@@ -19,7 +19,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "# Changing Sprites with Events\r\n\r\nTry adding and removing sprites when a new line shows. \r\n\r\n* Drag an event block into the workspace. \r\n* Find a line in the poem where a new sprite could be added or removed. \r\n* Find a text effect that matches the new mood of the poem. \r\n",
+    "long_instructions": "# Events - Changing Sprites\r\n\r\nTry adding and removing sprites when a new line shows. \r\n\r\n* Drag an event block into the workspace. \r\n* Find a line in the poem where a new sprite could be added or removed. \r\n* Find a text effect that matches the new mood of the poem. \r\n\r\n*Challenge: Try changing the sprite's behavior with an event block.*\r\n",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -33,21 +33,17 @@
     "validation_enabled": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "instructions_icon": "poet",
+    "instructions_icon": "octiIntimate",
     "callout_json": "[]",
     "parent_level_id": 29616,
-    "video_key": "hoc_dance_events",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "user_id": 1196,
   "game_id": 64,
-  "published": true,
   "created_at": "2021-08-25T21:54:12.000Z",
   "level_num": "custom",
-  "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2021-08-25T21:54:12.584+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_events_text\\\"\"],\"cloned_from\":\"poetryHoC_events_text\"},{\"changed_at\":\"2021-08-25 21:54:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-25 22:11:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-25 22:13:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-29 05:44:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-08-25T21:54:12.584+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_events_text\\\"\"],\"cloned_from\":\"poetryHoC_events_text\"},{\"changed_at\":\"2021-08-25 21:54:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-25 22:11:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-25 22:13:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-29 05:44:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-09-01 18:13:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-01 18:18:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"instructions_icon\",\"video_key\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-01 18:21:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -57,10 +53,21 @@
         <block type="when_run">
           <next>
             <block type="PoemBot_setPoem">
-              <title name="POEM">"twain"</title>
+              <title name="POEM">"wordsworth"</title>
               <next>
-                <block type="PoemBot_setForegroundEffect">
-                  <title name="EFFECT">"bubbles"</title>
+                <block type="gamelab_makeNewSpriteAnon">
+                  <title name="ANIMATION_NAME">"bear"</title>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker">
+                      <title name="LOCATION">{"x":325,"y":75}</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="PoemBot_startBehavior">
+                      <title name="ANIMATION_NAME">"bear"</title>
+                      <title name="BEHAVIOR">spinning_left</title>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
@@ -1248,6 +1255,138 @@
             </block>
           </statement>
         </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.</description>
+          </mutation>
+          <title name="NAME" id="moving north and looping">moving north and looping</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" uservisible="false">
+              <title name="DIRECTION">"North"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" uservisible="false">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if" uservisible="false">
+                  <value name="IF0">
+                    <block type="logic_compare" uservisible="false">
+                      <title name="OP">GT</title>
+                      <value name="A">
+                        <block type="gamelab_getProp" uservisible="false">
+                          <title name="PROPERTY">"y"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">450</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_setProp" uservisible="false">
+                      <title name="PROPERTY">"y"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">-50</title>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.</description>
+          </mutation>
+          <title name="NAME" id="moving south and looping">moving south and looping</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" uservisible="false">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" uservisible="false">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if" uservisible="false">
+                  <value name="IF0">
+                    <block type="logic_compare" uservisible="false">
+                      <title name="OP">LT</title>
+                      <value name="A">
+                        <block type="gamelab_getProp" uservisible="false">
+                          <title name="PROPERTY">"y"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">-50</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_setProp" uservisible="false">
+                      <title name="PROPERTY">"y"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">450</title>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -1276,7 +1415,7 @@
             </value>
             <value name="STROKE">
               <block type="colour_picker">
-                <title name="COLOUR">#993399</title>
+                <title name="COLOUR">#ffffff</title>
               </block>
             </value>
           </block>
@@ -1290,6 +1429,14 @@
             <value name="LOCATION">
               <block type="gamelab_location_picker">
                 <title name="LOCATION">{"x":325,"y":75}</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_makeNumSprites">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <value name="NUM">
+              <block type="math_number">
+                <title name="NUM">10</title>
               </block>
             </value>
           </block>
