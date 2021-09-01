@@ -317,7 +317,7 @@ const styles = {
   },
   textButton: {
     color: color.teal,
-    border: 'none',
+    borderWidth: 0,
     backgroundColor: 'unset',
     fontFamily: '"Gotham 5r", sans-serif',
     boxShadow: 'none',
