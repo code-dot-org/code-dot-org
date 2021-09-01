@@ -2,11 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function InputPrompt({onClick}) {
-  return (
-    <span style={styles.prompt} onClick={onClick}>
-      &gt;
-    </span>
-  );
+  return <span onClick={onClick}>&gt;&nbsp;</span>;
 }
 
 InputPrompt.propTypes = {
@@ -15,13 +11,4 @@ InputPrompt.propTypes = {
 
 InputPrompt.defaultProps = {
   onClick: () => {}
-};
-
-const styles = {
-  prompt: {
-    display: 'block',
-    width: 15,
-    cursor: 'text',
-    flexGrow: 0
-  }
 };

@@ -64,44 +64,23 @@ class JavalabConsole extends React.Component {
   };
 
   displayConsoleLogs() {
-    return (
-      <div style={styles.log}>
-        {this.props.consoleLogs.map((log, i) => {
-          if (log.type === 'newline') {
-            return '\n';
-          }
-          if (log.type === 'input') {
-            return (
-              <div style={styles.lineWrapper}>
-                <InputPrompt />
-                {log.text}
-              </div>
-            );
-          }
-          if (log.type !== 'newline' && log.type !== 'input') {
-            return log.text;
-          }
-        })}
-      </div>
-    );
-
-    /*
-    this.props.consoleLogs.map((log, i) => {
+    return this.props.consoleLogs.map((log, i) => {
       if (log.type === 'newline') {
+        return '\n';
+      }
+      if (log.type === 'input') {
         return (
-          <span key={`log-${i}`} style={styles.log}>
-            {'\n''}
-          </p>
-        );
-      } else {
-        return (
-          <p key={`log-${i}`} style={{...styles.lineWrapper, ...styles.log}}>
-            {log.type === 'input' && <InputPrompt />}
+          <span>
+            <InputPrompt />
             {log.text}
-          </p>
+            {'\n'}
+          </span>
         );
       }
-    });*/
+      if (log.type !== 'newline' && log.type !== 'input') {
+        return log.text;
+      }
+    });
   }
 
   onInputKeyDown = e => {
@@ -152,15 +131,15 @@ class JavalabConsole extends React.Component {
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
           >
-            <div style={styles.logs}>{this.displayConsoleLogs()}</div>
-            <div style={styles.lineWrapper}>
+            <div style={styles.logs}>
+              {this.displayConsoleLogs()}
               <InputPrompt onClick={this.focus} />
               <input
                 type="text"
                 spellCheck="false"
                 style={{
                   ...styles.input,
-                  ...(isDarkMode ? styles.darkMode : styles.lightMode)
+                  ...(isDarkMode ? styles.darkModeInput : styles.lightModeInput)
                 }}
                 onKeyDown={this.onInputKeyDown}
                 aria-label="console input"
@@ -197,6 +176,14 @@ const styles = {
     backgroundColor: color.white,
     color: color.black
   },
+  darkModeInput: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: color.white
+  },
+  lightModeInput: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: color.black
+  },
   container: {
     marginTop: 30,
     display: 'flex',
@@ -230,7 +217,8 @@ const styles = {
     boxShadow: 'none',
     border: 'none',
     padding: 0,
-    fontFamily: 'monospace'
+    fontFamily: 'monospace',
+    marginTop: -4
   },
   spacer: {
     width: 8
