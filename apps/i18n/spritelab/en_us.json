@@ -198,5 +198,8 @@
   "poemBotNoTextEffects": "You need to add a text effect to your project.",
   "poemBotOneTextEffect": "Great work! You added one text effect. Try adding another.",
   "poemBotDeletedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
-  "poemBotTextEffectWithEvent": "Set a new text effect under your `when line shows` event block."
+  "poemBotTextEffectWithEvent": "Set a new text effect under your `when line shows` event block.",
+  "poemBotEffectWithEvent": "Try using a new foreground or background effect under your `when line shows` event block.",
+  "poemBotSuccessForegroundEvent": "Great job changing your foreground with an event! Click “Keep Playing” to try changing the background effect.",
+  "poemBotSuccessBackgroundEvent": "Great job changing your background with an event! Click “Keep Playing” to try changing the foreground effect.",
 }
