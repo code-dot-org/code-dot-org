@@ -202,4 +202,7 @@
   "poemBotEffectWithEvent": "Try using a new foreground or background effect under your `when line shows` event block.",
   "poemBotSuccessForegroundEvent": "Great job changing your foreground with an event! Click “Keep Playing” to try changing the background effect.",
   "poemBotSuccessBackgroundEvent": "Great job changing your background with an event! Click “Keep Playing” to try changing the foreground effect.",
+  "poemBotSuccessAddedSprite": "Great work adding a new sprite with an event! Click “Keep Playing” to try removing a sprite with an event.",
+  "poemBotSuccessRemovedSprite": "Great work removing a new sprite with an event! Click “Keep Playing” to try adding  a sprite with an event.",
+  "poemBotSpriteEvent": "Try adding or removing a sprite under your `when line shows` event block."
 }
