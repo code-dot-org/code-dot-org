@@ -50,6 +50,9 @@ describe('MicroBitButton', function() {
         pin: 0
       });
     });
+    after(() => {
+      sinon.restore();
+    });
 
     it('is a readonly property', () => {
       const descriptor = Object.getOwnPropertyDescriptor(button, 'holdtime');

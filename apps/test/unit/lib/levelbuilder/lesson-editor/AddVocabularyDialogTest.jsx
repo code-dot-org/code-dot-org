@@ -65,6 +65,7 @@ describe('AddVocabularyDialog', () => {
 
     expect(handleCloseSpy.calledOnce).to.be.true;
     expect(afterSaveSpy.calledOnce).to.be.true;
+    server.restore();
   });
 
   it('renders an existing vocabulary for edit', () => {
@@ -112,6 +113,7 @@ describe('AddVocabularyDialog', () => {
     server.respond();
     wrapper.update();
     expect(wrapper.find('h3').contains('There was an error'));
+    server.restore();
   });
 
   it('renders default props', () => {

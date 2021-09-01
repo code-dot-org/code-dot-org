@@ -389,13 +389,14 @@ def distribute_translations(upload_manifests)
 
     ### Pegasus markdown
     Dir.glob("#{locale_dir}/codeorg-markdown/**/*.*") do |loc_file|
-      relative_path = loc_file.delete_prefix(locale_dir)
+      relative_path = loc_file.delete_prefix("#{locale_dir}/codeorg-markdown")
       next unless file_changed?(locale, relative_path)
 
       destination_dir = "pegasus/sites.v3/code.org/i18n/public"
-      relative_dir = File.dirname(loc_file.delete_prefix("#{locale_dir}/codeorg-markdown"))
+      relative_dir = File.dirname(relative_path)
       name = File.basename(loc_file, ".*")
       destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
+      FileUtils.mkdir_p(File.dirname(destination))
       FileUtils.mv(loc_file, destination)
     end
 

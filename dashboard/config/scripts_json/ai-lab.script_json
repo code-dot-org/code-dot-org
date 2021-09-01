@@ -176,7 +176,6 @@
         ],
         "progression": "Introduction to AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -202,7 +201,6 @@
         ],
         "progression": "Introduction to AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +226,6 @@
         ],
         "progression": "Using Models in App Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -254,7 +251,6 @@
         ],
         "progression": "Using Models in App Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -280,7 +276,6 @@
         ],
         "progression": "Video: Introduction to AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -306,7 +301,6 @@
         ],
         "progression": "Video: Training and Testing in AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -332,7 +326,6 @@
         ],
         "progression": "Video: Model Cards in AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -358,7 +351,6 @@
         ],
         "progression": "Video: Numerical Data in AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
