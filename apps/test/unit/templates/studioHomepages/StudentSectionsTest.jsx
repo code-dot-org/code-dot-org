@@ -45,12 +45,15 @@ describe('StudentSections', () => {
         description={i18n.enrollmentDescription()}
       >
         <JoinSectionNotifications />
-        <SectionsAsStudentTable
-          sections={sections}
-          canLeave={false}
-          updateSections={instance.updateSections}
-          updateSectionsResult={instance.updateSectionsResult}
-        />
+        <div>
+          <SectionsAsStudentTable
+            sections={sections}
+            canLeave={false}
+            updateSections={instance.updateSections}
+            updateSectionsResult={instance.updateSectionsResult}
+          />
+          <div />
+        </div>
         <JoinSection
           enrolledInASection={true}
           updateSections={instance.updateSections}
