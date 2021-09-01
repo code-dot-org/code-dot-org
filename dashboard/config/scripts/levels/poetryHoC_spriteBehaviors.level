@@ -39,7 +39,8 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "validation_code": "var spriteIds = getSpriteIdsInUse();\r\nvar validationInfo = getValidationInfo();\r\n\r\nif (!validationInfo.successFrame) {\r\n  for (var i = 0; i < spriteIds.length; i++) {\r\n    var behaviors = getBehaviorsForSpriteId(spriteIds[i]);\r\n    if (behaviors.length > 1 || (behaviors.length == 1 && behaviors[0] != 'fluttering')) {\r\n      setSuccessFrame();\r\n    }\r\n  }\r\n}\r\n\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'genericSuccess');\r\n  } else {\r\n    if (spriteIds.length == 0) {\r\n      levelFailure(3, 'poemBotDeletedSprite');\r\n    } else {\r\n      levelFailure(3, 'noBehavior');\r\n    }\r\n  }\r\n}"
   },
   "game_id": 64,
   "published": true,
