@@ -3,6 +3,7 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/aws/s3'
+require_relative '../../lib/cdo/png_utils'
 
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
 ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaults.json'.freeze
@@ -34,6 +35,25 @@ class AnimationLibraryApi < Sinatra::Base
         new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
         object("level_animations/#{animation_name}").
         get(version_id: version_id)
+      content_type result.content_type
+      cache_for 3600
+      result.body
+    rescue
+      not_found
+    end
+  end
+
+  #
+  # GET /api/v1/animation-library/level_animations/<filename>
+  # Retrieve an animation that was uploaded by a levelbuilder (for use in level start_animations)
+  #
+  get %r{/api/v1/animation-library/level_animations/(.+)} do |animation_name|
+    not_found if animation_name.empty?
+    begin
+      result = Aws::S3::Bucket.
+        new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+        object("level_animations/#{animation_name}").
+        get
       content_type result.content_type
       cache_for 3600
       result.body
@@ -139,10 +159,21 @@ class AnimationLibraryApi < Sinatra::Base
     bucket = Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET)
     bucket.objects({prefix: prefix}).each do |object_summary|
       animation_name = object_summary.key[/level_animations[^.]+/]
+      extension = object_summary.key[/(?<=\.)\w+$/]
+      next if extension.nil? # Skip 'directory' objects
+
       # Push into animations collection if unique
-      animations_by_name.push(animation_name)
+      animations_by_name[animation_name] ||= {}
+      next unless animations_by_name[animation_name][extension].nil?
+      # Populate sourceSize if not already present
+      calculated_source_size = {}
+      if extension === 'png'
+        png_body = object_summary.object.get.body.read
+        calculated_source_size = PngUtils.dimensions_from_png(png_body)
+      end
+      animations_by_name[animation_name][extension] = {key: object_summary.key, last_modified: object_summary.last_modified, version_id: object_summary.object.version_id, source_size: calculated_source_size}
     end
-    {filenames: animations_by_name}.to_json
+    animations_by_name.to_json
   end
 
   #

@@ -15,6 +15,15 @@ export function getManifest(appType, locale = 'en_us') {
   );
 }
 
+/* Returns the metadata for a specific animation file in level_animations
+ * @param filename {String} metadata filename
+ */
+export function getMetadataForLevelAnimationFile(filename) {
+  return fetch(`/api/v1/animation-library/${filename}`).then(response =>
+    response.json()
+  );
+}
+
 // Returns the list of default sprites in SpriteLab in English
 export function getDefaultList() {
   return fetch(`/api/v1/animation-library/default-spritelab`).then(response =>
@@ -87,6 +96,109 @@ export function createDefaultSpriteMetadata(listData) {
       propsByKey[key] = props;
     }
     return {orderedKeys, propsByKey};
+  });
+}
+
+export function buildAnimationMetadata(files) {
+  let animationMetadataByName = {};
+  let resolvedPromisesArray = [];
+  for (const [fileKey, fileObject] of Object.entries(files)) {
+    let json = fileObject['json'];
+    let png = fileObject['png'];
+    resolvedPromisesArray.push(
+      getMetadataForLevelAnimationFile(json.key).then(metadata => {
+        // Metadata contains name, frameCount, frameSize, looping, frameDelay
+        let combinedMetadata = metadata;
+        combinedMetadata['jsonLastModified'] = json.last_modified;
+        combinedMetadata['pngLastModified'] = png.last_modified;
+        combinedMetadata['version'] = png.version_id;
+        combinedMetadata[
+          'sourceUrl'
+        ] = `/api/v1/animation-library/level_animations/${png.version_id}/${
+          png.key
+        }`;
+        combinedMetadata['sourceSize'] = png.source_size;
+        animationMetadataByName[fileKey] = combinedMetadata;
+        return Promise.resolve();
+      })
+    );
+  }
+  return Promise.all(resolvedPromisesArray).then(() => {
+    return animationMetadataByName;
+  });
+}
+
+export function buildAliasMap(animationMetadata) {
+  let aliasMap = {};
+
+  for (const [key, metadata] of Object.entries(animationMetadata)) {
+    let aliases = [metadata['name'].toLowerCase()];
+    if (metadata['aliases']) {
+      metadata['aliases'].map(alias => {
+        aliases.push(alias.toLowerCase());
+      });
+    }
+    aliases.map(alias => {
+      //Push name into target array, deduplicate, and sort
+      let updatedMap = {...aliasMap};
+      let addedSet = new Set(updatedMap[alias]);
+      addedSet.add(key);
+      aliasMap[alias] = [...addedSet].sort();
+    });
+  }
+  return aliasMap;
+}
+
+export function buildCategoryMap(animationMetadata) {
+  let categoryMap = {};
+
+  for (const [key, metadata] of Object.entries(animationMetadata)) {
+    let categories = metadata['categories'];
+    // If the animation doesn't have a category, place it in a section for
+    // level-specific/hidden-from-library animations.
+    if (!categories) {
+      categories = ['level_animations'];
+    }
+    categories.map(category => {
+      let normalizedCategory = category.replace(' ', '_');
+      //Push name into target array, deduplicate, and sort
+      let updatedMap = {...categoryMap};
+      let addedSet = new Set(updatedMap[category]);
+      addedSet.add(key);
+      categoryMap[normalizedCategory] = [...addedSet].sort();
+    });
+  }
+  return categoryMap;
+}
+
+// Generates the json animation manifest for the level_animations folder
+export function generateLevelAnimationsManifest() {
+  return getLevelAnimationsFiles().then(files => {
+    return buildAnimationMetadata(files).then(animationMetadata => {
+      let aliasMap = buildAliasMap(animationMetadata);
+
+      let categoryMap = buildCategoryMap(animationMetadata);
+
+      let metadataNoAliases = {...animationMetadata};
+
+      for (const metadata of Object.values(metadataNoAliases)) {
+        delete metadata.aliases;
+      }
+
+      let manifestJson = {
+        '//': [
+          'Animation Library Manifest',
+          'GENERATED FILE: DO NOT MODIFY DIRECTLY'
+        ],
+        metadata: metadataNoAliases,
+
+        categories: categoryMap,
+
+        aliases: aliasMap
+      };
+
+      return JSON.stringify(manifestJson);
+    });
   });
 }
 
