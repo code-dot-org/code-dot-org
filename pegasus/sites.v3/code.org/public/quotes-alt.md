@@ -1,45 +1,258 @@
 ---
-title: Quotes - What leaders and trendsetters have to say about computer science
+title: Quotes on computer science - What leaders and trendsetters have to say
 theme: responsive
 style_min: true
 ---
 <div id="clear" style="clear:both"></div>
 
 <div class="container_responsive">
-<h1>Leaders and trend-setters all agree on one thing</h1>
+<h1>Leaders and trendsetters all agree on one thing</h1>
+<p>
+<h3>See what world leaders, celebrities, politicians, business titans, and more have to say about the importance of computer science.</h3>
+<p>
+<p style="text-align:center">
+<img src="/images/people/quote-malala.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
+<img src="/images/people/quote-obama.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
+<p>
+<img src="/images/people/quote-steph.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
+<img src="/images/people/quote-karlie.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
+<p style="clear: both;">
+<p><h3>Check out quotes from: <a href="#Celebrities">Celebrities, Artists, and Athletes</a> | <a href="#Business">Technology and Business Experts</a> | <a href="#Education">Education and Science Leaders</a> | <a href="#Politicians">Politicians</a></h3></p>
+<h2 id="Celebrities">Celebrities, Artists, and Athletes</h2>
 <div class="row" style="margin-bottom: 20px;"></div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
 <div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
-<img src="/images/people/malala-yousafzai.jpg">
+<img src="/images/people/jessica-alba.jpeg">
 </div>
 <div class="col-66 left" id="text">
 <h3 style="margin:0px;">
-Malala Yousafzai
+Jessica Alba
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Nobel Peace Prize Winner
+Actress and Founder, The Honest Company
 </h4>
 <p style="padding-right:10px;">
-Every girl deserves to take part in creating the technology that will change our world, and change who runs it.
+There's so much that's possible with technology, especially if you can learn how to code. You can create anything you want and reach everyone in the world.
 </p>
 </div>
 </div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
 <div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
-<img src="/images/people/justin-trudeau.jpg">
+<img src="/images/people/aloe-blacc.jpeg">
 </div>
 <div class="col-66 left" id="text">
 <h3 style="margin:0px;">
-Justin Trudeau
+Aloe Blacc
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Prime Minister, Canada
+Musician and Producer
 </h4>
 <p style="padding-right:10px;">
-Every job we're going to do in the future will rely on technology and be benefited if you are powerful users of the technology that surrounds us.
+Any machine that you're using has code that was developed by human beings. If you can figure out how to be one of those human beings, then you're that much further in life. You're in control of your communication, you're in control of your destiny.
 </p>
 </div>
 </div>
+<div class="row" style="margin-bottom: 20px;"></div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/Headshots/quotes-page-steph.png">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Steph Curry
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Three-time NBA Champion 
+</h4>
+<p style="padding-right:10px;">
+If you want to create and be a visionary, you're probably going to be working with technology in some way. 
+</p>
+</div>
+</div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/karlie-kloss.jpg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Karlie Kloss
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Model and Founder, Kode with Klossy Scholarship
+</h4>
+<p style="padding-right:10px;">
+Code is going to continue to play a major role in defining our future. I think it’s crucial that young women learn to code as early as possible to ensure that we as young women have a voice and a stake in what the world looks like.
+</p>
+</div>
+</div>
+<div class="row" style="margin-bottom: 20px;"></div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/ashton-kutcher-01.jpg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Ashton Kutcher
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Actor
+</h4>
+<p style="padding-right:10px;">
+I think every field can benefit from computer science and does benefit from computer science. So I really believe that coding should be part of the core curriculum in every school around the world.
+</p>
+</div>
+</div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/octavia-spencer.jpeg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Octavia Spencer
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Actress
+</h4>
+<p style="padding-right:10px;">
+In just one hour, you can take the first step in teaching yourself how to program with a computer and the first step to changing your life and the world.
+</p>
+</div>
+</div>
+<div class="row" style="margin-bottom: 20px;"></div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/snoop-dogg.jpg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Snoop Dogg
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Rapper, Singer-songwriter &amp; Actor
+</h4>
+<p style="padding-right:10px;">
+support tha american dream n make coding available to EVERYONE!!
+</p>
+</div>
+</div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/enrique-iglesias.jpg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Enrique Iglesias
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Singer-songwriter &amp; Actor
+</h4>
+<p style="padding-right:10px;">
+Programming is important. Learn how you can help get it into schools.
+</p>
+</div>
+</div>
+<div class="row" style="margin-bottom: 20px;"></div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/mario-armstrong.jpg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Mario Armstrong
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Digital Lifestyle Expert &amp; TV Host, NBC, CNN/HLN, NPR
+</h4>
+<p style="padding-right:10px;">
+Kids who understand code are at the highest level of literacy in the 21st century. This will give all kids the tools to move from consumers to creators, enabling them for huge success.
+</p>
+</div>
+</div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/chris-bosh-01.jpg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Chris Bosh
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+NBA All-Star, Miami Heat
+</h4>
+<p style="padding-right:10px;">
+Coding is very important when you think about the future, where everything is going. With more phones and tablets and computers being made, and more people having access to every thing and information being shared, I think it's very important to be able to learn the language of coding and programming.
+</p>
+</div>
+</div>
+<div class="row" style="margin-bottom: 20px;"></div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/ne-yo.jpeg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Ne-Yo
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Musician and Producer
+</h4>
+<p style="padding-right:10px;">
+Creativity plus coding equals magic — the kind of magic that can change the world.
+</p>
+</div>
+</div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/neymar.jpeg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Neymar
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Brazilian professional footballer
+</h4>
+<p style="padding-right:10px;">
+The winners of tomorrow will be the creators.
+</p>
+</div>
+</div>
+<div class="row" style="margin-bottom: 20px;"></div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/william.jpg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+will.i.am
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Musician and Entrepreneur
+</h4>
+<p style="padding-right:10px;">
+We all depend on technology to communicate, to bank, and none of us know how to read and write code. It's important for these kids, right now, starting at 8 years old, to read and write code.
+</p>
+</div>
+</div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/russell-okung.jpeg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Russell Okung
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+NFL offensive tackle
+</h4>
+<p style="padding-right:10px;">
+Computer science is becoming more and more of a factor in our world, in our economy, so there's no better time than now to take advantage of it.
+</p>
+</div>
+</div>
+<p>
+<p><h2 id="Business">Technology and Business Experts</h2></p>
+
 <div class="row" style="margin-bottom: 20px;"></div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
 <div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
@@ -73,72 +286,7 @@ An understanding of computer science is becoming increasingly essential in today
 </p>
 </div>
 </div>
-<div class="row" style="margin-bottom: 20px;"></div>
-<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
-<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
-<img src="/images/Headshots/quotes-page-steph.png">
-</div>
-<div class="col-66 left" id="text">
-<h3 style="margin:0px;">
-Steph Curry
-</h3>
-<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Three-time NBA Champion 
-</h4>
-<p style="padding-right:10px;">
-If you want to create and be a visionary, you're probably going to be working with technology in some way. 
-</p>
-</div>
-</div>
-<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
-<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
-<img src="/images/people/karlie-kloss.jpg">
-</div>
-<div class="col-66 left" id="text">
-<h3 style="margin:0px;">
-Karlie Kloss
-</h3>
-<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Model and Founder, Kode with Klossy Scholarship
-</h4>
-<p style="padding-right:10px;">
-I quickly came to understand that code is a superpower every young woman should be able to access. Understanding that code is the underlying (and invisible) framework of tech means that we do not have to be passive bystanders in our ever-changing digital world.
-</p>
-</div>
-</div>
-<div class="row" style="margin-bottom: 20px;"></div>
-<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
-<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
-<img src="/images/people/barack-obama.jpg">
-</div>
-<div class="col-66 left" id="text">
-<h3 style="margin:0px;">
-President Barack Obama
-</h3>
-<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Former President
-</h4>
-<p style="padding-right:10px;">
-Computers are going to be a big part of our future...and that future is yours to shape.
-</p>
-</div>
-</div>
-<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
-<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
-<img src="/images/people/stephen-hawking.jpg">
-</div>
-<div class="col-66 left" id="text">
-<h3 style="margin:0px;">
-Stephen Hawking
-</h3>
-<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Theoretical Physicist, Cosmologist &amp; Author
-</h4>
-<p style="padding-right:10px;">
-Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.
-</p>
-</div>
-</div>
+
 <div class="row" style="margin-bottom: 20px;"></div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
 <div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
@@ -172,6 +320,81 @@ With STEM occupations growing at double the rate as others, it’s critical that
 </p>
 </div>
 </div>
+
+
+<p><h2 id="Education">Education and Science Leaders</h2></p>
+
+<p><h2 id="Politicians">Politicians</h2></p>
+
+<div class="row" style="margin-bottom: 20px;"></div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/malala-yousafzai.jpg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Malala Yousafzai
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Nobel Peace Prize Winner
+</h4>
+<p style="padding-right:10px;">
+Every girl deserves to take part in creating the technology that will change our world, and change who runs it.
+</p>
+</div>
+</div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/justin-trudeau.jpg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Justin Trudeau
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Prime Minister, Canada
+</h4>
+<p style="padding-right:10px;">
+Every job we're going to do in the future will rely on technology and be benefited if you are powerful users of the technology that surrounds us.
+</p>
+</div>
+</div>
+
+
+<div class="row" style="margin-bottom: 20px;"></div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/barack-obama.jpg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+President Barack Obama
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Former President
+</h4>
+<p style="padding-right:10px;">
+If we want America to stay on the cutting edge, we need young Americans to master the tools and technology that will change the way we do just about everything.
+</p>
+</div>
+</div>
+<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
+<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
+<img src="/images/people/octavia-spencer.jpeg">
+</div>
+<div class="col-66 left" id="text">
+<h3 style="margin:0px;">
+Octavia Spencer
+</h3>
+<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
+Actress
+</h4>
+<p style="padding-right:10px;">
+In just one hour, you can take the first step in teaching yourself how to program with a computer and the first step to changing your life and the world.
+</p>
+</div>
+</div>
+
 <div class="row" style="margin-bottom: 20px;"></div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
 <div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
@@ -251,7 +474,7 @@ Ashton Kutcher
 Actor
 </h4>
 <p style="padding-right:10px;">
-I'd like to advocate for computer coding to be an institution in the public school systems right next to biology, chemistry, physics, etc. If we want to spur job growth in the US we have to educate ourselves in the disciplines where jobs are available and where economic growth is feasible.
+I think every field can benefit from computer science and does benefit from computer science. So I really believe that coding should be part of the core curriculum in every school around the world.
 </p>
 </div>
 </div>
@@ -1818,27 +2041,11 @@ will.i.am
 Musician, The Black Eyed Peas and Entrepreneur
 </h4>
 <p style="padding-right:10px;">
-Here we are, 2013, we ALL depend on technology to communicate, to bank, and none of us know how to read and write code. It's important for these kids, right now, starting at 8 years old, to read and write code.
+We all depend on technology to communicate, to bank, and none of us know how to read and write code. It's important for these kids, right now, starting at 8 years old, to read and write code.
 </p>
 </div>
 </div>
 <div class="row" style="margin-bottom: 20px;"></div>
-<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
-<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
-<img src="/images/people/mehmet-oz.jpg">
-</div>
-<div class="col-66 left" id="text">
-<h3 style="margin:0px;">
-Dr. Mehmet Oz
-</h3>
-<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Cardiothoracic Surgeon, Author, and TV Personality
-</h4>
-<p style="padding-right:10px;">
-To best prepare for life in the 21st century, today's students should ideally learn basic computer programming.
-</p>
-</div>
-</div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
 <div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
 <img src="/images/Headshots/quotes-page-mary.png">

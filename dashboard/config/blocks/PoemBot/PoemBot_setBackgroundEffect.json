@@ -28,8 +28,20 @@
             "\"darkCircles\""
           ],
           [
-            "Cloudy",
-            "\"cloudy\""
+            "Color Fade",
+            "\"fadeColors\""
+          ],
+          [
+            "Blooming",
+            "\"blooming\""
+          ],
+          [
+            "Ripples",
+            "\"ripples\""
+          ],
+          [
+            "Clouds",
+            "\"clouds\""
           ]
         ]
       },
@@ -59,6 +71,10 @@
           [
             "Spring",
             "\"spring\""
+          ],
+          [
+            "Summer",
+            "\"summer\""
           ],
           [
             "Autumn",
