@@ -24,6 +24,7 @@ class LighthouseTest < Minitest::Test
   end
 
   def test_lighthouse
+    skip
     ensure_lighthouse
     _, json = with_server(->(_, resp) {resp.body = 'Hello World!'}) do
       Lighthouse.test("http://localhost:#{PORT}/")
@@ -33,6 +34,7 @@ class LighthouseTest < Minitest::Test
   end
 
   def test_lighthouse_errors
+    skip
     ensure_lighthouse
     mount = ->(req, resp) do
       if req.path == '/'

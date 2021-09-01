@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-31 14:04:49 UTC",
+    "serialized_at": "2021-08-31 20:36:30 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -175,7 +175,6 @@
       "relative_position": 7,
       "properties": {
         "overview": "Students implement static variables and constants to count the number of `PainterPlus` objects created and set maximum and minimum values for the volume of sounds in The Theater.",
-        "preparation": "* Print copies of the Math Class Source Code handout (one per student)",
         "student_overview": "Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Neighborhood and in The Theater."
       },
       "seeding_key": {
