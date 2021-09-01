@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   storybook.storiesOf('Buttons/Button', module).addStoryTable([
@@ -89,9 +90,9 @@ export default storybook => {
       name: 'Button styled as text',
       story: () => (
         <Button
-          displayAsText={true}
+          styleAsText={true}
           text="Batman & Robin"
-          onClick={() => console.log('click')}
+          onClick={action('click')}
         />
       )
     },
@@ -100,7 +101,7 @@ export default storybook => {
       story: () => (
         <Button
           __useDeprecatedTag
-          onClick={() => console.log('click')}
+          onClick={action('click')}
           text="Batman & Robin"
         />
       )

@@ -3074,6 +3074,7 @@ button:active {
   border: 1px solid $light_gray !important;
 }
 button.button-active-no-border:active {
+  // Needed to override the border with !important defined for button:active
   border: none !important;
 }
 button:hover {
