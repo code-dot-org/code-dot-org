@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { colors, styles } from "../constants";
 import { Bar } from "react-chartjs-2";
+import { categeoricalColumnDetailsShape } from "./shapes";
 import {
   getCategoricalColumnDetails
 } from "../selectors/currentColumnSelectors";
@@ -38,8 +39,8 @@ const chartOptions = {
 };
 
 class ColumnDetailsCategorical extends Component {
-  static propTypes = {
-    columnDetails: PropTypes.object
+  static PropTypes = {
+    columnDetails: categeoricalColumnDetailsShape
   };
 
   render() {
