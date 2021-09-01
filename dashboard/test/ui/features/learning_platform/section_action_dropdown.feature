@@ -41,6 +41,7 @@ Feature: Using the SectionActionDropdown
     And I open the section action dropdown
     And I press the first ".edit-section-details-link" element
     And I press the first ".uitest-saveButton" element
+    And I wait for the dialog to close
 
   # * Checks that section can be hidden and shown
   #   * The menu of a new section should have a 'Hide Section' option -> select it to hide the section

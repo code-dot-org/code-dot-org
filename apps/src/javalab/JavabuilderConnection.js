@@ -106,6 +106,7 @@ export default class JavabuilderConnection {
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
       case WebSocketMessageType.THEATER:
+      case WebSocketMessageType.PLAYGROUND:
         this.miniApp.handleSignal(data);
         break;
       case WebSocketMessageType.EXCEPTION:

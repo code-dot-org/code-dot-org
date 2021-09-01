@@ -3,8 +3,6 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedTeacherFeedback as TeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedback';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import experiments from '@cdo/apps/util/experiments';
-import sinon from 'sinon';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
@@ -91,15 +89,11 @@ describe('TeacherFeedback', () => {
         expect(confirmButton.props().text).to.equal('Save and share');
       });
 
-      it('renders EditableReviewState with expected props if part of the experiment', () => {
-        sinon.stub(experiments, 'isEnabled').returns(true);
-
+      it('renders EditableReviewState with expected props', () => {
         const wrapper = setUp();
         const keepWorkingComponent = wrapper.find(EditableReviewState);
         expect(keepWorkingComponent).to.have.length(1);
         expect(keepWorkingComponent.props().latestReviewState).to.equal(null);
-
-        experiments.isEnabled.restore();
       });
     });
 
@@ -141,9 +135,7 @@ describe('TeacherFeedback', () => {
         expect(confirmButton.props().text).to.equal('Update');
       });
 
-      it('does not render EditableReviewState if part of the experiment and has not canHaveFeedbackReviewState', () => {
-        sinon.stub(experiments, 'isEnabled').returns(true);
-
+      it('does not render EditableReviewState if not canHaveFeedbackReviewState', () => {
         const latestFeedback = {
           ...FEEDBACK,
           review_state: ReviewStates.completed
@@ -155,13 +147,9 @@ describe('TeacherFeedback', () => {
 
         const keepWorkingComponent = wrapper.find(EditableReviewState);
         expect(keepWorkingComponent).to.have.length(0);
-
-        experiments.isEnabled.restore();
       });
 
-      it('renders EditableReviewState with expected props (completed) if part of the experiment', () => {
-        sinon.stub(experiments, 'isEnabled').returns(true);
-
+      it('renders EditableReviewState with expected props (completed)', () => {
         const latestFeedback = {
           ...FEEDBACK,
           review_state: ReviewStates.completed
@@ -173,13 +161,9 @@ describe('TeacherFeedback', () => {
         expect(keepWorkingComponent.props().latestReviewState).to.equal(
           ReviewStates.completed
         );
-
-        experiments.isEnabled.restore();
       });
 
-      it('renders EditableReviewState with expected props (awaitingReview) if part of the experiment', () => {
-        sinon.stub(experiments, 'isEnabled').returns(true);
-
+      it('renders EditableReviewState with expected props (awaitingReview)', () => {
         const latestFeedback = {
           ...FEEDBACK,
           is_awaiting_teacher_review: true
@@ -191,8 +175,6 @@ describe('TeacherFeedback', () => {
         expect(keepWorkingComponent.props().latestReviewState).to.equal(
           ReviewStates.awaitingReview
         );
-
-        experiments.isEnabled.restore();
       });
     });
   });
