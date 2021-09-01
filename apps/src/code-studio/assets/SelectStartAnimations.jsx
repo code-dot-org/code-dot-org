@@ -1,18 +1,23 @@
 import React from 'react';
 import {
   getManifest,
-  getLevelAnimationsFiles
+  generateLevelAnimationsManifest
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import AnimationPickerBody from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody.jsx';
 import {createUuid} from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
+import PropTypes from 'prop-types';
 
 const THUMBNAIL_SIZE = 50;
 const THUMBNAIL_BORDER_WIDTH = 1;
 
 export default class SelectStartAnimations extends React.Component {
+  static propTypes = {
+    useAllSprites: PropTypes.bool
+  };
+
   state = {
-    levelAnimations: [],
+    levelAnimationsManifest: {},
     libraryManifest: {},
     orderedKeys: [],
     propsByKey: {}
@@ -23,18 +28,19 @@ export default class SelectStartAnimations extends React.Component {
       .then(sprites => {
         this.setState({libraryManifest: sprites});
       })
-      .then(() => {
-        getLevelAnimationsFiles().then(sprites => {
-          let onlyPngs = sprites.files.filter(filename => {
-            let lowercase = filename.toLowerCase();
-            return lowercase.endsWith('png');
-          });
-          this.setState({levelAnimations: onlyPngs});
-        });
-      })
       .catch(err => {
         console.log(err);
       });
+
+    if (this.props.useAllSprites) {
+      generateLevelAnimationsManifest()
+        .then(manifest => {
+          this.setState({levelAnimationsManifest: manifest});
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
   }
 
   addAnimationToList = animation => {
