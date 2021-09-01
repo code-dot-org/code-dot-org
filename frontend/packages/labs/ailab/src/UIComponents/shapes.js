@@ -9,5 +9,5 @@ export const resultsPropType = PropTypes.shape({
 export const categeoricalColumnDetailsShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   uniqueOptions: PropTypes.array.isRequired,
-  frequencies: PropTypes.array.isRequired
+  frequencies: PropTypes.objectOf(PropTypes.number).isRequired
 });

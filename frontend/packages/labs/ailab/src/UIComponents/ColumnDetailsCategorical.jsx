@@ -1,5 +1,4 @@
 /* React component to handle showing details of categorical columns. */
-import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { colors, styles } from "../constants";
@@ -39,13 +38,12 @@ const chartOptions = {
 };
 
 class ColumnDetailsCategorical extends Component {
-  static PropTypes = {
+  static propTypes = {
     columnDetails: categeoricalColumnDetailsShape
   };
 
   render() {
     const { id, uniqueOptions, frequencies } = this.props.columnDetails;
-
     barData.labels = uniqueOptions && Object.values(uniqueOptions);
     barData.datasets[0].data = barData.labels.map(option => {
       return frequencies[option];
