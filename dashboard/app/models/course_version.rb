@@ -26,6 +26,9 @@ class CourseVersion < ApplicationRecord
   has_many :resources
   has_many :vocabularies
 
+  attr_readonly :content_root_type
+  attr_readonly :content_root_id
+
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates_format_of :key,
@@ -76,13 +79,14 @@ class CourseVersion < ApplicationRecord
         display_name: content_root.version_year,
         content_root: content_root,
       )
-      if content_root.prevent_course_version_change? && content_root.course_version != course_version
-        raise "cannot change course version of #{content_root.name}"
-      end
-      course_version.save!
     else
       course_version = nil
     end
+
+    if content_root.prevent_course_version_change? && content_root.course_version != course_version
+      raise "cannot change course version of #{content_root.name}"
+    end
+    course_version&.save!
 
     # Destroy the previously associated CourseVersion and CourseOffering if appropriate. This can happen if either:
     #   - family_name or version_year was changed
