@@ -6,5 +6,5 @@ description      'Installs/Upgrades Ruby'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.2.15'
 
-depends 'apt', '~> 2.6.0'
+depends 'apt'
 depends 'sudo-user'
