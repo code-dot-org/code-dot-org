@@ -3074,7 +3074,8 @@ button:active {
   border: 1px solid $light_gray !important;
 }
 button.button-active-no-border:active {
-  // Needed to override the border with !important defined for button:active
+  // This class is needed for when we want to hide the border on
+  // an active button. (overriding button:active rule above)
   border: none !important;
 }
 button:hover {
