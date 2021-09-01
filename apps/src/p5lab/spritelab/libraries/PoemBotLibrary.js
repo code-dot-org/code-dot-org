@@ -49,15 +49,20 @@ export default class PoemBotLibrary extends CoreLibrary {
           this.poemState,
           this.p5.World.frameCount
         );
-        for (let i = 0; i < renderInfo.lines.length; i++) {
-          const lineNum = i + 1; // students will 1-index the lines
-          // Fire line events
-          this.lineEvents[lineNum]?.forEach(callback => callback());
+        // Don't fire line events in preview
+        if (this.p5.frameCount > 1) {
+          for (let i = 0; i < renderInfo.lines.length; i++) {
+            const lineNum = i + 1; // students will 1-index the lines
+            if (this.lineEvents[lineNum]) {
+              // Fire line events
+              this.lineEvents[lineNum].forEach(callback => callback());
 
-          // Clear out line events so they don't fire again. This way, we'll fire
-          // the event only on the first frame where renderInfo.lines has
-          // that many items
-          this.lineEvents[lineNum] = null;
+              // Clear out line events so they don't fire again. This way, we'll fire
+              // the event only on the first frame where renderInfo.lines has
+              // that many items
+              this.lineEvents[lineNum] = null;
+            }
+          }
         }
         this.drawFromRenderInfo(renderInfo);
 
@@ -141,6 +146,7 @@ export default class PoemBotLibrary extends CoreLibrary {
       },
 
       getValidationInfo() {
+        this.validationInfo.lineEvents = Object.keys(this.lineEvents);
         this.validationInfo.font = {...this.poemState.font};
         this.validationInfo.textEffects = this.poemState.textEffects.map(
           effect => effect.name
