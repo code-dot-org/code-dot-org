@@ -17998,8 +17998,11 @@ de:
             lesson-12:
               name: Werkzeuge
             lesson-13: {}
+<<<<<<< HEAD
             lesson-17:
               name: Konsole
+=======
+>>>>>>> staging
             lesson-18:
               name: Widgets
           lesson_groups:

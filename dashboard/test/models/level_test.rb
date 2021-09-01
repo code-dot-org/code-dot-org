@@ -845,7 +845,6 @@ class LevelTest < ActiveSupport::TestCase
     new_level = old_level.clone_with_suffix(' copy')
     assert_equal 'level copy', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
-    assert_equal old_level.id, new_level.parent_level_id
     assert_equal ' copy', new_level.name_suffix
   end
 
@@ -855,13 +854,11 @@ class LevelTest < ActiveSupport::TestCase
     # level_1 has no name suffix, so the new suffix is appended.
     level_2 = level_1.clone_with_suffix('_2')
     assert_equal 'my_level_1_2', level_2.name
-    assert_equal level_1.id, level_2.parent_level_id
     assert_equal '_2', level_2.name_suffix
 
     # level_2 has a name suffix, which the new suffix replaces.
     level_3 = level_2.clone_with_suffix('_3')
     assert_equal 'my_level_1_3', level_3.name
-    assert_equal level_2.id, level_3.parent_level_id
     assert_equal '_3', level_3.name_suffix
   end
 
@@ -902,18 +899,15 @@ class LevelTest < ActiveSupport::TestCase
     level_2_copy = level_2.clone_with_suffix(' copy')
 
     template_level_copy = Level.find_by_name('template level copy')
-    assert_equal template_level.id, template_level_copy.parent_level_id
     assert_equal ' copy', template_level_copy.name_suffix
     assert_equal '<xml>template</xml>', template_level_copy.start_blocks
 
     assert_equal template_level_copy, level_1_copy.project_template_level
     assert_equal 'level 1 copy', level_1_copy.name
-    assert_equal level_1.id, level_1_copy.parent_level_id
     assert_equal ' copy', level_1_copy.name_suffix
 
     assert_equal template_level_copy, level_2_copy.project_template_level
     assert_equal 'level 2 copy', level_2_copy.name
-    assert_equal level_2.id, level_2_copy.parent_level_id
     assert_equal ' copy', level_2_copy.name_suffix
   end
 

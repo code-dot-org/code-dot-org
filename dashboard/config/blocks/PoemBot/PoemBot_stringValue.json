@@ -4,7 +4,7 @@
     "name": "stringValue",
     "blockText": "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}",
     "returnType": "String",
-    "expression": "[{value: VALUE, type: 'literal'}]",
+    "expression": "VALUE",
     "inline": true,
     "args": [
       {

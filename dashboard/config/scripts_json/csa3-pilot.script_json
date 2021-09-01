@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-12 21:06:17 UTC",
+    "serialized_at": "2021-08-20 17:05:02 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -6402,7 +6402,7 @@
     },
     {
       "name": "Arrays",
-      "url": "https://drive.google.com/file/d/1960cNnJ-jloE4z8k-UF4rlsiNGmaQxS5/view?usp=sharing",
+      "url": "https://youtu.be/5erOXbbmZK4",
       "key": "arrays",
       "properties": {
         "type": "Video",
@@ -6450,7 +6450,7 @@
     },
     {
       "name": "Constants",
-      "url": "https://drive.google.com/file/d/1ZFffIRmpx4BJWj-8X3pOYVAIHCEs4uyu/view?usp=sharing",
+      "url": "https://youtu.be/iXpPXRnaQag",
       "key": "constants",
       "properties": {
         "type": "Video",
@@ -6474,7 +6474,7 @@
     },
     {
       "name": "Enhanced for Loops",
-      "url": "https://drive.google.com/file/d/1wJ6e8eMVE2bw5LC7HJAd1vsr01bJfXQ6/view?usp=sharing",
+      "url": "https://youtu.be/6BLXdwSyTUQ",
       "key": "enhanced_for_loops",
       "properties": {
         "type": "Video",
@@ -6534,7 +6534,7 @@
     },
     {
       "name": "How Do Software Engineers Write Algorithms?",
-      "url": "https://drive.google.com/file/d/16XLWWcJBqX7daMO0Q9iPyRIDAMVjzGSJ/view?usp=sharing",
+      "url": "https://youtu.be/3oH0fyB3xx0",
       "key": "how_do_software_engineers_write_algorithms_",
       "properties": {
         "type": "Video",
@@ -6546,7 +6546,7 @@
     },
     {
       "name": "Introducing for Loops",
-      "url": "https://drive.google.com/file/d/1YQV3hU69w628iHyXtDeJ1r2uE3go3nZd/view?usp=sharing",
+      "url": "https://youtu.be/R0uGBEjb6tM",
       "key": "introducing_for_loops",
       "properties": {
         "type": "Video",
@@ -6570,7 +6570,7 @@
     },
     {
       "name": "Nested Loops",
-      "url": "https://drive.google.com/file/d/1LkDYSa9eDg1iBc_EmPDRkK13-ZTUQZy5/view?usp=sharing",
+      "url": "https://youtu.be/2qWWE8RVOvs",
       "key": "nested_loops",
       "properties": {
         "type": "Video",
@@ -6618,7 +6618,7 @@
     },
     {
       "name": "Polymorphism",
-      "url": "https://drive.google.com/file/d/1UUV1LKUumaYH2tevjUct0qqafU42EcW9/view?usp=sharing",
+      "url": "https://youtu.be/4xXGio3VDZo",
       "key": "polymorphism",
       "properties": {
         "type": "Video",
@@ -6642,7 +6642,7 @@
     },
     {
       "name": "Static Variables",
-      "url": "https://drive.google.com/file/d/1Ie39OmNCaTnOlZkdU96AE1qw2EC-RqVR/view?usp=sharing",
+      "url": "https://youtu.be/ldMzR8nWwJA",
       "key": "static_variables",
       "properties": {
         "type": "Video",
@@ -7366,7 +7366,7 @@
     {
       "key": "immutable",
       "word": "Immutable",
-      "definition": "The data type cannot be changed once it is created",
+      "definition": "The content cannot be changed once it is created",
       "properties": {
       },
       "seeding_key": {

@@ -334,6 +334,9 @@ setCallback(function(message) {
               sinon.spy(jsInterpreter, 'executeInterpreter');
               jsInterpreter.executeInterpreter(true);
             });
+            afterEach(() => {
+              sinon.restore();
+            });
 
             it("will be created from the interpreter's callback function", () => {
               expect(lastCallback).to.be.a('function');
@@ -487,6 +490,9 @@ myCallback("this message is coming from inside the interpreter");
       onPauseObserver = sinon.spy();
       jsInterpreter.onPause.register(onPauseObserver);
       sinon.spy(jsInterpreter, 'handleError');
+    });
+    afterEach(() => {
+      sinon.restore();
     });
 
     function getCurrentLine() {

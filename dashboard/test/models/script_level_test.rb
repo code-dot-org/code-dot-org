@@ -283,20 +283,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal student.id, summary[:userId]
   end
 
-  test 'calling next_level when next level is unplugged skips the level for script without lessons' do
-    last_20h_maze_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '2_19'}, script_id: 1)
-    first_20h_artist_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '1_1'}, script_id: 1)
-
-    assert_equal first_20h_artist_1_level, last_20h_maze_1_level.next_progression_level
-  end
-
-  test 'calling next_level when next level is not unplugged does not skip the level for script without lessons' do
-    first_20h_artist_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '1_1'}, script_id: 1)
-    second_20h_artist_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '1_2'}, script_id: 1)
-
-    assert_equal second_20h_artist_1_level, first_20h_artist_1_level.next_progression_level
-  end
-
   test 'calling next_level when next level is unplugged skips the level' do
     script = create(:script, name: 's1')
     lesson_group = create(:lesson_group, script: script)

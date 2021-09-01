@@ -2,13 +2,15 @@
   "script": {
     "name": "self-paced-pl-csd4-2021",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-16 00:54:47 UTC",
+    "serialized_at": "2021-08-24 14:44:25 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd4-2021"
@@ -37,7 +39,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
+        "overview": "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes",
+        "student_overview": "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -53,7 +56,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n\n**Suggested Time:** 25 minutes"
+        "overview": "**You will:**\n\n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n\n**Suggested Time:** 25 minutes",
+        "student_overview": "**You will:**\n\n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n\n**Suggested Time:** 25 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -69,7 +73,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 20 minutes"
+        "overview": "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
