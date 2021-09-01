@@ -83,10 +83,14 @@ class CourseVersion < ApplicationRecord
       course_version = nil
     end
 
-    if content_root.prevent_course_version_change? && content_root.course_version != course_version
+    # Check if we should prevent saving the new course version:
+    # - We can always add a course version if the content_root didn't previously have one
+    # - If the content root's previous course version equals the new one, then there's no change
+    # - If the content_root doesn't prevent a course version change, we can safely change it
+    if content_root.course_version && content_root.course_version != course_version && content_root.prevent_course_version_change?
       raise "cannot change course version of #{content_root.name}"
     end
-    course_version&.save!
+    course_version.save! if course_version
 
     # Destroy the previously associated CourseVersion and CourseOffering if appropriate. This can happen if either:
     #   - family_name or version_year was changed
