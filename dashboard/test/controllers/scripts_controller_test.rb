@@ -7,7 +7,6 @@ class ScriptsControllerTest < ActionController::TestCase
     @admin = create(:admin)
     @not_admin = create(:user)
     @platformization_partner = create(:platformization_partner)
-    @levelbuilder = create(:levelbuilder)
 
     @in_development_unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
 
@@ -32,7 +31,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should get index" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    sign_in(@levelbuilder)
+    sign_in(create(:levelbuilder))
     get :index
     assert_response :success
     assert_not_nil assigns(:scripts)
@@ -245,21 +244,21 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should not get edit on production" do
     CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     get :edit, params: {id: 'course1'}
     assert_response :forbidden
   end
 
   test "should get edit on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     get :edit, params: {id: 'course1'}
     assert_response :ok
   end
 
   test "should not be able to edit on levelbuilder in locale besides en-US" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     with_default_locale(:de) do
       get :edit, params: {id: 'course1'}
     end
@@ -269,7 +268,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should get edit on test" do
     CDO.stubs(:rack_env).returns(:test)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     get :edit, params: {id: 'course1'}
     assert_response :ok
   end
@@ -277,7 +276,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should not get edit on staging" do
     CDO.stubs(:rack_env).returns(:staging)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     get :edit, params: {id: 'course1'}
     assert_response :forbidden
   end
@@ -301,7 +300,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "edit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     unit = Script.find_by_name('course1')
     get :edit, params: {id: unit.name}
 
@@ -378,7 +377,7 @@ class ScriptsControllerTest < ActionController::TestCase
       filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
     end
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     post :create, params: {
       script: {name: unit_name},
@@ -393,7 +392,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test 'cannot create legacy unit' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     unit_name = 'legacy'
     post :create, params: {
@@ -406,7 +405,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test 'destroy raises exception for evil filenames' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     # Note that these unit names (intentionally) fail model validation.
     [
@@ -425,7 +424,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "cannot update on production" do
     CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
@@ -442,7 +441,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "can update on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
@@ -463,7 +462,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "update published state to in_development" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
@@ -484,7 +483,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "update published state to pilot" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
@@ -506,7 +505,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "update published state to beta" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
@@ -527,7 +526,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "update published state to preview" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
@@ -548,7 +547,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "update published state to stable" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
@@ -570,7 +569,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "can update on test without modifying filesystem" do
     CDO.stubs(:rack_env).returns(:test)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
@@ -588,7 +587,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "cannot update on staging" do
     CDO.stubs(:rack_env).returns(:staging)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
@@ -604,7 +603,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
@@ -623,7 +622,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'can update if database matches starting content for current edit page' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
@@ -648,7 +647,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'updating migrated unit without differences updates timestamp' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     Timecop.freeze do
@@ -678,7 +677,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'cannot update migrated unit with outdated timestamp' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script, is_migrated: true
@@ -704,7 +703,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'can update migrated unit containing migrated script levels' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script, name: 'migrated', is_migrated: true
@@ -738,7 +737,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'cannot update migrated unit containing legacy script levels' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script, name: 'migrated', is_migrated: true
@@ -771,7 +770,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'updates teacher resources' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
@@ -788,7 +787,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'updates migrated teacher resources' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta, is_migrated: true
@@ -814,7 +813,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'updates migrated student resources' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta, is_migrated: true
@@ -839,7 +838,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'updates pilot_experiment' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
@@ -861,7 +860,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'does not hide unit with blank pilot_experiment' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
@@ -883,7 +882,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'update: can update general_params' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
@@ -914,7 +913,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'set_and_unset_teacher_resources' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
@@ -952,7 +951,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'set and unset all general_params' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
@@ -1019,7 +1018,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'add lesson to unit' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     level = create :level
@@ -1142,7 +1141,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "levelbuilder does not see visible after warning if lesson does not have visible_after property" do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     get :show, params: {id: 'course1'}
     assert_response :success
@@ -1151,7 +1150,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "levelbuilder does not see visible after warning if lesson has visible_after property that is in the past" do
     Timecop.freeze(Time.new(2020, 4, 2))
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     create(:level, name: "Level 1")
     unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
@@ -1165,7 +1164,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "levelbuilder sees visible after warning if lesson has visible_after property that is in the future" do
     Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     create(:level, name: "Level 1")
     unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
@@ -1219,7 +1218,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "view all instructions page for migrated unit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in(@levelbuilder)
+    sign_in(create(:levelbuilder))
 
     get :instructions, params: {id: @migrated_unit.name}
     assert_response :success
@@ -1227,7 +1226,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "view all instructions page for unmigrated unit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in(@levelbuilder)
+    sign_in(create(:levelbuilder))
 
     get :instructions, params: {id: @unmigrated_unit.name}
     assert_response :success
@@ -1235,7 +1234,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "get_rollup_resources return rollups for a unit with code, resources, standards, and vocab" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in(@levelbuilder)
+    sign_in(create(:levelbuilder))
 
     course_version = create :course_version, content_root: @migrated_unit
     lesson_group = create :lesson_group, script: @migrated_unit
@@ -1254,7 +1253,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "get_rollup_resources doesn't return rollups if no lesson in a unit has the associated object" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in(@levelbuilder)
+    sign_in(create(:levelbuilder))
 
     course_version = create :course_version, content_root: @migrated_unit
     lesson_group = create :lesson_group, script: @migrated_unit
@@ -1272,7 +1271,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "get_unit bypasses cache for edit route" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in(@levelbuilder)
+    sign_in(create(:levelbuilder))
 
     Script.expects(:get_from_cache).never
     Script.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
