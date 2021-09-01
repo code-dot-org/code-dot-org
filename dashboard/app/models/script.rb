@@ -1322,6 +1322,7 @@ class Script < ApplicationRecord
       unit_data, i18n =
         if general_params[:is_migrated]
           lesson_groups = general_params[:lesson_groups]
+          raise 'lesson_groups param is required for migrated scripts' unless lesson_groups
           [{lesson_groups: lesson_groups}, get_lesson_groups_i18n(lesson_groups)]
         else
           ScriptDSL.parse(unit_text, 'input', unit_name)
