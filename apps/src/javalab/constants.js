@@ -67,9 +67,7 @@ export const NeighborhoodExceptionType = makeEnum(
 
 export const TheaterSignalType = {
   AUDIO_URL: 'AUDIO_URL',
-  VISUAL_URL: 'VISUAL_URL',
-  AUDIO: 'AUDIO',
-  VISUAL: 'VISUAL'
+  VISUAL_URL: 'VISUAL_URL'
 };
 
 export const StatusMessageType = {
