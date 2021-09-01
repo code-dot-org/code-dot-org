@@ -10,8 +10,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
     @in_development_unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
 
-    @no_progress_or_assignment_student = create :student
-
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
     @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
@@ -192,13 +190,13 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: do not redirect when showing latest stable version in family for student" do
-    sign_in @no_progress_or_assignment_student
+    sign_in create(:student)
     get :show, params: {id: @coursez_2018.name}
     assert_response :success
   end
 
   test "show: redirect from older version to latest stable version in family for student" do
-    sign_in @no_progress_or_assignment_student
+    sign_in create(:student)
     get :show, params: {id: @coursez_2017.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
@@ -209,7 +207,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect from new unstable version to latest stable version in family for student" do
-    sign_in @no_progress_or_assignment_student
+    sign_in create(:student)
     get :show, params: {id: @coursez_2019.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
@@ -230,7 +228,7 @@ class ScriptsControllerTest < ActionController::TestCase
   # the student is not redirected if true is returned.
   test "show: do not redirect student to latest stable version in family if they can view the unit version" do
     Script.any_instance.stubs(:can_view_version?).returns(true)
-    sign_in @no_progress_or_assignment_student
+    sign_in create(:student)
     get :show, params: {id: @coursez_2017.name}
     assert_response :ok
   end
