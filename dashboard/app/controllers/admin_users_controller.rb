@@ -116,7 +116,7 @@ class AdminUsersController < ApplicationController
     redirect_to :manual_pass_form
   end
 
-  # get /admin/user_progress
+  # GET /admin/user_progress
   def user_progress_form
     user_identifier = params[:user_identifier]
     script_offset = params[:script_offset] || 0 # Not currently exposed in admin UI but can be manually added to URL
@@ -130,16 +130,23 @@ class AdminUsersController < ApplicationController
       @user_scripts = UserScript.
         where(user_id: @target_user.id).
         order(updated_at: :desc).
-        limit(5).
+        limit(100).
         offset(script_offset)
     end
+  end
 
-    if @user_scripts
-      script_ids = @user_scripts.pluck(:script_id)
-      @user_levels = UserLevel.
-        where(user_id: @target_user.id, script_id: script_ids).
-        order(updated_at: :desc)
-    end
+  # GET /admin/delete_progress
+  # This page is linked from /admin/user_progress to confirm that the admin
+  # wants to delete progress and to capture additional information. It expects
+  # user_id and script_id to be passed in as parameters.
+  def delete_progress_form
+    params.require([:user_id, :script_id])
+
+    @target_user = User.find(params[:user_id])
+    @script = Script.get_from_cache(params[:script_id])
+    @user_level_count = UserLevel.
+      where(user_id: @target_user.id, script_id: @script.id).
+      count
   end
 
   # get /admin/permissions
