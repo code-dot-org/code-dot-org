@@ -15,7 +15,8 @@ const FAKE_VERSION_LIST_RESPONSE = {
     {
       versionId: FAKE_CURRENT_VERSION,
       lastModified: new Date('2018-08-01T03:00:00'),
-      isLatest: true
+      isLatest: true,
+      comment: 'Commit comment'
     },
     {
       versionId: FAKE_PREVIOUS_VERSION,
@@ -148,6 +149,7 @@ describe('VersionHistoryWithCommits', () => {
 
       // Rendered two version rows
       expect(wrapper.find('VersionWithCommit')).to.have.length(2);
+      expect(wrapper.text()).to.include('Commit comment');
     });
 
     it('attempts to restore a chosen version when clicking restore button', () => {
