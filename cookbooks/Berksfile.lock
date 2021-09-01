@@ -1,6 +1,6 @@
 DEPENDENCIES
   apt
-  ark
+  ark (< 6.0.0)
   build-essential
   cdo-analytics
     path: cdo-analytics
@@ -55,8 +55,8 @@ DEPENDENCIES
 
 GRAPH
   apt (7.4.0)
-  ark (6.0.3)
-    seven_zip (>= 3.1)
+  ark (5.1.1)
+    seven_zip (~> 3.2.0)
   aws_cloudwatch (1.0.2)
   build-essential (8.2.1)
     mingw (>= 1.1)
