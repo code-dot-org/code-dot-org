@@ -15,10 +15,10 @@ export function getManifest(appType, locale = 'en_us') {
   );
 }
 
-/* Returns the metadata for a specific animation file in level_animations
+/* Returns the metadata for a specific animation library file
  * @param filename {String} metadata filename
  */
-export function getMetadataForLevelAnimationFile(filename) {
+export function getAnimationLibraryFile(filename) {
   return fetch(`/api/v1/animation-library/${filename}`).then(response =>
     response.json()
   );
@@ -106,21 +106,25 @@ export function buildAnimationMetadata(files) {
     let json = fileObject['json'];
     let png = fileObject['png'];
     resolvedPromisesArray.push(
-      getMetadataForLevelAnimationFile(json.key).then(metadata => {
-        // Metadata contains name, frameCount, frameSize, looping, frameDelay
-        let combinedMetadata = metadata;
-        combinedMetadata['jsonLastModified'] = json.last_modified;
-        combinedMetadata['pngLastModified'] = png.last_modified;
-        combinedMetadata['version'] = png.version_id;
-        combinedMetadata[
-          'sourceUrl'
-        ] = `/api/v1/animation-library/level_animations/${png.version_id}/${
-          png.key
-        }`;
-        combinedMetadata['sourceSize'] = png.source_size;
-        animationMetadataByName[fileKey] = combinedMetadata;
-        return Promise.resolve();
-      })
+      getAnimationLibraryFile(json.key)
+        .then(metadata => {
+          // Metadata contains name, frameCount, frameSize, looping, frameDelay
+          let combinedMetadata = metadata;
+          combinedMetadata['jsonLastModified'] = json.last_modified;
+          combinedMetadata['pngLastModified'] = png.last_modified;
+          combinedMetadata['version'] = png.version_id;
+          combinedMetadata[
+            'sourceUrl'
+          ] = `/api/v1/animation-library/level_animations/${png.version_id}/${
+            png.key
+          }`;
+          combinedMetadata['sourceSize'] = png.source_size;
+          animationMetadataByName[fileKey] = combinedMetadata;
+          return Promise.resolve();
+        })
+        .catch(err => {
+          return Promise.reject(err);
+        })
     );
   }
   return Promise.all(resolvedPromisesArray).then(() => {
