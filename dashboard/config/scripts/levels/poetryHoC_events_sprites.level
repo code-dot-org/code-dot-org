@@ -36,13 +36,8 @@
     "instructions_icon": "octiIntimate",
     "callout_json": "[]",
     "parent_level_id": 29616,
-    "video_key": "hoc_dance_events",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "validation_code": "// for some reason Array.includes doesn't work in validation code.\r\nfunction arrayIncludes(arr, item) {\r\n  for (var i = 0; i < arr.length; i++) {\r\n    if (arr[i] == item) {\r\n      return true;\r\n    }\r\n  }\r\n  return false;\r\n}\r\n\r\nvar spriteIds = getSpriteIdsInUse();\r\nvar validationInfo = getValidationInfo();\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {spriteIds: spriteIds};\r\n}\r\n\r\nvar hasLineEvent = validationInfo.lineEvents.length > 0;\r\n\r\nvar previousSpriteIds = validationProps.previous.spriteIds;\r\n// Explicit loops to check for added/removed sprites instead of just\r\n// using spriteIds.length to account for possibility that one sprite\r\n// was added and another was deleted within the same frame.\r\nvar addedSprite = false;\r\nfor (var i = 0; i < spriteIds.length; i++) {\r\n  if (!arrayIncludes(previousSpriteIds, spriteIds[i])) {\r\n    addedSprite = true;\r\n  }\r\n}\r\n\r\nvar removedSprite = false;\r\nfor (var i = 0; i < previousSpriteIds.length; i++) {\r\n  if (!arrayIncludes(spriteIds, previousSpriteIds[i])) {\r\n    removedSprite = true;\r\n  }\r\n}\r\n\r\nif (hasLineEvent && (addedSprite || removedSprite)) {\r\n  setSuccessFrame();\r\n  validationProps.addedSprite = validationProps.addedSprite || addedSprite;\r\n  validationProps.removedSprite = validationProps.removedSprite || removedSprite;\r\n}\r\nvalidationProps.previous.spriteIds = spriteIds;\r\n\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    if (validationProps.addedSprite && validationProps.removedSprite) {\r\n      levelFailure(0, 'genericSuccess');\r\n    } else if (validationProps.addedSprite) {\r\n      levelFailure(0, 'poemBotSuccessAddedSprite');\r\n    } else if (validationProps.removedSprite) {\r\n      levelFailure(0, 'poemBotSuccessRemovedSprite');\r\n    }\r\n  } else {\r\n    levelFailure(3, 'poemBotSpriteEvent');\r\n  }\r\n}"
->>>>>>> staging
   },
   "user_id": 1196,
   "game_id": 64,
