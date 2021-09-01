@@ -7,7 +7,7 @@ cookbook 'ark'
 cookbook 'build-essential'
 cookbook 'chef-client'
 cookbook 'ntp'
-cookbook 'seven_zip'
+cookbook 'seven_zip', '< 4.0.0' # 4.0.0 requires Chef 16
 cookbook 'chef_client_updater'
 
 # List all local cookbooks using local-mode Chef.
