@@ -4,8 +4,6 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @platformization_partner = create(:platformization_partner)
-
     @in_development_unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
 
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
@@ -312,7 +310,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test 'platformization partner cannot create unit' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @platformization_partner
+    sign_in create(:platformization_partner)
     post :create, params: {
       script: {name: 'test-unit-create'},
       script_text: '',
@@ -323,21 +321,21 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "platformization partner cannot edit our units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @platformization_partner
+    sign_in create(:platformization_partner)
     get :edit, params: {id: @coursez_2019.id}
     assert_response :forbidden
   end
 
   test "platformization partner can edit their units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @platformization_partner
+    sign_in create(:platformization_partner)
     get :edit, params: {id: @partner_unit.id}
     assert_response :success
   end
 
   test "platformization partner cannot update our units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @platformization_partner
+    sign_in create(:platformization_partner)
     patch :update, params: {
       id: @coursez_2019.id,
       script: {name: @coursez_2019.name},
@@ -350,7 +348,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     stub_file_writes(@partner_unit.name)
 
-    sign_in @platformization_partner
+    sign_in create(:platformization_partner)
     patch :update, params: {
       id: @partner_unit.id,
       script: {name: @partner_unit.name},
