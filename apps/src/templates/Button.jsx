@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import classNames from 'classnames';
 
 const ButtonColor = {
   orange: 'orange',
@@ -39,7 +40,7 @@ class Button extends React.Component {
     text: PropTypes.string.isRequired,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
     color: PropTypes.oneOf(Object.keys(ButtonColor)),
-    displayAsText: PropTypes.bool,
+    styleAsText: PropTypes.bool,
     icon: PropTypes.string,
     iconClassName: PropTypes.string,
     iconStyle: PropTypes.object,
@@ -68,7 +69,7 @@ class Button extends React.Component {
     const {
       href,
       text,
-      displayAsText,
+      styleAsText,
       icon,
       iconClassName,
       iconStyle,
@@ -115,13 +116,13 @@ class Button extends React.Component {
     // potential exploits. Therefore, we do so here.
     const rel = target === '_blank' ? 'noopener noreferrer' : undefined;
 
-    let tagStyle;
-    let className = this.props.className || '';
-    if (displayAsText) {
+    let tagStyle, className;
+    if (styleAsText) {
       tagStyle = [styles.main, styles.textButton, style];
-      className += 'button-active-no-border';
+      className = classNames(this.props.className, 'button-active-no-border');
     } else {
       tagStyle = [styles.main, styles.colors[color], sizeStyle, style];
+      className = this.props.className;
     }
 
     return (
@@ -318,7 +319,7 @@ const styles = {
     color: color.teal,
     border: 'none',
     backgroundColor: 'unset',
-    fontWeight: 'bold',
+    fontFamily: '"Gotham 5r", sans-serif',
     boxShadow: 'none',
     padding: 0,
     margin: 0,
