@@ -141,6 +141,32 @@ class CourseOfferingTest < ActiveSupport::TestCase
     end
   end
 
+  test "throws exception if removing course version of script that prevent course version change" do
+    script = create :script, is_course: true, family_name: 'family', version_year: '2000'
+    CourseOffering.add_course_offering(script)
+
+    script.family_name = nil
+    script.save!
+    script.reload
+    script.stubs(:prevent_course_version_change?).returns(true)
+    assert_raises do
+      CourseOffering.add_course_offering(script)
+    end
+  end
+
+  test "throws exception if removing course version of course that prevent course version change" do
+    course = create :unit_group, family_name: 'family', version_year: '2000'
+    CourseOffering.add_course_offering(course)
+
+    course.family_name = nil
+    course.save!
+    course.reload
+    course.stubs(:prevent_course_version_change?).returns(true)
+    assert_raises do
+      CourseOffering.add_course_offering(course)
+    end
+  end
+
   test "enforces key format" do
     course_offering = build :course_offering, key: 'invalid key'
     refute course_offering.valid?
