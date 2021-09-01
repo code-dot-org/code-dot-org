@@ -25869,7 +25869,9 @@ en:
               description_student: 
               description_teacher: "- Use setProperty() to change elements on the screen\n  - Focus on colors and x/y positions using random numbers\n- Use setText() to change text on screen \n- NO circuit playground; NO if statements; NO variables"
             lesson-5:
-              name: Unplugged Board Inputs?
+              name: Sensors
+              description_student: 
+              description_teacher: 
             lesson-6:
               name: Board Inputs (Button Toggle)
               description_student: 
@@ -25927,7 +25929,27 @@ en:
               name: 'Project: Maker'
               description_student: 
               description_teacher: 
-          lesson_groups: {}
+            lesson-13:
+              name: Accelerometer
+            lesson-14:
+              name: Music + Arrays
+            lesson-15:
+              name: 'Mini Project: Sensors'
+            lesson-17:
+              name: Physical Outputs (LEDs)
+            lesson-16:
+              name: Physical Inputs
+            lesson-18:
+              name: Prototyping
+            lesson-19:
+              name: Project
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Content
           name: csdu6-playground
           title: CSD Unit 6 Playground
           description_audience: ''
