@@ -196,5 +196,6 @@
   "poemBotRemovedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
   "poemBotSetSize": "Use a `set size` block to change the size of your sprite. Use a number other than 100.",
   "poemBotNoTextEffects": "You need to add a text effect to your project.",
-  "poemBotOneTextEffect": "Great work! You added one text effect. Try adding another."
+  "poemBotOneTextEffect": "Great work! You added one text effect. Try adding another.",
+  "poemBotDeletedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox."
 }
