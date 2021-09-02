@@ -70,7 +70,7 @@ export const POEMS = {
       'The frumious Bandersnatch!”'
     ]
   },
-  rumi: {
+  rumi_1: {
     author: 'Rumi',
     title: 'Sing',
     lines: [
@@ -79,6 +79,14 @@ export const POEMS = {
       'Not worrying about',
       'Who hears or',
       'What they think.'
+    ]
+  },
+  rumi_2: {
+    author: 'Rumi',
+    title: 'Ocean',
+    lines: [
+      'You are not a drop in the ocean,',
+      'You are the entire ocean in one drop'
     ]
   },
   field: {
@@ -93,8 +101,7 @@ export const POEMS = {
       '"Where are you going, and what do you wish?"',
       'The old moon asked the three.',
       '"We have come to fish for the herring-fish',
-      'That live in this beautiful sea;',
-      'Nets of silver and gold have we,"',
+      'That live in this beautiful sea...',
       'Said Wynken, Blynken, And Nod.'
     ]
   },
