@@ -861,5 +861,5 @@ export default connect(
     }
   }),
   null,
-  {forwardRef: true}
+  {withRef: true}
 )(Radium(TopInstructions));
