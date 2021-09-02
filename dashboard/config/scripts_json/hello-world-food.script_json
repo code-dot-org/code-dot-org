@@ -7,8 +7,8 @@
       "is_migrated": true
     },
     "new_name": null,
-    "family_name": "poster",
-    "serialized_at": "2021-09-01 18:53:16 UTC",
+    "family_name": null,
+    "serialized_at": "2021-09-01 19:06:56 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "hello-world-food"
@@ -78,6 +78,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_print"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -99,6 +102,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "food_helloworld_locations"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -120,6 +126,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "food_helloworld_multi"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -141,6 +150,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "food_helloworld_click"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -162,6 +174,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_events"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -183,6 +198,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_choices_backgrounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -204,6 +222,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_choices_properties"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -225,6 +246,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_choices_costumes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -246,6 +270,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_choices_behaviors"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -267,6 +294,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_choices_sounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -288,6 +318,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_project_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
