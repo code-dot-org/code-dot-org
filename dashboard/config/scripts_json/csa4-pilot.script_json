@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-02 16:34:43 UTC",
+    "serialized_at": "2021-09-02 19:19:34 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -3958,6 +3958,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1"
+        ],
         "progression": "The Math Class"
       },
       "bonus": false,
@@ -3980,6 +3983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2"
+        ],
         "progression": "Working with the Math Class"
       },
       "bonus": false,
@@ -4002,6 +4008,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3"
+        ],
         "progression": "Working with the Math Class"
       },
       "bonus": false,
@@ -4024,6 +4033,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4"
+        ],
         "progression": "Working with the Math Class"
       },
       "bonus": false,
@@ -4046,6 +4058,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5"
+        ],
         "progression": "Working with the Math Class"
       },
       "bonus": false,
@@ -4068,6 +4083,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L6"
+        ],
         "progression": "Working with the Math Class"
       },
       "bonus": false,
@@ -4090,6 +4108,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4111,6 +4132,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L1"
+        ],
         "progression": "Casting Exploration"
       },
       "bonus": false,
@@ -4133,6 +4157,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L2"
+        ],
         "progression": "Generating Random Numbers"
       },
       "bonus": false,
@@ -4155,6 +4182,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L3"
+        ],
         "progression": "Generating Random Numbers"
       },
       "bonus": false,
@@ -4177,6 +4207,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L4"
+        ],
         "progression": "Generating Random Numbers"
       },
       "bonus": false,
@@ -4199,6 +4232,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4221,6 +4257,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L1"
+        ],
         "progression": "Exploring Operators"
       },
       "bonus": false,
@@ -4243,6 +4282,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L2"
+        ],
         "progression": "Painting with Relational Operators"
       },
       "bonus": false,
@@ -4265,6 +4307,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L3"
+        ],
         "progression": "Painting with Relational Operators"
       },
       "bonus": false,
@@ -4287,6 +4332,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L4"
+        ],
         "progression": "Painting with Relational Operators"
       },
       "bonus": false,
@@ -4309,6 +4357,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
