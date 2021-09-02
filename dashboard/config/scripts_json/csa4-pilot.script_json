@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-01 18:54:43 UTC",
+    "serialized_at": "2021-09-02 16:34:43 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -108,9 +108,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. ",
-        "preparation": "* Print copies of the Exploring Operators handout (one per student)\n* Gather 3-5 sticky notes for each pair of students",
-        "student_overview": "Today is all about using code to make decisions. You compare relationships between values while using conditional statements to help the `Painter` make decisions. "
+        "overview": "Students use relational operators to write and evaluate Boolean expressions. Students then use these relational operators to expand the conditions they can check with `if` statements. Students revisit The Neighborhood to practice writing expressions with relational operators in `if` statements to navigate and paint under specific conditions.",
+        "preparation": "* Print copies of the Exploring Operators handout (one per student)\n* Gather a sticky note for each student",
+        "student_overview": "In The Neighborhood, you have used Boolean methods to help the `Painter` make decisions about navigating and painting. In this lesson, you learn to use relational operators to write Boolean expressions and use these with `if` statements to expand the conditions you can check while navigating and painting in The Neighborhood. "
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -1535,7 +1535,7 @@
       "key": "14c69a55-a843-4827-9d6e-594f7077bcb2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you remember about a Boolean value?*\n\n**Discussion Goal:** Students share that Boolean values are only `true` or `false`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the `isOnBucket()` method and its return type.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you remember about Boolean values?*\n\n**Discussion Goal:** Students recall that Boolean values are only `true` or `false`. Students may share examples of where they have seen or used Boolean values, such as checking if the `Painter` can move or if the `Painter` is facing a specific direction in The Neighborhood.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the `isOnBucket()` method.",
         "name": "Boolean Value"
       },
       "seeding_key": {
@@ -1544,118 +1544,113 @@
       }
     },
     {
-      "key": "c23ac4b5-9e0b-4853-88b6-39ead21fb3d5",
+      "key": "056474a1-823c-4cc0-bedf-675ef94cec91",
       "position": 2,
       "properties": {
-        "description": "In Unit 1, you learned that sometimes we need to determine when a value is `true` or `false`. To review, we will look back at scenarios using the `Painter`’s information-gathering commands to determine if a Boolean value is `true` or `false`.",
+        "description": "In Unit 1, you learned that sometimes we need to determine when a value is `true` or `false`. To review, we will look back at scenarios using the `Painter`’s Boolean methods.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "c23ac4b5-9e0b-4853-88b6-39ead21fb3d5",
+        "activity_section.key": "056474a1-823c-4cc0-bedf-675ef94cec91",
         "lesson_activity.key": "577f24f7-2440-4a23-84be-68051b42e60d"
       }
     },
     {
-      "key": "f0708d9c-d464-465e-82ce-64a29952e6be",
+      "key": "d7ea9d74-5f86-4581-a630-2b34fb05ce79",
       "position": 3,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to review the scenarios. Have students determine if the output is `true` or `false` for each scenario.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `canMove()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `isOnBucket()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingNorth()`"
+        "description": "**Do This:** Click through each animated slide to review the scenarios. Have students determine if the output is `true` or `false` for each scenario.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `canMove()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `isOnBucket()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingNorth()`"
       },
       "seeding_key": {
-        "activity_section.key": "f0708d9c-d464-465e-82ce-64a29952e6be",
+        "activity_section.key": "d7ea9d74-5f86-4581-a630-2b34fb05ce79",
         "lesson_activity.key": "577f24f7-2440-4a23-84be-68051b42e60d"
       }
     },
     {
-      "key": "a91a58b4-a90d-4ce4-ae77-9bac560d411d",
+      "key": "241aa607-3316-4b81-b177-86367930979f",
       "position": 4,
       "properties": {
         "description": "Today we will learn how to expand our use of `if` statements with relational operators.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "a91a58b4-a90d-4ce4-ae77-9bac560d411d",
+        "activity_section.key": "241aa607-3316-4b81-b177-86367930979f",
         "lesson_activity.key": "577f24f7-2440-4a23-84be-68051b42e60d"
       }
     },
     {
-      "key": "016e1ef0-e2fd-43c8-b611-53dd9ef591be",
+      "key": "80c80ba7-857b-49d1-b17c-7803dd3acb09",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you used operators like less than, greater than, or equal?*\n\n**Discussion Goal:** Students recall using operators in math or previous computer science courses. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you used operators like less than, greater than, or equal?*\n\n**Discussion Goal:** Students recall using operators in math or previous computer science courses.  ",
         "duration": "20",
         "name": "Relational Operators"
       },
       "seeding_key": {
-        "activity_section.key": "016e1ef0-e2fd-43c8-b611-53dd9ef591be",
+        "activity_section.key": "80c80ba7-857b-49d1-b17c-7803dd3acb09",
         "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
       }
     },
     {
-      "key": "d49d5c73-f08b-4af3-8f00-8c24ca8e6688",
+      "key": "709b688c-c006-4790-96ee-4e31e6d63f71",
       "position": 2,
       "properties": {
         "description": "Programming is all about testing and comparing values to make decisions about actions to take. Relational operators help us evaluate values to make these decisions.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "d49d5c73-f08b-4af3-8f00-8c24ca8e6688",
+        "activity_section.key": "709b688c-c006-4790-96ee-4e31e6d63f71",
         "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
       }
     },
     {
-      "key": "33d90a96-8e7f-4adb-a4f6-8d33ce465965",
+      "key": "6265bd68-c6ba-471b-925f-02fb38de76e3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the definition and chart of relational operators.\n* The `==` operator is equal to\n* The `!=` operator is not equal to\n* The `>` operator is greater than\n* The `<` operator is less than\n* The `>=` operator is greater than or equal to\n* The `<=` operator is less than or equal to",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define relational operators.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "As you review the chart, emphasize the difference between the assignment operator (`=`) and the equals operator (`==`). Confusing the assignment operator with the equals operator is common. It is important when reading out loud to differentiate the single equal sign as an assignment and the double equals sign as a comparison."
+            "markdown": "Confusing the assignment operator with the equals operator is common. As you review the chart, emphasize the difference between the assignment operator (`=`) and the equals operator (`==`)."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "33d90a96-8e7f-4adb-a4f6-8d33ce465965",
+        "activity_section.key": "6265bd68-c6ba-471b-925f-02fb38de76e3",
         "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
       }
     },
     {
-      "key": "b3822b2c-921b-4cfa-9da4-e45662a0d2bc",
+      "key": "acd3e267-b48d-440c-9b17-c5c1f0ab2e9c",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In what order would you evaluate this expression?*\n\n**Discussion Goal:** Students recall the order of operations and how to evaluate the expression.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the order of operations that Java uses for arithmetic and relational operators when evaluating expressions.\n* The highest precedence is multiplication, division, and modulus.\n* The second precedence is addition and subtraction.\n* The third precedence is the relational operators.\n* The lowest precedence is the equality operators.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In what order would you evaluate this expression?*\n\n**Discussion Goal:** Students recall the order of operations and how to evaluate the expression.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to introduce Java's order of operations for arithmetic and relational operators when evaluating expressions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define Boolean expressions.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "As you click through the animated slide, review the mod `%` operator. Emphasize that relational operators have lower precedence than addition and subtraction operators and that relational operators have higher precedence than equality operators. "
+            "markdown": "As you click through the animated slide, review the mod `%` operator. Emphasize that relational operators have lower precedence than addition and subtraction operators and that relational operators have higher precedence than equality operators."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "b3822b2c-921b-4cfa-9da4-e45662a0d2bc",
+        "activity_section.key": "acd3e267-b48d-440c-9b17-c5c1f0ab2e9c",
         "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
       }
     },
     {
-      "key": "a92e4a2a-fce1-465d-8e98-dce99c98d0e0",
+      "key": "2f4b1efc-248f-4695-aae7-59562d7c9dc8",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an Exploring Operators handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 10 minutes to complete the Exploring Operators handout. As students are working, use Catch and Release as appropriate to maintain engagement. You may choose to catch to:\n* Ask a student to demonstrate how to use the widget when they have started the plugged section of the activity.\n* Answer the fill-in-the-blank questions for the relational operators.\n* Answer the free-response questions for the numeric values.\n* Clarify how operator precedence is used in arithmetic expressions using relational operators.\n* Support students with misconceptions involving mathematical concepts.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use a public timer to differentiate between independent work and discussion, addressing all student questions after a given amount of time has elapsed."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an Exploring Operators handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Exploring Operators handout. As students are working, use Catch and Release as appropriate to maintain engagement. You may choose to catch to:\n* Ask a student to demonstrate how to use the widget when they have started the plugged section of the activity.\n* Answer the fill-in-the-blank questions for the relational operators.\n* Answer the free-response questions for the numeric values.\n* Clarify how operator precedence is used in arithmetic expressions using relational operators.\n* Support students with misconceptions involving mathematical concepts.",
+        "progression_name": "Exploring Operators"
       },
       "seeding_key": {
-        "activity_section.key": "a92e4a2a-fce1-465d-8e98-dce99c98d0e0",
+        "activity_section.key": "2f4b1efc-248f-4695-aae7-59562d7c9dc8",
         "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
       }
     },
     {
-      "key": "9c561b42-e312-49b7-947b-c46bc0f52ae1",
+      "key": "d0e14672-31d8-4f17-8af9-e1c2b11a1a7f",
       "position": 6,
       "properties": {
         "description": "You have used `if` statements in previous lessons before. Let’s recall how you would use an `if` statement to modify the outcome of a program. ",
@@ -1664,18 +1659,19 @@
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "9c561b42-e312-49b7-947b-c46bc0f52ae1",
+        "activity_section.key": "d0e14672-31d8-4f17-8af9-e1c2b11a1a7f",
         "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
       }
     },
     {
-      "key": "29126bf1-f1f9-4133-b0fc-786107c3f316",
+      "key": "ebf7de77-6b6c-4104-8cf4-258ab8843be1",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might you modify the code to check if Frida has enough paint to produce the mural?*\n\n**Discussion Goal:** Students notice that for Frida to check if she has enough paint, the variables `currentPaint` and `muralAmount` with the relational operator `<=` needs to be inside the conditional statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using relational operators inside an `if` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 through 4 on Code Studio. Remind them that they should use an `if` statement and relational operator to solve the problems."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might you modify the code to check if Frida has enough paint to produce the mural?*\n\n**Discussion Goal:** Students notice that for Frida to check if she has enough paint, the variables `currentPaint` and `muralAmount` with the relational operator `<=` needs to be inside the conditional statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using relational operators inside an `if` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 through 4 on Code Studio.",
+        "progression_name": "Painting with Relational Operators"
       },
       "seeding_key": {
-        "activity_section.key": "29126bf1-f1f9-4133-b0fc-786107c3f316",
+        "activity_section.key": "ebf7de77-6b6c-4104-8cf4-258ab8843be1",
         "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
       }
     },
@@ -1683,7 +1679,7 @@
       "key": "58d4d4a4-fa9b-48e6-bb85-abff711b4c91",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Prompt students to write down any bugs they encountered and the strategy they used to debug on a sticky note. Have students add their sticky notes to the Debugging Wall. If time permits, students should read the sticky notes placed by other students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "**Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Prompt students to write down a bug they encountered and their strategy to debug it on their sticky note. Have students add their sticky notes to the Debugging Wall. If time permits, students should read the sticky notes placed by other students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Debugging if Statements"
       },
       "seeding_key": {
@@ -1696,7 +1692,8 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9c00429a-ee55-4885-a940-33ddf5f937c4",
@@ -4217,6 +4214,116 @@
       "level_keys": [
         "CSA U4L3-L5"
       ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L4-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "2f4b1efc-248f-4695-aae7-59562d7c9dc8"
+      },
+      "level_keys": [
+        "CSA U4L4-L1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Painting with Relational Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L4-L2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ebf7de77-6b6c-4104-8cf4-258ab8843be1"
+      },
+      "level_keys": [
+        "CSA U4L4-L2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Painting with Relational Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L4-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ebf7de77-6b6c-4104-8cf4-258ab8843be1"
+      },
+      "level_keys": [
+        "CSA U4L4-L3"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Painting with Relational Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L4-L4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ebf7de77-6b6c-4104-8cf4-258ab8843be1"
+      },
+      "level_keys": [
+        "CSA U4L4-L4"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L4-L5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "9c00429a-ee55-4885-a940-33ddf5f937c4"
+      },
+      "level_keys": [
+        "CSA U4L4-L5"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4458,6 +4565,66 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot",
         "activity_section.key": "969d669a-c374-4551-9778-ac6b8c0abe5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L4-L1",
+        "script_level.level_keys": [
+          "CSA U4L4-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "2f4b1efc-248f-4695-aae7-59562d7c9dc8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L4-L2",
+        "script_level.level_keys": [
+          "CSA U4L4-L2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ebf7de77-6b6c-4104-8cf4-258ab8843be1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L4-L3",
+        "script_level.level_keys": [
+          "CSA U4L4-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ebf7de77-6b6c-4104-8cf4-258ab8843be1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L4-L4",
+        "script_level.level_keys": [
+          "CSA U4L4-L4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ebf7de77-6b6c-4104-8cf4-258ab8843be1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L4-L5",
+        "script_level.level_keys": [
+          "CSA U4L4-L5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "9c00429a-ee55-4885-a940-33ddf5f937c4"
       }
     }
   ],
@@ -5429,6 +5596,16 @@
       }
     },
     {
+      "key": "boolean_expression",
+      "word": "Boolean Expression",
+      "definition": "A logical statement that gives either a `true` or `false` value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
       "key": "alias",
       "word": "Alias",
       "definition": "A reference variable that points to the same object as another reference variable",
@@ -5608,6 +5785,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "vocabulary.key": "alias"
       }
@@ -5780,7 +5963,7 @@
     {
       "key": "ed9c8df0-539c-4bbb-bb70-737272712974",
       "properties": {
-        "description": "Construct if statements using relational operators"
+        "description": "Write `if` statements using relational operators"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
