@@ -966,12 +966,12 @@
   coursed-2019_name: Curso D (2019)
   coursee-2019_name: Curso E (2019)
   coursef-2019_name: Curso F (2019)
-  coursea-2020_name: Curso A (2019)
-  courseb-2020_name: Curso B (2019)
-  coursec-2020_name: Curso C (2019)
-  coursed-2020_name: Curso D (2019)
-  coursee-2020_name: Curso E (2019)
-  coursef-2020_name: Curso F (2019)
+  coursea-2020_name: Curso A (2020)
+  courseb-2020_name: Curso B (2020)
+  coursec-2020_name: Curso C (2020)
+  coursed-2020_name: Curso D (2020)
+  coursee-2020_name: Curso E (2020)
+  coursef-2020_name: Curso F (2020)
   coursea-2021_name: Curso A (2021)
   courseb-2021_name: Curso B (2021)
   coursec-2021_name: Curso C (2021)
@@ -1679,7 +1679,7 @@
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "En colaboración con"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* es un programa que abarca desde la niñez hasta la carrera profesional, diseñado para inspirar, educar y formar a niños y jóvenes de bajos recursos y con otras necesidades, y ayudarlos a seguir una carrera en ciencias de la computación. <a href='%{amazon_future_engineer_link}' target='_blank'>Conoce más</a>"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* es un programa integral que abarca desde la niñez hasta la carrera y tiene el objetivo de inspirar, educar y capacitar a niños y jóvenes de bajos ingresos y otros niños y jóvenes desfavorecidos para que sigan carreras en ciencias de la computación. [Más información](%{amazon_future_engineer_link})"
-  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "Si eres alumno o profesor en Francia, visita [Amazon Future Engineer - France].(%{amazon_future_engineer_france_link})"
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "Si eres estudiante o profesor en Francia, visita [Amazon Future Engineer - France].(%{amazon_future_engineer_france_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Aprende más acerca de Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "Acerca de Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_description: "Aprende sobre el programa de Amazon que abarca desde la niñez hasta la carrera profesional, diseñado para impulsar el acceso a la educación en ciencias de la computación. Encuentra información sobre cómo participar en nuestros campamentos de verano, clases de ciencias de la computación para escuelas secundarias, becas y pasantías."
@@ -1719,9 +1719,9 @@
   hoc2019_dance_previous_versions: "¿Estás buscando una versión anterior de Fiesta de baile?  \nHaz clic aquí para iniciar [Parte 1](%{dance_2018_link}) y [Parte 2](%{dance_extras_2018_link}) del último año."
   homepage_slot_text_title_at_home: "Aprende desde casa"
   homepage_slot_text_blurb_at_home: "Aprender es fácil con estos recursos"
-  homepage_slot_text_link_code_break: "¡Tómate un descanso de código!"
+  homepage_slot_text_link_code_break: "¡Tómate un recreo con código!"
   homepage_slot_text_link_do_hoc: "Prepara una Hora de Código"
-  homepage_slot_text_link_express_course: "Prueba un Curso Exprés"
+  homepage_slot_text_link_express_course: "Prueba el Curso Exprés"
   page_not_available_title: "Página no disponible"
   page_not_available_description: "Lo sentimos, la página que solicitó ya no está disponible en esta dirección. Si todavía necesita acceso, envíe un correo electrónico a [support@code.org](%{support_email_link})."
   page_not_available_button: "Volver a la página de inicio"

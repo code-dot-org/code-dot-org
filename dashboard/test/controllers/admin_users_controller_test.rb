@@ -15,8 +15,11 @@ class AdminUsersControllerTest < ActionController::TestCase
     @malformed.update_column(:email, '')  # Bypasses validation!
 
     @user = create :user, email: 'test_user@example.com'
-    @script = create(:script, :with_levels, levels_count: 1)
-    @level = @script.script_levels.first.level
+    @script = create(:script, :with_levels, levels_count: 3)
+    @level = @script.script_levels.first.level  # for tests that only need a single level
+    @level1 = @script.script_levels.first.level
+    @level2 = @script.script_levels.second.level
+    @level3 = @script.script_levels.third.level
     @manual_pass_params = {
       user_id: @user.id,
       script_id_or_name: @script.id,
@@ -257,25 +260,119 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'delete_progress_form returns correct data' do
     sign_in @admin
 
-    user = create(:student, username: 'test_student')
-    script = create(:script, :with_levels, levels_count: 3)
-    level1 = script.script_levels.first.level
-    level2 = script.script_levels.second.level
-    level3 = script.script_levels.third.level
+    UserLevel.create!(user: @user, script: @script, level: @level1, best_result: 0)
+    UserLevel.create!(user: @user, script: @script, level: @level2, best_result: 10)
+    UserLevel.create!(user: @user, script: @script, level: @level3, best_result: 100)
 
-    UserScript.create!(user: user, script: script)
-    UserLevel.create!(user: user, script: script, level: level1, best_result: 0)
-    UserLevel.create!(user: user, script: script, level: level2, best_result: 10)
-    UserLevel.create!(user: user, script: script, level: level3, best_result: 100)
-
-    get :delete_progress_form, params: {user_id: user.id, script_id: script.id}
-    assert_response :ok
+    get :delete_progress_form, params: {user_id: @user.id, script_id: @script.id}
+    assert_response :success
     assert_select "strong" do  |elements|
       assert_equal 4, elements.length
-      assert_equal user.username, elements[1].text
-      assert_equal script.name, elements[2].text
+      assert_equal @user.username, elements[1].text
+      assert_equal @script.name, elements[2].text
       assert_equal 3, elements[3].text.to_i   # count of user_level rows
     end
+  end
+
+  test "delete_progress returns error if not admin" do
+    sign_in @not_admin
+    post :delete_progress, params: {user_id: @user.id, script_id: @script.id}
+    assert_response :forbidden
+  end
+
+  test "delete_progress raises error if reason is empty" do
+    sign_in @admin
+    assert_raises(ActionController::ParameterMissing) do
+      post :delete_progress, params: {user_id: @user.id, script_id: @script.id, reason: ''}
+    end
+  end
+
+  test "delete_progress deletes script progress" do
+    sign_in @admin
+
+    UserScript.create!(user: @user, script: @script)
+    assert_equal 1, @user.user_scripts.count
+
+    post :delete_progress, params: {user_id: @user.id, script_id: @script.id, reason: 'Testing'}
+    @user.reload
+    assert_equal 0, @user.user_scripts.count
+  end
+
+  test "delete_progress deletes level progress" do
+    sign_in @admin
+
+    UserLevel.create!(user: @user, script: @script, level: @level1, best_result: 100)
+    UserLevel.create!(user: @user, script: @script, level: @level2, best_result: 50)
+    assert_equal 2, @user.user_levels_by_level(@script).count
+
+    post :delete_progress, params: {user_id: @user.id, script_id: @script.id, reason: 'Testing'}
+    assert_equal 0, @user.user_levels_by_level(@script).count
+  end
+
+  test "delete_progress deletes channel tokens" do
+    # TODO: Write this test after the work to add script_ids to channel tokens is completed.
+  end
+
+  test "delete_progress deletes teacher feedback" do
+    sign_in @admin
+
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, teacher: teacher)
+    section.add_student(student)
+
+    TeacherFeedback.create!(teacher: teacher, student: student, script: @script, level: @level1)
+    TeacherFeedback.create!(teacher: teacher, student: student, script: @script, level: @level1)
+    TeacherFeedback.create!(teacher: teacher, student: student, script: @script, level: @level2)
+    TeacherFeedback.create!(teacher: teacher, student: student, script: @script, level: @level3)
+    assert_equal 3, TeacherFeedback.get_latest_feedbacks_received(student.id, nil, @script.id).count
+
+    post :delete_progress, params: {user_id: student.id, script_id: @script.id, reason: 'Testing'}
+    assert_equal 0, TeacherFeedback.get_latest_feedbacks_received(student.id, nil, @script.id).count
+  end
+
+  test "delete_progress for driver leaves pairing record" do
+    driver = create(:student)
+    navigator = create(:student)
+
+    driver_user_level = UserLevel.create!(user: driver, script: @script, level: @level, best_result: 100)
+    navigator_user_level = UserLevel.create!(user: navigator, script: @script, level: @level, best_result: 100)
+    PairedUserLevel.create!(driver_user_level_id: driver_user_level.id, navigator_user_level_id: navigator_user_level.id)
+
+    # check that we've correctly setup the pairing relationship
+    assert navigator_user_level.navigator?
+    assert_equal 1, PairedUserLevel.pairs(navigator_user_level).count
+
+    # delete the driver's progress
+    post :delete_progress, params: {user_id: driver.id, script_id: @script.id, reason: 'Testing'}
+
+    # navigator should still be able to see that they were paired on this level
+    # (but can no longer tell who they were paired with)
+    navigator_user_level.reload
+    assert navigator_user_level.navigator?
+    assert_equal 1, PairedUserLevel.pairs(navigator_user_level).count
+  end
+
+  test "delete_progress for navigator leaves pairing record" do
+    driver = create(:student)
+    navigator = create(:student)
+
+    driver_user_level = UserLevel.create!(user: driver, script: @script, level: @level, best_result: 100)
+    navigator_user_level = UserLevel.create!(user: navigator, script: @script, level: @level, best_result: 100)
+    PairedUserLevel.create!(driver_user_level_id: driver_user_level.id, navigator_user_level_id: navigator_user_level.id)
+
+    # check that we've correctly setup the pairing relationship
+    assert driver_user_level.driver?
+    assert_equal 1, PairedUserLevel.pairs(driver_user_level).count
+
+    # delete the navigator's progress
+    post :delete_progress, params: {user_id: navigator.id, script_id: @script.id, reason: 'Testing'}
+
+    # driver should still be able to see that they were paired on this level
+    # (but can no longer tell who they were paired with)
+    driver_user_level.reload
+    assert driver_user_level.driver?
+    assert_equal 1, PairedUserLevel.pairs(driver_user_level).count
   end
 
   generate_admin_only_tests_for :permissions_form

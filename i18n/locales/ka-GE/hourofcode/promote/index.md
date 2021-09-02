@@ -8,7 +8,7 @@ title: გაავრცელეთ ინფორმაცია
 
 ## 1. გაავრცელეთ ხმა
 
-Tell your friends about the **#HourOfCode**!
+მოუყევით თქვენს მეგობრებს **#HourOfCode**-ის შესახებ!
 
 {{ promote/share_buttons }}
 
