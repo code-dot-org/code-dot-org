@@ -8,7 +8,7 @@ title: Divulgue
 
 ## 1. Divulgue
 
-Tell your friends about the **#HourOfCode**!
+Conte aos seus amigos sobre a **#HoraDoCodigo**!
 
 {{ promote/share_buttons }}
 

@@ -8,7 +8,7 @@ title: Truyền tải thông điệp
 
 ## 1. Truyền tải thông điệp
 
-Tell your friends about the **#HourOfCode**!
+Giới thiệu cho bạn bè của bạn về **#GiờLậpTrình**!
 
 {{ promote/share_buttons }}
 

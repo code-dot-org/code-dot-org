@@ -596,6 +596,12 @@ pl:
         Gettting_Started_StudentExperience: Doświadczenie uczniowskie
         Getting_Started_BasicFeatures: Podstawowe cechy Code.org
         PL_overview_CSD: Co to są odkrycia informatyki?
+        PL_CSD_TeacherTips_Advise: Wskazówki dla nauczycieli — porady dla nowych nauczycieli
+        PL_CSD_TeacherTips_IntroToCSD: Wskazówki dla nauczycieli — Wprowadzenie do odkryć informatyki
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Wskazówki dla nauczycieli — Proces rozwiązywania problemu 
+        PL_CSD_TeacherTips_PairProgramming: Wskazówki dla nauczycieli — Programowanie w parach
+        PL_CSD_TeacherTips_Debugging: Wskazówki dla nauczycieli — Debugowanie
+        PL_CSD_TeacherTips_LeadLearner: Wskazówki dla nauczycieli — Prowadzący uczeń
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

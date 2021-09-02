@@ -3009,16 +3009,22 @@
             "parameters": {
               "points": "अंक",
               "length": "लंबाई"
-            }
+            },
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें"
           },
           "draw a circle": {
-            "name": "एक चक्र बनाएं"
+            "name": "एक चक्र बनाएं",
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
           },
           "draw a pinwheel": {
             "name": "चकरी चित्रित करें",
             "parameters": {
               "length": "लंबाई",
-              "repeat": "दोहराएँ"
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
             }
           },
           "draw a triangle": {
@@ -3030,7 +3036,8 @@
           "draw a shape": {
             "name": "आकृति खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "draw a house": {
@@ -3052,16 +3059,22 @@
             "parameters": {
               "points": "अंक",
               "length": "लंबाई"
-            }
+            },
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें"
           },
           "draw a circle": {
-            "name": "एक चक्र बनाएं"
+            "name": "एक चक्र बनाएं",
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
           },
           "draw a pinwheel": {
             "name": "चकरी चित्रित करें",
             "parameters": {
               "length": "लंबाई",
-              "repeat": "दोहराएँ"
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
             }
           },
           "draw a triangle": {
@@ -3073,7 +3086,8 @@
           "draw a shape": {
             "name": "आकृति खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "draw a house": {
@@ -3095,16 +3109,22 @@
             "parameters": {
               "points": "अंक",
               "length": "लंबाई"
-            }
+            },
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें"
           },
           "draw a circle": {
-            "name": "एक चक्र बनाएं"
+            "name": "एक चक्र बनाएं",
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
           },
           "draw a pinwheel": {
             "name": "चकरी चित्रित करें",
             "parameters": {
               "length": "लंबाई",
-              "repeat": "दोहराएँ"
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
             }
           },
           "draw a triangle": {
@@ -3116,7 +3136,8 @@
           "draw a shape": {
             "name": "आकृति खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "draw a house": {
@@ -3332,6 +3353,16 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "मूव करके काउंटर के साथ मधुरस प्राप्त करें"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "गेम रीसेट करें"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "lettuce stairs": {
+            "name": "लेट्स सीढ़ियां"
           }
         }
       }

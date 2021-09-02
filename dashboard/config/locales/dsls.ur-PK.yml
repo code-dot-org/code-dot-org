@@ -2345,3 +2345,136 @@ ur-PK:
         - {}
         questions:
         - {}
+      OPD-K5 CS Courses:
+        markdown: |-
+          # منصوبہ بندی > Code.org پر شروع کرنا
+
+
+          ## مرحلہ 1: ایک کورس منتخب کریں
+          ہمارے تمام کورس -- پری ریڈرز سے لیکر ہائی اسکول طلباء تک -- ہماری **[کورس کیٹلاگ](https://studio.code.org/courses)** میں درج ہیں۔ CS کے بنیادی اصول اسباق تلاش کرنے کے لیے جن کے ساتھ آپ مشق کرتے رہے ہیں، ہمارے **[ابتدائی صفحہ]
+          (https://code.org/educate/curriculum/elementary-school)** پر جائیں اور نیچے "کورسز" سیکشن پر اسکرول کریں۔ ہمارے تمام کورسز بلا معاوضہ دستیاب ہیں۔ یہ تعین کرنے کے لئے اپنے اسکول کے رفقائے کار کے ساتھ بات چیت کریں کہ کورس کے نصاب کو کئی مضامین کے ساتھ کیسے مربوط کیا جا سکتا ہے۔
+          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
+          ***
+          ## مرحلہ 2: اپنا کلاس روم سیکشن قائم کریں
+          اپنے طالب علم کی پیشرفت دیکھنے کے لیے کلاس روم سیکشن ترتیب دیں، اپنے طلباء کے لیے لاگ ان کارڈ پرنٹ کریں، ان کے اکاؤنٹس کو منظم کریں اور وہ سرٹیفکیٹس پرنٹ کریں جنہیں وہ کورس مکمل کرنے پر گھر لے جا سکتے ہیں۔ اس لنک پر کلک کریں اور **[ایک مختصر ویڈیو دیکھیں](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)** جو وضاحت کرتی ہے کہ Code.org پر اپنی پہلی کمپیوٹر سائنس کلاس کس طرح تشکیل دینی ہے۔ آپ **[اس معاون آرٹیکل] (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)** میں بھی مراحل تلاش کر سکتے ہیں۔ ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
+          ***
+          ## مرحلہ 3: کورس کو اپنے سیکشن میں تفویض کریں
+          جو کورس آپ پڑھا رہے ہیں اس پر کلک کریں -- آپ کو ایک اسکرین دکھائی دینی چاہیے جو ذیل جیسی دکھائی دیتی ہے۔ پھر آپ "کورس تفویض کریں" پر کلک کر سکتے ہیں اور اس کورس کو اپنے کسی سیکشن کو تفویض کر سکتے ہیں۔ ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)
+          ***
+          ## مرحلہ 4: پڑھانا شروع کریں!
+          کمپیوٹر سائنس کے تصورات کو اپنے کلاس روم میں لانے کے لیے صرف ایک سبق درکار ہوتا ہے۔ جب آپ کو اپنے طلباء میں CS کے لیے جوش و خروش دکھائی دینے لگے، تو اپنے طلباء کی رہنمائی کے لیے روزانہ کے سبق کے منصوبوں، پلگ نکالا سرگرمیوں جنہیں آپ ایک کمپیوٹر کے بغیر کر سکتے ہیں، اور دوسرے اساتذہ سے منسلک ہونے کے لیے فورمز، کے ساتھ آگے بڑھیں۔
+      OPD-K5 CS Courses_copy:
+        markdown: "# Code.org پر شروع کرنا\n\n\n## مرحلہ 1: ایک کورس منتخب کریں\nہمارے
+          تمام کورس -- پری ریڈرز سے لیکر ہائی اسکول طلباء تک -- ہماری **<a href=\"https://studio.code.org/courses\"
+          target=\"blank\" rel=\"noopener noreferrer\">کورس کیٹلاگ</a>** میں درج ہیں۔
+          ہمارے تمام کورس بلا معاوضہ دستیاب ہیں۔ یہ تعین کرنے کے لئے اپنے اسکول میں
+          رفقائے کار کے ساتھ بات چیت کریں کہ کورس کے نصاب کو کئی مضامین کے ساتھ کیسے
+          مربوط کیا جا سکتا ہے۔\n\n<table style=\"width:100%; border-style:none;\">\n
+          \ <tr>\n    <th style=\"background-color:#ff9900; text-align:center; border-style:none;
+          font-weight:bold;\"\"\">\n      <b>کورس A</b><br/>\n      <i>کنڈرگارٹن</i>\n
+          \   </th>\n    <th style=\"background-color:#f1c232; text-align:center;
+          border-style:none;\"\"\">\n        کورس B<br/>\n        <i>پہلا گریڈ</i>\n
+          \   </th>\n    <th style=\"background-color:#b8bf0d; text-align:center;
+          border-style:none;\"\"\">\n        کورس C<br/>\n        <i>دوسرا گریڈ</i>\n
+          \   </th>\n    <th style=\"background-color:#53bac2; text-align:center;
+          border-style:none;\"\"\">\n        کورس D<br/>\n        <i>تیسرا گریڈ</i>\n
+          \   </th>\n    <th style=\"background-color:#0094ca; text-align:center;
+          border-style:none;\"\"\">\n        کورس E<br/>\n        <i>چوتھا گریڈ</i>\n
+          \   </th>\n    <th style=\"background-color:#7664a0; text-align:center;
+          border-style:none;\"\"\">\n        کورس F<br/>\n        <i>پانچواں گریڈ</i>\n
+          \   </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 اسباق ~مکمل کرنے کے
+          لئے 12 گھنٹے</td>\n    <td style=\"background-color:#ffe599; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 اسباق ~مکمل کرنے کے
+          لئے 12 گھنٹے</td>\n    <td style=\"background-color:#d2da0e; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 اسباق ~مکمل کرنے کے
+          لئے 18 گھنٹے</td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 اسباق، ~مکمل کرنے کے
+          لئے 18 گھنٹے</td>\n    <td style=\"background-color:#9ed7ed; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 اسباق، ~مکمل کرنے کے
+          لئے 18 گھنٹے</td>\n    <td style=\"background-color:#c9c1e9; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 اسباق، ~مکمل کرنے کے
+          لئے 18 گھنٹے</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;\">تصورات</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>ڈیجیٹل شہریت</li>\n        <li>ترتیب
+          بندی</li>\n        <li>لوپس</li>\n        <li>ایونٹس</li>\n      </ul>\n
+          \   </td>\n    <td style=\"background-color:#ffe599; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>ڈیجیٹل شہریت</li>\n        <li>ترتیب بندی</li>\n        <li>لوپس</li>\n
+          \       <li>کمپیوٹنگ کے اثرات</li>\n        <li>ایونٹس</li>\n      </ul>\n
+          \   </td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>ڈیجیٹل شہریت</li>\n        <li>ترتیب بندی</li>\n        <li>بائنری</li>\n
+          \       <li>لوپس</li>\n        <li>ایونٹس</li>\n        <li>ڈیٹا</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>ترتیب بندی</li>\n        <li>ایونٹس</li>\n        <li>لوپس</li>\n
+          \       <li>کنڈیشنلز</li>\n        <li>بائنری</li>\n        <li>ڈیجیٹل شہریت</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#9ed7ed; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>سپرائٹس</li>\n        <li>ڈیجیٹل شہریت</li>\n        <li>کمپیوٹنگ
+          کے اثرات</li>\n        <li>نیسٹڈ لوپس</li>\n        <li>فنکشنز</li>\n      </ul>\n
+          \   </td>\n    <td style=\"background-color:#c9c1e9; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>متغیرات</li>\n        <li>ڈیٹا</li>\n        <li>لوپس کیلیے</li>\n
+          \       <li>انٹرنیٹ</li>\n        <li>سپرائٹس</li>\n        <li>ڈیجیٹل شہریت</li>\n
+          \       </ul>\n    </td>\n  <tr>\n  \t<td style=\"background-color:#f9cb9c\">\n
+          \    <a href=\"https://studio.code.org/s/coursea\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>کورس دیکھیں</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n          <button>سبق کے
+          منصوبے</button>\n      </a>\n    </td>\n    <td style=\"background-color:#ffe599\">\n
+          \   <a href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>کورس دیکھیں</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>سبق کے
+          منصوبے</button>\n      </a>\n    </td>   \n   \t<td style=\"background-color:#d2da0e\">\n
+          \   <a href=\"https://studio.code.org/s/coursec\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>کورس دیکھیں</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>سبق کے
+          منصوبے</button>\n      </a>\n    </td>   \n    <td style=\"background-color:#68ebf5\">\n
+          \   <a href=\"https://studio.code.org/s/coursed\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>کورس دیکھیں</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>سبق کے
+          منصوبے</button>\n      </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>کورس دیکھیں</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>سبق کے
+          منصوبے</button>\n      </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>کورس دیکھیں</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>سبق کے
+          منصوبے</button>\n      </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n##
+          مرحلہ 2: اپنا کلاس روم سیکشن قائم کریں\nطالب علم کی پیشرفت دیکھنے کے لیے
+          کلاس روم سیکشن ترتیب دیں، اپنے طلباء کے لیے لاگ ان کارڈ پرنٹ کریں، ان کے
+          اکاؤنٹس کو منظم کریں اور وہ سرٹیفکیٹس پرنٹ کریں جنہیں وہ کورس مکمل کرنے
+          پر گھر لے جا سکتے ہیں۔ اس لنک پر کلک کریں اور **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          target=\"blank\" rel=\"noopener noreferrer\">ایک مختصر ویڈیو دیکھیں</a>**
+          جو وضاحت کرتی ہے کہ Code.org پر اپنی پہلی کمپیوٹر سائنس کلاس کس طرح تشکیل
+          دینی ہے۔ آپ **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
+          target=\"blank\" rel=\"noopener noreferrer\">this اس معاون آرٹیکل</a>**
+          میں بھی مراحل تلاش کر سکتے ہیں۔\n\n***\n## مرحلہ 3: کورس کو اپنے سیکشن میں
+          تفویض کریں\nجو کورس آپ پڑھا رہے ہیں اس پر کلک کریں۔ پھر آپ \"کورس تفویض
+          کریں\" پر کلک کر سکتے ہیں اور اس کورس کو اپنے کسی سیکشن کو تفویض کر سکتے
+          ہیں۔ \n***\n## مرحلہ 4: پڑھانا شروع کریں! \nکمپیوٹر سائنس کے تصورات کو اپنے
+          کلاس روم میں لانے کے لیے صرف ایک سبق درکار ہوتا ہے۔ جب آپ کو اپنے طلباء
+          میں CS کے لیے جوش و خروش دکھائی دینے لگے، تو اپنے طلباء کی رہنمائی کے لیے
+          روزانہ کے سبق کے منصوبوں، پلگ نکالا سرگرمیوں جنہیں آپ ایک کمپیوٹر کے بغیر
+          کر سکتے ہیں، اور دوسرے اساتذہ سے منسلک ہونے کے لیے فورمز، کے ساتھ آگے بڑھیں۔\n\n\n"
+      OPD-K5 CS Courses_dani:
+        markdown: |-
+          # منصوبہ بندی > Code.org پر شروع کرنا
+
+
+          ## مرحلہ 1: ایک کورس منتخب کریں
+          ہمارے تمام کورس -- پری ریڈرز سے لیکر ہائی اسکول طلباء تک -- ہماری **[کورس کیٹلاگ](https://studio.code.org/courses)** میں درج ہیں۔ CS کے بنیادی اصول اسباق تلاش کرنے کے لیے جن کے ساتھ آپ مشق کرتے رہے ہیں، ہمارے **[ابتدائی صفحہ]
+          (https://code.org/educate/curriculum/elementary-school)** پر جائیں اور نیچے "کورسز" سیکشن پر اسکرول کریں۔ ہمارے تمام کورسز بلا معاوضہ دستیاب ہیں۔ یہ تعین کرنے کے لئے اپنے اسکول کے رفقائے کار کے ساتھ بات چیت کریں کہ کورس کے نصاب کو کئی مضامین کے ساتھ کیسے مربوط کیا جا سکتا ہے۔
+          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
+          ***
+          ## مرحلہ 2: اپنا کلاس روم سیکشن قائم کریں
+          اپنے طالب علم کی پیشرفت دیکھنے کے لیے کلاس روم سیکشن ترتیب دیں، اپنے طلباء کے لیے لاگ ان کارڈ پرنٹ کریں، ان کے اکاؤنٹس کو منظم کریں اور وہ سرٹیفکیٹس پرنٹ کریں جنہیں وہ کورس مکمل کرنے پر گھر لے جا سکتے ہیں۔ اس لنک پر کلک کریں اور **[ایک مختصر ویڈیو دیکھیں](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)** جو وضاحت کرتی ہے کہ Code.org پر اپنی پہلی کمپیوٹر سائنس کلاس کس طرح تشکیل دینی ہے۔ آپ **[اس معاون آرٹیکل] (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)** میں بھی مراحل تلاش کر سکتے ہیں۔ ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
+          ***
+          ## مرحلہ 3: کورس کو اپنے سیکشن میں تفویض کریں
+          جو کورس آپ پڑھا رہے ہیں اس پر کلک کریں -- آپ کو ایک اسکرین دکھائی دینی چاہیے جو ذیل جیسی دکھائی دیتی ہے۔ پھر آپ "کورس تفویض کریں" پر کلک کر سکتے ہیں اور اس کورس کو اپنے کسی سیکشن کو تفویض کر سکتے ہیں۔ ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)
+          ***
+          ## مرحلہ 4: پڑھانا شروع کریں!
+          کمپیوٹر سائنس کے تصورات کو اپنے کلاس روم میں لانے کے لیے صرف ایک سبق درکار ہوتا ہے۔ جب آپ کو اپنے طلباء میں CS کے لیے جوش و خروش دکھائی دینے لگے، تو اپنے طلباء کی رہنمائی کے لیے روزانہ کے سبق کے منصوبوں، پلگ نکالا سرگرمیوں جنہیں آپ ایک کمپیوٹر کے بغیر کر سکتے ہیں، اور دوسرے اساتذہ سے منسلک ہونے کے لیے فورمز، کے ساتھ آگے بڑھیں۔

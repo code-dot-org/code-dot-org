@@ -20,6 +20,10 @@ class LessonGroup < ApplicationRecord
   include SerializedProperties
 
   belongs_to :script
+  def script
+    Script.get_from_cache(script_id)
+  end
+
   has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
   has_many :script_levels, through: :lessons
   has_many :levels, through: :script_levels

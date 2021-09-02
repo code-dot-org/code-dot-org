@@ -14,7 +14,7 @@ title: Blurbs and useful stats
 
 ## Gunakan blurb ini di suratkabar
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### Bawa ilmu komputer ke sekolah Anda. Mulailah dengan satu jam kode!
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Tapi kurang dari separuh sekolah mengajarkan ilmu komputer! Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. If you heard about the Hour of Code last year, you might know it made history. 100 juta siswa sekarang telah menemukan betapa mudahnya dan menyenangkannya ilmu komputer dapat dilakukan dengan hanya satu Jam Kode .
 
@@ -46,7 +46,7 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 <a id="infographics"></a>
 
-## Infographics
+## Infografis
 
 {{ stats_carousel }}
 

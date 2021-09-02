@@ -1657,6 +1657,117 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Glisse les blocs de la boîte à outils dans ton espace de travail.\n"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Appuyez d'abord sur le bouton Exécuter ! ",
+          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Appuyez d'abord sur le bouton Exécuter ! ",
+          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+        },
+        "courseF_apps_collector": {
+          "run_button": "Appuyez d'abord sur le bouton Exécuter ! ",
+          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+        },
+        "courseF_apps_pet": {
+          "run_button": "Appuyez d'abord sur le bouton Exécuter ! ",
+          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Cliquez ici pour ouvrir la catégorie Sprites. "
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Cliquez ici pour ouvrir la catégorie Emplacements. "
+        },
+        "courseF_events_key": {
+          "whenKey": "Utilisez le nouveau bloc d'événement trouvé ici. "
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Ce block n'est pas dans le bon ordre."
+        },
+        "courseF_events_time": {
+          "events_category": "Cliquez ici pour ouvrir la catégorie Événements. "
+        },
+        "courseF_text_events": {
+          "events_category": "Cliquez ici pour ouvrir la catégorie Événements. "
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+        },
+        "courseF_text_print": {
+          "print_block": "Trouvez le bloc d'impression ici !",
+          "text_print_finish": "Votre message s'est-il imprimé ci-dessus ? Si c'est le cas, appuyez sur « Terminer ». Sinon, appuyez sur « Réinitialiser », modifiez votre code et appuyez à nouveau sur « Exécuter ». "
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Nouveaux blocs ici !"
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Avez-vous fini ? Si c'est le cas, appuyez sur « Terminer ». Sinon, appuyez sur « Réinitialiser », modifiez votre code et appuyez à nouveau sur « Exécuter » "
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Essayez de changer le when en while."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Regardez attentivement le code en dessous de ce point. "
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Regardez attentivement le code en dessous de ce point. "
+        },
+        "courseF_text_answer": {
+          "answered_block": "Recherchez un nouveau bloc ici ! "
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Recherchez deux nouveaux blocs ici ! ",
+          "text_answer_finish": "Un écran-titre s'est-il affiché pendant 3 secondes ? Si c'est le cas, appuyez sur « Terminer ». Sinon, appuyez sur « Réinitialiser », modifiez votre code et appuyez à nouveau sur « Exécuter ». "
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Recherchez de nouveaux blocs ici ! "
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Trouvez le bloc d'invite ici ! "
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "L'arrière-plan a-t-il changé de couleur lorsque vous avez répondu à la question ? Si c'est le cas, appuyez sur « Terminer ». Sinon, appuyez sur « Réinitialiser », modifiez votre code et appuyez à nouveau sur « Exécuter ». "
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Vous pouvez ralentir votre programme ici. "
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Essayez de parcourir votre code un bloc à la fois. "
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Cliquez ici pour ouvrir la catégorie Emplacements. "
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Recherchez un nouveau bloc ici ! "
         }
       }
     }
