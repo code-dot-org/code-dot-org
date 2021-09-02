@@ -36,9 +36,12 @@
     "instructions_icon": "octiProfound",
     "callout_json": "[]",
     "parent_level_id": 29611,
-    "validation_code": "var validationInfo = getValidationInfo();\r\nif (validationInfo.foregroundEffect) {\r\n  setSuccessFrame();\r\n}\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'genericSuccess');\r\n  } else {\r\n    levelFailure(3, 'poemBotMakeForeground');\r\n  }\r\n}",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Click the **World** category to find this block: \\n<xml><block type=\\\"PoemBot_setForegroundEffect\\\"><title name=\\\"EFFECT\\\">\\\"rain\\\"</title></block></xml>\\n\\nConnect this block under `when run` in your Workspace\",\"hint_id\":\"step1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c15e374352c053ee372a90c557619e30/poetryHoC_addForeground.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can add foreground and background effects by adding more code to your project. \\n\\n<xml><block type=\\\"when_run\\\" movable=\\\"false\\\"><next><block type=\\\"PoemBot_setPoem\\\"><title name=\\\"POEM\\\">\\\"carroll_1\\\"</title><next><block type=\\\"PoemBot_setBackgroundEffect\\\"><title name=\\\"EFFECT\\\">\\\"stars\\\"</title><title name=\\\"PALETTE\\\">\\\"summer\\\"</title><next><block type=\\\"PoemBot_setForegroundEffect\\\"><title name=\\\"EFFECT\\\">\\\"confetti\\\"</title><next><block type=\\\"PoemBot_setForegroundEffect\\\"><title name=\\\"EFFECT\\\">\\\"starburst\\\"</title><next><block type=\\\"PoemBot_setForegroundEffect\\\"><title name=\\\"EFFECT\\\">\\\"starburst\\\"</title><next><block type=\\\"PoemBot_setForegroundEffect\\\"><title name=\\\"EFFECT\\\">\\\"starburst\\\"</title></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>\\n\\n![](https://images.code.org/42c74dbb1ef0fa486438e232886172be-image-1630606635437.gif)\",\"hint_id\":\"bonus1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/297ff5fdfdd8a826a54f677456efbd4b/poetryHoC_addForeground.mp3\"}]",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "validation_code": "var validationInfo = getValidationInfo();\r\nif (validationInfo.foregroundEffects.length > 0) {\r\n  setSuccessFrame();\r\n}\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'genericSuccess');\r\n  } else {\r\n    levelFailure(3, 'poemBotMakeForeground');\r\n  }\r\n}"
   },
   "user_id": 1196,
   "game_id": 64,

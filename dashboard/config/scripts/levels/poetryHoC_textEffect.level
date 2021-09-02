@@ -37,7 +37,11 @@
     "callout_json": "[]",
     "parent_level_id": 29612,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can change the color of your text two ways. The inner color is called the \\\"fill\\\" and the outline color is called the \\\"stroke.\\\" \\n\\n<xml><block type=\\\"PoemBot_setFontColor\\\"><value name=\\\"FILL\\\"><block type=\\\"colour_picker\\\"><title name=\\\"COLOUR\\\">#ffcc33</title></block></value><value name=\\\"STROKE\\\"><block type=\\\"colour_picker\\\"><title name=\\\"COLOUR\\\">#000000</title></block></value></block></xml>\\n\\nThink about how different colors feel more happy or sad. Choose colors that match the mood of the poem. \",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/93eaf8ccb1ad036083f629fce9531ad8/poetryHoC_textEffect.mp3\"}]",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "validation_code": "var validationInfo = getValidationInfo();\r\nvar isFontSet = validationInfo.font.font != 'Arial';\r\nvar isColorSet = validationInfo.font.fill != 'black' || validationInfo.font.stroke != 'white';\r\nvar hasTextEffect = validationInfo.textEffects.length > 0;\r\n\r\n// Pass the level if they have at least two of the three effects.\r\nif (isFontSet && isColorSet || isFontSet && hasTextEffect || isColorSet && hasTextEffect) {\r\n  setSuccessFrame();\r\n}\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    if (isFontSet && isColorSet && hasTextEffect) {\r\n      // 3 effects\r\n      levelFailure(0, 'genericBonusSuccess');\r\n    } else {\r\n      // 2 effects\r\n      levelFailure(0, 'genericSuccess');\r\n    }\r\n  } else {\r\n    if (isFontSet || isColorSet || hasTextEffect) {\r\n      // 1 effect\r\n      levelFailure(3, 'poemBotOneTextEffect');\r\n    } else {\r\n      // 0 effects\r\n      levelFailure(3, 'poemBotNoTextEffects');\r\n    }\r\n  }\r\n}"
   },
   "user_id": 1196,
   "game_id": 64,

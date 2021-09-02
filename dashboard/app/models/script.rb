@@ -72,10 +72,21 @@ class Script < ApplicationRecord
             :callouts
           ]
         },
+        :lesson_groups,
+        :resources,
+        :student_resources,
         {
-          lessons: [{script_levels: [:levels]}]
+          lessons: [
+            :lesson_activities,
+            {script_levels: [:levels]}
+          ]
         },
-        :unit_group_units
+        {
+          unit_group_units: {
+            unit_group: :course_version
+          }
+        },
+        :course_version
       ]
     )
   end
@@ -261,7 +272,7 @@ class Script < ApplicationRecord
   end
 
   def self.lesson_extras_script_ids
-    @@lesson_extras_scripts ||= Script.all.select(&:lesson_extras_available?).pluck(:id)
+    @@lesson_extras_scripts ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
   end
 
   def self.maker_units
@@ -305,10 +316,8 @@ class Script < ApplicationRecord
 
   class << self
     def all_scripts
-      all_scripts = Rails.cache.fetch('valid_scripts/all') do
-        Script.all.to_a
-      end
-      all_scripts.freeze
+      return all.to_a unless should_cache?
+      @@all_scripts ||= script_cache.values.uniq.compact.freeze
     end
 
     def family_names
@@ -320,10 +329,7 @@ class Script < ApplicationRecord
     private
 
     def visible_units
-      visible_units = Rails.cache.fetch('valid_scripts/valid') do
-        Script.all.select(&:launched?).to_a
-      end
-      visible_units.freeze
+      all_scripts.select(&:launched?).to_a.freeze
     end
   end
 
@@ -392,7 +398,7 @@ class Script < ApplicationRecord
   end
 
   def self.unit_cache_to_cache
-    Rails.cache.write(UNIT_CACHE_KEY, unit_cache_from_db)
+    Rails.cache.write(UNIT_CACHE_KEY, (@@unit_cache = unit_cache_from_db))
   end
 
   def self.unit_cache_from_cache
@@ -1689,6 +1695,7 @@ class Script < ApplicationRecord
     @@unit_cache = nil
     @@unit_family_cache = nil
     @@level_cache = nil
+    @@all_scripts = nil
     Rails.cache.delete UNIT_CACHE_KEY
   end
 

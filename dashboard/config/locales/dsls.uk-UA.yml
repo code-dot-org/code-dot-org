@@ -1606,7 +1606,7 @@ uk-UA:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Не знаю
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
@@ -1614,7 +1614,7 @@ uk-UA:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Не знаю
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
@@ -1622,7 +1622,7 @@ uk-UA:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Не знаю
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1630,7 +1630,7 @@ uk-UA:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Не знаю
         questions:
         - {}
       courseC_multi_starWars_predict2:

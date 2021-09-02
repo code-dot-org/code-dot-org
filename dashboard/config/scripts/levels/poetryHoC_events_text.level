@@ -39,7 +39,8 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "validation_code": "var spriteIds = getSpriteIdsInUse();\r\nvar validationInfo = getValidationInfo();\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {};\r\n}\r\n\r\nvar hasLineEvent = validationInfo.lineEvents.length > 0;\r\nvar newTextEffect = validationProps.previous.numTextEffects < validationInfo.textEffects.length;\r\nif (hasLineEvent && newTextEffect) {\r\n  setSuccessFrame();\r\n}\r\nvalidationProps.previous.numTextEffects = validationInfo.textEffects.length;\r\n\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'genericSuccess');\r\n  } else {\r\n    levelFailure(3, 'poemBotTextEffectWithEvent');\r\n  }\r\n}"
   },
   "game_id": 64,
   "published": true,

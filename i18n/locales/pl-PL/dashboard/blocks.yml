@@ -1341,12 +1341,16 @@ pl:
         text: "{SPRITE} zaczyna unikać {TARGET}"
       gamelab_startFollowing:
         text: "{SPRITE} zaczyna podążać {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} zaczyna przesuwać się "
       gamelab_stopAvoiding:
         text: "{SPRITE} przestaje unikać inne duszki"
       gamelab_stopCollectingData:
         text: zatrzymaj zbieranie danych
       gamelab_stopFollowing:
         text: "{SPRITE} przestaje podążać za innymi duszkami "
+      gamelab_stopGliding:
+        text: "{SPRITE} zaczyna przesuwać się "
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_textJoin:
@@ -1799,6 +1803,21 @@ pl:
           BG_EFFECT:
             '"solid"': trwały
             '"rainbow"': tęcza
+      PoemBot_setFont:
+        text: ustaw czcionkę {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Georgia"': Georgia
+            '"Palatino"': Palatino
+            '"Times"': Times
+            '"Courier"': Courier
+            '"Arial Black"': Arial Black
+            '"Impact"': Wpływ
+            '"Tahoma"': Tahoma
+            '"Verdana"': Verdana
+      PoemBot_setFontColor:
+        text: ustaw kolor czcionki {COLOR}
       PoemBot_setForegroundEffect:
         text: ustaw efekt pierwszego planu {FG_EFFECT}
         options:
@@ -1823,6 +1842,8 @@ pl:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_whenLineShows:
+        text: gdy linia {N} pokazuje
       RyanLab_moveForward:
         text: idź do przodu
       RyanLab_turnLeft:
