@@ -8,7 +8,7 @@ title: Ipamalita ito
 
 ## 1. Palaganapin ang salita
 
-Tell your friends about the **#HourOfCode**!
+Sabihan ang iyong mga kaibigan tungkol sa **#HourOfCode**!
 
 {{ promote/share_buttons }}
 

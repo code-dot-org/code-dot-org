@@ -1086,6 +1086,7 @@
   "manageLinkedAccounts_microsoft": "마이크로소프트 계정",
   "manageLinkedAccounts_notConnected": "연결되지 않음",
   "manageLinkedAccounts_rosteredSectionTooltip": "이 연결된 계정이 귀하의 섹션 중 하나에 연결되어 있으므로 이 계정으로부터 연결 해제할 수 없습니다.",
+  "manageLinkedAccounts_makerAuthError": "이 조치는 메이커 앱에서 수행할 수 없습니다. 기본 브라우저로 되돌아가 다시 시도해 주세요.",
   "manageStudents": "학생 관리",
   "manageStudentsNotificationFailure": "오류가 발생했습니다.",
   "manageStudentsNotificationCannotAdd": "{numStudents, plural, one {1명의 학생} other {#명의 학생들}}을 귀하의 섹션에 추가할 수 없습니다. 다시 시도하거나 이 페이지를 새로 고치십시오.",

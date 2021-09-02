@@ -8,7 +8,7 @@ title: 傳播這個訊息
 
 ## 1. 傳播這個口號
 
-Tell your friends about the **#HourOfCode**!
+讓你的朋友們知道 **#HourOfCode** 活動！
 
 {{ promote/share_buttons }}
 

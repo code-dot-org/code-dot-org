@@ -3680,6 +3680,7 @@ id:
               name: Desainer Hour of Code Minecraft
           student_description: Program binatang dan makhluk Minecraft lainnya dalam Minecraft versi Anda sendiri.
         flappy-impact-study:
+          title: Flappy Code dengan survey
           lessons:
             Pre Hour of Code Survey:
               name: Survei Pra Hour of Code

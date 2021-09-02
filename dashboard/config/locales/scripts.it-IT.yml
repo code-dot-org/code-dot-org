@@ -11369,6 +11369,8 @@ it:
           lessons:
             lesson-12:
               name: Strumenti
+            lesson-17:
+              name: Console
             lesson-18:
               name: Componenti
           lesson_groups:

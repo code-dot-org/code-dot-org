@@ -30,7 +30,7 @@ During the Hour of Code campaign, your company can help raise awareness of the c
 
 One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Zaregistruj sa ako dobrovoľník</button>]({{ urls/volunteer }})
 
 Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
 
@@ -82,7 +82,7 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- Pozvite programátorov z Vašej spoločnosti, aby povedali, prečo sa rozhodli študovať informatiku a predstavili projekty, na ktorých pracujú.
 - If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 
 ### 3. Plan your technology needs
@@ -106,7 +106,7 @@ If your event is going to be virtual, you’ll want to decide on your conference
 
 We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **Všetky aktivity v Hodine Kódu** vyžadujú len minimálny čas na prípravu a sú individuálne - umožňujú účastníkom pracovať svojim vlastným tempom a podľa vlastných schopností.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 

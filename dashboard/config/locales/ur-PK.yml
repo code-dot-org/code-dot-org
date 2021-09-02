@@ -193,15 +193,23 @@ ur:
   compatibility:
     upgrade:
       link: مزید سیکھے
+  view_lesson_plan: سبق پلان دیکھیں
   upsell:
     dance:
       title: ڈانس پارٹی
     dance-2019:
       title: ڈانس پارٹی
+    20-hour:
+      title: تیز کردہ کورس
+      body_short: 2-4 کورسز کے تیز کردہ ورژن میں بنیادی کمپیوٹر سائنس سیکھیں۔
     hoc2014:
       try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
     frozen:
       title: فروزن
+    unplugged:
+      title: ان پلگڈ اسباق
+      body_short: اگر آپ کے پاس کمپیوٹر نہیں ہے، تو اپنے کلاس روم میں پلگ نکالا اسباق
+        کو آزمائیں۔
     unplugged_conditionals:
       title: شرائط
     widgets:
@@ -248,6 +256,8 @@ ur:
         math: ریاضی
         science: سائنس
         la: لسانی آرٹس
+      workshop_course:
+        csf_express: CS بنیادی اصول (پری ایکسپریس یا ایکسپریس)
       email_opt_in:
         opt_in_yes: جی
         opt_in_no: نہيں
