@@ -38,7 +38,7 @@ class ProfanityFilter
     LANGUAGE_SPECIFIC_ALLOWLIST.each do |word, languages|
       next if languages.include? language_code
       r = Regexp.new "\\b#{word}\\b", Regexp::IGNORECASE
-      return word.to_s if r =~ text
+      return [word.to_s] if r =~ text
     end
     WebPurify.find_potential_profanities(text, ['en', language_code])
   end
