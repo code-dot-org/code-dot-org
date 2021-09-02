@@ -103,8 +103,7 @@ export const POEMS = {
       '"Where are you going, and what do you wish?"',
       'The old moon asked the three.',
       '"We have come to fish for the herring-fish',
-      'That live in this beautiful sea...',
-      'Said Wynken, Blynken, And Nod.'
+      'That live in this beautiful sea.'
     ]
   },
   twain: {
