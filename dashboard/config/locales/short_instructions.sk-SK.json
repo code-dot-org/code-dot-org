@@ -2913,7 +2913,30 @@
         "ramp_artist_loops4_2021": "Takúto hviezdu vytvoríš opakovaním blokov \"posuň sa dopredu\" a \"otoč sa vpravo o 144 stupňov\".",
         "ramp_artist_loops7_2021": "Nájdi opakujúci sa vzor a skráť tento kód pomocou cyklov!",
         "ramp_artist_loops8_2021": "Uprav kód tak, aby si nakreslil obrázok podľa predlohy s použitím cyklov.",
-        "ramp_artist_loops9_2021": "Nakresli štvorec."
+        "ramp_artist_loops9_2021": "Nakresli štvorec.",
+        "iceage_click_hello": "Pomôžeš Sidovi zavolať na kamarátov vždy, keď naňho klikneš? ",
+        "iceage_hello1": "Pomôž Sidovi pozdraviť sa. Chyť blok `povedz` a pripoj ho pod udalosť `pri spustení`.",
+        "iceage_hello2": "Pomôž Mannymu a Sidovi pozdraviť sa – použi blok `postava ___ povedz` dvakrát.",
+        "iceage_move_to_actor": "Pripoj k udalosti `keď postava ___ dotkne sa` iný blok, aby sa pri stretnutí Diega a Mannyho prehral zvuk.",
+        "iceage_move_to_flag": "Scrat hľadá svoj žaluď! Pomôžeš mu prekonať posledných 200 pixelov?",
+        "iceage_repeat": "Pomôž Ňani trošku si zacvičiť tým, že ju budeš opakovane posúvať doľava a doprava.",
+        "iceage_sound_and_points": "Vieš tento program dokončiť tak, aby sa pri stretnutí Sida s Ňanou **prehral zvuk** a zároveň **pridal bod**? ",
+        "iceage_sound_and_points_dani": "Vieš tento program dokončiť tak, aby sa pri stretnutí Sida s Ňanou **prehral zvuk** a zároveň **pridal bod**? ",
+        "iceage_free_play": "Teraz si môžeš vytvoriť vlastnú hru alebo príbeh! ",
+        "iceage_throw_hearts": "Pomocou príkazu `postava ___ hoď` hoď od Sida (postava 1) srdcia na Ňaňu (postava 2). Okrem toho naprogramuj, aby sa Ňani nastavila veselá nálada, keď ju srdcia zasiahnu.",
+        "iceage_warn_ice_age": "Nastav scéne ľadové pozadie a Sidovi (postava 1) nastav rýchlu rýchlosť.",
+        "iceage_warn_ice_age_dani": "Nastav scéne ľadové pozadie a Sidovi (postava 1) nastav rýchlu rýchlosť.",
+        "courseA_artist_loops10_2021": "Pomôž mi s kladením kameňov, aby som nespadol!",
+        "courseA_artist_loops12_2021": "Umelec v diaľke uvidel niečo smiešne. Nakresli, čo si myslíš, že uvidel.",
+        "courseA_artist_loops3_2021": "Nakresli päť rovných čiar.",
+        "courseA_artist_loops4_2021": "Teraz túto čiaru nakresli päťkrát pomocou cyklu `opakuj`!",
+        "courseA_artist_loops9_2021": "Výzva: Oprav schody.",
+        "courseA_artist_loops_challenge1_2021": "Vieš nakresliť dom? Pokojne nakresli taký, aký sa ti bude najviac páčiť.",
+        "courseA_artist_loops_challenge2a_2021": "_„Pomôž mi postaviť tieto tri stany!“_",
+        "courseA_playLab_events3_2021": "Blok `presuň sa doľava` pripoj k bloku s udalosťou `keď šípka vľavo`, ktorý sa už nachádza na pracovnej ploche.",
+        "courseA_playlab_events_challenge1_2021": "Vieš doplniť kód tak, aby sa zobrazil aj zvyšok mojich kamarátov? Pomôcky ti krok za krokom pomôžu dokončiť tento projekt.",
+        "courseA_playlab_events_challenge2_2021": "Každého naprogramuj tak, aby niečo robil, keď naňho klikneš.",
+        "courseA_video_events_2021": "Potrebuješ lepšiu kombináciu udalostí do Play Labu"
       }
     }
   }

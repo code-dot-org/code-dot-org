@@ -29266,6 +29266,8 @@ de:
           lessons:
             lesson-12:
               name: Werkzeuge
+            lesson-17:
+              name: Konsole
             lesson-18:
               name: Widgets
           lesson_groups:

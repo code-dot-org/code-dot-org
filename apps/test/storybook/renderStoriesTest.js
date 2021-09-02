@@ -2,7 +2,6 @@
 // render errors and other problems.
 import {
   throwOnConsoleErrorsEverywhere,
-  throwOnConsoleWarningsEverywhere,
   clearTimeoutsBetweenTests
 } from '../util/testUtils';
 import testStorybook from './util/testStorybook';
@@ -18,7 +17,11 @@ const DENYLIST = [
 
 describe('react-storybook stories render without errors or warnings', function() {
   throwOnConsoleErrorsEverywhere();
-  throwOnConsoleWarningsEverywhere();
+
+  // TODO: Add warnings back once redux/react-redux have been upgraded.
+  // https://codedotorg.atlassian.net/browse/XTEAM-376
+  // throwOnConsoleWarningsEverywhere();
+
   clearTimeoutsBetweenTests();
 
   // Stub jquery fileupload library function and window.Audio class.

@@ -242,7 +242,7 @@ class JsDebugger extends React.Component {
     this.props.onSlideOpen && this.props.onSlideOpen(this.state.openedHeight);
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (this.props.isOpen && !nextProps.isOpen) {
       this.slideShut();
     } else if (!this.props.isOpen && nextProps.isOpen) {
@@ -382,7 +382,7 @@ class JsDebugger extends React.Component {
    *  Handle mouse moves while dragging the debug resize bar.
    */
   onMouseMoveWatchersResizeBar = event => {
-    const watchers = this._watchers;
+    const watchers = this._watchers.getWrappedInstance();
     const watchersRect = watchers.scrollableContainer.getBoundingClientRect();
     const movement = watchersRect.left - event.clientX;
     const newDesiredWidth = watchersRect.width + movement;
@@ -394,7 +394,8 @@ class JsDebugger extends React.Component {
     const watchersResizeRect = this._watchersResizeBar.getBoundingClientRect();
     const watchersResizeRight = newWatchersWidth - watchersResizeRect.width / 2;
     watchers.scrollableContainer.style.width = newWatchersWidth + 'px';
-    this._debugConsole.root.style.right = newWatchersWidth + 'px';
+    this._debugConsole.getWrappedInstance().root.style.right =
+      newWatchersWidth + 'px';
     this._watchersResizeBar.style.right = watchersResizeRight + 'px';
 
     const headerLBorderWidth = 1;
@@ -435,7 +436,6 @@ class JsDebugger extends React.Component {
     }
 
     const showWatchPane = this.props.debugWatch && !this.state.watchersHidden;
-
     return (
       <div
         id="debug-area"

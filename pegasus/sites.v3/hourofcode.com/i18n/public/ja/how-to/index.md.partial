@@ -4,7 +4,7 @@ layout: wide
 nav: how_to_nav
 ---
 
-{{ signup_button }}
+サインアップ
 
 # How to plan your Hour of Code
 
@@ -101,7 +101,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 - ビル・ゲイツ、マーク・ザッカーバーグ、そしてNBAスターのクリス・ボッシュを特集したCode.org設立時のオリジナルビデオ （[1分](https://www.youtube.com/watch?v=qYZF6oIZtfc)、[5分](https://www.youtube.com/watch?v=nKIu9yen5nc)、[9分](https://www.youtube.com/watch?v=dU1xS07N-FA)のバージョンがあります）
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+あなた自身、もしくは生徒達、もしくはその両方がコンピュータサイエンスを学んだことがなくても、全く問題はありません。以下のようなアクティビティをやってみると良いでしょう。
 
 - テクノロジーが私たちの生活にどのような影響を与えているかを、男の子と女の子がともに興味を持つような実例を交えて説明する。例えば、コンピュータが医療の分野でどの様に使われているのか、人々を助けるためにどんな役割を担っているのか、もしくは人々を国境を超えてつなげるためにどんなアプリケーションが使われているのかなど。
 - クラス全体で、コンピュータが使われているシーンをリストアップしてみる。
@@ -115,7 +115,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 生徒たちに何をするのか指示する
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- 黒板にチュートリアルへのリンクを書きましょう。[あなたが選択したチュートリアルの情報]({{ urls/learn }})にあるリンクを探してください。
 
 生徒たちが困っていたら以下のように声をかけてみてもよいです
 
@@ -158,4 +158,4 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 
-{{ signup_button }}
+サインアップ

@@ -8,7 +8,7 @@ title: اس بات کو عام کریں
 
 ## 1. دوسروں تک بھجیں
 
-Tell your friends about the **#HourOfCode**!
+اپنے دوستوں کو ** #HourOfCode </ strong> کے بارے میں بتائیں!</p> 
 
 {{ promote/share_buttons }}
 

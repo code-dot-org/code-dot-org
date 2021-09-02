@@ -8,7 +8,7 @@ title: Vertel het verder
 
 ## 1. Spreid het woord
 
-Tell your friends about the **#HourOfCode**!
+Vertel uw vrienden over **#HourOfCode**!
 
 {{ promote/share_buttons }}
 

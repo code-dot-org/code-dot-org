@@ -78,6 +78,11 @@ export const StatusMessageType = {
   EXITED: 'EXITED'
 };
 
+export const InputMessageType = {
+  SYSTEM_IN: 'SYSTEM_IN',
+  PLAYGROUND: 'PLAYGROUND'
+};
+
 export const SoundExceptionType = makeEnum(
   'INVALID_AUDIO_FILE_FORMAT',
   'MISSING_AUDIO_DATA'

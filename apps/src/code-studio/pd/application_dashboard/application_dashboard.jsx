@@ -69,7 +69,7 @@ export default class ApplicationDashboard extends React.Component {
     canLockApplications: PropTypes.bool
   };
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     store.dispatch(setRegionalPartners(this.props.regionalPartners));
     store.dispatch(
       setRegionalPartnerFilter(
