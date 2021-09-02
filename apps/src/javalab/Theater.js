@@ -1,9 +1,12 @@
-import {TheaterSignalType} from './constants';
+import {TheaterSignalType, STATUS_MESSAGE_PREFIX} from './constants';
+import javalabMsg from '@cdo/javalab/locale';
 
 export default class Theater {
-  constructor() {
+  constructor(onOutputMessage, onNewlineMessage) {
     this.canvas = null;
     this.context = null;
+    this.onOutputMessage = onOutputMessage;
+    this.onNewlineMessage = onNewlineMessage;
   }
 
   handleSignal(data) {
@@ -14,18 +17,6 @@ export default class Theater {
       }
       case TheaterSignalType.VISUAL_URL: {
         this.getImgElement().src = data.detail.url;
-        break;
-      }
-      // TODO: Remove these message types once javabuilder is updated to
-      // no longer use them.
-      case TheaterSignalType.VISUAL: {
-        const imageString = 'data:image/gif;base64,' + data.detail.image;
-        this.getImgElement().src = imageString;
-        break;
-      }
-      case TheaterSignalType.AUDIO: {
-        const audioString = 'data:audio/wav;base64,' + data.detail.audio;
-        this.getAudioElement().src = audioString;
         break;
       }
       default:
@@ -44,5 +35,13 @@ export default class Theater {
 
   getAudioElement() {
     return document.getElementById('theater-audio');
+  }
+
+  onClose() {
+    this.onNewlineMessage();
+    this.onOutputMessage(
+      `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
+    );
+    this.onNewlineMessage();
   }
 }

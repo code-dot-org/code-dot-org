@@ -3,7 +3,22 @@
     "data": {
       "bubble_choice_description": {
         "outbreak4": "Cambia il funzionamento della simulazione e fai una previsione su ciò che accadrà.",
-        "outbreak5": "Aiuta i tuoi personaggi a migliorare automaticamente nel tempo!"
+        "outbreak5": "Aiuta i tuoi personaggi a migliorare automaticamente nel tempo!",
+        "CourseF_outbreak4": "Cambia il funzionamento della simulazione e fai una previsione su ciò che accadrà.",
+        "CourseF_outbreak5": "Aiuta i tuoi personaggi a migliorare automaticamente nel tempo!",
+        "CourseF_outbreak6": "Un virus non si trasmette sempre, né le maschere fermano perfettamente la trasmissione. Migliora la tua simulazione facendo in modo che le infezioni avvengano con una certa probabilità.",
+        "CourseF_outbreak7": "Impedisci ai tuoi personaggi di ammalarsi rendendoli immuni al virus.",
+        "CourseF_outbreak8": "Usa il tuo progetto per condividere un messaggio. Cosa vuoi che si impari da questa attività?",
+        "courseC_artist_prog_challenge1_2021": "Disegna una stanza per ogni animale.",
+        "courseD_bee_nestedLoops8_2021": "Raccogli tutto il nettare da ogni fiore e produci il miele in ogni favo. Usa un ciclo annidato.",
+        "courseD_bee_nestedLoops9_2021": "Fai tutto il miele.",
+        "courseF_bee_variables_7a_2021": "Questo esercizio è un po' diverso. Cosa devi fare per risolverlo?",
+        "outbreak6": "Un virus non si trasmette sempre, né le maschere fermano perfettamente la trasmissione. Migliora la tua simulazione facendo in modo che le infezioni avvengano con una certa probabilità.",
+        "outbreak7": "Impedisci ai tuoi personaggi di ammalarsi rendendoli immuni al virus.",
+        "outbreak8": "Usa il tuo progetto per condividere un messaggio. Cosa vuoi che si impari da questa attività?",
+        "outbreak_freeplay": "Espandi il tuo progetto con funzioni, variabili e altro!",
+        "outbreak_freeplay_basic": "Continua a lavorare con i blocchi che hai usato finora!",
+        "ramp_artist_loops8_2021": "Cerca uno schema che si ripete e rendi questo programma più breve usando un ciclo."
       }
     }
   }

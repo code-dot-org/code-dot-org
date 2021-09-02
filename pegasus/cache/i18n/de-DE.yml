@@ -1308,12 +1308,14 @@ de-DE:
   coursed-2020_name: Kurs D (2019)
   coursee-2020_name: Kurs E (2019)
   coursef-2020_name: Kurs F (2019)
+  coursed-2021_name: Kurs D (2021)
   express-2018_name: Expresskurs (2018)
   pre-express-2018_name: Leseanfänger-Expresskurs (2018)
   express-2019_name: Expresskurs (2019)
   pre-express-2019_name: Leseanfänger-Expresskurs (2019)
   express-2020_name: Expresskurs (2019)
   pre-express-2020_name: Leseanfänger-Expresskurs (2020)
+  pre-express-2021_name: Leseanfänger-Expresskurs (2021)
   csd2_name: 'Lerneinheit 2: Webentwicklung'
   csd3_name: 'Lerneinheit 3: Animation und Spiele'
   accelerated_name: Beschleunigter Kurs
@@ -1622,6 +1624,29 @@ de-DE:
     Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt,
     das du mit deinen Freunden und deiner Familie teilen kannst.
   coursef-2020_shortdescription_congrats: Lerne die Verwendung verschiedener Arten
+    von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene
+    Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von
+    Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein
+    Capstone Projekt, das du mit Freunden und Familie teilen kannst.
+  coursea-2021_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  courseb-2021_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  coursec-2021_shortdescription_congrats: Erstellen Sie Programme mit Sequenzen, Schleifen
+    und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie
+    verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing
+    umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre
+    eigene Geschichte, die Sie mit anderen teilen können!
+  coursed-2021_shortdescription_congrats: Die SchülerInnen entwickeln ihr Verständnis
+    für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen
+    auch etwas über digitale Bürgerschaft.
+  coursee-2021_shortdescription_congrats: Beginne mit der Programmierung von Algorithmen,
+    Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen.
+    Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt,
+    das du mit deinen Freunden und deiner Familie teilen kannst.
+  coursef-2021_shortdescription_congrats: Lerne die Verwendung verschiedener Arten
     von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene
     Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von
     Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein
@@ -2512,6 +2537,7 @@ de-DE:
   footer_support: Unterstützung
   footer_terms: Bedingungen
   ai_for_oceans: KI für Meere
+  ai_for_oceans_lesson_plan: arbeitsplan
   ai_in_partnership_with: In Zusammenarbeit mit
   ai_microsoft_thanks: Wir danken Microsoft für die Unterstützung unserer Vision und
     Mission, sicherzustellen, dass jedes Kind die Möglichkeit hat, Informatik und

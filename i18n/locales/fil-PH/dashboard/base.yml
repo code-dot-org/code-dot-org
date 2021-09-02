@@ -167,8 +167,8 @@ fil:
     additional_information: "Kailangan namin ng karagdagang impormasyon para maituloy ang pag-sign up sa iyo."
     user_type_button: "I-update ang Uri ng Account"
     user_type_label: "Uri ng Account"
-    user_type_teacher: "Teacher"
     user_type_student: "Estudyante"
+    user_type_teacher: "Teacher"
     field_is_required: "ay kailangan"
     accept_terms: "Kailangan mong sumang-ayon para gumawa ng account"
     error: "May problemang naganap."
@@ -269,6 +269,7 @@ fil:
     invite_sent: 'Imbitasyon napadala na'
     added_teacher: '%{name} dinagdag ka bilang guro'
     registered: "Ikaw ay nagrehistro para sa %{section_name}."
+    already_exists: 'Ikaw ay nakasali na sa seksyon na %{section_name}.'
     error:
       signed_in: 'Maaring mag signout muna bago magpatuloy'
       username_not_found: 'Ang username na %{username} ay hindi nakita'
@@ -458,6 +459,7 @@ fil:
     for_parents_and_guardians: "Para sa mga Magulang at mga Tagapag-alaga"
     link_a_parent_email: "Iugnay ang email address ng magulang/tagapag-alaga sa account na ito para manatiling updated sa progreso at mga proyekto ng anak mo. Magagamit mo rin ang email address na ito para mabawi ang password."
     parent_guardian_email_label: "Email Magulang/Tagapangalaga"
+    remove_parent_email_label: "Alisin"
     none: "Wala"
     only_one_parent_email_supported_warning: "Tandaan: masusuportahan lang namin ang isang email address ng magulang/tagapag-alaga sa bawat estudyante sa ngayon. "
   user_level:
@@ -564,7 +566,6 @@ fil:
       link: "Matuto nang higit pa"
       applab_unsupported_tablet: "Ang App Lab ay mas mainam na gamitin sa desktop o laptop na kompyuter na mayroong mouse at keyboard. Maaring makaranas ka ng mga problema sa paggamit ng kagamitang ito sa iyong kasalukuyang device."
       gamelab_unsupported_tablet: "Ang Game Lab ay mas mainam gamitin sa desktop o laptop na kompyuter na may mouse at keyboard. Maaring makaranas ka ng mga problema sa paggamit ng kagamitang ito sa iyong kasalukuyang device."
-      weblab_unsupported_browser: "Sa kasamaan palad, kami ay kasalukuyang nakaranas ng mga problema sa paglo-load ng Web Lab sa iyong browser. Maaring gusto mong gumamit ng ibang browser habang hindi pa nalutas ang problema. Ipagpaumanhin niyo po ang abala."
       weblab_unsupported_locale_storage: "Maaring makaranas ka ng mga problema sa paggamit ng Web Lab sa Private Browsing na mode. Paki-load ulit ang iyong proyekto sa normal na mode. Ipagpaumanhin niyo po ang abala."
   slow_loading: 'Ito ay tumatagal pa sa karaniwan...'
   try_reloading: 'Subukang i-reload ang pahina'
@@ -921,7 +922,7 @@ fil:
       school_city: 'Lungsod ng Paaralan'
       school_country: 'Bansa ng Paaralan'
       colombian_school_city: 'Lungsod ng Paaralan'
-      colombian_school_name: 'Pangalan ng Paaralan'
+      colombian_chilean_school_name: 'Pangalan ng Paaralan'
     form_entries:
       gender:
         male: 'Lalaki'

@@ -54,6 +54,7 @@ class UnitEditor extends React.Component {
     initialProjectWidgetVisible: PropTypes.bool,
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
     initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
     initialLessonLevelData: PropTypes.string,
     initialHasVerifiedResources: PropTypes.bool,
@@ -126,6 +127,7 @@ class UnitEditor extends React.Component {
       wrapupVideo: this.props.initialWrapupVideo,
       projectWidgetVisible: this.props.initialProjectWidgetVisible,
       projectWidgetTypes: this.props.initialProjectWidgetTypes,
+      lastUpdatedAt: this.props.initialLastUpdatedAt,
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
       lessonLevelData:
         this.props.initialLessonLevelData ||
@@ -290,6 +292,7 @@ class UnitEditor extends React.Component {
             this.props.levelKeyList
           )
         : this.state.lessonLevelData,
+      last_updated_at: this.state.lastUpdatedAt,
       old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
@@ -338,13 +341,22 @@ class UnitEditor extends React.Component {
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
-            oldScriptText: data.lessonLevelData
+            oldScriptText: data.lessonLevelData,
+            lastUpdatedAt: data.updated_at
           });
         }
       })
       .fail(error => {
         this.setState({isSaving: false, error: error.responseText});
       });
+  };
+
+  toggleHiddenCourseUnit = () => {
+    const publishedState =
+      this.state.publishedState === PublishedState.in_development
+        ? null
+        : PublishedState.in_development;
+    this.setState({publishedState});
   };
 
   render() {
@@ -611,10 +623,43 @@ class UnitEditor extends React.Component {
                 </HelpTip>
               </label>
               {this.props.hasCourse && (
-                <p>
-                  This unit is part of a course. Go to the course edit page to
-                  publish the course and its units.
-                </p>
+                <div>
+                  <p>
+                    This unit is part of a course. Go to the course edit page to
+                    publish the course and its units.
+                  </p>
+                  {/*
+                   Just use a checkbox instead of a dropdown to set the
+                   published state for now, because (1) units in unit groups
+                   really only need 2 of the 6 possible states at the moment,
+                   but (2) we haven't nailed down how many of these states we
+                   will need in the long term, and (3) we need these 2 states
+                   working now in order to launch the AP CSA pilot. The work to
+                   clean this up is tracked in:
+                   https://codedotorg.atlassian.net/browse/PLAT-1170
+                   */}
+                  <label>
+                    Hide this unit within this course
+                    <input
+                      type="checkbox"
+                      checked={
+                        this.state.publishedState ===
+                        PublishedState.in_development
+                      }
+                      style={styles.checkbox}
+                      onChange={this.toggleHiddenCourseUnit}
+                    />
+                    <HelpTip>
+                      <p>
+                        Whether to hide this unit from the list of units in its
+                        course, as viewed on the course overview page, the edit
+                        section dialog, and the teacher dashboard, as well as
+                        when navigating directly to the unit by its url. Hidden
+                        units will still be visible to levelbuilders.
+                      </p>
+                    </HelpTip>
+                  </label>
+                </div>
               )}
               {!this.props.hasCourse && (
                 <div>

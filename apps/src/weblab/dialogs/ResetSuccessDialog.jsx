@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/weblab/locale';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 
-export default function ResetSuccessDialog(props) {
+export default function ResetSuccessDialog({isOpen, handleClose, ...props}) {
   return (
     <StylizedBaseDialog
-      isOpen={props.isOpen}
-      handleClose={props.handleClose}
+      {...props}
+      isOpen={isOpen}
+      handleClose={handleClose}
       title={i18n.resetComplete()}
       body={i18n.reloading()}
       hideFooter

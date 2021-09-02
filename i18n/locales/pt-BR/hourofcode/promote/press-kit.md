@@ -4,7 +4,7 @@ title: Kit para a imprensa
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# Como atrair a mídia para sua Hora do Código
 
 ### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
@@ -12,7 +12,7 @@ title: Kit para a imprensa
 
 * * *
 
-## Key Tips
+## Dicas fundamentais
 
 - Entre em contato com a mídia por e-mail, duas semanas antes do seu evento. Faça o acompanhamento por e-mail e telefone, caso você não receba uma resposta inicial.
 - Peça a um membro da equipe escolar ou voluntário que tire fotos para serem compartilhadas on-line ou enviadas para a imprensa.
@@ -21,7 +21,7 @@ title: Kit para a imprensa
 
 ## Step-by-step guide
 
-### 1. Plan your event
+### 1. Planeje seu evento
 
 - Planeje a abertura da Hora do Código.
 - Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
@@ -33,13 +33,13 @@ title: Kit para a imprensa
 
 Like local newspapers, TV station or radio stations, or blogs. <br />
 
-### 3. Contact local media
+### 3. Entre em contato com a mídia local
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+A melhor maneira de realizar este contato é por e-mail. It should be short and should communicate "why should other people care about this event"? Inclua as informações de contato (incluindo o número de um telefone celular) de quem estará no local do evento. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+Procure na Internet informações de contato de jornalistas. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. Prepare-se para receber perguntas sobre o evento da sua escola. Veja os exemplos a seguir:
 
 #### Por que sua escola está fazendo uma Hora do Código?
 

@@ -94,6 +94,8 @@ export default class SublevelCard extends React.Component {
 
     let mappedSublevel = sublevel;
     if (mappedSublevel) {
+      // ProgressBubble expects level keys to be camelCase (instead of snake case)
+      // converting keys to the correct casing here
       mappedSublevel = _.mapKeys(sublevel, (value, key) => _.camelCase(key));
     }
 

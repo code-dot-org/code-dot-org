@@ -129,8 +129,13 @@ id:
       masuk dengan mengetikkan kata sandi Anda di bawah ini.
     use_clever: Maaf, akun Code.org Anda tidak tertaut ke %{provider}. Masuk melalui
       Clever Portal.
+    invalid_provider: Maaf,%{provider} akun tidak bisa ditautkan ke akun Code.org.
+    migration_required: Maaf,kami tidak bisa tersambung atau putuskan akun yang masih
+      menggunakan akun lama
     unable_to_connect_provider: Tidak dapat menghubungkan akun Code.org Anda ke akun
       %{provider}. Silakan coba lagi.
+    disconnect_successful: Berhasil! Kami sudah memutuskan akun eksternal dari akun
+      Code.org anda.
     already_in_use: Akun %{provider} sudah terhubung ke akun Code.org yang lain.
     already_linked: Akun %{provider} Anda sudah tertaut ke akun Code.org Anda.
     existing_account:
@@ -211,8 +216,15 @@ id:
       pendaftaran Anda.
     user_type_button: Perbarui Jenis Akun
     user_type_label: Jenis Akun
-    user_type_teacher: Guru
     user_type_student: siswa
+    user_type_student_desc: 'Jelajahi semua kursus dan kegiatan kami,ditambah:'
+    user_type_student_ability_1: Simpan kemajuan dan proyek anda
+    user_type_student_ability_2: Bergabung dengan bagian kelas guru
+    user_type_teacher: Guru
+    user_type_teacher_ability_1: Membuat bagian kelas
+    user_type_teacher_ability_2: Menetapkan dan melacak pekerjaan siswa
+    user_type_teacher_ability_3: Mendaftar dalam pembelajaran profesional
+    user_type_teacher_ability_4: Berinteraksi dalam forum guru kami
     field_is_required: diperlukan
     accept_terms: Anda harus setuju untuk membuat akun.
     error: Sebuah kesalahan terjadi.
@@ -318,6 +330,8 @@ id:
     invite_sent: Undangan telah dikirim
     added_teacher: "%{name} telah dicantumkan sebagai nama guru Anda"
     registered: Anda sudah terdaftar pada %{section_name}.
+    captcha_required: Silahkan isi CAPTCHA untuk bergabung dibagian ini
+    already_exists: Anda telah bergabung dengan bagian %{section_name}.
     error:
       signed_in: Silahkan logout sebelum melanjutkan
       username_not_found: Nama akun %{username} tidak ditemukan
@@ -331,6 +345,11 @@ id:
       provider_managed_section: Bagian ini dikelola oleh penyedia yang lain dan tidak
         dapat digabungkan. Mintalah guru Anda untuk menambahkan Anda melalui %{provider}
         dan sinkronkan bagian mereka.
+      restricted_section: Kami tidak bisa menambahkan anda ke bagian %{section_code}
+        karena ini terkunci.Silahkan kontak guru anda untuk bantuan.
+      full_section: Kami tidak bisa nenambahkan anda %{section_code} karena sudah
+        ada siswa %{section_capacity} didalamnya. Silahkan kontak guru anda untuk
+        bantuan.
     mail:
       student_disassociated:
         subject: 'Pemberitahuan Code.org : %{student_name} tidak lagi terdaftar sebagai
@@ -383,6 +402,7 @@ id:
       game_lab_tutorials: Tutorial lab permainan
       sprite_lab_documentation: Dokumentasi Lab Sprite
       sprite_lab_tutorials: Tutorial Lab Sprite
+      web_lab_documentation: Dokumentasi Web Lab
       educate_overview: Ikhtisar Pendidik
       educate_elementary: Sekolah Dasar
       educate_middle: Sekolah Menengah Pertama
@@ -449,7 +469,7 @@ id:
       minecraft_codebuilder: 'Minecraft: Koneksi Code'
       minecraft_designer: Minecraft
       minecraft_hero: Pahlawan Minecraft
-      playlab: Play Lab/Lab Permainan
+      playlab: Lab Permainan
       playlab_k1: Lab bermain (pra-pembaca)
       scratch: Scratch
       sports: Olahraga
@@ -498,6 +518,7 @@ id:
       worked_with: Bekerja Bersama
       update_lock_settings: Perbarui pengaturan kunci di sini.
       clear_response: Hapus tanggapan
+    student_code_view_diabled: Code siswa tidak bisa dilihat unuk aktifitas ini.
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
@@ -568,6 +589,7 @@ id:
       mendapatkan info terkini mengenai kemajuan dan proyek anak Anda. Anda juga bisa
       menggunakan alamat email ini untuk pemulihan kata sandi.
     parent_guardian_email_label: Email orang tua/wali
+    remove_parent_email_label: Hapus
     none: Tidak Ada
     only_one_parent_email_supported_warning: 'Catatan: kami hanya dapat mendukung
       satu alamat email orang tua/wali per akun murid pada saat ini.'
@@ -684,6 +706,9 @@ id:
     code_from_html: Code.org menggunakan p5.play, yang berlisensi <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Didukung oleh Amazon Web Services
+    built_on_github: Bawaan GitHub dari Microsoft
+    google_copyright: "&copy: Google inc. digunakan dalam ijin. Google Clasroom adalah
+      merek dagang dari Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; adalah merk dagang dari Code.org."
     copyright: Hak cipta
@@ -695,12 +720,14 @@ id:
     tos_short: Ketentuan
     tos: Ketentuan Layanan
     privacy: Kebijakan privasi
+    privacy_updated: Kebijakan Privasi Diperbarui
     secure: Versi yang Aman
     report_abuse: Laporkan Penyalahgunaan
     built_on_code_studio: Dibuat di Code Studio
     make_my_own_app: Membuat aplikasi saya sendiri
     how_it_works: Cara Kerjanya (Lihat Code)
     try_hour_of_code: Cobalah Hour of Code!
+    store: Toko
   reference_area:
     title: Perlu bantuan?
     subtitle: Lihat video ini dan tips lainnya
@@ -731,12 +758,6 @@ id:
       gamelab_unsupported_tablet: Game Lab sangat cocok di komputer atau laptop dengan
         mouse dan keyboard. Anda mungkin mengalami masalah menggunakan alat ini di
         perangkat Anda saat ini.
-      oceans_unsupported_browser: Browser ini tidak didukung untuk tutorial ini. Silakan
-        mengunjungi halaman ini dengan Edge, Chrome, Firefox, atau browser modern
-        lainnya.
-      weblab_unsupported_browser: Maaf, kami saat ini mengalami masalah memuat Web
-        Lab di browser ini. Anda mungkin perlu menggunakan browser lain sampai masalah
-        ini terselesaikan. Mohon maaf atas ketidaknyamanannya.
       weblab_unsupported_locale_storage: Mungkin Anda mengalami masalah menggunakan
         Web Lab dalam mode Penjelajahan Pribadi. Tolong muat ulang proyek Anda dalam
         mode normal. Mohon maaf atas ketidaknyamanannya.
@@ -939,6 +960,8 @@ id:
     open_response_body: Terima kasih atas jawaban Anda!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
+  lesson_extras:
+    bonus_level: Bonus level
   dialog:
     ok: Oke!
     startover_title: Kamu yakin ingin memulainya dari awal?
@@ -1001,6 +1024,18 @@ id:
       tidak tersedia bagi murid Anda sebelum secara tegas menerima persyaratan yang
       diperbarui.
     review_terms: Tinjau ketentuan yang diperbarui
+  donor_interstitial:
+    title: Kursus gratis CS anda dibuat mungkin oleh...
+    subtitle: Kami ingin mengucapkan terimakasih kepada para donatur yang murah hati
+      yang dengan dukungannya membuat Code.org sukses. Kami berkomitmen agar Code.org
+      tetap gratis untuk sekolah dan para siswa,secara global, terimakasih kepada
+      kemurahan hati yang berkelanjutan dari [donors](%{donors_url}) kami!
+    local_supporters: Pendukung lokal
+    global_supporters: Pendukung global
+    support_codeorg_1: Setiap dolar yang diberikan kepada Code.org membawa kesempatan  untuk
+      lebih banyak siswa.
+    support_codeorg_2: "[Berdonasi sekarang](%{donate_url}) untuk mendukung Code.org."
+    get_started: Memulai di Code.org
   school_info_interstitial:
     title: Kami ingin menghadirkan Ilmu Komputer kepada setiap murid - bantu kami
       memantau kemajuan kami!
@@ -1225,7 +1260,11 @@ id:
       school_city: Kota sekolah
       school_country: Negara Sekolah
       colombian_school_city: Kota sekolah
-      colombian_school_name: Nama Sekolah
+      colombian_chilean_school_department: Departemen sekolah/wilayah
+      colombian_school_municipality: Kotamadya sekolah
+      colombian_chilean_school_name: Nama Sekolah
+      chilean_school_commune: Komune
+      chilean_school_id: ID sekolah
       ages: Umur berapa yang Anda ajar tahun ini?
       subjects: Mata pelajaran apa yang Anda ajarkan tahun ini?
       resources: Manakah dari materi pembelajaran pendidikan CS berikut yang Anda
@@ -1257,10 +1296,12 @@ id:
       school_country:
         canada: Kanada
         chile: Cile
+        colombia: Colombia
         israel: Israel
         malaysia: Malaysia
         mexico: Meksiko
         thailand: Thailand
+        uzbekistan: Uzbekistan
       ages:
         ages_under_6: "< 6 tahun"
         ages_7_8: 7- 8 tahun
@@ -1306,6 +1347,7 @@ id:
         csf_express: CS Fundamentals (Praekspres atau Ekspres)
         csd: CS Discoveries
         csp: CS Principles
+        not_applicable: Tidak dapat diterapkan
       email_opt_in:
         opt_in_yes: Ya
         opt_in_no: Tidak
@@ -1324,6 +1366,9 @@ id:
         Anda mengenal kurikulum dan alat Code.org. Silakan terus sampaikan pertanyaan
         dan masukan Anda kepada kami di [support@code.org](%{support_email_url}) atau
         dengan memposting di [forum guru](%{teacher_forum_url})!
+      facilitator_not_listed: Fasilitator saya tidak terdaftar
+      facilitator_not_applicable: Tidak dapat diterapkan
+      organizer_not_listed: Penyelenggara saya tidak terdaftar
     logged_out:
       heading: Terima kasih sudah berminat pada Program Pembelajaran Profesional!
       body: Untuk memulai, terlebih dahulu Anda perlu login ke akun Code.org Anda.
@@ -1352,6 +1397,7 @@ id:
     alamat web dan daftar ulang. Atau, kembali ke homepage.
   page_not_found_button: Pulang ke rumah
   copy: Salin
+  confirm: Konfirmasi
   maker:
     google_oauth:
       login_with_google: Login ke Maker App dengan Google
@@ -1363,8 +1409,13 @@ id:
       error_wrong_provider: Penyedia salah. Pastikan Anda login dengan Google.
       error_invalid_user: Id pengguna tidak valid. Silakan coba login lagi.
       error_no_code: Mohon masukkan kode login Anda.
+      confirm_login: Pilih "konfirm" untuk log in dengan akun Google anda.
   parent_email_banner:
     text: "**Apakah Anda orang tua atau wali?** Tautkan email Anda ke akun ini untuk
       tetap mendapatkan info terkini mengenai kemajuan dan proyek anak Anda!"
     link_your_email: Hubungkan email Anda
     not_now: Tidak sekarang
+  behaviors:
+    this_sprite: Sprite ini
+  unit_prefix: Unit %{n}
+  code_org_logo_alt: Home Code.org

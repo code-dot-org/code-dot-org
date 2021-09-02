@@ -148,8 +148,8 @@ vi:
     additional_information: "Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng ký cho bạn."
     user_type_button: "Cập nhật tài khoản"
     user_type_label: "Kiểu tài khoản"
-    user_type_teacher: "Giáo viên"
     user_type_student: "Học sinh"
+    user_type_teacher: "Giáo viên"
     field_is_required: "là bắt buộc"
     accept_terms: "Bạn phải đồng ý để tạo một tài khoản"
     error: "Đã xảy ra lỗi."
@@ -250,6 +250,7 @@ vi:
     invite_sent: 'Đã gửi lời mời'
     added_teacher: '%{name} được thêm như giáo viên của bạn'
     registered: "Bạn đã đăng kí cho mục %{section_name}."
+    already_exists: 'Bạn đã tham gia nhóm đào tạo %{section_name}.'
     error:
       signed_in: 'Xin vui lòng đăng xuất trước khi tiếp tục'
       username_not_found: 'Tên người sử dụng % {username} không tìm thấy'
@@ -259,6 +260,7 @@ vi:
       blank_code: "Vui lòng nhập một phần mã"
       cant_join_own_section: "Xin lỗi, bạn không thể tham gia phần riêng của bạn."
       provider_managed_section: "Mục này được quản lý bởi nhà cung cấp khác và bạn không thể tham gia. Vui lòng liên hệ giáo viên của bạn để %{provider} thêm bạn vào và tham gia mục này."
+      restricted_section: "Chúng tôi không thể thêm bạn vào nhóm đào tạo %{section_code} vì nhóm này bị khóa. Vui lòng liên hệ với giáo viên của bạn để được giúp đỡ."
     mail:
       student_disassociated:
         subject: "Thông báo từ Code.org: %{student_name} không còn trong danh sách là học viên của bạn."
@@ -320,6 +322,7 @@ vi:
       about_contact: "Liên hệ"
       about_faqs: "Hỏi đáp"
       learn: "Học"
+      stats: "Xem thống kê"
       help_us: "Giúp đỡ chúng tôi"
       teach: "Dạy"
       about: "về chúng tôi"
@@ -357,6 +360,7 @@ vi:
       gumball: 'Thế giới kì diệu của Gumball'
       iceage: 'Kỉ băng hà'
       infinity: 'Vô cùng'
+      minecraft_adventurer: 'Minecraft Chuyến phiêu lưu'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Phòng trò chơi'
@@ -401,6 +405,7 @@ vi:
       example: 'Ví dụ'
       example_with_number: 'Ví dụ giải pháp %{solution_number}'
       submitted_on: 'Gửi lên ngày:'
+      last_updated: 'Cập nhật lần cuối:'
       unsubmit: 'Ngưng gửi'
       worked_with: 'Làm việc với'
       update_lock_settings: 'Cập Nhật khóa cài đặt tại đây.'
@@ -438,6 +443,7 @@ vi:
     for_parents_and_guardians: "Dành cho Phụ huynh và Người giám hộ"
     link_a_parent_email: "Liên kết địa chỉ email phụ huynh/người giám hộ với tài khoản này để luôn được cập nhật về tiến triển và các bài tập của con bạn. Bạn cũng sẽ có thể sử dụng địa chỉ email này để khôi phục mật khẩu."
     parent_guardian_email_label: "Email của phụ huynh/người giám hộ"
+    remove_parent_email_label: "Loại bỏ"
     none: "Không có"
     only_one_parent_email_supported_warning: "Lưu ý: Hiện tại, chúng tôi chỉ có thể hỗ trợ một địa chỉ thư điện tử của phụ huynh/người giám hộ cho mỗi học sinh."
   user_level:
@@ -481,6 +487,7 @@ vi:
     print_certificate: "In giấy chứng nhận"
   move_students:
     new_section_dne: "Xin lỗi, nhưng phần học %{new_section_code} không tồn tại. Vui lòng nhập một mã khác cho phần học."
+    current_section_dne: "Xin lỗi, nhưng phần học %{current_section_code} không tồn tại. Vui lòng nhập một mã khác cho phần học."
     student_ids_not_entered: "Vui lòng cung cấp student_ids."
     student_not_found: "Không thể tìm thấy một hoặc vài sinh viên."
     all_students_must_be_in_current_section: "Tất cả các sinh viên hiện phải đăng ký trong phần của bạn."
@@ -541,7 +548,6 @@ vi:
       link: "Tìm hiểu thêm"
       applab_unsupported_tablet: "App Lab hoạt động tốt nhất trên máy tính để bàn hoặc máy tính xách tay có chuột và bàn phím. Bạn có thể gặp sự cố khi sử dụng công cụ này trên thiết bị hiện tại của mình."
       gamelab_unsupported_tablet: "Game Lab hoạt động tốt nhất trên máy tính để bàn hoặc máy tính xách tay với chuột và bàn phím. Bạn có thể gặp sự cố khi sử dụng công cụ này trên thiết bị hiện tại của mình."
-      weblab_unsupported_browser: "Rất tiếc, chúng tôi hiện đang gặp sự cố khi tải Lab Web trên trình duyệt này. Bạn có thể muốn sử dụng một trình duyệt khác cho đến khi được giải quyết. Xin lỗi vì sự bất tiện."
       weblab_unsupported_locale_storage: "Bạn có thể gặp sự cố khi sử dụng Web Lab ở chế độ Duyệt web Riêng tư. Vui lòng tải lại dự án của bạn ở chế độ thông thường. Xin lỗi vì sự bất tiện."
   slow_loading: 'Điều này mất nhiều thời gian hơn bình thường...'
   try_reloading: 'Hãy thử tải lại trang'
@@ -887,7 +893,7 @@ vi:
       school_city: 'Thành phố của trường'
       school_country: 'Quốc gia'
       colombian_school_city: 'Thành phố của trường'
-      colombian_school_name: 'Tên trường'
+      colombian_chilean_school_name: 'Tên trường'
     form_entries:
       gender:
         male: 'Nam'
@@ -917,9 +923,18 @@ vi:
       email_opt_in:
         opt_in_yes: 'Đồng ý'
         opt_in_no: 'Không'
+    international_opt_in:
+      title: 'Tham gia hội thảo'
+      intro: "Cảm ơn bạn đã dành thời gian để tham gia đào tạo về chương trình giảng dạy của Code.org. Sứ mệnh của chúng tôi là mang đến cơ hội học môn khoa học máy tính cho tất cả trẻ em ở tất cả các trường học trên toàn thế giới. Sứ mệnh này sẽ không thể thực hiện được nếu thiếu bạn."
+      instructions: "Vui lòng điền vào biểu mẫu bên dưới để cho biết 1) bạn đã tham dự hội thảo đào tạo do một trong những đối tác quốc tế của Code.org tổ chức và 2) bạn đồng ý chia sẻ thông tin của mình với đối tác quốc tế của chúng tôi ở quốc gia của bạn để họ có thể giúp đỡ bạn trên hành trình trở thành một giáo viên dạy môn khoa học máy tính."
+      thanks_markdown: "Cảm ơn bạn đã gửi đơn! Chúng tôi rất mong được hỗ trợ bạn khi bạn hiểu chương trình giảng dạy và công cụ của Code.org. Vui lòng tiếp tục chia sẻ câu hỏi và phản hồi của bạn với chúng tôi bằng cách viết thư cho chúng tôi theo địa chỉ [support@code.org](%{support_email_url}) hoặc bằng cách đăng trên [diễn đàn giáo viên](%{teacher_forum_url})!"
+      facilitator_not_listed: "Điều hành viên của tôi không có trong danh sách"
+      organizer_not_listed: "Người tổ chức của tôi không có trong danh sách"
   cookie_banner:
     accept: 'tôi đồng ý'
+  page_not_found_title: "Không tìm thấy trang"
   copy: 'Sao chép'
+  confirm: 'Xác nhận'
   parent_email_banner:
     text: "**Bạn là cha mẹ hay người giám hộ?** Hãy liên kết email của bạn với tài khoản này để luôn cập nhật về tiến trình và dự án của con bạn!"
     link_your_email: "Liên kết thư điện tử của bạn"

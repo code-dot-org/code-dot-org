@@ -2,7 +2,7 @@
 title: 全校での参加
 ---
 
-{{ signup_button }}
+サインアップ
 
 # Get your whole school to participate
 

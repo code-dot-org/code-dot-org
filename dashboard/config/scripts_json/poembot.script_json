@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "poembot",
-    "serialized_at": "2021-07-19 16:54:03 UTC",
+    "serialized_at": "2021-07-20 22:21:31 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poembot"
@@ -111,7 +111,6 @@
         ],
         "progression": "Choose a Poem"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -137,7 +136,6 @@
         ],
         "progression": "Choose a Poem"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -163,7 +161,6 @@
         ],
         "progression": "Sprites & Behaviors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -189,7 +186,6 @@
         ],
         "progression": "Sprites & Behaviors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -215,7 +211,6 @@
         ],
         "progression": "Sprites & Behaviors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -241,7 +236,6 @@
         ],
         "progression": "Sprites & Behaviors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -267,7 +261,6 @@
         ],
         "progression": "Sprites & Behaviors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -293,7 +286,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

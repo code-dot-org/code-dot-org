@@ -26,11 +26,28 @@
     = f.hidden_field :email
     = f.hidden_field :encrypted_password
     .row
-      .span3.signup-field-label
+      .span3.signup-field-label{:id => 'signup-select-user-type-label'}
         = f.label :user_type, t('signup_form.user_type_label')
         - if @user.errors[:user_type].present?
           %p.error= t('activerecord.errors.messages.blank')
-      .span5
+      -# Sign-up user type variant
+      .span5{:id => 'select-user-type-variant'}
+        %button.select-user-type-student-button{id: 'select-user-type-student', type: 'button', onClick: 'selectUserTypeStudent()'}
+          %b.user-type-name= t('signup_form.user_type_student')
+          %p.user-type-desc= t('signup_form.user_type_student_desc')
+          %ul.user-type-abilities-unordered-list
+            %li= t('signup_form.user_type_student_ability_1')
+            %li= t('signup_form.user_type_student_ability_2')
+        %button.select-user-type-teacher-button{id: 'select-user-type-teacher', type: 'button', onClick: 'selectUserTypeTeacher()'}
+          %b.user-type-name= t('signup_form.user_type_teacher')
+          %p.user-type-desc= t('signup_form.user_type_teacher_desc')
+          %ul.user-type-abilities-unordered-list
+            %li= t('signup_form.user_type_teacher_ability_1')
+            %li= t('signup_form.user_type_teacher_ability_2')
+            %li= t('signup_form.user_type_teacher_ability_3')
+            %li= t('signup_form.user_type_teacher_ability_4')
+      -# Sign-up user type original
+      .span5{:id => 'select-user-type-original'}
         = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
       .span2
     .row#parent-email-container
@@ -135,12 +152,43 @@
           = f.radio_button :email_preference_opt_in, 'no'
           = f.label :email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
 
+    .row#share-email-reg-part-preference-radio{style: "display: none;"}
+      .span10.signup-field-label
+        %p
+          = t('signup_form.share_teacher_email_reg_partner_question', cdo_regional_partner_desc: CDO.code_org_url('/educate/regional-partner'), markdown: true).html_safe
+        - if @user.errors[:share_teacher_email_reg_partner_opt_in_radio_choice].present?
+          %p.error= t('signup_form.share_teacher_email_reg_partner_preference_required')
+      .span2{style:"display:block"}
+        .radio
+          = f.radio_button :share_teacher_email_reg_partner_opt_in_radio_choice, 'yes'
+          = f.label :share_teacher_email_reg_partner_opt_in_radio_choice, t('signup_form.share_teacher_email_reg_partner_preference_yes'), value: 'yes'
+        .radio
+          = f.radio_button :share_teacher_email_reg_partner_opt_in_radio_choice, 'no'
+          = f.label :share_teacher_email_reg_partner_opt_in_radio_choice, t('signup_form.share_teacher_email_reg_partner_preference_no'), value: 'no'
+
     .row
       .span10.tos
         = f.hidden_field :terms_of_service_version, value: User::TERMS_OF_SERVICE_VERSIONS.last
         = t('terms_interstitial.accept_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
 
     %button.submit= t('signup_form.go_to_account')
+
+:javascript
+  // Selects 'Teacher' as the user type
+  function selectUserTypeTeacher() {
+    selectUserType('selectUserTypeTeacher');
+  }
+  // Selects 'Student' as the user type
+  function selectUserTypeStudent() {
+    selectUserType('selectUserTypeStudent');
+  }
+  // Selects user type by creating and dispatching an event with the given name.
+  // (Listener for these events is located in _finish_sign_up.js)
+  function selectUserType(selectUserEventName) {
+    var selectUserTypeEvent = document.createEvent('Event');
+    selectUserTypeEvent.initEvent(selectUserEventName, true, true);
+    document.dispatchEvent(selectUserTypeEvent);
+  }
 
 :ruby
   script_data = {

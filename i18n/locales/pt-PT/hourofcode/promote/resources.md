@@ -16,7 +16,7 @@ title: Recursos
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## Pendura estes cartazes na tua escola
 
 A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
 
@@ -26,7 +26,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <a id="social"></a>
 
-## Post these on social media
+## Publique estes nas redes sociais
 
 [![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -36,7 +36,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Utilize o logótipo da Hora de Código para espalhar a palavra
 
 [![image]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![image]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
@@ -92,7 +92,7 @@ This year, let's make it even bigger. I’m asking you to join the Hour of Code 
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Get started at http://hourofcode.com/{{ country }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -132,7 +132,7 @@ That’s why our entire school is joining in on the largest learning event in hi
 
 This is a chance to change the future of education in [TOWN/CITY NAME].
 
-See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 

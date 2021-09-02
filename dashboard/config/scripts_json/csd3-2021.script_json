@@ -14,12 +14,13 @@
       "is_migrated": true,
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-08 19:41:18 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 16:28:10 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -4860,7 +4861,13 @@
       "key": "4b3c39d2-a62c-43c3-b5ae-048ef270624a",
       "position": 5,
       "properties": {
-        "progression_name": "Make an Interactive Card"
+        "progression_name": "Make an Interactive Card",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels_1/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4b3c39d2-a62c-43c3-b5ae-048ef270624a",
@@ -6785,7 +6792,13 @@
       "position": 4,
       "properties": {
         "description": "**Transition:** Students are now ready to program their games on Code Studio. These levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.",
-        "name": "Try - Write Code\r"
+        "name": "Try - Write Code\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels_1/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "686b638e-1a29-49cc-8711-191165d251b9",
@@ -6948,7 +6961,6 @@
         ],
         "progression": "Sample Programs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6974,7 +6986,6 @@
         ],
         "progression": "Sample Programs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7000,7 +7011,6 @@
         ],
         "progression": "Sample Programs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7026,7 +7036,6 @@
         ],
         "progression": "Sample Programs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7052,7 +7061,6 @@
         ],
         "progression": "Drawing Shapes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7078,7 +7086,6 @@
         ],
         "progression": "Introduction to Game Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7104,7 +7111,6 @@
         ],
         "progression": "Video: Drawing in Game Lab - Part 1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7130,7 +7136,6 @@
         ],
         "progression": "Using the Grid"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7156,7 +7161,6 @@
         ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7182,7 +7186,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7208,7 +7211,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7234,7 +7236,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7260,7 +7261,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7286,7 +7286,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7312,7 +7311,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7338,7 +7336,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7364,7 +7361,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7390,7 +7386,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7416,7 +7411,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7442,7 +7436,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7468,7 +7461,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7494,7 +7486,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7520,7 +7511,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7546,7 +7536,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7572,7 +7561,6 @@
         ],
         "progression": "Video: Introduction to Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7598,7 +7586,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7624,7 +7611,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7650,7 +7636,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7676,7 +7661,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7702,7 +7686,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7728,7 +7711,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7754,7 +7736,6 @@
         ],
         "progression": "Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7780,7 +7761,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7806,7 +7786,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7832,7 +7811,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7858,7 +7836,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7884,7 +7861,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7910,7 +7886,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7936,7 +7911,6 @@
         ],
         "progression": "Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7962,7 +7936,6 @@
         ],
         "progression": "Video: Introduction to Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7988,7 +7961,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8014,7 +7986,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8040,7 +8011,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8066,7 +8036,6 @@
         ],
         "progression": "Video: The Animation Tab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8092,7 +8061,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8118,7 +8086,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8144,7 +8111,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8170,7 +8136,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8196,7 +8161,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8222,7 +8186,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8248,7 +8211,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8274,7 +8236,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8300,7 +8261,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8326,7 +8286,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8352,7 +8311,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8378,7 +8336,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8404,7 +8361,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8430,7 +8386,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8456,7 +8411,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8482,7 +8436,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8508,7 +8461,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8534,7 +8486,6 @@
         ],
         "progression": "Sprite Scenes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8560,7 +8511,6 @@
         ],
         "progression": "Create a Background"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8586,7 +8536,6 @@
         ],
         "progression": "Add Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8612,7 +8561,6 @@
         ],
         "progression": "Add Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8638,7 +8586,6 @@
         ],
         "progression": "Review Your Scene"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8664,7 +8611,6 @@
         ],
         "progression": "Video: Introduction to the Draw Loop"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8690,7 +8636,6 @@
         ],
         "progression": "Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8716,7 +8661,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8742,7 +8686,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8768,7 +8711,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8794,7 +8736,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8820,7 +8761,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8846,7 +8786,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8872,7 +8811,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8898,7 +8836,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8924,7 +8861,6 @@
         ],
         "progression": "Video: Sprite Movement"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8950,7 +8886,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8976,7 +8911,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9002,7 +8936,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9028,7 +8961,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9054,7 +8986,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9080,7 +9011,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9106,7 +9036,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9132,7 +9061,6 @@
         ],
         "progression": "Example Animated Scene"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9158,7 +9086,6 @@
         ],
         "progression": "Plan Your Scene"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9184,7 +9111,6 @@
         ],
         "progression": "Draw a Background"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9210,7 +9136,6 @@
         ],
         "progression": "Add Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9236,7 +9161,6 @@
         ],
         "progression": "Add Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9262,7 +9186,6 @@
         ],
         "progression": "Add Movement"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9288,7 +9211,6 @@
         ],
         "progression": "Review Your Animated Scene"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9314,7 +9236,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9340,7 +9261,6 @@
         ],
         "progression": "Video: Booleans"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9366,7 +9286,6 @@
         ],
         "progression": "Quick Check"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9392,7 +9311,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9418,7 +9336,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9444,7 +9361,6 @@
         ],
         "progression": "Video: Conditional Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9470,7 +9386,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9496,7 +9411,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9522,7 +9436,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9548,7 +9461,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9574,7 +9486,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9600,7 +9511,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9626,7 +9536,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9652,7 +9561,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9678,7 +9586,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9704,7 +9611,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9730,7 +9636,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9756,7 +9661,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9782,7 +9686,6 @@
         ],
         "progression": "Video: If/Else Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9808,7 +9711,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9834,7 +9736,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9860,7 +9761,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9886,7 +9786,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9912,7 +9811,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9938,7 +9836,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9964,7 +9861,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9990,7 +9886,6 @@
         ],
         "progression": "Demo App: Interactive Card"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10016,7 +9911,6 @@
         ],
         "progression": "Make an Interactive Card"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10042,7 +9936,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10068,7 +9961,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10094,7 +9986,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10120,7 +10011,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10146,7 +10036,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10172,7 +10061,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10198,7 +10086,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10224,7 +10111,6 @@
         ],
         "progression": "Video: Velocity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10250,7 +10136,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10276,7 +10161,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10302,7 +10186,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10328,7 +10211,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10354,7 +10236,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10380,7 +10261,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10406,7 +10286,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10432,7 +10311,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10458,7 +10336,6 @@
         ],
         "progression": "Sample Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10484,7 +10361,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10510,7 +10386,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10536,7 +10411,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10562,7 +10436,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10588,7 +10461,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10614,7 +10486,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10640,7 +10511,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10666,7 +10536,6 @@
         ],
         "progression": "Intro to Side Scrollers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10692,7 +10561,6 @@
         ],
         "progression": "Draw Your Background"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10718,7 +10586,6 @@
         ],
         "progression": "Create Your Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10744,7 +10611,6 @@
         ],
         "progression": "Player Controls"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10770,7 +10636,6 @@
         ],
         "progression": "Looping"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10796,7 +10661,6 @@
         ],
         "progression": "Sprite Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10822,7 +10686,6 @@
         ],
         "progression": "Scoring & Scoreboard"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10848,7 +10711,6 @@
         ],
         "progression": "Review Your Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10874,7 +10736,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10900,7 +10761,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10926,7 +10786,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10952,7 +10811,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10978,7 +10836,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11004,7 +10861,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11030,7 +10886,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11056,7 +10911,6 @@
         ],
         "progression": "Code Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11082,7 +10936,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11108,7 +10961,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11134,7 +10986,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11160,7 +11011,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11186,7 +11036,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11212,7 +11061,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11238,7 +11086,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11264,7 +11111,6 @@
         ],
         "progression": "Intro to Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11290,7 +11136,6 @@
         ],
         "progression": "Make Your Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11316,7 +11161,6 @@
         ],
         "progression": "Player Controls"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11342,7 +11186,6 @@
         ],
         "progression": "Player Controls"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11368,7 +11211,6 @@
         ],
         "progression": "Player Controls"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11394,7 +11236,6 @@
         ],
         "progression": "Sprite Movement"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11420,7 +11261,6 @@
         ],
         "progression": "Sprite Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11446,7 +11286,6 @@
         ],
         "progression": "Review Your Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11472,7 +11311,6 @@
         ],
         "progression": "Video: Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11498,7 +11336,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11524,7 +11361,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11550,7 +11386,6 @@
         ],
         "progression": "Predict"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11576,7 +11411,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11602,7 +11436,6 @@
         ],
         "progression": "Quick Check"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11628,7 +11461,6 @@
         ],
         "progression": "Collector Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11654,7 +11486,6 @@
         ],
         "progression": "Collector Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11680,7 +11511,6 @@
         ],
         "progression": "Collector Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11706,7 +11536,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11732,7 +11561,6 @@
         ],
         "progression": "Same Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11758,7 +11586,6 @@
         ],
         "progression": "Plan Your Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11784,7 +11611,6 @@
         ],
         "progression": "Set Up Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11810,7 +11636,6 @@
         ],
         "progression": "Set Up Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11836,7 +11661,6 @@
         ],
         "progression": "Control Your Player"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11862,7 +11686,6 @@
         ],
         "progression": "Control Your Player"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11888,7 +11711,6 @@
         ],
         "progression": "Control Your Player"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11914,7 +11736,6 @@
         ],
         "progression": "Sprite Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11940,7 +11761,6 @@
         ],
         "progression": "Sprite Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11966,7 +11786,6 @@
         ],
         "progression": "Sprite Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11992,7 +11811,6 @@
         ],
         "progression": "Sprite Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12018,7 +11836,6 @@
         ],
         "progression": "Sprite Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12044,7 +11861,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12070,7 +11886,6 @@
         ],
         "progression": "Sample Platform Jumper Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12096,7 +11911,6 @@
         ],
         "progression": "Build a Platform Jumper"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12122,7 +11936,6 @@
         ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12148,7 +11961,6 @@
         ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12174,7 +11986,6 @@
         ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12200,7 +12011,6 @@
         ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12226,7 +12036,6 @@
         ],
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12252,7 +12061,6 @@
         ],
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12278,7 +12086,6 @@
         ],
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12304,7 +12111,6 @@
         ],
         "progression": "Platform Jumper - Items"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12330,7 +12136,6 @@
         ],
         "progression": "Platform Jumper - Items"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12356,7 +12161,6 @@
         ],
         "progression": "Platform Jumper - Items"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12382,7 +12186,6 @@
         ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12408,7 +12211,6 @@
         ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12434,7 +12236,6 @@
         ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12460,7 +12261,6 @@
         ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12486,7 +12286,6 @@
         ],
         "progression": "Platform Jumper Review"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12512,7 +12311,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12538,7 +12336,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12564,7 +12361,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12590,7 +12386,6 @@
         ],
         "progression": "Sample Games"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12616,7 +12411,6 @@
         ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12642,7 +12436,6 @@
         ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12668,7 +12461,6 @@
         ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12694,7 +12486,6 @@
         ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12720,7 +12511,6 @@
         ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12746,7 +12536,6 @@
         ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12772,7 +12561,6 @@
         ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12798,7 +12586,6 @@
         ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12824,7 +12611,6 @@
         ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12850,7 +12636,6 @@
         ],
         "progression": "Review Your Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12876,7 +12661,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12901,7 +12685,6 @@
           "CSD Interactive Animations and Games Post-Project Test_pilot_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12922,8 +12705,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD survey_placeholder_levelgroup"
+        ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -16118,6 +15903,18 @@
       }
     },
     {
+      "name": "Extra Code in Challenge Levels",
+      "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
+      "key": "extra_code_in_challenge_levels_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "extra_code_in_challenge_levels_1"
+      }
+    },
+    {
       "name": "Flyer Game",
       "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
       "key": "flyer-game",
@@ -16516,7 +16313,7 @@
       }
     },
     {
-      "name": "Shapes and Parameters - (Map Level)",
+      "name": "Shapes and Parameters",
       "url": "https://studio.code.org/docs/concepts/game-lab/shapes-and-parameters/",
       "key": "shapes_and_parameters_-_map_level",
       "properties": {
@@ -16704,50 +16501,80 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "cs-entertainment-activity"
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision-detection-exemplar-2020"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "cs_in_entertainment"
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection_version_a_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection_version_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing-shapes-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "colored-shape-drawing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes_version_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
+        "lesson.key": "Collisions",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "resource.key": "velocity_and_the_counter_pattern_-_map_level_pdf_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "boolean_expressions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "booleans_and_comparison_operators"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "conditional_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "if_statements"
       }
     },
     {
@@ -16776,103 +16603,61 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "shapes_and_parameters_-_map_level"
+        "lesson.key": "Functions",
+        "resource.key": "calling_and_defining_functions"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
+        "lesson.key": "Functions",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "shapes_and_parameters"
+        "lesson.key": "Functions",
+        "resource.key": "functions_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "introduction-to-variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
+        "lesson.key": "Keyboard Input",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "variables_1"
+        "lesson.key": "Mini-Project: Animation",
+        "resource.key": "animated-scene"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "naming_variables"
+        "lesson.key": "Mini-Project: Animation",
+        "resource.key": "animated-scene-1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Random Numbers",
+        "lesson.key": "Mini-Project: Animation",
+        "resource.key": "animated-scene-planning-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Animation",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "resource.key": "random_numbers"
+        "lesson.key": "Mini-Project: Captioned Scenes",
+        "resource.key": "captioned-scenes"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "introduction_to_sprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "the_animation_tab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "sprites_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "animation_tab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "resource.key": "sprite_properties"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text",
+        "lesson.key": "Mini-Project: Captioned Scenes",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
@@ -16885,132 +16670,60 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Captioned Scenes",
-        "resource.key": "captioned-scenes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
         "resource.key": "sprite-scene-planning"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
+        "lesson.key": "Mini-Project: Flyer Game",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "random-dot-flipbook"
+        "lesson.key": "Mini-Project: Flyer Game",
+        "resource.key": "flyer-game"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "random-sprite-flipbook"
+        "lesson.key": "Mini-Project: Flyer Game",
+        "resource.key": "flyer-game-1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "youtube-flipbook"
+        "lesson.key": "Mini-Project: Flyer Game",
+        "resource.key": "flyer-game-project-guide-exemplar"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Draw Loop",
+        "lesson.key": "Mini-Project: Side Scroller",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "introduction_to_the_draw_loop"
+        "lesson.key": "Mini-Project: Side Scroller",
+        "resource.key": "mini-project-guide-side-scroller-exemplar-2020"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "the_draw_loop"
+        "lesson.key": "Mini-Project: Side Scroller",
+        "resource.key": "side-scroller"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "animating-sprites"
+        "lesson.key": "Mini-Project: Side Scroller",
+        "resource.key": "side-scroller-1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "the_counter_pattern"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "resource.key": "animated-scene-planning-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "resource.key": "animated-scene-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "resource.key": "animated-scene"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "boolean_expressions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "conditional_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "booleans_and_comparison_operators"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "if_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
+        "lesson.key": "Mouse Input",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
@@ -17023,19 +16736,133 @@
     {
       "seeding_key": {
         "lesson.key": "Mouse Input",
+        "resource.key": "if_else_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
+        "resource.key": "colored-shape-drawing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "if_else_statements"
+        "lesson.key": "Plotting Shapes",
+        "resource.key": "drawing-shapes-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
+        "resource.key": "drawing_shapes_version_a_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
+        "resource.key": "drawing_shapes_version_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "resource.key": "cs-entertainment-activity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "resource.key": "cs_in_entertainment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "extra_code_in_challenge_levels_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make-your-own-game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make-your-own-game-1-2-3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make-your-own-game-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make-your-own-game-sample-marked-rubrics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game_-_student_checklist"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
         "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "extra_code_in_challenge_levels_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "interactive-card-1-2-3-4"
       }
     },
     {
@@ -17059,18 +16886,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive-card-1-2-3-4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
         "resource.key": "interactive_card"
       }
     },
@@ -17078,6 +16893,192 @@
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
         "resource.key": "interactive_card_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "resource.key": "shapes_and_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "resource.key": "shapes_and_parameters_-_map_level"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "resource.key": "animating-sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "resource.key": "the_counter_pattern"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "resource.key": "sprite_properties"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "animation_tab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "introduction_to_sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "sprites_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "the_animation_tab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Text",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "introduction_to_the_draw_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "random-dot-flipbook"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "random-sprite-flipbook"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "the_draw_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "youtube-flipbook"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "resource.key": "project-guide-defender-game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "resource.key": "planning-your-platform-game-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "resource.key": "platform-game-project-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "introduction-to-variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "naming_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "variables_1"
       }
     },
     {
@@ -17097,231 +17098,9 @@
         "lesson.key": "Velocity",
         "resource.key": "velocity_2"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision-detection-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_version_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "resource.key": "mini-project-guide-side-scroller-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "resource.key": "side-scroller-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "resource.key": "side-scroller"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "resource.key": "velocity_and_the_counter_pattern_-_map_level_pdf_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "resource.key": "flyer-game-project-guide-exemplar"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "resource.key": "flyer-game-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "resource.key": "flyer-game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "calling_and_defining_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "functions_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "resource.key": "project-guide-defender-game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "planning-your-platform-game-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "platform-game-project-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make-your-own-game-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make-your-own-game-sample-marked-rubrics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make-your-own-game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make-your-own-game-1-2-3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_-_student_checklist"
-      }
     }
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum_1",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging",
-        "script.name": "csd3-2021"
-      }
-    },
     {
       "seeding_key": {
         "resource.key": "all_code_1",
@@ -17343,6 +17122,36 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
         "script.name": "csd3-2021"
       }
     }

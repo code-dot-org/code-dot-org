@@ -7,7 +7,7 @@ Factory.define('CodeReviewComment')
     'commentText',
     "Don't worry about the world coming to an end today. It's already tomorrow in Australia."
   )
-  .attr('timestampString', '2021/01/01 at 9:30 AM')
+  .attr('timestampString', '2019-01-29T02:49:08.000Z')
   .attr('isResolved', false)
   .attr('isFromTeacher', false)
   .attr('isFromCurrentUser', false)

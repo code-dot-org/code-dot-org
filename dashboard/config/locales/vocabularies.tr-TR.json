@@ -1,0 +1,116 @@
+{
+  "tr-TR": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "Davranış"
+        },
+        "variable/coursef/2021": {
+          "word": "Değişken"
+        },
+        "input/coursef/2021": {
+          "word": "Girdi"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Makine Öğrenimi"
+        },
+        "internet/coursef/2021": {
+          "word": "İnternet"
+        },
+        "packets/coursef/2021": {
+          "word": "Paketler"
+        },
+        "define/coursef/2021": {
+          "word": "Tanımla"
+        },
+        "debugging/courseb/2021": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "drop/courseb/2021": {
+          "word": "Bırak"
+        },
+        "programming/courseb/2021": {
+          "word": "Programlama"
+        },
+        "debugging/coursea/2021": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "drop/coursea/2021": {
+          "word": "Bırak"
+        },
+        "programming/coursea/2021": {
+          "word": "Programlama"
+        },
+        "debugging/coursec/2021": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "sequencing/coursec/2021": {
+          "word": "Sıralama"
+        },
+        "programming/coursec/2021": {
+          "word": "Programlama"
+        },
+        "binary/coursec/2021": {
+          "word": "İkili"
+        },
+        "debugging/coursed/2021": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "programming/coursed/2021": {
+          "word": "Programlama"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Koşullar"
+        },
+        "debugging/express/2021": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "sequencing/express/2021": {
+          "word": "Sıralama"
+        },
+        "programming/express/2021": {
+          "word": "Programlama"
+        },
+        "behavior/express/2021": {
+          "word": "Davranış"
+        },
+        "conditionals/express/2021": {
+          "word": "Koşullar"
+        },
+        "function/express/2021": {
+          "word": "Fonksiyon"
+        },
+        "variable/express/2021": {
+          "word": "Değişken"
+        },
+        "define/express/2021": {
+          "word": "Tanımla"
+        },
+        "drop/pre-express/2021": {
+          "word": "Bırak"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "programming/pre-express/2021": {
+          "word": "Programlama"
+        },
+        "behavior/coursee/2021": {
+          "word": "Davranış"
+        },
+        "copyright/coursee/2021": {
+          "word": "Telif Hakkı"
+        },
+        "function/coursee/2021": {
+          "word": "Fonksiyon"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Koşullar"
+        },
+        "define/coursee/2021": {
+          "word": "Tanımla"
+        }
+      }
+    }
+  }
+}

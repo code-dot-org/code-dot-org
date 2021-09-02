@@ -1,3 +1,5 @@
+import {createUuid} from '@cdo/apps/utils';
+
 export const UploadType = {
   SPRITE: 'Sprite',
   METADATA: 'Metadata'
@@ -11,6 +13,98 @@ export function getManifest(appType, locale = 'en_us') {
   return fetch(`/api/v1/animation-library/manifest/${appType}/${locale}`).then(
     response => response.json()
   );
+}
+
+// Returns the list of default sprites in SpriteLab in English
+export function getDefaultList() {
+  return fetch(`/api/v1/animation-library/default-spritelab`).then(response =>
+    response.json()
+  );
+}
+
+/* Returns the list of default sprites in SpriteLab in English
+ * @param listData {Object} JSON object to upload
+ */
+export function updateDefaultList(listData) {
+  return fetch(`/api/v1/animation-library/default-spritelab`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(listData)
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(
+          `Default List Upload Error(${response.status}: ${
+            response.statusText
+          })`
+        );
+      }
+      return Promise.resolve();
+    })
+    .catch(err => {
+      return Promise.reject(err);
+    });
+}
+
+export function createDefaultSpriteMetadata(listData) {
+  let orderedKeys = [];
+  let propsByKey = {};
+  return getManifest('spritelab').then(manifest => {
+    const animations = JSON.parse(manifest)['metadata'];
+    for (let sprite of listData.default_sprites) {
+      const {
+        sourceUrl,
+        frameSize,
+        frameCount,
+        looping,
+        frameDelay,
+        version,
+        categories
+      } = animations[sprite.key];
+      const props = {
+        name: sprite.name,
+        sourceUrl: `https://studio.code.org${sourceUrl}`,
+        frameSize,
+        frameCount,
+        looping,
+        frameDelay,
+        version,
+        categories
+      };
+      const key = createUuid();
+      orderedKeys.push(key);
+      propsByKey[key] = props;
+    }
+    return {orderedKeys, propsByKey};
+  });
+}
+
+// Regenerates the metadata for the default list of sprites in SpriteLab
+export function regenerateDefaultSpriteMetadata(listData) {
+  return createDefaultSpriteMetadata(listData).then(defaultMetadata => {
+    return fetch(`/api/v1/animation-library/default-spritelab-metadata`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(defaultMetadata)
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(
+            `Default Sprite Metadata Upload Error(${response.status}: ${
+              response.statusText
+            })`
+          );
+        }
+        return Promise.resolve();
+      })
+      .catch(err => {
+        return Promise.reject(err);
+      });
+  });
 }
 
 /* Uploads the given sprite to the animation library at the specified path. On success

@@ -18,13 +18,17 @@ nn:
       Game/Score: Spel/Poengsum
       Games/Score: Spel/Poengsum
       Groups: Grupper
+      Input: Inngang
+      Location: Stad
       Locations: Stadar
       Logic: Logikk
       Loops: Løkker
       Math: Matematikk
       Numbers: Tal
       Properties: Eigenskapar
+      Sprites: Sprites
       Text: Tekst
       Variables: Variablar
       'Variables ': 'Variablar '
+      'Variables  ': 'Variablar  '
       World: Verd

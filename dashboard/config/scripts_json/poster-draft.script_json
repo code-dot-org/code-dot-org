@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-07 20:02:44 UTC",
+    "serialized_at": "2021-07-20 22:21:31 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poster-draft"
@@ -165,7 +165,6 @@
         ],
         "progression": "Welcome to Sprite Lab!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -191,7 +190,6 @@
         ],
         "progression": "Welcome to Sprite Lab!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -217,7 +215,6 @@
         ],
         "progression": "Welcome to Sprite Lab!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -243,7 +240,6 @@
         ],
         "progression": "Welcome to Sprite Lab!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -269,7 +265,6 @@
         ],
         "progression": "Mini-Lessons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -295,7 +290,6 @@
         ],
         "progression": "Create Your Story Board"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -321,7 +315,6 @@
         ],
         "progression": "Create Your Story Board"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -347,7 +340,6 @@
         ],
         "progression": "Create Your Story Board"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -373,7 +365,6 @@
         ],
         "progression": "Create Your Story Board"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -399,7 +390,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -1757,3 +1757,692 @@ mr-IN:
         - {}
         questions:
         - {}
+      Dance_Party_extras_intro:
+        markdown: "# डान्स करत रहा!\n\nभाग 2 मध्ये, तुम्ही तुमचा स्वत:चा नवीन प्रोजेक्ट
+          तयार करणार आहात. इथे कोणतीही कोडी नाहीत- त्याऐवजी इथे काही प्रोजेक्ट्स आहेत,
+          ज्यामध्ये अधिक गुंतागुंतीच्या डान्स पार्टीज बनवण्याचे वेगवेगळे मार्ग दाखवलेले
+          आहेत. \n\nतुम्ही या पातळ्या _कोणत्याही क्रमाने_ करू शकता. मागच्या पातळीत
+          काय केले होते, ते मागे जाऊन पहा किंवा दोन प्रोजेक्ट्समधल्या संकल्पना एकत्र
+          करा. त्या सर्व करून पहा, तुमची आवडती निवडा आणि ती संकल्पना तुम्हाला समजण्यासाठी
+          ती तुमच्या प्रोजेक्टमध्ये जोडण्यावर वेळ खर्च करा.\n\n<div class=\"clearfix\"></div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"2\">\n<h2>\nचला, एक रचना
+          करूया.\n</h2>\n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nते कुठे गेले?\n</h2>\n\n<img
+          src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nडान्स क्रूज\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nक्वार्टर नोट्स\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nबास, मिड, ट्रेबल\n</h2>\n\n<img
+          src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nवेग वाढवा, वेग
+          कमी करा.\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>"
+      Dance_Party_extras_intro_2019:
+        markdown: "# डान्स करत राहा!\n\nभाग 2 मध्ये, तुम्ही तुमचा स्वत:चा नवीन प्रोजेक्ट
+          तयार करणार आहात. इथे कोणतीही कोडी नाहीत- त्याऐवजी इथे काही प्रोजेक्ट्स आहेत,
+          ज्यामध्ये अधिक गुंतागुंतीच्या डान्स पार्टीज बनवण्याचे वेगवेगळे मार्ग दाखवलेले
+          आहेत. \n\nतुम्ही या पातळ्या _कोणत्याही क्रमाने_ करू शकता. मागच्या पातळीत
+          काय केले होते, ते मागे जाऊन पहा किंवा दोन प्रोजेक्ट्समधल्या संकल्पना एकत्र
+          करा. त्या सर्व करून पहा, तुमची आवडती निवडा आणि ती संकल्पना तुम्हाला समजण्यासाठी
+          ती तुमच्या प्रोजेक्टमध्ये जोडण्यावर वेळ खर्च करा.\n\n<div class=\"clearfix\"></div>\n\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"2\">\n<h2>\nमागे आणि पुढे
+          \n</h2>\n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nअधिक बटणे\n</h2>\n\n<img
+          src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>\n\n</div>\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nरचन तयार करा\n</h2>\n\n<img
+          src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nते कुठ गेले?\n</h2>\n\n<img
+          src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nडान्स क्रूज\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nक्वार्टर नोट्स\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"8\">\n<h2>\nबास, मिड, ट्रेबल
+          \ \n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"9\">\n<h2>\nवेग वाढवा, वेग
+          कमी करा\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>"
+      OPD-K5 CS Courses:
+        markdown: "# नियोजन  > Code.org वर सुरुवात करणे\n\n\n## पायरी 1: एक अभ्यासक्रम
+          निवडणे \nआमच्या सर्व अभ्यासक्रमांची -- पूर्व वाचकांपासून ते हायस्कूलच्या
+          विद्यार्थांपर्यंतच्या  -- यादी आमच्या **[अभ्यासक्रम कॅटलॉगमध्ये ](https://studio.code.org/courses)**
+          दिलेली आहे. तुम्ही ज्या संगणक शास्त्राच्या मूलभूत गोष्टींच्या धड्यांचा सराव
+          करत आहात, ते पाहण्यासाठी आमच्या  **[प्राथमिक पेज]  (https://code.org/educate/curriculum/elementary-school)
+          वर जा** आणि \"अभ्यासक्रम\" विभागापर्यंत खाली स्क्रोल करा. आमचे सर्व अभ्यासक्रम
+          विनामूल्य उपलब्ध आहेत. विविध विषयांबरोबर अभ्यासक्रमाचे कसे एकत्रीकरण करता
+          येईल हे ठरवण्यासाठी तुमच्या शाळेतील सहकाऱ्यांबरोबर बोला.  ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          पायरी 2: तुमच्या वर्गाचा विभाग तयार करा \nतुमच्या विद्यार्थ्यांची प्रगती
+          पाहण्यासाठी, तुमच्या विद्यार्थ्यांसाठी लॉगीन कार्ड्स छापण्यासाठी, त्यांची
+          खाती व्यवस्थापित करण्यासाठी आणि अभ्यासक्रम संपल्यावर त्यांना घरी घेऊन जाण्यासाठी
+          प्रमाणपत्रे छापण्यासाठी एक वर्गाचा विभाग तयार करा. **[छोटासा व्हिडीओ पाहण्यासाठी](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          या लिंकवर क्लिक करा, जिथे  Code.org वर तुमचा पहिला संगणक शास्त्राचा वर्ग
+          कसा तयार करायचा याचे प्रात्यक्षिक दिसेल. तुम्ही **[या मदतीच्या लेखामध्ये]
+          सुद्धा पायऱ्या पाहू शकता (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          पायरी 3: तुमच्या विभागाला अभ्यासक्रम असाईन करा  \nतुम्ही शिकवत असलेल्या
+          अभ्यासक्रमात क्लिक करा -- तुम्हाला खाली दाखवल्याप्रमाणे एक स्क्रीन दिसेल.
+          नंतर तुम्ही \"अभ्यासक्रम असाईन करा\" वर क्लिक करा आणि तो अभ्यासक्रम तुमच्या
+          एका विभागाला असाईन करा. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          पायरी 4: शिकवायला सुरुवात करा! \nसंगणक शास्त्रातील संकल्पना तुमच्या वर्गात
+          आणण्यासाठी फक्त एक धडा पुरेसा आहे. संगणक शास्त्राबद्दल तुमच्या विद्यार्थ्यांमध्ये
+          उत्साह दिसल्यावर, तुमच्या विद्यार्थ्यांना मार्गदर्शन करण्यासाठी दररोजच्या
+          धड्याच्या प्लॅनबरोबर, कॉम्प्युटर न लागणाऱ्या अनप्लग्ड कृतींबरोबर आणि इतर
+          शिक्षकांसाठी कनेक्ट करण्यासाठी फोरम्सबरोबर पुढे जा."
+      OPD-K5 CS Courses_copy:
+        markdown: "# Code.org वर सुरुवात करा\n\n\n## Step 1: एक अभ्यासक्रम निवडणे
+          \nआमच्या सर्व अभ्यासक्रमांची -- पूर्व वाचकांपासून ते हायस्कूलच्या विद्यार्थांपर्यंतच्या
+          \ -- यादी आमच्या  **<a href=\"https://studio.code.org/courses\" target=\"blank\"
+          rel=\"noopener noreferrer\">अभ्यासक्रम कॅटलॉगमध्ये </a>** दिलेली आहे. आमचे
+          सर्व अभ्यासक्रम विनामूल्य उपलब्ध आहेत. विविध विषयांबरोबर अभ्यासक्रमाचे कसे
+          एकत्रीकरण करता येईल हे ठरवण्यासाठी तुमच्या शाळेतील सहकाऱ्यांबरोबर बोला.\n\n<table
+          style=\"width:100%; border-style:none;\">\n  <tr>\n    <th style=\"background-color:#ff9900;
+          text-align:center; border-style:none; font-weight:bold;\"\"\">\n      <b>अभ्यासक्रम
+          A</b><br/>\n      <i>बालवाडी</i>\n    </th>\n    <th style=\"background-color:#f1c232;
+          text-align:center; border-style:none;\"\"\">\n        अभ्यासक्रम B<br/>\n
+          \       <i>1ली इयत्ता </i>\n    </th>\n    <th style=\"background-color:#b8bf0d;
+          text-align:center; border-style:none;\"\"\">\n        अभ्यासक्रम C<br/>\n
+          \       <i>2री इयत्ता</i>\n    </th>\n    <th style=\"background-color:#53bac2;
+          text-align:center; border-style:none;\"\"\">\n        अभ्यासक्रम D<br/>\n
+          \       <i>3री इयत्ता</i>\n    </th>\n    <th style=\"background-color:#0094ca;
+          text-align:center; border-style:none;\"\"\">\n        अभ्यासक्रम E<br/>\n
+          \       <i>4थी इयत्ता </i>\n    </th>\n    <th style=\"background-color:#7664a0;
+          text-align:center; border-style:none;\"\"\">\n        अभ्यासक्रम F<br/>\n
+          \       <i>5वी इयत्ता</i>\n    </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">12 धडे , पूर्ण
+          करण्यासाठी ~12 तास</td>\n    <td style=\"background-color:#ffe599; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 धडे , पूर्ण करण्यासाठी
+          ~12 तास</td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none;
+          vertical-align: text-top;\"\">18 धडे, पूर्ण करण्यासाठी ~18 तास</td>\n    <td
+          style=\"background-color:#68ebf5; color:black; border-style:none; vertical-align:
+          text-top;\"\">18 धडे, पूर्ण करण्यासाठी ~18 तास</td>\n    <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 धडे, पूर्ण
+          करण्यासाठी ~18-20 तास</td>\n    <td style=\"background-color:#c9c1e9; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 धडे, ~ पूर्ण करण्यासाठी
+          20-22 तास</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;\">संकल्पना </td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>डिजिटल नागरिकत्व </li>\n        <li>सिक्वेन्सिंग</li>\n
+          \       <li>लूप्स</li>\n        <li>इव्हेंट्स</li>\n      </ul>\n    </td>\n
+          \   <td style=\"background-color:#ffe599; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>डिजिटल नागरिकत्व</li>\n        <li>सिक्वेन्सिंग</li>\n        <li>लूप्स</li>\n
+          \       <li>कॉम्प्युटिंगचे परिणाम</li>\n        <li>इव्हेंट्स</li>\n      </ul>\n
+          \   </td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>डिजिटल नागरिकत्व</li>\n        <li>सिक्वेन्सिंग</li>\n        <li>बायनरी</li>\n
+          \       <li>लूप्स</li>\n        <li>इव्हेंट्स</li>\n        <li>डेटा</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>सिक्वेन्सिंग</li>\n        <li>इव्हेंट्स</li>\n        <li>लूप्स</li>\n
+          \       <li>कंडीशनल्स</li>\n        <li>बायनरी</li>\n        <li>डिजिटल
+          नागरिकत्व</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>स्प्राईट्स</li>\n        <li>डिजिटल
+          नागरिकत्व</li>\n        <li>कॉम्प्युटिंगचे परिणाम </li>\n        <li>नेस्टेड
+          लूप्स </li>\n        <li>फंक्शन्स</li>\n      </ul>\n    </td>\n    <td
+          style=\"background-color:#c9c1e9; color:black; border-style:none; vertical-align:
+          text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>व्हेरीएबल्स
+          </li>\n        <li>डेटा</li>\n        <li>फॉर लूप्स</li>\n        <li>इंटरनेट</li>\n
+          \       <li>स्प्राईट्स</li>\n        <li>डिजिटल नागरिकत्व</li>\n        </ul>\n
+          \   </td>\n  <tr>\n  \t<td style=\"background-color:#f9cb9c\">\n     <a
+          href=\"https://studio.code.org/s/coursea\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n          <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>\n    <td style=\"background-color:#ffe599\">\n
+          \   <a href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>   \n   \t<td style=\"background-color:#d2da0e\">\n
+          \   <a href=\"https://studio.code.org/s/coursec\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>   \n    <td style=\"background-color:#68ebf5\">\n
+          \   <a href=\"https://studio.code.org/s/coursed\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n##
+          पायरी 2: तुमच्या वर्गाचा विभाग तयार करा \nतुमच्या विद्यार्थ्यांची प्रगती
+          पाहण्यासाठी, तुमच्या विद्यार्थ्यांसाठी लॉगीन कार्ड्स छापण्यासाठी, त्यांची
+          खाती व्यवस्थापित करण्यासाठी आणि अभ्यासक्रम संपल्यावर त्यांना घरी घेऊन जाण्यासाठी
+          प्रमाणपत्रे छापण्यासाठी एक वर्गाचा विभाग तयार करा. **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          target=\"blank\" rel=\"noopener noreferrer\">छोटासा व्हिडीओ पाहण्यासाठी</a>**
+          या लिंकवर क्लिक करा, जिथे  Code.org वर तुमचा पहिला संगणक शास्त्राचा वर्ग
+          कसा तयार करायचा याचे प्रात्यक्षिक दिसेल. तुम्ही  **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
+          target=\"blank\" rel=\"noopener noreferrer\">या मदतीच्या लेखामध्ये</a>**सुद्धा
+          पायऱ्या पाहू शकता .\n\n***\n## पायरी 3: तुमच्या विभागाला अभ्यासक्रम असाईन
+          करा \nतुम्ही शिकवत असलेल्या अभ्यासक्रमात क्लिक करा -- तुम्हाला खाली दाखवल्याप्रमाणे
+          एक स्क्रीन दिसेल. नंतर तुम्ही \"अभ्यासक्रम असाईन करा\" वर क्लिक करा आणि
+          तो अभ्यासक्रम तुमच्या एका विभागाला असाईन करा. \n***\n## पायरी 4: शिकवायला
+          सुरुवात करा! \nसंगणक शास्त्रातील संकल्पना तुमच्या वर्गात आणण्यासाठी फक्त
+          एक धडा पुरेसा आहे. संगणक शास्त्राबद्दल तुमच्या विद्यार्थ्यांमध्ये उत्साह
+          दिसल्यावर, तुमच्या विद्यार्थ्यांना मार्गदर्शन करण्यासाठी दररोजच्या धड्याच्या
+          प्लॅनबरोबर, कॉम्प्युटर न लागणाऱ्या अनप्लग्ड कृतींबरोबर आणि इतर शिक्षकांसाठी
+          कनेक्ट करण्यासाठी फोरम्सबरोबर पुढे जा."
+      OPD-K5 CS Courses_dani:
+        markdown: "# नियोजन  > Code.org वर सुरुवात करणे\n\n\n## पायरी 1: एक अभ्यासक्रम
+          निवडणे \nआमच्या सर्व अभ्यासक्रमांची -- पूर्व वाचकांपासून ते हायस्कूलच्या
+          विद्यार्थांपर्यंतच्या  -- यादी आमच्या **[अभ्यासक्रम कॅटलॉगमध्ये ](https://studio.code.org/courses)**
+          दिलेली आहे. तुम्ही ज्या संगणक शास्त्राच्या मूलभूत गोष्टींच्या धड्यांचा सराव
+          करत आहात, ते पाहण्यासाठी आमच्या  **[प्राथमिक पेज]  (https://code.org/educate/curriculum/elementary-school)
+          वर जा** आणि \"अभ्यासक्रम\" विभागापर्यंत खाली स्क्रोल करा. आमचे सर्व अभ्यासक्रम
+          विनामूल्य उपलब्ध आहेत. विविध विषयांबरोबर अभ्यासक्रमाचे कसे एकत्रीकरण करता
+          येईल हे ठरवण्यासाठी तुमच्या शाळेतील सहकाऱ्यांबरोबर बोला.  ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          पायरी 2: तुमच्या वर्गाचा विभाग तयार करा \nतुमच्या विद्यार्थ्यांची प्रगती
+          पाहण्यासाठी, तुमच्या विद्यार्थ्यांसाठी लॉगीन कार्ड्स छापण्यासाठी, त्यांची
+          खाती व्यवस्थापित करण्यासाठी आणि अभ्यासक्रम संपल्यावर त्यांना घरी घेऊन जाण्यासाठी
+          प्रमाणपत्रे छापण्यासाठी एक वर्गाचा विभाग तयार करा. **[छोटासा व्हिडीओ पाहण्यासाठी](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          या लिंकवर क्लिक करा, जिथे  Code.org वर तुमचा पहिला संगणक शास्त्राचा वर्ग
+          कसा तयार करायचा याचे प्रात्यक्षिक दिसेल. तुम्ही **[या मदतीच्या लेखामध्ये]
+          सुद्धा पायऱ्या पाहू शकता (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          पायरी 3: तुमच्या विभागाला अभ्यासक्रम असाईन करा  \nतुम्ही शिकवत असलेल्या
+          अभ्यासक्रमात क्लिक करा -- तुम्हाला खाली दाखवल्याप्रमाणे एक स्क्रीन दिसेल.
+          नंतर तुम्ही \"अभ्यासक्रम असाईन करा\" वर क्लिक करा आणि तो अभ्यासक्रम तुमच्या
+          एका विभागाला असाईन करा. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          पायरी 4: शिकवायला सुरुवात करा! \nसंगणक शास्त्रातील संकल्पना तुमच्या वर्गात
+          आणण्यासाठी फक्त एक धडा पुरेसा आहे. संगणक शास्त्राबद्दल तुमच्या विद्यार्थ्यांमध्ये
+          उत्साह दिसल्यावर, तुमच्या विद्यार्थ्यांना मार्गदर्शन करण्यासाठी दररोजच्या
+          धड्याच्या प्लॅनबरोबर, कॉम्प्युटर न लागणाऱ्या अनप्लग्ड कृतींबरोबर आणि इतर
+          शिक्षकांसाठी कनेक्ट करण्यासाठी फोरम्सबरोबर पुढे जा."
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: कलाकार एक पंचकोन काढेल
+          feedback: चुकले. कलाकाराने चौरस काढला.
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - text: स्क्रॅट पहिल्या ब्लॉकमधून हलणार नाही.
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: पक्षी भिंतीवर आपटेल.
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: BB-8 फक्त 3 स्पेसेस हालचाल करेल.
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: 'पहिल्या लूपनंतर BB-8 चुकीच्या दिशेत वळेल. '
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: वरीलपैकी एकही नाही
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: मधमाशी ढगापर्यंत पोचणार नाही.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: मधमाशी फुले आणि मधाचे पोळे दोन्हींमधून मध आणि परागकण मिळवण्याचा प्रयत्न
+            करेल.
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: मधमाशी चुकीच्या दिशेला वळेल.
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: हार्वेस्टर फक्त भोपळे गोळा करेल.
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: हा कोड शेवटच्या छिद्राला स्पर्श करणार नाही.
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: शेतकरी फक्त एकदाच घाण काढेल.
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: झोंबी पुढे जायच्या रस्त्याच्या शेवटी अडकेल.
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: पक्षी चुकीच्या दिशेने वळतो.
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - feedback: चूक. परग्रहवासी स्क्रीनवर वर आणि खाली जायला सुरुवात करेल.
+        - text: परग्रहवासी उजवीकडून डावीकडे गस्त घालायला सुरुवात करेल.
+          feedback: चूक. परग्रहवासी स्क्रीनवर वर आणि खाली जायला सुरुवात करेल.
+        - text: परग्रहवासी स्क्रीनवर वर आणि खाली जायला सुरुवात करेल.
+          correct: true
+        - text: परग्रहवासी स्क्रीनच्या वरच्या भागातून दिसेनासा होईल.
+          feedback: चूक. निळा परग्रहवासी स्क्रीनवर वर आणि खाली जायला सुरुवात करेल.
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - feedback: चूक. टम्बलवीड टम्बल व्हायला सुरुवात करेल.
+        - text: टम्बलवीड स्क्रीनच्या वरच्या भागात तरंगेल
+          feedback: चूक. टम्बलवीड टम्बल व्हायला सुरुवात करेल.
+        - text: 'टम्बलवीड टम्बल व्हायला सुरुवात करेल
+
+'
+          correct: true
+        - text: टम्बलवीड मध्येमध्ये डोळे मिचकावेल.
+          feedback: चूक. टम्बलवीड टम्बल व्हायला सुरुवात करेल.
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - text: स्प्राईट फक्त उजवीकडे स्पिन करेल.
+          feedback: चूक. स्प्राईट पूर्वेकडेसुद्धा स्पिन करेल.
+        - text: स्प्राईट फक्त पूर्वेकडे स्पिन करेल.
+          feedback: चूक. स्प्राईटने स्पिनिंग करणे थांबवलेले नाही, त्यामुळे तो दोन्ही
+            गोष्टी एकाचवेळी करेल.
+        - text: स्प्राईट एकाचवेळी स्पिन करेल आणि हालचाल करेल.
+          correct: true
+          feedback: बरोबर! दोन्ही बिहेवियर्स एकाचवेळी घडतील.
+        - text: स्प्राईट आधी स्पिन करेल आणि मग हालचाल करेल.
+          feedback: चूक, स्प्राईट लॅबमध्ये, जोडलेले ब्लॉक्स एकापाठोपाठ एक रन होतात,
+            त्यामुळे दोन्ही बिहेवियर्स एकाचवेळी घडतील.
+        questions:
+        - text: 'कोड वाचा आणि मग अंदाज वर्तवा. '
+      courseF_labels_predict_multi:
+        answers:
+        - text: '"एक पिझ्झा लगेचच येत आहे!"'
+          feedback: चूक. व्हेरीएबलची लेबल्स जुळत नाहीत.
+        - text: '"एक जेवण लगेचच येत आहे!"'
+          feedback: चूक. व्हेरीएबलचे लेबल कधीच प्रिंट होत नाही.
+        - text: '"एक अन्नपदार्थ लगेचच येत आहे!"'
+          feedback: चूक. व्हेरीएबलचे लेबल कधीच प्रिंट होत नाही.
+        - text: '"एक लगेचच येत आहे!"'
+          correct: true
+          feedback: 'बरोबर! व्हेरीएबल्सची लेबल्स जुळत नाहीत. '
+        - text: काहीही प्रिंट होणार नाही.
+          feedback: चूक. इव्हेंट आणि प्रिंट ब्लॉक्स तरीही काम करतील.
+        questions:
+        - text: हा कोड ओळखीचा वाटेल पण तो काळजीपूर्वक वाचा. जर युजरने "pizza" असे
+            टाईप केले तर काय प्रिंट होईल?
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: कॉम्प्युटर युजरला नंबर विचारेल.
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: मधमाशी पुढे जाईल आणि फूल क्रमांक 1 आणि 4 मधून एक परागकण गोळा करेल.
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - text: दोन्ही विमाने ग्रीडवर एक स्पेस पुढे जातील, मग थांबतील.
+          feedback: चूक. या स्प्राईट्सची अशी "वतर्णूक" आहे की त्यांना थांबायला सांगेपर्यंत
+            ते पळत राहतात.
+        - text: दोन्ही विमाने पुढे जायला सुरुवात करतील आणि थांबणार नाहीत.
+          correct: true
+          feedback: बरोबर! या वर्तणुकी विमानांना पुढे जायला आणि पुढे जाणे सुरूच ठेवायला
+            सांगतात.
+        - text: एक विमान आधी हालचाल करेल आणि मग दुसरे विमान हालचाल करेल.
+          feedback: चूक. स्प्राईट लॅबमधला कोडचा प्रत्येक ब्लॉक आधीच्या ब्लॉकनंतर लगेच
+            रन होतो.
+        - text: " विमानांची धडक होईल."
+          feedback: चूक. विमाने एकमेकांना स्पर्श करतील अशा पद्धतीने ती ठेवलेली नाहीत.
+        questions:
+        - text: 'कोड वाचा आणि मग अंदाज वर्तवा. '
+      courseF_variables_predict_multi:
+        answers:
+        - text: हा प्रोग्रॅम "Hello name!" प्रिंट करेल.
+          feedback: चूक. तुम्ही जे काही टाईप कराल ते ब्लॉकच्या नावाऐवजी येईल.
+        - text: तुम्ही टाईप केलेले नाव वापरून प्रोग्रॅम तुम्हाला अभिवादन करेल.
+          correct: true
+          feedback: बरोबर! तुम्ही जे काही टाईप कराल ते ब्लॉकच्या नावाऐवजी येईल.
+        - text: स्प्राईट आकार बदलेल.
+          feedback: चूक. मजकूर स्क्रीनवर प्रिंट होईल.
+        - text: कॉम्प्युटर दुसरा प्रश्न विचारेल.
+          feedback: चूक. प्रोग्रॅम सुरू झाल्यावर फक्त एक प्रश्न विचारला आहे.
+        questions:
+        - text: 'या प्रोग्रॅममध्ये तुम्ही प्रशाचे उत्तर तुमच्या कीबोर्डवर टाईप करून
+            देता. `print` ब्लॉक स्क्रीनवर मजकूर दाखवतो. अंदाज वर्तवा: प्रश्नाचे उत्तर
+            दिल्यावर काय होईल?'
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: लॉरेल हा कोड वापरून खजिन्याचा 1 तुकडा गोळा करेल.
+        questions:
+        - {}
+      courseD_project_exemplars_2020_2021:
+        markdown: |-
+          # प्रोजेक्ट उदाहरणे
+
+          तुम्ही लवकरच तुमचा अंतिम प्रोजेक्ट सुरू करणार आहात. तुम्ही सुरुवात करण्यापूर्वी,  उदाहरणादाखल दिलेले प्रोजेक्ट्स पहा.
+
+
+          | बाऊन्स केल्यावर रँडम स्पीड (बास्केटबॉल) | स्टॉर्मट्रूपर्सची संख्या वाढवणे (स्टार वॉर्स) |
+          |---|---|
+          | [![बाऊन्स केल्यावर रँडम स्पीड (बास्केटबॉल)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "बाऊन्स केल्यावर रँडम स्पीड (बास्केटबॉल)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "स्टॉर्मट्रूपर्सची संख्या वाढवणे (स्टार वॉर्स)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | बॉल बाऊन्स झाला की त्याचा वेग बदलतो! | स्टॉर्मट्रूपर्स टाळा नाहीतर त्यांची संख्या वाढेल! |
+
+
+          | पॅनिक ! अॅट द डिस्को (डान्स पार्टी) | बीच सीन (कलाकार) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | तुमचे बॅकअप डान्सर्स त्यांच्या मूव्ह्ज बदलत राहतात! | या दृश्याला अजून थोडा रंग आणि पार्श्वभूमी जोडण्याचा प्रयत्न करा! |
+      HappyMaps-Unplugged_2021:
+        markdown: "# आनंदी नकाशे\n\nपात्राला मेझमधून हालचाल करायला लावण्यासाठी एक
+          अल्गोरिदम तयार करा. "
+      SimonSays-Unplugged_2021:
+        markdown: "# अल्गोरीदमचे अनुसरण करा\n\n\nएक गेम खेळा आणि योग्य परिणाम साधण्यासाठी
+          कोणत्या कमांड्स आवश्यक आहेत त्यांचा विचार करा.  "
+      courseAB_EOC_2021:
+        description: तुम्ही शेवटच्या धड्यापर्यंत पोचला आहात! तयार करण्यासाठी एक प्रोजेक्ट
+          निवडा.
+      courseB_EOC_2021:
+        description: तुम्ही शेवटच्या धड्यापर्यंत पोचला आहात! तयार करण्यासाठी एक प्रोजेक्ट
+          निवडा.
+      courseD_EOC_examples_2021:
+        display_name: प्रोजेक्ट उदाहरणे
+        description: तुम्ही लवकरच तुमचा अंतिम प्रोजेक्ट सुरू करणार आहात. तुम्ही सुरुवात
+          करण्यापूर्वी, उदाहरणादाखल दिलेले काही प्रोजेक्ट्स पाहण्यासाठी वेळ खर्च करा.
+      courseF_events_freeplay:
+        description: 'आता तुम्ही प्रोजेक्ट यापेक्षा चांगला करण्यासाठी तुम्ही आत्तापर्यंत
+          काय शिकला ते वापरू शकता! तुमच्या प्रोग्रॅममध्ये नवीन गोष्टी जोडत राहा किंवा
+          काहीतरी नवीन सुरू करा! '
+        display_name: इव्हेंट्स - फ्री प्ले
+      courseF_events_practice:
+        description: आत्तापर्यंत छान कामगिरी केलीत! तुमची पुढची कृती निवडा. शक्य तितक्या
+          कृती पूर्ण करा. इव्हेंट्सचा सराव करत राहा!
+        display_name: इव्हेंट्सचा सराव
+        teacher_markdown: "# पसंती पातळयांचा आढावा\nपसंतीच्या पातळयांमध्ये विद्यार्थ्यांना
+          पूर्ण करण्यासाठी अतिरिक्त पातळयांचा मेनू दिलेला आहे. विद्यार्थ्यांनी इथे
+          किमान एक उप-पातळी पूर्ण केली पाहिजे, पण त्यांना (किंवा तुम्हाला) आवडतील
+          तितक्या पातळ्या ते पूर्ण करू शकतात.\n\nविद्यार्थ्यांना स्वत: निवड करता येण्यासाठी
+          तुम्ही खाली दिलेली वर्णने वापरू शकता किंवा किती उप-पातळ्या त्यांनी  \nपूर्ण
+          केल्या पाहिजेत याची अपेक्षा निश्चित करू शकता.\n\n|&nbsp; &nbsp; &nbsp; &nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |सुरुवात करा!|उडायला शिकणे| बॅरल रोल
+          करा|लहान व्हा आणि मोठे व्हा|माशाला फुगवा!|फिरणारा पेंग्विन|\n|-|-|-|-|-|-|-|\n|
+          ***टाईप करा*** |**आढावा**|**डीबग**|**Debug**|**डीबग**|**ऐच्छिक कंटेंट**|**ऐच्छिक
+          कंटेंट**\n| ***संकल्पना***|*events, behaviors*|*इव्हेंट्स, बिहेवियर्स*|*events,
+          behaviors*|*इव्हेंट्स, बिहेवियर्स*|*when/while events*|*when/while इव्हेंट्स*|"
+      courseF_intro_apps:
+        description: CS च्या मूलभूत गोष्टींमध्ये स्वागत! हे सगळे प्रोजेक्ट्स स्प्राईट
+          लॅब वापरून तयार केलेले आहेत. काय शक्य आहे ते पाहण्यासाठी ते करून पहा. या
+          अभ्यासक्रमाच्या शेवटी, तुम्ही यासारखे तुमचे स्वत:चे प्रोजेक्ट्स...आणि  इतर
+          अनेक गोष्टी तयार करू शकाल!
+        display_name: स्प्राईट लॅब ॲप्स
+        teacher_markdown: "# पसंतीच्या पातळयांचा आढावा \nपसंतीच्या पातळयांमध्ये विद्यार्थ्यांना
+          पूर्ण करण्यासाठी अतिरिक्त पातळयांचा मेनू दिलेला आहे. विद्यार्थ्यांनी इथे
+          किमान एक उप-पातळी पूर्ण केली पाहिजे, पण त्यांना (किंवा तुम्हाला) आवडतील
+          तितक्या पातळ्या ते पूर्ण करू शकतात.\n\nयेथील पसंती विद्यार्थ्यांना नमुना
+          ॲप्सकडे घेऊन जातील, जी ॲप्स विद्यार्थी बघू शकतील. ही कृती [धड्याच्या प्लॅनमधील]
+          (.././) एक्सप्लोरींग ॲप्स वर्कशीटबरोबर एकत्रित करण्याच्या हेतूने बनवलेली
+          आहे.\n"
+      courseF_sprites_freeplay:
+        description: तुम्हाला जे काही पाहिजे आहे ते करायची आता तुमची पाळी आहे! कोणत्या
+          प्रकारचा प्रोजेक्ट तुम्ही तयार कराल?
+        display_name: स्प्राईट्स - फ्री प्ले
+      courseF_sprites_practice:
+        description: आत्तापर्यंत छान कामगिरी केली आहेत! तुमची पुढची कृती निवडा. तुम्ही
+          जितक्या जास्तीत जास्त पूर्ण करू शकता तितक्या पूर्ण करा. स्प्राईट्स आणि बिहेवियर्स
+          यांचा सराव करत राहा!
+        display_name: स्प्राईट्स सराव
+        teacher_markdown: "# पसंती पातळयांचा आढावा\nपसंतीच्या पातळयांमध्ये विद्यार्थ्यांना
+          पूर्ण करण्यासाठी अतिरिक्त पातळयांचा मेनू दिलेला आहे. विद्यार्थ्यांनी इथे
+          किमान एक उप-पातळी पूर्ण केली पाहिजे, पण त्यांना (किंवा तुम्हाला) आवडतील
+          तितक्या पातळ्या ते पूर्ण करू शकतात.\n\nविद्यार्थ्यांना स्वत: निवड करता येण्यासाठी
+          तुम्ही खाली दिलेली वर्णने वापरू शकता किंवा किती उप-पातळ्या त्यांनी  \nपूर्ण
+          केल्या पाहिजेत याची अपेक्षा निश्चित करू शकता.\n\n|&nbsp; &nbsp; &nbsp; &nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |वाळवंटातील दृश्य|फळाचा आकार बदला.|चालणाऱ्या
+          जहाजाचे ॲनिमेशन करा| एक सुखद दिवस|\n|-|-|-|-|-|\n| ***प्रकार*** |**आढावा**|**Review**|**आढावा**|**आढावा**|\n|
+          ***संकल्पना***|*sprites, locations*|*sprites, properties*|*sprites, locations,
+          behaviors*|*behaviors*|\n"
+      courseF_variables_projects:
+        display_name: एक प्रोजेक्ट निवडा
+        description: तुम्ही एक ग्रीटिंग कार्ड, एक चॅटबॉट किंवा एक रिकाम्या जागेची
+          गोष्ट तयार कराल. जर तुम्ही आधीच तुमच्या प्रोजेक्टचा \"भाग 1\" पूर्ण केलेला
+          असेल तर \"भाग 2\" सुरू करा.
+        teacher_markdown: |-
+          # पसंती पातळयांचा आढावा
+          पसंतीच्या पातळया विद्यार्थ्यांना पूर्ण करण्यासाठी अधिक पातळ्यांचा मेनू पुरवते. विद्यार्थ्यांनी यातील उप-पातळयांमधील किमान एक पातळी विद्यार्थ्यांनी पूर्ण केली पाहिजे, पण त्यांनी एकाच प्रोजेक्टमधल्या **दोन** पातळ्या पूर्ण कराव्यात, यासाठी प्रोत्साहन दिले पाहिजे.
+
+          इथल्या निवडी कशा नेव्हीगेट कराव्यात, यासाठी विद्यार्थ्यांना स्पष्ट सूचना देणे आवश्यक आहे. प्रत्येक प्रोजेक्ट निवडीसाठी, इथे दोन उप-पातळ्या आहेत. सुरुवात करण्यासाठी, विद्यार्थ्यांनी "भाग 1" लिहिलेली एक पातळी निवडली पाहिजे. त्यांनी ही पातळी पूर्ण केली की ते इथे परत आले पाहिजेत आणि त्यांनी *त्याच* प्रोजेक्टचा "भाग 2" निवडला पाहिजे.  प्रत्येक निवडीच्या पहिल्या भागात विद्यार्थी त्यांच्या प्रोजेक्टचे मूलभूत घटक एकत्र आणतील तेव्हा विद्यार्थ्यांना अभिप्राय देईल. दुसरी पातळी म्हणजे "फ्री प्ले" यामध्ये विद्यार्थ्यांना त्यांच्या कोडमध्ये त्यांच्या आवडीनुसार बदल करता येतात.
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: "# माझा ऑनलाईन शेजार \n\n##तुम्ही सुरक्षितपणे एखाद्या ठिकाणी ऑनलाईन
+          कसे जाऊ शकता?"
+      express_EOC_examples_2021:
+        display_name: प्रोजेक्ट उदाहरणे
+        description: तुम्ही लवकरच तुमचा अंतिम प्रोजेक्ट सुरू करणार आहात. तुम्ही सुरुवात
+          करण्यापूर्वी, उदाहरणादाखल दिलेले काही प्रोजेक्ट्स पाहण्यासाठी वेळ खर्च करा.
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |-
+          # रिकाम्या जागेच्या गोष्टी
+
+          या धड्यात तुम्ही रिकाम्या जागेच्या गोष्टी लिहायाल शिकाल. याचा संबंध संगणक शास्त्राशी कसा आहे, हे समजून घेण्यासाठी हा व्हिडीओ बघा.
+      courseF_text_practice:
+        description: आत्तापर्यंत छान कामगिरी केलीत! तुमची पुढची कृती निवडा. शक्य तितक्या
+          कृती पूर्ण करा. मजकूर आणि प्रॉम्प्ट्सचा  सराव करत राहा!
+        display_name: मजकूर आणि प्रॉम्प्ट्सचा  सराव
+        teacher_markdown: "# पसंती पातळयांचा आढावा\nपसंतीच्या पातळयांमध्ये विद्यार्थ्यांना
+          पूर्ण करण्यासाठी अतिरिक्त पातळयांचा मेनू दिलेला आहे. विद्यार्थ्यांनी इथे
+          किमान एक उप-पातळी पूर्ण केली पाहिजे, पण त्यांना (किंवा तुम्हाला) आवडतील
+          तितक्या पातळ्या ते पूर्ण करू शकतात.\n\nविद्यार्थ्यांना स्वत: निवड करता येण्यासाठी
+          तुम्ही खाली दिलेली वर्णने वापरू शकता किंवा किती उप-पातळ्या त्यांनी  \nपूर्ण
+          केल्या पाहिजेत याची अपेक्षा निश्चित करू शकता.\n\n|&nbsp; &nbsp; &nbsp; &nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |स्पीच फॉर टेक्स्ट वापरणे|प्रॉम्प्ट्समधील
+          टेक्स्ट|रोबोला नाव द्याt!|व्हेरीएबल लेबल्स|मोठे टेक्स्ट|रंगांसाठी प्रॉम्प्टिंग
+          |मुळापासून सुरुवात करणे| |-|-|-|-|-|-|-|-| | ***टाईप करा*** |**आढावा घ्या**|**डीबग
+          करा **|** डीबग करा**|**डीबग करा**|**ऐच्छिक कंटेंट**|**ऐच्छिक कंटेंट**|**फ्री
+          प्ले** | ***संकल्पना***|*प्रिंट ब्लॉक, इव्हेंट्स*|*प्रॉम्प्ट्स, इव्हेंट्स
+          *|*स्पेसेस जोडणे*|*व्हेरीएबल्सची लेबल्स जुळवणे*|*टायटल स्क्रीन ब्लॉक्स*|*रंग
+          स्टोअर करणे*|*नवीन कंटेंट नाही*"
+      courseF_beeFor_practice:
+        display_name: मधमाशी सराव
+        description: आत्तापर्यंत छान कामगिरी केलीत! तुमची पुढची कृती निवडा. शक्य तितक्या
+          कृती पूर्ण करा. लूप्स आणि मधमाशीबरोबर सराव करत राहा!
+      courseF_beeVar_practice:
+        display_name: मधमाशी सराव
+        description: आत्तापर्यंत छान कामगिरी केलीत! तुमची पुढची कृती निवडा. शक्य तितक्या
+          कृती पूर्ण करा. व्हेरीएबल्स आणि मधमाशीबरोबर सराव करत राहा!
+      courseF_bee_practice:
+        description: आत्तापर्यंत छान कामगिरी केलीत! तुमची पुढची कृती निवडा. शक्य तितक्या
+          कृती पूर्ण करा. लूप्स आणि मधमाशीबरोबर सराव करत राहा!
+        display_name: मधमाशी सराव
+      CourseF_outbreak_story:
+        markdown: |-
+          # उद्रेक: तुमच्या स्वत:च्या कोडचे सिम्युलेशन करा
+
+          ## राक्षसांच्या गावात तुमचे स्वागत!
+          राक्षसांचे गाव म्हणजे सामान्यपणे एक आनंदी आणि निरोगी जागा असते.  राक्षसांच्या गावातल्या राक्षसांना त्यांच्या मित्रांना भेटायला इकडे तिकडे जायला मजा येते.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          एके दिवशी, एक राक्षस आजारी पडला. त्याला **व्हायरसची** बाधा झाली होती! व्हायरस म्हणजे एक छोटा जंतू असतो, जो तुम्हाला आजारी पाडू शकतो. इतर राक्षसांना फार चिंता वाटली नाही. ते त्यांच्या मित्रांना भेटतच राहिले.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          त्यानंतर लगेचच, अजून दोन राक्षस आजारी पडले. त्याला तोच व्हायरस जबाबदार होता! त्यांना त्यांच्या मित्राकडूनच व्हायरसची लागण झाली असे वाटते.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          जे राक्षस जवळपास होते त्यांनासुद्धा हळूहळू व्हायरसची लागण झाली. निरोगी राक्षसांनासुद्धा आपण आजारी पडू अशी चिंता वाटू लागली. आजारी राक्षसांना अशी चिंता वाटू लागली की त्यांच्यामुळे इतर सगळ्यांना व्हायरसची लागण होईल.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## प्रसार थांबवणे
+          सुदैवाने, विषाणूचा अभ्यास केल्यावर, राक्षसांच्या गावाच्या शेजाऱ्यांना एक महत्त्वाचा शोध लागला. त्यांच्या असे लक्षात आले की जर त्यांनी आपल्या तोंडावर मास्क्स घातले की ते व्हायरसचा प्रसार करण्याची कमी शक्यता आहे, आजारी राक्षसांकडून निरोगी राक्षसांकडे व्हायरसचा प्रसार होण्याची कमी शक्यता आहे
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## पुढे काय होईल?
+
+          आज, तुम्ही राक्षसांच्या गावातल्या व्हायरस संसर्गाचे **सिम्युलेशन** करण्यासाठी तुमचा स्वत:चा कोड लिहिणार आहात आणि तो रन करणार आहात. सिम्युलेशन म्हणजे प्रोसेस किंवा सिस्टीमचे कॉम्प्युटर मॉडेल. कोड लिहायला शिका आणि राक्षसांच्या गावच्या शेजाऱ्यांचे काय होईल, त्याबद्दल अंदाज वर्तवा.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *व्हायरसचा प्रसार किती लवकर होईल?*
+
+          * *सगळेच आजारी पडतील का?*
+
+          * *फेस मास्क्सचा कसा उपयोग होईल?*
+
+
+          तुमचे सिम्युलेशन करून झाल्यावर ते इतरांशी शेअर करा. जेव्हा गावात व्हायरस येतो तेव्हा इतरांना निरोगी ठेवण्यासाठी आपण काय करू शकतो? असे तुम्हाला वाटते, त्याबद्दलचा तुमचा मेसेज शेअर करा.
+      courseF_EOC_samples_2021:
+        description: तुम्ही लवकरच तुमचा अंतिम प्रोजेक्ट सुरू करणार आहात. तुम्ही सुरुवात
+          करण्यापूर्वी, उदाहरणादाखल दिलेले काही प्रोजेक्ट्स पाहण्यासाठी वेळ खर्च करा.
+      courseF_artist_practice:
+        description: आत्तापर्यंत छान कामगिरी केलीत! तुमची पुढची कृती निवडा. शक्य तितक्या
+          कृती पूर्ण करा. लूप्स आणि आर्टीस्टबरोबर सराव करत राहा!
+        display_name: आर्टीस्ट सराव
+      courseF_variables_samples:
+        description: तुम्ही एक ग्रीटिंग कार्ड, एक चॅटबॉट किंवा एक रिकाम्या जागेची
+          गोष्ट तयार कराल. सुरुवात करण्यापूर्वी तुम्हाला काय तयार करायला आवडेल हे
+          ठरवण्यासाठी खाली उदाहरणादाखल दिलेले प्रोजेक्ट्स बघा. तुम्ही जेव्हा स्वत:चा
+          प्रोग्रॅम सुरू करण्याचे नियोजन करण्यासाठी तयार असाल तेव्हा \"Finish\" दाबा.
+        display_name: पहा - नमुना प्रोग्रॅम्स
+        teacher_markdown: "# पसंतीच्या पातळयांचा आढावा \nपसंतीच्या पातळयांमध्ये विद्यार्थ्यांना
+          पूर्ण करण्यासाठी अतिरिक्त पातळयांचा मेनू दिलेला आहे. विद्यार्थ्यांनी इथे
+          किमान एक उप-पातळी पूर्ण केली पाहिजे, पण त्यांना (किंवा तुम्हाला) आवडतील
+          तितक्या पातळ्या ते पूर्ण करू शकतात.\n\nकाय तयार करायचे हे ठरवण्यापूर्वी
+          विद्यार्थ्यांनी हे प्रोजेक्ट्स काळजीपूर्वक पाहिले पाहिजेत. तुम्ही हे प्रोजेक्ट्स
+          वर्गात सगळेजण मिळून एकत्र पाहू शकता किंवा विद्यार्थ्यांना आपापले पाहायला
+          सांगा.\n"
+      courseF_variables_stop:
+        markdown: "# थांबा!\n\n## तुम्हाला नक्की पुढे जायचे आहे का? \n\n\nपुढच्या
+          पातळीला, तुम्ही तुमच्या प्रोजेक्टसाठी कोड लिहायला सुरू कराल. तुमच्याकडे
+          आधीपासूनच योजना असेल तर हे जास्त चांगले होईल.\n\nतुमच्या पूर्ण झालेल्या
+          प्लॅनमध्ये  या गोष्टी समाविष्ट असल्या पाहिजेत:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* तुम्ही तयार करत असलेल्या
+          प्रोजेक्टचा प्रकार. उदाहरणार्थ, ग्रीटिंग कार्ड, चॅटबॉट किंवा रिकाम्या जागेची
+          गोष्ट.\n* तुम्ही युजरला विचारणार असलेल्या प्रश्नांची उत्तरे.\n* तुम्ही स्क्रीनवर
+          दाखवणार असलेला इतर मजकूर.\n* तुम्हाला आवश्यक असलेले स्प्राईट्सचे वर्णन किंवा
+          चित्र (आणि त्यांची बिहेवियर्स).\n\nजर तुम्ही पुढे जायला तयार आहात का नाही,
+          याची तुम्हाला खात्री नसेल तर तुमच्या शिक्षकांना विचारा!"

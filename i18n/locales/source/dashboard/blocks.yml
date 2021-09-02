@@ -1074,8 +1074,8 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
-      gamelab_hideHaiku:
-        text: hide haiku
+      gamelab_glideTo:
+        text: "[SPRITE][0] glide to [LOCATION][1]"
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_ifVarEquals:
@@ -1212,7 +1212,7 @@ en:
       gamelab_patrollingUpDown:
         text: patrolling up and down
       gamelab_playSound:
-        text: playSound [SOUND][0]
+        text: play sound [SOUND][0]
       gamelab_pointInDirection:
         text: point [SPRITE][0] [DIRECTION][1]
         options:
@@ -1221,8 +1221,6 @@ en:
             '"East"': East
             '"South"': South
             '"West"': West
-      gamelab_printHaiku:
-        text: show haiku [BREAK][0] poem title [TITLE][1] poem author [AUTHOR][2] line 1 [LINE1][3] line 2 [LINE2][4] line 3 [LINE3][5]
       gamelab_printText:
         text: print [TEXT][0]
       gamelab_randColor:
@@ -1357,12 +1355,16 @@ en:
         text: "[SPRITE][0] begins avoiding [TARGET][1]"
       gamelab_startFollowing:
         text: "[SPRITE][0] begins following [TARGET][1]"
+      gamelab_startGliding:
+        text: "[SPRITE][0] starts gliding"
       gamelab_stopAvoiding:
         text: "[SPRITE][0] stops avoiding other sprites"
       gamelab_stopCollectingData:
         text: stop collecting data
       gamelab_stopFollowing:
         text: "[SPRITE][0] stops following other sprites"
+      gamelab_stopGliding:
+        text: "[SPRITE][0] stops gliding"
       gamelab_subjectSpritePointer:
         text: "[SPRITE][0]"
       gamelab_textJoin:
@@ -1872,6 +1874,21 @@ en:
           BG_EFFECT:
             '"solid"': solid
             '"rainbow"': rainbow
+      PoemBot_setFont:
+        text: set font [FONT][0]
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Georgia"': Georgia
+            '"Palatino"': Palatino
+            '"Times"': Times
+            '"Courier"': Courier
+            '"Arial Black"': Arial Black
+            '"Impact"': Impact
+            '"Tahoma"': Tahoma
+            '"Verdana"': Verdana
+      PoemBot_setFontColor:
+        text: set font color [COLOR][0]
       PoemBot_setForegroundEffect:
         text: set foreground effect [FG_EFFECT][0]
         options:
@@ -1882,8 +1899,10 @@ en:
         text: set poem [BG_EFFECT][0]
         options:
           BG_EFFECT:
+            '"---"': "---"
             '"wordsworth"': I Wandered Lonely as a Cloud
-            '"rainbow"': rainbow
+            '"dickinson"': If I can Stop one Heart from Breaking
+            '"silverstein"': Batty
       PoemBot_setTitle:
         text: set poem title [TITLE][0]
       PoemBot_showPoem:
@@ -1894,6 +1913,8 @@ en:
         text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"
       PoemBot_textConcat:
         text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
+      PoemBot_whenLineShows:
+        text: when line [N][0] shows
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:
@@ -2011,6 +2032,71 @@ en:
             '"quarantining"': quarantining when sick
             '"avoiding"': social distancing
             '"none"': staying still
+      batman_batmanSay:
+        text: "[IMG][0]say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I am Batman!"': I am Batman!
+            '"Being kind is never wasted."': Being kind is never wasted.
+            '"When you know better, you do better."': When you know better, you do better.
+            '"You always pass failure on the way to success."': You always pass failure on the way to success.
+            '"Make each day your masterpiece."': Make each day your masterpiece.
+      batman_batwomanSay:
+        text: "[IMG][0]say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I am Batwoman!"': I am Batwoman!
+      batman_bruceSay:
+        text: "[IMG][0]say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"Call me Bruce"': Call me Bruce.
+            '"Being kind is never wasted."': Being kind is never wasted.
+            '"When you know better, you do better."': When you know better, you do better.
+            '"You always pass failure on the way to success."': You always pass failure on the way to success.
+            '"Make each day your masterpiece."': Make each day your masterpiece.
+      batman_catwomanSay:
+        text: "[IMG][0]say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I am Catwoman!"': I am Catwoman!
+            '"Never quit!"': Never quit!
+            '"Live Fast."': Live Fast.
+      batman_freezeSay:
+        text: "[IMG][0]say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I''m Mr. Freeze!"': I'm Mr. Freeze!
+            '"Stay Cool!"': Stay Cool!
+            '"Everyone, chill!"': Everyone, chill!
+            '"Cool party!"': Cool party!
+            '"Allow me to break the ice."': Allow me to break the ice.
+            '"Tonight’s forecast… a freeze is coming!"': Tonight’s forecast… a freeze is coming!
+      batman_harleySay:
+        text: "[IMG][0]say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I am Harley Quinn!"': I am Harley Quinn!
+      batman_jokerSay:
+        text: "[IMG][0]say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I''m the Joker!"': I'm the Joker!
+      batman_nightwingSay:
+        text: "[IMG][0]say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I am Nightwing!"': I am Nightwing!
+      batman_poisonivySay:
+        text: "[IMG][0]say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I am Poison Ivy!"': I am Poison Ivy!
+      batman_robinSay:
+        text: "[IMG][0]say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I am Robin!"': I am Robin!
       binary_drawBin:
         text: draw binary [BIN][0]
       binary_drawBinScreen:
@@ -2153,3 +2239,7 @@ en:
           DIR:
             right: right ↻
             left: left ↺
+      validation_validatedBackground:
+        text: set background to [IMG][0]
+      validation_validatedSound:
+        text: PLAYSound [SOUND][0]

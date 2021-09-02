@@ -104,10 +104,16 @@ my:
         options:
           THIS:
             sprites: အားလုံး
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': မြင်နိုင်သော
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: အားလုံး
+          VISIBILITY:
+            'true': မြင်နိုင်သော
       Dancelab_startMappingEach:
         options:
           GROUP:
@@ -145,6 +151,10 @@ my:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:
         text: ကျဘန်းအရောင်
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            undefined: ဘာမှမရှိ
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -212,6 +222,10 @@ my:
           KEY:
             '"a"': က
             '"d"': ဃ
+      PoemBot_setForegroundEffect:
+        options:
+          FG_EFFECT:
+            '"rain"': မိုးရွာသည်
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:

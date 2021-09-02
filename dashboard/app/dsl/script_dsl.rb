@@ -433,23 +433,14 @@ class ScriptDSL < BaseDSL
     assessment = nil,
     experiments = []
   )
+    named_level_name = named && (level.display_name || level.name)
+    progression_name = progression || named_level_name
     s = []
-    if level.key.start_with? 'blockly:'
-      s << "skin '#{level.skin}'" if level.try(:skin)
-      s << "video_key_for_next_level '#{level.video_key}'" if level.video_key
-
-      unless level.concepts.empty?
-        s << "concepts #{level.summarize_concepts}"
-      end
-
-      s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
-    end
     l = "#{type} '#{escape(level.key)}'"
     l += ', active: false' if experiments.empty? && active == false
     l += ', active: true' if experiments.any? && (active == true || active.nil?)
     l += ", experiments: #{experiments.to_json}" if experiments.any?
-    l += ", progression: '#{escape(progression)}'" if progression
-    l += ', named: true' if named
+    l += ", progression: '#{escape(progression_name)}'" if progression_name
     l += ', assessment: true' if assessment
     l += ', challenge: true' if challenge
     s << l

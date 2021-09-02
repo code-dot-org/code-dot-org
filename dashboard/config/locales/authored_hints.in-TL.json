@@ -8739,6 +8739,1898 @@
         "outbreak7": {
           "whenclicked": "crwdns2493950:0[0]crwdne2493950:0",
           "verionhistory": "crwdns2493952:0crwdne2493952:0"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "crwdns2582320:0crwdne2582320:0",
+          "challenges": "crwdns2582322:0crwdne2582322:0"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "crwdns2582330:0crwdne2582330:0",
+          "challenges": "crwdns2582332:0[0]crwdne2582332:0"
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "crwdns2582342:0crwdne2582342:0",
+          "challenges": "crwdns2582344:0crwdne2582344:0"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "crwdns2582350:0crwdne2582350:0"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "crwdns2582358:0crwdne2582358:0",
+          "challenges": "crwdns2582360:0crwdne2582360:0"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "crwdns2582368:0crwdne2582368:0",
+          "challenges": "crwdns2582370:0crwdne2582370:0"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "crwdns2582378:0crwdne2582378:0",
+          "challenges": "crwdns2582380:0crwdne2582380:0"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "crwdns2582388:0crwdne2582388:0",
+          "tint_hint": "crwdns2582390:0crwdne2582390:0"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "crwdns2582396:0crwdne2582396:0",
+          "repeat_every_ideas": "crwdns2582398:0crwdne2582398:0",
+          "next_previous": "crwdns2582400:0crwdne2582400:0"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "crwdns2582416:0crwdne2582416:0"
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "crwdns2587550:0[0]crwdne2587550:0"
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "crwdns2587536:0crwdne2587536:0"
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "crwdns2587544:0crwdne2587544:0"
+        },
+        "CourseF_outbreak1": {
+          "step1": "crwdns2576510:0[0]crwdnd2576510:0[1]crwdne2576510:0",
+          "step2": "crwdns2576512:0[0]crwdne2576512:0",
+          "step3": "crwdns2576514:0[0]crwdne2576514:0"
+        },
+        "CourseF_outbreak2": {
+          "hint1": "crwdns2576526:0[0]crwdne2576526:0"
+        },
+        "CourseF_outbreak3": {
+          "hint1": "crwdns2576542:0[0]crwdne2576542:0",
+          "hint2": "crwdns2576544:0[0]crwdne2576544:0"
+        },
+        "CourseF_outbreak4": {
+          "challenge": "crwdns2576558:0[0]crwdnd2576558:0[1]crwdne2576558:0"
+        },
+        "CourseF_outbreak6": {
+          "hint2": "crwdns2576612:0[0]crwdne2576612:0",
+          "hint1": "crwdns2576614:0[0]crwdne2576614:0"
+        },
+        "CourseF_outbreak7": {
+          "whenclicked": "crwdns2576628:0[0]crwdne2576628:0",
+          "verionhistory": "crwdns2576630:0crwdne2576630:0"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_b": "crwdns2587220:0crwdne2587220:0",
+          "Function_intro_Ryan_a": "crwdns2587222:0crwdne2587222:0"
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "crwdns2587138:0crwdne2587138:0",
+          "MC_HOC_2017_01_RETRY_b": "crwdns2587140:0crwdne2587140:0",
+          "MC_HOC_2017_01_RETRY_c": "crwdns2587142:0crwdne2587142:0"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "crwdns2587150:0crwdne2587150:0",
+          "MC_HOC_2017_02_Cole_b": "crwdns2587152:0crwdne2587152:0",
+          "MC_HOC_2017_02_Cole_c": "crwdns2587154:0crwdne2587154:0",
+          "MC_HOC_2017_02_Cole_d": "crwdns2587156:0crwdne2587156:0"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "crwdns2587164:0crwdne2587164:0",
+          "MC_HOC_2017_03_Cole_b": "crwdns2587166:0crwdne2587166:0"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "crwdns2587190:0crwdne2587190:0",
+          "MC_HOC_2017_04POINT5_RYAN_a": "crwdns2587192:0crwdne2587192:0"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "crwdns2587176:0crwdne2587176:0",
+          "MC_HOC_2017_04_Cole_c": "crwdns2587178:0crwdne2587178:0",
+          "MC_HOC_2017_04_Cole_b": "crwdns2587180:0crwdne2587180:0"
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "crwdns2587200:0crwdne2587200:0",
+          "MC_HOC_2017_05_Cole_b": "crwdns2587202:0crwdne2587202:0"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "crwdns2587210:0crwdne2587210:0",
+          "MC_HOC_2017_06_Cole_b": "crwdns2587212:0crwdne2587212:0"
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "crwdns2587234:0crwdne2587234:0",
+          "MC_HOC_2017_07_Cole_a": "crwdns2587236:0crwdne2587236:0",
+          "MC_HOC_2017_07_Cole_b": "crwdns2587238:0crwdne2587238:0"
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "crwdns2587248:0crwdne2587248:0",
+          "MC_HOC_2017_10_Cole_a": "crwdns2587250:0crwdne2587250:0"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "crwdns2587262:0crwdne2587262:0",
+          "MC_HOC_2017_08_RY_b": "crwdns2587264:0crwdne2587264:0",
+          "MC_HOC_2017_08_RY_c": "crwdns2587266:0crwdne2587266:0"
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "crwdns2587280:0crwdne2587280:0"
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "crwdns2582948:0crwdne2582948:0",
+          "mc_8_b": "crwdns2582950:0crwdne2582950:0",
+          "mc_8_c": "crwdns2582952:0crwdne2582952:0"
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "crwdns2582892:0crwdne2582892:0",
+          "mc_2_b": "crwdns2582894:0crwdne2582894:0"
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "crwdns2582908:0crwdne2582908:0",
+          "mc_4_b": "crwdns2582910:0crwdne2582910:0"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "crwdns2582930:0crwdne2582930:0",
+          "mc_6_b": "crwdns2582932:0crwdne2582932:0",
+          "mc_6_c": "crwdns2582934:0crwdne2582934:0"
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "crwdns2582880:0crwdne2582880:0",
+          "mc_1_b": "crwdns2582882:0crwdne2582882:0"
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "crwdns2582918:0crwdne2582918:0",
+          "mc_5_b": "crwdns2582920:0crwdne2582920:0",
+          "mc_5_c": "crwdns2582922:0crwdne2582922:0"
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "crwdns2582940:0crwdne2582940:0",
+          "mc_7_b": "crwdns2582942:0crwdne2582942:0",
+          "mc_7_c": "crwdns2582944:0crwdne2582944:0"
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "crwdns2582956:0crwdne2582956:0",
+          "mc_13_b": "crwdns2582958:0crwdne2582958:0"
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "crwdns2582900:0crwdne2582900:0",
+          "mc_3_b": "crwdns2582902:0crwdne2582902:0",
+          "mc_3_c": "crwdns2582904:0crwdne2582904:0"
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "crwdns2582972:0crwdne2582972:0",
+          "mc_11_b": "crwdns2582974:0crwdne2582974:0"
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "crwdns2582982:0crwdne2582982:0",
+          "mc_12_b": "crwdns2582984:0crwdne2582984:0",
+          "mc_12_c": "crwdns2582986:0crwdne2582986:0"
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "crwdns2582990:0crwdne2582990:0",
+          "mc_10_b": "crwdns2582992:0crwdne2582992:0",
+          "mc_10_c": "crwdns2582994:0crwdne2582994:0"
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "crwdns2582962:0crwdne2582962:0",
+          "mc_9_b": "crwdns2582964:0crwdne2582964:0",
+          "mc_9_c": "crwdns2582966:0crwdne2582966:0"
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "crwdns2585864:0[0]crwdne2585864:0",
+          "courseA_artist_loops2_b": "crwdns2585866:0[0]crwdne2585866:0"
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "crwdns2585872:0crwdne2585872:0",
+          "courseA_artist_loops3_b": "crwdns2585874:0[0]crwdne2585874:0"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "crwdns2585880:0crwdne2585880:0",
+          "courseA_artist_loops4_b": "crwdns2585882:0[0]crwdnd2585882:0[1]crwdne2585882:0"
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_a": "crwdns2585890:0[0]crwdne2585890:0",
+          "courseA_artist_loops5_b": "crwdns2585892:0crwdne2585892:0",
+          "courseA_artist_loops5_c": "crwdns2585894:0[0]crwdnd2585894:0[1]crwdne2585894:0"
+        },
+        "courseA_artist_loops6_2021": {
+          "courseA_artist_loops6_a": "crwdns2585900:0crwdne2585900:0",
+          "courseA_artist_loops6_b": "crwdns2585902:0crwdne2585902:0"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_a": "crwdns2585908:0crwdne2585908:0",
+          "courseA_artist_loops7_b": "crwdns2585910:0crwdne2585910:0",
+          "courseA_artist_loops7_c": "crwdns2585912:0[0]crwdne2585912:0"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_a": "crwdns2585920:0crwdne2585920:0",
+          "courseA_artist_loops8_b": "crwdns2585922:0crwdne2585922:0",
+          "courseA_artist_loops8_c": "crwdns2585924:0crwdne2585924:0"
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_a": "crwdns2585932:0crwdne2585932:0",
+          "courseA_artist_loops9_b": "crwdns2585934:0[0]crwdne2585934:0",
+          "courseA_artist_loops9_c": "crwdns2585936:0crwdne2585936:0"
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "crwdns2585956:0[0]crwdne2585956:0",
+          "courseA_artist_loops_challenge2_b": "crwdns2585958:0crwdne2585958:0",
+          "courseA_artist_loops_challenge2_c": "crwdns2585960:0crwdne2585960:0"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "crwdns2577806:0[0]crwdne2577806:0",
+          "courseA_collector_loops1_b": "crwdns2577808:0crwdne2577808:0"
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "crwdns2577816:0crwdne2577816:0",
+          "courseA_collector_loops2_b": "crwdns2577818:0[0]crwdne2577818:0"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "crwdns2577822:0[0]crwdne2577822:0",
+          "courseA_collector_loops3_b": "crwdns2577824:0[0]crwdne2577824:0"
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "crwdns2577830:0crwdne2577830:0",
+          "courseA_collector_loops4_b": "crwdns2577832:0[0]crwdne2577832:0"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "crwdns2577836:0crwdne2577836:0",
+          "courseA_collector_loops5_b": "crwdns2577838:0crwdne2577838:0",
+          "courseA_collector_loops5_c": "crwdns2577840:0[0]crwdne2577840:0"
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "crwdns2577844:0crwdne2577844:0",
+          "courseA_collector_loops6_b": "crwdns2577846:0[0]crwdne2577846:0"
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "crwdns2577850:0crwdne2577850:0"
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "crwdns2577854:0crwdne2577854:0",
+          "courseA_collector_loops8_b": "crwdns2577856:0crwdne2577856:0",
+          "courseA_collector_loops8_c": "crwdns2577858:0crwdne2577858:0"
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "crwdns2577862:0crwdne2577862:0",
+          "courseA_collector_loops9_b": "crwdns2577864:0[0]crwdne2577864:0"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "crwdns2577884:0crwdne2577884:0",
+          "courseA_collector_loops_challenge1_b": "crwdns2577886:0crwdne2577886:0",
+          "courseA_collector_loops_challenge1_c": "crwdns2577888:0crwdne2577888:0",
+          "courseA_collector_loops_challenge1_d": "crwdns2577890:0[0]crwdne2577890:0"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "crwdns2577876:0crwdne2577876:0",
+          "courseA_collector_loops_challenge2kp_a": "crwdns2577878:0crwdne2577878:0"
+        },
+        "courseA_harvester_loops1_2021": {
+          "courseA_harvester_loops1_a": "crwdns2577060:0[0]crwdne2577060:0"
+        },
+        "courseA_harvester_loops2_2021": {
+          "courseA_harvester_loops2_a": "crwdns2577066:0[0]crwdnd2577066:0[1]crwdne2577066:0",
+          "courseA_harvester_loops2_b": "crwdns2577068:0crwdne2577068:0"
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_a": "crwdns2577074:0[0]crwdne2577074:0",
+          "courseA_harvester_loops3_b": "crwdns2577076:0[0]crwdne2577076:0"
+        },
+        "courseA_harvester_loops4_2021": {
+          "courseA_harvester_loops4_a": "crwdns2577082:0crwdne2577082:0",
+          "courseA_harvester_loops4_b": "crwdns2577084:0crwdne2577084:0"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "crwdns2577090:0crwdne2577090:0",
+          "courseA_harvester_loops5_b": "crwdns2577092:0[0]crwdnd2577092:0[1]crwdnd2577092:0[2]crwdne2577092:0",
+          "courseA_harvester_loops5_c": "crwdns2577094:0crwdne2577094:0"
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "crwdns2577100:0[0]crwdne2577100:0",
+          "courseA_harvester_loops5a_b": "crwdns2577102:0[0]crwdnd2577102:0[1]crwdne2577102:0",
+          "courseA_harvester_loops5a_c": "crwdns2577104:0crwdne2577104:0"
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "crwdns2577110:0crwdne2577110:0",
+          "courseA_harvester_loops5b_b": "crwdns2577112:0crwdne2577112:0",
+          "courseA_harvester_loops5b_c": "crwdns2577114:0crwdne2577114:0"
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "crwdns2577120:0crwdne2577120:0",
+          "courseA_harvester_loops6_b": "crwdns2577122:0crwdne2577122:0"
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_a": "crwdns2577128:0[0]crwdne2577128:0",
+          "courseA_harvester_loops7_b": "crwdns2577130:0crwdne2577130:0"
+        },
+        "courseA_harvester_loops9_2021": {
+          "courseA_harvester_loops9_a": "crwdns2577136:0crwdne2577136:0",
+          "courseA_harvester_loops9_b": "crwdns2577138:0crwdne2577138:0",
+          "courseA_harvester_loops9_c": "crwdns2577140:0crwdne2577140:0"
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "crwdns2585638:0crwdne2585638:0",
+          "courseA_harvester_seq10_b": "crwdns2585640:0crwdne2585640:0",
+          "courseA_harvester_seq10_c": "crwdns2585642:0crwdne2585642:0"
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "crwdns2585656:0[0]crwdne2585656:0"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "crwdns2585566:0[0]crwdne2585566:0",
+          "courseA_harvester_seq1_b": "crwdns2585568:0[0]crwdne2585568:0"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "crwdns2585574:0[0]crwdne2585574:0",
+          "courseA_harvester_seq2_b": "crwdns2585576:0crwdne2585576:0"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "crwdns2585582:0[0]crwdne2585582:0",
+          "courseA_harvester_seq3_b": "crwdns2585584:0crwdne2585584:0"
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "crwdns2585590:0crwdne2585590:0",
+          "courseA_harvester_seq4_b": "crwdns2585592:0[0]crwdne2585592:0"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "crwdns2585598:0crwdne2585598:0",
+          "courseA_harvester_seq5_b": "crwdns2585600:0crwdne2585600:0",
+          "courseA_harvester_seq5_c": "crwdns2585602:0[0]crwdne2585602:0"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "crwdns2585608:0crwdne2585608:0"
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "crwdns2585614:0crwdne2585614:0",
+          "courseA_harvester_seq7_b": "crwdns2585616:0crwdne2585616:0"
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "crwdns2585622:0crwdne2585622:0"
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "crwdns2585628:0crwdne2585628:0",
+          "courseA_harvester_seq9_b": "crwdns2585630:0crwdne2585630:0",
+          "courseA_harvester_seq9_c": "crwdns2585632:0crwdne2585632:0"
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "crwdns2576854:0[0]crwdne2576854:0"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "crwdns2576862:0[0]crwdne2576862:0"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "crwdns2576868:0[0]crwdne2576868:0"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "crwdns2576874:0[0]crwdne2576874:0"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "crwdns2576880:0[0]crwdne2576880:0"
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "crwdns2585442:0crwdne2585442:0",
+          "courseA_maze_seq10_b": "crwdns2585444:0crwdne2585444:0"
+        },
+        "courseA_maze_seq10_dani": {
+          "courseA_maze_seq10_a": "crwdns2572496:0crwdne2572496:0",
+          "courseA_maze_seq10_b": "crwdns2572498:0crwdne2572498:0"
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_a": "crwdns2585458:0crwdne2585458:0",
+          "courseA_maze_seq13_b": "crwdns2585460:0crwdne2585460:0",
+          "courseA_maze_seq13_c": "crwdns2585462:0[0]crwdnd2585462:0[1]crwdne2585462:0"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "crwdns2585404:0[0]crwdne2585404:0",
+          "courseA_maze_seq1_b": "crwdns2585406:0[0]crwdne2585406:0"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "crwdns2585414:0crwdne2585414:0",
+          "2": "crwdns2585416:0[0]crwdne2585416:0"
+        },
+        "courseA_maze_seq5_dani": {
+          "courseA_maze_seq5_a": "crwdns2572466:0crwdne2572466:0",
+          "courseA_maze_seq5_b": "crwdns2572468:0crwdne2572468:0"
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "crwdns2585422:0crwdne2585422:0"
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "crwdns2585428:0crwdne2585428:0",
+          "courseA_maze_seq6_b": "crwdns2585430:0crwdne2585430:0"
+        },
+        "courseA_maze_seq6_dani": {
+          "courseA_maze_seq6_a": "crwdns2572474:0crwdne2572474:0",
+          "courseA_maze_seq6_b": "crwdns2572476:0crwdne2572476:0"
+        },
+        "courseA_maze_seq7_dani": {
+          "courseA_maze_seq7_a": "crwdns2572482:0crwdne2572482:0",
+          "courseA_maze_seq7_b": "crwdns2572484:0crwdne2572484:0"
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "crwdns2585436:0crwdne2585436:0"
+        },
+        "courseA_maze_seq8_dani": {
+          "courseA_maze_seq8_a": "crwdns2572490:0crwdne2572490:0"
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "crwdns2585468:0crwdne2585468:0"
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "crwdns2585474:0crwdne2585474:0"
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_a": "crwdns2586072:0crwdne2586072:0",
+          "courseA_playLab_events2_b": "crwdns2586074:0[0]crwdne2586074:0"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "crwdns2586080:0[0]crwdnd2586080:0[1]crwdne2586080:0",
+          "courseA_playLab_events3_b": "crwdns2586082:0crwdne2586082:0"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "crwdns2586088:0[0]crwdne2586088:0",
+          "courseA_playLab_events4_b": "crwdns2586090:0[0]crwdne2586090:0"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_a": "crwdns2586098:0[0]crwdnd2586098:0[1]crwdne2586098:0",
+          "courseA_playLab_events5_b": "crwdns2586100:0[0]crwdne2586100:0"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "crwdns2586108:0[0]crwdne2586108:0",
+          "courseA_playLab_events6_b": "crwdns2586110:0[0]crwdne2586110:0",
+          "courseA_playLab_events6_c": "crwdns2586112:0[0]crwdne2586112:0"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "crwdns2586122:0[0]crwdne2586122:0"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "crwdns2586138:0[0]crwdne2586138:0",
+          "courseA_playlab_events_challenge1_b": "crwdns2586140:0[0]crwdne2586140:0",
+          "courseA_playlab_events_challenge1_c": "crwdns2586142:0[0]crwdne2586142:0",
+          "courseA_playlab_events_challenge1_d": "crwdns2586144:0[0]crwdne2586144:0",
+          "courseA_playlab_events_challenge1_e": "crwdns2586146:0[0]crwdne2586146:0"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "crwdns2586128:0[0]crwdne2586128:0",
+          "courseA_playlab_events_challenge2_b": "crwdns2586130:0[0]crwdne2586130:0",
+          "courseA_playlab_events_challenge2_c": "crwdns2586132:0[0]crwdne2586132:0"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "crwdns2585362:0crwdne2585362:0",
+          "2": "crwdns2585364:0crwdne2585364:0"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "crwdns2585372:0[0]crwdne2585372:0"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "crwdns2585378:0[0]crwdne2585378:0"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "crwdns2585386:0[0]crwdne2585386:0"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "crwdns2585392:0[0]crwdne2585392:0"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "crwdns2585398:0[0]crwdne2585398:0"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "crwdns2585972:0crwdne2585972:0",
+          "courseB_artist_loops2_b": "crwdns2585974:0crwdne2585974:0"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "crwdns2585980:0[0]crwdne2585980:0",
+          "courseB_artist_loops3_b": "crwdns2585982:0crwdne2585982:0"
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "crwdns2585990:0crwdne2585990:0",
+          "courseB_artist_loops4_b": "crwdns2585992:0crwdne2585992:0",
+          "courseB_artist_loops4_c": "crwdns2585994:0crwdne2585994:0"
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "crwdns2586000:0[0]crwdne2586000:0"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "crwdns2586006:0crwdne2586006:0"
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "crwdns2586012:0crwdne2586012:0",
+          "courseB_artist_loops7_b": "crwdns2586014:0[0]crwdne2586014:0",
+          "courseB_artist_loops7_c": "crwdns2586016:0crwdne2586016:0"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "crwdns2586022:0crwdne2586022:0",
+          "courseB_artist_loops8_b": "crwdns2586024:0crwdne2586024:0"
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_a": "crwdns2586030:0crwdne2586030:0",
+          "courseB_artist_loops9_b": "crwdns2586032:0crwdne2586032:0",
+          "courseB_artist_loops9_c": "crwdns2586034:0crwdne2586034:0"
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "crwdns2586046:0[0]crwdne2586046:0",
+          "courseB_artist_loops_challenge1_b": "crwdns2586048:0crwdne2586048:0",
+          "courseB_artist_loops_challenge1_c": "crwdns2586050:0crwdne2586050:0"
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "crwdns2586056:0crwdne2586056:0",
+          "courseB_artist_loops_challenge2_b": "crwdns2586058:0crwdne2586058:0"
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "crwdns2585830:0crwdne2585830:0",
+          "courseB_collector_loops10_b": "crwdns2585832:0crwdne2585832:0"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "crwdns2585754:0[0]crwdne2585754:0"
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "crwdns2585762:0crwdne2585762:0",
+          "courseB_collector_loops2_b": "crwdns2585764:0[0]crwdne2585764:0"
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "crwdns2585770:0[0]crwdne2585770:0",
+          "courseB_collector_prog3_b": "crwdns2585772:0crwdne2585772:0"
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "crwdns2585778:0crwdne2585778:0",
+          "courseB_collector_loops4_b": "crwdns2585780:0crwdne2585780:0",
+          "courseB_collector_loops4_c": "crwdns2585782:0[0]crwdne2585782:0"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "crwdns2585788:0crwdne2585788:0",
+          "courseB_collector_loops5_b": "crwdns2585790:0crwdne2585790:0"
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "crwdns2585796:0crwdne2585796:0",
+          "courseB_collector_loops6_b": "crwdns2585798:0crwdne2585798:0",
+          "courseB_collector_loops6_c": "crwdns2585800:0[0]crwdne2585800:0",
+          "courseB_collector_loops6_d": "crwdns2585802:0crwdne2585802:0"
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "crwdns2585808:0crwdne2585808:0",
+          "courseB_collector_loops7_b": "crwdns2585810:0crwdne2585810:0"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "crwdns2585816:0crwdne2585816:0"
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "crwdns2585822:0crwdne2585822:0",
+          "courseB_collector_loops9_b": "crwdns2585824:0crwdne2585824:0"
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "crwdns2585852:0[0]crwdne2585852:0",
+          "courseB_collector_loops_challenge1_c": "crwdns2585854:0[0]crwdne2585854:0",
+          "courseB_collector_loops_challenge1_d": "crwdns2585856:0[0]crwdne2585856:0"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "crwdns2585842:0crwdne2585842:0",
+          "courseB_collector_loops_challenge2a_b": "crwdns2585844:0crwdne2585844:0",
+          "courseB_collector_loops_challenge2a_c": "crwdns2585846:0[0]crwdne2585846:0"
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "crwdns2585736:0crwdne2585736:0",
+          "courseB_iceage_loops10_b": "crwdns2585738:0crwdne2585738:0",
+          "courseB_iceage_loops10_c": "crwdns2585740:0crwdne2585740:0"
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "crwdns2585662:0crwdne2585662:0",
+          "courseB_iceage_loops1_b": "crwdns2585664:0[0]crwdne2585664:0"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "crwdns2585670:0crwdne2585670:0",
+          "courseB_iceage_loops2_b": "crwdns2585672:0crwdne2585672:0",
+          "courseB_iceage_loops2_c": "crwdns2585674:0crwdne2585674:0"
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "crwdns2585680:0[0]crwdne2585680:0",
+          "courseB_iceage_loops3_b": "crwdns2585682:0[0]crwdne2585682:0"
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_a": "crwdns2585688:0crwdne2585688:0",
+          "courseB_iceage_loops4_b": "crwdns2585690:0crwdne2585690:0",
+          "courseB_iceage_loops4_c": "crwdns2585692:0crwdne2585692:0"
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "crwdns2585698:0crwdne2585698:0",
+          "courseB_iceage_loops6_b": "crwdns2585700:0crwdne2585700:0",
+          "courseB_iceage_loops6_c": "crwdns2585702:0crwdne2585702:0"
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "crwdns2585708:0crwdne2585708:0",
+          "courseB_iceage_loops7_b": "crwdns2585710:0crwdne2585710:0"
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "crwdns2585716:0crwdne2585716:0",
+          "courseB_iceage_loops8_b": "crwdns2585718:0crwdne2585718:0",
+          "courseB_iceage_loops8_c": "crwdns2585720:0crwdne2585720:0"
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "crwdns2585726:0crwdne2585726:0",
+          "courseB_iceage_loops9_b": "crwdns2585728:0crwdne2585728:0",
+          "courseB_iceage_loops9_c": "crwdns2585730:0crwdne2585730:0"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "crwdns2577528:0[0]crwdne2577528:0",
+          "courseB_maze_seq1_b": "crwdns2577530:0[0]crwdnd2577530:0[1]crwdne2577530:0"
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "crwdns2577538:0crwdne2577538:0",
+          "courseB_maze_seq4_b": "crwdns2577540:0[0]crwdne2577540:0"
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "crwdns2577546:0crwdne2577546:0",
+          "courseB_maze_seq5_b": "crwdns2577548:0crwdne2577548:0",
+          "courseB_maze_seq5_c": "crwdns2577550:0crwdne2577550:0"
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "crwdns2577556:0crwdne2577556:0",
+          "courseB_maze_seq6_b": "crwdns2577558:0crwdne2577558:0",
+          "courseB_maze_seq5_c": "crwdns2577560:0crwdne2577560:0",
+          "courseB_maze_seq5_d": "crwdns2577562:0crwdne2577562:0"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "crwdns2577568:0crwdne2577568:0",
+          "courseB_maze_seq7_b": "crwdns2577570:0crwdne2577570:0",
+          "courseB_maze_seq7_c": "crwdns2577572:0crwdne2577572:0"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "crwdns2577578:0crwdne2577578:0",
+          "courseB_maze_seq8_b": "crwdns2577580:0crwdne2577580:0",
+          "courseB_maze_seq8_c": "crwdns2577582:0crwdne2577582:0"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "crwdns2577588:0crwdne2577588:0",
+          "courseB_maze_seq9_b": "crwdns2577590:0crwdne2577590:0",
+          "courseB_maze_seq9_c": "crwdns2577592:0crwdne2577592:0",
+          "courseB_maze_seq9_d": "crwdns2577594:0crwdne2577594:0"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "crwdns2577612:0crwdne2577612:0",
+          "courseB_maze_seq_challenge1_b": "crwdns2577614:0[0]crwdne2577614:0"
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "crwdns2577620:0crwdne2577620:0",
+          "courseB_maze_seq_challenge2_b": "crwdns2577622:0crwdne2577622:0"
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "crwdns2586152:0[0]crwdne2586152:0"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "crwdns2586158:0[0]crwdne2586158:0",
+          "courseB_playlab_events3_b": "crwdns2586160:0[0]crwdne2586160:0"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "crwdns2586166:0[0]crwdne2586166:0",
+          "courseB_playlab_events4_b": "crwdns2586168:0[0]crwdne2586168:0"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "crwdns2586174:0[0]crwdne2586174:0",
+          "courseB_playlab_events5_b": "crwdns2586176:0[0]crwdne2586176:0"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "crwdns2586182:0[0]crwdne2586182:0",
+          "courseB_playlab_events6_b": "crwdns2586184:0[0]crwdne2586184:0",
+          "courseB_playlab_events6_c": "crwdns2586186:0crwdne2586186:0"
+        },
+        "courseB_playlab_events7_2021": {
+          "courseB_playlab_events7_a": "crwdns2586194:0[0]crwdne2586194:0",
+          "courseB_playlab_events7_b": "crwdns2586196:0[0]crwdne2586196:0",
+          "courseB_playlab_events7_c": "crwdns2586198:0[0]crwdne2586198:0"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "crwdns2586212:0[0]crwdne2586212:0",
+          "courseB_playlab_events_challenge1_b": "crwdns2586214:0[0]crwdne2586214:0",
+          "courseB_playlab_events_challenge1_c": "crwdns2586216:0[0]crwdne2586216:0"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "crwdns2586222:0crwdne2586222:0",
+          "courseB_playlab_events_challenge2_b": "crwdns2586224:0[0]crwdne2586224:0",
+          "courseB_playlab_events_challenge2_c": "crwdns2586226:0[0]crwdne2586226:0",
+          "courseB_playlab_events_challenge2_d": "crwdns2586228:0crwdne2586228:0"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "crwdns2585480:0crwdne2585480:0",
+          "courseB_starWars_prog1_b": "crwdns2585482:0[0]crwdne2585482:0"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "crwdns2585488:0crwdne2585488:0"
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "crwdns2585494:0crwdne2585494:0",
+          "courseB_starWars_prog3_b": "crwdns2585496:0crwdne2585496:0"
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "crwdns2585502:0crwdne2585502:0",
+          "courseB_starWars_prog4_b": "crwdns2585504:0[0]crwdne2585504:0"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "crwdns2585510:0crwdne2585510:0",
+          "courseB_starWars_prog5_b": "crwdns2585512:0crwdne2585512:0",
+          "courseB_starWars_prog5_c": "crwdns2585514:0crwdne2585514:0",
+          "courseB_starWars_prog5_da": "crwdns2585516:0[0]crwdne2585516:0"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "crwdns2585522:0crwdne2585522:0",
+          "courseB_starWars_prog6_b": "crwdns2585524:0[0]crwdne2585524:0"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "crwdns2585530:0crwdne2585530:0",
+          "courseB_starWars_prog7_b": "crwdns2585532:0crwdne2585532:0",
+          "courseB_starWars_prog7_c": "crwdns2585534:0crwdne2585534:0"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "crwdns2585540:0crwdne2585540:0",
+          "courseB_starWars_prog8_b": "crwdns2585542:0[0]crwdne2585542:0"
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "crwdns2585548:0crwdne2585548:0",
+          "courseB_starWars_prog9_b": "crwdns2585550:0crwdne2585550:0",
+          "courseB_starWars_prog9_c": "crwdns2585552:0[0]crwdne2585552:0"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "crwdns2579210:0crwdne2579210:0",
+          "courseE_playLab_scaffold1_b": "crwdns2579212:0crwdne2579212:0",
+          "courseE_playLab_scaffold1_c": "crwdns2579214:0crwdne2579214:0"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "courseE_playLab_scaffold1_b": "crwdns2579226:0crwdne2579226:0",
+          "playlab_up": "crwdns2590754:0[0]crwdne2590754:0",
+          "playlab_down": "crwdns2590756:0[0]crwdne2590756:0",
+          "playlab_left": "crwdns2590758:0[0]crwdne2590758:0",
+          "playlab_right": "crwdns2590760:0[0]crwdne2590760:0",
+          "courseE_playLab_scaffold1_c": "crwdns2579228:0crwdne2579228:0"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "crwdns2579248:0crwdne2579248:0"
+        },
+        "courseC_PlayLab_events1_2021": {
+          "courseC_PlayLab_events1_a": "crwdns2579038:0[0]crwdne2579038:0"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "crwdns2579042:0[0]crwdne2579042:0",
+          "courseC_PlayLab_events2_b": "crwdns2579044:0crwdne2579044:0"
+        },
+        "courseC_PlayLab_events3_2021": {
+          "courseC_PlayLab_events3_a": "crwdns2579048:0crwdne2579048:0",
+          "courseC_PlayLab_events3_b": "crwdns2579050:0crwdne2579050:0",
+          "courseC_PlayLab_events3_c": "crwdns2579052:0[0]crwdne2579052:0"
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_b": "crwdns2579056:0crwdne2579056:0",
+          "courseC_PlayLab_events4_a": "crwdns2579058:0crwdne2579058:0"
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "crwdns2579062:0crwdne2579062:0",
+          "courseC_PlayLab_events5_b": "crwdns2579064:0crwdne2579064:0"
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_a": "crwdns2579076:0crwdne2579076:0",
+          "courseC_PlayLab_events6_b": "crwdns2579078:0crwdne2579078:0",
+          "courseC_PlayLab_events6_c": "crwdns2579080:0crwdne2579080:0"
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "crwdns2579086:0crwdne2579086:0",
+          "courseC_PlayLab_events7_b": "crwdns2579088:0crwdne2579088:0"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_a": "crwdns2579094:0crwdne2579094:0",
+          "courseC_PlayLab_events8_b": "crwdns2579096:0crwdne2579096:0"
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "crwdns2579102:0crwdne2579102:0",
+          "courseC_PlayLab_events9_b": "crwdns2579104:0crwdne2579104:0",
+          "courseC_PlayLab_events9_c": "crwdns2579106:0crwdne2579106:0"
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "crwdns2579110:0crwdne2579110:0",
+          "courseC_PlayLab_eventsA_b": "crwdns2579112:0crwdne2579112:0"
+        },
+        "courseC_PlayLab_eventsA_embed_2021": {
+          "courseC_PlayLab_eventsA_a": "crwdns2579070:0crwdne2579070:0"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "idea1": "crwdns2579118:0crwdne2579118:0",
+          "idea2": "crwdns2579120:0crwdne2579120:0",
+          "idea3": "crwdns2579122:0crwdne2579122:0"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "crwdns2579132:0[0]crwdne2579132:0",
+          "courseC_PlayLab_events_challenge_b": "crwdns2579134:0crwdne2579134:0",
+          "courseC_PlayLab_events_challenge_c": "crwdns2579136:0[0]crwdne2579136:0"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "crwdns2582580:0[0]crwdne2582580:0",
+          "courseC_artist_loops1a_b": "crwdns2582582:0[0]crwdne2582582:0"
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "crwdns2582592:0[0]crwdne2582592:0"
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_a": "crwdns2582602:0crwdne2582602:0",
+          "courseC_artist_loops2a_b": "crwdns2582604:0crwdne2582604:0"
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "crwdns2582612:0crwdne2582612:0",
+          "courseC_artist_loops3a_b": "crwdns2582614:0[0]crwdne2582614:0"
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "crwdns2582622:0[0]crwdne2582622:0",
+          "courseC_artist_loops4a_b": "crwdns2582624:0[0]crwdne2582624:0"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "crwdns2582632:0[0]crwdne2582632:0",
+          "courseC_artist_loops5b_b": "crwdns2582634:0crwdne2582634:0",
+          "courseC_artist_loops5b_c": "crwdns2582636:0[0]crwdne2582636:0"
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "crwdns2582644:0crwdne2582644:0"
+        },
+        "courseC_artist_loops7a_2021": {
+          "courseC_artist_loops7a_a": "crwdns2582652:0crwdne2582652:0"
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "crwdns2586804:0[0]crwdne2586804:0",
+          "courseC_artist_prog2_b": "crwdns2586806:0[0]crwdne2586806:0"
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "crwdns2586814:0crwdne2586814:0",
+          "courseC_artist_prog3_b": "crwdns2586816:0crwdne2586816:0"
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "crwdns2586828:0crwdne2586828:0",
+          "courseC_artist_prog4_b": "crwdns2586830:0crwdne2586830:0",
+          "courseC_artist_prog4_c": "crwdns2586832:0crwdne2586832:0"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_a": "crwdns2580954:0crwdne2580954:0",
+          "courseC_artist_prog5_b": "crwdns2580956:0crwdne2580956:0",
+          "courseC_artist_prog5_c": "crwdns2580958:0crwdne2580958:0",
+          "courseC_artist_prog5_d": "crwdns2580960:0crwdne2580960:0"
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "crwdns2580966:0crwdne2580966:0",
+          "courseC_artist_prog6_b": "crwdns2580968:0crwdne2580968:0",
+          "courseC_artist_prog6_c": "crwdns2580970:0crwdne2580970:0"
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "crwdns2586844:0crwdne2586844:0",
+          "courseC_artist_prog7_b": "crwdns2586846:0crwdne2586846:0",
+          "courseC_artist_prog7_c": "crwdns2586848:0crwdne2586848:0",
+          "courseC_artist_prog7_d": "crwdns2586850:0crwdne2586850:0",
+          "courseC_artist_prog7_e": "crwdns2586852:0crwdne2586852:0"
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "crwdns2586886:0crwdne2586886:0"
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "crwdns2586896:0crwdne2586896:0",
+          "courseC_artist_prog_challenge2_b": "crwdns2586898:0crwdne2586898:0"
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "crwdns2582572:0crwdne2582572:0"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "crwdns2580790:0[0]crwdne2580790:0",
+          "courseC_collector_prog1_b": "crwdns2580792:0crwdne2580792:0"
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "crwdns2580800:0[0]crwdnd2580800:0[1]crwdne2580800:0",
+          "courseC_collector_prog2_b": "crwdns2580802:0crwdne2580802:0"
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "crwdns2580808:0[0]crwdne2580808:0",
+          "courseC_collector_prog3_b": "crwdns2580810:0crwdne2580810:0",
+          "courseC_collector_prog3_c": "crwdns2580812:0crwdne2580812:0"
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "crwdns2580818:0crwdne2580818:0",
+          "courseC_collector_prog4_b": "crwdns2580820:0crwdne2580820:0",
+          "courseC_collector_prog4_c": "crwdns2580822:0crwdne2580822:0"
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "crwdns2580828:0crwdne2580828:0",
+          "courseC_collector_prog5_b": "crwdns2580830:0crwdne2580830:0",
+          "courseC_collector_prog5_c": "crwdns2580832:0crwdne2580832:0",
+          "courseC_collector_prog5_d": "crwdns2580834:0crwdne2580834:0"
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "crwdns2580840:0crwdne2580840:0",
+          "courseC_collector_prog6_b": "crwdns2580842:0crwdne2580842:0"
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "crwdns2580848:0crwdne2580848:0",
+          "courseC_collector_prog7_b": "crwdns2580850:0crwdne2580850:0",
+          "courseC_collector_prog7_c": "crwdns2580852:0crwdne2580852:0"
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "crwdns2580900:0crwdne2580900:0"
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "crwdns2580906:0crwdne2580906:0",
+          "courseC_collector_prog_challenge1_b": "crwdns2580908:0crwdne2580908:0"
+        },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "crwdns2578980:0[0]crwdne2578980:0"
+        },
+        "courseC_flappy_events2_2021": {
+          "courseC_flappy_events2_a": "crwdns2578986:0crwdne2578986:0",
+          "courseC_flappy_events2_b": "crwdns2578988:0crwdne2578988:0"
+        },
+        "courseC_flappy_events3_2021": {
+          "courseC_flappy_events3_a": "crwdns2578994:0crwdne2578994:0"
+        },
+        "courseC_flappy_events4_2021": {
+          "courseC_flappy_events4_a": "crwdns2579000:0crwdne2579000:0"
+        },
+        "courseC_flappy_events5_2021": {
+          "courseC_flappy_events5_a": "crwdns2579006:0crwdne2579006:0"
+        },
+        "courseC_flappy_events6_2021": {
+          "courseC_flappy_events6_a": "crwdns2579012:0crwdne2579012:0"
+        },
+        "courseC_flappy_events7_2021": {
+          "courseC_flappy_events7_a": "crwdns2579018:0crwdne2579018:0"
+        },
+        "courseC_flappy_events8_2021": {
+          "courseC_flappy_events8_a": "crwdns2579024:0crwdne2579024:0"
+        },
+        "courseC_flappy_events9_2021": {
+          "courseC_flappy_events9_a": "crwdns2579030:0crwdne2579030:0"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "crwdns2578762:0[0]crwdne2578762:0",
+          "courseC_harvester_loops1_b": "crwdns2578764:0[0]crwdne2578764:0"
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "crwdns2578772:0crwdne2578772:0",
+          "courseC_harvester_loops2_b": "crwdns2578774:0crwdne2578774:0",
+          "courseC_harvester_loops2_c": "crwdns2578776:0crwdne2578776:0"
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "crwdns2578782:0crwdne2578782:0",
+          "courseC_harvester_loops3_b": "crwdns2578784:0crwdne2578784:0",
+          "courseC_harvester_loops3_c": "crwdns2578786:0crwdne2578786:0"
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "crwdns2578792:0crwdne2578792:0",
+          "courseC_harvester_loops4_b": "crwdns2578794:0crwdne2578794:0",
+          "courseC_harvester_loops4_c": "crwdns2578796:0crwdne2578796:0"
+        },
+        "courseC_harvester_loops5_2021": {
+          "courseC_harvester_loops5_a": "crwdns2578818:0crwdne2578818:0",
+          "courseC_harvester_loops5_b": "crwdns2578820:0crwdne2578820:0"
+        },
+        "courseC_harvester_loops6_2021": {
+          "courseC_harvester_loops6_a": "crwdns2578802:0crwdne2578802:0",
+          "courseC_harvester_loops6_b": "crwdns2578804:0crwdne2578804:0"
+        },
+        "courseC_harvester_loops7_2021": {
+          "courseC_harvester_loops7_a": "crwdns2578810:0crwdne2578810:0",
+          "courseC_harvester_loops7_b": "crwdns2578812:0crwdne2578812:0"
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_a": "crwdns2578826:0crwdne2578826:0",
+          "courseC_harvester_loops8_b": "crwdns2578828:0crwdne2578828:0"
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "crwdns2578870:0crwdne2578870:0",
+          "courseC_harvester_loops_challenge1_b": "crwdns2578872:0crwdne2578872:0",
+          "courseC_harvester_loops_challenge1_c": "crwdns2578874:0[0]crwdne2578874:0"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "crwdns2578880:0crwdne2578880:0",
+          "courseC_harvester_loops_challenge2_b": "crwdns2578882:0crwdne2578882:0",
+          "courseC_harvester_loops_challenge2_c": "crwdns2578884:0[0]crwdne2578884:0",
+          "courseC_harvester_loops_challenge2_d": "crwdns2578886:0[0]crwdne2578886:0"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "crwdns2580690:0crwdne2580690:0",
+          "courseC_maze_debugging1_b": "crwdns2580692:0crwdne2580692:0"
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "crwdns2580696:0crwdne2580696:0",
+          "courseC_maze_debugging2_b": "crwdns2580698:0crwdne2580698:0",
+          "courseC_maze_debugging2_c": "crwdns2580700:0crwdne2580700:0"
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "crwdns2580706:0[0]crwdne2580706:0",
+          "courseC_maze_debugging3_b": "crwdns2580708:0crwdne2580708:0"
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "crwdns2580712:0crwdne2580712:0",
+          "courseC_maze_debugging4_b": "crwdns2580714:0crwdne2580714:0"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "crwdns2580718:0crwdne2580718:0",
+          "courseC_maze_debugging5_c": "crwdns2580720:0crwdne2580720:0",
+          "courseC_maze_debugging5_b": "crwdns2580722:0crwdne2580722:0"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "crwdns2580728:0crwdne2580728:0",
+          "courseC_maze_debugging6_b": "crwdns2580730:0crwdne2580730:0"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "crwdns2580734:0crwdne2580734:0",
+          "courseC_maze_debugging7_b": "crwdns2580736:0crwdne2580736:0",
+          "courseC_maze_debugging7_c": "crwdns2580738:0crwdne2580738:0"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "crwdns2580772:0crwdne2580772:0",
+          "courseC_maze_debugging_challenge1_b": "crwdns2580774:0crwdne2580774:0",
+          "courseC_maze_debugging_challenge1_c": "crwdns2580776:0crwdne2580776:0"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "crwdns2580782:0crwdne2580782:0",
+          "courseC_maze_debugging_challenge2_c": "crwdns2580784:0[0]crwdne2580784:0"
+        },
+        "courseC_maze_loops_challenge1a_2021": {
+          "courseC_maze_loops_challenge1_a": "crwdns2582564:0crwdne2582564:0",
+          "courseC_maze_loops_challenge1_b": "crwdns2582566:0crwdne2582566:0"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "crwdns2580558:0crwdne2580558:0"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "crwdns2580566:0[0]crwdnd2580566:0[1]crwdne2580566:0",
+          "courseC_maze_programming2_b": "crwdns2580568:0crwdne2580568:0"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "crwdns2580576:0crwdne2580576:0",
+          "courseC_maze_programming3_b": "crwdns2580578:0[0]crwdne2580578:0"
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "crwdns2580588:0crwdne2580588:0",
+          "courseC_maze_programming4_b": "crwdns2580590:0crwdne2580590:0"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "crwdns2580598:0crwdne2580598:0",
+          "courseC_maze_programming5_b": "crwdns2580600:0crwdne2580600:0",
+          "courseC_maze_programming5_c": "crwdns2580602:0crwdne2580602:0"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "crwdns2580610:0crwdne2580610:0",
+          "courseC_maze_programming6_b": "crwdns2580612:0crwdne2580612:0",
+          "courseC_maze_programming6_c": "crwdns2580614:0crwdne2580614:0",
+          "courseC_maze_programming6_d": "crwdns2580616:0crwdne2580616:0"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "crwdns2580622:0crwdne2580622:0",
+          "courseC_maze_programming7_b": "crwdns2580624:0crwdne2580624:0"
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_a": "crwdns2580634:0crwdne2580634:0",
+          "courseC_maze_programming8_b": "crwdns2580636:0crwdne2580636:0"
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "crwdns2580676:0crwdne2580676:0"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "crwdns2580682:0crwdne2580682:0",
+          "courseC_maze_programming_challenge2_b": "crwdns2580684:0[0]crwdne2580684:0"
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_a": "crwdns2582524:0crwdne2582524:0",
+          "courseC_starWars_loops10_b": "crwdns2582526:0crwdne2582526:0",
+          "courseC_starWars_loops10_c": "crwdns2582528:0crwdne2582528:0"
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_a": "crwdns2582428:0crwdne2582428:0",
+          "courseC_starWars_loops1_b": "crwdns2582430:0crwdne2582430:0",
+          "courseC_starWars_loops1_c": "crwdns2582432:0crwdne2582432:0"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "crwdns2582466:0crwdne2582466:0"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2_a": "crwdns2572512:0crwdne2572512:0"
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "crwdns2582474:0crwdne2582474:0",
+          "courseC_starWars_loops4_a": "crwdns2582476:0crwdne2582476:0",
+          "courseC_starWars_loops4_b": "crwdns2582478:0crwdne2582478:0"
+        },
+        "courseC_starWars_loops4_dani": {
+          "courseC_starWars_loops4_c": "crwdns2572520:0crwdne2572520:0",
+          "courseC_starWars_loops4_a": "crwdns2572522:0crwdne2572522:0",
+          "courseC_starWars_loops4_b": "crwdns2572524:0crwdne2572524:0"
+        },
+        "courseC_starWars_loops5_2021": {
+          "courseC_starWars_loops5_a": "crwdns2582484:0crwdne2582484:0"
+        },
+        "courseC_starWars_loops5_dani": {
+          "courseC_starWars_loops5_b": "crwdns2572530:0crwdne2572530:0",
+          "courseC_starWars_loops5_a": "crwdns2572532:0crwdne2572532:0"
+        },
+        "courseC_starWars_loops6_2021": {
+          "courseC_starWars_loops6_a": "crwdns2582490:0crwdne2582490:0",
+          "courseC_starWars_loops6_b": "crwdns2582492:0crwdne2582492:0"
+        },
+        "courseC_starWars_loops6_dani": {
+          "courseC_starWars_loops6_a": "crwdns2572538:0crwdne2572538:0",
+          "courseC_starWars_loops6_b": "crwdns2572540:0crwdne2572540:0"
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_a": "crwdns2582498:0crwdne2582498:0",
+          "courseC_starWars_loops7_b": "crwdns2582500:0crwdne2582500:0",
+          "courseC_starWars_loops7_c": "crwdns2582502:0crwdne2582502:0"
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_a": "crwdns2572546:0crwdne2572546:0",
+          "courseC_starWars_loops7_b": "crwdns2572548:0crwdne2572548:0",
+          "courseC_starWars_loops7_c": "crwdns2572550:0crwdne2572550:0"
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_a": "crwdns2582506:0crwdne2582506:0",
+          "course_starWars_loops8_b": "crwdns2582508:0crwdne2582508:0",
+          "course_starWars_loops8_c": "crwdns2582510:0[0]crwdne2582510:0"
+        },
+        "courseC_starWars_loops8_dani": {
+          "course_starWars_loops8_a": "crwdns2572554:0crwdne2572554:0",
+          "course_starWars_loops8_b": "crwdns2572556:0crwdne2572556:0",
+          "course_starWars_loops8_c": "crwdns2572558:0[0]crwdne2572558:0"
+        },
+        "courseC_starWars_loops9_2021": {
+          "course_starWars_loops9_b": "crwdns2582516:0crwdne2582516:0",
+          "course_starWars_loops9_c": "crwdns2582518:0[0]crwdne2582518:0"
+        },
+        "courseD_artist_1_2021": {
+          "courseD_artist_project1_a": "crwdns2582846:0crwdne2582846:0",
+          "courseD_artist_project1_b": "crwdns2582848:0crwdne2582848:0"
+        },
+        "courseD_artist_2_2021": {
+          "courseD_artist_project1_b": "crwdns2582854:0crwdne2582854:0",
+          "courseD_artist_project1_a": "crwdns2582856:0crwdne2582856:0"
+        },
+        "courseD_artist_5_2021": {
+          "1": "crwdns2582870:0crwdne2582870:0"
+        },
+        "courseD_artist_nestedLoops1_2021": {
+          "courseD_artist_nestedLoops1_a": "crwdns2586902:0crwdne2586902:0",
+          "courseD_artist_nestedLoops1_b": "crwdns2586904:0crwdne2586904:0",
+          "courseD_artist_nestedLoops1_c": "crwdns2586906:0crwdne2586906:0"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_a": "crwdns2586912:0[0]crwdne2586912:0",
+          "courseD_artist_nestedLoops1a_b": "crwdns2586914:0crwdne2586914:0",
+          "courseD_artist_nestedLoops1a_c": "crwdns2586916:0crwdne2586916:0"
+        },
+        "courseD_artist_nestedLoops2_2021": {
+          "courseD_artist_nestedLoops2_a": "crwdns2586924:0crwdne2586924:0",
+          "courseD_artist_nestedLoops2_b": "crwdns2586926:0crwdne2586926:0"
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "crwdns2586930:0crwdne2586930:0",
+          "courseD_artist_nestedLoops3_b": "crwdns2586932:0crwdne2586932:0",
+          "courseD_artist_nestedLoops3_c": "crwdns2586934:0crwdne2586934:0"
+        },
+        "courseD_artist_nestedLoops4_2021": {
+          "courseD_artist_nestedLoops4_d": "crwdns2586940:0crwdne2586940:0",
+          "courseD_artist_nestedLoops4_a": "crwdns2586942:0crwdne2586942:0",
+          "courseD_artist_nestedLoops4_b": "crwdns2586944:0crwdne2586944:0",
+          "courseD_artist_nestedLoops4_c": "crwdns2586946:0crwdne2586946:0"
+        },
+        "courseD_artist_nestedLoops5_2021": {
+          "courseD_artist_nestedLoops5_a": "crwdns2586952:0crwdne2586952:0",
+          "courseD_artist_nestedLoops5_b": "crwdns2586954:0crwdne2586954:0"
+        },
+        "courseD_artist_nestedLoops7_2021": {
+          "courseD_artist_nestedLoops7_a": "crwdns2586960:0crwdne2586960:0",
+          "courseD_artist_nestedLoops7_b": "crwdns2586962:0crwdne2586962:0"
+        },
+        "courseD_artist_nestedLoops8_2021": {
+          "courseD_artist_nestedLoops8_a": "crwdns2586968:0crwdne2586968:0",
+          "courseD_artist_nestedLoops8_b": "crwdns2586970:0crwdne2586970:0",
+          "courseD_artist_nestedLoops8_c": "crwdns2586972:0crwdne2586972:0"
+        },
+        "courseD_artist_nestedLoops9_2021": {
+          "courseD_artist_nestedLoops9_a": "crwdns2586978:0crwdne2586978:0",
+          "courseD_artist_nestedLoops9_b": "crwdns2586980:0crwdne2586980:0",
+          "courseD_artist_nestedLoops9_c": "crwdns2586982:0crwdne2586982:0"
+        },
+        "courseD_artist_nestedLoopsFP_2021": {
+          "courseD_artist_nestedLoopsFP_a": "crwdns2587022:0crwdne2587022:0",
+          "courseD_artist_nestedLoopsFP_b": "crwdns2587024:0crwdne2587024:0",
+          "courseD_artist_nestedLoopsFP_c": "crwdns2587026:0crwdne2587026:0"
+        },
+        "courseD_artist_nestedLoops_challenge1_2021": {
+          "courseD_artist_nestedLoops_challenge1_a": "crwdns2587032:0crwdne2587032:0",
+          "courseD_artist_nestedLoops_challenge1_b": "crwdns2587034:0crwdne2587034:0",
+          "courseD_artist_nestedLoops_challenge1_c": "crwdns2587036:0crwdne2587036:0",
+          "courseD_artist_nestedLoops_challenge1_d": "crwdns2587038:0crwdne2587038:0"
+        },
+        "courseD_artist_nestedLoops_challenge2_2021": {
+          "courseD_artist_nestedLoops_challenge2_a": "crwdns2587044:0crwdne2587044:0",
+          "courseD_artist_nestedLoops_challenge2_b": "crwdns2587046:0crwdne2587046:0"
+        },
+        "courseD_artist_project1_2021": {
+          "courseD_artist_project1_a": "crwdns2587054:0crwdne2587054:0",
+          "courseD_artist_project1_b": "crwdns2587056:0crwdne2587056:0"
+        },
+        "courseD_artist_project1a_2021": {
+          "courseD_artist_project1a_a": "crwdns2587102:0crwdne2587102:0",
+          "courseD_artist_project1a_b": "crwdns2587104:0crwdne2587104:0"
+        },
+        "courseD_artist_project2_2021": {
+          "courseD_artist_project2_a": "crwdns2587064:0crwdne2587064:0",
+          "courseD_artist_project2_b": "crwdns2587066:0crwdne2587066:0"
+        },
+        "courseD_artist_project2a_2021": {
+          "courseD_artist_project2a_a": "crwdns2587112:0crwdne2587112:0"
+        },
+        "courseD_artist_project3_2021": {
+          "courseD_artist_project3_a": "crwdns2587074:0crwdne2587074:0",
+          "courseD_artist_project3_b": "crwdns2587076:0crwdne2587076:0"
+        },
+        "courseD_artist_project3a_2021": {
+          "courseD_artist_project3a_a": "crwdns2587120:0crwdne2587120:0"
+        },
+        "courseD_artist_project4_2021": {
+          "courseD_artist_project4_a": "crwdns2587084:0crwdne2587084:0",
+          "courseD_artist_project4_b": "crwdns2587086:0crwdne2587086:0"
+        },
+        "courseD_artist_project4a_2021": {
+          "courseD_artist_project4a_a": "crwdns2587128:0crwdne2587128:0"
+        },
+        "courseD_artist_project5_2021": {
+          "courseD_artist_project4_a": "crwdns2587094:0crwdne2587094:0"
+        },
+        "courseD_bee_conditionals1_predict1_2021": {
+          "courseD_bee_conditionals1_a": "crwdns2583006:0crwdne2583006:0"
+        },
+        "courseD_bee_conditionals1_predict1_dani": {
+          "courseD_bee_conditionals1_a": "crwdns2572570:0crwdne2572570:0"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "courseD_bee_conditionals2_a": "crwdns2583038:0crwdne2583038:0",
+          "courseD_bee_conditionals2_c": "crwdns2583040:0crwdne2583040:0"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "courseD_bee_conditionals2_hintVid1": "crwdns2572602:0crwdne2572602:0",
+          "courseD_bee_conditionals2_a": "crwdns2572604:0crwdne2572604:0",
+          "courseD_bee_conditionals2_b": "crwdns2572606:0crwdne2572606:0",
+          "courseD_bee_conditionals2_c": "crwdns2572608:0crwdne2572608:0",
+          "courseD_bee_conditionals2_hintVid2": "crwdns2572610:0crwdne2572610:0"
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_a": "crwdns2583048:0crwdne2583048:0",
+          "courseD_bee_conditionals3_c": "crwdns2583050:0crwdne2583050:0"
+        },
+        "courseD_bee_conditionals3_dani": {
+          "courseD_bee_conditionals3_hintVid1": "crwdns2572620:0crwdne2572620:0",
+          "courseD_bee_conditionals3_a": "crwdns2572622:0crwdne2572622:0",
+          "courseD_bee_conditionals3_b": "crwdns2572624:0crwdne2572624:0",
+          "courseD_bee_conditionals3_c": "crwdns2572626:0crwdne2572626:0",
+          "courseD_bee_conditionals3_hintVid2": "crwdns2572628:0crwdne2572628:0"
+        },
+        "courseD_bee_conditionals4_2021": {
+          "courseD_bee_conditionals4_a": "crwdns2583056:0crwdne2583056:0",
+          "courseD_bee_conditionals4_b": "crwdns2583058:0crwdne2583058:0"
+        },
+        "courseD_bee_conditionals4_dani": {
+          "courseD_bee_conditionals4_hintVid1": "crwdns2572634:0crwdne2572634:0",
+          "courseD_bee_conditionals4_a": "crwdns2572636:0crwdne2572636:0",
+          "courseD_bee_conditionals4_b": "crwdns2572638:0crwdne2572638:0",
+          "courseD_bee_conditionals4_c": "crwdns2572640:0[0]crwdne2572640:0",
+          "courseD_bee_conditionals4_hintVid2": "crwdns2572642:0crwdne2572642:0"
+        },
+        "courseD_bee_conditionals5_2021": {
+          "courseD_bee_conditionals5_a": "crwdns2583062:0crwdne2583062:0",
+          "courseD_bee_conditionals5_c": "crwdns2583064:0crwdne2583064:0"
+        },
+        "courseD_bee_conditionals5_dani": {
+          "courseD_bee_conditionals5_hintVid1": "crwdns2572646:0crwdne2572646:0",
+          "courseD_bee_conditionals5_a": "crwdns2572648:0crwdne2572648:0",
+          "courseD_bee_conditionals5_c": "crwdns2572650:0crwdne2572650:0",
+          "courseD_bee_conditionals5_b": "crwdns2572652:0crwdne2572652:0",
+          "courseD_bee_conditionals5_hintVid2": "crwdns2572654:0crwdne2572654:0"
+        },
+        "courseD_bee_conditionals6_2021": {
+          "courseD_bee_conditionals6_a": "crwdns2583070:0crwdne2583070:0",
+          "courseD_bee_conditionals6_b": "crwdns2583072:0crwdne2583072:0",
+          "courseD_bee_conditionals6_c": "crwdns2583074:0crwdne2583074:0"
+        },
+        "courseD_bee_conditionals7_2021": {
+          "courseD_bee_conditionals7_a": "crwdns2583080:0crwdne2583080:0",
+          "courseD_bee_conditionals7_b": "crwdns2583082:0crwdne2583082:0"
+        },
+        "courseD_bee_conditionals7_predict2_2021": {
+          "courseD_bee_conditionals7_a": "crwdns2583088:0crwdne2583088:0"
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "crwdns2583120:0crwdne2583120:0",
+          "courseD_bee_conditionals8_b": "crwdns2583122:0crwdne2583122:0"
+        },
+        "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_a": "crwdns2583136:0crwdne2583136:0",
+          "courseD_bee_conditionals_challenge1_b": "crwdns2583138:0crwdne2583138:0"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge1_b": "crwdns2583144:0[0]crwdne2583144:0"
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "crwdns2582674:0crwdne2582674:0",
+          "courseD_bee_nestedLoops1_b": "crwdns2582676:0crwdne2582676:0",
+          "courseD_bee_nestedLoops1_c": "crwdns2582678:0crwdne2582678:0"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "crwdns2582664:0crwdne2582664:0",
+          "courseD_bee_nestedLoops1_c": "crwdns2582666:0crwdne2582666:0"
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "crwdns2582718:0crwdne2582718:0",
+          "courseD_bee_nestedLoops2_b": "crwdns2582720:0crwdne2582720:0",
+          "courseD_bee_nestedLoops2_c": "crwdns2582722:0crwdne2582722:0"
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "crwdns2582768:0crwdne2582768:0",
+          "courseD_bee_nestedLoops7_b": "crwdns2582770:0crwdne2582770:0",
+          "courseD_bee_nestedLoops7_c": "crwdns2582772:0crwdne2582772:0"
+        },
+        "courseD_bounce_events10s_2021": {
+          "courseD_bounce_events10s_a": "crwdns2579450:0[0]crwdne2579450:0"
+        },
+        "courseD_bounce_events11s_2021": {
+          "courseD_bounce_events11s_a": "crwdns2579456:0crwdne2579456:0"
+        },
+        "courseD_bounce_events12s_2021": {
+          "courseD_bounce_events12s_a": "crwdns2579460:0crwdne2579460:0",
+          "courseD_bounce_events12s_b": "crwdns2579462:0crwdne2579462:0"
+        },
+        "courseD_bounce_events1s_2021": {
+          "courseD_bounce_events1s_a": "crwdns2579414:0crwdne2579414:0",
+          "courseD_bounce_events1s_b": "crwdns2579416:0crwdne2579416:0"
+        },
+        "courseD_bounce_events2s_2021": {
+          "courseD_bounce_events2s_a": "crwdns2579422:0[0]crwdne2579422:0"
+        },
+        "courseD_bounce_events5s_2021": {
+          "courseD_bounce_events5s_a": "crwdns2579428:0crwdne2579428:0",
+          "courseD_bounce_events5s_b": "crwdns2579430:0[0]crwdne2579430:0"
+        },
+        "courseD_bounce_events6s_2021": {
+          "courseD_bounce_events6s_a": "crwdns2579436:0[0]crwdne2579436:0",
+          "courseD_bounce_events6s_b": "crwdns2579438:0crwdne2579438:0"
+        },
+        "courseD_bounce_events7s_2021": {
+          "courseD_bounce_events7s_a": "crwdns2579444:0crwdne2579444:0"
+        },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_a": "crwdns2579364:0crwdne2579364:0",
+          "courseD_collector_debugging1_c": "crwdns2579366:0crwdne2579366:0"
+        },
+        "courseD_collector_debugging2a_2021": {
+          "courseD_collector_debugging2a_a": "crwdns2579372:0crwdne2579372:0",
+          "courseD_collector_debugging2a_c": "crwdns2579374:0crwdne2579374:0"
+        },
+        "courseD_collector_debugging3a_2021": {
+          "courseD_collector_debugging3_a": "crwdns2579380:0crwdne2579380:0"
+        },
+        "courseD_collector_debugging4a_2021": {
+          "courseD_collector_debugging4_a": "crwdns2579386:0crwdne2579386:0",
+          "courseD_collector_debugging4_b": "crwdns2579388:0crwdne2579388:0"
+        },
+        "courseD_collector_debugging5a_2021": {
+          "courseD_collector_debugging5a_a": "crwdns2579394:0crwdne2579394:0",
+          "courseD_collector_debugging5a_b": "crwdns2579396:0crwdne2579396:0"
+        },
+        "courseD_collector_debugging6a_2021": {
+          "courseD_collector_debugging6_a": "crwdns2579402:0crwdne2579402:0",
+          "courseD_collector_debugging6_b": "crwdns2579404:0crwdne2579404:0"
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_a": "crwdns2582834:0crwdne2582834:0",
+          "courseD_bee_nested_loops_challenge2_b": "crwdns2582836:0crwdne2582836:0",
+          "courseD_bee_nested_loops_challenge2_c": "crwdns2582838:0crwdne2582838:0",
+          "courseD_bee_nested_loops_challenge2_d": "crwdns2582840:0[0]crwdne2582840:0"
+        },
+        "courseD_farmer_condLoops1_2021": {
+          "courseD_farmer_condLoops1_a": "crwdns2583456:0crwdne2583456:0",
+          "courseD_farmer_condLoops1_b": "crwdns2583458:0crwdne2583458:0"
+        },
+        "courseD_farmer_condLoops2_2021": {
+          "courseD_farmer_condLoops2_a": "crwdns2583464:0crwdne2583464:0",
+          "courseD_farmer_condLoops2_b": "crwdns2583466:0crwdne2583466:0",
+          "courseD_farmer_condLoops2_c": "crwdns2583468:0crwdne2583468:0"
+        },
+        "courseD_farmer_condLoops3_2021": {
+          "courseD_farmer_condLoops3_a": "crwdns2583474:0crwdne2583474:0",
+          "courseD_farmer_condLoops3_b": "crwdns2583476:0crwdne2583476:0"
+        },
+        "courseD_farmer_condLoops4_2021": {
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "crwdns2583482:0crwdne2583482:0",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "crwdns2583484:0crwdne2583484:0",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "crwdns2583486:0crwdne2583486:0"
+        },
+        "courseD_farmer_condLoops5_2021": {
+          "courseD_farmer_condLoops5_a": "crwdns2583492:0crwdne2583492:0",
+          "courseD_farmer_condLoops5_b": "crwdns2583494:0crwdne2583494:0"
+        },
+        "courseD_farmer_condLoops6_2021": {
+          "courseD_farmer_condLoops6_a": "crwdns2583500:0crwdne2583500:0",
+          "courseD_farmer_condLoops6_b": "crwdns2583502:0crwdne2583502:0"
+        },
+        "courseD_farmer_condLoops7_2021": {
+          "courseD_farmer_condLoops7_a": "crwdns2583508:0[0]crwdne2583508:0",
+          "courseD_farmer_condLoops7_b": "crwdns2583510:0crwdne2583510:0"
+        },
+        "courseD_farmer_condLoops_challenge1_2021": {
+          "courseD_farmer_condLoops_challenge1_a": "crwdns2583556:0crwdne2583556:0",
+          "courseD_farmer_condLoops_challenge1_b": "crwdns2583558:0crwdne2583558:0"
+        },
+        "courseD_farmer_condLoops_challenge2_2021": {
+          "courseD_farmer_condLoops_challenge2_a": "crwdns2583564:0crwdne2583564:0"
+        },
+        "courseD_farmer_while1_2021": {
+          "courseD_farmer_while1_a": "crwdns2587564:0crwdne2587564:0",
+          "courseD_farmer_while1_b": "crwdns2587566:0crwdne2587566:0"
+        },
+        "courseD_farmer_while2_2021": {
+          "courseD_farmer_while2_a": "crwdns2587570:0crwdne2587570:0",
+          "courseD_farmer_while2_b": "crwdns2587572:0crwdne2587572:0"
+        },
+        "courseD_farmer_while3_2021": {
+          "courseD_farmer_while3_a": "crwdns2587578:0crwdne2587578:0",
+          "courseD_farmer_while3_b": "crwdns2587580:0crwdne2587580:0"
+        },
+        "courseD_farmer_while4_2021": {
+          "courseD_farmer_conditionals4_a": "crwdns2583204:0crwdne2583204:0",
+          "courseD_farmer_conditionals4_b": "crwdns2583206:0crwdne2583206:0"
+        },
+        "courseD_farmer_while5_2021": {
+          "courseD_farmer_conditionals5a_a": "crwdns2583210:0crwdne2583210:0",
+          "courseD_farmer_conditionals5a_b": "crwdns2583212:0crwdne2583212:0",
+          "courseD_farmer_conditionals5a_c": "crwdns2583214:0crwdne2583214:0"
+        },
+        "courseD_farmer_while6_2021": {
+          "courseD_farmer_conditionals6_a": "crwdns2583220:0crwdne2583220:0",
+          "courseD_farmer_conditionals6_b": "crwdns2583222:0crwdne2583222:0",
+          "courseD_farmer_conditionals6_c": "crwdns2583224:0crwdne2583224:0"
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_conditionals8_a": "crwdns2583228:0crwdne2583228:0",
+          "courseD_farmer_conditionals8_b": "crwdns2583230:0crwdne2583230:0",
+          "courseD_farmer_conditionals8_c": "crwdns2583232:0crwdne2583232:0"
+        },
+        "courseD_farmer_while8_2021": {
+          "courseD_farmer_conditionals8_a": "crwdns2583240:0crwdne2583240:0",
+          "courseD_farmer_conditionals8_b": "crwdns2583242:0crwdne2583242:0",
+          "courseD_farmer_conditionals8_c": "crwdns2583244:0crwdne2583244:0"
+        },
+        "courseD_farmer_while_challenge1_2021": {
+          "courseD_farmer_while_challenge1_a": "crwdns2583282:0crwdne2583282:0",
+          "courseD_farmer_while_challenge1_b": "crwdns2583284:0crwdne2583284:0",
+          "courseD_farmer_conditionals8_c": "crwdns2583286:0crwdne2583286:0"
+        },
+        "courseD_harvester_nested_loops_challenge1_2021": {
+          "courseD_harvester_nested_loops_challenge1_a": "crwdns2582824:0crwdne2582824:0",
+          "courseD_harvester_nested_loops_challenge1_b": "crwdns2582826:0crwdne2582826:0",
+          "courseD_harvester_nested_loops_challenge1_c": "crwdns2582828:0crwdne2582828:0"
+        },
+        "courseD_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "crwdns2579652:0crwdne2579652:0",
+          "courseB_iceage_loops10_b": "crwdns2579654:0crwdne2579654:0",
+          "courseB_iceage_loops10_c": "crwdns2579656:0crwdne2579656:0"
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_a": "crwdns2579576:0crwdne2579576:0",
+          "courseD_iceage_loops1_b": "crwdns2579578:0[0]crwdne2579578:0"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "crwdns2579584:0crwdne2579584:0",
+          "courseD_iceage_loops2_b": "crwdns2579586:0crwdne2579586:0",
+          "courseD_iceage_loops2_c": "crwdns2579588:0crwdne2579588:0"
+        },
+        "courseD_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "crwdns2579596:0[0]crwdne2579596:0",
+          "courseB_iceage_loops3_b": "crwdns2579598:0crwdne2579598:0"
+        },
+        "courseD_iceage_loops4_2021": {
+          "courseD_iceage_loops4_a": "crwdns2579604:0crwdne2579604:0",
+          "courseD_iceage_loops4_b": "crwdns2579606:0crwdne2579606:0",
+          "courseD_iceage_loops4_c": "crwdns2579608:0crwdne2579608:0"
+        },
+        "courseD_iceage_loops6_2021": {
+          "courseD_iceage_loops6_a": "crwdns2579614:0crwdne2579614:0",
+          "courseD_iceage_loops6_b": "crwdns2579616:0crwdne2579616:0",
+          "courseD_iceage_loops6_c": "crwdns2579618:0crwdne2579618:0"
+        },
+        "courseD_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "crwdns2579624:0crwdne2579624:0",
+          "courseB_iceage_loops7_b": "crwdns2579626:0crwdne2579626:0"
+        },
+        "courseD_iceage_loops8_2021": {
+          "courseD_iceage_loops8_a": "crwdns2579632:0crwdne2579632:0",
+          "courseD_iceage_loops8_b": "crwdns2579634:0crwdne2579634:0",
+          "courseD_iceage_loops8_c": "crwdns2579636:0crwdne2579636:0"
+        },
+        "courseD_iceage_loops9_2021": {
+          "courseD_iceage_loops9_a": "crwdns2579642:0crwdne2579642:0",
+          "courseD_iceage_loops9_b": "crwdns2579644:0crwdne2579644:0",
+          "courseD_iceage_loops9_c": "crwdns2579646:0crwdne2579646:0"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_a": "crwdns2579310:0crwdne2579310:0",
+          "courseC_maze_programming4_b": "crwdns2579312:0crwdne2579312:0"
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_a": "crwdns2579332:0crwdne2579332:0",
+          "courseC_maze_programming5_b": "crwdns2579334:0crwdne2579334:0",
+          "courseC_maze_programming5_c": "crwdns2579336:0crwdne2579336:0"
+        },
+        "courseD_maze_nestedLoops3_2021": {
+          "courseD_maze_nestedLoops3_a": "crwdns2582728:0crwdne2582728:0",
+          "courseD_maze_nestedLoops3_b": "crwdns2582730:0crwdne2582730:0",
+          "courseD_maze_nestedLoops3_c": "crwdns2582732:0crwdne2582732:0"
+        },
+        "courseD_maze_nestedLoops4_2021": {
+          "courseD_maze_nestedLoops4_a": "crwdns2582738:0[0]crwdne2582738:0",
+          "courseD_maze_nestedLoops4_b": "crwdns2582740:0crwdne2582740:0",
+          "courseD_maze_nestedLoops4_c": "crwdns2582742:0crwdne2582742:0"
+        },
+        "courseD_maze_nestedLoops5_2021": {
+          "courseD_maze_nestedLoops5_a": "crwdns2582746:0crwdne2582746:0",
+          "courseD_maze_nestedLoops5_b": "crwdns2582748:0crwdne2582748:0"
+        },
+        "courseD_maze_nestedLoops6_2021": {
+          "courseD_maze_nestedLoops6_a": "crwdns2582754:0crwdne2582754:0",
+          "courseD_maze_nestedLoops6_b": "crwdns2582756:0crwdne2582756:0",
+          "courseD_maze_nestedLoops6_c": "crwdns2582758:0crwdne2582758:0"
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "crwdns2579280:0crwdne2579280:0",
+          "courseC_maze_programming1_b": "crwdns2579282:0crwdne2579282:0"
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_a": "crwdns2579290:0crwdne2579290:0",
+          "courseC_maze_programming2_b": "crwdns2579292:0crwdne2579292:0"
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_a": "crwdns2579300:0[0]crwdne2579300:0"
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_a": "crwdns2579320:0crwdne2579320:0",
+          "courseC_maze_programming5_b": "crwdns2579322:0crwdne2579322:0",
+          "courseC_maze_programming5_c": "crwdns2579324:0crwdne2579324:0"
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_a": "crwdns2579344:0crwdne2579344:0",
+          "courseC_maze_programming5_b": "crwdns2579346:0crwdne2579346:0",
+          "courseC_maze_programming5_c": "crwdns2579348:0crwdne2579348:0"
+        },
+        "courseD_maze_until1_2021": {
+          "courseD_maze_until1_a": "crwdns2583342:0crwdne2583342:0",
+          "courseD_maze_until1_b": "crwdns2583344:0crwdne2583344:0"
+        },
+        "courseD_maze_until3_2021": {
+          "courseD_maze_until3_a": "crwdns2583374:0crwdne2583374:0",
+          "courseD_maze_until3_b": "crwdns2583376:0crwdne2583376:0",
+          "courseD_maze_until3_c": "crwdns2583378:0crwdne2583378:0",
+          "courseD_maze_until3_d": "crwdns2583380:0crwdne2583380:0"
+        },
+        "courseD_maze_until4_2021": {
+          "courseD_maze_until4_a": "crwdns2583386:0crwdne2583386:0",
+          "courseD_maze_until4_b": "crwdns2583388:0crwdne2583388:0",
+          "courseD_maze_until4_c": "crwdns2583390:0crwdne2583390:0"
+        },
+        "courseD_maze_until5_2021": {
+          "courseD_maze_until5_b": "crwdns2583396:0crwdne2583396:0"
+        },
+        "courseD_maze_until6_2021": {
+          "courseD_maze_until6_b": "crwdns2583402:0crwdne2583402:0"
+        },
+        "courseD_maze_until7_2021": {
+          "courseD_maze_until7_a": "crwdns2583408:0crwdne2583408:0",
+          "courseD_maze_until7_b": "crwdns2583410:0crwdne2583410:0"
+        },
+        "courseD_maze_until9_2021": {
+          "courseD_maze_until8_c": "crwdns2583416:0crwdne2583416:0"
+        },
+        "courseE_artist_functions10_2021": {
+          "courseD_artist_functions10_b": "crwdns2587452:0crwdne2587452:0",
+          "courseD_artist_functions10_a": "crwdns2587454:0crwdne2587454:0",
+          "courseD_artist_functions10_c": "crwdns2587456:0[0]crwdne2587456:0"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "crwdns2572666:0crwdne2572666:0",
+          "courseE_artist_functions1_b": "crwdns2572668:0crwdne2572668:0",
+          "courseE_artist_functions1_c": "crwdns2572670:0crwdne2572670:0"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_b": "crwdns2587322:0crwdne2587322:0",
+          "courseD_artist_functions2_c": "crwdns2587324:0[0]crwdne2587324:0",
+          "courseD_artist_functions2_a": "crwdns2587326:0crwdne2587326:0"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_b": "crwdns2572712:0crwdne2572712:0",
+          "courseD_artist_functions2_c": "crwdns2572714:0[0]crwdne2572714:0",
+          "courseD_artist_functions2_a": "crwdns2572716:0crwdne2572716:0"
+        },
+        "courseE_artist_functions3_dani": {
+          "courseD_artist_functions3_a": "crwdns2572728:0crwdne2572728:0",
+          "courseD_artist_functions3_b": "crwdns2572730:0crwdne2572730:0"
+        },
+        "courseE_artist_functions4_dani": {
+          "courseD_artist_functions4_a": "crwdns2572736:0crwdne2572736:0",
+          "courseD_artist_functions4_b": "crwdns2572738:0crwdne2572738:0",
+          "courseD_artist_functions4_c": "crwdns2572740:0crwdne2572740:0"
+        },
+        "courseE_artist_functions5_2021": {
+          "courseD_artist_functions5_a": "crwdns2587344:0crwdne2587344:0",
+          "courseD_artist_functions5_b": "crwdns2587346:0crwdne2587346:0",
+          "courseD_artist_functions5_c": "crwdns2587348:0crwdne2587348:0"
+        },
+        "courseE_artist_functions5_dani": {
+          "courseD_artist_functions5_a": "crwdns2572748:0crwdne2572748:0",
+          "courseD_artist_functions5_b": "crwdns2572750:0crwdne2572750:0",
+          "courseD_artist_functions5_c": "crwdns2572752:0crwdne2572752:0"
+        },
+        "courseE_artist_functions7_2021": {
+          "courseD_artist_functions7_a": "crwdns2587356:0crwdne2587356:0",
+          "courseD_artist_functions7_b": "crwdns2587358:0crwdne2587358:0"
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_f": "crwdns2587408:0crwdne2587408:0",
+          "courseD_artist_functions8_a": "crwdns2587410:0crwdne2587410:0",
+          "courseD_artist_functions8_d": "crwdns2587412:0crwdne2587412:0",
+          "courseD_artist_functions8_b": "crwdns2587414:0[0]crwdne2587414:0",
+          "courseD_artist_functions8_c": "crwdns2587416:0crwdne2587416:0",
+          "courseD_artist_functions8_g": "crwdns2587418:0[0]crwdne2587418:0"
+        },
+        "courseE_artist_functions8b_2021": {
+          "courseD_artist_functions8_f": "crwdns2587376:0crwdne2587376:0",
+          "courseD_artist_functions8_a": "crwdns2587378:0crwdne2587378:0",
+          "courseD_artist_functions8_d": "crwdns2587380:0crwdne2587380:0"
+        },
+        "courseE_artist_functions8c_2021": {
+          "courseD_artist_functions8_f": "crwdns2587392:0crwdne2587392:0",
+          "courseD_artist_functions8_a": "crwdns2587394:0crwdne2587394:0",
+          "courseD_artist_functions8_c": "crwdns2587396:0crwdne2587396:0"
+        },
+        "courseE_artist_functions9_2021": {
+          "courseD_artist_functions9_e": "crwdns2587432:0[0]crwdne2587432:0",
+          "courseD_artist_functions9_a": "crwdns2587434:0crwdne2587434:0",
+          "courseD_artist_functions9_b": "crwdns2587436:0crwdne2587436:0",
+          "courseD_artist_functions9_c": "crwdns2587438:0crwdne2587438:0",
+          "courseD_artist_functions9_d": "crwdns2587440:0crwdne2587440:0"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_a": "crwdns2587482:0crwdne2587482:0",
+          "courseE_artist_functions_challenge1_b": "crwdns2587484:0crwdne2587484:0"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge1_a": "crwdns2587498:0[0]crwdnd2587498:0[1]crwdne2587498:0"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_a": "crwdns2587670:0crwdne2587670:0",
+          "courseE_farmer_functions1_b": "crwdns2587672:0crwdne2587672:0"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_a": "crwdns2587680:0crwdne2587680:0",
+          "courseE_farmer_functions1a_b": "crwdns2587682:0crwdne2587682:0"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions2b_a": "crwdns2587692:0crwdne2587692:0",
+          "courseE_farmer_functions2b_b": "crwdns2587694:0crwdne2587694:0",
+          "courseE_farmer_functions2b_c": "crwdns2587696:0crwdne2587696:0"
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "courseE_farmer_functions2ba_a": "crwdns2587706:0crwdne2587706:0"
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "coursee_farmer_functions3c1_2018_a": "crwdns2587724:0crwdne2587724:0",
+          "coursee_farmer_functions3c1_2018_b": "crwdns2587726:0crwdne2587726:0"
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "courseE_farmer_functions7a1_2018_a": "crwdns2587738:0crwdne2587738:0",
+          "courseE_farmer_functions7a1_2018_b": "crwdns2587740:0crwdne2587740:0"
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "courseE_farmer_functions8a1_2018a": "crwdns2587748:0crwdne2587748:0",
+          "courseE_farmer_functions8a1_2018b": "crwdns2587750:0crwdne2587750:0"
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "courseE_farmer_functions9a1_2018a": "crwdns2587758:0crwdne2587758:0",
+          "courseE_farmer_functions9a1_2018b": "crwdns2587760:0crwdne2587760:0",
+          "courseE_farmer_functions9a1_2018c": "crwdns2587762:0crwdne2587762:0"
+        },
+        "courseE_farmer_ramp11a_2021": {
+          "courseE_farmer_ramp12_a": "crwdns2587616:0crwdne2587616:0",
+          "courseE_farmer_ramp12_b": "crwdns2587618:0crwdne2587618:0"
+        },
+        "courseE_farmer_ramp11b_2021": {
+          "courseE_farmer_ramp11b_a": "crwdns2587624:0crwdne2587624:0"
+        },
+        "courseE_farmer_ramp12_forswap_2021": {
+          "courseE_farmer_ramp12_b": "crwdns2587634:0crwdne2587634:0"
+        },
+        "courseE_farmer_ramp12c_2021": {
+          "courseE_farmer_ramp12b_b": "crwdns2587640:0crwdne2587640:0"
+        },
+        "courseE_farmer_ramp12d_2021": {
+          "courseE_farmer_ramp12d_b": "crwdns2587646:0crwdne2587646:0"
+        },
+        "courseE_farmer_ramp12e_2021": {
+          "courseE_farmer_ramp12e_b": "crwdns2587652:0crwdne2587652:0"
+        },
+        "courseE_farmer_ramp12f_2021": {
+          "courseE_farmer_ramp12f_b": "crwdns2587658:0crwdne2587658:0"
+        },
+        "courseE_farmer_while1_2021": {
+          "courseE_farmer_ramp12G_b": "crwdns2587664:0crwdne2587664:0"
+        },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_a": "crwdns2585110:0crwdne2585110:0",
+          "courseF_artist_for10_b": "crwdns2585112:0crwdne2585112:0",
+          "courseF_artist_for10_c": "crwdns2585114:0[0]crwdne2585114:0"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "crwdns2585060:0[0]crwdne2585060:0"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "crwdns2585072:0crwdne2585072:0",
+          "courseF_artist_for6_b": "crwdns2585074:0crwdne2585074:0",
+          "courseF_artist_for6_c": "crwdns2585076:0crwdne2585076:0"
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_a": "crwdns2585082:0crwdne2585082:0",
+          "courseF_artist_for7_b": "crwdns2585084:0crwdne2585084:0",
+          "courseF_artist_for7_c": "crwdns2585086:0crwdne2585086:0",
+          "courseF_artist_for7_d": "crwdns2585088:0crwdne2585088:0"
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_a": "crwdns2585092:0crwdne2585092:0",
+          "courseF_artist_for8_b": "crwdns2585094:0crwdne2585094:0"
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "crwdns2585100:0crwdne2585100:0",
+          "courseF_artist_for9_b": "crwdns2585102:0crwdne2585102:0"
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_a": "crwdns2585120:0crwdne2585120:0",
+          "courseF_artist_for_challenge1_b": "crwdns2585122:0crwdne2585122:0",
+          "courseF_artist_for_challenge1_c": "crwdns2585124:0crwdne2585124:0",
+          "courseF_artist_for_challenge1_d": "crwdns2585126:0[0]crwdne2585126:0"
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_c": "crwdns2585132:0crwdne2585132:0",
+          "courseF_artist_for_challenge2_a": "crwdns2585134:0crwdne2585134:0",
+          "courseF_artist_for_challenge2_b": "crwdns2585136:0crwdne2585136:0",
+          "courseF_artist_for_challenge2_d": "crwdns2585138:0[0]crwdnd2585138:0[1]crwdne2585138:0"
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "crwdns2584822:0crwdne2584822:0",
+          "courseF_artist_variables10_b": "crwdns2584824:0crwdne2584824:0"
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": "crwdns2584794:0crwdne2584794:0",
+          "courseF_artist_variables7_b": "crwdns2584796:0crwdne2584796:0",
+          "courseF_artist_variables7_c": "crwdns2584798:0crwdne2584798:0"
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_b": "crwdns2584804:0crwdne2584804:0",
+          "courseF_artist_variables8_c": "crwdns2584806:0crwdne2584806:0",
+          "courseF_artist_variables8_a": "crwdns2584808:0[0]crwdne2584808:0"
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_a": "crwdns2584814:0crwdne2584814:0",
+          "courseF_artist_variables9_b": "crwdns2584816:0crwdne2584816:0"
+        },
+        "courseF_artist_variablesFP_2021": {
+          "polygon_table": "crwdns2584832:0:------:crwdnd2584832:0:---:crwdnd2584832:0:---:crwdne2584832:0"
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_a": "crwdns2585028:0crwdne2585028:0",
+          "courseF_bee_for10_b": "crwdns2585030:0crwdne2585030:0",
+          "courseF_bee_for10_c": "crwdns2585032:0[0]crwdne2585032:0",
+          "courseF_bee_for10_d": "crwdns2585034:0crwdne2585034:0"
+        },
+        "courseF_bee_for11_2021": {
+          "courseF_bee_for11_a": "crwdns2584988:0crwdne2584988:0"
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "crwdns2584894:0crwdne2584894:0"
+        },
+        "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "crwdns2584900:0crwdne2584900:0",
+          "courseF_bee_for2_b": "crwdns2584902:0crwdne2584902:0"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "crwdns2584938:0crwdne2584938:0",
+          "courseF_bee_for4_b": "crwdns2584940:0crwdne2584940:0",
+          "courseF_bee_for4_c": "crwdns2584942:0crwdne2584942:0"
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_a": "crwdns2584998:0crwdne2584998:0",
+          "courseF_bee_for5_b": "crwdns2585000:0crwdne2585000:0",
+          "courseF_bee_for5_c": "crwdns2585002:0crwdne2585002:0"
+        },
+        "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "crwdns2584950:0crwdne2584950:0",
+          "courseF_bee_for6_b": "crwdns2584952:0crwdne2584952:0",
+          "courseF_bee_for6_c": "crwdns2584954:0crwdne2584954:0"
+        },
+        "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "crwdns2584960:0crwdne2584960:0",
+          "courseF_bee_for7_b": "crwdns2584962:0crwdne2584962:0",
+          "courseF_bee_for7_c": "crwdns2584964:0crwdne2584964:0"
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_a": "crwdns2584974:0crwdne2584974:0",
+          "courseF_bee_for8_b": "crwdns2584976:0crwdne2584976:0",
+          "courseF_bee_for8_c": "crwdns2584978:0crwdne2584978:0"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_a": "crwdns2585012:0crwdne2585012:0",
+          "courseF_bee_for9_c": "crwdns2585014:0crwdne2585014:0",
+          "courseF_bee_for9_b": "crwdns2585016:0crwdne2585016:0"
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_a": "crwdns2585046:0[0]crwdne2585046:0",
+          "courseF_bee_for_challenge2_b": "crwdns2585048:0crwdne2585048:0",
+          "courseF_bee_for_challenge2_c": "crwdns2585050:0crwdne2585050:0",
+          "courseF_bee_for_challenge2_d": "crwdns2585052:0[0]crwdne2585052:0"
+        },
+        "courseF_bee_variables_3a_2021": {
+          "courseF_bee_variables_3_2021_1": "crwdns2584856:0[0]crwdne2584856:0"
+        },
+        "courseF_bee_variables_3aa_2021": {
+          "courseF_bee_variables_3_2021_1": "crwdns2584850:0[0]crwdne2584850:0"
+        },
+        "courseF_bee_variables_4a_2021": {
+          "courseF_bee_variables_4_2021_1": "crwdns2584862:0crwdne2584862:0"
+        },
+        "courseF_events_choice_pufferfish": {
+          "changeProp": "crwdns2582054:0[0]crwdne2582054:0"
+        },
+        "courseF_events_key": {
+          "changePropBlock": "crwdns2581772:0[0]crwdne2581772:0"
+        },
+        "courseF_sprites_clouds": {
+          "behavior_list": "crwdns2581558:0crwdne2581558:0"
+        },
+        "courseF_text_choice_multiprompt": {
+          "when_answered_var": "crwdns2584590:0[0]crwdne2584590:0"
+        },
+        "courseF_text_concat": {
+          "prompt_example": "crwdns2584400:0[0]crwdne2584400:0"
+        },
+        "courseF_variables_card_finish": {
+          "card_idea1": "crwdns2575652:0crwdne2575652:0",
+          "card_idea2": "crwdns2575654:0crwdne2575654:0",
+          "card_idea3": "crwdns2575656:0crwdne2575656:0"
+        },
+        "courseF_variables_chatbot_finish": {
+          "chatbot_idea1": "crwdns2575746:0crwdne2575746:0",
+          "chatbot_idea2": "crwdns2575748:0crwdne2575748:0",
+          "chatbot_idea3": "crwdns2575750:0crwdne2575750:0",
+          "chatbot_idea4": "crwdns2575752:0crwdne2575752:0"
+        },
+        "courseF_variables_madlib_finish": {
+          "card_idea1": "crwdns2575842:0crwdne2575842:0",
+          "card_idea2": "crwdns2575844:0crwdne2575844:0",
+          "card_idea3": "crwdns2575846:0crwdne2575846:0"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "crwdns2576844:0crwdne2576844:0",
+          "courseC_maze_programming1_b": "crwdns2576846:0crwdne2576846:0"
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "crwdns2572768:0crwdne2572768:0"
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "crwdns2572776:0crwdne2572776:0",
+          "iceage_sound_and_points_b": "crwdns2572778:0crwdne2572778:0"
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "crwdns2572786:0crwdne2572786:0",
+          "iceage_warn_ice_age_b": "crwdns2572788:0crwdne2572788:0"
         }
       }
     }

@@ -20,6 +20,8 @@ ta:
         title: நுண்புல
       Unplug10:
         title: இணையம்
+      Conditionals:
+        title: நிபந்தனைகள்
       GraphPaperProgramming:
         title: வரைதாள் செய்நிரல்
       ComputationalThinking:
@@ -28,6 +30,16 @@ ta:
         title: பாடல் எழுதுதல்
       SongwritingWithParameters:
         title: பாடல் எழுதுதல்
+      courseB_unplugged_MRF:
+        title: பிரிக்கப்படாத செயல்பாடு
+      courseB_unplugged_loopyMRF:
+        title: பிரிக்கப்படாத செயல்பாடு
+      courseC_Unplugged_ScreenOutTheMean:
+        title: பிரிக்கப்படாத செயல்பாடு
+      courseD_unplugged_digitalCitizenship:
+        title: பிரிக்கப்படாத செயல்பாடு
+      courseF_unplugged_powerOfWords:
+        title: பிரிக்கப்படாத செயல்பாடு
       courseD_unplugged_graphPaperProgramming:
         title: வரைதாள் செய்நிரல்
       courseE_unplugged_songwritingParameters:
@@ -38,5 +50,19 @@ ta:
         title: பாடல் எழுதுதல்
       GraphPaperProgramming_2018:
         title: வரைதாள் செய்நிரல்
+      courseD_unplugged_digitalCitizenship_2018:
+        title: பிரிக்கப்படாத செயல்பாடு
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: பிரிக்கப்படாத செயல்பாடு
+      Conditionals_2018:
+        title: நிபந்தனைகள்
+      Conditionals_2019:
+        title: நிபந்தனைகள்
       GraphPaperProgramming_2019:
         title: வரைதாள் செய்நிரல்
+      courseD_unplugged_digitalCitizenship_2019:
+        title: பிரிக்கப்படாத செயல்பாடு
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: பிரிக்கப்படாத செயல்பாடு
+      timeforcs_demo_conditionals:
+        title: நிபந்தனைகள்

@@ -1,3 +1,4 @@
+---
 ta:
   data:
     blocks:
@@ -40,20 +41,20 @@ ta:
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
       Dancelab_atTimestamp:
-        text: இதற்குப்பின் [TIMESTAMP][0] [UNIT][1]
+        text: இதற்குப்பின் {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': அளவீடுகள்
             '"seconds"': விநாடிகள்
       Dancelab_changeColorBy:
-        text: மாற்றுக [COLOR][0] [METHOD][1] இதனால் [AMOUNT][2]
+        text: மாற்றுக {COLOR} {METHOD} இதனால் {AMOUNT}
         options:
           METHOD:
             '"hue"': ஹ்யூ
             '"saturation"': சாச்சுரேஷன் (நிற ஆழம்)
             '"brightness"': பிரைட்னஸ் (வெளிர்தன்மை)
       Dancelab_changeMoveEachLR:
-        text: "[GROUP][0] செய்க [MOVE][1] [DIR][2] எப்போதும்"
+        text: "{GROUP} செய்க {MOVE} {DIR} எப்போதும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -83,7 +84,7 @@ ta:
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
       Dancelab_changeMoveLR:
-        text: "[SPRITE][0] செய்க [MOVE][1] [DIR][2] எப்போதும்"
+        text: "{SPRITE} செய்க {MOVE} {DIR} எப்போதும்"
         options:
           MOVE:
             '"next"': "(அடுத்த)"
@@ -101,7 +102,7 @@ ta:
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
       Dancelab_changePropBy:
-        text: மாற்றவும் [SPRITE][0] [PROPERTY][1] இந்த அளவிற்கு [VAL][2]
+        text: மாற்றவும் {SPRITE} {PROPERTY} இந்த அளவிற்கு {VAL}
         options:
           PROPERTY:
             '"scale"': அளவு
@@ -111,6 +112,7 @@ ta:
             '"x"': கிடைமட்ட அமைவிடம்
             '"y"': செங்குத்து அமைவிடம்
       Dancelab_changePropEachBy:
+        text: மாற்றவும் {GROUP} {PROPERTY} இந்த அளவிற்கு {VAL}
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -132,7 +134,7 @@ ta:
             '"x"': கிடைமட்ட அமைவிடம்
             '"y"': செங்குத்து அமைவிடம்
       Dancelab_doMoveEachLR:
-        text: "[GROUP][0] ஒருமுறை [MOVE][1] [DIR][2] செய்யவும்"
+        text: "{GROUP} ஒருமுறை {MOVE} {DIR} செய்யவும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -172,7 +174,7 @@ ta:
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
       Dancelab_doMoveLR:
-        text: "[SPRITE][0] ஒருமுறை [MOVE][1] [DIR][2] செய்யவும்"
+        text: "{SPRITE} ஒருமுறை {MOVE} {DIR} செய்யவும்"
         options:
           MOVE:
             '"rand"': "(ரான்டம்)"
@@ -200,32 +202,32 @@ ta:
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
       Dancelab_everySeconds:
-        text: 'ஒவ்வொன்றையும் திரும்ப செய்யவும் [N][0] [UNIT][1]'
+        text: ஒவ்வொன்றையும் திரும்ப செய்யவும் {N} {UNIT}
         options:
           UNIT:
             '"measures"': அளவீடுகள்
             '"seconds"': விநாடிகள்
       Dancelab_everySecondsRange:
-        text: 'ஒவ்வொரு [N][0] [UNIT][1] [START][2] தொடங்கி [STOP][3] வரை '
+        text: 'ஒவ்வொரு {N} {UNIT} {START} தொடங்கி {STOP} வரை '
         options:
           UNIT:
             measures: அளவீடுகள்
             seconds: விநாடிகள்
       Dancelab_everyVerseChorus:
-        text: 'ஒவ்வொரு [UNIT][0] '
+        text: 'ஒவ்வொரு {UNIT} '
         options:
           UNIT:
             '"verse"': வெர்ஸ்
             '"chorus"': கோரஸ்
       Dancelab_getEnergy:
-        text: எடுக்க [RANGE][0]
+        text: எடுக்க {RANGE}
         options:
           RANGE:
             '"low"': பேஸ்
             '"mid"': மிட்
             '"high"': ட்ரெபில்
       Dancelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': அளவு
@@ -236,15 +238,15 @@ ta:
             '"y"': செங்குத்து அமைவிடம்
             '"tint"': டின்ட்
       Dancelab_getTime:
-        text: நடப்பு நேர அலகு [UNIT][0]
+        text: நடப்பு நேர அலகு {UNIT}
         options:
           UNIT:
             '"measures"': அளவீடுகள்
             '"seconds"': விநாடிகள்
       Dancelab_ifDanceIs:
         text: |-
-          ஒருவேளை [SPRITE][0] [DANCE][1] செய்தால்
-          [DO1][2] [DO2][3]
+          ஒருவேளை {SPRITE} {DANCE} செய்தால்
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: உயரே கைதட்டுக
@@ -260,8 +262,8 @@ ta:
             MOVES.Rest: எதுவுமில்லை
       Dancelab_ifTime:
         text: |-
-          ஒருவேளை [UNIT][0] [OP][1] [N][2] என்றிருந்தால்
-          [DO1][3] [DO2][4]
+          ஒருவேளை {UNIT} {OP} {N} என்றிருந்தால்
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': அளவீடுகள்
@@ -271,7 +273,7 @@ ta:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "[SPRITE][0] குதிக்கவும் [LOCATION][1]"
+        text: "{SPRITE} குதிக்கவும் {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": மேல்புறம்
@@ -280,9 +282,9 @@ ta:
             "{x: 300, y: 200}": வலது
             "{x: 200, y: 200}": மையம்
             "{x: 100, y: 100}": மேல் இடது
-            "{x: 300, y: 100}": "மேல் வலது\n"
-            "{x: 100, y: 300}": "கீழ் இடது\n"
-            "{x: 300, y: 300}": "கீழ் வலது\n"
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_jumpToEach:
         options:
@@ -305,12 +307,12 @@ ta:
             "{x: 300, y: 200}": வலது
             "{x: 200, y: 200}": மையம்
             "{x: 100, y: 100}": மேல் இடது
-            "{x: 300, y: 100}": "மேல் வலது\n"
-            "{x: 100, y: 300}": "கீழ் இடது\n"
-            "{x: 300, y: 300}": "கீழ் வலது\n"
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_layoutSprites:
-        text: '[FORMAT][1] ஆக [GROUP][0]-ஐ தளவமைக்கவும்'
+        text: "{FORMAT} ஆக {GROUP}-ஐ தளவமைக்கவும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -355,14 +357,14 @@ ta:
             "{x: 300, y: 200}": வலது
             "{x: 200, y: 200}": மையம்
             "{x: 100, y: 100}": மேல் இடது
-            "{x: 300, y: 100}": "மேல் வலது\n"
-            "{x: 100, y: 300}": "கீழ் இடது\n"
-            "{x: 300, y: 300}": "கீழ் வலது\n"
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeNewDanceSprite:
         text: |-
-          ஒரு புதிய [COSTUME][0] உருவாக்கவும்
-           [NAME][1] ஐ [LOCATION][2] ல் அழைத்தேன்
+          ஒரு புதிய {COSTUME} உருவாக்கவும்
+           {NAME} ஐ {LOCATION} ல் அழைத்தேன்
         options:
           COSTUME:
             '"ALIEN"': வேற்றுகிரகத்துவாசி
@@ -383,14 +385,14 @@ ta:
             "{x: 300, y: 200}": வலது
             "{x: 200, y: 200}": மையம்
             "{x: 100, y: 100}": மேல் இடது
-            "{x: 300, y: 100}": "மேல் வலது\n"
-            "{x: 100, y: 300}": "கீழ் இடது\n"
-            "{x: 300, y: 300}": "கீழ் வலது\n"
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          [N][0] புதிய [COSTUME][1] உருவாக்கவும்
-          ஒரு [LAYOUT][2]-ல்
+          {N} புதிய {COSTUME} உருவாக்கவும்
+          ஒரு {LAYOUT}-ல்
         options:
           'N':
             '2': '2'
@@ -435,9 +437,9 @@ ta:
             '"plus"': ப்ளஸ்
             '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_mixColors:
-        text: '[COLOR1][0] மற்றும் [COLOR2][1] –ஐ கலக்கவும்'
+        text: "{COLOR1} மற்றும் {COLOR2} –ஐ கலக்கவும்"
       Dancelab_nMeasures:
-        text: "[N][0] அளவீடுகள்"
+        text: "{N} அளவீடுகள்"
       Dancelab_onPointerDown:
         text: பாய்ண்டர் டவுனில்
       Dancelab_onPointerDrag:
@@ -447,15 +449,14 @@ ta:
       Dancelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
       Dancelab_setBackground:
-        text: பின்னணி வண்ணத்தை மாற்றவும் [COLOR][0]
+        text: பின்னணி வண்ணத்தை மாற்றவும் {COLOR}
       Dancelab_setBackgroundEffect:
         text: |-
           பின்னணி எஃபெக்டடை அமைக்கவும்
-          [EFFECT][0] [PALETTE][1]
+          {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': எதுவுமில்லை
-            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(ரான்டம்)"
             '"circles"': வட்டங்கள்
             '"color_cycle"': வண்ணங்கள்
             '"diamonds"': டயமன்ட்ஸ்
@@ -486,7 +487,7 @@ ta:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           பின்னணி எஃபெக்டடை அமைக்கவும்
-           [PALETTE][0] [EFFECT][1]
+           {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': எதுவுமில்லை
@@ -497,18 +498,18 @@ ta:
             '"diamonds"': டயமன்ட்ஸ்
             '"disco_ball"': டிஸ்கோ பால்
             '"fireworks"': ஃபயர்ஒர்க்ஸ்
-            '"flowers"': "மலர்கள்\n"
+            '"flowers"': மலர்கள்
             '"growing_stars"': வளரும் நட்சத்திரங்கள்
             '"swirl"': ஹிப்னோ
             '"kaleidoscope"': கெலைடோஸ்கோப்
             '"lasers"': லேசர் டான்ஸ் தளம்
             '"splatter"': பெயின்ட் ஸ்பலாட்டர்
             '"rainbow"': வானவில்
-            '"ripples_random"': "தொடர்பற்ற சிற்றலைகள்\n"
-            '"ripples"': "சிற்றலைகள்\n"
+            '"ripples_random"': தொடர்பற்ற சிற்றலைகள்
+            '"ripples"': சிற்றலைகள்
             '"snowflakes"': பனி
             '"text"': பாடல் பெயர்கள்
-            '"squiggles"': "சிறு வளை கோடுகள்\n"
+            '"squiggles"': சிறு வளை கோடுகள்
             '"galaxy"': ஸ்பேஸ்
             '"sparkles"': ஜொலிப்புகள்
             '"spiral"': ஸ்பைரல்
@@ -526,7 +527,7 @@ ta:
             '"vintage"': வின்டேஜ்
             '"warm"': வ
       Dancelab_setDanceSpeed:
-        text: '[SPRITE][0] ன் நடன வேகத்தை [SPEED][1] ஆக்கவும்'
+        text: "{SPRITE} ன் நடன வேகத்தை {SPEED} ஆக்கவும்"
         options:
           SPEED:
             '1': normal
@@ -535,7 +536,7 @@ ta:
             '0.5': வேகக் குறைவு
             '0.25': வேகம் மிகக்குறைவு
       Dancelab_setDanceSpeedEach:
-        text: '[GROUP][0] ன் நடன வேகத்தை [SPEED][1] ஆக்கவும்'
+        text: "{GROUP} ன் நடன வேகத்தை {SPEED} ஆக்கவும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -556,11 +557,10 @@ ta:
             '0.5': வேகக் குறைவு
             '0.25': வேகம் மிகக்குறைவு
       Dancelab_setForegroundEffect:
-        text: முன்னணி எஃபெக்டை அமைக்கவும் [EFFECT][0]
+        text: முன்னணி எஃபெக்டை அமைக்கவும் {EFFECT}
         options:
           EFFECT:
             '"none"': எதுவுமில்லை
-            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(ரான்டம்)"
             '"bubbles"': குமிழிகள்
             '"confetti"': கான்ஃபெடி
             '"hearts_red"': இதயங்கள்
@@ -575,7 +575,7 @@ ta:
             '"color_lights"': மேடை லைட்கள்
             '"raining_tacos"': டாகோஸ்
       Dancelab_setForegroundEffectExtended:
-        text: முன்னணி எஃபெக்டை அமைக்கவும் [EFFECT][0]
+        text: முன்னணி எஃபெக்டை அமைக்கவும் {EFFECT}
         options:
           EFFECT:
             '"none"': எதுவுமில்லை
@@ -594,7 +594,7 @@ ta:
             '"color_lights"': மேடை லைட்கள்
             '"raining_tacos"': டாகோஸ்
       Dancelab_setProp:
-        text: '[SPRITE][0] [PROPERTY][1] ஐ [VAL][2] ஆக்கவும் '
+        text: "{SPRITE} {PROPERTY} ஐ {VAL} ஆக்கவும் "
         options:
           PROPERTY:
             '"scale"': அளவு
@@ -604,7 +604,7 @@ ta:
             '"x"': கிடைமட்ட அமைவிடம்
             '"y"': செங்குத்து அமைவிடம்
       Dancelab_setPropEach:
-        text: '[GROUP][0] [PROPERTY][1] ஐ [VAL][2] ஆக்கவும்'
+        text: "{GROUP} {PROPERTY} ஐ {VAL} ஆக்கவும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -627,7 +627,7 @@ ta:
             '"y"': செங்குத்து அமைவிடம்
             '"tint"': டின்ட்
       Dancelab_setPropRandom:
-        text: '[SPRITE][0] [PROPERTY][1] ஐ ரேன்டம் ஆக்கவும்'
+        text: "{SPRITE} {PROPERTY} ஐ ரேன்டம் ஆக்கவும்"
         options:
           PROPERTY:
             '"scale"': அளவு
@@ -638,7 +638,7 @@ ta:
             '"y"': செங்குத்து அமைவிடம்
             '"tint"': டின்ட்
       Dancelab_setPropRandomEach:
-        text: '[GROUP][0] [PROPERTY][1] ஐ ரேன்டம் ஆக்கவும்'
+        text: "{GROUP} {PROPERTY} ஐ ரேன்டம் ஆக்கவும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -661,9 +661,9 @@ ta:
             '"y"': செங்குத்து அமைவிடம்
             '"tint"': டின்ட்
       Dancelab_setTint:
-        text: '[SPRITE][0] ன் டின்ட்டை [VAL][1] ஆக்கவும்'
+        text: "{SPRITE} ன் டின்ட்டை {VAL} ஆக்கவும்"
       Dancelab_setTintEach:
-        text: '[THIS][0] ன் டின்ட்டை [VAL][1] ஆக்கவும்'
+        text: "{THIS} ன் டின்ட்டை {VAL} ஆக்கவும்"
         options:
           THIS:
             '"ALIEN"': ஏலியன்கள்
@@ -678,7 +678,7 @@ ta:
             '"SHARK"': சுறாமீன்கள்
             '"UNICORN"': யூனிகார்ன்கள்
       Dancelab_setTintEachInline:
-        text: '[THIS][0] ன் டின்ட்டை [VAL][1] ஆக்கவும்'
+        text: "{THIS} ன் டின்ட்டை {VAL} ஆக்கவும்"
         options:
           THIS:
             '"ALIEN"': ஏலியன்கள்
@@ -693,15 +693,15 @@ ta:
             '"SHARK"': சுறாமீன்கள்
             '"UNICORN"': யூனிகார்ன்கள்
       Dancelab_setTintInline:
-        text: '[SPRITE][0] ன் டின்ட்டை [VAL][1] ஆக்கவும்'
+        text: "{SPRITE} ன் டின்ட்டை {VAL} ஆக்கவும்"
       Dancelab_setVisible:
-        text: '[SPRITE][0] ஐ [VISIBILITY][1] க்கு தெரியும்படி செய்யவும்'
+        text: "{SPRITE} ஐ {VISIBILITY} க்கு தெரியும்படி செய்யவும்"
         options:
           VISIBILITY:
             'true': தெரியும்படி இருப்பது
             'false': தெரியாமல் இருப்பது
       Dancelab_setVisibleEach:
-        text: '[THIS][0] ன் தோற்றத்தை [VISIBILITY][1] க்கு தெரியும்படி செய்யவும்'
+        text: "{THIS} ன் தோற்றத்தை {VISIBILITY} க்கு தெரியும்படி செய்யவும்"
         options:
           THIS:
             '"ALIEN"': ஏலியன்கள்
@@ -719,7 +719,7 @@ ta:
             'true': தெரியும்படி இருப்பது
             'false': தெரியாமல் இருப்பது
       Dancelab_startMapping:
-        text: "[RANGE][2] ஐ தொடர்ந்து [PROPERTY][1] ஐ [SPRITE][0] தொடங்குக"
+        text: "{RANGE} ஐ தொடர்ந்து {PROPERTY} ஐ {SPRITE} தொடங்குக"
         options:
           PROPERTY:
             '"scale"': அளவு
@@ -760,7 +760,7 @@ ta:
             '"mid"': மிட்
             '"treble"': ட்ரெபில்
       Dancelab_stopMapping:
-        text: "[RANGE][2] ஐ தொடர்ந்து [PROPERTY][1] ஐ [SPRITE][0] நிற்க"
+        text: "{RANGE} ஐ தொடர்ந்து {PROPERTY} ஐ {SPRITE} நிற்க"
         options:
           PROPERTY:
             '"scale"': அளவு
@@ -806,11 +806,11 @@ ta:
         options:
           STRING:
             '"music_wave"': அலைகள்
-            '"ripples"': "சிற்றலைகள்\n"
-            '"ripples_random"': "தொடர்பற்ற சிற்றலைகள்\n"
+            '"ripples"': சிற்றலைகள்
+            '"ripples_random"': தொடர்பற்ற சிற்றலைகள்
             '"quads"': கோணங்கள்
-            '"flowers"': "மலர்கள்\n"
-            '"squiggles"': "சிறு வளை கோடுகள்\n"
+            '"flowers"': மலர்கள்
+            '"squiggles"': சிறு வளை கோடுகள்
             '"growing_stars"': வளரும் நட்சத்திரங்கள்
             '"hearts_colorful"': இதயங்கள்
             '"s"': s
@@ -819,6 +819,7 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -831,7 +832,7 @@ ta:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: '[KEY][0] அழுத்தப்படுகையில்'
+        text: "{KEY} அழுத்தப்படுகையில்"
         options:
           KEY:
             '"up"': மேலே
@@ -864,6 +865,7 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -876,7 +878,7 @@ ta:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: '[RANGE][0] ஆகையில் பீக்'
+        text: "{RANGE} ஆகையில் பீக்"
         options:
           RANGE:
             '0': பேஸ்
@@ -886,12 +888,16 @@ ta:
         text: செட்அப்
       Dancelab_whenSetup2:
         text: செட்அப்
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': தவிர்க்கவும்
       gamelab_atTime:
         options:
           UNIT:
             '"seconds"': விநாடிகள்
       gamelab_changePropBy:
-        text: மாற்றவும் [SPRITE][0] [PROPERTY][1] இந்த அளவிற்கு [VAL][2]
+        text: மாற்றவும் {SPRITE} {PROPERTY} இந்த அளவிற்கு {VAL}
         options:
           PROPERTY:
             '"scale"': அளவு
@@ -902,8 +908,10 @@ ta:
           CONDITION:
             '"when"': எப்போது
             '"while"': எப்பொழுது
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
       gamelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': அளவு
@@ -946,9 +954,10 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_jumpTo:
-        text: "[SPRITE][0] குதிக்கவும் [LOCATION][1]"
+        text: "{SPRITE} குதிக்கவும் {LOCATION}"
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -984,34 +993,43 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': வலது
             '"left"': இடது
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
       gamelab_randColor:
         text: ஏதாவது ஒரு நிறம்
       gamelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
       gamelab_setBackground:
-        text: பின்னணி வண்ணத்தை மாற்றவும் [COLOR][0]
+        text: பின்னணி வண்ணத்தை மாற்றவும் {COLOR}
       gamelab_setBackgroundImage:
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': குகை
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': மாநகர்
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': பாலைவனம்
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': கிரிட்
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': வானவில்
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': நீருக்கடியில்
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': குளிர்காலம்
+            undefined: எதுவுமில்லை
       gamelab_setProp:
+        text: "{SPRITE} {PROPERTY} ஐ {VAL} ஆக்கவும்"
         options:
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
       gamelab_setProp_dropdown:
+        text: "{SPRITE} {PROPERTY} ஐ {SIZE} ஆக்கவும்"
         options:
           PROPERTY:
             '"scale"': அளவு
@@ -1026,13 +1044,15 @@ ta:
           CONDITION:
             '"when"': எப்போது
             '"while"': எப்பொழுது
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:
             '"right"': வலது
             '"left"': இடது
       gamelab_whenKey:
-        text: '[KEY][0] அழுத்தப்படுகையில்'
+        text: "{KEY} அழுத்தப்படுகையில்"
         options:
           KEY:
             '"up"': மேலே
@@ -1056,6 +1076,12 @@ ta:
             '"w"': w
             '"s"': s
             '"d"': d
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 200, y: 100}": மீன்
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": மீன்
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1071,9 +1097,9 @@ ta:
             "{x: 300, y: 200}": வலது
             "{x: 200, y: 200}": மையம்
             "{x: 100, y: 100}": மேல் இடது
-            "{x: 300, y: 100}": "மேல் வலது\n"
-            "{x: 100, y: 300}": "கீழ் இடது\n"
-            "{x: 300, y: 300}": "கீழ் வலது\n"
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -1095,9 +1121,9 @@ ta:
             "{x: 300, y: 200}": வலது
             "{x: 200, y: 200}": மையம்
             "{x: 100, y: 100}": மேல் இடது
-            "{x: 300, y: 100}": "மேல் வலது\n"
-            "{x: 100, y: 300}": "கீழ் இடது\n"
-            "{x: 300, y: 300}": "கீழ் வலது\n"
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
       Mikelab_groupGetProp:
         options:
           PROPERTY:
@@ -1110,10 +1136,14 @@ ta:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
+      Mikelab_hideFish:
+        options:
+          TRASH:
+            fish: மீன்
       Mikelab_ifDanceIs:
         text: |-
-          ஒருவேளை [SPRITE][0] [DANCE][1] செய்தால்
-          [DO1][2] [DO2][3]
+          ஒருவேளை {SPRITE} {DANCE} செய்தால்
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: உயரே கைதட்டுக
@@ -1127,6 +1157,20 @@ ta:
             MOVES.Kick: ஸ்டார்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: மீன்
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: மீன்
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: மீன்
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
       Mikelab_setBG:
@@ -1144,6 +1188,10 @@ ta:
           CORNER:
             '"right"': வலது
             '"left"': இடது
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': கீழே
       Mikelab_sprite:
         options:
           LOCATION:
@@ -1153,11 +1201,11 @@ ta:
             "{x: 300, y: 200}": வலது
             "{x: 200, y: 200}": மையம்
             "{x: 100, y: 100}": மேல் இடது
-            "{x: 300, y: 100}": "மேல் வலது\n"
-            "{x: 100, y: 300}": "கீழ் இடது\n"
-            "{x: 300, y: 300}": "கீழ் வலது\n"
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
       Mikelab_whenKeyPressed:
-        text: '[KEY][0] அழுத்தப்படுகையில்'
+        text: "{KEY} அழுத்தப்படுகையில்"
         options:
           KEY:
             '"w"': மேற்கு
@@ -1171,6 +1219,32 @@ ta:
             '"a"': அ
             '"s"': தெற்கு
             '"d"': ஈ
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': ஆம்
+            '"no"': இல்லை
+      Outbreak_beginCongregating:
+        text: அரக்கர்கள் ஒன்றுகூடத் தொடங்குகிறார்கள்
+      Outbreak_beginQuarantining:
+        text: பேய்கள் நோய்வாய்ப்பட்டபோது தனிமைப்படுத்தத் தொடங்குகின்றன
+      Outbreak_beginSocialDistancing:
+        text: அரக்கர்கள் சமூக தூரத்தைத் தொடங்குகிறார்கள்
+      Outbreak_beginWandering:
+        text: அரக்கர்கள் அலையத் தொடங்குகிறார்கள்
+      Outbreak_beginWearingMasks:
+        text: அரக்கர்கள் முகமூடிகளை அணியத் தொடங்குகிறார்கள்
+      Outbreak_stopMoving:
+        text: அரக்கர்கள் நகர்வதை நிறுத்துகிறார்கள்
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': வானவில்
+      PoemBot_setForegroundEffect:
+        text: முன்னணி எஃபெக்டை அமைக்கவும் {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"bubbles"': குமிழிகள்
       RyanLab_moveForward:
         text: முன்னோக்கி நகர்த்த
       RyanLab_turnLeft:
@@ -1179,6 +1253,10 @@ ta:
         text: வலதுபுறம் திரும்பவும்
       Vector_positionCenter:
         text: மையம்
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": நிறம்
       aalab_layoutSprites:
         options:
           FORMAT:
@@ -1194,7 +1272,7 @@ ta:
             '"left"': இடது
             '"right"': வலது
       binary_whenKey:
-        text: '[KEY][0] அழுத்தப்படுகையில்'
+        text: "{KEY} அழுத்தப்படுகையில்"
         options:
           KEY:
             '"up"': மேலே
@@ -1207,18 +1285,47 @@ ta:
             '"s"': s
             '"d"': d
       craft_ifPath:
+        text: |-
+          பாதை என்றால் {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": மாருதி
       craft_ifStandingOn:
+        text: |-
+          நின்று கொண்டிருந்தால் {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": மண்
       craft_ifStandingOnLimit:
+        text: |-
+          நின்று கொண்டிருந்தால் {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": மண்
       craft_moveForward:
         text: முன்னோக்கி நகர்த்த
+      craft_placeBlock:
+        text: இடம் {blockType}
+      craft_placePrismarine:
+        text: பிரிஸ்மரைன் வைக்கவும்
       craft_placeTorch:
         text: இடம் மின்வளக்கு
+      craft_repeatUntilConduit:
+        text: |-
+          வழித்தடம் முடியும் வரை மீண்டும் செய்யவும்
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          இலக்கு வரை மீண்டும் செய்யவும்
+          {STATEMENT}
+      craft_spawnEntity:
+        text: ஸ்பான் {ENTITY}
+      craft_turn:
+        text: திரும்பவும்{DIR}
+        options:
+          DIR:
+            right: சரி ↻
+            left: இடது  ↺

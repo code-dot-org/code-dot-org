@@ -15,7 +15,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     @malformed.update_column(:email, '')  # Bypasses validation!
 
     @user = create :user, email: 'test_user@example.com'
-    @script = Script.first
+    @script = create(:script, :with_levels, levels_count: 1)
     @level = @script.script_levels.first.level
     @manual_pass_params = {
       user_id: @user.id,
@@ -231,29 +231,51 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'user_progress returns progress' do
     user = @not_admin
-    script1 = Script.first
-    script2 = Script.second
-    level1 = script1.script_levels.first.level
-    level2 = script1.script_levels.second.level
-    level3 = script2.script_levels.first.level
+    script1 = create(:script, :with_levels, levels_count: 2)
+    script2 = create(:script, :with_levels, levels_count: 1)
 
-    UserScript.create! user: user, script: script1
-    UserScript.create! user: user, script: script2
-    UserLevel.create! user: user, script: script1, level: level1, best_result: 100
-    UserLevel.create! user: user, script: script1, level: level2, best_result: 100
-    UserLevel.create! user: user, script: script2, level: level3, best_result: 100
+    UserScript.create!(user: user, script: script1)
+    UserScript.create!(user: user, script: script2)
 
     sign_in @admin
     post :user_progress_form, params: {user_identifier: @not_admin.id.to_s}
 
-    # page has 3 tables:
+    # page has 2 tables:
     # table 1 - user information (1 row)
     # table 2 - script progress (2 rows)
-    # table 3 - level progress (3 rows)
-    assert_select "table", 3
+    assert_select "table", 2
     assert_select "table:nth-of-type(1) tbody tr", 1
     assert_select "table:nth-of-type(2) tbody tr", 2
-    assert_select "table:nth-of-type(3) tbody tr", 3
+  end
+
+  test "delete_progress_form returns error if not admin" do
+    sign_in @not_admin
+    get :delete_progress_form, params: {user_id: @user.id, script_id: @script.id}
+    assert_response :forbidden
+  end
+
+  test 'delete_progress_form returns correct data' do
+    sign_in @admin
+
+    user = create(:student, username: 'test_student')
+    script = create(:script, :with_levels, levels_count: 3)
+    level1 = script.script_levels.first.level
+    level2 = script.script_levels.second.level
+    level3 = script.script_levels.third.level
+
+    UserScript.create!(user: user, script: script)
+    UserLevel.create!(user: user, script: script, level: level1, best_result: 0)
+    UserLevel.create!(user: user, script: script, level: level2, best_result: 10)
+    UserLevel.create!(user: user, script: script, level: level3, best_result: 100)
+
+    get :delete_progress_form, params: {user_id: user.id, script_id: script.id}
+    assert_response :ok
+    assert_select "strong" do  |elements|
+      assert_equal 4, elements.length
+      assert_equal user.username, elements[1].text
+      assert_equal script.name, elements[2].text
+      assert_equal 3, elements[3].text.to_i   # count of user_level rows
+    end
   end
 
   generate_admin_only_tests_for :permissions_form

@@ -2,6 +2,10 @@ kk:
   data:
     variable_names:
       actor: ойыншы
+      age: жасы
+      answer: жауап
+      binary: бинарлы
+      color: түс
       counter: санағыш
       height: биіктік
       honey: бал

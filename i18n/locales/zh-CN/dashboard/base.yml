@@ -167,8 +167,8 @@ zh-CN:
     additional_information: "我们需要一些额外的信息来继续为你注册."
     user_type_button: "更新帐户类型"
     user_type_label: "帐户类型"
-    user_type_teacher: "老师"
     user_type_student: "学生"
+    user_type_teacher: "老师"
     field_is_required: "必填"
     accept_terms: "必须同意创建一个帐户。"
     error: "发生错误。"
@@ -271,6 +271,7 @@ zh-CN:
     added_teacher: '添加%{name}为你的老师'
     registered: "你已经注册了 %{section_name}。"
     captcha_required: '请填写验证码加入本小组。'
+    already_exists: '你已经加入了小组 %{section_name}'
     error:
       signed_in: '请在注销后继续下一步操作。'
       username_not_found: '找不到用户名 %{用户名}'
@@ -553,7 +554,7 @@ zh-CN:
     help_from_html: '我们要特别感谢来自亚马逊、谷歌和微软的工程师帮助创建本教程。'
     help_from_html_old: '来自亚马逊、谷歌和微软的工程师们帮助创建了本教程。'
     art_from_html: '我的世界&#8482; &copy; %{current_year} 微软，保留所有权利。<br />星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。<br />冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼，保留所有权利。<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯，保留所有权利。<br />愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司，保留所有权利。<br />植物大战僵尸&#8482; &copy; %{current_year} 电子艺界，保留所有权利。<br />阿甘妙世界是TM，&copy; %{current_year} 卡通网络。'
-    art_from_html_old: '我的世界&#8482; &copy; %{current_year} 微软，保留所有权利。星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼，保留所有权利。冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯，保留所有权利。愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司，保留所有权利。植物大战僵尸&#8482; &copy; %{current_year} 电子艺界，保留所有权利。阿甘妙世界是TM，&copy; %{current_year} 卡通网络。'
+    art_from_html_old: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利. 星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利. 冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; 2015 卡通网络.'
     code_from_html: 'Code.org 使用 p5.play 游戏资源库，根据 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a> 之许可。'
     powered_by_aws: '由亚马逊网络服务'
     built_on_github: '在微软的GitHub上构建'
@@ -575,6 +576,7 @@ zh-CN:
     make_my_own_app: '制作我自己的应用程序'
     how_it_works: '它是如何工作的（查看代码）'
     try_hour_of_code: '试试《编程一小时》！'
+    store: '商店'
   reference_area:
     title: '需要帮助吗？'
     subtitle: '看看这些视频和提示'
@@ -598,8 +600,6 @@ zh-CN:
       link: "了解详情"
       applab_unsupported_tablet: "应用实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。"
       gamelab_unsupported_tablet: "游戏实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。"
-      oceans_unsupported_browser: "本教程不支持此浏览器。 请尝试使用 Edge，Chrome，Firefox 或其他现代浏览器访问此页面。"
-      weblab_unsupported_browser: "很遗憾，在当前浏览器中加载网络实验室时遇到一些问题。您也许可以先试试另一个浏览器，直到我们解决了这个问题。很抱歉造成您的不便。"
       weblab_unsupported_locale_storage: "在私密浏览模式下使用 Web Lab 可能会遇到问题。请在正常模式下重新加载您的项目。很抱歉给您带来的不便。"
   slow_loading: '请再多等一会儿...'
   try_reloading: '请重新刷新页面'
@@ -985,9 +985,8 @@ zh-CN:
       school_city: '学校所在城市'
       school_country: '学校所在国家'
       colombian_school_city: '学校所在城市'
-      colombian_school_department: '学校部门'
       colombian_school_municipality: '学校政府'
-      colombian_school_name: '学校名称'
+      colombian_chilean_school_name: '学校名称'
       ages: '今年将教什么年纪的学生？'
       subjects: '今年教的科目是什么？'
       resources: '您使用以下哪种计算机科学教育资源？'

@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-02 17:23:47 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:24 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -3518,7 +3518,6 @@
         ],
         "progression": "Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3544,7 +3543,6 @@
         ],
         "progression": "Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3570,7 +3568,6 @@
         ],
         "progression": "Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3596,7 +3593,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3622,7 +3618,6 @@
         ],
         "progression": "Investigation #1: Thermostat App v.1 "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3648,7 +3643,6 @@
         ],
         "progression": "Investigation #1: Thermostat App v.1 "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3674,7 +3668,6 @@
         ],
         "progression": "Investigation #2: Thermostat App v.2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3700,7 +3693,6 @@
         ],
         "progression": "Investigation #3: Thermostat App v.3"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3726,7 +3718,6 @@
         ],
         "progression": "Investigation #3: Thermostat App v.3"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3752,7 +3743,6 @@
         ],
         "progression": "Assessment: Check For Understanding\r"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3778,7 +3768,6 @@
         ],
         "progression": "Assigning Numbers and Strings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3804,7 +3793,6 @@
         ],
         "progression": "Assigning Numbers and Strings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3830,7 +3818,6 @@
         ],
         "progression": "Variables and Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3856,7 +3843,6 @@
         ],
         "progression": "Variables and Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3882,7 +3868,6 @@
         ],
         "progression": "Variables and Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3908,7 +3893,6 @@
         ],
         "progression": "Variables and Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3934,7 +3918,6 @@
         ],
         "progression": "Variables and Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3960,7 +3943,6 @@
         ],
         "progression": "Debugging Scope Issues"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3986,7 +3968,6 @@
         ],
         "progression": "Debugging Scope Issues"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4012,7 +3993,6 @@
         ],
         "progression": "Putting it Together"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4038,7 +4018,6 @@
         ],
         "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4064,7 +4043,6 @@
         ],
         "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4090,7 +4068,6 @@
         ],
         "progression": "Try the Photo Liker app"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4116,7 +4093,6 @@
         ],
         "progression": "Make the Photo Liker app"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4142,7 +4118,6 @@
         ],
         "progression": "Conditionals: Boolean Expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4168,7 +4143,6 @@
         ],
         "progression": "Assessment: Check For Understanding\r"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4194,7 +4168,6 @@
         ],
         "progression": "Assessment: Check For Understanding\r"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4220,7 +4193,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4246,7 +4218,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4272,7 +4243,6 @@
         ],
         "progression": "If-Else Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4298,7 +4268,6 @@
         ],
         "progression": "If-Else Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4324,7 +4293,6 @@
         ],
         "progression": "If-Else-If Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4350,7 +4318,6 @@
         ],
         "progression": "If-Else-If Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4376,7 +4343,6 @@
         ],
         "progression": "Logical Operators: AND OR"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4402,7 +4368,6 @@
         ],
         "progression": "Logical Operators: AND OR"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4428,7 +4393,6 @@
         ],
         "progression": "Patterns: If-else-if"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4454,7 +4418,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4480,7 +4443,6 @@
         ],
         "progression": "Boolean expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4506,7 +4468,6 @@
         ],
         "progression": "Boolean expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4532,7 +4493,6 @@
         ],
         "progression": "Boolean expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4558,7 +4518,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4584,7 +4543,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4610,7 +4568,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4636,7 +4593,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4662,7 +4618,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4688,7 +4643,6 @@
         ],
         "progression": "Logical Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4714,7 +4668,6 @@
         ],
         "progression": "Logical Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4740,7 +4693,6 @@
         ],
         "progression": "MOD Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4766,7 +4718,6 @@
         ],
         "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4792,7 +4743,6 @@
         ],
         "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4818,7 +4768,6 @@
         ],
         "progression": "Try to the Museum Ticket Generator App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4844,7 +4793,6 @@
         ],
         "progression": "Make the Museum Ticket Generator App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4870,7 +4818,6 @@
         ],
         "progression": "Explore Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4896,7 +4843,6 @@
         ],
         "progression": "Declaring and Calling Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4922,7 +4868,6 @@
         ],
         "progression": "Declaring and Calling Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4948,7 +4893,6 @@
         ],
         "progression": "Declaring and Calling Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4974,7 +4918,6 @@
         ],
         "progression": "Declaring and Calling Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5000,7 +4943,6 @@
         ],
         "progression": "Update Screen Pattern"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5026,7 +4968,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5052,7 +4993,6 @@
         ],
         "progression": "Declare and Call Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5078,7 +5018,6 @@
         ],
         "progression": "Declare and Call Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5104,7 +5043,6 @@
         ],
         "progression": "Declare and Call Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5130,7 +5068,6 @@
         ],
         "progression": "Declare and Call Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5156,7 +5093,6 @@
         ],
         "progression": "Declare and Call Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5182,7 +5118,6 @@
         ],
         "progression": "Function Scope"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5208,7 +5143,6 @@
         ],
         "progression": "Function Scope"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5234,7 +5168,6 @@
         ],
         "progression": "When to Declare Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5260,7 +5193,6 @@
         ],
         "progression": "When to Declare Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5286,7 +5218,6 @@
         ],
         "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5312,7 +5243,6 @@
         ],
         "progression": "Quote Maker App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5338,7 +5268,6 @@
         ],
         "progression": "Make the Quote Maker App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5364,7 +5293,6 @@
         ],
         "progression": "Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5390,7 +5318,6 @@
         ],
         "progression": "Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5416,7 +5343,6 @@
         ],
         "progression": "Create the Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5442,7 +5368,6 @@
         ],
         "progression": "Create the Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5468,7 +5393,6 @@
         ],
         "progression": "Create the Function"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5494,7 +5418,6 @@
         ],
         "progression": "Add onEvents"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5520,7 +5443,6 @@
         ],
         "progression": "Test Your Decision Maker App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5546,7 +5468,6 @@
         ],
         "progression": "Submit Your Decision Maker App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5572,7 +5493,6 @@
         ],
         "progression": "Unit 4 Exam"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6883,168 +6803,6 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "resource.key": "guide_to_explore_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "resource.key": "eipm_a_short_introduction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "resource.key": "guide_to_investigate_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "resource.key": "eipm_a_short_introduction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "resource.key": "debugging-guide-csp-20-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "resource.key": "guide_to_practice_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "resource.key": "eipm_a_short_introduction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "resource.key": "debugging_global_vs_local_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Make",
-        "resource.key": "variables-make-activity-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Make",
-        "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Make",
-        "resource.key": "guide_to_make_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Make",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Explore",
-        "resource.key": "cs-principles-conditionals-part-1-boolean-expressions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Explore",
-        "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Explore",
-        "resource.key": "guide_to_explore_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Explore",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Investigate",
-        "resource.key": "guide_to_investigate_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Investigate",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "resource.key": "debugging-guide-csp-20-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "resource.key": "guide_to_practice_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Conditional Make",
         "resource.key": "conditionals-make-activity-guide"
       }
@@ -7057,8 +6815,62 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "resource.key": "cs-principles-conditionals-part-1-boolean-expressions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "resource.key": "guide_to_eipm_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "resource.key": "guide_to_explore_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "resource.key": "guide_to_investigate_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "resource.key": "debugging-guide-csp-20-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "resource.key": "guide_to_practice_lessons"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Functions Explore / Investigate",
-        "resource.key": "song-lyrics-functions"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -7082,13 +6894,25 @@
     {
       "seeding_key": {
         "lesson.key": "Functions Explore / Investigate",
+        "resource.key": "song-lyrics-functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Make",
+        "resource.key": "csp_functions_make"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Make",
         "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions Practice",
-        "resource.key": "guide_to_practice_lessons"
+        "lesson.key": "Functions Make",
+        "resource.key": "guide_to_make_lessons"
       }
     },
     {
@@ -7105,26 +6929,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions Make",
-        "resource.key": "guide_to_make_lessons"
+        "lesson.key": "Functions Practice",
+        "resource.key": "guide_to_practice_lessons"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions Make",
+        "lesson.key": "Lesson 15: Assessment Day",
         "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions Make",
-        "resource.key": "csp_functions_make"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 1",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "resource.key": "csp_u4_practice_pt_planning_guide"
       }
     },
     {
@@ -7136,13 +6954,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 1",
-        "resource.key": "csp_u4_practice_pt_planning_guide"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 2",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "resource.key": "csp_u4_practice_pt_planning_guide"
       }
     },
     {
@@ -7154,13 +6972,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 2",
-        "resource.key": "csp_u4_practice_pt_planning_guide"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 3",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "resource.key": "csp_u4_practice_pt_planning_guide"
       }
     },
     {
@@ -7172,7 +6990,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 3",
-        "resource.key": "csp_u4_practice_pt_planning_guide"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -7201,15 +7019,135 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 15: Assessment Day",
+        "lesson.key": "Variables Explore",
         "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "resource.key": "eipm_a_short_introduction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "resource.key": "guide_to_eipm_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "resource.key": "guide_to_explore_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "resource.key": "eipm_a_short_introduction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "resource.key": "guide_to_eipm_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "resource.key": "guide_to_investigate_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "resource.key": "guide_to_eipm_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "resource.key": "guide_to_make_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "resource.key": "variables-make-activity-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "resource.key": "debugging-guide-csp-20-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "resource.key": "debugging_global_vs_local_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "resource.key": "eipm_a_short_introduction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "resource.key": "guide_to_eipm_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "resource.key": "guide_to_practice_lessons"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "guide_to_eipm_lessons",
+        "resource.key": "all_resources_4",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
         "script.name": "csp4-2021"
       }
     },
@@ -7221,7 +7159,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "course_master_vocabulary",
+        "resource.key": "guide_to_eipm_lessons",
         "script.name": "csp4-2021"
       }
     },
@@ -7234,24 +7172,6 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_4",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_4",
         "script.name": "csp4-2021"
       }
     }

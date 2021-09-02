@@ -7,4 +7,7 @@ class SpriteManagementController < ApplicationController
 
   def sprite_upload
   end
+
+  def default_sprites_editor
+  end
 end

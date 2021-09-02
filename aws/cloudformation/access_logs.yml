@@ -68,9 +68,16 @@ Parameters:
       cs-headers,
       cs-header-names,
       cs-headers-count
+  OldLogFields:
+    Type: CommaDelimitedList
+    Description: >
+      When updating fields in a log configuration, a mix of records with old and new fields will
+      arrive for up to several hours after the update. To handle records with old fields properly, copy
+      LogFields to OldLogFields.
 Resources:
   AccessLogConfig:
     Type: AWS::CloudFront::RealtimeLogConfig
+    DependsOn: AccessLogProcessor
     Properties:
       Name: !Ref AWS::StackName
       SamplingRate: 100
@@ -153,7 +160,7 @@ Resources:
         RoleARN: !GetAtt AccessLogDeliveryRole.Arn
       ExtendedS3DestinationConfiguration:
         BufferingHints: 
-          IntervalInSeconds: 60
+          IntervalInSeconds: 180
           SizeInMBs: 128
         BucketARN: !GetAtt AccessLogBucket.Arn
         RoleARN: !GetAtt AccessLogDeliveryRole.Arn
@@ -165,6 +172,8 @@ Resources:
               Parameters:
                 - {ParameterName: LambdaArn, ParameterValue: !GetAtt AccessLogProcessor.Arn}
                 - {ParameterName: RoleArn, ParameterValue: !GetAtt AccessLogDeliveryRole.Arn}
+                - {ParameterName: BufferIntervalInSeconds, ParameterValue: 180}
+                - {ParameterName: BufferSizeInMBs, ParameterValue: 3}
         DataFormatConversionConfiguration:
           Enabled: true
           InputFormatConfiguration: {Deserializer: {OpenXJsonSerDe: {}}}
@@ -181,12 +190,13 @@ Resources:
       Handler: access_logs.handler
       Runtime: ruby2.7
       MemorySize: 1024
+      Timeout: 60
       Environment:
         Variables:
           DATABASE: !Ref AccessLogDatabase
           TABLE: !Ref AccessLogTable
           LOG_FIELDS: !Join [',', !Ref LogFields]
-          CONFIG_ARN: !Ref AccessLogConfig
+          OLD_LOG_FIELDS: !Join [',', !Ref OldLogFields]
       Role: !GetAtt AccessLogRole.Arn
 
   AccessLogDatabase:
@@ -289,14 +299,6 @@ Resources:
                   - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:catalog'
                   - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:database/${AccessLogDatabase}'
                   - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:table/${AccessLogDatabase}/${AccessLogTable}'
-        - PolicyName: cloudfront
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Effect: Allow
-                Action:
-                  - cloudfront:GetRealtimeLogConfig
-                Resource: '*'
   AccessLogConfigRole:
     Type: AWS::IAM::Role
     Properties:
@@ -367,6 +369,7 @@ Resources:
                   - lambda:GetFunctionConfiguration
                 Resource:
                   - !GetAtt AccessLogProcessor.Arn
+                  - !Sub "${AccessLogProcessor.Arn}:$LATEST"
   AccessLogRedshiftSpectrumRole:
     Type: AWS::IAM::Role
     Properties:

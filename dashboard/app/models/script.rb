@@ -12,7 +12,7 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
-#  published_state :string(255)      default("in_development"), not null
+#  published_state :string(255)      default("in_development")
 #
 # Indexes
 #
@@ -60,15 +60,33 @@ class Script < ApplicationRecord
       [
         {
           script_levels: [
-            {levels: [:game, :concepts, :level_concept_difficulty]},
+            {
+              levels: [
+                :concepts,
+                :game,
+                :level_concept_difficulty,
+                :levels_child_levels
+              ]
+            },
             :lesson,
             :callouts
           ]
         },
+        :lesson_groups,
+        :resources,
+        :student_resources,
         {
-          lessons: [{script_levels: [:levels]}]
+          lessons: [
+            :lesson_activities,
+            {script_levels: [:levels]}
+          ]
         },
-        :unit_group_units
+        {
+          unit_group_units: {
+            unit_group: :course_version
+          }
+        },
+        :course_version
       ]
     )
   end
@@ -109,7 +127,9 @@ class Script < ApplicationRecord
   before_validation :hide_pilot_units
 
   def hide_pilot_units
-    self.published_state = SharedConstants::PUBLISHED_STATE.pilot unless pilot_experiment.blank?
+    if !unit_group && pilot_experiment.present?
+      self.published_state = SharedConstants::PUBLISHED_STATE.pilot
+    end
   end
 
   # As we read and write to files with the unit name, to prevent directory
@@ -122,7 +142,7 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
-  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
 
   def prevent_duplicate_levels
     reload
@@ -252,7 +272,7 @@ class Script < ApplicationRecord
   end
 
   def self.lesson_extras_script_ids
-    @@lesson_extras_scripts ||= Script.all.select(&:lesson_extras_available?).pluck(:id)
+    @@lesson_extras_scripts ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
   end
 
   def self.maker_units
@@ -296,10 +316,8 @@ class Script < ApplicationRecord
 
   class << self
     def all_scripts
-      all_scripts = Rails.cache.fetch('valid_scripts/all') do
-        Script.all.to_a
-      end
-      all_scripts.freeze
+      return all.to_a unless should_cache?
+      @@all_scripts ||= script_cache.values.uniq.compact.freeze
     end
 
     def family_names
@@ -311,10 +329,7 @@ class Script < ApplicationRecord
     private
 
     def visible_units
-      visible_units = Rails.cache.fetch('valid_scripts/valid') do
-        Script.all.select(&:launched?).to_a
-      end
-      visible_units.freeze
+      all_scripts.select(&:launched?).to_a.freeze
     end
   end
 
@@ -383,7 +398,7 @@ class Script < ApplicationRecord
   end
 
   def self.unit_cache_to_cache
-    Rails.cache.write(UNIT_CACHE_KEY, unit_cache_from_db)
+    Rails.cache.write(UNIT_CACHE_KEY, (@@unit_cache = unit_cache_from_db))
   end
 
   def self.unit_cache_from_cache
@@ -563,7 +578,7 @@ class Script < ApplicationRecord
       progress_unit_ids = user.user_levels.map(&:script_id)
       unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
       unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
-      return Script.new(redirect_to: unit_name) if unit_name
+      return Script.new(redirect_to: unit_name, published_state: SharedConstants::PUBLISHED_STATE.beta) if unit_name
     end
 
     locale_str = locale&.to_s
@@ -1008,7 +1023,7 @@ class Script < ApplicationRecord
         wrapup_video: unit_data[:wrapup_video],
         new_name: unit_data[:new_name],
         family_name: unit_data[:family_name],
-        published_state: unit_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
+        published_state: new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1289,7 +1304,7 @@ class Script < ApplicationRecord
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-          published_state: general_params[:published_state].nil? ? SharedConstants::PUBLISHED_STATE.in_development : general_params[:published_state],
+          published_state: general_params[:published_state],
           properties: Script.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
@@ -1425,15 +1440,15 @@ class Script < ApplicationRecord
   # A unit that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(get_published_state)
   end
 
   def stable?
-    published_state == SharedConstants::PUBLISHED_STATE.stable
+    get_published_state == SharedConstants::PUBLISHED_STATE.stable
   end
 
   def in_development?
-    published_state == SharedConstants::PUBLISHED_STATE.in_development
+    get_published_state == SharedConstants::PUBLISHED_STATE.in_development
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
@@ -1478,13 +1493,15 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      publishedState: published_state,
+      publishedState: get_published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       csf: csf?,
+      isCsd: csd?,
+      isCsp: csp?,
       only_instructor_review_required: only_instructor_review_required?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewLessonInfo: peer_review_lesson_info,
@@ -1504,7 +1521,7 @@ class Script < ApplicationRecord
       versions: summarize_versions(user),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
-      pilot_experiment: pilot_experiment,
+      pilot_experiment: get_pilot_experiment,
       editor_experiment: editor_experiment,
       show_assign_button: assignable_for_user?(user),
       project_sharing: project_sharing,
@@ -1524,7 +1541,8 @@ class Script < ApplicationRecord
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
       courseVersionId: get_course_version&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
-      scriptResourcesPdfUrl: get_unit_resources_pdf_url
+      scriptResourcesPdfUrl: get_unit_resources_pdf_url,
+      updated_at: updated_at.to_s
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1626,7 +1644,7 @@ class Script < ApplicationRecord
     end.to_h
 
     data[:description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.description", default: ''))
-    data[:student_description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
+    data[:studentDescription] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
 
     if include_lessons
       data[:lessonDescriptions] = lessons.map do |lesson|
@@ -1664,7 +1682,8 @@ class Script < ApplicationRecord
           version_title: s.version_year,
           can_view_version: s.can_view_version?(user),
           is_stable: s.stable?,
-          locales: s.supported_locale_names
+          locales: s.supported_locale_names,
+          locale_codes: s.supported_locales
         }
       end
 
@@ -1676,6 +1695,7 @@ class Script < ApplicationRecord
     @@unit_cache = nil
     @@unit_family_cache = nil
     @@level_cache = nil
+    @@all_scripts = nil
     Rails.cache.delete UNIT_CACHE_KEY
   end
 
@@ -1778,6 +1798,17 @@ class Script < ApplicationRecord
     course_version || unit_group&.course_version
   end
 
+  # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
+  # If both are null, the script is in_development
+  def get_published_state
+    published_state || unit_group&.published_state || SharedConstants::PUBLISHED_STATE.in_development
+  end
+
+  # Use the unit group's pilot_experiment if one exists
+  def get_pilot_experiment
+    pilot_experiment || unit_group&.pilot_experiment
+  end
+
   # @return {String|nil} path to the course overview page for this unit if there
   #   is one.
   def course_link(section_id = nil)
@@ -1789,6 +1820,10 @@ class Script < ApplicationRecord
 
   def course_title
     unit_group.try(:localized_title)
+  end
+
+  def unversioned?
+    version_year.blank? || version_year == CourseVersion::UNVERSIONED
   end
 
   # If there is an alternate version of this unit which the user should be on
@@ -1830,6 +1865,7 @@ class Script < ApplicationRecord
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
+    info[:supported_locale_codes] = supported_locale_codes
     info[:lesson_extras_available] = lesson_extras_available
     if has_standards_associations?
       info[:standards] = standards
@@ -1837,11 +1873,14 @@ class Script < ApplicationRecord
     info
   end
 
-  def supported_locale_names
+  def supported_locale_codes
     locales = supported_locales || []
-    locales += ['en-US']
-    locales = locales.sort
-    locales.map {|l| Script.locale_native_name_map[l] || l}.uniq
+    locales += ['en-US'] unless locales.include? 'en-US'
+    locales.sort
+  end
+
+  def supported_locale_names
+    supported_locale_codes.map {|l| Script.locale_native_name_map[l] || l}.uniq
   end
 
   def self.locale_native_name_map
@@ -1869,30 +1908,10 @@ class Script < ApplicationRecord
   end
 
   def get_feedback_for_section(section)
-    rubric_performance_headers = {
-      performanceLevel1: "Extensive Evidence",
-      performanceLevel2: "Convincing Evidence",
-      performanceLevel3: "Limited Evidence",
-      performanceLevel4: "No Evidence"
-    }
-
-    rubric_performance_json_to_ruby = {
-      performanceLevel1: "rubric_performance_level_1",
-      performanceLevel2: "rubric_performance_level_2",
-      performanceLevel3: "rubric_performance_level_3",
-      performanceLevel4: "rubric_performance_level_4"
-    }
-
-    review_state_labels = {
-      keepWorking: "Needs more work",
-      completed: "Reviewed, completed"
-    }
-
     feedback = {}
 
-    level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
     student_ids = section.students.map(&:id)
-    all_feedback = TeacherFeedback.get_latest_feedbacks_given(student_ids, level_ids, id, section.user_id)
+    all_feedback = TeacherFeedback.get_latest_feedbacks_given(student_ids, nil, id, section.user_id)
 
     feedback_hash = {}
     all_feedback.each do |feedback_element|
@@ -1901,25 +1920,23 @@ class Script < ApplicationRecord
     end
 
     script_levels.each do |script_level|
-      next unless script_level.oldest_active_level.can_have_feedback?
-      section.students.each do |student|
-        current_level = script_level.oldest_active_level
-        next unless feedback_hash[student.id]
-        temp_feedback = feedback_hash[student.id][current_level.id]
-        next unless temp_feedback
-        feedback[temp_feedback.id] = {
-          studentName: student.name,
-          lessonNum: script_level.lesson.relative_position.to_s,
-          lessonName: script_level.lesson.localized_title,
-          levelNum: script_level.position.to_s,
-          keyConcept: (current_level.rubric_key_concept || ''),
-          performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),
-          performance: rubric_performance_headers[temp_feedback.performance&.to_sym],
-          comment: temp_feedback.comment,
-          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r"),
-          reviewStateLabel: review_state_labels[temp_feedback.review_state&.to_sym] || "Never reviewed",
-          studentSeenFeedback: temp_feedback.student_seen_feedback&.localtime&.strftime("%D at %r")
-        }
+      current_level = script_level.oldest_active_level
+
+      if current_level.can_have_feedback?
+        section.students.each do |student|
+          next unless temp_feedback = feedback_hash.dig(student.id, current_level.id)
+          feedback[temp_feedback.id] = temp_feedback.summarize_for_csv(current_level, script_level, student)
+        end
+      end
+
+      next unless sublevels = current_level.try(:sublevels)
+      sublevels.each_with_index do |sublevel, sublevel_index|
+        next unless sublevel.can_have_feedback?
+
+        section.students.each do |student|
+          next unless temp_feedback = feedback_hash.dig(student.id, sublevel.id)
+          feedback[temp_feedback.id] = temp_feedback.summarize_for_csv(sublevel, script_level, student, sublevel_index)
+        end
       end
     end
 
@@ -1927,7 +1944,7 @@ class Script < ApplicationRecord
   end
 
   def pilot?
-    !!pilot_experiment
+    !!get_pilot_experiment
   end
 
   def has_pilot_access?(user = nil)
@@ -1947,8 +1964,7 @@ class Script < ApplicationRecord
 
   # Whether this particular user has the pilot experiment enabled.
   def has_pilot_experiment?(user)
-    return false unless pilot_experiment
-    SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
+    user.has_pilot_experiment?(get_pilot_experiment)
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot
@@ -1962,8 +1978,7 @@ class Script < ApplicationRecord
   # If a user is in the editor experiment of this unit, that indicates that
   # they are a platformization partner who owns this unit.
   def has_editor_experiment?(user)
-    return false unless editor_experiment
-    SingleUserExperiment.enabled?(user: user, experiment_name: editor_experiment)
+    user.has_pilot_experiment?(editor_experiment)
   end
 
   def self.get_version_year_options

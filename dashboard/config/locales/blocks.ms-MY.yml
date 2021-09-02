@@ -341,7 +341,7 @@ ms:
             '"circle"': bulatan
             '"grid"': grid
             '"top"': barisan Atas
-            '"row"': baris
+            '"row"': kelas
             '"bottom"': barisan Bawah
             '"left"': lajur Kiri
             '"column"': lajur
@@ -425,7 +425,7 @@ ms:
             '"DOG"': anjing
             '"DUCK"': itik
             '"FROG"': katak
-            '"MOOSE"': rusa Amerika utara
+            '"MOOSE"': rusa
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
@@ -437,7 +437,7 @@ ms:
             '"circle"': bulatan
             '"grid"': grid
             '"top"': barisan Atas
-            '"row"': baris
+            '"row"': kelas
             '"bottom"': barisan Bawah
             '"left"': lajur Kiri
             '"column"': lajur
@@ -877,7 +877,7 @@ ms:
             '"left"': kiri
             '"down"': bawah
             '"right"': kanan
-            '"space"': ruang
+            '"space"': angkasa
             '"enter"': masuk
             '"a"': a
             '"b"': b
@@ -927,6 +927,10 @@ ms:
         text: persediaan
       gamelab_addBehaviorSimple:
         text: bidadari {SPRITE} bermula {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': elak
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -973,9 +977,6 @@ ms:
             '"speed"': kelajuan
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
-        options:
-          CHOICE:
-            '"this"': ini
       gamelab_getTime:
         options:
           UNIT:
@@ -1058,13 +1059,6 @@ ms:
             '"z"': z
       gamelab_locationAt:
         text: 'lokasi x: {X} y: {Y}'
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': Utara
-            '"East"': Timur
-            '"South"': Selatan
-            '"West"': Barat
       gamelab_locationMouse:
         text: lokasi tetikus
       gamelab_locationOf:
@@ -1085,12 +1079,6 @@ ms:
         text: bergerak {SPRITE} {DISTANCE} piksel ke hadapan
       gamelab_moveInDirection:
         text: bergerak {SPRITE} {DISTANCE} piksel {DIRECTION} 12321
-        options:
-          DIRECTION:
-            '"North"': Utara
-            '"East"': Timur
-            '"South"': Selatan
-            '"West"': Barat
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} ke arah {TARGET}
       gamelab_newSpritePointer:
@@ -1101,12 +1089,6 @@ ms:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Utara
-            '"East"': Timur
-            '"South"': Selatan
-            '"West"': Barat
       gamelab_printText:
         text: cetak {TEXT}
       gamelab_randColor:
@@ -1137,7 +1119,6 @@ ms:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaksi
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grid
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': pelangi
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': SCI-fi
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': bintang
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': di
               bawah permukaan air
@@ -1155,6 +1136,7 @@ ms:
             '"direction"': arah pergerakan
             '"speed"': kelajuan
       gamelab_setProp_dropdown:
+        text: tetapkan {SPRITE} {PROPERTY} kepada {SIZE}
         options:
           PROPERTY:
             '"scale"': saiz
@@ -1283,14 +1265,9 @@ ms:
             '"direction"': arah pergerakan
       Mikelab_groupChangeAnim:
         text: tukar {SELECT} {COSTUME} kepada {COSTUME2}
-        options:
-          SELECT:
-            '"this"': ini
       Mikelab_groupChangePropBy:
         text: Menukar {PROPERTY} daripada {SELECT} {COSTUME} Oleh {VAL}
         options:
-          SELECT:
-            '"this"': ini
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
@@ -1310,9 +1287,6 @@ ms:
             "{x: 300, y: 300}": bahagian bawah sebelah kanan
       Mikelab_groupDestroy:
         text: keluarkan {SELECT} {COSTUME}
-        options:
-          SELECT:
-            '"this"': ini
       Mikelab_groupDisplace:
         text: semua {COSTUME} blok {COSTUME2} dari bergerak
       Mikelab_groupEdgesDisplace:
@@ -1320,42 +1294,25 @@ ms:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME} {PROPERTY} 12321 123_321"
         options:
-          SELECT:
-            '"average"': purata
-            '"this"': ini
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
             '"direction"': arah pergerakan
       Mikelab_groupRemoveAllBehaviors:
         text: berhenti {SELECT} {COSTUME} tingkah laku
-        options:
-          SELECT:
-            '"this"': ini
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} berhenti {BEHAVIOR} 12321"
-        options:
-          SELECT:
-            '"this"': ini
       Mikelab_groupRemoveTint:
         text: keluarkan warna dari {SELECT} {COSTUME}
-        options:
-          SELECT:
-            '"this"': ini
       Mikelab_groupSetProp:
         text: Set {PROPERTY} daripada {SELECT} {COSTUME} Untuk {VAL}
         options:
-          SELECT:
-            '"this"': ini
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
             '"direction"': arah pergerakan
       Mikelab_groupSetTint:
         text: Tukar warna {SELECT} {COSTUME} Untuk {COLOR}
-        options:
-          SELECT:
-            '"this"': ini
       Mikelab_groupWhenClickedOn:
         text: ketika {COSTUME} diklik
       Mikelab_groupWhenXTouchesY:
@@ -1415,6 +1372,8 @@ ms:
           DANCE:
             MOVES.ClapHigh: ikan
             MOVES.Clown: bukan saya-label
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'lokasi x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1487,6 +1446,27 @@ ms:
         text: koordinat x dari {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat dari {SPRITE}
+      Outbreak_beginCongregating:
+        text: raksasa mula berhimpun
+      Outbreak_beginQuarantining:
+        text: raksasa mula mengkuarantinkan diri apabila sakit
+      Outbreak_beginSocialDistancing:
+        text: raksasa mula mengamalkan penjarakan sosial
+      Outbreak_beginWandering:
+        text: raksasa mula merayau
+      Outbreak_beginWearingMasks:
+        text: raksasa mula memakai pelitup muka
+      Outbreak_stopMoving:
+        text: raksasa berhenti bergerak
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': pelangi
+      PoemBot_setForegroundEffect:
+        text: tetapkan kesan {FG_EFFECT} latar depan
+        options:
+          FG_EFFECT:
+            '"bubbles"': gelembung
       RyanLab_moveForward:
         text: bergerak ke hadapan
       RyanLab_turnLeft:
@@ -1525,7 +1505,7 @@ ms:
           FORMAT:
             '"grid"': grid
             '"border"': sempadan
-            '"row"': baris
+            '"row"': kelas
             '"random"': rawak
       binary_drawBin:
         text: menarik binari {BIN}
@@ -1548,7 +1528,6 @@ ms:
           VAL:
             '0': 'off'
             '1': pada
-            '"toggle"': togol
       binary_drawString:
         text: lukis rentetan {STR}
       binary_goTo:
@@ -1585,20 +1564,14 @@ ms:
         options:
           DIR:
             "'ahead'": di hadapan
-            "'right'": ke kanan
-            "'left'": ke kiri
       craft_ifStandingOn:
         text: |-
           jika berdiri di {TYPE}
           {STATEMENT} 123_321
         options:
           TYPE:
-            "'blueCoralBlock'": karang biru
-            "'redCoralBlock'": karang merah
             "'sand'": pasir
-            "'wool_blue'": air dalam
             "'planksOak'": papan oak
-            "'seaLantern'": tanglung laut
       craft_ifStandingOnLimit:
         text: |-
           jika berdiri di {TYPE}
@@ -1606,40 +1579,12 @@ ms:
         options:
           TYPE:
             "'sand'": pasir
-            "'darkPrismarine'": prismarin gelap
-            "'seaLantern'": tanglung laut
       craft_log:
         text: mesej log {MESSAGE}
       craft_moveForward:
         text: bergerak ke hadapan
       craft_placeBlock:
         text: tempat {blockType}
-        options:
-          blockType:
-            '"strippedOak"': dilucutkan oak
-            '"strippedDarkOak"': dilucutkan oak gelap
-            '"stoneBricks"': batu bata
-            '"mossyStoneBricks"': batu bata berlumut
-            '"crackedStoneBricks"': batu bata retak
-            '"blueCoralBlock"': blok karang biru
-            '"pinkCoralBlock"': blok karang merah jambu
-            '"magentaCoralBlock"': blok karang magenta
-            '"redCoralBlock"': blok karang merah
-            '"yellowCoralBlock"': blok karang kuning
-            '"blueDeadCoralBlock"': blok karang mati biru
-            '"pinkDeadCoralBlock"': merah jambu blok karang mati
-            '"magentaDeadCoralBlock"': blok karang mati magenta
-            '"readDeadCoralBlock"': blok karang mati merah
-            '"yellowDeadCoralBlock"': blok karang mati kuning
-            '"prismarine"': Prismarine
-            '"darkPrismarine"': prismarin gelap
-            '"seaLantern"': tanglung laut
-            '"packedIce"': ais dibungkus
-            '"blueIce"': ais biru
-            '"blackConcrete"': konkrit hitam
-            '"seaGrass"': rumput laut
-            '"kelp"': kelp
-            '"polishedGranite"': granit digilap
       craft_placePrismarine:
         text: tempat prismarine
       craft_placeTorch:
@@ -1656,15 +1601,13 @@ ms:
         text: bertelur {ENTITY}
         options:
           ENTITY:
-            '"cod"': kod
             '"dolphin"': lumba-lumba
-            '"salmon"': salmon
-            '"seaTurtle"': penyu laut
             '"squid"': sotong
-            '"tropicalFish"': ikan tropika
       craft_turn:
         text: menghidupkan {DIR}
         options:
           DIR:
             right: kanan?
             left: kiri
+      validation_validatedBackground:
+        text: tetapkan latar belakang ke {IMG}

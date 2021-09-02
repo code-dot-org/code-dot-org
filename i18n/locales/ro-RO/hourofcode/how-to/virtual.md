@@ -1,71 +1,71 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Ghidul Hour of Code pentru evenimente virtuale
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# Sfaturi pentru un eveniment virtual Hour of Code
 
-### You don't have to be in-person to run a successful Hour of Code!
+### Nu trebuie să te prezinți personal pentru a organiza un eveniment Hour of Code de succes!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+Deși Hour of Code se desfășoară în mod tradițional în sălile de clasă din întreaga lume, nu este nevoie să fii acolo în persoană pentru a te distra! Poți găzdui un eveniment Hour of Code interactiv și interesant la distanță, folosind unele dintre recomandările de mai jos.  Consultă [ghidul nostru pentru evenimente virtuale]({{ localized_files/participation_guide_virtual }}) dacă ai întrebări.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+## Nu vă aflați în același loc, dar puteți începe împreună
+Chiar dacă intenția este ca elevii să își desfășoare activitățile în mod independent, îți recomandăm să începi evenimentul cu o întâlnire virtuală de lansare online, pentru a-i entuziasma pe participanți. Există mai multe moduri interesante prin care poți începe evenimentul: 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>Invită pe cineva să țină o prelegere</b>: Mii de voluntari din toate domeniile așteaptă să te asculte! Folosește <a href="https://code.org/volunteer/local">harta voluntarilor</a> pentru a-i căuta. În cazul unui eveniment virtual Hour of Code nu ești limitat de distanță, așa că, dacă este necesar, ia în considerare posibilitatea de a căuta voluntari și în alte regiuni, pentru a te ajuta de la distanță. După ce ai stabilit o legătură cu un voluntar, poți menționa <a href="http://hourofcode.com/us/how-to/volunteers">Ghidul voluntarilor pentru evenimente Hour of Code</a> pentru a stabili subiecte potențiale, întrebări care să conducă la discuții și multe altele.</li> 
+<li><b>Prezintă un clip video inspirațional</b>: O altă opțiune cu care poți începe evenimentul este să vizionați împreună cu participanții unul dintre numeroasele noastre <a href="http://hourofcode.com/us/promote/resources#videos">clipuri video inspiraționale</a>. Majoritatea clipurilor video au o durată de maxim 5 minute și conțin discursuri ale unor celebrități, pe care elevii le vor recunoaște și care îi vor inspira și încuraja pe elevi.</li> 
+<li><b>Discută despre știința calculatoarelor și puterea acesteia de a face bine în lume</b>: Transformă evenimentul Hour of Code într-o posibilitate de a înțelege știința calculatoarelor la un nivel mai profund, luând în considerare impactul tehnologiei asupra vieții noastre de zi cu zi. Adresează elevilor întrebări orientative și transformă începutul evenimentului într-o discuție interactivă. Pentru idei pentru a începe conversația, consultă aceste <a href="https://code.org/csforgood#prompts">întrebări</a>.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## Ce trebuie să pregătești din timp
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. Stabilește care va fi platforma de videoconferință utilizată
+Probabil că ești deja familiarizat cu platforme precum Cisco Webex, Google Meet, Microsoft Teams, Skype sau Zoom. Indiferent de platforma pe care o preferi, te încurajăm să te familiarizezi cu aceasta, să îi testezi capacitățile și să parcurgi ordinea de zi a evenimentului Hour of Code înainte de data evenimentului.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. Planifică modul în care vor participa elevii
+**Activitate de tip "Hour of Code" pe cont propriu**<br>Îți recomandăm ca, după începerea evenimentului, să le permiți elevilor să părăsească videoconferința pentru a lucra singuri la <a href="https://hourofcode.com/us/learn">activitățile Hour of Code</a> pe cont propriu. Acest lucru le va permite elevilor să se concentreze asupra propriilor proiecte și să înțeleagă mai bine conceptele de ȘC. De asemenea, acest lucru va reduce numărul situațiilor care le pot distrage atenția elevilor și va elimina obstacolul prezentat de fereastra de videoconferință care a rămas deschisă.
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+Stabilește din timp 1 până la 3 opțiuni de tutoriale dintre care elevii să aleagă. Aceasta le vă permite să alegeți activitățile care sunt cele mai potrivite pentru nivelul clasei lor. În plus, dacă elevii au întrebări pentru care au nevoie de ajutorul tău, vei fi mai bine pregătit să îi ajuți dacă ești deja familiarizați cu tutorialele la care lucrează.
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+Dacă elevii urmează să își desfășoare activitatea imediat după începerea lecției, poți lua în considerare posibilitatea de a deschide o sesiune de conferințe virtuale, o platformă de chat sau alte mijloace de comunicare, pentru ca elevii să poată lua legătura cu tine pentru a-ți adresa întrebări, dacă este necesar.
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+**Activitatea Hour of Code - împreună, online**<br>Dacă preferi ca participanții să continue să participe la aceeași convorbire video pe toată durata evenimentului, reține că aceștia vor trebui să aibă două ferestre deschise în permanență - una pentru platforma de videoconferință și cealaltă pentru ca aceștia să lucreze la activitatea lor.
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**Cu părinții**<br>Pentru elevii din clasa a IV-a și mai mici, încurajează-i pe părinți să găzduiască acasă un eveniment Hor of Code. Le poți acorda asistență sub forma unor tutoriale recomandate, precum și prin intermediul <a href="https://hourofcode.com/us/how-to/parents">Ghidului pentru părinți</a>, un instrument foarte util.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. Înrolează un voluntar
+Poți găsi un voluntar potrivit nevoilor tale vizitând <a href="https://code.org/volunteer/local">harta</a> <a href="https://code.org/volunteer/local">voluntarilor</a>. Mulți dintre aceștia pot participa de la distanță și sunt dispuși să vorbească despre experiența lor în domeniul științei calculatoarelor, despre impactul pe care tehnologia îl are asupra funcțiilor lor sau pot pur și simplu să te ajute să răspunzi la întrebările elevilor. Odată ce ai găsit un voluntar, asigură-te că ai stabilit din timp o întâlnire cu acesta pentru a discuta rolul său în cadrul evenimentului, pentru a stabili cerințele tehnice și aspectele logistice ale participării online.
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+### 4. Materiale pentru sărbătorirea evenimentului
+Mai jos vei găsi câteva idei pentru a sărbători evenimentul virtual Hour of Code. Pentru unele dintre acestea va trebui să te pregătești din timp, cum ar fi crearea de <a href="https://code.org/certificates">certificate de absolvire</a> pentru toți participanții.
 
 ---
 
-## Celebrate together
+## Sărbătoriți împreună
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+Ați început împreună evenimentul, acum adunați-vă după eveniment pentru a sărbători! Iată câteva idei pentru a face ca această ocazie virtuală să fie interactivă și deosebită:
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Permite-le elevilor să le arate colegilor proiectele finalizate. Dacă platforma de conferință permite acest lucru, îi poți chiar încuraja pe elevi să facă o captură de ecran a proiectelor lor și să o seteze ca fundal virtual!
+- Discutați despre ce au învățat: Ce au învățat despre știința calculatoarelor sau tehnologie? Ce au făcut atunci când s-au confruntat cu o problemă, cum au rezolvat-o?
+- <a href="https://code.org/certificates">Creează și distribuie certificate</a> pentru participanți.
+- Distribuie fotografii și clipuri video de la evenimentul virtual Hour of Code pe rețelele de socializare. Folosește #HourOfCode și @codeorg pentru ca și noi să le spunem altora despre succesul tău!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+Dacă nu ai început evenimentul cu un <a href="https://code.org/volunteer/local">invitat care să se adreseze elevilor</a>, cu un <a href="https://hourofcode.com/us/promote/resources#">clip video inspirațional</a> sau cu <a href="https://code.org/csforgood#prompts">întrebări</a>, aceasta este o ocazie excelentă de a încorpora și una dintre aceste experiențe.
 
 {{ signup_button }}

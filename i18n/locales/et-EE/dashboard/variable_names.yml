@@ -2,7 +2,11 @@ et:
   data:
     variable_names:
       actor: tegelane
+      age: vanus
+      answer: vastus
+      binary: binaarne
       cats: kõik kassid
+      color: värv
       counter: loendur
       dogs: kõik koerad
       height: kõrgus

@@ -7,7 +7,7 @@ import {
   BasicTooltip,
   BubbleSize
 } from './BubbleFactory';
-import {BubbleBadgeWrapper, KeepWorkingBadge} from './BubbleBadge';
+import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {defaultBubbleIcon} from './progressHelpers';
 import {levelProgressStyle} from './progressStyles';
 import FontAwesome from '../FontAwesome';
@@ -306,17 +306,20 @@ export default class ProgressLegend extends Component {
   }
 
   getBubble(status, isConcept, text, includeKeepWorkingBadge = false) {
+    const shape = isConcept ? BubbleShape.diamond : BubbleShape.circle;
     return (
       <BasicTooltip icon={defaultBubbleIcon} text={text}>
         <BasicBubble
-          shape={isConcept ? BubbleShape.diamond : BubbleShape.circle}
+          shape={shape}
           size={BubbleSize.full}
           progressStyle={levelProgressStyle(status)}
         >
           {includeKeepWorkingBadge && (
-            <BubbleBadgeWrapper isDiamond={isConcept}>
-              <KeepWorkingBadge />
-            </BubbleBadgeWrapper>
+            <BubbleBadge
+              badgeType={BadgeType.keepWorking}
+              bubbleSize={BubbleSize.full}
+              bubbleShape={shape}
+            />
           )}
         </BasicBubble>
       </BasicTooltip>

@@ -12,6 +12,7 @@ import locales from '@cdo/apps/redux/localesRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 export function fakeRowsForStudents(students) {
   const rows = [];
@@ -96,6 +97,7 @@ function randomProgress(level) {
   const rand = Math.floor(Math.random() * 4);
   const paired = Math.floor(Math.random() * 10) === 0;
   const timeSpent = level.isConceptLevel ? 0 : Math.random() * 60 * 60 + 1;
+  const timestamp = Date.now() / 1000;
   switch (rand) {
     case 0:
       return {
@@ -104,7 +106,8 @@ function randomProgress(level) {
         result: TestResults.MINIMUM_OPTIMAL_RESULT,
         paired: paired,
         timeSpent: timeSpent,
-        lastTimestamp: Date.now()
+        lastTimestamp: timestamp,
+        reviewState: randomReviewState()
       };
     case 1:
       return {
@@ -113,7 +116,8 @@ function randomProgress(level) {
         result: TestResults.LEVEL_STARTED,
         paired: paired,
         timeSpent: timeSpent,
-        lastTimestamp: Date.now()
+        lastTimestamp: timestamp,
+        reviewState: randomReviewState()
       };
     case 2:
       return {
@@ -122,8 +126,21 @@ function randomProgress(level) {
         result: TestResults.TOO_MANY_BLOCKS_FAIL,
         paired: paired,
         timeSpent: timeSpent,
-        lastTimestamp: Date.now()
+        lastTimestamp: timestamp,
+        reviewState: randomReviewState()
       };
+    default:
+      return null;
+  }
+}
+
+function randomReviewState() {
+  const rand = Math.floor(Math.random() * 20);
+  switch (rand) {
+    case 0:
+      return ReviewStates.keepWorking;
+    case 1:
+      return ReviewStates.awaitingReview;
     default:
       return null;
   }

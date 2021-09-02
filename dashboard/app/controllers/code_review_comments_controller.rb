@@ -3,16 +3,13 @@ class CodeReviewCommentsController < ApplicationController
   before_action :decrypt_channel_id, only: [:create, :project_comments]
 
   check_authorization
-  load_and_authorize_resource :code_review_comment, only: [:resolve, :destroy]
+  load_and_authorize_resource :code_review_comment, only: [:toggle_resolved, :destroy]
 
   # POST /code_review_comments
   def create
     additional_attributes = {
-      # Using temporary placeholder string for currently required project_version.
-      # Immediate to-do to migrate the code_review_comments table to not require project_version.
       commenter_id: current_user.id,
       storage_app_id: @storage_app_id,
-      project_version: 'temporary placeholder',
       project_owner_id: @project_owner.id
     }
     @code_review_comment = CodeReviewComment.new(code_review_comments_params.merge(additional_attributes))
@@ -28,10 +25,9 @@ class CodeReviewCommentsController < ApplicationController
     end
   end
 
-  # PATCH /code_review_comments/:id/resolve
-  def resolve
-    @code_review_comment.inspect
-    if @code_review_comment.update(is_resolved: true)
+  # PATCH /code_review_comments/:id/toggle_resolved
+  def toggle_resolved
+    if @code_review_comment.update(is_resolved: params[:is_resolved])
       return head :ok
     else
       return head :bad_request
@@ -58,6 +54,11 @@ class CodeReviewCommentsController < ApplicationController
       storage_app_id: @storage_app_id
     ).order(:created_at)
 
+    # Keep teacher comments private between project owner and teacher.
+    unless @project_owner.student_of?(current_user) || @project_owner == current_user
+      @project_comments = @project_comments.reject {|comment| !!comment.is_from_teacher}
+    end
+
     serialized_comments = @project_comments.map {|comment| serialize(comment)}
 
     render json: serialized_comments
@@ -71,18 +72,18 @@ class CodeReviewCommentsController < ApplicationController
     @project_owner = User.find_by(id: user_id_for_storage_id(@storage_id))
   end
 
-  # TO DO: modify permit_params to handle other parameters (eg, section ID)
   def code_review_comments_params
     params.permit(
       :comment,
+      :script_id,
+      :level_id,
       :is_resolved
     )
   end
 
   def serialize(comment)
-    # once project versioning is implemented,
-    # we should pass the project_version string to the front end
-    # and calculate isFromOlderVersionOfProject there.
+    # once comments associated with project versions is implemented,
+    # we should calculate isFromOlderVersionOfProject there.
     {
       id: comment.id,
       name: comment.commenter&.name,
@@ -92,6 +93,7 @@ class CodeReviewCommentsController < ApplicationController
       isResolved: !!comment.is_resolved,
       isFromTeacher: !!comment.is_from_teacher,
       isFromCurrentUser: !!(comment.commenter == current_user),
+      isFromProjectOwner: !!(comment.commenter == @project_owner),
       isFromOlderVersionOfProject: false
     }
   end

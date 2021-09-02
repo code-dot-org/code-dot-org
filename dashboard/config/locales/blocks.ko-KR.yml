@@ -8,15 +8,15 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           MOVE1:
@@ -62,17 +62,17 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
-            '"UNICORN"': 모든 유니콘
+            '"UNICORN"': 유니콘
           MOVE:
             '"next"': "(다음)"
             '"prev"': "(이전)"
@@ -122,15 +122,15 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           PROPERTY:
@@ -146,15 +146,15 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           MOVE:
@@ -301,15 +301,15 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           LOCATION:
@@ -329,15 +329,15 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           FORMAT:
@@ -347,7 +347,7 @@ ko:
             '"circle"': 원
             '"grid"': 그리드
             '"top"': 위쪽 행
-            '"row"': 행
+            '"row"': class
             '"bottom"': 아래쪽 행
             '"left"': 왼쪽 열
             '"column"': 열
@@ -391,10 +391,10 @@ ko:
             '"ALIEN"': 외계인
             '"BEAR"': 곰
             '"CAT"': 고양이
-            '"DOG"': 개
+            '"DOG"': 강아지
             '"DUCK"': 오리
             '"FROG"': 개구리
-            '"MOOSE"': 사슴
+            '"MOOSE"': 모든 사슴
             '"PINEAPPLE"': 파인애플
             '"ROBOT"': 로봇
             '"SHARK"': 상어
@@ -437,15 +437,15 @@ ko:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': 외계인
+            '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
-            '"CAT"': 고양이
-            '"DOG"': 개
+            '"CAT"': 모든 고양이
+            '"DOG"': 모든 개
             '"DUCK"': 오리
             '"FROG"': 개구리
-            '"MOOSE"': 사슴
+            '"MOOSE"': 모든 사슴
             '"PINEAPPLE"': 파인애플
-            '"ROBOT"': 로봇
+            '"ROBOT"': 모든 로봇
             '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
@@ -456,7 +456,7 @@ ko:
             '"circle"': 원
             '"grid"': 그리드
             '"top"': 위쪽 행
-            '"row"': 행
+            '"row"': class
             '"bottom"': 아래쪽 행
             '"left"': 왼쪽 열
             '"column"': 열
@@ -494,7 +494,7 @@ ko:
             '"splatter"': 페인트 튀기기
             '"rainbow"': 무지개
             '"snowflakes"': 눈
-            '"text"': 노래 제목
+            '"text"': 음악 제목
             '"galaxy"': 우주
             '"sparkles"': 반짝이
             '"spiral"': 나선
@@ -502,7 +502,7 @@ ko:
             '"stars"': 별
           PALETTE:
             '"rave"': 흑백
-            '"cool"': 시원시원
+            '"cool"': 파란색
             '"electronic"': 일렉트로닉
             '"iceCream"': 아이스크림
             '"default"': 빛
@@ -534,7 +534,7 @@ ko:
             '"ripples_random"': 랜덤 물결
             '"ripples"': 물결
             '"snowflakes"': 눈
-            '"text"': 노래 제목
+            '"text"': 음악 제목
             '"squiggles"': 구불구불
             '"galaxy"': 우주
             '"sparkles"': 반짝이
@@ -544,7 +544,7 @@ ko:
             '"music_wave"': 파도
           PALETTE:
             '"rave"': 흑백
-            '"cool"': 시원시원
+            '"cool"': 파란색
             '"electronic"': 일렉트로닉
             '"iceCream"': 아이스크림
             '"default"': 빛
@@ -567,15 +567,15 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           SPEED:
@@ -641,15 +641,15 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           PROPERTY:
@@ -677,15 +677,15 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           PROPERTY:
@@ -704,15 +704,15 @@ ko:
           THIS:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
       Dancelab_setTintEachInline:
@@ -721,15 +721,15 @@ ko:
           THIS:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
       Dancelab_setTintInline:
@@ -746,15 +746,15 @@ ko:
           THIS:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           VISIBILITY:
@@ -781,15 +781,15 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           PROPERTY:
@@ -826,15 +826,15 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
-            '"BEAR"': 모든 곰
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
-            '"DUCK"': 모든 오리
-            '"FROG"': 모든 개구리
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
-            '"PINEAPPLE"': 모든 파인애플
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
-            '"SHARK"': 모든 상어
+            '"SHARK"': 상어
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           PROPERTY:
@@ -904,7 +904,7 @@ ko:
             '"left"': 왼쪽으로
             '"down"': 아래로
             '"right"': 오른쪽으로
-            '"space"': 스페이스바
+            '"space"': 우주
             '"enter"': 입력
             '"a"': a
             '"b"': b
@@ -957,6 +957,9 @@ ko:
         text: 스프라이트 {SPRITE} 시작 {BEHAVIOR}
       gamelab_addTarget:
         text: "{SPRITE}가 목표물 {TARGET}을 얻습니다"
+        options:
+          OPT:
+            '"avoid"': avoid
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -984,7 +987,7 @@ ko:
         options:
           CONDITION:
             '"when"': "~할 때"
-            '"while"': 동안
+            '"while"': '반복(~인 동안):'
       gamelab_clickedOn:
         text: 때 {SPRITE} 클릭
       gamelab_clickedSpritePointer:
@@ -1022,7 +1025,6 @@ ko:
         text: "{CHOICE} 스프라이트"
         options:
           CHOICE:
-            '"this"': 이
             '"other"': 기타
       gamelab_getTime:
         text: "{UNIT} 내 시간"
@@ -1084,7 +1086,7 @@ ko:
         options:
           CONDITION:
             '"when"': "~할 때"
-            '"while"': 동안
+            '"while"': '반복(~인 동안):'
           KEY:
             '"up"': 위로
             '"down"': 아래로
@@ -1121,12 +1123,6 @@ ko:
         text: '위치 x: {X} Y: {Y}'
       gamelab_locationModifier:
         text: "{LOCATION}의 {DISTANCE} 픽셀 {DIRECTION}  "
-        options:
-          DIRECTION:
-            '"North"': 북쪽
-            '"East"': 동쪽
-            '"South"': 남쪽
-            '"West"': 서쪽
       gamelab_locationMouse:
         text: 마우스 위치
       gamelab_locationOf:
@@ -1151,12 +1147,6 @@ ko:
         text: 이동 {SPRITE} {DISTANCE} 픽셀 앞으로
       gamelab_moveInDirection:
         text: 이동 {SPRITE} {DISTANCE} 픽셀 {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 북쪽
-            '"East"': 동쪽
-            '"South"': 남쪽
-            '"West"': 서쪽
       gamelab_moveToward:
         text: 이동 {SPRITE} 픽셀 {DISTANCE} 향해 {TARGET}
       gamelab_newSpritePointer:
@@ -1169,12 +1159,6 @@ ko:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
         text: 지점 {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 북쪽
-            '"East"': 동쪽
-            '"South"': 남쪽
-            '"West"': 서쪽
       gamelab_printText:
         text: 인쇄 {TEXT}
       gamelab_randColor:
@@ -1206,9 +1190,8 @@ ko:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': 은하
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 그리드
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 비
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': 공상
-              과학
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 별
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': 지하철
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 물속
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 겨울
             undefined: 없음
@@ -1237,6 +1220,7 @@ ko:
             '"direction"': 움직임 방향
             '"speed"': 스피드
       gamelab_setProp_dropdown:
+        text: "{SPRITE} {PROPERTY}을(를) {SIZE}(으)로 설정"
         options:
           PROPERTY:
             '"scale"': 크기
@@ -1268,7 +1252,7 @@ ko:
         options:
           CONDITION:
             '"when"': "~할 때"
-            '"while"': 동안
+            '"while"': '반복(~인 동안):'
       gamelab_stopCollectingData:
         text: 데이터 수집 중지
       gamelab_subjectSpritePointer:
@@ -1397,13 +1381,11 @@ ko:
         options:
           SELECT:
             '"all"': 모두
-            '"this"': 이
       Mikelab_groupChangePropBy:
         text: 변경 {PROPERTY} 의 {SELECT} {COSTUME} 의해 {VAL}
         options:
           SELECT:
             '"all"': 모두
-            '"this"': 이
           PROPERTY:
             '"scale"': 크기
             '"rotation"': 회전
@@ -1428,7 +1410,6 @@ ko:
         options:
           SELECT:
             '"all"': 모두
-            '"this"': 이
       Mikelab_groupDisplace:
         text: 모든 {COSTUME} 블록 {COSTUME2} 이동에서
       Mikelab_groupEdgesDisplace:
@@ -1436,9 +1417,6 @@ ko:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME}'의 {PROPERTY}"
         options:
-          SELECT:
-            '"average"': 평균
-            '"this"': 이
           PROPERTY:
             '"scale"': 크기
             '"rotation"': 회전
@@ -1450,25 +1428,21 @@ ko:
         options:
           SELECT:
             '"all"': 모두
-            '"this"': 이
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} 중지 {BEHAVIOR}"
         options:
           SELECT:
             '"all"': 모두
-            '"this"': 이
       Mikelab_groupRemoveTint:
         text: 에서 색상 제거 {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': 모두
-            '"this"': 이
       Mikelab_groupSetProp:
         text: 설정 {PROPERTY} 의 {SELECT} {COSTUME} 받는 사람 {VAL}
         options:
           SELECT:
             '"all"': 모두
-            '"this"': 이
           PROPERTY:
             '"scale"': 크기
             '"rotation"': 회전
@@ -1480,7 +1454,6 @@ ko:
         options:
           SELECT:
             '"all"': 모두
-            '"this"': 이
       Mikelab_groupWhenClickedOn:
         text: 때 {COSTUME} 클릭
       Mikelab_groupWhenXTouchesY:
@@ -1560,6 +1533,7 @@ ko:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 도시
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': 지하철
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1580,6 +1554,10 @@ ko:
           CORNER:
             '"right"': 오른쪽으로
             '"left"': 왼쪽으로
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': below
       Mikelab_sprite:
         text: 새로운 {COSTUME} 스프라이트 에서 {LOCATION}
         options:
@@ -1624,8 +1602,8 @@ ko:
         text: 때 {KEY} 클릭
         options:
           KEY:
-            '"yes"': 네
-            '"no"': 아니
+            '"yes"': 예
+            '"no"': 아니요
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1637,6 +1615,24 @@ ko:
         text: x 좌표 {SPRITE}
       Mikelab_yLocationOf:
         text: y 좌표 {SPRITE}
+      PoemBot_setBackgroundEffect:
+        text: 배경 효과 {BG_EFFECT} [PALETTE][1] 설정
+        options:
+          BG_EFFECT:
+            '"solid"': 채우기
+            '"rainbow"': 비
+      PoemBot_setForegroundEffect:
+        text: 전경 효과 {FG_EFFECT} 설정
+        options:
+          FG_EFFECT:
+            '"rain"': 비
+            '"bubbles"': 거품
+      PoemBot_stringConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      PoemBot_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       RyanLab_moveForward:
         text: 앞으로 이동
       RyanLab_turnLeft:
@@ -1675,7 +1671,7 @@ ko:
           FORMAT:
             '"grid"': 그리드
             '"border"': 테두리
-            '"row"': 행
+            '"row"': class
             '"random"': random(랜덤)
       aalab_someGraduallyStartIntervention:
         options:
@@ -1712,7 +1708,6 @@ ko:
           VAL:
             '0': 꺼져요
             '1': 을 (를) 켜십시오
-            '"toggle"': 토글
       binary_drawString:
         text: 그리기 문자열 {STR}
       binary_goTo:
@@ -1770,7 +1765,6 @@ ko:
         options:
           TYPE:
             "'sand'": 모래
-            "'darkPrismarine'": 다크 프리스마린
             "'seaLantern'": 바다 랜턴
       craft_log:
         text: 로그 메시지 {MESSAGE}
@@ -1780,31 +1774,8 @@ ko:
         text: 장소 {blockType}
         options:
           blockType:
-            '"strippedOak"': 벗겨 참나무
-            '"strippedDarkOak"': 박탈 다크 오크
-            '"stoneBricks"': 돌 벽돌
-            '"mossyStoneBricks"': 이끼 돌 벽돌
-            '"crackedStoneBricks"': 금이 간 돌 벽돌
             '"chiseledStoneBricks"': 장식용 석조 벽돌
-            '"blueCoralBlock"': 푸른 산호 블록
-            '"pinkCoralBlock"': 핑크 산호 블록
-            '"magentaCoralBlock"': 마젠타 산호 블록
-            '"redCoralBlock"': 붉은 산호 블록
-            '"yellowCoralBlock"': 노란 산호 블록
-            '"blueDeadCoralBlock"': 푸른 죽은 산호 블록
-            '"pinkDeadCoralBlock"': 핑크 죽은 산호 블록
-            '"magentaDeadCoralBlock"': 마젠타 죽은 산호 블록
-            '"readDeadCoralBlock"': 붉은 죽은 산호 블록
-            '"yellowDeadCoralBlock"': 노란 죽은 산호 블록
-            '"prismarine"': 원시사린
-            '"darkPrismarine"': 다크 프리스마린
             '"seaLantern"': 바다 랜턴
-            '"packedIce"': 포장 얼음
-            '"blueIce"': 블루 아이스
-            '"blackConcrete"': 검은 콘크리트
-            '"seaGrass"': 바다 잔디
-            '"kelp"': 다시마
-            '"polishedGranite"': 연마 화강암
       craft_placePrismarine:
         text: 장소 프리스마린
       craft_placeTorch:
@@ -1821,15 +1792,13 @@ ko:
         text: 산란 {ENTITY}
         options:
           ENTITY:
-            '"cod"': 대구
             '"dolphin"': 돌고래
-            '"salmon"': 연어
-            '"seaTurtle"': 바다거북
             '"squid"': 오징어
-            '"tropicalFish"': 열대어
       craft_turn:
         text: 설정 {DIR}
         options:
           DIR:
             right: 우측 윙어
             left: 왼쪽
+      validation_validatedBackground:
+        text: 배경을 {IMG}으로 설정

@@ -627,6 +627,21 @@ en:
         PL-Video-21: Welcome to Code.org's Professional Learning!
         csp_tutorial_datavis1: Data Visualizer in App Lab - Part 1
         csp_tutorial_datavis2: Data Visualizer in App Lab - Part 2
+        csd_ml_intro_ai_lab_july2021: Introduction to AI Lab
+        csd_ml_training_testing_ai_lan: Training and Testing in AI Lab
+        csd_ml_model_cards_july2021: Model Cards in AI Lab
+        csd_ml_numerical_ai_lab: Numerical Data in AI Lab
+        Gettting_Started_Progress: Progress, Feedback, and Assessment
+        Gettting_Started_ClassSection: Creating a Class Section
+        Gettting_Started_StudentExperience: The Student Experience
+        Getting_Started_BasicFeatures: Basic Features of Code.org
+        PL_overview_CSD: What is Computer Science Discoveries?
+        PL_CSD_TeacherTips_Advise: Teacher Tips - Advice to New Teachers
+        PL_CSD_TeacherTips_IntroToCSD: Teacher Tips - Introduction to CS Discoveries
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Teacher Tips - The Problem Solving Process
+        PL_CSD_TeacherTips_PairProgramming: Teacher Tips - Pair Programming
+        PL_CSD_TeacherTips_Debugging: Teacher Tips - Debugging
+        PL_CSD_TeacherTips_LeadLearner: Teacher Tips - Lead Learner
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

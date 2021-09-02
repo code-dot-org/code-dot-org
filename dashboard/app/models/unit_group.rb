@@ -30,7 +30,21 @@ class UnitGroup < ApplicationRecord
 
   after_save :write_serialization
 
-  scope :with_associated_models, -> {includes([:plc_course, :default_unit_group_units])}
+  scope :with_associated_models, -> do
+    includes(
+      [
+        :plc_course,
+        :default_unit_group_units,
+        :alternate_unit_group_units,
+        :course_version
+      ]
+    )
+  end
+
+  def cached
+    return self unless UnitGroup.should_cache?
+    self.class.get_from_cache(id)
+  end
 
   validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
@@ -194,9 +208,8 @@ class UnitGroup < ApplicationRecord
     units_to_remove = default_unit_group_units.map(&:script) - new_units_objects
     units_to_remove -= alternate_units.map {|hash| Script.find_by_name!(hash['alternate_script'])}
 
-    if units_to_remove.any?(&:prevent_course_version_change?)
-      raise 'Cannot remove units that have resources or vocabulary'
-    end
+    unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
+    raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
     if new_units_objects.any? do |s|
       s.unit_group != self && s.prevent_course_version_change?
@@ -207,6 +220,7 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
+        unit.update!(published_state: nil)
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -258,32 +272,22 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.all_courses
-    all_courses = Rails.cache.fetch('valid_courses/all') do
-      UnitGroup.all.to_a
-    end
-    all_courses.freeze
+    return all.to_a unless should_cache?
+    @@all_courses ||= course_cache.values.uniq.compact.freeze
   end
 
   def self.family_names
     CourseVersion.course_offering_keys('UnitGroup')
   end
 
-  # Get the set of valid courses for the dropdown in our sections table. This
-  # should be static data for users without any course experiments enabled, but
-  # contains localized strings so we can only cache on a per locale basis.
-  #
+  # Get the set of valid courses for the dropdown in our sections table.
   # @param [User] user Whose experiments to check for possible unit substitutions.
+  # @return [Array<UnitGroup>]
   def self.valid_courses(user: nil)
-    # Do not cache if the user might have a course experiment enabled which puts them
-    # on an alternate unit.
+    courses = all_courses.select(&:launched?)
     if user && has_any_course_experiments?(user)
-      return UnitGroup.valid_courses_without_cache
+      return courses
     end
-
-    courses = Rails.cache.fetch("valid_courses/#{I18n.locale}") do
-      UnitGroup.valid_courses_without_cache.to_a
-    end
-    courses.freeze
 
     if user && has_any_pilot_access?(user)
       pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
@@ -335,7 +339,7 @@ class UnitGroup < ApplicationRecord
     [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
-  def summarize(user = nil)
+  def summarize(user = nil, for_edit: false)
     {
       name: name,
       id: id,
@@ -363,7 +367,7 @@ class UnitGroup < ApplicationRecord
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
-      prevent_course_version_change: prevent_course_version_change?,
+      prevent_course_version_change: for_edit && prevent_course_version_change?,
       course_path: link
     }
   end
@@ -421,11 +425,15 @@ class UnitGroup < ApplicationRecord
   # If a user has an experiment enabled corresponding to an alternate unit in
   # this course, use the alternate unit in place of the default unit with
   # the same position.
+  # If the unit is in development, hide it from everyone but levelbuilders.
   # @param user [User]
   def units_for_user(user)
     # @return [Array<Script>]
-    default_unit_group_units.map do |ugu|
-      select_unit_group_unit(user, ugu).script
+    units = default_unit_group_units.map do |ugu|
+      Script.get_from_cache(select_unit_group_unit(user, ugu).script_id)
+    end
+    units.compact.reject do |unit|
+      unit.in_development? && !user&.permission?(UserPermission::LEVELBUILDER)
     end
   end
 
@@ -451,7 +459,8 @@ class UnitGroup < ApplicationRecord
   def select_unit_group_unit(user, unit_group_unit)
     return unit_group_unit unless user
 
-    alternates = alternate_unit_group_units.where(default_script: unit_group_unit.script).all
+    alternates = alternate_unit_group_units.to_a.select {|unit| unit.default_script_id == unit_group_unit.script_id}
+    return unit_group_unit if alternates.empty?
 
     if user.teacher?
       alternates.each do |ugu|
@@ -459,7 +468,7 @@ class UnitGroup < ApplicationRecord
       end
     end
 
-    course_sections = user.sections_as_student.where(unit_group: self)
+    course_sections = user.sections_as_student.where(unit_group: self).to_a
     unless course_sections.empty?
       alternates.each do |ugu|
         course_sections.each do |section|
@@ -520,14 +529,10 @@ class UnitGroup < ApplicationRecord
   def self.latest_stable_version(family_name)
     return nil unless family_name.present?
 
-    UnitGroup.
-      # select only courses in the same course family.
-      where("properties -> '$.family_name' = ?", family_name).
-      # select only stable courses.
-      where(published_state: SharedConstants::PUBLISHED_STATE.stable).
-      # order by version year.
-      order("properties -> '$.version_year' DESC")&.
-      first
+    all_courses.select do |course|
+      course.family_name == family_name &&
+        course.published_state == SharedConstants::PUBLISHED_STATE.stable
+    end.sort_by(&:version_year).last
   end
 
   # @param family_name [String] The family name for a course family.
@@ -537,14 +542,10 @@ class UnitGroup < ApplicationRecord
     return nil unless family_name && user
     assigned_course_ids = user.section_courses.pluck(:id)
 
-    UnitGroup.
-      # select only courses assigned to this user.
-      where(id: assigned_course_ids).
-      # select only courses in the same course family.
-      where("properties -> '$.family_name' = ?", family_name).
-      # order by version year.
-      order("properties -> '$.version_year' DESC")&.
-      first
+    all_courses.select do |course|
+      assigned_course_ids.include?(course.id) &&
+        course.family_name == family_name
+    end.sort_by(&:version_year).last
   end
 
   # @param user [User]
@@ -552,9 +553,7 @@ class UnitGroup < ApplicationRecord
   def has_progress?(user)
     return nil unless user
     user_unit_ids = user.user_scripts.pluck(:script_id)
-    unit_group_units_with_progress = default_unit_group_units.where('course_scripts.script_id' => user_unit_ids)
-
-    unit_group_units_with_progress.count > 0
+    default_unit_group_units.any? {|ugu| user_unit_ids.include?(ugu.script_id)}
   end
 
   # @param user [User]
@@ -563,17 +562,12 @@ class UnitGroup < ApplicationRecord
     return nil unless user && family_name && version_year
     user_unit_ids = user.user_scripts.pluck(:script_id)
 
-    UnitGroup.
-      joins(:default_unit_group_units).
-      # select only courses in the same course family.
-      where("properties -> '$.family_name' = ?", family_name).
-      # select only older versions
-      where("properties -> '$.version_year' < ?", version_year).
-      # exclude the current course.
-      where.not(id: id).
-      # select only courses with units which the user has progress in.
-      where('course_scripts.script_id' => user_unit_ids).
-      count > 0
+    UnitGroup.all_courses.any? do |course|
+      course.family_name == family_name &&
+        course.version_year < version_year &&
+        course.id != id &&
+        course.default_unit_group_units.any? {|ugu| user_unit_ids.include?(ugu.script_id)}
+    end
   end
 
   # returns whether a unit in this course has version_warning_dismissed.
@@ -593,6 +587,7 @@ class UnitGroup < ApplicationRecord
   def self.clear_cache
     raise "only call this in a test!" unless Rails.env.test?
     @@course_cache = nil
+    @@all_courses = nil
     Rails.cache.delete COURSE_CACHE_KEY
   end
 
@@ -617,7 +612,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.course_cache_to_cache
-    Rails.cache.write(COURSE_CACHE_KEY, course_cache_from_db)
+    Rails.cache.write(COURSE_CACHE_KEY, (@@course_cache = course_cache_from_db))
   end
 
   def self.course_cache

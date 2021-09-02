@@ -1,0 +1,107 @@
+{
+  "ja-JP": {
+    "data": {
+      "vocabularies": {
+        "sprite/coursef/2021": {
+          "word": "スプライト"
+        },
+        "behavior/coursef/2021": {
+          "word": "行動"
+        },
+        "variable/coursef/2021": {
+          "word": "変数"
+        },
+        "input/coursef/2021": {
+          "word": "入力"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "機械学習"
+        },
+        "internet/coursef/2021": {
+          "word": "インターネット"
+        },
+        "packets/coursef/2021": {
+          "word": "パケット"
+        },
+        "define/coursef/2021": {
+          "word": "定義"
+        },
+        "debugging/courseb/2021": {
+          "word": "デバッギング"
+        },
+        "drop/courseb/2021": {
+          "word": "ドロップ"
+        },
+        "debugging/coursea/2021": {
+          "word": "デバッギング"
+        },
+        "drop/coursea/2021": {
+          "word": "ドロップ"
+        },
+        "debugging/coursec/2021": {
+          "word": "デバッギング"
+        },
+        "sequencing/coursec/2021": {
+          "word": "シークエンス"
+        },
+        "binary/coursec/2021": {
+          "word": "２しんすう"
+        },
+        "debugging/coursed/2021": {
+          "word": "デバッギング"
+        },
+        "conditionals/coursed/2021": {
+          "word": "条件"
+        },
+        "debugging/express/2021": {
+          "word": "デバッギング"
+        },
+        "sequencing/express/2021": {
+          "word": "シークエンス"
+        },
+        "behavior/express/2021": {
+          "word": "行動"
+        },
+        "sprite/express/2021": {
+          "word": "スプライト"
+        },
+        "conditionals/express/2021": {
+          "word": "条件"
+        },
+        "function/express/2021": {
+          "word": "関数（かんすう）"
+        },
+        "variable/express/2021": {
+          "word": "変数"
+        },
+        "define/express/2021": {
+          "word": "定義"
+        },
+        "drop/pre-express/2021": {
+          "word": "ドロップ"
+        },
+        "debugging/pre-express/2021": {
+          "word": "デバッギング"
+        },
+        "behavior/coursee/2021": {
+          "word": "行動"
+        },
+        "sprite/coursee/2021": {
+          "word": "スプライト"
+        },
+        "copyright/coursee/2021": {
+          "word": "著作権"
+        },
+        "function/coursee/2021": {
+          "word": "関数（かんすう）"
+        },
+        "conditionals/coursee/2021": {
+          "word": "条件"
+        },
+        "define/coursee/2021": {
+          "word": "定義"
+        }
+      }
+    }
+  }
+}

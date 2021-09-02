@@ -167,8 +167,8 @@ sk:
     additional_information: "Potrebujeme niektoré ďalšie informácie pre pokračovanie vášho prihlásenia/registrácie."
     user_type_button: "Zmeniť typ účtu"
     user_type_label: "Typ účtu"
-    user_type_teacher: "Učiteľ"
     user_type_student: "Študent"
+    user_type_teacher: "Učiteľ"
     field_is_required: "je povinné"
     accept_terms: "Musíte súhlasiť s vytvorením účtu."
     error: "Vyskytla sa chyba."
@@ -282,6 +282,7 @@ sk:
       cant_join_own_section: "Prepáčte, nemôžete sa pridať do vlastnej sekcie."
       provider_managed_section: "Túto triedu spravuje iný poskytovateľ a nie je možné sa k nej pripojiť. Požiadajte prosím vášho školiteľa o pridanie pomocou %{provider} a opätovné synchronizovanie ich triedy."
       restricted_section: "Do sekcie %{section_code} ťa nevieme pridať, pretože je uzamknutá. Kontaktuj prosím svojho učiteľa pre pomoc."
+      full_section: "Do sekcie %{section_code} ťa nebolo možné pridať, pretože je tam prihlásených už %{section_capacity} študentov.  Kontaktuj prosím svojho učiteľa pre pomoc."
     mail:
       student_disassociated:
         subject: "Code.org upozornenie: %{student_name} už nie je Vaším študentom."
@@ -589,8 +590,6 @@ sk:
       link: "Zistiť viac"
       applab_unsupported_tablet: "App Lab funguje najlepšie na stolnom počítači alebo notebooku s myšou a klávesnicou. Pri používaní App Labu na tomto zariadení sa môžu vyskytnúť chyby alebo probémy."
       gamelab_unsupported_tablet: "Game Lab funguje najlepšie na stolnom počítači alebo notebooku s myšou a klávesnicou. Pri používaní Game Lab na tomto zariadení sa môžu vyskytnúť chyby alebo problémy."
-      oceans_unsupported_browser: "Návod sa nedá otvoriť v tomto internetovom prehliadači. Skús otvoriť stránku cez Edge, Chrome, Firefox, alebo iný prehliadač."
-      weblab_unsupported_browser: "Je nám ľúto, ale v tomto prehliadači nefunguje Web Lab správne. Do vyriešenia problému použite prosím iný internetový prehliadač. Ospravedlňujeme sa za prípadné nepríjemnosti."
       weblab_unsupported_locale_storage: "Pri používaní Web Labu v Inkognito móde (Private Browsing mode) môžete zaznamenať problémy. Spustite prosím váš projekt nanovo v normálnom móde. Ospravedlňujeme sa za prípadné komplikácie."
   slow_loading: 'Trvá to dlhšie než zvyčajne...'
   try_reloading: 'Skúste načítať stránku znovu'
@@ -976,9 +975,8 @@ sk:
       school_city: 'Mesto'
       school_country: 'Krajina'
       colombian_school_city: 'Mesto'
-      colombian_school_department: 'Oddelenie na škole'
       colombian_school_municipality: 'Okres školy'
-      colombian_school_name: 'Názov školy'
+      colombian_chilean_school_name: 'Názov školy'
       ages: 'Ktoré ročníky vyučujute tento rok?'
       subjects: 'Ktoré predmety vyučujute tento rok?'
       resources: 'Ktoré z nasledovných zdrojov používate pri výučbe informatiky?'

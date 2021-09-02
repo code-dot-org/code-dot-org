@@ -32,9 +32,9 @@ experiments.I18N_TRACKING = 'i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-
-// backend "pilot" experiment, stored on window.appOptions.experiments
-experiments.KEEP_WORKING = 'teacher-feedback-review-state';
+experiments.POEM_BOT = 'poemBot';
+experiments.CLEARER_SIGN_UP_USER_TYPE = 'clearerSignUpUserType';
+experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

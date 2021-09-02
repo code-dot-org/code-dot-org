@@ -629,7 +629,7 @@
   dashboard_middle_courses_desc: "Nuestro plan de estudios de secundaria utiliza informática y programación en el contexto de las matemáticas y la ciencias a nivel de escuela secundaria, como una herramienta para enseñar conceptos de matemáticas y ciencias. Para inscribirse en los talleres de desarrollo profesional, realice una solicitud en <a href=\"/educate/districts\">Centros Asociados</a> de Code.org."
   dashboard_high_courses: "Cursos anuales para preparatorias"
   dashboard_high_courses_desc: "Nuestro programa para bachillerato ayuda a los institutos con el objetivo de ofrecer clases anuales de informática preparando al profesorado existente para ofertar este nuevo ámbito de estudio. Para inscribirse en los talleres de desarrollo profesional, realice una solicitud en <a href=\"/educate/districts\">Institutos Asociados </a> de Code.org."
-  dashboard_course_csina: "Ciencias de la computación en álgebra"
+  dashboard_course_csina: "Las Ciencias de la Computación en el álgebra"
   dashboard_course_csina_desc: "Code.org se ha asociado con Bootstrap para desarrollar un currículo para enseñar conceptos algebraicos y geométricos a través de la programación de computadoras."
   dashboard_course_csins: "Las ciencias de la computación en la ciencia"
   dashboard_course_csins_desc: "Code.org se ha asociado con el Proyecto GUTS para proporcionar una introducción a los conceptos de las ciencias de la computación dentro del contexto del modelado y la simulación."
@@ -966,18 +966,26 @@
   coursed-2019_name: Curso D (2019)
   coursee-2019_name: Curso E (2019)
   coursef-2019_name: Curso F (2019)
-  coursea-2020_name: Curso A (2019)
-  courseb-2020_name: Curso B (2019)
-  coursec-2020_name: Curso C (2019)
-  coursed-2020_name: Curso D (2019)
-  coursee-2020_name: Curso E (2019)
-  coursef-2020_name: Curso F (2019)
+  coursea-2020_name: Curso A (2020)
+  courseb-2020_name: Curso B (2020)
+  coursec-2020_name: Curso C (2020)
+  coursed-2020_name: Curso D (2020)
+  coursee-2020_name: Curso E (2020)
+  coursef-2020_name: Curso F (2020)
+  coursea-2021_name: Curso A (2021)
+  courseb-2021_name: Curso B (2021)
+  coursec-2021_name: Curso C (2021)
+  coursed-2021_name: Curso D (2021)
+  coursee-2021_name: Curso E (2021)
+  coursef-2021_name: Curso F (2021)
   express-2018_name: Curso Express (2018)
   pre-express-2018_name: Curso Express para prelectores (2018)
   express-2019_name: Curso Express (2019)
   pre-express-2019_name: Curso Express para prelectores (2019)
   express-2020_name: Curso Express (2020)
   pre-express-2020_name: Curso Express para prelectores (2020)
+  express-2021_name: Curso Express (2021)
+  pre-express-2021_name: Curso Express para prelectores (2021)
   csd2_name: 'Unidad 2: desarrollo web'
   csd3_name: 'Unidad 3: Animaciones y juegos'
   accelerated_name: "Curso acelerado"
@@ -1194,19 +1202,19 @@
   coursef_shortdescription_congrats: "Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego."
   coursea-2017_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores.
   courseb-2017_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores (similar al Curso A, pero con más variedad para estudiantes más avanzados).
-  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
+  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las ciencias de la computación y crea tu propio arte, historias y juegos.
   coursed-2017_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2017_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos C y D, y luego avanza con funciones.
   coursef-2017_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
   coursea-2018_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores.
   courseb-2018_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores (similar al Curso A, pero con más variedad para estudiantes más avanzados).
-  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
+  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las ciencias de la computación y crea tu propio arte, historias y juegos.
   coursed-2018_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2018_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos C y D, y luego avanza con funciones.
   coursef-2018_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
   coursea-2019_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores.
   courseb-2019_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores (similar al Curso A, pero con más variedad para estudiantes más avanzados).
-  coursec-2019_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
+  coursec-2019_shortdescription_congrats: Aprende los conceptos básicos de las ciencias de la computación y crea tu propio arte, historias y juegos.
   coursed-2019_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2019_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos C y D, y luego avanza con funciones.
   coursef-2019_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
@@ -1216,6 +1224,12 @@
   coursed-2020_shortdescription_congrats: Los estudiantes desarrollan su comprensión de bucles anidados, bucles `mientras`, condicionales y eventos. Los estudiantes no solo aprenden a programar, sino que también aprenden sobre ciudadanía digital.
   coursee-2020_shortdescription_congrats: Empieza a programar con algoritmos, bucles, condicionales y eventos, y pasa luego a las funciones. En la segunda parte de este curso, diseñarás y crearás un proyecto final que puedes compartir con tus amigos y familiares.
   coursef-2020_shortdescription_congrats: Aprende a usar diferentes tipos de bucles, eventos, funciones y condicionales. Investiga distintas técnicas de resolución de problemas y debate sobre el impacto de la computación y de Internet en la sociedad. En la segunda parte del curso, diseña y crea un proyecto final que puedes compartir con tus amigos y familiares.
+  coursea-2021_shortdescription_congrats: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+  courseb-2021_shortdescription_congrats: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+  coursec-2021_shortdescription_congrats: Crea programas con secuencias, bucles y eventos. Traduce tus iniciales a código binario, investiga distintas técnicas de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del curso podrás crear tu propio juego o historia para compartir!
+  coursed-2021_shortdescription_congrats: Los estudiantes desarrollan su comprensión de bucles anidados, bucles `mientras`, condicionales y eventos. Los estudiantes no solo aprenden a programar, sino que también aprenden sobre ciudadanía digital.
+  coursee-2021_shortdescription_congrats: Empieza a programar con algoritmos, bucles, condicionales y eventos, y pasa luego a las funciones. En la segunda parte de este curso, diseñarás y crearás un proyecto final que puedes compartir con tus amigos y familiares.
+  coursef-2021_shortdescription_congrats: Aprende a usar diferentes tipos de bucles, eventos, funciones y condicionales. Investiga distintas técnicas de resolución de problemas y debate sobre el impacto de la computación y de Internet en la sociedad. En la segunda parte del curso, diseña y crea un proyecto final que puedes compartir con tus amigos y familiares.
   codeorg_longdescription: "Aprende los conceptos básicos de las ciencias de la computación mediante la programación del tipo arrastrar y soltar. Este tutorial autodirigido similar a un juego incluye videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs. Zombies. Aprende sobre bucles de repetición, condicionales y algoritmos básicos. Está disponible en 34 idiomas."
   codeintl_longdescription: "Aprende los conceptos básicos de las ciencias de la computación mediante la programación del tipo arrastrar y soltar. Este tutorial autodirigido similar a un juego incluye videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs. Zombies. Aprende sobre bucles de repetición, condicionales y algoritmos básicos. Está disponible en 34 idiomas."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n c&oacute;mo guiarse para llevar a cabo tareas espec&iacute;ficas sin discutirlas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1665,7 +1679,7 @@
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "En colaboración con"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* es un programa que abarca desde la niñez hasta la carrera profesional, diseñado para inspirar, educar y formar a niños y jóvenes de bajos recursos y con otras necesidades, y ayudarlos a seguir una carrera en ciencias de la computación. <a href='%{amazon_future_engineer_link}' target='_blank'>Conoce más</a>"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* es un programa integral que abarca desde la niñez hasta la carrera y tiene el objetivo de inspirar, educar y capacitar a niños y jóvenes de bajos ingresos y otros niños y jóvenes desfavorecidos para que sigan carreras en ciencias de la computación. [Más información](%{amazon_future_engineer_link})"
-  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "Si eres alumno o profesor en Francia, visita [Amazon Future Engineer - France].(%{amazon_future_engineer_france_link})"
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "Si eres estudiante o profesor en Francia, visita [Amazon Future Engineer - France].(%{amazon_future_engineer_france_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Aprende más acerca de Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "Acerca de Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_description: "Aprende sobre el programa de Amazon que abarca desde la niñez hasta la carrera profesional, diseñado para impulsar el acceso a la educación en ciencias de la computación. Encuentra información sobre cómo participar en nuestros campamentos de verano, clases de ciencias de la computación para escuelas secundarias, becas y pasantías."
@@ -1705,9 +1719,9 @@
   hoc2019_dance_previous_versions: "¿Estás buscando una versión anterior de Fiesta de baile?  \nHaz clic aquí para iniciar [Parte 1](%{dance_2018_link}) y [Parte 2](%{dance_extras_2018_link}) del último año."
   homepage_slot_text_title_at_home: "Aprende desde casa"
   homepage_slot_text_blurb_at_home: "Aprender es fácil con estos recursos"
-  homepage_slot_text_link_code_break: "¡Tómate un descanso de código!"
+  homepage_slot_text_link_code_break: "¡Tómate un recreo con código!"
   homepage_slot_text_link_do_hoc: "Prepara una Hora de Código"
-  homepage_slot_text_link_express_course: "Prueba un Curso Exprés"
+  homepage_slot_text_link_express_course: "Prueba el Curso Exprés"
   page_not_available_title: "Página no disponible"
   page_not_available_description: "Lo sentimos, la página que solicitó ya no está disponible en esta dirección. Si todavía necesita acceso, envíe un correo electrónico a [support@code.org](%{support_email_link})."
   page_not_available_button: "Volver a la página de inicio"

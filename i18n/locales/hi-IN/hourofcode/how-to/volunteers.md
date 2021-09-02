@@ -15,7 +15,7 @@ Computational thinking helps nurture problem-solving skills, logic, and creativi
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
 
 - [Who can volunteer?](#who-can-volunteer)
-- [Why volunteer?](#why-volunteer)
+- [स्वयंसेवी क्यों?](#why-volunteer)
 - [How do volunteers get selected?](#selection)
 - [What if I want to volunteer with a specific school?](#choose-a-school)
 - [How to prepare](#how-to-prepare)
@@ -40,7 +40,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. [
 
 <a id="why-volunteer"></a>
 
-## Why volunteer?
+## स्वयंसेवी क्यों?
 
 Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
 
@@ -134,7 +134,7 @@ Work with the school or teacher to discuss what makes the most sense. We’ve se
 
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- आपकी कंपनीके साॅफ्टवेअर अभियंताओंको बुला कर, उन्होंने संगणक शास्त्र सिखानेका और उसके प्रकल्पोंपर काम करनेका निर्णय क्यों लिया, इसके बारे में बताने को बोले.
 - If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
 
 ### 3. Plan your technology needs
@@ -158,7 +158,7 @@ If your event is going to be virtual, you’ll want to decide on your conference
 
 We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **सभी घंटे कोड गतिविधियों** के लिए न्यूनतम प्री-टाइम की आवश्यकता होती है, और स्वयं निर्देशित होते हैं - प्रतिभागियों को अपनी गति और कौशल-स्तर पर काम करने की अनुमति देते हैं।
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
@@ -227,7 +227,7 @@ Help raise awareness of the computer science movement with this sample content t
 
 - Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
 - Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile). 
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
+- संगणक शास्त्र का महत्त्व प्रचारित करने के लिए और संगणक शास्त्र का ज्यादा से ज्यादा प्रचार करने के लिए कंपनी के सब डिपार्टमेंट में ईमेल भेजने के लिए आप के कंपनी प्रमुखको अनुरोध करे.
 - Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
 - [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science. 
 - [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all. 

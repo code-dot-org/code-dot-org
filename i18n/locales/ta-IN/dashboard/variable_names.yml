@@ -5,7 +5,9 @@ ta:
       Green: பச்சை
       Red: சிவப்பு
       actor: நடிகர்
+      age: வயது
       cats: பூனைகள்
+      color: நிறம்
       counter: கணக்கிடுகிளவன்
       dogs: நாய்கள்
       height: உயரம்
@@ -13,10 +15,12 @@ ta:
       i: i
       left: இடது
       length: நீளம்
+      name: பெயர்
       nectar: பூ அமுது
       random: தொடர்பின்றி எடுக்கப்பட்ட
       repeat: மறுபடி
       right: வலது
+      score: மதிப்பெண்
       size: அளவு
       variable: மாறி
       width: அகலம்

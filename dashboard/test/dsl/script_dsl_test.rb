@@ -979,24 +979,43 @@ level 'Level 3'
   end
 
   test 'serialize named_level' do
-    level = create :maze, name: 'maze 1', level_num: 'custom'
+    level1 = create :maze, name: 'maze 1', level_num: 'custom'
+    level2 = create :maze, name: 'maze 2', level_num: 'custom', display_name: 'Maze Two'
+    level3 = create :maze, name: 'maze 3', level_num: 'custom', display_name: 'ignored'
     script = create :script
     lesson_group = create :lesson_group, key: "", script: script, user_facing: false
     lesson = create :lesson, name: 'Lesson 1', key: 'Lesson 1', script: script, lesson_group: lesson_group, has_lesson_plan: true
-    script_level = create(
+    create(
       :script_level,
-      levels: [level],
+      levels: [level1],
       named_level: true,
       lesson: lesson,
       script: script
     )
+    create(
+      :script_level,
+      levels: [level2],
+      named_level: true,
+      lesson: lesson,
+      script: script
+    )
+    create(
+      :script_level,
+      levels: [level3],
+      named_level: true,
+      lesson: lesson,
+      script: script,
+      progression: 'Maze Three'
+    )
 
-    script_text = ScriptDSL.serialize_to_string(script_level.script)
+    script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~UNIT
       published_state 'beta'
 
       lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true
-      level 'maze 1', named: true
+      level 'maze 1', progression: 'maze 1'
+      level 'maze 2', progression: 'Maze Two'
+      level 'maze 3', progression: 'Maze Three'
 
     UNIT
     assert_equal expected, script_text

@@ -342,6 +342,41 @@ class ApiController < ApplicationController
     }
   end
 
+  # GET /api/teacher_panel_progress/:section_id
+  # Get complete details of a particular section for the teacher panel progress
+  def teacher_panel_progress
+    section = load_section
+    script = load_script(section)
+
+    if params[:level_id]
+      script_level = script.script_levels.find do |sl|
+        sl.level_ids.include?(params[:level_id].to_i)
+      end
+      return head :bad_request if script_level.nil?
+
+      student_progress = section.students.order(:name).map do |student|
+        script_level.summarize_for_teacher_panel(student, current_user)
+      end
+    elsif params[:is_lesson_extras] && params[:lesson_id]
+      lesson = script.lessons.find do |l|
+        l.id == params[:lesson_id].to_i
+      end
+      return head :bad_request if lesson.nil?
+
+      bonus_level_ids = lesson.script_levels.where(bonus: true).map(
+        &:level_ids
+      ).flatten
+
+      student_progress = section.students.order(:name).map do |student|
+        ScriptLevel.summarize_as_bonus_for_teacher_panel(lesson.script, bonus_level_ids, student)
+      end
+    else
+      return head :bad_request
+    end
+
+    render json: student_progress
+  end
+
   def script_structure
     script = Script.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
@@ -413,7 +448,7 @@ class ApiController < ApplicationController
           response[:pairingAttempt] = edit_level_source_path(recent_attempt)
         elsif level.channel_backed?
           @level = level
-          recent_channel = get_channel_for(level, recent_user) if recent_user
+          recent_channel = get_channel_for(level, script.id, recent_user) if recent_user
           response[:pairingChannelId] = recent_channel if recent_channel
         end
       end

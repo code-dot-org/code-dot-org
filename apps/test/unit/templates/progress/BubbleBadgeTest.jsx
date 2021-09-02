@@ -1,55 +1,89 @@
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {
-  BubbleBadgeWrapper,
+import BubbleBadge, {
   KeepWorkingBadge,
-  AssessmentBadge
+  AssessmentBadge,
+  BadgeType
 } from '@cdo/apps/templates/progress/BubbleBadge';
+import {
+  BubbleSize,
+  BubbleShape
+} from '@cdo/apps/templates/progress/BubbleFactory';
 import {expect} from '../../../util/reconfiguredChai';
 import color from '@cdo/apps/util/color';
 
 describe('BubbleBadge', () => {
-  describe('BubbleBadgeWrapper', () => {
-    it('positions the wrapper correctly if isDiamond is false', () => {
-      const children = <div />;
-      const wrapper = shallow(
-        <BubbleBadgeWrapper isDiamond={false}>{children}</BubbleBadgeWrapper>
-      );
-      expect(wrapper.props().style.top).to.equal(-7);
-      expect(wrapper.props().style.right).to.equal(-7);
-    });
+  it('renders an AssessmentBadge for BadgeType.assessment', () => {
+    const wrapper = shallow(
+      <BubbleBadge
+        badgeType={BadgeType.assessment}
+        bubbleSize={BubbleSize.full}
+        bubbleShape={BubbleShape.circle}
+      />
+    );
+    expect(wrapper.find(AssessmentBadge)).to.have.lengthOf(1);
+  });
 
-    it('positions the wrapper correctly if isDiamond is true', () => {
-      const children = <div />;
-      const wrapper = shallow(
-        <BubbleBadgeWrapper isDiamond={true}>{children}</BubbleBadgeWrapper>
-      );
-      console.log(wrapper.debug());
-      expect(wrapper.props().style.top).to.equal(-13);
-      expect(wrapper.props().style.right).to.equal(-17);
-    });
+  it('renders a KeepWorkingBadge for BadgeType.keepWorking', () => {
+    const wrapper = shallow(
+      <BubbleBadge
+        badgeType={BadgeType.keepWorking}
+        bubbleSize={BubbleSize.full}
+        bubbleShape={BubbleShape.circle}
+      />
+    );
+    expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
+  });
+
+  it('renders nothing for dot bubbles and KeepWorking badge for letter bubbles', () => {
+    const letter = shallow(
+      <BubbleBadge
+        badgeType={BadgeType.keepWorking}
+        bubbleSize={BubbleSize.letter}
+        bubbleShape={BubbleShape.circle}
+      />
+    );
+    const dot = shallow(
+      <BubbleBadge
+        badgeType={BadgeType.keepWorking}
+        bubbleSize={BubbleSize.dot}
+        bubbleShape={BubbleShape.circle}
+      />
+    );
+    expect(letter.find(KeepWorkingBadge)).to.have.lengthOf(1);
+    expect(dot).to.be.empty;
+  });
+
+  it('positions the element correctly is bubbleShape is not a diamond for assessment badge', () => {
+    const wrapper = mount(
+      <BubbleBadge
+        badgeType={BadgeType.assessment}
+        bubbleShape={BubbleShape.circle}
+        bubbleSize={BubbleSize.full}
+      />
+    );
+    expect(wrapper.find('div').props().style.top).to.equal(-7);
+    expect(wrapper.find('div').props().style.right).to.equal(-7);
+  });
+
+  it('positions the element correctly is bubbleShape is a diamond for assessment badge', () => {
+    const wrapper = mount(
+      <BubbleBadge
+        badgeType={BadgeType.assessment}
+        bubbleShape={BubbleShape.diamond}
+        bubbleSize={BubbleSize.full}
+      />
+    );
+    expect(wrapper.find('div').props().style.top).to.equal(-13);
+    expect(wrapper.find('div').props().style.right).to.equal(-17);
   });
 
   describe('KeepWorkingBadge', () => {
     it('has a red background', () => {
       const wrapper = mount(<KeepWorkingBadge />);
-      expect(
-        wrapper.find('FontAwesome[icon="circle"]').props().style.color
-      ).to.equal(color.red);
-    });
-
-    it('has a exclamation icon', () => {
-      const wrapper = mount(<KeepWorkingBadge />);
-      expect(wrapper.find('FontAwesome[icon="exclamation"]')).to.have.length(1);
-    });
-
-    it('displays a white border when hasWhiteBorder is true', () => {
-      it('has a exclamation icon', () => {
-        const wrapper = mount(<KeepWorkingBadge hasWhiteBorder={true} />);
-        expect(wrapper.find('FontAwesome[icon="circle-thin"]')).to.have.length(
-          1
-        );
-      });
+      expect(wrapper.find('div').props().style.backgroundColor).to.equal(
+        color.red
+      );
     });
   });
 

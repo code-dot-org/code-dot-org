@@ -5,6 +5,8 @@ it:
       Green: Verdi
       Red: Rossi
       actor: personaggio
+      age: età
+      answer: rispondi
       armlength: lunghezza braccio
       binary: binario
       birds: uccelli
@@ -14,11 +16,13 @@ it:
       counter: contatore
       direction: direzione
       dogs: tutti i cani
+      energy: energia
       height: altezza
       honey: miele
       i: i
       left: a sinistra
       length: lunghezza
+      level: livello
       name: nome
       nectar: nettare
       nectars: nettare
@@ -28,6 +32,7 @@ it:
       repeat: ripeti
       right: a destra
       score: punteggio
+      shout: urlo
       sides: lati
       size: dimensione
       speed: velocità

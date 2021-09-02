@@ -1,2 +1,13 @@
 {
+  "ko-KR": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "각 동물을 위한 공간을 그리세요. ",
+        "courseD_bee_nestedLoops8_2021": "꽃에서 과즙을 모두 모으고 벌집에서 꿀을 만드세요. ",
+        "courseD_bee_nestedLoops9_2021": "꿀을 모두 만드세요.",
+        "courseF_bee_variables_7a_2021": "이 퍼즐은 약간 다릅니다. 이것을 풀기 위해 무엇을 해야 할까요?",
+        "ramp_artist_loops8_2021": "패턴을 찾고 루프를 사용해 이 코드를 더 짧게 만드세요."
+      }
+    }
+  }
 }

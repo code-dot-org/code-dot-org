@@ -139,8 +139,8 @@ ja:
     additional_information: "サインアップを続けるために、私たちはさらにいくつかの情報が必要です。"
     user_type_button: "アカウントタイプを更新"
     user_type_label: "アカウントの種類"
-    user_type_teacher: "先生"
     user_type_student: "生徒"
+    user_type_teacher: "先生"
     field_is_required: "が必要です"
     accept_terms: "アカウントを作成することに、同意が必要です。"
     error: "エラーが発生しました。"
@@ -239,6 +239,7 @@ ja:
     invite_sent: '招待状を送信しました'
     added_teacher: '%{name} あなたの先生として追加'
     registered: "%{section_name} に登録しました"
+    already_exists: 'あなたは既にセクション %{section_name} に参加しています。'
     error:
       signed_in: '続行する前にサインアウトしてください'
       username_not_found: 'ユーザー名 %{username} が見つかりません'
@@ -360,6 +361,7 @@ ja:
       playlab: 'プレイラボ'
       playlab_k1: "プレイラボ (就学前)\n"
       sports: 'スポーツ'
+      spritelab: 'スプライト ラボ'
       starwars: 'スター・ウォーズ'
       starwarsblocks: 'スター ・ ウォーズ (ブロック)'
       starwarsblocks_hour: 'スター ・ ウォーズ (ブロック)'
@@ -398,6 +400,7 @@ ja:
       example: '解答例'
       example_with_number: '解答例 %{solution_number}'
       submitted_on: '提出日時:'
+      last_updated: '最終更新日:'
       unsubmit: '取り消す'
       worked_with: 'いっしょにする'
       update_lock_settings: 'ここでロックの設定を更新します。'
@@ -434,6 +437,7 @@ ja:
     for_parents_and_guardians: "親と保護者向け"
     link_a_parent_email: "保護者のメールアドレスをこのアカウントにリンクさせてお子様の進み具合とプロジェクトについて最新情報を入手しましょう！このメールアドレスをパスワードの回復に使用することもできます。"
     parent_guardian_email_label: "親/保護者Eメール"
+    remove_parent_email_label: "削除"
     none: "設定なし"
     only_one_parent_email_supported_warning: "注: 現在、生徒アカウント1件につきサポートできるのは親/保護者のメールアドレス1つのみです。"
     encrypted: "暗号化済み\n"
@@ -542,7 +546,6 @@ ja:
       link: "もっと詳しく知る"
       applab_unsupported_tablet: "App Labはマウスとキーボードが使える、デスクトップPCやノートPCで正しく動作します。あなたがお使いのタブレット機器では、正しく動作しない場合があります。"
       gamelab_unsupported_tablet: "Game Labはマウスとキーボードが使える、デスクトップPCやノートPCで正しく動作します。あなたがお使いのタブレット機器では、正しく動作しない場合があります。"
-      weblab_unsupported_browser: "残念ながら、あなたがお使いのブラウザでは、Web Labを正しく読み込めない問題があります。この問題が解決するまでは他のブラウザをお使いください。ご不便をおかけして申し訳ありません。"
       weblab_unsupported_locale_storage: "Web Labは、ブラウザのプライベートモードでは正しくお使いいただけません。通常モードで読み込み直してください。ご不便をおかけして申し訳ありません。"
   slow_loading: '通常よりも長くかかっている...'
   try_reloading: 'ページを再読み込みする'
@@ -895,7 +898,7 @@ ja:
       school_city: '学校の市町村名'
       school_country: '学校のある国'
       colombian_school_city: '学校の市町村名'
-      colombian_school_name: '学校名'
+      colombian_chilean_school_name: '学校名'
     form_entries:
       gender:
         male: '男性'
@@ -926,6 +929,7 @@ ja:
   page_not_found_description: "お探しのページはこのアドレスには存在しません。ウェブアドレスを確認して再送信してください。または、ホームページに戻ってください。"
   page_not_found_button: "ホームへ戻る"
   copy: 'コピー'
+  confirm: '確認'
   parent_email_banner:
     text: "**あなたは親または保護者ですか？**このアカウントにあなたのメールをリンクさせてお子様の進み具合とプロジェクトについて最新情報を入手しましょう！"
     link_your_email: "メールアドレスをリンクさせる"

@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-02 16:48:12 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:25 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -1739,7 +1739,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1765,7 +1764,6 @@
         ],
         "progression": "Widget: Ticket Generator"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1791,7 +1789,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1817,7 +1814,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1843,7 +1839,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1869,7 +1864,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1895,7 +1889,6 @@
         ],
         "progression": "Widget: Traveling Salesman"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1921,7 +1914,6 @@
         ],
         "progression": "Widget: Traveling Salesman - Random Nodes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1947,7 +1939,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1973,7 +1964,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1999,7 +1989,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2025,7 +2014,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2051,7 +2039,6 @@
         ],
         "progression": "Unit 6 Exam"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2337,25 +2324,19 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "resource.key": "csp_unit_6_-_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Algorithm Efficiency",
         "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Unreasonable Time",
-        "resource.key": "unreasonable-time-activity-guide"
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Unreasonable Time",
+        "lesson.key": "Lesson 6: Assessment Day",
         "resource.key": "csp_unit_6_-_algorithms"
       }
     },
@@ -2373,15 +2354,39 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 6: Assessment Day",
+        "lesson.key": "Unreasonable Time",
         "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "resource.key": "unreasonable-time-activity-guide"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "all_resources_6",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_6",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_master_vocabulary",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
         "script.name": "csp6-2021"
       }
     },
@@ -2394,24 +2399,6 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
-        "script.name": "csp6-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp6-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_6",
-        "script.name": "csp6-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_6",
         "script.name": "csp6-2021"
       }
     }

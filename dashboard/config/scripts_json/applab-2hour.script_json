@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:44 UTC",
+    "serialized_at": "2021-08-03 22:47:06 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "applab-2hour"
@@ -103,9 +103,9 @@
       "properties": {
         "level_keys": [
           "Building a UI with Design Mode"
-        ]
+        ],
+        "progression": "Building a UI with Design Mode"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -129,7 +129,6 @@
           "CSDU4 Design Mode Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -153,7 +152,6 @@
           "CSDU4 - Design Mode - 15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -177,7 +175,6 @@
           "CSDU4 - Design Mode - 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -199,9 +196,9 @@
       "properties": {
         "level_keys": [
           "Choosing Good IDs"
-        ]
+        ],
+        "progression": "Choosing Good IDs"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -225,7 +222,6 @@
           "CSD U4 - Design Mode Text"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -249,7 +245,6 @@
           "CSD U4 - Design Mode Input Widgets"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -273,7 +268,6 @@
           "CSDU4 - Design Mode - 21"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -297,7 +291,6 @@
           "CSDU4 - Design Mode Icons"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -321,7 +314,6 @@
           "CSDU4 - Design Mode - 18"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -343,9 +335,9 @@
       "properties": {
         "level_keys": [
           "Responding to User Input"
-        ]
+        ],
+        "progression": "Responding to User Input"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -369,7 +361,6 @@
           "CSDU4 - Design Mode - 16"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -393,7 +384,6 @@
           "CSDU4 - Design Mode - 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -417,7 +407,6 @@
           "CSDU4 - Design Mode - 17"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -439,9 +428,9 @@
       "properties": {
         "level_keys": [
           "Multi-Screen Apps"
-        ]
+        ],
+        "progression": "Multi-Screen Apps"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -465,7 +454,6 @@
           "CSDU4 - Design Mode - 19"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -489,7 +477,6 @@
           "CSDU4 - Design Mode - 20"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -513,7 +500,6 @@
           "CSDU4 Connecting Screens"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -537,7 +523,6 @@
           "CSDU4 Connecting Screens Getting Back"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -561,7 +546,6 @@
           "CSDU4 Functionality visible"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -583,9 +567,9 @@
       "properties": {
         "level_keys": [
           "CSD - Getters and Setters"
-        ]
+        ],
+        "progression": "Getters and Setters"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -610,7 +594,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -635,7 +618,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -660,7 +642,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -685,7 +666,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -710,7 +690,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -735,7 +714,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -760,7 +738,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -782,9 +759,9 @@
       "properties": {
         "level_keys": [
           "CSD: getText vs getNumber"
-        ]
+        ],
+        "progression": "getText vs getNumber"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -806,9 +783,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - UI and Inputs - getNumber"
-        ]
+        ],
+        "progression": "getNumber"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -830,9 +807,9 @@
       "properties": {
         "level_keys": [
           "CSD: setProperty"
-        ]
+        ],
+        "progression": "setProperty"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -857,7 +834,6 @@
         ],
         "progression": "UI Element Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -882,7 +858,6 @@
         ],
         "progression": "UI Element Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -907,7 +882,6 @@
         ],
         "progression": "UI Element Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

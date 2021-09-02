@@ -14,6 +14,11 @@ import {
   BubbleSize,
   BubbleShape
 } from '@cdo/apps/templates/progress/BubbleFactory';
+import BubbleBadge, {
+  KeepWorkingBadge,
+  BadgeType
+} from '@cdo/apps/templates/progress/BubbleBadge';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 const TITLE = '1';
 
@@ -77,6 +82,7 @@ function getFirstRenderedBasicBubble(propOverrides = {}) {
   const size = renderPropsSpy.args[0][1];
   const progressStyle = renderPropsSpy.args[0][2];
   const content = renderPropsSpy.args[0][3];
+  const showKeepWorkingBadge = renderPropsSpy.args[0][4];
 
   // finally we render the `BasicBubble` itself so we can verifty its props
   // (since the underlying `CachedElement` rendered it as raw HTML when
@@ -84,6 +90,13 @@ function getFirstRenderedBasicBubble(propOverrides = {}) {
   return mount(
     <BasicBubble shape={shape} size={size} progressStyle={progressStyle}>
       {content}
+      {showKeepWorkingBadge && (
+        <BubbleBadge
+          badgeType={BadgeType.keepWorking}
+          bubbleSize={size}
+          bubbleShape={shape}
+        />
+      )}
     </BasicBubble>
   );
 }
@@ -224,6 +237,36 @@ describe('ProgressTableLevelBubble', () => {
         levelKind: LevelKind.assessment
       });
       expect(style.backgroundColor).to.equal(assessmentBackgrounds[status]);
+    });
+  });
+
+  describe('badges', () => {
+    it('shows a badge for ReviewState.keepWorking', () => {
+      const wrapper = getFirstRenderedBasicBubble({
+        reviewState: ReviewStates.keepWorking
+      });
+      expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
+    });
+
+    it('shows a badge for ReviewState.awaitingReview', () => {
+      const wrapper = getFirstRenderedBasicBubble({
+        reviewState: ReviewStates.awaitingReview
+      });
+      expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
+    });
+
+    it('does not show a badge for ReviewState.completed', () => {
+      const wrapper = getFirstRenderedBasicBubble({
+        reviewState: ReviewStates.completed
+      });
+      expect(wrapper.find(KeepWorkingBadge)).to.be.empty;
+    });
+
+    it('does not show a badge if no review state', () => {
+      const wrapper = getFirstRenderedBasicBubble({
+        reviewState: undefined
+      });
+      expect(wrapper.find(KeepWorkingBadge)).to.be.empty;
     });
   });
 

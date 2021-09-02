@@ -8,7 +8,7 @@ title: Расскажите всем
 
 ## 1. Расскажите всем
 
-Tell your friends about the **#HourOfCode**!
+Расскажите своим друзьям о **#HourOfCode**!
 
 {{ promote/share_buttons }}
 

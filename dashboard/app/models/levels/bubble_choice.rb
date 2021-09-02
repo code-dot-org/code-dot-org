@@ -34,6 +34,8 @@ class BubbleChoice < DSLDefined
     description
   )
 
+  ALPHABET = ('a'..'z').to_a
+
   def dsl_default
     <<~ruby
       name '#{DEFAULT_LEVEL_NAME}'
@@ -47,11 +49,9 @@ class BubbleChoice < DSLDefined
   end
 
   # Returns all of the sublevels for this BubbleChoice level in order.
+  # TODO: replace calls to this method in the codebase
   def sublevels
-    levels_child_levels.
-      includes(:child_level).
-      sublevel.
-      map(&:child_level)
+    child_levels.sublevel
   end
 
   def sublevel_at(index)
@@ -124,15 +124,13 @@ class BubbleChoice < DSLDefined
     sublevels.each_with_index do |level, index|
       level_info = level.summary_for_lesson_plans.symbolize_keys
 
-      alphabet = ('a'..'z').to_a
-
       level_info.merge!(
         {
           id: level.id.to_s,
           description: level.try(:bubble_choice_description),
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,
-          letter: alphabet[index],
+          letter: ALPHABET[index],
           icon: level.try(:icon)
         }
       )
@@ -145,16 +143,13 @@ class BubbleChoice < DSLDefined
         level_url(level.id)
 
       if user_id
-        level_info[:perfect] = UserLevel.find_by(
+        user_level = UserLevel.find_by(
           level: level,
           script: script_level.try(:script),
           user_id: user_id
-          )&.perfect?
-        level_info[:status] = if level_info[:perfect]
-                                SharedConstants::LEVEL_STATUS.perfect
-                              else
-                                SharedConstants::LEVEL_STATUS.not_tried
-                              end
+          )
+        level_info[:perfect] = user_level&.perfect?
+        level_info[:status] = activity_css_class(user_level)
 
         level_feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level.id, script_level.try(:script)).first
         level_info[:teacher_feedback_review_state] = level_feedback&.review_state
@@ -204,12 +199,6 @@ class BubbleChoice < DSLDefined
 
   def clone_with_suffix(new_suffix, editor_experiment: nil)
     level = super(new_suffix, editor_experiment: editor_experiment)
-    level.levels_child_levels.each do |parent_levels_child_level|
-      sublevel = parent_levels_child_level.child_level
-      cloned_sublevel = sublevel.clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
-      parent_levels_child_level.child_level = cloned_sublevel
-      parent_levels_child_level.save!
-    end
 
     level.rewrite_dsl_file(BubbleChoiceDSL.serialize(level))
     level

@@ -69,6 +69,7 @@ class XhrProxyController < ApplicationController
     distanza.org
     dweet.io
     enclout.com
+    googleapis.com
     herokuapp.com
     hubblesite.org
     images-api.nasa.gov
@@ -102,6 +103,7 @@ class XhrProxyController < ApplicationController
     vpic.nhtsa.dot.gov
     wikipedia.org
     worldclockapi.com
+    worldtimeapi.org
   ).freeze
 
   # How long the content is allowed to be cached

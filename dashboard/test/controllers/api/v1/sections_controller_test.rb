@@ -27,6 +27,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedConstants::PUBLISHED_STATE.preview)
     @csp_script = create(:script, name: 'csp1', published_state: SharedConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
+    @csp_script.reload
   end
 
   test 'logged out cannot list sections' do
@@ -388,6 +389,16 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     assert_equal false, returned_json['lesson_extras']
     assert_equal false, returned_section.lesson_extras
+  end
+
+  test 'default code_review_enabled value is TRUE' do
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL
+    }
+
+    assert returned_json['code_review_enabled']
+    assert returned_section.code_review_enabled
   end
 
   test 'cannot set lesson_extras to an invalid value' do

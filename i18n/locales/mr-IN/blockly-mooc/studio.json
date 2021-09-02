@@ -10,6 +10,7 @@
   "moveDirectionUp": "वर",
   "to": "पर्यंत",
   "no": "नाही",
+  "reinfFeedbackMsg": "तुमची कथा पुन्हा लावण्यासाठी मागे जाण्याकरता तुम्ही \"{backButton}\" बटण दाबू शकता.",
   "robot": "रोबॉट",
   "saySpriteChoices_16": "होय",
   "saySpriteChoices_17": "नाही",

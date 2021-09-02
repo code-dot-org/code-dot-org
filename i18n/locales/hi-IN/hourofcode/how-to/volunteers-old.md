@@ -4,12 +4,12 @@ title: ऑवर ऑफ़ कोड स्वयंसेवकों के ल�
 
 {{ signup_button }}
 
-# How-to Guide for Volunteers
-### Make a difference in a classroom today!
+# अध्यापको के लिए प्रशिक्षण पत्र
+### आज कक्षा में एक अंतर बनाओ!
 
 ***
 
-## Why volunteer?
+## स्वयंसेवी क्यों?
 Check out some testimony from past volunteers:
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”

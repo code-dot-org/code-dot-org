@@ -2,18 +2,42 @@
   "category": "",
   "config": {
     "func": "setForegroundEffect",
-    "blockText": "set foreground effect {FG_EFFECT}",
+    "blockText": "do {EFFECT} effect",
     "args": [
       {
-        "name": "FG_EFFECT",
+        "name": "EFFECT",
         "options": [
           [
-            "rain",
+            "Rain",
             "\"rain\""
           ],
           [
-            "bubbles",
+            "Bubbles",
             "\"bubbles\""
+          ],
+          [
+            "Colorful Hearts",
+            "\"hearts\""
+          ],
+          [
+            "Happy Emojis",
+            "\"emojis\""
+          ],
+          [
+            "Confetti",
+            "\"confetti\""
+          ],
+          [
+            "Starburst",
+            "\"starburst\""
+          ],
+          [
+            "Shattering Glass",
+            "\"glass\""
+          ],
+          [
+            "Twinkling",
+            "\"twinkling\""
           ]
         ]
       }

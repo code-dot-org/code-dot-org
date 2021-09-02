@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-16 23:54:59 UTC",
+    "serialized_at": "2021-08-17 17:08:59 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -31,7 +31,7 @@
       "properties": {
         "display_name": "Chapter 1 - Understanding Machine Learning",
         "description": "Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.",
-        "big_questions": "- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n- How can machine learning be used to solve problems in our community?"
+        "big_questions": "- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -2021,8 +2021,21 @@
       }
     },
     {
-      "key": "1cffdddb-7386-4408-b816-eedc5ab5c0e5",
+      "key": "4f20276d-6403-4e23-90b3-98a9424e30b1",
       "position": 1,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit on AI and Machine Learning. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f20276d-6403-4e23-90b3-98a9424e30b1",
+        "lesson_activity.key": "cb3d02a5-589b-47d7-b836-ad217f5438fe"
+      }
+    },
+    {
+      "key": "1cffdddb-7386-4408-b816-eedc5ab5c0e5",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is something new you learned about machine learning today? What is a new question you have about machine learning?_\n\nEncourage students to choose one of these to share with you on the way out the door, or to write their responses on a post-it note that can be displayed in the classroom. If possible, keep track of these items throughout the unit and refer back to them in later lessons when they are addressed.",
         "name": "Journal"
@@ -4268,7 +4281,7 @@
       "key": "3bbbd5a7-a83b-425f-bd20-3fc571167798",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai-training/aiml/2021] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** Biased data favors some things and de-prioritizes or excludes others\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai-training/aiml/2021] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** When a decision favors some things and de-prioritizes or excludes others\n"
       },
       "seeding_key": {
         "activity_section.key": "3bbbd5a7-a83b-425f-bd20-3fc571167798",
@@ -5036,7 +5049,7 @@
       "key": "c589d268-67e6-4c07-ae30-dfcadbf16418",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the  to each student.\n[r unplugged_knn_-_activity_guide/aiml/2021]"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r unplugged_knn_-_activity_guide/aiml/2021] activity guide to each student."
       },
       "seeding_key": {
         "activity_section.key": "c589d268-67e6-4c07-ae30-dfcadbf16418",
@@ -5108,13 +5121,7 @@
       "key": "082bda98-c0da-4454-a2ed-748664e66bd6",
       "position": 7,
       "properties": {
-        "description": "**Model:** Help students track how similar each row of the table is similar to Location A. This involves counting each time a cell from Location A matches a cell in the table. For example, if the only thing both locations have in common is that they are indoors, then we would write a 1 for the similarities with Location A. Or, if both locations are indoors, loud, and have sidewalks: then we would write a 3 for the similarities with Location A.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Answer Key:** An answer key to this activity is provided to verified teachers in the links section of the lesson plan"
-          }
-        ]
+        "description": "**Model:** Help students track how similar each row of the table is similar to Location A. This involves counting each time a cell from Location A matches a cell in the table. For example, if the only thing both locations have in common is that they are indoors, then we would write a 1 for the similarities with Location A. Or, if both locations are indoors, loud, and have sidewalks: then we would write a 3 for the similarities with Location A."
       },
       "seeding_key": {
         "activity_section.key": "082bda98-c0da-4454-a2ed-748664e66bd6",
@@ -5142,13 +5149,7 @@
       "key": "015eedd8-8d21-4ede-8c7e-b44848440644",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On the next page of the activity guide, students are given two new locations to predict the number of zombies. They will repeat this same process for these locations: determine the three most similar locations, then find the average to predict the number of zombies.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Formative Assessment**: [have students do this in pairs so they can practice on their own as a formative assessment]"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On the next page of the activity guide, students are given two new locations to predict the number of zombies. They will repeat this same process for these locations: determine the three most similar locations, then find the average to predict the number of zombies."
       },
       "seeding_key": {
         "activity_section.key": "015eedd8-8d21-4ede-8c7e-b44848440644",
@@ -5336,7 +5337,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**AI Accuracy in the Real World:** [Story about how AI Accuracy effects things like cancer predictions or life/death situations]"
+            "markdown": "**AI Accuracy in the Real World:** This situation introduces issues involving inaccurate calculations from machine learning models, such as false positives or false negatives. Students may have experience with this when an important email is marked as spam by an email program, or they ignore a phone call from an important person because they don't recognize the number - both of these are examples of false positives, where a piece of data was incorrectly marked as unimportant.\n\nNot all false positives have the same impact on people in the real world. These resources can be helpful in giving examples of how issues of accuracy can have large impacts for people in the real world, and help jump-start the discussion in the wrap-up journal prompt: \n- [**Medical News and Life Sciences**](https://www.news-medical.net/news/20200512/AI-techniques-in-medical-imaging-may-lead-to-false-positives-and-false-negatives.aspx) - this article explains how artificial intelligence is routinely used to help identify cancer in the medical field to great success, but the risks of a false-positive identification can be devastating.\n- [**Wrongfully Accused by an Algorithm**](https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html) - this article explains how inaccurate facial recognition software was used to wrongfully arrest a man for a crime he didn't commit."
           }
         ]
       },
@@ -5361,7 +5362,7 @@
       "key": "15c77531-5344-416b-93da-36258c34586c",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:** Students may call on examples from the news such as:\n\n* Medical diagnosis, such as cancer detection\n* Facial recognition for criminal prosecution\n* [others]"
+        "description": "**Discussion Goal:** Students may call on examples from the news such as:\n\n* Medical diagnosis, such as cancer detection\n* Facial recognition for criminal prosecution"
       },
       "seeding_key": {
         "activity_section.key": "15c77531-5344-416b-93da-36258c34586c",
@@ -6218,7 +6219,7 @@
       "key": "ce85e0e2-9b23-4d33-8332-33bb03e8bde9",
       "position": 2,
       "properties": {
-        "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey. Some questions are the same as the pre-survey at the start of the unit, which can show student growth or changes in student attitudes towards computer science.",
         "name": "Reflection",
         "progression_name": "Reflection"
       },
@@ -7217,7 +7218,7 @@
       "key": "6e55de6c-bd9e-44e3-ac11-523d359f4682",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Editing Google Sheets video. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r cleaning_survey_data/aiml/2021] video. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -8095,7 +8096,6 @@
         ],
         "progression": "Recognizing Fish"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8121,7 +8121,6 @@
         ],
         "progression": "Recognizing Fish Features"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8147,7 +8146,6 @@
         ],
         "progression": "Recognizing Expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8164,6 +8162,31 @@
     },
     {
       "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_2021"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aiml-intro-pulse-survey_2021"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "4f20276d-6403-4e23-90b3-98a9424e30b1"
+      },
+      "level_keys": [
+        "aiml-intro-pulse-survey_2021"
+      ]
+    },
+    {
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8173,7 +8196,6 @@
         ],
         "progression": "Looking for Patterns"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8189,7 +8211,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8199,7 +8221,6 @@
         ],
         "progression": "Green Glass Door"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8215,7 +8236,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8225,7 +8246,6 @@
         ],
         "progression": "Shoe Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8241,7 +8261,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8251,7 +8271,6 @@
         ],
         "progression": "Improved Shoe Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8267,7 +8286,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8277,7 +8296,6 @@
         ],
         "progression": "Shoe Recommendation Survey"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8293,7 +8311,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8303,7 +8321,6 @@
         ],
         "progression": "Ultimate Shoe Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8319,7 +8336,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8329,7 +8346,6 @@
         ],
         "progression": "Fruit and Veggie Explorer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8345,7 +8361,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8355,7 +8371,6 @@
         ],
         "progression": "Recognizing Shapes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8371,7 +8386,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8381,7 +8396,6 @@
         ],
         "progression": "Pizza Recommendations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8397,7 +8411,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8407,7 +8421,6 @@
         ],
         "progression": "You Choose: Restaurant Recommendations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8423,7 +8436,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8433,7 +8446,6 @@
         ],
         "progression": "Book Recommender App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8449,7 +8461,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8459,7 +8471,6 @@
         ],
         "progression": "Import a Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8475,7 +8486,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8485,7 +8496,6 @@
         ],
         "progression": "Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8501,7 +8511,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8511,7 +8521,6 @@
         ],
         "progression": "Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8527,7 +8536,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8537,7 +8546,6 @@
         ],
         "progression": "Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8553,7 +8561,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 6,
       "activity_section_position": 4,
       "assessment": true,
@@ -8563,7 +8571,6 @@
         ],
         "progression": "Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8579,7 +8586,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8589,7 +8596,6 @@
         ],
         "progression": "Choice Levels: Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8605,7 +8611,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8615,7 +8621,6 @@
         ],
         "progression": "Medical Priority App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8631,7 +8636,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8641,7 +8646,6 @@
         ],
         "progression": "Book Recommender Model Card"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8657,7 +8661,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8667,7 +8671,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8683,7 +8686,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8693,7 +8696,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8709,7 +8711,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8719,7 +8721,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8735,7 +8736,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8745,7 +8746,6 @@
         ],
         "progression": "Zoo Predictions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8761,7 +8761,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8771,7 +8771,6 @@
         ],
         "progression": "Zoo Predictions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8787,7 +8786,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8797,7 +8796,6 @@
         ],
         "progression": "Zoo Predictions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8813,7 +8811,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8823,7 +8821,6 @@
         ],
         "progression": "Importing Your Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8839,7 +8836,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8849,7 +8846,6 @@
         ],
         "progression": "Customizing Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8865,7 +8861,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8875,7 +8871,6 @@
         ],
         "progression": "Example App: Zoo Classification"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8891,7 +8886,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8901,7 +8896,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8917,7 +8911,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8927,7 +8921,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8943,7 +8936,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8953,7 +8946,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8969,7 +8961,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8979,7 +8971,6 @@
         ],
         "progression": "Adding New Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8995,7 +8986,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -9005,7 +8996,6 @@
         ],
         "progression": "Adding New Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9021,7 +9011,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -9031,7 +9021,6 @@
         ],
         "progression": "Adding New Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9047,7 +9036,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9057,7 +9046,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9073,7 +9061,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -9083,7 +9071,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9099,7 +9086,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -9109,7 +9096,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9125,7 +9111,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -9135,7 +9121,6 @@
         ],
         "progression": "Safari Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9151,7 +9136,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9161,7 +9146,6 @@
         ],
         "progression": "Safari App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9177,7 +9161,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9187,7 +9171,6 @@
         ],
         "progression": "Raspado Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9203,7 +9186,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9213,7 +9196,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9229,7 +9211,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9239,7 +9221,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9255,7 +9236,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9265,7 +9246,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9281,7 +9261,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9291,7 +9271,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9307,7 +9286,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9317,7 +9296,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9333,7 +9311,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -9343,7 +9321,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9359,7 +9336,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 6,
       "assessment": true,
@@ -9369,7 +9346,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9385,7 +9361,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9395,7 +9371,6 @@
         ],
         "progression": "You Choose: Improve Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9411,7 +9386,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9421,7 +9396,6 @@
         ],
         "progression": "Train a Model in AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9437,7 +9411,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9447,7 +9421,6 @@
         ],
         "progression": "Create an App in App Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9463,21 +9436,20 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "aiml-pulse-check-survey-1-levelgroup Ch1_2021"
+          "aiml-ch1-pulse-survey_2021"
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "aiml-pulse-check-survey-1-levelgroup Ch1_2021"
+          "aiml-ch1-pulse-survey_2021"
         ],
         "lesson.key": "lesson-18",
         "lesson_group.key": "lessonGroup-2",
@@ -9485,11 +9457,11 @@
         "activity_section.key": "ce85e0e2-9b23-4d33-8332-33bb03e8bde9"
       },
       "level_keys": [
-        "aiml-pulse-check-survey-1-levelgroup Ch1_2021"
+        "aiml-ch1-pulse-survey_2021"
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9499,7 +9471,6 @@
         ],
         "progression": "Create a Google Form"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9515,7 +9486,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9525,7 +9496,6 @@
         ],
         "progression": "Kim's Survey"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9541,7 +9511,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9551,7 +9521,6 @@
         ],
         "progression": "Kim's Survey Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9567,7 +9536,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9577,7 +9546,6 @@
         ],
         "progression": "AI Lab and Kim's Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9593,7 +9561,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9603,7 +9571,6 @@
         ],
         "progression": "Isaac's Survey Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9619,7 +9586,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9629,7 +9596,6 @@
         ],
         "progression": "AI Lab and Isaac's Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9645,7 +9611,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9655,7 +9621,6 @@
         ],
         "progression": "Club Datasets"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9671,7 +9636,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9681,7 +9646,6 @@
         ],
         "progression": "Alternative Datasets"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9697,7 +9661,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9707,7 +9671,6 @@
         ],
         "progression": "Import Your Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9723,7 +9686,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -9733,7 +9696,6 @@
         ],
         "progression": "Import Your Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9749,7 +9711,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -9759,7 +9721,6 @@
         ],
         "progression": "Import Your Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9775,7 +9736,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9785,7 +9746,6 @@
         ],
         "progression": "Add a Welcome Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9801,7 +9761,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9811,7 +9771,6 @@
         ],
         "progression": "Add a Welcome Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9827,7 +9786,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9837,7 +9796,6 @@
         ],
         "progression": "Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9853,7 +9811,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9863,7 +9821,6 @@
         ],
         "progression": "Review Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9879,7 +9836,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9889,7 +9846,6 @@
         ],
         "progression": "Design an AI App - AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9905,7 +9861,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9915,7 +9871,6 @@
         ],
         "progression": "Design an AI App - App Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9931,7 +9886,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -9941,7 +9896,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9957,7 +9911,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -9966,7 +9920,6 @@
           "CSD survey_placeholder_levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10017,6 +9970,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
         "activity_section.key": "204615dd-39ee-49f1-821d-0d4d4afdbd0a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aiml-intro-pulse-survey_2021",
+        "script_level.level_keys": [
+          "aiml-intro-pulse-survey_2021"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "4f20276d-6403-4e23-90b3-98a9424e30b1"
       }
     },
     {
@@ -10621,9 +10586,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "aiml-pulse-check-survey-1-levelgroup Ch1_2021",
+        "level.key": "aiml-ch1-pulse-survey_2021",
         "script_level.level_keys": [
-          "aiml-pulse-check-survey-1-levelgroup Ch1_2021"
+          "aiml-ch1-pulse-survey_2021"
         ],
         "lesson.key": "lesson-18",
         "lesson_group.key": "lessonGroup-2",
@@ -10874,6 +10839,54 @@
       }
     },
     {
+      "name": "[KEY] - Numerical Data in AI Lab",
+      "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit",
+      "key": "_key_-_numerical_data_in_ai_lab",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_-_numerical_data_in_ai_lab"
+      }
+    },
+    {
+      "name": "[KEY] Numerical Accuracy",
+      "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
+      "key": "_key_numerical_accuracy",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_numerical_accuracy"
+      }
+    },
+    {
+      "name": "[KEY] Training a Model in AI Lab",
+      "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
+      "key": "_key_training_a_model_in_ai_lab",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_training_a_model_in_ai_lab"
+      }
+    },
+    {
+      "name": "[KEY] Zoo Models",
+      "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/edit#",
+      "key": "_key_zoo_models",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_zoo_models"
+      }
+    },
+    {
       "name": "[Template] 5 Why's",
       "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
       "key": "_template_5_why_s",
@@ -10883,6 +10896,18 @@
       },
       "seeding_key": {
         "resource.key": "_template_5_why_s"
+      }
+    },
+    {
+      "name": "Accuracy in AI Lab",
+      "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
+      "key": "accuracy_in_ai_lab",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "accuracy_in_ai_lab"
       }
     },
     {
@@ -10936,6 +10961,17 @@
       }
     },
     {
+      "name": "AI and Machine Learning Implementation Options",
+      "url": "https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview",
+      "key": "ai_and_machine_learning_implementation_options",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_machine_learning_implementation_options"
+      }
+    },
+    {
       "name": "Numerical Data in AI Lab",
       "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
       "key": "ai_lab_numerical_data",
@@ -10957,6 +10993,19 @@
       },
       "seeding_key": {
         "resource.key": "ai_lab_select_label"
+      }
+    },
+    {
+      "name": "AI: What is Machine Learning?",
+      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+      "key": "ai_what_is_machine_learning_",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "ai_what_is_machine_learning_"
       }
     },
     {
@@ -11066,6 +11115,18 @@
       }
     },
     {
+      "name": "Cleaning Survey Data",
+      "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
+      "key": "cleaning_survey_data",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "cleaning_survey_data"
+      }
+    },
+    {
       "name": "Create a Survey using Google Forms",
       "url": "https://www.youtube.com/watch?v=ZdakHQ-HIXk",
       "key": "create_a_survey_using_google_forms",
@@ -11087,6 +11148,18 @@
       },
       "seeding_key": {
         "resource.key": "create_an_ml_app_-_project_guide"
+      }
+    },
+    {
+      "name": "Creating a Survey",
+      "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
+      "key": "creating_a_survey",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "creating_a_survey"
       }
     },
     {
@@ -11208,6 +11281,18 @@
       }
     },
     {
+      "name": "Importing a Model in App Lab",
+      "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
+      "key": "importing_a_model_in_app_lab",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "importing_a_model_in_app_lab"
+      }
+    },
+    {
       "name": "Innovations in AI",
       "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
       "key": "innovations_in_ai",
@@ -11294,7 +11379,7 @@
       "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
       "key": "key-classification-with-machine-learning",
       "properties": {
-        "type": "Activity Guide",
+        "type": "Answer Key",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
@@ -11313,11 +11398,13 @@
       }
     },
     {
-      "name": "Numerical Accuracy - Activity Guide",
+      "name": "Numerical Accuracy",
       "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
       "key": "knn_accuracy_-_activity_guide",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "knn_accuracy_-_activity_guide"
@@ -11459,6 +11546,18 @@
       }
     },
     {
+      "name": "[KEY] Patterns in Data",
+      "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view",
+      "key": "patterns_in_data_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "patterns_in_data_1"
+      }
+    },
+    {
       "name": "Issue Statements",
       "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/copy",
       "key": "planning_an_ml_project",
@@ -11504,6 +11603,30 @@
       },
       "seeding_key": {
         "resource.key": "seeing_ai"
+      }
+    },
+    {
+      "name": "Selecting a Label",
+      "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
+      "key": "selecting_a_label",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "selecting_a_label"
+      }
+    },
+    {
+      "name": "Selecting Features",
+      "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
+      "key": "selecting_features",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "selecting_features"
       }
     },
     {
@@ -11652,25 +11775,52 @@
       }
     },
     {
-      "name": "Zombie Prediction - Activity Guide",
+      "name": "Zombie Prediction",
       "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
       "key": "unplugged_knn_-_activity_guide",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "unplugged_knn_-_activity_guide"
       }
     },
     {
-      "name": "Zombie Prediction - Answer Key",
+      "name": "[KEY] Zombie Prediction",
       "url": "https://docs.google.com/document/d/1R2NzYw-wTtx05wdHMKBESh3XchqQnILHKM_wXGl1vow/edit",
       "key": "unplugged_knn_-_answer_key",
       "properties": {
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "unplugged_knn_-_answer_key"
+      }
+    },
+    {
+      "name": "Using Data with Categorical Features",
+      "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
+      "key": "using_data_with_categorical_features",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "using_data_with_categorical_features"
+      }
+    },
+    {
+      "name": "Using Data with Numerical Features",
+      "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
+      "key": "using_data_with_numerical_features",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "using_data_with_numerical_features"
       }
     },
     {
@@ -11781,6 +11931,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-22",
+        "resource.key": "creating_a_survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
         "resource.key": "questions_form_day"
       }
     },
@@ -11794,6 +11950,12 @@
       "seeding_key": {
         "lesson.key": "lesson-22",
         "resource.key": "survey_template_google_form_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "cleaning_survey_data"
       }
     },
     {
@@ -11818,6 +11980,12 @@
       "seeding_key": {
         "lesson.key": "lesson-23",
         "resource.key": "view_and_download_survey_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson1",
+        "resource.key": "ai_what_is_machine_learning_"
       }
     },
     {
@@ -11853,6 +12021,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson12",
+        "resource.key": "_key_zoo_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
         "resource.key": "ai_lab_select_label"
       }
     },
@@ -11860,6 +12034,12 @@
       "seeding_key": {
         "lesson.key": "lesson12",
         "resource.key": "model_cards_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "resource.key": "selecting_a_label"
       }
     },
     {
@@ -11991,6 +12171,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson3",
+        "resource.key": "patterns_in_data_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson3",
         "resource.key": "shoe_survey"
       }
     },
@@ -12021,6 +12207,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson5",
+        "resource.key": "_key_training_a_model_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "resource.key": "accuracy_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
         "resource.key": "intro_ai_lab"
       }
     },
@@ -12028,6 +12226,12 @@
       "seeding_key": {
         "lesson.key": "lesson5",
         "resource.key": "introduction_to_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "resource.key": "selecting_features"
       }
     },
     {
@@ -12044,8 +12248,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson5",
+        "resource.key": "using_data_with_categorical_features"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson6",
         "resource.key": "app_lab_import"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson6",
+        "resource.key": "importing_a_model_in_app_lab"
       }
     },
     {
@@ -12069,6 +12285,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson8",
+        "resource.key": "_key_-_numerical_data_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson8",
         "resource.key": "ai_lab_numerical_data"
       }
     },
@@ -12082,6 +12304,18 @@
       "seeding_key": {
         "lesson.key": "lesson8",
         "resource.key": "numerical_data_in_ai_lab_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson8",
+        "resource.key": "using_data_with_numerical_features"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson9",
+        "resource.key": "_key_numerical_accuracy"
       }
     },
     {
@@ -12110,6 +12344,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "ai_and_machine_learning_implementation_options",
+        "script.name": "aiml-2021"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "all_code",

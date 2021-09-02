@@ -1183,7 +1183,7 @@ sq-AL:
         answers:
         - {}
         - {}
-        - {}
+        - text: '15'
         - {}
         questions:
         - {}
@@ -1191,7 +1191,7 @@ sq-AL:
         answers:
         - {}
         - {}
-        - {}
+        - text: '15'
         - {}
         questions:
         - {}
@@ -1199,7 +1199,7 @@ sq-AL:
         answers:
         - {}
         - {}
-        - {}
+        - text: '15'
         - {}
         questions:
         - {}
@@ -1207,7 +1207,7 @@ sq-AL:
         answers:
         - {}
         - {}
-        - {}
+        - text: '15'
         - {}
         questions:
         - {}
@@ -1510,7 +1510,7 @@ sq-AL:
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - {}
-        - {}
+        - text: '8'
         - {}
         - {}
         questions:
@@ -1518,7 +1518,7 @@ sq-AL:
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - {}
-        - {}
+        - text: '8'
         - {}
         - {}
         questions:
@@ -1526,7 +1526,7 @@ sq-AL:
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - {}
-        - {}
+        - text: '8'
         - {}
         - {}
         questions:
@@ -1534,7 +1534,7 @@ sq-AL:
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - {}
-        - {}
+        - text: '8'
         - {}
         - {}
         questions:
@@ -2057,7 +2057,7 @@ sq-AL:
         answers:
         - {}
         - {}
-        - {}
+        - text: '15'
         - {}
         questions:
         - {}
@@ -2136,7 +2136,7 @@ sq-AL:
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - {}
-        - {}
+        - text: '8'
         - {}
         - {}
         questions:

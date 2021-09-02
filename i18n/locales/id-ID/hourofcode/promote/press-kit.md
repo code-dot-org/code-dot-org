@@ -4,7 +4,7 @@ title: Perlengkapan Media
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# Cara menarik media ke acara Hour of Code Anda
 
 ### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
@@ -12,7 +12,7 @@ title: Perlengkapan Media
 
 * * *
 
-## Key Tips
+## Tips Utama
 
 - Jangkau media dua minggu sebelum acara Anda melalui email. Tindak lanjuti melalui email dan telepon jika Anda tidak menerima tanggapan awal.
 - Mintalah anggota staf sekolah atau sukarela untuk mengambil foto untuk dibagikan secara online atau kirim ke pers.
@@ -21,7 +21,7 @@ title: Perlengkapan Media
 
 ## Step-by-step guide
 
-### 1. Plan your event
+### 1. Rencanakan acara Anda
 
 - Rencanakan sebuah majelis untuk memulai Hour of Code.
 - Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
@@ -33,13 +33,13 @@ title: Perlengkapan Media
 
 Like local newspapers, TV station or radio stations, or blogs. <br />
 
-### 3. Contact local media
+### 3. Hubungi media lokal
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+Cara terbaik untuk menjangkau adalah melalui email. It should be short and should communicate "why should other people care about this event"? Sertakan informasi kontak (termasuk nomor ponsel) untuk siapa yang akan berada di lokasi pada acara tersebut. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+Lihatlah secara online untuk mencari informasi kontak reporter. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. Siapkan pertanyaan tentang acara sekolah Anda. Berikut adalah beberapa contohnya:
 
 #### Mengapa sekolah Anda melakukan Hour of Code?
 

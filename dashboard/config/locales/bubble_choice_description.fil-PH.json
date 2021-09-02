@@ -1,2 +1,12 @@
 {
+  "fil-PH": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Magguhit ng mga silid para sa bawat isa sa mga hayop. ",
+        "courseD_bee_nestedLoops8_2021": "Kolektahin ang lahat ng nektar mula sa bawat isa sa mga bulaklak at gumawa ng pulot sa pulot-pukyutan. ",
+        "courseD_bee_nestedLoops9_2021": "Gawin ang lahat ng pulot.",
+        "ramp_artist_loops8_2021": "Maghanap ng paterno at paikilin ang code na ito gamit ang mga loop."
+      }
+    }
+  }
 }

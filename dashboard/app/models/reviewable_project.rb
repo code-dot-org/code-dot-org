@@ -12,7 +12,14 @@
 #
 # Indexes
 #
-#  index_reviewable_projects_on_storage_app_id_and_user_id  (storage_app_id,user_id)
+#  index_reviewable_projects_on_user_script_level_storage_app  (user_id,script_id,level_id,storage_app_id)
 #
 class ReviewableProject < ApplicationRecord
+  belongs_to :user
+  belongs_to :level
+  belongs_to :script
+
+  def self.user_can_mark_project_reviewable?(project_owner, user)
+    project_owner == user && project_owner.sections_as_student.all?(&:code_review_enabled?)
+  end
 end

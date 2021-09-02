@@ -40,6 +40,182 @@
           "recovering": "đang hồi phục",
           "moving left and right": "di chuyển sang trái và sang phải",
           "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "CourseE_Project_SpriteLab_cupcake_examples_2021": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "CourseE_Project_SpriteLab_examples_2021": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "CourseF_outbreak1": {
+          "recovering": "đang hồi phục"
+        },
+        "CourseF_outbreak2": {
+          "recovering": "đang hồi phục"
+        },
+        "CourseF_outbreak3": {
+          "recovering": "đang hồi phục"
+        },
+        "CourseF_outbreak4": {
+          "recovering": "đang hồi phục",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "CourseF_outbreak5": {
+          "recovering": "đang hồi phục"
+        },
+        "CourseF_outbreak6": {
+          "recovering": "đang hồi phục"
+        },
+        "CourseF_outbreak7": {
+          "recovering": "đang hồi phục",
+          "moving left and right": "di chuyển sang trái và sang phải",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "CourseF_outbreak8": {
+          "recovering": "đang hồi phục",
+          "moving left and right": "di chuyển sang trái và sang phải",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "Virtual Pet 1_2021": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseE_aboutme_1_2021": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_apps_aquarium": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên",
+          "moving with arrow keys2": "di chuyển bằng các phím mũi tên2",
+          "driving with arrow keys2": "lái xe bằng các phím mũi tên2"
+        },
+        "courseF_apps_card": {
+          "blocking movement": "chặn chuyển động",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_apps_chatbot": {
+          "blocking movement": "chặn chuyển động",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên",
+          "moving with arrow keys2": "di chuyển bằng các phím mũi tên2",
+          "driving with arrow keys2": "lái xe bằng các phím mũi tên2"
+        },
+        "courseF_apps_collector": {
+          "flying west and looping": "bay sang trái và lặp lại",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên",
+          "moving with arrow keys2": "di chuyển bằng các phím mũi tên2",
+          "driving with arrow keys2": "lái xe bằng các phím mũi tên2"
+        },
+        "courseF_apps_madlib": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_apps_pet": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_editable_card": {
+          "blocking movement": "chặn chuyển động",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_editable_chatbot": {
+          "blocking movement": "chặn chuyển động",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_editable_madlib": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_events_choice_conflict": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_events_choice_conflict2": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_events_choice_penguin": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_events_choice_pufferfish": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_events_conflict": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_events_key": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_events_practice_reorder": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên",
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_events_review": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_events_ship": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_events_stops": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_events_time": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_text_answer": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_text_choice_color": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_text_choice_conversation": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_text_choice_events": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_text_choice_freeplay": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_text_choice_interview": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_text_choice_multiprompt": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_text_choice_title": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_text_concat": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_text_events": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_text_print": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_text_prompts": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_text_review": {
+          "moving forward": "tiến về phía trước"
+        },
+        "courseF_variables_card": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_variables_card_finish": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_variables_chatbot": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_variables_chatbot_finish": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_variables_madlib": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "courseF_variables_madlib_finish": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "simcustom_2021": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
         }
       }
     }

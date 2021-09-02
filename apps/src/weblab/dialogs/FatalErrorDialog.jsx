@@ -8,10 +8,16 @@ import StylizedBaseDialog, {
 import SupportArticleMarkdown from '@cdo/apps/weblab/SupportArticleMarkdown';
 import {reload} from '@cdo/apps/utils';
 
-export default function FatalErrorDialog(props) {
+export default function FatalErrorDialog({
+  isOpen,
+  errorMessage,
+  handleClose,
+  handleResetProject,
+  ...props
+}) {
   const body = (
     <div>
-      <p>{props.errorMessage}</p>
+      <p>{errorMessage}</p>
       <SupportArticleMarkdown />
     </div>
   );
@@ -25,13 +31,13 @@ export default function FatalErrorDialog(props) {
     />,
     <FooterButton
       text={weblabI18n.reset()}
-      onClick={props.handleResetProject}
+      onClick={handleResetProject}
       key="reset"
       color="red"
     />,
     <FooterButton
       text={commonI18n.dismiss()}
-      onClick={props.handleClose}
+      onClick={handleClose}
       key="confirm"
       type="confirm"
     />
@@ -39,10 +45,11 @@ export default function FatalErrorDialog(props) {
 
   return (
     <StylizedBaseDialog
-      isOpen={props.isOpen}
+      {...props}
+      isOpen={isOpen}
       title={commonI18n.errorOccurredTitle()}
       body={body}
-      handleClose={props.handleClose}
+      handleClose={handleClose}
       renderFooter={() => footerButtons}
     />
   );

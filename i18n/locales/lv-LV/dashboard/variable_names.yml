@@ -2,7 +2,12 @@ lv:
   data:
     variable_names:
       actor: aktieris
+      age: vecums
+      answer: atbilde
+      binary: binārie
+      color: krāsa
       counter: cikla mainīgais
+      energy: enerģija
       height: augstums
       honey: medus
       left: pa kreisi

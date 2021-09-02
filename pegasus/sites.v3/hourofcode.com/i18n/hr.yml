@@ -12,24 +12,24 @@ hr:
   campaign_date_full: 7. - 13. prosinca
   campaign_date_year: '2016.'
   campaign_date_full_year: 7.-13. prosinca, 2020.
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_start_short: Lis. 1
+  latam_campaign_date_start_long: Listopad 1
+  latam_campaign_date_short: Lis. 1 - Pro. 12
+  latam_campaign_date_full: Listopad 1 - Prosinac 12
   latam_campaign_date_year: '2016.'
-  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
-  europe_campaign_date_start_short: Oct. 10
-  europe_campaign_date_start_long: October 10
-  europe_campaign_date_short: Oct. 10-25
-  europe_campaign_date_full: October 10-25
+  latam_campaign_date_full_year: Listopad 1, 2021 - Prosinac 12, 2021
+  europe_campaign_date_start_short: Lis. 9
+  europe_campaign_date_start_long: Listopad 9
+  europe_campaign_date_short: Lis. 9-24
+  europe_campaign_date_full: Listopad 9-24
   europe_campaign_date_year: '2016.'
-  europe_campaign_date_full_year: October 10-25, 2020
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
+  europe_campaign_date_full_year: Listopad 9-24, 2021
+  africa_campaign_date_start_short: Lis. 1
+  africa_campaign_date_start_long: Listopad 1
+  africa_campaign_date_short: Lis. 1-31
+  africa_campaign_date_full: Listopad 1-31
   africa_campaign_date_year: '2016.'
-  africa_campaign_date_full_year: October 1-31, 2020
+  africa_campaign_date_full_year: Listopad 1-31, 2021
   hoc2020_header: Učite danas, gradite svjetlije sutra.
   hoc2020_header_with_line_break_markdown: Učite danas, gradite svjetlije sutra.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
@@ -77,7 +77,7 @@ hr:
     problems. Enjoy Code.org's first step in a new journey to teach more about AI.
     When you use the AI for Oceans activity you are training real machine learning
     models. [Learn more](#behind-the-scenes).
-  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources: Resursi za učitelje
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
   oceans_landing_resource_button: Prikaži resurse
@@ -157,8 +157,8 @@ hr:
   ai_video_title_ethics_of_ai: Ethics of AI
   ai_video_title_ml_human_bias: Machine Learning and Human Bias
   ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
-  name: Name
+  activity: Aktivnosti
+  name: Ime
   description: Description
   audience: Audience
   ai_resource_header: Teach and Learn about AI
@@ -231,7 +231,7 @@ hr:
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
-  cookie_banner_accept: I agree
+  cookie_banner_accept: Slažem se
   front_header_banner: Pridružite se najvećem edukativnom događaju u povijesti, od
     8. do 14. prosinca 2015
   front_intro_default: Sat kodiranja globalni je pokret kojeg čine deseci milijuna

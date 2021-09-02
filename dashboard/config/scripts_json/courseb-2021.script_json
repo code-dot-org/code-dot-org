@@ -15,11 +15,12 @@
       "curriculum_umbrella": "CSF",
       "is_course": true,
       "is_migrated": true,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-07-02 16:28:37 UTC",
+    "serialized_at": "2021-07-27 22:37:31 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "courseb-2021"
@@ -2958,7 +2959,6 @@
         ],
         "progression": "Video: Follow The Digital Trail"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2984,7 +2984,6 @@
         ],
         "progression": "Move It Move it Video  - Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3010,7 +3009,6 @@
         ],
         "progression": "Video - Maze Intro: Programming with Blocks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3036,7 +3034,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3062,7 +3059,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3088,7 +3084,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3114,7 +3109,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3140,7 +3134,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3166,7 +3159,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3192,7 +3184,6 @@
         ],
         "progression": "Video: Pair Programming"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3218,7 +3209,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3244,7 +3234,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3270,7 +3259,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3296,7 +3284,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3322,7 +3309,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3349,7 +3335,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3375,7 +3360,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3401,7 +3385,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3427,7 +3410,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3453,7 +3435,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3479,7 +3460,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3505,7 +3485,6 @@
         ],
         "progression": "Video: The Harvester"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3531,7 +3510,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3557,7 +3535,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3583,7 +3560,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3609,7 +3585,6 @@
         ],
         "progression": "Video: Debugging with the Step Button"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3635,7 +3610,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3661,7 +3635,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3687,7 +3660,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3713,7 +3685,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3739,7 +3710,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3765,7 +3735,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3792,7 +3761,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3818,7 +3786,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3844,7 +3811,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3870,7 +3836,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3896,7 +3861,6 @@
         ],
         "progression": "Video: Getting Loopy"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3922,7 +3886,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3948,7 +3911,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3974,7 +3936,6 @@
         ],
         "progression": "Video: Repeat Blocks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4000,7 +3961,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4026,7 +3986,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4052,7 +4011,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4078,7 +4036,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4104,7 +4061,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4130,7 +4086,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4156,7 +4111,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4183,7 +4137,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4209,7 +4162,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4235,7 +4187,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4261,7 +4212,6 @@
         ],
         "progression": "Video: The Collector"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4287,7 +4237,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4313,7 +4262,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4339,7 +4287,6 @@
         ],
         "progression": "Video: Using the Repeat Block"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4365,7 +4312,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4391,7 +4337,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4417,7 +4362,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4443,7 +4387,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4469,7 +4412,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4496,7 +4438,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4522,7 +4463,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4548,7 +4488,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4574,7 +4513,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4600,7 +4538,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4626,7 +4563,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4652,7 +4588,6 @@
         ],
         "progression": "Video: The Artist in Code Studio"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4678,7 +4613,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4704,7 +4638,6 @@
         ],
         "progression": "Video: Repeat Blocks with the Artist"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4730,7 +4663,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4756,7 +4688,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4782,7 +4713,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4808,7 +4738,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4834,7 +4763,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4861,7 +4789,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4887,7 +4814,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4913,7 +4839,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4939,7 +4864,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4965,7 +4889,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4991,7 +4914,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5017,7 +4939,6 @@
         ],
         "progression": "The Right App - Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5043,7 +4964,6 @@
         ],
         "progression": "Video: The Big Event - Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5069,7 +4989,6 @@
         ],
         "progression": "Video: Introduction to Play Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5095,7 +5014,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5121,7 +5039,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5147,7 +5064,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5173,7 +5089,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5199,7 +5114,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5225,7 +5139,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5251,7 +5164,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5277,7 +5189,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5303,7 +5214,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5329,7 +5239,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5355,7 +5264,6 @@
         ],
         "progression": "Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7040,13 +6948,7 @@
     {
       "seeding_key": {
         "lesson.key": "Digital Trails",
-        "resource.key": "digital-trails-lesson-slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Digital Trails",
-        "resource.key": "digital-trails-follow-the-digital-trail"
+        "resource.key": "digital-trails-animal-tracks"
       }
     },
     {
@@ -7058,7 +6960,145 @@
     {
       "seeding_key": {
         "lesson.key": "Digital Trails",
-        "resource.key": "digital-trails-animal-tracks"
+        "resource.key": "digital-trails-follow-the-digital-trail"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "resource.key": "digital-trails-lesson-slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "course-ab-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "csf-lesson-recommend"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "the_big_event_courses_a_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "assessment-answer-big-event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "csf-the-big-event-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "the_big_event_courses_a_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "unplugged-video-big-event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "resource.key": "csf-lesson-recommend"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "resource.key": "feeling_faces_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "resource.key": "csf-lesson-recommend"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "resource.key": "feeling_faces_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "resource.key": "course-ab-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "resource.key": "csf-lesson-recommend"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "resource.key": "feeling_faces_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "resource.key": "assessment-answer-getting-loopy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "resource.key": "csf-getting-loopy-activity-worksheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "resource.key": "csf-getting-loopy-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "resource.key": "unplugged-video-getting-loopy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "resource.key": "feeling_faces_emotion_image"
       }
     },
     {
@@ -7087,96 +7127,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Move It, Move It",
-        "resource.key": "feeling_faces_emotion_image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "resource.key": "mimi-activity"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "resource.key": "jigsaw"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "resource.key": "class-section-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "resource.key": "wiggles_-_gonoodle"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "resource.key": "20_20_20_rule"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "resource.key": "mimi-activity"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "resource.key": "happy-map-game-pieces"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "resource.key": "compass-rose"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "resource.key": "feeling_faces_-_emotion_image"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Programming in Harvester",
         "resource.key": "feeling-faces-image"
       }
@@ -7195,134 +7145,92 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "resource.key": "unplugged-video-getting-loopy"
+        "lesson.key": "Programming in Maze",
+        "resource.key": "compass-rose"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "resource.key": "csf-getting-loopy-activity-worksheet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "resource.key": "csf-getting-loopy-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "resource.key": "assessment-answer-getting-loopy"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
+        "lesson.key": "Programming in Maze",
         "resource.key": "course-ab-blockly-blocks"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "resource.key": "csf-lesson-recommend"
+        "lesson.key": "Programming in Maze",
+        "resource.key": "feeling_faces_-_emotion_image"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "resource.key": "feeling_faces_emotion_image"
+        "lesson.key": "Programming in Maze",
+        "resource.key": "happy-map-game-pieces"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "resource.key": "csf-lesson-recommend"
+        "lesson.key": "Programming in Maze",
+        "resource.key": "mimi-activity"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "resource.key": "feeling_faces_emotion_image"
+        "lesson.key": "Programming in Maze",
+        "resource.key": "pair-programming-vid"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "resource.key": "csf-lesson-recommend"
+        "lesson.key": "Sequencing in Maze",
+        "resource.key": "20_20_20_rule"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "resource.key": "common-sense-media-pause-think"
+        "lesson.key": "Sequencing in Maze",
+        "resource.key": "class-section-video"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "resource.key": "feeling_faces_emotion_image"
+        "lesson.key": "Sequencing in Maze",
+        "resource.key": "course-ab-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "resource.key": "jigsaw"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "resource.key": "mimi-activity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "resource.key": "wiggles_-_gonoodle"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Right App",
         "resource.key": "the-right-app-scenarios"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "unplugged-video-big-event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "csf-the-big-event-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "assessment-answer-big-event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "the_big_event_courses_a_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "csf-lesson-recommend"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "common-sense-media-pause-think"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {
@@ -7341,7 +7249,7 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "csta_standards_mapping",
+        "resource.key": "2021_change_log",
         "script.name": "courseb-2021"
       }
     },
@@ -7353,13 +7261,31 @@
     },
     {
       "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "courseb-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "cross-curricular_extension_activities",
         "script.name": "courseb-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
+        "resource.key": "csta_standards_mapping",
+        "script.name": "courseb-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "courseb-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
         "script.name": "courseb-2021"
       }
     },
@@ -7372,24 +7298,6 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
-        "script.name": "courseb-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "debugging_guide",
-        "script.name": "courseb-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "curriculum_guide_1",
-        "script.name": "courseb-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2021_change_log",
         "script.name": "courseb-2021"
       }
     },

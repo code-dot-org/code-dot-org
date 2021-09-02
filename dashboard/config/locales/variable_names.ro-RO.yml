@@ -6,6 +6,9 @@ ro:
       Green: Verde
       Red: Roșu
       actor: actor
+      age: vârsta
+      answer: răspuns
+      binary: binar
       cats: pisicile
       color: culoare
       counter: numărător
@@ -15,6 +18,7 @@ ro:
       i: i
       left: stânga
       length: lungime
+      level: nivel
       name: nume
       nectar: nectar
       points: puncte
@@ -24,6 +28,8 @@ ro:
       score: scor
       size: dimensiune
       speed: viteză
+      startX: startX
+      startY: startY
       variable: variabila
       width: lăţime
       wizard: vrăjitor

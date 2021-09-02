@@ -222,8 +222,8 @@ uz:
       ma'lumot kerak.
     user_type_button: Hisob turini yangilash
     user_type_label: Hisob (Akkaunt) Turi
-    user_type_teacher: O'qituvchi
     user_type_student: O‘quvchi
+    user_type_teacher: O'qituvchi
     field_is_required: talab etiladi
     accept_terms: Hisob qaydnomasini yaratishga rozilik bildirishingiz kerak.
     error: Xatolik yuz berdi.
@@ -334,6 +334,7 @@ uz:
     invite_sent: Taklif yuborildi
     added_teacher: "%{name} o'qituvchingiz sifatida qo'shildi"
     registered: Siz %{section_name} uchun ro'yxatdan o'tdingiz.
+    already_exists: Siz allaqachon %{section_name} bo‘limiga qo‘shildingiz.
     error:
       signed_in: Davom etishdan oldin, iltimos, tizimdan chiqing
       username_not_found: " %{username} foydalanuvchi topilmadi"
@@ -759,12 +760,6 @@ uz:
       gamelab_unsupported_tablet: Game Lab sichqoncha va klaviatura yordamida ish
         stoli yoki noutbukda yaxshi ishlaydi. Joriy qurilmangizda ushbu vositadan
         foydalanishda muammolarga duch kelishingiz mumkin.
-      oceans_unsupported_browser: Ushbu o'quv qo'llanmada ushbu brauzer qo'llab-quvvatlanmaydi.
-        Iltimos, Edge, Chrome, Firefox yoki boshqa zamonaviy brauzer yordamida ushbu
-        sahifaga kirib ko'ring.
-      weblab_unsupported_browser: Afsuski, biz hozirda ushbu brauzerda Web Lab-ni
-        yuklashda muammolarga duch kelmoqdamiz. Bu hal bo'lguncha boshqa brauzerdan
-        foydalanishingiz mumkin. Noqulaylik uchun uzr.
       weblab_unsupported_locale_storage: Shaxsiy ko'rib chiqish rejimida Web Lab bilan
         bog'liq muammolarga duch kelishingiz mumkin. Iltimos, loyihangizni normal
         rejimda qayta yuklang. Noqulaylik uchun uzr.
@@ -1290,9 +1285,8 @@ uz:
       school_city: Maktab shahri
       school_country: Maktab davlati
       colombian_school_city: Maktab shahri
-      colombian_school_department: Maktab bo'limi
       colombian_school_municipality: Maktab munitsipaliteti
-      colombian_school_name: Maktab nomi
+      colombian_chilean_school_name: Maktab nomi
       ages: Bu yil qaysi yosh(lar) ni o'qitasiz?
       subjects: Bu yil qaysi fan(lar)ni o'qitasiz?
       resources: Quyidagi CS (informatika) ta'lim manbalaridan qaysi birini ishlatasiz?

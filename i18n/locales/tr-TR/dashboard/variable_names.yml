@@ -14,6 +14,7 @@ tr:
       animal2score: animal2score
       animal2speed: animal2speed
       answer: cevap
+      binary: ikili
       birds: kuşlar
       bit: bit
       blue1: blue1

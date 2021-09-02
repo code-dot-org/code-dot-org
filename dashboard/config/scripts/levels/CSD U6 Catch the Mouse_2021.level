@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2020-12-04T21:55:55.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -192,7 +188,7 @@
     "long_instructions": "Embedded Prediction",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "var score = 0;\r\nled.off();\r\n\r\nonEvent(\"mouse\", \"click\", function(event) {\r\n  setProperty(\"mouse\",\"x\",randomNumber(0,200));\r\n  setProperty(\"mouse\",\"y\",randomNumber(50,350));\r\n  score = score + 1;\r\n  if (score > 10) {\r\n    setProperty(\"message\", \"text\", \"You win!!!!!!!!!!!\")\r\n    led.on();\r\n  } else if (score > 5){\r\n    led.blink(200);\r\n  }\r\n});",
+    "start_blocks": "var score = 0;\r\nled.off();\r\n\r\nonEvent(\"mouse\", \"click\", function() {\r\n  setProperty(\"mouse\",\"x\",randomNumber(0,200));\r\n  setProperty(\"mouse\",\"y\",randomNumber(50,350));\r\n  score = score + 1;\r\n  if (score > 10) {\r\n    setProperty(\"message\", \"text\", \"You win!!!!!!!!!!!\");\r\n    led.on();\r\n  } else if (score > 5){\r\n    led.blink(200);\r\n  }\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -231,11 +227,24 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20404,
     "name_suffix": "_2021",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "text_mode_at_start": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "ai_enabled": "false"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2020-12-04T21:55:55.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-24 21:15:19 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:16:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:19:36 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:20:37 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:21:14 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 00:34:51 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-24 21:15:19 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:16:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:19:36 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:20:37 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 21:21:14 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 00:34:51 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2021-08-25 16:31:31 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-08 03:12:53 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:26 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -170,6 +170,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.",
+        "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.",
         "student_overview": "In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image."
       },
       "seeding_key": {
@@ -2126,7 +2127,6 @@
         ],
         "progression": "Exploring Metadata"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2152,7 +2152,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2178,7 +2177,6 @@
         ],
         "progression": "Making Bar Charts and Histograms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2204,7 +2202,6 @@
         ],
         "progression": "Making Bar Charts and Histograms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2230,7 +2227,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2256,7 +2252,6 @@
         ],
         "progression": "Cleaning Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2282,7 +2277,6 @@
         ],
         "progression": "Filtering Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2308,7 +2302,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2334,7 +2327,6 @@
         ],
         "progression": "Crosstab and Scatter Charts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2360,7 +2352,6 @@
         ],
         "progression": "Crosstab and Scatter Charts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2386,7 +2377,6 @@
         ],
         "progression": "What Type of Chart?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2412,7 +2402,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2438,7 +2427,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2464,7 +2452,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2490,7 +2477,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2516,7 +2502,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2542,7 +2527,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2568,7 +2552,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2594,7 +2577,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2620,7 +2602,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2646,7 +2627,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2672,7 +2652,6 @@
         ],
         "progression": "Cropping Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2698,7 +2677,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2724,7 +2702,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2750,7 +2727,6 @@
         ],
         "progression": "Data Story Workspace"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2776,7 +2752,6 @@
         ],
         "progression": "Data Story Workspace"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2801,7 +2776,6 @@
           "CSP Unit 9 AP-Style Assessment _2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3304,6 +3278,18 @@
       }
     },
     {
+      "name": "Sharing learnings about our image cropping algorithm (Twitter)",
+      "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
+      "key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -3313,6 +3299,19 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Twitter says its image-cropping algorithm was biased, so it's ditching it (CNN)",
+      "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
+      "key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing"
+      },
+      "seeding_key": {
+        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
       }
     },
     {
@@ -3379,13 +3378,13 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Learning From Data",
-        "resource.key": "google-trends"
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "resource.key": "big-data-citizen-science-machine-learning-activity-guide"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Learning From Data",
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
         "resource.key": "csp-u9-presentation"
       }
     },
@@ -3393,6 +3392,12 @@
       "seeding_key": {
         "lesson.key": "Exploring One Column",
         "resource.key": "csp-u9-presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "resource.key": "data_visualizer_in_app_lab_-_part_1"
       }
     },
     {
@@ -3403,8 +3408,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring One Column",
-        "resource.key": "data_visualizer_in_app_lab_-_part_1"
+        "lesson.key": "Exploring Two Columns",
+        "resource.key": "csp-u9-presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "resource.key": "data_visualizer_in_app_lab_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "resource.key": "exploring-two-columns-activity-guide"
       }
     },
     {
@@ -3421,32 +3438,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
+        "lesson.key": "Learning From Data",
         "resource.key": "csp-u9-presentation"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "resource.key": "exploring-two-columns-activity-guide"
+        "lesson.key": "Learning From Data",
+        "resource.key": "google-trends"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "resource.key": "data_visualizer_in_app_lab_-_part_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson.key": "Lesson 9: Assessment Day",
         "resource.key": "csp-u9-presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "resource.key": "big-data-citizen-science-machine-learning-activity-guide"
       }
     },
     {
@@ -3505,15 +3510,45 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson.key": "lesson-10",
         "resource.key": "csp-u9-presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "all_resources_9",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_9",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_master_vocabulary",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
         "script.name": "csp9-2021"
       }
     },
@@ -3526,24 +3561,6 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
-        "script.name": "csp9-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp9-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_9",
-        "script.name": "csp9-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_9",
         "script.name": "csp9-2021"
       }
     }

@@ -2,6 +2,10 @@ gl:
   data:
     variable_names:
       actor: actor
+      age: idade
+      answer: resposta
+      binary: binario
+      color: cor
       counter: contador
       height: altura
       honey: mel

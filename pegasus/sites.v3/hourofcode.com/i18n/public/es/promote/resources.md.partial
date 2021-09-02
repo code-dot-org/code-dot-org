@@ -58,7 +58,7 @@ nav: promote_nav
 </ul>
 
 1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
-2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+2. Incluye mensajes en tu página (o en el pie de página), como enlaces a la Semana por la Educación en Ciencias de la Computación y a los sitios web de[Code.org]({{ codeorg_link }}), que digan lo siguiente:
     
     *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
@@ -94,7 +94,7 @@ Este año, vamos a hacer que sea aún más grande. Acompáñanos en la Hora del 
 
 Corre la voz. Organiza un evento. Pide a una escuela local que se inscriba. O prueba la Hora del Código por ti mismo. Todos pueden beneficiarse de aprender los conceptos básicos.
 
-Comienza en http://hourofcode.com/{{ country }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -134,7 +134,7 @@ Por eso nuestra escuela se une al evento de aprendizaje más grande de la histor
 
 Aprovecha la oportunidad de cambiar el futuro de la educación en [NOMBRE DE LA CIUDAD].
 
-Visita http://hourofcode.com/{{ country }} para ver más detalles y ayudar a difundir la noticia. <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 

@@ -17,6 +17,7 @@ ja:
       Game/Score: ゲーム/スコア
       Games/Score: ゲーム/スコア
       Groups: グループ
+      Input: 入力
       Location: ロケーション
       Locations: 場所
       Logic: ロジック
@@ -24,7 +25,9 @@ ja:
       Math: 計算(けいさん)
       Numbers: 数 (かず) 
       Properties: プロパティ
+      Sprites: スプライト
       Text: テキスト
       Variables: 変数（へんすう）
       'Variables ': '変数（へんすう）'
+      'Variables  ': '変数  '
       World: 世界

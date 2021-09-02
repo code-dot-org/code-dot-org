@@ -230,6 +230,37 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Whakamahia te pouaka takaiho ki te whakakapi i te \"???\" ki tētahi tau"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Tapiri atu tenei paraka ki to taupānga!"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "He paraka/wahanga hou!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "He paraka/wahanga hou!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "He paraka/wahanga hou!",
+          "new_block_4": "He paraka/wahanga hou!"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Kua hoatu e mātou ētahi paraka hei tīmatanga māu"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ka tīmata te waehere ki te hanga i tō whare. Ka taea e koe tēnā te whakamutu?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Pāwhiritia te \"Whakahaerehia\" ki te whakamātau i tō papatono"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Tōaitia ngā hohenga mā te hoatu i ngā paraka ki roto nei"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Mā tēnei waehere e taki i te tahepuia. E taea ana e koe tētahi tono neke ki mua te tāpiri?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Mainahia tēnei rino!"
         }
       }
     }

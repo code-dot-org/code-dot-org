@@ -219,14 +219,6 @@ tr:
       courseF_unplugged_songwritingParameters:
         title: Parametrelerle Şarkı Yazmak
         desc: 'Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı olacaktır.  '
-      swipeRightPassThrough:
-        title: İşe Alma Senaryoları Toplantısı
-        desc: "# Öğrenci Alım Senaryoları Oturumu\\r\n\\r\n## Bilgisayar Bilimi için Sağa Kaydır\\r\nBu oturumda, MIT'deki ortaklarımız tarafından geliştirilmiş olan \"Bilgisayar Bilimi için Sağa Kaydır\" adında bir araç kullanacağız. Bilgisayar Bilimi için Sağa Kaydır'da, birkaç öğrenci profili okuyacaksınız ve öğrencinin sizin Bilgisayar Bilimi İlkeleri kursunuza kaydolması için öğrenciyi ikna etmede kullanılabilecek özel ifadeleri düşüneceksiniz.\\r\n\\r\n### Nasıl Çalışır\\r\nBilgisayar Bilimi için Sağa Kaydır oynarken, öğrenciye söyleyebileceğiniz bir dizi alıntı göreceksiniz. Öğrenciyi kursa kaydolmaya ikna etmek için etkili olacağını düşündüğünüz alıntıları sağa kaydıracaksınız ve etkili olmayacağını düşündüğünüz ifadeleri sola kaydıracaksınız. Oturum sırasında grup olarak, bir öğrenciyi Bilgisayar Bilimlerine kaydolmasını sağlayacak en etkili ifade türleri üzerine sizin düşüncelerinizi tartışacağız ve atölyenizdeki diğer insanların her argümanı hangi yöne kaydırdıklarını görme şansınız olacak.\\r\n\\r\n\\r\nAşağıda devama tıkladığınızda, size oyunu göndereceğiz ve oturum açtığınız Code.org eposta adresinizi ileteceğiz."
-      swipeRightPassThrough-test123:
-        title: İşe Alma Senaryoları Toplantısı
-        desc: "# Öğrenci Alım Senaryoları Oturumu\\r\n\\r\n## Bilgisayar Bilimi için Sağa Kaydır\\r\nBu oturumda, MIT'deki ortaklarımız tarafından geliştirilmiş olan \"Bilgisayar Bilimi için Sağa Kaydır\" adında bir araç kullanacağız. Bilgisayar Bilimi için Sağa Kaydır'da, birkaç öğrenci profili okuyacaksınız ve öğrencinin sizin Bilgisayar Bilimi İlkeleri kursunuza kaydolması için öğrenciyi ikna etmede kullanılabilecek özel ifadeleri düşüneceksiniz.\\r\n\\r\n### Nasıl Çalışır\\r\nBilgisayar Bilimi için Sağa Kaydır oynarken, öğrenciye söyleyebileceğiniz bir dizi alıntı göreceksiniz. Öğrenciyi kursa kaydolmaya ikna etmek için etkili olacağını düşündüğünüz alıntıları sağa kaydıracaksınız ve etkili olmayacağını düşündüğünüz ifadeleri sola kaydıracaksınız. Oturum sırasında grup olarak, bir öğrenciyi Bilgisayar Bilimlerine kaydolmasını sağlayacak en etkili ifade türleri üzerine sizin düşüncelerinizi tartışacağız ve atölyenizdeki diğer insanların her argümanı hangi yöne kaydırdıklarını görme şansınız olacak.\\r\n\\r\n\\r\nAşağıda devama tıkladığınızda, size oyunu göndereceğiz ve oturum açtığınız Code.org eposta adresinizi ileteceğiz."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         title: Robot dostlarım
         desc: Arkadaşların için kod yazarak programlamayı öğren!
@@ -345,8 +337,6 @@ tr:
       PaperPlanes_2019:
         title: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
         desc: Bu derste biz özellikle kağıt uçaklar yaparak algoritmanın bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların bilgisayar bilimindeki önemini göreceğiz.
-      test-uid-passthrough:
-        desc: "# Öğrenci Alım Senaryoları Oturumu\\r\n\\r\n## Bilgisayar Bilimi için Sağa Kaydır\\r\nBu oturumda, MIT'deki ortaklarımız tarafından geliştirilmiş olan \"Bilgisayar Bilimi için Sağa Kaydır\" adında bir araç kullanacağız. Bilgisayar Bilimi için Sağa Kaydır'da, birkaç öğrenci profili okuyacaksınız ve Bilgisayar Bilimi İlkeleri kursunuza kaydolması için öğrenciyi ikna etmede kullanabileceğiniz özel ifadeleri düşüneceksiniz.\\r\n\\r\n## Nasıl Çalışır\\r\nBilgisayar Bilimi için Sağa Kaydır oynarken, her bir öğrenciye söyleyebileceğiniz bir dizi alıntı göreceksiniz. Belirli bir öğrenciyi kursa kaydolmaya ikna etmek için etkili olacağını düşündüğünüz alıntıları sağa kaydıracaksınız ve etkili olmayacağını düşündüğünüz ifadeleri sola kaydıracaksınız. Oturum sırasında, bir öğrencinin Bilgisayar Bilimine kaydolmasını sağlayacak en etkili ifade türleri üzerine düşüncelerinizi bir grup olarak tartışacağız ve atölyenizdeki diğer insanların her argümanı hangi yöne kaydırdıklarını görme şansınız olacak.\\r\n<br><br><br><br>\\r\n\\r\n<span style=\"display:none\">iletDüğmesi sonraki-aşama</span>\\r\n\\r\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\"> \nBilgisayar Bilimi için Sağa Kaydır'ı oynamak için buraya tıklayın</a>\\r\n\\r"
       PlantASeed_2019:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
         desc: Bu derste biz özellikle tohum ekme işlemini kullanarak algoritmanın bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların bilgisayar bilimindeki önemini göreceğiz.
@@ -385,6 +375,3 @@ tr:
       timeforcs_demo_conditionals:
         title: Koşullar
         desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada eğer kırmızı kartı çekersem puan alırım, eğer siyah kartı çekersem sen bir puan alırsın gibi kurallar yaratacaklar
-      TheRightApp_2019:
-        title: Doğru Uygulama
-        desc: "* Günümüzde herkes bilgisayarları, özellikle akıllı telefonları kullanır. \\r\n* Akıllı telefon uygulamaları veya \"uygulamalar\", insanların arkadaşlarla konuşmak, müzik dinleme, alışveriş yapmak veya yalnızca ağı keşfetmek gibi şeyleri yapmasına yardım eder.\\r\n* Programcıların başkalarının ihtiyaçlarını anlaması ve bunları akılda tutarak uygulamaları tasarlaması önemlidir!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

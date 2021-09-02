@@ -1,0 +1,230 @@
+{
+  "da-DK": {
+    "data": {
+      "resources": {
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "For loop sjov"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "For loop sjov"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "For loop sjov"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "For loop sjov"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "For loop sjov"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internettet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Teacher forum"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Flyt det, flyt det"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Flyt det, flyt det"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Flyt det, flyt det"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Flyt det, Flyt det"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Par programmering"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Blive Svimmel"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Blive Svimmel"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Blive Svimmel"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Blive Svimmel"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Den store begivenhed"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "Den store begivenhed"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Den store begivenhed"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "Teacher forum"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Par programmering"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Glade Kort"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Den store begivenhed"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Den store begivenhed"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Den store begivenhed"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "Teacher forum"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Mine robot venner"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Mine robot venner"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Mine robot venner"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Mine robot venner"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Mine robot venner"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Par programmering"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Den store begivenhed"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Den store begivenhed"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Den store begivenhed"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binære armbånd"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Binære armbånd"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Binære armbånd"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Binære armbånd"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Binære armbånd"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "Teacher forum"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Par programmering"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Stafet-programmering"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Stafet-programmering"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Stafet-programmering"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Stafet-programmering"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Stafet-programmering"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Stafet-programmering"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Betingelser med kortspil"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Betingelser med kortspil"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Betingelser med kortspil"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Betingelser med kortspil"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Betingelser med kortspil"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Teacher forum"
+        },
+        "pair_programming/express/2021": {
+          "name": "Par programmering"
+        },
+        "variables_video/express/2021": {
+          "name": "Variabler"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Teacher forum"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Par programmering"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "Teacher forum"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Teacher forum"
+        }
+      }
+    }
+  }
+}

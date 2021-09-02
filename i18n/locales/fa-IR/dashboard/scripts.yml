@@ -53,6 +53,7 @@ fa:
           title: دوره 2
           description: دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه برنامه نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی برای حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5).
           description_short: دوره 2 برای دانش آموزانی که می توانند بخوانند طراحی شده است.
+          description_audience: سنین 6 به بالا (خواندن لازم است)
           lessons:
             'Artist: Debugging':
               name: 'هنرمند: اشکال زدایی'
@@ -95,6 +96,7 @@ fa:
           student_description: دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه برنامه نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی برای حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5).
         course3:
           title: دورۀ 3
+          description: دوره 3 برای دانش آموزانی که دوره 2 را گذرانده اند طراحی شده است. دانش آموزان در مباحث برنامه نویسی معرفی شده در دوره های قبلی به راه حل های انعطاف پذیر برای مشکلات پیچیده بیشتر کاوش خواهند کرد. در پایان این دوره، دانش آموزان داستان های تعاملی و بازی هایی میسازند که می توانند با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس 4-5.
           description_short: دوره 3 ادامه دوره 2 است.
           description_audience: سنین 8 به بالا (پس از دوره 2)
           lessons:
@@ -140,6 +142,7 @@ fa:
               name: 'آزمایشگاه بازی: یک بازی بساز'
             'Studio: Create a Story':
               name: 'آزمایشگاه بازی: یک داستان بنویس'
+          student_description: دوره 3 برای دانش آموزانی که دوره 2 را گذرانده اند طراحی شده است. دانش آموزان در مباحث برنامه نویسی معرفی شده در دوره های قبلی به راه حل های انعطاف پذیر برای مشکلات پیچیده بیشتر کاوش خواهند کرد. در پایان این دوره، دانش آموزان داستان های تعاملی و بازی هایی میسازند که می توانند با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس 4-5.
         playlab:
           title: آزمایشگاه بازی
           description: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
@@ -262,8 +265,8 @@ fa:
           student_description: منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده.
         algebra:
           title: علوم کامپیوتر در جبر
-          description: یادگیری برنامه نویسی تابعی از طریق جبر
-          description_short: یادگیری برنامه نویسی تابعی از طریق جبر
+          description: یادگیری برنامه نویسی تابعی از طریق جبر.
+          description_short: یادگیری برنامه نویسی تابعی از طریق جبر.
           lessons:
             'Eval: Conditionals':
               name: شرطی ها
@@ -275,7 +278,7 @@ fa:
               name: 'بدون دستگاه: دستور العمل طرح'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
-          student_description: یادگیری برنامه نویسی تابعی از طریق جبر
+          student_description: یادگیری برنامه نویسی تابعی از طریق جبر.
         infinity:
           title: آزمایشگاه بازی بی نهایت دیزنی
           description: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
@@ -402,8 +405,6 @@ fa:
             Hour of Code 2013:
               name: ساعت کد نویسی سال 2013
           student_description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان عصبانی را امتحان کنید!
-        cspunit1:
-          description_short: برنامه نویسی
         algebraPD:
           lessons:
             Evaluation Blocks:
@@ -439,7 +440,6 @@ fa:
             Introduction to PD:
               name: آشنايي با پیشرفت حرفه ای
         cspunit3:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
@@ -486,19 +486,11 @@ fa:
             Introduction to PD:
               name: آشنايي با پیشرفت حرفه ای
         sciencePD2:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
             Welcome!:
               name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-        cspunit2:
-          description_short: برنامه نویسی
-          lessons:
-            The Internet:
-              name: اینترنت
         algebraPD2a:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -524,6 +516,8 @@ fa:
               name: زنبور عسل
             Bounce:
               name: پریدن
+            Farmer:
+              name: کشاورز
             Flappy:
               name: فلاپی
             Jigsaw:
@@ -583,14 +577,12 @@ fa:
               name: خلاصه
           student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         algebraPD2:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+          title: CS در جبر قسمت 2
           lessons:
             The Design Recipe:
               name: دستور العمل طراحی
             Welcome!:
               name: خوش آمدی!
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         sciencePD2b:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -601,14 +593,11 @@ fa:
               name: جمع و جور کن
           student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         science-PD2:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
             Welcome!:
               name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         sciencePD2b-iZone:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -649,6 +638,7 @@ fa:
               name: خلاصه
           student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         asUnplugged:
+          description_audience: سنین 6 تا 13
           lessons:
             Binary Bracelets:
               name: دستبند دودویی
@@ -668,6 +658,8 @@ fa:
               name: ترانه سرایی
             The Big Event:
               name: رویداد بزرگ
+        afterschool1:
+          description_audience: سنین 7 تا 13
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -687,7 +679,6 @@ fa:
               name: آزمایشگاه بازی عصر یخبندان
           student_description: یک داستان یا یک بازی با آزمایشگاه عصر یخبندان بساز!
         cspunit3temp:
-          description_short: برنامه نویسی
           lessons:
             While Loops:
               name: حلقه ها ی While
@@ -697,18 +688,16 @@ fa:
             Gumball Play Lab:
               name: آزمایشگاه بازی Gumball
         starwars:
-          title: 'جنگ ستارگان: یک کهکشان با کد بسازید'
           lessons:
             Hour of Code 2015:
               name: ساعت کدنویسی 2015
         starwarsblocks:
-          title: 'جنگ ستارگان: یک کهکشان با کد بسازید'
           lessons:
             Hour of Code 2015:
               name: ساعت کدنویسی 2015
         mc:
           description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
-          description_short: یک جهان ماینکرفتی را از طریق کد کاوش کنید
+          description_short: یک جهان ماینکرفتی را از طریق کد کاوش کنید.
           lessons:
             Hour of Code 2015:
               name: ساعت کدنویسی 2015
@@ -719,10 +708,6 @@ fa:
               name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
-        cspunit5:
-          description_short: برنامه نویسی
-        cspunit4:
-          description_short: برنامه نویسی
         AlgebraA:
           description: یادگیری برنامه نویسی تابعی از طریق جبر
           description_short: یادگیری برنامه نویسی تابعی از طریق جبر
@@ -731,17 +716,22 @@ fa:
               name: 'حساب: تعریف متغیرها'
             'Calc: Evaluation Blocks':
               name: 'حساب: ارزیابی بلوکها'
+            'Eval: Defining Functions':
+              name: 'ارزیابی: تعریف توابع'
+            'Eval: Functions':
+              name: 'ارزیابی: توابع'
             'Eval: Strings and Images':
               name: 'ارزیابی: رشته ها و تصاویر'
             'Eval: Writing Contracts':
               name: 'ارزبابی: نوشتن قراردادها'
+            'Play Lab: Defining Functions':
+              name: 'آزمایشگاه بازی: تعریف توابع'
             'Unplugged: Contracts':
               name: 'بدون دستگاه: قراردادها'
             'Unplugged: The Design Recipe':
               name: 'بدون دستگاه: دستور العمل طرح'
           student_description: یادگیری برنامه نویسی تابعی از طریق جبر
         AlgebraB:
-          title: 'علوم کامپیوتر در جبر'
           description: یادگیری برنامه نویسی تابعی از طریق جبر
           description_short: یادگیری برنامه نویسی تابعی از طریق جبر
           lessons:
@@ -780,7 +770,6 @@ fa:
             The Internet:
               name: اینترنت
         csp3-2017:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
@@ -823,7 +812,14 @@ fa:
           lessons:
             Game Lab:
               name: کارگاه بازی سازی
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: حالت طراحی
+        CSF_Secret_Sample_Story:
+          description_audience: سنین 8-18+
         MikeTest:
+          description_audience: سنین 8-98
           lessons:
             Artist Functions:
               name: توابع هنرمند
@@ -838,7 +834,10 @@ fa:
             'Bee: Conditionals':
               name: 'زنبور عسل: شرطی ها'
         gradeKinder:
+          description_audience: سنین 5 به بالا (خواندن لازم است)
           lessons:
+            Debugging:
+              name: اشکال‌زدایی
             Events:
               name: رویدادها
             'Jigsaw: Learn to drag and drop':
@@ -850,13 +849,19 @@ fa:
             'Real-life Algorithms: Plant a Seed':
               name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
         grade4:
+          title: رده ی سنی 4
+          description_audience: سنین 9-99
           lessons:
             Digital Citizenship:
               name: شهروندی دیجیتالی
             Songwriting:
               name: ترانه سرایی
         grade1:
+          title: رده ی سنی 1
+          description_audience: سنین 5 به بالا (خواندن لازم است)
           lessons:
+            Debugging:
+              name: اشکال‌زدایی
             Events:
               name: رویدادها
             'Jigsaw: Learn to drag and drop':
@@ -866,6 +871,8 @@ fa:
             Programming:
               name: برنامه نویسی
         grade5:
+          title: رده ی سنی 5
+          description_audience: سنین 10-110
           lessons:
             'Artist: For Loops':
               name: 'هنرمند: برای حلقه ها'
@@ -900,7 +907,11 @@ fa:
             Wrap-up:
               name: خلاصه
         grade3:
+          title: رده ی سنی 3
+          description_audience: سنین 5 به بالا (خواندن لازم است)
           lessons:
+            " Bee: Conditionals":
+              name: " زنبور عسل: شرطی ها"
             'Artist: Nested Loops':
               name: 'هنرمند: حلقه های تو در تو'
             Bee Debugging:
@@ -913,8 +924,24 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
+          lessons:
+            Lesson 1,10:
+              name: درس 1,10
+            Lesson 1,11:
+              name: درس 1,11
+            Lesson 1,4:
+              name: درس 1,4
+            Lesson 1,6:
+              name: درس 1,6
+            Lesson 1,9:
+              name: درس 1,9
+            Lesson 2,10:
+              name: درس 2,10
+            Lesson 2,2:
+              name: درس 2,2
+            Lesson 2,3:
+              name: درس 2,3
         csd3-2017:
-          description_short: برنامه نویسی
           lessons:
             Functions:
               name: توابع
@@ -923,6 +950,7 @@ fa:
             Conditionals:
               name: شرطی ها
         grade2:
+          description_audience: سنین 5 به بالا (خواندن لازم است)
           lessons:
             Flappy:
               name: فلاپی
@@ -1046,6 +1074,8 @@ fa:
               name: مقدمه
             Ice Age Play Lab:
               name: آزمایشگاه بازی عصر یخبندان
+            'Algorithms: Tangrams':
+              name: 'الگوریتم: تنگرام'
         classic-hoc-impact-study:
           description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
           lessons:
@@ -1164,6 +1194,8 @@ fa:
               name: 'تهی'
         coursef-ramp:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'الگوریتم: تنگرام'
             Introduction:
               name: مقدمه
             Ice Age Play Lab:
@@ -1192,6 +1224,8 @@ fa:
               name: حلقه های تو در تو
         coursee-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'الگوریتم: تنگرام'
             Ice Age Play Lab:
               name: آزمایشگاه بازی عصر یخبندان
             Envelope Variables:
@@ -1206,6 +1240,8 @@ fa:
               name: حلقه های تو در تو
         coursef-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'الگوریتم: تنگرام'
             Building a Foundation:
               name: ساختن بنیان
         cspnovice:
@@ -1287,7 +1323,6 @@ fa:
             Thanks:
               name: متشکرم
         csp3-research-mxghyt:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
@@ -1341,6 +1376,8 @@ fa:
           lessons:
             Building a Foundation:
               name: ساختن بنیان
+            'Algorithms: Tangrams':
+              name: 'الگوریتم: تنگرام'
             Ice Age Play Lab:
               name: آزمایشگاه بازی عصر یخبندان
             Envelope Variables:
@@ -1379,6 +1416,8 @@ fa:
           lessons:
             Building a Foundation:
               name: ساختن بنیان
+            'Algorithms: Tangrams':
+              name: 'الگوریتم: تنگرام'
             Introduction:
               name: مقدمه
             Ice Age Play Lab:
@@ -1396,7 +1435,6 @@ fa:
             For Loops:
               name: حلقه های "برای"
         csd3-1819draft:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -1405,7 +1443,6 @@ fa:
             Functions:
               name: توابع
         csd3-2018:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -1449,8 +1486,6 @@ fa:
               name: دستبند دودویی
             'Unplugged: Binary':
               name: تصاویر دوتایی
-            Artist Binary:
-              name: دودویی هنرمند
             Internet:
               name: اینترنت
             Crowdsourcing:
@@ -1481,8 +1516,6 @@ fa:
               name: شهروندی دیجیتالی
             'Unplugged: Binary':
               name: تصاویر دوتایی
-            Artist Binary:
-              name: دودویی هنرمند
             Graph Paper Programming:
               name: برنامه نویسی روی کاغذ رسم شطرنجی
             Relay Programming:
@@ -1499,6 +1532,8 @@ fa:
               name: دستبند دودویی
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: معادله با پارامترها_
             Functions with Parameters:
               name: معادله با پارامترها
         coursee-2018:
@@ -1523,6 +1558,8 @@ fa:
               name: دوستان رباتی من
             Building a Foundation:
               name: ساختن بنیان
+            'Algorithms: Tangrams':
+              name: 'الگوریتم: تنگرام'
             Introduction:
               name: مقدمه
             Ice Age Play Lab:
@@ -1540,7 +1577,6 @@ fa:
             The Internet:
               name: اینترنت
         csp3-2018:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
@@ -1714,8 +1750,6 @@ fa:
               name: شهروندی دیجیتالی
             'Unplugged: Binary':
               name: تصاویر دوتایی
-            Artist Binary:
-              name: دودویی هنرمند
             Dance Party:
               name: جشن و رقص
         coursee-2019:
@@ -1850,7 +1884,6 @@ fa:
             Lists:
               name: فهرست‌ها
         csd3-2019:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -1877,7 +1910,6 @@ fa:
             The Internet:
               name: اینترنت
         csp3-2019:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
@@ -1984,7 +2016,6 @@ fa:
             Lists:
               name: فهرست‌ها
         csd3-pilot:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -1992,10 +2023,17 @@ fa:
               name: شرطی ها
             Functions:
               name: توابع
+        maddie-test:
+          lessons:
+            stage 1:
+              name: مرحله 1
         csp3-pilot:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
+          lessons:
+            Debugging:
+              name: اشکال‌زدایی
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2155,7 +2193,6 @@ fa:
             Functions with Parameters:
               name: معادله با پارامترها
         csd3-2020:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -2229,8 +2266,6 @@ fa:
               name: شرطی ها با کارتها
             'Unplugged: Binary':
               name: تصاویر دوتایی
-            Artist Binary:
-              name: دودویی هنرمند
             Digital Citizenship:
               name: شهروندی دیجیتالی
             Dance Party:
@@ -2287,11 +2322,18 @@ fa:
           lessons:
             Spelling Bee:
               name: زنبور عسل هجی کن
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: اشکال‌زدایی
         csp3-virtual:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: اشکال‌زدایی
         csp5-virtual:
           lessons:
             While Loops:
@@ -2326,8 +2368,11 @@ fa:
               name: متغیرها
             For Loops:
               name: حلقه های "برای"
+        dani-june-2020-test:
+          lessons:
+            lesson 2:
+              name: درس 2
         csd3-virtual:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -2337,20 +2382,15 @@ fa:
               name: شرطی ها
             Functions:
               name: توابع
-        ml-playground:
-          lessons:
-            lesson14:
-              name: درس 14
-            lesson15:
-              name: درس 15
         2021drafting:
           lesson_groups:
             introduction:
               display_name: مقدمه
             lessonGroup-3:
               display_name: متغیرها
+            debugging:
+              display_name: اشکال‌زدایی
         csd3-2021:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               key: متغیرها
@@ -2369,6 +2409,11 @@ fa:
             Functions with Parameters:
               key: معادله با پارامترها
               name: معادله با پارامترها
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: اشکال‌زدایی
+              name: اشکال‌زدایی
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2442,7 +2487,6 @@ fa:
               name: تصاویر دوتایی
             Artist Binary:
               key: دودویی هنرمند
-              name: دودویی هنرمند
           lesson_groups:
             csf_events:
               display_name: رویدادها
@@ -2529,18 +2573,10 @@ fa:
               display_name: متغیرها
             variables:
               display_name: متغیرها
-        ai-unit-pilot:
-          lessons:
-            lesson14:
-              name: درس 14
-            lesson15:
-              name: درس 15
-            lesson17:
-              name: درس 15
+        contagion-pilot:
+          description_audience: رده ی سنی 5
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: مقدمه
             Loops:
               key: حلقه‌ها
               name: حلقه‌ها
@@ -2564,12 +2600,32 @@ fa:
               display_name: مقدمه
             Introduction:
               display_name: مقدمه
-        aiml-2021:
-          lessons:
-            lesson15:
-              name: درس 15
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
               key: مقدمات علم کامپیوتر
               name: مقدمات علم کامپیوتر
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: واحد 1
+            lessonGroup-4:
+              display_name: واحد 2
+            lessonGroup-5:
+              display_name: واحد 3
+            lessonGroup-6:
+              display_name: واحد 4
+            lessonGroup-7:
+              display_name: واحد 5
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: آزمایش
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: بررسی اجمالی
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: بررسی اجمالی

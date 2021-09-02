@@ -1,10 +1,19 @@
+---
 si:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': පිටසක්වල ජීවින්
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': තත්පර
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            '"ALIEN"': පිටසක්වල ජීවින්
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -12,9 +21,15 @@ si:
             '"height"': උස
       Dancelab_changePropEachBy:
         options:
+          GROUP:
+            '"ALIEN"': පිටසක්වල ජීවින්
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            '"ALIEN"': පිටසක්වල ජීවින්
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -40,18 +55,23 @@ si:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
       Dancelab_jumpToEach:
         options:
+          GROUP:
+            '"ALIEN"': පිටසක්වල ජීවින්
           LOCATION:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": අහඹු
       Dancelab_layoutSprites:
         options:
+          GROUP:
+            '"ALIEN"': පිටසක්වල ජීවින්
           FORMAT:
             '"random"': අහඹු
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
             '"ALIEN"': පිටසක්වල ජීවියා
+            '"BEAR"': බියර්
             '"CAT"': බළලා
             '"DOG"': බල්ලා
             '"DUCK"': තාරාවා
@@ -65,6 +85,7 @@ si:
         options:
           COSTUME:
             '"ALIEN"': පිටසක්වල ජීවියා
+            '"BEAR"': බියර්
             '"CAT"': බළලා
             '"DOG"': බල්ලා
             '"DUCK"': තාරාවා
@@ -76,10 +97,16 @@ si:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
       Dancelab_makeNewDanceSpriteGroup:
         options:
+          COSTUME:
+            '"ALIEN"': පිටසක්වල ජීවින්
           LAYOUT:
             '"random"': අහඹු
       Dancelab_randomColor:
         text: අහඹු වර්ණයක්
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            '"ALIEN"': පිටසක්වල ජීවින්
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -87,6 +114,8 @@ si:
             '"height"': උස
       Dancelab_setPropEach:
         options:
+          GROUP:
+            '"ALIEN"': පිටසක්වල ජීවින්
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
@@ -97,9 +126,29 @@ si:
             '"height"': උස
       Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            '"ALIEN"': පිටසක්වල ජීවින්
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            '"ALIEN"': පිටසක්වල ජීවින්
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            '"ALIEN"': පිටසක්වල ජීවින්
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': දෘශ්‍යමාන
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            '"ALIEN"': පිටසක්වල ජීවින්
+          VISIBILITY:
+            'true': දෘශ්‍යමාන
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -107,6 +156,8 @@ si:
             '"height"': උස
       Dancelab_startMappingEach:
         options:
+          GROUP:
+            '"ALIEN"': පිටසක්වල ජීවින්
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
@@ -117,6 +168,8 @@ si:
             '"height"': උස
       Dancelab_stopMappingEach:
         options:
+          GROUP:
+            '"ALIEN"': පිටසක්වල ජීවින්
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
@@ -319,6 +372,11 @@ si:
             '"right"': දකුණු ඊතලය
             '"w"': බ
             '"s"': ද
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': ඔව්
+            '"no"': නැහැ
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -326,12 +384,20 @@ si:
             '"down"': පහල ඊතලය
             '"left"': වම් ඊතලය
             '"right"': දකුණු ඊතලය
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': දේදුන්න
       RyanLab_moveForward:
         text: ඉදිරියට යන්න
       RyanLab_turnLeft:
         text: වමට හැරෙන්න
       RyanLab_turnRight:
         text: දකුණට හැරෙන්න
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": පාට
       aalab_layoutSprites:
         options:
           FORMAT:

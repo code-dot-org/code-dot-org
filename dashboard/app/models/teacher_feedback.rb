@@ -78,14 +78,24 @@ class TeacherFeedback < ApplicationRecord
       order(created_at: :desc)
   end
 
-  # returns the latest feedback for each student on every level in a script given by the teacher
+  # Returns the latest feedback for each student on every level in a script given by the teacher
+  # Get number of passed levels per user for the given set of user IDs
+  # @param [Array<Integer>|Integer] student_ids: (optional) one or a list of student_ids. If nil student_id is excluded from the query
+  # @param [Array<Integer>|Integer] level_ids: (optional) one or a list of level_ids. If nil level_id is excluded from the query
+  # @param [Integer] script_id: (optional) if nil, script_id will be excluded from the query
+  # @param [Integer] teacher_id: (optional) if nil, teacher_id will be excluded from the query
+  # @return [Array<TeacherFeedback>] Array of TeacherFeedbacks
   def self.get_latest_feedbacks_given(student_ids, level_ids, script_id, teacher_id)
+    query = {
+      student_id: student_ids,
+      level_id: level_ids,
+      script_id: script_id,
+      teacher_id: teacher_id
+    }.compact
+
     find(
       where(
-        student_id: student_ids,
-        level_id: level_ids,
-        script_id: script_id,
-        teacher_id: teacher_id
+        query
       ).group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)')
     )
   end
@@ -131,12 +141,8 @@ class TeacherFeedback < ApplicationRecord
     return student_last_visited_at if student_last_visited_at && student_last_visited_at > created_at
   end
 
-  def student_updated_since_feedback?
-    user_level.present? && user_level.updated_at > created_at
-  end
-
   # TODO: update to use camelcase
-  def summarize
+  def summarize(is_latest = false)
     {
       id: id,
       student_id: student_id,
@@ -150,7 +156,49 @@ class TeacherFeedback < ApplicationRecord
       student_last_updated: user_level&.updated_at,
       seen_on_feedback_page_at: seen_on_feedback_page_at,
       student_first_visited_at: student_first_visited_at,
-      student_updated_since_feedback: student_updated_since_feedback?
+      is_awaiting_teacher_review: awaiting_teacher_review?(is_latest)
+    }
+  end
+
+  def summarize_for_csv(level, script_level, student, sublevel_index = nil)
+    rubric_performance_json_to_ruby = {
+      performanceLevel1: "rubric_performance_level_1",
+      performanceLevel2: "rubric_performance_level_2",
+      performanceLevel3: "rubric_performance_level_3",
+      performanceLevel4: "rubric_performance_level_4"
+    }
+
+    rubric_performance_headers = {
+      performanceLevel1: "Extensive Evidence",
+      performanceLevel2: "Convincing Evidence",
+      performanceLevel3: "Limited Evidence",
+      performanceLevel4: "No Evidence"
+    }
+
+    review_state_labels = {
+      keepWorking: "Needs more work",
+      completed: "Reviewed, completed",
+    }
+
+    review_state_label = awaiting_teacher_review?(true) ? "Waiting for review" : review_state_labels[review_state&.to_sym]
+    level_num = script_level.position.to_s
+
+    if sublevel_index
+      level_num += BubbleChoice::ALPHABET[sublevel_index]
+    end
+
+    {
+      studentName: student.name,
+      lessonNum: script_level.lesson.relative_position.to_s,
+      lessonName: script_level.lesson.localized_title,
+      levelNum: level_num,
+      keyConcept: (level.rubric_key_concept || ''),
+      performanceLevelDetails: (level.properties[rubric_performance_json_to_ruby[performance&.to_sym]] || ''),
+      performance: rubric_performance_headers[performance&.to_sym],
+      comment: comment,
+      timestamp: updated_at.localtime.strftime("%D at %r"),
+      reviewStateLabel: review_state_label || "Never reviewed",
+      studentSeenFeedback: student_seen_feedback&.localtime&.strftime("%D at %r"),
     }
   end
 
@@ -170,5 +218,22 @@ class TeacherFeedback < ApplicationRecord
 
     self.student_last_visited_at = now
     save
+  end
+
+  # When a teacher updates their feedback on a level, a new feedback record is created.
+  # Only the latest feedback from the teacher is considered up-to-date and displayed for the
+  # student on the level. We store other feedbacks to keep track of historical feedback given,
+  # which is displayed on the /feedback page. Only the up-to-date feedback (latest feedback record)
+  # can be awaiting review since it's the only relevant feedback to the student.
+  def awaiting_teacher_review?(is_latest = false)
+    return false unless is_latest
+
+    return review_state == REVIEW_STATES.keepWorking && student_updated_since_feedback?
+  end
+
+  private
+
+  def student_updated_since_feedback?
+    user_level.present? && user_level.updated_at > created_at
   end
 end

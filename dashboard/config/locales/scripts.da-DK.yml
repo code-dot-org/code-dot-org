@@ -24,7 +24,7 @@ da:
             'Artist: Shapes':
               name: 'Kunstner: Figurer'
             'Bee: Loops':
-              name: 'Bi: Løkker'
+              name: 'Bi: Sløjfer'
             'Bee: Sequence':
               name: 'Bi: Sekvens'
             Building a Foundation:
@@ -40,7 +40,7 @@ da:
             'Maze: Debugging':
               name: 'Labyrint: Fejlfinding'
             'Maze: Loops':
-              name: 'Labyrint: Løkker'
+              name: 'Labyrint: Sløjfer'
             'Maze: Sequence':
               name: 'Labyrint: Sekvens'
             Move it, Move it:
@@ -65,6 +65,7 @@ da:
             at lave programmer, og udvikle interaktive spil eller historier der kan
             deles. Anbefales til elever i 2.-5. klasse.
           description_short: Kursus 2 er designet til elever, der kan læse.
+          description_audience: Fra 6 år (læsning nødvendigt)
           lessons:
             'Artist: Debugging':
               name: 'Kunstner: Fejlfinding'
@@ -79,7 +80,7 @@ da:
             'Bee: Debugging':
               name: 'Bi: Fejlfinding'
             'Bee: Loops':
-              name: 'Bi: Løkker'
+              name: 'Bi: Sløjfer'
             Binary Bracelets:
               name: Binære armbånd
             Conditionals:
@@ -91,7 +92,7 @@ da:
             Graph Paper Programming:
               name: Programmering på millimeterpapir
             'Maze: Loops':
-              name: 'Labyrint: Løkker'
+              name: 'Labyrint: Sløjfer'
             'Maze: Sequence':
               name: 'Labyrint: Sekvens'
             'Real-life Algorithms: Paper Planes':
@@ -311,8 +312,8 @@ da:
           student_description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
         algebra:
           title: Datalogi i Algebra
-          description: Lære funktionel programmering gennem Algebra
-          description_short: Lære funktionel programmering gennem Algebra
+          description: Lære funktionel programmering gennem Algebra.
+          description_short: Lære funktionel programmering gennem Algebra.
           lessons:
             'Eval: Conditionals':
               name: Betingelser
@@ -324,7 +325,7 @@ da:
               name: 'Unplugged: Design opskrift'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Games og Coordinate Planes'
-          student_description: Lære funktionel programmering gennem Algebra
+          student_description: Lære funktionel programmering gennem Algebra.
         infinity:
           title: Disney Infinity Play Lab
           description: Brug Play Lab til at skabe en historie eller et spil med karakterer
@@ -403,9 +404,9 @@ da:
             videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens
             klasseværelser, men det er sjovt at lære i alle aldre.
         edit-code:
-          title: Rediger kode
-          description: Rediger kode
-          description_short: Rediger kode
+          title: Redigér Kode
+          description: Redigér Kode
+          description_short: Redigér Kode
           lessons:
             Play Lab:
               name: Play Lab
@@ -413,7 +414,7 @@ da:
               name: Kunstneren
             The Maze:
               name: Labyrinten
-          student_description: Rediger kode
+          student_description: Redigér Kode
         events:
           title: Hændelser
           description: Hændelser
@@ -440,12 +441,12 @@ da:
             Prøv vores Flappy kode undervisning!
         jigsaw:
           title: Puslespil
-          description: Prøv vores Puslespils-øvelse
-          description_short: Prøv vores Puslespils-øvelse
+          description: Prøv vores Puslespils-øvelse.
+          description_short: Prøv vores Puslespils-øvelse.
           lessons:
             Jigsaw:
               name: Puslespil
-          student_description: Prøv vores Puslespils-øvelse
+          student_description: Prøv vores Puslespils-øvelse.
         step:
           title: Tip!
           description: Trin-øvelse
@@ -473,8 +474,6 @@ da:
           lessons:
             Puzzles:
               name: Gåder
-        cspunit1:
-          description_short: Programmering
         algebraPD:
           lessons:
             Evaluation Blocks:
@@ -488,7 +487,6 @@ da:
             Strings and Images:
               name: Strenge og billeder
         cspunit3:
-          description_short: Programmering
           lessons:
             Creating Functions:
               name: Oprettelse af funktioner
@@ -511,19 +509,11 @@ da:
             Evaluation Blocks:
               name: Evalueringsblokke
         sciencePD2:
-          description: 'Fase 2 Online: Blandet Sommerkursus'
-          description_short: 'Fase 2 Online: Blandet Sommerkursus'
           lessons:
             Welcome!:
               name: Velkommen!
             Wrap-Up:
               name: Konklusion
-          student_description: 'Fase 2 Online: Blandet Sommerkursus'
-        cspunit2:
-          description_short: Programmering
-          lessons:
-            The Internet:
-              name: Internettet
         algebraPD2a:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
@@ -549,6 +539,8 @@ da:
               name: Bee
             Bounce:
               name: Hoppe
+            Farmer:
+              name: Landmand
             Flappy:
               name: Flappy
             Jigsaw:
@@ -600,14 +592,11 @@ da:
               name: Afslutning
           student_description: 'Fase 2 Online: Blandet Sommerkursus'
         algebraPD2:
-          description: 'Fase 2 Online: Blandet Sommerkursus'
-          description_short: 'Fase 2 Online: Blandet Sommerkursus'
           lessons:
             The Design Recipe:
               name: Design opskrift
             Welcome!:
               name: Velkommen!
-          student_description: 'Fase 2 Online: Blandet Sommerkursus'
         sciencePD2b:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
@@ -618,14 +607,11 @@ da:
               name: Konklusion
           student_description: 'Fase 2 Online: Blandet Sommerkursus'
         science-PD2:
-          description: 'Fase 2 Online: Blandet Sommerkursus'
-          description_short: 'Fase 2 Online: Blandet Sommerkursus'
           lessons:
             Welcome!:
               name: Velkommen!
             Wrap-Up:
               name: Konklusion
-          student_description: 'Fase 2 Online: Blandet Sommerkursus'
         sciencePD2b-iZone:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
@@ -654,6 +640,7 @@ da:
               name: Afslutning
           student_description: 'Fase 2 Online: Blandet Sommerkursus'
         asUnplugged:
+          description_audience: I alderen 6-13
           lessons:
             Binary Bracelets:
               name: Binære armbånd
@@ -673,6 +660,8 @@ da:
               name: Sangskrivning
             The Big Event:
               name: Den store begivenhed
+        afterschool1:
+          description_audience: I alderen 7-13
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -692,7 +681,6 @@ da:
               name: Ice Age Play Lab
           student_description: Lav en historie eller et spil med Ice Age Play Lab!
         cspunit3temp:
-          description_short: Programmering
           lessons:
             While Loops:
               name: Mens løkker
@@ -705,7 +693,6 @@ da:
               name: Gumball Play Lab
           student_description: Lav en historie eller et spil med Gumball Play Lab!
         starwars:
-          title: 'Star Wars: Byg en Galakse med Kode'
           description: Lær at programmere droider, og lav dit eget Star Wars spil
             i en galakse langt, langt herfra.
           description_short: Lær at programmere droider, og lav dit eget Star Wars
@@ -716,7 +703,6 @@ da:
           student_description: Lær at programmere droider, og lav dit eget Star Wars
             spil i en galakse langt, langt herfra.
         starwarsblocks:
-          title: 'Star Wars: Byg en Galakse med Kode'
           description: Lær at programmere droider, og lav dit eget Star Wars spil
             i en galakse langt, langt herfra.
           description_short: Lær at programmere droider, og lav dit eget Star Wars
@@ -729,7 +715,7 @@ da:
         mc:
           title: Minecraft Hour of Code
           description: Brug kodeblokke til at lede Steve eller Alex gennem et eventyr
-            i denne Minecraft verden
+            i denne Minecraft-verden.
           description_short: Udforsk en Minecraft-verden gennem kode
           lessons:
             Hour of Code 2015:
@@ -742,10 +728,6 @@ da:
               name: Velkommen!
             Wrap-Up:
               name: Konklusion
-        cspunit5:
-          description_short: Programmering
-        cspunit4:
-          description_short: Programmering
         AlgebraA:
           description: Lære funktionel programmering gennem Algebra
           description_short: Lære funktionel programmering gennem Algebra
@@ -754,17 +736,22 @@ da:
               name: 'Calc: Definere variabler'
             'Calc: Evaluation Blocks':
               name: 'Calc: Evaluering blokke'
+            'Eval: Defining Functions':
+              name: 'Eval: Definere funktioner'
+            'Eval: Functions':
+              name: 'Eval: funktioner'
             'Eval: Strings and Images':
               name: 'Eval: Strings og Images'
             'Eval: Writing Contracts':
               name: 'Eval: Skrive kontrakter'
+            'Play Lab: Defining Functions':
+              name: 'Play Lab: Definere funktioner'
             'Unplugged: Contracts':
               name: 'Unplugged: kontrakter'
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Design opskrift'
           student_description: Lære funktionel programmering gennem Algebra
         AlgebraB:
-          title: Datalogi i Algebra
           description: Lære funktionel programmering gennem Algebra
           description_short: Lære funktionel programmering gennem Algebra
           lessons:
@@ -800,7 +787,6 @@ da:
             The Internet:
               name: Internettet
         csp3-2017:
-          description_short: Programmering
           lessons:
             Creating Functions:
               name: Oprettelse af funktioner
@@ -837,7 +823,14 @@ da:
           lessons:
             Game Lab:
               name: Spil Laboratoriet
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Designtilstand
+        CSF_Secret_Sample_Story:
+          description_audience: Alderen 8 - 18+
         MikeTest:
+          description_audience: Alder 8-98
           lessons:
             Artist Functions:
               name: Kunstner funktioner
@@ -852,7 +845,10 @@ da:
             'Bee: Conditionals':
               name: 'Bi: Betingelser'
         gradeKinder:
+          description_audience: Alderen 5 - 18
           lessons:
+            Debugging:
+              name: Fejlfinding
             Events:
               name: Hændelser
             'Jigsaw: Learn to drag and drop':
@@ -864,13 +860,19 @@ da:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life algoritmer: Plante et frø'
         grade4:
+          title: 4.  klasse
+          description_audience: I alderen 9-99
           lessons:
             Digital Citizenship:
               name: Digital statsborgerskab
             Songwriting:
               name: Sangskrivning
         grade1:
+          title: 1.  klasse
+          description_audience: Alderen 5 - 18
           lessons:
+            Debugging:
+              name: Fejlfinding
             Events:
               name: Hændelser
             'Jigsaw: Learn to drag and drop':
@@ -880,6 +882,8 @@ da:
             Programming:
               name: Programmering
         grade5:
+          title: 5.  klasse
+          description_audience: Alder 10-110
           lessons:
             'Artist: For Loops':
               name: Kunstner For loops/sløjfer
@@ -908,7 +912,11 @@ da:
             Wrap-up:
               name: Afslutning
         grade3:
+          title: 3.  klasse
+          description_audience: Alderen 5 - 18
           lessons:
+            " Bee: Conditionals":
+              name: " Bi: Betingelser"
             'Artist: Nested Loops':
               name: 'Kunstner: Indlejrede løkker'
             Bee Debugging:
@@ -922,7 +930,6 @@ da:
             required:
               display_name: Oversigt
         csd3-2017:
-          description_short: Programmering
           lessons:
             Functions:
               name: Funktioner
@@ -933,6 +940,7 @@ da:
             Conditionals:
               name: Betingelser
         grade2:
+          description_audience: Alderen 5 - 18
           lessons:
             Flappy:
               name: Flappy
@@ -1067,6 +1075,8 @@ da:
               name: Introduktion
             Ice Age Play Lab:
               name: Ice Age Play Lab
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
         classic-hoc-impact-study:
           description_short: Prøv grundlæggende programmering med masser af sjove
             figurer!
@@ -1197,6 +1207,8 @@ da:
               name: nul
         coursef-ramp:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Introduction:
               name: Introduktion
             Ice Age Play Lab:
@@ -1225,6 +1237,8 @@ da:
               name: Indlejret Løkker
         coursee-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Ice Age Play Lab:
               name: Ice Age Play Lab
             Envelope Variables:
@@ -1239,6 +1253,8 @@ da:
               name: Indlejret Løkker
         coursef-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Building a Foundation:
               name: Opbygge et fundament
         cspnovice:
@@ -1320,7 +1336,6 @@ da:
             Thanks:
               name: Tak
         csp3-research-mxghyt:
-          description_short: Programmering
           lessons:
             Creating Functions:
               name: Oprettelse af funktioner
@@ -1374,6 +1389,8 @@ da:
           lessons:
             Building a Foundation:
               name: Opbygge et fundament
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Ice Age Play Lab:
               name: Ice Age Play Lab
             Envelope Variables:
@@ -1416,6 +1433,8 @@ da:
           lessons:
             Building a Foundation:
               name: Opbygge et fundament
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Introduction:
               name: Introduktion
             Ice Age Play Lab:
@@ -1433,7 +1452,6 @@ da:
             For Loops:
               name: For Loops
         csd3-1819draft:
-          description_short: Programmering
           lessons:
             Variables:
               name: Variabler
@@ -1444,7 +1462,6 @@ da:
             Functions:
               name: Funktioner
         csd3-2018:
-          description_short: Programmering
           lessons:
             Variables:
               name: Variabler
@@ -1490,8 +1507,6 @@ da:
               name: Binære armbånd
             'Unplugged: Binary':
               name: Binære billeder
-            Artist Binary:
-              name: Kunstner binære
             Internet:
               name: Internettet
             Crowdsourcing:
@@ -1522,8 +1537,6 @@ da:
               name: Digital statsborgerskab
             'Unplugged: Binary':
               name: Binære billeder
-            Artist Binary:
-              name: Kunstner binære
             Graph Paper Programming:
               name: Programmering på millimeterpapir
             Relay Programming:
@@ -1540,6 +1553,8 @@ da:
               name: Binære armbånd
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: Funktioner med parametre\_
             Functions with Parameters:
               name: Funktioner med parametre
         coursee-2018:
@@ -1566,6 +1581,8 @@ da:
               name: Mine robot venner
             Building a Foundation:
               name: Opbygge et fundament
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Introduction:
               name: Introduktion
             Ice Age Play Lab:
@@ -1583,7 +1600,6 @@ da:
             The Internet:
               name: Internettet
         csp3-2018:
-          description_short: Programmering
           lessons:
             Creating Functions:
               name: Oprettelse af funktioner
@@ -1686,9 +1702,8 @@ da:
             Artist:
               name: Kunstner
         dance:
-          title: Dansefest
           description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
-            Ciara, og 25 flere!
+            Ciara og 25 andre!
           description: Lav din egen dansefest sammen med dine venner.
           lessons:
             Dance Party:
@@ -1778,8 +1793,6 @@ da:
               name: Digital statsborgerskab
             'Unplugged: Binary':
               name: Binære billeder
-            Artist Binary:
-              name: Kunstner binære
             Dance Party:
               name: Dance Party
         coursee-2019:
@@ -1922,7 +1935,6 @@ da:
             Lists:
               name: Lister
         csd3-2019:
-          description_short: Programmering
           lessons:
             Variables:
               name: Variabler
@@ -1954,7 +1966,6 @@ da:
             The Internet:
               name: Internettet
         csp3-2019:
-          description_short: Programmering
           lessons:
             Creating Functions:
               name: Oprettelse af funktioner
@@ -2068,7 +2079,6 @@ da:
             Lists:
               name: Lister
         csd3-pilot:
-          description_short: Programmering
           lessons:
             Variables:
               name: Variabler
@@ -2078,10 +2088,17 @@ da:
               name: Betingelser
             Functions:
               name: Funktioner
+        maddie-test:
+          lessons:
+            stage 1:
+              name: trin 1
         csp3-pilot:
           lesson_groups:
             required:
               display_name: Oversigt
+          lessons:
+            Debugging:
+              name: Fejlfinding
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2103,6 +2120,11 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
+          lessons:
+            Step 1:
+              name: Trin 1
+            Step 2:
+              name: Trin 2
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
@@ -2250,7 +2272,6 @@ da:
             Functions with Parameters:
               name: Funktioner med parametre
         csd3-2020:
-          description_short: Programmering
           lessons:
             Variables:
               name: Variabler
@@ -2326,8 +2347,6 @@ da:
               name: Betingelser med kortspil
             'Unplugged: Binary':
               name: Binære billeder
-            Artist Binary:
-              name: Kunstner binære
             Digital Citizenship:
               name: Digital statsborgerskab
             Dance Party:
@@ -2390,8 +2409,11 @@ da:
           lessons:
             Spelling Bee:
               name: Stave-bien
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Fejlfinding
         csp3-virtual:
-          description_short: Programmering
           lessons:
             Creating Functions:
               name: Oprettelse af funktioner
@@ -2399,6 +2421,8 @@ da:
           lessons:
             Tools:
               name: Værktøjer
+            Debugging:
+              name: Fejlfinding
         csp5-virtual:
           lessons:
             While Loops:
@@ -2436,7 +2460,6 @@ da:
             Sprite Lab:
               name: SpriteLab
         csd3-virtual:
-          description_short: Programmering
           lessons:
             Variables:
               name: Variabler
@@ -2478,8 +2501,9 @@ da:
               display_name: Variabler
             outbreak:
               display_name: Udbrud Simulator
+            debugging:
+              display_name: Fejlfinding
         csd3-2021:
-          description_short: Programmering
           lessons:
             Variables:
               key: Variabler
@@ -2501,6 +2525,11 @@ da:
             Functions with Parameters:
               key: Funktioner med parametre
               name: Funktioner med parametre
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Fejlfinding
+              name: Fejlfinding
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2574,7 +2603,6 @@ da:
               name: Binære billeder
             Artist Binary:
               key: Kunstner binære
-              name: Kunstner binære
           lesson_groups:
             csf_events:
               display_name: Hændelser
@@ -2677,6 +2705,7 @@ da:
             variables:
               display_name: Variabler
         contagion-pilot:
+          description_audience: 5.  klasse
           description_short: 'Brug Sprite Lab til at programmere en simulation ud
             af et virusudbrud. '
           description: 'Brug Sprite Lab til at programmere en simulation ud af et
@@ -2685,8 +2714,6 @@ da:
             af et virusudbrud. '
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Introduktion
             Loops:
               key: Løkker
               name: Løkker
@@ -2707,9 +2734,36 @@ da:
               name: For Loops
             Sprite Lab:
               key: SpriteLab
-              name: SpriteLab
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduktion
             Introduction:
               display_name: Introduktion
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enhed 1
+            lessonGroup-4:
+              display_name: Enhed 2
+            lessonGroup-5:
+              display_name: Enhed 3
+            lessonGroup-6:
+              display_name: Enhed 4
+            lessonGroup-7:
+              display_name: Enhed 5
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Oversigt
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Oversigt
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Værktøjer

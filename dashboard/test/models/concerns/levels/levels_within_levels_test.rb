@@ -1,6 +1,39 @@
 require 'test_helper'
 
 class LevelsWithinLevelsTest < ActiveSupport::TestCase
+  test 'cannot delete levels that other levels reference as children' do
+    child = create(:level, parent_levels: [create(:level)])
+
+    refute child.destroy
+
+    assert_equal ["Cannot delete record because dependent parent levels exist"],
+      child.errors.full_messages
+    refute child.destroyed?
+  end
+
+  test 'can delete levels that other levels reference as parents' do
+    child = create(:level)
+    parent = create(:level, child_levels: [child])
+
+    assert parent.destroy
+
+    assert parent.destroyed?
+    refute child.destroyed?
+  end
+
+  test 'deleting a parent level will also remove associations' do
+    child = create(:level)
+    parent = create(:level, child_levels: [child])
+    assert child.levels_parent_levels.present?
+
+    assert parent.destroy
+
+    child.reload
+    assert parent.destroyed?
+    refute child.destroyed?
+    assert child.levels_parent_levels.empty?
+  end
+
   test 'parent levels and child levels' do
     parent = create :level
     child = create :level
@@ -77,5 +110,71 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     assert_equal level, level.project_template_level
 
     assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
+  end
+
+  test 'setup contained levels' do
+    level = create :level
+    assert_equal [], level.child_levels.contained
+
+    # can add
+    first_contained = create :level
+    level.update!(contained_level_names: [first_contained.name])
+    assert_equal [first_contained], level.child_levels.contained
+
+    # can reorder
+    second_contained = create :level
+    level.update!(contained_level_names: [first_contained.name, second_contained.name])
+    assert_equal [first_contained, second_contained], level.child_levels.contained
+    level.update!(contained_level_names: [second_contained.name, first_contained.name])
+    assert_equal [second_contained, first_contained], level.child_levels.contained
+
+    # can remove
+    level.update!(contained_level_names: [])
+    assert_equal [], level.reload.child_levels.contained
+  end
+
+  test 'clone_child_levels clones child levels' do
+    parent = create :level, level_num: 'custom'
+    child = create :level, level_num: 'custom', name: 'child_level'
+    ParentLevelsChildLevel.create(parent_level: parent, child_level: child)
+    Level.clone_child_levels(parent, '_test_clone')
+    assert_equal 'child_level_test_clone', parent.reload.child_levels.first.name
+  end
+
+  test 'clone_child_levels returns update params' do
+    parent = create :level, level_num: 'custom'
+    child = create :level, level_num: 'custom', name: 'child_level'
+    ParentLevelsChildLevel.create(
+      parent_level: parent,
+      child_level: child,
+      kind: ParentLevelsChildLevel::CONTAINED
+    )
+    result = Level.clone_child_levels(parent, '_test_clone')
+    expected = {contained_level_names: ['child_level_test_clone']}
+    assert_equal expected, result
+  end
+
+  test 'project template level' do
+    template_level = Blockly.create(name: 'project_template')
+    template_level.start_blocks = '<xml/>'
+    template_level.save!
+
+    assert_nil template_level.project_template_level
+    assert_equal '<xml/>', template_level.start_blocks
+
+    real_level1 = Blockly.create(name: 'level 1')
+    real_level1.project_template_level_name = 'project_template'
+    real_level1.save!
+
+    assert_equal template_level, real_level1.project_template_level
+  end
+
+  test 'can unset project template level' do
+    template_level = create(:level)
+    real_level = create(:level, project_template_level_name: template_level.name)
+    assert_equal template_level, real_level.project_template_level
+
+    real_level.update!(project_template_level_name: nil)
+    assert_nil real_level.project_template_level
   end
 end

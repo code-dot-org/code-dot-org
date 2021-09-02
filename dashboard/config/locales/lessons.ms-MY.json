@@ -1,0 +1,313 @@
+{
+  "ms-MY": {
+    "data": {
+      "lessons": {
+        "coursef-2021/lesson-2": {
+          "student_overview": "Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian."
+        },
+        "coursef-2021/Loops with the Artist": {
+          "overview": "Pelajaran **membina kemahiran** ini mengalihkan tumpuan daripada Makmal Peperi kepada Artis, alat baharu yang akan diterokai oleh pelajar sepanjang tempoh kursus yang tinggal ini."
+        },
+        "coursef-2021/Variables that Change in Artist": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk baharu.",
+          "student_overview": "Dalam pelajaran ini, anda akan membuat lukisan dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan."
+        },
+        "coursef-2021/Nested Loops in the Maze": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan digalakkan berfikir sejauh mana perubahan kecil di dalam gelung akan memberikan kesan kepada atur cara mereka.",
+          "student_overview": "Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda menempatkan gelung di dalam gelung yang lain."
+        },
+        "coursef-2021/Variables that Change in Bee": {
+          "overview": "Pelajaran **membina kemahiran** ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih dinamik dengan membenarkan nilai ditukar semasa kod sedang berjalan.",
+          "student_overview": "Lebah ini menyukai pemboleh ubah!"
+        },
+        "coursef-2021/For Loop Fun": {
+          "student_overview": "Anda akan menikmati banyak keseronokan apabila mempelajari tentang gelung `untuk`!"
+        },
+        "coursef-2021/For Loops in Artist": {
+          "student_overview": "Bersedia untuk membuat hasil kerja agung anda yang seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan membuat beberapa gambar yang cukup luar biasa."
+        },
+        "coursef-2021/Simulating Experiments": {
+          "student_overview": "Jalankan simulasi pada komputer dan eksperimen dengan menukar pemboleh ubah."
+        },
+        "coursef-2021/End of Course Project": {
+          "student_overview": "Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!"
+        },
+        "courseb-2021/Digital Trails": {
+          "student_overview": "Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web."
+        },
+        "courseb-2021/Move It, Move It": {
+          "student_overview": "Atur cara akan sekelas anda untuk melangkah dengan berhati-hati dari satu tempat ke tempat yang lain."
+        },
+        "courseb-2021/Sequencing in Maze": {
+          "student_overview": "Bantu Red, Angry Bird mengikuti laluan menuju ke tempat khinzir yang nakal."
+        },
+        "courseb-2021/Programming in Harvester": {
+          "student_overview": "Bantu Penuai mengumpulkan sayuran di sepanjang laluan."
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "student_overview": "Dalam pelajaran ini, kami akan mengadakan majlis tari-menari dengan menggunakan gelung berulang!"
+        },
+        "courseb-2021/Loops in Harvester": {
+          "student_overview": "Bantu Penuai mengumpulkan lebih banyak lagi, dengan menggunakan gelung!"
+        },
+        "courseb-2021/Loops in Collector": {
+          "student_overview": "Atur cara pengembara Laurel mengumpulkan harta karun di dalam ruang gua yang terbuka."
+        },
+        "courseb-2021/Loops in Artist": {
+          "student_overview": "Gunakan corak dan gelung untuk menyiapkan imej."
+        },
+        "courseb-2021/The Right App": {
+          "student_overview": "Lakarkan aplikasi telefon pintar anda sendiri."
+        },
+        "courseb-2021/Events: The Big Event": {
+          "student_overview": "Bergerak atau berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi."
+        },
+        "courseb-2021/Events in Play Lab": {
+          "student_overview": "Gunakan peristiwa untuk mencipta cerita atau membuat permainan berinteraktif."
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "student_overview": "Pelajari cara untuk pergi ke merata tempat dengan selamat dalam talian."
+        },
+        "coursea-2021/Learn to Drag and Drop": {
+          "student_overview": "Klik dan tarik untuk menyelesaikan teka-teki."
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "purpose": "Jambatan yang menyambungkan algoritma dengan pengaturcaraan boleh menjadi pendek jika pelajar memahami perbezaan antara merancang jujukan dengan teliti dan mengekod jujukan tersebut ke dalam bahasa yang sesuai. Aktiviti ini akan membantu pelajar memperoleh pengalaman membaca dan menulis dalam trengkas.",
+          "student_overview": "Tulis arahan untuk membawa Flurb kepada buah."
+        },
+        "coursea-2021/Sequencing with Scrat": {
+          "student_overview": "Atur cara Scrat mendapatkan buah oak."
+        },
+        "coursea-2021/Programming in Ice Age": {
+          "student_overview": "Tulis program untuk membantu Scrat mendapatkan buah oak."
+        },
+        "coursea-2021/Programming with Rey and BB-8": {
+          "student_overview": "Bantu BB-8 mengumpulkan logam sekerap."
+        },
+        "coursea-2021/Loops: Happy Loops": {
+          "student_overview": "Bantu Flurb menyelesaikan masalah yang lebih besar dengan menggunakan gelung."
+        },
+        "coursea-2021/Loops in Ice Age": {
+          "student_overview": "Bantu Scrat menutup lebih banyak tanah dengan menggunakan gelung."
+        },
+        "coursea-2021/Loops in Collector": {
+          "student_overview": "Bantu pengembara Laurel mengumpulkan harta karun di bawah tanah."
+        },
+        "coursea-2021/Ocean Scene with Loops": {
+          "student_overview": "Gunakan gelung dan corak untuk menyiapkan imej."
+        },
+        "coursea-2021/Events: The Big Event": {
+          "student_overview": "Bergerak dan berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi."
+        },
+        "coursea-2021/Events in Play Lab": {
+          "student_overview": "Cipta permainan dan cerita anda sendiri."
+        },
+        "coursec-2021/Putting a STOP to Online Meanness": {
+          "student_overview": "Dalam pelajaran ini, anda akan mempelajari tentang kekejian dan perkara yang perlu dilakukan jika anda mengalaminya dalam talian."
+        },
+        "coursec-2021/Programming: My Robotic Friends": {
+          "student_overview": "Dalam pelajaran ini, anda akan berpura-pura yang rakan sekelas anda ialah robot dan mengatur cara mereka untuk membina corak cawan yang tersusun."
+        },
+        "coursec-2021/Debugging in Maze": {
+          "student_overview": "Cari masalah di dalam teka-teki dan berlatih kemahiran penyahpepijatan anda."
+        },
+        "coursec-2021/Programming in Collector": {
+          "student_overview": "Tulis algoritma untuk membantu Pengembara Laurel mengumpulkan banyak batu permata!"
+        },
+        "coursec-2021/Programming in Artist": {
+          "student_overview": "Cipta imej yang cantik dengan mengatur cara Artis."
+        },
+        "coursec-2021/Loops: My Loopy Robotic Friends": {
+          "student_overview": "Dalam pelajaran ini, anda akan mengatur cara rakan sekelas anda sekali lagi, tetapi dengan menggunakan gelung, anda akan dapat menyelesaikan masalah yang lebih besar dan lebih rumit."
+        },
+        "coursec-2021/Loops in Harvester": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar menggelungkan tindakan baharu untuk membantu penuai mengumpulkan pelbagai sayuran yang tumbuh dalam rumpun yang besar.",
+          "student_overview": "Mari kita gunakan gelung untuk membantu penuai mengumpulkan sebahagian daripada sayuran!"
+        },
+        "coursec-2021/Sticker Art with Loops": {
+          "student_overview": "Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!"
+        },
+        "coursec-2021/Events: The Big Event": {
+          "student_overview": "Main permainan yang menyeronokkan untuk mengetahui tentang peristiwa."
+        },
+        "coursec-2021/Build a Flappy Game": {
+          "student_overview": "Bina permainan Kibasan Burung anda sendiri mengikut kesukaan anda, kemudian kongsikan dengan rakan anda!"
+        },
+        "coursec-2021/Events in Play Lab": {
+          "student_overview": "Sudah tiba masanya menjadi kreatif dan mencipta permainan di Makmal Mainan!"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "student_overview": "Cipta gelang binari anda sendiri dan ketahui cara komputer mengingati maklumat!"
+        },
+        "coursec-2021/End of Course Project: Create a Play Lab Game": {
+          "student_overview": "Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda."
+        },
+        "coursed-2021/lesson-5": {
+          "student_overview": "Dalam pelajaran ini, anda akan mempelajari cara kata laluan melindungi maklumat anda dan membuat kata laluan yang baik."
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "student_overview": "Dalam pelajaran ini, anda akan mengatur cara rakan sekelas anda untuk melukis gambar!"
+        },
+        "coursed-2021/Introduction to Online Puzzles": {
+          "student_overview": "Pelajaran ini akan memberikan anda latihan dalam kemahiran yang anda perlukan untuk kursus ini."
+        },
+        "coursed-2021/Relay Programming": {
+          "student_overview": "Adakah anda masih ingat pada permulaan kursus ini apabila anda membuat lukisan dengan menggunakan kod? Dalam pelajaran ini, anda akan bekerjasama dengan pasukan untuk melakukan sesuatu yang serupa!"
+        },
+        "coursed-2021/Debugging in Collector": {
+          "student_overview": "Adakah anda pernah menghadapi masalah semasa pengekodan? Dalam pelajaran ini, anda akan mempelajari rahsia penyahpepijatan. Penyahpepijatan ialah proses mencari dan membetulkan masalah dalam kod anda."
+        },
+        "coursed-2021/Events in Bounce": {
+          "student_overview": "Adakah anda pernah berharap agar dapat bermain permainan video di sekolah? Dalam pelajaran ini, anda akan mencipta permainan itu sendiri!"
+        },
+        "coursed-2021/Build a Star Wars Game": {
+          "student_overview": "Rasakan kekuatan semasa anda membina permainan Star Wars anda sendiri dalam pelajaran ini."
+        },
+        "coursed-2021/Dance Party": {
+          "student_overview": "Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri."
+        },
+        "coursed-2021/Loops in Ice Age": {
+          "student_overview": "Dalam pelajaran ini, anda akan menggunakan blok ulangan untuk membantu Scrat mendapatkan buah oak secekap yang mungkin."
+        },
+        "coursed-2021/Loops in Artist": {
+          "student_overview": "Dalam pelajaran ini, gelung memudahkan imej menarik dibuat dengan Artis!"
+        },
+        "coursed-2021/Conditionals with Cards": {
+          "student_overview": "Sudah tiba masanya untuk bermain permainan yang anda memperoleh mata hanya di bawah syarat tertentu!"
+        },
+        "coursed-2021/Conditionals in Bee": {
+          "student_overview": "Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar."
+        },
+        "coursed-2021/While Loops in Farmer": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang, tetapi mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran. Untuk menyelesaikan teka-teki ini, pelajar akan menggunakan jenis gelung yang baharu.",
+          "student_overview": "Gelung adalah sangat berguna dalam pengekodan. Pelajaran ini akan mengajar anda tentang jenis gelung baharu: iaitu gelung semasa!"
+        },
+        "coursed-2021/Until Loops in Maze": {
+          "student_overview": "Anda boleh melakukan beberapa perkara yang menakjubkan apabila anda menggunakan gelung `sehingga`!"
+        },
+        "coursed-2021/End of Course Project": {
+          "student_overview": "Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda."
+        },
+        "express-2021/Debugging with Scrat": {
+          "student_overview": "Cari masalah di dalam teka-teki dan berlatih kemahiran penyahpepijatan anda."
+        },
+        "express-2021/Creating Art with Code": {
+          "student_overview": "Cipta imej yang cantik dengan mengatur cara Artis."
+        },
+        "express-2021/Swimming Fish in Sprite Lab": {
+          "student_overview": "Pelajari cara mencipta dan mengedit peperi."
+        },
+        "express-2021/lesson-1": {
+          "student_overview": "Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri."
+        },
+        "express-2021/Sticker Art with Loops": {
+          "student_overview": "Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!"
+        },
+        "express-2021/Nested Loops in Maze": {
+          "student_overview": "Gelung di dalam gelung di dalam gelung. Apakah yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda mencipta gelung bersarang."
+        },
+        "express-2021/If/Else with Bee": {
+          "student_overview": "Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar."
+        },
+        "express-2021/While Loops with the Farmer": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang, tetapi mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran. Untuk menyelesaikan teka-teki ini, pelajar akan menggunakan jenis gelung yang baharu.",
+          "student_overview": "Gelung adalah sangat berguna dalam pengekodan. Pelajaran ini akan mengajar anda tentang jenis gelung baharu: iaitu gelung semasa!"
+        },
+        "express-2021/Until Loops in Maze": {
+          "student_overview": "Anda boleh melakukan beberapa perkara yang menakjubkan apabila anda menggunakan gelung `sehingga`!"
+        },
+        "express-2021/Harvesting with Conditionals": {
+          "overview": "Pelajar akan berlatih gelung `semasa`, gelung `sehingga` dan pernyataan `jika / lain`. Semua blok ini menggunakan bersyarat. Apabila berlatih dengan menggunakan ketiga-tiganya, pelajar akan mempelajari menulis kod yang kompleks dan fleksibel.",
+          "student_overview": "Bukan selalunya jelas masa untuk menggunakan setiap yang bersyarat. Pelajaran ini akan membantu anda berlatih membuat keputusan mengenai perkara yang perlu dilakukan."
+        },
+        "express-2021/Functions in Minecraft": {
+          "student_overview": "Bolehkah anda memikirkan cara menggunakan fungsi untuk kod yang paling cekap?"
+        },
+        "express-2021/Functions with Artist": {
+          "student_overview": "Membuatkan lukisan yang kompleks menjadi lebih mudah dengan fungsi!"
+        },
+        "express-2021/Functions with Harvester": {
+          "student_overview": "Fungsi akan mengurangkan banyak kerja kerana anda membantu peladang dengan proses penuaiannya!"
+        },
+        "express-2021/Variables with Artist": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk baharu.",
+          "student_overview": "Dalam pelajaran ini, anda akan membuat lukisan dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan."
+        },
+        "express-2021/Changing Variables with Bee": {
+          "overview": "Pelajaran **membina kemahiran** ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih dinamik dengan membenarkan nilai ditukar semasa kod sedang berjalan.",
+          "student_overview": "Lebah ini menyukai pemboleh ubah!"
+        },
+        "express-2021/For Loops with Artist": {
+          "student_overview": "Bersedia untuk membuat hasil kerja agung anda yang seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan membuat beberapa gambar yang cukup luar biasa."
+        },
+        "express-2021/End of Course Project": {
+          "student_overview": "Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda."
+        },
+        "pre-express-2021/Learn to Drag and Drop": {
+          "student_overview": "Klik dan tarik untuk menyelesaikan teka-teki."
+        },
+        "pre-express-2021/Sequencing with Scrat": {
+          "student_overview": "Atur cara Scrat mendapatkan buah oak."
+        },
+        "pre-express-2021/Programming in Harvester": {
+          "student_overview": "Bantu Penuai mengumpulkan sayuran di sepanjang laluan."
+        },
+        "pre-express-2021/Loops with Scrat": {
+          "student_overview": "Bantu Scrat menutup lebih banyak tanah dengan menggunakan gelung."
+        },
+        "pre-express-2021/Loops with Laurel": {
+          "overview": "Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \\`dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan."
+        },
+        "pre-express-2021/Ocean Scene with Loops": {
+          "student_overview": "Gunakan gelung dan corak untuk menyiapkan imej."
+        },
+        "pre-express-2021/Drawing Gardens with Loops": {
+          "student_overview": "Gunakan corak dan gelung untuk menyiapkan imej."
+        },
+        "pre-express-2021/On the Move with Events": {
+          "student_overview": "Cipta permainan dan cerita anda sendiri."
+        },
+        "pre-express-2021/A Royal Battle with Events": {
+          "student_overview": "Gunakan peristiwa untuk mencipta cerita atau membuat permainan berinteraktif."
+        },
+        "coursee-2021/Simon Says": {
+          "student_overview": "Main permainan dan fikirkan tentang perintah yang diperlukan untuk mendapatkan hasil yang betul."
+        },
+        "coursee-2021/Learning Sprites with Sprite Lab": {
+          "student_overview": "Pelajari cara mencipta dan mengedit peperi."
+        },
+        "coursee-2021/Alien Dance Party with Sprite Lab": {
+          "student_overview": "Cipta projek berinteraktif yang boleh dikongsikan dengan rakan sekelas."
+        },
+        "coursee-2021/lesson-4": {
+          "student_overview": "Pelajari cara anda boleh menjadi individu bertanggungjawab apabila anda melihat buli siber."
+        },
+        "coursee-2021/Private and Personal Information": {
+          "student_overview": "Internet ialah sesuatu yang menyeronokkan dan menarik, tetapi adalah penting untuk kekal selamat. Pelajaran ini mengajar anda perbezaan antara maklumat yang selamat untuk dikongsi dan maklumat yang bersifat sulit."
+        },
+        "coursee-2021/Digital Sharing": {
+          "student_overview": "Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta."
+        },
+        "coursee-2021/Nested Loops in Artist": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, mencipta reka bentuk yang rumit dengan menggunakan Artis. Pelajaran ini berakhir dengan peluang untuk pelajar mencipta reka bentuk mereka sendiri.",
+          "student_overview": "Lebih banyak gelung bersarang! Kali ini, anda boleh membuat lukisan yang MENAKJUBKAN dengan gelung bersarang."
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "student_overview": "Malah bintang lagu rock juga memerlukan kemahiran pengaturcaraan. Pelajaran ini akan mengajar anda tentang fungsi menggunakan lirik daripada lagu."
+        },
+        "coursee-2021/Functions in Minecraft": {
+          "student_overview": "Bolehkah anda memikirkan cara menggunakan fungsi untuk kod yang paling cekap?"
+        },
+        "coursee-2021/Functions in Artist": {
+          "student_overview": "Membuatkan lukisan yang kompleks menjadi lebih mudah dengan fungsi!"
+        },
+        "coursee-2021/Functions in Harvester": {
+          "student_overview": "Fungsi akan mengurangkan banyak kerja kerana anda membantu peladang dengan proses penuaiannya!"
+        },
+        "coursee-2021/End of Course Project": {
+          "student_overview": "Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!"
+        }
+      }
+    }
+  }
+}

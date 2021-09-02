@@ -16,7 +16,7 @@ import {
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
-import locales, {setLocaleEnglishName} from '../../../../redux/localesRedux';
+import locales, {setLocaleCode} from '../../../../redux/localesRedux';
 
 $(document).ready(initPage);
 
@@ -27,7 +27,7 @@ function initPage() {
   const {scriptData, plcBreadcrumb} = config;
   const store = getStore();
   registerReducers({locales});
-  store.dispatch(setLocaleEnglishName(scriptData.locale));
+  store.dispatch(setLocaleCode(scriptData.locale_code));
 
   if (plcBreadcrumb) {
     // Dispatch breadcrumb props so that UnitOverviewHeader can add the breadcrumb

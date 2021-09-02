@@ -19,6 +19,7 @@ id:
       Games/Score: Permainan/Skor
       Groups: Grup
       Input: Input
+      Location: Lokasi
       Locations: Lokasi
       Logic: Logika
       Loops: Loop
@@ -29,4 +30,5 @@ id:
       Text: Teks
       Variables: variabel
       'Variables ': 'Variable '
+      'Variables  ': 'Variable  '
       World: Dunia

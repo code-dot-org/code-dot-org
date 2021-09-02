@@ -5,15 +5,20 @@ fr:
       Green: Vert
       Red: Rouge
       actor: acteur
+      age: age
+      answer: réponse
+      binary: binaire
       cats: tous les chats
       color: couleur
       counter: compteur
       dogs: tous les chiens
+      energy: l'Énergie
       height: hauteur
       honey: miel
       i: i
       left: vers la gauche
       length: longueur
+      level: niveau
       name: nom
       nectar: nectar
       planet: planète

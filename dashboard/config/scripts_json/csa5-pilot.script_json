@@ -14,8 +14,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-12 19:35:51 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2021-08-10 04:49:31 UTC",
+    "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa5-pilot"
     }
@@ -2314,12 +2314,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "unit_5_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
         "resource.key": "_key_u5l1_extra_practice"
       }
     },
@@ -2331,7 +2325,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-1",
         "resource.key": "unit_5_presentation_slides"
       }
     },
@@ -2349,7 +2343,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-3",
+        "lesson.key": "lesson-2",
         "resource.key": "unit_5_presentation_slides"
       }
     },
@@ -2379,7 +2373,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-4",
+        "lesson.key": "lesson-3",
         "resource.key": "unit_5_presentation_slides"
       }
     },
@@ -2409,14 +2403,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-5",
+        "lesson.key": "lesson-4",
         "resource.key": "unit_5_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "vocabulary_bingo_definitions_1"
       }
     },
     {
@@ -2428,19 +2416,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "u5l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "vocabulary_bingo_cards_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "u5l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "unit_5_presentation_slides"
+        "resource.key": "vocabulary_bingo_definitions_1"
       }
     },
     {
@@ -2460,6 +2454,12 @@
         "lesson.key": "lesson-6",
         "resource.key": "u5l6_extra_practice"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_5_presentation_slides"
+      }
     }
   ],
   "scripts_resources": [
@@ -2472,7 +2472,7 @@
     {
       "key": "initializer_list",
       "word": "Initializer List",
-      "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( { } )",
+      "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( `{ }` )",
       "properties": {
       },
       "seeding_key": {
@@ -2532,7 +2532,7 @@
     {
       "key": "pixel",
       "word": "Pixel",
-      "definition": "The smallest unit of a digital image. Digital images are made up of a grid of pixels.",
+      "definition": "The smallest unit of a digital image",
       "properties": {
       },
       "seeding_key": {

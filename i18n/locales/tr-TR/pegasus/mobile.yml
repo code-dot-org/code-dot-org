@@ -970,12 +970,14 @@
   coursed-2020_name: Kurs D (2020)
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
+  coursed-2021_name: Kurs D (2021)
   express-2018_name: Hızlı Kurs
   pre-express-2018_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2018)
   express-2019_name: Hızlandırılmış Kurs (2019)
   pre-express-2019_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2019)
   express-2020_name: Hızlandırılmış Kurs (2020)
   pre-express-2020_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2020)
+  pre-express-2021_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2021)
   csd2_name: 'Ünite 2 - Ağ Geliştirme'
   csd3_name: 'Ünite 3 - Animasyonlar ve Oyunlar'
   accelerated_name: "Hızlandırılmış Kurs"
@@ -1211,6 +1213,12 @@
   coursed-2020_shortdescription_congrats: Öğrenciler; döngüler, koşullar ve olaylara dair anlayışlarını geliştirecektir. Kodlamanın ötesinde öğrenciler, dijital vatandaşlık ile ilgili bilgi edinecektir.
   coursee-2020_shortdescription_congrats: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
   coursef-2020_shortdescription_congrats: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi tasarlayınız ve oluşturunuz.
+  coursea-2021_shortdescription_congrats: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+  courseb-2021_shortdescription_congrats: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+  coursec-2021_shortdescription_congrats: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+  coursed-2021_shortdescription_congrats: Öğrenciler; döngüler, koşullar ve olaylara dair anlayışlarını geliştirecektir. Kodlamanın ötesinde öğrenciler, dijital vatandaşlık ile ilgili bilgi edinecektir.
+  coursee-2021_shortdescription_congrats: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
+  coursef-2021_shortdescription_congrats: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi tasarlayınız ve oluşturunuz.
   codeorg_longdescription: "Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten eğitimli oyun denebilir."
   codeintl_longdescription: "Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten eğitimli oyun denebilir."
   khan_longdescription: "Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!"
@@ -1693,6 +1701,7 @@
   footer_support: "Yardım ve Topluluk"
   footer_terms: "Koşullar"
   ai_for_oceans: "Okyanuslar için Yapay Zeka\n"
+  ai_for_oceans_lesson_plan: "ders planı"
   ai_in_partnership_with: "### ortaklığıyla"
   ai_microsoft_thanks: "21. yüzyılda başarıyı yakalamak için her çocuğun bilgisayar bilimini ve becerileri öğrenme olanağına sahip olmasını sağlamaya yönelik vizyonumuzu ve misyonumuzu desteklediği için Microsoft'a teşekkür ederiz."
   ai_activity: "Etkinlik"

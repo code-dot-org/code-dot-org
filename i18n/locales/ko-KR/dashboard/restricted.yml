@@ -1,0 +1,10 @@
+ko:
+  devise:
+    mailer:
+      reset_password_instructions:
+        subject: "Code.org 비밀번호 재설정 안내"
+        hello: "안녕하세요 %{user_email} 님!"
+        change_my_password: "비밀번호 재설정하기:"
+        ignore_if_did_not_request: "귀하께서 요청하시지 않은 경우, 본 이메일을 무시하십시오."
+        your_password_reset: "누군가 귀하의 계정에 비밀번호 재설정 링크를 요청하였습니다. 하단의 링크는 %{day_count} 일간 유효합니다."
+        your_password_wont_change: "상단의 링크를 통해 새 비밀번호를 생성할때까지 비밀번호는 변경되지 않습니다."

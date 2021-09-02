@@ -1,0 +1,525 @@
+{
+  "pl-PL": {
+    "data": {
+      "vocabularies": {
+        "sprite/coursef/2021": {
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        },
+        "user/coursef/2021": {
+          "word": "Użytkownik",
+          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
+        },
+        "behavior/coursef/2021": {
+          "word": "Zachowanie",
+          "definition": "Czynność, którą duszek wykonuje nieustannie do momentu, gdy powie mu się, by przestał."
+        },
+        "program/coursef/2021": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algorytm",
+          "definition": "Lista kroków do ukończenia zadania. "
+        },
+        "event/coursef/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "variable/coursef/2021": {
+          "word": "Zmienna",
+          "definition": "Etykieta informacji użyta w programie."
+        },
+        "input/coursef/2021": {
+          "word": "Wejście",
+          "definition": "Informacje, które komputery otrzymują od użytkowników."
+        },
+        "loop/coursef/2021": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/coursef/2021": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "for_loop/coursef/2021": {
+          "word": "Pętla \"dla\" (for)",
+          "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modele i symulacje"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Uczenie maszynowe",
+          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
+        },
+        "dns/coursef/2021": {
+          "word": "DNS",
+          "definition": "skrót dla \"Systemu nazwy domen\" [Domain Name System], system przekłada na nazwy domen (na przykład example.com) na adresy OP (np. 93.184.216.34)"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet",
+          "definition": "Grupa komputerów i serwerów, które są ze sobą połączone."
+        },
+        "packets/coursef/2021": {
+          "word": "Pakiety",
+          "definition": "Niewielkie fragmenty informacji, które zostały starannie utworzone z większych części informacji."
+        },
+        "servers/coursef/2021": {
+          "word": "Serwery",
+          "definition": "Komputery, które istnieją tylko po to, by przekazywać rzeczy innym."
+        },
+        "url/coursef/2021": {
+          "word": "URL",
+          "definition": "Zapadający w pamięć adres do wywołania strony internetowej (np. www.code.org)."
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Kabel",
+          "definition": "Metoda wysyłania informacji z użyciem kabli telefonicznych lub telewizyjnych."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Światłowód",
+          "definition": "Połączenie, w którym używa się światła do przesyłu informacji"
+        },
+        "ip_address/coursef/2021": {
+          "word": "Adres IP",
+          "definition": "Liczba przypisana do dowolnej pozycji, która jest połączona z Internetem."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi",
+          "definition": "Bezprzewodowa metoda wysyłania informacji korzystająca z fal radiowych."
+        },
+        "define/coursef/2021": {
+          "word": "Zdefiniuj",
+          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
+        },
+        "prepare/coursef/2021": {
+          "word": "Przygotuj",
+          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
+        },
+        "reflect/coursef/2021": {
+          "word": "Przemyśl",
+          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
+        },
+        "try/coursef/2021": {
+          "word": "Spróbuj",
+          "definition": "Próba zrobienia czegoś"
+        },
+        "algorithm/courseb/2021": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "bug/courseb/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/courseb/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "click/courseb/2021": {
+          "word": "Kliknij",
+          "definition": "Wciśnij przycisk myszy"
+        },
+        "drag/courseb/2021": {
+          "word": "Przeciągnij",
+          "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
+        },
+        "drop/courseb/2021": {
+          "word": "Drop",
+          "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
+        },
+        "double_click/courseb/2021": {
+          "word": "Kliknij dwukrotnie",
+          "definition": "Wciśnij przycisk myszki bardzo szybko"
+        },
+        "program/courseb/2021": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "programming/courseb/2021": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "persistence/courseb/2021": {
+          "word": "Wytrwałość",
+          "definition": "Ciągłe podejmowanie prób nawet wówczas, gdy coś jest bardzo trudne."
+        },
+        "loop/courseb/2021": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/courseb/2021": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "event/courseb/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "algorithm/coursea/2021": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "debugging/coursea/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/coursea/2021": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "click/coursea/2021": {
+          "word": "Kliknij",
+          "definition": "Wciśnij przycisk myszy"
+        },
+        "drag/coursea/2021": {
+          "word": "Przeciągnij",
+          "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
+        },
+        "drop/coursea/2021": {
+          "word": "Drop",
+          "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
+        },
+        "double_click/coursea/2021": {
+          "word": "Kliknij dwukrotnie",
+          "definition": "Wciśnij przycisk myszki bardzo szybko"
+        },
+        "bug/coursea/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "programming/coursea/2021": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "loop/coursea/2021": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/coursea/2021": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "event/coursea/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "algorithm/coursec/2021": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "bug/coursec/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/coursec/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/coursec/2021": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "sequencing/coursec/2021": {
+          "word": "Sekwencjonowanie",
+          "definition": "Porządkowanie komend w poprawnym porządku tak, aby komputery były w stanie odczytać komendy."
+        },
+        "programming/coursec/2021": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "loop/coursec/2021": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/coursec/2021": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "event/coursec/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "binary/coursec/2021": {
+          "word": "Binarny",
+          "definition": "Sposób przedstawiania informacji z użyciem tylko dwóch opcji."
+        },
+        "algorithm/coursed/2021": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "program/coursed/2021": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "bug/coursed/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/coursed/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "loop/coursed/2021": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "programming/coursed/2021": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "frustrated/coursed/2021": {
+          "word": "Sfrustrowany",
+          "definition": "Poczucie irytacji lub złości spowodowane tym, że coś idzie nie tak, jak chcemy."
+        },
+        "persistence/coursed/2021": {
+          "word": "Wytrwałość",
+          "definition": "Ciągłe podejmowanie prób nawet wówczas, gdy coś jest bardzo trudne."
+        },
+        "event/coursed/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "code/coursed/2021": {
+          "word": "kodować",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "repeat/coursed/2021": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "command/coursed/2021": {
+          "word": "Komenda",
+          "definition": "Polecenie dla komputera. Wiele komend złożonych razem tworzy algorytmy i programy komputerowe."
+        },
+        "conditionals/coursed/2021": {
+          "word": "Zdania z warunkami",
+          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
+        },
+        "pseudocode/coursed/2021": {
+          "word": "pseudokod"
+        },
+        "condition/coursed/2021": {
+          "word": "Warunek",
+          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
+        },
+        "while_loop/coursed/2021": {
+          "word": "Pętla \"dopóki\" (While)",
+          "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
+        },
+        "until/coursed/2021": {
+          "word": "Aż do",
+          "definition": "Komenda, która nakazuje Ci coś zrobić tylko do momentu, w którym coś staje się prawdą."
+        },
+        "algorithm/express/2021": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "bug/express/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/express/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "sequencing/express/2021": {
+          "word": "Sekwencjonowanie",
+          "definition": "Porządkowanie komend w poprawnym porządku tak, aby komputery były w stanie odczytać komendy."
+        },
+        "program/express/2021": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "programming/express/2021": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "behavior/express/2021": {
+          "word": "Zachowanie",
+          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
+        },
+        "sprite/express/2021": {
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        },
+        "event/express/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "code/express/2021": {
+          "word": "kodować"
+        },
+        "loop/express/2021": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/express/2021": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "command/express/2021": {
+          "word": "Komenda",
+          "definition": "Polecenie dla komputera. Wiele komend złożonych razem tworzy algorytmy i programy komputerowe."
+        },
+        "condition/express/2021": {
+          "word": "Warunek",
+          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
+        },
+        "conditionals/express/2021": {
+          "word": "Zdania z warunkami",
+          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
+        },
+        "while_loop/express/2021": {
+          "word": "Pętla \"dopóki\" (While)",
+          "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
+        },
+        "until/express/2021": {
+          "word": "Aż do",
+          "definition": "Komenda, która nakazuje Ci coś zrobić tylko do momentu, w którym coś staje się prawdą."
+        },
+        "function/express/2021": {
+          "word": "Funkcja",
+          "definition": "Część kodu, który można łatwo przywoływać bez końca."
+        },
+        "variable/express/2021": {
+          "word": "Zmienna",
+          "definition": "Etykieta informacji użyta w programie."
+        },
+        "for_loop/express/2021": {
+          "word": "Pętla \"dla\" (for)",
+          "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
+        },
+        "define/express/2021": {
+          "word": "Zdefiniuj",
+          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
+        },
+        "prepare/express/2021": {
+          "word": "Przygotuj",
+          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
+        },
+        "reflect/express/2021": {
+          "word": "Przemyśl",
+          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
+        },
+        "try/express/2021": {
+          "word": "Spróbuj",
+          "definition": "Próba zrobienia czegoś"
+        },
+        "click/pre-express/2021": {
+          "word": "Kliknij",
+          "definition": "Wciśnij przycisk myszy"
+        },
+        "drag/pre-express/2021": {
+          "word": "Przeciągnij",
+          "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
+        },
+        "drop/pre-express/2021": {
+          "word": "Drop",
+          "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
+        },
+        "double_click/pre-express/2021": {
+          "word": "Kliknij dwukrotnie",
+          "definition": "Wciśnij przycisk myszki bardzo szybko"
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "bug/pre-express/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/pre-express/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/pre-express/2021": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "programming/pre-express/2021": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "persistence/pre-express/2021": {
+          "word": "Wytrwałość",
+          "definition": "Ciągłe podejmowanie prób nawet wówczas, gdy coś jest bardzo trudne."
+        },
+        "loop/pre-express/2021": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/pre-express/2021": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "event/pre-express/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "behavior/coursee/2021": {
+          "word": "Zachowanie",
+          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
+        },
+        "algorithm/coursee/2021": {
+          "word": "algorytm",
+          "definition": "Lista działań, aby ukończyć zadanie."
+        },
+        "sprite/coursee/2021": {
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        },
+        "event/coursee/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "copyright/coursee/2021": {
+          "word": "Prawa autorskie",
+          "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
+        },
+        "loop/coursee/2021": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/coursee/2021": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "function/coursee/2021": {
+          "word": "Funkcja",
+          "definition": "Część kodu, który można łatwo przywoływać bez końca."
+        },
+        "condition/coursee/2021": {
+          "word": "Warunek",
+          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
+        },
+        "conditionals/coursee/2021": {
+          "word": "Zdania z warunkami",
+          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
+        },
+        "while_loop/coursee/2021": {
+          "word": "Pętla \"dopóki\" (While)",
+          "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
+        },
+        "define/coursee/2021": {
+          "word": "Zdefiniuj",
+          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
+        },
+        "prepare/coursee/2021": {
+          "word": "Przygotuj",
+          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
+        },
+        "reflect/coursee/2021": {
+          "word": "Przemyśl",
+          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
+        },
+        "try/coursee/2021": {
+          "word": "Spróbuj",
+          "definition": "Próba zrobienia czegoś"
+        }
+      }
+    }
+  }
+}

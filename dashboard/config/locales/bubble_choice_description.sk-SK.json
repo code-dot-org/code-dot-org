@@ -3,7 +3,12 @@
     "data": {
       "bubble_choice_description": {
         "courseF_extras_sim": "Vytvor si a prispôsob vlastnú simuláciu!",
-        "spritelab_extras_repeat": "Pomocou cyklov vytvor rýchlo veľa podobných sprite objektov!"
+        "spritelab_extras_repeat": "Pomocou cyklov vytvor rýchlo veľa podobných sprite objektov!",
+        "courseC_artist_prog_challenge1_2021": "Nakresli izbu pre každé zo zvieratiek. ",
+        "courseD_bee_nestedLoops8_2021": "Pozbieraj všetok nektár z každého kvetu a v plástoch vyrob med. ",
+        "courseD_bee_nestedLoops9_2021": "Vyrob všetok med.",
+        "courseF_bee_variables_7a_2021": "Táto úloha je trochu iná. Čo potrebuješ na jej vyriešenie?",
+        "ramp_artist_loops8_2021": "Uprav kód tak, aby si nakreslil obrázok podľa predlohy s použitím cyklov."
       }
     }
   }

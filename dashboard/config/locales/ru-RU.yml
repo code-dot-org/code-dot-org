@@ -153,7 +153,7 @@ ru:
     overview: Зарегистрируйте учетную запись, чтобы отслеживать свой прогресс или
       управлять своим классом. <a href="/"> Вы можете просматривать различные задачи
       и этапы</a> и без учетной записи, но для сохранения свего прогресса и проектов
-      вы должны зарегистрироваться.
+      вы должны будете зарегистрироваться.
     overview_markdown: Зарегистрируйте учетную запись, чтобы отслеживать свой прогресс
       или управлять своим классом. [Вы можете просматривать различные задачи и этапы](/)
       и без учетной записи, но для сохранения свего прогресса и проектов вы должны
@@ -216,8 +216,8 @@ ru:
       информация.
     user_type_button: Обновление типа учетной записи
     user_type_label: Тип Учётной Записи
-    user_type_teacher: Учитель
     user_type_student: Ученик
+    user_type_teacher: Учитель
     field_is_required: требуется
     accept_terms: Вы должны принять условия перед созданием учетной записи
     error: Произошла ошибка.
@@ -326,6 +326,7 @@ ru:
     invite_sent: Приглашение отправлено
     added_teacher: "%{name} добавлен как твой учитель"
     registered: Вы зарегистрированы в %{section_name}.
+    already_exists: Вы уже присоединились к классу %{section_name}.
     error:
       signed_in: Прежде чем продолжить, выйдите из системы
       username_not_found: Имя пользователя %{username} не найдено
@@ -676,16 +677,16 @@ ru:
       Age&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены.<br />Angry
       Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права
       защищены.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts
-      Inc. Все права защищены.<br />Удивительный мир Гамбола является товарным знаком
-      и &copy; %{current_year} Cartoon Network.
+      Inc. Все права защищены.<br />Удивительный мир Гамбола (The Amazing World of
+      Gumball) является товарным знаком и &copy; 2015 Cartoon Network.
     art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Все права
       защищены. Star Wars&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права
       защищены. Frozen&#8482; &copy; %{current_year} Disney. Все права защищены. Ice
       Age&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены. Angry
       Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права
       защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc.
-      Все права защищены. Удивительный мир Гамбола является товарным знаком и &copy;
-      %{current_year} Cartoon Network.
+      Все права защищены. Удивительный мир Гамбола (The Amazing World of Gumball)
+      является товарным знаком и &copy; 2015 г., Cartoon Network.
     code_from_html: Code.org использует p5.play, который лицензируется на условиях
       <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
@@ -737,12 +738,6 @@ ru:
       gamelab_unsupported_tablet: Game Lab работает лучше всего на настольном или
         портативном компьютере с мышкой и клавиатурой. Могут возникнуть проблемы с
         этим инструментом на вашем текущем устройстве.
-      oceans_unsupported_browser: Этот браузер не поддерживает данный урок. Пожалуйста,
-        попробуйте посетить эту страницу используя Edge, Chrome, Firefox или любой
-        другой современный браузер.
-      weblab_unsupported_browser: К сожалению в настоящее время возникают проблемы
-        с загрузкой Web Lab в данном браузере. Может потребоваться использование другого
-        браузера пока эта проблема не будет решена. Извиняемся за причиненные неудобства.
       weblab_unsupported_locale_storage: Могут возникнуть проблемы с использованием
         Web Lab в режим приватного просмотра. Пожалуйста, обновите ваш проект в обычном
         режиме. Извините за причиненные неудобства.
@@ -854,6 +849,7 @@ ru:
       title: Спорт
       body: Создай баскетбольную игру или сочетай различные спортивные игры.
     text-compression:
+      title: Сжатие текста
       body: В этом уроке, студенты будут использовать текстовый компрессионный виджет
         для сжатия текста путем замены модулей с символами.
     unplugged:
@@ -1249,9 +1245,8 @@ ru:
       school_city: Город, где находится школа
       school_country: Страна твоей школы
       colombian_school_city: Город, где находится школа
-      colombian_school_department: Отдел образования
       colombian_school_municipality: Муниципальные школы
-      colombian_school_name: Название школы
+      colombian_chilean_school_name: Название школы
       ages: Какие возраста вы обучали в этом году?
       subjects: Каким предметам вы обучали в этом году?
       resources: Какой из следующих образовательных ресурсов CS вы используете?
@@ -1385,6 +1380,7 @@ ru:
     страницу.
   page_not_found_button: Вернуться на домашнюю страницу
   copy: Копировать
+  confirm: Подтвердить
   maker:
     google_oauth:
       login_with_google: Войти в приложение Maker с помощью Google

@@ -114,6 +114,10 @@ class ScriptLevelsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @script_level
     authorize! :read, @script_level, params.slice(:login_required)
 
+    @code_review_enabled = @script_level.level.is_a?(Javalab) &&
+      current_user.present? &&
+      (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
+
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
       render 'levels/_hidden_lesson'
@@ -399,11 +403,13 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    user = User.find(params[:user_id])
+    user_to_view = User.find(params[:user_id])
+    if can?(:view_as_user, @script_level, user_to_view)
+      @user = user_to_view
 
-    # TODO: This should use cancan/authorize.
-    if user.student_of?(current_user) || current_user.project_validator?
-      @user = user
+      if can?(:view_as_user_for_code_review, @script_level, user_to_view)
+        view_options(is_code_reviewing: true)
+      end
     end
   end
 
@@ -515,7 +521,7 @@ class ScriptLevelsController < ApplicationController
     # Add video generation URL for only the last level of Dance
     # If we eventually want to add video generation for other levels or level
     # types, this is the condition that should be extended.
-    replay_video_view_options(get_channel_for(@level, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
+    replay_video_view_options(get_channel_for(@level, @script_level.script_id, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {

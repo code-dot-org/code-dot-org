@@ -1,2 +1,13 @@
 {
+  "id-ID": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Gambar ruangan untuk masing-masing binatang. ",
+        "courseD_bee_nestedLoops8_2021": "Kumpulkan semua nektar dari setiap bunga dan buatlah madu di setiap sarang madu. ",
+        "courseD_bee_nestedLoops9_2021": "Hasilkan semua madunya",
+        "courseF_bee_variables_7a_2021": "Puzzle ini sedikit berbeda. Apa yang perlu Anda lakukan untuk memecahkannya?",
+        "ramp_artist_loops8_2021": "Carilah sebuah pola dan buatlah kode ini lebih pendek menggunakan loops."
+      }
+    }
+  }
 }

@@ -9,6 +9,8 @@ import {
   getBubbleClassNames,
   getBubbleShape
 } from '@cdo/apps/templates/progress/BubbleFactory';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import CachedElement from '@cdo/apps/util/CachedElement';
 import {levelProgressStyle} from '../../progress/progressStyles';
 
@@ -37,7 +39,8 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
     isPaired: PropTypes.bool,
     bubbleSize: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
     title: PropTypes.string,
-    url: PropTypes.string
+    url: PropTypes.string,
+    reviewState: PropTypes.oneOf(Object.keys(ReviewStates))
   };
 
   static defaultProps = {
@@ -58,6 +61,12 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
           createElement={this.createBubbleElement}
         />
       </BubbleLink>
+    );
+  }
+
+  shouldShowKeepWorkingBadge() {
+    return [ReviewStates.keepWorking, ReviewStates.awaitingReview].includes(
+      this.props.reviewState
     );
   }
 
@@ -85,7 +94,8 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
       getBubbleShape(isUnplugged, isConcept),
       bubbleSize,
       levelProgressStyle(levelStatus, levelKind),
-      content
+      content,
+      this.shouldShowKeepWorkingBadge()
     );
   }
 
@@ -93,7 +103,7 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
    * We use this helper as a testing hook to intercept the explicit props used
    * to render the `BasicBubble`.
    */
-  renderBasicBubble(shape, size, progressStyle, content) {
+  renderBasicBubble(shape, size, progressStyle, content, showKeepWorkingBadge) {
     return (
       <BasicBubble
         shape={shape}
@@ -102,6 +112,13 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
         classNames={getBubbleClassNames(true)}
       >
         {content}
+        {showKeepWorkingBadge && (
+          <BubbleBadge
+            badgeType={BadgeType.keepWorking}
+            bubbleSize={size}
+            bubbleShape={shape}
+          />
+        )}
       </BasicBubble>
     );
   }
@@ -149,7 +166,8 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
     // letter bubbles and unplugged bubbles are all of the same shape and
     // content, so for those we can return a shorter key.
     if (bubbleSize === BubbleSize.letter) {
-      return `ltr:ttl=${title}&${statusString}`;
+      const badge = this.shouldShowKeepWorkingBadge() ? '&bdg' : '';
+      return `ltr:ttl=${title}&${statusString}${badge}`;
     } else if (isUnplugged) {
       return `unp:${statusString}`;
     }
@@ -168,6 +186,10 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
       ? `ttl=${title}`
       : null;
 
-    return `${contentString}&${shapeString}&${statusString}`;
+    const strings = [contentString, shapeString, statusString];
+    if (this.shouldShowKeepWorkingBadge()) {
+      strings.push('bdg');
+    }
+    return strings.join('&');
   }
 }

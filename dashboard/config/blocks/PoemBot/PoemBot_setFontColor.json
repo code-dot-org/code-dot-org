@@ -1,0 +1,17 @@
+{
+  "category": "",
+  "config": {
+    "func": "setFontColor",
+    "blockText": "set font color {FILL} with outline {STROKE}",
+    "args": [
+      {
+        "name": "FILL",
+        "type": "Colour"
+      },
+      {
+        "name": "STROKE",
+        "type": "Colour"
+      }
+    ]
+  }
+}

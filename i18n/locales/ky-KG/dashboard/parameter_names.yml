@@ -2,6 +2,7 @@ ky:
   data:
     parameter_names:
       actor: аткаруу
+      color: түс
       counter: эсептегич
       height: бийиктиги
       honey: бал

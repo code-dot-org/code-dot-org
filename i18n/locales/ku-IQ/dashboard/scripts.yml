@@ -1,3 +1,4 @@
+---
 ku:
   data:
     script:
@@ -19,6 +20,7 @@ ku:
             Happy Maps:
               name: نەخشەی دڵخۆش
         course2:
+          title: Ders 2
           lessons:
             'Artist: Loops':
               name: 'هونەرمەند: خولانەوەکان'
@@ -29,11 +31,14 @@ ku:
             Graph Paper Programming:
               name: بەرنامەڕێژی پەڕەی هێڵکاری
         course3:
+          title: Ders 3
           lessons:
             Bounce:
               name: هەڵبەزینەوە
             Computational Thinking:
               name: بیرکردنەوەی ژمارەیی
+        course4:
+          title: Ders 4
         Course4pre:
           lessons:
             'Artist: Loops':
@@ -121,32 +126,14 @@ ku:
               name: هاوشێوەسازی ئینتەرنێت
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         asUnplugged:
@@ -171,21 +158,21 @@ ku:
           lessons:
             Loops:
               name: گرێکان
+        grade4:
+          title: پۆلەكانی 4
         grade1:
+          title: پۆلەكانی 1
           lessons:
             Loops:
               name: گرێکان
+        grade5:
+          title: پۆلەكانی 5
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         grade3:
+          title: پۆلەكانی 3
           lessons:
             Bounce:
               name: هەڵبەزینەوە
@@ -268,7 +255,7 @@ ku:
             Functions:
               name: فرمانەکان
             'null':
-              name: 'بەتاڵ'
+              name: بەتاڵ
         artist-and-bb8:
           lessons:
             Bounce:
@@ -391,7 +378,7 @@ ku:
         andrea-test:
           lessons:
             'null':
-              name: 'بەتاڵ'
+              name: بەتاڵ
         coursec-2019:
           lesson_groups:
             csf_loops:
@@ -525,6 +512,10 @@ ku:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
+        maddie-test:
+          lessons:
+            stage 1:
+              name: قۆناغی 1
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -788,6 +779,8 @@ ku:
               display_name: گۆڕاوەکان
             variables:
               display_name: گۆڕاوەکان
+        contagion-pilot:
+          description_audience: پۆلەكانی 5
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -802,3 +795,7 @@ ku:
             Variables:
               key: گۆڕاوەکان
               name: گۆڕاوەکان
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: تاقیکردنەوە

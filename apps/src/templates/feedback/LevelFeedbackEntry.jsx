@@ -60,27 +60,18 @@ export default class LevelFeedbackEntry extends Component {
   }
 
   renderReviewState() {
-    const {
-      review_state,
-      is_latest_for_level,
-      student_updated_since_feedback
-    } = this.props.feedback;
-
-    const isAwaitingReview =
-      review_state === ReviewStates.keepWorking &&
-      is_latest_for_level &&
-      student_updated_since_feedback;
+    const {review_state, is_awaiting_teacher_review} = this.props.feedback;
 
     if (review_state === ReviewStates.completed) {
       return <div style={styles.reviewState}>{i18n.reviewedComplete()}</div>;
-    } else if (isAwaitingReview) {
+    } else if (is_awaiting_teacher_review) {
       return (
         <div style={styles.reviewState}>{i18n.waitingForTeacherReview()}</div>
       );
     } else {
       return (
         <div style={styles.reviewState}>
-          <KeepWorkingBadge hasWhiteBorder={false} style={{fontSize: 8}} />
+          <KeepWorkingBadge />
           &nbsp;
           <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
         </div>
@@ -235,6 +226,8 @@ const styles = {
     cursor: 'pointer'
   },
   reviewState: {
+    display: 'flex',
+    alignItems: 'center',
     marginBottom: 8,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,

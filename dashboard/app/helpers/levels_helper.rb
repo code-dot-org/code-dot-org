@@ -85,19 +85,20 @@ module LevelsHelper
   # If given a user, find the channel associated with the given level/user.
   # Otherwise, gets the storage_id associated with the (potentially signed out)
   # current user, and either finds or creates a channel for the level
-  def get_channel_for(level, user = nil)
+  def get_channel_for(level, script_id = nil, user = nil)
     if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
       user_storage_id = storage_id_for_user_id(user.id)
-      channel_token = ChannelToken.find_channel_token(level, user_storage_id)
+      channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
     else
       user_storage_id = get_storage_id
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
         request.ip,
         user_storage_id,
+        script_id,
         {
           hidden: true,
         }
@@ -116,7 +117,7 @@ module LevelsHelper
     return false unless user.present?
 
     if level.channel_backed?
-      return get_channel_for(level, user).present?
+      return get_channel_for(level, script.id, user).present?
     else
       user.last_attempt(level, script).present?
     end
@@ -178,11 +179,18 @@ module LevelsHelper
 
     if (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
       view_options(
-        channel: get_channel_for(@level, @user),
+        channel: get_channel_for(@level, @script&.id, @user),
         server_project_level_id: @level.project_template_level.try(:id),
       )
       # readonly if viewing another user's channel
       readonly_view_options if @user
+    end
+
+    # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
+    if @level.is_a?(Javalab) && (@user || current_user)
+      user_id = @user&.id || current_user&.id
+      backpack = Backpack.find_by_user_id(user_id)
+      view_options(backpack_channel: backpack&.channel)
     end
 
     # Always pass user age limit
@@ -246,7 +254,7 @@ module LevelsHelper
         if recent_attempt
           level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
         elsif @level.channel_backed?
-          recent_channel = get_channel_for(@level, recent_user) if recent_user
+          recent_channel = get_channel_for(@level, @script&.id, recent_user) if recent_user
           level_view_options(@level.id, pairing_channel_id: recent_channel) if recent_channel
         end
       end
@@ -268,10 +276,11 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
-    if @script_level && @level.can_have_feedback?
+    if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
       @app_options[:serverScriptId] = @script.id
       @app_options[:serverScriptLevelId] = @script_level.id
       @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
+      @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
     end
 
     # Blockly caches level properties, whereas this field depends on the user
@@ -795,7 +804,7 @@ module LevelsHelper
   def firebase_shared_auth_token
     return nil unless CDO.firebase_shared_secret
 
-    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
     payload = {
       uid: user_or_session_id,
       is_dashboard_user: !!current_user,
@@ -821,7 +830,7 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
-    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
     payload = {
       uid: user_or_session_id,
       is_dashboard_user: !!current_user,

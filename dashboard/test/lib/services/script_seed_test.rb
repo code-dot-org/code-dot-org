@@ -97,6 +97,18 @@ module Services
       assert_script_trees_equal(script, script_after_seed)
     end
 
+    test 'seed modifies script updated_at' do
+      Timecop.freeze do
+        script = create_script_tree
+        updated_at = script.updated_at
+        Timecop.travel 1.minute
+        json = ScriptSeed.serialize_seeding_json(script)
+        ScriptSeed.seed_from_json(json)
+        script.reload
+        refute_equal updated_at, script.updated_at
+      end
+    end
+
     test 'seed script in unit group' do
       script = create_script_tree(with_unit_group: true)
       refute script.course_version
@@ -278,7 +290,7 @@ module Services
         updated_script_level = script.script_levels.first
         updated_script_level.update!(challenge: 'foo')
         updated_script_level.levels += [new_level]
-        create :script_level, lesson: script.lessons.last, script: script, levels: [new_level], assessment: false, bonus: false, named_level: false
+        create :script_level, lesson: script.lessons.last, script: script, levels: [new_level], assessment: false, bonus: false
       end
 
       ScriptSeed.seed_from_json(json)
@@ -1108,6 +1120,7 @@ module Services
         )
         CourseOffering.add_course_offering(script)
       end
+      script.reload
       course_version = script.get_course_version
       assert course_version
 
@@ -1154,7 +1167,7 @@ module Services
               level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "custom", game: game
               create :script_level, activity_section: section, activity_section_position: sl_pos,
                      lesson: lesson, script: script, levels: [level], challenge: sl_num.even?,
-                     assessment: false, bonus: false, named_level: false
+                     assessment: false, bonus: false
               sl_num += 1
             end
           end

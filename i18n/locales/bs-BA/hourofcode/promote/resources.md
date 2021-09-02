@@ -92,7 +92,7 @@ This year, let's make it even bigger. I’m asking you to join the Hour of Code 
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Get started at http://hourofcode.com/{{ country }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -132,7 +132,7 @@ That’s why our entire school is joining in on the largest learning event in hi
 
 This is a chance to change the future of education in [TOWN/CITY NAME].
 
-See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 

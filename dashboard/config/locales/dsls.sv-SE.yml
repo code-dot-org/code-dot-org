@@ -2282,3 +2282,294 @@ sv-SE:
           i ditt projekt. Du kan välja att fortsätta att arbeta med samma block eller
           prova en utökad verktygslåda.
         display_name: Fri lek
+      CourseF_outbreak_story:
+        content1: Beskrivning här
+      CourseF_outbreak_story2:
+        content1: Beskrivning här
+        markdown: |-
+          # Utbrott: Tänk som en forskare
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Simuleringar är ett utmärkt sätt att lära sig saker som kan vara svåra att observera i verkligheten. De hjälper forskare att lösa problem och testa nya idéer på ett säkert och effektivt sätt. Din simulering är ett sätt att visa hur ett virusutbrott i Monster Town kan se ut.
+
+          ## Återställ och spela om!
+          Även när du själv skriver koden är det omöjligt att veta exakt vad som kommer att hända när du trycker på 'run'. Monstren vandrar slumpmässigt, så du vet inte om viruset sprids snabbt eller långsamt. Var noga med att ändra din kod, se till att köra din simulering mer än en gång. Saker kommer inte att hända på samma sätt två gånger!
+
+          ## Samla in data
+          Försök att skriva ner dina observationer när du kör din simulering. Du kan räkna antalet monster som blir sjuka eller använda en timer för att se hur snabbt saker händer. Till exempel, hur lång tid tar det vanligtvis för alla monster att bli sjuka om ingen har munskydd?
+
+          ## Gör förutsägelser
+          Om du förstår din modell kan du använda den för att göra förutsägelser. Du kan till och med ändra hur din simulering körs och gissa vad som kommer att hända annorlunda. Till exempel:
+          * Vad skulle hända om det fanns dubbelt så många monster?
+          * Vad skulle hända om monstren rörde sig med halva hastigheten?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Är Monster Town precis som verkligheten?
+          Det finns en gräns för hur realistisk en modell kan vara.
+          * Vad har din utbrottssimulering gemensamt med virusutbrott i verkligheten?
+          * Vilka är skillnaderna?
+          När du är klar med den här aktiviteten kan du diskutera dessa frågor med lärare eller din familj!
+
+          ## Vad mer kan vi bygga modeller av?
+          Du har redan skapat en fungerande modell av utbrottet i Monster Town. Vad kan din simulering inte göra eller visa som du skulle önska att den kunde? Tryck på 'Continue' för att fortsätta och lära dig ännu mer om modeller:
+          * Öka antalet monster i simuleringen
+          * Hjälp monster att återhämta sig från viruset
+          * Sannolikhet, immunitet, vaccin och mer!
+
+          Du kan också dela din simuleringsmodell med andra eller dela ett budskap om hur man kan skydda andra när ett virus kommer till stan.
+      OPD-K5 Stage3aGo_dani:
+        content1: Beskrivning här
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: Beskrivning här
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen_2021:
+        content1: Beskrivning här
+      csf_password_power-up_2021:
+        content1: Beskrivning här
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: Beskrivning här
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}

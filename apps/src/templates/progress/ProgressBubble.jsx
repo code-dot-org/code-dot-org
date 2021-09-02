@@ -13,12 +13,8 @@ import {
   getBubbleUrl
 } from './BubbleFactory';
 import {levelProgressStyle} from './progressStyles';
-import {
-  BubbleBadgeWrapper,
-  AssessmentBadge,
-  KeepWorkingBadge
-} from '@cdo/apps/templates/progress/BubbleBadge';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import BubbleBadge, {BadgeType} from './BubbleBadge';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -39,7 +35,10 @@ export default class ProgressBubble extends React.Component {
       PropTypes.number
     ]),
     hideToolTips: PropTypes.bool,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    // We have the ability to hide the assessment checkmark badge because
+    // it's visually cluttering in places like the teacher panel and progress table
+    hideAssessmentBadge: PropTypes.bool
   };
 
   isClickable() {
@@ -63,6 +62,30 @@ export default class ProgressBubble extends React.Component {
       : getBubbleUrl(level.url, selectedStudentId, selectedSectionId, true);
   }
 
+  renderBubbleBadge(bubbleShape, bubbleSize) {
+    const {level, smallBubble, hideAssessmentBadge} = this.props;
+
+    const hasKeepWorkingFeedback =
+      level.teacherFeedbackReviewState === ReviewStates.keepWorking;
+
+    const displayAssessmentBadge =
+      isLevelAssessment(level) && !hideAssessmentBadge;
+
+    if ((displayAssessmentBadge || hasKeepWorkingFeedback) && !smallBubble) {
+      return (
+        <BubbleBadge
+          badgeType={
+            hasKeepWorkingFeedback
+              ? BadgeType.keepWorking
+              : BadgeType.assessment
+          }
+          bubbleSize={bubbleSize}
+          bubbleShape={bubbleShape}
+        />
+      );
+    }
+  }
+
   createBubbleElement() {
     const {level, smallBubble, hideToolTips} = this.props;
     const bubbleSize = smallBubble ? BubbleSize.dot : BubbleSize.full;
@@ -76,35 +99,21 @@ export default class ProgressBubble extends React.Component {
       bubbleSize
     );
 
-    const shape = getBubbleShape(
+    const bubbleShape = getBubbleShape(
       // override pill shape for small bubbles
       level.isUnplugged && !smallBubble,
       level.isConceptLevel
     );
 
-    const hasKeepWorkingFeedback =
-      level.teacherFeedbackReviewState === ReviewStates.keepWorking;
-
-    const displayBubbleBadge =
-      (isLevelAssessment(level) || hasKeepWorkingFeedback) && !smallBubble;
-
     const bubble = (
       <BasicBubble
-        shape={shape}
+        shape={bubbleShape}
         size={bubbleSize}
         progressStyle={levelProgressStyle(level.status, level.kind)}
         classNames={getBubbleClassNames(this.isClickable())}
       >
         {content}
-        {displayBubbleBadge && (
-          <BubbleBadgeWrapper isDiamond={level.isConceptLevel}>
-            {hasKeepWorkingFeedback ? (
-              <KeepWorkingBadge />
-            ) : (
-              <AssessmentBadge />
-            )}
-          </BubbleBadgeWrapper>
-        )}
+        {this.renderBubbleBadge(bubbleShape, bubbleSize)}
       </BasicBubble>
     );
 

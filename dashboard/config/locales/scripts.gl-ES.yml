@@ -15,7 +15,7 @@ gl:
             en tarefas difíciles. Para o final deste curso, os estudantes crean o
             seu propio xogo personalizado ou historia que poden compartir. Recomendado
             para primeiro grao de primaria.
-          description_short: O Curso 1 está deseñado para lectores temperáns.
+          description_short: O Curso 1 esta\* desenh_ado para lectores tempera_ns.
           description_audience: Idades de 4 a 6 anos
           lessons:
             'Artist: Loops':
@@ -66,7 +66,8 @@ gl:
             teñen experiencia previa en programación. Neste curso os estudantes crearán
             programas para resolver problemas e desenvolver xogos interactivos ou
             historias que poden compartir. Recoméndase para os cursos 2 a 5 de primaria.
-          description_short: O Curso 2 está deseñado para estudantes que poden ler.
+          description_short: O Curso 2 esta\* desenh\*ado para estudantes que poden
+            ler.
           description_audience: A partir de 6 anos (cómpre saber ler)
           lessons:
             'Artist: Debugging':
@@ -74,7 +75,7 @@ gl:
             'Artist: Loops':
               name: 'Artista: Bucles'
             'Artist: Nested Loops':
-              name: 'Artista: Bucles Aniñados'
+              name: 'Artista: Bucles Aninh\*ados'
             'Artist: Sequence':
               name: 'Artista: Secuencia'
             'Bee: Conditionals':
@@ -120,15 +121,15 @@ gl:
             curso, os estudantes son quen de crear historias e xogos interactivos
             que poden compartir con calquera. Recomendado para os cursos 4º a 5º de
             Primaria.
-          description_short: O Curso 3 é unha continuación do Curso 2.
+          description_short: O Curso 3 e\* unha continuacio\*n do Curso 2.
           description_audience: Idades de 8 a 18 anos
           lessons:
             Artist:
               name: Artista
             'Artist: Functions':
-              name: 'Artista: Funcións'
+              name: 'Artista: Funcio\*ns'
             'Artist: Nested Loops':
-              name: 'Artista: Bucles Aniñados'
+              name: 'Artista: Bucles Aninh\*ados'
             'Artist: Patterns':
               name: 'Artista: Padróns'
             'Bee: Conditionals':
@@ -136,9 +137,9 @@ gl:
             'Bee: Debugging':
               name: 'Abella: Depuración (Debug)'
             'Bee: Functions':
-              name: 'Abella: Funcións'
+              name: 'Abella: Funcio\*ns'
             'Bee: Nested Loops':
-              name: 'Abella: Bucles Aniñados'
+              name: 'Abella: Bucles Aninh\*ados'
             Bounce:
               name: Rebote
             Computational Thinking:
@@ -193,7 +194,7 @@ gl:
           title: Labirinto clásico
           description: Proba os fundamentos da informática cos personaxes de Angry
             Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
-          description_short: Proba os fundamentos da informática con moitos personaxes
+          description_short: Proba os fundamentos da informa\*tica con moitos personaxes
             divertidos!
           lessons:
             Maze:
@@ -234,15 +235,15 @@ gl:
             'Artist: For Loops':
               name: Artista Bucles "Para" (for)
             'Artist: Functions':
-              name: 'Artista: Funcións'
+              name: 'Artista: Funcio\*ns'
             'Artist: Functions with Parameters':
-              name: 'Artista: Funcións con Parámetros'
+              name: 'Artista: Funcio_ns con Para_metros'
             'Artist: Variables':
               name: 'Artista: Variábeis'
             'Bee: For Loops':
               name: 'Abella: Bucles "Para" (For)'
             'Bee: Functions with Parameters':
-              name: 'Abella: Funcións con parámetros'
+              name: 'Abella: Funcio_ns con para_metros'
             Extreme Challenge - Comprehensive:
               name: Desafío extremo - completo
             Maze and Bee:
@@ -250,13 +251,13 @@ gl:
             'Play Lab: For Loops':
               name: 'Laboratorio de Xogos: Bucles "Para" (For)'
             'Play Lab: Functions with Parameters':
-              name: 'Laboratorio de xogos: Funcións con parámetros'
+              name: 'Laboratorio de xogos: Funcio_ns con para_metros'
             'Play Lab: Variables':
               name: 'Laboratorio de xogos: Variábeis'
             Super Challenge - For Loops:
               name: Super reto - bucles "Para" (for)
             Super Challenge - Functions and Parameters:
-              name: Super reto - funcións e parámetros
+              name: Super reto - funcio_ns e para_metros
             Super Challenge - Variables:
               name: Super desafío - Variábeis
             'Unplugged: Binary':
@@ -268,7 +269,7 @@ gl:
             'Unplugged: Madlibs':
               name: 'Desconectado: Madlibs'
             'Unplugged: Songwriting with Parameters':
-              name: 'Desconectado: Composición de cancións con parámetros'
+              name: 'Desconectado: Composicio_n de cancio_ns con para\*metros'
             'Unplugged: Tangrams':
               name: 'Desconectado: Tangrams'
           student_description: O Curso 4 está deseñado para estudantes que fixeron
@@ -285,11 +286,11 @@ gl:
             deron os cursos 2 e 3.
           lessons:
             'Artist: Functions':
-              name: 'Artista: Funcións'
+              name: 'Artista: Funcio\*ns'
             'Artist: Loops':
               name: 'Artista: Bucles'
             'Artist: Nested Loops':
-              name: 'Artista: Bucles Aniñados'
+              name: 'Artista: Bucles Aninh\*ados'
             'Artist: Sequence':
               name: 'Artista: Secuencia'
             'Bee: Conditionals':
@@ -297,7 +298,7 @@ gl:
             'Bee: Debugging':
               name: 'Abella: Depuración (Debug)'
             'Bee: Nested Loops':
-              name: 'Abella: Bucles Aniñados'
+              name: 'Abella: Bucles Aninh\*ados'
             'Farmer: While Loops':
               name: 'Granxeira: Bucles "Mentres" (While)'
             'Maze: Sequence':
@@ -317,15 +318,16 @@ gl:
             Variables:
               name: Variables
         algebra:
+          title: Informática na álxebra
           lessons:
             'Eval: Conditionals':
               name: Condicionais
             'Eval: Strings and Images':
               name: Tiras de caracteres e imaxes
             'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Desconectado: Condicionais e funcións por partes'
+              name: 'Desconectado: Condicionais e funcio\*ns por partes'
             'Unplugged: The Design Recipe':
-              name: 'Desconectado: A receita de deseño'
+              name: 'Desconectado: A receita de desenh\*o'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Offline: vídeo-xogos e plano de coordenadas'
         infinity:
@@ -355,8 +357,8 @@ gl:
             os conceptos da programación. O curso está deseñado para o seu uso en
             clase para os cursos de primaria pero é divertido aprender con calquera
             idade!
-          description_short: Este curso de 20 horas cobre os conceptos básicos de
-            informática e programación dos cursos 2-4.
+          description_short: Este curso de 20 horas cobre os conceptos ba_sicos de
+            informa_tica e programacio\*n dos cursos 2-4.
           description_audience: Idades de 10 a 18 anos
           lessons:
             Abstraction:
@@ -435,12 +437,12 @@ gl:
             Experimente o noso titorial sobre o Código do Flappy bird!
         jigsaw:
           title: Crebacabezas
-          description: Proba o noso titorial de Jigsaw
-          description_short: Proba o noso titorial de Jigsaw
+          description: Proba o noso titorial de Jigsaw.
+          description_short: Proba o noso titorial de Jigsaw.
           lessons:
             Jigsaw:
               name: Crebacabezas
-          student_description: Proba o noso titorial de Jigsaw
+          student_description: Proba o noso titorial de Jigsaw.
         step:
           title: Paso
           description: Titorial paso a paso
@@ -451,14 +453,14 @@ gl:
           student_description: Titorial paso a paso
         Hour of Code:
           title: Hora de Código 2013
-          description: Proba os fundamentos da informática con personaxes de Angry
+          description: Proba os fundamentos da informa\*tica con personaxes de Angry
             Birds e Plantas vs. Zombis!
-          description_short: Proba os fundamentos da informática con moitos personaxes
+          description_short: Proba os fundamentos da informa\*tica con moitos personaxes
             divertidos!
           lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
-          student_description: Proba os fundamentos da informática con personaxes
+          student_description: Proba os fundamentos da informa\*tica con personaxes
             de Angry Birds e Plantas vs. Zombis!
         algebraPD:
           lessons:
@@ -495,14 +497,11 @@ gl:
             Evaluation Blocks:
               name: Bloques de avaliación
         sciencePD2:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         cspunit2:
           lessons:
             The Internet:
@@ -579,14 +578,11 @@ gl:
               name: Sumario
           student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         algebraPD2:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
             The Design Recipe:
               name: A receita de deseño
             Welcome!:
               name: Benvido!
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         sciencePD2b:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
@@ -597,14 +593,11 @@ gl:
               name: Resumo
           student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         science-PD2:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         sciencePD2b-iZone:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
@@ -633,6 +626,7 @@ gl:
               name: Sumario
           student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         asUnplugged:
+          description_audience: De 6 a 13 anos
           lessons:
             Binary Bracelets:
               name: Pulseiras Binarias
@@ -652,6 +646,8 @@ gl:
               name: Composición
             The Big Event:
               name: O Gran Evento
+        afterschool1:
+          description_audience: De 7 a 13 anos
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -689,25 +685,23 @@ gl:
           student_description: Crea unha historia ou fai un xogo co laboratorio de
             xogo de Gumball!
         starwars:
-          title: 'Star Wars: Contruíndo unha Galaxia con Código'
           description: Aprende a programar androides e crea o teu propio xogo Star
             Wars nunha galaxia moi, moi afastada.
           description_short: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
           lessons:
             Hour of Code 2015:
-              name: Hora do Código 2015
+              name: Hora do Co\*digo 2015
           student_description: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
         starwarsblocks:
-          title: 'Star Wars: Contruíndo unha Galaxia con Código'
           description: Aprende a programar androides e crea o teu propio xogo Star
             Wars nunha galaxia moi, moi afastada.
           description_short: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
           lessons:
             Hour of Code 2015:
-              name: Hora do Código 2015
+              name: Hora do Co\*digo 2015
           student_description: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
         mc:
@@ -717,7 +711,7 @@ gl:
           description_short: Explora o mundo de Minecraft a través do código
           lessons:
             Hour of Code 2015:
-              name: Hora do Código 2015
+              name: Hora do Co\*digo 2015
           student_description: Usa bloques de código para acompañar a Steve ou a Alex
             nunha aventura polo mundo de Minecraft
         ScienceP3OLPT3:
@@ -731,15 +725,15 @@ gl:
             'Calc: Defining Variables':
               name: 'Calc: Definindo Variábeis'
             'Calc: Evaluation Blocks':
-              name: 'Calc: Bloques de avaliación'
+              name: 'Calc: Bloques de avaliacio\*n'
             'Eval: Strings and Images':
               name: 'Eval: Tiras de caracteres e imaxes'
             'Eval: Writing Contracts':
-              name: 'Eval: Redacción de contratos'
+              name: 'Eval: Redaccio\*n de contratos'
             'Unplugged: Contracts':
               name: 'Desconectado: contratos'
             'Unplugged: The Design Recipe':
-              name: 'Desconectado: A receita de deseño'
+              name: 'Desconectado: A receita de desenh\*o'
         AlgebraB:
           lessons:
             'Eval: Boolean Operators':
@@ -747,21 +741,21 @@ gl:
             'Eval: Conditionals':
               name: 'Eval: condicionais'
             'Play Lab: Animation (Big Game)':
-              name: 'Laboratorio de xogos: Animación (Big Game)'
+              name: 'Laboratorio de xogos: Animacio\*n (Big Game)'
             'Play Lab: Boolean (Big Game)':
               name: 'Laboratorio de xogos: Booleano (Big Game)'
             'Play Lab: Booleans':
               name: 'Laboratorio de xogos: valores booleanos'
             'Play Lab: Collision Detection (Big Game)':
-              name: 'Laboratorio de xogos: Detección de colisións (Big Game)'
+              name: 'Laboratorio de xogos: Deteccio_n de colisio_ns (Big Game)'
             'Play Lab: Defining Variables (Big Game)':
               name: 'Laboratorio de xogos: Definición de Variábeis (Big Game)'
             'Unplugged: Booleans':
               name: 'Desconectado: Booleanos'
             'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Desconectado: Detección de colisións e a fórmula de distancia'
+              name: 'Desconectado: Deteccio_n de colisio_ns e a fo\*rmula de distancia'
             'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Desconectado: Condicionais e funcións por partes'
+              name: 'Desconectado: Condicionais e funcio\*ns por partes'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Offline: vídeo-xogos e plano de coordenadas'
         algebraPD1:
@@ -798,7 +792,10 @@ gl:
           lesson_groups:
             required:
               display_name: Visión xeral
+        CSF_Secret_Sample_Story:
+          description_audience: Idades de 8 a 18 anos+
         MikeTest:
+          description_audience: Idades de 8 a 98 anos
           lessons:
             Artist Functions:
               name: Funcións de artista
@@ -813,6 +810,7 @@ gl:
             'Bee: Conditionals':
               name: 'Abella: Condicionais'
         gradeKinder:
+          description_audience: Idades de 5 a 18 anos
           lessons:
             Events:
               name: Eventos
@@ -823,12 +821,14 @@ gl:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
         grade4:
+          description_audience: De 9 a 99 anos
           lessons:
             Digital Citizenship:
               name: Cidadanía dixital
             Songwriting:
               name: Composición
         grade1:
+          description_audience: Idades de 5 a 18 anos
           lessons:
             Events:
               name: Eventos
@@ -837,17 +837,18 @@ gl:
             Loops:
               name: Bucles
         grade5:
+          description_audience: De 10 a 110 anos
           lessons:
             'Artist: For Loops':
               name: Artista Bucles "Para" (for)
             'Artist: Functions with Parameters':
-              name: 'Artista: Funcións con Parámetros'
+              name: 'Artista: Funcio_ns con Para_metros'
             'Artist: Variables':
               name: 'Artista: Variábeis'
             'Bee: For Loops':
               name: 'Abella: Bucles "Para" (For)'
             'Bee: Functions with Parameters':
-              name: 'Abella: Funcións con parámetros'
+              name: 'Abella: Funcio_ns con para_metros'
             Digital Citizenship:
               name: Cidadanía dixital
             'Play Lab: Variables':
@@ -857,7 +858,7 @@ gl:
             'Unplugged: For Loop Fun':
               name: 'Desconectado: Bucles "Para" (For) divertidos'
             'Unplugged: Songwriting with Parameters':
-              name: 'Desconectado: Composición de cancións con parámetros'
+              name: 'Desconectado: Composicio_n de cancio_ns con para\*metros'
         ecs-unit1:
           lessons:
             Welcome!:
@@ -865,9 +866,12 @@ gl:
             Wrap-up:
               name: Sumario
         grade3:
+          description_audience: Idades de 5 a 18 anos
           lessons:
+            " Bee: Conditionals":
+              name: " Abella: Condicionais"
             'Artist: Nested Loops':
-              name: 'Artista: Bucles Aniñados'
+              name: 'Artista: Bucles Aninh\*ados'
             Bee Debugging:
               name: Depuración (debug) da Abella
             Bounce:
@@ -887,6 +891,7 @@ gl:
             Conditionals:
               name: Condicionais
         grade2:
+          description_audience: Idades de 5 a 18 anos
           lessons:
             Flappy:
               name: Flappy bird
@@ -1010,14 +1015,16 @@ gl:
               name: Introdución
             Ice Age Play Lab:
               name: O xogo de laboratorio da Idade de xeo
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: Tangrams'
         classic-hoc-impact-study:
-          description_short: Proba os fundamentos da informática con moitos personaxes
+          description_short: Proba os fundamentos da informa\*tica con moitos personaxes
             divertidos!
           lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
         hoc-impact-study:
-          description_short: Proba os fundamentos da informática con moitos personaxes
+          description_short: Proba os fundamentos da informa\*tica con moitos personaxes
             divertidos!
           lessons:
             Hour of Code 2013:
@@ -1130,6 +1137,8 @@ gl:
               name: nulo
         coursef-ramp:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: Tangrams'
             Introduction:
               name: Introdución
             Ice Age Play Lab:
@@ -1158,6 +1167,8 @@ gl:
               name: Bucles aniñados
         coursee-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: Tangrams'
             Ice Age Play Lab:
               name: O xogo de laboratorio da Idade de xeo
             Envelope Variables:
@@ -1172,6 +1183,8 @@ gl:
               name: Bucles aniñados
         coursef-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: Tangrams'
             Building a Foundation:
               name: Construíndo unha base
         cspnovice:
@@ -1306,6 +1319,8 @@ gl:
           lessons:
             Building a Foundation:
               name: Construíndo unha base
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: Tangrams'
             Ice Age Play Lab:
               name: O xogo de laboratorio da Idade de xeo
             Envelope Variables:
@@ -1340,6 +1355,8 @@ gl:
           lessons:
             Building a Foundation:
               name: Construíndo unha base
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: Tangrams'
             Introduction:
               name: Introdución
             Ice Age Play Lab:
@@ -1408,8 +1425,6 @@ gl:
               name: Pulseiras Binarias
             'Unplugged: Binary':
               name: Imaxes binárias
-            Artist Binary:
-              name: Artista binario
             Internet:
               name: A Internet
             Crowdsourcing:
@@ -1440,8 +1455,6 @@ gl:
               name: Cidadanía dixital
             'Unplugged: Binary':
               name: Imaxes binárias
-            Artist Binary:
-              name: Artista binario
             Graph Paper Programming:
               name: Programación en Papel Cadriculado
             Relay Programming:
@@ -1458,6 +1471,8 @@ gl:
               name: Pulseiras Binarias
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: Funcións con parámetros\_
             Functions with Parameters:
               name: Funcións con parámetros
         coursee-2018:
@@ -1484,6 +1499,8 @@ gl:
               name: Os meus amigos robóticos
             Building a Foundation:
               name: Construíndo unha base
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: Tangrams'
             Introduction:
               name: Introdución
             Ice Age Play Lab:
@@ -1658,8 +1675,6 @@ gl:
               name: Cidadanía dixital
             'Unplugged: Binary':
               name: Imaxes binárias
-            Artist Binary:
-              name: Artista binario
         coursee-2019:
           lesson_groups:
             csf_digcit:
@@ -1927,6 +1942,10 @@ gl:
               name: Condicionais
             Functions:
               name: Funcións
+        maddie-test:
+          lessons:
+            stage 1:
+              name: 1.ª ETAPA
         csp3-pilot:
           lesson_groups:
             required:
@@ -2159,8 +2178,6 @@ gl:
               name: Condicionais con cartas
             'Unplugged: Binary':
               name: Imaxes binárias
-            Artist Binary:
-              name: Artista binario
             Digital Citizenship:
               name: Cidadanía dixital
         coursee-2020:
@@ -2355,7 +2372,6 @@ gl:
               name: Imaxes binárias
             Artist Binary:
               key: Artista binario
-              name: Artista binario
           lesson_groups:
             csf_events:
               display_name: Eventos
@@ -2438,8 +2454,6 @@ gl:
               display_name: Variables
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Introdución
             Loops:
               key: Bucles
               name: Bucles
@@ -2463,3 +2477,32 @@ gl:
               display_name: Introdución
             Introduction:
               display_name: Introdución
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Fundamentos de Informática
+              name: Fundamentos de Informática
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unidade 1
+            lessonGroup-4:
+              display_name: Unidade 2
+            lessonGroup-5:
+              display_name: Unidade 3
+            lessonGroup-6:
+              display_name: Unidade 4
+            lessonGroup-7:
+              display_name: Unidade 5
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Visión xeral
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Visión xeral

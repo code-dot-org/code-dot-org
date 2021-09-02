@@ -117,6 +117,7 @@ class User < ApplicationRecord
     parent_email_banner_dismissed
     section_attempts
     section_attempts_last_reset
+    share_teacher_email_regional_partner_opt_in
   )
 
   # Include default devise modules. Others available are:
@@ -218,6 +219,8 @@ class User < ApplicationRecord
 
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
 
+  after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
+
   before_destroy :soft_delete_channels
 
   def save_email_preference
@@ -242,6 +245,15 @@ class User < ApplicationRecord
         source: parent_email_preference_source,
         form_kind: nil
       )
+    end
+  end
+
+  # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
+  def save_email_reg_partner_preference
+    user = User.find_by_email_or_hashed_email(email)
+    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.downcase == "yes"
+      user.share_teacher_email_regional_partner_opt_in = DateTime.now
+      user.save!
     end
   end
 
@@ -395,6 +407,8 @@ class User < ApplicationRecord
   attr_accessor :parent_email_preference_email
   attr_accessor :parent_email_preference_request_ip
   attr_accessor :parent_email_preference_source
+
+  attr_accessor :share_teacher_email_reg_partner_opt_in_radio_choice
 
   attr_accessor :data_transfer_agreement_required
 
@@ -2195,6 +2209,11 @@ class User < ApplicationRecord
         }
       ]
     )
+  end
+
+  def has_pilot_experiment?(pilot_name)
+    return false unless pilot_name
+    SingleUserExperiment.enabled?(user: self, experiment_name: pilot_name)
   end
 
   # Called before_destroy.

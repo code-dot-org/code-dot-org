@@ -7,6 +7,8 @@ zh-TW:
       Green: 綠
       Red: 紅
       actor: 角色
+      age: 年齡
+      answer: 答案
       armlength: armlength
       binary: 二進制（Binary）
       birds: 鳥
@@ -16,11 +18,13 @@ zh-TW:
       counter: counter
       direction: 方向
       dogs: 全部小狗
+      energy: 能量
       height: 高度
       honey: 蜂蜜
       i: i
       left: " 向左"
       length: 長度
+      level: 水平
       name: 名稱
       nectar: 花蜜
       nectars: 花蜜

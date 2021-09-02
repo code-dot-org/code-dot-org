@@ -332,6 +332,7 @@
   "subtitle": "a visual programming environment",
   "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again.",
   "teachers": "Teachers",
+  "teacherCourseHoc": "The Hour of Code",
   "teacherPanel": "Teacher Panel",
   "text": "Text",
   "textVariable": "text",

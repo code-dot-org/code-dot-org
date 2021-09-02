@@ -34,6 +34,7 @@ class TopCourse extends Component {
         <img
           src={require('@cdo/static/small_purple_icons_fullwidth.png')}
           style={styles.image}
+          alt=""
         />
         <div style={styles.name}>{assignableName}</div>
         <div style={styles.description}>

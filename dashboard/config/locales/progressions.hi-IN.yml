@@ -2,24 +2,39 @@
 hi:
   data:
     progressions:
+      Alien Defender: एलियन डिफेंडर
+      Arrays: श्रृंखला समूह
       Artist Project: कलाकार परियोजना
       'Artist: Variables': 'आर्टिस्ट: वेरिएबल्स'
+      Back and Forth: पीछे व आगे
+      Bass, Mid, and Treble: धीमी, मध्यम, व तेज़
       Binary Numbers: युग्मक संख्याएं
       Board Events: बोर्ड इवेंट्स
       CS Discoveries Post-Course Survey: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+      Collision Detection: संघट्टन अभिज्ञान
       Collisions: संघट्टन
       Combining Representations: प्रस्तुतियों को संयोजित करना
+      Course E Artist Project: कोर्स E कलाकार प्रोजेक्ट
+      Course F Artist Project: कोर्स E कलाकार प्रोजेक्ट
+      Dance Crews: डांस कर्मीदल
       Debugging: डीबगिंग
       Design Mode: डिज़ाइन मोड
+      Designing Screens with Code: कोड के साथ स्क्रीन डिज़ाइन करना
+      Designing for Accessibility: सुलभता के लिए डिज़ाइन करना
       Drawing: ड्राइंग
+      End of Course Projects: समाप्ति कोर्स प्रोजेक्ट
+      Event Types: इवेंट के प्रकार
       Events: घटनाएँ
       For Loops: फॉर लूप्स
       Free Play: फ्री प्ले
       Functions: कार्य
       Functions with Parameters: मापदंडों के साथ फंक्शन
+      Get In Formation: सुव्यवस्थित क्रम में प्रवेश करें
+      Getters and Setters: गेटर्स एंड सेटर्स
       Getting Properties: गेटिंग विशेषताएं
       Headings: शीर्षक
       How to Make a Sprite: स्प्राइट कैसे बनाएं
+      Images in HTML: HTML में चित्र
       Introducing Sprite Lab: स्प्राइट लैब का परिचय
       Introduction to Arrays: श्रृंखला समूहों का परिचय
       Keeping Data Secret: डेटा को गोपनीय रखना
@@ -28,20 +43,42 @@ hi:
       Linking Pages: पृष्ठों को लिंक करना
       Linking Screens: स्क्रीनों को लिंक करना
       Lists: सूचियाँ
+      Making Music: संगीत बनाना
       Measures: संगीत प्रविधियां
+      'Mini-Project: About Me': स्प्राइट लैब के साथ मेरे बारे में
+      More Buttons: और बटन
+      Multi-Screen Apps: मल्टी-स्क्रीन ऐप्स
+      My Online Neighborhood: मेरा ऑनलाइन पड़ोस
+      Overview: रूपरेखा
       Pair Programming: जोड़ी प्रोग्रामिंग
+      Picturing Data: तस्वीरों वाला डेटा
+      Planning: नियोजन
+      Polling Events: पोलिंग इवेंट्स
       Predict: "(Predict) पूर्वानुमान लगाइए"
       Programming with Rey and BB-8: रे और BB-8 के साथ प्रोग्रामिंग
       Project: प्रोजेक्ट
       Properties: गुण
       Publishing Your Website: आपकी वेबसाइट का प्रकाशन
+      Quarter Notes: क्वार्टर नोट्स
       Reflection: प्रतिबिंब
       Representing Images: चित्र प्रस्तुत करना
+      Review: समीक्षा करें
+      Skill Building: कौशल विकास
+      Speed it Up, Slow it Down: इसकी गति तेज़ करें, इसकी गति धीमी करें
       Sprite Lab Project: स्प्राइट लैब प्रोजेक्ट
       Stopping the Outbreak with Masks: मास्क के साथ आउटब्रेक को रोकना
+      Text Compression: टेक्स्ट कम्प्रेशन
+      The Animation Tab: ऐनिमेशन लैब
+      The Draw Loop: ड्रा लूप
       The Harvester: कटाई मशीन
       Using the Repeat Block: दोहराएं ब्लॉक का उपयोग करना
+      Variables: चर
       Velocity: वेग
       Video: वीडीयो
+      'Video: Conditional Statements': 'व्हिडिओ: सापेक्ष स्टेटमेंट्स'
+      'Video: If/Else Statements': 'व्हिडिओ: इफ/ एल्स स्टेटमेंट्स'
+      'Video: Problem Solving Process': सवाल हल करने की प्रक्रिया
+      Warm Up: तैयार हों
+      Where'd They Go?: वे कहां जाएंगे?
       While Loops with the Farmer: फार्मर के साथ व्हाइल लूप्स
       Wrap-up: समाप्ति

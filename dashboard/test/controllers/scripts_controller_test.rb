@@ -442,7 +442,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :forbidden
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test "can update on levelbuilder" do
@@ -463,7 +463,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to in_development" do
@@ -484,7 +484,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.in_development
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.in_development
   end
 
   test "update published state to pilot" do
@@ -506,7 +506,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.pilot
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.pilot
   end
 
   test "update published state to beta" do
@@ -527,7 +527,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test "update published state to preview" do
@@ -548,7 +548,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to stable" do
@@ -569,7 +569,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.stable
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.stable
   end
 
   test "can update on test without modifying filesystem" do
@@ -587,7 +587,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "cannot update on staging" do
@@ -605,7 +605,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :forbidden
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
@@ -652,6 +652,62 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'updating migrated unit without differences updates timestamp' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    Timecop.freeze do
+      unit = create :script, is_migrated: true
+      lesson_group = create :lesson_group, script: unit
+      create :lesson, script: unit, lesson_group: lesson_group
+      stub_file_writes(unit.name)
+
+      unit.reload
+      old_unit_dsl = ScriptDSL.serialize_lesson_groups(unit)
+      updated_at = unit.updated_at
+
+      Timecop.travel 1.minute
+
+      post :update, params: {
+        id: unit.id,
+        script: {name: unit.name},
+        is_migrated: true,
+        last_updated_at: updated_at.to_s,
+        script_text: old_unit_dsl,
+        old_unit_text: old_unit_dsl
+      }
+      assert_response :success
+      unit.reload
+      refute_equal updated_at, unit.updated_at
+    end
+  end
+
+  test 'cannot update migrated unit with outdated timestamp' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: unit
+    create :lesson, script: unit, lesson_group: lesson_group
+    stub_file_writes(unit.name)
+
+    unit.reload
+    timestamp = (unit.updated_at - 1).to_s
+    old_unit_dsl = ScriptDSL.serialize_lesson_groups(unit)
+
+    e = assert_raises do
+      post :update, params: {
+        id: unit.id,
+        script: {name: unit.name},
+        is_migrated: true,
+        last_updated_at: timestamp,
+        script_text: old_unit_dsl,
+        old_unit_text: old_unit_dsl
+      }
+    end
+    assert_includes e.message, 'Could not update the unit because it has been modified more recently outside of this editor.'
+  end
+
   test 'can update migrated unit containing migrated script levels' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -673,12 +729,13 @@ class ScriptsControllerTest < ActionController::TestCase
     )
 
     stub_file_writes(unit.name)
-
+    unit.reload
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
       script_text: ScriptDSL.serialize_lesson_groups(unit),
+      last_updated_at: unit.updated_at.to_s,
     }
     assert_response :success
     assert unit.is_migrated
@@ -702,12 +759,13 @@ class ScriptsControllerTest < ActionController::TestCase
     )
 
     stub_file_writes(unit.name)
-
+    unit.reload
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
       script_text: ScriptDSL.serialize_lesson_groups(unit),
+      last_updated_at: unit.updated_at.to_s,
     }
 
     assert_response :not_acceptable
@@ -748,12 +806,14 @@ class ScriptsControllerTest < ActionController::TestCase
       create(:resource, course_version: course_version)
     ]
 
+    unit.reload
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       script_text: '',
       resourceIds: teacher_resources.map(&:id),
-      is_migrated: true
+      is_migrated: true,
+      last_updated_at: unit.updated_at.to_s,
     }
     assert_equal teacher_resources.map(&:key), Script.find_by_name(unit.name).resources.map {|r| r[:key]}
   end
@@ -771,12 +831,14 @@ class ScriptsControllerTest < ActionController::TestCase
       create(:resource, course_version: course_version)
     ]
 
+    unit.reload
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       script_text: '',
       studentResourceIds: student_resources.map(&:id),
-      is_migrated: true
+      is_migrated: true,
+      last_updated_at: unit.updated_at.to_s,
     }
     assert_equal student_resources.map(&:key), Script.find_by_name(unit.name).student_resources.map {|r| r[:key]}
   end
@@ -800,7 +862,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_equal 'pilot-experiment', Script.find_by_name(unit.name).pilot_experiment
     # pilot units are always marked with the pilot published state
-    assert_equal Script.find_by_name(unit.name).published_state, SharedConstants::PUBLISHED_STATE.pilot
+    assert_equal Script.find_by_name(unit.name).get_published_state, SharedConstants::PUBLISHED_STATE.pilot
   end
 
   test 'does not hide unit with blank pilot_experiment' do
@@ -822,7 +884,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_nil Script.find_by_name(unit.name).pilot_experiment
     # blank pilot_experiment does not cause unit to have published_state of pilot
-    assert_equal Script.find_by_name(unit.name).published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal Script.find_by_name(unit.name).get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test 'update: can update general_params' do

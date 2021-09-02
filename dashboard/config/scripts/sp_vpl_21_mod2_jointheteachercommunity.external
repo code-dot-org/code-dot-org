@@ -3,15 +3,15 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Task: Explore the teacher community
+# Task: Post an introduction on the teacher forum
 
-#### 1. Open a new tab.
-#### 2. Navigate to Code.org and sign into your teacher account.
-#### 3. Click on the "?" in the upper right hand corner of the screen.
-#### 4. Select "Teacher community" from the dropdown menu. 
-#### 5. Click on CS Discoveries and select a topic to explore.
-#### 6. Find one new idea to use in your classroom. 
+<img src="https://images.code.org/26556e070cf8f6b25325568183f63728-image-1628821293761.21.19 PM.png" alt="Screenshot of a thread in the teacher forum titled 'Welcome to CS Discoveries 21-22: Introduce Yourself." style="float: left; height: 250px; clear: both; margin: 0 20px 20px 0;">
 
+##### **Step 1:** Click on the "?" in the upper right hand corner of your screen.
+##### **Step 2:** Select "Teacher forum" from the dropdown menu. 
+##### **Step 3:** Scroll down to the topics area. 
+##### **Step 4:** Find and click on the pinned topic "Welcome to CS Discoveries 21-22: Introduce yourself"
+##### **Step 5:** Click "Reply" and introduce yourself to the CS Discoveries teacher community!
 
-![](https://docs.google.com/drawings/d/e/2PACX-1vTomDhvJAeqhP_Xw5Ty5kzxX2i8rGCyUWBQKvoEWX6_oimDR0AZ3fyw2SN3n0dyNyTZifA2Qy-O7aFg/pub?w=970&h=532)
+<div style="clear:both"/>
 MARKDOWN

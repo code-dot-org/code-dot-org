@@ -17,6 +17,7 @@ my-MM:
   csedweek_og_title: ကွန်ပျူတာသိပ္ပံ ပညာရေး ရက်သတ္တပတ်
   csedweek_map_search_reset: ပြန်လည်စတင်မယ်
   try_now: ဆက်သင်ယူရန်
+  california_button: ဆက်သင်ယူရန်
   view_english_site: အင်္ဂလိပ် အင်တာနက်စာမျက်နှာကိုကြည့်ရှုရန်
   non_english_tutorials: 'ဘာသာစကားအမျိုးမျိုးနှင့် ပြန်ဆိုထားသည့် Tutorialsများ:'
   write_your_first_program: သင့်ရဲ့ပထမဆုံးကွန်ပျူတာပရိုဂရမ်ကိုရေးပါ
@@ -30,7 +31,11 @@ my-MM:
   thank_you_: ကျေးဇူးတင်ပါသည်!
   congratulations: ဂုဏ္ယူပါတယ္
   get_a_certificate_of_achievement: အောင်မြင်စွာပြီးဆုံးကြောင်း certificateရယူပါ
+  third_party_gradelevel_kto8: Grades K-8
+  third_party_gradelevel_kto2: Grades K-2
   enter_valid_email: ကျေးဇူးပြု၍ email ရေးပေးပါ
+  get_a_certificate_message: We'll send you a certificate and information about how
+    to <a href='/learn/beyond'>Learn beyond One Hour</a>
   thanks_for_submitting: ေပးပို႔မႈအတြက္ ေက်းဇူးတင္ပါတယ္။
   leaderboards_for_hoc: Hour of Code အတွက် ဦးဆောင်သူများ
   country: နိုင်ငံ
@@ -40,10 +45,13 @@ my-MM:
   girls: မိန်းကလေး
   give_my_hour: ကိုယ့် အချိန်ကို ပေးမယ်
   girls_team: မိန်းကလေး အဖွဲ့
+  boys_team: ေယာက္်ားေလး အဖြဲ႔
   tell_the_world: တစ်ကမ္ဘာလုံးကိုပြောလိုက်ပါ့!
   share_on_facebook: Facebook မှာshareမယ်
   share_on_twitter: Twitter မှာshare မယ်
   learn_back_to_minecraft: Minecraft နှင့် ဆက်လက်သင်ယူပါ
+  just_did_hoc_donor: 'ကျွန်ုပ် #HourOfCode အခုဘဲလုပ်လိုက်တယ်။ကြည့်ကြည့်ပါ!( @codeorg
+    ကိုပံ့ပိုးတဲ့အတွက် %{donor_twitter} ကိုကျေးဇူးတင်ပါတယ်)'
   homepage_hero_text_malala: |-
     &ldquo;ကျွန်မနိုင်ငံတစ်နိုင်ငံချင်းစီတိုင်းမှာရှိတဲ့မိန်းကလေးများကို one Hour of Code သင်ဖို့စိန်ခေါ်ပါတယ်&rdquo;
     Malala, Nobel Peace Prize winner
@@ -139,6 +147,9 @@ my-MM:
   homepage_slot_text_link_administrators: သင့်ကျောင်း (သို့မဟုတ်) ​ေဒသတွင်ပြုလုပ်ပါ
   homepage_header_donors: Code.orgအားပံ့ပိုးပေးသူများကိုကျေးဇူးတင်ပါသည်
   homepage_donors_seall: အားလုံးကြည့်ရန်
+  homepage_below_hero_announcement_text: ကိုယ်ရေးကိုယ်တာ လုံခြုံမှုကို ဂရုထားပြီး၊
+    ကိုယ်ရေးကိုယ်တာ ပေါ်လစီ ပြင်ဆင်သင့်သည်များ ပြုလုပ်ထားခြင်းများ မေ ၂၅ တွင် စတင်
+    အသက်ဝင်ပါမည်။
   homepage_below_hero_announcement_link_text: ဆက်သင်ယူရန်
   starwars_blocks_title: Blocks
   mc_name: Minecraft Hour of Code
@@ -192,11 +203,15 @@ my-MM:
   sports_watch_video: ဗီဒီရိုကြည့်ပါ
   video_title_inspire_girl: မိန်းကလေးတစ်ဦးကိုဆွဲဆောင်ခြင်း
   volunteer_engineer_submission_field_name: အမည္
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: ဖော်ပြချက်
   volunteer_engineer_submission_submit: ပေးပို့ပါ
   petition_age: အသက်
   dashboard_announce_learn_more_button: ဆက်သင်ယူရန်
   dashboard_action_cancel: ပယ်ဖျတ်သည်
+  dashboard_navigation_add_students: ကျောင်းသားများကို ထည့်ပါ
+  dashboard_progress_not_started: မစရသေးပါ
   dashboard_sections_close: ပိတ်ပါ
   dashboard_students_name: အမည္
   dashboard_login_none: email လိပ္စာ
@@ -206,16 +221,19 @@ my-MM:
   thinkersmith_gradelevel: အသက်အရွယ်အားလုံး
   lightbotintl_gradelevel: အသက်အရွယ်အားလုံး
   blockly_gradelevel: အသက်အရွယ်အားလုံး
+  hourofcode_longdescription: သင့်ရဲ့ပထမဆုံးကွန်ပျူတာပရိုဂရမ်ကိုရေးပါ
   lightbot_beyond_gradelevel: အသက်အရွယ်အားလုံး
   flappy_shortcode: လှုပ်ခတ်ပါ
   header_my_dashboard: ကျွန်ုပ်ကျောက်သင်ပုံး
   header_sections: တန်းခွဲများ
   header_professional_learning: Professional Learning
+  user_header_view_project_gallery: ပ​ရောဂျက်များကြည့်မယ်
   user_header_view_my_projects: ပရောဂျက်တွေကို ကြည့်မယ်
   view_all_sections: Section အားလုံးကို ကြည့်မယ်
   hero_name: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်'
   hoc_overview_title: Code.org မှ Hour of Code လေ့ကျင့်ခန်းများ
   hoc2018_creativity_create: ဖန်တီးပါ
+  hoc2018_creativity_hoc_coming: Hour of Code လာနေပါပြီ…
   hoc2018_mc_page_title: Minecraft Hour of Code နည်းပြ Tutorialများ
   hoc2018_mc_details: ဘာသာစကားများ |ခေတ်မှီ browsersများ နှင့် tabletsများ |Grades
     2+

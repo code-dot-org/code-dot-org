@@ -104,8 +104,8 @@ bn:
     additional_information: "সাইন আপ প্রক্রিয়া চালিয়ে নিতে আমাদের আরো কিছু অতিরিক্ত তথ্যের প্রয়োজন।"
     user_type_button: "অ্যাকাউন্ট-এর ধরন আপডেট করুন"
     user_type_label: "অ্যাকাউন্ট-এর ধরন"
-    user_type_teacher: "শিক্ষক"
     user_type_student: "ছাত্র"
+    user_type_teacher: "শিক্ষক"
     field_is_required: "প্রয়োজন"
     accept_terms: "আপনার একাউন্ট তৈরি করতে সম্মত হতে হবে।"
     email_preference_yes: "\"হ্যাঁ\""
@@ -224,6 +224,7 @@ bn:
       unsubmit: 'জমা না দেয়া'
   user:
     update_email: "আপডেট"
+    remove_parent_email_label: "মুছে ফেলা"
   user_level:
     completed: 'সম্পূর্ণ হয়েছে'
     tried: 'চেষ্টা করা হয়েছে'
@@ -312,6 +313,7 @@ bn:
     unplugged_conditionals:
       title: "শর্তযুক্ত"
     widgets:
+      audience: "বয়স 14+"
       cta: "শিখুন কিভাবে"
   landing:
     report_bug: "বাগ রিপোর্ট করুন"

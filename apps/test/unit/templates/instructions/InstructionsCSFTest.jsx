@@ -17,7 +17,9 @@ import authoredHints from '@cdo/apps/redux/authoredHints';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
-describe('InstructionsCSF', () => {
+// TODO: Fix/unskip this test (only 1 test in this describe block).
+// Tracked by https://codedotorg.atlassian.net/browse/STAR-1680
+describe.skip('InstructionsCSF', () => {
   beforeEach(() => {
     stubRedux();
     registerReducers({authoredHints, instructions, isRtl, pageConstants});

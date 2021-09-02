@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "The Neighborhood wants a line painted down the street to separate the lanes of traffic. Since someone is having a birthday party this weekend, they want the line to be painted with festive colors.\r\n\r\n1. Create a new `Painter` object at (0, 6) facing South with 4 units of paint.\r\n\r\n2. Initialize a `String` array called `paintColors` with four different paint colors.\r\n\r\n3. Using a `for` loop, paint each color from the array in order.\r\n\r\n![](https://images.code.org/6d4eb7f2571acaa5bfa885bd5ab644e1-image-1625168729797.png)",
+    "long_instructions": "The Neighborhood wants a line painted down the street to separate the lanes of traffic. Since someone is having a birthday party this weekend, they want the line to be painted with festive colors.\r\n\r\n1. Create a new `Painter` object at `(6, 0)` facing `South` with `4` units of paint.\r\n\r\n2. Initialize a `String` array called `paintColors` with four different paint colors.\r\n\r\n3. Using a `for` loop, paint each color from the array in order.\r\n\r\n![](https://images.code.org/6012e20db69898e362811725befe81d8-image-1628603947551.png)",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "neighborhood",
@@ -534,15 +534,17 @@
         "isVisible": true
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tN7auHkLS870w3RdKAg\nly3Nx4bn9irYt4THXYtDpTKAvyioPlpEqPJEGRIXOa3VfxM=\n",
+    "reference_links": [
+      "https://docs.google.com/document/d/e/2PACX-1vSbu1JcuqFt8sFJWEUsd2dMmvRhzkNMD30gPiMpFYNZJEPEOzflNVGWqEL36VjpDKVcYY2NDyVi4gZl/pub"
+    ],
+    "submittable": "false"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-07-01T19:37:18.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-01 19:38:07 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-01 19:45:41 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-01 19:48:48 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-01 19:38:07 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-01 19:45:41 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-01 19:48:48 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 13:45:18 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-05 12:40:24 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-10 13:54:58 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-10 13:59:13 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-24 17:28:12 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
 }]]></config>
 </Javalab>

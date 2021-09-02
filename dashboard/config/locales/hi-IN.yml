@@ -187,8 +187,8 @@ hi:
       लिए जारी रखने के लिए ।
     user_type_button: खाता प्रकार अद्यतन करें
     user_type_label: खाता प्रकार
-    user_type_teacher: अध्यापक
     user_type_student: छात्र
+    user_type_teacher: अध्यापक
     field_is_required: की आवश्यकता है
     accept_terms: खाता बनाने के लिए आपको सहमति देनी होगी।
     error: एक त्रुटि घटित हुई है।
@@ -296,6 +296,7 @@ hi:
     invite_sent: आमंत्रण भेजा गया
     added_teacher: अपने शिक्षक के रूप में जोड़ा गया %{name}
     registered: आप %{section_name} के लिए पंजीकृत किया है।
+    already_exists: आप पहले से ही सेक्शन %{section_name} से जुड़े हुए हैं।
     error:
       signed_in: कृपया आगे बढ़ने से पहले signout
       username_not_found: उपयोगकर्ता नाम नहीं मिला %{username}
@@ -691,9 +692,6 @@ hi:
       gamelab_unsupported_tablet: गेम लैब माउस और कीबोर्ड के साथ डेस्कटॉप या लैपटॉप
         कंप्यूटर पर सबसे अच्छा काम करता है। आपकी मौजूदा डिवाइस पर इस टूल का उपयोग
         करने में आपको समस्याएं आ सकती हैं।
-      weblab_unsupported_browser: 'अफसोस, हमें इस समय इस ब्राउजर पर वेब लैब लोड करने
-        में समस्याएं आ रही हैं। आप इसके ठीक होने तक किसी और ब्राउजर का उपयोग करना
-        चाह सकते हैं। असुविधा के लिए खेद है। '
       weblab_unsupported_locale_storage: 'निजी ब्राउजिंग मोड में वेब लैब का उपयोग
         करने में आपको समस्याएं आ सकती हैं। कृपया अपने प्रोजेक्ट को सामान्य मोड में
         पुनःलोड करें। असुविधा के लिए खेद है। '
@@ -1177,7 +1175,7 @@ hi:
       school_city: स्कूल का शहर
       school_country: स्कूल देश
       colombian_school_city: स्कूल का शहर
-      colombian_school_name: स्कूल का नाम
+      colombian_chilean_school_name: स्कूल का नाम
       ages: इस वर्ष आप कौन-से आयु वर्ग(वर्गों) को सिखा रहे हैं?
       subjects: इस वर्ष आप कौन-सा विषय सिखा रहे हैं?
       resources: आप निम्नलिखित में से कौन-से CS शिक्षा संसाधनों का उपयोग करते हैं?

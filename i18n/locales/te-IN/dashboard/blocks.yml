@@ -1,3 +1,4 @@
+---
 te:
   data:
     blocks:
@@ -40,20 +41,20 @@ te:
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
       Dancelab_atTimestamp:
-        text: తరుగాత [TIMESTAMP][0] [UNIT][1]
+        text: తరుగాత {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': మెజర్స్
             '"seconds"': సెకండ్లు
       Dancelab_changeColorBy:
-        text: మార్చు [COLOR][0] [METHOD][1] by [AMOUNT][2]
+        text: మార్చు {COLOR} {METHOD} by {AMOUNT}
         options:
           METHOD:
             '"hue"': హ్యూ
             '"saturation"': శాచురేషన్
             '"brightness"': బ్రైట్‌నెస్
       Dancelab_changeMoveEachLR:
-        text: "[GROUP][0] చేయండి [MOVE][1] [DIR][2] ఎప్పటికీ"
+        text: "{GROUP} చేయండి {MOVE} {DIR} ఎప్పటికీ"
         options:
           GROUP:
             '"ALIEN"': ఏలియన్
@@ -83,7 +84,7 @@ te:
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
       Dancelab_changeMoveLR:
-        text: "[SPRITE][0] చేయండి [MOVE][1] [DIR][2] ఎప్పటికీ"
+        text: "{SPRITE} చేయండి {MOVE} {DIR} ఎప్పటికీ"
         options:
           MOVE:
             '"next"': "(తరువాత)"
@@ -101,7 +102,7 @@ te:
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
       Dancelab_changePropBy:
-        text: మార్చండి [SPRITE][0] [PROPERTY][1] దీనితో [VAL][2]
+        text: మార్చండి {SPRITE} {PROPERTY} దీనితో {VAL}
         options:
           PROPERTY:
             '"scale"': సైజు
@@ -111,6 +112,7 @@ te:
             '"x"': సమాంతర పొజిషన్
             '"y"': నిలువు పొజిషన్
       Dancelab_changePropEachBy:
+        text: మార్చండి {GROUP} {PROPERTY} దీనితో {VAL}
         options:
           GROUP:
             '"ALIEN"': ఏలియన్
@@ -132,7 +134,7 @@ te:
             '"x"': సమాంతర పొజిషన్
             '"y"': నిలువు పొజిషన్
       Dancelab_doMoveEachLR:
-        text: "[GROUP][0] చేయండి [MOVE][1] [DIR][2] ఒకసారి"
+        text: "{GROUP} చేయండి {MOVE} {DIR} ఒకసారి"
         options:
           GROUP:
             '"ALIEN"': ఏలియన్
@@ -172,7 +174,7 @@ te:
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
       Dancelab_doMoveLR:
-        text: "[SPRITE][0] చేయండి [MOVE][1] [DIR][2] ఒకసారి"
+        text: "{SPRITE} చేయండి {MOVE} {DIR} ఒకసారి"
         options:
           MOVE:
             '"rand"': "(రాండమ్)"
@@ -205,26 +207,26 @@ te:
             '"measures"': మెజర్స్
             '"seconds"': సెకండ్లు
       Dancelab_everySecondsRange:
-        text: 'ప్రతిదీ [N][0] [UNIT][1] నుండి [START][2] వరకు [STOP][3] '
+        text: 'ప్రతిదీ {N} {UNIT} నుండి {START} వరకు {STOP} '
         options:
           UNIT:
             measures: మెజర్స్
             seconds: సెకండ్లు
       Dancelab_everyVerseChorus:
-        text: 'ప్రతి [UNIT][0] '
+        text: 'ప్రతి {UNIT} '
         options:
           UNIT:
             '"verse"': వెర్స్
             '"chorus"': కోరస్
       Dancelab_getEnergy:
-        text: పొందండి [RANGE][0]
+        text: పొందండి {RANGE}
         options:
           RANGE:
             '"low"': బాస్
             '"mid"': మిడ్
             '"high"': ట్రెబుల్
       Dancelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': సైజు
@@ -235,15 +237,15 @@ te:
             '"y"': నిలువు పొజిషన్
             '"tint"': టింట్
       Dancelab_getTime:
-        text: ప్రస్తుత సమయం [UNIT][0] లో
+        text: ప్రస్తుత సమయం {UNIT} లో
         options:
           UNIT:
             '"measures"': మెజర్స్
             '"seconds"': సెకండ్లు
       Dancelab_ifDanceIs:
         text: |-
-          ఒకవేళ [SPRITE][0] చేస్తుంటే [DANCE][1]
-          [DO1][2] [DO2][3]
+          ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: క్లాప్ హై
@@ -259,8 +261,8 @@ te:
             MOVES.Rest: ఏదీ కాదు
       Dancelab_ifTime:
         text: |-
-          ఒకవేళ [UNIT][0] అయితే [OP][1] [N][2]
-          [DO1][3] [DO2][4]
+          ఒకవేళ {UNIT} అయితే {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': మెజర్స్
@@ -270,7 +272,7 @@ te:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "[SPRITE][0] జంప్ చేయండి [LOCATION][1] కు"
+        text: "{SPRITE} జంప్ చేయండి {LOCATION} కు"
         options:
           LOCATION:
             "{x: 200, y: 100}": టాప్
@@ -297,7 +299,7 @@ te:
             "{x: 100, y: 200}": ఎడమ
             "{x: 300, y: 200}": కుడి
       Dancelab_layoutSprites:
-        text: లేఔట్ [GROUP][0] ఒక [FORMAT][1] లాగా
+        text: లేఔట్ {GROUP} ఒక {FORMAT} లాగా
         options:
           GROUP:
             '"ALIEN"': ఏలియన్
@@ -336,12 +338,11 @@ te:
             "{x: 300, y: 200}": కుడి
       Dancelab_makeNewDanceSprite:
         text: |-
-          "ఒక కొత్తది [COSTUME][0] చేయండి
-          [NAME][1] అని పిలువబడే [LOCATION][2] లో"
+          "ఒక కొత్తది {COSTUME} చేయండి
+          {NAME} అని పిలువబడే {LOCATION} లో"
         options:
           COSTUME:
             '"BEAR"': బేర్
-            '"DOG"': డాగ్
             '"FROG"': ఫ్రాగ్
             '"MOOSE"': మూస్
             '"PINEAPPLE"': పైన్‌ఆపిల్
@@ -354,8 +355,8 @@ te:
             "{x: 300, y: 200}": కుడి
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          "చేయండి [N][0] కొత్త [COSTUME][1]
-           [LAYOUT][2] లో"
+          "చేయండి {N} కొత్త {COSTUME}
+           {LAYOUT} లో"
         options:
           'N':
             '2': '2'
@@ -399,9 +400,9 @@ te:
             '"x"': క్రిస్-క్రాస్
             '"plus"': క్రిస్-క్రాస్
       Dancelab_mixColors:
-        text: మిక్స్ చేయండి [COLOR1][0] మరియు [COLOR2][1]
+        text: మిక్స్ చేయండి {COLOR1} మరియు {COLOR2}
       Dancelab_nMeasures:
-        text: "[N][0] మెజర్స్"
+        text: "{N} మెజర్స్"
       Dancelab_onPointerDown:
         text: ఆన్ పాయింటర్ డౌన్
       Dancelab_onPointerDrag:
@@ -409,15 +410,12 @@ te:
       Dancelab_onPointerUp:
         text: ఆన్ పాయింటర్ అప్
       Dancelab_setBackground:
-        text: బ్యాక్‌గ్రౌండ్ రంగు [COLOR][0] సెట్ చేయండి
+        text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       Dancelab_setBackgroundEffect:
-        text: |-
-          "బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ 
-          [EFFECT][0] [PALETTE][1] సెట్ చేయండి"
+        text: "\"బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ \n{EFFECT} {PALETTE} సెట్ చేయండి\""
         options:
           EFFECT:
             '"none"': ఏదీ కాదు
-            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(రాండమ్)"
             '"circles"': సర్కిల్స్
             '"color_cycle"': రంగులు
             '"diamonds"': డైమండ్స్
@@ -445,9 +443,7 @@ te:
             '"vintage"': వింటేజ్
             '"warm"': వామ్
       Dancelab_setBackgroundEffectWithPalette:
-        text: |-
-          బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ 
-          [PALETTE][0] [EFFECT][1] సెట్ చేయండి
+        text: "బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ \n{PALETTE} {EFFECT} సెట్ చేయండి"
         options:
           EFFECT:
             '"none"': ఏదీ కాదు
@@ -479,7 +475,7 @@ te:
             '"vintage"': వింటేజ్
             '"warm"': వామ్
       Dancelab_setDanceSpeed:
-        text: సెట్ చేయండి [SPRITE][0] డాన్స్ స్పీడ్ [SPEED][1] కు
+        text: సెట్ చేయండి {SPRITE} డాన్స్ స్పీడ్ {SPEED} కు
         options:
           SPEED:
             '1': normal
@@ -488,7 +484,7 @@ te:
             '0.5': స్లో
             '0.25': వెరీ స్లో
       Dancelab_setDanceSpeedEach:
-        text: సెట్ చేయండి [GROUP][0] డాన్స్ స్పీడ్[SPEED][1] కు
+        text: సెట్ చేయండి {GROUP} డాన్స్ స్పీడ్{SPEED} కు
         options:
           GROUP:
             '"ALIEN"': ఏలియన్
@@ -509,11 +505,10 @@ te:
             '0.5': స్లో
             '0.25': వెరీ స్లో
       Dancelab_setForegroundEffect:
-        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ [EFFECT][0]
+        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ {EFFECT}
         options:
           EFFECT:
             '"none"': ఏదీ కాదు
-            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(రాండమ్)"
             '"bubbles"': బబ్బుల్స్
             '"confetti"': కన్ఫెట్టీ
             '"hearts_red"': హార్ట్స్
@@ -528,7 +523,7 @@ te:
             '"color_lights"': స్టేజ్ లైట్స్
             '"raining_tacos"': టాకోస్
       Dancelab_setForegroundEffectExtended:
-        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ [EFFECT][0]
+        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ {EFFECT}
         options:
           EFFECT:
             '"none"': ఏదీ కాదు
@@ -547,7 +542,7 @@ te:
             '"color_lights"': స్టేజ్ లైట్స్
             '"raining_tacos"': టాకోస్
       Dancelab_setProp:
-        text: 'సెట్ చేయండి [SPRITE][0] [PROPERTY][1] ని [VAL][2] కు '
+        text: 'సెట్ చేయండి {SPRITE} {PROPERTY} ని {VAL} కు '
         options:
           PROPERTY:
             '"scale"': సైజు
@@ -557,7 +552,7 @@ te:
             '"x"': సమాంతర పొజిషన్
             '"y"': నిలువు పొజిషన్
       Dancelab_setPropEach:
-        text: సెట్ చేయండి [GROUP][0] [PROPERTY][1] ని [VAL][2] కు
+        text: సెట్ చేయండి {GROUP} {PROPERTY} ని {VAL} కు
         options:
           GROUP:
             '"ALIEN"': ఏలియన్
@@ -580,7 +575,7 @@ te:
             '"y"': నిలువు పొజిషన్
             '"tint"': టింట్
       Dancelab_setPropRandom:
-        text: రాండమైజ్ [SPRITE][0] [PROPERTY][1]
+        text: రాండమైజ్ {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': సైజు
@@ -591,6 +586,7 @@ te:
             '"y"': నిలువు పొజిషన్
             '"tint"': టింట్
       Dancelab_setPropRandomEach:
+        text: రాండమైజ్ {GROUP} {PROPERTY}
         options:
           GROUP:
             '"ALIEN"': ఏలియన్
@@ -613,9 +609,9 @@ te:
             '"y"': నిలువు పొజిషన్
             '"tint"': టింట్
       Dancelab_setTint:
-        text: సెట్ చేయండి [SPRITE][0] టింట్ ను [VAL][1] కు
+        text: సెట్ చేయండి {SPRITE} టింట్ ను {VAL} కు
       Dancelab_setTintEach:
-        text: సెట్ చేయండి [THIS][0] టింట్ ను [VAL][1] కు
+        text: సెట్ చేయండి {THIS} టింట్ ను {VAL} కు
         options:
           THIS:
             '"ALIEN"': ఏలియన్
@@ -630,7 +626,7 @@ te:
             '"SHARK"': షార్క్
             '"UNICORN"': యూనికార్న్
       Dancelab_setTintEachInline:
-        text: సెట్ చేయండి [THIS][0] టింట్ ను [VAL][1] కు
+        text: సెట్ చేయండి {THIS} టింట్ ను {VAL} కు
         options:
           THIS:
             '"ALIEN"': ఏలియన్
@@ -645,15 +641,15 @@ te:
             '"SHARK"': షార్క్
             '"UNICORN"': యూనికార్న్
       Dancelab_setTintInline:
-        text: సెట్ చేయండి [SPRITE][0] టింట్ ను [VAL][1] కు
+        text: సెట్ చేయండి {SPRITE} టింట్ ను {VAL} కు
       Dancelab_setVisible:
-        text: సెట్ చేయండి [SPRITE][0] విజిబుల్ ను [VISIBILITY][1] కు
+        text: సెట్ చేయండి {SPRITE} విజిబుల్ ను {VISIBILITY} కు
         options:
           VISIBILITY:
             'true': విజిబుల్
             'false': ఇన్‌విజిబుల్
       Dancelab_setVisibleEach:
-        text: సెట్ చేయండి [THIS][0] విజిబిలిటిని[VISIBILITY][1] కు
+        text: సెట్ చేయండి {THIS} విజిబిలిటిని{VISIBILITY} కు
         options:
           THIS:
             '"ALIEN"': ఏలియన్
@@ -671,7 +667,7 @@ te:
             'true': విజిబుల్
             'false': ఇన్‌విజిబుల్
       Dancelab_startMapping:
-        text: "[SPRITE][0] ప్రారంభిస్తుంది [PROPERTY][1] ని [RANGE][2] తరువాత"
+        text: "{SPRITE} ప్రారంభిస్తుంది {PROPERTY} ని {RANGE} తరువాత"
         options:
           PROPERTY:
             '"scale"': సైజు
@@ -712,7 +708,7 @@ te:
             '"mid"': మిడ్
             '"treble"': ట్రెబుల్
       Dancelab_stopMapping:
-        text: "[SPRITE][0] ఆపివేస్తుంది [PROPERTY][1] ను [RANGE][2] తరువాత"
+        text: "{SPRITE} ఆపివేస్తుంది {PROPERTY} ను {RANGE} తరువాత"
         options:
           PROPERTY:
             '"scale"': సైజు
@@ -775,7 +771,7 @@ te:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: నొక్కినప్పుడు [KEY][0] కీ
+        text: నొక్కినప్పుడు {KEY} కీ
         options:
           KEY:
             '"up"': అప్
@@ -819,7 +815,7 @@ te:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: ఉన్నప్పుడు [RANGE][0] పీక్
+        text: ఉన్నప్పుడు {RANGE} పీక్
         options:
           RANGE:
             '0': బాస్
@@ -834,14 +830,16 @@ te:
           UNIT:
             '"seconds"': సెకండ్లు
       gamelab_changePropBy:
-        text: మార్చండి [SPRITE][0] [PROPERTY][1] దీనితో [VAL][2]
+        text: మార్చండి {SPRITE} {PROPERTY} దీనితో {VAL}
         options:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
       gamelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': సైజు
@@ -885,7 +883,7 @@ te:
             '"w"': w
             '"z"': z
       gamelab_jumpTo:
-        text: "[SPRITE][0] జంప్ చేయండి [LOCATION][1] కు"
+        text: "{SPRITE} జంప్ చేయండి {LOCATION} కు"
       gamelab_keyPressed:
         options:
           KEY:
@@ -923,19 +921,26 @@ te:
           DIRECTION:
             '"right"': కుడి
             '"left"': ఎడమ
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
       gamelab_setBackground:
-        text: బ్యాక్‌గ్రౌండ్ రంగు [COLOR][0] సెట్ చేయండి
+        text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       gamelab_setBackgroundImage:
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': గ్రిడ్
+            undefined: ఏదీ కాదు
       gamelab_setProp:
+        text: సెట్ చేయండి {SPRITE} {PROPERTY} ని {VAL} కు
         options:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
       gamelab_setProp_dropdown:
+        text: సెట్ చేయండి {SPRITE} {PROPERTY} ని {SIZE} కు
         options:
           PROPERTY:
             '"scale"': సైజు
@@ -945,13 +950,15 @@ te:
             '"scale"': సైజు
             '"width"': వెడల్పు
             '"height"': ఎత్తు
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:
             '"right"': కుడి
             '"left"': ఎడమ
       gamelab_whenKey:
-        text: నొక్కినప్పుడు [KEY][0] కీ
+        text: నొక్కినప్పుడు {KEY} కీ
         options:
           KEY:
             '"up"': అప్
@@ -975,6 +982,12 @@ te:
             '"w"': w
             '"s"': s
             '"d"': d
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 200, y: 100}": చేప
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": చేప
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1019,10 +1032,14 @@ te:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      Mikelab_hideFish:
+        options:
+          TRASH:
+            fish: చేప
       Mikelab_ifDanceIs:
         text: |-
-          ఒకవేళ [SPRITE][0] చేస్తుంటే [DANCE][1]
-          [DO1][2] [DO2][3]
+          ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: క్లాప్ హై
@@ -1036,6 +1053,20 @@ te:
             MOVES.Kick: స్టార్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: చేప
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: చేప
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: చేప
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1055,7 +1086,17 @@ te:
             "{x: 100, y: 200}": ఎడమ
             "{x: 300, y: 200}": కుడి
       Mikelab_whenKeyPressed:
-        text: నొక్కినప్పుడు [KEY][0] కీ
+        text: నొక్కినప్పుడు {KEY} కీ
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': అవును
+            '"no"': లేదు
+      PoemBot_setForegroundEffect:
+        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"bubbles"': బబ్బుల్స్
       aalab_layoutSprites:
         options:
           FORMAT:
@@ -1070,7 +1111,7 @@ te:
             '"left"': ఎడమ
             '"right"': కుడి
       binary_whenKey:
-        text: నొక్కినప్పుడు [KEY][0] కీ
+        text: నొక్కినప్పుడు {KEY} కీ
         options:
           KEY:
             '"up"': అప్

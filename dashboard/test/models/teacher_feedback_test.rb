@@ -152,19 +152,31 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     assert_equal(feedback.user_level, user_level)
   end
 
-  test 'student_updated_since_feedback? returns false if there was no attempt by student' do
+  test 'awaiting_teacher_review? returns false if isLatest is false' do
     teacher = create :teacher
     student = create :student
     level = create :level
     script = create :script
     create :script_level, script: script, levels: [level]
 
-    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
 
-    assert_equal(feedback.student_updated_since_feedback?, false)
+    assert_equal(feedback.awaiting_teacher_review?(false), false)
   end
 
-  test 'student_updated_since_feedback? returns false if the attempt by the student happened before the feedback was given' do
+  test 'awaiting_teacher_review? returns false if is latest feedback and keepWorking review_state and there was no attempt by student' do
+    teacher = create :teacher
+    student = create :student
+    level = create :level
+    script = create :script
+    create :script_level, script: script, levels: [level]
+
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    assert_equal(feedback.awaiting_teacher_review?(true), false)
+  end
+
+  test 'awaiting_teacher_review? returns false if is latest feedback and keepWorking review_state and the attempt by the student happened before the feedback was given' do
     teacher = create :teacher
     student = create :student
     level = create :level
@@ -172,22 +184,35 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     create :script_level, script: script, levels: [level]
 
     create :user_level, user: student, level: level, script: script, updated_at: 1.week.ago
-    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
 
-    assert_equal(feedback.student_updated_since_feedback?, false)
+    assert_equal(feedback.awaiting_teacher_review?(true), false)
   end
 
-  test 'student_updated_since_feedback? returns true if the attempt by the student happened after the feedback was given' do
+  test 'awaiting_teacher_review? returns false if is latest feedback and not keepWorking review_state and the attempt by the student happened after the feedback was given' do
     teacher = create :teacher
     student = create :student
     level = create :level
     script = create :script
     create :script_level, script: script, levels: [level]
 
-    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script, review_state: TeacherFeedback::REVIEW_STATES.completed
     create :user_level, user: student, level: level, script: script, updated_at: 1.week.from_now
 
-    assert_equal(feedback.student_updated_since_feedback?, true)
+    assert_equal(feedback.awaiting_teacher_review?(true), false)
+  end
+
+  test 'awaiting_teacher_review? returns true if is latest feedback and keepWorking review_state and the attempt by the student happened after the feedback was given' do
+    teacher = create :teacher
+    student = create :student
+    level = create :level
+    script = create :script
+    create :script_level, script: script, levels: [level]
+
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+    create :user_level, user: student, level: level, script: script, updated_at: 1.week.from_now
+
+    assert_equal(feedback.awaiting_teacher_review?(true), true)
   end
 
   test 'destroys when teacher is destroyed' do
@@ -339,5 +364,45 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
 
     # we get most recent feedback for each level sorted by created date
     assert_equal([expected_feedback2, expected_feedback1], retrieved)
+  end
+
+  test 'summarize_for_csv returns expected values' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student(student)
+
+    level = create :level
+    script_level = create :script_level, levels: [level]
+    script = script_level.script
+
+    teacher_feedback = create :teacher_feedback, teacher: teacher, student: student, script: script, level: level, performance: 'performanceLevel3', review_state: TeacherFeedback::REVIEW_STATES.keepWorking, comment: "Keep trying"
+
+    summarized_feedback = teacher_feedback.summarize_for_csv(level, script_level, student)
+
+    assert_equal "Limited Evidence", summarized_feedback[:performance]
+    assert_equal "Needs more work", summarized_feedback[:reviewStateLabel]
+    assert_equal script_level.lesson.localized_title, summarized_feedback[:lessonName]
+    assert_equal "Keep trying", summarized_feedback[:comment]
+  end
+
+  test 'summarize_for_csv returns expected values for sublevel' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student(student)
+
+    parent_level = create :bubble_choice_level, :with_sublevels
+    child_level = parent_level.sublevels.first
+    script_level = create :script_level, levels: [parent_level]
+    script = script_level.script
+
+    teacher_feedback = create :teacher_feedback, teacher: teacher, student: student, script: script, level: child_level, comment: "Great work"
+
+    summarized_feedback = teacher_feedback.summarize_for_csv(child_level, script_level, student, 0)
+
+    assert_equal "Great work", summarized_feedback[:comment]
+    assert_equal "1a", summarized_feedback[:levelNum]
+    assert_equal "Never reviewed", summarized_feedback[:reviewStateLabel]
   end
 end

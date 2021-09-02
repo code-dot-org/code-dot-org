@@ -2,6 +2,7 @@ ka:
   data:
     parameter_names:
       actor: პერსონაჟი
+      color: ფერი
       counter: მრიცხველი
       height: სიმაღლე
       honey: თაფლი

@@ -3,6 +3,10 @@ ne:
   data:
     variable_names:
       actor: नायक
+      age: उमेर
+      answer: answer
+      binary: binary
+      color: color
       counter: counter
       height: height
       honey: honey

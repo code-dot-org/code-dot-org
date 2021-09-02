@@ -483,6 +483,8 @@ az:
         C4_function_parameters: Parametrli funksiyalar
         C4_conditionals: Şərti ifadələr
         C4_unplugged_binary: İkilik
+        CSF_debugging_k1_blocks: Sazlama
+        CSF_debugging_text_blocks: Sazlama
         CSF_Power_of_Words: Sözlərin gücü
         CSF_Super_Digital_Citizen: Super rəqəmsal vətəndaş
         CSF_stevie_big_project: Stevie və Böyük Layihə
@@ -514,6 +516,7 @@ az:
         hoc_dance_properties: Rəqs Şənliyi - Xüsusiyyətlər
         csd_pair_programming: Estafet proqramlaşdırması
         csd_applab_parameters: Parametrli funksiyalar
+        csd_debugging: Sazlama
         hoc_dance_events_2019: Rəqs Şənliyi - Hadisələr
         hoc_dance_properties_2019: Rəqs Şənliyi - Xüsusiyyətlər
         playlab_2021: Oyun Labına giriş

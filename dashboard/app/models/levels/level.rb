@@ -69,7 +69,8 @@ class Level < ApplicationRecord
     map_reference
     reference_links
     name_suffix
-    parent_level_id
+    contained_level_names
+    project_template_level_name
     hint_prompt_attempts_threshold
     short_instructions
     long_instructions
@@ -114,18 +115,7 @@ class Level < ApplicationRecord
           levels_by_key[key] || Level.find_by_key(key)
         end
 
-      if key.starts_with?('blockly')
-        # this level is defined in levels.js. find/create the reference to this level
-        level = Level.
-          create_with(name: 'blockly').
-          find_or_create_by!(Level.key_to_params(key))
-        level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
-        if level.video_key && !raw_level[:video_key]
-          raw_level[:video_key] = nil
-        end
-
-        level.update(raw_level)
-      elsif raw_level[:video_key]
+      if raw_level[:video_key] && !key.starts_with?('blockly')
         level.update(video_key: raw_level[:video_key])
       end
 
@@ -194,10 +184,6 @@ class Level < ApplicationRecord
 
   def complete_toolbox(type)
     "<xml id='toolbox' style='display: none;'>#{toolbox(type)}</xml>"
-  end
-
-  def host_level
-    project_template_level || self
   end
 
   # Overriden by different level types.
@@ -492,14 +478,6 @@ class Level < ApplicationRecord
     end
   end
 
-  # Project template levels are used to persist use progress
-  # across multiple levels, using a single level name as the
-  # storage key for that user.
-  def project_template_level
-    return nil if try(:project_template_level_name).nil?
-    Level.find_by_key(project_template_level_name)
-  end
-
   def strip_name
     self.name = name.to_s.strip unless name.nil?
   end
@@ -585,14 +563,15 @@ class Level < ApplicationRecord
     ["Applab", "Gamelab", "Weblab"].include?(type)
   end
 
-  # Returns an array of all the contained levels
-  # (based on the contained_level_names property)
-  def contained_levels
-    names = try('contained_level_names')
-    return [] unless names.present?
-    names.map do |contained_level_name|
-      Script.cache_find_level(contained_level_name)
-    end
+  # Currently only Javalab can have code review
+  def can_have_code_review?
+    ["Javalab"].include?(type)
+  end
+
+  # We hide this feature for contained levels because contained levels are currently not
+  # editable by students so setting the feedback review_state to keepWorking doesn't make sense.
+  def can_have_feedback_review_state?
+    contained_levels.empty?
   end
 
   def display_as_unplugged?
@@ -675,15 +654,14 @@ class Level < ApplicationRecord
     false
   end
 
-  # Create a copy of this level named new_name, and store the id of the original
-  # level in parent_level_id.
+  # Create a copy of this level named new_name
   # @param [String] new_name
   # @param [String] editor_experiment
   # @raise [ActiveRecord::RecordInvalid] if the new name already is taken.
   def clone_with_name(new_name, editor_experiment: nil)
     level = dup
     # specify :published to make should_write_custom_level_file? return true
-    level_params = {name: new_name, parent_level_id: id, published: true}
+    level_params = {name: new_name, published: true}
     level_params[:editor_experiment] = editor_experiment if editor_experiment
     level_params[:audit_log] = [{changed_at: Time.now, changed: ["cloned from #{name.dump}"], cloned_from: name}].to_json
     level.update!(level_params)
@@ -691,9 +669,9 @@ class Level < ApplicationRecord
   end
 
   # Create a copy of this level by appending new_suffix to the name, removing
-  # any previous suffix from the name first. Store the id of the original
-  # level in parent_level_id, and store the suffix in name_suffix. If a level
-  # with the same name already exists, us that instead of creating a new one.
+  # any previous suffix from the name first and storing the suffix in
+  # name_suffix. If a level with the same name already exists, us that instead
+  # of creating a new one.
   #
   # Also, copy over any project template level. If two levels with the same
   # project template level are copied using the same new_suffix, then the new
@@ -716,16 +694,8 @@ class Level < ApplicationRecord
     update_params = {name_suffix: new_suffix}
     update_params[:editor_experiment] = editor_experiment if editor_experiment
 
-    if project_template_level
-      new_template_level = project_template_level.clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
-      update_params[:project_template_level_name] = new_template_level.name
-    end
-
-    unless contained_levels.empty?
-      update_params[:contained_level_names] = contained_levels.map do |contained_level|
-        contained_level.clone_with_suffix(new_suffix, editor_experiment: editor_experiment).name
-      end
-    end
+    child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
+    update_params.merge!(child_params_to_update)
 
     level.update!(update_params)
 

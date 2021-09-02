@@ -16,6 +16,7 @@ import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
 import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 const defaultProps = {
   name: 'test-course',
@@ -41,6 +42,10 @@ const defaultProps = {
 };
 
 describe('CourseEditor', () => {
+  // Warnings allowed due to usage of deprecated componentWillReceiveProps
+  // lifecycle method.
+  allowConsoleWarnings();
+
   beforeEach(() => {
     sinon.stub(utils, 'navigateToHref');
     stubRedux();
@@ -157,13 +162,18 @@ describe('CourseEditor', () => {
   });
 
   describe('Saving Course Editor', () => {
-    let clock;
+    let clock, server;
+
+    beforeEach(() => {
+      server = sinon.fakeServer.create();
+    });
 
     afterEach(() => {
       if (clock) {
         clock.restore();
         clock = undefined;
       }
+      server.restore();
     });
 
     it('can save and keep editing', () => {
@@ -173,7 +183,6 @@ describe('CourseEditor', () => {
       let returnData = {
         coursePath: '/courses/test-course'
       };
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/courses/test-course`, [
         200,
         {'Content-Type': 'application/json'},
@@ -210,7 +219,6 @@ describe('CourseEditor', () => {
       const courseEditor = wrapper.find('CourseEditor');
 
       let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/courses/test-course`, [
         404,
         {'Content-Type': 'application/json'},
@@ -248,7 +256,6 @@ describe('CourseEditor', () => {
       let returnData = {
         coursePath: '/courses/test-course'
       };
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/courses/test-course`, [
         200,
         {'Content-Type': 'application/json'},
@@ -279,7 +286,6 @@ describe('CourseEditor', () => {
       const courseEditor = wrapper.find('CourseEditor');
 
       let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/courses/test-course`, [
         404,
         {'Content-Type': 'application/json'},

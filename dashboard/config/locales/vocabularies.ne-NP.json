@@ -1,0 +1,74 @@
+{
+  "ne-NP": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "व्यवहार"
+        },
+        "variable/coursef/2021": {
+          "word": "Variable"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "परिभाषित गर्नुहोस्"
+        },
+        "debugging/courseb/2021": {
+          "word": "Debugging"
+        },
+        "debugging/coursea/2021": {
+          "word": "Debugging"
+        },
+        "debugging/coursec/2021": {
+          "word": "Debugging"
+        },
+        "binary/coursec/2021": {
+          "word": "Binary"
+        },
+        "debugging/coursed/2021": {
+          "word": "Debugging"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Conditionals"
+        },
+        "debugging/express/2021": {
+          "word": "Debugging"
+        },
+        "behavior/express/2021": {
+          "word": "व्यवहार"
+        },
+        "conditionals/express/2021": {
+          "word": "Conditionals"
+        },
+        "function/express/2021": {
+          "word": "Function"
+        },
+        "variable/express/2021": {
+          "word": "Variable"
+        },
+        "define/express/2021": {
+          "word": "परिभाषित गर्नुहोस्"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Debugging"
+        },
+        "behavior/coursee/2021": {
+          "word": "व्यवहार"
+        },
+        "copyright/coursee/2021": {
+          "word": "Copyright"
+        },
+        "function/coursee/2021": {
+          "word": "Function"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Conditionals"
+        },
+        "define/coursee/2021": {
+          "word": "परिभाषित गर्नुहोस्"
+        }
+      }
+    }
+  }
+}

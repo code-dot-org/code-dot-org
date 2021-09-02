@@ -1,0 +1,266 @@
+{
+  "sk-SK": {
+    "data": {
+      "resources": {
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Predstavenie Sprite Labu"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Predstavenie Sprite Labu"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "Postavy v akcii"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Zábava s cyklami \"for\""
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Zábava s cyklami \"for\""
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Zábava s cyklami \"for\""
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Zábava s cyklami \"for\""
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Zábava s cyklami \"for\""
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Implementačná Príručka"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Sprievodca osnovami"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Fórum učiteľov"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Pohni sa, pohni sa"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Pohni sa, pohni sa"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Pohni sa, pohni sa"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Pohni sa, pohni sa"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Programovanie v páre"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stevie a jej veľký projekt"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "Príbeh o hľadaní chrobákov a chýb"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Cykly sa zacykľujú"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Cykly sa zacykľujú"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Cykly sa zacykľujú"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Cykly sa zacykľujú"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Veľká udalosť"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "Veľká udalosť"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Veľká udalosť"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Implementačná Príručka"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Sprievodca osnovami"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "Fórum učiteľov"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Programovanie v páre"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Veselé mapy"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Veľká udalosť"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Veľká udalosť"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Veľká udalosť"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Implementačná Príručka"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Sprievodca osnovami"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "Fórum učiteľov"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Moji robotickí kamaráti"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Moji robotickí kamaráti"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Moji robotickí kamaráti"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Moji robotickí kamaráti"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Moji robotickí kamaráti"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Programovanie v páre"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Veľká udalosť"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Veľká udalosť"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Veľká udalosť"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binárne náramky"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Binárne náramky"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Binárne náramky"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Binárne náramky"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Binárne náramky"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Implementačná Príručka"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Sprievodca osnovami"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "Fórum učiteľov"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Programovanie na štvorčekový papier"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Programovanie na štvorčekový papier"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Programovanie na štvorčekový papier"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Programovanie na štvorčekový papier"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Programovanie na štvorčekový papier"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Programovanie na štvorčekový papier"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Programovanie v páre"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Štafetové programovanie"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Štafetové programovanie"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Štafetové programovanie"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Štafetové programovanie"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Štafetové programovanie"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Štafetové programovanie"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Podmienky s kartami"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Podmienky s kartami"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Podmienky s kartami"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Podmienky s kartami"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Podmienky s kartami"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Implementačná Príručka"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Sprievodca osnovami"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Fórum učiteľov"
+        },
+        "pair_programming/express/2021": {
+          "name": "Programovanie v páre"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "Postavy v akcii"
+        },
+        "variables_video/express/2021": {
+          "name": "Premenné"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Fórum učiteľov"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Programovanie v páre"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "Fórum učiteľov"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Implementačná Príručka"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Sprievodca osnovami"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Fórum učiteľov"
+        }
+      }
+    }
+  }
+}

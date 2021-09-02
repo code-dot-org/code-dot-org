@@ -1,2 +1,9 @@
 {
+  "gl-ES": {
+    "data": {
+      "bubble_choice_description": {
+        "courseD_bee_nestedLoops8_2021": "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
+      }
+    }
+  }
 }

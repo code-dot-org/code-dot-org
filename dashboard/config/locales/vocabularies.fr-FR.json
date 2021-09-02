@@ -1,0 +1,494 @@
+{
+  "fr-FR": {
+    "data": {
+      "vocabularies": {
+        "sprite/coursef/2021": {
+          "word": "Lutin"
+        },
+        "behavior/coursef/2021": {
+          "word": "comportement"
+        },
+        "program/coursef/2021": {
+          "word": "Programme",
+          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algorithme"
+        },
+        "event/coursef/2021": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "variable/coursef/2021": {
+          "word": "Variable",
+          "definition": "Un espace réservé pour une information qui peut changer."
+        },
+        "input/coursef/2021": {
+          "word": "Entrée"
+        },
+        "loop/coursef/2021": {
+          "word": "Boucle",
+          "definition": "L'action de faire quelque chose encore et encore."
+        },
+        "repeat/coursef/2021": {
+          "word": "Répéter",
+          "definition": "Faire quelque chose de nouveau."
+        },
+        "for_loop/coursef/2021": {
+          "word": "Boucle For",
+          "definition": "Boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Apprentissage Automatique",
+          "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
+        },
+        "dns/coursef/2021": {
+          "word": "DNS",
+          "definition": "abréviation de Domain Name System, ce système traduit les noms de domaine (comme exemple.com) en adresses IP (comme 93.184.216.34)"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet",
+          "definition": "Un groupe d'ordinateurs et de serveurs qui sont reliés les uns aux autres."
+        },
+        "packets/coursef/2021": {
+          "word": "PaqLes uets",
+          "definition": "De petits morceaux d'informations qui ont été soigneusement formés à partir de plus grands blocs d'informations."
+        },
+        "servers/coursef/2021": {
+          "word": "Serveurs",
+          "definition": "Ordinateurs qui n'existent que pour fournir des choses aux autres."
+        },
+        "url/coursef/2021": {
+          "word": "URL",
+          "definition": "Une adresse facile à retenir pour appeler une page web (comme www.code.org)."
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Câble",
+          "definition": "Un procédé d'envoi d'informations utilisant les câbles téléphoniques ou de télévision."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Câble à Fibre Optique",
+          "definition": "Une connexion qui utilise la lumière pour transmettre des informations"
+        },
+        "ip_address/coursef/2021": {
+          "word": "Adresse IP",
+          "definition": "Un numéro attribué à tout élément connecté à Internet."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi",
+          "definition": "Procédé sans fil d'envoi d'informations à l'aide d'ondes radio."
+        },
+        "define/coursef/2021": {
+          "word": "Définis",
+          "definition": "Comprendre les détails des problèmes que tu essayes de résoudre"
+        },
+        "prepare/coursef/2021": {
+          "word": "Préparer",
+          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité que tu es sur le point d'entreprendre"
+        },
+        "reflect/coursef/2021": {
+          "word": "Réfléchir",
+          "definition": "Réfléchir soigneusement à quelque chose avec l'intention d'améliorer le résultat à l'avenir"
+        },
+        "try/coursef/2021": {
+          "word": "Essayer",
+          "definition": "Tenter de faire quelque chose"
+        },
+        "algorithm/courseb/2021": {
+          "word": "Algorithme",
+          "definition": "Une liste d'étapes pour terminer une tâche. "
+        },
+        "bug/courseb/2021": {
+          "word": "Bug",
+          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
+        },
+        "debugging/courseb/2021": {
+          "word": "Le Débogage",
+          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+        },
+        "click/courseb/2021": {
+          "word": "Cliquez",
+          "definition": "Appuie sur le bouton de la souris"
+        },
+        "drag/courseb/2021": {
+          "word": "Glisser",
+          "definition": "Clique sur le bouton de ta souris et maintiens la pression pendant que tu déplaces le pointeur de la souris vers un nouvel emplacement"
+        },
+        "drop/courseb/2021": {
+          "word": "Grand écart",
+          "definition": "Relâche le bouton de ta souris pour « lâcher » un élément que tu fais glisser"
+        },
+        "double_click/courseb/2021": {
+          "word": "Double-Clique sur",
+          "definition": "Appuuie très rapidement sur le bouton de la souris"
+        },
+        "program/courseb/2021": {
+          "word": "Programme",
+          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+        },
+        "programming/courseb/2021": {
+          "word": "Programmation",
+          "definition": "L'art de créer un programme."
+        },
+        "persistence/courseb/2021": {
+          "word": "Persévérance",
+          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+        },
+        "loop/courseb/2021": {
+          "word": "Boucle",
+          "definition": "L'action de faire quelque chose encore et encore."
+        },
+        "repeat/courseb/2021": {
+          "word": "Répéter",
+          "definition": "Faire quelque chose de nouveau."
+        },
+        "event/courseb/2021": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "algorithm/coursea/2021": {
+          "word": "Algorithme",
+          "definition": "Une liste d'étapes pour terminer une tâche. "
+        },
+        "debugging/coursea/2021": {
+          "word": "Le Débogage",
+          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+        },
+        "program/coursea/2021": {
+          "word": "Programme",
+          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+        },
+        "click/coursea/2021": {
+          "word": "Cliquez",
+          "definition": "Appuie sur le bouton de la souris"
+        },
+        "drag/coursea/2021": {
+          "word": "Glisser",
+          "definition": "Clique sur le bouton de ta souris et maintiens la pression pendant que tu déplaces le pointeur de la souris vers un nouvel emplacement"
+        },
+        "drop/coursea/2021": {
+          "word": "Grand écart",
+          "definition": "Relâche le bouton de ta souris pour « lâcher » un élément que tu fais glisser"
+        },
+        "double_click/coursea/2021": {
+          "word": "Double-Clique sur",
+          "definition": "Appuuie très rapidement sur le bouton de la souris"
+        },
+        "bug/coursea/2021": {
+          "word": "Bug",
+          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
+        },
+        "programming/coursea/2021": {
+          "word": "Programmation",
+          "definition": "L'art de créer un programme."
+        },
+        "loop/coursea/2021": {
+          "word": "Boucle",
+          "definition": "L'action de faire quelque chose encore et encore."
+        },
+        "repeat/coursea/2021": {
+          "word": "Répéter",
+          "definition": "Faire quelque chose de nouveau."
+        },
+        "event/coursea/2021": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "algorithm/coursec/2021": {
+          "word": "Algorithme",
+          "definition": "Une liste d'étapes pour terminer une tâche. "
+        },
+        "bug/coursec/2021": {
+          "word": "Bug",
+          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
+        },
+        "debugging/coursec/2021": {
+          "word": "Le Débogage",
+          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+        },
+        "program/coursec/2021": {
+          "word": "Programme",
+          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+        },
+        "sequencing/coursec/2021": {
+          "word": "Séquençage",
+          "definition": "Mettre les commandes dans le bon ordre afin que les ordinateurs puissent lire les commandes."
+        },
+        "programming/coursec/2021": {
+          "word": "Programmation",
+          "definition": "L'art de créer un programme."
+        },
+        "loop/coursec/2021": {
+          "word": "Boucle",
+          "definition": "L'action de faire quelque chose encore et encore."
+        },
+        "repeat/coursec/2021": {
+          "word": "Répéter",
+          "definition": "Faire quelque chose de nouveau."
+        },
+        "event/coursec/2021": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "binary/coursec/2021": {
+          "word": "Binaire",
+          "definition": "Une façon de représenter l'information n'utilisant que deux options."
+        },
+        "algorithm/coursed/2021": {
+          "word": "Algorithme",
+          "definition": "Une liste d'étapes pour terminer une tâche. "
+        },
+        "program/coursed/2021": {
+          "word": "Programme",
+          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+        },
+        "bug/coursed/2021": {
+          "word": "Bug",
+          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
+        },
+        "debugging/coursed/2021": {
+          "word": "Le Débogage",
+          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+        },
+        "loop/coursed/2021": {
+          "word": "Boucle",
+          "definition": "L'action de faire quelque chose encore et encore."
+        },
+        "programming/coursed/2021": {
+          "word": "Programmation",
+          "definition": "L'art de créer un programme."
+        },
+        "frustrated/coursed/2021": {
+          "word": "Frustré",
+          "definition": "Te sentir agacé ou en colère parce que quelque chose n'est pas comme tu le veux."
+        },
+        "persistence/coursed/2021": {
+          "word": "Persévérance",
+          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+        },
+        "event/coursed/2021": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "code/coursed/2021": {
+          "word": "code",
+          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+        },
+        "repeat/coursed/2021": {
+          "word": "Répéter",
+          "definition": "Faire quelque chose de nouveau."
+        },
+        "command/coursed/2021": {
+          "word": "Commande",
+          "definition": "Une instruction pour l'ordinateur. De nombreuses commandes assemblées composent des algorithmes et des programmes informatiques."
+        },
+        "conditionals/coursed/2021": {
+          "word": "Instructions conditionnelles",
+          "definition": "Déclarations qui s'exécutent que sous certaines conditions."
+        },
+        "condition/coursed/2021": {
+          "word": "Condition",
+          "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
+        },
+        "while_loop/coursed/2021": {
+          "word": "Boucle Tant Que",
+          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+        },
+        "algorithm/express/2021": {
+          "word": "Algorithme",
+          "definition": "Une liste d'étapes pour terminer une tâche. "
+        },
+        "bug/express/2021": {
+          "word": "Bug",
+          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
+        },
+        "debugging/express/2021": {
+          "word": "Le Débogage",
+          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+        },
+        "sequencing/express/2021": {
+          "word": "Séquençage",
+          "definition": "Mettre les commandes dans le bon ordre afin que les ordinateurs puissent lire les commandes."
+        },
+        "program/express/2021": {
+          "word": "Programme",
+          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+        },
+        "programming/express/2021": {
+          "word": "Programmation",
+          "definition": "L'art de créer un programme."
+        },
+        "behavior/express/2021": {
+          "word": "comportement"
+        },
+        "sprite/express/2021": {
+          "word": "Lutin"
+        },
+        "event/express/2021": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "code/express/2021": {
+          "word": "code"
+        },
+        "loop/express/2021": {
+          "word": "Boucle",
+          "definition": "L'action de faire quelque chose encore et encore."
+        },
+        "repeat/express/2021": {
+          "word": "Répéter",
+          "definition": "Faire quelque chose de nouveau."
+        },
+        "command/express/2021": {
+          "word": "Commande",
+          "definition": "Une instruction pour l'ordinateur. De nombreuses commandes assemblées composent des algorithmes et des programmes informatiques."
+        },
+        "condition/express/2021": {
+          "word": "Condition",
+          "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
+        },
+        "conditionals/express/2021": {
+          "word": "Instructions conditionnelles",
+          "definition": "Déclarations qui s'exécutent que sous certaines conditions."
+        },
+        "while_loop/express/2021": {
+          "word": "Boucle Tant Que",
+          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+        },
+        "function/express/2021": {
+          "word": "Fonction",
+          "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
+        },
+        "variable/express/2021": {
+          "word": "Variable",
+          "definition": "Un espace réservé pour une information qui peut changer."
+        },
+        "for_loop/express/2021": {
+          "word": "Boucle For",
+          "definition": "Boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
+        },
+        "define/express/2021": {
+          "word": "Définis",
+          "definition": "Comprendre les détails des problèmes que tu essayes de résoudre"
+        },
+        "prepare/express/2021": {
+          "word": "Préparer",
+          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité que tu es sur le point d'entreprendre"
+        },
+        "reflect/express/2021": {
+          "word": "Réfléchir",
+          "definition": "Réfléchir soigneusement à quelque chose avec l'intention d'améliorer le résultat à l'avenir"
+        },
+        "try/express/2021": {
+          "word": "Essayer",
+          "definition": "Tenter de faire quelque chose"
+        },
+        "click/pre-express/2021": {
+          "word": "Cliquez",
+          "definition": "Appuie sur le bouton de la souris"
+        },
+        "drag/pre-express/2021": {
+          "word": "Glisser",
+          "definition": "Clique sur le bouton de ta souris et maintiens la pression pendant que tu déplaces le pointeur de la souris vers un nouvel emplacement"
+        },
+        "drop/pre-express/2021": {
+          "word": "Grand écart",
+          "definition": "Relâche le bouton de ta souris pour « lâcher » un élément que tu fais glisser"
+        },
+        "double_click/pre-express/2021": {
+          "word": "Double-Clique sur",
+          "definition": "Appuuie très rapidement sur le bouton de la souris"
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Algorithme",
+          "definition": "Une liste d'étapes pour terminer une tâche. "
+        },
+        "bug/pre-express/2021": {
+          "word": "Bug",
+          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
+        },
+        "debugging/pre-express/2021": {
+          "word": "Le Débogage",
+          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+        },
+        "program/pre-express/2021": {
+          "word": "Programme",
+          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+        },
+        "programming/pre-express/2021": {
+          "word": "Programmation",
+          "definition": "L'art de créer un programme."
+        },
+        "persistence/pre-express/2021": {
+          "word": "Persévérance",
+          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+        },
+        "loop/pre-express/2021": {
+          "word": "Boucle",
+          "definition": "L'action de faire quelque chose encore et encore."
+        },
+        "repeat/pre-express/2021": {
+          "word": "Répéter",
+          "definition": "Faire quelque chose de nouveau."
+        },
+        "event/pre-express/2021": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "behavior/coursee/2021": {
+          "word": "comportement"
+        },
+        "sprite/coursee/2021": {
+          "word": "Lutin"
+        },
+        "event/coursee/2021": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "copyright/coursee/2021": {
+          "word": "Copyright"
+        },
+        "loop/coursee/2021": {
+          "word": "Boucle",
+          "definition": "L'action de faire quelque chose encore et encore."
+        },
+        "repeat/coursee/2021": {
+          "word": "Répéter",
+          "definition": "Faire quelque chose de nouveau."
+        },
+        "function/coursee/2021": {
+          "word": "Fonction",
+          "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
+        },
+        "condition/coursee/2021": {
+          "word": "Condition",
+          "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
+        },
+        "conditionals/coursee/2021": {
+          "word": "Instructions conditionnelles",
+          "definition": "Déclarations qui s'exécutent que sous certaines conditions."
+        },
+        "while_loop/coursee/2021": {
+          "word": "Boucle Tant Que",
+          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+        },
+        "define/coursee/2021": {
+          "word": "Définis",
+          "definition": "Comprendre les détails des problèmes que tu essayes de résoudre"
+        },
+        "prepare/coursee/2021": {
+          "word": "Préparer",
+          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité que tu es sur le point d'entreprendre"
+        },
+        "reflect/coursee/2021": {
+          "word": "Réfléchir",
+          "definition": "Réfléchir soigneusement à quelque chose avec l'intention d'améliorer le résultat à l'avenir"
+        },
+        "try/coursee/2021": {
+          "word": "Essayer",
+          "definition": "Tenter de faire quelque chose"
+        }
+      }
+    }
+  }
+}

@@ -1,2 +1,11 @@
 {
+  "th-TH": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "วาดห้องให้สัตว์แต่ละตัว ",
+        "courseD_bee_nestedLoops8_2021": "Collect all of the nectar from each flower\nand make honey at each honeycomb. Use a nested loop.",
+        "courseD_bee_nestedLoops9_2021": "ทำหน้าหวานให้หมด"
+      }
+    }
+  }
 }

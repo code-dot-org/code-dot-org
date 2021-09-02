@@ -1,3 +1,4 @@
+---
 zu:
   data:
     blocks:
@@ -61,6 +62,10 @@ zu:
         options:
           CONDITION:
             '"when"': nini
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"no"': cha
       RyanLab_moveForward:
         text: qubekela phambili
       craft_ifPath:

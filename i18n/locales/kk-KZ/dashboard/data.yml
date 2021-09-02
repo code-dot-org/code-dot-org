@@ -351,6 +351,8 @@ kk:
         C4_unplugged_forloops: For ілмектері
         C4_unplugged_parameters: Параметрлермен ән жазу
         C4_unplugged_binary: Бинарлы
+        CSF_debugging_k1_blocks: Бағдарламаны дұрыстау
+        CSF_debugging_text_blocks: Бағдарламаны дұрыстау
         CSF_my_robotic_friends: Менің Достарым Роботтар
         frozen_intro: Код Жазу Сағатына Кіріспе
         frozen_loops: Циклдерге Кіріспе
@@ -392,6 +394,7 @@ kk:
         CSF_loops_AB: Ілмек
         csd_pair_programming: Жұптасып Бағдарламалау
         csd_applab_parameters: Параметрлі Функциялар
+        csd_debugging: Бағдарламаны дұрыстау
         playlab_2021: Ойын Лабораториясына Кіріспе
         playlab_2021_reader: Ойын Лабораториясына Кіріспе
     callout:

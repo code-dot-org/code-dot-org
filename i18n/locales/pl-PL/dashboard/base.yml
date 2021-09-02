@@ -167,8 +167,16 @@ pl:
     additional_information: "Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować."
     user_type_button: "Zaktualizuj typ konta"
     user_type_label: "Typ konta"
-    user_type_teacher: "Nauczyciel"
     user_type_student: "Uczeń"
+    user_type_student_desc: "Poznaj wszystkie nasze kursy i zajęcia, a także:"
+    user_type_student_ability_1: "Zapisz swoje postępy i projekty"
+    user_type_student_ability_2: "Dołącz do sekcji klasowej swojego nauczyciela"
+    user_type_teacher: "Nauczyciel"
+    user_type_teacher_desc: "Wszystko, do czego uczniowie mają dostęp, plus:"
+    user_type_teacher_ability_1: "Utwórz sekcje klasowe"
+    user_type_teacher_ability_2: "Przydziel i śledź prace uczniów"
+    user_type_teacher_ability_3: "Zapisz się na profesjonalną naukę"
+    user_type_teacher_ability_4: "Wejdź w interakcję na naszym forum dla nauczycieli"
     field_is_required: "jest wymagane"
     accept_terms: "Musisz wyrazić zgodę, aby utworzyć konto"
     error: "Wystąpił błąd."
@@ -397,7 +405,7 @@ pl:
       minecraft_codebuilder: 'Minecraft: Połączenie kodu'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Bohater Minecraftu'
-      playlab: 'Play Lab'
+      playlab: 'Lab Gier'
       playlab_k1: 'Play Lab (niewymagana biegłość w czytaniu)'
       scratch: 'Scratch'
       sports: 'Zawody'
@@ -555,8 +563,8 @@ pl:
     thank_you: 'Dziękujemy naszym <a href="https://code.org/about/donors">darczyńcom</a>, <a href="https://code.org/about/partners"> partnerom</a>, naszemu <a href="https://code.org/about/team"> zespołowi</a>, obsadzie wideo i naszym <a href="https://code.org/about/advisors"> doradcom edukacyjnym </a> za wsparcie przy tworzeniu Code Studio.'
     help_from_html: 'Szczególnie chcielibyśmy podziękować inżynierom z firm Amazon, Google i Microsoft, którzy pomogli nam utworzyć te materiały.'
     help_from_html_old: 'Inżynierowie z Amazon, Google i Microsoft pomogli utworzyć te materiały.'
-    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone.<br /> Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone.<br /> Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone.<br /> Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone.<br /> Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone.<br /> Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.<br /> The Amazing World of Gumball jest znakiem towarowym i &copy; %{current_year} Cartoon Network.'
-    art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. The Amazing World of Gumball jest znakiem towarowym &copy; %{current_year} Cartoon Network.'
+    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
     code_from_html: 'Code.org używa p5.play, który ma licencję <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: "Amazon Web Services i logo “Powered by AWS” są znakami towarowymi Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych krajach.\n"
     built_on_github: 'Oparty na GitHub firmy Microsoft'
@@ -578,6 +586,7 @@ pl:
     make_my_own_app: 'Utwórz własną aplikację'
     how_it_works: 'Jak to działa (Zobacz kod)'
     try_hour_of_code: 'Wypróbuj Godzinę Kodowania!'
+    store: 'Skład'
   reference_area:
     title: 'Czy potrzebujesz pomocy?'
     subtitle: 'Zobacz te filmiki i wskazówki'
@@ -601,8 +610,6 @@ pl:
       link: "Dowiedz się więcej"
       applab_unsupported_tablet: "App Lab działa najlepiej na komputerze stacjonarnym lub laptopie z myszką i klawiaturą. W przypadku korzystania z tych narzędzi na obecnym urządzeniu, mogą wystąpić problemy."
       gamelab_unsupported_tablet: "Game Lab działa najlepiej na komputerze stacjonarnym lub laptopie z myszką i klawiaturą. W przypadku korzystania z tych narzędzi na obecnym urządzeniu, mogą wystąpić problemy."
-      oceans_unsupported_browser: "Ta przeglądarka nie obsługuje niniejszego samouczka. Prosimy spróbować odwiedzić tę stronę korzystając z przeglądarki Edge, Chrome, Firefox lub innej nowoczesnej przeglądarki."
-      weblab_unsupported_browser: "Niestety obecnie występują problemy z ładowaniem Web Lab w tej przeglądarce. Proponujemy skorzystać z innej przeglądarki dopóki problem nie zostanie rozwiązany. Przepraszamy za niedogodności."
       weblab_unsupported_locale_storage: "Mogą wystąpić problemy w czasie używania Web Lab w trybie prywatnego przeglądania. Prosimy o przeładowanie projektu w zwykłym trybie przeglądarki. Przepraszamy za niedogodności."
   slow_loading: 'To trwa dłużej niż zwykle...'
   try_reloading: 'Spróbuj odświeżyć stronę'
@@ -988,9 +995,11 @@ pl:
       school_city: 'Miasto szkoły'
       school_country: 'Kraj szkoły'
       colombian_school_city: 'Miasto szkoły'
-      colombian_school_department: 'Okręg  Szkoły'
+      colombian_chilean_school_department: 'Szkolny Wydział/Region'
       colombian_school_municipality: 'Gmina Szkoły'
-      colombian_school_name: 'Nazwa szkoły'
+      colombian_chilean_school_name: 'Nazwa szkoły'
+      chilean_school_commune: 'Gmina'
+      chilean_school_id: 'Identyfikator szkoły'
       ages: 'Jaką grupę wiekową/grupy wiekowe uczysz w tym roku?'
       subjects: 'Jakiego przedmiotu/jakich przedmiotów uczysz w tym roku?'
       resources: 'Które z poniższych zasobów edukacji informatycznej wykorzystujesz?'

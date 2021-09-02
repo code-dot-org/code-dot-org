@@ -2,6 +2,7 @@ sq:
   data:
     parameter_names:
       actor: personazh
+      color: ngjyra
       counter: numërues
       height: gjatësia
       honey: mjaltë

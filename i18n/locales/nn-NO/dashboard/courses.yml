@@ -4,10 +4,10 @@ nn:
     course:
       name:
         csp-2017:
-          assignment_family_title: Informatikkprinsipper
+          assignment_family_title: AP® Prinsipp i Datavitskap
           version_title: "'17-'18"
         csd-2017:
-          assignment_family_title: Informatikkoppdagelser
+          assignment_family_title: Oppdagingar i datavitskap
           version_title: "'17-'18"
           description_short: En introduksjon til kurs i datavitenskap som gir elevene muligheten til å skape autentiske artifakter.
         allthethingscourse:
@@ -16,12 +16,12 @@ nn:
           description_student: Dette er ei kursrekke for alle kurs og har lengre skildring for elevar
           description_teacher: Dette er ei kursrekke for alle kurs og har lengre skildring for lærarar
         csd-2018:
-          assignment_family_title: Informatikkoppdagelser
+          assignment_family_title: Oppdagingar i datavitskap
           title: Informatikkoppdagelser ('18-'19)
           version_title: "'18-'19"
           description_short: En introduksjon til kurs i datavitenskap som gir elevene muligheten til å skape autentiske artifakter.
         csp-2018:
-          assignment_family_title: Informatikkprinsipper
+          assignment_family_title: AP® Prinsipp i Datavitskap
           title: Informatikkprinsipper ('18-'19)
           version_title: "'18-'19"
         csp-2019:

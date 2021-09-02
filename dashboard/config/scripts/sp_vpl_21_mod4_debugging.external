@@ -18,7 +18,7 @@ Debugging is the act of finding and fixing problems in code.
 
 ##### Your role as the teacher is to avoid directly debugging for your students, and instead, to guide them in the development of their own debugging skills. 
 
-<img src="https://images.code.org/b53dc24b96845e7e3cd77576316958a0-image-1626492100685.jpg" width="400px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/b53dc24b96845e7e3cd77576316958a0-image-1626492100685.jpg" alt="A teacher looks on to a student's desktop computer while they work." width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 ### Teacher tips:
 
@@ -32,7 +32,7 @@ Debugging is the act of finding and fixing problems in code.
 
 ##### Occasionally students will encounter a debugging level where they are explicitly asked to identify and fix bugs in provided code. While these are great opportunities to highlight specific kinds of errors and misconceptions, it’s important to build a culture of constant debugging, as this isn’t an activity that is done in isolated moments.
 
-### <a href="https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview" target="blank" >Click here</a> to read the CS Discoveries Guide to Debugging. 
+### <a href="https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview" target="blank" rel="noopener noreferrer" >Click here</a> to read the CS Discoveries Guide to Debugging. 
 
 
 MARKDOWN

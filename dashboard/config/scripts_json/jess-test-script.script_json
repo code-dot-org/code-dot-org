@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-01 21:00:30 UTC",
+    "serialized_at": "2021-08-31 23:44:14 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "jess-test-script"
@@ -186,7 +186,6 @@
         ],
         "progression": "Module 1 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -211,7 +210,6 @@
         ],
         "progression": "Summer Workshop Review (~ 10 - 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -236,7 +234,6 @@
         ],
         "progression": "Summer Workshop Review (~ 10 - 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -261,7 +258,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -286,7 +282,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -311,7 +306,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -336,7 +330,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -361,7 +354,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -386,7 +378,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -411,7 +402,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -436,7 +426,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -461,7 +450,6 @@
         ],
         "progression": "Debugging (~ 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -486,7 +474,6 @@
         ],
         "progression": "Debugging (~ 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -511,7 +498,6 @@
         ],
         "progression": "Debugging (~ 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -536,7 +522,6 @@
         ],
         "progression": "Debugging (~ 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -561,7 +546,6 @@
         ],
         "progression": "Module 1 Asynchronous Wrap Up (~ 10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -586,7 +570,6 @@
         ],
         "progression": "Module 2 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -611,7 +594,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -636,7 +618,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -661,7 +642,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -686,7 +666,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -711,7 +690,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -736,7 +714,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -761,7 +738,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -786,7 +762,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -811,7 +786,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -836,7 +810,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -861,7 +834,6 @@
         ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -886,7 +858,6 @@
         ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -911,7 +882,6 @@
         ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -936,7 +906,6 @@
         ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -961,7 +930,6 @@
         ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -986,7 +954,6 @@
         ],
         "progression": "Module 2 Asynchronous Wrap Up (~ 10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1011,7 +978,6 @@
         ],
         "progression": "Module 3 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1036,7 +1002,6 @@
         ],
         "progression": "Check In (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1061,7 +1026,6 @@
         ],
         "progression": "Theme Introduction (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1084,9 +1048,8 @@
         "level_keys": [
           "VPL - CSD Module 3 Curriculum Investigation Overview"
         ],
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1109,9 +1072,8 @@
         "level_keys": [
           "VPL - CSD - Module 3 - U4L1 Investigation"
         ],
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1134,9 +1096,8 @@
         "level_keys": [
           "VPL - CSD - Module 3 - Problem Solving Process Guide"
         ],
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1159,9 +1120,8 @@
         "level_keys": [
           "VPL - CSD Module 3 Problem Solving Process"
         ],
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1184,9 +1144,8 @@
         "level_keys": [
           "VPL - CSD - Module 3 - U4L2 Investigation"
         ],
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1209,9 +1168,8 @@
         "level_keys": [
           "VPL - CSD Module 3 U4L2 Reflection"
         ],
-        "progression": "Reflection (~5 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1234,9 +1192,8 @@
         "level_keys": [
           "VPL - CSD Module 3 U4L2 Intro Group Dynamics"
         ],
-        "progression": "Intro to Group Dynamics (~5 mins)"
+        "progression": "Supporting Effective Group Work (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1257,11 +1214,34 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "VPL - CSD Module 3 Equity - 2021"
+        ],
+        "progression": "Equity and Data (~5 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 3 Equity - 2021"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD Module 3 Equity - 2021"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "VPL - CSD - Module 3 Wrap Up"
         ],
         "progression": "Module 3 Asynchronous Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1276,7 +1256,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1286,7 +1266,6 @@
         ],
         "progression": "Module 4 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1301,7 +1280,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1311,7 +1290,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1326,7 +1304,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1336,7 +1314,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1351,7 +1328,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1361,7 +1338,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1376,7 +1352,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1386,7 +1362,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1401,7 +1376,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1411,7 +1386,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1426,7 +1400,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1436,7 +1410,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1451,7 +1424,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1461,7 +1434,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1476,7 +1448,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -1486,7 +1458,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1501,7 +1472,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -1511,7 +1482,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1526,7 +1496,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -1536,7 +1506,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1551,7 +1520,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -1561,7 +1530,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1576,7 +1544,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 13,
       "activity_section_position": null,
       "assessment": false,
@@ -1586,7 +1554,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1601,7 +1568,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 14,
       "activity_section_position": null,
       "assessment": false,
@@ -1611,7 +1578,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1626,7 +1592,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 15,
       "activity_section_position": null,
       "assessment": false,
@@ -1636,7 +1602,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1651,7 +1616,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 16,
       "activity_section_position": null,
       "assessment": false,
@@ -1661,7 +1626,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1676,7 +1640,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 17,
       "activity_section_position": null,
       "assessment": false,
@@ -1686,7 +1650,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1701,7 +1664,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 18,
       "activity_section_position": null,
       "assessment": false,
@@ -1711,7 +1674,6 @@
         ],
         "progression": "Module 4 Asynchronous Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1726,7 +1688,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1736,7 +1698,6 @@
         ],
         "progression": "Module 5 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1751,7 +1712,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1761,7 +1722,6 @@
         ],
         "progression": "Theme Introduction (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1776,7 +1736,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1786,7 +1746,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1801,7 +1760,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1811,7 +1770,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1826,7 +1784,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1836,7 +1794,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1851,7 +1808,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1861,7 +1818,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1876,7 +1832,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1886,7 +1842,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1901,7 +1856,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1911,7 +1866,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1926,7 +1880,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -1936,7 +1890,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1951,7 +1904,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -1961,7 +1914,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1976,7 +1928,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -1986,7 +1938,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2001,7 +1952,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -2011,7 +1962,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2026,7 +1976,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 13,
       "activity_section_position": null,
       "assessment": false,
@@ -2036,7 +1986,6 @@
         ],
         "progression": "Reflection (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2051,7 +2000,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 14,
       "activity_section_position": null,
       "assessment": false,
@@ -2061,7 +2010,6 @@
         ],
         "progression": "Supporting Equity (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2076,7 +2024,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 15,
       "activity_section_position": null,
       "assessment": false,
@@ -2086,7 +2034,6 @@
         ],
         "progression": "Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2101,7 +2048,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2111,7 +2058,6 @@
         ],
         "progression": "Module 6 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2126,7 +2072,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2136,7 +2082,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2151,7 +2096,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2161,7 +2106,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2176,7 +2120,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2186,7 +2130,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2201,7 +2144,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2211,7 +2154,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2226,7 +2168,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2236,7 +2178,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2251,7 +2192,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2261,7 +2202,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2276,7 +2216,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2286,7 +2226,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2301,7 +2240,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2311,7 +2250,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2326,7 +2264,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2336,7 +2274,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2351,7 +2288,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2361,7 +2298,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2376,7 +2312,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -2386,7 +2322,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2401,7 +2336,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 13,
       "activity_section_position": null,
       "assessment": false,
@@ -2411,7 +2346,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2426,7 +2360,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 14,
       "activity_section_position": null,
       "assessment": false,
@@ -2436,7 +2370,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2451,7 +2384,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 15,
       "activity_section_position": null,
       "assessment": false,
@@ -2461,7 +2394,6 @@
         ],
         "progression": "Differentiation (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2476,7 +2408,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 16,
       "activity_section_position": null,
       "assessment": false,
@@ -2486,7 +2418,6 @@
         ],
         "progression": "Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2501,7 +2432,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2511,7 +2442,6 @@
         ],
         "progression": "Module 7 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2526,7 +2456,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2536,7 +2466,6 @@
         ],
         "progression": "Theme Introduction (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2551,7 +2480,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2561,7 +2490,6 @@
         ],
         "progression": "Curriculum Investigation Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2576,7 +2504,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2586,7 +2514,6 @@
         ],
         "progression": "Unit 6: Lesson 1 - Innovations in Computing (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2601,7 +2528,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2611,7 +2538,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2626,7 +2552,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2636,7 +2562,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2651,7 +2576,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2661,7 +2586,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2676,7 +2600,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2686,7 +2610,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2701,7 +2624,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2711,7 +2634,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2726,7 +2648,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2736,7 +2658,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2751,7 +2672,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2761,7 +2682,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2776,7 +2696,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -2786,7 +2706,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2801,7 +2720,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 13,
       "activity_section_position": null,
       "assessment": false,
@@ -2811,7 +2730,6 @@
         ],
         "progression": "Unit 6: Lesson 3 - The Circuit Playground (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2826,7 +2744,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 14,
       "activity_section_position": null,
       "assessment": false,
@@ -2836,7 +2754,6 @@
         ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2851,7 +2768,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 15,
       "activity_section_position": null,
       "assessment": false,
@@ -2861,7 +2778,6 @@
         ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2876,7 +2792,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 16,
       "activity_section_position": null,
       "assessment": false,
@@ -2886,7 +2802,6 @@
         ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2901,7 +2816,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 17,
       "activity_section_position": null,
       "assessment": false,
@@ -2911,7 +2826,6 @@
         ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2926,7 +2840,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 18,
       "activity_section_position": null,
       "assessment": false,
@@ -2936,7 +2850,6 @@
         ],
         "progression": "Reflection: Problem Solving Process for Programming (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2951,7 +2864,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 19,
       "activity_section_position": null,
       "assessment": false,
@@ -2961,7 +2874,6 @@
         ],
         "progression": "Preview: Alternate Units to Unit 6 (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2976,7 +2888,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 20,
       "activity_section_position": null,
       "assessment": false,
@@ -2986,7 +2898,6 @@
         ],
         "progression": "Preview: Alternate Units to Unit 6 (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3001,7 +2912,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 21,
       "activity_section_position": null,
       "assessment": false,
@@ -3011,7 +2922,6 @@
         ],
         "progression": "Module 7 Asynchronous Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3026,7 +2936,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3036,7 +2946,6 @@
         ],
         "progression": "Module 8 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3051,7 +2960,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3061,7 +2970,6 @@
         ],
         "progression": "Curriculum Investigation Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3076,7 +2984,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3086,7 +2994,6 @@
         ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3101,7 +3008,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3111,7 +3018,6 @@
         ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3126,7 +3032,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3136,7 +3042,6 @@
         ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3151,7 +3056,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -3161,7 +3066,6 @@
         ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3176,7 +3080,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -3186,7 +3090,6 @@
         ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3201,7 +3104,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -3211,7 +3114,6 @@
         ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3226,7 +3128,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -3236,7 +3138,6 @@
         ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3251,7 +3152,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -3261,7 +3162,6 @@
         ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3276,7 +3176,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -3286,7 +3186,6 @@
         ],
         "progression": "Equity Journey (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3301,7 +3200,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -3311,7 +3210,6 @@
         ],
         "progression": "Module 8 Asynchronous Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3794,6 +3692,17 @@
         "level.key": "VPL - CSD Module 3 U4L2 Intro Group Dynamics",
         "script_level.level_keys": [
           "VPL - CSD Module 3 U4L2 Intro Group Dynamics"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 3 Equity - 2021",
+        "script_level.level_keys": [
+          "VPL - CSD Module 3 Equity - 2021"
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",

@@ -13,6 +13,7 @@ my:
   cancel: ပယ်ဖျတ်သည်
   or: သို့မဟုတ်
   appname: Code.org
+  stage_number: သင်ခန်းစာ %{number}
   continue: ဆက်လုပ်ပါ
   auth:
     clever: Clever
@@ -28,6 +29,8 @@ my:
       email: email လိပ္စာ
       google_classroom: Google Classroom
       clever: Clever
+  follower:
+    already_exists: သင်%{section_name} တွင်ပါဝင်ပြီးသားဖြစ်ပါတယ်.
   crud:
     edit: ပြုပြင်သည်
     submit: ပေးပို့ပါ
@@ -73,6 +76,8 @@ my:
   race_interstitial:
     submit: ပေးပို့ပါ
     decline: ပိတ်ပါ
+  progress:
+    not_started: မစရသေးပါ
   project:
     name: အမည္
     saved: သိမ်းထားပြီးပါပြီ

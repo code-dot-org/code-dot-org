@@ -3,8 +3,13 @@ import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import AddVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddVocabularyDialog';
 import sinon from 'sinon';
+import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('AddVocabularyDialog', () => {
+  // Warnings allowed due to usage of deprecated componentWillMount
+  // lifecycle method.
+  allowConsoleWarnings();
+
   let defaultProps, afterSaveSpy, handleCloseSpy;
   beforeEach(() => {
     afterSaveSpy = sinon.spy();
@@ -60,6 +65,7 @@ describe('AddVocabularyDialog', () => {
 
     expect(handleCloseSpy.calledOnce).to.be.true;
     expect(afterSaveSpy.calledOnce).to.be.true;
+    server.restore();
   });
 
   it('renders an existing vocabulary for edit', () => {
@@ -107,6 +113,7 @@ describe('AddVocabularyDialog', () => {
     server.respond();
     wrapper.update();
     expect(wrapper.find('h3').contains('There was an error'));
+    server.restore();
   });
 
   it('renders default props', () => {

@@ -1,10 +1,10 @@
 ---
-title: Hour of Code How-to Guide for parents
+title: Hour of Code - Ghid pentru părinți
 ---
 
 # Cum să organizezi o Oră de Programare cu copilul tău
 
-Încercând o Hour of Code este un mod simplu și distractiv de a-l introduce pe copilul tău în informatică, poate pentru prima dată. Not only is computer science foundational to all fields of study, but [recent studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+Încercând o Hour of Code este un mod simplu și distractiv de a-l introduce pe copilul tău în informatică, poate pentru prima dată. Știința calculatoarelor nu este doar un element de bază pentru toate celelalte domenii de studiu, ci în plus, [studiile recente arată că](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): copiii care studiază știința calculatoarelor au rezultate mai bune la alte materii, au rezultate excelente în ceea ce privește rezolvarea problemelor și au <font color="00adbc"><b>17% mai multe șanse de a se înscrie la facultate</b></font>.
 
 Te poți alătura la zeci de milioane de elevi din lumea întreagă în acest eveniment global. Împreună putem să îi inspirăm pe copii să învețe, să spargă stereotipuri și să îi ajute pe copii să descopere un interes dobândit. Și cel mai bine din toate, ai deja tot ce ai nevoie pentru a aduce Ora de Cod în casa ta!
 
@@ -14,9 +14,9 @@ Te poți alătura la zeci de milioane de elevi din lumea întreagă în acest ev
 
 Hour of Code este simpu de rulat - chiar pentru începători. Nu ai nevoie de experiență în știința calculatoarelor sau în predare pentru a facilita o activitate distractivă pentru copiii tăi care vor și învăța și se vor și distra. 
 
-You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+Poți să încerci să organizezi Hour of Code pe un computer, o tabletă, un smartphone sau chiar offline! Iată cum poți să începi.
 
-[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
+[<button>Consultă ghidul PDF</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
@@ -24,21 +24,21 @@ You can try the Hour of Code with a computer, a tablet, a smartphone, or complet
 
 [![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-There are countless [Hour of Code activities](https://hourofcode.com/us/learn) available to you if you’re working on a computer with internet access. Te încurajăm să arunci o privire în avans la unele din opțiunile tale astfel încât să îți poți ghida copilul către exercițiile de care se va bucura. 
+Există nenumărate [activități Hour of Code](https://hourofcode.com/us/learn) disponibile dacă lucrezi de pe un computer cu acces la internet. Te încurajăm să arunci o privire în avans la unele din opțiunile tale astfel încât să îți poți ghida copilul către exercițiile de care se va bucura. 
 
 Toate activitățile noastre integrează rezolvarea problemelor și gândirea critică cu distracția și creativitatea, dar aici sunt câteva preferințe ale elevilor:
 
-- For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
-- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Pentru copilul care adoră să se joace: [Minecraft](https://code.org/minecraft) sau [Petrecere dansantă](https://code.org/dance)
+- Pentru copilul căruia îi plac filmele de animație Disney: [Războiul Stelelor](https://code.org/starwars), [Regatul de gheață](https://studio.code.org/s/frozen/stage/1/puzzle/1) sau [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - Pentru copilul care iubește să învețe: [IA pentru Oceane](https://code.org/oceans) sau [Fă Muzică cu Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>Tehnologie simplă sau fără tehnologie?</h3>
 
-If you’ll be using limited or no technology, you can filter [Hour of Code activities](https://hourofcode.com/us/learn) by selecting “No computers or devices” in the *Classroom technology* section.
+Dacă resursele tale tehnologice sunt limitate sau inexistente, poți filtra [activitățile Hour of Code](https://hourofcode.com/us/learn) selectând „Fără computere sau dispozitive” în secțiunea *Tehnologie necesară pentru ore*.
 
 [![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
-You can also check out these [short videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) for more ideas on how to facilitate an unplugged activity at home!
+Poți să consulți și aceste [scurte clipuri video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) pentru mai multe idei despre cum să organizezi o activitate offline acasă!
 
 ## 2) Pregatește-te din timp
 
@@ -48,51 +48,51 @@ Acum că ai câteva tutoriale în minte, ar putea fi folositor să încerci aces
 
 <h3>Mai mult de un copil acasa?</h3>
 
-Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
+Ia în considerare posibilitatea de a le oferi căști fiecăruia dacă vor lucra pe dispozitive separate. În acest fel, vor putea să desfășoare activități cu sunet fără a-și distrage atenția.
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Programarea pereche îi încurajează pe copii să lucreze împreună. Atunci când sunt parteneri, ei se ajută unul pe altul să rezolve problema. Ei vor vedea, de asemenea, că programarea este socială şi colaborativă.
+Dacă vei folosi doar un singur dispozitiv sau pur și simplu dacă vrei să transformi Hour of Code într-o activitate mai interactivă, încearcă [programarea în perechi](https://www.youtube.com/watch?v=vgkahOzFH2Q). Programarea pereche îi încurajează pe copii să lucreze împreună. Atunci când sunt parteneri, ei se ajută unul pe altul să rezolve problema. Ei vor vedea, de asemenea, că programarea este socială şi colaborativă.
 
 <h3>Fă-i pe copii să se entuziasmeze. </h3>
 
-This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
+Aceasta este o ocazie excelentă de a adăuga un nou tip de activitate la ziua copilului tău. Poți prelungi distracția și după urmărirea tutorialelor cu aceste sugestii:
 
-- Show them an [inspirational video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) that features one of their favorite role models
-- Inspire them with a video on one of the [many careers](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) that computer science skills can lead to
-- [Order some swag](https://store.code.org/)! Poți alege dintre tricouri, stickere, sau chiar tatuaje temporare. Împărtășește-l imediat cu ei pentru a-i entuziasma, sau păstrează-l până la sfârșitul Hour of Code ca un trofeu special. 
+- Arată-le un [clip video inspirațional](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) în care apare unul dintre modelele lor preferate
+- Inspiră-i cu un videoclip despre una dintre [numeroasele cariere](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) pe care le pot avea în urma dobândirii de competențe în domeniul științei calculatoarelor.
+- [Comandă niște articole cu logo](https://store.code.org/)! Poți alege dintre tricouri, stickere, sau chiar tatuaje temporare. Împărtășește-l imediat cu ei pentru a-i entuziasma, sau păstrează-l până la sfârșitul Hour of Code ca un trofeu special. 
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
 ## 3) Sfaturi pentru a-l introduce pe copilul tău în CS 
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
+Nu este nicio problemă dacă atât tu cât și copilul tău sunteți începători în domeniul științei calculatoarelor. Iată câteva idei pentru prezentarea activității Hour of Code și pentru a te motiva să abordezi ȘC:
 
-- Explicați modurile în care tehnologia are impact asupra vieții voastre, cu exemple specifice care l-ar putea interesa pe copilul tău. De exemplu, poți discuta despre medicină sau să conectezi oamenii virtual. Also, check out [Code.org/CSforGood](https://code.org/csforgood) for suggested discussion questions.
+- Explicați modurile în care tehnologia are impact asupra vieții voastre, cu exemple specifice care l-ar putea interesa pe copilul tău. De exemplu, poți discuta despre medicină sau să conectezi oamenii virtual. De asemenea, consultă [Code.org/CSforGood](https://code.org/csforgood) pentru sugestii de întrebări.
 - Împreună, fă în fiecare zi o listă cu lucrurile care utilizează programarea pentru a lucra corespunzător.
 
 [![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-<h3>Have young women at home?</h3>
+<h3>Locuiești împreună cu tinere fete?</h3>
 
-<a href="https://code.org/girls">Aici sunt câteva recomandări</a> pentru a te ajuta să le stârnești interesul în informatică. **Pro-tip**: You can start just by telling them they’d be great at it!
+<a href="https://code.org/girls">Aici sunt câteva recomandări</a> pentru a te ajuta să le stârnești interesul în informatică. **Pro-tip:** Poți începe spunându-le că s-ar descurca grozav în domeniul acesta!
 
 <h3>Rezolvați problema împreună</h3>
 
-Lastly, when your child comes across difficulties it's okay to respond: - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+În cele din urmă, atunci când copilul tău întâmpină dificultăți, este normal să răspunzi:- "Nu știu. Să rezolvăm asta împreună.”- „Tehnologia nu funcționează întotdeauna așa cum ne dorim.”- „Să înveți să programezi e ca și cum ai învăța o limbă străină, nu o vei vorbi fluent imediat.”
 
-Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
+Știința calculatoarelor înseamnă să înveți cum să „depanezi” situațiile în care lucrurile nu au ieșit așa cum ne doream. Împreună, tu și copilul tău vă puteți gândi la modalități creative de a rezolva problema!
 
 ## 4) NU uita să sărbătoriți!
 
-The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+Hour of Code este un eveniment global, iar familia ta merită să sărbătorească. Iată câteva modalități de a face evenimentul Hour of Code și mai special:
 
-- Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity 
-- [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise. 
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Imprimă [Certificatele Hour of Code](https://staging.code.org/certificates) pe care le vei acorda atunci când copilul își încheie activitatea. 
+- [Imprimă autocolantele](https://staging.hourofcode.com/us/promote/resources#stickers) acasă sau [cumpără-le online](https://store.code.org/), ca o surpriză suplimentară. 
+- Distribuie pe rețelele de socializare fotografii și videoclipuri de la evenimentul Hour of Code organizat acasă. Folosește #HourOfCode și @codeorg pentru ca și noi să le spunem altora despre succesul tău!
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
 <h2>Ce urmeaza dupa Hour of Code?</h2>
 
-Computer science doesn’t have to end with the Hour of Code! În timp ce 90% dintre părinți doresc ca copiii lor să învețe informatică, multe scoli încă nu o predau. Pentru a ajuta, curiculul nostru se bazează întotdeauna pe web și utilizarea gratuită. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
+Studiul științei calculatoarelor nu trebuie să se încheie cu evenimentul Hour of Code! În timp ce 90% dintre părinți doresc ca copiii lor să învețe informatică, multe scoli încă nu o predau. Pentru a ajuta, curiculul nostru se bazează întotdeauna pe web și utilizarea gratuită. [Află cum](https://code.org/yourschool) poți să aduci ȘC în școala copilului tău chiar astăzi.
 
-[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
+[<button>Consultă ghidul PDF</button>]({{ localized_files/hourofcode_parent_how_to }})

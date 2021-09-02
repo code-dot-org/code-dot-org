@@ -103,6 +103,14 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': տեսանելի
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': տեսանելի
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -311,6 +319,11 @@ hy:
             '"right"': ճիշտ arrow
             '"w"': W
             '"s"': S
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': այո
+            '"no"': ոչ
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -318,12 +331,20 @@ hy:
             '"down"': ներքեւ arrow
             '"left"': ձախ arrow
             '"right"': ճիշտ arrow
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': ծիածան
       RyanLab_moveForward:
         text: առաջ ընթանալ
       RyanLab_turnLeft:
         text: դիմել է մնացել
       RyanLab_turnRight:
         text: աջ շրջադարձ
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": գույնը
       aalab_layoutSprites:
         options:
           FORMAT:

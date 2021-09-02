@@ -21,8 +21,6 @@ ms:
     mailer:
       confirmation_instructions:
         subject: Arahan pengesahan Code.org
-      reset_password_instructions:
-        subject: Code.org arahan set semula kata laluan
       unlock_instructions:
         subject: Buka arahan
     omniauth_callbacks:

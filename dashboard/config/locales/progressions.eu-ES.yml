@@ -4,6 +4,7 @@ eu:
     progressions:
       Artist Project: Artist proiektua
       'Artist: Variables': 'Artista: aldagaiak'
+      Debugging: Arazketa
       Events: Gertaerak
       For Loops: For begiztak
       Free Play: Joku askea
@@ -11,5 +12,8 @@ eu:
       Functions with Parameters: Parametrodun funtzioak
       Lists: Zerrendak
       Measures: Neurriak
+      Overview: Bista orokorra
       Pair Programming: Bikoteka programatzen
+      Sprite Properties: Sprite-n Propietateak
+      Variables: Aldagaiak
       Wrap-up: Ixtea

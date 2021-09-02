@@ -18,7 +18,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     if @feedback.nil?
       head :no_content
     else
-      render json: @feedback.summarize
+      render json: @feedback.summarize(true)
     end
   end
 
@@ -32,7 +32,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       params.require(:student_id),
       params.require(:level_id),
       params.require(:script_id)
-    ).map(&:summarize)
+    ).map {|feedback| feedback.summarize(true)}
 
     render json: @level_feedbacks
   end
@@ -53,8 +53,12 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     @teacher_feedback.teacher_id = current_user.id
 
     if @teacher_feedback.save
+      if @teacher_feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking
+        reset_progress_for_keep_working(@teacher_feedback)
+      end
+
       # reload is called so that the correct created_at date is sent back
-      render json: @teacher_feedback.reload.summarize, status: :created
+      render json: @teacher_feedback.reload.summarize(true), status: :created
     else
       head :bad_request
     end
@@ -73,6 +77,16 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   end
 
   private
+
+  def reset_progress_for_keep_working(teacher_feedback)
+    UserLevel.update_best_result(
+      teacher_feedback.student_id,
+      teacher_feedback.level_id,
+      teacher_feedback.script_id,
+      ActivityConstants::TEACHER_FEEDBACK_KEEP_WORKING,
+      false
+    )
+  end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def teacher_feedback_params

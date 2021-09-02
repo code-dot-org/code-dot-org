@@ -7,13 +7,13 @@ import {levelWithProgressType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
 import {isLevelAssessment} from './progressHelpers';
-import {
-  BubbleBadgeWrapper,
-  AssessmentBadge,
-  KeepWorkingBadge
-} from '@cdo/apps/templates/progress/BubbleBadge';
 import {connect} from 'react-redux';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
+import {
+  BubbleShape,
+  BubbleSize
+} from '@cdo/apps/templates/progress/BubbleFactory';
 
 /**
  * This component is similar to our ProgressBubble, except that instead of being
@@ -139,13 +139,15 @@ class ProgressPill extends React.Component {
           )}
           {tooltip}
           {displayBadge && (
-            <BubbleBadgeWrapper>
-              {hasKeepWorkingFeedback ? (
-                <KeepWorkingBadge />
-              ) : (
-                <AssessmentBadge />
-              )}
-            </BubbleBadgeWrapper>
+            <BubbleBadge
+              badgeType={
+                hasKeepWorkingFeedback
+                  ? BadgeType.keepWorking
+                  : BadgeType.assessment
+              }
+              bubbleSize={BubbleSize.full}
+              bubbleShape={BubbleShape.pill}
+            />
           )}
         </div>
       </a>

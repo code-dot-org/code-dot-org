@@ -50,6 +50,38 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal file_objs[1].size, starter_assets[1]['size']
   end
 
+  test 'show: returns template level starter_assets when defined' do
+    uuid_name_1 = "#{SecureRandom.uuid}.png"
+    key_1 = "starter_assets/#{uuid_name_1}"
+    uuid_name_2 = "#{SecureRandom.uuid}.jpg"
+    file_objs = [
+      MockS3ObjectSummary.new(key_1, 123, 1.day.ago)
+    ]
+    LevelStarterAssetsController.any_instance.
+      expects(:get_object).once.
+      returns(file_objs[0])
+    level_starter_asset_1 = {
+      'ty.png' => uuid_name_1
+    }
+    level_starter_asset_2 = {
+      'welcome.jpg' => uuid_name_2
+    }
+    template_level = create(:applab, starter_assets: level_starter_asset_1)
+
+    child_level = create(:applab)
+    child_level.project_template_level_name = template_level.name
+    child_level.starter_assets = level_starter_asset_2
+    child_level.save!
+
+    # start assets comes from template_level not child_level
+    get :show, params: {level_name: child_level.name}
+    assert_response :success
+    starter_assets = JSON.parse(response.body)['starter_assets']
+    assert_equal 'ty.png', starter_assets[0]['filename']
+    assert_equal 'image', starter_assets[0]['category']
+    assert_equal file_objs[0].size, starter_assets[0]['size']
+  end
+
   test 'file: returns requested file' do
     LevelStarterAssetsController.any_instance.
       expects(:get_object).

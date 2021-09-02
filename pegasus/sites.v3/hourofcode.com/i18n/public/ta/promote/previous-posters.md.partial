@@ -4,7 +4,7 @@ layout: wide
 nav: promote_nav
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
 # குறியீடு சுவரொட்டிகளின் கடந்த நேரம்
 
@@ -16,4 +16,4 @@ nav: promote_nav
 
 {{விளம்பர_போஸ்டர்கள்}}
 
-{{signup_button}}
+{{ signup_button }}

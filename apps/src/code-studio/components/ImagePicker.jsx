@@ -6,14 +6,15 @@ import color from '../../util/color';
 import IconLibrary from './IconLibrary';
 import ImageURLInput from './ImageURLInput';
 import {ICON_PREFIX} from '@cdo/apps/applab/constants';
+import {RecordingFileType} from './recorders';
 
 const extensionFilter = {
   // Note: .jfif files will be converted to .jpg by the server.
   image: '.jpg, .jpeg, .jfif, .gif, .png',
-  audio: '.mp3',
+  audio: '.mp3, .wav',
   document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx',
   // Default set of valid extensions (used if type filter is not specified)
-  default: '.jpg, .jpeg, .jfif, .gif, .png, .mp3, .pdf, .doc, .docx'
+  default: '.jpg, .jpeg, .jfif, .gif, .png, .mp3, .wav, .pdf, .doc, .docx'
 };
 
 /**
@@ -30,6 +31,7 @@ export default class ImagePicker extends React.Component {
     useFilesApi: PropTypes.bool,
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
+    recordingFileType: PropTypes.oneOf(Object.values(RecordingFileType)),
     currentValue: PropTypes.string,
     currentImageType: PropTypes.string,
     //For logging purposes
@@ -63,6 +65,7 @@ export default class ImagePicker extends React.Component {
           projectId={this.props.projectId}
           soundPlayer={this.props.soundPlayer}
           disableAudioRecording={disableAudio}
+          recordingFileType={this.props.recordingFileType}
           imagePicker={true}
           elementId={this.props.elementId}
           levelName={levelName}
@@ -167,6 +170,10 @@ export default class ImagePicker extends React.Component {
     if (reduxState && reduxState.level) {
       levelName = reduxState.level.name;
       isStartMode = reduxState.level.isStartMode;
+    }
+    if (reduxState.javalab && reduxState.javalab.levelName) {
+      levelName = reduxState.javalab.levelName;
+      isStartMode = reduxState.javalab.isStartMode;
     }
 
     return (

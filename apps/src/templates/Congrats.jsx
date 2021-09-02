@@ -4,7 +4,6 @@ import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
 import styleConstants from '../styleConstants';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../util/color';
 
 export default class Congrats extends Component {
@@ -43,19 +42,8 @@ export default class Congrats extends Component {
    */
   renderExtraCertificateLinks = (language, tutorial) => {
     let extraLinkUrl, extraLinkText;
-    // https://codedotorg.atlassian.net/browse/FND-1604
-    // these can be removed after July 25 2021
-    if (language === 'ko') {
-      if (/oceans/.test(tutorial)) {
-        extraLinkUrl = pegasus('/files/online-coding-party-2021-oceans.pdf');
-        extraLinkText =
-          '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
-      } else if (/dance/.test(tutorial)) {
-        extraLinkUrl = pegasus('/files/online-coding-party-2021-dance.pdf');
-        extraLinkText =
-          '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
-      }
-    }
+    // Add extra links here
+
     if (!extraLinkUrl || !extraLinkText) {
       // There are no extra links to render.
       return;

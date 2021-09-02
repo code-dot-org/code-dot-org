@@ -1,0 +1,206 @@
+{
+  "si-LK": {
+    "data": {
+      "resources": {
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "For ලුපයේ සතුට"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "For ලුපයේ සතුට"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "For ලුපයේ සතුට"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "For ලුපයේ සතුට"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "For ලුපයේ සතුට"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "අන්තර්ජාලය"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "අන්තර්ජාලය"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "අන්තර්ජාලය"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "ඔල්මාද වීම"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "ඔල්මාද වීම"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "ඔල්මාද වීම"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "ඔල්මාද වීම"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "විශාල සිදුවීම"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "විශාල සිදුවීම"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "විශාල සිදුවීම"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "සතුටු සිතියම්"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "විශාල සිදුවීම"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "විශාල සිදුවීම"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "විශාල සිදුවීම"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "මගේ රොබෝ මිතුරන්"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "මගේ රොබෝ මිතුරන්"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "මගේ රොබෝ මිතුරන්"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "මගේ රොබෝ මිතුරන්"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "මගේ රොබෝ මිතුරන්"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "විශාල සිදුවීම"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "විශාල සිදුවීම"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "විශාල සිදුවීම"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "ද්විමය වළලු"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "ද්විමය වළලු"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "ද්විමය වළලු"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "ද්විමය වළලු"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "ද්විමය වළලු"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "pair_programming/express/2021": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "variables_video/express/2021": {
+          "name": "විචල්‍යන්"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        }
+      }
+    }
+  }
+}
