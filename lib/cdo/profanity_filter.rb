@@ -10,8 +10,8 @@ class ProfanityFilter
   #
   # Words in this list will be blocked for all languages _except_ for those
   # listed along with the word.
-  # Words in this list should be _unblocked_ on WebPurify, since we are
-  # handling them with our custom code, here.
+  # Words in this list should be added to the allowlist on WebPurify, since we are
+  # handling them with our custom code, here. Webpurify credentials are in LastPass.
   LANGUAGE_SPECIFIC_ALLOWLIST = {
     fu: %w(it), # past-tense "to be" in Italian
     fick: %w(sv) # "got" in Swedish
