@@ -43,7 +43,7 @@ export class VisualizationOverlay extends React.Component {
     document.addEventListener('mousemove', this.onMouseMove);
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (
       this.props.width !== nextProps.width ||
       this.props.height !== nextProps.height
