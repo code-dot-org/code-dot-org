@@ -62,7 +62,7 @@ export default class SoundLibrary extends React.Component {
     selectedSound: {}
   };
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     this.sounds = Sounds.getSingleton();
   }
 
