@@ -18,8 +18,8 @@ const DENYLIST = [
 describe('react-storybook stories render without errors or warnings', function() {
   throwOnConsoleErrorsEverywhere();
 
-  // TODO: Add warnings back once we've run the rename-unsafe-lifecycles codemod.
-  // https://codedotorg.atlassian.net/browse/XTEAM-377
+  // TODO: Add warnings back once redux/react-redux have been upgraded.
+  // https://codedotorg.atlassian.net/browse/XTEAM-376
   // throwOnConsoleWarningsEverywhere();
 
   clearTimeoutsBetweenTests();

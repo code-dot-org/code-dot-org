@@ -328,7 +328,8 @@ class InstructionsCSF extends React.Component {
           />
           <InstructionsCsfMiddleCol
             ref={instructions =>
-              (this.instructions = instructions?.instructions)
+              (this.instructions =
+                instructions && instructions.getWrappedInstance().instructions)
             }
             dismissHintPrompt={this.dismissHintPrompt}
             shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
@@ -417,5 +418,5 @@ export default connect(
     };
   },
   null,
-  {forwardRef: true}
+  {withRef: true}
 )(Radium(InstructionsCSF));
