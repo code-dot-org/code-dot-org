@@ -179,6 +179,10 @@ module AWS
             },
             DomainName: origin,
             OriginPath: '',
+            OriginShield: {
+              Enabled: true,
+              OriginShieldRegion: {Ref: 'AWS::Region'}
+            }
           },
           {
             Id: 'cdo-assets',

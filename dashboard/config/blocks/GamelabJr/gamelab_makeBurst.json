@@ -3,7 +3,7 @@
   "config": {
     "func": "makeBurst",
     "inline": true,
-    "blockText": "burst {NUM} new {ANIMATION_NAME} sprites",
+    "blockText": "create {EFFECT} effect with {NUM} {ANIMATION_NAME} sprites",
     "color": [
       355,
       ".7",
@@ -17,6 +17,23 @@
       {
         "name": "ANIMATION_NAME",
         "customInput": "costumePicker"
+      },
+      {
+        "name": "EFFECT",
+        "options": [
+          [
+            "burst",
+            "\"burst\""
+          ],
+          [
+            "pop",
+            "\"pop\""
+          ],
+          [
+            "rain",
+            "\"rain\""
+          ]
+        ]
       }
     ]
   }

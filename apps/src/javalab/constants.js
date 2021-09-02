@@ -67,9 +67,7 @@ export const NeighborhoodExceptionType = makeEnum(
 
 export const TheaterSignalType = {
   AUDIO_URL: 'AUDIO_URL',
-  VISUAL_URL: 'VISUAL_URL',
-  AUDIO: 'AUDIO',
-  VISUAL: 'VISUAL'
+  VISUAL_URL: 'VISUAL_URL'
 };
 
 export const StatusMessageType = {
@@ -78,6 +76,11 @@ export const StatusMessageType = {
   RUNNING: 'RUNNING',
   GENERATING_RESULTS: 'GENERATING_RESULTS',
   EXITED: 'EXITED'
+};
+
+export const InputMessageType = {
+  SYSTEM_IN: 'SYSTEM_IN',
+  PLAYGROUND: 'PLAYGROUND'
 };
 
 export const SoundExceptionType = makeEnum(

@@ -39,7 +39,8 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "validation_code": "var validationInfo = getValidationInfo();\r\nvar isFontSet = validationInfo.font.font != 'Arial';\r\nvar isColorSet = validationInfo.font.fill != 'black' || validationInfo.font.stroke != 'white';\r\nvar hasTextEffect = validationInfo.textEffects.length > 0;\r\n\r\n// Pass the level if they have at least two of the three effects.\r\nif (isFontSet && isColorSet || isFontSet && hasTextEffect || isColorSet && hasTextEffect) {\r\n  setSuccessFrame();\r\n}\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    if (isFontSet && isColorSet && hasTextEffect) {\r\n      // 3 effects\r\n      levelFailure(0, 'genericBonusSuccess');\r\n    } else {\r\n      // 2 effects\r\n      levelFailure(0, 'genericSuccess');\r\n    }\r\n  } else {\r\n    if (isFontSet || isColorSet || hasTextEffect) {\r\n      // 1 effect\r\n      levelFailure(3, 'poemBotOneTextEffect');\r\n    } else {\r\n      // 0 effects\r\n      levelFailure(3, 'poemBotNoTextEffects');\r\n    }\r\n  }\r\n}"
   },
   "game_id": 64,
   "published": true,
