@@ -19,6 +19,8 @@
 #
 
 class ChannelToken < ApplicationRecord
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   belongs_to :user
   belongs_to :level
 
