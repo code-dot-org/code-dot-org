@@ -44,7 +44,7 @@ export class WorkshopSummaryReport extends React.Component {
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (
       nextProps.startDate !== this.props.startDate ||
       nextProps.endDate !== this.props.endDate ||

@@ -36,7 +36,7 @@ export default class VersionHistory extends React.Component {
     confirmingClearPuzzle: false
   };
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     if (this.props.useFilesApi) {
       filesApi.getVersionHistory(
         this.onVersionListReceived,

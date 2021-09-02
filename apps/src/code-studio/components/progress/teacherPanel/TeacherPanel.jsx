@@ -45,7 +45,7 @@ class TeacherPanel extends React.Component {
     loadLevelsWithProgress: PropTypes.func.isRequired
   };
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (
       this.props.pageType !== pageTypes.scriptOverview && // no progress is shown on script overview page in teacher panel
       nextProps.selectedSection?.id !== this.props.selectedSection?.id
