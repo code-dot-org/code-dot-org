@@ -25,7 +25,7 @@ export default class Pairing extends React.Component {
     loading: true
   };
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     $.ajax({
       url: this.props.source,
       method: 'GET',

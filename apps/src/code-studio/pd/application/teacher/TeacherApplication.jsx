@@ -25,8 +25,8 @@ export default class TeacherApplication extends FormController {
   /**
    * @override
    */
-  UNSAFE_componentWillMount() {
-    super.UNSAFE_componentWillMount();
+  componentWillMount() {
+    super.componentWillMount();
 
     // Extract school info saved in sessionStorage, if any
     let reloadedSchoolId = undefined;
