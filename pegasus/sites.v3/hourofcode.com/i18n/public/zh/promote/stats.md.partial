@@ -16,7 +16,7 @@ nav: promote_nav
 
 ## 在新聞稿中使用這則引言
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### 將計算機科學帶到你的學校。從《編程一小時》開始。
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. 但不到 50% 的學校有計算機科學課程！ 好消息是我們正在改變此狀況。 如果你去年聽說過一小時玩程式（Hour of Code）活動，你也許知道它創下了些紀錄。 1 億名學生通過一小時玩程式活動學習計算機科學的入門並體驗到其中的樂趣。
 
@@ -48,7 +48,7 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 <a id="infographics"></a>
 
-## Infographics
+## 訊息圖表
 
 {{ stats_carousel }}
 

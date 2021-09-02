@@ -9543,3 +9543,188 @@ cs:
           lessons:
             lesson-1:
               name: Přehled
+        csa-u6-dev:
+          lessons:
+            lesson-18:
+              name: Widgety
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lekce
+        csa1-pilot-facilitator:
+          lessons:
+            FRQ Day:
+              description_student: Dnes dokončíte svou první Otázku s volnou odpovědí
+                (OVO)! To znamená, že ručně napíšete kód řešící nějaký velký úkol.
+                Provedete to s partnerem chozením po místnosti a plněním různých částí
+                úkolu na jednotlivých místech, přičemž budete postupně kontrolovat
+                průběh své práce.
+              description_teacher: "V této lekci studenti vyřeší svůj první příklad
+                ve stylu otázky s volnou odpovědí (OVO). Otázku označí jako třída
+                a pak v párech formou aktivity ve stylu „Kolem světa“ implementují
+                kompletní třídu `MalířSpirál`.\n\nCíle této lekce jsou tři: \n\n-
+                \  Vytvořit pocit vzrušení a úspěšného dosahování výsledků při řešení
+                OVO\n-   Praktikovat otázky s volným koncem (písemně)\n-   Posloužit
+                jako shrnující vyhodnocení obsahu z Jednotky 1\n\nAčkoli formát této
+                OVO není stejný jako u OVO na zkoušce AP, jde o stavební blok, který
+                má studentům pomoci se na tyto typy otázek připravit. Jak budou studenti
+                postupně pokračovat v kurzu, otázky OVO, s kterými se budou setkávat,
+                budou postupně bližší a bližší realitě."
+            lesson-19:
+              description_student: Dnes dokončíte svou první Otázku s volnou odpovědí
+                (OVO)! To znamená, že ručně napíšete kód řešící nějaký velký úkol.
+                Provedete to s partnerem chozením po místnosti a plněním různých částí
+                úkolu na jednotlivých místech, přičemž budete postupně kontrolovat
+                průběh své práce.
+              description_teacher: "V této lekci studenti vyřeší svůj první příklad
+                ve stylu otázky s volnou odpovědí (OVO). Otázku označí jako třída
+                a pak v párech formou aktivity ve stylu „Kolem světa“ implementují
+                kompletní třídu `MalířSpirál`.\n\nCíle této lekce jsou tři: \n\n-
+                \  Vytvořit pocit vzrušení a úspěšného dosahování výsledků při řešení
+                OVO\n-   Praktikovat otázky s volným koncem (písemně)\n-   Posloužit
+                jako shrnující vyhodnocení obsahu z Jednotky 1\n\nAčkoli formát této
+                OVO není stejný jako u OVO na zkoušce AP, jde o stavební blok, který
+                má studentům pomoci se na tyto typy otázek připravit. Jak budou studenti
+                postupně pokračovat v kurzu, otázky OVO, s kterými se budou setkávat,
+                budou postupně bližší a bližší realitě."
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa2-pilot-facilitator:
+          lessons:
+            Defining Attributes:
+              description_student: 'Prostřednictvím našich zážitků ze Čtvrti víme,
+                že třídy a objekty jsou klíčovou komponentou  programovacího jazyka
+                Java. Ale jak vlastně třídy vytvářejí objekty? V této lekci prozkoumáte,
+                jak se vytváří objekt a dozvíte se více o procesu zvaném enkapsulace
+                dat. '
+              description_teacher: V této offline lekci mohou studenti vytvářet objekty
+                a znázorňovat příslušné atributy pomocí instančních proměnných. Studenti
+                se mohou naučit rozdíl mezi „veřejným“ a „soukromým“ a účel enkapsulace
+                ke skrytí vnitřní implementace objektu.
+            Using Variables:
+              name: Používání proměnných
+              description_student: Proměnné představují způsob, jak mohou softwaroví
+                inženýři ukládat informace. Typ informací, které potřebujeme uložit,
+                určuje druh proměnné, jakou budeme muset použít, její datový typ a
+                to, jak ji můžeme používat. V této lekci budete používat proměnné
+                k ukládání informací používaných k vytvoření objektů typu `Malíř`
+                a k ukládání informací zadávaných uživatelem.
+              description_teacher: V této lekci budou studenti prozkoumávat funkcionalitu
+                proměnných a učit se rozlišovat mezi základními proměnnými a referenčními
+                proměnnými. Studenti budou užívat třídu `Scanner` k získání vstupu
+                od uživatele a k vymezení proměnných k ukládání hodnot dodaných uživatelem.
+                Tyto hodnoty se používají ke zkonstruování objektů typu `Malíř` ve
+                Čtvrti.
+            Writing Constructors:
+              name: Psaní konstruktorů
+              description_student: Pojízdná prodejna pečiva projektu Mercury potřebuje
+                vaši pomoc! Majitel chce prodávat dezerty ve Čtvrti, ale potřebuje
+                mít možnost své dezerty zadávat a ukládat do programu. Byli jste požádáni,
+                abyste pomocí svých programátorských dovedností vytvořili program,
+                který bude umět vytvářet objekty typu dezertu, aby mohl majitel sledovat
+                svůj inventář. Začnete vytvořením třídy `Dezert`, aby majitel mohl
+                zadat příchuť, dostupné množství a cenu jednotlivých dezertů, které
+                prodává.
+              description_teacher: Studenti budou obeznámeni s druhy pečiva z pojízdné
+                prodejny projektu Mercury Pastries a s majitelovou potřebou programu
+                na zadávání a ukládání položek typu dezert. Jako softwaroví inženýři
+                budou studenti využívat objektově orientovaných strategií návrhu k
+                identifikaci nezbytných atributů a vhodných datových typů pro třídu
+                `Dezert`. Studenti napíší konstruktor a použijí objekt `Scanner` k
+                vytvoření hodnot pro instanční proměnné k inicializaci objektu `Dezert`.
+            Adding Multiple Constructors:
+              name: Přidání více konstruktorů
+            Manipulating Variables and Object Data:
+              name: Manipulace s proměnnými a Daty objektů
+            Minimizing Errors in Initialization:
+              name: Minimalizace chyb při inicializaci
+            Writing Constructors for Hierarchies:
+              name: Psaní konstruktorů pro hierarchie
+            Accessing Object Data:
+              name: Přístup k datům objektu
+            Modifying Object Data:
+              name: Úprava dat objektu
+            Displaying Object Information:
+              name: Zobrazení dat objektu
+            The Neighborhood Store Management Project - Day 1:
+              name: Projekt správy obchodu ve čtvrti - den 1
+            The Neighborhood Store Management Project - Day 2:
+              name: Projekt správy obchodu ve čtvrti - den 2
+            The Neighborhood Store Management Project - Day 3:
+              name: Projekt správy obchodu ve čtvrti - den 3
+            new lesson:
+              description_student: 'Prostřednictvím našich zážitků ze Čtvrti víme,
+                že třídy a objekty jsou klíčovou komponentou  programovacího jazyka
+                Java. Ale jak vlastně třídy vytvářejí objekty? V této lekci prozkoumáte,
+                jak se vytváří objekt a dozvíte se více o procesu zvaném enkapsulace
+                dat. '
+              description_teacher: V této offline lekci mohou studenti vytvářet objekty
+                a znázorňovat příslušné atributy pomocí instančních proměnných. Studenti
+                se mohou naučit rozdíl mezi „veřejným“ a „soukromým“ a účel enkapsulace
+                ke skrytí vnitřní implementace objektu.
+            lesson-2:
+              name: Používání proměnných
+              description_student: Proměnné představují způsob, jak mohou softwaroví
+                inženýři ukládat informace. Typ informací, které potřebujeme uložit,
+                určuje druh proměnné, jakou budeme muset použít, její datový typ a
+                to, jak ji můžeme používat. V této lekci budete používat proměnné
+                k ukládání informací používaných k vytvoření objektů typu `Malíř`
+                a k ukládání informací zadávaných uživatelem.
+              description_teacher: V této lekci budou studenti prozkoumávat funkcionalitu
+                proměnných a učit se rozlišovat mezi základními proměnnými a referenčními
+                proměnnými. Studenti budou užívat třídu `Scanner` k získání vstupu
+                od uživatele a k vymezení proměnných k ukládání hodnot dodaných uživatelem.
+                Tyto hodnoty se používají ke zkonstruování objektů typu `Malíř` ve
+                Čtvrti.
+            lesson-3:
+              name: Psaní konstruktorů
+              description_student: Pojízdná prodejna pečiva projektu Mercury potřebuje
+                vaši pomoc! Majitel chce prodávat dezerty ve Čtvrti, ale potřebuje
+                mít možnost své dezerty zadávat a ukládat do programu. Byli jste požádáni,
+                abyste pomocí svých programátorských dovedností vytvořili program,
+                který bude umět vytvářet objekty typu dezertu, aby mohl majitel sledovat
+                svůj inventář. Začnete vytvořením třídy `Dezert`, aby majitel mohl
+                zadat příchuť, dostupné množství a cenu jednotlivých dezertů, které
+                prodává.
+              description_teacher: Studenti budou obeznámeni s druhy pečiva z pojízdné
+                prodejny projektu Mercury Pastries a s majitelovou potřebou programu
+                na zadávání a ukládání položek typu dezert. Jako softwaroví inženýři
+                budou studenti využívat objektově orientovaných strategií návrhu k
+                identifikaci nezbytných atributů a vhodných datových typů pro třídu
+                `Dezert`. Studenti napíší konstruktor a použijí objekt `Scanner` k
+                vytvoření hodnot pro instanční proměnné k inicializaci objektu `Dezert`.
+            lesson-4:
+              name: Přidání více konstruktorů
+            lesson-5:
+              name: Manipulace s proměnnými a Daty objektů
+            lesson-6:
+              name: Minimalizace chyb při inicializaci
+            lesson-7:
+              name: Psaní konstruktorů pro hierarchie
+            lesson-8:
+              name: Přístup k datům objektu
+            lesson-9:
+              name: Úprava dat objektu
+            lesson-10:
+              name: Zobrazení dat objektu
+            lesson-11:
+              name: Projekt správy obchodu ve čtvrti - den 1
+            lesson-12:
+              name: Projekt správy obchodu ve čtvrti - den 2
+            lesson-13:
+              name: Projekt správy obchodu ve čtvrti - den 3
+          lesson_groups:
+            lesson group:
+              display_name: Obsah
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah

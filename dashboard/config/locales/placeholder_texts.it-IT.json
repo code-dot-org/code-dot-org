@@ -132,7 +132,9 @@
           "5b402e6ea05e847a076e03ad74420c45": " uccelli!",
           "4b23c908b939eaf7918e07142b9e05e0": "Un drago!",
           "7f945c111ba5ea6d7b1547601db6ba0e": " draghi!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Conta tutti gli animali!"
+          "71fc859f3abd22273bad5d0d8eda2173": "Conta tutti gli animali!",
+          "f62038e77820419cd978f7b722da560a": "Quanti ne appariranno?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Conta gli Animali Domestici"
         },
         "courseC_data wizard_2020": {
           "d93dfc24c6ce3e53d8ee07416c743e60": "Un cane!",
@@ -143,7 +145,9 @@
           "5b402e6ea05e847a076e03ad74420c45": " uccelli!",
           "4b23c908b939eaf7918e07142b9e05e0": "Un drago!",
           "7f945c111ba5ea6d7b1547601db6ba0e": " draghi!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Conta tutti gli animali!"
+          "71fc859f3abd22273bad5d0d8eda2173": "Conta tutti gli animali!",
+          "f62038e77820419cd978f7b722da560a": "Quanti ne appariranno?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Conta gli Animali Domestici"
         },
         "courseE_aboutme_1": {
           "b63151482630edd1589a9ac24d107c49": "Sono io! Rikki! Mi piace programmare, uscire con Thuy e mangiare il gelato!",
@@ -392,7 +396,9 @@
           "5b402e6ea05e847a076e03ad74420c45": " uccelli!",
           "4b23c908b939eaf7918e07142b9e05e0": "Un drago!",
           "7f945c111ba5ea6d7b1547601db6ba0e": " draghi!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Conta tutti gli animali!"
+          "71fc859f3abd22273bad5d0d8eda2173": "Conta tutti gli animali!",
+          "f62038e77820419cd978f7b722da560a": "Quanti ne appariranno?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Conta gli Animali Domestici"
         },
         "courseE_aboutme_1_2021": {
           "b63151482630edd1589a9ac24d107c49": "Sono io! Rikki! Mi piace programmare, uscire con Thuy e mangiare il gelato!",
@@ -411,7 +417,8 @@
         },
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "pesce",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "altro"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "altro",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "creatura"
         },
         "courseF_apps_chatbot": {
           "13e575be866ecf5ac3dcbf61ab2048d7": "Quanti anni hai?",

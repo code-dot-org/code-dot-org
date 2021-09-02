@@ -906,6 +906,7 @@ uk:
             Getting Started:
               name: Починаємо
         cspunit4draft:
+          description_short: Дані
           lessons:
             Discover a Data Story:
               name: Відкрийте історію даних
@@ -1225,6 +1226,8 @@ uk:
               name: Класи
             Peer Review:
               name: Рецензування
+        CSDU5-Draft:
+          description_short: Дані
         CSF_Secret_Sample_Story:
           description_audience: Вік 8-18+
         MikeTest:
@@ -3354,6 +3357,8 @@ uk:
               display_name: Просунутися
             csf_variables:
               display_name: Змінні
+            csf_data:
+              display_name: Дані
             csf_for_loops:
               display_name: Цикли For
             csf_internet:
@@ -3560,6 +3565,8 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+            csf_data:
+              display_name: Дані
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Життєві алгоритми: Паперові літачки'
@@ -4756,6 +4763,8 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+            csf_data:
+              display_name: Дані
           lessons:
             Powerful Passwords:
               description_teacher: "Учні дізнаються навіщо люди використовують паролі,
@@ -4828,6 +4837,8 @@ uk:
               display_name: Цифрове громадянство
             csf_variables:
               display_name: Змінні
+            csf_data:
+              display_name: Дані
             csf_for_loops:
               display_name: Цикли For
             csf_sprites:
@@ -5514,6 +5525,8 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+            csf_data:
+              display_name: Дані
         coursed-2021:
           title: Курс D (2021)
           description_audience: 'Вік: 7-11'
@@ -5945,3 +5958,34 @@ uk:
           lessons:
             lesson-1:
               name: Огляд
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Інструменти
+            lesson-18:
+              name: Віджети
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Уроки
+            lessonGroup-3:
+              display_name: Проект
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Зміст
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст

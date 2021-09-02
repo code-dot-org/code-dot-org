@@ -8,7 +8,6 @@ import {
   resultFromStatus
 } from '@cdo/apps/code-studio/activityUtils';
 import _ from 'lodash';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -159,18 +158,10 @@ export function lessonHasLevels(lesson) {
 
 /**
  * Determines if we should show "Keep working" and "Needs review" states for
- * progress in a unit. User must be enrolled in the relevant pilot and unit
- * must be either CSF or CSD.
+ * progress in a unit. Unit must be either CSD or CSP.
  */
 export function shouldShowReviewStates(unit) {
-  return (
-    experiments.isEnabled(experiments.KEEP_WORKING) &&
-    (unit.csf || isUnitCsd(unit))
-  );
-}
-
-function isUnitCsd(unit) {
-  return unit.name?.startsWith('csd');
+  return unit.isCsd || unit.isCsp;
 }
 
 /**

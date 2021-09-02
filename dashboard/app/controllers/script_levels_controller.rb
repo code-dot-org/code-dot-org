@@ -501,6 +501,10 @@ class ScriptLevelsController < ApplicationController
       )
     end
 
+    @code_review_enabled = @level.is_a?(Javalab) &&
+      current_user.present? &&
+      (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
+
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
@@ -517,7 +521,7 @@ class ScriptLevelsController < ApplicationController
     # Add video generation URL for only the last level of Dance
     # If we eventually want to add video generation for other levels or level
     # types, this is the condition that should be extended.
-    replay_video_view_options(get_channel_for(@level, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
+    replay_video_view_options(get_channel_for(@level, @script_level.script_id, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {

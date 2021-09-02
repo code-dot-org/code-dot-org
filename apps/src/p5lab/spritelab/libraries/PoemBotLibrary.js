@@ -1,30 +1,39 @@
 import CoreLibrary from './CoreLibrary';
-import {commands as backgroundEffects} from '../commands/poembot/backgroundEffects';
-import {commands as foregroundEffects} from '../commands/poembot/foregroundEffects';
+import {POEMS} from '../poembot/constants';
+import * as utils from '../poembot/commands/utils';
+import {commands as backgroundEffects} from '../poembot/commands/backgroundEffects';
+import {commands as foregroundEffects} from '../poembot/commands/foregroundEffects';
 
 const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
 const FONT_SIZE = 25;
-const TextType = {
-  BLANK: 'blank',
-  LITERAL: 'literal',
-  RANDOM: 'random'
-};
-const BLANK_TEXT = {value: '', type: TextType.BLANK};
 const PLAYSPACE_SIZE = 400;
+const POEM_DURATION = 500;
 
 export default class PoemBotLibrary extends CoreLibrary {
   constructor(p5) {
     super(p5);
-    this.poem = {
+    // Extra information for validation code to be able to inspect the program state
+    this.validationInfo = {
+      endTime: POEM_DURATION
+    };
+    this.poemState = {
       title: '',
       author: '',
-      lines: []
+      lines: [],
+      font: {
+        fill: 'black',
+        stroke: 'white',
+        font: 'Arial'
+      },
+      isVisible: true,
+      textEffects: []
     };
-    this.isVisible = false;
     this.backgroundEffect = () => this.p5.background('white');
-    this.foregroundEffect = () => {};
-    this.p5.noStroke();
+    this.foregroundEffects = [];
+    this.lineEvents = {};
+    this.p5.textAlign(this.p5.CENTER);
+    this.p5.angleMode(this.p5.DEGREES);
 
     this.commands = {
       // Keep everything from Core Sprite Lab
@@ -36,115 +45,143 @@ export default class PoemBotLibrary extends CoreLibrary {
         this.runBehaviors();
         this.runEvents();
         this.p5.drawSprites();
-        this.drawPoem();
-        this.foregroundEffect();
+        const renderInfo = this.getRenderInfo(
+          this.poemState,
+          this.p5.World.frameCount
+        );
+        // Don't fire line events in preview
+        if (this.p5.frameCount > 1) {
+          for (let i = 0; i < renderInfo.lines.length; i++) {
+            const lineNum = i + 1; // students will 1-index the lines
+            if (this.lineEvents[lineNum]) {
+              // Fire line events
+              this.lineEvents[lineNum].forEach(callback => callback());
+
+              // Clear out line events so they don't fire again. This way, we'll fire
+              // the event only on the first frame where renderInfo.lines has
+              // that many items
+              this.lineEvents[lineNum] = null;
+            }
+          }
+        }
+        this.drawFromRenderInfo(renderInfo);
+
+        // Don't show foreground effect in preview
+        if (this.p5.frameCount > 1) {
+          this.foregroundEffects.forEach(effect => effect.func());
+        }
       },
 
       // And add custom Poem Bot commands
       textConcat(text1, text2) {
-        if (!text1) {
-          return text2;
-        }
-        if (!text2) {
-          return text1;
-        }
-        return [...text1, ...text2];
+        return [text1, text2].join('');
       },
 
       randomWord() {
         // TODO: get curated random word list from Curriculum
         const words = ['cat', 'dog', 'fish'];
-        const index = this.randomNumber(0, words.length - 1);
+        const index = utils.randomInt(0, words.length - 1);
         return words[index];
       },
 
       addLine(line) {
-        this.poem.lines.push(line || [BLANK_TEXT]);
+        this.poemState.lines.push(line || '');
       },
 
-      setFontColor(color) {
-        this.p5.fill(color);
-      },
-
-      setFont(font) {
-        this.p5.textFont(font);
-      },
-
-      setTitle(line) {
-        if (line) {
-          this.poem.title = line[0].value;
+      setFontColor(fill, stroke) {
+        if (fill) {
+          this.poemState.font.fill = fill;
+        }
+        if (stroke) {
+          this.poemState.font.stroke = stroke;
         }
       },
 
-      setAuthor(line) {
-        if (line) {
-          this.poem.author = line[0].value;
+      setFont(font) {
+        if (font) {
+          this.poemState.font.font = font;
+        }
+      },
+
+      setTitle(title) {
+        if (title) {
+          this.poemState.title = title;
+        }
+      },
+
+      setAuthor(author) {
+        if (author) {
+          this.poemState.author = author;
         }
       },
 
       showPoem() {
-        this.isVisible = true;
+        this.poemState.isVisible = true;
       },
 
       hidePoem() {
-        this.isVisible = false;
+        this.poemState.isVisible = false;
       },
 
       setPoem(key) {
-        if (key === 'wordsworth') {
-          this.poem = {
-            title: 'I Wandered Lonely as a Cloud',
-            author: 'William Wordsworth',
-            lines: [
-              [{value: 'I wandered lonely as a cloud', type: 'literal'}],
-              [
-                {
-                  value: "That floats on high o'er vales and hills,",
-                  type: 'literal'
-                }
-              ],
-              [{value: 'When all at once I saw a crowd,', type: 'literal'}],
-              [{value: 'A host, of golden daffodils;', type: 'literal'}],
-              [{value: 'Beside the lake, beneath the trees,', type: 'literal'}],
-              [
-                {
-                  value: 'Fluttering and dancing in the breeze.',
-                  type: 'literal'
-                }
-              ]
-            ]
-          };
-        } else if (key === 'dickinson') {
-          this.poem = {
-            title: 'If I can Stop one Heart from Breaking',
-            author: 'Emily Dickinson',
-            lines: [
-              [
-                {
-                  value: 'If I can stop one heart from breaking,',
-                  type: 'literal'
-                }
-              ],
-              [{value: 'I shall not live in vain;', type: 'literal'}],
-              [{value: 'If I can ease one life the aching,', type: 'literal'}],
-              [{value: 'Or cool one pain,', type: 'literal'}],
-              [{value: 'Or help one fainting robin', type: 'literal'}],
-              [{value: 'Unto his nest again,', type: 'literal'}],
-              [{value: 'I shall not live in vain.', type: 'literal'}]
-            ]
-          };
-        } else if (key === 'silverstein') {
-          this.poem = {
-            title: 'Batty',
-            author: 'Shel Silverstein',
-            lines: [
-              [{value: 'The baby bat', type: 'literal'}],
-              [{value: 'Screamed out in fright', type: 'literal'}],
-              [{value: "'Turn on the dark;", type: 'literal'}],
-              [{value: "I'm afraid of the light.'", type: 'literal'}]
-            ]
+        if (POEMS[key]) {
+          this.poemState = {
+            ...this.poemState,
+            ...POEMS[key]
           };
         }
+      },
+
+      setTextEffect(effect) {
+        this.poemState.textEffects.push({
+          name: effect
+        });
+      },
+
+      whenLineShows(lineNum, callback) {
+        if (!this.lineEvents[lineNum]) {
+          this.lineEvents[lineNum] = [];
+        }
+        this.lineEvents[lineNum].push(callback);
+      },
+
+      getValidationInfo() {
+        this.validationInfo.lineEvents = Object.keys(this.lineEvents);
+        this.validationInfo.font = {...this.poemState.font};
+        this.validationInfo.textEffects = this.poemState.textEffects.map(
+          effect => effect.name
+        );
+        this.validationInfo.foregroundEffects = this.foregroundEffects.map(
+          effect => effect.name
+        );
+        return this.validationInfo;
+      },
+
+      setSuccessFrame() {
+        if (!this.validationInfo.successFrame) {
+          // Only set the success frame if it hasn't already been set (the first
+          // frame at which we know the student will pass the level).
+          this.validationInfo.successFrame = this.p5.frameCount;
+        }
+      },
+
+      drawProgressBar() {
+        this.p5.push();
+        this.p5.noStroke();
+        if (this.validationInfo.successFrame) {
+          // The student will pass the level
+          this.p5.fill(this.p5.rgb(0, 173, 188));
+        } else {
+          // The student will not pass the level (yet);
+          this.p5.fill(this.p5.rgb(118, 102, 160));
+        }
+        this.p5.rect(
+          0,
+          390,
+          (this.p5.frameCount / POEM_DURATION) * PLAYSPACE_SIZE,
+          10
+        );
+        this.p5.pop();
       },
 
       ...backgroundEffects,
@@ -152,12 +189,13 @@ export default class PoemBotLibrary extends CoreLibrary {
     };
   }
 
-  randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  getScaledFontSize(text, desiredSize) {
+  getScaledFontSize(text, font, desiredSize) {
     this.p5.push();
+    this.p5.textFont(font);
+    // stroke color doesn't matter here, we just need to set a stroke to get an
+    // accurate width calculation.
+    this.p5.stroke('black');
+    this.p5.strokeWeight(3);
     this.p5.textSize(desiredSize);
     const fullWidth = this.p5.textWidth(text);
     const scaledSize = Math.min(
@@ -169,47 +207,187 @@ export default class PoemBotLibrary extends CoreLibrary {
     return scaledSize;
   }
 
-  drawPoem() {
-    let yCursor = OUTER_MARGIN;
-    this.p5.textSize(FONT_SIZE);
-    this.p5.textAlign(this.p5.CENTER);
-    if (this.poem.title) {
-      this.p5.textSize(this.getScaledFontSize(this.poem.title, FONT_SIZE * 2));
-      this.p5.text(this.poem.title, PLAYSPACE_SIZE / 2, yCursor);
-      this.p5.textSize(FONT_SIZE);
-      yCursor += LINE_HEIGHT;
-    }
-    if (this.poem.author) {
-      yCursor -= LINE_HEIGHT / 2;
-      this.p5.textSize(this.getScaledFontSize(this.poem.author, 16));
-      this.p5.text(this.poem.author, PLAYSPACE_SIZE / 2, yCursor);
-      this.p5.textSize(FONT_SIZE);
-      yCursor += LINE_HEIGHT;
+  applyTextEffect(renderInfo, effect, frameCount) {
+    const newLines = [];
+    renderInfo.lines.forEach(line => {
+      const newLine = {...line};
+      if (frameCount >= newLine.start && frameCount < newLine.end) {
+        const progress =
+          (frameCount - newLine.start) / (newLine.end - newLine.start);
+        switch (effect.name) {
+          case 'fade':
+            newLine.alpha = progress * 255;
+            break;
+          case 'typewriter': {
+            const numCharsToShow = Math.floor(progress * newLine.text.length);
+            newLine.text = newLine.text.substring(0, numCharsToShow);
+            break;
+          }
+          case 'flyLeft': {
+            const start = -PLAYSPACE_SIZE / 2;
+            const end = newLine.x;
+            newLine.x = start - progress * (start - end);
+            break;
+          }
+          case 'flyRight': {
+            const start = PLAYSPACE_SIZE * 1.5;
+            const end = newLine.x;
+            newLine.x = start - progress * (start - end);
+            break;
+          }
+          case 'flyTop': {
+            const start = -LINE_HEIGHT;
+            const end = newLine.y;
+            newLine.y = start - progress * (start - end);
+            break;
+          }
+          case 'flyBottom': {
+            const start = PLAYSPACE_SIZE + LINE_HEIGHT;
+            const end = newLine.y;
+            newLine.y = start - progress * (start - end);
+            break;
+          }
+          default:
+            break;
+        }
+      }
+      newLines.push(newLine);
+    });
+    return {
+      ...renderInfo,
+      lines: newLines
+    };
+  }
+
+  applyGlobalLineAnimation(renderInfo, frameCount) {
+    const progress = frameCount / POEM_DURATION;
+    const framesPerLine = POEM_DURATION / renderInfo.lines.length;
+    const newLines = [];
+    for (let i = 0; i < renderInfo.lines.length; i++) {
+      const newLine = {...renderInfo.lines[i]};
+      newLine.start = i * framesPerLine;
+      newLine.end = (i + 1) * framesPerLine;
+      newLines.push(newLine);
     }
 
-    const lineHeight = (PLAYSPACE_SIZE - yCursor) / this.poem.lines.length;
-    this.poem.lines.forEach(line => {
-      this.drawPoemLine(line, yCursor);
-      this.p5.textSize(FONT_SIZE);
+    const numLinesToShow = Math.floor(progress * renderInfo.lines.length);
+    return {
+      ...renderInfo,
+      lines: newLines.slice(0, numLinesToShow + 1) // end index is not inclusive, so + 1
+    };
+  }
+
+  getRenderInfo(poemState, frameCount) {
+    if (!poemState.isVisible) {
+      return {
+        lines: []
+      };
+    }
+    let yCursor = OUTER_MARGIN;
+    let renderInfo = {
+      font: {
+        ...poemState.font
+      },
+      lines: []
+    };
+    if (poemState.title) {
+      renderInfo.title = {
+        text: poemState.title,
+        x: PLAYSPACE_SIZE / 2,
+        y: yCursor,
+        size: this.getScaledFontSize(
+          poemState.title,
+          poemState.font.font,
+          FONT_SIZE * 2
+        )
+      };
+      yCursor += LINE_HEIGHT;
+    }
+    if (poemState.author) {
+      yCursor -= LINE_HEIGHT / 2;
+      renderInfo.author = {
+        text: poemState.author,
+        x: PLAYSPACE_SIZE / 2,
+        y: yCursor,
+        size: this.getScaledFontSize(poemState.author, poemState.font.font, 16)
+      };
+      yCursor += LINE_HEIGHT;
+    }
+    const lineHeight = (PLAYSPACE_SIZE - yCursor) / poemState.lines.length;
+    const longestLine = poemState.lines.reduce(
+      (accumulator, current) =>
+        accumulator.length > current.length ? accumulator : current,
+      '' /* default value */
+    );
+    renderInfo.lineSize = this.getScaledFontSize(
+      longestLine,
+      poemState.font.font,
+      FONT_SIZE
+    );
+    poemState.lines.forEach(line => {
+      renderInfo.lines.push({
+        text: line,
+        x: PLAYSPACE_SIZE / 2,
+        y: yCursor
+      });
       yCursor += lineHeight;
+    });
+
+    if (this.p5.frameCount === 1) {
+      // Don't apply text effects / line animation for preview
+      return renderInfo;
+    }
+
+    renderInfo = this.applyGlobalLineAnimation(renderInfo, frameCount);
+    poemState.textEffects.forEach(effect => {
+      renderInfo = this.applyTextEffect(renderInfo, effect, frameCount);
+    });
+    return renderInfo;
+  }
+
+  drawFromRenderInfo(renderInfo) {
+    this.p5.fill(renderInfo.font.fill);
+    this.p5.stroke(renderInfo.font.stroke);
+    this.p5.strokeWeight(3);
+    this.p5.textFont(renderInfo.font.font);
+    if (renderInfo.title) {
+      this.p5.textSize(renderInfo.title.size);
+      this.p5.text(
+        renderInfo.title.text,
+        renderInfo.title.x,
+        renderInfo.title.y
+      );
+    }
+    if (renderInfo.author) {
+      this.p5.textSize(renderInfo.author.size);
+      this.p5.text(
+        renderInfo.author.text,
+        renderInfo.author.x,
+        renderInfo.author.y
+      );
+    }
+    this.p5.textSize(renderInfo.lineSize);
+    renderInfo.lines.forEach(item => {
+      let fillColor = this.getP5Color(renderInfo.font.fill, item.alpha);
+      this.p5.fill(fillColor);
+      let strokeColor = this.getP5Color(renderInfo.font.stroke, item.alpha);
+      this.p5.stroke(strokeColor);
+      this.p5.text(item.text, item.x, item.y);
     });
   }
 
-  drawPoemLine(line, yPos) {
-    // Concatenate all the text values together so we can compute the length
-    // of the printed text
-    const fullLine = line.map(textItem => textItem.value).join(' ');
-    this.p5.textSize(this.getScaledFontSize(fullLine, FONT_SIZE));
-
-    // compute line width with scaled textSize
-    let fullWidth = this.p5.textWidth(fullLine);
-
-    const start = PLAYSPACE_SIZE / 2 - fullWidth / 2;
-    this.p5.textAlign(this.p5.LEFT);
-    let xCursor = start;
-    line.forEach(textItem => {
-      this.p5.text(textItem.value, xCursor, yPos);
-      xCursor += this.p5.textWidth(textItem.value + ' ');
-    });
+  // polyfill for https://github.com/processing/p5.js/blob/main/src/color/p5.Color.js#L355
+  getP5Color(hex, alpha) {
+    let color = this.p5.color(hex);
+    if (alpha !== undefined) {
+      color._array[3] = alpha / color.maxes[color.mode][3];
+    }
+    const array = color._array;
+    // (loop backwards for performance)
+    const levels = (color.levels = new Array(array.length));
+    for (let i = array.length - 1; i >= 0; --i) {
+      levels[i] = Math.round(array[i] * 255);
+    }
+    return color;
   }
 }

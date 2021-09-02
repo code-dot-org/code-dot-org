@@ -1,0 +1,121 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr",
+      "PoemBot"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Making Sprites\r\n\r\nTo make a sprite, open the **Sprites** category of the toolbox and drag out this block:\r\n\r\n<xml><block type=\"gamelab_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"alligator_mouth_closed\"</title><value name=\"LOCATION\"><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">{\"x\":200,\"y\":200}</title></block></value></block></xml>\r\n\r\n* Connect a `make new sprite` block under the `when run` block.\r\n* Choose a costume for your sprite.\r\n",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "instructions_icon": "octiGeneral",
+    "callout_json": "[]",
+    "parent_level_id": 29613,
+    "video_key": "hoc_dance_properties",
+    "validation_code": "var validationInfo = getValidationInfo();\r\nvar spriteIds = getSpriteIdsInUse();\r\n\r\nif (spriteIds.length > 0) {\r\n  setSuccessFrame();\r\n}\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'genericSuccess');\r\n  } else {\r\n    levelFailure(3, 'noSprites');\r\n  }\r\n}",
+    "start_animations": "{\"orderedKeys\":[\"15b36193-a649-444f-9234-48a5d6fb0622\",\"80924d49-ecbb-442e-b865-d4db8e0e487b\",\"c49e89ec-f324-4af6-8ff1-a3487fbb010f\",\"3b12e5ca-45c4-429e-b80e-0836313e6a5f\",\"efb5a998-881f-46f3-a52a-8ee2f0ab797c\",\"9a301ed8-4bd1-4449-ac28-3e201dd4b775\",\"a30c77a1-11c8-46c6-8ee1-445ce631a217\",\"aba3944d-f0c5-4105-85c9-24f30a0eff62\",\"5c5a67d5-e4ac-4d6a-a6c7-bd4a5ac8cfcb\",\"3f908215-4f72-4f99-bd4e-6a4e9bd79771\",\"6f81c909-8f18-4c8f-8d28-b7f41b046d8f\",\"22bb7c78-3a0c-4aa3-8083-97cc5cb38d12\",\"de23ae67-3dbe-4b34-a817-4230a1d37203\",\"4fd45dd0-a81d-4ca5-ad49-ca0b4a16a1cf\",\"4adaa9f5-a42f-4beb-bcfd-ca3b8a389598\", \"4dff609c-a724-45ea-a06d-e59ed29ac88d\"],\r\n \r\n\"propsByKey\":{\"4dff609c-a724-45ea-a06d-e59ed29ac88d\": {\"name\": \"boat_1\",\"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/PxN9yaK_YEYckfaYEUA05Acna96g9oo6/category_vehicles/boat.png\",\"frameSize\": {\"x\": 128,\"y\": 128},\"frameCount\": 1,\"looping\": true,\"frameDelay\": 2,\"version\": \"PxN9yaK_YEYckfaYEUA05Acna96g9oo6\",\"categories\": [\"vehicles\"]},\"4adaa9f5-a42f-4beb-bcfd-ca3b8a389598\":{\"name\":\"wind\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:08.000Z\",\"pngLastModified\":\"2021-09-02T00:35:27.000Z\",\"version\":\"0H8fbGkjIrIe7YCxj67gu5XLqcPBddbq\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/0H8fbGkjIrIe7YCxj67gu5XLqcPBddbq/wind.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"4fd45dd0-a81d-4ca5-ad49-ca0b4a16a1cf\":{\"name\":\"twinkling_star\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:08.000Z\",\"pngLastModified\":\"2021-09-02T00:35:23.000Z\",\"version\":\"vjb.CoEaXyBgW9Y2UQpWm0GupWu_LGVX\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/vjb.CoEaXyBgW9Y2UQpWm0GupWu_LGVX/twinkling_star.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"de23ae67-3dbe-4b34-a817-4230a1d37203\":{\"name\":\"smiling_sun\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:40:17.000Z\",\"pngLastModified\":\"2021-09-02T00:35:25.000Z\",\"version\":\"iyXXWnXSMWujUL1Kc2.E0BjaTZ9oMOeH\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/iyXXWnXSMWujUL1Kc2.E0BjaTZ9oMOeH/smiling_sun.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"22bb7c78-3a0c-4aa3-8083-97cc5cb38d12\":{\"name\":\"night_star\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:10.000Z\",\"pngLastModified\":\"2021-09-02T00:35:23.000Z\",\"version\":\"NLCaSULDfYRSqkUj7CA6TBnjsyxgSf1F\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/NLCaSULDfYRSqkUj7CA6TBnjsyxgSf1F/night_star.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6f81c909-8f18-4c8f-8d28-b7f41b046d8f\":{\"name\":\"night_moon\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:10.000Z\",\"pngLastModified\":\"2021-09-02T00:35:22.000Z\",\"version\":\"Y5hqneuuT25yNdgpP74PlbkBB3SpKggi\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Y5hqneuuT25yNdgpP74PlbkBB3SpKggi/night_moon.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"3f908215-4f72-4f99-bd4e-6a4e9bd79771\":{\"name\":\"night_cloud\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:11.000Z\",\"pngLastModified\":\"2021-09-02T00:35:24.000Z\",\"version\":\"Gc.QvUXL142ZHgCNk9KKmWx_3a1pvMEg\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Gc.QvUXL142ZHgCNk9KKmWx_3a1pvMEg/night_cloud.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"5c5a67d5-e4ac-4d6a-a6c7-bd4a5ac8cfcb\":{\"name\":\"library\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:11.000Z\",\"pngLastModified\":\"2021-09-02T00:35:21.000Z\",\"version\":\"S6NXQa5A7rzgpM6NDhXsHCHwIRm1PszB\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/S6NXQa5A7rzgpM6NDhXsHCHwIRm1PszB/library.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"aba3944d-f0c5-4105-85c9-24f30a0eff62\":{\"name\":\"lake\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:13.000Z\",\"pngLastModified\":\"2021-09-02T00:35:21.000Z\",\"version\":\"6SvDTNnDBPouYh1c3Xp0JRJkgu3sHcHd\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/6SvDTNnDBPouYh1c3Xp0JRJkgu3sHcHd/lake.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"a30c77a1-11c8-46c6-8ee1-445ce631a217\":{\"name\":\"drop\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:14.000Z\",\"pngLastModified\":\"2021-09-02T00:35:13.000Z\",\"version\":\"03g9texyGWM1wCQDddu1vH53Zw.lopXe\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/03g9texyGWM1wCQDddu1vH53Zw.lopXe/drop.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"9a301ed8-4bd1-4449-ac28-3e201dd4b775\":{\"name\":\"daffodil2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:14.000Z\",\"pngLastModified\":\"2021-09-02T00:35:26.000Z\",\"version\":\"FGt5YuYuVNSCNTOm8R19ajvSLwoNurrP\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/FGt5YuYuVNSCNTOm8R19ajvSLwoNurrP/daffodil2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"efb5a998-881f-46f3-a52a-8ee2f0ab797c\":{\"name\":\"daffodil1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:15.000Z\",\"pngLastModified\":\"2021-09-02T00:35:25.000Z\",\"version\":\"3myTIS7gTz0CJy1o8aZx0NYSNIuxX6Mr\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/3myTIS7gTz0CJy1o8aZx0NYSNIuxX6Mr/daffodil1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"3b12e5ca-45c4-429e-b80e-0836313e6a5f\":{\"name\":\"cloud_single\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:40:16.000Z\",\"pngLastModified\":\"2021-09-02T00:35:26.000Z\",\"version\":\"tZmLxFQGrKnltSQuVsWwGhaX.xmPRvKt\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/tZmLxFQGrKnltSQuVsWwGhaX.xmPRvKt/cloud_single.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"c49e89ec-f324-4af6-8ff1-a3487fbb010f\":{\"name\":\"books\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:16.000Z\",\"pngLastModified\":\"2021-09-02T00:35:22.000Z\",\"version\":\"dGQwCtdcO_hpk64_eVgnfzNW3e2ds83b\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/dGQwCtdcO_hpk64_eVgnfzNW3e2ds83b/books.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"80924d49-ecbb-442e-b865-d4db8e0e487b\":{\"name\":\"alligator_mouth_open\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:18.000Z\",\"pngLastModified\":\"2021-09-02T00:35:28.000Z\",\"version\":\"wM4wxgwJzoIKHGb3uQiRuQFmjrD372Cd\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/wM4wxgwJzoIKHGb3uQiRuQFmjrD372Cd/alligator_mouth_open.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"15b36193-a649-444f-9234-48a5d6fb0622\":{\"name\":\"alligator_mouth_closed\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:19.000Z\",\"pngLastModified\":\"2021-09-02T00:35:28.000Z\",\"version\":\"oM0isJgyj9Fl7nqWEXON0U9xB.vnyNFm\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/oM0isJgyj9Fl7nqWEXON0U9xB.vnyNFm/alligator_mouth_closed.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Each sprite has a **location**. You can set the location by clicking the pin on this block: <xml><block type=\\\"gamelab_location_picker\\\"><title name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</title></block></xml>\\n\\n* Click the pin ![](https://images.code.org/6e59189145f18fc4e46140409e2ad5b8-image-1610554321961.png) on the location block then choose a new position for your sprite on the screen.\\n* Press the \\\"Run\\\" button when your code is finished.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7360b5738ca403cc2a9eb79a2ec5f1d6/poetryHoC_addSprites.mp3\"}]",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 64,
+  "published": true,
+  "created_at": "2021-08-18T21:44:19.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2021-08-18T21:44:19.545+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_textEffect\\\"\"],\"cloned_from\":\"poetryHoC_textEffect\"},{\"changed_at\":\"2021-08-18 21:46:43 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:49:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:50:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:50:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:51:18 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 22:01:27 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:01:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:02:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:04:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:22:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-29 05:14:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-08-29 05:15:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-08-30 17:18:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-30 17:20:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-01 19:19:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-01 19:19:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-02 00:50:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\"],\"changed_by_id\":702,\"changed_by_email\":\"erin@code.org\"},{\"changed_at\":\"2021-09-02 16:00:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"start_animations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-02 16:51:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"start_animations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-02 17:15:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-02 18:41:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-02 18:43:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-02 18:53:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="PoemBot_setPoem" can_disconnect_from_parent="false">
+              <title name="POEM">"field"</title>
+              <next>
+                <block type="PoemBot_setFont">
+                  <title name="FONT">"Georgia"</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="World">
+          <block type="PoemBot_setPoem">
+            <title name="POEM">"---"</title>
+          </block>
+          <block type="PoemBot_setBackgroundEffect">
+            <title name="EFFECT">"colors"</title>
+            <title name="PALETTE">"grayscale"</title>
+          </block>
+          <block type="PoemBot_setForegroundEffect">
+            <title name="EFFECT">"rain"</title>
+          </block>
+        </category>
+        <category name="Text">
+          <block type="PoemBot_setFont">
+            <title name="FONT">"Arial"</title>
+          </block>
+          <block type="PoemBot_setFontColor">
+            <value name="FILL">
+              <block type="colour_picker">
+                <title name="COLOUR">#000000</title>
+              </block>
+            </value>
+            <value name="STROKE">
+              <block type="colour_picker">
+                <title name="COLOUR">#ffffff</title>
+              </block>
+            </value>
+          </block>
+          <block type="PoemBot_setTextEffect">
+            <title name="EFFECT">"fade"</title>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSpriteAnon">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <title name="LOCATION">{"x":200,"y":200}</title>
+              </block>
+            </value>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

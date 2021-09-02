@@ -23,12 +23,12 @@ class ApiControllerTest < ActionController::TestCase
     end
     @student_1, @student_2, @student_3, @student_4, @student_5, @student_6, @student_7 = @students
 
-    @flappy = create(:text_match, :script).script_levels.first.script
+    @flappy = create(:text_match, :with_script).script_levels.first.script
     @flappy_section = create(:section, user: @teacher, script_id: @flappy.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.reload
 
-    @allthings = create(:text_match, :script).script_levels.first.script
+    @allthings = create(:text_match, :with_script).script_levels.first.script
     @allthings_section = create(:section, user: @teacher, script_id: @allthings.id)
     @student_allthings = create(:student, name: 'student_allthings')
     create(:follower, section: @allthings_section, student_user: @student_allthings)
@@ -123,7 +123,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get text_responses for section with specific script" do
-    script = create(:text_match, :script).script_levels.first.script
+    script = create(:text_match, :with_script).script_levels.first.script
 
     make_text_progress_in_script(@allthings_section.script, @student_allthings)
     make_text_progress_in_script(script, @student_allthings)
@@ -506,7 +506,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, user_level.submitted?
 
     # Now, unlock the assessment again to simulate a retake scenario
-    user_level.delete
+    user_level.really_destroy!
     assert_nil UserLevel.find_by(user_level_data)
     updates = [
       {
@@ -547,7 +547,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.send(:unlocked_at)
 
     # view_anwers for a user_level that does not yet exist
-    user_level.delete
+    user_level.really_destroy!
     assert_nil UserLevel.find_by(user_level_data)
     updates = [
       {
@@ -564,7 +564,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.send(:unlocked_at)
 
     # multiple updates at once
-    user_level.delete
+    user_level.really_destroy!
     assert_nil UserLevel.find_by(user_level_data)
     assert_nil UserLevel.find_by(user_level_data2)
     updates = [

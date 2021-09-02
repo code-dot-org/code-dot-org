@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-28 17:02:36 UTC",
+    "serialized_at": "2021-08-31 15:21:00 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "dlp21-csd-mod2"
@@ -124,7 +124,6 @@
         ],
         "progression": "Preparation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -150,7 +149,6 @@
         ],
         "progression": "Preparation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -176,7 +174,6 @@
         ],
         "progression": "Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -202,7 +199,6 @@
         ],
         "progression": "Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +224,6 @@
         ],
         "progression": "Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

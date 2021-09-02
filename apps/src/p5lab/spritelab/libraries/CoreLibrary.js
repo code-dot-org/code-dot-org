@@ -17,6 +17,7 @@ export default class CoreLibrary {
     this.promptVars = {};
     this.eventLog = [];
     this.speechBubbles = [];
+    this.soundLog = [];
 
     this.commands = {
       executeDrawLoopAndCallbacks() {

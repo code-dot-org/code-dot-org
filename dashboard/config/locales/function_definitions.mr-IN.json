@@ -681,6 +681,11 @@
           "reset game": {
             "name": "गेम रीसेट करा"
           }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "गेम समाप्त करा"
+          }
         }
       }
     }

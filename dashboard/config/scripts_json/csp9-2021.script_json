@@ -2127,7 +2127,6 @@
         ],
         "progression": "Exploring Metadata"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2153,7 +2152,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2179,7 +2177,6 @@
         ],
         "progression": "Making Bar Charts and Histograms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2205,7 +2202,6 @@
         ],
         "progression": "Making Bar Charts and Histograms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2231,7 +2227,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2257,7 +2252,6 @@
         ],
         "progression": "Cleaning Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2283,7 +2277,6 @@
         ],
         "progression": "Filtering Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2309,7 +2302,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2335,7 +2327,6 @@
         ],
         "progression": "Crosstab and Scatter Charts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2361,7 +2352,6 @@
         ],
         "progression": "Crosstab and Scatter Charts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2387,7 +2377,6 @@
         ],
         "progression": "What Type of Chart?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2413,7 +2402,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2439,7 +2427,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2465,7 +2452,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2491,7 +2477,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2517,7 +2502,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2543,7 +2527,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2569,7 +2552,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2595,7 +2577,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2621,7 +2602,6 @@
         ],
         "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2647,7 +2627,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2673,7 +2652,6 @@
         ],
         "progression": "Cropping Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2699,7 +2677,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2725,7 +2702,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2751,7 +2727,6 @@
         ],
         "progression": "Data Story Workspace"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2777,7 +2752,6 @@
         ],
         "progression": "Data Story Workspace"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2802,7 +2776,6 @@
           "CSP Unit 9 AP-Style Assessment _2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -16,7 +16,6 @@ import {
   rubricShape
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import experiments from '@cdo/apps/util/experiments';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
@@ -203,15 +202,10 @@ export class TeacherFeedback extends Component {
   }
 
   renderCommentAreaHeaderForTeacher() {
-    const keepWorkingEnabled = experiments.isEnabled(experiments.KEEP_WORKING);
-
-    const hasEditableReviewState =
-      keepWorkingEnabled && this.props.canHaveFeedbackReviewState;
-
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        {hasEditableReviewState && (
+        {this.props.canHaveFeedbackReviewState && (
           <EditableReviewState
             latestReviewState={this.getLatestReviewState()}
             onReviewStateChange={this.onReviewStateChange}
@@ -334,7 +328,8 @@ const styles = {
   },
   footer: {
     display: 'flex',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    alignItems: 'center'
   },
   header: {
     display: 'flex',

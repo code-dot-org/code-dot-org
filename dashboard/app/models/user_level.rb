@@ -30,6 +30,8 @@ require 'cdo/activity_constants'
 class UserLevel < ApplicationRecord
   AUTOLOCK_PERIOD = 1.day
 
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   belongs_to :user
   belongs_to :level
   belongs_to :script

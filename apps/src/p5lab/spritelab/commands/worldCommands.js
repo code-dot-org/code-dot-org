@@ -4,6 +4,7 @@ import {
   addTextPrompt,
   addMultipleChoicePrompt
 } from '../../redux/spritelabInput';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 export const commands = {
   comment(text) {
@@ -32,6 +33,11 @@ export const commands = {
 
   hideTitleScreen() {
     this.screenText = {};
+  },
+
+  playSound(url) {
+    this.soundLog.push(url);
+    audioCommands.playSound({url, loop: false});
   },
 
   printText(text) {

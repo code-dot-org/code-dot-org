@@ -24,31 +24,7 @@ import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const style = {
-  root: {
-    width: styleConstants['content-width'],
-    height: '80vh',
-    left: 20,
-    right: 20
-  },
-  dropdown: {
-    padding: '0.3em'
-  },
-  sectionNameInput: {
-    // Full-width, large happy text, lots of space.
-    display: 'block',
-    width: '98%',
-    boxSizing: 'border-box',
-    fontSize: 'large',
-    padding: '0.5em'
-  },
-  scroll: {
-    position: 'absolute',
-    top: 80,
-    overflowY: 'scroll',
-    height: 'calc(80vh - 200px)'
-  }
-};
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -205,6 +181,11 @@ class EditSectionForm extends Component {
     const showLoginTypeField =
       !isNewSection && changeableLoginTypes.includes(section.loginType);
 
+    // These are server-side experiments, which are passed down to the client
+    const showCodeReviewEnabledCheckbox =
+      experiments.isEnabled('csa-pilot') ||
+      experiments.isEnabled('csa-pilot-facilitators');
+
     if (!section) {
       return null;
     }
@@ -252,6 +233,15 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
+          {showCodeReviewEnabledCheckbox && (
+            <CodeReviewField
+              value={section.codeReviewEnabled}
+              onChange={codeReviewEnabled =>
+                editSectionProperties({codeReviewEnabled})
+              }
+              disabled={isSaveInProgress}
+            />
+          )}
           {textToSpeechUnitIds.indexOf(section.scriptId) > -1 && (
             <TtsAutoplayField
               isEnglish={localeCode.startsWith('en')}
@@ -474,6 +464,15 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
 );
 PairProgrammingField.propTypes = FieldProps;
 
+const CodeReviewField = ({value, onChange, disabled}) => (
+  <div>
+    <FieldName>{i18n.enablePeerFeedback()}</FieldName>
+    <FieldDescription>{i18n.enablePeerFeedbackDescription()}</FieldDescription>
+    <YesNoDropdown value={value} onChange={onChange} disabled={disabled} />
+  </div>
+);
+CodeReviewField.propTypes = FieldProps;
+
 const RestrictAccessField = ({value, onChange, disabled, loginType}) => {
   const {clever, google_classroom} = SectionLoginType;
   if (loginType !== (clever && google_classroom)) {
@@ -605,3 +604,29 @@ export default connect(
     handleClose: cancelEditingSection
   }
 )(EditSectionForm);
+
+const style = {
+  root: {
+    width: styleConstants['content-width'],
+    height: '80vh',
+    left: 20,
+    right: 20
+  },
+  dropdown: {
+    padding: '0.3em'
+  },
+  sectionNameInput: {
+    // Full-width, large happy text, lots of space.
+    display: 'block',
+    width: '98%',
+    boxSizing: 'border-box',
+    fontSize: 'large',
+    padding: '0.5em'
+  },
+  scroll: {
+    position: 'absolute',
+    top: 80,
+    overflowY: 'scroll',
+    height: 'calc(80vh - 200px)'
+  }
+};

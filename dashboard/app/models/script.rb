@@ -72,10 +72,21 @@ class Script < ApplicationRecord
             :callouts
           ]
         },
+        :lesson_groups,
+        :resources,
+        :student_resources,
         {
-          lessons: [{script_levels: [:levels]}]
+          lessons: [
+            :lesson_activities,
+            {script_levels: [:levels]}
+          ]
         },
-        :unit_group_units
+        {
+          unit_group_units: {
+            unit_group: :course_version
+          }
+        },
+        :course_version
       ]
     )
   end
@@ -261,7 +272,7 @@ class Script < ApplicationRecord
   end
 
   def self.lesson_extras_script_ids
-    @@lesson_extras_scripts ||= Script.all.select(&:lesson_extras_available?).pluck(:id)
+    @@lesson_extras_scripts ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
   end
 
   def self.maker_units
@@ -305,10 +316,8 @@ class Script < ApplicationRecord
 
   class << self
     def all_scripts
-      all_scripts = Rails.cache.fetch('valid_scripts/all') do
-        Script.all.to_a
-      end
-      all_scripts.freeze
+      return all.to_a unless should_cache?
+      @@all_scripts ||= script_cache.values.uniq.compact.freeze
     end
 
     def family_names
@@ -320,10 +329,7 @@ class Script < ApplicationRecord
     private
 
     def visible_units
-      visible_units = Rails.cache.fetch('valid_scripts/valid') do
-        Script.all.select(&:launched?).to_a
-      end
-      visible_units.freeze
+      all_scripts.select(&:launched?).to_a.freeze
     end
   end
 
@@ -392,7 +398,7 @@ class Script < ApplicationRecord
   end
 
   def self.unit_cache_to_cache
-    Rails.cache.write(UNIT_CACHE_KEY, unit_cache_from_db)
+    Rails.cache.write(UNIT_CACHE_KEY, (@@unit_cache = unit_cache_from_db))
   end
 
   def self.unit_cache_from_cache
@@ -1494,6 +1500,8 @@ class Script < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       csf: csf?,
+      isCsd: csd?,
+      isCsp: csp?,
       only_instructor_review_required: only_instructor_review_required?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewLessonInfo: peer_review_lesson_info,
@@ -1533,7 +1541,8 @@ class Script < ApplicationRecord
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
       courseVersionId: get_course_version&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
-      scriptResourcesPdfUrl: get_unit_resources_pdf_url
+      scriptResourcesPdfUrl: get_unit_resources_pdf_url,
+      updated_at: updated_at.to_s
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1635,7 +1644,7 @@ class Script < ApplicationRecord
     end.to_h
 
     data[:description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.description", default: ''))
-    data[:student_description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
+    data[:studentDescription] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
 
     if include_lessons
       data[:lessonDescriptions] = lessons.map do |lesson|
@@ -1686,6 +1695,7 @@ class Script < ApplicationRecord
     @@unit_cache = nil
     @@unit_family_cache = nil
     @@level_cache = nil
+    @@all_scripts = nil
     Rails.cache.delete UNIT_CACHE_KEY
   end
 
@@ -1812,6 +1822,10 @@ class Script < ApplicationRecord
     unit_group.try(:localized_title)
   end
 
+  def unversioned?
+    version_year.blank? || version_year == CourseVersion::UNVERSIONED
+  end
+
   # If there is an alternate version of this unit which the user should be on
   # due to existing progress or a course experiment, return that unit. Otherwise,
   # return nil.
@@ -1894,30 +1908,10 @@ class Script < ApplicationRecord
   end
 
   def get_feedback_for_section(section)
-    rubric_performance_headers = {
-      performanceLevel1: "Extensive Evidence",
-      performanceLevel2: "Convincing Evidence",
-      performanceLevel3: "Limited Evidence",
-      performanceLevel4: "No Evidence"
-    }
-
-    rubric_performance_json_to_ruby = {
-      performanceLevel1: "rubric_performance_level_1",
-      performanceLevel2: "rubric_performance_level_2",
-      performanceLevel3: "rubric_performance_level_3",
-      performanceLevel4: "rubric_performance_level_4"
-    }
-
-    review_state_labels = {
-      keepWorking: "Needs more work",
-      completed: "Reviewed, completed"
-    }
-
     feedback = {}
 
-    level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
     student_ids = section.students.map(&:id)
-    all_feedback = TeacherFeedback.get_latest_feedbacks_given(student_ids, level_ids, id, section.user_id)
+    all_feedback = TeacherFeedback.get_latest_feedbacks_given(student_ids, nil, id, section.user_id)
 
     feedback_hash = {}
     all_feedback.each do |feedback_element|
@@ -1926,25 +1920,23 @@ class Script < ApplicationRecord
     end
 
     script_levels.each do |script_level|
-      next unless script_level.oldest_active_level.can_have_feedback?
-      section.students.each do |student|
-        current_level = script_level.oldest_active_level
-        next unless feedback_hash[student.id]
-        temp_feedback = feedback_hash[student.id][current_level.id]
-        next unless temp_feedback
-        feedback[temp_feedback.id] = {
-          studentName: student.name,
-          lessonNum: script_level.lesson.relative_position.to_s,
-          lessonName: script_level.lesson.localized_title,
-          levelNum: script_level.position.to_s,
-          keyConcept: (current_level.rubric_key_concept || ''),
-          performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),
-          performance: rubric_performance_headers[temp_feedback.performance&.to_sym],
-          comment: temp_feedback.comment,
-          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r"),
-          reviewStateLabel: review_state_labels[temp_feedback.review_state&.to_sym] || "Never reviewed",
-          studentSeenFeedback: temp_feedback.student_seen_feedback&.localtime&.strftime("%D at %r")
-        }
+      current_level = script_level.oldest_active_level
+
+      if current_level.can_have_feedback?
+        section.students.each do |student|
+          next unless temp_feedback = feedback_hash.dig(student.id, current_level.id)
+          feedback[temp_feedback.id] = temp_feedback.summarize_for_csv(current_level, script_level, student)
+        end
+      end
+
+      next unless sublevels = current_level.try(:sublevels)
+      sublevels.each_with_index do |sublevel, sublevel_index|
+        next unless sublevel.can_have_feedback?
+
+        section.students.each do |student|
+          next unless temp_feedback = feedback_hash.dig(student.id, sublevel.id)
+          feedback[temp_feedback.id] = temp_feedback.summarize_for_csv(sublevel, script_level, student, sublevel_index)
+        end
       end
     end
 

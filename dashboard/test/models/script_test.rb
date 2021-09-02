@@ -31,7 +31,7 @@ class ScriptTest < ActiveSupport::TestCase
     # *before* generating the caches.
     # We also want to test level_concept_difficulties, so make sure to give it
     # one.
-    @cacheable_level = create(:level, :script, level_concept_difficulty: create(:level_concept_difficulty))
+    @cacheable_level = create(:level, :with_script, level_concept_difficulty: create(:level_concept_difficulty))
 
     # ensure that we have freshly generated caches with this unit_group/unit
     UnitGroup.clear_cache
@@ -1812,7 +1812,6 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal "Level #{level_num}_copy", level.name
       old_level = Level.find_by_name("Level #{level_num}")
       assert_equal old_level.level_num, level.level_num
-      assert_equal old_level.id, level.parent_level_id
       assert_equal '_copy', level.name_suffix
     end
 
@@ -1988,17 +1987,24 @@ class ScriptTest < ActiveSupport::TestCase
     section.add_student(student2)
 
     feedback1 = create(:teacher_feedback, script: script, level: weblab_level, teacher: teacher, student: student1, comment: "Testing", performance: 'performanceLevel1')
-    create(:teacher_feedback, script: script, level: weblab_level, teacher: teacher, student: student2)
+    feedback2 = create(:teacher_feedback, script: script, level: weblab_level, teacher: teacher, student: student2, review_state: TeacherFeedback::REVIEW_STATES.keepWorking)
+    create :user_level, user: student2, level: weblab_level, script: script, updated_at: 1.week.from_now
     create(:teacher_feedback, script: script, level: gamelab_level, teacher: teacher, student: student2)
 
     feedback_for_section = script.get_feedback_for_section(section)
 
     assert_equal(3, feedback_for_section.keys.length) # expect 3 feedbacks
+
+    # feedback1 assertions
     feedback1_result = feedback_for_section[feedback1.id]
     assert_equal(student1.name, feedback1_result[:studentName])
     assert_equal("Testing", feedback1_result[:comment])
     assert_equal("Extensive Evidence", feedback1_result[:performance])
     assert_equal("Never reviewed", feedback1_result[:reviewStateLabel])
+
+    # feedback2 assertions
+    feedback2_result = feedback_for_section[feedback2.id]
+    assert_equal("Waiting for review", feedback2_result[:reviewStateLabel])
   end
 
   # This test checks that all categories that may show up in the UI have
@@ -2061,25 +2067,25 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
+    Script.destroy_all
     user = create(:user)
-    unit = create(:script)
-    alternate_unit = build(:script)
+    create(:script, published_state: SharedConstants::PUBLISHED_STATE.stable, name: 'original-unit')
+    alternate_unit = build(:script, published_state: SharedConstants::PUBLISHED_STATE.stable, name: 'alternate-unit')
 
     UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Rails.cache.stubs(:fetch).returns([unit])
-    unit.stubs(:alternate_script).returns(alternate_unit)
+    Script.any_instance.stubs(:alternate_script).returns(alternate_unit)
 
     units = Script.valid_scripts(user)
     assert_equal [alternate_unit], units
   end
 
   test "self.valid_scripts: returns original unit if user has a course experiment with no alternate unit" do
+    Script.destroy_all
     user = create(:user)
-    unit = create(:script)
+    unit = create(:script, published_state: SharedConstants::PUBLISHED_STATE.stable)
 
     UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Rails.cache.stubs(:fetch).returns([unit])
-    unit.stubs(:alternate_script).returns(nil)
+    Script.any_instance.stubs(:alternate_script).returns(nil)
 
     units = Script.valid_scripts(user)
     assert_equal [unit], units

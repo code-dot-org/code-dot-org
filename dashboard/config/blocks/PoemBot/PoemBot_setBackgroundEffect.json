@@ -2,18 +2,87 @@
   "category": "",
   "config": {
     "func": "setBackgroundEffect",
-    "blockText": "set background effect {BG_EFFECT}",
+    "blockText": "set background effect {EFFECT} {PALETTE}",
     "args": [
       {
-        "name": "BG_EFFECT",
+        "name": "EFFECT",
         "options": [
           [
-            "solid",
-            "\"solid\""
+            "Colors",
+            "\"colors\""
           ],
           [
-            "rainbow",
-            "\"rainbow\""
+            "Squiggles",
+            "\"squiggles\""
+          ],
+          [
+            "Space",
+            "\"space\""
+          ],
+          [
+            "Stars",
+            "\"stars\""
+          ],
+          [
+            "Dark Circles",
+            "\"darkCircles\""
+          ],
+          [
+            "Color Fade",
+            "\"fadeColors\""
+          ],
+          [
+            "Blooming",
+            "\"blooming\""
+          ],
+          [
+            "Ripples",
+            "\"ripples\""
+          ],
+          [
+            "Clouds",
+            "\"clouds\""
+          ]
+        ]
+      },
+      {
+        "name": "PALETTE",
+        "options": [
+          [
+            "Black & White",
+            "\"grayscale\""
+          ],
+          [
+            "Sky",
+            "\"sky\""
+          ],
+          [
+            "Ocean",
+            "\"ocean\""
+          ],
+          [
+            "Sunrise",
+            "\"sunrise\""
+          ],
+          [
+            "Sunset",
+            "\"sunset\""
+          ],
+          [
+            "Spring",
+            "\"spring\""
+          ],
+          [
+            "Summer",
+            "\"summer\""
+          ],
+          [
+            "Autumn",
+            "\"autumn\""
+          ],
+          [
+            "Winter",
+            "\"winter\""
           ]
         ]
       }

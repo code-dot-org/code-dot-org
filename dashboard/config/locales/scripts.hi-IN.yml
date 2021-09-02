@@ -22342,6 +22342,8 @@ hi:
               name: स्प्राइट लैब का परिचय
             Virus Simulation for Code Bytes:
               name: एक सिम्युलेशन की कोडिंग
+            Making Sprites:
+              name: स्प्राइट्स बनाएं
             Sprites in Action:
               name: क्रिया में स्प्राइट्स
           lesson_groups:
@@ -24063,6 +24065,7 @@ hi:
               description_teacher: यहां, छात्र अपने खुद के अनुकूलित व्यवहार तैयार
                 करने के लिए स्प्राइट लैब का उपयोग करेंगे।
             Virtual Pet:
+              key: वर्चुअल पालतू जानवर
               description_student: इस पाठ में, छात्र संवादात्मक वर्चुअल पालतू जानवर
                 बनाएंगे, जो उनकी इच्छा मुताबिक दिखता और व्यवहार करता हो। छात्र अपने
                 पालतू जानवर को अनुकूलित करने के लिए स्प्राइट लैप के "कॉस्ट्यूम्स"
@@ -24087,6 +24090,8 @@ hi:
                 बारे में सीखेंगे। '
             lesson-6:
               name: स्प्राइट लैब का परिचय
+            lesson-7:
+              name: स्प्राइट्स बनाएं
             lesson-8:
               name: क्रिया में स्प्राइट्स
             lesson-2:
@@ -24358,6 +24363,8 @@ hi:
               description_teacher: इस पाठ में, आप अपनी खुद की संवादात्मक डांस पार्टी
                 को प्रोग्राम करेंगे। इस गतिविधि के लिए ध्वनि की जरूरत है क्योंकि टूल
                 संगीत पर प्रतिक्रिया करने वाला बनाया गया था।
+            lesson-2:
+              name: स्प्राइट्स बनाएं
             lesson-3:
               name: क्रिया में स्प्राइट्स
           lesson_groups:
@@ -24495,6 +24502,8 @@ hi:
               name: एक सिम्युलेशन की कोडिंग
             Course F Introduction:
               name: स्प्राइट लैब का परिचय
+            Making Sprites:
+              name: स्प्राइट्स बनाएं
             Sprites in Action:
               name: क्रिया में स्प्राइट्स
             introducing-spritelab:
@@ -25396,3 +25405,10 @@ hi:
           lessons:
             lesson-1:
               name: रूपरेखा
+        csa-u6-dev:
+          lessons:
+            lesson-18:
+              name: विजेट (Widgets)
+          lesson_groups:
+            lessonGroup-3:
+              display_name: प्रोजेक्ट

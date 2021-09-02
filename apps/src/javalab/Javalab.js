@@ -25,7 +25,7 @@ import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
-import {CsaViewMode} from './constants';
+import {CsaViewMode, InputMessageType} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
 import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
@@ -34,6 +34,7 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -53,6 +54,8 @@ const Javalab = function() {
   this.studioApp_ = null;
   this.miniApp = null;
   this.visualization = null;
+
+  this.csrf_token = null;
 };
 
 /**
@@ -101,18 +104,28 @@ Javalab.prototype.init = function(config) {
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
-  if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
-    this.miniApp = new Neighborhood(
-      this.onOutputMessage,
-      this.onNewlineMessage,
-      this.setIsRunning
-    );
-    config.afterInject = () =>
-      this.miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
-    this.visualization = <NeighborhoodVisualizationColumn />;
-  } else if (this.level.csaViewMode === CsaViewMode.THEATER) {
-    this.miniApp = new Theater(this.onOutputMessage, this.onNewlineMessage);
-    this.visualization = <TheaterVisualizationColumn />;
+
+  switch (this.level.csaViewMode) {
+    case CsaViewMode.NEIGHBORHOOD:
+      this.miniApp = new Neighborhood(
+        this.onOutputMessage,
+        this.onNewlineMessage,
+        this.setIsRunning
+      );
+      config.afterInject = () =>
+        this.miniApp.afterInject(
+          this.level,
+          this.skin,
+          config,
+          this.studioApp_
+        );
+      this.visualization = <NeighborhoodVisualizationColumn />;
+      break;
+    case CsaViewMode.THEATER:
+    case CsaViewMode.PLAYGROUND:
+      this.miniApp = new Theater(this.onOutputMessage, this.onNewlineMessage);
+      this.visualization = <TheaterVisualizationColumn />;
+      break;
   }
 
   const onMount = () => {
@@ -129,6 +142,12 @@ Javalab.prototype.init = function(config) {
     this.studioApp_.initVersionHistoryUI(config);
     this.studioApp_.initTimeSpent();
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
+
+    initializeSubmitHelper({
+      studioApp: this.studioApp_,
+      onPuzzleComplete: this.onContinue.bind(this),
+      unsubmitUrl: config.level.unsubmitUrl
+    });
 
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
     var viewport = document.querySelector('meta[name="viewport"]');
@@ -148,7 +167,9 @@ Javalab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isEditingStartSources: this.isStartMode,
     isCodeReviewing: !!config.isCodeReviewing,
-    isResponsive: true
+    isResponsive: true,
+    isSubmittable: !!config.level.submittable,
+    isSubmitted: !!config.level.submitted
   });
 
   registerReducers({javalab});
@@ -216,7 +237,15 @@ Javalab.prototype.init = function(config) {
     setBackpackApi(new BackpackClientApi(config.backpackChannel))
   );
 
-  getStore().dispatch(setDisableFinishButton(config.readonlyWorkspace));
+  getStore().dispatch(
+    setDisableFinishButton(
+      !!config.readonlyWorkspace && !config.level.submittable
+    )
+  );
+
+  fetch('/project_versions/get_token', {
+    method: 'GET'
+  }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -286,20 +315,31 @@ Javalab.prototype.onStop = function() {
 
 // Called by Javalab console to send a message to Javabuilder.
 Javalab.prototype.onInputMessage = function(message) {
-  this.javabuilderConnection.sendMessage(message);
+  this.onJavabuilderMessage(InputMessageType.SYSTEM_IN, message);
+};
+
+// Called by the console or mini apps to send a message to Javabuilder.
+Javalab.prototype.onJavabuilderMessage = function(messageType, message) {
+  this.javabuilderConnection.sendMessage(
+    JSON.stringify({
+      messageType,
+      message
+    })
+  );
 };
 
 // Called by the Javalab app when it wants to go to the next level.
-Javalab.prototype.onContinue = function() {
+Javalab.prototype.onContinue = function(submit) {
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
+  const onComplete = submit ? onSubmitComplete : onReportComplete;
 
   const containedLevelResultsInfo = this.studioApp_.hasContainedLevels
     ? getContainedLevelResultInfo()
     : null;
   if (containedLevelResultsInfo) {
-    runAfterPostContainedLevel(onReportComplete);
+    runAfterPostContainedLevel(onComplete);
   } else {
     this.studioApp_.report({
       app: 'javalab',
@@ -307,8 +347,9 @@ Javalab.prototype.onContinue = function() {
       result: true,
       testResult: TestResults.ALL_PASS,
       program: '',
+      submitted: submit,
       onComplete: result => {
-        onReportComplete(result);
+        onComplete(result);
       }
     });
   }
@@ -324,8 +365,21 @@ Javalab.prototype.afterClearPuzzle = function() {
   project.autosave();
 };
 
-Javalab.prototype.onCommitCode = function(commitNotes) {
-  project.autosave();
+Javalab.prototype.onCommitCode = function(commitNotes, onSuccessCallback) {
+  project.save(true).then(result => {
+    fetch('/project_versions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': this.csrf_token
+      },
+      body: JSON.stringify({
+        storage_id: project.getCurrentId(),
+        version_id: project.getCurrentSourceVersionId(),
+        comment: commitNotes
+      })
+    }).then(() => onSuccessCallback());
+  });
 };
 
 Javalab.prototype.onOutputMessage = function(message) {

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-16 14:10:22 UTC",
+    "serialized_at": "2021-09-01 13:40:36 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -2949,13 +2949,7 @@
       "key": "46e87755-691e-4e96-a588-88a99674ef64",
       "position": 8,
       "properties": {
-        "description": "**Do This:** Discuss strategies for giving good feedback.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how to focus code reviews by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the ART (ask questions, raise flags about confusing code, and tag awesome code) mnemonic to help structure feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice activity guide to each review group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the comments. Have students decide whether the feedback is valuable for the author.\n* Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n* Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n* Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What additional feedback might you give to the developer?*\n* *Why is this feedback useful?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their review groups to write additional comments for the developer on their Code Review Practice activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to review the work of one member of their review group.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Some additional places students may give feedback in lines 1-30 include:\n* Line 3 - The constructor is initialized incorrectly\n* Lines 11-14 - Good use of a `while` loop\n* Lines 28-30 - Interesting use of paint buckets as a tool for navigating and drawing"
-          }
-        ]
+        "description": "**Do This:** Discuss strategies for giving good feedback.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how to focus code reviews by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the ART (ask questions, raise flags about confusing code, and tag awesome code) mnemonic to help structure feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice activity guide to each review group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the comments. Have students decide whether the feedback is valuable for the author.\n* Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n* Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n* Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What additional feedback might you give to the developer?*\n* *Why is this feedback useful?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their review groups to write additional comments for the developer on their Code Review Practice activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to review the work of one member of their review group."
       },
       "seeding_key": {
         "activity_section.key": "46e87755-691e-4e96-a588-88a99674ef64",
@@ -3107,7 +3101,13 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
-        "progression_name": "Creating PainterPlus"
+        "progression_name": "Creating PainterPlus",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Backpack allows students to save and reuse their code in future lessons and projects. Be sure to remind students to update changes to their Backpack to ensure they have the latest version saved."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c2e994c5-aa95-423f-963e-10b48563f2d0",
@@ -7620,6 +7620,18 @@
       }
     },
     {
+      "name": "Around the World",
+      "url": "https://youtu.be/6T1jW9R6YIQ",
+      "key": "around_the_world",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "around_the_world"
+      }
+    },
+    {
       "name": "Asphalt Art Project Peer Interview Cards",
       "url": "https://docs.google.com/document/d/1zUqv1XmGszrRmP5Y7MuL7mQCHMZITVBkLmwoGWjoZus/edit?usp=sharing",
       "key": "asphalt_art_project_peer_interview_cards",
@@ -7684,7 +7696,7 @@
     },
     {
       "name": "Conditionals",
-      "url": "https://drive.google.com/file/d/1hyWJDDhNPcwc98qjfeHwUifAzo3dkxYl/view?usp=sharing",
+      "url": "https://youtu.be/IM_GcUh3oLA",
       "key": "conditionals",
       "properties": {
         "type": "Video",
@@ -7709,7 +7721,7 @@
     },
     {
       "name": "Creating Objects",
-      "url": "https://drive.google.com/file/d/1Yvi3F7mT5I3y4qiYMsyMYpnqmTTOtGLR/view?usp=sharing",
+      "url": "https://youtu.be/RdoQv0lUDb0",
       "key": "creating_objects",
       "properties": {
         "type": "Video",
@@ -7725,7 +7737,7 @@
       "key": "design_the_neighborhood",
       "properties": {
         "type": "Activity Guide",
-        "audience": "Verified Teacher",
+        "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
@@ -7747,7 +7759,7 @@
     },
     {
       "name": "if-else Statements",
-      "url": "https://drive.google.com/file/d/1h-BRs9A-UO_OHAqRA6coeYi_8ri-6aE1/view?usp=sharing",
+      "url": "https://youtu.be/A1zMZrt_0yA",
       "key": "if-else_statements",
       "properties": {
         "type": "Video",
@@ -7759,7 +7771,7 @@
     },
     {
       "name": "Inheritance and Subclasses",
-      "url": "https://drive.google.com/file/d/13nxTym71iAbJ-iiDC64MmP9Xpt9jOX1R/view?usp=sharing",
+      "url": "https://youtu.be/mTU-xJ_WhC8",
       "key": "inheritance_and_subclasses",
       "properties": {
         "type": "Video",
@@ -7771,7 +7783,7 @@
     },
     {
       "name": "Introduction to Parameters",
-      "url": "https://drive.google.com/file/d/14aJLfsCqFuucALoM0fAiNr7EnKzn19BH/view?usp=sharing",
+      "url": "https://youtu.be/01wTIQ9bfBM",
       "key": "introduction_to_parameters",
       "properties": {
         "type": "Video",
@@ -7796,7 +7808,7 @@
     },
     {
       "name": "Methods",
-      "url": "https://drive.google.com/file/d/17tb18nCPZhe61xabjxuE_FB2KJmJYPKq/view?usp=sharing",
+      "url": "https://youtu.be/aDgkQrJWy-Q",
       "key": "methods",
       "properties": {
         "type": "Video",
@@ -7834,7 +7846,7 @@
     },
     {
       "name": "Objects and Classes",
-      "url": "https://drive.google.com/file/d/1RJQC9DSvyyXysKH6bWBFkhsWZaieq0T4/view?usp=sharing",
+      "url": "https://youtu.be/8Wu40UFzFnM",
       "key": "objects_and_classes",
       "properties": {
         "type": "Video",
@@ -7870,7 +7882,7 @@
     },
     {
       "name": "Parameterized Constructors",
-      "url": "https://drive.google.com/file/d/1sFcHpes5Sl1T0tEF8yrt0JV4cjDbJo9S/view?usp=sharing",
+      "url": "https://youtu.be/ZRF6ebbRsA4",
       "key": "parameterized_constructors",
       "properties": {
         "type": "Video",
@@ -8203,7 +8215,7 @@
     },
     {
       "name": "What is Java?",
-      "url": "https://drive.google.com/file/d/1E5L-ADA40ai9CGrpdUkfZIHwPCr1QBPx/view?usp=sharing",
+      "url": "https://youtu.be/Q8fw0cDpL_k",
       "key": "what_is_java_",
       "properties": {
         "type": "Video",
@@ -8489,6 +8501,12 @@
       "seeding_key": {
         "lesson.key": "lesson-19",
         "resource.key": "_key_u1l19_frq_day"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "around_the_world"
       }
     },
     {

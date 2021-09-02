@@ -1,5 +1,6 @@
 name 'CSA U1L6-L4'
 title 'Check for Understanding'
+height '100'
 description 'Match each term with its correct definition.'
 
 question 'syntax'

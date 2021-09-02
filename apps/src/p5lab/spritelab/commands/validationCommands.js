@@ -5,7 +5,9 @@ export const commands = {
 
   getBackground() {
     const background = this.getBackground();
-    if (typeof background === 'string') {
+    if (background === undefined) {
+      return undefined;
+    } else if (typeof background === 'string') {
       return background;
     } else {
       return background.name;
@@ -34,6 +36,10 @@ export const commands = {
 
   getPromptVars() {
     return this.promptVars;
+  },
+
+  getSoundLog() {
+    return this.soundLog;
   },
 
   getSpriteIdsInUse() {

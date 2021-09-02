@@ -23644,6 +23644,8 @@ fr:
               name: Introduction au Labo des Lutins
             Virus Simulation for Code Bytes:
               name: Codage d'une simulation
+            Making Sprites:
+              name: Faire des sprites
             Sprites in Action:
               name: Les Lutins en Action
             End of Course Project:
@@ -25542,6 +25544,7 @@ fr:
               description_teacher: Ici, les étudiants utiliseront le Labo des Lutins
                 pour créer leurs propres comportements personnalisés.
             Virtual Pet:
+              key: Animal domestique virtuel
               description_student: Dans cette leçon, les élèves créeront un Animal
                 de Compagnie Virtuel interactif dont l'apparence et le comportements
                 correspondront à leurs souhaits. Les élèves utiliseront l'outil «
@@ -25574,6 +25577,8 @@ fr:
                 hypothétiques. '
             lesson-6:
               name: Introduction au Labo des Lutins
+            lesson-7:
+              name: Faire des sprites
             lesson-8:
               name: Les Lutins en Action
             lesson-2:
@@ -25869,6 +25874,8 @@ fr:
               description_teacher: Dans cette leçon, les élèves programmeront leur
                 propre soirée dansante interactive. Cette activité nécessite du son
                 car l'outil a été conçu pour répondre à la musique.
+            lesson-2:
+              name: Faire des sprites
             lesson-3:
               name: Les Lutins en Action
           lesson_groups:
@@ -26012,6 +26019,8 @@ fr:
               name: Introduction au Labo des Lutins
             lesson-3:
               name: Créer un Chat-bot
+            Making Sprites:
+              name: Faire des sprites
             Sprites in Action:
               name: Les Lutins en Action
             introducing-spritelab:
@@ -27031,3 +27040,59 @@ fr:
           lessons:
             lesson-1:
               name: Aperçu
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Outils
+            lesson-18:
+              name: Widgets
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Leçons
+            lessonGroup-3:
+              display_name: Projet
+        csa1-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            lesson-20:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa2-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lesson group:
+              display_name: Contenu
+        csa3-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa4-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa5-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu

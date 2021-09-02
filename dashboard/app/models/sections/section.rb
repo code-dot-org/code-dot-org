@@ -21,6 +21,7 @@
 #  hidden               :boolean          default(FALSE), not null
 #  tts_autoplay_enabled :boolean          default(FALSE), not null
 #  restrict_section     :boolean          default(FALSE)
+#  code_review_enabled  :boolean          default(TRUE)
 #
 # Indexes
 #
@@ -177,7 +178,7 @@ class Section < ApplicationRecord
     # added_by is passed only from the sections_students_controller, used by teachers to
     # manager their rosters.
     unless added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)
-      return ADD_STUDENT_RESTRICTED if restrict_section == TRUE && (!follower || follower.deleted?)
+      return ADD_STUDENT_RESTRICTED if restrict_section == true && (!follower || follower.deleted?)
     end
 
     # Unless the sections login type is Google or Clever
@@ -293,7 +294,8 @@ class Section < ApplicationRecord
       providerManaged: provider_managed?,
       hidden: hidden,
       students: include_students ? unique_students.map(&:summarize) : nil,
-      restrict_section: restrict_section
+      restrict_section: restrict_section,
+      code_review_enabled: code_review_enabled?
     }
   end
 
@@ -391,6 +393,10 @@ class Section < ApplicationRecord
     # This performs two queries, but could be optimized to perform only one by
     # doing additional joins.
     Script.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.pluck(:id)
+  end
+
+  def code_review_enabled?
+    code_review_enabled.nil? ? true : code_review_enabled
   end
 
   private

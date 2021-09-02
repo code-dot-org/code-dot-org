@@ -206,13 +206,17 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :user
     sign_in user
 
-    channel = get_channel_for(@level)
+    script = create(:script)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [@level, level])
+
+    channel = get_channel_for(@level, script.id)
     # Request it again, should get the same channel
-    assert_equal channel, get_channel_for(@level)
+    assert_equal channel, get_channel_for(@level, script.id)
 
     # Request it for a different level, should get a different channel
     level = create(:level, :blockly)
-    assert_not_equal channel, get_channel_for(level)
+    assert_not_equal channel, get_channel_for(level, script.id)
   end
 
   test 'applab levels should have channels' do
@@ -228,10 +232,12 @@ class LevelsHelperTest < ActionView::TestCase
     @user = create :user
     sign_in create(:user)
 
+    script = create(:script)
     @level = create :applab
+    create(:script_level, script: script, levels: [@level])
 
     # channel does not exist
-    assert_nil get_channel_for(@level, @user)
+    assert_nil get_channel_for(@level, script.id, @user)
   end
 
   test 'applab levels should load channel when viewing student solution of a student with a channel' do
@@ -239,11 +245,13 @@ class LevelsHelperTest < ActionView::TestCase
     @user = create :user
     sign_in create(:user)
 
+    script = create(:script)
     @level = create :applab
+    create(:script_level, script: script, levels: [@level])
 
     # channel exists
     create :channel_token, level: @level, storage_id: storage_id_for_user_id(@user.id)
-    assert_not_nil get_channel_for(@level, @user)
+    assert_not_nil get_channel_for(@level, script.id, @user)
 
     # calling app_options should set readonly_workspace, since we're viewing for
     # different user
