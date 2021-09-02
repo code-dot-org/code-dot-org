@@ -22614,8 +22614,8 @@ en:
               description_teacher: Students explore the use of casting and truncation to help the owner of the Project Mercury Pastries Food Truck round their prices to whole dollar numbers. Students apply casting and rounding techniques to generate random numbers using `Math.random()` within specific ranges.
             lesson-5:
               name: Comparing Values to Make Decisions
-              description_student: 'Today is all about using code to make decisions. You compare relationships between values while using conditional statements to help the `Painter` make decisions. '
-              description_teacher: 'Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. '
+              description_student: 'In The Neighborhood, you have used Boolean methods to help the `Painter` make decisions about navigating and painting. In this lesson, you learn to use relational operators to write Boolean expressions and use these with `if` statements to expand the conditions you can check while navigating and painting in The Neighborhood. '
+              description_teacher: Students use relational operators to write and evaluate Boolean expressions. Students then use these relational operators to expand the conditions they can check with `if` statements. Students revisit The Neighborhood to practice writing expressions with relational operators in `if` statements to navigate and paint under specific conditions.
             lesson-6:
               name: Adding Randomness to a Program
               description_student: One of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes. Today, you add randomization to the Pop the Balloon game by adding a dice rolling feature.
@@ -25931,12 +25931,18 @@ en:
               description_teacher: 
             lesson-13:
               name: Accelerometer
+              description_student: 
+              description_teacher: 
             lesson-14:
               name: Music + Arrays
+              description_student: 
+              description_teacher: 
             lesson-15:
               name: 'Mini Project: Sensors'
             lesson-17:
               name: Physical Outputs (LEDs)
+              description_student: 
+              description_teacher: 
             lesson-16:
               name: Physical Inputs
             lesson-18:
