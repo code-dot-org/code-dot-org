@@ -22606,16 +22606,16 @@ en:
               description_teacher: Students design and build a game engine for this project, focusing primarily on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identify its core functionalities. They write pseudocode for these components and begin the development of their project.
             lesson-3:
               name: Solving Problems with the Math Class
-              description_student: In Unit 3, you looked at the source code for the `Math` class, but now it’s time to see what it can do! In this lesson, you learn about `final` classes and static methods and identify their purposes and uses. You use some of the `Math` class methods - `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` - to solve problems.
-              description_teacher: Students revisit the `Math` class, going more in-depth to explore its methods. They learn about `final` classes and static methods and identify their purposes and uses. They use `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` to solve problems.
+              description_student: Another class in the Java API is the `Math` class, which contains methods for performing mathematical functions. In this lesson, you explore the `Math` class to learn about its structure and methods. As you review the documentation for the `Math` class, you discover the purpose and use of `final` classes and static methods. You practice using methods in the `Math` class and the `Scanner` class to solve problems.
+              description_teacher: Students explore the `Math` class to learn about its structure and methods. As students review the documentation for the `Math` class, students discover the purpose and use of `final` classes and static methods. Students practice using methods in the `Math` class and the `Scanner` class to solve problems.
             lesson-4:
               name: Treating Data as a Different Types
-              description_student: The Food Truck has run out of coins! Because the owner can’t give change with coins, she can only charge whole dollar amounts and no cents. You learn how to use casting, rounding, and random numbers to help the owner through her coin shortage.
-              description_teacher: Students revisit the Project Mercury Pastries Food Truck to learn about casting, rounding, and random numbers. The students solve scenarios for the food truck owner using their knowledge of Java and the `Math` class.
+              description_student: In the previous lesson, you learned how to use `Math` class to calculate absolute values, square roots, and exponents. You continue manipulating values as you learn about casting and rounding. You combine these techniques with `Math.random()` to generate random numbers within specific ranges.
+              description_teacher: Students explore the use of casting and truncation to help the owner of the Project Mercury Pastries Food Truck round their prices to whole dollar numbers. Students apply casting and rounding techniques to generate random numbers using `Math.random()` within specific ranges.
             lesson-5:
               name: Comparing Values to Make Decisions
-              description_student: 'Today is all about using code to make decisions. You compare relationships between values while using conditional statements to help the `Painter` make decisions. '
-              description_teacher: 'Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. '
+              description_student: 'In The Neighborhood, you have used Boolean methods to help the `Painter` make decisions about navigating and painting. In this lesson, you learn to use relational operators to write Boolean expressions and use these with `if` statements to expand the conditions you can check while navigating and painting in The Neighborhood. '
+              description_teacher: Students use relational operators to write and evaluate Boolean expressions. Students then use these relational operators to expand the conditions they can check with `if` statements. Students revisit The Neighborhood to practice writing expressions with relational operators in `if` statements to navigate and paint under specific conditions.
             lesson-6:
               name: Adding Randomness to a Program
               description_student: One of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes. Today, you add randomization to the Pop the Balloon game by adding a dice rolling feature.
@@ -24931,6 +24931,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         csa-self-paced-pl:
           lessons:
             Navigating the Code.org learning platform:
@@ -25854,30 +25855,53 @@ en:
               description_teacher: 
             lesson-2:
               name: Innovations in Computing
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: Board Outputs (LED Buzzer)
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                - Use the buzzer on the circuit playground
+                - Use the led on the circuit playground
+                - NO variables; NO if statements; NO screen elements
             lesson-4:
               name: App Lab Outputs (setProperty)
               description_student: 
-              description_teacher: 
+              description_teacher: "- Use setProperty() to change elements on the screen\n  - Focus on colors and x/y positions using random numbers\n- Use setText() to change text on screen \n- NO circuit playground; NO if statements; NO variables"
             lesson-5:
-              name: Unplugged Board Inputs?
+              name: Sensors
+              description_student: 
+              description_teacher: 
             lesson-6:
               name: Board Inputs (Button Toggle)
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                - use buttons to change elements on screen
+                - use toggle switch to change elements on screen
+                - use buttons and toggle with buzzer in circuit playground
+                - NO if statements; NO variables; OK screen outputs
             lesson-7:
               name: Variables + If-Statements
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                - use variables + counter pattern to update elements on screen
+                  - example: count number of times a button is pressed
+                - use if-statements to check position of toggle switch
+                - use variables to check value of variable
+                  - for example: play buzzer after a certain number of clicks
             lesson-8:
               name: 'Mini-Proj: Emoji Race'
+              description_student: 
+              description_teacher: 
             lesson-9:
               name: Color LEDs
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                - use screen events to change color LEDs in circuit playground
+                - use on(), off(), pulse(), toggle(), and blink() LED functions
+                - change intensity of color LEDs
+                - NOT A FOCUS: arrays.
+                  - Only need concept of counting from 0 and concept of position mapping (ie: [0] maps to a specific LED on the CP; [5] maps to a different LED on the CP)
             lesson-10:
               name: App Lab Inputs (getProperty, getText) (Dropdowns Inputs Sliders?)
               description_student: 
@@ -25894,12 +25918,60 @@ en:
                 In tomorrow's lesson, include motorcycle game where you can press on CP and have something change on screen.
             lesson-11:
               name: Combining Inputs
+              description_student: 
+              description_teacher: |-
+                - Use dropdowns and sliders to update aspects of the circuit playground
+                - Have CP inputs update screen elements using getProperty() and setProperty()
+                - Screen input <> Board Output is preparation for Maker project at end of Ch 1
+
+                **NOTE TO SELF: These levels should use the color LEDs instead of the regular LED.** In original curriculum, we only had access to led and buzzer. But now, we have color LEDs, so lets use those here too
             lesson-12:
               name: 'Project: Maker'
-          lesson_groups: {}
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: Accelerometer
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: Music + Arrays
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: 'Mini Project: Sensors'
+            lesson-17:
+              name: Physical Outputs (LEDs)
+              description_student: 
+              description_teacher: 
+            lesson-16:
+              name: Physical Inputs
+            lesson-18:
+              name: Prototyping
+            lesson-19:
+              name: Project
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Content
           name: csdu6-playground
           title: CSD Unit 6 Playground
           description_audience: ''
           description_short: CSD U6 Playground. See Dan Schneider for questions
           description: ''
           student_description: CSD U6 Playground. See Dan Schneider for questions
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-food
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
