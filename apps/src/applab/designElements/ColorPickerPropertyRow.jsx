@@ -24,7 +24,7 @@ export default class ColorPickerPropertyRow extends React.Component {
     window.removeEventListener('mousedown', this.handlePageClick);
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     const {initialValue} = nextProps;
     if (this.props.initialValue !== initialValue) {
       this.setState({colorPickerText: initialValue});

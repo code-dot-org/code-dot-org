@@ -46,13 +46,13 @@ export default class WorkshopTable extends React.Component {
     showStatus: false
   };
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     if (this.props.onWorkshopsReceived) {
       this.props.onWorkshopsReceived(this.props.workshops);
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (
       !_.isEqual(this.props.workshops, nextProps.workshops) &&
       this.props.onWorkshopsReceived
