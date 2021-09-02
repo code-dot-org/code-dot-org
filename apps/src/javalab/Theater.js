@@ -41,7 +41,7 @@ export default class Theater {
 
   reset() {
     this.loadEventsFinished = 0;
-    this.getImgElement().src = '';
+    this.getImgElement().style.visibility = 'hidden';
     this.getAudioElement().src = '';
   }
 
