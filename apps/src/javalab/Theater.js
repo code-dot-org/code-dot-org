@@ -12,11 +12,12 @@ export default class Theater {
   handleSignal(data) {
     switch (data.value) {
       case TheaterSignalType.AUDIO_URL: {
-        this.getAudioElement().src = data.detail.url;
+        this.getAudioElement().src =
+          data.detail.url + this.getCacheBustSuffix();
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
-        this.getImgElement().src = data.detail.url;
+        this.getImgElement().src = data.detail.url + this.getCacheBustSuffix();
         break;
       }
       default:
@@ -43,5 +44,9 @@ export default class Theater {
       `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
     );
     this.onNewlineMessage();
+  }
+
+  getCacheBustSuffix() {
+    return '?=' + new Date().getTime();
   }
 }
