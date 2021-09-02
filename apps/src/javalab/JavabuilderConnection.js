@@ -31,6 +31,13 @@ export default class JavabuilderConnection {
   // Get the access token to connect to javabuilder and then open the websocket connection.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
   connectJavabuilder() {
+    // Don't attempt to connect to Javabuilder if we do not have a project identifier.
+    // This typically occurs if the project has not been modified from the starter code.
+    if (project.getCurrentId() === undefined) {
+      this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
+      return;
+    }
+
     $.ajax({
       url: '/javabuilder/access_token',
       type: 'get',
@@ -46,12 +53,10 @@ export default class JavabuilderConnection {
       .fail(error => {
         if (error.status === 403) {
           this.onOutputMessage(
-            'It appear you are not authorized to access Javalab. Do you need to log in or join a section?'
+            javalabMsg.errorJavabuilderConnectionNotAuthorized()
           );
         } else {
-          this.onOutputMessage(
-            'We hit an error connecting to our server. Try again.'
-          );
+          this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
           console.error(error.responseText);
         }
       });
