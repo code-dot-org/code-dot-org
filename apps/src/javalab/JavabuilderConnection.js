@@ -32,7 +32,10 @@ export default class JavabuilderConnection {
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
   connectJavabuilder() {
     // Don't attempt to connect to Javabuilder if we do not have a project identifier.
-    // This typically occurs if the project has not been modified from the starter code.
+    // This typically occurs if a teacher is trying to view a student's project
+    // that has not been modified from the starter code.
+    // This case does not apply to students, who are able to execute unmodified starter code.
+    // See this comment for more detail: https://github.com/code-dot-org/code-dot-org/pull/42313#discussion_r701417221
     if (project.getCurrentId() === undefined) {
       this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
       return;
