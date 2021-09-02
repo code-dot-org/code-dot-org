@@ -44,10 +44,16 @@ export default class JavabuilderConnection {
     })
       .done(result => this.establishWebsocketConnection(result.token))
       .fail(error => {
-        this.onOutputMessage(
-          'We hit an error connecting to our server. Try again.'
-        );
-        console.error(error.responseText);
+        if (error.status === 403) {
+          this.onOutputMessage(
+            'It appear you are not authorized to access Javalab. Do you need to log in or join a section?'
+          );
+        } else {
+          this.onOutputMessage(
+            'We hit an error connecting to our server. Try again.'
+          );
+          console.error(error.responseText);
+        }
       });
   }
 
