@@ -8,25 +8,20 @@ export default class Theater {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.loadEventsFinished = 0;
-    this.audioResponse = null;
-    this.visualResponse = null;
   }
 
   handleSignal(data) {
     switch (data.value) {
       case TheaterSignalType.AUDIO_URL: {
         // Wait for the audio to load before starting playback
-        this.audioResponse = data.detail.url;
-        this.getAudioElement().src = this.audioResponse;
+        this.getAudioElement().src = data.detail.url;
         this.getAudioElement().oncanplaythrough = () => this.startPlayback();
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
         // Preload the image. Once it's ready, start the playback
-        this.visualResponse = data.detail.url;
-        var img = new Image();
-        img.src = this.visualResponse;
-        img.onload = () => this.startPlayback();
+        this.getImgElement().src = data.detail.url;
+        this.getImgElement().onload = () => this.startPlayback();
         break;
       }
       default:
@@ -39,7 +34,7 @@ export default class Theater {
     // We expect exactly 2 responses from Javabuilder. One for audio and one for video.
     // Wait for both to respond and load before starting playback.
     if (this.loadEventsFinished > 1) {
-      this.getImgElement().src = this.visualResponse;
+      this.getImgElement().style.visibility = 'visible';
       this.getAudioElement().play();
     }
   }
