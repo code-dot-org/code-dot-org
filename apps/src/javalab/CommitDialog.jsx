@@ -15,78 +15,74 @@ const fileShape = PropTypes.shape({
 });
 
 export class UnconnectedCommitDialog extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    filesToBackpack: [],
+    existingBackpackFiles: [],
+    commitNotes: '',
+    backpackSaveInProgress: false,
+    commitSaveInProgress: false,
+    hasBackpackLoadError: false,
+    hasBackpackSaveError: false,
+    hasCommitSaveError: false
+  };
 
-    let existingBackpackFiles = [];
-    let hasBackpackLoadError = false;
-    if (props.backpackApi.hasBackpack()) {
-      props.backpackApi.getFileList(
-        () => (hasBackpackLoadError = true),
-        filenames => (existingBackpackFiles = filenames)
-      );
-    }
-
-    this.state = {
-      filesToBackpack: [],
-      existingBackpackFiles: existingBackpackFiles,
-      commitNotes: '',
-      backpackSaveInProgress: false,
-      commitSaveInProgress: false,
-      hasBackpackLoadError: hasBackpackLoadError,
-      hasBackpackSaveError: false,
-      hasCommitSaveError: false
-    };
+  componentDidMount() {
+    this.updateBackpackFileList();
   }
 
   // Get updated backpack file list every time we open the modal
   componentDidUpdate(prevProps) {
-    if (this.props.isOpen !== prevProps.isOpen && this.props.isOpen) {
-      if (this.props.backpackApi.hasBackpack()) {
-        this.props.backpackApi.getFileList(
-          this.handleBackpackLoadError,
-          filenames => this.setState({existingBackpackFiles: filenames})
-        );
-      }
+    if (this.props.isOpen && !prevProps.isOpen) {
+      this.updateBackpackFileList();
+    }
+  }
+
+  updateBackpackFileList() {
+    if (this.props.backpackApi.hasBackpack()) {
+      this.props.backpackApi.getFileList(
+        () => this.setState({hasBackpackLoadError: true}),
+        filenames => this.setState({existingBackpackFiles: filenames})
+      );
     }
   }
 
   renderFooter = () => {
+    const {
+      backpackSaveInProgress,
+      commitSaveInProgress,
+      commitNotes,
+      hasBackpackLoadError,
+      hasBackpackSaveError,
+      hasCommitSaveError,
+      filesToBackpack
+    } = this.state;
     let footerIcon = '';
     let footerMessageTitle = '';
     let footerMessageText = '';
     let commitText = i18n.commit();
-    const saveInProgress =
-      this.state.backpackSaveInProgress || this.state.commitSaveInProgress;
+    const saveInProgress = backpackSaveInProgress || commitSaveInProgress;
+    const hasError =
+      hasBackpackSaveError || hasCommitSaveError || hasBackpackLoadError;
     const isCommitButtonDisabled =
-      !this.state.commitNotes ||
-      saveInProgress ||
-      this.state.hasBackpackLoadError;
-    if (this.state.filesToBackpack.length > 0) {
+      !commitNotes || saveInProgress || hasBackpackLoadError;
+    if (filesToBackpack.length > 0) {
       commitText = i18n.commitAndSave();
     }
 
     // TODO: Add compile status here
-    if (this.state.saveInProgress) {
+    if (saveInProgress) {
       footerIcon = (
         <span className="fa fa-spin fa-spinner" style={styles.spinner} />
       );
       footerMessageTitle = i18n.saving();
-    } else if (
-      this.state.hasBackpackSaveError ||
-      this.state.hasCommitSaveError
-    ) {
+    } else if (hasError) {
       footerIcon = (
         <span className="fa fa-exclamation-circle" style={styles.iconError} />
       );
       footerMessageTitle = i18n.backpackErrorTitle();
-      footerMessageText = i18n.backpackSaveErrorMessage();
-    } else if (this.state.hasBackpackLoadError) {
-      footerIcon = (
-        <span className="fa fa-exclamation-circle" style={styles.iconError} />
-      );
-      footerMessageTitle = i18n.backpackErrorTitle();
-      footerMessageText = i18n.backpackListLoadErrorMessageCommitDialog();
+      footerMessageText = hasBackpackLoadError
+        ? i18n.backpackListLoadErrorMessageCommitDialog()
+        : i18n.backpackSaveErrorMessage();
     }
 
     return [
@@ -166,18 +162,12 @@ export class UnconnectedCommitDialog extends React.Component {
     const canClose =
       !this.state.commitSaveInProgress && !this.state.hasCommitSaveError;
 
-    this.props.backpackApi.getFileList(
-      this.handleBackpackLoadError,
-      filenames => {
-        this.setState({
-          hasBackpackSaveError: false,
-          hasBackpackLoadError: false,
-          backpackSaveInProgress: false,
-          filesToBackpack: [],
-          existingBackpackFiles: filenames
-        });
-      }
-    );
+    this.setState({
+      hasBackpackSaveError: false,
+      backpackSaveInProgress: false,
+      filesToBackpack: []
+    });
+    this.updateBackpackFileList();
 
     if (canClose) {
       this.props.handleClose();
