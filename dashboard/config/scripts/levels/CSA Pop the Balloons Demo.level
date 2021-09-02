@@ -1,0 +1,66 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Demo for The Playground",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "playground",
+    "start_sources": {
+      "MyPlayground.java": {
+        "text": "public class MyPlayground {\n  public static void main(String[] args) {\n\n\tPopBalloonsGame.play();\n    \n  }\n}",
+        "isVisible": true
+      },
+      "PopBalloonsGame.java": {
+        "text": "public final class PopBalloonsGame {\n\n\n  \n}",
+        "isVisible": true
+      },
+      "PopBalloonsDisplay.java": {
+        "text": "public final class PopBalloonsDisplay {\n\n\n\n}",
+        "isVisible": true
+      },
+      "Balloons.java": {
+        "text": "public class Balloons extends ClickableImage {\n\n\n\n}",
+        "isVisible": true
+      },
+      "RollButton.java": {
+        "text": "public class RollButton extends ClickableImage {\n\n\n  \n}",
+        "isVisible": true
+      }
+    },
+    "starter_assets": {
+      "balloon1.png": "8fbf1645-88a4-4203-92d0-286e38dbd024.png",
+      "balloon2.png": "f3de569b-b655-42f7-af5d-bd023196aa1f.png",
+      "balloon3.png": "8f734973-bb37-4343-ba15-fa4896792fa2.png",
+      "balloon4.png": "988ad003-ddbd-4f46-9c7d-550f84fdf03d.png",
+      "balloon5.png": "c21fcb7e-cd65-4824-af0f-cbc08c29fb2b.png",
+      "balloon6.png": "1112f474-2d1b-4c1f-be1f-47bae4ded515.png",
+      "balloon7.png": "b52afc09-3214-4db5-a1c5-4f0e7c64d5d8.png",
+      "balloon8.png": "b97bbff0-1ca9-4e72-8800-b1d7b1536847.png",
+      "balloon9.png": "5c0bd1eb-14c1-438e-8166-181ac321cdab.png",
+      "balloon10.png": "afb1aa3f-61d9-44dd-9622-9243300457ff.png",
+      "dice1.png": "794a8326-14cf-428b-a40f-2f3374b81973.png",
+      "dice2.png": "411a2fee-95c1-4f94-9d12-19fba3e77e90.png",
+      "dice3.png": "b112c0ea-7854-4395-9ec7-6310bf4aacb4.png",
+      "dice4.png": "8311d244-3d63-4772-9699-84fbfd9e4fd7.png",
+      "dice5.png": "b257c183-52e4-4a17-ad24-b499f573e69e.png",
+      "dice6.png": "9de4f09c-f2a9-4ec3-9b51-f980a21b7c72.png",
+      "poppedBlue.png": "f637f11f-ebf4-4396-a2c1-e900ff258cb1.png",
+      "poppedGreen.png": "2d349bdf-1735-4802-93b4-795b0cf9af7f.png",
+      "poppedOrange.png": "43cf60ed-6a6b-416b-b271-4f0136584573.png",
+      "poppedPurple.png": "209e7e76-cba3-4e77-976a-a2344c3991db.png",
+      "poppedTeal.png": "3ffe1fb8-4fa9-4927-88dd-ed96ed70d6db.png",
+      "rollButton.png": "60c949b5-c889-4709-8791-0bfd6187149f.png",
+      "pop.wav": "ef2d56e2-a98b-476b-bd11-e13a8a807141.wav",
+      "diceRoll.wav": "6733d30a-a6a4-4520-93e1-223172888723.wav"
+    }
+  },
+  "game_id": 68,
+  "created_at": "2021-09-02T18:04:34.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-09-02 18:04:38 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-02 18:13:04 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-02 18:14:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-02 18:29:42 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
