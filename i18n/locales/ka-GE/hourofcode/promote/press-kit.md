@@ -4,7 +4,7 @@ title: პრესისთვის
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# როგორ მოიზიდოთ მედიის წარმომადგენლები თქვენს კოდის ერთ საათზე
 
 ### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
@@ -12,7 +12,7 @@ title: პრესისთვის
 
 * * *
 
-## Key Tips
+## ძირითადი მინიშნებები
 
 - დაუკავშირდით მედია-საშუალებებს ღონისძიებამდე ორი კვირით ადრე ელფოსტით. თუ პასუხს არ მიიღებთ, კვლავ მისწერეთ ან ტელეფონით დაუკავშირდით.
 - სთხოვეთ სკოლის თანამშრომელს ან მოხალისეს გადაიღონ სურათები - ეს შემდგომ დაგჭირდებათ ონლაინ ან პრესისთვის გასაზიარებლად.
@@ -21,7 +21,7 @@ title: პრესისთვის
 
 ## Step-by-step guide
 
-### 1. Plan your event
+### 1. დაგეგმეთ ღონისძიება
 
 - დაგეგმეთ, ვინ მიიღებს მონაწილეობას კოდის ერთი საათის გახსნაში.
 - Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
@@ -33,13 +33,13 @@ title: პრესისთვის
 
 Like local newspapers, TV station or radio stations, or blogs. <br />
 
-### 3. Contact local media
+### 3. დაუკავშირდით ადგილობრივ მედიას
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+კავშირის დამყარების საკუთესო გზა არის ელფოსტა. It should be short and should communicate "why should other people care about this event"? დაურთეთ საკონტაქტო ინფორმაცია (ტელეფონის ნომრის ჩათვლით) თქვენი და იმათი, ვინც ღონისძიებას დაესწრება. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+მოიძიეთ ჟურნალისტის საკონტაქტო ინფორმაცია ონლაინ. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. მოემზადეთ თქვენი სასკოლო ღონისძიების შესახებ კითხვებზე პასუხის გასაცემად. მოყვანილია მაგალითები:
 
 #### რატომ ატარებთ კოდის ერთ საათს თქვენს სკოლაში?
 

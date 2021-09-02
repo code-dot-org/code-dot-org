@@ -289,7 +289,7 @@ es-MX:
             'Play Lab: Variables':
               name: 'Laboratorio de juegos: variables'
             Super Challenge - For Loops:
-              name: 'Súper reto: para los bucles'
+              name: 'Súper reto: bucles para'
             Super Challenge - Functions and Parameters:
               name: 'Súper reto: funciones y parámetros'
             Super Challenge - Variables:
@@ -22501,7 +22501,7 @@ es-MX:
             informáticos a diario, añade juegos más sofisticados basados en sprites.
             En el proyecto final, desarrollarás un programa personalizado e interactivo."
         coursea-2020:
-          title: Curso A (2019)
+          title: Curso A (2020)
           description: Aprende los fundamentos de las ciencias de la computación y
             la seguridad en Internet. Al final del curso, crea tu propio juego o historia
             para compartir.
@@ -22624,7 +22624,7 @@ es-MX:
             y la seguridad en Internet. Al final del curso, crea tu propio juego o
             historia para compartir.
         courseb-2020:
-          title: Curso B (2019)
+          title: Curso B (2020)
           description: Aprende los fundamentos de las ciencias de la computación y
             la seguridad en Internet. Al final del curso, crea tu propio juego o historia
             para compartir.
@@ -22760,7 +22760,7 @@ es-MX:
             y la seguridad en Internet. Al final del curso, crea tu propio juego o
             historia para compartir.
         coursec-2020:
-          title: Curso C (2019)
+          title: Curso C (2020)
           description: Crea programas con secuencias, bucles y eventos. Traduce tus
             iniciales a código binario, investiga distintas técnicas de resolución
             de problemas y aprende cómo responder al ciberacoso. ¡Al final del curso
@@ -22981,7 +22981,7 @@ es-MX:
             de problemas y aprende cómo responder al ciberacoso. ¡Al final del curso
             podrás crear tu propio juego o historia para compartir!
         coursed-2020:
-          title: Curso D (2019)
+          title: Curso D (2020)
           description: Los estudiantes desarrollan su comprensión de bucles anidados,
             bucles `mientras`, condicionales y eventos. Los estudiantes no solo aprenden
             a programar, sino que también aprenden sobre ciudadanía digital.
@@ -23202,7 +23202,7 @@ es-MX:
             no solo aprenden a programar, sino que también aprenden sobre ciudadanía
             digital.
         coursee-2020:
-          title: Curso E (2019)
+          title: Curso E (2020)
           description: Empieza a programar con algoritmos, bucles, condicionales y
             eventos, y pasa luego a las funciones. En la segunda parte de este curso,
             diseñarás y crearás un proyecto final que puedes compartir con tus amigos
@@ -23431,7 +23431,7 @@ es-MX:
             diseñarás y crearás un proyecto final que puedes compartir con tus amigos
             y familiares.
         coursef-2020:
-          title: Curso F (2019)
+          title: Curso F (2020)
           description: Aprende a usar diferentes tipos de bucles, eventos, funciones
             y condicionales. Investiga distintas técnicas de resolución de problemas
             y debate sobre el impacto de la computación y de Internet en la sociedad.
@@ -25416,10 +25416,9 @@ es-MX:
             csf:
               name: Fundamentos de Ciencias de la Computación
             sprites_in_action_2021:
-              name: 'Laboratorio de Sprites: Sprites en acción (piloto del CSF 2021)'
+              name: 'Laboratorio de Sprite: Sprites en Acción'
             text_and_prompts_2021:
-              name: 'Laboratorio Sprites: Texto e Indicaciones (proyecto piloto CSF
-                2021)'
+              name: 'Laboratorio de Sprite: Texto y Avisos'
             csp_functions_2021:
               name: 'Principios de Ciencias de la Computación: Funciones'
             minitoolbox_2021:
@@ -25534,7 +25533,7 @@ es-MX:
             appendix:
               name: Anexo
             intro-categorical:
-              name: Introducción al Laboratorio de Inteligencia Artificial
+              name: Introducción al Laboratorio de IA
             model-cards:
               name: Modelo de Juego de Cartas
             bug-bash:
@@ -29925,6 +29924,16 @@ es-MX:
           name: Curso E - 2021
         coursef-2021:
           title: Curso F (2021)
+          description: Hemos creado el Curso F para estudiantes en el 5° grado. Al
+            comenzar este curso los estudiantes aprenderán sobre las decisiones que
+            la gente toma cuando utilizan las aplicaciones. Luego, los estudiantes
+            aprenderán a crear diferentes tipos de aplicaciones con multiples opciones
+            para los usuarios usando el Laboratorio de Sprites. En las próximas lecciones
+            del curso, los estudiantes aprenderán conceptos mas avanzados, como los
+            variables y los bucles "para". Los estudiantes tendrán más autonomía y
+            la oportunidad de tomar sus propias decisiones a través del curso. Los
+            estudiantes terminaran el curso con proyectos interactivos y obras de
+            arte que podrán compartir con sus amigos/as y familiares.
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias
             de la Computación y crea tu propio arte, historia o juego.
           description_audience: 9 a 13 años
@@ -30149,6 +30158,12 @@ es-MX:
                 y la tecnología en sus vidas, centrándose en cómo las aplicaciones
                 y las herramientas dan a los usuarios la posibilidad de elegir la
                 forma de utilizarlas.
+              description_teacher: 'En esta lección **definida por el contexto**,
+                los estudiantes debatirán sobre el papel de las computadoras y la
+                tecnología en sus vidas, centrándose en cómo las aplicaciones y las
+                herramientas ofrecen a los usuarios la posibilidad de elegir cómo
+                utilizarlas. Los estudiantes explorarán aplicaciones similares a las
+                que crearán más adelante.  '
             lesson-7:
               name: Creación de sprites
               description_student: En esta lección escribirás programas y aprenderás
@@ -32748,7 +32763,7 @@ es-MX:
                 que resulta cuando hay más datos en juego.\\\r\n\\\r\n**Pregunta del
                 día:** ¿Cómo aprenden los ordenadores a clasificar los datos?"
             lesson5:
-              name: Introducción al Laboratorio de Inteligencia Artificial
+              name: Introducción al Laboratorio de IA
               description_student: Los alumnos se introducen por primera vez en la
                 herramienta Laboratorio de Inteligencia Artificial (AI Lab), donde
                 seleccionan características para entrenar un modelo que predice una
@@ -33126,7 +33141,7 @@ es-MX:
                 que resulta cuando hay más datos en juego.\\\r\n\\\r\n**Pregunta del
                 día:** ¿Cómo aprenden los ordenadores a clasificar los datos?"
             Introduction to AI Lab:
-              name: Introducción al Laboratorio de Inteligencia Artificial
+              name: Introducción al Laboratorio de IA
               description_student: Los alumnos se introducen por primera vez en la
                 herramienta Laboratorio de Inteligencia Artificial (AI Lab), donde
                 seleccionan características para entrenar un modelo que predice una

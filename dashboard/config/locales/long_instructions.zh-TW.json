@@ -3111,7 +3111,7 @@
         "courseE_aboutme_3_2021": "<img src=\"https://studio.code.org/api/v1/animation-library/gamelab/uRkXIcSlbIAZ46WKaW.dFu.g3062psWS/category_people/pink_dress_wave.png\" style=\"height:80px\"> _\"說點關於你自己的東西，確保它是安全的！\"_\n\n使用<xml><block type=\"gamelab_spriteClicked\" block-text=\"the when sprite clicked event block\"></block></xml>和<xml><block type=\"gamelab_printText\" block-text=\"the print text block\"></block></xml>（在“世界”積木類別中），在精靈圖被點擊時分享關於你自己的資訊！ \n\n**一定要確保分享的資訊是安全的。**\n\n* * *\n\n#### 安全和不安全資訊的示例\n\n| 安全    | 不安全       |\n| ----- | --------- |\n| 僅名字   | 全名        |\n| 喜歡的東西 | 家庭住址      |\n| 尊重的觀點 | 電話或電子郵箱位址 |",
         "courseE_aboutme_4_2021": "<img src=\"https://studio.code.org/api/v1/animation-library/gamelab/uRkXIcSlbIAZ46WKaW.dFu.g3062psWS/category_people/pink_dress_wave.png\" style=\"height:80px\"> _\"向你的海報添加更多精靈圖！別忘了賦予它們服裝!\"_\n\n在你的海報中添加**至少兩個**其他的精靈圖。給每個精靈圖一件獨特的服裝！",
         "courseE_aboutme_5_2021": "<img src=\"https://studio.code.org/api/v1/animation-library/gamelab/uRkXIcSlbIAZ46WKaW.dFu.g3062psWS/category_people/pink_dress_wave.png\" style=\"height:80px\"> _\"通過你的新精靈圖告訴世界更多關於你自己的資訊！\"_\n\n讓你的其他精靈圖在被點擊時列印資訊。確保你分享的東西是安全的！",
-        "courseE_aboutme_6_2021": "<img src=\"https://studio.code.org/api/v1/animation-library/gamelab/uRkXIcSlbIAZ46WKaW.dFu.g3062psWS/category_people/pink_dress_wave.png\" style=\"height:80px\"> _\"哇！你的海報太酷了！\"_\n\n這是你的項目，繼續前進吧！以下是一些讓你的海報更好的思路：\n\n-   添加背景。選擇一個適合海報的背景。\n-   添加行為。讓你的每個精靈圖在點擊時做出不同的反應。\n-   添加更多事件。使用**事件**積木類別中的其他積木。\n-   添加聲音。",
+        "courseE_aboutme_6_2021": " _\"哇！你的海報太酷了！\"_\n\n這是你的項目，繼續前進吧！以下是一些讓你的海報更好的思路：\n\n-   添加背景。選擇一個適合海報的背景。\n-   添加行為。讓你的每個精靈圖在點擊時做出不同的反應。\n-   添加更多事件。使用**事件**積木類別中的其他積木。\n-   添加聲音。",
         "courseE_artist_functions10_2021": "這次，使用8 個邊長為 25 像素的六邊形來繪製。\n\n-   在繪製每個六邊形時，重複繪製 6 次來畫圖型的邊，並且每次旋轉 60 度。\n-   在每個六邊形之間跳躍 25 個像素。\n-   要繪製出菱形，需要交替轉向 60 度和 120 度。",
         "courseE_artist_functions2_2021": "\"這裡有一個叫做`繪製正方形`的函式。用它來完成這次繪圖。 \n\n* * *\n\n正方形的間距為 75 像素。\"",
         "courseE_artist_functions3_2021": "\"構建一個函式來繪製這個星形。\n\n* * *\n\n-   星形的每條邊都有 25 個像素長\n-   你需要轉向 45 度才能畫出 8 條邊\n-   前進後退都是可以的，在同一條邊上也可以\"",
@@ -3236,7 +3236,8 @@
         "ramp_artist_loops6v1_2021": "這個樓梯很大，但如果使用循環，它只需要幾行代碼！\n\n使用一個循環來完成這個難題。",
         "ramp_artist_loops7_2021": "找到規律，用迴圈讓這個程式更精簡！",
         "ramp_artist_loops9_2021": "畫出一個每邊長 200 像素的正方形以過關。",
-        "simcustom_2021": "# 定制\n\n這是另一個版本的模擬。嘗試對精靈圖服裝或下面的代碼做一些更改。盡情定制自己的模擬！"
+        "simcustom_2021": "# 定制\n\n這是另一個版本的模擬。嘗試對精靈圖服裝或下面的代碼做一些更改。盡情定制自己的模擬！",
+        "Final Personal Website": "# 個人網站\n\n就是這樣！你已正在為整個單位進行建置你的個人網站。完成它並提交給你的老師吧！準備你的最後成品時記得參考解決問題步驟。\n\n# 做這些\n\n-   定義: 閱讀評量指標以了解預期的結果是什麼\n-   計畫: 決定仍需要做的事情並將其分出優先順序\n-   嘗試: 將改善方案施行到你的個人網站當中\n-   反饋: 從同學中取得回饋意見並決定要採取的對應作為\n\n不要忘記存下你的首頁截圖以供日後使用（*不知如何存下截圖嗎？請參閱<a href=\"http://www.take-a-screenshot.org/\" target=\"_new\">這個頁面 </a>。*）"
       }
     }
   }

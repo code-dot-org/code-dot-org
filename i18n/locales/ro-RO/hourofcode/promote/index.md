@@ -8,7 +8,7 @@ title: Răspândește vestea
 
 ## 1. Răspândește vestea
 
-Tell your friends about the **#HourOfCode**!
+Spune-le prietenilor tăi despre **#HourOfCode**!
 
 {{ promote/share_buttons }}
 

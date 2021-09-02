@@ -24,7 +24,7 @@ Die "Hour of Code" ist eine einstündige Einführung in die Informatik mit dem Z
 - [Weitere Möglichkeiten zur Unterstützung der Hour of Code](#support-hour-of-code)
 - [Häufig gestellte Fragen für Freiwillige](#faq)
 
-Unabhängig davon, ob Sie sich virtuell, privat oder zusammen mit Ihrem Unternehmen als Freiwillige(r) engagieren, werden Ihre Bemühungen ganz sicher einen großen Einfluss darauf haben, wie die SchülerInnen das Fach Informatik und ihr eigenes Potenzial bewerten. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
+Unabhängig davon, ob Sie sich virtuell, privat oder zusammen mit Ihrem Unternehmen als Freiwillige(r) engagieren, werden Ihre Bemühungen ganz sicher einen großen Einfluss darauf haben, wie die SchülerInnen das Fach Informatik und ihr eigenes Potenzial bewerten. Schauen Sie sich unser [Toolkit für Freiwillige an, wenn Sie noch Fragen haben]({{ localized_files/hoc_volunteer_toolkit }}).
 
 * * *
 

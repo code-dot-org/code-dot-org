@@ -43,13 +43,13 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 ## Example plan for a school assembly or event
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Evenement:** Door heel de school Computer Science Education Week kick-off bijeenkomst
 
 **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Time** Gedurende de schooldag. Het liefst in de morgen. Ongeveer 1 uur.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Location:** Bijeenkomst in een hal of grote ruimte(bv. theater, sportzaal, cafetaria)
 
 ## Programma
 

@@ -6,13 +6,13 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How-to Guide for Volunteers
+# Інструкції для волонтерів
 ### Make a difference in a classroom today!
 
 ***
 
-## Why volunteer?
-Check out some testimony from past volunteers:
+## Навіщо волонтерити?
+Гляньте деякі відгуки минулих волонтерів:
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
 - “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
@@ -39,8 +39,8 @@ Do you believe that learning computer science can open doors of opportunity for 
 1. [Send this email]({{ promote/help_schools }}) to your child’s teacher offering to help them run an Hour of Code.
 2. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide]({{ urls/how_to_guide }}) to help you plan.
 
-## Recruit your co-workers to volunteer
-Tell your friends and co-workers about the Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
+## Залучіть своїх колег до волонтерства
+Розкажіть своїм друзям та колегам про Годину коду. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Попросіть свого роботодавця долучитися. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
 
 ## How to prepare
 - [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.
@@ -55,17 +55,17 @@ Tell your friends and co-workers about the Hour of Code. Thousands of teachers a
 ## Day-of Hour of Code Event
 When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
 
-### Sample agenda:
+### Приклад порядку денного:
 
-| Час           | Agenda item                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1-5 minutes   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                                            |
-| 5-10 minutes  | Introduce yourself and learn more about the students: </ul><li>What do you work, what do you do, and what do you love most about your job?</li><li>Що чи хто вас надихнув?</li><li>Як ти зацікавився інформатикою?</li><li>Чи був у вас наставник?</li><li>Share a story about how tech affects everyone.</li><br>Задайте студентам запитання та залиште час на запитання та відповіді.</br> <li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul> |
-| 30-60 minutes | **Code!** Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.                                     |
-| 1-3 minutes   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                                                 |
-| After         | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Go to [code.org/yourschool](https://code.org/yourschool) with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.                                                             |
+| Час           | Пункт порядку денного                                                                                                                                                                                                                                                                                                                                             |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-5 хвилин    | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                              |
+| 5-10 хвилин   | Introduce yourself and learn more about the students: </ul><li>Де ви працюєте, що робите, і що в своїй роботі ви любите найбільше?</li><li>Що чи хто вас надихнув?</li><li>Як ти зацікавився інформатикою?</li><li>Чи був у вас наставник?</li><li>Share a story about how tech affects everyone.</li><br>Задайте студентам запитання та залиште час на запитання та відповіді.</br> <li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Чи мають учні питання до вас?</ul> |
+| 30-60 minutes | **Code!** Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.                       |
+| 1-3 хвилин    | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                                   |
+| After         | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Go to [code.org/yourschool](https://code.org/yourschool) with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.                                               |
 
-### After the Event:
+### Після заходу:
 - Share your photos and stories with Code.org at giving@code.org.
 - Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
 - Share about your experience on social media #HourOfCode!
@@ -75,14 +75,14 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 ## How you get selected as a technical volunteer of guest speaker
 - Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
 - Try to make your profile as complete as possible to increase the chance that a teacher will select you.
-- A teacher will contact you through this form (your email address will never be shared with the teacher). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
+- Вчитель зв'яжеться з вами через цю форму (вашу адресу електронної пошти не буде показано вчителеві ніколи). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
 
-## Volunteering during the Hour of Code FAQ
+## ЧаПи волонтерства під час Години коду
 
 ### I haven't been contacted by a teacher yet. How can I still volunteer?
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+Спробуйте пошукати місцеві школи та зателефонуйте директорові/вчителеві/керівництву, і спитайте, як ви можете допомогти.
 
-### How long do classroom visits last for?
+### Скільки триває відвідування класу?
 An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
 
 ### What age group is the Hour of Code activity appropriate for?

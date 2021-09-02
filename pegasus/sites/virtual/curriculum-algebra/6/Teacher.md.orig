@@ -15,11 +15,11 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Teaching Summary
 ### **Getting Started**
- 
-1) [Vocabulary](#Vocab)<br/>
-2) [Introduction](#GetStarted)  
 
-### **Activity: Defining Variables and Substitution**  
+1) [Vocabulary](#Vocab)<br/>
+2) [Introduction](#GetStarted)
+
+### **Activity: Defining Variables and Substitution**
 
 3) [Online Puzzles](#Activity1)
 
@@ -50,12 +50,8 @@ We can store that red triangle Evaluation Block in a Variable, let's call it "re
 [tip]
 
 # Lesson Tip
-<<<<<<< HEAD
  If students have used variables in other languages
 It's essential to note that in functional programming, as in math, variables are considered immutable - meaning the value can't be changed during the execution of a program. Think about it this way: saying x = 50, and then x = x + 1 might make sense in Javascript, but it's impossible in Algebra.
-=======
- If students have used variables in other programming languages, it's essential to note that in functional programming, as in math, variables are considered immutable - meaning the value can't be changed during the execution of a program. Think about it this way: saying x = 50, and then x = x + 1 might make sense in Javascript, but it's impossible in Algebra.
->>>>>>> a705199ae34e6fa0f30291112690bbf286e61ad1
 
 [/together]
 

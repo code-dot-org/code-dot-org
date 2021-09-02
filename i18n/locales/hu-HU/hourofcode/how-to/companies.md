@@ -106,7 +106,7 @@ If your event is going to be virtual, you’ll want to decide on your conference
 
 We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **Minden "Hour of Code" gyakorlat** egy minimális felkészülési igényel a szervezőtől, de az eseményen mindenki a saját tempójában tud haladni, a képességének megfelelően.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
@@ -175,7 +175,7 @@ Help raise awareness of the computer science movement with this sample content t
 
 - Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
 - Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile). 
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
+- Kér meg a Vezérigazgatót, hogy küldjön egy vállalati szintű emailt, kihangsúlyozva az IT fontosságát, és ösztönözze a munkatársakat ennek terjesztésére.
 - Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
 - [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science. 
 - [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all. 

@@ -2,7 +2,7 @@
 title: Hour of Codeのイベント開催ガイド
 ---
 
-{{ signup_button }}
+サインアップ
 
 # How to organize an Hour of Code assembly or event
 
@@ -37,19 +37,19 @@ Share pictures of your event on Facebook and Twitter and use the hashtag **#Hour
 
 ## Hour of Codeのファミリーコードナイトを主催して保護者を招待する
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. これは、より大きなコミュニティを巻き込んで、学校でコンピュータサイエンスを学ぶためのサポートを保護者に呼びかける最適な方法です。 Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. イベントキットをダウンロードするには[ここ](http://www.familycodenight.org/DownloadCodeDotOrg.html)をクリックします。
 
 * * *
 
 ## Example plan for a school assembly or event
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**イベント:** コンピュータサイエンス教育週間の全校キックオフ集会
 
 **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**時間:** 登校日の日中、午前中に１時間程度のイベントを開催できることが望ましい。
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**場所:** 全校集会用のホール（例、講義室、体育館、カフェテリア）
 
 ## 当日の流れ（例）
 
@@ -62,4 +62,4 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 | 10:40-11:00 | 生徒にオフラインのアクティビティをデモしてもらいます。コンピューターサイエンスはコンピューターがなくても教えられることを見てもらいます。                                                                  |
 | 11:00-11:05 | このイベントを主催した先生に、閉会の言葉を頂きましょう。                                                                                                          |
 
-{{ signup_button }}
+サインアップ

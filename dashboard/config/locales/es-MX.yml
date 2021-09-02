@@ -227,10 +227,10 @@ es-MX:
     user_type_teacher: Docente
     user_type_teacher_desc: 'Todo aquello a lo que tienen acceso los estudiantes,
       además de:'
-    user_type_teacher_ability_1: Crear secciones para la clase
+    user_type_teacher_ability_1: Crear secciones de clase
     user_type_teacher_ability_2: Asignar y seguir el trabajo de un estudiante
-    user_type_teacher_ability_3: Involucrarse en el aprendizaje profesional
-    user_type_teacher_ability_4: Interactúa en el foro de nuestro profesor
+    user_type_teacher_ability_3: Inscribirse en el aprendizaje profesional
+    user_type_teacher_ability_4: Interactúa en el foro de profesores
     field_is_required: es obligatorio
     accept_terms: Debes estar de acuerdo para crear una cuenta.
     error: Ocurrió un error.
