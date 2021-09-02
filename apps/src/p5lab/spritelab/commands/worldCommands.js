@@ -36,6 +36,7 @@ export const commands = {
   },
 
   playSound(url) {
+    this.soundLog.push(url);
     audioCommands.playSound({url, loop: false});
   },
 
