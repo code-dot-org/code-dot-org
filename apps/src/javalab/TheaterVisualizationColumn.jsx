@@ -57,6 +57,8 @@ const styles = {
     height: 800
   },
   theaterImage: {
+    // Start hidden so we can start the audio and gif at the same time.
+    visibility: 'hidden',
     width: 800,
     height: 800
   }
