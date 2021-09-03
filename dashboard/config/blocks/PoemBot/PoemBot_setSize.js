@@ -1,3 +1,3 @@
-function setSize(costume, size){
-  setProp(({costume: costume}), "scale", size);
+function setSize(spriteArg, size){
+  setProp(spriteArg, "scale", size);
 }

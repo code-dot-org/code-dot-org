@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-02 16:34:43 UTC",
+    "serialized_at": "2021-09-03 15:55:59 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -1133,8 +1133,8 @@
       "key": "249b7a2c-b25b-49b7-832c-7d115907e9a7",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What could you do or create with this API?*\n\n**Discussion Goal:** Students notice the API includes adding and removing images and clickable images. Students also notice that the API allows them to play sounds. Students share ideas about making games and interactive programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 5 on Code Studio. Students import The Playground and run the sample code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using The Playground.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio. Students add balloons as `ClickableImage`s, then add popped balloons as `Image`s that show when clicking the balloons.",
-        "progression_name": "Creating Balloons"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What could you do or create with this API?*\n\n**Discussion Goal:** Students notice the API includes adding and removing images and clickable images. Students also notice that the API allows them to play sounds. Students share ideas about making games and interactive programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 5 on Code Studio. Students import The Playground and run the sample code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using The Playground.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio.",
+        "progression_name": "Creating the Dice and Roll Button"
       },
       "seeding_key": {
         "activity_section.key": "249b7a2c-b25b-49b7-832c-7d115907e9a7",
@@ -1653,7 +1653,7 @@
       "key": "d0e14672-31d8-4f17-8af9-e1c2b11a1a7f",
       "position": 6,
       "properties": {
-        "description": "You have used `if` statements in previous lessons before. Let’s recall how you would use an `if` statement to modify the outcome of a program. ",
+        "description": "Our Pop the Balloons game currently has two dice and a roll button. Currently, when we set the roll value for a dice, the image of the dice does not change to show the new value.\n\nTo update the image of the dice, we need to know which dice to change and what value to show. Remember that each dice has an array of dice images for each of its sides.",
         "duration": "15",
         "name": "if Statements Using Relational Operators",
         "remarks": true
@@ -1667,8 +1667,8 @@
       "key": "ebf7de77-6b6c-4104-8cf4-258ab8843be1",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might you modify the code to check if Frida has enough paint to produce the mural?*\n\n**Discussion Goal:** Students notice that for Frida to check if she has enough paint, the variables `currentPaint` and `muralAmount` with the relational operator `<=` needs to be inside the conditional statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using relational operators inside an `if` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 through 4 on Code Studio.",
-        "progression_name": "Painting with Relational Operators"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How might you specify which dice to update?*\n* *Since the images of each side are in an array in the `Dice` class, how might we specify which image to use?*\n\n**Discussion Goal:** Students suggest using relational operators inside an `if` statement to check for either the left or right dice. Students may also suggest various ways to specify which image, such as using multiple `if` statements and relational operators to compare the value to the index location. Students realize that the value is one more than the index location, so the image at index `value - 1` from the array should be displayed.\n\n**Do This:** Click through the animated slide to introduce using relational operators inside an `if` statement.\n\n**Do This:** Direct students to complete Levels 2 through 4 on Code Studio.",
+        "progression_name": "Updating the Dice Images"
       },
       "seeding_key": {
         "activity_section.key": "ebf7de77-6b6c-4104-8cf4-258ab8843be1",
@@ -3886,7 +3886,7 @@
         "level_keys": [
           "CSA U4L1-L6"
         ],
-        "progression": "Creating Balloons"
+        "progression": "Creating the Dice and Roll Button"
       },
       "bonus": false,
       "seeding_key": {
@@ -3911,7 +3911,7 @@
         "level_keys": [
           "CSA U4L1-L7"
         ],
-        "progression": "Creating Balloons"
+        "progression": "Creating the Dice and Roll Button"
       },
       "bonus": false,
       "seeding_key": {
@@ -3958,6 +3958,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1"
+        ],
         "progression": "The Math Class"
       },
       "bonus": false,
@@ -3980,6 +3983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2"
+        ],
         "progression": "Working with the Math Class"
       },
       "bonus": false,
@@ -4002,6 +4008,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3"
+        ],
         "progression": "Working with the Math Class"
       },
       "bonus": false,
@@ -4024,6 +4033,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4"
+        ],
         "progression": "Working with the Math Class"
       },
       "bonus": false,
@@ -4046,6 +4058,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5"
+        ],
         "progression": "Working with the Math Class"
       },
       "bonus": false,
@@ -4068,6 +4083,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L6"
+        ],
         "progression": "Working with the Math Class"
       },
       "bonus": false,
@@ -4090,6 +4108,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4111,6 +4132,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L1"
+        ],
         "progression": "Casting Exploration"
       },
       "bonus": false,
@@ -4133,6 +4157,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L2"
+        ],
         "progression": "Generating Random Numbers"
       },
       "bonus": false,
@@ -4155,6 +4182,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L3"
+        ],
         "progression": "Generating Random Numbers"
       },
       "bonus": false,
@@ -4177,6 +4207,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L4"
+        ],
         "progression": "Generating Random Numbers"
       },
       "bonus": false,
@@ -4199,6 +4232,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4221,6 +4257,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L1"
+        ],
         "progression": "Exploring Operators"
       },
       "bonus": false,
@@ -4243,7 +4282,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Painting with Relational Operators"
+        "level_keys": [
+          "CSA U4L4-L2"
+        ],
+        "progression": "Updating the Dice Images"
       },
       "bonus": false,
       "seeding_key": {
@@ -4265,7 +4307,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Painting with Relational Operators"
+        "level_keys": [
+          "CSA U4L4-L3"
+        ],
+        "progression": "Updating the Dice Images"
       },
       "bonus": false,
       "seeding_key": {
@@ -4287,7 +4332,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Painting with Relational Operators"
+        "level_keys": [
+          "CSA U4L4-L4"
+        ],
+        "progression": "Updating the Dice Images"
       },
       "bonus": false,
       "seeding_key": {
@@ -4309,6 +4357,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
