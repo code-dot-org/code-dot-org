@@ -1273,11 +1273,6 @@
                 <title name="COLOUR">#993399</title>
               </block>
             </value>
-            <value name="STROKE">
-              <block type="colour_picker">
-                <title name="COLOUR">#993399</title>
-              </block>
-            </value>
           </block>
           <block type="PoemBot_setTextEffect">
             <title name="EFFECT">"fade"</title>

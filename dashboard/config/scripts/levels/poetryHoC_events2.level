@@ -1304,7 +1304,7 @@
             <title name="FONT">"Arial"</title>
           </block>
           <block type="PoemBot_setFontColor">
-            <value name="COLOR">
+            <value name="FILL">
               <block type="colour_picker">
                 <title name="COLOUR">#993399</title>
               </block>

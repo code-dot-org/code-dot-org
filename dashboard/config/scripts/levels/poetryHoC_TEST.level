@@ -69,11 +69,6 @@
                           <title name="COLOUR">#000000</title>
                         </block>
                       </value>
-                      <value name="STROKE">
-                        <block type="colour_picker">
-                          <title name="COLOUR">#ffffff</title>
-                        </block>
-                      </value>
                       <next>
                         <block type="PoemBot_setTextEffect">
                           <title name="EFFECT">"typewriter"</title>
@@ -110,11 +105,6 @@
             <value name="FILL">
               <block type="colour_picker">
                 <title name="COLOUR">#000000</title>
-              </block>
-            </value>
-            <value name="STROKE">
-              <block type="colour_picker">
-                <title name="COLOUR">#ffffff</title>
               </block>
             </value>
           </block>
