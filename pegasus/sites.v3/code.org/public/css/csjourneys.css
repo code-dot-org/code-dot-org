@@ -102,7 +102,7 @@ h1.csjourneys-banner-header {
 }
 
 .csjourneys-skinny-banner-logo {
-  height: 40px;
+  height: 50px;
   object-fit: contain;
 }
 
@@ -127,6 +127,7 @@ a.csjourneys-skinny-banner-cta {
 @media only screen and (min-width: 760px) {
   .csjourneys-skinny-banner-content {
     flex-direction: row;
+    padding: 20px;
   }
 
   h2.csjourneys-skinny-banner-header {
