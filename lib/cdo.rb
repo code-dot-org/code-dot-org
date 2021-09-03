@@ -125,6 +125,8 @@ module Cdo
         # separate service, uses a different port. Therefore, we can access the
         # the service directly.
         'ws://localhost:8080/javabuilder'
+      elsif rack_env?(:adhoc)
+        'wss://javabuilder-molly.dev-code.org'
       else
         # TODO: Update to use this URL once we have Route53 set up for API Gateway
         # site_url('javabuilder.code.org', '', 'wss')
