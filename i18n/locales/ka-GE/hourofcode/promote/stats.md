@@ -14,7 +14,7 @@ title: Blurbs and useful stats
 
 ## გამოიყენეთ ეს მოკლე რეკლამა საინფორმაციო წერილებში
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### ჩართეთ კომპიუტერული მეცნიერება სასკოლო განათლებაში. დაიწყეთ კოდის ერთი საათით!
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. მაგრამ კომპიუტერულ მეცნიერებას სკოლების ნახევარზე ნაკლები ასწავლის! კარგი სიახლე ისაა, რომ ჩვენ ვმუშაობთ ამის შეცვლაზე. თუ შარშან გაიგეთ კოდის ერთი საათის შესახებ, შეიძლება, იცოდეთ, რომ მან ისტორიაზე გავლენა მოახდინა. 100-მა მილიონმა მოსწავლემ აღმოაჩინა, როგორი ხელმისაწვდომი და სახალისო შეიძლება იყოს კომპიუტერული მეციერება მხოლოდ კოდის ერთი საათის მეშვეობით.
 
@@ -46,7 +46,7 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 <a id="infographics"></a>
 
-## Infographics
+## ინფოგრაფიკა
 
 {{ stats_carousel }}
 

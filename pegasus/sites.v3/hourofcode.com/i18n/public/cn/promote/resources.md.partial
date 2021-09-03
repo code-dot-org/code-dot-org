@@ -18,7 +18,7 @@ nav: promote_nav
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## 在你的学校悬挂这些海报
 
 A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
 
@@ -28,7 +28,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <a id="social"></a>
 
-## Post these on social media
+## 利用社交媒体发布
 
 [![图片](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -38,11 +38,11 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## 使用编程一小时标志来传播这个词
 
 [![图片]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![图片]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[下载高分辨率版本](http://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 
@@ -66,7 +66,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## 打印这些贴纸，给你的学生。
 
 (Stickers are 1" diameter, 63 per sheet) <br />
 
@@ -82,17 +82,17 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### 邀请您的学校、雇主或朋友注册:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code <br />
+** 主题行: **加入我和超过1亿学生的一个《编程一小时》 <br />
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+计算机无所不在，它正改变着世界上的工业。 But only 47% of all high schools teach computer science. 好消息是我们正在改变此现状！ 如果你之前听说过编程一小时，你可能知道它创造了历史。 超过 1 亿学生尝试过编程一小时。
 
-因为《编程一小时》，计算机科学已经登上谷歌，MSN，雅虎和迪斯尼的主页。 超过100位合作伙伴共同支持这项活动。 Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+因为《编程一小时》，计算机科学已经登上谷歌，MSN，雅虎和迪斯尼的主页。 超过100位合作伙伴共同支持这项活动。 世界上每个苹果专卖店都会举办一个《编程一小时》, 而且像奥巴马总统和加拿大总理贾斯廷·特鲁多这样的领导人写了他们的第一行编程作为竞选活动的一部分。
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
+今年, 让我们把它变得更大。 I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+帮助宣传，实际举办一场活动，邀请当地学校报名加入，或者自己尝试编程一小时-每个人都能从这项基础学习中获益。
 
 Get started at http://hourofcode.com/{{ country_language }} <br />
 
@@ -100,19 +100,19 @@ Get started at http://hourofcode.com/{{ country_language }} <br />
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### 在学校做志愿者:
 
 #### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
 
 **Subject line:** Can we help you host an Hour of Code?
 
-Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. 这是让每个孩子都有机会了解到我们周围的技术是如何工作的。
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+[我们的组织/我的名字] 很乐意帮助 [学校名称] 运行《编程一小时》活动。 我们可以帮助老师在他们的教室里主持一个小《编程一小时》 (我们甚至不需要电脑!) 或者如果你想举办一个学校大会, 我们可以安排一个演讲者谈论技术是如何运作的, 以及成为一个软件工程师的感觉。
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+学生将创建自己的应用程序或游戏, 他们可以显示给他们的父母, 我们也会打印《编程一小时》的证书, 他们可以带回家。 而且, 这很有趣! 通过互动、动手的活动，学生将以浅显易懂的方式学习计算思维技能。
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+计算机无所不在，它正改变着世界上的工业。 But only 47% of all high schools teach computer science. 好消息是我们正在改变此现状！ 如果您以前听过有关《编程一小时》的信息, 您可能知道它创造了历史-全世界有超过1亿的学生尝试了《编程一小时》。 Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
@@ -120,19 +120,19 @@ You can read more about the event at http://hourofcode.com. Or, let us know if y
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
+### 告诉家长关于您学校的活动：
 
-**Subject line:** Our students are changing the future with an Hour of Code
+** 主题行: **我们的学生将用《编程一小时》来改变未来
 
-Dear Parents,
+亲爱的家长们：
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+我们生活在一个被科技包围的世界。 同时我们也知道我们的学生长大后无论选进入什么领域，他们取得成功的能力都将越来越多地取决于他们对于科技如何运作的理解。
 
 But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). 全世界已经有超过1亿名学生体验了编程一小时。 我们的《编程一小时》声明[学校名称] 已经准备好教这些21世纪的基础技能。 为了持续带来更多的编程活动给同学们，我们希望把编程一小时可以办得更加盛大。 我鼓励你们志愿去接触当地媒体，在你的社交媒体频道上分享消息，并在小区尝试组织其他的编程一小时活动。
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+这是一个改变[城市名称] 教育未来的机会。
 
 See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
@@ -140,7 +140,7 @@ See http://hourofcode.com/{{ country_language }} for details, and help spread th
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
+### 邀请媒体出席你的活动：
 
 #### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
 
@@ -164,22 +164,22 @@ I look forward to being in touch. <br />
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
+### 邀请当地的政界人士出席你们学校的活动：
 
 #### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
 
 **Subject line**: Join our school as we change the future with an Hour of Code
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+尊敬的[姓氏 市长/省长/领导/代表]:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+您知道在美国电脑工作的收入是排名第一的吗？ 全美国有超过500,000个电脑工作空缺，但去年只有42,969个计算机科学专业毕业生进入劳动力市场。
 
 Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). 全世界已经有超过1亿名学生体验了编程一小时。
 
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+我写信来邀请您加入我们的《编程一小时》活动, 并在我们的开幕式上发言。 我们的活动将于[日期，时间，地点] 开始，并郑重声明[州i或城市名称] 已经准备好了教给我们的学生21世纪的关键技能。 我们要确保我们的学生都能走在未来创新科技的前沿-而不只是享受它。
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+请联系我[电话号码或邮箱地址]，期待你的回应。
 
 {{ signup_button }}

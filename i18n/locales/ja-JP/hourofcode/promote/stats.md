@@ -4,7 +4,7 @@ title: 宣伝文句や役立つ統計情報
 
 <a id="blurb"></a>
 
-{{ signup_button }}
+サインアップ
 
 # 宣伝文句や役立つ統計情報
 
@@ -24,7 +24,7 @@ Hour of Codeは1時間のコンピューターサイエンス入門で、コー�
 
 #### なぜあなたの学校はHour of Codeをやっているのですか？
 
-今日の技術に満ちあふれた世界をどう生き抜いてゆくか。私たちはみな、それを学ぶことの重要性をわかっていますが、多くの先生たちはコンピューターサイエンスの経験がなく、どこから始めればよいのか分かりません。 This event is a chance for all of us to see what computer science is about.
+今日の技術に満ちあふれた世界をどう生き抜いてゆくか。私たちはみな、それを学ぶことの重要性をわかっていますが、多くの先生たちはコンピューターサイエンスの経験がなく、どこから始めればよいのか分かりません。 このイベントは私たち全てが「コンピューターサイエンスとはどのようなものか」を知る機会になるのです。
 
 私たちはこれをきっかけに学生たちの興味が刺激されて学び続けることを願っています。 子供たちは、読み書きを覚える前にプログラミングの概念を習得できるという研究結果もあります。 実際に、若い時に外国語の学習が容易なように、子どもたちの脳はコンピューター言語の習得も早いのです。 <br /> <br />
 
@@ -42,7 +42,7 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 ## ソーシャルメディアやメールで共有しよう
 
-[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![画像](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
@@ -50,4 +50,4 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 {{ stats_carousel }}
 
-{{ signup_button }}
+サインアップ

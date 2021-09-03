@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-23 16:52:25 UTC",
+    "serialized_at": "2021-09-01 13:40:25 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot-facilitator"
@@ -2949,13 +2949,7 @@
       "key": "ac97b15f-10ac-492f-ad4c-04b50bfca19f",
       "position": 8,
       "properties": {
-        "description": "**Do This:** Discuss strategies for giving good feedback.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how to focus code reviews by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the ART (ask questions, raise flags about confusing code, and tag awesome code) mnemonic to help structure feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice activity guide to each review group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the comments. Have students decide whether the feedback is valuable for the author.\n* Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n* Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n* Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What additional feedback might you give to the developer?*\n* *Why is this feedback useful?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their review groups to write additional comments for the developer on their Code Review Practice activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to review the work of one member of their review group.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Some additional places students may give feedback in lines 1-30 include:\n* Line 3 - The constructor is initialized incorrectly\n* Lines 11-14 - Good use of a `while` loop\n* Lines 28-30 - Interesting use of paint buckets as a tool for navigating and drawing"
-          }
-        ]
+        "description": "**Do This:** Discuss strategies for giving good feedback.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how to focus code reviews by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the ART (ask questions, raise flags about confusing code, and tag awesome code) mnemonic to help structure feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice activity guide to each review group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the comments. Have students decide whether the feedback is valuable for the author.\n* Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n* Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n* Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What additional feedback might you give to the developer?*\n* *Why is this feedback useful?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their review groups to write additional comments for the developer on their Code Review Practice activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to review the work of one member of their review group."
       },
       "seeding_key": {
         "activity_section.key": "ac97b15f-10ac-492f-ad4c-04b50bfca19f",
