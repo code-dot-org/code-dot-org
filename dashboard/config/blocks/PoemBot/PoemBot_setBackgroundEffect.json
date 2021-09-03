@@ -49,10 +49,6 @@
         "name": "PALETTE",
         "options": [
           [
-            "Black & White",
-            "\"grayscale\""
-          ],
-          [
             "Sky",
             "\"sky\""
           ],
@@ -83,6 +79,10 @@
           [
             "Winter",
             "\"winter\""
+          ],
+          [
+            "Black & White",
+            "\"grayscale\""
           ]
         ]
       }
