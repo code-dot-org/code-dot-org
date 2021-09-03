@@ -104,8 +104,8 @@ Javalab.prototype.init = function(config) {
   const onStop = this.onStop.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
-  const onSystemInMessage = this.onSystemInMessage.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
+  const onJavabuilderMessage = this.onJavabuilderMessage.bind(this);
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
 
   switch (this.level.csaViewMode) {
@@ -132,7 +132,7 @@ Javalab.prototype.init = function(config) {
       this.miniApp = new Playground(
         this.onOutputMessage,
         this.onNewlineMessage,
-        onInputMessage
+        onJavabuilderMessage
       );
       this.visualization = <PlaygroundVisualizationColumn />;
       break;
@@ -265,7 +265,7 @@ Javalab.prototype.init = function(config) {
         onStop={onStop}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
-        onInputMessage={onSystemInMessage}
+        onInputMessage={onInputMessage}
         handleVersionHistory={handleVersionHistory}
         visualization={this.visualization}
         viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
