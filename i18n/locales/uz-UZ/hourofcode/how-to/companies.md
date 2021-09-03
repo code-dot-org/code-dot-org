@@ -6,7 +6,7 @@ title: Hour of Code How-To Guide for Companies
 
 # How your company can engage with the Hour of Code
 
-### Find out how you and your employees can inspire students to try computer science!
+### Siz va xodimlaringiz o‘quvchilarni kompyuter fanini o‘rganishga qanday ilhomlantirishi mumkinligini bilib oling!
 
 * * *
 

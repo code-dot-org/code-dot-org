@@ -56,7 +56,7 @@ title: المصادر
 </ul>
 
 1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
-2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+2. اكتب فقرة في صفحتك أو (أسفل الصفحة)، تتضمن روابط لمواقع الأسبوع العالمي للبرمجة وعلوم الحاسوب وموقع [Code.org]({{ codeorg_link }})، وتنص على ما يلي:
     
     *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 

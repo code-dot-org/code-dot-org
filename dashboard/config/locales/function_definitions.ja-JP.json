@@ -3713,19 +3713,22 @@
             "parameters": {
               "points": "ポイント",
               "length": "長さ"
-            }
+            },
+            "description": "決められた点と、決められた長さの辺を使って星をかきます"
           },
           "draw a circle": {
             "name": "円 を かく",
             "parameters": {
               "radius": "半径"
-            }
+            },
+            "description": "決められた半径の円をかきます"
           },
           "draw a pinwheel": {
             "name": "風車をかく",
             "parameters": {
               "length": "長さ",
-              "repeat": "くりかえし"
+              "repeat": "くりかえし",
+              "sides": "辺"
             }
           },
           "draw a triangle": {
@@ -3737,7 +3740,8 @@
           "draw a shape": {
             "name": "図形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw a house": {
@@ -3749,8 +3753,21 @@
           "draw a square": {
             "name": "正方形 を かく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
+          },
+          "small flower": {
+            "name": "小さな花"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ロジックの花 2"
+          },
+          "LOGIC FLOWER": {
+            "name": "ロジックの花"
+          },
+          "LOGIC FLOWERS": {
+            "name": "ロジックの花"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -3759,13 +3776,15 @@
             "parameters": {
               "points": "ポイント",
               "length": "長さ"
-            }
+            },
+            "description": "決められた点と、決められた長さの辺を使って星をかきます"
           },
           "draw a circle": {
             "name": "円 を かく",
             "parameters": {
               "radius": "半径"
-            }
+            },
+            "description": "決められた半径の円をかきます"
           },
           "draw a pinwheel": {
             "name": "風車をかく",
@@ -3805,19 +3824,22 @@
             "parameters": {
               "points": "ポイント",
               "length": "長さ"
-            }
+            },
+            "description": "決められた点と、決められた長さの辺を使って星をかきます"
           },
           "draw a circle": {
             "name": "円 を かく",
             "parameters": {
               "radius": "半径"
-            }
+            },
+            "description": "決められた半径の円をかきます"
           },
           "draw a pinwheel": {
             "name": "風車をかく",
             "parameters": {
               "length": "長さ",
-              "repeat": "くりかえし"
+              "repeat": "くりかえし",
+              "sides": "辺"
             }
           },
           "draw a triangle": {
@@ -3829,7 +3851,8 @@
           "draw a shape": {
             "name": "図形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw a house": {
@@ -3851,13 +3874,15 @@
             "parameters": {
               "points": "ポイント",
               "length": "長さ"
-            }
+            },
+            "description": "決められた点と、決められた長さの辺を使って星をかきます"
           },
           "draw a circle": {
             "name": "円 を かく",
             "parameters": {
               "radius": "半径"
-            }
+            },
+            "description": "決められた半径の円をかきます"
           },
           "draw a pinwheel": {
             "name": "風車をかく",
@@ -4231,6 +4256,11 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "counterを使って、進んでミツをとる"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "ゲームをリセットする"
           }
         }
       }

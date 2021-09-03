@@ -21,13 +21,13 @@
           "description": "Przypisz wartość zmiennej"
         },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
-          "description": "Używać zmiennych do utrzymywania słów i zwrotów."
+          "description": "Używaj zmiennych do przechowywania słów i zwrotów."
         },
         "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
-          "description": "Używać zmiennych do utrzymywania słów i zwrotów."
+          "description": "Używaj zmiennych do przechowywania słów i zwrotów."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
           "description": "Rozróżniać pomiędzy komendami, które należy powtarzać w pętlach, a komendami, które powinny być używane indywidualnie."
@@ -39,7 +39,7 @@
           "description": "Używać zmiennych w miejsce powtarzających się wartości wewnątrz programu."
         },
         "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f": {
-          "description": "Używać zmiennych do zmiany wartości w pętli."
+          "description": "Używaj zmiennych do zmiany wartości w pętli."
         },
         "dd570e3f-8340-4838-8ba1-de856546f834": {
           "description": "Łamać skomplikowane zadania na mniejsze, powtarzalne sekcje."
@@ -120,7 +120,7 @@
           "description": "Zamienić serię działań wielokrotnych w pojedynczą pętlę."
         },
         "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
           "description": "Dzielićić długą sekwencję poleceń na najmniejszą możliwą powtarzalną sekwencję."
@@ -132,7 +132,7 @@
           "description": "Używać połączenia komend sekwencyjnych i zapętlonych, aby dojść do końca labiryntu."
         },
         "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
           "description": "Dzielićić długą sekwencję poleceń na najmniejszą możliwą powtarzalną sekwencję."
@@ -216,7 +216,7 @@
           "description": "Doskonalić istniejący kod znajdując obszary powtarzania i przenoszenia ich w struktury zapętlające się"
         },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "ea6a44e1-0175-4ecc-a257-4489b703c063": {
           "description": "Dzielićić długą sekwencję poleceń na najmniejszą możliwą powtarzalną sekwencję."
@@ -294,7 +294,7 @@
           "description": "Zapisywać instrukcje, w których używa się pętli, aby powtarzać wzorce"
         },
         "46288097-dbab-437f-897c-4e14352ae388": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
           "description": "Dzielićić długą sekwencję poleceń na największą powtarzalną sekwencję."
@@ -312,7 +312,7 @@
           "description": "Używać połączenia komend sekwencyjnych i zapętlonych, aby przemieszczać i wykonywać działania."
         },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
           "description": "Rozróżniać pomiędzy komendami, które należy powtarzać w pętlach, a komendami, które powinny być używane indywidualnie."
@@ -417,7 +417,7 @@
           "description": "Doskonalić istniejący kod znajdując obszary powtarzania i przenoszenia ich w struktury zapętlające się"
         },
         "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "079d7fb4-c8a7-4319-80d6-53037ad705eb": {
           "description": "Rozróżniać pomiędzy komendami, które należy powtarzać w pętlach, a komendami, które powinny być używane indywidualnie."
@@ -429,7 +429,7 @@
           "description": "Zauważać duże, powtórzone wzorce wytworzone z mniejszych powtórzonych wzorców."
         },
         "673ddc56-5217-45a9-919c-b42024f7de2b": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "fd3464fd-5921-4873-a850-c0799c55eecd": {
           "description": "Definiować okoliczności, kiedy pewne części programu należy uruchamiać, a kiedy nie."
@@ -525,7 +525,7 @@
           "description": "Tworzyć animacje tańców przy pomocy kodu"
         },
         "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
           "description": "Dzielićić długą sekwencję poleceń na największą powtarzalną sekwencję."
@@ -534,7 +534,7 @@
           "description": "Używać połączenia komend sekwencyjnych i zapętlonych, aby dojść do końca labiryntu."
         },
         "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "32250c07-4872-43ce-9968-33e17f779cf3": {
           "description": "Rozróżniać pomiędzy komendami, które należy powtarzać w pętlach, a komendami, które powinny być używane indywidualnie."
@@ -546,7 +546,7 @@
           "description": "Zauważać duże, powtórzone wzorce wytworzone z mniejszych powtórzonych wzorców."
         },
         "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "f35a3857-a630-4783-98c3-c0e6304af48f": {
           "description": "Dzielić kod na największe powtarzalne sekwencje używając zarówno pętli, jak i pętli zagnieżdżonych."
@@ -618,7 +618,7 @@
           "description": "Używać zmiennych w miejsce powtarzających się wartości wewnątrz programu."
         },
         "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4": {
-          "description": "Używać zmiennych do zmiany wartości w pętli."
+          "description": "Używaj zmiennych do zmiany wartości w pętli."
         },
         "a80a4857-3cff-46f5-9fc5-63a3969a4631": {
           "description": "Identyfikować obszary, w którym można używać zmiennych do modyfikowania ilości w trakcie czasu przebiegu."
@@ -669,7 +669,7 @@
           "description": "Doskonalić istniejący kod znajdując obszary powtarzania i przenoszenia ich w struktury zapętlające się"
         },
         "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
           "description": "Dzielićić długą sekwencję poleceń na najmniejszą możliwą powtarzalną sekwencję."
@@ -723,7 +723,7 @@
           "description": "Rozumieć własne prawa dotyczące materiałów, które utworzyli"
         },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
           "description": "Rozróżniać pomiędzy komendami, które należy powtarzać w pętlach, a komendami, które powinny być używane indywidualnie."

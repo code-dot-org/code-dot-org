@@ -4,7 +4,7 @@ title: Press Kit
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# Paaano maaakit ang media sa iyong kaganapan sa Hour of Code
 
 ### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
@@ -12,7 +12,7 @@ title: Press Kit
 
 * * *
 
-## Key Tips
+## Mga pangunahing payo
 
 - Ipaalam sa media dalwang linggo bago ang iyong kaganapan sa pamamagitan ng email. Mag-follow up sa email at telepono kung hindi ka nakatanggap ng isang paunang tugon.
 - Hilingin sa isang miyembro ng kawani ng paaralan o sa boluntaryo na kunan ng litrato upang ibahagi online o ipadala sa pahayagan.
@@ -21,7 +21,7 @@ title: Press Kit
 
 ## Step-by-step guide
 
-### 1. Plan your event
+### 1. Planuhin ang iyong kaganapan
 
 - Magplano ng isang pagpupulong upang i-kick off ang Hour of Code.
 - Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
@@ -33,13 +33,13 @@ title: Press Kit
 
 Like local newspapers, TV station or radio stations, or blogs. <br />
 
-### 3. Contact local media
+### 3. Kontakin ang lokal na media
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+Ang pinakamahusay na paraan upang maabot ay sa pamamagitan ng email. It should be short and should communicate "why should other people care about this event"? Isama ang kontak na impormasyon (kasama ang numero ng cellphone) kung sino ang nasa site sa kaganapan. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+Tumungin online upang makahanao ng kontak na impormasyon ng mamamahayag. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. Maghanda ng patlang na tanong tungkol sa kaganapan ng iyong paaralan. Narito ang ilang mga halimbawa:
 
 #### Bakit ang iyong paaralan ay ginagawa ang Hour of Code?
 

@@ -28,16 +28,20 @@
             "\"darkCircles\""
           ],
           [
-            "Cloudy",
-            "\"cloudy\""
-          ],
-          [
-            "Fade Colors",
+            "Color Fade",
             "\"fadeColors\""
           ],
           [
             "Blooming",
             "\"blooming\""
+          ],
+          [
+            "Ripples",
+            "\"ripples\""
+          ],
+          [
+            "Clouds",
+            "\"clouds\""
           ]
         ]
       },
@@ -79,6 +83,14 @@
           [
             "Winter",
             "\"winter\""
+          ],
+          [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Roses",
+            "\"roses\""
           ]
         ]
       }

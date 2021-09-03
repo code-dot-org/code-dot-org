@@ -25,7 +25,7 @@ import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
-import {CsaViewMode} from './constants';
+import {CsaViewMode, InputMessageType} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
 import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
@@ -324,14 +324,15 @@ Javalab.prototype.onStop = function() {
 };
 
 // Called by Javalab console to send a message to Javabuilder.
-Javalab.prototype.onSystemInMessage = function(message) {
-  this.onInputMessage('SYSTEM_IN');
+Javalab.prototype.onInputMessage = function(message) {
+  this.onJavabuilderMessage(InputMessageType.SYSTEM_IN, message);
 };
 
-Javalab.prototype.onInputMessage = function(type, message) {
+// Called by the console or mini apps to send a message to Javabuilder.
+Javalab.prototype.onJavabuilderMessage = function(messageType, message) {
   this.javabuilderConnection.sendMessage(
     JSON.stringify({
-      messageType: type,
+      messageType,
       message
     })
   );
