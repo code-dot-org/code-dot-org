@@ -85,7 +85,7 @@ class DropletCodeToggle extends Component {
     this.forceUpdate();
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     studioApp().on('afterInit', this.afterInit);
   }
 
@@ -177,7 +177,7 @@ export default class ShowCodeToggle extends Component {
     this.forceUpdate();
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     studioApp().on('afterInit', this.afterInit);
   }
 

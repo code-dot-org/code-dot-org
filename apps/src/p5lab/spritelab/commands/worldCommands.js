@@ -36,7 +36,16 @@ export const commands = {
   },
 
   playSound(url) {
+    this.soundLog.push(url);
     audioCommands.playSound({url, loop: false});
+  },
+
+  playSpeech(speech) {
+    audioCommands.playSpeech({
+      text: speech,
+      gender: 'female',
+      language: 'English'
+    });
   },
 
   printText(text) {
