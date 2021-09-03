@@ -506,7 +506,7 @@ class Homepage
   end
 
   def self.show_csjourneys_banner(request)
-    true
+    request.locale == "en-US"
   end
 
   def self.show_professional_learning_banner(request)
