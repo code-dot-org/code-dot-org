@@ -4,7 +4,7 @@ import LevelFeedback from '@cdo/apps/templates/feedback/LevelFeedback';
 import i18n from '@cdo/locale';
 import {levelFeedbackShape} from './types';
 
-export default class AllFeedback extends Component {
+class AllFeedback extends Component {
   static propTypes = {
     feedbackByLevel: PropTypes.arrayOf(levelFeedbackShape)
   };
@@ -15,7 +15,7 @@ export default class AllFeedback extends Component {
 
     return (
       <div>
-        <h1>{i18n.feedbackAll()}</h1>
+        <h1 style={styles.header}>{i18n.feedbackAll()}</h1>
         {noFeedback && <div>{i18n.feedbackNoneYet()}</div>}
         {feedbackByLevel.map((levelFeedback, i) => {
           return <LevelFeedback key={i} {...levelFeedback} />;
@@ -24,3 +24,11 @@ export default class AllFeedback extends Component {
     );
   }
 }
+
+const styles = {
+  header: {
+    marginBottom: 20
+  }
+};
+
+export default AllFeedback;

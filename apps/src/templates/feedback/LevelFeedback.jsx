@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import {levelFeedbackShape} from './types';
+import {levelFeedbackType} from './types';
 import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
 import Button from '@cdo/apps/templates/Button';
 
 export default class LevelFeedback extends Component {
-  static propTypes = levelFeedbackShape;
+  static propTypes = levelFeedbackType;
 
   state = {
     showingPastComments: false
@@ -60,7 +60,7 @@ export default class LevelFeedback extends Component {
                 : i18n.showPastComments()
             }
             onClick={this.toggleshowPastComments}
-            displayAsText={true}
+            styleAsText={true}
             style={styles.showPastComments}
           />
         )}
@@ -87,11 +87,11 @@ const styles = {
     fontSize: 14,
     lineHeight: '17px',
     marginBottom: 8,
-    marginTop: 4
+    marginTop: 4,
+    fontFamily: '"Gotham 5r", sans-serif'
   },
   showPastComments: {
     float: 'right',
-    color: color.teal,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 16
   }

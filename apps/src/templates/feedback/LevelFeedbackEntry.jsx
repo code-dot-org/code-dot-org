@@ -13,7 +13,7 @@ const getElementHeight = element => {
   return ReactDOM.findDOMNode(element).offsetHeight;
 };
 
-const visibleCommentHeight = 40;
+const visibleCommentHeight = 46;
 
 const RubricPerformanceLabels = {
   performanceLevel1: i18n.rubricLevelOneHeader(),
@@ -95,6 +95,7 @@ export default class LevelFeedbackEntry extends Component {
     const {expanded, commentHeight} = this.state;
 
     const isCommentExpandable = commentHeight > visibleCommentHeight;
+    const showCommentFade = isCommentExpandable && !expanded;
 
     const commentContainerStyle = expanded
       ? styles.commentContainer
@@ -113,6 +114,15 @@ export default class LevelFeedbackEntry extends Component {
           <div ref={r => (this.comment = r)} style={styles.feedbackText}>
             &quot;{comment}&quot;
           </div>
+          {showCommentFade && (
+            <div
+              id="comment-fade"
+              style={{
+                ...styles.fadeout,
+                ...(this.feedbackSeenByStudent() && styles.fadeoutSeen)
+              }}
+            />
+          )}
         </span>
       </div>
     );
@@ -200,6 +210,15 @@ const styles = {
     cursor: 'pointer'
   },
   commentText: {
+    position: 'relative', // for positioning fade over comment text
     fontFamily: '"Gotham 5r", sans-serif'
+  },
+  fadeout: {
+    bottom: 0,
+    height: 'calc(100% - 15px)',
+    background:
+      'linear-gradient(rgba(231, 232, 234, .1) 0%,rgba(231, 232, 234, 1) 100%)',
+    position: 'absolute',
+    width: '100%'
   }
 };

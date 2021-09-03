@@ -11,6 +11,7 @@ import ReactDOM from 'react-dom';
 import sinon from 'sinon';
 
 const DEFAULT_FEEDBACK = {
+  id: 1,
   seen_on_feedback_page_at: null,
   student_first_visited_at: null,
   created_at: new Date(),
@@ -20,11 +21,13 @@ const DEFAULT_FEEDBACK = {
   is_awaiting_teacher_review: false
 };
 
-const setUp = overrideFeedback => {
+const setUp = (overrideFeedback, useMount = false) => {
   const props = {
     feedback: {...DEFAULT_FEEDBACK, ...overrideFeedback}
   };
-  return shallow(<LevelFeedbackEntry {...props} />);
+  return useMount
+    ? mount(<LevelFeedbackEntry {...props} />)
+    : shallow(<LevelFeedbackEntry {...props} />);
 };
 
 describe('LevelFeedbackEntry', () => {
@@ -36,19 +39,20 @@ describe('LevelFeedbackEntry', () => {
     expect(timeAgoComponent.props().dateString).to.equal(createdDate);
   });
 
-  it('displays background as white if student has not seed feedback', () => {
+  it('displays background as lightest_gray with no opacity set if the student has not seen feedback', () => {
     const wrapper = setUp();
-    expect(wrapper.first().props().style.backgroundColor).to.equal(color.white);
+    expect(wrapper.first().props().style.backgroundColor).to.equal(
+      color.lightest_gray
+    );
+    expect(wrapper.first().props().style.opacity).to.equal(undefined);
   });
 
-  it('displays background as gray if student has seen feedback', () => {
+  it('displays opacity as 60% if student has seen feedback', () => {
     const wrapper = setUp({
       student_first_visited_at: new Date().toString(),
       seen_on_feedback_page_at: new Date().toString()
     });
-    expect(wrapper.first().props().style.backgroundColor).to.equal(
-      color.background_gray
-    );
+    expect(wrapper.first().props().style.opacity).to.equal('60%');
   });
 
   it('displays review state badge if review state is keep working (not awaiting review)', () => {

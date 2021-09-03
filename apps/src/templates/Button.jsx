@@ -19,15 +19,13 @@ const ButtonColor = {
   white: 'white',
   red: 'red',
   green: 'green',
-  purple: 'purple',
-  transparent: 'transparent'
+  purple: 'purple'
 };
 
 const ButtonSize = {
   default: 'default',
   large: 'large',
-  narrow: 'narrow',
-  text: 'text'
+  narrow: 'narrow'
 };
 
 const ButtonHeight = {
@@ -88,17 +86,8 @@ class Button extends React.Component {
       __useDeprecatedTag
     } = this.props;
 
-    let className = this.props.className || '';
-
-    let color, size;
-    if (displayAsText) {
-      color = ButtonColor.transparent;
-      size = ButtonSize.text;
-      className += 'button-active-no-border';
-    } else {
-      color = this.props.color || ButtonColor.orange;
-      size = this.props.size || ButtonSize.default;
-    }
+    const color = this.props.color || ButtonColor.orange;
+    const size = this.props.size || ButtonSize.default;
 
     if (!href && !onClick) {
       throw new Error('Expect at least one of href/onClick');
@@ -117,10 +106,9 @@ class Button extends React.Component {
       );
     }
 
-    const sizeStyle =
-      __useDeprecatedTag || displayAsText
-        ? styles.sizes[size]
-        : {...styles.sizes[size], ...styles.updated};
+    const sizeStyle = __useDeprecatedTag
+      ? styles.sizes[size]
+      : {...styles.sizes[size], ...styles.updated};
 
     // Opening links in new tabs with 'target=_blank' is inherently insecure.
     // Unfortunately, we depend on this functionality in a couple of place.
@@ -324,18 +312,6 @@ const styles = {
         backgroundColor: color.lightest_gray,
         boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
-    },
-    [ButtonColor.transparent]: {
-      color: color.teal,
-      border: 'none',
-      backgroundColor: 'none',
-      fontWeight: 'bold',
-      boxShadow: 'none',
-      padding: 0,
-      margin: 0,
-      ':active': {
-        border: 'none !important'
-      }
     }
   },
   sizes: {
@@ -356,11 +332,6 @@ const styles = {
       paddingLeft: 10,
       paddingRight: 10,
       lineHeight: '40px'
-    },
-    [ButtonSize.text]: {
-      paddingLeft: 0,
-      paddingRight: 0,
-      lineHeight: 'unset'
     }
   },
   textButton: {
