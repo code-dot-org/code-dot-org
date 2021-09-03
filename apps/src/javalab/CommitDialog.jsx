@@ -7,12 +7,9 @@ import StylizedBaseDialog, {
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import {connect} from 'react-redux';
 import _ from 'lodash';
+import CommitDialogBody from './CommitDialogBody';
 
-const fileShape = PropTypes.shape({
-  name: PropTypes.string.isRequired,
-  commit: PropTypes.bool.isRequired,
-  hasConflictingName: PropTypes.bool.isRequired
-});
+const PADDING = 8;
 
 export class UnconnectedCommitDialog extends React.Component {
   state = {
@@ -264,77 +261,7 @@ UnconnectedCommitDialog.propTypes = {
   backpackApi: PropTypes.object
 };
 
-function CommitDialogBody({files, notes, onToggleFile, onChangeNotes}) {
-  return (
-    <div>
-      <label htmlFor="commit-notes" style={{...styles.bold, ...styles.notes}}>
-        {i18n.commitNotes()}
-      </label>
-      <textarea
-        id="commit-notes"
-        placeholder={i18n.commitNotesPlaceholder()}
-        onChange={e => onChangeNotes(e.target.value)}
-        style={styles.textarea}
-        value={notes}
-      />
-      <div style={{...styles.bold, ...styles.filesHeader}}>
-        {i18n.saveToBackpack()}
-      </div>
-      {files.map(file => {
-        return (
-          <CommitDialogFile
-            file={file}
-            onToggleFile={onToggleFile}
-            key={file.name}
-          />
-        );
-      })}
-    </div>
-  );
-}
-
-CommitDialogBody.propTypes = {
-  files: PropTypes.arrayOf(fileShape).isRequired,
-  notes: PropTypes.string,
-  onToggleFile: PropTypes.func.isRequired,
-  onChangeNotes: PropTypes.func.isRequired
-};
-
-export function CommitDialogFile({file, onToggleFile}) {
-  return (
-    <div style={styles.fileRow}>
-      <div style={styles.fileLabelContainer}>
-        <label htmlFor={`commit-${file.name}`} style={styles.fileLabel}>
-          {file.name}
-        </label>
-        {file.hasConflictingName && (
-          <div style={styles.fileNameConflictWarning}>
-            {i18n.backpackFileNameConflictWarning()}
-          </div>
-        )}
-      </div>
-      <input
-        id={`commit-${file.name}`}
-        type="checkbox"
-        checked={file.commit}
-        onChange={() => onToggleFile(file.name)}
-        style={styles.checkbox}
-      />
-    </div>
-  );
-}
-
-CommitDialogFile.propTypes = {
-  file: fileShape.isRequired,
-  onToggleFile: PropTypes.func.isRequired
-};
-
-const PADDING = 8;
 const styles = {
-  bold: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.dark_charcoal
-  },
   footerStatus: {
     display: 'flex',
     alignItems: 'center'
@@ -342,43 +269,6 @@ const styles = {
   iconSuccess: {
     color: color.level_perfect,
     marginRight: 5
-  },
-  filesHeader: {
-    fontSize: 14,
-    backgroundColor: color.lightest_gray,
-    padding: PADDING
-  },
-  fileRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    padding: PADDING,
-    paddingBottom: PADDING / 2,
-    borderBottom: `1px solid ${color.lightest_gray}`
-  },
-  fileLabelContainer: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  fileLabel: {
-    flexGrow: 2,
-    color: color.default_text
-  },
-  fileNameConflictWarning: {
-    color: color.default_text,
-    fontStyle: 'italic',
-    fontSize: 12
-  },
-  checkbox: {
-    width: 18,
-    height: 18
-  },
-  notes: {
-    paddingTop: PADDING * 2
-  },
-  textarea: {
-    width: '98%',
-    height: 75,
-    resize: 'none'
   },
   iconError: {
     color: color.light_orange,
