@@ -10,7 +10,6 @@ import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
-import InputPrompt from './InputPrompt';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -69,13 +68,7 @@ class JavalabConsole extends React.Component {
         return '\n';
       }
       if (log.type === 'input') {
-        return (
-          <span>
-            <InputPrompt />
-            {log.text}
-            {'\n'}
-          </span>
-        );
+        return log.text + '\n';
       }
       if (log.type !== 'newline' && log.type !== 'input') {
         return log.text;
@@ -131,10 +124,10 @@ class JavalabConsole extends React.Component {
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
           >
-            <div style={styles.logs}>
+            <label style={styles.logs} htmlFor="console-input">
               {this.displayConsoleLogs()}
-              <InputPrompt onClick={this.focus} />
               <input
+                id="console-input"
                 type="text"
                 spellCheck="false"
                 style={{
@@ -144,7 +137,7 @@ class JavalabConsole extends React.Component {
                 onKeyDown={this.onInputKeyDown}
                 aria-label="console input"
               />
-            </div>
+            </label>
           </div>
           {bottomRow && [
             {...bottomRow, key: 'bottom-row'},
@@ -200,19 +193,9 @@ const styles = {
   logs: {
     lineHeight: 'normal',
     cursor: 'text',
-    whiteSpace: 'pre-wrap',
-    flexGrow: 1
-  },
-  lineWrapper: {
-    flexGrow: 0,
-    flexShrink: 0,
-    display: 'flex',
-    alignItems: 'center',
-    overflow: 'auto',
-    fontSize: 14
+    whiteSpace: 'pre-wrap'
   },
   input: {
-    flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none',
     border: 'none',
