@@ -62,16 +62,59 @@ class JavalabConsole extends React.Component {
     this._consoleLogs.scrollTop = this._consoleLogs.scrollHeight;
   };
 
-  displayConsoleLogs() {
-    return this.props.consoleLogs.map((log, i) => {
+  // Transform this.props.consoleLogs into an array of strings, with each string
+  // representing a single line that will appear in the console.
+  getConsoleLines() {
+    const lines = [];
+    let currentLine = 0;
+
+    lines[currentLine] = '';
+
+    for (const log of this.props.consoleLogs) {
       if (log.type === 'newline') {
-        return '\n';
+        lines[++currentLine] = '';
+      } else {
+        const text = log.type === 'input' ? log.text + '\n' : log.text;
+        const splitText = text.split(/\r?\n/).entries();
+        for (const [i, value] of splitText) {
+          if (i > 0) {
+            lines[++currentLine] = value;
+          } else {
+            lines[currentLine] += value;
+          }
+        }
       }
-      if (log.type === 'input') {
-        return log.text + '\n';
-      }
-      if (log.type !== 'newline' && log.type !== 'input') {
-        return log.text;
+    }
+
+    return lines;
+  }
+
+  // Returns a rendering of the console log.  It includes the input field following the final
+  // content, taking up the remaining width of the line.
+  renderConsoleLogs(isDarkMode) {
+    const lines = this.getConsoleLines();
+
+    return lines.map((line, index) => {
+      if (index === lines.length - 1) {
+        return (
+          <div style={{display: 'flex'}}>
+            {line}
+            <input
+              id="console-input"
+              type="text"
+              spellCheck="false"
+              style={{
+                ...styles.input,
+                ...(isDarkMode ? styles.darkModeInput : styles.lightModeInput)
+              }}
+              onKeyDown={this.onInputKeyDown}
+              aria-label="console input"
+              autoFocus
+            />
+          </div>
+        );
+      } else {
+        return <div>{line.length === 0 ? ' ' : line}</div>;
       }
     });
   }
@@ -125,18 +168,7 @@ class JavalabConsole extends React.Component {
             className="javalab-console"
           >
             <label style={styles.logs} htmlFor="console-input">
-              {this.displayConsoleLogs()}
-              <input
-                id="console-input"
-                type="text"
-                spellCheck="false"
-                style={{
-                  ...styles.input,
-                  ...(isDarkMode ? styles.darkModeInput : styles.lightModeInput)
-                }}
-                onKeyDown={this.onInputKeyDown}
-                aria-label="console input"
-              />
+              {this.renderConsoleLogs(isDarkMode)}
             </label>
           </div>
           {bottomRow && [
@@ -171,7 +203,8 @@ const styles = {
   },
   darkModeInput: {
     backgroundColor: 'rgba(0,0,0,0)',
-    color: color.white
+    color: color.white,
+    float: 'left'
   },
   lightModeInput: {
     backgroundColor: 'rgba(0,0,0,0)',
@@ -195,13 +228,17 @@ const styles = {
     cursor: 'text',
     whiteSpace: 'pre-wrap'
   },
+  logLine: {
+    display: 'flex'
+  },
   input: {
     marginBottom: 0,
     boxShadow: 'none',
     border: 'none',
     padding: 0,
     fontFamily: 'monospace',
-    marginTop: -4
+    flexGrow: 1,
+    marginTop: -2
   },
   spacer: {
     width: 8

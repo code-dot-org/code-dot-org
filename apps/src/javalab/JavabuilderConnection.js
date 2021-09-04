@@ -47,6 +47,7 @@ export default class JavabuilderConnection {
         this.onOutputMessage(
           'We hit an error connecting to our server. Try again.'
         );
+        this.onNewlineMessage();
         console.error(error.responseText);
       });
   }
@@ -162,6 +163,7 @@ export default class JavabuilderConnection {
     this.onOutputMessage(
       'We hit an error connecting to our server. Try again.'
     );
+    this.onNewlineMessage();
     // Set isRunning to false
     this.setIsRunning(false);
     console.error(`[error] ${error.message}`);
