@@ -2,8 +2,15 @@ import * as utils from './utils';
 import {PALETTES} from '../constants';
 
 export const commands = {
+  setBackground(color) {
+    this.validationInfo.backgroundEffect = color;
+    this.backgroundEffect = () => {
+      this.p5.background(color);
+    };
+  },
   // TODO: would it be possible to re-use the background/foreground effect code from dance party?
   setBackgroundEffect(effectName, palette) {
+    this.validationInfo.backgroundEffect = effectName;
     switch (effectName) {
       case 'colors': {
         let amount = 0;
@@ -339,6 +346,46 @@ export const commands = {
           if (ripples.length === 0) {
             startRipple = true;
           }
+          this.p5.pop();
+        };
+        break;
+      }
+      case 'clouds': {
+        const tileSize = 8;
+        const noiseScale = 0.05;
+        const speed = 0.015;
+        const tiles = [];
+        let xnoise = 0.01;
+        let ynoise = 0.01;
+        let backgroundAmount = 0;
+        for (let x = 0; x < 400; x += tileSize) {
+          xnoise = 0.01;
+          for (let y = 0; y < 400; y += tileSize) {
+            tiles.push({
+              x,
+              y,
+              xnoise,
+              ynoise
+            });
+            xnoise += noiseScale;
+          }
+          ynoise += noiseScale;
+        }
+
+        this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.noStroke();
+          backgroundAmount += speed;
+          this.p5.background(
+            utils.lerpColorFromPalette(this.p5, palette, backgroundAmount)
+          );
+          tiles.forEach(tile => {
+            tile.alpha = this.p5.noise(tile.xnoise, tile.ynoise) * 255;
+            tile.xnoise += speed;
+            tile.ynoise += speed;
+            this.p5.fill(this.getP5Color('#ffffff', tile.alpha));
+            this.p5.rect(tile.x, tile.y, tileSize, tileSize);
+          });
           this.p5.pop();
         };
         break;

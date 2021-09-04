@@ -34,6 +34,7 @@ class CoursesControllerTest < ActionController::TestCase
     setup do
       Script.stubs(:should_cache?).returns true
       Script.clear_cache
+      UnitGroup.clear_cache
 
       @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
     end
@@ -44,9 +45,53 @@ class CoursesControllerTest < ActionController::TestCase
 
     test_user_gets_response_for :index, response: :success, user: :user, queries: 4
 
-    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 15
+    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 10
 
     test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
+  end
+
+  class CachedQueryCounts < ActionController::TestCase
+    setup do
+      Script.stubs(:should_cache?).returns true
+      Script.clear_cache
+      UnitGroup.clear_cache
+
+      offering = create :course_offering, key: 'csx'
+
+      @unit_group = create :unit_group, name: 'csx-3001', published_state: SharedConstants::PUBLISHED_STATE.stable, family_name: 'csx', version_year: '3001'
+      create :course_version, course_offering: offering, content_root: @unit_group, key: '3001'
+      unit1 = create :unit, name: 'csx1-3001', published_state: SharedConstants::PUBLISHED_STATE.stable
+      create :unit_group_unit, unit_group: @unit_group, script: unit1, position: 1
+      unit2 = create :unit, name: 'csx2-3001', published_state: SharedConstants::PUBLISHED_STATE.stable
+      create :unit_group_unit, unit_group: @unit_group, script: unit2, position: 2
+
+      older_unit_group = create :unit_group, name: 'csx-3000', published_state: SharedConstants::PUBLISHED_STATE.stable, family_name: 'csx', version_year: '3000'
+      create :course_version, course_offering: offering, content_root: older_unit_group, key: '3000'
+      unit1 = create :unit, name: 'csx1-3000', published_state: SharedConstants::PUBLISHED_STATE.stable
+      create :unit_group_unit, unit_group: older_unit_group, script: unit1, position: 1
+      unit2 = create :unit, name: 'csx2-3000', published_state: SharedConstants::PUBLISHED_STATE.stable
+      create :unit_group_unit, unit_group: older_unit_group, script: unit2, position: 2
+    end
+
+    test 'signed out user views course overview with caching enabled' do
+      assert_cached_queries(0) do
+        get :show, params: {course_name: @unit_group.name}
+      end
+    end
+
+    test 'student views course overview with caching enabled' do
+      sign_in create(:student)
+      assert_cached_queries(6) do
+        get :show, params: {course_name: @unit_group.name}
+      end
+    end
+
+    test 'teacher views course overview with caching enabled' do
+      sign_in create(:teacher)
+      assert_cached_queries(9) do
+        get :show, params: {course_name: @unit_group.name}
+      end
+    end
   end
 
   test "show: regular courses get sent to show" do

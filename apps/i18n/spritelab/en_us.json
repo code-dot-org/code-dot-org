@@ -190,5 +190,19 @@
   "thirdClickButNoSpeech": "You clicked on more than two sprites but one of your clicks didn't cause a sprite to say anything. Add a `say` block under each `when clicked` event. <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
   "changeOrSetSize": "None of your sprites changed size.",
   "changeOrSetCostume": "None of your sprites changed costumes.",
-  "changeBackground": "The background was not changed."
+  "changeBackground": "The background was not changed.",
+  "poemBotMakeBackground": "You need to add a background effect.",
+  "poemBotMakeForeground": "You need to add a foreground effect.",
+  "poemBotRemovedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
+  "poemBotSetSize": "Use a `set size` block to change the size of your sprite. Use a number other than 100.",
+  "poemBotNoTextEffects": "You need to add a text effect to your project.",
+  "poemBotOneTextEffect": "Great work! You added one text effect. Try adding another.",
+  "poemBotDeletedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
+  "poemBotTextEffectWithEvent": "Set a new text effect under your `when line shows` event block.",
+  "poemBotEffectWithEvent": "Try using a new foreground or background effect under your `when line shows` event block.",
+  "poemBotSuccessForegroundEvent": "Great job changing your foreground with an event! Click “Keep Playing” to try changing the background effect.",
+  "poemBotSuccessBackgroundEvent": "Great job changing your background with an event! Click “Keep Playing” to try changing the foreground effect.",
+  "poemBotSuccessAddedSprite": "Great work adding a new sprite with an event! Click “Keep Playing” to try removing a sprite with an event.",
+  "poemBotSuccessRemovedSprite": "Great work removing a new sprite with an event! Click “Keep Playing” to try adding  a sprite with an event.",
+  "poemBotSpriteEvent": "Try adding or removing a sprite under your `when line shows` event block."
 }

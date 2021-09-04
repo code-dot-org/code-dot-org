@@ -38,6 +38,10 @@ export const commands = {
     return this.promptVars;
   },
 
+  getSoundLog() {
+    return this.soundLog;
+  },
+
   getSpriteIdsInUse() {
     return this.getSpriteIdsInUse();
   },

@@ -768,7 +768,7 @@ class Lesson < ApplicationRecord
   def copy_to_unit(destination_unit, new_level_suffix = nil)
     return if script == destination_unit
     raise 'Both lesson and unit must be migrated' unless script.is_migrated? && destination_unit.is_migrated?
-    raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil? || script.get_course_version.nil?
+    raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil?
 
     copied_lesson = dup
     copied_lesson.key = copied_lesson.name

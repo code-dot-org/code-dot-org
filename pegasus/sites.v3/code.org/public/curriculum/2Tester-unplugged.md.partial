@@ -228,15 +228,10 @@ th, td {
   </tr>
      <th id=t07>Abstraction</th>
     <td><a href="https://code.org/curriculum/course4/5/Teacher"target="_blank">Mad Glibs</a><br><small>Abstraction is one of the most important skills for a computer scientist to understand. It simplifies problems and prevents unnecessary repetition. A good coder uses abstraction just about every time she creates a program. This activity will have your students analyze stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.</td> <td><a href="https://youtu.be/TctGRrUdkcc"target="_blank">Lesson Video</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Activity5-MadGlibs.pdf"target="_blank">Activity Answer Key</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Assessment5-MadGlibs.pdf"target="_blank">Assessment Answer Key </a></td>
-
 </tr>
-
-​	<th id=t07>Variables</th>
-
-​	<td><a href="https://curriculum.code.org/csf-20/coursef/7/"target="_blank">Envelope Variables</a><br><i>*Supplies: Envelopes (1-4/group of 2-4)</i><br><small>Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.</td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
-
+   <th id=t07>Variables</th>
+​	  <td><a href="https://curriculum.code.org/csf-20/coursef/7/"target="_blank">Envelope Variables</a><br><i>*Supplies: Envelopes (1-4/group of 2-4)</i><br><small>Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
 </tr>
-
 </table>
 
 <p style="clear:both"></p>

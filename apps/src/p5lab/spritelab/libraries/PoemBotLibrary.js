@@ -13,6 +13,10 @@ const POEM_DURATION = 500;
 export default class PoemBotLibrary extends CoreLibrary {
   constructor(p5) {
     super(p5);
+    // Extra information for validation code to be able to inspect the program state
+    this.validationInfo = {
+      endTime: POEM_DURATION
+    };
     this.poemState = {
       title: '',
       author: '',
@@ -23,10 +27,10 @@ export default class PoemBotLibrary extends CoreLibrary {
         font: 'Arial'
       },
       isVisible: true,
-      effects: []
+      textEffects: []
     };
     this.backgroundEffect = () => this.p5.background('white');
-    this.foregroundEffect = () => {};
+    this.foregroundEffects = [];
     this.lineEvents = {};
     this.p5.textAlign(this.p5.CENTER);
     this.p5.angleMode(this.p5.DEGREES);
@@ -45,21 +49,26 @@ export default class PoemBotLibrary extends CoreLibrary {
           this.poemState,
           this.p5.World.frameCount
         );
-        for (let i = 0; i < renderInfo.lines.length; i++) {
-          const lineNum = i + 1; // students will 1-index the lines
-          // Fire line events
-          this.lineEvents[lineNum]?.forEach(callback => callback());
+        // Don't fire line events in preview
+        if (this.p5.frameCount > 1) {
+          for (let i = 0; i < renderInfo.lines.length; i++) {
+            const lineNum = i + 1; // students will 1-index the lines
+            if (this.lineEvents[lineNum]) {
+              // Fire line events
+              this.lineEvents[lineNum].forEach(callback => callback());
 
-          // Clear out line events so they don't fire again. This way, we'll fire
-          // the event only on the first frame where renderInfo.lines has
-          // that many items
-          this.lineEvents[lineNum] = null;
+              // Clear out line events so they don't fire again. This way, we'll fire
+              // the event only on the first frame where renderInfo.lines has
+              // that many items
+              this.lineEvents[lineNum] = null;
+            }
+          }
         }
         this.drawFromRenderInfo(renderInfo);
 
         // Don't show foreground effect in preview
         if (this.p5.frameCount > 1) {
-          this.foregroundEffect();
+          this.foregroundEffects.forEach(effect => effect.func());
         }
       },
 
@@ -124,7 +133,7 @@ export default class PoemBotLibrary extends CoreLibrary {
       },
 
       setTextEffect(effect) {
-        this.poemState.effects.push({
+        this.poemState.textEffects.push({
           name: effect
         });
       },
@@ -134,6 +143,45 @@ export default class PoemBotLibrary extends CoreLibrary {
           this.lineEvents[lineNum] = [];
         }
         this.lineEvents[lineNum].push(callback);
+      },
+
+      getValidationInfo() {
+        this.validationInfo.lineEvents = Object.keys(this.lineEvents);
+        this.validationInfo.font = {...this.poemState.font};
+        this.validationInfo.textEffects = this.poemState.textEffects.map(
+          effect => effect.name
+        );
+        this.validationInfo.foregroundEffects = this.foregroundEffects.map(
+          effect => effect.name
+        );
+        return this.validationInfo;
+      },
+
+      setSuccessFrame() {
+        if (!this.validationInfo.successFrame) {
+          // Only set the success frame if it hasn't already been set (the first
+          // frame at which we know the student will pass the level).
+          this.validationInfo.successFrame = this.p5.frameCount;
+        }
+      },
+
+      drawProgressBar() {
+        this.p5.push();
+        this.p5.noStroke();
+        if (this.validationInfo.successFrame) {
+          // The student will pass the level
+          this.p5.fill(this.p5.rgb(0, 173, 188));
+        } else {
+          // The student will not pass the level (yet);
+          this.p5.fill(this.p5.rgb(118, 102, 160));
+        }
+        this.p5.rect(
+          0,
+          390,
+          (this.p5.frameCount / POEM_DURATION) * PLAYSPACE_SIZE,
+          10
+        );
+        this.p5.pop();
       },
 
       ...backgroundEffects,
@@ -159,7 +207,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     return scaledSize;
   }
 
-  applyEffect(renderInfo, effect, frameCount) {
+  applyTextEffect(renderInfo, effect, frameCount) {
     const newLines = [];
     renderInfo.lines.forEach(line => {
       const newLine = {...line};
@@ -212,20 +260,23 @@ export default class PoemBotLibrary extends CoreLibrary {
   }
 
   applyGlobalLineAnimation(renderInfo, frameCount) {
-    const progress = frameCount / POEM_DURATION;
-    const framesPerLine = POEM_DURATION / renderInfo.lines.length;
+    // Add 2 so there's time before the first line and after the last line
+    const framesPerLine = POEM_DURATION / (renderInfo.lines.length + 2);
+
     const newLines = [];
     for (let i = 0; i < renderInfo.lines.length; i++) {
+      const lineNum = i + 1; // account for time before the first line shows
       const newLine = {...renderInfo.lines[i]};
-      newLine.start = i * framesPerLine;
-      newLine.end = (i + 1) * framesPerLine;
-      newLines.push(newLine);
+      newLine.start = lineNum * framesPerLine;
+      newLine.end = (lineNum + 1) * framesPerLine;
+      if (this.p5.World.frameCount >= newLine.start) {
+        newLines.push(newLine);
+      }
     }
 
-    const numLinesToShow = Math.floor(progress * renderInfo.lines.length);
     return {
       ...renderInfo,
-      lines: newLines.slice(0, numLinesToShow + 1) // end index is not inclusive, so + 1
+      lines: newLines
     };
   }
 
@@ -286,13 +337,13 @@ export default class PoemBotLibrary extends CoreLibrary {
     });
 
     if (this.p5.frameCount === 1) {
-      // Don't apply effects / line animation for preview
+      // Don't apply text effects / line animation for preview
       return renderInfo;
     }
 
     renderInfo = this.applyGlobalLineAnimation(renderInfo, frameCount);
-    poemState.effects.forEach(effect => {
-      renderInfo = this.applyEffect(renderInfo, effect, frameCount);
+    poemState.textEffects.forEach(effect => {
+      renderInfo = this.applyTextEffect(renderInfo, effect, frameCount);
     });
     return renderInfo;
   }
