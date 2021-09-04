@@ -12112,6 +12112,8 @@ sk:
           lessons:
             lesson-12:
               name: Nástroje
+            lesson-17:
+              name: Konzola
             lesson-18:
               name: Widgety
           lesson_groups:

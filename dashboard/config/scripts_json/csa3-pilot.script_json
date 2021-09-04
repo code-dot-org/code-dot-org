@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-20 17:05:02 UTC",
+    "serialized_at": "2021-08-31 20:36:30 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -175,7 +175,6 @@
       "relative_position": 7,
       "properties": {
         "overview": "Students implement static variables and constants to count the number of `PainterPlus` objects created and set maximum and minimum values for the volume of sounds in The Theater.",
-        "preparation": "* Print copies of the Math Class Source Code handout (one per student)",
         "student_overview": "Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Neighborhood and in The Theater."
       },
       "seeding_key": {
@@ -1021,7 +1020,7 @@
       "key": "80c51fbe-10f4-4bb7-b7a3-41afbeec8c24",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Introduce one-dimensional arrays.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define a one-dimensional array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to define element and index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arrays video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are some physical examples that are similar to a one-dimensional array?*\n* *What does it mean to be immutable?*\n* *How are arrays immutable?*\n\n**Discussion Goal:** Students point out physical items that can store one or more values. Some examples might include a storage facility, school lockers, or freight cars. Students define the term immutable as something that cannot be changed. Students recall that the size of an array cannot be changed after it is created and is therefore immutable.",
+        "description": "**Do This:** Introduce one-dimensional arrays.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define data structure.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define a one-dimensional array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to define element and index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arrays video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are some physical examples that are similar to a one-dimensional array?*\n* *What does it mean to be immutable?*\n* *How are arrays immutable?*\n\n**Discussion Goal:** Students point out physical items that can store one or more values. Some examples might include a storage facility, school lockers, or freight cars. Students define the term immutable as something that cannot be changed. Students recall that the size of an array cannot be changed after it is created and is therefore immutable.",
         "duration": "5",
         "name": "Hip Hip Array"
       },
@@ -7404,6 +7403,16 @@
       }
     },
     {
+      "key": "data_structure",
+      "word": "Data Structure",
+      "definition": "A way of storing and organizing data in a program",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_structure"
+      }
+    },
+    {
       "key": "for_loop",
       "word": "for Loop",
       "definition": "A loop that has a predetermined beginning, end, and increment or decrement",
@@ -7635,6 +7644,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "one_dimensional_d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "data_structure"
       }
     },
     {

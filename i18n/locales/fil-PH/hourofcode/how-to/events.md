@@ -37,19 +37,19 @@ Share pictures of your event on Facebook and Twitter and use the hashtag **#Hour
 
 ## Mag host ng isang gabing Family Code na may kasamang Hour of Code at imbitahin ang mga magulang na lumahok
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. Ito ay isang mahusay na paraan upang makisali sa mas malaking komunidad at hikayatin ang suporta ng magulang para sa computer science sa iyong paaralan. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [I-click dito para ma-download ang Kit ng kaganapan](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 * * *
 
 ## Example plan for a school assembly or event
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Kaganapan:** Ang School-wide Computer Science Education Week kick-off assembly
 
 **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Oras:** Sa araw ng pag-aaral. Ginusto ang kalagitnaan ng umagang kaganapan. Humigit-kumulang na 1 oras.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Lokasyon:** School assembly hall (hal. theater, gym, cafeteria)
 
 ## Takbo ng palabas
 

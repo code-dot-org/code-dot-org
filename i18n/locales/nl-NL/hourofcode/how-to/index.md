@@ -99,7 +99,7 @@ Laat een inspirerende video zien:
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Het maakt niet uit als programmeren voor u en uw leerlingen nog nieuw is. Hier zijn een paar ideeën om uw CodeUur activiteit te introduceren:
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - Noem dingen op waarmee codering wordt gebruikt.
@@ -111,11 +111,11 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ## 6. Get coding!
 
-Direct students to the activity
+Betrek de deelnemers bij de activiteit
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-When your students come across difficulties it's okay to respond:
+Wanneer uw studenten moeilijkheden tegenkomen kunt u gerust reageren met:
 
 - "Ik weet het niet. Laten we het samen oplossen."
 - "Technologie werkt niet altijd op de manier waarop we dat willen."

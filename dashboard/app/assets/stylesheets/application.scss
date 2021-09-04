@@ -1991,7 +1991,7 @@ a.download-video {
       }
     }
 
-    #email-preference-radio {
+    #email-preference-radio, #share-email-reg-part-preference-radio {
       p {
         margin: 0;
       }
@@ -3072,6 +3072,11 @@ button:hover>img {
 }
 button:active {
   border: 1px solid $light_gray !important;
+}
+button.button-active-no-border:active {
+  // This class is needed for when we want to hide the border on
+  // an active button. (overriding button:active rule above)
+  border: none !important;
 }
 button:hover {
   @include box-shadow(2px 2px 5px $shadow);

@@ -99,7 +99,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 - Code.org-ის უნიკალური ვიდეო ღონისძიების დასაწყებად: ბილ გეითსის, მარკ ცუკერგერგის და NBA ვარსკვლავის კრის ბოშის მონაწილეობით. (ხელმისაწვდომია შემდეგი ხანგრძლივობის ვერსიები: [1 წუთიანი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთიანი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთიანი](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - მეტ ინსპირაციულ ვიდეოს იხილავთ [რესურსები ]({{ urls/inspire }})და[ვიდეოები](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+არაუშავს, თუ კომპიუტერეულ მეცნიერებებში თქვენ და თქვენი მოსწავლეები თანაბრად გამოუცდელი ხართ. აი, რამდენიმე იდეა, როგორ შეიძლება წარადგინოთ კოდის ერთი საათის აქტივობა:
 
 - ახსენით, რა გავლენას ახდენენ ტექნოლოგიები ჩვენს ცხოვრებაზე. გამოიყენეთ მაგალითები, რომლებიც გოგონებისთვის და ბიჭებისთვის ერთნაირად საინტერესო იქნება (ესაუბრეთ სიცოცხლის გადარჩენაზე, ადამიანების დახმარებაზე, მათ ერთმანეთთან დაკავშირებაზე და ა. შ.).
 - კლასთან ერთად ჩამოწერეთ ყოველდღიური გამოყენების საგნები, რომლებიც იყენებენ პროგრამირებას.
