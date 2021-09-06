@@ -163,7 +163,15 @@ zh-CN:
     user_type_button: 更新帐户类型
     user_type_label: 帐户类型
     user_type_student: 学生
+    user_type_student_desc: 探索我们的所有课程和活动，还有：
+    user_type_student_ability_1: 保存你的进度和项目
+    user_type_student_ability_2: 加入老师的课堂小组
     user_type_teacher: 老师
+    user_type_teacher_desc: 学生能访问的所有东西，还有：
+    user_type_teacher_ability_1: 创建课堂小组
+    user_type_teacher_ability_2: 分配和跟踪学生作业
+    user_type_teacher_ability_3: 注册专业学习
+    user_type_teacher_ability_4: 在我们的教师论坛上互动
     field_is_required: 必填
     accept_terms: 必须同意创建一个帐户。
     error: 发生错误。

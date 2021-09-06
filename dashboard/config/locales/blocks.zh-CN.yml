@@ -1606,6 +1606,11 @@ zh-CN:
             '"direction"': 移动方向
       Mikelab_setTint:
         text: 将 {SPRITE} 的颜色改为 {COLOR}
+      Mikelab_setupOutbreak:
+        text: |-
+          疫情爆发设置
+          人口：{SPRITE2N}
+          {TOGGLE}病毒
       Mikelab_setupSim:
         text: |-
           setup simulation with
@@ -1687,6 +1692,26 @@ zh-CN:
         text: "{SPRITE} 的x轴坐标"
       Mikelab_yLocationOf:
         text: "{SPRITE} 的y坐标"
+      Outbreak_beginCongregating:
+        text: 怪物开始聚集
+      Outbreak_beginQuarantining:
+        text: 怪物生病时开始隔离
+      Outbreak_beginSocialDistancing:
+        text: 怪物开始保持社交距离
+      Outbreak_beginWandering:
+        text: 怪物开始徘徊
+      Outbreak_beginWearingMasks:
+        text: 怪物开始戴口罩
+      Outbreak_layoutBorder:
+        text: 在边界上布局怪物
+      Outbreak_layoutClusters:
+        text: 在{NUM}的集群中布局怪物
+      Outbreak_layoutGrid:
+        text: 按网格布局怪物
+      Outbreak_layoutRandom:
+        text: 随机布局怪物
+      Outbreak_stopMoving:
+        text: 怪物停止移动
       PoemBot_setBackgroundEffect:
         text: 设置背景效果为 {BG_EFFECT}
         options:
