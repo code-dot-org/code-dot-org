@@ -24425,6 +24425,14 @@ mn:
               display_name: 'Илүү гүн шумбах: Е ба F хичээлүүд'
             Introduction:
               display_name: Танилцуулга
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Хичээл 3
+            Lesson 4:
+              display_name: Хичээл 4
+            Lesson 5:
+              display_name: Хичээл 5
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
