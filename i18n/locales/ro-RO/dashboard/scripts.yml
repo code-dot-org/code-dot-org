@@ -8391,6 +8391,14 @@ ro:
               display_name: Introducere
             Introduction:
               display_name: Introducere
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lecția 3
+            Lesson 4:
+              display_name: Lecția 4
+            Lesson 5:
+              display_name: Lecția 5
         allthemigratedthings:
           lessons:
             lesson-2: {}
@@ -8639,6 +8647,11 @@ ro:
           lessons:
             lesson-1: {}
             lesson-2: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Etapa 1
+            lessonGroup-3:
+              display_name: Etapa 2
         dlp21-csp-mod1:
           lessons:
             lesson-1: {}
