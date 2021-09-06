@@ -163,6 +163,101 @@
           "wobbling": "डगमगणे",
           "moving west and looping": "पश्चिमेकडे जाणे आणि लूपिंग",
           "moving east and looping": "पूर्वेकडे जाणे आणि लूपिंग"
+        },
+        "CourseF_outbreak1": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak2": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak3": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak4": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak5": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak6": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak7": {
+          "recovering": "रिकव्हर होत आहे",
+          "moving left and right": "डावीकडे आणि उजवीकडे जाणे"
+        },
+        "CourseF_outbreak8": {
+          "recovering": "रिकव्हर होत आहे",
+          "moving left and right": "डावीकडे आणि उजवीकडे जाणे"
+        },
+        "courseF_sprites_predict": {
+          "moving east": "पूर्वेकडे जाणे",
+          "moving west": "पश्चिमेकडे जाणे",
+          "mystery behavior": "गूढ वर्तणूक",
+          "wandering": "भटकणे",
+          "running east": "पूर्वेकडे जाणे",
+          "spinning left": "डावीकडे स्पिन होणे",
+          "spinning right": "उजवीकडे स्पिन होणे",
+          "shrinking": "आकार कमी होणे",
+          "growing": "आकार वाढवणे",
+          "moving south": "दक्षिणेकडे जाणे",
+          "swimming left and right": "डावीकडे आणि उजवीकडे पोहणे",
+          "moving north": "उत्तरेकडे जाणे",
+          "jittering": "थरथरणे",
+          "patrolling": "गस्त घालणे"
+        },
+        "outbreak1": {
+          "recovering": "रिकव्हर होत आहे",
+          "wandering": "भटकत आहे"
+        },
+        "outbreak2": {
+          "recovering": "रिकव्हर होत आहे",
+          "wandering": "भटकत आहे"
+        },
+        "outbreak3": {
+          "recovering": "रिकव्हर होत आहे",
+          "wandering": "भटकत आहे"
+        },
+        "outbreak4": {
+          "recovering": "रिकव्हर होत आहे",
+          "wandering": "भटकत आहे",
+          "shrinking": "आकार कमी होत आहे",
+          "growing": "वाढत आहे",
+          "jittering": "थरथरत आहे"
+        },
+        "outbreak5": {
+          "recovering": "रिकव्हर होत आहे",
+          "wandering": "भटकत आहे"
+        },
+        "outbreak6": {
+          "recovering": "रिकव्हर होत आहे",
+          "wandering": "भटकत आहे"
+        },
+        "outbreak7": {
+          "recovering": "रिकव्हर होत आहे",
+          "wandering": "भटकत आहे",
+          "shrinking": "आकार कमी होत आहे",
+          "growing": "वाढत आहे",
+          "moving left and right": "डावीकडे आणि उजवीकडे जाणे",
+          "jittering": "थरथरत आहे"
+        },
+        "outbreak8": {
+          "recovering": "रिकव्हर होत आहे",
+          "wandering": "भटकत आहे",
+          "shrinking": "आकार कमी होत आहे",
+          "growing": "वाढत आहे",
+          "moving left and right": "डावीकडे आणि उजवीकडे जाणे",
+          "jittering": "थरथरत आहे"
+        },
+        "outbreak_freeplay": {
+          "recovering": "रिकव्हर होत आहे",
+          "growing": "वाढत आहे",
+          "moving left and right": "डावीकडे आणि उजवीकडे जाणे"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "रिकव्हर होत आहे",
+          "growing": "वाढत आहे",
+          "moving left and right": "डावीकडे आणि उजवीकडे जाणे"
         }
       }
     }
