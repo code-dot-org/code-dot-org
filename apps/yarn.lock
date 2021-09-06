@@ -1568,8 +1568,7 @@
     to-fast-properties "^2.0.0"
 
 "@cdo/interpreted@link:../dashboard/config/libraries":
-  version "0.0.0"
-  uid ""
+  version "0.1.0"
 
 "@code-dot-org/artist@0.2.1":
   version "0.2.1"
@@ -5406,6 +5405,11 @@ csstype@^3.0.2:
 csv-parse@^1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-1.1.7.tgz#6e4678f7967013ac823929a4303a3ce177115abc"
+
+csv-parse@^4.16.3:
+  version "4.16.3"
+  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-4.16.3.tgz#7ca624d517212ebc520a36873c3478fa66efbaf7"
+  integrity sha512-cO1I/zmz4w2dcKHVvpCr7JVRu8/FymG5OEpmvsZYlccYolPBLoVGKUHgNoc4ZGkFeFlWGEDmMyBM+TTqRdW/wg==
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
