@@ -1,4 +1,3 @@
----
 el:
   data:
     script:
@@ -126,7 +125,7 @@ el:
             'Bee: Debugging':
               name: 'Μέλισσα: Επαναλήψεις'
             'Bee: Functions':
-              name: Λειτουργίες μέλισσας
+              name: 'Λειτουργίες μέλισσας'
             'Bee: Nested Loops':
               name: 'Μέλισσα: Εμφωλευμένοι βρόχοι'
             Bounce:
@@ -576,6 +575,12 @@ el:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Καλώς ήρθατε!
             Wrap-up:
@@ -617,6 +622,12 @@ el:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Καλώς ήρθατε!
             Wrap-up:
@@ -626,6 +637,12 @@ el:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Καλώς ήρθατε!
             Wrap-up:
@@ -913,14 +930,20 @@ el:
               name: 'Εκτός Σύνδεσης: Γράψιμο Τραγουδιών με Παραμέτρους'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Καλώς ήρθατε!
             Wrap-up:
               name: συνοψίζω
         ecs-unit4:
-          description: Αρχές CS - Ενότητα 4
-          description_short: Αρχές CS - Ενότητα 4
-          student_description: Αρχές CS - Ενότητα 4
+          description: 'Αρχές CS - Ενότητα 4'
+          description_short: 'Αρχές CS - Ενότητα 4'
+          student_description: 'Αρχές CS - Ενότητα 4'
         grade3:
           description_audience: Ηλικίες 5-18
           lessons:
@@ -1235,7 +1258,7 @@ el:
             Functions:
               name: Συναρτήσεις
             'null':
-              name: τίποτε
+              name: 'τίποτε'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1640,7 +1663,7 @@ el:
               display_name: Έρευνα
           lessons:
             Functions with Parameters_:
-              name: Συναρτήσεις με παραμέτρους\_
+              name: Συναρτήσεις με παραμέτρους_
             Functions with Parameters:
               name: Συναρτήσεις με παραμέτρους
         coursee-2018:
@@ -2006,7 +2029,7 @@ el:
               display_name: Επισκόπηση
           lessons:
             'null':
-              name: τίποτε
+              name: 'τίποτε'
         dance-extras-gallery:
           title: Συνεχίστε να Χορεύετε
           description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ.
@@ -2810,7 +2833,7 @@ el:
               name: Βασικές αρχές της Επιστήμης των Υπολογιστών
         virustest:
           title: Εξομοιώνοντας μία Έξαρση
-          description_short: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να δημιουργήσετε μια προσομοίωση από μία έξαρση ιού.
+          description_short: 'Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να δημιουργήσετε μια προσομοίωση από μία έξαρση ιού.'
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -2819,10 +2842,10 @@ el:
             outbreak:
               display_name: Προσομοίωση Επιδημικής Έξαρσης
           title: Προσομοιωτής Επιδημικής Έξαρσης
-          description_short: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.
-          description: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.
+          description_short: 'Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
+          description: 'Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
           name: έξαρση
-          student_description: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.
+          student_description: 'Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
         2021drafting:
           lessons:
             Virus Simulation for Code Bytes:
@@ -3111,9 +3134,9 @@ el:
             cspSurvey:
               display_name: Έρευνα
         contagion-pilot:
-          description_short: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.
-          description: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.
-          student_description: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.
+          description_short: 'Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
+          description: 'Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
+          student_description: 'Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -3170,6 +3193,12 @@ el:
               display_name: Μονάδα 4
             lessonGroup-7:
               display_name: Μονάδα 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Στάδιο 1
+            lessonGroup-3:
+              display_name: Στάδιο 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
