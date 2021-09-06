@@ -70,7 +70,19 @@
         "courseF_variables_madlib": "Hãy tạo lời nhắc đầu tiên của bạn, sau đó thêm nhân vật và hành vi.",
         "courseF_variables_madlib_finish": "Hãy hoàn thiện dự án của bạn rồi chia sẻ nhé!",
         "ramp_artist_loops4_2021": "Hãy tạo mô hình ngôi sao này bằng cách lặp lại một chuỗi",
-        "ramp_artist_loops6v1_2021": "Sử dụng vòng lặp để vẽ cầu thang."
+        "ramp_artist_loops6v1_2021": "Sử dụng vòng lặp để vẽ cầu thang.",
+        "CourseF_outbreak4": "Thay đổi cách hoạt động của bản mô phòng và dự đoán diễn biến sắp tới.",
+        "CourseF_outbreak5": "Giúp các nhân vật tự động khỏe lại theo thời gian!",
+        "CourseF_outbreak6": "Không phải lúc nào vi rút cũng lây lan và khẩu trang cũng không ngăn chặn lây nhiễm ở mức hoàn hảo. Hãy cải thiện bản mô phỏng của bạn bằng cách đưa khả năng ngẫu nhiên vào quá trình lây nhiễm.",
+        "CourseF_outbreak7": "Hãy giúp nhân vật tránh bị bệnh bằng cách cho chúng khả năng miễn dịch.",
+        "CourseF_outbreak8": "Sử dụng dự án của bạn để chia sẻ một thông điệp. Bạn muốn người khác học được gì từ thông điệp này?",
+        "outbreak4": "Thay đổi cách hoạt động của bản mô phòng và dự đoán diễn biến sắp tới.",
+        "outbreak5": "Giúp các nhân vật tự động khỏe lại theo thời gian!",
+        "outbreak6": "Không phải lúc nào vi rút cũng lây lan và khẩu trang cũng không ngăn chặn lây nhiễm ở mức hoàn hảo. Hãy cải thiện bản mô phỏng của bạn bằng cách đưa khả năng ngẫu nhiên vào quá trình lây nhiễm.",
+        "outbreak7": "Hãy giúp nhân vật tránh bị bệnh bằng cách cho chúng khả năng miễn dịch.",
+        "outbreak8": "Sử dụng dự án của bạn để chia sẻ một thông điệp. Bạn muốn người khác học được gì từ thông điệp này?",
+        "outbreak_freeplay": "Hãy mở rộng dự án của bạn bằng các hàm, biến và nhiều công cụ khác!",
+        "outbreak_freeplay_basic": "Hãy tiếp tục với các khối tương tự mà bạn đã biết!"
       }
     }
   }

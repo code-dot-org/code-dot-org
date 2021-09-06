@@ -188,7 +188,16 @@ vi:
     user_type_button: Cập nhật tài khoản
     user_type_label: Kiểu tài khoản
     user_type_student: Học sinh
+    user_type_student_desc: 'Khám phá tất cả khóa học và hoạt động của chúng tôi,
+      kèm theo:'
+    user_type_student_ability_1: Lưu tiến độ và các dự án của bạn
+    user_type_student_ability_2: Tham gia buổi học trên lớp của giáo viên
     user_type_teacher: Giáo viên
+    user_type_teacher_desc: 'Tất cả quyền truy cập của học sinh, kèm theo:'
+    user_type_teacher_ability_1: Tạo mục quản lý lớp học
+    user_type_teacher_ability_2: Chỉ định và theo dõi bài làm của học sinh
+    user_type_teacher_ability_3: Đăng ký học nâng cao chuyên môn
+    user_type_teacher_ability_4: Tương tác trên diễn đàn dành cho giáo viên
     field_is_required: là bắt buộc
     accept_terms: Bạn phải đồng ý để tạo một tài khoản
     error: Đã xảy ra lỗi.

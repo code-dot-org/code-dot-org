@@ -34,7 +34,9 @@ vi:
             'Artist: Loops':
               name: 'Nghệ sĩ: vòng'
             'Artist: Sequence':
-              name: 'Nghệ sĩ: trình tự'
+              name: 'Nghệ sĩ: trình tự
+
+'
             'Artist: Shapes':
               name: 'Nghệ sĩ: hình dạng'
             'Bee: Loops':
@@ -88,7 +90,9 @@ vi:
             'Artist: Nested Loops':
               name: 'Nghệ sĩ: các vòng lồng vào nhau'
             'Artist: Sequence':
-              name: 'Nghệ sĩ: trình tự'
+              name: 'Nghệ sĩ: trình tự
+
+'
             'Bee: Conditionals':
               name: 'Ong: Các điều kiện'
             'Bee: Debugging':
@@ -305,7 +309,9 @@ vi:
             'Artist: Nested Loops':
               name: 'Nghệ sĩ: các vòng lồng vào nhau'
             'Artist: Sequence':
-              name: 'Nghệ sĩ: trình tự'
+              name: 'Nghệ sĩ: trình tự
+
+'
             'Bee: Conditionals':
               name: 'Ong: Các điều kiện'
             'Bee: Debugging':
@@ -1176,6 +1182,8 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
+            0: Phần 1, ngày 1-2 máy tính là gì?
+            1: Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1287,6 +1295,8 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
+            0: Phần 1, ngày 1-2 máy tính là gì?
+            1: Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1310,6 +1320,8 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
+            0: Phần 1, ngày 1-2 máy tính là gì?
+            1: Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -2694,6 +2706,8 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
+            0: Phần 1, ngày 1-2 máy tính là gì?
+            1: Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -3221,7 +3235,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \\\r \\\r "
+                cá nhân của họ. \r \r \n"
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính
@@ -4037,16 +4051,16 @@ vi:
                 học này sẽ giới thiệu cho học sinh ý tưởng rằng bực bội có thể là
                 một phần quan trọng của việc học. Ở đây, sự bực bội được thể hiện
                 như một bước trong quá trình sáng tạo, chứ không phải là một dấu hiệu
-                của sự thất bại.\\\r\n\\\r\nBài tập này có thể thực hiện trong một
-                hoặc hai buổi học. Nếu bạn có nhiều thời gian hơn, cứ thử bắt đầu
-                giai đoạn xây dựng và chỉnh sửa của hoạt động Đường trượt bi."
+                của sự thất bại.\r\n\r\nBài tập này có thể thực hiện trong một hoặc
+                hai buổi học. Nếu bạn có nhiều thời gian hơn, cứ thử bắt đầu giai
+                đoạn xây dựng và chỉnh sửa của hoạt động Đường trượt bi."
             'Real-life Algorithms: Plant a Seed':
               name: 'Thuật toán đời sống: Trồng một hạt giống'
               description_teacher: "Trong bài học này, học sinh sẽ liên hệ khái niệm
                 thuật toán với các hoạt động thực tiễn hàng ngày bằng cách gieo một
                 hạt giống thật. Mục tiêu ở đây là bắt đầu xây dựng các kỹ năng để
                 chuyển các tình huống trong thế giới thực sang các tình huống trực
-                tuyến và ngược lại.\\\r"
+                tuyến và ngược lại.\r\n"
             Learn to Drag and Drop:
               name: Sắp xếp thứ tự bằng thao tác Kéo và Thả
               description_teacher: Bài học này sẽ cung cấp cho học sinh ý tưởng về
@@ -4290,14 +4304,14 @@ vi:
               name: 'If/Else: Lệnh điều kiện với thẻ'
               description_student: Đã đến lúc chơi trò chơi mà bạn chỉ giành được
                 điểm khi đáp ứng một số điều kiện nhất định!
-              description_teacher: Bài học này trình bày cách sử dụng các lệnh điều
+              description_teacher: "Bài học này trình bày cách sử dụng các lệnh điều
                 kiện để điều chỉnh chương trình sao cho phù hợp với thông tin cụ thể.
                 Không phải lúc nào chúng ta cũng có tất cả thông tin cần thiết khi
                 viết một chương trình. Đôi khi bạn sẽ muốn tùy cơ ứng biến trong những
                 tình huống khác nhau, ngay cả khi bạn không biết tình huống nào sẽ
                 xuất hiện khi chạy mã lệnh. Đó là khi lệnh điều kiện phát huy tác
                 dụng. Lệnh điều kiện cho phép máy tính đưa ra quyết định dựa trên
-                thông tin đúng bất cứ khi nào bạn chạy mã lệnh.
+                thông tin đúng bất cứ khi nào bạn chạy mã lệnh.\n\n"
             Conditionals in Bee:
               name: Lệnh điều kiện trong game Chú ong
               description_student: Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc
@@ -4569,7 +4583,7 @@ vi:
                 trước và cho học sinh cơ hội tư duy phản biện về cách giải quyết từng
                 vấn đề, nhưng không cho học sinh biết khái niệm nào nên áp dụng. Học
                 sinh sẽ ôn lại các thuật toán cơ bản, sửa lỗi, vòng lặp `lặp lại,
-                lệnh điều kiện, vòng lặp`while\` và các hàm.
+                lệnh điều kiện, vòng lặp `while` và các hàm.
             Build a Play Lab Game:
               name: Làm game trong Play Lab
               description_student: Hãy thực hành làm game để chia sẻ với bạn bè và
@@ -5861,7 +5875,7 @@ vi:
               display_name: Nội dung khóa học bổ sung
           lessons:
             courseB_unplugged_MRF_2018:
-              name: courseB_unplugged_MRF\_2018
+              name: courseB_unplugged_MRF_2018
             'Programming: My Robotic Friends':
               name: 'Lập trình: Những người bạn rô bốt của tôi'
             Sequence in Maze:
@@ -6150,7 +6164,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \\\r \\\r "
+                cá nhân của họ. \r \r \n"
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính
@@ -6177,16 +6191,16 @@ vi:
                 học này sẽ giới thiệu cho học sinh ý tưởng rằng bực bội có thể là
                 một phần quan trọng của việc học. Ở đây, sự bực bội được thể hiện
                 như một bước trong quá trình sáng tạo, chứ không phải là một dấu hiệu
-                của sự thất bại.\\\r\n\\\r\nBài tập này có thể thực hiện trong một
-                hoặc hai buổi học. Nếu bạn có nhiều thời gian hơn, cứ thử bắt đầu
-                giai đoạn xây dựng và chỉnh sửa của hoạt động Đường trượt bi."
+                của sự thất bại.\r\n\r\nBài tập này có thể thực hiện trong một hoặc
+                hai buổi học. Nếu bạn có nhiều thời gian hơn, cứ thử bắt đầu giai
+                đoạn xây dựng và chỉnh sửa của hoạt động Đường trượt bi."
             'Real-life Algorithms: Plant a Seed':
               name: Trồng hạt giống
               description_teacher: "Trong bài học này, học sinh sẽ liên hệ khái niệm
                 thuật toán với các hoạt động thực tiễn hàng ngày bằng cách gieo một
                 hạt giống thật. Mục tiêu ở đây là bắt đầu xây dựng các kỹ năng để
                 chuyển các tình huống trong thế giới thực sang các tình huống trực
-                tuyến và ngược lại.\\\r"
+                tuyến và ngược lại.\r\n"
             Learn to Drag and Drop:
               name: Học cách kéo và thả
               description_teacher: Bài học này sẽ cung cấp cho học sinh ý tưởng về
@@ -6522,9 +6536,9 @@ vi:
               display_name: Khảo sát
           lessons:
             Making Music_:
-              name: Tạo âm nhạc\_
+              name: Tạo âm nhạc_
             Functions with Parameters_:
-              name: Hàm và tham số\_
+              name: Hàm và tham số_
             Making Music:
               name: Tạo âm nhạc
             Functions with Parameters:
@@ -6651,7 +6665,7 @@ vi:
                 trước và cho học sinh cơ hội tư duy phản biện về cách giải quyết từng
                 vấn đề, nhưng không cho học sinh biết khái niệm nào nên áp dụng. Học
                 sinh sẽ ôn lại các thuật toán cơ bản, sửa lỗi, vòng lặp `lặp lại,
-                lệnh điều kiện, vòng lặp`while\` và các hàm.
+                lệnh điều kiện, vòng lặp `while` và các hàm.
             Build a Play Lab Game:
               name: Làm game trong Play Lab
               description_student: Hãy thực hành làm game để chia sẻ với bạn bè và
@@ -7669,10 +7683,10 @@ vi:
                 các em có thể gặp phải tin nhắn từ những đứa trẻ khác khiến các em
                 cảm thấy tức giận, tổn thương, buồn bã hoặc sợ hãi. Các em khám phá
                 các cách để xử lý nạn bắt nạt trực tuyến và cách ứng phó khi đối mặt
-                với ngôn ngữ gây khó chịu trên mạng.\\\r\n\\\r\nHọc sinh thảo luận
-                về tất cả các cách sử dụng công nghệ để giao tiếp và khám phá những
-                điểm giống và khác nhau giữa giao tiếp trực tiếp và trực tuyến. Sau
-                đó, học sinh suy nghĩ về cách đối phó với nạn bắt nạt trực tuyến.\\\r\n\\\r\nĐể
+                với ngôn ngữ gây khó chịu trên mạng.\r\n\r\nHọc sinh thảo luận về
+                tất cả các cách sử dụng công nghệ để giao tiếp và khám phá những điểm
+                giống và khác nhau giữa giao tiếp trực tiếp và trực tuyến. Sau đó,
+                học sinh suy nghĩ về cách đối phó với nạn bắt nạt trực tuyến.\r\n\r\nĐể
                 biết thêm thông tin, vui lòng truy cập: [r common-sense-media-power-of-words]"
             Envelope Variables:
               name: Các biến phong bì
@@ -7874,16 +7888,15 @@ vi:
                 Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần,
                 trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu
                 về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của
-                mình.\\\r\n\\\r\nTrong giai đoạn “Khám phá”, học sinh sẽ có thể thử
-                dùng các chương trình Artist và Sprite Lab xây dựng sẵn để lấy cảm
-                hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách
-                triển khai quy trình này trong các dự án của chính mình. Sau đó, các
-                em sẽ tự mình tạo dự án của riêng mình trong Artist hoặc Sprite Lab
-                hoặc bất kỳ giao diện nào khác mà bạn có thể cung cấp. (Đây có thể
-                là giai đoạn dài nhất của dự án.) Sau đó, học sinh sẽ chỉnh sửa mã
-                lệnh của mình sau khi thử nghiệm và cho các bạn xem. Cuối cùng, học
-                sinh có thể trình bày tác phẩm hoàn chỉnh của mình với các bạn cùng
-                lớp."
+                mình.\r\n\r\nTrong giai đoạn “Khám phá”, học sinh sẽ có thể thử dùng
+                các chương trình Artist và Sprite Lab xây dựng sẵn để lấy cảm hứng.
+                Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển
+                khai quy trình này trong các dự án của chính mình. Sau đó, các em
+                sẽ tự mình tạo dự án của riêng mình trong Artist hoặc Sprite Lab hoặc
+                bất kỳ giao diện nào khác mà bạn có thể cung cấp. (Đây có thể là giai
+                đoạn dài nhất của dự án.) Sau đó, học sinh sẽ chỉnh sửa mã lệnh của
+                mình sau khi thử nghiệm và cho các bạn xem. Cuối cùng, học sinh có
+                thể trình bày tác phẩm hoàn chỉnh của mình với các bạn cùng lớp."
             Internet:
               name: Internet
               description_student: Bạn đã bao giờ tự hỏi thông tin di chuyển trên
@@ -8041,15 +8054,14 @@ vi:
                 Bài học này sẽ dạy bạn về một loại vòng lặp mới: vòng lặp while!'
               description_teacher: "Vào thời điểm học sinh tiếp cận bài học này, các
                 em đã được thực hành nhiều cách sử dụng các vòng lặp `lặp lại`, và
-                bây giờ là lúc để kết hợp mọi kiến thức đã học.\\\r\n\\\r\n_Vòng lặp
-                while_ là các vòng lặp tiếp tục lặp lại các lệnh khi đáp ứng điều
-                kiện. Vòng lặp `while` được sử dụng khi người lập trình không biết
-                chính xác số lần mà lệnh đó cần được lặp lại, nhưng biết điều kiện
-                cần đáp ứng để vòng lặp tiếp tục lặp lại. Ví dụ: học sinh sẽ tiến
-                hành lấp lỗ và đào đất trong game Bác nông dân. Các em không biết
-                kích thước của lỗ hoặc độ cao của đống đất, nhưng học sinh sẽ biết
-                các em cần phải tiếp tục lấp lỗ và đào đất miễn là mặt đất không bằng
-                phẳng."
+                bây giờ là lúc để kết hợp mọi kiến thức đã học.\r\n\r\n_Vòng lặp while_
+                là các vòng lặp tiếp tục lặp lại các lệnh khi đáp ứng điều kiện. Vòng
+                lặp `while` được sử dụng khi người lập trình không biết chính xác
+                số lần mà lệnh đó cần được lặp lại, nhưng biết điều kiện cần đáp ứng
+                để vòng lặp tiếp tục lặp lại. Ví dụ: học sinh sẽ tiến hành lấp lỗ
+                và đào đất trong game Bác nông dân. Các em không biết kích thước của
+                lỗ hoặc độ cao của đống đất, nhưng học sinh sẽ biết các em cần phải
+                tiếp tục lấp lỗ và đào đất miễn là mặt đất không bằng phẳng."
             Until Loops in Maze:
               description_student: Bạn có thể làm những điều vô cùng thú vị khi sử
                 dụng vòng lặp `đến khi` đấy!
@@ -8066,7 +8078,7 @@ vi:
                 tình huống khác nhau, ngay cả khi bạn không biết tình huống nào sẽ
                 xuất hiện khi chạy mã lệnh. Đó là khi lệnh điều kiện phát huy tác
                 dụng. Lệnh điều kiện cho phép máy tính đưa ra quyết định dựa trên
-                thông tin đúng bất cứ khi nào bạn chạy mã lệnh.\\\r\n\\\r"
+                thông tin đúng bất cứ khi nào bạn chạy mã lệnh.\r\n\r\n"
             Conditionals in Bee:
               description_student: Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc
                 lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và
@@ -8093,7 +8105,7 @@ vi:
                 học này giúp học sinh học cách tư duy phản biện về thông tin người
                 dùng mà một số trang web yêu cầu hoặc bắt buộc. Học sinh sẽ tìm hiểu
                 sự khác biệt giữa thông tin riêng tư và thông tin cá nhân, phân biệt
-                những thông tin nào là an toàn và không an toàn để chia sẻ trực tuyến.\\\r\n\\\r\nHọc
+                những thông tin nào là an toàn và không an toàn để chia sẻ trực tuyến.\r\n\r\nHọc
                 sinh cũng sẽ khám phá ý nghĩa của việc hành xử trách nhiệm và tôn
                 trọng cộng đồng ngoại tuyến và trực tuyến của các em như một phần
                 trong quá trình học cách trở thành những công dân kỹ thuật số gương
@@ -8194,14 +8206,14 @@ vi:
                 giữa thông tin an toàn để chia sẻ và thông tin riêng tư.
               description_teacher: "Với sự phát triển của Common Sense Education,
                 bài học này nói về sự khác biệt giữa thông tin an toàn để chia sẻ
-                trực tuyến và thông tin không an toàn.\\\r\n\\\r\nKhi học sinh truy
-                cập các trang web yêu cầu thông tin danh tính, các em sẽ học cách
-                triển khai quy trình tìm hiểu thiết yếu giúp các em có thể tự bảo
-                vệ bản thân và gia đình khỏi bị ăn cắp danh tính. Trong bài học này,
-                học sinh sẽ học cách tư duy phản biện về thông tin người dùng mà một
-                số trang web yêu cầu hoặc bắt buộc. Các em sẽ tìm hiểu sự khác biệt
-                giữa thông tin riêng tư và thông tin cá nhân cũng như cách phân biệt
-                những thông tin an toàn hoặc không an toàn để chia sẻ trực tuyến."
+                trực tuyến và thông tin không an toàn.\r\n\r\nKhi học sinh truy cập
+                các trang web yêu cầu thông tin danh tính, các em sẽ học cách triển
+                khai quy trình tìm hiểu thiết yếu giúp các em có thể tự bảo vệ bản
+                thân và gia đình khỏi bị ăn cắp danh tính. Trong bài học này, học
+                sinh sẽ học cách tư duy phản biện về thông tin người dùng mà một số
+                trang web yêu cầu hoặc bắt buộc. Các em sẽ tìm hiểu sự khác biệt giữa
+                thông tin riêng tư và thông tin cá nhân cũng như cách phân biệt những
+                thông tin an toàn hoặc không an toàn để chia sẻ trực tuyến."
             Build a Star Wars Game:
               name: Làm game Chiến tranh giữa các vì sao
               description_student: Hãy cảm nhận thần lực khi làm game Chiến tranh
@@ -8254,7 +8266,7 @@ vi:
                 trước và cho học sinh cơ hội tư duy phản biện về cách giải quyết từng
                 vấn đề, nhưng không cho học sinh biết khái niệm nào nên áp dụng. Học
                 sinh sẽ ôn lại các thuật toán cơ bản, sửa lỗi, vòng lặp `lặp lại,
-                lệnh điều kiện, vòng lặp`while\` và các hàm.
+                lệnh điều kiện, vòng lặp `while` và các hàm.
             Learning Sprites with Sprite Lab:
               name: Cá bơi với Sprite Lab
               description_student: Tìm hiểu cách tạo và chỉnh sửa nhân vật.
@@ -8378,11 +8390,11 @@ vi:
                 `Đặt lại` và `Bước`. Những nội dung cũng được thảo luận trong các
                 video này: kéo các khối Blockly, xóa các khối Blockly và kết nối các
                 khối Blockly. Tiếp theo, học sinh sẽ thực hành các kỹ năng _sắp xếp
-                thứ tự_ và _sửa lỗi_ trong mê cung.\\\r\nSửa lỗi là một yếu tố cần
-                thiết trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập
-                đã được giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để
-                xác định lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu,
-                khối bổ sung và khối không đúng thứ tự."
+                thứ tự_ và _sửa lỗi_ trong mê cung.\r\nSửa lỗi là một yếu tố cần thiết
+                trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập đã được
+                giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để xác định
+                lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu, khối bổ
+                sung và khối không đúng thứ tự."
             Programming and Loops with the Artist:
               name: Vẽ bằng vòng lặp
               description_student: Trong bài học này, các vòng lặp giúp bạn dễ dàng
@@ -8404,7 +8416,7 @@ vi:
                 ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo
                 dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong
                 đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy
-                trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\\\r\n\\\r\nTrong
+                trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\r\n\r\nTrong
                 giai đoạn khám phá, học sinh sẽ xem các ví dụ được tạo sẵn về các
                 dự án trong cả Artist và Sprite Lab để lấy cảm hứng. Tiếp theo, học
                 sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình
@@ -8421,7 +8433,7 @@ vi:
                 nhân và riêng tư trên web.
               description_teacher: "Bằng cách tạo poster tương tác với Sprite Lab,
                 học sinh sẽ áp dụng kiến thức của mình về việc chia sẻ thông tin cá
-                nhân và riêng tư trên web.\\\r"
+                nhân và riêng tư trên web.\r\n"
             Aquatic Conditionals in Minecraft:
               name: Lệnh điều kiện thủy sinh trong Minecraft
             Access Ability:
@@ -8673,7 +8685,7 @@ vi:
               description_teacher: "Trong giai đoạn trước, học sinh đã sử dụng vòng
                 lặp để tạo ra những bức tranh tuyệt tác. Giờ đây, các em sẽ lặp lại
                 các hành động mới để giúp máy gặt thu thập nhiều loại rau mọc thành
-                cụm lớn.\\\r"
+                cụm lớn.\r\n"
             'Events: The Big Event':
               name: Sự kiện lớn
               description_student: Chơi game thú vị để tìm hiểu về sự kiện.
@@ -8698,7 +8710,7 @@ vi:
                 hoặc sợ hãi.
               description_teacher: "Bài học này giúp trẻ em nhận ra rằng điều cần
                 thiết là phải nói chuyện với một người lớn đáng tin cậy nếu có nội
-                dung trực tuyến khiến các em cảm thấy tức giận, buồn bã hoặc sợ hãi.\\\r\n\\\r\nHọc
+                dung trực tuyến khiến các em cảm thấy tức giận, buồn bã hoặc sợ hãi.\r\n\r\nHọc
                 sinh biết rằng người ta đôi khi có thể hành động như những kẻ bắt
                 nạt trên môi trường trực tuyến. Các em sẽ khám phá địnhh nghĩa bắt
                 nạt trực tuyến và cách xử lý khi phải đối mặt với hiện tượng này.
@@ -8706,7 +8718,7 @@ vi:
                 luận về định nghĩa bắt nạt trực tuyến, cảm xúc của mọi người trước
                 hiện tượng này và cách đối phó. Cuối cùng, các em sẽ sử dụng kiến
                 thức của mình để soạn thảo tờ hướng dẫn đơn giản về bắt nạt trực tuyến
-                trong nhật ký của mình.\\\r"
+                trong nhật ký của mình.\r\n"
             Events in Play Lab:
               name: Trò chơi đuổi bắt với sự kiện
               description_student: Đã đến lúc sáng tạo và làm game trong Play Lab
@@ -8775,10 +8787,10 @@ vi:
               description_teacher: "Với sự hợp tác của **Common Sense Education**,
                 trong bài học này, học sinh sẽ khám phá lý do mọi người sử dụng mật
                 khẩu, tìm hiểu lợi ích của việc sử dụng mật khẩu và khám phá các chiến
-                lược để tạo và duy trì mật khẩu mạnh, an toàn.\\\r\n\\\r\nHọc sinh
-                sẽ học các bí quyết về mật khẩu, kiểm tra mật khẩu hiện có của các
-                em bằng game tương tác và tạo mật khẩu mới bằng cách sử dụng hướng
-                dẫn tạo mật khẩu mạnh.\\\r"
+                lược để tạo và duy trì mật khẩu mạnh, an toàn.\r\n\r\nHọc sinh sẽ
+                học các bí quyết về mật khẩu, kiểm tra mật khẩu hiện có của các em
+                bằng game tương tác và tạo mật khẩu mới bằng cách sử dụng hướng dẫn
+                tạo mật khẩu mạnh.\r\n"
             Sticker Art with Loops:
               description_student: Trong bài học này, các vòng lặp giúp bạn dễ dàng
                 tạo ra những bức ảnh tuyệt tác với Artist!
@@ -9186,7 +9198,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \\\r \\\r "
+                cá nhân của họ. \r \r \n"
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính
@@ -9783,7 +9795,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \\\r \\\r "
+                cá nhân của họ. \r \r \n"
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính
@@ -10677,7 +10689,7 @@ vi:
                 hoặc sợ hãi.
               description_teacher: "Bài học này giúp trẻ em nhận ra rằng điều cần
                 thiết là phải nói chuyện với một người lớn đáng tin cậy nếu có nội
-                dung trực tuyến khiến các em cảm thấy tức giận, buồn bã hoặc sợ hãi.\\\r\n\\\r\nHọc
+                dung trực tuyến khiến các em cảm thấy tức giận, buồn bã hoặc sợ hãi.\r\n\r\nHọc
                 sinh biết rằng người ta đôi khi có thể hành động như những kẻ bắt
                 nạt trên môi trường trực tuyến. Các em sẽ khám phá địnhh nghĩa bắt
                 nạt trực tuyến và cách xử lý khi phải đối mặt với hiện tượng này.
@@ -10685,16 +10697,16 @@ vi:
                 luận về định nghĩa bắt nạt trực tuyến, cảm xúc của mọi người trước
                 hiện tượng này và cách đối phó. Cuối cùng, các em sẽ sử dụng kiến
                 thức của mình để soạn thảo tờ hướng dẫn đơn giản về bắt nạt trực tuyến
-                trong nhật ký của mình.\\\r"
+                trong nhật ký của mình.\r\n"
             Powerful Passwords:
               description_student: Trong bài học này, bạn sẽ tìm hiểu cách mật khẩu
                 bảo vệ thông tin của bạn và cách tạo mật khẩu hiệu quả.
               description_teacher: "Học sinh sẽ khám phá lý do mọi người sử dụng mật
                 khẩu, tìm hiểu lợi ích của việc sử dụng mật khẩu và khám phá các chiến
-                lược để tạo và duy trì mật khẩu mạnh, an toàn.\\\r\n\\\r\nHọc sinh
-                sẽ học các bí quyết về mật khẩu, kiểm tra mật khẩu hiện có của các
-                em bằng game tương tác và tạo mật khẩu mới bằng cách sử dụng hướng
-                dẫn tạo mật khẩu mạnh.\\\r"
+                lược để tạo và duy trì mật khẩu mạnh, an toàn.\r\n\r\nHọc sinh sẽ
+                học các bí quyết về mật khẩu, kiểm tra mật khẩu hiện có của các em
+                bằng game tương tác và tạo mật khẩu mới bằng cách sử dụng hướng dẫn
+                tạo mật khẩu mạnh.\r\n"
             'Programming: My Robotic Friends':
               name: Những người bạn robot của tôi – nâng cao
               description_student: Trong bài học này, bạn sẽ giả vờ rằng các bạn cùng
@@ -10772,7 +10784,7 @@ vi:
               description_teacher: "Trong giai đoạn trước, học sinh đã sử dụng vòng
                 lặp để tạo ra những bức tranh tuyệt tác. Giờ đây, các em sẽ lặp lại
                 các hành động mới để giúp máy gặt thu thập nhiều loại rau mọc thành
-                cụm lớn.\\\r"
+                cụm lớn.\r\n"
             Looking Ahead:
               name: Nhìn về phía trước
               description_student: Hãy tránh dung nham! Ở đây, bạn sẽ bắt đầu tìm
@@ -10980,7 +10992,7 @@ vi:
                 tình huống khác nhau, ngay cả khi bạn không biết tình huống nào sẽ
                 xuất hiện khi chạy mã lệnh. Đó là khi lệnh điều kiện phát huy tác
                 dụng. Lệnh điều kiện cho phép máy tính đưa ra quyết định dựa trên
-                thông tin đúng bất cứ khi nào bạn chạy mã lệnh.\\\r\n\\\r"
+                thông tin đúng bất cứ khi nào bạn chạy mã lệnh.\r\n\r\n"
             Conditionals in Bee:
               description_student: Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc
                 lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và
@@ -10996,15 +11008,14 @@ vi:
                 Bài học này sẽ dạy bạn về một loại vòng lặp mới: vòng lặp while!'
               description_teacher: "Vào thời điểm học sinh tiếp cận bài học này, các
                 em đã được thực hành nhiều cách sử dụng các vòng lặp `lặp lại`, và
-                bây giờ là lúc để kết hợp mọi kiến thức đã học.\\\r\n\\\r\n_Vòng lặp
-                while_ là các vòng lặp tiếp tục lặp lại các lệnh khi đáp ứng điều
-                kiện. Vòng lặp `while` được sử dụng khi người lập trình không biết
-                chính xác số lần mà lệnh đó cần được lặp lại, nhưng biết điều kiện
-                cần đáp ứng để vòng lặp tiếp tục lặp lại. Ví dụ: học sinh sẽ tiến
-                hành lấp lỗ và đào đất trong game Bác nông dân. Các em không biết
-                kích thước của lỗ hoặc độ cao của đống đất, nhưng học sinh sẽ biết
-                các em cần phải tiếp tục lấp lỗ và đào đất miễn là mặt đất không bằng
-                phẳng."
+                bây giờ là lúc để kết hợp mọi kiến thức đã học.\r\n\r\n_Vòng lặp while_
+                là các vòng lặp tiếp tục lặp lại các lệnh khi đáp ứng điều kiện. Vòng
+                lặp `while` được sử dụng khi người lập trình không biết chính xác
+                số lần mà lệnh đó cần được lặp lại, nhưng biết điều kiện cần đáp ứng
+                để vòng lặp tiếp tục lặp lại. Ví dụ: học sinh sẽ tiến hành lấp lỗ
+                và đào đất trong game Bác nông dân. Các em không biết kích thước của
+                lỗ hoặc độ cao của đống đất, nhưng học sinh sẽ biết các em cần phải
+                tiếp tục lấp lỗ và đào đất miễn là mặt đất không bằng phẳng."
             Until Loops in Maze:
               description_student: Bạn có thể làm những điều vô cùng thú vị khi sử
                 dụng vòng lặp `đến khi` đấy!
@@ -11043,7 +11054,7 @@ vi:
                 học này giúp học sinh học cách tư duy phản biện về thông tin người
                 dùng mà một số trang web yêu cầu hoặc bắt buộc. Học sinh sẽ tìm hiểu
                 sự khác biệt giữa thông tin riêng tư và thông tin cá nhân, phân biệt
-                những thông tin nào là an toàn và không an toàn để chia sẻ trực tuyến.\\\r\n\\\r\nHọc
+                những thông tin nào là an toàn và không an toàn để chia sẻ trực tuyến.\r\n\r\nHọc
                 sinh cũng sẽ khám phá ý nghĩa của việc hành xử trách nhiệm và tôn
                 trọng cộng đồng ngoại tuyến và trực tuyến của các em như một phần
                 trong quá trình học cách trở thành những công dân kỹ thuật số gương
@@ -11111,11 +11122,11 @@ vi:
                 `Đặt lại` và `Bước`. Những nội dung cũng được thảo luận trong các
                 video này: kéo các khối Blockly, xóa các khối Blockly và kết nối các
                 khối Blockly. Tiếp theo, học sinh sẽ thực hành các kỹ năng _sắp xếp
-                thứ tự_ và _sửa lỗi_ trong mê cung.\\\r\nSửa lỗi là một yếu tố cần
-                thiết trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập
-                đã được giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để
-                xác định lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu,
-                khối bổ sung và khối không đúng thứ tự."
+                thứ tự_ và _sửa lỗi_ trong mê cung.\r\nSửa lỗi là một yếu tố cần thiết
+                trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập đã được
+                giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để xác định
+                lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu, khối bổ
+                sung và khối không đúng thứ tự."
             Programming and Loops with the Artist:
               name: Vẽ bằng vòng lặp
               description_student: Trong bài học này, các vòng lặp giúp bạn dễ dàng
@@ -11189,7 +11200,7 @@ vi:
                 nhân và riêng tư trên web.
               description_teacher: "Bằng cách tạo poster tương tác với Sprite Lab,
                 học sinh sẽ áp dụng kiến thức của mình về việc chia sẻ thông tin cá
-                nhân và riêng tư trên web.\\\r"
+                nhân và riêng tư trên web.\r\n"
             Access Ability:
               name: Thiết kế cho trợ năng
               description_student: Trong bài học này, học sinh sẽ tìm hiểu về trợ
@@ -11275,7 +11286,7 @@ vi:
                 ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo
                 dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong
                 đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy
-                trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\\\r\n\\\r\nTrong
+                trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\r\n\r\nTrong
                 giai đoạn khám phá, học sinh sẽ xem các ví dụ được tạo sẵn về các
                 dự án trong cả Artist và Sprite Lab để lấy cảm hứng. Tiếp theo, học
                 sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình
@@ -11506,16 +11517,15 @@ vi:
                 Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần,
                 trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu
                 về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của
-                mình.\\\r\n\\\r\nTrong giai đoạn “Khám phá”, học sinh sẽ có thể thử
-                dùng các chương trình Artist và Sprite Lab xây dựng sẵn để lấy cảm
-                hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách
-                triển khai quy trình này trong các dự án của chính mình. Sau đó, các
-                em sẽ tự mình tạo dự án của riêng mình trong Artist hoặc Sprite Lab
-                hoặc bất kỳ giao diện nào khác mà bạn có thể cung cấp. (Đây có thể
-                là giai đoạn dài nhất của dự án.) Sau đó, học sinh sẽ chỉnh sửa mã
-                lệnh của mình sau khi thử nghiệm và cho các bạn xem. Cuối cùng, học
-                sinh có thể trình bày tác phẩm hoàn chỉnh của mình với các bạn cùng
-                lớp."
+                mình.\r\n\r\nTrong giai đoạn “Khám phá”, học sinh sẽ có thể thử dùng
+                các chương trình Artist và Sprite Lab xây dựng sẵn để lấy cảm hứng.
+                Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển
+                khai quy trình này trong các dự án của chính mình. Sau đó, các em
+                sẽ tự mình tạo dự án của riêng mình trong Artist hoặc Sprite Lab hoặc
+                bất kỳ giao diện nào khác mà bạn có thể cung cấp. (Đây có thể là giai
+                đoạn dài nhất của dự án.) Sau đó, học sinh sẽ chỉnh sửa mã lệnh của
+                mình sau khi thử nghiệm và cho các bạn xem. Cuối cùng, học sinh có
+                thể trình bày tác phẩm hoàn chỉnh của mình với các bạn cùng lớp."
             AI for Oceans:
               name: Trí Tuệ Nhân Tạo cho Đại Dương
               description_student: 'Tóm tắt bài hướng dẫn: Đầu tiên, học sinh phân
@@ -11533,13 +11543,13 @@ vi:
                 phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên
                 hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử
                 dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh
-                mới.\\\r\n\\\r\n\\\r\n**Kiểm tra độ chính xác:** Bài hướng dẫn này
-                sẽ không cho học sinh biết liệu các em có hoàn thành cấp độ một cách
-                chính xác hay không. Học sinh có thể lướt qua các phần khác nhau của
-                hoạt động một cách nhanh chóng. Hãy khuyến khích học sinh xem video,
-                đọc hướng dẫn và thử nhiều hoạt động khác nhau trong quá trình học.
-                Các em có thể chia sẻ những phát hiện của mình với bạn hoặc một người
-                bạn cùng lớp bất cứ lúc nào.\\\r"
+                mới.\r\n\r\n\r\n**Kiểm tra độ chính xác:** Bài hướng dẫn này sẽ không
+                cho học sinh biết liệu các em có hoàn thành cấp độ một cách chính
+                xác hay không. Học sinh có thể lướt qua các phần khác nhau của hoạt
+                động một cách nhanh chóng. Hãy khuyến khích học sinh xem video, đọc
+                hướng dẫn và thử nhiều hoạt động khác nhau trong quá trình học. Các
+                em có thể chia sẻ những phát hiện của mình với bạn hoặc một người
+                bạn cùng lớp bất cứ lúc nào.\r\n"
           student_description: Học cách sử dụng các loại vòng lặp, sự kiện, hàm và
             lệnh điều kiện khác nhau. Phân tích các kỹ thuật giải quyết vấn đề khác
             nhau và thảo luận về các tác động xã hội của máy tính và internet. Trong
@@ -11861,7 +11871,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \\\r \\\r "
+                cá nhân của họ. \r \r \n"
             Intellectual Property:
               name: Sở hữu trí tuệ
             Styling Elements with CSS:
@@ -12117,6 +12127,8 @@ vi:
               name: Tạo nhân vật
             End of Course Project:
               name: Dự án tổng kết khóa học
+            Outbreaklab:
+              name: Phòng thí nghiệm độc lập dịch bệnh bùng phát
           lesson_groups:
             introduction:
               display_name: Giới thiệu
@@ -12709,7 +12721,7 @@ vi:
               description_teacher: |-
                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
 
-                Bài học này vốn do [Common Sense Education] biên soạn.(<https://www.commonsense.org/education/digital-citizenship/curriculum>).
+                Bài học này vốn do [Common Sense Education] biên soạn.(https://www.commonsense.org/education/digital-citizenship/curriculum).
                 Mật khẩu trực tuyến mạnh hơn, an toàn hơn là một ý tưởng hay cho mọi người. Nhưng làm thế nào để chúng ta có thể giúp trẻ tạo mật khẩu tốt hơn và thực sự ghi nhớ được mật khẩu đó? Hãy sử dụng các bí quyết trong bài học này để giúp trẻ tạo mật khẩu vừa an toàn vừa dễ nhớ.
             lesson-1:
               name: Sức mạnh của ngôn từ
@@ -12718,7 +12730,7 @@ vi:
               description_teacher: |2-
                  [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
 
-                Bài học này ban đầu được tạo bởi Common Sense Education. [Tìm hiểu thêm.] \(<https://www.commonsense.org/education/digital-citizenship/curriculum>)
+                Bài học này ban đầu được tạo bởi Common Sense Education. [Tìm hiểu thêm.] (https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Khi trẻ lớn lên, tự nhiên chúng sẽ bắt đầu giao tiếp trực tuyến nhiều hơn. Nhưng một số những gì họ nhìn thấy có thể khiến họ cảm thấy bị tổn thương, buồn bã, tức giận hoặc thậm chí là sợ hãi. Giúp học sinh của bạn xây dựng sự đồng cảm với người khác và học các chiến lược để sử dụng khi đối mặt với bắt nạt trên mạng.
           lesson_groups:
@@ -12755,11 +12767,11 @@ vi:
                 `Đặt lại` và `Bước`. Những nội dung cũng được thảo luận trong các
                 video này: kéo các khối Blockly, xóa các khối Blockly và kết nối các
                 khối Blockly. Tiếp theo, học sinh sẽ thực hành các kỹ năng _sắp xếp
-                thứ tự_ và _sửa lỗi_ trong mê cung.\\\r\nSửa lỗi là một yếu tố cần
-                thiết trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập
-                đã được giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để
-                xác định lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu,
-                khối bổ sung và khối không đúng thứ tự."
+                thứ tự_ và _sửa lỗi_ trong mê cung.\r\nSửa lỗi là một yếu tố cần thiết
+                trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập đã được
+                giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để xác định
+                lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu, khối bổ
+                sung và khối không đúng thứ tự."
             Programming and Loops with the Artist:
               name: Vẽ bằng vòng lặp
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -12931,7 +12943,7 @@ vi:
               description_teacher: |2-
                  [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
 
-                Bài học này ban đầu được tạo bởi Common Sense Education. [Tìm hiểu thêm.] \(<https://www.commonsense.org/education/digital-citizenship/curriculum>)
+                Bài học này ban đầu được tạo bởi Common Sense Education. [Tìm hiểu thêm.] (https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Khi trẻ lớn lên, tự nhiên chúng sẽ bắt đầu giao tiếp trực tuyến nhiều hơn. Nhưng một số những gì họ nhìn thấy có thể khiến họ cảm thấy bị tổn thương, buồn bã, tức giận hoặc thậm chí là sợ hãi. Giúp học sinh của bạn xây dựng sự đồng cảm với người khác và học các chiến lược để sử dụng khi đối mặt với bắt nạt trên mạng.
             Envelope Variables:
@@ -13016,6 +13028,8 @@ vi:
                 kế các giải pháp trợ năng cho các ứng dụng giả định.
             lesson-7:
               name: Tạo nhân vật
+            lesson-5:
+              name: Dịch bệnh bùng phát
             lesson-2:
               name: Sức mạnh của ngôn từ
               description_student: Bắt nạt chưa bao giờ là đúng. Bài học này sẽ dạy
@@ -13023,7 +13037,7 @@ vi:
               description_teacher: |2-
                  [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
 
-                Bài học này ban đầu được tạo bởi Common Sense Education. [Tìm hiểu thêm.] \(<https://www.commonsense.org/education/digital-citizenship/curriculum>)
+                Bài học này ban đầu được tạo bởi Common Sense Education. [Tìm hiểu thêm.] (https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Khi trẻ lớn lên, tự nhiên chúng sẽ bắt đầu giao tiếp trực tuyến nhiều hơn. Nhưng một số những gì họ nhìn thấy có thể khiến họ cảm thấy bị tổn thương, buồn bã, tức giận hoặc thậm chí là sợ hãi. Giúp học sinh của bạn xây dựng sự đồng cảm với người khác và học các chiến lược để sử dụng khi đối mặt với bắt nạt trên mạng.
           lesson_groups:
@@ -13347,14 +13361,13 @@ vi:
                 hoàn thành một bài tập lớn. Bạn làm bài tập này cùng một đối tác bằng
                 cách di chuyển quanh phòng và hoàn thành các phần trong bài tập tại
                 từng vị trí, kiểm tra bài làm của mình trong quá trình đó.
-              description_teacher: |-
+              description_teacher: |
                 Học sinh hoàn thành bài tập dạng Câu hỏi tự luận (FRQ) đầu tiên của mình trong bài học này. Các em ghi chú câu hỏi thành một nhóm, sau đó triển khai nhóm `SpiralPainter` đầy đủ theo cặp thông qua hoạt động theo kiểu “Vòng quanh thế giới”.
 
                 Bài học này bao gồm ba mục tiêu:
-
-                -   Tạo cảm giác hứng thú và thành công khi hoàn thành FRQ
-                -   Thực hành câu hỏi kiểu FRQ (viết bằng tay)
-                -   Đóng vai trò bài đánh giá tổng kết nội dung của Bài 1
+                * Tạo cảm giác hứng thú và thành công khi hoàn thành FRQ
+                * Thực hành câu hỏi kiểu FRQ (viết bằng tay)
+                * Đóng vai trò bài đánh giá tổng kết nội dung của Bài 1
 
                 Mặc dù hình thức của FRQ này không giống như FRQ trong kỳ thi AP, nhưng đây là tiền đề để giúp học sinh chuẩn bị giải các dạng câu hỏi này. Khi học sinh tiếp tục theo khóa học, các câu hỏi FRQ mà các em gặp phải dần trở nên gần với thực tế hơn.
           lesson_groups:
@@ -13363,11 +13376,13 @@ vi:
         csa2-pilot:
           lessons:
             new lesson:
-              description_student: Thông qua kinh nghiệm của chúng tôi trong dự án
+              description_student: 'Thông qua kinh nghiệm của chúng tôi trong dự án
                 Khu phố, chúng tôi biết rằng các nhóm và đối tượng là các thành phần
                 quan trọng của ngôn ngữ lập trình Java. Nhưng chính xác thì các nhóm
                 tạo ra đối tượng như thế nào? Trong bài học này, bạn sẽ khám phá cách
                 tạo ra đối tượng và tìm hiểu về quá trình đóng gói dữ liệu.
+
+'
               description_teacher: Trong bài học không dùng thiết bị điện tử này,
                 học sinh tạo các đối tượng và biểu diễn các thuộc tính có liên quan
                 bằng cách sử dụng các biến thực thể. Học sinh sẽ tìm hiểu sự khác
@@ -13468,12 +13483,34 @@ vi:
               display_name: Giới thiệu
             Introduction:
               display_name: Giới thiệu
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Bài học 3
+            Lesson 4:
+              display_name: Bài học 4
+            Lesson 5:
+              display_name: Bài học 5
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: Dịch bệnh bùng phát ở Thị Trấn Quái Vật
+          lesson_groups:
+            Outbreak Module:
+              display_name: Mô-đun Dịch bệnh bùng phát
+          name: môđundịchbệnhbùngphát
+          title: Mô-đun Dịch bệnh bùng phát_V2
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
               display_name: Khảo sát
         aiml-2021:
           lessons:
+            lesson9:
+              description_teacher: |-
+                Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.
+
+                **Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?
             lesson-22:
               name: Bộ sưu tập Thiết kế dữ liệu
           lesson_groups:
@@ -13481,6 +13518,11 @@ vi:
               display_name: Khảo sát
         csd7-2021:
           lessons:
+            Similarity Models:
+              description_teacher: |-
+                Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.
+
+                **Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?
             Survey Planning:
               name: Bộ sưu tập Thiết kế dữ liệu
           lesson_groups:
@@ -13536,6 +13578,9 @@ vi:
           lessons:
             lesson-4:
               name: Quy trình thiết kế
+        outbreak-module:
+          name: mô-đun-dịch-bệnh-bùng-phát
+          title: Dịch bệnh bùng phát
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -13581,6 +13626,14 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: màn 1
+            lessonGroup-3:
+              display_name: 'màn 2
+
+'
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -13605,14 +13658,13 @@ vi:
                 hoàn thành một bài tập lớn. Bạn làm bài tập này cùng một đối tác bằng
                 cách di chuyển quanh phòng và hoàn thành các phần trong bài tập tại
                 từng vị trí, kiểm tra bài làm của mình trong quá trình đó.
-              description_teacher: |-
+              description_teacher: |
                 Học sinh hoàn thành bài tập dạng Câu hỏi tự luận (FRQ) đầu tiên của mình trong bài học này. Các em ghi chú câu hỏi thành một nhóm, sau đó triển khai nhóm `SpiralPainter` đầy đủ theo cặp thông qua hoạt động theo kiểu “Vòng quanh thế giới”.
 
                 Bài học này bao gồm ba mục tiêu:
-
-                -   Tạo cảm giác hứng thú và thành công khi hoàn thành FRQ
-                -   Thực hành câu hỏi kiểu FRQ (viết bằng tay)
-                -   Đóng vai trò bài đánh giá tổng kết nội dung của Bài 1
+                * Tạo cảm giác hứng thú và thành công khi hoàn thành FRQ
+                * Thực hành câu hỏi kiểu FRQ (viết bằng tay)
+                * Đóng vai trò bài đánh giá tổng kết nội dung của Bài 1
 
                 Mặc dù hình thức của FRQ này không giống như FRQ trong kỳ thi AP, nhưng đây là tiền đề để giúp học sinh chuẩn bị giải các dạng câu hỏi này. Khi học sinh tiếp tục theo khóa học, các câu hỏi FRQ mà các em gặp phải dần trở nên gần với thực tế hơn.
             lesson-19:
@@ -13621,14 +13673,13 @@ vi:
                 hoàn thành một bài tập lớn. Bạn làm bài tập này cùng một đối tác bằng
                 cách di chuyển quanh phòng và hoàn thành các phần trong bài tập tại
                 từng vị trí, kiểm tra bài làm của mình trong quá trình đó.
-              description_teacher: |-
+              description_teacher: |
                 Học sinh hoàn thành bài tập dạng Câu hỏi tự luận (FRQ) đầu tiên của mình trong bài học này. Các em ghi chú câu hỏi thành một nhóm, sau đó triển khai nhóm `SpiralPainter` đầy đủ theo cặp thông qua hoạt động theo kiểu “Vòng quanh thế giới”.
 
                 Bài học này bao gồm ba mục tiêu:
-
-                -   Tạo cảm giác hứng thú và thành công khi hoàn thành FRQ
-                -   Thực hành câu hỏi kiểu FRQ (viết bằng tay)
-                -   Đóng vai trò bài đánh giá tổng kết nội dung của Bài 1
+                * Tạo cảm giác hứng thú và thành công khi hoàn thành FRQ
+                * Thực hành câu hỏi kiểu FRQ (viết bằng tay)
+                * Đóng vai trò bài đánh giá tổng kết nội dung của Bài 1
 
                 Mặc dù hình thức của FRQ này không giống như FRQ trong kỳ thi AP, nhưng đây là tiền đề để giúp học sinh chuẩn bị giải các dạng câu hỏi này. Khi học sinh tiếp tục theo khóa học, các câu hỏi FRQ mà các em gặp phải dần trở nên gần với thực tế hơn.
           lesson_groups:
@@ -13637,11 +13688,13 @@ vi:
         csa2-pilot-facilitator:
           lessons:
             Defining Attributes:
-              description_student: Thông qua kinh nghiệm của chúng tôi trong dự án
+              description_student: 'Thông qua kinh nghiệm của chúng tôi trong dự án
                 Khu phố, chúng tôi biết rằng các nhóm và đối tượng là các thành phần
                 quan trọng của ngôn ngữ lập trình Java. Nhưng chính xác thì các nhóm
                 tạo ra đối tượng như thế nào? Trong bài học này, bạn sẽ khám phá cách
                 tạo ra đối tượng và tìm hiểu về quá trình đóng gói dữ liệu.
+
+'
               description_teacher: Trong bài học không dùng thiết bị điện tử này,
                 học sinh tạo các đối tượng và biểu diễn các thuộc tính có liên quan
                 bằng cách sử dụng các biến thực thể. Học sinh sẽ tìm hiểu sự khác
@@ -13698,11 +13751,13 @@ vi:
             The Neighborhood Store Management Project - Day 3:
               name: Dự án quản lý cửa hàng khu phố – Ngày 3
             new lesson:
-              description_student: Thông qua kinh nghiệm của chúng tôi trong dự án
+              description_student: 'Thông qua kinh nghiệm của chúng tôi trong dự án
                 Khu phố, chúng tôi biết rằng các nhóm và đối tượng là các thành phần
                 quan trọng của ngôn ngữ lập trình Java. Nhưng chính xác thì các nhóm
                 tạo ra đối tượng như thế nào? Trong bài học này, bạn sẽ khám phá cách
                 tạo ra đối tượng và tìm hiểu về quá trình đóng gói dữ liệu.
+
+'
               description_teacher: Trong bài học không dùng thiết bị điện tử này,
                 học sinh tạo các đối tượng và biểu diễn các thuộc tính có liên quan
                 bằng cách sử dụng các biến thực thể. Học sinh sẽ tìm hiểu sự khác
