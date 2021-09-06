@@ -599,11 +599,11 @@
         "CSD U1L01 TFMD_2018": "Unterrichtsübersicht",
         "CSD U1L01 TFMD_2019": "Unterrichtsübersicht",
         "spritelab_extras_repeat": "Lauter Sprites!",
-        "outbreak1": "Virus Simulation",
-        "outbreak2": "Virus Simulation",
-        "outbreak3": "Virus Simulation",
+        "outbreak1": "Simulation eines Virus",
+        "outbreak2": "Simulation eines Virus",
+        "outbreak3": "Simulation eines Virus",
         "outbreak4": "Modifiziere deine Simulation",
-        "outbreak6": "Zufällige Chance",
+        "outbreak6": "Zufallswahrscheinlichkeit",
         "outbreak7": "Immunität und Impfungen",
         "outbreak8": "Teile eine Nachricht",
         "CDEF_video_SpritesInAction_2021": "Wie man einen Sprite erstellt",
@@ -619,11 +619,11 @@
         "CourseF_Oceans_Video_Machine_Learning_2021": "Video: Maschinelles Lernen",
         "CourseF_Oceans_Video_Societal_Implications_2021": "Video: Gesellschaftliche Auswirkungen",
         "CourseF_Oceans_Video_Training_Data_2021": "Video: Trainingsdaten",
-        "CourseF_outbreak1": "Virus Simulation",
-        "CourseF_outbreak2": "Virus Simulation",
-        "CourseF_outbreak3": "Virus Simulation",
+        "CourseF_outbreak1": "Simulation eines Virus",
+        "CourseF_outbreak2": "Simulation eines Virus",
+        "CourseF_outbreak3": "Simulation eines Virus",
         "CourseF_outbreak4": "Modifiziere deine Simulation",
-        "CourseF_outbreak6": "Zufällige Chance",
+        "CourseF_outbreak6": "Zufallswahrscheinlichkeit",
         "CourseF_outbreak7": "Immunität und Impfungen",
         "CourseF_outbreak8": "Teile eine Nachricht",
         "CourseF_video_introSpriteLab_2021": "Hier ist das Sprite Lab",
@@ -657,7 +657,9 @@
         "courseF_sprites_freeplay_aquatic": "Wassersport",
         "courseF_sprites_properties": "Sprite Eigenschaften",
         "ramp_artist_loops4_2021": "Stern",
-        "scrat_loops_C-F_video_2021": "Schleifen im Ice Age Video"
+        "scrat_loops_C-F_video_2021": "Schleifen im Ice Age Video",
+        "outbreak_freeplay": "Erweiterter Werkzeugkasten",
+        "outbreak_freeplay_basic": "Standard-Werkzeugkasten"
       }
     }
   }

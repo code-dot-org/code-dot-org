@@ -17610,6 +17610,14 @@ de:
               display_name: 'Diving Deeper: Courses E and F'
             Introduction:
               display_name: Einführung
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lektion 3
+            Lesson 4:
+              display_name: Lektion 4
+            Lesson 5:
+              display_name: Lektion 5
         allthemigratedthings:
           lessons:
             lesson-2: {}
@@ -17933,6 +17941,11 @@ de:
           lessons:
             lesson-1: {}
             lesson-2: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stufe 1
+            lessonGroup-3:
+              display_name: Teil 2
         dlp21-csp-mod1:
           lessons:
             lesson-1: {}
