@@ -1,4 +1,3 @@
----
 sr:
   data:
     script:
@@ -502,6 +501,12 @@ sr:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -541,6 +546,12 @@ sr:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -550,6 +561,12 @@ sr:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -786,6 +803,12 @@ sr:
               name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -1035,7 +1058,7 @@ sr:
             Functions:
               name: Функције
             'null':
-              name: ништа
+              name: 'ништа'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1301,7 +1324,7 @@ sr:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Функције са параметрима\_
+              name: Функције са параметрима_
             Functions with Parameters:
               name: Функције са параметрима
         coursee-2018:
@@ -1530,7 +1553,7 @@ sr:
               display_name: Преглед
           lessons:
             'null':
-              name: ништа
+              name: 'ништа'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2259,6 +2282,12 @@ sr:
               display_name: Unit 4
             lessonGroup-7:
               display_name: Unit 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Фаза 1
+            lessonGroup-3:
+              display_name: Фаза 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
