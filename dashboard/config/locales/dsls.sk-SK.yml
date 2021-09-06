@@ -343,7 +343,8 @@ sk-SK:
         - {}
         content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
+        - text: Aká je najväčšia časť tejto piesne, ktorú môžete definvoať ako refrén
+            tak, že sa tento refrém zopakuje vždy keď sa zavolá?
         title: Vyber správnu odpoveď
       4-5 Suncatchers Match 1:
         answers:
@@ -414,6 +415,9 @@ sk-SK:
         questions:
         - text: Vyber najlepší z blokov.
         title: Včela s podmienkami - Vyber správnu odpoveď
+        content2: Fialová kvetina môže mať 3, 2 alebo 1 nektár, ale neviete koľko
+          presne. Ktoré bloky správne skontrolujú a pozbierajú všetok nektár z fialovej
+          kvetiny?
       4-5 bee debug multi 1:
         answers:
         - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
@@ -1799,17 +1803,19 @@ sk-SK:
         content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
       K-1 Plant a Seed Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
         questions:
         - text: Ktorý krok by mal ísť na začiatok tohoto algoritmu?
         title: Vyber správnu odpoveď
       K-1 Plant a Seed Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
         questions:
         - text: Ktorý krok má vyplniť prázdne miesto tohto algoritmu?
         title: Vyber správnu odpoveď
@@ -1823,7 +1829,7 @@ sk-SK:
         title: Vyber správnu odpoveď
       K-1 Word Search Multi 3:
         answers:
-        - {}
+        - text: nastaviť
         - correct: true
         - {}
         questions:
@@ -5230,6 +5236,8 @@ sk-SK:
           návrhu aplikácií!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
       courseAB_EOC_2021:
         display_name: Záverečný projekt
+        description: Dostali sme sa na poslednú lekciu! Vyber si projekt, ktorý chceš
+          vytvoriť.
       courseB_EOC_2021:
         display_name: Záverečný projekt
       courseC_multi_artist_prog6_predict1_2021:

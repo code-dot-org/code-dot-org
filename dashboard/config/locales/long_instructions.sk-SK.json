@@ -2701,7 +2701,7 @@
         "Underground Avoiding Lava_2021": "Láva sa ukrýva pod niektorými z týchto blokov, ktoré budeš potrebovať zakryť predtým, než sa posunieš vpred. K tomu môžeš použiť príkaz `ak`. Pridaj príkaz `posuň sa dopredu` na správne miesto a vyťaž tieto bloky.",
         "Underground If Statements_2021": "Teraz to bude zapeklité. Vyťaž 3 červené kamene, no nespadni pritom do lávy. Použi príkaz `ak` a umiestni kamene cez všetku lávu, ktorú odkryješ.",
         "Video: Intro to CSS_2019": "## Otázky na zváženie\n\n-   Ako sa štýl webstránky líši od štruktúry?\n-   Prečo by mala mať tvoja webstránka určitý štýl?",
-        "courseA_artist_loops10_2021": "## Čas vrátiť sa späť na pevninu. Pomôž mi s kladením kameňov, aby som nespadol!",
+        "courseA_artist_loops10_2021": "## Čas vrátiť sa späť na pevninu. Pômož mi s kladením kameňov, aby som nespadol!",
         "courseA_artist_loops11_2021": "## Pomôž mi postaviť schody, aby som mohol sledovať ako loď odpláva.\n\n![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)",
         "courseA_artist_loops12_2021": "Umelec v diaľke uvidel niečo smiešne. Nakresli, čo si myslíš, že uvidel.\n\n* * *\n\n### Nápady\n\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)",
         "courseA_artist_loops2_2021": "Pomôž umelcovi nakresliť túto čiaru 2 krát dopredu.\n\n![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)",
@@ -3122,14 +3122,23 @@
         "iceage_throw_hearts": "Sid chce svojej starej mame Ňani dať vedieť, že ju ľúbi.   \n\nPomocou príkazu `postava ___ hoď` nastav, aby Sid (postava 1) hodil srdcia na Ňaňu (postava 2). \nOkrem toho naprogramuj, aby sa Ňani nastavila veselá nálada, keď ju srdcia zasiahnu.",
         "iceage_warn_ice_age": "Všetci sa musia hýbať rýchlejšie, pretože sa blíži ľadová búrka! \nNastav scéne ľadové pozadie a Sidovi (postava 1) nastav rýchlu rýchlosť.\nStlač Spustiť a presuň Sida k Diegovi, aby ho varoval.",
         "iceage_warn_ice_age_dani": "Všetci sa musia hýbať rýchlejšie, pretože sa blíži ľadová búrka! \nNastav scéne ľadové pozadie a Sidovi (postava 1) nastav rýchlu rýchlosť.\nStlač Spustiť a presuň Sida k Diegovi, aby ho varoval.",
-        "courseA_artist_loops_challenge1_2021": "Pomocou cyklu môžeš nakresliť veľa čiar za sebou.\n\nVieš nakresliť dom? Pokojne nakresli taký, aký sa ti bude najviac páčiť. Skús hľadať opakujúce sa vzory!\n\nMôžeš sa inšpirovať týmito nápadmi:\n\n![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)",
-        "courseA_artist_loops_challenge2a_2021": "_„Pomôž mi rozložiť tábor!“_\n\nPomocou blokov v paneli nástrojov nakresli tieto tri stany.",
-        "courseA_playlab_events_challenge1_2021": "Keď klikneš na mačku Olive, zobrazí sa vtáčik Robin! Vieš doplniť kód tak, aby sa takto zobrazil aj zvyšok postavičiek?\n\nV tejto úlohe určite využívaj pomôcky! Krok za krokom ti pomôžu dokončiť tento projekt.\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)",
-        "courseA_playlab_events_challenge2_2021": "Každého naprogramuj tak, aby niečo robil, keď naňho klikneš. Čo budú hovoriť zvieratká? Čo ďalšie sa udeje?\n\nV tejto úlohe určite využívaj pomôcky. Nájdeš v nich zábavné nápady, čo všetko sa dá v tejto úlohe vyskúšať.\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)",
         "courseF_bee_for10_2021": "**Výzva:** Použi, čo už vieš o cykloch `for`, a skús vyriešiť tento problém. \n\nNezabudni. Kým vymyslíš všetky kroky, prejdi cez riešenia niekoľko krát.",
         "courseF_bee_for11_2021": "Ak tvoj cyklus odpočítava, tak prírastok je **odčítaný** z tvojej premennej počítadlo pri každom prechode.\n\nAký má byť prírastok, keď chceš pozbierať 15, potom 12, potom 9, 6, 3 nektáre?",
         "courseF_bee_for8_2021": "Máš to!  \n\nAký by mal byť tvoj **prírastok**, keď chceš pozbierať 3, 6, 9, 12, 15 nektárov?",
-        "courseF_bee_for9_2021": "Teraz skombinujme premennú `počítadlo` s `matematickým` blokom!\n\nAko môžeš použiť premennú `počítadlo` na prejdenie cez túto záhradu s najmenším počtom blokov?"
+        "courseF_bee_for9_2021": "Teraz skombinujme premennú `počítadlo` s `matematickým` blokom!\n\nAko môžeš použiť premennú `počítadlo` na prejdenie cez túto záhradu s najmenším počtom blokov?",
+        "2-3 Artist Nested Loops 2": "Teraz tento trojuholník zopakuj 6 krát.\n\nPo každom trojuholníku sa musíš otočiť o 60 stupňov, aby si mohol nakresliť ďalší.",
+        "2-3 Bee Conditionals 2": "Ja som hladná včela!\n\nPomôž mi pozbierať všetok nektár z kvetov s použitím čo najmenšieho počtu blokov.",
+        "2-3 Maze Loops 19": "Posuňme sa na vyšší level! \n\nPouži cyklus, aby si ma dostal k slnečnici s čo najmenším možným počtom opakovaní.",
+        "4-5 Maze Conditionals 3": "Použite blok \"if\" pre pomoc s rozhodnutím sa, kedy mám zabočiť.",
+        "course2_artist_prog_challenge2": "_Pomôž mi na túto cestu dokresliť žlté čiary!_",
+        "courseA_artist_loops_challenge2a_2021": "_„Pomôž mi rozložiť tábor!“_\n\nPomocou blokov v paneli nástrojov nakresli tieto tri stany.",
+        "courseA_collector_loops_challenge1_2021": "_\"Pomôžeš mi nájsť pár chýb? Viem, ktorým smerom mám ísť, ale nie som si istý, koľko krokov mám urobiť.\"_",
+        "courseA_EOC_artist_1": "Je čas na tvoj posledný projekt. Môžeš vytvoriť, čo len chceš!",
+        "courseA_EOC_artist_2": "Je čas na tvoj posledný projekt. Môžeš vytvoriť, čo len chceš!",
+        "courseA_EOC_artist_3": "Je čas na tvoj posledný projekt. Môžeš vytvoriť, čo len chceš!",
+        "courseA_artist_loops_challenge1_2021": "Pomocou cyklu môžeš nakresliť veľa čiar za sebou.\n\nVieš nakresliť dom? Pokojne nakresli taký, aký sa ti bude najviac páčiť. Skús hľadať opakujúce sa vzory!\n\nMôžeš sa inšpirovať týmito nápadmi:\n\n![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)",
+        "courseA_playlab_events_challenge1_2021": "Keď klikneš na mačku Olive, zobrazí sa vtáčik Robin! Vieš doplniť kód tak, aby sa takto zobrazil aj zvyšok postavičiek?\n\nV tejto úlohe určite využívaj pomôcky! Krok za krokom ti pomôžu dokončiť tento projekt.\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)",
+        "courseA_playlab_events_challenge2_2021": "Každého naprogramuj tak, aby niečo robil, keď naňho klikneš. Čo budú hovoriť zvieratká? Čo ďalšie sa udeje?\n\nV tejto úlohe určite využívaj pomôcky. Nájdeš v nich zábavné nápady, čo všetko sa dá v tejto úlohe vyskúšať.\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)"
       }
     }
   }
