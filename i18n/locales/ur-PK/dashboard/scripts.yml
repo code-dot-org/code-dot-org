@@ -1,4 +1,3 @@
----
 ur:
   data:
     script:
@@ -14,14 +13,14 @@ ur:
             Conditionals:
               name: شرائط
         course3:
-          description_audience: Ages 8-18
+          description_audience: "Ages 8-18\n"
         frozen:
           title: اینا اور ایلسا کے ساتھ کوڈ
           description: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی دکھا سکیں گے۔
           description_short: آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن کرسکیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
           student_description: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی دکھا سکیں گے۔
         course4:
-          description_audience: Ages 9-18
+          description_audience: "Ages 9-18\n"
         usability:
           lessons:
             Variables:
@@ -39,7 +38,7 @@ ur:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
         20-hour:
-          description_audience: Ages 10-18
+          description_audience: "Ages 10-18\n"
           lessons:
             Conditionals:
               name: شرائط
@@ -96,13 +95,13 @@ ur:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
         asUnplugged:
-          description_audience: Ages 6-13
+          description_audience: "Ages 6-13\n"
         afterschool1:
-          description_audience: Ages 7-13
+          description_audience: "Ages 7-13\n"
         Special Fun:
-          description_audience: Ages 10-18
+          description_audience: "Ages 10-18\n"
         SpecialSeries:
-          description_audience: Ages 10-18
+          description_audience: "Ages 10-18\n"
         mc:
           title: Minecraft کوڈ کی گھڑی
         algebraPD1:
@@ -110,37 +109,37 @@ ur:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
         CSF_Secret_Sample:
-          description_audience: Ages 8-18
+          description_audience: "Ages 8-18\n"
         algebraFacilitator:
           lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
         CSF_Secret_Sample_Story:
-          description_audience: Ages 8-18+
+          description_audience: "Ages 8-18+\n"
         MikeTest:
-          description_audience: Ages 8-98
+          description_audience: "Ages 8-98\n"
         artistExemplar:
-          description_audience: Ages 8-18
+          description_audience: "Ages 8-18\n"
         gradeKinder:
-          description_audience: Ages 5-18
+          description_audience: "Ages 5-18\n"
           lessons:
             Events:
               name: ایونٹس/واقعات
             Loops:
               name: لوپس
         grade4:
-          description_audience: Ages 9-99
+          description_audience: "Ages 9-99\n"
         grade1:
-          description_audience: Ages 5-18
+          description_audience: "Ages 5-18\n"
           lessons:
             Events:
               name: ایونٹس/واقعات
             Loops:
               name: لوپس
         grade5:
-          description_audience: Ages 10-110
+          description_audience: "Ages 10-110\n"
         grade3:
-          description_audience: Ages 5-18
+          description_audience: "Ages 5-18\n"
         csd3-2017:
           lessons:
             Variables:
@@ -148,7 +147,7 @@ ur:
             Conditionals:
               name: شرائط
         grade2:
-          description_audience: Ages 5-18
+          description_audience: "Ages 5-18\n"
         k5concepts:
           lessons:
             Conditionals:
@@ -206,7 +205,7 @@ ur:
             Conditionals:
               name: شرائط
             'null':
-              name: نَل
+              name: 'نَل'
         coursea-2017:
           title: کورس A
           assignment_family_title: کورس A
@@ -372,7 +371,7 @@ ur:
         andrea-test:
           lessons:
             'null':
-              name: نَل
+              name: 'نَل'
         coursec-2019:
           lesson_groups:
             csf_loops:
@@ -665,7 +664,7 @@ ur:
               name: کورس F
         virustest:
           title: وباء کے پھیلنے کا سیمیولیشن
-          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
+          description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -674,10 +673,10 @@ ur:
             outbreak:
               display_name: وباء کی سیمولیشن
           title: وباء کا سیمیولیٹر
-          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
-          description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
+          description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
           name: وباء کا پھیلنا
-          student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
+          student_description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
         2021drafting:
           lessons:
             Virus Simulation for Code Bytes:
@@ -730,6 +729,7 @@ ur:
             csf_events:
               display_name: ایونٹس/واقعات
         coursed-2021:
+          title: کورس D (2021)
           lessons:
             Dance Party:
               key: ڈانس پارٹی
@@ -795,9 +795,9 @@ ur:
             variables:
               display_name: متغیرات
         contagion-pilot:
-          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
-          description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
-          student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
+          description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          student_description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
         k5-onlinepd-2021:
           lessons:
             Loops:
