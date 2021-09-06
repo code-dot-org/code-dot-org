@@ -1,9 +1,8 @@
----
 lt:
   data:
     script:
       category:
-        hoc_category_name: "„Programavimo valanda“"
+        hoc_category_name: '„Programavimo valanda“'
         math_category_name: Matematika
         other_category_name: Kita
       name:
@@ -488,7 +487,7 @@ lt:
             Creating Functions:
               name: Komandų kūrimas
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -579,6 +578,12 @@ lt:
               name: Kiti žingsniai
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
@@ -613,12 +618,24 @@ lt:
               name: Apibendrinimas
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
               name: Apibendrinimas
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
@@ -671,7 +688,7 @@ lt:
         cspunit3temp:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         gumball:
           title: Gumball laboratorija
           description: Sukurk istoriją arba žaidimą su Gumball laboratorija!
@@ -759,7 +776,7 @@ lt:
         csp5-2017:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         CSDU3-Draft:
           lessons:
             Functions:
@@ -879,6 +896,12 @@ lt:
               name: 'Be kompiuterio: dainų rašymas pagal parametrus'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
@@ -963,7 +986,7 @@ lt:
             Variables:
               name: Kintamieji
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         algebrapdnext:
           description: Algebros mokymas per funkcijų programavimą
           lessons:
@@ -1250,7 +1273,7 @@ lt:
             Functions:
               name: Komandų kūrimas
             'null':
-              name: nieko
+              name: 'nieko'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1640,7 +1663,7 @@ lt:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Komandos su parametrais\_
+              name: Komandos su parametrais_
             Functions with Parameters:
               name: Komandos su parametrais
         coursee-2018:
@@ -1694,7 +1717,7 @@ lt:
         csp5-2018:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -1943,7 +1966,7 @@ lt:
             new stage:
               name: naujas lygis
             'null':
-              name: nieko
+              name: 'nieko'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2057,7 +2080,7 @@ lt:
         csp5-2019:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         csp1-pilot:
           lesson_groups:
             required:
@@ -2571,7 +2594,7 @@ lt:
         csp5-virtual:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
             Variables:
               name: Kintamieji
         virtual-holding-place:
@@ -2598,7 +2621,7 @@ lt:
         csp5-virtual-part2:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         k5-onlinepd-2020:
           lessons:
             Loops:
@@ -2926,6 +2949,12 @@ lt:
           lessons:
             lesson-2:
               name: 2 pamoka
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1 Etapas
+            lessonGroup-3:
+              display_name: 2 Etapas
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
