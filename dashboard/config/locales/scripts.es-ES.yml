@@ -24750,6 +24750,7 @@ es:
           student_description: "¡Aprende a enseñar ciencias de la computación con
             este curso en línea gratuito y autodidacta de Fundamentos de Ciencias
             de la Computación!"
+          name: k5-enlíneapd-2020
         dani-test-2020:
           lessons:
             new lesson:
@@ -33851,6 +33852,12 @@ es:
           lessons:
             lesson-2:
               name: Lección 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Etapa 1
+            lessonGroup-3:
+              display_name: Etapa 2
         dlp21-csp-mod1:
           title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la
             Computación
@@ -33877,6 +33884,8 @@ es:
           lessons:
             lesson-12:
               name: Herramientas
+            lesson-13:
+              name: Ejemplos
             lesson-17:
               name: Consola
             lesson-18:
@@ -35118,6 +35127,14 @@ es:
                 un nivel de elección y revisan su código basándose en los comentarios.
             lesson-4:
               name: Recorrido de Arrays con Bucles While
+              description_student: "¿Recuerdas los bucles `while`? En esta lección,
+                investigarás los casos límite de los bucles `while` y harás conexiones
+                entre los bucles `while` y `for`. Creas imágenes para tu música utilizando
+                la clase `Rectangle`."
+              description_teacher: Los alumnos revisan los bucles `while` y aprenden
+                sobre los bucles infinitos. Los alumnos exploran la creación de visuales
+                antes de la conversión entre los bucles `while` y `for`. Los alumnos
+                crean sus propios visuales musicales utilizando la clase `Rectangle`.
             lesson-5:
               name: Almacenando Objetos en Arrays
               description_teacher: Los alumnos exploran la funcionalidad y las ventajas
@@ -35219,6 +35236,13 @@ es:
                 restricciones a la duración del mismo y agregando elementos visuales.
                 Realiza una revisión del código para obtener comentarios que te permitan
                 seguir desarrollando tu programa.
+              description_teacher: En la lección anterior, los estudiantes escribieron
+                un algoritmo de remezcla y lo combinaron con los algoritmos que desarrollaron
+                en lecciones anteriores. Los alumnos utilizan variables estáticas
+                y constantes para añadir restricciones a la duración del concierto.
+                Añaden elementos visuales al concierto utilizando un array de `Formas`,
+                y luego participan en una revisión del código para dar y utilizar
+                la experiencia mientras desarrollan su programa.
             lesson-13:
               description_student: En la lección anterior, creaste una lista priorizada
                 de trabajo para completar. Hoy, autoevaluarás tu trabajo con respecto
