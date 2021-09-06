@@ -1,4 +1,3 @@
----
 lv:
   data:
     script:
@@ -10,7 +9,7 @@ lv:
         course1:
           title: Kurss 1
           description: Kurss 1 ir radīts, lai ļautu jaunākiem lasītājiem radīt datorprogrammas, kas palīdzēs viņiem apgūt sadarbību ar kolēģiem, attīstīt problēmu risināšanas prasmes un neatlaisties no sarežģītiem uzdevumiem. Šī kursa beigās skolēni radīs paši savu spēli vai stāstu ar ko varēs dalīties vai publicēt. Ieteicams klasēm K-1.
-          description_short: 1.  kurss piemērots ar nelielu lasītprasmi.
+          description_short: 1. kurss piemērots ar nelielu lasītprasmi.
           description_audience: No 4 gadiem (nav jālasa)
           lessons:
             'Artist: Loops':
@@ -52,8 +51,8 @@ lv:
           student_description: Kurss 1 ir radīts, lai ļautu jaunākiem lasītājiem radīt datorprogrammas, kas palīdzēs viņiem apgūt sadarbību ar kolēģiem, attīstīt problēmu risināšanas prasmes un neatlaisties no sarežģītiem uzdevumiem. Šī kursa beigās skolēni radīs paši savu spēli vai stāstu ar ko varēs dalīties vai publicēt. Ieteicams klasēm K-1.
         course2:
           title: Kurss 2
-          description: 2.  kurss ir veidots skolēniem, kuri prot lasīt un kuriem nav ieprieksējās programmēšnas pieredzes. Šajā kursā skolēni veidos programmas, kas risina problēmas, un radīs interaktīvas spēles vai stāstus ar kuriem var dalīties vai publicēt. Iteicams no 2.-5. klasei.
-          description_short: 2.  kurss paredzēts skolēniem, kuri prot lasīt.
+          description: 2. kurss ir veidots skolēniem, kuri prot lasīt un kuriem nav ieprieksējās programmēšnas pieredzes. Šajā kursā skolēni veidos programmas, kas risina problēmas, un radīs interaktīvas spēles vai stāstus ar kuriem var dalīties vai publicēt. Iteicams no 2.-5. klasei.
+          description_short: 2. kurss paredzēts skolēniem, kuri prot lasīt.
           description_audience: No 6 gadiem (jāprot lasīt)
           lessons:
             'Artist: Debugging':
@@ -94,11 +93,11 @@ lv:
               name: Lielais notikums
             Your Digital Footprint:
               name: Tavs digitālais nospiedums
-          student_description: 2.  kurss ir veidots skolēniem, kuri prot lasīt un kuriem nav ieprieksējās programmēšnas pieredzes. Šajā kursā skolēni veidos programmas, kas risina problēmas, un radīs interaktīvas spēles vai stāstus ar kuriem var dalīties vai publicēt. Iteicams no 2.-5. klasei.
+          student_description: 2. kurss ir veidots skolēniem, kuri prot lasīt un kuriem nav ieprieksējās programmēšnas pieredzes. Šajā kursā skolēni veidos programmas, kas risina problēmas, un radīs interaktīvas spēles vai stāstus ar kuriem var dalīties vai publicēt. Iteicams no 2.-5. klasei.
         course3:
           title: Kurss 3
-          description: 3.  kurss ir paredzēts skolēniem, kas ir pabeiguši 2. kursu. Skolēni vairāk iedziļinās programmēšanas tēmās, ar kurām iepazinās iepriekšējos kursos, lai atrastu vairāk atbildes grūtākām problēmām. Šī kursa beigās, skolēni izveido interaktīvus stāstus un spēles, lai dalītos ar pārējiem. Ieteicams no 4.-5. klasei.
-          description_short: 3.  kurss seko 2. kursam.
+          description: 3. kurss ir paredzēts skolēniem, kas ir pabeiguši 2. kursu. Skolēni vairāk iedziļinās programmēšanas tēmās, ar kurām iepazinās iepriekšējos kursos, lai atrastu vairāk atbildes grūtākām problēmām. Šī kursa beigās, skolēni izveido interaktīvus stāstus un spēles, lai dalītos ar pārējiem. Ieteicams no 4.-5. klasei.
+          description_short: 3. kurss seko 2. kursam.
           description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
           lessons:
             Artist:
@@ -114,7 +113,7 @@ lv:
             'Bee: Debugging':
               name: 'Bite: atkļūdošana'
             'Bee: Functions':
-              name: Bites funkcijas
+              name: 'Bites funkcijas'
             'Bee: Nested Loops':
               name: 'Bite: Nosacījuma cikli'
             Bounce:
@@ -136,14 +135,14 @@ lv:
             Maze:
               name: Labirints
             'Maze: Conditionals':
-              name: Labirinta nosacījums
+              name: 'Labirinta nosacījums'
             Songwriting:
               name: Dziesmu rakstīšana
             'Studio: Create a Game':
               name: 'Spēļu laboratorija: Izveidot spēli'
             'Studio: Create a Story':
               name: 'Spēļu laboratorija: izvedot stāstu'
-          student_description: 3.  kurss ir paredzēts skolēniem, kas ir pabeiguši 2. kursu. Skolēni vairāk iedziļinās programmēšanas tēmās, ar kurām iepazinās iepriekšējos kursos, lai atrastu vairāk atbildes grūtākām problēmām. Šī kursa beigās, skolēni izveido interaktīvus stāstus un spēles, lai dalītos ar pārējiem. Ieteicams no 4.-5. klasei.
+          student_description: 3. kurss ir paredzēts skolēniem, kas ir pabeiguši 2. kursu. Skolēni vairāk iedziļinās programmēšanas tēmās, ar kurām iepazinās iepriekšējos kursos, lai atrastu vairāk atbildes grūtākām problēmām. Šī kursa beigās, skolēni izveido interaktīvus stāstus un spēles, lai dalītos ar pārējiem. Ieteicams no 4.-5. klasei.
         playlab:
           title: Spēles laboratorija
           description: Izveidot stāstu vai spēli ar Spēles laboratoriju!
@@ -176,7 +175,7 @@ lv:
               name: Mākslinieks
           student_description: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
         course4:
-          title: 4.  kurss
+          title: 4. kurss
           description_short: Skolēniem, kas pilda 4. kursu vajadzēja pabeigt 2. un 3. kursu.
           description_audience: Vecumā no 10 gadiem (pēc 3. kursa)
           lessons:
@@ -217,7 +216,7 @@ lv:
             'Unplugged: Tangrams':
               name: 'Atvienots: Tangrams'
         Course4pre:
-          title: 4.  kursa priekšnoteikums
+          title: 4. kursa priekšnoteikums
           description: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un 3. kursu.
           description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un 3. kursu.
           lessons:
@@ -436,6 +435,12 @@ lv:
               name: Interneta simulators
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Ietīt
         algebraPD2:
@@ -458,10 +463,22 @@ lv:
               name: Kopsavilkums
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Ietīt
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Ietīt
         asUnplugged:
@@ -658,6 +675,12 @@ lv:
               name: 'Atvienots: Dziesmu rakstīšana ar parametriem'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Ietīt
         grade3:
@@ -917,7 +940,7 @@ lv:
             Functions:
               name: Funkcijas
             'null':
-              name: bez vērtības
+              name: 'bez vērtības'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1286,7 +1309,7 @@ lv:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Funkcijas ar parametriem\_
+              name: Funkcijas ar parametriem_
             Functions with Parameters:
               name: Funkcijas ar parametriem
         coursee-2018:
@@ -1553,7 +1576,7 @@ lv:
               display_name: Pārskats
           lessons:
             'null':
-              name: bez vērtības
+              name: 'bez vērtības'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2339,15 +2362,21 @@ lv:
         csa-videos:
           lesson_groups:
             lessonGroup-2:
-              display_name: 1.  nodaļa
+              display_name: 1. nodaļa
             lessonGroup-4:
-              display_name: 2.  nodaļa
+              display_name: 2. nodaļa
             lessonGroup-5:
-              display_name: 3.  nodaļa
+              display_name: 3. nodaļa
             lessonGroup-6:
-              display_name: 4.  nodaļa
+              display_name: 4. nodaļa
             lessonGroup-7:
-              display_name: 5.  nodaļa
+              display_name: 5. nodaļa
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Līmenis 1
+            lessonGroup-3:
+              display_name: Līmenis 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
