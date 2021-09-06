@@ -11,24 +11,24 @@ ka:
   campaign_date_full: 4-10 დეკემბერი
   campaign_date_year: '2016'
   campaign_date_full_year: 7-13 დეკემბერი, 2020
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_start_short: 1 ოქტ.
+  latam_campaign_date_start_long: 1 ოქტომბერი
+  latam_campaign_date_short: 1 ოქტ. - 12 დეკ.
+  latam_campaign_date_full: 1 ოქტომბერი - 12 დეკემბერი
   latam_campaign_date_year: '2016'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: Oct. 9
-  europe_campaign_date_start_long: October 9
-  europe_campaign_date_short: Oct. 9-24
-  europe_campaign_date_full: October 9-24
+  latam_campaign_date_full_year: 1 ოქტომბერი, 2021 - 12 დეკემბერი, 2021
+  europe_campaign_date_start_short: 9 ოქტ.
+  europe_campaign_date_start_long: 9 ოქტომბერი
+  europe_campaign_date_short: 9-24 ოქტ.
+  europe_campaign_date_full: 9-24 ოქტომბერი
   europe_campaign_date_year: '2016'
-  europe_campaign_date_full_year: October 9-24, 2021
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
+  europe_campaign_date_full_year: 9-24 ოქტომბერი, 2021
+  africa_campaign_date_start_short: 1 ოქტ.
+  africa_campaign_date_start_long: 1 ოქტომბერი
+  africa_campaign_date_short: 1-31 ოქტ.
+  africa_campaign_date_full: 1-31 ოქტომბერი
   africa_campaign_date_year: '2016'
-  africa_campaign_date_full_year: October 1-31, 2021
+  africa_campaign_date_full_year: 1-31 ოქტომბერი, 2021
   hoc2020_header: Learn today, build a brighter tomorrow.
   hoc2020_header_with_line_break_markdown: |-
     Learn today,
