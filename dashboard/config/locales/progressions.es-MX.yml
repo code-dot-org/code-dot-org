@@ -23,6 +23,7 @@ es-MX:
       Basic Conditionals: Condicionales Básicas
       Bass, Mid, and Treble: Bajos, medios y agudos
       Be a Super Digital Citizen: Cómo ser un Súper Ciudadano Digital
+      Begin planning your project: Empieza a planificar tu proyecto
       Binary Bracelets - Unplugged Activity: Pulseras Binarias - Actividad Desconectada
       Binary Numbers: Números binarios
       Binary and Data: Binario y datos
@@ -30,6 +31,7 @@ es-MX:
       Board Input and Output: Entrada y salida de la placa
       Boolean Comparison: Comparación Booleana
       Booleans and Comparison Operators: Operadores booleanos y de comparación
+      Build a Platform Jumper: Crea un salto de plataformas
       Build a Screen: Construir una Pantalla
       Building an App: Crear una app
       'Bunny ': Conejito
@@ -121,7 +123,7 @@ es-MX:
       'Exploration: Adding Style': 'Exploración: añadir estilo'
       'Exploration: For Loops': 'Exploración: Bucles "For"'
       'Exploration: Rikki''s Poster': 'Investigación: El cartel de Rikki'
-      'Exploration: Sample Apps': 'Exploración: Ejemplos de Aplicaciones'
+      'Exploration: Sample Apps': 'Exploración: aplicaciones de muestra'
       'Exploration: Sample Programs': 'Exploración: Ejemplos de Programas'
       'Exploration: Sample Project': 'Exploración: Ejemplos de Proyectos'
       Explore HTML: Explorar HTML
@@ -141,8 +143,8 @@ es-MX:
       For Loops and Repeat Blocks: Bucles "for" y bloques de repetición
       Formatting HTML: Formatear HTML
       Free Play: Juego libre
-      'Free Play: Make a Scene': 'Juego Libre: Hacer una Escena'
-      'Free Play: Make an Interactive Scene': 'Juego Libre: Hacer una Escena Interactiva'
+      'Free Play: Make a Scene': 'Juego libre: crear una escena'
+      'Free Play: Make an Interactive Scene': 'Juego libre: Crear una escena interactiva'
       Functions: Funciones
       Functions Review: Revisión de funciones
       Functions with Parameters: Funciones con parámetros
@@ -179,6 +181,7 @@ es-MX:
       Introduction to Game Lab: Introducción al Laboratorio de juegos
       Introduction to Variables: Introducción a las variables
       Iteration and Parameters: Repetición y parámetros
+      Keep On Dancing!: Sigue bailando!
       Keeping Data Secret: Mantener los datos en secreto
       Keyboard Input: Entrada de teclado
       LED Apps: Aplicaciones LED
@@ -200,6 +203,7 @@ es-MX:
       Making Scenes: Creación de escenas
       Making Songs: Hacer canciones
       Making Sounds: Hacer sonidos
+      Making an Interactive Card: Crear una tarjeta interactiva
       'Maze Intro: Programming with Blocks': 'Introducción al Laberinto: Programación
         con bloques'
       Measures: Medidas
@@ -410,7 +414,7 @@ es-MX:
         Desconectada'
       'Video: Harvesting with Conditionals': 'Vídeo: Cosechar con Condicionales'
       'Video: How to Create a Simple Function': 'Vídeo: Cómo Crear una Función Simple'
-      'Video: How to Make a Sprite': 'Vídeo: Cómo Hacer un Sprite'
+      'Video: How to Make a Sprite': 'Video: Cómo crear un sprite'
       'Video: Ice Age Loops': 'Vídeo: Bucles en la Edad de Hielo'
       'Video: If/Else Statements': 'Video: sentencias si/si no'
       'Video: Impacts on Society': 'Vídeo: Impactos en la Sociedad'
@@ -420,7 +424,7 @@ es-MX:
         - Parte 1'
       'Video: Intro to Web Lab - Part 2': 'Video: introducción al Laboratorio web
         - Parte 2'
-      'Video: Introducing Sprite Lab': 'Vídeo: Presentación del Laboratorio de Sprites'
+      'Video: Introducing Sprite Lab': 'Video: Introducción al Sprite Lab'
       'Video: Introduction to Arrays': 'Video: introducción a arreglos'
       'Video: Introduction to Play Lab': 'Vídeo: Introducción al Laboratorio de Juegos'
       'Video: Introduction to Sprites': 'Video: introducción a los sprites'
@@ -461,7 +465,7 @@ es-MX:
       'Video: Repeat Until Blocks': 'Vídeo: Bloques Repetir Hasta '
       'Video: Repeat Until Statements': 'Vídeo: Sentencias Repetir Hasta'
       'Video: Sprite Movement': 'Video: movimiento de sprites'
-      'Video: Sprites in Action': 'Vídeo: Sprites en Acción'
+      'Video: Sprites in Action': 'Video: Sprites en acción'
       'Video: Star Wars Project': 'Vídeo: Proyecto Star Wars'
       'Video: Text and Prompts': 'Vídeo: Texto y Avisos'
       'Video: The Animation Tab': 'Video: pestaña de animación'
@@ -488,6 +492,7 @@ es-MX:
       Welcome to Monster Town: Bienvenido a la Ciudad de Monstruos
       Where'd They Go?: "¿A dónde fueron?"
       While Loops with the Farmer: Bucles 'mientras' en la Granjera
+      'Widget: Text Compression': 'Widget: compresión de texto'
       Wrap-up: Cierre
       Your Personal Website: Tu sitio web personal
       getNumber: obtenerNúmero
