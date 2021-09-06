@@ -4945,7 +4945,8 @@ fr-FR:
         - text: C
           feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
             le répète 4 fois dans un cercle.
-        - feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
+        - text: Rien de ce qui figure ci-dessus
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
             le répète 4 fois dans un cercle.
         markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
           width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
@@ -5072,7 +5073,8 @@ fr-FR:
         - text: La moissonneuse ramassera toutes les cultures, sauf la citrouille.
           correct: true
           feedback: Correct!
-        - feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
+        - text: La fermière ne ramassera que la citrouille.
+          feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
             d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
             ramassera pas la citrouille.
         markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
@@ -5106,7 +5108,8 @@ fr-FR:
             dès que le tas aura disparu.
           correct: true
           feedback: Correct!
-        - feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
+        - text: Le fermier n'enlèvera la saleté qu'une seule fois
+          feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
             tas, puis s'arrêtera dès que le tas aura disparu.
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
@@ -5158,12 +5161,20 @@ fr-FR:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Rien ne se passera.
-        - {}
-        - correct: true
+          feedback: 'Incorrect. L''alien commencera à se déplacer de haut en bas sur
+            l''écran. '
+        - text: 'L''alien commencera à patrouiller de droite à gauche. '
+          feedback: 'Incorrect. L''alien commencera à se déplacer de haut en bas sur
+            l''écran. '
+        - text: 'L''alien commencera à se déplacer de haut en bas sur l''écran. '
+          correct: true
           feedback: Correct!
-        - {}
+        - text: 'L''alien disparaîtra du haut de l''écran. '
+          feedback: 'Incorrect. L''alien bleu commencera à se déplacer de haut en
+            bas sur l''écran. '
         questions:
-        - {}
+        - text: 'Regardez attentivement le code ci-dessous. Que se passera-t-il après
+            avoir cliqué sur l''alien ? '
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La fermière ramassera 2 citrouilles.
@@ -5227,7 +5238,7 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: Le tumbleweed va clignoter.
-          feedback: 'Incorrect. '
+          feedback: 'Incorrect. Le tumbleweed va commencer à dégringoler '
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
             sur "Démarrer"?
@@ -5252,7 +5263,7 @@ fr-FR:
             l'un après l'autre, de sorte que les deux comportements arriveront en
             même temps.
         questions:
-        - text: 'Lisez le code, puis faites une prédiction. '
+        - text: 'Lis le code, puis fais une prédiction. '
       courseF_labels_predict_multi:
         answers:
         - text: '"Une pizza, c''est parti !"'
@@ -5281,8 +5292,8 @@ fr-FR:
           feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
             bloc `tourner` pour que cela se produise.
         - text: 'L''ordinateur demandera à l''utilisateur un numéro. '
-          feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
-            `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
+          feedback: La variable `longueur`, à 50, va être utilisé dans le bloc `avancer`,
+            donc l'artiste dessinera un triangle avec 50 pixels de côtés.
         questions:
         - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
             lorsque tu cliqueras sur "Démarrer"?
@@ -5298,7 +5309,8 @@ fr-FR:
         - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
           feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
             quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        - text: " "
+        - text: 'L''abeille avancera et récoltera un nectar des fleurs numéro 1 et
+            4. '
           feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
             quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
         markdown: Ah! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus simple!
@@ -5322,7 +5334,7 @@ fr-FR:
           feedback: Incorrect. Les avions sont disposés de telle sorte qu'ils ne peuvent
             pas se toucher.
         questions:
-        - text: 'Lisez le code, puis faites une prédiction. '
+        - text: 'Lis le code, puis fais une prédiction. '
       courseF_variables_predict_multi:
         answers:
         - text: 'Le programme imprimera "Bonjour nom !" '
@@ -5333,7 +5345,7 @@ fr-FR:
           feedback: 'Correct ! Ce que vous tapez est utilisé à la place du bloc de
             nom. '
         - text: Le sprite changera de taille.
-          feedback: 'Incorrect. '
+          feedback: 'Incorrect. Le texte est imprimé à l''écran. '
         - text: 'L''ordinateur posera une autre question. '
           feedback: 'Incorrect. Une seule question est posée, dès le début du programme. '
         questions:
@@ -5537,3 +5549,23 @@ fr-FR:
         description: 'Vous êtes sur le point de commencer votre projet final. Avant
           de commencer, prenez le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
+      SimonSays-Unplugged_2021:
+        markdown: "# Suivez l'algorithme\n\nJouez à un jeu et réfléchissez aux commandes
+          nécessaires pour obtenir le bon résultat. "
+      courseF_sprites_practice:
+        description: 'Excellent travail jusqu''à présent ! Choisis ta prochaine activité.
+          Remplis-en autant que tu peux. Continue à t''entraîner avec les sprites
+          et les comportements ! '
+        display_name: Entraînement avec les sprites
+        teacher_markdown: |+
+          # Aperçu du niveau de choix
+          Les niveaux de choix fournissent un menu de niveaux supplémentaires à compléter par les étudiants. Ils doivent terminer au moins un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent ou que vous le souhaitez.
+
+          Vous pouvez utiliser les descriptions ci-dessous pour aider les élèves à choisir eux-mêmes leurs choix ou pour définir des attentes concernant le nombre de sous-niveaux qu'ils doivent terminer.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Desert Scene|Resize the fruit.|Animate a Sailing Ship|A Breezy Day|
+          |-|-|-|-|-|
+          | ***Type*** |**Review**|**Review**|**Review**|**Review**|
+          | ***Concept***|*sprites, locations*|*sprites, properties*|*sprites, locations, behaviors*|*behaviors*|
+
+

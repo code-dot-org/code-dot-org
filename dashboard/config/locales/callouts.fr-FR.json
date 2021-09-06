@@ -1650,7 +1650,7 @@
           "courseF_bee_functions_1_2018_1": "Tu peux trouver tes variables ici, dessous !\n"
         },
         "courseF_events_predict": {
-          "behaviors_edit": "Clique ici pour voir comment ce comportement fonctionne.\n"
+          "behaviors_edit": "Clique ici pour voir comment ce comportement fonctionne."
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Après avoir enclenché tous les blocs ensemble, appuie sur « Exécuter » pour lancer ton programme."
@@ -1659,8 +1659,8 @@
           "express_maze_debugging9_2019_1": "Glisse les blocs de la boîte à outils dans ton espace de travail.\n"
         },
         "courseF_apps_aquarium": {
-          "run_button": "Appuyez d'abord sur le bouton Exécuter ! ",
-          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+          "run_button": "Appuie d'abord sur le bouton Exécuter ! ",
+          "visualizationResizeBar": "Fais glisser les 3 points pour redimensionner la zone de jeu. "
         },
         "courseF_apps_card": {
           "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
@@ -1670,8 +1670,8 @@
           "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
         },
         "courseF_apps_collector": {
-          "run_button": "Appuyez d'abord sur le bouton Exécuter ! ",
-          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+          "run_button": "Appuie d'abord sur le bouton Exécuter ! ",
+          "visualizationResizeBar": "Fais glisser les 3 points pour redimensionner la zone de jeu. "
         },
         "courseF_apps_madlib": {
           "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
@@ -1690,10 +1690,10 @@
           "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
         },
         "courseF_sprites_make": {
-          "sprites_category": "Cliquez ici pour ouvrir la catégorie Sprites. "
+          "sprites_category": "Clique ici pour ouvrir la catégorie Sprites. "
         },
         "courseF_sprites_positioning": {
-          "locations_category": "Cliquez ici pour ouvrir la catégorie Emplacements. "
+          "locations_category": "Clique ici pour ouvrir la catégorie Emplacements. "
         },
         "courseF_events_key": {
           "whenKey": "Utilisez le nouveau bloc d'événement trouvé ici. "
@@ -1763,11 +1763,11 @@
         "courseA_EOC_playlab_people": {
           "question_mark": "?"
         },
-        "courseF_sprites_behaviors": {
-          "behaviors_category": "Cliquez ici pour ouvrir la catégorie Emplacements. "
-        },
         "courseF_sprites_properties": {
-          "sprites_category2": "Recherchez un nouveau bloc ici ! "
+          "sprites_category2": "Recherche un nouveau bloc ici ! "
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Clique ici pour ouvrir la catégorie Comportements. "
         }
       }
     }

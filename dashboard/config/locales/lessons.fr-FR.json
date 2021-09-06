@@ -49,7 +49,8 @@
           "student_overview": "Exécute des simulations sur l'ordinateur et expérimente en changeant les variables."
         },
         "coursef-2021/lesson-5": {
-          "preparation": ""
+          "preparation": "",
+          "purpose": "Dans la leçon précédente, les élèves ont collecté et interprété les données d'une simulation simple. Dans cette leçon, les ils suivront des instructions pour coder leur propre modèle de simulation. Les connaissances préalables des élèves sur les épidémies de virus dans le monde réel seront appliquées à un scénario fictif. "
         },
         "coursef-2021/Internet": {
           "overview": "Même si beaucoup de gens utilisent internet quotidiennement, peu savent comment cela fonctionne. Dans cette leçon, les élèves feront semblant de circuler sur internet, tout en apprenant sur les connexions, les URL, les adresses IP et le DNS.",

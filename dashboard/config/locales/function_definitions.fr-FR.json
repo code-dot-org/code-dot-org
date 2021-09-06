@@ -3870,6 +3870,18 @@
               "length": "longueur",
               "sides": "côtés"
             }
+          },
+          "small flower": {
+            "name": "petite fleur"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FLEURS LOGIQUES2 "
+          },
+          "LOGIC FLOWER": {
+            "name": "FLEUR LOGIQUE"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FLEURS LOGIQUES"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {

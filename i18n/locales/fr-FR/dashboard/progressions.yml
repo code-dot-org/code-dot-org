@@ -36,6 +36,7 @@ fr:
       'Challenge: Making Sense of Sensors': 'Défi : Donner du sens aux capteurs'
       'Challenge: Updating Variables': 'Défi : Mettre des variables à jour'
       Challenges: Défis
+      Chance: Chance
       Changing Screens: Changer d’écran
       Changing Sensor Scale: Modifier l’échelle des capteurs
       'Circuit Playground: Buzzer': 'Circuit Playground : Buzzer'
@@ -56,6 +57,7 @@ fr:
       Create a Story: Créez une histoire
       Create your project: Créez votre projet
       Creating Sprites: Créer des sprites
+      Creating a Simulation: Codage d'une simulation
       Creative Commons Search: Recherche sur la licence Creative Commons
       Dance Crews: Équipes de danse
       Debugging: Le Débogage
@@ -75,7 +77,7 @@ fr:
       Events: Événements
       Exploration: Exploration
       'Exploration: Adding Style': 'Exploration : Ajout de style'
-      'Exploration: For Loops': ' Boucles « Pour »'
+      'Exploration: For Loops': 'Exploration: Boucles « Pour »'
       'Exploration: Sample Apps': ' Exemples d''Aplications'
       Explore HTML: Explorer le HTML
       Finish a Screen: Terminer l'écran
@@ -113,6 +115,7 @@ fr:
       Keeping Data Secret: Garder les Données Secrètes
       Keyboard Input: Entrée Au Clavier
       Layout Properties: Propriétés de la mise en page
+      Learning from Simulations: Apprendre à l'aide des simulations
       Lesson Extras: Les Extras de la Leçon
       Lesson Overview: Aperçu de la leçon
       Linking Pages: Relier des Pages
@@ -129,6 +132,7 @@ fr:
       Modifying Arrays: Modifier et créer des tableaux
       Modifying and Creating Arrays: Modifier et créer des tableaux
       More Buttons: Plus de boutons
+      More Monsters: Plus de Monstres
       Multi-Screen Apps: Applications Multi-Écrans
       My Online Neighborhood: Mon Quartier en Ligne
       Naming Variables: Nommer les variables
@@ -138,6 +142,7 @@ fr:
       Plane Jumper: Saut d’avion
       Planning: Planifier
       Polling Events: Attendre les évènements
+      Programming with Events: La Programmation avec les événements
       Programming with Rey and BB-8: Programmer avec Rey et BB-8
       Project: Projet
       Project - Finishing Touches: Projet - Finitions
@@ -145,6 +150,7 @@ fr:
       Quarter Notes: Noires
       RGB Widget: Widget RVB
       Random Numbers: Nombres aléatoires
+      Recovery: Récupération
       Reflection: Réflexion
       Representing Images: Représenter des Images
       Responding to User Input: Répondre à l’entrée de l’utilisateur
@@ -158,7 +164,8 @@ fr:
       Sample Program: Programme d’exemple
       Sensor Experiment: Expérience des capteurs
       Shapes and Parameters: Formes et paramètres
-      Skill Building: Labo des Lutins
+      Share Your Message: Partager Ton Message
+      Skill Building: Renforcement Des Compétences
       Speed it Up, Slow it Down: Accélére la, ralenti la
       Sprite Interactions: Interactions de sprite
       Sprite Interactions Review: Révision des interactions de sprite
@@ -176,6 +183,7 @@ fr:
       Tour of Design Mode: Visite du mode création
       Using the Grid: Utiliser la grille
       Using the Repeat Block: Utiliser le Bloc Répéter
+      Vaccines: Les vaccins
       Variables: variables
       Velocity: Vitesse
       Velocity and the Counter Pattern: Vélocité et le contre-modèle
@@ -191,6 +199,7 @@ fr:
       'Video: Drawing in Game Lab - Part 1': 'Vidéo : Dessiner dans le labo des jeux - Partie 1'
       'Video: Drawing in Game Lab - Part 2': 'Vidéo : Dessiner dans le labo des jeux - Partie 2'
       'Video: Events': ' Événements'
+      'Video: For Loops': 'Video: Boucles « Pour »'
       'Video: Harvesting with Conditionals': ' Récolter avec les Conditions'
       'Video: If/Else Statements': 'Vidéo : Instructions conditionnelles'
       'Video: Intro to Web Lab - Part 1': 'Vidéo : Introduction au labo du web - Partie 1'
@@ -218,6 +227,7 @@ fr:
       'Video: What Makes a Computer, a Computer?': 'Vidéo : De quoi est fait un ordinateur ?'
       'Video: While Loops with the Farmer': ' Les Boucles Tant Que avec la Fermière'
       Warm Up: Warm-up (Séance d’échauffement)
+      Welcome to Monster Town: Bienvenue à Monster Town
       Where'd They Go?: Où iraient-ils ?
       While Loops with the Farmer: Les Boucles Tant Que avec la Fermière
       Wrap-up: Résumé et ouverture

@@ -5055,7 +5055,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             'Functions with Parameters: Songwriting with Parameters':
               name: 'Les Fonctions avec Paramètres : L''Écriture Musicale avec des
                 Paramètres'
@@ -5397,13 +5397,13 @@ fr:
             Physical Input:
               name: Entrée physique
             List and For Loops:
-              name: Liste et boucles Pour
+              name: Liste et Boucles « Pour »
             'Project: Board Output':
               name: 'Projet: Utilisation du circuit comme sortie'
             For Loops with UI and Board:
               name: Boucle Pour avec le circuit et une interface utilisateur
             Lists and For Loops:
-              name: Listes et boucles Pour
+              name: Listes et Boucles « Pour »
             Analog Input:
               name: Entrée analogique
             Polling Events:
@@ -5433,7 +5433,7 @@ fr:
             Making Music:
               name: Créer de la Musique
             Arrays and For Loops:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
             Circuits and Physical Prototypes:
               name: Circuits et prototypes physiques
             Accelerometer:
@@ -5705,7 +5705,7 @@ fr:
                 utilisent leur connaissance dans App Lab pour écrire des programmes
                 avec des répétitions utilisant des boucles _pour_.
             Lists and For Loops:
-              name: Listes et boucles Pour
+              name: Listes et Boucles « Pour »
               description_student: En combinant _listes_ et boucles _pour_, vous pouvez
                 écrire des programmes qui utilisent tous les éléments d'une liste,
                 quelle que soit sa longueur. La classe utilise cette structure pour
@@ -5902,7 +5902,7 @@ fr:
                 jouer des notes en utilisant le buzzer, utilisez un tableau pour jouer
                 des séquences de notes représentant une mélodie.
             Arrays and For Loops:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
               description_student: En combinant _listes_ et boucles _pour_, vous pouvez
                 écrire des programmes qui utilisent tous les éléments d'une liste,
                 quelle que soit sa longueur. La classe utilise cette structure pour
@@ -6113,7 +6113,7 @@ fr:
                 jouer des notes en utilisant le buzzer, utilisez un tableau pour jouer
                 des séquences de notes représentant une mélodie.
             Arrays and For Loops_:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
               description_student: En combinant _listes_ et boucles _pour_, vous pouvez
                 écrire des programmes qui utilisent tous les éléments d'une liste,
                 quelle que soit sa longueur. La classe utilise cette structure pour
@@ -7446,7 +7446,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Conditionals and Functions in Bee:
@@ -7779,7 +7779,7 @@ fr:
                 en utilisant des boucles for pour résoudre, plus efficacement, des
                 problèmes compliqués.
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre.
                 Ici, tu utiliseras des boucles `pour` pour faire des images à couper
                 le souffle.
@@ -8440,7 +8440,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Functions in Bee:
@@ -8866,7 +8866,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             'Functions: Songwriting with Parameters':
               name: 'Les Fonctions : L''Écriture Musicale avec des Paramètres'
             Functions in Bee:
@@ -9017,7 +9017,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Functions in Bee:
@@ -9545,7 +9545,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Functions in Bee:
@@ -9589,7 +9589,7 @@ fr:
             For Loops:
               name: Boucles « Pour »
             Lists and For Loops:
-              name: Listes et boucles Pour
+              name: Listes et Boucles « Pour »
             Timed Loops:
               name: Boucles temporisées
             'Project: Board Output':
@@ -10521,9 +10521,9 @@ fr:
             'For Loops: For Loop Fun':
               name: 'Les Boucles Pour : S''amuser avec la Boucle Pour'
             For Loops in Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
             For Loops in Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
             'Functions: Songwriting with Parameters':
               name: 'Les Fonctions : L''Écriture Musicale avec des Paramètres'
             Functions in Bee:
@@ -10746,7 +10746,7 @@ fr:
             Using Behaviors:
               name: Utiliser les Comportements
             Using Forever Loops:
-              name: Utiliser les Boucles Pour Toujours
+              name: Utiliser les Boucles « Pour Toujours »
             Virtual Pet - Behaviors:
               name: Animaux de Compagnie Virtuels - Les Comportements
             Fish Tank:
@@ -10937,7 +10937,7 @@ fr:
             Making Music_:
               name: Faire De La Musique\_
             Arrays and For Loops_:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »\_
             Accelerometer_:
               name: Accéléromètre\_
             Functions with Parameters_:
@@ -10969,7 +10969,7 @@ fr:
             Making Music:
               name: Créer de la Musique
             Arrays and For Loops:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
             Accelerometer:
               name: Accéléromètre
             Functions with Parameters:
@@ -11360,7 +11360,7 @@ fr:
                 Ces nouvelles structures permettront aux élèves de créer du code plus
                 puissant et plus dynamique. '
             For Loops in Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille
                 vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les
@@ -11370,7 +11370,7 @@ fr:
                 en utilisant des boucles for pour résoudre, plus efficacement, des
                 problèmes compliqués.
             For Loops in Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre.
                 Ici, tu utiliseras des boucles `pour` pour faire des images à couper
                 le souffle.
@@ -13800,7 +13800,7 @@ fr:
                 Ces nouvelles structures permettront aux élèves de créer du code plus
                 puissant et plus dynamique. '
             For Loops in Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille
                 vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les
@@ -13809,7 +13809,7 @@ fr:
                 revoir les boucles des leçons précédentes, puis seront initiés aux
                 boucles `for` afin de résoudre, plus efficacement, des problèmes compliqués.
             For Loops in Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre.
                 Ici, tu utiliseras des boucles `pour` pour faire des images à couper
                 le souffle.
@@ -14714,9 +14714,9 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
             For Loops in Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
             For Loops in Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
             Learning Sprites with Sprite Lab:
               name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
@@ -16973,7 +16973,7 @@ fr:
             Making Music:
               name: Créer de la Musique
             Arrays and For Loops:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
             Accelerometer:
               name: Accéléromètre
             Functions with Parameters:
@@ -21377,7 +21377,7 @@ fr:
             Making Music:
               name: Créer de la Musique
             Arrays and For Loops:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
             Accelerometer:
               name: Accéléromètre
             Functions with Parameters:
@@ -22577,7 +22577,7 @@ fr:
                 Ces nouvelles structures permettront aux élèves de créer du code plus
                 puissant et plus dynamique. '
             For Loops in Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille
                 vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les
@@ -22586,7 +22586,7 @@ fr:
                 revoir les boucles des leçons précédentes, puis seront initiés aux
                 boucles `for` afin de résoudre, plus efficacement, des problèmes compliqués.
             For Loops in Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre.
                 Ici, tu utiliseras des boucles `pour` pour faire des images à couper
                 le souffle.
@@ -22753,7 +22753,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             Learning Sprites with Sprite Lab:
               name: Découvrir les Lutins avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
@@ -22795,9 +22795,9 @@ fr:
             Changing Variables with Artist:
               name: Modifier des Variables avec l'Artiste
             For Loops with Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
             For Loops with Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
             Swimming Fish in Sprite Lab:
               name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party:
@@ -23650,6 +23650,8 @@ fr:
               name: Les Lutins en Action
             End of Course Project:
               name: Fin du projet.
+            Outbreaklab:
+              name: Laboratoire autonome d'épidémie
           lesson_groups:
             introduction:
               display_name: Introduction
@@ -24091,8 +24093,8 @@ fr:
               key: Créer de la Musique
               name: Créer de la Musique
             Arrays and For Loops:
-              key: Tableaux et boucles Pour
-              name: Tableaux et boucles Pour
+              key: Tableaux et boucles « Pour »
+              name: Tableaux et boucles « Pour »
               description_teacher: L'utilisation d'une boucle _pour_ pour parcourir
                 tous les éléments d'un tableau est une construction très utile dans
                 la plupart des langages de programmation. Dans cette leçon, les élèves
@@ -25518,7 +25520,7 @@ fr:
                 puissant et plus dynamique.
             For Loops in Bee:
               key: Les Boucles Pour dans l'Abeille
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille
                 vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les
@@ -25527,8 +25529,8 @@ fr:
                 revoir les boucles des leçons précédentes, puis seront initiés aux
                 boucles `for` afin de résoudre, plus efficacement, des problèmes compliqués.
             For Loops in Artist:
-              key: Les Boucles Pour dans l'Artiste
-              name: Les Boucles For avec l'Artiste
+              key: Les Boucles « Pour » dans l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre.
                 Ici, tu utiliseras des boucles `for` pour faire des images à couper
                 le souffle.
@@ -25581,6 +25583,8 @@ fr:
               name: Faire des sprites
             lesson-8:
               name: Les Lutins en Action
+            lesson-5:
+              name: Épidémie
             lesson-2:
               name: Le Pouvoir des Mots
               description_student: Le harcèlement n'est jamais acceptable. Cette leçon
@@ -25798,8 +25802,8 @@ fr:
               description_student: Dans cette leçon, tu vas faire des dessins en utilisant
                 des variables qui changent au fur et à mesure que le programme s'exécute.
             For Loops with Bee:
-              key: Les Boucles Pour avec l'Abeille
-              name: Les Boucles Pour avec l'Abeille
+              key: Les Boucles « Pour » avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille
                 vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les
@@ -25808,8 +25812,8 @@ fr:
                 revoir les boucles des leçons précédentes, puis seront initiés aux
                 boucles `for` afin de résoudre, plus efficacement, des problèmes compliqués.
             For Loops with Artist:
-              key: Les Boucles For avec l'Artiste
-              name: Les Boucles For avec l'Artiste
+              key: Les Boucles « Pour » avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre.
                 Ici, tu utiliseras des boucles `for` pour faire des images à couper
                 le souffle.
@@ -26820,6 +26824,15 @@ fr:
               display_name: Leçon 4
             Lesson 5:
               display_name: Leçon 5
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: Épidémie à Monster Town
+          lesson_groups:
+            Outbreak Module:
+              display_name: Module d'épidémie
+          name: Module d'épidémie
+          title: Module d'épidémie\_V2
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -26843,6 +26856,11 @@ fr:
             temps et ta considération.
         aiml-2021:
           lessons:
+            lesson9:
+              description_teacher: |-
+                Dans cette leçon, les élèves participent à une activité « déconnectée » simulant une épidémie de zombies. Ils doivent prédire quelles parties de la ville auront le moins de zombies en exploitant les données d’une ville voisine. À l’aide des degrés de similitude et des moyennes, ils pourront faire des prédictions sur le nombre de zombies à un endroit particulier. Ensuite, les ils devront comparer leurs prédictions aux chiffres réels afin d’observer et de définir ensemble comment évolue le niveau de précision entre données numériques et données catégorielles.
+
+                \*\*La question du jour : \*\* Comment les ordinateurs apprennent-ils à faire des prédictions avec des données numériques ?
             lesson-22:
               name: Concevoir la Collecte de Données
           lesson_groups:
@@ -26850,6 +26868,11 @@ fr:
               display_name: Enquête
         csd7-2021:
           lessons:
+            Similarity Models:
+              description_teacher: |-
+                Dans cette leçon, les élèves participent à une activité « déconnectée » simulant une épidémie de zombies. Ils doivent prédire quelles parties de la ville auront le moins de zombies en exploitant les données d’une ville voisine. À l’aide des degrés de similitude et des moyennes, ils pourront faire des prédictions sur le nombre de zombies à un endroit particulier. Ensuite, les ils devront comparer leurs prédictions aux chiffres réels afin d’observer et de définir ensemble comment évolue le niveau de précision entre données numériques et données catégorielles.
+
+                \*\*La question du jour : \*\* Comment les ordinateurs apprennent-ils à faire des prédictions avec des données numériques ?
             Survey Planning:
               name: Concevoir la Collecte de Données
           lesson_groups:
@@ -26980,6 +27003,9 @@ fr:
               name: 'Unité 2 : Développement Web'
             lesson-6:
               name: Les Données et la Société
+        outbreak-module:
+          name: module-d'épidémie
+          title: Épidémie
         csa1-exemplars:
           lessons:
             lesson-20:
@@ -27019,6 +27045,12 @@ fr:
           lessons:
             lesson-2:
               name: Leçon 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Processus 1
+            lessonGroup-3:
+              display_name: Processus 2
         dlp21-csp-mod1:
           title: CS Principles Apprentissage Approfondi Module 1
         dlp21-csd:
