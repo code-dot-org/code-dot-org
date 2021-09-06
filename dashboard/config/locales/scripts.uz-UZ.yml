@@ -27558,6 +27558,12 @@ uz:
           lessons:
             lesson-2:
               name: 2-dars
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-bosqich
+            lessonGroup-3:
+              display_name: 2-bosqich
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
