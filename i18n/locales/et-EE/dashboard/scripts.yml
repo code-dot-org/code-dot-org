@@ -1,4 +1,3 @@
----
 et:
   data:
     script:
@@ -178,7 +177,7 @@ et:
           student_description: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega avastada jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid uisutamise ajal ning moodustad talvekuningriigi, mida saad jagada kõigi oma sõpradega!
         course4:
           title: Kursus 4
-          description: 4.  kursus on mõeldud õpilastele, kes on läbinud kursused 2 ja 3. Õpilased õpivad, kuidas lahendada järjest keerulisemaid probleeme ning nad õpivad iga ülesande lahendamisel, kuidas kombineerida mitut erinevat kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
+          description: 4. kursus on mõeldud õpilastele, kes on läbinud kursused 2 ja 3. Õpilased õpivad, kuidas lahendada järjest keerulisemaid probleeme ning nad õpivad iga ülesande lahendamisel, kuidas kombineerida mitut erinevat kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
           description_short: Ehita keerulisemaid programme koos trüklite ja parameetritega ja parameetritega funktsioonid. See on järg Kursus 3le.
           description_audience: Vanustele 10-18
           lessons:
@@ -226,7 +225,7 @@ et:
               name: 'Unplugged: Laulukirjutamine parameetritega'
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrammid'
-          student_description: 4.  kursus on mõeldud õpilastele, kes on läbinud kursused 2 ja 3. Õpilased õpivad, kuidas lahendada järjest keerulisemaid probleeme ning nad õpivad iga ülesande lahendamisel, kuidas kombineerida mitut erinevat kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
+          student_description: 4. kursus on mõeldud õpilastele, kes on läbinud kursused 2 ja 3. Õpilased õpivad, kuidas lahendada järjest keerulisemaid probleeme ning nad õpivad iga ülesande lahendamisel, kuidas kombineerida mitut erinevat kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
         Course4pre:
           title: Kursuse 4 Ettevalmistus
           description: Väike kokkuvõte Kursuse 2 ja 3 põhimõtetest, õpilastele kes pole neid võtnud veel.
@@ -483,7 +482,7 @@ et:
             Creating Functions:
               name: Loomisfunktsioonid
             While Loops:
-              name: "„Kui“ tsüklid"
+              name: '„Kui“ tsüklid'
         algebraPD3:
           lessons:
             Course Overview:
@@ -632,6 +631,12 @@ et:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Tere tulemast!
             Wrap-up:
@@ -677,6 +682,12 @@ et:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Tere tulemast!
             Wrap-up:
@@ -686,6 +697,12 @@ et:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Tere tulemast!
             Wrap-up:
@@ -763,7 +780,7 @@ et:
         cspunit3temp:
           lessons:
             While Loops:
-              name: "„Kui“ tsüklid"
+              name: '„Kui“ tsüklid'
         gumball:
           title: Gumballi Play Lab
           description: Loo lugu või mäng Gumballi Play Labiga!
@@ -879,7 +896,7 @@ et:
               display_name: Uuring
           lessons:
             While Loops:
-              name: "„Kui“ tsüklid"
+              name: '„Kui“ tsüklid'
         CSDU3-Draft:
           lessons:
             Functions:
@@ -1005,6 +1022,12 @@ et:
               name: 'Unplugged: Laulukirjutamine parameetritega'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Tere tulemast!
             Wrap-up:
@@ -1104,7 +1127,7 @@ et:
             Variables:
               name: Muutujad
             While Loops:
-              name: "„Kui“ tsüklid"
+              name: '„Kui“ tsüklid'
         algebrapdnext:
           lessons:
             Teacher Dashboard:
@@ -1394,7 +1417,7 @@ et:
             Functions:
               name: Funktsioonid
             'null':
-              name: tühi
+              name: 'tühi'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1657,7 +1680,7 @@ et:
           description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga.
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft: Kangelase teekond KoodiTund'
+              name: 'Minecraft\: Kangelase teekond KoodiTund'
             Minecraft Hour of Code:
               name: Minecrafti KoodiTund
           student_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga.
@@ -1833,7 +1856,7 @@ et:
               display_name: Uuring
           lessons:
             Functions with Parameters_:
-              name: Parameetritega funktsioonid\_
+              name: Parameetritega funktsioonid_
             Functions with Parameters:
               name: Parameetritega funktsioonid
         coursee-2018:
@@ -1927,7 +1950,7 @@ et:
               display_name: Uuring
           lessons:
             While Loops:
-              name: "„Kui“ tsüklid"
+              name: '„Kui“ tsüklid'
         csppostap-2018:
           lesson_groups:
             cspSurvey:
@@ -2218,7 +2241,7 @@ et:
               display_name: Sisu
           lessons:
             'null':
-              name: tühi
+              name: 'tühi'
         dance-extras-gallery:
           title: Tantsi edasi
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
@@ -2375,7 +2398,7 @@ et:
               display_name: Uuring
           lessons:
             While Loops:
-              name: "„Kui“ tsüklid"
+              name: '„Kui“ tsüklid'
         csp-explore-2019:
           lesson_groups:
             cspSurvey:
@@ -2911,7 +2934,7 @@ et:
         csp5-virtual:
           lessons:
             While Loops:
-              name: "„Kui“ tsüklid"
+              name: '„Kui“ tsüklid'
             Variables:
               name: Muutujad
         virtual-holding-place:
@@ -2932,7 +2955,7 @@ et:
         csp5-virtual-part2:
           lessons:
             While Loops:
-              name: "„Kui“ tsüklid"
+              name: '„Kui“ tsüklid'
         k5-onlinepd-2020:
           lessons:
             Loops:
@@ -3288,6 +3311,14 @@ et:
               display_name: Sissejuhatus
             Introduction:
               display_name: Sissejuhatus
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Õppetund 3
+            Lesson 4:
+              display_name: Õppetund 4
+            Lesson 5:
+              display_name: Õppetund 5
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -3335,6 +3366,12 @@ et:
           lessons:
             lesson-3:
               name: Test
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Etapp 1
+            lessonGroup-3:
+              display_name: Etapp 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
