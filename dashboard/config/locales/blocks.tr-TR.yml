@@ -1481,6 +1481,11 @@ tr:
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
+      Mikelab_setupOutbreak:
+        text: |-
+          salgın düzeni
+          nüfus:{SPRITE2N}
+          {TOGGLE}virüs
       Mikelab_setupSim:
         text: |-
           ile kurulum simülasyonu
@@ -1554,6 +1559,26 @@ tr:
         text: x {SPRITE} koordinatı
       Mikelab_yLocationOf:
         text: y koordinatı {SPRITE}
+      Outbreak_beginCongregating:
+        text: canavarlar toplanmaya başlar
+      Outbreak_beginQuarantining:
+        text: canavarlar hastalandığında karantinaya girer
+      Outbreak_beginSocialDistancing:
+        text: canavarlar sosyal mesafeye uymaya başlar
+      Outbreak_beginWandering:
+        text: canavarlar dolaşmaya başlar
+      Outbreak_beginWearingMasks:
+        text: canavarlar maske takmaya başlar
+      Outbreak_layoutBorder:
+        text: canavarları bir sınıra yerleştir
+      Outbreak_layoutClusters:
+        text: canavarları {NUM} küme olarak yerleştir
+      Outbreak_layoutGrid:
+        text: canavarları ızgara şeklinde yerleştir
+      Outbreak_layoutRandom:
+        text: canavarları rastgele yerleştir
+      Outbreak_stopMoving:
+        text: canavarlar hareket etmeyi bırakıyor
       PoemBot_setBackgroundEffect:
         text: arka plan efektini {BG_EFFECT} [PALETTE][1] olarak ayarla
         options:

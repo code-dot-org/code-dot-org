@@ -3269,7 +3269,6 @@
         "courseC_artist_prog6_2021": "Kenarları 200 piksel olan bu baklava şeklini çizin.",
         "courseC_artist_prog8_2021": "Bir künye daha. Bu, Pi için bir üçgen.\n(Kenarları 150 piksel)",
         "courseC_artist_prog_challenge1_2021": "Hayvanların her biri için oda çizin. ",
-        "courseC_artist_prog_challenge2a_2021": "_\"Bu yoldaki sarı çizgileri boyamama yardım et!\"_",
         "courseC_collector_loops_challenge2_2021": "En az **5** adet hazine toplayın!",
         "courseC_collector_prog1_2021": "Bloklarla oynayarak, Laurel'ın birkaç hazine toplamasına yardım etmeye çalışın.",
         "courseC_collector_prog2_2021": "Laurel'ı hazineye yönlendirin, sonra hazineyi almak için şunu kullanın: \"topla\"",
@@ -3564,7 +3563,9 @@
         "ramp_artist_loops6_2021": "Bu merdiven çizmek için döngüyü düzenleyin.",
         "ramp_artist_loops7_2021": "Tekrarlayan deseni bulun ve kodu daha kısa yapın!",
         "ramp_artist_loops8_2021": "Tekrarlayan deseni bulun ve kodu daha kısa yapın.",
-        "ramp_artist_loops9_2021": "Bir kare çizerek bu bulmacayı çöz,."
+        "ramp_artist_loops9_2021": "Bir kare çizerek bu bulmacayı çöz,.",
+        "outbreak_freeplay": "Projenizde istediğiniz değişiklikleri veya iyileştirmeleri yapın.",
+        "outbreak_freeplay_basic": "Projenizde istediğiniz değişiklikleri veya iyileştirmeleri yapın."
       }
     }
   }

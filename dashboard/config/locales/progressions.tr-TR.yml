@@ -62,7 +62,7 @@ tr:
       Create a Story: Hikaye oluştur
       Create your project: Proje Oluştur
       Creating Sprites: Hareketliler Oluşturuluyor
-      Creating a Simulation: Simülasyon oluştur
+      Creating a Simulation: Simülasyon Oluşturuluyor
       Creative Commons Search: Kamu Telif Hakkı Araması
       Dance Crews: Dans Ekipleri
       Data Visualization: Veri görselleştirmeleri
@@ -130,6 +130,7 @@ tr:
       Introduction to Arrays: Dizilere Giriş
       Introduction to Game Lab: Oyun Laboratuvarı'na Giriş
       Iteration and Parameters: Tekrarlama ve Parametreler
+      Keep On Dancing!: Dans Etmeye Devam!
       Keeping Data Secret: Verileri Gizli Tutmak
       Keyboard Input: Klavye girişi
       LED Apps: LED Uygulamaları
@@ -153,6 +154,7 @@ tr:
       'Mini-Project: About Me': Ben ve Hareketli Nesne Laboratuvarı Hakkında
       'Mini-Project: Alien Dance Moves': 'Mini Proje: Uzaylı Dansı Hareketleri'
       'Mini-Project: Alien Dance Party': 'Mini Proje: Uzaylı Dans Partisi'
+      'Mini-Project: Outbreak Simulator': 'Mini Proje: Salgın Simülatörü'
       'Mini-Project: Royal Battle': 'Mini Proje: Kraliyet Savaşı'
       'Mini-Project: Snowflake #1': 'Mini Proje: Kar Tanesi # 1'
       'Mini-Project: Snowflake #2': 'Mini Proje: Kar Tanesi #2'
@@ -207,7 +209,7 @@ tr:
       RGB Widget: RGB
       Random Numbers: Rastgele Sayılar
       Reading Sensors: Okuma Sensörleri
-      Recovery: Kurtarma
+      Recovery: İyileşme
       Reflection: Yansıma
       Repeat Blocks: Tekrarlanan Bloklar
       Repeat Blocks with BB-8: BB-8 ile Blokları Tekrarla
@@ -229,7 +231,7 @@ tr:
       Shapes and Parameters: Şekiller ve Parametreler
       Shapes and the Draw Loop: Şekiller ve Çizim Döngüsü
       Share Your App: Uygulamanızı Paylaşın
-      Share Your Message: Mesajınızı paylaşın
+      Share Your Message: Mesajınızı Paylaşın
       Side Scroller: Yan Kaydırıcı
       Simple Circuits: Basit Devreler
       Skill Building: Beceri Oluşturma
@@ -280,7 +282,7 @@ tr:
         yapan nedir?'
       Warm Up: Isınmak
       Website Project: Web Sitesi Projesi
-      Welcome to Monster Town: Monster Town'a hoş geldiniz
+      Welcome to Monster Town: Canavar Şehri'ne Hoş Geldiniz
       Where'd They Go?: Nereye Gittiler?
       While Loops with the Farmer: Çiftçi Döngüleri
       Wrap-up: Özet

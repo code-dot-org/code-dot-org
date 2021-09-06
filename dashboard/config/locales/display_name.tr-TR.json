@@ -553,7 +553,7 @@
         "outbreak6": "Rastgele Olasılık",
         "outbreak7": "Bağışıklık ve Aşılar",
         "outbreak8": "Mesaj Paylaşın",
-        "outbreak5": "Kurtarma",
+        "outbreak5": "İyileşme",
         "CDEF_video_SpritesInAction_2021": "Nesne Oluşturma",
         "CourseD_Dance_2020_bonus1_2021": "Geri ve ileri",
         "CourseD_Dance_2020_bonus3_2021": "Düzene Girelim",
@@ -567,7 +567,7 @@
         "CourseF_outbreak2": "Virüs Simülasyonu",
         "CourseF_outbreak3": "Virüs Simülasyonu",
         "CourseF_outbreak4": "Simülasyonunuzu Değiştirin",
-        "CourseF_outbreak5": "Kurtarma",
+        "CourseF_outbreak5": "İyileşme",
         "CourseF_outbreak6": "Rastgele Olasılık",
         "CourseF_outbreak7": "Bağışıklık ve Aşılar",
         "CourseF_outbreak8": "Mesaj Paylaşın",
@@ -595,7 +595,9 @@
         "courseF_sprites_freeplay_aquatic": "Su",
         "courseF_sprites_properties": "Nesne özellikleri",
         "ramp_artist_loops4_2021": "Yıldız",
-        "scrat_loops_C-F_video_2021": "Buz Devri Videosundaki Döngüler"
+        "scrat_loops_C-F_video_2021": "Buz Devri Videosundaki Döngüler",
+        "outbreak_freeplay": "Gelişmiş Araç Kutusu",
+        "outbreak_freeplay_basic": "Standart Araç Kutusu"
       }
     }
   }

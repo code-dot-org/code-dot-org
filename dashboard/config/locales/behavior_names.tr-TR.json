@@ -1077,15 +1077,15 @@
         },
         "outbreak1": {
           "wandering": "gezinme",
-          "recovering": "iyileşiyor"
+          "recovering": "iyileşme"
         },
         "outbreak2": {
           "wandering": "gezinme",
-          "recovering": "iyileşiyor"
+          "recovering": "iyileşme"
         },
         "outbreak3": {
           "wandering": "gezinme",
-          "recovering": "iyileşiyor"
+          "recovering": "iyileşme"
         },
         "outbreak4": {
           "wandering": "gezinme",
@@ -1100,16 +1100,16 @@
           "jittering": "kararsızlık",
           "moving west": "batıya ilerleme",
           "patrolling": "kontrol sağlama",
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "moving with arrow keys": "ok tuşları ile hareket"
         },
         "outbreak5": {
           "wandering": "gezinme",
-          "recovering": "iyileşiyor"
+          "recovering": "iyileşme"
         },
         "outbreak6": {
           "wandering": "gezinme",
-          "recovering": "iyileşiyor"
+          "recovering": "iyileşme"
         },
         "outbreak7": {
           "wandering": "gezinme",
@@ -1123,7 +1123,7 @@
           "jittering": "kararsızlık",
           "moving west": "batıya ilerleme",
           "patrolling": "kontrol sağlama",
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "moving left and right": "sola ve sağa hareket",
           "moving with arrow keys": "ok tuşları ile hareket"
         },
@@ -1139,7 +1139,7 @@
           "jittering": "kararsızlık",
           "moving west": "batıya ilerleme",
           "patrolling": "kontrol sağlama",
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "moving left and right": "sola ve sağa hareket",
           "moving with arrow keys": "ok tuşları ile hareket"
         },
@@ -1155,7 +1155,7 @@
           "jittering": "kararsızlık",
           "moving west": "batıya ilerleme",
           "patrolling": "kontrol sağlama",
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "moving left and right": "sola ve sağa hareket",
           "moving with arrow keys": "ok tuşları ile hareket"
         },
@@ -1188,7 +1188,7 @@
           "wandering": "gezinme"
         },
         "outbreak_freeplay_basic": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme",
           "moving east": "doğuya ilerleme",
           "spinning left": "sola dönme",
@@ -1302,19 +1302,19 @@
           "moving east and looping": "doğuya doğru hareket ve döngü"
         },
         "CourseF_outbreak1": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme"
         },
         "CourseF_outbreak2": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme"
         },
         "CourseF_outbreak3": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme"
         },
         "CourseF_outbreak4": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme",
           "moving east": "doğuya ilerleme",
           "spinning left": "sola dönme",
@@ -1330,15 +1330,15 @@
           "moving with arrow keys": "ok tuşları ile hareket"
         },
         "CourseF_outbreak5": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme"
         },
         "CourseF_outbreak6": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme"
         },
         "CourseF_outbreak7": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme",
           "moving east": "doğuya ilerleme",
           "spinning left": "sola dönme",
@@ -1354,7 +1354,7 @@
           "moving with arrow keys": "ok tuşları ile hareket"
         },
         "CourseF_outbreak8": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme",
           "moving east": "doğuya ilerleme",
           "spinning left": "sola dönme",

@@ -9605,9 +9605,7 @@
         },
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_a": "Tüm açıları 45 veya 90 derece.",
-          "courseC_artist_prog7_b": "İlk adımda her şey yolunda mı?\\\nPeki ikinci adımda?\\\nİşler nerede karışıyor?",
           "courseC_artist_prog7_c": "Hangi açıya ihtiyacınız olduğunu görmek için dönüş bloklarındaki açılır menüyü kullanabilirsiniz!",
-          "courseC_artist_prog7_d": "Şunları yapın:\n\n-   ilerle\n-   45 derece sağa dön\n-   ilerle\n-   90 derece sağa dön\n-   ilerle\n-   45 derece sağa dön\n\nBu deseni iki kez tekrarlayın!",
           "courseC_artist_prog7_e": "Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın."
         },
         "courseC_artist_prog_challenge1_2021": {
@@ -10074,8 +10072,7 @@
         },
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "İçerisinde ayrıca 'ilerle' bloğu olan bir başka 'tekrar'ın içerisindeki 'nektar al'ı tekrarlamanız gerekecek.",
-          "courseD_bee_nestedLoops7_b": "Bu bulmacayı çözmek için mevcut üç 'tekrar' bloğunun tamamını kullanmanız gerekecek.",
-          "courseD_bee_nestedLoops7_c": "Sahip olduğunuz üç bloğu aşağıdaki gibi iç içe yerleştirin:\n\n-   tekrar 4\n    -   tekrar 3\n        \\-tekrar 12\n            \\- nektar al\n        -   ilerle\n    -   sağa dön"
+          "courseD_bee_nestedLoops7_b": "Bu bulmacayı çözmek için mevcut üç 'tekrar' bloğunun tamamını kullanmanız gerekecek."
         },
         "courseD_bounce_events10s_2021": {
           "courseD_bounce_events10s_a": "Kodunda bu olayların ikisini de bulundurmalısın:\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">Hışırtı</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">Islık</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
@@ -10527,11 +10524,7 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "Atmanız gereken adım sayısı ve toplamanız gereken nektar sayısı arasında bir bağlantı bulabilir misiniz?",
           "courseF_bee_for10_b": "Birinci çiçek setinde toplamda **14 çiçek** vardır. Bu birinci sete ulaşmak için, arı **7 kare** aşağı doğru vızıldayarak uçmalıdır (veya 14 kare bölü 2). Sonraki sette kaç çiçek var ve buraya ulaşması için arının kaç kareyi geçmesi gerekli?",
-          "courseF_bee_for10_c": "Yapbozda ilk çiçek kümesinde \\*\\* 14 \\*\\* çiçek, ikinci kümede \\*\\* 10 \\*\\* çiçek, üçüncü kümesinde \\*\\* 6 \\*\\* çiçek, dördüncü kümesinde \\*\\* 2 \\*\\* çiçek bulunur.\n\nBu çizimde, \\*\\* 7 \\*\\* kırmızı kare, \\*\\* 5 \\*\\* turuncu kare, \\*\\* 3 \\*\\* yeşil kare ve \\*\\* 1 \\*\\* mavi blok bulunduğuna dikkat edin.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nSayılar nasıl ilişkilidir?",
           "courseF_bee_for10_d": "2 tekrara ihtiyacınız olacak, bunlardan biri bir matematik bloğunu kullanacak."
-        },
-        "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "12, 15'ten ne kadar azdır?\\\\\n\n9, 12'den ne kadar azdır?\n\nBir bağlantı görüyor musunuz?"
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "Bütün nektarı toplamak için 'tekrar' döngünüzün içinde iki kareye iktiyacınız olacak."
@@ -10562,8 +10555,7 @@
         },
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_a": "Döngünüz geriye doğru sayıyor ise, her seferinde artış, sayaç değişkeninize eklenir.",
-          "courseF_bee_for8_b": "Bu bulmacada, çiçeklere ulaşmak için bir merdiven basamağı deseninde hareket etmeniz gerekir.",
-          "courseF_bee_for8_c": "Döngünüz _3'ten 15'e_ belli bir artışla sayacak. Bu nedir?"
+          "courseF_bee_for8_b": "Bu bulmacada, çiçeklere ulaşmak için bir merdiven basamağı deseninde hareket etmeniz gerekir."
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "Sayaç değişkeni ile matematik hesabı yapmayı dene.\n\nToplaman gereken nektar miktarına eşit olması için her bir çiçekte sayaca ne yapmanız gerekli?",
