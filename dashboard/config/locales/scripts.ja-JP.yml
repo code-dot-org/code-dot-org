@@ -17967,6 +17967,14 @@ ja:
               display_name: '発展: コースEおよびF'
             Introduction:
               display_name: はじめに
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: レッスン3
+            Lesson 4:
+              display_name: レッスン4
+            Lesson 5:
+              display_name: レッスン5
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -18154,6 +18162,12 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ステージ 1
+            lessonGroup-3:
+              display_name: ステージ 2
         dlp21-csp-mod1:
           title: CS原則 詳細学習 モジュール1
         dlp21-csd:
