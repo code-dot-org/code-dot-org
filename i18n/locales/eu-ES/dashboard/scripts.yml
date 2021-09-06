@@ -1,4 +1,3 @@
----
 eu:
   data:
     script:
@@ -8,7 +7,7 @@ eu:
         other_category_name: Beste bat
       name:
         course1:
-          title: 1.  Kurtsoa
+          title: 1. Kurtsoa
           description: Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago. Ikasleek programazioko oinarrizko kontzeptuak ulertuko dituzte, beste batrzuekin lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak eta lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute, eta elkarbanatu.
           description_short: Hasi 1. kurtsoarekin irakurle goiztiarrekin.
           description_audience: 4-6 urte
@@ -51,7 +50,7 @@ eu:
               name: Gertaera Handia
           student_description: Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago. Ikasleek programazioko oinarrizko kontzeptuak ulertuko dituzte, beste batrzuekin lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak eta lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute, eta elkarbanatu.
         course2:
-          title: 2.  Kurtsoa
+          title: 2. Kurtsoa
           description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
           description_short: Hasi 2 kurtosarekin irakurtzen dakiten ikasleekin.
           description_audience: 6+ urte (Nahitaezko irakurketa)
@@ -96,9 +95,9 @@ eu:
               name: Zure aztarna digitala
           student_description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
         course3:
-          title: 3.  Kurtsoa
+          title: 3. Kurtsoa
           description: Hirugarren maila, bigarren maila egin duten ikasleentzat dago dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.
-          description_short: 3.  kurtsoa 2. kurtsoaren jarraipena da.
+          description_short: 3. kurtsoa 2. kurtsoaren jarraipena da.
           description_audience: 8-18 bitarteko adina
           lessons:
             Artist:
@@ -177,8 +176,8 @@ eu:
               name: Artista
           student_description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!
         course4:
-          title: 4.  Kurtsoa
-          description_short: 4.  kurtsoa egin ahal izateko, ikasleek 2, eta 3. kurtsoak eginda izan behar dituzte.
+          title: 4. Kurtsoa
+          description_short: 4. kurtsoa egin ahal izateko, ikasleek 2, eta 3. kurtsoak eginda izan behar dituzte.
           description_audience: 10-18 bitarteko adina
           lessons:
             Artist:
@@ -298,9 +297,7 @@ eu:
           title: Internet simulagailua
         20-hour:
           title: CS kurtsora sarrera azkarra
-          description: |-
-            20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
-            Gehiago ikasteko ikusi maila bereko gure ikastaroak!
+          description: "20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.\nGehiago ikasteko ikusi maila bereko gure ikastaroak!"
           description_short: 20 orduko ikastaro honek 2-4 kurtsotako informatikako eta programazioko oinarrizko kontzeptuak biltzen ditu.
           description_audience: 10-18 bitarteko adina
           lessons:
@@ -344,9 +341,7 @@ eu:
               name: labirintoa
             Wrap-up:
               name: Ixtea
-          student_description: |-
-            20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
-            Gehiago ikasteko ikusi maila bereko gure ikastaroak!
+          student_description: "20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.\nGehiago ikasteko ikusi maila bereko gure ikastaroak!"
         edit-code:
           title: Editatu kodea
           description: Editatu kodea
@@ -521,6 +516,12 @@ eu:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Ongi etorri!
             Wrap-up:
@@ -562,6 +563,12 @@ eu:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Ongi etorri!
             Wrap-up:
@@ -571,6 +578,12 @@ eu:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Ongi etorri!
             Wrap-up:
@@ -810,6 +823,12 @@ eu:
               name: 'Deskonektatua: abestiak idatzi aldagaiekin'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Ongi etorri!
             Wrap-up:
@@ -1083,7 +1102,7 @@ eu:
             Functions:
               name: Funtzioak
             'null':
-              name: baliogabea
+              name: 'baliogabea'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1425,7 +1444,7 @@ eu:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Parametrodun funtzioak\_
+              name: Parametrodun funtzioak_
             Functions with Parameters:
               name: Parametrodun funtzioak
         coursee-2018:
@@ -1694,7 +1713,7 @@ eu:
               display_name: Bista orokorra
           lessons:
             'null':
-              name: baliogabea
+              name: 'baliogabea'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -1908,7 +1927,7 @@ eu:
         maddie-test:
           lessons:
             stage 1:
-              name: 1.  etapa
+              name: 1. etapa
         csp3-pilot:
           lesson_groups:
             required:
@@ -2481,6 +2500,12 @@ eu:
               display_name: Gaia 4
             lessonGroup-7:
               display_name: Gaia 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1. etapa
+            lessonGroup-3:
+              display_name: 2. etapa
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
