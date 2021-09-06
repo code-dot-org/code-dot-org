@@ -1,4 +1,3 @@
----
 is:
   data:
     script:
@@ -17,7 +16,7 @@ is:
         csp_2020_category_name: Grunnhugtök tölvunarfræði ('20-'21)
         csp_2021_category_name: Grunnhugtök tölvunarfræði ('21-'22)
         cspexams_category_name: Æfingapróf fyrir Undirstöðuatriði TF
-        csp17_category_name: "'16-'17 TF Grundvöllur"
+        csp17_category_name: '''16-''17 TF Grundvöllur'
         full_course_category_name: Heil námskeið
         hoc_category_name: Klukkustund kóðunar
         math_category_name: Reikningur
@@ -587,8 +586,8 @@ is:
           student_description: Þessi kafli kannar þær tæknilegu áskoranir og spurningar sem koma upp út frá þörfinni fyrir að setja stafrænar upplýsingar fram í tölvum og flytja þær milli manna og tölvutækja. Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
         algebraPD:
           title: Tölvunarfræði í algebru - fagmenntun
-          description: '1.  áfangi: Netkynning'
-          description_short: '1.  áfangi: Netkynning'
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           lessons:
             Course Overview:
               name: Yfirlit námskeiðs
@@ -602,7 +601,7 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
-          student_description: '1.  áfangi: Netkynning'
+          student_description: '1. áfangi: Netkynning'
         algPDmiami:
           title: Tölvunarfræði í algebru - fagmenntun
           description: Kenna algebru með fallmiðaðri forritun
@@ -641,8 +640,8 @@ is:
           student_description: Þjappa texta með því að greina endurtekin mynstur.
         CSPPD:
           title: Grundvöllur Tölvunarfræði (GT)- fagmenntun
-          description: '1.  áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
-          description_short: '1.  áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
+          description: '1. áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
+          description_short: '1. áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
           lessons:
             Exploring CSP Instructional Materials:
               name: Könnun á kennsluefni fyrir Grundvöll Tölvunarfræði (GT)
@@ -658,7 +657,7 @@ is:
               name: Kennslunálganir
             What is CSP?:
               name: Hvað er átt við með Grundvelli Tölvunarfræði (GT)?
-          student_description: '1.  áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
+          student_description: '1. áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
         CSPLessonSamples:
           title: Sýnishorn GT kennslustunda
           lessons:
@@ -667,8 +666,8 @@ is:
             Lesson 15:
               name: Kennslustund 15
         ECSPD:
-          description: '1.  áfangi: Netkynning'
-          description_short: '1.  áfangi: Netkynning'
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           lessons:
             Growth Mindset:
               name: Vaxtarhugur
@@ -682,10 +681,10 @@ is:
               name: Kennslunálganir
             What is ECS?:
               name: Hvað er ECS?
-          student_description: '1.  áfangi: Netkynning'
+          student_description: '1. áfangi: Netkynning'
         sciencePD:
-          description: '1.  áfangi: Netkynning'
-          description_short: '1.  áfangi: Netkynning'
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           lessons:
             Introduction to PD:
               name: Kynning á PD
@@ -701,7 +700,7 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
-          student_description: '1.  áfangi: Netkynning'
+          student_description: '1. áfangi: Netkynning'
         rbo-reference:
           lessons:
             reference:
@@ -754,7 +753,7 @@ is:
             Practice PT - Design a Digital Scene:
               name: Fagnámsæfing - Hanna stafræna sviðsmynd
             'Practice PT: Create':
-              name: Fagnámsæfing - Skapa
+              name: 'Fagnámsæfing - Skapa'
             Processing Arrays:
               name: Unnið með fylki
             The Need For Programming Languages:
@@ -790,8 +789,8 @@ is:
             The Design Recipe:
               name: Hönnunaruppskriftin
         ECSPD-NexTech:
-          description: '1.  áfangi: Netkynning'
-          description_short: '1.  áfangi: Netkynning'
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           lessons:
             Growth Mindset:
               name: Vaxtarhugur
@@ -805,10 +804,10 @@ is:
               name: Kennslunálganir
             What is ECS?:
               name: Hvað er ECS?
-          student_description: '1.  áfangi: Netkynning'
+          student_description: '1. áfangi: Netkynning'
         ECSPD-iZone:
-          description: '1.  áfangi: Netkynning'
-          description_short: '1.  áfangi: Netkynning'
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           lessons:
             Growth Mindset:
               name: Vaxtarhugur
@@ -822,11 +821,11 @@ is:
               name: Kennslunálganir
             What is ECS?:
               name: Hvað er ECS?
-          student_description: '1.  áfangi: Netkynning'
+          student_description: '1. áfangi: Netkynning'
         algebraPD-NexTech:
           title: Tölvunarfræði í algebru - fagmenntun
-          description: '1.  áfangi: Netkynning'
-          description_short: '1.  áfangi: Netkynning'
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           lessons:
             Course Overview:
               name: Yfirlit námskeiðs
@@ -840,11 +839,11 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
-          student_description: '1.  áfangi: Netkynning'
+          student_description: '1. áfangi: Netkynning'
         algebraPD-iZone:
           title: Tölvunarfræði í algebru - fagmenntun
-          description: '1.  áfangi: Netkynning'
-          description_short: '1.  áfangi: Netkynning'
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           lessons:
             Course Overview:
               name: Yfirlit námskeiðs
@@ -858,10 +857,10 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
-          student_description: '1.  áfangi: Netkynning'
+          student_description: '1. áfangi: Netkynning'
         sciencePD-NexTech:
-          description: '1.  áfangi: Netkynning'
-          description_short: '1.  áfangi: Netkynning'
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           lessons:
             Introduction to PD:
               name: Kynning á PD
@@ -877,10 +876,10 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
-          student_description: '1.  áfangi: Netkynning'
+          student_description: '1. áfangi: Netkynning'
         sciencePD-iZone:
-          description: '1.  áfangi: Netkynning'
-          description_short: '1.  áfangi: Netkynning'
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           lessons:
             Introduction to PD:
               name: Kynning á PD
@@ -896,7 +895,7 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
-          student_description: '1.  áfangi: Netkynning'
+          student_description: '1. áfangi: Netkynning'
         sciencePD2:
           lessons:
             Creating Breeds in Starlogo Nova:
@@ -948,8 +947,8 @@ is:
               name: Þörfin fyrir DNS
         algebraPD2a:
           title: Tölvunarfræði í algebru - fagmenntun
-          description: '2.  áfangi á neti: Blandað sumarnám'
-          description_short: '2.  áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           lessons:
             Big Game - Animation:
               name: Stórleikur - Hreyfimyndir
@@ -981,7 +980,7 @@ is:
               name: Hönnunaruppskriftin
             Big GAme - Collision Detection:
               name: Stórleikur - Skynjun árekstra
-          student_description: '2.  áfangi á neti: Blandað sumarnám'
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         allthethings:
           title: All þetta!
           description: Allar gerðir borða fyrir prófun á notendaviðmóti (UI). Vinsamlegast skráðu þig inn til að prófa borð í applab (applab borð virka aðeins eftir innskráningu. Venjulega látum við fólk skrá sig inn, en það er aðeins hægt að framfylgja því fyrir heila skriftu og væri hvimleitt að þurfa að gera fyrir þessa skriftu).
@@ -1054,8 +1053,8 @@ is:
           student_description: Allar gerðir borða fyrir prófun á notendaviðmóti (UI). Vinsamlegast skráðu þig inn til að prófa borð í applab (applab borð virka aðeins eftir innskráningu. Venjulega látum við fólk skrá sig inn, en það er aðeins hægt að framfylgja því fyrir heila skriftu og væri hvimleitt að þurfa að gera fyrir þessa skriftu).
         algebraPD2b:
           title: Tölvunarfræði í algebru - fagmenntun
-          description: '2.  áfangi á neti: Blandað sumarnám'
-          description_short: '2.  áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           lessons:
             Best Practices for Teaching Computer Science:
               name: Bestu aðferðir við kennslu tölvunarfræði
@@ -1081,7 +1080,7 @@ is:
               name: Stjórnborð kennara
             Writing Contracts:
               name: Ritun samninga
-          student_description: '2.  áfangi á neti: Blandað sumarnám'
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         cspfacilitator:
           lessons:
             App Lab:
@@ -1123,8 +1122,8 @@ is:
             Planning:
               name: Áætlanagerð
         ECSPD2:
-          description: '2.  áfangi á neti: Blandað sumarnám'
-          description_short: '2.  áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: Eining 1, dagur 10 Að segja sögu með gögnum
@@ -1134,6 +1133,10 @@ is:
               name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Eining 1, dagar 17-19 Hvað er greind?
+            0: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            1: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
             Unit 1, Days 3-4 Buying a Computer:
               name: Eining 1, dagar 3-4 Að kaupa tölvu
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1144,7 +1147,7 @@ is:
               name: Velkomin!
             Wrap-up:
               name: Samantekt
-          student_description: '2.  áfangi á neti: Blandað sumarnám'
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         equityPD:
           lessons:
             Equity PD:
@@ -1166,8 +1169,8 @@ is:
             Welcome!:
               name: Velkomin!
         sciencePD2b:
-          description: '2.  áfangi á neti: Blandað sumarnám'
-          description_short: '2.  áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           lessons:
             Advanced StarLogo Nova:
               name: Ítarlegra StarLogo Nova
@@ -1183,7 +1186,7 @@ is:
               name: Velkomin!
             Wrap-Up:
               name: Samantekt
-          student_description: '2.  áfangi á neti: Blandað sumarnám'
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         equity-pd:
           lessons:
             Code.org Equity PD:
@@ -1217,8 +1220,8 @@ is:
             Next Steps:
               name: Næstu skref
         sciencePD2b-iZone:
-          description: '2.  áfangi á neti: Blandað sumarnám'
-          description_short: '2.  áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           lessons:
             Advanced StarLogo Nova:
               name: Ítarlegra StarLogo Nova
@@ -1234,10 +1237,10 @@ is:
               name: Velkomin!
             Wrap-Up:
               name: Samantekt
-          student_description: '2.  áfangi á neti: Blandað sumarnám'
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         ECSPD2-iZone:
-          description: '2.  áfangi á neti: Blandað sumarnám'
-          description_short: '2.  áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: Eining 1, dagur 10 Að segja sögu með gögnum
@@ -1247,6 +1250,10 @@ is:
               name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Eining 1, dagar 17-19 Hvað er greind?
+            0: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            1: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
             Unit 1, Days 3-4 Buying a Computer:
               name: Eining 1, dagar 3-4 Að kaupa tölvu
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1257,10 +1264,10 @@ is:
               name: Velkomin!
             Wrap-up:
               name: Samantekt
-          student_description: '2.  áfangi á neti: Blandað sumarnám'
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         ECSPD2-NexTech:
-          description: '2.  áfangi á neti: Blandað sumarnám'
-          description_short: '2.  áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: Eining 1, dagur 10 Að segja sögu með gögnum
@@ -1270,6 +1277,10 @@ is:
               name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Eining 1, dagar 17-19 Hvað er greind?
+            0: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            1: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
             Unit 1, Days 3-4 Buying a Computer:
               name: Eining 1, dagar 3-4 Að kaupa tölvu
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1280,7 +1291,7 @@ is:
               name: Velkomin!
             Wrap-up:
               name: Samantekt
-          student_description: '2.  áfangi á neti: Blandað sumarnám'
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         CSPPD2:
           lessons:
             Getting Started:
@@ -1544,7 +1555,7 @@ is:
             Loops and Simulations:
               name: Lykkjur og hermilíkön
             'Practice PT: Create':
-              name: Fagnámsæfing - Skapa
+              name: 'Fagnámsæfing - Skapa'
             Processing Arrays:
               name: Unnið með fylki
             While Loops:
@@ -1740,7 +1751,7 @@ is:
           student_description: Læra fallmiðaða forritun í gegnum algebru
         algebraPD1:
           description: Kenna algebru með fallmiðaðri forritun
-          description_short: '1.  áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           lessons:
             Course Overview:
               name: Yfirlit námskeiðs
@@ -1911,7 +1922,7 @@ is:
             Multi-screen Apps:
               name: Öpp með fleiri en eina skjámynd
             'Practice PT: Create':
-              name: Fagnámsæfing - Skapa
+              name: 'Fagnámsæfing - Skapa'
             Processing Arrays:
               name: Unnið með fylki
             Understanding Program Flow and Logic:
@@ -1923,29 +1934,29 @@ is:
             While Loops:
               name: Á meðan lykkjur
             Unit 5 Assessment 1:
-              name: 5.  eining - Mat 1
+              name: 5. eining - Mat 1
             Unit 5 Assessment 2:
-              name: 5.  eining - Mat 2
+              name: 5. eining - Mat 2
             "'If' Statements Unplugged":
               name: "'Ef' yrðingar án tölvu"
             '"If" Statements Unplugged':
-              name: "'Ef' yrðingar án tölvu"
+              name: '''Ef'' yrðingar án tölvu'
             Getting started with If Statements:
               name: Byrjað á Ef yrðingum
             Unit 3 Chapter 1 Assessment 3:
-              name: 3.  eining 1. kafli - Mat 3
+              name: 3. eining 1. kafli - Mat 3
             If statements:
               name: Ef yrðingar
             Unit 3 Assessment 3:
-              name: 3.  eining - Mat 3
+              name: 3. eining - Mat 3
             Unit 3 Assessment 4:
-              name: 3.  eining - Mat 4
+              name: 3. eining - Mat 4
             If-else-if and Conditional Logic:
               name: Ef-annars-ef og rökvísi skilyrðinga
             Unit 5 Assessment 3:
-              name: 5.  eining - Mat 3
+              name: 5. eining - Mat 3
             Unit 5 Assessment 4:
-              name: 5.  eining - Mat 4
+              name: 5. eining - Mat 4
             '"if-else-if" and Conditional Logic':
               name: '"ef-annars-ef" og rökvísi skilyrðinga'
             Multi-Screen Apps:
@@ -2021,7 +2032,7 @@ is:
         CSF_Secret_Sample:
           description_audience: Fyrir 8-18 ára
         ECSPD1:
-          description_short: '1.  áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
         algebraFacilitator:
           description: Kenna algebru með fallmiðaðri forritun
           description_short: Kenna algebru með fallmiðaðri forritun
@@ -2036,7 +2047,7 @@ is:
               name: Hvers vegna tölvunarfræði á heima í algebru
           student_description: Kenna algebru með fallmiðaðri forritun
         sciencePD1:
-          description_short: '1.  áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           lessons:
             Introduction to PD:
               name: Kynning á PD
@@ -2316,6 +2327,10 @@ is:
               name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Eining 1, dagar 17-19 Hvað er greind?
+            0: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            1: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
             Unit 1, Days 3-4 Buying a Computer:
               name: Eining 1, dagar 3-4 Að kaupa tölvu
             Unit 1, Days 5-7 Searching and Web 2:
@@ -3266,7 +3281,7 @@ is:
             'Chapter 1: Images and Animation':
               name: 'Kafli 1: Myndir og Hreyfing'
             'null':
-              name: tómagildi
+              name: 'tómagildi'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -3791,15 +3806,11 @@ is:
             Simple Encryption:
               name: Einföld dulkóðun
         hero:
-          description: |-
-            Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
-            Ferðist um Minecraft með kóða.
+          description: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
           lessons:
             Minecraft Hour of Code:
               name: Klukkustund kóðunar með Minecraft
-          student_description: |-
-            Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
-            Ferðist um Minecraft með kóða.
+          student_description: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
         csp-explore-2017:
           lesson_groups:
             csp_ap_2:
@@ -4170,9 +4181,9 @@ is:
               display_name: Könnun
           lessons:
             Making Music_:
-              name: Lagasmíð\_
+              name: Lagasmíð_
             Functions with Parameters_:
-              name: Föll með stikum\_
+              name: Föll með stikum_
             Making Music:
               name: Lagasmíð
             Functions with Parameters:
@@ -4329,7 +4340,7 @@ is:
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
-              display_name: Kafli 2 - Stafrænar upplýsingar
+              display_name: 'Kafli 2 - Stafrænar upplýsingar'
             cspAssessment:
               display_name: Kaflamat
           lessons:
@@ -4426,15 +4437,15 @@ is:
             Controlling Memory with Variables:
               name: Stjórnun minnis með breytum
             Unit 5 Assessment 1:
-              name: 5.  eining - Mat 1
+              name: 5. eining - Mat 1
             User Input and Strings:
               name: Inntak notanda og strengir
             '"If" Statements Unplugged':
-              name: "'Ef' yrðingar án tölvu"
+              name: '''Ef'' yrðingar án tölvu'
             '"if-else-if" and Conditional Logic':
               name: '"ef-annars-ef" og rökvísi skilyrðinga'
             Unit 5 Assessment 2:
-              name: 5.  eining - Mat 2
+              name: 5. eining - Mat 2
             While Loops:
               name: Á meðan lykkjur
             Loops and Simulations:
@@ -4442,15 +4453,15 @@ is:
             Introduction to Arrays:
               name: Kynning á fylkjum
             Unit 5 Assessment 3:
-              name: 5.  eining - Mat 3
+              name: 5. eining - Mat 3
             Processing Arrays:
               name: Unnið með fylki
             Functions with Return Values:
               name: Föll með skilagildum
             Unit 5 Assessment 4:
-              name: 5.  eining - Mat 4
+              name: 5. eining - Mat 4
             'Practice PT: Create':
-              name: Fagnámsæfing - Skapa
+              name: 'Fagnámsæfing - Skapa'
         csppostap-2018:
           lesson_groups:
             csp_postap_1:
@@ -4848,7 +4859,7 @@ is:
             new stage:
               name: nýr áfangi
             'null':
-              name: tómagildi
+              name: 'tómagildi'
         dance-extras-gallery:
           title: Halda áfram að dansa
           description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
@@ -5146,7 +5157,7 @@ is:
         csp2-2019:
           lesson_groups:
             csp2_1_2018:
-              display_name: Kafli 2 - Stafrænar upplýsingar
+              display_name: 'Kafli 2 - Stafrænar upplýsingar'
             cspAssessment:
               display_name: Kaflamat
             cspSurvey:
@@ -5217,15 +5228,15 @@ is:
             Controlling Memory with Variables:
               name: Stjórnun minnis með breytum
             Unit 5 Assessment 1:
-              name: 5.  eining - Mat 1
+              name: 5. eining - Mat 1
             User Input and Strings:
               name: Inntak notanda og strengir
             '"If" Statements Unplugged':
-              name: "'Ef' yrðingar án tölvu"
+              name: '''Ef'' yrðingar án tölvu'
             '"if-else-if" and Conditional Logic':
               name: '"ef-annars-ef" og rökvísi skilyrðinga'
             Unit 5 Assessment 2:
-              name: 5.  eining - Mat 2
+              name: 5. eining - Mat 2
             While Loops:
               name: Á meðan lykkjur
             Loops and Simulations:
@@ -5233,13 +5244,13 @@ is:
             Introduction to Arrays:
               name: Kynning á fylkjum
             Unit 5 Assessment 3:
-              name: 5.  eining - Mat 3
+              name: 5. eining - Mat 3
             Processing Arrays:
               name: Unnið með fylki
             Functions with Return Values:
               name: Föll með skilagildum
             Unit 5 Assessment 4:
-              name: 5.  eining - Mat 4
+              name: 5. eining - Mat 4
         csp-explore-2019:
           lesson_groups:
             csp_ap_2:
@@ -5444,7 +5455,7 @@ is:
             new stage:
               name: nýr áfangi
             Unit 5 Assessment:
-              name: 5.  eining - Mat
+              name: 5. eining - Mat
         fit2019-novice:
           lesson_groups:
             required:
@@ -5907,6 +5918,7 @@ is:
               name: Vinnsla
             Project - Propose an App:
               name: Verkefni - Tillaga að Appi
+            0:
             Storage:
               name: Vistun
         csd4-2020:
@@ -6192,7 +6204,7 @@ is:
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
-              display_name: Kafli 1 - Stafrænar upplýsingar
+              display_name: 'Kafli 1 - Stafrænar upplýsingar'
             cspSurvey:
               display_name: Könnun
             cspSurvey2020:
@@ -6306,15 +6318,15 @@ is:
             Controlling Memory with Variables:
               name: Stjórnun minnis með breytum
             Unit 5 Assessment 1:
-              name: 5.  eining - Mat 1
+              name: 5. eining - Mat 1
             User Input and Strings:
               name: Inntak notanda og strengir
             '"If" Statements Unplugged':
-              name: "'Ef' yrðingar án tölvu"
+              name: '''Ef'' yrðingar án tölvu'
             '"if-else-if" and Conditional Logic':
               name: '"ef-annars-ef" og rökvísi skilyrðinga'
             Unit 5 Assessment 2:
-              name: 5.  eining - Mat 2
+              name: 5. eining - Mat 2
             While Loops:
               name: Á meðan lykkjur
             Loops and Simulations:
@@ -6322,13 +6334,13 @@ is:
             Introduction to Arrays:
               name: Kynning á fylkjum
             Unit 5 Assessment 3:
-              name: 5.  eining - Mat 3
+              name: 5. eining - Mat 3
             Processing Arrays:
               name: Unnið með fylki
             Functions with Return Values:
               name: Föll með skilagildum
             Unit 5 Assessment 4:
-              name: 5.  eining - Mat 4
+              name: 5. eining - Mat 4
             Variables:
               name: Breytur
         virtual-holding-place:
@@ -6372,7 +6384,7 @@ is:
               display_name: 'Kafli 2: Forritað með formgerðum gagna'
           lessons:
             Unit 5 Assessment 2:
-              name: 5.  eining - Mat 2
+              name: 5. eining - Mat 2
             While Loops:
               name: Á meðan lykkjur
             Loops and Simulations:
@@ -6380,13 +6392,13 @@ is:
             Introduction to Arrays:
               name: Kynning á fylkjum
             Unit 5 Assessment 3:
-              name: 5.  eining - Mat 3
+              name: 5. eining - Mat 3
             Processing Arrays:
               name: Unnið með fylki
             Functions with Return Values:
               name: Föll með skilagildum
             Unit 5 Assessment 4:
-              name: 5.  eining - Mat 4
+              name: 5. eining - Mat 4
         k5-onlinepd-2020:
           lessons:
             Sequencing:
@@ -6638,7 +6650,7 @@ is:
             cspSurvey:
               display_name: Könnun
             csp_unit1_2020:
-              display_name: Kafli 1 - Stafrænar upplýsingar
+              display_name: 'Kafli 1 - Stafrænar upplýsingar'
         csp2-2021:
           lessons:
             The Need for Addressing:
@@ -7120,15 +7132,15 @@ is:
             lessonGroup-3:
               display_name: Tilföng
             lessonGroup-2:
-              display_name: 1.  eining
+              display_name: 1. eining
             lessonGroup-4:
-              display_name: 2.  eining
+              display_name: 2. eining
             lessonGroup-5:
-              display_name: 3.  eining
+              display_name: 3. eining
             lessonGroup-6:
-              display_name: 4.  eining
+              display_name: 4. eining
             lessonGroup-7:
-              display_name: 5.  eining
+              display_name: 5. eining
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -7141,6 +7153,12 @@ is:
           lessons:
             lesson-2:
               name: Kennslustund 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Áfangi 1
+            lessonGroup-3:
+              display_name: Áfangi 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
