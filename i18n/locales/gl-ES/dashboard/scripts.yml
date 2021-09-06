@@ -1,4 +1,3 @@
----
 gl:
   data:
     script:
@@ -10,7 +9,7 @@ gl:
         course1:
           title: Curso 1
           description: O Curso 1 esta deseñado para permitir aos lectores primeirizos crear programas de computador que lles axuden a aprender a colaborar con outros, desenvolver habilidades de solución de problemas, e persistir en tarefas difíciles. Para o final deste curso, os estudantes crean o seu propio xogo personalizado ou historia que poden compartir. Recomendado para primeiro grao de primaria.
-          description_short: O Curso 1 esta\* desenh_ado para lectores tempera_ns.
+          description_short: O Curso 1 esta* desenh*ado para lectores tempera*ns.
           description_audience: Idades de 4 a 6 anos
           lessons:
             'Artist: Loops':
@@ -53,7 +52,7 @@ gl:
         course2:
           title: Curso 2
           description: O Curso 2 está deseñado para estudantes que poden ler e non teñen experiencia previa en programación. Neste curso os estudantes crearán programas para resolver problemas e desenvolver xogos interactivos ou historias que poden compartir. Recoméndase para os cursos 2 a 5 de primaria.
-          description_short: O Curso 2 esta\* desenh\*ado para estudantes que poden ler.
+          description_short: O Curso 2 esta* desenh*ado para estudantes que poden ler.
           description_audience: A partir de 6 anos (cómpre saber ler)
           lessons:
             'Artist: Debugging':
@@ -61,7 +60,7 @@ gl:
             'Artist: Loops':
               name: 'Artista: Bucles'
             'Artist: Nested Loops':
-              name: 'Artista: Bucles Aninh\*ados'
+              name: 'Artista: Bucles Aninh*ados'
             'Artist: Sequence':
               name: 'Artista: Secuencia'
             'Bee: Conditionals':
@@ -98,15 +97,15 @@ gl:
         course3:
           title: Curso 3
           description: O Curso 3 está deseñado para estudantes que fixeron o Curso 2. Profundarase en temas de programación xa presentados nos cursos anteriores, e que dan solucións flexíbeis a problemas máis complexos. Ao remate do curso, os estudantes son quen de crear historias e xogos interactivos que poden compartir con calquera. Recomendado para os cursos 4º a 5º de Primaria.
-          description_short: O Curso 3 e\* unha continuacio\*n do Curso 2.
+          description_short: O Curso 3 e* unha continuacio*n do Curso 2.
           description_audience: Idades de 8 a 18 anos
           lessons:
             Artist:
               name: Artista
             'Artist: Functions':
-              name: 'Artista: Funcio\*ns'
+              name: 'Artista: Funcio*ns'
             'Artist: Nested Loops':
-              name: 'Artista: Bucles Aninh\*ados'
+              name: 'Artista: Bucles Aninh*ados'
             'Artist: Patterns':
               name: 'Artista: Padróns'
             'Bee: Conditionals':
@@ -114,9 +113,9 @@ gl:
             'Bee: Debugging':
               name: 'Abella: Depuración (Debug)'
             'Bee: Functions':
-              name: 'Abella: Funcio\*ns'
+              name: 'Abella: Funcio*ns'
             'Bee: Nested Loops':
-              name: 'Abella: Bucles Aninh\*ados'
+              name: 'Abella: Bucles Aninh*ados'
             Bounce:
               name: Rebote
             Computational Thinking:
@@ -163,7 +162,7 @@ gl:
         hourofcode:
           title: Labirinto clásico
           description: Proba os fundamentos da informática cos personaxes de Angry Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
-          description_short: Proba os fundamentos da informa\*tica con moitos personaxes divertidos!
+          description_short: Proba os fundamentos da informa*tica con moitos personaxes divertidos!
           lessons:
             Maze:
               name: Labirinto
@@ -187,17 +186,17 @@ gl:
             Artist Binary:
               name: Artista binario
             'Artist: For Loops':
-              name: Artista Bucles "Para" (for)
+              name: 'Artista Bucles "Para" (for)'
             'Artist: Functions':
-              name: 'Artista: Funcio\*ns'
+              name: 'Artista: Funcio*ns'
             'Artist: Functions with Parameters':
-              name: 'Artista: Funcio_ns con Para_metros'
+              name: 'Artista: Funcio*ns con Para*metros'
             'Artist: Variables':
               name: 'Artista: Variábeis'
             'Bee: For Loops':
               name: 'Abella: Bucles "Para" (For)'
             'Bee: Functions with Parameters':
-              name: 'Abella: Funcio_ns con para_metros'
+              name: 'Abella: Funcio*ns con para*metros'
             Extreme Challenge - Comprehensive:
               name: Desafío extremo - completo
             Maze and Bee:
@@ -205,13 +204,13 @@ gl:
             'Play Lab: For Loops':
               name: 'Laboratorio de Xogos: Bucles "Para" (For)'
             'Play Lab: Functions with Parameters':
-              name: 'Laboratorio de xogos: Funcio_ns con para_metros'
+              name: 'Laboratorio de xogos: Funcio*ns con para*metros'
             'Play Lab: Variables':
               name: 'Laboratorio de xogos: Variábeis'
             Super Challenge - For Loops:
               name: Super reto - bucles "Para" (for)
             Super Challenge - Functions and Parameters:
-              name: Super reto - funcio_ns e para_metros
+              name: Super reto - funcio*ns e para*metros
             Super Challenge - Variables:
               name: Super desafío - Variábeis
             'Unplugged: Binary':
@@ -223,7 +222,7 @@ gl:
             'Unplugged: Madlibs':
               name: 'Desconectado: Madlibs'
             'Unplugged: Songwriting with Parameters':
-              name: 'Desconectado: Composicio_n de cancio_ns con para\*metros'
+              name: 'Desconectado: Composicio*n de cancio*ns con para*metros'
             'Unplugged: Tangrams':
               name: 'Desconectado: Tangrams'
           student_description: O Curso 4 está deseñado para estudantes que fixeron os cursos 2 e 3. O alumnado aprenderá a resolver problemas de maior complexidade segundo vaian aprendendo a combinar varios conceptos para cada desafío. Ao remate do curso, os estudantes serán quen de crear programas que amosen habilidades múltiples, incluídos bucles e funcións con parámetros. Recomendado dende 4º de Primaria a 2º de ESO.
@@ -233,11 +232,11 @@ gl:
           description_short: Un breve resumo de conceptos para os estudantes que non deron os cursos 2 e 3.
           lessons:
             'Artist: Functions':
-              name: 'Artista: Funcio\*ns'
+              name: 'Artista: Funcio*ns'
             'Artist: Loops':
               name: 'Artista: Bucles'
             'Artist: Nested Loops':
-              name: 'Artista: Bucles Aninh\*ados'
+              name: 'Artista: Bucles Aninh*ados'
             'Artist: Sequence':
               name: 'Artista: Secuencia'
             'Bee: Conditionals':
@@ -245,7 +244,7 @@ gl:
             'Bee: Debugging':
               name: 'Abella: Depuración (Debug)'
             'Bee: Nested Loops':
-              name: 'Abella: Bucles Aninh\*ados'
+              name: 'Abella: Bucles Aninh*ados'
             'Farmer: While Loops':
               name: 'Granxeira: Bucles "Mentres" (While)'
             'Maze: Sequence':
@@ -271,9 +270,9 @@ gl:
             'Eval: Strings and Images':
               name: Tiras de caracteres e imaxes
             'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Desconectado: Condicionais e funcio\*ns por partes'
+              name: 'Desconectado: Condicionais e funcio*ns por partes'
             'Unplugged: The Design Recipe':
-              name: 'Desconectado: A receita de desenh\*o'
+              name: 'Desconectado: A receita de desenh*o'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Offline: vídeo-xogos e plano de coordenadas'
         infinity:
@@ -297,7 +296,7 @@ gl:
         20-hour:
           title: Curso acelerado de Introdución a programación informática
           description: Este curso de 20 horas introduce o núcleo da informática e os conceptos da programación. O curso está deseñado para o seu uso en clase para os cursos de primaria pero é divertido aprender con calquera idade!
-          description_short: Este curso de 20 horas cobre os conceptos ba_sicos de informa_tica e programacio\*n dos cursos 2-4.
+          description_short: Este curso de 20 horas cobre os conceptos ba*sicos de informa*tica e programacio*n dos cursos 2-4.
           description_audience: Idades de 10 a 18 anos
           lessons:
             Abstraction:
@@ -387,12 +386,12 @@ gl:
           student_description: Titorial paso a paso
         Hour of Code:
           title: Hora de Código 2013
-          description: Proba os fundamentos da informa\*tica con personaxes de Angry Birds e Plantas vs. Zombis!
-          description_short: Proba os fundamentos da informa\*tica con moitos personaxes divertidos!
+          description: Proba os fundamentos da informa*tica con personaxes de Angry Birds e Plantas vs. Zombis!
+          description_short: Proba os fundamentos da informa*tica con moitos personaxes divertidos!
           lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
-          student_description: Proba os fundamentos da informa\*tica con personaxes de Angry Birds e Plantas vs. Zombis!
+          student_description: Proba os fundamentos da informa*tica con personaxes de Angry Birds e Plantas vs. Zombis!
         algebraPD:
           lessons:
             Evaluation Blocks:
@@ -503,6 +502,12 @@ gl:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Benvido!
             Wrap-up:
@@ -542,6 +547,12 @@ gl:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Benvido!
             Wrap-up:
@@ -551,6 +562,12 @@ gl:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Benvido!
             Wrap-up:
@@ -614,14 +631,14 @@ gl:
           description_short: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
           lessons:
             Hour of Code 2015:
-              name: Hora do Co\*digo 2015
+              name: Hora do Co*digo 2015
           student_description: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
         starwarsblocks:
           description: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
           description_short: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
           lessons:
             Hour of Code 2015:
-              name: Hora do Co\*digo 2015
+              name: Hora do Co*digo 2015
           student_description: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
         mc:
           title: Hora do Código Minecraft
@@ -629,7 +646,7 @@ gl:
           description_short: Explora o mundo de Minecraft a través do código
           lessons:
             Hour of Code 2015:
-              name: Hora do Co\*digo 2015
+              name: Hora do Co*digo 2015
           student_description: Usa bloques de código para acompañar a Steve ou a Alex nunha aventura polo mundo de Minecraft
         ScienceP3OLPT3:
           lessons:
@@ -642,15 +659,15 @@ gl:
             'Calc: Defining Variables':
               name: 'Calc: Definindo Variábeis'
             'Calc: Evaluation Blocks':
-              name: 'Calc: Bloques de avaliacio\*n'
+              name: 'Calc: Bloques de avaliacio*n'
             'Eval: Strings and Images':
               name: 'Eval: Tiras de caracteres e imaxes'
             'Eval: Writing Contracts':
-              name: 'Eval: Redaccio\*n de contratos'
+              name: 'Eval: Redaccio*n de contratos'
             'Unplugged: Contracts':
               name: 'Desconectado: contratos'
             'Unplugged: The Design Recipe':
-              name: 'Desconectado: A receita de desenh\*o'
+              name: 'Desconectado: A receita de desenh*o'
         AlgebraB:
           lessons:
             'Eval: Boolean Operators':
@@ -658,21 +675,21 @@ gl:
             'Eval: Conditionals':
               name: 'Eval: condicionais'
             'Play Lab: Animation (Big Game)':
-              name: 'Laboratorio de xogos: Animacio\*n (Big Game)'
+              name: 'Laboratorio de xogos: Animacio*n (Big Game)'
             'Play Lab: Boolean (Big Game)':
               name: 'Laboratorio de xogos: Booleano (Big Game)'
             'Play Lab: Booleans':
               name: 'Laboratorio de xogos: valores booleanos'
             'Play Lab: Collision Detection (Big Game)':
-              name: 'Laboratorio de xogos: Deteccio_n de colisio_ns (Big Game)'
+              name: 'Laboratorio de xogos: Deteccio*n de colisio*ns (Big Game)'
             'Play Lab: Defining Variables (Big Game)':
               name: 'Laboratorio de xogos: Definición de Variábeis (Big Game)'
             'Unplugged: Booleans':
               name: 'Desconectado: Booleanos'
             'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Desconectado: Deteccio_n de colisio_ns e a fo\*rmula de distancia'
+              name: 'Desconectado: Deteccio*n de colisio*ns e a fo*rmula de distancia'
             'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Desconectado: Condicionais e funcio\*ns por partes'
+              name: 'Desconectado: Condicionais e funcio*ns por partes'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Offline: vídeo-xogos e plano de coordenadas'
         algebraPD1:
@@ -757,15 +774,15 @@ gl:
           description_audience: De 10 a 110 anos
           lessons:
             'Artist: For Loops':
-              name: Artista Bucles "Para" (for)
+              name: 'Artista Bucles "Para" (for)'
             'Artist: Functions with Parameters':
-              name: 'Artista: Funcio_ns con Para_metros'
+              name: 'Artista: Funcio*ns con Para*metros'
             'Artist: Variables':
               name: 'Artista: Variábeis'
             'Bee: For Loops':
               name: 'Abella: Bucles "Para" (For)'
             'Bee: Functions with Parameters':
-              name: 'Abella: Funcio_ns con para_metros'
+              name: 'Abella: Funcio*ns con para*metros'
             Digital Citizenship:
               name: Cidadanía dixital
             'Play Lab: Variables':
@@ -775,9 +792,15 @@ gl:
             'Unplugged: For Loop Fun':
               name: 'Desconectado: Bucles "Para" (For) divertidos'
             'Unplugged: Songwriting with Parameters':
-              name: 'Desconectado: Composicio_n de cancio_ns con para\*metros'
+              name: 'Desconectado: Composicio*n de cancio*ns con para*metros'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Benvido!
             Wrap-up:
@@ -788,7 +811,7 @@ gl:
             " Bee: Conditionals":
               name: " Abella: Condicionais"
             'Artist: Nested Loops':
-              name: 'Artista: Bucles Aninh\*ados'
+              name: 'Artista: Bucles Aninh*ados'
             Bee Debugging:
               name: Depuración (debug) da Abella
             Bounce:
@@ -935,12 +958,12 @@ gl:
             'Algorithms: Tangrams':
               name: 'Algoritmos: Tangrams'
         classic-hoc-impact-study:
-          description_short: Proba os fundamentos da informa\*tica con moitos personaxes divertidos!
+          description_short: Proba os fundamentos da informa*tica con moitos personaxes divertidos!
           lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
         hoc-impact-study:
-          description_short: Proba os fundamentos da informa\*tica con moitos personaxes divertidos!
+          description_short: Proba os fundamentos da informa*tica con moitos personaxes divertidos!
           lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
@@ -1049,7 +1072,7 @@ gl:
             Functions:
               name: Funcións
             'null':
-              name: nulo
+              name: 'nulo'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1387,7 +1410,7 @@ gl:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Funcións con parámetros\_
+              name: Funcións con parámetros_
             Functions with Parameters:
               name: Funcións con parámetros
         coursee-2018:
@@ -1650,7 +1673,7 @@ gl:
               display_name: Visión xeral
           lessons:
             'null':
-              name: nulo
+              name: 'nulo'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2409,6 +2432,12 @@ gl:
               display_name: Unidade 4
             lessonGroup-7:
               display_name: Unidade 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.ª ETAPA
+            lessonGroup-3:
+              display_name: 2.ª ETAPA
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
