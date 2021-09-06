@@ -9472,9 +9472,9 @@
         },
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_a": "每個角度會是 45 度或 90 度。",
-          "courseC_artist_prog7_b": "第一步有順利執行嗎？\\\n那麼第二步呢？\\\n哪裡出錯了？",
+          "courseC_artist_prog7_b": "第一步會運行嗎？  \n第二步呢？  \n哪裡出問題了？",
           "courseC_artist_prog7_c": "你可以點擊轉向積木中的下拉選單，並且選擇你需要的角度數值！",
-          "courseC_artist_prog7_d": "你將要：\n\n-   移動 - 向前\n-   轉向 - 右邊 45 度\n-   移動 - 向前\n-   轉向 - 右邊 90 度\n-   移動 - 向前\n-   轉向 - 右邊 45 度",
+          "courseC_artist_prog7_d": "你需要：\n- 向前移動\n- 向右轉45度\n- 向前移動\n- 向右轉90度\n- 向前移動\n- 向右轉45度\n\n重複此模型2次！",
           "courseC_artist_prog7_e": "不要害怕犯錯！即使您覺得還不能通關，嘗試添加積木並運行程式看看會發生什麼。"
         },
         "courseC_artist_prog_challenge1_2021": {
@@ -9799,7 +9799,7 @@
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "您需要在另一個其中也有`移動-向前`積木的重複積木裡裡重複`採集花蜜`。",
           "courseD_bee_nestedLoops7_b": "您需要使用三個可用的重複積木來通過本關。",
-          "courseD_bee_nestedLoops7_c": "將您的積木嵌套三層，像這樣：\n\n-   重複1\n    -   重複3\n        -   重複12\n            -   採集花蜜\n        -   向前移動\n    -   右轉"
+          "courseD_bee_nestedLoops7_c": "將積木嵌套三層深，像這樣：\n\n- 重複4次\n   - 重複3次\n      - 重複12次\n          - 採集花蜜\n      - 向前移動\n   - 向右轉\n\n"
         },
         "courseE_artist_functions1_dani": {
           "courseE_artist_functions1_a": "正方形每邊都有 100 像素，這代表你需要向前移動 175 像素之後才能開始畫第二個正方形。",
@@ -9886,7 +9886,7 @@
           "courseF_bee_for10_a": "您能在需要採取的步驟和需收集的花蜜數量之間找到規律嗎？",
           "courseF_bee_for10_b": "第一組花共有**14朵花**。要進入第一組，蜜蜂必須嗡嗡作響**7個正方形**（或14個正方形除以2 ）。在下一組中，有幾朵花，蜜蜂要到達那裡必須移動多少個正方形？",
           "courseF_bee_for10_d": "您需要重複2次，其中1次使用數學積木。",
-          "courseF_bee_for10_c": "在這個關卡中，第一組花有**14**朵花，第二組花有**10**朵花，第三組花有**6**朵花，第四組花有**2**朵花。\n\n在此圖形中，請注意有**7**個紅色正方形，**5**個橙色正方形，**3**個綠色正方形和**1**個藍色積木。\n\n\\[] [0]\n\n數字如何關聯？"
+          "courseF_bee_for10_c": "在難題中，第一組花有**14**朵花，第二組花有**10**朵花，第三組花有**6**朵花，第四組花有**2**朵花。\n\n在這張圖中，請注意有**7**個紅色正方形，**5**個橙色正方形，**3**個綠色正方形和**1**個藍色積木。 \n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\n這些數字如何相關聯？"
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "在「repeat」迴圈中，您需要使用兩個積木來收集所有的花蜜。"
@@ -9918,7 +9918,7 @@
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_a": "如果在往上計數，則每次迴圈都會將其增量添加到計數器變數中。\n\n您需要在每個數字上加多少才能得到下一個花蜜？",
           "courseF_bee_for8_b": "在這個關卡中，您將需要按階梯模式移動才能到達花朵。",
-          "courseF_bee_for8_c": "您的迴圈將以某增量_從3數到15_。這個增量是多少？"
+          "courseF_bee_for8_c": "你的循環將通過一些增量來*從3到15*計數 。它是什麼？"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "嘗試使用計數器變數進行一些數學運算。您需要對每朵花的計數器做些什麼，才能使其等於需要採集的花蜜量？",
@@ -10625,7 +10625,7 @@
           "polygon_table": "想嘗試其他多邊形？ \n\n在你的“重複”積木中使用邊數，在你的“轉向”積木中使用角度。\n嘗試這些：\n\n|  形狀 |  邊數 |  角度  |\n| :-: | :-: | :--: |\n| 三角形 |  3  | 120° |\n| 正方形 |  4  |  90° |\n| 五邊形 |  5  |  72° |\n| 六邊形 |  6  |  60° |\n| 八邊形 |  8  |  45° |\n| 九邊形 |  9  |  40° |\n| 十邊形 |  10 |  36° |"
         },
         "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "12比15少多少？\\\n9比12少多少？\n\n您看到規律了嗎？"
+          "courseF_bee_for11_a": "12比15少多少？  \n9比12少多少？\n\n你看到規律了嗎？"
         },
         "courseF_bee_variables_3a_2021": {
           "courseF_bee_variables_3_2021_1": "要繼續這個模型，增加重複的數量：\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -10637,7 +10637,7 @@
           "courseF_bee_variables_4_2021_1": "每次變數加2，而不是加1。"
         },
         "courseF_events_choice_pufferfish": {
-          "changeProp": "你還需要這個積木：\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "你還會需要這個積木：\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key": {
           "changePropBlock": "你還需要這個積木：\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
@@ -10646,7 +10646,7 @@
           "behavior_list": "嘗試使用一些行為，如“向東移動並循環”、“向右旋轉”和“徘徊”。"
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "嘗試在“when answered”模組中更改變數的標籤。因為有多個提示，所以使用將被回答的_最後_提示的標籤。\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "嘗試在“when answered”積木中更改變數的標籤。因為有多個提示，所以使用將被回答的*最後*提示的標籤。\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_variables_card_finish": {
           "card_idea1": "你可以通過將一個帶不同變數的新提示積木連接到你的第一個“when answered”事件來添加第二個（或第三個、第四個）提示。\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">what do you want for your birthday?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">gift</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",

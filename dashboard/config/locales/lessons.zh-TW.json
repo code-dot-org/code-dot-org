@@ -41,6 +41,9 @@
           "overview": "在 Sprite Lab 上執行簡單模擬，學生便會體驗到電腦運算可怎樣用來收集資料，從而找出各種趨勢與模式。多次執行模擬後，學生便會有機會預測一下，變更模擬中的變數可能會怎樣影響結果，然後再測試這個假設。",
           "student_overview": "在電腦上執行模擬，並實驗一下變更參數後的情況。"
         },
+        "coursef-2021/lesson-5": {
+          "purpose": "在前一課中，學生從一個簡單的模擬中收集和解釋數據。在本課中，學生將按照說明編寫自己的模擬模型。學生之前掌握的關於現實世界病毒疫情爆發的知識將應用於一個虛構的場景。"
+        },
         "coursef-2021/Internet": {
           "overview": "即便許多人每天都會上網，但是理解其中原理的中卻不多。在本課堂中，學生會假裝流經網際網路，同時學習連線、URL、IP 位址與 DNS 的知識。",
           "student_overview": "你有沒有想過，資訊怎樣在網際網路中傳輸？不是魔術！本課堂將會教導網際網路運作方面的基本知識。"
@@ -49,447 +52,696 @@
           "student_overview": "這麼大型的專案需要時間與充分計畫。找出靈感、制訂計畫，激發你的創意！"
         },
         "courseb-2021/Digital Trails": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "瞭解自己的數位足跡，並學習怎樣在瀏覽網站時保持安全。"
         },
         "courseb-2021/Move It, Move It": {
           "overview": "本課堂會讓學生在心理上準備好程式編寫練習，他們會在整個課程中遇到這些練習。學生會組成小隊，以實體活動為同學設計程式，讓同學從某個位置踏步到踏一個位置，直到到達終點。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "為你的同學設計程式，讓同學小心翼翼從某處移動到另一處。"
         },
         "courseb-2021/Sequencing in Maze": {
           "overview": "本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。",
+          "preparation": "",
           "purpose": "在本課堂中，學生會在電腦平台上加強程式設計與除錯技巧。這些謎題採用積木格式，有助學生學習序列與各種概念，而不用擔心要完善程式語法。",
           "student_overview": "協助憤怒鳥在道路上移動至搗蛋豬的位置。"
         },
         "courseb-2021/Programming in Maze": {
           "overview": "學生會使用冰原歷險記中的角色開發序列演算法，讓鼠奎特能夠從迷宮的一側移動到另一側的橡樹果實那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓鼠奎特向前、向左或是向右移動。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "製作程式，協助憤怒鳥完成迷宮。"
         },
         "courseb-2021/Programming in Harvester": {
           "overview": "學生會把所學到的程式設計概念，應用到收割者遊戲的環境中。現在不僅是讓角色到達終點 - 學生必須使用新的積木收集玉米。他們會繼續建立順序演算法的技巧，並開始運用除錯流程。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "幫助收割者在路上收集蔬菜。"
         },
         "courseb-2021/Loops: Getting Loopy": {
           "overview": "我們開始設計更長和更有趣味的程式時，程式碼裡通常都會有大量重複內容。在本課堂中，學生會瞭解怎樣使用迴圈，以更簡易的方式傳達含大量重複內容的指令。學生會觀察舞蹈中的重複移動模式。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在本課堂中，我們會使用重複迴圈舉行舞蹈派對！"
         },
         "courseb-2021/Loops in Harvester": {
           "overview": "這個舞台會以「學習迴圈」中重複指令的概念為基礎，讓學生在 Code.org 上用迴圈更有效率的收集玉米。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "使用迴圈，幫助收割者收集更多農作物！"
         },
         "courseb-2021/Loops in Collector": {
           "overview": "在本課堂中，學生會繼續學習迴圈（loop）的概念。在這裡，冒險家 Laurel 會使用迴圈，在開放的洞穴中收集寶藏。這個時候會介紹新的「get treasure」（取得寶藏）積木，協助她完成旅程。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "為冒險家 Laurel 編寫程式，讓她能夠在開放的洞穴中收集寶藏。"
         },
         "courseb-2021/Loops in Artist": {
           "overview": "學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個線上課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，學生會使用迴圈建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。",
+          "preparation": "",
           "purpose": "本課堂會提供不同的視角，說明迴圈可怎樣在程式設計中建立各種東西。學生會測試自己的批判思維技巧，評估提供的程式碼，並決定需要加入甚麼才可解決謎題。學生也可在這裡反思：不使用迴圈設計程式會降低效率，因為沒有「重複」迴圈的幫助，程式便需要增加多少塊積木。",
           "student_overview": "使用模式與迴圈完成圖像。"
         },
         "courseb-2021/The Right App": {
           "overview": "本課堂會讓學生明白，電腦可協助現實生活中的大眾。首先，學生會理解一些虛構的智慧型手機使用者，以協助他們找出「合適的應用程式」解決他們的需要。然後，學生會練習同理心與創意，製作自己的智慧型手機應用程式草稿，解決下一位使用者的需要。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "製作你自己的智慧型手機應用程式草稿。"
         },
         "courseb-2021/Events: The Big Event": {
           "overview": "事件是很好的方式，在預先編寫好的演算法中增加變化。有時候，你希望自己的程式能夠完全以使用者預期的方式回應使用者。這正是事件之目的。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "老師按下巨型遙控器的按鈕後，你便會移動或是大叫。"
         },
         "courseb-2021/Events in Play Lab": {
           "overview": "在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在 Play Lab 創造出你的遊戲！",
+          "preparation": "",
           "purpose": "在這項線上活動中，學生會學習怎樣在 Play Lab 中使用事件。他們首先會訓練武士，在他們按下箭頭鍵時讓武士移動。活動結束時，他們將有機會展示本課程中所學到的其餘技巧（包括序列與迴圈）做為最後的自由探索謎題。",
           "student_overview": "使用事件製作故事或互動遊戲。"
         },
+        "courseb-2021/lesson-1": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "coursea-2021/Learn to Drag and Drop": {
           "overview": "本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "以點擊與拖放的方式完成謎題。"
         },
         "coursea-2021/Programming: Happy Maps": {
           "overview": "如果學生理解規畫順序和將它循序編程之間的區別，那麼從演算法過渡到程式設計的時間就不會太長，這項活動將透過速記讀寫代碼的方式幫助學生獲得經驗。",
+          "preparation": "",
           "purpose": "如果學生理解規畫順序和將它循序編程之間的區別，那麼從演算法過渡到程式設計的時間就不會太長，這項活動將透過速記讀寫代碼的方式幫助學生獲得經驗。",
           "student_overview": "編寫指令，讓 Flurb 走到水果那裡。"
         },
         "coursea-2021/Sequencing with Scrat": {
           "overview": "本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。",
+          "preparation": "",
           "purpose": "在本課堂中，學生會在電腦平台上加強程式設計與除錯技巧。這些謎題採用積木格式，有助學生學習序列與各種概念，而不用擔心要完善程式語法。",
           "student_overview": "為鼠奎特設計程式，讓他能夠拿到橡樹果實。"
         },
         "coursea-2021/Programming in Ice Age": {
           "overview": "學生會使用冰原歷險記中的角色開發序列演算法，讓鼠奎特能夠從迷宮的一側移動到另一側的橡樹果實那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓鼠奎特向前、向左或是向右移動。",
+          "preparation": "",
           "purpose": "在本課堂中，學生會在電腦平台上加強程式設計與除錯技巧。這些謎題採用積木格式，有助學生學習序列與各種概念，而不用擔心要完善程式語法。",
           "student_overview": "編寫程式，幫助鼠奎特拿到橡樹果實。"
         },
         "coursea-2021/Programming with Rey and BB-8": {
           "overview": "在本課堂中，學生會以更複雜的方式運用新的程式設計技巧，與 BB-8 一起完成更巧妙的關卡。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "協助 BB-8 收集廢金屬。"
         },
         "coursea-2021/Loops: Happy Loops": {
           "overview": "迴圈是程式設計中非常有用且強大的工具。為了理解迴圈的用處，就必須逼著學生去思考更簡潔的方式來解決平凡的問題。",
+          "preparation": "",
           "purpose": "本課堂用來介紹迴圈（loop）。迴圈可讓學生把需要重複的命令組合起來，從而簡化程式碼。學生會發展批判思維技巧，他們要注意同學重複移動的模式，並判斷需要重複命令多少次。學生會再看到「快樂地圖」，並有機會把序列等舊概念，和新的迴圈概念聯繫起來。",
           "student_overview": "使用迴圈（loop），幫助 Flurb 解決更棘手的問題。"
         },
         "coursea-2021/Loops in Ice Age": {
           "overview": "這個舞台會以「快樂迴圈」中重複指令的概念為基礎，讓學生在 Code.org 上用迴圈更有效率的收集橡樹果實。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "使用迴圈，幫助鼠奎特更快完成任務。"
         },
         "coursea-2021/Loops in Collector": {
           "overview": "從「快樂迴圈」中建立重複指令的概念，這個階段會讓學生用迴圈更有效率的收集寶藏。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "幫探險家 Laurel 收集地底的寶藏。"
         },
         "coursea-2021/Ocean Scene with Loops": {
           "overview": "學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個插電課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，迴圈則用於建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "使用迴圈與模式完成圖像。"
         },
         "coursea-2021/Events: The Big Event": {
           "overview": "事件是很好的方式，在預先編寫好的演算法中增加變化。有時候，你希望自己的程式能夠完全以使用者預期的方式回應使用者。這正是事件之目的。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "教師按下巨型遙控器的按鈕後，學生便會移動和大叫。"
         },
         "coursea-2021/Events in Play Lab": {
           "overview": "在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在 Play Lab 創造出你的故事！",
+          "preparation": "",
           "purpose": "今天學生會使用 Play Lab，繼續增加對事件的認識。事件在大部分電腦程式中都十分常見。在這項活動中，學生會使用事件，讓角色依據使用者啟動的事件，在畫面上移動、發出噪音與變更背景。",
           "student_overview": "創作自己的遊戲或故事。"
         },
+        "coursea-2021/lesson-1": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "coursec-2021/Putting a STOP to Online Meanness": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "coursec-2021/Programming: My Robotic Friends": {
           "overview": "學生會使用一組符號來代替程式碼，設計演算法指示「機器人」把杯子疊起成不同的模式。學生會輪流扮演機器人，且僅回應同伴定義的演算法。這個部分會教導學生符號和行動關的聯繫、演算法和程式間的分別，以及有用的除錯技巧。",
+          "preparation": "",
           "purpose": "本不插電課堂讓全班同學組成一個團隊，並完成一項任務：讓「機器人」把杯子疊起成指定的設計。學生會在整個課程中設計程式，而這項活動則為程式設計打下基礎，他們會學到定義表達清晰的演算法非常重要。",
           "student_overview": "在本課堂中，你會假設同學是機器人，然後為他們設計程式，建立杯子堆疊的模式。"
         },
         "coursec-2021/Programming in Maze": {
           "overview": "學生會使用憤怒鳥遊戲中的角色開發序列演算法，讓憤怒鳥能夠從迷宮的一側移動到另一側的豬那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓憤怒鳥向前、向左或是向右移動。",
+          "preparation": "",
           "purpose": "在本課堂中，學生會在電腦平台上加強程式設計與除錯技巧。這些謎題採用積木格式，有助學生學習序列與各種概念，而不用擔心要完善程式語法。",
           "student_overview": "與憤怒鳥一起學習序列與演算法。"
         },
         "coursec-2021/Debugging in Maze": {
           "overview": "除錯是學習設計程式的重要元素。在本課堂中，學生會遇到各種謎題，這些謎題曾經以不正確的方式解決。學生需要觀察現有的程式碼找出錯誤，包括不正確的迴圈、遺漏的積木、多餘的積木，以及次序錯誤的積木。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在謎題中尋找問題，並練習你的除錯技巧。"
         },
         "coursec-2021/Programming in Collector": {
           "overview": "在這組謎題中，學生會繼續增加對演算法和除錯的瞭解。學生會遇到新角色：探除家 Laurel，並製作序列演算法，讓 Laurel 能夠在道路上行走時收集寶藏。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "編寫演算法，幫助探險家 Laurel 收集大量寶石！"
         },
         "coursec-2021/Programming in Artist": {
           "overview": "在本課堂中，學生會控制藝術家完成畫面上的圖畫。這個藝術家舞台可讓學生製作越來越複雜的圖像，期間會使用新的積木，例如「move forward by 100 pixels」（向前移動 100 像素）與「turn right by 90 degrees」（向右旋轉 90 度）等。",
+          "preparation": "",
           "purpose": "本課程會以學生先前使用序列的經驗為基礎，激發學生的更多創意編寫程式。本課堂之目的，是介紹新的積木與目標，以鞏固學生對序列的認識。在這種情況下，學生會使用新的積木學習像素與角度的更多知識，同時仍然可練習序列技巧，此外，學生也將能夠把新的目標形象化，例如編寫程式讓藝術家繪畫正方形。",
           "student_overview": "為藝術家設計程式，製作漂亮的圖像。"
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
           "overview": "學生會以最初的「我的機器人朋友」活動為基礎，處理更大型且更複雜的設計。為了幫助「機器人」設計程式，以完成這些更大型的設計，學生將需要找出指令裡有哪些重複模式可使用迴圈（loop）取代。",
+          "preparation": "",
           "purpose": "本課堂會用來重新介紹迴圈，並使用學生已經熟悉的「機器人」程式設計指令組合。學生會發展批判思維技巧，他們會注意同學移動的重複模式，並確定怎樣使用迴圈來簡化這些重複模式。",
           "student_overview": "在本課堂中，你會再次為同學設計程式，但會使用迴圈（loop），這樣，你便能夠解決更龐大、更複雜的問題。"
         },
         "coursec-2021/Loops with Rey and BB-8": {
           "overview": "這個舞台會以「學習迴圈」中重複指令的概念為基礎，讓學生用迴圈協助 BB-8 更有效率的遊歷迷宮。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "使用迴圈（loop），幫助 BB-8 完成各個迷宮！"
         },
         "coursec-2021/Loops in Harvester": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "我們來使用迴圈（loop），幫助收割者收割蔬菜！"
         },
         "coursec-2021/Sticker Art with Loops": {
+          "overview": "",
+          "preparation": "",
           "purpose": "這個系列會以充滿創意的個人設計，強調迴圈的強大力量。\n\n此課程進展是以專案為基礎的系列，讓學生可在自己的作品上學習，並製作出精彩的作品。",
           "student_overview": "在本課堂中，迴圈（loop）讓你在藝術家中輕鬆製作更酷炫的圖像！"
         },
         "coursec-2021/Events: The Big Event": {
           "overview": "學生很快會知道，事件是很好的方式，在預先編寫好的演算法中增加靈活性。有時候，你希望自己的程式能夠完全以使用者預期的方式回應使用者。事件可讓你的程式更有趣，而且有更多互動。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "玩一款有趣的遊戲，學習使用事件。"
         },
         "coursec-2021/Build a Flappy Game": {
           "overview": "在這個特別舞台中，學生會開始製作自己的第一款像素鳥遊戲。他們會使用事件處理器偵測滑鼠點擊與物件碰撞。在關卡結束時，學生將能夠自訂遊戲，變更視覺元素或規則。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "以你喜歡的方式隨意製作像素鳥遊戲，並盡情與朋友分享！"
         },
         "coursec-2021/Events in Play Lab": {
           "overview": "在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在 Play Lab 創造出你的遊戲！",
+          "preparation": "",
           "purpose": "學生會在這裡使用 Play Lab，繼續增加對事件的認識。他們會使用事件，讓角色依據使用者的輸入而在畫面上移動、發出噪音和更變背景。在謎題系列結束時，學生將有機會分享自己的專案。",
           "student_overview": "是時候發揮創意，在 Play Lab 中製作遊戲！"
         },
         "coursec-2021/Picturing Data": {
           "overview": "資料可用來幫助學生瞭解自己的世界，並解答有趣的問題。在本課堂中，學生會收集一個 Play Lab 專案的資料，並使用不同類型的圖表將資料視覺化。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "資料可用來幫助學生瞭解自己的世界，並解答有趣的問題。在本課堂中，學生會收集一個 Play Lab 專案的資料，並使用不同類型的圖表將資料視覺化。"
         },
         "coursec-2021/Binary Bracelets": {
           "overview": "二進制在電腦世界中極為重要。現代的大多數電腦都會以二進制形式儲存所有類型的資訊。本課堂會協助展示：怎樣能夠把現實世界的東西，轉換成一系列的開/關。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "製作屬於你自己的二進制手環，並學習電腦怎樣記得資訊！"
         },
         "coursec-2021/End of Course Project: Create a Play Lab Game": {
           "overview": "本總結課堂會引導學生重溫設計、開發與展示 Play Lab 專案的流程！為了確保流程順暢，我們已提供循序漸進的結構，方面學生按照結構工作 - 從紙張上計畫到在我們的網站上編寫程式。此外，我們也提供多種構思，協助教師完成最終展示！",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "準備就緒，開始編寫大量程式！是時候開始製作你的專案了。"
         },
         "coursed-2021/lesson-5": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在本課堂中，你會瞭解密碼可怎樣保護你的資訊，以及怎樣才算是好的密碼。"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "overview": "學生會互相為對方「設計程式」繪畫，從而有機會以有趣且無障礙的方式，體驗程式設計中的一些核心概念。班級課堂開始時，首先會讓學生使用符號，互相指導對方在方格紙上的正方形裡填色，以重現出現有的圖片。如果時間允許，課堂結束時可以讓學生自行創作圖像。",
+          "preparation": "",
           "purpose": "這項活動的目標是增強學生的批判思維技巧，並提高學生對課程的興趣，同時介紹一些基本的程式設計概念，這些概念將會在整課程中使用。在不插電活動中向班級學生介紹序列與演算法等基本概念，可讓害怕電腦的學生也能對這些主題有基本的瞭解。在本課堂中，學生會學習怎樣建立演算法，並把它編碼進程式中。",
           "student_overview": "在本課堂中，你會為同學設計程式，讓同學能夠畫畫！"
         },
         "coursed-2021/Introduction to Online Puzzles": {
           "overview": "在這組謎題中，首先會向學生簡介（或重溫，視你的班級經驗而定） Code.org 的線上工作區。我們有各種影片指出工作區的基本功能，包括「Run」（執行）、「Reset」（重設）與「Step」（步進）按鈕。這些影片也會說明怎樣拖曳 Blockly 積木、刪除 Blockly 積木與連接 Blockly 積木。之後，學生會在迷宮裡練習_序列_與_除錯_技巧。接著，學生會在學習_迴圈_的基本知識時看到一些新的謎題類型，例如收藏家、藝術家與收割者。",
+          "preparation": "",
           "purpose": "我們明白，每個班級對每個科目都有不同的理解程度。你的班級裡可能會有一些學生是電腦奇才，其他人則可能完全沒有經驗。為了營造公平的遊戲（與學習）環境，我們為課程 D 制定了這個「提升階段」，可用來介紹或重溫怎樣使用 Code.org，並學習基本的電腦科學概念。本階段函蓋全部需要的先決條件，讓學生準備好開始課程 D。",
           "student_overview": "本課堂會讓你練習本課程中需要的技巧。"
         },
         "coursed-2021/Relay Programming": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "還記得課程開始時，你使用程式碼繪畫嗎？在本課堂中，你會與一個團隊合作，做一些類似的事情！"
         },
         "coursed-2021/Debugging in Collector": {
           "overview": "在這項線上活動中，學生會在「收藏家」環境中練習除錯。他們會練習閱讀與編輯程式碼，從而使用簡單的演算法、迴圈（loop）與巢狀迴圈（nested loop），修正謎題中的錯誤。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在編寫程式時，你是否遇到過問題？在本課堂中，你會學習除錯的秘密。除錯是找出並解決程式碼問題的流程。"
         },
         "coursed-2021/Events in Bounce": {
           "overview": "在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。",
+          "preparation": "",
           "purpose": "在電腦程式設計中，事件是十分常用的方式，尤其是在電子遊戲中。\n\n在本課堂中，學生會製作運動遊戲，以加深瞭解事件。他們會學習使用箭頭鍵讓彈板移動，並在物件互相碰撞時發出聲音。遊戲結束時，他們可自訂遊戲，讓遊戲變得更獨特！",
           "student_overview": "有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！"
         },
         "coursed-2021/Build a Star Wars Game": {
           "overview": "在本課堂中，學生會練習使用事件（event）製作遊戲，並可在線上分享。在 R2-D2 和其他星際大戰的角色陪伴下，學生會在引導下學習各種事件，然後自由製作屬於自己的遊戲。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在本課堂中，建立自己的星際大戰遊戲，感受原力的震撼！"
         },
         "coursed-2021/Dance Party": {
           "overview": "在本課堂中，學生會編寫程式，製作自己的互動舞蹈派對。這項活動需要使用音效，音效工具用來對音樂做出反應。",
+          "preparation": "",
           "purpose": "本課堂介紹核心的電腦科學概念：編寫程式與事件程式設計（使用積木）。",
           "student_overview": "現在是時候慶祝一下了！你會在本課堂中編寫程式，製作自己的互動舞蹈派對。"
         },
         "coursed-2021/Loops in Ice Age": {
           "overview": "這個舞台是使用迴圈（loop）的快速更新（或簡介），會讓學生使用「repeat」（重複）積木，讓鼠奎特以更有效率的方式拿到橡樹果實。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在本課堂中，你會使用 repeat（重複）積木，協助鼠奎特以最有效率的方式拿到橡樹果實。"
         },
         "coursed-2021/Loops in Artist": {
           "overview": "本課堂以學生先前在課堂中對迴圈（loop）的認識為基礎，讓學生有機會真正發揮創意。這項活動也會做為除錯練習，獲得額外的問題解決機會。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在本課堂中，迴圈（loop）讓你更容易在藝術家中製作酷炫的圖像！"
         },
         "coursed-2021/Nested Loops in Bee": {
           "overview": "在這項線上活動中，學生將有機會把自己對迴圈（loop）的認識推上另一個新的層次。學生會玩蜜蜂和植物大戰殭屍，同時學習怎樣設計程式，使一個迴圈放進另一個迴圈內。我們也會鼓勵學生瞭解，任一個迴圈的少許變更，可怎樣影響程式在點擊「Run」（執行）後的結果。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "迴圈裡的迴圈裡的迴圈 - 這是甚麼意思？本課堂會說明你在建立巢狀迴圈（nested loop）時會發生甚麼事。"
         },
         "coursed-2021/Conditionals with Cards": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "是時候玩一款遊戲，讓你僅在某些條件下賺到點數！"
         },
         "coursed-2021/lesson-6": {
           "overview": "本課堂原本為一小時玩程式活動而和 Minecraft 團隊一起建立。學生將有機會練習到目前為止學到的構想，並搶先學習條件式（conditional）！",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "躲開岩漿！你會在 Minecraft 的世界裡開始學習條件式。"
         },
         "coursed-2021/Conditionals in Bee": {
           "overview": "到了這個階段，學生已設計了程式，讓程式每次都使用相同的方法執行。這種做法十分可靠，不過欠缺點彈性。在本課堂中，班級同學將會開始使用條件式（conditional）編寫程式，讓他們編寫出來的程式，可依據程式遇到的特定條件，以不同方式運作。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "你已明白甚麼是條件式（conditional）。現在是時候為蜜蜂設計程式，讓蜜蜂在採集蜂蜜與花蜜時使用。"
         },
         "coursed-2021/While Loops in Farmer": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "迴圈（loop）在程式編寫中非用實用。本課堂會教你其中一種：while（當）迴圈！"
         },
         "coursed-2021/Until Loops in Maze": {
           "overview": "在本課堂中，學生會學習「until」（直到）迴圈。學生會製作程式，讓主角重複動作，「直到」主角到達所需的停駐點。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "使用 until（直到）迴圈，你就可成就一些精彩的事情！"
         },
         "coursed-2021/End of Course Project": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "準備就緒，開始編寫大量程式！是時候開始製作你的專案了。"
         },
         "express-2021/Programming with Angry Birds": {
           "overview": "學生會使用憤怒鳥遊戲中的角色開發序列演算法，讓憤怒鳥能夠從迷宮的一側移動到另一側的豬那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓憤怒鳥向前、向左或是向右移動。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "與憤怒鳥一起學習序列與演算法。"
         },
         "express-2021/Debugging with Scrat": {
           "overview": "除錯是學習設計程式的重要元素。在本課堂中，學生會遇到各種謎題，這些謎題曾經以不正確的方式解決。學生需要觀察現有的程式碼找出錯誤，包括不正確的迴圈、遺漏的積木、多餘的積木，以及次序錯誤的積木。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在謎題中尋找問題，並練習你的除錯技巧。"
         },
         "express-2021/Collecting Treasure with Laurel": {
-          "overview": "在這組謎題中，學生會繼續增加對演算法和除錯的瞭解。學生會遇到新角色：探除家 Laurel，並製作序列演算法，讓 Laurel 能夠在道路上行走時收集寶藏。"
+          "overview": "在這組謎題中，學生會繼續增加對演算法和除錯的瞭解。學生會遇到新角色：探除家 Laurel，並製作序列演算法，讓 Laurel 能夠在道路上行走時收集寶藏。",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "express-2021/Creating Art with Code": {
           "overview": "在本課堂中，學生會控制藝術家完成畫面上的圖畫。這個藝術家舞台可讓學生製作越來越複雜的圖像，期間會使用新的積木，例如「move forward by 100 pixels」（向前移動 100 像素）與「turn right by 90 degrees」（向右旋轉 90 度）等。",
+          "preparation": "",
           "purpose": "本課程會以學生先前使用序列的經驗為基礎，激發學生的更多創意編寫程式。本課堂之目的，是介紹新的積木與目標，以鞏固學生對序列的認識。在這種情況下，學生會使用新的積木學習像素與角度的更多知識，同時仍然可練習序列技巧，此外，學生也將能夠把新的目標形象化，例如編寫程式讓藝術家繪畫正方形。",
           "student_overview": "為藝術家設計程式，製作漂亮的圖像。"
         },
         "express-2021/Swimming Fish in Sprite Lab": {
           "overview": "在本課堂中，學生會學習 Sprite Lab 的 2 大核心概念：角色（sprite）與行為。角色是畫面上的人物或物件，學生可移動、變更或操控角色。行為是讓角色連續進行的動作，直到角色停止。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "學習建立與編輯角色（sprite）。"
+        },
+        "express-2021/lesson-2": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "express-2021/lesson-3": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "express-2021/Virtual Pet with Sprite Lab": {
           "overview": "在本課堂中，學生會製作互動的虛擬寵物，並依據學生的喜好設計寵物的外觀與行為。學生會使用 Sprite Lab 的「Costumes」（造型）工具自訂寵物的外表。然後，學生會使用學到的事件、行為與其他概念，讓寵物擁有自己的生命！",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在本課堂中，學生會製作互動的虛擬寵物，並依據學生的喜好設計寵物的外觀與行為。學生會使用 Sprite Lab 的「Costumes」（造型）工具自訂寵物的外表。然後，學生會使用學到的事件、行為與其他概念，讓寵物擁有自己的生命！"
         },
         "express-2021/lesson-1": {
           "overview": "在本課堂中，學生會編寫程式，製作自己的互動舞蹈派對。這項活動需要使用音效，音效工具用來對音樂做出反應。",
+          "preparation": "",
           "purpose": "本課堂介紹核心的電腦科學概念：編寫程式與事件程式設計（使用積木）。",
           "student_overview": "現在是時候慶祝一下了！你會在本課堂中編寫程式，製作自己的互動舞蹈派對。"
         },
         "express-2021/Loops with Rey and BB-8": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "使用迴圈（loop），幫助 BB-8 完成各個迷宮！"
         },
         "express-2021/Sticker Art with Loops": {
           "overview": "觀看學生怎樣使用少量積木與數位貼紙創作精彩的設計，讓他們歡喜雀躍！本課堂以先前的課堂中對迴圈的認識為基礎，讓學生有機會真正發揮創意。這項活動非常適合用來製作數位作品，或是用於家長/教師會議。",
+          "preparation": "",
           "purpose": "這個系列會以充滿創意的個人設計，強調迴圈的強大力量。\n\n此課程進展是以專案為基礎的系列，讓學生可在自己的作品上學習，並製作出精彩的作品。",
           "student_overview": "在本課堂中，迴圈（loop）讓你在藝術家中輕鬆製作更酷炫的圖像！"
         },
         "express-2021/Nested Loops in Maze": {
           "overview": "在這項線上活動中，學生將有機會把自己對迴圈（loop）的認識推上另一個新的層次。學生會玩蜜蜂和植物大戰殭屍，同時學習怎樣設計程式，使一個迴圈放進另一個迴圈內。我們也會鼓勵學生瞭解，任一個迴圈的少許變更，可怎樣影響程式在點擊「Run」（執行）後的結果。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "迴圈裡的迴圈裡的迴圈 - 這是甚麼意思？本課堂會說明你在建立巢狀迴圈（nested loop）時會發生甚麼事。"
         },
         "express-2021/Snowflakes with Anna and Elsa": {
           "overview": "學生已學懂怎樣把迴圈分層，現在他們可製作許多漂亮的東西。本課堂會把學生帶到一系列的練習中，協助他們運用安娜與艾莎的優秀滑冰技巧，製作適用於自己個人作品的圖像！",
+          "preparation": "",
           "purpose": "在這個系列中，學生會練習製作巢狀迴圈（nested loop），同時製作精彩圖像，讓學生迫不及待與他人分享。 \n\n學生在收到一些指示後，便會學生自行決定怎樣製作重複的設計。然後，他們會以多種方式把玩設計，最後製作出獨一無二的藝術作品。",
           "student_overview": "安娜與艾莎的滑冰技術非常出眾，但是需要你的協助，在冰上建立模式。請使用巢狀迴圈（nested loop）製作非常酷炫的效果！"
         },
         "express-2021/Looking Ahead with Minecraft ": {
           "overview": "本課堂原本為一小時玩程式活動而和 Minecraft 團隊一起建立。學生將有機會練習到目前為止學到的構想，並搶先學習條件式（conditional）！",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "躲開岩漿！你會在 Minecraft 的世界裡開始學習條件式。"
         },
         "express-2021/If/Else with Bee": {
           "overview": "到了這個階段，學生已設計了程式，讓程式每次都使用相同的方法執行。這種做法十分可靠，不過欠缺點彈性。在本課堂中，班級同學將會開始使用條件式（conditional）編寫程式，讓他們編寫出來的程式，可依據程式遇到的特定條件，以不同方式運作。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "你已明白甚麼是條件式（conditional）。現在是時候為蜜蜂設計程式，讓蜜蜂在採集蜂蜜與花蜜時使用。"
         },
         "express-2021/While Loops with the Farmer": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "迴圈（loop）在程式編寫中非用實用。本課堂會教你其中一種：while（當）迴圈！"
         },
         "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "overview": "本課堂原本為一小時玩程式活動而和 Minecraft 團隊一起建立。學生將有機會練習到目前為止學到的構想，並搶先學習條件式（conditional）！",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "你會在 Minecraft 的世界裡學習條件式。"
         },
         "express-2021/Until Loops in Maze": {
           "overview": "在本課堂中，學生會學習「until」（直到）迴圈。學生會製作程式，讓主角重複動作，「直到」主角到達所需的停駐點。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "使用 until（直到）迴圈，你就可成就一些精彩的事情！"
         },
         "express-2021/Harvesting with Conditionals": {
           "overview": "學生會練習「while」（當）迴圈、「until」（直到）迴圈與「if/else」（如果/否則）陳述句。這幾種積木都會使用條件式。練習全部積木後，學生便會學習到如何編寫複雜且具靈活性的程式碼。",
+          "preparation": "",
           "purpose": "練習在不同情景中使用條件式（conditional），可協助學生更瞭解條件式可用來做甚麼。在前一個課堂中，學生僅使用條件式在迷宮中移動。在本課堂中，學生會使用條件式幫助農夫知道甚麼時候應該收割農作物。新的模式將會出現，學生會以創意與批判思維，判斷需要在裡面執行並重複程式碼的條件式。",
           "student_overview": "我們不會總是清楚瞭解要在甚麼時候使用每項條件式（conditional）。本課堂會幫你練習決定要怎樣做。"
         },
         "express-2021/Functions in Minecraft": {
           "overview": "在這個有趣的互動式 Minecraft 冒險之旅中，學生會開始瞭解函式為何這麼實用！",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "你能指出要如何利用函式提高編程效率嗎？"
         },
         "express-2021/Functions with Artist": {
           "overview": "學生會在藝術家遊戲中學習使用函式（function）。他們會製作並修改精美的圖像。如需要製作更複雜的圖案，學生便會學習巢狀（nesting）函式，方法是呼叫一個函式裡的另一個函式。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "使用函式，以更簡易的方式繪畫複雜的圖畫！"
         },
         "express-2021/Functions with Harvester": {
           "overview": "學生已練習在藝術家遊戲中製作精彩的設計，並在蜜蜂遊戲中遊走，但他們今天會使用函式（function），在收割者遊戲中收割農作物。本課堂會鼓勵學生以新的方式使用函式：把函式和「while」（當）迴圈與「if/else」（如果/否則）陳述句結合起來。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "協助農夫收割農作物時，函式（function）可為你省下大量工夫！"
+        },
+        "express-2021/lesson-4": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "express-2021/Variables with Artist": {
           "overview": "在本課堂中，學生會在藝術家環境中，學習怎樣使用變數製作重複的設計。學生會學習變數可怎樣使程式碼更容易編寫和閱讀。在引導式謎題後，學生會在自由探索關卡中結束課堂，然後展示他們學到的內容，以及製作自己的設計。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在本課堂中，你會使用變數來繪畫。在程式執行期間，這些變數都可變更。"
         },
         "express-2021/Changing Variables with Bee": {
           "overview": "本課堂會幫你說明，變數可怎樣使程式更強大：允許在程式碼執時變更各個值。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "這隻蜜蜂很喜愛變數！"
         },
         "express-2021/For Loops with Bee": {
           "overview": "本課堂以蜜蜂為角色，集中學習「for」（計數）迴圈並使用遞增變數解決更複雜的謎題。學生首先會重溫先前課堂的迴圈，然後觀看 for 迴圈簡介，讓他們可更有效地解決複雜的問題。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "嗡嗡嗡！在這些謎題中，你會以「for」（計數）迴圈引導蜜蜂找出花蜜與蜂蜜！"
         },
         "express-2021/For Loops with Artist": {
           "overview": "在本課堂中，學生會繼續練習「for」（計數）迴圈，這次會使用藝術家進行。學生會完成各種謎題，期間會結合變數、迴圈與「for」迴圈的概念，製作出複雜的設計。最後，他們將有機會在自由探索關卡中創作自己的藝術作品。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "準備好製作你的下一份傑作！在這裡，你會使用「for」迴圈繪畫一些讓人大開眼界的圖畫。"
         },
         "express-2021/End of Course Project": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "準備就緒，開始編寫大量程式！是時候開始製作你的專案了。"
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "overview": "本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "以點擊與拖放的方式完成謎題。"
         },
         "pre-express-2021/Sequencing with Scrat": {
           "overview": "本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。",
+          "preparation": "",
           "purpose": "在本課堂中，學生會在電腦平台上加強程式設計與除錯技巧。這些謎題採用積木格式，有助學生學習序列與各種概念，而不用擔心要完善程式語法。",
           "student_overview": "為鼠奎特設計程式，讓他能夠拿到橡樹果實。"
         },
         "pre-express-2021/Programming in with Angry Birds": {
           "overview": "學生會使用冰原歷險記中的角色開發序列演算法，讓鼠奎特能夠從迷宮的一側移動到另一側的橡樹果實那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓鼠奎特向前、向左或是向右移動。",
+          "preparation": "",
           "purpose": "在本課堂中，學生會在電腦平台上加強程式設計與除錯技巧。這些謎題採用積木格式，有助學生學習序列與各種概念，而不用擔心要完善程式語法。"
         },
         "pre-express-2021/Programming with Rey and BB-8": {
           "overview": "在本課堂中，學生會以更複雜的方式運用新的程式設計技巧，與 BB-8 一起完成更巧妙的關卡。",
+          "preparation": "",
           "purpose": "本課堂會以傳遞知識為重點，為學生提供全新環境，練習他們一直學習的技巧。星際大戰的粉絲看到這些謎題後，肯定會非常雀躍。這個系列的每個謎題都已加入星際大戰的角色，讓學生更深入瞭解本課程餘下部分將會用到的基本概念。"
         },
         "pre-express-2021/Programming in Harvester": {
           "overview": "學生會把所學到的程式設計概念，應用到收割者遊戲的環境中。現在不僅是讓角色到達終點 - 學生必須使用新的積木收集玉米。他們會繼續建立順序演算法的技巧，並開始運用除錯流程。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "幫助收割者在路上收集蔬菜。"
         },
         "pre-express-2021/Loops with Scrat": {
+          "overview": "",
+          "preparation": "",
           "purpose": "在本課堂中，學生會學習關於迴圈的更多知識，以及怎樣在 Blockly 程式碼中實作迴圈。使用_迴圈_是在程式設計中很重要的技巧，因為手動重複命令不但乏味，而且效率很低。學生會在這些 Code.org 的謎題中，在現有的迴圈裡加入指令、收集重複的程式碼加入迴圈中，然後識別需要重複的模式。",
           "student_overview": "使用迴圈，幫助鼠奎特更快完成任務。"
         },
         "pre-express-2021/Loops with Laurel": {
-          "overview": "在本課堂中，學生會繼續學習迴圈（loop）的概念。在這裡，冒險家 Laurel 會使用迴圈，在開放的洞穴中收集寶藏。這個時候會介紹新的「get treasure」（取得寶藏）積木，協助她完成旅程。"
+          "overview": "在本課堂中，學生會繼續學習迴圈（loop）的概念。在這裡，冒險家 Laurel 會使用迴圈，在開放的洞穴中收集寶藏。這個時候會介紹新的「get treasure」（取得寶藏）積木，協助她完成旅程。",
+          "preparation": "",
+          "purpose": ""
         },
         "pre-express-2021/Ocean Scene with Loops": {
           "overview": "學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個插電課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，迴圈則用於建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。",
+          "preparation": "",
           "purpose": "本課堂會提供不同的視角，說明迴圈可怎樣在程式設計中建立各種東西。學生也可在這裡反思：不使用迴圈設計程式會降低效率，因為沒有「重複」迴圈的幫助，程式便需要增加多少塊積木。",
           "student_overview": "使用迴圈與模式完成圖像。"
         },
         "pre-express-2021/Drawing Gardens with Loops": {
           "overview": "學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個線上課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，學生會使用迴圈建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。",
+          "preparation": "",
           "purpose": "本課堂會提供不同的視角，說明迴圈可怎樣在程式設計中建立各種東西。學生會測試自己的批判思維技巧，評估提供的程式碼，並決定需要加入甚麼才可解決謎題。學生也可在這裡反思：不使用迴圈設計程式會降低效率，因為沒有「重複」迴圈的幫助，程式便需要增加多少塊積木。",
           "student_overview": "使用模式與迴圈完成圖像。"
         },
         "pre-express-2021/On the Move with Events": {
           "overview": "在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在 Play Lab 創造出你的故事！",
+          "preparation": "",
           "purpose": "今天學生會使用 Play Lab，繼續增加對事件的認識。事件在大部分電腦程式中都十分常見。在這項活動中，學生會使用事件，讓角色依據使用者啟動的事件，在畫面上移動、發出噪音與變更背景。",
           "student_overview": "創作自己的遊戲或故事。"
         },
         "pre-express-2021/A Royal Battle with Events": {
           "overview": "在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在 Play Lab 創造出你的遊戲！",
+          "preparation": "",
           "purpose": "在這項線上活動中，學生會學習怎樣在 Play Lab 中使用事件。他們首先會訓練武士，在他們按下箭頭鍵時讓武士移動。活動結束時，他們將有機會展示本課程中所學到的其餘技巧（包括序列與迴圈）做為最後的自由探索謎題。",
           "student_overview": "使用事件製作故事或互動遊戲。"
         },
         "coursee-2021/Simon Says": {
           "overview": "在本課堂中，學生會玩一款遊戲，目的是讓他們思考一下，需要以甚麼方式提供命令，才可獲得正確的結果。這樣就可幫助他們更容易在往後的課堂中過渡到 Sprite Lab。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "玩一款遊戲，想想需要使用哪些命令才可獲得正確的結果。"
         },
         "coursee-2021/Learning Sprites with Sprite Lab": {
           "overview": "在本課堂中，學生會學習 Sprite Lab 的 2 大核心概念：角色（sprite）與行為。角色是畫面上的人物或物件，學生可移動、變更或操控角色。行為是讓角色連續進行的動作，直到角色停止。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "學習建立與編輯角色（sprite）。"
         },
         "coursee-2021/Alien Dance Party with Sprite Lab": {
           "overview": "本課堂會介紹 Sprite Lab，這是一個工作平台，讓學生可在這裡製作自己的互動式動畫和遊戲。除了「行為」外，學生今天會結合做為「事件」的使用者輸入，以製成「外星人舞蹈派對」。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "製作可與同學分享的互動專案。"
         },
+        "coursee-2021/lesson-4": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "coursee-2021/Private and Personal Information": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "網際網路刺激有趣，但是也有必要保持安全！本課堂會教你有哪些資訊可安全分享，有哪些資訊則應保持私密。"
         },
         "coursee-2021/About Me": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。"
         },
         "coursee-2021/Digital Sharing": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在本課堂中，你會學到所有權與著作權方面的挑戰與優點。"
         },
         "coursee-2021/Programming and Loops with the Artist": {
           "overview": "觀看學生怎樣使用少量積木與數位貼紙創作精彩的設計，讓他們歡喜雀躍！本課堂以先前的課堂中對迴圈的認識為基礎，讓學生有機會真正發揮創意。這項活動非常適合用來製作數位作品，或是用於家長/教師會議。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在本課堂中，迴圈（loop）讓你在藝術家中輕鬆製作更酷炫的圖像！"
         },
         "coursee-2021/Nested Loops in Artist": {
+          "overview": "",
+          "preparation": "",
           "purpose": "在這個線上活動中，學生會在藝術家遊戲中設計作品，並可自豪地與家人分享。\n\n這項活動之目的，是運用巢狀迴圈（nested loop）做為啟發學生藝術思維的方式，把編寫程式視為另一種表現創意的方式。這組謎題用於發展學生的批判思維技巧、讓學生學習初等幾何學，並啟發學生的創意 - 這些目標全都納入巢狀迴圈的學習範圍中！",
           "student_overview": "更多巢狀迴圈（nested loop）！這一次，你將能夠使用巢狀迴圈製作一些非常漂亮的圖畫！"
         },
         "coursee-2021/Nested Loops in Frozen": {
           "overview": "學生已學懂怎樣把迴圈分層，現在他們可製作許多漂亮的東西。本課堂會把學生帶到一系列的練習中，協助他們運用安娜與艾莎的優秀滑冰技巧，製作適用於自己個人作品的圖像！",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "安娜與艾莎的滑冰技術非常出眾，但是需要你的協助，在冰上建立模式。請使用巢狀迴圈（nested loop）製作非常酷炫的效果！"
         },
         "coursee-2021/Functions: Songwriting": {
           "overview": "在電腦科學世界中，函式（function）可以說是最壯觀的結構之一。函式有時候稱為程序，是在龐大的程式中的一些迷你程式，可以不斷重複利用。本課堂將會幫助學生直觀的瞭解，為甚麼把這麼多零碎的程式碼組合成函式是非常有用的做法。  ",
+          "preparation": "",
           "purpose": "使用函式有助簡化程式碼，並加強學生組織自己程式的能力。學生很快便會明白，編寫函式可讓內容更長的程式更容易閱讀，而且在出錯時更容易除錯。",
           "student_overview": "即使是搖滾巨星也需要程式設計技巧。本課堂會用歌曲裡的歌詞教授函式。"
         },
         "coursee-2021/Functions in Minecraft": {
           "overview": "在這個有趣的互動式 Minecraft 冒險之旅中，學生會開始瞭解函式為何這麼實用！",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "你能指出要如何利用函式提高編程效率嗎？"
         },
         "coursee-2021/Functions in Artist": {
           "overview": "學生會在藝術家遊戲中學習使用函式（function）。他們會製作並修改精美的圖像。如需要製作更複雜的圖案，學生便會學習巢狀（nesting）函式，方法是呼叫一個函式裡的另一個函式。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "使用函式，以更簡易的方式繪畫複雜的圖畫！"
         },
         "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "overview": "本課堂原本為一小時玩程式活動而和 Minecraft 團隊一起建立。學生將有機會練習到目前為止學到的構想，並搶先學習條件式（conditional）！",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "你會在 Minecraft 的世界裡學習條件式。"
         },
         "coursee-2021/Conditionals": {
           "overview": "本課堂會向學生介紹「while」（當）迴圈與「if / else」（如果/否則）陳述句。_While 迴圈_ 用於在條件是 true 時繼續重複命令。While 迴圈的使用情況是：程式設計師不知道命令確實需要重複多少次，但是知道哪項條件需要為 true，才可讓迴圈繼續重複。「If / Else」陳述句為程式設計提供彈性，程式僅會在某個項目為 true 時執行整個部分，否則便會執行其他項目。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "在這個有趣而具挑戰的遊戲系列中，你會告訴電腦在某些特定條件下如何行動。"
         },
         "coursee-2021/Functions in Harvester": {
           "overview": "學生已練習在藝術家遊戲中製作精彩的設計，並在蜜蜂遊戲中遊走，但他們今天會使用函式（function），在收割者遊戲中收割農作物。本課堂會鼓勵學生以新的方式使用函式：把函式和「while」（當）迴圈與「if/else」（如果/否則）陳述句結合起來。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "協助農夫收割農作物時，函式（function）可為你省下大量工夫！"
         },
         "coursee-2021/lesson-1": {
-          "overview": "在本課堂中，學生會瞭解無障礙使用與同理心的價值所在，途徑為一起思考並設計無障礙解決方案，用於假想的應用程式中。"
+          "overview": "在本課堂中，學生會瞭解無障礙使用與同理心的價值所在，途徑為一起思考並設計無障礙解決方案，用於假想的應用程式中。",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "coursee-2021/End of Course Project": {
-          "overview": "接下來的 4 個課堂讓學生有機會把自己的程寫編寫技巧，用於製作一份總結專案。這個專案可幫助學生累積程式編寫經驗，並製作範例專案與同伴和摯愛分享。這是多個課堂或多個星期的體驗，學生會花時間一起思考、學習設計流程、製作並展示自己的最終作品。\\\\r\n\\\\r\n在探索階段中，學生將會試玩預先製作完成的藝術家與 Sprite Lab 專案範例，從而獲取靈感。然後，學生將會學習設計流程，以及怎樣將設計加入自己的專案中。之後，學生會有自由創作空間，在藝術家、Sprite Lab 或其他他們熟悉的介面中製作自己的專案（這可能是專案中最長的階段）。最後，學生將能夠向同伴展示自己的成品。",
+          "overview": "接下來的 4 個課堂讓學生有機會把自己的程寫編寫技巧，用於製作一份總結專案。這個專案可幫助學生累積程式編寫經驗，並製作範例專案與同伴和摯愛分享。這是多個課堂或多個星期的體驗，學生會花時間一起思考、學習設計流程、製作並展示自己的最終作品。\\r\n\\r\n在探索階段中，學生將會試玩預先製作完成的藝術家與 Sprite Lab 專案範例，從而獲取靈感。然後，學生將會學習設計流程，以及怎樣將設計加入自己的專案中。之後，學生會有自由創作空間，在藝術家、Sprite Lab 或其他他們熟悉的介面中製作自己的專案（這可能是專案中最長的階段）。最後，學生將能夠向同伴展示自己的成品。",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "這麼大型的專案需要時間與充分計畫。找出靈感、制訂計畫，激發你的創意！"
         }
       }

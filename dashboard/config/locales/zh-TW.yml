@@ -163,7 +163,15 @@ zh-TW:
     user_type_button: 更新帳戶類型
     user_type_label: 帳戶類型
     user_type_student: 學生
+    user_type_student_desc: 探索我們的所有課程和活動，還有：
+    user_type_student_ability_1: 儲存你的進度和項目
+    user_type_student_ability_2: 加入老師的課堂小組
     user_type_teacher: 教師
+    user_type_teacher_desc: 學生能訪問的所有東西，還有：
+    user_type_teacher_ability_1: 創建課堂小組
+    user_type_teacher_ability_2: 分配和跟蹤學生作業
+    user_type_teacher_ability_3: 註冊專業學習
+    user_type_teacher_ability_4: 在我們的教師論壇上互動
     field_is_required: 必填
     accept_terms: 你必須同意才能建立帳戶。
     error: 發生錯誤。
