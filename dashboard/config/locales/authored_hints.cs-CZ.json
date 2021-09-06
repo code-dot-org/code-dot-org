@@ -3558,9 +3558,9 @@
         },
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_a": "Každý úhel je buď 45 nebo 90 stupňů.",
-          "courseC_artist_prog7_b": "Funguje to v prvním kroku?\\\nA co druhý?\\\nKde se to pokazí?\\\\",
+          "courseC_artist_prog7_b": "Funguje to na první krok?  \nA co na druhý?  \nCo je špatně?",
           "courseC_artist_prog7_c": "Pomocí rozbalovací nabídky na otočných blocích můžeš zjistit, jaký úhel potřebuješ!",
-          "courseC_artist_prog7_d": "Budeš potřebovat:\n\n-   posuň se vpřed\n-   otoč se vpravo o 45 stupňů\n-   posuň se vpřed\n-   otoč se vpravo o 90 stupňů\n-   posuň se vpřed\n-   otoč se vpravo o 45 stupňů\n\nTento vzor opakuj dvakrát!",
+          "courseC_artist_prog7_d": "Budete muset:\n- posunout se vpřed\n- otočit se doprava o 45 stupňů\n- posunout se vpřed\n- otočit se doprava o 90 stupňů\n- posunout se vpřed\n- otočit se doprava o 45 stupňů\n\nOpakovat tento postup dvakrát!",
           "courseC_artist_prog7_e": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
         },
         "courseC_collector_loops_challenge2_2021": {
@@ -4407,7 +4407,7 @@
           "courseF_bee_variables_4_2021_1": "Namísto přičtení jedničky k proměnné přičtěte pokaždé dvojku."
         },
         "courseF_events_choice_pufferfish": {
-          "changeProp": "Budete potřebovat také tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "V tomto bloku budete potřebovat také:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">„měřítko“</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">„creature_18_1“</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key": {
           "changePropBlock": "Budete potřebovat také tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
@@ -4416,7 +4416,7 @@
           "behavior_list": "Zkuste používat taková chování jako „pohyb na východ a zacyklení“, „otáčení doprava“, a „potulování se“."
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "Zkuste změnit štítek proměnné v bloku `when answered` (`při zodpovězení`). Protože výzev je více, použijte výzvu pro _poslední_ výzvu, která bude zodpovězena.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "Zkuste změnit štítek proměnné v bloku `when answered` (`když je zodpovězeno`). Protože výzev je více, použijte štítek *poslední* výzvy, která bude zodpovězena.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_variables_card_finish": {
           "card_idea1": "Napojením nového bloku výzvy na jinou proměnnou můžete ke své první události `when answered` (`když je zodpovězeno`) přidat druhou (nebo třetí nebo čtvrtou) výzvu.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">jméno</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">co chcete k narozeninám?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">dárek</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
@@ -4433,6 +4433,18 @@
           "card_idea1": "Použitím nového bloku výzvy s jinou proměnnou můžete přidat druhou (nebo třetí nebo čtvrtou) výzvu.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Zadejte slovo pro aktivitu:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">sloveso</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
           "card_idea2": "Změnu z jednoho chování na jiné můžete provést pomocí bloku `sprajt se zastaví` s prostým blokem `sprite begins` (`sprajt začne`) pod událostí.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">jméno</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">„robot_02_1“</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">otáčení doleva</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">„robot_02_1“</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">otáčení doprava</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
           "card_idea3": "Svůj program můžete udělat interaktivní tím, že způsobíte, aby se odehrávaly jiné věci  , když uživatel stiskne tlačítko nebo když uplyne určitá doba.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">„když“</title>\n    <title name=\"KEY\">„nahoru“</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">„měřítko“</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">„robot_02_1“</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_c": "Vnořte své bloky do hloubky tři, takto:\n\n- opakování 4\n   - opakování 3\n      - opakování 12\n          - získat nektar\n      - posun vpřed\n   - otočení doprava\n"
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_c": "V tomto hlavolamu má první sada květin **14** květů, druhá má **10** květů, třetí sada má **6** květů a čtvrtá má **2** květy.\n\nPovšimněte si, že na tomto výkrese je  **7** červených čtverců, **5** oranžových čtverců, **3** zelené čtverce a **1** modrý blok. \n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\nJak tato čísla navzájem souvisejí?"
+        },
+        "courseF_bee_for11_2021": {
+          "courseF_bee_for11_a": "O kolik méně je 12 než 15?  \nO kolik méně je 9 než 12?\n\nVidíte v tom vzor?"
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_c": "Váš cyklus bude odpočítávat *od 3 do 15* s nějakým krokem. Jaký krok to je?"
         }
       }
     }

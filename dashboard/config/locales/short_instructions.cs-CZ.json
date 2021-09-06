@@ -1405,7 +1405,7 @@
         "outbreak1": "Vytvořte 10 zdravých a 1 nakaženou postavu. Změňte jejich velikost a uveďte je do pohybu.",
         "outbreak3": "Nasaďte příšerce roušku tím, že na ni kliknete. ",
         "outbreak4": "Změňte počet a velikost postav příšerek pro simulaci.",
-        "outbreak8": "Sdílet zprávu se simulací.",
+        "outbreak8": "Sdílejte zprávu se svou simulací.",
         "outbreak2": "Nastavte, aby se zdravé příšerky při dotyku změnily na nakažené.",
         "outbreak5": "Nastavte, aby se všechny nakažené příšerky začaly uzdravovat, když se nakažené příšerky dotkne zdravá příšerka.",
         "outbreak6": "Přidejte procentuální pravděpodobnost, kdy se příšerky nakazí, kdykoli se zdravá příšerka dotkne nakažené příšerky. Proveďte to pro všechny kombinace setkání příšerek s rouškou a bez roušky.",
@@ -1442,7 +1442,7 @@
         "CourseF_outbreak4": "Změňte počet a velikost postav příšerek pro simulaci.",
         "CourseF_outbreak6": "Přidejte procentuální pravděpodobnost, kdy se příšerky nakazí, kdykoli se zdravá příšerka dotkne nakažené příšerky. Proveďte to pro všechny kombinace setkání příšerek s rouškou a bez roušky.",
         "CourseF_outbreak7": "Vytvořte nový kostým pro příšerky, které jsou na virus imunní, a použijte ho v simulaci.",
-        "CourseF_outbreak8": "Sdílet zprávu se simulací.",
+        "CourseF_outbreak8": "Sdílejte zprávu se svou simulací.",
         "courseA_artist_loops7_2021": "Pomocí cyklu \"repeat\" přidej do vody vlny.",
         "courseA_harvester_seq12_2021": "Posbírej všechnu kukuřici.",
         "courseA_maze_ramp5a_2021": "Dostaň mne k prasátku!",
@@ -1485,7 +1485,7 @@
         "courseC_artist_loops4a_2021": "Uprav svůj kód: skoč vpřed mezi kreslením první a druhé nálepky.",
         "courseC_artist_prog5_2021": "Tenhle domek potřebuje střechu! Nakresli trojúhelník. Tip: všechny tři strany jsou stejně dlouhé.",
         "courseC_artist_prog8_2021": "Ještě jedna značka. Toto je trojúhelník pro Pi.\n(Každá strana má 150 pixelů)",
-        "courseC_artist_prog_challenge2a_2021": "_Pomoz mi namalovat žluté čáry na této silnici!_",
+        "courseC_artist_prog_challenge2a_2021": "*\"Pomozte mi nakreslit žluté čáry na tuto silnici!\"*",
         "courseC_collector_prog2_2021": "Přesuň Laurel k pokladu a poté jej vyzvedni pomocí `sbírej`.",
         "courseC_collector_prog8_2021": "_\"Jen tak dál! Pomoz mi posbírat všechen poklad.\"_",
         "courseC_collector_prog9_2021": "_\"Pojďme posbírat všechen poklad!\"_",
@@ -1537,7 +1537,7 @@
         "courseF_bee1": "Hmm, ta květinka vypadá lahodně!\n\nOprav chybu(y) a sesbírej všechen nektar. Můžeš využít tlačítek Spustit i Krok.",
         "courseF_bee2": "Použij cyklus `opakuj` k sesbírání všeho nektaru.",
         "courseF_bee_for4_2021": "Pomoz včele sebrat nektar ze všech květů.",
-        "courseF_bee_for8_2021": "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3, 6, 9, 12, 15? \\\r",
+        "courseF_bee_for8_2021": "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3, 6, 9, 12, 15? \r\n",
         "courseF_bee_for_challenge2_2021": "Vyřeš tento puzzle s co nejmenším možným počtem bloků.",
         "grade2_collector_10_2021": "Máš skoro hotovo! Posbírej co nejvíce kousků pokladu a dokonči tuto fázi!",
         "grade2_collector_A_2021": "Pomoz Laurel posbírat všechen poklad.",
@@ -1760,7 +1760,9 @@
         "express_maze_debugging9_2021": "Využij nabízené bloky, abys vytvořil svůj program. Dostaň veverku Scrata k žaludu.",
         "ramp_artist_loops6v1_2021": "Pomocí cyklu vytvořte toto schodiště.",
         "ramp_artist_loops7_2021": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus!",
-        "simcustom_2021": "Pokuste se udělat nějaké změny v kostýmech sprajtů nebo v níže uvedeném kódu. "
+        "simcustom_2021": "Pokuste se udělat nějaké změny v kostýmech sprajtů nebo v níže uvedeném kódu. ",
+        "outbreak_freeplay": "Udělejte na svém projektu jakékoli změny nebo vylepšení dle vlastního přání.",
+        "outbreak_freeplay_basic": "Udělejte na svém projektu jakékoli změny nebo vylepšení dle vlastního přání."
       }
     }
   }

@@ -7,7 +7,9 @@ cs:
       Bass, Mid, and Treble: Basy, středy a výšky
       Binary Numbers: Binární čísla
       Challenge: Výzva
+      Chance: 'Šance:'
       Code Your Own Flappy Game: Naprogramujte si vlastní pleskací hru
+      Creating a Simulation: Vytvoření simulace
       Dance Crews: Taneční skupiny
       Debugging: Ladění
       Design Mode: Dizajnový mód
@@ -24,28 +26,35 @@ cs:
       Get In Formation: Utvoř sestavu
       Images and Sounds: Obrázky a zvuky
       Intro to Design Mode: Úvod do dizajnového módu
+      Learning from Simulations: Učení se na základě simulací
       Lesson Extras: Doplňující cvičení
       Lists: Seznamy
       Measures: Takty
+      'Mini-Project: Outbreak Simulator': 'Miniprojekt: Simulátor epidemie'
       More Buttons: Více tlačítek
+      More Monsters: Další příšery
       My Online Neighborhood: Mé online sousedství
       Overview: Přehled
       Pair Programming: Párové programování
       Picturing Data: Zobrazení dat
       Predict: Předpověď
+      Programming with Events: Programování s událostmi
       Programming with Rey and BB-8: Programování s Rey a BB-8
       Properties: Vlastnosti
       Quarter Notes: Čtvrťové noty
       Random Numbers: Náhodná čísla
+      Recovery: Zotavení
       Reflection: Reflexe
       Review: Posouzení
       Setting Properties: Nastavení vlastností
       Share Your App: Sdílej svou appku
+      Share Your Message: Sdílejte své sdělení
       Speed it Up, Slow it Down: Zrychli to, zpomal to
       Stopping the Outbreak with Masks: Zastavení šíření pomocí roušek
       Text Compression: Komprese textu
       The Harvester: Zahradnice
       Tour of Design Mode: Představení dizajnového módu
+      Vaccines: Vakcíny
       Variables: Proměnné
       Video: Video
       'Video: Conditional Statements': 'Video: Podmíněný příkaz'
@@ -54,6 +63,7 @@ cs:
       'Video: Intro to CSS': 'Video: Úvod do CSS'
       'Video: Problem Solving Process': 'Video: Proces řešení problémů'
       Warm Up: Zahřátí
+      Welcome to Monster Town: Vítejte ve Městě Příšer
       Where'd They Go?: Kam by šli?
       While Loops with the Farmer: Cykly pokud (while) s farmářkou
       Wrap-up: Shrnutí
