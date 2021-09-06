@@ -1,4 +1,3 @@
----
 nn:
   data:
     script:
@@ -839,6 +838,12 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -892,6 +897,12 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -901,6 +912,12 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -1333,6 +1350,12 @@ nn:
               name: 'Trådlaust: Låtskriving med parameter'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -1348,12 +1371,12 @@ nn:
             Teaching Strategies:
               name: Læringsstrategiar
         ecs-unit4:
-          description: "(gammel) Eining 4: Programmering"
-          description_short: "(gammel) Eining 4: Programmering"
+          description: '(gammel) Eining 4: Programmering'
+          description_short: '(gammel) Eining 4: Programmering'
           lessons:
             Teaching Strategies:
               name: Læringsstrategiar
-          student_description: "(gammel) Eining 4: Programmering"
+          student_description: '(gammel) Eining 4: Programmering'
         ecs-unit5:
           lessons:
             Unit 5 lessons:
@@ -2263,7 +2286,7 @@ nn:
           description: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet! Reis gjennom Minecraft med kode.
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft: Helten si reise i Kodetimen'
+              name: 'Minecraft\: Helten si reise i Kodetimen'
             Minecraft Hour of Code:
               name: Kodetimen med Minecraft
           student_description: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet! Reis gjennom Minecraft med kode.
@@ -2512,7 +2535,7 @@ nn:
               display_name: Undersøking
           lessons:
             Functions with Parameters_:
-              name: Funksjonar med parameter\_
+              name: Funksjonar med parameter_
             Functions with Parameters:
               name: Funksjonar med parameter
         coursee-2018:
@@ -3355,7 +3378,7 @@ nn:
             csp_project:
               display_name: Prosjekt
         csp2-pilot-staging:
-          title: "(gammel) Eining 2: Internett"
+          title: '(gammel) Eining 2: Internett'
           lesson_groups:
             csp_variables:
               display_name: Variablar
@@ -3417,7 +3440,7 @@ nn:
             csp_project:
               display_name: Prosjekt
         csp9-pilot-staging:
-          title: "(gammel) Eining 9: Data"
+          title: '(gammel) Eining 9: Data'
           lesson_groups:
             csp_variables:
               display_name: Variablar
@@ -4036,7 +4059,7 @@ nn:
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
-              display_name: "(gammel) Eining 1: Digital informasjon"
+              display_name: '(gammel) Eining 1: Digital informasjon'
             cspSurvey:
               display_name: Undersøking
             cspSurvey2020:
@@ -4047,7 +4070,7 @@ nn:
         csp2-2020:
           lesson_groups:
             csp_unit2_2020:
-              display_name: "(gammel) Eining 2: Internett"
+              display_name: '(gammel) Eining 2: Internett'
             cspSurvey2020:
               display_name: Undersøking etter kurs
         csp3-2020:
@@ -4064,7 +4087,7 @@ nn:
         csp9-2020:
           lesson_groups:
             csp_unit9_2020:
-              display_name: "(gammel) Eining 9: Data"
+              display_name: '(gammel) Eining 9: Data'
             cspSurvey2020:
               display_name: Undersøking etter kurs
         csp10-2020:
@@ -4306,11 +4329,11 @@ nn:
             cspSurvey:
               display_name: Undersøking
             csp_unit1_2020:
-              display_name: "(gammel) Eining 1: Digital informasjon"
+              display_name: '(gammel) Eining 1: Digital informasjon'
         csp2-2021:
           lesson_groups:
             csp_unit2_2020:
-              display_name: "(gammel) Eining 2: Internett"
+              display_name: '(gammel) Eining 2: Internett'
             lessonGroup-2:
               display_name: Undersøking
         csp3-2021:
@@ -4347,7 +4370,7 @@ nn:
         csp9-2021:
           lesson_groups:
             csp_unit9_2020:
-              display_name: "(gammel) Eining 9: Data"
+              display_name: '(gammel) Eining 9: Data'
         coursea-2021:
           description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
           lessons:
@@ -4611,6 +4634,14 @@ nn:
               display_name: 'Djupdykk: Kurs E og F'
             Introduction:
               display_name: Introduksjon
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Leksjon 3
+            Lesson 4:
+              display_name: Leksjon 4
+            Lesson 5:
+              display_name: Leksjon 5
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -4665,6 +4696,12 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Steg 1
+            lessonGroup-3:
+              display_name: Steg 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
