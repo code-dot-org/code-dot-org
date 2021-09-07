@@ -1,8 +1,6 @@
 function makeBurst(num,costume,effect) {
   for (var count = 0; count < num; count++) {
     createNewSprite({name: 'temporarySprite'}, costume, ({"x":200,"y":200}));
-    
-      
     if(effect=="pop"){
       setProp({name: 'temporarySprite'}, "speed", math_random_int(10, 25));
       setProp({name: 'temporarySprite'}, "scale", 50);
