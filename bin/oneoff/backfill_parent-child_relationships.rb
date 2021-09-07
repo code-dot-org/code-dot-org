@@ -14,6 +14,9 @@ def main
       end
     end
 
+    # Our linter wants us to use `next` here rather than `if`, but doing so
+    # breaks parallelism with the other block
+    # rubocop:disable Style/Next
     if level.project_template_level_name.present?
       begin
         level.setup_project_template_level
@@ -21,6 +24,7 @@ def main
         puts e
       end
     end
+    # rubocop:enable Style/Next
   end
 end
 
