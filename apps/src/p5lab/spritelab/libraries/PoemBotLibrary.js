@@ -260,20 +260,23 @@ export default class PoemBotLibrary extends CoreLibrary {
   }
 
   applyGlobalLineAnimation(renderInfo, frameCount) {
-    const progress = frameCount / POEM_DURATION;
-    const framesPerLine = POEM_DURATION / renderInfo.lines.length;
+    // Add 2 so there's time before the first line and after the last line
+    const framesPerLine = POEM_DURATION / (renderInfo.lines.length + 2);
+
     const newLines = [];
     for (let i = 0; i < renderInfo.lines.length; i++) {
+      const lineNum = i + 1; // account for time before the first line shows
       const newLine = {...renderInfo.lines[i]};
-      newLine.start = i * framesPerLine;
-      newLine.end = (i + 1) * framesPerLine;
-      newLines.push(newLine);
+      newLine.start = lineNum * framesPerLine;
+      newLine.end = (lineNum + 1) * framesPerLine;
+      if (this.p5.World.frameCount >= newLine.start) {
+        newLines.push(newLine);
+      }
     }
 
-    const numLinesToShow = Math.floor(progress * renderInfo.lines.length);
     return {
       ...renderInfo,
-      lines: newLines.slice(0, numLinesToShow + 1) // end index is not inclusive, so + 1
+      lines: newLines
     };
   }
 
