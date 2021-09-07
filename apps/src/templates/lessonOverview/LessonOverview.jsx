@@ -24,6 +24,7 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -96,6 +97,8 @@ class LessonOverview extends Component {
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
+    const showPDFButton = lesson.publishedState !== PublishedState.pilot;
+
     return (
       <div className="lesson-overview">
         <div className="lesson-overview-header">
@@ -107,7 +110,7 @@ class LessonOverview extends Component {
               {`< ${lesson.unit.displayName}`}
             </a>
             <div style={styles.dropdowns}>
-              {pdfDropdownOptions.length > 0 && (
+              {showPDFButton && pdfDropdownOptions.length > 0 && (
                 <div style={{marginRight: 5}}>
                   <DropdownButton
                     color={Button.ButtonColor.gray}
