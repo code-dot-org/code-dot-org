@@ -257,7 +257,6 @@ Javalab.prototype.init = function(config) {
         visualization={this.visualization}
         viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
         isProjectTemplateLevel={!!this.level.projectTemplateLevelName}
-        useFilesApiForVersionHistory={!!config.useFilesApi}
         handleClearPuzzle={() => {
           return this.studioApp_.handleClearPuzzle(config);
         }}

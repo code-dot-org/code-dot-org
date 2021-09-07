@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {sources as sourcesApi, files as filesApi} from '../clientApi';
+import {sources as sourcesApi} from '../clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import * as utils from '../utils';
@@ -8,6 +8,9 @@ import i18n from '@cdo/locale';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
+
+const DEFAULT_FILE_NAME = 'main.json';
+
 /**
  * A component for viewing project version history.
  */
@@ -15,7 +18,6 @@ export default class VersionHistoryWithCommits extends React.Component {
   static propTypes = {
     handleClearPuzzle: PropTypes.func.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
-    useFilesApi: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired
   };
@@ -45,22 +47,14 @@ export default class VersionHistoryWithCommits extends React.Component {
       isOpen: true
     };
 
-    if (props.useFilesApi) {
-      filesApi.getVersionHistory(
-        this.onVersionListReceived,
-        this.onAjaxFailure
-      );
-    } else {
-      // TODO: Use Dave's client api when it's finished.
-      sourcesApi.ajax(
-        'GET',
-        'main.json/versions',
-        this.onVersionListReceived,
-        this.onAjaxFailure,
-        null,
-        ['with_comments=true']
-      );
-    }
+    sourcesApi.ajax(
+      'GET',
+      `${DEFAULT_FILE_NAME}/versions`,
+      this.onVersionListReceived,
+      this.onAjaxFailure,
+      null,
+      ['with_comments=true']
+    );
   }
 
   /**
@@ -91,20 +85,12 @@ export default class VersionHistoryWithCommits extends React.Component {
    * @param versionId
    */
   onChooseVersion = versionId => {
-    if (this.props.useFilesApi) {
-      filesApi.restorePreviousVersion(
-        versionId,
-        this.onRestoreSuccess,
-        this.onAjaxFailure
-      );
-    } else {
-      sourcesApi.restorePreviousFileVersion(
-        'main.json',
-        versionId,
-        this.onRestoreSuccess,
-        this.onAjaxFailure
-      );
-    }
+    sourcesApi.restorePreviousFileVersion(
+      DEFAULT_FILE_NAME,
+      versionId,
+      this.onRestoreSuccess,
+      this.onAjaxFailure
+    );
 
     // Show the spinner.
     this.setState({showSpinner: true});

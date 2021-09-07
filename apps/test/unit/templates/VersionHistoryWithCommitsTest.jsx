@@ -57,7 +57,6 @@ describe('VersionHistoryWithCommits', () => {
       props: {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
-        useFilesApi: false,
         onClose: () => {},
         isOpen: true
       },
@@ -92,7 +91,6 @@ describe('VersionHistoryWithCommits', () => {
       props: {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
-        useFilesApi: true,
         onClose: () => {},
         isOpen: true
       },

@@ -43,7 +43,6 @@ describe('Java Lab Editor Test', () => {
       showProjectTemplateWorkspaceIcon: false,
       isProjectTemplateLevel: false,
       height: 400,
-      useFilesApiForVersionHistory: true,
       handleClearPuzzle: () => {}
     };
     appOptions = window.appOptions;

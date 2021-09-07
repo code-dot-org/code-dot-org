@@ -53,7 +53,6 @@ class JavalabEditor extends React.Component {
     onCommitCode: PropTypes.func.isRequired,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
-    useFilesApiForVersionHistory: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
 
     // populated by redux
@@ -503,7 +502,6 @@ class JavalabEditor extends React.Component {
       showProjectTemplateWorkspaceIcon,
       height,
       isProjectTemplateLevel,
-      useFilesApiForVersionHistory,
       handleClearPuzzle
     } = this.props;
 
@@ -520,7 +518,6 @@ class JavalabEditor extends React.Component {
           <VersionHistoryWithCommits
             handleClearPuzzle={handleClearPuzzle}
             isProjectTemplateLevel={isProjectTemplateLevel}
-            useFilesApi={useFilesApiForVersionHistory}
             onClose={() => this.setState({versionHistoryOpen: false})}
             isOpen={versionHistoryOpen}
           />
