@@ -2,6 +2,12 @@ import * as utils from './utils';
 import {PALETTES} from '../constants';
 
 export const commands = {
+  setBackground(color) {
+    this.validationInfo.backgroundEffect = color;
+    this.backgroundEffect = () => {
+      this.p5.background(color);
+    };
+  },
   // TODO: would it be possible to re-use the background/foreground effect code from dance party?
   setBackgroundEffect(effectName, palette) {
     this.validationInfo.backgroundEffect = effectName;
