@@ -1,5 +1,8 @@
 Feature: AI Lab
 
+  # We don't run this test on Drone currently because trained models can't be
+  # saved to s3 from Drone with the current configuration.
+  # JIRA STAR-1713
   @no_circle
   @as_student
   Scenario: Training a model with an in-house dataset and importing it into App Lab
