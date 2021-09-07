@@ -7130,7 +7130,7 @@ columns:
     comment: 
   lessons_opportunity_standards:
   - &1825 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: id
+    name: lesson_id
     table_name: lessons_opportunity_standards
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &417 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
@@ -7140,14 +7140,14 @@ columns:
         precision: 
         scale: 
       type_metadata: *417
-      extra: auto_increment
+      extra: ''
     'null': false
     default: 
     default_function: 
     collation: 
     comment: 
   - &1826 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: lesson_id
+    name: standard_id
     table_name: lessons_opportunity_standards
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &418 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
@@ -7164,7 +7164,7 @@ columns:
     collation: 
     comment: 
   - &1827 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: standard_id
+    name: id
     table_name: lessons_opportunity_standards
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &419 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
@@ -7174,7 +7174,7 @@ columns:
         precision: 
         scale: 
       type_metadata: *419
-      extra: ''
+      extra: auto_increment
     'null': false
     default: 
     default_function: 
@@ -24587,9 +24587,9 @@ columns_hash:
     position: *1823
     properties: *1824
   lessons_opportunity_standards:
-    id: *1825
-    lesson_id: *1826
-    standard_id: *1827
+    lesson_id: *1825
+    standard_id: *1826
+    id: *1827
   lessons_programming_expressions:
     lesson_id: *1828
     programming_expression_id: *1829
