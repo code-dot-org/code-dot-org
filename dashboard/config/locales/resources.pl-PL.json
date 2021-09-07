@@ -178,6 +178,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursef/2021": {
+          "name": "Przewodnik debugowania",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursef/2021": {
@@ -331,6 +332,7 @@
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/courseb/2021": {
+          "name": "Słownik kursu",
           "url": "https://studio.code.org/s/courseb-2021/vocab"
         },
         "implementation_guide/courseb/2021": {
@@ -341,6 +343,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/courseb/2021": {
+          "name": "Przewodnik debugowania",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/courseb/2021": {
@@ -398,7 +401,7 @@
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit>)<https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "Blockly Blocks w trybie \"unplugged\" - bez komputera (Klasy K-1)",
@@ -412,6 +415,7 @@
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "Debugowanie z użyciem przycisku Krok",
           "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
         },
         "feeling_faces_emotion_image/coursea/2021": {
@@ -436,6 +440,7 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "pair-programming/coursea/2021": {
+          "name": "Programowanie w parach",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
@@ -499,6 +504,7 @@
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursea/2021": {
+          "name": "Słownik kursu",
           "url": "https://studio.code.org/s/coursea-2021/vocab"
         },
         "implementation_guide/coursea/2021": {
@@ -509,6 +515,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursea/2021": {
+          "name": "Przewodnik debugowania",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursea/2021": {
@@ -564,6 +571,7 @@
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "debugging_guide/coursec/2021": {
+          "name": "Przewodnik debugowania",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
         },
         "course-cf-blockly-blocks/coursec/2021": {
@@ -654,6 +662,7 @@
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursec/2021": {
+          "name": "Słownik kursu",
           "url": "https://studio.code.org/s/coursec-2021/vocab"
         },
         "implementation_guide/coursec/2021": {
@@ -664,6 +673,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide_1/coursec/2021": {
+          "name": "Przewodnik debugowania",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursec/2021": {
@@ -826,6 +836,7 @@
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursed/2021": {
+          "name": "Słownik kursu",
           "url": "https://studio.code.org/s/coursed-2021/vocab"
         },
         "implementation_guide/coursed/2021": {
@@ -836,6 +847,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursed/2021": {
+          "name": "Przewodnik debugowania",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursed/2021": {
@@ -906,6 +918,7 @@
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
         },
         "pair_programming_video/express/2021": {
+          "name": "Film: programowanie w parach",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
@@ -952,6 +965,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/express/2021": {
+          "name": "Przewodnik debugowania",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "pair-programming-vid/pre-express/2021": {
@@ -989,6 +1003,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/pre-express/2021": {
+          "name": "Przewodnik debugowania",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "follow_the_algorithm/coursee/2021": {
@@ -1008,18 +1023,23 @@
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
         "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "Informacje prywatne i osobiste: Slajdy lekcji",
           "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "Informacje prywatne i osobiste: Informacje prywatne i osobiste",
           "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "Informacje prywatne i osobiste: Bilet wyjścia",
           "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "Informacje prywatne i osobiste: Quiz z lekcji",
           "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
         },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "Informacje prywatne i osobiste: Quiz z lekcji",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
         },
         "common-sense-media-pause-think/coursee/2021": {
@@ -1112,6 +1132,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursee/2021": {
+          "name": "Przewodnik debugowania",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursee/2021": {

@@ -16,7 +16,9 @@ export const PALETTES = {
   summer: ['#FAD0AE', '#F69F88', '#EE6E51', '#BC4946', '#425D19', '#202E14'],
   autumn: ['#484F0C', '#AEA82E', '#EEBB10', '#D46324', '#731B31', '#4A173C'],
   winter: ['#EAECE8', '#E3DDDF', '#D3CEDC', '#A2B6BF', '#626C7D', '#A4C0D0'],
-  twinkling: ['#FFC702', '#FC9103', '#F17302', '#B83604', '#7E1301']
+  twinkling: ['#FFC702', '#FC9103', '#F17302', '#B83604', '#7E1301'],
+  rainbow: ['#A800FF', '#0079FF', '#00F11D', '#FF7F00', '#FF0900'],
+  roses: ['#4C0606', '#86003C', '#E41F7B', '#FF8BA0 ', '#FFB6B3']
 };
 
 export const POEMS = {
@@ -70,7 +72,7 @@ export const POEMS = {
       'The frumious Bandersnatch!”'
     ]
   },
-  rumi: {
+  rumi_1: {
     author: 'Rumi',
     title: 'Sing',
     lines: [
@@ -79,6 +81,14 @@ export const POEMS = {
       'Not worrying about',
       'Who hears or',
       'What they think.'
+    ]
+  },
+  rumi_2: {
+    author: 'Rumi',
+    title: 'Ocean',
+    lines: [
+      'You are not a drop in the ocean,',
+      'You are the entire ocean in one drop'
     ]
   },
   field: {
@@ -93,9 +103,7 @@ export const POEMS = {
       '"Where are you going, and what do you wish?"',
       'The old moon asked the three.',
       '"We have come to fish for the herring-fish',
-      'That live in this beautiful sea;',
-      'Nets of silver and gold have we,"',
-      'Said Wynken, Blynken, And Nod.'
+      'That live in this beautiful sea.'
     ]
   },
   twain: {

@@ -1265,7 +1265,7 @@
           "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
         },
         "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
+          "courseC_maze_programming3_2": "आप उन्हें दूर छोड़ने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
           "courseC_maze_programming3_3": "ये ब्लॉक्स पत्थर हैं और इन्हें फेंका नहीं जा सकता।"
         },
         "courseC_maze_programming4_2021": {
@@ -1310,7 +1310,8 @@
           "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
         },
         "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।"
+          "courseC_maze_programming3_2": "आप उन्हें दूर छोड़ने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
+          "stone_block_2": "स्लेटी ब्लॉक्स को फेंका नहीं जा सकता।"
         },
         "courseD_maze_ramp5_2021": {
           "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
@@ -1356,6 +1357,12 @@
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_1": "आप `गणित` ब्लॉक यहां पाएंगे।"
         },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "अपने प्रोजेक्ट में नई पोशाकें शामिल करने के लिए यहां क्लिक करें!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "अपने प्रोजेक्ट में नई पोशाकें शामिल करने के लिए यहां क्लिक करें!"
+        },
         "courseF_apps_aquarium": {
           "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
           "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
@@ -1386,6 +1393,116 @@
         },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_events_conflict": {
+          "stops_block": "यहां नए ब्लॉक हैं!"
+        },
+        "courseF_events_key": {
+          "whenKey": "यहां पाए जाने वाले नए इवेंट ब्लॉक का उपयोग करें।"
+        },
+        "courseF_events_time": {
+          "events_category": "इवेंट्स श्रेणी खोलने के लिए यहां क्लिक करें।"
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "व्यवहार श्रेणी खोलने के लिए यहां क्लिक करें।"
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "स्प्राइट्स श्रेणी खोलने के लिए यहां क्लिक करें।"
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "स्थान श्रेणी खोलने के लिए यहां क्लिक करें।"
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "यहां नया ब्लॉक ढूंढ़ें।"
+        },
+        "courseF_text_events": {
+          "events_category": "इवेंट्स श्रेणी खोलने के लिए यहां क्लिक करें।"
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "जब को जिस समय में बदलने का प्रयास करें।"
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "यह ब्लॉक गलत क्रम में है।"
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "इस बिंदु के नीचे दिए कोड को ध्यान से देखें। "
+        },
+        "courseF_text_answer": {
+          "answered_block": "यहां नया ब्लॉक ढूंढ़ें!"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "यहां नया ब्लॉक ढूंढ़ें!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "इस बिंदु के नीचे दिए कोड को ध्यान से देखें। "
+        },
+        "courseF_text_print": {
+          "print_block": "यहां प्रिंट ब्लॉक पाएं!",
+          "text_print_finish": "क्या आपका संदेश ऊपर प्रिंट हुआ था? यदि हां, तो 'खत्म करें' को दबाएं। यदि नहीं, तो 'रीसेट करें' को दबाएं, अपना कोड बदलें और दुबारा 'चलाएं' को दबाएं।"
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "यहां अनुबोध ब्लॉक पाएं!"
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "क्या आपने पूरा कर लिया है? यदि हां, तो 'खत्म करें' पर क्लिक करें। यदि नहीं, तो 'रीसेट करें' पर क्लिक करें, अपना कोड बदलें, और दुबारा 'चलाएं' पर क्लिक करें।"
+        },
+        "courseF_text_choice_title": {
+          "title_block": "यहां दो नए ब्लॉक्स ढूंढ़ें!",
+          "text_answer_finish": "क्या शीर्षक स्क्रीन 3 सेकंड के लिए दिखाई गई? यदि हां, तो 'खत्म करें' पर क्लिक करें। यदि नहीं, तो 'रीसेट करें' पर क्लिक करें, अपना कोड बदलें और दुबारा 'चलाएं' पर क्लिक करें।"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "जब आपने सवाल का जवाब दिया तो क्या पृष्ठभूमि का रंग बदला?  यदि हां, तो 'खत्म करें' को दबाएं। यदि नहीं, तो 'रीसेट करें' को दबाएं, अपना कोड बदलें और दुबारा 'चलाएं' को दबाएं।"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "आप अपना प्रोग्राम यहां धीमा कर सकते हैं।"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "अपने कोड में एक बार में एक ब्लॉक चलने का प्रयास करें।"
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को एक साथ काटने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "खजाना एकत्र करने के लिए इस ब्लॉक का उपयोग करें।"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "अपने वर्कस्पेस में टूलबॉक्स से ब्लॉक्स खींचें।"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे हैं?  चिंता न करें, हम आपको दिखाएंगे कि दूसरे पाठ में उनका उपयोग कैसे करना है।"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "ये ब्लॉक्स लॉक हैं और इन्हें मिटाया नहीं जा सकता!"
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "अपने वर्कस्पेस में टूलबॉक्स से ब्लॉक्स खींचें।"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "इस प्रोजेक्ट के लिए यह ब्लॉक बहुत महत्वपूर्ण है। इसका उपयोग अवश्य करें!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "इसे अपने प्रोग्राम के बीच में शामिल करें।"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "यह देखने के लिए यहां क्लिक करें कि यह व्यवहार कैसे काम करता है।"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "आपका कोड कैसे काम करता है, इस बारे में अपने लिए या अध्यापक के लिए नोट्स छोड़ने हेतु इस ब्लॉक का उपयोग करें।"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "खजाना एकत्र करने के लिए इस ब्लॉक का उपयोग करें।"
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "आप अपने वेरिएबल्स यहां नीचे पा सकते हैं!"
         }
       }
     }

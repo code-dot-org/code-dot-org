@@ -4,7 +4,7 @@ title: Press Kit
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# 如何吸引媒體目光至您的一小時玩程式活動
 
 ### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
@@ -12,7 +12,7 @@ title: Press Kit
 
 * * *
 
-## Key Tips
+## 關鍵提示
 
 - 在活動舉辦兩週前，透過電子郵件聯繫媒體。若沒有收到任何回應，則再進一步用電子郵件與電話追蹤。
 - 請求學校行政人員或志工拍攝照片分享於網路上或寄送給記者。
@@ -21,7 +21,7 @@ title: Press Kit
 
 ## Step-by-step guide
 
-### 1. Plan your event
+### 1. 計畫你的活動
 
 - 規劃如何為一小時玩程式活動開場。
 - Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
@@ -33,13 +33,13 @@ title: Press Kit
 
 Like local newspapers, TV station or radio stations, or blogs. <br />
 
-### 3. Contact local media
+### 3. 聯絡當地媒體
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+最好的方法是通過電子郵件聯繫。 It should be short and should communicate "why should other people care about this event"? 內容包括在座的出席活動各位的聯繫信息（含手機號碼）。 **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+查看線上查找記者聯繫資訊。 If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. 準備好回答關於你學校活動的問題，以下是一些例子：
 
 #### 為什麼你的學校會參加「一小時玩程式」呢？
 

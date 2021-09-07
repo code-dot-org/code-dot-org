@@ -4651,6 +4651,82 @@ fr-FR:
           » et « Si je dessine une carte noire, tu obtiens un point. »\n"
       CourseF_outbreak_story:
         content1: description ici
+        markdown: "# Éclosion : codez votre propre simulation\n\n## Bienvenue à Monster
+          Town !\nMonster Town était généralement un endroit heureux et sain. Les
+          monstres de Monster Town adoraient se promener pour rendre visite à leurs
+          amis. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nUn jour, l'un des monstres a commencé à se sentir
+          malade. Le monstre avait attrapé un **virus** ! Un virus est un petit germe
+          qui peut vous rendre malade. Les autres monstres n'étaient pas trop inquiets.
+          Ils ont continué à rendre visite à leurs amis. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nPas longtemps après, deux autres monstres sont tombés
+          malades. C'était le même virus ! Il semble qu'ils aient attrapé le virus
+          de leur ami. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nLe virus s'est lentement propagé à d'autres monstres
+          qui se trouvaient à côté. Les monstres en bonne santé ont commencé à avoir
+          peur de tous tomber malade. Les monstres malades ont commencé à avoir peur
+          de transmettre le virus à tout le monde. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Arrêter la propagation\nHeureusement,
+          après avoir étudié le virus, les voisins de Monster Town ont fait une découverte
+          importante. Ils se sont rendu compte qu'ils étaient moins susceptibles de
+          propager le virus s'ils portaient des masques sur la bouche. Avec des masques
+          faciaux, les monstres malades étaient moins susceptibles de transmettre
+          le virus à des monstres sains. \n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Que va-t-il se passer ensuite?\n\nAujourd'hui, vous allez écrire du code
+          pour créer et exécuter votre propre **simulation** de l'épidémie de virus
+          à Monster Town. Une simulation est un modèle informatique d'un processus
+          ou d'un système. Apprenez à coder et à faire des prédictions sur ce qui
+          arrivera aux voisins de Monster Town. \n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *À quelle vitesse le virus se propagera-t-il
+          ?*\n\n* *Est-ce que tout le monde tombera malade ?*\n\n* *Comment les masques
+          faciaux vous aideront-ils?*\n\n\nLorsque vous aurez terminé, partagez votre
+          simulation avec les autres. Partagez votre message sur ce que vous pensez
+          que nous pouvons faire pour aider les autres à rester en bonne santé lorsqu'un
+          virus arrive en ville. "
       CourseF_outbreak_story2:
         content1: description ici
         markdown: "# Épidémie : Penser comme un scientifique\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
@@ -4770,7 +4846,8 @@ fr-FR:
         - text: L'artiste dessinera un carré.
           correct: true
           feedback: Correct!
-        - feedback: Incorrect. L'artiste dessine un carré.
+        - text: 'L''artiste dessinera un pentagone '
+          feedback: Incorrect. L'artiste dessine un carré.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
@@ -4802,9 +4879,12 @@ fr-FR:
             `move forward`.
           correct: true
           feedback: 'Correct! '
-        - feedback: " "
+        - text: 'Scrat ne bougera pas du premier bloc. '
+          feedback: Il y a deux bugs dans ce code. Scrat tourne d'abord dans la mauvaise
+            direction et n'avance donc pas suffisamment pour atteindre le gland.
         questions:
-        - text: " "
+        - text: Recherche des bugs dans ce code. Scrat atteindra-t-il le gland ou
+            bien y a-t-il un problème ?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: L'oiseau va s'arrêter à un pas du cochon.
@@ -4814,7 +4894,8 @@ fr-FR:
           feedback: Correct!
         - text: L'oiseau va rentrer dans les explosifs.
           feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
-        - feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
+        - text: L'oiseau va rentrer dans le mur.
+          feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
         questions:
         - text: Lis attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu vas cliquer sur "Démarrer"?
@@ -4827,7 +4908,8 @@ fr-FR:
         - text: BB-8 bougera 5 fois et ramassera toute la feraille
           correct: true
           feedback: Correct!
-        - feedback: Incorrect. Le bloc `Répéter` fera avancer BB-8 5 fois.
+        - text: 'BB-8 ne se déplacera que de 3 cases. '
+          feedback: Incorrect. Le bloc `Répéter` fera avancer BB-8 5 fois.
         questions:
         - text: Que penses-tu qu'il se passera lorsque tu appuieras sur "Démarrer"?
       courseC_multi_starWars_predict2_2021:
@@ -4842,7 +4924,8 @@ fr-FR:
         - text: BB-8 ramassera toute la ferraille sans problème.
           feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
             2 pas, alors qu'il a besoin d'avancer de 3 pas.
-        - feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
+        - text: 'BB-8 tournera dans la mauvaise direction après la première boucle. '
+          feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
             2 pas, alors qu'il a besoin d'avancer de 3 pas.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
@@ -4887,7 +4970,8 @@ fr-FR:
             de ce qui se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
             de ramasser le nectar seulement si il y a une fleur sous le nuage.
-        - feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+        - text: 'L''abeille n''atteindra pas le nuage. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
             de ramasser le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
@@ -4931,7 +5015,9 @@ fr-FR:
         - text: L'abeille essaiera d'obtenir du miel des fleurs et des rayons de miel.
           feedback: 'Faux. Faux. Avec le bloc "si à la fleur", l''abeille ramasse
             du nectar à chaque fleur et fabrique du miel à chaque rayon de miel. '
-        - feedback: 'Faux. Faux. Avec le bloc "si à la fleur", l''abeille ramasse
+        - text: L'abeille essaiera de ramasser le miel et le nectar des fleurs et
+            des rayons de miel.
+          feedback: 'Faux. Faux. Avec le bloc "si à la fleur", l''abeille ramasse
             du nectar à chaque fleur et fabrique du miel à chaque rayon de miel. '
         questions:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
@@ -4948,7 +5034,8 @@ fr-FR:
         - text: L' abeille prendra tout le nectar.
           correct: true
           feedback: Correct!
-        - feedback: Incorrect. L'abeille répète la boucle qui la fait avancer et prendre
+        - text: L'abeille tournera dans le mauvais sens.
+          feedback: Incorrect. L'abeille répète la boucle qui la fait avancer et prendre
             le nectar, lui permettant ainsi de terminer le puzzle.
         questions:
         - text: Regarde attentivement les boucles imbriquées ci-dessous. Que va-t-il
@@ -5003,7 +5090,8 @@ fr-FR:
         - text: Ce code laissera les trous intacts.
           feedback: Incorrect. La boucle `Tant que` générera des boucles de n'importe
             quelle taille, mais il n'y a pas de code pour enlever la saleté du tas.
-        - feedback: Incorrect. Il n'y a pas de code pour enlever la saleté du tas.
+        - text: Ce code ne touchera pas au dernier trou.
+          feedback: Incorrect. Il n'y a pas de code pour enlever la saleté du tas.
         questions:
         - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
       courseD_multi_farmer_while4_predict1_2021:
@@ -5036,7 +5124,8 @@ fr-FR:
             rond à l'infini.
           feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
             et venir, pour toujours.
-        - feedback: Dans ce code, le zombie empruntera le bon chemin et finira par
+        - text: 'Le zombie sera coincé au bout du chemin. '
+          feedback: Dans ce code, le zombie empruntera le bon chemin et finira par
             aller et venir, pour toujours.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
@@ -5054,7 +5143,8 @@ fr-FR:
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
             sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
             le cochon !
-        - feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
+        - text: 'L''oiseau tourne dans le mauvais sens. '
+          feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
             à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre le cochon!.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
@@ -5130,10 +5220,14 @@ fr-FR:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Rien ne se passera.
-        - {}
-        - correct: true
+          feedback: 'Incorrect. Le tumbleweed va commencer à dégringoler '
+        - text: 'Le tumbleweed va flotter en haut de l''écran '
+          feedback: 'Incorrect. Le tumbleweed va commencer à dégringoler '
+        - text: 'Le tumbleweed va commencer à dégringoler '
+          correct: true
           feedback: Correct!
-        - {}
+        - text: Le tumbleweed va clignoter.
+          feedback: 'Incorrect. '
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
             sur "Démarrer"?
@@ -5145,19 +5239,34 @@ fr-FR:
         display_name: Fin du projet.
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Le sprite va tourner exactement comme il faut.
+          feedback: Incorrect. Le sprite va aussi aller vers l'Est.
+        - text: Le sprite va juste aller vers l'Est.
+          feedback: 'Incorrect. Le sprite n''a pas arrêté de tourner, il fera donc
+            les deux simultanément. '
+        - text: Le sprite tournera et se déplacera en même temps.
+          correct: true
+          feedback: Correct ! Les deux comportements se produiront en même temps.
+        - text: 'Le sprite tournera d''abord, puis se déplacera plus tard. '
+          feedback: Incorrect. Dans Sprite Lab, les blocs connectés arrivent immédiatement
+            l'un après l'autre, de sorte que les deux comportements arriveront en
+            même temps.
         questions:
-        - {}
+        - text: 'Lisez le code, puis faites une prédiction. '
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - feedback: 'Incorrect. '
+        - text: '"Une pizza, c''est parti !"'
+          feedback: 'Incorrect. Les libellés des variables ne correspondent pas. '
+        - text: '"Un menu, c''est parti !"'
+          feedback: 'Incorrect. Le libellé d''une variable n''est jamais imprimé. '
+        - text: '"Un plat, c''est parti !"'
+          feedback: 'Incorrect. Le libellé d''une variable n''est jamais imprimé. '
+        - text: '"Et c''est parti !"'
+          correct: true
+          feedback: 'Correct ! Les libellés des variables ne correspondent pas. '
+        - text: Rien ne sera imprimé.
+          feedback: 'Incorrect. L''événement et le bloc d''impression fonctionneront
+            toujours. '
         questions:
         - text: " "
       courseF_multi_artist_variables3a_predict1_2021:
@@ -5171,7 +5280,8 @@ fr-FR:
         - text: L'artiste dessinera 3 côtés ouverts avec des angles à 50 degrés.
           feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
             bloc `tourner` pour que cela se produise.
-        - feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
+        - text: 'L''ordinateur demandera à l''utilisateur un numéro. '
+          feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
             `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
         questions:
         - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
@@ -5197,22 +5307,52 @@ fr-FR:
             su "Démarrer"?
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 'Les deux avions se déplaceront d''une case le long de la grille,
+            puis s''arrêteront. '
+          feedback: 'Incorrect. Ces sprites ont le même "comportement" jusqu''à ce
+            qu''on leur dise d''arrêter. '
+        - text: Les deux avions commenceront à se déplacer sans s'arrêter.
+          correct: true
+          feedback: 'Correct ! Ces comportements disent aux avions de commencer à
+            se déplacer sans s''arrêter. '
+        - text: 'L''un des avions se déplacera en premier et l''autre après. '
+          feedback: 'Incorrect. Chaque bloc de code dans Sprite Lab s''exécute instantanément
+            après le suivant. '
+        - text: 'Les avions vont s''écraser. '
+          feedback: Incorrect. Les avions sont disposés de telle sorte qu'ils ne peuvent
+            pas se toucher.
         questions:
-        - {}
+        - text: 'Lisez le code, puis faites une prédiction. '
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - feedback: 'Incorrect. '
-        - {}
+        - text: 'Le programme imprimera "Bonjour nom !" '
+          feedback: 'Incorrect. Le bloc de nom sera remplacé par tout ce que vous
+            tapez. '
+        - text: 'Le programme vous accueillera avec le nom que vous saisissez. '
+          correct: true
+          feedback: 'Correct ! Ce que vous tapez est utilisé à la place du bloc de
+            nom. '
+        - text: Le sprite changera de taille.
+          feedback: 'Incorrect. '
+        - text: 'L''ordinateur posera une autre question. '
+          feedback: 'Incorrect. Une seule question est posée, dès le début du programme. '
         questions:
-        - {}
+        - text: 'Ce programme vous permet de répondre à une question en tapant avec
+            votre clavier. Le bloc « print » affiche le texte à l''écran. Faites une
+            prédiction : que se passera-t-il après avoir répondu à la question ? '
       courseF_variables_stop:
         content1: description ici
+        markdown: "# Arrêtez !\n\n## Êtes-vous sûr d'être prêt à passer à autre chose
+          ?\n\n\nAu niveau suivant, vous commencerez à écrire le code de votre projet.
+          Cela fonctionne mieux si vous avez déjà un plan.\n\nVotre plan complété
+          doit inclure :\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* Le type de projet
+          que vous construisez. Par exemple, une carte de vœux, un chatbot ou une
+          histoire d'espace vide.\n* Une liste de questions que vous poserez à l'utilisateur.\n*
+          L'autre texte que vous afficherez à l'écran.\n* Une description ou un dessin
+          des sprites dont vous aurez besoin (et leurs comportements).\n\nSi vous
+          n'êtes pas sûr d'être prêt à passer à autre chose, voyez avec votre professeur
+          ! \n"
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: L’artiste résoudra ce problème correctement.
@@ -5236,8 +5376,24 @@ fr-FR:
           ## Comment être fort quand on est témoin de cyber-harcèlement ?
       csf_password_power-up_2021:
         content1: description ici
+        markdown: "#  Power Up Your Password\n\n# Alimentez votre mot de passe\n\n##
+          Conseils sur le mot de passe à retenir\n\n* Commencez par une **phrase**
+          mémorable.\n* Seuls vos **parents** doivent connaître votre mot de passe.\n*
+          N'utilisez jamais d'informations d'identité **privées** dans votre mot de
+          passe.\n* Créez des mots de passe avec au moins **huit** caractères.\n*
+          Utilisez des lettres, des chiffres et des **symboles** dans votre mot de
+          passe. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)\n"
       csf_putting_a_stop_to_online_meanness_2021:
         content1: description ici
+        markdown: |-
+          # STOP à la méchanceté
+
+          ## Que devez-vous faire si quelqu'un est méchant avec vous en ligne ?
+
+          * **Éloignez-vous.
+          * ** Dites-le à un adulte de confiance.
+          * **Ne privilégiez que les sites sûrs.
+          * **Prenez le temps d'analyser les sites où vous naviguez.
       express_EOC_2021:
         description: Tu as finis le Cours E! Choisis un projet à créer.
         display_name: Fin du projet.
@@ -5253,25 +5409,131 @@ fr-FR:
         - text: Laurel ramassera tous les diamants.
           feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
             a pas et cela provoque une erreur.
-        - feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+        - text: 'Laurel recueillera 1 bout de trésor en utilisant ce code. '
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
             a pas et cela provoque une erreur.
         questions:
         - text: Regarde attentivement ce code. Que penses-tu qu'il se passera lorsque
             le programme sera lancé?
       courseAB_EOC_2021:
         display_name: Fin du projet.
+        description: Vous avez fini votre dernier cours ! Choisissez un projet à créer.
       courseB_EOC_2021:
         display_name: Fin du projet.
+        description: Vous avez fini votre dernier cours ! Choisissez un projet à créer.
       courseExpress_EOC_2020:
         description: Tu as atteint la dernière leçon du cours Express ! Choisis un
           projet à créer.
         display_name: Fin du projet.
       courseF_EOC_samples_2021:
         display_name: Fin du projet.
+        description: 'Vous êtes sur le point de commencer votre projet final. Avant
+          de commencer, prenez le temps d''examiner les exemples de projets. '
       courseF_variables_samples:
         description: "  "
         teacher_markdown: " \n\n \n"
+        display_name: 'Exploration - Exemples de programmes '
       csf_digital_trails_2021:
         markdown: "\n"
       csf_safety_in_my_online_neighborhood_2021:
         markdown: "\n"
+      courseF_intro_apps:
+        description: 'Bienvenue dans CS Fundamentals ! Ces projets ont tous été créés
+          avec Sprite Lab. Testez-les maintenant pour voir ce que l''on peut faire
+          avec. À la fin de ce cours, vous serez capable de réaliser vos propres projets
+          comme ceux-ci... et bien plus encore ! '
+        display_name: Applis Sprite Lab
+        teacher_markdown: "# Présentation du niveau de choix\nLes niveaux de choix
+          fournissent un menu de niveaux supplémentaires à faire par les étudiants.
+          Ils doivent terminer au moins un des sous-niveaux ici, mais peuvent en suivre
+          autant qu'ils le souhaitent (ou que vous le souhaitez).\n\nLes choix ici
+          amènent les étudiants à échantillonner des applications qu'ils peuvent explorer.
+          Cette activité est destinée à être coordonnée avec la feuille de travail
+          Exploring Apps, qui se trouve dans le [plan de cours](.././). "
+      courseF_events_freeplay:
+        description: 'Maintenant, vous pouvez utiliser ce que vous avez appris pour
+          rendre votre projet encore meilleur ! Continuez à ajouter à votre programme
+          ou commencez quelque chose de nouveau ! '
+        display_name: Événements - Jeu gratuit
+      courseF_events_practice:
+        description: 'Excellent travail pour l''instant ! Choisissez votre prochaine
+          activité. Faites-en autant que vous le pouvez. Continuez à vous entraîner
+          avec des évènements ! '
+        display_name: 'Pratique des événements '
+        teacher_markdown: |+
+          # Présentation du niveau de choix
+          Les niveaux de choix fournissent un menu de niveaux supplémentaires à faire par les étudiants. Ils doivent finir au moins l'un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent ou que vous le souhaitez.
+
+          Vous pouvez utiliser les descriptions ci-dessous pour aider les élèves à choisir eux-mêmes leurs choix ou pour définir des attentes concernant le nombre de sous-niveaux qu'ils doivent terminer.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Blast Off!|Learning to fly|Do a barrel roll|Shrink and Grow|Puff up the fish!|Penguin on the move|
+          |-|-|-|-|-|-|-|
+          | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**
+          | ***Concept***|*events, behaviors*|*events, behaviors*|*events, behaviors*|*events, behaviors*|*when/while events*|*when/while events*|
+
+
+      courseF_text_practice:
+        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
+          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
+          avec du texte et des invites ! '
+        display_name: 'Pratique du texte et des invites '
+        teacher_markdown: |-
+          # Présentation du niveau de choix
+          Les niveaux de choix fournissent un menu de niveaux supplémentaires à faire par les étudiants. Ils doivent finir au moins un des sous-niveaux ici, mais peuvent en suivre autant qu'ils le souhaitent, ou que vous le souhaitez.
+
+          Vous pouvez utiliser les descriptions ci-dessous pour aider les élèves à choisir eux-mêmes leurs choix ou pour définir des attentes concernant le nombre de sous-niveaux qu'ils doivent terminer.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Utilisation de la parole pour le texte|Texte à partir d'invites|Nommez le robot !|Étiquettes de variables|Grand Texte|Demande de couleurs|Commencer à partir de rien|
+          |-|-|-|-|-|-|-|-|
+          | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**|**Free Play**
+          | ***Concept***|*print block, events*|*prompts, events*|*adding spaces*|*matching variable labels*|*title screen blocks*|*storing colors*|*no new content*
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: " Histoires d'espace vide\n\nDans cette leçon, vous apprendrez à
+          utiliser et à écrire des histoires d'espace vide. Regardez cette vidéo pour
+          découvrir comment cela se connecte à l'informatique. "
+      courseF_variables_projects:
+        description: 'Vous allez créer soit une carte de vœux, un chatbot ou une histoire
+          d''espace vide. Si vous avez déjà terminé la \"Partie 1\" de votre projet,
+          passez à la \"Partie 2\". '
+        display_name: Choisissez un projet
+        teacher_markdown: "# Présentation du niveau de choix\nLes niveaux de choix
+          fournissent un menu de niveaux supplémentaires à compléter par les étudiants.
+          Ils doivent faire au moins un des sous-niveaux ici, mais devraient être
+          encouragés à en faire **deux** pour un même projet.\n\nIls peuvent avoir
+          besoin d'instructions très claires pour comprendre comment naviguer dans
+          les choix ici. Pour chacun des choix de projets, il existe ici deux sous-niveaux.
+          Pour commencer, les étudiants doivent choisir l'un des niveaux marqués \"Partie
+          1\". Une fois qu'ils ont terminé ce niveau, ils doivent revenir ici et sélectionner
+          \"Partie 2\" du *même* projet. Le premier niveau de chaque choix fournira
+          aux étudiants une rétroaction au fur et à mesure qu'ils assembleront les
+          éléments de base de leur projet. Le deuxième niveau est un \"jeu gratuit\"
+          qui est destiné à permettre aux étudiants d'apporter les modifications qu'ils
+          souhaitent à leur code. "
+      courseF_artist_practice:
+        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
+          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
+          avec les boucles et l''artiste ! '
+        display_name: Entrainement d'Artiste
+      courseF_beeFor_practice:
+        display_name: Entrainement avec l'abeille
+        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
+          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
+          avec les boucles for et l''abeille ! '
+      courseF_beeVar_practice:
+        display_name: Entrainement avec l'abeille
+        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
+          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
+          avec les variables et l''abeille ! '
+      courseF_bee_practice:
+        description: 'Excellent travail jusqu''à présent ! Choisissez votre prochaine
+          activité. Remplissez-en autant que vous le pouvez. Continuez à vous entraîner
+          avec les boucles et l''abeille ! '
+        display_name: Entrainement avec l'abeille
+      courseD_EOC_examples_2021:
+        description: 'Vous êtes sur le point de commencer votre projet final. Avant
+          de commencer, prenez le temps d''examiner les exemples de projets. '
+        display_name: 'Exemples de projets '
+      express_EOC_examples_2021:
+        description: 'Vous êtes sur le point de commencer votre projet final. Avant
+          de commencer, prenez le temps d''examiner les exemples de projets. '
+        display_name: 'Exemples de projets '
