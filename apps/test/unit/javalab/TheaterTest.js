@@ -23,7 +23,7 @@ describe('Theater', () => {
     const data = {value: TheaterSignalType.AUDIO_URL, detail: {url: url}};
     theater.startPlayback = sinon.spy();
     theater.handleSignal(data);
-    expect(audioElement.src).to.equal(url);
+    expect(audioElement.src).to.contain(url);
     expect(typeof audioElement.oncanplaythrough).to.equal('function');
     expect(theater.startPlayback).to.have.not.been.called;
   });
@@ -33,7 +33,7 @@ describe('Theater', () => {
     const data = {value: TheaterSignalType.VISUAL_URL, detail: {url: url}};
     theater.startPlayback = sinon.spy();
     theater.handleSignal(data);
-    expect(imageElement.src).to.equal(url);
+    expect(imageElement.src).to.contain(url);
     expect(typeof imageElement.onload).to.equal('function');
     expect(theater.startPlayback).to.have.not.been.called;
   });
