@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-07-27 22:38:23 UTC",
+    "serialized_at": "2021-09-03 20:48:11 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursec-2021"
@@ -8812,6 +8812,18 @@
       "seeding_key": {
         "resource.key": "unplugged-video-robotic-friends"
       }
+    },
+    {
+      "name": "Virtual Lesson Modifications",
+      "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit",
+      "key": "virtual_lesson_modifications",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_lesson_modifications"
+      }
     }
   ],
   "lessons_resources": [
@@ -9132,6 +9144,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum_1",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_lesson_modifications",
         "script.name": "coursec-2021"
       }
     }
