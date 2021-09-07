@@ -28,7 +28,6 @@ class JavalabView extends React.Component {
     visualization: PropTypes.object,
     viewMode: PropTypes.string.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
-    useFilesApiForVersionHistory: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
 
     // populated by redux
@@ -143,7 +142,6 @@ class JavalabView extends React.Component {
       isSubmittable,
       isSubmitted,
       isProjectTemplateLevel,
-      useFilesApiForVersionHistory,
       handleClearPuzzle
     } = this.props;
     const {isTesting} = this.state;
@@ -189,7 +187,6 @@ class JavalabView extends React.Component {
                 }
                 height={height}
                 isProjectTemplateLevel={isProjectTemplateLevel}
-                useFilesApiForVersionHistory={useFilesApiForVersionHistory}
                 handleClearPuzzle={handleClearPuzzle}
               />
             )}
