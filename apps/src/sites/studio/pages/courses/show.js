@@ -101,11 +101,7 @@ function showCourseOverview() {
         teacherResources={teacherResources}
         migratedTeacherResources={courseSummary.migrated_teacher_resources}
         studentResources={courseSummary.student_resources}
-        isTeacher={isTeacher}
-        viewAs={ViewType.Teacher}
         scripts={courseSummary.scripts}
-        isVerifiedTeacher={!!scriptData.is_verified_teacher}
-        hasVerifiedResources={!!courseSummary.has_verified_resources}
         versions={convertAssignmentVersionShapeFromServer(versions)}
         showVersionWarning={
           !!scriptData.show_version_warning && versions.length > 1
