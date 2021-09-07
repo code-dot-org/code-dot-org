@@ -139,6 +139,8 @@
   "applabTutorialTitle": "App Lab Hour of Code",
   "archiveSection": "Archive Section",
   "archivedSections": "Archived Sections",
+  "archivedSectionsStudentDescription": "Archived sections are hidden by your teachers. You won’t be redirected to archived sections’ course assignments.",
+  "archivedSectionsTeacherDescription": "Archived sections are hidden on your students’ My Dashboard. Students are not redirected to archived sections’ course assignments.",
   "assessment": "Assessment",
   "assessmentAndSurvey": "Assessments / Surveys",
   "assessmentOpportunity": "Assessment Opportunity",
