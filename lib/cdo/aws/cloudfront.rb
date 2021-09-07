@@ -245,6 +245,12 @@ module AWS
           Forward: behavior_config[:cookies]
         }
 
+      accept_language_fn =
+        {
+          EventType: 'viewer-request',
+           FunctionARN: {'Fn::Sub': 'arn:aws:cloudfront::${AWS::AccountId}:function/AcceptLanguage'}
+        }
+
       {
         AllowedMethods: ALLOWED_METHODS,
         CachedMethods: CACHED_METHODS,
@@ -256,6 +262,7 @@ module AWS
           Headers: headers,
           QueryString: behavior_config[:query] != false
         },
+        FunctionAssociations: headers.include?('Accept-Language') ? [accept_language_fn] : [],
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,
         SmoothStreaming: false,
