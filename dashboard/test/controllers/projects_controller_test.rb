@@ -24,6 +24,7 @@ class ProjectsControllerTest < ActionController::TestCase
     # doesn't set them up as actual project template levels, much less give
     # them specific content.
     ProjectsController::STANDALONE_PROJECTS.each do |type, config|
+      next if Level.where(name: config[:name]).exists?
       factory = FactoryGirl.factories.registered?(type) ? type : :level
       create(factory, name: config[:name])
     end
