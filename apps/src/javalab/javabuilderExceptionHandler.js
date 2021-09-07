@@ -43,6 +43,7 @@ export function handleException(exceptionDetails, callback) {
     case JavabuilderExceptionType.INTERNAL_COMPILER_EXCEPTION:
       error = msg.internalCompilerException({connectionId: connectionId});
       break;
+    case JavabuilderExceptionType.UNKNOWN_ERROR:
     case JavabuilderExceptionType.INTERNAL_EXCEPTION:
       error = msg.internalException({connectionId: connectionId});
       break;
