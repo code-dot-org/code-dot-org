@@ -3,7 +3,7 @@ import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {assert, expect} from '../../util/reconfiguredChai';
 import VersionHistoryWithCommits from '@cdo/apps/templates/VersionHistoryWithCommits';
-import {sources as sourcesApi, files as filesApi} from '@cdo/apps/clientApi';
+import {sources as sourcesApi} from '@cdo/apps/clientApi';
 import * as utils from '@cdo/apps/utils';
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -73,40 +73,6 @@ describe('VersionHistoryWithCommits', () => {
         sourcesApi.restorePreviousFileVersion.firstCall.args[2](),
       failRestoreVersion: () =>
         sourcesApi.restorePreviousFileVersion.firstCall.args[3]()
-    });
-  });
-
-  describe('using the files api', () => {
-    beforeEach(() => {
-      sinon.stub(filesApi, 'getVersionHistory');
-      sinon.stub(filesApi, 'restorePreviousVersion');
-    });
-
-    afterEach(() => {
-      filesApi.restorePreviousVersion.restore();
-      filesApi.getVersionHistory.restore();
-    });
-
-    testVersionHistoryWithCommits({
-      props: {
-        handleClearPuzzle: () => {},
-        isProjectTemplateLevel: false,
-        onClose: () => {},
-        isOpen: true
-      },
-      finishVersionHistoryLoad: () => {
-        filesApi.getVersionHistory.firstCall.args[0](
-          FAKE_VERSION_LIST_RESPONSE
-        );
-        wrapper.update();
-      },
-      failVersionHistoryLoad: () =>
-        filesApi.getVersionHistory.firstCall.args[1](),
-      restoreSpy: () => filesApi.restorePreviousVersion,
-      finishRestoreVersion: () =>
-        filesApi.restorePreviousVersion.firstCall.args[1](),
-      failRestoreVersion: () =>
-        filesApi.restorePreviousVersion.firstCall.args[2]()
     });
   });
 
