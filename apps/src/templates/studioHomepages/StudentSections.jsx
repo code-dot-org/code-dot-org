@@ -98,12 +98,14 @@ export default class StudentSections extends Component {
         />
         {enrolledInASection && (
           <div>
-            <SectionsAsStudentTable
-              sections={liveSections}
-              canLeave={!!isTeacher}
-              updateSections={this.updateSections}
-              updateSectionsResult={this.updateSectionsResult}
-            />
+            {liveSections.length > 0 && (
+              <SectionsAsStudentTable
+                sections={liveSections}
+                canLeave={!!isTeacher}
+                updateSections={this.updateSections}
+                updateSectionsResult={this.updateSectionsResult}
+              />
+            )}
             <div style={styles.buttonContainer}>
               {archivedSections.length > 0 && (
                 <Button
