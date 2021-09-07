@@ -14,13 +14,14 @@ export default class Theater {
     switch (data.value) {
       case TheaterSignalType.AUDIO_URL: {
         // Wait for the audio to load before starting playback
-        this.getAudioElement().src = data.detail.url;
+        this.getAudioElement().src =
+          data.detail.url + this.getCacheBustSuffix();
         this.getAudioElement().oncanplaythrough = () => this.startPlayback();
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
         // Preload the image. Once it's ready, start the playback
-        this.getImgElement().src = data.detail.url;
+        this.getImgElement().src = data.detail.url + this.getCacheBustSuffix();
         this.getImgElement().onload = () => this.startPlayback();
         break;
       }
@@ -59,5 +60,9 @@ export default class Theater {
       `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
     );
     this.onNewlineMessage();
+  }
+
+  getCacheBustSuffix() {
+    return '?=' + new Date().getTime();
   }
 }
