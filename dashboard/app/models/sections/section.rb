@@ -178,7 +178,7 @@ class Section < ApplicationRecord
     # added_by is passed only from the sections_students_controller, used by teachers to
     # manager their rosters.
     unless added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)
-      return ADD_STUDENT_RESTRICTED if restrict_section == TRUE && (!follower || follower.deleted?)
+      return ADD_STUDENT_RESTRICTED if restrict_section == true && (!follower || follower.deleted?)
     end
 
     # Unless the sections login type is Google or Clever

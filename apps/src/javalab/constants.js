@@ -18,6 +18,7 @@ export const WebSocketMessageType = {
 };
 
 export const JavabuilderExceptionType = {
+  CLASS_NOT_FOUND: 'CLASS_NOT_FOUND',
   COMPILER_ERROR: 'COMPILER_ERROR',
   ILLEGAL_METHOD_ACCESS: 'ILLEGAL_METHOD_ACCESS',
   INTERNAL_COMPILER_EXCEPTION: 'INTERNAL_COMPILER_EXCEPTION',
@@ -27,7 +28,7 @@ export const JavabuilderExceptionType = {
   NO_MAIN_METHOD: 'NO_MAIN_METHOD',
   RUNTIME_ERROR: 'RUNTIME_ERROR',
   TWO_MAIN_METHODS: 'TWO_MAIN_METHODS',
-  CLASS_NOT_FOUND: 'CLASS_NOT_FOUND'
+  UNKNOWN_ERROR: 'UNKNOWN_ERROR'
 };
 
 export const NeighborhoodSignalType = {

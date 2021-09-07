@@ -436,7 +436,7 @@ class User < ApplicationRecord
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
-  has_many :scripts, -> {where(published_state: [SharedConstants::PUBLISHED_STATE.stable, SharedConstants::PUBLISHED_STATE.preview])}, through: :user_scripts, source: :script
+  has_many :scripts, through: :user_scripts, source: :script
 
   validates :name, presence: true, unless: -> {purged_at}
   validates :name, length: {within: 1..70}, allow_blank: true
@@ -1569,7 +1569,7 @@ class User < ApplicationRecord
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
-    scripts.map(&:unit_group).compact.concat(section_courses).uniq
+    visible_scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any launched scripts assigned to the user.
@@ -1676,6 +1676,10 @@ class User < ApplicationRecord
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:unit_group).compact.uniq
+  end
+
+  def visible_scripts
+    scripts.map(&:cached).select {|s| [SharedConstants::PUBLISHED_STATE.stable, SharedConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
