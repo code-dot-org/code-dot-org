@@ -40,6 +40,14 @@ export const commands = {
     audioCommands.playSound({url, loop: false});
   },
 
+  playSpeech(speech) {
+    audioCommands.playSpeech({
+      text: speech,
+      gender: 'female',
+      language: 'English'
+    });
+  },
+
   printText(text) {
     this.printLog.push(text);
     getStore().dispatch(addConsoleMessage({text: text}));

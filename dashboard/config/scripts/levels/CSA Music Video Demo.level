@@ -2,20 +2,30 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "long_instructions": "Demo for Unit 7 in The Theater",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "theater"
+    "csa_view_mode": "theater",
+    "starter_assets": {
+      "arabic_trap.wav": "603fc71c-0948-4337-8536-d4daab0fbaa7.wav",
+      "chill_trap.wav": "68c31fb7-f213-4dc2-80ac-1544fb7241e5.wav",
+      "middle_eastern.wav": "a251583b-13f4-459e-b284-4dc661594da8.wav",
+      "piano.wav": "931b3cc3-72ed-4d7b-9ed3-aaa4cc827abd.wav",
+      "rock.wav": "d7a76e2b-2055-4805-aec9-3fec6bb66220.wav"
+    },
+    "start_sources": {
+      "MyClass.java": {
+        "text": "",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2021-09-02T18:30:59.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-02 18:31:02 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-09-02 18:31:02 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-02 20:58:11 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
