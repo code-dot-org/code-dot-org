@@ -380,6 +380,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     post :create, params: {
       script: {name: unit_name},
+      lesson_groups: '[]',
       is_migrated: true
     }
     assert_redirected_to edit_script_path id: unit_name
@@ -656,7 +657,7 @@ class ScriptsControllerTest < ActionController::TestCase
       stub_file_writes(unit.name)
 
       unit.reload
-      old_unit_dsl = ScriptDSL.serialize_lesson_groups(unit)
+      lesson_groups_json = unit.lesson_groups.map(&:summarize_for_unit_edit).to_json
       updated_at = unit.updated_at
 
       Timecop.travel 1.minute
@@ -666,8 +667,7 @@ class ScriptsControllerTest < ActionController::TestCase
         script: {name: unit.name},
         is_migrated: true,
         last_updated_at: updated_at.to_s,
-        script_text: old_unit_dsl,
-        old_unit_text: old_unit_dsl
+        lesson_groups: lesson_groups_json
       }
       assert_response :success
       unit.reload
@@ -723,11 +723,12 @@ class ScriptsControllerTest < ActionController::TestCase
 
     stub_file_writes(unit.name)
     unit.reload
+    lesson_groups_json = unit.lesson_groups.map(&:summarize_for_unit_edit).to_json
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
-      script_text: ScriptDSL.serialize_lesson_groups(unit),
+      lesson_groups: lesson_groups_json,
       last_updated_at: unit.updated_at.to_s,
     }
     assert_response :success
@@ -753,11 +754,12 @@ class ScriptsControllerTest < ActionController::TestCase
 
     stub_file_writes(unit.name)
     unit.reload
+    lesson_groups_json = unit.lesson_groups.map(&:summarize_for_unit_edit).to_json
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
-      script_text: ScriptDSL.serialize_lesson_groups(unit),
+      lesson_groups: lesson_groups_json,
       last_updated_at: unit.updated_at.to_s,
     }
 
@@ -803,7 +805,7 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      lesson_groups: '[]',
       resourceIds: teacher_resources.map(&:id),
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
@@ -828,7 +830,7 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      lesson_groups: '[]',
       studentResourceIds: student_resources.map(&:id),
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
