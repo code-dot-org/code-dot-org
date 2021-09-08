@@ -497,6 +497,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Cleaned 1 UserLevel"
   end
 
+  test "Disconnects soft-deleted user_levels from level_sources" do
+    user_level = create :user_level, level_source: create(:level_source)
+
+    refute_nil user_level.level_source_id
+
+    # Same test as above except that we soft-delete the user_level before
+    # calling purge_user
+    user_level.destroy
+    assert user_level.deleted?
+
+    purge_user user_level.user
+    user_level.reload
+
+    assert_nil user_level.level_source_id
+
+    assert_logged "Cleaned 1 UserLevel"
+  end
+
   #
   # Table: dashboard.authentication_options
   # Note: acts_as_paranoid
