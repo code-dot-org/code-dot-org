@@ -9,6 +9,7 @@ import UnitOverviewTopRow, {
   COMPLETED
 } from './UnitOverviewTopRow';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
+import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
@@ -60,6 +61,7 @@ class UnitOverview extends React.Component {
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
+    showUnversionedRedirectWarning: PropTypes.bool,
 
     // redux provided
     perLevelResults: PropTypes.object.isRequired,
@@ -129,7 +131,8 @@ class UnitOverview extends React.Component {
       unitCalendarLessons,
       isMigrated,
       scriptOverviewPdfUrl,
-      scriptResourcesPdfUrl
+      scriptResourcesPdfUrl,
+      showUnversionedRedirectWarning
     } = this.props;
 
     const displayRedirectDialog =
@@ -147,10 +150,15 @@ class UnitOverview extends React.Component {
       !!scriptId &&
       isScriptHiddenForSection(hiddenLessonState, selectedSectionId, scriptId);
 
+    const showUnversionedRedirectWarningDialog =
+      showUnversionedRedirectWarning && !this.state.showRedirectDialog;
     return (
       <div>
         {onOverviewPage && (
           <div>
+            {showUnversionedRedirectWarningDialog && (
+              <UnversionedScriptRedirectDialog />
+            )}
             {this.props.courseLink && (
               <div className="unit-breadcrumb" style={styles.navArea}>
                 <a href={this.props.courseLink} style={styles.navLink}>{`< ${
@@ -167,6 +175,7 @@ class UnitOverview extends React.Component {
                 redirectButtonText={i18n.goToAssignedVersion()}
               />
             )}
+
             <UnitOverviewHeader
               showCourseUnitVersionWarning={showCourseUnitVersionWarning}
               showScriptVersionWarning={showScriptVersionWarning}
