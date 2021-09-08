@@ -61,7 +61,9 @@ describe('LevelFeedbackEntry', () => {
   it('renders the show past comments buttons if there is more than one feedback for the level', () => {
     const wrapper = setUp({feedbacks: [feedback, additionalFeedback]});
     expect(wrapper.find(Button)).to.have.length(1);
-    expect(wrapper.find(Button).props().text).to.equal(i18n.showPastComments());
+    expect(wrapper.find(Button).props().text).to.equal(
+      i18n.showOlderComments()
+    );
   });
 
   it('hides the show past comments buttons if there is one feedback for the level', () => {

@@ -9,11 +9,11 @@ export default class LevelFeedback extends Component {
   static propTypes = levelFeedbackType;
 
   state = {
-    showingPastComments: false
+    showingOlderComments: false
   };
 
-  toggleshowPastComments = () => {
-    this.setState({showingPastComments: !this.state.showingPastComments});
+  toggleshowOlderComments = () => {
+    this.setState({showingOlderComments: !this.state.showingOlderComments});
   };
 
   render() {
@@ -26,9 +26,9 @@ export default class LevelFeedback extends Component {
       feedbacks
     } = this.props;
 
-    const {showingPastComments} = this.state;
+    const {showingOlderComments} = this.state;
 
-    const displayedFeedbacks = showingPastComments
+    const displayedFeedbacks = showingOlderComments
       ? feedbacks
       : feedbacks.slice(0, 1);
 
@@ -55,13 +55,13 @@ export default class LevelFeedback extends Component {
         {hasMultipleFeedbacks && (
           <Button
             text={
-              showingPastComments
-                ? i18n.hidePastComments()
-                : i18n.showPastComments()
+              showingOlderComments
+                ? i18n.hideOlderComments()
+                : i18n.showOlderComments()
             }
-            onClick={this.toggleshowPastComments}
+            onClick={this.toggleshowOlderComments}
             styleAsText={true}
-            style={styles.showPastComments}
+            style={styles.showOlderComments}
           />
         )}
       </div>
@@ -90,7 +90,7 @@ const styles = {
     marginTop: 4,
     fontFamily: '"Gotham 5r", sans-serif'
   },
-  showPastComments: {
+  showOlderComments: {
     float: 'right',
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 16
