@@ -103,7 +103,6 @@ Javalab.prototype.init = function(config) {
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
-  const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
 
   switch (this.level.csaViewMode) {
     case CsaViewMode.NEIGHBORHOOD:
@@ -139,7 +138,6 @@ Javalab.prototype.init = function(config) {
     bodyElement.style.overflow = 'hidden';
     bodyElement.className = bodyElement.className + ' pin_bottom';
     container.className = container.className + ' pin_bottom';
-    this.studioApp_.initVersionHistoryUI(config);
     this.studioApp_.initTimeSpent();
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
 
@@ -256,9 +254,12 @@ Javalab.prototype.init = function(config) {
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
-        handleVersionHistory={handleVersionHistory}
         visualization={this.visualization}
         viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
+        isProjectTemplateLevel={!!this.level.projectTemplateLevelName}
+        handleClearPuzzle={() => {
+          return this.studioApp_.handleClearPuzzle(config);
+        }}
       />
     </Provider>,
     document.getElementById(config.containerId)

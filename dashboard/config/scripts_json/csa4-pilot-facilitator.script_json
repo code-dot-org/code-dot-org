@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-12 15:52:42 UTC",
+    "serialized_at": "2021-09-02 19:17:27 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa4-pilot-facilitator"
@@ -48,29 +48,12 @@
   ],
   "lessons": [
     {
-      "key": "Using Existing Libraries to Add Capabilities",
-      "name": "Using Existing Libraries to Add Capabilities",
+      "key": "Solving Problems with the Math Class",
+      "name": "Solving Problems with the Math Class",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
-      "properties": {
-        "overview": "The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. Students explore APIs and their documentation to identify features that they can add to their programs. To begin developing the Pop the Balloon game for The Neighborhood block party, students import The Park API and use it to implement clickable images.",
-        "student_overview": "The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs. To begin developing the Pop the Balloon game for The Neighborhood block party, you import The Park API and use it to implement clickable images."
-      },
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa4-pilot-facilitator"
-      }
-    },
-    {
-      "key": "Solving Problems with the Math Class",
-      "name": "Solving Problems with the Math Class",
-      "absolute_position": 2,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 2,
       "properties": {
         "overview": "Students revisit the `Math` class, going more in-depth to explore its methods. They learn about `final` classes and static methods and identify their purposes and uses. They use `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` to solve problems.",
         "preparation": "* Print copies of the Math Class Activity Guide (one per student)",
@@ -85,10 +68,10 @@
     {
       "key": "Treating Data as a Different Types",
       "name": "Treating Data as a Different Types",
-      "absolute_position": 3,
+      "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 2,
       "properties": {
         "overview": "Students revisit the Project Mercury Pastries Food Truck to learn about casting, rounding, and random numbers. The students solve scenarios for the food truck owner using their knowledge of Java and the `Math` class.",
         "preparation": "* Print copies of the Casting Exploration handout (one per student)",
@@ -103,10 +86,10 @@
     {
       "key": "Comparing Values to Make Decisions",
       "name": "Comparing Values to Make Decisions",
-      "absolute_position": 4,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 3,
       "properties": {
         "overview": "Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. ",
         "preparation": "* Print copies of the Exploring Operators handout (one per student)\n* Gather 3-5 sticky notes for each pair of students",
@@ -121,10 +104,10 @@
     {
       "key": "Adding Randomness to a Program",
       "name": "Adding Randomness to a Program",
-      "absolute_position": 5,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 4,
       "properties": {
         "overview": "In this lesson, students develop the dice rolling feature of the Pop the Balloon game. Each subtask of the development process requires students to add different randomization features, including generating numbers between ranges, computing probabilities, and using conditional statements that are executed based on varying results.",
         "preparation": "* Print and cut out a class set of Quiz, Quiz, Trade cards",
@@ -139,10 +122,10 @@
     {
       "key": "Comparing Object References and Data",
       "name": "Comparing Object References and Data",
-      "absolute_position": 6,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 5,
       "properties": {
         "overview": "Students differentiate between comparisons of objects and primitive values. Students explore the effects of using `==` or `!=` with objects to identify the need for the `equals()` method to compare object data.",
         "preparation": "* For each pair of students, prepare:\n   * One copy of the Comparing Objects activity guide\n   * Object References Manipulatives and three paper clip chains\n   * 5-6 sticky notes",
@@ -157,10 +140,10 @@
     {
       "key": "Providing an Alternate Path of Execution",
       "name": "Providing an Alternate Path of Execution",
-      "absolute_position": 7,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 6,
       "properties": {
         "overview": "Students review `if/else` statements and use them to implement alternate actions based on the outcome of a Boolean expression. Students apply `if/else` statements to access elements from arrays and use `Math.random()` to access random elements. `if/else` statements are then implemented in the Pop the Balloons game to check the validity of a move.",
         "student_overview": "You review `if/else` statements and use them to implement alternate actions based on the outcome of a Boolean expression. You apply `if/else` statements to access elements from arrays and use `Math.random()` to access random elements. You then implement `if/else` statements in the Pop the Balloons game to check whether a move is valid."
@@ -174,10 +157,10 @@
     {
       "key": "Testing Multiple Conditions",
       "name": "Testing Multiple Conditions",
-      "absolute_position": 8,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 7,
       "properties": {
         "overview": "Students use `if/else-if/else` statements to evaluate multiple conditions to select a specific desired outcome. Students develop the balloon display feature of the Pop the Balloons game using `if/else-if/else` statements to change the image of the balloon if it has been popped.",
         "student_overview": "Today is all about evaluating multiple conditions to select a specific desired outcome. In The Neighborhood, you use `if/else-if/else` statements to solve problems for the `Painter`. You then implement `if/else-if/else` statements in the Pop the Balloons game to update the picture of the balloon if it has been popped. "
@@ -191,10 +174,10 @@
     {
       "key": "Using Logical Operators",
       "name": "Using Logical Operators",
-      "absolute_position": 9,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
         "overview": "Students explore problems involving multiple conditions and write nested `if` statements to create solutions for these problems. Students write expressions involving logical operators in conditional statements and identify the effect of logical operators on the outcome of the expression. Nested `if` statements and logical operators are then implemented in the Pop the Balloons game to check how many moves are left and calculate the score.",
         "student_overview": "You learn how to write nested `if` statements and expressions involving three logical operators. You simplify more complex multiple conditionals using logical operators to solve problems. You revisit The Neighborhood and add nested `if` statements to solve a given problem for the `Painter`. You then implement nested `if` statements and logical operators in the Pop the Balloons game to check how many moves are left and calculate the game's score."
@@ -208,10 +191,10 @@
     {
       "key": "Applying De Morgan's Laws to Boolean Expressions",
       "name": "Applying De Morgan's Laws to Boolean Expressions",
-      "absolute_position": 10,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "overview": "Students learn how to construct truth tables to represent compound Boolean expressions. Students work together to use truth tables to prove De Morgan’s Laws and explore open-source code.",
         "preparation": "* Print one-sided copies of the Vocabulary Don’t-Say-It! activity guide (one copy for each group of 4-5 students)\n* Cut out the cards for the vocabulary game or gather a pair of scissors for each group of students\n* Print copies of the Truth Tables activity guide (one copy for each student)\n* Print out the station instructions in the Around the World Printouts resource\n* Prepare stacks of sticky notes, poster paper, and markers for each Around the World station\n* Print copies of the Unit 4 Guide (one copy for each student)",
@@ -226,10 +209,10 @@
     {
       "key": "Neighborhood Block Party Project - Day 1",
       "name": "Neighborhood Block Party Project - Day 1",
-      "absolute_position": 11,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
         "overview": "Students design and build a game engine for this project, focusing primarily on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identify its core functionalities. They write pseudocode for these components and begin the development of their project.",
         "preparation": "* Review the project setup, requirements, and rubric\n* Print copies of the Game Engine Project Planning Guide (one per student)",
@@ -244,10 +227,10 @@
     {
       "key": "Neighborhood Block Party Project - Day 2",
       "name": "Neighborhood Block Party Project - Day 2",
-      "absolute_position": 12,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
         "overview": "In the previous lesson, students planned a game engine for a simple game and wrote pseudocode for its core functions. Students begin the development of their game engine by translating their pseudocode to Java. They participate in a code review and reflect on their progress to prepare for the final development of their game engine.",
         "student_overview": "Now that you have a plan, today’s goal is to write code. You begin the development of your game engine by translating your pseudocode to Java. You participate in a code review and reflect on your progress to prepare for the final development of your game engine."
@@ -261,10 +244,10 @@
     {
       "key": "Neighborhood Block Party Project - Day 3",
       "name": "Neighborhood Block Party Project - Day 3",
-      "absolute_position": 13,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
         "overview": "Students begin the second iteration of their project. After working on their code, they self-assess their work against the project rubric and create a final priority list for their last iteration. Students then complete their last iteration, and the class celebrates in the form of a block party where students play each others’ games. Students finish the project with a final reflection and identify potential next steps to continue developing their game.",
         "preparation": "* Gather 3-4 sticky notes per student",
@@ -279,10 +262,10 @@
     {
       "key": "FRQ Day",
       "name": "FRQ Day",
-      "absolute_position": 14,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
         "overview": "Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ work, they begin to work more independently, working through annotating, pseudocoding, and completing an FRQ on their own. After annotating and writing their solutions, students still discuss their results with their peers and receive support.  \n\nThe goals of this lesson are:\n* Practice annotating an FRQ\n* Practice writing pseudocode for an FRQ\n* Practice writing a solution for an FRQ\n* Practice scoring an FRQ against a scoring rubric",
         "preparation": "* Print one copy for each student of the following handouts:\n   * FRQ Writing\n   * FRQ Scoring Guide\n* Gather one sheet of scratch paper per student\n* Gather one sticky note per student",
@@ -297,10 +280,10 @@
     {
       "key": "Assessment Day",
       "name": "Assessment Day",
-      "absolute_position": 15,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
         "assessment": true,
         "overview": "In this unit, students expanded the expressions used in conditionals and iteration to use relational and logical operators. Students used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. Students developed an understanding of De Morgan's Laws and writing truth tables. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.",
@@ -315,48 +298,6 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "49368e24-4ff9-4528-9cfe-a0bd9aef82be",
-      "position": 1,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "49368e24-4ff9-4528-9cfe-a0bd9aef82be",
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa4-pilot-facilitator"
-      }
-    },
-    {
-      "key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41",
-      "position": 2,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41",
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa4-pilot-facilitator"
-      }
-    },
-    {
-      "key": "0365cd96-541e-4fb8-bb3f-e03bd83c234b",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0365cd96-541e-4fb8-bb3f-e03bd83c234b",
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa4-pilot-facilitator"
-      }
-    },
     {
       "key": "32ea12d9-b8fe-4b95-bbd8-4b1ed1d6c1f8",
       "position": 1,
@@ -930,254 +871,6 @@
     }
   ],
   "activity_sections": [
-    {
-      "key": "f89433e3-613b-4732-b391-8a3ea3136e87",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the examples of an app using universal login, Google Maps on a website, and posting on social media from other websites and apps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are examples of apps and websites that use functionalities from other apps and services?*\n\n**Discussion Goal:** Students share examples they have seen or used, such as sharing a post on Instagram to Twitter or getting directions to a store location on the store's website.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How is it possible for apps and websites to use the functionalities of other apps and services?*\n\n**Discussion Goal:** Students guess that software engineers might be writing code to send information to other apps or that they might be using existing code that communicates between their app and other apps.",
-        "name": "App Functionalities"
-      },
-      "seeding_key": {
-        "activity_section.key": "f89433e3-613b-4732-b391-8a3ea3136e87",
-        "lesson_activity.key": "49368e24-4ff9-4528-9cfe-a0bd9aef82be"
-      }
-    },
-    {
-      "key": "152f880e-1f32-4e4e-9acc-534e93bbd5b6",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Software engineers often use application program interfaces, or APIs, to create interaction between their program and other programs. APIs contain tools and libraries that software engineers can use in their programs.\n\nWe use the Java API to write our programs. Let's explore it by looking at some classes we have been using and find out exactly where they come from and what we can do with them.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "152f880e-1f32-4e4e-9acc-534e93bbd5b6",
-        "lesson_activity.key": "49368e24-4ff9-4528-9cfe-a0bd9aef82be"
-      }
-    },
-    {
-      "key": "59bf43ac-ca19-4925-a426-a5c15f5e862d",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run the program on Level 1 for the class to demonstrate the error that occurs.",
-        "duration": "10",
-        "name": "The Scanner Class",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Alternatively, direct students to Level 1 on Code Studio to run the program individually to identify the error."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "59bf43ac-ca19-4925-a426-a5c15f5e862d",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "650b1a4d-1c14-4f05-a737-4f4d7eca0452",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think caused this error?*\n\n**Discussion Goal:** Students guess the meaning of the error displayed in the console, including that Java does not know what a `Scanner` object is. Some students may have noticed the `import` statement at the top of previous programs they have written and may point out that the `import` statement is missing."
-      },
-      "seeding_key": {
-        "activity_section.key": "650b1a4d-1c14-4f05-a737-4f4d7eca0452",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "7596aad4-61fa-46ac-ba32-9d1dc371f534",
-      "position": 3,
-      "properties": {
-        "description": "We have created `Scanner` objects before, but we did not have to create a `Scanner` class first.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> But remember that no class, __________ (no object)!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "7596aad4-61fa-46ac-ba32-9d1dc371f534",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "63ae431a-887d-4b07-a953-ed411d2feaa3",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How were we able to create `Scanner` objects when we did not create a `Scanner` class first?*\n\n**Discussion Goal:** Students guess that something told Java where to find the `Scanner` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to review the `Scanner` class documentation. Have students work with a partner to find the components listed on the slide in the `Scanner` class documentation."
-      },
-      "seeding_key": {
-        "activity_section.key": "63ae431a-887d-4b07-a953-ed411d2feaa3",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "d5ea9ea5-9d6c-4a21-aa90-e1ef6e62dae7",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What did you find out about the `Scanner` class?*\n* *What did you notice about the constructors and methods for the `Scanner` class?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share information they found about the `Scanner` class, including descriptions, constructors for creating `Scanner` objects, and methods that they can use. Students may wonder about other methods in the `Scanner` class that they have not used yet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define packages, explain their purpose, and demonstrate how to use them in a program.\n* A package is a collection of similar classes.\n* The `Scanner` class is in the `java.util` package.\n* Use the `import` statement to use a package in a program."
-      },
-      "seeding_key": {
-        "activity_section.key": "d5ea9ea5-9d6c-4a21-aa90-e1ef6e62dae7",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "c1665dc5-71b7-44e7-8bc0-3a5fd396390e",
-      "position": 6,
-      "properties": {
-        "description": "`String` is another object that we create and use in our programs, but we never wrote a `String` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> But no class, ______ (no object)!\n\nLike with the `Scanner` class, we can create `String` objects without first creating a `String` class because it is in a package.",
-        "duration": "10",
-        "name": "The String Class",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "c1665dc5-71b7-44e7-8bc0-3a5fd396390e",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "32c7c14d-23be-44b0-92e2-57f842042d76",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Have students work with a partner to find the components listed on the slide in the `String` class documentation."
-      },
-      "seeding_key": {
-        "activity_section.key": "32c7c14d-23be-44b0-92e2-57f842042d76",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "2e730bc0-b520-4d92-bf95-0eccaa29d648",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to discuss the prompts.*\n* *What did you find out about the `String` class?*\n* *What did you notice about the constructors and methods for the `String` class?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share information they found about the `String` class, including descriptions, constructors for creating `String` objects, and methods that they can use. Students may wonder about other methods in the `String` class that they have not used yet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which package can we find the `String` class?*\n\n**Discussion Goal:** Students share that the `String` class is part of the `java.lang` package.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think we can create `String` objects without first importing `java.lang`?*\n\n**Discussion Goal:** Students guess that the `java.lang` package is the core package of the Java language. Java automatically includes this package in every program.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students may wonder about the difference between the `java.util` and the `java.lang` package. Reinforce to students that since packages contain similar classes, they have different types of classes based on their overall purposes or common themes."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2e730bc0-b520-4d92-bf95-0eccaa29d648",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "6637b283-c696-4edf-b099-b486d7c8c0ee",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the APIs and Libraries video."
-      },
-      "seeding_key": {
-        "activity_section.key": "6637b283-c696-4edf-b099-b486d7c8c0ee",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "d36adae3-737f-4e8b-a44c-bb2202412713",
-      "position": 10,
-      "properties": {
-        "description": "The `Scanner` and `String` classes are part of the Java API, which we use to write programs. That is why the package names start with java, such as `java.util` and `java.lang`.\n\nWe saw at the beginning of class that apps and websites often use functions from other apps. The software engineers of these programs can add functions and interact with other apps by using APIs.\n\nLet's look at some popular APIs used in many of the programs we use every day.",
-        "duration": "15",
-        "name": "Exploring APIs",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "d36adae3-737f-4e8b-a44c-bb2202412713",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "dad43519-551e-483f-bc5c-ee4f20bb8ca0",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students explore example APIs such as Google Developers and Spotify for Developers."
-      },
-      "seeding_key": {
-        "activity_section.key": "dad43519-551e-483f-bc5c-ee4f20bb8ca0",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "61aa76ce-505b-46f9-87c2-49af2c3b48db",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to discuss the prompts.*\n* *What do you notice about these APIs?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students notice that the APIs define functionalities that a software engineer can incorporate into their programs and include documentation explaining how to use them. Students may wonder if there are APIs for other apps they use or how to incorporate these into their programs."
-      },
-      "seeding_key": {
-        "activity_section.key": "61aa76ce-505b-46f9-87c2-49af2c3b48db",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "bf9a7582-2363-4208-b3b1-5a70851a3103",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Neighborhood is hosting a block party, and you have been asked to develop a game to play at the block party. In this unit, you will implement the API for The Park, which allows people in the community to gather to play games with their friends and family.\n\nThroughout this unit, you will develop a game called Pop the Balloon for The Neighborhood Block Party.",
-        "duration": "10",
-        "name": "Introduction to The Park",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "bf9a7582-2363-4208-b3b1-5a70851a3103",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "7c5aecf8-6b26-4d0b-8d12-d8a2809b5783",
-      "position": 14,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to review the API documentation for The Park."
-      },
-      "seeding_key": {
-        "activity_section.key": "7c5aecf8-6b26-4d0b-8d12-d8a2809b5783",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "2e82c047-1dda-4bbd-88db-b447a0ef9d21",
-      "position": 15,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What could you do or create with this API?*\n\n**Discussion Goal:** Students notice the API includes adding and removing images and clickable images. Students also notice that the API allows them to play sounds. Students share ideas about making games and interactive programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 4 on Code Studio. Students import The Park and run the sample code."
-      },
-      "seeding_key": {
-        "activity_section.key": "2e82c047-1dda-4bbd-88db-b447a0ef9d21",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "4053175d-6fbb-4c11-8bff-87553bbc44e0",
-      "position": 16,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using The Park.\n* Adding a `ClickableImage`\n* Writing the `onClick()` method\n* Adding an `Image`\n* Removing an image\n* Playing a sound effect\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students add a balloon as a `ClickableImage`, then add a popped balloon as an Image that shows when the balloon is clicked."
-      },
-      "seeding_key": {
-        "activity_section.key": "4053175d-6fbb-4c11-8bff-87553bbc44e0",
-        "lesson_activity.key": "5707f5bb-bd86-4132-a8b9-e630d21b2a41"
-      }
-    },
-    {
-      "key": "5b75c380-ac05-41e5-a2be-9d8da88b8ca7",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to discuss the prompts.*\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students discuss the purpose of APIs and libraries and the benefits of using APIs. Students make predictions about how they will use APIs and libraries throughout the unit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
-        "name": "Three W's"
-      },
-      "seeding_key": {
-        "activity_section.key": "5b75c380-ac05-41e5-a2be-9d8da88b8ca7",
-        "lesson_activity.key": "0365cd96-541e-4fb8-bb3f-e03bd83c234b"
-      }
-    },
-    {
-      "key": "a11a1476-a6b8-476f-8d13-2dca7405e23b",
-      "position": 2,
-      "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "a11a1476-a6b8-476f-8d13-2dca7405e23b",
-        "lesson_activity.key": "0365cd96-541e-4fb8-bb3f-e03bd83c234b"
-      }
-    },
     {
       "key": "0f048b68-1d1b-44af-95c7-89bc0bc207ee",
       "position": 1,
@@ -3904,18 +3597,6 @@
       }
     },
     {
-      "name": "[KEY] U4L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1d4c2QCa3D9cmlPEyTKBIHBQ5hUCjuWBj7DHdauSzpdw/edit?usp=sharing",
-      "key": "_key_u4l1_extra_practice",
-      "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l1_extra_practice"
-      }
-    },
-    {
       "name": "[KEY] U4L2 Extra Practice",
       "url": "https://docs.google.com/document/d/1kjF5zAh_QwWcNuYknSxq7OGQGtIF2lSysRy-qod9XR4/edit?usp=sharing",
       "key": "_key_u4l2_extra_practice",
@@ -4165,18 +3846,6 @@
       },
       "seeding_key": {
         "resource.key": "u4l10_extra_practice"
-      }
-    },
-    {
-      "name": "U4L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1ABN1VF8UND-BN653ldj6Qhz3PACNcKDrTF5n2Tqe6cU/edit?usp=sharing",
-      "key": "u4l1_extra_practice",
-      "properties": {
-        "type": "Handout",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "u4l1_extra_practice"
       }
     },
     {
@@ -4633,24 +4302,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "resource.key": "_key_u4l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "resource.key": "u4l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "resource.key": "unit_4_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Using Logical Operators",
         "resource.key": "_key_u4l9_extra_practice"
       }
@@ -4675,36 +4326,6 @@
 
   ],
   "vocabularies": [
-    {
-      "key": "application_program_interface_api_",
-      "word": "Application Program Interface (API)",
-      "definition": "A set of tools, definitions, and methods that can be used in a program to access features of other applications and services",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "application_program_interface_api_"
-      }
-    },
-    {
-      "key": "library",
-      "word": "Library",
-      "definition": "A collection of existing code that can be used in a program",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "library"
-      }
-    },
-    {
-      "key": "package",
-      "word": "Package",
-      "definition": "A collection of similar classes",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "package"
-      }
-    },
     {
       "key": "math_class",
       "word": "Math Class",
@@ -4899,24 +4520,6 @@
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "vocabulary.key": "application_program_interface_api_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "vocabulary.key": "library"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "vocabulary.key": "package"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Solving Problems with the Math Class",
         "vocabulary.key": "math_class"
       }
@@ -5034,26 +4637,6 @@
 
   ],
   "objectives": [
-    {
-      "key": "e2ad1bb9-716b-40bb-9007-eb5a22c6a57d",
-      "properties": {
-        "description": "Explain the purpose and capabilities of APIs and libraries"
-      },
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "objective.key": "e2ad1bb9-716b-40bb-9007-eb5a22c6a57d"
-      }
-    },
-    {
-      "key": "c43365d9-2e37-4217-9bb2-1d4aeb0f0b32",
-      "properties": {
-        "description": "Add new functionality to program code by importing an API"
-      },
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "objective.key": "c43365d9-2e37-4217-9bb2-1d4aeb0f0b32"
-      }
-    },
     {
       "key": "b0fa2360-aa3a-48e8-b984-a49f9615e1cd",
       "properties": {
@@ -5446,48 +5029,6 @@
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.E.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Existing Libraries to Add Capabilities",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.9"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Solving Problems with the Math Class",

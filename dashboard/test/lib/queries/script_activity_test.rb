@@ -24,9 +24,17 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal [a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_scripts(@user)
     assert_equal a.script, Queries::ScriptActivity.primary_script(@user)
 
+    unit_group = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.stable
+    course_script = create :script, published_state: nil
+    create :unit_group_unit, unit_group: unit_group, script: course_script, position: 1
+    course_script.reload
+    create :user_script, user: @user, started_at: Time.now - 12.hours, script: course_script
+    assert_equal [course_script, a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_scripts(@user)
+    assert_equal course_script, Queries::ScriptActivity.primary_script(@user)
+
     # make progress on an older script
     s1.update_attribute(:last_progress_at, Time.now - 3.hours)
-    assert_equal [s1.script, a.script, s2.script], Queries::ScriptActivity.working_on_scripts(@user)
+    assert_equal [s1.script, course_script, a.script, s2.script], Queries::ScriptActivity.working_on_scripts(@user)
     assert_equal s1.script, Queries::ScriptActivity.primary_script(@user)
   end
 
