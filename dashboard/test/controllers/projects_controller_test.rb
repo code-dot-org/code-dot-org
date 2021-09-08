@@ -19,6 +19,16 @@ class ProjectsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    # Create placeholder levels for the standalone project pages.
+    # Note that all this does is create blank levels with appropriate names; it
+    # doesn't set them up as actual project template levels, much less give
+    # them specific content.
+    ProjectsController::STANDALONE_PROJECTS.each do |type, config|
+      next if Level.where(name: config[:name]).exists?
+      factory = FactoryGirl.factories.registered?(type) ? type : :level
+      create(factory, name: config[:name])
+    end
+
     @driver = create :user
     @navigator = create :user
     @section = create :section
