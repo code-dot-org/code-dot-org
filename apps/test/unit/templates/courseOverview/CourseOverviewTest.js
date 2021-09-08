@@ -19,7 +19,6 @@ const defaultProps = {
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   sectionsInfo: [],
   teacherResources: [],
-  isTeacher: true,
   viewAs: ViewType.Teacher,
   scripts: [
     {

@@ -1,0 +1,35 @@
+{
+  "category": "World",
+  "config": {
+    "func": "playSoundOptions",
+    "docFunc": "gamelab_playSoundOptions",
+    "blockText": "play sound {SOUND}",
+    "args": [
+      {
+        "name": "SOUND",
+        "options": [
+          [
+            "accent",
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'"
+          ],
+          [
+            "boing",
+            "'sound://category_digital/boing_2.mp3'"
+          ],
+          [
+            "button",
+            "'sound://category_app/app_button_1.mp3'"
+          ],
+          [
+            "crunch",
+            "'sound://category_collect/clicky_crunch.mp3'"
+          ],
+          [
+            "swing",
+            "'sound://category_swish/quick_swing.mp3'"
+          ]
+        ]
+      }
+    ]
+  }
+}
