@@ -1,6 +1,7 @@
+require 'uri'
 require 'net/http'
-require 'open-uri'
 require 'retryable'
+require 'json'
 
 class Slack
   COLOR_MAP = {
@@ -225,5 +226,21 @@ class Slack
       gsub(/<a href=['"]([^'"]+)['"]>/, '<\1|').
       gsub(/<\/a>/, '>').
       gsub(/<br\/?>/, "\n")
+  end
+
+  private_class_method def self.post_to_slack(url, payload = nil)
+    headers = {
+      "Content-type" => "application/json; charset=utf-8",
+      "Authorization" => "Bearer #{SLACK_TOKEN}"
+    }
+
+    uri = URI(url)
+    https = Net::HTTP.new(uri.host, uri.port)
+    https.use_ssl = true
+    req = Net::HTTP::Post.new(url, headers)
+    req.body = payload.to_json if payload
+
+    res = https.request(req)
+    JSON.parse(res.body)
   end
 end
