@@ -238,13 +238,13 @@ class ScriptsController < ApplicationController
       params[:action] == "edit" ?
       Script.get_without_cache(unit_id, with_associated_models: true) :
       Script.get_from_cache(unit_id, raise_exceptions: false)
-    @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning]
+    @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !script.is_course
     session[:show_unversioned_redirect_warning] = false
     return script if script
 
     if Script.family_names.include?(unit_id)
       script = Script.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
-      session[:show_unversioned_redirect_warning] = true unless script.is_course
+      session[:unversioned_redirect] = true
       Script.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
       return script
     end
