@@ -1,4 +1,4 @@
-const svmjs = require('svm'); // https://github.com/karpathy/svmjs
+const svmjs = require('@code-dot-org/svm');
 import {ClassType} from '../oceans/constants'
 
 const SVM_PARAMS = {maxiter: 500}; // See https://github.com/karpathy/svmjs/blob/b75b71289dd81fc909a5b3fb8b1caf20fbe45121/lib/svm.js#L27
