@@ -642,6 +642,9 @@ en:
         PL_CSD_TeacherTips_PairProgramming: Teacher Tips - Pair Programming
         PL_CSD_TeacherTips_Debugging: Teacher Tips - Debugging
         PL_CSD_TeacherTips_LeadLearner: Teacher Tips - Lead Learner
+        poembot-playtest-intro: PoemBot Playtest Intro
+        poembot-playtest-sprites: PoemBot Playtest Sprites
+        poembot-playtest-events: PoemBot Playtest Events
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
