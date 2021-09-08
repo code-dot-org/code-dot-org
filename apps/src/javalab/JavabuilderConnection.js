@@ -122,7 +122,6 @@ export default class JavabuilderConnection {
         break;
       case WebSocketMessageType.SYSTEM_OUT:
         this.onOutputMessage(data.value);
-        this.onNewlineMessage();
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
       case WebSocketMessageType.THEATER:
