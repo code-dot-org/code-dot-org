@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-31 23:44:14 UTC",
+    "serialized_at": "2021-09-08 19:26:09 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "jess-test-script"
@@ -1862,21 +1862,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "VPL - CSD - Module 5 - CI - L4_1"
+          "VPL - CSD - U4L1 - 2021"
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 5 - CI - L4_1"
+          "VPL - CSD - U4L1 - 2021"
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VPL - CSD - Module 5 - CI - L4_1"
+        "VPL - CSD - U4L1 - 2021"
       ]
     },
     {
@@ -3997,9 +3997,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 5 - CI - L4_1",
+        "level.key": "VPL - CSD - U4L1 - 2021",
         "script_level.level_keys": [
-          "VPL - CSD - Module 5 - CI - L4_1"
+          "VPL - CSD - U4L1 - 2021"
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
