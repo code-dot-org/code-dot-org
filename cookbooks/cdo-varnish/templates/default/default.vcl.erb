@@ -1,15 +1,7 @@
 vcl 4.0;
-import cookie;
-import header;
 import directors;
 import std;
-import accept;
 
-<%
-  backends = node['cdo-varnish']['backends'].to_hash
-  redirects = node['cdo-varnish']['redirects'].dup
--%>
-<% backends.each_pair do |id, ip| -%>
 probe backend_healthcheck {
   .url = "/health_check";
   .window = 4;
@@ -18,24 +10,21 @@ probe backend_healthcheck {
   .interval = 15s;
   .timeout = 10s;
 }
-<%   %w[pegasus dashboard].each do |app| -%>
-backend <%=app%>_<%=id%> {
-  .host = "<%= ip %>";
+<% %w[pegasus dashboard].each do |app| -%>
+backend <%=app%>_localhost {
+  .host = "127.0.0.1";
   .port = "<%= node['cdo-apps'][app]['port'] %>";
   .connect_timeout = 600s;
   .first_byte_timeout = 600s;
   .between_bytes_timeout = 600s;
   .probe = backend_healthcheck;
 }
-<%   end -%>
 <% end -%>
 
 sub vcl_init {
 <% %w[pegasus dashboard].each do |app| -%>
   new <%=app%> = directors.round_robin();
-<%   backends.keys.each do |id| -%>
-  <%=app%>.add_backend(<%=app%>_<%= id %>);
-<%   end -%>
+  <%=app%>.add_backend(<%=app%>_localhost);
 <% end -%>
 }
 
@@ -52,7 +41,7 @@ sub vcl_recv
 
   # Use "/health_check" to keep this instance in the load balancer.
   if (req.method == "GET" && req.url ~ "^/health_check$") {
-    if (std.healthy(dashboard_<%=backends.keys.first%>) && std.healthy(pegasus_<%=backends.keys.first%>)) {
+    if (std.healthy(dashboard_localhost) && std.healthy(pegasus_localhost)) {
       return(synth(200, "Webapps are healthy."));
     } else {
       return(synth(503, "Webapps are not healthy."));
@@ -60,7 +49,7 @@ sub vcl_recv
   }
 <% %w[pegasus dashboard].each do |app| -%>
   if (req.method == "GET" && req.url ~ "^/health_check.<%=app%>$") {
-    if (std.healthy(<%=app%>_<%=backends.keys.first%>)) {
+    if (std.healthy(<%=app%>_localhost)) {
       return(synth(200, "<%=app%> is healthy."));
     } else {
       return(synth(503, "<%=app%> is not healthy."));
@@ -83,14 +72,14 @@ sub vcl_recv
     return(synth(751, "https://" + regsub(req.http.host, "^www\.","") + req.url));
   }
 <%
-  redirects.each_pair do |domain, site|
+  node['cdo-varnish']['redirects'].dup.each_pair do |domain, site|
     site = "https://#{site}" unless site =~ %r[^https?://]
-%>
+-%>
   else if(req.http.Host == "<%= domain %>")
   {
     return(synth(751, "<%= site %>" + req.url));
   }
-<% end %>
+<% end -%>
   # Redirect http to https
   if(req.http.X-Forwarded-Proto !~ "(?i)https") {
     return(synth(751, "https://" + req.http.host + req.url));
