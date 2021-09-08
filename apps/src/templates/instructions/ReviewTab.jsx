@@ -252,21 +252,23 @@ class ReviewTab extends Component {
 
     return (
       <div style={styles.checkboxContainer}>
-        <label style={styles.label}>
-          {loadingReviewableState ? (
-            <Spinner size="small" style={styles.checkbox} />
-          ) : (
-            <input
-              type="checkbox"
-              checked={isReadyForReview}
-              onChange={() => {
-                this.setReadyForReview(!isReadyForReview);
-              }}
-              style={styles.checkbox}
-            />
-          )}
-          {javalabMsg.enablePeerReview()}
-        </label>
+        <div style={styles.reviewCheckboxRow}>
+          <label>
+            {loadingReviewableState ? (
+              <Spinner size="small" style={styles.checkbox} />
+            ) : (
+              <input
+                type="checkbox"
+                checked={isReadyForReview}
+                onChange={() => {
+                  this.setReadyForReview(!isReadyForReview);
+                }}
+                style={styles.checkbox}
+              />
+            )}
+            {javalabMsg.enablePeerReview()}
+          </label>
+        </div>
       </div>
     );
   }
@@ -495,7 +497,7 @@ const styles = {
   reviewsContainer: {
     margin: '25px 5%'
   },
-  label: {
+  reviewCheckboxRow: {
     margin: 0,
     display: 'flex',
     justifyContent: 'flex-end',
