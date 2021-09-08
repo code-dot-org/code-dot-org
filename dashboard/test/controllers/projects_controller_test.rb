@@ -59,14 +59,14 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "index: redirect to '/' if user is admin" do
+  test "index: redirect admins to root" do
     sign_in create(:admin)
 
     get :index
-    assert_redirected_to '/'
+    assert_redirected_to root_path
 
     get :index, params: {tab_name: 'libraries'}
-    assert_redirected_to '/'
+    assert_redirected_to root_path
 
     # Don't redirect if we're already on /projects/public
     get :index, params: {tab_name: 'public'}
@@ -257,16 +257,16 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in_with_request create(:admin)
 
     get :index
-    assert_redirected_to '/'
+    assert_redirected_to root_path
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}
-      assert_redirected_to '/'
+      assert_redirected_to root_path
     end
 
     %w(applab gamelab).each do |lab|
       get :show, params: {key: lab, share: true, channel_id: 'fake_channel_id'}
-      assert_redirected_to '/'
+      assert_redirected_to root_path
     end
   end
 
