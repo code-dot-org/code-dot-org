@@ -100,7 +100,7 @@ class Lesson < ApplicationRecord
           key: raw_lesson[:key],
           script: unit
         ) do |l|
-          l.name = "" # will be updated below, but cant be null
+          l.name = raw_lesson[:name]
           l.relative_position = 0 # will be updated below, but cant be null
           l.has_lesson_plan = true # will be reset below if specified
         end
