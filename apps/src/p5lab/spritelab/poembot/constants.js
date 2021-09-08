@@ -164,5 +164,35 @@ export const POEMS = {
       'You may not come out',
       'The same person who went in.'
     ]
+  },
+  hughes_1: {
+    author: 'Langston Hughes',
+    title: 'Dream Variations',
+    lines: [
+      'To fling my arms wide',
+      'In the face of the sun,',
+      'Dance! Whirl! Whirl!',
+      'Till the quick day is done.',
+      'Rest at pale evening...',
+      'A tall, slim tree...',
+      'Night coming tenderly',
+      '  Black like me.'
+    ]
+  },
+  hughes_2: {
+    author: 'Langston Hughes',
+    title: 'Dream Deferred',
+    lines: [
+      'What happens to a dream deferred?',
+      'Does it dry up,',
+      'Like a raisin in the sun?',
+      'Or fester like a sore --',
+      'And then run?',
+      'Does it stink like rotten meat?',
+      'Or crust and sugar over --',
+      'Like a syrupy sweet?',
+      'Maybe it just sags',
+      'Like a heavy load.'
+    ]
   }
 };
