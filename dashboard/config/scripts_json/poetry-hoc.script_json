@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "poembot-hoc",
-    "serialized_at": "2021-09-02 17:36:47 UTC",
+    "serialized_at": "2021-09-08 16:35:59 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "poetry-hoc"
@@ -252,30 +252,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "poetryHoC_events_text"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "poetryHoC_events_text"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "poetry-hoc",
-        "activity_section.key": "3c1509e7-fbe0-49af-8ba1-b27f6d56d899"
-      },
-      "level_keys": [
-        "poetryHoC_events_text"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "poetryHoC_events_sprites"
         ]
       },
@@ -294,9 +270,9 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -396,18 +372,6 @@
         "level.key": "poetryHoC_events1",
         "script_level.level_keys": [
           "poetryHoC_events1"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "poetry-hoc",
-        "activity_section.key": "3c1509e7-fbe0-49af-8ba1-b27f6d56d899"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "poetryHoC_events_text",
-        "script_level.level_keys": [
-          "poetryHoC_events_text"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
