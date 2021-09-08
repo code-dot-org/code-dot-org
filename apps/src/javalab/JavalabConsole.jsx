@@ -109,6 +109,7 @@ class JavalabConsole extends React.Component {
               }}
               onKeyDown={this.onInputKeyDown}
               aria-label="console input"
+              ref={ref => (this.inputRef = ref)}
               autoFocus
             />
           </div>
@@ -140,6 +141,10 @@ class JavalabConsole extends React.Component {
     }
   };
 
+  onLogsClick = () => {
+    this.inputRef.focus();
+  };
+
   render() {
     const {isDarkMode, style, bottomRow, clearConsoleLogs} = this.props;
 
@@ -167,9 +172,9 @@ class JavalabConsole extends React.Component {
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
           >
-            <label style={styles.logs} htmlFor="console-input">
+            <div onClick={this.onLogsClick} style={styles.logs}>
               {this.renderConsoleLogs(isDarkMode)}
-            </label>
+            </div>
           </div>
           {bottomRow && [
             {...bottomRow, key: 'bottom-row'},
