@@ -63,7 +63,7 @@ class DeleteAccountsHelper
   # @param [Integer] user_id The user to clean the LevelSource-backed progress of.
   def clean_level_source_backed_progress(user_id)
     @log.puts "Cleaning UserLevel"
-    updated_rows = UserLevel.where(user_id: user_id).update_all(level_source_id: nil)
+    updated_rows = UserLevel.with_deleted.where(user_id: user_id).update_all(level_source_id: nil)
     @log.puts "Cleaned #{updated_rows} UserLevel" if updated_rows > 0
 
     @log.puts "Cleaning Activity"

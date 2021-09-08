@@ -52,7 +52,6 @@ class CourseOverview extends Component {
     teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape),
-    isTeacher: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
@@ -126,7 +125,6 @@ class CourseOverview extends Component {
       teacherResources,
       migratedTeacherResources,
       studentResources,
-      isTeacher,
       viewAs,
       scripts,
       isVerifiedTeacher,
@@ -142,10 +140,7 @@ class CourseOverview extends Component {
     } = this.props;
 
     const showNotification =
-      viewAs === ViewType.Teacher &&
-      isTeacher &&
-      !isVerifiedTeacher &&
-      hasVerifiedResources;
+      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
 
     // Only display viewable versions in course version dropdown.
     const filteredVersions = versions.filter(version => version.canViewVersion);
@@ -230,7 +225,7 @@ class CourseOverview extends Component {
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             useMigratedResources={useMigratedResources}
-            isTeacher={isTeacher}
+            isTeacher={viewAs === ViewType.Teacher}
           />
         </div>
         {scripts.map((script, index) => (
@@ -288,5 +283,8 @@ export default connect((state, ownProps) => ({
     true
   ),
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
+  viewAs: state.viewAs,
+  isVerifiedTeacher: state.verifiedTeacher.isVerified,
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
   announcements: state.announcements || []
 }))(CourseOverview);
