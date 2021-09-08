@@ -44,6 +44,13 @@ class Slack
     user['name']
   end
 
+  def self.user_id(name)
+    members = post_to_slack("https://slack.com/api/users.list")['members']
+    user = members.find {|member| name == member['name']}
+    raise "Slack user #{name} not found" unless user
+    user['id']
+  end
+
   # @param channel_name [String] The channel to fetch the topic.
   # @return [String | nil] The existing topic, nil if not found.
   def self.get_topic(channel_name, use_channel_map = false)
@@ -141,24 +148,13 @@ class Slack
     end
   end
 
-  # For more information see
-  # https://github.com/ErikKalkoken/slackApiDoc/blob/master/chat.command.md. NOTE This API is 'undocumented' and not part of the official Slack APIs.
-  # @param channel_name [String] Name of the Slack channel to post the command to.
-  # @param command [String] Command to execute, excluding the /.
-  # @param message [String] Optional text passed to the command.
-  # @return [Boolean] Whether the command was posted to Slack successfully.
-  def self.command(channel_name, command, message="")
-    channel_id = get_channel_id(channel_name)
-    response = open(
-      "https://slack.com/api/chat.command?channel=#{channel_id}"\
-      "&command=/#{command}"\
-      "&text=#{message}"\
-      "&token=#{SLACK_TOKEN}"
-    )
-
-    result = JSON.parse(response.read)
-    raise "Failed to post command with: #{result['error']}" if result['error']
-    result['ok']
+  # Bot tokens are unable to post to reminders.add or chat.command, so we will mimic the functionality of a slack reminder
+  #  by scheduling a DM to the user at a specific time.
+  # @param recipient_id [String] Slack ID of user to message.
+  # @param time [String] Unix timestamp of the time the message should be sent.
+  # @param message [String] Text to be sent in the scheduled message.
+  def self.remind(recipient_id, time, message)
+    post_to_slack("https://slack.com/api/chat.scheduleMessage", {"channel" => recipient_id, "post_at" => time, "text" => message})
   end
 
   # @param room [String] Channel name or id to post the snippet.
