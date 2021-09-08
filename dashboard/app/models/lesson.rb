@@ -446,8 +446,7 @@ class Lesson < ApplicationRecord
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedTeacher: user&.authorized_teacher?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
-      scriptResourcesPdfUrl: unit_resource_pdf_url,
-      publishedState: script.get_published_state
+      scriptResourcesPdfUrl: unit_resource_pdf_url
     }
   end
 

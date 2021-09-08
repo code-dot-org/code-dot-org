@@ -21,6 +21,7 @@ describe('LessonOverview', () => {
         unit: {
           displayName: 'Unit 1',
           link: '/s/unit-1',
+          publishedState: 'beta',
           lessonGroups: [
             {
               key: 'lg-1',
@@ -290,7 +291,7 @@ describe('LessonOverview', () => {
     ).to.be.true;
   });
 
-  it('renders dropdown button with links to printing options', () => {
+  it('renders dropdown button with links to printing options if not pilot', () => {
     const lesson = {
       ...defaultProps.lesson,
       lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
@@ -312,5 +313,22 @@ describe('LessonOverview', () => {
       'Print Lesson Plan',
       'Print Handouts'
     ]);
+  });
+
+  it('does not render printing options dropdown for pilot course', () => {
+    const unit = {
+      ...defaultProps.lesson.unit,
+      publishedState: 'pilot'
+    };
+    const lesson = {
+      ...defaultProps.lesson,
+      unit: unit,
+      lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
+      scriptResourcesPdfUrl: '/link/to/script_resources.pdf'
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(0);
   });
 });
