@@ -18,6 +18,18 @@ class Slack
     'production' => 'infra-production'
   }.freeze
 
+  # Common channel name to ID mappings
+  CHANNEL_IDS = {
+    'developers' => 'C0T0PNTM3',
+    'deploy-status' => 'C7GS8NE8L',
+    'infra-staging' => 'C03CK8E51',
+    'infra-test' => 'C03CM903Y',
+    'infra-production' => 'C03CK8FGX',
+    'infra-honeybadger' => 'C55JZ1BPZ',
+    'levelbuilder' => 'C0T10H2HY',
+    'server-operations' => 'C0CCSS3PX'
+  }.freeze
+
   SLACK_TOKEN = CDO.slack_token.freeze
 
   # Returns the user (mention) name of the user.
@@ -26,9 +38,7 @@ class Slack
   # @raise [ArgumentError] If the email does not correspond to a Slack user.
   # @return [nil | String] The user (mention) name for the Slack user.
   def self.user_name(email)
-    users_list = open("https://slack.com/api/users.list?token=#{SLACK_TOKEN}").
-      read
-    members = JSON.parse(users_list)['members']
+    members = post_to_slack("https://slack.com/api/users.list")['members']
     user = members.find {|member| email == member['profile']['email']}
     raise "Slack email #{email} not found" unless user
     user['name']
@@ -44,25 +54,10 @@ class Slack
     channel_id = get_channel_id(channel_name)
     return nil unless channel_id
 
-    response = Retryable.retryable(on: [Errno::ETIMEDOUT, OpenURI::HTTPError], tries: 2) do
-      open(
-        'https://slack.com/api/conversations.info'\
-        "?token=#{SLACK_TOKEN}"\
-        "&channel=#{channel_id}"\
-      )
-    end
+    response = post_to_slack("https://slack.com/api/conversations.info?channel=#{channel_id}")
 
-    begin
-      parsed_response = JSON.parse(response.read)
-    rescue JSON::ParserError
-      return nil
-    end
-
-    unless parsed_response['ok']
-      return nil
-    end
-
-    replace_user_links(parsed_response['channel']['topic']['value'])
+    return nil unless response['ok']
+    replace_user_links(response['channel']['topic']['value'])
   end
 
   # @param channel_name [String] The channel to update the topic.
@@ -78,12 +73,10 @@ class Slack
     channel_id = get_channel_id(channel_name)
     return false unless channel_id
 
-    response = open('https://slack.com/api/conversations.setTopic'\
-      "?token=#{SLACK_TOKEN}"\
-      "&channel=#{channel_id}"\
-      "&topic=#{new_topic}"
-    )
-    result = JSON.parse(response.read)
+    url = "https://slack.com/api/conversations.setTopic"
+    payload = {"channel" => channel_id, "topic" => new_topic}
+    result = post_to_slack(url, payload)
+
     raise "Failed to update_topic, with error: #{result['error']}" if result['error']
     result['ok']
   end
@@ -92,16 +85,14 @@ class Slack
     message.gsub(/<@(.*?)>/) {'@' + get_display_name($1)}
   end
 
+  # @param user_id [String] The user whose name you are looking for.
+  # @return [String] Slack 'display_name' if one is set, otherwise Slack 'real_name'.
+  #   Returns provided user_id if not found.
   def self.get_display_name(user_id)
-    response = open(
-      'https://slack.com/api/users.info'\
-      "?token=#{SLACK_TOKEN}"\
-      "&user=#{user_id}"\
-    ).read
-    return user_id unless response
-    parsed_response = JSON.parse(response)
-    return user_id unless parsed_response['ok']
-    parsed_response['user']['profile']['display_name']
+    response = post_to_slack("https://slack.com/api/users.info?user=#{user_id}")
+    return user_id unless response['ok']
+    return response['user']['profile']['display_name'] unless response['user']['profile']['display_name'] == ""
+    response['user']['real_name']
   end
 
   # For more information about the Slack API, see
@@ -114,6 +105,7 @@ class Slack
   #   color (optional): The color the post should be.
   # @return [Boolean] Whether the text was posted to Slack successfully.
   # WARNING: This function mutates params.
+  # NOTE: This function utilizes an incoming webhook, not the Slack token
   def self.message(text, params={})
     return false unless CDO.slack_endpoint
     params[:channel] = "\##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
@@ -169,24 +161,19 @@ class Slack
     result['ok']
   end
 
+  # @param room [String] Channel name or id to post the snippet.
+  # @param text [String] Snippet text.
   def self.snippet(room, text)
     # omit leading '#' when passing channel names to this API
     channel = CHANNEL_MAP[room] || room
-    open('https://slack.com/api/files.upload'\
-      "?token=#{SLACK_TOKEN}"\
-      "&content=#{URI.escape(text)}"\
-      "&channels=#{channel}"
-    )
+    result = post_to_slack("https://slack.com/api/files.upload?channels=#{channel}&content=#{URI.escape(text)}")
+    result['ok']
   end
 
+  # @param name [String] Name of the Slack channel to join.
   def self.join_room(name)
-    response = open(
-      'https://slack.com/api/conversations.join'\
-      "?token=#{SLACK_TOKEN}"\
-      "&channel=#{get_channel_id(name)}"
-    )
+    result = post_to_slack("https://slack.com/api/conversations.join", {"channel" => get_channel_id(name)})
 
-    result = JSON.parse(response.read)
     raise "Failed to join_room, with error: #{result['error']}" if result['error']
     result['ok']
   end
@@ -196,16 +183,13 @@ class Slack
   # @return [nil | String] The Slack channel ID for the channel, nil if not
   #   found.
   private_class_method def self.get_channel_id(channel_name)
+    return CHANNEL_IDS[channel_name] if CHANNEL_IDS[channel_name]
+
     raise "CDO.slack_token undefined" if SLACK_TOKEN.nil?
     # Documentation at https://api.slack.com/methods/channels.list.
-    slack_api_url = "https://slack.com/api/conversations.list"\
-      "?token=#{SLACK_TOKEN}&limit=1000&types=public_channel&exclude_archived=true"
-    channels = open(slack_api_url).read
-    begin
-      parsed_channels = JSON.parse(channels)
-    rescue JSON::ParserError
-      return nil
-    end
+    url = "https://slack.com/api/conversations.list?limit=1000&types=public_channel&exclude_archived=true"
+    parsed_channels = post_to_slack(url)
+
     return nil unless parsed_channels['channels']
     parsed_channels['channels'].each do |parsed_channel|
       return parsed_channel['id'] if parsed_channel['name'] == channel_name
