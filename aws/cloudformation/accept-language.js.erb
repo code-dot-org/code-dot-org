@@ -27,6 +27,7 @@ function handler(event) {
  */
 function lookup(acceptLanguage, tags, defaultTag) {
     // 'Language tags and thus language ranges are to be treated as case-insensitive' (RFC4647 Section 2)
+    // Normalize header and tags to lowercase.
     acceptLanguage = acceptLanguage.toLowerCase();
 
     /*
@@ -40,7 +41,7 @@ function lookup(acceptLanguage, tags, defaultTag) {
       qvalue          = ( "0" [ "." 0*3DIGIT ] )
                       / ( "1" [ "." 0*3("0") ] )
      */
-    var regex = /(?<range>([a-z]{1,8})(-([a-z0-9]{1,8}))*|\*)(\s*;\s*q=(?<qvalue>0(\.[0-9]{0,3})?|1(\.0{0,3})?))?(\s*,\s*)?/gi
+    var regex = /(?<range>([a-z]{1,8})(-([a-z0-9]{1,8}))*|\*)(\s*;\s*q=(?<qvalue>0(\.[0-9]{0,3})?|1(\.0{0,3})?))?(\s*,\s*)?/g
 
     var match,
       /* 'Each application, protocol, or specification that uses lookup MUST
@@ -65,7 +66,7 @@ function lookup(acceptLanguage, tags, defaultTag) {
                     break;
                 }
                 oldRange = range;
-                range = oldRange.replace(/-([A-Z0-9]{1,8})$/, '');
+                range = oldRange.replace(/-([a-z0-9]{1,8})$/, '');
             }
         }
     }
