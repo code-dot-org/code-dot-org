@@ -123,6 +123,8 @@ class AdminSearchController < ApplicationController
   end
 
   def remove_from_pilot
+    puts "REMOVING"
+
     email = params[:email]
     pilot_name = params[:pilot_name]
     return head :bad_request unless Pilot.exists?(name: pilot_name)
