@@ -116,8 +116,8 @@ export function buildAnimationMetadata(files) {
           combinedMetadata[
             'sourceUrl'
           ] = `/api/v1/animation-library/level_animations/${png.version_id}/${
-            png.key
-          }`;
+            metadata.name
+          }.png`;
           combinedMetadata['sourceSize'] = png.source_size;
           animationMetadataByName[fileKey] = combinedMetadata;
           return Promise.resolve();
