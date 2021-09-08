@@ -12,7 +12,14 @@
   %tr
     %th
       %span Current Pilot Participants
+    %th
+      %span Actions
   - @emails.each do |email|
     %tr
       %td
         %span= email
+      %td
+        = form_tag controller: 'admin_search', action: 'remove_from_pilot', method: "post" do
+          = hidden_field_tag 'email', email
+          = hidden_field_tag 'pilot_name', @pilot_name
+          = submit_tag "Remove", class: 'btn'

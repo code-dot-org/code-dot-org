@@ -306,4 +306,16 @@ class AdminSearchControllerTest < ActionController::TestCase
 
     refute SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
   end
+
+  test 'can remove teacher from pilot' do
+    teacher = create :teacher
+    pilot_name = create(:pilot).name
+    post :add_to_pilot, params: {email: teacher.email, pilot_name: pilot_name}
+
+    assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+
+    post :remove_from_pilot, params: {email: teacher.email, pilot_name: pilot_name}
+
+    refute SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+  end
 end
