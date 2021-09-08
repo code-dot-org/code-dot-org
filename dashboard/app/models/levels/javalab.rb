@@ -154,4 +154,8 @@ class Javalab < Level
     starter_assets.delete(friendly_name)
     save!
   end
+
+  def age_13_required?
+    true
+  end
 end
