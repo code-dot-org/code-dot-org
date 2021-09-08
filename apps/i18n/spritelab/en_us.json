@@ -205,7 +205,7 @@
     "poemBotSuccessAddedSprite": "Great work adding a new sprite with an event! Click “Keep Playing” to try removing a sprite with an event.",
     "poemBotSuccessRemovedSprite": "Great work removing a new sprite with an event! Click “Keep Playing” to try adding  a sprite with an event.",
     "poemBotSpriteEvent": "Try adding or removing a sprite under your `when line shows` event block.",
-    "poemBotNoBehavior": "Click on the **Sprites** toolbox to find this block <xml><block type=\"PoemBot_startBehavior\"><title name=\"ANIMATION_NAME\">\"tropicalfish_04_1\"</title><title name=\"BEHAVIOR\">swimming_left_and_right</title></block></xml>",
+    "poemBotNoBehavior": "Click on the **Sprites** toolbox to find this block. <xml><block type=\"PoemBot_startBehavior\"><title name=\"ANIMATION_NAME\">\"tropicalfish_04_1\"</title><title name=\"BEHAVIOR\">swimming_left_and_right</title></block></xml>",
     "poemBotSuccessLevel1": "Congratulations! You completed Level 1.",
     "poemBotSuccessLevel2": "Congratulations! You completed Level 2.",
     "poemBotSuccessLevel3": "Congratulations! You completed Level 3.",
@@ -217,3 +217,4 @@
     "poemBotSuccessLevel9": "Congratulations! You completed Level 9.", 
     "poemBotSuccessLevel10": "Congratulations! You completed Level 10." 
   }
+  
