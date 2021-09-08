@@ -35,7 +35,7 @@ export default class SelectStartAnimations extends React.Component {
     if (this.props.useAllSprites) {
       generateLevelAnimationsManifest()
         .then(manifest => {
-          this.setState({levelAnimationsManifest: manifest});
+          this.setState({levelAnimationsManifest: JSON.parse(manifest)});
         })
         .catch(err => {
           console.log(err);
@@ -82,16 +82,39 @@ export default class SelectStartAnimations extends React.Component {
   };
 
   render() {
-    let {orderedKeys, propsByKey} = this.state;
-    let animationObject = {orderedKeys, propsByKey};
+    const {orderedKeys, propsByKey} = this.state;
     return (
       <div>
         <h2>Select Starting Animations</h2>
-        <div>
+        <div style={styles.pageBreak}>
           <h3>Selected Animations:</h3>
           {this.displaySelectedSprites()}
         </div>
-        <div>
+        {this.props.useAllSprites && (
+          <div style={styles.pageBreak}>
+            <h3>
+              Hidden Animations (Animations that don't normally appear in the
+              animation library):
+            </h3>
+            <AnimationPickerBody
+              is13Plus={true}
+              onDrawYourOwnClick={() =>
+                console.log('Not supported at this time')
+              }
+              onPickLibraryAnimation={this.addAnimationToList}
+              onUploadClick={() => console.log('Not supported at this time')}
+              playAnimations={false}
+              libraryManifest={this.state.levelAnimationsManifest}
+              hideUploadOption={false}
+              hideAnimationNames={false}
+              navigable={true}
+              hideBackgrounds={false}
+              canDraw={false}
+            />
+          </div>
+        )}
+        <div style={styles.pageBreak}>
+          <h3>Library Animations:</h3>
           <AnimationPickerBody
             is13Plus={true}
             onDrawYourOwnClick={() => console.log('Not supported at this time')}
@@ -106,7 +129,7 @@ export default class SelectStartAnimations extends React.Component {
             canDraw={false}
           />
         </div>
-        <p>{JSON.stringify(animationObject)}</p>
+        <p>{JSON.stringify({orderedKeys, propsByKey})}</p>
       </div>
     );
   }
@@ -123,5 +146,8 @@ const styles = {
     ':hover': {
       borderColor: color.purple
     }
+  },
+  pageBreak: {
+    borderTop: '1px solid gray'
   }
 };
