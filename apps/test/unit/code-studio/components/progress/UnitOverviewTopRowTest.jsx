@@ -29,6 +29,7 @@ const defaultProps = {
   teacherResources: [],
   studentResources: [],
   showAssignButton: true,
+  publishedState: 'beta',
   isMigrated: false
 };
 
@@ -281,7 +282,7 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.false;
   });
 
-  it('renders dropdown button with links to printing options', () => {
+  it('renders dropdown button with links to printing options when published state is not pilot', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -303,6 +304,19 @@ describe('UnitOverviewTopRow', () => {
       'Print Lesson Plans',
       'Print Handouts'
     ]);
+  });
+
+  it('does not render printing options dropdown when published state is pilot', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow
+        {...defaultProps}
+        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+        viewAs={ViewType.Teacher}
+        publishedState={'pilot'}
+      />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(0);
   });
 
   it('does not render printing option dropdown for students', () => {
