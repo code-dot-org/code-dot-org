@@ -58,7 +58,7 @@ describe('LevelFeedbackEntry', () => {
     expect(wrapper.contains('A Unit')).to.be.true;
   });
 
-  it('renders the show past comments buttons if there is more than one feedback for the level', () => {
+  it('renders the show older comments buttons if there is more than one feedback for the level', () => {
     const wrapper = setUp({feedbacks: [feedback, additionalFeedback]});
     expect(wrapper.find(Button)).to.have.length(1);
     expect(wrapper.find(Button).props().text).to.equal(
@@ -66,16 +66,18 @@ describe('LevelFeedbackEntry', () => {
     );
   });
 
-  it('hides the show past comments buttons if there is one feedback for the level', () => {
+  it('hides the show older comments buttons if there is one feedback for the level', () => {
     const wrapper = setUp();
     expect(wrapper.find(Button)).to.have.length(0);
   });
 
-  it('displays all feedbacks when show past comments is clicked', () => {
+  it('displays all feedbacks when show older comments is clicked', () => {
     const wrapper = setUp({feedbacks: [feedback, additionalFeedback]});
     expect(wrapper.find(LevelFeedbackEntry)).to.have.length(1);
     wrapper.find(Button).simulate('click');
     expect(wrapper.find(LevelFeedbackEntry)).to.have.length(2);
-    expect(wrapper.find(Button).props().text).to.equal(i18n.hidePastComments());
+    expect(wrapper.find(Button).props().text).to.equal(
+      i18n.hideOlderComments()
+    );
   });
 });
