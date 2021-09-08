@@ -248,8 +248,13 @@ module AWS
       accept_language_fn =
         {
           EventType: 'viewer-request',
-           FunctionARN: {'Fn::Sub': 'arn:aws:cloudfront::${AWS::AccountId}:function/AcceptLanguage'}
+          FunctionARN: {'Fn::Sub': 'arn:aws:cloudfront::${AWS::AccountId}:function/AcceptLanguage'}
         }
+      normalize_accept_language = headers.include?('Accept-Language')
+      # Behaviors including session cookies aren't cacheable anyway, so don't bother
+      # running the extra header-normalization function for these.
+      normalize_accept_language = false if behavior_config[:cookies] == 'all' ||
+        behavior_config[:cookies].is_a?(Array) && behavior_config[:cookies].include?('rack.session')
 
       {
         AllowedMethods: ALLOWED_METHODS,
@@ -262,7 +267,7 @@ module AWS
           Headers: headers,
           QueryString: behavior_config[:query] != false
         },
-        FunctionAssociations: headers.include?('Accept-Language') ? [accept_language_fn] : [],
+        FunctionAssociations: normalize_accept_language ? [accept_language_fn] : [],
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,
         SmoothStreaming: false,
