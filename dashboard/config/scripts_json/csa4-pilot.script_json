@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-03 15:55:59 UTC",
+    "serialized_at": "2021-09-07 16:59:08 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -108,9 +108,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Students use relational operators to write and evaluate Boolean expressions. Students then use these relational operators to expand the conditions they can check with `if` statements. Students revisit The Neighborhood to practice writing expressions with relational operators in `if` statements to navigate and paint under specific conditions.",
+        "overview": "Students use relational operators to write and evaluate Boolean expressions. Students then use these relational operators to expand the conditions they can check with `if` statements. The dice images in the Pop the Balloons game are then updated using relational operators and `if` statements to show the correct side with a specified value.",
         "preparation": "* Print copies of the Exploring Operators handout (one per student)\n* Gather a sticky note for each student",
-        "student_overview": "In The Neighborhood, you have used Boolean methods to help the `Painter` make decisions about navigating and painting. In this lesson, you learn to use relational operators to write Boolean expressions and use these with `if` statements to expand the conditions you can check while navigating and painting in The Neighborhood. "
+        "student_overview": "In The Neighborhood, you have used Boolean methods to help the `Painter` make decisions about navigating and painting. In this lesson, you learn to use relational operators to write Boolean expressions and use these with `if` statements to update the dice images in the Pop the Balloons game to show the correct side with a specified value."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -126,9 +126,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "In this lesson, students develop the dice rolling feature of the Pop the Balloon game. Each subtask of the development process requires students to add different randomization features, including generating numbers between ranges, computing probabilities, and using conditional statements that are executed based on varying results.",
+        "overview": "Students develop the dice roll functionality of the Pop the Balloon game and add clickable balloons. Each subtask of the development of these game components requires students to add different randomization features, including generating numbers between ranges, computing probabilities, and using conditional statements that are executed based on varying results.",
         "preparation": "* Print and cut out a class set of Quiz, Quiz, Trade cards",
-        "student_overview": "One of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes. Today, you add randomization to the Pop the Balloon game by adding a dice rolling feature."
+        "student_overview": "One of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes. In this lesson, you develop the dice roll functionality and add the balloon sprites to incorporate randomization in your Pop the Balloons game."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -144,9 +144,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "Students differentiate between comparisons of objects and primitive values. Students explore the effects of using `==` or `!=` with objects to identify the need for the `equals()` method to compare object data.",
-        "preparation": "* For each pair of students, prepare:\n   * One copy of the Comparing Objects activity guide\n   * Object References Manipulatives and three paper clip chains\n   * 5-6 sticky notes",
-        "student_overview": "We have compared two `int`s or `double`s for equality, but how do we compare objects? Can two `String`s be equal? What about two donuts? You discover how to test two objects for equality and implement your findings in the Pop the Balloons game."
+        "overview": "Students differentiate between comparisons of objects and primitive values. Students explore the effects of using `==` or `!=` with objects to identify the need for the `equals()` method to compare object data. Using the `equals()` method, students add to the Pop the Balloons game to compare `Balloon` objects and determine if there are valid moves left.",
+        "preparation": "* Print copies of the Comparing Objects handout (one per pair of students)\n* Print and cut out sets of the Object References Manipulatives (one set per pair of students)\n* Gather three paper clip chains and 5-6 sticky notes per pair of students",
+        "student_overview": "We have compared two `int`s or `double`s for equality, but how do we compare objects? What does it mean for two `String`s be equal? What about two donuts? You discover how to test two objects for equality and implement your findings in the Pop the Balloons game."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -540,14 +540,14 @@
       }
     },
     {
-      "key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e",
+      "key": "2a93488f-3895-4574-8739-bc988d5866be",
       "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e",
+        "lesson_activity.key": "2a93488f-3895-4574-8739-bc988d5866be",
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot"
@@ -1653,7 +1653,7 @@
       "key": "d0e14672-31d8-4f17-8af9-e1c2b11a1a7f",
       "position": 6,
       "properties": {
-        "description": "Our Pop the Balloons game currently has two dice and a roll button. Currently, when we set the roll value for a dice, the image of the dice does not change to show the new value.\n\nTo update the image of the dice, we need to know which dice to change and what value to show. Remember that each dice has an array of dice images for each of its sides.",
+        "description": "Our Pop the Balloons game currently has two dice and a roll button. Currently, when we set the roll value for a die, the dice image does not change to show the new value.\n\nTo update the dice image, we need to know which dice to change and what value to show. Remember that each dice has an array of dice images for each of its sides.",
         "duration": "15",
         "name": "if Statements Using Relational Operators",
         "remarks": true
@@ -1667,7 +1667,7 @@
       "key": "ebf7de77-6b6c-4104-8cf4-258ab8843be1",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How might you specify which dice to update?*\n* *Since the images of each side are in an array in the `Dice` class, how might we specify which image to use?*\n\n**Discussion Goal:** Students suggest using relational operators inside an `if` statement to check for either the left or right dice. Students may also suggest various ways to specify which image, such as using multiple `if` statements and relational operators to compare the value to the index location. Students realize that the value is one more than the index location, so the image at index `value - 1` from the array should be displayed.\n\n**Do This:** Click through the animated slide to introduce using relational operators inside an `if` statement.\n\n**Do This:** Direct students to complete Levels 2 through 4 on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How might you specify which dice to update?*\n* *Since the images of each side are in an array in the `Dice` class, how might we specify which image to use?*\n\n**Discussion Goal:** Students suggest using relational operators inside an `if` statement to check for either the left or right dice. Students may also suggest various ways to specify which image, such as using multiple `if` statements and relational operators to compare the value to the index location. Students realize that the value is one more than the index location, so they need to display the image at index `value - 1` from the array.\n\n**Do This:** Click through the animated slide to introduce using relational operators inside an `if` statement.\n\n**Do This:** Direct students to complete Levels 2 through 4 on Code Studio.",
         "progression_name": "Updating the Dice Images"
       },
       "seeding_key": {
@@ -1716,7 +1716,7 @@
       "key": "68aa26b0-be5f-4865-a767-d30727dcaa21",
       "position": 2,
       "properties": {
-        "description": "You have learned a lot of new words and concepts that will be useful in today’s lesson. Today you will apply them to expand your Pop the Balloon game.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today, we will develop the dice rolling function of our Pop the Balloon game. We will also create `Balloon` sprites that we can click and turn into images of popped balloons. A sprite is a core element of a game that can be manipulated in some way. Most games have multiple sprites!",
         "remarks": true
       },
       "seeding_key": {
@@ -1725,89 +1725,88 @@
       }
     },
     {
-      "key": "7ff8a8d8-bc27-498b-8bfb-a1a39d0132ec",
+      "key": "40e03475-afa6-4d5e-9ef5-79b07aefd849",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today we will build the dice rolling feature of our Pop the Balloon game. \n\nThe game uses two six-sided dice, which we will refer to as the left die and right die. To roll the dice in the game, the user will click the roll button to generate two numbers between 1 and 6. After each roll, images of the dice will be updated on the game board.\n\nThere is a lot to do today so let’s break this into smaller tasks.",
-        "duration": "2",
-        "name": "Dice Rolling Feature Overview",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The game uses two six-sided dice, referred to as the left die and right die. To roll the dice in the game, the user will click the roll button to generate two numbers between 1 and 6. After each roll, the game will update the images of the dice.\n\nThere is a lot to do today so let’s break this into smaller tasks.",
+        "duration": "15",
+        "name": "Rolling the Dice",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "7ff8a8d8-bc27-498b-8bfb-a1a39d0132ec",
+        "activity_section.key": "40e03475-afa6-4d5e-9ef5-79b07aefd849",
         "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
       }
     },
     {
-      "key": "05b07170-9a10-406d-a73b-3a654bd5d65b",
+      "key": "4c78d35a-c5b9-4bc2-b65a-28117eaa7484",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Walk students through the checklist of subtasks needed to create the dice rolling feature."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the subtasks needed to develop the dice roll function and the `Balloon` sprites."
       },
       "seeding_key": {
-        "activity_section.key": "05b07170-9a10-406d-a73b-3a654bd5d65b",
+        "activity_section.key": "4c78d35a-c5b9-4bc2-b65a-28117eaa7484",
         "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
       }
     },
     {
-      "key": "002741a5-f231-428d-95ee-8bbdc32b8b6f",
+      "key": "cd5eb631-ffe3-4043-ba7c-b168ac55241b",
       "position": 3,
       "properties": {
-        "description": "In previous lessons, you learned how to generate a random number using `Math.random()`.\n\nOne of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes.",
-        "duration": "13",
-        "name": "Task 1: Implementing rollDice()",
+        "description": "In the previous lesson, you learned how to generate a random number using `Math.random()`.\n\nOne of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes.\n\nIn Pop the Balloons, we need to generate two random numbers between 1 and 6 to represent the numbers showing on each die when clicking the roll button.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "002741a5-f231-428d-95ee-8bbdc32b8b6f",
+        "activity_section.key": "cd5eb631-ffe3-4043-ba7c-b168ac55241b",
         "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
       }
     },
     {
-      "key": "5dc75e92-7ae8-4b1b-975b-68f9fbc4fccb",
+      "key": "9725a9d4-6878-4d73-afea-881b97c671d2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When the roll button is clicked, two random numbers between 1 and 6 are generated to represent the numbers showing on each die. How might this be implemented using `Math.random()`?*\n\n**Discussion Goal:** For each die, generate a random number between 1 to 6 to represent the value of the rolled die. To generate a number from 1 to 6, use `(int)(Math.random() * 6) + 1 `.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1 then complete Level 2 in pairs, where they create a dice rolling simulation."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might this be implemented using `Math.random()`?*\n\n**Discussion Goal:** Students suggest generating a random number between 1 to 6 to represent the value of the rolled die. Students recall using casting and rounding to generate a number from 1 to 6, use `(int)(Math.random() * 6) + 1`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio.",
+        "progression_name": "Implement the Dice Roll Function"
       },
       "seeding_key": {
-        "activity_section.key": "5dc75e92-7ae8-4b1b-975b-68f9fbc4fccb",
+        "activity_section.key": "9725a9d4-6878-4d73-afea-881b97c671d2",
         "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
       }
     },
     {
-      "key": "dbe279fd-073e-47b3-afb4-2aec813105d8",
+      "key": "fa7a006e-cbd6-4d36-a538-4ddd177b3deb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the numbers returned by `Math.random()` have an equal probability of being generated. \n\n**Display:** Show the Probability with Math.random() video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which of the following would be true about 65% of the time?*\n\n**Discussion Goal:** The answer is B.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the numbers returned by `Math.random()` have an equal probability of being generated. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Probability with Math.random() video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question by giving them time to think independently, discuss briefly with a neighbor, then share their answer as a class. Click through the animated slide to display the correct answer.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "To demonstrate this to the class, go to Level 3 on Code Studio and run `Math.random()` 10 times. Keep track of how many times each of the three options were true. Answer B should have the highest number of occurrences out of the 10 trials."
+            "markdown": "To demonstrate this to the class, go to Level 3 on Code Studio and run `Math.random()` 10 times. Keep track of how many times each of the three options was true. Answer B should have the highest number of occurrences out of the ten trials."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "dbe279fd-073e-47b3-afb4-2aec813105d8",
+        "activity_section.key": "fa7a006e-cbd6-4d36-a538-4ddd177b3deb",
         "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
       }
     },
     {
-      "key": "5ea15af8-e8fb-4500-a212-ce8e9cc329dd",
+      "key": "adcb687d-ea1f-4281-95a9-f66f5e198999",
       "position": 6,
       "properties": {
         "description": "Not all outcomes in a game need to have equal probability. Some outcomes are more likely to occur than others.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "5ea15af8-e8fb-4500-a212-ce8e9cc329dd",
+        "activity_section.key": "adcb687d-ea1f-4281-95a9-f66f5e198999",
         "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
       }
     },
     {
-      "key": "87ac4023-fafe-4fea-97a5-71c3a937a3a2",
+      "key": "cff0490c-9464-4a48-aad1-02515dcd3035",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show example of a weighted die that rolls a five or higher 65% of the time. Points to highlight:\n* To allow our code to make decisions, we can use an `if-else` statement.\n* If `Math.random()` generates a number between above 0.35, the code block under the `if` statement is executed. This condition is true 65% of the time. Therefore, `leftRoll` will be assigned to be five or six 65% of the time.\n* If `Math.random()` generates a number that is less than or equal to 0.35, the code block under the `else` statement is executed. This condition is true 35% of the time. Therefore, `leftRoll` will be assigned one, two, three or four for the remaining 35% of the time.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the example of a weighted die that rolls a five or higher 65% of the time. Points to highlight:\n* If `Math.random()` generates a number above 0.35, the code block under the `if` statement executes. This condition is true 65% of the time. Therefore, `leftRoll` will be assigned to be five or six 65% of the time.\n* If `Math.random()` generates a number less than or equal to 0.35, the code block under the `else` statement executes. This condition is true 35% of the time. Therefore, `leftRoll` will be assigned one, two, three, or four for the remaining 35% of the time.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1816,44 +1815,70 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "87ac4023-fafe-4fea-97a5-71c3a937a3a2",
+        "activity_section.key": "cff0490c-9464-4a48-aad1-02515dcd3035",
         "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
       }
     },
     {
-      "key": "504d81d7-988f-4acb-956c-3bf94fd0e3b8",
+      "key": "bd1b3453-461d-4ef9-b488-ac95e4d854ae",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 4 on Code Studio, where they create a weighted dice using conditional statements."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio, where they create weighted dice using conditional statements.",
+        "progression_name": "Create Weighted Dice"
       },
       "seeding_key": {
-        "activity_section.key": "504d81d7-988f-4acb-956c-3bf94fd0e3b8",
+        "activity_section.key": "bd1b3453-461d-4ef9-b488-ac95e4d854ae",
         "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
       }
     },
     {
-      "key": "5325bcdc-e120-4f59-9293-50480d6455f2",
+      "key": "80b84c27-c19d-4f11-a5a9-2407baf6611d",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the next two tasks from the checklist of subtasks. Use the image to show the result of completing the tasks.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 5 and 6 on Code Studio. In pairs, students complete Level 5 and 6 to add roll button functionality and dice images to the game board.",
-        "duration": "8",
-        "name": "Task 2: Adding Images to the Game Board"
+        "description": "We have a functioning roll button that generates random numbers and shows the correct dice image in The Playground. Next, we want to add our `Balloon` sprites that pop when we click them. We'll use `Math.random()` to play a randomly selected pop sound when we pop a balloon.",
+        "duration": "10",
+        "name": "Creating Balloon Sprites",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "5325bcdc-e120-4f59-9293-50480d6455f2",
+        "activity_section.key": "80b84c27-c19d-4f11-a5a9-2407baf6611d",
         "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
       }
     },
     {
-      "key": "299341cc-bc8b-485e-acbd-30439566cfb5",
+      "key": "e7e06bb6-6219-43f3-afe2-668235abe438",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the last task from the checklist of subtasks. Use the image to show the result of completing the task.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Currently, each side of a die is represented by an individual `Die` object stored in a variable. How could we use an array to represent a `Die`?*\n\n**Discussion Goal:** Create an array of `Die` where each `Die` object element can be accessed at its corresponding index (offset by 1).\n\n**Do This:** Click through the animated slide to show an array containing each side of a die.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 7 on Code Studio. In pairs, students complete Level 7 to use an array to represent dice and expand the `rollDice()` method to update the dice images on the game board.",
-        "duration": "12",
-        "name": "Task 3: Update Dice Images"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the next two tasks from the checklist.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4 and 5 on Code Studio.",
+        "progression_name": "Creating Balloon Sprites"
       },
       "seeding_key": {
-        "activity_section.key": "299341cc-bc8b-485e-acbd-30439566cfb5",
+        "activity_section.key": "e7e06bb6-6219-43f3-afe2-668235abe438",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "12f03acd-99cc-428c-b93b-eb03a792a843",
+      "position": 11,
+      "properties": {
+        "description": "We have made a lot of progress on our game! Now that we have a functioning roll button and balloons that we can pop, we can calculate a score.",
+        "duration": "10",
+        "name": "Totaling the Dice and the Score",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "12f03acd-99cc-428c-b93b-eb03a792a843",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "bdde54ed-79c1-414f-8de3-46883bf2c4bb",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the last two tasks from the checklist.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how the score is calculated in Pop the Balloons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "bdde54ed-79c1-414f-8de3-46883bf2c4bb",
         "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
       }
     },
@@ -1861,7 +1886,7 @@
       "key": "eb2e0502-cdac-4bbb-9f29-b918a73b832b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Great job! You have completed all of the subtasks for the dice rolling feature. As we continue to build the Pop the Balloon game, you will continue to modify your code to add more functionality. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Great job! You now have a functioning roll button, and you have `Balloon` sprites that pop when clicked. We will continue to add more functionality to our game as we continue through the unit.",
         "name": "Closing the Loop",
         "remarks": true
       },
@@ -1874,7 +1899,7 @@
       "key": "4fb65044-a62f-4f2a-a4dc-546d2eebdd5f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "4fb65044-a62f-4f2a-a4dc-546d2eebdd5f",
@@ -1886,7 +1911,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "55a14961-e0fd-4d72-b03b-85bd705f9f06",
@@ -1894,235 +1920,231 @@
       }
     },
     {
-      "key": "bd7da479-e838-4556-b28c-4663bf842b0d",
+      "key": "263d7329-a770-4b14-be65-308591075afe",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the two code segments and prompts. Direct students to silently predict the output of the code.\n\n**Do This:**\n* Have students share their predictions with a partner, then ask for volunteers to share their predictions with the class.\n* Display Lesson 6 Level 1 for the class and run the two code segments. To run Code Segment B, comment lines 5 to 11 and uncomment lines 14 - 20.",
-        "name": "Primitive vs Reference Type",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Have students complete both choice levels by predicting the program's output, then running the program to compare the result to their prediction.",
+        "name": "Primitives and References",
+        "progression_name": "Predict the Output",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "263d7329-a770-4b14-be65-308591075afe",
+        "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a"
+      }
+    },
+    {
+      "key": "062f180e-aa5d-456a-9c7a-8b6ec49377b1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did the two programs have different results?*\n\n**Discussion Goal:** Students recall that integers are primitive values and `String`s are objects. Students suggest that since integers are primitive values, the values are compared and considered equal. Since `String`s are objects, each variable stores a reference to an object rather than a specific value.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Have students run the code with you to compare their predictions to the actual outcomes."
+            "markdown": "Ask additional probing questions as needed, such as:\n* *What information does a primitive variable store? What information does a reference variable store?*\n* *What does it mean for two `String`s to be equal?*\n* *How does Java know what to use to determine if two `String`s are equal?*"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "bd7da479-e838-4556-b28c-4663bf842b0d",
+        "activity_section.key": "062f180e-aa5d-456a-9c7a-8b6ec49377b1",
         "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a"
       }
     },
     {
-      "key": "cdec5ff4-d329-4f03-a0d4-e2cedcc372cd",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did the two code segments have different results?*\n\n**Discussion Goal:** Students make connections to prior knowledge to identify that integers are primitive values and `String`s are objects."
-      },
-      "seeding_key": {
-        "activity_section.key": "cdec5ff4-d329-4f03-a0d4-e2cedcc372cd",
-        "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a"
-      }
-    },
-    {
-      "key": "57d2c587-2741-448b-83b7-4f6fe45386a2",
+      "key": "21dbcad2-135e-4210-a22a-7f65be8d4f2b",
       "position": 3,
       "properties": {
-        "description": "Although these two code segments are very similar, there is a key difference between the two. Integers are primitive values, but `String`s are objects.",
+        "description": "These two code segments are very similar, but there is a key difference between the two. Integers are primitive values, but `String`s are objects. How we work with the data stored in an object is different from working with primitive values.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "57d2c587-2741-448b-83b7-4f6fe45386a2",
+        "activity_section.key": "21dbcad2-135e-4210-a22a-7f65be8d4f2b",
         "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a"
       }
     },
     {
-      "key": "ef72b423-09e6-4eed-82d2-a31a97377a7b",
+      "key": "85bee01d-eea2-45b1-8ed1-de74ca9ad6b5",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to summarize the difference between primitive values and objects."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the difference between primitive values and objects."
       },
       "seeding_key": {
-        "activity_section.key": "ef72b423-09e6-4eed-82d2-a31a97377a7b",
+        "activity_section.key": "85bee01d-eea2-45b1-8ed1-de74ca9ad6b5",
         "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a"
       }
     },
     {
-      "key": "1d548755-2e08-46eb-ba70-fa3fd91d70f8",
+      "key": "5e6a3c72-708c-4246-8459-c3ae3a96016c",
       "position": 5,
       "properties": {
-        "description": "Today, our goal is to explore the relationship between reference variables and objects and how Java references and accesses data in a computer. ",
+        "description": "Today, we will explore the relationship between reference variables and objects and how Java references and accesses data. We will use this to add another component to our Pop the Balloons game.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "1d548755-2e08-46eb-ba70-fa3fd91d70f8",
+        "activity_section.key": "5e6a3c72-708c-4246-8459-c3ae3a96016c",
         "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a"
       }
     },
     {
-      "key": "f4bbface-571f-4ad2-9e4f-bf67e3c95bb3",
+      "key": "a60700bb-e569-455f-86b8-3bcfe5bb0a4e",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in pairs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Comparing Objects activity guide, a set of Object References Manipulatives and several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n* Have students set up their manipulatives to match the diagram on the slide. Students specify the flavor, quantity, and price on the objects, write names for the reference variables on sticky notes and use paper clip chains to connect the reference variable to the object.\n* Click through the animated slide to describe the problem.\n* Give students time to use the manipulatives to develop a solution.\n* Ask a pair to demonstrate the swap.",
-        "duration": "14",
+        "description": "**Group:** Place students in pairs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Comparing Objects handout, a set of Object References Manipulatives, and several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n* Have students set up their manipulatives to match the diagram on the slide. Students specify the flavor, quantity, and price on the objects, write names for the reference variables on sticky notes, and use paper clip chains to connect the reference variable to the object.\n* Click through the animated slide to describe the problem.\n* Have students use the manipulatives to develop a solution.\n* Ask a pair to demonstrate the swap.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When we perform a swap, what does the `temp` reference variable store?*\n\n**Discussion Goal:** Students note that `temp` stores a reference to the same object as the `secondPriority` variable.",
+        "duration": "15",
         "name": "Aliasing",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students completed this same manipulative swap exercise in Unit 3, Lesson 9. This activity is a quick reactivation of prior knowledge to focus on the mental model represented by the manipulatives and visualizing references."
+            "markdown": "Remind students that reference variables store a reference to an object and not the object itself. Make sure students understand that the `temp` variable does not store a copy of the object but that either variable can now reference the object. Both variables store a reference to the same object."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "f4bbface-571f-4ad2-9e4f-bf67e3c95bb3",
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+        "activity_section.key": "a60700bb-e569-455f-86b8-3bcfe5bb0a4e",
+        "lesson_activity.key": "2a93488f-3895-4574-8739-bc988d5866be"
       }
     },
     {
-      "key": "e6a4bde9-d804-4708-90dd-9b3d5d9feb6f",
+      "key": "f6a772cb-e8db-45ae-8f8d-a61d817b527e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When we perform a swap, what does the temp reference variable store?*\n\n**Discussion Goal:** Students continue to differentiate between reference and primitive variables. Students note that a reference variable only holds that object’s location in memory, making it possible to have two variables that reference the same object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the functionality of a reference variable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Describe the relationship between reference variables that are aliases.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the manipulatives to complete the first page of the Comparing Objects activity guide.  As they work, they should test their predictions by running the code in Level 2 on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the functionality of a reference variable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define alias.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the manipulatives to complete the first page of the Comparing Objects handout with their partner.  Students should test their predictions by running the code in Level 2 on Code Studio.",
+        "progression_name": "Comparing Objects"
       },
       "seeding_key": {
-        "activity_section.key": "e6a4bde9-d804-4708-90dd-9b3d5d9feb6f",
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+        "activity_section.key": "f6a772cb-e8db-45ae-8f8d-a61d817b527e",
+        "lesson_activity.key": "2a93488f-3895-4574-8739-bc988d5866be"
       }
     },
     {
-      "key": "997abd22-9ae1-4a79-99eb-c96bf84b4be0",
+      "key": "d73df9f7-3cbd-4691-9847-e726900ced4c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we want to find whether some or all attributes of two objects contain the same value?  How might we do this?*\n\n**Discussion Goal:** Students consider what it means for an object to be equal and hypothesize about comparing properties of an object. They may suggest creating a method that compares these properties. Students consider how they would get the values of the instance variables using the accessor methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to look at the documentation for the `String` class. They should use the questions to guide their exploration. ",
-        "duration": "13",
-        "name": "Object Equality"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we determine whether some or all attributes of two objects contain the same value?*\n\n**Discussion Goal:** Students consider what it means for an object to be equal and share ideas to compare individual attributes of an object. They may suggest creating a method that compares these attributes. Students consider how they would use accessor methods to get the values of the instance variables.",
+        "duration": "10",
+        "name": "Object Equality",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use examples of objects to discuss how to determine equality. For example, have students brainstorm how we determine whether two `Student` objects or two `Song` objects are equal."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "997abd22-9ae1-4a79-99eb-c96bf84b4be0",
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+        "activity_section.key": "d73df9f7-3cbd-4691-9847-e726900ced4c",
+        "lesson_activity.key": "2a93488f-3895-4574-8739-bc988d5866be"
       }
     },
     {
-      "key": "13519ee6-4331-4b13-8627-eca90c2aada7",
+      "key": "07fcb8ff-5dd4-4844-b639-6771b7eae2aa",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the `equals()` method in the `String` class.\n* *What does this method compare?*\n   * The `equals()` method compares the characters (letters) of the `String`s. It looks at the contents of the object to see if they are the same.\n* *How can this method be used or called?*\n   * This method is called on one `String`, and the second `String` to compare to is passed as an argument.\n* *Where does it come from within the class hierarchy?*\n   * Just like the `toString()` method, `equals()` is inherited from the `Object` class."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to look at the documentation for the `String` class and answer the provided questions.",
+        "progression_name": "String Equality"
       },
       "seeding_key": {
-        "activity_section.key": "13519ee6-4331-4b13-8627-eca90c2aada7",
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+        "activity_section.key": "07fcb8ff-5dd4-4844-b639-6771b7eae2aa",
+        "lesson_activity.key": "2a93488f-3895-4574-8739-bc988d5866be"
       }
     },
     {
-      "key": "3ea3b1e6-908a-4934-85f5-97da75bf83b1",
+      "key": "a360a3d4-412d-437c-a434-97a3301f7e59",
       "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the `equals()` method."
+      },
+      "seeding_key": {
+        "activity_section.key": "a360a3d4-412d-437c-a434-97a3301f7e59",
+        "lesson_activity.key": "2a93488f-3895-4574-8739-bc988d5866be"
+      }
+    },
+    {
+      "key": "5cd0ee65-b970-4ad4-9521-92802519ca14",
+      "position": 6,
       "properties": {
         "description": "All classes inherit from the `Object` class, which means all classes have an `equals()` method! The `Object` `equals()` method only returns `true` if two reference variables are aliases. To use it to compare specific attributes, we need to override the method.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "3ea3b1e6-908a-4934-85f5-97da75bf83b1",
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+        "activity_section.key": "5cd0ee65-b970-4ad4-9521-92802519ca14",
+        "lesson_activity.key": "2a93488f-3895-4574-8739-bc988d5866be"
       }
     },
     {
-      "key": "384390c2-eb1e-4d2c-bb81-af59b93d7c1a",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Equals and Aliasing video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the second page of the Comparing Objects activity guide to write pseudocode for an `equals()` method for the `Cake` class. Students then navigate to Level 4 on Code Studio to write and test their method."
-      },
-      "seeding_key": {
-        "activity_section.key": "384390c2-eb1e-4d2c-bb81-af59b93d7c1a",
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
-      }
-    },
-    {
-      "key": "e30b2d35-a8ce-424b-b58e-2b57d57a06a7",
+      "key": "cb15560a-3541-4337-8e3f-0e3c2f7bf2d7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the `equals()` method.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Equals and Aliasing video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for an `equals()` method for the `Cake` class on the second page of the Comparing Objects handout. Students then navigate to Level 4 on Code Studio to write and test their method.",
+        "progression_name": "The Same Cake",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students struggled with translating their algorithm to code, walk through this code segment with them and highlight:\n* The use of a `boolean` value\n* The use of accessor methods and `this`\n* The condition in the `if` statement to determine whether the two objects are the same\n\nAn alternative solution returns both inside and outside the `if` statement without using a `boolean` variable. This approach demonstrates a more familiar solution since students have not yet learned about returning inside an `if` statement or loop."
+            "markdown": "Ask additional probing questions as needed, such as:\n* *What does it mean for two `Cake` objects to be equal?*\n* *How do we obtain values for the attributes of a `Cake` object?*"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "e30b2d35-a8ce-424b-b58e-2b57d57a06a7",
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+        "activity_section.key": "cb15560a-3541-4337-8e3f-0e3c2f7bf2d7",
+        "lesson_activity.key": "2a93488f-3895-4574-8739-bc988d5866be"
       }
     },
     {
-      "key": "c59a5d9a-0196-4a77-9140-e9725c848406",
+      "key": "375b82b4-860b-4077-9aac-92ada62d9835",
       "position": 8,
       "properties": {
-        "description": "Now that we’ve spent some time working with object equality, we will apply this concept to our block party game. Your task is to figure out whether two rolled dice display the same number. First, we’re going to get to know the `Die` class.",
+        "description": "Now that we’ve spent some time working with object equality, we will apply this concept to our Pop the Balloons game. Your task is to determine whether two `Balloon` sprites are equal.\n\nSince each `Balloon` object has a different value, we do not need to check whether the values are equal. However, we do want to know whether the popped status of both `Balloon` objects is equal. We'll use this information to determine whether or not there are valid moves left in the game.",
+        "duration": "10",
+        "name": "Checking Balloon Equality",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "c59a5d9a-0196-4a77-9140-e9725c848406",
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+        "activity_section.key": "375b82b4-860b-4077-9aac-92ada62d9835",
+        "lesson_activity.key": "2a93488f-3895-4574-8739-bc988d5866be"
       }
     },
     {
-      "key": "055e7070-91d9-4080-b305-ae8c5b25b084",
+      "key": "e98c8c00-9e1b-4269-9a29-e718f83280e3",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to read through the methods in the `Die` class.",
-        "duration": "8",
-        "name": "Adding equals() to Pop the Balloons",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students should focus on the constructor to identify the instance variables they should compare and the accessor method(s) they want to use when comparing."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio. Students add an `equals()` method to the `Balloon` class, then add a `movesLeft()` method to the game to check whether valid moves are left.",
+        "progression_name": "Checking Balloons for Valid Moves"
       },
       "seeding_key": {
-        "activity_section.key": "055e7070-91d9-4080-b305-ae8c5b25b084",
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+        "activity_section.key": "e98c8c00-9e1b-4269-9a29-e718f83280e3",
+        "lesson_activity.key": "2a93488f-3895-4574-8739-bc988d5866be"
       }
     },
     {
-      "key": "34681785-a896-4c6b-976a-e1bba83d6688",
-      "position": 10,
+      "key": "23d88bb2-dbbd-4fe9-89de-eed3ce51fc0c",
+      "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which methods will be important when writing an `equals()` method to compare the dice values?*\n\n**Discussion Goal:** Students consider what to compare and how to access the information for both objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio. Students write an `equals()` method in the `Die` class of the Pop the Balloons game."
-      },
-      "seeding_key": {
-        "activity_section.key": "34681785-a896-4c6b-976a-e1bba83d6688",
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
-      }
-    },
-    {
-      "key": "3d376108-934d-4db0-be21-f1ec15d54ec6",
-      "position": 11,
-      "properties": {
-        "description": "You’ve now spent some time comparing objects and learned the difference between using `==` and the `equals()` method. Well done! Let’s take a moment to recap the objectives of today’s lessons through a guided pair discussion.",
+        "description": "You’ve now spent some time comparing objects and learned the difference between using `==` and the `equals()` method. Well done!",
+        "name": "Question Stems",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "3d376108-934d-4db0-be21-f1ec15d54ec6",
-        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+        "activity_section.key": "23d88bb2-dbbd-4fe9-89de-eed3ce51fc0c",
+        "lesson_activity.key": "92f9c858-7721-4d37-b121-14958b822dca"
       }
     },
     {
-      "key": "ea7d8014-aa16-466a-87e0-738357d4616b",
-      "position": 1,
+      "key": "9c500619-8d18-4917-8f93-9230e90f7bc5",
+      "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose one of the question stems. Students write the question stem on an index card or scrap paper and fill in the blank to complete the question. Have students then turn to the person next to them and take turns asking and answering their questions.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
-        "name": "Question Stems"
+        "description": "**Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose one of the question stems. Students write the question stem on an index card or scrap paper and fill in the blank to complete the question. Have students then turn to the person next to them and take turns asking and answering their questions.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "ea7d8014-aa16-466a-87e0-738357d4616b",
+        "activity_section.key": "9c500619-8d18-4917-8f93-9230e90f7bc5",
         "lesson_activity.key": "92f9c858-7721-4d37-b121-14958b822dca"
       }
     },
     {
       "key": "5f11abe3-73f7-49a0-b97a-ee5fd87f5bc4",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "5f11abe3-73f7-49a0-b97a-ee5fd87f5bc4",
@@ -3719,13 +3741,7 @@
       "key": "8295a615-6cbb-4672-bc4c-faadcf90bed4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 4 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys). Allow five minutes for students to log in to Code Studio. ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Topic Questions and Personal Progress Checks**\n\n\nFor more information, see the Code.org CSA Topic Coverage."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 4 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
       },
       "seeding_key": {
         "activity_section.key": "8295a615-6cbb-4672-bc4c-faadcf90bed4",
@@ -4375,6 +4391,334 @@
       "level_keys": [
         "CSA U4L4-L5"
       ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Implement the Dice Roll Function"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L5-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "9725a9d4-6878-4d73-afea-881b97c671d2"
+      },
+      "level_keys": [
+        "CSA U4L5-L1"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Implement the Dice Roll Function"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L5-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "9725a9d4-6878-4d73-afea-881b97c671d2"
+      },
+      "level_keys": [
+        "CSA U4L5-L2"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create Weighted Dice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L5-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "bd1b3453-461d-4ef9-b488-ac95e4d854ae"
+      },
+      "level_keys": [
+        "CSA U4L5-L3"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating Balloon Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L5-L4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "e7e06bb6-6219-43f3-afe2-668235abe438"
+      },
+      "level_keys": [
+        "CSA U4L5-L4"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating Balloon Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L5-L5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "e7e06bb6-6219-43f3-afe2-668235abe438"
+      },
+      "level_keys": [
+        "CSA U4L5-L5"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L5-L6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "bdde54ed-79c1-414f-8de3-46883bf2c4bb"
+      },
+      "level_keys": [
+        "CSA U4L5-L6"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L5-L7"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "bdde54ed-79c1-414f-8de3-46883bf2c4bb"
+      },
+      "level_keys": [
+        "CSA U4L5-L7"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L5-L8"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "55a14961-e0fd-4d72-b03b-85bd705f9f06"
+      },
+      "level_keys": [
+        "CSA U4L5-L8"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict the Output"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L6-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "263d7329-a770-4b14-be65-308591075afe"
+      },
+      "level_keys": [
+        "CSA U4L6-L1"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Comparing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L6-L2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "f6a772cb-e8db-45ae-8f8d-a61d817b527e"
+      },
+      "level_keys": [
+        "CSA U4L6-L2"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "String Equality"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L6-L3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "07fcb8ff-5dd4-4844-b639-6771b7eae2aa"
+      },
+      "level_keys": [
+        "CSA U4L6-L3"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Same Cake"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L6-L4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "cb15560a-3541-4337-8e3f-0e3c2f7bf2d7"
+      },
+      "level_keys": [
+        "CSA U4L6-L4"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Checking Balloons for Valid Moves"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L6-L5"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "e98c8c00-9e1b-4269-9a29-e718f83280e3"
+      },
+      "level_keys": [
+        "CSA U4L6-L5"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Checking Balloons for Valid Moves"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L6-L6"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "e98c8c00-9e1b-4269-9a29-e718f83280e3"
+      },
+      "level_keys": [
+        "CSA U4L6-L6"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L6-L7"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "5f11abe3-73f7-49a0-b97a-ee5fd87f5bc4"
+      },
+      "level_keys": [
+        "CSA U4L6-L7"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4676,6 +5020,186 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot",
         "activity_section.key": "9c00429a-ee55-4885-a940-33ddf5f937c4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L5-L1",
+        "script_level.level_keys": [
+          "CSA U4L5-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "9725a9d4-6878-4d73-afea-881b97c671d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L5-L2",
+        "script_level.level_keys": [
+          "CSA U4L5-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "9725a9d4-6878-4d73-afea-881b97c671d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L5-L3",
+        "script_level.level_keys": [
+          "CSA U4L5-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "bd1b3453-461d-4ef9-b488-ac95e4d854ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L5-L4",
+        "script_level.level_keys": [
+          "CSA U4L5-L4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "e7e06bb6-6219-43f3-afe2-668235abe438"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L5-L5",
+        "script_level.level_keys": [
+          "CSA U4L5-L5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "e7e06bb6-6219-43f3-afe2-668235abe438"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L5-L6",
+        "script_level.level_keys": [
+          "CSA U4L5-L6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "bdde54ed-79c1-414f-8de3-46883bf2c4bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L5-L7",
+        "script_level.level_keys": [
+          "CSA U4L5-L7"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "bdde54ed-79c1-414f-8de3-46883bf2c4bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L5-L8",
+        "script_level.level_keys": [
+          "CSA U4L5-L8"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "55a14961-e0fd-4d72-b03b-85bd705f9f06"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L6-L1",
+        "script_level.level_keys": [
+          "CSA U4L6-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "263d7329-a770-4b14-be65-308591075afe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L6-L2",
+        "script_level.level_keys": [
+          "CSA U4L6-L2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "f6a772cb-e8db-45ae-8f8d-a61d817b527e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L6-L3",
+        "script_level.level_keys": [
+          "CSA U4L6-L3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "07fcb8ff-5dd4-4844-b639-6771b7eae2aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L6-L4",
+        "script_level.level_keys": [
+          "CSA U4L6-L4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "cb15560a-3541-4337-8e3f-0e3c2f7bf2d7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L6-L5",
+        "script_level.level_keys": [
+          "CSA U4L6-L5"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "e98c8c00-9e1b-4269-9a29-e718f83280e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L6-L6",
+        "script_level.level_keys": [
+          "CSA U4L6-L6"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "e98c8c00-9e1b-4269-9a29-e718f83280e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L6-L7",
+        "script_level.level_keys": [
+          "CSA U4L6-L7"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "5f11abe3-73f7-49a0-b97a-ee5fd87f5bc4"
       }
     }
   ],
@@ -5657,6 +6181,26 @@
       }
     },
     {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "An element of a game that can be manipulated in some way",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "key": "probability",
+      "word": "Probability",
+      "definition": "The likelihood of something happening",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "probability"
+      }
+    },
+    {
       "key": "alias",
       "word": "Alias",
       "definition": "A reference variable that points to the same object as another reference variable",
@@ -5838,6 +6382,18 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "probability"
       }
     },
     {
@@ -6024,21 +6580,11 @@
     {
       "key": "da25aec1-6d77-4aba-a5f2-19500e92349a",
       "properties": {
-        "description": "Use Math.random() to generate random numbers"
+        "description": "Use `Math.random()` to generate random numbers"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
         "objective.key": "da25aec1-6d77-4aba-a5f2-19500e92349a"
-      }
-    },
-    {
-      "key": "16b96062-d951-48b5-84f3-42cde5207f51",
-      "properties": {
-        "description": "Use Math.random() to compute probabilities"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "objective.key": "16b96062-d951-48b5-84f3-42cde5207f51"
       }
     },
     {
@@ -6052,19 +6598,9 @@
       }
     },
     {
-      "key": "36c69762-8b91-4d60-b0bf-a2d1b5045a7d",
-      "properties": {
-        "description": "Predict the outcome of a code segment using aliased reference variables"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "objective.key": "36c69762-8b91-4d60-b0bf-a2d1b5045a7d"
-      }
-    },
-    {
       "key": "aca009d5-ae48-4a80-bc4e-44be1dbe234e",
       "properties": {
-        "description": "Explain the difference between == and equals()"
+        "description": "Explain the difference between `==` and `equals()`"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -6074,7 +6610,7 @@
     {
       "key": "56c25e89-fb66-4db2-99c9-18ead4d223c6",
       "properties": {
-        "description": "Write an equals() method to compare object data for equality"
+        "description": "Write an `equals()` method to compare object data for equality"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",

@@ -76,6 +76,18 @@
       "seeding_key": {
         "resource.key": "all_standards"
       }
+    },
+    {
+      "name": "CSP Syllabus",
+      "url": "https://drive.google.com/file/d/1dzsY0lTCx8XpNAdZ2d19FdUO3HEg37up/view?usp=sharing",
+      "key": "csp_syllabus",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_syllabus"
+      }
     }
   ],
   "student_resources": [

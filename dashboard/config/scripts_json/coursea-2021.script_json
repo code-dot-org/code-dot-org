@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-08-04 21:42:55 UTC",
+    "serialized_at": "2021-09-03 20:51:28 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursea-2021"
@@ -7223,6 +7223,18 @@
       }
     },
     {
+      "name": "Virtual Lesson Modifications",
+      "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit",
+      "key": "virtual_lesson_modifications",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_lesson_modifications"
+      }
+    },
+    {
       "name": "Wiggles-Go Noodle",
       "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
       "key": "wiggles-go_noodle",
@@ -7619,6 +7631,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum_1",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_lesson_modifications",
         "script.name": "coursea-2021"
       }
     }
