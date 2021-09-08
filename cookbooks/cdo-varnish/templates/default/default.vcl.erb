@@ -31,7 +31,6 @@ backend <%=app%>_<%=id%> {
 <% end -%>
 
 sub vcl_init {
-  new dashboard = directors.round_robin();
 <% %w[pegasus dashboard].each do |app| -%>
   new <%=app%> = directors.round_robin();
 <%   backends.keys.each do |id| -%>
