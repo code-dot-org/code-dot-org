@@ -41,7 +41,9 @@ describe('Java Lab Editor Test', () => {
       onCommitCode: () => {},
       handleVersionHistory: () => {},
       showProjectTemplateWorkspaceIcon: false,
-      height: 400
+      isProjectTemplateLevel: false,
+      height: 400,
+      handleClearPuzzle: () => {}
     };
     appOptions = window.appOptions;
     window.appOptions = {level: {}};
