@@ -561,7 +561,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should not edit level if not custom level" do
-    level = Script.twenty_hour_unit.levels.first
+    level = create(:level, user_id: nil)
     refute Ability.new(@levelbuilder).can? :edit, level
 
     post :update_blocks, params: @default_update_blocks_params.merge(
@@ -642,11 +642,14 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
+    level_path = 'config/scripts/test_external_markdown.external'
+    data, _ = External.parse_file level_path
+    External.setup data
     CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
     level = Level.find_by_name 'Test External Markdown'
     get :edit, params: {id: level.id}
 
-    assert_equal 'config/scripts/test_external_markdown.external', assigns(:level).filename
+    assert_equal level_path, assigns(:level).filename
     assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
     assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
   end
@@ -694,7 +697,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should prevent rename of stanadalone project level" do
     level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
-    # standalone project levels are created when we generate fixtures
+    create(:level, name: level_name) unless Level.where(name: level_name).exists?
     level = Level.find_by(name: level_name)
 
     get :edit, params: {id: level.id}
