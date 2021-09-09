@@ -36,11 +36,17 @@ pilot_names.each do |pilot_name|
   sections = Section.where(course_id: nil, script_id: script_ids)
   CDO.log.info "found #{sections.length} sections to update."
   sections.each do |section|
+    add_to_updated = true
     if options[:actually_update]
       section.course_id = pilot.id
-      section.save!
+      begin
+        section.save!
+      rescue ActiveRecord::RecordInvalid
+        CDO.log.info "could not update section #{section.id}"
+        add_to_updated = false
+      end
     end
-    updated << section.id
+    updated << section.id if add_to_updated
   end
 end
 
