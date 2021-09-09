@@ -38,8 +38,9 @@ def check_for_cdo_keys
     Create your API tokens from these pages:
 
       https://github.com/settings/tokens ('public_repo' permission)
-      https://api.slack.com/custom-integrations/legacy-tokens
       https://app.honeybadger.io/users/edit#authentication
+
+    The slack_token can be found in the Shared-Engineering folder in LastPass, under DOTD Slack Token.
 
     Please add them to your locals.yml and rerun the script.
     CDO.devinternal_db_writer should be pulled automatically from AWS Secrets Manager.
