@@ -430,6 +430,7 @@ Dashboard::Application.routes.draw do
   post '/admin/pilots/', to: 'admin_search#create_pilot', as: 'create_pilot'
   get '/admin/pilots/:pilot_name', to: 'admin_search#show_pilot', as: 'show_pilot'
   post '/admin/add_to_pilot', to: 'admin_search#add_to_pilot', as: 'add_to_pilot'
+  post '/admin/remove_from_pilot', to: 'admin_search#remove_from_pilot', as: 'remove_from_pilot'
 
   # internal engineering dashboards
   get '/admin/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
