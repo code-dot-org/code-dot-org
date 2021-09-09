@@ -821,6 +821,14 @@ Then /^there's a div with a background image "([^"]*)"$/ do |path|
   expect(exists).to eq(true)
 end
 
+Then /^I wait until there's an SVG image "([^"]*)"$/ do |path|
+  wait_until do
+    steps %{
+      Then there's an SVG image "#{path}"
+    }
+  end
+end
+
 Then /^there's an SVG image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('image').filter('[xlink\\\\:href*=\"#{path}\"]').length != 0")
   expect(exists).to eq(true)
