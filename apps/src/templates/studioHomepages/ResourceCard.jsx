@@ -90,7 +90,6 @@ class ResourceCard extends Component {
 
 const styles = {
   card: {
-    height: 250,
     width: 310,
     background: color.teal
   },
@@ -139,7 +138,6 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     lineHeight: '21px',
-    height: 140,
     marginBottom: 5,
     overflowY: 'auto'
   },
