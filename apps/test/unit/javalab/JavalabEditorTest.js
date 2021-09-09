@@ -16,19 +16,21 @@ import {lightMode} from '@cdo/apps/javalab/editorSetup';
 import javalab, {
   setIsDarkMode,
   sourceVisibilityUpdated,
-  sourceValidationUpdated
+  sourceValidationUpdated,
+  setBackpackApi
 } from '@cdo/apps/javalab/javalabRedux';
 import {setAllSources} from '../../../src/javalab/javalabRedux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
+import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 
 describe('Java Lab Editor Test', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps
   // lifecycle method.
   allowConsoleWarnings();
 
-  let defaultProps, store, appOptions;
+  let defaultProps, store, appOptions, hasBackpackStub, backpackGetFileListStub;
 
   beforeEach(() => {
     stubRedux();
@@ -39,7 +41,9 @@ describe('Java Lab Editor Test', () => {
       onCommitCode: () => {},
       handleVersionHistory: () => {},
       showProjectTemplateWorkspaceIcon: false,
-      height: 400
+      isProjectTemplateLevel: false,
+      height: 400,
+      handleClearPuzzle: () => {}
     };
     appOptions = window.appOptions;
     window.appOptions = {level: {}};
@@ -48,11 +52,23 @@ describe('Java Lab Editor Test', () => {
         isEditingStartSources: false
       })
     );
+    backpackGetFileListStub = sinon
+      .stub(BackpackClientApi.prototype, 'getFileList')
+      .callsArgWith(1, ['backpackFile.java']);
+    hasBackpackStub = sinon.stub().returns(true);
+
+    store.dispatch(
+      setBackpackApi({
+        hasBackpack: hasBackpackStub,
+        getFileList: backpackGetFileListStub
+      })
+    );
   });
 
   afterEach(() => {
     restoreRedux();
     window.appOptions = appOptions;
+    backpackGetFileListStub.restore();
   });
 
   const createWrapper = overrideProps => {

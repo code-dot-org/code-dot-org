@@ -7,28 +7,22 @@ export default class Theater {
     this.context = null;
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
+    this.loadEventsFinished = 0;
   }
 
   handleSignal(data) {
     switch (data.value) {
       case TheaterSignalType.AUDIO_URL: {
-        this.getAudioElement().src = data.detail.url;
+        // Wait for the audio to load before starting playback
+        this.getAudioElement().src =
+          data.detail.url + this.getCacheBustSuffix();
+        this.getAudioElement().oncanplaythrough = () => this.startPlayback();
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
-        this.getImgElement().src = data.detail.url;
-        break;
-      }
-      // TODO: Remove these message types once javabuilder is updated to
-      // no longer use them.
-      case TheaterSignalType.VISUAL: {
-        const imageString = 'data:image/gif;base64,' + data.detail.image;
-        this.getImgElement().src = imageString;
-        break;
-      }
-      case TheaterSignalType.AUDIO: {
-        const audioString = 'data:audio/wav;base64,' + data.detail.audio;
-        this.getAudioElement().src = audioString;
+        // Preload the image. Once it's ready, start the playback
+        this.getImgElement().src = data.detail.url + this.getCacheBustSuffix();
+        this.getImgElement().onload = () => this.startPlayback();
         break;
       }
       default:
@@ -36,8 +30,19 @@ export default class Theater {
     }
   }
 
+  startPlayback() {
+    this.loadEventsFinished++;
+    // We expect exactly 2 responses from Javabuilder. One for audio and one for video.
+    // Wait for both to respond and load before starting playback.
+    if (this.loadEventsFinished > 1) {
+      this.getImgElement().style.visibility = 'visible';
+      this.getAudioElement().play();
+    }
+  }
+
   reset() {
-    this.getImgElement().src = '';
+    this.loadEventsFinished = 0;
+    this.getImgElement().style.visibility = 'hidden';
     this.getAudioElement().src = '';
   }
 
@@ -55,5 +60,9 @@ export default class Theater {
       `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
     );
     this.onNewlineMessage();
+  }
+
+  getCacheBustSuffix() {
+    return '?=' + new Date().getTime();
   }
 }

@@ -1,0 +1,20 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-09-01T13:07:33.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "Write a program where the user inputs a value, which is stored in the variable `num`",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "published": true
+}]]></config>
+</Javalab>

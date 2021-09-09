@@ -801,7 +801,7 @@ class LessonTest < ActiveSupport::TestCase
     # of related_lessons, so that the count is not artificially reduced by
     # anything being cached from the call to related_lessons.
     summaries = nil
-    assert_queries(11) do
+    assert_queries(10) do
       summaries = lesson1.summarize_related_lessons
     end
 
@@ -1095,6 +1095,25 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal [original_vocab], copied_lesson.vocabularies
       assert_equal course_version.resources.count, course_version_resource_count
       assert_equal course_version.vocabularies.count, course_version_vocab_count
+    end
+
+    test "can clone lesson without course version to a script with a course version" do
+      original_script = create :script, is_migrated: true, is_course: true
+      original_script.reload
+
+      original_script.expects(:write_script_json).never
+      original_lesson_group = create :lesson_group, script: original_script
+      original_lesson = create :lesson, lesson_group: original_lesson_group, script: original_script, has_lesson_plan: true
+
+      destination_script = create :script, is_migrated: true, is_course: true
+      create :course_version, content_root: destination_script
+      create :lesson_group, script: destination_script
+
+      destination_script.expects(:write_script_json).once
+      Script.expects(:merge_and_write_i18n).once
+      copied_lesson = original_lesson.copy_to_unit(destination_script)
+
+      assert_equal destination_script, copied_lesson.script
     end
 
     test "can clone lesson into another script with lessons" do
