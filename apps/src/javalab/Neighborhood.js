@@ -60,6 +60,7 @@ export default class Neighborhood {
       this.onOutputMessage(
         `${STATUS_MESSAGE_PREFIX} ${javalabMsg.startingPainter()}`
       );
+      this.onNewlineMessage();
     }
   }
 
