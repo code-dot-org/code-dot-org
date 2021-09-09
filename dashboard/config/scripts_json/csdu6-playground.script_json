@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-02 00:33:51 UTC",
+    "serialized_at": "2021-09-09 18:01:11 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csdu6-playground"
@@ -24,7 +24,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Content"
+        "display_name": "Templates"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -36,7 +36,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Content"
+        "display_name": "Chapter 1"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -48,7 +48,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Content"
+        "display_name": "Chapter 2"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
@@ -2274,6 +2274,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - CA_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2646,6 +2649,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - P_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -2668,6 +2674,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB1_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2690,6 +2699,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2712,6 +2724,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - P2_2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2734,6 +2749,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB3_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2756,6 +2774,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB4_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2778,6 +2799,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - Prac_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2799,6 +2823,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - PA_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2820,6 +2847,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - Chal_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2842,6 +2872,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - CA_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2864,6 +2897,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - CB_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2886,6 +2922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - P_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -2908,6 +2947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB1_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2930,6 +2972,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2952,6 +2997,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB3_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2974,6 +3022,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - Prac_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2996,6 +3047,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - PA_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3018,6 +3072,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - PB_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3040,6 +3097,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - PC_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3062,6 +3122,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - PD_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3084,6 +3147,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - Chal_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3105,6 +3171,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - CA_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3126,6 +3195,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - Chal_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3148,6 +3220,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - CA_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3170,6 +3245,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB1_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3192,6 +3270,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3214,6 +3295,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB3_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
