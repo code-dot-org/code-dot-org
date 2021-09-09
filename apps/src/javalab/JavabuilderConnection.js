@@ -82,23 +82,23 @@ export default class JavabuilderConnection {
 
   onStatusMessage(messageKey) {
     let message;
-    let includeLineBreak = false;
+    let lineBreakCount = 0;
     switch (messageKey) {
       case StatusMessageType.COMPILING:
         message = javalabMsg.compiling();
-        includeLineBreak = true;
+        lineBreakCount = 1;
         break;
       case StatusMessageType.COMPILATION_SUCCESSFUL:
         message = javalabMsg.compilationSuccess();
-        includeLineBreak = true;
+        lineBreakCount = 1;
         break;
       case StatusMessageType.RUNNING:
         message = javalabMsg.running();
-        includeLineBreak = true;
+        lineBreakCount = 2;
         break;
       case StatusMessageType.GENERATING_RESULTS:
         message = javalabMsg.generatingResults();
-        includeLineBreak = true;
+        lineBreakCount = 1;
         break;
       case StatusMessageType.EXITED:
         this.onExit();
@@ -109,7 +109,7 @@ export default class JavabuilderConnection {
     if (message) {
       this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
     }
-    if (includeLineBreak) {
+    for (let lineBreak = 0; lineBreak < lineBreakCount; lineBreak++) {
       this.onNewlineMessage();
     }
   }
