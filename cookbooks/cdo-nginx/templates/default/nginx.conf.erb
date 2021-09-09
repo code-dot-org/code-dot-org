@@ -27,15 +27,17 @@ http {
   keepalive_timeout 30;
 
   server {
-    listen <%= node['cdo-apps']['dashboard']['port'] %> default deferred;
-    server_name dashboard_proxy;
+    listen 80 deferred;
+    listen <%= node['cdo-apps']['dashboard']['port'] %> deferred;
+    server_name ~(dashboard|studio);
     location / {
       proxy_pass http://unix:<%= @run_dir %>/dashboard.sock;
       proxy_set_header Host $http_host;
     }
   }
   server {
-    listen <%= node['cdo-apps']['pegasus']['port'] %> default deferred;
+    listen 80 default_server deferred;
+    listen <%= node['cdo-apps']['pegasus']['port'] %> deferred;
     server_name pegasus_proxy;
     location / {
       proxy_pass http://unix:<%= @run_dir %>/pegasus.sock;
@@ -47,10 +49,17 @@ http {
     listen 443 ssl;
     <%= render 'nginx.erb', cookbook: 'ssl_certificate' %>
     location / {
-      # Pass the request on to Varnish.
+      # Pass the request on to port 80.
       proxy_pass  http://127.0.0.1;
       proxy_set_header Host $http_host;
       proxy_set_header X-Forwarded-Proto https;
     }
   }
+<% node['cdo-varnish']['redirects'].dup.each_pair do |domain, site| -%>
+  server {
+    listen 80 deferred;
+    server_name <%=domain%>;
+    return 301 https://<%=site%>$request_uri;
+  }
+<% end -%>
 }

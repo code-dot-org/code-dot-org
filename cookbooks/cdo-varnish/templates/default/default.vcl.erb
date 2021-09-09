@@ -59,33 +59,6 @@ sub vcl_recv
 ###
 
 ### REDIRECTS
-  # TODO: Move to ELBv2 Listener Rules "redirect" action.
-
-  if(req.http.host ~ "\.$")
-  {
-    /* Don't allow domain names that end in "." */
-    return(synth(751, "https://" + regsub(req.http.host, "\.$","") + req.url));
-  }
-  else if(req.http.host ~ "^www\.")
-  {
-    /* Normalize domain names to the short (non www.) form. */
-    return(synth(751, "https://" + regsub(req.http.host, "^www\.","") + req.url));
-  }
-<%
-  node['cdo-varnish']['redirects'].dup.each_pair do |domain, site|
-    site = "https://#{site}" unless site =~ %r[^https?://]
--%>
-  else if(req.http.Host == "<%= domain %>")
-  {
-    return(synth(751, "<%= site %>" + req.url));
-  }
-<% end -%>
-  # Redirect http to https
-  if(req.http.X-Forwarded-Proto !~ "(?i)https") {
-    return(synth(751, "https://" + req.http.host + req.url));
-  }
-###
-
 # Copy Accept-Language header to X-Varnish-Accept-Language.
 # TODO: Update application code to read Accept-Language instead of X-Varnish-Accept-Language.
 
@@ -106,15 +79,4 @@ if (req.http.Accept-Language) {
 
   # Disable caching, just proxy requests to backend.
   return (pass);
-}
-
-# Handle redirects
-sub vcl_synth {
-  if(resp.status == 751) {
-    # We use this special error status 751 to force redirects with 301 (permanent) redirects
-    # To use this, call the following from anywhere in vcl_recv: return (synth(751, "http://host/new.html"));
-    set resp.http.Location = resp.reason;
-    set resp.status = 301;
-    return(deliver);
-  }
 }
