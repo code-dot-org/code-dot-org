@@ -59,7 +59,7 @@ class LessonGroup < ApplicationRecord
 
     counters = Counters.new(0, 0, 0, 0)
 
-    raw_lesson_groups&.map do |raw_lesson_group|
+    raw_lesson_groups&.map(&:deep_symbolize_keys)&.map do |raw_lesson_group|
       if !raw_lesson_group[:user_facing]
         raise 'non-user-facing lesson group must have blank key' unless raw_lesson_group[:key].blank?
         lesson_group = LessonGroup.find_or_create_by!(
