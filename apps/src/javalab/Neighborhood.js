@@ -74,7 +74,6 @@ export default class Neighborhood {
         // we are done processing commands and can stop checking for signals.
         // Set isRunning to false, add a blank line to the console, and return
         this.setIsRunning(false);
-        this.onNewlineMessage();
         return;
       }
       const timeForSignal =

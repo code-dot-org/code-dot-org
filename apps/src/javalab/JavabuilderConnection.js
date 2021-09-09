@@ -85,7 +85,6 @@ export default class JavabuilderConnection {
     let lineBreakCount = 0;
     switch (messageKey) {
       case StatusMessageType.COMPILING:
-        this.onNewlineMessage();
         message = javalabMsg.compiling();
         lineBreakCount = 1;
         break;
@@ -102,6 +101,7 @@ export default class JavabuilderConnection {
         lineBreakCount = 1;
         break;
       case StatusMessageType.EXITED:
+        this.onNewlineMessage();
         this.onExit();
         break;
       default:
