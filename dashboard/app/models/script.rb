@@ -272,19 +272,19 @@ class Script < ApplicationRecord
   end
 
   def self.lesson_extras_script_ids
-    @@lesson_extras_scripts ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
+    @@lesson_extras_script_ids ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
   end
 
   def self.maker_units
-    visible_units.select(&:is_maker_unit?)
+    @@maker_units ||= visible_units.select(&:is_maker_unit?)
   end
 
   def self.text_to_speech_unit_ids
-    all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
+    @@text_to_speech_unit_ids ||= all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
   end
 
   def self.pre_reader_unit_ids
-    all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
+    @@pre_reader_unit_ids ||= all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
   end
 
   # Get the set of units that are valid for the current user, ignoring those
@@ -329,7 +329,7 @@ class Script < ApplicationRecord
     private
 
     def visible_units
-      all_scripts.select(&:launched?).to_a.freeze
+      @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
     end
   end
 
@@ -1696,6 +1696,8 @@ class Script < ApplicationRecord
     @@unit_family_cache = nil
     @@level_cache = nil
     @@all_scripts = nil
+    @@visible_units = nil
+    @@maker_units = nil
     Rails.cache.delete UNIT_CACHE_KEY
   end
 
