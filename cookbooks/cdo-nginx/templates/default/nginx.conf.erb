@@ -22,9 +22,11 @@ http {
   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
   proxy_set_header X-Request-Start "t=${msec}";
   proxy_set_header Host $http_host;
+<% unless node['cdo-varnish']['enabled'] -%>
   # Copy Accept-Language header to X-Varnish-Accept-Language.
   # TODO: Update application code to read Accept-Language instead of X-Varnish-Accept-Language.
   proxy_set_header X-Varnish-Accept-Language $http_accept_language;
+<% end -%>
   proxy_buffer_size 8k;
 
   client_max_body_size 4G;
@@ -32,7 +34,7 @@ http {
 
   server {
 <% unless node['cdo-varnish']['enabled'] -%>
-    listen 80 deferred;
+    listen 80;
 <% end -%>
     listen <%= node['cdo-apps']['dashboard']['port'] %> deferred;
     server_name ~(dashboard|studio);
@@ -61,10 +63,11 @@ http {
     }
   }
 <% unless node['cdo-varnish']['enabled'] -%>
-<%   node['cdo-varnish']['redirects'].dup.each_pair do |domain, site| -%>
+<%   redirects = node['cdo-varnish']['redirects'].group_by(&:last).transform_values {|v| v.to_h.keys}
+     redirects.each do |site, domains| -%>
   server {
-    listen 80 deferred;
-    server_name <%=domain%>;
+    listen 80;
+    server_name <%=domains.join(' ')%>;
     return 301 https://<%=site%>$request_uri;
   }
 <%   end -%>
