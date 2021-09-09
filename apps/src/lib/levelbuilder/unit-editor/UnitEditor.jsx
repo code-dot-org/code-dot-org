@@ -17,7 +17,6 @@ import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import {
-  getSerializedLessonGroups,
   init,
   mapLessonGroupDataForEditor,
   mapLessonGroupDataForUpdate
@@ -290,12 +289,7 @@ class UnitEditor extends React.Component {
       lesson_groups:
         this.props.isMigrated &&
         JSON.stringify(mapLessonGroupDataForUpdate(this.props.lessonGroups)),
-      script_text: this.props.isMigrated
-        ? getSerializedLessonGroups(
-            this.props.lessonGroups,
-            this.props.levelKeyList
-          )
-        : this.state.lessonLevelData,
+      script_text: !this.props.isMigrated && this.state.lessonLevelData,
       last_updated_at: this.state.lastUpdatedAt,
       old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
