@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import ReactDOM from 'react-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -15,146 +15,143 @@ const getElementHeight = element => {
 
 const visibleCommentHeight = 46;
 
-const RubricPerformanceLabels = {
-  performanceLevel1: i18n.rubricLevelOneHeader(),
-  performanceLevel2: i18n.rubricLevelTwoHeader(),
-  performanceLevel3: i18n.rubricLevelThreeHeader(),
-  performanceLevel4: i18n.rubricLevelFourHeader()
-};
+function LevelFeedbackEntry({feedback}) {
+  const {
+    id,
+    created_at,
+    comment,
+    performance,
+    review_state,
+    seen_on_feedback_page_at,
+    student_first_visited_at,
+    is_awaiting_teacher_review
+  } = feedback;
 
-export default class LevelFeedbackEntry extends Component {
-  state = {
-    expanded: false,
-    commentHeight: 0
+  const feedbackSeenByStudent =
+    seen_on_feedback_page_at || student_first_visited_at;
+
+  const commentExists = comment.length > 2;
+  const commentSeenStyle = feedbackSeenByStudent ? styles.commentBlockSeen : {};
+
+  const displayReviewState =
+    review_state === ReviewStates.keepWorking ||
+    review_state === ReviewStates.completed;
+
+  return (
+    <div style={{...styles.commentBlock, ...commentSeenStyle}}>
+      <TimeAgo style={styles.time} dateString={created_at} />
+      {displayReviewState && (
+        <ReviewState
+          reviewState={review_state}
+          isAwaitingTeacherReview={is_awaiting_teacher_review}
+        />
+      )}
+      {performance && <Performance performance={performance} />}
+      {commentExists && (
+        <Comment
+          commentText={comment}
+          feedbackSeenByStudent={feedbackSeenByStudent}
+          feedbackId={id}
+        />
+      )}
+    </div>
+  );
+}
+
+function ReviewState({reviewState, isAwaitingTeacherReview}) {
+  if (reviewState === ReviewStates.completed) {
+    return <div style={styles.reviewState}>{i18n.reviewedComplete()}</div>;
+  } else if (isAwaitingTeacherReview) {
+    return (
+      <div style={styles.reviewState}>{i18n.waitingForTeacherReview()}</div>
+    );
+  } else {
+    return (
+      <div style={styles.reviewState}>
+        <KeepWorkingBadge />
+        &nbsp;
+        <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
+      </div>
+    );
+  }
+}
+
+function Performance({performance}) {
+  const RubricPerformanceLabels = {
+    performanceLevel1: i18n.rubricLevelOneHeader(),
+    performanceLevel2: i18n.rubricLevelTwoHeader(),
+    performanceLevel3: i18n.rubricLevelThreeHeader(),
+    performanceLevel4: i18n.rubricLevelFourHeader()
   };
 
-  static propTypes = {feedback: feedbackShape};
+  return (
+    <div style={styles.feedbackText}>
+      <span>{i18n.feedbackRubricEvaluation()}</span>&nbsp;
+      <span style={styles.rubricPerformance}>
+        {RubricPerformanceLabels[performance]}
+      </span>
+    </div>
+  );
+}
 
-  expandComment = () => {
-    this.setState({expanded: true});
+function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
+  const commentRef = useRef(null);
+  const [expanded, setExpanded] = useState(false);
+  const [commentHeight, setCommentHeight] = useState(0);
+
+  useEffect(() => {
+    commentRef.current &&
+      setCommentHeight(getElementHeight(commentRef.current));
+  });
+
+  const expandComment = () => {
+    setExpanded(true);
     firehoseClient.putRecord(
       {
         study: 'all-feedback',
         event: 'expand-feedback',
-        data_json: {feedback_id: this.props.feedback.id}
+        data_json: {feedback_id: feedbackId}
       },
       {includeUserId: true}
     );
   };
 
-  collapseComment = () => {
-    this.setState({expanded: false});
+  const collapseComment = () => {
+    setExpanded(false);
   };
 
-  componentDidMount() {
-    this.comment &&
-      this.setState({commentHeight: getElementHeight(this.comment)});
-  }
+  const isCommentExpandable = commentHeight > visibleCommentHeight;
+  const showCommentFade = isCommentExpandable && !expanded;
 
-  feedbackSeenByStudent() {
-    const {
-      seen_on_feedback_page_at,
-      student_first_visited_at
-    } = this.props.feedback;
-    return seen_on_feedback_page_at || student_first_visited_at;
-  }
+  const commentContainerStyle = expanded
+    ? styles.commentContainer
+    : styles.commentContainerCollapsed;
 
-  renderReviewState() {
-    const {review_state, is_awaiting_teacher_review} = this.props.feedback;
-
-    if (review_state === ReviewStates.completed) {
-      return <div style={styles.reviewState}>{i18n.reviewedComplete()}</div>;
-    } else if (is_awaiting_teacher_review) {
-      return (
-        <div style={styles.reviewState}>{i18n.waitingForTeacherReview()}</div>
-      );
-    } else {
-      return (
-        <div style={styles.reviewState}>
-          <KeepWorkingBadge />
-          &nbsp;
-          <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
+  return (
+    <div style={commentContainerStyle}>
+      {isCommentExpandable && (
+        <FontAwesome
+          style={styles.expanderIcon}
+          icon={expanded ? 'caret-down' : 'caret-right'}
+          onClick={expanded ? collapseComment : expandComment}
+        />
+      )}
+      <span style={styles.commentText}>
+        <div ref={commentRef} style={styles.feedbackText}>
+          &quot;{commentText}&quot;
         </div>
-      );
-    }
-  }
-
-  renderPerformance() {
-    return (
-      <div style={styles.feedbackText}>
-        <span>{i18n.feedbackRubricEvaluation()}</span>&nbsp;
-        <span style={styles.rubricPerformance}>
-          {RubricPerformanceLabels[this.props.feedback.performance]}
-        </span>
-      </div>
-    );
-  }
-
-  renderComment() {
-    const {comment} = this.props.feedback;
-    const {expanded, commentHeight} = this.state;
-
-    const isCommentExpandable = commentHeight > visibleCommentHeight;
-    const showCommentFade = isCommentExpandable && !expanded;
-
-    const commentContainerStyle = expanded
-      ? styles.commentContainer
-      : styles.commentContainerCollapsed;
-
-    return (
-      <div style={commentContainerStyle}>
-        {isCommentExpandable && (
-          <FontAwesome
-            style={styles.expanderIcon}
-            icon={expanded ? 'caret-down' : 'caret-right'}
-            onClick={expanded ? this.collapseComment : this.expandComment}
+        {showCommentFade && (
+          <div
+            id="comment-fade"
+            style={{
+              ...styles.fadeout,
+              ...(feedbackSeenByStudent && styles.fadeoutSeen)
+            }}
           />
         )}
-        <span style={styles.commentText}>
-          <div ref={r => (this.comment = r)} style={styles.feedbackText}>
-            &quot;{comment}&quot;
-          </div>
-          {showCommentFade && (
-            <div
-              id="comment-fade"
-              style={{
-                ...styles.fadeout,
-                ...(this.feedbackSeenByStudent() && styles.fadeoutSeen)
-              }}
-            />
-          )}
-        </span>
-      </div>
-    );
-  }
-
-  render() {
-    const {
-      created_at,
-      comment,
-      performance,
-      review_state
-    } = this.props.feedback;
-
-    const commentExists = comment.length > 2;
-
-    const commentSeenStyle = this.feedbackSeenByStudent()
-      ? styles.commentBlockSeen
-      : {};
-
-    const displayReviewState =
-      review_state === ReviewStates.keepWorking ||
-      review_state === ReviewStates.completed;
-
-    return (
-      <div style={{...styles.commentBlock, ...commentSeenStyle}}>
-        <TimeAgo style={styles.time} dateString={created_at} />
-        {displayReviewState && this.renderReviewState()}
-        {performance && this.renderPerformance()}
-        {commentExists && this.renderComment()}
-      </div>
-    );
-  }
+      </span>
+    </div>
+  );
 }
 
 const styles = {
@@ -222,3 +219,7 @@ const styles = {
     width: '100%'
   }
 };
+
+LevelFeedbackEntry.propTypes = {feedback: feedbackShape};
+
+export default LevelFeedbackEntry;
