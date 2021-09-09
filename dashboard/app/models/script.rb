@@ -53,7 +53,7 @@ class Script < ApplicationRecord
   belongs_to :user
   has_many :unit_group_units
   has_many :unit_groups, through: :unit_group_units
-  has_one :course_version, as: :content_root
+  has_one :course_version, as: :content_root, dependent: :destroy
 
   scope :with_associated_models, -> do
     includes(
