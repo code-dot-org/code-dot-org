@@ -134,7 +134,7 @@ export const POEMS = {
   },
   hughes: {
     author: 'Langston Hughes',
-    title: 'Dream Deferred',
+    title: 'Harlem',
     lines: [
       'What happens to a dream deferred? ',
       'Does it dry up',
@@ -177,22 +177,6 @@ export const POEMS = {
       'A tall, slim tree...',
       'Night coming tenderly',
       '  Black like me.'
-    ]
-  },
-  hughes_2: {
-    author: 'Langston Hughes',
-    title: 'Dream Deferred',
-    lines: [
-      'What happens to a dream deferred?',
-      'Does it dry up,',
-      'Like a raisin in the sun?',
-      'Or fester like a sore --',
-      'And then run?',
-      'Does it stink like rotten meat?',
-      'Or crust and sugar over --',
-      'Like a syrupy sweet?',
-      'Maybe it just sags',
-      'Like a heavy load.'
     ]
   }
 };
