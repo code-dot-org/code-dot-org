@@ -90,6 +90,8 @@ Feature: Using the Lesson Edit Page
     And I wait until element ".progress-bubble" contains text "1"
     Then element ".progress-bubble" contains text "2"
 
+    And I delete the temp unit with lessons
+
   @no_firefox
   Scenario: Update script level properties
     Given I create a levelbuilder named "Levi"
@@ -112,3 +114,5 @@ Feature: Using the Lesson Edit Page
     And I press ".uitest-level-token-name" using jQuery
     And I wait until element ".level-token-checkboxes" is visible
     Then element ".level-token-checkboxes input[type=checkbox]:nth(1)" is checked
+
+    And I delete the temp unit with lessons

@@ -65,7 +65,7 @@ module Services
 
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
-      #   7 queries to set up course offering and course version
+      #   4 queries to set up course offering and course version
       #   34 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
       #     Resources, and Vocabulary.
@@ -88,7 +88,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(88) do
+      assert_queries(85) do
         ScriptSeed.seed_from_json(json)
       end
 
