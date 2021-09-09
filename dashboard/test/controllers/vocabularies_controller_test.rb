@@ -64,8 +64,8 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   test "can load vocab edit page of unit group course version" do
     sign_in @levelbuilder
-    course_version = create :course_version
-    unit_group = create :unit_group, name: 'fake-course-2021', course_version: course_version
+    unit_group = create :unit_group, name: 'fake-course-2021'
+    course_version = create :course_version, content_root: unit_group
     vocabulary = create :vocabulary, key: 'variable', word: 'variable', definition: 'definition', course_version: course_version
 
     get :edit, params: {course_name: unit_group.name}
@@ -76,8 +76,8 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   test "can load vocab edit page of standalone script course version" do
     sign_in @levelbuilder
-    course_version = create :course_version
-    script = create :script, name: 'fake-standalone-script-2021', is_course: true, course_version: course_version
+    script = create :script, name: 'fake-standalone-script-2021', is_course: true
+    course_version = create :course_version, content_root: script
     vocabulary = create :vocabulary, key: 'variable', word: 'variable', definition: 'definition', course_version: course_version
 
     get :edit, params: {course_name: script.name}

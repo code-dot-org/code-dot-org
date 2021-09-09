@@ -26,7 +26,7 @@ class UnitGroup < ApplicationRecord
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
-  has_one :course_version, as: :content_root
+  has_one :course_version, as: :content_root, dependent: :destroy
 
   after_save :write_serialization
 
