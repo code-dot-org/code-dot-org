@@ -476,16 +476,6 @@ end
 def main
   check_for_cdo_keys
 
-  # auto-join Slack rooms where the DOTD might be @mentioned
-  # or need to affect the room topic.
-  Slack.join_room('developers')
-  Slack.join_room('deploy-status')
-  Slack.join_room('infra-staging')
-  Slack.join_room('infra-test')
-  Slack.join_room('infra-production')
-  Slack.join_room('infra-honeybadger')
-  Slack.join_room('levelbuilder')
-
   dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV['USER']
   @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{dotd_name} is DOTD")
 
