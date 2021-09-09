@@ -58,7 +58,6 @@ export default class StudentSections extends Component {
       sectionCapacity,
       viewHidden
     } = this.state;
-    const enrolledInASection = sections.length > 0;
     const heading = isTeacher ? i18n.sectionsJoined() : i18n.sectionsTitle();
     const description = isTeacher ? '' : i18n.enrollmentDescription();
 
@@ -96,33 +95,31 @@ export default class StudentSections extends Component {
           id={resultId}
           sectionCapacity={sectionCapacity}
         />
-        {enrolledInASection && (
+        {liveSections.length > 0 && (
+          <SectionsAsStudentTable
+            sections={liveSections}
+            canLeave={!!isTeacher}
+            updateSections={this.updateSections}
+            updateSectionsResult={this.updateSectionsResult}
+          />
+        )}
+        {archivedSections.length > 0 && (
           <div>
-            {liveSections.length > 0 && (
-              <SectionsAsStudentTable
-                sections={liveSections}
-                canLeave={!!isTeacher}
-                updateSections={this.updateSections}
-                updateSectionsResult={this.updateSectionsResult}
-              />
-            )}
             <div style={styles.buttonContainer}>
-              {archivedSections.length > 0 && (
-                <Button
-                  __useDeprecatedTag
-                  className="ui-test-show-hide"
-                  onClick={this.toggleViewHidden}
-                  icon={viewHidden ? 'caret-up' : 'caret-down'}
-                  text={
-                    viewHidden
-                      ? i18n.hideArchivedSections()
-                      : i18n.viewArchivedSections()
-                  }
-                  color={Button.ButtonColor.gray}
-                />
-              )}
+              <Button
+                __useDeprecatedTag
+                className="ui-test-show-hide"
+                onClick={this.toggleViewHidden}
+                icon={viewHidden ? 'caret-up' : 'caret-down'}
+                text={
+                  viewHidden
+                    ? i18n.hideArchivedSections()
+                    : i18n.viewArchivedSections()
+                }
+                color={Button.ButtonColor.gray}
+              />
             </div>
-            {viewHidden && archivedSections.length > 0 && (
+            {viewHidden && (
               <div>
                 <div style={styles.hiddenSectionLabel}>
                   {i18n.archivedSections()}
@@ -138,7 +135,7 @@ export default class StudentSections extends Component {
           </div>
         )}
         <JoinSection
-          enrolledInASection={enrolledInASection}
+          enrolledInASection={liveSections.length > 0}
           updateSections={this.updateSections}
           updateSectionsResult={this.updateSectionsResult}
         />
