@@ -148,7 +148,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
     script.family_name = nil
     script.save!
     script.reload
-    script.stubs(:prevent_course_version_change?).returns(true)
+    script.resources = [create(:resource)]
+    assert script.prevent_course_version_change?
     assert_raises do
       CourseOffering.add_course_offering(script)
     end
@@ -161,7 +162,12 @@ class CourseOfferingTest < ActiveSupport::TestCase
     course.family_name = nil
     course.save!
     course.reload
-    course.stubs(:prevent_course_version_change?).returns(true)
+    script = create :script
+    create :unit_group_unit, unit_group: course, script: script, position: 1
+    script.reload
+    script.resources = [create(:resource)]
+    assert course.prevent_course_version_change?
+
     assert_raises do
       CourseOffering.add_course_offering(course)
     end
