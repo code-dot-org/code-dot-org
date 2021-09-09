@@ -23,7 +23,7 @@ export default class PoemBotLibrary extends CoreLibrary {
       lines: [],
       font: {
         fill: 'black',
-        stroke: 'black',
+        stroke: 'rgba(0,0,0,0)',
         font: 'Arial'
       },
       isVisible: true,
