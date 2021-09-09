@@ -17,6 +17,7 @@ import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailTog
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {testLessons} from './unitCalendarTestData';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
   sectionsForDropdown: [],
@@ -313,7 +314,20 @@ describe('UnitOverviewTopRow', () => {
         scriptOverviewPdfUrl="/link/to/script_overview.pdf"
         scriptResourcesPdfUrl="/link/to/script_resources.pdf"
         viewAs={ViewType.Teacher}
-        publishedState={'pilot'}
+        publishedState={PublishedState.pilot}
+      />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(0);
+  });
+
+  it('does not render printing options dropdown when published state is in-development', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow
+        {...defaultProps}
+        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+        viewAs={ViewType.Teacher}
+        publishedState={PublishedState.in_development}
       />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(0);

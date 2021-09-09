@@ -127,7 +127,9 @@ class UnitOverviewTopRow extends React.Component {
       ? styles.buttonMarginRTL
       : styles.buttonMarginLTR;
 
-    const showPDFButton = publishedState !== PublishedState.pilot;
+    const showPDFButton =
+      publishedState !== PublishedState.pilot &&
+      publishedState !== PublishedState.in_development;
 
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">

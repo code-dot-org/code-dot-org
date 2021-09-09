@@ -12,6 +12,7 @@ import {
   fakeTeacherAnnouncement
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 import _ from 'lodash';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 describe('LessonOverview', () => {
   let defaultProps;
@@ -318,7 +319,24 @@ describe('LessonOverview', () => {
   it('does not render printing options dropdown for pilot course', () => {
     const unit = {
       ...defaultProps.lesson.unit,
-      publishedState: 'pilot'
+      publishedState: PublishedState.pilot
+    };
+    const lesson = {
+      ...defaultProps.lesson,
+      unit: unit,
+      lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
+      scriptResourcesPdfUrl: '/link/to/script_resources.pdf'
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(0);
+  });
+
+  it('does not render printing options dropdown for in development course', () => {
+    const unit = {
+      ...defaultProps.lesson.unit,
+      publishedState: PublishedState.in_development
     };
     const lesson = {
       ...defaultProps.lesson,
