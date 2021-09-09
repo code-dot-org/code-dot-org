@@ -126,9 +126,9 @@ def restore_redacted_files
     ERR
   end
 
-  puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count} processes"
+  puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
-  Parallel.each(locales) do |prop|
+  Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
     locale = prop[:locale_s]
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
@@ -317,9 +317,9 @@ end
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations(upload_manifests)
   locales = Languages.get_locale
-  puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count} processes"
+  puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
-  Parallel.each(locales) do |prop|
+  Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
     locale = prop[:locale_s]
     locale_dir = File.join("i18n/locales", locale)
     next if locale == 'en-US'
