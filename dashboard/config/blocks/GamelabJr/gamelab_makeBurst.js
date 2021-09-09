@@ -23,6 +23,18 @@ function makeBurst(num,costume,effect) {
       setProp({name: 'temporarySprite'}, "rotation", math_random_int(0, 359));
       addBehaviorSimple({name: 'temporarySprite'}, new Behavior(burstEffectBehavior, []));
     }
+    else if(effect=="zigzag"){
+      setProp({name: 'temporarySprite'}, "speed", math_random_int(10, 25)); 
+      setProp({name: 'temporarySprite'}, "scale", 50);
+      if (count%2 == 0) {
+        jumpTo({name: 'temporarySprite'}, locationAt(math_random_int(-100, -50), math_random_int(0, 400)));
+        setProp({name: 'temporarySprite'}, "direction", 0);
+      } else {
+        jumpTo({name: 'temporarySprite'}, locationAt(math_random_int(450, 500), math_random_int(0, 400)));
+        setProp({name: 'temporarySprite'}, "direction", 180);
+      }
+      addBehaviorSimple({name: 'temporarySprite'}, new Behavior(zigzagEffectBehavior, []));
+    }
     else {
       destroy({name: 'temporarySprite'});
     }
@@ -61,6 +73,42 @@ function rainEffectBehavior(this_sprite) {
   changePropBy(this_sprite, "speed", -0.5);
   changePropBy(this_sprite, "rotation", math_random_int(-5, 5));
   if (getProp(this_sprite, "y") < -100) {
+    destroy(this_sprite);
+  }
+}
+
+function zigzagEffectBehavior(this_sprite) {
+  if (getProp(this_sprite, "x") >= 0 &&
+      getProp(this_sprite, "x") <= 50 &&
+      getProp(this_sprite, "direction") == 180 &&
+     (getProp(this_sprite, "collisions")===undefined ||
+      getProp(this_sprite, "collisions") < 2)) {
+    if (getProp(this_sprite, "collisions")===undefined) {
+      setProp(this_sprite, "collisions", 1);
+    } else {
+      changePropBy(this_sprite, "collisions", 1);
+    }
+    setProp(this_sprite, "direction", 0);
+    changePropBy(this_sprite, "scale", 10);
+  } else if (getProp(this_sprite, "x") <= 400 &&
+             getProp(this_sprite, "x") >= 350 &&
+             getProp(this_sprite, "direction") == 0 &&
+             (getProp(this_sprite, "collisions")===undefined ||
+              getProp(this_sprite, "collisions") < 2)) {
+    if (getProp(this_sprite, "collisions")===undefined) {
+      setProp(this_sprite, "collisions", 1);
+    } else {
+      changePropBy(this_sprite, "collisions", 1);
+    }
+    setProp(this_sprite, "direction", 180);
+    changePropBy(this_sprite, "scale", 10);
+  }
+
+  moveForward(this_sprite, getProp(this_sprite, "speed"));
+  changePropBy(this_sprite, "speed", 0.75);
+  changePropBy(this_sprite, "rotation", math_random_int(-5, 5));
+  if (getProp(this_sprite, "x") < -100 ||
+     getProp(this_sprite, "x") > 500) {
     destroy(this_sprite);
   }
 }
