@@ -16,9 +16,9 @@
       %span Actions
   - @emails.each do |email|
     %tr
-      %td
+      %td.email
         %span= email
-      %td
+      %td.actions
         = form_tag controller: 'admin_search', action: 'remove_from_pilot', class: 'form-inline', method: "post" do
           = hidden_field_tag 'email', email
           = hidden_field_tag 'pilot_name', @pilot_name
