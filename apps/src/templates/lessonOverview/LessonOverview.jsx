@@ -97,7 +97,9 @@ class LessonOverview extends Component {
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
-    const showPDFButton = lesson.unit.publishedState !== PublishedState.pilot;
+    const showPDFButton =
+      lesson.unit.publishedState !== PublishedState.pilot &&
+      lesson.unit.publishedState !== PublishedState.in_development;
 
     return (
       <div className="lesson-overview">
