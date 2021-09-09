@@ -19,18 +19,7 @@
       %td
         %span= email
       %td
-        .btn.btn-link{"href" => "#remove_pilot_user", "role" => "button", "data-toggle" => "modal"} Remove
-
-.modal.hide.fade#remove_pilot_user{"role"=>"dialog", "aria-labelledby" => "remove_pilot_userLabel", "aria-hidden" => "true"}
-  .modal-header
-    %button.close{"data-dismiss" => "modal", "aria-hidden" => "true"}
-      x
-    %h3#remove_pilot_userLabel
-      Remove Pilot User
-  .modal-body
-    You are about to remove this participant from this pilot.  Once you do this all progress this participant has made will be lost.  Are you sure?
-  .modal-footer
-    = form_tag controller: 'admin_search', action: 'remove_from_pilot', class: 'form-inline', method: "post" do
-      = hidden_field_tag 'email', 'levelbuilder@dev.com'
-      = hidden_field_tag 'pilot_name', @pilot_name
-      = submit_tag "Remove", class: 'btn-primary'
+        = form_tag controller: 'admin_search', action: 'remove_from_pilot', class: 'form-inline', method: "post" do
+          = hidden_field_tag 'email', email
+          = hidden_field_tag 'pilot_name', @pilot_name
+          = submit_tag "Remove", class: 'btn-primary', data:{confirm: "You are about to remove " + email + " from this pilot.  Once you do this all progress this participant has made will be lost.  Are you sure?"}
