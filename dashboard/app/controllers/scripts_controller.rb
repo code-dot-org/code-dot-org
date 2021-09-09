@@ -47,6 +47,9 @@ class ScriptsController < ApplicationController
     sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :script_id, :course_id)}
     @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
 
+    @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !@script.is_course
+    session[:show_unversioned_redirect_warning] = false
+
     # Warn levelbuilder if a lesson will not be visible to users because 'visible_after' is set to a future day
     if current_user && current_user.levelbuilder?
       notice_text = ""
@@ -238,13 +241,11 @@ class ScriptsController < ApplicationController
       params[:action] == "edit" ?
       Script.get_without_cache(unit_id, with_associated_models: true) :
       Script.get_from_cache(unit_id, raise_exceptions: false)
-    @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !script.is_course
-    session[:show_unversioned_redirect_warning] = false
     return script if script
 
     if Script.family_names.include?(unit_id)
       script = Script.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
-      session[:unversioned_redirect] = true
+      session[:show_unversioned_redirect_warning] = true
       Script.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
       return script
     end
