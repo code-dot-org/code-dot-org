@@ -1091,6 +1091,55 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal 'lesson 1', unit.lessons.first.name
   end
 
+  test 'add user facing lesson group to migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    stub_file_writes(unit.name)
+
+    Script.stubs(:merge_and_write_i18n).with do |i18n, name, _|
+      name == unit.name &&
+        i18n[unit.name]['lessons'].empty? &&
+        i18n[unit.name]['lesson_groups']['lesson-group-1']['display_name'] == 'lesson group 1'
+    end.once
+
+    lesson_groups_json = [
+      {
+        key: "lesson-group-1",
+        display_name: "lesson group 1",
+        user_facing: true,
+        lessons: [],
+        description: 'Description',
+        big_questions: 'Big Questions',
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    assert_response :success
+    lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
+    assert_equal 'lesson group 1', lesson_group_data['display_name']
+    assert lesson_group_data['user_facing']
+    assert_not_nil lesson_group_data['id']
+    assert_empty lesson_group_data['lessons']
+    assert_equal 'Big Questions', lesson_group_data['big_questions']
+    assert_equal 'Description', lesson_group_data['description']
+
+    unit.reload
+    assert_empty unit.lessons
+    lesson_group = unit.lesson_groups.first
+    assert_equal 'lesson group 1', lesson_group.display_name
+    assert_equal 'Big Questions', lesson_group.big_questions
+    assert_equal 'Description', lesson_group.description
+  end
+
   class CoursePilotTests < ActionController::TestCase
     setup do
       @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
