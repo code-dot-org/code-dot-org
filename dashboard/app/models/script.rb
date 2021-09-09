@@ -1697,6 +1697,7 @@ class Script < ApplicationRecord
     @@level_cache = nil
     @@all_scripts = nil
     @@visible_units = nil
+    @@maker_units = nil
     Rails.cache.delete UNIT_CACHE_KEY
   end
 
