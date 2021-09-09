@@ -85,7 +85,7 @@
     "remark-rehype": "^5.0.0",
     "sinon": "^7.5.0",
     "style-loader": "^1.0.0",
-    "svm": "uponthesun/svmjs",
+    "@code-dot-org/svm": "^0.1.1",
     "url-loader": "^2.2.0",
     "webpack": "4.19.1",
     "webpack-bundle-analyzer": "^3.6.0",
