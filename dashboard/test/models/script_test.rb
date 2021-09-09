@@ -1924,6 +1924,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     UNIT
 
+    puts unit_copy.inspect
     assert_equal new_dsl, ScriptDSL.serialize_to_string(unit_copy)
   end
 
@@ -1976,7 +1977,9 @@ class ScriptTest < ActiveSupport::TestCase
     I18n.backend.store_translations test_locale, custom_i18n
 
     course = create(:unit_group, family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
-    unit = build(:script, name: 'csp1-2017', unit_groups: [course])
+    CourseOffering.add_course_offering(course)
+    course.reload
+    unit = build(:script, name: 'csp1-2017', published_state: nil, unit_groups: [course])
     assignable_info = unit.assignable_info
 
     assert_equal('CSP Unit 1 Test', assignable_info[:name])

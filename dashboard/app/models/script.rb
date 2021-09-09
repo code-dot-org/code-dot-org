@@ -1807,7 +1807,7 @@ class Script < ApplicationRecord
 
   # Get the published state on the course version and default to in_development if it doesn't exist
   def get_published_state
-    get_course_version&.published_state || SharedConstants::PUBLISHED_STATE.beta
+    published_state || get_course_version&.published_state || SharedConstants::PUBLISHED_STATE.in_development
   end
 
   def set_published_state(new_published_state)
