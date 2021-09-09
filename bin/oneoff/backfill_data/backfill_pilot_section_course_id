@@ -24,7 +24,15 @@ updated = []
 pilot_names.each do |pilot_name|
   CDO.log.info "fixing pilot #{pilot_name}."
   pilot = UnitGroup.find_by_name(pilot_name)
+  unless pilot
+    CDO.log.info "could not find pilot #{pilot_name}"
+    next
+  end
   script_ids = UnitGroupUnit.where(course_id: pilot.id).pluck(:script_id)
+  if script_ids.empty?
+    CDO.log.info "pilot #{pilot_name} had no script ids"
+    next
+  end
   sections = Section.where(course_id: nil, script_id: script_ids)
   CDO.log.info "found #{sections.length} sections to update."
   sections.each do |section|
