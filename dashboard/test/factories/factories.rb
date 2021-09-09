@@ -18,7 +18,7 @@ FactoryGirl.define do
     end
 
     trait :with_unit do
-      association(:content_root, factory: :standalone_unit, is_course: true)
+      association(:content_root, factory: :unit, is_course: true)
     end
 
     trait :with_course_offering do
