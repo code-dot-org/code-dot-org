@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -75,6 +76,10 @@ function ReviewState({reviewState, isAwaitingTeacherReview}) {
     );
   }
 }
+ReviewState.propTypes = {
+  reviewState: PropTypes.string,
+  isAwaitingTeacherReview: PropTypes.bool
+};
 
 function Performance({performance}) {
   const RubricPerformanceLabels = {
@@ -93,6 +98,9 @@ function Performance({performance}) {
     </div>
   );
 }
+Performance.propTypes = {
+  performance: PropTypes.string
+};
 
 function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
   const commentRef = useRef(null);
@@ -153,6 +161,11 @@ function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
     </div>
   );
 }
+Comment.propTypes = {
+  commentText: PropTypes.string,
+  feedbackSeenByStudent: PropTypes.bool,
+  feedbackId: PropTypes.number
+};
 
 const styles = {
   commentBlock: {
