@@ -97,7 +97,7 @@ class JavalabConsole extends React.Component {
     return lines.map((line, index) => {
       if (index === lines.length - 1) {
         return (
-          <div style={{display: 'flex'}}>
+          <div key={index} style={{display: 'flex'}}>
             {line}
             <input
               id="console-input"
@@ -115,7 +115,7 @@ class JavalabConsole extends React.Component {
           </div>
         );
       } else {
-        return <div>{line.length === 0 ? ' ' : line}</div>;
+        return <div key={index}>{line.length === 0 ? ' ' : line}</div>;
       }
     });
   }
