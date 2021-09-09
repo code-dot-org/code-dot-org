@@ -4244,6 +4244,8 @@ ja:
               name: はじめに
             Sprites:
               name: スプライト
+            Input:
+              name: 入力
             'Project: Interactive Card':
               name: 'プロジェクト: インタラクティブカード'
         csd5-draft:
@@ -5977,6 +5979,8 @@ ja:
               name: サブゴールラベル学習オプトイン
             deprecated:
               name: 非推奨
+            other:
+              name: その他
             Thanks:
               name: ありがとう
         csp-pre-survey-test-2017:
@@ -15963,6 +15967,8 @@ ja:
           lessons:
             Course F Introduction:
               name: スプライトラボの紹介
+            Making Sprites:
+              name: スプライトを作る
             Sprites in Action:
               name: 実行中のスプライト
             End of Course Project:
@@ -17387,6 +17393,8 @@ ja:
               description_teacher: このレッスンでは、生徒は架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。
             lesson-6:
               name: スプライトラボの紹介
+            lesson-7:
+              name: スプライトを作る
             lesson-8:
               name: 実行中のスプライト
             lesson-2:
@@ -17555,6 +17563,8 @@ ja:
               name: ダンスパーティー
               description_student: お祝いの時間です！このレッスンでは、独自のインタラクティブなダンスパーティーをプログラムします。
               description_teacher: このレッスンでは、生徒が自分のインタラクティブなダンスパーティーをプログラムします。ツールは音楽に応答するように構築されているため、このアクティビティにはサウンドが必要です。
+            lesson-2:
+              name: スプライトを作る
             lesson-3:
               name: 実行中のスプライト
           lesson_groups:
@@ -17650,6 +17660,8 @@ ja:
               name: スプライトラボで泳ぐ魚
             Course F Introduction:
               name: スプライトラボの紹介
+            Making Sprites:
+              name: スプライトを作る
             Sprites in Action:
               name: 実行中のスプライト
             introducing-spritelab:

@@ -17,6 +17,7 @@ sk:
       answer: odpoveď
       armlength: dĺžkaruky
       binary: binárny
+      birds: vtáky
       bit: bit
       blue1: modrá1
       blue2: modrá2
@@ -65,6 +66,7 @@ sk:
       nectar: nektár
       nectars: nektár
       padYOffset: vnútornýPosunY
+      planet: planéta
       player_score: body_hráča
       points: body
       punchLine: pointa
@@ -78,6 +80,7 @@ sk:
       screenHeight: výškaObrazovky
       screenWidth: šírkaObrazovky
       set sides: nastav strany
+      shout: krik
       sides: Strany
       size: veľkosť
       speed: rýchlosť

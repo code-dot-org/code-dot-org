@@ -31,7 +31,8 @@
           "definition": "Etykieta informacji użyta w programie."
         },
         "input/coursef/2021": {
-          "word": "Wejście"
+          "word": "Wejście",
+          "definition": "Informacje, które komputery otrzymują od użytkowników."
         },
         "loop/coursef/2021": {
           "word": "Pętla",
@@ -44,6 +45,9 @@
         "for_loop/coursef/2021": {
           "word": "Pętla \"dla\" (for)",
           "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modele i symulacje"
         },
         "machine_learning/coursef/2021": {
           "word": "Uczenie maszynowe",
@@ -293,6 +297,9 @@
           "word": "Zdania z warunkami",
           "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
         },
+        "pseudocode/coursed/2021": {
+          "word": "pseudokod"
+        },
         "condition/coursed/2021": {
           "word": "Warunek",
           "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
@@ -331,7 +338,7 @@
         },
         "behavior/express/2021": {
           "word": "Zachowanie",
-          "definition": "Czynność, którą duszek wykonuje nieustannie do momentu, gdy powie mu się, by przestał."
+          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
         },
         "sprite/express/2021": {
           "word": "Duszek",
@@ -454,7 +461,11 @@
         },
         "behavior/coursee/2021": {
           "word": "Zachowanie",
-          "definition": "Czynność, którą duszek wykonuje nieustannie do momentu, gdy powie mu się, by przestał."
+          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
+        },
+        "algorithm/coursee/2021": {
+          "word": "algorytm",
+          "definition": "Lista działań, aby ukończyć zadanie."
         },
         "sprite/coursee/2021": {
           "word": "Duszek",

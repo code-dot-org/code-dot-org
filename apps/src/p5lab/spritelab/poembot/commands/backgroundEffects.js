@@ -2,8 +2,15 @@ import * as utils from './utils';
 import {PALETTES} from '../constants';
 
 export const commands = {
+  setBackground(color) {
+    this.validationInfo.backgroundEffect = color;
+    this.backgroundEffect = () => {
+      this.p5.background(color);
+    };
+  },
   // TODO: would it be possible to re-use the background/foreground effect code from dance party?
   setBackgroundEffect(effectName, palette) {
+    this.validationInfo.backgroundEffect = effectName;
     switch (effectName) {
       case 'colors': {
         let amount = 0;
@@ -131,6 +138,8 @@ export const commands = {
           circles.push(createCircle());
         }
         this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.noStroke();
           this.p5.background('black');
           for (let i = 0; i < circles.length; i++) {
             const circle = circles[i];
@@ -150,6 +159,7 @@ export const commands = {
               circle.radius * 2
             );
           }
+          this.p5.pop();
         };
         break;
       }
@@ -282,6 +292,102 @@ export const commands = {
           this.p5.pop();
         };
 
+        break;
+      }
+      case 'ripples': {
+        palette = PALETTES[palette];
+        let ripples = [];
+        let startRipple = false;
+        let colorIndex = 0;
+        const rippleSpacing = 30;
+        const rippleSpeed = 4;
+        const frameDelay = 4;
+        const rippleNumber = palette.length - 1;
+
+        for (let i = 0; i < rippleNumber; i++) {
+          ripples.push({
+            size: (i + 1) * rippleSpacing,
+            color: palette[colorIndex]
+          });
+          colorIndex = (colorIndex + 1) % palette.length;
+        }
+
+        this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.noFill();
+          this.p5.strokeWeight(3);
+          if (startRipple && this.p5.frameCount % frameDelay === 0) {
+            ripples.push({
+              size:
+                rippleSpacing +
+                ripples.length * (rippleSpacing + rippleSpeed * frameDelay),
+              color: palette[colorIndex]
+            });
+            colorIndex = (colorIndex + 1) % palette.length;
+            if (ripples.length === rippleNumber) {
+              startRipple = false;
+            }
+          }
+
+          if (ripples.length > 0) {
+            // the actual background color is not fully opaque so we need to
+            // "clear out" the previous frame first so we don't see a remnant of it.
+            this.p5.background('white');
+            this.p5.background(this.getP5Color(ripples[0].color, 100));
+          }
+
+          ripples.forEach(ripple => {
+            const alpha = this.p5.map(ripple.size, 400, 0, 0, 255);
+            this.p5.stroke(this.getP5Color(ripple.color, alpha));
+            this.p5.ellipse(200, 200, ripple.size, ripple.size);
+            ripple.size += rippleSpeed;
+          });
+          ripples = ripples.filter(ripple => ripple.size < 500);
+          if (ripples.length === 0) {
+            startRipple = true;
+          }
+          this.p5.pop();
+        };
+        break;
+      }
+      case 'clouds': {
+        const tileSize = 8;
+        const noiseScale = 0.05;
+        const speed = 0.015;
+        const tiles = [];
+        let xnoise = 0.01;
+        let ynoise = 0.01;
+        let backgroundAmount = 0;
+        for (let x = 0; x < 400; x += tileSize) {
+          xnoise = 0.01;
+          for (let y = 0; y < 400; y += tileSize) {
+            tiles.push({
+              x,
+              y,
+              xnoise,
+              ynoise
+            });
+            xnoise += noiseScale;
+          }
+          ynoise += noiseScale;
+        }
+
+        this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.noStroke();
+          backgroundAmount += speed;
+          this.p5.background(
+            utils.lerpColorFromPalette(this.p5, palette, backgroundAmount)
+          );
+          tiles.forEach(tile => {
+            tile.alpha = this.p5.noise(tile.xnoise, tile.ynoise) * 255;
+            tile.xnoise += speed;
+            tile.ynoise += speed;
+            this.p5.fill(this.getP5Color('#ffffff', tile.alpha));
+            this.p5.rect(tile.x, tile.y, tileSize, tileSize);
+          });
+          this.p5.pop();
+        };
         break;
       }
     }

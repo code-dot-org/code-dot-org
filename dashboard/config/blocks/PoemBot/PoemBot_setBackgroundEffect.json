@@ -28,26 +28,26 @@
             "\"darkCircles\""
           ],
           [
-            "Cloudy",
-            "\"cloudy\""
-          ],
-          [
-            "Fade Colors",
+            "Color Fade",
             "\"fadeColors\""
           ],
           [
             "Blooming",
             "\"blooming\""
+          ],
+          [
+            "Ripples",
+            "\"ripples\""
+          ],
+          [
+            "Clouds",
+            "\"clouds\""
           ]
         ]
       },
       {
         "name": "PALETTE",
         "options": [
-          [
-            "Black & White",
-            "\"grayscale\""
-          ],
           [
             "Sky",
             "\"sky\""
@@ -79,6 +79,18 @@
           [
             "Winter",
             "\"winter\""
+          ],
+          [
+            "Black & White",
+            "\"grayscale\""
+          ],
+          [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Roses",
+            "\"roses\""
           ]
         ]
       }

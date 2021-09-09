@@ -7,8 +7,8 @@ social:
   "og:description": "Classroom chats with CS professionals"
   "twitter:title": "My Journey"
   "twitter:description": "Classroom chats with CS professionals"
-  "twitter:image": "/images/csjourneys/og-internships.jpg"
-  "og:image": "/images/csjourneys/og-internships.jpg"
+  "twitter:image": "/images/csjourneys/og-chats.png"
+  "og:image": "/images/csjourneys/og-chats.png"
   "og:image:width": 1200
   "og:image:height": 630
 ---
@@ -20,7 +20,7 @@ social:
 <p>Give your students the opportunity to hear from a diverse group of people using computer science to explore the universe, make cool robots and popular TV shows, and more! Students will learn about a number of ways they can use computer science to have a positive impact, as well as different journeys that people have taken to get to meaningful careers and achieve their goals. For classes joining live, there may be opportunities for Q&A.</p>
 
 <ul>
-  <li><a href="#chats">View the options</a></li>
+  <li><a href="#chats">Browse the chats</a></li>
   <li><a href="#guide">View the Teacher Guides</a></li>
 </ul>
 
@@ -53,37 +53,17 @@ social:
 <p>Learn how one program manager works with scientists and engineers to help build new technologies responsibly.</p>
 <p><b>About the speaker</b>:
 <br>
-As a program manager on <a href="https://www.google.com/" target="_blank">Google</a>’s Responsible AI team, <strong>Taylor Roper</strong> works with a lot of amazing research scientists, software engineers, and others to develop and manage tools, processes, and programs to help Google's teams develop AI responsibly. Taylor is an alumna of Howard University, graduating in 2020 with a B.B.A. in Information Systems.
+As a program manager on <a href="https://about.google/" target="_blank">Google</a>’s Responsible AI team, <strong>Taylor Roper</strong> works with a lot of amazing research scientists, software engineers, and others to develop and manage tools, processes, and programs to help Google's teams develop AI responsibly. Taylor is an alumna of Howard University, graduating in 2020 with a B.B.A. in Information Systems.
 </p>
 
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-developing-responsible-artificial-intelligence-registration-168002151959" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-168002151959" type="button">Register my class</button>
-<noscript></a>Register on Eventbrite</noscript>
-
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-<script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '168002151959',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-168002151959',
-        onOrderComplete: exampleCallback
-    });
-</script>
+<a href="https://www.eventbrite.com/e/my-journey-developing-responsible-artificial-intelligence-registration-168002151959" target="_blank"><button>Register my class</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Artificial intelligence and sports</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<a href="https://www.eventbrite.com/e/my-journey-using-artificial-intelligence-in-sports-registration-163522164195" target="_blank"><img src="/images/csjourneys/myjourney-patrick.png" style="max-width:100%; border-radius:15px" alt="Patrick Lucey"></a>
+<a href="https://www.eventbrite.com/e/my-journey-using-artificial-intelligence-in-sports-registration-163522164195" target="_blank"><img src="/images/csjourneys/myjourney-patrick2.png" style="max-width:100%; border-radius:15px" alt="Patrick Lucey"></a>
 <center><img src="/images/csjourneys/stats-perform.jpg" style="max-width:50%; margin-top:15px" alt="Stats PERFORM logo"></center>
 </div>
 
@@ -96,27 +76,7 @@ As a program manager on <a href="https://www.google.com/" target="_blank">Google
 <strong>Patrick Lucey</strong> serves as Chief Scientist at <a href="https://www.statsperform.com/" target="_blank">Stats PERFORM</a>. Previously, Patrick was at Disney Research, where he conducted research into automatic sports broadcasting. His main research interests are in artificial intelligence and interactive machine learning in sporting domains. For more background, please check out Patrick’s <a href="https://patricklucey.com/index.html" target="_blank">personal page</a>.
 </p>
 
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-using-artificial-intelligence-in-sports-registration-163522164195" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-163522164195" type="button">Register my class</button>
-<noscript></a>Register on Eventbrite</noscript>
-
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-<script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '163522164195',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-163522164195',
-        onOrderComplete: exampleCallback
-    });
-</script>
+<a href="https://www.eventbrite.com/e/my-journey-using-artificial-intelligence-in-sports-registration-163522164195" target="_blank"><button>Register my class</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
@@ -138,27 +98,7 @@ As a program manager on <a href="https://www.google.com/" target="_blank">Google
 <br>
 <strong>Rutuparna Das</strong> is an astrophysicist and science communicator at the <a href="https://www.cfa.harvard.edu/" target="_blank">Center for Astrophysics | Harvard & Smithsonian</a>. Through research, she weighs clusters of galaxies to figure out what the cosmos is made of. Through NASA's Universe of Learning, she spreads the joys of space in a variety of ways, including telling stories about the people behind the science.</p>
 
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-building-models-of-the-universe-registration-167178077129" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-167178077129" type="button">Register my class</button>
-<noscript></a>Register on Eventbrite</noscript>
-
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-<script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '167178077129',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-167178077129',
-        onOrderComplete: exampleCallback
-    });
-</script>
+<a href="https://www.eventbrite.com/e/my-journey-building-models-of-the-universe-registration-167178077129" target="_blank"><button>Register my class</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
@@ -180,27 +120,7 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 <br>
 <strong>Maureen Sturgeon</strong> is a Software Engineer at Code.org. She didn’t discover computer science until college and is passionate about expanding access to computer science for K-12 students. Maureen graduated from Western Washington University with a B.S. in Mathematics. In her spare time, she enjoys hiking, traveling and watching stand-up comedy.</p>
 
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-computer-science-for-good-registration-166870053823" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-166870053823" type="button">Register my class</button>
-<noscript></a>Register on Eventbrite</noscript>
-
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-<script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '166870053823',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-166870053823',
-        onOrderComplete: exampleCallback
-    });
-</script>
+<a href="https://www.eventbrite.com/e/my-journey-computer-science-for-good-registration-166870053823" target="_blank"><button>Register my class</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
@@ -222,27 +142,7 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 <br>
 As Director of Software Engineering at <a href="https://www.irobot.com/" target="_blank">iRobot</a>, <strong>Eva Moscat</strong> is responsible for the Robot Operating System department, including connectivity, embedded Linux, manufacturing, and engineering tools. Eva is an immigrant from the Dominican Republic; through her culture and socioeconomic upbringing, she mentors children with a similar background in STEM. Eva is inspired daily by her husband and her newborn son. In her free time, she enjoys watching anime, playing basketball, and building her sneaker collection.</p>
 
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-building-robots-registration-168115226167" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-168115226167" type="button">Register my class</button>
-<noscript></a>Register on Eventbrite</noscript>
-
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-<script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '168115226167',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-168115226167',
-        onOrderComplete: exampleCallback
-    });
-</script>
+<a href="https://www.eventbrite.com/e/my-journey-building-robots-registration-168115226167" target="_blank"><button>Register my class</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
@@ -261,27 +161,7 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 <br>
 <strong>Olawale Oladehin</strong> is the Head of Worldwide Solutions Architects – IoT (Internet of Things) at <a href="https://www.amazon.com/" target="_blank">Amazon</a>. He has 15 years of experience working across ecommerce, video, and embedded systems. He has a passion for helping customers innovate through technology to achieve their business outcomes. He holds a Bachelor’s degree in Computer Science from Princeton University.</p>
 
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-building-the-internet-of-things-registration-167369924951" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-167369924951" type="button">Register my class</button>
-<noscript></a>Register on Eventbrite</noscript>
-
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-<script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '167369924951',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-167369924951',
-        onOrderComplete: exampleCallback
-    });
-</script>
+<a href="https://www.eventbrite.com/e/my-journey-building-the-internet-of-things-registration-167369924951" target="_blank"><button>Register my class</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
@@ -303,27 +183,7 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 <br>
 <strong>Ini Oladosu</strong> joined <a href="https://www.ilm.com/" target="_blank">Industrial Light & Magic</a> in 2020 as a Production Assistant. He was born in Port Harcourt, Nigeria before immigrating to Calgary, Canada with his family in 2000. Between 2019 and 2021, Ini co-wrote and co-produced his debut short film, <i>Framed</i>. The film has been selected into various film festivals and most recently won the award for Best Edit at the 2021 London International Monthly Film Festival.</p>
 
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-making-star-wars-registration-166863869325" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-166863869325" type="button">Register my class</button>
-<noscript></a>Register on Eventbrite</noscript>
-
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-<script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '166863869325',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-166863869325',
-        onOrderComplete: exampleCallback
-    });
-</script>
+<a href="https://www.eventbrite.com/e/my-journey-making-star-wars-registration-166863869325" target="_blank"><button>Register my class</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
@@ -343,27 +203,7 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 As the senior instruction designer for <a href="https://www.roblox.com/" target="_blank">Roblox</a>, <strong>Genevieve Johnson</strong> oversees the creation of educational content and empowers students to pursue careers as entrepreneurs, engineers, and designers. She has been an author on two books, <i>Roblox Game Development in 24 Hours: The Official Roblox Guide</i>, and <i>Coding with Roblox Lua in 24 Hours: The Official Roblox Guide</i>.
 </p>
 
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-using-roblox-to-empower-students-registration-167177770211" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-167177770211" type="button">Register my class</button>
-<noscript></a>Register on Eventbrite</noscript>
-
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-<script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '167177770211',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-167177770211',
-        onOrderComplete: exampleCallback
-    });
-</script>
+<a href="https://www.eventbrite.com/e/my-journey-using-roblox-to-empower-students-registration-167177770211" target="_blank"><button>Register my class</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
@@ -386,27 +226,7 @@ Since <strong>Joel Ferree</strong> became program director of <a href="https://w
 <strong>Tomas Garcia</strong> is <a href="https://www.lacma.org/" target="_blank">LACMA</a>’s Assistant Vice President of Technology and Digital Media, guiding the digital vision of one of the nation’s pioneering arts institutions. In this capacity he leads the digital operations of a diverse, multi-generational workforce while materializing the groundwork for the future of technology in museums. Tomas is responsible for the design and management of digital touchpoints all across the institution.
 </p>
 
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-art-tech-registration-167881553245" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-167881553245" type="button">Register my class</button>
-<noscript></a>Register on Eventbrite</noscript>
-
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-<script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '167881553245',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-167881553245',
-        onOrderComplete: exampleCallback
-    });
-</script>
+<a href="https://www.eventbrite.com/e/my-journey-art-tech-registration-167881553245" target="_blank"><button>Register my class</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
@@ -426,27 +246,7 @@ Since <strong>Joel Ferree</strong> became program director of <a href="https://w
 <strong>Sasha Samochina</strong> (sam-ocean-uh) is the Director of Labs at <a href="https://www.movingbrands.com/" target="_blank">Moving Brands</a>, a creative and innovation company that explores emerging technologies. She formerly led the Data Visualization and Infusion team at NASA Jet Propulsion Laboratory. With a background in art, Sasha creates software that incorporates innovative forms of visualization that aid scientists, engineers, and astronauts. For more background, please check out Sasha's <a href="https://www.cloudsasha.com/" target="_blank">personal page</a>.
 </p>
 
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-visual-storytelling-with-data-registration-166980004689" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-166980004689" type="button">Register my class</button>
-<noscript></a>Register on Eventbrite</noscript>
-
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-<script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '166980004689',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-166980004689',
-        onOrderComplete: exampleCallback
-    });
-</script>
+<a href="https://www.eventbrite.com/e/my-journey-visual-storytelling-with-data-registration-166980004689" target="_blank"><button>Register my class</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
