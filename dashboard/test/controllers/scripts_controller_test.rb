@@ -1018,7 +1018,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal({}, unit.properties)
   end
 
-  test 'add lesson to unit' do
+  test 'add lesson to unmigrated unit' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -1044,6 +1044,51 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal level, unit.lessons.first.script_levels.first.level
     assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
     assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
+  end
+
+  test 'add lesson to migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    stub_file_writes(unit.name)
+
+    Script.stubs(:merge_and_write_i18n).with do |i18n, name, _|
+      name == unit.name &&
+        i18n[unit.name]['lessons']['lesson-1']['name'] == 'lesson 1' &&
+        i18n[unit.name]['lesson_groups'].empty?
+    end.once
+
+    assert_empty unit.lessons
+
+    lesson_groups_json = [
+      {
+        key: "",
+        display_name: "Content",
+        user_facing: false,
+        lessons: [
+          {
+            key: "lesson-1",
+            name: "lesson 1",
+          }
+        ]
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    assert_response :success
+    assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
+    assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
+
+    unit.reload
+    assert_equal 'lesson 1', unit.lessons.first.name
   end
 
   class CoursePilotTests < ActionController::TestCase
