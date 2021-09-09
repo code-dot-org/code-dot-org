@@ -53,6 +53,13 @@ blocklyTags.forEach(tag => {
   schema.attributes[tag] = ['block_text', 'id', 'inline', 'name', 'type'];
 });
 
+function BlocklyXml(props) {
+  return <xml is="xml" {...props} />;
+}
+function BlocklyBlock(props) {
+  return <block is="block" {...props} />;
+}
+
 const markdownToReact = Parser.create()
   .getParser()
   // include custom plugins
@@ -68,7 +75,11 @@ const markdownToReact = Parser.create()
   .use(rehypeSanitize, schema)
   // convert the HAST to React
   .use(rehypeReact, {
-    createElement: React.createElement
+    createElement: React.createElement,
+    components: {
+      xml: BlocklyXml,
+      block: BlocklyBlock
+    }
   });
 
 const markdownToReactExternalLinks = markdownToReact().use(externalLinks, {
