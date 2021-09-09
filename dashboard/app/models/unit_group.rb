@@ -713,6 +713,6 @@ class UnitGroup < ApplicationRecord
   end
 
   def get_published_state
-    course_version&.published_state || SharedConstants::PUBLISHED_STATE.beta
+    course_version&.published_state || SharedConstants::PUBLISHED_STATE.in_development
   end
 end
