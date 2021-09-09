@@ -32,8 +32,9 @@ class ScriptTest < ActiveSupport::TestCase
     # We also want to test level_concept_difficulties, so make sure to give it
     # one.
     @cacheable_level = create(:level, :with_script, level_concept_difficulty: create(:level_concept_difficulty))
+  end
 
-    # ensure that we have freshly generated caches with this unit_group/unit
+  setup do
     UnitGroup.clear_cache
     Script.clear_cache
   end
