@@ -21,27 +21,33 @@ http {
   proxy_redirect off;
   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
   proxy_set_header X-Request-Start "t=${msec}";
+  proxy_set_header Host $http_host;
+  # Copy Accept-Language header to X-Varnish-Accept-Language.
+  # TODO: Update application code to read Accept-Language instead of X-Varnish-Accept-Language.
+  proxy_set_header X-Varnish-Accept-Language $http_accept_language;
   proxy_buffer_size 8k;
 
   client_max_body_size 4G;
   keepalive_timeout 30;
 
   server {
+<% unless node['cdo-varnish']['enabled'] -%>
     listen 80 deferred;
+<% end -%>
     listen <%= node['cdo-apps']['dashboard']['port'] %> deferred;
     server_name ~(dashboard|studio);
     location / {
       proxy_pass http://unix:<%= @run_dir %>/dashboard.sock;
-      proxy_set_header Host $http_host;
     }
   }
   server {
+<% unless node['cdo-varnish']['enabled'] -%>
     listen 80 default_server deferred;
+<% end -%>
     listen <%= node['cdo-apps']['pegasus']['port'] %> deferred;
     server_name pegasus_proxy;
     location / {
       proxy_pass http://unix:<%= @run_dir %>/pegasus.sock;
-      proxy_set_header Host $http_host;
     }
   }
   server {
@@ -51,15 +57,16 @@ http {
     location / {
       # Pass the request on to port 80.
       proxy_pass  http://127.0.0.1;
-      proxy_set_header Host $http_host;
       proxy_set_header X-Forwarded-Proto https;
     }
   }
-<% node['cdo-varnish']['redirects'].dup.each_pair do |domain, site| -%>
+<% unless node['cdo-varnish']['enabled'] -%>
+<%   node['cdo-varnish']['redirects'].dup.each_pair do |domain, site| -%>
   server {
     listen 80 deferred;
     server_name <%=domain%>;
     return 301 https://<%=site%>$request_uri;
   }
+<%   end -%>
 <% end -%>
 }
