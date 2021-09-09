@@ -9,17 +9,17 @@ class CoursesControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
-    @in_development_unit_group = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.in_development, family_name: 'family', version_year: '2020'
+    @in_development_unit_group = create :unit_group, :with_course_version, published_state: SharedConstants::PUBLISHED_STATE.in_development, family_name: 'family', version_year: '2020'
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_unit_group = create :unit_group, family_name: 'family', version_year: '2021', pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    @pilot_unit_group = create :unit_group, :with_course_version, family_name: 'family', version_year: '2021', pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
-    @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
+    @unit_group_regular = create :unit_group, :with_course_version, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
 
     @migrated_unit = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
-    @unit_group_migrated = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta
+    @unit_group_migrated = create :unit_group, :with_course_version, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_unit, position: 1
 
     @unmigrated_unit = create :script, is_migrated: false, published_state: SharedConstants::PUBLISHED_STATE.beta
@@ -36,7 +36,7 @@ class CoursesControllerTest < ActionController::TestCase
       Script.clear_cache
       UnitGroup.clear_cache
 
-      @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
+      @unit_group_regular = create :unit_group, :with_course_version, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
     end
 
     test_user_gets_response_for :index, response: :success, user: :teacher, queries: 4
@@ -45,7 +45,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     test_user_gets_response_for :index, response: :success, user: :user, queries: 4
 
-    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 10
+    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 12
 
     test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
   end
@@ -426,12 +426,12 @@ class CoursesControllerTest < ActionController::TestCase
     unit1.reload
     unit2.reload
 
-    assert_equal course.pilot_experiment, 'my-pilot'
-    assert_equal course.get_published_state, 'pilot'
-    assert_equal unit1.pilot_experiment, 'my-pilot'
-    assert_equal unit1.get_published_state, 'pilot'
-    assert_equal unit2.pilot_experiment, 'my-pilot'
-    assert_equal unit2.get_published_state, 'pilot'
+    assert_equal 'my-pilot', course.pilot_experiment
+    assert_equal 'pilot', course.get_published_state
+    assert_equal 'my-pilot', unit1.get_pilot_experiment
+    assert_equal 'pilot', unit1.get_published_state
+    assert_equal 'my-pilot', unit2.get_pilot_experiment
+    assert_equal 'pilot', unit2.get_published_state
   end
 
   test "update: persists changes localizeable strings" do
@@ -473,7 +473,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists teacher resources for migrated unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit_group = create :unit_group, :with_course_version, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.beta
     course_version = unit_group.course_version
     unit = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
@@ -488,7 +488,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists student resources for migrated unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit_group = create :unit_group, :with_course_version, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.beta
     course_version = unit_group.course_version
     unit = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
