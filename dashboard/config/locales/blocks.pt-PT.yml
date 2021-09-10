@@ -719,6 +719,11 @@ pt:
         text: localização de {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': explodido
+            '"rain"': chuva
       gamelab_makeNewSpriteAnon:
         text: fazer novo {ANIMATION_NAME} sprite at sprite at sprite at spr {LOCATION}
       gamelab_mirrorSprite:
@@ -743,6 +748,12 @@ pt:
         text: clicado {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
+      gamelab_playSoundOptions:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": botão
+            "'sound://category_collect/clicky_crunch.mp3'": triturar
       gamelab_pointInDirection:
         text: ponto {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1152,14 +1163,8 @@ pt:
         text: x coordenada de {SPRITE}
       Mikelab_yLocationOf:
         text: y coordenada de {SPRITE}
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': arco-íris
-      PoemBot_setForegroundEffect:
-        options:
-          FG_EFFECT:
-            '"rain"': chuva
+      PoemBot_playSound:
+        text: PlaySound {SOUND}
       RyanLab_moveForward:
         text: segue em frente
       RyanLab_turnLeft:
