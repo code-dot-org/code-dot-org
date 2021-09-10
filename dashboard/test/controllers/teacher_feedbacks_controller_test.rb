@@ -14,8 +14,8 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
     get :index
     assert_response :success
 
-    all_feedback_by_level = get_all_response_feedback_data
-    assert_equal 0, all_feedback_by_level.count
+    all_feedbacks_by_level = get_all_response_feedback_data
+    assert_equal 0, all_feedbacks_by_level.count
   end
 
   test 'index: returns success if signed in user - feedback' do
@@ -25,10 +25,10 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
     get :index
     assert_response :success
 
-    all_feedback_by_level = get_all_response_feedback_data
-    assert_equal 1, all_feedback_by_level.count
-    assert_equal 1, all_feedback_by_level[0]['feedbacks'].count
-    assert_equal feedback.student.id, all_feedback_by_level[0]['feedbacks'][0]['student_id']
+    all_feedbacks_by_level = get_all_response_feedback_data
+    assert_equal 1, all_feedbacks_by_level.count
+    assert_equal 1, all_feedbacks_by_level[0]['feedbacks'].count
+    assert_equal feedback.student.id, all_feedbacks_by_level[0]['feedbacks'][0]['student_id']
   end
 
   test 'index returns many feedbacks for 3 levels' do
@@ -50,8 +50,8 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
       assert_response :success
     end
 
-    all_feedback_by_level = get_all_response_feedback_data
-    assert_equal 3, all_feedback_by_level.count
+    all_feedbacks_by_level = get_all_response_feedback_data
+    assert_equal 3, all_feedbacks_by_level.count
   end
 
   test 'index returns most recent feedback first for a level' do
@@ -68,9 +68,9 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
     get :index
     assert_response :success
 
-    all_feedback_by_level = get_all_response_feedback_data
+    all_feedbacks_by_level = get_all_response_feedback_data
 
-    level_feedbacks = all_feedback_by_level[0]['feedbacks']
+    level_feedbacks = all_feedbacks_by_level[0]['feedbacks']
     assert_equal "newest", level_feedbacks[0]['comment']
     assert_equal "middle", level_feedbacks[1]['comment']
     assert_equal "oldest", level_feedbacks[2]['comment']
@@ -89,8 +89,8 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
     get :index
     assert_response :success
 
-    all_feedback_by_level = get_all_response_feedback_data
-    level_feedbacks = all_feedback_by_level[0]['feedbacks']
+    all_feedbacks_by_level = get_all_response_feedback_data
+    level_feedbacks = all_feedbacks_by_level[0]['feedbacks']
     awaiting_review_for_level_vals = level_feedbacks.map {|feedback| feedback['is_awaiting_teacher_review']}
     assert_equal awaiting_review_for_level_vals, [true, false, false]
   end
@@ -100,6 +100,6 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
   def get_all_response_feedback_data
     assert_select 'script[data-feedback]', 1
     feedback_data = JSON.parse(css_select('script[data-feedback]').first.attribute('data-feedback').to_s)
-    feedback_data['all_feedback_by_level']
+    feedback_data['all_feedbacks_by_level']
   end
 end
