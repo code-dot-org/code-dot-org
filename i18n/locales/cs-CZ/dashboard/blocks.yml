@@ -1127,6 +1127,10 @@ cs:
         text: umístění {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': déšť
       gamelab_makeNewSpriteAnon:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNumSprites:
@@ -1161,6 +1165,11 @@ cs:
         text: hlídkovat nahoru a dolů
       gamelab_playSound:
         text: přehraj zvuk {SOUND}
+      gamelab_playSoundOptions:
+        text: přehraj zvuk {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": křupnutí
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
         options:
@@ -1530,6 +1539,11 @@ cs:
             '"x"': souřadnice X
             '"y"': souřadnice Y
             '"direction"': směr pohybu
+      Mikelab_setupOutbreak:
+        text: |-
+          konfigurace epidemie
+          populace:{SPRITE2N}
+          {TOGGLE}virus
       Mikelab_setupSim:
         text: |-
           simulace nastavení
@@ -1613,18 +1627,40 @@ cs:
         text: příšery se začínají toulat
       Outbreak_beginWearingMasks:
         text: příšery začínají nosit roušky
+      Outbreak_layoutBorder:
+        text: rozložte příšery na hranici
+      Outbreak_layoutClusters:
+        text: rozložte příšery v uskupeních po {NUM}
+      Outbreak_layoutGrid:
+        text: rozložte příšery jako pravidelnou mřížku
+      Outbreak_layoutRandom:
+        text: rozložte příšery náhodně
+      Outbreak_setSpeed:
+        text: nastavte rychlost příšer na {VAL}
+      Outbreak_setupOutbreak:
+        text: nakonfigurujte Město příšer s{COUNT}příšerami
       Outbreak_stopMoving:
         text: příšery se přestávají pohybovat
+      PoemBot_playSound:
+        text: přehraj zvuk {SOUND}
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"solid"': plný
-            '"rainbow"': duha
+          EFFECT:
+            '"colors"': Barvy
+            '"squiggles"': Klikyháky
+            '"space"': Vesmír
+            '"stars"': Hvězdy
+            '"ripples"': Vlny
+          PALETTE:
+            '"rainbow"': Duha
       PoemBot_setForegroundEffect:
         options:
-          FG_EFFECT:
-            '"rain"': déšť
-            '"bubbles"': bubliny
+          EFFECT:
+            '"rain"': Déšť
+            '"bubbles"': Bubliny
+            '"hearts"': Barevná srdíčka
+            '"confetti"': Konfety
+            '"starburst"': Výbuch hvězdy
       RyanLab_moveForward:
         text: posuň se vpřed
       RyanLab_turnLeft:
