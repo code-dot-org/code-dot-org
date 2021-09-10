@@ -20,6 +20,11 @@ export default class Playground {
         this.generateNewClickableItem(data.detail);
         break;
       }
+      case PlaygroundSignalType.REMOVE_ITEM:
+      case PlaygroundSignalType.REMOVE_CLICKABLE_ITEM: {
+        this.removeItem(data.detail);
+        break;
+      }
       case PlaygroundSignalType.CHANGED_ITEM: {
         this.changeImage(data.detail);
         break;
@@ -51,6 +56,11 @@ export default class Playground {
 
   onClose() {
     // for now do nothing here
+  }
+
+  removeItem(imageData) {
+    const image = document.getElementById(imageData.id);
+    image.remove();
   }
 
   playSound(soundData) {
