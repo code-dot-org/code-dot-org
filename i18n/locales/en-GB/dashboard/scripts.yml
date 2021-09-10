@@ -386,6 +386,10 @@ en-GB:
             Variables:
               key: Variables
               name: Variables
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Stage 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
