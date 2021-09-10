@@ -1,0 +1,1149 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Community Academy of Philadelphia CS,,420001300318,10157,AP Computer Science A,26,11,5,18,0,0,18,1,0
+Urban Pathways 6-12 CS,,420001800337,10152,Computer Programming,58,30,56,0,0,0,41,9,1
+Robert Benjamin Wiley Community CS,,420002000342,10011,Computer Science Principles,102,52,45,11,0,0,96,29,6
+La Academia Partnership CS,,420002600359,10012,Exploring Computer Science,31,10,4,25,0,0,31,9,7
+Susq-Cyber CS,,420002800368,10199,Computer Programming—Other,1,1,0,0,0,0,0,0,0
+School Lane CS,,420003000379,10199,Computer Programming—Other,19,4,2,2,0,0,14,5,3
+Imhotep Institute CHS,,420003800393,10152,Computer Programming,97,43,97,0,0,0,94,28,0
+Imhotep Institute CHS,,420003800393,10152,Computer Programming,156,77,156,0,0,0,124,30,0
+Imhotep Institute CHS,,420003800393,10157,AP Computer Science A,31,19,31,0,0,0,30,3,0
+Collegium CS,,420005000485,10019,AP Computer Science Principles,6,1,1,1,0,0,2,0,0
+Collegium CS,,420005000485,10152,Computer Programming,13,4,4,2,0,0,4,3,0
+Collegium CS,,420005000485,10155,Java Programming,1,1,0,0,0,0,0,0,0
+Collegium CS,,420005000485,10157,AP Computer Science A,5,1,1,0,0,0,0,0,0
+MAST Community CS,,420005100488,10013,PLTW Computer Science Essentials,16,9,1,2,0,0,8,1,0
+MAST Community CS,,420005100488,10152,Computer Programming,33,11,1,3,0,0,15,6,0
+Mastery CS-Hardy Williams,,420006200504,10019,AP Computer Science Principles,52,32,49,2,0,0,45,3,0
+Renaissance Academy CS,,420006700511,10019,AP Computer Science Principles,4,0,0,0,0,0,0,0,0
+Pennsylvania Cyber CS,,420007100534,10156,Computer Programming—Other Language,75,23,6,0,0,0,14,13,0
+New Foundations CS,,420007500531,10013,PLTW Computer Science Essentials,37,11,7,6,0,1,19,0,1
+New Foundations CS,,420007500531,10014,PLTW Computer Science A,11,2,1,1,0,0,4,0,0
+Esperanza Academy CS,,420007600552,10019,AP Computer Science Principles,10,0,0,10,0,0,8,0,1
+City CHS,,420009400663,10152,Computer Programming,14,6,3,0,0,0,4,3,0
+City CHS,,420009400663,10152,Computer Programming,27,13,11,0,0,0,15,7,0
+City CHS,,420009400663,10152,Computer Programming,31,9,11,1,0,0,21,9,0
+City CHS,,420009400663,10156,Computer Programming—Other Language,11,5,5,0,0,0,6,2,0
+Fell CS,,420009600688,10012,Exploring Computer Science,24,12,2,3,0,0,13,2,0
+Avon Grove CS,,420010100656,10015,PLTW Computer Science Principles,5,0,0,0,0,0,1,0,0
+Avon Grove CS,,420010100656,10015,PLTW Computer Science Principles,12,0,0,2,0,0,4,0,0
+Avon Grove CS,,420010100656,10019,AP Computer Science Principles,8,1,0,0,0,0,1,2,0
+Propel CS-Homestead,,420011100749,10019,AP Computer Science Principles,5,2,5,0,0,0,4,0,0
+Commonwealth Charter Academy CS,,420011900756,10019,AP Computer Science Principles,1,0,0,1,0,0,1,0,0
+Commonwealth Charter Academy CS,,420011900756,10152,Computer Programming,82,21,13,11,1,0,36,10,0
+Pennsylvania Distance Learning CS,,420012500839,10152,Computer Programming,20,2,2,4,0,0,7,3,0
+Pennsylvania Distance Learning CS,,420012500839,10199,Computer Programming—Other,1,0,1,0,0,0,0,0,0
+Pennsylvania Distance Learning CS,,420012500839,10199,Computer Programming—Other,11,4,1,2,0,0,5,3,0
+Pennsylvania Distance Learning CS,,420012500839,10206,Mobile Applications,1,1,0,0,0,0,1,1,0
+Pennsylvania Leadership CS,,420012700837,10019,AP Computer Science Principles,4,1,0,0,0,0,0,0,0
+Pennsylvania Leadership CS,,420012700837,10152,Computer Programming,56,27,1,2,0,0,24,13,0
+Pennsylvania Leadership CS,,420012700837,10154,C++ Programming,9,5,0,0,0,0,2,0,0
+Pennsylvania Leadership CS,,420012700837,10157,AP Computer Science A,4,2,1,0,0,0,3,0,0
+Pennsylvania Leadership CS,,420012700837,10157,AP Computer Science A,9,2,0,0,0,0,0,1,0
+Pennsylvania Leadership CS,,420012700837,10160,Particular Topics in Computer Programming,33,16,5,3,0,0,12,3,0
+Pennsylvania Leadership CS,,420012700837,10199,Computer Programming—Other,35,10,5,0,0,0,9,7,0
+Pennsylvania Leadership CS,,420012700837,10199,Computer Programming—Other,54,31,6,5,0,0,25,7,0
+Achievement House CS,,420012800843,10155,Java Programming,18,5,1,2,0,0,9,2,1
+The New Academy CS,,420013300866,10152,Computer Programming,53,19,41,0,1,0,44,25,0
+Young Scholars of Central PA CS,,420013700879,10152,Computer Programming,2,0,0,0,0,0,0,1,0
+Agora Cyber CS,,420014000896,10152,Computer Programming,48,19,9,4,1,0,12,13,0
+Agora Cyber CS,,420014000896,10154,C++ Programming,20,6,2,1,1,0,8,3,0
+Agora Cyber CS,,420014000896,10155,Java Programming,20,3,2,2,0,0,8,2,0
+Agora Cyber CS,,420014000896,10157,AP Computer Science A,18,4,0,2,0,0,5,0,0
+Agora Cyber CS,,420014000896,10205,Computer Gaming and Design,96,18,23,8,0,0,37,21,0
+Lincoln Park Performing Arts CS,,420014300906,10199,Computer Programming—Other,31,20,0,0,0,0,6,1,0
+Mastery CS -Shoemaker Campus,,420014500944,10160,Particular Topics in Computer Programming,101,50,95,3,0,0,88,35,1
+Boys Latin of Philadelphia CS,,420076006107,10199,Computer Programming—Other,105,0,94,2,0,0,48,20,0
+Mastery CS-Pickett Campus,,420076106025,10160,Particular Topics in Computer Programming,36,13,36,0,0,0,30,15,0
+Propel CS-Braddock Hills,,420083307363,10011,Computer Science Principles,13,4,10,0,0,0,8,1,0
+John B. Stetson CS,,420083907353,10152,Computer Programming,373,172,48,319,0,0,321,102,125
+Olney Charter High School,,420084307386,10152,Computer Programming,9,4,4,4,0,0,7,1,1
+Mastery CS-Gratz Campus,,420085107414,10012,Exploring Computer Science,138,58,123,12,0,0,124,38,3
+Penn Hills CS of Entrepreneurship,,420085307381,10011,Computer Science Principles,13,8,10,0,0,0,7,4,0
+Penn Hills CS of Entrepreneurship,,420085307381,10012,Exploring Computer Science,15,6,12,0,0,0,5,1,0
+Penn Hills CS of Entrepreneurship,,420085307381,10205,Computer Gaming and Design,17,6,14,0,0,0,7,4,0
+Capital Area School for the Arts CS,,420087607493,10160,Particular Topics in Computer Programming,1,1,0,0,0,0,0,0,0
+Capital Area School for the Arts CS,,420087607493,10160,Particular Topics in Computer Programming,2,1,1,0,0,0,0,0,0
+Capital Area School for the Arts CS,,420087607493,10160,Particular Topics in Computer Programming,3,1,1,0,0,0,2,1,0
+Reach Cyber CS,,420088707580,10012,Exploring Computer Science,8,2,1,0,0,0,3,2,0
+Reach Cyber CS,,420088707580,10153,Visual Basic (VB) Programming,11,4,0,0,0,0,4,3,0
+Reach Cyber CS,,420088707580,10155,Java Programming,5,1,0,0,0,0,3,1,0
+Provident CS,,420089007574,10011,Computer Science Principles,4,2,0,0,0,0,2,3,0
+Westinghouse Arts Academy CS,,420089607608,10152,Computer Programming,4,2,2,0,0,0,2,0,0
+Insight PA Cyber CS,,420089807635,10155,Java Programming,238,42,59,39,0,0,160,77,4
+Insight PA Cyber CS,,420089807635,10205,Computer Gaming and Design,222,38,48,43,0,0,140,69,4
+Abington Heights HS,,420201005091,10157,AP Computer Science A,24,8,0,1,0,0,3,0,0
+Abington Heights HS,,420201005091,10199,Computer Programming—Other,9,2,0,0,0,0,0,0,0
+Abington Heights MS,,420201006839,10199,Computer Programming—Other,388,173,4,24,0,0,87,79,10
+Abington SHS,,420204003241,10019,AP Computer Science Principles,89,27,9,4,0,0,13,1,2
+Abington SHS,,420204003241,10157,AP Computer Science A,50,13,2,1,0,0,7,7,0
+Abington SHS,,420204003241,10160,Particular Topics in Computer Programming,26,1,5,2,0,0,5,4,2
+Albert Gallatin Area SHS,,420210006001,10019,AP Computer Science Principles,55,21,2,0,0,0,16,1,0
+Springdale JSHS,,420219000029,10157,AP Computer Science A,1,1,0,0,0,0,0,0,0
+Springdale JSHS,,420219000029,10199,Computer Programming—Other,9,3,0,1,0,0,4,0,1
+William Allen HS,,420228002794,10019,AP Computer Science Principles,13,7,2,4,0,0,5,1,1
+William Allen HS,,420228002794,10152,Computer Programming,201,90,41,141,0,0,164,33,31
+William Allen HS,,420228002794,10152,Computer Programming,315,132,41,224,1,0,256,57,59
+William Allen HS,,420228002794,10152,Computer Programming,328,146,52,236,0,0,266,54,59
+William Allen HS,,420228002794,10157,AP Computer Science A,5,0,0,3,0,0,4,1,0
+Louis E Dieruff HS,,420228002795,10019,AP Computer Science Principles,3,0,0,3,0,0,2,0,0
+Louis E Dieruff HS,,420228002795,10152,Computer Programming,7,2,1,3,0,0,4,0,1
+Louis E Dieruff HS,,420228002795,10152,Computer Programming,411,179,47,308,0,0,309,70,75
+Louis E Dieruff HS,,420228002795,10157,AP Computer Science A,6,1,2,3,0,0,2,0,0
+Altoona Area HS,,420234000913,10152,Computer Programming,44,4,5,1,0,0,20,3,0
+Altoona Area HS,,420234000913,10155,Java Programming,34,3,3,1,0,0,16,5,1
+Wissahickon SHS,,420240003247,10152,Computer Programming,93,17,4,2,0,0,9,13,0
+Wissahickon SHS,,420240003247,101523,Computer Programming,20,4,0,0,0,0,0,1,0
+Wissahickon SHS,,420240003247,10157,AP Computer Science A,17,2,0,2,0,0,5,1,0
+Ambridge Area HS,,420244006555,101523,Computer Programming,21,7,4,1,0,0,10,4,0
+Ambridge Area HS,,420244006555,10157,AP Computer Science A,9,4,1,0,0,0,5,1,0
+Antietam MS/HS,,420248000820,10013,PLTW Computer Science Essentials,13,4,2,1,0,0,5,5,0
+Antietam MS/HS,,420248000820,10157,AP Computer Science A,5,1,0,0,0,0,1,0,0
+Annville Cleona HS,,420249002725,10155,Java Programming,16,3,0,2,0,0,6,1,0
+Annville Cleona HS,,420249002725,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Apollo-Ridge HS,,420255002320,10019,AP Computer Science Principles,1,0,0,0,0,0,1,0,0
+Apollo-Ridge MS,,420255006570,10206,Mobile Applications,101,52,0,0,1,0,52,10,0
+West Shamokin JSHS,,420259000517,10152,Computer Programming,10,1,0,0,0,0,2,0,0
+West Shamokin JSHS,,420259000517,10155,Java Programming,2,0,0,0,0,0,0,0,0
+West Shamokin JSHS,,420259000517,10197,Computer Programming—Independent Study,1,0,0,0,0,0,1,0,0
+Armstrong JSHS,,420259007569,10152,Computer Programming,2,2,0,0,0,0,0,0,0
+Armstrong SD,,420259007569,10152,Computer Programming,3,2,0,0,0,0,1,0,0
+Armstrong JSHS,,420259007569,10152,Computer Programming,30,5,1,0,0,0,11,1,0
+Armstrong SD,,420259007569,10155,Java Programming,2,1,0,0,0,0,1,0,0
+Armstrong JSHS,,420259007569,10155,Java Programming,17,3,0,0,0,0,4,0,0
+Armstrong JSHS,,420259007569,10157,AP Computer Science A,3,0,0,0,0,0,2,1,0
+Armstrong JSHS,,420259007569,10197,Computer Programming—Independent Study,4,1,0,0,0,0,2,1,0
+Athens Area HS,,420267000958,10152,Computer Programming,19,0,0,0,0,0,6,4,0
+Athens Area HS,,420267000958,10155,Java Programming,2,0,0,0,0,0,1,0,0
+Avella Area JSHS,,420276004165,10019,AP Computer Science Principles,2,1,0,0,0,0,0,0,0
+Avella Area JSHS,,420276004165,10152,Computer Programming,6,0,0,0,0,0,4,0,0
+Avon Grove HS,,420279001367,10019,AP Computer Science Principles,20,2,1,0,0,0,1,0,0
+Avon Grove HS,,420279001367,10160,Particular Topics in Computer Programming,74,17,1,17,0,0,21,8,4
+Avonworth HS,,420282005199,10011,Computer Science Principles,2,0,0,0,0,0,1,1,0
+Avonworth HS,,420282005199,10152,Computer Programming,122,36,3,3,0,0,16,21,0
+Avonworth HS,,420282005199,10154,C++ Programming,12,1,0,0,0,0,2,1,0
+Pine-Richland HS,,420285000315,10152,Computer Programming,28,7,0,1,0,0,0,3,0
+Pine-Richland HS,,420285000315,10155,Java Programming,66,17,2,1,0,0,1,7,1
+Pine-Richland HS,,420285000315,10157,AP Computer Science A,16,3,0,0,0,0,0,1,0
+Pine-Richland HS,,420285000315,10206,Mobile Applications,21,0,0,1,0,0,0,3,0
+Baldwin SHS,,420297000050,10155,Java Programming,18,2,0,0,0,0,8,0,1
+Baldwin SHS,,420297000050,10157,AP Computer Science A,59,12,6,1,0,0,22,1,0
+Baldwin SHS,,420297000050,10160,Particular Topics in Computer Programming,38,1,0,0,0,0,16,3,5
+Bangor Area HS,,420300003434,10011,Computer Science Principles,47,6,1,1,0,0,8,9,0
+Bangor Area HS,,420300003434,10019,AP Computer Science Principles,11,0,0,2,0,0,0,1,0
+Bangor Area HS,,420300003434,10157,AP Computer Science A,9,2,1,0,0,0,2,0,0
+Belle Vernon Area HS,,420321004930,10013,PLTW Computer Science Essentials,7,0,0,0,0,0,2,0,0
+Belle Vernon Area HS,,420321004930,10015,PLTW Computer Science Principles,10,1,0,0,0,0,4,1,1
+Bellefonte Area HS,,420324001343,10155,Java Programming,11,2,0,1,0,0,1,3,0
+Bellefonte Area HS,,420324001343,10157,AP Computer Science A,3,0,0,0,0,0,1,0,0
+Bensalem Twp HS,,420333005116,10152,Computer Programming,13,0,0,2,0,0,1,1,0
+Bensalem Twp HS,,420333005116,10152,Computer Programming,70,16,6,12,1,0,7,10,11
+Bensalem Twp HS,,420333005116,10154,C++ Programming,26,5,2,4,0,0,1,4,0
+Bensalem Twp HS,,420333005116,10155,Java Programming,17,1,1,3,0,0,2,1,2
+Bentworth SHS,,420336004188,10154,C++ Programming,7,1,0,0,0,0,2,0,0
+Bentworth SHS,,420336004188,10157,AP Computer Science A,8,2,0,1,0,0,0,0,0
+Berlin Brothersvalley SHS,,420342006207,10205,Computer Gaming and Design,10,2,0,0,0,0,6,4,0
+Berwick Area HS,,420348001605,10152,Computer Programming,10,1,0,1,0,0,3,2,0
+Berwick Area HS,,420348001605,10152,Computer Programming,15,0,0,0,0,0,6,0,0
+Berwick Area HS,,420348001605,101522,Computer Programming,23,0,0,0,0,0,13,2,0
+Berwick Area HS,,420348001605,10155,Java Programming,12,2,1,1,0,0,6,2,0
+Berwick Area HS,,420348001605,10155,Java Programming,20,0,0,1,0,0,6,1,0
+Bethel Park HS,,420351000062,10157,AP Computer Science A,20,6,0,0,0,0,2,0,0
+Northeast MS,,420357003462,10011,Computer Science Principles,448,219,55,252,0,0,338,93,27
+Northeast MS,,420357003462,10152,Computer Programming,282,138,19,239,0,0,265,89,79
+Northeast MS,,420357003462,10152,Computer Programming,312,162,20,265,0,0,283,42,73
+Nitschmann MS,,420357003463,10011,Computer Science Principles,470,232,38,146,1,0,228,90,11
+Broughal MS,,420357003464,10205,Computer Gaming and Design,54,25,7,37,0,0,50,14,8
+Broughal MS,,420357003464,10205,Computer Gaming and Design,129,66,23,89,0,0,117,34,23
+Liberty HS,,420357003465,10011,Computer Science Principles,137,81,18,60,0,0,91,21,11
+Liberty HS,,420357003465,10011,Computer Science Principles,206,87,26,98,2,0,142,44,12
+Liberty HS,,420357003465,10152,Computer Programming,98,6,13,31,0,0,54,14,2
+Liberty HS,,420357003465,10157,AP Computer Science A,11,1,1,4,0,0,3,0,0
+Liberty HS,,420357003465,10206,Mobile Applications,17,3,1,10,0,0,10,2,0
+East Hills MS,,420357004956,10011,Computer Science Principles,321,149,32,102,0,2,156,58,7
+East Hills MS,,420357004956,10011,Computer Science Principles,323,160,35,107,0,1,149,61,23
+Freedom HS,,420357004957,10011,Computer Science Principles,40,12,3,17,0,1,24,7,0
+Freedom HS,,420357004957,10011,Computer Science Principles,106,47,14,41,0,0,62,12,9
+Freedom HS,,420357004957,10019,AP Computer Science Principles,19,5,2,2,0,0,7,3,0
+Freedom HS,,420357004957,10152,Computer Programming,25,6,2,4,0,0,12,4,0
+Freedom HS,,420357004957,10157,AP Computer Science A,9,1,0,1,0,0,3,0,0
+Freedom HS,,420357004957,10206,Mobile Applications,48,9,7,15,0,0,28,10,2
+Bethlehem-Center SHS,,420360004181,10019,AP Computer Science Principles,9,2,1,1,0,0,7,0,0
+Bethlehem-Center SHS,,420360004181,10156,Computer Programming—Other Language,26,6,3,0,0,0,17,5,0
+Beaver Falls Area SHS,,420363000649,10152,Computer Programming,1,0,0,0,0,0,1,0,0
+Beaver Falls Area SHS,,420363000649,10152,Computer Programming,14,1,2,0,0,0,11,1,0
+Big Spring HS,,420366001677,10011,Computer Science Principles,13,1,0,0,0,0,2,3,0
+Big Spring HS,,420366001677,10011,Computer Science Principles,15,3,0,0,0,0,7,0,0
+Big Spring HS,,420366001677,10152,Computer Programming,1,1,0,0,0,0,0,0,0
+Big Spring HS,,420366001677,10155,Java Programming,5,0,0,0,0,0,3,0,0
+Big Spring HS,,420366001677,10205,Computer Gaming and Design,13,2,0,0,0,1,4,3,0
+Blackhawk HS,,420368806707,10152,Computer Programming,1,0,0,0,0,0,0,0,0
+Blackhawk HS,,420368806707,10152,Computer Programming,10,2,0,0,0,0,2,0,0
+Blackhawk HS,,420368806707,10152,Computer Programming,12,4,0,0,0,0,2,0,0
+Blackhawk HS,,420368806707,10157,AP Computer Science A,6,0,0,0,0,0,0,0,0
+Blairsville MS,,420375002317,10199,Computer Programming—Other,71,31,1,3,0,0,32,10,0
+Saltsburg MS/HS,,420375002353,10152,Computer Programming,10,0,0,0,0,0,4,2,0
+Blairsville SHS,,420375004706,10199,Computer Programming—Other,49,15,2,0,0,0,34,35,0
+Blue Mountain HS,,420387003891,10152,Computer Programming,17,11,1,0,0,0,5,4,0
+Blue Mountain HS,,420387003891,10152,Computer Programming,18,6,0,2,0,0,12,18,0
+Blue Mountain HS,,420387003891,10152,Computer Programming,34,5,1,3,0,0,7,1,0
+Blue Mountain HS,,420387003891,10152,Computer Programming,120,63,2,2,0,0,24,12,1
+Blue Mountain HS,,420387003891,10152,Computer Programming,136,61,3,5,0,0,37,24,1
+Blue Ridge HS,,420390004034,10019,AP Computer Science Principles,3,0,0,0,0,0,0,0,0
+Boyertown Area SHS,,420396006306,10155,Java Programming,20,3,0,1,0,0,4,0,0
+Bradford Area HS,,420402004691,10152,Computer Programming,26,4,1,0,0,0,16,4,0
+Bradford Area HS,,420402004691,10157,AP Computer Science A,13,1,0,0,0,0,5,0,0
+Brandywine Heights HS,,420405006308,10155,Java Programming,2,1,0,0,0,0,2,0,0
+Brentwood SHS,,420414000070,10156,Computer Programming—Other Language,8,3,1,0,0,0,3,0,0
+Brentwood SHS,,420414000070,10157,AP Computer Science A,31,4,0,0,0,1,14,1,2
+Brentwood SHS,,420414000070,10199,Computer Programming—Other,67,24,4,4,0,0,32,8,1
+Bristol MS,,420420000686,10205,Computer Gaming and Design,3,0,0,0,0,0,2,0,0
+Bristol HS,,420420001014,10155,Java Programming,1,0,0,0,0,0,0,0,0
+Truman SHS,,420423001029,10014,PLTW Computer Science A,10,1,2,1,0,0,7,0,0
+Truman SHS,,420423001029,10015,PLTW Computer Science Principles,12,0,1,0,0,2,10,0,1
+Burgettstown MS/HS,,420450004195,10019,AP Computer Science Principles,4,0,0,0,0,0,0,0,0
+Burgettstown MS/HS,,420450004195,10152,Computer Programming,32,18,0,0,1,0,5,2,0
+Burgettstown MS/HS,,420450004195,10152,Computer Programming,32,9,0,0,0,0,5,4,0
+Burgettstown MS/HS,,420450004195,10197,Computer Programming—Independent Study,1,0,0,0,0,0,0,0,0
+Burrell HS,,420453004340,10019,AP Computer Science Principles,4,1,0,0,0,0,1,0,0
+Burrell HS,,420453004340,10155,Java Programming,8,0,0,0,0,0,2,3,0
+Butler Area IHS,,420459006690,10152,Computer Programming,26,2,0,0,0,0,0,7,0
+Butler Area IHS,,420459006690,10160,Particular Topics in Computer Programming,33,3,4,0,0,0,0,5,0
+Butler Area SHS,,420459007554,10019,AP Computer Science Principles,25,12,0,0,0,0,0,1,0
+Butler Area SHS,,420459007554,10152,Computer Programming,27,4,0,1,0,0,0,4,0
+Butler Area SHS,,420459007554,10154,C++ Programming,44,5,1,0,0,0,0,4,0
+Butler Area SHS,,420459007554,10155,Java Programming,47,4,0,0,0,0,0,4,1
+Butler Area SHS,,420459007554,10157,AP Computer Science A,6,3,0,0,0,0,0,0,1
+Butler Area SD,,420459007554,10160,Particular Topics in Computer Programming,1,0,0,0,0,0,0,1,0
+Butler Area SHS,,420459007554,10160,Particular Topics in Computer Programming,7,2,0,0,0,0,0,5,0
+Cambria Heights SHS,,420474005212,10152,Computer Programming,15,1,0,1,0,0,8,2,0
+Camp Hill SHS,,420486001682,10152,Computer Programming,4,1,0,0,0,0,0,1,0
+Canon-McMillan SHS,,420489004217,10019,AP Computer Science Principles,41,5,0,0,0,0,5,0,0
+Canon-McMillan SHS,,420489004217,10157,AP Computer Science A,11,3,0,0,0,0,1,1,0
+Carlisle Area HS,,420501001694,10019,AP Computer Science Principles,13,1,0,0,0,0,1,0,0
+Carlisle Area HS,,420501001694,10019,AP Computer Science Principles,43,4,0,1,1,0,3,1,2
+Carlisle Area HS,,420501001694,10199,Computer Programming—Other,9,1,0,1,0,0,1,2,0
+William Tennent HS,,420519001040,10155,Java Programming,59,9,2,5,0,0,20,8,1
+William Tennent HS,,420519001040,10155,Java Programming,113,12,9,11,0,0,41,20,0
+William Tennent HS,,420519001040,10157,AP Computer Science A,13,0,0,2,0,0,2,0,0
+William Tennent HS,,420519001040,10157,AP Computer Science A,29,11,1,0,0,0,5,0,0
+William Tennent HS,,420519001040,10157,AP Computer Science A,50,15,0,2,0,0,8,2,0
+Central Bucks HS-South,,420531000785,10019,AP Computer Science Principles,28,11,0,0,0,0,0,0,0
+Central Bucks HS-South,,420531000785,10019,AP Computer Science Principles,110,41,1,7,0,0,6,3,0
+Central Bucks HS-South,,420531000785,10155,Java Programming,22,2,0,1,0,0,0,4,0
+Central Bucks HS-South,,420531000785,10155,Java Programming,72,11,1,1,0,0,0,6,0
+Central Bucks HS-South,,420531000785,10157,AP Computer Science A,40,8,2,2,0,0,2,3,0
+Central Bucks HS-West,,420531001043,10019,AP Computer Science Principles,77,26,1,3,0,0,6,2,0
+Central Bucks HS-West,,420531001043,10019,AP Computer Science Principles,112,48,4,3,0,0,9,4,0
+Central Bucks HS-West,,420531001043,10155,Java Programming,11,3,1,0,0,0,1,2,0
+Central Bucks HS-West,,420531001043,10155,Java Programming,36,7,1,2,0,0,5,3,0
+Central Bucks HS-West,,420531001043,10157,AP Computer Science A,34,9,0,2,0,0,1,2,0
+Central Bucks HS-East,,420531005133,10019,AP Computer Science Principles,46,17,0,2,0,0,2,0,0
+Central Bucks HS-East,,420531005133,10155,Java Programming,36,9,1,1,0,0,2,3,0
+Central Bucks HS-East,,420531005133,10155,Java Programming,50,16,0,1,0,0,4,0,0
+Central Bucks HS-East,,420531005133,10157,AP Computer Science A,40,13,0,1,0,0,3,2,0
+Central Cambria HS,,420534001208,10019,AP Computer Science Principles,9,1,0,0,0,0,2,0,0
+Central Columbia SHS,,420537001619,10154,C++ Programming,12,2,0,0,0,0,4,2,0
+Central Columbia SHS,,420537001619,10157,AP Computer Science A,13,6,0,0,0,0,1,1,0
+Central Dauphin SHS,,420540001745,10155,Java Programming,2,0,0,0,0,0,0,0,0
+Central Dauphin SHS,,420540001745,10157,AP Computer Science A,33,7,1,1,0,0,9,1,0
+Central Dauphin SHS,,420540001745,10199,Computer Programming—Other,19,2,5,0,0,0,5,0,0
+Central Dauphin SHS,,420540001745,10205,Computer Gaming and Design,44,6,8,1,0,0,12,9,2
+Central Dauphin East SHS,,420540001746,10011,Computer Science Principles,15,4,7,2,0,0,9,2,5
+Central Dauphin East SHS,,420540001746,10157,AP Computer Science A,4,0,0,0,0,0,2,0,1
+Central Dauphin East SHS,,420540001746,10160,Particular Topics in Computer Programming,6,3,3,0,0,0,2,0,0
+Central Dauphin East SHS,,420540001746,10199,Computer Programming—Other,5,0,1,0,0,0,2,0,0
+Central Dauphin East SHS,,420540001746,10205,Computer Gaming and Design,38,6,16,6,0,0,30,6,7
+Waynesburg Central HS,,420543005118,10152,Computer Programming,46,6,0,0,0,0,11,2,0
+Central York HS,,420549004545,10019,AP Computer Science Principles,11,3,0,3,0,0,1,0,0
+Central York HS,,420549004545,10156,Computer Programming—Other Language,11,0,0,0,0,0,0,1,0
+Central York HS,,420549004545,10157,AP Computer Science A,7,1,0,1,0,0,1,0,0
+Chambersburg Area MS - North,,420555002190,10160,Particular Topics in Computer Programming,182,97,20,24,0,0,95,27,4
+Chambersburg Area MS - North,,420555002190,10160,Particular Topics in Computer Programming,194,96,15,35,0,0,93,39,5
+Chambersburg Area SHS,,420555002191,10154,C++ Programming,24,6,1,2,0,1,9,1,0
+Chambersburg Area SHS,,420555002191,10160,Particular Topics in Computer Programming,24,2,3,2,0,0,13,8,2
+Chambersburg Area MS - South,,420555006615,10160,Particular Topics in Computer Programming,335,173,21,69,2,0,198,38,28
+Charleroi Area HS,,420564004715,10152,Computer Programming,7,2,1,0,0,0,4,0,0
+Charleroi Area HS,,420564004715,10152,Computer Programming,59,24,5,4,0,0,23,6,0
+Chartiers Valley HS,,420570006706,10153,Visual Basic (VB) Programming,45,9,0,0,0,0,16,5,6
+Chartiers Valley HS,,420570006706,10157,AP Computer Science A,36,12,4,0,0,0,10,2,0
+Chartiers-Houston JSHS,,420573009975,10160,Particular Topics in Computer Programming,7,1,0,0,0,0,3,2,0
+Chartiers-Houston JSHS,,420573009975,10160,Particular Topics in Computer Programming,72,27,2,2,0,0,31,15,0
+Chartiers-Houston JSHS,,420573009975,10160,Particular Topics in Computer Programming,74,27,2,3,0,1,34,14,0
+Cheltenham HS,,420576003260,10019,AP Computer Science Principles,35,7,16,3,0,0,10,2,0
+Cheltenham HS,,420576003260,10152,Computer Programming,83,24,50,7,0,0,29,16,2
+Cheltenham HS,,420576003260,10155,Java Programming,32,14,11,1,0,0,8,2,0
+Cheltenham HS,,420576003260,10157,AP Computer Science A,20,2,6,0,0,0,4,1,0
+Chester HS,,420586006492,10152,Computer Programming,81,41,67,9,0,1,80,15,8
+STEM at Showalter,,420586007499,10011,Computer Science Principles,38,18,33,4,0,0,38,6,1
+Toby Farms Intermediate School,,420586007510,10012,Exploring Computer Science,323,149,294,23,0,0,269,100,15
+Chichester SHS,,420591001849,10155,Java Programming,1,0,0,0,0,0,0,1,0
+Clairton MS/HS,,420603007346,10019,AP Computer Science Principles,9,2,6,0,1,0,7,1,0
+Clairton MS/HS,,420603007346,10152,Computer Programming,18,3,10,0,0,0,15,7,0
+Clearfield Area JSHS,,420615006236,10154,C++ Programming,23,3,0,0,0,0,23,2,0
+Clearfield Area JSHS,,420615006236,10157,AP Computer Science A,11,3,0,0,0,0,11,1,0
+Coatesville Area SHS,,420624005012,10157,AP Computer Science A,23,6,3,1,0,0,7,1,0
+Cocalico SHS,,420627006290,10156,Computer Programming—Other Language,2,0,0,0,0,0,1,0,0
+Cocalico SHS,,420627006290,10157,AP Computer Science A,9,2,0,1,0,0,1,1,0
+Cocalico SHS,,420627006290,10199,Computer Programming—Other,37,3,0,5,0,0,19,4,0
+Conemaugh Twp Area MS/SHS,,420642003978,10152,Computer Programming,8,1,0,0,0,0,3,0,0
+Conestoga Valley SHS,,420648002532,10019,AP Computer Science Principles,16,3,1,3,0,0,4,0,0
+Conestoga Valley SHS,,420648002532,10152,Computer Programming,59,11,3,11,0,0,22,3,1
+Conestoga Valley SHS,,420648002532,10157,AP Computer Science A,11,1,1,1,0,0,2,0,0
+Conestoga Valley SHS,,420648002532,10199,Computer Programming—Other,1,0,0,0,0,0,0,0,0
+New Oxford SHS,,420655000017,10152,Computer Programming,103,9,3,15,0,0,32,7,0
+New Oxford SHS,,420655000017,10197,Computer Programming—Independent Study,6,1,0,0,0,0,1,0,0
+Conneaut Area Senior High,,420659007439,10152,Computer Programming,7,1,1,0,0,0,1,0,0
+Conneaut Area Senior High,,420659007439,10157,AP Computer Science A,8,1,0,0,0,0,6,0,0
+Connellsville Area MS,,420666002105,10160,Particular Topics in Computer Programming,28,8,2,0,0,0,21,7,0
+Connellsville Area MS,,420666002105,10160,Particular Topics in Computer Programming,29,10,0,0,0,0,22,3,0
+Connellsville Area SHS,,420666005228,10011,Computer Science Principles,25,7,1,0,0,0,15,4,0
+Connellsville Area SHS,,420666005228,10019,AP Computer Science Principles,39,14,0,1,0,0,15,1,0
+Connellsville Area SHS,,420666005228,10156,Computer Programming—Other Language,6,2,0,0,0,0,3,0,0
+Connellsville Area SHS,,420666005228,10160,Particular Topics in Computer Programming,11,3,0,0,0,0,5,3,0
+Conrad Weiser HS,,420678000777,10152,Computer Programming,67,18,1,3,1,0,17,5,0
+Conrad Weiser HS,,420678000777,10157,AP Computer Science A,6,0,0,1,0,0,1,0,0
+Conrad Weiser HS,,420678000777,10160,Particular Topics in Computer Programming,18,4,0,1,0,0,4,1,0
+Cornell HS,,420681007335,10011,Computer Science Principles,17,11,2,2,0,0,11,1,0
+Cornell HS,,420681007335,10011,Computer Science Principles,37,14,7,4,0,0,25,6,0
+Cornell HS,,420681007335,10019,AP Computer Science Principles,6,3,0,0,0,0,1,0,0
+Cornell HS,,420681007335,10152,Computer Programming,9,4,1,2,0,0,4,0,0
+Cedar Crest HS,,420684004800,10155,Java Programming,13,1,0,4,0,0,7,1,0
+Cedar Crest HS,,420684004800,10156,Computer Programming—Other Language,30,8,2,5,0,0,10,1,0
+Corry Area HS,,420686001998,10152,Computer Programming,2,0,0,0,0,0,1,0,0
+Corry Area HS,,420686001998,10199,Computer Programming—Other,30,7,0,0,0,0,21,5,0
+Council Rock HS South,,420696000691,10157,AP Computer Science A,26,5,0,0,0,0,2,1,0
+Council Rock HS North,,420696005096,10157,AP Computer Science A,40,12,0,1,0,0,4,1,0
+Council Rock HS North,,420696005096,10157,AP Computer Science A,40,4,0,1,0,0,4,1,1
+Cranberry Area JSHS,,420705004098,10152,Computer Programming,11,0,0,0,0,0,4,0,0
+Cochranton JSHS,,420708001632,10019,AP Computer Science Principles,5,3,0,0,0,0,0,0,0
+Cochranton JSHS,,420708001632,10153,Visual Basic (VB) Programming,26,16,0,1,0,0,3,2,0
+Meadville Area SHS,,420708001654,10019,AP Computer Science Principles,1,0,0,0,0,0,0,0,0
+Meadville Area SHS,,420708001654,10152,Computer Programming,3,0,0,0,0,0,0,0,0
+Meadville Area SHS,,420708001654,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Cumberland Valley HS,,420711001701,10152,Computer Programming,41,7,1,2,0,0,3,3,1
+Cumberland Valley HS,,420711001701,10152,Computer Programming,47,11,2,2,0,0,6,3,1
+Cumberland Valley HS,,420711001701,10154,C++ Programming,40,5,1,0,0,0,1,1,2
+Cumberland Valley HS,,420711001701,10157,AP Computer Science A,32,7,0,0,0,0,4,0,0
+Cumberland Valley HS,,420711001701,10197,Computer Programming—Independent Study,9,0,0,0,0,0,0,0,0
+Curwensville Area JSHS,,420714001529,10152,Computer Programming,15,1,0,0,1,0,12,0,0
+Dallas SHS,,420720002869,10155,Java Programming,25,4,0,0,0,0,2,1,0
+Dallastown Area SHS,,420723004553,10019,AP Computer Science Principles,30,6,0,2,0,0,4,2,0
+Dallastown Area SHS,,420723004553,10152,Computer Programming,106,23,7,4,0,0,22,20,2
+Dallastown Area SHS,,420723004553,10157,AP Computer Science A,32,0,0,0,0,0,14,0,0
+Danville Area SHS,,420732003425,10019,AP Computer Science Principles,32,8,0,0,0,0,2,0,0
+Danville Area SHS,,420732003425,10152,Computer Programming,26,7,0,2,0,0,6,1,0
+Danville Area SHS,,420732003425,10157,AP Computer Science A,6,1,0,0,0,0,1,0,0
+Danville Area SHS,,420732003425,10206,Mobile Applications,35,3,1,1,0,0,11,12,0
+Delaware Valley HS,,420753005261,10019,AP Computer Science Principles,17,4,0,1,0,0,6,0,0
+Delaware Valley HS,,420753005261,10153,Visual Basic (VB) Programming,36,9,0,3,0,0,11,1,0
+Delaware Valley HS,,420753005261,10155,Java Programming,2,1,0,0,0,0,0,0,0
+Delaware Valley HS,,420753005261,10155,Java Programming,23,3,0,2,0,0,5,0,0
+Delaware Valley HS,,420753005261,10157,AP Computer Science A,10,2,0,0,0,0,4,0,0
+Deer Lakes HS,,420754000513,10019,AP Computer Science Principles,8,4,0,1,0,0,0,1,0
+Deer Lakes HS,,420754000513,10157,AP Computer Science A,6,2,0,0,0,0,1,1,0
+Deer Lakes HS,,420754000513,10160,Particular Topics in Computer Programming,29,4,0,1,0,0,12,4,0
+Hershey HS,,420759004801,10153,Visual Basic (VB) Programming,84,21,2,2,0,0,9,1,1
+Hershey HS,,420759004801,10157,AP Computer Science A,27,9,0,1,0,0,0,0,0
+Hershey HS,,420759004801,10157,AP Computer Science A,38,11,0,3,0,0,3,1,0
+Donegal HS,,420765002539,10019,AP Computer Science Principles,3,0,0,0,0,0,0,0,0
+Donegal HS,,420765002539,10152,Computer Programming,94,24,2,6,0,0,26,12,0
+Donegal HS,,420765002539,10155,Java Programming,1,0,0,0,0,0,0,0,0
+Donegal HS,,420765002539,10199,Computer Programming—Other,3,1,0,1,0,0,1,0,0
+Dover Area HS,,420768004558,10015,PLTW Computer Science Principles,15,2,1,0,0,0,4,4,0
+Downingtown HS East Campus,,420771000706,10152,Computer Programming,4,1,0,0,0,0,0,0,0
+Downingtown HS East Campus,,420771000706,10152,Computer Programming,50,11,1,1,0,0,6,8,1
+Downingtown HS East Campus,,420771000706,10156,Computer Programming—Other Language,10,0,1,1,0,0,1,1,0
+Downingtown HS East Campus,,420771000706,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Downingtown HS East Campus,,420771000706,10157,AP Computer Science A,116,27,2,4,0,0,6,1,1
+Downingtown HS West Campus,,420771001387,10152,Computer Programming,1,0,0,0,0,0,0,0,0
+Downingtown HS West Campus,,420771001387,10152,Computer Programming,45,10,1,1,0,0,5,6,0
+Downingtown HS West Campus,,420771001387,10157,AP Computer Science A,39,10,0,0,0,0,3,6,0
+Downingtown STEM Academy,,420771007401,10155,Java Programming,23,7,0,0,0,0,0,0,0
+Downingtown STEM Academy,,420771007401,10155,Java Programming,34,9,0,2,0,0,3,2,0
+Dubois Area SHS,,420783006156,10152,Computer Programming,29,3,0,2,0,0,14,4,0
+Dubois Area SHS,,420783006156,10199,Computer Programming—Other,19,3,0,0,1,0,10,4,0
+Dubois Area SHS,,420783006156,10205,Computer Gaming and Design,4,0,0,1,0,0,3,0,0
+East Allegheny JSHS,,420806007559,10019,AP Computer Science Principles,11,9,1,0,0,0,3,0,0
+Eastern Lebanon Co SHS,,420846002740,10019,AP Computer Science Principles,5,1,0,0,0,0,0,0,0
+Hughesville JSHS,,420849006364,10199,Computer Programming—Other,47,6,0,0,0,0,19,7,0
+Emmaus HS,,420855002809,10019,AP Computer Science Principles,18,4,1,0,0,0,3,0,0
+Emmaus HS,,420855002809,10152,Computer Programming,61,16,1,3,0,0,15,5,0
+Emmaus HS,,420855002809,10152,Computer Programming,111,25,2,9,0,0,18,3,1
+Emmaus HS,,420855002809,10155,Java Programming,1,0,0,0,0,0,0,0,0
+Emmaus HS,,420855002809,10157,AP Computer Science A,31,6,0,2,1,0,2,1,0
+Emmaus HS,,420855002809,10160,Particular Topics in Computer Programming,5,0,0,0,0,0,1,0,0
+East Pennsboro Area SHS,,420858001707,10013,PLTW Computer Science Essentials,53,14,4,3,0,0,10,5,1
+East Pennsboro Area MS,,420858005220,10156,Computer Programming—Other Language,48,25,1,4,0,0,9,8,1
+East Pennsboro Area MS,,420858005220,10156,Computer Programming—Other Language,93,50,6,9,0,0,31,18,4
+J T Lambert Intermediate Sch,,420867000051,10012,Exploring Computer Science,48,30,7,3,0,0,15,0,0
+East Stroudsburg SHS North,,420867000518,10054,Data Systems/Processing,27,18,5,6,0,0,13,5,0
+East Stroudsburg SHS North,,420867000518,10152,Computer Programming,14,2,4,4,0,0,7,2,0
+East Stroudsburg SHS North,,420867000518,10157,AP Computer Science A,8,1,0,2,0,0,3,0,0
+East Stroudsburg SHS South,,420867006935,10054,Data Systems/Processing,52,28,14,8,0,0,23,11,1
+East Stroudsburg SHS South,,420867006935,10054,Data Systems/Processing,98,45,21,20,0,1,46,28,0
+East Stroudsburg SHS South,,420867006935,10157,AP Computer Science A,6,1,1,1,0,0,1,0,0
+Eastern York HS,,420879004564,10153,Visual Basic (VB) Programming,36,9,0,1,1,0,17,2,0
+Garden Spot SHS,,420882002554,10152,Computer Programming,48,9,0,5,0,0,12,7,0
+Garden Spot SHS,,420882002554,10157,AP Computer Science A,16,0,0,1,0,0,6,1,0
+Easton Area HS,,420885003482,10012,Exploring Computer Science,28,6,3,5,0,0,10,0,0
+Easton Area HS,,420885003482,10012,Exploring Computer Science,71,29,4,8,0,0,15,3,0
+Easton Area HS,,420885003482,10019,AP Computer Science Principles,87,40,3,9,0,0,20,2,0
+Easton Area HS,,420885003482,10152,Computer Programming,61,15,4,14,0,0,21,5,1
+Easton Area HS,,420885003482,10157,AP Computer Science A,64,14,6,11,0,0,15,2,0
+Elizabeth Forward SHS,,420909000144,10154,C++ Programming,7,4,0,0,0,0,1,0,0
+Elizabeth Forward SHS,,420909000144,10156,Computer Programming—Other Language,21,10,0,0,0,0,3,0,0
+Elizabeth Forward SHS,,420909000144,10157,AP Computer Science A,9,2,0,0,0,0,2,0,0
+Elizabethtown Area SHS,,420912002562,10157,AP Computer Science A,7,0,0,0,0,0,1,1,0
+Elizabethtown Area SHS,,420912002562,10199,Computer Programming—Other,61,7,0,4,0,0,7,4,1
+Lincoln JSHS,,420924002675,10152,Computer Programming,32,6,0,1,0,0,17,5,0
+Lincoln JSHS,,420924002675,10157,AP Computer Science A,6,2,0,0,0,0,2,0,0
+Ephrata SHS,,420927006293,10011,Computer Science Principles,15,3,0,0,0,0,4,1,0
+Ephrata SHS,,420927006293,10019,AP Computer Science Principles,13,1,0,0,0,0,3,0,1
+Ephrata SHS,,420927006293,10054,Data Systems/Processing,13,3,0,1,0,0,3,0,1
+Ephrata SHS,,420927006293,10157,AP Computer Science A,10,2,0,0,0,0,2,0,0
+Ephrata MS,,420927006712,10013,PLTW Computer Science Essentials,61,16,2,9,0,0,32,18,3
+Ephrata MS,,420927006712,10014,PLTW Computer Science A,53,20,2,5,1,0,24,9,1
+Ephrata MS,,420927006712,10014,PLTW Computer Science A,53,19,2,6,0,0,22,12,0
+Northwest PA Collegiate Academy,,420930000273,10019,AP Computer Science Principles,16,2,1,0,0,0,4,0,0
+Northwest PA Collegiate Academy,,420930000273,10157,AP Computer Science A,33,10,0,0,0,0,8,1,1
+Northwest PA Collegiate Academy,,420930000273,10160,Particular Topics in Computer Programming,42,13,6,1,0,0,10,2,1
+Erie HS,,420930007612,10160,Particular Topics in Computer Programming,35,7,15,3,0,0,25,9,5
+Everett Area HS,,420936001009,10160,Particular Topics in Computer Programming,19,3,0,0,0,0,9,2,0
+Exeter Twp JHS,,420948000787,10152,Computer Programming,75,17,4,9,0,0,18,8,2
+Exeter Twp SHS,,420948000788,10011,Computer Science Principles,18,6,3,4,0,0,7,6,0
+Exeter Twp SHS,,420948000788,10019,AP Computer Science Principles,23,4,0,2,1,0,1,1,0
+Fairfield Area HS,,420954006269,10205,Computer Gaming and Design,68,14,1,0,0,0,13,3,0
+Fairview HS,,420957006737,10156,Computer Programming—Other Language,3,0,0,0,0,0,0,0,0
+Fairview HS,,420957006737,10160,Particular Topics in Computer Programming,8,1,0,0,0,0,2,3,0
+Karns City HS,,420960001154,10152,Computer Programming,22,12,1,1,0,0,2,0,0
+Karns City HS,,420960001154,101522,Computer Programming,14,7,0,1,0,0,2,0,0
+Karns City HS,,420960001154,10157,AP Computer Science A,16,7,0,0,0,0,4,0,0
+Karns City HS,,420960001154,10160,Particular Topics in Computer Programming,15,6,0,1,0,0,4,0,0
+Karns City HS,,420960001154,10199,Computer Programming—Other,178,77,0,0,0,0,48,39,0
+Fleetwood SHS,,420978005023,10019,AP Computer Science Principles,3,0,0,0,0,0,0,1,0
+Fleetwood SHS,,420978005023,10152,Computer Programming,17,3,1,2,0,0,3,0,0
+Fleetwood SHS,,420978005023,10152,Computer Programming,38,6,0,4,0,0,11,7,0
+Forest City Regional HS,,420993006419,10019,AP Computer Science Principles,4,0,0,0,0,0,0,1,0
+Forest City Regional HS,,420993006419,10157,AP Computer Science A,2,1,0,0,0,0,0,1,0
+Forest Hills JSHS,,420994007586,10019,AP Computer Science Principles,6,0,0,1,0,0,0,1,0
+Fort LeBoeuf SHS,,420999002037,10152,Computer Programming,20,5,0,0,0,0,10,4,0
+Fort LeBoeuf SHS,,420999002037,10160,Particular Topics in Computer Programming,1,0,0,0,0,0,0,1,0
+Dorseyville MS,,421007000147,10199,Computer Programming—Other,28,6,3,0,0,0,8,2,1
+Dorseyville MS,,421007000147,10199,Computer Programming—Other,29,6,1,0,0,0,1,0,0
+Fox Chapel Area HS,,421007000156,10157,AP Computer Science A,25,6,0,1,0,0,3,1,0
+Fox Chapel Area HS,,421007000156,10157,AP Computer Science A,34,9,1,2,0,0,6,3,0
+Fox Chapel Area HS,,421007000156,10157,AP Computer Science A,75,7,0,0,0,0,2,0,0
+North Schuylkill JSHS,,421011003883,10153,Visual Basic (VB) Programming,7,0,0,1,0,0,3,1,0
+North Schuylkill JSHS,,421011003883,10154,C++ Programming,4,0,0,1,0,0,3,0,0
+North Star HS,,421011503988,10019,AP Computer Science Principles,12,4,0,0,0,0,5,0,0
+North Star HS,,421011503988,10152,Computer Programming,18,5,0,0,0,0,8,0,0
+North Star HS,,421011503988,10199,Computer Programming—Other,1,0,0,0,0,0,0,0,0
+Franklin Regional MS,,421023000442,10013,PLTW Computer Science Essentials,243,120,2,3,2,0,34,40,0
+Franklin Regional SHS,,421023004360,10151,Business Programming,15,7,1,2,0,0,2,0,0
+Franklin Regional SHS,,421023004360,10157,AP Computer Science A,18,3,0,0,0,0,2,1,0
+Freedom Area SHS,,421038006563,10199,Computer Programming—Other,11,1,0,0,0,0,4,2,0
+Freeport Area MS,,421044007566,10012,Exploring Computer Science,6,1,1,1,0,0,5,6,0
+Garnet Valley HS,,421059001869,10152,Computer Programming,1,1,0,0,0,0,0,1,0
+Garnet Valley HS,,421059001869,10152,Computer Programming,3,1,0,0,0,0,0,2,0
+Garnet Valley HS,,421059001869,10152,Computer Programming,84,24,3,1,0,0,2,7,0
+Garnet Valley HS,,421059001869,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Garnet Valley HS,,421059001869,10157,AP Computer Science A,41,9,0,0,0,0,1,0,0
+Gateway SHS,,421062000170,10152,Computer Programming,55,22,18,2,0,0,27,9,1
+General McLane HS,,421065002040,10152,Computer Programming,21,5,0,0,0,0,4,2,0
+General McLane HS,,421065002040,10152,Computer Programming,23,3,0,1,0,0,6,1,0
+James W Parker MS,,421065005225,10199,Computer Programming—Other,30,21,0,0,0,0,4,0,0
+Gettysburg Area HS,,421071006271,10152,Computer Programming,41,7,1,5,1,0,9,3,0
+Glendale JSHS,,421083005219,10205,Computer Gaming and Design,13,7,0,1,0,0,3,3,0
+Great Valley HS,,421087001424,10157,AP Computer Science A,55,7,0,1,0,0,2,0,0
+Great Valley HS,,421087001424,10160,Particular Topics in Computer Programming,6,1,0,0,0,0,0,0,0
+Greensburg-Salem HS,,421092004373,10151,Business Programming,2,1,0,0,0,0,0,0,0
+Greensburg-Salem HS,,421092004373,10152,Computer Programming,13,2,0,0,0,0,4,0,0
+Greensburg-Salem HS,,421092004373,10153,Visual Basic (VB) Programming,39,12,0,2,0,0,13,1,1
+Greensburg-Salem HS,,421092004373,10157,AP Computer Science A,9,2,0,0,0,0,3,0,0
+Greensburg-Salem HS,,421092004373,10197,Computer Programming—Independent Study,1,0,0,0,0,0,0,0,0
+Greater Latrobe SHS,,421098004845,10156,Computer Programming—Other Language,65,6,0,0,0,0,21,13,1
+Greater Latrobe SHS,,421098004845,10157,AP Computer Science A,59,12,0,0,0,0,10,1,2
+Greater Latrobe JHS,,421098006957,10155,Java Programming,225,112,2,3,0,0,75,58,1
+Greencastle-Antrim SHS,,421101002206,10019,AP Computer Science Principles,54,14,3,0,0,0,8,1,0
+Greenville JSHS,,421116003137,10199,Computer Programming—Other,14,3,0,1,0,0,9,4,0
+Grove City Area HS,,421122003145,10157,AP Computer Science A,11,2,0,0,0,0,0,0,0
+Halifax Area HS,,421131006330,10199,Computer Programming—Other,1,0,0,0,0,0,1,1,0
+Halifax Area MS,,421131006331,10199,Computer Programming—Other,2,0,0,0,0,0,1,1,0
+Hamburg Area HS,,421134000808,10157,AP Computer Science A,2,0,0,0,0,0,0,0,0
+Hampton MS,,421140000179,10205,Computer Gaming and Design,13,1,0,1,0,0,0,3,0
+Hampton HS,,421140005190,10019,AP Computer Science Principles,40,22,0,0,0,0,1,0,0
+Hampton HS,,421140005190,10152,Computer Programming,58,18,1,0,0,0,3,8,0
+Hampton HS,,421140005190,10156,Computer Programming—Other Language,1,1,0,0,0,0,1,0,0
+Hampton HS,,421140005190,10157,AP Computer Science A,12,4,0,0,0,0,0,0,0
+Hanover SHS,,421145004571,10019,AP Computer Science Principles,35,15,1,5,0,0,2,0,0
+Harrisburg HS,,421158006333,10011,Computer Science Principles,64,4,27,30,0,0,53,14,17
+Hatboro-Horsham SHS,,421161003272,10155,Java Programming,21,5,2,1,0,0,8,0,0
+Hatboro-Horsham SHS,,421161003272,10156,Computer Programming—Other Language,10,1,0,1,0,0,3,1,0
+Hatboro-Horsham SHS,,421161003272,10157,AP Computer Science A,11,1,1,1,0,0,2,1,0
+Hatboro-Horsham SHS,,421161003272,10199,Computer Programming—Other,15,2,1,1,0,0,4,2,0
+Keith Valley MS,,421161006639,10199,Computer Programming—Other,37,18,3,5,0,0,9,6,0
+Keith Valley MS,,421161006639,10199,Computer Programming—Other,114,50,10,13,0,0,29,25,2
+Haverford SHS,,421167001879,10054,Data Systems/Processing,1,1,0,0,0,0,0,0,0
+Haverford SHS,,421167001879,10152,Computer Programming,13,2,1,1,0,0,5,1,1
+Haverford SHS,,421167001879,10152,Computer Programming,17,4,1,1,0,0,4,1,0
+Haverford SHS,,421167001879,10153,Visual Basic (VB) Programming,6,2,0,0,0,0,0,0,0
+Haverford SHS,,421167001879,10153,Visual Basic (VB) Programming,8,0,1,0,0,0,3,3,0
+Haverford SHS,,421167001879,10157,AP Computer Science A,18,2,1,1,0,0,2,2,0
+Haverford SHS,,421167001879,10157,AP Computer Science A,22,5,0,0,0,0,5,0,0
+Hazleton Area HS,,421170000026,10152,Computer Programming,35,13,0,12,0,0,8,0,0
+Hazleton Area HS,,421170000026,10155,Java Programming,40,5,1,15,0,0,12,0,0
+Saucon Valley SHS,,421173005352,10019,AP Computer Science Principles,57,22,1,2,0,0,7,2,0
+Saucon Valley SHS,,421173005352,10152,Computer Programming,37,15,0,0,0,0,6,8,0
+Hempfield Area SHS,,421176004404,10019,AP Computer Science Principles,20,7,0,0,0,0,2,0,0
+Hempfield Area SHS,,421176004404,10152,Computer Programming,19,2,0,0,0,0,7,2,0
+Hempfield Area SHS,,421176004404,10156,Computer Programming—Other Language,9,0,0,0,0,0,2,1,0
+Hempfield Area SHS,,421176004404,10157,AP Computer Science A,18,1,0,0,0,0,3,0,0
+Hempfield Area SHS,,421176004404,10199,Computer Programming—Other,28,1,0,1,0,0,11,3,0
+Hempfield SHS,,421179002578,10157,AP Computer Science A,66,7,2,5,1,0,12,3,0
+Hempfield SHS,,421179002578,10199,Computer Programming—Other,32,3,3,2,0,0,6,5,0
+Hempfield SHS,,421179002578,10205,Computer Gaming and Design,25,4,2,3,0,0,5,6,0
+Hickory HS,,421182003150,10154,C++ Programming,5,2,0,0,0,0,1,0,0
+Hickory HS,,421182003150,10160,Particular Topics in Computer Programming,14,1,2,0,0,0,5,6,0
+Hollidaysburg Area SHS,,421194005207,10199,Computer Programming—Other,63,21,1,2,0,0,20,8,2
+Hopewell SHS,,421203000675,10152,Computer Programming,2,0,0,1,0,0,2,0,0
+Indiana Area SHS,,421215002325,10152,Computer Programming,43,8,1,2,0,0,12,2,0
+Indiana Area SHS,,421215002325,10157,AP Computer Science A,13,3,0,0,0,0,3,0,0
+Interboro SHS,,421217001885,10152,Computer Programming,55,32,5,2,0,0,28,7,4
+Interboro SHS,,421217001885,10157,AP Computer Science A,10,3,2,0,0,0,5,0,0
+Interboro SHS,,421217001885,10199,Computer Programming—Other,77,18,13,3,0,0,42,16,1
+Iroquois JSHS,,421221004817,10199,Computer Programming—Other,26,9,0,1,0,0,11,3,0
+Jefferson-Morgan MS/HS,,421239002280,10019,AP Computer Science Principles,9,3,0,0,0,0,3,0,0
+Jefferson-Morgan MS/HS,,421239002280,10157,AP Computer Science A,2,0,0,0,0,0,1,0,0
+Jenkintown Middle/High School,,421242007327,10019,AP Computer Science Principles,12,3,0,1,0,0,2,0,0
+Jenkintown Middle/High School,,421242007327,10152,Computer Programming,5,0,0,0,0,0,0,2,0
+Jenkintown Middle/High School,,421242007327,10155,Java Programming,3,0,0,0,0,0,0,1,0
+Jenkintown Middle/High School,,421242007327,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Jersey Shore Area SHS,,421248003034,10152,Computer Programming,12,0,0,0,0,0,7,2,0
+Jersey Shore Area SHS,,421248003034,10155,Java Programming,1,0,0,0,0,0,0,0,0
+Jersey Shore Area SHS,,421248003034,10205,Computer Gaming and Design,12,1,0,0,0,0,3,0,0
+Jim Thorpe Area HS,,421254001307,10152,Computer Programming,58,34,3,6,0,0,25,1,1
+Jim Thorpe Area HS,,421254001307,10156,Computer Programming—Other Language,32,6,2,3,0,0,16,8,0
+Jim Thorpe Area HS,,421254001307,10157,AP Computer Science A,15,4,1,0,0,0,7,0,0
+Johnsonburg Area HS,,421257006218,10019,AP Computer Science Principles,18,9,0,0,0,0,5,2,0
+Johnsonburg Area HS,,421257006218,10152,Computer Programming,60,34,1,0,0,0,33,20,0
+Johnsonburg Area HS,,421257006218,10160,Particular Topics in Computer Programming,9,3,0,0,0,0,4,0,0
+East Juniata JSHS,,421260002394,10153,Visual Basic (VB) Programming,8,1,1,0,0,0,1,0,0
+East Juniata JSHS,,421260002394,10157,AP Computer Science A,4,1,0,0,0,0,0,0,0
+Juniata SHS,,421260006255,10019,AP Computer Science Principles,7,2,0,0,0,0,2,0,0
+Juniata SHS,,421260006255,10154,C++ Programming,41,12,0,1,0,0,16,3,0
+Juniata SHS,,421260006255,10199,Computer Programming—Other,8,1,0,0,0,0,2,0,0
+Kennett HS,,421269006482,10157,AP Computer Science A,12,3,0,1,0,0,0,0,0
+Keystone JSHS,,421272001486,10152,Computer Programming,23,2,0,0,0,0,4,1,0
+Kiski Area HS,,421284004431,10019,AP Computer Science Principles,30,14,1,0,0,0,8,1,0
+Kiski Area HS,,421284004431,10019,AP Computer Science Principles,91,38,0,2,0,0,16,0,0
+Kutztown Area SHS,,421293000816,10019,AP Computer Science Principles,7,2,0,1,0,0,1,0,0
+Lackawanna Trail JSHS,,421299004528,10152,Computer Programming,24,7,0,0,0,0,8,4,0
+Lake-Lehman JSHS,,421302002924,10152,Computer Programming,26,11,0,2,0,0,11,6,0
+Lake-Lehman JSHS,,421302002924,10152,Computer Programming,156,77,0,0,1,0,61,34,0
+Lakeland JSHS,,421305006404,10019,AP Computer Science Principles,18,4,0,1,0,0,3,0,0
+Lakeland JSHS,,421305006404,10157,AP Computer Science A,5,0,0,0,0,0,0,0,0
+Lakeview HS,,421308003155,10155,Java Programming,13,4,1,0,0,0,3,4,0
+Lampeter-Strasburg SHS,,421311002607,10019,AP Computer Science Principles,19,1,0,2,0,0,5,0,0
+Lampeter-Strasburg SHS,,421311002607,10152,Computer Programming,22,7,1,2,0,0,8,1,1
+Lampeter-Strasburg SHS,,421311002607,10152,Computer Programming,23,6,0,1,0,0,7,2,1
+McCaskey Campus,,421314002596,10152,Computer Programming,36,2,8,19,0,0,36,8,3
+McCaskey Campus,,421314002596,10157,AP Computer Science A,15,1,0,7,0,0,15,1,1
+McCaskey Campus,,421314002596,10159,IB Computer Science,26,2,4,7,0,0,26,3,2
+Homer-Center JSHS,,421329002331,10019,AP Computer Science Principles,7,2,0,0,0,0,1,0,0
+Homer-Center JSHS,,421329002331,10152,Computer Programming,1,0,0,0,0,0,0,0,0
+Laurel HS,,421338002680,10011,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Laurel HS,,421338002680,10152,Computer Programming,10,1,0,0,0,0,1,0,0
+Lebanon SHS,,421344005155,10152,Computer Programming,89,14,8,44,0,0,41,6,3
+Lebanon SHS,,421344005155,101522,Computer Programming,11,1,0,5,0,0,2,0,0
+Lehighton Area HS,,421350001315,10012,Exploring Computer Science,52,26,1,2,0,0,20,8,1
+Lehighton Area HS,,421350001315,10012,Exploring Computer Science,72,37,0,9,0,0,32,16,2
+Lehighton Area HS,,421350001315,10012,Exploring Computer Science,74,48,1,1,0,0,30,7,0
+Lehighton Area HS,,421350001315,10054,Data Systems/Processing,12,8,0,0,0,0,8,1,0
+Lehighton Area HS,,421350001315,10152,Computer Programming,24,8,1,1,0,0,9,1,0
+Lewisburg HS,,421359004085,10154,C++ Programming,16,0,0,0,0,0,3,2,0
+Ligonier Valley HS,,421371004442,10152,Computer Programming,8,3,0,0,0,0,3,1,0
+Penn Cambria HS,,421377001213,10160,Particular Topics in Computer Programming,8,1,0,0,0,0,2,1,0
+Littlestown SHS,,421398000014,10019,AP Computer Science Principles,8,2,0,0,0,0,8,0,0
+Littlestown SHS,,421398000014,10152,Computer Programming,20,2,1,1,0,0,19,1,0
+Littlestown SHS,,421398000014,10157,AP Computer Science A,4,0,0,0,0,0,4,0,0
+Lower Dauphin HS,,421410001776,10152,Computer Programming,39,1,1,5,0,0,1,4,0
+Lower Dauphin HS,,421410001776,10157,AP Computer Science A,9,1,0,1,0,0,1,0,0
+Lower Merion HS,,421416003295,10011,Computer Science Principles,42,10,4,2,0,0,3,4,1
+Lower Merion HS,,421416003295,10011,Computer Science Principles,53,20,2,0,0,0,5,6,0
+Lower Merion HS,,421416003295,10012,Exploring Computer Science,24,8,0,0,0,0,2,1,0
+Lower Merion HS,,421416003295,10012,Exploring Computer Science,56,24,4,1,0,0,3,3,1
+Lower Merion HS,,421416003295,10157,AP Computer Science A,26,6,0,0,0,0,4,2,0
+Lower Merion HS,,421416003295,10157,AP Computer Science A,29,9,0,1,0,0,0,0,0
+Harriton SHS,,421416003296,10011,Computer Science Principles,57,17,3,1,0,0,5,7,0
+Harriton SHS,,421416003296,10012,Exploring Computer Science,33,11,0,1,0,0,1,6,0
+Harriton SHS,,421416003296,10157,AP Computer Science A,35,5,0,0,0,0,1,0,0
+Lower Moreland HS,,421419004960,10012,Exploring Computer Science,13,1,0,0,0,0,4,2,3
+Lower Moreland HS,,421419004960,10012,Exploring Computer Science,18,4,1,0,0,0,1,4,2
+Lower Moreland HS,,421419004960,10019,AP Computer Science Principles,37,13,0,0,0,0,3,1,0
+Lower Moreland HS,,421419004960,10152,Computer Programming,8,1,0,0,0,0,2,2,2
+Lower Moreland HS,,421419004960,10152,Computer Programming,16,2,0,1,0,0,2,1,2
+Lower Moreland HS,,421419004960,10157,AP Computer Science A,10,2,0,1,0,0,0,0,0
+Methacton HS,,421425003305,10019,AP Computer Science Principles,12,5,0,0,0,0,0,0,0
+Methacton HS,,421425003305,10155,Java Programming,12,4,0,0,0,0,0,0,0
+Methacton HS,,421425003305,10157,AP Computer Science A,40,9,1,1,1,0,6,2,1
+Mahanoy Area JSHS,,421443007626,10152,Computer Programming,16,5,1,3,0,0,11,9,0
+Mahanoy Area JSHS,,421443007626,10197,Computer Programming—Independent Study,1,0,0,0,0,0,1,0,0
+Manheim Central SHS,,421455002618,10012,Exploring Computer Science,12,3,0,1,0,0,5,1,0
+Manheim Central SHS,,421455002618,10012,Exploring Computer Science,16,1,0,2,0,0,6,3,0
+Manheim Central SHS,,421455002618,10012,Exploring Computer Science,20,6,0,1,0,0,8,7,0
+Manheim Twp HS,,421458002623,10019,AP Computer Science Principles,32,4,0,2,0,0,8,0,0
+Manheim Twp HS,,421458002623,10152,Computer Programming,58,12,4,4,0,0,17,7,0
+Manheim Twp HS,,421458002623,10155,Java Programming,1,0,0,1,0,0,0,0,0
+Manheim Twp HS,,421458002623,10155,Java Programming,49,7,1,1,0,0,8,1,0
+Manheim Twp HS,,421458002623,10157,AP Computer Science A,29,5,1,0,0,0,5,0,0
+Manheim Twp MS,,421458005114,10155,Java Programming,1,0,1,0,0,0,0,0,0
+Marple Newtown SHS,,421476001902,10019,AP Computer Science Principles,9,0,2,0,0,0,0,1,0
+Marple Newtown SHS,,421476001902,10152,Computer Programming,15,2,0,0,0,0,2,2,1
+Marple Newtown SHS,,421476001902,10157,AP Computer Science A,13,4,0,0,0,0,2,0,0
+Marple Newtown SHS,,421476001902,10160,Particular Topics in Computer Programming,28,3,0,1,0,0,7,7,0
+Marple Newtown SHS,,421476001902,10160,Particular Topics in Computer Programming,29,5,0,0,0,0,9,6,1
+Mars Area SHS,,421479001159,10152,Computer Programming,14,1,0,0,0,0,0,1,0
+Mars Area SHS,,421479001159,10160,Particular Topics in Computer Programming,55,21,1,1,0,0,0,1,0
+Mars Area MS,,421479005363,10152,Computer Programming,193,99,3,2,0,0,13,24,1
+Mars Area MS,,421479005363,101522,Computer Programming,202,99,2,4,0,0,14,20,0
+McGuffey HS,,421488004249,10019,AP Computer Science Principles,9,4,0,1,0,0,3,0,0
+Mechanicsburg Area SHS,,421503005098,10152,Computer Programming,5,1,0,0,0,0,0,0,0
+Midd-West HS,,421521003962,10152,Computer Programming,1,0,0,0,0,0,0,0,0
+Midd-West HS,,421521003962,10199,Computer Programming—Other,2,0,0,0,0,0,0,0,0
+Middletown Area HS,,421524001790,10155,Java Programming,23,1,1,2,0,0,9,1,2
+Mifflin Co JHS,,421529007397,10152,Computer Programming,37,23,0,0,0,0,7,0,0
+Mifflin Co HS,,421529007398,10011,Computer Science Principles,6,1,0,0,0,0,2,0,0
+Mifflin Co HS,,421529007398,10011,Computer Science Principles,21,6,0,0,0,0,10,2,0
+Mifflin Co HS,,421529007398,10019,AP Computer Science Principles,9,2,0,0,0,0,3,0,0
+Mifflin Co HS,,421529007398,10152,Computer Programming,34,8,0,0,0,0,12,3,0
+Mifflin Co HS,,421529007398,10157,AP Computer Science A,8,1,0,0,0,0,2,1,0
+Mifflin Co MS,,421529007399,10011,Computer Science Principles,168,77,6,10,0,0,96,31,3
+Mifflin Co MS,,421529007399,10011,Computer Science Principles,221,104,0,11,0,0,109,23,4
+McDowell HS,,421533007320,10152,Computer Programming,23,3,1,1,0,0,5,2,0
+McDowell HS,,421533007320,10152,Computer Programming,59,11,0,1,1,0,17,9,0
+McDowell HS,,421533007320,10155,Java Programming,36,4,0,2,0,0,11,2,1
+Milton HS,,421548003541,10152,Computer Programming,15,1,0,0,0,0,8,5,0
+Monessen SHS,,421560006181,10152,Computer Programming,28,15,11,1,0,0,22,4,0
+Montour HS,,421572005017,10157,AP Computer Science A,26,9,1,0,0,0,5,0,0
+Montour HS,,421572005017,10199,Computer Programming—Other,54,14,2,1,0,0,12,2,1
+Montoursville Area SHS,,421575003045,10152,Computer Programming,15,0,0,0,0,0,1,0,0
+Montrose Area JSHS,,421581004044,10152,Computer Programming,8,0,0,0,0,0,7,0,0
+Moon SHS,,421583004951,10153,Visual Basic (VB) Programming,38,3,4,1,0,0,11,8,1
+Moon SHS,,421583004951,10155,Java Programming,58,10,2,5,0,0,7,8,0
+Moshannon Valley JSHS,,421596001550,10157,AP Computer Science A,6,0,0,0,0,0,3,0,0
+Mount Union Area SHS,,421602006104,10153,Visual Basic (VB) Programming,12,1,0,0,0,0,4,0,0
+Mt Lebanon SHS,,421611000254,10157,AP Computer Science A,71,17,1,1,0,0,9,2,0
+Mount Pleasant Area HS,,421617004458,10153,Visual Basic (VB) Programming,44,7,2,0,0,0,19,12,0
+Muhlenberg HS,,421620006610,10019,AP Computer Science Principles,14,4,1,4,0,0,7,0,0
+Muhlenberg HS,,421620006610,10157,AP Computer Science A,7,2,0,1,0,1,3,0,0
+Muhlenberg HS,,421620006610,10199,Computer Programming—Other,23,4,7,5,0,0,8,7,0
+Muncy JSHS,,421623003048,10157,AP Computer Science A,2,2,0,0,0,0,0,0,0
+Nazareth Area MS,,421638003494,10160,Particular Topics in Computer Programming,350,176,7,29,2,1,84,44,3
+Nazareth Area HS,,421638003495,10152,Computer Programming,50,3,2,4,0,0,9,4,0
+Nazareth Area HS,,421638003495,10157,AP Computer Science A,11,5,0,0,0,0,1,0,0
+Neshaminy HS,,421641006455,10157,AP Computer Science A,20,6,2,2,0,1,6,0,0
+Neshaminy HS,,421641006455,10160,Particular Topics in Computer Programming,47,13,1,1,0,0,8,2,0
+Neshannock JSHS,,421644002689,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Woodland Hills HS,,421650007214,10019,AP Computer Science Principles,16,5,6,1,0,0,8,1,0
+Woodland Hills HS,,421650007214,10157,AP Computer Science A,16,2,4,1,0,0,5,2,0
+Woodland Hills HS,,421650007214,10160,Particular Topics in Computer Programming,49,10,30,2,0,0,31,8,2
+New Brighton Area MS,,421653000694,10199,Computer Programming—Other,113,60,6,2,0,0,90,21,0
+New Brighton Area HS,,421653000695,10153,Visual Basic (VB) Programming,10,2,1,0,1,0,8,3,0
+New Brighton Area HS,,421653000695,10156,Computer Programming—Other Language,3,1,1,0,0,0,1,1,0
+New Castle SHS,,421662002704,10019,AP Computer Science Principles,10,1,0,0,0,0,6,0,0
+New Castle SHS,,421662002704,10054,Data Systems/Processing,270,130,80,9,2,0,178,41,4
+New Hope-Solebury HS,,421686001084,10152,Computer Programming,15,7,0,0,0,0,1,1,0
+New Hope-Solebury HS,,421686001084,10157,AP Computer Science A,9,3,0,0,0,0,0,1,0
+Newport HS,,421689003413,10012,Exploring Computer Science,80,46,2,4,0,0,43,10,0
+Newport HS,,421689003413,10152,Computer Programming,11,4,0,1,0,0,5,0,0
+Newport HS,,421689003413,10205,Computer Gaming and Design,1,0,0,1,0,0,1,0,0
+Newport MS,,421689006078,10155,Java Programming,4,0,0,0,0,0,2,0,0
+East Norriton MS,,421698003265,10012,Exploring Computer Science,317,143,107,119,0,0,186,98,32
+Stewart MS,,421698003320,10012,Exploring Computer Science,329,174,103,151,0,0,230,71,39
+Eisenhower MS,,421698003321,10012,Exploring Computer Science,378,196,130,193,0,0,261,93,62
+Norristown Area HS,,421698006729,10011,Computer Science Principles,47,7,13,14,0,0,27,7,0
+North Allegheny HS,,421701007482,10152,Computer Programming,63,18,0,0,0,0,0,4,2
+North Allegheny HS,,421701007482,10152,Computer Programming,82,22,1,0,0,0,0,3,3
+North Allegheny HS,,421701007482,10157,AP Computer Science A,56,20,0,1,0,0,0,0,0
+North Allegheny HS,,421701007482,10157,AP Computer Science A,64,15,0,0,0,0,0,1,0
+North Allegheny HS,,421701007482,10199,Computer Programming—Other,20,4,1,2,0,0,0,5,0
+North Allegheny HS,,421701007482,10199,Computer Programming—Other,72,1,2,3,0,0,0,19,0
+Moniteau JSHS,,421710001164,10152,Computer Programming,20,3,0,0,1,0,11,1,0
+North Clarion Co JSHS,,421713001489,10199,Computer Programming—Other,13,4,0,0,0,0,1,2,0
+North Hills MS,,421722006106,10156,Computer Programming—Other Language,17,5,0,0,0,0,6,2,1
+North Hills SHS,,421722007122,10157,AP Computer Science A,13,1,0,0,0,0,2,0,0
+North Penn SHS,,421728005345,10152,Computer Programming,48,9,0,0,0,2,10,5,1
+North Penn SHS,,421728005345,10157,AP Computer Science A,92,23,1,1,1,0,12,1,0
+North Pocono HS,,421731002446,10019,AP Computer Science Principles,25,4,1,0,0,0,5,0,0
+North Pocono HS,,421731002446,10152,Computer Programming,11,0,0,2,0,0,5,0,0
+Northampton Area HS,,421737003505,10013,PLTW Computer Science Essentials,12,2,0,1,0,0,1,0,0
+Northampton Area HS,,421737003505,10152,Computer Programming,17,1,1,1,1,0,3,1,0
+Riverside HS,,421743000700,10152,Computer Programming,35,8,1,0,0,0,13,1,0
+Northeastern SHS,,421752004577,10019,AP Computer Science Principles,18,3,1,2,0,0,5,0,0
+Northern Cambria HS,,421761006201,10199,Computer Programming—Other,39,7,0,0,0,0,15,8,0
+Northern Cambria HS,,421761006201,10205,Computer Gaming and Design,31,6,0,0,0,0,9,5,0
+Northern Lebanon SHS,,421764002760,10152,Computer Programming,5,1,0,0,0,0,0,0,0
+Northern MS,,421776006346,10199,Computer Programming—Other,33,8,0,1,0,0,4,5,0
+Northwest Area HS,,421779002958,10155,Java Programming,7,1,0,0,0,0,1,0,0
+Northwest Area HS,,421779002958,10157,AP Computer Science A,22,9,0,0,0,0,4,0,0
+Northwestern Lehigh HS,,421785002821,10152,Computer Programming,9,1,0,0,0,0,0,0,0
+Northwestern SHS,,421788006745,10152,Computer Programming,8,4,0,0,0,0,7,4,0
+Northwestern SHS,,421788006745,10160,Particular Topics in Computer Programming,8,1,0,0,0,0,7,4,0
+Norwin SHS,,421794004717,10152,Computer Programming,123,32,2,2,0,0,29,20,2
+Norwin SHS,,421794004717,10205,Computer Gaming and Design,3,1,0,0,0,0,0,2,0
+Octorara Area JSHS,,421803001414,10152,Computer Programming,1,0,0,1,0,0,1,1,0
+Octorara Area JSHS,,421803001414,10153,Visual Basic (VB) Programming,31,10,3,1,0,0,8,4,0
+Oil City SHS,,421809004931,10152,Computer Programming,7,3,0,0,0,0,4,0,0
+Oley Valley SHS,,421815006318,10157,AP Computer Science A,7,4,0,0,0,0,1,1,0
+Oswayo Valley HS,,421821007191,10011,Computer Science Principles,5,3,0,0,0,0,0,0,0
+Owen J Roberts HS,,421827001406,10019,AP Computer Science Principles,42,9,0,1,0,0,2,5,0
+Owen J Roberts HS,,421827001406,10157,AP Computer Science A,19,6,0,0,0,0,0,2,0
+Owen J Roberts HS,,421827001406,10157,AP Computer Science A,28,8,0,0,0,0,0,2,0
+Oxford Area HS,,421830001420,10013,PLTW Computer Science Essentials,18,2,0,0,0,0,3,3,0
+Oxford Area HS,,421830001420,10019,AP Computer Science Principles,28,8,0,4,0,0,3,0,1
+Oxford Area HS,,421830001420,10152,Computer Programming,29,10,0,1,0,0,2,1,1
+Oxford Area HS,,421830001420,10157,AP Computer Science A,16,3,0,2,0,0,6,1,1
+Palisades HS,,421833001094,10019,AP Computer Science Principles,13,6,0,0,0,0,1,0,1
+Palisades HS,,421833001094,10157,AP Computer Science A,9,3,0,0,0,0,0,0,0
+Palmerton Area HS,,421836004734,10011,Computer Science Principles,24,2,1,1,0,0,9,0,0
+Palmyra Area SHS,,421839002766,10157,AP Computer Science A,26,4,0,3,0,0,4,0,0
+Palmyra Area SHS,,421839002766,10199,Computer Programming—Other,11,2,0,1,0,0,0,2,0
+Panther Valley JSHS,,421845007560,10011,Computer Science Principles,2,1,0,0,0,0,0,0,0
+Panther Valley JSHS,,421845007560,10012,Exploring Computer Science,11,2,1,2,0,0,0,3,1
+Panther Valley JSHS,,421845007560,10157,AP Computer Science A,7,3,0,0,0,0,0,0,0
+Parkland HS,,421851002829,10013,PLTW Computer Science Essentials,67,21,3,4,0,0,6,1,0
+Parkland HS,,421851002829,10019,AP Computer Science Principles,43,7,2,1,0,0,5,0,0
+Parkland HS,,421851002829,10152,Computer Programming,48,5,3,5,0,0,6,6,0
+Parkland HS,,421851002829,10157,AP Computer Science A,20,4,2,0,0,0,2,1,0
+Parkland HS,,421851002829,10205,Computer Gaming and Design,48,3,1,8,0,0,13,5,1
+Sun Valley HS,,421858001915,10205,Computer Gaming and Design,53,6,8,1,0,0,19,12,0
+Penn Hills SHS,,421859000309,10152,Computer Programming,130,56,79,4,0,1,82,14,0
+Penn Hills SHS,,421859000309,101522,Computer Programming,22,6,6,0,0,1,12,3,0
+Penn Hills SHS,,421859000309,10160,Particular Topics in Computer Programming,138,54,113,2,2,2,109,40,2
+Penn Manor HS,,421863002633,10157,AP Computer Science A,17,2,3,0,0,0,5,1,0
+Penn Trafford HS,,421866006648,10153,Visual Basic (VB) Programming,48,10,0,0,0,0,6,2,0
+Maplewood JSHS,,421874006942,10157,AP Computer Science A,10,2,0,0,0,0,1,0,0
+Pennridge HS,,421875001100,10019,AP Computer Science Principles,50,17,0,1,0,0,5,1,0
+Pennridge HS,,421875001100,10153,Visual Basic (VB) Programming,49,7,0,3,0,0,5,10,1
+Pennridge HS,,421875001100,10157,AP Computer Science A,17,1,0,1,0,0,1,0,0
+Pennsbury HS,,421884004682,10019,AP Computer Science Principles,55,10,1,0,0,0,10,0,0
+Pennsbury HS,,421884004682,10157,AP Computer Science A,48,6,2,3,1,0,5,2,0
+Pennsbury HS,,421884004682,10160,Particular Topics in Computer Programming,13,2,1,1,0,0,5,2,0
+Pennsbury HS,,421884004682,10160,Particular Topics in Computer Programming,53,6,2,3,0,0,15,2,1
+Pequea Valley HS,,421890002649,10157,AP Computer Science A,3,1,0,2,0,0,2,0,0
+Pequea Valley HS,,421890002649,10199,Computer Programming—Other,12,2,0,0,0,0,6,1,0
+Perkiomen Valley HS,,421893003328,10157,AP Computer Science A,57,7,1,1,0,0,6,3,0
+Perkiomen Valley HS,,421893003328,10160,Particular Topics in Computer Programming,48,5,3,0,0,0,6,11,0
+Peters Twp HS,,421896005083,10019,AP Computer Science Principles,57,20,0,0,0,0,2,3,0
+Peters Twp HS,,421896005083,10019,AP Computer Science Principles,139,49,1,5,1,0,10,8,0
+Peters Twp HS,,421896005083,10154,C++ Programming,22,4,0,0,0,0,1,1,0
+Peters Twp HS,,421896005083,10156,Computer Programming—Other Language,38,4,1,1,0,0,5,6,0
+Peters Twp HS,,421896005083,10157,AP Computer Science A,16,1,0,0,0,0,0,0,0
+Swenson Arts & Technology HS,,421899000572,10012,Exploring Computer Science,110,38,27,37,1,0,64,13,13
+Parkway West,,421899000821,10019,AP Computer Science Principles,11,6,10,0,0,0,2,1,0
+Philadelphia Military Acad at Elverson,,421899000899,10019,AP Computer Science Principles,58,25,38,16,0,0,44,14,5
+Kensington Creative & Performing Arts HS,,421899000901,10011,Computer Science Principles,44,21,10,31,0,0,20,6,10
+Kensington Creative & Performing Arts HS,,421899000901,10019,AP Computer Science Principles,87,39,21,57,0,0,38,9,16
+Science Leadership Academy,,421899000923,10011,Computer Science Principles,5,0,0,0,0,0,0,0,0
+Science Leadership Academy,,421899000923,10012,Exploring Computer Science,27,13,15,4,0,0,11,2,0
+Academy at Palumbo,,421899000962,10011,Computer Science Principles,89,22,15,8,1,0,44,9,9
+Academy at Palumbo,,421899000962,10019,AP Computer Science Principles,32,12,7,3,0,0,13,2,0
+Academy at Palumbo,,421899000962,10157,AP Computer Science A,29,7,10,2,0,0,5,2,0
+School of the Future,,421899000993,10012,Exploring Computer Science,123,49,117,2,1,0,88,37,4
+School of the Future,,421899000993,10019,AP Computer Science Principles,15,10,13,0,0,0,10,3,0
+Constitution HS,,421899001010,10019,AP Computer Science Principles,22,12,12,6,0,0,6,3,1
+Constitution HS,,421899001010,10019,AP Computer Science Principles,29,12,21,3,0,0,17,1,2
+Masterman Julia R Sec Sch,,421899003808,10011,Computer Science Principles,33,18,4,0,0,0,0,0,0
+Fels Samuel HS,,421899003816,10019,AP Computer Science Principles,16,5,9,2,0,0,3,1,3
+Furness Horace HS,,421899003818,10012,Exploring Computer Science,34,19,7,7,0,0,20,7,17
+Lincoln HS,,421899003845,10012,Exploring Computer Science,34,12,9,9,0,0,20,9,8
+Lincoln HS,,421899003845,10012,Exploring Computer Science,35,12,8,16,0,0,22,7,11
+Central HS,,421899003848,10011,Computer Science Principles,24,11,9,2,0,0,10,0,0
+Central HS,,421899003848,10015,PLTW Computer Science Principles,5,0,0,0,0,0,1,0,0
+Central HS,,421899003848,10019,AP Computer Science Principles,27,7,7,4,0,0,4,2,0
+Central HS,,421899003848,10157,AP Computer Science A,52,13,11,7,1,0,2,2,0
+Frankford HS,,421899003850,10011,Computer Science Principles,19,5,13,3,1,0,11,2,2
+Frankford HS,,421899003850,10012,Exploring Computer Science,121,50,43,57,0,0,87,53,27
+Northeast HS,,421899003855,10011,Computer Science Principles,58,23,10,21,0,0,18,1,41
+Northeast HS,,421899003855,10019,AP Computer Science Principles,26,6,2,2,0,0,7,1,2
+Northeast HS,,421899003855,10019,AP Computer Science Principles,28,3,3,1,0,0,6,1,1
+Northeast HS,,421899003855,10160,Particular Topics in Computer Programming,63,13,18,15,0,1,3,13,8
+Overbrook HS,,421899003857,10012,Exploring Computer Science,41,18,40,1,0,0,28,15,1
+South Philadelphia HS,,421899003859,10011,Computer Science Principles,51,20,26,15,0,0,25,9,20
+Washington George HS,,421899006527,10011,Computer Science Principles,33,6,4,3,0,0,8,5,18
+Washington George HS,,421899006527,10019,AP Computer Science Principles,14,5,5,0,0,0,2,0,3
+Parkway Northwest,,421899006548,10011,Computer Science Principles,41,24,40,0,0,0,28,2,0
+Franklin LC,,421899006822,10011,Computer Science Principles,15,4,6,5,0,0,9,2,1
+Franklin LC,,421899006822,10157,AP Computer Science A,11,0,2,1,0,0,0,0,1
+Carver HS,,421899007023,10011,Computer Science Principles,54,13,35,3,0,0,18,8,0
+Carver HS,,421899007023,10012,Exploring Computer Science,25,11,18,2,0,0,14,1,0
+Carver HS,,421899007023,10012,Exploring Computer Science,53,28,27,9,0,0,32,3,1
+Carver HS,,421899007023,10012,Exploring Computer Science,58,32,27,6,0,0,32,1,2
+Carver HS,,421899007023,10019,AP Computer Science Principles,27,6,17,2,0,0,7,1,0
+Carver HS,,421899007023,10157,AP Computer Science A,17,4,10,0,0,0,2,1,0
+Penn Treaty Sch,,421899007502,10011,Computer Science Principles,12,6,6,3,0,0,11,2,0
+Penn Treaty Sch,,421899007502,10012,Exploring Computer Science,121,49,53,37,0,0,90,58,12
+The Science Leadership Academy at Beeber,,421899007524,10012,Exploring Computer Science,66,25,52,4,0,0,18,14,3
+Building 21,,421899007534,10019,AP Computer Science Principles,10,3,9,1,0,0,6,0,1
+Philipsburg-Osceola Area HS,,421902001560,10153,Visual Basic (VB) Programming,4,1,0,0,0,0,1,0,0
+Philipsburg-Osceola Area MS,,421902007475,10012,Exploring Computer Science,38,9,0,0,0,0,21,5,0
+Phoenixville Area HS,,421905001426,10154,C++ Programming,1,0,0,0,0,0,0,0,0
+Pine Grove Area HS,,421914003910,10152,Computer Programming,38,9,0,0,1,0,15,7,0
+Pine Grove Area HS,,421914003910,10197,Computer Programming—Independent Study,1,0,0,0,0,0,1,1,0
+Pittsburgh Allderdice HS,,421917000409,10019,AP Computer Science Principles,15,6,5,0,0,0,7,2,0
+Pittsburgh Allderdice HS,,421917000409,10157,AP Computer Science A,14,6,0,0,0,0,2,1,0
+Pittsburgh Carrick HS,,421917000412,10019,AP Computer Science Principles,10,6,5,0,0,0,4,1,0
+Pittsburgh Perry HS,,421917000416,10019,AP Computer Science Principles,13,4,10,0,0,0,10,3,0
+Pittsburgh Brashear HS,,421917006915,10019,AP Computer Science Principles,11,3,3,0,0,0,6,1,1
+Pittsburgh Brashear HS,,421917006915,10157,AP Computer Science A,9,2,2,0,0,0,3,0,1
+Pittsburgh Science and Technology Academ,,421917006989,10152,Computer Programming,20,11,10,3,0,0,12,1,0
+Pittsburgh Science and Technology Academ,,421917006989,10160,Particular Topics in Computer Programming,54,15,19,0,0,0,16,4,0
+Pittsburgh CAPA 6-12,,421917007014,10019,AP Computer Science Principles,22,11,2,1,0,0,4,1,0
+Pittston Area SHS,,421920005058,10154,C++ Programming,21,5,1,0,0,0,7,0,0
+Pittston Area SHS,,421920005058,10157,AP Computer Science A,13,3,0,0,0,0,7,0,0
+Pleasant Valley HS,,421929003210,10013,PLTW Computer Science Essentials,9,2,0,1,0,0,1,0,0
+Pleasant Valley HS,,421929003210,10152,Computer Programming,2,1,0,0,0,0,0,0,0
+Pleasant Valley HS,,421929003210,10152,Computer Programming,19,2,1,2,0,0,5,0,0
+Pleasant Valley HS,,421929003210,10152,Computer Programming,85,20,9,10,1,0,23,11,1
+Pleasant Valley HS,,421929003210,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Pleasant Valley HS,,421929003210,10157,AP Computer Science A,22,4,0,0,0,0,6,0,1
+Plum SHS,,421935000435,10019,AP Computer Science Principles,24,8,2,0,0,0,2,0,0
+Plum SHS,,421935000435,10152,Computer Programming,38,11,0,0,0,0,9,3,0
+Plum SHS,,421935000435,10157,AP Computer Science A,39,12,1,0,0,0,7,0,0
+Plum SHS,,421935000435,10197,Computer Programming—Independent Study,2,0,0,0,0,0,0,0,0
+Plum SHS,,421935000435,10199,Computer Programming—Other,25,2,0,0,0,0,4,3,0
+Plymouth-Whitemarsh SHS,,421947003333,10157,AP Computer Science A,34,8,1,0,0,0,3,2,0
+Plymouth-Whitemarsh SHS,,421947003333,10160,Particular Topics in Computer Programming,1,0,0,0,0,0,0,0,0
+Plymouth-Whitemarsh SHS,,421947003333,10160,Particular Topics in Computer Programming,2,2,0,0,0,0,0,0,0
+Plymouth-Whitemarsh SHS,,421947003333,10160,Particular Topics in Computer Programming,11,2,2,1,0,0,6,11,0
+Plymouth-Whitemarsh SHS,,421947003333,10160,Particular Topics in Computer Programming,88,8,9,2,0,0,18,20,1
+Plymouth-Whitemarsh SHS,,421947003333,10199,Computer Programming—Other,1,0,0,0,0,0,0,0,0
+Colonial MS,,421947005077,10199,Computer Programming—Other,131,26,19,5,1,0,29,22,1
+Pocono Mountain West HS,,421950000679,10012,Exploring Computer Science,47,25,19,13,0,0,33,17,0
+Pocono Mountain West HS,,421950000679,10012,Exploring Computer Science,271,144,85,83,2,1,161,70,0
+Pocono Mountain West HS,,421950000679,10019,AP Computer Science Principles,4,1,0,1,0,0,1,1,0
+Pocono Mountain West HS,,421950000679,10152,Computer Programming,29,7,5,7,0,0,17,5,1
+Pocono Mountain West HS,,421950000679,10154,C++ Programming,9,2,2,3,0,0,6,1,0
+Pocono Mountain West HS,,421950000679,10155,Java Programming,38,7,10,10,0,0,19,5,0
+Pocono Mountain West HS,,421950000679,10157,AP Computer Science A,4,0,2,0,0,0,2,0,0
+Pocono Mountain West JHS,,421950000961,10012,Exploring Computer Science,594,262,203,189,2,1,397,132,15
+Pocono Mountain East HS,,421950003216,10012,Exploring Computer Science,75,41,18,10,0,0,29,13,0
+Pocono Mountain East HS,,421950003216,10012,Exploring Computer Science,136,74,33,20,0,0,42,19,1
+Pocono Mountain East HS,,421950003216,10019,AP Computer Science Principles,19,4,3,4,0,0,6,2,0
+Pocono Mountain East HS,,421950003216,10154,C++ Programming,19,3,4,3,0,1,4,2,0
+Pocono Mountain East HS,,421950003216,10155,Java Programming,71,19,9,12,0,0,24,7,0
+Pocono Mountain East HS,,421950003216,10157,AP Computer Science A,25,7,2,2,0,0,7,0,0
+Pocono Mountain East JHS,,421950006820,10012,Exploring Computer Science,418,188,81,90,0,0,182,111,10
+Port Allegany JSHS,,421953003111,10153,Visual Basic (VB) Programming,3,2,0,0,0,0,2,0,0
+Port Allegany JSHS,,421953003111,10153,Visual Basic (VB) Programming,9,0,0,0,0,0,5,1,0
+Port Allegany JSHS,,421953003111,10157,AP Computer Science A,10,1,1,0,0,0,4,0,0
+Pottsgrove SHS,,421965003338,10019,AP Computer Science Principles,23,6,1,0,0,0,1,0,0
+Pottsgrove SHS,,421965003338,10152,Computer Programming,23,0,2,2,0,0,11,1,0
+Pottsgrove SHS,,421965003338,10157,AP Computer Science A,15,0,1,1,0,0,3,1,0
+Pottsgrove SHS,,421965003338,10206,Mobile Applications,19,2,2,3,0,0,10,5,0
+Pottsville Area HS,,421971003924,10152,Computer Programming,26,8,2,0,0,0,7,0,0
+Pottsville Area HS,,421971003924,10157,AP Computer Science A,5,0,0,0,0,0,0,0,0
+Purchase Line JSHS,,421983002350,10152,Computer Programming,100,53,2,0,0,0,56,15,0
+Purchase Line JSHS,,421983002350,10156,Computer Programming—Other Language,10,0,0,0,0,0,10,0,0
+Purchase Line JSHS,,421983002350,10160,Particular Topics in Computer Programming,3,1,0,0,0,0,3,1,0
+Quaker Valley HS,,421986000448,10152,Computer Programming,26,3,3,0,0,0,8,3,0
+Quaker Valley HS,,421986000448,10155,Java Programming,36,7,3,0,0,0,5,2,0
+Quaker Valley HS,,421986000448,10157,AP Computer Science A,8,1,0,0,0,0,2,0,0
+Quaker Valley HS,,421986000448,10157,AP Computer Science A,17,5,0,0,0,0,0,3,0
+Quaker Valley HS,,421986000448,10160,Particular Topics in Computer Programming,1,0,0,0,0,0,0,0,0
+Quakertown Community HS,,421989001128,10019,AP Computer Science Principles,10,2,0,0,0,0,1,0,0
+Quakertown Community HS,,421989001128,10152,Computer Programming,57,6,0,2,1,0,13,5,0
+Quakertown Community HS,,421989001128,10157,AP Computer Science A,18,2,0,3,0,0,4,2,0
+Radnor SHS,,421992001921,10157,AP Computer Science A,38,12,1,2,0,0,5,0,0
+Southern MS,,422004000855,10152,Computer Programming,154,71,12,136,0,0,151,35,40
+Southern MS,,422004000855,10152,Computer Programming,277,128,24,234,0,0,269,91,88
+Northwest MS,,422004000856,10152,Computer Programming,485,235,32,424,1,0,464,105,133
+Reading SHS,,422004000859,10152,Computer Programming,99,9,2,89,0,0,90,20,20
+Central MS,,422004006958,10152,Computer Programming,532,259,45,460,1,0,513,137,141
+Central MS,,422004006958,10152,Computer Programming,564,275,38,495,1,0,542,175,135
+Southwest MS,,422004007675,10152,Computer Programming,101,43,10,90,0,0,100,38,41
+Southwest MS,,422004007675,10152,Computer Programming,299,150,26,257,0,2,284,69,84
+Red Lion Area SHS,,422010004598,10154,C++ Programming,10,2,0,0,0,0,1,0,0
+Red Lion Area SHS,,422010004598,10206,Mobile Applications,17,3,0,1,0,0,11,2,0
+Redbank Valley HS,,422013001495,10206,Mobile Applications,80,41,0,0,0,0,37,16,0
+Richland HS,,422025006079,10012,Exploring Computer Science,89,39,4,3,0,0,24,13,0
+Richland HS,,422025006079,10152,Computer Programming,7,0,1,0,0,0,3,1,0
+Richland HS,,422025006079,10157,AP Computer Science A,6,0,1,0,0,0,2,0,0
+Ridgway Area HS,,422031001989,10019,AP Computer Science Principles,8,4,0,0,0,0,3,0,0
+Ridley HS,,422037001934,10019,AP Computer Science Principles,48,25,1,2,0,0,12,0,0
+Ridley HS,,422037001934,10157,AP Computer Science A,16,4,1,0,0,0,2,2,0
+Ridley HS,,422037001934,10160,Particular Topics in Computer Programming,64,5,7,1,0,0,32,18,4
+Ringgold MS,,422040004271,10152,Computer Programming,148,28,16,4,0,0,78,24,2
+Ringgold SHS,,422040007238,10019,AP Computer Science Principles,35,10,0,0,0,0,12,0,0
+Ringgold SHS,,422040007238,10152,Computer Programming,54,12,1,2,0,0,31,14,0
+Riverview JSHS,,422043006928,10157,AP Computer Science A,6,2,1,0,0,0,1,1,0
+Rochester High School,,422046000712,10152,Computer Programming,10,4,3,0,0,0,3,0,0
+Penncrest HS,,422055001942,10019,AP Computer Science Principles,12,3,1,0,0,0,1,2,0
+Penncrest HS,,422055001942,10155,Java Programming,34,6,1,1,0,0,7,6,0
+Penncrest HS,,422055001942,10157,AP Computer Science A,12,3,0,1,0,0,3,0,0
+South Fayette MS,,422058000258,10156,Computer Programming—Other Language,290,141,3,7,2,0,34,26,3
+South Fayette Twp HS,,422058000470,10019,AP Computer Science Principles,25,9,0,0,0,0,2,0,0
+South Fayette Twp HS,,422058000470,10155,Java Programming,37,11,1,0,0,0,3,1,0
+South Fayette Twp HS,,422058000470,10156,Computer Programming—Other Language,18,3,1,1,0,0,1,0,0
+South Fayette Twp HS,,422058000470,10156,Computer Programming—Other Language,47,11,0,1,0,0,2,1,0
+South Fayette Twp HS,,422058000470,10157,AP Computer Science A,32,10,1,0,0,0,2,0,0
+South Fayette Twp HS,,422058000470,10160,Particular Topics in Computer Programming,23,3,0,0,0,0,0,1,0
+South Fayette Twp HS,,422058000470,10205,Computer Gaming and Design,17,2,0,1,0,0,0,1,0
+St Marys Area SHS,,422064005169,10157,AP Computer Science A,9,1,0,0,0,0,2,0,0
+Salisbury SHS,,422073002833,10152,Computer Programming,1,0,0,0,0,0,0,0,0
+Salisbury SHS,,422073002833,10155,Java Programming,12,0,0,2,0,0,4,1,0
+Schuylkill Valley HS,,422097000864,10153,Visual Basic (VB) Programming,11,2,0,1,0,0,0,2,0
+Schuylkill Valley HS,,422097000864,10154,C++ Programming,9,0,0,1,0,0,0,2,0
+Schuylkill Valley HS,,422097000864,10157,AP Computer Science A,7,2,0,0,0,0,0,0,0
+Scranton HS,,422109006413,10157,AP Computer Science A,29,9,2,1,0,1,9,1,1
+Selinsgrove Area HS,,422112003969,10011,Computer Science Principles,1,0,0,0,0,0,1,1,0
+Shaler Area HS,,422120000460,10155,Java Programming,10,2,0,0,0,0,3,1,0
+Shanksville-Stonycreek HS,,422127006800,10152,Computer Programming,7,3,0,0,0,0,1,0,0
+Shenandoah Valley JSHS,,422149003940,10152,Computer Programming,7,0,0,1,0,0,3,0,0
+Shenango HS,,422151002708,10019,AP Computer Science Principles,14,0,0,0,0,0,8,0,0
+Shikellamy HS,,422154003569,10019,AP Computer Science Principles,14,3,1,2,0,0,5,0,0
+Shikellamy HS,,422154003569,10157,AP Computer Science A,6,0,0,0,0,0,1,0,0
+Smethport Area JSHS,,422169003117,10151,Business Programming,54,35,0,0,0,0,33,13,0
+Solanco HS,,422181002658,10011,Computer Science Principles,4,0,0,0,0,0,1,1,0
+Somerset Area Jr-Sr HS,,422184007509,10157,AP Computer Science A,8,1,0,0,0,0,3,1,0
+Souderton Area SHS,,422187003354,10152,Computer Programming,65,10,0,1,0,0,7,6,1
+Souderton Area SHS,,422187003354,10157,AP Computer Science A,20,4,0,0,0,0,3,1,1
+Indian Valley MS,,422187004722,10152,Computer Programming,116,34,2,11,1,0,24,42,0
+South Allegheny HS,,422191007669,10157,AP Computer Science A,14,4,0,0,0,0,3,1,0
+Knoch HS,,422193001177,10156,Computer Programming—Other Language,8,1,0,0,0,0,2,0,0
+Knoch HS,,422193001177,10157,AP Computer Science A,4,0,0,0,0,0,2,0,0
+Knoch HS,,422193001177,10160,Particular Topics in Computer Programming,28,6,0,0,0,0,9,3,0
+Boiling Springs HS,,422205006328,10152,Computer Programming,37,11,1,1,0,0,0,2,0
+Boiling Springs HS,,422205006328,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Boiling Springs HS,,422205006328,10197,Computer Programming—Independent Study,2,1,0,0,0,0,0,1,0
+South Park SHS,,422206000467,10155,Java Programming,12,1,1,0,0,0,3,0,0
+South Park SHS,,422206000467,10157,AP Computer Science A,2,0,0,0,0,0,0,0,0
+South Williamsport Area JSHS,,422214003056,10019,AP Computer Science Principles,7,2,0,0,0,0,4,0,0
+South Williamsport Area JSHS,,422214003056,10199,Computer Programming—Other,21,6,0,0,0,0,11,2,0
+Kennard-Dale HS,,422217004602,10160,Particular Topics in Computer Programming,24,2,0,0,0,0,8,2,0
+South Side HS,,422223000714,10013,PLTW Computer Science Essentials,16,3,0,0,0,0,5,2,0
+Southern Columbia HS,,422226001627,10152,Computer Programming,13,1,1,0,0,0,4,1,0
+Southern Huntingdon Co HS/MS,,422232002313,10011,Computer Science Principles,11,4,0,0,0,0,4,0,0
+Southern Huntingdon Co HS/MS,,422232002313,10199,Computer Programming—Other,1,0,0,0,0,0,1,1,0
+Southern Lehigh SHS,,422235002839,10011,Computer Science Principles,14,2,0,1,0,0,1,0,0
+Southern Lehigh SHS,,422235002839,10012,Exploring Computer Science,15,2,0,0,0,0,1,0,0
+Southern Lehigh SHS,,422235002839,10019,AP Computer Science Principles,28,6,0,0,0,0,2,1,0
+Southern Lehigh SHS,,422235002839,10157,AP Computer Science A,10,3,0,0,0,0,1,0,0
+North Penn-Liberty JSHS,,422237004064,10205,Computer Gaming and Design,10,1,0,0,0,0,7,3,0
+Susquehannock HS,,422238004614,10152,Computer Programming,22,1,0,0,0,0,1,4,0
+Susquehannock HS,,422238004614,10157,AP Computer Science A,5,1,0,0,1,0,2,0,0
+Southmoreland SHS,,422241006191,10152,Computer Programming,18,6,0,1,0,0,9,2,0
+Southmoreland SHS,,422241006191,10154,C++ Programming,18,7,1,0,0,0,8,0,0
+Ryan Gloyer MS,,422244005311,10152,Computer Programming,244,114,4,9,0,0,32,39,3
+Seneca Valley HS,,422244007521,10011,Computer Science Principles,46,7,3,1,0,0,3,8,0
+Seneca Valley HS,,422244007521,10152,Computer Programming,13,6,0,0,0,0,0,0,0
+Seneca Valley HS,,422244007521,10157,AP Computer Science A,20,4,0,0,0,0,1,0,0
+Seneca Valley HS,,422244007521,10157,AP Computer Science A,89,23,1,1,0,0,2,1,0
+Seneca Valley HS,,422244007521,10197,Computer Programming—Independent Study,4,2,0,0,0,0,0,0,0
+Seneca Valley HS,,422244007521,10199,Computer Programming—Other,30,1,1,1,0,0,11,9,0
+South Western SHS,,422247004608,10157,AP Computer Science A,11,4,0,1,0,0,3,0,0
+Spring-Ford SHS 9-12 Ctr,,422256003367,10152,Computer Programming,91,12,2,4,0,0,13,10,1
+Spring-Ford SHS 9-12 Ctr,,422256003367,10157,AP Computer Science A,8,2,0,0,0,0,0,0,0
+Spring Grove Area HS,,422259004623,10152,Computer Programming,13,3,0,1,0,0,2,0,0
+Spring Grove Area HS,,422259004623,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Spring Grove Area HS,,422259004623,10199,Computer Programming—Other,37,6,3,0,0,1,9,2,0
+Springfield HS,,422260001950,10019,AP Computer Science Principles,25,3,2,0,0,0,4,1,0
+Springfield HS,,422260001950,10152,Computer Programming,50,11,7,0,0,0,11,6,1
+Springfield Twp HS,,422262003376,10019,AP Computer Science Principles,13,2,1,0,0,0,1,2,0
+Springfield Twp HS,,422262003376,10156,Computer Programming—Other Language,1,1,0,0,0,0,0,0,0
+James Buchanan HS,,422274006280,10152,Computer Programming,4,0,0,0,0,0,1,1,0
+State College Area HS,,422277001364,10157,AP Computer Science A,25,8,0,1,0,0,3,0,0
+Steel Valley SHS,,422279000196,10199,Computer Programming—Other,61,21,27,1,0,0,49,22,1
+Sto-Rox JSHS,,422283000477,10152,Computer Programming,59,22,38,0,0,0,47,8,2
+Stroudsburg JHS,,422286000472,10199,Computer Programming—Other,1,0,0,0,0,0,1,0,0
+Stroudsburg MS,,422286000884,10011,Computer Science Principles,3,3,0,1,0,0,3,1,0
+Stroudsburg HS,,422286003224,10152,Computer Programming,1,1,1,0,0,0,1,0,0
+Stroudsburg HS,,422286003224,10153,Visual Basic (VB) Programming,49,4,14,11,0,0,28,11,1
+Susquehanna Community JSHS,,422298004054,10011,Computer Science Principles,20,13,0,0,0,0,10,1,0
+Susquehanna Community JSHS,,422298004054,10012,Exploring Computer Science,14,1,0,0,0,0,11,2,0
+Susquehanna Twp HS,,422301001806,10019,AP Computer Science Principles,10,2,4,1,0,0,4,0,0
+Susquehanna Twp HS,,422301001806,10152,Computer Programming,12,2,2,1,0,0,5,0,2
+Susquenita HS,,422304003589,10152,Computer Programming,27,4,0,0,0,0,12,4,0
+Susquenita HS,,422304003589,101522,Computer Programming,7,1,0,0,0,0,1,0,0
+Susquenita HS,,422304003589,10153,Visual Basic (VB) Programming,5,1,0,1,0,0,0,1,0
+Susquenita HS,,422304003589,10154,C++ Programming,4,0,0,1,0,0,2,1,0
+Susquenita HS,,422304003589,10157,AP Computer Science A,14,4,0,1,0,0,1,0,0
+Susquenita HS,,422304003589,10160,Particular Topics in Computer Programming,25,2,0,3,1,0,11,3,1
+Susquenita HS,,422304003589,10199,Computer Programming—Other,2,1,0,0,0,0,0,0,0
+Tamaqua Area SHS,,422322005070,10152,Computer Programming,17,4,1,2,0,0,9,4,0
+Riverside JSHS,,422325002496,10152,Computer Programming,2,1,0,2,0,0,2,0,0
+Titusville SHS,,422349001668,10019,AP Computer Science Principles,2,0,0,0,0,0,1,0,0
+Titusville SHS,,422349001668,10152,Computer Programming,12,0,0,0,0,0,2,0,0
+Titusville SHS,,422349001668,10157,AP Computer Science A,3,0,0,0,0,0,1,0,0
+Towanda Area JSHS,,422355005208,10160,Particular Topics in Computer Programming,25,1,1,0,0,0,1,8,0
+Conestoga SHS,,422364001423,10019,AP Computer Science Principles,62,16,1,0,0,0,2,3,2
+Conestoga SHS,,422364001423,10019,AP Computer Science Principles,83,29,2,0,0,0,6,4,4
+Conestoga SHS,,422364001423,10155,Java Programming,38,5,1,4,0,0,2,6,2
+Conestoga SHS,,422364001423,10157,AP Computer Science A,75,19,0,0,0,0,3,6,2
+Conestoga SHS,,422364001423,10197,Computer Programming—Independent Study,1,0,0,0,0,0,0,0,0
+Trinity SHS,,422376006012,10019,AP Computer Science Principles,15,9,0,0,0,0,3,1,0
+Trinity SHS,,422376006012,10152,Computer Programming,5,0,0,0,0,0,3,3,0
+Trinity SHS,,422376006012,10152,Computer Programming,11,2,0,0,0,0,4,0,0
+Trinity SHS,,422376006012,10155,Java Programming,29,3,0,0,0,1,8,2,0
+Trinity SHS,,422376006012,10157,AP Computer Science A,9,2,0,0,0,0,1,1,0
+Trinity MS,,422376006638,10013,PLTW Computer Science Essentials,44,20,0,1,0,0,19,14,0
+Trinity MS,,422376006638,10013,PLTW Computer Science Essentials,86,37,3,1,1,0,26,21,0
+Trinity MS,,422376006638,10013,PLTW Computer Science Essentials,140,65,5,0,2,0,64,24,0
+Trinity MS,,422376006638,10015,PLTW Computer Science Principles,256,145,5,4,2,0,104,36,3
+Trinity MS,,422376006638,10152,Computer Programming,63,33,1,1,1,0,30,15,0
+Trinity MS,,422376006638,10152,Computer Programming,398,203,10,3,2,0,160,64,1
+Tulpehocken JSHS,,422382004670,10152,Computer Programming,12,1,1,0,0,0,3,0,0
+Tulpehocken JSHS,,422382004670,10157,AP Computer Science A,8,0,0,1,0,0,1,0,0
+Tunkhannock HS,,422385005271,10152,Computer Programming,30,3,0,2,0,0,10,7,0
+Tunkhannock STEM Academy,,422385007647,10152,Computer Programming,49,10,0,0,0,0,21,7,0
+Twin Valley HS,,422400000873,10152,Computer Programming,30,2,1,0,0,0,9,8,0
+Twin Valley HS,,422400000873,10157,AP Computer Science A,14,1,0,2,0,0,1,1,0
+Union Area HS,,422406002712,10151,Business Programming,10,2,0,1,0,0,3,2,0
+Union Area HS,,422406002712,10152,Computer Programming,5,0,2,0,0,0,4,1,0
+Union Area HS,,422406002712,10160,Particular Topics in Computer Programming,2,0,0,0,0,0,1,0,0
+Union City HS,,422409002075,10152,Computer Programming,8,2,0,0,0,0,1,0,0
+Union City MS,,422409009966,10199,Computer Programming—Other,180,95,0,2,0,0,87,38,0
+Unionville HS,,422421001443,10019,AP Computer Science Principles,50,12,1,0,0,0,2,1,0
+Unionville HS,,422421001443,10154,C++ Programming,27,3,0,0,0,0,3,3,0
+Unionville HS,,422421001443,10156,Computer Programming—Other Language,24,5,0,1,0,0,0,2,0
+Unionville HS,,422421001443,10157,AP Computer Science A,16,4,0,0,0,0,0,0,0
+Unionville HS,,422421001443,10157,AP Computer Science A,20,7,0,0,0,0,1,1,0
+Charles F Patton MS,,422421006719,10152,Computer Programming,89,26,0,5,0,0,7,13,0
+United JSHS,,422424002358,10152,Computer Programming,1,1,0,0,0,0,1,1,0
+United JSHS,,422424002358,10152,Computer Programming,7,3,0,0,0,0,4,0,0
+United JSHS,,422424002358,10156,Computer Programming—Other Language,16,3,0,0,0,0,8,3,0
+United JSHS,,422424002358,10157,AP Computer Science A,2,1,0,0,0,0,1,0,0
+Biglerville HS,,422430000021,10156,Computer Programming—Other Language,14,0,0,1,0,0,2,0,0
+Drexel Hill MS,,422432001971,10152,Computer Programming,25,4,10,1,0,0,8,1,0
+Upper Darby SHS,,422432001972,10019,AP Computer Science Principles,12,3,0,0,0,0,7,0,0
+Upper Darby SHS,,422432001972,10019,AP Computer Science Principles,24,4,6,1,0,0,12,0,0
+Upper Darby SHS,,422432001972,10019,AP Computer Science Principles,41,11,7,2,0,0,24,0,0
+Upper Darby SHS,,422432001972,10152,Computer Programming,119,31,45,6,0,0,59,5,11
+Upper Darby SHS,,422432001972,10157,AP Computer Science A,28,8,6,0,0,0,12,0,0
+Upper Dublin HS,,422439005078,10019,AP Computer Science Principles,20,3,2,2,0,0,1,0,1
+Upper Dublin HS,,422439005078,10157,AP Computer Science A,22,2,0,1,0,0,4,1,1
+Upper Merion HS,,422448003395,10019,AP Computer Science Principles,19,6,2,3,0,0,2,3,0
+Upper Merion HS,,422448003395,10155,Java Programming,1,0,0,0,0,0,0,0,0
+Upper Merion HS,,422448003395,10157,AP Computer Science A,2,1,0,1,0,0,0,0,0
+Upper Moreland MS,,422451005249,10152,Computer Programming,35,14,5,2,0,0,10,4,0
+Upper Perkiomen HS,,422454005081,10054,Data Systems/Processing,17,10,0,0,0,0,3,0,0
+Upper Saint Clair HS,,422457000492,10152,Computer Programming,45,8,2,0,0,0,8,4,1
+Upper Saint Clair HS,,422457000492,10157,AP Computer Science A,32,5,0,0,0,0,0,0,0
+Wallenpaupack Area HS,,422475004310,10152,Computer Programming,4,1,0,0,0,0,0,1,0
+Wallenpaupack Area HS,,422475004310,10152,Computer Programming,16,1,0,0,0,0,11,3,0
+Strath Haven HS,,422479005287,10157,AP Computer Science A,94,21,6,1,0,0,3,5,0
+Strath Haven HS,,422479005287,10160,Particular Topics in Computer Programming,24,3,4,3,0,0,2,8,0
+Strath Haven HS,,422479005287,10197,Computer Programming—Independent Study,1,0,0,0,0,0,0,0,0
+Warrior Run HS,,422487005103,10152,Computer Programming,1,1,0,0,0,0,0,0,0
+Warwick SHS,,422496002663,10152,Computer Programming,99,23,1,5,2,0,21,7,0
+Warwick SHS,,422496002663,10154,C++ Programming,39,6,0,0,0,1,8,0,0
+Warwick SHS,,422496002663,10157,AP Computer Science A,37,15,1,0,0,0,2,0,0
+Honesdale HS,,422497004295,10152,Computer Programming,1,1,0,0,0,0,0,0,0
+Honesdale HS,,422497004295,10152,Computer Programming,2,0,0,0,0,0,2,0,0
+Washington HS,,422499004286,10019,AP Computer Science Principles,4,1,3,0,0,0,2,0,0
+Washington HS,,422499004286,10152,Computer Programming,1,0,0,0,0,0,1,0,0
+Washington HS,,422499004286,10152,Computer Programming,20,12,7,0,0,0,15,2,1
+Washington HS,,422499004286,10152,Computer Programming,29,8,6,1,0,0,19,4,0
+Washington HS,,422499004286,10155,Java Programming,16,3,3,1,0,0,9,0,1
+Seneca HS,,422508006148,10019,AP Computer Science Principles,5,0,0,0,0,0,2,0,0
+Seneca HS,,422508006148,10152,Computer Programming,12,3,0,0,0,0,3,2,0
+Seneca HS,,422508006148,10157,AP Computer Science A,8,2,0,0,0,0,3,0,0
+Waynesboro Area SHS,,422511002243,10012,Exploring Computer Science,19,2,0,1,0,0,6,1,0
+Waynesboro Area SHS,,422511002243,10157,AP Computer Science A,13,3,0,1,0,0,1,0,0
+Weatherly Area SHS,,422514001327,10152,Computer Programming,20,2,0,1,0,0,13,1,0
+Weatherly Area SHS,,422514001327,10153,Visual Basic (VB) Programming,1,1,0,0,0,0,1,0,0
+Weatherly Area SHS,,422514001327,10153,Visual Basic (VB) Programming,29,15,0,3,0,0,18,8,0
+Weatherly Area SHS,,422514001327,10199,Computer Programming—Other,8,0,0,0,0,0,5,0,0
+Wellsboro Area HS,,422517004080,10153,Visual Basic (VB) Programming,6,0,0,0,0,0,0,1,0
+West Allegheny SHS,,422520000509,10019,AP Computer Science Principles,16,8,0,0,0,0,3,2,0
+West Allegheny SHS,,422520000509,10019,AP Computer Science Principles,21,2,2,1,0,0,1,5,0
+West Allegheny SHS,,422520000509,10152,Computer Programming,24,3,1,1,0,0,6,9,0
+West Allegheny SHS,,422520000509,10157,AP Computer Science A,10,1,0,0,0,0,4,0,0
+West Allegheny SHS,,422520000509,10199,Computer Programming—Other,11,1,0,0,0,0,0,1,0
+West Chester Bayard Rustin HS,,422529000969,10019,AP Computer Science Principles,16,4,0,0,0,1,1,0,1
+West Chester Bayard Rustin HS,,422529000969,10152,Computer Programming,32,6,1,0,0,0,1,3,1
+West Chester Bayard Rustin HS,,422529000969,10154,C++ Programming,20,3,0,0,0,0,1,1,0
+West Chester Bayard Rustin HS,,422529000969,10157,AP Computer Science A,16,2,0,0,0,0,0,2,0
+West Chester Henderson HS,,422529001453,10019,AP Computer Science Principles,21,6,1,1,0,0,3,0,1
+West Chester Henderson HS,,422529001453,10019,AP Computer Science Principles,25,8,0,5,0,0,8,1,1
+West Chester Henderson HS,,422529001453,10152,Computer Programming,14,5,1,0,0,0,0,0,0
+West Chester Henderson HS,,422529001453,10152,Computer Programming,21,1,0,1,0,0,3,1,0
+West Chester Henderson HS,,422529001453,10154,C++ Programming,13,0,0,1,0,0,3,0,0
+West Chester Henderson HS,,422529001453,10154,C++ Programming,14,4,1,0,0,0,0,0,0
+West Chester Henderson HS,,422529001453,10157,AP Computer Science A,50,9,1,0,0,0,2,0,0
+West Chester East HS,,422529006734,10019,AP Computer Science Principles,15,1,2,1,0,0,1,0,0
+West Chester East HS,,422529006734,10152,Computer Programming,25,4,1,1,0,0,3,4,0
+West Chester East HS,,422529006734,10154,C++ Programming,16,3,1,1,0,0,1,1,0
+West Chester East HS,,422529006734,10157,AP Computer Science A,23,4,0,1,0,0,2,0,0
+West Greene JSHS,,422544007638,10152,Computer Programming,17,4,0,0,0,0,5,0,0
+Thomas Jefferson HS,,422559000523,10011,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Thomas Jefferson HS,,422559000523,10011,Computer Science Principles,3,1,1,0,0,0,2,0,0
+Thomas Jefferson HS,,422559000523,10019,AP Computer Science Principles,6,0,0,0,0,0,1,0,0
+Thomas Jefferson HS,,422559000523,10154,C++ Programming,28,3,0,0,0,0,4,0,0
+Thomas Jefferson HS,,422559000523,10156,Computer Programming—Other Language,99,16,1,3,0,0,19,6,1
+West Middlesex Area JSHS,,422565006129,10012,Exploring Computer Science,6,2,0,0,1,0,2,1,0
+West Mifflin Area HS,,422568000536,10154,C++ Programming,6,0,0,1,0,0,1,0,0
+West Mifflin Area HS,,422568000536,10157,AP Computer Science A,4,0,0,0,0,0,1,1,0
+West Perry SHS,,422574003596,10152,Computer Programming,32,7,0,0,0,0,11,1,0
+West Perry SHS,,422574003596,101522,Computer Programming,9,4,0,0,0,0,3,0,0
+West Perry SHS,,422574003596,101522,Computer Programming,32,6,1,1,0,0,15,5,0
+West Perry SHS,,422574003596,10154,C++ Programming,19,2,0,0,0,0,10,7,0
+West Perry SHS,,422574003596,10157,AP Computer Science A,5,0,0,0,0,0,1,0,0
+West Perry SHS,,422574003596,10199,Computer Programming—Other,23,1,0,1,0,0,9,1,0
+West Perry MS,,422574003597,10160,Particular Topics in Computer Programming,175,75,0,3,0,1,73,29,0
+Cedar Cliff HS,,422583001732,10152,Computer Programming,30,4,2,1,0,0,12,3,0
+Red Land SHS,,422583004704,10152,Computer Programming,6,1,1,0,0,0,3,0,0
+West Side CTC,,422587005059,10151,Business Programming,37,8,2,2,0,0,18,19,0
+Wyoming Valley West SHS,,422595006391,10152,Computer Programming,62,11,1,4,0,0,30,2,0
+Wyoming Valley West SHS,,422595006391,10157,AP Computer Science A,3,0,0,1,0,0,2,0,0
+West York Area HS,,422598006705,10152,Computer Programming,1,1,0,0,0,0,0,0,0
+West York Area MS,,422598009971,10012,Exploring Computer Science,89,40,10,11,0,0,62,23,3
+West York Area MS,,422598009971,10013,PLTW Computer Science Essentials,179,88,15,33,0,0,106,28,5
+Western Wayne HS,,422607006704,10019,AP Computer Science Principles,5,0,0,1,0,0,2,0,0
+Western Wayne HS,,422607006704,10152,Computer Programming,24,2,0,2,0,0,11,5,0
+Western Wayne HS,,422607006704,10199,Computer Programming—Other,5,0,0,1,0,0,2,0,0
+Westmont Hilltop JSHS,,422613007578,10019,AP Computer Science Principles,24,8,0,0,0,0,5,2,0
+Westmont Hilltop JSHS,,422613007578,10157,AP Computer Science A,9,2,0,0,0,0,1,1,0
+Whitehall HS,,422625002848,10012,Exploring Computer Science,23,6,1,7,0,0,13,3,4
+Whitehall HS,,422625002848,10019,AP Computer Science Principles,10,2,0,1,0,0,5,0,0
+Whitehall HS,,422625002848,10154,C++ Programming,25,1,0,8,0,0,12,3,1
+Whitehall HS,,422625002848,10155,Java Programming,14,1,0,3,0,0,8,0,0
+Whitehall HS,,422625002848,10157,AP Computer Science A,13,3,2,2,0,0,7,0,0
+Whitehall HS,,422625002848,10205,Computer Gaming and Design,26,0,3,5,0,0,12,8,2
+Whitehall HS,,422625002848,10205,Computer Gaming and Design,89,5,14,28,0,0,56,20,10
+James M Coughlin JSHS,,422630003007,10152,Computer Programming,34,12,0,2,0,0,16,1,0
+G A R Memorial JSHS,,422630003008,10152,Computer Programming,45,16,8,23,0,0,43,8,1
+Elmer L Meyers JSHS,,422630003009,10152,Computer Programming,13,2,1,4,0,0,11,0,0
+Penn Wood HS,,422639007452,10157,AP Computer Science A,7,1,5,0,0,0,3,0,0
+Williams Valley JSHS,,422640003914,10019,AP Computer Science Principles,3,0,0,0,0,0,0,0,0
+Williams Valley JSHS,,422640003914,10152,Computer Programming,30,2,0,2,0,0,13,6,0
+Wilmington Area HS,,422652002721,10152,Computer Programming,37,16,1,0,0,0,18,8,0
+Wilson Area HS,,422655003522,10152,Computer Programming,13,2,3,4,0,0,6,1,1
+Wilson Area Intermediate Sch,,422655006785,10152,Computer Programming,163,74,16,37,0,0,77,25,4
+Wilson HS,,422658006980,10019,AP Computer Science Principles,34,8,0,5,0,0,5,0,0
+Wilson HS,,422658006980,10152,Computer Programming,1,0,0,1,0,0,0,0,0
+Wilson HS,,422658006980,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Wilson Southern MS,,422658006982,10160,Particular Topics in Computer Programming,1,0,0,0,0,0,0,0,0
+Windber Area HS,,422661004026,10157,AP Computer Science A,4,1,0,0,0,0,1,0,0
+Wyalusing Valley JSHS,,422670001005,10155,Java Programming,9,4,0,1,0,0,1,0,0
+Wyalusing Valley JSHS,,422670001005,10157,AP Computer Science A,8,4,0,0,0,0,4,0,0
+Wyoming Area Sec Ctr,,422673006390,10019,AP Computer Science Principles,11,0,0,1,0,0,3,1,0
+Wyoming Area Sec Ctr,,422673006390,10152,Computer Programming,25,5,1,0,0,0,11,5,0
+Wyomissing Area JSHS,,422676000887,10152,Computer Programming,19,7,2,4,0,0,7,4,0
+Wyomissing Area JSHS,,422676000887,10153,Visual Basic (VB) Programming,23,7,0,4,0,0,11,3,0
+Wyomissing Area JSHS,,422676000887,10153,Visual Basic (VB) Programming,120,30,2,21,3,0,38,11,1
+Wyomissing Area JSHS,,422676000887,10157,AP Computer Science A,9,1,0,0,0,0,0,0,0
+York Co School of Technology,,422681005168,10199,Computer Programming—Other,2,2,0,0,0,0,0,1,0
+York Co School of Technology,,422681005168,10199,Computer Programming—Other,98,15,7,18,2,0,50,17,4
+William Penn SHS,,422682004647,10019,AP Computer Science Principles,40,12,12,18,0,0,24,0,1
+William Penn SHS,,422682004647,10152,Computer Programming,3,1,2,1,0,0,1,0,0
+William Penn SHS,,422682004647,10152,Computer Programming,39,20,13,20,0,0,32,6,4
+York Suburban SHS,,422685004658,10152,Computer Programming,34,2,0,4,0,0,9,2,2
+York Suburban SHS,,422685004658,10156,Computer Programming—Other Language,16,1,1,1,0,0,3,0,0
+York Suburban SHS,,422685004658,10157,AP Computer Science A,15,1,0,1,0,0,6,0,0
+York Suburban SHS,,422685004658,10197,Computer Programming—Independent Study,2,0,0,0,0,0,0,0,0
+Berks CTC-West Campus,,428006007047,10151,Business Programming,36,3,2,4,0,0,7,13,0
+Greater Altoona CTC,,428008007049,10152,Computer Programming,37,4,0,1,0,0,26,9,0
+Cumberland Perry AVTS,,428018007059,10152,Computer Programming,43,4,1,1,0,0,0,8,0
+Schuylkill Technology Centers-South Camp,,428062007104,10156,Computer Programming—Other Language,48,8,0,4,0,0,26,18,0
