@@ -94,15 +94,7 @@ class Lesson < ApplicationRecord
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_blank_display_name(raw_lesson)
 
-      lesson = unit.lessons.detect {|l| l.key == raw_lesson[:key]} ||
-        Lesson.find_or_create_by(
-          key: raw_lesson[:key],
-          script: unit
-        ) do |l|
-          l.name = raw_lesson[:name]
-          l.relative_position = 0 # will be updated below, but cant be null
-          l.has_lesson_plan = true # will be reset below if specified
-        end
+      lesson = fetch_lesson(raw_lesson, unit)
 
       numbered_lesson = !!raw_lesson[:has_lesson_plan] || !raw_lesson[:lockable]
 
@@ -115,6 +107,18 @@ class Lesson < ApplicationRecord
       lesson.reload
       lesson
     end
+  end
+
+  def self.fetch_lesson(raw_lesson, unit)
+    unit.lessons.detect {|l| l.key == raw_lesson[:key]} ||
+      Lesson.find_or_create_by(
+        key: raw_lesson[:key],
+        script: unit
+      ) do |l|
+        l.name = raw_lesson[:name]
+        l.relative_position = 0 # will be updated below, but cant be null
+        l.has_lesson_plan = true # will be reset below if specified
+      end
   end
 
   def self.add_lessons(unit, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
