@@ -13,7 +13,7 @@ class CachingTest < ActionDispatch::IntegrationTest
   end
 
   test "should get /s/frozen" do
-    assert_cached_queries(0) do
+    assert_cached_queries(10) do
       get '/s/frozen'
     end
     assert_response :success
