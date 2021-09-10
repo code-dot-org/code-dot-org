@@ -134,6 +134,8 @@ lt:
     email_preference_privacy: Tikrinti savo privatumą
     email_preference_yes: Taip
     email_preference_no: Ne
+    share_teacher_email_reg_partner_preference_yes: Taip
+    share_teacher_email_reg_partner_preference_no: Ne
   school_info:
     title: Mokyklos informacija (neprivaloma)
     select_school_type: Mokyklos tipas
