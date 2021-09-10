@@ -35,6 +35,24 @@
         "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
+        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
+          "description": "Déterminer la valeur de départ, la valeur d'arrêt et la valeur de progression pour une boucle « pour »."
+        },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Illustrer les valeurs de compteur, frappées à chaque fois, via une boucle « pour » pendant l'exécution."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Déterminer la valeur de départ, la valeur d'arrêt et la valeur de progression pour une boucle `« pour »`."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "Reconnaître quand utiliser une boucle « pour » et quand utiliser d'autres boucles telles que les boucles « répéter » et « tant que »."
+        },
+        "68c038c1-990a-4009-ad61-619ba6ea71af": {
+          "description": "Utilise des boucles `« pour »` pour changer de boucle plusieurs fois avec des valeurs différentes."
+        },
+        "7ad09074-8899-4330-bb54-6a00c5164299": {
+          "description": "Reconnaître quand utiliser une boucle « pour » et quand utiliser d'autres boucles telles que les boucles « répéter » et « tant que »."
+        },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "Discutez du rôle que joue l'intelligence artificielle dans leur vie."
         },
@@ -556,6 +574,18 @@
         },
         "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4": {
           "description": "Utiliser des variables pour modifier les valeurs à l'intérieur d'une boucle."
+        },
+        "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
+          "description": "Déterminer la valeur de départ, la valeur d'arrêt et la valeur de progression pour une boucle `« pour »`."
+        },
+        "3abab07c-e404-45d4-ab89-f92a34c68356": {
+          "description": "Reconnaître quand utiliser une boucle « pour » et quand utiliser d'autres boucles telles que les boucles « répéter » et « tant que »."
+        },
+        "1b705c64-cbba-4dfe-8d47-549eb6754326": {
+          "description": "Utilise des boucles `« pour »` pour changer de boucle plusieurs fois avec des valeurs différentes."
+        },
+        "a5169230-8faf-4492-bc49-ca11dca864fa": {
+          "description": "Reconnaître quand utiliser une boucle « pour » et quand utiliser d'autres boucles telles que les boucles « répéter » et « tant que »."
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."

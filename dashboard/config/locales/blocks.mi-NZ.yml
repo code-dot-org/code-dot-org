@@ -1060,6 +1060,10 @@ mi:
             '"z"': z
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ua
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1069,6 +1073,10 @@ mi:
         text: pāwhiria {SPRITE}
       gamelab_objectSpritePointer:
         text: pāwhiria {SPRITE}
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": karihi
       gamelab_randColor:
         text: tae matapōkere
       gamelab_randomColor:
@@ -1332,14 +1340,23 @@ mi:
             '"right"': tohu katau
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"rainbow"': kahukura
+          EFFECT:
+            '"colors"': Tae
+            '"squiggles"': Ngā Koropikopiko
+            '"space"': Tuarangi
+            '"stars"': Ngā Whetū
+            '"ripples"': Ngā Pungarungaru
+          PALETTE:
+            '"rainbow"': Āniwaniwa
       PoemBot_setForegroundEffect:
-        text: whakarite i te papamua {FG_EFFECT}
+        text: whakarite i te papamua {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': ua
-            '"bubbles"': ngā mirumiru
+          EFFECT:
+            '"rain"': Ua
+            '"bubbles"': Ngā mirumiru
+            '"hearts"': Manawa Tae
+            '"confetti"': Pepa tae iti
+            '"starburst"': Pāpahu Whetū
       RyanLab_moveForward:
         text: neke ki mua
       RyanLab_turnLeft:

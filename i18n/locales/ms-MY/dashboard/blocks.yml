@@ -1085,6 +1085,8 @@ ms:
         text: mengklik {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
+      gamelab_playSoundOptions:
+        text: PlaySound {SOUND}
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1453,15 +1455,27 @@ ms:
         text: raksasa mula memakai pelitup muka
       Outbreak_stopMoving:
         text: raksasa berhenti bergerak
+      PoemBot_playSound:
+        text: PlaySound {SOUND}
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"rainbow"': pelangi
+          EFFECT:
+            '"colors"': Warna
+            '"squiggles"': Cacing Kerawit
+            '"space"': Ruang
+            '"stars"': Bintang
+            '"ripples"': Riak
+          PALETTE:
+            '"rainbow"': Pelangi
       PoemBot_setForegroundEffect:
-        text: tetapkan kesan {FG_EFFECT} latar depan
+        text: tetapkan kesan {EFFECT} latar depan
         options:
-          FG_EFFECT:
-            '"bubbles"': gelembung
+          EFFECT:
+            '"rain"': Hujan
+            '"bubbles"': Gelembung
+            '"hearts"': Hati Berwarna-warni
+            '"confetti"': Konfeti
+            '"starburst"': Pecahan Cahaya
       RyanLab_moveForward:
         text: bergerak ke hadapan
       RyanLab_turnLeft:

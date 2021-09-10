@@ -110,11 +110,92 @@
         "teacher_forum_1/courseb/2021": {
           "name": "Lehrer Forum"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "Sicherheit in meiner Online-Nachbarschaft: Lektion Folien"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "Sicherheit in meiner Online-Nachbarschaft: Meine Online-Nachbarschaft"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "Sicherheit in meiner Online-Nachbarschaft: Sicherheit: Es regiert!"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "Sicherheit in meiner Online-Nachbarschaft: Pause und Denk-Moment"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Paarprogrammierung"
         },
+        "20_20_20_rule/coursea/2021": {
+          "name": "20/20/20-Regel"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "name": "Wiggles-Go Noodle"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "Wie man einen Klassenabschnitt auf Code.org erstellt"
+        },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Glücklich Karten"
+        },
+        "happy-map-cards/coursea/2021": {
+          "name": "Happy Maps - Fröhliche Karten - Überprüfung"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "Happy Maps - Fröhliche Karten - Überprüfung"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "Happy Maps - Fröhliche Karten - Spielsteine"
+        },
+        "feeling_faces_-_emotion_image/coursea/2021": {
+          "name": "Gefühlsgesichter - Emotion Image"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "Unplugged Blockly Blocks (Grades K-1)"
+        },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "20/20/20-Regel"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "name": "Wiggles - GoNoodle"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "Debuggen mit dem Step Button"
+        },
+        "feeling_faces_emotion_image/coursea/2021": {
+          "name": "Gefühlsgesichter Emotion Image"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "Gefühlsgesichter - Emotion Image"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "Happy Maps - Fröhliche Karten XL"
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "Spielsteine Bonus-Pack"
+        },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "Gefühlsgesichter Emotion Image"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "Fühlende Gesichter"
+        },
+        "pair-programming/coursea/2021": {
+          "name": "Paarprogrammierung"
+        },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "Gefühlsgesichter Emotion Image"
+        },
+        "csf_lesson_recommendations/coursea/2021": {
+          "name": "CSF Lektion Empfehlungen"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "name": "Pause und Denken Online"
+        },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Gefühlsgesichter Emotion Image"
+        },
+        "csf_lesson_recommendations_1/coursea/2021": {
+          "name": "CSF Lektion Empfehlungen"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Der große Event"
@@ -125,11 +206,53 @@
         "assessment-answer-big-event/coursea/2021": {
           "name": "Der große Event"
         },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "Das große Ereignis (Kurse A-B)"
+        },
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "Gefühlsgesichter - Emotion Image"
+        },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "CS Fundamentals Hauptaktivität Tipps"
+        },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "Gefühlsgesichter - Emotion Image"
+        },
+        "csf_lesson_recommendations_2/coursea/2021": {
+          "name": "CSF Lektion Empfehlungen"
+        },
+        "artist_project_planning_guide/coursea/2021": {
+          "name": "Artist Project Planning Guide"
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "name": "Artist Project Planning Guide"
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "CSTA Standards Mapping"
+        },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "Common Core und NGSS Anleitung"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "Fächerübergreifende Erweiterungsaktivitäten"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "Kurs Vokabeln"
+        },
         "implementation_guide/coursea/2021": {
           "name": "Einführungsleitfaden"
         },
+        "lesson_type_guide/coursea/2021": {
+          "name": "Lektionstyp Anleitung"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "Anleitung zur Fehlerbehebung (Debuggen)"
+        },
         "curriculum_guide_1/coursea/2021": {
           "name": "Bildungsinhaltsführer"
+        },
+        "2021_change_log/coursea/2021": {
+          "name": "2021 Änderungsprotokoll"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Lehrer Forum"

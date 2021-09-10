@@ -563,6 +563,17 @@ ar:
         codebreak_e01: 'برنامج Code Break 1.0: الخوارزميات مع هيل هاربر'
         codebreak_e02: 'برنامج Code Break 2.0: النماذج الأولية مع مارك كوبان وليندسي سكوت'
         codebreak_e03: 'برنامج Code Break 3.0: التشفير مع أشتون كوتشر ومايا جيل إبنر'
+        codebreak_e04: Code Break 4.0 المعلومات الرقمية مع مايك كريجر وأليس كيلر
+        codebreak_e05: 'Code Break 5.0: المحاكاة والبيانات مع بيل جيتس'
+        csd_how_teamwork_works: كيف يعمل العمل الجماعي
+        csd_teamwork_and_disagreement: العمل الجماعي - التعامل مع الخلاف
+        codebreak_e06: 'Code Break 6.0: الإنترنت مع Keegan-Michael Scott & Vint Cerf'
+        codebreak_e07: 'Code Break 7.0: الشرط مع Sal Khan و Flo Vaughn'
+        codebreak_e08: 'Code Break 8.0: المتغيرات مع Yara Shahidi و Fuzzy Khosrowshahi'
+        codebreak_e09: 'Code Break 8.0: المتغيرات مع يارا شهيدي و Fuzzy Khosrowshahi'
+        codebreak_e10: 'Code Break 10.0: الذكاء الاصطناعي مع كات جراهام وكيت بارك'
+        codebreak_e11: 'Code Break 11.0: التجريد مع سوزان وجسيكي وتشاينا آن ماكلين'
+        codebreak_e12: 'Code Break 12.0: أجهزة مزودة بـ Aloe Blacc و Bret Taylor و Paula Mejia'
         playlab_2021: مقدمة لمختبر اللعب
         playlab_2021_reader: مقدمة لمختبر اللعب
     callout:

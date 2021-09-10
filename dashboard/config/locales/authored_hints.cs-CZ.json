@@ -75,7 +75,7 @@
         },
         "2-3 Artist Loops New 11": {
           "2-3_Artist_Loops_New_11_b": "Tvé nové otočení by mělo jít na **konec** kódu uvnitř cyklu.",
-          "2-3_Artist_Loops_New_11_a": "Vzpomeň si na kód z minulé úlohy:\n\n[blockly block][0]"
+          "2-3_Artist_Loops_New_11_a": "Vzpomeň si na kód z minulé úlohy:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">8</title>\n        <statement name=\"DO\">\n          <block type=\"draw_colour\" inline=\"true\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_random\"/>\n            </value>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">turnRight</title>\n                <title name=\"VALUE\" config=\"45,60,90,120,180\">45</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">50</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant_dropdown\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <title name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n                        <next>\n                          <block type=\"draw_move_by_constant\">\n                            <title name=\"DIR\">moveForward</title>\n                            <title name=\"VALUE\">50</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "2-3 Artist Loops New 12": {
           "2-3_Artist Loops_New_12_a": "Než začne diamant, umělec se potřebuje otočit doleva o 60 stupňů, aby byl správně nasměrován.",
@@ -112,7 +112,7 @@
         "2-3 Bee Conditionals 14": {
           "2-3_Bee_Conditionals_14_a": "Těžko najít způsob, jak vyzrát na bloky? Zkus zacházet s červenou květinou úplně stejně jako s fialovou květinou!",
           "2-3_Bee_Conditionals_14_b": "Pokud by červená květina byla fialová, našel bys jak použít blok `opakuj` abys zmenšil kód?",
-          "2-3_Bee_Conditionals_14_c": "Zkus to rozložit na dva samostatné úkoly:\n\n[][0]\n\n1.  Získat nektar 3 krát\n    -   Posun se vpřed 5 krát\n    -   Zkontroluj, jestli je tam nektar: pokud ano, získej ho\n    -   Otoč se doleva\n\n2.  Vyrob med\n    -   Posuň se vpřed 2 krát\n    -   Vyrob dva medy"
+          "2-3_Bee_Conditionals_14_c": "Zkus to rozložit na dva samostatné úkoly:\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.  Získat nektar 3 krát\n    -   Posun se vpřed 5 krát\n    -   Zkontroluj, jestli je tam nektar: pokud ano, získej ho\n    -   Otoč se doleva\n\n2.  Vyrob med\n    -   Posuň se vpřed 2 krát\n    -   Vyrob dva medy"
         },
         "2-3 Bee Conditionals 15": {
           "2-3_Bee_Conditionals_15_a": "Pamatuj: Fialová květina může mít 0 nebo 1 nektaru and mohou se změnit pokaždé, když spustíš program."
@@ -827,7 +827,7 @@
           "mc_9_c": "K umístění pochodně na políčko pod sebou použij `umísti pochodeň` blok."
         },
         "course1_artist_loops_challenge1": {
-          "courseA_artist_loops_challenge1_a": "Můžeš použít podobný cyklus k vytvoření zdí a střechy. Zkus opakovat různé bloky.\n\n[][0]\n\nVytvoř svoje vlastní nebo stiskni [][1] pro nějaké nápady!",
+          "courseA_artist_loops_challenge1_a": "Můžeš použít podobný cyklus k vytvoření zdí a střechy. Zkus opakovat různé bloky.\n\n![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)\n\nVytvoř svoje vlastní nebo stiskni ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) pro nějaké nápady!",
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "courseA_artist_loops_challenge1_c": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "courseA_artist_loops_challenge1_d": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -845,11 +845,11 @@
         },
         "course1_collector_loops_challenge2": {
           "courseA_collector_loops_challenge2_b": "K vyřešení této hádanky potřebuješ pouze jeden \\[] [0] blok.",
-          "courseA_collector_loops_challenge2_a": "Než se přesuneš na jih, můžeš se vrátit po stejné cestě.\n\n[][0]"
+          "courseA_collector_loops_challenge2_a": "Než se přesuneš na jih, můžeš se vrátit po stejné cestě.\n\n![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)"
         },
         "course1_collector_loops_challenge3": {
-          "courseB_collector_loops_challenge1_b": "Začni opakováním příkazů „posuň se na jih“ a „získej poklad“.\n\n[blockly block][0]",
-          "courseB_collector_loops_challenge1_a": "Severní vzor je mírně odlišný od jižního.\n\n[blockly block][0]"
+          "courseB_collector_loops_challenge1_b": "Začni opakováním příkazů „posuň se na jih“ a „získej poklad“.\n\n<xml>\n  <block type=\"maze_moveSouth\"/><next>\n  <block type=\"collector_collect\"/></next>\n  </xml>",
+          "courseB_collector_loops_challenge1_a": "Severní vzor je mírně odlišný od jižního.\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>"
         },
         "course1_maze_debugging_challenge1": {
           "courseA_maze_seq_challenge1_a": "Některé cesty povedou k TNT, pokud se posuneš příliš daleko."
@@ -879,12 +879,12 @@
         "course2_harvester_loops_challenge1": {
           "courseC_harvester_loops_challenge1_a": "Ani nepřemýšlej, že bys to zkoušel bez cyklů!",
           "courseC_harvester_loops_challenge1_b": "Můžeš opakovat sekvenci `posuň se vpřed` a `vyber kukuřici` kolikrát je potřeba a potom zatočit pomocí `otoč se vpravo` na každém rohu.",
-          "courseC_harvester_loops_challenge1_c": "Pro sesbírání prvních čtyř kukuřicí bude nejlepší použít `opakuj X krát` bloček ve druhé bločku `opakuj X krát`. Podobně můžeš vyřešit i zbytek hádanky.\n\n[blockly block][0]"
+          "courseC_harvester_loops_challenge1_c": "Pro sesbírání prvních čtyř kukuřicí bude nejlepší použít `opakuj X krát` bloček ve druhé bločku `opakuj X krát`. Podobně můžeš vyřešit i zbytek hádanky.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">2</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></next></block></xml>"
         },
         "course2_maze_loops_challenge1": {
           "courseC_maze_loops_challenge1_a": "Přemýšlejte nad touto cestou jako o třech různých úsecích. Každý z nich má vzor, který můžete opakovat.",
           "courseC_maze_loops_challenge1_b": "Mezi bloky `opakuj` budete potřebovat bloky `otočit vlevo` nebo `otočit vpravo`, aby byl Scrat připraven na další vzor.",
-          "courseC_maze_loops_challenge1_c": "Když už jsi se dostal takhle daleko, stačí ti pouze `otoč se vlevo` a několik bločků `posuň se vpřed`. Nevzdávej to!\n\n[][0]"
+          "courseC_maze_loops_challenge1_c": "Když už jsi se dostal takhle daleko, stačí ti pouze `otoč se vlevo` a několik bločků `posuň se vpřed`. Nevzdávej to!\n\n![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)"
         },
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "_Couvání může být náročné na orientaci, dej si pozor při zatáčení!_",
@@ -3257,7 +3257,7 @@
           "courseC_maze_programming1_b": "Neboj se dělat chyby! Něco zkus, a když to nebude fungovat, vyzkoušej něco jiného."
         },
         "course2_artist_prog_challenge2": {
-          "courseC_artist_prog_challenge2_a": "Můžeš vložit do `opakuj` bločku aby se opakovaně vykonávaly. Zkus si to ;-)\n\n[blockly block][0]"
+          "courseC_artist_prog_challenge2_a": "Můžeš vložit do `opakuj` bločku aby se opakovaně vykonávaly. Zkus si to ;-)\n\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
         },
         "2-3 Artist Debugging 8": {
           "2-3_Artist_Debugging_8_a": "Kolikrát se můj tvar opakuje?\n\nKolikrát se _má_ opakovat?\n\nKde to můžeš v programu změnit?"
@@ -3266,7 +3266,7 @@
           "courseD_bee_conditionals_challenge1_a": "Dokážeš najít cestu, kterou se dostaneš na všechny květiny a medové plástve bez naražení do stromu? Což takhle zkusit spirálu?\n\n**Tento úkol je možné vyřešit bez použití otoč se vlevo.**"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Podobně jako při použití bločku `Pokud na květině` se kód uvnitř bločku vykonává pouze, když je včelka na květině lze využít bloček `dokud nektar > 0` k vykonávání bločků uvnitř pouze dokud květina obsahuje nektar. Vyzkoušej toto:\n\n[blockly block][0]"
+          "courseD_bee_conditionals_challenge1_b": "Podobně jako při použití bločku `Pokud na květině` se kód uvnitř bločku vykonává pouze, když je včelka na květině lze využít bloček `dokud nektar > 0` k vykonávání bločků uvnitř pouze dokud květina obsahuje nektar. Vyzkoušej toto:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "Tento úkol lze vyřešit dvěma způsoby!",
@@ -3332,7 +3332,7 @@
           "4-5_Bee_Debugging_1_a": "Pokud máš potíže se zjištěnmí, co není v pořádku, zkus spustit program, aby bylo vidět, kde se něco pokazí."
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Začni tím, že se soustředíš na sbírání DVOU drahokamů z každé z prvních dvou hromádek.\n\n[][0]\n\nVyužij následující bloky.\n\n[blockly block][1]"
+          "courseD_collector_debugging_challenge2_a": "Začni tím, že se soustředíš na sbírání DVOU drahokamů z každé z prvních dvou hromádek.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n\nVyužij následující bloky.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         },
         "outbreak5": {
           "solution2": "Váš nový kód by měl vypadat takto:\n\n[blockly block][0]"

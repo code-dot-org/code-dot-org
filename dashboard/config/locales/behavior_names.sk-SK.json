@@ -2775,6 +2775,22 @@
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
           "moving east and looping": "posun na východ a cyklenie"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "zotavenie",
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving left and right": "pohybovať sa vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "moving with arrow keys": "posúvanie klávesami so šípkami"
         }
       }
     }

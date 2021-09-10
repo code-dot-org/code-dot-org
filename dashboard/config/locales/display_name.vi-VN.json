@@ -166,10 +166,10 @@
         "CourseF_outbreak1": "Mô phỏng vi rút",
         "CourseF_outbreak2": "Mô phỏng vi rút",
         "CourseF_outbreak3": "Mô phỏng vi rút",
-        "CourseF_outbreak4": "Chỉnh sửa mô phỏng của bạn",
-        "CourseF_outbreak6": "Khả năng ngẫu nhiên",
-        "CourseF_outbreak7": "Miễn dịch và Vắc xin",
-        "CourseF_outbreak8": "Chia sẻ tin nhắn",
+        "CourseF_outbreak4": "Chỉnh sửa bản mô phỏng của bạn",
+        "CourseF_outbreak6": "Hồi phục",
+        "CourseF_outbreak7": "Khả năng ngẫu nhiên",
+        "CourseF_outbreak8": "Miễn dịch và Vắc xin",
         "MC_HOC_2017_01_RETRY_2021": "Homestead",
         "MC_HOC_2017_02_Cole_2021": "Nông trại",
         "MC_HOC_2017_03_Cole_2021": "Rừng rậm",
@@ -257,7 +257,19 @@
         "courseF_variables_madlib_finish": "Câu chuyện khoảng trống, Phần 2",
         "ramp_artist_loops4_2021": "Ngôi sao",
         "ramp_artist_loops6v1_2021": "Cầu thang",
-        "ramp_artist_loops8_2021": "Hình bát giác"
+        "ramp_artist_loops8_2021": "Hình bát giác",
+        "CDEF_video_SpritesInAction_2021": "Cách tạo nhân vật",
+        "CourseEF_video_IntroSpriteLab_2021": "Đây là Sprite Lab",
+        "CourseEF_video_MakeSprite_2021": "Cách tạo nhân vật",
+        "CourseEF_video_MakeSprite_2021-2": "Cách tạo nhân vật",
+        "CourseF_outbreak5": "Chỉnh sửa bản mô phỏng của bạn",
+        "CourseF_video_introSpriteLab_2021": "Đây là Sprite Lab",
+        "courseF_apps_collector": "Trò chơi nhà sưu tầm",
+        "courseF_lotsofsprites_video": "Cách tạo nhân vật",
+        "courseF_pilotVideo_events": "Cách tạo nhân vật",
+        "courseF_pilotVideo_prompts": "Cách tạo nhân vật",
+        "courseF_sprites_properties": "Thuộc tính của nhân vật",
+        "international_outbreak_freeplay": "Chia sẻ thông điệp"
       }
     }
   }

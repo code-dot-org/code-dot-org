@@ -128,6 +128,8 @@ sl:
     error: "Prišlo je do napake."
     email_preference_yes: "Da"
     email_preference_no: "Ne"
+    share_teacher_email_reg_partner_preference_yes: "Da"
+    share_teacher_email_reg_partner_preference_no: "Ne"
   school_info:
     private: 'zasebna'
     other: 'Drugi'

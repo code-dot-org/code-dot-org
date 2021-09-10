@@ -16387,6 +16387,14 @@ mn:
               display_name: 'Илүү гүн шумбах: Е ба F хичээлүүд'
             Introduction:
               display_name: Танилцуулга
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Хичээл 3
+            Lesson 4:
+              display_name: Хичээл 4
+            Lesson 5:
+              display_name: Хичээл 5
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -16503,8 +16511,10 @@ mn:
               name: Модуль 2
             Module 3:
               key: Модуль 3
+              name: Модуль 3
             Module 4:
               key: Модуль 4
+              name: Модуль 4
             Module 5:
               key: Модуль 5
             Module 6:
@@ -16578,3 +16588,11 @@ mn:
               display_name: Хичээлүүд
             lessonGroup-3:
               display_name: Төсөл
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Тооцоолол дээрх инноваци
+            lesson-13:
+              name: Хурдасгуур хэмжигч
+            lesson-19:
+              name: Төсөл

@@ -165,6 +165,10 @@ he:
     email_preference_yes: כן
     email_preference_no: לא
     email_preference_required: עליך לציין העדפה של דואר אלקטרוני.
+    share_teacher_email_reg_partner_preference_yes: כן
+    share_teacher_email_reg_partner_preference_no: לא
+    share_teacher_email_reg_partner_preference_required: עליך לציין העדפה של דואר
+      אלקטרוני.
   school_info:
     title: מידע על בית הספר (רשות)
     school_country: ארץ בית הספר

@@ -3152,9 +3152,9 @@
         "CourseF_outbreak3": "Convierte monstruos en monstruos con máscaras faciales cuando haces clic en ellos.",
         "CourseF_outbreak4": "Cambia el número y el tamaño de los sprites de monstruos para tu simulación.",
         "CourseF_outbreak5": "Todos los monstruos enfermos comienzan a recuperarse automáticamente.",
-        "CourseF_outbreak6": "Agrega un porcentaje de probabilidad de que los monstruos se enfermen cada vez que monstruos sanos toquen monstruos enfermos. Haz esto para todas las combinaciones de monstruos con y sin máscaras.",
-        "CourseF_outbreak7": "Crea un nuevo disfraz para monstruos con inmunidad al virus y úsalo en tu simulación.",
-        "CourseF_outbreak8": "Comparte un mensaje con tu simulación.",
+        "CourseF_outbreak6": "Haz que todos los monstruos enfermos empiecen a recuperarse cuando un monstruo sano toque a un monstruo enfermo.",
+        "CourseF_outbreak7": "Agrega un porcentaje de probabilidad de que los monstruos se enfermen cada vez que monstruos sanos toquen monstruos enfermos. Haz esto para todas las combinaciones de monstruos con y sin máscaras.",
+        "CourseF_outbreak8": "Crea un nuevo disfraz para monstruos con inmunidad al virus y úsalo en tu simulación.",
         "Dance Party 2_2021": "Cambia el comportamiento dentro del bloque `spring comienza` para hacer que el extraterrestre comience a dar vueltas.",
         "Dance Party 3_2021": "Crea un nuevo sprite de alien con un aspecto diferente. Haz que el nuevo sprite inicie cualquier comportamiento que quieras cuando se haga clic en él.",
         "Dance Party 4_2021": "Crea un tercer sprite que parezca un extraterrestre amarillo, y haz que todos tus extraterrestres se pongan en una línea. ",
@@ -3758,7 +3758,8 @@
         "ramp_artist_loops7_2021": "¡Busca un patrón y haz este código más corto usando loops!",
         "ramp_artist_loops8_2021": "Busca un patrón y acorta este código a través de los bucles.",
         "ramp_artist_loops9_2021": "Dibuja un cuadrado para resolver este desafío.",
-        "simcustom_2021": "Intenta hacer algunos cambios en los disfraces de los sprites o en el código de abajo. "
+        "simcustom_2021": "Intenta hacer algunos cambios en los disfraces de los sprites o en el código de abajo. ",
+        "international_outbreak_freeplay": "Comparte un mensaje con tu simulación."
       }
     }
   }

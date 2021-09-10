@@ -216,10 +216,28 @@
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "Giới thiệu"
         },
+        "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
+          "name": "Dịch bệnh bùng phát",
+          "description": "_Trong bài học hôm nay, các bạn sẽ đến với “Thị Trấn Quái Vật”, nơi sắp xảy ra một đợt lây lan vi rút. Tiến sĩ Quái Vật cần sự giúp đỡ của bạn để làm chậm sự lây lan của vi-rút._\n\n_Bạn sẽ tạo một trình mô phỏng dịch bệnh trong Sprite Lab, rồi sử dụng trình mô phỏng đó để hiểu cách lây lan của vi rút. Bạn cũng sẽ giúp tất cả quái vật hồi phục sức khỏe đấy!_",
+          "progression_name": "Dịch bệnh bùng phát"
+        },
+        "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "progression_name": "Chào mừng đến với Thị Trấn Quái Vật"
+        },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
             null
           ]
+        },
+        "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
+          "description": "**Làm như sau:** Tập hợp cả lớp lại để đọc bài _Dịch bệnh bùng phát: Tư duy như nhà khoa học._",
+          "progression_name": "Học hỏi từ bản mô phỏng"
+        },
+        "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
+          "progression_name": "Dự án nhỏ: Trình mô phỏng dịch bệnh bùng phát"
+        },
+        "2085bbfe-07e4-4eb4-9830-520e979a04c8": {
+          "description": "_Bản mô phỏng là phương pháp tuyệt vời để học những điều khó có thể quan sát được trong thế giới thực. Chúng giúp các nhà khoa học giải quyết vấn đề, dự đoán cách giải quyết vấn đề và thử nghiệm các ý tưởng mới một cách an toàn và hiệu quả. Bản mô phỏng của bạn là cách thể hiện diễn biến của một đợt lây lan vi rút ở Thị Trấn Quái Vật._"
         },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "Phản ánh"

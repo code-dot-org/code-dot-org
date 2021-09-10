@@ -3,7 +3,12 @@
     "data": {
       "vocabularies": {
         "sprite/coursef/2021": {
-          "word": "スプライト"
+          "word": "スプライト",
+          "definition": "場所、大きさ、見た目がわかる画面上のグラフィック。"
+        },
+        "user/coursef/2021": {
+          "word": "ユーザー",
+          "definition": "ソフトウェアやハードウェアなどのオブジェクトを使う人。"
         },
         "behavior/coursef/2021": {
           "word": "行動"
@@ -63,7 +68,8 @@
           "word": "行動"
         },
         "sprite/express/2021": {
-          "word": "スプライト"
+          "word": "スプライト",
+          "definition": "場所、大きさ、見た目がわかる画面上のグラフィック。"
         },
         "conditionals/express/2021": {
           "word": "条件"
@@ -87,7 +93,8 @@
           "word": "行動"
         },
         "sprite/coursee/2021": {
-          "word": "スプライト"
+          "word": "スプライト",
+          "definition": "場所、大きさ、見た目がわかる画面上のグラフィック。"
         },
         "copyright/coursee/2021": {
           "word": "著作権"

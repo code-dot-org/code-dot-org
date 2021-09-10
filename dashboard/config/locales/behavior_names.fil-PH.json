@@ -150,6 +150,11 @@
         },
         "simcustom_2021": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "nagpapagaling",
+          "moving left and right": "paggalaw sa kaliwa at kanan",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
         }
       }
     }

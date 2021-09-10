@@ -26,15 +26,14 @@ it:
       CS Discoveries Post-course Survey: Sondaggio Post-corso di Alla Scoperta dell'Informatica
       Cake Defender: Difensore della Torta
       Challenge Levels: Livelli della Sfida
-      'Challenge: Draw an Image': 'Challenge: Draw an Image'
+      'Challenge: Draw an Image': 'Sfida: Disegna un''Immagine'
       Challenges: Sfide
-      Chance: Probabilità
       Change: Modifica
       Checking for a Winner: Cercando un Vincitore
       'Circuit Playground: Introduction': 'Circuito parco giochi: Introduzione'
       Code Your Own Flappy Game: Programma il Tuo Gioco in Stile Flappy Bird
       Collector Game: Gioco di Raccolta
-      Collision Detection: Collision Detection
+      Collision Detection: Rilevamento delle Collisioni
       Collisions in Games: Collisioni nei Giochi
       Color LEDs: LED colorati
       Combining Projects: Combinare Progetti
@@ -47,7 +46,6 @@ it:
       Create Your Own Animation: Crea la Tua Animazione
       Create a Story: Crea una Storia
       Create your project: Crea il tuo progetto
-      Creating a Simulation: Crea una simulazione
       Dance Crews: Squadre di ballo
       Data Visualization: Visualizzazione dei Dati
       De-bugging with the Step Button: Debugging con il Pulsante di Fase
@@ -57,7 +55,7 @@ it:
       Design Mode: Design Mode
       Dogger Example: È pericoloso attraversare
       Drawing: Disegni
-      Drawing Shapes: Drawing Shapes
+      Drawing Shapes: Disegnare Forme
       End of Course Projects: Progetto di Fine Corso
       Events: Eventi
       Events and Linking Screens: Eventi e Collegare Schermate
@@ -98,13 +96,13 @@ it:
       Intro to Variables: Introduzione alle Variabili
       Introducing Sprite Lab: Introduzione al Laboratorio dei Personaggi
       Introduction to Arrays: Introduzione agli array
-      Introduction to Game Lab: Introduction to Game Lab
+      Introduction to Game Lab: Introduzione al Game Lab
       Iteration and Parameters: Iterazione e Parametri
       LED Apps: App LED
       Layout with CSS: Layout con CSS
       Learning from Simulations: Imparare dalle simulazioni
       Lesson Extras: Esercizi Supplementari
-      Lesson Overview: Panoramica della lezione
+      Lesson Overview: Panoramica della Lezione
       Light Show: Spettacolo di Luci
       Lists: Liste
       Loops with the Artist: Cicli con l'Artista
@@ -132,14 +130,13 @@ it:
       Modify simulation variables: Modifica le variabili di simulazione
       More Buttons: Più pulsanti
       More Input: Altri Input
-      More Monsters: Tanti mostri
       More Parameters: Più Parametri
       Motorcycle: Motocicletta
       Movement with the Counter Pattern: Movimento con lo Schema Contatore
       Multiframe Animations: Animazioni Multi-Fotogramma
       Musical Arrays: Insiemi Musicali
       My Online Neighborhood: Il mio quartiere digitale
-      Naming Variables: Naming Variables
+      Naming Variables: Nominare le Variabili
       Nested Loops with the Bee: Cicli Nidificati con l'Ape
       New Shapes: Nuove Forme
       Orientation: Orientamento
@@ -153,12 +150,11 @@ it:
       Platform Jumper - Player: Saltatore di Piattaforme - Giocatore
       Playing Notes: Riprodurre Note
       Playing with Notes: Giocare con le Note
-      Plotting Shapes in Game Lab: Plotting Shapes in Game Lab
+      Plotting Shapes in Game Lab: Traccia le Forme nel Game Lab
       Post-Course Survey Instructions: Istruzioni del Sondaggio Post-Corso
       Practice: Pratica
       Predict: Predict
       Prediction: Previsione
-      Programming with Events: Programmare con gli eventi
       Programming with Rey and BB-8: Programmare con Rey e BB-8
       Programs that Repeat: Programmi che Ripetono
       Project: Progetto
@@ -169,9 +165,8 @@ it:
       Publishing Your Website: Pubblicare il tuo sito web
       Quarter Notes: Quartine
       RGB Exploration: Esplorazione RGB
-      Random Numbers: Random Numbers
+      Random Numbers: Numeri Casuali
       Reading Sensors: Leggere i Sensori
-      Recovery: Guarigione
       Reflection: Riflessione
       Repeat Blocks: Blocchi Ripeti
       Repeat Blocks with BB-8: Blocchi Ripeti con BB-8
@@ -188,10 +183,9 @@ it:
       Sensor Events: Eventi del Sensore
       Sensors to Colors: Sensori a Colori
       Setting Properties: Impostare le Proprietà
-      Shapes and Parameters: Shapes and Parameters
+      Shapes and Parameters: Forme e Parametri
       Shapes and the Draw Loop: Forme e Cicli Infiniti
       Share Your App: Condividi la Tua App
-      Share Your Message: Condividi il tuo messaggio
       Side Scroller: Scorrimento Laterale
       Simple Circuits: Circuiti Semplici
       Skill Building: Costruzione di abilità
@@ -200,10 +194,9 @@ it:
       Speed it Up, Slow it Down: Accelerare, rallentare
       Sprite Lab Example Project: Progetto di esempio nel Laboratorio dei personaggi
       Sprite Lab Project: Progetto del Laboratorio dei personaggi
-      Sprite Scenes: Sprite Scenes
+      Sprite Scenes: Scene dello Sprite
       Sprites and the Draw Loop: Sprite e Cicli Infiniti
       Star Chaser: Cacciatore di Stelle
-      Stopping the Outbreak with Masks: Ferma la pandemia con le mascherine
       Styling Text: Stilizzare il Testo
       Styling with Classes: Stilizzare con le Classi
       Styling your Website: Stilizzare il tuo Sito Web
@@ -218,21 +211,22 @@ it:
       Using Getters and Setters: Usare Getter e Setter
       Using HTML Tags: Usare Tag HTML
       Using Random Numbers: Usare i Numeri Casuali
-      Using the Grid: Using the Grid
+      Using the Grid: Usare la Griglia
       Using the LED: Usare i LED
       Using the Repeat Block: Uso del blocco Ripeti
       Using the Switch: Usare l'Interruttore
-      Vaccines: Vaccini
       Variables: Variabili
       Velocity: Velocità
       Video: Video
       'Video: CS Matters': 'Video: L''importanza dell''informatica'
-      'Video: Conditional Statements': 'Video: Conditional Statements'
-      'Video: Drawing in Game Lab - Part 1': 'Video: Drawing in Game Lab - Part 1'
-      'Video: Drawing in Game Lab - Part 2': 'Video: Drawing in Game Lab - Part 2'
+      'Video: Conditional Statements': 'Video: Dichiarazioni condizionali'
+      'Video: Drawing in Game Lab - Part 1': 'Video: Disegnare nel Game Lab - Parte
+        1'
+      'Video: Drawing in Game Lab - Part 2': 'Video: Disegnare nel Game Lab - Parte
+        2'
       'Video: For Loops': 'Video: per i loop'
-      'Video: Functions': 'Video: Functions'
-      'Video: If/Else Statements': 'Video: If/Else Statements'
+      'Video: Functions': 'Video: Funzioni'
+      'Video: If/Else Statements': 'Video: Dichiarazioni If/Else'
       'Video: Intro to Web Lab - Part 1': 'Video: Introduzione a Web Lab - Parte 1'
       'Video: Intro to Web Lab - Part 2': 'Video: Introduzione a Web Lab - Parte 2'
       'Video: Introduction to Arrays': 'Video: introduzione agli Insiemi'

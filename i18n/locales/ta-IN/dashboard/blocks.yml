@@ -1183,6 +1183,8 @@ ta:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
+      Mikelab_setupOutbreak:
+        text: "அவுட்பிரேக்  செட்அப் \nமக்கள் தொகை:{SPRITE2N}\n{TOGGLE}வைரஸ்"
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1234,17 +1236,33 @@ ta:
         text: அரக்கர்கள் அலையத் தொடங்குகிறார்கள்
       Outbreak_beginWearingMasks:
         text: அரக்கர்கள் முகமூடிகளை அணியத் தொடங்குகிறார்கள்
+      Outbreak_layoutBorder:
+        text: ஒரு எல்லையில் அரக்கர்களை அமைக்கவும்
+      Outbreak_layoutClusters:
+        text: கொத்துகளாக அமைந்த அரக்கர்கள்{NUM}
+      Outbreak_layoutGrid:
+        text: ஒரு கட்டமாக அரக்கர்களை அமைக்கவும்
+      Outbreak_layoutRandom:
+        text: அசுரர்களை தோராயமாக அமைக்கவும்
       Outbreak_stopMoving:
         text: அரக்கர்கள் நகர்வதை நிறுத்துகிறார்கள்
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
+          EFFECT:
+            '"colors"': வண்ணங்கள்
+            '"squiggles"': சிறு வளை கோடுகள்
+            '"space"': ஸ்பேஸ்
+            '"stars"': நட்சத்திரங்கள்
+            '"ripples"': சிற்றலைகள்
+          PALETTE:
             '"rainbow"': வானவில்
       PoemBot_setForegroundEffect:
-        text: முன்னணி எஃபெக்டை அமைக்கவும் {FG_EFFECT}
+        text: முன்னணி எஃபெக்டை அமைக்கவும் {EFFECT}
         options:
-          FG_EFFECT:
+          EFFECT:
+            '"rain"': மழை
             '"bubbles"': குமிழிகள்
+            '"confetti"': கான்ஃபெடி
       RyanLab_moveForward:
         text: முன்னோக்கி நகர்த்த
       RyanLab_turnLeft:

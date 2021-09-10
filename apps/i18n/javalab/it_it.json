@@ -3,7 +3,6 @@
   "allFilesCompile": "Tutti i File Compilati!",
   "backpackLabel": "Zaino",
   "backpackListLoadError": "Si è verificato un errore caricando il tuo zaino. Riprova.",
-  "backpackSaveErrorTitle": "Si è verificato un errore",
   "backpackSaveErrorMessage": "Sei pregato di riprovare",
   "cancel": "Annulla",
   "clearConsole": "Cancella Console",

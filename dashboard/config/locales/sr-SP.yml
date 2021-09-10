@@ -151,6 +151,8 @@ sr:
     email_preference_privacy: "(Погледајте нашу политику приватности)"
     email_preference_yes: Да
     email_preference_no: не
+    share_teacher_email_reg_partner_preference_yes: Да
+    share_teacher_email_reg_partner_preference_no: не
   school_info:
     title: Информације о школи (опционо)
     other: Други

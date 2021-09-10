@@ -1737,6 +1737,49 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Перетащи блоки с панели инструментов в свою рабочую область."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Сначала нажми кнопку \"Пуск\"!",
+          "visualizationResizeBar": "Перетащи 3 кнопки, чтобы изменить игровую зону."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Перетащи 3 кнопки, чтобы изменить игровую зону."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Сначала нажми кнопку \"Пуск\"!",
+          "visualizationResizeBar": "Перетащи 3 кнопки, чтобы изменить игровую зону."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Сначала нажми кнопку \"Пуск\"!",
+          "visualizationResizeBar": "Перетащи 3 кнопки, чтобы изменить игровую зону."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Перетащи 3 кнопки, чтобы изменить игровую зону."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Сначала нажми кнопку \"Пуск\"!",
+          "visualizationResizeBar": "Перетащи 3 кнопки, чтобы изменить игровую зону."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Перетащи 3 кнопки, чтобы изменить игровую зону."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Перетащи 3 кнопки, чтобы изменить игровую зону."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Перетащи 3 кнопки, чтобы изменить игровую зону."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Щелкни здесь, чтобы открыть категорию “Поведения”."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Нажми здесь, чтобы открыть категорию “Спрайты”."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Нажми здесь, чтобы открыть категорию “Расположения”."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Поищи новый блок здесь."
         }
       }
     }

@@ -313,9 +313,8 @@
         "CourseF_outbreak2": "Simulasi Virus",
         "CourseF_outbreak3": "Simulasi Virus",
         "CourseF_outbreak4": "Modifikasi Simulasi Anda",
-        "CourseF_outbreak6": "Peluang Acak",
-        "CourseF_outbreak7": "Kekebalan dan Vaksin",
-        "CourseF_outbreak8": "Bagikan Pesan",
+        "CourseF_outbreak7": "Peluang Acak",
+        "CourseF_outbreak8": "Kekebalan dan Vaksin",
         "CourseF_video_introSpriteLab_2021": "Ini adalah Sprite Lab",
         "MC_HOC_2017_01_RETRY_2021": "Rumah dan pekarangannya",
         "MC_HOC_2017_02_Cole_2021": "Ladang",
@@ -338,7 +337,9 @@
         "courseF_pilotVideo_prompts": "Bagaimana Membuat Sprite",
         "courseF_sprites_freeplay_aquatic": "Air",
         "ramp_artist_loops4_2021": "Bintang",
-        "scrat_loops_C-F_video_2021": "Loops dalam Video Zaman Es"
+        "scrat_loops_C-F_video_2021": "Loops dalam Video Zaman Es",
+        "CourseF_outbreak5": "Modifikasi Simulasi Anda",
+        "international_outbreak_freeplay": "Bagikan Pesan"
       }
     }
   }

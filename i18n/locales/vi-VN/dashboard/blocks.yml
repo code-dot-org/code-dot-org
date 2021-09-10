@@ -1093,6 +1093,10 @@ vi:
         text: vị trí của {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': mưa
       gamelab_makeNewSpriteAnon:
         text: làm mới {ANIMATION_NAME} sprite tại {LOCATION}
       gamelab_mirrorSprite:
@@ -1115,6 +1119,11 @@ vi:
         text: nhấp {SPRITE}
       gamelab_playSound:
         text: Âm thanh chơi {SOUND}
+      gamelab_playSoundOptions:
+        text: Âm thanh chơi {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": khủng hoảng
       gamelab_pointInDirection:
         text: điểm {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1473,6 +1482,11 @@ vi:
             '"x"': hoành độ
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
+      Mikelab_setupOutbreak:
+        text: |-
+          thiết lập ổ dịch
+          quần thể:{SPRITE2N}
+          {TOGGLE}vi rút
       Mikelab_setupSim:
         text: |-
           thiết lập mô phỏng với
@@ -1556,19 +1570,38 @@ vi:
         text: quái vật bắt đầu lang thang
       Outbreak_beginWearingMasks:
         text: quái vật bắt đầu đeo khẩu trang
+      Outbreak_layoutBorder:
+        text: bố trí quái vật trong phạm vi
+      Outbreak_layoutClusters:
+        text: bố trí quái vật theo cụm {NUM} quái vật
+      Outbreak_layoutGrid:
+        text: bố trí quái vật theo dạng lưới
+      Outbreak_layoutRandom:
+        text: bố trí quái vật ngẫu nhiên
       Outbreak_stopMoving:
         text: quái vật ngừng di chuyển
+      PoemBot_playSound:
+        text: Âm thanh chơi {SOUND}
       PoemBot_setBackgroundEffect:
-        text: thiết lập hiệu ứng nền {BG_EFFECT} [PALETTE][1]
+        text: thiết lập hiệu ứng nền {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"rainbow"': cầu vồng
+          EFFECT:
+            '"colors"': Màu sắc
+            '"squiggles"': Nét nguệch ngoạc
+            '"space"': Không gian
+            '"stars"': Sao
+            '"ripples"': Gợn sóng
+          PALETTE:
+            '"rainbow"': Cầu vồng
       PoemBot_setForegroundEffect:
-        text: thiết lập hiệu ứng tiền cảnh {FG_EFFECT}
+        text: thiết lập hiệu ứng tiền cảnh {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': mưa
-            '"bubbles"': bong bóng
+          EFFECT:
+            '"rain"': Mưa
+            '"bubbles"': Bong bóng
+            '"hearts"': Trái tim sặc sỡ
+            '"confetti"': Hoa giấy
+            '"starburst"': Lóe sáng
       RyanLab_moveForward:
         text: đi thẳng
       RyanLab_turnLeft:

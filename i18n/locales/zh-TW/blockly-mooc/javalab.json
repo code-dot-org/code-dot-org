@@ -3,7 +3,6 @@
   "allFilesCompile": "完成所有檔案了！",
   "backpackLabel": "背包",
   "backpackListLoadError": "載入你的背包時發生錯誤。請重試一次。",
-  "backpackSaveErrorTitle": "發生錯誤。",
   "backpackSaveErrorMessage": "請再試一次",
   "cancel": "取消",
   "clearConsole": "清除主控台",

@@ -37,6 +37,12 @@
         "courseb-2021/Events: The Big Event": {
           "overview": "Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti."
         },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "overview": "[\\[common sense education](https://creativecommons.org/)][1]\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Learn more.][2]\n\nSila internetu umožňuje študentom objavovať a navštevovať miesta, kam by sa osobne možno nedostali. Podobne ako pri skutočnom cestovaní po svete je však potrebné dbať na bezpečnosť aj na potulkách internetom. Na tomto virtuálnom školskom výlete si deti môžu vyskúšať, ako absolvovať online dobrodružstvá bezpečne.",
+          "preparation": "-   Prezrite si metodické materiály.\n-   Vytlačte pre každéo študenta pracovné listy.\n-   (Doplnkovo) Vytlačte plagát s básňou a vystavte ho v triede.",
+          "purpose": "Organizácia Common Sense Education vytvorila túto lekciu, aby študentom ukázala, ako sa bezpečne pohybovať po online svete.",
+          "student_overview": "Naučte sa bezpečne pohybovať po online svete."
+        },
         "coursea-2021/Learn to Drag and Drop": {
           "overview": "Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh."
         },
@@ -136,16 +142,33 @@
           "overview": "V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!"
         },
         "coursee-2021/Simon Says": {
-          "overview": "V tejto lekcii si študenti zahrajú hru, ktorá im pomôže premýšľať nad spôsobmi prideľovania príkazov tak, aby spôsobili želaný výsledok. Pomôže im to ľahšie premostiť do prostredia Sprite Labu v nasledujúcej lekcii."
+          "overview": "V tejto lekcii si študenti zahrajú hru, ktorá im pomôže premýšľať nad spôsobmi prideľovania príkazov tak, aby dosiahnuť želaný výsledok. Pomôže im to ľahšie premostiť do prostredia Sprite Labu v nasledujúcej lekcii.",
+          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý študent má zápisník na poznámky.",
+          "purpose": "Cieľom tejto lekcie je pripraviť študentov na zamyslenie nad jedným zo základných konceptov programovania v Sprite Lab, ktorým je správanie.",
+          "student_overview": "Zahrajte si hru a zamyslite sa nad tým, ktoré príkazy sú potrebné na dosiahnutie správneho výsledku."
         },
         "coursee-2021/Learning Sprites with Sprite Lab": {
           "overview": "V tejto lekcii sa študenti oboznámia s dvomi konceptami ležiacimi v srdci Sprite Labu: Sprite a jeho správanie. Objekt \"Sprite\" predstavuje postavy alebo predmety zobrazené na obrazovke. Tieto postavy či predmety môžu študenti meniť, či nimi pohybovať. Správanie je akcia, ktorú \"Sprite\" vykonáva až do momentu,  kedy ju zastavíme. ",
+          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý študent má zápisník na poznámky.",
+          "purpose": "Cieľom tejto lekcie je predstaviť študentom základné pojmy zo Sprite Labu a umožniť im využiť koncepty, ktoré si osvojili v iných prostrediach, v tomto nástroji. Vytvorením akvária začnú študenti získavať prehľad o programovacom modeli, ktorý využíva tento nástroj, a preskúmajú spôsoby, ako môžu pomocou neho tvoriť.   ",
           "student_overview": "Nauč sa ako tvoriť  a upravovať postavy."
         },
         "coursee-2021/Alien Dance Party with Sprite Lab": {
-          "overview": "V tejto lekcii študenti pracujú v Sprite Labe, v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich \"Spritov\" študenti pridajú vstup od užívateľa ako udalosť, ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. "
+          "overview": "V tejto lekcii študenti pracujú v Sprite Labe, v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich \"Spritov\" študenti pridajú vstup od užívateľa ako udalosť, ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. ",
+          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý študent má zápisník na poznámky.",
+          "purpose": "Táto lekcia je skvelým úvodom do udalostí v programovaní. Dokonca dáva študentom možnosť preukázať svoju kreativitu! Na konci lekcie budú mať študenti príležitosť predviesť svoje projekty.",
+          "student_overview": "Vytvorte interaktívny projekt, ktorý môžete zdieľať so svojimi spolužiakmi."
+        },
+        "coursee-2021/lesson-4": {
+          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Ďalšie informácie.][2]\n\nOnline nástroje dávajú deťom nové možnosti, ale zároveň sa spájajú aj s veľkou zodpovednosťou. No vedia deti, čo majú robiť, keď sa stretnú s kyberšikanovaním? Ukážte študentom, ako správne zakročiť a riešiť konflikty, aby sa nebáli ozvať a pomôcť iným, ktorí to potrebujú.",
+          "preparation": "-   Prečítajte si materiály s pokynmi.\n-   Vytlačte podkladové materiály pre študentov.\n-   Pripravte farebné ceruzky alebo fixky pre študentov.",
+          "purpose": "Organizácia Common Sense Education vytvorila túto lekciu, aby študentom ukázala, ako sa majú zachovať, keď sa stretnú s kyberšikanovaním.",
+          "student_overview": "Nauč sa zakročiť, keď sa stretneš s kyberšikanovaním."
         },
         "coursee-2021/Private and Personal Information": {
+          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Ďalšie informácie.][2]\n\nPre študentov je prirodzené zdieľať a spájať sa s inými. Ale so zdieľaním sa spájajú aj riziká. Ako môžeme deťom pomôcť budovať silné, pozitívne a bezpečné vzťahy online? Pomôžte študentom zistiť, čo je osobné a čo by malo zostať súkromné.",
+          "preparation": "-   Prečítajte si materiály s pokynmi.\n-   Vytlačte podkladové materiály pre študentov.",
+          "purpose": "Organizácia Common Sense Education vytvorila túto lekciu, aby študentom ukázala, aké informácie môžu bezpečne zdieľať online.",
           "student_overview": "Na internete zažijeme veľa zábavy, ale je tiež dôležité myslieť na bezpečnosť. V tejto lekcii sa naučíme rozlišovať medzi informáciami, ktoré je bezpečné zdieľať online a a informáciami, ktoré majú zostať súkromné."
         },
         "coursee-2021/About Me": {
