@@ -3658,6 +3658,12 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Trinn 1
+            lessonGroup-3:
+              display_name: Trinn 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
