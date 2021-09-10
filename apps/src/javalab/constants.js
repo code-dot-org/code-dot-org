@@ -72,8 +72,11 @@ export const TheaterSignalType = {
 };
 
 export const PlaygroundSignalType = {
-  ADD_IMAGE: 'ADD_IMAGE',
-  CHANGED_IMAGE: 'CHANGED_IMAGE'
+  ADD_ITEM: 'ADD_ITEM',
+  CHANGED_ITEM: 'CHANGED_ITEM',
+  ADD_CLICKABLE_ITEM: 'ADD_CLICKABLE_ITEM',
+  RUN: 'RUN',
+  PLAY_SOUND: 'PLAY_SOUND'
 };
 
 export const StatusMessageType = {

@@ -12,12 +12,20 @@ export default class Playground {
 
   handleSignal(data) {
     switch (data.value) {
-      case PlaygroundSignalType.ADD_IMAGE: {
-        this.generateNewImage(data.detail);
+      case PlaygroundSignalType.ADD_ITEM: {
+        this.generateNewItem(data.detail);
         break;
       }
-      case PlaygroundSignalType.CHANGED_IMAGE: {
+      case PlaygroundSignalType.ADD_CLICKABLE_ITEM: {
+        this.generateNewClickableItem(data.detail);
+        break;
+      }
+      case PlaygroundSignalType.CHANGED_ITEM: {
         this.changeImage(data.detail);
+        break;
+      }
+      case PlaygroundSignalType.PLAY_SOUND: {
+        this.playSound(data.detail);
         break;
       }
       default:
@@ -45,12 +53,22 @@ export default class Playground {
     // for now do nothing here
   }
 
-  generateNewImage(imageData) {
-    this.imagesData[imageData.id] = imageData;
-    const image = document.createElement('img');
-    this.styleImage(image, imageData);
-    image.style.zIndex = imageData.index;
-    image.addEventListener('click', () => this.handleImageClick(imageData.id));
+  playSound(soundData) {
+    const soundUrl = assetsApi.basePath(soundData.filename);
+    this.getAudioElement().src = soundUrl + this.getCacheBustSuffix();
+  }
+
+  generateNewItem(imageData) {
+    const image = this.setUpImage(imageData);
+    this.getPlaygroundElement().appendChild(image);
+  }
+
+  generateNewClickableItem(clickableItemData) {
+    this.imagesData[clickableItemData.id] = clickableItemData;
+    const image = this.setUpImage(clickableItemData);
+    image.addEventListener('click', () =>
+      this.handleImageClick(clickableItemData.id)
+    );
     this.getPlaygroundElement().appendChild(image);
   }
 
@@ -60,6 +78,13 @@ export default class Playground {
     let originalData = this.imagesData[id];
     this.imagesData[id] = {...originalData, ...imageData};
     this.styleImage(image, this.imagesData[id]);
+  }
+
+  setUpImage(imageData) {
+    const image = document.createElement('img');
+    this.styleImage(image, imageData);
+    image.style.zIndex = imageData.index;
+    return image;
   }
 
   styleImage(image, imageData) {
@@ -105,5 +130,9 @@ export default class Playground {
       width,
       x
     )} ${this.getClipPath(height, y)} 0)`;
+  }
+
+  getCacheBustSuffix() {
+    return '?=' + new Date().getTime();
   }
 }
