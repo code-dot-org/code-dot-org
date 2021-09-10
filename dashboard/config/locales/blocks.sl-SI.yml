@@ -403,11 +403,19 @@ sl:
             '"space"': vesolje
             '"x"': x
             '"y"': y
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': dež
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': desno
             '"left"': levo
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": hrustati
       gamelab_randColor:
         text: naključna barva
       gamelab_randomColor:
@@ -604,15 +612,6 @@ sl:
             '"down"': puščica dol
             '"left"': puščica levo
             '"right"': puščica desno
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"solid"': ploskovita
-            '"rainbow"': mavrica
-      PoemBot_setForegroundEffect:
-        options:
-          FG_EFFECT:
-            '"rain"': dež
       RyanLab_moveForward:
         text: premakni se naprej
       RyanLab_turnLeft:
