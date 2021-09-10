@@ -1140,6 +1140,59 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal 'Description', lesson_group.description
   end
 
+  test 'update user facing lesson group in migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
+    stub_file_writes(unit.name)
+
+    Script.stubs(:merge_and_write_i18n).with do |i18n, _, _|
+      i18n[unit.name]['lessons'].empty? &&
+        i18n[unit.name]['lesson_groups']['lesson-group-1']['display_name'] == 'updated name'
+    end.once
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-1',
+        display_name: 'updated name',
+        user_facing: true,
+        lessons: [
+          {
+            id: lesson.id,
+            key: 'lesson-1',
+            name: 'lesson 1'
+          },
+        ],
+        description: 'updated description',
+        big_questions: 'updated questions',
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    assert_response :success
+    lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
+    assert_equal 'updated name', lesson_group_data['display_name']
+    assert_equal 'updated questions', lesson_group_data['big_questions']
+    assert_equal 'updated description', lesson_group_data['description']
+    assert_equal 'lesson 1', lesson_group_data['lessons'][0]['name']
+
+    lesson_group.reload
+    assert_equal 'updated name', lesson_group.display_name
+    assert_equal 'updated questions', lesson_group.big_questions
+    assert_equal 'updated description', lesson_group.description
+    assert_equal 'lesson 1', lesson_group.lessons.first.name
+  end
+
   class CoursePilotTests < ActionController::TestCase
     setup do
       @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
