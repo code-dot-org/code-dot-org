@@ -17,10 +17,9 @@ const UPDATE_LESSON_GROUP_FIELD = 'unitEditor/UPDATE_LESSON_GROUP_FIELD';
 
 // NOTE: Position for Lesson Groups and Lessons is 1 based.
 
-export const init = (lessonGroups, levelKeyList) => ({
+export const init = lessonGroups => ({
   type: INIT,
-  lessonGroups,
-  levelKeyList
+  lessonGroups
 });
 
 export const addGroup = (groupPosition, groupKey, groupName) => ({
@@ -217,16 +216,7 @@ function lessonGroups(state = [], action) {
   return newState;
 }
 
-function levelKeyList(state = {}, action) {
-  switch (action.type) {
-    case INIT:
-      return action.levelKeyList;
-  }
-  return state;
-}
-
 export default {
-  levelKeyList,
   lessonGroups
 };
 

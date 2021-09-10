@@ -13,12 +13,6 @@ import reducers, {
 import _ from 'lodash';
 
 const getInitialState = () => ({
-  levelKeyList: {
-    2001: 'Level One',
-    2002: 'Level Two',
-    2003: 'Level Three',
-    2004: 'blockly:Maze:2_3'
-  },
   lessonGroups: [
     {
       id: 1,

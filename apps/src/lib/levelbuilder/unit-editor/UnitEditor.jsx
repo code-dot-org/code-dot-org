@@ -86,7 +86,6 @@ class UnitEditor extends React.Component {
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
-    levelKeyList: PropTypes.object.isRequired,
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
       .isRequired,
     studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
@@ -322,7 +321,7 @@ class UnitEditor extends React.Component {
         } else {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
-          this.props.init(lessonGroups, this.props.levelKeyList);
+          this.props.init(lessonGroups);
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
@@ -1008,7 +1007,6 @@ export const UnconnectedUnitEditor = UnitEditor;
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    levelKeyList: state.levelKeyList,
     migratedTeacherResources: state.resources,
     studentResources: state.studentResources
   }),
