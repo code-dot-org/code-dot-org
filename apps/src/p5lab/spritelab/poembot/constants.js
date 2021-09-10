@@ -134,7 +134,7 @@ export const POEMS = {
   },
   hughes: {
     author: 'Langston Hughes',
-    title: 'Dream Deferred',
+    title: 'Harlem',
     lines: [
       'What happens to a dream deferred? ',
       'Does it dry up',
@@ -163,6 +163,20 @@ export const POEMS = {
       '',
       'You may not come out',
       'The same person who went in.'
+    ]
+  },
+  hughes_1: {
+    author: 'Langston Hughes',
+    title: 'Dream Variations',
+    lines: [
+      'To fling my arms wide',
+      'In the face of the sun,',
+      'Dance! Whirl! Whirl!',
+      'Till the quick day is done.',
+      'Rest at pale evening...',
+      'A tall, slim tree...',
+      'Night coming tenderly',
+      '  Black like me.'
     ]
   }
 };
