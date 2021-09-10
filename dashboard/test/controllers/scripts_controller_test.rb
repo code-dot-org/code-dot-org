@@ -1163,7 +1163,6 @@ class ScriptsControllerTest < ActionController::TestCase
           {
             id: lesson.id,
             key: 'lesson-1',
-            name: 'lesson 1'
           },
         ],
         description: 'updated description',
@@ -1259,12 +1258,10 @@ class ScriptsControllerTest < ActionController::TestCase
           {
             id: lesson_1.id,
             key: 'lesson-1',
-            name: 'lesson 1'
           },
           {
             id: lesson_2.id,
             key: 'lesson-2',
-            name: 'lesson 2'
           },
         ],
       },
@@ -1317,12 +1314,10 @@ class ScriptsControllerTest < ActionController::TestCase
           {
             id: lesson_2.id,
             key: 'lesson-2',
-            name: 'lesson 2'
           },
           {
             id: lesson_1.id,
             key: 'lesson-1',
-            name: 'lesson 1'
           },
         ],
       }
@@ -1365,17 +1360,14 @@ class ScriptsControllerTest < ActionController::TestCase
           {
             id: lesson_2.id,
             key: 'lesson-2',
-            name: 'lesson 2'
           },
           {
             id: lesson_1.id,
             key: 'lesson-1',
-            name: 'lesson 1'
           },
           {
             id: lesson_3.id,
             key: 'lesson-3',
-            name: 'lesson 3'
           },
         ],
       },
@@ -1415,7 +1407,6 @@ class ScriptsControllerTest < ActionController::TestCase
           {
             id: lesson_2.id,
             key: 'lesson-2',
-            name: 'lesson 2'
           },
         ],
       },
@@ -1427,7 +1418,6 @@ class ScriptsControllerTest < ActionController::TestCase
           {
             id: lesson_1.id,
             key: 'lesson-1',
-            name: 'lesson 1'
           },
         ],
       },

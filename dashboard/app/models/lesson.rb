@@ -92,8 +92,6 @@ class Lesson < ApplicationRecord
   def self.update_lessons_in_migrated_unit(unit, lesson_group, raw_lessons, counters)
     unit.lessons.reload
     raw_lessons.map do |raw_lesson|
-      Lesson.prevent_blank_display_name(raw_lesson)
-
       lesson = fetch_lesson(raw_lesson, unit)
 
       numbered_lesson = !!raw_lesson[:has_lesson_plan] || !raw_lesson[:lockable]
@@ -104,21 +102,22 @@ class Lesson < ApplicationRecord
         relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
       )
       lesson.save! if lesson.changed?
-      lesson.reload
       lesson
     end
   end
 
   def self.fetch_lesson(raw_lesson, unit)
-    unit.lessons.detect {|l| l.key == raw_lesson[:key]} ||
-      Lesson.find_or_create_by(
-        key: raw_lesson[:key],
-        script: unit
-      ) do |l|
-        l.name = raw_lesson[:name]
-        l.relative_position = 0 # will be updated below, but cant be null
-        l.has_lesson_plan = true # will be reset below if specified
-      end
+    if raw_lesson[:id]
+      return Lesson.find_by!(script: unit, id: raw_lesson[:id], key: raw_lesson[:key])
+    end
+    Lesson.prevent_blank_display_name(raw_lesson)
+    Lesson.create!(
+      key: raw_lesson[:key],
+      script: unit,
+      name: raw_lesson[:name],
+      relative_position: 0,  # will be updated by the caller, but can't be nil
+      has_lesson_plan: true
+    )
   end
 
   def self.add_lessons(unit, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
