@@ -23109,6 +23109,8 @@ tr:
               name: Eylem halindeki Hareketli Nesneler
             End of Course Project:
               name: Ders Projesinin Sonu
+            Outbreaklab:
+              name: Salgın Bağımsız Laboratuvarı
           lesson_groups:
             introduction:
               display_name: Giriş
@@ -25082,6 +25084,8 @@ tr:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
             lesson-8:
               name: Eylem halindeki Hareketli Nesneler
+            lesson-5:
+              name: Salgın
             lesson-2:
               name: Kelimelerin gücü
               description_student: Zorbalık hiçbir zaman iyi değildir. Bu ders, size,
@@ -26221,6 +26225,15 @@ tr:
             Module 1:
               name: 'Modül 1: Ünite 4''e Giriş ve programlamayı öğretmeye yönelik
                 yeni pedagoji'
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: Canavar Şehri'nde Salgın
+          lesson_groups:
+            Outbreak Module:
+              display_name: Salgın Modülü
+          name: salgınmodülü
+          title: Salgın Modülü\_V2
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -26232,6 +26245,11 @@ tr:
           description_short: CSP Öğrenci Kurs Sonu Anketi
         aiml-2021:
           lessons:
+            lesson9:
+              description_teacher: |-
+                Bu derste öğrenciler, bir zombi salgınını simüle eden bilgisayarsız bir etkinliğe katılırlar. Öğrenciler, komşu kasabadaki verileri kullanarak şehrin hangi bölgelerinde en az sayıda zombi olduğunu tahmin etmelidir. Öğrenciler, belirli bir yerdeki zombilerin sayısı hakkında tahminlerde bulunmak için benzerlik derecelerini ve ortalamaları kullanacaklardır. Ardından, öğrenciler, sayısal veriler için doğruluğun kategorik verilere kıyasla ne kadar farklı olduğunu tartışmak amacıyla tahminlerini gerçek sayılarla karşılaştırma imkanı elde ederler.
+
+                **Günün Sorusu:** Bilgisayarlar sayısal verilerle tahmin yapmayı nasıl öğrenir?
             lesson-22:
               name: Veri toplama tasarımı
           lesson_groups:
@@ -26239,6 +26257,11 @@ tr:
               display_name: Anket
         csd7-2021:
           lessons:
+            Similarity Models:
+              description_teacher: |-
+                Bu derste öğrenciler, bir zombi salgınını simüle eden bilgisayarsız bir etkinliğe katılırlar. Öğrenciler, komşu kasabadaki verileri kullanarak şehrin hangi bölgelerinde en az sayıda zombi olduğunu tahmin etmelidir. Öğrenciler, belirli bir yerdeki zombilerin sayısı hakkında tahminlerde bulunmak için benzerlik derecelerini ve ortalamaları kullanacaklardır. Ardından, öğrenciler, sayısal veriler için doğruluğun kategorik verilere kıyasla ne kadar farklı olduğunu tartışmak amacıyla tahminlerini gerçek sayılarla karşılaştırma imkanı elde ederler.
+
+                **Günün Sorusu:** Bilgisayarlar sayısal verilerle tahmin yapmayı nasıl öğrenir?
             Survey Planning:
               name: Veri toplama tasarımı
           lesson_groups:
@@ -26341,8 +26364,10 @@ tr:
               name: Modül 2
             Module 3:
               key: Modül 3
+              name: Modül 3
             Module 4:
               key: Modül 4
+              name: Modül 4
             Module 5:
               key: Modül 5
             Module 6:
@@ -26378,6 +26403,9 @@ tr:
               name: Ünite 2 - Ağ Geliştirme
             lesson-6:
               name: Veri ve Toplum
+        outbreak-module:
+          name: salgın-modülü
+          title: Salgın
         csa1-exemplars:
           lessons:
             lesson-20:
@@ -26421,6 +26449,12 @@ tr:
           lessons:
             lesson-2:
               name: Ders 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  Aşama
+            lessonGroup-3:
+              display_name: Bölüm 2
         dlp21-csp-mod1:
           title: Bilgisayar Bilimi İlkeleri Derinlemesine Öğrenim Modülü 1
         dlp21-csd:
@@ -26500,3 +26534,13 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Bilişimdeki Yenilikler
+            lesson-9:
+              name: Renkli LED'ler
+            lesson-13:
+              name: İvme Ölçer
+            lesson-19:
+              name: Proje

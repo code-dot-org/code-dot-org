@@ -20496,6 +20496,14 @@ fil:
               display_name: Panimula
             Introduction:
               display_name: Panimula
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Aralin 3
+            Lesson 4:
+              display_name: Aralin 4
+            Lesson 5:
+              display_name: Aralin 5
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -20574,6 +20582,12 @@ fil:
           lesson_groups:
             lessonGroup-3:
               display_name: Mga Resources
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stage 1
+            lessonGroup-3:
+              display_name: Stage 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -20590,3 +20604,9 @@ fil:
           lessons:
             lesson-18:
               name: Mga Widget
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Mga Pagbabago sa Pag-Compute
+            lesson-13:
+              name: Accelerometer

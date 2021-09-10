@@ -188,6 +188,10 @@ ne:
           DIRECTION:
             '"right"': दाँया
             '"left"': बाँया
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
       gamelab_randColor:
         text: कुनै एक  रङ
       gamelab_randomColor:
@@ -341,10 +345,6 @@ ne:
             '"down"': down arrow
             '"left"': left arrow
             '"right"': right arrow
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': इन्द्रणी
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:

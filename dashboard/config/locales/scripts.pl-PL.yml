@@ -1519,6 +1519,7 @@ pl:
             Unit 6 lessons:
               name: Jednostka 6 Lekcje
         cspunit4draft:
+          title: Podstawy informatyki Jednostka 4 - Dane
           description_short: Dane
           lessons:
             Check Your Assumptions:
@@ -1608,6 +1609,7 @@ pl:
             Teaching Support - Lessons 8-12:
               name: Wsparcie nauczania - Lekcje 8-12
         CSPPD3-Unit2:
+          title: 'Podstawy informatyki: Jednostka 2 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1652,6 +1654,7 @@ pl:
           student_description: Utwórz historyjkę lub grę z pomoc Epoki Lodowcotej
             w Play Lab!
         CSPPD3-Unit3:
+          title: 'Podstawy informatyki: Jednostka 3 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1694,6 +1697,7 @@ pl:
             While Loops:
               name: Pętle Dopóki (While)
         CSP-Unit3-Support:
+          title: 'Podstawy informatyki: Jednostka 3 Rozwój zawodowy (PD)'
           lessons:
             Chunk 1 Overview:
               name: Część 1 Przeląd
@@ -1763,6 +1767,7 @@ pl:
             maszynowe mogą być wykorzystywana do zajmowania się problemami całego
             świata.
         CSPPD3-Unit3-pt2:
+          title: 'Podstawy informatyki: Jednostka 3 Wyzwania zawodowego rozwoju'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1860,6 +1865,7 @@ pl:
             Visualizing Data:
               name: Wizualizacja danych
         CSPPD3-Unit5:
+          title: 'Podstawy informatyki: Jednostka 5 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1898,6 +1904,7 @@ pl:
             Visualizing Data:
               name: Wizualizacja danych
         AlgebraA:
+          title: 'Informatyka w algebrze: Kurs A'
           description: Poznaj programowanie funkcjonalne za pomocą algebry
           description_short: Poznaj programowanie funkcjonalne za pomocą algebry
           lessons:
@@ -30391,11 +30398,10 @@ pl:
               name: Moduł 2
             Module 3:
               key: Moduł 3
-              name: 'Moduł 3: Jednostka 5, używanie list w aplikacjach i rozpoznawanie
-                umiejętności CS w klasie'
+              name: Moduł 3
             Module 4:
               key: Moduł 4
-              name: 'Moduł 4: Jednostka 5 i używanie zestawów danych w aplikacjach'
+              name: Moduł 4
             Module 5:
               key: Moduł 5
               name: 'Moduł 5: Jednostka 7 i zrozumienie funkcji z parametrami i zwracaniem
@@ -30786,8 +30792,6 @@ pl:
           name: dlp21-csd-mod2
           title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 2 dla Warsztatu
             2
-          description: "## Ten moduł zostanie w pełni opublikowany przed 3 września
-            2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
         dlp21-csd-mod3:
           lessons:
             lesson-1:
@@ -30819,8 +30823,6 @@ pl:
           name: dlp21-csp-mod2
           title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 2 dla Warsztatu
             2
-          description: "## Ten moduł zostanie w pełni opublikowany przed 3 września
-            2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
         dlp21-csp-mod3:
           lessons:
             lesson-1:
@@ -32030,3 +32032,13 @@ pl:
             lessonGroup-3:
               display_name: Pokaż, co wiesz
           name: csa5-pilot-facilitator
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Innowacje w informatyce
+            lesson-9:
+              name: Kolorowe LED
+            lesson-13:
+              name: Akcelerometr
+            lesson-19:
+              name: Projekt

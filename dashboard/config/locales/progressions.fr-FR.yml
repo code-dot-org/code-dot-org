@@ -2,7 +2,7 @@
 fr:
   data:
     progressions:
-      '"If/Else" with the Bee': '"Si/Sinon" avec l''abeille'
+      '"If/Else" with the Bee': "« Si/Sinon » avec l'abeille"
       Adding Images: Ajouter des images
       Adding Screens: Ajouter des écrans
       Alien Defender: Défenseur alien
@@ -52,6 +52,7 @@ fr:
       Collisions: Collisions
       Combining Representations: Combiner des Représentations
       'Conditionals: If Statements': " Instructions « si »"
+      'Conditionals: If and If/Else Statements': Instructions conditionnelles « Si/Sinon »
       Course E Artist Project: Cours E Projet Artiste
       Course E Sprite Lab Project: 'Cours E Projet du Labo des Lutins
 
@@ -85,7 +86,7 @@ fr:
       Events: Événements
       Exploration: Exploration
       'Exploration: Adding Style': 'Exploration : Ajout de style'
-      'Exploration: For Loops': " Boucles « Pour »"
+      'Exploration: For Loops': 'Exploration: Boucles « Pour »'
       'Exploration: Sample Apps': " Exemples d'Aplications"
       Explore HTML: Explorer le HTML
       Finish a Screen: Terminer l'écran
@@ -93,7 +94,9 @@ fr:
       Finishing Functions: Terminer les fonctions
       Finishing Touches: Terminer les touches
       Follow the Mouse: Suivre la souris
-      For Loops: Boucles « Pour »
+      For Loops: Les Boucles « Pour »
+      For Loops and Color LEDs: Les Boucles « Pour » et LEDs colorées
+      For Loops and Repeat Blocks: Les Boucles « Pour » et Les Blocs « Répéter »
       Formatting HTML: Mise en forme HTML
       Free Play: Activité libre
       Functions: fonctions
@@ -117,12 +120,14 @@ fr:
       Inspiration!: Inspiration !
       Interactive Card: Carte interactive
       Intro to Design Mode: Introduction au mode création
+      Intro to For Loops: Intro au Boucles « Pour »
       Introducing Sprite Lab: Introduction au Labo des Lutins
       Introduction to Arrays: Introduction aux Tableaux
       Introduction to Game Lab: Introduction au labo de jeux
       Keeping Data Secret: Garder les Données Secrètes
       Keyboard Input: Entrée Au Clavier
       Layout Properties: Propriétés de la mise en page
+      Learning from Simulations: Apprendre à l'aide des simulations
       Lesson Extras: Les Extras de la Leçon
       Lesson Overview: Aperçu de la leçon
       Linking Pages: Relier des Pages
@@ -156,6 +161,8 @@ fr:
       RGB Widget: Widget RVB
       Random Numbers: Nombres aléatoires
       Reflection: Réflexion
+      Repeat Blocks: Les blocs `Répéter`
+      Repeat Blocks with BB-8: Les blocs `Répéter` avec BB-8
       Representing Images: Représenter des Images
       Responding to User Input: Répondre à l’entrée de l’utilisateur
       Review: Vérifier
@@ -174,7 +181,7 @@ fr:
       Sample Program: Programme d’exemple
       Sensor Experiment: Expérience des capteurs
       Shapes and Parameters: Formes et paramètres
-      Skill Building: Labo des Lutins
+      Skill Building: Renforcement Des Compétences
       Speed it Up, Slow it Down: Accélére la, ralenti la
       Sprite Interactions: Interactions de sprite
       Sprite Interactions Review: Révision des interactions de sprite
@@ -185,7 +192,6 @@ fr:
       Sprite Properties: Propriétés du sprite
       Sprite Scenes: Scènes de sprites
       Sprite Velocity: Vélocité des sprites
-      Stopping the Outbreak with Masks: Stopper l'épidémie avec des masques
       Text Compression: Compression de texte
       The Accelerometer: L’accéléromètre
       The Animation Tab: L’onglet Animation
@@ -199,20 +205,24 @@ fr:
       Velocity and the Counter Pattern: Vélocité et le contre-modèle
       Velocity and the Counter Pattern Review: Révision de la vélocité et du contre-modèle
       Video: Vidéo
-      'Video: "If/Else" Statements': 'Vidéo : Instructions conditionnelles'
+      'Video: "If/Else"': 'Video: « Si/Sinon »'
+      'Video: "If/Else" Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
       'Video: Booleans': 'Vidéo : Boléens'
       'Video: CS Matters': 'Vidéo : Questions d’informatique'
       'Video: Conditional Statements': 'Vidéo : Instructions conditionnelles'
       'Video: Conditionals': 'Vidéo : Instructions conditionnelles'
       'Video: Conditionals: If Statements': "  Instructions « si »"
+      'Video: Conditionals: If and If/Else Statements': 'Video: Instructions conditionnelles
+        « Si » et « Si/Sinon »'
       'Video: Debugging with Scrat ': " Déboguer avec Scrat "
       'Video: Drawing in Game Lab - Part 1': 'Vidéo : Dessiner dans le labo des jeux
         - Partie 1'
       'Video: Drawing in Game Lab - Part 2': 'Vidéo : Dessiner dans le labo des jeux
         - Partie 2'
       'Video: Events': " Événements"
+      'Video: For Loops': 'Video: Les Boucles « Pour »'
       'Video: Harvesting with Conditionals': " Récolter avec les Conditions"
-      'Video: If/Else Statements': 'Vidéo : Instructions conditionnelles'
+      'Video: If/Else Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
       'Video: Intro to Web Lab - Part 1': 'Vidéo : Introduction au labo du web - Partie
         1'
       'Video: Intro to Web Lab - Part 2': 'Vidéo : Introduction au labo du web - Partie
@@ -229,6 +239,8 @@ fr:
       'Video: Problem Solving Process': Processus de Résolution De Problème
       'Video: Programming with Rey and BB-8': " Programmer avec Rey et BB-8"
       'Video: Properties': " Propriétés"
+      'Video: Repeat Blocks': 'Video: Les blocs `Répéter`'
+      'Video: Repeat Until Blocks': 'Video: Les blocs Répéter Jusqu’à'
       'Video: Sprite Movement': 'Vidéo : Animer un sprite'
       'Video: Sprites in Action': " Les Lutins en Action"
       'Video: Star Wars Project': " Projet Star Wars"
@@ -241,6 +253,7 @@ fr:
         ?'
       'Video: While Loops with the Farmer': " Les Boucles Tant Que avec la Fermière"
       Warm Up: Warm-up (Séance d’échauffement)
+      Welcome to Monster Town: Bienvenue à Monster Town
       Where'd They Go?: Où iraient-ils ?
       While Loops with the Farmer: Les Boucles Tant Que avec la Fermière
       Wrap-up: Résumé et ouverture

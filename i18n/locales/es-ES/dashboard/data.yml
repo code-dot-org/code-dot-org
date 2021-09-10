@@ -585,6 +585,7 @@ es:
         csp_defining_calling_functions: Definiendo y Llamando a Funciones
         csd_ml_intro_ai_lab_july2021: Introducción al Laboratorio de Inteligencia Artificial
         csd_ml_numerical_ai_lab: Datos Numéricos en el Laboratorio de Inteligencia Artificial
+        Gettting_Started_ClassSection: Creación de una Sección de Clase
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

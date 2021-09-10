@@ -2437,8 +2437,100 @@ de-DE:
           Erstellen Sie einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
       Internet Simulator Setup:
         content1: hier die Beschreibung
+        markdown: "# Code.org  Internet-Simulator \n\n_Hinweis: \n\nDie Anweisungen
+          in dieser Anleitung sind für Lehrkräfte gedacht, die den Internet-Simulator
+          als eigenständiges Werkzeug unabhängig vom Code.org Computer Science Principles
+          Lehrplan verwenden möchten. Wenn Sie die Aktivitäten im Rahmen des  CSP-Lehrplans
+          von Code.org verwenden möchten, besuchen Sie bitte [CSP-Lehrplanseite](https://code.org/educate/csp)_
+          ### Inhalt Hier finden Sie 3 Seiten mit Hintergrundinformationen: * Was
+          ist der Internet-Simulator? Überblick (siehe unten) * [Einrichtungshinweise](/s/netsim/lessons/1/levels/2)
+          * [FAQ](/s/netsim/lessons/1/levels/3) ### Was ist der Internet-Simulator?
+          Ein Überblick: Der Internet-Simulator ist ein Werkzeug , das von Code.org
+          für unseren neuen High-School- [Computer Science Principles](https://code.org/educate/csp)
+          Kurs entwickelt wurde. Das Tool wurde entwickelt, um den Schülern die Möglichkeit
+          zu geben, verschiedene Probleme im Zusammenhang mit vernetzten Computern
+          auszuprobieren (und zu lösen). Der Internet-Simulator wird in mehreren Lektionen
+          in den Einheiten 1 und 2 unseres Lehrplans eingesetzt, um die verschiedenen
+          Schichten des Internets nach und nach aufzubauen. Wenn Sie in Erwägung ziehen,
+          das Werkzeug in Ihrem Unterricht mit selbst entworfenen Aktivitäten einzusetzen,
+          empfehlen wir Ihnen, sich anhand unserer [Unterrichtspläne] (https://curriculum.code.org/csp/unit1)
+          mit dem Werkzeug  vertraut zu machen. **Die Hinweise für die Einraichtung**
+          auf der nächsten Seite sind für Lehrkräfte gedacht, die den Internet-Simulator
+          unabhängig vom Code.org CSP-Lehrplan verwenden möchten. Das Werkzeug selbst
+          _unterrichtet_ diese Konzepte nicht, sondern bietet eine Umgebung, in der
+          mehrere Schüler/innen zusammenkommen und sich gegenseitig oder anderen Mitschüler*innen
+          binäre, dezimale oder ascii-basierte Nachrichten schicken können. *Die Umgebung
+          kann auf unterschiedliche Weise konfiguriert werden, um verschiedene Probleme
+          zu lösen, Daten und Verbindungen zwischen Hosts zu visualisieren und das
+          Lernen verschiedener Konzepte im Zusammenhang mit dem Internet zu unterstützen.
+          Der Internet-Simulator wurde für den Einsatz in einem *Klassenzimmer* entwickelt,
+          in dem die Schüler/innen gemeinsam und persönlich an der Lösung von Problemen
+          arbeiten. Oft geht es dabei um die Erfindung eines Kommunikationsprotokolls
+          oder darum, Informationen so zu kodieren, dass sie im Internet weitertransportiert
+          werden können. *Im  Curriculum Grundlagen der Informatik von Code.org**
+          strukturieren wir die Lektionen und Aktivitäten in der Regel folgendermaßen:
+          * **Zuerst stellen wir die Schüler/innen vor eine Herausforderung** * z.
+          B. Das physische Internet ist von Natur aus unzuverlässig und kann Nachrichten
+          verwerfen * **Geben wir ihnen die Möglichkeit, mit dem Simulator zu experimentieren,
+          um ein Gefühl für die Probleme zu bekommen** * z. B. schauen wir uns die
+          Routerprotokolle an und stellen fest, dass 10-20% aller Nachrichten verworfen
+          werden und Pakete in falscher Reihenfolge weitergeleitet werden können *
+          **Geben wir ihnen die Möglichkeit, ihre eigene Lösung für die Herausforderung
+          zu finden** * z. B. ein eigenes Protokoll zu erfinden, um Nachrichten über
+          dieses unzuverlässige Netzwerk zuverlässig zu versenden * **Schließlich
+          recherchieren die Schüler, wie das Protokoll oder die Erfindung \"in der
+          realen Welt\" funktioniert ** * z. B. recherchieren sie, wie TCP wirklich
+          funktioniert, und schauen sich ein Video an ### Wozu kann der Internet-Simulator
+          konfiguriert werden? Im einfachsten Fall kann der Internet-Simulator ein
+          einzelnes Bit an Informationen über eine einzige gemeinsame Leitung ohne
+          Koordination oder Synchronisation übertragen. In seiner fortschrittlichsten
+          Version kann er unzuverlässige Verbindungen über mehrere Router simulieren
+          und dabei IP-Adressen, ein DNS und Pakete fester Größe verwenden, die die
+          Erstellung von Protokollen ähnlich wie TCP/IP oder HTTP erfordern. Wir haben
+          den Internet-Simulator in einer Vielzahl von Konfigurationen eingerichtet,
+          die sich für den Unterricht bestimmter Themen eignen. Wenn Sie den Internet-Simulator
+          im Unterricht verwenden, sollten Sie jedoch einige Einstellungen der Benutzeroberfläche
+          kennen, die Sie kontrollieren oder Ihren Schülern vorgeben möchten. Ein
+          Beispiel: Eine der Funktionen des Internet-Simulators ist, dass man die
+          binären, dezimalen, hexadezimalen und ASCII-Darstellungen aller Daten anzeigen
+          kann, die man verschickt. In einigen Konfigurationen kann der/die Benutzer/in
+          auch die \"Chunk-Größe\" einstellen, um zu bestimmen, wie die Bits interpretiert
+          werden. Für eine selbst gestaltete Unterrichtsstunde könnten Sie eine der
+          von uns angebotenen Konfigurationen wählen, müssen aber vielleicht vorschreiben,
+          dass die Schülerinnen und Schüler nur eine bestimmte Darstellung der Bits
+          zeigen, oder Sie möchten, dass die Chunk-Größe auf einen bestimmten Wert
+          eingestellt wird. Entscheidend ist, dass die hier vorgestellten Konfigurationen
+          als Ausgangspunkt für den Unterricht zu einem bestimmten Thema dienen sollen.
+          Möglicherweise müssen Sie etwas Einfallsreichtum und Unterrichtsstrategien
+          einbringen, um die Verwendung des Simulators weiter zu verfeinern und an
+          Ihre Vorstellungen anzupassen. <br><br> <img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/> <br><br> _Nächster Punkt: Anleitung
+          zur Einrichtung_"
       Internet Simulator Setup 2:
         content1: hier die Beschreibung
+        markdown: 'Internet-Simulator: Anweisungen zur Einrichtung 1. **Erstellen
+          Sie einen Bereich in Code Studio.** Damit die Schüler in Ihrer Klasse miteinander
+          kommunizieren können, müssen sie alle mit demselben Bereich in Code Studio
+          verbunden sein. Wenn Sie als Lehrer angemeldet sind, müssen Sie einen Bereich
+          erstellen, dem alle Ihre Schüler beitreten. Um einen Bereich zu erstellen:
+          * Navigieren Sie zum Bereich [Abschnitte](https://code.org/teacher-dashboard#/sections)
+          des Lehrer-Dashboards * Klicken Sie auf die Schaltfläche ''Neuer Abschnitt''.
+          Wir empfehlen, für den Kurs die Anmeldeart ''E-Mail'' und ''cspunit1'' zu
+          wählen. <br> <img src="https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png"
+          width="600px" /> <br><br> 2. **Lassen Sie die Schüler diesem Abschnitt beitreten.**
+          Sobald der Abschnitt erstellt ist, klicken Sie auf den Link ''Schüler verwalten''
+          für den Abschnitt. Sie sehen dann einen Abschnittscode, mit dem Sie die
+          Studenten auffordern können, der Sektion beizutreten, sobald sie ihre eigenen
+          Code Studio-Konten erstellt haben. <br> <img src="https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png"
+          width="400px" /> <br><br> 3. **Geben Sie den Studenten die URL zu der Version
+          des Internet-Simulators an, die Sie verwenden möchten.** Wir haben mehrere
+          verschiedene Konfigurationen des Internet-Simulators erstellt, die unter
+          [code.org/internetsimulator](http://code.org/internetsimulator) verfügbar
+          sind. Wenn Sie eine Konfiguration gefunden haben, die für Ihre Aktivität
+          geeignet ist, geben Sie die URL an die Schüler weiter. Wenn sie sich alle
+          in der gleichen Sektion befinden, können sie sich automatisch miteinander
+          verbinden, wenn sie die gleiche URL aufrufen. Nächster Punkt: Häufig gestellte
+          Fragen_'
       Internet Simulator Setup 3:
         content1: hier die Beschreibung
         markdown: |
@@ -6549,40 +6641,55 @@ de-DE:
           Spielen Sie ein Kartenspiel und erstellen Sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt"
       CourseF_outbreak_story:
         content1: hier die Beschreibung
+        markdown: |
+          # Ausbruch: Codieren Sie Ihre eigene Simulation
+
+          ## Willkommen in Monster Town!
+          Monster Town war normalerweise ein glücklicher und gesunder Ort. Die Monster von Monster Town liebten es, ihre Freunde zu besuchen.
+
+          ## Ein Virus kommt in die Stadt
+          Eines Tages wurde einem der Monster schlecht. Das Monster hatte einen ** Virus ** gefangen! Ein Virus ist ein winziger Keim, der Sie krank machen kann. Die anderen Monster waren nicht allzu besorgt. Sie besuchten immer wieder ihre Freunde.
+
+          ## Das Virus verbreitet sich
+          Bald wurden zwei weitere Monster darauf krank. Es war der gleiche Virus! Es scheint, dass sie den Virus von ihrem Freund bekommen haben.
+
+          ## Ausbruch!
+          Das Virus breitete sich langsam auf andere Monster in der Nähe aus. Die gesunden Monster begannen sich Sorgen zu machen, dass sie alle krank werden würden. Die kranken Monster begannen sich Sorgen zu machen, dass sie das Virus an alle anderen weitergeben würden.
       CourseF_outbreak_story2:
         content1: hier die Beschreibung
         markdown: "# Ausbruch: Denke wie ein Wissenschaftler\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nSimulationen sind eine tolle Sache,
-          um etwas zu erfahren, was sich in der realen Welt nicht beobachtet werden
-          kann. Wissenschaftler lösen damit Probleme und testen gefahrlos und effizient
+          um etwas zu erfahren, was man in der realen Welt nicht beobachten kann.
+          Wissenschaftler lösen damit Probleme und testen gefahrlos und effizient
           neue Ideen. Mit deiner Simulation kannst du zeigen, wie ein Virenausbruch
-          in Monster Town ablaufen könnte.\n\n## Zurücksetzen und noch einmal spielen!\nAuch
-          wenn du deinen Code selbst schreibst, kannst du nie genau wissen, was passiert,
+          in Monster-Town ablaufen könnte.\n\n## Zurücksetzen und noch einmal spielen!\nAuch
+          wenn du deinen Code selbst schreibst,  weißt du vorher nie genau, was passiert,
           wenn du auf Ausführen klickst. Die Monster bewegen sich willkürlich, deshalb
-          weißt du nicht, ob sich das Virus schnell oder langsam ausbreitet. Immer
-          wenn du deinen Code änderst, solltest du die Simulation mehrmals ausführen.
+          weißt du nicht, ob sich das Virus schnell oder langsam ausbreitet. Wenn
+          du deinen Code änderst, solltest du die Simulation immer mehrmals ausführen.
           Das Spiel ist nie dasselbe!\n\n## Sammle Daten\nSchreibe deine Beobachtungen
           auf, wenn du die Simulation ausführst. Zähle beispielsweise die Monster,
-          die krank werden oder beobachte mit dem Timer, wie schnell es geht. Wie
-          lange dauert es gewöhnlich, bis alle Monster krank sind, wenn sie keine
-          Maske tragen. \n\n## Wage eine Prognose\nWenn du dein Modell gut kennst,
-          kannst du Prognosen aufstellen. Du kannst sogar die Ausführungen deiner
-          Simulation ändern und erraten, was diesmal anders sein wird. Zum Beispiel:\n*
-          Was würde passieren, wenn es doppelt so viele Monster sind?\n* Was würde
-          passieren, wenn sich die Monster halb so schnell bewegen?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
-          style=\"float:right\">\n\n## Ist Monster Town wie die richtige Welt?\nEin
-          Modell kann nicht zu hundert Prozent realistisch sein. \n* Was haben deine
-          Ausbruchssimulation und Virenausbrüche in der realen Welt gemeinsam?\n*
-          Was unterscheidet sie?\nSpreche mit deinen Lehrern oder deiner Familie darüber,
-          wenn du diese Aktivität beendet hast!\n\n## Was könntest du noch simulieren?\nDu
-          hast jetzt ein funktionierendes Arbeitsmodell eines Ausbruchs in Monster
-          Town. Was kann deine Simulation nicht modellieren oder zeigen, was du gerne
-          zeigen würdest? Klicke auf Fortfahren und lerne noch mehr zu modellieren:\n*
-          Erhöhe die Anzahl der Monster der Simulation\n* Hilf Monstern gesund zu
-          werden\n* Wahrscheinlichkeit, Immunität, Impfungen und mehr!\n\nDu kannst
-          deine Simulation auch mit anderen teilen oder eine Nachricht, was wir tun
-          könnten, damit andere gesund bleiben, wenn der Virus in die Stadt gelangt
-          ist. \n"
+          die krank werden oder beobachte mit dem Timer, wie schnell es geht. Du kannst
+          zum Beispiel beobachten, wie lange es  normalerweise dauert, bis alle Monster
+          krank sind, wenn sie keine Maske tragen. \n\n## Erstelle Prognosen\nWenn
+          du dein Modell gut kennst, kannst du Prognosen erstellen. Du kannst sogar
+          die Ausführungen deiner Simulation ändern und erraten, was diesmal anders
+          sein wird. Zum Beispiel:\n* Was würde passieren, wenn es doppelt so viele
+          Monster sind?\n* Was würde passieren, wenn sich die Monster halb so schnell
+          bewegen?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Funktioniert Monster-Town wie die wirkliche
+          Welt?\nEin Modell kann niemals zu hundert Prozent realistisch sein. \n*
+          Was haben deine Simulation des Ausbruchs und Virenausbrüche in der wirklichen
+          Welt gemeinsam?\n* Was unterscheidet sie?\nSprich mit deinen Lehrern oder
+          deiner Familie darüber, wenn du diese Aktivität abgeschlossen hast!\n\n##
+          Was könntest du noch simulieren?\nDu hast jetzt ein funktionierendes Arbeitsmodell
+          eines Ausbruchs in Monster-Town. Was kann deine Simulation nicht modellieren
+          oder zeigen, was du gerne zeigen würdest? Klicke auf Fortfahren und lerne,
+          noch mehr zu modellieren:\n* Erhöhe die Anzahl der Monster der Simulation\n*
+          Hilf den Monstern dabei, gesund zu werden\n* Wahrscheinlichkeit, Immunität,
+          Impfungen und mehr!\n\nDu kannst deine Simulation auch anderen zeigen oder
+          erklären, was wir tun könnten, damit andere gesund bleiben, wenn der Virus
+          in die Stadt gelangt ist. \n"
       DesigningForAccessibilityMarkdownLevel_2021:
         markdown: |
           # Entwerfen für Barrierefreiheit

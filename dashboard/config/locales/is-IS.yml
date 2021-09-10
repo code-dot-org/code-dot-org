@@ -223,6 +223,9 @@ is:
     email_preference_yes: Já
     email_preference_no: Nei
     email_preference_required: Þú verður tilgreina tölvupóst.
+    share_teacher_email_reg_partner_preference_yes: Já
+    share_teacher_email_reg_partner_preference_no: Nei
+    share_teacher_email_reg_partner_preference_required: Þú verður tilgreina tölvupóst.
     parent_account_checkbox: Ég er foreldri/forráðamaður sem er að skrá fyrir hönd
       barns míns
     parent_account_email_progress_permission: Megum við senda þér af og til netpóst

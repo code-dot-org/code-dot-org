@@ -194,6 +194,10 @@ hy:
           DIRECTION:
             '"right"': ճիշտ
             '"left"': ձախ
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": ճռճռոց
       gamelab_randColor:
         text: կամայական գույն
       gamelab_randomColor:
@@ -331,10 +335,6 @@ hy:
             '"down"': ներքեւ arrow
             '"left"': ձախ arrow
             '"right"': ճիշտ arrow
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': ծիածան
       RyanLab_moveForward:
         text: առաջ ընթանալ
       RyanLab_turnLeft:

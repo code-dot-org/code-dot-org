@@ -265,11 +265,119 @@
         },
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "Рыбы",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "другое"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "другое",
+          "f655df68ec33643278de7e69794e8d76": "Виртуальный аквариум",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Что ты добавишь?",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "создание",
+          "0d3e73168beb875063ea0f0302fe32bd": "Какая рыба?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Какое создание?",
+          "78574118d153534fd0925a2f5ca25e79": "Какая вещь?"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Победа!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " секунд"
+          "077449fb290b51b9d70c9f2f3d3213bc": " секунд",
+          "490082498449bd20ff0199737dfa4916": "Выбери тип игры:",
+          "41f2b2212de0105c2a942ebb4a44e449": "Игра «Великий собиратель»!"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "У кого день рождения?",
+          "d1210f945885351b13feb9bbb868aeef": "Сколько лет исполняется имениннику?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_apps_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "Здравствуй, я Х-9! Как тебя зовут?",
+          "f0e5da70d264f312a1658d51c130b101": "Укажи свое имя:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Сколько тебе лет?",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Укажи свой возраст:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " лет тоже!",
+          "605f302ebc9f7fbacba60b15f551a633": "Какой твой любимый цвет?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Укажи свой любимый цвет:",
+          "ae096fbf24d913754b01a1601672bf62": " тоже!",
+          "1f258d88a70309efc1435ef5daa277a0": "Спасибо за общение со мной сегодня!"
+        },
+        "courseF_apps_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Командные игры",
+          "bf08dd3d1961874f13e77c936aad27e5": "История с чистого листа",
+          "514b8d5320196898a9ced3efe0d4c802": "Задай прилагательное:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Задай предмет:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Задай часть тела:",
+          "e522ee28f39133b45497637539ff429b": "Задай число:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " игры.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-забег!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "У кого день рождения?",
+          "d1210f945885351b13feb9bbb868aeef": "Сколько лет исполняется имениннику?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_editable_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "Здравствуй, я Х-9! Как тебя зовут?",
+          "f0e5da70d264f312a1658d51c130b101": "Укажи свое имя:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Сколько тебе лет?",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Укажи свой возраст:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " лет тоже!",
+          "605f302ebc9f7fbacba60b15f551a633": "Какой твой любимый цвет?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Укажи свой любимый цвет:",
+          "1f258d88a70309efc1435ef5daa277a0": "Спасибо за общение со мной сегодня!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_editable_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Командные игры",
+          "bf08dd3d1961874f13e77c936aad27e5": "История с чистого листа",
+          "514b8d5320196898a9ced3efe0d4c802": "Задай прилагательное:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Задай предмет:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Задай часть тела:",
+          "e522ee28f39133b45497637539ff429b": "Задай число:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "игры.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-забег!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "У кого день рождения?",
+          "d1210f945885351b13feb9bbb868aeef": "Сколько лет исполняется имениннику?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
         }
       }
     }

@@ -3087,9 +3087,9 @@
         "CourseF_outbreak2": "當它們接觸時，將健康的怪物變成生病的怪物。",
         "CourseF_outbreak3": "當你點擊怪物時，將它們變成戴口罩的怪物。",
         "CourseF_outbreak4": "為你的模擬更改怪物精靈圖的數量和大小。",
-        "CourseF_outbreak6": "添加一個當健康怪物接觸生病怪物時怪物生病的百分比幾率。對所有戴了或沒戴的怪物組合都這樣做。",
-        "CourseF_outbreak7": "為具有病毒免疫的怪物創建一個新的服裝，並在你的模擬中使用它。",
-        "CourseF_outbreak8": "與你的模擬分享資訊。",
+        "CourseF_outbreak6": "當健康的怪物接觸生病的怪物時，使所有生病的怪物開始恢復。",
+        "CourseF_outbreak7": "添加一個當健康怪物接觸生病怪物時怪物生病的百分比幾率。對所有戴了或沒戴的怪物組合都這樣做。",
+        "CourseF_outbreak8": "為具有病毒免疫的怪物創建一個新的服裝，並在你的模擬中使用它。",
         "courseA_artist_loops10_2021": "幫我放些石頭，我不想掉下去！",
         "courseA_artist_loops11_2021": "幫我蓋一個階梯，讓我可以看著船航行到遠方。",
         "courseA_artist_loops12_2021": "小藝術家在遠處看到一些有趣的東西，你覺得他看到了什麼？把它畫出來。",
@@ -3733,7 +3733,8 @@
         "ramp_artist_loops6v1_2021": "使用循環來繪製這個樓梯。",
         "ramp_artist_loops7_2021": "找到規律，用迴圈讓這個程式更精簡！",
         "ramp_artist_loops9_2021": "畫一個正方形通過本關。",
-        "simcustom_2021": "嘗試對精靈圖服裝或下面的代碼做一些更改。 "
+        "simcustom_2021": "嘗試對精靈圖服裝或下面的代碼做一些更改。 ",
+        "international_outbreak_freeplay": "與你的模擬分享資訊。"
       }
     }
   }

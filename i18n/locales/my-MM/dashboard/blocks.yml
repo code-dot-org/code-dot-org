@@ -147,6 +147,10 @@ my:
             '"while"': စဉ်တွင်
           KEY:
             '"x"': "×"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': မိုးရွာသည်
       gamelab_randColor:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:
@@ -222,10 +226,6 @@ my:
           KEY:
             '"a"': က
             '"d"': ဃ
-      PoemBot_setForegroundEffect:
-        options:
-          FG_EFFECT:
-            '"rain"': မိုးရွာသည်
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:

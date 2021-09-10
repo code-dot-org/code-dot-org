@@ -1109,6 +1109,10 @@ fr:
         text: emplacement de {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': pluie
       gamelab_makeNewSpriteAnon:
         text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
       gamelab_mirrorSprite:
@@ -1139,6 +1143,11 @@ fr:
         text: cliqué {SPRITE}
       gamelab_playSound:
         text: jouer le son {SOUND}
+      gamelab_playSoundOptions:
+        text: jouer le son {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
       gamelab_pointInDirection:
         text: diriger {SPRITE} vers {DIRECTION}
         options:
@@ -1509,6 +1518,11 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
+      Mikelab_setupOutbreak:
+        text: |-
+          Configuration de l'épidémie
+          population:{SPRITE2N}
+          {TOGGLE}virus
       Mikelab_setupSim:
         text: configure la simulation avec {SPRITE1N}{SPRITE1COSTUME}vitesse{SPRITE1SPEED}{SPRITE2N}{SPRITE2COSTUME}vitesse{SPRITE2SPEED}ramassant{SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
@@ -1577,18 +1591,56 @@ fr:
         text: coordonnées x de {SPRITE}
       Mikelab_yLocationOf:
         text: coordonnées y de {SPRITE}
+      Outbreak_beginCongregating:
+        text: les monstres commencent à se rassembler
+      Outbreak_beginQuarantining:
+        text: les monstres commencent à se mettre en quarantaine lorsqu'ils sont malades
+      Outbreak_beginSocialDistancing:
+        text: les monstres commencent à respecter les règles de distanciation physique
+      Outbreak_beginWandering:
+        text: les monstres commencent à errer
+      Outbreak_beginWearingMasks:
+        text: les monstres commencent à porter le masque
+      Outbreak_layoutBorder:
+        text: dispose les monstres sur une bordure
+      Outbreak_layoutClusters:
+        text: dispose les monstres par lots de {NUM}
+      Outbreak_layoutGrid:
+        text: dispose les monstres en quadrillage
+      Outbreak_layoutRandom:
+        text: dispose les monstres au hasard
+      Outbreak_stopMoving:
+        text: les monstres ne bougent plus
+      PoemBot_playSound:
+        text: jouer le son {SOUND}
       PoemBot_setBackgroundEffect:
-        text: définir l’effet de fond {BG_EFFECT} [PALETTE][1]
+        text: définir l’effet de fond {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': unie
-            '"rainbow"': arc-en-ciel
+          EFFECT:
+            '"colors"': Couleurs
+            '"squiggles"': Gribouillis
+            '"space"': Espace
+            '"stars"': Étoiles
+            '"ripples"': Ondulations
+          PALETTE:
+            '"rainbow"': Arc-en-ciel
       PoemBot_setForegroundEffect:
-        text: définir l’effet de premier plan {FG_EFFECT}
+        text: définir l’effet de premier plan {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': pluie
-            '"bubbles"': bulles
+          EFFECT:
+            '"rain"': Pluie
+            '"bubbles"': Bulles
+            '"hearts"': Cœurs colorés
+            '"confetti"': Confettis
+            '"starburst"': Starburst
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            swimming_left_and_right: natation
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            swimming_left_and_right: natation
       RyanLab_moveForward:
         text: avancer
       RyanLab_turnLeft:

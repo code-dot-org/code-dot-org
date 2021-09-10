@@ -4,6 +4,138 @@
       "objectives": {
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Eine Variable deklarieren"
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "Entdecke, dass das Internet genutzt werden kann, um ferne Orte zu besuchen und neue Dinge zu lernen."
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Vergleiche, wie sicher du online bist und wie sicher du in der realen Welt bist."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Erkläre Regeln für sicheres Reisen im Internet."
+        },
+        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
+          "description": "Erkenne, was erwartet wird, wenn SchülerInnen den Computerraum betreten."
+        },
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
+          "description": "Verwende eine angemessene Terminologie, wenn du dich auf eine Computermaus, ein Trackpad oder einen Touchscreen beziehst."
+        },
+        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
+          "description": "Übersetze einen Algorithmus in ein Programm"
+        },
+        "95ef707d-603d-4106-955e-3138f0f16a5d": {
+          "description": "Dekodiere und führe ein von jemand anderem erstelltes Programm aus"
+        },
+        "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
+          "description": "Identifiziere und behebe Bugs oder Fehler in sequenzierten Anweisungen"
+        },
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Vorbildliches Verhalten im Computerraum"
+        },
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Experimentiere mit standardmäßigen blockbasierten Programmieraktionen wie: Klicken, Drag and Drop, etc."
+        },
+        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
+          "description": "Konstruiere ein Programm, indem du sequenzielle Bewegungen reorganisierst"
+        },
+        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
+          "description": "Ein Computerprogramm aus einer Reihe von schriftlichen Anweisungen erstellen"
+        },
+        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
+          "description": "Geeignete Debugging-Praktiken beim Lösen von Problemen wählen"
+        },
+        "199aed02-347c-4892-9e98-d7571ae64c9d": {
+          "description": "Ordne die Befehle in einer logischen Reihenfolge an."
+        },
+        "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
+          "description": "Erkenne Probleme oder \"Bugs\" in einem Programm und entwickle einen Plan, um die Probleme zu beheben."
+        },
+        "407c5a4d-9337-4218-92d5-018597e41e19": {
+          "description": "Identifiziere sich wiederholenden Code und verkürze mehrere Aktionen zu einer einzigen Schleife."
+        },
+        "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
+          "description": "Interpretiere ein Programm mit Schleifen als eine Serie von mehreren Aktionen."
+        },
+        "cb7cab91-20ca-495a-a429-621631cb0507": {
+          "description": "Konstruiere ein Programm mit Strukturen, die Bereiche des Codes wiederholen"
+        },
+        "381b89ab-336f-41cd-b755-78142a1f1f90": {
+          "description": "Verbessere bestehenden Code, indem du Bereiche mit Wiederholungen findest und sie in Schleifenstrukturen verschiebst"
+        },
+        "632bd918-c124-4f4c-892e-980cdc07b3bf": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
+          "description": "Brich eine lange Sequenz von Anweisungen in die kleinstmögliche wiederholbare Sequenz herunter."
+        },
+        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
+          "description": "Zähle die Anzahl, wie oft eine Aktion wiederholt werden soll und stelle sie als Schleife dar."
+        },
+        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
+          "description": "Zerlege eine Form in ihre größte wiederholbare Sequenz."
+        },
+        "66267233-8532-4f63-aea5-3a214dac119a": {
+          "description": "Erstelle ein Programm, das komplexe Formen durch Wiederholung einfacher Sequenzen zeichnet."
+        },
+        "134f184c-8865-44d2-8921-5740c749bcd5": {
+          "description": "Wiederhole Kommandos, die von einem Instruktor gegeben werden."
+        },
+        "b7973aec-afbf-4f81-820c-daced7731b0f": {
+          "description": "Erkenne Aktionen des Lehrers als Signale, um Kommandos einzuleiten."
+        },
+        "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
+          "description": "Übe die Unterscheidung zwischen vordefinierten Aktionen und ereignisgesteuerten Aktionen."
+        },
+        "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
+          "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
+        },
+        "b366b41e-9396-4c1b-9d35-164052448c1c": {
+          "description": "Erstelle eine animierte, interaktive Geschichte mit Sequenz- und Event-Handlern."
+        },
+        "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
+          "description": "Teile ein kreatives Artefakt mit anderen Schülern."
+        },
+        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
+          "description": "Wende Informatik-Konzepte in einem offenen Projekt an."
+        },
+        "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
+          "description": "Überwinde Hindernisse wie Zeitbeschränkungen oder Bugs."
+        },
+        "26392005-5f64-4707-b38b-847d1f009a29": {
+          "description": "Identifiziere und behebe Bugs oder Fehler in sequenzierten Anweisungen"
+        },
+        "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
+          "description": "Konstruiere ein Programm mit Strukturen, die Bereiche des Codes wiederholen"
+        },
+        "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
+          "description": "Verbessere bestehenden Code, indem du Bereiche mit Wiederholungen findest und sie in Schleifenstrukturen verschiebst"
+        },
+        "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
+          "description": "Erkenne, was erwartet wird, wenn SchülerInnen den Computerraum betreten."
+        },
+        "d1485387-01e4-484d-9935-75f7c14b9d76": {
+          "description": "Verwende eine angemessene Terminologie, wenn du dich auf eine Computermaus, ein Trackpad oder einen Touchscreen beziehst."
+        },
+        "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
+          "description": "Konstruiere ein Programm, indem du sequenzielle Bewegungen reorganisierst"
+        },
+        "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
+          "description": "Ein Computerprogramm aus einer Reihe von schriftlichen Anweisungen erstellen"
+        },
+        "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
+          "description": "Ordne die Befehle in einer logischen Reihenfolge an."
+        },
+        "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
+          "description": "Erkenne Probleme oder \"Bugs\" in einem Programm und entwickle einen Plan, um die Probleme zu beheben."
+        },
+        "38f34964-ca2d-4d03-ab82-e937fc487d2a": {
+          "description": "Konstruiere ein Programm mit Strukturen, die Bereiche des Codes wiederholen"
+        },
+        "b6f41a7c-0967-4986-b7b6-910819b28396": {
+          "description": "Verbessere bestehenden Code, indem du Bereiche mit Wiederholungen findest und sie in Schleifenstrukturen verschiebst"
+        },
+        "2fa04500-f1d4-4924-aa39-70292711d432": {
+          "description": "Erstelle eine animierte, interaktive Geschichte mit Sequenz- und Event-Handlern."
         }
       }
     }

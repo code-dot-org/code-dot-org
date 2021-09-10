@@ -391,6 +391,13 @@
         },
         "courseC_artist_prog2_2021": {
           "slider": "तुम्ही तुमचा प्रोग्रॅम इथे संथ करू शकता."
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "ब्लॉक मोठा करण्यासाठी येथे क्लिक करा.",
+          "pointerlocation": "सब्जेक्ट ब्लॉक इथे ड्रॅग करा"
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "नवीन पोशाख तयार करण्यासाठी क्लिक करा"
         }
       }
     }

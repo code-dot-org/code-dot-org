@@ -2384,6 +2384,22 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "להחלים",
+          "wandering": "לשוטט",
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "moving left and right": "לנוע שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
         }
       }
     }

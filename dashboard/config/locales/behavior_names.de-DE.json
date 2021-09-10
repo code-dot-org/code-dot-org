@@ -1248,7 +1248,10 @@
           "spinning left2": "linksdrehen2\n",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
           "driving with arrow keys": "fahren mit den Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
           "moving west": "nach Westen gehend",
@@ -1277,7 +1280,10 @@
           "spinning left2": "linksdrehen2\n",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
           "driving with arrow keys": "fahren mit den Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
           "wandering": "wandernd",
@@ -1294,22 +1300,25 @@
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
           "driving with arrow keys": "fahren mit den Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "CourseF_outbreak1": {
-          "recovering": "Wiederherstellen",
+          "recovering": "gesund werden",
           "wandering": "wandernd"
         },
         "CourseF_outbreak2": {
-          "recovering": "Wiederherstellen",
+          "recovering": "gesund werden",
           "wandering": "wandernd"
         },
         "CourseF_outbreak3": {
-          "recovering": "Wiederherstellen",
+          "recovering": "gesund werden",
           "wandering": "wandernd"
         },
         "CourseF_outbreak4": {
-          "recovering": "Wiederherstellen",
+          "recovering": "gesund werden",
           "wandering": "wandernd",
           "moving east": "nach Osten gehend",
           "spinning left": "linksdrehend",
@@ -1325,15 +1334,15 @@
           "moving with arrow keys": "Scrollen mit Pfeiltasten"
         },
         "CourseF_outbreak5": {
-          "recovering": "Wiederherstellen",
+          "recovering": "gesund werden",
           "wandering": "wandernd"
         },
         "CourseF_outbreak6": {
-          "recovering": "Wiederherstellen",
+          "recovering": "gesund werden",
           "wandering": "wandernd"
         },
         "CourseF_outbreak7": {
-          "recovering": "Wiederherstellen",
+          "recovering": "gesund werden",
           "wandering": "wandernd",
           "moving east": "nach Osten gehend",
           "spinning left": "linksdrehend",
@@ -1349,7 +1358,7 @@
           "moving with arrow keys": "Scrollen mit Pfeiltasten"
         },
         "CourseF_outbreak8": {
-          "recovering": "Wiederherstellen",
+          "recovering": "gesund werden",
           "wandering": "wandernd",
           "moving east": "nach Osten gehend",
           "spinning left": "linksdrehend",
@@ -1526,7 +1535,10 @@
           "moving west": "nach Westen gehend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
           "driving with arrow keys": "fahren mit den Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "Virtual Pet 2_2021": {
           "wandering": "wandernd",
@@ -1738,7 +1750,8 @@
           "swimming left and right2": "links und rechts schwimmen2\n",
           "moving north2": "nach Norden bewegen2\n",
           "jittering2": "schwankend2",
-          "patrolling2": "patrollierend2"
+          "patrolling2": "patrollierend2",
+          "fluttering": "flattern"
         },
         "courseF_apps_madlib": {
           "wandering": "wandernd",
@@ -1754,7 +1767,10 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_apps_pet": {
           "patrolling": "patrouillierend",
@@ -1771,7 +1787,10 @@
           "moving west": "nach Westen gehend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
           "driving with arrow keys": "fahren mit den Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_editable_card": {
           "driving with arrow keys": "fahren mit den Pfeiltasten",
@@ -1819,7 +1838,10 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_events_choice_conflict": {
           "patrolling": "patrouillierend",
@@ -1832,7 +1854,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "patrouillierend",
@@ -1844,7 +1869,10 @@
           "moving south": "nach Süden gehend",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "patrouillierend",
@@ -1858,7 +1886,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "patrouillierend",
@@ -1872,7 +1903,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_events_conflict": {
           "patrolling": "patrouillierend",
@@ -1885,7 +1919,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_events_freeplay_air": {
           "moving east": "nach Osten gehend",
@@ -1898,7 +1935,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_events_freeplay_animals": {
           "moving east": "nach Osten gehend",
@@ -1911,7 +1951,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_events_freeplay_aquatic": {
           "moving east": "nach Osten gehend",
@@ -1924,7 +1967,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_events_freeplay_blank": {
           "moving east": "nach Osten gehend",
@@ -1937,7 +1983,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_events_freeplay_food": {
           "moving east": "nach Osten gehend",
@@ -1950,7 +1999,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_events_freeplay_space": {
           "moving east": "nach Osten gehend",
@@ -1963,7 +2015,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_events_key": {
           "patrolling": "patrouillierend",
@@ -1977,7 +2032,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_events_practice_reorder": {
           "moving east": "nach Osten gehend",
@@ -1993,7 +2051,10 @@
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
           "spinning left": "linksdrehend",
-          "driving with arrow keys": "fahren mit den Pfeiltasten"
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_events_predict": {
           "mystery behavior": "geheimnisvolles Verhalten\n",
@@ -2023,7 +2084,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_events_ship": {
           "patrolling": "patrouillierend",
@@ -2037,7 +2101,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_events_stops": {
           "moving east": "nach Osten gehend",
@@ -2050,7 +2117,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_events_time": {
           "patrolling": "patrouillierend",
@@ -2064,7 +2134,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_label_predict": {
           "moving east": "nach Osten gehend",
@@ -2092,7 +2165,10 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_sprites_behaviors": {
           "moving east": "nach Osten gehend",
@@ -2115,7 +2191,10 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_sprites_desert": {
           "moving east": "nach Osten gehend",
@@ -2127,7 +2206,10 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_sprites_freeplay_air": {
           "moving east": "nach Osten gehend",
@@ -2140,7 +2222,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_sprites_freeplay_animals": {
           "moving east": "nach Osten gehend",
@@ -2153,7 +2238,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_sprites_freeplay_aquatic": {
           "moving east": "nach Osten gehend",
@@ -2166,7 +2254,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_sprites_freeplay_blank": {
           "moving east": "nach Osten gehend",
@@ -2179,7 +2270,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_sprites_freeplay_food": {
           "moving east": "nach Osten gehend",
@@ -2192,7 +2286,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_sprites_freeplay_space": {
           "moving east": "nach Osten gehend",
@@ -2205,7 +2302,10 @@
           "moving south": "nach Süden gehend",
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "fluttering": "flattern"
         },
         "courseF_sprites_make": {
           "moving east": "nach Osten gehend",
@@ -2217,7 +2317,10 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_sprites_moreSprites": {
           "moving east": "nach Osten gehend",
@@ -2229,7 +2332,10 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_sprites_positioning": {
           "moving east": "nach Osten gehend",
@@ -2241,7 +2347,10 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_sprites_predict": {
           "moving east": "nach Osten gehend",
@@ -2269,7 +2378,10 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_sprites_ship": {
           "moving east": "nach Osten gehend",
@@ -2281,7 +2393,10 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_answer": {
           "patrolling": "patrouillierend",
@@ -2294,7 +2409,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_choice_color": {
           "patrolling": "patrouillierend",
@@ -2307,7 +2425,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_choice_conversation": {
           "wandering": "wandernd",
@@ -2324,7 +2445,10 @@
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
           "driving with arrow keys": "fahren mit den Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_choice_events": {
           "wandering": "wandernd",
@@ -2341,7 +2465,10 @@
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
           "driving with arrow keys": "fahren mit den Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_choice_freeplay": {
           "wandering": "wandernd",
@@ -2358,7 +2485,10 @@
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
           "driving with arrow keys": "fahren mit den Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_choice_interview": {
           "wandering": "wandernd",
@@ -2375,7 +2505,10 @@
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
           "driving with arrow keys": "fahren mit den Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_choice_multiprompt": {
           "wandering": "wandernd",
@@ -2392,7 +2525,10 @@
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
           "driving with arrow keys": "fahren mit den Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_choice_title": {
           "patrolling": "patrouillierend",
@@ -2405,7 +2541,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_concat": {
           "patrolling": "patrouillierend",
@@ -2418,7 +2557,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_events": {
           "patrolling": "patrouillierend",
@@ -2431,7 +2573,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_print": {
           "patrolling": "patrouillierend",
@@ -2444,7 +2589,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_prompts": {
           "patrolling": "patrouillierend",
@@ -2457,7 +2605,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_text_review": {
           "patrolling": "patrouillierend",
@@ -2470,7 +2621,10 @@
           "jittering": "zitternd",
           "wandering": "wandernd",
           "shrinking": "schrumpfend",
-          "spinning left": "linksdrehend"
+          "spinning left": "linksdrehend",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_variables_card": {
           "wandering": "wandernd",
@@ -2486,7 +2640,10 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_variables_card_finish": {
           "wandering": "wandernd",
@@ -2502,7 +2659,10 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_variables_chatbot": {
           "wandering": "wandernd",
@@ -2518,7 +2678,10 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_variables_chatbot_finish": {
           "wandering": "wandernd",
@@ -2534,7 +2697,10 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_variables_madlib": {
           "wandering": "wandernd",
@@ -2550,7 +2716,10 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_variables_madlib_finish": {
           "wandering": "wandernd",
@@ -2566,7 +2735,10 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "courseF_variables_predict": {
           "moving east": "nach Osten gehend",
@@ -2599,7 +2771,26 @@
           "moving west": "nach Westen gehend",
           "moving with arrow keys": "Scrollen mit Pfeiltasten",
           "driving with arrow keys": "fahren mit den Pfeiltasten",
-          "wobbling": "wackelnd"
+          "wobbling": "wackelnd",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "gesund werden",
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "moving left and right": "rechts und links bewegen",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten"
         }
       }
     }

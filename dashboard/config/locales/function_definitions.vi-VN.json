@@ -1908,7 +1908,11 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "vẽ ngọn lửa"
+          },
+          "draw fire": {
+            "name": "vẽ lửa"
           }
         },
         "courseC_data wizard_2021": {
@@ -2444,6 +2448,11 @@
             "parameters": {
               "binary": "nhị phân"
             }
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "bảo bối"
           }
         }
       }

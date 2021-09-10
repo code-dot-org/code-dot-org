@@ -1150,6 +1150,11 @@ de:
         text: Position von {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': platzen
+            '"rain"': Regen
       gamelab_makeNewSpriteAnon:
         text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       gamelab_makeNumSprites:
@@ -1184,6 +1189,12 @@ de:
         text: patrouilliert auf und ab
       gamelab_playSound:
         text: spieleTon {SOUND}
+      gamelab_playSoundOptions:
+        text: spieleTon {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": Taste
+            "'sound://category_collect/clicky_crunch.mp3'": knirschen
       gamelab_pointInDirection:
         text: richte {SPRITE} nach {DIRECTION} aus
         options:
@@ -1663,18 +1674,50 @@ de:
         text: x Koordinate von {SPRITE}
       Mikelab_yLocationOf:
         text: y Koordinate von {SPRITE}
+      PoemBot_playSound:
+        text: spieleTon {SOUND}
       PoemBot_setBackgroundEffect:
-        text: Hintergrundeffekt einstellen {BG_EFFECT} [PALETTE][1]
+        text: Hintergrundeffekt einstellen {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': fest
+          EFFECT:
+            '"colors"': Farben
+            '"squiggles"': Schnörkel
+            '"space"': Leerzeichen
+            '"stars"': Sterne
+            '"ripples"': Welligkeit
+          PALETTE:
             '"rainbow"': Regenbogen
       PoemBot_setForegroundEffect:
-        text: Vordergrundeffekt einstellen {FG_EFFECT}
+        text: Vordergrundeffekt einstellen {EFFECT}
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': Regen
-            '"bubbles"': blasen
+            '"bubbles"': Blasen
+            '"hearts"': Farbenfrohe Herzen
+            '"confetti"': Konfetti
+            '"starburst"': Starburst
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: flattern
+            growing: wachsend
+            jittering: zitternd
+            shrinking: schrumpfend
+            spinning_left: linksdrehend
+            spinning_right: rechtsdrehend
+            wandering: wandernd
+            wobbling: wackelnd
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: flattern
+            growing: wachsend
+            jittering: zitternd
+            shrinking: schrumpfend
+            spinning_left: linksdrehend
+            spinning_right: rechtsdrehend
+            wandering: wandernd
+            wobbling: wackelnd
       RyanLab_moveForward:
         text: vorwärts bewegen
       RyanLab_turnLeft:

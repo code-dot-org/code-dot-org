@@ -1086,6 +1086,10 @@ hi:
         text: "{SPRITE} का स्थान"
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': बारिश
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       gamelab_mirrorSprite:
@@ -1114,6 +1118,11 @@ hi:
         text: "{SPRITE} पर क्लिक किया"
       gamelab_playSound:
         text: प्लेसाउंड {SOUND}
+      gamelab_playSoundOptions:
+        text: प्लेसाउंड {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": चरमराना
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION} की ओर संकेत दें"
         options:
@@ -1554,18 +1563,28 @@ hi:
         text: "{SPRITE} का x निर्देशांक"
       Mikelab_yLocationOf:
         text: "{SPRITE} का y निर्देशांक"
+      PoemBot_playSound:
+        text: प्लेसाउंड {SOUND}
       PoemBot_setBackgroundEffect:
-        text: पृष्ठभूमि प्रभाव सेट करें {BG_EFFECT} [PALETTE][1]
+        text: पृष्ठभूमि प्रभाव सेट करें {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': ठोस
+          EFFECT:
+            '"colors"': रंग
+            '"squiggles"': टेढ़ी-मेढ़ी रेखाएं
+            '"space"': खाली स्थान
+            '"stars"': स्टार
+            '"ripples"': लहरें
+          PALETTE:
             '"rainbow"': इंद्रधनुष
       PoemBot_setForegroundEffect:
-        text: आगे के भाग का प्रभाव {FG_EFFECT} सेट करें
+        text: आगे के भाग का प्रभाव {EFFECT} सेट करें
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': बारिश
             '"bubbles"': बुलबुले
+            '"hearts"': रंगीन दिल
+            '"confetti"': कॉन्फेटी
+            '"starburst"': स्टारबर्स्ट
       RyanLab_moveForward:
         text: आगे जाएं
       RyanLab_turnLeft:

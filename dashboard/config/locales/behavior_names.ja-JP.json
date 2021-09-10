@@ -31,7 +31,8 @@
           "swimming left and right": "左右に泳がせる",
           "running east": "東に動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_label_predict": {
           "mystery behavior": "ふしぎな動き",
@@ -46,7 +47,8 @@
           "swimming left and right": "左右に泳がせる",
           "running east": "東に動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_sprites_predict": {
           "mystery behavior": "ふしぎな動き",
@@ -61,7 +63,8 @@
           "swimming left and right": "左右に泳がせる",
           "running east": "東に動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_variables_predict": {
           "mystery behavior": "ふしぎな動き",
@@ -174,7 +177,8 @@
           "moving with arrow keys": "矢印キーで動かす",
           "driving with arrow keys": "矢印キーで進ませる",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "CourseF_outbreak4": {
           "jittering": "ブルブルさせる",
@@ -188,7 +192,9 @@
           "swimming left and right": "左右に泳がせる",
           "moving with arrow keys": "矢印キーで動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "recovering": "回復する",
+          "shrinking": "小さくする"
         },
         "CourseF_outbreak7": {
           "jittering": "ブルブルさせる",
@@ -201,7 +207,10 @@
           "growing": "大きくする",
           "moving with arrow keys": "矢印キーで動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "recovering": "回復する",
+          "shrinking": "小さくする",
+          "moving left and right": "左右に動かす"
         },
         "CourseF_outbreak8": {
           "jittering": "ブルブルさせる",
@@ -214,7 +223,10 @@
           "growing": "大きくする",
           "moving with arrow keys": "矢印キーで動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "recovering": "回復する",
+          "shrinking": "小さくする",
+          "moving left and right": "左右に動かす"
         },
         "Dance Party 2_2021": {
           "patrolling": "パトロール",
@@ -658,7 +670,8 @@
           "swimming left and right": "左右に泳がせる",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_editable_chatbot": {
           "blocking movement": "動きをブロックする",
@@ -674,7 +687,8 @@
           "swimming left and right": "左右に泳がせる",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_editable_madlib": {
           "jittering": "ブルブルさせる",
@@ -692,7 +706,8 @@
           "swimming left and right": "左右に泳がせる",
           "moving with arrow keys": "矢印キーで動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_events_choice_conflict": {
           "patrolling": "パトロール",
@@ -708,7 +723,8 @@
           "moving west and looping": "西に動かしてループ",
           "growing": "大きくする",
           "moving forward": "前に進める",
-          "moving north": "北に動かす"
+          "moving north": "北に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "パトロール",
@@ -723,7 +739,8 @@
           "spinning left": "左に回す",
           "moving west and looping": "西に動かしてループ",
           "growing": "大きくする",
-          "moving forward": "前に進める"
+          "moving forward": "前に進める",
+          "shrinking": "小さくする"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "パトロール",
@@ -775,7 +792,8 @@
           "growing": "大きくする",
           "moving forward": "前に進める",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_events_freeplay_air": {
           "jittering": "ブルブルさせる",
@@ -888,7 +906,8 @@
           "growing": "大きくする",
           "moving forward": "前に進める",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_events_practice_reorder": {
           "patrolling": "パトロール",
@@ -907,7 +926,8 @@
           "driving with arrow keys": "矢印キーで進ませる",
           "moving north": "北に動かす",
           "moving forward": "前に進める",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_events_review": {
           "patrolling": "パトロール",
@@ -924,7 +944,8 @@
           "growing": "大きくする",
           "moving forward": "前に進める",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_events_ship": {
           "patrolling": "パトロール",
@@ -941,7 +962,8 @@
           "growing": "大きくする",
           "moving forward": "前に進める",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_events_stops": {
           "patrolling": "パトロール",
@@ -957,7 +979,8 @@
           "growing": "大きくする",
           "moving forward": "前に進める",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_events_time": {
           "patrolling": "パトロール",
@@ -974,7 +997,8 @@
           "growing": "大きくする",
           "moving forward": "前に進める",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_place_fruit": {
           "jittering": "ブルブルさせる",
@@ -988,7 +1012,8 @@
           "moving west and looping": "西に動かしてループ",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_sprites_clouds": {
           "jittering": "ブルブルさせる",
@@ -1003,7 +1028,8 @@
           "moving west and looping": "西に動かしてループ",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_sprites_desert": {
           "jittering": "ブルブルさせる",
@@ -1017,7 +1043,8 @@
           "moving west and looping": "西に動かしてループ",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_sprites_freeplay_air": {
           "jittering": "ブルブルさせる",
@@ -1080,7 +1107,8 @@
           "moving south": "南に動かす",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_sprites_freeplay_food": {
           "jittering": "ブルブルさせる",
@@ -1126,7 +1154,8 @@
           "moving west and looping": "西に動かしてループ",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_sprites_moreSprites": {
           "jittering": "ブルブルさせる",
@@ -1140,7 +1169,8 @@
           "moving west and looping": "西に動かしてループ",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_sprites_positioning": {
           "jittering": "ブルブルさせる",
@@ -1154,7 +1184,8 @@
           "moving west and looping": "西に動かしてループ",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_sprites_properties": {
           "jittering": "ブルブルさせる",
@@ -1168,7 +1199,8 @@
           "moving west and looping": "西に動かしてループ",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_sprites_ship": {
           "jittering": "ブルブルさせる",
@@ -1182,7 +1214,8 @@
           "moving west and looping": "西に動かしてループ",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_text_answer": {
           "patrolling": "パトロール",
@@ -1436,7 +1469,8 @@
           "swimming left and right": "左右に泳がせる",
           "moving with arrow keys": "矢印キーで動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_variables_card_finish": {
           "jittering": "ブルブルさせる",
@@ -1454,7 +1488,8 @@
           "swimming left and right": "左右に泳がせる",
           "moving with arrow keys": "矢印キーで動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_variables_chatbot": {
           "jittering": "ブルブルさせる",
@@ -1472,7 +1507,8 @@
           "swimming left and right": "左右に泳がせる",
           "moving with arrow keys": "矢印キーで動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_variables_chatbot_finish": {
           "jittering": "ブルブルさせる",
@@ -1490,7 +1526,8 @@
           "swimming left and right": "左右に泳がせる",
           "moving with arrow keys": "矢印キーで動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_variables_madlib": {
           "jittering": "ブルブルさせる",
@@ -1508,7 +1545,8 @@
           "swimming left and right": "左右に泳がせる",
           "moving with arrow keys": "矢印キーで動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "courseF_variables_madlib_finish": {
           "jittering": "ブルブルさせる",
@@ -1526,7 +1564,8 @@
           "swimming left and right": "左右に泳がせる",
           "moving with arrow keys": "矢印キーで動かす",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "simcustom_2021": {
           "patrolling": "パトロール",
@@ -1545,22 +1584,28 @@
           "moving with arrow keys": "矢印キーで動かす",
           "driving with arrow keys": "矢印キーで進ませる",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         },
         "CourseF_outbreak1": {
-          "wandering": "あちこちに動かす"
+          "wandering": "あちこちに動かす",
+          "recovering": "回復する"
         },
         "CourseF_outbreak2": {
-          "wandering": "あちこちに動かす"
+          "wandering": "あちこちに動かす",
+          "recovering": "回復する"
         },
         "CourseF_outbreak3": {
-          "wandering": "あちこちに動かす"
+          "wandering": "あちこちに動かす",
+          "recovering": "回復する"
         },
         "CourseF_outbreak5": {
-          "wandering": "あちこちに動かす"
+          "wandering": "あちこちに動かす",
+          "recovering": "回復する"
         },
         "CourseF_outbreak6": {
-          "wandering": "あちこちに動かす"
+          "wandering": "あちこちに動かす",
+          "recovering": "回復する"
         },
         "courseF_sprites_behaviors": {
           "spinning right": "右に回す",
@@ -1569,7 +1614,8 @@
           "moving west": "西に動かす",
           "growing": "大きくする",
           "moving north": "北に動かす",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "shrinking": "小さくする"
         }
       }
     }

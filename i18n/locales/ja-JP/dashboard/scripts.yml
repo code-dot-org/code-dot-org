@@ -2280,6 +2280,8 @@ ja:
               name: ECSカリキュラム
             Welcome to Phase 1!:
               name: フェーズ1へようこそ！
+            Wrap Up:
+              name: まとめ
             Classroom and workshop style:
               name: 教室とワークショップのスタイル
             'Classroom and workshop style ':
@@ -5399,6 +5401,8 @@ ja:
               name: ようこそ
             Congrats:
               name: おめでとう
+            Wrap Up:
+              name: まとめ
           student_description: 初心者ファシリテーターとしてTeacherConで学んだことを追跡する場所。
         csp-explore-task:
           title: CSP PT準備を探索
@@ -5475,6 +5479,8 @@ ja:
               name: 水曜日
             Thursday:
               name: 木曜日
+            Wrap Up:
+              name: まとめ
           student_description: 初心者ファシリテーターとしてTeacherConで学んだことを追跡する場所。
         novice-view:
           title: 初心者の回答を見る
@@ -8651,6 +8657,8 @@ ja:
               name: 水曜日
             Thursday:
               name: 木曜日
+            Wrap Up:
+              name: まとめ
             Friday:
               name: 金曜日
             Novice Reflection Overview:
@@ -8685,6 +8693,8 @@ ja:
               name: 水曜日
             Thursday:
               name: 木曜日
+            Wrap Up:
+              name: まとめ
             Apprentice Reflection Overview:
               name: 見習いの省察の概要
             Day 1:
@@ -8715,6 +8725,8 @@ ja:
               name: 水曜日
             Thursday:
               name: 木曜日
+            Wrap Up:
+              name: まとめ
             Monday:
               name: 月曜日
             Day 1:
@@ -8745,6 +8757,8 @@ ja:
               name: 水曜日
             Thursday:
               name: 木曜日
+            Wrap Up:
+              name: まとめ
             Apprentice Reflection Overview:
               name: 見習いの省察の概要
             Day 1:
@@ -11728,6 +11742,8 @@ ja:
               name: 3日目
             Day 4:
               name: 4日目
+            Wrap Up:
+              name: まとめ
           student_description: これは、Code.orgファシリテーターが5日間の夏のワークショップでトレーニングするための初心者用復習資料です。この中で、対面式の5日間の夏のワークショップの毎日の復習プロンプトが表示されます。これらの質問は、ファシリテータートレーニングワークショップで行う作業の基礎となります。
         csd-test-saving-state:
           title: オンラインアクティビティのサンプル
@@ -11757,6 +11773,8 @@ ja:
               name: 3日目
             Day 4:
               name: 4日目
+            Wrap Up:
+              name: まとめ
           student_description: これは、Code.orgファシリテーターが5日間の夏のワークショップでトレーニングするための見習い用復習資料です。この中で、対面式の5日間の夏のワークショップの毎日の復習プロンプトが表示されます。これらの質問は、ファシリテータートレーニングワークショップで行う作業の基礎となります。
         csd-sample-online:
           title: CS発見のオンラインアクティビティのサンプル
@@ -13909,6 +13927,7 @@ ja:
               description_teacher: このキャップストーンレッスンでは、生徒が自分のプレイラボプロジェクトを設計、開発、展示するプロセスを紹介します。このプロセスを円滑に進めるために、紙で計画を立てることからウェブサイトでプログラミングするまで段階的な構造を示し、生徒がそれに従って作業できるようにします。さらに、先生がフィナーレを飾るのに役立つアイデアを提供します！
             Putting a STOP to Online Meanness:
               name: ネットの迷惑行為を防止する
+              description_student: このレッスンでは、意地悪な行為と、それをネット上で目撃した場合の対処方法について学習します。
             Password Power-Up:
               name: パスワードの強化
               description_student: このレッスンでは、パスワードがどのように情報を保護するか、また適切なパスワードはどのように作成したらよいかについて学習します。
@@ -16304,6 +16323,7 @@ ja:
             Putting a STOP to Online Meanness:
               key: ネットの迷惑行為を防止する
               name: ネットの迷惑行為を防止する
+              description_student: このレッスンでは、意地悪な行為と、それをネット上で目撃した場合の対処方法について学習します。
             Password Power-Up:
               key: パスワードの強化
               name: パスワードの強化
@@ -16730,8 +16750,10 @@ ja:
               description_teacher: このレッスンでは、生徒は架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。
             lesson-6:
               name: スプライトラボの紹介
+              description_student: アプリやツールでどのような使用方法が選択肢としてユーザーに与えられているのか、ということに焦点を当てて、生活におけるコンピュータやテクノロジーの役割について説明します。
             lesson-7:
               name: スプライトを作る
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「フリープレイ」タスクを完了します。 生徒はプログラムを作成し、スプライトラボの中心となる2つの概念、スプライトと動作について学びます。
             lesson-8:
               name: 実行中のスプライト
             lesson-2:
@@ -16900,6 +16922,8 @@ ja:
               description_teacher: このレッスンでは、生徒が自分のインタラクティブなダンスパーティーをプログラムします。ツールは音楽に応答するように構築されているため、このアクティビティにはサウンドが必要です。
             lesson-2:
               name: スプライトを作る
+              description_student: このレッスンでは、プログラムを作成し、スプライトと動作について学習します。
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「フリープレイ」タスクを完了します。 生徒はプログラムを作成し、スプライトラボの中心となる2つの概念、スプライトと動作について学びます。
             lesson-3:
               name: 実行中のスプライト
           lesson_groups:
@@ -17285,6 +17309,14 @@ ja:
               display_name: '発展: コースEおよびF'
             Introduction:
               display_name: はじめに
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: レッスン3
+            Lesson 4:
+              display_name: レッスン4
+            Lesson 5:
+              display_name: レッスン5
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -17398,8 +17430,10 @@ ja:
               name: モジュール2
             Module 3:
               key: モジュール3
+              name: モジュール3
             Module 4:
               key: モジュール4
+              name: モジュール4
             Module 5:
               key: モジュール5
             Module 6:
@@ -17470,6 +17504,12 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ステージ 1
+            lessonGroup-3:
+              display_name: ステージ 2
         dlp21-csp-mod1:
           title: CS原則 詳細学習 モジュール1
         dlp21-csd:
@@ -17547,3 +17587,11 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: コンピューティングにおける革新
+            lesson-13:
+              name: 加速度計
+            lesson-19:
+              name: プロジェクト

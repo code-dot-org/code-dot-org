@@ -1850,22 +1850,22 @@
           "step3": "Làm tất cả các nhân vật bắt đầu lang thang bằng khối này: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nKhối này có trong danh mục **Hành động** của hộp công cụ."
         },
         "CourseF_outbreak2": {
-          "hint1": "Nhấn vào phím \"+\" trên khối sự kiện. Điền khối \"nội dung\" có trong đó vào chỗ trống trong khối \"thay đổi trang phục\".\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Nhấn vào phím `+` trên khối sự kiện. Điền khối `nội dung` có trong đó vào chỗ trống trong khối `đổi trang phục`.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Để cho quái vật đeo khẩu trang, hãy sử dụng khối \"thay đổi trang phục\" bằng sự kiện \"khi nhấn vào\":\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nHãy đảm bảo bạn kéo vào cả khối \"đã nhấn vào\" nhỏ có màu đỏ nhé! ",
-          "hint2": "Mã mới cho cấp độ này sẽ như sau:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Để cho quái vật đeo khẩu trang, hãy sử dụng khối `đổi trang phục` bằng sự kiện `khi nhấn`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nHãy đảm bảo bạn kéo vào cả khối `đã nhấn` nhỏ có màu đỏ nhé!",
+          "hint2": "Mã lệnh mới cho cấp độ này sẽ như sau:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
-          "challenge": "## Bạn muốn tăng thêm thử thách?\n\nBạn còn có thể làm cho quái vật di chuyển nhanh hơn hoặc chậm hơn.\n\n1.  Nhấn vào \"Sửa\" trong khối này <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Tăng hoặc giảm con số trong khối này: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nĐể làm quái vật di chuyển chậm hơn, chọn một số thập phân như \"0,5\" hoặc \"0,25\". Để làm quái vật di chuyển nhanh hơn, chọn một số bất kỳ lớn hơn 1."
+          "challenge": "## Bạn muốn tăng thêm thử thách?\n\nBạn còn có thể làm cho quái vật di chuyển nhanh hơn hoặc chậm hơn.\n\n1.  Nhấn vào `Sửa` trong khối này <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Tăng hoặc giảm con số trong khối này: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nĐể làm quái vật di chuyển chậm hơn, chọn một số thập phân như `0,5` hoặc `0,25`. Để làm quái vật di chuyển nhanh hơn, chọn một số bất kỳ lớn hơn 1."
         },
         "CourseF_outbreak6": {
           "hint2": "Đảm bạo bạn di chuyển các khối \"hành động\" vào trong khối \"nếu có khả năng\":\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Bạn sẽ cần thêm 3 sự kiện \"khi chạm vào\" nữa để kiểm tra tất cả các cách kết hợp có thể của các lượt \"chạm vào\" giữa các nhân vật khỏe mạnh và bị nhiễm bệnh.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "Bạn sẽ cần thêm 3 sự kiện `khi chạm` nữa để kiểm tra tất cả các cách kết hợp có thể của các lượt `chạm vào` giữa các nhân vật khỏe mạnh và bị nhiễm bệnh.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## Vắc xin\n\nBạn có thể mô phỏng việc tiêm vắc xin cho quái vật khi bạn nhấn vào quái vật đó. Để làm vậy, hãy sử dụng khối \"thay đổi trang phục\" với sự kiện này:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
-          "verionhistory": "Bạn cảm thấy bế tắc? Bạn luôn có thể đặt lại mã bằng cách nhấn vào \"Lịch sử phiên bản\" ở dưới rồi chọn \"Bắt đầu lại\"."
+          "whenclicked": "## Vắc xin\n\nBạn có thể mô phỏng việc tiêm vắc xin cho quái vật khi bạn nhấn vào quái vật đó. Để làm vậy, hãy sử dụng khối `đổi trang phục` với sự kiện này:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "Bạn cảm thấy bế tắc? Bạn luôn có thể đặt lại mã bằng cách nhấn vào `Lịch sử phiên bản` ở dưới rồi chọn `Bắt đầu lại`."
         },
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_b": "Nếu bạn sử dụng chính xác các chức năng, sẽ có một con đường bạn có thể di chuyển...",
@@ -2297,10 +2297,13 @@
           "courseD_artist_functions2_a": "Chương trình của bạn cần:\n\n-   Dùng hàm\\\\\n-   Tiến về phía trước 100 + 75 điểm ảnh\n-   Dùng hàm"
         },
         "courseF_artist_variables8_2021": {
-          "courseF_artist_variables8_a": "Hãy thử đặt khối\n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\nbên trong vòng lặp của bạn ở cuối."
+          "courseF_artist_variables8_a": "Hãy thử đặt khối\n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\nbên trong vòng lặp của bạn ở cuối.",
+          "courseF_artist_variables8_b": "Nhớ bắt đầu mã lệnh vẽ hình tam giác bằng khối `set length` (đặt chiều dài) và đặt giá trị ban đầu là 150 pixel nhé.",
+          "courseF_artist_variables8_c": "Đừng quên sử dụng vòng lặp `repeat` (lặp lại) để vẽ hình tam giác."
         },
         "courseF_artist_variables9_2021": {
-          "courseF_artist_variables9_b": "Hãy đảm bảo rằng khối thay đổi `length` (chiều dài) nằm trong vòng lặp của bạn để các đường thẳng tiếp tục dài ra."
+          "courseF_artist_variables9_b": "Hãy đảm bảo rằng khối thay đổi `length` (chiều dài) nằm trong vòng lặp của bạn để các đường thẳng tiếp tục dài ra.",
+          "courseF_artist_variables9_a": "Trong bài tập này, tất cả những gì bạn cần làm là thay đổi số lần lặp lại của vòng lặp."
         },
         "courseF_artist_variablesFP_2021": {
           "polygon_table": "Bạn muốn thử các đa giác khác không?\n\nHãy sử dụng số cạnh trong khối `repeat` (lặp lại) của bạn và góc trong khối `turn` (quay) của bạn.\nHãy thử những thông số sau:\n\n|   Hình dạng   | Cạnh |  Góc |\n| :-----------: | :--: | :--: |\n|    tam giác   |   3  | 120° |\n|   hình vuông  |   4  |  90° |\n|    ngũ giác   |   5  |  72° |\n|    lục giác   |   6  |  60° |\n| hình bát giác |   8  |  45° |\n|    nonagon    |   9  |  40° |\n| hình lục giác |  10  |  36° |"
@@ -2347,6 +2350,92 @@
         },
         "iceage_hello1": {
           "iceage_hello1_a": "Bạn chỉ cần thêm một khối để giải quyết thử thách này. Kéo khối `nói` ra từ thanh công cụ và nối nó vào khối sự kiện `khi chạy` đã có sẵn trong vùng làm việc. Sau đó, gõ \"Xin chào!\" vào trong."
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "*“Nếu bạn sử dụng khối <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, tôi sẽ vẽ một đường thẳng.”*",
+          "courseC_artist_prog2_b": "Bạn gặp khó khăn khi cần rẽ ở góc? Hãy sử dụng khối <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "Để tạo cửa sổ, chỉ cần vẽ một hình vuông với các cạnh 100 pixel.\n\n-   tiến về phía trước\n-   rẽ\n-   tiến về phía trước\n-   rẽ\n-   tiến về phía trước\n-   rẽ\n-   tiến về phía trước",
+          "courseC_artist_prog3_b": "Bạn muốn tạo mã lệnh ngắn hơn à? Hãy thử sử dụng vòng lặp trong bài tập này nhé."
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "Để hoàn thành tên lửa, chỉ cần vẽ hình tam giác phía trên!",
+          "courseC_artist_prog4_b": "Bạn có thể sử dụng menu thả xuống trên các khối `turn` (rẽ) để xem bạn cần góc nào!",
+          "courseC_artist_prog4_c": "Để vẽ hình tam giác, bạn cần:\n\n-   tiến về phía trước\n-   rẽ trái 120 độ\n-   tiến về phía trước\n-   rẽ trái 120 độ\n-   tiến về phía trước"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "Tất cả các góc đều là 45 hoặc 90 độ.",
+          "courseC_artist_prog7_c": "Bạn có thể sử dụng menu thả xuống trên các khối rẽ để xem bạn cần góc nào!",
+          "courseC_artist_prog7_e": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "Bạn có thể vẽ căn phòng hình chữ nhật với một đường thẳng ở giữa hoặc hai hình vuông khác nhau!"
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "Sau khi bạn vẽ đường thẳng đầu tiên, hãy rẽ trái trước khi vẽ đường thẳng thứ hai.",
+          "courseC_artist_prog_challenge2_b": "Sau khi vẽ đường thẳng thứ hai, hãy rẽ phải trước khi vẽ đường thẳng thứ ba."
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "Mã lệnh không hoạt động? Hãy thử sử dụng nút “Step” (Bước) để xem điều gì xảy ra ở từng dòng mã lệnh nhé.",
+          "courseD_bee_nestedLoops1_b": "Trước tiên, hãy thử viết mã lệnh cho một cạnh của hình vuông. Bạn có thể lặp lại mã lệnh này để lấy toàn bộ mật hoa không?",
+          "courseD_bee_nestedLoops1_c": "Đừng quên dùng khối `get nectar` (lấy mật) khi bạn đang đứng trên ô có bông hoa."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "Mã lệnh không hoạt động? Hãy thử sử dụng nút “Step” (Bước) để xem điều gì xảy ra ở từng dòng mã lệnh nhé.",
+          "courseD_bee_nestedLoops1_c": "Đừng quên dùng khối `get nectar` (lấy mật) khi bạn đang đứng trên ô có bông hoa."
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "Để giải bài tập này, bạn cần đặt một vòng lặp `repeat` (lặp lại) vào bên trong một vòng lặp khác.",
+          "courseD_bee_nestedLoops2_b": "Bạn không tìm được vị trí đặt các vòng lặp? Hãy thử viết mã lệnh trên giấy từng bước một và tìm ra quy luật.",
+          "courseD_bee_nestedLoops2_c": "Hãy nhớ rằng bạn có thể đặt nhiều hơn một khối bên trong một vòng lặp."
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "Bạn cần lặp lại khối `get nectar` (lấy mật hoa) bên trong một khối `repeat` (lặp lại) khác có sẵn khối `move forward` (tiến về phía trước) ở trong.",
+          "courseD_bee_nestedLoops7_b": "Bạn cần sử dụng cả ba khối `repeat` (lặp lại) có sẵn để giải bài tập này."
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_c": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_c": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_c": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "Chơi đùa thỏa thích trong cấp độ này đi nào! Hãy xem những thay đổi nhỏ có tác dụng gì với mã lệnh của bạn.",
+          "courseF_artist_variables10_b": "Bạn có thể thử nhiều cách khác nhau và chạy mã lệnh nhiều lần."
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": "Hãy bắt đầu mã lệnh bằng cách sử dụng khối `set length` (đặt chiều dài). Đặt biến chiều dài thành 150.",
+          "courseF_artist_variables7_b": "Bạn có thể sử dụng vòng lặp `repeat` (lặp lại) để khiến mã lệnh vẽ hình tam giác được đơn giản hơn.",
+          "courseF_artist_variables7_c": "Bạn cần rẽ trái 120 độ để tạo các góc của hình tam giác."
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "Bạn sẽ cần hai khối trong vòng lặp ‘repeat’ (lặp lại) của mình để thu thập tất cả mật hoa."
+        },
+        "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "Nếu bạn bối rối, hãy xử lý từng bông hoa một và thường xuyên kiểm tra.",
+          "courseF_bee_for2_b": "Nhớ tiến về phía trước giữa mỗi vòng lặp để đến chỗ từng bông hoa nhé."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "Hãy sử dụng vòng lặp `for` (với) có giá trị từ 1 đến 7, với gia số là 1 để giải bài tập này."
         }
       }
     }

@@ -67,7 +67,7 @@
           "2-3_Artist_Functions_4_a": "Художник повинен перетворити 120 градусів між кожним квадратом, щоб завершити цей дизайн."
         },
         "2-3 Artist Loops New 11": {
-          "2-3_Artist_Loops_New_11_a": "Пригадай, в останньому завданні код був таким:\n\n[blockly block][0]",
+          "2-3_Artist_Loops_New_11_a": "Пригадай, в останньому завданні код був таким:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">8</title>\n        <statement name=\"DO\">\n          <block type=\"draw_colour\" inline=\"true\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_random\"/>\n            </value>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">turnRight</title>\n                <title name=\"VALUE\" config=\"45,60,90,120,180\">45</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">50</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant_dropdown\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <title name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n                        <next>\n                          <block type=\"draw_move_by_constant\">\n                            <title name=\"DIR\">moveForward</title>\n                            <title name=\"VALUE\">50</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
           "2-3_Artist_Loops_New_11_b": "Ваш новий хід має йти на \\*\\* кінці \\*\\* коду всередині циклу."
         },
         "2-3 Artist Loops New 12": {
@@ -406,7 +406,7 @@
           "Course_4_SCV_1_c": "Використовуючи змінну для \"сторін\" та ще одну для \"довжини\" робить код зрозумілішим, бо ти можеш пройти в циклі одні й ті ж команди багато разів, замість того, що створювати нову копію команди для нових чисел."
         },
         "Course 4 SCV 2": {
-          "Course_4_SCV_2_a": "Повна картинка складається з 10 таких \"квітів\":\\\n[][0]\n\n...які складаються з 10 таких 10-кутників:\\\n[][1]",
+          "Course_4_SCV_2_a": "Повна картинка складається з 10 таких \"квітів\":\\\n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n\n...які складаються з 10 таких 10-кутників:\\\n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)",
           "Course_4_SCV_2_b": "Цей дизайн використовує вкладені цикли (три ступені вкладення). Всі цикли виконуються \"сторін\" разів.",
           "Course_4_SCV_2_c": "Художник повертає ліворуч, створюючи кожен десятикутник, але повертає праворуч у двох інших циклах.",
           "Course_4_SCV_2_d": "Щоб всі 10 квітів не малювались в одному місці, переконайся, що використовуєш команду стрибка вперед на \"довжина\"/\"сторін\" перед тим, як повертати на 360/\"сторін\" градусів, у своєму зовнішньому циклі."
@@ -421,12 +421,12 @@
           "Course_4_SCV_4_c": "Подивіться на цю опцію для переміщення:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         },
         "Course 4 SCV 5": {
-          "Course_4_SCV_5_a": "Подивіться на цю опцію для переміщення:\n\n[][0]",
+          "Course_4_SCV_5_a": "Подивіться на цю опцію для переміщення:\n\n![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)",
           "Course_4_SCV_5_b": "Щоразу при виконанні циклу квіти мають на 2 одиниці нектару менше, і бджілці потрібно виробляти на 1 більше меду.",
           "Course_4_SCV_5_c": "Зверни увагу, що на початку зовнішнього циклу бджола рухається стільки разів, скільки є нектару в наступній квітці."
         },
         "Course 4 SCV 6": {
-          "Course_4_SCV_6_a": "Подивись, як виглядає елемент повної фігури\n\n[][0]",
+          "Course_4_SCV_6_a": "Подивись, як виглядає елемент повної фігури\n\n![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)",
           "Course_4_SCV_6_b": "Варто створити 8 змінних: red1, green1, blue1, red2, green2, blue2, довжина та сторони.",
           "Course_4_SCV_6_c": "Кожна з 5 сторін розділена на частини \"довжина\"/\"сторін\" там, де зигзаг блакитний (rgb = 0,175,200) та фіолетовий (rgb = 100, 50, 150).",
           "Course_4_SCV_6_d": "Щоб зробити зигзаг, повертай ліворуч та праворуч на 360/сторона. ",
@@ -759,7 +759,7 @@
           "brush_width": "Ми встановили ширину щітки до 1, а потім колір до синього, перш ніж ми зробили що-небудь ще.",
           "double_loop": "Спробуйте вставити \"for loop\" всередині циклу `repeat`.",
           "after": "Коли ви закінчите з кожним \"пелюстком\", переконайтеся, що \"переміщаєтеся вперед\" 20 пікселів перед тим, як зробити 60 градусів обертання.",
-          "solution": "**Розв'язок:**\n\n[blockly block][0]"
+          "solution": "**Розв'язок:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">6</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"controls_for_counter\" inline=\"true\">\n                  <mutation counter=\"counter\"></mutation>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">3</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">17</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">500</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"procedures_callnoreturn\" inline=\"false\">\n                            <mutation name=\"draw a polygon\">\n                            <arg name=\"length\"></arg>\n                            <arg name=\"sides\"></arg>\n                            </mutation>\n                            <value name=\"ARG0\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">30</title>\n                              </block>\n                            </value>\n                            <value name=\"ARG1\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">20</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">60</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n  </xml>"
         },
         "Overworld House Frame Chosen": {
           "mc_6_b": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
@@ -811,7 +811,7 @@
           "courseC_artist_prog_challenge1_a": "Прямокутник 200 пікселів шириною та 100 пікселів висотою. "
         },
         "course2_artist_prog_challenge2": {
-          "courseC_artist_prog_challenge2_a": "Ти можеш вставляти команди всередину блоку \"Повтор\" для повторення їх знову и знову. Спробуй\n\n[blockly block][0]"
+          "courseC_artist_prog_challenge2_a": "Ти можеш вставляти команди всередину блоку \"Повтор\" для повторення їх знову и знову. Спробуй\n\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
         },
         "course2_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_b": "У цій головоломці кожен простір може мати квітку, медову гребіну або нічого. Це означає, що ви можете повторити ваш `if / else` умовно на кожному квадраті."
@@ -819,7 +819,7 @@
         "course2_harvester_loops_challenge1": {
           "courseC_harvester_loops_challenge1_a": "Не думайте навіть про спробу цього спробувати без циклів!",
           "courseC_harvester_loops_challenge1_b": "Ви можете повторити \"рухатися вперед\" і \"зібрати кукурудзу\" стільки разів, скільки вам потрібно, а потім \"повернути праворуч\" на кожному кутку.",
-          "courseC_harvester_loops_challenge1_c": "Найкращий спосіб зібрати перші чотири кукурудзи, це скористатися блоком \"повторити\" всередині іншого блоку \"повторити\". Ви можете використовувати такий принцип і для решти завдання!\n\n[blockly block][0]"
+          "courseC_harvester_loops_challenge1_c": "Найкращий спосіб зібрати перші чотири кукурудзи, це скористатися блоком \"повторити\" всередині іншого блоку \"повторити\". Ви можете використовувати такий принцип і для решти завдання!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">2</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></next></block></xml>"
         },
         "course2_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "Один із способів вирішити це виглядає як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень для загадки, як це. Бути наполегливим!"
@@ -2138,7 +2138,7 @@
         },
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_b": "Розпочати зацикливши команду \"рухати на південь\" та \"отримати скарб\"",
-          "courseB_collector_loops_challenge1_a": "Північний візерунок трохи відрізняється від південного.\n\n[blockly block][0]"
+          "courseB_collector_loops_challenge1_a": "Північний візерунок трохи відрізняється від південного.\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>"
         },
         "course1_maze_debugging_challenge1": {
           "courseA_maze_seq_challenge1_a": "Деякі шляхи приведуть до вибухівки, якщо Ви зайдете занадто далеко."
@@ -2170,21 +2170,21 @@
           "verionhistory": "Застрягли? Завжди можна скасувати зміни, клацаючи `Історія версій` внизу, коли обираєте \"Почати знову\"."
         },
         "course1_artist_loops_challenge1": {
-          "courseA_artist_loops_challenge1_a": "Ви можете використовувати такі цикли для створення стін і даху. Спробуйте повторити різні блоки.  \n\n[][0]\n\nСтворіть свій власний дизайн або натисніть [][1], щоб переглянути кілька ідей!"
+          "courseA_artist_loops_challenge1_a": "Ви можете використовувати такі цикли для створення стін і даху. Спробуйте повторити різні блоки.  \n\n![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)\n\nСтворіть свій власний дизайн або натисніть ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png), щоб переглянути кілька ідей!"
         },
         "course1_collector_loops_challenge1": {
           "courseA_collector_loops_challenge1_a": "Спробуйте змінити цифри в кожному циклі, якщо щось піде не так.",
           "courseA_collector_loops_challenge1_c": "На правій стороні печери 6 самоцвітів, але вам достатньо рухатися та збирати їх лише 5 разів. Ви знаєте чому так?"
         },
         "course1_collector_loops_challenge2": {
-          "courseA_collector_loops_challenge2_b": "Для вирішення проблеми потрібно скористатися лише одним блоком [][0].",
-          "courseA_collector_loops_challenge2_a": "Ви можете рухатися назад і повернутися на шлях знову, перш ніж іти на південь.\n\n[][0]"
+          "courseA_collector_loops_challenge2_b": "Для вирішення проблеми потрібно скористатися лише одним блоком ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png>).",
+          "courseA_collector_loops_challenge2_a": "Ви можете рухатися назад і повернутися на шлях знову, перш ніж іти на південь.\n\n![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)"
         },
         "course1_maze_debugging_challenge2": {
           "courseB_maze_seq_challenge2_b": "Переставте блоки та йдіть середнім шляхом."
         },
         "course1_playlab_events_challenge1": {
-          "courseA_playlab_events_challenge1_e": "Нарешті, відкрийте чарівника Венделя, натиснувши на Спіфа!\n\n[blockly block][0]"
+          "courseA_playlab_events_challenge1_e": "Нарешті, відкрийте чарівника Венделя, натиснувши на Спіфа!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Початковий код працював би чудово, якби в кожній купі був лише одна часточка скарбу!"
