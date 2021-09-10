@@ -115,7 +115,7 @@
         "2-3 Bee Conditionals 14": {
           "2-3_Bee_Conditionals_14_a": "מתקשה בלהבין כיצד להוריד את הבלוקים למטה? נסה להתייחס לפרח האדום בדיוק כמו לפרח הסגול!",
           "2-3_Bee_Conditionals_14_b": "אם הפרח האדום היה סגול, היית מצליח לחשוב על דרך כיצד להשתמש בלולאת ה\"חזור\" כדי לחסוך בכמות הבלוקים בקוד?",
-          "2-3_Bee_Conditionals_14_c": "נסו לחלק את זה לשני חלקים:\n\n[][0]\n\n1.  אספו נקטר 3 פעמים\n    -   זוזו קדימה 5 פעמים\n    -   בדקו האם נותר צוף, אם כן: אספו אותו\n    -   הסתובבו שמאלה\n\n2.  ייצרו דבש\n    -   זוזו קדימה פעם אחת\n    -   ייצרו 2 חלות דבש"
+          "2-3_Bee_Conditionals_14_c": "נסו לחלק את זה לשני חלקים:\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.  אספו נקטר 3 פעמים\n    -   זוזו קדימה 5 פעמים\n    -   בדקו האם נותר צוף, אם כן: אספו אותו\n    -   הסתובבו שמאלה\n\n2.  ייצרו דבש\n    -   זוזו קדימה פעם אחת\n    -   ייצרו 2 חלות דבש"
         },
         "2-3 Bee Conditionals 15": {
           "2-3_Bee_Conditionals_15_a": "זכור: פרחים סגולים יכולים להכיל או 0 או 1 צופים והם יכולים להשתנות בכל פעם שתפעיל את התוכנית."
@@ -899,7 +899,7 @@
           "courseD_bee_conditionals_challenge1_a": "התוכלו למצוא את הדרך אשר מגיעה לכל פרח וחלת דבש בלי להתקע בעצים? הדרך הטובה ביותר היא ספירלה.\n\n**אתם יכולים לפתור את השלב בלי לפנות שמאלה כלל.**"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "כמו שהשתמשתם בבלוק 'אם בפרח', הקוד בתוכו 'כל עוד צוף > 0' ירוץ רק אם הדבורה הגיעה לפרח. ההבדל המשמעותי זה שהקוד בתוכו ירוץ בלולאה כל עוד לא נותר עוד צוף בפרח. נסה את התבנית הבאה:\n\n[blockly block][0]"
+          "courseD_bee_conditionals_challenge1_b": "כמו שהשתמשתם בבלוק 'אם בפרח', הקוד בתוכו 'כל עוד צוף > 0' ירוץ רק אם הדבורה הגיעה לפרח. ההבדל המשמעותי זה שהקוד בתוכו ירוץ בלולאה כל עוד לא נותר עוד צוף בפרח. נסה את התבנית הבאה:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "הקוד המקורי יכול לעבוד נהדר - רק אם היה אוצר אחד בלבד בכל ערימה!"
@@ -913,12 +913,12 @@
         "course2_harvester_loops_challenge1": {
           "courseC_harvester_loops_challenge1_a": "אל תחשוב אפילו לנסות לפתור את החידה בלי לולאות!",
           "courseC_harvester_loops_challenge1_b": "אתם יכולים לחזור על הבלוקים 'זוז קדימה' ו-'אסוף תירס' כמה פעמים שאתם צריכים, אח\"כ השתמשו בבלוק 'פנה ימינה' בכל פינה.",
-          "courseC_harvester_loops_challenge1_c": "הדרך הטובה ביותר לאסוף את ארבעת התירסים הראשונים היא בעזרת בלוק 'חזור' בתוך בלוק 'חזור' נוסף. תוכלו להשתמש בדרך הזו גם להמשך פתרון הפאזל!\n\n[blockly block][0]"
+          "courseC_harvester_loops_challenge1_c": "הדרך הטובה ביותר לאסוף את ארבעת התירסים הראשונים היא בעזרת בלוק 'חזור' בתוך בלוק 'חזור' נוסף. תוכלו להשתמש בדרך הזו גם להמשך פתרון הפאזל!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">2</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></next></block></xml>"
         },
         "course2_maze_loops_challenge1": {
           "courseC_maze_loops_challenge1_a": "חישבו על הדרך הזו כעל שלושה חלקים נפרדים. בכל אחד דפוס פעולה זהה אשר ניתן לחזור עליו.",
           "courseC_maze_loops_challenge1_b": "בכל בלוק 'חזור' עליך להשתמש ב- 'פנה שמאלה' או 'פנה ימינה' כדי להכין את סקראט אל התבנית הבאה.",
-          "courseC_maze_loops_challenge1_c": "אם כבר הגעת עד לכאן, עליך רק 'פנה שמאלה' ואז 'זוז קדימה' מספר פעמים. אל תיכנע!\n\n[][0]"
+          "courseC_maze_loops_challenge1_c": "אם כבר הגעת עד לכאן, עליך רק 'פנה שמאלה' ואז 'זוז קדימה' מספר פעמים. אל תיכנע!\n\n![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)"
         },
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "_אם תשלח אותי אחורה, שים לב לכך שאתה מסובב אותי בכיוון הנכון!_",
