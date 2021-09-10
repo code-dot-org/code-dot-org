@@ -48,7 +48,7 @@
   "fishlong-training-many": "Wow! Das sind ganz schön viele Fische!",
   "fishlong-predicting-init1": "Mit deinen Trainingsdaten hast du die KI so programmiert, dass sie \"{word}\"-Fische erkennt.",
   "fishlong-predicting-init2": "Mal sehen, wie die KI \"{Wort}\" Fische identifiziert.",
-  "fishlong-pond-init1": "Aufgrund deines Trainings hat die KI {n, Plural, einen {diesen} andere {diese}} Fisch als \"{Wort}\" identifiziert. Wie gut hat die KI funktioniert? ",
+  "fishlong-pond-init1": "Aufgrund deines Trainings hat die KI {n, plural,one {diesen} other {diese}} Fisch als \"{Wort}\" identifiziert. Wie gut hat die KI funktioniert? ",
   "fishlong-pond-init2": "Du kannst sie weiter trainieren, wenn du die Ergebnisse verbessern willst.",
   "fishlong-pond-init3": "Oder du kannst der KI ein neues Wort beibringen, indem du Neues Wort auswählst.",
   "didYouKnow": "Wusstest du schon?",
