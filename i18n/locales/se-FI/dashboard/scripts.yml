@@ -6922,6 +6922,14 @@ se:
               key: Sprite-lab
             Getting Started:
               name: Álgge
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lekšuvdna 3
+            Lesson 4:
+              display_name: Lekšuvdna 4
+            Lesson 5:
+              display_name: Lekšuvdna 5
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
