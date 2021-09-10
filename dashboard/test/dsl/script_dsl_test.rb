@@ -711,7 +711,8 @@ level 'Level 3'
                 {levels: [{name: "Level 2"}]},
               ]
             }
-          ]
+          ],
+          user_facing: true,
         ]
       }
     )
@@ -753,6 +754,7 @@ level 'Level 3'
                 ]
               }
             ],
+            user_facing: true,
             description: 'This is a description',
           },
           {
@@ -760,6 +762,7 @@ level 'Level 3'
             display_name: "empty lesson group",
             big_questions: "empty lesson group questions",
             lessons: [],
+            user_facing: true,
             description: "empty lesson group description"
           },
           {
@@ -774,7 +777,8 @@ level 'Level 3'
                   {levels: [{name: "Level 2"}]},
                 ]
               }
-            ]
+            ],
+            user_facing: true,
           }
         ]
       }
@@ -1143,7 +1147,8 @@ level 'Level 3'
                 {levels: [{name: 'Level 2'}]},
               ]
             }
-          ]
+          ],
+          user_facing: true,
         ]
       }
     )
