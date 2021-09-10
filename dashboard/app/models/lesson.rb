@@ -93,7 +93,6 @@ class Lesson < ApplicationRecord
     unit.lessons.reload
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_blank_display_name(raw_lesson)
-      Lesson.prevent_changing_stable_i18n_key(unit, raw_lesson)
 
       lesson = unit.lessons.detect {|l| l.key == raw_lesson[:key]} ||
         Lesson.find_or_create_by(
