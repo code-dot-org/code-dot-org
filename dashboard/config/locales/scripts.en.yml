@@ -24785,7 +24785,7 @@ en:
           title: 2021 CS Principles Deeper Learning Module 2 for Workshop 2
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by September <s>3</s> 8, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csp-mod3:
           lessons:
@@ -25953,11 +25953,11 @@ en:
               name: Project
           lesson_groups:
             lessonGroup-3:
-              display_name: Content
+              display_name: Templates
             lessonGroup-2:
-              display_name: Content
+              display_name: Chapter 1
             lessonGroup-4:
-              display_name: Content
+              display_name: Chapter 2
           name: csdu6-playground
           title: CSD Unit 6 Playground
           description_audience: ''
