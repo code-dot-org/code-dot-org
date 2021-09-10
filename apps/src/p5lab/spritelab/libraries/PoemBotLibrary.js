@@ -8,7 +8,7 @@ const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
 const FONT_SIZE = 25;
 const PLAYSPACE_SIZE = 400;
-const POEM_DURATION = 500;
+const POEM_DURATION = 400;
 
 export default class PoemBotLibrary extends CoreLibrary {
   constructor(p5) {
@@ -23,7 +23,7 @@ export default class PoemBotLibrary extends CoreLibrary {
       lines: [],
       font: {
         fill: 'black',
-        stroke: 'white',
+        stroke: 'rgba(0,0,0,0)',
         font: 'Arial'
       },
       isVisible: true,
@@ -170,7 +170,7 @@ export default class PoemBotLibrary extends CoreLibrary {
         this.p5.noStroke();
         if (this.validationInfo.successFrame) {
           // The student will pass the level
-          this.p5.fill(this.p5.rgb(0, 173, 188));
+          this.p5.fill(this.p5.rgb(133, 175, 76));
         } else {
           // The student will not pass the level (yet);
           this.p5.fill(this.p5.rgb(118, 102, 160));

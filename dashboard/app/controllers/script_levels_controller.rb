@@ -19,6 +19,7 @@ class ScriptLevelsController < ApplicationController
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
   before_action :disable_session_for_cached_pages
+  before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
 
   def disable_session_for_cached_pages

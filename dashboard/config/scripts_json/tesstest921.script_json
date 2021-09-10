@@ -1,6 +1,6 @@
 {
   "script": {
-    "name": "dlp21-overview",
+    "name": "tesstest921",
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
@@ -8,10 +8,10 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-29 13:18:36 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-09-09 21:04:32 UTC",
+    "published_state": null,
     "seeding_key": {
-      "script.name": "dlp21-overview"
+      "script.name": "tesstest921"
     }
   },
   "lesson_groups": [
