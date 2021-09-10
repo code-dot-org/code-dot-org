@@ -1394,6 +1394,60 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal [lesson_2.id, lesson_1.id, lesson_3.id], unit.lesson_groups[0].lessons.map(&:id)
   end
 
+  test 'can move lesson group within migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group_1 = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1'
+    lesson_group_2 = create :lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true
+    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2'
+
+    stub_file_writes(unit.name)
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-2',
+        display_name: 'lesson group 2',
+        user_facing: true,
+        lessons: [
+          {
+            id: lesson_2.id,
+            key: 'lesson-2',
+            name: 'lesson 2'
+          },
+        ],
+      },
+      {
+        key: 'lesson-group-1',
+        display_name: 'lesson group 1',
+        user_facing: true,
+        lessons: [
+          {
+            id: lesson_1.id,
+            key: 'lesson-1',
+            name: 'lesson 1'
+          },
+        ],
+      },
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    unit.reload
+    assert_equal ['lesson group 2', 'lesson group 1'], unit.lesson_groups.map(&:display_name)
+    assert_equal [lesson_group_2.id, lesson_group_1.id], unit.lesson_groups.map(&:id)
+    assert_equal ['lesson 2'], unit.lesson_groups[0].lessons.map(&:name)
+    assert_equal ['lesson 1'], unit.lesson_groups[1].lessons.map(&:name)
+  end
+
   class CoursePilotTests < ActionController::TestCase
     setup do
       @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
