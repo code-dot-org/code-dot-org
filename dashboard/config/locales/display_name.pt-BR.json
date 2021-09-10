@@ -794,9 +794,8 @@
         "CourseF_outbreak2": "Simulação de Vírus",
         "CourseF_outbreak3": "Simulação de Vírus",
         "CourseF_outbreak4": "Modifique sua Simulação",
-        "CourseF_outbreak6": "Chances Aleatórias",
-        "CourseF_outbreak7": "Imunidade e Vacinas",
-        "CourseF_outbreak8": "Compartilhar uma Mensagem",
+        "CourseF_outbreak7": "Chances Aleatórias",
+        "CourseF_outbreak8": "Imunidade e Vacinas",
         "CourseF_video_introSpriteLab_2021": "Este é o Laboratório de Sprites",
         "MC_HOC_2017_01_RETRY_2021": "Propriedade",
         "MC_HOC_2017_02_Cole_2021": "A Fazenda",
@@ -821,7 +820,9 @@
         "courseF_sprites_freeplay_aquatic": "Aquático",
         "courseF_sprites_properties": "Propriedades do Sprite",
         "ramp_artist_loops4_2021": "Estrela",
-        "scrat_loops_C-F_video_2021": "Repetições no vídeo da Era do Gelo"
+        "scrat_loops_C-F_video_2021": "Repetições no vídeo da Era do Gelo",
+        "CourseF_outbreak5": "Modifique sua Simulação",
+        "international_outbreak_freeplay": "Compartilhar uma Mensagem"
       }
     }
   }
