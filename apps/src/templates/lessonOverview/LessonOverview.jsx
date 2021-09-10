@@ -63,9 +63,14 @@ class LessonOverview extends Component {
   };
 
   compilePdfDropdownOptions = () => {
-    const {lessonPlanPdfUrl, scriptResourcesPdfUrl} = this.props.lesson;
+    const {lessonPlanPdfUrl, scriptResourcesPdfUrl, unit} = this.props.lesson;
+
+    const showOverviewPDFOption =
+      unit.publishedState !== PublishedState.pilot &&
+      unit.publishedState !== PublishedState.in_development;
+
     const options = [];
-    if (lessonPlanPdfUrl) {
+    if (lessonPlanPdfUrl && showOverviewPDFOption) {
       options.push({
         key: 'singleLessonPlan',
         name: i18n.printLessonPlan(),
@@ -97,10 +102,6 @@ class LessonOverview extends Component {
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
-    const showPDFButton =
-      lesson.unit.publishedState !== PublishedState.pilot &&
-      lesson.unit.publishedState !== PublishedState.in_development;
-
     return (
       <div className="lesson-overview">
         <div className="lesson-overview-header">
@@ -112,7 +113,7 @@ class LessonOverview extends Component {
               {`< ${lesson.unit.displayName}`}
             </a>
             <div style={styles.dropdowns}>
-              {showPDFButton && pdfDropdownOptions.length > 0 && (
+              {pdfDropdownOptions.length > 0 && (
                 <div style={{marginRight: 5}}>
                   <DropdownButton
                     color={Button.ButtonColor.gray}
