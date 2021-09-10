@@ -268,33 +268,7 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
           unplugged: lesson.unplugged,
           hasLessonPlan: lesson.hasLessonPlan,
           lessonEditPath: lesson.lessonEditPath,
-          name: lesson.name,
-          /*
-           * NOTE: The Unit Edit GUI no longer includes the editing of levels
-           * as those have been moved out to the lesson edit page. We include
-           * level information here behind the scenes because it allows us to
-           * continue to use ScriptDSl for the time being until we are ready
-           * to move on to our future system.
-           */
-          // Only include the first level of an assessment (uid ending with "_0").
-          levels: lesson.levels
-            .filter(level => !level.uid || /_0$/.test(level.uid))
-            .map(level => ({
-              position: level.position,
-              activeId: level.activeId,
-              inactiveIds: level.inactiveIds,
-              ids: level.ids.slice(),
-              kind: level.kind,
-              skin: level.skin,
-              videoKey: level.videoKey,
-              concepts: level.concepts,
-              conceptDifficulty: level.conceptDifficulty,
-              progression: level.progression,
-              named: !!level.name,
-              bonus: level.bonus,
-              assessment: level.assessment,
-              challenge: level.challenge
-            }))
+          name: lesson.name
         }))
     }));
   if (lessonGroups.length === 0) {
