@@ -21,10 +21,8 @@ import {
   mapLessonGroupDataForEditor,
   mapLessonGroupDataForUpdate
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {
-  lessonGroupShape,
-  resourceShape as migratedResourceShape
-} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 import {PublishedState} from '@cdo/apps/util/sharedConstants';
