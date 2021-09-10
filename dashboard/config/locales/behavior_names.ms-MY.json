@@ -150,6 +150,11 @@
         },
         "simcustom_2021": {
           "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "pulih",
+          "moving left and right": "bergerak kiri dan kanan",
+          "moving with arrow keys": "bergerak dengan kunci arah"
         }
       }
     }
