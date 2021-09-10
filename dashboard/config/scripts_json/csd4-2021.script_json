@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-09 20:03:37 UTC",
+    "serialized_at": "2021-09-09 22:58:26 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd4-2021"
@@ -7404,10 +7404,9 @@
     },
     {
       "name": "Example Apps for Good",
-      "url": "https://docs.google.com/document/d/1S05DMbFF316RAMYQB9EBjPxa7xbZJipa98kYwccOQJA/edit",
+      "url": "https://docs.google.com/document/d/1kCuDUhTJb7Vcrv_pzvA4yL79WyZn_7PorV-F-gTxBuk/edit",
       "key": "example-apps-for-good",
       "properties": {
-        "type": "Teacher Resource",
         "audience": "Teacher",
         "include_in_pdf": true
       },
@@ -7492,7 +7491,7 @@
     },
     {
       "name": "Market Research",
-      "url": "https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/edit",
+      "url": "https://docs.google.com/document/d/1xROZ51ntcX11OmXXfB46slca_ViqIjmOrAydkytVWdw/edit",
       "key": "market-research",
       "properties": {
         "type": "Activity Guide",
@@ -7666,10 +7665,9 @@
     },
     {
       "name": "Phone Paper Prototype",
-      "url": "https://drive.google.com/file/d/0B2UNlnU_5Vg4c1VJZ1Zrd0NXUkE/view",
+      "url": "https://drive.google.com/file/d/1O_TFldMiOe6QWCnunqgaZFFT9qnansLo/view",
       "key": "phone-paper-prototype",
       "properties": {
-        "type": "Template",
         "audience": "Student"
       },
       "seeding_key": {

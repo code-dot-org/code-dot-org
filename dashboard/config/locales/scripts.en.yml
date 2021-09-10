@@ -25944,16 +25944,24 @@ en:
               description_teacher: 
             lesson-15:
               name: 'Mini Project: Sensors'
+              description_student: 
+              description_teacher: Based off Dan's sensor projects - blow out candles, light theramin, volume meter
             lesson-17:
               name: Physical Outputs (LEDs)
               description_student: 
               description_teacher: 
             lesson-16:
               name: Physical Inputs
+              description_student: 
+              description_teacher: 
             lesson-18:
               name: Prototyping
+              description_student: 
+              description_teacher: 
             lesson-19:
               name: Project
+              description_student: 
+              description_teacher: 
             lesson-20:
               name: Functions + Functions w/Parameters
               description_student: 
