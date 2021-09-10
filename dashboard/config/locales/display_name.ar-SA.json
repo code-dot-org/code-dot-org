@@ -217,9 +217,9 @@
         "CourseF_outbreak2": "محاكاة الفيروس",
         "CourseF_outbreak3": "محاكاة الفيروس",
         "CourseF_outbreak4": "تعديل المحاكاة الخاصة بك",
-        "CourseF_outbreak6": "فرصة عشوائية",
-        "CourseF_outbreak7": "المناعة واللقاحات",
-        "CourseF_outbreak8": "شارك برسالة",
+        "CourseF_outbreak6": "التعافي",
+        "CourseF_outbreak7": "فرصة عشوائية",
+        "CourseF_outbreak8": "المناعة واللقاحات",
         "CourseF_video_introSpriteLab_2021": "هذا مشروع Sprite Lab",
         "MC_HOC_2017_01_RETRY_2021": "المسكن وما حوله",
         "MC_HOC_2017_02_Cole_2021": "المزرعة",
@@ -244,8 +244,9 @@
         "scrat_loops_C-F_video_2021": "فيديو حلقات التكرار في العصر الجليدي",
         "App Lab Intro 8 - Video Getting Started": "فيديو :ابدأ من هنا",
         "AppLab Intro 7 - Change Screen Color": "تغيير لون الشاشة",
-        "CourseF_outbreak5": "التعافي",
-        "outbreak5": "التعافي"
+        "CourseF_outbreak5": "تعديل المحاكاة الخاصة بك",
+        "outbreak5": "التعافي",
+        "international_outbreak_freeplay": "شارك برسالة"
       }
     }
   }
