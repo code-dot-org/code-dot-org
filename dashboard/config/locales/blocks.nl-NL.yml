@@ -1093,6 +1093,10 @@ nl:
         text: locatie van {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regen
       gamelab_makeNewSpriteAnon:
         text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
       gamelab_mirrorSprite:
@@ -1115,6 +1119,11 @@ nl:
         text: geklikt {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
+      gamelab_playSoundOptions:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": kraak
       gamelab_pointInDirection:
         text: punt {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1547,18 +1556,28 @@ nl:
         text: x coördinaat van {SPRITE}
       Mikelab_yLocationOf:
         text: y coordinaat van {SPRITE}
+      PoemBot_playSound:
+        text: PlaySound {SOUND}
       PoemBot_setBackgroundEffect:
-        text: stel {BG_EFFECT} [PALETTE][1] in als achtergrondeffect
+        text: stel {EFFECT} {PALETTE} in als achtergrondeffect
         options:
-          BG_EFFECT:
-            '"solid"': vast
-            '"rainbow"': regenboog
+          EFFECT:
+            '"colors"': Kleuren
+            '"squiggles"': Kronkels
+            '"space"': Ruimte
+            '"stars"': Sterren
+            '"ripples"': Rimpelingen
+          PALETTE:
+            '"rainbow"': Regenboog
       PoemBot_setForegroundEffect:
-        text: stel {FG_EFFECT} in als voorgrondeffect
+        text: stel {EFFECT} in als voorgrondeffect
         options:
-          FG_EFFECT:
-            '"rain"': regen
-            '"bubbles"': bubbels
+          EFFECT:
+            '"rain"': Regen
+            '"bubbles"': Bubbels
+            '"hearts"': Kleurrijke Harten
+            '"confetti"': Confetti
+            '"starburst"': Sterrenvorming
       RyanLab_moveForward:
         text: beweeg vooruit
       RyanLab_turnLeft:
