@@ -81,6 +81,9 @@ module PardotHelpers
       token_request.to_query
     )
 
+    raise "Pardot authentication failed with HTTP #{response.code}" unless
+      SUCCESS_HTTP_CODES.include?(response.code)
+
     @@access_token = JSON.parse(response.body)["access_token"]
   end
 
