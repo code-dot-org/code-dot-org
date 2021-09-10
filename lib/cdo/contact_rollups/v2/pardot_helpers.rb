@@ -120,6 +120,8 @@ module PardotHelpers
     }
     response = Net::HTTP.post(uri, "", headers)
 
+    raise InvalidApiKeyException if response.code == '401'
+
     # TODO: Return a custom exception containing both the HTTP response code and
     #   the (parsed) response body. The detailed error is in the response body.
     raise "Pardot request failed with HTTP #{response.code}" unless
@@ -129,9 +131,6 @@ module PardotHelpers
 
     doc = Nokogiri::XML(response.body, &:noblanks)
     raise 'Pardot response did not return parsable XML' if doc.nil?
-
-    error_details = doc.xpath('/rsp/err').text
-    raise InvalidApiKeyException if error_details.include? ERROR_INVALID_API_KEY
 
     status = get_response_status doc
     raise 'Pardot response did not include status' if status.nil?
