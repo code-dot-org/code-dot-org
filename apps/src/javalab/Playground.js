@@ -10,6 +10,7 @@ export default class Playground {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.sendMessage = sendMessage;
+    this.loadEvents = 0;
   }
 
   handleSignal(data) {
@@ -24,14 +25,25 @@ export default class Playground {
         break;
       }
       case PlaygroundSignalType.UPDATE: {
+        this.loadEvents = 0;
         const {imageUrl, audioUrl} = data.detail;
 
         if (imageUrl) {
+          this.loadEvents++;
           this.getImgElement().src = imageUrl + `?t=${Date.now()}`;
+          this.getImgElement().onload = () => {
+            this.loadEvents--;
+            this.onLoad();
+          };
         }
 
         if (audioUrl) {
+          this.loadEvents++;
           this.getAudioElement().src = audioUrl + `?t=${Date.now()}`;
+          this.getAudioElement().oncanplaythrough = () => {
+            this.loadEvents--;
+            this.onLoad();
+          };
         }
 
         calculator.onUpdateReceived();
@@ -39,6 +51,12 @@ export default class Playground {
       }
       default:
         break;
+    }
+  }
+
+  onLoad() {
+    if (this.loadEvents === 0) {
+      calculator.onUpdateComplete();
     }
   }
 

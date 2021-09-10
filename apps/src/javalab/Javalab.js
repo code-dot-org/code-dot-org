@@ -37,6 +37,7 @@ import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudio
 import Playground from './Playground';
 import PlaygroundVisualizationColumn from './PlaygroundVisualizationColumn';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
+import calculator from './PlaygroundLatencyCalculator';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -294,6 +295,7 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
+  calculator.onRunStarted();
   this.studioApp_.attempts++;
   if (this.studioApp_.hasContainedLevels) {
     lockContainedLevelAnswers();
@@ -322,6 +324,7 @@ Javalab.prototype.onRun = function() {
 
 // Called by the Javalab app when it wants to stop student code execution
 Javalab.prototype.onStop = function() {
+  calculator.onStopped();
   this.javabuilderConnection.closeConnection();
 };
 
