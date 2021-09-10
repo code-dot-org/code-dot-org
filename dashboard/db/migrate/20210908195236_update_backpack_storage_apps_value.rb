@@ -1,10 +1,9 @@
 class UpdateBackpackStorageAppsValue < ActiveRecord::Migration[5.2]
-  def change
-    Backpack.all.each do |backpack|
-      storage_app_row = PEGASUS_DB[:storage_apps].where(id: backpack.storage_app_id).first
-      if storage_app_row[:value] == "".to_json
+  def up
+    PEGASUS_DB[:storage_apps].where(project_type: 'backpack').each do |storage_app|
+      if storage_app[:value] == "".to_json
         new_value = {hidden: true}.to_json
-        PEGASUS_DB[:storage_apps].where(id: backpack.storage_app_id).update(value: new_value)
+        PEGASUS_DB[:storage_apps].where(id: storage_app[:id]).update(value: new_value)
       end
     end
   end
