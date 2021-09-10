@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {lessonGroupShape} from './shapes';
 
 const INIT = 'unitEditor/INIT';
 const ADD_GROUP = 'unitEditor/ADD_GROUP';
