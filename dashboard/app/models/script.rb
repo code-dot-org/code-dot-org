@@ -1612,7 +1612,8 @@ class Script < ApplicationRecord
     {
       displayName: title_for_display,
       link: link,
-      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)}
+      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)},
+      publishedState: get_published_state
     }
   end
 
