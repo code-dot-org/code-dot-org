@@ -56,5 +56,6 @@
   "didntMoveDown": "Il tuo personaggio non si è mosso verso il basso.",
   "didntMoveLeft": "Il tuo personaggio non si è mosso verso sinistra.",
   "didntMoveRight": "Il tuo personaggio non si è mosso verso destra.",
-  "whenToWhile": "Il tuo personaggio si muove in tutte le direzioni, ma in modo non fluido. Cambia `quando` in `mentre` in ogni blocco evento. \n <xml><xml><block type=\"gamelab_keyPressed\"><title name=\"CONDITION\">mentre</title><title name=\"KEY\">???</title></block></xml></xml>"
+  "whenToWhile": "Il tuo personaggio si muove in tutte le direzioni, ma in modo non fluido. Cambia `quando` in `mentre` in ogni blocco evento. \n <xml><xml><block type=\"gamelab_keyPressed\"><title name=\"CONDITION\">mentre</title><title name=\"KEY\">???</title></block></xml></xml>",
+  "poemBotMakeBackground": "Devi aggiungere un effetto di sfondo."
 }

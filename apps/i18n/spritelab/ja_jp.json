@@ -7,5 +7,6 @@
   "spritelabFeedbackChangeBackgroundColor": "バックグラウンドを白以外の色に変えてください。",
   "spritelabFeedbackCreateTwoSprites": "かっきり二つのスプライトを作ってください。",
   "spritelabFeedbackTwoSpritesWithCostumes": "スプライトたちは別のコスチュームを着なければなりません。",
-  "genericBonusSuccess": "素晴らし出来です！ "
+  "genericBonusSuccess": "素晴らし出来です！ ",
+  "poemBotMakeBackground": "背景エフェクトを追加しましょう。"
 }
