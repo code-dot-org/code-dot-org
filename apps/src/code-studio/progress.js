@@ -301,6 +301,7 @@ progress.renderCourseProgress = function(scriptData) {
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
+        publishedState={scriptData.published_state}
       />
     </Provider>,
     mountPoint
