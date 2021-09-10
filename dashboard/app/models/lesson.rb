@@ -397,16 +397,26 @@ class Lesson < ApplicationRecord
     }
   end
 
-  # Provides data about this lesson needed by the unit edit page.
-  #
-  # TODO: [PLAT-369] trim down to only include those fields needed on the
-  # unit edit page
+  # Provides data about this lesson needed by the edit page for unmigrated units.
   def summarize_for_unit_edit
     summary = summarize(true, for_edit: true).dup
     # Do not let unit name override lesson name when there is only one lesson
     summary[:name] = name
     summary[:lesson_group_display_name] = lesson_group&.display_name
     summary.freeze
+  end
+
+  def summarize_for_migrated_unit_edit
+    {
+      id: id,
+      name: name,
+      key: key,
+      assessment: !!assessment,
+      lockable: !!lockable,
+      hasLessonPlan: has_lesson_plan,
+      unplugged: unplugged,
+      lessonEditPath: edit_lesson_path(id: id)
+    }
   end
 
   # Provides all the editable data related to this lesson and its activities for
