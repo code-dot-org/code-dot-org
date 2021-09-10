@@ -1307,14 +1307,14 @@
           "harvey_tictactoe": "Du kan bruke `hopp`-blokker for å flytte deg til andre ruter på spillbrettet."
         },
         "course1_collector_loops_challenge3": {
-          "courseB_collector_loops_challenge1_b": "Start med å lage en løkke med kommandoene \"gå sør\" og \"hent skatt\"\n\n[blockly block][0]",
-          "courseB_collector_loops_challenge1_a": "Mønsteret for å gå nord er litt annerledes enn mønsteret for å gå sør.\n\n[blockly block][0]"
+          "courseB_collector_loops_challenge1_b": "Start med å lage en løkke med kommandoene \"gå sør\" og \"hent skatt\"\n\n<xml>\n  <block type=\"maze_moveSouth\"/><next>\n  <block type=\"collector_collect\"/></next>\n  </xml>",
+          "courseB_collector_loops_challenge1_a": "Mønsteret for å gå nord er litt annerledes enn mønsteret for å gå sør.\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>"
         },
         "course1_maze_debugging_challenge2": {
           "courseB_maze_seq_challenge2_b": "Gjør om på rekkefølgen til blokkene, sånn at du kan følge den midterste veien frem til grisen!"
         },
         "course1_playlab_events_challenge1": {
-          "courseA_playlab_events_challenge1_e": "Til slutt, få Trollmannen Wendel til å vise seg når du trykker på Spiff!\n\n[blockly block][0]"
+          "courseA_playlab_events_challenge1_e": "Til slutt, få Trollmannen Wendel til å vise seg når du trykker på Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "Det er to måtar å løyse denne oppgåva!"
