@@ -11,3 +11,9 @@ export const categeoricalColumnDetailsShape = PropTypes.shape({
   uniqueOptions: PropTypes.array.isRequired,
   frequencies: PropTypes.objectOf(PropTypes.number).isRequired
 });
+
+export const numericalColumnDetailsShape = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  extrema: PropTypes.objectOf(PropTypes.number).isRequired,
+  containsOnlyNumbers: PropTypes.bool.isRequired
+});
