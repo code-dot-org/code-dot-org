@@ -49,16 +49,20 @@ const blocklyTags = [
   'xml'
 ];
 schema.tagNames = schema.tagNames.concat(blocklyTags);
+let blocklyComponentWrappers = {};
 blocklyTags.forEach(tag => {
   schema.attributes[tag] = ['block_text', 'id', 'inline', 'name', 'type'];
-});
 
-function BlocklyXml(props) {
-  return <xml is="xml" {...props} />;
-}
-function BlocklyBlock(props) {
-  return <block is="block" {...props} />;
-}
+  // Create a React component to wrap each Blockly tag. Since these elements ultimately
+  // render as React components, creating a wrapper makes them valid (whereas <xml>
+  // is not a valid React tag).
+  blocklyComponentWrappers[tag] = function(props) {
+    const BlocklyElement = tag;
+    // The "is" attribute prevents React from warning about unrecognized tags:
+    // https://github.com/facebook/react/issues/11184#issuecomment-335942439
+    return <BlocklyElement is={tag} {...props} />;
+  };
+});
 
 const markdownToReact = Parser.create()
   .getParser()
@@ -76,10 +80,9 @@ const markdownToReact = Parser.create()
   // convert the HAST to React
   .use(rehypeReact, {
     createElement: React.createElement,
-    components: {
-      xml: BlocklyXml,
-      block: BlocklyBlock
-    }
+    // Use React component wrappers for Blockly XML elements to prevent
+    // React from warning us about invalid components.
+    components: blocklyComponentWrappers
   });
 
 const markdownToReactExternalLinks = markdownToReact().use(externalLinks, {
