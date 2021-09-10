@@ -1,0 +1,1648 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Adams Central High School,,180006000007,4568,AP Computer Science Principles,32,8,0,1,0,0,4,0,0
+South Adams High School,,181026001642,4801,Computer Science I,8,1,0,1,0,0,2,1,0
+South Adams High School,,181026001642,5236,Computer Science II,2,0,0,0,0,0,0,0,0
+Homestead Senior High School,,180003000002,5236,Computer Science II,22,2,1,1,0,0,0,0,0
+Homestead Senior High School,,180003000002,5252,Computer Science III: Special Topics,11,1,0,1,0,0,0,1,0
+Homestead Senior High School,,180003000002,4801,Computer Science I,42,6,0,7,0,0,4,3,0
+Homestead Senior High School,,180003000002,5253,Computer Science III:  Cybersecurity Capstone,17,1,1,0,0,0,0,0,0
+Carroll High School,,180825001414,4570,AP Computer Science A,12,0,0,0,0,0,2,1,0
+Carroll High School,,180825001414,4801,Computer Science I,76,3,6,5,0,0,17,6,0
+Carroll High School,,180825001414,5253,Computer Science III:  Cybersecurity Capstone,21,2,1,0,1,0,1,2,0
+Anthis Career Center,,180363000528,5253,Computer Science III:  Cybersecurity Capstone,5,1,0,1,0,0,3,0,1
+Anthis Career Center,,180363000528,5236,Computer Science II,18,7,3,2,0,0,6,4,1
+North Side High School,,180363000550,4801,Computer Science I,53,9,12,7,0,0,32,11,6
+North Side High School,,180363000550,5236,Computer Science II,13,1,0,0,0,0,9,0,0
+North Side High School,,180363000550,4803,Introduction to Computer Science,86,14,23,21,0,0,59,14,9
+R Nelson Snider High School,,180363000556,4570,AP Computer Science A,13,2,1,1,0,0,5,1,0
+R Nelson Snider High School,,180363000556,4568,AP Computer Science Principles,38,8,5,3,0,0,12,2,0
+R Nelson Snider High School,,180363000556,4803,Introduction to Computer Science,66,9,12,9,0,0,34,10,1
+South Side High School,,180363000562,4801,Computer Science I,34,3,7,10,0,0,25,3,3
+South Side High School,,180363000562,4803,Introduction to Computer Science,102,26,35,29,0,0,70,10,17
+Wayne High School,,180363000568,4801,Computer Science I,76,22,20,13,0,0,39,7,7
+Wayne High School,,180363000568,4803,Introduction to Computer Science,152,41,42,24,1,0,99,32,11
+Northrop High School,,180363000552,4801,Computer Science I,130,23,27,17,1,0,69,19,6
+Northrop High School,,180363000552,4803,Introduction to Computer Science,118,34,26,16,2,0,64,25,4
+Leo Junior/Senior High School,,180285000349,5612,Industrial Automation and Robotics II,1,0,0,0,0,0,0,0,0
+Leo Junior/Senior High School,,180285000349,4803,Introduction to Computer Science,17,4,1,0,0,0,5,0,0
+Leo Junior/Senior High School,,180285000349,5610,Industrial Automation and Robotics I,3,0,0,0,0,0,2,1,0
+Heritage Jr/Sr High School,,180285000344,4801,Computer Science I,40,10,1,3,0,0,25,6,10
+Heritage Jr/Sr High School,,180285000344,4803,Introduction to Computer Science,28,2,2,2,0,0,15,4,9
+Woodlan Jr/Sr High School,,180285000361,4803,Introduction to Computer Science,22,1,1,0,0,0,6,5,0
+New Haven Jr/Sr High School,,180285000353,4803,Introduction to Computer Science,24,0,8,3,0,0,13,1,2
+Columbus North High School,,180036000066,4801,Computer Science I,55,10,3,9,1,0,15,3,4
+Columbus North High School,,180036000066,4570,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Columbus North High School,,180036000066,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+Columbus North High School,,180036000066,5612,Industrial Automation and Robotics II,6,0,0,0,0,0,2,0,1
+Columbus North High School,,180036000066,5610,Industrial Automation and Robotics I,8,0,0,1,0,0,3,1,1
+Columbus North High School,,180036000066,4568,AP Computer Science Principles,3,3,0,1,0,0,0,0,0
+Columbus North High School,,180036000066,5253,Computer Science III:  Cybersecurity Capstone,5,0,0,1,0,0,1,0,0
+Columbus East High School,,180036000065,5253,Computer Science III:  Cybersecurity Capstone,0,0,0,0,0,0,0,0,0
+Columbus East High School,,180036000065,5612,Industrial Automation and Robotics II,0,0,0,0,0,0,0,0,0
+Columbus East High School,,180036000065,4801,Computer Science I,20,0,1,1,1,0,4,0,2
+Columbus East High School,,180036000065,5610,Industrial Automation and Robotics I,0,0,0,0,0,0,0,0,0
+Hauser Jr-Sr High School,,180357000509,4570,AP Computer Science A,6,2,0,0,0,0,1,0,0
+Hauser Jr-Sr High School,,180357000509,4803,Introduction to Computer Science,20,10,0,1,0,0,10,3,0
+Hauser Jr-Sr High School,,180357000509,4801,Computer Science I,21,6,0,0,0,0,7,3,0
+Hauser Jr-Sr High School,,180357000509,4568,AP Computer Science Principles,4,0,0,0,0,0,1,0,0
+Hauser Jr-Sr High School,,180357000509,5253,Computer Science III:  Cybersecurity Capstone,1,0,0,0,0,0,1,0,0
+Benton Central Jr-Sr High School,,180048000097,4801,Computer Science I,12,3,0,2,0,0,6,2,0
+Benton Central Jr-Sr High School,,180048000097,5236,Computer Science II,4,0,0,0,0,0,2,1,0
+Benton Central Jr-Sr High School,,180048000097,5249,Computer Science III:  Software Development Capstone,4,1,0,1,0,0,1,0,0
+Zionsville Community High School,,180283000341,4568,AP Computer Science Principles,32,6,2,1,0,0,1,3,0
+Zionsville Community High School,,180283000341,4570,AP Computer Science A,55,9,1,1,0,0,0,3,0
+Lebanon Senior High School,,180579001041,4570,AP Computer Science A,1,1,0,0,0,0,0,0,0
+Lebanon Senior High School,,180579001041,4801,Computer Science I,12,4,0,1,0,0,4,0,0
+Brown County High School,,180096000169,5253,Computer Science III:  Cybersecurity Capstone,5,1,0,0,0,0,1,1,0
+Brown County High School,,180096000169,4568,AP Computer Science Principles,39,9,0,1,1,0,11,4,0
+Brown County High School,,180096000169,5236,Computer Science II,14,1,0,1,1,0,8,4,0
+Carroll Senior High School,,180129000203,4803,Introduction to Computer Science,19,5,0,2,0,0,2,6,1
+Delphi Community High School,,180270000326,4570,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Delphi Community High School,,180270000326,4801,Computer Science I,55,19,0,8,0,0,25,2,0
+Pioneer Jr-Sr High School,,180894001491,4803,Introduction to Computer Science,35,12,0,1,0,0,8,0,1
+Pioneer Jr-Sr High School,,180894001491,4801,Computer Science I,16,2,1,1,0,0,10,1,0
+Lewis Cass High School,,181068001755,5610,Industrial Automation and Robotics I,2,0,0,0,0,0,2,0,0
+Lewis Cass High School,,181068001755,4801,Computer Science I,11,3,0,1,0,0,2,1,0
+Lewis Cass High School,,181068001755,4570,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Lewis Cass Polytechnic Academy ,,181068002622,5612,Industrial Automation and Robotics II,1,0,0,0,0,0,0,0,0
+Lewis Cass Polytechnic Academy ,,181068002622,5610,Industrial Automation and Robotics I,4,0,0,0,0,0,1,3,0
+Century Career Center,,180603001054,4801,Computer Science I,21,1,2,7,0,0,9,3,4
+Century Career Center,,180603001054,4803,Introduction to Computer Science,41,12,1,16,0,0,23,4,2
+Silver Creek High School,,180937001536,4801,Computer Science I,9,0,0,2,0,0,1,0,0
+Silver Creek High School,,180937001536,4803,Introduction to Computer Science,39,4,1,6,0,0,11,7,1
+Clarksville Senior High School,,180192000249,4801,Computer Science I,8,1,1,0,0,0,2,2,0
+Clarksville Senior High School,,180192000249,4803,Introduction to Computer Science,33,8,1,6,0,0,11,5,1
+Clarksville Senior High School,,180192000249,5236,Computer Science II,1,0,0,1,0,0,0,0,1
+Indiana Gateway Digital Academy,,180192002690,4803,Introduction to Computer Science,16,7,0,1,0,0,9,0,0
+Charlestown Senior High School,,180394000663,4803,Introduction to Computer Science,30,5,0,4,0,0,11,5,3
+Charlestown Senior High School,,180394000663,4801,Computer Science I,7,1,0,0,0,0,2,0,0
+Charlestown Senior High School,,180394000663,5253,Computer Science III:  Cybersecurity Capstone,3,2,0,0,0,0,2,1,0
+Jeffersonville High School,,180394000666,4801,Computer Science I,39,5,8,5,0,0,14,4,2
+Jeffersonville High School,,180394000666,4803,Introduction to Computer Science,75,11,19,7,0,1,46,16,3
+Jeffersonville High School,,180394000666,5236,Computer Science II,18,1,4,2,0,0,9,2,0
+Clay City Jr-Sr High School,,180084000157,4728,Robotics Design and Innovation,8,0,0,0,0,0,3,1,0
+Northview High School,,180084000154,4801,Computer Science I,11,2,0,0,0,0,1,1,0
+Clinton Central Junior-Senior HS,,180213000257,4728,Robotics Design and Innovation,0,0,0,0,0,0,0,0,0
+Clinton Prairie Jr-Sr High School,,180216000258,4803,Introduction to Computer Science,9,1,0,1,0,0,5,0,0
+Frankfort High School,,180366000574,4801,Computer Science I,0,0,0,0,0,0,0,0,0
+Frankfort High School,,180366000574,4803,Introduction to Computer Science,0,0,0,0,0,0,0,0,0
+Rossville Middle/Senior High Sch,,180972001590,4801,Computer Science I,14,0,0,0,0,0,1,4,0
+Crawford County High School,,180244000279,4801,Computer Science I,33,12,0,0,0,0,18,7,0
+Crawford County High School,,180244000279,5236,Computer Science II,8,1,0,0,0,0,4,0,0
+North Daviess Jr-Sr High School,,180771001319,5610,Industrial Automation and Robotics I,2,0,0,0,0,0,2,0,0
+North Daviess Jr-Sr High School,,180771001319,4803,Introduction to Computer Science,2,0,0,0,0,0,0,1,0
+North Daviess Jr-Sr High School,,180771001319,4801,Computer Science I,17,4,0,1,0,0,9,2,0
+Washington High School,,181029001684,5253,Computer Science III:  Cybersecurity Capstone,11,2,0,1,0,0,7,4,1
+Washington High School,,181029001684,4801,Computer Science I,74,18,0,10,1,0,29,6,1
+East Central High School,,181119001802,4801,Computer Science I,55,10,0,0,0,0,6,9,0
+East Central High School,,181119001802,5249,Computer Science III:  Software Development Capstone,6,0,0,0,0,0,0,0,0
+East Central High School,,181119001802,5236,Computer Science II,19,5,0,0,0,0,2,1,0
+South Dearborn High School,,180024000056,4801,Computer Science I,6,3,0,0,0,0,1,0,0
+Lawrenceburg High School,,180570001037,4801,Computer Science I,22,4,1,1,0,0,9,3,0
+Lawrenceburg High School,,180570001037,5249,Computer Science III:  Software Development Capstone,3,0,0,0,0,0,0,0,0
+Lawrenceburg High School,,180570001037,5610,Industrial Automation and Robotics I,1,0,0,0,0,0,0,0,0
+South Decatur Jr-Sr High School,,180261000311,4803,Introduction to Computer Science,9,0,0,0,0,0,3,1,0
+South Decatur Jr-Sr High School,,180261000311,5253,Computer Science III:  Cybersecurity Capstone,1,0,0,0,0,0,0,0,0
+North Decatur Jr-Sr High School,,180261000309,4801,Computer Science I,11,0,0,0,0,0,6,2,0
+North Decatur Jr-Sr High School,,180261000309,5253,Computer Science III:  Cybersecurity Capstone,10,0,0,1,0,0,3,0,1
+Greensburg Community High School,,180408000704,4801,Computer Science I,5,3,0,0,0,0,2,0,0
+Greensburg Community High School,,180408000704,4803,Introduction to Computer Science,4,2,0,0,0,0,2,0,0
+Greensburg Community High School,,180408000704,4728,Robotics Design and Innovation,12,1,0,1,0,0,4,3,0
+DeKalb High School,,180159000220,4568,AP Computer Science Principles,22,1,0,0,0,0,5,1,0
+DeKalb High School,,180159000220,4803,Introduction to Computer Science,22,2,0,1,0,0,8,9,0
+Delta High School,,180266000320,4801,Computer Science I,33,3,0,0,0,0,9,6,0
+Wes-Del Middle/Senior High School,,180450000761,4803,Introduction to Computer Science,26,12,0,0,0,0,12,3,0
+Wes-Del Middle/Senior High School,,180450000761,4801,Computer Science I,9,1,0,0,0,0,2,1,0
+Wapahani High School,,180588001047,4801,Computer Science I,38,10,0,1,0,0,7,1,0
+Yorktown High School,,180723001217,4801,Computer Science I,12,1,0,0,0,0,3,1,0
+Yorktown High School,,180723001217,4728,Robotics Design and Innovation,15,0,1,0,0,0,2,2,0
+Daleville Jr-Sr High School,,180984001603,4801,Computer Science I,17,5,1,1,0,0,7,1,0
+Daleville Jr-Sr High School,,180984001603,5612,Industrial Automation and Robotics II,1,0,0,0,0,0,1,0,0
+Muncie Central High School,,180732001242,4801,Computer Science I,13,0,0,1,0,0,7,2,0
+Muncie Central High School,,180732001242,4568,AP Computer Science Principles,2,1,1,0,0,0,1,0,0
+Muncie Central High School,,180732001242,4803,Introduction to Computer Science,23,3,7,1,0,0,15,5,0
+Muncie Central High School,,180732001242,5610,Industrial Automation and Robotics I,9,0,3,0,0,0,4,2,0
+Northeast Dubois Jr/Sr High School,,180812001393,4801,Computer Science I,8,2,0,0,0,0,2,1,0
+Forest Park Jr-Sr High School,,181064001745,4801,Computer Science I,12,0,0,1,0,0,3,0,0
+Southridge High School,,181087001779,4801,Computer Science I,5,1,0,2,0,0,0,1,0
+Jasper High School,,180396000685,5253,Computer Science III:  Cybersecurity Capstone,14,2,0,1,0,0,0,2,0
+Jasper High School,,180396000685,4568,AP Computer Science Principles,51,9,0,3,0,0,3,2,0
+Fairfield Jr-Sr High School,,180348000491,4801,Computer Science I,11,0,0,2,0,0,1,0,0
+Fairfield Jr-Sr High School,,180348000491,5236,Computer Science II,4,0,0,0,0,0,1,2,0
+Fairfield Jr-Sr High School,,180348000491,4803,Introduction to Computer Science,16,2,1,0,0,0,4,0,0
+Jimtown High School,,180042000090,4803,Introduction to Computer Science,0,0,0,0,0,0,0,0,0
+Concord Community High School,,180240000269,5236,Computer Science II,2,1,0,0,0,0,0,0,0
+Concord Community High School,,180240000269,4801,Computer Science I,74,12,5,32,0,0,34,10,14
+Northridge High School,,180660001165,5253,Computer Science III:  Cybersecurity Capstone,5,1,0,0,0,0,0,0,0
+Northridge High School,,180660001165,4801,Computer Science I,41,2,0,4,0,0,10,3,0
+Northridge High School,,180660001165,5610,Industrial Automation and Robotics I,2,0,0,0,0,0,0,0,0
+Northridge High School,,180660001165,5236,Computer Science II,6,0,0,0,0,0,1,0,0
+North Wood High School,,181224001956,4803,Introduction to Computer Science,25,4,0,4,0,0,9,1,0
+Elkhart Area Career Center,,180327000428,5610,Industrial Automation and Robotics I,15,1,1,2,0,1,4,0,0
+Elkhart Area Career Center,,180327000428,5612,Industrial Automation and Robotics II,4,0,2,0,0,0,1,1,0
+Elkhart High School,,180327002693,4568,AP Computer Science Principles,6,0,0,2,0,0,2,0,0
+Elkhart High School,,180327002693,4803,Introduction to Computer Science,66,10,6,22,0,0,33,5,7
+Elkhart High School,,180327002693,4570,AP Computer Science A,5,0,0,1,0,0,1,0,0
+Goshen High School,,180393000654,5236,Computer Science II,10,1,0,4,0,0,4,3,2
+Goshen High School,,180393000654,4801,Computer Science I,48,4,0,27,0,0,25,9,8
+Connersville Sr High School,,180351000498,4801,Computer Science I,20,1,0,0,0,0,4,2,0
+Connersville Sr High School,,180351000498,4803,Introduction to Computer Science,37,6,1,0,0,0,23,3,0
+Whitewater Career Center,,180351000495,4801,Computer Science I,7,0,0,0,0,0,1,0,0
+New Albany Senior High School,,180741001277,4801,Computer Science I,47,14,2,1,0,0,8,4,0
+New Albany Senior High School,,180741001277,4803,Introduction to Computer Science,25,6,2,3,0,0,14,5,0
+New Albany Senior High School,,180741001277,4570,AP Computer Science A,20,2,0,1,0,0,4,3,0
+Floyd Central High School,,180741001265,4570,AP Computer Science A,15,0,0,0,0,0,1,2,0
+Floyd Central High School,,180741001265,4801,Computer Science I,27,3,1,0,0,0,4,4,0
+Floyd Central High School,,180741001265,5252,Computer Science III: Special Topics,4,2,0,0,0,0,1,0,0
+Prosser Career Education Center,,180741001262,4801,Computer Science I,25,4,0,2,0,0,12,2,0
+Attica High School,,180021000050,4801,Computer Science I,3,0,0,0,0,0,1,0,0
+Covington Community High School,,180243000275,5236,Computer Science II,4,0,0,0,0,0,0,1,0
+Covington Community High School,,180243000275,4801,Computer Science I,7,2,0,0,0,0,0,0,0
+Franklin County High,,180370002336,4801,Computer Science I,9,0,0,0,0,0,6,2,0
+Franklin County High,,180370002336,4803,Introduction to Computer Science,1,0,0,0,0,0,0,0,0
+Rochester Community High School,,180963001576,4801,Computer Science I,1,1,0,0,0,0,1,0,0
+Rochester Community High School,,180963001576,4803,Introduction to Computer Science,13,0,0,1,0,0,5,1,0
+Caston Jr-Sr High School,,180141000207,4803,Introduction to Computer Science,5,3,0,0,0,0,1,0,0
+Waldo J Wood Memorial High,,180294000386,4803,Introduction to Computer Science,16,3,0,0,0,0,4,3,0
+Waldo J Wood Memorial High,,180294000386,5236,Computer Science II,2,1,0,0,0,0,1,2,0
+Waldo J Wood Memorial High,,180294000386,4568,AP Computer Science Principles,7,1,0,0,0,0,3,0,0
+Princeton Community High School,,180777001326,5236,Computer Science II,4,0,0,0,0,0,1,0,0
+Princeton Community High School,,180777001326,4801,Computer Science I,10,1,0,2,0,0,5,4,0
+Gibson Southern High School,,181035001688,4801,Computer Science I,6,1,0,0,0,0,0,1,0
+Gibson Southern High School,,181035001688,4568,AP Computer Science Principles,6,3,0,0,0,0,1,0,0
+Gibson Southern High School,,181035001688,4803,Introduction to Computer Science,37,6,0,2,0,0,11,10,0
+Eastbrook High School,,180303000399,4801,Computer Science I,12,0,0,1,0,0,3,2,0
+Eastbrook High School,,180303000399,4568,AP Computer Science Principles,3,0,0,0,0,0,0,0,0
+Madison-Grant Jr./Sr. High School,,180624001097,4801,Computer Science I,18,0,1,1,0,0,6,4,0
+Madison-Grant Jr./Sr. High School,,180624001097,4803,Introduction to Computer Science,38,24,0,0,0,0,14,4,0
+Mississinewa High School,,180687001189,4570,AP Computer Science A,5,2,0,0,0,0,2,0,0
+Mississinewa High School,,180687001189,4568,AP Computer Science Principles,14,2,0,0,0,0,4,0,0
+Mississinewa High School,,180687001189,4803,Introduction to Computer Science,44,9,0,1,0,0,25,5,0
+Marion High School,,180639001117,4568,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Marion High School,,180639001117,5236,Computer Science II,5,1,0,1,0,0,4,1,0
+Marion High School,,180639001117,4801,Computer Science I,34,6,6,3,0,0,20,5,1
+Bloomfield Jr-Sr High School,,180060000113,4801,Computer Science I,7,0,0,0,0,0,2,1,1
+Bloomfield Jr-Sr High School,,180060000113,5253,Computer Science III:  Cybersecurity Capstone,2,0,0,0,0,0,0,0,0
+Bloomfield Jr-Sr High School,,180060000113,4803,Introduction to Computer Science,14,3,0,0,0,0,6,3,1
+Eastern Greene High School,,180309000408,4803,Introduction to Computer Science,0,0,0,0,0,0,0,0,0
+Eastern Greene High School,,180309000408,4570,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Linton-Stockton High School,,180591001049,4803,Introduction to Computer Science,17,1,0,3,0,0,9,3,0
+White River Valley High School,,180000802302,4801,Computer Science I,22,3,0,1,0,0,8,3,0
+Fishers High School,,181065002392,4568,AP Computer Science Principles,150,39,8,9,0,0,16,4,1
+Fishers High School,,181065002392,4570,AP Computer Science A,43,9,0,0,0,0,4,2,0
+Fishers High School,,181065002392,4801,Computer Science I,84,14,2,6,0,0,10,5,2
+Fishers High School,,181065002392,4803,Introduction to Computer Science,115,26,11,16,0,0,20,5,2
+Fishers High School,,181065002392,5253,Computer Science III:  Cybersecurity Capstone,21,1,0,1,0,0,4,2,2
+Hamilton Southeastern HS,,181065001752,4803,Introduction to Computer Science,29,4,4,3,0,0,3,3,2
+Hamilton Southeastern HS,,181065001752,5249,Computer Science III:  Software Development Capstone,21,2,0,1,1,0,1,0,0
+Hamilton Southeastern HS,,181065001752,4570,AP Computer Science A,306,64,23,3,0,0,15,6,2
+Hamilton Southeastern HS,,181065001752,4801,Computer Science I,68,8,4,4,1,0,5,7,1
+Hamilton Southeastern HS,,181065001752,5253,Computer Science III:  Cybersecurity Capstone,31,5,0,2,1,0,3,2,1
+Hamilton Heights High School,,180426000728,4568,AP Computer Science Principles,16,7,1,0,0,0,2,1,0
+Westfield High School,,181308002075,5253,Computer Science III:  Cybersecurity Capstone,16,4,0,0,0,0,0,0,0
+Westfield High School,,181308002075,4801,Computer Science I,48,7,1,5,0,0,5,2,1
+Westfield High School,,181308002075,4803,Introduction to Computer Science,68,13,2,2,0,0,11,9,2
+Sheridan High School,,180648001127,4803,Introduction to Computer Science,9,1,0,1,0,0,5,3,0
+Carmel High School,,180120000193,4568,AP Computer Science Principles,131,29,4,1,0,0,8,3,1
+Carmel High School,,180120000193,4728,Robotics Design and Innovation,21,3,0,1,0,0,2,0,0
+Carmel High School,,180120000193,5253,Computer Science III:  Cybersecurity Capstone,29,1,0,1,0,1,2,2,0
+Carmel High School,,180120000193,4803,Introduction to Computer Science,126,21,7,3,0,0,9,12,1
+Carmel High School,,180120000193,4570,AP Computer Science A,70,11,1,2,0,1,2,1,1
+Carmel High School,,180120000193,5236,Computer Science II,1,0,0,0,0,0,0,0,0
+Carmel High School,,180120000193,4801,Computer Science I,4,0,1,0,0,0,0,0,0
+Noblesville High School,,180765001309,5236,Computer Science II,53,9,0,1,0,0,9,2,0
+Noblesville High School,,180765001309,5252,Computer Science III: Special Topics,20,3,1,0,0,0,2,2,0
+Noblesville High School,,180765001309,5253,Computer Science III:  Cybersecurity Capstone,21,2,0,1,0,0,2,1,0
+Noblesville High School,,180765001309,4801,Computer Science I,49,6,1,1,0,0,8,2,2
+New Palestine High School,,181071001761,4568,AP Computer Science Principles,26,4,0,0,0,0,2,1,0
+Greenfield-Central High School,,180405000696,4728,Robotics Design and Innovation,13,1,0,1,0,0,7,3,0
+Mt Vernon High School,,180726001221,4803,Introduction to Computer Science,56,13,4,2,0,0,14,8,1
+Eastern Hancock High School,,180312000410,4568,AP Computer Science Principles,3,0,0,0,0,0,0,2,0
+Eastern Hancock High School,,180312000410,4801,Computer Science I,10,1,0,1,0,0,1,0,1
+Eastern Hancock High School,,180312000410,4570,AP Computer Science A,2,0,0,0,0,0,0,0,0
+Lanesville Jr-Sr HS,,180372000593,4803,Introduction to Computer Science,1,0,0,0,0,0,0,0,0
+North Harrison High School,,180069000144,5253,Computer Science III:  Cybersecurity Capstone,38,9,0,0,0,0,14,4,0
+North Harrison High School,,180069000144,4801,Computer Science I,134,65,2,3,0,0,56,14,1
+Corydon Central High School,,181036002282,4801,Computer Science I,24,8,0,1,0,0,14,3,1
+Corydon Central High School,,181036002282,5253,Computer Science III:  Cybersecurity Capstone,6,0,0,2,0,0,3,2,1
+South Central Jr & Sr High School,,181036002285,5610,Industrial Automation and Robotics I,1,0,0,0,0,0,1,0,0
+Tri-West Senior High School,,180810001387,4568,AP Computer Science Principles,10,7,0,0,0,0,2,1,0
+Tri-West Senior High School,,180810001387,4801,Computer Science I,17,3,0,0,1,0,4,1,0
+Brownsburg High School,,180102000176,4803,Introduction to Computer Science,25,4,8,3,0,0,9,2,1
+Brownsburg High School,,180102000176,5236,Computer Science II,33,2,1,3,0,0,4,0,0
+Brownsburg High School,,180102000176,4801,Computer Science I,144,27,7,7,0,0,16,7,1
+Brownsburg High School,,180102000176,5253,Computer Science III:  Cybersecurity Capstone,55,14,6,3,0,0,10,3,0
+Avon High School,,180027000057,4801,Computer Science I,14,3,3,1,0,0,4,1,3
+Avon High School,,180027000057,5610,Industrial Automation and Robotics I,44,4,6,5,0,0,7,8,2
+Avon High School,,180027000057,5253,Computer Science III:  Cybersecurity Capstone,14,4,0,0,0,0,3,0,0
+Avon High School,,180027000057,4570,AP Computer Science A,60,17,8,4,0,0,11,1,0
+Avon High School,,180027000057,4568,AP Computer Science Principles,228,75,31,22,0,0,59,13,6
+Danville Community High School,,180255000304,4801,Computer Science I,20,1,0,1,0,0,6,4,0
+Plainfield High School,,180897001494,4801,Computer Science I,135,32,6,6,0,1,31,28,3
+Plainfield High School,,180897001494,5236,Computer Science II,35,3,0,1,0,0,2,7,0
+Plainfield High School,,180897001494,5249,Computer Science III:  Software Development Capstone,5,2,0,1,0,0,0,0,0
+Blue River Valley Jr-Sr High Sch,,180066000141,4801,Computer Science I,30,12,0,0,0,0,10,1,0
+Blue River Valley Jr-Sr High Sch,,180066000141,5236,Computer Science II,3,1,0,0,0,0,2,1,0
+Blue River Valley Jr-Sr High Sch,,180066000141,5253,Computer Science III:  Cybersecurity Capstone,6,0,0,0,0,0,1,1,0
+Shenandoah High School,,180828001420,4801,Computer Science I,1,1,0,0,0,0,0,0,0
+Shenandoah High School,,180828001420,4803,Introduction to Computer Science,41,15,0,0,0,0,21,5,0
+New Castle High School,,180744001290,4801,Computer Science I,25,4,0,3,0,0,12,2,1
+New Castle High School,,180744001290,5253,Computer Science III:  Cybersecurity Capstone,2,0,0,0,0,0,2,0,0
+Knightstown High School,,180106000189,4803,Introduction to Computer Science,13,5,0,0,1,0,7,1,0
+Northwestern Senior High School,,180204000255,4801,Computer Science I,10,1,0,0,0,0,2,2,0
+Northwestern Senior High School,,180204000255,4803,Introduction to Computer Science,18,6,1,0,0,0,3,1,0
+Northwestern Senior High School,,180204000255,5610,Industrial Automation and Robotics I,2,0,0,0,0,0,1,1,0
+Eastern High School,,180315000413,4801,Computer Science I,10,2,0,1,0,0,0,2,0
+Eastern High School,,180315000413,5236,Computer Science II,2,0,0,0,0,0,0,0,0
+Eastern High School,,180315000413,4803,Introduction to Computer Science,13,3,1,0,0,0,5,0,0
+Western High School,,180447000756,4570,AP Computer Science A,14,2,0,0,0,0,2,2,0
+Western High School,,180447000756,4801,Computer Science I,12,0,0,0,0,0,1,1,0
+Kokomo High School,,180537000947,4570,AP Computer Science A,7,1,1,0,0,0,4,0,1
+Huntington North High School,,180471000786,5252,Computer Science III: Special Topics,3,0,0,0,0,0,0,0,0
+Huntington North High School,,180471000786,4801,Computer Science I,22,4,0,0,0,0,8,0,0
+Huntington North High School,,180471000786,5236,Computer Science II,7,1,0,0,0,0,2,0,0
+Medora Jr & Sr High School,,180123000201,4803,Introduction to Computer Science,21,11,0,0,0,0,21,4,0
+Seymour Senior High School,,181008001618,5610,Industrial Automation and Robotics I,1,0,0,0,0,0,1,0,0
+Seymour Senior High School,,181008001618,4570,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Seymour Senior High School,,181008001618,4568,AP Computer Science Principles,11,0,0,1,0,0,1,1,1
+Brownstown Central High School,,180105000180,4803,Introduction to Computer Science,17,3,0,0,0,0,5,0,0
+Kankakee Valley High School,,180528000933,4801,Computer Science I,5,0,0,0,0,0,3,0,0
+Kankakee Valley High School,,180528000933,4803,Introduction to Computer Science,23,3,0,1,0,0,7,3,0
+Rensselaer Central High School,,180942001543,4801,Computer Science I,10,1,0,2,0,0,6,3,0
+Rensselaer Central High School,,180942001543,5236,Computer Science II,2,0,0,0,0,0,0,0,0
+Jay County Jr/Sr High School,,180498000914,4801,Computer Science I,25,2,0,1,0,0,13,3,1
+Jay County Jr/Sr High School,,180498000914,5236,Computer Science II,2,0,0,0,0,0,0,0,0
+Jay County Jr/Sr High School,,180498000914,5610,Industrial Automation and Robotics I,4,0,0,0,0,0,3,1,0
+Madison Consolidated High School,,180612001090,4801,Computer Science I,4,0,0,0,0,0,1,0,0
+Madison Consolidated High School,,180612001090,4803,Introduction to Computer Science,11,0,0,1,0,0,5,2,0
+Southwestern High School,,181080001767,5612,Industrial Automation and Robotics II,0,0,0,0,0,0,0,0,0
+Southwestern High School,,181080001767,4801,Computer Science I,9,1,0,0,0,0,3,1,0
+Southwestern High School,,181080001767,5610,Industrial Automation and Robotics I,2,0,0,0,0,0,0,0,0
+Southwestern High School,,181080001767,4803,Introduction to Computer Science,14,0,0,2,0,0,7,3,2
+Jennings County High School,,180519000923,4803,Introduction to Computer Science,6,2,0,1,0,0,2,1,1
+Jennings County High School,,180519000923,4728,Robotics Design and Innovation,8,1,0,0,0,0,5,2,0
+Whiteland Community High School,,180189000246,4570,AP Computer Science A,7,0,1,1,0,0,1,0,0
+Whiteland Community High School,,180189000246,4801,Computer Science I,26,5,1,2,0,0,12,2,1
+Whiteland Community High School,,180189000246,4803,Introduction to Computer Science,45,8,2,2,0,0,12,6,1
+Center Grove High School,,180144000209,4568,AP Computer Science Principles,60,20,0,3,0,0,5,4,0
+Center Grove High School,,180144000209,4728,Robotics Design and Innovation,22,1,1,1,0,0,6,5,1
+Center Grove High School,,180144000209,4570,AP Computer Science A,30,8,0,0,0,0,3,4,0
+Center Grove High School,,180144000209,4801,Computer Science I,33,2,1,1,0,0,2,2,0
+Center Grove High School,,180144000209,5253,Computer Science III:  Cybersecurity Capstone,31,7,0,0,0,0,1,0,0
+Franklin Community High School,,180369000581,4803,Introduction to Computer Science,9,0,0,1,0,0,3,2,0
+Franklin Community High School,,180369000581,5253,Computer Science III:  Cybersecurity Capstone,6,0,0,0,0,0,1,0,0
+Indian Creek Sr High School,,180762001303,4801,Computer Science I,17,1,0,0,0,0,5,2,0
+Indian Creek Sr High School,,180762001303,4803,Introduction to Computer Science,20,1,0,0,0,0,4,3,0
+North Knox Jr-Sr High School,,180783001334,4801,Computer Science I,5,0,0,0,0,0,3,0,0
+North Knox Jr-Sr High School,,180783001334,5236,Computer Science II,10,2,0,0,0,0,6,1,0
+Lincoln High School,,181212001931,5236,Computer Science II,3,0,0,0,0,0,2,1,0
+Lincoln High School,,181212001931,4801,Computer Science I,16,4,0,0,0,0,7,2,0
+Wawasee High School,,180555001007,5236,Computer Science II,3,1,0,2,0,0,2,0,0
+Wawasee High School,,180555001007,4801,Computer Science I,10,2,0,1,0,0,4,1,0
+Wawasee High School,,180555001007,5610,Industrial Automation and Robotics I,9,0,0,0,0,0,3,3,0
+Warsaw Community High School,,181242001999,4801,Computer Science I,42,2,0,8,0,0,11,5,0
+Warsaw Community High School,,181242001999,4803,Introduction to Computer Science,20,2,1,2,1,0,8,1,0
+Warsaw Community High School,,181242001999,5236,Computer Science II,12,0,0,0,0,0,5,1,0
+Warsaw Community High School,,181242001999,5252,Computer Science III: Special Topics,2,0,0,0,0,0,1,0,0
+Warsaw Community High School,,181242001999,4728,Robotics Design and Innovation,17,0,0,1,0,0,8,1,1
+Tippecanoe Valley High School,,181137001839,4801,Computer Science I,31,6,0,2,0,0,8,5,0
+Tippecanoe Valley High School,,181137001839,5236,Computer Science II,10,0,0,1,0,0,3,1,0
+Lakeland Jr/Sr High School,,180552000996,4728,Robotics Design and Innovation,9,1,0,1,0,0,2,1,0
+Lakeland Jr/Sr High School,,180552000996,4801,Computer Science I,9,1,1,2,0,0,3,3,0
+Lakeland Jr/Sr High School,,180552000996,4803,Introduction to Computer Science,15,4,0,2,0,0,11,5,0
+Hanover Central High School,,180435000753,4801,Computer Science I,24,5,0,4,0,0,2,5,0
+Hanover Central High School,,180435000753,4803,Introduction to Computer Science,30,6,0,2,0,0,3,4,0
+Merrillville High School,,180969001586,4570,AP Computer Science A,20,4,8,4,0,0,9,0,0
+Merrillville High School,,180969001586,4801,Computer Science I,38,4,29,3,0,0,22,5,0
+Merrillville High School,,180969001586,4803,Introduction to Computer Science,53,7,36,8,0,0,31,4,0
+Merrillville High School,,180969001586,5236,Computer Science II,22,2,12,3,0,0,9,0,0
+Merrillville High School,,180969001586,5610,Industrial Automation and Robotics I,16,2,10,5,0,0,6,3,0
+Lake Central High School,,180545000984,4570,AP Computer Science A,8,1,1,1,0,0,0,0,0
+Lake Central High School,,180545000984,4801,Computer Science I,57,6,1,10,1,0,13,6,1
+Lake Central High School,,180545000984,5236,Computer Science II,43,5,2,2,0,0,5,2,1
+Lake Central High School,,180545000984,5253,Computer Science III:  Cybersecurity Capstone,13,0,1,2,0,0,2,1,1
+Lake Central High School,,180545000984,4568,AP Computer Science Principles,11,0,2,0,0,0,1,0,0
+Lowell Senior High School,,181146001852,4801,Computer Science I,18,1,1,0,0,0,1,0,0
+Lowell Senior High School,,181146001852,4803,Introduction to Computer Science,19,9,0,3,0,0,8,4,0
+Calumet New Tech High School,,180546000989,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+Calumet New Tech High School,,180546000989,4801,Computer Science I,0,0,0,0,0,0,0,0,0
+Calumet New Tech High School,,180546000989,4803,Introduction to Computer Science,0,0,0,0,0,0,0,0,0
+Crown Point High School,,180249000293,4801,Computer Science I,16,0,0,3,0,0,1,2,0
+Crown Point High School,,180249000293,4803,Introduction to Computer Science,42,4,1,8,0,0,6,5,0
+Crown Point High School,,180249000293,5236,Computer Science II,21,6,0,2,0,0,1,1,0
+Crown Point High School,,180249000293,5610,Industrial Automation and Robotics I,37,5,2,2,0,0,7,6,1
+Crown Point High School,,180249000293,5612,Industrial Automation and Robotics II,29,6,0,8,0,0,6,5,0
+East Chicago Central High School,,180288002272,4801,Computer Science I,16,1,3,12,0,0,13,2,2
+East Chicago Central High School,,180288002272,4803,Introduction to Computer Science,67,18,32,34,0,0,57,16,5
+Thomas A Edison Jr-Sr HS,,180291000380,4803,Introduction to Computer Science,73,26,13,20,0,0,46,14,0
+Thomas A Edison Jr-Sr HS,,180291000380,4801,Computer Science I,8,1,1,5,0,0,7,1,0
+Griffith High School,,180417000722,4801,Computer Science I,32,6,6,4,0,0,12,0,0
+Griffith High School,,180417000722,5236,Computer Science II,12,2,0,1,0,0,4,2,0
+George Rogers Clark Md/HS,,180432000735,4803,Introduction to Computer Science,0,0,0,0,0,0,0,0,0
+George Rogers Clark Md/HS,,180432000735,5610,Industrial Automation and Robotics I,0,0,0,0,0,0,0,0,0
+George Rogers Clark Md/HS,,180432000735,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+George Rogers Clark Md/HS,,180432000735,4801,Computer Science I,72,37,5,56,0,0,55,3,6
+Donald E Gavit Middle/High School,,180432000734,4801,Computer Science I,0,0,0,0,0,0,0,0,0
+Donald E Gavit Middle/High School,,180432000734,4568,AP Computer Science Principles,37,16,9,20,0,0,29,2,1
+Donald E Gavit Middle/High School,,180432000734,4570,AP Computer Science A,17,1,5,7,0,0,9,0,1
+Donald E Gavit Middle/High School,,180432000734,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+Donald E Gavit Middle/High School,,180432000734,4803,Introduction to Computer Science,41,8,14,19,0,0,29,8,2
+Donald E Gavit Middle/High School,,180432000734,5610,Industrial Automation and Robotics I,0,0,0,0,0,0,0,0,0
+Hammond High School,,180432000736,4801,Computer Science I,0,0,0,0,0,0,0,0,0
+Hammond High School,,180432000736,4803,Introduction to Computer Science,76,29,37,35,0,0,66,5,5
+Hammond High School,,180432000736,5610,Industrial Automation and Robotics I,0,0,0,0,0,0,0,0,0
+Hammond High School,,180432000736,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+Morton Senior High School,,180432000746,5610,Industrial Automation and Robotics I,0,0,0,0,0,0,0,0,0
+Morton Senior High School,,180432000746,4803,Introduction to Computer Science,110,46,43,48,0,0,79,6,7
+Morton Senior High School,,180432000746,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+Morton Senior High School,,180432000746,4801,Computer Science I,4,1,2,2,0,0,2,1,0
+Area Career Center,,180432000737,4803,Introduction to Computer Science,7,4,3,3,0,0,6,0,1
+Area Career Center,,180432000737,5236,Computer Science II,11,2,3,4,0,0,8,0,0
+Area Career Center,,180432000737,5610,Industrial Automation and Robotics I,13,2,3,6,0,0,9,0,0
+Area Career Center,,180432000737,4801,Computer Science I,10,4,1,5,0,0,6,2,0
+Highland High School,,180456000763,4801,Computer Science I,21,0,3,6,0,0,3,4,0
+Highland High School,,180456000763,4728,Robotics Design and Innovation,17,5,2,2,0,0,3,4,0
+Highland High School,,180456000763,4803,Introduction to Computer Science,55,7,6,18,0,0,19,6,2
+Hobart High School,,180459000774,4801,Computer Science I,58,15,5,19,0,0,24,7,0
+Hobart High School,,180459000774,5610,Industrial Automation and Robotics I,4,0,0,0,0,0,1,2,0
+Hobart High School,,180459000774,4728,Robotics Design and Innovation,6,0,1,0,0,0,2,0,0
+Munster High School,,180735001257,4570,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Munster High School,,180735001257,4568,AP Computer Science Principles,87,34,6,17,0,0,17,0,0
+Munster High School,,180735001257,5253,Computer Science III:  Cybersecurity Capstone,18,6,1,4,0,0,1,0,0
+Whiting High School,,181320002082,4568,AP Computer Science Principles,31,15,1,27,0,0,17,1,0
+New Prairie High School,,180756001298,4728,Robotics Design and Innovation,13,2,0,2,0,0,5,1,0
+New Prairie High School,,180756001298,5236,Computer Science II,9,0,0,1,0,0,2,0,0
+New Prairie High School,,180756001298,4801,Computer Science I,24,1,0,0,0,0,3,1,0
+LaCrosse School,,180010702511,4801,Computer Science I,2,1,0,0,0,0,0,0,0
+LaCrosse School,,180010702511,4803,Introduction to Computer Science,13,2,0,0,0,0,4,1,0
+Michigan City High School,,180657001160,4801,Computer Science I,8,0,1,0,0,0,5,4,1
+Michigan City High School,,180657001160,4803,Introduction to Computer Science,35,8,13,4,0,0,27,7,0
+Michigan City High School,,180657001160,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+Michigan City High School,,180657001160,4568,AP Computer Science Principles,7,0,1,0,0,0,4,1,0
+South Central Jr-Sr High School,,180219000263,4801,Computer Science I,8,2,0,1,0,0,2,0,0
+LaPorte High School,,180558001015,4803,Introduction to Computer Science,28,6,2,3,0,0,8,4,0
+LaPorte High School,,180558001015,5236,Computer Science II,1,0,0,1,0,0,1,0,0
+LaPorte High School,,180558001015,4801,Computer Science I,22,1,0,3,0,0,6,0,0
+North Lawrence Career Center,,180786001343,4801,Computer Science I,26,3,0,0,0,0,16,5,0
+North Lawrence Career Center,,180786001343,4803,Introduction to Computer Science,29,6,0,1,0,0,11,7,0
+Mitchell High School,,180690001198,4801,Computer Science I,9,2,0,0,0,0,2,0,0
+Frankton Jr-Sr High School,,181288002050,4728,Robotics Design and Innovation,10,0,0,0,0,0,4,3,0
+Frankton Jr-Sr High School,,181288002050,5236,Computer Science II,5,0,0,0,0,0,1,0,0
+Lapel Sr High School,,181288002328,4803,Introduction to Computer Science,3,0,0,2,0,0,1,1,0
+Lapel Sr High School,,181288002328,4801,Computer Science I,6,0,0,0,0,0,2,0,0
+Pendleton Heights High School,,181044001711,4803,Introduction to Computer Science,16,2,0,1,0,0,3,1,0
+Alexandria-Monroe High School,,180012000011,5236,Computer Science II,10,3,0,0,0,0,5,0,0
+Alexandria-Monroe High School,,180012000011,4801,Computer Science I,17,1,0,1,0,0,7,6,0
+Anderson High School,,180015000029,4801,Computer Science I,51,6,5,6,0,0,34,7,0
+Anderson High School,,180015000029,5236,Computer Science II,9,2,2,2,0,0,8,4,2
+Elwood Jr-Sr High School,,180330000449,4801,Computer Science I,4,0,0,0,0,0,1,0,0
+Elwood Jr-Sr High School,,180330000449,4803,Introduction to Computer Science,19,3,0,1,0,0,7,1,0
+Elwood Jr-Sr High School,,180330000449,5236,Computer Science II,2,0,0,0,0,0,2,0,0
+Decatur Central High School,,180264000312,4728,Robotics Design and Innovation,21,1,1,4,0,0,11,4,2
+Decatur Central High School,,180264000312,4803,Introduction to Computer Science,112,27,17,19,0,0,54,17,10
+Decatur Central High School,,180264000312,5236,Computer Science II,2,0,0,0,0,0,2,0,0
+Decatur Central High School,,180264000312,5249,Computer Science III:  Software Development Capstone,7,1,2,2,0,0,4,2,1
+Decatur Central High School,,180264000312,4801,Computer Science I,42,3,3,6,0,0,26,7,3
+Decatur Central High School,,180264000312,5253,Computer Science III:  Cybersecurity Capstone,1,1,0,0,0,0,0,1,0
+Decatur Twp School for Excellence,,180264002463,5253,Computer Science III:  Cybersecurity Capstone,12,4,0,0,0,0,7,0,0
+Decatur Twp School for Excellence,,180264002463,4801,Computer Science I,55,20,2,5,0,0,36,9,1
+Decatur Twp School for Excellence,,180264002463,4803,Introduction to Computer Science,78,22,12,2,0,0,51,11,0
+Decatur Twp School for Excellence,,180264002463,5249,Computer Science III:  Software Development Capstone,6,5,0,1,0,0,2,0,0
+Franklin Central High School,,180375000597,4803,Introduction to Computer Science,50,10,8,5,0,0,13,7,3
+Franklin Central High School,,180375000597,4568,AP Computer Science Principles,8,1,0,2,0,0,3,1,0
+Franklin Central High School,,180375000597,4801,Computer Science I,50,4,7,2,0,0,16,7,1
+Franklin Central High School,,180375000597,4570,AP Computer Science A,11,1,1,0,0,0,4,1,0
+Lawrence Central High School,,180567001029,4803,Introduction to Computer Science,2,0,1,1,0,0,2,0,1
+Lawrence North High School,,180567001031,4803,Introduction to Computer Science,1,0,0,0,0,0,0,0,0
+McKenzie Career Center,,180567000725,5236,Computer Science II,41,8,8,10,0,0,18,5,8
+McKenzie Career Center,,180567000725,5252,Computer Science III: Special Topics,24,1,9,5,0,0,11,8,1
+McKenzie Career Center,,180567000725,5253,Computer Science III:  Cybersecurity Capstone,14,0,3,3,0,0,6,5,1
+McKenzie Career Center,,180567000725,4801,Computer Science I,69,8,27,16,0,0,40,10,8
+McKenzie Career Center,,180567000725,4803,Introduction to Computer Science,126,36,64,33,0,0,78,26,13
+Perry Meridian High School,,180882001464,4803,Introduction to Computer Science,80,13,6,12,0,0,43,15,5
+Perry Meridian High School,,180882001464,4570,AP Computer Science A,8,1,0,2,0,0,1,1,0
+Perry Meridian High School,,180882001464,4801,Computer Science I,34,5,0,4,0,0,16,8,1
+Southport High School,,180882001467,4568,AP Computer Science Principles,4,0,0,1,0,0,3,0,0
+Southport High School,,180882001467,5236,Computer Science II,10,2,0,1,0,0,5,0,0
+Southport High School,,180882001467,5252,Computer Science III: Special Topics,8,0,0,1,0,0,6,2,1
+Pike High School,,180891001489,4801,Computer Science I,118,18,59,35,0,0,64,10,10
+Pike High School,,180891001489,4803,Introduction to Computer Science,81,12,49,18,0,0,48,8,13
+Pike High School,,180891001489,5610,Industrial Automation and Robotics I,20,1,6,10,0,0,11,2,1
+Pike High School,,180891001489,4568,AP Computer Science Principles,10,4,5,1,0,0,5,0,0
+Pike High School,,180891001489,4570,AP Computer Science A,13,3,4,3,0,0,5,1,0
+Pike High School,,180891001489,4728,Robotics Design and Innovation,62,12,32,22,1,0,37,7,7
+Pike High School,,180891001489,5236,Computer Science II,39,5,25,6,0,0,29,1,3
+Pike High School,,180891001489,5253,Computer Science III:  Cybersecurity Capstone,16,2,5,7,0,1,5,0,1
+Warren Central High School,,181236001973,4728,Robotics Design and Innovation,7,1,5,1,0,0,3,2,0
+Warren Central High School,,181236001973,5236,Computer Science II,32,5,14,4,0,0,18,2,1
+Warren Central High School,,181236001973,5249,Computer Science III:  Software Development Capstone,9,2,0,2,0,0,4,0,0
+Warren Central High School,,181236001973,4570,AP Computer Science A,12,2,1,1,0,0,8,0,0
+Warren Central High School,,181236001973,4801,Computer Science I,111,18,49,20,0,1,60,8,10
+Warren Central High School,,181236001973,5253,Computer Science III:  Cybersecurity Capstone,5,3,1,1,0,0,2,0,0
+J Everett Light Career Center,,181272002018,4801,Computer Science I,36,1,13,3,0,0,10,11,1
+J Everett Light Career Center,,181272002018,5253,Computer Science III:  Cybersecurity Capstone,6,0,3,0,0,0,2,1,0
+J Everett Light Career Center,,181272002018,5236,Computer Science II,12,0,3,2,0,0,3,6,0
+North Central High School,,180816001402,4568,AP Computer Science Principles,15,4,3,1,0,0,3,1,0
+North Central High School,,180816001402,4570,AP Computer Science A,28,4,2,1,0,0,7,0,0
+Ben Davis High School,,181281002028,4570,AP Computer Science A,29,5,7,10,0,0,12,1,1
+Ben Davis High School,,181281002028,5236,Computer Science II,9,1,2,6,0,0,5,0,1
+Ben Davis High School,,181281002028,4801,Computer Science I,53,10,22,15,0,0,27,6,8
+Achieve Virtual Education Academy,,181281002516,4801,Computer Science I,14,4,1,2,0,0,0,1,0
+Ben Davis University High School,,181281002410,4801,Computer Science I,24,1,7,8,0,0,13,4,3
+Ben Davis University High School,,181281002410,5236,Computer Science II,20,3,5,5,0,0,9,1,0
+Beech Grove Sr High School,,180045000093,4803,Introduction to Computer Science,49,7,6,4,0,0,28,7,2
+Beech Grove Sr High School,,180045000093,5236,Computer Science II,10,0,1,0,0,0,7,0,1
+Beech Grove Sr High School,,180045000093,4801,Computer Science I,5,0,0,1,0,0,4,1,0
+Arsenal Technical High School,,180477000801,5236,Computer Science II,25,3,12,9,0,0,14,7,4
+Arsenal Technical High School,,180477000801,4801,Computer Science I,52,14,26,14,0,0,37,10,9
+Arsenal Technical High School,,180477000801,4803,Introduction to Computer Science,17,7,9,4,0,0,12,3,3
+Arsenal Technical High School,,180477000801,4568,AP Computer Science Principles,4,1,1,1,0,0,1,2,0
+Crispus Attucks High School,,180477000815,4568,AP Computer Science Principles,26,10,14,12,0,0,20,2,3
+Crispus Attucks High School,,180477000815,4728,Robotics Design and Innovation,1,1,1,0,0,0,1,0,0
+Shortridge High School,,180477002238,4568,AP Computer Science Principles,18,3,5,6,0,0,10,4,0
+Shortridge High School,,180477002238,4803,Introduction to Computer Science,89,24,41,29,0,0,62,10,4
+George Washington High School,,180477001446,4801,Computer Science I,54,17,30,10,1,0,47,12,9
+George Washington High School,,180477001446,5253,Computer Science III:  Cybersecurity Capstone,8,5,0,7,0,0,5,0,6
+George Washington High School,,180477001446,4568,AP Computer Science Principles,2,1,2,0,0,0,2,0,0
+George Washington High School,,180477001446,5249,Computer Science III:  Software Development Capstone,7,0,4,1,0,0,3,0,1
+Speedway Senior High School,,181092001785,5253,Computer Science III:  Cybersecurity Capstone,8,2,2,1,0,0,5,1,0
+Speedway Senior High School,,181092001785,4568,AP Computer Science Principles,59,28,10,4,0,0,21,2,0
+Culver Community Middle/High Sch,,180252000301,4803,Introduction to Computer Science,68,34,0,7,0,0,32,10,0
+Culver Community Middle/High Sch,,180252000301,4801,Computer Science I,7,3,0,0,0,0,2,0,0
+Argos Comm Jr-Sr High School,,180018000048,4801,Computer Science I,14,8,1,0,0,0,9,1,1
+Argos Comm Jr-Sr High School,,180018000048,5612,Industrial Automation and Robotics II,1,0,0,0,0,0,1,1,0
+Plymouth High School,,180906001500,4801,Computer Science I,11,3,0,1,0,0,3,3,2
+Triton Jr-Sr High School,,181149001856,4728,Robotics Design and Innovation,18,1,0,1,0,0,7,1,0
+Triton Jr-Sr High School,,181149001856,4801,Computer Science I,17,3,0,0,0,0,5,3,0
+Triton Jr-Sr High School,,181149001856,4803,Introduction to Computer Science,19,4,0,3,0,0,8,3,0
+Loogootee High School,,180606001067,4801,Computer Science I,10,1,0,0,0,0,2,2,0
+Maconaquah High School,,180609001078,4728,Robotics Design and Innovation,14,1,0,0,0,0,3,3,0
+Maconaquah High School,,180609001078,4803,Introduction to Computer Science,10,1,0,0,0,0,3,1,0
+Oak Hill High School,,180834001429,5236,Computer Science II,3,1,0,0,0,0,1,0,0
+Oak Hill High School,,180834001429,4801,Computer Science I,46,10,0,3,0,0,16,3,2
+Peru High School,,180885001476,5236,Computer Science II,3,0,0,0,0,0,0,0,0
+Peru High School,,180885001476,5610,Industrial Automation and Robotics I,9,1,0,1,0,0,3,4,0
+Peru High School,,180885001476,5612,Industrial Automation and Robotics II,1,0,0,0,0,0,0,1,0
+Peru High School,,180885001476,4801,Computer Science I,16,1,0,1,0,0,7,2,0
+Edgewood High School,,180948001546,4568,AP Computer Science Principles,10,1,0,0,0,0,4,0,0
+Edgewood High School,,180948001546,4803,Introduction to Computer Science,12,1,0,0,0,0,1,0,0
+Bloomington High School South,,180063000120,4568,AP Computer Science Principles,53,13,1,3,0,0,6,0,1
+Bloomington High School North,,180063000119,4803,Introduction to Computer Science,38,10,0,2,0,0,8,7,0
+The Acad of Sci & Entrepreneurship,,180063002467,4801,Computer Science I,8,0,0,0,0,0,4,1,0
+The Acad of Sci & Entrepreneurship,,180063002467,4803,Introduction to Computer Science,11,7,1,1,0,0,3,4,0
+The Acad of Sci & Entrepreneurship,,180063002467,5236,Computer Science II,1,0,0,0,0,0,1,1,0
+North Montgomery High School,,180790001357,5236,Computer Science II,8,0,0,0,0,0,2,0,0
+North Montgomery High School,,180790001357,4803,Introduction to Computer Science,29,5,0,2,0,0,12,4,1
+Southmont Sr High School,,181045001716,5610,Industrial Automation and Robotics I,14,2,0,2,0,0,2,1,0
+Crawfordsville Sr High School,,180246000287,4570,AP Computer Science A,4,1,0,2,0,0,1,0,0
+Crawfordsville Sr High School,,180246000287,4801,Computer Science I,10,3,0,3,0,0,4,1,0
+Monrovia High School,,180414000716,4570,AP Computer Science A,4,0,0,0,0,0,0,0,0
+Eminence Jr-Sr High School,,180333000454,4801,Computer Science I,12,1,0,0,0,0,7,3,0
+Martinsville High School,,180651001135,4801,Computer Science I,27,2,0,0,0,0,11,4,0
+Martinsville High School,,180651001135,4803,Introduction to Computer Science,83,15,1,2,0,0,30,13,2
+Martinsville High School,,180651001135,5253,Computer Science III:  Cybersecurity Capstone,0,0,0,0,0,0,0,0,0
+Mooresville High School,,180714001207,5253,Computer Science III:  Cybersecurity Capstone,2,0,0,0,0,0,0,0,0
+Mooresville High School,,180714001207,4801,Computer Science I,0,0,0,0,0,0,0,0,0
+Mooresville High School,,180714001207,5236,Computer Science II,11,2,0,0,0,0,1,1,0
+South Newton Senior High School,,181047001722,4801,Computer Science I,9,0,0,1,0,0,4,0,0
+South Newton Senior High School,,181047001722,4803,Introduction to Computer Science,4,0,0,0,0,0,4,0,0
+South Newton Senior High School,,181047001722,5236,Computer Science II,3,2,0,1,0,0,2,0,0
+Central Noble Junior Senior HS,,180171000230,4803,Introduction to Computer Science,0,0,0,0,0,0,0,0,0
+Central Noble Junior Senior HS,,180171000230,4568,AP Computer Science Principles,15,3,0,0,0,0,2,1,0
+East Noble High School,,180297000389,4728,Robotics Design and Innovation,13,2,0,0,0,0,2,0,0
+East Noble High School,,180297000389,4803,Introduction to Computer Science,35,4,0,1,1,0,16,3,1
+West Noble High School,,181290002058,4803,Introduction to Computer Science,35,8,0,15,0,0,17,3,1
+Paoli Jr & Sr High School,,180864001438,4728,Robotics Design and Innovation,0,0,0,0,0,0,0,0,0
+Paoli Jr & Sr High School,,180864001438,4803,Introduction to Computer Science,0,0,0,0,0,0,0,0,0
+Springs Valley Comm High School,,181098001795,4801,Computer Science I,1,0,0,0,0,0,0,0,0
+Springs Valley Comm High School,,181098001795,4803,Introduction to Computer Science,0,0,0,0,0,0,0,0,0
+Springs Valley Comm High School,,181098001795,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+Owen Valley Community High School,,181095001791,5236,Computer Science II,7,0,0,0,0,0,4,1,0
+Owen Valley Community High School,,181095001791,4801,Computer Science I,8,0,0,1,1,0,3,2,0
+Riverton Parke Jr-Sr High School,,181090002287,5610,Industrial Automation and Robotics I,0,0,0,0,0,0,0,0,0
+Perry Central Jr-Sr High School,,180174000234,4803,Introduction to Computer Science,8,0,0,1,0,0,3,2,0
+Perry Central Jr-Sr High School,,180174000234,4801,Computer Science I,6,2,0,0,0,0,2,0,0
+Tell City Jr-Sr High School,,181126001819,5236,Computer Science II,26,9,0,0,0,0,7,1,0
+Tell City Jr-Sr High School,,181126001819,4801,Computer Science I,26,6,0,0,0,0,11,2,0
+Parke Heritage High School,,180011802644,4801,Computer Science I,5,3,0,0,0,0,3,1,0
+Pike Central High School,,180890001482,4801,Computer Science I,7,0,0,0,0,0,1,0,0
+Hebron High School,,180075000153,4803,Introduction to Computer Science,23,3,0,5,0,0,7,0,0
+Chesterton Senior High School,,180280000333,4570,AP Computer Science A,18,1,0,1,0,0,3,0,0
+Chesterton Senior High School,,180280000333,4801,Computer Science I,30,3,0,4,0,0,5,4,0
+Chesterton Senior High School,,180280000333,4728,Robotics Design and Innovation,55,6,0,9,0,0,16,17,0
+Chesterton Senior High School,,180280000333,4803,Introduction to Computer Science,83,18,1,10,0,0,17,14,0
+Morgan Township Middle/High School,,180900001214,4803,Introduction to Computer Science,8,0,0,0,0,0,0,3,0
+Portage High School,,180915001514,5610,Industrial Automation and Robotics I,20,3,3,1,0,0,7,4,0
+Portage High School,,180915001514,5612,Industrial Automation and Robotics II,14,0,0,0,0,0,4,0,0
+Portage High School,,180915001514,4568,AP Computer Science Principles,13,1,0,4,0,0,1,0,0
+Portage High School,,180915001514,4801,Computer Science I,3,1,0,2,0,0,1,0,0
+Portage High School,,180915001514,4803,Introduction to Computer Science,42,5,5,5,0,0,15,2,0
+Portage High School,,180915001514,5236,Computer Science II,9,0,1,2,0,0,1,0,0
+Valparaiso High School,,181197001891,4728,Robotics Design and Innovation,10,0,0,0,0,0,2,2,0
+Valparaiso High School,,181197001891,4570,AP Computer Science A,9,1,0,0,0,0,0,0,0
+Valparaiso High School,,181197001891,4801,Computer Science I,23,1,0,1,0,0,7,2,1
+Mount Vernon High School,,180729001226,4801,Computer Science I,32,1,2,1,0,0,8,8,1
+Mount Vernon High School,,180729001226,5236,Computer Science II,1,0,0,0,0,0,0,0,0
+North Posey High School,,180795001366,5236,Computer Science II,4,0,0,0,0,0,2,0,0
+Winamac Community High School,,180711001205,4803,Introduction to Computer Science,17,2,0,1,0,0,6,3,0
+South Putnam High School,,181050001726,4801,Computer Science I,20,4,0,0,0,0,14,2,0
+South Putnam High School,,181050001726,5252,Computer Science III: Special Topics,4,0,0,0,0,0,1,1,0
+North Putnam Sr High School,,180798001369,4803,Introduction to Computer Science,9,1,0,0,0,0,7,1,0
+North Putnam Sr High School,,180798001369,4801,Computer Science I,15,3,0,1,0,0,6,2,0
+Cloverdale High School,,180222000265,4801,Computer Science I,16,2,0,1,1,0,9,0,0
+Cloverdale High School,,180222000265,4803,Introduction to Computer Science,75,43,0,0,0,0,35,19,0
+Cloverdale High School,,180222000265,4728,Robotics Design and Innovation,0,0,0,0,0,0,0,0,0
+Greencastle Senior High School,,180399000690,4803,Introduction to Computer Science,13,3,0,0,0,0,6,3,0
+Union Junior & High School,,181173001875,4801,Computer Science I,2,0,0,0,0,0,1,1,0
+Union Junior & High School,,181173001875,4803,Introduction to Computer Science,4,0,0,0,0,0,4,1,0
+Indiana Digital JR and High School,,181173002666,4801,Computer Science I,127,25,26,9,0,0,94,30,0
+Monroe Central Jr-Sr High School,,180708001202,4801,Computer Science I,18,6,0,2,0,0,6,2,0
+Winchester Community High School,,180177000242,4801,Computer Science I,10,2,0,1,0,0,4,1,0
+Union City Community Jr/Sr High ,,180318000415,4568,AP Computer Science Principles,3,0,0,1,0,0,1,0,0
+Union City Community Jr/Sr High ,,180318000415,4801,Computer Science I,17,1,0,4,0,0,7,0,0
+Batesville High School,,180039000084,5236,Computer Science II,1,0,0,0,0,0,0,0,0
+Batesville High School,,180039000084,4728,Robotics Design and Innovation,12,1,0,0,0,0,2,3,0
+Batesville High School,,180039000084,4801,Computer Science I,6,1,0,0,0,0,2,1,0
+Jac-Cen-Del MS/HS,,180480000907,4801,Computer Science I,0,0,0,0,0,0,0,0,0
+Jac-Cen-Del MS/HS,,180480000907,5252,Computer Science III: Special Topics,0,0,0,0,0,0,0,0,0
+Jac-Cen-Del MS/HS,,180480000907,5253,Computer Science III:  Cybersecurity Capstone,6,1,0,0,0,0,0,0,0
+Jac-Cen-Del MS/HS,,180480000907,4803,Introduction to Computer Science,5,0,0,0,0,0,3,2,0
+Jac-Cen-Del MS/HS,,180480000907,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+Milan High School,,180663001168,4801,Computer Science I,15,6,0,0,0,0,5,1,0
+Milan High School,,180663001168,5236,Computer Science II,2,2,0,0,0,0,1,0,0
+Rushville Consolidated High School,,180975001596,4803,Introduction to Computer Science,84,38,0,1,0,0,50,15,0
+John Glenn High School,,180912001505,4803,Introduction to Computer Science,10,1,0,1,0,0,3,3,0
+John Glenn High School,,180912001505,5610,Industrial Automation and Robotics I,1,0,0,1,0,0,0,0,1
+John Glenn High School,,180912001505,4801,Computer Science I,5,1,0,0,0,0,1,0,0
+Penn High School,,180876001451,4801,Computer Science I,53,7,4,3,1,0,7,5,1
+Penn High School,,180876001451,5252,Computer Science III: Special Topics,15,0,0,1,0,0,3,0,0
+Penn High School,,180876001451,5253,Computer Science III:  Cybersecurity Capstone,4,0,0,0,0,0,0,0,0
+Penn High School,,180876001451,4803,Introduction to Computer Science,23,3,1,4,0,1,4,0,0
+Penn High School,,180876001451,5236,Computer Science II,23,3,0,0,0,0,4,1,0
+Penn High School,,180876001451,5610,Industrial Automation and Robotics I,13,2,0,0,0,0,1,0,0
+Penn High School,,180876001451,5612,Industrial Automation and Robotics II,11,1,1,0,0,0,1,1,0
+Mishawaka High School,,180684001183,4728,Robotics Design and Innovation,17,6,1,1,0,0,7,4,0
+Mishawaka High School,,180684001183,4801,Computer Science I,22,2,2,1,0,0,10,3,0
+Mishawaka High School,,180684001183,4803,Introduction to Computer Science,35,4,8,1,0,0,20,4,0
+Mishawaka High School,,180684001183,5610,Industrial Automation and Robotics I,9,2,0,1,0,0,2,1,0
+Mishawaka High School,,180684001183,5612,Industrial Automation and Robotics II,5,1,0,0,0,0,1,0,0
+South Bend Virtual School,,181029002699,4803,Introduction to Computer Science,1,0,0,1,0,0,0,0,0
+South Bend Virtual School,,181029002699,5253,Computer Science III:  Cybersecurity Capstone,1,0,0,0,0,0,0,0,0
+Clay High School,,181029001649,4568,AP Computer Science Principles,4,2,0,0,0,0,3,0,0
+Clay High School,,181029001649,4803,Introduction to Computer Science,17,6,4,4,1,0,7,3,2
+Clay High School,,181029001649,4570,AP Computer Science A,3,2,0,0,0,0,0,0,0
+Adams High School,,181029001662,4568,AP Computer Science Principles,13,2,2,4,0,0,4,3,1
+Adams High School,,181029001662,4803,Introduction to Computer Science,84,23,27,23,0,0,48,8,9
+Riley High School,,181029001660,5253,Computer Science III:  Cybersecurity Capstone,11,1,1,3,0,0,6,0,1
+Riley High School,,181029001660,5249,Computer Science III:  Software Development Capstone,1,0,1,0,0,0,1,1,0
+Riley High School,,181029001660,4801,Computer Science I,38,8,8,10,0,0,24,3,1
+Riley High School,,181029001660,4803,Introduction to Computer Science,147,55,50,31,1,0,105,25,8
+Riley High School,,181029001660,5236,Computer Science II,16,1,1,2,1,0,7,1,0
+Washington High School,,181029001684,4803,Introduction to Computer Science,50,12,17,22,0,0,41,1,7
+Scottsburg Senior High School,,181002001612,4801,Computer Science I,38,3,0,1,0,0,23,6,0
+Scottsburg Senior High School,,181002001612,5236,Computer Science II,9,1,0,0,0,0,5,0,0
+Scottsburg Senior High School,,181002001612,5253,Computer Science III:  Cybersecurity Capstone,2,0,0,0,0,0,0,0,0
+Morristown Jr-Sr High School,,180321000418,4568,AP Computer Science Principles,5,2,0,0,0,0,1,0,0
+Morristown Jr-Sr High School,,180321000418,4803,Introduction to Computer Science,1,0,0,0,0,0,1,0,0
+Waldron Jr-Sr High School,,180321000420,4803,Introduction to Computer Science,13,2,0,0,0,0,8,3,0
+Triton Central High School,,180831001423,4801,Computer Science I,21,4,1,1,0,0,5,1,0
+Southwestern High School,,181080001767,5610,Industrial Automation and Robotics I,1,0,0,0,0,0,0,0,0
+Shelbyville Sr High School,,181014001631,4801,Computer Science I,20,2,0,4,0,0,5,2,0
+Shelbyville Sr High School,,181014001631,4803,Introduction to Computer Science,25,3,0,2,0,0,14,4,0
+Shelbyville Sr High School,,181014001631,5253,Computer Science III:  Cybersecurity Capstone,7,3,0,0,0,0,2,0,0
+Shelbyville Sr High School,,181014001631,4728,Robotics Design and Innovation,11,2,0,3,0,0,4,1,0
+Heritage Hills High School,,180801001376,4801,Computer Science I,25,4,0,3,0,0,3,0,0
+Heritage Hills High School,,180801001376,5236,Computer Science II,8,2,0,0,0,0,1,2,0
+South Spencer High School,,181056001733,4728,Robotics Design and Innovation,23,3,1,1,0,0,9,3,0
+Knox Community High School,,180534000938,5612,Industrial Automation and Robotics II,1,0,0,0,0,0,1,0,0
+Knox Community High School,,180534000938,5610,Industrial Automation and Robotics I,4,0,0,1,0,0,3,0,0
+Angola High School,,181110001797,4801,Computer Science I,13,0,0,0,0,0,2,1,0
+Angola High School,,181110001797,4803,Introduction to Computer Science,21,6,1,2,0,0,6,2,0
+North Central Jr/Sr High School,,180816001402,5612,Industrial Automation and Robotics II,5,0,0,0,0,0,0,3,0
+North Central Jr/Sr High School,,180816001402,4803,Introduction to Computer Science,43,16,0,1,1,0,22,7,0
+North Central Jr/Sr High School,,180816001402,5610,Industrial Automation and Robotics I,19,3,1,0,0,0,9,4,0
+Sullivan High School,,181086001773,5612,Industrial Automation and Robotics II,5,0,0,0,0,0,4,2,0
+Sullivan High School,,181086001773,4801,Computer Science I,5,1,0,0,0,0,2,3,1
+Sullivan High School,,181086001773,4803,Introduction to Computer Science,21,2,0,2,0,0,11,4,1
+Sullivan High School,,181086001773,5610,Industrial Automation and Robotics I,15,1,0,1,0,0,7,3,0
+Switzerland Co Senior High School,,181122001811,4803,Introduction to Computer Science,9,1,0,0,0,0,3,0,0
+Switzerland Co Senior High School,,181122001811,4801,Computer Science I,14,4,0,1,0,0,4,1,0
+Jefferson High School,,180540000968,4801,Computer Science I,17,4,1,5,0,0,9,2,0
+Jefferson High School,,180540000968,4803,Introduction to Computer Science,26,5,2,7,0,0,14,6,1
+McCutcheon High School,,181134001830,4801,Computer Science I,13,1,2,2,0,0,5,3,0
+McCutcheon High School,,181134001830,4803,Introduction to Computer Science,39,6,1,8,0,0,14,4,1
+William Henry Harrison High School,,180345000490,4801,Computer Science I,40,9,2,2,0,0,5,4,0
+William Henry Harrison High School,,180345000490,5236,Computer Science II,2,0,0,0,0,0,0,0,0
+West Lafayette Jr/Sr High School,,181287002048,4568,AP Computer Science Principles,41,14,1,2,0,0,0,2,1
+West Lafayette Jr/Sr High School,,181287002048,4570,AP Computer Science A,35,6,0,2,0,0,3,0,0
+West Lafayette Jr/Sr High School,,181287002048,4801,Computer Science I,20,5,0,4,0,0,3,1,4
+West Lafayette Jr/Sr High School,,181287002048,4803,Introduction to Computer Science,16,4,0,2,0,0,2,1,0
+Tri Central Middle-High School,,180804001379,4801,Computer Science I,7,3,0,0,0,0,3,1,0
+Tipton High School,,181140001843,4801,Computer Science I,21,3,0,2,0,0,8,1,1
+Central High School,,180345000459,4801,Computer Science I,1,0,0,0,0,0,0,0,0
+Central High School,,180345000459,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+Francis Joseph Reitz High School,,180345000466,4801,Computer Science I,2,0,0,0,0,0,2,1,0
+Francis Joseph Reitz High School,,180345000466,5252,Computer Science III: Special Topics,2,1,0,0,0,0,0,0,0
+Francis Joseph Reitz High School,,180345000466,4803,Introduction to Computer Science,14,1,1,0,0,0,5,2,0
+Francis Joseph Reitz High School,,180345000466,5236,Computer Science II,1,0,0,0,0,0,0,0,0
+North High School,,180345000478,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+North High School,,180345000478,4801,Computer Science I,2,1,0,0,0,0,1,1,0
+Southern Ind Career and Tech Cent,,180345002219,4801,Computer Science I,6,3,0,0,0,0,1,0,0
+Southern Ind Career and Tech Cent,,180345002219,5236,Computer Science II,3,0,0,0,0,0,1,0,0
+Harwood Career Prep High School,,180345002649,4801,Computer Science I,1,0,0,0,0,0,0,0,0
+Harwood Career Prep High School,,180345002649,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+William Henry Harrison High School,,180345000490,5236,Computer Science II,3,0,0,0,0,0,2,1,0
+William Henry Harrison High School,,180345000490,4801,Computer Science I,2,1,1,0,0,0,0,0,0
+William Henry Harrison High School,,180345000490,5252,Computer Science III: Special Topics,1,1,0,0,0,0,1,0,0
+William Henry Harrison High School,,180345000490,4803,Introduction to Computer Science,86,13,17,8,0,1,52,15,0
+New Tech Institute,,180345002464,4801,Computer Science I,3,0,0,0,0,0,1,0,0
+New Tech Institute,,180345002464,5236,Computer Science II,2,0,0,0,0,0,0,0,0
+New Tech Institute,,180345002464,4728,Robotics Design and Innovation,14,2,0,1,0,0,5,0,0
+South Vermillion High School,,181059001739,5610,Industrial Automation and Robotics I,0,0,0,0,0,0,0,0,0
+South Vermillion High School,,181059001739,5612,Industrial Automation and Robotics II,0,0,0,0,0,0,0,0,0
+South Vermillion High School,,181059001739,4801,Computer Science I,37,5,0,1,0,0,10,3,0
+Terre Haute North Vigo High School,,181209001917,5612,Industrial Automation and Robotics II,8,3,0,1,0,0,2,1,0
+Terre Haute North Vigo High School,,181209001917,5236,Computer Science II,2,0,0,0,0,0,1,1,0
+Terre Haute North Vigo High School,,181209001917,4801,Computer Science I,35,3,0,1,0,0,14,8,0
+Terre Haute North Vigo High School,,181209001917,4803,Introduction to Computer Science,14,2,0,1,0,0,6,3,0
+Terre Haute North Vigo High School,,181209001917,5610,Industrial Automation and Robotics I,13,1,0,1,0,0,6,4,0
+West Vigo High School,,181209001923,5612,Industrial Automation and Robotics II,3,0,0,0,0,0,2,2,0
+West Vigo High School,,181209001923,4803,Introduction to Computer Science,28,6,0,0,0,0,13,6,0
+West Vigo High School,,181209001923,5610,Industrial Automation and Robotics I,12,2,0,0,0,0,5,2,0
+Terre Haute South Vigo High School,,181209001918,4803,Introduction to Computer Science,15,3,1,1,0,0,7,3,0
+Terre Haute South Vigo High School,,181209001918,5610,Industrial Automation and Robotics I,23,0,1,1,0,0,10,3,0
+Terre Haute South Vigo High School,,181209001918,5236,Computer Science II,7,0,0,0,0,0,3,3,0
+Terre Haute South Vigo High School,,181209001918,5612,Industrial Automation and Robotics II,1,0,0,0,0,0,0,0,0
+Terre Haute South Vigo High School,,181209001918,4801,Computer Science I,44,3,3,1,0,0,26,13,0
+Vigo Virtual School Academy,,181209002676,4803,Introduction to Computer Science,6,2,0,1,0,0,3,1,0
+Booker T Washington Alt Sch,,181209002344,4801,Computer Science I,0,0,0,0,0,0,0,0,0
+Manchester Jr-Sr High School,,180627001103,4803,Introduction to Computer Science,1,0,0,0,0,0,0,0,0
+Southwood Jr-Sr High School,,181218001948,5236,Computer Science II,2,0,0,0,0,0,0,0,0
+Southwood Jr-Sr High School,,181218001948,4801,Computer Science I,14,1,0,1,0,0,6,1,0
+Wabash High School,,181215001940,4803,Introduction to Computer Science,1,0,0,0,0,0,0,0,0
+Castle High School,,181239001977,4801,Computer Science I,37,9,0,3,0,0,6,0,0
+Castle High School,,181239001977,5236,Computer Science II,23,2,2,0,0,0,3,0,0
+Castle High School,,181239001977,5249,Computer Science III:  Software Development Capstone,14,1,0,0,0,0,4,0,0
+Salem High School,,180981001600,4801,Computer Science I,7,0,0,0,0,0,3,1,0
+Eastern High School,,180315000413,4801,Computer Science I,14,5,0,0,0,0,5,4,0
+West Washington Jr-Sr High School,,181293002063,4801,Computer Science I,9,6,0,1,0,0,5,2,0
+Hagerstown Jr-Sr High School,,180738001261,4803,Introduction to Computer Science,10,3,0,0,0,0,4,0,0
+Centerville Sr High School,,180156000217,5236,Computer Science II,10,2,0,0,0,0,2,1,0
+Centerville Sr High School,,180156000217,4801,Computer Science I,57,17,0,1,0,0,13,2,0
+Northeastern High School,,180819001406,4801,Computer Science I,1,0,0,0,0,0,0,1,0
+Northeastern High School,,180819001406,4803,Introduction to Computer Science,15,3,1,1,0,0,6,1,0
+Richmond High School,,180951001566,4568,AP Computer Science Principles,25,5,0,3,0,0,11,2,0
+Norwell High School,,180822001410,4803,Introduction to Computer Science,14,1,0,1,0,0,4,1,0
+Norwell High School,,180822001410,4801,Computer Science I,3,0,0,0,0,0,2,0,0
+Norwell High School,,180822001410,5252,Computer Science III: Special Topics,6,1,0,0,0,0,1,0,0
+Bluffton High School,,180072000146,4801,Computer Science I,31,5,0,1,0,1,14,3,0
+North White High School,,180813001396,4801,Computer Science I,13,2,0,3,0,0,8,1,0
+Frontier Jr-Sr High School,,180381000603,5236,Computer Science II,2,0,0,0,0,0,0,0,0
+Tri-County Jr/Sr High School ,,181143001846,5236,Computer Science II,3,0,0,0,0,0,0,0,0
+Tri-County Jr/Sr High School ,,181143001846,4801,Computer Science I,6,3,0,0,0,0,2,0,0
+Twin Lakes Senior High School,,181158001863,4568,AP Computer Science Principles,5,0,0,0,0,0,2,0,0
+Twin Lakes Senior High School,,181158001863,5236,Computer Science II,10,1,0,3,0,0,3,2,0
+Twin Lakes Senior High School,,181158001863,5253,Computer Science III:  Cybersecurity Capstone,5,1,0,2,0,0,3,0,0
+Twin Lakes Senior High School,,181158001863,4570,AP Computer Science A,3,0,0,0,0,0,1,0,0
+Twin Lakes Senior High School,,181158001863,4801,Computer Science I,21,4,0,3,0,0,15,4,0
+Churubusco Jr-Sr High School,,181023001638,4803,Introduction to Computer Science,27,3,0,0,0,0,4,2,0
+Purdue Polytechnic High Sch North,,180018302632,4728,Robotics Design and Innovation,23,4,5,2,0,0,9,5,0
+Columbia City High School,,180228000267,4801,Computer Science I,10,2,0,0,0,0,3,1,0
+Columbia City High School,,180228000267,5252,Computer Science III: Special Topics,94,44,0,5,0,0,12,16,0
+Columbia City High School,,180228000267,5253,Computer Science III:  Cybersecurity Capstone,4,0,0,0,0,0,1,1,0
+James and Rosemary Phalen Leadership Academy High School,,180018802618,4801,Computer Science I,19,5,13,4,0,0,15,4,0
+GEO Next Generation Academy,,180021902704,4801,Computer Science I,31,16,26,2,0,0,26,3,0
+Purdue Polytechnic High School Ind,,180018302632,4803,Introduction to Computer Science,8,6,2,2,0,0,3,0,0
+Indiana Connections Career Academy,,180019102631,4803,Introduction to Computer Science,27,3,3,1,0,0,8,4,0
+Indiana Connections Career Academy,,180019102631,4801,Computer Science I,20,1,1,0,0,0,9,4,0
+Gary Middle College West,,180019502641,4801,Computer Science I,1,0,1,0,0,0,1,0,0
+Insight School of Indiana,,180017902601,4803,Introduction to Computer Science,58,15,11,5,0,0,31,9,0
+Insight School of Indiana,,180017902601,5236,Computer Science II,9,1,0,0,0,0,6,2,0
+Riverside High School,,180018702633,4568,AP Computer Science Principles,4,0,1,0,0,0,3,2,0
+Riverside High School,,180018702633,4803,Introduction to Computer Science,21,9,11,4,0,0,12,6,0
+Rooted School Indianapolis,,180022402709,4801,Computer Science I,57,31,54,0,0,0,46,8,0
+Excel Center - Gary ,,180020002652,4801,Computer Science I,3,1,3,0,0,0,1,0,0
+Signature School Inc,,180002100319,4586,IB Computer Science Standard Level,23,11,1,1,0,0,4,0,0
+Options Charter School - Carmel,,180001601738,4803,Introduction to Computer Science,13,7,0,0,0,0,0,9,0
+Irvington Community School,,180001401756,4570,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Irvington Community School,,180001401756,4803,Introduction to Computer Science,0,0,0,0,0,0,0,0,0
+Christel House Academy South,,180001801789,4803,Introduction to Computer Science,56,31,3,31,0,0,36,5,0
+Christel House Academy South,,180001801789,4801,Computer Science I,20,6,0,17,0,0,15,2,0
+Christel House Academy South,,180001801789,5236,Computer Science II,10,4,1,7,0,0,7,2,0
+Christel House DORS,,180012202538,4803,Introduction to Computer Science,3,1,1,0,0,0,1,1,0
+Thea Bowman Leadership Academy,,180002501807,4801,Computer Science I,0,0,0,0,0,0,0,0,0
+Thea Bowman Leadership Academy,,180002501807,5236,Computer Science II,0,0,0,0,0,0,0,0,0
+Indiana Agriculture and Technology,,180019802665,4803,Introduction to Computer Science,6,3,0,0,0,0,1,1,0
+Indiana Agriculture and Technology,,180019802665,4801,Computer Science I,1,0,0,0,0,0,0,1,0
+21st Century Charter Sch of Gary,,180004602162,4801,Computer Science I,2,1,2,0,0,0,2,2,0
+Victory College Prep Academy,,180005102165,4568,AP Computer Science Principles,21,8,10,4,0,0,21,2,0
+Victory College Prep Academy,,180005102165,4801,Computer Science I,22,7,9,7,0,0,20,2,0
+Burris Laboratory School,,180003800185,4570,AP Computer Science A,5,2,0,0,0,0,0,0,0
+Burris Laboratory School,,180003800185,4568,AP Computer Science Principles,30,5,0,1,0,0,5,4,0
+Indiana Academy for Sci Math Hmn ,,180004102348,4801,Computer Science I,1,0,0,0,0,0,0,0,0
+Indiana Academy for Sci Math Hmn ,,180004102348,5252,Computer Science III: Special Topics,10,3,0,1,0,0,2,0,0
+Indiana Academy for Sci Math Hmn ,,180004102348,4570,AP Computer Science A,13,3,0,0,0,0,0,0,0
+Indiana Academy for Sci Math Hmn ,,180004102348,5236,Computer Science II,13,5,0,0,0,0,2,2,0
+Herron High School,,180005802315,4568,AP Computer Science Principles,14,6,1,1,0,0,5,2,0
+Herron High School,,180005802315,4803,Introduction to Computer Science,42,10,14,1,0,0,17,9,0
+Hammond Academy of Science & Tech,,180008202466,4568,AP Computer Science Principles,7,2,1,4,0,0,5,0,0
+Hammond Academy of Science & Tech,,180008202466,4803,Introduction to Computer Science,19,2,2,11,0,0,12,2,0
+Neighbors' New Vistas High School,,180011302544,4803,Introduction to Computer Science,24,11,6,2,0,0,14,6,0
+Rock Creek Community Academy,,180009902497,5236,Computer Science II,21,9,4,2,0,1,6,8,0
+Rock Creek Community Academy,,180009902497,4801,Computer Science I,27,7,3,1,0,0,8,12,0
+Career Academy High School,,180010102521,4803,Introduction to Computer Science,28,5,4,2,0,0,12,4,0
+Career Academy High School,,180010102521,5612,Industrial Automation and Robotics II,30,11,2,2,0,0,11,4,0
+Career Academy High School,,180010102521,4801,Computer Science I,12,3,5,1,1,0,5,2,0
+Career Academy High School,,180010102521,5236,Computer Science II,12,4,2,0,0,0,8,0,0
+IN Math & Science Academy - North,,180009402487,4728,Robotics Design and Innovation,7,2,3,3,0,0,7,0,0
+IN Math & Science Academy - North,,180009402487,4801,Computer Science I,17,6,9,7,0,0,13,1,0
+Indiana Connections Academy,,180009802474,4803,Introduction to Computer Science,125,29,4,10,1,0,42,38,0
+Dugger Union Community School Corp,,180016502590,4801,Computer Science I,17,7,0,0,0,0,7,8,0
+Dugger Union Community School Corp,,180016502590,5236,Computer Science II,4,0,0,1,0,0,3,2,0
+Dugger Union Community School Corp,,180016502590,4803,Introduction to Computer Science,30,14,0,0,0,0,20,10,0
+Adams Central Middle School,,180006000008,0488.68,Computer Science (Grade 6),36,15,1,0,0,0,9,1,0
+Adams Central Middle School,,180006000008,0488.68,Computer Science (Grade 8),35,18,0,1,0,0,17,2,0
+Bellmont Elementary ,,180768001316,0488.35,Computer Science (Grade 5),94,35,0,10,0,0,51,16,0
+Maple Creek Middle School,,180825001380,0488.68,Computer Science (Grade 6),107,46,5,5,0,0,15,12,0
+Maple Creek Middle School,,180825001380,0488.68,Computer Science (Grade 7),245,127,8,2,0,0,29,27,0
+Maple Creek Middle School,,180825001380,0488.68,Computer Science (Grade 8),50,28,3,3,0,0,13,9,0
+Carroll Middle School,,180825002294,0488.68,Computer Science (Grade 6),147,66,3,5,0,0,36,20,0
+Carroll Middle School,,180825002294,0488.68,Computer Science (Grade 7),275,142,6,19,0,0,66,16,0
+Carroll Middle School,,180825002294,0488.68,Computer Science (Grade 8),3,0,0,0,0,0,0,3,0
+Memorial Park Middle School,,180363000546,0488.68,Computer Science (Grade 6),11,4,4,1,0,0,6,2,0
+Delphi Community Middle School,,180270000327,0488.68,Computer Science (Grade 7),7,3,0,0,0,0,3,0,0
+Lewis Cass Elementary School,,181068002169,0488.35,Computer Science (Grade 3),91,44,1,9,0,0,43,15,0
+Lewis Cass Elementary School,,181068002169,0488.35,Computer Science (Grade 4),92,38,0,8,0,0,41,12,0
+Lewis Cass Elementary School,,181068002169,0488.35,Computer Science (Grade 5),86,39,1,5,0,0,44,5,0
+Columbia 6th Grade Academy ,,180603001052,0488,Computer Science (Grade 6),81,36,0,39,0,0,48,7,0
+Clarksville Elementary School,,180192000251,0488.K2,Computer Science (Kindergarten),106,53,9,21,0,0,59,17,0
+Clinton Central Elementary School,,180213000256,0488.35,Computer Science (Grade 3),53,27,0,2,0,0,24,6,0
+Clinton Central Elementary School,,180213000256,0488.35,Computer Science (Grade 4),57,24,0,6,0,0,33,9,0
+Clinton Central Elementary School,,180213000256,0488.35,Computer Science (Grade 5),45,21,1,5,0,0,22,12,0
+Clinton Central Elementary School,,180213000256,0488.K2,Computer Science (Grade 1),44,16,1,4,0,0,22,4,0
+Clinton Central Elementary School,,180213000256,0488.K2,Computer Science (Grade 2),56,26,1,1,0,0,27,5,0
+Frankfort Middle School,,180366000573,0488.68,Computer Science (Grade 6),94,48,0,53,0,0,69,10,0
+Frankfort Middle School,,180366000573,0488.68,Computer Science (Grade 7),139,70,2,66,0,0,93,15,0
+Frankfort Middle School,,180366000573,0488.68,Computer Science (Grade 8),73,33,0,41,0,0,54,11,0
+South Crawford Elementary School,,180244000281,0488.35,Computer Science (Grade 4),27,12,0,1,0,0,19,4,0
+South Crawford Elementary School,,180244000281,0488.35,Computer Science (Grade 5),15,5,0,0,0,0,9,3,0
+West Crawford Elementary School,,180244000284,0488.35,Computer Science (Grade 3),32,16,0,1,0,0,21,9,0
+West Crawford Elementary School,,180244000284,0488.35,Computer Science (Grade 4),31,14,0,1,0,0,21,7,0
+West Crawford Elementary School,,180244000284,0488.35,Computer Science (Grade 5),34,17,0,0,0,0,28,8,0
+Crawford County Middle School,,180244000282,0488.68,Computer Science (Grade 6),91,52,0,0,0,0,57,24,0
+East Crawford Elementary School,,180244000283,0488.35,Computer Science (Grade 3),18,12,0,0,0,0,12,4,0
+East Crawford Elementary School,,180244000283,0488.35,Computer Science (Grade 4),36,18,0,0,0,0,20,3,0
+East Crawford Elementary School,,180244000283,0488.35,Computer Science (Grade 5),44,26,0,1,0,0,23,12,0
+North Daviess Elementary School,,180771001648,0488.35,Computer Science (Grade 3),80,36,0,1,0,0,27,16,0
+North Daviess Elementary School,,180771001648,0488.35,Computer Science (Grade 4),97,56,0,5,1,0,51,16,0
+North Daviess Elementary School,,180771001648,0488.35,Computer Science (Grade 5),90,49,0,4,1,0,42,18,0
+North Daviess Elementary School,,180771001648,0488.68,Computer Science (Grade 6),75,30,1,3,0,0,34,15,0
+North Daviess Elementary School,,180771001648,0488.K2,Computer Science (Grade 1),84,38,0,2,2,0,42,15,0
+North Daviess Elementary School,,180771001648,0488.K2,Computer Science (Grade 2),89,34,0,3,1,0,41,11,0
+Sunman-Dearborn Middle School,,181119002300,0488,Computer Science (Grade 7),21,8,0,0,0,0,4,7,0
+Sunman-Dearborn Middle School,,181119002300,0488,Computer Science (Grade 8),4,2,0,2,0,0,1,1,0
+South Dearborn Middle School,,180024000958,0488.68,Computer Science (Grade 7),80,47,0,0,0,0,37,4,0
+J E Ober Elementary School,,180384000606,0488.35,Computer Science (Grade 3),107,49,0,2,0,0,51,19,0
+J E Ober Elementary School,,180384000606,0488.35,Computer Science (Grade 4),109,50,0,4,0,0,55,26,0
+J E Ober Elementary School,,180384000606,0488.35,Computer Science (Grade 5),112,64,2,4,0,0,54,20,0
+J E Ober Elementary School,,180384000606,0488.K2,Computer Science (Kindergarten),114,46,0,3,0,1,62,15,0
+J E Ober Elementary School,,180384000606,0488.K2,Computer Science (Grade 1),99,51,0,1,0,0,50,13,0
+J E Ober Elementary School,,180384000606,0488.K2,Computer Science (Grade 2),88,38,1,1,2,1,42,15,0
+Royerton Elementary School,,180266000324,0488.35,Computer Science (Grade 3),83,43,2,2,1,0,28,19,0
+Royerton Elementary School,,180266000324,0488.35,Computer Science (Grade 4),85,39,1,1,1,0,29,14,0
+Royerton Elementary School,,180266000324,0488.35,Computer Science (Grade 5),88,47,1,1,1,0,33,12,0
+Royerton Elementary School,,180266000324,0488.K2,Computer Science (Kindergarten),110,50,3,2,0,0,52,18,0
+Royerton Elementary School,,180266000324,0488.K2,Computer Science (Grade 1),127,61,1,6,0,0,53,14,0
+Royerton Elementary School,,180266000324,0488.K2,Computer Science (Grade 2),113,54,1,1,0,1,56,15,0
+Delta Middle School,,180266000323,0488.68,Computer Science (Grade 6),107,49,3,1,1,0,51,18,0
+Eaton Elementary School,,180266000322,0488.35,Computer Science (Grade 3),65,31,0,0,1,0,25,13,0
+Eaton Elementary School,,180266000322,0488.35,Computer Science (Grade 4),67,21,0,1,2,0,42,15,0
+Eaton Elementary School,,180266000322,0488.35,Computer Science (Grade 5),84,40,1,2,0,0,45,18,0
+Eaton Elementary School,,180266000322,0488.K2,Computer Science (Kindergarten),35,14,0,0,0,0,22,5,0
+Eaton Elementary School,,180266000322,0488.K2,Computer Science (Grade 1),39,26,0,0,0,0,22,6,0
+Eaton Elementary School,,180266000322,0488.K2,Computer Science (Grade 2),27,14,0,0,0,0,14,5,0
+Albany Elementary School,,180266000318,0488.35,Computer Science (Grade 3),35,22,0,0,0,0,18,5,0
+Albany Elementary School,,180266000318,0488.35,Computer Science (Grade 4),37,14,0,1,0,0,23,6,0
+Albany Elementary School,,180266000318,0488.35,Computer Science (Grade 5),36,17,0,2,1,0,18,8,0
+Albany Elementary School,,180266000318,0488.K2,"Computer Science, Middle Level (Kindergarten)",36,17,0,0,1,0,18,5,0
+Albany Elementary School,,180266000318,0488.K2,"Computer Science, Middle Level (Grade 1)",45,22,0,1,0,0,30,7,0
+Albany Elementary School,,180266000318,0488.K2,"Computer Science, Middle Level (Grade 2)",29,17,0,0,0,0,19,4,0
+Cowan Elementary School,,180702001199,0488.35,"Computer Science, Middle Level (Grade 3)",60,25,0,0,0,0,36,12,0
+Cowan Elementary School,,180702001199,0488.35,"Computer Science, Middle Level (Grade 4)",53,21,1,1,0,0,27,8,0
+Cowan Elementary School,,180702001199,0488.35,"Computer Science, Middle Level (Grade 5)",61,35,1,0,0,0,30,9,0
+Cowan Elementary School,,180702001199,0488.68,"Computer Science, Middle Level (Grade 6)",44,27,1,3,0,0,25,12,0
+Cowan Elementary School,,180702001199,0488.K2,"Computer Science, Middle Level (Kindergarten)",52,24,1,1,0,0,25,3,0
+Cowan Elementary School,,180702001199,0488.K2,"Computer Science, Middle Level (Grade 1)",59,27,1,3,0,0,36,6,0
+Cowan Elementary School,,180702001199,0488.K2,"Computer Science, Middle Level (Grade 2)",62,28,0,2,0,0,35,8,0
+Northside Middle School,,180036000076,0488,"Computer Science, Middle Level (Grade 6)",51,30,13,3,0,0,27,0,0
+Northside Middle School,,180036000076,0488,"Computer Science, Middle Level (Grade 7)",76,44,22,7,0,0,41,10,0
+Northside Middle School,,180036000076,0488,"Computer Science, Middle Level (Grade 8)",58,30,12,8,0,2,27,13,0
+Southside Middle School,,180732001252,0488,"Computer Science, Middle Level (Grade 6)",44,24,7,2,0,0,34,13,0
+Southside Middle School,,180732001252,0488,"Computer Science, Middle Level (Grade 7)",56,24,11,5,0,0,39,12,0
+Southside Middle School,,180732001252,0488,"Computer Science, Middle Level (Grade 8)",52,22,12,3,0,0,35,9,0
+Northeast Dubois Elementary School,,180816001401,0488.K2,"Computer Science, Middle Level (Kindergarten)",38,20,0,1,0,0,9,6,0
+Northeast Dubois Elementary School,,180816001401,0488.K2,"Computer Science, Middle Level (Grade 1)",44,14,0,0,0,0,13,10,0
+Northeast Dubois Elementary School,,180816001401,0488.K2,"Computer Science, Middle Level (Grade 2)",60,25,0,1,0,0,17,10,0
+Holland Elementary School,,181087001776,0488.35,"Computer Science, Middle Level (Grade 3)",36,16,0,1,0,0,12,8,0
+Holland Elementary School,,181087001776,0488.35,"Computer Science, Middle Level (Grade 4)",38,16,0,1,0,0,13,8,0
+Holland Elementary School,,181087001776,0488.35,"Computer Science, Middle Level (Grade 5)",23,11,0,1,0,0,3,7,0
+Holland Elementary School,,181087001776,0488.K2,Computer Science (Kindergarten),31,14,0,2,0,0,5,8,0
+Holland Elementary School,,181087001776,0488.K2,Computer Science (Grade 1),36,11,0,3,0,0,8,8,0
+Holland Elementary School,,181087001776,0488.K2,Computer Science (Grade 2),37,20,1,0,0,0,11,11,0
+Huntingburg Elementary School,,181087001236,0488.35,Computer Science (Grade 3),94,47,1,43,0,0,53,16,0
+Huntingburg Elementary School,,181087001236,0488.35,Computer Science (Grade 4),51,23,0,23,0,0,19,9,0
+Huntingburg Elementary School,,181087001236,0488.35,Computer Science (Grade 5),52,26,0,22,0,0,22,8,0
+Huntingburg Elementary School,,181087001236,0488.K2,Computer Science (Kindergarten),73,38,1,31,0,0,27,10,0
+Huntingburg Elementary School,,181087001236,0488.K2,Computer Science (Grade 1),129,52,0,59,0,0,64,16,0
+Huntingburg Elementary School,,181087001236,0488.K2,Computer Science (Grade 2),110,51,0,56,0,0,47,16,0
+Covington Elementary School,,180243000276,0488.35,Computer Science (Grade 3),51,27,0,3,1,0,7,3,0
+Covington Elementary School,,180243000276,0488.35,Computer Science (Grade 4),42,21,0,1,0,0,22,4,0
+Covington Elementary School,,180243000276,0488.35,Computer Science (Grade 5),56,29,2,6,0,0,25,9,0
+Covington Elementary School,,180243000276,0488.K2,Computer Science (Kindergarten),52,26,0,2,0,0,23,11,0
+Covington Elementary School,,180243000276,0488.K2,Computer Science (Grade 1),54,25,0,2,0,0,17,11,0
+Covington Elementary School,,180243000276,0488.K2,"Computer Science, Middle Level (Grade 2)",41,19,0,2,0,0,14,5,0
+Waldo J Wood Memorial JHS,,180294000622,0488.68,"Computer Science, Middle Level (Grade 7)",17,7,0,0,0,0,7,2,0
+Princeton Comm Intermediate School,,180777001324,0488.35,"Computer Science, Middle Level (Kindergarten)",1,0,0,0,0,0,1,1,0
+Princeton Comm Intermediate School,,180777001324,0488.35,"Computer Science, Middle Level (Grade 1)",2,1,0,0,0,0,2,2,0
+Princeton Comm Intermediate School,,180777001324,0488.35,"Computer Science, Middle Level (Grade 2)",2,2,0,0,0,0,2,2,0
+Princeton Comm Intermediate School,,180777001324,0488.35,Computer Science (Grade 3),7,2,0,0,0,0,6,7,0
+Princeton Comm Intermediate School,,180777001324,0488.35,Computer Science (Grade 4),2,0,0,0,0,0,1,2,0
+Princeton Comm Intermediate School,,180777001324,0488.35,Computer Science (Grade 5),4,1,0,0,0,0,2,3,0
+Bloomfield Elementary School,,180498000910,0488.35,Computer Science (Grade 4),59,37,1,0,0,0,24,11,0
+Bloomfield Elementary School,,180498000910,0488.35,Computer Science (Grade 5),50,28,0,5,0,0,19,6,0
+Linton-Stockton Middle School,,180591002147,0488.68,Computer Science (Grade 6),37,17,0,2,0,0,20,2,0
+Linton-Stockton Middle School,,180591002147,0488.68,Computer Science (Grade 7),89,42,1,3,0,0,45,9,0
+Hamilton Heights Middle School,,180426000727,0488.35,Computer Science (Grade 5),167,88,1,6,0,0,54,29,0
+Hamilton Heights Middle School,,180426000727,0488.35,Computer Science (Grade 8),2,1,0,0,0,0,1,2,0
+Hamilton Heights Middle School,,180426000727,0488.68,Computer Science (Grade 6),41,20,1,3,0,0,14,2,0
+Sheridan Middle School,,180648001655,0488.68,Computer Science (Grade 8),17,7,0,2,0,0,5,1,0
+Clay Middle School,,180120000195,0488.68,Computer Science (Grade 7),31,6,1,0,0,0,3,3,0
+Cherry Tree Elementary School,,180120002332,0488.35,Computer Science (Grade 3),227,107,14,7,0,0,27,25,0
+Cherry Tree Elementary School,,180120002332,0488.35,Computer Science (Grade 4),200,87,6,6,0,0,18,14,0
+Cherry Tree Elementary School,,180120002332,0488.35,Computer Science (Grade 5),202,109,15,6,0,0,23,15,0
+Cherry Tree Elementary School,,180120002332,0488.K2,Computer Science (Kindergarten),176,88,4,3,3,0,18,22,0
+Cherry Tree Elementary School,,180120002332,0488.K2,Computer Science (Grade 1),199,110,14,2,2,0,21,20,0
+Cherry Tree Elementary School,,180120002332,0488.K2,Computer Science (Grade 2),210,122,7,8,1,0,24,23,0
+Carmel Middle School,,180120000194,0488.68,Computer Science (Grade 7),32,8,1,2,0,0,3,3,0
+Creekside Middle School,,180120002083,0488.68,Computer Science (Grade 7),16,2,1,1,0,0,2,4,0
+Greenfield Central Junior High Sch,,180405002476,0488.68,Computer Science (Grade 7),135,63,2,3,0,0,41,18,0
+Greenfield Central Junior High Sch,,180405002476,0488.68,Computer Science (Grade 8),9,2,0,0,0,0,4,2,0
+Corydon Central Jr High School,,181036002283,0488.68,Computer Science (Grade 7),106,46,0,5,0,0,57,15,0
+Corydon Central Jr High School,,181036002283,0488.68,Computer Science (Grade 8),17,12,0,0,0,0,3,0,0
+River Birch Elementary School,,180027002480,0488.35,Computer Science (Grade 3),146,74,10,7,0,0,38,35,0
+River Birch Elementary School,,180027002480,0488.35,Computer Science (Grade 4),156,76,14,6,0,0,44,26,0
+River Birch Elementary School,,180027002480,0488.K2,Computer Science (Kindergarten),126,59,13,9,0,1,33,16,0
+River Birch Elementary School,,180027002480,0488.K2,Computer Science (Grade 1),141,56,8,11,0,0,34,22,0
+River Birch Elementary School,,180027002480,0488.K2,"Computer Science, Middle Level (Grade 2)",129,62,7,11,0,0,34,21,0
+Avon Intermediate School East,,180027001256,0488.35,"Computer Science, Middle Level (Grade 5)",316,160,43,33,0,1,93,43,0
+Avon Intermediate School West,,180027002092,0488.35,Computer Science (Grade 5),299,143,45,40,0,0,107,50,0
+Avon Middle School North,,180027002450,0488.68,Computer Science (Grade 7),18,7,3,1,1,0,5,0,0
+Avon Middle School North,,180027002450,0488.68,Computer Science (Grade 8),175,73,38,16,0,0,61,22,0
+Avon Middle School South,,180027002095,0488.68,Computer Science (Grade 7),68,13,12,3,0,0,13,9,0
+Avon Middle School South,,180027002095,0488.68,Computer Science (Grade 8),125,42,23,11,1,0,46,18,0
+Cedar Elementary School,,180027002194,0488.35,Computer Science (Grade 3),118,52,21,9,0,0,41,26,0
+Cedar Elementary School,,180027002194,0488.35,Computer Science (Grade 4),152,84,28,13,0,0,47,21,0
+Cedar Elementary School,,180027002194,0488.K2,Computer Science (Kindergarten),98,34,25,10,0,0,38,12,0
+Cedar Elementary School,,180027002194,0488.K2,Computer Science (Grade 1),121,57,27,5,0,0,52,17,0
+Cedar Elementary School,,180027002194,0488.K2,Computer Science (Grade 2),116,54,22,14,0,0,45,22,0
+Clarks Creek Elementary,,180897002438,0488,Computer Science (Kindergarten),1,1,0,0,0,0,1,0,0
+Clarks Creek Elementary,,180897002438,0488,Computer Science (Grade 1),137,65,10,11,0,0,47,21,0
+Clarks Creek Elementary,,180897002438,0488,Computer Science (Grade 2),141,69,22,10,0,0,36,24,0
+Clarks Creek Elementary,,180897002438,0488,Computer Science (Grade 3),167,80,14,12,0,0,43,35,0
+Clarks Creek Elementary,,180897002438,0488,Computer Science (Grade 4),165,81,14,13,0,0,63,32,0
+Clarks Creek Elementary,,180897002438,0488,Computer Science (Grade 5),162,89,19,9,0,0,49,29,0
+Plainfield Community Middle School,,180897002357,0488,Computer Science (Grade 6),175,88,6,8,0,0,44,16,0
+Central Elementary School,,180891001484,0488,Computer Science (Grade 1),78,36,2,4,0,0,15,13,0
+Central Elementary School,,180891001484,0488,Computer Science (Grade 2),79,29,3,2,0,0,21,16,0
+Central Elementary School,,180891001484,0488,Computer Science (Grade 3),106,46,4,4,0,0,29,22,0
+Central Elementary School,,180891001484,0488,Computer Science (Grade 4),88,50,7,3,0,0,21,19,0
+Central Elementary School,,180891001484,0488,Computer Science (Grade 5),103,56,2,2,0,0,26,20,0
+Van Buren Elementary School,,180084000164,0488,Computer Science (Grade 1),71,38,0,6,0,0,28,11,0
+Van Buren Elementary School,,180084000164,0488,Computer Science (Grade 2),97,47,0,7,0,0,32,15,0
+Van Buren Elementary School,,180084000164,0488,Computer Science (Grade 3),89,47,1,2,0,0,24,15,0
+Van Buren Elementary School,,180084000164,0488,Computer Science (Grade 4),104,59,1,5,0,0,41,13,0
+Van Buren Elementary School,,180084000164,0488,Computer Science (Grade 5),87,44,2,4,0,0,23,17,0
+Brentwood Elementary School,,180897001492,0488,Computer Science (Grade 1),63,26,3,9,0,0,30,11,0
+Brentwood Elementary School,,180897001492,0488,Computer Science (Grade 2),74,37,8,3,0,0,29,12,0
+Brentwood Elementary School,,180897001492,0488,Computer Science (Grade 3),69,31,8,4,0,0,24,12,0
+Brentwood Elementary School,,180897001492,0488,Computer Science (Grade 4),70,34,3,9,0,0,24,6,0
+Brentwood Elementary School,,180897001492,0488,Computer Science (Grade 5),78,32,10,4,0,0,37,18,0
+Cascade Middle School,,180666001170,0488.68,Computer Science (Grade 6),14,2,0,0,0,0,4,4,0
+Cascade Middle School,,180666001170,0488.68,Computer Science (Grade 7),10,2,0,1,0,0,4,1,0
+Blue River Valley Elementary Sch,,180066000140,0488.35,Computer Science (Grade 1),35,13,0,0,0,0,17,10,0
+Blue River Valley Elementary Sch,,180066000140,0488.35,Computer Science (Grade 2),36,16,0,2,0,0,20,8,0
+Blue River Valley Elementary Sch,,180066000140,0488.35,Computer Science (Grade 3),35,14,0,0,0,0,13,5,0
+Blue River Valley Elementary Sch,,180066000140,0488.35,Computer Science (Grade 4),45,28,0,1,0,1,26,5,0
+Blue River Valley Elementary Sch,,180066000140,0488.35,Computer Science (Grade 5),44,17,0,2,0,0,21,5,0
+Blue River Valley Elementary Sch,,180066000140,0488.35,Computer Science (Grade 6),62,31,0,0,0,0,24,9,0
+Tri-Elementary School,,181038001703,0488.35,Computer Science (Grade 3),59,31,0,2,0,0,28,11,0
+Tri-Elementary School,,181038001703,0488.35,Computer Science (Grade 4),48,25,1,1,0,0,28,4,0
+Tri-Elementary School,,181038001703,0488.35,Computer Science (Grade 5),39,16,0,0,0,0,14,7,0
+Tri-Elementary School,,181038001703,0488.K2,Computer Science (Kindergarten),46,18,0,4,0,0,26,5,0
+Tri-Elementary School,,181038001703,0488.K2,Computer Science (Grade 1),49,24,0,1,0,0,24,8,0
+Tri-Elementary School,,181038001703,0488.K2,Computer Science (Grade 2),44,20,1,1,0,0,26,4,0
+Elwood Haynes Elementary School,,180537000946,0488,Computer Science (Grade 1),62,31,21,4,0,0,53,9,0
+Elwood Haynes Elementary School,,180537000946,0488,Computer Science (Grade 2),69,29,20,6,0,0,63,13,0
+Elwood Haynes Elementary School,,180537000946,0488,Computer Science (Grade 3),61,30,14,8,0,0,51,11,0
+Elwood Haynes Elementary School,,180537000946,0488,Computer Science (Grade 4),58,27,8,4,0,0,49,13,0
+Elwood Haynes Elementary School,,180537000946,0488,Computer Science (Grade 5),47,25,11,3,0,0,37,8,0
+Riverview School,,180471000790,0488.68,Computer Science (Grade 6),49,22,1,1,0,0,22,6,0
+Bloomfield Elementary School,,180498000910,0488.35,Computer Science (Grade 3),18,7,0,1,0,0,8,2,0
+Bloomfield Elementary School,,180498000910,0488.35,Computer Science (Grade 4),21,9,0,1,0,0,6,5,0
+Bloomfield Elementary School,,180498000910,0488.35,Computer Science (Grade 5),22,10,0,0,0,0,3,3,0
+Bloomfield Elementary School,,180498000910,0488.68,Computer Science (Grade 6),15,8,0,0,0,0,3,6,0
+Bloomfield Elementary School,,180498000910,0488.K2,Computer Science (Grade 1),18,9,1,1,0,0,9,4,0
+Bloomfield Elementary School,,180498000910,0488.K2,Computer Science (Grade 2),18,8,0,0,0,0,6,5,0
+Westlawn Elementary School,,180498000919,0488.35,Computer Science (Grade 3),8,4,0,0,0,0,7,3,0
+Westlawn Elementary School,,180498000919,0488.35,Computer Science (Grade 4),17,10,0,1,0,0,8,4,0
+Westlawn Elementary School,,180498000919,0488.35,Computer Science (Grade 5),16,8,0,0,0,0,8,4,0
+Westlawn Elementary School,,180498000919,0488.68,Computer Science (Grade 6),15,10,0,1,0,0,8,4,0
+Westlawn Elementary School,,180498000919,0488.K2,Computer Science (Grade 1),12,8,0,0,0,0,8,4,0
+Westlawn Elementary School,,180498000919,0488.K2,Computer Science (Grade 2),25,13,1,2,0,0,19,6,0
+Southwestern Middle School,,181134001832,0488.68,Computer Science (Grade 6),40,20,0,4,0,0,24,5,0
+Southwestern Middle School,,181134001832,0488.68,Computer Science (Grade 7),50,27,0,2,0,0,24,4,0
+Southwestern Middle School,,181134001832,0488.68,Computer Science (Grade 8),39,20,0,4,0,1,25,8,0
+Whiteland Elementary School,,180189000247,0488.35,Computer Science (Grade 3),66,35,0,4,0,0,27,7,0
+Whiteland Elementary School,,180189000247,0488.35,"Computer Science, Middle Level (Grade 4)",82,44,1,8,0,0,37,14,0
+Whiteland Elementary School,,180189000247,0488.35,"Computer Science, Middle Level (Grade 5)",74,41,1,6,0,0,33,12,0
+Whiteland Elementary School,,180189000247,0488.K2,"Computer Science, Middle Level (Grade 2)",59,32,0,5,0,0,31,9,0
+Clark Pleasant Middle School,,180189000245,0488.68,"Computer Science, Middle Level (Grade 8)",23,2,1,1,0,0,8,0,0
+East Side Elementary School,,180324000421,0488.35,"Computer Science, Middle Level (Grade 3)",63,32,0,10,0,0,45,18,0
+East Side Elementary School,,180324000421,0488.35,"Computer Science, Middle Level (Grade 4)",53,25,0,2,0,0,39,19,0
+East Side Elementary School,,180324000421,0488.35,"Computer Science, Middle Level (Grade 5)",69,33,0,6,0,0,49,22,0
+East Side Elementary School,,180324000421,0488.K2,Computer Science (Kindergarten),63,26,1,7,0,0,52,12,0
+East Side Elementary School,,180324000421,0488.K2,Computer Science (Grade 1),69,35,0,8,0,0,50,11,0
+East Side Elementary School,,180324000421,0488.K2,Computer Science (Grade 2),64,36,0,5,0,0,44,12,0
+John I Meister Elementary School,,180462000779,0488.K2,Computer Science (Kindergarten),49,18,1,20,0,0,34,4,0
+Pierce Middle School,,180969001588,0488,Computer Science (Grade 7),86,40,54,20,0,0,58,19,0
+Pierce Middle School,,180969001588,0488,Computer Science (Grade 8),91,49,56,13,0,0,48,2,0
+Lowell Middle School,,181146001851,0488.68,Computer Science (Grade 8),98,47,0,9,0,0,23,16,0
+Joseph Block Middle School,,180288000370,0488.68,Computer Science (Grade 7),39,21,20,19,0,0,30,3,0
+Joseph Block Middle School,,180288000370,0488.68,Computer Science (Grade 8),47,22,29,16,0,0,41,8,0
+Alexander Hamilton Elementary Sch,,180291000376,0488.35,Computer Science (Grade 3),32,14,1,18,0,0,30,2,0
+Alexander Hamilton Elementary Sch,,180291000376,0488.35,Computer Science (Grade 4),25,8,4,18,0,0,22,7,0
+Alexander Hamilton Elementary Sch,,180291000376,0488.35,Computer Science (Grade 5),48,21,2,20,0,0,38,10,0
+Alexander Hamilton Elementary Sch,,180291000376,0488.K2,Computer Science (Kindergarten),42,20,7,19,0,0,35,3,0
+Alexander Hamilton Elementary Sch,,180291000376,0488.K2,Computer Science (Grade 1),34,17,4,16,0,0,25,1,0
+Alexander Hamilton Elementary Sch,,180291000376,0488.K2,Computer Science (Grade 2),44,16,5,19,0,0,39,7,0
+Virgil I Bailey Elementary School,,180291000381,0488.35,Computer Science (Grade 3),35,17,4,17,0,0,30,12,0
+Virgil I Bailey Elementary School,,180291000381,0488.35,Computer Science (Grade 4),40,14,4,18,0,0,33,9,0
+Virgil I Bailey Elementary School,,180291000381,0488.35,Computer Science (Grade 5),35,8,5,12,0,0,27,17,0
+Virgil I Bailey Elementary School,,180291000381,0488.K2,Computer Science (Kindergarten),45,24,4,18,0,0,33,3,0
+Virgil I Bailey Elementary School,,180291000381,0488.K2,Computer Science (Grade 1),47,18,1,21,0,0,39,8,0
+Virgil I Bailey Elementary School,,180291000381,0488.K2,Computer Science (Grade 2),49,20,3,19,0,0,42,9,0
+Virgil I Bailey Elementary School,,180291000381,0488.K2,Computer Science (Grade 3),1,1,0,1,0,0,1,0,0
+Bailly Middle School,,180387002460,0488.68,"Computer Science, Middle Level (Grade 7)",133,59,121,7,0,0,133,16,0
+Bailly Middle School,,180387002460,0488.68,"Computer Science, Middle Level (Grade 8)",23,9,20,2,0,0,23,3,0
+Beiriger Elementary School,,180417000717,0488.35,"Computer Science, Middle Level (Kindergarten)",3,1,1,0,0,0,2,3,0
+Beiriger Elementary School,,180417000717,0488.35,"Computer Science, Middle Level (Grade 1)",3,1,2,0,0,0,1,3,0
+Beiriger Elementary School,,180417000717,0488.35,"Computer Science, Middle Level (Grade 2)",3,1,2,0,0,0,3,3,0
+Beiriger Elementary School,,180417000717,0488.35,"Computer Science, Middle Level (Grade 3)",140,70,33,37,0,0,65,15,0
+Beiriger Elementary School,,180417000717,0488.35,"Computer Science, Middle Level (Grade 4)",125,60,27,38,0,0,55,15,0
+Beiriger Elementary School,,180417000717,0488.35,"Computer Science, Middle Level (Grade 5)",159,79,25,43,0,0,78,27,0
+Elsie Wadsworth Elementary School,,180417000719,0488.K2,"Computer Science, Middle Level (Pre-Kindergarten)",9,2,1,3,0,0,6,9,0
+Elsie Wadsworth Elementary School,,180417000719,0488.K2,"Computer Science, Middle Level (Kindergarten)",144,63,34,36,0,0,66,13,0
+Elsie Wadsworth Elementary School,,180417000719,0488.K2,Computer Science (Grade 1),110,52,19,36,0,0,48,12,0
+Elsie Wadsworth Elementary School,,180417000719,0488.K2,Computer Science (Grade 2),135,66,19,41,0,0,66,14,0
+Elsie Wadsworth Elementary School,,180417000719,0488.K2,Computer Science (Grade 3),1,0,0,0,0,0,0,1,0
+Joseph Hess Elementary School,,180432002413,0488.35,Computer Science (Grade 4),84,44,36,33,1,0,63,14,0
+Joseph Hess Elementary School,,180432002413,0488.35,Computer Science (Grade 5),80,40,42,27,0,0,70,9,0
+Joseph Hess Elementary School,,180432002413,0488.K2,Computer Science (Kindergarten),62,29,22,26,0,0,43,4,0
+Joseph Hess Elementary School,,180432002413,0488.K2,Computer Science (Grade 1),96,43,47,37,0,0,80,11,0
+Joseph Hess Elementary School,,180432002413,0488.K2,Computer Science (Grade 2),81,38,37,22,0,0,71,6,0
+Joseph Hess Elementary School,,180432002413,0488.K2,Computer Science (Grade 3),77,39,34,28,0,0,64,8,0
+Warren G Harding Elementary School,,180432000750,0488.35,Computer Science (Grade 3),95,48,28,50,0,0,82,6,0
+Warren G Harding Elementary School,,180432000750,0488.35,Computer Science (Grade 4),90,41,27,37,0,0,77,11,0
+Warren G Harding Elementary School,,180432000750,0488.35,Computer Science (Grade 5),99,50,28,51,0,0,81,13,0
+Warren G Harding Elementary School,,180432000750,0488.K2,Computer Science (Kindergarten),76,39,17,40,0,0,58,7,0
+Warren G Harding Elementary School,,180432000750,0488.K2,Computer Science (Grade 1),87,44,20,45,0,0,62,4,0
+Warren G Harding Elementary School,,180432000750,0488.K2,Computer Science (Grade 2),84,42,21,42,0,0,67,12,0
+Washington Irving Elementary Sch,,180432000751,0488.35,Computer Science (Grade 3),98,48,17,61,1,0,86,7,0
+Washington Irving Elementary Sch,,180432000751,0488.35,Computer Science (Grade 4),121,60,25,77,0,0,96,19,0
+Washington Irving Elementary Sch,,180432000751,0488.35,Computer Science (Grade 5),122,55,21,86,0,0,104,17,0
+Washington Irving Elementary Sch,,180432000751,0488.K2,Computer Science (Kindergarten),79,35,12,54,1,0,68,5,0
+Washington Irving Elementary Sch,,180432000751,0488.K2,Computer Science (Grade 1),107,56,19,72,1,0,87,11,0
+Washington Irving Elementary Sch,,180432000751,0488.K2,Computer Science (Grade 2),103,57,18,70,0,0,93,13,0
+Thomas Jefferson Elementary School,,180432000749,0488.35,Computer Science (Grade 3),75,38,28,33,0,0,53,11,0
+Thomas Jefferson Elementary School,,180432000749,0488.35,Computer Science (Grade 4),64,30,29,22,0,0,39,12,0
+Thomas Jefferson Elementary School,,180432000749,0488.35,Computer Science (Grade 5),77,35,39,25,0,0,54,17,0
+Thomas Jefferson Elementary School,,180432000749,0488.K2,Computer Science (Kindergarten),69,32,24,24,0,0,49,6,0
+Thomas Jefferson Elementary School,,180432000749,0488.K2,Computer Science (Grade 1),67,26,21,27,0,0,50,14,0
+Thomas Jefferson Elementary School,,180432000749,0488.K2,Computer Science (Grade 2),65,26,31,23,0,0,45,9,0
+Maywood Elementary School,,180432000744,0488.K2,Computer Science (Kindergarten),86,34,60,24,1,0,73,3,0
+Maywood Elementary School,,180432000744,0488.K2,Computer Science (Grade 1),91,39,55,26,0,1,86,4,0
+Morton Elementary School,,180432002237,0488.35,Computer Science (Grade 3),70,28,13,45,0,0,57,4,0
+Morton Elementary School,,180432002237,0488.35,Computer Science (Grade 4),68,33,24,26,0,0,55,10,0
+Morton Elementary School,,180432002237,0488.35,Computer Science (Grade 5),82,38,29,37,0,0,62,10,0
+Morton Elementary School,,180432002237,0488.K2,Computer Science (Kindergarten),65,33,21,30,0,0,51,7,0
+Morton Elementary School,,180432002237,0488.K2,Computer Science (Grade 1),63,39,17,30,0,0,51,7,0
+Morton Elementary School,,180432002237,0488.K2,Computer Science (Grade 2),69,29,28,33,0,0,54,11,0
+Lew Wallace Elementary School,,180432000743,0488.35,Computer Science (Grade 3),58,22,28,24,0,0,55,6,0
+Lew Wallace Elementary School,,180432000743,0488.35,Computer Science (Grade 4),65,36,21,35,0,0,58,12,0
+Lew Wallace Elementary School,,180432000743,0488.35,Computer Science (Grade 5),50,26,23,19,0,0,42,9,0
+Lew Wallace Elementary School,,180432000743,0488.K2,Computer Science (Kindergarten),42,18,17,22,0,0,38,3,0
+Lew Wallace Elementary School,,180432000743,0488.K2,Computer Science (Grade 1),48,20,22,17,0,0,42,3,0
+Lew Wallace Elementary School,,180432000743,0488.K2,Computer Science (Grade 2),47,23,22,19,0,0,41,6,0
+Highland Middle School,,180456000764,0488.68,Computer Science (Grade 8),36,12,3,13,0,0,12,3,0
+Whiting Middle School,,181320000398,0488,Computer Science (Grade 6),28,12,0,26,0,0,21,2,0
+Whiting Middle School,,181320000398,0488,Computer Science (Grade 7),29,22,7,17,0,0,20,1,0
+Nathan Hale Elementary School,,181320002081,0488,Computer Science (Grade 1),56,32,2,36,0,0,34,7,0
+Nathan Hale Elementary School,,181320002081,0488,Computer Science (Grade 2),74,40,0,61,0,0,53,8,0
+Nathan Hale Elementary School,,181320002081,0488,Computer Science (Grade 3),59,28,1,49,0,0,41,10,0
+Nathan Hale Elementary School,,181320002081,0488,Computer Science (Grade 4),69,31,6,53,0,0,50,12,0
+Nathan Hale Elementary School,,181320002081,0488,Computer Science (Grade 5),76,36,1,61,0,0,50,16,0
+New Prairie Middle School,,180756001299,0488.68,Computer Science (Grade 7),40,13,0,4,0,0,13,4,0
+New Prairie Middle School,,180756001299,0488.68,Computer Science (Grade 8),42,14,0,3,1,0,12,1,0
+Martin T Krueger Middle School,,180657001154,0488.68,Computer Science (Grade 7),61,21,21,11,0,0,48,13,0
+Martin T Krueger Middle School,,180657001154,0488.68,Computer Science (Grade 8),69,29,30,11,0,0,61,14,0
+Barker Middle School,,180657001140,0488.68,Computer Science (Grade 7),66,35,22,6,0,0,46,16,0
+Barker Middle School,,180657001140,0488.68,Computer Science (Grade 8),78,39,19,11,0,0,59,12,0
+Indian Trail Elementary School,,180558002338,0488.35,Computer Science (Grade 3),45,22,0,5,0,0,19,11,0
+Indian Trail Elementary School,,180558002338,0488.35,Computer Science (Grade 4),41,14,0,7,0,0,22,7,0
+Indian Trail Elementary School,,180558002338,0488.K2,Computer Science (Pre-Kindergarten),1,0,0,0,0,0,1,0,0
+Indian Trail Elementary School,,180558002338,0488.K2,Computer Science (Kindergarten),56,29,0,8,0,0,37,17,0
+Indian Trail Elementary School,,180558002338,0488.K2,Computer Science (Grade 1),50,22,0,7,0,0,28,19,0
+Indian Trail Elementary School,,180558002338,0488.K2,Computer Science (Grade 2),34,16,1,5,1,0,23,6,0
+Kingsford Heights Elementary Sch,,180558001014,0488.35,Computer Science (Grade 3),28,14,0,1,0,0,13,5,0
+Kingsford Heights Elementary Sch,,180558001014,0488.35,Computer Science (Grade 4),20,11,0,0,0,0,14,4,0
+Kingsford Heights Elementary Sch,,180558001014,0488.K2,Computer Science (Kindergarten),18,10,0,1,0,0,13,2,0
+Kingsford Heights Elementary Sch,,180558001014,0488.K2,Computer Science (Grade 1),27,21,0,0,0,1,19,5,0
+Kingsford Heights Elementary Sch,,180558001014,0488.K2,Computer Science (Grade 2),29,16,0,3,0,1,18,2,0
+Kingsbury Elementary School,,180558001013,0488.35,Computer Science (Grade 3),39,20,0,6,0,0,12,7,0
+Kingsbury Elementary School,,180558001013,0488.35,"Computer Science, Middle Level (Grade 4)",54,38,2,4,1,0,22,9,0
+Kingsbury Elementary School,,180558001013,0488.K2,"Computer Science, Middle Level (Kindergarten)",48,26,1,3,0,0,20,2,0
+Kingsbury Elementary School,,180558001013,0488.K2,"Computer Science, Middle Level (Grade 1)",45,25,1,1,0,0,14,9,0
+Kingsbury Elementary School,,180558001013,0488.K2,"Computer Science, Middle Level (Grade 2)",40,17,0,4,0,0,10,9,0
+Hailmann Elementary School,,180558001010,0488,"Computer Science, Middle Level (Kindergarten)",55,26,1,16,0,0,37,17,0
+Hailmann Elementary School,,180558001010,0488,"Computer Science, Middle Level (Grade 1)",59,35,0,16,0,0,40,9,0
+Hailmann Elementary School,,180558001010,0488,"Computer Science, Middle Level (Grade 2)",46,28,0,17,0,0,29,10,0
+Hailmann Elementary School,,180558001010,0488,"Computer Science, Middle Level (Grade 3)",54,31,1,14,0,0,34,14,0
+Hailmann Elementary School,,180558001010,0488,"Computer Science, Middle Level (Grade 4)",51,27,0,13,0,0,37,6,0
+F Willard Crichfield Elementary,,180558001009,0488,"Computer Science, Middle Level (Kindergarten)",63,30,0,6,0,0,19,8,0
+F Willard Crichfield Elementary,,180558001009,0488,"Computer Science, Middle Level (Grade 1)",62,30,0,7,1,1,20,6,0
+F Willard Crichfield Elementary,,180558001009,0488,"Computer Science, Middle Level (Grade 2)",70,35,0,4,0,0,21,8,0
+F Willard Crichfield Elementary,,180558001009,0488,Computer Science (Grade 3),76,37,1,4,0,0,22,8,0
+F Willard Crichfield Elementary,,180558001009,0488,Computer Science (Grade 4),79,45,1,4,0,1,13,4,0
+Lincoln Elementary School,,180786001341,0488.35,Computer Science (Grade 3),33,15,1,7,0,0,23,4,0
+Lincoln Elementary School,,180786001341,0488.35,Computer Science (Grade 4),28,12,1,7,0,0,24,7,0
+Lincoln Elementary School,,180786001341,0488.K2,Computer Science (Kindergarten),28,16,3,6,0,0,24,5,0
+Lincoln Elementary School,,180786001341,0488.K2,Computer Science (Grade 1),29,13,1,5,0,0,21,5,0
+Lincoln Elementary School,,180786001341,0488.K2,Computer Science (Grade 2),33,21,1,5,0,0,25,4,0
+Riley Elementary School,,181209001913,0488.35,Computer Science (Grade 3),49,22,2,7,0,0,30,4,0
+Riley Elementary School,,181209001913,0488.35,Computer Science (Grade 4),47,24,2,3,0,0,31,10,0
+Riley Elementary School,,181209001913,0488.K2,Computer Science (Kindergarten),44,20,2,3,0,0,31,4,0
+Riley Elementary School,,181209001913,0488.K2,Computer Science (Grade 1),49,23,1,6,0,0,36,5,0
+Riley Elementary School,,181209001913,0488.K2,Computer Science (Grade 2),43,20,1,8,0,0,28,8,0
+Handley Elementary School,,180558001011,0488.35,Computer Science (Grade 3),50,16,0,8,0,0,34,10,0
+Handley Elementary School,,180558001011,0488.35,Computer Science (Grade 4),55,28,1,8,0,0,34,14,0
+Handley Elementary School,,180558001011,0488.K2,Computer Science (Kindergarten),59,24,2,12,0,0,39,13,0
+Handley Elementary School,,180558001011,0488.K2,Computer Science (Grade 1),62,29,1,17,0,0,43,9,0
+Handley Elementary School,,180558001011,0488.K2,Computer Science (Grade 2),47,23,1,8,0,0,29,14,0
+Oolitic School,,180786000446,0488.68,Computer Science (Grade 7),11,1,0,0,0,0,5,1,0
+Oolitic School,,180786000446,0488.68,Computer Science (Grade 8),6,0,0,0,0,0,0,0,0
+Bedford Middle School,,180786001336,0488.68,Computer Science (Grade 7),97,46,0,3,0,0,49,15,0
+Bedford Middle School,,180786001336,0488.68,Computer Science (Grade 8),109,50,0,5,0,0,56,21,0
+Burris Elementary School,,180690001194,0488.35,Computer Science (Grade 2),1,1,0,0,0,0,0,1,0
+Burris Elementary School,,180690001194,0488.35,Computer Science (Grade 3),104,48,0,7,0,0,65,25,0
+Burris Elementary School,,180690001194,0488.35,Computer Science (Grade 4),98,47,0,3,1,0,60,24,0
+Burris Elementary School,,180690001194,0488.35,Computer Science (Grade 5),103,43,0,3,0,0,63,24,0
+Hatfield Elementary School,,180690001196,0488.K2,Computer Science (Kindergarten),95,43,0,2,0,0,53,11,0
+Hatfield Elementary School,,180690001196,0488.K2,Computer Science (Grade 1),95,42,0,4,0,0,44,24,0
+Hatfield Elementary School,,180690001196,0488.K2,Computer Science (Grade 2),96,54,0,3,0,0,55,25,0
+Lapel Middle School,,181288002418,0488.68,Computer Science (Grade 8),15,5,1,0,0,0,6,2,0
+East Elementary School,,181044002167,0488.35,Computer Science (Grade 3),90,43,1,4,0,0,30,12,0
+East Elementary School,,181044002167,0488.35,Computer Science (Grade 4),101,53,1,2,0,0,34,16,0
+East Elementary School,,181044002167,0488.35,Computer Science (Grade 5),85,44,0,2,0,0,28,10,0
+East Elementary School,,181044002167,0488.68,Computer Science (Grade 6),99,60,1,1,0,0,31,15,0
+East Elementary School,,181044002167,0488.K2,Computer Science (Kindergarten),98,47,0,1,0,1,25,14,0
+East Elementary School,,181044002167,0488.K2,Computer Science (Grade 1),89,37,1,3,0,0,34,10,0
+East Elementary School,,181044002167,0488.K2,Computer Science (Grade 2),92,43,0,2,0,0,35,14,0
+Pendleton Elementary School,,181044001713,0488.35,Computer Science (Grade 3),102,47,0,2,1,0,32,12,0
+Pendleton Elementary School,,181044001713,0488.35,Computer Science (Grade 4),89,34,1,1,0,0,17,8,0
+Pendleton Elementary School,,181044001713,0488.35,Computer Science (Grade 5),113,65,1,3,1,0,30,18,0
+Pendleton Elementary School,,181044001713,0488.68,Computer Science (Grade 6),87,38,1,3,0,0,27,8,0
+Pendleton Elementary School,,181044001713,0488.K2,Computer Science (Kindergarten),100,48,0,2,0,0,23,19,0
+Pendleton Elementary School,,181044001713,0488.K2,Computer Science (Grade 1),98,54,2,3,0,0,27,13,0
+Pendleton Elementary School,,181044001713,0488.K2,Computer Science (Grade 2),85,46,0,5,0,0,26,14,0
+Maple Ridge Elementary School,,181044001676,0488.35,Computer Science (Grade 3),70,33,1,3,0,0,24,11,0
+Maple Ridge Elementary School,,181044001676,0488.35,Computer Science (Grade 4),88,51,2,2,0,0,31,10,0
+Maple Ridge Elementary School,,181044001676,0488.35,Computer Science (Grade 5),106,49,4,7,0,0,31,21,0
+Maple Ridge Elementary School,,181044001676,0488.68,Computer Science (Grade 6),95,42,0,6,0,0,32,17,0
+Maple Ridge Elementary School,,181044001676,0488.K2,Computer Science (Kindergarten),76,31,1,5,0,0,26,10,0
+Maple Ridge Elementary School,,181044001676,0488.K2,Computer Science (Grade 1),96,50,2,7,0,0,47,17,0
+Maple Ridge Elementary School,,181044001676,0488.K2,Computer Science (Grade 2),91,50,3,5,0,0,34,13,0
+Highland Middle School,,180456000764,0488.68,Computer Science (Grade 8),27,11,4,2,0,0,13,3,0
+Elwood Intermediate School,,180330002309,0488.35,Computer Science (Grade 3),102,52,1,11,0,0,61,20,0
+Elwood Intermediate School,,180330002309,0488.35,Computer Science (Grade 4),97,43,0,12,1,0,54,20,0
+Elwood Intermediate School,,180330002309,0488.35,Computer Science (Grade 5),114,56,0,14,0,0,69,25,0
+Elwood Intermediate School,,180330002309,0488.68,Computer Science (Grade 6),82,47,2,4,0,1,51,15,0
+Elwood Elementary School,,180330000448,0488.K2,Computer Science (Kindergarten),98,52,2,9,0,0,66,10,0
+Elwood Elementary School,,180330000448,0488.K2,Computer Science (Grade 1),112,51,1,8,0,0,71,18,0
+Elwood Elementary School,,180330000448,0488.K2,Computer Science (Grade 2),94,40,0,8,0,0,50,21,0
+Decatur Middle School,,180264000313,0488.68,Computer Science (Grade 8),127,55,22,16,0,2,83,8,0
+Franklin Central Junior High,,180375002436,0488.68,Computer Science (Grade 7),110,45,22,9,0,1,64,13,0
+Franklin Central Junior High,,180375002436,0488.68,Computer Science (Grade 8),146,63,13,11,0,0,63,9,0
+Lillie Idella Kitley Intermediate,,180375002499,0488.35,Computer Science (Grade 4),93,36,9,9,0,0,39,15,0
+Lillie Idella Kitley Intermediate,,180375002499,0488.35,Computer Science (Grade 5),82,37,10,6,0,0,36,20,0
+Lillie Idella Kitley Intermediate,,180375002499,0488.68,Computer Science (Grade 6),125,76,15,5,0,1,42,12,0
+Edgewood Intermediate School,,180948001708,0488.35,Computer Science (Grade 4),88,34,3,11,0,0,45,15,0
+Edgewood Intermediate School,,180948001708,0488.35,Computer Science (Grade 5),84,37,7,9,0,0,44,15,0
+Edgewood Intermediate School,,180948001708,0488.68,Computer Science (Grade 6),92,38,9,9,0,0,47,5,0
+Belzer Middle School,,180567001023,0488.68,Computer Science (Grade 7),90,30,39,28,0,0,63,7,0
+Belzer Middle School,,180567001023,0488.68,Computer Science (Grade 8),36,12,20,10,0,0,30,2,0
+Mary Evelyn Castle Elementary Sch,,180567001032,0488,Computer Science (Grade 1),119,64,41,33,0,0,65,10,0
+Mary Evelyn Castle Elementary Sch,,180567001032,0488,Computer Science (Grade 2),120,61,48,24,0,0,61,11,0
+Mary Evelyn Castle Elementary Sch,,180567001032,0488,Computer Science (Grade 3),108,62,41,26,0,0,68,10,0
+Mary Evelyn Castle Elementary Sch,,180567001032,0488,Computer Science (Grade 4),96,40,39,32,0,0,56,12,0
+Mary Evelyn Castle Elementary Sch,,180567001032,0488,Computer Science (Grade 5),113,66,45,27,0,0,68,10,0
+Mary Evelyn Castle Elementary Sch,,180567001032,0488,Computer Science (Grade 6),107,56,45,26,0,0,67,7,0
+Crestview Elementary School,,180567001026,0488,Computer Science (Grade 1),90,41,47,11,0,0,60,11,0
+Crestview Elementary School,,180567001026,0488,Computer Science (Grade 2),74,36,44,10,0,0,51,5,0
+Crestview Elementary School,,180567001026,0488,Computer Science (Grade 3),104,55,50,13,0,0,68,9,0
+Crestview Elementary School,,180567001026,0488,Computer Science (Grade 4),91,48,51,16,0,0,71,13,0
+Crestview Elementary School,,180567001026,0488,Computer Science (Grade 5),112,49,59,16,1,0,69,17,0
+Crestview Elementary School,,180567001026,0488,Computer Science (Grade 6),114,54,57,16,0,0,73,21,0
+Indian Creek Elementary School,,180567002278,0488.35,Computer Science (Grade 3),119,50,45,62,0,0,93,18,0
+Indian Creek Elementary School,,180567002278,0488.35,Computer Science (Grade 4),111,59,49,46,0,0,80,11,0
+Indian Creek Elementary School,,180567002278,0488.35,Computer Science (Grade 5),103,41,38,45,0,0,80,19,0
+Indian Creek Elementary School,,180567002278,0488.68,Computer Science (Grade 6),116,53,46,48,0,0,84,13,0
+Indian Creek Elementary School,,180567002278,0488.K2,Computer Science (Grade 1),102,43,42,45,0,0,76,11,0
+Indian Creek Elementary School,,180567002278,0488.K2,Computer Science (Grade 2),107,44,36,49,0,0,78,10,0
+Skiles Test Elementary School,,180567001034,0488.35,Computer Science (Grade 3),77,43,41,28,0,0,53,3,0
+Skiles Test Elementary School,,180567001034,0488.35,Computer Science (Grade 4),60,27,37,10,0,0,43,7,0
+Skiles Test Elementary School,,180567001034,0488.35,Computer Science (Grade 5),54,26,35,8,0,1,35,10,0
+Skiles Test Elementary School,,180567001034,0488.68,Computer Science (Grade 5),1,1,1,0,0,0,1,0,0
+Skiles Test Elementary School,,180567001034,0488.68,Computer Science (Grade 6),74,32,52,13,0,0,51,5,0
+Skiles Test Elementary School,,180567001034,0488.K2,Computer Science (Kindergarten),49,29,13,23,0,0,29,2,0
+Skiles Test Elementary School,,180567001034,0488.K2,Computer Science (Grade 1),87,43,42,26,0,0,52,8,0
+Skiles Test Elementary School,,180567001034,0488.K2,Computer Science (Grade 2),85,40,40,26,0,0,61,5,0
+Sunnyside Elementary School,,180567001066,0488.35,Computer Science (Grade 3),102,52,28,61,0,0,86,13,0
+Sunnyside Elementary School,,180567001066,0488.35,Computer Science (Grade 4),116,55,27,81,0,0,87,13,0
+Sunnyside Elementary School,,180567001066,0488.35,Computer Science (Grade 5),138,64,36,88,0,0,111,12,0
+Sunnyside Elementary School,,180567001066,0488.68,Computer Science (Grade 6),123,48,23,83,0,1,99,11,0
+Sunnyside Elementary School,,180567001066,0488.K2,Computer Science (Kindergarten),1,0,0,0,0,0,1,0,0
+Sunnyside Elementary School,,180567001066,0488.K2,Computer Science (Grade 1),82,41,16,55,0,0,58,7,0
+Sunnyside Elementary School,,180567001066,0488.K2,Computer Science (Grade 2),91,42,22,56,0,0,62,6,0
+New Augusta Public Academy - North,,180891000513,0488.68,Computer Science (Grade 6),123,67,68,12,0,0,53,3,0
+Creston Intermediate & Middle Schl,,181236001961,0488.35,Computer Science (Grade 5),211,97,110,43,0,0,138,32,0
+Stonybrook Intermediate & Middle,,181236001970,0488.35,Computer Science (Grade 5),209,106,130,46,0,0,148,41,0
+Allisonville Elementary School,,181272002010,0488.35,Computer Science (Grade 3),118,54,39,14,0,0,45,14,0
+Allisonville Elementary School,,181272002010,0488.35,Computer Science (Grade 4),109,58,37,11,0,0,42,16,0
+Allisonville Elementary School,,181272002010,0488.35,Computer Science (Grade 5),132,73,44,15,0,0,52,21,0
+Allisonville Elementary School,,181272002010,0488.K2,Computer Science (Kindergarten),92,53,26,11,1,0,29,14,0
+Allisonville Elementary School,,181272002010,0488.K2,Computer Science (Grade 1),115,56,34,13,0,0,37,13,0
+Allisonville Elementary School,,181272002010,0488.K2,Computer Science (Grade 2),110,55,34,8,0,0,43,18,0
+Crooked Creek Elementary School,,181272002255,0488.35,Computer Science (Grade 3),89,48,40,15,0,0,47,13,0
+Crooked Creek Elementary School,,181272002255,0488.35,Computer Science (Grade 4),84,44,36,10,0,0,28,12,0
+Crooked Creek Elementary School,,181272002255,0488.35,Computer Science (Grade 5),97,60,43,21,0,1,55,21,0
+Crooked Creek Elementary School,,181272002255,0488.K2,Computer Science (Kindergarten),62,25,23,12,0,0,35,11,0
+Crooked Creek Elementary School,,181272002255,0488.K2,Computer Science (Grade 1),69,31,35,12,0,0,36,14,0
+Crooked Creek Elementary School,,181272002255,0488.K2,Computer Science (Grade 2),65,29,34,13,0,0,36,15,0
+Clearwater Elementary School,,181272002657,0488.35,Computer Science (Grade 3),103,50,40,12,0,1,48,14,0
+Clearwater Elementary School,,181272002657,0488.35,Computer Science (Grade 4),104,46,38,13,0,0,44,11,0
+Clearwater Elementary School,,181272002657,0488.35,Computer Science (Grade 5),121,54,46,20,0,0,57,22,0
+Clearwater Elementary School,,181272002657,0488.K2,Computer Science (Kindergarten),97,57,21,8,0,0,36,9,0
+Clearwater Elementary School,,181272002657,0488.K2,Computer Science (Grade 1),111,60,33,15,0,0,49,12,0
+Clearwater Elementary School,,181272002657,0488.K2,Computer Science (Grade 2),115,57,38,7,0,0,49,11,0
+Clearwater Elementary School,,181272002657,0488.K2,Computer Science (Grade 5),1,0,0,1,0,0,1,0,0
+Nora Elementary School,,181272002020,0488.35,Computer Science (Grade 3),75,36,24,32,0,0,60,12,0
+Nora Elementary School,,181272002020,0488.35,Computer Science (Grade 4),71,29,19,37,0,0,56,12,0
+Nora Elementary School,,181272002020,0488.35,Computer Science (Grade 5),71,29,21,26,0,0,51,15,0
+Nora Elementary School,,181272002020,0488.K2,Computer Science (Kindergarten),85,35,25,34,0,0,58,10,0
+Nora Elementary School,,181272002020,0488.K2,Computer Science (Grade 1),82,43,23,31,0,0,53,12,0
+Nora Elementary School,,181272002020,0488.K2,Computer Science (Grade 2),74,39,20,29,0,0,56,9,0
+Spring Mill Elementary School,,181272002023,0488.35,Computer Science (Grade 2),1,0,0,0,0,0,1,0,0
+Spring Mill Elementary School,,181272002023,0488.35,Computer Science (Grade 3),82,37,40,14,0,0,60,12,0
+Spring Mill Elementary School,,181272002023,0488.35,Computer Science (Grade 4),64,31,40,9,0,0,47,13,0
+Spring Mill Elementary School,,181272002023,0488.35,Computer Science (Grade 5),84,42,45,20,0,0,62,12,0
+Spring Mill Elementary School,,181272002023,0488.K2,Computer Science (Kindergarten),60,37,32,13,0,0,38,5,0
+Spring Mill Elementary School,,181272002023,0488.K2,Computer Science (Grade 1),76,32,45,11,0,0,56,13,0
+Spring Mill Elementary School,,181272002023,0488.K2,Computer Science (Grade 2),87,44,40,27,0,0,65,16,0
+Fox Hill Elementary School,,181272002376,0488.35,Computer Science (Grade 3),105,53,32,30,0,0,60,13,0
+Fox Hill Elementary School,,181272002376,0488.35,Computer Science (Grade 4),108,52,35,34,0,0,62,17,0
+Fox Hill Elementary School,,181272002376,0488.35,Computer Science (Grade 5),119,65,43,46,0,0,82,17,0
+Fox Hill Elementary School,,181272002376,0488.K2,Computer Science (Kindergarten),80,40,31,20,0,0,46,9,0
+Fox Hill Elementary School,,181272002376,0488.K2,Computer Science (Grade 1),103,40,38,34,0,0,65,5,0
+Fox Hill Elementary School,,181272002376,0488.K2,Computer Science (Grade 2),80,38,24,30,1,0,55,8,0
+Maplewood Elementary School,,180363000544,0488.35,Computer Science (Grade 3),119,70,10,46,0,0,99,10,0
+Maplewood Elementary School,,180363000544,0488.35,Computer Science (Grade 4),29,16,2,13,0,0,22,5,0
+Maplewood Elementary School,,180363000544,0488.35,Computer Science (Grade 5),36,20,3,21,0,0,29,4,0
+Maplewood Elementary School,,180363000544,0488.68,Computer Science (Grade 6),119,50,12,55,0,0,88,16,0
+Maplewood Elementary School,,180363000544,0488.K2,Computer Science (Grade 1),90,44,14,37,0,0,74,14,0
+Chapel Glen Elementary School,,181281002030,0488.35,Computer Science (Grade 3),28,14,13,3,0,0,23,1,0
+Chapel Glen Elementary School,,181281002030,0488.35,Computer Science (Grade 4),131,58,61,29,0,0,95,13,0
+Chapel Glen Elementary School,,181281002030,0488.35,"Computer Science, Middle Level (Grade 5)",23,16,9,6,0,0,17,2,0
+Chapel Glen Elementary School,,181281002030,0488.68,"Computer Science, Middle Level (Grade 6)",57,27,27,6,0,0,43,5,0
+Chapel Glen Elementary School,,181281002030,0488.K2,"Computer Science, Middle Level (Kindergarten)",22,9,13,3,0,0,15,0,0
+Chapel Glen Elementary School,,181281002030,0488.K2,"Computer Science, Middle Level (Grade 1)",123,57,51,22,1,1,85,15,0
+Chapel Glen Elementary School,,181281002030,0488.K2,"Computer Science, Middle Level (Grade 2)",92,46,48,18,0,0,75,9,0
+Garden City Elementary School,,181281002033,0488.35,"Computer Science, Middle Level (Grade 3)",20,6,7,10,0,0,13,5,0
+Garden City Elementary School,,181281002033,0488.35,"Computer Science, Middle Level (Grade 4)",24,13,13,8,0,0,15,3,0
+Garden City Elementary School,,181281002033,0488.35,"Computer Science, Middle Level (Grade 5)",17,11,8,5,0,0,14,5,0
+Garden City Elementary School,,181281002033,0488.68,Computer Science (Grade 6),28,14,11,12,0,0,22,3,0
+Garden City Elementary School,,181281002033,0488.K2,Computer Science (Grade 1),23,12,8,10,0,0,16,4,0
+McClelland Elementary School,,181281002035,0488.35,Computer Science (Grade 3),101,38,29,33,0,0,77,19,0
+McClelland Elementary School,,181281002035,0488.35,Computer Science (Grade 4),99,47,31,28,0,1,68,18,0
+McClelland Elementary School,,181281002035,0488.35,Computer Science (Grade 5),34,14,14,10,0,0,28,3,0
+McClelland Elementary School,,181281002035,0488.68,Computer Science (Grade 6),115,56,39,36,0,0,86,20,0
+McClelland Elementary School,,181281002035,0488.K2,Computer Science (Grade 1),22,9,12,7,0,0,18,5,0
+Rhoades Elementary School,,181281002036,0488.35,Computer Science (Grade 3),19,10,6,7,1,0,17,1,0
+Rhoades Elementary School,,181281002036,0488.35,Computer Science (Grade 4),109,57,33,44,0,1,85,18,0
+Rhoades Elementary School,,181281002036,0488.35,Computer Science (Grade 5),102,59,20,50,0,0,85,13,0
+Rhoades Elementary School,,181281002036,0488.68,Computer Science (Grade 6),113,58,23,49,0,0,91,19,0
+Rhoades Elementary School,,181281002036,0488.K2,Computer Science (Grade 1),18,9,7,8,0,0,16,4,0
+Robey Elementary School,,181281002037,0488.35,Computer Science (Grade 3),22,11,11,3,0,0,14,1,0
+Robey Elementary School,,181281002037,0488.35,Computer Science (Grade 4),114,61,50,14,0,0,55,5,0
+Robey Elementary School,,181281002037,0488.35,Computer Science (Grade 5),123,65,40,20,0,0,59,6,0
+Robey Elementary School,,181281002037,0488.68,Computer Science (Grade 6),126,64,54,16,0,0,67,11,0
+Robey Elementary School,,181281002037,0488.K2,Computer Science (Grade 1),27,13,13,3,0,0,20,3,0
+North Wayne Elementary School,,181281000238,0488.35,Computer Science (Grade 3),101,53,71,20,0,1,71,6,0
+North Wayne Elementary School,,181281000238,0488.35,Computer Science (Grade 4),33,14,22,6,0,0,22,4,0
+North Wayne Elementary School,,181281000238,0488.35,Computer Science (Grade 5),34,15,24,6,0,0,24,1,0
+North Wayne Elementary School,,181281000238,0488.68,Computer Science (Grade 6),31,11,20,8,0,0,28,8,0
+North Wayne Elementary School,,181281000238,0488.K2,Computer Science (Kindergarten),1,1,1,0,0,0,1,0,0
+North Wayne Elementary School,,181281000238,0488.K2,Computer Science (Grade 1),120,65,76,30,0,0,87,8,0
+North Wayne Elementary School,,181281000238,0488.K2,Computer Science (Grade 2),77,40,48,25,0,0,47,14,0
+Stout Field Elementary School,,181281002040,0488.35,Computer Science (Grade 3),20,5,4,10,0,0,17,4,0
+Stout Field Elementary School,,181281002040,0488.35,Computer Science (Grade 4),18,10,2,8,0,0,17,0,0
+Stout Field Elementary School,,181281002040,0488.35,Computer Science (Grade 5),19,8,2,6,0,0,18,1,0
+Stout Field Elementary School,,181281002040,0488.68,"Computer Science, Middle Level (Grade 6)",21,12,5,3,0,0,16,3,0
+Stout Field Elementary School,,181281002040,0488.K2,Computer Science (Grade 1),25,13,3,9,0,0,20,3,0
+Westlake Elementary School,,181281002042,0488.35,Computer Science (Grade 3),16,7,9,5,0,0,13,1,0
+Westlake Elementary School,,181281002042,0488.35,Computer Science (Grade 4),18,10,10,6,0,0,15,0,0
+Westlake Elementary School,,181281002042,0488.35,Computer Science (Grade 5),26,11,15,9,0,0,22,3,0
+Westlake Elementary School,,181281002042,0488.68,Computer Science (Grade 6),26,9,14,7,0,0,15,5,0
+Westlake Elementary School,,181281002042,0488.K2,Computer Science (Grade 1),16,11,10,4,0,0,10,0,0
+Chapelwood Elementary School,,181281002031,0488.35,Computer Science (Grade 3),115,65,63,27,1,0,76,15,0
+Chapelwood Elementary School,,181281002031,0488.35,Computer Science (Grade 4),125,70,76,25,0,0,86,16,0
+Chapelwood Elementary School,,181281002031,0488.35,Computer Science (Grade 5),130,71,69,39,0,0,97,24,0
+Chapelwood Elementary School,,181281002031,0488.68,Computer Science (Grade 6),143,71,82,24,1,0,106,24,0
+Chapelwood Elementary School,,181281002031,0488.K2,Computer Science (Kindergarten),93,48,51,19,0,0,67,9,0
+Chapelwood Elementary School,,181281002031,0488.K2,Computer Science (Grade 1),134,68,79,32,2,0,96,9,0
+Chapelwood Elementary School,,181281002031,0488.K2,Computer Science (Grade 2),93,37,52,21,1,0,75,10,0
+Bridgeport Elementary School,,181281002123,0488.35,Computer Science (Grade 3),22,10,11,4,0,0,14,3,0
+Bridgeport Elementary School,,181281002123,0488.35,Computer Science (Grade 4),24,14,12,4,1,0,17,1,0
+Bridgeport Elementary School,,181281002123,0488.35,Computer Science (Grade 5),22,12,14,2,0,0,9,4,0
+Bridgeport Elementary School,,181281002123,0488.68,Computer Science (Grade 6),44,22,25,9,0,0,24,10,0
+Bridgeport Elementary School,,181281002123,0488.K2,Computer Science (Grade 1),27,12,14,5,0,0,18,4,0
+Arlington Community Middle School,,180477002597,0488.68,Computer Science (Grade 7),219,115,158,38,0,0,168,38,0
+Arlington Community Middle School,,180477002597,0488.68,Computer Science (Grade 8),170,81,123,27,0,0,128,30,0
+HW Longfellow Med/STEM Magnet Midl,,180477002630,0488.68,Computer Science (Grade 7),45,16,16,16,0,0,36,0,0
+HW Longfellow Med/STEM Magnet Midl,,180477002630,0488.68,Computer Science (Grade 8),130,68,48,55,0,0,91,9,0
+Cold Spring School,,180477000814,0488.35,Computer Science (Grade 3),51,23,29,6,0,0,34,5,0
+Cold Spring School,,180477000814,0488.35,Computer Science (Grade 4),40,24,23,7,0,0,33,10,0
+Cold Spring School,,180477000814,0488.35,Computer Science (Grade 5),51,20,34,8,0,0,35,8,0
+Cold Spring School,,180477000814,0488.68,Computer Science (Grade 6),45,21,33,7,0,0,33,7,0
+Cold Spring School,,180477000814,0488.68,Computer Science (Grade 7),42,20,27,8,0,0,28,9,0
+Cold Spring School,,180477000814,0488.K2,Computer Science (Grade 2),44,25,30,5,0,0,29,8,0
+Christian Park School 82,,180477000812,0488.35,Computer Science (Grade 3),39,22,9,7,0,0,27,8,0
+Christian Park School 82,,180477000812,0488.35,Computer Science (Grade 4),41,15,10,13,0,0,34,7,0
+Christian Park School 82,,180477000812,0488.35,Computer Science (Grade 5),39,20,6,9,0,0,34,6,0
+Christian Park School 82,,180477000812,0488.68,Computer Science (Grade 6),36,20,7,8,0,0,27,7,0
+Christian Park School 82,,180477000812,0488.K2,Computer Science (Kindergarten),27,7,3,6,0,0,23,2,0
+Christian Park School 82,,180477000812,0488.K2,Computer Science (Grade 1),46,23,10,10,0,0,35,8,0
+Christian Park School 82,,180477000812,0488.K2,Computer Science (Grade 2),43,17,9,6,0,0,33,5,0
+Anna Brochhausen School 88,,180477000797,0488.35,Computer Science (Grade 3),37,17,24,4,0,0,31,3,0
+Anna Brochhausen School 88,,180477000797,0488.35,Computer Science (Grade 4),42,19,30,6,0,0,37,4,0
+Anna Brochhausen School 88,,180477000797,0488.35,Computer Science (Grade 5),41,17,25,8,0,0,29,10,0
+Anna Brochhausen School 88,,180477000797,0488.68,Computer Science (Grade 6),44,23,33,4,0,0,34,9,0
+Anna Brochhausen School 88,,180477000797,0488.K2,Computer Science (Kindergarten),23,8,15,2,0,0,16,3,0
+Anna Brochhausen School 88,,180477000797,0488.K2,Computer Science (Grade 1),53,26,35,8,0,0,44,7,0
+Anna Brochhausen School 88,,180477000797,0488.K2,Computer Science (Grade 2),39,15,30,2,1,0,32,4,0
+George S Buck School 94,,180477001426,0488.35,Computer Science (Grade 1),1,0,1,0,0,0,1,0,0
+George S Buck School 94,,180477001426,0488.35,Computer Science (Grade 3),1,0,1,0,0,0,1,0,0
+George S Buck School 94,,180477001426,0488.35,Computer Science (Grade 5),1,0,1,0,0,0,0,1,0
+George S Buck School 94,,180477001426,0488,Computer Science (Kindergarten),32,13,18,9,0,0,24,4,0
+George S Buck School 94,,180477001426,0488,Computer Science (Grade 1),36,25,17,15,0,0,28,2,0
+George S Buck School 94,,180477001426,0488,Computer Science (Grade 2),36,18,20,10,0,0,27,2,0
+George S Buck School 94,,180477001426,0488,Computer Science (Grade 3),43,24,21,18,0,0,26,4,0
+George S Buck School 94,,180477001426,0488,Computer Science (Grade 4),37,25,24,10,0,0,31,6,0
+George S Buck School 94,,180477001426,0488,Computer Science (Grade 5),32,15,24,4,0,0,23,10,0
+George S Buck School 94,,180477001426,0488,Computer Science (Grade 6),44,25,26,16,0,0,27,7,0
+George S Buck School 94,,180477001426,0488,Computer Science (Grade 7),1,0,1,0,0,0,1,0,0
+James A Allison Elementary Sch 3,,181092001783,0488.35,Computer Science (Grade 3),37,20,22,3,0,0,21,2,0
+James A Allison Elementary Sch 3,,181092001783,0488.35,Computer Science (Grade 4),34,18,17,5,0,1,19,3,0
+James A Allison Elementary Sch 3,,181092001783,0488.35,Computer Science (Grade 5),50,28,17,15,0,0,32,8,0
+James A Allison Elementary Sch 3,,181092001783,0488.68,Computer Science (Grade 6),39,16,14,9,0,0,24,3,0
+James A Allison Elementary Sch 3,,181092001783,0488.K2,Computer Science (Grade 1),36,16,21,7,0,0,22,5,0
+James A Allison Elementary Sch 3,,181092001783,0488.K2,Computer Science (Grade 2),48,22,23,11,0,0,34,4,0
+Carl G Fisher Elementary School 1,,181092001781,0488.35,Computer Science (Grade 2),1,0,0,0,0,0,0,1,0
+Carl G Fisher Elementary School 1,,181092001781,0488.35,Computer Science (Grade 3),22,10,2,1,0,0,8,7,0
+Carl G Fisher Elementary School 1,,181092001781,0488.35,Computer Science (Grade 4),12,5,0,1,0,0,6,5,0
+Carl G Fisher Elementary School 1,,181092001781,0488.35,Computer Science (Grade 5),17,10,1,1,0,0,6,3,0
+Carl G Fisher Elementary School 1,,181092001781,0488.35,Computer Science (Grade 6),1,0,0,0,0,0,1,1,0
+Carl G Fisher Elementary School 1,,181092001781,0488.68,Computer Science (Grade 6),23,9,0,3,0,0,9,3,0
+Carl G Fisher Elementary School 1,,181092001781,0488.K2,Computer Science (Grade 1),14,5,0,2,0,0,6,0,0
+Carl G Fisher Elementary School 1,,181092001781,0488.K2,Computer Science (Grade 2),15,6,2,2,0,0,7,1,0
+Arthur C Newby Elementary School 2,,181092001780,0488.35,Computer Science (Grade 3),28,13,8,2,0,0,11,2,0
+Arthur C Newby Elementary School 2,,181092001780,0488.35,Computer Science (Grade 4),32,13,12,1,0,0,15,4,0
+Arthur C Newby Elementary School 2,,181092001780,0488.35,Computer Science (Grade 5),24,15,6,1,0,0,14,2,0
+Arthur C Newby Elementary School 2,,181092001780,0488.68,Computer Science (Grade 6),35,13,7,5,0,0,20,3,0
+Arthur C Newby Elementary School 2,,181092001780,0488.K2,Computer Science (Grade 1),30,17,13,4,0,0,17,2,0
+Arthur C Newby Elementary School 2,,181092001780,0488.K2,Computer Science (Grade 2),33,14,17,6,0,0,25,2,0
+Frank H Wheeler Elementary Sch 4,,181092001782,0488.35,Computer Science (Grade 3),34,15,10,11,0,1,22,1,0
+Frank H Wheeler Elementary Sch 4,,181092001782,0488.35,Computer Science (Grade 4),49,16,15,16,0,0,32,3,0
+Frank H Wheeler Elementary Sch 4,,181092001782,0488.35,Computer Science (Grade 5),46,27,10,14,0,0,31,3,0
+Frank H Wheeler Elementary Sch 4,,181092001782,0488.68,Computer Science (Grade 6),52,30,11,17,0,0,38,7,0
+Frank H Wheeler Elementary Sch 4,,181092001782,0488.K2,Computer Science (Kindergarten),1,1,1,0,0,0,1,1,0
+Frank H Wheeler Elementary Sch 4,,181092001782,0488.K2,Computer Science (Grade 1),49,31,12,15,0,0,36,3,0
+Frank H Wheeler Elementary Sch 4,,181092001782,0488.K2,Computer Science (Grade 2),49,21,15,14,1,0,32,5,0
+Culver Elementary School,,180252000302,0488,Computer Science (Grade 2),68,35,0,4,0,0,33,13,0
+Pipe Creek Elementary School,,180609002318,0488.K2,Computer Science (Kindergarten),132,57,2,10,0,0,84,12,0
+Pipe Creek Elementary School,,180609002318,0488.K2,Computer Science (Grade 1),144,67,4,14,0,0,92,22,0
+Blair Pointe Upper Elementary,,180885001471,0488.35,Computer Science (Grade 3),148,77,4,3,2,0,49,19,0
+Blair Pointe Upper Elementary,,180885001471,0488.35,Computer Science (Grade 4),119,52,4,8,0,0,65,19,0
+Blair Pointe Upper Elementary,,180885001471,0488.35,Computer Science (Grade 5),124,64,3,2,1,0,79,22,0
+Blair Pointe Upper Elementary,,180885001471,0488.68,Computer Science (Grade 6),141,71,3,6,0,0,75,13,0
+Edgewood Junior High School,,180948001547,0488.68,Computer Science (Grade 6),47,25,1,5,0,0,12,4,0
+Edgewood Junior High School,,180948001547,0488.68,Computer Science (Grade 7),45,27,0,0,1,0,7,4,0
+Southmont Jr High School,,181045002325,0488.68,Computer Science (Grade 8),51,25,0,3,1,0,18,9,0
+John R. Wooden Middle School,,180651002600,0488.68,Computer Science (Grade 7),61,30,0,0,0,0,25,6,0
+Bell Intermediate Academy,,180651002612,0488.35,Computer Science (Grade 5),118,55,0,4,0,0,54,14,0
+Bell Intermediate Academy,,180651002612,0488.68,Computer Science (Grade 6),149,66,2,3,0,0,78,20,0
+Orleans Elementary School,,180849001436,0488.35,Computer Science (Grade 3),65,29,1,1,0,0,28,16,0
+Orleans Elementary School,,180849001436,0488.35,Computer Science (Grade 4),78,39,1,0,0,0,41,11,0
+Orleans Elementary School,,180849001436,0488.35,Computer Science (Grade 5),55,33,0,0,0,0,27,12,0
+Orleans Elementary School,,180849001436,0488.68,Computer Science (Grade 6),57,26,0,1,0,0,29,14,0
+Orleans Elementary School,,180849001436,0488.K2,Computer Science (Kindergarten),60,31,0,0,0,0,37,10,0
+Orleans Elementary School,,180849001436,0488.K2,Computer Science (Grade 1),63,31,0,0,0,0,41,7,0
+Orleans Elementary School,,180849001436,0488.K2,Computer Science (Grade 2),54,28,0,0,0,0,33,8,0
+Cannelton Elementary & High School,,180117000191,0488.35,Computer Science (Grade 6),14,6,0,0,0,0,10,3,0
+William Tell Elementary School,,181126001282,0488.35,Computer Science (Grade 5),106,56,1,2,0,0,46,23,0
+William Tell Elementary School,,181126001282,0488.68,Computer Science (Grade 6),103,53,0,2,0,0,51,24,0
+William Tell Elementary School,,181126001282,0488.K2,Computer Science (Kindergarten),116,67,1,3,0,0,66,27,0
+William Tell Elementary School,,181126001282,0488.K2,Computer Science (Grade 1),101,47,2,2,0,0,59,30,0
+William Tell Elementary School,,181126001282,0488.K2,Computer Science (Grade 2),98,45,2,2,0,0,42,26,0
+William Tell Elementary School,,181126001282,0488.K2,Computer Science (Grade 3),93,39,0,1,0,0,43,23,0
+William Tell Elementary School,,181126001282,0488.K2,Computer Science (Grade 4),102,45,1,3,1,0,51,27,0
+Rockville Elementary School,,180011801578,0488.35,Computer Science (Grade 3),50,18,0,3,0,0,32,10,0
+Rockville Elementary School,,180011801578,0488.35,Computer Science (Grade 4),48,19,0,5,0,0,34,4,0
+Rockville Elementary School,,180011801578,0488.35,Computer Science (Grade 5),50,28,2,2,0,0,27,8,0
+Rockville Elementary School,,180011801578,0488.K2,Computer Science (Kindergarten),66,27,0,2,0,0,38,14,0
+Rockville Elementary School,,180011801578,0488.K2,Computer Science (Grade 1),47,26,2,1,0,0,25,7,0
+Rockville Elementary School,,180011801578,0488.K2,Computer Science (Grade 2),53,24,2,1,0,0,33,7,0
+Turkey Run Elementary School,,180011801857,0488.35,Computer Science (Kindergarten),5,4,0,0,0,0,4,4,0
+Turkey Run Elementary School,,180011801857,0488.35,Computer Science (Grade 1),2,0,0,0,0,0,1,2,0
+Turkey Run Elementary School,,180011801857,0488.35,Computer Science (Grade 2),2,1,0,0,0,0,1,2,0
+Turkey Run Elementary School,,180011801857,0488.35,Computer Science (Grade 3),29,13,0,1,0,0,13,6,0
+Turkey Run Elementary School,,180011801857,0488.35,Computer Science (Grade 4),37,22,0,0,0,0,21,6,0
+Turkey Run Elementary School,,180011801857,0488.35,Computer Science (Grade 5),43,20,0,1,1,0,30,12,0
+Turkey Run Elementary School,,180011801857,0488.K2,Computer Science (Kindergarten),50,16,0,0,0,0,27,9,0
+Turkey Run Elementary School,,180011801857,0488.K2,Computer Science (Grade 1),34,16,0,1,0,0,21,4,0
+Turkey Run Elementary School,,180011801857,0488.K2,Computer Science (Grade 2),35,20,0,0,0,0,20,4,0
+Turkey Run Elementary School,,180011801857,0488.K2,Computer Science (Grade 4),1,1,0,0,0,0,0,0,0
+Pike Central Middle School,,180890000889,0488.68,Computer Science (Grade 6),95,44,0,2,0,0,36,13,0
+Winslow Elementary School,,180890001483,0488.35,Computer Science (Grade 2),1,1,0,0,0,0,1,0,0
+Winslow Elementary School,,180890001483,0488.35,Computer Science (Grade 3),49,28,0,0,0,0,26,10,0
+Winslow Elementary School,,180890001483,0488.35,Computer Science (Grade 4),42,22,0,1,0,0,19,8,0
+Winslow Elementary School,,180890001483,0488.35,Computer Science (Grade 5),48,28,0,0,0,0,24,9,0
+Winslow Elementary School,,180890001483,0488.K2,Computer Science (Pre-Kindergarten),11,7,0,0,0,0,6,2,0
+Winslow Elementary School,,180890001483,0488.K2,Computer Science (Kindergarten),42,17,0,0,0,0,23,10,0
+Winslow Elementary School,,180890001483,0488.K2,Computer Science (Grade 1),46,23,0,0,0,0,21,13,0
+Winslow Elementary School,,180890001483,0488.K2,Computer Science (Grade 2),41,23,0,0,0,0,26,8,0
+Winslow Elementary School,,180890001483,0488.K2,Computer Science (Grade 5),1,1,0,0,0,0,1,1,0
+Petersburg Elementary School,,180890001481,0488.35,Computer Science (Grade 3),60,27,0,0,1,0,37,10,0
+Petersburg Elementary School,,180890001481,0488.35,Computer Science (Grade 4),70,34,0,2,0,0,28,13,0
+Petersburg Elementary School,,180890001481,0488.35,Computer Science (Grade 5),70,42,0,2,0,0,34,3,0
+Petersburg Elementary School,,180890001481,0488.K2,Computer Science (Kindergarten),75,40,0,2,0,0,41,14,0
+Petersburg Elementary School,,180890001481,0488.K2,Computer Science (Grade 1),72,30,0,1,0,0,36,12,0
+Petersburg Elementary School,,180890001481,0488.K2,Computer Science (Grade 2),81,38,0,2,0,0,47,16,0
+Union Center Elementary School,,181170001872,0488.35,Computer Science (Grade 3),62,32,1,10,0,0,11,5,0
+Union Center Elementary School,,181170001872,0488.35,Computer Science (Grade 4),67,34,2,7,0,0,17,11,0
+Union Center Elementary School,,181170001872,0488.35,Computer Science (Grade 5),59,32,1,13,0,0,10,11,0
+Union Center Elementary School,,181170001872,0488.K2,Computer Science (Kindergarten),53,25,0,9,0,0,10,2,0
+Union Center Elementary School,,181170001872,0488.K2,Computer Science (Grade 1),68,28,1,11,0,0,16,5,0
+Union Center Elementary School,,181170001872,0488.K2,Computer Science (Grade 2),67,25,0,6,0,0,11,12,0
+John Simatovich Elementary School,,181170002218,0488.35,Computer Science (Grade 3),43,19,3,6,1,0,21,12,0
+John Simatovich Elementary School,,181170002218,0488.35,Computer Science (Grade 4),39,15,3,4,0,0,17,14,0
+John Simatovich Elementary School,,181170002218,0488.35,Computer Science (Grade 5),34,17,3,3,0,0,14,6,0
+John Simatovich Elementary School,,181170002218,0488.K2,Computer Science (Kindergarten),37,17,1,5,0,0,20,8,0
+John Simatovich Elementary School,,181170002218,0488.K2,Computer Science (Grade 1),42,25,0,8,0,0,13,4,0
+John Simatovich Elementary School,,181170002218,0488.K2,Computer Science (Grade 2),37,18,0,3,0,0,16,10,0
+Benjamin Franklin Middle School,,181197001881,0488.68,"Computer Science, Middle Level (Grade 8)",95,42,4,6,0,0,17,5,0
+Thomas Jefferson Middle School,,181197001890,0488.68,"Computer Science, Middle Level (Grade 8)",79,43,5,9,0,0,33,10,0
+Mount Vernon Jr High School,,180729001227,0488.68,"Computer Science, Middle Level (Grade 6)",57,25,1,4,0,0,22,19,0
+Mount Vernon Jr High School,,180729001227,0488.68,"Computer Science, Middle Level (Grade 7)",74,38,3,2,0,0,27,15,0
+Mount Vernon Jr High School,,180729001227,0488.68,"Computer Science, Middle Level (Grade 8)",67,29,4,3,1,0,23,13,0
+North Putnam Middle School,,180798000316,0488.68,Computer Science (Grade 6),18,10,0,0,0,0,9,1,0
+North Putnam Middle School,,180798000316,0488.68,Computer Science (Grade 7),11,6,0,0,0,0,4,1,0
+North Putnam Middle School,,180798000316,0488.68,Computer Science (Grade 8),1,1,0,0,0,0,0,0,0
+Tzouanakis Intermediate School,,180399000693,0488.35,Computer Science (Grade 3),131,63,1,4,0,0,64,27,0
+Tzouanakis Intermediate School,,180399000693,0488.35,Computer Science (Grade 4),115,54,1,3,0,0,62,23,0
+Tzouanakis Intermediate School,,180399000693,0488.35,Computer Science (Grade 5),128,68,0,3,0,0,58,26,0
+Indiana Digital Elementary,,181173002654,0488.68,Computer Science (Grade 5),2,0,1,0,1,0,2,1,0
+Indiana Digital Elementary,,181173002654,0488.68,Computer Science (Grade 6),397,190,60,31,0,0,310,100,0
+Indiana Digital Elementary,,181173002654,0488.K2,Computer Science (Kindergarten),373,188,90,31,2,1,305,29,0
+Indiana Digital Elementary,,181173002654,0488.K2,Computer Science (Grade 1),329,156,50,42,1,0,259,41,0
+Indiana Digital Elementary,,181173002654,0488.K2,Computer Science (Grade 2),378,186,76,21,4,0,281,53,0
+Indiana Digital Elementary,,181173002654,0488.K2,Computer Science (Grade 3),1,1,0,0,0,0,1,0,0
+Randolph Southern Elementary Sch,,181074001762,0488.35,Computer Science (Grade 3),20,10,0,2,0,0,11,4,0
+Randolph Southern Elementary Sch,,181074001762,0488.35,Computer Science (Grade 4),31,18,0,1,0,0,18,7,0
+Randolph Southern Elementary Sch,,181074001762,0488.35,Computer Science (Grade 5),34,17,0,1,0,0,19,8,0
+Randolph Southern Elementary Sch,,181074001762,0488.68,Computer Science (Grade 6),35,21,0,1,0,0,23,6,0
+Randolph Southern Elementary Sch,,181074001762,0488.K2,Computer Science (Kindergarten),37,17,0,0,0,0,21,16,0
+Randolph Southern Elementary Sch,,181074001762,0488.K2,Computer Science (Grade 1),31,18,0,3,0,0,18,6,0
+Randolph Southern Elementary Sch,,181074001762,0488.K2,Computer Science (Grade 2),32,17,0,1,0,0,22,9,0
+Randolph Southern Elementary Sch,,181074001762,0488.K2,Computer Science (Grade 3),19,8,0,1,1,0,12,2,0
+Lee L Driver Middle School,,180177000235,0488.68,Computer Science (Grade 6),50,23,0,2,0,0,27,8,0
+O R Baker Elementary School,,180177000236,0488.K2,Computer Science (Kindergarten),81,47,0,6,0,0,45,20,0
+O R Baker Elementary School,,180177000236,0488.K2,Computer Science (Grade 1),75,29,0,1,0,0,49,18,0
+O R Baker Elementary School,,180177000236,0488.K2,Computer Science (Grade 2),78,44,0,1,1,0,42,18,0
+Willard Elementary School,,180177000241,0488.35,Computer Science (Grade 3),74,38,0,2,0,0,41,23,0
+Willard Elementary School,,180177000241,0488.35,Computer Science (Grade 4),62,31,0,3,0,0,28,19,0
+Willard Elementary School,,180177000241,0488.35,Computer Science (Grade 5),64,33,0,3,0,0,45,14,0
+Deerfield Elementary School,,180177002191,0488.35,Computer Science (Grade 3),30,16,0,2,0,0,17,8,0
+Deerfield Elementary School,,180177002191,0488.35,Computer Science (Grade 4),22,11,0,0,0,0,11,6,0
+Deerfield Elementary School,,180177002191,0488.35,Computer Science (Grade 5),20,12,0,0,0,0,14,3,0
+Deerfield Elementary School,,180177002191,0488.K2,Computer Science (Kindergarten),29,21,0,1,0,0,14,9,0
+Deerfield Elementary School,,180177002191,0488.K2,Computer Science (Grade 1),14,6,0,0,0,0,8,3,0
+Deerfield Elementary School,,180177002191,0488.K2,Computer Science (Grade 2),20,13,0,0,0,0,12,3,0
+Milan Middle School,,180663001626,0488.68,Computer Science (Grade 7),2,0,0,0,0,0,1,0,0
+Milan Middle School,,180663001626,0488.68,Computer Science (Grade 8),1,0,0,0,0,0,1,0,0
+Milan Elementary School,,180663001167,0488.35,Computer Science (Grade 3),58,29,0,0,0,0,35,15,0
+Milan Elementary School,,180663001167,0488.35,Computer Science (Grade 4),77,37,0,1,0,0,40,24,0
+Milan Elementary School,,180663001167,0488.K2,Computer Science (Kindergarten),62,25,0,1,0,0,29,7,0
+Milan Elementary School,,180663001167,0488.K2,Computer Science (Grade 1),68,29,0,0,0,0,42,10,0
+Milan Elementary School,,180663001167,0488.K2,Computer Science (Grade 2),78,38,0,0,0,0,42,14,0
+Lincoln Elementary School,,180786001341,0488.35,Computer Science (Grade 2),1,0,1,0,0,0,0,1,0
+Lincoln Elementary School,,180786001341,0488.35,Computer Science (Grade 3),73,36,29,24,0,1,64,9,0
+Lincoln Elementary School,,180786001341,0488.35,Computer Science (Grade 4),74,22,33,23,1,0,57,14,0
+Lincoln Elementary School,,180786001341,0488.35,Computer Science (Grade 5),77,42,32,22,0,1,66,13,0
+Lincoln Elementary School,,180786001341,0488.K2,Computer Science (Kindergarten),51,20,21,12,1,0,6,7,0
+Lincoln Elementary School,,180786001341,0488.K2,Computer Science (Grade 1),62,29,26,11,0,0,49,15,0
+Lincoln Elementary School,,180786001341,0488.K2,Computer Science (Grade 2),80,39,35,22,0,0,65,16,0
+Madison S.T.E.A.M. Academy ,,181029001658,0488.35,Computer Science (Grade 1),115,45,64,27,0,0,101,18,0
+Madison S.T.E.A.M. Academy ,,181029001658,0488.35,Computer Science (Grade 2),98,47,44,32,0,0,86,19,0
+Madison S.T.E.A.M. Academy ,,181029001658,0488.35,Computer Science (Grade 3),107,48,53,29,0,1,98,29,0
+Madison S.T.E.A.M. Academy ,,181029001658,0488.35,Computer Science (Grade 4),94,56,45,32,0,0,91,20,0
+Madison S.T.E.A.M. Academy ,,181029001658,0488.35,Computer Science (Grade 5),83,37,43,27,0,0,78,23,0
+Madison S.T.E.A.M. Academy ,,181029001658,0488.K2,Computer Science (Kindergarten),87,45,47,22,0,0,29,7,0
+Madison S.T.E.A.M. Academy ,,181029001658,0488.K2,Computer Science (Grade 1),1,0,0,0,0,0,1,0,0
+Chrisney Elementary School,,180801001373,0488.35,Computer Science (Grade 3),28,14,0,0,0,0,10,8,0
+Chrisney Elementary School,,180801001373,0488.35,Computer Science (Grade 4),30,13,0,0,0,0,18,11,0
+Chrisney Elementary School,,180801001373,0488.35,Computer Science (Grade 5),29,17,0,0,0,0,13,4,0
+Chrisney Elementary School,,180801001373,0488.68,Computer Science (Grade 6),36,14,0,0,0,0,15,7,0
+Chrisney Elementary School,,180801001373,0488.K2,Computer Science (Kindergarten),28,12,1,0,0,0,12,6,0
+Chrisney Elementary School,,180801001373,0488.K2,Computer Science (Grade 1),22,7,0,0,0,0,9,6,0
+Chrisney Elementary School,,180801001373,0488.K2,Computer Science (Grade 2),24,11,0,0,0,0,7,4,0
+David Turnham Education Center,,180801001375,0488.35,Computer Science (Grade 3),38,23,1,10,0,0,17,8,0
+David Turnham Education Center,,180801001375,0488.35,Computer Science (Grade 4),41,23,0,8,1,0,22,12,0
+David Turnham Education Center,,180801001375,0488.35,Computer Science (Grade 5),35,23,0,10,0,0,16,5,0
+David Turnham Education Center,,180801001375,0488.68,Computer Science (Grade 6),34,21,0,6,0,0,17,7,0
+David Turnham Education Center,,180801001375,0488.K2,Computer Science (Kindergarten),21,10,0,6,0,0,11,5,0
+David Turnham Education Center,,180801001375,0488.K2,Computer Science (Grade 2),24,11,0,9,0,0,15,8,0
+Nancy Hanks Elementary School,,180801000167,0488.35,Computer Science (Grade 4),35,17,0,0,0,0,6,11,0
+Nancy Hanks Elementary School,,180801000167,0488.35,Computer Science (Grade 5),31,8,0,0,0,0,4,7,0
+Nancy Hanks Elementary School,,180801000167,0488.68,Computer Science (Grade 6),30,16,0,0,0,0,6,9,0
+Lincoln Trail Elementary School,,180801000174,0488.35,Computer Science (Grade 3),46,24,1,1,0,0,12,8,0
+Lincoln Trail Elementary School,,180801000174,0488.35,Computer Science (Grade 4),50,23,1,0,0,0,15,8,0
+Lincoln Trail Elementary School,,180801000174,0488.35,Computer Science (Grade 5),34,13,0,1,0,0,9,5,0
+Lincoln Trail Elementary School,,180801000174,0488.68,Computer Science (Grade 6),49,23,0,3,0,0,13,8,0
+Lincoln Trail Elementary School,,180801000174,0488.K2,Computer Science (Grade 1),48,22,1,1,0,0,13,6,0
+Lincoln Trail Elementary School,,180801000174,0488.K2,Computer Science (Grade 2),56,33,1,0,0,0,12,12,0
+Knox Community Elementary School,,180534000940,0488,Computer Science (Kindergarten),134,58,0,6,0,0,75,14,0
+Knox Community Elementary School,,180534000940,0488,Computer Science (Grade 1),118,55,1,7,1,0,73,16,0
+Knox Community Elementary School,,180534000940,0488,Computer Science (Grade 2),116,56,0,4,1,0,62,20,0
+Knox Community Elementary School,,180534000940,0488,Computer Science (Grade 3),112,53,0,10,1,0,65,13,0
+Knox Community Elementary School,,180534000940,0488,Computer Science (Grade 4),109,48,0,4,0,0,61,14,0
+Fremont Elementary School,,180378000600,0488.35,Computer Science (Grade 3),52,22,0,0,1,0,28,7,0
+Fremont Elementary School,,180378000600,0488.35,Computer Science (Grade 4),69,32,0,2,0,0,25,9,0
+Fremont Elementary School,,180378000600,0488.K2,Computer Science (Grade 2),58,29,0,3,0,0,29,10,0
+Hamilton Community Elementary Sch,,180423000723,0488.35,Computer Science (Grade 3),22,12,0,1,0,0,11,4,0
+Hamilton Community Elementary Sch,,180423000723,0488.35,Computer Science (Grade 4),23,13,0,0,0,0,7,3,0
+Hamilton Community Elementary Sch,,180423000723,0488.35,Computer Science (Grade 5),24,12,0,0,0,0,8,4,0
+Hamilton Community Elementary Sch,,180423000723,0488.K2,Computer Science (Kindergarten),29,21,0,1,0,0,11,3,0
+Hamilton Community Elementary Sch,,180423000723,0488.K2,Computer Science (Grade 1),22,11,0,0,0,0,9,4,0
+Hamilton Community Elementary Sch,,180423000723,0488.K2,Computer Science (Grade 2),30,14,0,0,0,0,16,2,0
+Switzerland Co Middle School,,181122000806,0488.68,Computer Science (Grade 7),11,5,0,0,0,0,11,2,0
+Switzerland Co Elementary School,,181122002170,0488.35,Computer Science (Grade 3),52,20,1,2,0,0,29,11,0
+Switzerland Co Elementary School,,181122002170,0488.35,Computer Science (Grade 4),53,19,1,0,0,0,30,18,0
+Switzerland Co Elementary School,,181122002170,0488.35,Computer Science (Grade 5),47,15,1,0,0,0,26,14,0
+Switzerland Co Elementary School,,181122002170,0488.68,Computer Science (Grade 6),50,30,1,0,0,0,34,12,0
+Switzerland Co Elementary School,,181122002170,0488.K2,Computer Science (Kindergarten),49,24,0,2,0,0,26,6,0
+Switzerland Co Elementary School,,181122002170,0488.K2,Computer Science (Grade 1),65,38,1,1,0,0,47,12,0
+Switzerland Co Elementary School,,181122002170,0488.K2,Computer Science (Grade 2),59,33,1,0,0,0,31,16,0
+Lafayette Sunnyside Intermediate,,180540000974,0488.35,Computer Science (Grade 5),179,90,35,60,0,0,129,40,0
+Lafayette Tecumseh Jr High School,,180540000975,0488.68,Computer Science (Grade 7),87,27,16,21,0,0,71,16,0
+Lafayette Tecumseh Jr High School,,180540000975,0488.68,Computer Science (Grade 8),2,1,0,1,0,0,1,0,0
+Tipton Elementary School,,181140001844,0488.35,Computer Science (Grade 3),85,42,0,3,0,0,37,17,0
+Tipton Elementary School,,181140001844,0488.35,Computer Science (Grade 4),75,35,2,7,0,0,33,11,0
+Tipton Elementary School,,181140001844,0488.35,Computer Science (Grade 5),94,46,0,8,0,0,41,17,0
+Tipton Elementary School,,181140001844,0488.K2,Computer Science (Kindergarten),69,29,0,0,0,0,28,5,0
+Tipton Elementary School,,181140001844,0488.K2,Computer Science (Grade 1),82,43,1,3,0,0,37,19,0
+Tipton Elementary School,,181140001844,0488.K2,Computer Science (Grade 2),79,30,1,4,1,0,33,11,0
+Cynthia Heights Elementary School,,180345000460,0488.35,Computer Science (Grade 3),92,46,1,3,0,0,39,11,0
+Cynthia Heights Elementary School,,180345000460,0488.35,Computer Science (Grade 4),64,34,1,3,0,0,22,2,0
+Cynthia Heights Elementary School,,180345000460,0488.35,Computer Science (Grade 5),95,52,0,0,0,0,30,5,0
+Cynthia Heights Elementary School,,180345000460,0488.K2,Computer Science (Grade 2),73,30,1,1,0,0,31,14,0
+McCutchanville Elementary School,,180345002627,0488.35,Computer Science (Grade 3),107,47,3,2,0,1,16,12,0
+McCutchanville Elementary School,,180345002627,0488.35,Computer Science (Grade 4),115,56,3,2,0,0,27,10,0
+McCutchanville Elementary School,,180345002627,0488.35,Computer Science (Grade 5),123,63,2,3,0,0,14,10,0
+McCutchanville Elementary School,,180345002627,0488.68,Computer Science (Grade 6),105,44,2,2,0,0,20,6,0
+McCutchanville Elementary School,,180345002627,0488.K2,Computer Science (Kindergarten),120,52,3,4,0,0,17,13,0
+McCutchanville Elementary School,,180345002627,0488.K2,Computer Science (Grade 1),121,53,0,3,0,0,18,8,0
+McCutchanville Elementary School,,180345002627,0488.K2,Computer Science (Grade 2),115,55,3,1,1,1,18,6,0
+Fairlawn Elementary School,,180345000465,0488.35,Computer Science (Grade 3),43,23,9,2,0,2,36,7,0
+Fairlawn Elementary School,,180345000465,0488.35,Computer Science (Grade 4),44,20,11,2,0,0,37,10,0
+Fairlawn Elementary School,,180345000465,0488.35,Computer Science (Grade 5),53,25,10,7,1,0,44,8,0
+Fairlawn Elementary School,,180345000465,0488.K2,Computer Science (Kindergarten),64,31,11,2,2,1,49,6,0
+Fairlawn Elementary School,,180345000465,0488.K2,Computer Science (Grade 1),54,32,10,8,0,1,43,6,0
+Fairlawn Elementary School,,180345000465,0488.K2,Computer Science (Grade 2),50,22,10,6,1,1,39,11,0
+Hebron Elementary School,,180075000152,0488.35,Computer Science (Grade 4),82,48,18,9,1,0,39,8,0
+Hebron Elementary School,,180075000152,0488.35,Computer Science (Grade 5),100,44,17,5,0,0,44,14,0
+Helfrich Park STEM Academy,,180345000471,0488.68,Computer Science (Grade 6),44,27,1,0,0,0,26,6,0
+Helfrich Park STEM Academy,,180345000471,0488.68,Computer Science (Grade 7),65,31,1,2,0,0,32,9,0
+Helfrich Park STEM Academy,,180345000471,0488.68,Computer Science (Grade 8),49,27,3,1,0,0,23,10,0
+Stockwell Elementary School,,180345000483,0488.35,Computer Science (Grade 3),77,47,13,14,0,1,51,6,0
+Stockwell Elementary School,,180345000483,0488.35,Computer Science (Grade 4),89,43,23,9,0,1,59,12,0
+Stockwell Elementary School,,180345000483,0488.35,Computer Science (Grade 5),83,38,15,11,0,1,52,9,0
+Stockwell Elementary School,,180345000483,0488.K2,Computer Science (Kindergarten),94,44,21,11,0,0,65,5,0
+Stockwell Elementary School,,180345000483,0488.K2,Computer Science (Grade 1),79,35,17,7,0,1,57,9,0
+Stockwell Elementary School,,180345000483,0488.K2,Computer Science (Grade 2),81,39,27,4,1,1,64,7,0
+Highland Elementary School,,180345000472,0488.35,Computer Science (Grade 4),146,79,5,4,1,1,64,15,0
+Highland Elementary School,,180345000472,0488.35,Computer Science (Grade 5),126,63,5,3,0,1,50,14,0
+Vogel Elementary School,,180345000487,0488.35,Computer Science (Grade 3),84,39,1,8,0,1,55,11,0
+Vogel Elementary School,,180345000487,0488.35,Computer Science (Grade 4),73,44,3,6,0,1,44,12,0
+Vogel Elementary School,,180345000487,0488.35,Computer Science (Grade 5),75,41,8,4,0,0,45,14,0
+Vogel Elementary School,,180345000487,0488.68,Computer Science (Grade 6),77,33,7,3,0,0,48,8,0
+Vogel Elementary School,,180345000487,0488.K2,Computer Science (Kindergarten),57,33,8,6,0,0,33,4,0
+Vogel Elementary School,,180345000487,0488.K2,Computer Science (Grade 1),79,36,4,5,0,1,49,7,0
+Vogel Elementary School,,180345000487,0488.K2,Computer Science (Grade 2),74,35,5,3,0,0,53,11,0
+West Terrace Elementary School,,180345000489,0488.35,Computer Science (Grade 3),121,66,1,1,1,0,20,9,0
+West Terrace Elementary School,,180345000489,0488.35,Computer Science (Grade 4),100,49,4,1,1,0,15,8,0
+West Terrace Elementary School,,180345000489,0488.35,Computer Science (Grade 5),104,46,2,0,0,0,26,12,0
+West Terrace Elementary School,,180345000489,0488.K2,Computer Science (Pre-Kindergarten),2,2,0,0,0,0,0,0,0
+West Terrace Elementary School,,180345000489,0488.K2,Computer Science (Kindergarten),83,45,2,0,1,0,25,8,0
+West Terrace Elementary School,,180345000489,0488.K2,Computer Science (Grade 1),84,43,1,0,0,0,16,8,0
+West Terrace Elementary School,,180345000489,0488.K2,Computer Science (Grade 2),89,40,1,2,0,0,23,7,0
+Ernie Pyle Elementary School,,181059001736,0488.35,Computer Science (Grade 3),33,17,0,1,0,0,19,6,0
+Ernie Pyle Elementary School,,181059001736,0488.35,Computer Science (Grade 4),27,13,0,0,0,0,14,4,0
+Ernie Pyle Elementary School,,181059001736,0488.35,Computer Science (Grade 5),30,12,0,0,0,0,19,4,0
+Ernie Pyle Elementary School,,181059001736,0488.K2,Computer Science (Kindergarten),24,13,0,0,0,0,17,6,0
+Ernie Pyle Elementary School,,181059001736,0488.K2,Computer Science (Grade 1),35,20,1,0,0,0,21,5,0
+Ernie Pyle Elementary School,,181059001736,0488.K2,Computer Science (Grade 2),37,19,0,0,0,0,24,5,0
+South Vermillion Middle School,,181059001740,0488.68,Computer Science (Grade 7),98,46,0,1,0,0,58,20,0
+Van Duyn Elementary School,,181059001741,0488.35,Computer Science (Grade 2),2,2,0,0,0,0,1,1,0
+Van Duyn Elementary School,,181059001741,0488.35,Computer Science (Grade 3),36,14,0,1,0,0,19,4,0
+Van Duyn Elementary School,,181059001741,0488.35,Computer Science (Grade 4),31,14,0,0,0,0,11,6,0
+Van Duyn Elementary School,,181059001741,0488.35,Computer Science (Grade 5),39,11,0,1,0,0,18,9,0
+Van Duyn Elementary School,,181059001741,0488.K2,Computer Science (Grade 1),33,15,0,0,0,0,18,5,0
+Van Duyn Elementary School,,181059001741,0488.K2,Computer Science (Grade 2),38,23,0,0,0,0,21,7,0
+Van Duyn Elementary School,,181059001741,0488.K2,Computer Science (Grade 3),1,1,0,0,0,0,1,1,0
+Van Duyn Elementary School,,181059001741,0488.K2,Computer Science (Grade 4),1,0,0,0,0,0,1,1,0
+Northeastern Elementary School,,180819002228,0488.35,Computer Science (Grade 3),79,35,3,2,0,0,40,12,0
+Northeastern Elementary School,,180819002228,0488.35,Computer Science (Grade 4),100,45,0,4,1,1,43,16,0
+Northeastern Elementary School,,180819002228,0488.35,Computer Science (Grade 5),112,58,2,0,0,0,53,19,0
+Northeastern Elementary School,,180819002228,0488.K2,Computer Science (Pre-Kindergarten),1,0,0,0,0,0,1,1,0
+Northeastern Elementary School,,180819002228,0488.K2,Computer Science (Kindergarten),84,43,1,0,1,0,40,18,0
+Northeastern Elementary School,,180819002228,0488.K2,Computer Science (Grade 1),80,38,1,1,0,0,39,10,0
+Northeastern Elementary School,,180819002228,0488.K2,Computer Science (Grade 2),80,48,1,3,0,0,39,14,0
+Northeastern Middle School,,180819002567,0488.68,Computer Science (Grade 6),13,5,0,0,0,0,4,0,0
+Northeastern Middle School,,180819002567,0488.68,Computer Science (Grade 7),15,2,0,0,0,0,8,1,0
+Northeastern Middle School,,180819002567,0488.68,Computer Science (Grade 8),4,0,0,0,0,0,2,0,0
+Bluffton-Harrison Elementary Sch,,180072000149,0488.35,Computer Science (Grade 3),153,82,4,13,0,0,73,26,0
+Bluffton-Harrison Elementary Sch,,180072000149,0488.35,Computer Science (Grade 4),145,76,0,13,0,1,77,33,0
+Bluffton-Harrison Elementary Sch,,180072000149,0488.K2,Computer Science (Grade 1),130,68,2,18,0,0,60,21,0
+Bluffton-Harrison Elementary Sch,,180072000149,0488.K2,Computer Science (Grade 2),113,45,1,10,0,0,51,18,0
+Roosevelt Middle School,,181158001862,0488.68,Computer Science (Grade 6),69,35,0,8,0,0,40,3,0
+Roosevelt Middle School,,181158001862,0488.68,Computer Science (Grade 7),35,14,0,6,1,0,23,1,0
+Roosevelt Middle School,,181158001862,0488.68,Computer Science (Grade 8),41,9,0,5,0,0,19,3,0
+Christel House Academy West,,180014902568,0488.35,Computer Science (Grade 3),56,27,30,21,0,0,48,7,0
+Christel House Academy West,,180014902568,0488.35,Computer Science (Grade 4),56,28,18,29,0,0,48,10,0
+Christel House Academy West,,180014902568,0488.35,Computer Science (Grade 5),54,34,15,32,0,0,38,8,0
+Christel House Academy West,,180014902568,0488.68,Computer Science (Grade 6),55,29,16,31,0,0,45,6,0
+Christel House Academy West,,180014902568,0488.68,Computer Science (Grade 7),56,25,18,30,0,0,45,10,0
+Christel House Academy West,,180014902568,0488.68,Computer Science (Grade 8),45,25,21,19,0,0,38,9,0
+Christel House Academy West,,180014902568,0488.K2,Computer Science (Kindergarten),55,15,20,27,0,0,50,2,0
+Christel House Academy West,,180014902568,0488.K2,Computer Science (Grade 1),54,21,24,29,0,0,49,3,0
+Christel House Academy West,,180014902568,0488.K2,Computer Science (Grade 2),58,32,28,24,0,0,46,11,0
+Gary Lighthouse Charter School,,180005202155,0488.35,Computer Science (Grade 4),55,31,48,4,0,0,55,9,0
+Gary Lighthouse Charter School,,180005202155,0488.35,Computer Science (Grade 5),47,23,46,1,0,0,47,15,0
+Gary Lighthouse Charter School,,180005202155,0488.35,Computer Science (Grade 6),5,0,4,1,0,0,5,5,0
+Gary Lighthouse Charter School,,180005202155,0488.35,Computer Science (Grade 7),1,0,1,0,0,0,1,1,0
+Gary Lighthouse Charter School,,180005202155,0488.35,Computer Science (Grade 8),1,1,0,1,0,0,1,1,0
+Gary Lighthouse Charter School,,180005202155,0488.68,Computer Science (Grade 6),48,22,46,0,0,0,48,7,0
+Gary Lighthouse Charter School,,180005202155,0488.68,Computer Science (Grade 7),54,23,50,3,0,0,54,12,0
+Gary Lighthouse Charter School,,180005202155,0488.68,Computer Science (Grade 8),52,19,45,5,0,0,52,15,0
+21st Century Charter Sch of Gary,,180004602162,0488.35,Computer Science (Grade 2),1,1,1,0,0,0,1,1,0
+21st Century Charter Sch of Gary,,180004602162,0488.35,Computer Science (Grade 3),90,41,85,3,0,0,79,16,0
+21st Century Charter Sch of Gary,,180004602162,0488.35,Computer Science (Grade 4),95,47,92,3,0,0,83,9,0
+21st Century Charter Sch of Gary,,180004602162,0488.35,Computer Science (Grade 5),82,35,75,4,0,0,75,13,0
+21st Century Charter Sch of Gary,,180004602162,0488.35,Computer Science (Grade 7),1,0,1,0,0,0,1,1,0
+21st Century Charter Sch of Gary,,180004602162,0488.68,Computer Science (Grade 7),98,49,93,3,0,0,86,16,0
+21st Century Charter Sch of Gary,,180004602162,0488.K2,Computer Science (Kindergarten),103,55,93,6,0,0,94,12,0
+21st Century Charter Sch of Gary,,180004602162,0488.K2,Computer Science (Grade 1),101,49,95,4,0,0,83,9,0
+21st Century Charter Sch of Gary,,180004602162,0488.K2,Computer Science (Grade 2),87,49,80,6,0,0,76,6,0
+Dugger Union Community School Corp,,180016502590,0488.68,Computer Science (Grade 6),47,23,0,3,0,0,31,9,0
+Success Academy Primary School,,180016102583,0488.35,Computer Science (Grade 3),55,28,28,2,0,0,31,10,0
+Success Academy Primary School,,180016102583,0488.35,Computer Science (Grade 4),66,35,37,7,1,0,42,12,0
+Success Academy Primary School,,180016102583,0488.35,Computer Science (Grade 5),44,23,17,13,0,0,28,12,0
+Success Academy Primary School,,180016102583,0488.K2,Computer Science (Kindergarten),65,27,31,6,0,0,6,10,0
+Success Academy Primary School,,180016102583,0488.K2,Computer Science (Grade 1),63,31,24,7,0,0,42,14,0
+Success Academy Primary School,,180016102583,0488.K2,Computer Science (Grade 2),45,19,17,8,0,0,26,8,0
+WILLIAM HENRY HARRISON HIGH SCHOOL,,181134001835,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WASHINGTON HIGH SCHOOL,,181245002006,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH CENTRAL HIGH SCHOOL,,181272002021,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DAMAR CHARTER ACADEMY,,180010802503,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WHITE'S JR-SR HIGH SCHOOL,,181218001951,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOONE GROVE HIGH SCHOOL,,180918001521,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
