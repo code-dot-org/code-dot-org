@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/code-dot-org/ml-activities.svg?branch=main)](https://travis-ci.org/code-dot-org/ml-activities)
+[![Build Status](https://github.com/code-dot-org/ml-activities/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/code-dot-org/ml-activities/actions/workflows/deploy.yml)
 
 Steps to get up and running:
 
