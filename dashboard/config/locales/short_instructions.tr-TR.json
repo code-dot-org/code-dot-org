@@ -3036,9 +3036,9 @@
         "CourseF_outbreak2": "Dokundukları zaman sağlıklı canavarları hasta canavarlara dönüştür.",
         "CourseF_outbreak3": "Tıkladığınızda canavarları maskeli canavara dönüştürün.",
         "CourseF_outbreak4": "Simülasyonunuzdaki canavar tipi hareketli nesne sayısını ve boyutunu değiştirin.",
-        "CourseF_outbreak6": "Sağlıklı canavarlar hasta canavarlara dokunduğunda, canavarların hastalanması olasılığını yüzde olarak ekleyin. Bunu maskeli ve maskesiz tüm canavar kombinasyonları için yapın.",
-        "CourseF_outbreak7": "Virüse karşı bağışıklığı olan canavarlar için yeni bir kostüm oluşturun ve bunu simülasyonunuzda kullanın.",
-        "CourseF_outbreak8": "Simülasyonunuz ile mesaj paylaşın.",
+        "CourseF_outbreak6": "Sağlıklı bir canavar hasta bir canavara dokunduğunda tüm hasta canavarların iyileşmeye başlamasını sağlayın.",
+        "CourseF_outbreak7": "Sağlıklı canavarlar hasta canavarlara dokunduğunda, canavarların hastalanması olasılığını yüzde olarak ekleyin. Bunu maskeli ve maskesiz tüm canavar kombinasyonları için yapın.",
+        "CourseF_outbreak8": "Virüse karşı bağışıklığı olan canavarlar için yeni bir kostüm oluşturun ve bunu simülasyonunuzda kullanın.",
         "Dance Party 2_2021": "Uzaylının dönmesini başlatan farklı bir bloğa 'hareketli nesne başlar'da davranış bloğunu değiştirin!",
         "Dance Party 4_2021": "Sarı bir uzaylı gibi görünen üçüncü bir hareketli nesne oluşturun, tıklandığında dans etmesini sağlayın ve uzaylıların hepsinin yatay bir hatta durması için ayarlayın.",
         "Dance Party Freeplay_2021": "Şimdi kendi uzaylı diskonuzu oluşturun!",
@@ -3564,7 +3564,9 @@
         "ramp_artist_loops6_2021": "Bu merdiven çizmek için döngüyü düzenleyin.",
         "ramp_artist_loops7_2021": "Tekrarlayan deseni bulun ve kodu daha kısa yapın!",
         "ramp_artist_loops8_2021": "Tekrarlayan deseni bulun ve kodu daha kısa yapın.",
-        "ramp_artist_loops9_2021": "Bir kare çizerek bu bulmacayı çöz,."
+        "ramp_artist_loops9_2021": "Bir kare çizerek bu bulmacayı çöz,.",
+        "CourseF_outbreak5": "Simülasyonunuzdaki canavar tipi hareketli nesne sayısını ve boyutunu değiştirin.",
+        "international_outbreak_freeplay": "Simülasyonunuz ile mesaj paylaşın."
       }
     }
   }
