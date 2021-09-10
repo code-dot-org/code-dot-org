@@ -1,0 +1,370 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+ROBERT J. ELKINGTON MIDDLE SCHOOL,,271317000939,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+MOUNTAIN IRON-BUHL SECONDARY,,270000101613,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+KINGSLAND JUNIOR/SENIOR HIGH SCHOOL,,270000701469,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WATERVILLE-ELYSIAN-MORRISTOWN JR.,,270001301104,21009,Robotics,0,0,0,0,0,0,0,0,0
+CHISAGO LAKES MIDDLE,,270001700351,10014,PLTW Computer Science Essentials,0,0,0,0,0,0,0,0,0
+CHISAGO LAKES SENIOR HIGH,,270001700353,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+MINNEWASKA AREA WIN ACADEMY,,270001903600,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+WADENA-DEER CREEK SENIOR HIGH,,270002201733,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+BUFFALO LAKE-HECTOR SECONDARY,,270002300704,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DAKOTA CTY. ALC,,270002602155,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+DAKOTA CTY. ALC,,270002602155,21009,Robotics,0,0,0,0,0,0,0,0,0
+MN RIVER VALLEY ALC-SEATBASED,,270005802245,21009,Robotics,0,0,0,0,0,0,0,0,0
+LAKEVIEW SECONDARY,,270008800408,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+MURRAY COUNTY CENTRAL SECONDARY,,270009001449,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+PACT CHARTER SECONDARY,,270009303030,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+SIBLEY EAST-ARLINGTON SENIOR HIGH,,270010200134,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+SIBLEY EAST-ARLINGTON SENIOR HIGH,,270010200134,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+WEST CENTRAL AREA SECONDARY,,270010402566,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+BELGRADE-BROOTEN-ELROSA SEC.,,270010502567,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PIPESTONE MIDDLE,,270010801264,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+CEDAR MOUNTAIN SECONDARY,,270011001099,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+CEDAR MOUNTAIN SECONDARY,,270011001099,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COMMUNITY OF PEACE ACADEMY HIGH SCHOOL,,270011502605,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+MINNESOTA CONNECTIONS ACADEMY,,270011703694,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FAIRMONT JR./SR. HIGH SCHOOL,,270012400553,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+LAC QUI PARLE VALLEY SECONDARY,,270012502260,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+ADA-BORUP SECONDARY,,270012600051,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+ADA-BORUP SECONDARY,,270012600051,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+ADA-BORUP SECONDARY,,270012600051,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GSL JUNIOR HIGH SCHOOL,,270012801445,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+BLUE EARTH AREA SECONDARY,,270013002498,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+CYBER VILLAGE ACADEMY 7-12,,270013802717,10160,Particular Topics in Computer Programming,0,0,0,0,0,0,0,0,0
+GLENVILLE-EMMONS SECONDARY,,270014800635,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+6-12TH GRADE BUILDING,,270015000652,2156,Computer Math with Algebra,0,0,0,0,0,0,0,0,0
+6-12TH GRADE BUILDING,,270015000652,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+RENVILLE COUNTY WEST SENIOR HIGH,,270016301310,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+REDWOOD VALLEY SENIOR HIGH,,270018201304,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+REDWOOD VALLEY SENIOR HIGH,,270018201304,21009,Robotics,0,0,0,0,0,0,0,0,0
+AFSA HIGH SCHOOL,,270018603139,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLUESKY CHARTER SCHOOL,,270019303146,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+HARBOR CITY INTERNATIONAL CHARTER,,270020903270,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SAGE ACADEMY CHARTER SCHOOL,,270021103272,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEW CENTURY ACADEMY,,270021403275,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TRIO WOLF CREEK DISTANCE LEARNING,,270023502689,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+TWIN CITIES ACADEMY,,270024603307,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SPECTRUM HIGH SCHOOL,,270027603615,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+LAURA JEFFREY ACADEMY CHARTER,,270029203713,10156,Computer Programming—Other Language,0,0,0,0,0,0,0,0,0
+RTR MIDDLE SCHOOL,,270029403644,21009,Robotics,0,0,0,0,0,0,0,0,0
+RTR SECONDARY SCHOOL,,270029403692,21009,Robotics,0,0,0,0,0,0,0,0,0
+PARNASSUS PREPARATORY SCHOOL-RHETORIC,,270033304817,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+HMONG COLLEGE PREP ACADEMY HS,,270034204092,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+HMONG COLLEGE PREP ACADEMY HS,,270034204092,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+TREKNORTH HIGH SCHOOL,,270034504166,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KALEIDOSCOPE CHARTER HIGH SCHOOL,,270036004668,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ST. CROIX PREPARATORY ACADEMY UPPER,,270036204360,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+UBAH MEDICAL ACADEMY CHARTER SCHOOL,,270036304107,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EAGLE RIDGE ACADEMY CHARTER SCHOOL,,270036404108,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+EAGLE RIDGE ACADEMY CHARTER SCHOOL,,270036404108,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+MONTGOMERY PRE K-8,,270037904625,21009,Robotics,0,0,0,0,0,0,0,0,0
+LE CENTER PRE K-8,,270037904626,10015,PLTW Computer Science A,0,0,0,0,0,0,0,0,0
+BRANDON-EVANSVILLE MIDDLE SCHOOL,,270038204740,10014,PLTW Computer Science Essentials,0,0,0,0,0,0,0,0,0
+MORRIS AREA SECONDARY,,270038304728,21009,Robotics,0,0,0,0,0,0,0,0,0
+VENTURE ACADEMY HIGH SCHOOL,,270038404697,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+RED LAKE COUNTY CENTRAL HIGH SCHOOL,,270038504735,21009,Robotics,0,0,0,0,0,0,0,0,0
+MMSA ELEMENTARY SCHOOL,,270039904788,10014,PLTW Computer Science Essentials,0,0,0,0,0,0,0,0,0
+MMSA ELEMENTARY SCHOOL,,270039904788,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+MONTICELLO HIGH SCHOOL - SNW,,270041304890,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SNW - BIG LAKE MIDDLE SCHOOL,,270041305216,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SWMETRO ALC,,270042004979,10155,Java Programming,0,0,0,0,0,0,0,0,0
+LESTER PRAIRIE SECONDARY,,270264000049,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+WALKER-HACKENSACK-AKELEY SEC.,,270291001737,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ALBERT LEA SENIOR HIGH,,270297000068,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+SOUTHWEST MIDDLE,,270297000078,21009,Robotics,0,0,0,0,0,0,0,0,0
+ALDEN-CONGER SECONDARY,,270303000080,10156,Computer Programming—Other Language,0,0,0,0,0,0,0,0,0
+DISCOVERY MIDDLE SCHOOL,,270306000083,21009,Robotics,0,0,0,0,0,0,0,0,0
+ALEXANDRIA AREA HIGH SCHOOL,,270306000085,21009,Robotics,0,0,0,0,0,0,0,0,0
+CHAMPLIN PARK HIGH SCHOOL,,270318000021,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+CHAMPLIN PARK HIGH SCHOOL,,270318000021,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+CHAMPLIN PARK HIGH SCHOOL,,270318000021,10160,Particular Topics in Computer Programming,0,0,0,0,0,0,0,0,0
+ANOKA HIGH SCHOOL,,270318000096,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+ANOKA HIGH SCHOOL,,270318000096,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+ANOKA HIGH SCHOOL,,270318000096,10160,Particular Topics in Computer Programming,0,0,0,0,0,0,0,0,0
+ANOKA HIGH SCHOOL,,270318000096,21009,Robotics,0,0,0,0,0,0,0,0,0
+BLAINE HIGH SCHOOL,,270318000097,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+BLAINE HIGH SCHOOL,,270318000097,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+BLAINE HIGH SCHOOL,,270318000097,10160,Particular Topics in Computer Programming,0,0,0,0,0,0,0,0,0
+COON RAPIDS HIGH SCHOOL,,270318000100,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+COON RAPIDS HIGH SCHOOL,,270318000100,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+COON RAPIDS HIGH SCHOOL,,270318000100,10160,Particular Topics in Computer Programming,0,0,0,0,0,0,0,0,0
+ANDOVER HIGH SCHOOL,,270318003170,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+ANDOVER HIGH SCHOOL,,270318003170,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+ANDOVER HIGH SCHOOL,,270318003170,10160,Particular Topics in Computer Programming,0,0,0,0,0,0,0,0,0
+ASHBY SECONDARY,,270330000137,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AUSTIN SENIOR HIGH,,270345000148,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+AUSTIN SENIOR HIGH,,270345000148,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+BARNUM SECONDARY,,270369000172,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+BATTLE LAKE SECONDARY,,270375000176,21009,Robotics,0,0,0,0,0,0,0,0,0
+BELLE PLAINE SENIOR HIGH,,270405000184,10155,Java Programming,0,0,0,0,0,0,0,0,0
+BEMIDJI SENIOR HIGH,,270444000190,21009,Robotics,0,0,0,0,0,0,0,0,0
+BENSON SECONDARY,,270447000199,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+BENSON SECONDARY,,270447000199,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+BENSON SECONDARY,,270447000199,21009,Robotics,0,0,0,0,0,0,0,0,0
+BIG LAKE SENIOR HIGH,,270546000206,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+BLACKDUCK SECONDARY,,270573000213,2156,Computer Math with Algebra,0,0,0,0,0,0,0,0,0
+BLACKDUCK SECONDARY,,270573000213,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+JEFFERSON SENIOR HIGH,,270579000219,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+JEFFERSON SENIOR HIGH,,270579000219,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+JEFFERSON SENIOR HIGH,,270579000219,21009,Robotics,0,0,0,0,0,0,0,0,0
+KENNEDY SENIOR HIGH,,270579000220,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+KENNEDY SENIOR HIGH,,270579000220,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+KENNEDY SENIOR HIGH,,270579000220,21009,Robotics,0,0,0,0,0,0,0,0,0
+BRAINERD SENIOR HIGH,,270609000249,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+BRECKENRIDGE AREA LEARNING PROGRAM,,270615004963,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+INSIGHT SCHOOL OF MINNESOTA,,270624004306,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+INSIGHT SCHOOL OF MINNESOTA,,270624004306,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+BUFFALO SENIOR HIGH,,270720000285,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+BUFFALO SENIOR HIGH,,270720000285,21009,Robotics,0,0,0,0,0,0,0,0,0
+BURNSVILLE HIGH SCHOOL,,270729000292,2156,Computer Math with Algebra,0,0,0,0,0,0,0,0,0
+BURNSVILLE HIGH SCHOOL,,270729000292,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+BURNSVILLE HIGH SCHOOL,,270729000292,10153,Visual Basic Programming,0,0,0,0,0,0,0,0,0
+BURNSVILLE HIGH SCHOOL,,270729000292,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+BURNSVILLE SR HIGH EXTENDED DAY PROGRAM,,270729000474,2156,Computer Math with Algebra,0,0,0,0,0,0,0,0,0
+BYRON SENIOR HIGH SCHOOL,,270735000307,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+CAMBRIDGE-ISANTI HIGH SCHOOL,,270741000316,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CANNON FALLS SECONDARY,,270750000324,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CASS LAKE-BENA SECONDARY,,270807000331,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTENNIAL HIGH SCHOOL,,270810000334,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+CENTENNIAL HIGH SCHOOL,,270810000334,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+CENTENNIAL HIGH SCHOOL,,270810000334,21009,Robotics,0,0,0,0,0,0,0,0,0
+CHASKA HIGH SCHOOL,,270819000343,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+CHASKA HIGH SCHOOL,,270819000343,21009,Robotics,0,0,0,0,0,0,0,0,0
+CHASKA MIDDLE SCHOOL EAST,,270819000345,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+CHASKA MIDDLE SCHOOL EAST,,270819000345,21009,Robotics,0,0,0,0,0,0,0,0,0
+CHASKA MIDDLE SCHOOL WEST,,270819000345,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+CHASKA MIDDLE SCHOOL WEST,,270819000345,21009,Robotics,0,0,0,0,0,0,0,0,0
+PIONEER RIDGE MIDDLE SCHOOL,,270819003180,21009,Robotics,0,0,0,0,0,0,0,0,0
+CHANHASSEN HIGH SCHOOL,,270819004260,21009,Robotics,0,0,0,0,0,0,0,0,0
+INTEGRATED ARTS ACADEMY,,270819004310,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHISHOLM SECONDARY,,270891000357,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHOKIO-ALBERTA SECONDARY,,270894000361,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLEVELAND SECONDARY,,270933000375,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+CLEVELAND SECONDARY,,270933000375,21009,Robotics,0,0,0,0,0,0,0,0,0
+CLOQUET SENIOR,,270942000382,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+CLOQUET SENIOR,,270942000382,21009,Robotics,0,0,0,0,0,0,0,0,0
+CLOQUET SENIOR,,270942000382,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROCORI MIDDLE,,270944001682,10014,PLTW Computer Science Essentials,0,0,0,0,0,0,0,0,0
+ROCORI MIDDLE,,270944001682,21009,Robotics,0,0,0,0,0,0,0,0,0
+GREENWAY SENIOR HIGH,,270948002786,21009,Robotics,0,0,0,0,0,0,0,0,0
+CROMWELL-WRIGHT SECONDARY,,270969000409,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+CROOKSTON SECONDARY,,270972000412,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+CROOKSTON SECONDARY,,270972000412,21009,Robotics,0,0,0,0,0,0,0,0,0
+CROSBY-IRONTON SECONDARY,,270975000417,21009,Robotics,0,0,0,0,0,0,0,0,0
+DASSEL-COKATO SENIOR HIGH,,271006000428,21009,Robotics,0,0,0,0,0,0,0,0,0
+DEER RIVER SECONDARY,,271014000433,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+DILWORTH-GLYNDON-FELTON SENIOR HIGH,,271026000642,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+DOVER-EYOTA HIGH SCHOOL,,271101000452,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EDGERTON SECONDARY,,271122000504,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+EDINA SENIOR HIGH,,271125000510,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VALLEY VIEW MIDDLE,,271125002035,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+ELK RIVER SENIOR HIGH,,271137000518,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+ROGERS SENIOR HIGH,,271137004161,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+MEMORIAL HIGH SCHOOL,,271152000530,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MINNETONKA SENIOR HIGH,,271167000546,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FARIBAULT MIDDLE,,271176000557,21009,Robotics,0,0,0,0,0,0,0,0,0
+KENNEDY HIGH SCHOOL,,271188000578,21009,Robotics,0,0,0,0,0,0,0,0,0
+FERTILE-BELTRAMI SECONDARY,,271191000583,21009,Robotics,0,0,0,0,0,0,0,0,0
+FISHER SECONDARY,,271218000586,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FOREST LAKE AREA MIDDLE SCHOOL,,271227000592,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+FOREST LAKE AREA MIDDLE SCHOOL,,271227000592,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+FRAZEE SECONDARY,,271236000606,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+FRIDLEY SENIOR HIGH,,271242000611,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FULDA SECONDARY,,271248000618,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRANADA HUNTLEY EAST CHAIN HIGH SCH,,271304000155,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAND RAPIDS SENIOR HIGH,,271317000935,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+HASTINGS MIDDLE SCHOOL,,271353000693,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+HASTINGS HIGH SCHOOL,,271353000694,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+HASTINGS HIGH SCHOOL,,271353000694,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+HERMANTOWN SENIOR HIGH,,271392000716,21009,Robotics,0,0,0,0,0,0,0,0,0
+HILL CITY SENIOR HIGH,,271401000724,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+HILL CITY SENIOR HIGH,,271401000724,21009,Robotics,0,0,0,0,0,0,0,0,0
+EDEN PRAIRIE SENIOR HIGH,,271422000735,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+DISTANCE LEARNING ACADEMY - SECONDARY,,271422005303,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+DISTANCE LEARNING ACADEMY - SECONDARY,,271422005303,10160,Particular Topics in Computer Programming,0,0,0,0,0,0,0,0,0
+HOPKINS SENIOR HIGH,,271426000613,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+HOPKINS SENIOR HIGH,,271426000613,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+HOUSTON SECONDARY,,271428000749,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HUTCHINSON SENIOR HIGH,,271497000756,21009,Robotics,0,0,0,0,0,0,0,0,0
+SIMLEY SENIOR HIGH,,271503000767,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+SIMLEY SENIOR HIGH,,271503000767,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+ISLE SECONDARY,,271551000770,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JORDAN MIDDLE,,271575004144,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+KASSON-MANTORVILLE SENIOR HIGH,,271698000784,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+KASSON-MANTORVILLE MIDDLE SCHOOL,,271698002243,21009,Robotics,0,0,0,0,0,0,0,0,0
+KERKHOVEN SECONDARY,,271712000023,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+LINCOLN SECONDARY,,271752000804,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAKE OF THE WOODS SECONDARY,,271757000809,10014,PLTW Computer Science Essentials,0,0,0,0,0,0,0,0,0
+LAKE OF THE WOODS SECONDARY,,271757000809,10015,PLTW Computer Science A,0,0,0,0,0,0,0,0,0
+LAKEVILLE NORTH HIGH,,271778000817,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+LAKEVILLE NORTH HIGH,,271778000817,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+LAKEVILLE NORTH HIGH,,271778000817,21009,Robotics,0,0,0,0,0,0,0,0,0
+LAKEVILLE AREA LEARNING CENTER,,271778002804,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+LAKEVILLE SOUTH HIGH,,271778003515,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+LAKEVILLE SOUTH HIGH,,271778003515,21009,Robotics,0,0,0,0,0,0,0,0,0
+LINK12 LAKEVILLE HIGH SCHOOL,,271778004309,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+LITTLE FALLS SENIOR HIGH,,271824000964,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+LITTLE FALLS SENIOR HIGH,,271824000964,21009,Robotics,0,0,0,0,0,0,0,0,0
+LUVERNE SENIOR HIGH,,271833000852,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LYLE SECONDARY,,271836000854,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EMINNESOTA ONLINE ACADEMY,,271857004463,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+MAHNOMEN SECONDARY,,271866000866,21009,Robotics,0,0,0,0,0,0,0,0,0
+MAHTOMEDI SENIOR HIGH,,271875000870,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+MANKATO EAST SENIOR HIGH,,271878000879,21009,Robotics,0,0,0,0,0,0,0,0,0
+MANKATO WEST SENIOR HIGH,,271878000880,21009,Robotics,0,0,0,0,0,0,0,0,0
+GRYGLA SECONDARY,,271892000897,21009,Robotics,0,0,0,0,0,0,0,0,0
+MARSHALL HIGH SCHOOL,,271894000892,10155,Java Programming,0,0,0,0,0,0,0,0,0
+MCGREGOR SECONDARY,,271917000904,10151,Business Programming,0,0,0,0,0,0,0,0,0
+MELROSE SECONDARY,,272055000913,21009,Robotics,0,0,0,0,0,0,0,0,0
+MILACA SECONDARY HIGH,,272067000924,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+SOUTH SENIOR HIGH,,272124001035,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHWEST SENIOR HIGH,,272124001037,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WELLSTONE INTERNATIONAL HIGH,,272124003107,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH ACADEMY SENIOR HIGH,,272124004557,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRANKLIN MIDDLE,,272124004882,21009,Robotics,0,0,0,0,0,0,0,0,0
+HERITAGE STEM ACADEMY,,272124004903,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MINNEOTA SECONDARY,,272127001068,21009,Robotics,0,0,0,0,0,0,0,0,0
+MONTICELLO SENIOR HIGH,,272139001079,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+MOORHEAD HIGH SCHOOL,,272142001084,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+MOORHEAD HIGH SCHOOL,,272142001084,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+MOOSE LAKE SECONDARY,,272145001094,21009,Robotics,0,0,0,0,0,0,0,0,0
+MORA SECONDARY,,272148000944,21009,Robotics,0,0,0,0,0,0,0,0,0
+MOUND WESTONKA HIGH SCHOOL,,272292001112,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+MOUND WESTONKA HIGH SCHOOL,,272292001112,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+IRONDALE SENIOR HIGH,,272295001118,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+IRONDALE SENIOR HIGH,,272295001118,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+IRONDALE SENIOR HIGH,,272295001118,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+MOUNDS VIEW SENIOR HIGH,,272295001121,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+MOUNDS VIEW SENIOR HIGH,,272295001121,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+MOUNDS VIEW SENIOR HIGH,,272295001121,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+MOUNTAIN LAKE SECONDARY,,272301001135,21009,Robotics,0,0,0,0,0,0,0,0,0
+NASHWAUK SECONDARY,,272331001138,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+NASHWAUK SECONDARY,,272331001138,21009,Robotics,0,0,0,0,0,0,0,0,0
+NEW PRAGUE SENIOR HIGH,,272343001146,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEW ULM HIGH SCHOOL,,272349001153,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEW YORK MILLS SECONDARY,,272352001156,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+MARSHALL COUNTY CENTRAL HIGH,,272355001157,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+MARSHALL COUNTY CENTRAL HIGH,,272355001157,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+NICOLLET SENIOR HIGH SCHOOL,,272358001161,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH BRANCH AREA HIGH SCHOOL,,272382001162,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+NORTH BRANCH AREA HIGH SCHOOL,,272382001162,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+NORTH BRANCH AREA MIDDLE SCHOOL,,272382001164,21009,Robotics,0,0,0,0,0,0,0,0,0
+NORTH SENIOR HIGH,,272385001174,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+NORTH SENIOR HIGH,,272385001174,21009,Robotics,0,0,0,0,0,0,0,0,0
+TARTAN SENIOR HIGH,,272385001177,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+TARTAN SENIOR HIGH,,272385001177,10156,Computer Programming—Other Language,0,0,0,0,0,0,0,0,0
+TARTAN SENIOR HIGH,,272385001177,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+NORTHFIELD MIDDLE,,272388001182,21009,Robotics,0,0,0,0,0,0,0,0,0
+NORTHFIELD SENIOR HIGH,,272388001183,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+NORTHFIELD AREA LEARNING CENTER,,272388001501,21009,Robotics,0,0,0,0,0,0,0,0,0
+OGILVIE SECONDARY,,272397001189,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+ORONO SENIOR HIGH,,272508001198,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+ORONO SENIOR HIGH,,272508001198,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+ORONO SENIOR HIGH,,272508001198,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+OSAKIS SECONDARY,,272514001204,10155,Java Programming,0,0,0,0,0,0,0,0,0
+OSSEO SENIOR HIGH,,272520001218,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+MAPLE GROVE SENIOR HIGH,,272520002651,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+OWATONNA MIDDLE SCHOOL,,272805001227,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+OWATONNA MIDDLE SCHOOL,,272805001227,21009,Robotics,0,0,0,0,0,0,0,0,0
+OWATONNA SENIOR HIGH,,272805001228,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+OWATONNA SENIOR HIGH,,272805001228,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+OWATONNA SENIOR HIGH,,272805001228,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+PARK RAPIDS AREA CENTURY MIDDLE,,272808001236,21009,Robotics,0,0,0,0,0,0,0,0,0
+PEQUOT LAKES SENIOR HIGH,,272820001245,21009,Robotics,0,0,0,0,0,0,0,0,0
+HEALY SECONDARY,,272832001252,2156,Computer Math with Algebra,0,0,0,0,0,0,0,0,0
+PINE ISLAND SECONDARY,,272895001258,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+PINE RIVER-BACKUS ELEMENTARY,,272897000039,10014,PLTW Computer Science Essentials,0,0,0,0,0,0,0,0,0
+PRINCETON HIGH SCHOOL,,273003001273,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+PRIOR LAKE HIGH SCHOOL,,273006001277,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+PRIOR LAKE HIGH SCHOOL,,273006001277,10155,Java Programming,0,0,0,0,0,0,0,0,0
+PRIOR LAKE HIGH SCHOOL,,273006001277,21009,Robotics,0,0,0,0,0,0,0,0,0
+PRIOR LAKE-SAVAGE AREA ALC,,273006004390,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+PRIOR LAKE-SAVAGE AREA ALC,,273006004390,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+A.I. JEDLICKA MIDDLE SCHOOL,,273009001552,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+RED WING SENIOR HIGH,,273048001293,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RICHFIELD SENIOR HIGH,,273175001315,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+ROBBINSDALE ARMSTRONG SENIOR HIGH,,273178001318,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+ROBBINSDALE MIDDLE,,273178002184,10014,PLTW Computer Science Essentials,0,0,0,0,0,0,0,0,0
+LINCOLN K-8 DISTRICT-WIDE SCHOOL,,273180001005,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+JOHN MARSHALL SENIOR HIGH,,273180001015,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+MAYO SENIOR HIGH,,273180001016,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+CENTURY SENIOR HIGH,,273180002660,10155,Java Programming,0,0,0,0,0,0,0,0,0
+CENTURY SENIOR HIGH,,273180002660,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+CENTURY SENIOR HIGH,,273180002660,21009,Robotics,0,0,0,0,0,0,0,0,0
+ROCHESTER ALTERNATIVE LEARNING CNTR,,273180003078,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROSEAU SECONDARY,,273225001371,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+EAGAN SENIOR HIGH,,273239000488,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+ROSEMOUNT AREA LEARNING CENTER,,273239000500,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+APPLE VALLEY SENIOR HIGH,,273239001373,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+ROSEMOUNT SENIOR HIGH,,273239001379,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+ROSEMOUNT SENIOR HIGH,,273239001379,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+ROSEMOUNT MIDDLE,,273239001381,21009,Robotics,0,0,0,0,0,0,0,0,0
+BLACK HAWK MIDDLE,,273239002437,21009,Robotics,0,0,0,0,0,0,0,0,0
+EASTVIEW SENIOR HIGH,,273239002645,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+EASTVIEW SENIOR HIGH,,273239002645,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+ROSEVILLE AREA SENIOR HIGH,,273243001385,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+FAIRVIEW ALTERNATIVE HIGH SCHOOL,,273243004233,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROTHSAY ELEMENTARY,,273246001400,21009,Robotics,0,0,0,0,0,0,0,0,0
+RUSH CITY SECONDARY,,273255001406,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+INDUS SECONDARY,,273270001413,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+INDUS SECONDARY,,273270001413,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+NORTHOME SECONDARY,,273270001416,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+SARTELL SENIOR HIGH,,273282001424,21009,Robotics,0,0,0,0,0,0,0,0,0
+SARTELL MIDDLE,,273282001675,21009,Robotics,0,0,0,0,0,0,0,0,0
+SAUK CENTRE SECONDARY,,273285001429,21009,Robotics,0,0,0,0,0,0,0,0,0
+SHAKOPEE WEST MIDDLE SCHOOL,,273300001439,21009,Robotics,0,0,0,0,0,0,0,0,0
+SHAKOPEE EAST MIDDLE SCHOOL,,273300003717,21009,Robotics,0,0,0,0,0,0,0,0,0
+SLEEPY EYE SEC.,,273321001451,21009,Robotics,0,0,0,0,0,0,0,0,0
+SOUTH ST. PAUL HIGH SCHOOL,,273327001456,21009,Robotics,0,0,0,0,0,0,0,0,0
+SPRING LAKE PARK SENIOR HIGH,,273333001464,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+SPRING LAKE PARK SENIOR HIGH,,273333001464,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+SPRING LAKE PARK SENIOR HIGH,,273333001464,10155,Java Programming,0,0,0,0,0,0,0,0,0
+ST. CHARLES SECONDARY,,273345001476,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+APOLLO SENIOR HIGH,,273351001479,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+APOLLO SENIOR HIGH,,273351001479,21009,Robotics,0,0,0,0,0,0,0,0,0
+TECHNICAL SENIOR HIGH,,273351001494,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+TECHNICAL SENIOR HIGH,,273351001494,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+ST. JAMES MIDDLE/HIGH SCHOOL,,273360001505,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+ST. LOUIS PARK SENIOR HIGH,,273378001532,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+ST. MICHAEL-ALBERTVILLE SENIOR HIGH,,273379001535,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+PARK HIGH SCHOOL,,273381001543,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WOODBURY HIGH SCHOOL,,273381001550,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EAST RIDGE HIGH SCHOOL,,273381004246,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GUADALUPE ALTERNATIVE PROGRAMS,,273384001489,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL SENIOR HIGH,,273384001564,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HARDING SENIOR HIGH,,273384001585,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HIGHLAND PARK SENIOR HIGH,,273384001592,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HUMBOLDT HIGH SCHOOL,,273384001598,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JOHNSON SENIOR HIGH,,273384001603,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COMO PARK SENIOR HIGH,,273384001955,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEAP HIGH SCHOOL,,273384002455,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WASHINGTON TECH SECONDARY MAGNET,,273384004429,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OPEN WORLD LEARNING SECONDARY,,273384004443,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ST. PETER HIGH SCHOOL,,273387001641,10155,Java Programming,0,0,0,0,0,0,0,0,0
+STEWARTVILLE SENIOR HIGH,,273816001653,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STILLWATER AREA HIGH SCHOOL,,273819001662,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+STILLWATER AREA HIGH SCHOOL,,273819001662,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+SWANVILLE SECONDARY,,273828001671,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LINCOLN SENIOR HIGH,,273885001676,21009,Robotics,0,0,0,0,0,0,0,0,0
+LINCOLN SECONDARY,,273888001681,21009,Robotics,0,0,0,0,0,0,0,0,0
+VIRGINIA SECONDARY,,274104001718,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+VIRGINIA SECONDARY,,274104001718,21009,Robotics,0,0,0,0,0,0,0,0,0
+WABASSO SECONDARY,,274143001728,21009,Robotics,0,0,0,0,0,0,0,0,0
+WACONIA HIGH SCHOOL,,274146000358,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+WARROAD HIGH SCHOOL,,274185001745,21009,Robotics,0,0,0,0,0,0,0,0,0
+WATERTOWN MAYER HIGH,,274191001750,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+WAYZATA HIGH,,274216001765,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+WAYZATA HIGH,,274216001765,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+WAYZATA HIGH,,274216001765,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+WHITE BEAR SOUTH CAMPUS SENIOR,,274236002148,10020,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+WHITE BEAR SOUTH CAMPUS SENIOR,,274236002148,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+WILLMAR SENIOR HIGH,,274272001809,10156,Computer Programming—Other Language,0,0,0,0,0,0,0,0,0
+WINDOM SENIOR HIGH,,274278001815,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WINONA MIDDLE,,274407001830,21009,Robotics,0,0,0,0,0,0,0,0,0
+WINONA SENIOR HIGH,,274407001831,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+WINONA AREA LEARNING CENTER,,274407002249,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+WORTHINGTON SENIOR HIGH,,274416001841,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+WORTHINGTON SENIOR HIGH,,274416001841,21009,Robotics,0,0,0,0,0,0,0,0,0
+LEARNING CENTER,,274416002335,10206,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+ZUMBROTA-MAZEPPA SENIOR HIGH,,274573500209,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JANESVILLE-WALDORF-PEMBERTON SEC,,279145102330,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
