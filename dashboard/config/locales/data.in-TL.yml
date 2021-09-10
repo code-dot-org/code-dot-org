@@ -641,6 +641,9 @@ in:
         PL_CSD_TeacherTips_PairProgramming: crwdns2692607:0crwdne2692607:0
         PL_CSD_TeacherTips_Debugging: crwdns2692609:0crwdne2692609:0
         PL_CSD_TeacherTips_LeadLearner: crwdns2692611:0crwdne2692611:0
+        poembot-playtest-intro: crwdns2693037:0crwdne2693037:0
+        poembot-playtest-sprites: crwdns2693039:0crwdne2693039:0
+        poembot-playtest-events: crwdns2693041:0crwdne2693041:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

@@ -4699,6 +4699,14 @@ nn:
               display_name: 'Djupdykk: Kurs E og F'
             Introduction:
               display_name: Introduksjon
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Leksjon 3
+            Lesson 4:
+              display_name: Leksjon 4
+            Lesson 5:
+              display_name: Leksjon 5
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -4753,6 +4761,12 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Steg 1
+            lessonGroup-3:
+              display_name: Steg 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -4792,3 +4806,7 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: Prosjekt

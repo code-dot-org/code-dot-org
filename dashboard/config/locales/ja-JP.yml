@@ -148,6 +148,9 @@ ja:
     email_preference_yes: はい
     email_preference_no: いいえ
     email_preference_required: メール設定を指定しなくてはなりません。
+    share_teacher_email_reg_partner_preference_yes: はい
+    share_teacher_email_reg_partner_preference_no: いいえ
+    share_teacher_email_reg_partner_preference_required: メール設定を指定しなくてはなりません。
     parent_account_checkbox: 私は子供の代わりに登録する親/保護者です。
     parent_account_email_progress_permission: お子様の進捗状況やプロジェクトに関する最新情報、およびコースとコンピューターサイエンスに関する最新情報をメールでお送りしてもよろしいですか？[(当社のプライバシーポリシーをご覧ください)]
       (%{privacy_policy_url})

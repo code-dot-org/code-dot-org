@@ -10,9 +10,24 @@ mr:
   unplugged_activity: 'अनप्लग्ड कृती '
   continue: सुरू ठेवा
   signup_form:
+    user_type: तुम्ही विद्यार्थी आहात का शिक्षक?
+    user_type_button: खात्याचा प्रकार अपडेट करा
+    user_type_label: खात्याचा प्रकार
     user_type_student: विध्यार्थी
+    user_type_student_desc: 'आमचे सगळे अभ्यासक्रम आणि कृती पहा, शिवाय:'
+    user_type_student_ability_1: तुमची प्रगती आणि प्रोजेक्ट्स सेव्ह करा
+    user_type_student_ability_2: " तुमच्या शिक्षकाच्या वर्ग विभागात सहभागी व्हा"
+    user_type_teacher: शिक्षक
+    user_type_teacher_desc: " विद्यार्थ्यांना ॲक्सेस असलेल्या सर्व गोष्टी, शिवाय: "
+    user_type_teacher_ability_1: वर्गात विभाग तयार करा
+    user_type_teacher_ability_2: प्रत्येक विद्यार्थ्याला काम द्या आणि या कामाचा आढावा
+      घ्या
+    user_type_teacher_ability_3: व्यावसायिक अध्ययनात नावनोंदणी करा
+    user_type_teacher_ability_4: आमच्या शिक्षकांच्या मंचावर परस्पर संवाद साधा
     email_preference_yes: होय
     email_preference_no: नाही
+    share_teacher_email_reg_partner_preference_yes: होय
+    share_teacher_email_reg_partner_preference_no: नाही
     parent_account_checkbox: मी माझ्या बालकाच्या वतीने साईनिंग अप करणारा  आई-वडील/पालक
       आहे
     parent_account_email_progress_permission: तुमच्या मुलाची प्रगती आणि प्रकल्प, आणि
@@ -31,6 +46,11 @@ mr:
         साधा.
   crud:
     edit: संपादन करा
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: तुम्ही दिलेला ईमेल पत्ता या खात्याच्या ईमेल
+          पत्त्याशी जुळत नाही
   nav:
     header:
       finished_hoc: माझं झालंय!
@@ -70,6 +90,7 @@ mr:
     student_reg_link: विध्यार्थी
   user_type:
     student: विध्यार्थी
+    teacher: शिक्षक
   footer:
     copyright: कॉपीराइट
     translate: आमच्या सामग्रीचा अनुवाद करण्यासाठी पुढे या

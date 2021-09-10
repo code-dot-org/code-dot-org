@@ -2279,6 +2279,18 @@
           "moving north": "dul ó thuaidh",
           "jittering": "crith",
           "moving west": "dul siar"
+        },
+        "international_outbreak_freeplay": {
+          "wandering": "fánaíocht",
+          "moving east": "dul soir",
+          "spinning right": "casadh ar deiseal",
+          "shrinking": "crapadh",
+          "growing": "fás",
+          "moving south": "dul ó dheas",
+          "moving north": "dul ó thuaidh",
+          "jittering": "crith",
+          "moving west": "dul siar",
+          "patrolling": "patrólú"
         }
       }
     }

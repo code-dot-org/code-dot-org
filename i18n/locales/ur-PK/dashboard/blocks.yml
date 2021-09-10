@@ -1066,6 +1066,10 @@ ur:
         text: مقام {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': بارش
       gamelab_makeNewSpriteAnon:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       gamelab_mirrorSprite:
@@ -1087,6 +1091,8 @@ ur:
       gamelab_objectSpritePointer:
         text: کلک کیا {SPRITE}
       gamelab_playSound:
+        text: پلے آواز {SOUND}
+      gamelab_playSoundOptions:
         text: پلے آواز {SOUND}
       gamelab_pointInDirection:
         text: نقطہ {SPRITE} {DIRECTION}
@@ -1447,17 +1453,27 @@ ur:
         text: ایکس {SPRITE} کے مربوط
       Mikelab_yLocationOf:
         text: Y کے ہم آہنگ {SPRITE}
+      PoemBot_playSound:
+        text: پلے آواز {SOUND}
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"solid"': ٹھوس
-            '"rainbow"': دھنک
+          EFFECT:
+            '"colors"': رنگ
+            '"squiggles"': سکویگلز
+            '"space"': جگہ
+            '"stars"': ستارہ
+            '"ripples"': ریپلز
+          PALETTE:
+            '"rainbow"': قوس قزح
       PoemBot_setForegroundEffect:
-        text: پس منظر اثر {FG_EFFECT} سیٹ کریں
+        text: پس منظر اثر {EFFECT} سیٹ کریں
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': بارش
             '"bubbles"': بُلبُلے
+            '"hearts"': رنگین دل
+            '"confetti"': کاغذی لیریاں
+            '"starburst"': اسٹاربسٹ
       RyanLab_moveForward:
         text: آگے چلیں
       RyanLab_turnLeft:

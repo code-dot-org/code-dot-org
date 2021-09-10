@@ -2926,6 +2926,12 @@ lt:
           lessons:
             lesson-2:
               name: 2 pamoka
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1 Etapas
+            lessonGroup-3:
+              display_name: 2 Etapas
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

@@ -2483,10 +2483,10 @@ vi-VN:
           Mô phỏng là phương pháp lý tưởng để tìm hiểu những sự việc khó quan sát trong thế giới thực. Phương pháp này giúp các nhà khoa học giải quyết các vấn đề và thử nghiệm các ý tưởng mới một cách an toàn và hiệu quả. Bản mô phỏng của bạn là phương thức minh họa cách vi rút lây lan trong Thị Trấn Quái Vật.
 
           ## Đặt lại và chạy lại!
-          Ngay cả khi bạn chính là người lập trình thì cũng không thể biết chính xác điều gì sẽ xảy ra khi nhấn nút "Chạy". Các quái vật lang thang ngẫu nhiên nên bạn không biết vi rút sẽ lây lan nhanh hay chậm. Mỗi khi bạn thay đổi mã lập trình, hãy đảm bảo chạy mô phỏng nhiều hơn một lần. Sự việc có thể không lặp lại tới lần thứ hai đâu!
+          Ngay cả khi bạn chính là người lập trình thì cũng không thể biết chính xác điều gì sẽ xảy ra khi nhấn nút chạy. Các quái vật lang thang ngẫu nhiên nên bạn không biết vi rút sẽ lây lan nhanh hay chậm. Mỗi khi bạn thay đổi mã lập trình, hãy đảm bảo chạy mô phỏng nhiều hơn một lần. Sự việc có thể không lặp lại tới lần thứ hai đâu!
 
           ## Thu thập dữ liệu
-          Hãy thử ghi lại những gì bạn quan sát được trong quá trình chạy mô phỏng. Bạn có thể đếm số quái vật bị ốm hoặc sử dụng đồng hồ bấm giờ xem sự việc diễn ra nhanh tới mức nào. Ví dụ: Thông thường sẽ mất bao nhiêu thời gian để toàn bộ quái vật bị ốm nếu không có ai đeo khẩu trang?
+          Hãy thử ghi lại những gì bạn quan sát được trong quá trình chạy mô phỏng. Bạn có thể đếm số quái vật bị bệnh hoặc sử dụng đồng hồ bấm giờ xem sự việc diễn ra nhanh tới mức nào. Ví dụ: Thông thường sẽ mất bao nhiêu thời gian để toàn bộ quái vật bị bệnh nếu không có ai đeo khẩu trang?
 
           ## Đưa ra dự đoán
           Nếu bạn hiểu mô hình của mình, bạn có thể sử dụng mô hình đó để đưa ra dự đoán. Bạn thậm chí còn có thể thay đổi cách chạy mô phỏng và đoán xem sẽ có những thay đổi gì xảy ra. Ví dụ:
@@ -2556,6 +2556,7 @@ vi-VN:
         - {}
         - {}
         - correct: true
+          feedback: Chính xác!
         - text: Họa sĩ sẽ vẽ hình ngũ giác
           feedback: Sai. Họa sĩ vẽ hình vuông.
         questions:
@@ -2565,6 +2566,7 @@ vi-VN:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Chính xác!
         - text: '15'
         - text: '20'
         questions:
@@ -2581,6 +2583,7 @@ vi-VN:
         answers:
         - {}
         - correct: true
+          feedback: Chính xác!
         - {}
         - text: Chú chim sẽ va vào tường.
         questions:
@@ -2590,6 +2593,7 @@ vi-VN:
         - {}
         - {}
         - correct: true
+          feedback: Chính xác!
         - text: BB-8 sẽ chỉ di chuyển 3 ô.
         questions:
         - {}
@@ -2597,6 +2601,7 @@ vi-VN:
         answers:
         - {}
         - correct: true
+          feedback: Chính xác!
         - {}
         - text: BB-8 sẽ rẽ sai hướng sau vòng lặp đầu tiên.
         questions:
@@ -2613,6 +2618,7 @@ vi-VN:
         answers:
         - text: A
           correct: true
+          feedback: Chính xác!
         - text: B
         - text: C
         - text: Không mục nào ở trên
@@ -2622,6 +2628,7 @@ vi-VN:
         answers:
         - {}
         - correct: true
+          feedback: Chính xác!
         - {}
         - text: Chú ong sẽ không chạm được đám mây.
         questions:
@@ -2637,6 +2644,7 @@ vi-VN:
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
         - correct: true
+          feedback: Chính xác!
         - {}
         - {}
         - text: Chú ong sẽ cố gắng lấy mật và mật hoa từ cả hoa và tổ ong.
@@ -2647,6 +2655,7 @@ vi-VN:
         - {}
         - {}
         - correct: true
+          feedback: Chính xác!
         - text: Chũ ong sẽ rẽ sai hướng.
         questions:
         - {}
@@ -2655,6 +2664,7 @@ vi-VN:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Chính xác!
         - text: '10'
         - text: '12'
         questions:
@@ -2664,6 +2674,7 @@ vi-VN:
         - {}
         - {}
         - correct: true
+          feedback: Chính xác!
         - text: Người thu hoạch sẽ chỉ hái bí.
         questions:
         - {}
@@ -2671,6 +2682,7 @@ vi-VN:
         answers:
         - {}
         - correct: true
+          feedback: Chính xác!
         - {}
         - text: Mã lệnh này sẽ không xử lý hố cuối cùng.
         questions:
@@ -2680,12 +2692,14 @@ vi-VN:
         - {}
         - {}
         - correct: true
+          feedback: Chính xác!
         - text: Bác nông dân sẽ làm sạch vết bẩn một lần duy nhất.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2021:
         answers:
         - correct: true
+          feedback: Chính xác!
         - {}
         - {}
         - text: Thây ma sẽ bị mắc kẹt ở cuối con đường phía trước.
@@ -2695,6 +2709,7 @@ vi-VN:
         answers:
         - {}
         - correct: true
+          feedback: Chính xác!
         - {}
         - text: Chú chim sẽ quay sai hướng.
         questions:
@@ -2712,6 +2727,7 @@ vi-VN:
             màn hình.
         - text: Người ngoài hành tinh sẽ bắt đầu di chuyển lên và xuống trên màn hình.
           correct: true
+          feedback: Chính xác!
         - text: Người ngoài hành tinh sẽ biến mất khỏi phía trên màn hình.
           feedback: Sai. Người ngoài hành tinh xanh sẽ bắt đầu di chuyển lên và xuống
             trên màn hình.
@@ -2722,6 +2738,7 @@ vi-VN:
         - {}
         - {}
         - correct: true
+          feedback: Chính xác!
         - {}
         questions:
         - {}
@@ -2748,6 +2765,7 @@ vi-VN:
           feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
         - text: Cỏ lăn sẽ bắt đầu lăn
           correct: true
+          feedback: Chính xác!
         - text: Cỏ lăn sẽ nhấp nháy.
           feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
         questions:
@@ -2845,21 +2863,48 @@ vi-VN:
             sẽ được hiển thị nếu người dùng nhập “pizza”?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: Họa sĩ sẽ vẽ hình tam giác có cạnh 50 pixel.
+          correct: true
+          feedback: Chính xác!
+        - text: Họa sĩ sẽ vẽ đa giác 50 cạnh, mỗi cạnh 3 pixel.
+          feedback: Sai rồi. Biến `length` (chiều dài) cần phải ở trong vòng lặp `repeat`
+            (lặp lại) để làm được điều đó.
+        - text: Họa sĩ sẽ vẽ ba cạnh mở có các góc rẽ 50 độ.
+          feedback: Sai rồi. Biến `length` (chiều dài) cần được dùng trong khối `repeat`
+            (lặp lại) để làm được điều đó.
         - text: Máy tính sẽ nhắc người dùng nhập số.
+          feedback: Biến `length` được đặt giá trị 50 và đang được dùng trong khối
+            `move forward by` (tiến về phía trước một khoảng), vì vậy họa sĩ sẽ vẽ
+            hình tam giác có cạnh 50 pixel.
         questions:
-        - {}
+        - text: Chúng ta đã đặt biến “length” (chiều dài) thành 50. Điều gì sẽ xảy
+            ra khi bạn nhấp chuột vào nút “Run” (Chạy)?
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Chú ong sẽ tiến về phía trước và thu thập tất cả mật hoa từ mỗi bông
+            hoa.
+          feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong thu thập lượng mật
+            hoa phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông
+            hoa mà thôi.
+        - text: Chú ong sẽ tiến về phía trước và thu thập tất cả mật hoa từ mỗi bông
+            hoa, trừ một bông.
+          correct: true
+          feedback: Chính xác!
+        - text: Chú ong sẽ tiến về phía trước và thu thập một mật hoa từ mỗi bông
+            hoa.
+          feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong thu thập lượng mật
+            hoa phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông
+            hoa mà thôi.
         - text: Chú ong sẽ di chuyển về phía trước và thu thập một mật hoa từ hoa
             số 1 và 4.
+          feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong thu thập lượng mật
+            hoa phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông
+            hoa mà thôi.
         questions:
-        - {}
+        - text: Hãy đọc mã lệnh dưới đây. Điều gì sẽ xảy ra khi bạn nhấp chuột vào
+            nút “Run” (Chạy)?
+        markdown: A! Sử dụng các vòng lặp `for` (với) sẽ khiến bài tập này đơn giản
+          hơn rất nhiều!
       courseF_sprites_freeplay:
         description: Đến lượt bạn tự sáng tạo bằng ý tưởng của chính mình rồi! Bạn
           sẽ thực hiện loại dự án nào?
@@ -2972,6 +3017,7 @@ vi-VN:
         answers:
         - {}
         - correct: true
+          feedback: Chính xác!
         - {}
         - {}
         questions:
@@ -3002,6 +3048,7 @@ vi-VN:
         answers:
         - {}
         - correct: true
+          feedback: Chính xác!
         - {}
         - text: Laurel sẽ thu thập 1 mẩu kho báu bằng cách sử dụng mã lệnh này.
         questions:
@@ -3011,3 +3058,13 @@ vi-VN:
           # மகிழ்ச்சியான வரைபடம்
 
           பிரமை வழியாக ஒரு பாத்திரத்தை நகர்த்த ஒரு வழிமுறையை உருவாக்கவும்.
+      ForLoopFun-Unplugged_2021:
+        markdown: |
+          # Zábava s cykly „for“
+
+          Víme, že cykly nám umožňují dělat věci znovu a znovu, ale teď se naučíme, jak cykly používat se zabudovanou strukturou navíc.
+      PowerOfWords-Unplugged_2021:
+        markdown: |
+          # Moc slov
+
+          ## Co byste měli dělat, když někdo na internetu použije zlovolnou nebo urážející mluvu?

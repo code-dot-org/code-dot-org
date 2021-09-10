@@ -1107,6 +1107,11 @@ ja:
         text: の場所 {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': 爆発
+            '"rain"': 雨
       gamelab_makeNewSpriteAnon:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       gamelab_mirrorSprite:
@@ -1129,6 +1134,12 @@ ja:
         text: クリック {SPRITE}
       gamelab_playSound:
         text: Playsound {SOUND}
+      gamelab_playSoundOptions:
+        text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": ボタン
+            "'sound://category_collect/clicky_crunch.mp3'": ドスン
       gamelab_pointInDirection:
         text: ポイント {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1566,18 +1577,36 @@ ja:
         text: x 座標の {SPRITE}
       Mikelab_yLocationOf:
         text: y 座標 {SPRITE}
+      PoemBot_playSound:
+        text: Playsound {SOUND}
       PoemBot_setBackgroundEffect:
-        text: 背景エフェクトを {BG_EFFECT} [PALETTE][1] にセット
+        text: 背景エフェクトを {EFFECT} {PALETTE} にセット
         options:
-          BG_EFFECT:
-            '"solid"': 単色
-            '"rainbow"': にじ
+          EFFECT:
+            '"colors"': 色
+            '"squiggles"': 波線
+            '"space"': 宇宙
+            '"stars"': 星
+            '"ripples"': さざ波
+          PALETTE:
+            '"rainbow"': 虹
       PoemBot_setForegroundEffect:
-        text: 前景エフェクトを {FG_EFFECT} にセット
+        text: 前景エフェクトを {EFFECT} にセット
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': 雨
             '"bubbles"': 泡
+            '"hearts"': カラフルなハート
+            '"confetti"': 紙吹雪
+            '"starburst"': スターバースト
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            swimming_left_and_right: 水泳
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            swimming_left_and_right: 水泳
       RyanLab_moveForward:
         text: 前に すすむ
       RyanLab_turnLeft:

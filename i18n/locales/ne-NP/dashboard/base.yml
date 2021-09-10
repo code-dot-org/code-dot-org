@@ -120,6 +120,8 @@ ne:
     accept_terms: "You must agree to create an account"
     email_preference_yes: "हो"
     email_preference_no: "होइन"
+    share_teacher_email_reg_partner_preference_yes: "हो"
+    share_teacher_email_reg_partner_preference_no: "होइन"
   school_info:
     other: 'अन्य'
   signin_form:

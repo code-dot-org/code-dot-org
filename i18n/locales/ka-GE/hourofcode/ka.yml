@@ -11,29 +11,27 @@ ka:
   campaign_date_full: 4-10 დეკემბერი
   campaign_date_year: '2016'
   campaign_date_full_year: 7-13 დეკემბერი, 2020
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_start_short: 1 ოქტ.
+  latam_campaign_date_start_long: 1 ოქტომბერი
+  latam_campaign_date_short: 1 ოქტ. - 12 დეკ.
+  latam_campaign_date_full: 1 ოქტომბერი - 12 დეკემბერი
   latam_campaign_date_year: '2016'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: Oct. 9
-  europe_campaign_date_start_long: October 9
-  europe_campaign_date_short: Oct. 9-24
-  europe_campaign_date_full: October 9-24
+  latam_campaign_date_full_year: 1 ოქტომბერი, 2021 - 12 დეკემბერი, 2021
+  europe_campaign_date_start_short: 9 ოქტ.
+  europe_campaign_date_start_long: 9 ოქტომბერი
+  europe_campaign_date_short: 9-24 ოქტ.
+  europe_campaign_date_full: 9-24 ოქტომბერი
   europe_campaign_date_year: '2016'
-  europe_campaign_date_full_year: October 9-24, 2021
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
+  europe_campaign_date_full_year: 9-24 ოქტომბერი, 2021
+  africa_campaign_date_start_short: 1 ოქტ.
+  africa_campaign_date_start_long: 1 ოქტომბერი
+  africa_campaign_date_short: 1-31 ოქტ.
+  africa_campaign_date_full: 1-31 ოქტომბერი
   africa_campaign_date_year: '2016'
-  africa_campaign_date_full_year: October 1-31, 2021
-  hoc2020_header: Learn today, build a brighter tomorrow.
-  hoc2020_header_with_line_break_markdown: |-
-    Learn today,
-
-    build a brighter tomorrow.
+  africa_campaign_date_full_year: 1-31 ოქტომბერი, 2021
+  hoc2020_header: ისწავლე დღეს, ააშენე ნათელი ხვალინდელი დღე.
+  hoc2020_header_with_line_break_markdown: "ისწავლე დღეს, \n\nააშენე ნათელი ხვალინდელი
+    დღე."
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
@@ -49,7 +47,7 @@ ka:
     Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
     discuss ethics and AI, and more...
   hoc2019_header: Learn computer science. Change the world.
-  hoc2019_header_line1_mobile: Learn computer science.
+  hoc2019_header_line1_mobile: ისწავლე კომპიუტერული მეცნიერება.
   hoc2019_header_line2_mobile: Change the world.
   social_hoc2019_every_sudent: 'Every student has the potential to change the world.
     Help them get started. #CSforGood'
@@ -568,10 +566,9 @@ ka:
   map_legend_title: ლეგენდა
   map_legend_hoc_events: კოდის ერთი საათის ღონისძიება
   map_legend_cs_tech_jam: სპეციალური ღონისძიება
-  map_warning: კოდის საათის რუკა გვიჩვენებს პირველ 200,000 დარეგისტრირებულ ღონისძიებას.
-    ყველა დარეგისტრირებული ღონისძიების სწორი მისამართით შეგიძლიათ იხილოთ <a href='%{events_url}'>ღონისძიებების
+  map_warning: ყველა ღონისძიება შეგიძლიათ იხილოთ <a href='%{events_url}'>ღონისძიებების
     გვერდზე.</a>
-  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
+  map_warning_markdown: ყველა ღონისძიება შეგიძლიათ იხილოთ [ღონისძიებების გვერდზე.](%{events_url})
   meta_tag_og_title: კოდის ერთი საათის დროა
   meta_tag_og_description: 'კოდის ერთი საათი არის გლობალური მოძრაობა, რომელიც აერთიანებს
     ათობით მილიონ მოსწავლეს 180+ ქვეყნიდან, 40 ენაზე მისაწვდომი ტუტორიალებით. ასაკი:
@@ -590,13 +587,10 @@ ka:
   hoc_faq_what_is_hoc_a: კოდის ერთი საათი არის ერთსაათიანი შესავალი კურსი კომპიუტერულ
     მეცნიერებებში, რომლის მიზანიცაა აჩვენოს, რომ პროგრამირების საწყისების სწავლა შეუძლია
     ყველას. <a href='http://code.org/learn'>გაეცანით ტუტორიალებს</a>.
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: კოდის ერთი საათი არის ერთსაათიანი შესავალი კურსი
+    კომპიუტერულ მეცნიერებებში, რომლის მიზანიცაა აჩვენოს, რომ პროგრამირების საწყისების
+    სწავლა შეუძლია ყველას. გაეცანით [ტუტორიალებს](%{tutorials}). ამ სახალხო კამპანიას
+    მხარს უჭერს [400 პარტნიორი](%{partners}) და 200.000 პედაგოგი მსოფლიოს გარშემო.
   hoc_faq_last_year: სცადეთ ტუტორიალები
   hoc_faq_when_is_hoc_q: როდისაა კოდის ერთი საათი?
   hoc_faq_when_is_hoc_a: კოდის ერთი საათი ტარდება ყოველ წელს <a href='%{csedweek_url}'>კომპიუტერული
@@ -617,19 +611,19 @@ ka:
     ინფორმატიკის სწავლა ავითარებს პრობლემების გადაჭრის უნარს, ლოგიკასა და შემოქმედებით
     უნარს. სწავლის ადრე დაწყება უზრუნველყოფს მოსწავლეების წარმატებას 21-ე საუკუნის
     ნებისმიერ პროფესიაში. გაეცანით სტატისტიკას <a href='%{stats_url}'>აქ</a>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+  hoc_faq_why_cs_a_markdown: _ყოველ_ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა, ისწავლოს
+    ინფორმატიკა. ინფორმატიკის სწავლა ავითარებს პრობლემების გადაჭრის უნარს, ლოგიკასა
+    და შემოქმედებით უნარს. სწავლის ადრე დაწყება უზრუნველყოფს მოსწავლეების წარმატებას
+    21-ე საუკუნის ნებისმიერ პროფესიაში. გაეცანით სტატისტიკას [აქ](%{stats_url}).
   hoc_faq_how_participate_q: როგორ მივიღო მონაწილეობა კოდის ერთ საათში?
   hoc_faq_how_participate_a: "<a href='target-resources-how-to'>დაიწყეთ თქვენი გეგმა
     აქ</a> ჩვენი ინსტრუქციების გაცნობით. კოდის ერთი საათის ორგანიზება შეგიძლიათ თქვენს
     სკოლაში ან ნებისმიერ გაერთიანებაში&mdash; დამატებითი აქტივობის წრეში, არასამეწრამეო
     ორგანიზაციაში ან სამსახურში. ან სცადეთ დამოუკიდებლად %{campaign_date}."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a_markdown: "[დაიწყეთ თქვენი გეგმა აქ](%{howto}) ჩვენი ინსტრუქციების
+    გაცნობით. კოდის ერთი საათის ორგანიზება შეგიძლიათ თქვენს სკოლაში ან ნებისმიერ გაერთიანებაში;
+    დამატებითი აქტივობის წრეში, არასამეწარმეო ორგანიზაციაში ან სამსახურში. ან სცადეთ
+    დამოუკიდებლად როცა კოდის ერთი საათი დაიწყება — %{campaign_date}."
   hoc_faq_behind_hoc_q: ვინ დგას კოდის ერთი საათის მიღმა?
   hoc_faq_behind_hoc_a: კოდის ერთი საათი ორგანიზებულია კოდის ერთი საათისა და კომპიუტერული
     მეცნიერების საგანმანათლებლო კვირეულის <a href='%{partner_url}'>მიმიხილვის კომიტეტის</a>
@@ -638,11 +632,11 @@ ka:
     მოსწავლეებს შორის. კოდის ერთი საათის ირგვლივ გაერთიანებულია უამრავი პარტნიორი,
     მაგალითად, Microsoft, Apple, Amazon, Boys and Girls Clubs of America და College
     Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: კოდის ერთი საათი ორგანიზებულია კოდის ერთი საათისა
+    და კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის [მრჩეველთა და მეთვალყურეობის
+    კომიტეტის](%{partner_url}) მიერ. ასევე, პარტნიორთა უპრეცედენტო გაერთიანების მიერ,
+    რომლებიც მხარს უჭერენ კოდის ერთ საათს — Microsoft, Apple, Amazon, Boys and Girls
+    Clubs of America და College Board.
   hoc_faq_host_q: პროგრამირების შესახებ არაფერი არ ვიცი. შეიძლება, რომ მაინც ვიყო
     ორგანიზატორი?
   hoc_faq_host_a: 'რა თქმა უნდა, კოდის ერთი საათის აქტივობების გავლა დამოუკიდებლადაც
@@ -650,11 +644,11 @@ ka:
     მიმდინარე ტუტორიალები</a>, აირჩიოთ, რომელიც მოგეწონებათ, აირჩიოთ საათი&mdash;
     ჩვენ მივხედავთ ყველაფერ დანარჩენს. თვენი ღონისძიების დასასგეგმად გაეცანით ჩვენს
     <a href=''/how-to''>ინსტრუქციებს</a>.'
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: 'რა თქმა უნდა, კოდის ერთი საათის აქტივობების გავლა დამოუკიდებლადაც
+    შეიძლება. ერთადერთი, რაც უნდა გააკეთოთ: [სცადოთ მიმდინარე ტუტორიალები](%{codeorg_url}/learn),
+    აირჩიოთ, რომელიც მოგეწონებათ, აირჩიოთ საათი; ჩვენ მივხედავთ ყველაფერ დანარჩენს.
+    ყველა ასაკისა და გამოცდილების მქონე მოსწავლისთვის გვაქვს რესურსები; დაწყებული
+    საბავშვო ბაღიდან და ზევით. თქვენი ღონისძიების დასაგეგმად გაეცანით ჩვენს [ინსტრუქციებს](%{howto}).'
   hoc_faq_devices_q: რა მოწყობილობები უნდა გამოვიყენო ჩემი მოსწავლეებისთვის?
   hoc_faq_devices_a: Code.org–ის ტუტორიალები ყველა მოწყობილობასა და ბრაუზერში მუშაობს.
     მეტი ინფორმაცია ჩვენი ტუტორიალების ტექ. უზრუნველყოფის შესახებ შეგიძლიათ იხილოთ
@@ -662,11 +656,12 @@ ka:
     ტექ. უზრუნველყოფის შესახებ <a href='%{codeorg_url}/learn'>%{partner_url}/წაიკითხეთ
     </a> ტუტორიალის აღწერაში. არ დაგავიწყდეთ, რომ ჩვენ <a href='%{unplugged_url}'>კომპიუტერების
     გარეშე შესასრულებელი აქტივობებიც</a> გვაქს!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Code.org–ის ტუტორიალები ყველა მოწყობილობასა და ბრაუზერში
+    მუშაობს. მეტი ინფორმაცია ჩვენი ტუტორიალების ტექნიკური საჭიროებების შესახებ შეგიძლიათ
+    იხილოთ [აქ]((%{codeorg_url}/educate/it)). პარტნიორების მიერ მოწოდებული ტუტორიალების
+    ტექნიკური საჭიროებების შესახებ წაიკითხეთ ტუტორიალის აღწერაში — [%{partner_url}/learn](%{codeorg_url}/learn).
+    არ დაგავიწყდეთ, რომ ჩვენ ოფლაინ და მოწყობილობების გარეშე შესასრულებელი [აქტივობებიც](%{unplugged_url})
+    გვაქვს!
   hoc_faq_need_computers_q: მჭირდება თუ არა კომპიუტერი ყოველი მონაწილისთვის?
   hoc_faq_need_computers_a: 'არა. ჩვენ გვაქვს კოდის ერთი საათის ისეთი ტუტორიალები,
     რომლებიც მუშაობს პერსონალურ კომპიუტერებზე, სმარტფონებზე, პლანშეტებზე, ზოგს კი
@@ -960,7 +955,7 @@ ka:
     რომლებიც იწყებენ კოდის ერთი საათით.
   learn_banner_beyond: სწავლის გაგრძელება გინდათ? <a id='learn_banner_beyond'>გასცდით
     ერთ საათს</a>
-  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
+  learn_banner_beyond_markdown: სწავლის გაგრძელება გინდათ? [გასცდით ერთ საათს](%{url})
   learn_banner_teachers: 'მასწავლებლებო: <a id=''teacher_banner_host''>უმასპინძლეთ
     საათს</a> ან <a id=''teacher_banner_howto''>წაიკითხეთ "თუ-როგორ" სახელმძღვანელო</a>'
   learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read

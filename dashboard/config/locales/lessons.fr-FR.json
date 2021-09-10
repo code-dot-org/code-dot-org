@@ -35,21 +35,21 @@
           "student_overview": "Vous allez avoir beaucoup de plaisir à découvrir les boucles `for` !"
         },
         "coursef-2021/For Loops in Bee": {
-          "overview": "Avec l'Abeille, cette leçon se concentre sur les boucles `for` et l'utilisation d'une variable d'incrémentation pour résoudre des énigmes plus compliquées. Les élèves commenceront par revoir les boucles des leçons précédentes, puis seront initiés aux boucles `for` afin de résoudre, plus efficacement, des problèmes compliqués.",
           "preparation": "",
-          "student_overview": "Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles \"for\" !"
+          "student_overview": "Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !"
         },
         "coursef-2021/For Loops in Artist": {
           "overview": "Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles `for` pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.",
           "preparation": "",
-          "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles `for` pour faire des images à couper le souffle."
+          "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle."
         },
         "coursef-2021/Simulating Experiments": {
           "overview": "En exécutant une simulation simple dans le Labo des Lutins, les étudiants découvriront comment l'informatique peut être utilisée pour collecter des données qui identifient des tendances ou des modèles. Après avoir exécuté la simulation de nombreuses fois, les élèves auront l'occasion de faire une prédiction sur la façon dont la modification d'une variable dans la simulation peut avoir un impact sur le résultat, puis de tester cette hypothèse.",
           "student_overview": "Exécute des simulations sur l'ordinateur et expérimente en changeant les variables."
         },
         "coursef-2021/lesson-5": {
-          "preparation": ""
+          "preparation": "",
+          "purpose": "Dans la leçon précédente, les élèves ont collecté et interprété les données d'une simulation simple. Dans cette leçon, les ils suivront des instructions pour coder leur propre modèle de simulation. Les connaissances préalables des élèves sur les épidémies de virus dans le monde réel seront appliquées à un scénario fictif. "
         },
         "coursef-2021/Internet": {
           "overview": "Même si beaucoup de gens utilisent internet quotidiennement, peu savent comment cela fonctionne. Dans cette leçon, les élèves feront semblant de circuler sur internet, tout en apprenant sur les connexions, les URL, les adresses IP et le DNS.",
@@ -392,12 +392,11 @@
           "student_overview": "Cette abeille aime les variables !"
         },
         "express-2021/For Loops with Bee": {
-          "overview": "Avec l'Abeille, cette leçon se concentre sur les boucles `for` et l'utilisation d'une variable d'incrémentation pour résoudre des énigmes plus compliquées. Les élèves commenceront par revoir les boucles des leçons précédentes, puis seront initiés aux boucles `for` afin de résoudre, plus efficacement, des problèmes compliqués.",
-          "student_overview": "Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles \"for\" !"
+          "student_overview": "Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !"
         },
         "express-2021/For Loops with Artist": {
           "overview": "Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles `for` pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.",
-          "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles `for` pour faire des images à couper le souffle."
+          "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle."
         },
         "express-2021/End of Course Project": {
           "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."

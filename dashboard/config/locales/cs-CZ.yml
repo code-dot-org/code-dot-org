@@ -208,7 +208,15 @@ cs:
     user_type_button: Aktualizovat typ účtu
     user_type_label: Typ účtu
     user_type_student: Student
+    user_type_student_desc: 'Probádejte všechny naše kurzy a aktivity, a navíc:'
+    user_type_student_ability_1: Ukládejte svůj pokrok a své projekty
+    user_type_student_ability_2: Přidejte se do třídní sekce svého učitele
     user_type_teacher: Učitel
+    user_type_teacher_desc: 'Vše, k čemu mají studenti přístup, a navíc:'
+    user_type_teacher_ability_1: Vytvářejte třídní sekce
+    user_type_teacher_ability_2: Zadávejte a sledujte práci studentů
+    user_type_teacher_ability_3: Zapište se na profesionální výuku
+    user_type_teacher_ability_4: Interagujte na našem učitelském fóru
     field_is_required: je požadováno
     accept_terms: Musíte souhlasit pro vytvoření účtu
     error: Došlo k chybě.
@@ -218,6 +226,10 @@ cs:
     email_preference_yes: Ano
     email_preference_no: Ne
     email_preference_required: Musíte vyplnit nastavení e-mailové komunikace.
+    share_teacher_email_reg_partner_preference_yes: Ano
+    share_teacher_email_reg_partner_preference_no: Ne
+    share_teacher_email_reg_partner_preference_required: Musíte vyplnit nastavení
+      e-mailové komunikace.
     parent_account_checkbox: Jsem rodič nebo zákonný zástupce přihlašující se jménem
       svého dítěte.
     parent_account_email_progress_permission: Smíme Vám příležitostně poslat e-mail
@@ -1190,8 +1202,11 @@ cs:
       gender: Rod
       school_name: Název školy
       school_country: Země školy
+      colombian_chilean_school_department: Školní okrsek / region
       colombian_school_municipality: Školní městský obvod
       colombian_chilean_school_name: Název školy
+      chilean_school_commune: Komuna
+      chilean_school_id: ID školy
       ages: Jaké jsou věky studentů, které letos učíte?
       subjects: Jaké předměty letos vyučujete?
       resources: Které z následujících vzdělávacích prostředků výuky počítačových
@@ -1307,8 +1322,14 @@ cs:
   page_not_found_button: Zpět domů
   copy: Kopírovat
   confirm: Potvrdit
+  maker:
+    google_oauth:
+      login_with_google: Přihlášení do Maker App s Google
   parent_email_banner:
     text: "**Jste rodič nebo zákonný zástupce?** Připojte k tomuto účtu svůj e-mail
       a budete dostávat aktuální informace o pokroku a projektech svého dítěte!"
     link_your_email: Připojte svůj e-mail.
     not_now: Teď ne.
+  behaviors:
+    this_sprite: tento sprajt
+  unit_prefix: Jednotka %{n}

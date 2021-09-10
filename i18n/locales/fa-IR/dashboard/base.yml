@@ -121,6 +121,8 @@ fa:
     email_preference_privacy: "(سیاست‌های حفظ حریم خصوصی ما را ببینید)"
     email_preference_yes: "بله"
     email_preference_no: "نه"
+    share_teacher_email_reg_partner_preference_yes: "بله"
+    share_teacher_email_reg_partner_preference_no: "نه"
   school_info:
     title: 'اطلاعات مدرسه(اختیاری)'
     select_school_type: 'نوع مدرسه'

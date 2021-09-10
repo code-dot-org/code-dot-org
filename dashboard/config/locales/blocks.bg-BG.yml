@@ -775,6 +775,10 @@ bg:
         text: разположение на {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': дъжд
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -784,6 +788,10 @@ bg:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": криза
       gamelab_randColor:
         text: случаен цвят
       gamelab_randomColor:
@@ -1042,14 +1050,13 @@ bg:
             '"right"': стрелка надясно
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"solid"': твърд
-            '"rainbow"': дъга
+          EFFECT:
+            '"colors"': Цветове
       PoemBot_setForegroundEffect:
         options:
-          FG_EFFECT:
-            '"rain"': дъжд
-            '"bubbles"': балончета
+          EFFECT:
+            '"rain"': Дъжд
+            '"bubbles"': Балончета
       RyanLab_moveForward:
         text: върви напред
       RyanLab_turnLeft:

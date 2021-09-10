@@ -8144,7 +8144,7 @@ cs:
               display_name: Úrovně nahrávání videí
               description: Tyto úrovně mají používat tvůrci videí.
         virustest:
-          title: Simulace šíření
+          title: Simulování epidemie
           description_short: 'Vytvořte ve Sprite Labu simulaci šíření viru. '
         ml-playground:
           lessons:
@@ -8153,30 +8153,32 @@ cs:
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
-              name: Kódování simulace
+              name: Naprogramování simulace
           lesson_groups:
             outbreak:
-              display_name: Simulace šíření
-          title: Simulátor šíření
-          description_short: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
-          description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
-          name: šíření
-          student_description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
+              display_name: Simulace epidemie
+          title: Simulátor epidemie
+          description_short: Naprogramujte ve Sprite Lab simulaci epidemie viru.
+          description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
+          name: epidemie
+          student_description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
         2021drafting:
           lessons:
             Virus Simulation for Code Bytes:
-              name: Kódování simulace
+              name: Naprogramování simulace
             Making Sprites:
               name: Dělání sprajtů
             End of Course Project:
               name: Projekt na zakončení kurzu
+            Outbreaklab:
+              name: Samostatná laboratoř epidemií
           lesson_groups:
             introduction:
               display_name: Úvod
             lessonGroup-3:
               display_name: Proměnné
             outbreak:
-              display_name: Simulátor šíření
+              display_name: Simulátor epidemie
             debugging:
               display_name: Ladění
         csd1-2021:
@@ -9017,6 +9019,8 @@ cs:
                 pro hypotetické aplikace. '
             lesson-7:
               name: Dělání sprajtů
+            lesson-5:
+              name: Epidemie
             lesson-2:
               name: Moc slova
               description_student: Šikana není nikdy v pořádku. Tato lekce Vás poučí
@@ -9304,14 +9308,14 @@ cs:
             Learning Sprites with Sprite Lab:
               name: Plovoucí ryby s Laboratoří sprajtů
             Virus Simulation for Code Bytes:
-              name: Kódování simulace
+              name: Naprogramování simulace
             Making Sprites:
               name: Dělání sprajtů
           lesson_groups:
             ramp_up:
               display_name: Úvod
             outbreak:
-              display_name: Simulace šíření
+              display_name: Simulace epidemie
             lessonGroup-3:
               display_name: Proměnné
             Sprites:
@@ -9330,9 +9334,9 @@ cs:
               display_name: 'Kapitola 2: Řešení datových problémů'
         contagion-pilot:
           description_audience: Známky 5
-          description_short: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
-          description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
-          student_description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
+          description_short: Naprogramujte ve Sprite Lab simulaci epidemie viru.
+          description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
+          student_description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
         csa1-pilot:
           lessons:
             lesson-19:
@@ -9466,6 +9470,47 @@ cs:
               display_name: Úvod
             Introduction:
               display_name: Úvod
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lekce 3
+            Lesson 4:
+              display_name: Lekce 4
+            Lesson 5:
+              display_name: Lekce 5
+        outbreakmodule:
+          lessons:
+            how things spread:
+              name: Jak se věci šíří
+            contagion simulator setup:
+              name: Konfigurace simulátoru nákazy
+            sometimes but not always:
+              name: Někdy, ale ne vždy
+            modifying your model:
+              name: Úprava Vašeho modelu
+            telling a data story:
+              name: Vyprávění příběhu dat
+            intro monster town:
+              name: Epidemie ve Městě Příšer
+          lesson_groups:
+            Outbreak Module:
+              display_name: Modul epidemie
+          name: epidemický modul
+          title: Modul_epidemie_V2
+        aiml-2021:
+          lessons:
+            lesson9:
+              description_teacher: |-
+                V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.
+
+                **Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?
+        csd7-2021:
+          lessons:
+            Similarity Models:
+              description_teacher: |-
+                V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.
+
+                **Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?
         kodea-pd-2021:
           lessons:
             Getting Started:
@@ -9482,6 +9527,9 @@ cs:
           lessons:
             lesson-4:
               name: Proces návrhu
+        outbreak-module:
+          name: modul\_epidemie
+          title: Epidemie
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -9531,6 +9579,12 @@ cs:
           lessons:
             lesson-3:
               name: Test
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Fáze 1
+            lessonGroup-3:
+              display_name: Fáze 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

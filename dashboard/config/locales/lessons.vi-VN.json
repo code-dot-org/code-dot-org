@@ -29,6 +29,9 @@
         "coursef-2021/Simulating Experiments": {
           "student_overview": "Chạy trình mô phỏng trên máy tính và thử nghiệm bằng cách thay đổi biến."
         },
+        "coursef-2021/lesson-5": {
+          "purpose": "Trong bài học trước, học sinh đã thu thập và giải thích dữ liệu từ một bản mô phỏng đơn giản. Trong bài học này, học sinh sẽ làm theo hướng dẫn để viết mã lệnh cho mô hình mô phỏng của riêng mình. Những kiến thức trước đó của học sinh về sự lây lan của vi rút trong thế giới thực sẽ được áp dụng trong một tình huống giả tưởng."
+        },
         "coursef-2021/End of Course Project": {
           "student_overview": "Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!"
         },

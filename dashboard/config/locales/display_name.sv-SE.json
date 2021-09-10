@@ -96,13 +96,14 @@
         "CourseF_outbreak2": "Virussimulering",
         "CourseF_outbreak3": "Virussimulering",
         "CourseF_outbreak4": "Ändra din simulering",
-        "CourseF_outbreak6": "Slumpartad chans",
-        "CourseF_outbreak7": "Immunitet och vaccin",
-        "CourseF_outbreak8": "Dela ett meddelande",
+        "CourseF_outbreak7": "Slumpartad chans",
+        "CourseF_outbreak8": "Immunitet och vaccin",
         "courseF_bee_for5_2021": "variabler",
         "courseF_events_freeplay_aquatic": "Vatten",
         "courseF_sprites_freeplay_aquatic": "Vatten",
-        "ramp_artist_loops4_2021": "Stjärna"
+        "ramp_artist_loops4_2021": "Stjärna",
+        "CourseF_outbreak5": "Ändra din simulering",
+        "international_outbreak_freeplay": "Dela ett meddelande"
       }
     }
   }

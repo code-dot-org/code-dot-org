@@ -16989,8 +16989,10 @@ uz:
               name: Modul 2
             Module 3:
               key: Modul 3
+              name: Modul 3
             Module 4:
               key: Modul 4
+              name: Modul 4
             Module 5:
               key: Modul 5
             Module 6:
@@ -17061,6 +17063,12 @@ uz:
           lessons:
             lesson-2:
               name: 2-dars
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-bosqich
+            lessonGroup-3:
+              display_name: 2-bosqich
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -17138,3 +17146,13 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Innovations in Computing
+            lesson-9:
+              name: LED ranglar
+            lesson-13:
+              name: Accelerometer
+            lesson-19:
+              name: Loyiha

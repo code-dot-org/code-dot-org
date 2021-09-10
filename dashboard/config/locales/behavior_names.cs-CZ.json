@@ -216,6 +216,22 @@
         },
         "courseF_text_review": {
           "moving forward": "posuv vpřed"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "zotavuje se",
+          "wandering": "potulování se",
+          "moving east": "posuv na východ",
+          "spinning left": "otáčení doleva",
+          "spinning right": "otáčení doprava",
+          "shrinking": "smršťování",
+          "growing": "růst",
+          "moving south": "posuv na jih",
+          "moving left and right": "posun doleva a doprava",
+          "moving north": "posuv na sever",
+          "jittering": "komíhání",
+          "moving west": "posuv na západ",
+          "patrolling": "patrolování",
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         }
       }
     }

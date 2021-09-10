@@ -40,5 +40,6 @@
   "genericSuccess": "Befejezted a szintet! Nyomd meg a Folytatás-t, hogy folytasd.",
   "genericReplay": "Győződj meg arról, hogy többször lejátszod a programod, mitlőtt továbblépnél.",
   "genericBonusSuccess": "Szép munka! Befejezted a szintet a extra kihívással együtt!",
-  "debugSprites": "Van egy karakterekhez köthető hibád."
+  "debugSprites": "Van egy karakterekhez köthető hibád.",
+  "poemBotMakeBackground": "Hozzá kell adnod egy háttéreffektet."
 }

@@ -860,9 +860,9 @@
           "courseD_bee_debugging_challenge1_c": "បន្ទាប់ពីឃ្មុំធ្វើឱ្យវាស្ថិតនៅជួរខាងក្រោម សូមឱ្យវាធ្វើម្តងទៀតនូវពាក្យបញ្ជាទាំងនេះ:\n\n-   ធ្វើឡើងវិញ ២ ដង:\n    -   ទៅមុខ\n    -   ធ្វើទឹកឃ្មុំ ៣\n-   រំកិលថយក្រោយ"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n[][0]\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n[blockly block][1]",
-          "courseD_collector_debugging_challenge2_c": "ចុងបញ្ចប់ ប្រមូលកំណប់ដែលនៅសល់។ បន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n[blockly block][0]",
-          "courseD_collector_debugging_challenge2_d": "នេះគឺជាដំណោះស្រាយពេញលេញសម្រាប់បញ្ហានេះ។\n\n[blockly block][0]"
+          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_c": "ចុងបញ្ចប់ ប្រមូលកំណប់ដែលនៅសល់។ បន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_d": "នេះគឺជាដំណោះស្រាយពេញលេញសម្រាប់បញ្ហានេះ។\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "course3_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "ឆ្វេងឬស្ដាំ? ស្រេច​តែលើ​អ្នក!"
@@ -1827,7 +1827,7 @@
         },
         "Course 4 SCF 3": {
           "Course_4_SCF_3_f": "\\*\\* ដំណោះស្រាយ៖ \\*\\*\n\n[បិទប្លុក] [0]",
-          "Course_4_SCF_3_a": "[][0]"
+          "Course_4_SCF_3_a": "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         },
         "Course 4 SCFL 1": {
           "Course_4_SCFL_1_d": "\\*\\* ដំណោះស្រាយ៖ \\*\\*\n\n[បិទប្លុក] [0]"
@@ -2324,10 +2324,10 @@
           "courseE_bee_functions5_b": "អនុគមន៍របស់អ្នកគួរតែបង្កើតឱ្យតួអង្គឃ្មុំ: \n\n-   បត់\n-   រំកិលទៅមុខ\n-   ប្រមូលទឹកដមទាំងអស់\n-   រំកិលថយក្រោយ\n-   ត្រលប់ទៅទិសដៅដែលតួអង្គឃ្មុំចាប់ផ្តើមដំបូង"
         },
         "course3_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "[blockly block][0]\n\nប្លុក `jump to` នេះអនុញ្ញាតឱ្យអ្នកផ្លាស់ទីសិល្បករzombieទៅទំហំភីកសែលណាមួយនៅលើចត្រង្គក្រឡា, នៅពេលណាដែលអ្នកចង់បាន។ វាដំណើរការដោយ ការផ្លាស់ប្តូរសិល្បករzombieនូវមួយចំនួន\nនៃភីកសែលទៅខាងស្តាំនិងមួយចំនួននៃភីកសែលចុះក្រោម។ រាប់ពីជ្រុងខាងឆ្វេងខាងលើ,\nមានន័យថាវាមិនជាបញ្ហាដែលកន្លែងសិល្បករzombie នៅ _មុន_ពេលពាក្យបញ្ជាត្រូវបានរត់!\n\n[][1]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nប្លុក `jump to` នេះអនុញ្ញាតឱ្យអ្នកផ្លាស់ទីសិល្បករzombieទៅទំហំភីកសែលណាមួយនៅលើចត្រង្គក្រឡា, នៅពេលណាដែលអ្នកចង់បាន។ វាដំណើរការដោយ ការផ្លាស់ប្តូរសិល្បករzombieនូវមួយចំនួន\nនៃភីកសែលទៅខាងស្តាំនិងមួយចំនួននៃភីកសែលចុះក្រោម។ រាប់ពីជ្រុងខាងឆ្វេងខាងលើ,\nមានន័យថាវាមិនជាបញ្ហាដែលកន្លែងសិល្បករzombie នៅ _មុន_ពេលពាក្យបញ្ជាត្រូវបានរត់!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "course4_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "[blockly block][0]\n\nប្លុក `jump to` នេះអនុញ្ញាតឱ្យអ្នកផ្លាស់ទីសិល្បករzombieទៅទំហំភីកសែលណាមួយនៅលើចត្រង្គក្រឡា, នៅពេលណាដែលអ្នកចង់បាន។ វាដំណើរការដោយ ការផ្លាស់ប្តូរសិល្បករzombieនូវមួយចំនួន\nនៃភីកសែលទៅខាងស្តាំនិងមួយចំនួននៃភីកសែលចុះក្រោម។ រាប់ពីជ្រុងខាងឆ្វេងខាងលើ,\nមានន័យថាវាមិនជាបញ្ហាដែលកន្លែងសិល្បករzombie នៅ _មុន_ពេលពាក្យបញ្ជាត្រូវបានរត់!\n\n[][1]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nប្លុក `jump to` នេះអនុញ្ញាតឱ្យអ្នកផ្លាស់ទីសិល្បករzombieទៅទំហំភីកសែលណាមួយនៅលើចត្រង្គក្រឡា, នៅពេលណាដែលអ្នកចង់បាន។ វាដំណើរការដោយ ការផ្លាស់ប្តូរសិល្បករzombieនូវមួយចំនួន\nនៃភីកសែលទៅខាងស្តាំនិងមួយចំនួននៃភីកសែលចុះក្រោម។ រាប់ពីជ្រុងខាងឆ្វេងខាងលើ,\nមានន័យថាវាមិនជាបញ្ហាដែលកន្លែងសិល្បករzombie នៅ _មុន_ពេលពាក្យបញ្ជាត្រូវបានរត់!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_a": "ប្រសិនបើអ្នកហៅអនុគមន៍ម្តងទៀត, អ្នកអាចបង្កើតការរចនាដូចគ្នានៅជ្រុងចុងក្រោយ។",
@@ -2399,7 +2399,7 @@
           "courseE_bee_functions2_c": "អ្នកនឹងចង់ឆ្ពោះទៅមុខហើយទទួលបានទឹកដមពីរពីរដង ដើម្បីដោះស្រាយបញ្ហានេះ ។"
         },
         "4-5 Artist 1": {
-          "4-5_Artist_1_a": "[][0]"
+          "4-5_Artist_1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "ប្លុកដែលអាចជំនួសមាននៅក្នុងប្លុក \"អ្នករាំ\"។"
@@ -2420,9 +2420,9 @@
           "courseF_artist_variables5_d": "នេះគឺជាលំនាំដែលសិល្បកររបស់អ្នកនឹងធ្វើតាម។\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "course1_artist_loops_challenge1": {
-          "courseA_artist_loops_challenge1_b": "[][0]",
-          "courseA_artist_loops_challenge1_c": "[][0]",
-          "courseA_artist_loops_challenge1_d": "[][0]"
+          "courseA_artist_loops_challenge1_b": "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)",
+          "courseA_artist_loops_challenge1_c": "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)",
+          "courseA_artist_loops_challenge1_d": "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
         },
         "course3_playLab_challenge1": {
           "courseE_playLab_challenge1_a": "នេះជាអ្វីដែលអ្នកអាចធ្វើបាននៅពេលអ្នកលេងឈ្នះហ្គេម៖\n\n-   ធ្វើឱ្យដាយណូស័ររលាយបាត់។\n-   បញ្ឈប់សត្វកំប្រុក។\n-   ធ្វើឱ្យសត្វកំប្រុកនិងអ្នកជិះសេះរីករាយ។\n-   កំណត់ផ្ទៃខាងក្រោយថ្មី។\n-   ធ្វើឱ្យអ្នកជិះសេះអរគុណដល់អ្នកលេងដែលបានជួយ។\n-   ធ្វើឱ្យតារាសម្តែងទាំងអស់បាត់ខ្លួនហើយបង្ហាញ \"អ្នកឈ្នះ!\" សារ។",
@@ -2697,7 +2697,7 @@
         },
         "course4_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "នៅពេលអ្នកកំណត់មុខងារអ្នកអាចហៅវាម្តងហើយម្តងទៀត - នៅពេលណានិងកន្លែងណាដែលអ្នកចង់បាន!",
-          "courseE_artist_concept_challenge2_b": "អ្នកអាចលោតទៅមុខតំណែងផ្សេងៗគ្នាលើផ្ទាំងក្រណាត់ដោយប្រើពាក្យបញ្ជានេះ៖\n\n[blockly block][0]"
+          "courseE_artist_concept_challenge2_b": "អ្នកអាចលោតទៅមុខតំណែងផ្សេងៗគ្នាលើផ្ទាំងក្រណាត់ដោយប្រើពាក្យបញ្ជានេះ៖\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
         },
         "course4_bee_fwp_challenge1": {
           "courseF_bee_fwp_challenge1_a": "កម្មវិធីសំខាន់គួរតែមើលទៅដូចនេះ៖\n[បិទប្លុក] [0]",
@@ -3183,14 +3183,14 @@
           "courseA_collector_loops_challenge1_b": "អ្នកមិនត្រូវការប្រើរង្វិលជុំដដែលៗទេបើសិនបើអ្នកធ្វើអ្វីៗតែមួយដង។"
         },
         "course1_collector_loops_challenge3": {
-          "courseB_collector_loops_challenge1_c": "ផ្លាស់ទីខាងកើតពីរដងរវាងផ្លូវនីមួយៗ។\n\n[blockly block][0]",
-          "courseB_collector_loops_challenge1_d": "សាកល្បងវា!\n\n[blockly block][0]"
+          "courseB_collector_loops_challenge1_c": "ផ្លាស់ទីខាងកើតពីរដងរវាងផ្លូវនីមួយៗ។\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>",
+          "courseB_collector_loops_challenge1_d": "សាកល្បងវា!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "course1_collector_loops_challenge4": {
           "courseB_collector_loops_challenge2_a": "ប្រសិនបើមានអ្វីមួយមិនប្រក្រតីកុំខ្លាចក្នុងការចាប់ផ្តើម។ កុំបោះបង់!",
-          "courseB_collector_loops_challenge2_b": "ប្រសិនបើអ្នកធ្វើបែបបទនេះម្តងទៀតLaurelនឹងមិនបុកជញ្ជាំងនៅខាងក្រោមរូងភ្នំទេ!\n\n[blockly block][0]",
+          "courseB_collector_loops_challenge2_b": "ប្រសិនបើអ្នកធ្វើបែបបទនេះម្តងទៀតLaurelនឹងមិនបុកជញ្ជាំងនៅខាងក្រោមរូងភ្នំទេ!\n\n<xml><block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block></xml>",
           "courseB_collector_loops_challenge2_c": "សាកល្បងប្រើប្លុក `ធ្វើម្តងទៀត`ដើម្បីប្រមូលកំណប់ចុងក្រោយ!",
-          "courseB_collector_loops_challenge2_d": "សាកល្បងដំណោះស្រាយនេះ៖\n\n[blockly block][0]"
+          "courseB_collector_loops_challenge2_d": "សាកល្បងដំណោះស្រាយនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_artist_loops_challenge2a": {
           "courseA_artist_loops_challenge2_c": "ប្លុកទាំងអស់របស់អ្នកនឹងត្រូវនៅខាងក្នុងរង្វិលជុំដដែលៗមួយដើម្បីបញ្ចប់ចំនោទបញ្ហានេះ។"
