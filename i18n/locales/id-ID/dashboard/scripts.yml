@@ -18077,8 +18077,10 @@ id:
               name: Modul 2
             Module 3:
               key: Modul 3
+              name: Modul 3
             Module 4:
               key: Modul 4
+              name: Modul 4
             Module 5:
               key: Modul 5
             Module 6:
@@ -18153,6 +18155,12 @@ id:
           lessons:
             lesson-2:
               name: Pelajaran ke- 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tahap 1
+            lessonGroup-3:
+              display_name: Tahap 2
         dlp21-csp-mod1:
           title: CS Principles Deeper Learning Modul 1
         dlp21-csd:
@@ -18230,3 +18238,11 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Inovasi dalam Komputasi
+            lesson-13:
+              name: Akselerometer
+            lesson-19:
+              name: Proyek
