@@ -28,8 +28,9 @@ function LevelFeedbackEntry({feedback}) {
     is_awaiting_teacher_review
   } = feedback;
 
-  const feedbackSeenByStudent =
-    seen_on_feedback_page_at || student_first_visited_at;
+  const feedbackSeenByStudent = !!(
+    seen_on_feedback_page_at || student_first_visited_at
+  );
 
   const commentExists = comment.length > 2;
   const commentSeenStyle = feedbackSeenByStudent ? styles.commentBlockSeen : {};
