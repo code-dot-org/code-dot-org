@@ -1179,6 +1179,13 @@ en:
         text: location of {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        text: create {EFFECT} effect with {NUM} {ANIMATION_NAME} sprites
+        options:
+          EFFECT:
+            '"burst"': burst
+            '"pop"': pop
+            '"rain"': rain
       gamelab_makeNewSpriteAnon:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
@@ -1213,6 +1220,17 @@ en:
         text: patrolling up and down
       gamelab_playSound:
         text: play sound {SOUND}
+      gamelab_playSoundOptions:
+        text: play sound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": accent
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_app/app_button_1.mp3'": button
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_swish/quick_swing.mp3'": swing
+      gamelab_playSpeech:
+        text: play speech {SOUND}
       gamelab_pointInDirection:
         text: point {SPRITE} {DIRECTION}
         options:
@@ -1870,16 +1888,53 @@ en:
         text: monsters stop moving
       PoemBot_addLine:
         text: add line {LINE}
+      PoemBot_hidePoem:
+        text: hide poem
+      PoemBot_playSound:
+        text: play sound {SOUND}
+        options:
+          SOUND:
+            '"sound://category_bell/bells_win_low.mp3"': Bell
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Bright
+            '"sound://category_background/fire_burning.mp3"': Fireside
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Forest
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harps
+            '"sound://category_nature/summer_night_loop.mp3"': Night
+            '"sound://category_background/ocean_waves.mp3"': Ocean
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': Rainy
+            '"sound://category_background/rainforest_ambient_sound.mp3"': Rainforest
+            '"sound://category_background/wavering_wind.mp3"': Sleepy
+            '"sound://category_background/typewriter.mp3"': Typewriter
+            '"sound://category_background/waterfall.mp3"': Waterfall
       PoemBot_randomWord:
         text: random word
       PoemBot_setAuthor:
         text: set poem author {AUTHOR}
       PoemBot_setBackgroundEffect:
-        text: set background effect {BG_EFFECT}
+        text: set background effect {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': solid
-            '"rainbow"': rainbow
+          EFFECT:
+            '"colors"': Colors
+            '"squiggles"': Squiggles
+            '"space"': Space
+            '"stars"': Stars
+            '"darkCircles"': Dark Circles
+            '"fadeColors"': Color Fade
+            '"blooming"': Blooming
+            '"ripples"': Ripples
+            '"clouds"': Clouds
+          PALETTE:
+            '"sky"': Sky
+            '"ocean"': Ocean
+            '"sunrise"': Sunrise
+            '"sunset"': Sunset
+            '"spring"': Spring
+            '"summer"': Summer
+            '"autumn"': Autumn
+            '"winter"': Winter
+            '"grayscale"': Black & White
+            '"rainbow"': Rainbow
+            '"roses"': Roses
       PoemBot_setFont:
         text: set font {FONT}
         options:
@@ -1894,27 +1949,87 @@ en:
             '"Tahoma"': Tahoma
             '"Verdana"': Verdana
       PoemBot_setFontColor:
-        text: set font color {COLOR}
+        text: set font color {FILL}
       PoemBot_setForegroundEffect:
-        text: set foreground effect {FG_EFFECT}
+        text: do {EFFECT} effect
         options:
-          FG_EFFECT:
-            '"rain"': rain
-            '"bubbles"': bubbles
+          EFFECT:
+            '"rain"': Rain
+            '"bubbles"': Bubbles
+            '"hearts"': Colorful Hearts
+            '"emojis"': Happy Emojis
+            '"confetti"': Confetti
+            '"starburst"': Starburst
+            '"glass"': Shattering Glass
+            '"twinkling"': Twinkling
       PoemBot_setPoem:
-        text: set poem {BG_EFFECT}
+        text: set poem {POEM}
         options:
-          BG_EFFECT:
+          POEM:
             '"---"': "---"
+            '"hafez"': My Brilliant Image
+            '"carroll_1"': Twinkle, Twinkle Little Star
+            '"rumi_1"': Sing
+            '"field"': Wynken, Blynken, and Nod
+            '"carroll_2"': Crocodile
+            '"twain"': Warm Summer Sun
             '"wordsworth"': I Wandered Lonely as a Cloud
-            '"dickinson"': If I can Stop one Heart from Breaking
-            '"silverstein"': Batty
+            '"carroll_3"': Jabberwocky
+            '"rios"': Don't Go Into the Library
+            '"rumi_2"': Ocean
+            '"hughes_1"': Dream Variations
+            '"hughes"': Harlem
+      PoemBot_setSize:
+        text: set {SPRITE} size to {VAL}
+      PoemBot_setTextEffect:
+        text: set text effect {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': fade
+            '"typewriter"': typewriter
+            '"flyLeft"': fly from left
+            '"flyRight"': fly from right
+            '"flyTop"': fly from top
+            '"flyBottom"': fly from bottom
       PoemBot_setTitle:
         text: set poem title {TITLE}
       PoemBot_showPoem:
         text: show poem
-      PoemBot_stringConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_startBehavior:
+        text: 'sprite {ANIMATION_NAME} begins {BEHAVIOR} '
+        options:
+          BEHAVIOR:
+            fluttering: fluttering
+            growing: growing
+            jittering: jittering
+            moving_north_and_looping: looping north
+            moving_south_and_looping: looping south
+            moving_east_and_looping: looping east
+            moving_west_and_looping: looping west
+            shrinking: shrinking
+            spinning_left: spinning left
+            spinning_right: spinning right
+            swimming_left_and_right: swimming
+            wandering: wandering
+            wobbling: wobbling
+      PoemBot_stopBehavior:
+        text: 'sprite {ANIMATION_NAME} stops {BEHAVIOR} '
+        options:
+          BEHAVIOR:
+            fluttering: fluttering
+            growing: growing
+            jittering: jittering
+            moving_north_and_looping: looping north
+            moving_south_and_looping: looping south
+            moving_east_and_looping: looping east
+            moving_west_and_looping: looping west
+            shrinking: shrinking
+            spinning_left: spinning left
+            spinning_right: spinning right
+            swimming_left_and_right: swimming
+            wandering: wandering
+            wobbling: wobbling
+            '"all"': "--all behaviors--"
       PoemBot_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:
