@@ -198,7 +198,7 @@ class ScriptsController < ApplicationController
   private
 
   def set_unit_file
-    @unit_dsl_text = ScriptDSL.serialize_lesson_groups(@script)
+    @unit_dsl_text = @script.is_migrated ? '' : ScriptDSL.serialize_lesson_groups(@script)
   end
 
   def rake
