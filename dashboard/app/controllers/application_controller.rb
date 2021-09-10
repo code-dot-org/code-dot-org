@@ -260,6 +260,10 @@ class ApplicationController < ActionController::Base
     authorize! :read, :reports
   end
 
+  def redirect_admin_from_labs
+    redirect_to root_path, flash: {alert: 'Labs not allowed for admins.'} if current_user&.admin?
+  end
+
   # Pairings are stored as an array of user ids in the session
   # (storing full objects is not a good idea because the session is
   # saved as a cookie)
