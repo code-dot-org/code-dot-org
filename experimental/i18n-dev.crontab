@@ -33,7 +33,7 @@ HOME=/home/ubuntu
 30 8 * * MON (cd /home/ubuntu/code-dot-org && (bundle exec ./bin/i18n/sync-all.rb -yip | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error) >>/tmp/cronlog 2>&1
 
 # Run the sync down periodically throughout the week. Specifically:
-# - Run it every other hour. This is a somewhat arbitrarily-chosen frequency
+# - Run it every 4 hours. This is a somewhat arbitrarily-chosen frequency
 #   for a test period. We expect to refine this over time.
 # - Run it on the half-hour. Like for the full sync, this is done to reduce the
 #   chance of colliding with the CI Build.
