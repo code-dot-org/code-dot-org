@@ -424,6 +424,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
       }]
@@ -432,6 +433,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
       }]
@@ -443,6 +445,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
       }]
@@ -451,6 +454,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
       }]
