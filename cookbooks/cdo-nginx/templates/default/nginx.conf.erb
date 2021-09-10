@@ -79,8 +79,11 @@ http {
     listen 443 ssl;
     <%= render 'nginx.erb', cookbook: 'ssl_certificate' %>
     location / {
-      # Pass the request on to port 80.
+<% if node['cdo-varnish']['enabled'] -%>
       proxy_pass  http://127.0.0.1;
+<% else -%>
+      proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
+<% end -%>
       proxy_set_header X-Forwarded-Proto https;
     }
   }
