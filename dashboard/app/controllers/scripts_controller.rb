@@ -124,10 +124,7 @@ class ScriptsController < ApplicationController
       raise msg
     end
 
-    # TODO: disable this check for migrated scripts once they are using the new,
-    # non-dsl script update api. at that time, the above check on script.updated_at
-    # will provide sufficient protection against write conflicts on migrated scripts.
-    if params[:old_unit_text]
+    if !@script.is_migrated && params[:old_unit_text]
       current_unit_text = ScriptDSL.serialize_lesson_groups(@script).strip
       old_unit_text = params[:old_unit_text].strip
       if old_unit_text != current_unit_text
