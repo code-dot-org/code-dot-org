@@ -113,7 +113,6 @@ describe('unitEditorRedux reducer tests', () => {
 
     expect(mappedLessonGroups.length).to.equal(2);
     expect(mappedLessonGroups[0].lessons.length).to.equal(3);
-    expect(mappedLessonGroups[0].lessons[0].levels.length).to.equal(2);
   });
 
   it('add group', () => {
