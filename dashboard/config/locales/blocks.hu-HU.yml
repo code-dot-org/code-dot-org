@@ -1134,6 +1134,11 @@ hu:
         text: "{SPRITE} helye"
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': robbanás
+            '"rain"': esős
       gamelab_makeNewSpriteAnon:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       gamelab_makeNumSprites:
@@ -1168,6 +1173,12 @@ hu:
         text: fel-le mászkálni
       gamelab_playSound:
         text: játszd le a {SOUND} hangot
+      gamelab_playSoundOptions:
+        text: játszd le a {SOUND} hangot
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": gomb
+            "'sound://category_collect/clicky_crunch.mp3'": ropogás
       gamelab_pointInDirection:
         text: "{SPRITE} fordulj {DIRECTION} felé"
         options:
@@ -1646,20 +1657,40 @@ hu:
         text: "{SPRITE} x koordinátája"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinátája"
+      PoemBot_playSound:
+        text: játszd le a {SOUND} hangot
       PoemBot_setBackgroundEffect:
-        text: háttéreffekt beállítása {BG_EFFECT} [PALETTE][1]
+        text: háttéreffekt beállítása {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': teli
-            '"rainbow"': szivárvány
+          EFFECT:
+            '"colors"': Színek
+            '"squiggles"': Kígyóvonalak
+            '"space"': Világűr
+            '"stars"': Csillagok
+            '"ripples"': Lüktetés
+          PALETTE:
+            '"rainbow"': Szivárvány
       PoemBot_setForegroundEffect:
-        text: 'előtéreffekt beállítása: {FG_EFFECT}'
+        text: 'előtéreffekt beállítása: {EFFECT}'
         options:
-          FG_EFFECT:
-            '"rain"': esős
-            '"bubbles"': buborékok
-      PoemBot_stringConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+          EFFECT:
+            '"rain"': Eső
+            '"bubbles"': Buborékok
+            '"hearts"': Színes szívek
+            '"confetti"': Konfetti
+            '"starburst"': Csillagrobbanás
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: csapkodva
+            swimming_left_and_right: úszás
+            wobbling: kalimpálva
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: csapkodva
+            swimming_left_and_right: úszás
+            wobbling: kalimpálva
       PoemBot_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:

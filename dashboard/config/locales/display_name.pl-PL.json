@@ -500,10 +500,10 @@
         "CourseF_outbreak2": "Symulacja wirusów",
         "CourseF_outbreak3": "Symulacja wirusów",
         "CourseF_outbreak4": "Modyfikuj swoją symuację",
-        "CourseF_outbreak5": "Odzyskiwanie",
-        "CourseF_outbreak6": "Losowe szanse",
-        "CourseF_outbreak7": "Odporność i szczepionki",
-        "CourseF_outbreak8": "Udostępnij wiadomość",
+        "CourseF_outbreak5": "Modyfikuj swoją symuację",
+        "CourseF_outbreak6": "Odzyskiwanie",
+        "CourseF_outbreak7": "Losowe szanse",
+        "CourseF_outbreak8": "Odporność i szczepionki",
         "CourseF_video_introSpriteLab_2021": "To jest Laboratorium Duszków",
         "MC_HOC_2017_01_RETRY_2021": "Gospodarstwo rolne",
         "MC_HOC_2017_02_Cole_2021": "Farma",
@@ -545,7 +545,8 @@
         "OPD-K5 WhatIsCS_dani": "Czym jest informatyka?",
         "scrat_loops_C-F_video_2021": "Pętle w filmie wideo \"Epoka Lodowcowa\"",
         "courseF_apps_aquarium": "Wirtualne akwarium",
-        "courseF_apps_chatbot": "Chat Bot X-9"
+        "courseF_apps_chatbot": "Chat Bot X-9",
+        "international_outbreak_freeplay": "Udostępnij wiadomość"
       }
     }
   }

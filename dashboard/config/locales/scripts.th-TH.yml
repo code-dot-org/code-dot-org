@@ -7357,6 +7357,12 @@ th:
               display_name: หน่วยที่ 4
             lessonGroup-7:
               display_name: หน่วยที่ 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ขั้นตอนที่ 1
+            lessonGroup-3:
+              display_name: ขั้นตอนที่ 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -7373,3 +7379,7 @@ th:
           lesson_groups:
             lessonGroup-3:
               display_name: โปรเจกต์
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: โปรเจกต์

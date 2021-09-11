@@ -799,7 +799,7 @@
           "courseA_collector_loops_challenge1_c": "มีอัญมณีอยู่ 6 อย่างบริเวณด้านขวาของถ้ำ แต่คุณต้องเดินไปและเก็บขึ้นมาเพียง 5 ครั้งเท่านั้น คุณรู้ไหมว่าทำไม?"
         },
         "course1_collector_loops_challenge2": {
-          "courseA_collector_loops_challenge2_b": "คุณต้องใช้บล็อค [][0] บล็อคเดียวเท่านั้นเพื่อแก้โจทย์นี้"
+          "courseA_collector_loops_challenge2_b": "คุณต้องใช้บล็อค ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png>) บล็อคเดียวเท่านั้นเพื่อแก้โจทย์นี้"
         },
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_b": "เริ่มต้นโดยการวนลูปคำสั่ง `เคลื่อนไปทางใต้` และ `เก็บสมบัติ`\n\n<xml>\n  <block type=\"maze_moveSouth\"/><next>\n  <block type=\"collector_collect\"/></next>\n  </xml>",

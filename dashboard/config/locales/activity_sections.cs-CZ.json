@@ -230,10 +230,28 @@
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "Úvod"
         },
+        "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
+          "name": "Epidemie",
+          "description": "_V dnešní lekci se podíváte do „Města Příšer“, kde se právě chystá propuknout epidemie viru. Dr. Příšera potřebuje Vaši pomoc se zpomalováním šíření viru._\n\n_V Laboratoři sprajtů vytvoříte simulátor epidemie, který potom použijete k pochopení toho, jak se virus může šířit. Také pomůžete všem příšerám zase se uzdravit!_",
+          "progression_name": "Epidemie"
+        },
+        "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "progression_name": "Vítejte ve Městě Příšer"
+        },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
             null
           ]
+        },
+        "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
+          "description": "**Proveďte tohle:** Přiveďte třídu zpět, aby si četli _Epidemie: Myslet jako vědec._",
+          "progression_name": "Učení se na základě simulací"
+        },
+        "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
+          "progression_name": "Miniprojekt: Simulátor epidemie"
+        },
+        "2085bbfe-07e4-4eb4-9830-520e979a04c8": {
+          "description": "_Simulace jsou vynikající způsob, jak se můžeme učit o věcech, které se v reálném světě nesnadno pozorují. Pomáhají vědcům řešit problémy, ¨předvídat, jak problém vyřešit a testovat nové myšlenky bezpečně a účinně. Vaše simulace je způsob, jak ukázat, jak by šíření viru ve Městě Příšer mohlo vypadat._"
         },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "Reflexe"

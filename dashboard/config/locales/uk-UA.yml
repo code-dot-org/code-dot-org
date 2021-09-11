@@ -229,6 +229,10 @@ uk:
     email_preference_yes: Так
     email_preference_no: Ні
     email_preference_required: Необхідно вказати перевагу електронній пошті.
+    share_teacher_email_reg_partner_preference_yes: Так
+    share_teacher_email_reg_partner_preference_no: Ні
+    share_teacher_email_reg_partner_preference_required: Необхідно вказати перевагу
+      електронній пошті.
     parent_account_checkbox: Я один (-на) з батьків/опікун, що подає оформлення від
       імені своєї дитини
     parent_account_email_progress_permission: Чи можемо ми надсилати вам електронні

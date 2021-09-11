@@ -3090,9 +3090,9 @@
         "CourseF_outbreak2": "Zmieniaj zdrowe potwory w chore potwory, gdy się dotykają.",
         "CourseF_outbreak3": "Zamieniaj potwory w potwory z maskami na twarzach po kliknięciu na nich.",
         "CourseF_outbreak4": "Zmień liczbę i rozmiar duszków potworów w swojej symulacji.",
-        "CourseF_outbreak6": "Dodaj procentową szansę do zachorowania potworów, gdy tylko zdrowe potwory dotkną chorych potworów. Zrób to dla wszystkich kombinacji potworów z maskami i bez.",
-        "CourseF_outbreak7": "Utwórz nowy kostium dla potworów odpornych na wirusa i użyj go w swojej symulacji.",
-        "CourseF_outbreak8": "Udostępnij wiadomość swojej symulacji.",
+        "CourseF_outbreak6": "Spraw, aby wszystkie chore potwory zaczęły dochodzić do siebie, gdy zdrowy potwór dotknie chorego potwora.",
+        "CourseF_outbreak7": "Dodaj procentową szansę do zachorowania potworów, gdy tylko zdrowe potwory dotkną chorych potworów. Zrób to dla wszystkich kombinacji potworów z maskami i bez.",
+        "CourseF_outbreak8": "Utwórz nowy kostium dla potworów odpornych na wirusa i użyj go w swojej symulacji.",
         "Dance Party 2_2021": "Zastąp blok zachowania w bloku \"duszek zaczyna\" na inne, które sprawi, że ufoludek zacznie się obracać!",
         "Dance Party 4_2021": "Utwórz trzeciego duszka, który wygląda jak żółty ufoludek, spraw, by wykonywał taniec po kliknięciu w niego i ustaw wszystkie swoje ufoludki, aby ustawiły się w linii poziomej.",
         "Dance Party Freeplay_2021": "Teraz utwórz swoją własną dyskotekę ufoludków!",
@@ -3628,7 +3628,9 @@
         "ramp_artist_loops3_2021": "Użyj pętli `powtarzaj` do narysowania 5 kolorowych kresek.",
         "ramp_artist_loops7_2021": "Szukaj wzorca i skracaj kod z wykorzystaniem pętli!",
         "ramp_artist_loops9_2021": "Rozwiąż to zadanie rysując kwadrat.",
-        "courseF_apps_chatbot": "Ten robot będzie zadawał Ci pytania i pamiętał, co wpisujesz! Wpisuj swoje odpowiedzi i porozmawiaj z X-9!"
+        "courseF_apps_chatbot": "Ten robot będzie zadawał Ci pytania i pamiętał, co wpisujesz! Wpisuj swoje odpowiedzi i porozmawiaj z X-9!",
+        "CourseF_outbreak5": "Zmień liczbę i rozmiar duszków potworów w swojej symulacji.",
+        "international_outbreak_freeplay": "Udostępnij wiadomość swojej symulacji."
       }
     }
   }

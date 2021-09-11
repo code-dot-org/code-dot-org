@@ -32,14 +32,53 @@
         "programming/courseb/2021": {
           "word": "Programmierung"
         },
+        "algorithm/coursea/2021": {
+          "word": "Algorithmus",
+          "definition": "Eine Liste von Schritten zum Abschließen einer Aufgabe."
+        },
         "debugging/coursea/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/coursea/2021": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "click/coursea/2021": {
+          "word": "Klick",
+          "definition": "Drücken der Maustaste"
+        },
+        "drag/coursea/2021": {
+          "word": "-   Ziehen:",
+          "definition": "Klicken mit der Maus und die Maustaste gedrückt halten, während man den Mauszeiger an einen anderen Ort bewegt"
         },
         "drop/coursea/2021": {
-          "word": "Fallen lassen"
+          "word": "Fallen lassen",
+          "definition": "Die Maustaste loslassem, um das Element, das man zieht, abzulegen"
+        },
+        "double_click/coursea/2021": {
+          "word": "-   Doppelklicken:",
+          "definition": "Zweimaliges, sehr schnelles Drücken der Maustaste."
+        },
+        "bug/coursea/2021": {
+          "word": "Bug/Fehler",
+          "definition": "Teil eines Programms, der nicht korrekt funktioniert."
         },
         "programming/coursea/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": "Die Kunst, ein Programm zu erstellen."
+        },
+        "loop/coursea/2021": {
+          "word": "Schleifen",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/coursea/2021": {
+          "word": "Wiederholen:",
+          "definition": "Um wieder etwas zu tun."
+        },
+        "event/coursea/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "debugging/coursec/2021": {
           "word": "Debugging/Fehlerbeseitigung"

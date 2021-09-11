@@ -6,26 +6,60 @@ id:
       Red: Merah
       actor: Pemain
       age: umur
+      animal1score: Nilai1hewan
+      animal1speed: Kecepatan1hewan
+      animal2score: Nilai2hewan
+      animal2speed: Kecepatan2hewan
       answer: jawaban
+      armlength: Panjanglengan
       binary: binary
+      blue1: Biru1
+      blue2: Biru2
+      bodylength: Panjangbadan
+      buttonHeight: TinggiKancing
+      buttonMargin: PinggirKancing
+      buttonWidth: LuasKancing
+      cat_score: Nilai_kucing
+      cat_speed: Kecepatan_kucing
       cats: semua kucing
+      choice: Pilihan
+      circ: Lingk
+      codeName: Namakode
       color: warna
       counter: Pencacah
+      dog_score: Nilai_anjung
+      dog_speed: Kecepatan_anjing
       dogs: semua anjing
+      dragons: Naga
+      enemy_speed: Kecepatan_musuh
       energy: energi
+      firstName: NamaDepan
+      footlength: Panjangkaki
+      gather: Kumpul
+      green1: Hijau1
+      green2: Hijau2
+      guess: Tebak
       height: tinggi
       honey: madu
       i: i
       left: kiri
+      leglength: Panjangkaki
       length: panjang
       level: tingkat
+      myName: Namaku
       name: nama
       nectar: madu
+      nectars: Madu
+      player_score: Nilai_pemain
       points: poin
       random: acak
+      red1: Merah1
+      red2: Merah2
       repeat: Ulangi
+      repetitions: Pengurangan
       right: kanan
       score: Skor
+      score1: Nilai1
       size: ukuran
       speed: kecepatan
       startX: startX

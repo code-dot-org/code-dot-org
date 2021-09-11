@@ -42,7 +42,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
           "tips": [
@@ -64,7 +64,7 @@
           "progression_name": " Les Lutins en Action"
         },
         "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
           "tips": [
@@ -122,7 +122,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9": {
           "name": "Vérifier"
@@ -159,10 +159,10 @@
           "name": "Dessiner avec des Boucles"
         },
         "ef504f91-6fca-4859-a960-7e792de6223e": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "411a2b66-714e-40fe-9636-a184b62c44bf": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "684dcdb5-2ce6-4481-85c2-aec19cf71f8e": {
           "name": "Réflexion"
@@ -174,7 +174,7 @@
           "progression_name": " Les Variables dans Artiste"
         },
         "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "d6137926-640f-4180-a257-20c5f32317f5": {
           "progression_name": "Activité libre"
@@ -187,7 +187,7 @@
         },
         "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20": {
           "name": "Les Boucles Imbriquées dans le Labyrinthe",
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "6cef858a-437c-47a3-9c8a-1229f634948a": {
           "tips": [
@@ -202,7 +202,7 @@
         },
         "aa24a7a8-7cec-408b-b980-89e9c457605a": {
           "name": "Modifier des Variables avec l'Abeille",
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "a3b35da9-5d20-4f58-998a-e5395fc7e23f": {
           "name": "Réflexion"
@@ -235,6 +235,9 @@
         "eeea4847-21c3-4f1e-a2a2-980aa7fe8d9b": {
           "name": "Aperçu des puzzles en ligne en classe"
         },
+        "30ee92f3-9378-4f76-acea-3c22d8df60dd": {
+          "name": "Les Boucles « Pour » Avec les Abeilles"
+        },
         "1668a313-16da-49db-9713-13d7ad33889e": {
           "progression_name": "Vérifier"
         },
@@ -245,7 +248,7 @@
           "progression_name": " Boucles « Pour »"
         },
         "b500137c-9df8-40c5-8b4d-e4f364f8255e": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "7a256684-5f37-4780-b2d7-a75a079dfc95": {
           "progression_name": "Les Extras de la Leçon"
@@ -257,14 +260,14 @@
           "name": "Introduction"
         },
         "b838a926-533f-414b-86f6-17f8ea078fad": {
-          "name": "Les Boucles For avec l'Artiste",
+          "name": "Les Boucles « Pour » avec l'Artiste",
           "progression_name": " Boucles « Pour »"
         },
         "5a79bfa7-16f2-41b1-8ebf-88fadad29acb": {
           "progression_name": "Exploration"
         },
         "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
           "progression_name": "Activité libre"
@@ -289,16 +292,31 @@
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "Introduction"
         },
+        "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
+          "name": "Épidémie",
+          "description": "\\_Dans la leçon d’aujourd’hui, tu vas à « Monster Town » qui est touché par une épidémie. Le Dr. Monster a besoin de ton aide pour ralentir la propagation du virus.**\\_\\_\\_\\_**.\n\n_Tu vas devroir créer un simulateur d’épidémie dans le Sprite Lab, et l’utiliser pour comprendre comment un virus peut se propager. Tu aideras aussi à soigner tous les monstres !_ \\_",
+          "progression_name": "Épidémie"
+        },
+        "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "progression_name": "Bienvenue à Monster Town"
+        },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
             null
           ]
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
+        },
+        "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
+          "description": "\\*\\*Essaye de faire ceci : \\*\\* Rassemble la classe pour lire \\_ _Épidémie : Penser comme un scientifique._",
+          "progression_name": "Apprendre à l'aide des simulations"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
           "progression_name": " Simulateur d'épidémie"
+        },
+        "2085bbfe-07e4-4eb4-9830-520e979a04c8": {
+          "description": "_Les simulations sont un excellent moyen d’apprendre des choses qui peuvent être difficiles à observer dans le monde réel. Elles aident les scientifiques à résoudre des problèmes, à les anticiper et à tester de nouvelles idées de manière sûre et efficace. Ta simulation est un moyen de savoir à quoi pourrait ressembler une épidémie de virus dans Monster Town._"
         },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "Réflexion"
@@ -414,7 +432,7 @@
           ]
         },
         "b43821ea-fcde-4389-a55f-285b77e61964": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
           "name": "Réflexion"
@@ -431,7 +449,7 @@
           "progression_name": " Programmation en Binôme"
         },
         "a60dc5a3-0c97-439c-86a4-628f733b0916": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
           "progression_name": "Défi"
@@ -465,10 +483,10 @@
           "progression_name": " La Moissonneuse"
         },
         "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "9f24e731-b41f-4339-877d-314aa5813f01": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "fcc74691-719d-415b-87ae-8bc40b436318": {
           "progression_name": "Défi"
@@ -497,10 +515,13 @@
           "name": "Les Boucles avec la Moissonneuse"
         },
         "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
+        },
+        "a58a0e8a-e277-4309-92c4-990cc99c53b4": {
+          "progression_name": "Video: Les blocs `Répéter`"
         },
         "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
           "progression_name": "Défi"
@@ -512,13 +533,13 @@
           "name": "Introduction"
         },
         "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "9bffbabf-f624-49e2-b54b-52317b420600": {
           "progression_name": " Utiliser le Bloc Répéter"
         },
         "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "9b293bbc-d3e3-494d-892e-f90e56347451": {
           "progression_name": "Défi"
@@ -538,10 +559,10 @@
           ]
         },
         "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "000254d0-54ca-4866-b12c-f3d4c387cbbc": {
           "progression_name": "Défi"
@@ -651,7 +672,7 @@
           ]
         },
         "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "name": "Réflexion",
@@ -684,7 +705,7 @@
           ]
         },
         "88c2697f-a9ba-483a-8091-cc2a1b7bf027": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "a7d5f389-5e34-4cbf-91e8-e2d934992246": {
           "name": "Réflexion"
@@ -698,10 +719,10 @@
           "progression_name": " Programmation en Binôme "
         },
         "487f446a-7245-403f-827c-e1e94663c256": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "af0d64b6-9076-490e-96b8-b4d56d3dc5c5": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "9bf3aa93-0d30-4dd2-a78e-926066cc64f3": {
           "progression_name": "Défi"
@@ -725,7 +746,7 @@
           "progression_name": " Programmer avec Rey et BB-8"
         },
         "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "3c2f387d-dde7-4c31-befe-3bf45387d813": {
           "progression_name": "Défi"
@@ -759,10 +780,10 @@
           "name": "Les Boucles avec Scrat"
         },
         "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "277f1b5f-abbe-4158-9507-d91cce301994": {
           "progression_name": "Défi"
@@ -784,13 +805,13 @@
           ]
         },
         "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "801526d2-4615-4e46-90c1-5e3c08dfe223": {
           "progression_name": " Utiliser le Bloc Répéter"
         },
         "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "3c97efcf-4bdd-437a-a07d-bcd1f9faad87": {
           "progression_name": "Défi"
@@ -808,13 +829,13 @@
           "name": "Scène de l'Océan avec des Boucles"
         },
         "d060bb00-33a3-4049-925e-56db3f7508f7": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "52392151-808b-48cd-a76b-554587d200ec": {
           "progression_name": " Les Boucles dans Artiste"
         },
         "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "879f345b-620d-4541-8467-84f00e515229": {
           "progression_name": "Défi"
@@ -932,7 +953,7 @@
           ]
         },
         "1ebd42df-a302-418a-be1e-6bbca930cedf": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
           "progression_name": "Défi"
@@ -953,7 +974,7 @@
           "name": "Déboguer dans le Labyrinthe"
         },
         "9b6832e5-f80f-4baa-9049-48d9526443ba": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "a7458755-70c4-4b60-b6ad-729468af507f": {
           "progression_name": "Défi"
@@ -977,7 +998,7 @@
           "name": "Collecter le Trésor avec Laurel"
         },
         "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
           "progression_name": "Défi"
@@ -995,7 +1016,7 @@
           "name": "Créer de l'Art avec du Code"
         },
         "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
@@ -1031,10 +1052,10 @@
           "progression_name": " Programmer avec Rey et BB-8"
         },
         "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
           "progression_name": "Défi"
@@ -1056,7 +1077,7 @@
           "progression_name": " La Moissonneuse"
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
           "progression_name": "Défi"
@@ -1117,7 +1138,7 @@
           "name": "Construire un Jeu Flappy"
         },
         "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
           "tips": [
@@ -1233,7 +1254,7 @@
           ]
         },
         "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
           "progression_name": "Défi"
@@ -1264,7 +1285,7 @@
           "name": "Déboguer avec Laurel"
         },
         "0fee56da-4a47-490c-b500-a54be824f01c": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "1921c52c-25f6-457a-8dba-57926c95bfae": {
           "progression_name": "Défi"
@@ -1305,7 +1326,7 @@
           "progression_name": " Projet Star Wars"
         },
         "72b1888f-765e-42c0-bccc-0e32a5724f40": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
           "tips": [
@@ -1364,13 +1385,13 @@
           "name": "Boucles dans l'Âge de Glace"
         },
         "dad54c78-6c91-4ba8-bb15-eff5861db842": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "4c88ec45-b2cb-4b4d-88de-2d676d507722": {
           "progression_name": " Utiliser le Bloc Répéter"
         },
         "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
           "progression_name": "Défi"
@@ -1390,10 +1411,10 @@
           "name": "Dessiner des Formes avec des Boucles"
         },
         "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "1d0954f1-dbad-49b1-b3f3-19b4273adeac": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "8ff5abc7-3c4a-42d5-88f6-51f0dd8060ab": {
           "progression_name": "Défi"
@@ -1408,10 +1429,10 @@
           "name": "Les Boucles Imbriquées dans le Labyrinthe"
         },
         "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "802e73fc-cff0-462f-8d3d-24c0855bce28": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "0f7bd996-f5bb-414f-9bd8-b569978307a5": {
           "progression_name": "Défi"
@@ -1445,7 +1466,7 @@
         },
         "2f024770-481d-43dc-aa55-7133819f6663": {
           "name": "Regarder vers l'Avenir avec Minecraft",
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "16432484-49b1-47dc-bbd9-60f67bacc790": {
           "progression_name": "Défi"
@@ -1460,16 +1481,19 @@
           "name": "Introduction"
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
-          "name": "Si/Sinon avec l'Abeille"
+          "name": "« Si/Sinon » avec l'Abeille"
         },
         "ca607451-3bb5-4aea-bca0-efd3fed0c6be": {
           "progression_name": "  Instructions « si »"
         },
         "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
+        },
+        "e50811f9-8d07-4737-841d-ae3ebf402649": {
+          "progression_name": "Video: Instructions conditionnelles « Si » et « Si/Sinon »"
         },
         "3f6678b5-e568-42f2-a629-56defb6374fe": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "8a1d519d-3579-40dd-8c62-77a2d4abc8ea": {
           "progression_name": "Défi"
@@ -1490,13 +1514,13 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "5b71ce88-2e79-4478-888a-796bed9dacb9": {
           "progression_name": " Les Boucles Tant Que avec la Fermière"
         },
         "60c8c247-570f-4f82-92a1-dddff86de3eb": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "b25165f7-abe4-4c2b-a4f2-2a8838986caa": {
           "progression_name": "Défi"
@@ -1512,10 +1536,10 @@
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
           "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "35caf44d-4c1f-4dd0-942d-27132dd2c2ee": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "31e87218-76f2-4e0c-9689-9203f3f2bc83": {
           "progression_name": "Défi"
@@ -1553,7 +1577,7 @@
           ]
         },
         "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
           "progression_name": "Défi"
@@ -1580,7 +1604,7 @@
           "progression_name": " Déboguer avec Scrat "
         },
         "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
           "progression_name": "Défi"
@@ -1604,7 +1628,7 @@
           "name": "Collecter le Trésor avec Laurel"
         },
         "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
           "progression_name": "Défi"
@@ -1622,7 +1646,7 @@
           "name": "Créer de l'Art avec du Code"
         },
         "d9b1cf39-8041-44b2-a8f8-a2e396647ab2": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
@@ -1654,7 +1678,7 @@
           "progression_name": " Introduction au Labo des Lutins"
         },
         "90de173c-642d-4906-a7fe-c3d9ad3123ec": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab": {
           "progression_name": "Activité libre"
@@ -1672,7 +1696,7 @@
           ]
         },
         "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "a35138b5-f6fc-4fac-9a73-991bed07f6d1": {
           "name": "Réflexion"
@@ -1689,7 +1713,7 @@
           "progression_name": " Les Lutins en Action"
         },
         "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
           "name": "Réflexion"
@@ -1743,7 +1767,7 @@
           "progression_name": " Programmer avec Rey et BB-8"
         },
         "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "736ef92b-b635-4477-abbb-7d98d171b960": {
           "progression_name": "Défi"
@@ -1792,7 +1816,7 @@
         },
         "89a3d9b1-6f7c-4581-8abc-9d6501a009cc": {
           "name": "Les Flocons de Neige avec Anna et Elsa",
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "d1f0e984-22d3-4086-978b-0e830c9cc6c9": {
           "name": "Réflexion"
@@ -1802,7 +1826,7 @@
         },
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
           "name": "Regarder vers l'Avenir avec Minecraft",
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
           "progression_name": "Défi"
@@ -1817,16 +1841,19 @@
           "name": "Introduction"
         },
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
-          "name": "Si/Sinon avec l'Abeille"
+          "name": "« Si/Sinon » avec l'Abeille"
         },
         "c622f540-96a1-4448-9a80-18850f23abdd": {
           "progression_name": "  Instructions « si »"
         },
         "2c223051-9787-4ae5-afb2-c999300ee231": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
+        },
+        "de68c7d7-06ea-4aca-b533-5e0644760022": {
+          "progression_name": "Video: Instructions conditionnelles « Si » et « Si/Sinon »"
         },
         "431e814c-2fdb-4385-ac49-7a3ad70c8411": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "cd33cbb5-8d96-4173-a790-5f3c59c5afff": {
           "progression_name": "Défi"
@@ -1847,13 +1874,13 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "2094fb7f-31a7-4639-be69-0baf39649007": {
           "progression_name": " Les Boucles Tant Que avec la Fermière"
         },
         "d1f28a2a-eb91-4271-aeef-7c155109fac4": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "b0a4f8d2-11ae-416f-a274-e1c3be9dcc22": {
           "progression_name": "Défi"
@@ -1871,13 +1898,13 @@
           "name": "Les Conditions dans Minecraft : Voyage Aquatique"
         },
         "0c1c356b-b51e-49e9-902a-9bb743c4acbc": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "ebbb5af1-a268-4256-a63b-a179d5813d8d": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "Activité libre"
@@ -1890,10 +1917,10 @@
         },
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
           "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "308b7268-008e-40c7-9ab3-6977bfd38927": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "db38efa3-e075-41c0-ba59-0e9426393b52": {
           "progression_name": "Défi"
@@ -1909,7 +1936,7 @@
           "progression_name": " Récolter avec les Conditions"
         },
         "38760d27-fbe5-48c9-bd46-2b7eeac81ca2": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "f6fcf627-61b6-45f8-ac6b-602a11fb434a": {
           "progression_name": "Défi"
@@ -1933,13 +1960,13 @@
           ]
         },
         "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "08364a41-ef59-40a4-b3ec-e55ca40c2e6f": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "f05f4ec1-71a1-4e00-8d93-935c6f47e01d": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "467dc80b-fcf1-48ff-8b74-74aa00c9ed26": {
           "progression_name": " Minecraft - Félicitations"
@@ -1993,7 +2020,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "82d80787-927d-4386-b471-8a0bc2d5ce1d": {
           "name": "Vérifier"
@@ -2008,7 +2035,7 @@
           "progression_name": " Les Variables dans Artiste"
         },
         "79a73c29-5877-4ffc-8570-fad97926f939": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "47be5db0-347f-4617-a652-e0b01325b180": {
           "progression_name": "Activité libre"
@@ -2021,13 +2048,16 @@
         },
         "60fb6e02-bbf3-49df-ab58-79496259ada1": {
           "name": "Modifier des Variables avec l'Abeille",
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "40a52b8d-4101-4d39-a124-460b6553eea6": {
           "name": "Réflexion"
         },
         "b3ac68a6-7600-49ad-bfb3-88d318e25658": {
           "name": "Introduction"
+        },
+        "eac3c96a-98e8-4d3f-95de-b60f44c66df2": {
+          "name": "Les Boucles « Pour » avec l'abeille"
         },
         "50cc68cf-605b-42e3-a882-bc77e7933f8b": {
           "progression_name": "Vérifier"
@@ -2039,7 +2069,7 @@
           "progression_name": " Boucles « Pour »"
         },
         "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "776538d2-aa5d-4210-9c54-cfd0f01db4b0": {
           "progression_name": "Les Extras de la Leçon"
@@ -2060,7 +2090,7 @@
           "progression_name": "Exploration"
         },
         "5cb283f5-dd23-4694-a205-a97ffd80c3cc": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "1582774d-bc37-4642-8f63-dccb08adea1c": {
           "progression_name": "Activité libre"
@@ -2113,7 +2143,7 @@
           ]
         },
         "bde027df-b2a3-4252-980a-7e8493d898e6": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
           "name": "Réflexion"
@@ -2134,14 +2164,14 @@
           ]
         },
         "0394c5d4-246e-42bc-aca2-97d7bd159173": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
           "name": "Réflexion"
         },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
           "name": "Programmation avec Angry Birds",
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "58491b40-8a56-4299-9f91-d96bd0af3ab0": {
           "progression_name": "Défi"
@@ -2168,7 +2198,7 @@
           "progression_name": " Programmer avec Rey et BB-8"
         },
         "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa": {
           "progression_name": "Défi"
@@ -2191,10 +2221,10 @@
           "progression_name": " La Moissonneuse"
         },
         "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "fc22082b-67fd-47ec-8353-11c902f9ab4c": {
           "progression_name": "Défi"
@@ -2216,10 +2246,10 @@
           ]
         },
         "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "0a8a7f79-b1b7-436e-8a45-b6190c180164": {
           "progression_name": "Défi"
@@ -2234,13 +2264,13 @@
           "name": "Les Boucles avec Laurel"
         },
         "9aa00264-eca7-4093-92fb-60d301554a5b": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "dead7fa5-406d-419c-a084-3a913cbd2499": {
           "progression_name": " Utiliser le Bloc Répéter"
         },
         "08049c61-d346-4c06-96f3-58775b4bf69d": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "46172f79-e306-4a8f-9ecd-640b05733fb6": {
           "progression_name": "Défi"
@@ -2263,13 +2293,13 @@
           ]
         },
         "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "eabc47c6-9f94-4b32-aab1-4a138064532b": {
           "progression_name": " Les Boucles dans Artiste"
         },
         "94271c9b-4000-4e8c-a99c-9a04d851549e": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "073ef24a-022b-46a3-a900-9a5bd5c2b6fe": {
           "progression_name": "Défi"
@@ -2293,7 +2323,7 @@
           ]
         },
         "1474d69b-c98f-40d9-b8c5-07cbeb090699": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "77de1bff-b1e2-4956-9ed2-15110f9aa640": {
           "progression_name": "Défi"
@@ -2381,7 +2411,7 @@
           "progression_name": " Introduction au Labo des Lutins"
         },
         "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "83778d93-2959-4776-94d0-e82985346914": {
           "progression_name": "Activité libre"
@@ -2402,10 +2432,10 @@
           "progression_name": " Les Lutins en Action"
         },
         "5661328f-256c-4f27-988b-ea102fde1cbd": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "dc08f2e2-dab1-43b0-8349-9ce3161eec83": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
           "progression_name": "Activité libre"
@@ -2450,10 +2480,10 @@
           "name": "Dessiner avec des Boucles"
         },
         "257e3a1f-5cc5-444e-94e3-ee18c5d7169e": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "f6df66e2-bc97-403d-a4e1-c015294d94ac": {
           "progression_name": "Défi"
@@ -2476,10 +2506,10 @@
           ]
         },
         "35342825-ca7b-4305-b02a-365e6095e8f6": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "7f4ec132-6df2-4a23-abe3-853efe35701d": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "70a7d0e6-caa1-439a-a18c-41e5af3daf6f": {
           "progression_name": "Défi"
@@ -2547,13 +2577,13 @@
           ]
         },
         "cd4d43da-dace-4324-a934-618f8c5b6ec7": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "4130a39a-0232-45ed-b6c7-1f2badada9ee": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "8543e376-7910-45df-b486-372036c19fdc": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "9619ba1f-8426-40fb-9699-41562c4721ac": {
           "progression_name": " Minecraft - Félicitations"
@@ -2571,7 +2601,7 @@
           "name": "Les Fonctions avec L'Artiste"
         },
         "c8b7ed1a-7b68-48e5-bf78-c411d209179a": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "2be1256a-b8a6-4ec6-a54d-c1db662af71e": {
           "progression_name": "Défi"
@@ -2589,13 +2619,13 @@
           "name": "Les Conditions dans Minecraft : Voyage Aquatique"
         },
         "ace06bbe-f40f-4333-806c-928527edede6": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "735452ce-870a-4728-8b1b-00a77c5bffbb": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "Activité libre"
@@ -2611,16 +2641,22 @@
           "tips": [
             null
           ],
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "a63ac211-7ad4-4c28-af4a-cfa489ec8a77": {
           "progression_name": " Les Boucles Tant Que avec la Fermière"
         },
         "af239dc4-fc39-4765-a761-8d1979ef5e11": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
+        },
+        "c978158c-f26f-4fe2-ac61-4f383a2fe748": {
+          "progression_name": "Video: Les blocs Répéter Jusqu’à"
         },
         "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
+        },
+        "37929d1a-a0f2-4700-96e9-7d207a70dc1e": {
+          "progression_name": "Video: « Si/Sinon »"
         },
         "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
           "progression_name": "Défi"
@@ -2635,7 +2671,7 @@
           "progression_name": " La Moissonneuse"
         },
         "6da14073-1ba0-4603-989b-5b9c9758c047": {
-          "progression_name": "Labo des Lutins"
+          "progression_name": "Renforcement Des Compétences"
         },
         "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5": {
           "progression_name": "Défi"

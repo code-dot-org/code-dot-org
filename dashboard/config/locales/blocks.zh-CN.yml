@@ -1141,6 +1141,10 @@ zh-CN:
         text: "{SPRITE} 的位置"
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': 下雨
       gamelab_makeNewSpriteAnon:
         text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵图
       gamelab_makeNumSprites:
@@ -1175,6 +1179,11 @@ zh-CN:
         text: 上移和下移
       gamelab_playSound:
         text: 播放音效{SOUND}
+      gamelab_playSoundOptions:
+        text: 播放音效{SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": 紧缩
       gamelab_pointInDirection:
         text: 指向 {SPRITE} {DIRECTION}
         options:
@@ -1606,6 +1615,11 @@ zh-CN:
             '"direction"': 移动方向
       Mikelab_setTint:
         text: 将 {SPRITE} 的颜色改为 {COLOR}
+      Mikelab_setupOutbreak:
+        text: |-
+          疫情爆发设置
+          人口：{SPRITE2N}
+          {TOGGLE}病毒
       Mikelab_setupSim:
         text: |-
           setup simulation with
@@ -1687,20 +1701,72 @@ zh-CN:
         text: "{SPRITE} 的x轴坐标"
       Mikelab_yLocationOf:
         text: "{SPRITE} 的y坐标"
+      Outbreak_beginCongregating:
+        text: 怪物开始聚集
+      Outbreak_beginQuarantining:
+        text: 怪物生病时开始隔离
+      Outbreak_beginSocialDistancing:
+        text: 怪物开始保持社交距离
+      Outbreak_beginWandering:
+        text: 怪物开始徘徊
+      Outbreak_beginWearingMasks:
+        text: 怪物开始戴口罩
+      Outbreak_layoutBorder:
+        text: 在边界上布局怪物
+      Outbreak_layoutClusters:
+        text: 在{NUM}的集群中布局怪物
+      Outbreak_layoutGrid:
+        text: 按网格布局怪物
+      Outbreak_layoutRandom:
+        text: 随机布局怪物
+      Outbreak_stopMoving:
+        text: 怪物停止移动
+      PoemBot_playSound:
+        text: 播放音效{SOUND}
       PoemBot_setBackgroundEffect:
-        text: 设置背景效果为 {BG_EFFECT}
+        text: 设置背景效果为 {EFFECT}
         options:
-          BG_EFFECT:
-            '"solid"': 固体
+          EFFECT:
+            '"colors"': 颜色
+            '"squiggles"': 花体
+            '"space"': 空间
+            '"stars"': 星星
+            '"ripples"': 波纹
+          PALETTE:
             '"rainbow"': 彩虹
       PoemBot_setForegroundEffect:
-        text: 设置前景效果为 {FG_EFFECT}
+        text: 设置前景效果为 {EFFECT}
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': 下雨
             '"bubbles"': 气泡
-      PoemBot_stringConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+            '"hearts"': 五彩心
+            '"confetti"': 彩纸屑
+            '"starburst"': 星爆
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: 飘动
+            growing: 生长
+            jittering: 抖动
+            shrinking: 收缩
+            spinning_left: 向左旋转
+            spinning_right: 向右旋转
+            swimming_left_and_right: 游泳
+            wandering: 徘徊
+            wobbling: 摇摆
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: 飘动
+            growing: 生长
+            jittering: 抖动
+            shrinking: 收缩
+            spinning_left: 向左旋转
+            spinning_right: 向右旋转
+            swimming_left_and_right: 游泳
+            wandering: 徘徊
+            wobbling: 摇摆
       PoemBot_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:

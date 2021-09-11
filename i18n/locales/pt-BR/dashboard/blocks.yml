@@ -1119,6 +1119,11 @@ pt:
         text: localização de {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': explosão
+            '"rain"': chuva
       gamelab_makeNewSpriteAnon:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       gamelab_mirrorSprite:
@@ -1149,6 +1154,12 @@ pt:
         text: clique {SPRITE}
       gamelab_playSound:
         text: reproduzir som {SOUND}
+      gamelab_playSoundOptions:
+        text: reproduzir som {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": botão
+            "'sound://category_collect/clicky_crunch.mp3'": triture
       gamelab_pointInDirection:
         text: aponte {SPRITE} {DIRECTION}
         options:
@@ -1622,18 +1633,46 @@ pt:
         text: coordenada x do {SPRITE}
       Mikelab_yLocationOf:
         text: coordenada y do {SPRITE}
+      PoemBot_playSound:
+        text: reproduzir som {SOUND}
       PoemBot_setBackgroundEffect:
-        text: definir o efeito do plano de fundo {BG_EFFECT} [PALETTE][1]
+        text: definir o efeito do plano de fundo {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': sólido
-            '"rainbow"': arco-íris
+          EFFECT:
+            '"colors"': Cores
+            '"squiggles"': Rabiscos
+            '"space"': Espaço
+            '"stars"': Estrelas
+            '"ripples"': Ondulação
+          PALETTE:
+            '"rainbow"': Arco-íris
       PoemBot_setForegroundEffect:
-        text: definir o efeito do primeiro plano {FG_EFFECT}
+        text: definir o efeito do primeiro plano {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': chuva
-            '"bubbles"': bolhas
+          EFFECT:
+            '"rain"': Chuva
+            '"bubbles"': Bolhas
+            '"hearts"': Corações coloridos
+            '"confetti"': Confete
+            '"starburst"': Starburst
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: crescendo
+            jittering: tremendo
+            shrinking: encolhendo
+            spinning_left: girando para a esquerda
+            spinning_right: girando para a direita
+            wandering: vagando
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: crescendo
+            jittering: tremendo
+            shrinking: encolhendo
+            spinning_left: girando para a esquerda
+            spinning_right: girando para a direita
+            wandering: vagando
       RyanLab_moveForward:
         text: avance
       RyanLab_turnLeft:

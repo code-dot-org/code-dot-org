@@ -160,9 +160,8 @@
         "CourseF_outbreak2": "वायरस सिम्युलेशन",
         "CourseF_outbreak3": "वायरस सिम्युलेशन",
         "CourseF_outbreak4": "अपने सिम्युलेशन को मॉडिफाई करें",
-        "CourseF_outbreak6": "रैंडम चांस",
-        "CourseF_outbreak7": "इम्युनिटी और वैक्सीन्स",
-        "CourseF_outbreak8": "एक मैसेज साझा करें",
+        "CourseF_outbreak7": "रैंडम चांस",
+        "CourseF_outbreak8": "इम्युनिटी और वैक्सीन्स",
         "CourseF_video_introSpriteLab_2021": "यह स्प्राइट लैब है",
         "OPD-K5 WhatIsCS_dani": "कंप्यूटर साइंस क्या है?",
         "courseF_artist_for1_2021": "फॉर लूप्स फ्रीप्ले (शुरुआत)",
@@ -267,7 +266,25 @@
         "courseF_sprites_properties": "स्प्राइट्स की विशेषताएं",
         "CourseD_EOC_dance_2021": "डांस तैयार करें",
         "CourseE_Project_SpriteLab_cupcake_examples_2021": "कपकेक डांस (स्प्राइटलैब)",
-        "courseF_bee_for10_2021": "चुनौती"
+        "courseF_bee_for10_2021": "चुनौती",
+        "Course E: Artist Project_2021": "आर्टिस्ट प्रोजेक्ट बनाएं",
+        "Course E: Artist Project_examples_2021": "पैटर्न आर्टिस्ट",
+        "Course E: Frozen Project_2021": "फ्रोजन प्रोजेक्ट बनाएं",
+        "Course E: Frozen Project_examples_2021": "हिम-पक्षी फूल",
+        "CourseE_Project_SpriteLab_2021": "स्प्राइट लैब प्रोजेक्ट बनाएं",
+        "CourseE_Project_SpriteLab_examples_2021": "मोन्स्टर डांस (स्प्राइटलैब)",
+        "MC_HOC_2017_01_RETRY_2021": "इलाका",
+        "MC_HOC_2017_02_Cole_2021": "खेत",
+        "MC_HOC_2017_03_Cole_2021": "जंगल",
+        "MC_HOC_2017_04POINT5_RYAN_2021": "रेगिस्तान",
+        "MC_HOC_2017_04_Cole_2021": "दलदल",
+        "MC_HOC_2017_05_Cole_2021": "नदी",
+        "MC_HOC_2017_06_Cole_2021": "ज्वार-भाटा",
+        "MC_HOC_2017_07_Cole_2021": "हिमश्वेत पास",
+        "MC_HOC_2017_10_RETRY_2021": "गुफा",
+        "MC_HOC_2017_Ali_2021": "निचला किला",
+        "MC_HOC_2017_FP20x20_2021": "फ्रीप्ले",
+        "international_outbreak_freeplay": "एक मैसेज साझा करें"
       }
     }
   }

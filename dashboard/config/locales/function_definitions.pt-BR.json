@@ -432,34 +432,50 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "obter 3 néctares"
+            "name": "obter 3 néctares",
+            "parameters": {
+              "direction": "direção"
+            }
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "obter 3 néctares"
+            "name": "obter 3 néctares",
+            "parameters": {
+              "direction": "direção"
+            }
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "pegar 5 néctares"
+            "name": "pegar 5 néctares",
+            "parameters": {
+              "direction": "direção"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "pegar 5 néctares"
+            "name": "pegar 5 néctares",
+            "parameters": {
+              "direction": "direção"
+            }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "obter muitos néctares"
+            "name": "obter muitos néctares",
+            "parameters": {
+              "direction": "direção"
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "obter néctar fazer mel",
             "parameters": {
-              "honey": "mel"
+              "honey": "mel",
+              "direction": "direção"
             }
           }
         },

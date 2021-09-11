@@ -15819,6 +15819,7 @@ es:
             k5_next_steps_1:
               display_name: Próximos pasos
           student_description: "¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!"
+          name: k5-enlíneapd-2020
         dani-test-2020:
           lessons:
             new lesson:
@@ -19358,8 +19359,8 @@ es:
               description_teacher: Los alumnos vuelven a visitar el Proyecto Camión de Comida de Pasteles Mercurio para aprender sobre el reparto, el redondeo y los números aleatorios. Los alumnos resuelven escenarios para el propietario del camión de comida utilizando sus conocimientos de Java y la clase `Matemáticas`.
             lesson-5:
               name: Comparando Valores para Tomar Decisiones
-              description_student: 'Hoy, se trata de utilizar el código para tomar decisiones. Se comparan las relaciones entre los valores mientras se utilizan sentencias condicionales para ayudar al `Pintor` a tomar decisiones. '
-              description_teacher: 'Los alumnos utilizan operadores relacionales para escribir y evaluar expresiones. Los alumnos amplían el uso de las sentencias `if` para comparar valores almacenados en variables y elementos de matrices (arrays). '
+              description_student: Hoy, se trata de utilizar el código para tomar decisiones. Se comparan las relaciones entre los valores mientras se utilizan sentencias condicionales para ayudar al `Pintor` a tomar decisiones.
+              description_teacher: Los alumnos utilizan operadores relacionales para escribir y evaluar expresiones. Los alumnos amplían el uso de las sentencias `if` para comparar valores almacenados en variables y elementos de matrices (arrays).
             lesson-6:
               name: Añadiendo Aleatoriedad a un Programa
               description_student: Uno de los casos de uso más comunes para generar números aleatorios son los juegos de azar, como tirar los dados, barajar las cartas y lanzar una moneda. Los juegos suelen utilizar números aleatorios para generar diferentes resultados. Hoy, se añade la aleatoriedad al juego Explota el Globo añadiendo una función de lanzamiento de dados.
@@ -19977,10 +19978,10 @@ es:
               name: Módulo 2
             Module 3:
               key: Módulo 3
-              name: 'Módulo 3: Unidad 5, uso de listas en las aplicaciones y reconocimiento de las habilidades de Ciencias de la Computación en el aula'
+              name: Módulo 3
             Module 4:
               key: Módulo 4
-              name: 'Módulo 4: Unidad 5 y uso de conjuntos de datos en las aplicaciones'
+              name: Módulo 4
             Module 5:
               key: Módulo 5
               name: 'Módulo 5: Unidad 7 y comprensión de las funciones con parámetros y retorno'
@@ -20341,6 +20342,12 @@ es:
           lessons:
             lesson-2:
               name: Lección 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Etapa 1
+            lessonGroup-3:
+              display_name: Etapa 2
         dlp21-csp-mod1:
           title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la Computación
         dlp21-csd:
@@ -20366,6 +20373,8 @@ es:
           lessons:
             lesson-12:
               name: Herramientas
+            lesson-13:
+              name: Ejemplos
             lesson-17:
               name: Consola
             lesson-18:
@@ -20740,6 +20749,8 @@ es:
               description_teacher: Los alumnos escriben bucles "for" para recorrer matrices (arrays) y buscar y modificar elementos que cumplan determinadas condiciones. Los alumnos vuelven a visitar El barrio y utilizan tablas de seguimiento para documentar cómo se ejecuta el código dentro de un bucle `for`. Participan en una revisión del código después de completar un nivel de elección y revisan su código basándose en los comentarios.
             lesson-4:
               name: Recorrido de Arrays con Bucles While
+              description_student: "¿Recuerdas los bucles `while`? En esta lección, investigarás los casos límite de los bucles `while` y harás conexiones entre los bucles `while` y `for`. Creas imágenes para tu música utilizando la clase `Rectangle`."
+              description_teacher: Los alumnos revisan los bucles `while` y aprenden sobre los bucles infinitos. Los alumnos exploran la creación de visuales antes de la conversión entre los bucles `while` y `for`. Los alumnos crean sus propios visuales musicales utilizando la clase `Rectangle`.
             lesson-5:
               name: Almacenando Objetos en Arrays
               description_teacher: Los alumnos exploran la funcionalidad y las ventajas del polimorfismo para crear y recorrer un array de objetos `Shape`. Después de revisar la herencia, los alumnos descubren que las subclases pueden implementar versiones específicas de comportamientos. El análisis de un segmento de código proporciona un ejemplo para guiar la implementación del polimorfismo en El Teatro.
@@ -20768,6 +20779,7 @@ es:
               description_teacher: Para este proyecto, los alumnos utilizan matrices unidimensionales y algoritmos estándar para desarrollar un concierto en El Teatro. Los alumnos comienzan eligiendo un algoritmo de remezcla de un conjunto de opciones de remezcla y escribiendo su pseudocódigo con un compañero. Traducirán el pseudocódigo en código y combinarán su nuevo algoritmo con los algoritmos que han desarrollado en lecciones anteriores para crear el audio del concierto.
             lesson-12:
               description_student: Continúa diseñando tu concierto en El Teatro, añadiendo restricciones a la duración del mismo y agregando elementos visuales. Realiza una revisión del código para obtener comentarios que te permitan seguir desarrollando tu programa.
+              description_teacher: En la lección anterior, los estudiantes escribieron un algoritmo de remezcla y lo combinaron con los algoritmos que desarrollaron en lecciones anteriores. Los alumnos utilizan variables estáticas y constantes para añadir restricciones a la duración del concierto. Añaden elementos visuales al concierto utilizando un array de `Formas`, y luego participan en una revisión del código para dar y utilizar la experiencia mientras desarrollan su programa.
             lesson-13:
               description_student: En la lección anterior, creaste una lista priorizada de trabajo para completar. Hoy, autoevaluarás tu trabajo con respecto a la rúbrica del proyecto y a continuación, revisarás tu lista priorizada para decidir qué revisiones tienes que hacer en tu concierto. ¡A continuación, compartirás tu proyecto final con los compañeros para celebrar tu éxito!
               description_teacher: En la lección anterior, los alumnos crearon una lista priorizada de trabajo para completar. En esta lección, los alumnos autoevaluarán su trabajo con respecto a la rúbrica del proyecto y, a continuación, revisarán su lista de prioridades para informar sobre las revisiones de su concierto. A continuación, los alumnos comparten sus proyectos finales con los compañeros para celebrar sus éxitos.
@@ -20887,3 +20899,13 @@ es:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Innovaciones en computación
+            lesson-9:
+              name: LEDs de colores
+            lesson-13:
+              name: Acelerómetro
+            lesson-19:
+              name: Proyecto

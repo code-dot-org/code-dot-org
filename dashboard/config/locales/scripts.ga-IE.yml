@@ -4558,6 +4558,12 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Céim 1
+            lessonGroup-3:
+              display_name: Céim 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -4599,3 +4605,7 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: Tionscadal

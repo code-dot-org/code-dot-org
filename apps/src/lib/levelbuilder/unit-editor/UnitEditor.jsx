@@ -180,7 +180,11 @@ class UnitEditor extends React.Component {
   };
 
   handleStandaloneUnitChange = () => {
-    this.setState({isCourse: !this.state.isCourse});
+    this.setState({
+      isCourse: !this.state.isCourse,
+      familyName: null,
+      versionYear: null
+    });
   };
 
   handleShowCalendarChange = () => {

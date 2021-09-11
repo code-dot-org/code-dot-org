@@ -2805,6 +2805,22 @@
           "wobbling": "crwdns2576492:0crwdne2576492:0",
           "moving west and looping": "crwdns2576494:0crwdne2576494:0",
           "moving east and looping": "crwdns2576496:0crwdne2576496:0"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "crwdns2493992:0crwdne2493992:0",
+          "wandering": "crwdns2493994:0crwdne2493994:0",
+          "moving east": "crwdns2493996:0crwdne2493996:0",
+          "spinning left": "crwdns2493998:0crwdne2493998:0",
+          "spinning right": "crwdns2494000:0crwdne2494000:0",
+          "shrinking": "crwdns2494002:0crwdne2494002:0",
+          "growing": "crwdns2494004:0crwdne2494004:0",
+          "moving south": "crwdns2494006:0crwdne2494006:0",
+          "moving left and right": "crwdns2494008:0crwdne2494008:0",
+          "moving north": "crwdns2494010:0crwdne2494010:0",
+          "jittering": "crwdns2494012:0crwdne2494012:0",
+          "moving west": "crwdns2494014:0crwdne2494014:0",
+          "patrolling": "crwdns2494016:0crwdne2494016:0",
+          "moving with arrow keys": "crwdns2494018:0crwdne2494018:0"
         }
       }
     }

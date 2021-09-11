@@ -77,7 +77,7 @@
           "2-3_Artist_Functions_4_a": "Artistul trebuie să întoarcă la 120 de grade între fiecare pătrat pentru a finaliza acest design."
         },
         "2-3 Artist Loops New 11": {
-          "2-3_Artist_Loops_New_11_a": "Aminteşte-ţi ca programul din ultimul puzzle a fost:\n\n[blockly block][0]",
+          "2-3_Artist_Loops_New_11_a": "Aminteşte-ţi ca programul din ultimul puzzle a fost:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">8</title>\n        <statement name=\"DO\">\n          <block type=\"draw_colour\" inline=\"true\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_random\"/>\n            </value>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">turnRight</title>\n                <title name=\"VALUE\" config=\"45,60,90,120,180\">45</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">50</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant_dropdown\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <title name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n                        <next>\n                          <block type=\"draw_move_by_constant\">\n                            <title name=\"DIR\">moveForward</title>\n                            <title name=\"VALUE\">50</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
           "2-3_Artist_Loops_New_11_b": "Noua ta întoarcere trebuie să fie plasată la **finalul** codului din interiorul buclei."
         },
         "2-3 Artist Loops New 12": {
@@ -115,7 +115,7 @@
         "2-3 Bee Conditionals 14": {
           "2-3_Bee_Conditionals_14_a": "Aveți dificultăți în a afla cum să puneți blocurile în partea de jos? Încercați să tratați floarea roșie exact la fel ca pe o floare mov!",
           "2-3_Bee_Conditionals_14_b": "Dacă floarea roşie ar fi fost violetă, vă puteți da seama cum se utilizează o buclă `repetă` suplimentară pentru a reduce pe codul?",
-          "2-3_Bee_Conditionals_14_c": "Încearcă să spargi programul în două bucăți separate:\n\n[][0]\n\n1.  Adună nectar de 3 ori\n\n2.  Mută înainte de 5 ori\n\n3.  Verifică să vezi dacă este nectar, dacă da: strânge-l\n\n4.  Întoarce la stânga\n\n5.  Fă miere \n\n6.  Mută înainte o dată\n\n7.  Fă două (bucați de) miere"
+          "2-3_Bee_Conditionals_14_c": "Încearcă să spargi programul în două bucăți separate:\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.  Adună nectar de 3 ori\n\n2.  Mută înainte de 5 ori\n\n3.  Verifică să vezi dacă este nectar, dacă da: strânge-l\n\n4.  Întoarce la stânga\n\n5.  Fă miere \n\n6.  Mută înainte o dată\n\n7.  Fă două (bucați de) miere"
         },
         "2-3 Bee Conditionals 15": {
           "2-3_Bee_Conditionals_15_a": "Amintiți-vă: florile mov au doar 0 sau 1 nectar și se pot modifica de fiecare dată când executați programul."
@@ -337,7 +337,7 @@
           "Course_4_Artist_For_Loops_inspire_a": "Structura de bază a acestui cod este aceeaşi ca și cea a puzzle-ului din provocarea anterioară... cu vreo două schimbări.",
           "Course_4_Artist_For_Loops_inspire_b": "Încercați o buclă \"pentru\" care merge de la 3 la 10 cu un increment de 1.",
           "Course_4_Artist_For_Loops_inspire_c": "Există două iterații ale aceleiași bucle de repetare în interiorul buclei `pentru`, dar cea de-a doua repetare întoarce în direcția opusă.",
-          "Course_4_Artist_For_Loops_inspire_d": "**Soluție:** \n\n[blockly block][0]"
+          "Course_4_Artist_For_Loops_inspire_d": "**Soluție:** \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_arithmetic\" inline=\"true\">\n                <title name=\"OP\">MINUS</title>\n                <value name=\"A\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <value name=\"B\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">1</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">40</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">360</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">1</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">40</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">360</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "Course 4 Artist Functions Inspiration": {
           "Course_4_Artist_Functions_Inspiration_a": "Începeți cu codul din ultimul puzzle și adăugați un extra \"întoarce la dreapta\" de trei grade în bucla repetitivă.",
@@ -398,12 +398,12 @@
         },
         "Course 4 SCF 1a": {
           "Course_4_SCF_1a_a": "Aduceți-vă aminte de funcțiile din etapa 16.",
-          "Course_4_SCF_1a_b": "Priveşte la acest drum ca fiind ruta principală:  \n\n[][0]",
+          "Course_4_SCF_1a_b": "Priveşte la acest drum ca fiind ruta principală:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)",
           "Course_4_SCF_1a_c": "Ar trebui să luați în considerare utilizarea unei \"bucle pentru\". Nu pentru pași, ci pentru parametrul funcției."
         },
         "Course 4 SCF 1b": {
           "Course_4_SCF_1b_a": "Observă că toate locurile cu miere arată la fel.  \n\nUn loc foarte bun pentru o funcţie!",
-          "Course_4_SCF_1b_b": "Priveşte această idee despre cum ar putea albina să călătorească:  \n\n[][0]",
+          "Course_4_SCF_1b_b": "Priveşte această idee despre cum ar putea albina să călătorească:  \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)",
           "Course_4_SCF_1b_c": "Ar trebui să luați în considerare utilizarea unei \"bucle pentru\" pentru distanța parcursă de albină."
         },
         "Course 4 SCF 2": {
@@ -450,7 +450,7 @@
           "Course_4_SCV_1_c": "Folosind o variabilă pentru `laturi` şi una pentru `lungime` face codul mai clar pentru că poţi să repeţi acelaşi cod de mai multe ori în loc să creezi o copie nouă pentru fiecare set de numere."
         },
         "Course 4 SCV 2": {
-          "Course_4_SCV_2_a": "Imaginea completă este formată din 10 din aceste \"flori\":\\\n[][0]\n\n...care sunt făcute din 10 astfel de decagoane:\\\n[][1]",
+          "Course_4_SCV_2_a": "Imaginea completă este formată din 10 din aceste \"flori\":\\\n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n\n...care sunt făcute din 10 astfel de decagoane:\\\n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)",
           "Course_4_SCV_2_b": "Acest program foloseşte bucle îmbricate (de 3 ori). Toate buclele se repetă de un număr de ori egal cu `laturi`. ",
           "Course_4_SCV_2_c": "Artistul se întoarce la stânga când crează fiecare decagon, dar se întoarce la dreapta în fiecare dintre celelalte bucle.",
           "Course_4_SCV_2_d": "Pentru a nu avea toate cele 10 \"flori\" petale desenate în acelaşi loc, asigură-te că sari înainte cu `lungime`/`laturi` înainte să te roteşti 360/`laturi` grade ca parte din bucla exterioară."
@@ -464,12 +464,12 @@
           "Course_4_SCV_4_b": "Va fi foarte util să folosiți trei bucle în interiorul buclei dvs. principale. Una pentru mersul înainte, una pentru colectarea nectarului și una pentru a face miere. "
         },
         "Course 4 SCV 5": {
-          "Course_4_SCV_5_a": "Priveşte această variantă pentru mişcare:\n\n[][0]",
+          "Course_4_SCV_5_a": "Priveşte această variantă pentru mişcare:\n\n![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)",
           "Course_4_SCV_5_b": "La fiecare repetare, florile au cu 2 mai puţin nectar şi albina trebuie să facă miere încă o dată.",
           "Course_4_SCV_5_c": "Observă că la începutul buclei exterioare, albina se mişcă de câte ori este nectar în floarea următoare."
         },
         "Course 4 SCV 6": {
-          "Course_4_SCV_6_a": "Priveşte cum arată o formă completă\n\n[][0]",
+          "Course_4_SCV_6_a": "Priveşte cum arată o formă completă\n\n![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)",
           "Course_4_SCV_6_b": "Te va ajuta să creezi 8 variabile: roşu1, verde1, albastru1, roşu2, verde2, albastru2, lungime şi laturi.",
           "Course_4_SCV_6_c": "Fiecare dintre cele 5 laturi ale formei se împarte în bucăti de `length`/`sides` unde primul segment este turcoaz (rgb = 0,175,200) şi al doilea este purpuriu (rgb = 100, 50, 150).",
           "Course_4_SCV_6_d": "Prima întoarcere este o rotire stânga cu `360`/`laturi`.  Următoarea rotaţie este dreapta cu `360`/`laturi`. ",
@@ -652,7 +652,7 @@
           "double_loop": "Încercați să puneți o buclă \"pentru\" în interiorul unei bucle \"repetă\".",
           "specifics": "Bucla `pentru` rulează de la trei la șaptesprezece pentru fiecare dintre cele șase \"petale\" înainte de a trece la următoarea, desenând forme doar cu un număr impar de laturi.\n\nBlocul `setează alfa` folosește diviziunea pentru a decolora culoarea, pe măsură ce contorul devine mai mare.",
           "after": "După ce ați terminat cu fiecare \"petală\", asigurați-vă că \"mutați înainte\" cu 20 de pixeli înainte de a efectua o rotație de 60 de grade.",
-          "solution": "**Soluţie**\n\n[blockly block][0]"
+          "solution": "**Soluţie**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">6</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"controls_for_counter\" inline=\"true\">\n                  <mutation counter=\"counter\"></mutation>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">3</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">17</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">500</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"procedures_callnoreturn\" inline=\"false\">\n                            <mutation name=\"draw a polygon\">\n                            <arg name=\"length\"></arg>\n                            <arg name=\"sides\"></arg>\n                            </mutation>\n                            <value name=\"ARG0\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">30</title>\n                              </block>\n                            </value>\n                            <value name=\"ARG1\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">20</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">60</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n  </xml>"
         },
         "NEW Course 4 Bee For Loops 8": {
           "NEW_Course_4_Bee_For_Loops_8_a": "Dacă bucla ta numără în sus, incrementul este adăugat variabilei contor la fiecare repetare.\n\nCe trebuie să adaugi fiecărui număr pentru a obţine numărul de după el?"
@@ -661,7 +661,7 @@
           "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "course1_artist_loops_challenge1": {
-          "courseA_artist_loops_challenge1_a": "Poţi folosi bucle ca aceasta pentru a crea pereţii şi acoperişul. Încearcă să repeţi blocuri diferite.\n\n[][0]\n\nDesenează modelul tău sau apasă [][1] pentru nişte idei!",
+          "courseA_artist_loops_challenge1_a": "Poţi folosi bucle ca aceasta pentru a crea pereţii şi acoperişul. Încearcă să repeţi blocuri diferite.\n\n![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)\n\nDesenează modelul tău sau apasă ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) pentru nişte idei!",
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "courseA_artist_loops_challenge1_c": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "courseA_artist_loops_challenge1_d": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -678,12 +678,12 @@
           "courseA_collector_loops_challenge1_c": "Sunt 6 pietre preţioase pe partea dreaptă a peşterii, dar tu trebuie să muţi şi să strângi de 5 ori. Ştii de ce?"
         },
         "course1_collector_loops_challenge2": {
-          "courseA_collector_loops_challenge2_b": "Va fi nevoie să foloseşti un bloc [][0] pentru a rezolva asta.",
-          "courseA_collector_loops_challenge2_a": "Poți să te deplasezi înapoi pe traseu a doua oară înainte de a te deplasa spre sud.\n\n[][0]"
+          "courseA_collector_loops_challenge2_b": "Va fi nevoie să foloseşti un bloc ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png>) pentru a rezolva asta.",
+          "courseA_collector_loops_challenge2_a": "Poți să te deplasezi înapoi pe traseu a doua oară înainte de a te deplasa spre sud.\n\n![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)"
         },
         "course1_collector_loops_challenge3": {
-          "courseB_collector_loops_challenge1_b": "Începe prin a repeta comenzile \"mută sud\" şi \"ia comoara\".\n\n[blockly block][0]",
-          "courseB_collector_loops_challenge1_a": "Modelul din nord este puţin diferit faţă de modelul din sud.\n\n[blockly block][0]",
+          "courseB_collector_loops_challenge1_b": "Începe prin a repeta comenzile \"mută sud\" şi \"ia comoara\".\n\n<xml>\n  <block type=\"maze_moveSouth\"/><next>\n  <block type=\"collector_collect\"/></next>\n  </xml>",
+          "courseB_collector_loops_challenge1_a": "Modelul din nord este puţin diferit faţă de modelul din sud.\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>",
           "courseB_collector_loops_challenge1_c": "Mutați Est de două ori între fiecare traseu.\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\nPuteți face acest lucru cu doar 14 blocuri. Faceți clic pentru încă un indiciu pentru a vedea o soluție."
         },
         "course1_maze_debugging_challenge1": {
@@ -696,7 +696,7 @@
           "courseB_maze_seq_challenge1_b": "Încearcă să mergi spre vest pentru a începe."
         },
         "course1_playlab_events_challenge1": {
-          "courseA_playlab_events_challenge1_e": "La final, fă-l pe Vrajitorul Wendel să apare când apeşi pe Spiff!\n\n[blockly block][0]"
+          "courseA_playlab_events_challenge1_e": "La final, fă-l pe Vrajitorul Wendel să apare când apeşi pe Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "course2_artist_nestedLoops_challenge1": {
           "courseD_artist_nestedLoops_challenge1_a": "Începe prin a face o buclă îmbricată pentru a crea patru octogoane. Virează 45 de grade pentru a face octogonul. Sari, apoi virează 90 de grade după fiecare.",
@@ -707,13 +707,13 @@
           "courseC_artist_prog_challenge1_a": "Dreptunghiul are 200 de pixeli laţime si 100 de pixeli înălţime. "
         },
         "course2_artist_prog_challenge2": {
-          "courseC_artist_prog_challenge2_a": "Poţi pune comenzi în interiorul blocului \"repetă\" pentru a le executa de mai multe ori. Încearcă!\n\n[blockly block][0]"
+          "courseC_artist_prog_challenge2_a": "Poţi pune comenzi în interiorul blocului \"repetă\" pentru a le executa de mai multe ori. Încearcă!\n\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
         },
         "course2_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_a": "Poţi găsi un drum care trece pe la fiecare floare si fiecare fagure fără a lovi vreun copac? Cel mai bun drum este o spirala.\n\n**Poţi rezolva această problemă fără a te întoarce la stânga.**"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "La fel ca şi blocul \"dacă eşti la floare\", codul din interiorul unui bloc \"cât timp nectar > 0\" va rula doar dacă albina este la o floare. Diferenţa principală este a acest cod se va executa repetat până când nu mai este nectar. Încearcă acest model:\n\n[blockly block][0]"
+          "courseD_bee_conditionals_challenge1_b": "La fel ca şi blocul \"dacă eşti la floare\", codul din interiorul unui bloc \"cât timp nectar > 0\" va rula doar dacă albina este la o floare. Diferenţa principală este a acest cod se va executa repetat până când nu mai este nectar. Încearcă acest model:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Codul original ar merge perfect - doar dacă ar fi o singură comoară in fiecare grămadă!"
@@ -727,7 +727,7 @@
         "course2_harvester_loops_challenge1": {
           "courseC_harvester_loops_challenge1_a": "Nici nu te gândi să încerci asta fără bucle!",
           "courseC_harvester_loops_challenge1_b": "Puteți repeta \"mută înainte\" și \"culege porumb\" ori de câte ori aveți nevoie, apoi \"întoarce la dreapta\" la fiecare colț.",
-          "courseC_harvester_loops_challenge1_c": "Cea mai bună metodă de a strânge primii patru porumbi foloseşte un bloc \"repetă\" în interiorul unui alt bloc \"repetă\". Poţi folosi acest model şi pentru restul problemei!\n\n[blockly block][0]"
+          "courseC_harvester_loops_challenge1_c": "Cea mai bună metodă de a strânge primii patru porumbi foloseşte un bloc \"repetă\" în interiorul unui alt bloc \"repetă\". Poţi folosi acest model şi pentru restul problemei!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">2</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></next></block></xml>"
         },
         "course2_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_b": "Puteți repeta \"mută înainte\" și \"culege porumb\" ori de câte ori aveți nevoie, apoi întoarceți la fiecare colț."
@@ -735,7 +735,7 @@
         "course2_maze_loops_challenge1": {
           "courseC_maze_loops_challenge1_a": "Gândeşte-te la acest drum ca având trei bucăţi diferite. Fiecare are un model pe care îl poţi repeta.",
           "courseC_maze_loops_challenge1_b": "Între blocurile \"repetă\" vei avea nevoie să \"întorci stânga\" sau să \"întorci dreapta\" ca să îl pregăteşti pe Scrat pentru modelul următor.",
-          "courseC_maze_loops_challenge1_c": "Dacă ai ajuns până aici, trebuie doar să te \"întorci stânga\" şi apoi să \"mergi înainte\" de câteva ori. Nu renunţa!\n\n[][0]"
+          "courseC_maze_loops_challenge1_c": "Dacă ai ajuns până aici, trebuie doar să te \"întorci stânga\" şi apoi să \"mergi înainte\" de câteva ori. Nu renunţa!\n\n![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)"
         },
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "_Dacă mă trimiţi cu spatele, ai multă grijă să mă întorc în direcţia corectă!_",
@@ -751,7 +751,7 @@
           "courseE_bee_functions_challenge1_a": "Dacă puzzle-ul pare a fi o provocare, încercați să vă construiți funcția câte puțin de fiecare dată.\n\nAdăugați câteva blocuri, apoi încercați să vedeți ce se întâmplă. Adăugați mai multe, apoi încercați din nou. În curând, veți reuși!"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Începe prin a aduna DOUÂ pietre preţioase din fiecare dintre primele două grămezi.\n\n[][0]\nFoloseşte aceste blocuri.\n\n[blockly block][1]"
+          "courseD_collector_debugging_challenge2_a": "Începe prin a aduna DOUÂ pietre preţioase din fiecare dintre primele două grămezi.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nFoloseşte aceste blocuri.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         },
         "course3_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_a": "Butonul `PAS` ar putea fi foarte util pentru această problemă."
@@ -766,7 +766,7 @@
         "course3_maze_debugging_challenge2": {
           "courseC_maze_debugging_challenge2_a": "O metodă de rezolvare este să adaugi mai multi paşi \"înainte\" între întoarceri.",
           "courseC_maze_debugging_challenge2_b": "Dacă de blochezi, poţi oricând să o iei de la început sau să ştergi tot codul şi să găseşti soluţia ta!",
-          "courseC_maze_debugging_challenge2_c": "Sunt două drumuri diferite pe care le poţi urma folosind doar blocul \"mută înainte\" şi doar patru întoarceri. Daca găseşti o cale să foloseşti blocul \"repetă\", poate sunt mai multe!\n\n[][0]"
+          "courseC_maze_debugging_challenge2_c": "Sunt două drumuri diferite pe care le poţi urma folosind doar blocul \"mută înainte\" şi doar patru întoarceri. Daca găseşti o cale să foloseşti blocul \"repetă\", poate sunt mai multe!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
         },
         "course4_artist_binary_challenge2": {
           "courseD_artist_binary_challenge2_a": "Cea mai bună indicaţie pe care o am pentru tine este să apeşi `⟲ Începe din nou` dacă începe să fie foarte complicat.\n\nSunt doar câteva linii greşite în programul original. Daca ceva eşuează, încearcă din nou. Există o soluţie!"
