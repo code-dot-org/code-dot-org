@@ -76,9 +76,18 @@ class UnitOverviewTopRow extends React.Component {
   };
 
   compilePdfDropdownOptions = () => {
-    const {scriptOverviewPdfUrl, scriptResourcesPdfUrl} = this.props;
+    const {
+      scriptOverviewPdfUrl,
+      scriptResourcesPdfUrl,
+      publishedState
+    } = this.props;
+
+    const showOverviewPDFOption =
+      publishedState !== PublishedState.pilot &&
+      publishedState !== PublishedState.in_development;
+
     const options = [];
-    if (scriptOverviewPdfUrl) {
+    if (scriptOverviewPdfUrl && showOverviewPDFOption) {
       options.push({
         key: 'lessonPlans',
         name: i18n.printLessonPlans(),
@@ -115,8 +124,7 @@ class UnitOverviewTopRow extends React.Component {
       showCalendar,
       unitCalendarLessons,
       weeklyInstructionalMinutes,
-      isMigrated,
-      publishedState
+      isMigrated
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -126,10 +134,6 @@ class UnitOverviewTopRow extends React.Component {
     const buttonMarginStyle = isRtl
       ? styles.buttonMarginRTL
       : styles.buttonMarginLTR;
-
-    const showPDFButton =
-      publishedState !== PublishedState.pilot &&
-      publishedState !== PublishedState.in_development;
 
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
@@ -174,28 +178,26 @@ class UnitOverviewTopRow extends React.Component {
                 useMigratedResources={isMigrated}
               />
             )}
-          {showPDFButton &&
-            pdfDropdownOptions.length > 0 &&
-            viewAs === ViewType.Teacher && (
-              <div style={{marginRight: 5}}>
-                <DropdownButton
-                  text={i18n.printingOptions()}
-                  color={Button.ButtonColor.blue}
-                >
-                  {pdfDropdownOptions.map(option => (
-                    <a
-                      key={option.key}
-                      href={option.url}
-                      onClick={e =>
-                        this.recordAndNavigateToPdf(e, option.key, option.url)
-                      }
-                    >
-                      {option.name}
-                    </a>
-                  ))}
-                </DropdownButton>
-              </div>
-            )}
+          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Teacher && (
+            <div style={{marginRight: 5}}>
+              <DropdownButton
+                text={i18n.printingOptions()}
+                color={Button.ButtonColor.blue}
+              >
+                {pdfDropdownOptions.map(option => (
+                  <a
+                    key={option.key}
+                    href={option.url}
+                    onClick={e =>
+                      this.recordAndNavigateToPdf(e, option.key, option.url)
+                    }
+                  >
+                    {option.name}
+                  </a>
+                ))}
+              </DropdownButton>
+            </div>
+          )}
           {showCalendar && viewAs === ViewType.Teacher && (
             <UnitCalendarButton
               lessons={unitCalendarLessons}
