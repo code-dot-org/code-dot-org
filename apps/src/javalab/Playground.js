@@ -85,12 +85,18 @@ export default class Playground {
   }
 
   reset() {
+    // console.log('in reset');
     this.getAudioElement().src = '';
     const playground = this.getPlaygroundElement();
     while (playground.lastElementChild) {
       playground.removeChild(playground.lastElementChild);
     }
-    this.isInClickEvent = false;
+    this.loadEvents = 0;
+    this.inClickEvent = false;
+    this.runStarted = false;
+    this.loggedInitialLoad = false;
+    this.images = {};
+    this.imagesData = {};
   }
 
   getPlaygroundElement() {
@@ -106,6 +112,13 @@ export default class Playground {
   }
 
   onLoad() {
+    // console.log(
+    //   `in onLoad, loadEvents is ${this.loadEvents}, inClickEvent is ${
+    //     this.inClickEvent
+    //   }, runStarted is ${this.runStarted}, loggedInitialLoad is ${
+    //     this.loggedInitialLoad
+    //   }`
+    // );
     if (this.loadEvents === 0 && !this.inClickEvent && this.runStarted) {
       if (!this.loggedInitialLoad) {
         calculator.onUpdateReceived();
