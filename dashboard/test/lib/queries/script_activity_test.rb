@@ -24,7 +24,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal [a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_scripts(@user)
     assert_equal a.script, Queries::ScriptActivity.primary_script(@user)
 
-    unit_group = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.stable
+    unit_group = create :unit_group, :with_course_version, published_state: SharedConstants::PUBLISHED_STATE.stable
     course_script = create :script, published_state: nil
     create :unit_group_unit, unit_group: unit_group, script: course_script, position: 1
     course_script.reload

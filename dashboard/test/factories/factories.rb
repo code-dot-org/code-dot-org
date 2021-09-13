@@ -34,7 +34,7 @@ FactoryGirl.define do
     published_state "beta"
 
     trait :with_course_version do
-      sequence(:family_name) {|f| "family-#{f}"}
+      sequence(:family_name) {|f| "course-family-#{f}"}
       sequence(:version_year) {|y| "202#{y - 1}"}
       after(:create) do |ug|
         CourseOffering.add_course_offering(ug)
@@ -757,7 +757,7 @@ FactoryGirl.define do
     end
 
     factory :standalone_unit do
-      sequence(:family_name) {|f| "family-#{f}"}
+      sequence(:family_name) {|f| "unit-family-#{f}"}
       sequence(:version_year) {|y| "202#{y - 1}"}
       is_course true
       after(:create) do |script|
@@ -976,7 +976,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script {create :script, published_state: SharedConstants::PUBLISHED_STATE.stable}
+    script {create :standalone_unit, published_state: SharedConstants::PUBLISHED_STATE.stable}
   end
 
   factory :user_school_info do
