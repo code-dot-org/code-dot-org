@@ -8,7 +8,7 @@
  */
 
 // make sure Blockly is loaded
-require('./frame')();
+require('./setupBlocklyGlobal')();
 var context = require.context(
   '../../build/package/js/en_us/',
   false,

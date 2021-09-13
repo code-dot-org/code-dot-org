@@ -4,7 +4,7 @@
  * space as global.Blockly.
  */
 
-function setGlobals() {
+export default function setBlocklyGlobal() {
   // Initialize browser environment.
   document.body.innerHTML = '<div id="codeApp"><div id="app"></div></div>';
   // locale file requires Blockly as a global
@@ -18,4 +18,3 @@ function setGlobals() {
     console.log(err);
   }
 }
-module.exports = setGlobals;
