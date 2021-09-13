@@ -3,6 +3,7 @@ import {
   assets as assetsApi,
   starterAssets as starterAssetsApi
 } from '@cdo/apps/clientApi';
+import calculator from './PlaygroundLatencyCalculator';
 
 export default class Playground {
   constructor(onOutputMessage, onNewlineMessage, onInputMessage, levelName) {
@@ -18,6 +19,10 @@ export default class Playground {
       this.onStarterAssetsReceived,
       () => {}
     );
+    this.loadEvents = 0;
+    this.inClickEvent = false;
+    this.runStarted = false;
+    this.seenFirstEvent = false;
   }
 
   onStarterAssetsReceived = result => {
@@ -28,12 +33,27 @@ export default class Playground {
   };
 
   handleSignal(data) {
+    const updateEvents = [
+      PlaygroundSignalType.ADD_ITEM,
+      PlaygroundSignalType.ADD_CLICKABLE_ITEM,
+      PlaygroundSignalType.CHANGED_ITEM,
+      PlaygroundSignalType.PLAY_SOUND
+    ];
+    if (updateEvents.includes(data.value)) {
+      this.loadEvents++;
+      if (!this.seenFirstEvent) {
+        this.seenFirstEvent = true;
+        calculator.onUpdateReceived();
+      }
+    }
     switch (data.value) {
       case PlaygroundSignalType.ADD_ITEM: {
+        this.loadEvents++;
         this.generateNewItem(data.detail);
         break;
       }
       case PlaygroundSignalType.ADD_CLICKABLE_ITEM: {
+        this.loadEvents++;
         this.generateNewClickableItem(data.detail);
         break;
       }
@@ -43,16 +63,33 @@ export default class Playground {
         break;
       }
       case PlaygroundSignalType.CHANGED_ITEM: {
+        this.loadEvents++;
         this.changeImage(data.detail);
         break;
       }
       case PlaygroundSignalType.PLAY_SOUND: {
+        this.loadEvents++;
         this.playSound(data.detail);
+        break;
+      }
+      case PlaygroundSignalType.RUN: {
+        this.runStarted = true;
+        break;
+      }
+      case PlaygroundSignalType.STARTED_CLICK_EVENT: {
+        this.inClickEvent = true;
+        calculator.onUpdateReceived();
+        break;
+      }
+      case PlaygroundSignalType.FINISHED_CLICK_EVENT: {
+        this.inClickEvent = false;
         break;
       }
       default:
         break;
     }
+
+    calculator.onUpdateReceived();
   }
 
   reset() {
@@ -61,6 +98,7 @@ export default class Playground {
     while (playground.lastElementChild) {
       playground.removeChild(playground.lastElementChild);
     }
+    this.isInClickEvent = false;
   }
 
   getPlaygroundElement() {
@@ -75,6 +113,12 @@ export default class Playground {
     // for now do nothing here
   }
 
+  onLoad() {
+    if (this.loadEvents === 0 && !this.inClickEvent && this.runStarted) {
+      calculator.onUpdateComplete();
+    }
+  }
+
   removeItem(imageData) {
     const image = document.getElementById(imageData.id);
     image.remove();
@@ -83,6 +127,10 @@ export default class Playground {
   playSound(soundData) {
     const soundUrl = this.getUrl(soundData.filename);
     this.getAudioElement().src = soundUrl;
+    this.getAudioElement().oncanplaythrough = () => {
+      this.loadEvents--;
+      this.onLoad();
+    };
   }
 
   generateNewItem(imageData) {
@@ -111,6 +159,10 @@ export default class Playground {
     const image = document.createElement('img');
     this.styleImage(image, imageData);
     image.style.zIndex = imageData.index;
+    image.onload = () => {
+      this.loadEvents--;
+      this.onLoad();
+    };
     return image;
   }
 
@@ -128,7 +180,6 @@ export default class Playground {
   }
 
   handleImageClick(imageId) {
-    console.log('in handle image click');
     this.onInputMessage('PLAYGROUND', imageId);
   }
 
