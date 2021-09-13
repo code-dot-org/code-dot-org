@@ -26070,3 +26070,55 @@ en:
         tesstest921:
           lessons: {}
           lesson_groups: {}
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-animals
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-emoji
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-retro
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-batman
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

@@ -1,18 +1,17 @@
 {
   "script": {
-    "name": "hello-world-food",
+    "name": "hello-world-batman",
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
-      "tts": true
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-13 21:06:44 UTC",
+    "serialized_at": "2021-09-13 21:17:05 UTC",
     "published_state": "beta",
     "seeding_key": {
-      "script.name": "hello-world-food"
+      "script.name": "hello-world-batman"
     }
   },
   "lesson_groups": [
@@ -24,7 +23,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "",
-        "script.name": "hello-world-food"
+        "script.name": "hello-world-batman"
       }
     }
   ],
@@ -41,34 +40,33 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food"
+        "script.name": "hello-world-batman"
       }
     }
   ],
   "lesson_activities": [
     {
-      "key": "726b38ad-28ae-43e1-b7d8-08d13ccda1d3",
+      "key": "72b82ee0-13cc-4ec5-a064-9662055bca33",
       "position": 1,
       "properties": {
-        "name": "Main Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "726b38ad-28ae-43e1-b7d8-08d13ccda1d3",
+        "lesson_activity.key": "72b82ee0-13cc-4ec5-a064-9662055bca33",
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food"
+        "script.name": "hello-world-batman"
       }
     }
   ],
   "activity_sections": [
     {
-      "key": "1634ab74-919f-40fb-b2dc-8cd5701655a2",
+      "key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2",
-        "lesson_activity.key": "726b38ad-28ae-43e1-b7d8-08d13ccda1d3"
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5",
+        "lesson_activity.key": "72b82ee0-13cc-4ec5-a064-9662055bca33"
       }
     }
   ],
@@ -79,22 +77,19 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_say"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_say"
+          "helloworld_batman_say"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       },
       "level_keys": [
-        "helloworld_food_say"
+        "helloworld_batman_say"
       ]
     },
     {
@@ -103,22 +98,19 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_location"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_location"
+          "helloworld_batman_location"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       },
       "level_keys": [
-        "helloworld_food_location"
+        "helloworld_batman_location"
       ]
     },
     {
@@ -127,22 +119,19 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_multi"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_multi"
+          "helloworld_batman_multi"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       },
       "level_keys": [
-        "helloworld_food_multi"
+        "helloworld_batman_multi"
       ]
     },
     {
@@ -151,22 +140,19 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_click"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_click"
+          "helloworld_batman_click"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       },
       "level_keys": [
-        "helloworld_food_click"
+        "helloworld_batman_click"
       ]
     },
     {
@@ -175,22 +161,19 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_events"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_events"
+          "helloworld_batman_events"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       },
       "level_keys": [
-        "helloworld_food_events"
+        "helloworld_batman_events"
       ]
     },
     {
@@ -199,22 +182,19 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_backgrounds"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_backgrounds"
+          "helloworld_batman_backgrounds"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       },
       "level_keys": [
-        "helloworld_food_backgrounds"
+        "helloworld_batman_backgrounds"
       ]
     },
     {
@@ -223,22 +203,19 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_costumes"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_costumes"
+          "helloworld_batman_costumes"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       },
       "level_keys": [
-        "helloworld_food_costumes"
+        "helloworld_batman_costumes"
       ]
     },
     {
@@ -247,22 +224,19 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_sizes"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_sizes"
+          "helloworld_batman_sizes"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       },
       "level_keys": [
-        "helloworld_food_sizes"
+        "helloworld_batman_sizes"
       ]
     },
     {
@@ -271,22 +245,19 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_behaviors"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_behaviors"
+          "helloworld_batman_behaviors"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       },
       "level_keys": [
-        "helloworld_food_behaviors"
+        "helloworld_batman_behaviors"
       ]
     },
     {
@@ -295,22 +266,19 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_sounds"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_sounds"
+          "helloworld_batman_sounds"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       },
       "level_keys": [
-        "helloworld_food_sounds"
+        "helloworld_batman_sounds"
       ]
     },
     {
@@ -319,156 +287,153 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "helloworld_food_freeplay"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_freeplay"
+          "helloworld_batman_freeplay"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       },
       "level_keys": [
-        "helloworld_food_freeplay"
+        "helloworld_batman_freeplay"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "helloworld_food_say",
+        "level.key": "helloworld_batman_say",
         "script_level.level_keys": [
-          "helloworld_food_say"
+          "helloworld_batman_say"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_location",
+        "level.key": "helloworld_batman_location",
         "script_level.level_keys": [
-          "helloworld_food_location"
+          "helloworld_batman_location"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_multi",
+        "level.key": "helloworld_batman_multi",
         "script_level.level_keys": [
-          "helloworld_food_multi"
+          "helloworld_batman_multi"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_click",
+        "level.key": "helloworld_batman_click",
         "script_level.level_keys": [
-          "helloworld_food_click"
+          "helloworld_batman_click"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_events",
+        "level.key": "helloworld_batman_events",
         "script_level.level_keys": [
-          "helloworld_food_events"
+          "helloworld_batman_events"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_backgrounds",
+        "level.key": "helloworld_batman_backgrounds",
         "script_level.level_keys": [
-          "helloworld_food_backgrounds"
+          "helloworld_batman_backgrounds"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_costumes",
+        "level.key": "helloworld_batman_costumes",
         "script_level.level_keys": [
-          "helloworld_food_costumes"
+          "helloworld_batman_costumes"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_sizes",
+        "level.key": "helloworld_batman_sizes",
         "script_level.level_keys": [
-          "helloworld_food_sizes"
+          "helloworld_batman_sizes"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_behaviors",
+        "level.key": "helloworld_batman_behaviors",
         "script_level.level_keys": [
-          "helloworld_food_behaviors"
+          "helloworld_batman_behaviors"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_sounds",
+        "level.key": "helloworld_batman_sounds",
         "script_level.level_keys": [
-          "helloworld_food_sounds"
+          "helloworld_batman_sounds"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_freeplay",
+        "level.key": "helloworld_batman_freeplay",
         "script_level.level_keys": [
-          "helloworld_food_freeplay"
+          "helloworld_batman_freeplay"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "hello-world-food",
-        "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
+        "script.name": "hello-world-batman",
+        "activity_section.key": "92380b8b-dd70-43a5-9670-1cb6c216c1b5"
       }
     }
   ],
