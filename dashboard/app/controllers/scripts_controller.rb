@@ -118,7 +118,7 @@ class ScriptsController < ApplicationController
   end
 
   def update
-    if @script.is_migrated && params[:last_updated_at] != @script.updated_at.to_s
+    if @script.is_migrated && params[:last_updated_at] && params[:last_updated_at] != @script.updated_at.to_s
       msg = "Could not update the unit because it has been modified more recently outside of this editor. Please save a copy your work, reload the page, and try saving again."
       raise msg
     end
