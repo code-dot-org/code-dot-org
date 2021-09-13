@@ -22,7 +22,7 @@ export default class Playground {
     this.loadEvents = 0;
     this.inClickEvent = false;
     this.runStarted = false;
-    this.seenFirstEvent = false;
+    this.loggedInitialLoad = false;
   }
 
   onStarterAssetsReceived = result => {
@@ -65,8 +65,6 @@ export default class Playground {
         break;
       }
       case PlaygroundSignalType.RUN: {
-        console.log('run started');
-        calculator.onUpdateReceived();
         this.runStarted = true;
         this.onLoad();
         break;
@@ -84,8 +82,6 @@ export default class Playground {
       default:
         break;
     }
-
-    calculator.onUpdateReceived();
   }
 
   reset() {
@@ -111,8 +107,12 @@ export default class Playground {
 
   onLoad() {
     if (this.loadEvents === 0 && !this.inClickEvent && this.runStarted) {
-      console.log('calling onUpdateComplete');
-      calculator.onUpdateComplete();
+      if (!this.loggedInitialLoad) {
+        calculator.onUpdateReceived();
+        this.loggedInitialLoad = true;
+      } else {
+        calculator.onUpdateComplete();
+      }
     }
   }
 
