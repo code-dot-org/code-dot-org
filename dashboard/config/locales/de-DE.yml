@@ -229,6 +229,10 @@ de:
     email_preference_yes: Ja
     email_preference_no: Nein
     email_preference_required: Sie müssen eine bevorzugte Emailadresse angeben.
+    share_teacher_email_reg_partner_preference_yes: Ja
+    share_teacher_email_reg_partner_preference_no: Nein
+    share_teacher_email_reg_partner_preference_required: Sie müssen eine bevorzugte
+      Emailadresse angeben.
     parent_account_checkbox: Ich bin ein(e) Elternteil/Erziehungsberechtige(r) und
       melde mich im Namen meines Kindes an
     parent_account_email_progress_permission: Dürfen wir Sie gelegentlich per E-Mail

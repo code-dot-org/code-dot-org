@@ -1334,6 +1334,15 @@
           "wobbling": "хитання",
           "moving west and looping": "рух на захід і циклічно",
           "moving east and looping": "рух на схід і циклічно"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "видужання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving left and right": "рух ліворуч та праворуч",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками"
         }
       }
     }

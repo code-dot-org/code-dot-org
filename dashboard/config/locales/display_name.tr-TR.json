@@ -567,10 +567,10 @@
         "CourseF_outbreak2": "Virüs Simülasyonu",
         "CourseF_outbreak3": "Virüs Simülasyonu",
         "CourseF_outbreak4": "Simülasyonunuzu Değiştirin",
-        "CourseF_outbreak5": "Kurtarma",
-        "CourseF_outbreak6": "Rastgele Olasılık",
-        "CourseF_outbreak7": "Bağışıklık ve Aşılar",
-        "CourseF_outbreak8": "Mesaj Paylaşın",
+        "CourseF_outbreak5": "Simülasyonunuzu Değiştirin",
+        "CourseF_outbreak6": "İyileşme",
+        "CourseF_outbreak7": "Rastgele Olasılık",
+        "CourseF_outbreak8": "Bağışıklık ve Aşılar",
         "CourseF_video_introSpriteLab_2021": "Bu Hareketli Nesne Laboratuvarıdır. ",
         "MC_HOC_2017_01_RETRY_2021": "Çiftlik evi",
         "MC_HOC_2017_02_Cole_2021": "Çiftlik",
@@ -595,7 +595,8 @@
         "courseF_sprites_freeplay_aquatic": "Su",
         "courseF_sprites_properties": "Nesne özellikleri",
         "ramp_artist_loops4_2021": "Yıldız",
-        "scrat_loops_C-F_video_2021": "Buz Devri Videosundaki Döngüler"
+        "scrat_loops_C-F_video_2021": "Buz Devri Videosundaki Döngüler",
+        "international_outbreak_freeplay": "Mesaj Paylaşın"
       }
     }
   }

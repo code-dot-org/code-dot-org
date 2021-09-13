@@ -1,10 +1,18 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "back-to-school-2021"
+    "/home": "csjourneys"
   },
 
   "banners": {
+    "csjourneys": {
+      "image": "/images/csjourneys/teacher-banner.png",
+      "title": "Explore the wide world of computer science",
+      "body": "Bring CS to life with Code.org’s new career inspiration and exploration program! Sign up for live, engaging classroom experiences like virtual field trips and class chats, or let students explore with short videos and other resources.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/csjourneys",
+      "buttonId": "csjourneys-dashboard"
+    },
     "class-schedule-survey": {
       "image": "/images/class-schedule-survey.png",
       "title": "Fall 2021 Class Schedule Survey",

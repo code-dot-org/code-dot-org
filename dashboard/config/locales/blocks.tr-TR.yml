@@ -1057,6 +1057,11 @@ tr:
         text: konumu {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': patlama
+            '"rain"': yağmur
       gamelab_makeNewSpriteAnon:
         text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
@@ -1091,6 +1096,12 @@ tr:
         text: yukarı ve aşağı kontrol sağla
       gamelab_playSound:
         text: playSound {SOUND}
+      gamelab_playSoundOptions:
+        text: playSound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": Tuş
+            "'sound://category_collect/clicky_crunch.mp3'": çatlak
       gamelab_pointInDirection:
         text: point {SPRITE} {DIRECTION}
         options:
@@ -1481,6 +1492,11 @@ tr:
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
+      Mikelab_setupOutbreak:
+        text: |-
+          salgın düzeni
+          nüfus:{SPRITE2N}
+          {TOGGLE}virüs
       Mikelab_setupSim:
         text: |-
           ile kurulum simülasyonu
@@ -1554,20 +1570,71 @@ tr:
         text: x {SPRITE} koordinatı
       Mikelab_yLocationOf:
         text: y koordinatı {SPRITE}
+      Outbreak_beginCongregating:
+        text: canavarlar toplanmaya başlar
+      Outbreak_beginQuarantining:
+        text: canavarlar hastalandığında karantinaya girer
+      Outbreak_beginSocialDistancing:
+        text: canavarlar sosyal mesafeye uymaya başlar
+      Outbreak_beginWandering:
+        text: canavarlar dolaşmaya başlar
+      Outbreak_beginWearingMasks:
+        text: canavarlar maske takmaya başlar
+      Outbreak_layoutBorder:
+        text: canavarları bir sınıra yerleştir
+      Outbreak_layoutClusters:
+        text: canavarları {NUM} küme olarak yerleştir
+      Outbreak_layoutGrid:
+        text: canavarları ızgara şeklinde yerleştir
+      Outbreak_layoutRandom:
+        text: canavarları rastgele yerleştir
+      Outbreak_stopMoving:
+        text: canavarlar hareket etmeyi bırakıyor
+      PoemBot_playSound:
+        text: playSound {SOUND}
       PoemBot_setBackgroundEffect:
-        text: arka plan efektini {BG_EFFECT} [PALETTE][1] olarak ayarla
+        text: arka plan efektini {EFFECT} {PALETTE} olarak ayarla
         options:
-          BG_EFFECT:
-            '"solid"': katı
-            '"rainbow"': gökkuşağı
+          EFFECT:
+            '"colors"': Renkler
+            '"squiggles"': Karalamalar
+            '"space"': Uzay
+            '"stars"': Yıldızlar
+            '"ripples"': Dalgaları
+          PALETTE:
+            '"rainbow"': Gökkuşağı
       PoemBot_setForegroundEffect:
-        text: ön plan efektini {FG_EFFECT} olarak ayarla
+        text: ön plan efektini {EFFECT} olarak ayarla
         options:
-          FG_EFFECT:
-            '"rain"': yağmur
-            '"bubbles"': baloncuklar
-      PoemBot_stringConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+          EFFECT:
+            '"rain"': Yağmur
+            '"bubbles"': Baloncuklar
+            '"hearts"': Renkli Kalpler
+            '"confetti"': Konfeti
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: fluttering
+            growing: büyüme
+            jittering: kararsızlık
+            shrinking: küçülme
+            spinning_left: sola dönme
+            spinning_right: sağa dönme
+            swimming_left_and_right: yüzme
+            wandering: gezinme
+            wobbling: sallanma
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: fluttering
+            growing: büyüme
+            jittering: kararsızlık
+            shrinking: küçülme
+            spinning_left: sola dönme
+            spinning_right: sağa dönme
+            swimming_left_and_right: yüzme
+            wandering: gezinme
+            wobbling: sallanma
       PoemBot_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:

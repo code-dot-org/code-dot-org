@@ -18117,6 +18117,14 @@ ko:
               display_name: '심화: 과정 E와 F'
             Introduction:
               display_name: 소개
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: 레슨 3
+            Lesson 4:
+              display_name: 레슨 4
+            Lesson 5:
+              display_name: 레슨 5
         pl-playground:
           lessons:
             Module 1:
@@ -18261,10 +18269,10 @@ ko:
               name: 모듈 2
             Module 3:
               key: 모듈 3
-              name: '모듈 3: 단원 5, 앱 내 목록 사용과 교실 내 CS 스킬 인식'
+              name: 모듈 3
             Module 4:
               key: 모듈 4
-              name: '모듈 4: 단원 5 및 앱 내 데이터세트 사용'
+              name: 모듈 4
             Module 5:
               key: 모듈 5
               name: '모듈 5: 단원 7 및 매개변수와 반환이 있는 함수 이해'
@@ -18345,6 +18353,12 @@ ko:
             lesson-1:
               name: AI 랩
           title: AI 랩
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1 단계
+            lessonGroup-3:
+              display_name: 2 단계
         dlp21-csp-mod1:
           title: CS 원리 심화 학습 모듈 1
         dlp21-csd:
@@ -18424,3 +18438,11 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+        csdu6-playground:
+          lessons:
+            lesson-9:
+              name: 컬러 LED
+            lesson-13:
+              name: 가속도 센서
+            lesson-19:
+              name: 프로젝트

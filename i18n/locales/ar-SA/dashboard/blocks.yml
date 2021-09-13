@@ -1124,6 +1124,11 @@ ar:
         text: موقع {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': تدفق
+            '"rain"': مطر
       gamelab_makeNewSpriteAnon:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       gamelab_mirrorSprite:
@@ -1152,6 +1157,12 @@ ar:
         text: النقر {SPRITE}
       gamelab_playSound:
         text: بلاي ساوند {SOUND}
+      gamelab_playSoundOptions:
+        text: بلاي ساوند {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": زر
+            "'sound://category_collect/clicky_crunch.mp3'": سحق
       gamelab_pointInDirection:
         text: نقطه {SPRITE} {DIRECTION}
         options:
@@ -1605,20 +1616,48 @@ ar:
         text: x إحداثيات {SPRITE}
       Mikelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
+      PoemBot_playSound:
+        text: بلاي ساوند {SOUND}
       PoemBot_setBackgroundEffect:
         text: |-
           ضبط تأثيرات الخلفية
-          {BG_EFFECT} [PALETTE][1]
+          {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': صلب
-            '"rainbow"': قوس قزح
+          EFFECT:
+            '"colors"': ألوان
+            '"squiggles"': سكويغلز
+            '"space"': الفضاء
+            '"stars"': نجوم
+            '"ripples"': تموجات
+          PALETTE:
+            '"rainbow"': ألوان
       PoemBot_setForegroundEffect:
-        text: عيّن التأثيرات الأمامية {FG_EFFECT}
+        text: عيّن التأثيرات الأمامية {EFFECT}
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': مطر
             '"bubbles"': فقاعات
+            '"hearts"': قلوب ملونة
+            '"confetti"': قصاصات من الورق
+            '"starburst"': النجمي
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: النمو
+            jittering: الاهتزاز
+            shrinking: الانقباض
+            spinning_left: الدوران ناحية اليسار
+            spinning_right: الدوران ناحية اليمين
+            wandering: التحرك
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: النمو
+            jittering: الاهتزاز
+            shrinking: الانقباض
+            spinning_left: الدوران ناحية اليسار
+            spinning_right: الدوران ناحية اليمين
+            wandering: التحرك
       RyanLab_moveForward:
         text: تحريك إلى الأمام
       RyanLab_turnLeft:

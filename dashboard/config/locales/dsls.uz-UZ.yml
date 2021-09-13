@@ -5229,6 +5229,53 @@ uz-UZ:
           Karta o'yinini o'ynang va "Agar men qizil karta olsam, men ball olaman" va "agar men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
       CourseF_outbreak_story:
         content1: tafsilotlar bu yerda
+        markdown: |
+          # Kasallik: o'zingizning simulyatsiyangizni kodlash
+
+          ## Monster Town-ga xush kelibsiz!
+          Monster Town baxtli va sog'lom joy edi. Monster Town monstrlari do'stlarinikiga borish va mehmon bo'lishni yaxshi ko'rishardi.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Bir kuni mosnstrlardan biri kasal bo'lib qoldi. U ** virusni ** ushladi! Virus - sizni kasal qilib qo'yadigan mayda jonzot. Boshqa monstrlar juda xavotirlanmadi. Ular do'stlarini ziyorat qilishda davom etishdi.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Ko'p o'tmay, yana ikkita monstr kasal bo'lib qoldi. Xuddi shu virus bilan! Aftidan ular virusni do'stidan yuqtirib olishgan.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Virus asta-sekin yaqin atrofdagi boshqa monstrlarga tarqaldi. Sog'lom monstrlarning barchasi kasal bo'lib qolishidan xavotirlana boshladi. Kasal monstrlar virusni boshqalarga yuqtirishdan xavotirlana boshladi.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Tarqatishni to'xtatish
+          Yaxshiyamki, virusni o'rgangandan so'ng, Monster Town-ning qo'shnilari muhim kashfiyot qilishdi. Agar ular og'ziga niqob kiysalar, virusni yuqtirish ehtimoli kamligini angladilar. Yuz maskalari bilan kasallangan monstrlar sog'lom monstrlarga virusni berish ehtimoli kamroq edi.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Keyin nima bo'ladi?
+
+          Bugun siz Monster Town-da virusning ** simulyatsiyasini ** yaratish va boshqarish uchun kod yozasiz. Simulyatsiya - bu jarayon yoki tizimning kompyuter modeli. Monster Town qo'shnilari bilan nima sodir bo'lishi haqida kod yozishni va bashorat qilishni o'rganing.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * * Virus qanchalik tez tarqaladi? *
+
+          * * Hamma kasal bo'lib qoladimi? *
+
+          * * Yuz maskalari qanday yordam beradi? *
+
+
+          Tugatgandan so'ng, simulyatsiyangizni boshqalar bilan ulashing. Virus shaharga kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida xabaringizni ulashing.
       CourseF_outbreak_story2:
         content1: tafsilotlar bu yerda
         markdown: |-
@@ -6849,3 +6896,12 @@ uz-UZ:
         questions:
         - text: Ushbu kodni diqqat bilan ko'rib chiqing. Sizningcha, dastur ishga
             tushganda nima bo'ladi?
+      Unit 1 Lesson 1 Overview:
+        markdown: |-
+          # Umumiy ma'lumot
+
+          Sinf alyumin folga qayiqlarini loyihalash uchun guruh bo'lib ishlaydi, qayiqlar iloji boricha ko'p tanga ko'tarishi kerak. Dars oxirida guruhlar mashg'ulotlar davomida o'z tajribalari haqida fikr yuritadilar va dars davomida muammolarni hal qilish boshqa usullari bilan bog'laydilar.
+
+          ## Resurslar
+
+          * [Alumin qayiqlar](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Yo'riqnoma ( [MS Word] fayl ko'rinishida nusxa olish (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))

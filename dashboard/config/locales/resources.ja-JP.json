@@ -3,16 +3,20 @@
     "data": {
       "resources": {
         "introducing_sprite_lab/coursef/2021": {
-          "name": "スプライトラボの紹介"
+          "name": "スプライトラボの紹介",
+          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
         },
         "exploring_apps/coursef/2021": {
-          "name": "アプリを探索"
+          "name": "アプリを探索",
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "name": "スプライトラボの紹介"
+          "name": "スプライトラボの紹介",
+          "url": "https://youtu.be/yd-9xZ275dM"
         },
         "exploring_apps_1/coursef/2021": {
-          "name": "アプリを探索"
+          "name": "アプリを探索",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
           "name": "スプライトを作る"
@@ -22,6 +26,10 @@
         },
         "sprites_in_action/coursef/2021": {
           "name": "実行中のスプライト"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "name": "オンラインでたちどまって考える",
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Forループを楽しむ"
@@ -80,8 +88,20 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "動かせ！動かせ！"
         },
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "フィーリングフェイス絵文字",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "name": "フィーリングフェイス",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
         "pair-programming-vid/courseb/2021": {
           "name": "ペアプログラミング"
+        },
+        "feeling_faces_-_emotion_image/courseb/2021": {
+          "name": "フィーリングフェイス - 絵文字",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "スティーヴィーと大きなプロジェクト"
@@ -100,6 +120,10 @@
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "ルーピーをゲット"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "name": "オンラインでたちどまって考える",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "ビッグイベント"
@@ -122,11 +146,46 @@
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
           "name": " 私のオンラインネイバーフッド"
         },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "オンラインネイバーフッドの安全：たちどまって考える",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "ペアプログラミング"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "ハッピーマップ"
+        },
+        "feeling_faces_-_emotion_image/coursea/2021": {
+          "name": "フィーリングフェイス - 絵文字"
+        },
+        "feeling_faces_emotion_image/coursea/2021": {
+          "name": "フィーリングフェイス絵文字",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "フィーリングフェイス - 絵文字",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "フィーリングフェイス絵文字",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "フィーリングフェイス",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "フィーリングフェイス絵文字",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "name": "オンラインでたちどまって考える",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "フィーリングフェイス絵文字",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "ビッグイベント"
@@ -137,6 +196,14 @@
         "assessment-answer-big-event/coursea/2021": {
           "name": "ビッグイベント"
         },
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "フィーリングフェイス - 絵文字",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "フィーリングフェイス - 絵文字",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
         "implementation_guide/coursea/2021": {
           "name": "実装ガイド"
         },
@@ -145,6 +212,14 @@
         },
         "teacher_forum_1/coursea/2021": {
           "name": "先生用フォーラム"
+        },
+        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
+          "name": "ネット上の意地悪への4つの対策：レッスンスライド",
+          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
+        },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "name": "ネット上での意地悪を食い止める：ネット上の意地悪への4つの対策",
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "私のロボットの友だち"
@@ -164,6 +239,9 @@
         "pair-programming-vid/coursec/2021": {
           "name": "ペアプログラミング"
         },
+        "feeling_faces_emotion_image/coursec/2021": {
+          "name": "フィーリングフェイス絵文字"
+        },
         "unplugged-video-big-event/coursec/2021": {
           "name": "ビッグイベント"
         },
@@ -172,6 +250,10 @@
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "ビッグイベント"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "name": "オンラインでたちどまって考える",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "バイナリ ブレスレット"
@@ -236,6 +318,18 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "プログラミングをリレーする"
         },
+        "pause_and_think_online/coursed/2021": {
+          "name": "オンラインでたちどまって考える",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "フィーリングフェイス",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "name": "オンラインでたちどまって考える",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "カードと条件"
         },
@@ -275,6 +369,10 @@
         "sprites_in_action/express/2021": {
           "name": "実行中のスプライト"
         },
+        "pause_and_think_online/express/2021": {
+          "name": "オンラインでたちどまって考える",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
         "variables_video/express/2021": {
           "name": "変数（へんすう）"
         },
@@ -284,6 +382,14 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "ペアプログラミング"
         },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "フィーリングフェイス",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "オンラインでたちどまって考える",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "先生用フォーラム"
         },
@@ -292,6 +398,10 @@
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
           "name": " スーパー デジタル市民"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "オンラインでたちどまって考える",
+          "url": "https://youtu.be/X_duZ-1LApg"
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "アクセシビリティのための設計"

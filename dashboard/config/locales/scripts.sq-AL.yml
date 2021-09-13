@@ -2960,6 +2960,14 @@ sq:
               display_name: Hyrja
             Introduction:
               display_name: Hyrja
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lekcioni 3
+            Lesson 4:
+              display_name: Lekcioni 4
+            Lesson 5:
+              display_name: Lekcioni 5
         kodea-pd-2021:
           lessons:
             Next Steps:
@@ -2989,6 +2997,12 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Faza 1
+            lessonGroup-3:
+              display_name: Faza 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

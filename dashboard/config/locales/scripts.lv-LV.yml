@@ -2387,6 +2387,12 @@ lv:
               display_name: 4.  nodaļa
             lessonGroup-7:
               display_name: 5.  nodaļa
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Līmenis 1
+            lessonGroup-3:
+              display_name: Līmenis 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

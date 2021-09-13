@@ -2227,7 +2227,7 @@
           ]
         },
         "af6b778e-d5bf-4e72-bc11-ac8f839bf656": {
-          "progression_name": "Vídeo: Presentación del Laboratorio de Sprites"
+          "progression_name": "Video: Introducción al Sprite Lab"
         },
         "cc4cf469-32ea-4a00-9080-7726f48f08c6": {
           "progression_name": "Predicción"
@@ -2236,7 +2236,7 @@
           "progression_name": "Desarrollo de habilidades"
         },
         "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb": {
-          "progression_name": "Vídeo: Cómo Hacer un Sprite"
+          "progression_name": "Video: Cómo crear un sprite"
         },
         "a8372901-5a6f-40c1-88ec-bf6c62c79c95": {
           "progression_name": "Práctica"
@@ -2267,7 +2267,7 @@
         },
         "60d05bd8-d452-4ff7-8d42-afc78df62133": {
           "description": "**Haz esto:** reproduce el video “Cómo crear un sprite”",
-          "progression_name": "Vídeo: Cómo Hacer un Sprite"
+          "progression_name": "Video: Cómo crear un sprite"
         },
         "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
           "description": "#### Desarrollo de habilidades y práctica (20 minutos)\n\n**Transición:** haz que los estudiantes vayan a su computadora e inicien sesión.\n\nEstas actividades son adecuadas para el aprendizaje independiente o la programación en pareja.\n\nLos estudiantes deben completar los niveles de desarrollo de habilidades y, en el tiempo restante, elegir entre las diversas actividades de práctica.",
@@ -2278,7 +2278,7 @@
         },
         "676dfae2-cb99-4395-a262-f61ed61a3d28": {
           "description": "#### Juego libre (10 minutos)\n\n**Transición:** los estudiantes ahora deben pasar al nivel final de la lección, donde podrán crear su propio proyecto.",
-          "progression_name": "Juego Libre: Hacer una Escena"
+          "progression_name": "Juego libre: crear una escena"
         },
         "a35138b5-f6fc-4fac-9a73-991bed07f6d1": {
           "name": "Reflexión",
@@ -2303,7 +2303,7 @@
         },
         "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
           "description": "#### Video: Sprites en acción (3 minutos)\n\n**Haz esto:** reproduce el video “Sprites en acción”",
-          "progression_name": "Vídeo: Sprites en Acción"
+          "progression_name": "Video: Sprites en acción"
         },
         "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
           "description": "#### Desarrollo de habilidades y práctica (20 minutos)\n\n**Transición:** haz que los estudiantes vayan a su computadora e inicien sesión. Estas actividades son adecuadas para el aprendizaje independiente o la programación en pareja.\n\nLos estudiantes deben completar los niveles de desarrollo de habilidades y, en el tiempo restante, elegir entre las diversas actividades de práctica.",
@@ -2314,7 +2314,7 @@
         },
         "482633ae-1c8c-4ca2-b44b-ba150352c610": {
           "description": "#### Juego libre (10 minutos)\n\n**Transición:** los estudiantes ahora deben pasar al nivel final de la lección, donde verán las mismas opciones de juego libre que en las lecciones anteriores. Anima a los estudiantes a agregar eventos a sus últimos proyectos o comenzar un nuevo proyecto.",
-          "progression_name": "Juego Libre: Hacer una Escena Interactiva"
+          "progression_name": "Juego libre: Crear una escena interactiva"
         },
         "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
           "name": "Reflexión",
@@ -3315,7 +3315,7 @@
           ]
         },
         "331e6451-5472-4491-bf96-d630d7f902a4": {
-          "progression_name": "Vídeo: Presentación del Laboratorio de Sprites"
+          "progression_name": "Video: Introducción al Sprite Lab"
         },
         "75de5d52-becb-4805-82d8-5be30d0dca7d": {
           "progression_name": "Predicción"
@@ -3324,7 +3324,7 @@
           "progression_name": "Desarrollo de habilidades"
         },
         "d344a21b-2267-48e7-9b27-b3fe923209e9": {
-          "progression_name": "Vídeo: Cómo Hacer un Sprite"
+          "progression_name": "Video: Cómo crear un sprite"
         },
         "30997374-8929-4152-b55b-94e459e3ee58": {
           "progression_name": "Práctica"
@@ -3348,7 +3348,7 @@
           "progression_name": "Predicción"
         },
         "1620d22b-10cf-4c91-bb52-cda64a75b666": {
-          "progression_name": "Vídeo: Sprites en Acción"
+          "progression_name": "Video: Sprites en acción"
         },
         "5661328f-256c-4f27-988b-ea102fde1cbd": {
           "progression_name": "Desarrollo de habilidades"

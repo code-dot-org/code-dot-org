@@ -1002,6 +1002,11 @@ ru:
         text: местоположение {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': взрыв
+            '"rain"': дождь
       gamelab_makeNewSpriteAnon:
         text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       gamelab_makeNumSprites:
@@ -1036,6 +1041,12 @@ ru:
         text: патрулирование вверх и вниз
       gamelab_playSound:
         text: playSound {SOUND}
+      gamelab_playSoundOptions:
+        text: playSound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": кнопка
+            "'sound://category_collect/clicky_crunch.mp3'": хруст
       gamelab_pointInDirection:
         text: точка {SPRITE} {DIRECTION}
         options:
@@ -1472,18 +1483,44 @@ ru:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
+      PoemBot_playSound:
+        text: playSound {SOUND}
       PoemBot_setBackgroundEffect:
-        text: задать фоновый эффект {BG_EFFECT} [PALETTE][1]
+        text: задать фоновый эффект {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': заливка
-            '"rainbow"': радуга
+          EFFECT:
+            '"colors"': Цвета
+            '"space"': Космос
+            '"stars"': Звезды
+            '"ripples"': Круги на воде
+          PALETTE:
+            '"rainbow"': Радуга
       PoemBot_setForegroundEffect:
-        text: задать эффект переднего плана {FG_EFFECT}
+        text: задать эффект переднего плана {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': дождь
-            '"bubbles"': пузыри
+          EFFECT:
+            '"rain"': Дождь
+            '"bubbles"': Пузыри
+            '"hearts"': Цветные сердечки
+            '"confetti"': Конфетти
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: увеличение
+            jittering: дрожание
+            shrinking: уменьшение
+            spinning_left: левостороннее вращение
+            spinning_right: правостороннее вращение
+            wandering: блуждание
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: увеличение
+            jittering: дрожание
+            shrinking: уменьшение
+            spinning_left: левостороннее вращение
+            spinning_right: правостороннее вращение
+            wandering: блуждание
       RyanLab_moveForward:
         text: двигаться вперед
       RyanLab_turnLeft:

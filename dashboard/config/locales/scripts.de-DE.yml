@@ -22997,6 +22997,7 @@ de:
                 zu werden und in Play Lab eine Geschichte zu erstellen!
             Safety in My Online Neighborhood:
               name: Sicherheit in meiner Online-Nachbarschaft
+              description_student: Lerne, wie du sicher online gehen kannst.
           student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit.
             Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des
             Kurses, die mit anderen geteilt werden kann.
@@ -26692,6 +26693,7 @@ de:
             Safety in My Online Neighborhood:
               key: Sicherheit in meiner Online-Nachbarschaft
               name: Sicherheit in meiner Online-Nachbarschaft
+              description_student: Lerne, wie du sicher online gehen kannst.
             Learn to Drag and Drop:
               key: Erlerne Drag und Drop
               name: Erlerne Drag und Drop
@@ -26798,6 +26800,10 @@ de:
                 zu werden und in Play Lab eine Geschichte zu erstellen!
             lesson-1:
               name: Projekt am Ende des Kurses
+              description_student: Erzähle eine Geschichte mit dem Künstler!
+              description_teacher: In dieser **Projektstunde** wenden die SchülerInnen
+                an, was sie über Sequenzierung und Schleifen mit dem Artist gelernt
+                haben.
           lesson_groups:
             csf_digcit:
               display_name: Digitalen Staatsbürgerschaft
@@ -29028,6 +29034,14 @@ de:
               display_name: 'Diving Deeper: Courses E and F'
             Introduction:
               display_name: Einführung
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lektion 3
+            Lesson 4:
+              display_name: Lektion 4
+            Lesson 5:
+              display_name: Lektion 5
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -29161,8 +29175,10 @@ de:
               name: Modul 2
             Module 3:
               key: Modul 3
+              name: Modul 3
             Module 4:
               key: Modul 4
+              name: Modul 4
             Module 5:
               key: Modul 5
             Module 6:
@@ -29241,6 +29257,12 @@ de:
           lessons:
             lesson-3:
               name: Test
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stufe 1
+            lessonGroup-3:
+              display_name: Teil 2
         dlp21-csp-mod1:
           title: Grundsätze der Informatik - Vertieftes Lernen Modul 1
         dlp21-csd:
@@ -29320,3 +29342,11 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Innovationen in der Datenverarbeitung
+            lesson-13:
+              name: Beschleunigungssensor
+            lesson-19:
+              name: Projekt

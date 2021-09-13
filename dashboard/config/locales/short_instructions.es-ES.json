@@ -3658,9 +3658,9 @@
         "CourseF_outbreak3": "Convierte a los monstruos en monstruos con mascarillas faciales al hacer clic en ellos.",
         "CourseF_outbreak4": "Cambia el número y el tamaño de los sprites de los monstruos para tu simulación.",
         "CourseF_outbreak5": "Todos los monstruos enfermos comienzan a recuperarse automáticamente.",
-        "CourseF_outbreak6": "Añade un porcentaje de probabilidad de que los monstruos enfermen, cada vez que los sanos toquen a los enfermos. Hazlo para todas las combinaciones de monstruos con y sin mascarilla.",
-        "CourseF_outbreak7": "Crea un nuevo traje para monstruos con inmunidad al virus y úsalo en tu simulación.",
-        "CourseF_outbreak8": "Comparte un mensaje con tu simulación.",
+        "CourseF_outbreak6": "Haz que todos los monstruos enfermos empiecen a recuperarse cuando un monstruo sano toque a un monstruo enfermo.",
+        "CourseF_outbreak7": "Añade un porcentaje de probabilidad de que los monstruos enfermen, cada vez que los sanos toquen a los enfermos. Hazlo para todas las combinaciones de monstruos con y sin mascarilla.",
+        "CourseF_outbreak8": "Crea un nuevo traje para monstruos con inmunidad al virus y úsalo en tu simulación.",
         "Dance Party 3_2021": "Crea un nuevo sprite de alien con un aspecto diferente. Haz que el nuevo sprite inicie cualquier comportamiento que quieras cuando se haga clic en él.",
         "Dance Party 5_2021": "Utilizando un evento \"con tecla pulsada\", haz que cuando se pulse una tecla, ¡un alien cambie de color!",
         "Dance Party 6_2021": "Añade un evento para que los aliens dejen de moverse después de 3 segundos.",
@@ -3758,7 +3758,8 @@
         "iceage_sound_and_points_dani": "¿Puedes terminar este programa de tal manera que **reproduzcas un sonido** y **anotes un punto** cuando Sid y Granny choquen? ",
         "iceage_warn_ice_age_dani": "Cambia la escena a un fondo con hielo y configura la velocidad de Sid (actor 1) en rápido.",
         "ramp_artist_loops6v1_2021": "Utiliza un bucle para dibujar esta escalera.",
-        "simcustom_2021": "Intenta hacer algunos cambios en los disfraces de los sprites o en el código de abajo. "
+        "simcustom_2021": "Intenta hacer algunos cambios en los disfraces de los sprites o en el código de abajo. ",
+        "international_outbreak_freeplay": "Comparte un mensaje con tu simulación."
       }
     }
   }

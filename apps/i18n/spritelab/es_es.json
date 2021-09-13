@@ -172,5 +172,6 @@
   "moveSpriteLocation": "Tus sprites están en la misma ubicación. Mueve uno de tus sprites usando el bloque `location`. <xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">'{\"x\":200,\"y\":200}'</title></block></xml>",
   "createDraggableSprite": "El sprite de la comida de tu mascota tiene que empezar el comportamiento de \"ser arrastrable\". <xml><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"cara_zanahoria_1\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_draggable\"></block></value></block></xml>",
   "createNotDraggableSPrite": "Sólo el sprite de la comida debería ser arrastrable. Elimina el comportamiento de tu mascota.",
-  "moveSpriteByDrag": "¡Tu código se ve muy bien! Para arrastrar tu sprite, haz clic en él mientras se ejecuta el programa."
+  "moveSpriteByDrag": "¡Tu código se ve muy bien! Para arrastrar tu sprite, haz clic en él mientras se ejecuta el programa.",
+  "poemBotMakeBackground": "Tienes que añadir un efecto de fondo."
 }

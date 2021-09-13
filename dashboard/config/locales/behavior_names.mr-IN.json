@@ -163,6 +163,40 @@
           "wobbling": "डगमगणे",
           "moving west and looping": "पश्चिमेकडे जाणे आणि लूपिंग",
           "moving east and looping": "पूर्वेकडे जाणे आणि लूपिंग"
+        },
+        "CourseF_outbreak1": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak2": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak3": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak4": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak5": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak6": {
+          "recovering": "रिकव्हर होत आहे"
+        },
+        "CourseF_outbreak7": {
+          "recovering": "रिकव्हर होत आहे",
+          "moving left and right": "डावीकडे आणि उजवीकडे जाणे"
+        },
+        "CourseF_outbreak8": {
+          "recovering": "रिकव्हर होत आहे",
+          "moving left and right": "डावीकडे आणि उजवीकडे जाणे"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "रिकव्हर होत आहे",
+          "wandering": "भटकत आहे",
+          "shrinking": "आकार कमी होत आहे",
+          "growing": "वाढत आहे",
+          "moving left and right": "डावीकडे आणि उजवीकडे जाणे",
+          "jittering": "थरथरत आहे"
         }
       }
     }

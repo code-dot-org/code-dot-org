@@ -831,10 +831,10 @@
         "CourseF_outbreak2": "Simulación del virus",
         "CourseF_outbreak3": "Simulación del virus",
         "CourseF_outbreak4": "Modifica tu simulación",
-        "CourseF_outbreak5": "Recuperación",
-        "CourseF_outbreak6": "Probabilidad aleatoria",
-        "CourseF_outbreak7": "Inmunidad y Vacunas",
-        "CourseF_outbreak8": "Comparte un mensaje",
+        "CourseF_outbreak5": "Modifica tu simulación",
+        "CourseF_outbreak6": "Recuperación",
+        "CourseF_outbreak7": "Probabilidad aleatoria",
+        "CourseF_outbreak8": "Inmunidad y Vacunas",
         "CourseF_video_introSpriteLab_2021": "Esto es Laboratorio de sprites",
         "MC_HOC_2017_01_RETRY_2021": "Hogar",
         "MC_HOC_2017_02_Cole_2021": "La granja",
@@ -933,7 +933,8 @@
         "ramp_artist_loops4_2021": "Estrella",
         "ramp_artist_loops6v1_2021": "Escalera",
         "ramp_artist_loops8_2021": "Octógono",
-        "scrat_loops_C-F_video_2021": "Video de bucles en la Era de Hielo"
+        "scrat_loops_C-F_video_2021": "Video de bucles en la Era de Hielo",
+        "international_outbreak_freeplay": "Comparte un mensaje"
       }
     }
   }

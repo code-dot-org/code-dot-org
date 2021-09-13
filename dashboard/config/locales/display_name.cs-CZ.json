@@ -153,10 +153,10 @@
         "CourseF_outbreak1": "Simulace viru",
         "CourseF_outbreak2": "Simulace viru",
         "CourseF_outbreak3": "Simulace viru",
-        "CourseF_outbreak4": "Upravte simulaci",
-        "CourseF_outbreak6": "Náhodná změna",
-        "CourseF_outbreak7": "Imunita a očkování",
-        "CourseF_outbreak8": "Sdílet zprávu",
+        "CourseF_outbreak4": "Upravte svou simulaci",
+        "CourseF_outbreak6": "Zotavení",
+        "CourseF_outbreak7": "Náhodná šance",
+        "CourseF_outbreak8": "Imunita a očkování",
         "OPD-K5 WhatIsCS_dani": "Co je informatika?",
         "courseF_bee_for10_2021": "Výzva",
         "courseF_bee_for5_2021": "Proměnné",
@@ -295,7 +295,9 @@
         "courseF_variables_madlib_finish": "Příběh prázdného prostoru, Část 2",
         "ramp_artist_loops6v1_2021": "Schodiště",
         "ramp_artist_loops8_2021": "Osmiúhelník",
-        "scrat_loops_C-F_video_2021": "Cykly v Době ledové - video"
+        "scrat_loops_C-F_video_2021": "Cykly v Době ledové - video",
+        "CourseF_outbreak5": "Upravte svou simulaci",
+        "international_outbreak_freeplay": "Sdílet zprávu"
       }
     }
   }

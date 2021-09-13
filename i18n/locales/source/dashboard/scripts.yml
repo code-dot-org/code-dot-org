@@ -22476,30 +22476,32 @@ en:
           lessons:
             lesson-1:
               name: Using Existing Libraries to Add Capabilities
-              description_student: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs. To begin developing the Pop the Balloon game for The Neighborhood block party, you import The Park API and use it to implement clickable images.
-              description_teacher: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. Students explore APIs and their documentation to identify features that they can add to their programs. To begin developing the Pop the Balloon game for The Neighborhood block party, students import The Park API and use it to implement clickable images.
+              description_student: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs to get started. You use `import` statements to import The Playground, implement clickable images, and begin developing the Pop the Balloon game for the block party.
+              description_teacher: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. To get started, students explore APIs and their documentation to identify features to add to their programs. Students use `import` statements to import The Playground, implement clickable images, and begin developing the Pop the Balloon game for the block party.
             lesson-2:
               name: Neighborhood Block Party Project - Day 1
               description_student: For this project, you design the core elements for a simple game by planning and developing a game engine. You outline the game mechanics, pseudocode each component, then use an interactive design process to make a game that reacts to a user’s interaction. At the end of this project, you participate in a block party to play one another’s games!
               description_teacher: Students design and build a game engine for this project, focusing primarily on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identify its core functionalities. They write pseudocode for these components and begin the development of their project.
             lesson-3:
               name: Solving Problems with the Math Class
-              description_student: In Unit 3, you looked at the source code for the `Math` class, but now it’s time to see what it can do! In this lesson, you learn about `final` classes and static methods and identify their purposes and uses. You use some of the `Math` class methods - `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` - to solve problems.
-              description_teacher: Students revisit the `Math` class, going more in-depth to explore its methods. They learn about `final` classes and static methods and identify their purposes and uses. They use `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` to solve problems.
+              description_student: Another class in the Java API is the `Math` class, which contains methods for performing mathematical functions. In this lesson, you explore the `Math` class to learn about its structure and methods. As you review the documentation for the `Math` class, you discover the purpose and use of `final` classes and static methods. You practice using methods in the `Math` class and the `Scanner` class to solve problems.
+              description_teacher: Students explore the `Math` class to learn about its structure and methods. As students review the documentation for the `Math` class, students discover the purpose and use of `final` classes and static methods. Students practice using methods in the `Math` class and the `Scanner` class to solve problems.
             lesson-4:
               name: Treating Data as a Different Types
-              description_student: The Food Truck has run out of coins! Because the owner can’t give change with coins, she can only charge whole dollar amounts and no cents. You learn how to use casting, rounding, and random numbers to help the owner through her coin shortage.
-              description_teacher: Students revisit the Project Mercury Pastries Food Truck to learn about casting, rounding, and random numbers. The students solve scenarios for the food truck owner using their knowledge of Java and the `Math` class.
+              description_student: In the previous lesson, you learned how to use `Math` class to calculate absolute values, square roots, and exponents. You continue manipulating values as you learn about casting and rounding. You combine these techniques with `Math.random()` to generate random numbers within specific ranges.
+              description_teacher: Students explore the use of casting and truncation to help the owner of the Project Mercury Pastries Food Truck round their prices to whole dollar numbers. Students apply casting and rounding techniques to generate random numbers using `Math.random()` within specific ranges.
             lesson-5:
               name: Comparing Values to Make Decisions
-              description_student: 'Today is all about using code to make decisions. You compare relationships between values while using conditional statements to help the `Painter` make decisions. '
-              description_teacher: 'Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. '
+              description_student: In The Neighborhood, you have used Boolean methods to help the `Painter` make decisions about navigating and painting. In this lesson, you learn to use relational operators to write Boolean expressions and use these with `if` statements to update the dice images in the Pop the Balloons game to show the correct side with a specified value.
+              description_teacher: Students use relational operators to write and evaluate Boolean expressions. Students then use these relational operators to expand the conditions they can check with `if` statements. The dice images in the Pop the Balloons game are then updated using relational operators and `if` statements to show the correct side with a specified value.
             lesson-6:
               name: Adding Randomness to a Program
-              description_student: One of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes. Today, you add randomization to the Pop the Balloon game by adding a dice rolling feature.
-              description_teacher: In this lesson, students develop the dice rolling feature of the Pop the Balloon game. Each subtask of the development process requires students to add different randomization features, including generating numbers between ranges, computing probabilities, and using conditional statements that are executed based on varying results.
+              description_student: One of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes. In this lesson, you develop the dice roll functionality and add the balloon sprites to incorporate randomization in your Pop the Balloons game.
+              description_teacher: Students develop the dice roll functionality of the Pop the Balloon game and add clickable balloons. Each subtask of the development of these game components requires students to add different randomization features, including generating numbers between ranges, computing probabilities, and using conditional statements that are executed based on varying results.
             lesson-7:
               name: Comparing Object References and Data
+              description_student: We have compared two `int`s or `double`s for equality, but how do we compare objects? What does it mean for two `String`s be equal? What about two donuts? You discover how to test two objects for equality and implement your findings in the Pop the Balloons game.
+              description_teacher: Students differentiate between comparisons of objects and primitive values. Students explore the effects of using `==` or `!=` with objects to identify the need for the `equals()` method to compare object data. Using the `equals()` method, students add to the Pop the Balloons game to compare `Balloon` objects and determine if there are valid moves left.
             lesson-8:
               name: Providing an Alternate Path of Execution
             lesson-9:
@@ -23451,12 +23453,12 @@ en:
               description_teacher: ''
             Module 3:
               key: Module 3
-              name: 'Module 3: Unit 5, using lists in apps, and recognizing CS skills in the classroom'
+              name: Module 3
               description_student: ''
               description_teacher: ''
             Module 4:
               key: Module 4
-              name: 'Module 4: Unit 5 and using datasets in apps'
+              name: Module 4
               description_student: ''
               description_teacher: ''
             Module 5:
@@ -23489,7 +23491,12 @@ en:
           lessons:
             lesson-1:
               name: Welcome to Code.org
-              description_student: 
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to Code.org and CS Discoveries.
+
+                **Suggested Time:** 8 minutes
               description_teacher: |-
                 **You will:**
 
@@ -23498,7 +23505,12 @@ en:
                 **Suggested Time:** 8 minutes
             lesson-2:
               name: Welcome to "Teaching CS Discoveries"
-              description_student: 
+              description_student: |-
+                **You will:**
+
+                * Learn how to engage in this professional learning course.
+
+                **Suggested Time:** 2 minutes
               description_teacher: |-
                 **You will:**
 
@@ -23531,11 +23543,18 @@ en:
           description_audience: ''
           description_short: ''
           description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Discoveries.\n-   Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Discoveries.\n-   Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csd2-2021:
           lessons:
             lesson-4:
               name: Navigating the Code.org learning platform
-              description_student: 
+              description_student: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
               description_teacher: |-
                 **You will:**
 
@@ -23551,7 +23570,12 @@ en:
               name: Tracking Student Progress and Providing Feedback
             lesson-3:
               name: Navigating lesson plans and resources
-              description_student: 
+              description_student: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
               description_teacher: |-
                 **You will:**
 
@@ -23562,7 +23586,7 @@ en:
               name: Lesson Plan Structure
             lesson-8:
               name: Navigating support
-              description_student: 
+              description_student: "**You will:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
               description_teacher: "**You will:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
             lesson-9:
               name: Teacher Community
@@ -23580,11 +23604,17 @@ en:
           description_audience: ''
           description_short: ''
           description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
         self-paced-pl-csd3-2021:
           lessons:
             lesson-1:
               name: Overview of course content
-              description_student: 
+              description_student: |-
+                **You will:**
+
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 30 minutes
               description_teacher: |-
                 **You will:**
 
@@ -23593,7 +23623,12 @@ en:
                 **Suggested time:** 30 minutes
             lesson-2:
               name: Overview of learning tools
-              description_student: 
+              description_student: |-
+                **You will:**
+
+                * Become familiar with the student learning tools used within CS Discoveries.
+
+                **Suggested time:** 20 minutes
               description_teacher: |-
                 **You will:**
 
@@ -23602,7 +23637,12 @@ en:
                 **Suggested time:** 20 minutes
             lesson-3:
               name: 'Overview of implementation '
-              description_student: 
+              description_student: |-
+                **You will:**
+
+                * Decide which units of CS Discoveries you will teach in your class.
+
+                **Suggested Time:** 10 minutes
               description_teacher: |-
                 **You will:**
 
@@ -23617,15 +23657,21 @@ en:
           description_audience: ''
           description_short: ''
           description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum.\n-   Become familiar with the programming environments used within CS Discoveries.\n-   Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum.\n-   Become familiar with the programming environments used within CS Discoveries.\n-   Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
         self-paced-pl-csd4-2021:
           lessons:
             lesson-1:
               name: Role of the teacher
-              description_student: 
+              description_student: "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
               description_teacher: "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
             lesson-2:
               name: Learning CS Discoveries
-              description_student: 
+              description_student: |-
+                **You will:**
+
+                * Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
+
+                **Suggested Time:** 25 minutes
               description_teacher: |-
                 **You will:**
 
@@ -23634,7 +23680,7 @@ en:
                 **Suggested Time:** 25 minutes
             lesson-3:
               name: Teaching CS Discoveries
-              description_student: 
+              description_student: "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 20 minutes"
               description_teacher: "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 20 minutes"
           lesson_groups:
             lessonGroup-2:
@@ -23644,6 +23690,7 @@ en:
           description_audience: ''
           description_short: ''
           description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n\n-   Consider the role of the teacher in a CS Discoveries classroom. \n-   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n-   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          student_description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n\n-   Consider the role of the teacher in a CS Discoveries classroom. \n-   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n-   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
         self-paced-pl-csd5-2021:
           lessons:
             lesson-1:
@@ -24564,7 +24611,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 2 for Workshop 2
           description_audience: ''
           description_short: ''
-          description: "## This module will be fully published by September 3, 2021.  Check back later for your prompts."
+          description: ''
+          student_description: ''
         dlp21-csd-mod3:
           lessons:
             lesson-1:
@@ -24612,7 +24660,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 2 for Workshop 2
           description_audience: ''
           description_short: ''
-          description: "## This module will be fully published by September 3, 2021.  Check back later for your prompts."
+          description: ''
+          student_description: ''
         dlp21-csp-mod3:
           lessons:
             lesson-1:
@@ -24759,6 +24808,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         csa-self-paced-pl:
           lessons:
             Navigating the Code.org learning platform:
@@ -25659,3 +25709,144 @@ en:
           description_short: ''
           description_audience: ''
           name: csa5-pilot-facilitator
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: Moods & Attitudes
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poetry-hoc
+          title: Poetry HoC
+          description_audience: ''
+          description_short: 'Hour of Code Activity - V2 '
+          description: ''
+          student_description: ''
+        csdu6-playground:
+          lessons:
+            lesson-1:
+              name: Template
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Innovations in Computing
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Board Outputs (LED Buzzer)
+              description_student: 
+              description_teacher: |-
+                - Use the buzzer on the circuit playground
+                - Use the led on the circuit playground
+                - NO variables; NO if statements; NO screen elements
+            lesson-4:
+              name: App Lab Outputs (setProperty)
+              description_student: 
+              description_teacher: "- Use setProperty() to change elements on the screen\n  - Focus on colors and x/y positions using random numbers\n- Use setText() to change text on screen \n- NO circuit playground; NO if statements; NO variables"
+            lesson-5:
+              name: Sensors
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Board Inputs (Button Toggle)
+              description_student: 
+              description_teacher: |-
+                - use buttons to change elements on screen
+                - use toggle switch to change elements on screen
+                - use buttons and toggle with buzzer in circuit playground
+                - NO if statements; NO variables; OK screen outputs
+            lesson-7:
+              name: Variables + If-Statements
+              description_student: 
+              description_teacher: |-
+                - use variables + counter pattern to update elements on screen
+                  - example: count number of times a button is pressed
+                - use if-statements to check position of toggle switch
+                - use variables to check value of variable
+                  - for example: play buzzer after a certain number of clicks
+            lesson-8:
+              name: 'Mini-Proj: Emoji Race'
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Color LEDs
+              description_student: 
+              description_teacher: |-
+                - use screen events to change color LEDs in circuit playground
+                - use on(), off(), pulse(), toggle(), and blink() LED functions
+                - change intensity of color LEDs
+                - NOT A FOCUS: arrays.
+                  - Only need concept of counting from 0 and concept of position mapping (ie: [0] maps to a specific LED on the CP; [5] maps to a different LED on the CP)
+            lesson-10:
+              name: App Lab Inputs (getProperty, getText) (Dropdowns Inputs Sliders?)
+              description_student: 
+              description_teacher: |-
+                Only in App Lab - No Circuit Playground (yet).
+
+                All about getProperty, Variables, and if-statements
+                - get property from dropdown. If (X) -> do (Y)
+                - get property from slider. Use to update position of something on the screen?
+                - get text from input. Use to update a label
+
+                **Focus on new getProperty() command and how to use it with new design elts. Save board inputs/outputs for tomorrow!**
+
+                In tomorrow's lesson, include motorcycle game where you can press on CP and have something change on screen.
+            lesson-11:
+              name: Combining Inputs
+              description_student: 
+              description_teacher: |-
+                - Use dropdowns and sliders to update aspects of the circuit playground
+                - Have CP inputs update screen elements using getProperty() and setProperty()
+                - Screen input <> Board Output is preparation for Maker project at end of Ch 1
+
+                **NOTE TO SELF: These levels should use the color LEDs instead of the regular LED.** In original curriculum, we only had access to led and buzzer. But now, we have color LEDs, so lets use those here too
+            lesson-12:
+              name: 'Project: Maker'
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: Accelerometer
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: Music + Arrays
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: 'Mini Project: Sensors'
+            lesson-17:
+              name: Physical Outputs (LEDs)
+              description_student: 
+              description_teacher: 
+            lesson-16:
+              name: Physical Inputs
+            lesson-18:
+              name: Prototyping
+            lesson-19:
+              name: Project
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Templates
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-4:
+              display_name: Chapter 2
+          name: csdu6-playground
+          title: CSD Unit 6 Playground
+          description_audience: ''
+          description_short: CSD U6 Playground. See Dan Schneider for questions
+          description: ''
+          student_description: CSD U6 Playground. See Dan Schneider for questions
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-food
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

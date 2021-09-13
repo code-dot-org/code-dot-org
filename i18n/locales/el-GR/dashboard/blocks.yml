@@ -1109,6 +1109,10 @@ el:
         text: θέση από {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': βροχή
       gamelab_makeNewSpriteAnon:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       gamelab_mirrorSprite:
@@ -1137,6 +1141,12 @@ el:
         text: έγινε κλικ στο {SPRITE}
       gamelab_playSound:
         text: παίξεΉχο {SOUND}
+      gamelab_playSoundOptions:
+        text: παίξεΉχο {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": κουμπί
+            "'sound://category_collect/clicky_crunch.mp3'": τρίξιμο
       gamelab_pointInDirection:
         text: στρίψε το {SPRITE} {DIRECTION}
         options:
@@ -1587,18 +1597,36 @@ el:
         text: x συντεταγμένη του {SPRITE}
       Mikelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
+      PoemBot_playSound:
+        text: παίξεΉχο {SOUND}
       PoemBot_setBackgroundEffect:
-        text: όρισε παρασκήνιο σε {BG_EFFECT} [PALETTE][1]
+        text: όρισε παρασκήνιο σε {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': συμπαγής
-            '"rainbow"': ουράνιο τόξο
+          EFFECT:
+            '"colors"': Χρώματα
+            '"squiggles"': Μουτζούρες
+            '"space"': Διάστημα
+            '"stars"': Αστέρια
+            '"ripples"': Πτυχώσεις
+          PALETTE:
+            '"rainbow"': Ουράνιο τόξο
       PoemBot_setForegroundEffect:
-        text: όρισε προσκήνιο σε {FG_EFFECT}
+        text: όρισε προσκήνιο σε {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': βροχή
-            '"bubbles"': μπουρμπουλήθρες
+          EFFECT:
+            '"rain"': Βροχή
+            '"bubbles"': Μπουρμπουλήθρες
+            '"hearts"': Πολύχρωμες καρδιές
+            '"confetti"': Κομφετί
+            '"starburst"': Οδοντωτός σύνδεσμος
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            swimming_left_and_right: κολύμβηση
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            swimming_left_and_right: κολύμβηση
       RyanLab_moveForward:
         text: προχώρησε μπροστά
       RyanLab_turnLeft:
