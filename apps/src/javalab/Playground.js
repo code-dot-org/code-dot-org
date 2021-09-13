@@ -82,7 +82,7 @@ export default class Playground {
 
   playSound(soundData) {
     const soundUrl = this.getUrl(soundData.filename);
-    this.getAudioElement().src = soundUrl + this.getCacheBustSuffix();
+    this.getAudioElement().src = soundUrl;
   }
 
   generateNewItem(imageData) {
@@ -161,16 +161,9 @@ export default class Playground {
 
   getUrl(filename) {
     if (this.starterAssetFilenames.includes(filename)) {
-      return (
-        starterAssetsApi.withLevelName(this.levelName).basePath(filename) +
-        this.getCacheBustSuffix()
-      );
+      return starterAssetsApi.withLevelName(this.levelName).basePath(filename);
     } else {
-      return assetsApi.basePath(filename) + this.getCacheBustSuffix();
+      return assetsApi.basePath(filename);
     }
-  }
-
-  getCacheBustSuffix() {
-    return '?=' + new Date().getTime();
   }
 }
