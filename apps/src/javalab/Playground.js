@@ -12,7 +12,7 @@ export default class Playground {
     this.images = {};
     this.imagesData = {};
     this.starterAssetFilenames = [];
-    console.log(`calling getStarterAssets with level name ${levelName}`);
+    this.levelName = levelName;
     starterAssetsApi.getStarterAssets(
       levelName,
       this.onStarterAssetsReceived,
@@ -161,7 +161,10 @@ export default class Playground {
 
   getUrl(filename) {
     if (this.starterAssetFilenames.includes(filename)) {
-      return starterAssetsApi.basePath(filename) + this.getCacheBustSuffix();
+      return (
+        starterAssetsApi.withLevelName(this.levelName).basePath(filename) +
+        this.getCacheBustSuffix()
+      );
     } else {
       return assetsApi.basePath(filename) + this.getCacheBustSuffix();
     }
