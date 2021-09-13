@@ -176,9 +176,8 @@
         "CourseF_outbreak2": "Προσομοίωση ιών",
         "CourseF_outbreak3": "Προσομοίωση ιών",
         "CourseF_outbreak4": "Τροποποιήστε την Προσομοίωση σας",
-        "CourseF_outbreak6": "Τυχαία Επιλογή",
-        "CourseF_outbreak7": "Ανοσία και Εμβόλια",
-        "CourseF_outbreak8": "Μοιραστείτε ένα Μήνυμα",
+        "CourseF_outbreak7": "Τυχαία Επιλογή",
+        "CourseF_outbreak8": "Ανοσία και Εμβόλια",
         "CourseF_video_introSpriteLab_2021": "Αυτό είναι το Εργαστήριο Χαρακτήρων",
         "OPD-K5 WhatIsCS_dani": "Τι είναι η επιστήμη υπολογιστών;",
         "courseF_bee_for10_2021": "Εξάσκηση",
@@ -186,7 +185,9 @@
         "courseF_events_freeplay_aquatic": "Υδάτινο",
         "courseF_sprites_freeplay_aquatic": "Υδάτινο",
         "courseF_sprites_properties": "Ιδιότητες Χαρακτήρα",
-        "ramp_artist_loops4_2021": "Αστέρι"
+        "ramp_artist_loops4_2021": "Αστέρι",
+        "CourseF_outbreak5": "Τροποποιήστε την Προσομοίωση σας",
+        "international_outbreak_freeplay": "Μοιραστείτε ένα Μήνυμα"
       }
     }
   }

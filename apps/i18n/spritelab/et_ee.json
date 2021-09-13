@@ -22,5 +22,6 @@
   "spritelabFeedbackMoveUpNotDown": "Sinu kujutis peab liikuma üles (põhja), mitte alla (lõunasse).",
   "spritelabFeedbackRobotFasterThanRover": "Robot jõudis ekraani paremale poolele enne roomikut.",
   "spritelabFeedbackDifferentStarRotation": "Kujutised tähe kostüümides peavad pöörama sama palju.",
-  "spritelabFeedbackAstronautMoveToCorner": "Astronaudi kujutis peab liikuma ühte neljast nurgast."
+  "spritelabFeedbackAstronautMoveToCorner": "Astronaudi kujutis peab liikuma ühte neljast nurgast.",
+  "poemBotMakeBackground": "Pead lisama taustaefekti."
 }

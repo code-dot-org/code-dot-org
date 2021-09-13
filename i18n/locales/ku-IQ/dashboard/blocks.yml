@@ -944,6 +944,8 @@ ku:
         text: کرتە کرا {SPRITE}
       gamelab_playSound:
         text: دەنگ هەڵکەر {SOUND}
+      gamelab_playSoundOptions:
+        text: دەنگ هەڵکەر {SOUND}
       gamelab_pointInDirection:
         text: ئاماژە {SPRITE} {DIRECTION}
         options:
@@ -1243,16 +1245,23 @@ ku:
         text: پۆتانی xی {SPRITE}
       Mikelab_yLocationOf:
         text: پۆتانی yی {SPRITE}
+      PoemBot_playSound:
+        text: دەنگ هەڵکەر {SOUND}
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"solid"': پتەو
+          EFFECT:
+            '"colors"': ڕەنگ
+            '"space"': بۆشایی ئاسمان
+            '"stars"': ئەستێرە
+          PALETTE:
             '"rainbow"': پەلكەزێرینە
       PoemBot_setForegroundEffect:
-        text: ئیفێکتی پێشبنەما دابنێ {FG_EFFECT}
+        text: ئیفێکتی پێشبنەما دابنێ {EFFECT}
         options:
-          FG_EFFECT:
+          EFFECT:
+            '"rain"': باران
             '"bubbles"': بڵق
+            '"confetti"': بڕشتی کاغەز
       SpriteLab2Beta_spriteSay:
         text: سپڕایت {SPRITE} بڵێ {TEXT} بەماوەی {SECONDS} چرکە
       Vector_createSpriteWith:

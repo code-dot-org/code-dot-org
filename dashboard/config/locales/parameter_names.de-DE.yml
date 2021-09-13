@@ -6,11 +6,13 @@ de:
       actor: Figur
       color: Farbe
       counter: Zähler
+      direction: Richtung
       height: Höhe
       honey: Honig
       left: links
       length: Länge
       min: min
+      nectars: Nektar
       points: Punkte
       radius: Radius
       sides: Kanten

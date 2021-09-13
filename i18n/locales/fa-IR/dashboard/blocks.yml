@@ -251,6 +251,10 @@ fa:
           DIRECTION:
             '"right"': سمت راست
             '"left"': سمت چپ
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": خرد شدن
       gamelab_randColor:
         text: رنگ تصادفی
       gamelab_randomColor:
@@ -435,11 +439,6 @@ fa:
             '"down"': فلش سمت پایین
             '"left"': فلش سمت چپ
             '"right"': فلش سمت راست
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"solid"': تو پُر
-            '"rainbow"': رنگین کمان
       RyanLab_moveForward:
         text: برو جلو
       RyanLab_turnLeft:

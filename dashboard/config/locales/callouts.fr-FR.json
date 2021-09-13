@@ -90,7 +90,7 @@
           "if_bee_nectar": "Utilise le bloc « Si » pour décider si l'abeille doit obtenir du nectar ou non"
         },
         "Course 4 Bee 3": {
-          "if_else_bee": "Utilise le bloc «Si/Sinon» pour que l'abeille butine le nectar d'une fleur, ou fasse du miel si ce n'est pas une fleur"
+          "if_else_bee": "Utilise le bloc « Si/Sinon » pour que l'abeille butine le nectar d'une fleur, ou fasse du miel si ce n'est pas une fleur"
         },
         "Course 4 Bee Params 2": {
           "edit_get_nectar": "Utilise ce bouton pour modifier la fonction et changer la direction dans laquelle l'abeille va tourner pour butiner le nectar."
@@ -1424,7 +1424,7 @@
           "pointerlocation": "Faites glisser un bloc sujet ici."
         },
         "CourseF_outbreak7": {
-          "costumes_callout": "Cliquez pour créer un nouveau costume"
+          "costumes_callout": "Cliquez pour créer un nouveau déguisement"
         },
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "Utilise ce bloc pour laisser, à ton professeur ou toi-même, des notes sur le fonctionnement de ton code.\n"
@@ -1433,7 +1433,7 @@
           "Function_intro_Ryan_1": "Cette petite instruction indique à l'ordinateur d'exécuter un GROS morceau de code avec le même nom dans l'espace de travail."
         },
         "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Ceci est une boucle « répéter » !  Cliquez dessus dans l'espace de travail et ajoutez le code que vous voulez exécuter en boucle."
+          "MC_HOC_2017_03_Cole_1": "Ceci est une boucle « repeat » !  Cliquez dessus dans l'espace de travail et ajoutez le code que vous voulez exécuter en boucle."
         },
         "MC_HOC_2017_04_Cole_2021": {
           "MC_HOC_2017_04_Cole_a": "L'Agent peut survoler l'eau, mais votre joueur ne le peut pas !"
@@ -1473,7 +1473,7 @@
           "courseA_artist_loops8_1": "Savais-tu que tu peux redessiner par dessus une ligne quand tu en as besoin?"
         },
         "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_1": "Utilise ce bloc pour collecter le trésor."
+          "courseA_collector_loops1_1": "Utilise ce bloc pour ramasser le trésor."
         },
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "Ce nombre t'indique combien de ces blocs tu peux utiliser dans ce puzzle."
@@ -1503,10 +1503,10 @@
           "courseB_artist_loops3_1": "Il y a un seul de ces blocs dans la boîte à outils. Comment vas-tu l'utiliser ?"
         },
         "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "Utilise ce bloc pour collecter le trésor."
+          "courseB_collector_loops1_1": "Utilise ce bloc pour ramasser le trésor."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce !"
         },
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Utilise la flèche déroulante verte pour changer de direction."
@@ -1521,7 +1521,7 @@
           "courseC_PlayLab_events_challenge1_1": "Ce bloc te laisse bouger les acteurs vers différentes parties de l'espace de jeu."
         },
         "courseC_artist_loops1a_2021": {
-          "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !\n"
+          "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !"
         },
         "courseC_artist_loops1b_2021": {
           "sticker2": "Ajoute ceci au milieu de ton programme.\n"
@@ -1539,7 +1539,7 @@
           "courseC_maze_debugging5_1": "Ces blocs sont verrouillés et ne peuvent pas être supprimés !\n"
         },
         "courseC_maze_debugging9_2021": {
-          "courseC_maze_debugging9_2019_1": "Glisse les blocs de la boîte à outils dans ton espace de travail.\n"
+          "courseC_maze_debugging9_2019_1": "Glisse les blocs de la boîte à outils dans ton espace de travail."
         },
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur \"Exécuter\" pour démarrer ton programme."
@@ -1581,7 +1581,7 @@
           "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour ramasser tout le nectar (ou miel) d’une fleur (ou d’un rayon de miel)."
         },
         "courseD_farmer_while7_2021": {
-          "courseD_farmer_while7_2018_PathAhead": "Tu devras utiliser le bloc `tant que chemin devant` afin de résoudre cette énigme."
+          "courseD_farmer_while7_2018_PathAhead": "Tu devras utiliser le bloc `tant qu'il y a un chemin devant` afin de résoudre cette énigme."
         },
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "C'est ton nombre maximum de blocs. Cela te dit combien de ces blocs il te reste à utiliser."
@@ -1597,7 +1597,7 @@
         },
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "Tu peux faire glisser des blocs supplémentaires vers la boite à outils pour les jeter.",
-          "stone_block_2": "Les blocs gris ne peuvent pas être jetés.\n"
+          "stone_block_2": "Les blocs gris ne peuvent pas être jetés."
         },
         "courseD_maze_ramp5_2021": {
           "": "Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que tu veux !"
@@ -1656,11 +1656,11 @@
           "grade2_CaringForNewPet_0_1": "Après avoir enclenché tous les blocs ensemble, appuie sur « Exécuter » pour lancer ton programme."
         },
         "express_maze_debugging9_2021": {
-          "express_maze_debugging9_2019_1": "Glisse les blocs de la boîte à outils dans ton espace de travail.\n"
+          "express_maze_debugging9_2019_1": "Glisse les blocs de la boîte à outils dans ton espace de travail."
         },
         "courseF_apps_aquarium": {
-          "run_button": "Appuyez d'abord sur le bouton Exécuter ! ",
-          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+          "run_button": "Appuie d'abord sur le bouton Exécuter ! ",
+          "visualizationResizeBar": "Fais glisser les 3 points pour redimensionner la zone de jeu. "
         },
         "courseF_apps_card": {
           "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
@@ -1670,8 +1670,8 @@
           "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
         },
         "courseF_apps_collector": {
-          "run_button": "Appuyez d'abord sur le bouton Exécuter ! ",
-          "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
+          "run_button": "Appuie d'abord sur le bouton Exécuter ! ",
+          "visualizationResizeBar": "Fais glisser les 3 points pour redimensionner la zone de jeu. "
         },
         "courseF_apps_madlib": {
           "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
@@ -1690,10 +1690,10 @@
           "visualizationResizeBar": "Faites glisser les 3 points pour redimensionner la zone de jeu. "
         },
         "courseF_sprites_make": {
-          "sprites_category": "Cliquez ici pour ouvrir la catégorie Sprites. "
+          "sprites_category": "Clique ici pour ouvrir la catégorie Sprites. "
         },
         "courseF_sprites_positioning": {
-          "locations_category": "Cliquez ici pour ouvrir la catégorie Emplacements. "
+          "locations_category": "Clique ici pour ouvrir la catégorie Emplacements. "
         },
         "courseF_events_key": {
           "whenKey": "Utilisez le nouveau bloc d'événement trouvé ici. "
@@ -1752,7 +1752,7 @@
           "slider": "Vous pouvez ralentir votre programme ici. "
         },
         "courseD_bee_nestedLoops1a_2021": {
-          "stepButton": "Essayez de parcourir votre code un bloc à la fois. "
+          "stepButton": "Essaie de parcourir ton code un bloc à la fois. "
         },
         "courseA_EOC_playlab_animals": {
           "question_mark": "?"
@@ -1767,7 +1767,7 @@
           "behaviors_category": "Cliquez ici pour ouvrir la catégorie Emplacements. "
         },
         "courseF_sprites_properties": {
-          "sprites_category2": "Recherchez un nouveau bloc ici ! "
+          "sprites_category2": "Recherche un nouveau bloc ici."
         }
       }
     }

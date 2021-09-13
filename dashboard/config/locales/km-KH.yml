@@ -164,6 +164,8 @@ km:
     email_preference_privacy: "(សូមពិនិត្យមើលគោលការណ៍ឯកជនភាពរបស់ពួកយើង)"
     email_preference_yes: យល់ព្រម
     email_preference_no: ទេ
+    share_teacher_email_reg_partner_preference_yes: យល់ព្រម
+    share_teacher_email_reg_partner_preference_no: ទេ
   school_info:
     title: ព័ត៌មានអំពីសាលា
     school_country: សាលាក្នុងប្រទេស

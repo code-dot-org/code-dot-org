@@ -172,6 +172,10 @@ sq:
     email_preference_yes: Po
     email_preference_no: Jo
     email_preference_required: Ju duhet të specifikoni preferencën e postës elektronike.
+    share_teacher_email_reg_partner_preference_yes: Po
+    share_teacher_email_reg_partner_preference_no: Jo
+    share_teacher_email_reg_partner_preference_required: Ju duhet të specifikoni preferencën
+      e postës elektronike.
   school_info:
     title: Informacione për shkollën (opsionale)
     school_country: Qyteti i shkollës

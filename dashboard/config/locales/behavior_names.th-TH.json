@@ -770,6 +770,13 @@
         "courseF_variables_predict": {
           "wandering": "เคลื่อนที่",
           "moving north": "เคลื่อนที่ไปทางเหนือ"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "การรักษาตัว",
+          "wandering": "เคลื่อนที่",
+          "moving left and right": "เคลื่อนที่ไปทางซ้ายและขวา",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
         }
       }
     }

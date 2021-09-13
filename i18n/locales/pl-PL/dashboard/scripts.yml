@@ -1448,6 +1448,7 @@ pl:
             Unit 6 lessons:
               name: Jednostka 6 Lekcje
         cspunit4draft:
+          title: Podstawy informatyki Jednostka 4 - Dane
           description_short: Dane
           lessons:
             Check Your Assumptions:
@@ -1537,6 +1538,7 @@ pl:
             Teaching Support - Lessons 8-12:
               name: Wsparcie nauczania - Lekcje 8-12
         CSPPD3-Unit2:
+          title: 'Podstawy informatyki: Jednostka 2 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1579,6 +1581,7 @@ pl:
               name: Epoka Lodowcowa w Play Lab
           student_description: Utwórz historyjkę lub grę z pomoc Epoki Lodowcotej w Play Lab!
         CSPPD3-Unit3:
+          title: 'Podstawy informatyki: Jednostka 3 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1621,6 +1624,7 @@ pl:
             While Loops:
               name: Pętle Dopóki (While)
         CSP-Unit3-Support:
+          title: 'Podstawy informatyki: Jednostka 3 Rozwój zawodowy (PD)'
           lessons:
             Chunk 1 Overview:
               name: Część 1 Przeląd
@@ -1677,6 +1681,7 @@ pl:
               name: Oceany
           student_description: Poznaj sposób, w jaki sztuczna inteligencja i uczenie maszynowe mogą być wykorzystywana do zajmowania się problemami całego świata.
         CSPPD3-Unit3-pt2:
+          title: 'Podstawy informatyki: Jednostka 3 Wyzwania zawodowego rozwoju'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1773,6 +1778,7 @@ pl:
             Visualizing Data:
               name: Wizualizacja danych
         CSPPD3-Unit5:
+          title: 'Podstawy informatyki: Jednostka 5 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1810,6 +1816,7 @@ pl:
             Visualizing Data:
               name: Wizualizacja danych
         AlgebraA:
+          title: 'Informatyka w algebrze: Kurs A'
           description: Poznaj programowanie funkcjonalne za pomocą algebry
           description_short: Poznaj programowanie funkcjonalne za pomocą algebry
           lessons:
@@ -19299,10 +19306,10 @@ pl:
               name: Moduł 2
             Module 3:
               key: Moduł 3
-              name: 'Moduł 3: Jednostka 5, używanie list w aplikacjach i rozpoznawanie umiejętności CS w klasie'
+              name: Moduł 3
             Module 4:
               key: Moduł 4
-              name: 'Moduł 4: Jednostka 5 i używanie zestawów danych w aplikacjach'
+              name: Moduł 4
             Module 5:
               key: Moduł 5
               name: 'Moduł 5: Jednostka 7 i zrozumienie funkcji z parametrami i zwracaniem wartości'
@@ -19689,7 +19696,6 @@ pl:
               name: 'Krok 2: Wykaż zrozumienie'
           name: dlp21-csd-mod2
           title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 2 dla Warsztatu 2
-          description: "## Ten moduł zostanie w pełni opublikowany przed 3 września 2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
         dlp21-csd-mod3:
           lessons:
             lesson-1:
@@ -19716,7 +19722,6 @@ pl:
               name: 'Krok 2: Wykaż zrozumienie'
           name: dlp21-csp-mod2
           title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 2 dla Warsztatu 2
-          description: "## Ten moduł zostanie w pełni opublikowany przed 3 września 2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
         dlp21-csp-mod3:
           lessons:
             lesson-1:
@@ -20266,10 +20271,7 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
-<<<<<<< HEAD
           name: csa4-pilot-facilitator
-=======
->>>>>>> staging
         csa5-pilot-facilitator:
           lessons:
             Creating Tables of Data:
@@ -20315,55 +20317,36 @@ pl:
             Assessment Day:
               name: Dzień sprawdzianu
             lesson-1:
-<<<<<<< HEAD
               key: lekcja 1
-=======
->>>>>>> staging
               name: Tworzenie tablic z danymi
               description_student: Na poprzednich lekcjach używałeś tablic jednowymiarowych (1D) do przechowywania wartości tego samego typu. Dzisiaj dowiesz się, jak tworzyć i używać dwuwymiarowych (2D) tablic, tablic przechowujących tablice tego samego typu. Tablice 2D są przydatne do przechowywania danych reprezentowanych w postaci tabeli. Na tej lekcji użyjesz tablic 2D do przechowywania danych reprezentujących ekspansję biznesową projektu Mercury Pastries Food Truck.
               description_teacher: Uczniowie poznają budowę dwuwymiarowych (2D) tablic oraz identyfikują podobieństwa i różnice między tablicami 1D i 2D. Tworzą tablice 2D do przechowywania elementów „int” i „double” za pomocą słowa kluczowego „new” i list inicjalizacji, aby reprezentować rozszerzony inwentarz projektu Mercury Pastries Food Truck. Uzyskują dostęp do poszczególnych elementów i modyfikują je, odwołując się do wartości indeksów wierszy i kolumn w celu uzyskania i oceny danych przechowywanych w tablicy 2D.
             lesson-2:
-<<<<<<< HEAD
               key: lekcja 2
-=======
->>>>>>> staging
               name: Trawersowanie tablicy 2D wierszami
               description_student: Teraz, gdy widziałeś już tablice 2D, piszesz zagnieżdżone pętle „dla”, aby je przemierzać! Wracasz do Teatru, aby przygotować nowy koncert, aby edukować The Neighborhood na temat zrównoważonego transportu. Po wybraniu początkowego obrazu powitalnego na koncercie, napisz metodę `getPixels()`, która przechowuje piksele z obrazu w tablicy 2D, aby wykorzystać ją w nadchodzących lekcjach do tworzenia efektów obrazu.
               description_teacher: Uczniowie używają zagnieżdżonych pętli „dla” do przechodzenia przez tablice 2D w kolejności wiersz główny i stosują standardowy algorytm, który napisali w Jednostce 3. do oceny danych. Ponownie odwiedzają Teatr, aby rozpocząć tworzenie nowego koncertu, który ma na celu edukowanie The Neighborhood na temat zrównoważonego transportu. Wybierają początkowy obraz powitalny na koncercie i piszą metodę `getPixels()`, która przechowuje piksele z obrazu w tablicy 2D, aby wykorzystać ją na nadchodzących lekcjach do tworzenia efektów graficznych.
             lesson-3:
-<<<<<<< HEAD
               key: lekcja 3
-=======
->>>>>>> staging
               name: Trawersowanie tablicy 2D kolumnami
               description_student: Dane są zorganizowane w wiersze i kolumny. W poprzedniej lekcji trawersowałeś tablicę 2D, aby uzyskać dostęp do elementów i wykonać obliczenia w rzędzie. Dzisiaj dowiesz się, jak przemierzać tablicę 2D w kolejności kolumn. Korzystając z tego algorytmu przechodzenia, tworzysz efekty obrazu, które manipulują pikselami w celu odbicia obrazu w pionie.
               description_teacher: Uczniowie używają zagnieżdżonych pętli „dla” do przechodzenia przez tablicę 2D w kolejności kolumn. Rozróżniają kolejność względem kolumn i wierszy oraz wyjaśniają, kiedy mogą zastosować jedno podejście zamiast drugiego. Stosują przechodzenie kolumnami, aby obliczyć całkowite zapasy według deserów w ramach projektu Mercury Pastries Food Truck i dalej rozwijać koncert w Teatrze. Uczniowie manipulują pikselami na obrazie za pomocą przechodzenia kolumnami w celu pionowego odzwierciedlenia obrazu i wdrożenia efektu na koncercie.
             lesson-4:
-<<<<<<< HEAD
               key: lekcja 4
-=======
->>>>>>> staging
               name: Stosowanie ulepszonych pętli
               description_student: Dzisiaj poznasz strukturę wykorzystania ulepszonych pętli „dla” do przechodzenia przez tablice 2D. Identyfikujesz podobieństwa i różnice między używaniem rozszerzonej pętli „dla” z tablicami 1D i 2D. Używasz zagnieżdżonej rozszerzonej pętli „dla” do pisania metod modyfikujących wartości kolorów pikseli i tworzenia efektów na obrazach koncertu.
               description_teacher: Uczniowie poznają strukturę ulepszonych pętli „dla” do przechodzenia tablice 2D. Identyfikują podobieństwa i różnice między używaniem ulepszonych pętli „dla” z tablicami 1D i 2D. Używają zagnieżdżonych, ulepszonych pętli „dla”, aby napisać metody modyfikowania wartości kolorów pikseli i tworzenia efektów na obrazach podczas koncertu.
             lesson-5:
-<<<<<<< HEAD
               key: lekcja 5
-=======
->>>>>>> staging
               name: Ocena tablic 2D
               description_student: Burmistrz poprosił Project Mercury Pastries Food Truck o przygotowanie deserów na nadchodzącym koncercie. Aby pomóc właścicielowi, wdrażasz nowe algorytmy przygotowujące do wydarzenia. Eksplorujesz wykonywanie instrukcji `zwróć` wewnątrz pętli w porównaniu do poza pętlą. Piszesz nowe standardowe algorytmy, aby sprawdzić, czy wartości są podzielne równomiernie przez inną liczbę całkowitą i znaleźć liczbę elementów, które spełniają określone kryteria.
               description_teacher: Uczniowie badają efekt wykonania instrukcji `zwróć` wewnątrz pętli w porównaniu z wykonaniem poza pętlą. Piszą nowe standardowe algorytmy, aby sprawdzić, czy wartości są równomiernie podzielne przez inną liczbę całkowitą i znaleźć liczbę elementów spełniających określone kryteria. Rozwiązują problemy w ramach projektu Mercury Pastries Food Truck, wdrażając te algorytmy.
             lesson-6:
-<<<<<<< HEAD
               key: lekcja 6
-=======
->>>>>>> staging
               name: Stosowanie standardowych algorytmów
               description_student: Standardowe algorytmy, które napisałeś w Jednostce 3, działają również z tablicami 2D i mogą tworzyć efekty wizualne na obrazach. W tej lekcji będziesz rozwijać swój koncert w Teatrze, pisząc metodę `grayscale()`. Znajdź minimalne i maksymalne wartości koloru czerwonego, zielonego lub niebieskiego i użyj tej wartości do ustawienia wszystkich innych wartości czerwonego, zielonego lub niebieskiego. Uczestniczysz w przeglądach kodu, aby dawać, otrzymywać i wdrażać informacje zwrotne na temat nowych metod i postępów.
               description_teacher: Uczniowie stosują standardowe algorytmy, które napisali w Jednostce 3, do tablic 2D, aby tworzyć efekty wizualne na obrazach. Kontynuują opracowywanie koncertu w Teatrze, pisząc metodę `grayscale()`, która znajduje średnią wartości RGB piksela na obrazie i ustawia piksel na tę średnią wartość. Uczniowie znajdują minimalne i maksymalne wartości koloru czerwonego, zielonego lub niebieskiego i używają tych wartości do ustawienia wszystkich innych wartości czerwonego, zielonego lub niebieskiego. Uczniowie uczestniczą w przeglądach kodu, aby dawać, otrzymywać i wdrażać informacje zwrotne na temat swoich nowych metod i postępów.
             lesson-7:
-<<<<<<< HEAD
               key: lekcja 7
               name: Odwracanie elementów
             lesson-8:
@@ -20389,31 +20372,20 @@ pl:
               name: Dzień FRQ
             lesson-15:
               key: lekcja 15
-=======
-              name: Odwracanie elementów
-            lesson-8:
-              name: Przesuwanie elementów
-            lesson-9:
-              name: Znajdowanie duplikatów
-            lesson-10:
-              name: Poszukiwanie elementów
-            lesson-11:
-              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 1
-            lesson-12:
-              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 2
-            lesson-13:
-              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 3
-            lesson-14:
-              name: Dzień FRQ
-            lesson-15:
->>>>>>> staging
               name: Dzień sprawdzianu
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
-<<<<<<< HEAD
           name: csa5-pilot-facilitator
-=======
->>>>>>> staging
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Innowacje w informatyce
+            lesson-9:
+              name: Kolorowe LED
+            lesson-13:
+              name: Akcelerometr
+            lesson-19:
+              name: Projekt

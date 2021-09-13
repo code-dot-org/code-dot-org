@@ -5,7 +5,7 @@
         "outbreak4": "改变模拟是怎么样工作的并推测什么事情会发生。",
         "outbreak5": "帮你的精灵图缓慢地恢复！",
         "CourseF_outbreak4": "改变模拟是怎么样工作的并推测什么事情会发生。",
-        "CourseF_outbreak5": "帮你的精灵图缓慢地恢复！",
+        "CourseF_outbreak5": "改变模拟是怎么样工作的并推测什么事情会发生。",
         "courseC_artist_prog_challenge1_2021": "为每种动物绘制房间。 ",
         "courseD_bee_nestedLoops8_2021": "从所有的花里收集花蜜，然后在蜂窝那里酿花蜜。 ",
         "courseD_bee_nestedLoops9_2021": "酿蜂蜜。",
@@ -82,7 +82,8 @@
         "courseF_variables_madlib": "创建你的第一个提示，然后添加精灵图和行为。",
         "courseF_variables_madlib_finish": "对你的项目进行最后润色，然后分享它！",
         "ramp_artist_loops4_2021": "通过循环一个序列来创建这个星形图案",
-        "ramp_artist_loops6v1_2021": "使用循环来绘制这个楼梯。"
+        "ramp_artist_loops6v1_2021": "使用循环来绘制这个楼梯。",
+        "international_outbreak_freeplay": "使用你的项目来共享信息。你希望别人从中学到什么？"
       }
     }
   }

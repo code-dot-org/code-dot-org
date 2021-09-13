@@ -5416,6 +5416,14 @@ uk:
               display_name: Вступ
             Introduction:
               display_name: Вступ
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Урок 3
+            Lesson 4:
+              display_name: Урок 4
+            Lesson 5:
+              display_name: Урок 5
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -5504,8 +5512,10 @@ uk:
               name: Модуль 2.
             Module 3:
               key: Модуль 3.
+              name: Модуль 3.
             Module 4:
               key: Модуль 4.
+              name: Модуль 4.
             Module 5:
               key: Модуль 5.
             Module 6:
@@ -5551,6 +5561,12 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Етап 1
+            lessonGroup-3:
+              display_name: Етап 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -5574,6 +5590,8 @@ uk:
           lessons:
             lesson-12:
               name: Інструменти
+            lesson-13:
+              name: Приклади
             lesson-18:
               name: Віджети
           lesson_groups:
@@ -5601,3 +5619,11 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csdu6-playground:
+          lessons:
+            lesson-9:
+              name: Кольорові LEDи
+            lesson-13:
+              name: Акселерометр
+            lesson-19:
+              name: Проект

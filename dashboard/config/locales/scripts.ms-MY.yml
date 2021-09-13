@@ -7832,6 +7832,12 @@ ms:
               name: Mengubah Suai Data Objek
             lesson-10:
               name: Memaparkan Maklumat Objek
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Peringkat 1
+            lessonGroup-3:
+              display_name: Peringkat 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

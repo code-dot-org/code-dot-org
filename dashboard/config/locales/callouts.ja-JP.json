@@ -1662,6 +1662,50 @@
         },
         "courseF_text_prompts": {
           "prompt_block": "ここでプロンプトブロックを見つけましょう！"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "ブロックを展開するには、ここをクリック。",
+          "pointerlocation": "「主語」ブロックをここにドラッグする。"
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "クリックして新しいコスチュームを追加"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "一度に1ブロックずつコードをすすめてみましょう。"
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "「とき」を「あいだ」に変えてみましょう。"
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "このブロックのじゅんばんは正しくありません。"
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
+        },
+        "courseF_text_answer": {
+          "answered_block": "ここで新しいブロックをさがしましょう。"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "質問に答えたときに背景の色は変わりましたか？ そうであれば「おわり」をクリックします。 そうでなければ「リセット」を押してコードを変更し、もう一度「実行」を押します。"
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "終わりましたか？そうであれば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
+        },
+        "courseF_text_choice_title": {
+          "title_block": "ここで2つの新しいブロックを探しましょう！",
+          "text_answer_finish": "タイトル画面が3秒間表示されましたか？ そうであれば、「おわり」をクリックします。 そうでなければ、「リセット」を押してコードを変更し、もう一度「実行」を押します。"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "ここで新しいブロックをさがしましょう。"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
         }
       }
     }

@@ -183,5 +183,6 @@
   "thirdClickButNoSpeech": "Kliknąłeś więcej niż dwa duszki, ale jedno z Twoich kliknięć nie spowodowało, że duszek coś  powiedział. Dodaj blok „powiedz” pod każdym zdarzeniem „po kliknięciu”.",
   "changeOrSetSize": "Żaden z twoich duszków nie zmienił rozmiaru.",
   "changeOrSetCostume": "Żaden z twoich duszków nie zmienił kostiumu.",
-  "changeBackground": "Tło nie zostało zmienione."
+  "changeBackground": "Tło nie zostało zmienione.",
+  "poemBotMakeBackground": "Musisz dodać efekt tła."
 }

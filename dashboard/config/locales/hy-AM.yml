@@ -102,6 +102,8 @@ hy:
     field_is_required: պարտադիր ե
     email_preference_yes: այո
     email_preference_no: ոչ
+    share_teacher_email_reg_partner_preference_yes: այո
+    share_teacher_email_reg_partner_preference_no: ոչ
   school_info:
     other: Այլ
   signin_form:

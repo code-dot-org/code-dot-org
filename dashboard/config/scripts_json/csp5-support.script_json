@@ -14,11 +14,12 @@
           "type": "warning",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "deprecated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:05 UTC",
+    "serialized_at": "2021-09-09 20:42:38 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csp5-support"

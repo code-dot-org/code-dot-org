@@ -24785,6 +24785,7 @@ es-MX:
           student_description: "¡Aprende a enseñar ciencias de la computación con
             este curso en línea gratuito y autodidacta de Fundamentos de Ciencias
             de la Computación!"
+          name: k5-enlíneapd-2020
         dani-test-2020:
           lessons:
             new lesson:
@@ -32333,14 +32334,14 @@ es-MX:
                 de Java y la clase `Matemáticas`.
             lesson-5:
               name: Comparando Valores para Tomar Decisiones
-              description_student: 'Hoy, se trata de utilizar el código para tomar
+              description_student: Hoy, se trata de utilizar el código para tomar
                 decisiones. Se comparan las relaciones entre los valores mientras
                 se utilizan sentencias condicionales para ayudar al `Pintor` a tomar
-                decisiones. '
-              description_teacher: 'Los alumnos utilizan operadores relacionales para
+                decisiones.
+              description_teacher: Los alumnos utilizan operadores relacionales para
                 escribir y evaluar expresiones. Los alumnos amplían el uso de las
                 sentencias `if` para comparar valores almacenados en variables y elementos
-                de matrices (arrays). '
+                de matrices (arrays).
             lesson-6:
               name: Añadiendo Aleatoriedad a un Programa
               description_student: Uno de los casos de uso más comunes para generar
@@ -33471,11 +33472,10 @@ es-MX:
               name: Módulo 2
             Module 3:
               key: Módulo 3
-              name: 'Módulo 3: Unidad 5, uso de listas en las aplicaciones y reconocimiento
-                de las habilidades de Ciencias de la Computación en el aula'
+              name: Módulo 3
             Module 4:
               key: Módulo 4
-              name: 'Módulo 4: Unidad 5 y uso de conjuntos de datos en las aplicaciones'
+              name: Módulo 4
             Module 5:
               key: Módulo 5
               name: 'Módulo 5: Unidad 7 y comprensión de las funciones con parámetros
@@ -33910,6 +33910,12 @@ es-MX:
           lessons:
             lesson-2:
               name: Lección 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Etapa 1
+            lessonGroup-3:
+              display_name: Etapa 2
         dlp21-csp-mod1:
           title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la
             Computación
@@ -33936,6 +33942,8 @@ es-MX:
           lessons:
             lesson-12:
               name: Herramientas
+            lesson-13:
+              name: Ejemplos
             lesson-17:
               name: Consola
             lesson-18:
@@ -35177,6 +35185,14 @@ es-MX:
                 un nivel de elección y revisan su código basándose en los comentarios.
             lesson-4:
               name: Recorrido de Arrays con Bucles While
+              description_student: "¿Recuerdas los bucles `while`? En esta lección,
+                investigarás los casos límite de los bucles `while` y harás conexiones
+                entre los bucles `while` y `for`. Creas imágenes para tu música utilizando
+                la clase `Rectangle`."
+              description_teacher: Los alumnos revisan los bucles `while` y aprenden
+                sobre los bucles infinitos. Los alumnos exploran la creación de visuales
+                antes de la conversión entre los bucles `while` y `for`. Los alumnos
+                crean sus propios visuales musicales utilizando la clase `Rectangle`.
             lesson-5:
               name: Almacenando Objetos en Arrays
               description_teacher: Los alumnos exploran la funcionalidad y las ventajas
@@ -35278,6 +35294,13 @@ es-MX:
                 restricciones a la duración del mismo y agregando elementos visuales.
                 Realiza una revisión del código para obtener comentarios que te permitan
                 seguir desarrollando tu programa.
+              description_teacher: En la lección anterior, los estudiantes escribieron
+                un algoritmo de remezcla y lo combinaron con los algoritmos que desarrollaron
+                en lecciones anteriores. Los alumnos utilizan variables estáticas
+                y constantes para añadir restricciones a la duración del concierto.
+                Añaden elementos visuales al concierto utilizando un array de `Formas`,
+                y luego participan en una revisión del código para dar y utilizar
+                la experiencia mientras desarrollan su programa.
             lesson-13:
               description_student: En la lección anterior, creaste una lista priorizada
                 de trabajo para completar. Hoy, autoevaluarás tu trabajo con respecto
@@ -35504,3 +35527,13 @@ es-MX:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Innovaciones en computación
+            lesson-9:
+              name: LEDs de colores
+            lesson-13:
+              name: Acelerómetro
+            lesson-19:
+              name: Proyecto

@@ -7916,6 +7916,12 @@ is:
           lessons:
             lesson-2:
               name: Kennslustund 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Áfangi 1
+            lessonGroup-3:
+              display_name: Áfangi 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -7955,3 +7961,7 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: Verkefni

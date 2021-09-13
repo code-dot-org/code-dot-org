@@ -3,7 +3,6 @@
   "allFilesCompile": "Kompilacja wszystkich plików! ",
   "backpackLabel": "Plecak",
   "backpackListLoadError": "Podczas ładowania plecaka wystąpił błąd. Spróbuj ponownie.",
-  "backpackSaveErrorTitle": "Wystąpił błąd",
   "backpackSaveErrorMessage": "Spróbuj ponownie",
   "cancel": "Anuluj",
   "clearConsole": "Wyczyść konsolę",

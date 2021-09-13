@@ -770,6 +770,10 @@ ca:
           DIRECTION:
             '"right"': dret
             '"left"': esquerra
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": cruixit
       gamelab_randColor:
         text: color aleatori
       gamelab_randomColor:
@@ -970,16 +974,20 @@ ca:
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
       PoemBot_setBackgroundEffect:
-        text: definir l'efecte de fons {BG_EFFECT} [PALETTE][1]
+        text: definir l'efecte de fons {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': sòlid
+          EFFECT:
+            '"space"': Espai
+            '"stars"': Estrelles
+          PALETTE:
             '"rainbow"': Arc de Sant Martí
       PoemBot_setForegroundEffect:
-        text: definir l'efecte de fons {FG_EFFECT}
+        text: definir l'efecte de fons {EFFECT}
         options:
-          FG_EFFECT:
-            '"bubbles"': bombolles
+          EFFECT:
+            '"rain"': Pluja
+            '"bubbles"': Bombolles
+            '"confetti"': Confeti
       RyanLab_moveForward:
         text: avança
       RyanLab_turnLeft:
