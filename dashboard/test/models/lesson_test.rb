@@ -890,7 +890,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'no student_lesson_plan_pdf_url for non-migrated scripts' do
-    script = create :script, include_student_lesson_plans: true
+    script = create :script, include_student_lesson_plans: true, is_migrated: false
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
 
