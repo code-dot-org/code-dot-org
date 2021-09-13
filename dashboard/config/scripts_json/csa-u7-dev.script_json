@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-09 19:29:45 UTC",
+    "serialized_at": "2021-09-10 19:56:52 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csa-u7-dev"
@@ -16,21 +16,9 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
-      "user_facing": true,
-      "position": 1,
-      "properties": {
-        "display_name": "Lessons"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 1,
       "properties": {
         "display_name": "Project"
       },
@@ -42,7 +30,7 @@
     {
       "key": "lessonGroup-4",
       "user_facing": true,
-      "position": 3,
+      "position": 2,
       "properties": {
         "display_name": "Demos and Resources"
       },
@@ -54,162 +42,12 @@
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "Writing Methods to Satisfy Conditions",
+      "key": "lesson-5",
+      "name": "Title Sequence Project",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "lesson-6",
-      "name": "Exploring Method Components and Functionality",
-      "absolute_position": 2,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "lesson-7",
-      "name": "Using Object References as Parameters",
-      "absolute_position": 3,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "lesson-8",
-      "name": "Overloading Methods",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "lesson-9",
-      "name": "Accessing Object Behavior",
-      "absolute_position": 5,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "lesson-10",
-      "name": "Overriding Methods",
-      "absolute_position": 6,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "lesson-11",
-      "name": "Exploring Recursive Methods",
-      "absolute_position": 7,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "lesson-12",
-      "name": "Comparing Recursive and Iterative Solutions",
-      "absolute_position": 8,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "lesson-13",
-      "name": "Writing Recursive Methods",
-      "absolute_position": 9,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "lesson-14",
-      "name": "Maximizing System Reliability",
-      "absolute_position": 10,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "lesson-5",
-      "name": "Title Sequence Project",
-      "absolute_position": 11,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -221,10 +59,10 @@
     {
       "key": "lesson-2",
       "name": "Widgets",
-      "absolute_position": 12,
+      "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 12,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -236,10 +74,10 @@
     {
       "key": "lesson-3",
       "name": "Tools",
-      "absolute_position": 13,
+      "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 13,
+      "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -251,10 +89,10 @@
     {
       "key": "lesson-4",
       "name": "Examples",
-      "absolute_position": 14,
+      "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 14,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -265,126 +103,6 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "2b74e1dc-3e3e-42a6-987b-33cc4f6f857b",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2b74e1dc-3e3e-42a6-987b-33cc4f6f857b",
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "1fa30dba-1f16-43f4-b1dd-4ef743c9acc9",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1fa30dba-1f16-43f4-b1dd-4ef743c9acc9",
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "5896cd95-9627-4ddb-84d0-b3c5e3e2d1f3",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5896cd95-9627-4ddb-84d0-b3c5e3e2d1f3",
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "2791556d-8a3d-441d-9bd6-fda48ff5b2d0",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2791556d-8a3d-441d-9bd6-fda48ff5b2d0",
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "0aeb699a-f35a-4e76-b56e-ce7c0f707a3d",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0aeb699a-f35a-4e76-b56e-ce7c0f707a3d",
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "87bb4ceb-b760-46fa-a1c2-ab0ed62bf170",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "87bb4ceb-b760-46fa-a1c2-ab0ed62bf170",
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "5d375adc-4577-4eed-8ca8-89a9ac2a68f4",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5d375adc-4577-4eed-8ca8-89a9ac2a68f4",
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "c01a2f6e-bbd3-4afd-aa53-a9059878cca0",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c01a2f6e-bbd3-4afd-aa53-a9059878cca0",
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "cf39f812-17d6-41eb-bec3-9f02b1dce4ac",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cf39f812-17d6-41eb-bec3-9f02b1dce4ac",
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
-    {
-      "key": "0060f10d-8a37-4022-9abc-fed54ad07cd2",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0060f10d-8a37-4022-9abc-fed54ad07cd2",
-        "lesson.key": "lesson-14",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev"
-      }
-    },
     {
       "key": "ed503d5c-a6e8-4acb-b31a-fa057ba37aa0",
       "position": 1,
@@ -435,106 +153,6 @@
     }
   ],
   "activity_sections": [
-    {
-      "key": "60d44fda-e6a5-4070-be7e-320d14f1288b",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "60d44fda-e6a5-4070-be7e-320d14f1288b",
-        "lesson_activity.key": "2b74e1dc-3e3e-42a6-987b-33cc4f6f857b"
-      }
-    },
-    {
-      "key": "c05eb7a5-99a1-440c-b606-a592bdd59695",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "c05eb7a5-99a1-440c-b606-a592bdd59695",
-        "lesson_activity.key": "1fa30dba-1f16-43f4-b1dd-4ef743c9acc9"
-      }
-    },
-    {
-      "key": "4b1b5577-c53f-4dcb-9fd4-d15a64b969f8",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "4b1b5577-c53f-4dcb-9fd4-d15a64b969f8",
-        "lesson_activity.key": "5896cd95-9627-4ddb-84d0-b3c5e3e2d1f3"
-      }
-    },
-    {
-      "key": "f180ae7e-babb-4ac4-be0d-c18662e25e0b",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "f180ae7e-babb-4ac4-be0d-c18662e25e0b",
-        "lesson_activity.key": "2791556d-8a3d-441d-9bd6-fda48ff5b2d0"
-      }
-    },
-    {
-      "key": "0a5b2a8f-1a63-4377-af16-936bd5b7c715",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0a5b2a8f-1a63-4377-af16-936bd5b7c715",
-        "lesson_activity.key": "0aeb699a-f35a-4e76-b56e-ce7c0f707a3d"
-      }
-    },
-    {
-      "key": "1af2189a-9863-49be-ba11-89b67d3688fe",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1af2189a-9863-49be-ba11-89b67d3688fe",
-        "lesson_activity.key": "87bb4ceb-b760-46fa-a1c2-ab0ed62bf170"
-      }
-    },
-    {
-      "key": "b3213663-aff1-4652-a1bd-0f448b165fbe",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "b3213663-aff1-4652-a1bd-0f448b165fbe",
-        "lesson_activity.key": "5d375adc-4577-4eed-8ca8-89a9ac2a68f4"
-      }
-    },
-    {
-      "key": "5110162d-cf97-4f55-b37b-a6bb09fbf00d",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5110162d-cf97-4f55-b37b-a6bb09fbf00d",
-        "lesson_activity.key": "c01a2f6e-bbd3-4afd-aa53-a9059878cca0"
-      }
-    },
-    {
-      "key": "bac6b982-a157-4c34-bf0e-c36c69224073",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bac6b982-a157-4c34-bf0e-c36c69224073",
-        "lesson_activity.key": "cf39f812-17d6-41eb-bec3-9f02b1dce4ac"
-      }
-    },
-    {
-      "key": "ed2d76ec-7ef6-4d7d-b89e-585250079be8",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ed2d76ec-7ef6-4d7d-b89e-585250079be8",
-        "lesson_activity.key": "0060f10d-8a37-4022-9abc-fed54ad07cd2"
-      }
-    },
     {
       "key": "9fd956cb-22f6-45a2-8feb-f1bfb11c0a80",
       "position": 1,
@@ -609,279 +227,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L2 Part A Exemplar Demo"
+        "level_keys": [
+          "CSA Music Video Demo"
         ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "c05eb7a5-99a1-440c-b606-a592bdd59695"
-      },
-      "level_keys": [
-        "CSA U7L2 Part A Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L2 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "c05eb7a5-99a1-440c-b606-a592bdd59695"
-      },
-      "level_keys": [
-        "CSA U7L2 Part B Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L3 Part A Exemplar Demo"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "4b1b5577-c53f-4dcb-9fd4-d15a64b969f8"
-      },
-      "level_keys": [
-        "CSA U7L3 Part A Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L3 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "4b1b5577-c53f-4dcb-9fd4-d15a64b969f8"
-      },
-      "level_keys": [
-        "CSA U7L3 Part B Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L4 Exemplar Demo"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "f180ae7e-babb-4ac4-be0d-c18662e25e0b"
-      },
-      "level_keys": [
-        "CSA U7L4 Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L5 Part A Exemplar Demo"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "0a5b2a8f-1a63-4377-af16-936bd5b7c715"
-      },
-      "level_keys": [
-        "CSA U7L5 Part A Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L5 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "0a5b2a8f-1a63-4377-af16-936bd5b7c715"
-      },
-      "level_keys": [
-        "CSA U7L5 Part B Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L6 Part A Exemplar Demo"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "1af2189a-9863-49be-ba11-89b67d3688fe"
-      },
-      "level_keys": [
-        "CSA U7L6 Part A Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L6 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "1af2189a-9863-49be-ba11-89b67d3688fe"
-      },
-      "level_keys": [
-        "CSA U7L6 Part B Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L8 Part A Exemplar Demo"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "5110162d-cf97-4f55-b37b-a6bb09fbf00d"
-      },
-      "level_keys": [
-        "CSA U7L8 Part A Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L8 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "5110162d-cf97-4f55-b37b-a6bb09fbf00d"
-      },
-      "level_keys": [
-        "CSA U7L8 Part B Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L9 Part A Exemplar Demo"
-        ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "bac6b982-a157-4c34-bf0e-c36c69224073"
-      },
-      "level_keys": [
-        "CSA U7L9 Part A Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L9 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "bac6b982-a157-4c34-bf0e-c36c69224073"
-      },
-      "level_keys": [
-        "CSA U7L9 Part B Exemplar Demo"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Title Sequence Project Example"
       },
       "bonus": false,
@@ -899,11 +247,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa widget test2"
+        ],
         "progression": "Neighborhood Setup Widget"
       },
       "bonus": false,
@@ -921,11 +272,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 8x8 Practice Level"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -943,11 +297,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 12x12 Practice Level"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -965,11 +322,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 16x16 Practice Level"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -987,11 +347,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 6,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 32x32 Practice Level"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -1009,11 +372,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 7,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Console Practice Level"
+        ],
         "progression": "Console"
       },
       "bonus": false,
@@ -1031,11 +397,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 8,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Theater Demo"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
@@ -1053,11 +422,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood Predict Level Example"
+        ],
         "progression": "Predict the Output Examples"
       },
       "bonus": false,
@@ -1076,162 +448,6 @@
     }
   ],
   "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L2 Part A Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L2 Part A Exemplar Demo"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "c05eb7a5-99a1-440c-b606-a592bdd59695"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L2 Part B Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L2 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "c05eb7a5-99a1-440c-b606-a592bdd59695"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L3 Part A Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L3 Part A Exemplar Demo"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "4b1b5577-c53f-4dcb-9fd4-d15a64b969f8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L3 Part B Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L3 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "4b1b5577-c53f-4dcb-9fd4-d15a64b969f8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L4 Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L4 Exemplar Demo"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "f180ae7e-babb-4ac4-be0d-c18662e25e0b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L5 Part A Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L5 Part A Exemplar Demo"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "0a5b2a8f-1a63-4377-af16-936bd5b7c715"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L5 Part B Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L5 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "0a5b2a8f-1a63-4377-af16-936bd5b7c715"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L6 Part A Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L6 Part A Exemplar Demo"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "1af2189a-9863-49be-ba11-89b67d3688fe"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L6 Part B Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L6 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "1af2189a-9863-49be-ba11-89b67d3688fe"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L8 Part A Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L8 Part A Exemplar Demo"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "5110162d-cf97-4f55-b37b-a6bb09fbf00d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L8 Part B Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L8 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "5110162d-cf97-4f55-b37b-a6bb09fbf00d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L9 Part A Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L9 Part A Exemplar Demo"
-        ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "bac6b982-a157-4c34-bf0e-c36c69224073"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L9 Part B Exemplar Demo",
-        "script_level.level_keys": [
-          "CSA U7L9 Part B Exemplar Demo"
-        ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-u7-dev",
-        "activity_section.key": "bac6b982-a157-4c34-bf0e-c36c69224073"
-      }
-    },
     {
       "seeding_key": {
         "level.key": "CSA Music Video Demo",
