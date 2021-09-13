@@ -921,7 +921,7 @@ module Services
       ScriptSeed.seed_from_json(json)
 
       script = Script.with_seed_models.find(script.id)
-      assert_equal 'preview', script.course_version.get_published_state
+      assert_equal 'preview', script.course_version.published_state
     end
 
     test 'import_script sets seeded_from from serialized_at' do

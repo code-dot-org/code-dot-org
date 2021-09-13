@@ -1914,7 +1914,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal expected_level_names, actual_level_names
 
     new_dsl = <<~UNIT
-      published_state 'beta'
+      published_state 'in_development'
 
       lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: false
       level 'Level 1_copy'
@@ -1924,7 +1924,6 @@ class ScriptTest < ActiveSupport::TestCase
 
     UNIT
 
-    puts unit_copy.inspect
     assert_equal new_dsl, ScriptDSL.serialize_to_string(unit_copy)
   end
 
