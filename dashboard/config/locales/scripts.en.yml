@@ -24571,7 +24571,8 @@ en:
           title: AI Lab
           description_audience: ''
           description_short: ''
-          description: ''
+          description: Use these levels to explore AI Lab and use in other lessons or activities.
+          student_description: Use these levels to explore AI Lab and use in other lessons or activities. You will need to create a Code.org account and sign-in in order to use these tools.
         poster-experiment:
           lessons:
             lesson-1:
