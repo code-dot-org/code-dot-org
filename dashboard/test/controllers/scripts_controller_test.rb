@@ -1065,7 +1065,7 @@ class ScriptsControllerTest < ActionController::TestCase
       {
         key: "",
         display_name: "Content",
-        user_facing: false,
+        userFacing: false,
         lessons: [
           {
             key: "lesson-1",
@@ -1107,11 +1107,11 @@ class ScriptsControllerTest < ActionController::TestCase
     lesson_groups_json = [
       {
         key: "lesson-group-1",
-        display_name: "lesson group 1",
-        user_facing: true,
+        displayName: "lesson group 1",
+        userFacing: true,
         lessons: [],
         description: 'Description',
-        big_questions: 'Big Questions',
+        bigQuestions: 'Big Questions',
       }
     ].to_json
 
@@ -1157,8 +1157,8 @@ class ScriptsControllerTest < ActionController::TestCase
     lesson_groups_json = [
       {
         key: 'lesson-group-1',
-        display_name: 'updated name',
-        user_facing: true,
+        displayName: 'updated name',
+        userFacing: true,
         lessons: [
           {
             id: lesson.id,
@@ -1166,7 +1166,7 @@ class ScriptsControllerTest < ActionController::TestCase
           },
         ],
         description: 'updated description',
-        big_questions: 'updated questions',
+        bigQuestions: 'updated questions',
       }
     ].to_json
 
@@ -1209,8 +1209,8 @@ class ScriptsControllerTest < ActionController::TestCase
     lesson_groups_json = [
       {
         key: 'lesson-group-1',
-        display_name: 'lesson group 1',
-        user_facing: true,
+        displayName: 'lesson group 1',
+        userFacing: true,
         lessons: [
           {
             id: lesson.id,
@@ -1252,8 +1252,8 @@ class ScriptsControllerTest < ActionController::TestCase
     lesson_groups_json = [
       {
         key: 'lesson-group-1',
-        display_name: 'lesson group 1',
-        user_facing: true,
+        displayName: 'lesson group 1',
+        userFacing: true,
         lessons: [
           {
             id: lesson_1.id,
@@ -1267,8 +1267,8 @@ class ScriptsControllerTest < ActionController::TestCase
       },
       {
         key: 'lesson-group-2',
-        display_name: 'lesson group 2',
-        user_facing: true,
+        displayName: 'lesson group 2',
+        userFacing: true,
         lessons: [],
       }
     ].to_json
@@ -1302,14 +1302,14 @@ class ScriptsControllerTest < ActionController::TestCase
     lesson_groups_json = [
       {
         key: 'lesson-group-1',
-        display_name: 'lesson group 1',
-        user_facing: true,
+        displayName: 'lesson group 1',
+        userFacing: true,
         lessons: [],
       },
       {
         key: 'lesson-group-2',
-        display_name: 'lesson group 2',
-        user_facing: true,
+        displayName: 'lesson group 2',
+        userFacing: true,
         lessons: [
           {
             id: lesson_2.id,
@@ -1354,8 +1354,8 @@ class ScriptsControllerTest < ActionController::TestCase
     lesson_groups_json = [
       {
         key: 'lesson-group-1',
-        display_name: 'lesson group 1',
-        user_facing: true,
+        displayName: 'lesson group 1',
+        userFacing: true,
         lessons: [
           {
             id: lesson_2.id,
@@ -1401,8 +1401,8 @@ class ScriptsControllerTest < ActionController::TestCase
     lesson_groups_json = [
       {
         key: 'lesson-group-2',
-        display_name: 'lesson group 2',
-        user_facing: true,
+        displayName: 'lesson group 2',
+        userFacing: true,
         lessons: [
           {
             id: lesson_2.id,
@@ -1412,8 +1412,8 @@ class ScriptsControllerTest < ActionController::TestCase
       },
       {
         key: 'lesson-group-1',
-        display_name: 'lesson group 1',
-        user_facing: true,
+        displayName: 'lesson group 1',
+        userFacing: true,
         lessons: [
           {
             id: lesson_1.id,
