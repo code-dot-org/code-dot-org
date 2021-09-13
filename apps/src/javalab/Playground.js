@@ -1,14 +1,31 @@
 import {PlaygroundSignalType} from './constants';
-import {assets as assetsApi} from '@cdo/apps/clientApi';
+import {
+  assets as assetsApi,
+  starterAssets as starterAssetsApi
+} from '@cdo/apps/clientApi';
 
 export default class Playground {
-  constructor(onOutputMessage, onNewlineMessage, onInputMessage) {
+  constructor(onOutputMessage, onNewlineMessage, onInputMessage, levelName) {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.onInputMessage = onInputMessage;
     this.images = {};
     this.imagesData = {};
+    this.starterAssetFilenames = [];
+    console.log(`calling getStarterAssets with level name ${levelName}`);
+    starterAssetsApi.getStarterAssets(
+      levelName,
+      this.onStarterAssetsReceived,
+      () => {}
+    );
   }
+
+  onStarterAssetsReceived = result => {
+    const response = JSON.parse(result.response);
+    response.starter_assets.forEach(asset => {
+      this.starterAssetFilenames.push(asset.filename);
+    });
+  };
 
   handleSignal(data) {
     switch (data.value) {
@@ -64,7 +81,7 @@ export default class Playground {
   }
 
   playSound(soundData) {
-    const soundUrl = assetsApi.basePath(soundData.filename);
+    const soundUrl = this.getUrl(soundData.filename);
     this.getAudioElement().src = soundUrl + this.getCacheBustSuffix();
   }
 
@@ -102,7 +119,7 @@ export default class Playground {
     const y = imageData.y * 2;
     const width = imageData.width * 2;
     const height = imageData.height * 2;
-    image.src = assetsApi.basePath(imageData.filename);
+    image.src = this.getUrl(imageData.filename);
     image.style.width = width + 'px';
     image.style.height = height + 'px';
     image.id = imageData.id;
@@ -140,6 +157,14 @@ export default class Playground {
       width,
       x
     )} ${this.getClipPath(height, y)} 0)`;
+  }
+
+  getUrl(filename) {
+    if (this.starterAssetFilenames.includes(filename)) {
+      return starterAssetsApi.basePath(filename) + this.getCacheBustSuffix();
+    } else {
+      return assetsApi.basePath(filename) + this.getCacheBustSuffix();
+    }
   }
 
   getCacheBustSuffix() {
