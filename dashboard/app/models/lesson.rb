@@ -90,7 +90,6 @@ class Lesson < ApplicationRecord
   include CodespanOnlyMarkdownHelper
 
   def self.update_lessons_in_migrated_unit(unit, lesson_group, raw_lessons, counters)
-    unit.lessons.reload
     raw_lessons.map do |raw_lesson|
       lesson = fetch_lesson(raw_lesson, unit)
 
