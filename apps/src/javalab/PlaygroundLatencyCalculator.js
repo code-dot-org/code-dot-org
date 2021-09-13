@@ -33,7 +33,7 @@ class PlaygroundLatencyCalculator {
 
   onUpdateComplete() {
     this.updateCompletedTimeMs = Date.now();
-    if (this.clickReceived && this.updateReceived) {
+    if (this.updateReceived) {
       this.numUpdates++;
 
       this.publishLatency();

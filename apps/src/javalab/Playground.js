@@ -41,19 +41,13 @@ export default class Playground {
     ];
     if (updateEvents.includes(data.value)) {
       this.loadEvents++;
-      if (!this.seenFirstEvent) {
-        this.seenFirstEvent = true;
-        calculator.onUpdateReceived();
-      }
     }
     switch (data.value) {
       case PlaygroundSignalType.ADD_ITEM: {
-        this.loadEvents++;
         this.generateNewItem(data.detail);
         break;
       }
       case PlaygroundSignalType.ADD_CLICKABLE_ITEM: {
-        this.loadEvents++;
         this.generateNewClickableItem(data.detail);
         break;
       }
@@ -63,17 +57,18 @@ export default class Playground {
         break;
       }
       case PlaygroundSignalType.CHANGED_ITEM: {
-        this.loadEvents++;
         this.changeImage(data.detail);
         break;
       }
       case PlaygroundSignalType.PLAY_SOUND: {
-        this.loadEvents++;
         this.playSound(data.detail);
         break;
       }
       case PlaygroundSignalType.RUN: {
+        console.log('run started');
+        calculator.onUpdateReceived();
         this.runStarted = true;
+        this.onLoad();
         break;
       }
       case PlaygroundSignalType.STARTED_CLICK_EVENT: {
@@ -83,6 +78,7 @@ export default class Playground {
       }
       case PlaygroundSignalType.FINISHED_CLICK_EVENT: {
         this.inClickEvent = false;
+        this.onLoad();
         break;
       }
       default:
@@ -115,6 +111,7 @@ export default class Playground {
 
   onLoad() {
     if (this.loadEvents === 0 && !this.inClickEvent && this.runStarted) {
+      console.log('calling onUpdateComplete');
       calculator.onUpdateComplete();
     }
   }
@@ -153,6 +150,7 @@ export default class Playground {
     let originalData = this.imagesData[id];
     this.imagesData[id] = {...originalData, ...imageData};
     this.styleImage(image, this.imagesData[id]);
+    this.loadEvents--;
   }
 
   setUpImage(imageData) {
@@ -181,6 +179,7 @@ export default class Playground {
 
   handleImageClick(imageId) {
     this.onInputMessage('PLAYGROUND', imageId);
+    calculator.onClick();
   }
 
   getPixelValue(configValue) {
