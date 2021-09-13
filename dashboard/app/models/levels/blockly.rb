@@ -226,6 +226,16 @@ class Blockly < Level
     xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
 
+  # "counter" mutations should not be stored because it results in the language being hardcoded
+  def self.remove_counter_mutations(xml_string)
+    xml = Nokogiri::XML(xml_string, &:noblanks)
+    return xml_string if xml.nil?
+    xml.xpath('//mutation').each do |block|
+      block.remove if block.attributes["counter"] && block.attributes["counter"].value == 'counter'
+    end
+    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+  end
+
   # for levels with solutions
   def update_ideal_level_source
     return if !respond_to?(:solution_blocks) || solution_blocks.blank?
