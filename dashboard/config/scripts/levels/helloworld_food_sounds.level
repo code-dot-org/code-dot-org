@@ -72,7 +72,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-13T20:55:18.698+00:00\",\"changed\":[\"cloned from \\\"generic_storyboard_choices_sounds\\\"\"],\"cloned_from\":\"generic_storyboard_choices_sounds\"},{\"changed_at\":\"2021-09-13 20:55:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-13T20:55:18.698+00:00\",\"changed\":[\"cloned from \\\"generic_storyboard_choices_sounds\\\"\"],\"cloned_from\":\"generic_storyboard_choices_sounds\"},{\"changed_at\":\"2021-09-13 20:55:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:54:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
