@@ -89,6 +89,34 @@ class Lesson < ApplicationRecord
 
   include CodespanOnlyMarkdownHelper
 
+  def self.update_lessons_in_migrated_unit(unit, lesson_group, raw_lessons, counters)
+    raw_lessons.map do |raw_lesson|
+      lesson = fetch_lesson(raw_lesson, unit)
+
+      lesson.assign_attributes(
+        lesson_group: lesson_group,
+        absolute_position: (counters.lesson_position += 1),
+        relative_position: lesson.numbered_lesson? ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
+      )
+      lesson.save! if lesson.changed?
+      lesson
+    end
+  end
+
+  def self.fetch_lesson(raw_lesson, unit)
+    if raw_lesson[:id]
+      return Lesson.find_by!(script: unit, id: raw_lesson[:id], key: raw_lesson[:key])
+    end
+    Lesson.prevent_blank_display_name(raw_lesson)
+    Lesson.create!(
+      key: raw_lesson[:key],
+      script: unit,
+      name: raw_lesson[:name],
+      relative_position: 0,  # will be updated by the caller, but can't be nil
+      has_lesson_plan: true
+    )
+  end
+
   def self.add_lessons(unit, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
     unit.lessons.reload
     raw_lessons.map do |raw_lesson|
