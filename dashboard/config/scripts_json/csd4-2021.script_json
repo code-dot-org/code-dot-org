@@ -28,8 +28,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-09 22:58:26 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-09-14 22:09:30 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd4-2021"
     }
