@@ -3,7 +3,6 @@
   "allFilesCompile": "Všetky súbory sa kompilujú!",
   "backpackLabel": "Ruksak",
   "backpackListLoadError": "Pri načítaní tvojho ruksaku sa vyskytla chyba. Skús to znova.",
-  "backpackSaveErrorTitle": "Vyskytla sa chyba",
   "backpackSaveErrorMessage": "Skús to znova",
   "cancel": "Zrušiť",
   "clearConsole": "Vymazať konzolu",

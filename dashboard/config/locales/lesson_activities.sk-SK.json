@@ -197,6 +197,9 @@
         "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
           "name": "Zhrnutie"
         },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": "Video: Moja internetová štvrť"
+        },
         "07c33815-2515-4a63-91f1-51db34b0a00e": {
           "name": "Úvodná aktivita"
         },
@@ -689,11 +692,20 @@
         "5b27bb73-d7a0-4ff5-b8b4-3cc29aa2cc9e": {
           "name": "Úvodná aktivita"
         },
+        "f0a9525c-5225-44d5-9a87-99a70c73b197": {
+          "name": "Hlavná aktivita"
+        },
         "b0345ccb-8e3c-4b40-a86e-5b02ac2ab780": {
           "name": "Zhrnutie"
         },
         "d7c5d028-ebdb-4366-9856-f36f780cd472": {
           "name": "Úvodná aktivita"
+        },
+        "23175482-f558-4d04-aec7-69a02820317e": {
+          "name": "Aktivita na premostenie"
+        },
+        "7007138d-bc16-4bc0-8d30-252440672814": {
+          "name": "Hlavná aktivita"
         },
         "6db6a634-e996-4369-9bc6-b32a570beaff": {
           "name": "Zhrnutie"
@@ -701,8 +713,35 @@
         "8f8f7be8-e984-40ce-9b30-b423814535f8": {
           "name": "Úvodná aktivita"
         },
+        "7ae8b822-0da7-4701-9c2d-068197f8fe14": {
+          "name": "Hlavná aktivita"
+        },
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Zhrnutie"
+        },
+        "1a64d92c-82ce-45e6-a188-a7d88086efd8": {
+          "name": "Úvodná aktivita: Tajný superhrdina"
+        },
+        "f642093a-def9-467e-a8cc-8950b21d62c8": {
+          "name": "Učenie: Ako sa stať ochrancom"
+        },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": "Tvorba: Tvoj digitálny občan – superhrdina"
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": "Zhrnutie: Komix Zachráň deň!"
+        },
+        "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
+          "name": "Ďalšie študijné materiály"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "Úvodná aktivita: Postav sa, sadni si"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Analýza: Prečo ľudia zdieľajú svoje informácie?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Analýza: Súkromné alebo osobné?"
         },
         "b0422816-99eb-45d4-ad51-c872770be86c": {
           "name": "Úrovne"
@@ -712,6 +751,9 @@
         },
         "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
           "name": "Zhrnutie"
+        },
+        "7ccdedb5-15bf-4d75-9efb-e65349644266": {
+          "name": "Hlavná aktivita"
         },
         "d41159ef-433a-4547-a067-2695e41120ae": {
           "name": "Zhrnutie"

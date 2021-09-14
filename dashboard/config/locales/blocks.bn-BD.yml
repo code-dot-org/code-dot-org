@@ -192,6 +192,10 @@ bn:
           DIRECTION:
             '"right"': ডানে
             '"left"': বামে
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": কড়্কড়্ শব্দ
       gamelab_randColor:
         text: যেকোনো রঙ
       gamelab_randomColor:
@@ -331,10 +335,6 @@ bn:
             '"down"': নিচের তীর
             '"left"': বামের তীর
             '"right"': ডানমুখী তীর
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': রামধনু
       RyanLab_moveForward:
         text: সামনে এগিয়ে যান
       RyanLab_turnLeft:

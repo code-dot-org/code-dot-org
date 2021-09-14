@@ -50,7 +50,6 @@ es:
       'Challenge: Making Sense of Sensors': 'Desafío: entender los sensores'
       'Challenge: Updating Variables': 'Desafío: actualizar variables'
       Challenges: Desafíos
-      Chance: Probabilidad
       Change: Cambiar
       Changing Screens: Cambiar pantallas
       Changing Sensor Scale: Cambiar la escala del sensor
@@ -80,7 +79,6 @@ es:
       Create a Story: Crear un Cuento
       Create your project: Crear tu proyecto
       Creating Sprites: Crear sprites
-      Creating a Simulation: Crear una Simulación
       Creative Commons Search: Búsqueda de Creative Commons
       Customize: Personalizar
       Dance Crews: Grupos de baile
@@ -172,6 +170,7 @@ es:
       Introduction to Game Lab: Introducción al Laboratorio de juegos
       Introduction to Variables: Introducción a las variables
       Iteration and Parameters: Repetición y parámetros
+      Keep On Dancing!: Sigue bailando!
       Keeping Data Secret: Mantener los datos en secreto
       Keyboard Input: Entrada de teclado
       LED Apps: Aplicaciones LED
@@ -218,7 +217,6 @@ es:
       Modifying and Creating Arrays: Modificar y crear arreglos
       More Buttons: Más botones
       More Input: Más datos
-      More Monsters: Más monstruos
       More Parameters: Más parámetros
       Motorcycle: Motocicleta
       Move It Move it Video  - Unplugged Activity: 'Vídeo: Muévete Muévete  - Actividad Desconectada'
@@ -250,7 +248,6 @@ es:
       Practice: Practica
       Predict: Predecir
       Prediction: Predicción
-      Programming with Events: Programación con sucesos (events)
       Programming with Rey and BB-8: Programación con Rey y BB-8
       Programs that Repeat: Programas que se repiten
       Project: Proyecto
@@ -265,7 +262,6 @@ es:
       RGB Widget: Widget RGB
       Random Numbers: Números aleatorios
       Reading Sensors: Sensores de lectura
-      Recovery: Recuperación
       Reflection: Reflexión
       Relay Programming - Unplugged Activity: Programación de Relés - Actividad Desconectada
       Repeat Blocks: Bloques Repetir
@@ -295,7 +291,6 @@ es:
       Shapes and Parameters: Formas y parámetros
       Shapes and the Draw Loop: Figuras y el Bucle de Dibujo
       Share Your App: Comparte tu Aplicación
-      Share Your Message: Comparte Tu Mensaje
       Side Scroller: Desplazamiento Lateral
       Simple Circuits: Circuitos Sencillos
       Skill Building: Desarrollo de Habilidades
@@ -313,7 +308,6 @@ es:
       Sprite Velocity: Velocidad de sprites
       Sprites and the Draw Loop: Sprites y el Bucle Dibujar
       Star Chaser: Star Chaser
-      Stopping the Outbreak with Masks: Detener el Brote con mascarillas
       Styling Text: Estilo de texto
       Styling with Classes: Estilo con Classes
       Styling your Website: Diseñar tu página web
@@ -346,7 +340,6 @@ es:
       Using the LED: Usando los LED
       Using the Repeat Block: Uso del bloque 'repetir'
       Using the Switch: Usando la instrucción "Switch"
-      Vaccines: Vacunas
       Variables: Variables
       Velocity: Velocidad
       Velocity and the Counter Pattern: Velocidad y patrón del contador
@@ -450,6 +443,7 @@ es:
       Welcome to Monster Town: Bienvenido a Monster Town
       Where'd They Go?: '¿A dónde fueron?'
       While Loops with the Farmer: Bucles 'mientras' en la Granjera
+      'Widget: Text Compression': 'Widget: Compresión de texto'
       Wrap-up: Cierre
       Your Personal Website: Tu Sitio Web Personal
       getNumber: obtenerNúmero

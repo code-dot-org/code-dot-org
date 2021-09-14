@@ -1574,26 +1574,26 @@ fr:
           nid d'abeilles, faire du miel». La-la !
     C4_conditionals:
       1:
-        text: Nous avons un nouveau bloc qui s’appelle le bloc « Si-Sinon ». Il s'agit
+        text: Nous avons un nouveau bloc qui s’appelle le bloc « Si/Sinon ». Il s'agit
           d'une instruction conditionnelle, tout comme le bloc « Si » que tu as utilisé
           dans le puzzle auparavant. Mais il y a maintenant une nouvelle partie en
-          bas qui dit « Sinon ». Le bloc « Si-Sinon » laisse l'abeille prendre une
+          bas qui dit « Sinon ». Le bloc « Si/Sinon » laisse l'abeille prendre une
           décision entre deux séries d'actions. Si l'abeille est sur une fleur, l'abeille
           va faire l'ensemble des actions que tu as mis dans la première partie où
-          il est dit «Faire». Si l'abeille n’est pas sur une fleur, l'abeille va faire
-          l'ensemble des actions que tu mets dans le créneau « Sinon ».
+          il est dit « Faire ». Si l'abeille n’est pas sur une fleur, l'abeille va
+          faire l'ensemble des actions que tu mets dans le créneau « Sinon ».
       2:
-        text: 'Les instructions «Si» sont la façon dont les ordinateurs sont capables
+        text: 'Les instructions « Si » sont la façon dont les ordinateurs sont capables
           de prendre des décisions. Les humains mettent en place des conditions pour
           l''ordinateur qui disent: si l’ordinateur rencontre cette situation, alors
           il doit faire cette action. « Sinon », qui signifie simplement dans le cas
           contraire, l’ordinateur doit faire cela. La partie supérieure de notre bloc
-          « Si-Sinon » dit « Si à une fleur». Mais la partie supérieure de notre bloc
-          pourrait dire d’autres choses, comme «Si le nectar est égal à 2» ou «S''il
-          y a un chemin devant», notre bloc se comportera de la même manière. Si l’instruction
-          dans la partie supérieure est vraie, alors elle fera la première série d''actions.
-          Mais si l''instruction dans la partie supérieure est fausse, alors elle
-          fera la deuxième série d''actions.'
+          « Si/Sinon » dit « Si à une fleur ». Mais la partie supérieure de notre
+          bloc pourrait dire d’autres choses, comme « Si le nectar est égal à 2 »
+          ou « S''il y a un chemin devant », notre bloc se comportera de la même manière.
+          Si l’instruction dans la partie supérieure est vraie, alors elle fera la
+          première série d''actions. Mais si l''instruction dans la partie supérieure
+          est fausse, alors elle fera la deuxième série d''actions.'
     C4_for_loops:
       1:
         text: Quand tu utilises un bloc « Répéter » pour créer une boucle dans ton
@@ -4133,7 +4133,7 @@ fr:
           conditionnelles si sont utiles lorsque tu exécutes du code dans des situations
           imprévisibles, telles que des ruines mystérieuses dans des grottes sous-marines.
       7:
-        text: Essaye d'utiliser les blocs if et prends ton code pour un tour.
+        text: Essaye d'utiliser les blocs « Si » et prends ton code pour un tour.
       8:
         text: Ça alors ! Les ruines de Netty étaient géniales. Je dois vraiment quitter
           la maison de mes parents. Alors, qu'en penses-tu ? Est-ce que les conditions

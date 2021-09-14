@@ -25222,6 +25222,14 @@ hi:
               display_name: 'गहन अध्ययन करना: कोर्स E और F के लिए'
             Introduction:
               display_name: परिचय
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: पाठ 3
+            Lesson 4:
+              display_name: पाठ 4
+            Lesson 5:
+              display_name: पाठ 5
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -25345,8 +25353,10 @@ hi:
               name: मॉड्यूल 2
             Module 3:
               key: मॉड्यूल 3
+              name: मॉड्यूल 3
             Module 4:
               key: मॉड्यूल 4
+              name: मॉड्यूल 4
             Module 5:
               key: मॉड्यूल 5
             Module 6:
@@ -25384,6 +25394,10 @@ hi:
           lesson_groups:
             lessonGroup-3:
               display_name: संसाधन
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Star 2
         dlp21-csp-mod1:
           title: CS के मूल सिद्धांत गहन प्रशिक्षण मॉड्यूल 1
         dlp21-csd:
@@ -25412,3 +25426,11 @@ hi:
           lesson_groups:
             lessonGroup-3:
               display_name: प्रोजेक्ट
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: कंप्यूटिंग में अन्वेषण
+            lesson-13:
+              name: त्वरणमापी
+            lesson-19:
+              name: प्रोजेक्ट

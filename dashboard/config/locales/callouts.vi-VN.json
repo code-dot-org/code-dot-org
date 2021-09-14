@@ -750,6 +750,12 @@
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "जेव्हा तुम्हाला हिंटची गरज असेल तेव्हा लाईटबल्बला क्लिक करा!  "
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Bạn có thể tìm thấy các biến của mình dưới đây!"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Nhấp chuột vào đây để xem cách hoạt động của hành vi này."
         }
       }
     }

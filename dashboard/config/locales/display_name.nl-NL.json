@@ -125,15 +125,16 @@
         "CourseF_outbreak2": "Virussimulatie",
         "CourseF_outbreak3": "Virussimulatie",
         "CourseF_outbreak4": "Uw simulatie modificeren",
-        "CourseF_outbreak6": "Willekeurige kans",
-        "CourseF_outbreak7": "Immuniteit en vaccines",
-        "CourseF_outbreak8": "Een bericht delen",
+        "CourseF_outbreak7": "Willekeurige kans",
+        "CourseF_outbreak8": "Immuniteit en vaccines",
         "courseF_bee_for5_2021": "Variabelen",
         "courseF_events_freeplay_aquatic": "Aquatisch",
         "courseF_sprites_freeplay_aquatic": "Aquatisch",
         "ramp_artist_loops4_2021": "Ster",
         "CourseD_Dance_2020_bonus1_2021": "Heen en weer",
-        "CourseD_Dance_2020_bonus3_2021": "Ga in positie staan"
+        "CourseD_Dance_2020_bonus3_2021": "Ga in positie staan",
+        "CourseF_outbreak5": "Uw simulatie modificeren",
+        "international_outbreak_freeplay": "Een bericht delen"
       }
     }
   }

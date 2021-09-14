@@ -15,11 +15,20 @@
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
       "include_student_lesson_plans": true,
-      "tts": true
+      "tts": true,
+      "announcements": [
+        {
+          "notice": "Supports to Teach CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-27 18:24:11 UTC",
+    "serialized_at": "2021-09-10 16:06:55 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd1-2021"
@@ -2215,7 +2224,7 @@
       "key": "187046cd-aaf6-466a-be86-5060acdda8e4",
       "position": 5,
       "properties": {
-        "description": "In order to solve this problem, you had to **get** information from your partner in the form of answers to you questions.  You also had to **give** information to your partner in the form of a recommendation.  Computers do the same thing.  The information that they get from users is called **input**, and the information that they give to users is called **output**.  Lets take a look at an app that also makes pet recommendations.",
+        "description": "In order to solve this problem, you had to **get** information from your partner in the form of answers to your questions.  You also had to **give** information to your partner in the form of a recommendation.  Computers do the same thing.  The information that they get from users is called **input**, and the information that they give to users is called **output**.  Lets take a look at an app that also makes pet recommendations.",
         "remarks": true
       },
       "seeding_key": {
@@ -5402,10 +5411,9 @@
     },
     {
       "name": "Apps and Problem Solving",
-      "url": "https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/edit",
+      "url": "https://docs.google.com/document/d/1Oza12wkU_FWawNSeXBae_v6knPNdO8Ph5EPeYBSvy3k/edit",
       "key": "app-proposal-project",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
         "include_in_pdf": true
       },

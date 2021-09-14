@@ -15,12 +15,21 @@
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
       "include_student_lesson_plans": true,
-      "tts": true
+      "tts": true,
+      "announcements": [
+        {
+          "notice": "Supports for Teaching CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-05 17:52:03 UTC",
-    "published_state": null,
+    "serialized_at": "2021-09-10 00:01:28 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -5733,7 +5742,7 @@
     },
     {
       "name": "ASCII Challenges",
-      "url": "https://docs.google.com/document/d/1IieRj27MGJZSHF4I7CNIt6O3IlzCCMNmqYmYDF3_TPs/edit",
+      "url": "https://docs.google.com/document/d/1HtbjV-HiNGAEH0FVSdipR6RIknT16YXc1SqGhM58eII/edit",
       "key": "ascii_challenges",
       "properties": {
         "type": "Answer Key",
@@ -5955,7 +5964,7 @@
     },
     {
       "name": "Interpreting Data",
-      "url": "https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/edit",
+      "url": "https://docs.google.com/document/d/1KC2wlSjvxZxZqZiezrtUZrPsGumkI70hkJDagR1gNDE/edit",
       "key": "interpreting-data-1",
       "properties": {
         "type": "Resource",
@@ -6068,7 +6077,7 @@
     },
     {
       "name": "Meals Data",
-      "url": "https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
       "key": "meals-data-resource-2019",
       "properties": {
         "type": "Resource",
@@ -6229,7 +6238,7 @@
     },
     {
       "name": "Representation Matters",
-      "url": "https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/17LnkRYXZMiyjC9enTcZRp2akfySN_YYmMe8fJRmkF4E/edit",
       "key": "representation-matters-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6254,7 +6263,7 @@
     },
     {
       "name": "Representing Information 1",
-      "url": "https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit",
+      "url": "https://docs.google.com/document/d/1B3BDFK50Na6D28aoZFHHtBTInThj26Qgdu82Z7YrcRI/edit",
       "key": "representing-information-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6291,7 +6300,7 @@
     },
     {
       "name": "Representing Information 2",
-      "url": "https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit",
+      "url": "https://docs.google.com/document/d/1XXyUF6qGzMpriXd89XH8Kg10jMwiWIsbC8_utCJIYRY/edit",
       "key": "representing_information_2",
       "properties": {
         "type": "Exemplar",

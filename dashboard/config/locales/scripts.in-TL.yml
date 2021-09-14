@@ -19679,6 +19679,8 @@ in:
               description_teacher: crwdns2686488:0crwdne2686488:0
             lesson-7:
               name: crwdns2686490:0crwdne2686490:0
+              description_student: crwdns2692653:0crwdne2692653:0
+              description_teacher: crwdns2692655:0crwdne2692655:0
             lesson-8:
               name: crwdns2686492:0crwdne2686492:0
             lesson-9:
@@ -20368,9 +20370,11 @@ in:
           lessons:
             lesson-1:
               name: crwdns2687414:0crwdne2687414:0
+              description_student: crwdns2687416:0crwdne2687416:0
               description_teacher: crwdns2687418:0crwdne2687418:0
             lesson-2:
               name: crwdns2687420:0crwdne2687420:0
+              description_student: crwdns2687422:0crwdne2687422:0
               description_teacher: crwdns2687424:0crwdne2687424:0
             lesson-3:
               name: crwdns2687426:0crwdne2687426:0
@@ -20392,10 +20396,12 @@ in:
           name: crwdns2687450:0crwdne2687450:0
           title: crwdns2687452:0crwdne2687452:0
           description: crwdns2687458:0crwdne2687458:0
+          student_description: crwdns2692657:0crwdne2692657:0
         self-paced-pl-csd2-2021:
           lessons:
             lesson-4:
               name: crwdns2687460:0crwdne2687460:0
+              description_student: crwdns2687462:0crwdne2687462:0
               description_teacher: crwdns2687464:0crwdne2687464:0
             lesson-5:
               name: crwdns2687466:0crwdne2687466:0
@@ -20405,11 +20411,13 @@ in:
               name: crwdns2687470:0crwdne2687470:0
             lesson-3:
               name: crwdns2687472:0crwdne2687472:0
+              description_student: crwdns2687474:0crwdne2687474:0
               description_teacher: crwdns2687476:0crwdne2687476:0
             lesson-2:
               name: crwdns2687478:0crwdne2687478:0
             lesson-8:
               name: crwdns2687480:0crwdne2687480:0
+              description_student: crwdns2687482:0crwdne2687482:0
               description_teacher: crwdns2687484:0crwdne2687484:0
             lesson-9:
               name: crwdns2687486:0crwdne2687486:0
@@ -20425,16 +20433,20 @@ in:
           name: crwdns2687496:0crwdne2687496:0
           title: crwdns2687498:0crwdne2687498:0
           description: crwdns2687504:0crwdne2687504:0
+          student_description: crwdns2692659:0crwdne2692659:0
         self-paced-pl-csd3-2021:
           lessons:
             lesson-1:
               name: crwdns2688630:0crwdne2688630:0
+              description_student: crwdns2688632:0crwdne2688632:0
               description_teacher: crwdns2688634:0crwdne2688634:0
             lesson-2:
               name: crwdns2688636:0crwdne2688636:0
+              description_student: crwdns2688638:0crwdne2688638:0
               description_teacher: crwdns2688640:0crwdne2688640:0
             lesson-3:
               name: crwdns2689205:0crwdne2689205:0
+              description_student: crwdns2689207:0crwdne2689207:0
               description_teacher: crwdns2689209:0crwdne2689209:0
           lesson_groups:
             lessonGroup-2:
@@ -20442,16 +20454,20 @@ in:
           name: crwdns2687506:0crwdne2687506:0
           title: crwdns2687508:0crwdne2687508:0
           description: crwdns2687514:0crwdne2687514:0
+          student_description: crwdns2692661:0crwdne2692661:0
         self-paced-pl-csd4-2021:
           lessons:
             lesson-1:
               name: crwdns2688644:0crwdne2688644:0
+              description_student: crwdns2688646:0crwdne2688646:0
               description_teacher: crwdns2688648:0crwdne2688648:0
             lesson-2:
               name: crwdns2689211:0crwdne2689211:0
+              description_student: crwdns2689213:0crwdne2689213:0
               description_teacher: crwdns2689215:0crwdne2689215:0
             lesson-3:
               name: crwdns2689217:0crwdne2689217:0
+              description_student: crwdns2689219:0crwdne2689219:0
               description_teacher: crwdns2689221:0crwdne2689221:0
           lesson_groups:
             lessonGroup-2:
@@ -20459,6 +20475,7 @@ in:
           name: crwdns2687516:0crwdne2687516:0
           title: crwdns2687518:0crwdne2687518:0
           description: crwdns2687524:0crwdne2687524:0
+          student_description: crwdns2692663:0crwdne2692663:0
         self-paced-pl-csd5-2021:
           lessons:
             lesson-1:
@@ -21062,7 +21079,6 @@ in:
               name: crwdns2690285:0crwdne2690285:0
           name: crwdns2690291:0crwdne2690291:0
           title: crwdns2690293:0crwdne2690293:0
-          description: crwdns2690299:0crwdne2690299:0
         dlp21-csd-mod3:
           lessons:
             lesson-1:
@@ -21089,7 +21105,6 @@ in:
               name: crwdns2690351:0crwdne2690351:0
           name: crwdns2690357:0crwdne2690357:0
           title: crwdns2690359:0crwdne2690359:0
-          description: crwdns2690365:0crwdne2690365:0
         dlp21-csp-mod3:
           lessons:
             lesson-1:
@@ -21956,3 +21971,74 @@ in:
           description: crwdns2692563:0crwdne2692563:0
           student_description: crwdns2692565:0crwdne2692565:0
           name: crwdns2692571:0crwdne2692571:0
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: crwdns2692671:0crwdne2692671:0
+          name: crwdns2692677:0crwdne2692677:0
+          title: crwdns2692679:0crwdne2692679:0
+          description_short: crwdns2692683:0crwdne2692683:0
+        csdu6-playground:
+          lessons:
+            lesson-1:
+              name: crwdns2692689:0crwdne2692689:0
+            lesson-2:
+              name: crwdns2692695:0crwdne2692695:0
+            lesson-3:
+              name: crwdns2692701:0crwdne2692701:0
+              description_teacher: crwdns2692705:0crwdne2692705:0
+            lesson-4:
+              name: crwdns2692707:0crwdne2692707:0
+              description_teacher: crwdns2692711:0crwdne2692711:0
+            lesson-5:
+              name: crwdns2692713:0crwdne2692713:0
+            lesson-6:
+              name: crwdns2692719:0crwdne2692719:0
+              description_teacher: crwdns2692723:0crwdne2692723:0
+            lesson-7:
+              name: crwdns2692725:0crwdne2692725:0
+              description_teacher: crwdns2692729:0crwdne2692729:0
+            lesson-8:
+              name: crwdns2692731:0crwdne2692731:0
+            lesson-9:
+              name: crwdns2692737:0crwdne2692737:0
+              description_teacher: crwdns2692741:0[0]crwdnd2692741:0[5]crwdne2692741:0
+            lesson-10:
+              name: crwdns2692743:0crwdne2692743:0
+              description_teacher: crwdns2692747:0crwdne2692747:0
+            lesson-11:
+              name: crwdns2692749:0crwdne2692749:0
+              description_teacher: crwdns2692753:0crwdne2692753:0
+            lesson-12:
+              name: crwdns2692755:0crwdne2692755:0
+            lesson-13:
+              name: crwdns2692761:0crwdne2692761:0
+            lesson-14:
+              name: crwdns2692767:0crwdne2692767:0
+            lesson-15:
+              name: crwdns2692773:0crwdne2692773:0
+            lesson-17:
+              name: crwdns2692775:0crwdne2692775:0
+            lesson-16:
+              name: crwdns2692781:0crwdne2692781:0
+            lesson-18:
+              name: crwdns2692783:0crwdne2692783:0
+            lesson-19:
+              name: crwdns2692785:0crwdne2692785:0
+          lesson_groups:
+            lessonGroup-3:
+              display_name: crwdns2692787:0crwdne2692787:0
+            lessonGroup-2:
+              display_name: crwdns2692789:0crwdne2692789:0
+            lessonGroup-4:
+              display_name: crwdns2692791:0crwdne2692791:0
+          name: crwdns2692793:0crwdne2692793:0
+          title: crwdns2692795:0crwdne2692795:0
+          description_short: crwdns2692799:0crwdne2692799:0
+          student_description: crwdns2692803:0crwdne2692803:0
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: crwdns2692805:0crwdne2692805:0
+          name: crwdns2692811:0crwdne2692811:0
+          title: crwdns2692813:0crwdne2692813:0

@@ -303,8 +303,13 @@
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "Giriş"
         },
+        "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
+          "name": "Salgın",
+          "description": "_Bugünkü derste, bir virüs salgınının gerçekleşmek üzere olduğu “Canavar Şehri”ne gidiyorsunuz. Dr. Canavar'ın virüsün yayılmasını yavaşlatmak için yardımınıza ihtiyacı var._\n\n_Hareketli Nesne Laboratuvarında bir salgın simülatörü oluşturacak ve ardından bunu bir virüsün nasıl yayılabileceğini anlamak için kullanacaksınız. Ayrıca tüm canavarların tekrar sağlıklarına kavuşmalarına yardım edeceksiniz!_",
+          "progression_name": "Salgın"
+        },
         "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
-          "progression_name": "Monster Town'a hoş geldiniz"
+          "progression_name": "Canavar Şehri'ne Hoş Geldiniz"
         },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
@@ -315,7 +320,14 @@
           "progression_name": "Beceri Oluşturma"
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
+          "description": "**Şunu yapın:** _Salgın: Bilim Adamı Gibi Düşünmek'i okumak için sınıfı tekrar bir araya getirin._",
           "progression_name": "Simülasyonlardan Öğrenmek"
+        },
+        "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
+          "progression_name": "Mini Proje: Salgın Simülatörü"
+        },
+        "2085bbfe-07e4-4eb4-9830-520e979a04c8": {
+          "description": "_Simülasyonlar, gerçek dünyada gözlemlenmesi zor olabilecek şeyleri öğrenmenin harika bir yoludur. Bilim adamlarının sorunları çözmelerine, sorunun nasıl çözüleceğini tahmin etmelerine, yeni fikirleri güvenli ve verimli bir şekilde test etmelerine yardımcı olurlar. Simülasyonunuz, Canavar Şehri'ndeki bir virüs salgınının nasıl görünebileceğini göstermenin bir yoludur._"
         },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "Yansıma"

@@ -450,6 +450,10 @@ ka:
             '"West"': აღმოსავლეთი
       gamelab_locationMouse:
         text: თაგვის მდებარეობა
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': წვიმა
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -464,6 +468,10 @@ ka:
             '"East"': აღმოსავლეთი
             '"South"': სამრხეთი
             '"West"': აღმოსავლეთი
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": ხრაშუნი
       gamelab_pointInDirection:
         options:
           DIRECTION:
@@ -743,13 +751,8 @@ ka:
             '"right"': მარჯვენა ისარი
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"solid"': ერთიანი
+          PALETTE:
             '"rainbow"': ცისარტყელა
-      PoemBot_setForegroundEffect:
-        options:
-          FG_EFFECT:
-            '"rain"': წვიმა
       RyanLab_moveForward:
         text: წინ გადაადგილება
       RyanLab_turnLeft:
@@ -822,3 +825,7 @@ ka:
         text: წინ გადაადგილება
       craft_placeTorch:
         text: ჩირაღდნის დაყენება
+      craft_turn:
+        options:
+          DIR:
+            right: მარჯვნივ ↻

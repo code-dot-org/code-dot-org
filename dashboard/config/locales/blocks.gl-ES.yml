@@ -189,6 +189,10 @@ gl:
           DIRECTION:
             '"right"': dereita
             '"left"': esquerda
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": triture
       gamelab_randColor:
         text: cor aleatoria
       gamelab_randomColor:
@@ -346,10 +350,6 @@ gl:
             '"down"': frecha cara abaixo
             '"left"': frecha esquerda
             '"right"': frecha dereita
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': arco da vella
       RyanLab_moveForward:
         text: avance
       RyanLab_turnLeft:

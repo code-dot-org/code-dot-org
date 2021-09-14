@@ -3793,6 +3793,11 @@
           "move and get nectar with counter": {
             "name": "двигаться и собирать нектар со счетчиком"
           }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "сбросить игру"
+          }
         }
       }
     }

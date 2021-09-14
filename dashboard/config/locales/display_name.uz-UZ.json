@@ -178,10 +178,10 @@
         "CourseF_outbreak2": "Virus Simulatsiyasi",
         "CourseF_outbreak3": "Virus Simulatsiyasi",
         "CourseF_outbreak4": "Simulyatsiyangizni o'zgartiring",
-        "CourseF_outbreak5": "Tiklash",
-        "CourseF_outbreak6": "Tasodifiy tanlov",
-        "CourseF_outbreak7": "Immunitet va emlashlar",
-        "CourseF_outbreak8": "Xabaringizni ulashing",
+        "CourseF_outbreak5": "Simulyatsiyangizni o'zgartiring",
+        "CourseF_outbreak6": "Tiklash",
+        "CourseF_outbreak7": "Tasodifiy tanlov",
+        "CourseF_outbreak8": "Immunitet va emlashlar",
         "CourseF_video_introSpriteLab_2021": "Bu Sprite Lab",
         "MC_HOC_2017_01_RETRY_2021": "Uy-joy",
         "MC_HOC_2017_02_Cole_2021": "Ferma",
@@ -207,7 +207,8 @@
         "courseF_sprites_freeplay_aquatic": "Aquatic",
         "courseF_sprites_properties": "Sprait hususiyatlari",
         "ramp_artist_loops4_2021": "Yulduz raqsi",
-        "scrat_loops_C-F_video_2021": "Muz davridagi sikllar. Video"
+        "scrat_loops_C-F_video_2021": "Muz davridagi sikllar. Video",
+        "international_outbreak_freeplay": "Xabaringizni ulashing"
       }
     }
   }
