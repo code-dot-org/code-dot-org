@@ -160,10 +160,13 @@ export default class Playground {
   changeImage(imageData) {
     const id = imageData.id;
     let image = document.getElementById(id);
-    let originalData = this.imagesData[id];
-    this.imagesData[id] = {...originalData, ...imageData};
-    this.styleImage(image, this.imagesData[id]);
+    if (image) {
+      let originalData = this.imagesData[id];
+      this.imagesData[id] = {...originalData, ...imageData};
+      this.styleImage(image, this.imagesData[id]);
+    }
     this.loadEvents--;
+    this.onLoad();
   }
 
   setUpImage(imageData) {
