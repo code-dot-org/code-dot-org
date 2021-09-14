@@ -21,9 +21,11 @@ class ConvertApplicationClasses < ActiveRecord::Migration[5.2]
         # convert Teacher1819Application to TeacherApplication
         ActiveRecord::Base.transaction do
           Pd::Application::ApplicationBase.
+            with_deleted.
             where("type in (?)", TEACHER_APPLICATION_CLASSES.values).
             update_all(type: "Pd::Application::TeacherApplication")
           Pd::Application::ApplicationBase.
+            with_deleted.
             where("type in (?)", PRINCIPAL_APPROVAL_APPLICATION_CLASSES.values).
             update_all(type: "Pd::Application::PrincipalApprovalApplication")
         end
@@ -32,27 +34,30 @@ class ConvertApplicationClasses < ActiveRecord::Migration[5.2]
       dir.down do
         # convert TeacherApplication to Teacher1819Application
         ActiveRecord::Base.transaction do
-          Pd::Application::ApplicationBase.
-            where(type: "Pd::Application::TeacherApplication").each do |application|
-            old_type = TEACHER_APPLICATION_CLASSES[application.application_year]
-            if old_type
-              application.update!(type: old_type)
-            else
-              # if the old type doesn't exist, i.e. for 2022-2023 in the future, use the most recent class.
-              # the application_year will still be correct and unchanged
-              application.update!(type: "Pd::Application::Teacher2122Application")
-            end
+          TEACHER_APPLICATION_CLASSES.each do |key, value|
+            Pd::Application::ApplicationBase.
+              with_deleted.
+              where(application_year: key).
+              where(application_type: 'Teacher').
+              update_all(type: value)
           end
-
-          Pd::Application::ApplicationBase.
-            where(type: "Pd::Application::PrincipalApprovalApplication").each do |application|
-            old_type = PRINCIPAL_APPROVAL_APPLICATION_CLASSES[application.application_year]
-            if old_type
-              application.update!(type: old_type)
-            else
-              application.update!(type: "Pd::Application::PrincipalApproval2122Application")
-            end
+          PRINCIPAL_APPROVAL_APPLICATION_CLASSES.each do |key, value|
+            Pd::Application::ApplicationBase.
+              with_deleted.
+              where(application_year: key).
+              where(application_type: 'Principal Approval').
+              update_all(type: value)
           end
+          # if the old type doesn't exist, i.e. for 2022-2023 in the future, use the most recent class.
+          # the application_year will still be correct and unchanged
+          Pd::Application::ApplicationBase.
+            with_deleted.
+            where(type: 'Pd::Application::TeacherApplication').
+            update_all(type: 'Pd::Application::Teacher2122Application')
+          Pd::Application::ApplicationBase.
+            with_deleted.
+            where(type: 'Pd::Application::PrincipalApprovalApplication').
+            update_all(type: 'Pd::Application::PrincipalApproval2122Application')
         end
       end
     end
