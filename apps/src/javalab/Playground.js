@@ -37,7 +37,9 @@ export default class Playground {
       PlaygroundSignalType.ADD_ITEM,
       PlaygroundSignalType.ADD_CLICKABLE_ITEM,
       PlaygroundSignalType.CHANGED_ITEM,
-      PlaygroundSignalType.PLAY_SOUND
+      PlaygroundSignalType.PLAY_SOUND,
+      PlaygroundSignalType.REMOVE_CLICKABLE_ITEM,
+      PlaygroundSignalType.REMOVE_ITEM
     ];
     if (updateEvents.includes(data.value)) {
       this.loadEvents++;
@@ -119,19 +121,22 @@ export default class Playground {
     //     this.loggedInitialLoad
     //   }`
     // );
-    if (this.loadEvents === 0 && !this.inClickEvent && this.runStarted) {
+    if (this.loadEvents <= 0 && !this.inClickEvent && this.runStarted) {
       if (!this.loggedInitialLoad) {
         calculator.onUpdateReceived();
         this.loggedInitialLoad = true;
       } else {
         calculator.onUpdateComplete();
       }
+      this.loadEvents = 0;
     }
   }
 
   removeItem(imageData) {
     const image = document.getElementById(imageData.id);
     image.remove();
+    this.loadEvents--;
+    this.onLoad();
   }
 
   playSound(soundData) {
