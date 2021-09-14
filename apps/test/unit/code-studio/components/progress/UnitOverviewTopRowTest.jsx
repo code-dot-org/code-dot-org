@@ -283,7 +283,7 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.false;
   });
 
-  it('renders dropdown button with links to printing options when published state is not pilot', () => {
+  it('renders dropdown button with links to printing options when published state is not pilot or indevelopment', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -307,7 +307,7 @@ describe('UnitOverviewTopRow', () => {
     ]);
   });
 
-  it('does not render printing options dropdown when published state is pilot', () => {
+  it('does not render overview printing option in dropdown for pilot course', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -317,10 +317,20 @@ describe('UnitOverviewTopRow', () => {
         publishedState={PublishedState.pilot}
       />
     );
-    expect(wrapper.find(DropdownButton).length).to.equal(0);
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper
+      .find(DropdownButton)
+      .first()
+      .props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      '/link/to/script_resources.pdf'
+    ]);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+      'Print Handouts'
+    ]);
   });
 
-  it('does not render printing options dropdown when published state is in-development', () => {
+  it('does not render overview printing option in dropdown for in development course', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -330,7 +340,17 @@ describe('UnitOverviewTopRow', () => {
         publishedState={PublishedState.in_development}
       />
     );
-    expect(wrapper.find(DropdownButton).length).to.equal(0);
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper
+      .find(DropdownButton)
+      .first()
+      .props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      '/link/to/script_resources.pdf'
+    ]);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+      'Print Handouts'
+    ]);
   });
 
   it('does not render printing option dropdown for students', () => {

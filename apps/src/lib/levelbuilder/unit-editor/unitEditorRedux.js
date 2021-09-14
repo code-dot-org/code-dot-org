@@ -267,19 +267,3 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
 
   return lessonGroups;
 };
-
-export const mapLessonGroupDataForUpdate = lessonGroups =>
-  lessonGroups.map(lessonGroup => ({
-    key: lessonGroup.key,
-    display_name: lessonGroup.displayName,
-    user_facing: lessonGroup.userFacing,
-    position: lessonGroup.position,
-    description: lessonGroup.description || '',
-    big_questions: lessonGroup.bigQuestions || '',
-    lessons: lessonGroup.lessons.map(lesson => ({
-      id: lesson.id,
-      key: lesson.key,
-      name: lesson.name,
-      position: lesson.position
-    }))
-  }));

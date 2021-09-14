@@ -18,8 +18,7 @@ import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import {
   init,
-  mapLessonGroupDataForEditor,
-  mapLessonGroupDataForUpdate
+  mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {lessonGroupShape} from './shapes';
@@ -177,7 +176,11 @@ class UnitEditor extends React.Component {
   };
 
   handleStandaloneUnitChange = () => {
-    this.setState({isCourse: !this.state.isCourse});
+    this.setState({
+      isCourse: !this.state.isCourse,
+      familyName: null,
+      versionYear: null
+    });
   };
 
   handleShowCalendarChange = () => {
@@ -271,8 +274,7 @@ class UnitEditor extends React.Component {
       project_widget_types: this.state.projectWidgetTypes,
       lesson_extras_available: this.state.lessonExtrasAvailable,
       lesson_groups:
-        this.props.isMigrated &&
-        JSON.stringify(mapLessonGroupDataForUpdate(this.props.lessonGroups)),
+        this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
       script_text: !this.props.isMigrated && this.state.lessonLevelData,
       last_updated_at: this.state.lastUpdatedAt,
       old_unit_text: this.state.oldScriptText,
