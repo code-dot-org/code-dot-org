@@ -121,24 +121,21 @@ class CoursesController < ApplicationController
   def vocab
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_units[0].is_migrated
+    return render :forbidden unless unit_group.can_preview_lesson_plans?(current_user)
     @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
   def resources
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_units[0].is_migrated
+    return render :forbidden unless unit_group.can_preview_lesson_plans?(current_user)
     @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
   def code
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_units[0].is_migrated
+    return render :forbidden unless unit_group.can_preview_lesson_plans?(current_user)
     @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
@@ -150,8 +147,7 @@ class CoursesController < ApplicationController
       return
     end
     raise ActiveRecord::RecordNotFound unless unit_group
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_units[0].is_migrated
+    return render :forbidden unless unit_group.can_preview_lesson_plans?(current_user)
     @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 

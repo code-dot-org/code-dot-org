@@ -691,6 +691,10 @@ class UnitGroup < ApplicationRecord
     !!default_units[0]&.is_migrated?
   end
 
+  def can_preview_lesson_plans?(user)
+    default_units.any? {|unit| unit.can_preview_lesson_plans?(user)}
+  end
+
   def prevent_course_version_change?
     # rubocop:disable Style/SymbolProc
     # For reasons I (Bethany) still don't understand, using a proc here causes
