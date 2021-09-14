@@ -222,19 +222,6 @@ class UnitEditor extends React.Component {
         shouldCloseAfterSave = false;
       }
     }
-    // HACK: until the unit edit page no longer overwrites changes to the
-    // arrangement of levels within lessons, give the user a warning
-    if (
-      window.lessonEditorOpened &&
-      !confirm(
-        'WARNING: It looks like you opened a lesson edit page from this unit edit page. ' +
-          'If you made any changes on the lesson edit page which you do not ' +
-          'wish to lose, please click cancel now and reload this page before ' +
-          'saving any changes to this unit edit page.'
-      )
-    ) {
-      shouldCloseAfterSave = false;
-    }
 
     if (this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
       this.setState({
