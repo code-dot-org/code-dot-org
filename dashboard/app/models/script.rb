@@ -2064,14 +2064,20 @@ class Script < ApplicationRecord
   end
 
   def get_unit_overview_pdf_url
-    if is_migrated?
+    if is_migrated? && use_code_studio_lesson_plans?
       Services::CurriculumPdfs.get_script_overview_url(self)
     end
   end
 
   def get_unit_resources_pdf_url
-    if is_migrated?
+    if is_migrated? && use_code_studio_lesson_plans?
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
+  end
+
+  # Whether the specified user has permission to preview code studio lesson
+  # plans and other curriculum materials.
+  def can_preview_lesson_plans?(user)
+    is_migrated? && (use_code_studio_lesson_plans? || user.permission?(UserPermission::LEVELBUILDER))
   end
 end
