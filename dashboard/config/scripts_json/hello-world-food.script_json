@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-01 19:06:56 UTC",
+    "serialized_at": "2021-09-13 21:06:44 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "hello-world-food"
@@ -79,13 +80,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "generic_storyboard_print"
+          "helloworld_food_say"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "generic_storyboard_print"
+          "helloworld_food_say"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -93,7 +94,7 @@
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
       },
       "level_keys": [
-        "generic_storyboard_print"
+        "helloworld_food_say"
       ]
     },
     {
@@ -103,13 +104,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "food_helloworld_locations"
+          "helloworld_food_location"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "food_helloworld_locations"
+          "helloworld_food_location"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -117,7 +118,7 @@
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
       },
       "level_keys": [
-        "food_helloworld_locations"
+        "helloworld_food_location"
       ]
     },
     {
@@ -127,13 +128,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "food_helloworld_multi"
+          "helloworld_food_multi"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "food_helloworld_multi"
+          "helloworld_food_multi"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -141,7 +142,7 @@
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
       },
       "level_keys": [
-        "food_helloworld_multi"
+        "helloworld_food_multi"
       ]
     },
     {
@@ -151,13 +152,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "food_helloworld_click"
+          "helloworld_food_click"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "food_helloworld_click"
+          "helloworld_food_click"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -165,7 +166,7 @@
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
       },
       "level_keys": [
-        "food_helloworld_click"
+        "helloworld_food_click"
       ]
     },
     {
@@ -175,13 +176,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "generic_storyboard_events"
+          "helloworld_food_events"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "generic_storyboard_events"
+          "helloworld_food_events"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -189,7 +190,7 @@
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
       },
       "level_keys": [
-        "generic_storyboard_events"
+        "helloworld_food_events"
       ]
     },
     {
@@ -199,13 +200,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "generic_storyboard_choices_backgrounds"
+          "helloworld_food_backgrounds"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "generic_storyboard_choices_backgrounds"
+          "helloworld_food_backgrounds"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -213,7 +214,7 @@
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
       },
       "level_keys": [
-        "generic_storyboard_choices_backgrounds"
+        "helloworld_food_backgrounds"
       ]
     },
     {
@@ -223,13 +224,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "generic_storyboard_choices_properties"
+          "helloworld_food_costumes"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "generic_storyboard_choices_properties"
+          "helloworld_food_costumes"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -237,7 +238,7 @@
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
       },
       "level_keys": [
-        "generic_storyboard_choices_properties"
+        "helloworld_food_costumes"
       ]
     },
     {
@@ -247,13 +248,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "generic_storyboard_choices_costumes"
+          "helloworld_food_sizes"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "generic_storyboard_choices_costumes"
+          "helloworld_food_sizes"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -261,7 +262,7 @@
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
       },
       "level_keys": [
-        "generic_storyboard_choices_costumes"
+        "helloworld_food_sizes"
       ]
     },
     {
@@ -271,13 +272,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "generic_storyboard_choices_behaviors"
+          "helloworld_food_behaviors"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "generic_storyboard_choices_behaviors"
+          "helloworld_food_behaviors"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -285,7 +286,7 @@
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
       },
       "level_keys": [
-        "generic_storyboard_choices_behaviors"
+        "helloworld_food_behaviors"
       ]
     },
     {
@@ -295,13 +296,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "generic_storyboard_choices_sounds"
+          "helloworld_food_sounds"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "generic_storyboard_choices_sounds"
+          "helloworld_food_sounds"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -309,7 +310,7 @@
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
       },
       "level_keys": [
-        "generic_storyboard_choices_sounds"
+        "helloworld_food_sounds"
       ]
     },
     {
@@ -319,13 +320,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "helloworld_project_freeplay"
+          "helloworld_food_freeplay"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_project_freeplay"
+          "helloworld_food_freeplay"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -333,16 +334,16 @@
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2"
       },
       "level_keys": [
-        "helloworld_project_freeplay"
+        "helloworld_food_freeplay"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "generic_storyboard_print",
+        "level.key": "helloworld_food_say",
         "script_level.level_keys": [
-          "generic_storyboard_print"
+          "helloworld_food_say"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -352,9 +353,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "food_helloworld_locations",
+        "level.key": "helloworld_food_location",
         "script_level.level_keys": [
-          "food_helloworld_locations"
+          "helloworld_food_location"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -364,9 +365,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "food_helloworld_multi",
+        "level.key": "helloworld_food_multi",
         "script_level.level_keys": [
-          "food_helloworld_multi"
+          "helloworld_food_multi"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -376,9 +377,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "food_helloworld_click",
+        "level.key": "helloworld_food_click",
         "script_level.level_keys": [
-          "food_helloworld_click"
+          "helloworld_food_click"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -388,9 +389,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "generic_storyboard_events",
+        "level.key": "helloworld_food_events",
         "script_level.level_keys": [
-          "generic_storyboard_events"
+          "helloworld_food_events"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -400,9 +401,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "generic_storyboard_choices_backgrounds",
+        "level.key": "helloworld_food_backgrounds",
         "script_level.level_keys": [
-          "generic_storyboard_choices_backgrounds"
+          "helloworld_food_backgrounds"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -412,9 +413,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "generic_storyboard_choices_properties",
+        "level.key": "helloworld_food_costumes",
         "script_level.level_keys": [
-          "generic_storyboard_choices_properties"
+          "helloworld_food_costumes"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -424,9 +425,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "generic_storyboard_choices_costumes",
+        "level.key": "helloworld_food_sizes",
         "script_level.level_keys": [
-          "generic_storyboard_choices_costumes"
+          "helloworld_food_sizes"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -436,9 +437,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "generic_storyboard_choices_behaviors",
+        "level.key": "helloworld_food_behaviors",
         "script_level.level_keys": [
-          "generic_storyboard_choices_behaviors"
+          "helloworld_food_behaviors"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -448,9 +449,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "generic_storyboard_choices_sounds",
+        "level.key": "helloworld_food_sounds",
         "script_level.level_keys": [
-          "generic_storyboard_choices_sounds"
+          "helloworld_food_sounds"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -460,9 +461,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_project_freeplay",
+        "level.key": "helloworld_food_freeplay",
         "script_level.level_keys": [
-          "helloworld_project_freeplay"
+          "helloworld_food_freeplay"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
