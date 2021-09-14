@@ -32,7 +32,7 @@ exports.setupTestBlockly = function() {
 };
 
 exports.setupBlocklyFrame = function() {
-  require('../../util/frame')();
+  require('../../util/setupBlocklyGlobal')();
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
   assert(Object.keys(global.Blockly).length > 0);
   Blockly.JavaScript.INFINITE_LOOP_TRAP = null;

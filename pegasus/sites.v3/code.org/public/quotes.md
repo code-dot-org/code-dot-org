@@ -433,7 +433,7 @@ We believe that coding should be a required language in all schools.
 Eric Schmidt
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Executive Chairman, Google
+Former Executive Chairman, Google
 </h4>
 <p style="padding-right:10px;">
 For most people on Earth, the digital revolution hasn't even started yet. Within the next 10 years, all that will change. Let's get the whole world coding!
@@ -555,23 +555,8 @@ Computer programming is the single best professional opportunity in the world. W
 </p>
 </div>
 </div>
+
 <div class="row" style="margin-bottom: 20px;"></div>
-<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
-<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
-<img src="/images/people/meg-whitman.jpg">
-</div>
-<div class="col-66 left" id="text">
-<h3 style="margin:0px;">
-Meg Whitman
-</h3>
-<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-President &amp; CEO, Hewlett-Packard
-</h4>
-<p style="padding-right:10px;">
-If you have a daughter, she should go be an engineer.
-</p>
-</div>
-</div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
 <div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
 <img src="/images/people/jeff-wilke.jpg">
@@ -581,27 +566,10 @@ If you have a daughter, she should go be an engineer.
 Jeff Wilke
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-CEO Worldwide Consumer, Amazon.com
+Former CEO Worldwide Consumer, Amazon.com
 </h4>
 <p style="padding-right:10px;">
 Coders change the world. They build new, amazing things faster than ever before. Anyone with imagination can learn to write code.
-</p>
-</div>
-</div>
-<div class="row" style="margin-bottom: 20px;"></div>
-<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
-<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
-<img src="/images/people/tony-hsieh.jpg">
-</div>
-<div class="col-66 left" id="text">
-<h3 style="margin:0px;">
-Tony Hsieh
-</h3>
-<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-CEO, Zappos
-</h4>
-<p style="padding-right:10px;">
-I think everyone should get a little exposure to computer science because it really forces you to think in a slightly different way, and it’s a skill that you can apply in life in general, whether you end up in computer science or not.
 </p>
 </div>
 </div>
@@ -746,10 +714,10 @@ Learning to code will be a huge booster for your future, no matter what your pro
 Dara Khosrowshahi
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-CEO, Expedia, Inc.
+CEO, Uber
 </h4>
 <p style="padding-right:10px;">
-Our programmers are our artists. They write beautiful code that millions of our travelers start to play with, to use, to help them travel better. It's a profound sense of power and satisfaction to have your work affect so many, so quickly, across the globe.
+Programmers are our artists... It's a profound sense of power and satisfaction to have your work affect so many, so quickly, across the globe.
 </p>
 </div>
 </div>
@@ -1063,7 +1031,7 @@ Jason Hirschorn
 Former Chief Digital Officer, MTV and President, Sling Media
 </h4>
 <p style="padding-right:10px;">
-Learning to code, just a little, helped me immensely in my career. I can converse and create with the rising leaders of the next generation, the coders themselves. Computers touch almost every aspect of our current and future life. Any society that plans ahead for its future citizens must teach computer programming at all levels of education. td&gt;
+Learning to code, just a little, helped me immensely in my career. I can converse and create with the rising leaders of the next generation, the coders themselves. Computers touch almost every aspect of our current and future life. Any society that plans ahead for its future citizens must teach computer programming at all levels of education.
 </p>
 </div>
 </div>
@@ -1093,7 +1061,7 @@ Learning to speak the language of information gives you the power to transform t
 Jamie Dimon
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-President &amp; CEO, JPMorgan Chase &amp; Co.
+Chairman &amp; CEO, JPMorgan Chase &amp; Co.
 </h4>
 <p style="padding-right:10px;">
 In a world where technology drives our industries, the financial sector is no different. Having bright, talented, creative minds developing innovative technology solutions for our businesses just makes sense. It’s good for them, and it’s good for business.
@@ -1142,7 +1110,7 @@ A car today can have tens of millions of lines of code. As engineers, scientists
 John Fallon
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-CEO, Pearson
+Former CEO, Pearson
 </h4>
 <p style="padding-right:10px;">
 Not being able to express yourself is frustrating. Yet, if we don't encourage young people to grasp the basics of coding language, we are setting them up for that kind of frustration. And the world can't afford that - Code.org predicts that by 2020 there will be a shortfall of more than one million computer programmers in America alone. So I’m encouraged by any initiative that gives young people the skills they need to create, build, and be competitive in the 21st century workforce.
@@ -1212,7 +1180,7 @@ Computers have and continue to change the world around us, and programmers conti
 Leland Melvin
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Astronaut, NASA Education Administrator
+NASA Education Administrator and retired astronaut
 </h4>
 <p style="padding-right:10px;">
 Computers play an increasingly larger role in all fields of science; they're helping us explore outer-space and our solar system. Whether you want to become a doctor or an astronaut, it would help to learn the basics of computer programming.
@@ -1246,7 +1214,7 @@ Learning to program is exciting: it's stimulating, fun, develops new ways of thi
 Larry Corey
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-President, Fred Hutchinson Cancer Research Center
+Former President, Fred Hutchinson Cancer Research Center
 </h4>
 <p style="padding-right:10px;">
 Computers are an increasingly essential part of understanding cancer and developing new therapies. Knowledge of computer programming is almost as important as knowledge of anatomy when it comes to medical research or clinical care.
@@ -1600,7 +1568,7 @@ Technology is not a separate discipline that can be considered in isolation from
 Dr. Alan Goodwin
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Principal, Walt Whitman High School
+Former Principal, Walt Whitman High School
 </h4>
 <p style="padding-right:10px;">
 In the 21st century, learning to program computers is one of the most valuable skills we can teach our young children, no matter what career they choose.
@@ -1616,7 +1584,7 @@ In the 21st century, learning to program computers is one of the most valuable s
 Bill Goodwyn
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-President &amp; CEO, Discovery Education
+Chief Revenue Officer & EVP Business Development & Partnerships at CuriosityStream
 </h4>
 <p style="padding-right:10px;">
 At Discovery Education, our mission is to prepare students for tomorrow's world, and Computer Science knowledge and skills can open doors to opportunities for students as they enter college and careers. In this digital age, coding is among those most critical skills needed to compete in the new global workforce.
@@ -1633,10 +1601,10 @@ At Discovery Education, our mission is to prepare students for tomorrow's world,
 </div>
 <div class="col-66 left" id="text">
 <h3 style="margin:0px;">
-President Barack Obama
+Barack Obama
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Former President
+Former President of the United States
 </h4>
 <p style="padding-right:10px;">
 If we want America to stay on the cutting edge, we need young Americans to master the tools and technology that will change the way we do just about everything.
@@ -1686,7 +1654,7 @@ Whether our children want to become farmers, doctors, teachers, or entrepreneurs
 Cathy McMorris Rodgers
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-U.S. Congresswoman, Washington State
+U.S. Representative, Washington State
 </h4>
 <p style="padding-right:10px;">
 As the foundation of America’s robust technology industry, computer science drives advancements in health care, aerospace, financial services, national defense, retail and so many other industries both at home and abroad. Young people should be exposed to computer science in our schools so they have the opportunity to learn, innovate, and develop new advancements to promote the future of technology.
@@ -1717,10 +1685,10 @@ Computer programming is quickly becoming an essential career skill. Learning to 
 </div>
 <div class="col-66 left" id="text">
 <h3 style="margin:0px;">
-President Bill Clinton
+Bill Clinton
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Former President
+Former President of the United States
 </h4>
 <p style="padding-right:10px;">
 At a time when people are saying "I want a good job - I got out of college and I couldnt find one," every single year in America there is a standing demand for 120,000 people who are training in computer science.
@@ -1735,10 +1703,10 @@ At a time when people are saying "I want a good job - I got out of college and I
 </div>
 <div class="col-66 left" id="text">
 <h3 style="margin:0px;">
-Vice President Al Gore
+Al Gore
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Former Vice President
+Former Vice President of the United States
 </h4>
 <p style="padding-right:10px;">
 Our civilization is experiencing unprecedented changes across many realms, largely due to the rapid advancement of information technology. The ability to code and understand the power of computing is crucial to success in today's hyper-connected world.
@@ -1772,7 +1740,7 @@ One of the best ways to prosper in the 21st century economy is to understand the
 John Hickenlooper
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Governor, State of Colorado
+U.S. Senator and former Governor, Colorado
 </h4>
 <p style="padding-right:10px;">
 There's no question that computers are changing the world around us. To help prepare our children for a successful future, no matter what career they pursue, they need to learn basic computer programming skills.
@@ -1806,7 +1774,7 @@ There’s a spirit of innovation in Washington State that's driven world class a
 Enda Kenny
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Taoiseach, Ireland
+Former Taoiseach, Ireland
 </h4>
 <p style="padding-right:10px;">
 Learning to code is learning to create and innovate. We want our young people, who have such enormous talent, to acquire this skill, so that they will become the trailblazers who will shape and change our future.
@@ -1856,7 +1824,7 @@ Computer programmers are in great demand by American businesses, across the tech
 Suzan DelBene
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-U.S. Congresswoman, Washington State
+U.S. Representative, Washington State
 </h4>
 <p style="padding-right:10px;">
 Technology is changing our world and driving our economy. We need to make sure our children have the skills necessary to innovate and compete in the 21st century. Exposure to computer science and basic programming empowers students and spurs creativity, which can unlock countless opportunities for their futures.
@@ -1874,7 +1842,7 @@ Technology is changing our world and driving our economy. We need to make sure o
 Michael Honda
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Former U.S. Congressman, California
+Former U.S. Representative, California
 </h4>
 <p style="padding-right:10px;">
 Students, parents, teachers, and policymakers will benefit greatly by recognizing the foundational importance of coding and computer science in our education curricula.
@@ -1890,7 +1858,7 @@ Students, parents, teachers, and policymakers will benefit greatly by recognizin
 James McGovern
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-U.S. Congressman, Massachusetts
+U.S. Representative, Massachusetts
 </h4>
 <p style="padding-right:10px;">
 We have witnessed astonishing advancements in computer technology just in our lifetimes. Preparing every student with a sound foundation in computer programming—whatever their chosen career path—will help them create the advancements of the future.
@@ -1907,7 +1875,7 @@ We have witnessed astonishing advancements in computer technology just in our li
 Tony Cardenas
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-U.S. Congressman, California
+U.S. Representative, California
 </h4>
 <p style="padding-right:10px;">
 The tech industry is quickly expanding and adding jobs to the U.S. economy. We need a workforce trained with the computer science and coding skills that fuel this expansion, so we can keep these exciting jobs here.
@@ -1923,7 +1891,7 @@ The tech industry is quickly expanding and adding jobs to the U.S. economy. We n
 Thomas Petri
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Former U.S. Congressman, Wisconsin
+Former U.S. Representative, Wisconsin
 </h4>
 <p style="padding-right:10px;">
 It’s clear that our economy depends on talented professionals who are educated in computer science and technology. I encourage more Americans to push the limits of innovation by studying these subjects.
@@ -1941,7 +1909,7 @@ It’s clear that our economy depends on talented professionals who are educated
 Ben Ray Luján
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-U.S. Congressman, New Mexico
+U.S. Senator, New Mexico
 </h4>
 <p style="padding-right:10px;">
 It is essential that students learn the language of code, the same way they learn to read and write. If we are to remain economically competitive and have a highly skilled workforce, access to computer science curricula and coding instruction must be a priority. With the potential for expansion and innovation as technology continues to become one of the most critical pieces of our infrastructure, this sector holds the promise of great opportunity for those who have the necessary training and knowledge.
@@ -1957,7 +1925,7 @@ It is essential that students learn the language of code, the same way they lear
 Mark Takano
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-U.S. Congressman, California
+U.S. Representative, California
 </h4>
 <p style="padding-right:10px;">
 By learning to design, code or program at an early age, America's students can help usher in a technological revolution that we can only imagine. Harnessing their creativity in new and innovative ways will further solidify America's position as the nation with the greatest technology sector and I support making computer programming courses a part of every school's core curriculum.
