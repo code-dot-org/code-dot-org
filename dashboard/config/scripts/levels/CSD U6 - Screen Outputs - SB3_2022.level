@@ -4,11 +4,12 @@
     "skin": "applab",
     "code_functions": {
       "setProperty": null,
-      "onEvent": null
+      "onEvent": null,
+      "setText": null
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Changing With a Click\r\n\r\nIt's not really useful to only set a property when your program is first run. After all, you could just do all of that in Design Mode. When you use an `onEvent` block with `setProperty`, you're able to do things you couldn't do with Design Mode alone.\r\n\r\n# Do This\r\n\r\nWe've provided an empty `onEvent` block that's watching the \"smiley\" image. Inside the `onEvent` block, use two `setProperty` blocks to move the smiley somewhere else (it doesn't really matter where for now). Test your program by running it and clicking on the smiley.",
+    "long_instructions": "# Changing With a Click\r\n\r\nIt's not really useful to only set a property when your program is first run. After all, you could just do all of that in Design Mode. When you use an `onEvent` block with `setProperty`, you're able to do things you couldn't do with Design Mode alone.\r\n\r\n# Do This\r\n\r\n- Find the `onEvent` block already in the code.\r\n- Inside the `onEvent` block, use two `setProperty` blocks to move the smiley to the center of the screen.\r\n- Test your program by running it and clicking on the smiley.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -57,10 +58,10 @@
       "/docs/concepts/app-lab/responding-to-user-input/"
     ],
     "encrypted": "false",
-    "preload_asset_list": null,
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -68,7 +69,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T15:41:01.051+00:00\",\"changed\":[\"cloned from \\\"CSD U6 setProperty xy click_2021\\\"\"],\"cloned_from\":\"CSD U6 setProperty xy click_2021\"},{\"changed_at\":\"2021-08-31 15:41:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-08-31 15:42:45 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T15:41:01.051+00:00\",\"changed\":[\"cloned from \\\"CSD U6 setProperty xy click_2021\\\"\"],\"cloned_from\":\"CSD U6 setProperty xy click_2021\"},{\"changed_at\":\"2021-08-31 15:41:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-08-31 15:42:45 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-14 17:56:40 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

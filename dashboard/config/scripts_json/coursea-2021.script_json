@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-09-03 20:51:28 UTC",
+    "serialized_at": "2021-09-13 21:49:10 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursea-2021"
@@ -7060,8 +7060,8 @@
       }
     },
     {
-      "name": "How to Make a Class Section on Code.org",
-      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+      "name": "Getting Started - Creating a Class Section",
+      "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
       "key": "how_to_make_a_class_section_on_code_org",
       "properties": {
         "type": "Video",
