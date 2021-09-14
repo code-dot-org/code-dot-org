@@ -63,7 +63,7 @@
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Use the `when clicked` event to make a sprite say something.",
-    "instructions_icon": "poster",
+    "instructions_icon": "batman",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Connect a `say` block under a `when click` event block:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\">\\n    <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_burger_1\\\"</title>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"gamelab_spriteSay\\\">\\n        <title name=\\\"SPEECH\\\">Hello, world!</title>\\n        <value name=\\\"SPRITE\\\">\\n          <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n            <title name=\\\"ANIMATION\\\">\\\"face_burger_1\\\"</title>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block></xml>\",\"hint_id\":\"hello_world_click\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db4684f80de2b03bb311a1aec559cc6a/generic_storyboard_events.mp3\"}]",
     "preload_asset_list": null,
     "encrypted_examples": [
@@ -76,7 +76,7 @@
   "level_num": "custom",
   "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-13T20:31:44.162+00:00\",\"changed\":[\"cloned from \\\"helloworld_retro_events\\\"\"],\"cloned_from\":\"helloworld_retro_events\"},{\"changed_at\":\"2021-09-13 20:31:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-13T20:31:44.162+00:00\",\"changed\":[\"cloned from \\\"helloworld_retro_events\\\"\"],\"cloned_from\":\"helloworld_retro_events\"},{\"changed_at\":\"2021-09-13 20:31:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:49:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
