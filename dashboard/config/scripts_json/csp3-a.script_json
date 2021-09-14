@@ -9,7 +9,7 @@
     "new_name": null,
     "family_name": null,
     "serialized_at": "2021-08-03 22:47:16 UTC",
-    "published_state": "beta",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp3-a"
     }

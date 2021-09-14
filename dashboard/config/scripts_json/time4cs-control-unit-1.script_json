@@ -12,7 +12,7 @@
     "new_name": null,
     "family_name": null,
     "serialized_at": "2021-08-03 22:47:49 UTC",
-    "published_state": "pilot",
+    "published_state": null,
     "seeding_key": {
       "script.name": "time4cs-control-unit-1"
     }

@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp3_1', display_name: 'Chapter 1: Programming Languages and Algorithms'
