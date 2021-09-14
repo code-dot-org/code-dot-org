@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-07 16:59:08 UTC",
+    "serialized_at": "2021-09-14 17:15:42 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -162,8 +162,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Students review `if/else` statements and use them to implement alternate actions based on the outcome of a Boolean expression. Students apply `if/else` statements to access elements from arrays and use `Math.random()` to access random elements. `if/else` statements are then implemented in the Pop the Balloons game to check the validity of a move.",
-        "student_overview": "You review `if/else` statements and use them to implement alternate actions based on the outcome of a Boolean expression. You apply `if/else` statements to access elements from arrays and use `Math.random()` to access random elements. You then implement `if/else` statements in the Pop the Balloons game to check whether a move is valid."
+        "overview": "Students review `if/else` statements to implement alternate actions based on the outcome of a Boolean expression. Students practice using `if/else` statements with `Math.random()` to access random elements from an array in The Neighborhood. Using `if/else` statements, students check the validity of a player's move in the Pop the Balloons game.",
+        "preparation": "* Gather two sticky notes for each student",
+        "student_overview": "You review `if/else` statements to implement alternate actions based on the outcome of a Boolean expression. You practice using `if/else` statements with `Math.random()` to access random elements from an array in The Neighborhood. Using `if/else statements`, you check the validity of a player's move in the Pop the Balloons game."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -179,8 +180,8 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "Students use `if/else-if/else` statements to evaluate multiple conditions to select a specific desired outcome. Students develop the balloon display feature of the Pop the Balloons game using `if/else-if/else` statements to change the image of the balloon if it has been popped.",
-        "student_overview": "Today is all about evaluating multiple conditions to select a specific desired outcome. In The Neighborhood, you use `if/else-if/else` statements to solve problems for the `Painter`. You then implement `if/else-if/else` statements in the Pop the Balloons game to update the picture of the balloon if it has been popped. "
+        "overview": "Students use `if/else-if/else` statements to evaluate multiple conditions to select a specific desired outcome. To check the game's status and determine whether or not the player won, students use multi-selection statements to check the condition of the game and choose the appropriate outcome.",
+        "student_overview": "Sometimes we need to check multiple conditions to determine the correct outcome. In The Neighborhood, you learn to use `if/else-if/else` statements to solve problems for the `Painter`. You then implement `if/else-if/else` statements in the Pop the Balloons game to check the game's status and determine whether or not the player won."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -627,7 +628,7 @@
       "key": "20388857-f568-45c1-aaf7-bc144f05b7dd",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -641,7 +642,7 @@
       "key": "f913c55c-3293-44d1-80d8-e1c12f6756ce",
       "position": 3,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -2155,7 +2156,7 @@
       "key": "c9a24d1c-68aa-4f34-a132-cff612909e57",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Click through the animated slide to review the problem from Unit 1 Lesson 7, which used `if/else` statements in its solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you remember about how you solved this problem?*\n\n**Discussion Goal:** Students explain the solution for solving the problem, including the use of `if/else` statements to achieve the desired outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you remember about how you solved this problem?*\n\n**Discussion Goal:** Students explain the solution for solving the problem, including using `if/else` statements to achieve the desired outcome.",
         "name": "Problem-Solving Brainstorm"
       },
       "seeding_key": {
@@ -2167,7 +2168,7 @@
       "key": "64ba8b27-34e0-4e5d-9c5e-cc583a99dce6",
       "position": 2,
       "properties": {
-        "description": "We are familiar with how to use `if/else` statements to solve problems in The Neighborhood. Today, we will practice using `if/else` statements in new ways in The Neighborhood. We will also expand the functionality of our Pop the Balloons game to check if the player's move is valid.\n\nFirst, let's review how `if/else` statements work.",
+        "description": "We are familiar with how to use `if/else` statements to solve problems in The Neighborhood. Today, we will practice using `if/else` statements in new ways before we expand the functionality of our Pop the Balloons game to check if the player's move is valid.",
         "remarks": true
       },
       "seeding_key": {
@@ -2180,8 +2181,8 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the if/else Statements video.",
-        "duration": "5",
-        "name": "if/else Statements",
+        "duration": "15",
+        "name": "Using if/else Statements",
         "tips": [
           {
             "type": "teachingTip",
@@ -2209,9 +2210,7 @@
       "key": "fbd267cc-911f-4914-a2dd-e559407398f2",
       "position": 3,
       "properties": {
-        "description": "We used `if/else` statements before to decide whether or not to move the `Painter` or to paint. We can also use `if/else` statements to choose paint colors from an array of paint colors based on a condition.\n\nWe used `if` statements while traversing arrays in Unit 3 to find elements that met certain criteria. We're going to use a similar approach in The Neighborhood with `if/else` statements.",
-        "duration": "10",
-        "name": "Using if/else in The Neighborhood",
+        "description": "We have used `if/else` statements to decide whether or not to move the `Painter` or paint. In Unit 3, we used `if` statements while traversing arrays to find elements that met certain criteria. We will use a similar approach in The Neighborhood to choose paint colors from an array based on a condition.",
         "remarks": true
       },
       "seeding_key": {
@@ -2223,7 +2222,8 @@
       "key": "c99de66f-3ddc-41f9-8e11-21580cc198d9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students use an `if/else` statement to access individual elements from an array of paint colors to solve the problem."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1, 2, and 3 on Code Studio.",
+        "progression_name": "Conditional Painting"
       },
       "seeding_key": {
         "activity_section.key": "c99de66f-3ddc-41f9-8e11-21580cc198d9",
@@ -2231,42 +2231,14 @@
       }
     },
     {
-      "key": "3bfd21fe-e724-42d5-8b1d-246c28e40cb7",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we wanted to randomly choose paint colors from the array?*\n\n**Discussion Goal:** Students suggest using `Math.random()` and casting to generate a random number within the range of the index values of the array.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students initially only suggest using `Math.random()`, ask additional probing questions to guide students in realizing the need for obtaining a value within the range of index values.\n* *Remember that `Math.random()` generates a `double` value between 0.0 up to but not including 1.0. Index values are integers and not `double`s. What do we need to add to get an integer result from `Math.random()`?*\n* *Index values range from 0 up to the length of the array minus 1. What do we need to add to get a random value in this range?*"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3bfd21fe-e724-42d5-8b1d-246c28e40cb7",
-        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
-      }
-    },
-    {
-      "key": "5e662485-026f-442a-b565-62f5b04064f0",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show the solution for generating a random index value and using it to access an element in an array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students use `Math.random()` and `if/else` to access random elements from the array of paint colors to solve the problem. Have students continue to complete Level 3."
-      },
-      "seeding_key": {
-        "activity_section.key": "5e662485-026f-442a-b565-62f5b04064f0",
-        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
-      }
-    },
-    {
       "key": "13a3a938-f7ad-4efa-b067-dc88ccf11385",
-      "position": 7,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the effects of using separate `if` statements instead of an `if/else` statement.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Trace through each code segment with the class before showing the output."
+            "markdown": "If students are confused about the output of each code segment, trace through each one with the class."
           }
         ]
       },
@@ -2277,9 +2249,9 @@
     },
     {
       "key": "3848a3ba-b733-4b63-bee6-1d29cbce14e8",
-      "position": 8,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why should we use `if/else` statements instead of writing separate `if` statements?*\n\nDiscussion Goal: Students point out that it makes the code cleaner and easier to debug. Students also note that since both `if` statements are evaluated separately, they could both execute depending on the outcome of the first `if` statement, which will change the end result of the program."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why should we use `if/else` statements instead of writing separate `if` statements?*\n\nDiscussion Goal: Students point out that it makes the code cleaner and easier to debug. Students also note that since both `if` statements are evaluated separately, both could execute depending on the outcome of the first `if` statement. If both `if` statements execute, the result of the program changes."
       },
       "seeding_key": {
         "activity_section.key": "3848a3ba-b733-4b63-bee6-1d29cbce14e8",
@@ -2288,9 +2260,9 @@
     },
     {
       "key": "844f4b77-2298-4a13-92d3-c458efe22fd2",
-      "position": 9,
+      "position": 7,
       "properties": {
-        "description": "The next features of our Pop the Balloons game that we are going to develop is the `isValidMove()` functionality.\n\nWith the `isValidMove()` method, we can check if the balloons that are clicked add up to the dice roll. This method takes the value of the balloon to check if it is less than the dice roll.",
+        "description": "The next feature of our Pop the Balloons game that we will develop is the `isValidMove()` functionality.\n\nWith the `isValidMove()` method, we can check if the clicked balloons add up to the dice roll. This method takes the value of the balloon to check if it is less than the total value rolled.",
         "duration": "10",
         "name": "Expanding Pop the Balloons",
         "remarks": true
@@ -2302,13 +2274,13 @@
     },
     {
       "key": "82f0a1f4-d481-484f-9ad3-3ab07763e79c",
-      "position": 10,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the purpose of the `isValidMove()` method. Direct students to work with a partner to write pseudocode on a piece of paper for `isValidMove()`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps needed to implement the `isValidMove()` method.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the purpose of the `isValidMove()` method. Direct students to work with a partner to write pseudocode on a piece of paper for `isValidMove()`.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you notice students struggling to break the problem down into pseudocode, write the pseudocode for each step as you review them. Allow students to ask clarifying questions before transitioning to Code Studio."
+            "markdown": "If you notice students struggling to break the problem down into pseudocode, write the pseudocode for each step as a class. Allow students to ask clarifying questions before transitioning to Code Studio."
           }
         ]
       },
@@ -2319,9 +2291,10 @@
     },
     {
       "key": "ff9d45cb-5891-401d-8855-03f4195fb3fb",
-      "position": 11,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students implement the `isValidMove()` method in the Pop the Balloons game."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4 and 5 on Code Studio. Students implement the `isValidMove()` method in the Pop the Balloons game and update the `onClick()` method in the `Balloon` class to check if the move is valid before updating its status.",
+        "progression_name": "Checking the Player's Move"
       },
       "seeding_key": {
         "activity_section.key": "ff9d45cb-5891-401d-8855-03f4195fb3fb",
@@ -2330,7 +2303,7 @@
     },
     {
       "key": "8e194c5b-a54b-4d0e-bf85-65273f08e0b6",
-      "position": 12,
+      "position": 10,
       "properties": {
         "description": "Let's take a moment to provide feedback to each other through a code review. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code! ",
         "duration": "10",
@@ -2344,9 +2317,9 @@
     },
     {
       "key": "a60fa545-6a85-4035-abf9-bd58d32e63dc",
-      "position": 13,
+      "position": 11,
       "properties": {
-        "description": "**Do This:** Pair students within a review group to review each other's game in Code Studio. Students request, receive, and review feedback on their `isValidMove()` method."
+        "description": "**Do This:** Pair students within a review group to review each other's game in Code Studio. Students request, receive, and review feedback on their `isValidMove()` method and `Balloon` class."
       },
       "seeding_key": {
         "activity_section.key": "a60fa545-6a85-4035-abf9-bd58d32e63dc",
@@ -2387,7 +2360,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "c4726349-becf-4624-afc0-0096f994f6be",
@@ -2398,7 +2372,7 @@
       "key": "e8474c6c-f8af-40dd-9363-87385af65b4e",
       "position": 1,
       "properties": {
-        "description": "When we want our code to make decisions based on a condition, we use selection statements such as an `if` statement or `if/else` statement.\n\n`if` statements are useful for getting something to happen when a condition is `true`. `if/else` statements are useful when we want to execute a task when the condition is `true` or a different task if the condition is `false`. \n\nLet’s review how you can use an `if/else` statement to solve a problem.",
+        "description": "When we want our code to make decisions based on a condition, we use selection statements such as an `if` statement or `if/else` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `if` statements are useful for getting something to happen when a condition is `true`. `if/else` statements are useful when we want to execute a task when the condition is `true` or a different task if the condition is `false`. \n\nLet’s review how you can use an `if/else` statement to solve a problem.",
         "name": "Conditional Statements",
         "remarks": true
       },
@@ -2419,24 +2393,10 @@
       }
     },
     {
-      "key": "3bc58966-8991-48c4-a889-f7d969e05d5e",
+      "key": "bde7107b-ab41-40bc-81d5-aa1c2a35bf35",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Let’s take a moment to read this problem. If you want to go to the park, the weather needs to be higher than 85 degrees. If the weather is 80 degrees, you can play soccer with friends. If the weather is lower than 80 degrees, you can stay at home. Think to yourself about how you would solve this problem with what you know about conditional statements.",
-        "duration": "15",
-        "name": "Multi-Selection Statements",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "3bc58966-8991-48c4-a889-f7d969e05d5e",
-        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
-      }
-    },
-    {
-      "key": "bde7107b-ab41-40bc-81d5-aa1c2a35bf35",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define multi-selection statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the execution flow of `if/else-if/else`.\n* The first condition is `true` if the number is greater than 0. If `true`, the body of that `if` statement executes.\n* If the first condition is `false`, the second condition is evaluated. The second condition is `true` `else-if` the number is equal to 0. Then the body of the `else-if` statement is executed.\n* When all conditions are `false`, the `else` statement executes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to work with a partner to read through the problem again. Students will write code on a piece of paper.\n\n**Discuss:** *How would you use a multi-selection statement to structure this problem in code?*\n\n**Discussion Goal:** Students work with a partner and write a code segment that would include an `if/else-if/else` statement to reflect the decisions based on the weather.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the solution to the discussion prompt. As you go through the solution, prompt students to participate in the `System.out.print()` Call and Response by saying the words and clapping as indicated on the slide. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If you want to go swimming, the weather needs to be higher than 90 degrees. If the weather is 80 degrees, you can go to the park and play soccer with friends. If the weather is lower than 80 degrees, you can stay home and read a book. How would you write this program to choose the correct outcome if the weather was 78 degrees?*\n\n**Discussion Goal:** Students suggest using `if` statements or `if/else` statements to check different Boolean expressions, such as if the weather is greater than 90.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define multi-selection statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate `if/else-if/else`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would you write this program using a multi-selection statement to choose the correct outcome if the weather was 78 degrees?*\n\n**Discussion Goal:** Students suggest using an `if/else-if/else` statement to check each condition. For example, students share that they could check if the weather is 90, if it is 80, or whether to stay home and read a book.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the solution and have students participate in the `System.out.print()` Call and Response by saying the words and clapping as indicated. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -2451,9 +2411,10 @@
     },
     {
       "key": "f3ed7eb9-7d8e-4f18-afd4-d473ea63e5a7",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. Students will revisit Level 1 from Lesson 7 to include multiple conditions to solve the problem."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. Students use an `if/else-if/else` statement to access paint to solve the problem.",
+        "progression_name": "Multi-Selection Statements"
       },
       "seeding_key": {
         "activity_section.key": "f3ed7eb9-7d8e-4f18-afd4-d473ea63e5a7",
@@ -2462,10 +2423,10 @@
     },
     {
       "key": "12ba61c3-f514-4c5e-9723-0394b918ba54",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "description": "The next feature of our Pop the Balloons game that we need to develop is the `updateBalloons()` functionality. Let's walk through how this method needs to function so we can implement it. You will use multi-selection statements inside your method to update the display if a balloon is popped. ",
-        "duration": "20",
+        "description": "The next component that we need to implement into our Pop the Balloons game is to check if the game is over. You will use multi-selection statements inside your method to perform different actions based on the game's outcome and let the player know whether or not the game is over. ",
+        "duration": "15",
         "name": "Expanding Pop the Balloons",
         "remarks": true
       },
@@ -2475,71 +2436,49 @@
       }
     },
     {
-      "key": "109900cf-f6bb-450a-b36e-955f3310319a",
+      "key": "557f699a-ab36-4540-bac2-0f3ce1dde018",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the functionality of the `gameOver()` method. Have students work with a partner to write pseudocode for the method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3 and 4 on Code Studio to implement the `gameOver()` method and update the `movesLeft()` method to check if the game is over.",
+        "progression_name": "Check for Game Over"
+      },
+      "seeding_key": {
+        "activity_section.key": "557f699a-ab36-4540-bac2-0f3ce1dde018",
+        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
+      }
+    },
+    {
+      "key": "e4e2187f-9b6f-4c41-8575-756246072294",
       "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Share the to-do list to write the `updateBalloons()` method for the balloons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Currently, each balloon is represented by an individual `Balloon` object stored in a variable. How could we use multi-selection statements to update the display of the balloon if it’s been popped?*\n\n**Discussion Goal:** Students suggest creating an `if/else-if/else` statement to test if each balloon number equals the balloon value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps needed to implement the `updateBalloons()` method.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Suggest that students write on a piece of paper their code segment to test the multiple conditions for each prompt. "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "109900cf-f6bb-450a-b36e-955f3310319a",
-        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
-      }
-    },
-    {
-      "key": "c7049c78-e67d-4044-af12-222e4a22f464",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 3 on Code Studio. Remind students to use multi-selection statements to solve the problem.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Circulate as students work through this level. Display the steps to implement the `updateBalloons()` method to assist students who need a visual while writing the method. If students finish early, encourage them to test their code with multiple inputs to see if the balloon pops for all values. \n\nSince students will be completing a code review for this level, remind students to commit their code often."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "c7049c78-e67d-4044-af12-222e4a22f464",
-        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
-      }
-    },
-    {
-      "key": "33d0bb49-3295-40ff-bb75-cf860451c9be",
-      "position": 7,
       "properties": {
         "description": "This is a good opportunity to do a code review to make improvements. Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "33d0bb49-3295-40ff-bb75-cf860451c9be",
+        "activity_section.key": "e4e2187f-9b6f-4c41-8575-756246072294",
         "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
       }
     },
     {
-      "key": "985c8503-873e-4858-8a18-2dddb7a602a3",
-      "position": 8,
+      "key": "e0db36b7-6ce8-45a5-98ae-4997a577b622",
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in the same pairs to review each other's `updateBallons()` method. Students request, receive, and review feedback on Level 3. While reviewing, students consider the following questions:\n* Am I able to understand the code easily?\n* Can you think of any inputs that could break the code?\n* How many test cases are needed to test all branches of the code?\n* Is the same code duplicated across multiple files?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in the same pairs to review each other's `gameOver()` method. Students request, receive, and review feedback on Level 4."
       },
       "seeding_key": {
-        "activity_section.key": "985c8503-873e-4858-8a18-2dddb7a602a3",
+        "activity_section.key": "e0db36b7-6ce8-45a5-98ae-4997a577b622",
         "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
       }
     },
     {
-      "key": "14081d41-4b5e-4d9c-9e28-a27f89543517",
-      "position": 9,
+      "key": "f687c682-eaa5-4a8c-b948-ac4c7bbf0cfc",
+      "position": 7,
       "properties": {
-        "description": "Great job! You have completed your task for the Pop the Balloons Game. As we continue to build the game, you will continue to modify your code to add more functionality. ",
+        "description": "Great job! Now your Pop the Balloons game can check if the game is over and let the player know whether or not they won. ",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "14081d41-4b5e-4d9c-9e28-a27f89543517",
+        "activity_section.key": "f687c682-eaa5-4a8c-b948-ac4c7bbf0cfc",
         "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
       }
     },
@@ -2547,7 +2486,7 @@
       "key": "cf4c4f4e-7aab-41f5-9de2-134e0b2c4e55",
       "position": 1,
       "properties": {
-        "description": "The methods you wrote today are methods that you will be able to use in your upcoming project. Today we used `if/else-if/else` statements to test multiple conditions. When you update the display of the balloon, you see the change based on the condition being `true`.",
+        "description": "The methods you wrote today are methods that you can also use in your upcoming project. Today we used `if/else-if/else` statements to test multiple conditions. Depending on the game's current status, we can display different messages and determine whether or not the game is over.",
         "name": "Glows, Grows, Want-to-Knows",
         "remarks": true
       },
@@ -2560,7 +2499,7 @@
       "key": "b3ba21bf-5f97-4ff9-894a-e75b496e92cd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Conditional Statements video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Students reflect on the following Glows, Grows, Want-to-Knows prompts:\n* Glow: *What is awesome about writing your code?*\n* Grow: *What is one action you can take to improve your code?*\n* Want-to-Know: *What is one question you have about an algorithm you worked on today?*\n\n**Discussion Goal:** Students share successes they experienced in writing their methods in today's activities and ideas for improvements they can make to their code. Students ask questions about the methods they wrote today and may even share wonders about the effects of potential modifications to the code they wrote.\n\n**Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Conditional Statements video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the Glows, Grows, Want-to-Knows prompts:\n* Glow: *What is awesome about writing your code?*\n* Grow: *What is one action you can take to improve your code?*\n* Want-to-Know: *What is one question you have about an algorithm you worked on today?*\n\n**Discussion Goal:** Students share successes they experienced in writing their methods in today's activities and ideas for improvements to their code. Students ask questions about the methods they wrote today and may even share wonders about the effects of potential modifications to the code they wrote.\n\n**Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "b3ba21bf-5f97-4ff9-894a-e75b496e92cd",
@@ -2572,7 +2511,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "947b1122-667d-4a84-a8a7-b0d287695862",
@@ -4398,6 +4338,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L1"
+        ],
         "progression": "Implement the Dice Roll Function"
       },
       "bonus": false,
@@ -4420,6 +4363,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L2"
+        ],
         "progression": "Implement the Dice Roll Function"
       },
       "bonus": false,
@@ -4442,6 +4388,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L3"
+        ],
         "progression": "Create Weighted Dice"
       },
       "bonus": false,
@@ -4464,6 +4413,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L4"
+        ],
         "progression": "Creating Balloon Sprites"
       },
       "bonus": false,
@@ -4486,6 +4438,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L5"
+        ],
         "progression": "Creating Balloon Sprites"
       },
       "bonus": false,
@@ -4508,6 +4463,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4529,6 +4487,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4550,6 +4511,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L8"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4572,6 +4536,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L1"
+        ],
         "progression": "Predict the Output"
       },
       "bonus": false,
@@ -4594,6 +4561,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L2"
+        ],
         "progression": "Comparing Objects"
       },
       "bonus": false,
@@ -4616,6 +4586,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L3"
+        ],
         "progression": "String Equality"
       },
       "bonus": false,
@@ -4638,6 +4611,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L4"
+        ],
         "progression": "The Same Cake"
       },
       "bonus": false,
@@ -4660,6 +4636,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L5"
+        ],
         "progression": "Checking Balloons for Valid Moves"
       },
       "bonus": false,
@@ -4682,6 +4661,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L6"
+        ],
         "progression": "Checking Balloons for Valid Moves"
       },
       "bonus": false,
@@ -4704,6 +4686,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4718,6 +4703,248 @@
       },
       "level_keys": [
         "CSA U4L6-L7"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditional Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L7-L1"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "c99de66f-3ddc-41f9-8e11-21580cc198d9"
+      },
+      "level_keys": [
+        "CSA U4L7-L1"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditional Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L7-L2"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "c99de66f-3ddc-41f9-8e11-21580cc198d9"
+      },
+      "level_keys": [
+        "CSA U4L7-L2"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Conditional Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L7-L3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "c99de66f-3ddc-41f9-8e11-21580cc198d9"
+      },
+      "level_keys": [
+        "CSA U4L7-L3"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Checking the Player's Move"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L7-L4"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ff9d45cb-5891-401d-8855-03f4195fb3fb"
+      },
+      "level_keys": [
+        "CSA U4L7-L4"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Checking the Player's Move"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L7-L5"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ff9d45cb-5891-401d-8855-03f4195fb3fb"
+      },
+      "level_keys": [
+        "CSA U4L7-L5"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L7-L6"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "c4726349-becf-4624-afc0-0096f994f6be"
+      },
+      "level_keys": [
+        "CSA U4L7-L6"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Multi-Selection Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L8-L1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "f3ed7eb9-7d8e-4f18-afd4-d473ea63e5a7"
+      },
+      "level_keys": [
+        "CSA U4L8-L1"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Multi-Selection Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L8-L2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "f3ed7eb9-7d8e-4f18-afd4-d473ea63e5a7"
+      },
+      "level_keys": [
+        "CSA U4L8-L2"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Game Over"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L8-L3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "557f699a-ab36-4540-bac2-0f3ce1dde018"
+      },
+      "level_keys": [
+        "CSA U4L8-L3"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Game Over"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L8-L4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "557f699a-ab36-4540-bac2-0f3ce1dde018"
+      },
+      "level_keys": [
+        "CSA U4L8-L4"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L8-L5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "947b1122-667d-4a84-a8a7-b0d287695862"
+      },
+      "level_keys": [
+        "CSA U4L8-L5"
       ]
     }
   ],
@@ -5201,6 +5428,138 @@
         "script.name": "csa4-pilot",
         "activity_section.key": "5f11abe3-73f7-49a0-b97a-ee5fd87f5bc4"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L7-L1",
+        "script_level.level_keys": [
+          "CSA U4L7-L1"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "c99de66f-3ddc-41f9-8e11-21580cc198d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L7-L2",
+        "script_level.level_keys": [
+          "CSA U4L7-L2"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "c99de66f-3ddc-41f9-8e11-21580cc198d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L7-L3",
+        "script_level.level_keys": [
+          "CSA U4L7-L3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "c99de66f-3ddc-41f9-8e11-21580cc198d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L7-L4",
+        "script_level.level_keys": [
+          "CSA U4L7-L4"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ff9d45cb-5891-401d-8855-03f4195fb3fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L7-L5",
+        "script_level.level_keys": [
+          "CSA U4L7-L5"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ff9d45cb-5891-401d-8855-03f4195fb3fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L7-L6",
+        "script_level.level_keys": [
+          "CSA U4L7-L6"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "c4726349-becf-4624-afc0-0096f994f6be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L8-L1",
+        "script_level.level_keys": [
+          "CSA U4L8-L1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "f3ed7eb9-7d8e-4f18-afd4-d473ea63e5a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L8-L2",
+        "script_level.level_keys": [
+          "CSA U4L8-L2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "f3ed7eb9-7d8e-4f18-afd4-d473ea63e5a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L8-L3",
+        "script_level.level_keys": [
+          "CSA U4L8-L3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "557f699a-ab36-4540-bac2-0f3ce1dde018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L8-L4",
+        "script_level.level_keys": [
+          "CSA U4L8-L4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "557f699a-ab36-4540-bac2-0f3ce1dde018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L8-L5",
+        "script_level.level_keys": [
+          "CSA U4L8-L5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "947b1122-667d-4a84-a8a7-b0d287695862"
+      }
     }
   ],
   "resources": [
@@ -5674,7 +6033,7 @@
     },
     {
       "name": "Unit 4 Presentation Slides",
-      "url": "https://docs.google.com/presentation/d/1M-LmKHk-ZbV-5Pi3FnqdcWOGavTBBq3_kZ-kib897tw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1kqcy8SPwKS39ciR9OfTYuoTM9XRmHexpwyYi26fe0NM/edit?usp=sharing",
       "key": "unit_4_presentation_slides",
       "properties": {
         "type": "Slides",
@@ -6213,7 +6572,7 @@
     {
       "key": "if_else_statement",
       "word": "if/else Statement",
-      "definition": "Specifies a block of code to execute when the condition is true and a block of code to execute when the condition is false",
+      "definition": "Specifies a block of code to execute when the condition is `true` and a block of code to execute when the condition is `false`",
       "properties": {
       },
       "seeding_key": {
@@ -6223,7 +6582,7 @@
     {
       "key": "two_way_selection",
       "word": "Two-Way Selection",
-      "definition": "Used when two sets of statements are needed: one to execute when the condition is true and one to execute when the condition is false",
+      "definition": "Used when two sets of conditional statements are needed: one to execute when the condition is `true` and one to execute when the condition is `false`",
       "properties": {
       },
       "seeding_key": {
@@ -6233,7 +6592,7 @@
     {
       "key": "multi_selection_statement",
       "word": "Multi-Selection Statement",
-      "definition": "A statement that selects a single action from three or more conditional statements based on which boolean expression is true",
+      "definition": "A statement that selects a single action from three or more conditional statements based on which Boolean expression is `true`",
       "properties": {
       },
       "seeding_key": {
@@ -6620,7 +6979,7 @@
     {
       "key": "fa9d5ed3-65e0-4045-ac6a-5f1ed07dc814",
       "properties": {
-        "description": "Write if/else statements to implement alternate outcomes"
+        "description": "Write `if/else` statements to implement alternate outcomes"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -6638,19 +6997,9 @@
       }
     },
     {
-      "key": "c4fbb002-3414-4bc4-ac31-198692345a87",
-      "properties": {
-        "description": "Use Math.random() to select a random element from an array"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "objective.key": "c4fbb002-3414-4bc4-ac31-198692345a87"
-      }
-    },
-    {
       "key": "9f49c933-e7c0-446d-9ed1-0fdf7cd34b2d",
       "properties": {
-        "description": "Use if/else statements to check the validity of a move in the Pop the Balloons game"
+        "description": "Use `if/else` statements to check the validity of a move in the Pop the Balloons game"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -6660,7 +7009,7 @@
     {
       "key": "e79effb7-0529-4063-92eb-127139ef85c0",
       "properties": {
-        "description": "Write if/else-if/else statements using relational operators"
+        "description": "Write `if/else-if/else` statements using relational operators"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
