@@ -510,6 +510,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil returned_section.unit_group
   end
 
+  test 'pilot teacher can assign pilot script' do
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    sign_in pilot_teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      script: {id: pilot_script.id}
+    }
+    assert_response :success
+
+    assert_equal pilot_script.id, returned_json['script']['id']
+    assert_equal pilot_script, returned_section.script
+  end
+
   test 'non pilot teacher cannot assign a pilot script' do
     pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     sign_in @teacher
