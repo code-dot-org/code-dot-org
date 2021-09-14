@@ -93,12 +93,10 @@ class Lesson < ApplicationRecord
     raw_lessons.map do |raw_lesson|
       lesson = fetch_lesson(raw_lesson, unit)
 
-      numbered_lesson = !!raw_lesson[:has_lesson_plan] || !raw_lesson[:lockable]
-
       lesson.assign_attributes(
         lesson_group: lesson_group,
         absolute_position: (counters.lesson_position += 1),
-        relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
+        relative_position: lesson.numbered_lesson? ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
       )
       lesson.save! if lesson.changed?
       lesson
