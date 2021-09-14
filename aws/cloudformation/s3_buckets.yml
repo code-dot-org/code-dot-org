@@ -24,6 +24,44 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+  ## Create S3 bucket for student sources (project code)
+  SourcesBucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: "cdo-v3-sources"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "aws:kms"
+      VersioningConfiguration:
+        Status: "Enabled"
+      LifecycleConfiguration:
+        Rules:
+          -
+            Id: "60-day expiration of old versions"
+            NoncurrentVersionExpirationInDays: 60
+            Prefix: "sources/"
+            Status: "Enabled"
+          -
+            ExpiredObjectDeleteMarker: true
+            Id: "Clean Test Sources"
+            NoncurrentVersionExpirationInDays: 1
+            Prefix: "sources_test/"
+            Status: "Enabled"
+          -
+            ExpiredObjectDeleteMarker: true
+            Id: "Clean Circle Sources"
+            NoncurrentVersionExpirationInDays: 1
+            Prefix: "sources_circle/"
+            Status: "Enabled"
+      LoggingConfiguration:
+        DestinationBucketName: "cdo-logs"
+        LogFilePrefix: "s3/cdo-v3-sources"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
   DroneLibraryBucketPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
