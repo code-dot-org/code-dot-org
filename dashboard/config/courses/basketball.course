@@ -1,7 +1,7 @@
 {
   "name": "basketball",
   "script_names": [
-
+    "basketball"
   ],
   "published_state": "preview",
   "properties": {

@@ -1,7 +1,7 @@
 {
   "name": "playlab",
   "script_names": [
-
+    "playlab"
   ],
   "published_state": "preview",
   "properties": {

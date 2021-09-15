@@ -1,7 +1,7 @@
 {
   "name": "mc",
   "script_names": [
-
+    "mc"
   ],
   "published_state": "preview",
   "properties": {

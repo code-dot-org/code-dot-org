@@ -1,7 +1,7 @@
 {
   "name": "iceage",
   "script_names": [
-
+    "iceage"
   ],
   "published_state": "preview",
   "properties": {

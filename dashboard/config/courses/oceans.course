@@ -1,7 +1,7 @@
 {
   "name": "oceans",
   "script_names": [
-
+    "oceans"
   ],
   "published_state": "preview",
   "properties": {

@@ -1,7 +1,7 @@
 {
   "name": "gumball",
   "script_names": [
-
+    "gumball"
   ],
   "published_state": "preview",
   "properties": {

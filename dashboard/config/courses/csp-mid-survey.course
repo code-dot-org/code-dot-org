@@ -1,7 +1,7 @@
 {
   "name": "csp-mid-survey",
   "script_names": [
-
+    "csp-mid-survey"
   ],
   "published_state": "preview",
   "properties": {

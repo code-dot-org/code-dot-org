@@ -1,7 +1,7 @@
 {
   "name": "csa-self-paced-pl",
   "script_names": [
-
+    "csa-self-paced-pl"
   ],
   "published_state": "beta",
   "properties": {

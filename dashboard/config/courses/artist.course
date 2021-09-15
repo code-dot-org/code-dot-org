@@ -1,7 +1,7 @@
 {
   "name": "artist",
   "script_names": [
-
+    "artist"
   ],
   "published_state": "preview",
   "properties": {
