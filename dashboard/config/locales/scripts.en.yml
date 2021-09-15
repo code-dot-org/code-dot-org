@@ -22629,10 +22629,16 @@ en:
               description_teacher: Students differentiate between comparisons of objects and primitive values. Students explore the effects of using `==` or `!=` with objects to identify the need for the `equals()` method to compare object data. Using the `equals()` method, students add to the Pop the Balloons game to compare `Balloon` objects and determine if there are valid moves left.
             lesson-8:
               name: Providing an Alternate Path of Execution
+              description_student: You review `if/else` statements to implement alternate actions based on the outcome of a Boolean expression. You practice using `if/else` statements with `Math.random()` to access random elements from an array in The Neighborhood. Using `if/else statements`, you check the validity of a player's move in the Pop the Balloons game.
+              description_teacher: Students review `if/else` statements to implement alternate actions based on the outcome of a Boolean expression. Students practice using `if/else` statements with `Math.random()` to access random elements from an array in The Neighborhood. Using `if/else` statements, students check the validity of a player's move in the Pop the Balloons game.
             lesson-9:
               name: Testing Multiple Conditions
+              description_student: Sometimes we need to check multiple conditions to determine the correct outcome. In The Neighborhood, you learn to use `if/else-if/else` statements to solve problems for the `Painter`. You then implement `if/else-if/else` statements in the Pop the Balloons game to check the game's status and determine whether or not the player won.
+              description_teacher: Students use `if/else-if/else` statements to evaluate multiple conditions to select a specific desired outcome. To check the game's status and determine whether or not the player won, students use multi-selection statements to check the condition of the game and choose the appropriate outcome.
             lesson-10:
               name: Using Logical Operators
+              description_student: You explore problems involving multiple conditions and learn to use nested `if` statements in your solutions. You write expressions using new logical operators in conditional statements and identify the effect of these operators on the result. You then improve the gameplay and functionality of your Pop the Balloons game using nested `if` statements and logical operators.
+              description_teacher: Students explore problems involving multiple conditions and write nested `if` statements to develop solutions. Students write expressions using logical operators in conditional statements and identify the effect of logical operators on the result. Nested `if` statements and logical operators are then implemented in the Pop the Balloons game to improve gameplay and overall functionality.
             lesson-11:
               name: Applying De Morgan's Laws to Boolean Expressions
               description_student: You learn about truth tables, a tool we can use to evaluate compound Boolean expressions. You learn about De Morgan's Laws and prove them with a partner using truth tables.
@@ -26070,3 +26076,55 @@ en:
         tesstest921:
           lessons: {}
           lesson_groups: {}
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-animals
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-emoji
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-retro
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-batman
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
