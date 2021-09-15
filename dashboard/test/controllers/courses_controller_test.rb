@@ -22,7 +22,7 @@ class CoursesControllerTest < ActionController::TestCase
     @unit_group_migrated = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_unit, position: 1
 
-    @unmigrated_unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    @unmigrated_unit = create :script, is_migrated: false, published_state: SharedConstants::PUBLISHED_STATE.beta
     @unit_group_unmigrated = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_unmigrated, script: @unmigrated_unit, position: 1
 

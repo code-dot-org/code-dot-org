@@ -3,19 +3,21 @@ title: Inspiring Female Students to Learn Computer Science
 video_player: true
 theme: responsive
 ---
+<h1>Inspiring Girls to Learn Computer Science</h1>
 <div style="text-align: center;">
 <img src="/images/code_like_a_girl.jpg" width="1000">
 </div>
 <br>
-Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. We work to increase diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. 
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe><br></center><Br>
 <p><br>
 Of the 60 million students using Code.org, <strong>27 million of them are young women</strong>. We focus on K-12 learning because data shows that experiences in K-12 directly impact students’ future in computer science. <strong>Among young women, those who try AP Computer Science in high school are 10 times more likely to major in computer science.</strong>
 <p><br>
-The charts below show participation in the AP Computer Science exam among young women since 2007. The improvements aren't the result of Code.org's work alone. There is a whole community of organizations working on diversity in CS, but the real credit belongs to the thousands of teachers who have worked for years to improve diversity in their classrooms. While things are moving in the right direction, we have a long way to go to reach a balanced population in computer science.
+The charts below show participation in the AP Computer Science exam among young women since 2007. The improvements aren't the result of Code.org's work alone. There is a whole community of organizations working on diversity in CS, but the real credit belongs to the thousands of teachers who have worked for years to improve diversity in their classrooms. 
 <div style="text-align: center;">
 <img src="/images/csp-results-female-2.jpg" width="700">
 </div>
-<h1>Inspiring Girls to Learn Computer Science</h1>
+While things are moving in the right direction, we have a long way to go to reach a balanced population in computer science. That's why it's critical to inspire girls to learn computer science.
+<h1>How You Can Help</h1>
 
 Computer science is foundational to many fields and students of all genders report being not only interested in the subject but confident of their abilities as well. Despite this, not enough girls are choosing to study it. <strong>Here are some proven methods for encouraging girls to try computer science:</strong>*
 
@@ -154,7 +156,7 @@ Take a look at some <a href="https://code.org/careers-in-tech">great examples</a
 
 [col-50]
 
-<center><iframe width="375" height="246" src="https://www.youtube.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe><br><Br>
+<center><iframe width="375" height="246" src="https://www.youtube.com/embed/RfbbDgx6l1g" frameborder="0" allowfullscreen></iframe><br><Br>
 
 [/col-50]
 

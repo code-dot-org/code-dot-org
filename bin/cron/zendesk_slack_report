@@ -37,12 +37,12 @@ MONITORING_GROUPS = {
   'cspalooza' => ['CSP'],
   'developers' => ['Developers'],
   'disco-party' => ['CSD'],
+  'ed-programs-tools' => ['PLC Tools'],
   'foundations' => ['Accounts'],
   'international' => ['International'],
   'learning-platform' => ['Learning Platform'],
   'marketing' => ['Media'],
   'pdot' => ['PDOT Amy', 'PDOT Desiree', 'PDOT Jess', 'PDOT Rosie', 'PDOT Tawny'],
-  'plc-engineering' => ['PLC Tools'],
   'product' => ['Product'],
   'regional_managers' => ['Outreach'],
   'star-labs-cabal' => ['*Labs']
@@ -66,7 +66,7 @@ GROUP_FILTERS = {
 
 # Slack room -> username of a code.org email
 MONITORING_USERS = {
-  'curriculum-platform' => ['zendesk-curricplatform'],
+  'ed-programs-tools' => ['zendesk-curricplatform'],
   'outreach_honky-tonk' => ['zendesk-outreach'],
   'pl-team-only' => ['zendesk-pl']
 }
