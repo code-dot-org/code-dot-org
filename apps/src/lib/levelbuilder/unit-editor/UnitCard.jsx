@@ -10,7 +10,7 @@ import {
   convertGroupToNonUserFacing
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import ReactDOM from 'react-dom';
-import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {lessonGroupShape} from './shapes';
 
 class UnitCard extends Component {
   static propTypes = {
