@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 import ReactDOM from 'react-dom';
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import initPage from '@cdo/apps/sites/studio/pages/scripts/edit';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
