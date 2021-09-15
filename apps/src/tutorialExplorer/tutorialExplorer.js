@@ -628,7 +628,10 @@ export default class TutorialExplorer extends React.Component {
                     width: getResponsiveValue({xs: 100, md: 20})
                   }}
                 >
-                  <Search onChange={this.handleSearchTerm} />
+                  <Search
+                    onChange={this.handleSearchTerm}
+                    showClearIcon={this.state.searchTerm !== ''}
+                  />
                   <FilterSet
                     mobileLayout={this.state.mobileLayout}
                     uniqueOrgNames={this.getUniqueOrgNames()}
