@@ -1569,7 +1569,7 @@ class User < ApplicationRecord
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
-    visible_scripts.map(&:unit_group).compact.concat(section_courses).uniq
+    visible_scripts.map(&:unit_group).compact.concat(section_courses).reject(&:standalone_course?).uniq
   end
 
   # Checks if there are any launched scripts assigned to the user.

@@ -200,7 +200,8 @@ module Services
         # Course version must be set before resources and vocabulary are imported. If the
         # script is in a unit group, we must wait and let the next seed step set
         # the course version on the unit group before resources and vocabulary can be imported.
-        CourseOffering.add_course_offering(seed_context.script) if seed_context.script.is_course
+        #CourseOffering.add_course_offering(seed_context.script) if seed_context.script.is_course
+        seed_context.script.add_unit_group
 
         seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
         seed_context.lessons = import_lessons(lessons_data, seed_context)

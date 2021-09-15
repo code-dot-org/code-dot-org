@@ -149,3 +149,187 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        20-hour:
+          :title: Accelerated Intro to CS Course
+        flappy:
+          :title: Flappy Code
+        jigsaw:
+          :title: Jigsaw
+        AlgebraA:
+          :title: 'Computer Science in Algebra: Course A'
+        AlgebraB:
+          :title: 'Computer Science in Algebra: Course B'
+        algebra:
+          :title: Computer Science in Algebra
+        allthemigratedthings:
+          :title: All the Migrated Things
+        applab-intro:
+          :title: Intro to App Lab
+        aquatic:
+          :title: 'Minecraft: Voyage Aquatic'
+        artist:
+          :title: Artist
+        basketball:
+          :title: Choose your team and make a basketball game
+        code-break-younger:
+          :title: Code Break for Younger Students
+        code-break:
+          :title: Code Break
+        course1:
+          :title: Course 1
+        course2:
+          :title: Course 2
+        course3:
+          :title: Course 3
+        course4:
+          :title: Course 4
+        coursea-2017:
+          :title: Course A
+        coursea-2018:
+          :title: Course A (2018)
+        coursea-2019:
+          :title: Course A (2019)
+        coursea-2020:
+          :title: Course A (2020)
+        coursea-2021:
+          :title: Course A (2021)
+        courseb-2017:
+          :title: Course B
+        courseb-2018:
+          :title: Course B (2018)
+        courseb-2019:
+          :title: Course B (2019)
+        courseb-2020:
+          :title: Course B (2020)
+        courseb-2021:
+          :title: Course B (2021)
+        coursec-2017:
+          :title: Course C
+        coursec-2018:
+          :title: Course C (2018)
+        coursec-2019:
+          :title: Course C (2019)
+        coursec-2020:
+          :title: Course C (2020)
+        coursec-2021:
+          :title: Course C (2021)
+        coursed-2017:
+          :title: Course D
+        coursed-2018:
+          :title: Course D (2018)
+        coursed-2019:
+          :title: Course D (2019)
+        coursed-2020:
+          :title: Course D (2020)
+        coursed-2021:
+          :title: Course D (2021)
+        coursee-2017:
+          :title: Course E
+        coursee-2018:
+          :title: Course E (2018)
+        coursee-2019:
+          :title: Course E (2019)
+        coursee-2020:
+          :title: Course E (2020)
+        coursee-2021:
+          :title: Course E (2021)
+        coursef-2017:
+          :title: Course F
+        coursef-2018:
+          :title: Course F (2018)
+        coursef-2019:
+          :title: Course F (2019)
+        coursef-2020:
+          :title: Course F (2020)
+        coursef-2021:
+          :title: Course F (2021)
+        csd-post-survey:
+          :title: CSD Student Post-Course Survey ('18-'19)
+        csd3-virtual:
+          :title: Self Paced Introduction to Game Lab
+        csp-mid-survey:
+          :title: CSP Student Mid-year Survey
+        csp3-virtual:
+          :title: Self Paced Introduction to Turtle Programming In App Lab
+        csp5-virtual:
+          :title: Event-Driven Programming in App Lab
+        dance-2019:
+          :title: Dance Party (2019)
+        dance-extras-2019:
+          :title: Keep On Dancing (2019)
+        dance-extras:
+          :title: Keep On Dancing (2018)
+        dance:
+          :title: Dance Party (2018)
+        deepdive-debugging:
+          :title: Debugging Lessons for Educators
+        express-2017:
+          :title: Express Course
+        express-2018:
+          :title: Express Course
+        express-2019:
+          :title: Express Course (2019)
+        express-2020:
+          :title: Express Course (2020)
+        express-2021:
+          :title: Express Course (2021)
+        frozen:
+          :title: Code with Anna and Elsa
+        gumball:
+          :title: Gumball Play Lab
+        hero:
+          :title: 'Minecraft: Hero''s Journey'
+        hoc-encryption:
+          :title: 'Hour of Code: Simple Encryption'
+        hourofcode:
+          :title: Classic Maze
+        iceage:
+          :title: Ice Age Play Lab
+        infinity:
+          :title: Disney Infinity Play Lab
+        mc:
+          :title: Minecraft Hour of Code
+        minecraft:
+          :title: Minecraft Hour of Code Designer
+        oceans:
+          :title: AI for Oceans
+        outbreak:
+          :title: Outbreak Simulator
+        pixelation:
+          :title: Pixelation
+        playlab:
+          :title: Play Lab
+        pre-express-2017:
+          :title: Pre-reader Express
+        pre-express-2018:
+          :title: Pre-reader Express (2018)
+        pre-express-2019:
+          :title: Pre-reader Express (2019)
+        pre-express-2020:
+          :title: Pre-reader Express (2020)
+        pre-express-2021:
+          :title: Pre-reader Express (2021)
+        sports:
+          :title: Code your own sports game
+        starwars:
+          :title: 'Star Wars: Building a Galaxy With Code (Javascript)'
+        starwarsblocks:
+          :title: 'Star Wars: Building a Galaxy With Code (Blockly)'
+        text-compression:
+          :title: Text Compression
+        aiml-2021:
+          :title: AI and Machine Learning Module
+        poembot:
+          :title: Poembot
+        sb-pt-cont:
+          :title: Story Board (playtest control)
+        sb-pt-exp:
+          :title: Story Board (playtest experiment)
+        csa-self-paced-pl:
+          :title: Navigating Code.org for CSA Pilot Teachers
+        poetry-hoc:
+          :title: Poetry HoC
+        ui-test-versioned-script-2017:
+          :title: ui-test-versioned-script-2017
+        ui-test-versioned-script-2019:
+          :title: ui-test-versioned-script-2019
