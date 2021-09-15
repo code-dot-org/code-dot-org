@@ -39,7 +39,8 @@ class ReviewTab extends Component {
     token: '',
     forceRecreateEditorKey: 0,
     reviewablePeers: [],
-    projectOwnerName: ''
+    projectOwnerName: '',
+    authorizationError: false
   };
 
   onSelectPeer = peer => {
@@ -160,6 +161,7 @@ class ReviewTab extends Component {
       serverLevelId
     } = getStore().getState().pageConstants;
     const {token} = this.state;
+    this.setState({authorizationError: false});
 
     codeReviewDataApi
       .submitNewCodeReviewComment(
@@ -177,6 +179,11 @@ class ReviewTab extends Component {
           comments: comments,
           forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1
         });
+      })
+      .fail(result => {
+        if (result.status === 404 || result.status === 500) {
+          this.setState({authorizationError: true});
+        }
       });
   };
 
@@ -352,7 +359,10 @@ class ReviewTab extends Component {
   }
 
   renderCommentEditor(forceRecreateEditorKey) {
-    if (this.state.isReadyForReview || this.props.viewAs === ViewType.Teacher) {
+    if (
+      !this.state.authorizationError &&
+      (this.state.isReadyForReview || this.props.viewAs === ViewType.Teacher)
+    ) {
       return (
         <CommentEditor
           onNewCommentSubmit={this.onNewCommentSubmit}
@@ -360,12 +370,19 @@ class ReviewTab extends Component {
         />
       );
     }
-
-    return (
-      <div style={styles.messageText}>
-        {javalabMsg.disabledPeerReviewMessage()}
-      </div>
-    );
+    if (this.state.authorizationError) {
+      return (
+        <div style={{...styles.reviewDisabledText, ...styles.messageText}}>
+          {javalabMsg.peerReviewDisabled()}
+        </div>
+      );
+    } else {
+      return (
+        <div style={styles.messageText}>
+          {javalabMsg.disabledPeerReviewMessage()}
+        </div>
+      );
+    }
   }
 
   renderPeerDropdown(reviewablePeers, onSelectPeer) {
@@ -542,5 +559,8 @@ const styles = {
   backToProjectButton: {
     margin: 0,
     paddingTop: 0
+  },
+  reviewDisabledText: {
+    fontStyle: 'italic'
   }
 };
