@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-14 17:15:42 UTC",
+    "serialized_at": "2021-09-15 15:39:08 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -197,8 +197,8 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "Students explore problems involving multiple conditions and write nested `if` statements to create solutions for these problems. Students write expressions involving logical operators in conditional statements and identify the effect of logical operators on the outcome of the expression. Nested `if` statements and logical operators are then implemented in the Pop the Balloons game to check how many moves are left and calculate the score.",
-        "student_overview": "You learn how to write nested `if` statements and expressions involving three logical operators. You simplify more complex multiple conditionals using logical operators to solve problems. You revisit The Neighborhood and add nested `if` statements to solve a given problem for the `Painter`. You then implement nested `if` statements and logical operators in the Pop the Balloons game to check how many moves are left and calculate the game's score."
+        "overview": "Students explore problems involving multiple conditions and write nested `if` statements to develop solutions. Students write expressions using logical operators in conditional statements and identify the effect of logical operators on the result. Nested `if` statements and logical operators are then implemented in the Pop the Balloons game to improve gameplay and overall functionality.",
+        "student_overview": "You explore problems involving multiple conditions and learn to use nested `if` statements in your solutions. You write expressions using new logical operators in conditional statements and identify the effect of these operators on the result. You then improve the gameplay and functionality of your Pop the Balloons game using nested `if` statements and logical operators."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -2543,250 +2543,201 @@
       }
     },
     {
-      "key": "1f02bd5c-6887-4f27-955e-7cd24b9e473a",
+      "key": "1d9ecbab-1240-49fe-b7c9-b4b08285f444",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Play a round of Guess This Tech Company with a partner. Use your three questions and tech companies displayed on the slide to assist you with guessing. Each partner should take a turn as the guesser. ",
+        "description": "Let's play a round of Guess This Tech Company with a partner. Use your three questions and tech companies displayed on the slide to assist you with guessing. Each partner should take a turn as the guesser. ",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "1f02bd5c-6887-4f27-955e-7cd24b9e473a",
+        "activity_section.key": "1d9ecbab-1240-49fe-b7c9-b4b08285f444",
         "lesson_activity.key": "19385468-9322-4b57-bd55-16825d6624a4"
       }
     },
     {
-      "key": "bdb817e8-8b6b-4d8e-bd24-706486a05b4c",
+      "key": "356b322d-523c-4711-9511-9cdf7bd341cf",
       "position": 4,
       "properties": {
-        "description": "**Display:** Show the Guess This Tech Company logos while students play the game.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Were you able to guess each other’s tech companies? Which questions were helpful? If you were to build a Java version of our Guess This Tech Company game, what structures would you use?*\n\n**Discussion Goal:** Students share if they could guess the tech company and examples of helpful questions. Students share that conditional statements allow them to simplify code through testing multiple conditions to get to the correct answer. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Guess This Tech Company logos while students play the game.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Were you able to guess each other’s tech companies?*\n* *Which questions were helpful?*\n* *What structures would you use if you were to build a Java version of our Guess This Tech Company game?*\n\n**Discussion Goal:** Students share whether they guessed their partners' tech company and provide examples of helpful questions. Students suggest that conditional statements would simplify code by testing multiple conditions to find the correct answer.  ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Prompt students to share different opinions about building a Guess This Tech Company program in Java. Ask students to identify some challenges using conditional statements. Some might include: \n* Increasing the number of tech companies might result in an excessive number of `if/else` statements\n* Large amounts of code may be difficult to debug"
+            "markdown": "Prompt students to share different opinions about building a Guess This Tech Company program in Java. Ask students to identify some challenges using conditional statements, such as: \n* Increasing the number of tech companies might result in an excessive number of `if/else` statements.\n* Large amounts of code may be difficult to debug."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "bdb817e8-8b6b-4d8e-bd24-706486a05b4c",
+        "activity_section.key": "356b322d-523c-4711-9511-9cdf7bd341cf",
         "lesson_activity.key": "19385468-9322-4b57-bd55-16825d6624a4"
       }
     },
     {
-      "key": "396df739-2c4e-419b-acfe-bffea4a7d96e",
+      "key": "d7b13a43-cefc-4d60-8d43-083bba8d8f89",
       "position": 1,
       "properties": {
-        "description": "In Unit 3, you were introduced to the term nested. Let’s look at how we can apply the concept of nested to if statements.  ",
+        "description": "In Unit 3, we learned about the term nested when referring to a loop inside another loop. Let’s look at how the concept of nesting works with `if` statements. ",
         "duration": "10",
-        "name": "Nested if",
+        "name": "Nested if Statements",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "396df739-2c4e-419b-acfe-bffea4a7d96e",
+        "activity_section.key": "d7b13a43-cefc-4d60-8d43-083bba8d8f89",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
     {
-      "key": "344a1b55-737d-46dd-a87a-6de8a25c9169",
+      "key": "a8372c57-fe16-4c94-bf74-9bfbb42876a5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the definition and an example of a nested `if` statement. Click through the animated slide to discuss the execution of a nested `if` statement. Pause at each step to discuss what is happening. Highlight the following:\n* Evaluating the first `if` statement\n* Evaluating the nested `if` statement condition\n* Executing the body of the nested `if` statement if the condition of the nested `if` statement is `true`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would be the reason to include an `if` statement in the body of another `if` statement?*\n\n**Discussion Goal:** Students share using nested `if` statements can simplify the code to allow the program to make a decision based on whether the condition is `true` or `false`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain and demonstrate a nested `if` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Why would we have an `if` statement in the body of another `if` statement?\n\n**Discussion Goal:** Students suggested using nested `if` statements to allow the program to check conditions within other conditions. Students may share scenarios where they would want to do this, such as checking if someone has enough money for a movie ticket and an available movie time.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students don’t get to this on their own, ask the following prompting questions:\n* *What is meant by nested?*\n* *How is this nested statement similar to a nested loop?*\n* *How could using a nested `if` statement simplify the use of an `if/else-if/else` statement?*"
+            "markdown": "If students don’t get to this on their own, ask the following prompting questions:\n* *What is meant by nested?*\n* *How is this nested statement similar to a nested loop?*\n* *What are some scenarios where you would need to check if multiple conditions were `true`?*"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "344a1b55-737d-46dd-a87a-6de8a25c9169",
+        "activity_section.key": "a8372c57-fe16-4c94-bf74-9bfbb42876a5",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
     {
-      "key": "2e5c5d8e-9f38-4cdd-bd16-beea4f589e58",
+      "key": "14b45514-678c-43d1-94d7-4870f13197e5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Before you can hang out with your friends, you need to answer the following questions: Did I finish my homework? Did I do all my chores? If the answers are true to both questions, then you can hang out with your friends. If not, then you need to complete your homework first, then finish all your chores.",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *You want to hang out with your friends...but first you need to do your homework, then you need to do your chores. How would you structure this scenario in Java?*\n\n**Discussion Goal:** Students suggest using an `if` statement to check if the homework is finished then a nested `if` statement to check if the chores are completed. If both conditions are `true`, then they can hang out with their friends. If one of the conditions is `false`, then they will need to complete that task first.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the example solution with a nested `if` statement."
       },
       "seeding_key": {
-        "activity_section.key": "2e5c5d8e-9f38-4cdd-bd16-beea4f589e58",
+        "activity_section.key": "14b45514-678c-43d1-94d7-4870f13197e5",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
     {
-      "key": "bee3b941-9f66-4c31-93c9-ea36d21b9c7a",
+      "key": "271bcae7-2a78-4cbe-9c4e-a950baf34417",
       "position": 4,
-      "properties": {
-        "description": "**Discuss:** *How would you structure this scenario in Java?*\n\n**Discussion Goal:** Students share the code segment would include an `if` statement to check if the homework is finished then a nested `if` statement to check if the chores are completed. If both conditions are `true`, then they can hang out with their friends. If one of the conditions is `false`, then they will need to complete their task first.\n\n**Do This:** Click through the animated slide to show an example solution with a nested `if` statement. "
-      },
-      "seeding_key": {
-        "activity_section.key": "bee3b941-9f66-4c31-93c9-ea36d21b9c7a",
-        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
-      }
-    },
-    {
-      "key": "872741a5-a9f0-4422-bb70-d20cfa28fd03",
-      "position": 5,
       "properties": {
         "description": "Now that you understand how to use a nested `if` statement, let’s practice using them to solve problems in The Neighborhood.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "872741a5-a9f0-4422-bb70-d20cfa28fd03",
+        "activity_section.key": "271bcae7-2a78-4cbe-9c4e-a950baf34417",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
     {
-      "key": "b0bcd476-f8bd-4cf3-977f-2551c462fd28",
-      "position": 6,
+      "key": "f2c9bfad-0203-4598-b92b-d21490b8ec62",
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 1 on Code Studio. Students revisit Level 1 from Lesson 8 to add a nested `if` statement to the current condition."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 1 on Code Studio.",
+        "progression_name": "Nested if Statement"
       },
       "seeding_key": {
-        "activity_section.key": "b0bcd476-f8bd-4cf3-977f-2551c462fd28",
+        "activity_section.key": "f2c9bfad-0203-4598-b92b-d21490b8ec62",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
     {
-      "key": "9bf378b6-89e6-4f6d-b00e-7b1f6dd41351",
-      "position": 7,
+      "key": "1f7d5006-8f8d-4aab-9d66-b9b59f4a9f60",
+      "position": 6,
       "properties": {
         "description": "In Lesson 4, you learned how to implement relational operators in conditional statements. We will now expand our conditional statements to include logical operators to create compound Boolean expressions. You should recall the first logical operator from Unit 1. ",
-        "duration": "8",
+        "duration": "10",
         "name": "Logical Operators",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "9bf378b6-89e6-4f6d-b00e-7b1f6dd41351",
+        "activity_section.key": "1f7d5006-8f8d-4aab-9d66-b9b59f4a9f60",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
     {
-      "key": "4fb5599a-877e-45d2-9d1a-fb75eecf08bd",
-      "position": 8,
+      "key": "2f1e4693-9a7a-4565-a741-c2a7cd053d5e",
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss logical operators.\n* The `!` operator means NOT\n* The `&&` operator means AND \n* The `||` operator means OR \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the definition and example of compound Boolean expressions.\n* A && B → evaluates to `true` when both A and B are true\n* A || B → evaluates to `true` when either (or both) A or B is true"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the logical operators.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and demonstrate compound Boolean expressions."
       },
       "seeding_key": {
-        "activity_section.key": "4fb5599a-877e-45d2-9d1a-fb75eecf08bd",
+        "activity_section.key": "2f1e4693-9a7a-4565-a741-c2a7cd053d5e",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
     {
-      "key": "088610d3-9e0f-46d1-8601-8328ac6f4cbb",
-      "position": 9,
+      "key": "f0c85aa2-99e1-48dc-bab2-002013a74b5a",
+      "position": 8,
       "properties": {
         "description": "Think about yesterday’s example about the weather. If you want to go to the park, the weather needs to be higher than 85 degrees. If the weather is above 95 degrees, then you want to stay home. If the weather is 80 degrees, you can play soccer with friends, but if the weather is lower than 80, you can just stay at home.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "088610d3-9e0f-46d1-8601-8328ac6f4cbb",
+        "activity_section.key": "f0c85aa2-99e1-48dc-bab2-002013a74b5a",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
     {
-      "key": "c49fbefd-a6c4-4635-83ee-ac41c06388cf",
-      "position": 10,
+      "key": "a8781c7e-7a1f-4589-904a-f553d9780ebc",
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would you guess logical operators show up in Java? How might they help us simplify the use of conditional statements? What if the weather was 98 degrees? How would you write that code segment?*\n\n**Discussion Goal:** Students suggest using a && operator to test if the weather is between 81 and 95 degrees. If the condition is `true`, then they can go to the park. If it is `false`, then the second condition will be evaluated. If the second condition is `false`, they will need to stay at home. \n\n**Do This:** Click through the animated slide to show an example conditional statement using a logical operator. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 Code Studio. Students use logical operators to simplify the conditional statements. Have students continue to complete Level 3."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How would you guess logical operators show up in Java?*\n* *How might they help us simplify the use of conditional statements?*\n* *What if the weather was 98 degrees? How would you write that code segment?*\n\n**Discussion Goal:** Students suggest using a `&&` operator to test if the weather is between 81 and 95 degrees. If the condition is `true`, then they can go to the park. If it is `false`, then the second condition will be evaluated. If the second condition is `false`, they will stay at home. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show an example conditional statement using a logical operator. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 Code Studio. Students use logical operators to simplify the conditional statement. Have students continue to complete Level 3.",
+        "progression_name": "Logical Operators"
       },
       "seeding_key": {
-        "activity_section.key": "c49fbefd-a6c4-4635-83ee-ac41c06388cf",
+        "activity_section.key": "a8781c7e-7a1f-4589-904a-f553d9780ebc",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
     {
-      "key": "61b356f3-d068-4b49-8f25-3d91419f0832",
-      "position": 11,
+      "key": "fb075cff-1e87-4d58-9dab-a133f5114360",
+      "position": 10,
       "properties": {
-        "description": "Today we will update our Pop the Balloon game to improve its functionality. The next features of our Pop the Balloons game that we will develop are the `movesLeft()` and `calculateScore()` functions. ",
-        "duration": "12",
+        "description": "Let's make some updates to our Pop the Balloon game to improve its functionality and implement another game rule. In Pop the Balloons, you can only roll one die if balloons 7, 8, and 9 are all popped. ",
+        "duration": "10",
         "name": "Pop the Balloons Game",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "61b356f3-d068-4b49-8f25-3d91419f0832",
+        "activity_section.key": "fb075cff-1e87-4d58-9dab-a133f5114360",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
     {
-      "key": "caa5adf8-4cb3-450f-9edc-1c05de14b9fd",
+      "key": "01e23e66-7123-4286-a0d6-7071a65d0179",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Walk students through the to-do list for the Pop the Balloons game. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4, 5, and 6 on Code Studio. Students use logical operators and nested if statements to further develop their Pop the Balloons game.",
+        "progression_name": "Improving the Game",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students need extra support, have them write pseudocode for the problem then translate it to Java.\n\nEncourage those who finish early to assist students who need extra support."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "01e23e66-7123-4286-a0d6-7071a65d0179",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "20cc410a-ccd1-493d-bd0a-b59aec276b57",
       "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can logical operators improve the functionality of your Pop the Balloons game?*\n\n**Discussion Goal:** Students share that the logical operators can simplify the selection statements to test multiple conditions in one or two selection statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Walk students through the to-do list of methods for the Pop the Balloons game. ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students may struggle to break down the process of checking if there are moves left or calculating the score. To help students think about the process, ask:\n* *Consider how many balloons have been popped and the value of each balloon. How would you know how many balloons have been popped? How would you find out if the values equal the number rolled?*\n* *How would you calculate the score by hand if you were playing the game? What steps would you take to find the score?*"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "caa5adf8-4cb3-450f-9edc-1c05de14b9fd",
-        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
-      }
-    },
-    {
-      "key": "5464c371-19e1-462d-bb12-d78d90f6ff5e",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the purpose of the `movesLeft()` method. Direct students to work with a partner to write pseudocode for the if statements on a sheet of paper. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the pseudocode for the `if` statements in the `movesLeft()` method. Students should compare their pseudocode to the slide to ensure they’re on the right track.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the purpose of the `calculateScore()` method. Direct students to work with a partner to write pseudocode on a sheet of paper for `calculateScore()`."
-      },
-      "seeding_key": {
-        "activity_section.key": "5464c371-19e1-462d-bb12-d78d90f6ff5e",
-        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
-      }
-    },
-    {
-      "key": "c609f8b1-ad76-4fb2-9ea7-1ebaa48e4600",
-      "position": 14,
-      "properties": {
-        "description": "Using your pseudocode, apply what you have written to write your two methods in Code Studio.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "c609f8b1-ad76-4fb2-9ea7-1ebaa48e4600",
-        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
-      }
-    },
-    {
-      "key": "7fe3379f-64d5-47f9-9a63-583330ec4acf",
-      "position": 15,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4 and 5 on Code Studio. Students use nested `if` statements and logical operators to improve the functionality of the Pop the Balloons game.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students need extra support:\n* Have students translate their pseudocode to Java before they go to Code Studio.\n* Encourage those who finish early to assist students who need extra support.\n* If time permits, review both methods as a class before the code review."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7fe3379f-64d5-47f9-9a63-583330ec4acf",
-        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
-      }
-    },
-    {
-      "key": "68eea8cf-3dbc-4422-b96e-968ba257f5d9",
-      "position": 16,
       "properties": {
         "description": "This is a good opportunity to do a code review to make improvements. Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "68eea8cf-3dbc-4422-b96e-968ba257f5d9",
+        "activity_section.key": "20cc410a-ccd1-493d-bd0a-b59aec276b57",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
     {
-      "key": "73f8fb4f-afe2-4750-b40b-95489bd60036",
-      "position": 17,
+      "key": "09c02259-59ca-4424-99b1-e6b604250d56",
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs to review each other's `calculateScore()` method. Students request, receive and review feedback on Level 5. While reviewing, students consider the following questions:\n* Am I able to understand the code easily?\n* Can you think of any inputs that could break the code?\n* Is error handling provided to handle edge cases?\n* Is the same code duplicated across multiple files?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs to review each other's Pop the Balloons game. Students request, receive, and review feedback on Level 6. While reviewing, students consider the following questions:\n* Am I able to understand the code easily?\n* Can you think of any inputs that could break the code?\n* Is error handling provided to handle edge cases?\n* Is the same code duplicated across multiple files?"
       },
       "seeding_key": {
-        "activity_section.key": "73f8fb4f-afe2-4750-b40b-95489bd60036",
+        "activity_section.key": "09c02259-59ca-4424-99b1-e6b604250d56",
         "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
       }
     },
@@ -2807,7 +2758,7 @@
       "key": "9d263138-862c-4372-b7bf-09dbefa821b4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary "
       },
       "seeding_key": {
         "activity_section.key": "9d263138-862c-4372-b7bf-09dbefa821b4",
@@ -2819,7 +2770,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "641ef16a-5799-4002-b1cb-7323760025ea",
@@ -4711,6 +4663,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L1"
+        ],
         "progression": "Conditional Painting"
       },
       "bonus": false,
@@ -4733,6 +4688,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L2"
+        ],
         "progression": "Conditional Painting"
       },
       "bonus": false,
@@ -4755,6 +4713,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L3"
+        ],
         "progression": "Conditional Painting"
       },
       "bonus": false,
@@ -4777,6 +4738,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L4"
+        ],
         "progression": "Checking the Player's Move"
       },
       "bonus": false,
@@ -4799,6 +4763,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L5"
+        ],
         "progression": "Checking the Player's Move"
       },
       "bonus": false,
@@ -4821,6 +4788,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4843,6 +4813,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L1"
+        ],
         "progression": "Multi-Selection Statements"
       },
       "bonus": false,
@@ -4865,6 +4838,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L2"
+        ],
         "progression": "Multi-Selection Statements"
       },
       "bonus": false,
@@ -4887,6 +4863,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L3"
+        ],
         "progression": "Check for Game Over"
       },
       "bonus": false,
@@ -4909,6 +4888,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L4"
+        ],
         "progression": "Check for Game Over"
       },
       "bonus": false,
@@ -4931,6 +4913,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4945,6 +4930,160 @@
       },
       "level_keys": [
         "CSA U4L8-L5"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Nested if Statement"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L9-L1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "f2c9bfad-0203-4598-b92b-d21490b8ec62"
+      },
+      "level_keys": [
+        "CSA U4L9-L1"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Logical Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L9-L2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "a8781c7e-7a1f-4589-904a-f553d9780ebc"
+      },
+      "level_keys": [
+        "CSA U4L9-L2"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Logical Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L9-L3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "a8781c7e-7a1f-4589-904a-f553d9780ebc"
+      },
+      "level_keys": [
+        "CSA U4L9-L3"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Improving the Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L9-L4"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "01e23e66-7123-4286-a0d6-7071a65d0179"
+      },
+      "level_keys": [
+        "CSA U4L9-L4"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Improving the Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L9-L5"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "01e23e66-7123-4286-a0d6-7071a65d0179"
+      },
+      "level_keys": [
+        "CSA U4L9-L5"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Improving the Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L9-L6"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "01e23e66-7123-4286-a0d6-7071a65d0179"
+      },
+      "level_keys": [
+        "CSA U4L9-L6"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L9-L7"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "641ef16a-5799-4002-b1cb-7323760025ea"
+      },
+      "level_keys": [
+        "CSA U4L9-L7"
       ]
     }
   ],
@@ -5559,6 +5698,90 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot",
         "activity_section.key": "947b1122-667d-4a84-a8a7-b0d287695862"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L9-L1",
+        "script_level.level_keys": [
+          "CSA U4L9-L1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "f2c9bfad-0203-4598-b92b-d21490b8ec62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L9-L2",
+        "script_level.level_keys": [
+          "CSA U4L9-L2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "a8781c7e-7a1f-4589-904a-f553d9780ebc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L9-L3",
+        "script_level.level_keys": [
+          "CSA U4L9-L3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "a8781c7e-7a1f-4589-904a-f553d9780ebc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L9-L4",
+        "script_level.level_keys": [
+          "CSA U4L9-L4"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "01e23e66-7123-4286-a0d6-7071a65d0179"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L9-L5",
+        "script_level.level_keys": [
+          "CSA U4L9-L5"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "01e23e66-7123-4286-a0d6-7071a65d0179"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L9-L6",
+        "script_level.level_keys": [
+          "CSA U4L9-L6"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "01e23e66-7123-4286-a0d6-7071a65d0179"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L9-L7",
+        "script_level.level_keys": [
+          "CSA U4L9-L7"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "641ef16a-5799-4002-b1cb-7323760025ea"
       }
     }
   ],
@@ -6602,7 +6825,7 @@
     {
       "key": "nested_if_statement",
       "word": "Nested if Statement",
-      "definition": "An if statement inside an if statement",
+      "definition": "An `if` statement inside of another `if` statement",
       "properties": {
       },
       "seeding_key": {
@@ -6612,7 +6835,7 @@
     {
       "key": "logical_operator",
       "word": "Logical Operator",
-      "definition": "An operator that returns a Boolean result",
+      "definition": "An operator that returns a Boolean value",
       "properties": {
       },
       "seeding_key": {
@@ -6622,7 +6845,7 @@
     {
       "key": "compound_boolean_expression",
       "word": "Compound Boolean Expression",
-      "definition": "An expression involving logical operators that evaluates to a Boolean value",
+      "definition": "An expression using logical operators that evaluates to a Boolean value",
       "properties": {
       },
       "seeding_key": {
@@ -7039,7 +7262,7 @@
     {
       "key": "0373553c-1a9c-403b-9b62-c95ff6701afd",
       "properties": {
-        "description": "Construct nested if statements"
+        "description": "Construct nested `if` statements"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -7049,7 +7272,7 @@
     {
       "key": "f6344639-6603-466b-a851-dc43cfec0b6e",
       "properties": {
-        "description": "Understand the effect of logical operators !(not), &&(and), and ||(or)"
+        "description": "Explain the effect of logical operators `!` (not), `&&` (and), and `||` (or)"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -7064,16 +7287,6 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "objective.key": "1221f661-f4b9-41d6-a00f-ee54b51f8722"
-      }
-    },
-    {
-      "key": "22b841da-0d6e-407e-8253-88c2b608db49",
-      "properties": {
-        "description": "Use nested if statements and logical operators to check how many moves are left and to calculate the score of the Pop the Balloons game"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "objective.key": "22b841da-0d6e-407e-8253-88c2b608db49"
       }
     },
     {

@@ -226,7 +226,7 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'can not show lesson when lesson is in a non-migrated script' do
     sign_in @levelbuilder
-    script2 = create :script, name: 'unmigrated-course'
+    script2 = create :script, name: 'unmigrated-course', is_migrated: false
     lesson_group2 = create :lesson_group, script: script2
     unmigrated_lesson = create(
       :lesson,
