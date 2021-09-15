@@ -1,7 +1,10 @@
-name: Build
+name: Build and Deploy
 
 on:
-  pull_request:
+  pull_request:  
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -20,3 +23,14 @@ jobs:
           yarn install --frozen-lockfile
           yarn test
           yarn build
+          cp -r public/* dist
+
+      - name: Deploy
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist
+          BUILD_SCRIPT: yarn install && yarn test && yarn build
+    
