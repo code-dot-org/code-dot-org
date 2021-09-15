@@ -1,4 +1,4 @@
-import {assert} from '../../../util/deprecatedChai';
+import {assert} from '../../../util/reconfiguredChai';
 import {isExternalLink} from '@cdo/apps/templates/plugins/externalLinks';
 
 describe('external links remark plugin', () => {

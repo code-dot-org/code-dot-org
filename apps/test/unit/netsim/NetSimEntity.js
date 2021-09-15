@@ -1,4 +1,4 @@
-import {assert} from '../../util/deprecatedChai';
+import {assert} from '../../util/reconfiguredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
