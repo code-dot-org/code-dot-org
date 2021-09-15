@@ -241,6 +241,7 @@ class Script < ApplicationRecord
     is_migrated
     seeded_from
     is_maker_unit
+    use_code_studio_lesson_plans
   )
 
   def self.twenty_hour_unit
