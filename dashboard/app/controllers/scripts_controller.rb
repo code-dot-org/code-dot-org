@@ -109,7 +109,6 @@ class ScriptsController < ApplicationController
       script: @script ? @script.summarize_for_unit_edit : {},
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
-      levelKeyList: @script.is_migrated ? Level.key_list : {},
       lessonLevelData: @unit_dsl_text,
       locales: options_for_locale_select,
       script_families: Script.family_names,
@@ -119,15 +118,12 @@ class ScriptsController < ApplicationController
   end
 
   def update
-    if @script.is_migrated && params[:last_updated_at] != @script.updated_at.to_s
+    if @script.is_migrated && params[:last_updated_at] && params[:last_updated_at] != @script.updated_at.to_s
       msg = "Could not update the unit because it has been modified more recently outside of this editor. Please save a copy your work, reload the page, and try saving again."
       raise msg
     end
 
-    # TODO: disable this check for migrated scripts once they are using the new,
-    # non-dsl script update api. at that time, the above check on script.updated_at
-    # will provide sufficient protection against write conflicts on migrated scripts.
-    if params[:old_unit_text]
+    if !@script.is_migrated && params[:old_unit_text]
       current_unit_text = ScriptDSL.serialize_lesson_groups(@script).strip
       old_unit_text = params[:old_unit_text].strip
       if old_unit_text != current_unit_text
@@ -140,21 +136,6 @@ class ScriptsController < ApplicationController
 
     unit_text = params[:script_text]
     if @script.update_text(unit_params, unit_text, i18n_params, general_params)
-
-      # For migrated scripts, we use the updated_at field to detect potential
-      # write conflicts when a curriculum editor tries to save an out-of-date
-      # script edit page. therefore, touch the `updated_at` column whenever we
-      # we save, even if it did not result an a change to the actual script
-      # object. that way, we'll prevent write conflicts on changes to lesson
-      # groups, as well as on fields which live only in scripts.en.yml.
-      # TODO(dave): consolidate this into the new update api codepath for
-      # migrated scripts, once that codepath exists.
-      @script.reload
-      if @script.is_migrated
-        @script.touch(:updated_at)
-        @script.save!
-      end
-
       @script.reload
       render json: @script.summarize_for_unit_edit
     else
@@ -217,7 +198,7 @@ class ScriptsController < ApplicationController
   private
 
   def set_unit_file
-    @unit_dsl_text = ScriptDSL.serialize_lesson_groups(@script)
+    @unit_dsl_text = @script.is_migrated ? '' : ScriptDSL.serialize_lesson_groups(@script)
   end
 
   def rake
@@ -295,6 +276,7 @@ class ScriptsController < ApplicationController
       :pilot_experiment,
       :editor_experiment,
       :include_student_lesson_plans,
+      :lesson_groups,
       resourceTypes: [],
       resourceLinks: [],
       resourceIds: [],
@@ -304,6 +286,7 @@ class ScriptsController < ApplicationController
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
+    h[:lesson_groups] = JSON.parse(h[:lesson_groups]).map {|lg| lg.transform_keys(&:underscore)} if h[:lesson_groups]
 
     h
   end

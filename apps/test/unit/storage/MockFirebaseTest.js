@@ -1,4 +1,4 @@
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import MockFirebase from '../../util/MockFirebase';
 import {init, getProjectDatabase} from '@cdo/apps/storage/firebaseUtils';
 

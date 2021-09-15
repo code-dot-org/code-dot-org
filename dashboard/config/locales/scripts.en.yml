@@ -22637,6 +22637,8 @@ en:
               description_teacher: Students use `if/else-if/else` statements to evaluate multiple conditions to select a specific desired outcome. To check the game's status and determine whether or not the player won, students use multi-selection statements to check the condition of the game and choose the appropriate outcome.
             lesson-10:
               name: Using Logical Operators
+              description_student: You explore problems involving multiple conditions and learn to use nested `if` statements in your solutions. You write expressions using new logical operators in conditional statements and identify the effect of these operators on the result. You then improve the gameplay and functionality of your Pop the Balloons game using nested `if` statements and logical operators.
+              description_teacher: Students explore problems involving multiple conditions and write nested `if` statements to develop solutions. Students write expressions using logical operators in conditional statements and identify the effect of logical operators on the result. Nested `if` statements and logical operators are then implemented in the Pop the Balloons game to improve gameplay and overall functionality.
             lesson-11:
               name: Applying De Morgan's Laws to Boolean Expressions
               description_student: You learn about truth tables, a tool we can use to evaluate compound Boolean expressions. You learn about De Morgan's Laws and prove them with a partner using truth tables.

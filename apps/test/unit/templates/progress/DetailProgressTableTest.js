@@ -1,4 +1,4 @@
-import {assert} from '../../../util/deprecatedChai';
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';

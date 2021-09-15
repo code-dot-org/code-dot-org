@@ -160,8 +160,8 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 'Lesson1', summary[:key]
   end
 
-  test 'can summarize lesson with and without lesson plan' do
-    script = create :script, name: 'test-script'
+  test 'can summarize lesson with and without lesson plan in unmigrated unit' do
+    script = create :script, name: 'test-script', is_migrated: false
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
     lesson2 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false
@@ -890,7 +890,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'no student_lesson_plan_pdf_url for non-migrated scripts' do
-    script = create :script, include_student_lesson_plans: true
+    script = create :script, include_student_lesson_plans: true, is_migrated: false
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
 
@@ -966,6 +966,13 @@ class LessonTest < ActiveSupport::TestCase
 
     expected_url = "/s/#{script.name}/standards"
     assert_equal expected_url, lesson.course_version_standards_url
+  end
+
+  test 'should give URL for script level curriculum PDF in unmigrated unit' do
+    script = create :script, is_migrated: false
+    lesson = create(:lesson, script: script, absolute_position: 5, relative_position: 5)
+    assert_includes(lesson.lesson_plan_html_url, "curriculum/#{lesson.script.name}/5/Teacher")
+    assert_includes(lesson.lesson_plan_pdf_url, "curriculum/#{lesson.script.name}/5/Teacher.pdf")
   end
 
   class LessonCopyTests < ActiveSupport::TestCase
