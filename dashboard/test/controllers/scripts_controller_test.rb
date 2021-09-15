@@ -9,8 +9,8 @@ class ScriptsControllerTest < ActionController::TestCase
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
     @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: SharedConstants::PUBLISHED_STATE.beta
 
-    @migrated_unit = create :script, is_migrated: true
-    @unmigrated_unit = create :script
+    @migrated_unit = create :script
+    @unmigrated_unit = create :script, is_migrated: false
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     File.stubs(:write)
@@ -380,6 +380,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     post :create, params: {
       script: {name: unit_name},
+      lesson_groups: '[]',
       is_migrated: true
     }
     assert_redirected_to edit_script_path id: unit_name
@@ -601,11 +602,11 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
-  test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
+  test 'cannot update unmigrated unit if changes have been made to the database which are not reflected in the current edit page' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script
+    unit = create :script, is_migrated: false
     stub_file_writes(unit.name)
 
     error = assert_raises RuntimeError do
@@ -620,11 +621,11 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_includes error.message, 'Could not update the unit because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again.'
   end
 
-  test 'can update if database matches starting content for current edit page' do
+  test 'can update unmigrated unit if database matches starting content for current edit page' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script
+    unit = create :script, is_migrated: false
     lesson_group = create :lesson_group, script: unit
     lesson = create :lesson, script: unit, lesson_group: lesson_group
     create(
@@ -656,7 +657,7 @@ class ScriptsControllerTest < ActionController::TestCase
       stub_file_writes(unit.name)
 
       unit.reload
-      old_unit_dsl = ScriptDSL.serialize_lesson_groups(unit)
+      lesson_groups_json = unit.lesson_groups.map(&:summarize_for_unit_edit).to_json
       updated_at = unit.updated_at
 
       Timecop.travel 1.minute
@@ -666,8 +667,7 @@ class ScriptsControllerTest < ActionController::TestCase
         script: {name: unit.name},
         is_migrated: true,
         last_updated_at: updated_at.to_s,
-        script_text: old_unit_dsl,
-        old_unit_text: old_unit_dsl
+        lesson_groups: lesson_groups_json
       }
       assert_response :success
       unit.reload
@@ -723,11 +723,12 @@ class ScriptsControllerTest < ActionController::TestCase
 
     stub_file_writes(unit.name)
     unit.reload
+    lesson_groups_json = unit.lesson_groups.map(&:summarize_for_unit_edit).to_json
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
-      script_text: ScriptDSL.serialize_lesson_groups(unit),
+      lesson_groups: lesson_groups_json,
       last_updated_at: unit.updated_at.to_s,
     }
     assert_response :success
@@ -753,11 +754,12 @@ class ScriptsControllerTest < ActionController::TestCase
 
     stub_file_writes(unit.name)
     unit.reload
+    lesson_groups_json = unit.lesson_groups.map(&:summarize_for_unit_edit).to_json
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
-      script_text: ScriptDSL.serialize_lesson_groups(unit),
+      lesson_groups: lesson_groups_json,
       last_updated_at: unit.updated_at.to_s,
     }
 
@@ -803,7 +805,7 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      lesson_groups: '[]',
       resourceIds: teacher_resources.map(&:id),
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
@@ -828,7 +830,7 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      lesson_groups: '[]',
       studentResourceIds: student_resources.map(&:id),
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
@@ -1016,12 +1018,12 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal({}, unit.properties)
   end
 
-  test 'add lesson to unit' do
+  test 'add lesson to unmigrated unit' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     level = create :level
-    unit = create :script
+    unit = create :script, is_migrated: false
     stub_file_writes(unit.name)
 
     assert_empty unit.lessons
@@ -1042,6 +1044,398 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal level, unit.lessons.first.script_levels.first.level
     assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
     assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
+  end
+
+  test 'add lesson to migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    stub_file_writes(unit.name)
+
+    Script.stubs(:merge_and_write_i18n).with do |i18n, name, _|
+      name == unit.name &&
+        i18n[unit.name]['lessons']['lesson-1']['name'] == 'lesson 1' &&
+        i18n[unit.name]['lesson_groups'].empty?
+    end.once
+
+    assert_empty unit.lessons
+
+    lesson_groups_json = [
+      {
+        key: "",
+        display_name: "Content",
+        userFacing: false,
+        lessons: [
+          {
+            key: "lesson-1",
+            name: "lesson 1",
+          }
+        ]
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    assert_response :success
+    assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
+    assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
+
+    unit.reload
+    assert_equal 'lesson 1', unit.lessons.first.name
+  end
+
+  test 'add user facing lesson group to migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    stub_file_writes(unit.name)
+
+    Script.stubs(:merge_and_write_i18n).with do |i18n, name, _|
+      name == unit.name &&
+        i18n[unit.name]['lessons'].empty? &&
+        i18n[unit.name]['lesson_groups']['lesson-group-1']['display_name'] == 'lesson group 1'
+    end.once
+
+    lesson_groups_json = [
+      {
+        key: "lesson-group-1",
+        displayName: "lesson group 1",
+        userFacing: true,
+        lessons: [],
+        description: 'Description',
+        bigQuestions: 'Big Questions',
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    assert_response :success
+    lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
+    assert_equal 'lesson group 1', lesson_group_data['display_name']
+    assert lesson_group_data['user_facing']
+    assert_not_nil lesson_group_data['id']
+    assert_empty lesson_group_data['lessons']
+    assert_equal 'Big Questions', lesson_group_data['big_questions']
+    assert_equal 'Description', lesson_group_data['description']
+
+    unit.reload
+    assert_empty unit.lessons
+    lesson_group = unit.lesson_groups.first
+    assert_equal 'lesson group 1', lesson_group.display_name
+    assert_equal 'Big Questions', lesson_group.big_questions
+    assert_equal 'Description', lesson_group.description
+  end
+
+  test 'update user facing lesson group in migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
+    stub_file_writes(unit.name)
+
+    Script.stubs(:merge_and_write_i18n).with do |i18n, _, _|
+      i18n[unit.name]['lessons'].empty? &&
+        i18n[unit.name]['lesson_groups']['lesson-group-1']['display_name'] == 'updated name'
+    end.once
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-1',
+        displayName: 'updated name',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson.id,
+            key: 'lesson-1',
+          },
+        ],
+        description: 'updated description',
+        bigQuestions: 'updated questions',
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    assert_response :success
+    lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
+    assert_equal 'updated name', lesson_group_data['display_name']
+    assert_equal 'updated questions', lesson_group_data['big_questions']
+    assert_equal 'updated description', lesson_group_data['description']
+    assert_equal 'lesson 1', lesson_group_data['lessons'][0]['name']
+
+    lesson_group.reload
+    assert_equal 'updated name', lesson_group.display_name
+    assert_equal 'updated questions', lesson_group.big_questions
+    assert_equal 'updated description', lesson_group.description
+    assert_equal 'lesson 1', lesson_group.lessons.first.name
+  end
+
+  test 'update to migrated unit does not update lesson name' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
+    stub_file_writes(unit.name)
+
+    Script.stubs(:merge_and_write_i18n).with do |i18n, _, _|
+      i18n[unit.name]['lessons'].empty? &&
+        i18n[unit.name]['lesson_groups']['lesson-group-1']['display_name'] == 'lesson group 1'
+    end.once
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-1',
+        displayName: 'lesson group 1',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson.id,
+            key: 'lesson-1',
+            name: 'bogus lesson name'
+          },
+        ],
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    assert_response :success
+    lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
+    assert_equal 'lesson 1', lesson_group_data['lessons'][0]['name']
+
+    lesson_group.reload
+    assert_equal 'lesson 1', lesson_group.lessons.first.name
+  end
+
+  test 'can move lesson to earlier lesson group in migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group_1 = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1'
+    lesson_group_2 = create :lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true
+    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2'
+
+    stub_file_writes(unit.name)
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-1',
+        displayName: 'lesson group 1',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson_1.id,
+            key: 'lesson-1',
+          },
+          {
+            id: lesson_2.id,
+            key: 'lesson-2',
+          },
+        ],
+      },
+      {
+        key: 'lesson-group-2',
+        displayName: 'lesson group 2',
+        userFacing: true,
+        lessons: [],
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    unit.reload
+    assert_equal ['lesson 1', 'lesson 2'], unit.lesson_groups[0].lessons.map(&:name)
+    assert_equal [lesson_1.id, lesson_2.id], unit.lesson_groups[0].lessons.map(&:id)
+    assert_empty unit.lesson_groups[1].lessons
+  end
+
+  test 'can move lesson to later lesson group in migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group_1 = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1'
+    lesson_group_2 = create :lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true
+    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2'
+
+    stub_file_writes(unit.name)
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-1',
+        displayName: 'lesson group 1',
+        userFacing: true,
+        lessons: [],
+      },
+      {
+        key: 'lesson-group-2',
+        displayName: 'lesson group 2',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson_2.id,
+            key: 'lesson-2',
+          },
+          {
+            id: lesson_1.id,
+            key: 'lesson-1',
+          },
+        ],
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    unit.reload
+    assert_empty unit.lesson_groups[0].lessons
+    assert_equal ['lesson 2', 'lesson 1'], unit.lesson_groups[1].lessons.map(&:name)
+    assert_equal [lesson_2.id, lesson_1.id], unit.lesson_groups[1].lessons.map(&:id)
+  end
+
+  test 'can move lesson within lesson group in migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
+    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-2', name: 'lesson 2'
+    lesson_3 = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-3', name: 'lesson 3'
+    unit.reload
+    assert_equal ['lesson 1', 'lesson 2', 'lesson 3'], unit.lesson_groups[0].lessons.map(&:name)
+
+    stub_file_writes(unit.name)
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-1',
+        displayName: 'lesson group 1',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson_2.id,
+            key: 'lesson-2',
+          },
+          {
+            id: lesson_1.id,
+            key: 'lesson-1',
+          },
+          {
+            id: lesson_3.id,
+            key: 'lesson-3',
+          },
+        ],
+      },
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    unit.reload
+    assert_equal ['lesson 2', 'lesson 1', 'lesson 3'], unit.lesson_groups[0].lessons.map(&:name)
+    assert_equal [lesson_2.id, lesson_1.id, lesson_3.id], unit.lesson_groups[0].lessons.map(&:id)
+  end
+
+  test 'can move lesson group within migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group_1 = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1'
+    lesson_group_2 = create :lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true
+    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2'
+
+    stub_file_writes(unit.name)
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-2',
+        displayName: 'lesson group 2',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson_2.id,
+            key: 'lesson-2',
+          },
+        ],
+      },
+      {
+        key: 'lesson-group-1',
+        displayName: 'lesson group 1',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson_1.id,
+            key: 'lesson-1',
+          },
+        ],
+      },
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    unit.reload
+    assert_equal ['lesson group 2', 'lesson group 1'], unit.lesson_groups.map(&:display_name)
+    assert_equal [lesson_group_2.id, lesson_group_1.id], unit.lesson_groups.map(&:id)
+    assert_equal ['lesson 2'], unit.lesson_groups[0].lessons.map(&:name)
+    assert_equal ['lesson 1'], unit.lesson_groups[1].lessons.map(&:name)
   end
 
   class CoursePilotTests < ActionController::TestCase
