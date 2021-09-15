@@ -10,7 +10,7 @@ export default class Search extends React.Component {
 
   handleChange = e => {
     const value = e ? e.target.value : '';
-    this.props.onChange(value.toLowerCase());
+    this.props.onChange(value);
   };
 
   render() {

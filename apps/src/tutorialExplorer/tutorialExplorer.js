@@ -10,7 +10,7 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
-import Search from './Search';
+import Search from './search';
 import {
   isTutorialSortByFieldNamePopularity,
   TutorialsSortByOptions,
@@ -414,6 +414,8 @@ export default class TutorialExplorer extends React.Component {
       searchTerm
     } = filterProps;
 
+    const cleanSearchTerm = searchTerm?.toLowerCase()?.trim();
+
     const filteredTutorials = tutorials
       .filter(tutorial => {
         // Check that the tutorial isn't marked as DoNotShow.  If it does,
@@ -454,9 +456,11 @@ export default class TutorialExplorer extends React.Component {
         }
 
         if (
-          searchTerm !== '' &&
-          (!tutorial.name.toLowerCase().includes(searchTerm) ||
-            !tutorial.longdescription.toLowerCase().includes(searchTerm))
+          searchTerm &&
+          !(
+            tutorial.name.toLowerCase().includes(cleanSearchTerm) ||
+            tutorial.longdescription.toLowerCase().includes(cleanSearchTerm)
+          )
         ) {
           return false;
         }
