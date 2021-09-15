@@ -161,7 +161,6 @@ class ReviewTab extends Component {
       serverLevelId
     } = getStore().getState().pageConstants;
     const {token} = this.state;
-    this.setState({authorizationError: false});
 
     codeReviewDataApi
       .submitNewCodeReviewComment(
@@ -181,7 +180,7 @@ class ReviewTab extends Component {
         });
       })
       .fail(result => {
-        if (result.status === 404 || result.status === 500) {
+        if (result.status === 404) {
           this.setState({authorizationError: true});
         }
       });
@@ -371,12 +370,16 @@ class ReviewTab extends Component {
       );
     }
     if (this.state.authorizationError) {
+      // this error messages is displayed if a student is trying to write a comment
+      // on a peer's project and the project has peer review disabled.
       return (
         <div style={{...styles.reviewDisabledText, ...styles.messageText}}>
           {javalabMsg.peerReviewDisabled()}
         </div>
       );
     } else {
+      // this message is displayed if a student is viewing their own project that has
+      // peer review disabled
       return (
         <div style={styles.messageText}>
           {javalabMsg.disabledPeerReviewMessage()}
