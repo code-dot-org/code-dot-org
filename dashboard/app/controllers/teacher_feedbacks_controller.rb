@@ -23,13 +23,13 @@ class TeacherFeedbacksController < ApplicationController
     @feedbacks_by_level = []
 
     feedbacks_grouped_by_level = @feedbacks_as_student.group_by {|feedback| "#{feedback.script_id}_#{feedback.level_id}"}
-    
+
     feedbacks_grouped_by_level.each do |_, feedbacks|
       level_details = feedbacks[0].get_script_level&.summary_for_feedback
 
       summarized_feedbacks = feedbacks.each_with_index.map do |feedback, i|
-        isLatest = i == 0
-        feedback.summarize(isLatest)
+        is_latest = i == 0
+        feedback.summarize(is_latest)
       end
 
       level_feedbacks = level_details.merge({feedbacks: summarized_feedbacks})
