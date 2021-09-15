@@ -362,5 +362,13 @@ describe('TutorialExplorer filterTutorials tests', function() {
     );
     assert.equal(filtered2.length, 1);
     assert.equal(filtered2[0].name, 'specific');
+
+    props.searchTerm = 'dinosaur';
+
+    const filtered3 = TutorialExplorer.filterTutorials(
+      tutorialsWithSpec,
+      props
+    );
+    assert.equal(filtered3.length, 0);
   });
 });
