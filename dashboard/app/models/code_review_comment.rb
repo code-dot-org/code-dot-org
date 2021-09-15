@@ -32,10 +32,20 @@ class CodeReviewComment < ApplicationRecord
 
   before_save :compute_is_from_teacher
 
-  # To do: move to ReviewableProject model
-  def self.user_can_review_project?(project_owner, potential_reviewer)
+  def self.user_can_review_project?(project_owner, potential_reviewer, storage_app_id, level_id = nil, script_id = nil)
+    # user can always review own project
     return true if project_owner == potential_reviewer
+    # teacher can always review student projects
     return true if project_owner.student_of?(potential_reviewer)
+    # peers can only review projects where code review has been enabled, which creates a ReviewableProject
+    reviewable_projects = ReviewableProject.where(storage_app_id: storage_app_id, user_id: project_owner.id)
+    if level_id
+      reviewable_projects = reviewable_projects.where(level_id: level_id)
+    end
+    if script_id
+      reviewable_projects = reviewable_projects.where(script_id: script_id)
+    end
+    return false unless reviewable_projects.any?
     return false if project_owner.sections_as_student.any? {|s| !s.code_review_enabled?}
     return false if potential_reviewer.sections_as_student.any? {|s| !s.code_review_enabled?}
     return (project_owner.sections_as_student & potential_reviewer.sections_as_student).any?
