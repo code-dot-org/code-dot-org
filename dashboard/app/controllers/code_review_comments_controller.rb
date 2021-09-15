@@ -46,6 +46,7 @@ class CodeReviewCommentsController < ApplicationController
   # GET /code_review_comments/project_comments
   def project_comments
     authorize! :project_comments, CodeReviewComment.new, @project_owner, @storage_app_id
+
     # Setting custom header here allows us to access the csrf-token and manually use for create
     headers['csrf-token'] = form_authenticity_token
 
