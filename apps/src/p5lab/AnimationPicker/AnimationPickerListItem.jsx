@@ -48,6 +48,12 @@ class AnimationPickerListItem extends React.Component {
         }.png`
       : '';
 
+    const centerStyle = {
+      top: THUMBNAIL_SIZE / 2 - 18,
+      left: THUMBNAIL_SIZE / 2 - 18
+    };
+
+    const hoverIcon = [styles.hoverIcon, centerStyle];
     return (
       <div
         style={rootStyle}
@@ -77,6 +83,9 @@ class AnimationPickerListItem extends React.Component {
           )}
         </div>
         {this.props.label && <div style={labelStyle}>{this.props.label}</div>}
+        {this.props.animationProps && (
+          <i className="fa fa-plus fa-3x" style={hoverIcon} />
+        )}
       </div>
     );
   }
@@ -88,7 +97,8 @@ const styles = {
     width: THUMBNAIL_SIZE,
     textAlign: 'center',
     marginRight: 10,
-    marginBottom: 10
+    marginBottom: 10,
+    position: 'relative'
   },
   thumbnail: {
     height: THUMBNAIL_SIZE,
@@ -96,9 +106,12 @@ const styles = {
     borderColor: color.light_gray,
     borderWidth: THUMBNAIL_BORDER_WIDTH,
     borderRadius: 12,
+    padding: '2px',
     cursor: 'pointer',
     ':hover': {
-      borderColor: color.purple
+      borderColor: color.purple,
+      borderWidth: '3px',
+      padding: 0
     }
   },
   thumbnailIcon: {
@@ -126,6 +139,18 @@ const styles = {
   },
   categoryImage: {
     borderRadius: 10
+  },
+  hoverIcon: {
+    position: 'absolute',
+    color: color.purple,
+    backgroundColor: color.white,
+    borderColor: color.purple,
+    borderStyle: 'solid',
+    borderWidth: '2px',
+    top: 0,
+    left: 0,
+    height: 36,
+    width: 36
   }
 };
 
