@@ -704,6 +704,7 @@ FactoryGirl.define do
   factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
+    is_migrated true
 
     trait :with_levels do
       transient do
