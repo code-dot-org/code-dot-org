@@ -49,10 +49,7 @@ export default class BlockDragger extends GoogleBlockly.BlockDragger {
    */
   updateCursorDuringBlockDrag_() {
     super.updateCursorDuringBlockDrag_();
-    if (this.draggedConnectionManager_.wouldDeleteBlock()) {
-      this.workspace_.trashcan.setLidOpen(true);
-    } else {
-      this.workspace_.trashcan.setLidOpen(false);
-    }
+    const wouldDeleteBlock = this.draggedConnectionManager_.wouldDeleteBlock();
+    this.workspace_.trashcan.setLidOpen(wouldDeleteBlock);
   }
 }
