@@ -1,0 +1,17 @@
+{
+  "name": "course2",
+  "script_names": [
+
+  ],
+  "published_state": "preview",
+  "properties": {
+    "family_name": "course2",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

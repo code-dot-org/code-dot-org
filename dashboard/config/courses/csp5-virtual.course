@@ -1,0 +1,17 @@
+{
+  "name": "csp5-virtual",
+  "script_names": [
+
+  ],
+  "published_state": "preview",
+  "properties": {
+    "family_name": "csp5-virtual",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

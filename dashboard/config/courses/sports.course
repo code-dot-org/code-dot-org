@@ -1,0 +1,17 @@
+{
+  "name": "sports",
+  "script_names": [
+
+  ],
+  "published_state": "preview",
+  "properties": {
+    "family_name": "sports",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

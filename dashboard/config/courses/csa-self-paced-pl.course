@@ -1,0 +1,17 @@
+{
+  "name": "csa-self-paced-pl",
+  "script_names": [
+
+  ],
+  "published_state": "beta",
+  "properties": {
+    "family_name": "csa-self-paced-pl",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

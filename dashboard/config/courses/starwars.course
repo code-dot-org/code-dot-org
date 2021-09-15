@@ -1,0 +1,17 @@
+{
+  "name": "starwars",
+  "script_names": [
+
+  ],
+  "published_state": "preview",
+  "properties": {
+    "family_name": "starwars",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "poembot",
+  "script_names": [
+
+  ],
+  "published_state": "beta",
+  "properties": {
+    "family_name": "poembot",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

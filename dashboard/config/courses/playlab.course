@@ -1,0 +1,17 @@
+{
+  "name": "playlab",
+  "script_names": [
+
+  ],
+  "published_state": "preview",
+  "properties": {
+    "family_name": "playlab",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
