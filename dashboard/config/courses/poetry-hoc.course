@@ -1,0 +1,17 @@
+{
+  "name": "poetry-hoc",
+  "script_names": [
+
+  ],
+  "published_state": "pilot",
+  "properties": {
+    "family_name": "poembot-hoc",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

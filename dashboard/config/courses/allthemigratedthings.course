@@ -1,0 +1,17 @@
+{
+  "name": "allthemigratedthings",
+  "script_names": [
+
+  ],
+  "published_state": "beta",
+  "properties": {
+    "family_name": "ui-test-versioned-script",
+    "version_year": "2020"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
