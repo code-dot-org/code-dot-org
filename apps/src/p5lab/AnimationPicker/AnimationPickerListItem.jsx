@@ -25,27 +25,33 @@ class AnimationPickerListItem extends React.Component {
   };
 
   render() {
-    const rootStyle = [styles.root, !this.props.label && styles.noLabel];
+    const {
+      icon,
+      animationProps,
+      category,
+      onClick,
+      playAnimations,
+      label
+    } = this.props;
+    const rootStyle = [styles.root, !label && styles.noLabel];
 
     const thumbnailStyle = [
       styles.thumbnail,
-      this.props.icon && styles.thumbnailIcon,
-      this.props.animationProps && {
+      icon && styles.thumbnailIcon,
+      animationProps && {
         display: this.state.loaded ? 'block' : 'none'
       }
     ];
 
     const labelStyle = [
       styles.label,
-      this.props.icon && styles.labelIcon,
-      this.props.animationProps && {
+      icon && styles.labelIcon,
+      animationProps && {
         display: this.state.loaded ? 'block' : 'none'
       }
     ];
-    const iconImageSrc = this.props.category
-      ? `/blockly/media/p5lab/animation-previews/category_${
-          this.props.category
-        }.png`
+    const iconImageSrc = category
+      ? `/blockly/media/p5lab/animation-previews/category_${category}.png`
       : '';
 
     const centerStyle = {
@@ -57,35 +63,31 @@ class AnimationPickerListItem extends React.Component {
     return (
       <div
         style={rootStyle}
-        onClick={this.props.onClick}
+        onClick={onClick}
         className="uitest-animation-picker-item"
       >
         <div style={thumbnailStyle}>
-          {this.props.animationProps && (
+          {animationProps && (
             <AnimationPreview
-              animationProps={this.props.animationProps}
-              sourceUrl={this.props.animationProps.sourceUrl}
+              animationProps={animationProps}
+              sourceUrl={animationProps.sourceUrl}
               width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
               height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-              playBehavior={
-                !this.props.playAnimations ? PlayBehavior.NEVER_PLAY : null
-              }
+              playBehavior={!playAnimations ? PlayBehavior.NEVER_PLAY : null}
               onPreviewLoad={() => this.setState({loaded: true})}
             />
           )}
-          {this.props.icon && <i className={'fa fa-' + this.props.icon} />}
-          {this.props.category && (
+          {icon && <i className={'fa fa-' + icon} />}
+          {category && (
             <img
-              className={this.props.category}
+              className={category}
               style={styles.categoryImage}
               src={iconImageSrc}
             />
           )}
         </div>
-        {this.props.label && <div style={labelStyle}>{this.props.label}</div>}
-        {this.props.animationProps && (
-          <i className="fa fa-plus fa-3x" style={hoverIcon} />
-        )}
+        {label && <div style={labelStyle}>{label}</div>}
+        {animationProps && <i className="fa fa-plus fa-3x" style={hoverIcon} />}
       </div>
     );
   }
