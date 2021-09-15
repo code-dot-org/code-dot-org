@@ -1186,10 +1186,19 @@ en:
             '"burst"': burst
             '"pop"': pop
             '"rain"': rain
+            '"zigzag"': zigzag
       gamelab_makeNewSpriteAnon:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
         text: make {NUM} new {ANIMATION_NAME} sprites
+      gamelab_makeProjectile:
+        text: "create projectile \n{ANIMATION_NAME} from {LOCATION} with speed {SPEED}direction{DIRECTION}"
+        options:
+          DIRECTION:
+            '270': up
+            '90': down
+            '180': left
+            '0': right
       gamelab_mirrorSprite:
         text: "{SPRITE} face {DIRECTION}"
         options:
