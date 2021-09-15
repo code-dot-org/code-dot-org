@@ -4,8 +4,8 @@ export default class BlockDragger extends GoogleBlockly.BlockDragger {
   /** Show trashcan over toolbox while dragging
    * @override
    */
-  dragBlock(e, currentDragDeltaXY) {
-    super.dragBlock(e, currentDragDeltaXY);
+  drag(e, currentDragDeltaXY) {
+    super.drag(e, currentDragDeltaXY);
     const isDraggingFromFlyout_ = !!Blockly.mainBlockSpace.currentGesture_
       .flyout_;
 
@@ -26,7 +26,7 @@ export default class BlockDragger extends GoogleBlockly.BlockDragger {
    * so negative block coordinates are valid, but we want to keep everything flowing down and to the right from (0,0).
    * @override
    */
-  endBlockDrag(e, currentDragDeltaXY) {
+  endDrag(e, currentDragDeltaXY) {
     // Don't let the block end with a negative position, unless it's getting deleted.
     if (!this.draggedConnectionManager_.wouldDeleteBlock()) {
       const endPosition = this.draggingBlock_.getRelativeToSurfaceXY();
@@ -38,8 +38,9 @@ export default class BlockDragger extends GoogleBlockly.BlockDragger {
       }
     }
 
-    super.endBlockDrag(e, currentDragDeltaXY);
+    super.endDrag(e, currentDragDeltaXY);
     this.workspace_.trashcan.setDisabled(false);
+    this.workspace_.trashcan.setLidOpen(false);
     this.workspace_.hideTrashcan();
   }
 
@@ -50,6 +51,8 @@ export default class BlockDragger extends GoogleBlockly.BlockDragger {
     super.updateCursorDuringBlockDrag_();
     if (this.draggedConnectionManager_.wouldDeleteBlock()) {
       this.workspace_.trashcan.setLidOpen(true);
+    } else {
+      this.workspace_.trashcan.setLidOpen(false);
     }
   }
 }
