@@ -1,4 +1,4 @@
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {stubWindowDashboard, stubWindowPegasus} from '../../../util/testUtils';
 import {
   pegasus,

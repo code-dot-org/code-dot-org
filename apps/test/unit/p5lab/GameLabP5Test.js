@@ -1,6 +1,6 @@
 /** @file Test of our p5.play wrapper object */
 import {spy} from 'sinon';
-import {assert, expect} from '../../util/deprecatedChai';
+import {assert, expect} from '../../util/reconfiguredChai';
 import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
 import {sandboxDocumentBody} from '../../util/testUtils';
 
@@ -238,8 +238,26 @@ describe('GameLabP5', function() {
     });
 
     it('draws the same rect when called with all arguments', function() {
+      p5Wrapper.p5.rect(100, 100, 75, 75, 50, 50, 25, 25);
+      p5Wrapper.p5.originalRect_(100, 100, 75, 75, 50, 50, 25, 25);
+      expect(p5Wrapper.p5.originalRect_.calledTwice).to.equal(true);
+      expect(p5Wrapper.p5.originalRect_.args[0]).to.deep.equal(
+        p5Wrapper.p5.originalRect_.args[1]
+      );
+    });
+
+    it('draws a rect with no border radiuses when none given', function() {
       p5Wrapper.p5.rect(100, 100, 50, 50);
-      p5Wrapper.p5.originalRect_(100, 100, 50, 50);
+      p5Wrapper.p5.originalRect_(
+        100,
+        100,
+        50,
+        50,
+        undefined,
+        undefined,
+        undefined,
+        undefined
+      );
       expect(p5Wrapper.p5.originalRect_.calledTwice).to.equal(true);
       expect(p5Wrapper.p5.originalRect_.args[0]).to.deep.equal(
         p5Wrapper.p5.originalRect_.args[1]
@@ -248,7 +266,16 @@ describe('GameLabP5', function() {
 
     it('draws a square with height equal to width, when no height given', function() {
       p5Wrapper.p5.rect(100, 100, 60);
-      p5Wrapper.p5.originalRect_(100, 100, 60, 60);
+      p5Wrapper.p5.originalRect_(
+        100,
+        100,
+        60,
+        60,
+        undefined,
+        undefined,
+        undefined,
+        undefined
+      );
       expect(p5Wrapper.p5.originalRect_.calledTwice).to.equal(true);
       expect(p5Wrapper.p5.originalRect_.args[0]).to.deep.equal(
         p5Wrapper.p5.originalRect_.args[1]
@@ -257,7 +284,16 @@ describe('GameLabP5', function() {
 
     it('draws a size 50 square if no width or height given', function() {
       p5Wrapper.p5.rect(100, 100);
-      p5Wrapper.p5.originalRect_(100, 100, 50, 50);
+      p5Wrapper.p5.originalRect_(
+        100,
+        100,
+        50,
+        50,
+        undefined,
+        undefined,
+        undefined,
+        undefined
+      );
       expect(p5Wrapper.p5.originalRect_.calledTwice).to.equal(true);
       expect(p5Wrapper.p5.originalRect_.args[0]).to.deep.equal(
         p5Wrapper.p5.originalRect_.args[1]
