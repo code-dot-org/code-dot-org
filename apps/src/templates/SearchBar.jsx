@@ -60,14 +60,14 @@ const styles = {
   },
   icon: {
     position: 'absolute',
-    top: 5,
+    top: 6,
     left: 5,
     fontSize: 16,
     color: color.light_gray
   },
   clearIcon: {
     position: 'absolute',
-    top: 5,
+    top: 6,
     right: 5,
     fontSize: 16,
     color: color.light_gray

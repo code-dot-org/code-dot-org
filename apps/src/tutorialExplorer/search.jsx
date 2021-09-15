@@ -5,7 +5,8 @@ import SearchBar from '../templates/SearchBar';
 
 export default class Search extends React.Component {
   static propTypes = {
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
+    showClearIcon: PropTypes.bool
   };
 
   handleChange = e => {
@@ -17,7 +18,7 @@ export default class Search extends React.Component {
     return (
       <FilterGroupContainer text="Search">
         <SearchBar
-          clearButton
+          clearButton={this.props.showClearIcon}
           onChange={this.handleChange}
           placeholderText=""
         />
