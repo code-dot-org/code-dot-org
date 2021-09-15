@@ -32,5 +32,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages-test
           FOLDER: dist
-          BUILD_SCRIPT: yarn install && yarn test && yarn build
     
