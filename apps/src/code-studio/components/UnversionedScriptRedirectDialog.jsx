@@ -4,6 +4,11 @@ import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 
+/*
+ * Simple dialog to show a warning to users who are using deprecated unversioned
+ * links to units with courses, such as /s/csd4 or /s/csp2. We plan on removing
+ * these links in June 2022. See https://codedotorg.atlassian.net/browse/PLAT-1135.
+ */
 export default function UnversionedScriptRedirectDialog(props) {
   const [isOpen, setIsOpen] = useState(true);
   return (
