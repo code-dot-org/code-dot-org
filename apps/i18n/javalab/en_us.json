@@ -63,6 +63,7 @@
   "noCodeReviewComments": "Comments from your teacher will appear here.",
   "noCodeReviewUntilStudentEditsCode": "You cannot leave comments until the project owner has modified the default code and clicked the \"Run\" button",
   "onlyVisibleToYou": "teacher comments are only visible to you",
+  "peerReviewDisabled": "Peer Review has been disabled on this project.",
   "programCompleted": "Program completed.",
   "reOpen": "Re-open",
   "replace": "Replace",
