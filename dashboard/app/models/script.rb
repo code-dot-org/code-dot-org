@@ -1084,11 +1084,24 @@ class Script < ApplicationRecord
       unit.prevent_legacy_script_levels_in_migrated_units
 
       unit.generate_plc_objects
-
-      CourseOffering.add_course_offering(unit)
+      unit.add_unit_group
 
       unit
     end
+  end
+
+  def add_unit_group
+    return nil unless is_course?
+    unit_group = UnitGroup.first_or_create!(
+      name: name
+    )
+    unit_group.default_units = [self]
+    unit_group.family_name = family_name
+    unit_group.version_year = version_year
+    unit_group.published_state = published_state
+    unit_group.save! if unit_group.changed?
+    CourseOffering.add_course_offering(unit_group)
+    unit_group
   end
 
   # If there is more than 1 lesson group then the key should never

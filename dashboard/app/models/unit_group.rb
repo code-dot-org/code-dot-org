@@ -84,7 +84,7 @@ class UnitGroup < ApplicationRecord
   # Any course with a plc_course is considered stable.
   # All other courses must specify a published_state.
   def stable?
-    plc_course || (published_state == SharedConstants::PUBLISHED_STATE.stable)
+    !!plc_course || (published_state == SharedConstants::PUBLISHED_STATE.stable)
   end
 
   def in_development?
@@ -138,7 +138,7 @@ class UnitGroup < ApplicationRecord
   # @param name [string] - name of the course being updated
   # @param course_strings[Hash{String => String}]
   def self.update_strings(name, course_strings)
-    courses_yml = File.expand_path('config/locales/courses.en.yml')
+    courses_yml = File.expand_path("#{Rails.root}/config/locales/courses.en.yml")
     i18n = File.exist?(courses_yml) ? YAML.load_file(courses_yml) : {}
 
     i18n.deep_merge!({'en' => {'data' => {'course' => {'name' => {name => course_strings.to_h}}}}})
@@ -211,11 +211,11 @@ class UnitGroup < ApplicationRecord
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
-    if new_units_objects.any? do |s|
-      s.unit_group != self && s.prevent_course_version_change?
-    end
-      raise 'Cannot add units that have resources or vocabulary'
-    end
+    #if new_units_objects.any? do |s|
+    #  s.unit_group != self && s.prevent_course_version_change?
+    #end
+    #  raise 'Cannot add units that have resources or vocabulary'
+    #end
 
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
@@ -252,6 +252,9 @@ class UnitGroup < ApplicationRecord
   # Get the assignable info for this course, then update translations
   # @return AssignableInfo
   def assignable_info(user = nil)
+    puts standalone_course?.inspect
+    return nil if standalone_course?
+
     info = ScriptConstants.assignable_info(self)
     # ScriptConstants gives us untranslated versions of our course name, and the
     # category it's in. Set translated strings here
@@ -269,6 +272,10 @@ class UnitGroup < ApplicationRecord
       units_for_user(user).map(&:id) :
       default_unit_group_units.map(&:script_id)
     info
+  end
+
+  def standalone_course?
+    default_units.length == 1 && default_units[0].is_course?
   end
 
   def self.all_courses
