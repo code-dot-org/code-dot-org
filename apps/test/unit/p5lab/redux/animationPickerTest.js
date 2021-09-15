@@ -1,5 +1,5 @@
 import reducer, * as animationPicker from '@cdo/apps/p5lab/redux/animationPicker';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 var Goal = animationPicker.Goal;
 
 describe('animationPicker', function() {
