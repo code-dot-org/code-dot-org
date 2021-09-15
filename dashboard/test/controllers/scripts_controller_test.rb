@@ -9,8 +9,8 @@ class ScriptsControllerTest < ActionController::TestCase
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
     @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: SharedConstants::PUBLISHED_STATE.beta
 
-    @migrated_unit = create :script, is_migrated: true
-    @unmigrated_unit = create :script
+    @migrated_unit = create :script
+    @unmigrated_unit = create :script, is_migrated: false
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     File.stubs(:write)
@@ -602,11 +602,11 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
-  test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
+  test 'cannot update unmigrated unit if changes have been made to the database which are not reflected in the current edit page' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script
+    unit = create :script, is_migrated: false
     stub_file_writes(unit.name)
 
     error = assert_raises RuntimeError do
@@ -621,11 +621,11 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_includes error.message, 'Could not update the unit because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again.'
   end
 
-  test 'can update if database matches starting content for current edit page' do
+  test 'can update unmigrated unit if database matches starting content for current edit page' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script
+    unit = create :script, is_migrated: false
     lesson_group = create :lesson_group, script: unit
     lesson = create :lesson, script: unit, lesson_group: lesson_group
     create(
@@ -1023,7 +1023,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     level = create :level
-    unit = create :script
+    unit = create :script, is_migrated: false
     stub_file_writes(unit.name)
 
     assert_empty unit.lessons
