@@ -758,6 +758,8 @@ en:
             What is ECS?:
               name: What is ECS?
           student_description: 'Phase 1: Online Introduction'
+          name: ECSPD
+          description_audience: ''
         sciencePD:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -10268,6 +10270,7 @@ en:
             Complete Unit 3 Deeper Learning Reflections:
               name: Complete Unit 3 Deeper Learning Reflections
           student_description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+          name: csd1-dlp-18
         csd2-dlp-18:
           title: CS Discoveries Unit 2 Deeper Learning 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
@@ -22626,10 +22629,16 @@ en:
               description_teacher: Students differentiate between comparisons of objects and primitive values. Students explore the effects of using `==` or `!=` with objects to identify the need for the `equals()` method to compare object data. Using the `equals()` method, students add to the Pop the Balloons game to compare `Balloon` objects and determine if there are valid moves left.
             lesson-8:
               name: Providing an Alternate Path of Execution
+              description_student: You review `if/else` statements to implement alternate actions based on the outcome of a Boolean expression. You practice using `if/else` statements with `Math.random()` to access random elements from an array in The Neighborhood. Using `if/else statements`, you check the validity of a player's move in the Pop the Balloons game.
+              description_teacher: Students review `if/else` statements to implement alternate actions based on the outcome of a Boolean expression. Students practice using `if/else` statements with `Math.random()` to access random elements from an array in The Neighborhood. Using `if/else` statements, students check the validity of a player's move in the Pop the Balloons game.
             lesson-9:
               name: Testing Multiple Conditions
+              description_student: Sometimes we need to check multiple conditions to determine the correct outcome. In The Neighborhood, you learn to use `if/else-if/else` statements to solve problems for the `Painter`. You then implement `if/else-if/else` statements in the Pop the Balloons game to check the game's status and determine whether or not the player won.
+              description_teacher: Students use `if/else-if/else` statements to evaluate multiple conditions to select a specific desired outcome. To check the game's status and determine whether or not the player won, students use multi-selection statements to check the condition of the game and choose the appropriate outcome.
             lesson-10:
               name: Using Logical Operators
+              description_student: You explore problems involving multiple conditions and learn to use nested `if` statements in your solutions. You write expressions using new logical operators in conditional statements and identify the effect of these operators on the result. You then improve the gameplay and functionality of your Pop the Balloons game using nested `if` statements and logical operators.
+              description_teacher: Students explore problems involving multiple conditions and write nested `if` statements to develop solutions. Students write expressions using logical operators in conditional statements and identify the effect of logical operators on the result. Nested `if` statements and logical operators are then implemented in the Pop the Balloons game to improve gameplay and overall functionality.
             lesson-11:
               name: Applying De Morgan's Laws to Boolean Expressions
               description_student: You learn about truth tables, a tool we can use to evaluate compound Boolean expressions. You learn about De Morgan's Laws and prove them with a partner using truth tables.
@@ -24568,7 +24577,8 @@ en:
           title: AI Lab
           description_audience: ''
           description_short: ''
-          description: ''
+          description: Use these levels to explore AI Lab and use in other lessons or activities.
+          student_description: Use these levels to explore AI Lab and use in other lessons or activities. You will need to create a Code.org account and sign-in in order to use these tools.
         poster-experiment:
           lessons:
             lesson-1:
@@ -24785,7 +24795,7 @@ en:
           title: 2021 CS Principles Deeper Learning Module 2 for Workshop 2
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by September <s>3</s> 8, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csp-mod3:
           lessons:
@@ -25941,23 +25951,38 @@ en:
               description_teacher: 
             lesson-15:
               name: 'Mini Project: Sensors'
+              description_student: 
+              description_teacher: Based off Dan's sensor projects - blow out candles, light theramin, volume meter
             lesson-17:
               name: Physical Outputs (LEDs)
               description_student: 
               description_teacher: 
             lesson-16:
               name: Physical Inputs
+              description_student: 
+              description_teacher: 
             lesson-18:
               name: Prototyping
+              description_student: 
+              description_teacher: 
             lesson-19:
               name: Project
+              description_student: 
+              description_teacher: 
+            lesson-20:
+              name: Functions + Functions w/Parameters
+              description_student: 
+              description_teacher: |-
+                - Requires introducing functions and then functions with parameters.
+                  - Will need to see about editing original functions video
+                - In current curriculum, functions with parameter levels are closely tied to music and accelerometer, so makes sense to include it here in unit progression
           lesson_groups:
             lessonGroup-3:
-              display_name: Content
+              display_name: Templates
             lessonGroup-2:
-              display_name: Content
+              display_name: Chapter 1
             lessonGroup-4:
-              display_name: Content
+              display_name: Chapter 2
           name: csdu6-playground
           title: CSD Unit 6 Playground
           description_audience: ''
@@ -25972,6 +25997,132 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: hello-world-food
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-u7-dev:
+          lessons:
+            lesson-1:
+              name: Writing Methods to Satisfy Conditions
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Title Sequence Project
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Widgets
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Tools
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Examples
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Exploring Method Components and Functionality
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Using Object References as Parameters
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Overloading Methods
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Accessing Object Behavior
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Overriding Methods
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: Exploring Recursive Methods
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: Comparing Recursive and Iterative Solutions
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: Writing Recursive Methods
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: Maximizing System Reliability
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lessons
+            lessonGroup-3:
+              display_name: Project
+            lessonGroup-4:
+              display_name: Demos and Resources
+          name: csa-u7-dev
+          title: CSA Unit 7 Development
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        tesstest921:
+          lessons: {}
+          lesson_groups: {}
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-animals
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-emoji
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-retro
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-batman
           title: Hello World
           description_audience: ''
           description_short: ''

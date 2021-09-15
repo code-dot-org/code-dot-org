@@ -15,12 +15,21 @@
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
       "include_student_lesson_plans": true,
-      "tts": true
+      "tts": true,
+      "announcements": [
+        {
+          "notice": "Supports for Teaching CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-16 16:20:07 UTC",
-    "published_state": null,
+    "serialized_at": "2021-09-15 17:24:28 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -6613,15 +6622,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 Project Bug Feature_preview-2021"
-        ],
         "progression": "Updating Your Prototype"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSDU4 Project Bug Feature_preview-2021"
+          "CSDU4 Project Bug Feature_2021"
         ],
         "lesson.key": "Updating Your Prototype",
         "lesson_group.key": "csd4_2",
@@ -6629,7 +6635,7 @@
         "activity_section.key": "98d47c66-d1b6-4d05-bada-bd58b317813b"
       },
       "level_keys": [
-        "CSDU4 Project Bug Feature_preview-2021"
+        "CSDU4 Project Bug Feature_2021"
       ]
     },
     {
@@ -7057,9 +7063,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSDU4 Project Bug Feature_preview-2021",
+        "level.key": "CSDU4 Project Bug Feature_2021",
         "script_level.level_keys": [
-          "CSDU4 Project Bug Feature_preview-2021"
+          "CSDU4 Project Bug Feature_2021"
         ],
         "lesson.key": "Updating Your Prototype",
         "lesson_group.key": "csd4_2",
@@ -7395,10 +7401,9 @@
     },
     {
       "name": "Example Apps for Good",
-      "url": "https://docs.google.com/document/d/1S05DMbFF316RAMYQB9EBjPxa7xbZJipa98kYwccOQJA/edit",
+      "url": "https://docs.google.com/document/d/1kCuDUhTJb7Vcrv_pzvA4yL79WyZn_7PorV-F-gTxBuk/edit",
       "key": "example-apps-for-good",
       "properties": {
-        "type": "Teacher Resource",
         "audience": "Teacher",
         "include_in_pdf": true
       },
@@ -7483,7 +7488,7 @@
     },
     {
       "name": "Market Research",
-      "url": "https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/edit",
+      "url": "https://docs.google.com/document/d/1xROZ51ntcX11OmXXfB46slca_ViqIjmOrAydkytVWdw/edit",
       "key": "market-research",
       "properties": {
         "type": "Activity Guide",
@@ -7657,10 +7662,9 @@
     },
     {
       "name": "Phone Paper Prototype",
-      "url": "https://drive.google.com/file/d/0B2UNlnU_5Vg4c1VJZ1Zrd0NXUkE/view",
+      "url": "https://drive.google.com/file/d/1O_TFldMiOe6QWCnunqgaZFFT9qnansLo/view",
       "key": "phone-paper-prototype",
       "properties": {
-        "type": "Template",
         "audience": "Student"
       },
       "seeding_key": {

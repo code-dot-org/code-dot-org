@@ -1132,6 +1132,10 @@ uz:
         text: "{SPRITE} lokatsiyasi"
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': yomg‘ir
       gamelab_makeNewSpriteAnon:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       gamelab_makeNumSprites:
@@ -1166,6 +1170,11 @@ uz:
         text: yuqoriga va pastga qarab patrul qilish
       gamelab_playSound:
         text: " {SOUND} ijro etish"
+      gamelab_playSoundOptions:
+        text: " {SOUND} ijro etish"
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": siqilish
       gamelab_pointInDirection:
         text: " {SPRITE} ga {DIRECTION} berish"
         options:
@@ -1622,16 +1631,47 @@ uz:
         text: "{SPRITE} x koordinatasi"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      PoemBot_playSound:
+        text: " {SOUND} ijro etish"
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"rainbow"': kamalak
+          EFFECT:
+            '"colors"': Ranglar
+            '"squiggles"': Siqilish (burmalar)
+            '"space"': Qoinot
+            '"stars"': Yulduzlar
+            '"ripples"': To‘lqinlar
+          PALETTE:
+            '"rainbow"': Kamalak
       PoemBot_setForegroundEffect:
-        text: old plan effektini {FG_EFFECT} o'rnatish
+        text: old plan effektini {EFFECT} o'rnatish
         options:
-          FG_EFFECT:
-            '"rain"': yomg‘ir
-            '"bubbles"': pufakchalar
+          EFFECT:
+            '"rain"': Yomg'ir
+            '"bubbles"': Pufakchalar
+            '"hearts"': Rangli yuraklar
+            '"confetti"': Konfetti
+            '"starburst"': Yulduzlar to'plami
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: o'sish
+            jittering: titrash
+            shrinking: kichrayish
+            spinning_left: chap tarafga aylanish
+            spinning_right: o'ng tarafga aylanish
+            swimming_left_and_right: suzmoqda
+            wandering: daydish
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: o'sish
+            jittering: titrash
+            shrinking: kichrayish
+            spinning_left: chap tarafga aylanish
+            spinning_right: o'ng tarafga aylanish
+            swimming_left_and_right: suzmoqda
+            wandering: daydish
       RyanLab_moveForward:
         text: oldinga siljish
       RyanLab_turnLeft:

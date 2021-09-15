@@ -171,6 +171,8 @@ el:
     email_preference_privacy: "(Δείτε την πολιτική απορρήτου μας)"
     email_preference_yes: "Ναι"
     email_preference_no: "Όχι"
+    share_teacher_email_reg_partner_preference_yes: "Ναι"
+    share_teacher_email_reg_partner_preference_no: "Όχι"
     parent_account_checkbox: "Είμαι γονέας/κηδεμόνας και κάνω την εγγραφή για λογαριασμό του τέκνου μου"
     parent_account_email_progress_permission: "Μπορούμε να σας αποστείλουμε ηλεκτρονικά μηνύματα με περιστασιακές ενημερώσεις για την πρόοδο και τα έργα του παιδιού σας, καθώς και ενημερώσεις σχετικά με το τμήμα τους και την επιστήμη των υπολογιστών; [(Δείτε την πολιτική απορρήτου μας)](%{privacy_policy_url})"
     parent_account_email_label: "Διεύθυνση ηλεκτρονικού ταχυδρομείου γονέα/κηδεμόνα"

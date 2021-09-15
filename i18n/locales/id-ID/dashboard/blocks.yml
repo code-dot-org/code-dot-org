@@ -1107,6 +1107,10 @@ id:
         text: lokasi {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': hujan
       gamelab_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       gamelab_mirrorSprite:
@@ -1131,6 +1135,11 @@ id:
         text: diklik {SPRITE}
       gamelab_playSound:
         text: Playsound {SOUND}
+      gamelab_playSoundOptions:
+        text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": menjongkok
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1575,17 +1584,45 @@ id:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
+      PoemBot_playSound:
+        text: Playsound {SOUND}
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"solid"': Pejal
-            '"rainbow"': pelangi
+          EFFECT:
+            '"colors"': Warna
+            '"squiggles"': Garis berlekuk
+            '"space"': Spasi
+            '"stars"': Bintang
+            '"ripples"': Riak
+          PALETTE:
+            '"rainbow"': Pelangi
       PoemBot_setForegroundEffect:
-        text: tetapkan efek latar depan {FG_EFFECT}
+        text: tetapkan efek latar depan {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': hujan
-            '"bubbles"': gelembung
+          EFFECT:
+            '"rain"': Hujan
+            '"bubbles"': Gelembung
+            '"hearts"': Hati Penuh Warna
+            '"confetti"': Konfeti
+            '"starburst"': Semburan bintang
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: pertumbuhan
+            jittering: gugup
+            shrinking: penyusutan
+            spinning_left: berputar ke kiri
+            spinning_right: berputar ke kanan
+            wandering: pengembaraan
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: pertumbuhan
+            jittering: gugup
+            shrinking: penyusutan
+            spinning_left: berputar ke kiri
+            spinning_right: berputar ke kanan
+            wandering: pengembaraan
       RyanLab_moveForward:
         text: Gerak maju
       RyanLab_turnLeft:

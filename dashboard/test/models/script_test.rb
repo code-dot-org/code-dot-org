@@ -32,8 +32,9 @@ class ScriptTest < ActiveSupport::TestCase
     # We also want to test level_concept_difficulties, so make sure to give it
     # one.
     @cacheable_level = create(:level, :with_script, level_concept_difficulty: create(:level_concept_difficulty))
+  end
 
-    # ensure that we have freshly generated caches with this unit_group/unit
+  setup do
     UnitGroup.clear_cache
     Script.clear_cache
   end
@@ -423,6 +424,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
       }]
@@ -431,6 +433,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
       }]
@@ -442,6 +445,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
       }]
@@ -450,6 +454,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
       }]
@@ -2592,7 +2597,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can move lesson to later lesson group in unit' do
-    unit = create :script, name: 'lesson-group-test-script'
+    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
     lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
     lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
     lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1
@@ -2626,7 +2631,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can move last lesson group up' do
-    unit = create :script, name: 'lesson-group-test-script'
+    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
     lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
     lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
     lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1

@@ -280,6 +280,10 @@ sq:
           DIRECTION:
             '"right"': djathtas
             '"left"': majtas
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": përtyp
       gamelab_randColor:
         text: ngjyrë e rastësishme
       gamelab_randomColor:
@@ -443,11 +447,6 @@ sq:
             '"down"': shigjetë drejtuar poshtë
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"solid"': solid
-            '"rainbow"': ylber
       RyanLab_moveForward:
         text: lëviz përpara
       RyanLab_turnLeft:

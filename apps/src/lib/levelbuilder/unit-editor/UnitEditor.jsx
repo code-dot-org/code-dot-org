@@ -17,14 +17,11 @@ import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import {
-  getSerializedLessonGroups,
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {
-  lessonGroupShape,
-  resourceShape as migratedResourceShape
-} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 import {PublishedState} from '@cdo/apps/util/sharedConstants';
@@ -86,7 +83,6 @@ class UnitEditor extends React.Component {
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
-    levelKeyList: PropTypes.object.isRequired,
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
       .isRequired,
     studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
@@ -180,7 +176,11 @@ class UnitEditor extends React.Component {
   };
 
   handleStandaloneUnitChange = () => {
-    this.setState({isCourse: !this.state.isCourse});
+    this.setState({
+      isCourse: !this.state.isCourse,
+      familyName: null,
+      versionYear: null
+    });
   };
 
   handleShowCalendarChange = () => {
@@ -218,19 +218,6 @@ class UnitEditor extends React.Component {
       ) {
         shouldCloseAfterSave = false;
       }
-    }
-    // HACK: until the unit edit page no longer overwrites changes to the
-    // arrangement of levels within lessons, give the user a warning
-    if (
-      window.lessonEditorOpened &&
-      !confirm(
-        'WARNING: It looks like you opened a lesson edit page from this unit edit page. ' +
-          'If you made any changes on the lesson edit page which you do not ' +
-          'wish to lose, please click cancel now and reload this page before ' +
-          'saving any changes to this unit edit page.'
-      )
-    ) {
-      shouldCloseAfterSave = false;
     }
 
     if (this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
@@ -286,12 +273,9 @@ class UnitEditor extends React.Component {
       project_widget_visible: this.state.projectWidgetVisible,
       project_widget_types: this.state.projectWidgetTypes,
       lesson_extras_available: this.state.lessonExtrasAvailable,
-      script_text: this.props.isMigrated
-        ? getSerializedLessonGroups(
-            this.props.lessonGroups,
-            this.props.levelKeyList
-          )
-        : this.state.lessonLevelData,
+      lesson_groups:
+        this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
+      script_text: !this.props.isMigrated && this.state.lessonLevelData,
       last_updated_at: this.state.lastUpdatedAt,
       old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
@@ -337,7 +321,7 @@ class UnitEditor extends React.Component {
         } else {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
-          this.props.init(lessonGroups, this.props.levelKeyList);
+          this.props.init(lessonGroups);
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
@@ -1023,7 +1007,6 @@ export const UnconnectedUnitEditor = UnitEditor;
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    levelKeyList: state.levelKeyList,
     migratedTeacherResources: state.resources,
     studentResources: state.studentResources
   }),

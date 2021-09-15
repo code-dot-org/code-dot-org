@@ -9603,6 +9603,8 @@ vi:
               name: Tạo nhân vật
             End of Course Project:
               name: Dự án tổng kết khóa học
+            Outbreaklab:
+              name: Phòng thí nghiệm độc lập dịch bệnh bùng phát
           lesson_groups:
             introduction:
               display_name: Giới thiệu
@@ -10329,6 +10331,8 @@ vi:
               description_student: Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
             lesson-7:
               name: Tạo nhân vật
+            lesson-5:
+              name: Dịch bệnh bùng phát
             lesson-2:
               name: Sức mạnh của ngôn từ
               description_student: Bắt nạt chưa bao giờ là đúng. Bài học này sẽ dạy bạn về những điều nên và không nên phát ngôn trực tuyến.
@@ -10675,12 +10679,34 @@ vi:
               display_name: Giới thiệu
             Introduction:
               display_name: Giới thiệu
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Bài học 3
+            Lesson 4:
+              display_name: Bài học 4
+            Lesson 5:
+              display_name: Bài học 5
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: Dịch bệnh bùng phát ở Thị Trấn Quái Vật
+          lesson_groups:
+            Outbreak Module:
+              display_name: Mô-đun Dịch bệnh bùng phát
+          name: môđundịchbệnhbùngphát
+          title: Mô-đun Dịch bệnh bùng phát\_V2
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
               display_name: Khảo sát
         aiml-2021:
           lessons:
+            lesson9:
+              description_teacher: |-
+                Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.
+
+                **Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?
             lesson-22:
               name: Bộ sưu tập Thiết kế dữ liệu
           lesson_groups:
@@ -10688,6 +10714,11 @@ vi:
               display_name: Khảo sát
         csd7-2021:
           lessons:
+            Similarity Models:
+              description_teacher: |-
+                Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.
+
+                **Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?
             Survey Planning:
               name: Bộ sưu tập Thiết kế dữ liệu
           lesson_groups:
@@ -10743,6 +10774,9 @@ vi:
           lessons:
             lesson-4:
               name: Quy trình thiết kế
+        outbreak-module:
+          name: mô-đun-dịch-bệnh-bùng-phát
+          title: Dịch bệnh bùng phát
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -10788,6 +10822,12 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: màn 1
+            lessonGroup-3:
+              display_name: màn 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

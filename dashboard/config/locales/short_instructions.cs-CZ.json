@@ -1440,9 +1440,9 @@
         "CourseF_outbreak2": "Nastavte, aby se zdravé příšerky při dotyku změnily na nakažené.",
         "CourseF_outbreak3": "Nasaďte příšerce roušku tím, že na ni kliknete. ",
         "CourseF_outbreak4": "Změňte počet a velikost postav příšerek pro simulaci.",
-        "CourseF_outbreak6": "Přidejte procentuální pravděpodobnost, kdy se příšerky nakazí, kdykoli se zdravá příšerka dotkne nakažené příšerky. Proveďte to pro všechny kombinace setkání příšerek s rouškou a bez roušky.",
-        "CourseF_outbreak7": "Vytvořte nový kostým pro příšerky, které jsou na virus imunní, a použijte ho v simulaci.",
-        "CourseF_outbreak8": "Sdílet zprávu se simulací.",
+        "CourseF_outbreak6": "Nastavte, aby se všechny nakažené příšerky začaly uzdravovat, když se nakažené příšerky dotkne zdravá příšerka.",
+        "CourseF_outbreak7": "Přidejte procentuální pravděpodobnost, kdy se příšerky nakazí, kdykoli se zdravá příšerka dotkne nakažené příšerky. Proveďte to pro všechny kombinace setkání příšerek s rouškou a bez roušky.",
+        "CourseF_outbreak8": "Vytvořte nový kostým pro příšerky, které jsou na virus imunní, a použijte ho v simulaci.",
         "courseA_artist_loops7_2021": "Pomocí cyklu \"repeat\" přidej do vody vlny.",
         "courseA_harvester_seq12_2021": "Posbírej všechnu kukuřici.",
         "courseA_maze_ramp5a_2021": "Dostaň mne k prasátku!",
@@ -1760,7 +1760,8 @@
         "express_maze_debugging9_2021": "Využij nabízené bloky, abys vytvořil svůj program. Dostaň veverku Scrata k žaludu.",
         "ramp_artist_loops6v1_2021": "Pomocí cyklu vytvořte toto schodiště.",
         "ramp_artist_loops7_2021": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus!",
-        "simcustom_2021": "Pokuste se udělat nějaké změny v kostýmech sprajtů nebo v níže uvedeném kódu. "
+        "simcustom_2021": "Pokuste se udělat nějaké změny v kostýmech sprajtů nebo v níže uvedeném kódu. ",
+        "international_outbreak_freeplay": "Sdílejte zprávu se svou simulací."
       }
     }
   }

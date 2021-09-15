@@ -596,8 +596,8 @@
           "courseA_artist_loops_challenge2_c": "Θα χρειαστείς ΠΟΛΛΑ μπλοκ μέσα στο βρόγχο γι' αυτή τη δοκιμασία."
         },
         "course1_collector_loops_challenge3": {
-          "courseB_collector_loops_challenge1_b": "Άρχισε βάζοντας σε βρόγχο τις εντολές \"κινήσου νότια\" και \"πάρε το θησαυρό\".\n\n[blockly block][0]",
-          "courseB_collector_loops_challenge1_a": "Το μοτίβο στα βόρεια είναι λίγο διαφορετικό από αυτό στα νότια.\n\n[blockly block][0]"
+          "courseB_collector_loops_challenge1_b": "Άρχισε βάζοντας σε βρόγχο τις εντολές \"κινήσου νότια\" και \"πάρε το θησαυρό\".\n\n<xml>\n  <block type=\"maze_moveSouth\"/><next>\n  <block type=\"collector_collect\"/></next>\n  </xml>",
+          "courseB_collector_loops_challenge1_a": "Το μοτίβο στα βόρεια είναι λίγο διαφορετικό από αυτό στα νότια.\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>"
         },
         "course1_maze_debugging_challenge1": {
           "courseA_maze_seq_challenge1_a": "Μερικές διαδρομές θα σε οδηγήσουν στη δυναμίτιδα, αν προχωρήσεις πολύ."

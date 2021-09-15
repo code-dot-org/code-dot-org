@@ -1722,6 +1722,21 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Presuň bloky z panela nástrojov na tvoju pracovnú plochu."
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Tieto bloky neobsahujú čísla. Môžeš ich použiť, koľko len chceš!"
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Tieto bloky neobsahujú čísla. Môžeš ich použiť, koľko len chceš!"
         }
       }
     }

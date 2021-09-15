@@ -262,7 +262,8 @@
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "khác",
           "0d3e73168beb875063ea0f0302fe32bd": "Loài cá nào?",
           "caaf8264ca397dba2d35ef902bbbd953": "Sinh vật nào?",
-          "78574118d153534fd0925a2f5ca25e79": "Đồ vật nào?"
+          "78574118d153534fd0925a2f5ca25e79": "Đồ vật nào?",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "sinh vật"
         },
         "courseF_apps_card": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?",
@@ -276,12 +277,15 @@
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
           "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
-          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!"
+          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
+          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!"
         },
         "courseF_apps_collector": {
           "077449fb290b51b9d70c9f2f3d3213bc": " giây",
           "490082498449bd20ff0199737dfa4916": "Chọn loại trò chơi:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Trò chơi nhà sưu tầm vĩ đại!"
+          "41f2b2212de0105c2a942ebb4a44e449": "Trò chơi nhà sưu tầm vĩ đại!",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Bạn thắng rồi!"
         },
         "courseF_apps_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng",
@@ -307,7 +311,9 @@
           "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
           "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
+          "ae096fbf24d913754b01a1601672bf62": "giống bạn nè!"
         },
         "courseF_editable_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng",

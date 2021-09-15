@@ -343,15 +343,15 @@
           "courseA_maze_seq_challenge2_a": "Prøv at tælle felterne med din finger. Husk ikke at tælle det felt hvor du begynder!"
         },
         "course1_playlab_events_challenge1": {
-          "courseA_playlab_events_challenge1_a": "Få pingvinen vist, når du klikker på Robin!\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge1_b": "Få spøgelset vist, når du klikker på Pingvinen!\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge1_c": "Få monsteret vist, når du klikker på spøgelset!\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge1_d": "Få robotten vist, når du klikker på monsteret!\n\n[blockly block][0]"
+          "courseA_playlab_events_challenge1_a": "Få pingvinen vist, når du klikker på Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Få spøgelset vist, når du klikker på Pingvinen!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Få monsteret vist, når du klikker på spøgelset!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Få robotten vist, når du klikker på monsteret!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "course1_playlab_events_challenge2": {
-          "courseA_playlab_events_challenge2_a": "Du kan få en fugl til at synge.\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge2_b": "Du kan få en robot til at bippe.\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge2_c": "Du kan få et monster til at knurre.\n\n[blockly block][0]"
+          "courseA_playlab_events_challenge2_a": "Du kan få en fugl til at synge.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Du kan få en robot til at bippe.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "Du kan få et monster til at knurre.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "Hvis du sender mig baglæns, så være ekstra opmærksom på, jeg vender den rigtige vej!",

@@ -6343,6 +6343,8 @@ sk:
               name: Postupnosť krokov v bludisku
             Events with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
+              description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
+                so svojimi spolužiakmi.
               description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
                 v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
                 svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
@@ -6614,6 +6616,8 @@ sk:
                 ktorú "Sprite" vykonáva až do momentu,  kedy ju zastavíme. '
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
+              description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
+                so svojimi spolužiakmi.
               description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
                 v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
                 svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
@@ -6729,6 +6733,8 @@ sk:
               name: Digitálne zdieľanie
             Simon Says:
               name: Simon vraví
+              description_student: Zahrajte si hru a zamyslite sa nad tým, ktoré príkazy
+                sú potrebné na dosiahnutie správneho výsledku.
               description_teacher: V tejto lekcii si študenti zahrajú hru, ktorá im
                 pomôže premýšľať nad spôsobmi prideľovania príkazov tak, aby spôsobili
                 želaný výsledok. Pomôže im to ľahšie premostiť do prostredia Sprite
@@ -9578,6 +9584,7 @@ sk:
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
             Safety in My Online Neighborhood:
               name: Bezpečný pohyb na internete.
+              description_student: Naučte sa bezpečne pohybovať po online svete.
               description_teacher: V spolupráci s Common Sense Education, táto lekcia
                 oboznámi študentom s tým, že webové stránky často požadú informácie,
                 ktoré sú súkromné a diskutuje s nimi o tom, ako na takého požiadavky
@@ -9847,6 +9854,8 @@ sk:
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
                 tvoj projekt.
+            Be A Super Digital Citizen:
+              description_student: Nauč sa zakročiť, keď sa stretneš s kyberšikanovaním.
           student_description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov
             s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania
             sa oboznámia aj s významom pojmu "digitálne občianstvo".
@@ -9912,6 +9921,8 @@ sk:
                 sa spustí niečo iné.
             Simon Says:
               name: Simon vraví
+              description_student: Zahrajte si hru a zamyslite sa nad tým, ktoré príkazy
+                sú potrebné na dosiahnutie správneho výsledku.
               description_teacher: V tejto lekcii si študenti zahrajú hru, ktorá im
                 pomôže premýšľať nad spôsobmi prideľovania príkazov tak, aby spôsobili
                 želaný výsledok. Pomôže im to ľahšie premostiť do prostredia Sprite
@@ -9926,6 +9937,8 @@ sk:
                 ktorú "Sprite" vykonáva až do momentu,  kedy ju zastavíme. '
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
+              description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
+                so svojimi spolužiakmi.
               description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
                 v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
                 svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
@@ -10022,6 +10035,8 @@ sk:
                 ktorú "Sprite" vykonáva až do momentu,  kedy ju zastavíme. '
             Events with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
+              description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
+                so svojimi spolužiakmi.
               description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
                 v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
                 svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
@@ -11082,6 +11097,7 @@ sk:
             Safety in My Online Neighborhood:
               key: Bezpečný pohyb na internete.
               name: Bezpečný pohyb na internete.
+              description_student: Naučte sa bezpečne pohybovať po online svete.
             Learn to Drag and Drop:
               key: Nauč sa presunúť a pustiť
               name: Nauč sa presunúť a pustiť
@@ -11395,6 +11411,8 @@ sk:
             Artist Binary:
               key: Binárny Umelec
               name: Binárne obrázky s Umelcom
+            Be A Super Digital Citizen:
+              description_student: Nauč sa zakročiť, keď sa stretneš s kyberšikanovaním.
             End of Course Project:
               key: Záverečný projekt
               name: Záverečný projekt
@@ -11468,8 +11486,10 @@ sk:
                 sa spustí niečo iné.
             Simon Says:
               key: Simon vraví
+              description_student: Zahrajte si hru a zamyslite sa nad tým, ktoré príkazy
+                sú potrebné na dosiahnutie správneho výsledku.
               description_teacher: V tejto lekcii si študenti zahrajú hru, ktorá im
-                pomôže premýšľať nad spôsobmi prideľovania príkazov tak, aby spôsobili
+                pomôže premýšľať nad spôsobmi prideľovania príkazov tak, aby dosiahnuť
                 želaný výsledok. Pomôže im to ľahšie premostiť do prostredia Sprite
                 Labu v nasledujúcej lekcii.
             Learning Sprites with Sprite Lab:
@@ -11483,6 +11503,8 @@ sk:
             Alien Dance Party with Sprite Lab:
               key: Mimozemská tanečná párty so Sprite Labom
               name: Mimozemská tanečná párty so Sprite Labom
+              description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
+                so svojimi spolužiakmi.
               description_teacher: V tejto lekcii študenti pracujú v Sprite Labe,
                 v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
                 svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
@@ -11541,6 +11563,8 @@ sk:
             End of Course Project:
               key: Záverečný projekt
               name: Záverečný projekt
+            lesson-4:
+              description_student: Nauč sa zakročiť, keď sa stretneš s kyberšikanovaním.
           lesson_groups:
             ramp_up:
               display_name: Vnorené cykly
@@ -11576,6 +11600,8 @@ sk:
                 ktorú "Sprite" vykonáva až do momentu,  kedy ju zastavíme. '
             Events with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
+              description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
+                so svojimi spolužiakmi.
               description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
                 v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
                 svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
@@ -11791,6 +11817,8 @@ sk:
             Alien Dance Party:
               key: Mimozemská tanečná párty
               name: Mimozemská tanečná párty
+              description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
+                so svojimi spolužiakmi.
               description_teacher: V tejto lekcii študenti pracujú v Sprite Labe,
                 v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
                 svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
@@ -12020,6 +12048,16 @@ sk:
               display_name: 'Ponárame sa hlbšie: Kurzy E a F'
             Introduction:
               display_name: Úvod
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 2:
+              display_name: Hodina 2
+            Lesson 3:
+              display_name: Hodina 3
+            Lesson 4:
+              display_name: Hodina 4
+            Lesson 5:
+              display_name: Hodina 5
         outbreakmodule:
           lessons:
             intro monster town:
@@ -12096,6 +12134,16 @@ sk:
           lessons:
             lesson-3:
               name: Test
+        tesspltest:
+          lessons:
+            lesson-2:
+              name: Hodina 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úroveň 1
+            lessonGroup-3:
+              display_name: Úroveň 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -12141,3 +12189,9 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csdu6-playground:
+          lessons:
+            lesson-9:
+              name: Farebné LEDky
+            lesson-19:
+              name: Projekt

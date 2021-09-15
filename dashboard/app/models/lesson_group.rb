@@ -59,9 +59,10 @@ class LessonGroup < ApplicationRecord
 
     counters = Counters.new(0, 0, 0, 0)
 
-    raw_lesson_groups&.map do |raw_lesson_group|
-      if raw_lesson_group[:key].nil?
-        lesson_group = LessonGroup.find_or_create_by(
+    raw_lesson_groups&.map(&:deep_symbolize_keys)&.map do |raw_lesson_group|
+      if !raw_lesson_group[:user_facing]
+        raise 'non-user-facing lesson group must have blank key' unless raw_lesson_group[:key].blank?
+        lesson_group = LessonGroup.find_or_create_by!(
           key: '',
           script: script,
           user_facing: false,
@@ -72,11 +73,13 @@ class LessonGroup < ApplicationRecord
         LessonGroup.prevent_blank_display_name(raw_lesson_group)
         LessonGroup.prevent_changing_stable_i18n_key(script, raw_lesson_group)
 
-        lesson_group = LessonGroup.find_or_create_by(
+        lesson_group = LessonGroup.find_or_create_by!(
           key: raw_lesson_group[:key],
           script: script,
-          user_facing: true
-        )
+          user_facing: true,
+        ) do |lg|
+          lg.position = 1 # will be updated below, but can't be nil
+        end
 
         lesson_group.assign_attributes(
           position: lesson_group_position += 1,
@@ -89,7 +92,10 @@ class LessonGroup < ApplicationRecord
         lesson_group.save! if lesson_group.changed?
       end
 
-      new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
+      new_lessons =
+        script.is_migrated ?
+          Lesson.update_lessons_in_migrated_unit(script, lesson_group, raw_lesson_group[:lessons], counters) :
+          Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
       lesson_group.lessons = new_lessons
       lesson_group.save!
 
@@ -143,9 +149,13 @@ class LessonGroup < ApplicationRecord
 
   def summarize_for_unit_edit
     summary = summarize
+    summary[:display_name] = display_name
     summary[:description] = description
     summary[:big_questions] = big_questions
-    summary[:lessons] = lessons.map(&:summarize_for_unit_edit)
+    summary[:lessons] =
+      script.is_migrated ?
+        lessons.map(&:summarize_for_migrated_unit_edit) :
+        lessons.map(&:summarize_for_unit_edit)
     summary
   end
 

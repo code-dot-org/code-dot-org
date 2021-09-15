@@ -150,6 +150,11 @@
         },
         "simcustom_2021": {
           "moving with arrow keys": "flytta med piltangenter"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "återhämtning",
+          "moving left and right": "flytta vänster och höger",
+          "moving with arrow keys": "flytta med piltangenter"
         }
       }
     }
