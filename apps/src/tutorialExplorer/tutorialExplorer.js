@@ -459,7 +459,7 @@ export default class TutorialExplorer extends React.Component {
           searchTerm &&
           !(
             tutorial.name.toLowerCase().includes(cleanSearchTerm) ||
-            tutorial.longdescription.toLowerCase().includes(cleanSearchTerm)
+            tutorial.longdescription?.toLowerCase().includes(cleanSearchTerm)
           )
         ) {
           return false;
