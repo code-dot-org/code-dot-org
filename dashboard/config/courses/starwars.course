@@ -1,7 +1,7 @@
 {
   "name": "starwars",
   "script_names": [
-
+    "starwars"
   ],
   "published_state": "preview",
   "properties": {

@@ -1,7 +1,7 @@
 {
   "name": "dance-extras",
   "script_names": [
-
+    "dance-extras"
   ],
   "published_state": "preview",
   "properties": {

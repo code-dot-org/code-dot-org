@@ -1,7 +1,7 @@
 {
   "name": "starwarsblocks",
   "script_names": [
-
+    "starwarsblocks"
   ],
   "published_state": "preview",
   "properties": {

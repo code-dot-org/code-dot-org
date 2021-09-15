@@ -1,7 +1,7 @@
 {
   "name": "csp5-virtual",
   "script_names": [
-
+    "csp5-virtual"
   ],
   "published_state": "preview",
   "properties": {

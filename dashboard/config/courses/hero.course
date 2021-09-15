@@ -1,7 +1,7 @@
 {
   "name": "hero",
   "script_names": [
-
+    "hero"
   ],
   "published_state": "preview",
   "properties": {

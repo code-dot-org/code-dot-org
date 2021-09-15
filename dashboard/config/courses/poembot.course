@@ -1,7 +1,7 @@
 {
   "name": "poembot",
   "script_names": [
-
+    "poembot"
   ],
   "published_state": "beta",
   "properties": {

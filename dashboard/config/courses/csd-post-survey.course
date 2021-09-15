@@ -1,7 +1,7 @@
 {
   "name": "csd-post-survey",
   "script_names": [
-
+    "csd-post-survey"
   ],
   "published_state": "preview",
   "properties": {

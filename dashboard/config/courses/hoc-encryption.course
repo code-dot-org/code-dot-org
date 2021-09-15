@@ -1,7 +1,7 @@
 {
   "name": "hoc-encryption",
   "script_names": [
-
+    "hoc-encryption"
   ],
   "published_state": "preview",
   "properties": {

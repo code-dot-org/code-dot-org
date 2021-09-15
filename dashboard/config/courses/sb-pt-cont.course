@@ -1,7 +1,7 @@
 {
   "name": "sb-pt-cont",
   "script_names": [
-
+    "sb-pt-cont"
   ],
   "published_state": "pilot",
   "properties": {

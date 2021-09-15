@@ -1,7 +1,7 @@
 {
   "name": "sb-pt-exp",
   "script_names": [
-
+    "sb-pt-exp"
   ],
   "published_state": "pilot",
   "properties": {

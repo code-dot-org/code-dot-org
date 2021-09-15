@@ -1,7 +1,7 @@
 {
   "name": "csp3-virtual",
   "script_names": [
-
+    "csp3-virtual"
   ],
   "published_state": "preview",
   "properties": {

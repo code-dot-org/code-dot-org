@@ -1,7 +1,7 @@
 {
   "name": "flappy",
   "script_names": [
-
+    "flappy"
   ],
   "published_state": "preview",
   "properties": {
