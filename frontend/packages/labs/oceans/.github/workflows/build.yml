@@ -4,7 +4,7 @@ on:
   pull_request:  
   push:
     branches:
-      - main
+      - GithubActions
 
 jobs:
   build:
@@ -26,11 +26,11 @@ jobs:
           cp -r public/* dist
 
       - name: Deploy
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ github.ref == 'refs/heads/GithubActions' }}
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
+          BRANCH: gh-pages-test
           FOLDER: dist
           BUILD_SCRIPT: yarn install && yarn test && yarn build
     
