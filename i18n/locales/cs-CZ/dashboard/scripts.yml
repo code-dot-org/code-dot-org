@@ -1,4 +1,3 @@
----
 cs:
   data:
     script:
@@ -114,7 +113,7 @@ cs:
         course3:
           title: Kurz 3
           description: Kurz 3 je určen pro studenty, kteří prošli kurzem 2. Studenti se hlouběji ponoří do programovacích témat z předchozích kurzů a budou hledat vhodná řešení složitějších problémů. Na konci tohoto kurzu studenti vytvoří interaktivní příběhy a hry, které mohou s kýmkoli sdílet. Vhodné pro 4.-5. ročník ZŠ.
-          description_short: Ponořte se ještě hlouběji do programování při vytváření her a interaktivních příběhů. Tento kurz navazuje na Kurz 2.
+          description_short: Ponořte se ještě hlouběji do programování při vytváření her a interaktivních příběhů. Tento kurz navazuje na Kurz 2. 
           description_audience: Věk 8-18
           lessons:
             Artist:
@@ -144,7 +143,7 @@ cs:
             Digital Citizenship:
               name: Digitální občanství
             'Farmer: While Loops':
-              name: Farmář - While cykly
+              name: 'Farmář - While cykly'
             Functional Suncatchers:
               name: Funkční náhrdelníky
             Internet:
@@ -195,7 +194,7 @@ cs:
         course4:
           title: Kurz 4
           description: Kurz 4 je určen pro studenty, kteří se kurzy 2 a 3. Studenti se naučí řešit hádanky s rostoucí složitosti, jak se učí jak zkombinovat několik konceptů, při řešení každé výzvě. V době dokončení tohoto kurzu studenti budou vytvářet programy, které jim předvést více dovedností, včetně smyček a funkce s parametry. Doporučeno pro stupně 4-8.
-          description_short: Vytvořte složitější programy s cykly a funkcemi s parametry. Tento kurz navazuje na Kurz 3.
+          description_short: Vytvořte složitější programy s cykly a funkcemi s parametry. Tento kurz navazuje na Kurz 3. 
           description_audience: Věk 9-18
           lessons:
             Artist:
@@ -263,7 +262,7 @@ cs:
             'Bee: Nested Loops':
               name: 'Včela: vnořené cykly'
             'Farmer: While Loops':
-              name: Farmář - While cykly
+              name: 'Farmář - While cykly'
             'Maze: Sequence':
               name: 'Bludiště: posloupnost'
           student_description: Krátký rozjezd konceptů pro studenty, kteří nevzali kurz 2 a 3.
@@ -629,6 +628,12 @@ cs:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Vítejte!
             Wrap-up:
@@ -675,6 +680,12 @@ cs:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Vítejte!
             Wrap-up:
@@ -684,6 +695,12 @@ cs:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Vítejte!
             Wrap-up:
@@ -1065,6 +1082,12 @@ cs:
               name: 'Nezapojené: Psaní písniček s parametry'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Vítejte!
             Wrap-up:
@@ -1078,12 +1101,12 @@ cs:
             Getting Started:
               name: Začínáme
         ecs-unit4:
-          description: '4.  lekce: Programování'
-          description_short: '4.  lekce: Programování'
+          description: '4. lekce: Programování'
+          description_short: '4. lekce: Programování'
           lessons:
             Getting Started:
               name: Začínáme
-          student_description: '4.  lekce: Programování'
+          student_description: '4. lekce: Programování'
         ecs-unit5:
           lessons:
             Getting Started:
@@ -1105,7 +1128,7 @@ cs:
             Bounce:
               name: Bounce
             'Farmer: While Loops':
-              name: Farmář - While cykly
+              name: 'Farmář - While cykly'
         alltheplcthings:
           lesson_groups:
             required:
@@ -1699,7 +1722,7 @@ cs:
             Functions:
               name: Funkce
             'null':
-              name: prázdná hodnota
+              name: 'prázdná hodnota'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1742,13 +1765,10 @@ cs:
               description_teacher: 'Tato lekce studenty provede jednotlivými kroky odstraňování vad.  Studenti se naučí mantru: „Co se stalo? Co se mělo stát? Co Vám to říká?“'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Vytrvalost: Stevie a Velký projekt'
-              description_teacher: |-
-                Když studenti při zodpovídání otázky nebo při práci na projektu narazí na nějakou překážku, někdy snadno podléhají bezmoci a vzdávají to.  Tato lekce představí studentům myšlenku, že frustrace může být důležitou součástí učení. Zde je frustrace prezentována jako jeden z kroků v rámci procesu tvorby a ne jako znamení selhání.\\r
-                \\r
-                Tuto lekci můžete realizovat v jedné nebo dvou hodinách ve třídě. Jestliže máte více času, nezdráhejte se protáhnout fázi budování a revize aktivity Marble Run.
+              description_teacher: "Když studenti při zodpovídání otázky nebo při práci na projektu narazí na nějakou překážku, někdy snadno podléhají bezmoci a vzdávají to.  Tato lekce představí studentům myšlenku, že frustrace může být důležitou součástí učení. Zde je frustrace prezentována jako jeden z kroků v rámci procesu tvorby a ne jako znamení selhání.\\r\n\\r\nTuto lekci můžete realizovat v jedné nebo dvou hodinách ve třídě. Jestliže máte více času, nezdráhejte se protáhnout fázi budování a revize aktivity Marble Run."
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy ze života: Zasadit semínko'
-              description_teacher: V této lekci budou studenti aplikovat koncepci algoritmu zpětně na každodenní činnosti ze života tím, že zasadí skutečné semeno. Cílem je začít budovat dovednosti v převádění situací ze skutečného života na online scénáře a naopak.\\r
+              description_teacher: "V této lekci budou studenti aplikovat koncepci algoritmu zpětně na každodenní činnosti ze života tím, že zasadí skutečné semeno. Cílem je začít budovat dovednosti v převádění situací ze skutečného života na online scénáře a naopak.\\r\n"
             Learn to Drag and Drop:
               name: Posloupnosti s přetahováním a upouštěním
               description_teacher: Tato lekce dá studentům představu o tom, co mohou očekávat, když se vydají do počítačové laboratoře. Začne to krátkou diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.
@@ -1872,7 +1892,7 @@ cs:
             Events in Bounce:
               name: Události s Bounce
               description_student: Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
-              description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky.
+              description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. 
             Nested Loops:
               name: Vnořené cykly
               description_student: Cykly uvnitř cyklů uvnitř cyklů. Co to znamená? Tato lekce Vás naučí, co se stane, když dáte cyklus do jiného cyklu.
@@ -1894,15 +1914,15 @@ cs:
             Conditionals with Cards:
               name: 'Jestliže/jinak: podmínky s kartami'
               description_student: Je čas zahrát si hru, v níž získáte body jen za určitých podmínek!
-              description_teacher: Tato lekce ukazuje, jak mohou být podmínky využité pro úpravu programu pro konkrétní informaci. Když píšeme program, nemáme vždy všechny informace, které potřebujeme. Někdy budete chtít udělat v jedné situaci něco jiného než ve druhé, i když nevíte, která situace nastane, až kód poběží. Tehdy využijete podmínky. Ty umožňují počítači rozhodnout se podle informace, která platí v čase, kdy kód poběží.
+              description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité pro úpravu programu pro konkrétní informaci. Když píšeme program, nemáme vždy všechny informace, které potřebujeme. Někdy budete chtít udělat v jedné situaci něco jiného než ve druhé, i když nevíte, která situace nastane, až kód poběží. Tehdy využijete podmínky. Ty umožňují počítači rozhodnout se podle informace, která platí v čase, kdy kód poběží."
             Conditionals in Bee:
               name: Podmínky ve Včele
-              description_student: Teď když rozumíte podmínkám, je čas začít programovat Včelu a používat je při sbírání medu a nektaru.
+              description_student: 'Teď když rozumíte podmínkám, je čas začít programovat Včelu a používat je při sbírání medu a nektaru.'
               description_teacher: Dosud psali studenti kód, který fungoval pořád stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní. V této lekci začne vaše třída programovat s podmínkami, což jim umožní napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž se program setká.
             Conditionals & Loops in Maze:
               name: Podmínky a cykly v Bludišti
               description_student: Když použijete podmínky a cykly současně, můžete dělat některé úžasné věci!
-              description_teacher: Tato sada hlavolamů překlenuje mezery v chápání, k nimž dochází při práci na hlavolamech využívajících různé druhy bloků. Sloučením těchto dvou nápadů dohromady se mohou studenti naučit vytvořit složitější kód, který se vyznačuje jednak obdivuhodnou tvořivostí a jednak kritickým myšlením!
+              description_teacher: 'Tato sada hlavolamů překlenuje mezery v chápání, k nimž dochází při práci na hlavolamech využívajících různé druhy bloků. Sloučením těchto dvou nápadů dohromady se mohou studenti naučit vytvořit složitější kód, který se vyznačuje jednak obdivuhodnou tvořivostí a jednak kritickým myšlením!'
             Conditionals & Loops in Farmer:
               name: Podmínky a cykly ve Sklízeči
               description_student: Nebývá vždy zřejmé, kdy použít jakou podmínku. Tato lekce Vám umožní procvičit se v rozhodování, co udělat.
@@ -1933,7 +1953,7 @@ cs:
             Debugging in Collector:
               name: Ladění v Kolektoru
               description_student: Dostali jste se někdy při programování do problémů? V této lekci se naučíte tajemství ladění. Ladění je proces vyhledávání a opravování problémů ve Vašem kódu.
-              description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly.
+              description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
           student_description: Učte se nové programovací koncepce, jako například algoritmy, vnořené cykly, cykly `while`, podmínky a události. Než vytvoříte svou úplně první hru nebo příběh, které budete chtít sdílet, absolvujte úvod do digitálního občanství.
           name: coursed-2017
         coursee-2017:
@@ -1985,10 +2005,7 @@ cs:
             Explore Project Ideas:
               name: Zkoumání projektových nápadů
               description_student: Tady je několik her a výkresů. Hrajte si s nimi se všemi, abyste dostali nápady na své vlastní projekty!
-              description_teacher: |-
-                Další čtyři lekce poskytují studentům příležitost využít své schopnosti programování v završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvoří exemplář ke sdílení se spolužáky a s blízkými. Má se jednat o zkušenost o více lekcích nebo trvající více týdnů. Studenti budou trávit čas bádáním v oblasti brainstormingu, učením se o procesu návrhu, budováním a předkládáním svých konečných výtvorů.
-
-                Ve fázi zkoumání budou studenti mít možnost zobrazit si pro inspiraci předem připravené příklady projektů v Umělci i v Laboratoři her. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření vlastního projektu v Umělci nebo v Laboratoři her (toto bude pravděpodobně nejdelší fáze projektu). Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům.
+              description_teacher: "Další čtyři lekce poskytují studentům příležitost využít své schopnosti programování v završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvoří exemplář ke sdílení se spolužáky a s blízkými. Má se jednat o zkušenost o více lekcích nebo trvající více týdnů. Studenti budou trávit čas bádáním v oblasti brainstormingu, učením se o procesu návrhu, budováním a předkládáním svých konečných výtvorů.\n\nVe fázi zkoumání budou studenti mít možnost zobrazit si pro inspiraci předem připravené příklady projektů v Umělci i v Laboratoři her. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření vlastního projektu v Umělci nebo v Laboratoři her (toto bude pravděpodobně nejdelší fáze projektu). Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům."
             The Design Process:
               name: Proces návrhu
               description_student: Projekty tohoto rozsahu vyžadují nějaký čas a spoustu plánování. Tady se dozvíte něco o procesu návrhu, co použijete k vybudování svého vlastního výtvoru.
@@ -2125,7 +2142,7 @@ cs:
             For Loop Fun:
               name: 'Cykly „for“: Zábava s cykly „for“'
               description_student: Při učení o cyklech `for` zažijete spoustu zábavy!
-              description_teacher: Víme, že cykly nám umožňují dělat věci znovu a znovu, ale teď se podíváme na to, jak používat cykly, které mají v sobě zabudované nějaké struktury navíc. Tyto nové struktury studentům umožní vytvářet kód, který bude mocnější a dynamičtější.
+              description_teacher: 'Víme, že cykly nám umožňují dělat věci znovu a znovu, ale teď se podíváme na to, jak používat cykly, které mají v sobě zabudované nějaké struktury navíc. Tyto nové struktury studentům umožní vytvářet kód, který bude mocnější a dynamičtější.'
             For Loops in Bee:
               name: Cykly „for“ ve Včele
               description_student: Bzz bzz. V těchto hlavolamech povedete včelu na nektar a med pomocí cyklů `for`!
@@ -2171,7 +2188,7 @@ cs:
             Present Your Project:
               name: Prezentujte svůj projekt
               description_student: Je čas, abyste ukázali svou práci! Tady předložíte svůj úžasný projekt svým spolužákům.
-              description_teacher: Během těchto pěti lekcí budou studenti spět k tomu, aby pomocí Laboratoře aplikací nebo Umělce jako programovacího prostředí vybudovali projekt dle vlastního návrhu. Nakonec budou mít studenti možnost předložit svou dokončenou práci prostřednictvím speciálního odkazu svým spolužákům nebo ji sdílet s blízkými. Průvodce lekcemi s přehledem všech pěti kroků procesu lze nalézt na začátku projektového procesu [tady] <https://curriculum.code.org/csf/coursef/15/>).
+              description_teacher: Během těchto pěti lekcí budou studenti spět k tomu, aby pomocí Laboratoře aplikací nebo Umělce jako programovacího prostředí vybudovali projekt dle vlastního návrhu. Nakonec budou mít studenti možnost předložit svou dokončenou práci prostřednictvím speciálního odkazu svým spolužákům nebo ji sdílet s blízkými. Průvodce lekcemi s přehledem všech pěti kroků procesu lze nalézt na začátku projektového procesu [tady] https://curriculum.code.org/csf/coursef/15/).
             Conditionals in Minecraft:
               name: Podmínky v Minecraft
               description_student: Vyhýbejte se lávě! Tady se dozvíte o podmínkách ve světě Minecraft.
@@ -2781,7 +2798,7 @@ cs:
               display_name: Přídavný obsah kurzu
           lessons:
             courseB_unplugged_MRF_2018:
-              name: courseB_unplugged_MRF\_2018
+              name: courseB_unplugged_MRF_2018
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Sequence in Maze:
@@ -2967,13 +2984,10 @@ cs:
               description_teacher: 'Tato lekce studenty provede jednotlivými kroky odstraňování vad.  Studenti se naučí mantru: „Co se stalo? Co se mělo stát? Co Vám to říká?“'
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie a Velký projekt
-              description_teacher: |-
-                Když studenti při zodpovídání otázky nebo při práci na projektu narazí na nějakou překážku, někdy snadno podléhají bezmoci a vzdávají to.  Tato lekce představí studentům myšlenku, že frustrace může být důležitou součástí učení. Zde je frustrace prezentována jako jeden z kroků v rámci procesu tvorby a ne jako znamení selhání.\\r
-                \\r
-                Tuto lekci můžete realizovat v jedné nebo dvou hodinách ve třídě. Jestliže máte více času, nezdráhejte se protáhnout fázi budování a revize aktivity Marble Run.
+              description_teacher: "Když studenti při zodpovídání otázky nebo při práci na projektu narazí na nějakou překážku, někdy snadno podléhají bezmoci a vzdávají to.  Tato lekce představí studentům myšlenku, že frustrace může být důležitou součástí učení. Zde je frustrace prezentována jako jeden z kroků v rámci procesu tvorby a ne jako znamení selhání.\\r\n\\r\nTuto lekci můžete realizovat v jedné nebo dvou hodinách ve třídě. Jestliže máte více času, nezdráhejte se protáhnout fázi budování a revize aktivity Marble Run."
             'Real-life Algorithms: Plant a Seed':
               name: Zasaď semeno
-              description_teacher: V této lekci budou studenti aplikovat koncepci algoritmu zpětně na každodenní činnosti ze života tím, že zasadí skutečné semeno. Cílem je začít budovat dovednosti v převádění situací ze skutečného života na online scénáře a naopak.\\r
+              description_teacher: "V této lekci budou studenti aplikovat koncepci algoritmu zpětně na každodenní činnosti ze života tím, že zasadí skutečné semeno. Cílem je začít budovat dovednosti v převádění situací ze skutečného života na online scénáře a naopak.\\r\n"
             Learn to Drag and Drop:
               name: Naučte se přetahovat a upouštět
               description_teacher: Tato lekce dá studentům představu o tom, co mohou očekávat, když se vydají do počítačové laboratoře. Začne to krátkou diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.
@@ -3286,9 +3300,9 @@ cs:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
           lessons:
             Analog Input_:
-              name: Analogový vstup\_
+              name: Analogový vstup_
             Functions with Parameters_:
-              name: Funkce s parametry\_
+              name: Funkce s parametry_
             Analog Input:
               name: Analogový vstup
             Functions with Parameters:
@@ -3374,10 +3388,7 @@ cs:
             Explore Project Ideas:
               name: Zkoumání projektových nápadů
               description_student: Tady je několik her a výkresů. Hrajte si s nimi se všemi, abyste dostali nápady na své vlastní projekty!
-              description_teacher: |-
-                Další čtyři lekce poskytují studentům příležitost využít své schopnosti programování v završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvoří exemplář ke sdílení se spolužáky a s blízkými. Má se jednat o zkušenost o více lekcích nebo trvající více týdnů. Studenti budou trávit čas bádáním v oblasti brainstormingu, učením se o procesu návrhu, budováním a předkládáním svých konečných výtvorů.
-
-                Ve fázi zkoumání budou studenti mít možnost zobrazit si pro inspiraci předem připravené příklady projektů v Umělci i v Laboratoři her. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření vlastního projektu v Umělci nebo v Laboratoři her (toto bude pravděpodobně nejdelší fáze projektu). Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům.
+              description_teacher: "Další čtyři lekce poskytují studentům příležitost využít své schopnosti programování v završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvoří exemplář ke sdílení se spolužáky a s blízkými. Má se jednat o zkušenost o více lekcích nebo trvající více týdnů. Studenti budou trávit čas bádáním v oblasti brainstormingu, učením se o procesu návrhu, budováním a předkládáním svých konečných výtvorů.\n\nVe fázi zkoumání budou studenti mít možnost zobrazit si pro inspiraci předem připravené příklady projektů v Umělci i v Laboratoři her. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření vlastního projektu v Umělci nebo v Laboratoři her (toto bude pravděpodobně nejdelší fáze projektu). Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům."
             The Design Process:
               name: Proces návrhu
               description_student: Projekty tohoto rozsahu vyžadují nějaký čas a spoustu plánování. Tady se dozvíte něco o procesu návrhu, co použijete k vybudování svého vlastního výtvoru.
@@ -3472,7 +3483,7 @@ cs:
             For Loop Fun:
               name: For cyklus zábavy
               description_student: Při učení o cyklech `for` zažijete spoustu zábavy!
-              description_teacher: Víme, že cykly nám umožňují dělat věci znovu a znovu, ale teď se podíváme na to, jak používat cykly, které mají v sobě zabudované nějaké struktury navíc. Tyto nové struktury studentům umožní vytvářet kód, který bude mocnější a dynamičtější.
+              description_teacher: 'Víme, že cykly nám umožňují dělat věci znovu a znovu, ale teď se podíváme na to, jak používat cykly, které mají v sobě zabudované nějaké struktury navíc. Tyto nové struktury studentům umožní vytvářet kód, který bude mocnější a dynamičtější.'
             For Loops in Bee:
               description_student: Bzz bzz. V těchto hlavolamech povedete včelu na nektar a med pomocí cyklů `for`!
               description_teacher: Tato lekce s Včelou se zaměří na cykly a používání inkrementální proměnné k řešení složitějších hlavolamů. Studenti začnou revizí cyklů z předchozích lekcí a poté přejdou na užívání cyklů `for` k efektivnějšímu řešení složitějších problémů.
@@ -3513,7 +3524,7 @@ cs:
             Present Your Project:
               name: Prezentujte svůj projekt
               description_student: Je čas, abyste ukázali svou práci! Tady předložíte svůj úžasný projekt svým spolužákům.
-              description_teacher: Během těchto pěti lekcí budou studenti spět k tomu, aby pomocí Laboratoře aplikací nebo Umělce jako programovacího prostředí vybudovali projekt dle vlastního návrhu. Nakonec budou mít studenti možnost předložit svou dokončenou práci prostřednictvím speciálního odkazu svým spolužákům nebo ji sdílet s blízkými. Průvodce lekcemi s přehledem všech pěti kroků procesu lze nalézt na začátku projektového procesu [tady] <https://curriculum.code.org/csf/coursef/15/>).
+              description_teacher: Během těchto pěti lekcí budou studenti spět k tomu, aby pomocí Laboratoře aplikací nebo Umělce jako programovacího prostředí vybudovali projekt dle vlastního návrhu. Nakonec budou mít studenti možnost předložit svou dokončenou práci prostřednictvím speciálního odkazu svým spolužákům nebo ji sdílet s blízkými. Průvodce lekcemi s přehledem všech pěti kroků procesu lze nalézt na začátku projektového procesu [tady] https://curriculum.code.org/csf/coursef/15/).
             Conditionals with Cards:
               name: Podmínky s kartami
             Conditionals:
@@ -3557,7 +3568,7 @@ cs:
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
-              display_name: '2.  lekce: Digitální informace'
+              display_name: '2. lekce: Digitální informace'
           lessons:
             Bytes and File Sizes:
               name: Bajty a velikosti souborů
@@ -3831,12 +3842,7 @@ cs:
             The Power of Words:
               name: Moc slova
               description_student: Šikana není nikdy v pořádku. Tato lekce Vás poučí o tom, co je a co není správné říkat online.
-              description_teacher: |-
-                Studenti uváží, že když využívají své oblíbené webové stránky, mohou narazit na zprávy od jiných dětí, kvůli kterým se budou cítit rozzlobené, ublížené, smutné nebo zastrašené. Bádají nad způsoby, jak zvládat kybernetickou šikanu a jak zareagovat, když narazí na znepokojující výrazy online.\\r
-                \\r
-                Studenti diskutují o všech způsobech, jak používají techniku ke komunikaci a prozkoumávají podobnosti a rozdíly mezi komunikací osobně a komunikací online. Studenti pak provádějí brainstorming způsobů, jak reagovat na kybernetickou šikanu. \\r
-                \\r
-                Další informace naleznete zde: [r common-sense-media-power-of-words]
+              description_teacher: "Studenti uváží, že když využívají své oblíbené webové stránky, mohou narazit na zprávy od jiných dětí, kvůli kterým se budou cítit rozzlobené, ublížené, smutné nebo zastrašené. Bádají nad způsoby, jak zvládat kybernetickou šikanu a jak zareagovat, když narazí na znepokojující výrazy online.\\r\n\\r\nStudenti diskutují o všech způsobech, jak používají techniku ke komunikaci a prozkoumávají podobnosti a rozdíly mezi komunikací osobně a komunikací online. Studenti pak provádějí brainstorming způsobů, jak reagovat na kybernetickou šikanu. \\r\n\\r\nDalší informace naleznete zde: [r common-sense-media-power-of-words]"
             Envelope Variables:
               name: Obálkové proměnné
               description_student: 'Obálky a proměnné mají něco společného: v obou případech v nich mohou být cenné věci. Tady se naučíte, co jsou to proměnné a jaké úžasné věci mohou dělat.'
@@ -3855,7 +3861,7 @@ cs:
             For Loop Fun:
               name: For cyklus zábavy
               description_student: Při učení o cyklech `for` zažijete spoustu zábavy!
-              description_teacher: Víme, že cykly nám umožňují dělat věci znovu a znovu, ale teď se podíváme na to, jak používat cykly, které mají v sobě zabudované nějaké struktury navíc. Tyto nové struktury studentům umožní vytvářet kód, který bude mocnější a dynamičtější.
+              description_teacher: 'Víme, že cykly nám umožňují dělat věci znovu a znovu, ale teď se podíváme na to, jak používat cykly, které mají v sobě zabudované nějaké struktury navíc. Tyto nové struktury studentům umožní vytvářet kód, který bude mocnější a dynamičtější.'
             For Loops in Bee:
               description_student: Bzz bzz. V těchto hlavolamech povedete včelu na nektar a med pomocí cyklů `for`!
               description_teacher: Tato lekce s Včelou se zaměří na cykly `for` a používání inkrementální proměnné k řešení složitějších hlavolamů. Studenti začnou revizí cyklů z předchozích lekcí a poté přejdou na úvod do cyklů `for`, aby mohli efektivněji řešit složité problémy.
@@ -3888,7 +3894,7 @@ cs:
             Present Your Project:
               name: Prezentujte svůj projekt
               description_student: Je čas, abyste ukázali svou práci! Tady předložíte svůj úžasný projekt svým spolužákům.
-              description_teacher: Během těchto pěti lekcí budou studenti spět k tomu, aby pomocí Laboratoře aplikací nebo Umělce jako programovacího prostředí vybudovali projekt dle vlastního návrhu. Nakonec budou mít studenti možnost předložit svou dokončenou práci prostřednictvím speciálního odkazu svým spolužákům nebo ji sdílet s blízkými. Průvodce lekcemi s přehledem všech pěti kroků procesu lze nalézt na začátku projektového procesu [tady] <https://curriculum.code.org/csf/coursef/15/>).
+              description_teacher: Během těchto pěti lekcí budou studenti spět k tomu, aby pomocí Laboratoře aplikací nebo Umělce jako programovacího prostředí vybudovali projekt dle vlastního návrhu. Nakonec budou mít studenti možnost předložit svou dokončenou práci prostřednictvím speciálního odkazu svým spolužákům nebo ji sdílet s blízkými. Průvodce lekcemi s přehledem všech pěti kroků procesu lze nalézt na začátku projektového procesu [tady] https://curriculum.code.org/csf/coursef/15/).
             The Artist:
               name: Umělec
             Nested Loops in the Maze:
@@ -3920,10 +3926,7 @@ cs:
             End of Course Project:
               name: Projekt na zakončení kurzu
               description_student: Takto velké projekty potřebují čas a spoustu plánování. Najděte inspiraci, vyviňte plán a rozpoutejte svou tvořivost!
-              description_teacher: |-
-                Dalších pět lekcí poskytuje studentům příležitost uplatnit své programovací dovednosti na završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvořit exemplář ke sdílení se spolužáky a s blízkými. Má to být projekt na více lekcí nebo na více týdnů, kde studenti budou trávit čas brainstormingem, učením se o procesu návrhu, budováním a následným předložením svých konečných výtvorů. \\r
-                \\r
-                Ve fázi „bádání“ si studenti pro inspiraci pohrají s programy předem vytvořenými v Umělci i v Laboratoři sprajtů. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření jejich vlastních projektů v Umělci, v Laboratoři sprajtů, nebo v jakémkoli jiném prostředí, které jim budete schopni a ochotni poskytnout. (Toto bude pravděpodobně nejdelší fáze projektu.) Po testování a posouzení spolužáky pak studenti budou revidovat svůj programový kód. Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům.
+              description_teacher: "Dalších pět lekcí poskytuje studentům příležitost uplatnit své programovací dovednosti na završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvořit exemplář ke sdílení se spolužáky a s blízkými. Má to být projekt na více lekcí nebo na více týdnů, kde studenti budou trávit čas brainstormingem, učením se o procesu návrhu, budováním a následným předložením svých konečných výtvorů. \\r\n\\r\nVe fázi „bádání“ si studenti pro inspiraci pohrají s programy předem vytvořenými v Umělci i v Laboratoři sprajtů. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření jejich vlastních projektů v Umělci, v Laboratoři sprajtů, nebo v jakémkoli jiném prostředí, které jim budete schopni a ochotni poskytnout. (Toto bude pravděpodobně nejdelší fáze projektu.) Po testování a posouzení spolužáky pak studenti budou revidovat svůj programový kód. Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům."
             Internet:
               name: Internet
               description_student: Zajímalo Vás někdy, jak se šíří informace po internetu? Není to kouzlo! V této lekci se naučíte základy toho, jak funguje internet.
@@ -3971,7 +3974,7 @@ cs:
             'Algorithms: Graph Paper Programming':
               name: Programování na čtverečkovaném papíru
               description_student: V této lekci budete programovat svého spolužáka tak, aby kreslil obrázky!
-              description_teacher: Začněme formou "programování", kde bude jeden žák programovat druhého tak, aby kreslil obrazce. Žáci tak budou mít příležitost zažít některé ze základních principů programování zábavnou a přístupnou cestou. V této lekci žáci začnou tím, že se naučí používat symboly, aby pomocí nich instruovali jeden druhého k vybarvení určitých čtverců na čtverečkovaném papíře. Takto vznikne obrazec. Pokud na konci hodiny zbyde čas, můžou si žáci nějaké obrázky vymyslet sami.
+              description_teacher: 'Začněme formou "programování", kde bude jeden žák programovat druhého tak, aby kreslil obrazce. Žáci tak budou mít příležitost zažít některé ze základních principů programování zábavnou a přístupnou cestou. V této lekci žáci začnou tím, že se naučí používat symboly, aby pomocí nich instruovali jeden druhého k vybarvení určitých čtverců na čtverečkovaném papíře. Takto vznikne obrazec. Pokud na konci hodiny zbyde čas, můžou si žáci nějaké obrázky vymyslet sami.'
             Introduction to Online Puzzles:
               name: Představení online úloh
               description_student: Tato lekce Vám dá praxi v dovednostech, které budete potřebovat pro tento kurz.
@@ -3979,23 +3982,23 @@ cs:
             Relay Programming:
               name: Štafetové programování
               description_student: Pamatujete na začátek kurzu, kdy jste dělali kresby pomocí programování? V této lekci budete spolupracovat s týmem na vytvoření něčeho velmi obdobného!
-              description_teacher: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat na napsání programu postupně po jednom pokynu.
+              description_teacher: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat na napsání programu postupně po jednom pokynu. 
             Debugging in Collector:
               name: Ladění s Laurel
               description_student: Dostali jste se někdy při programování do problémů? V této lekci se naučíte tajemství ladění. Ladění je proces vyhledávání a opravování problémů ve Vašem kódu.
-              description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly.
+              description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
             Events in Bounce:
               name: Události s Bounce
               description_student: Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
-              description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky.
+              description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. 
             Loops in Ice Age:
               name: Cykly v Době ledové
               description_student: V této lekci budete používat bloky opakování, abyste pomohli Scratovi pokud možno co nejúčinněji dosáhnout žaludu.
-              description_teacher: Pro krátké opakování (nebo představení) používání cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji dostali Scrata k žaludu.
+              description_teacher: Pro krátké opakování (nebo představení) používání cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji dostali Scrata k žaludu. 
             Loops in Artist:
               name: Kreslení tvarů s cykly
               description_student: V této lekci cykly umožňují snadnou tvorbu pěkných obrázků s Umělcem!
-              description_teacher: Tato lekce staví na pochopení cyklů z předchozí lekce a dává studentům možnost být opravdu kreativní. Tato aktivita se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli svoje schopnosti řešit problémy.
+              description_teacher: Tato lekce staví na pochopení cyklů z předchozí lekce a dává studentům možnost být opravdu kreativní. Tato aktivita se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli svoje schopnosti řešit problémy. 
             Nested Loops in Bee:
               name: Vnořené cykly v bludišti
               description_student: Cykly uvnitř cyklů uvnitř cyklů. Co to znamená? Tato lekce Vás naučí, co se stane, když vytvoříte vnořený cyklus.
@@ -4007,10 +4010,7 @@ cs:
             While Loops in Farmer:
               name: Cykly pokud (while) s farmářkou
               description_student: 'Cykly jsou při programování tak užitečné. Tato lekce Vás naučí nový druh cyklu: cykly `while`!'
-              description_teacher: |-
-                Když se studenti dostanou k této lekci, měli by už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu ztížit. \\r
-                \\r
-                _Cykly pokud (while)_ jsou cykly, které opakují příkazy, když je podmínka splněna. Cykly `pokud` se využívají, když programátor neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou znát velikost děr nebo výšku hromady hlíny, ale budou vědět, že musí pokračovat se zasypáváním děr nebo kopání hlíny tak dlouho, dokud nebude země rovná.
+              description_teacher: "Když se studenti dostanou k této lekci, měli by už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu ztížit. \\r\n\\r\n_Cykly pokud (while)_ jsou cykly, které opakují příkazy, když je podmínka splněna. Cykly `pokud` se využívají, když programátor neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou znát velikost děr nebo výšku hromady hlíny, ale budou vědět, že musí pokračovat se zasypáváním děr nebo kopání hlíny tak dlouho, dokud nebude země rovná."
             Until Loops in Maze:
               name: Cykly dokud (until) v bludišti
               description_student: Když použij cykly `dokud`, můžeš udělat úžasné věci!
@@ -4018,10 +4018,10 @@ cs:
             Conditionals with Cards:
               name: Podmínky s kartami
               description_student: Je čas zahrát si hru, v níž získáte body jen za určitých podmínek!
-              description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité pro úpravu programu pro konkrétní informaci. Když píšeme program, nemáme vždy všechny informace, které potřebujeme. Někdy budete chtít udělat v jedné situaci něco jiného než ve druhé, i když nevíte, která situace nastane, až kód poběží. Tehdy využijete podmínky. Ty umožňují počítači rozhodnout se podle informace, která platí v čase, kdy kód poběží.\\\\r\n\\\\r "
+              description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité pro úpravu programu pro konkrétní informaci. Když píšeme program, nemáme vždy všechny informace, které potřebujeme. Někdy budete chtít udělat v jedné situaci něco jiného než ve druhé, i když nevíte, která situace nastane, až kód poběží. Tehdy využijete podmínky. Ty umožňují počítači rozhodnout se podle informace, která platí v čase, kdy kód poběží.\\r\n\\r "
             Conditionals in Bee:
               name: Pokud/jinak se včelkou
-              description_student: Teď když rozumíte podmínkám, je čas začít programovat Včelu a používat je při sbírání medu a nektaru.
+              description_student: 'Teď když rozumíte podmínkám, je čas začít programovat Včelu a používat je při sbírání medu a nektaru.'
               description_teacher: Dosud psali studenti kód, který fungoval pořád stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní. V této lekci začne vaše třída programovat s podmínkami, což jim umožní napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž se program setká.
             Conditionals & Loops in Harvester:
               name: Zahradničení s podmínkami
@@ -4030,10 +4030,7 @@ cs:
             Digital Citizenship:
               name: Digitální občanství
               description_student: Některé informace není bezpečné sdílet online. Tato lekce Vám umožní poznat rozdíl mezi bezpečnými a soukromými informacemi.
-              description_teacher: |-
-                Tato lekce vytvořená ve spolupráci s Common Sense Education pomáhá studentům naučit se kriticky přemýšlet o uživatelských informacích, které některé weby požadují. Studenti se naučí rozdíl mezi soukromými a osobními infomacemi a rozlišit, co je a není bezpečné sdílet online.\\r
-                \\r
-                Při učení, jak být dobrým digitálním občanem, studenti také prozkoumají, co znamená být zodpovědný a ohleduplný ke svým offline a online komunitám.
+              description_teacher: "Tato lekce vytvořená ve spolupráci s Common Sense Education pomáhá studentům naučit se kriticky přemýšlet o uživatelských informacích, které některé weby požadují. Studenti se naučí rozdíl mezi soukromými a osobními infomacemi a rozlišit, co je a není bezpečné sdílet online.\\r\n\\r\nPři učení, jak být dobrým digitálním občanem, studenti také prozkoumají, co znamená být zodpovědný a ohleduplný ke svým offline a online komunitám."
             Build a Play Lab Game:
               name: Vybudujte si hru v Laboratoři her
             'Unplugged: Binary':
@@ -4100,10 +4097,7 @@ cs:
               description_teacher: Tato lekce dá studentům úvod do cyklů `while` a podmíněných příkazů `if / else`. _Cykly While_ jsou cykly, které neustále opakují příkazy, dokud platí nějaká podmínka. Cykly `while` se používají tehdy,, když programátor nezná přesný počet opakování výkonu příkazu, která budou potřeba, ale ví, jaká podmínka musí být pravdivá, aby se měl cyklus nadále opakovat. Podmíněné příkazy `If / Else` dodávají programování flexibilitu tím, že je možno spouštět celé úseky kódu jen tehdy, když je něco pravda. jinak je spuštěno něco jiného.
             Private and Personal Information:
               description_student: Internet je zábavný a vzrušující, ale důležité je také zůstávat v bezpečí. Tato lekce Vás naučí rozdíl mezi informacemi, které je bezpečné sdílet, a informacemi, které jsou soukromé.
-              description_teacher: |-
-                Tato lekce, kterou vyvinula společnost Common Sense Education, je o rozdílu mezi informacemi, které je bezpečné sdílet online a informacemi, které není bezpečné takto sdílet.\\r
-                \\r
-                Jak budou studenti navštěvovat stránky požadující informace o jejich totožnosti, budou se učit zavádět proces kritického zkoumání, který jim umožní chránit sebe a své rodiny před krádeží identity. V této lekci se studenti naučí kriticky se zamyslet nad uživatelskými informacemi, které některé weby požadují nebo vyžadují. Naučí se uvědomit si rozdíl mezi soukromými informacemi a osobními informacemi, ale i rozlišit, co je bezpečné sdílet online a co není.
+              description_teacher: "Tato lekce, kterou vyvinula společnost Common Sense Education, je o rozdílu mezi informacemi, které je bezpečné sdílet online a informacemi, které není bezpečné takto sdílet.\\r\n\\r\nJak budou studenti navštěvovat stránky požadující informace o jejich totožnosti, budou se učit zavádět proces kritického zkoumání, který jim umožní chránit sebe a své rodiny před krádeží identity. V této lekci se studenti naučí kriticky se zamyslet nad uživatelskými informacemi, které některé weby požadují nebo vyžadují. Naučí se uvědomit si rozdíl mezi soukromými informacemi a osobními informacemi, ale i rozlišit, co je bezpečné sdílet online a co není."
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
               description_student: Pociťte sílu při budování své vlastní hry Hvězdné války v této lekci.
@@ -4139,10 +4133,7 @@ cs:
             Explore Project Ideas:
               name: Zkoumání projektových nápadů
               description_student: Tady je několik her a výkresů. Hrajte si s nimi se všemi, abyste dostali nápady na své vlastní projekty!
-              description_teacher: |-
-                Další čtyři lekce poskytují studentům příležitost využít své schopnosti programování v završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvoří exemplář ke sdílení se spolužáky a s blízkými. Má se jednat o zkušenost o více lekcích nebo trvající více týdnů. Studenti budou trávit čas bádáním v oblasti brainstormingu, učením se o procesu návrhu, budováním a předkládáním svých konečných výtvorů.
-
-                Ve fázi zkoumání budou studenti mít možnost zobrazit si pro inspiraci předem připravené příklady projektů v Umělci i v Laboratoři her. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření vlastního projektu v Umělci nebo v Laboratoři her (toto bude pravděpodobně nejdelší fáze projektu). Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům.
+              description_teacher: "Další čtyři lekce poskytují studentům příležitost využít své schopnosti programování v završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvoří exemplář ke sdílení se spolužáky a s blízkými. Má se jednat o zkušenost o více lekcích nebo trvající více týdnů. Studenti budou trávit čas bádáním v oblasti brainstormingu, učením se o procesu návrhu, budováním a předkládáním svých konečných výtvorů.\n\nVe fázi zkoumání budou studenti mít možnost zobrazit si pro inspiraci předem připravené příklady projektů v Umělci i v Laboratoři her. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření vlastního projektu v Umělci nebo v Laboratoři her (toto bude pravděpodobně nejdelší fáze projektu). Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům."
             The Design Process:
               name: Proces návrhu
               description_student: Projekty tohoto rozsahu vyžadují nějaký čas a spoustu plánování. Tady se dozvíte něco o procesu návrhu, co použijete k vybudování svého vlastního výtvoru.
@@ -4178,7 +4169,7 @@ cs:
             Sequencing in the Maze:
               name: Posloupnosti v Bludišti
               description_student: V této části se naučíte psát své vlastní programy!
-              description_teacher: "V této sadě úloh studenti začnou se seznámením se (případně podle stupně pokročilosti třídy se zopakováním si) s online rozhraním Code.org. Uvidíte videa, která ukazují základní funkcionalitu pracovní plochy včetně tlačítek `Spustit`, `Obnovit` a `Krok`. Ve videích se také probírá přetahování, mazání a spojování Blockly bloků. Studenti si dále procvičí svoje _sekvenční_ a _ladící_ schopnosti v bludišti. \\\\r\nLadění kodu (debugging) je základním kamenem učení se programovat. Studenti se setkají s několika úlohami, které byly vyřešeny nesprávně. Budou muset projít stávající kód, aby odhalili chyby jako jsou nesprávné cykly, chybějící bloky, bloky navíc a bloky, které nefungují.  "
+              description_teacher: "V této sadě úloh studenti začnou se seznámením se (případně podle stupně pokročilosti třídy se zopakováním si) s online rozhraním Code.org. Uvidíte videa, která ukazují základní funkcionalitu pracovní plochy včetně tlačítek `Spustit`, `Obnovit` a `Krok`. Ve videích se také probírá přetahování, mazání a spojování Blockly bloků. Studenti si dále procvičí svoje _sekvenční_ a _ladící_ schopnosti v bludišti. \\r\nLadění kodu (debugging) je základním kamenem učení se programovat. Studenti se setkají s několika úlohami, které byly vyřešeny nesprávně. Budou muset projít stávající kód, aby odhalili chyby jako jsou nesprávné cykly, chybějící bloky, bloky navíc a bloky, které nefungují.  "
             Programming and Loops with the Artist:
               name: Kreslení s cykly
               description_student: V této lekci cykly umožňují snadnou tvorbu ještě pěknějších obrázků s Umělcem!
@@ -4186,16 +4177,13 @@ cs:
             End of Course Project:
               name: Projekt na zakončení kurzu
               description_student: Takto velké projekty potřebují čas a spoustu plánování. Najděte inspiraci, vyviňte plán a rozpoutejte svou tvořivost!
-              description_teacher: |-
-                Další čtyři lekce poskytují studentům příležitost využít své schopnosti programování v završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvořit exemplář ke sdílení se spolužáky a s blízkými. Má to být zkušenost na více lekcí nebo na více týdnů. Studenti budou trávit čas bádáním v oblasti brainstormingu, učením se o procesu návrhu, budováním a předkládáním svých konečných výtvorů.\\r
-                \\r
-                Ve fázi zkoumání budou si studenti pro inspiraci hrát s předem připravenými příklady projektů v Umělci i v Laboratoři sprajtů. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření vlastního projektu v Umělci nebo v Laboratoři sprajtů nebo v jiném rozhraní, se kterým jsou obeznámeni (toto bude pravděpodobně nejdelší fáze projektu). Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům.
+              description_teacher: "Další čtyři lekce poskytují studentům příležitost využít své schopnosti programování v završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvořit exemplář ke sdílení se spolužáky a s blízkými. Má to být zkušenost na více lekcí nebo na více týdnů. Studenti budou trávit čas bádáním v oblasti brainstormingu, učením se o procesu návrhu, budováním a předkládáním svých konečných výtvorů.\\r\n\\r\nVe fázi zkoumání budou si studenti pro inspiraci hrát s předem připravenými příklady projektů v Umělci i v Laboratoři sprajtů. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření vlastního projektu v Umělci nebo v Laboratoři sprajtů nebo v jiném rozhraní, se kterým jsou obeznámeni (toto bude pravděpodobně nejdelší fáze projektu). Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům."
             Conditionals in Minecraft:
               name: Podmínky v Minecraft
             About Me:
               name: O mě s Laboratoří sprajtů
               description_student: Vytvořením interaktivního plakátu v Laboratoři sprajtů budou studenti aplikovat své chápání sdílení osobních a soukromých informací na webu.
-              description_teacher: Vytvořením interaktivního plakátu v Laboratoři sprajtů budou studenti aplikovat své chápání sdílení osobních a soukromých informací na webu.\\r
+              description_teacher: "Vytvořením interaktivního plakátu v Laboratoři sprajtů budou studenti aplikovat své chápání sdílení osobních a soukromých informací na webu.\\r"
             Aquatic Conditionals in Minecraft:
               name: Vodní podmínky ve hře Minecraft
             Access Ability:
@@ -4345,7 +4333,7 @@ cs:
               display_name: Obsah
           lessons:
             'null':
-              name: prázdná hodnota
+              name: 'prázdná hodnota'
         dance-extras-gallery:
           title: Nepřestávej tančit
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
@@ -4391,14 +4379,14 @@ cs:
               name: 'Cykly: Bláznění s cykly'
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
-              description_student: Pomoz BB-8 dostat se z bludiště pomocí cyklů!
+              description_student: 'Pomoz BB-8 dostat se z bludiště pomocí cyklů!'
               description_teacher: V této fázi rozvíjející koncepci opakujících se instrukcí od „Zacyklení“ budou studenti používat cykly, aby pomohli BB-8 projít bludištěm účinněji než dříve.
             Loops in Artist:
               name: Smyčky v Umělci
             Loops in Harvester:
               name: Sběr úrody s cykly
               description_student: Použijme cyklů k tomu, abychom pomohli sklízeči nasbírat nějakou zeleninu!
-              description_teacher: V předchozí fázi studenti použili cykly k vytvoření fantastických kreseb. Teď budou zacyklovávat nové úkony, aby pomohli sklízeči posbírat více kusů zeleniny rostoucí ve velkých trsech.\\r
+              description_teacher: "V předchozí fázi studenti použili cykly k vytvoření fantastických kreseb. Teď budou zacyklovávat nové úkony, aby pomohli sklízeči posbírat více kusů zeleniny rostoucí ve velkých trsech.\\r"
             'Events: The Big Event':
               name: Velká událost
               description_student: 'Zahrajte si zábavnou hru, v níž se poučíte o událostech. '
@@ -4410,10 +4398,7 @@ cs:
             Screen Out the Mean:
               name: Vyplujte z průměru
               description_student: V této lekci se dozvíte co dělat, když Vás někdo rozzlobí, rozesmutní nebo zastraší.
-              description_teacher: |-
-                Tato lekce dětem umožní rozpoznat, že jestliže se kvůli něčemu cítí rozzlobeně, smutně nebo zastrašeně, je nezbytné, aby o tom řekli svému dospělému, kterému důvěřují. \\r
-                \\r
-                Studenti se učí, že druzí se někdy chovají jako grázlové, když jsou online. Podívají se na to, co je to kybernetická šikana a co mohou dělat, když se s ní setkají. Po přečtení scénáře o zlovolném online chování studenti diskutují o tom, co to je kybernetická šikana, jak se z ní lidé obyčejně cítí a jak na ni zareagovat. Nakonec svých znalostí využijí k vytvoření jednoduchého listu s radami o kybernetické šikaně ve svém deníku.\\r
+              description_teacher: "Tato lekce dětem umožní rozpoznat, že jestliže se kvůli něčemu cítí rozzlobeně, smutně nebo zastrašeně, je nezbytné, aby o tom řekli svému dospělému, kterému důvěřují. \\r\n\\r\nStudenti se učí, že druzí se někdy chovají jako grázlové, když jsou online. Podívají se na to, co je to kybernetická šikana a co mohou dělat, když se s ní setkají. Po přečtení scénáře o zlovolném online chování studenti diskutují o tom, co to je kybernetická šikana, jak se z ní lidé obyčejně cítí a jak na ni zareagovat. Nakonec svých znalostí využijí k vytvoření jednoduchého listu s radami o kybernetické šikaně ve svém deníku.\\r"
             Events in Play Lab:
               name: Honička s událostmi
               description_student: Je čas být kreativní a vytvořit hru v Laboratoři her!
@@ -4431,7 +4416,7 @@ cs:
             'End of Course Project: Create a Play Lab Game':
               name: Projekt na zakončení kurzu
               description_student: Připravte si ruce na psaní spousty kódu! Je čas začít budovat Váš projekt.
-              description_teacher: Tato završující lekce studenty provede procesem návrhu, vývoje a prezentace jejich vlastních projektů v Laboratoři her! Aby tento proces probíhal hladce, poskytli jsme studentům krokovou strukturu, podle které mají postupovat, od plánování na papíře po programování na našich webových stránkách. Kromě toho nabízíme nápady, které učitelům pomohou pořádat velkolepé finále!
+              description_teacher: 'Tato završující lekce studenty provede procesem návrhu, vývoje a prezentace jejich vlastních projektů v Laboratoři her! Aby tento proces probíhal hladce, poskytli jsme studentům krokovou strukturu, podle které mají postupovat, od plánování na papíře po programování na našich webových stránkách. Kromě toho nabízíme nápady, které učitelům pomohou pořádat velkolepé finále!'
             'Programming: My Robotic Friends':
               name: Moji robotičtí přátelé (ml.)
               description_student: V této lekci budete předstírat, že Vaši spolužáci jsou roboti a budete je programovat, aby stavěli obrazce z naskládaných pohárků.
@@ -4445,10 +4430,7 @@ cs:
             Powerful Passwords:
               name: Silná hesla
               description_student: V této lekci se budete učit o tom, jak hesla chrání Vaše informace a jak udělat dobré heslo.
-              description_teacher: |-
-                V této lekci připravené ve spolupráci se společností „Common Sense Education“ studenti probádají, proč lidé používají hesla, dozví se výhody užívání hesel a objeví strategie k vytváření a udržování silných a bezpečných hesel.\\r
-                \\r
-                Studenti se naučí tipy na hesla, otestují svá stávající hesla interaktivní hrou, a s užitím směrnic pro vytváření silných hesel vytvoří nová hesla.\\r
+              description_teacher: "V této lekci připravené ve spolupráci se společností „Common Sense Education“ studenti probádají, proč lidé používají hesla, dozví se výhody užívání hesel a objeví strategie k vytváření a udržování silných a bezpečných hesel.\\r\n\\r\nStudenti se naučí tipy na hesla, otestují svá stávající hesla interaktivní hrou, a s užitím směrnic pro vytváření silných hesel vytvoří nová hesla.\\r"
             Sticker Art with Loops:
               name: Razítka v cyklech
               description_student: V této lekci cykly umožňují snadnou tvorbu ještě pěknějších obrázků s Umělcem!
@@ -4511,7 +4493,7 @@ cs:
               description_teacher: Studenti se vrátí k cyklům a budou se učit kreslit obrázky zacyklením jednoduchých posloupností instrukcí. V předchozí online lekci byly cykly použity k průchodu bludištěm a nasbírání pokladu. Tady cykly vytvářejí vzory. Na konci této fáze bude studentům dána příležitost vytvořit si pomocí cyklů vlastní obrázky.
             Learn to Drag and Drop:
               name: Naučte se přetahovat a upouštět
-              description_student: " Hlavolamy dokončete kliknutím a potažením."
+              description_student: ' Hlavolamy dokončete kliknutím a potažením.'
               description_teacher: Tato lekce dá studentům představu o tom, co mohou očekávat, když se vydají do počítačové laboratoře. Začne to krátkou diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.
             Loops in Ice Age:
               name: Cykly se Scratem
@@ -4555,7 +4537,7 @@ cs:
               name: Posloupnosti se Scratem
             Your Digital Footprint:
               name: Tvá digitální stopa
-              description_student: Naučte se něco o své digitální stopě a o tom, jak zůstat v bezpečí při návštěvách webových stránek.
+              description_student: 'Naučte se něco o své digitální stopě a o tom, jak zůstat v bezpečí při návštěvách webových stránek.'
               description_teacher: Tato lekce ve spolupráci s **Common Sense Education** pomáhá studentům dozvědět se obdoby zůstávání v bezpečí ve skutečném světě a při navštěvování webových stránek. Studenti se také dozví, že informace, které dají online, po sobě zanechávají svou digitální stopu. Tato stopa může být velká nebo malá a užitečná nebo škodlivá, podle toho, jak s nimi zacházejí.
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
@@ -4601,7 +4583,7 @@ cs:
             Programming in Harvester:
               name: Programování ve Sklízeči
               description_student: Pomozte Sklízeči posbírat zeleninu podél cesty.
-              description_teacher: Studenti budou aplikovat programovací koncepce, které se naučili, na prostředí Sklízeče. A teď, namísto, aby prostě dostali postavu na cíl, musejí studenti sbírat kukuřici pomocí nového bloku. Studenti budou pokračovat v rozvíjení dovedností v oblasti sekvenčních algoritmů a začnou používat proces ladění.
+              description_teacher: 'Studenti budou aplikovat programovací koncepce, které se naučili, na prostředí Sklízeče. A teď, namísto, aby prostě dostali postavu na cíl, musejí studenti sbírat kukuřici pomocí nového bloku. Studenti budou pokračovat v rozvíjení dovedností v oblasti sekvenčních algoritmů a začnou používat proces ladění.'
             Sequencing in Maze:
               name: Posloupnosti s Naštvanými ptáky
               description_student: Pomozte Naštvanému ptákovi Červenému postupovat podél cesty k protivnému praseti.
@@ -4744,7 +4726,7 @@ cs:
         csp2-2019:
           lesson_groups:
             csp2_1_2018:
-              display_name: '2.  lekce: Digitální informace'
+              display_name: '2. lekce: Digitální informace'
           lessons:
             Bytes and File Sizes:
               name: Bajty a velikosti souborů
@@ -4830,7 +4812,7 @@ cs:
             csp_functions:
               display_name: Funkce
         csp2-pilot-staging:
-          title: '2.  lekce: Internet'
+          title: '2. lekce: Internet'
           lesson_groups:
             csp_variables:
               display_name: Proměnné
@@ -4876,7 +4858,7 @@ cs:
             csp_functions:
               display_name: Funkce
         csp9-pilot-staging:
-          title: '9.  lekce: Data'
+          title: '9. lekce: Data'
           lesson_groups:
             csp_variables:
               display_name: Proměnné
@@ -5343,7 +5325,7 @@ cs:
               description_teacher: Tato lekce, připravená ve spolupráci se společností Common Sense Media, pomáhá studentům naučit se, že mnohé weby od nás požadují informace, které jsou soukromého charakteru, a pojednává o tom, jak na takové požadavky zodpovědně zareagovat. Studenti také zjistí, že mohou chodit na zajímavá místa online, ale aby zůstali v bezpečí, musejí dodržovat určitá pravidla.
             Learn to Drag and Drop:
               name: Naučte se přetahovat a upouštět
-              description_student: " Hlavolamy dokončete kliknutím a potažením."
+              description_student: ' Hlavolamy dokončete kliknutím a potažením.'
               description_teacher: Tato lekce dá studentům představu o tom, co mohou očekávat, když se vydají do počítačové laboratoře. Začne to krátkou diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.
             'Programming: Happy Maps':
               name: Šťastné mapy
@@ -5409,7 +5391,7 @@ cs:
           lessons:
             Your Digital Footprint:
               name: Tvá digitální stopa
-              description_student: Naučte se něco o své digitální stopě a o tom, jak zůstat v bezpečí při návštěvách webových stránek.
+              description_student: 'Naučte se něco o své digitální stopě a o tom, jak zůstat v bezpečí při návštěvách webových stránek.'
               description_teacher: Tato lekce, připravená ve spolupráci s [r common-sense-media], pomáhá studentům poučit se o obdobě mezi dodržováním bezpečnosti ve skutečném světě a a při navštěvování webových stránek. Studenti se také dozví, že informace, které dají online, zanechávají po sobě digitální stopu. Tato stopa může být malá nebo velká a užitečná nebo škodlivá, podle toho, jak s ní nakládají.
             Move It, Move It:
               name: Pohyb, pohyb
@@ -5426,7 +5408,7 @@ cs:
             Programming in Harvester:
               name: Programování ve Sklízeči
               description_student: Pomozte Sklízeči posbírat zeleninu podél cesty.
-              description_teacher: Studenti budou aplikovat programovací koncepce, které se naučili, na prostředí Sklízeče. A teď, namísto, aby prostě dostali postavu na cíl, musejí studenti sbírat kukuřici pomocí nového bloku. Studenti budou pokračovat v rozvíjení dovedností v oblasti sekvenčních algoritmů a začnou používat proces ladění.
+              description_teacher: 'Studenti budou aplikovat programovací koncepce, které se naučili, na prostředí Sklízeče. A teď, namísto, aby prostě dostali postavu na cíl, musejí studenti sbírat kukuřici pomocí nového bloku. Studenti budou pokračovat v rozvíjení dovedností v oblasti sekvenčních algoritmů a začnou používat proces ladění.'
             'Loops: Getting Loopy':
               name: Bláznění s cykly
               description_student: V této lekci budeme mít taneční večírek užívající cyklů opakování!
@@ -5456,7 +5438,7 @@ cs:
               description_teacher: V této online aktivitě budou mít studenti příležitost naučit se používat události v Laboratoři her a aplikovat všechny programovací dovednosti, které se naučili, při vytváření animované hry. Je čas začít být tvořiví a udělat hru v Laboratoři her!
             Digital Trails:
               name: Digitální stopy
-              description_student: Naučte se něco o své digitální stopě a o tom, jak zůstat v bezpečí při návštěvách webových stránek.
+              description_student: 'Naučte se něco o své digitální stopě a o tom, jak zůstat v bezpečí při návštěvách webových stránek.'
               description_teacher: Tuto lekci původně vytvořila společnost Common Sense Education. Zůstane to, co děláte online, vždy online? Studenti se naučí, že informace, které sdílejí online, za sebou zanechávají digitální stopu. Podle toho, jak s nimi zacházejí, může být tato stopa velká nebo malá a škodlivá nebo užitečná. Studenti porovnají různé stopy a kriticky se zamyslí nad tím, jaké druhy informací po sobě chtějí zanechat.
           student_description: Učte se základy počítačových věd a internetové bezpečnosti. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet.
         coursec-2020:
@@ -5481,17 +5463,11 @@ cs:
             Screen Out the Mean:
               name: Vyplujte z průměru
               description_student: V této lekci se dozvíte co dělat, když Vás někdo rozzlobí, rozesmutní nebo zastraší.
-              description_teacher: |-
-                Tato lekce dětem umožní rozpoznat, že jestliže se kvůli něčemu cítí rozzlobeně, smutně nebo zastrašeně, je nezbytné, aby o tom řekli svému dospělému, kterému důvěřují. \\r
-                \\r
-                Studenti se učí, že druzí se někdy chovají jako grázlové, když jsou online. Podívají se na to, co je to kybernetická šikana a co mohou dělat, když se s ní setkají. Po přečtení scénáře o zlovolném online chování studenti diskutují o tom, co to je kybernetická šikana, jak se z ní lidé obyčejně cítí a jak na ni zareagovat. Nakonec svých znalostí využijí k vytvoření jednoduchého listu s radami o kybernetické šikaně ve svém deníku.\\r
+              description_teacher: "Tato lekce dětem umožní rozpoznat, že jestliže se kvůli něčemu cítí rozzlobeně, smutně nebo zastrašeně, je nezbytné, aby o tom řekli svému dospělému, kterému důvěřují. \\r\n\\r\nStudenti se učí, že druzí se někdy chovají jako grázlové, když jsou online. Podívají se na to, co je to kybernetická šikana a co mohou dělat, když se s ní setkají. Po přečtení scénáře o zlovolném online chování studenti diskutují o tom, co to je kybernetická šikana, jak se z ní lidé obyčejně cítí a jak na ni zareagovat. Nakonec svých znalostí využijí k vytvoření jednoduchého listu s radami o kybernetické šikaně ve svém deníku.\\r"
             Powerful Passwords:
               name: Silná hesla
               description_student: V této lekci se budete učit o tom, jak hesla chrání Vaše informace a jak udělat dobré heslo.
-              description_teacher: |-
-                Studenti probádají, proč lidé používají hesla, dozví se výhody užívání hesel a objeví strategie k vytváření a udržování silných a bezpečných hesel.\\r
-                \\r
-                Studenti se naučí tipy na hesla, otestují svá stávající hesla interaktivní hrou, a s užitím směrnic pro vytváření silných hesel vytvoří nová hesla.\\r
+              description_teacher: "Studenti probádají, proč lidé používají hesla, dozví se výhody užívání hesel a objeví strategie k vytváření a udržování silných a bezpečných hesel.\\r\n\\r\nStudenti se naučí tipy na hesla, otestují svá stávající hesla interaktivní hrou, a s užitím směrnic pro vytváření silných hesel vytvoří nová hesla.\\r"
             'Programming: My Robotic Friends':
               name: Moji robotičtí přátelé (ml.)
               description_student: V této lekci budete předstírat, že Vaši spolužáci jsou roboti a budete je programovat, aby stavěli obrazce z naskládaných pohárků.
@@ -5522,12 +5498,12 @@ cs:
               description_teacher: V návaznosti na počáteční aktivitu „Moji robotičtí přátelé“ budou studenti zvládat větší a komplikovanější návrhy. Aby mohli naprogramovat své „roboty“ tak, aby zvládali tyto větší návrhy, budou muset studenti identifikovat opakující se vzory ve svých instrukcích, které by bylo možno nahradit cyklem.
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
-              description_student: Pomoz BB-8 dostat se z bludiště pomocí cyklů!
+              description_student: 'Pomoz BB-8 dostat se z bludiště pomocí cyklů!'
               description_teacher: V této fázi rozvíjející koncepci opakujících se instrukcí od „Zacyklení“ budou studenti používat cykly, aby pomohli BB-8 projít bludištěm účinněji než dříve.
             Loops in Harvester:
               name: Sběr úrody s cykly
               description_student: Použijme cyklů k tomu, abychom pomohli sklízeči nasbírat nějakou zeleninu!
-              description_teacher: V předchozí fázi studenti použili cykly k vytvoření fantastických kreseb. Teď budou zacyklovávat nové úkony, aby pomohli sklízeči posbírat více kusů zeleniny rostoucí ve velkých trsech.\\r
+              description_teacher: "V předchozí fázi studenti použili cykly k vytvoření fantastických kreseb. Teď budou zacyklovávat nové úkony, aby pomohli sklízeči posbírat více kusů zeleniny rostoucí ve velkých trsech.\\r"
             Looking Ahead:
               name: Pohled do budoucna s Minecraftem
               description_student: Vyhněte se lávě! Tady se začnete dozvídat o podmínkách ve světě Minecraft.
@@ -5555,7 +5531,7 @@ cs:
             'End of Course Project: Create a Play Lab Game':
               name: Projekt na zakončení kurzu
               description_student: Připravte si ruce na psaní spousty kódu! Je čas začít budovat Váš projekt.
-              description_teacher: Tato završující lekce studenty provede procesem návrhu, vývoje a prezentace jejich vlastních projektů v Laboratoři her! Aby tento proces probíhal hladce, poskytli jsme studentům krokovou strukturu, podle které mají postupovat, od plánování na papíře po programování na našich webových stránkách. Kromě toho nabízíme nápady, které učitelům pomohou pořádat velkolepé finále!
+              description_teacher: 'Tato završující lekce studenty provede procesem návrhu, vývoje a prezentace jejich vlastních projektů v Laboratoři her! Aby tento proces probíhal hladce, poskytli jsme studentům krokovou strukturu, podle které mají postupovat, od plánování na papíře po programování na našich webových stránkách. Kromě toho nabízíme nápady, které učitelům pomohou pořádat velkolepé finále!'
             Putting a STOP to Online Meanness:
               name: Dát STOP online zlovolnostem
               description_student: V této lekci se dozvíte o zlovolnosti a o tom, co dělat, když se s ní setkáte online.
@@ -5589,7 +5565,7 @@ cs:
             'Algorithms: Graph Paper Programming':
               name: Programování na čtverečkovaném papíru
               description_student: V této lekci budete programovat svého spolužáka tak, aby kreslil obrázky!
-              description_teacher: Začněme formou "programování", kde bude jeden žák programovat druhého tak, aby kreslil obrazce. Žáci tak budou mít příležitost zažít některé ze základních principů programování zábavnou a přístupnou cestou. V této lekci žáci začnou tím, že se naučí používat symboly, aby pomocí nich instruovali jeden druhého k vybarvení určitých čtverců na čtverečkovaném papíře. Takto vznikne obrazec. Pokud na konci hodiny zbyde čas, můžou si žáci nějaké obrázky vymyslet sami.
+              description_teacher: 'Začněme formou "programování", kde bude jeden žák programovat druhého tak, aby kreslil obrazce. Žáci tak budou mít příležitost zažít některé ze základních principů programování zábavnou a přístupnou cestou. V této lekci žáci začnou tím, že se naučí používat symboly, aby pomocí nich instruovali jeden druhého k vybarvení určitých čtverců na čtverečkovaném papíře. Takto vznikne obrazec. Pokud na konci hodiny zbyde čas, můžou si žáci nějaké obrázky vymyslet sami.'
             Introduction to Online Puzzles:
               name: Představení online úloh
               description_student: Tato lekce Vám dá praxi v dovednostech, které budete potřebovat pro tento kurz.
@@ -5597,15 +5573,15 @@ cs:
             Relay Programming:
               name: Štafetové programování
               description_student: Pamatujete na začátek kurzu, kdy jste dělali kresby pomocí programování? V této lekci budete spolupracovat s týmem na vytvoření něčeho velmi obdobného!
-              description_teacher: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat na napsání programu postupně po jednom pokynu.
+              description_teacher: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat na napsání programu postupně po jednom pokynu. 
             Debugging in Collector:
               name: Ladění s Laurel
               description_student: Dostali jste se někdy při programování do problémů? V této lekci se naučíte tajemství ladění. Ladění je proces vyhledávání a opravování problémů ve Vašem kódu.
-              description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly.
+              description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
             Events in Bounce:
               name: Události s Bounce
               description_student: Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
-              description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky.
+              description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. 
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
               description_student: Pociťte sílu při budování své vlastní hry Hvězdné války v této lekci.
@@ -5613,11 +5589,11 @@ cs:
             Loops in Ice Age:
               name: Cykly v Době ledové
               description_student: V této lekci budete používat bloky opakování, abyste pomohli Scratovi pokud možno co nejúčinněji dosáhnout žaludu.
-              description_teacher: Pro krátké opakování (nebo představení) používání cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji dostali Scrata k žaludu.
+              description_teacher: Pro krátké opakování (nebo představení) používání cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji dostali Scrata k žaludu. 
             Loops in Artist:
               name: Kreslení tvarů s cykly
               description_student: V této lekci cykly umožňují snadnou tvorbu pěkných obrázků s Umělcem!
-              description_teacher: Tato lekce staví na pochopení cyklů z předchozí lekce a dává studentům možnost být opravdu kreativní. Tato aktivita se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli svoje schopnosti řešit problémy.
+              description_teacher: Tato lekce staví na pochopení cyklů z předchozí lekce a dává studentům možnost být opravdu kreativní. Tato aktivita se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli svoje schopnosti řešit problémy. 
             Nested Loops in Bee:
               name: Vnořené cykly v bludišti
               description_student: Cykly uvnitř cyklů uvnitř cyklů. Co to znamená? Tato lekce Vás naučí, co se stane, když vytvoříte vnořený cyklus.
@@ -5625,18 +5601,15 @@ cs:
             Conditionals with Cards:
               name: Podmínky s kartami
               description_student: Je čas zahrát si hru, v níž získáte body jen za určitých podmínek!
-              description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité pro úpravu programu pro konkrétní informaci. Když píšeme program, nemáme vždy všechny informace, které potřebujeme. Někdy budete chtít udělat v jedné situaci něco jiného než ve druhé, i když nevíte, která situace nastane, až kód poběží. Tehdy využijete podmínky. Ty umožňují počítači rozhodnout se podle informace, která platí v čase, kdy kód poběží.\\\\r\n\\\\r "
+              description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité pro úpravu programu pro konkrétní informaci. Když píšeme program, nemáme vždy všechny informace, které potřebujeme. Někdy budete chtít udělat v jedné situaci něco jiného než ve druhé, i když nevíte, která situace nastane, až kód poběží. Tehdy využijete podmínky. Ty umožňují počítači rozhodnout se podle informace, která platí v čase, kdy kód poběží.\\r\n\\r "
             Conditionals in Bee:
               name: Pokud/jinak se včelkou
-              description_student: Teď když rozumíte podmínkám, je čas začít programovat Včelu a používat je při sbírání medu a nektaru.
+              description_student: 'Teď když rozumíte podmínkám, je čas začít programovat Včelu a používat je při sbírání medu a nektaru.'
               description_teacher: Dosud psali studenti kód, který fungoval pořád stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní. V této lekci začne vaše třída programovat s podmínkami, což jim umožní napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž se program setká.
             While Loops in Farmer:
               name: Cykly pokud (while) s farmářkou
               description_student: 'Cykly jsou při programování tak užitečné. Tato lekce Vás naučí nový druh cyklu: cykly `while`!'
-              description_teacher: |-
-                Když se studenti dostanou k této lekci, měli by už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu ztížit. \\r
-                \\r
-                _Cykly pokud (while)_ jsou cykly, které opakují příkazy, když je podmínka splněna. Cykly `pokud` se využívají, když programátor neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou znát velikost děr nebo výšku hromady hlíny, ale budou vědět, že musí pokračovat se zasypáváním děr nebo kopání hlíny tak dlouho, dokud nebude země rovná.
+              description_teacher: "Když se studenti dostanou k této lekci, měli by už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu ztížit. \\r\n\\r\n_Cykly pokud (while)_ jsou cykly, které opakují příkazy, když je podmínka splněna. Cykly `pokud` se využívají, když programátor neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou znát velikost děr nebo výšku hromady hlíny, ale budou vědět, že musí pokračovat se zasypáváním děr nebo kopání hlíny tak dlouho, dokud nebude země rovná."
             Until Loops in Maze:
               name: Cykly dokud (until) v bludišti
               description_student: Když použij cykly `dokud`, můžeš udělat úžasné věci!
@@ -5656,10 +5629,7 @@ cs:
             Digital Citizenship:
               name: Digitální občanství
               description_student: Některé informace není bezpečné sdílet online. Tato lekce Vám umožní poznat rozdíl mezi bezpečnými a soukromými informacemi.
-              description_teacher: |-
-                Tato lekce vytvořená ve spolupráci s Common Sense Education pomáhá studentům naučit se kriticky přemýšlet o uživatelských informacích, které některé weby požadují. Studenti se naučí rozdíl mezi soukromými a osobními infomacemi a rozlišit, co je a není bezpečné sdílet online.\\r
-                \\r
-                Při učení, jak být dobrým digitálním občanem, studenti také prozkoumají, co znamená být zodpovědný a ohleduplný ke svým offline a online komunitám.
+              description_teacher: "Tato lekce vytvořená ve spolupráci s Common Sense Education pomáhá studentům naučit se kriticky přemýšlet o uživatelských informacích, které některé weby požadují. Studenti se naučí rozdíl mezi soukromými a osobními infomacemi a rozlišit, co je a není bezpečné sdílet online.\\r\n\\r\nPři učení, jak být dobrým digitálním občanem, studenti také prozkoumají, co znamená být zodpovědný a ohleduplný ke svým offline a online komunitám."
             Dance Party:
               name: Taneční večírek
               description_student: Je čas oslavovat! V této lekci naprogramujete svůj vlastní interaktivní taneční večírek.
@@ -5699,7 +5669,7 @@ cs:
             Sequencing in the Maze:
               name: Posloupnosti v Bludišti
               description_student: V této části se naučíte psát své vlastní programy!
-              description_teacher: "V této sadě úloh studenti začnou se seznámením se (případně podle stupně pokročilosti třídy se zopakováním si) s online rozhraním Code.org. Uvidíte videa, která ukazují základní funkcionalitu pracovní plochy včetně tlačítek `Spustit`, `Obnovit` a `Krok`. Ve videích se také probírá přetahování, mazání a spojování Blockly bloků. Studenti si dále procvičí svoje _sekvenční_ a _ladící_ schopnosti v bludišti. \\\\r\nLadění kodu (debugging) je základním kamenem učení se programovat. Studenti se setkají s několika úlohami, které byly vyřešeny nesprávně. Budou muset projít stávající kód, aby odhalili chyby jako jsou nesprávné cykly, chybějící bloky, bloky navíc a bloky, které nefungují.  "
+              description_teacher: "V této sadě úloh studenti začnou se seznámením se (případně podle stupně pokročilosti třídy se zopakováním si) s online rozhraním Code.org. Uvidíte videa, která ukazují základní funkcionalitu pracovní plochy včetně tlačítek `Spustit`, `Obnovit` a `Krok`. Ve videích se také probírá přetahování, mazání a spojování Blockly bloků. Studenti si dále procvičí svoje _sekvenční_ a _ladící_ schopnosti v bludišti. \\r\nLadění kodu (debugging) je základním kamenem učení se programovat. Studenti se setkají s několika úlohami, které byly vyřešeny nesprávně. Budou muset projít stávající kód, aby odhalili chyby jako jsou nesprávné cykly, chybějící bloky, bloky navíc a bloky, které nefungují.  "
             Programming and Loops with the Artist:
               name: Kreslení s cykly
               description_student: V této lekci cykly umožňují snadnou tvorbu ještě pěknějších obrázků s Umělcem!
@@ -5730,7 +5700,7 @@ cs:
             About Me:
               name: O mě s Laboratoří sprajtů
               description_student: Vytvořením interaktivního plakátu v Laboratoři sprajtů budou studenti aplikovat své chápání sdílení osobních a soukromých informací na webu.
-              description_teacher: Vytvořením interaktivního plakátu v Laboratoři sprajtů budou studenti aplikovat své chápání sdílení osobních a soukromých informací na webu.\\r
+              description_teacher: "Vytvořením interaktivního plakátu v Laboratoři sprajtů budou studenti aplikovat své chápání sdílení osobních a soukromých informací na webu.\\r"
             Access Ability:
               name: Návrh pro přístupnost
               description_student: 'V této lekci se budou studenti učit o přístupnosti a hodnotě empatie formou brainstormingu a navrhování přístupných řešení pro hypotetické aplikace. '
@@ -5766,10 +5736,7 @@ cs:
             End of Course Project:
               name: Projekt na zakončení kurzu
               description_student: Takto velké projekty potřebují čas a spoustu plánování. Najděte inspiraci, vyviňte plán a rozpoutejte svou tvořivost!
-              description_teacher: |-
-                Další čtyři lekce poskytují studentům příležitost využít své schopnosti programování v završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvořit exemplář ke sdílení se spolužáky a s blízkými. Má to být zkušenost na více lekcí nebo na více týdnů. Studenti budou trávit čas bádáním v oblasti brainstormingu, učením se o procesu návrhu, budováním a předkládáním svých konečných výtvorů.\\r
-                \\r
-                Ve fázi zkoumání budou si studenti pro inspiraci hrát s předem připravenými příklady projektů v Umělci i v Laboratoři sprajtů. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření vlastního projektu v Umělci nebo v Laboratoři sprajtů nebo v jiném rozhraní, se kterým jsou obeznámeni (toto bude pravděpodobně nejdelší fáze projektu). Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům.
+              description_teacher: "Další čtyři lekce poskytují studentům příležitost využít své schopnosti programování v završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvořit exemplář ke sdílení se spolužáky a s blízkými. Má to být zkušenost na více lekcí nebo na více týdnů. Studenti budou trávit čas bádáním v oblasti brainstormingu, učením se o procesu návrhu, budováním a předkládáním svých konečných výtvorů.\\r\n\\r\nVe fázi zkoumání budou si studenti pro inspiraci hrát s předem připravenými příklady projektů v Umělci i v Laboratoři sprajtů. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření vlastního projektu v Umělci nebo v Laboratoři sprajtů nebo v jiném rozhraní, se kterým jsou obeznámeni (toto bude pravděpodobně nejdelší fáze projektu). Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům."
             Digital Sharing:
               description_student: 'V této lekci se dozvíte o výzvách a výhodách vlastnictví a autorských práv. '
             Designing for Accessibility:
@@ -5838,7 +5805,7 @@ cs:
             For Loop Fun:
               name: For cyklus zábavy
               description_student: Při učení o cyklech `for` zažijete spoustu zábavy!
-              description_teacher: Víme, že cykly nám umožňují dělat věci znovu a znovu, ale teď se podíváme na to, jak používat cykly, které mají v sobě zabudované nějaké struktury navíc. Tyto nové struktury studentům umožní vytvářet kód, který bude mocnější a dynamičtější.
+              description_teacher: 'Víme, že cykly nám umožňují dělat věci znovu a znovu, ale teď se podíváme na to, jak používat cykly, které mají v sobě zabudované nějaké struktury navíc. Tyto nové struktury studentům umožní vytvářet kód, který bude mocnější a dynamičtější.'
             For Loops in Bee:
               description_student: Bzz bzz. V těchto hlavolamech povedete včelu na nektar a med pomocí cyklů `for`!
               description_teacher: Tato lekce s Včelou se zaměří na cykly `for` a používání inkrementální proměnné k řešení složitějších hlavolamů. Studenti začnou revizí cyklů z předchozích lekcí a poté přejdou na úvod do cyklů `for`, aby mohli efektivněji řešit složité problémy.
@@ -5861,7 +5828,7 @@ cs:
             The Power of Words:
               name: Moc slova
               description_student: Šikana není nikdy v pořádku. Tato lekce Vás poučí o tom, co je a co není správné říkat online.
-              description_teacher: Tuto lekci původně vytvořila společnost Common Sense Education. Jak děti postupně rostou, přirozeně začínají více komunikovat online. Ale z některých věcí, které uvidí, by mohly být smutné, rozhněvané nebo i bojácné. Pomozte svým studentům vybudovat si vciťování k jiným a učte se strategie používané při konfrontaci s kybernetickou šikanou.
+              description_teacher: "Tuto lekci původně vytvořila společnost Common Sense Education. Jak děti postupně rostou, přirozeně začínají více komunikovat online. Ale z některých věcí, které uvidí, by mohly být smutné, rozhněvané nebo i bojácné. Pomozte svým studentům vybudovat si vciťování k jiným a učte se strategie používané při konfrontaci s kybernetickou šikanou.\n"
             Crowdsourcing:
               name: Crowdsourcing
               description_student: V této lekci se naučíte o crowdsourcingu, o procesu vybudování projektu s týmem.
@@ -5871,18 +5838,11 @@ cs:
             End of Course Project:
               name: Projekt na zakončení kurzu
               description_student: Takto velké projekty potřebují čas a spoustu plánování. Najděte inspiraci, vyviňte plán a rozpoutejte svou tvořivost!
-              description_teacher: |-
-                Dalších pět lekcí poskytuje studentům příležitost uplatnit své programovací dovednosti na završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvořit exemplář ke sdílení se spolužáky a s blízkými. Má to být projekt na více lekcí nebo na více týdnů, kde studenti budou trávit čas brainstormingem, učením se o procesu návrhu, budováním a následným předložením svých konečných výtvorů. \\r
-                \\r
-                Ve fázi „bádání“ si studenti pro inspiraci pohrají s programy předem vytvořenými v Umělci i v Laboratoři sprajtů. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření jejich vlastních projektů v Umělci, v Laboratoři sprajtů, nebo v jakémkoli jiném prostředí, které jim budete schopni a ochotni poskytnout. (Toto bude pravděpodobně nejdelší fáze projektu.) Po testování a posouzení spolužáky pak studenti budou revidovat svůj programový kód. Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům.
+              description_teacher: "Dalších pět lekcí poskytuje studentům příležitost uplatnit své programovací dovednosti na završujícím projektu. Tento projekt umožní jednotlivcům získat zkušenost s programováním a vytvořit exemplář ke sdílení se spolužáky a s blízkými. Má to být projekt na více lekcí nebo na více týdnů, kde studenti budou trávit čas brainstormingem, učením se o procesu návrhu, budováním a následným předložením svých konečných výtvorů. \\r\n\\r\nVe fázi „bádání“ si studenti pro inspiraci pohrají s programy předem vytvořenými v Umělci i v Laboratoři sprajtů. Dále se studenti dozví něco o procesu návrhu a o tom, jak jej mohou zavést do svých vlastních projektů. Pak jim bude dán prostor na vytvoření jejich vlastních projektů v Umělci, v Laboratoři sprajtů, nebo v jakémkoli jiném prostředí, které jim budete schopni a ochotni poskytnout. (Toto bude pravděpodobně nejdelší fáze projektu.) Po testování a posouzení spolužáky pak studenti budou revidovat svůj programový kód. Nakonec budou mít studenti možnost předložit svou dokončenou práci svým spolužákům."
             AI for Oceans:
               name: AI pomáhá oceánům
               description_student: 'Shrnutí výukového kurzu: Nejprve studenti zařadí předměty jako buďto „ryba“ nebo „neryba“, aby se pokusili odstranit odpad z oceánu. Pak budou studenti muset rozšířit svůj cvičný datový soubor tak, aby zahrnoval i jiné mořské tvory patřící do vody. V druhé části aktivity budou studenti vybírat své vlastní značky, které aplikují na obrázky náhodně vytvořených ryb. Tato cvičná data se používají pro model strojového učení, který by měl být schopen označovat nové obrázky sám od sebe.'
-              description_teacher: |-
-                **Shrnutí výukového kurzu:** Studenti nejprve klasifikují objekty jako buďto „ryba“ nebo „neryba“, načež se pokusí odstranit odpad z oceánu. Pak budou muset rozšířit svou sadu školících dat tak, aby do ní patřili i jiní mořští tvorové, kteří patří do vody. V druhé části aktivity studenti vyberou své vlastní značky, které aplikují na obrázky náhodně vytvořených ryb. Tato sada školících dat bude použita pro model strojového učení, který by pak měl být schopen označovat nové obrázky sám o sobě.\\r
-                \\r
-                \\r
-                **Kontrola správnosti:** Tento výukový kurz studentům nesdělí, zda úroveň absolvovali správně. Různé části aktivity je možné rychle přeskočit. Vybídněte studenty, aby sledovali videa, přečetli si návody a zkusili různé věci. Své nálezy mohou kdykoli sdílet s Vámi nebo se svými spolužáky.\\r
+              description_teacher: "**Shrnutí výukového kurzu:** Studenti nejprve klasifikují objekty jako buďto „ryba“ nebo „neryba“, načež se pokusí odstranit odpad z oceánu. Pak budou muset rozšířit svou sadu školících dat tak, aby do ní patřili i jiní mořští tvorové, kteří patří do vody. V druhé části aktivity studenti vyberou své vlastní značky, které aplikují na obrázky náhodně vytvořených ryb. Tato sada školících dat bude použita pro model strojového učení, který by pak měl být schopen označovat nové obrázky sám o sobě.\\r\n\\r\n\\r\n**Kontrola správnosti:** Tento výukový kurz studentům nesdělí, zda úroveň absolvovali správně. Různé části aktivity je možné rychle přeskočit. Vybídněte studenty, aby sledovali videa, přečetli si návody a zkusili různé věci. Své nálezy mohou kdykoli sdílet s Vámi nebo se svými spolužáky.\\r\n\n"
           student_description: Naučte se požívat různé druhy cyklů, událostí, funkcí a podmínek. Řešte různé techniky řešení problémů a diskutujte o vlivu počítačových věd a internetu na společnost. V druhé části tohoto kurzu navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
         express-2020:
           title: Rychlý kurz (2020)
@@ -6010,7 +5970,7 @@ cs:
               name: Programování s Rey a BB-8
               description_teacher: V této lekci budou studenti používat své nově nalezené programovací dovednosti komplikovanějšími způsoby, aby procházely po obtížné cestě s BB-8.
             Programming in Harvester:
-              description_teacher: Studenti budou aplikovat programovací koncepce, které se naučili, na prostředí Sklízeče. A teď, namísto, aby prostě dostali postavu na cíl, musejí studenti sbírat kukuřici pomocí nového bloku. Studenti budou pokračovat v rozvíjení dovedností v oblasti sekvenčních algoritmů a začnou používat proces ladění.
+              description_teacher: 'Studenti budou aplikovat programovací koncepce, které se naučili, na prostředí Sklízeče. A teď, namísto, aby prostě dostali postavu na cíl, musejí studenti sbírat kukuřici pomocí nového bloku. Studenti budou pokračovat v rozvíjení dovedností v oblasti sekvenčních algoritmů a začnou používat proces ladění.'
             Spelling Bee:
               name: Hláskovací včelka
             Loops in Ice Age:
@@ -6042,14 +6002,14 @@ cs:
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
-              display_name: '1.  lekce: Digitální informace'
+              display_name: '1. lekce: Digitální informace'
           lessons:
             Binary Numbers:
               name: Binární čísla
         csp2-2020:
           lesson_groups:
             csp_unit2_2020:
-              display_name: '2.  lekce: Internet'
+              display_name: '2. lekce: Internet'
         csp3-2020:
           lessons:
             Debugging:
@@ -6057,7 +6017,7 @@ cs:
         csp9-2020:
           lesson_groups:
             csp_unit9_2020:
-              display_name: '9.  lekce: Data'
+              display_name: '9. lekce: Data'
         csp3-virtual:
           lesson_groups:
             csp3_1_2018:
@@ -6220,10 +6180,10 @@ cs:
             outbreak:
               display_name: Simulace epidemie
           title: Simulátor epidemie
-          description_short: Naprogramujte ve Sprite Lab simulaci epidemie viru.
-          description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
+          description_short: 'Naprogramujte ve Sprite Lab simulaci epidemie viru.'
+          description: 'Naprogramujte ve Sprite Lab simulaci epidemie viru.'
           name: epidemie
-          student_description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
+          student_description: 'Naprogramujte ve Sprite Lab simulaci epidemie viru.'
         2021drafting:
           lessons:
             Virus Simulation for Code Bytes:
@@ -6304,11 +6264,11 @@ cs:
               name: Binární čísla
           lesson_groups:
             csp_unit1_2020:
-              display_name: '1.  lekce: Digitální informace'
+              display_name: '1. lekce: Digitální informace'
         csp2-2021:
           lesson_groups:
             csp_unit2_2020:
-              display_name: '2.  lekce: Internet'
+              display_name: '2. lekce: Internet'
         csp3-2021:
           lessons:
             Debugging:
@@ -6336,7 +6296,7 @@ cs:
               name: Algoritmická podjatost
           lesson_groups:
             csp_unit9_2020:
-              display_name: '9.  lekce: Data'
+              display_name: '9. lekce: Data'
         coursea-2021:
           description_short: Úvod do počítačové vědy pro ty, kdo ještě neumí číst.
           description_audience: 'Věk: 4-7 let'
@@ -6354,7 +6314,7 @@ cs:
             Learn to Drag and Drop:
               key: Naučte se přetahovat a upouštět
               name: Naučte se přetahovat a upouštět
-              description_student: " Hlavolamy dokončete kliknutím a potažením."
+              description_student: ' Hlavolamy dokončete kliknutím a potažením.'
             'Programming: Happy Maps':
               key: 'Programování: šťastné mapy'
               name: Šťastné mapy
@@ -6416,7 +6376,7 @@ cs:
             Digital Trails:
               key: Digitální stopy
               name: Digitální stopy
-              description_student: Naučte se něco o své digitální stopě a o tom, jak zůstat v bezpečí při návštěvách webových stránek.
+              description_student: 'Naučte se něco o své digitální stopě a o tom, jak zůstat v bezpečí při návštěvách webových stránek.'
               description_teacher: |2-
                  [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
 
@@ -6525,7 +6485,7 @@ cs:
             Loops with Rey and BB-8:
               key: Cykly s Rey a BB-8
               name: Cykly s Rey a BB-8
-              description_student: Pomoz BB-8 dostat se z bludiště pomocí cyklů!
+              description_student: 'Pomoz BB-8 dostat se z bludiště pomocí cyklů!'
             Loops in Harvester:
               name: Sběr úrody s cykly
               description_student: Použijme cyklů k tomu, abychom pomohli sklízeči nasbírat nějakou zeleninu!
@@ -6579,7 +6539,7 @@ cs:
               key: 'Algoritmy: Programování na milimetrovém papíře'
               name: Programování na čtverečkovaném papíru
               description_student: V této lekci budete programovat svého spolužáka tak, aby kreslil obrázky!
-              description_teacher: Začněme formou "programování", kde bude jeden žák programovat druhého tak, aby kreslil obrazce. Žáci tak budou mít příležitost zažít některé ze základních principů programování zábavnou a přístupnou cestou. V této lekci žáci začnou tím, že se naučí používat symboly, aby pomocí nich instruovali jeden druhého k vybarvení určitých čtverců na čtverečkovaném papíře. Takto vznikne obrazec. Pokud na konci hodiny zbyde čas, můžou si žáci nějaké obrázky vymyslet sami.
+              description_teacher: 'Začněme formou "programování", kde bude jeden žák programovat druhého tak, aby kreslil obrazce. Žáci tak budou mít příležitost zažít některé ze základních principů programování zábavnou a přístupnou cestou. V této lekci žáci začnou tím, že se naučí používat symboly, aby pomocí nich instruovali jeden druhého k vybarvení určitých čtverců na čtverečkovaném papíře. Takto vznikne obrazec. Pokud na konci hodiny zbyde čas, můžou si žáci nějaké obrázky vymyslet sami.'
             Introduction to Online Puzzles:
               key: Představení online úloh
               name: Představení online úloh
@@ -6592,12 +6552,12 @@ cs:
               key: Ladění v Kolektoru
               name: Ladění s Laurel
               description_student: Dostali jste se někdy při programování do problémů? V této lekci se naučíte tajemství ladění. Ladění je proces vyhledávání a opravování problémů ve Vašem kódu.
-              description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly.
+              description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
             Events in Bounce:
               key: Události s Bounce
               name: Události s Bounce
               description_student: Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
-              description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky.
+              description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. 
             Build a Star Wars Game:
               key: Vytvoř Star Wars hru
               name: Vytvoř Star Wars hru
@@ -6607,17 +6567,17 @@ cs:
               key: Taneční večírek
               name: Taneční večírek
               description_student: Je čas oslavovat! V této lekci naprogramujete svůj vlastní interaktivní taneční večírek.
-              description_teacher: V této lekci studenti naprogramují svůj vlastní interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože tento nástroj byl vytvořený tak, aby reagoval na hudbu.
+              description_teacher: 'V této lekci studenti naprogramují svůj vlastní interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože tento nástroj byl vytvořený tak, aby reagoval na hudbu.'
             Loops in Ice Age:
               key: Cykly v Době ledové
               name: Cykly v Době ledové
               description_student: V této lekci budete používat bloky opakování, abyste pomohli Scratovi pokud možno co nejúčinněji dosáhnout žaludu.
-              description_teacher: Pro krátké opakování (nebo představení) používání cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji dostali Scrata k žaludu.
+              description_teacher: Pro krátké opakování (nebo představení) používání cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji dostali Scrata k žaludu. 
             Loops in Artist:
               key: Smyčky v Umělci
               name: Kreslení tvarů s cykly
               description_student: V této lekci cykly umožňují snadnou tvorbu pěkných obrázků s Umělcem!
-              description_teacher: Tato lekce staví na pochopení cyklů z předchozí lekce a dává studentům možnost být opravdu kreativní. Tato aktivita se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli svoje schopnosti řešit problémy.
+              description_teacher: Tato lekce staví na pochopení cyklů z předchozí lekce a dává studentům možnost být opravdu kreativní. Tato aktivita se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli svoje schopnosti řešit problémy. 
             Nested Loops in Bee:
               name: Vnořené cykly v bludišti
               description_teacher: V této online aktivitě dostanou studenti příležitost posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
@@ -6628,7 +6588,7 @@ cs:
             Conditionals in Bee:
               key: Podmínky ve Včele
               name: Pokud/jinak se včelkou
-              description_student: Teď když rozumíte podmínkám, je čas začít programovat Včelu a používat je při sbírání medu a nektaru.
+              description_student: 'Teď když rozumíte podmínkám, je čas začít programovat Včelu a používat je při sbírání medu a nektaru.'
               description_teacher: Dosud psali studenti kód, který fungoval pořád stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní. V této lekci začne vaše třída programovat s podmínkami, což jim umožní napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž se program setká.
             While Loops in Farmer:
               key: Cykly pokud (while) s farmářkou
@@ -6713,7 +6673,7 @@ cs:
               key: Posloupnosti v Bludišti
               name: Posloupnosti v Bludišti
               description_student: V této části se naučíte psát své vlastní programy!
-              description_teacher: "V této sadě úloh studenti začnou se seznámením se (případně podle stupně pokročilosti třídy se zopakováním si) s online rozhraním Code.org. Uvidíte videa, která ukazují základní funkcionalitu pracovní plochy včetně tlačítek `Spustit`, `Obnovit` a `Krok`. Ve videích se také probírá přetahování, mazání a spojování Blockly bloků. Studenti si dále procvičí svoje _sekvenční_ a _ladící_ schopnosti v bludišti. \\\\r\nLadění kodu (debugging) je základním kamenem učení se programovat. Studenti se setkají s několika úlohami, které byly vyřešeny nesprávně. Budou muset projít stávající kód, aby odhalili chyby jako jsou nesprávné cykly, chybějící bloky, bloky navíc a bloky, které nefungují.  "
+              description_teacher: "V této sadě úloh studenti začnou se seznámením se (případně podle stupně pokročilosti třídy se zopakováním si) s online rozhraním Code.org. Uvidíte videa, která ukazují základní funkcionalitu pracovní plochy včetně tlačítek `Spustit`, `Obnovit` a `Krok`. Ve videích se také probírá přetahování, mazání a spojování Blockly bloků. Studenti si dále procvičí svoje _sekvenční_ a _ladící_ schopnosti v bludišti. \\r\nLadění kodu (debugging) je základním kamenem učení se programovat. Studenti se setkají s několika úlohami, které byly vyřešeny nesprávně. Budou muset projít stávající kód, aby odhalili chyby jako jsou nesprávné cykly, chybějící bloky, bloky navíc a bloky, které nefungují.  "
             Programming and Loops with the Artist:
               name: Kreslení s cykly
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -6953,7 +6913,7 @@ cs:
             Loops with Rey and BB-8:
               key: Cykly s Rey a BB-8
               name: Cykly s Rey a BB-8
-              description_student: Pomoz BB-8 dostat se z bludiště pomocí cyklů!
+              description_student: 'Pomoz BB-8 dostat se z bludiště pomocí cyklů!'
             Sticker Art with Loops:
               key: Razítka v cyklech
               description_student: V této lekci cykly umožňují snadnou tvorbu ještě pěknějších obrázků s Umělcem!
@@ -6970,7 +6930,7 @@ cs:
             If/Else with Bee:
               key: Pokud/jinak se včelkou
               name: Pokud/jinak se včelkou
-              description_student: Teď když rozumíte podmínkám, je čas začít programovat Včelu a používat je při sbírání medu a nektaru.
+              description_student: 'Teď když rozumíte podmínkám, je čas začít programovat Včelu a používat je při sbírání medu a nektaru.'
               description_teacher: Dosud psali studenti kód, který fungoval pořád stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní. V této lekci začne vaše třída programovat s podmínkami, což jim umožní napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž se program setká.
             While Loops with the Farmer:
               key: Cykly pokud (while) s farmářkou
@@ -7035,7 +6995,7 @@ cs:
             lesson-1:
               name: Taneční večírek
               description_student: Je čas oslavovat! V této lekci naprogramujete svůj vlastní interaktivní taneční večírek.
-              description_teacher: V této lekci studenti naprogramují svůj vlastní interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože tento nástroj byl vytvořený tak, aby reagoval na hudbu.
+              description_teacher: 'V této lekci studenti naprogramují svůj vlastní interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože tento nástroj byl vytvořený tak, aby reagoval na hudbu.'
             lesson-2:
               name: Dělání sprajtů
           lesson_groups:
@@ -7068,7 +7028,7 @@ cs:
             Learn to Drag and Drop:
               key: Naučte se přetahovat a upouštět
               name: Naučte se přetahovat a upouštět
-              description_student: " Hlavolamy dokončete kliknutím a potažením."
+              description_student: ' Hlavolamy dokončete kliknutím a potažením.'
             Sequencing with Scrat:
               key: Posloupnosti se Scratem
               name: Posloupnosti se Scratem
@@ -7144,21 +7104,21 @@ cs:
               display_name: 'Kapitola 2: Řešení datových problémů'
         contagion-pilot:
           description_audience: Známky 5
-          description_short: Naprogramujte ve Sprite Lab simulaci epidemie viru.
-          description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
-          student_description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
+          description_short: 'Naprogramujte ve Sprite Lab simulaci epidemie viru.'
+          description: 'Naprogramujte ve Sprite Lab simulaci epidemie viru.'
+          student_description: 'Naprogramujte ve Sprite Lab simulaci epidemie viru.'
         csa1-pilot:
           lessons:
             lesson-19:
               description_student: Dnes dokončíte svou první Otázku s volnou odpovědí (OVO)! To znamená, že ručně napíšete kód řešící nějaký velký úkol. Provedete to s partnerem chozením po místnosti a plněním různých částí úkolu na jednotlivých místech, přičemž budete postupně kontrolovat průběh své práce.
-              description_teacher: "V této lekci studenti vyřeší svůj první příklad ve stylu otázky s volnou odpovědí (OVO). Otázku označí jako třída a pak v párech formou aktivity ve stylu „Kolem světa“ implementují kompletní třídu `MalířSpirál`.\n\nCíle této lekce jsou tři: \n\n-   Vytvořit pocit vzrušení a úspěšného dosahování výsledků při řešení OVO\n-   Praktikovat otázky s volným koncem (písemně)\n-   Posloužit jako shrnující vyhodnocení obsahu z Jednotky 1\n\nAčkoli formát této OVO není stejný jako u OVO na zkoušce AP, jde o stavební blok, který má studentům pomoci se na tyto typy otázek připravit. Jak budou studenti postupně pokračovat v kurzu, otázky OVO, s kterými se budou setkávat, budou postupně bližší a bližší realitě."
+              description_teacher: "V této lekci studenti vyřeší svůj první příklad ve stylu otázky s volnou odpovědí (OVO). Otázku označí jako třída a pak v párech formou aktivity ve stylu „Kolem světa“ implementují kompletní třídu `MalířSpirál`.\n\nCíle této lekce jsou tři: \n* Vytvořit pocit vzrušení a úspěšného dosahování výsledků při řešení OVO\n* Praktikovat otázky s volným koncem (písemně)\n* Posloužit jako shrnující vyhodnocení obsahu z Jednotky 1\n\nAčkoli formát této OVO není stejný jako u OVO na zkoušce AP, jde o stavební blok, který má studentům pomoci se na tyto typy otázek připravit. Jak budou studenti postupně pokračovat v kurzu, otázky OVO, s kterými se budou setkávat, budou postupně bližší a bližší realitě."
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
         csa2-pilot:
           lessons:
             new lesson:
-              description_student: 'Prostřednictvím našich zážitků ze Čtvrti víme, že třídy a objekty jsou klíčovou komponentou  programovacího jazyka Java. Ale jak vlastně třídy vytvářejí objekty? V této lekci prozkoumáte, jak se vytváří objekt a dozvíte se více o procesu zvaném enkapsulace dat. '
+              description_student: "Prostřednictvím našich zážitků ze Čtvrti víme, že třídy a objekty jsou klíčovou komponentou  programovacího jazyka Java. Ale jak vlastně třídy vytvářejí objekty? V této lekci prozkoumáte, jak se vytváří objekt a dozvíte se více o procesu zvaném enkapsulace dat. \n"
               description_teacher: V této offline lekci mohou studenti vytvářet objekty a znázorňovat příslušné atributy pomocí instančních proměnných. Studenti se mohou naučit rozdíl mezi „veřejným“ a „soukromým“ a účel enkapsulace ke skrytí vnitřní implementace objektu.
             lesson-2:
               name: Používání proměnných
@@ -7294,7 +7254,7 @@ cs:
             lesson-4:
               name: Proces návrhu
         outbreak-module:
-          name: modul\_epidemie
+          name: modul_epidemie
           title: Epidemie
         csa1-exemplars:
           lesson_groups:
@@ -7374,17 +7334,17 @@ cs:
           lessons:
             FRQ Day:
               description_student: Dnes dokončíte svou první Otázku s volnou odpovědí (OVO)! To znamená, že ručně napíšete kód řešící nějaký velký úkol. Provedete to s partnerem chozením po místnosti a plněním různých částí úkolu na jednotlivých místech, přičemž budete postupně kontrolovat průběh své práce.
-              description_teacher: "V této lekci studenti vyřeší svůj první příklad ve stylu otázky s volnou odpovědí (OVO). Otázku označí jako třída a pak v párech formou aktivity ve stylu „Kolem světa“ implementují kompletní třídu `MalířSpirál`.\n\nCíle této lekce jsou tři: \n\n-   Vytvořit pocit vzrušení a úspěšného dosahování výsledků při řešení OVO\n-   Praktikovat otázky s volným koncem (písemně)\n-   Posloužit jako shrnující vyhodnocení obsahu z Jednotky 1\n\nAčkoli formát této OVO není stejný jako u OVO na zkoušce AP, jde o stavební blok, který má studentům pomoci se na tyto typy otázek připravit. Jak budou studenti postupně pokračovat v kurzu, otázky OVO, s kterými se budou setkávat, budou postupně bližší a bližší realitě."
+              description_teacher: "V této lekci studenti vyřeší svůj první příklad ve stylu otázky s volnou odpovědí (OVO). Otázku označí jako třída a pak v párech formou aktivity ve stylu „Kolem světa“ implementují kompletní třídu `MalířSpirál`.\n\nCíle této lekce jsou tři: \n* Vytvořit pocit vzrušení a úspěšného dosahování výsledků při řešení OVO\n* Praktikovat otázky s volným koncem (písemně)\n* Posloužit jako shrnující vyhodnocení obsahu z Jednotky 1\n\nAčkoli formát této OVO není stejný jako u OVO na zkoušce AP, jde o stavební blok, který má studentům pomoci se na tyto typy otázek připravit. Jak budou studenti postupně pokračovat v kurzu, otázky OVO, s kterými se budou setkávat, budou postupně bližší a bližší realitě."
             lesson-19:
               description_student: Dnes dokončíte svou první Otázku s volnou odpovědí (OVO)! To znamená, že ručně napíšete kód řešící nějaký velký úkol. Provedete to s partnerem chozením po místnosti a plněním různých částí úkolu na jednotlivých místech, přičemž budete postupně kontrolovat průběh své práce.
-              description_teacher: "V této lekci studenti vyřeší svůj první příklad ve stylu otázky s volnou odpovědí (OVO). Otázku označí jako třída a pak v párech formou aktivity ve stylu „Kolem světa“ implementují kompletní třídu `MalířSpirál`.\n\nCíle této lekce jsou tři: \n\n-   Vytvořit pocit vzrušení a úspěšného dosahování výsledků při řešení OVO\n-   Praktikovat otázky s volným koncem (písemně)\n-   Posloužit jako shrnující vyhodnocení obsahu z Jednotky 1\n\nAčkoli formát této OVO není stejný jako u OVO na zkoušce AP, jde o stavební blok, který má studentům pomoci se na tyto typy otázek připravit. Jak budou studenti postupně pokračovat v kurzu, otázky OVO, s kterými se budou setkávat, budou postupně bližší a bližší realitě."
+              description_teacher: "V této lekci studenti vyřeší svůj první příklad ve stylu otázky s volnou odpovědí (OVO). Otázku označí jako třída a pak v párech formou aktivity ve stylu „Kolem světa“ implementují kompletní třídu `MalířSpirál`.\n\nCíle této lekce jsou tři: \n* Vytvořit pocit vzrušení a úspěšného dosahování výsledků při řešení OVO\n* Praktikovat otázky s volným koncem (písemně)\n* Posloužit jako shrnující vyhodnocení obsahu z Jednotky 1\n\nAčkoli formát této OVO není stejný jako u OVO na zkoušce AP, jde o stavební blok, který má studentům pomoci se na tyto typy otázek připravit. Jak budou studenti postupně pokračovat v kurzu, otázky OVO, s kterými se budou setkávat, budou postupně bližší a bližší realitě."
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
         csa2-pilot-facilitator:
           lessons:
             Defining Attributes:
-              description_student: 'Prostřednictvím našich zážitků ze Čtvrti víme, že třídy a objekty jsou klíčovou komponentou  programovacího jazyka Java. Ale jak vlastně třídy vytvářejí objekty? V této lekci prozkoumáte, jak se vytváří objekt a dozvíte se více o procesu zvaném enkapsulace dat. '
+              description_student: "Prostřednictvím našich zážitků ze Čtvrti víme, že třídy a objekty jsou klíčovou komponentou  programovacího jazyka Java. Ale jak vlastně třídy vytvářejí objekty? V této lekci prozkoumáte, jak se vytváří objekt a dozvíte se více o procesu zvaném enkapsulace dat. \n"
               description_teacher: V této offline lekci mohou studenti vytvářet objekty a znázorňovat příslušné atributy pomocí instančních proměnných. Studenti se mohou naučit rozdíl mezi „veřejným“ a „soukromým“ a účel enkapsulace ke skrytí vnitřní implementace objektu.
             Using Variables:
               name: Používání proměnných
@@ -7415,7 +7375,7 @@ cs:
             The Neighborhood Store Management Project - Day 3:
               name: Projekt správy obchodu ve čtvrti - den 3
             new lesson:
-              description_student: 'Prostřednictvím našich zážitků ze Čtvrti víme, že třídy a objekty jsou klíčovou komponentou  programovacího jazyka Java. Ale jak vlastně třídy vytvářejí objekty? V této lekci prozkoumáte, jak se vytváří objekt a dozvíte se více o procesu zvaném enkapsulace dat. '
+              description_student: "Prostřednictvím našich zážitků ze Čtvrti víme, že třídy a objekty jsou klíčovou komponentou  programovacího jazyka Java. Ale jak vlastně třídy vytvářejí objekty? V této lekci prozkoumáte, jak se vytváří objekt a dozvíte se více o procesu zvaném enkapsulace dat. \n"
               description_teacher: V této offline lekci mohou studenti vytvářet objekty a znázorňovat příslušné atributy pomocí instančních proměnných. Studenti se mohou naučit rozdíl mezi „veřejným“ a „soukromým“ a účel enkapsulace ke skrytí vnitřní implementace objektu.
             lesson-2:
               name: Používání proměnných
@@ -7460,3 +7420,10 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgety
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lekce
