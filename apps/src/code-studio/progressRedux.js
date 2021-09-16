@@ -365,9 +365,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
       );
     }
 
-    if (data.lockableAuthorized) {
-      dispatch(authorizeLockable());
-    }
+    dispatch(authorizeLockable(data.lockableAuthorized));
 
     if (data.completed) {
       dispatch(setScriptCompleted());
