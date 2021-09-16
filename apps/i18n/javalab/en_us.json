@@ -40,6 +40,7 @@
   "errorNeighborhoodInvalidLocation": "The location specified isn't on the grid.",
   "errorNeighborhoodInvalidMove": "Painter tried to move off the grid or into an obstacle.",
   "errorNeighborhoodInvalidPaintLocation": "Painter tried to paint off the grid or over an obstacle.",
+  "errorPeerReviewDisabled": "Peer Review has been disabled on this project.",
   "errorProjectNotEditedYet": "This project has not been edited yet. The code will need to be edited before it can run.",
   "errorSoundInvalidAudioFileFormat": "The sound file provided is in an unsupported format. Only WAV is supported at this time.",
   "errorSoundMissingAudioData": "The sound file provided did not have any audio data.",
