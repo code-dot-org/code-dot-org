@@ -1,4 +1,3 @@
----
 hy:
   data:
     blocks:
@@ -189,6 +188,13 @@ hy:
             '"right"': ճիշտ
             '"space"': տարածություն
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ճիշտ
+            '90': ներքեւ
+            '180': ձախ
+            '270': մինչեւ
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -326,8 +332,8 @@ hy:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': այո
-            '"no"': ոչ
+            '"yes"': 'այո'
+            '"no"': 'ոչ'
       Mikelab_whileKeyPressed:
         options:
           KEY:

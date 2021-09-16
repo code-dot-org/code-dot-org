@@ -1,11 +1,10 @@
----
 hy:
   data:
     script:
       category:
         csf_category_name: CS Fundamentals
         cspexams_category_name: CS Principles Practice Test
-        csp17_category_name: "'16-'17 CS Principles"
+        csp17_category_name: '''16-''17 CS Principles'
         hoc_category_name: Կոդի ժամ
         math_category_name: Մաթեմատիկա
         other_category_name: Այլ
@@ -25,7 +24,7 @@ hy:
             'Bee: Loops':
               name: 'Bee: Loops'
             'Bee: Sequence':
-              name: մեղու. հաջորդականություն
+              name: 'մեղու. հաջորդականություն'
             Building a Foundation:
               name: Building a Foundation
             Getting Loopy:
@@ -35,7 +34,7 @@ hy:
             Happy Maps:
               name: Ուրախ Քարտեզներ
             'Jigsaw: Learn to drag and drop':
-              name: Գոլւխկոտրուկ. Սովորեք քաշելով տեղափոխել
+              name: 'Գոլւխկոտրուկ. Սովորեք քաշելով տեղափոխել'
             'Maze: Debugging':
               name: 'Maze: Debugging'
             'Maze: Loops':
@@ -520,6 +519,12 @@ hy:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -562,6 +567,12 @@ hy:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -571,6 +582,12 @@ hy:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -774,7 +791,7 @@ hy:
             Events:
               name: Իրադարձություններ
             'Jigsaw: Learn to drag and drop':
-              name: Գոլւխկոտրուկ. Սովորեք քաշելով տեղափոխել
+              name: 'Գոլւխկոտրուկ. Սովորեք քաշելով տեղափոխել'
             Loops:
               name: loops
             Programming:
@@ -798,7 +815,7 @@ hy:
             Events:
               name: Իրադարձություններ
             'Jigsaw: Learn to drag and drop':
-              name: Գոլւխկոտրուկ. Սովորեք քաշելով տեղափոխել
+              name: 'Գոլւխկոտրուկ. Սովորեք քաշելով տեղափոխել'
             Loops:
               name: loops
             Programming:
@@ -829,14 +846,20 @@ hy:
               name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
               name: Փաթեթավորեք-up
         ecs-unit4:
-          description: CS Principles Unit 4
-          description_short: CS Principles Unit 4
-          student_description: CS Principles Unit 4
+          description: 'CS Principles Unit 4'
+          description_short: 'CS Principles Unit 4'
+          student_description: 'CS Principles Unit 4'
         grade3:
           title: Grade 3
           description_audience: Ages 5-18
@@ -1148,7 +1171,7 @@ hy:
             Functions:
               name: գործառույթները
             'null':
-              name: անվավեր
+              name: 'անվավեր'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1532,7 +1555,7 @@ hy:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Գործառույթները պարամետրերով\_
+              name: Գործառույթները պարամետրերով_
             Functions with Parameters:
               name: Գործառույթները պարամետրերով
         coursee-2018:
@@ -1839,7 +1862,7 @@ hy:
               display_name: պարունակություն
           lessons:
             'null':
-              name: անվավեր
+              name: 'անվավեր'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -1968,7 +1991,7 @@ hy:
             csp_functions:
               display_name: գործառույթները
         csp2-pilot-staging:
-          title: CS Principles Unit 2
+          title: 'CS Principles Unit 2'
           lesson_groups:
             csp_variables:
               display_name: փոփոխականների
@@ -2007,7 +2030,7 @@ hy:
             csp_functions:
               display_name: գործառույթները
         csp9-pilot-staging:
-          title: CS Principles Unit 9
+          title: 'CS Principles Unit 9'
           lesson_groups:
             csp_variables:
               display_name: փոփոխականների
@@ -2376,11 +2399,11 @@ hy:
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
-              display_name: CS Principles Unit 1
+              display_name: 'CS Principles Unit 1'
         csp2-2020:
           lesson_groups:
             csp_unit2_2020:
-              display_name: CS Principles Unit 2
+              display_name: 'CS Principles Unit 2'
         csp3-2020:
           lessons:
             Debugging:
@@ -2388,7 +2411,7 @@ hy:
         csp9-2020:
           lesson_groups:
             csp_unit9_2020:
-              display_name: CS Principles Unit 9
+              display_name: 'CS Principles Unit 9'
         csp3-virtual:
           lessons:
             Creating Functions:
@@ -2509,11 +2532,11 @@ hy:
         csp1-2021:
           lesson_groups:
             csp_unit1_2020:
-              display_name: CS Principles Unit 1
+              display_name: 'CS Principles Unit 1'
         csp2-2021:
           lesson_groups:
             csp_unit2_2020:
-              display_name: CS Principles Unit 2
+              display_name: 'CS Principles Unit 2'
         csp3-2021:
           lessons:
             Debugging:
@@ -2536,7 +2559,7 @@ hy:
         csp9-2021:
           lesson_groups:
             csp_unit9_2020:
-              display_name: CS Principles Unit 9
+              display_name: 'CS Principles Unit 9'
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
