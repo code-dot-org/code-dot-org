@@ -2,35 +2,165 @@
   "de-DE": {
     "data": {
       "vocabularies": {
+        "sprite/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "user/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
         "behavior/coursef/2021": {
-          "word": "Verhalten"
+          "word": "Verhalten",
+          "definition": ""
+        },
+        "program/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
-          "word": "Variable"
+          "word": "Variable",
+          "definition": ""
+        },
+        "prompt/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "input/coursef/2021": {
-          "word": "Eingabe"
+          "word": "Eingabe",
+          "definition": ""
+        },
+        "loop/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "for_loop/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "machine_learning/coursef/2021": {
-          "word": "Maschinelles Lernen"
+          "word": "Maschinelles Lernen",
+          "definition": ""
+        },
+        "dns/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "internet/coursef/2021": {
-          "word": "Internet"
+          "word": "Internet",
+          "definition": ""
         },
         "packets/coursef/2021": {
-          "word": "Pakete"
+          "word": "Pakete",
+          "definition": ""
+        },
+        "servers/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "url/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "ip_address/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "wi_fi/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "define/coursef/2021": {
-          "word": "Definiere"
+          "word": "Definiere",
+          "definition": ""
+        },
+        "prepare/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "reflect/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "try/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/courseb/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/courseb/2021": {
+          "word": "",
+          "definition": ""
         },
         "debugging/courseb/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": ""
+        },
+        "click/courseb/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "drag/courseb/2021": {
+          "word": "",
+          "definition": ""
         },
         "drop/courseb/2021": {
-          "word": "Fallen lassen"
+          "word": "Fallen lassen",
+          "definition": ""
+        },
+        "double_click/courseb/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "program/courseb/2021": {
+          "word": "",
+          "definition": ""
         },
         "programming/courseb/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": ""
+        },
+        "persistence/courseb/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/courseb/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/courseb/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/courseb/2021": {
+          "word": "",
+          "definition": ""
         },
         "algorithm/coursea/2021": {
           "word": "Algorithmus",
@@ -49,7 +179,7 @@
           "definition": "Drücken der Maustaste"
         },
         "drag/coursea/2021": {
-          "word": "-   Ziehen:",
+          "word": "- Ziehen:",
           "definition": "Klicken mit der Maus und die Maustaste gedrückt halten, während man den Mauszeiger an einen anderen Ort bewegt"
         },
         "drop/coursea/2021": {
@@ -57,7 +187,7 @@
           "definition": "Die Maustaste loslassem, um das Element, das man zieht, abzulegen"
         },
         "double_click/coursea/2021": {
-          "word": "-   Doppelklicken:",
+          "word": "- Doppelklicken:",
           "definition": "Zweimaliges, sehr schnelles Drücken der Maustaste."
         },
         "bug/coursea/2021": {
@@ -80,74 +210,325 @@
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
+        "algorithm/coursec/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/coursec/2021": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/coursec/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": ""
+        },
+        "program/coursec/2021": {
+          "word": "",
+          "definition": ""
         },
         "sequencing/coursec/2021": {
-          "word": "Sequencing"
+          "word": "Sequencing",
+          "definition": ""
         },
         "programming/coursec/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": ""
+        },
+        "loop/coursec/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursec/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursec/2021": {
+          "word": "",
+          "definition": ""
         },
         "binary/coursec/2021": {
-          "word": "Binärdatei"
+          "word": "Binärdatei",
+          "definition": ""
+        },
+        "algorithm/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "program/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "debugging/coursed/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": ""
+        },
+        "loop/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "programming/coursed/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": ""
+        },
+        "frustrated/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "persistence/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "code/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "command/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "conditionals/coursed/2021": {
-          "word": "Bedingungen"
+          "word": "Bedingungen",
+          "definition": ""
+        },
+        "pseudocode/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "while_loop/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "until/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "debugging/express/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": ""
         },
         "sequencing/express/2021": {
-          "word": "Sequencing"
+          "word": "Sequencing",
+          "definition": ""
+        },
+        "program/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "programming/express/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": ""
         },
         "behavior/express/2021": {
-          "word": "Verhalten"
+          "word": "Verhalten",
+          "definition": ""
+        },
+        "sprite/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "code/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "command/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "conditionals/express/2021": {
-          "word": "Bedingungen"
+          "word": "Bedingungen",
+          "definition": ""
+        },
+        "while_loop/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "until/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "function/express/2021": {
-          "word": "Funktion"
+          "word": "Funktion",
+          "definition": ""
         },
         "variable/express/2021": {
-          "word": "Variable"
+          "word": "Variable",
+          "definition": ""
+        },
+        "prompt/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "for_loop/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "define/express/2021": {
-          "word": "Definiere"
+          "word": "Definiere",
+          "definition": ""
+        },
+        "prepare/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "reflect/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "try/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "click/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "drag/pre-express/2021": {
+          "word": "",
+          "definition": ""
         },
         "drop/pre-express/2021": {
-          "word": "Fallen lassen"
+          "word": "Fallen lassen",
+          "definition": ""
+        },
+        "double_click/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/pre-express/2021": {
+          "word": "",
+          "definition": ""
         },
         "debugging/pre-express/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": ""
+        },
+        "program/pre-express/2021": {
+          "word": "",
+          "definition": ""
         },
         "programming/pre-express/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": ""
+        },
+        "persistence/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/pre-express/2021": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursee/2021": {
-          "word": "Verhalten"
+          "word": "Verhalten",
+          "definition": ""
+        },
+        "algorithm/coursee/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "sprite/coursee/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursee/2021": {
+          "word": "",
+          "definition": ""
         },
         "copyright/coursee/2021": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": ""
+        },
+        "loop/coursee/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursee/2021": {
+          "word": "",
+          "definition": ""
         },
         "function/coursee/2021": {
-          "word": "Funktion"
+          "word": "Funktion",
+          "definition": ""
+        },
+        "condition/coursee/2021": {
+          "word": "",
+          "definition": ""
         },
         "conditionals/coursee/2021": {
-          "word": "Bedingungen"
+          "word": "Bedingungen",
+          "definition": ""
+        },
+        "while_loop/coursee/2021": {
+          "word": "",
+          "definition": ""
         },
         "define/coursee/2021": {
-          "word": "Definiere"
+          "word": "Definiere",
+          "definition": ""
+        },
+        "prepare/coursee/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "reflect/coursee/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "try/coursee/2021": {
+          "word": "",
+          "definition": ""
         }
       }
     }
