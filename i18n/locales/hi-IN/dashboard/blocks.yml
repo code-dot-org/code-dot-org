@@ -1,9 +1,8 @@
----
 hi:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "{GROUP} प्रत्येक {N} संगीत प्रविधियों के बाद \n{MOVE1} और {MOVE2} को बदलता है"
+        text: "[GROUP][0] प्रत्येक [N][1] संगीत प्रविधियों के बाद \n[MOVE1][2] और [MOVE2][3] को बदलता है"
         options:
           GROUP:
             sprites: सभी
@@ -43,20 +42,20 @@ hi:
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
       Dancelab_atTimestamp:
-        text: "{TIMESTAMP} {UNIT} के बाद"
+        text: '[TIMESTAMP][0] [UNIT][1] के बाद'
         options:
           UNIT:
             '"measures"': संगीत प्रविधियां
             '"seconds"': सेकंड
       Dancelab_changeColorBy:
-        text: "{COLOR} {METHOD} को {AMOUNT} में बदलें"
+        text: '[COLOR][0] [METHOD][1] को [AMOUNT][2] में बदलें'
         options:
           METHOD:
             '"hue"': रंगत
             '"saturation"': संतृप्तीकरण
             '"brightness"': चमक
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} हमेशा {MOVE} {DIR} करता है"
+        text: "[GROUP][0] हमेशा [MOVE][1] [DIR][2] करता है"
         options:
           GROUP:
             sprites: सभी
@@ -87,7 +86,7 @@ hi:
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
       Dancelab_changeMoveLR:
-        text: "{SPRITE} हमेशा {MOVE} {DIR} करता है"
+        text: "[SPRITE][0] हमेशा [MOVE][1] [DIR][2] करता है"
         options:
           MOVE:
             '"next"': "(अगला)"
@@ -105,7 +104,7 @@ hi:
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
       Dancelab_changePropBy:
-        text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
+        text: '[SPRITE][0] [PROPERTY][1] को [VAL][2] द्वारा बदलें'
         options:
           PROPERTY:
             '"scale"': आकार
@@ -115,7 +114,7 @@ hi:
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
       Dancelab_changePropEachBy:
-        text: "{GROUP} {PROPERTY} के {VAL} तक बदलें"
+        text: '[GROUP][0] [PROPERTY][1] के [VAL][2] तक बदलें'
         options:
           GROUP:
             sprites: सभी
@@ -138,7 +137,7 @@ hi:
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
       Dancelab_doMoveEachLR:
-        text: "{GROUP} एक बार {MOVE} {DIR} करता है"
+        text: "[GROUP][0] एक बार [MOVE][1] [DIR][2] करता है"
         options:
           GROUP:
             sprites: सभी
@@ -179,7 +178,7 @@ hi:
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
       Dancelab_doMoveLR:
-        text: "{SPRITE} एक बार {MOVE} {DIR} करता है"
+        text: "[SPRITE][0] एक बार [MOVE][1] [DIR][2] करता है"
         options:
           MOVE:
             '"rand"': "(बेतरतीब)"
@@ -207,34 +206,34 @@ hi:
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
       Dancelab_everyMeasuresRange:
-        text: 'प्रत्येक {N} प्रविधियों को {START} के बाद दोहराएं '
+        text: 'प्रत्येक [N][0] प्रविधियों को [START][1] के बाद दोहराएं '
       Dancelab_everySeconds:
-        text: 'प्रत्येक {N} {UNIT} '
+        text: 'प्रत्येक [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': संगीत प्रविधियां
             '"seconds"': सेकंड
       Dancelab_everySecondsRange:
-        text: 'प्रत्येक {N} {UNIT} {START} से {STOP} तक '
+        text: 'प्रत्येक [N][0] [UNIT][1] [START][2] से [STOP][3] तक '
         options:
           UNIT:
             measures: संगीत प्रविधियां
             seconds: सेकंड
       Dancelab_everyVerseChorus:
-        text: 'प्रत्येक {UNIT} '
+        text: 'प्रत्येक [UNIT][0] '
         options:
           UNIT:
             '"verse"': पद्य
             '"chorus"': समूहगान
       Dancelab_getEnergy:
-        text: "{RANGE} पाएं"
+        text: '[RANGE][0] पाएं'
         options:
           RANGE:
             '"low"': मंद
             '"mid"': मध्य
             '"high"': ऊंची ध्वनि
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': आकार
@@ -245,15 +244,15 @@ hi:
             '"y"': लंबवत स्थिति
             '"tint"': रंगत
       Dancelab_getTime:
-        text: "{UNIT} में वर्तमान समय"
+        text: '[UNIT][0] में वर्तमान समय'
         options:
           UNIT:
             '"measures"': संगीत प्रविधियां
             '"seconds"': सेकंड
       Dancelab_ifDanceIs:
         text: |-
-          क्या {SPRITE}, {DANCE}
-          {DO1} {DO2} कर रहा है
+          क्या [SPRITE][0], [DANCE][1]
+          [DO1][2] [DO2][3] कर रहा है
         options:
           DANCE:
             MOVES.ClapHigh: ज़ोर से ताली बजाएं
@@ -269,8 +268,8 @@ hi:
             MOVES.Rest: कोई नहीं
       Dancelab_ifTime:
         text: |-
-          क्या {UNIT} {OP} {N}
-          {DO1} {DO2} है
+          क्या [UNIT][0] [OP][1] [N][2]
+          [DO1][3] [DO2][4] है
         options:
           UNIT:
             '"measures"': संगीत प्रविधियां
@@ -280,7 +279,7 @@ hi:
             '"<"': "\\<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} {LOCATION} पर कूदते हैं"
+        text: "[SPRITE][0] [LOCATION][1] पर कूदते हैं"
         options:
           LOCATION:
             "{x: 200, y: 100}": ऊपर
@@ -294,7 +293,7 @@ hi:
             "{x: 300, y: 300}": नीचे दाएं
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
       Dancelab_jumpToEach:
-        text: "{GROUP} से {LOCATION} पर जाएं"
+        text: '[GROUP][0] से [LOCATION][1] पर जाएं'
         options:
           GROUP:
             sprites: सभी
@@ -321,7 +320,7 @@ hi:
             "{x: 300, y: 300}": नीचे दाएं
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": यादृच्छिक
       Dancelab_layoutSprites:
-        text: "{GROUP} को {FORMAT} के रूप में लेआउट दें"
+        text: '[GROUP][0] को [FORMAT][1] के रूप में लेआउट दें'
         options:
           GROUP:
             sprites: सभी
@@ -351,7 +350,7 @@ hi:
             '"plus"': जोड़
             '"random"': यादृच्छिक
       Dancelab_makeAnonymousDanceSprite:
-        text: "{LOCATION} पर एक नया {COSTUME} बनाएं"
+        text: '[LOCATION][1] पर एक नया [COSTUME][0] बनाएं'
         options:
           COSTUME:
             '"ALIEN"': विदेशी
@@ -378,7 +377,8 @@ hi:
             "{x: 300, y: 300}": नीचे दाएं
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
       Dancelab_makeNewDanceSprite:
-        text: "{LOCATION} पर {NAME} नामक {COSTUME} बनाएं"
+        text: |-
+          [LOCATION][2] पर [NAME][1] नामक [COSTUME][0] बनाएं
         options:
           COSTUME:
             '"ALIEN"': विदेशी
@@ -405,7 +405,8 @@ hi:
             "{x: 300, y: 300}": नीचे दाएं
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
       Dancelab_makeNewDanceSpriteGroup:
-        text: "{LAYOUT} में {N} नया {COSTUME} बनाएं"
+        text: |-
+          [LAYOUT][2] में [N][0] नया [COSTUME][1] बनाएं
         options:
           'N':
             '2': '2'
@@ -454,11 +455,11 @@ hi:
             '"plus"': जोड़
             '"random"': यादृच्छिक
       Dancelab_mixColors:
-        text: "{COLOR1} और {COLOR2} को मिलाएं"
+        text: '[COLOR1][0] और [COLOR2][1] को मिलाएं'
       Dancelab_nMeasures:
-        text: "{N} संगीत प्रविधियां"
+        text: "[N][0] संगीत प्रविधियां"
       Dancelab_onPointerDown:
-        text: "\"संकेतक के नीचे करने पर"
+        text: '"संकेतक के नीचे करने पर'
       Dancelab_onPointerDrag:
         text: संकेतक को खींचने पर
       Dancelab_onPointerUp:
@@ -466,12 +467,14 @@ hi:
       Dancelab_randomColor:
         text: यादृच्छिक रंग
       Dancelab_setBackground:
-        text: पृष्ठभूमि का रंग {COLOR} सेट करें
+        text: पृष्ठभूमि का रंग [COLOR][0] सेट करें
       Dancelab_setBackgroundEffect:
-        text: पृष्ठभूमि प्रभाव सेट करें {EFFECT} {PALETTE}
+        text: |-
+          पृष्ठभूमि प्रभाव सेट करें [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"none"': कोई नहीं
+            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(बेतरतीब)"
             '"circles"': चक्र
             '"color_cycle"': रंग
             '"diamonds"': हीरा
@@ -500,7 +503,8 @@ hi:
             '"vintage"': विंटेज
             '"warm"': गरम
       Dancelab_setBackgroundEffectWithPalette:
-        text: पृष्ठभूमि प्रभाव सेट करें {PALETTE} {EFFECT}
+        text: |-
+          पृष्ठभूमि प्रभाव सेट करें [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"none"': कोई नहीं
@@ -540,7 +544,7 @@ hi:
             '"vintage"': विंटेज
             '"warm"': गरम
       Dancelab_setDanceSpeed:
-        text: "{SPRITE} की डांस स्पीड {SPEED} पर सेट करें"
+        text: '[SPRITE][0] की डांस स्पीड [SPEED][1] पर सेट करें'
         options:
           SPEED:
             '1': normal
@@ -549,7 +553,7 @@ hi:
             '0.5': धीमा
             '0.25': अत्‍यधिक धीमा
       Dancelab_setDanceSpeedEach:
-        text: "{GROUP} की डांस स्पीड {SPEED} पर सेट करें"
+        text: '[GROUP][0] की डांस स्पीड [SPEED][1] पर सेट करें'
         options:
           GROUP:
             sprites: सभी
@@ -571,10 +575,11 @@ hi:
             '0.5': धीमा
             '0.25': अत्‍यधिक धीमा
       Dancelab_setForegroundEffect:
-        text: आगे के भाग का प्रभाव {EFFECT} सेट करें
+        text: आगे के भाग का प्रभाव [EFFECT][0] सेट करें
         options:
           EFFECT:
             '"none"': कोई नहीं
+            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(बेतरतीब)"
             '"bubbles"': बुलबुले
             '"confetti"': कॉन्फेटी
             '"hearts_red"': दिल
@@ -589,7 +594,7 @@ hi:
             '"color_lights"': स्टेज लाइटें
             '"raining_tacos"': टैको
       Dancelab_setForegroundEffectExtended:
-        text: आगे के भाग का प्रभाव {EFFECT} सेट करें
+        text: आगे के भाग का प्रभाव [EFFECT][0] सेट करें
         options:
           EFFECT:
             '"none"': कोई नहीं
@@ -612,7 +617,7 @@ hi:
             '"exploding_stars"': स्टारबर्स्ट
             '"raining_tacos"': टैको
       Dancelab_setProp:
-        text: "{SPRITE} {PROPERTY} को {VAL} पर सेट करें "
+        text: '[SPRITE][0] [PROPERTY][1] को [VAL][2] पर सेट करें '
         options:
           PROPERTY:
             '"scale"': आकार
@@ -622,7 +627,7 @@ hi:
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
       Dancelab_setPropEach:
-        text: "{GROUP} {PROPERTY} को {VAL} पर सेट करें"
+        text: '[GROUP][0] [PROPERTY][1] को [VAL][2] पर सेट करें'
         options:
           GROUP:
             sprites: सभी
@@ -646,7 +651,7 @@ hi:
             '"y"': लंबवत स्थिति
             '"tint"': रंगत
       Dancelab_setPropRandom:
-        text: बेतरतीब{SPRITE} {PROPERTY}
+        text: बेतरतीब[SPRITE][0] [PROPERTY][1]
         options:
           PROPERTY:
             '"scale"': आकार
@@ -657,7 +662,7 @@ hi:
             '"y"': लंबवत स्थिति
             '"tint"': रंगत
       Dancelab_setPropRandomEach:
-        text: "{GROUP} {PROPERTY} को बेतरतीब करें"
+        text: '[GROUP][0] [PROPERTY][1] को बेतरतीब करें'
         options:
           GROUP:
             sprites: सभी
@@ -681,9 +686,9 @@ hi:
             '"y"': लंबवत स्थिति
             '"tint"': रंगत
       Dancelab_setTint:
-        text: "{SPRITE} की रंगत को {VAL} पर सेट करें"
+        text: '[SPRITE][0] की रंगत को [VAL][1] पर सेट करें'
       Dancelab_setTintEach:
-        text: "{THIS} रंगत को {VAL} पर सेट करें"
+        text: '[THIS][0] रंगत को [VAL][1] पर सेट करें'
         options:
           THIS:
             sprites: सभी
@@ -699,7 +704,7 @@ hi:
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
       Dancelab_setTintEachInline:
-        text: "{THIS} रंगत को {VAL} पर सेट करें"
+        text: '[THIS][0] रंगत को [VAL][1] पर सेट करें'
         options:
           THIS:
             sprites: सभी
@@ -715,15 +720,15 @@ hi:
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
       Dancelab_setTintInline:
-        text: "{SPRITE} की रंगत को {VAL} पर सेट करें"
+        text: '[SPRITE][0] की रंगत को [VAL][1] पर सेट करें'
       Dancelab_setVisible:
-        text: "{SPRITE} के दृश्य को {VISIBILITY} पर सेट करें"
+        text: '[SPRITE][0] के दृश्य को [VISIBILITY][1] पर सेट करें'
         options:
           VISIBILITY:
             'true': दृश्य
             'false': अदृश्य
       Dancelab_setVisibleEach:
-        text: "{THIS} दृश्यता को {VISIBILITY} पर सेट करें"
+        text: '[THIS][0] दृश्यता को [VISIBILITY][1] पर सेट करें'
         options:
           THIS:
             sprites: सभी
@@ -742,7 +747,7 @@ hi:
             'true': दृश्य
             'false': अदृश्य
       Dancelab_startMapping:
-        text: "{SPRITE} {PROPERTY} {RANGE} के बाद शुरू होता है"
+        text: "[SPRITE][0] [PROPERTY][1] [RANGE][2] के बाद शुरू होता है"
         options:
           PROPERTY:
             '"scale"': आकार
@@ -757,7 +762,7 @@ hi:
             '"mid"': मध्य
             '"treble"': ऊंची ध्वनि
       Dancelab_startMappingEach:
-        text: "{GROUP} {PROPERTY} निम्न {RANGE} पर शुरू करता है"
+        text: "[GROUP][0] [PROPERTY][1] निम्न [RANGE][2] पर शुरू करता है"
         options:
           GROUP:
             sprites: सभी
@@ -785,7 +790,7 @@ hi:
             '"mid"': मध्य
             '"treble"': ऊंची ध्वनि
       Dancelab_stopMapping:
-        text: "{SPRITE} {PROPERTY} {RANGE} के बाद रुकता है"
+        text: "[SPRITE][0] [PROPERTY][1] [RANGE][2] के बाद रुकता है"
         options:
           PROPERTY:
             '"scale"': आकार
@@ -801,7 +806,7 @@ hi:
             '"mid"': मध्य
             '"treble"': ऊंची ध्वनि
       Dancelab_stopMappingEach:
-        text: "{GROUP} {PROPERTY} निम्न {RANGE} पर रोकता है"
+        text: "[GROUP][0] [PROPERTY][1] निम्न [RANGE][2] पर रोकता है"
         options:
           GROUP:
             sprites: सभी
@@ -830,7 +835,7 @@ hi:
             '"mid"': मध्य
             '"treble"': ऊंची ध्वनि
       Dancelab_translateStrings:
-        text: "{STRING} का अनुवाद करें"
+        text: '[STRING][0] का अनुवाद करें'
         options:
           STRING:
             '"music_wave"': तरंगें
@@ -866,7 +871,7 @@ hi:
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
-            '"1"': १
+            '"1"': '१'
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -876,7 +881,7 @@ hi:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: जब {KEY} को दबाया हो
+        text: जब [KEY][0] को दबाया हो
         options:
           KEY:
             '"up"': ऊपर
@@ -912,7 +917,7 @@ hi:
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
-            '"1"': १
+            '"1"': '१'
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -922,7 +927,7 @@ hi:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: जब {RANGE} सबसे अधिक
+        text: जब [RANGE][0] सबसे अधिक
         options:
           RANGE:
             '0': मंद
@@ -933,15 +938,15 @@ hi:
       Dancelab_whenSetup2:
         text: सेटअप
       gamelab_addBehaviorSimple:
-        text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू करता है
+        text: स्प्राइट [SPRITE][0] [BEHAVIOR][1] शुरू करता है
       gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       gamelab_atTime:
         options:
           UNIT:
             '"seconds"': सेकंड
       gamelab_changePropBy:
-        text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
+        text: '[SPRITE][0] [PROPERTY][1] को [VAL][2] द्वारा बदलें'
         options:
           PROPERTY:
             '"scale"': आकार
@@ -951,29 +956,29 @@ hi:
             '"direction"': गतिविधि की दिशा
             '"speed"': गति
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} {SPRITE2} को छूता है"
+        text: "[CONDITION][0] [SPRITE1][1] [SPRITE2][2] को छूता है"
         options:
           CONDITION:
             '"when"': कब
             '"while"': जबकि
       gamelab_clickedOn:
-        text: जब {SPRITE} पर क्लिक किया
+        text: जब [SPRITE][0] पर क्लिक किया
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "[SPRITE][0] पर क्लिक किया"
       gamelab_comment:
-        text: 'टिप्पणी: {COMMENT}'
+        text: 'टिप्पणी: [COMMENT][0]'
       gamelab_costumeImage:
-        text: "{COSTUME}"
+        text: "[COSTUME][0]"
       gamelab_createNewSprite:
-        text: " {LOCATION} पर कॉस्ट्यूम  {COSTUME} \nके साथ\n{NAME} \nनामक एक नया \nस्प्राइट बनाएं"
+        text: " [LOCATION][2] पर कॉस्ट्यूम  [COSTUME][1] \nके साथ\n[NAME][0] \nनामक एक नया \nस्प्राइट बनाएं"
       gamelab_destroy:
-        text: "{THIS} को हटाएं"
+        text: '[THIS][0] को हटाएं'
       gamelab_draggable:
         text: ड्रैग करने योग्य हो रहा है
       gamelab_edgesDisplace:
-        text: किनारे {SPRITE} को मूव होने से रोकते हैं
+        text: किनारे [SPRITE][0] को मूव होने से रोकते हैं
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': आकार
@@ -984,7 +989,7 @@ hi:
             '"tint"': रंगत
             '"speed"': गति
       gamelab_getThisSprite:
-        text: "{CHOICE} स्प्राइट"
+        text: "[CHOICE][0] स्प्राइट"
         options:
           CHOICE:
             '"this"': यह
@@ -1030,11 +1035,11 @@ hi:
             '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
-        text: "{SPRITE} किनारों को छू रहा है"
+        text: "[SPRITE][0] किनारों को छू रहा है"
       gamelab_jumpTo:
-        text: "{SPRITE} {LOCATION} पर कूदते हैं"
+        text: "[SPRITE][0] [LOCATION][1] पर कूदते हैं"
       gamelab_keyPressed:
-        text: "{CONDITION} {KEY} दबाई"
+        text: "[CONDITION][0] [KEY][1] दबाई"
         options:
           CONDITION:
             '"when"': कब
@@ -1072,7 +1077,7 @@ hi:
             '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
-        text: 'स्थान x: {X} y: {Y}'
+        text: 'स्थान x: [X][0] y: [Y][1]'
       gamelab_locationModifier:
         options:
           DIRECTION:
@@ -1083,17 +1088,24 @@ hi:
       gamelab_locationMouse:
         text: माउस का स्थान
       gamelab_locationOf:
-        text: "{SPRITE} का स्थान"
+        text: '[SPRITE][0] का स्थान'
       gamelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': बारिश
       gamelab_makeNewSpriteAnon:
-        text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
+        text: '[LOCATION][1] पर नया [ANIMATION\_NAME][0] स्प्राइट बनाएं'
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': सही
+            '90': नीचे
+            '180': बाएं
+            '270': ऊपर
       gamelab_mirrorSprite:
-        text: "{SPRITE} सामने की ओर {DIRECTION} "
+        text: "[SPRITE][0] सामने की ओर [DIRECTION][1] "
         options:
           DIRECTION:
             '"right"': सही
@@ -1101,9 +1113,9 @@ hi:
       gamelab_mouseLocation:
         text: माउस का स्थान
       gamelab_moveForward:
-        text: "{SPRITE} {DISTANCE} पिक्सल्स को आगे की ओर मूव करें"
+        text: '[SPRITE][0] [DISTANCE][1] पिक्सल्स को आगे की ओर मूव करें'
       gamelab_moveInDirection:
-        text: "{SPRITE} {DISTANCE} पिक्सल्स को {DIRECTION} की ओर घुमाएं"
+        text: '[SPRITE][0] [DISTANCE][1] पिक्सल्स को [DIRECTION][2] की ओर घुमाएं'
         options:
           DIRECTION:
             '"North"': उत्तर
@@ -1111,20 +1123,20 @@ hi:
             '"South"': दक्षिण
             '"West"': पश्चिम
       gamelab_moveToward:
-        text: "{SPRITE} पिक्सल्स {DISTANCE} को {TARGET} की ओर घुमाएं"
+        text: '[SPRITE][0] पिक्सल्स [DISTANCE][1] को [TARGET][2] की ओर घुमाएं'
       gamelab_newSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "[SPRITE][0] पर क्लिक किया"
       gamelab_objectSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "[SPRITE][0] पर क्लिक किया"
       gamelab_playSound:
-        text: प्लेसाउंड {SOUND}
+        text: प्लेसाउंड [SOUND][0]
       gamelab_playSoundOptions:
-        text: प्लेसाउंड {SOUND}
+        text: प्लेसाउंड [SOUND][0]
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": चरमराना
       gamelab_pointInDirection:
-        text: "{SPRITE} {DIRECTION} की ओर संकेत दें"
+        text: '[SPRITE][0] [DIRECTION][1] की ओर संकेत दें'
         options:
           DIRECTION:
             '"North"': उत्तर
@@ -1132,7 +1144,7 @@ hi:
             '"South"': दक्षिण
             '"West"': पश्चिम
       gamelab_printText:
-        text: प्रिंट करें {TEXT}
+        text: प्रिंट करें [TEXT][0]
       gamelab_randColor:
         text: यादृच्छिक रंग
       gamelab_randomColor:
@@ -1140,19 +1152,19 @@ hi:
       gamelab_randomLocation:
         text: यादृच्छिक स्थान
       gamelab_removeAllBehaviors:
-        text: "{SPRITE} ने सब कुछ रोक दिया"
+        text: "[SPRITE][0] ने सब कुछ रोक दिया"
       gamelab_removeBehaviorSimple:
-        text: स्प्राइट {SPRITE} ने{BEHAVIOR} बंद कर दिया
+        text: स्प्राइट [SPRITE][0] ने[BEHAVIOR][1] बंद कर दिया
       gamelab_removeTint:
-        text: "{THIS} से रंग हटाएं"
+        text: '[THIS][0] से रंग हटाएं'
       gamelab_repeatForever:
         text: हमेशा दोहराएं
       gamelab_setAnimation:
-        text: "{THIS} कॉस्ट्यूम को {ANIMATION} में बदलें"
+        text: '[THIS][0] कॉस्ट्यूम को [ANIMATION][1] में बदलें'
       gamelab_setBackground:
-        text: पृष्ठभूमि का रंग {COLOR} सेट करें
+        text: पृष्ठभूमि का रंग [COLOR][0] सेट करें
       gamelab_setBackgroundImage:
-        text: पृष्ठभूमि के तौर पर {IMG} सेट करें
+        text: पृष्ठभूमि के तौर पर [IMG][0] सेट करें
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': गुफा
@@ -1167,7 +1179,7 @@ hi:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': सर्दी का मोसम
             undefined: कोई नहीं
       gamelab_setBackgroundImageAs:
-        text: पृष्ठभूमि के तौर पर {IMG} सेट करें
+        text: पृष्ठभूमि के तौर पर [IMG][0] सेट करें
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -1176,7 +1188,7 @@ hi:
             '75': मध्यम
             '100': large
       gamelab_setProp:
-        text: "{SPRITE} {PROPERTY} को {VAL} पर सेट करें"
+        text: '[SPRITE][0] [PROPERTY][1] को [VAL][2] पर सेट करें'
         options:
           PROPERTY:
             '"scale"': आकार
@@ -1186,7 +1198,7 @@ hi:
             '"direction"': गतिविधि की दिशा
             '"speed"': गति
       gamelab_setProp_dropdown:
-        text: "{SPRITE} {PROPERTY} को {SIZE} पर सेट करें"
+        text: '[SPRITE][0] [PROPERTY][1] को [SIZE][2] पर सेट करें'
         options:
           PROPERTY:
             '"scale"': आकार
@@ -1196,33 +1208,33 @@ hi:
             '75': मध्यम
             '100': large
       gamelab_setSizes:
-        text: "{SPRITE} {PROPERTY} को {N}% पर सेट करें"
+        text: '[SPRITE][0] [PROPERTY][1] को [N][2]% पर सेट करें'
         options:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
             '"height"': ऊंचाई
       gamelab_setTint:
-        text: "{THIS} का रंग {COLOR} पर सेट करें"
+        text: '[THIS][0] का रंग [COLOR][1] पर सेट करें'
       gamelab_setupSim:
         text: |-
           अनुरूपता को
-          {SPRITE1N}{SPRITE1COSTUME}गति{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}गति{SPRITE2SPEED}
+          [SPRITE1N][0][SPRITE1COSTUME][1]गति[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]गति[SPRITE2SPEED][5]
           के साथ
-          {SPRITE3N}{SPRITE3COSTUME} एकत्र करते हुए सेट करें
+          [SPRITE3N][6][SPRITE3COSTUME][7] एकत्र करते हुए सेट करें
       gamelab_showTitleScreen:
-        text: शीर्षक स्क्रीन दिखाएं {BREAK} शीर्षक {TITLE} टेक्सट {SUBTITLE}
+        text: शीर्षक स्क्रीन दिखाएं [BREAK][0] शीर्षक [TITLE][1] टेक्सट [SUBTITLE][2]
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} क्लिक किया"
+        text: "[CONDITION][0] [SPRITE][1] क्लिक किया"
         options:
           CONDITION:
             '"when"': कब
             '"while"': जबकि
       gamelab_subjectSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "[SPRITE][0] पर क्लिक किया"
       gamelab_turn:
-        text: "{SPRITE} {DIRECTION} {N} डिग्रियां बदलें"
+        text: '[SPRITE][0] [DIRECTION][1] [N][2] डिग्रियां बदलें'
         options:
           DIRECTION:
             '"right"': सही
@@ -1230,7 +1242,7 @@ hi:
       gamelab_whenDownArrow:
         text: जब नीचे के तीर वाला बटन दबाया गया
       gamelab_whenKey:
-        text: जब {KEY} को दबाया हो
+        text: जब [KEY][0] को दबाया हो
         options:
           KEY:
             '"up"': ऊपर
@@ -1247,13 +1259,13 @@ hi:
       gamelab_whenRightArrow:
         text: जब दाईं ओर के तीर वाला बटन दबाया गया
       gamelab_whenTouching:
-        text: जब {SPRITE1} {SPRITE2} को छूता है
+        text: जब [SPRITE1][0] [SPRITE2][1] को छूता है
       gamelab_whenUpArrow:
         text: जब ऊपर के तीर वाला बटन दबाया गया
       gamelab_whileDownArrow:
         text: जब नीचे के तीर वाला बटन दबाया गया
       gamelab_whileKey:
-        text: जब {KEY} दबाई गई
+        text: जब [KEY][0] दबाई गई
         options:
           KEY:
             '"up"': ऊपर
@@ -1270,17 +1282,17 @@ hi:
       gamelab_whileRightArrow:
         text: जब दाईं ओर के तीर वाला बटन दबाया गया
       gamelab_whileTouching:
-        text: जब {SPRITE1} {SPRITE2} को छू रहा हो
+        text: जब [SPRITE1][0] [SPRITE2][1] को छू रहा हो
       gamelab_whileUpArrow:
         text: जब ऊपर के तीर वाला बटन दबाया गया
       gamelab_xLocationOf:
-        text: "{SPRITE} का x निर्देशांक"
+        text: '[SPRITE][0] का x निर्देशांक'
       gamelab_yLocationOf:
-        text: "{SPRITE} का y निर्देशांक"
+        text: '[SPRITE][0] का y निर्देशांक'
       Mikelab_addBehaviorSimple:
-        text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू करता है
+        text: स्प्राइट [SPRITE][0] [BEHAVIOR][1] शुरू करता है
       Mikelab_addTrainingData:
-        text: 'प्रशिक्षण डेटा जोड़ें: {NAME},{LOCATION}'
+        text: 'प्रशिक्षण डेटा जोड़ें: [NAME][0],[LOCATION][1]'
         options:
           NAME:
             "{x: 201, y: 100}": वस्तु
@@ -1291,7 +1303,7 @@ hi:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": मेरा लेबल
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": मेरा लेबल नहीं है
       Mikelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1323,13 +1335,13 @@ hi:
             '"y"': y पोजीशन
             '"direction"': गतिविधि की दिशा
       Mikelab_groupChangeAnim:
-        text: "{SELECT} {COSTUME} को {COSTUME2} में बदलें"
+        text: '[SELECT][0] [COSTUME][1] को [COSTUME2][2] में बदलें'
         options:
           SELECT:
             '"all"': सभी
             '"this"': यह
       Mikelab_groupChangePropBy:
-        text: "{SELECT} {COSTUME} की {PROPERTY} को  {VAL} में बदलें"
+        text: '[SELECT][1] [COSTUME][2] की [PROPERTY][0] को  [VAL][3] में बदलें'
         options:
           SELECT:
             '"all"': सभी
@@ -1341,7 +1353,7 @@ hi:
             '"y"': y पोजीशन
             '"direction"': गतिविधि की दिशा
       Mikelab_groupCreateNewSprite:
-        text: "{LOCATION} पर एक नया {COSTUME} बनाएं"
+        text: '[LOCATION][1] पर एक नया [COSTUME][0] बनाएं'
         options:
           LOCATION:
             "{x: 200, y: 100}": ऊपर
@@ -1354,17 +1366,17 @@ hi:
             "{x: 100, y: 300}": नीचे बाएं
             "{x: 300, y: 300}": नीचे दाएं
       Mikelab_groupDestroy:
-        text: "{SELECT} {COSTUME} हटाएं"
+        text: '[SELECT][0] [COSTUME][1] हटाएं'
         options:
           SELECT:
             '"all"': सभी
             '"this"': यह
       Mikelab_groupDisplace:
-        text: सभी {COSTUME} {COSTUME2} को मूव होने से रोकते हैं
+        text: सभी [COSTUME][0] [COSTUME2][1] को मूव होने से रोकते हैं
       Mikelab_groupEdgesDisplace:
-        text: किनारे {COSTUME} को मूव होने से रोकते हैं
+        text: किनारे [COSTUME][0] को मूव होने से रोकते हैं
       Mikelab_groupGetProp:
-        text: "{SELECT} {COSTUME} की {PROPERTY}"
+        text: "[SELECT][0] [COSTUME][1] की [PROPERTY][2]"
         options:
           SELECT:
             '"average"': औसत
@@ -1376,25 +1388,25 @@ hi:
             '"y"': y पोजीशन
             '"direction"': गतिविधि की दिशा
       Mikelab_groupRemoveAllBehaviors:
-        text: "{SELECT} {COSTUME} व्यवहार रोकें"
+        text: '[SELECT][0] [COSTUME][1] व्यवहार रोकें'
         options:
           SELECT:
             '"all"': सभी
             '"this"': यह
       Mikelab_groupRemoveBehaviorSimple:
-        text: "{SELECT} {COSTUME} {BEHAVIOR} को रोकता है"
+        text: "[SELECT][0] [COSTUME][1] [BEHAVIOR][2] को रोकता है"
         options:
           SELECT:
             '"all"': सभी
             '"this"': यह
       Mikelab_groupRemoveTint:
-        text: "{SELECT} {COSTUME} से रंग हटाएं"
+        text: '[SELECT][0] [COSTUME][1] से रंग हटाएं'
         options:
           SELECT:
             '"all"': सभी
             '"this"': यह
       Mikelab_groupSetProp:
-        text: "{SELECT} {COSTUME} की {PROPERTY} को {VAL} में बदलें"
+        text: '[SELECT][1] [COSTUME][2] की [PROPERTY][0] को [VAL][3] में बदलें'
         options:
           SELECT:
             '"all"': सभी
@@ -1406,31 +1418,33 @@ hi:
             '"y"': y पोजीशन
             '"direction"': गतिविधि की दिशा
       Mikelab_groupSetTint:
-        text: "{SELECT} {COSTUME} के रंग को {COLOR} से बदलें"
+        text: '[SELECT][0] [COSTUME][1] के रंग को [COLOR][2] से बदलें'
         options:
           SELECT:
             '"all"': सभी
             '"this"': यह
       Mikelab_groupWhenClickedOn:
-        text: जब {COSTUME} पर क्लिक किया
+        text: जब [COSTUME][0] पर क्लिक किया
       Mikelab_groupWhenXTouchesY:
-        text: जब{COSTUME} {COSTUME2} को छूता है
+        text: जब[COSTUME][0] [COSTUME2][1] को छूता है
       Mikelab_groupWhileClicked:
-        text: "{COSTUME} पर क्लिक करते समय"
+        text: '[COSTUME][0] पर क्लिक करते समय'
       Mikelab_groupWhileTouchingAny:
-        text: "जब{COSTUME} {COSTUME2} को छू रहा हो\n{STATEMENT} "
+        text: |-
+          जब[COSTUME][0] [COSTUME2][1] को छू रहा हो
+          [STATEMENT][2] 
       Mikelab_hasBehavior:
-        text: "{SPRITE} is currently {BEHAVIOR}"
+        text: "[SPRITE][0] is currently [BEHAVIOR][1]"
       Mikelab_hideFish:
-        text: "{TRASH} को हटा दें"
+        text: '[TRASH][0] को हटा दें'
         options:
           TRASH:
             object: वस्तु
             fish: मछली
       Mikelab_ifDanceIs:
         text: |-
-          क्या {SPRITE}, {DANCE}
-          {DO1} {DO2} कर रहा है
+          क्या [SPRITE][0], [DANCE][1]
+          [DO1][2] [DO2][3] कर रहा है
         options:
           DANCE:
             MOVES.ClapHigh: ज़ोर से ताली बजाएं
@@ -1446,38 +1460,38 @@ hi:
             MOVES.Rest: कोई नहीं
       Mikelab_ifLabel:
         text: |-
-          यदि {DANCE}
-          करना {DO1} के अलावा {DO2}
+          यदि [DANCE][0]
+          करना [DO1][1] के अलावा [DO2][2]
         options:
           DANCE:
             MOVES.ClapHigh: मछली
             MOVES.Clown: मेरा लेबल
       Mikelab_ifRecognizeLabel:
         text: |-
-          यदि ऑब्जेक्ट को {DANCE}
-          के रूप में पहचाना जाता है तो {DO1} और {DO2} करें
+          यदि ऑब्जेक्ट को [DANCE][0]
+          के रूप में पहचाना जाता है तो [DO1][1] और [DO2][2] करें
         options:
           DANCE:
             MOVES.ClapHigh: मछली
             MOVES.Clown: मेरा लेबल
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          यदि ऑब्जेक्ट को {DANCE}
-          के रूप में पहचाना जाता है तो {DO1} करें
+          यदि ऑब्जेक्ट को [DANCE][0]
+          के रूप में पहचाना जाता है तो [DO1][1] करें
         options:
           DANCE:
             MOVES.ClapHigh: मछली
             MOVES.Clown: मेरा लेबल नहीं है
       Mikelab_joinText:
-        text: "{TEXT} {NEXT}"
+        text: "[TEXT][0] [NEXT][1]"
       Mikelab_locationAt:
-        text: 'स्थान x: {X} y: {Y}'
+        text: 'स्थान x: [X][0] y: [Y][1]'
       Mikelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       Mikelab_randomColor:
         text: यादृच्छिक रंग
       Mikelab_removeBehaviorSimple:
-        text: स्प्राइट {SPRITE} ने{BEHAVIOR} बंद कर दिया
+        text: स्प्राइट [SPRITE][0] ने[BEHAVIOR][1] बंद कर दिया
       Mikelab_repeatUntilComplete:
         text: हमेशा दोहराएं
       Mikelab_sendBad:
@@ -1499,17 +1513,17 @@ hi:
       Mikelab_setupSim:
         text: |-
           अनुरूपता को
-          {SPRITE1N}{SPRITE1COSTUME}गति{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}गति{SPRITE2SPEED}
+          [SPRITE1N][0][SPRITE1COSTUME][1]गति[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]गति[SPRITE2SPEED][5]
           के साथ
-          {SPRITE3N}{SPRITE3COSTUME} एकत्र करते हुए सेट करें
+          [SPRITE3N][6][SPRITE3COSTUME][7] एकत्र करते हुए सेट करें
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': सही
             '"left"': बाएं
       Mikelab_sprite:
-        text: "{LOCATION} पर नया स्प्राइट {COSTUME} "
+        text: '[LOCATION][1] पर नया स्प्राइट [COSTUME][0] '
         options:
           LOCATION:
             "{x: 200, y: 100}": ऊपर
@@ -1522,9 +1536,9 @@ hi:
             "{x: 100, y: 300}": नीचे बाएं
             "{x: 300, y: 300}": नीचे दाएं
       Mikelab_whenClickedOn:
-        text: जब {SPRITE} पर क्लिक किया
+        text: जब [SPRITE][0] पर क्लिक किया
       Mikelab_whenKeyPressed:
-        text: जब {KEY} को दबाया हो
+        text: जब [KEY][0] को दबाया हो
         options:
           KEY:
             '"up"': ऊपर तीर
@@ -1547,11 +1561,11 @@ hi:
       Mikelab_whenMouseClicked:
         text: when mouse clicked
       Mikelab_whenYesNoClicked:
-        text: जब {KEY} क्लिक किया गया
+        text: जब [KEY][0] क्लिक किया गया
         options:
           KEY:
-            '"yes"': हां
-            '"no"': नहीं
+            '"yes"': 'हां'
+            '"no"': 'नहीं'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1560,13 +1574,13 @@ hi:
             '"left"': बायाँ तीर
             '"right"': दायाँ तीर
       Mikelab_xLocationOf:
-        text: "{SPRITE} का x निर्देशांक"
+        text: '[SPRITE][0] का x निर्देशांक'
       Mikelab_yLocationOf:
-        text: "{SPRITE} का y निर्देशांक"
+        text: '[SPRITE][0] का y निर्देशांक'
       PoemBot_playSound:
-        text: प्लेसाउंड {SOUND}
+        text: प्लेसाउंड [SOUND][0]
       PoemBot_setBackgroundEffect:
-        text: पृष्ठभूमि प्रभाव सेट करें {EFFECT} {PALETTE}
+        text: पृष्ठभूमि प्रभाव सेट करें [BG_EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"colors"': रंग
@@ -1577,7 +1591,7 @@ hi:
           PALETTE:
             '"rainbow"': इंद्रधनुष
       PoemBot_setForegroundEffect:
-        text: आगे के भाग का प्रभाव {EFFECT} सेट करें
+        text: आगे के भाग का प्रभाव [FG_EFFECT][0] सेट करें
         options:
           EFFECT:
             '"rain"': बारिश
@@ -1592,31 +1606,29 @@ hi:
       RyanLab_turnRight:
         text: दाएं मुड़ें
       SpriteLab2Beta_spriteSay:
-        text: स्प्राइट {SPRITE} {TEXT} को {SECONDS} सेकंड तक कहता है
+        text: स्प्राइट [SPRITE][0] [TEXT][1] को [SECONDS][2] सेकंड तक कहता है
       Vector_createSpriteWith:
         text: |-
           स्प्राइट बनाएं
-          {STATEMENT} करें
+          [STATEMENT][0] करें
       Vector_log:
-        text: log message {MESSAGE}
+        text: log message [MESSAGE][0]
       Vector_positionCenter:
         text: बीच में
       Vector_push:
-        text: वेग {VECTOR} सेट करें
+        text: वेग [VECTOR][0] सेट करें
       Vector_randomLocation:
         text: यादृच्छिक स्थान
       Vector_setColor:
-        text: रंग {COLOR} पर सेट करें
+        text: रंग [COLOR][0] पर सेट करें
       Vector_setSize:
-        text: चौड़ाई {WIDTH} ऊंचाई {HEIGHT} सेट करें
+        text: चौड़ाई [WIDTH][0] ऊंचाई [HEIGHT][1] सेट करें
       Vector_teleportTo:
-        text: पोजीशन {POSITION} सेट करें
+        text: पोजीशन [POSITION][0] सेट करें
       Vector_vectorNorth:
         text: north
       Vector_where:
-        text: |-
-          प्रत्येक स्प्राइट, जहां {PROPERTY} {VALUE} है
-          {STATEMENT} करें
+        text: "प्रत्येक स्प्राइट, जहां [PROPERTY][0] [VALUE][1] है\n[STATEMENT][2] करें"
         options:
           PROPERTY:
             "'shapeColor'": रंग
@@ -1641,37 +1653,37 @@ hi:
             '0.5': half of
             '0.25': few
       binary_drawBin:
-        text: युग्मक चित्रित करें {BIN}
+        text: युग्मक चित्रित करें [BIN][0]
       binary_drawBinScreen:
         text: |-
           स्क्रीन चित्रित करें
-          {B1}
-          {B2}
-          {B3}
-          {B4}
-          {B5}
-          {B6}
-          {B7}
-          {B8}
+          [B1][0]
+          [B2][1]
+          [B3][2]
+          [B4][3]
+          [B5][4]
+          [B6][5]
+          [B7][6]
+          [B8][7]
       binary_drawDec:
-        text: दशमलव चित्रित करें {DEC}
+        text: दशमलव चित्रित करें [DEC][0]
       binary_drawPixelHere:
-        text: पिक्सल सेट करें {VAL}
+        text: पिक्सल सेट करें [VAL][0]
         options:
           VAL:
-            '0': ऑफ
-            '1': ऑन
+            '0': 'ऑफ'
+            '1': 'ऑन'
             '"toggle"': टॉगल
       binary_drawString:
-        text: स्ट्रिंग चित्रित करें {STR}
+        text: स्ट्रिंग चित्रित करें [STR][0]
       binary_goTo:
-        text: "{LOC} की ओर कूदें"
+        text: '[LOC][0] की ओर कूदें'
       binary_goToHome:
         text: ऊपर बाईं ओर कूदें
       binary_gridSize:
-        text: ग्रिड आकार सेट करें {SIZE}
+        text: ग्रिड आकार सेट करें [SIZE][0]
       binary_move:
-        text: "{DIR} मूव करें"
+        text: '[DIR][0] मूव करें'
         options:
           DIR:
             '"up"': ऊपर
@@ -1679,7 +1691,7 @@ hi:
             '"left"': बाएं
             '"right"': सही
       binary_whenKey:
-        text: जब {KEY} को दबाया हो
+        text: जब [KEY][0] को दबाया हो
         options:
           KEY:
             '"up"': ऊपर
@@ -1693,15 +1705,17 @@ hi:
             '"d"': d
       craft_ifPath:
         text: |-
-          यदि मार्ग {DIR}
-          {STATEMENT}
+          यदि मार्ग [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": आगे
             "'right'": दाईं ओर
             "'left'": बाईं ओर
       craft_ifStandingOn:
-        text: "यदि {TYPE} पर खड़ा है\n{STATEMENT} "
+        text: |-
+          यदि [TYPE][0] पर खड़ा है
+          [STATEMENT][1] 
         options:
           TYPE:
             "'blueCoralBlock'": नीला मूंगा
@@ -1711,18 +1725,20 @@ hi:
             "'planksOak'": शाहबलूत के तख्ते
             "'seaLantern'": समुद्री लालटेन
       craft_ifStandingOnLimit:
-        text: "यदि {TYPE} पर खड़ा है\n{STATEMENT} "
+        text: |-
+          यदि [TYPE][0] पर खड़ा है
+          [STATEMENT][1] 
         options:
           TYPE:
             "'sand'": रेत
             "'darkPrismarine'": डार्क प्रिस्मैरीन
             "'seaLantern'": समुद्री लालटेन
       craft_log:
-        text: log message {MESSAGE}
+        text: log message [MESSAGE][0]
       craft_moveForward:
         text: आगे जाएं
       craft_placeBlock:
-        text: स्थान {blockType}
+        text: स्थान [blockType][0]
         options:
           blockType:
             '"strippedOak"': धारीदार शाहबलूत
@@ -1757,13 +1773,13 @@ hi:
       craft_repeatUntilConduit:
         text: |-
           संचारण पूरा होने तक दोहराएं
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           लक्ष्य पर पहुंचने तक दोहराएं
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: स्पॉन {ENTITY}
+        text: स्पॉन [ENTITY][0]
         options:
           ENTITY:
             '"cod"': कॉड
@@ -1779,4 +1795,4 @@ hi:
             right: दाएं ↻
             left: बाएं ↺
       validation_validatedBackground:
-        text: पृष्ठभूमि के तौर पर {IMG} सेट करें
+        text: पृष्ठभूमि के तौर पर [IMG][0] सेट करें
