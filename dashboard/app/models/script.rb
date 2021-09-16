@@ -241,6 +241,7 @@ class Script < ApplicationRecord
     is_migrated
     seeded_from
     is_maker_unit
+    use_code_studio_lesson_plans
   )
 
   def self.twenty_hour_unit
@@ -1577,6 +1578,7 @@ class Script < ApplicationRecord
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
       weeklyInstructionalMinutes: weekly_instructional_minutes,
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
+      useCodeStudioLessonPlans: is_migrated && use_code_studio_lesson_plans,
       courseVersionId: get_course_version&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
@@ -1808,6 +1810,7 @@ class Script < ApplicationRecord
       :show_calendar,
       :is_migrated,
       :include_student_lesson_plans,
+      :use_code_studio_lesson_plans,
       :is_maker_unit
     ]
     not_defaulted_keys = [
