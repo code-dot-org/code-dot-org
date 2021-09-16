@@ -1,4 +1,3 @@
----
 bs:
   data:
     script:
@@ -477,7 +476,7 @@ bs:
               name: Zadaci
           student_description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
         cspunit1:
-          title: SK Jedinica 1 - Digitalna Informacija
+          title: "SK Jedinica 1 - Digitalna Informacija"
           lessons:
             Binary Numbers:
               name: Binarni Brojevi
@@ -674,6 +673,12 @@ bs:
               name: Planiranje
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Dobrodošli!
             Wrap-up:
@@ -710,12 +715,24 @@ bs:
               name: Zamotavanje
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Dobrodošli!
             Wrap-up:
               name: Zamotavanje
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Dobrodošli!
             Wrap-up:
@@ -1116,6 +1133,12 @@ bs:
               name: 'Izvanmrežno: Pisanje pjesama s parametrima'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Dobrodošli!
             Wrap-up:
@@ -1502,7 +1525,7 @@ bs:
             Functions:
               name: Funkcije
             'null':
-              name: ništa
+              name: 'ništa'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1919,9 +1942,9 @@ bs:
         csd6-2018:
           lessons:
             Making Music_:
-              name: Pravljenje muzike\_
+              name: Pravljenje muzike_
             Functions with Parameters_:
-              name: Funkcije sa Parametrima\_
+              name: Funkcije sa Parametrima_
             Making Music:
               name: Pravljenje muzike
             Functions with Parameters:
@@ -2260,7 +2283,7 @@ bs:
               display_name: Pregled
           lessons:
             'null':
-              name: ništa
+              name: 'ništa'
         dance-extras-gallery:
           title: Nastavite plesati
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
@@ -3017,7 +3040,7 @@ bs:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             'Programming: Happy Maps':
               name: Vesele Mape
-              description_teacher: Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.
+              description_teacher: 'Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.'
             Sequencing with Scrat:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
           lesson_groups:
