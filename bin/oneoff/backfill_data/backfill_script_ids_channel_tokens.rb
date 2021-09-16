@@ -65,6 +65,7 @@ $level_to_script_ids = {}
 def update_script_ids
   puts "Backfilling channel token script_ids..."
 
+  # find_each uses find_in_batches with a batch size of 1000 (https://apidock.com/rails/ActiveRecord/Batches/find_each)
   ChannelToken.where(id: $start_id..$end_id).find_each do |channel_token|
     next if channel_token.script_id.present?
 
