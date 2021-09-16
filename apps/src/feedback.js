@@ -692,18 +692,19 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   }
 
   ReactDOM.render(
-    React.createElement(DialogButtons, {
-      tryAgain: tryAgainText,
-      continueText:
+    <DialogButtons
+      tryAgain={tryAgainText}
+      continueText={
         options.continueText ||
-        (options.finalLevel ? msg.finish() : msg.continue()),
-      nextLevel: this.canContinueToNextLevel(options.feedbackType),
-      shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
-      userId: options.userId,
-      isK1: options.isK1,
-      assetUrl: this.studioApp_.assetUrl,
-      freePlay: options.freePlay
-    }),
+        (options.finalLevel ? msg.finish() : msg.continue())
+      }
+      nextLevel={this.canContinueToNextLevel(options.feedbackType)}
+      shouldPromptForHint={this.shouldPromptForHint(options.feedbackType)}
+      userId={options.userId}
+      isK1={options.isK1}
+      assetUrl={this.studioApp_.assetUrl}
+      freePlay={options.freePlay}
+    />,
     buttons
   );
 
@@ -1410,12 +1411,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function() {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  ReactDOM.render(
-    React.createElement(DialogButtons, {
-      ok: true
-    }),
-    buttons
-  );
+  ReactDOM.render(<DialogButtons ok={true} />, buttons);
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
