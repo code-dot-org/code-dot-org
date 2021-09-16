@@ -227,10 +227,6 @@ Javalab.prototype.init = function(config) {
   // Dispatches a redux update of isDarkMode
   getStore().dispatch(setIsDarkMode(this.isDarkMode));
 
-  // ensure autosave is executed on first run by manually setting
-  // projectChanged to true.
-  project.projectChanged();
-
   getStore().dispatch(
     setBackpackApi(new BackpackClientApi(config.backpackChannel))
   );
@@ -283,6 +279,12 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
+  if (this.studioApp_.attempts === 0) {
+    // ensure we save to S3 on the first run.
+    // Javabuilder requires code to be saved to S3.
+    project.projectChanged();
+  }
+
   this.studioApp_.attempts++;
   if (this.studioApp_.hasContainedLevels) {
     lockContainedLevelAnswers();
