@@ -12,13 +12,16 @@
         "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    double[] sales = {-4.05, 5.06, 3.99, -3.99, -1.99, 2.05, 10.50, -7.85, 6.73, -8.45};\n\n    // TO DO: Initialize a new array for the corrected sales information.\n\n\n    // TO DO: Initialize a String to contain the new sales information.\n\n\n    // TO DO: Traverse sales to fill the new array and add to the String.\n\n\n    // TO DO: Print the corrected array.\n    \n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
-  "created_at": "2021-09-01T13:06:59.000Z",
+  "published": true,
+  "created_at": "2021-09-16T20:58:22.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-09-16 20:48:48 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 20:50:24 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 20:50:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 20:55:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-16T20:58:22.162+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L5\\\"\"],\"cloned_from\":\"CSA U4L2-L5\"},{\"changed_at\":\"2021-09-16 20:58:26 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
