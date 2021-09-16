@@ -17,7 +17,7 @@ module PardotHelpers
   # @param retriable_errors [Array<Exception>]
   # @raise [ArgumentError] if no block given
   # @raise One of the retriable errors if they occurs more than max_tries times
-  def try_with_exponential_backoff(max_tries, retriable_errors = [Net::ReadTimeout])
+  def try_with_exponential_backoff(max_tries, retriable_errors = [Net::OpenTimeout, Net::ReadTimeout])
     raise ArgumentError.new('No block given') unless block_given?
 
     max_sleep_seconds = 10
