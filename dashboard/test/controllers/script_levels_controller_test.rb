@@ -58,37 +58,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
     pilot_section = create :section, user: @pilot_teacher, script: pilot_script
     @pilot_student = create(:follower, section: pilot_section).student_user
-
-    # Some of the functionality we're testing here is data-specific,
-    # and needs scripts with certain names to work. In the old
-    # fixture-based model, this data was all provided; in the new
-    # factory-based model, we need to do a little prep.
-    tested_script_names = [
-      'ECSPD',
-      Script::FLAPPY_NAME,
-      Script::FROZEN_NAME,
-      Script::HOC_NAME,
-      Script::PLAYLAB_NAME
-    ]
-
-    tested_script_names.each do |script_name|
-      script = Script.find_by_name(script_name)
-
-      # create the Script if we don't have one already
-      unless script.present?
-        script = create(:script, :with_levels, levels_count: 5, name: script_name)
-      end
-
-      # make sure that all the Script's ScriptLevels have associated
-      # Levels. This is expected during the interim period where we've
-      # removed the levels fixture but not yet the other fixtures.
-      levelless_script_levels = script.script_levels.select do |script_level|
-        script_level.levels.blank?
-      end
-      levelless_script_levels.each do |script_level|
-        script_level.levels << create(:level)
-      end
-    end
   end
 
   setup do
