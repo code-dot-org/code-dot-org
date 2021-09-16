@@ -700,7 +700,6 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
       }
       nextLevel={this.canContinueToNextLevel(options.feedbackType)}
       shouldPromptForHint={this.shouldPromptForHint(options.feedbackType)}
-      userId={options.userId}
       isK1={options.isK1}
       assetUrl={this.studioApp_.assetUrl}
       freePlay={options.freePlay}
