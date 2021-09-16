@@ -1,4 +1,3 @@
----
 km:
   data:
     blocks:
@@ -291,6 +290,13 @@ km:
         options:
           EFFECT:
             '"rain"': ភ្លៀង
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ស្តាំ
+            '90': ចុះ
+            '180': ឆ្វេង
+            '270': ឡើង
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -513,8 +519,8 @@ km:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': យល់ព្រម
-            '"no"': ទេ
+            '"yes"': 'យល់ព្រម'
+            '"no"': 'ទេ'
       Mikelab_whileKeyPressed:
         options:
           KEY:
