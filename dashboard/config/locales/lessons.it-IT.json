@@ -36,107 +36,256 @@
           "purpose": "Alcuni alunni potrebbero essere impazienti di iniziare subito a costruire i loro progetti, ma questa lezione li aiuterà a trasformare le loro idee in una corretta pianificazione. Questa struttura manterrà i più sognatori coi piedi a terra ed illuminerà la strada a coloro a cui sembrerà di brancolare nel buio. Fornisci agli alunni tutto il tempo per costruire e rivedere i loro progetti. I tentativi e gli errori inevitabilmente coinvolti in questa lezione insegneranno la risoluzione dei problemi e la persistenza.",
           "student_overview": "Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!"
         },
+        "courseb-2021/Digital Trails": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "courseb-2021/Move It, Move It": {
-          "purpose": "Utilizzando il movimento fisico per programmare i loro compagni di classe, gli alunni incontreranno problemi ed emozioni simili a ciò che proveranno quando inizieranno a programmare su un computer. Incontrare questi stress in un ambiente giocoso e aperto aiuterà ad alleviare l'intensità e permetterà agli studenti di mettere in pratica le abilità necessarie prima che incontrino problemi da soli."
+          "overview": "",
+          "preparation": "",
+          "purpose": "Utilizzando il movimento fisico per programmare i loro compagni di classe, gli alunni incontreranno problemi ed emozioni simili a ciò che proveranno quando inizieranno a programmare su un computer. Incontrare questi stress in un ambiente giocoso e aperto aiuterà ad alleviare l'intensità e permetterà agli studenti di mettere in pratica le abilità necessarie prima che incontrino problemi da soli.",
+          "student_overview": ""
         },
         "courseb-2021/Sequencing in Maze": {
           "overview": "Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.",
-          "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi."
+          "preparation": "",
+          "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
+          "student_overview": ""
+        },
+        "courseb-2021/Programming in Maze": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "courseb-2021/Programming in Harvester": {
-          "purpose": "In questa lezione, gli alunni svilupperanno abilità nella risoluzione dei problemi e continueranno a sviluppare le loro capacità di programmazione."
+          "overview": "",
+          "preparation": "",
+          "purpose": "In questa lezione, gli alunni svilupperanno abilità nella risoluzione dei problemi e continueranno a sviluppare le loro capacità di programmazione.",
+          "student_overview": ""
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "In questa lezione animeremo una festa con dei balli realizzati sfruttando i cicli!"
         },
+        "courseb-2021/Loops in Harvester": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "courseb-2021/Loops in Collector": {
-          "purpose": "Questa lezione offre agli alunni più pratica con i cicli e li incoraggia a inserire più blocchi all'interno di una `ripetizione` mentre cercano di raccogliere più diamanti possibile."
+          "overview": "",
+          "preparation": "",
+          "purpose": "Questa lezione offre agli alunni più pratica con i cicli e li incoraggia a inserire più blocchi all'interno di una `ripetizione` mentre cercano di raccogliere più diamanti possibile.",
+          "student_overview": ""
         },
         "courseb-2021/Loops in Artist": {
           "overview": "Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli.",
-          "purpose": "Questa lezione offre una diversa prospettiva su come possono essere usati i cicli nella programmazione. Gli alunni metteranno alla prova le loro capacità di pensiero critico, valutando il codice fornito e determinando cosa bisogna aggiungere per risolvere un certo esercizio. Gli alunni qui possono riflettere anche sull'inefficienza della programmazione senza cicli `ripeti`, valutando quanti blocchi richiederebbe il programma senza l'aiuto di questa fondamentale istruzione."
+          "preparation": "",
+          "purpose": "Questa lezione offre una diversa prospettiva su come possono essere usati i cicli nella programmazione. Gli alunni metteranno alla prova le loro capacità di pensiero critico, valutando il codice fornito e determinando cosa bisogna aggiungere per risolvere un certo esercizio. Gli alunni qui possono riflettere anche sull'inefficienza della programmazione senza cicli `ripeti`, valutando quanti blocchi richiederebbe il programma senza l'aiuto di questa fondamentale istruzione.",
+          "student_overview": ""
+        },
+        "courseb-2021/The Right App": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "courseb-2021/Events: The Big Event": {
-          "overview": "Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo."
+          "overview": "Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo.",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "courseb-2021/Events in Play Lab": {
           "overview": "In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!",
-          "purpose": "In questa lezione tecnologica, gli alunni impareranno come usare gli eventi nel Laboratorio. Inizieranno addestrando un cavaliere a muoversi quando viene premuto un tasto freccia, per poi terminare con l'opportunità di mostrare nell'ultimo esercizio libero, tutte le competenze apprese durante il corso, tra cui le sequenze di istruzioni ed i cicli."
+          "preparation": "",
+          "purpose": "In questa lezione tecnologica, gli alunni impareranno come usare gli eventi nel Laboratorio. Inizieranno addestrando un cavaliere a muoversi quando viene premuto un tasto freccia, per poi terminare con l'opportunità di mostrare nell'ultimo esercizio libero, tutte le competenze apprese durante il corso, tra cui le sequenze di istruzioni ed i cicli.",
+          "student_overview": ""
+        },
+        "courseb-2021/lesson-1": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "coursea-2021/Learn to Drag and Drop": {
           "overview": "Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.",
-          "purpose": "Il traguardo di questa lezione è di introdurre gli alunni alle funzionalità di base dell'utilizzo dei computer, come fare clic con il mouse e trascinare e rilasciare gli oggetti sullo schermo. In questo modo si cerca di livellare le differenze di esperienza dei vari alunni, in vista degli esercizi futuri. Questa lezione offre anche una grande opportunità per introdurre la terminologia hardware di base del computer, che potenzialmente include \"mouse\", \"trackpad\" o \"touchscreen\", a seconda dei dispositivi."
+          "preparation": "",
+          "purpose": "Il traguardo di questa lezione è di introdurre gli alunni alle funzionalità di base dell'utilizzo dei computer, come fare clic con il mouse e trascinare e rilasciare gli oggetti sullo schermo. In questo modo si cerca di livellare le differenze di esperienza dei vari alunni, in vista degli esercizi futuri. Questa lezione offre anche una grande opportunità per introdurre la terminologia hardware di base del computer, che potenzialmente include \"mouse\", \"trackpad\" o \"touchscreen\", a seconda dei dispositivi.",
+          "student_overview": ""
         },
         "coursea-2021/Programming: Happy Maps": {
           "overview": "Il passaggio da algoritmo a programmazione può essere più immediato se gli studenti capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli studenti ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
-          "purpose": "Il passaggio da algoritmo a programmazione può essere più immediato se gli studenti capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli studenti ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli."
+          "preparation": "",
+          "purpose": "Il passaggio da algoritmo a programmazione può essere più immediato se gli studenti capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli studenti ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
+          "student_overview": ""
         },
         "coursea-2021/Sequencing with Scrat": {
           "overview": "Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.",
-          "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi."
+          "preparation": "",
+          "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
+          "student_overview": ""
         },
         "coursea-2021/Programming in Ice Age": {
-          "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi."
+          "overview": "",
+          "preparation": "",
+          "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
+          "student_overview": ""
+        },
+        "coursea-2021/Programming with Rey and BB-8": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "coursea-2021/Loops: Happy Loops": {
           "overview": "I cicli sono uno strumento molto utile e potente nella programmazione. Per capire quanto utili possono essere, gli studenti dovranno essere condotti a desiderare un modo più semplice per risolvere problemi banali.",
-          "purpose": "Con questa lezione vengono introdotte le istruzioni di ripetizione (cicli). I cicli permettono agli alunni di semplificare i programmi raggruppando le istruzioni che devono essere ripetute. Gli alunni svilupperanno il pensiero critico, notando la ripetizione nei movimenti dei loro compagni di classe e determinando quante volte ripetere le istruzioni. Vedendo di nuovo \"Mappe Felici\", gli alunni avranno la possibilità di mettere in relazione concetti vecchi come le sequenze di istruzioni con il nuovo concetto delle istruzioni di ripetizione."
+          "preparation": "",
+          "purpose": "Con questa lezione vengono introdotte le istruzioni di ripetizione (cicli). I cicli permettono agli alunni di semplificare i programmi raggruppando le istruzioni che devono essere ripetute. Gli alunni svilupperanno il pensiero critico, notando la ripetizione nei movimenti dei loro compagni di classe e determinando quante volte ripetere le istruzioni. Vedendo di nuovo \"Mappe Felici\", gli alunni avranno la possibilità di mettere in relazione concetti vecchi come le sequenze di istruzioni con il nuovo concetto delle istruzioni di ripetizione.",
+          "student_overview": ""
+        },
+        "coursea-2021/Loops in Ice Age": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "coursea-2021/Loops in Collector": {
           "overview": "Basandosi sul concetto di istruzioni ripetute appreso in \"Cicli Felici\", in questa lezione gli studenti utilizzeranno i cicli per raccogliere dei diamanti su Code.org in modo più efficiente.",
-          "purpose": "Questa lezione offre agli alunni più pratica con i cicli e introduce un nuovo blocco, `prendi il tesoro`. Il blocco funziona esattamente come \"raccogli il mais\" nella Contadina. Questi esercizi sono più aperti e offrono agli alunni maggiore flessibilità per le loro soluzioni finali."
+          "preparation": "",
+          "purpose": "Questa lezione offre agli alunni più pratica con i cicli e introduce un nuovo blocco, `prendi il tesoro`. Il blocco funziona esattamente come \"raccogli il mais\" nella Contadina. Questi esercizi sono più aperti e offrono agli alunni maggiore flessibilità per le loro soluzioni finali.",
+          "student_overview": ""
         },
         "coursea-2021/Ocean Scene with Loops": {
-          "overview": "Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli."
+          "overview": "Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli.",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "coursea-2021/Events: The Big Event": {
-          "overview": "Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo."
+          "overview": "Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo.",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "coursea-2021/Events in Play Lab": {
           "overview": "In questa attività online, gli studenti avranno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!",
-          "purpose": "Oggi gli alunni svilupperanno ulteriormente la loro comprensione della gestione degli eventi utilizzando il Laboratorio. Gli eventi sono molto comuni nella maggior parte dei programmi per computer. In questa attività, gli studenti useranno gli eventi per far muovere un personaggio sullo schermo, fare rumori e cambiare lo sfondo in base agli eventi scatenati dall'utente."
+          "preparation": "",
+          "purpose": "Oggi gli alunni svilupperanno ulteriormente la loro comprensione della gestione degli eventi utilizzando il Laboratorio. Gli eventi sono molto comuni nella maggior parte dei programmi per computer. In questa attività, gli studenti useranno gli eventi per far muovere un personaggio sullo schermo, fare rumori e cambiare lo sfondo in base agli eventi scatenati dall'utente.",
+          "student_overview": ""
+        },
+        "coursea-2021/lesson-1": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "coursec-2021/Putting a STOP to Online Meanness": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "coursec-2021/Programming: My Robotic Friends": {
-          "purpose": "Questa lezione tradizionale riunisce l'intera classe in un'unica squadra motivata da un semplice compito: condurre un \"robot\" ad accatastare dei bicchieri secondo uno schema predeterminato. Questa attività pone le basi per la programmazione che gli alunni faranno durante il corso, mentre comprendono l'importanza di definire un algoritmo nel modo più dettagliato e comprensibile possibile."
+          "overview": "",
+          "preparation": "",
+          "purpose": "Questa lezione tradizionale riunisce l'intera classe in un'unica squadra motivata da un semplice compito: condurre un \"robot\" ad accatastare dei bicchieri secondo uno schema predeterminato. Questa attività pone le basi per la programmazione che gli alunni faranno durante il corso, mentre comprendono l'importanza di definire un algoritmo nel modo più dettagliato e comprensibile possibile.",
+          "student_overview": ""
         },
         "coursec-2021/Programming in Maze": {
-          "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi."
+          "overview": "",
+          "preparation": "",
+          "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
+          "student_overview": ""
         },
         "coursec-2021/Debugging in Maze": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "Cerca gli errori negli esercizi mettendo in pratica le tue capacità di debugging."
         },
         "coursec-2021/Programming in Collector": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "Scrivi algoritmi per aiutare Laura l'avventuriera a raccogliere tanti diamanti!"
         },
         "coursec-2021/Programming in Artist": {
+          "overview": "",
+          "preparation": "",
           "purpose": "Basandosi sulle precedenti esperienze degli alunni con le sequenze di istruzioni, questa lezione servirà ad ispirare maggiore creatività nella programmazione. Con questa lezione si ha lo scopo di consolidare le conoscenze sulle sequenze di istruzioni, introducendo nuovi blocchi ed obiettivi. Utilizzando i nuovi blocchi a disposizione in questi esercizi, gli alunni acquisiscono maggiore dimestichezza con i pixel e gli angoli, mentre continuano a far pratica con le loro abilità di programmazione. Inoltre, gli alunni saranno in grado di concepire nuovi obiettivi come la programmazione dell'artista per disegnare un quadrato.",
           "student_overview": "Crea splendide immagini programmando l'artista."
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
-          "purpose": "Questa lezione serve ad introdurre i cicli, usando l'ormai familiare insieme di istruzioni per programmare i \"robot\". Gli alunni sviluppano il pensiero critico cercando schemi di ripetizione nei movimenti dei compagni di classe e determinando come semplificare quegli schemi ripetuti usando i cicli."
+          "overview": "",
+          "preparation": "",
+          "purpose": "Questa lezione serve ad introdurre i cicli, usando l'ormai familiare insieme di istruzioni per programmare i \"robot\". Gli alunni sviluppano il pensiero critico cercando schemi di ripetizione nei movimenti dei compagni di classe e determinando come semplificare quegli schemi ripetuti usando i cicli.",
+          "student_overview": ""
+        },
+        "coursec-2021/Loops with Rey and BB-8": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "coursec-2021/Loops in Harvester": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "Usiamo i cicli per aiutare la contadina a raccogliere le sue verdure!"
         },
         "coursec-2021/Sticker Art with Loops": {
+          "overview": "",
+          "preparation": "",
           "purpose": "Questa serie di esercizi mette in evidenza la potenza il dei cicli in progetti creativi e personali.  \n\nIn questa lezione, da un esercizio al successivo, vengono mantenute le personalizzazioni introdotte nel codice, permettendo così agli alunni di costruire incredibili artefatti totalmente personali.",
           "student_overview": "In questa lezione i cicli permettono all'artista di realizzare immagini ancora più interessanti!"
         },
         "coursec-2021/Events: The Big Event": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "Fai un gioco divertente per conoscere gli eventi."
         },
         "coursec-2021/Build a Flappy Game": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "Costruisci il tuo personale gioco Flappy Bird e poi condividilo con i tuoi amici!"
         },
         "coursec-2021/Events in Play Lab": {
           "overview": "In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!",
+          "preparation": "",
           "purpose": "Qui gli alunni svilupperanno ulteriormente la loro comprensione degli eventi utilizzando il Laboratorio. Gli alunni useranno i gestori di eventi per far muovere i personaggi sullo schermo, fare rumori e cambiare lo sfondo in base agli input dell'utente. Alla fine degli esercizi gli alunni avranno l'opportunità di condividere i loro progetti.  ",
           "student_overview": "È il momento di essere creativi e creare un gioco nel Laboratorio!"
         },
+        "coursec-2021/Picturing Data": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "coursec-2021/Binary Bracelets": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "Crea il tuo braccialetto binario personale e impara in che modo i computer ricordano le informazioni!"
         },
         "coursec-2021/End of Course Project: Create a Play Lab Game": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto."
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
@@ -256,43 +405,66 @@
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "overview": "Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.",
-          "purpose": "Il traguardo di questa lezione è di introdurre gli alunni alle funzionalità di base dell'utilizzo dei computer, come fare clic con il mouse e trascinare e rilasciare gli oggetti sullo schermo. In questo modo si cerca di livellare le differenze di esperienza dei vari alunni, in vista degli esercizi futuri. Questa lezione offre anche una grande opportunità per introdurre la terminologia hardware di base del computer, che potenzialmente include \"mouse\", \"trackpad\" o \"touchscreen\", a seconda dei dispositivi."
+          "preparation": "",
+          "purpose": "Il traguardo di questa lezione è di introdurre gli alunni alle funzionalità di base dell'utilizzo dei computer, come fare clic con il mouse e trascinare e rilasciare gli oggetti sullo schermo. In questo modo si cerca di livellare le differenze di esperienza dei vari alunni, in vista degli esercizi futuri. Questa lezione offre anche una grande opportunità per introdurre la terminologia hardware di base del computer, che potenzialmente include \"mouse\", \"trackpad\" o \"touchscreen\", a seconda dei dispositivi.",
+          "student_overview": ""
         },
         "pre-express-2021/Sequencing with Scrat": {
           "overview": "Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.",
-          "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi."
+          "preparation": "",
+          "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
+          "student_overview": ""
         },
         "pre-express-2021/Programming in with Angry Birds": {
+          "overview": "",
+          "preparation": "",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi."
         },
         "pre-express-2021/Programming with Rey and BB-8": {
+          "overview": "",
+          "preparation": "",
           "purpose": "Sempre allo scopo di trasferire le conoscenze, in questa lezione viene fornito agli alunni un nuovo ambiente per far pratica con le abilità che stanno acquisendo. I fan di Star Wars salteranno di gioia quando vedranno questi esercizi. Ogni esercizio di questa serie è stato aggiunto per approfondire i concetti di base che utilizzeranno per il resto del corso."
         },
         "pre-express-2021/Programming in Harvester": {
-          "purpose": "In questa lezione, gli alunni svilupperanno abilità nella risoluzione dei problemi e continueranno a sviluppare le loro capacità di programmazione."
+          "overview": "",
+          "preparation": "",
+          "purpose": "In questa lezione, gli alunni svilupperanno abilità nella risoluzione dei problemi e continueranno a sviluppare le loro capacità di programmazione.",
+          "student_overview": ""
         },
         "pre-express-2021/Loops with Scrat": {
-          "purpose": "In questa lezione, gli alunni impareranno altre cose sui cicli e su come implementarli con i blocchi Blockly. L'uso dei _cicli_ è un'abilità importante nella programmazione, perché la ripetizione manuale delle istruzioni è noiosa e inefficiente. Con gli esercizi di Code.org, gli alunni impareranno ad aggiungere istruzioni ai cicli esistenti, a riunire in cicli le sequenze di istruzioni ripetute e a riconoscere gli schemi che si ripetono e che devono essere ricondotti ad un ciclo."
+          "overview": "",
+          "preparation": "",
+          "purpose": "In questa lezione, gli alunni impareranno altre cose sui cicli e su come implementarli con i blocchi Blockly. L'uso dei _cicli_ è un'abilità importante nella programmazione, perché la ripetizione manuale delle istruzioni è noiosa e inefficiente. Con gli esercizi di Code.org, gli alunni impareranno ad aggiungere istruzioni ai cicli esistenti, a riunire in cicli le sequenze di istruzioni ripetute e a riconoscere gli schemi che si ripetono e che devono essere ricondotti ad un ciclo.",
+          "student_overview": ""
         },
         "pre-express-2021/Loops with Laurel": {
           "overview": "In questa lezione, gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laura l'avventuriera usa i cicli per raccogliere diamanti negli spazi aperti delle caverne. Viene introdotto un nuovo blocco \"Prendi diamanti\" per aiutarla nel suo viaggio.",
+          "preparation": "",
           "purpose": "Questa lezione offre agli alunni più pratica con i cicli e li incoraggia a inserire più blocchi all'interno di una `ripetizione` mentre cercano di raccogliere più diamanti possibile."
         },
         "pre-express-2021/Ocean Scene with Loops": {
           "overview": "Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli.",
-          "purpose": "Questa lezione offre nuove prospettive di utilizzo creativo dei cicli nella programmazione. Qui gli alunni possono riflettere ulteriormente sull'inefficienza della programmazione senza cicli e rendersi conto di quanti blocchi richiederebbe il programma senza l'aiuto del ciclo `ripeti`."
+          "preparation": "",
+          "purpose": "Questa lezione offre nuove prospettive di utilizzo creativo dei cicli nella programmazione. Qui gli alunni possono riflettere ulteriormente sull'inefficienza della programmazione senza cicli e rendersi conto di quanti blocchi richiederebbe il programma senza l'aiuto del ciclo `ripeti`.",
+          "student_overview": ""
         },
         "pre-express-2021/Drawing Gardens with Loops": {
           "overview": "Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli.",
-          "purpose": "Questa lezione offre una diversa prospettiva su come possono essere usati i cicli nella programmazione. Gli alunni metteranno alla prova le loro capacità di pensiero critico, valutando il codice fornito e determinando cosa bisogna aggiungere per risolvere un certo esercizio. Gli alunni qui possono riflettere anche sull'inefficienza della programmazione senza cicli `ripeti`, valutando quanti blocchi richiederebbe il programma senza l'aiuto di questa fondamentale istruzione."
+          "preparation": "",
+          "purpose": "Questa lezione offre una diversa prospettiva su come possono essere usati i cicli nella programmazione. Gli alunni metteranno alla prova le loro capacità di pensiero critico, valutando il codice fornito e determinando cosa bisogna aggiungere per risolvere un certo esercizio. Gli alunni qui possono riflettere anche sull'inefficienza della programmazione senza cicli `ripeti`, valutando quanti blocchi richiederebbe il programma senza l'aiuto di questa fondamentale istruzione.",
+          "student_overview": ""
         },
         "pre-express-2021/On the Move with Events": {
           "overview": "In questa attività online, gli studenti avranno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!",
-          "purpose": "Oggi gli alunni svilupperanno ulteriormente la loro comprensione della gestione degli eventi utilizzando il Laboratorio. Gli eventi sono molto comuni nella maggior parte dei programmi per computer. In questa attività, gli studenti useranno gli eventi per far muovere un personaggio sullo schermo, fare rumori e cambiare lo sfondo in base agli eventi scatenati dall'utente."
+          "preparation": "",
+          "purpose": "Oggi gli alunni svilupperanno ulteriormente la loro comprensione della gestione degli eventi utilizzando il Laboratorio. Gli eventi sono molto comuni nella maggior parte dei programmi per computer. In questa attività, gli studenti useranno gli eventi per far muovere un personaggio sullo schermo, fare rumori e cambiare lo sfondo in base agli eventi scatenati dall'utente.",
+          "student_overview": ""
         },
         "pre-express-2021/A Royal Battle with Events": {
           "overview": "In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!",
-          "purpose": "In questa lezione tecnologica, gli alunni impareranno come usare gli eventi nel Laboratorio. Inizieranno addestrando un cavaliere a muoversi quando viene premuto un tasto freccia, per poi terminare con l'opportunità di mostrare nell'ultimo esercizio libero, tutte le competenze apprese durante il corso, tra cui le sequenze di istruzioni ed i cicli."
+          "preparation": "",
+          "purpose": "In questa lezione tecnologica, gli alunni impareranno come usare gli eventi nel Laboratorio. Inizieranno addestrando un cavaliere a muoversi quando viene premuto un tasto freccia, per poi terminare con l'opportunità di mostrare nell'ultimo esercizio libero, tutte le competenze apprese durante il corso, tra cui le sequenze di istruzioni ed i cicli.",
+          "student_overview": ""
         },
         "coursee-2021/Private and Personal Information": {
           "student_overview": "Internet è divertente ed emozionante, ma è anche importante muoversi in sicurezza. In questa lezione imparerai la differenza tra i dati che si possono condividere ed i dati personali da mantenere privati."

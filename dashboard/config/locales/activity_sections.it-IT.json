@@ -413,55 +413,149 @@
         "b240c1ca-bdb8-4b45-80da-5acf76d4ca7b": {
           "description": "Se i tuoi alunni hanno già molta dimestichezza con la programmazione, puoi provare a fargli creare i progetti in un differente ambiente di programmazione, come ad esempio [Scratch](https://scratch.mit.edu/)."
         },
+        "4c778537-489f-4c5c-913b-38cbf385737c": {
+          "name": "",
+          "description": "",
+          "progression_name": ""
+        },
+        "854c6fa9-6eda-4b41-8b7f-f7f0839f37ef": {
+          "description": ""
+        },
+        "732166f3-fa43-4af1-ae51-fa6136a7a8e7": {
+          "description": ""
+        },
+        "2ec9f664-2513-4fd2-972a-32193c8ab3a8": {
+          "description": ""
+        },
+        "aada1356-e4af-422e-897b-8ff511b2b4d3": {
+          "description": ""
+        },
+        "6e508233-b35d-43b1-ae77-81359ff95e99": {
+          "description": ""
+        },
         "0747338b-f02e-459d-b669-3c0f11486ae1": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "b58c10d1-6292-477b-9e94-af2238d56214": {
+          "description": ""
         },
         "7d459337-19c7-4d00-a1de-ec2286ea373c": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "d75d074a-5ebe-4143-bfbb-91c12750dd30": {
+          "description": ""
+        },
+        "b87acbf5-a0a2-4c86-a344-3fbf143431f6": {
+          "progression_name": ""
+        },
         "0c64d280-12f6-4d9a-9329-dac1aa620ca5": {
-          "name": "Muovilo, muovilo"
+          "name": "Muovilo, muovilo",
+          "description": ""
         },
         "93f8de74-6246-4227-8418-08d5c736633b": {
           "name": "Riflessione",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "d8233290-3b13-4062-b13e-6bc56ccd2f7f": {
           "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere usate come attività extra-scolastica o come approfondimento.\n\n**di X e di O**\n\n-   Disegna una tavola da tris per la classe.\n-   Metti una sola X e una sola O da qualche parte sul tabellone.\n-   Chiedi alla classe se possono portare la X alla O usando i gesti delle braccia come classe.\n\n**di X, di O e Frecce**\n\n-   Simile all'attività in alto, ma chiedi agli alunni di scrivere i loro programmi in anticipo usando le frecce invece dei gesti delle mani.\n    -   Questo può essere fatto in gruppi.\n    -   I gruppi possono condividere le loro soluzioni per la classe."
         },
+        "6fbe07dc-fe00-448c-89a6-39971bfcc99f": {
+          "name": "",
+          "description": ""
+        },
         "af269d6d-e57d-4331-bc8d-daae801d1db0": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "bc3a3305-ab8c-4998-95f6-8fe5c68fb211": {
+          "description": ""
+        },
+        "097eb409-6a3c-41f3-935e-dd1f235231c7": {
+          "description": ""
+        },
+        "bca3fd9d-6986-4755-80d1-056fcf486977": {
+          "name": "",
+          "description": ""
+        },
+        "be611371-ad73-4d3a-b3cf-7e20b4687b61": {
+          "name": "",
+          "description": ""
         },
         "07f0915c-fd00-4787-8a53-251613824cc8": {
           "name": "Sequenze di istruzioni con Angry Birds",
           "tips": [
-            null
+            ""
           ]
+        },
+        "4784895a-ea4f-4a2f-b4ef-c392b016f01c": {
+          "description": ""
+        },
+        "52466cb4-0b52-4d09-aeb9-7db1a558001e": {
+          "progression_name": ""
+        },
+        "b9d126ca-d582-403d-a4dc-45c555d65700": {
+          "description": ""
         },
         "b43821ea-fcde-4389-a55f-285b77e61964": {
           "progression_name": "Costruzione di abilità"
         },
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "0375d24a-10d8-4f65-87a3-d832c268c183": {
+          "description": ""
+        },
+        "dcd637b9-bd6f-4cc8-a0bf-d4a0b8096749": {
+          "description": ""
         },
         "7a8f2f22-1330-4e95-934e-8ab9c4441b20": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "85e4f61b-eaec-4bf9-b9d3-58afc91322bf": {
+          "description": ""
+        },
+        "8b5a63fd-e737-4cfe-bd6d-ae6e37c1cefc": {
+          "description": ""
+        },
+        "4d06cf45-70a0-47fb-a3ff-0d4818645b5c": {
+          "name": "",
+          "description": ""
+        },
+        "af41bb35-0f50-4787-81ac-3658bfa59b98": {
+          "name": "",
+          "description": ""
+        },
+        "72a8989a-9059-4d0b-8744-2956025dc538": {
+          "description": ""
+        },
         "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
-          "name": "Programmare con Angry Bird"
+          "name": "Programmare con Angry Bird",
+          "description": ""
+        },
+        "32a0cded-433b-4111-b1a5-8513247d783b": {
+          "progression_name": ""
         },
         "a60dc5a3-0c97-439c-86a4-628f733b0916": {
           "progression_name": "Costruzione di abilità"
+        },
+        "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
+          "progression_name": ""
         },
         "02e3f29b-3c7a-4226-8503-1b2cc47a2028": {
           "progression_name": "Pratica"
@@ -471,78 +565,170 @@
         },
         "6a3d0163-b925-4e7a-933a-93f7d6432233": {
           "tips": [
-            null
+            ""
           ]
         },
+        "49e55532-9f30-4591-a6ff-1f9c6abf32f1": {
+          "description": ""
+        },
         "c0a1cc94-6551-4771-841c-2b480772c527": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "82f16207-0435-4b48-bbb4-9378a2567b03": {
           "description": "Divisi in piccoli gruppi, fai progettare agli alunni dei labirinti di carta e falli sfidare tra di loro a scrivere i programmi per risolverli. Per aggiungere divertimento, puoi anche creare dei labirinti a grandezza naturale facendo interpretare agli alunni i ruoli di uccellino e maialino."
         },
         "53abffa5-fdeb-4041-a349-1e8e05f5d814": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "9aac4851-ae7d-497a-967e-1926a3d77c21": {
+          "description": ""
         },
         "478f0185-2792-46bb-8d0d-e88788ebb722": {
-          "name": "Programmare con la contadina"
+          "name": "Programmare con la contadina",
+          "description": ""
         },
         "78aa2079-ec2a-438a-90cd-fc04c7fd1a89": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "c99faf85-9a98-4efe-8843-65d04bed20f6": {
+          "description": ""
+        },
+        "0f52c6dc-5602-4905-a924-f7756676f53f": {
+          "progression_name": ""
         },
         "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
           "progression_name": "Costruzione di abilità"
         },
+        "d02d999e-ab11-4eab-89cc-fc1a1360c3e5": {
+          "progression_name": ""
+        },
         "9f24e731-b41f-4339-877d-314aa5813f01": {
           "progression_name": "Costruzione di abilità"
+        },
+        "fcc74691-719d-415b-87ae-8bc40b436318": {
+          "progression_name": ""
         },
         "270d2335-43e2-42a0-a4fe-4035d2e071b5": {
           "progression_name": "Pratica"
         },
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "8d66f089-ec12-474c-9410-cff9a1d9042a": {
+          "name": "",
+          "description": ""
+        },
+        "f1742404-d822-4885-a44e-f05f9bc991f3": {
+          "description": ""
+        },
+        "c8fd8e69-c19d-4264-90f8-44bb6909902d": {
+          "progression_name": ""
         },
         "018fc5e4-ba55-4049-8faf-bfd0f596e796": {
           "name": "Diventare ripetitivi"
         },
         "0d345591-6747-4a5e-aeb9-196c42f905cd": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "c19f7d42-9e78-4dc2-9d00-5c6e211be4ac": {
+          "description": ""
+        },
+        "5d225181-2af4-4b13-a7ef-96c2af34a7b2": {
+          "description": ""
+        },
+        "41aa9a16-e91e-4cdc-a3cd-b6dd125a2d0c": {
+          "description": ""
+        },
         "740f60c7-c857-4947-804e-498fb18ab620": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "7bf673c3-c5d7-43a4-b847-4548326462a1": {
+          "description": ""
+        },
+        "98b7009b-0d2e-4b16-80bb-72decac5a3a7": {
+          "description": ""
+        },
+        "16800831-7ae9-4206-baf3-71ceeb512506": {
+          "description": ""
         },
         "4d2a4e7e-8950-4697-a7c2-1035fe6a4d4c": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "bd8c9fb2-0968-4f8e-8186-c54ac0fc9870": {
+          "description": ""
+        },
+        "312282bb-1122-4f51-b143-605d761309d1": {
+          "name": "",
+          "description": ""
         },
         "bce6dafd-6066-46f8-872c-1b793b1098c7": {
-          "name": "Anteprima degli esercizi online con tutta la classe "
+          "name": "Anteprima degli esercizi online con tutta la classe ",
+          "description": ""
         },
         "11be2bd6-803f-4a86-9f3c-f366fbcbea4b": {
-          "name": "Cicli con la contadina"
+          "name": "Cicli con la contadina",
+          "description": ""
         },
         "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
           "progression_name": "Costruzione di abilità"
         },
+        "a58a0e8a-e277-4309-92c4-990cc99c53b4": {
+          "progression_name": ""
+        },
         "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
           "progression_name": "Costruzione di abilità"
+        },
+        "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
+          "progression_name": ""
         },
         "cb321e7e-953a-4d73-a614-39cb86ef8b15": {
           "progression_name": "Pratica"
         },
         "8342e7d2-b605-4c73-80a9-2d3d97aad783": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "edccf663-8ffc-4d68-973b-04b5dc5cdcfd": {
+          "description": ""
+        },
+        "73d6d577-ed28-4b7a-948a-8c9aea13dec4": {
+          "description": ""
         },
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "f9049e6f-d7f9-44c9-b38f-721d93ab7c0f": {
+          "description": ""
+        },
+        "080f9c60-77da-4902-a7ba-a5b21efd9aca": {
+          "name": "",
+          "description": ""
+        },
+        "fe653971-9c18-44ee-adbc-727e8978b387": {
+          "progression_name": ""
         },
         "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
           "progression_name": "Costruzione di abilità"
         },
+        "9bffbabf-f624-49e2-b54b-52317b420600": {
+          "progression_name": ""
+        },
         "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
           "progression_name": "Costruzione di abilità"
+        },
+        "9b293bbc-d3e3-494d-892e-f90e56347451": {
+          "progression_name": ""
         },
         "8c213233-f661-45be-9898-31c343bba987": {
           "progression_name": "Pratica"
@@ -550,22 +736,43 @@
         "eedc7420-83ed-420a-8bfe-db3e70719c14": {
           "progression_name": "Esercizi Supplementari"
         },
+        "65456981-db3c-42cb-b698-e162463df4d1": {
+          "description": ""
+        },
         "b4e46590-0e84-4574-9230-c8fb9e768647": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "9dca7720-b4ca-46ac-9d8a-c224721ddb12": {
+          "description": ""
         },
         "bd9b2ae7-e0c5-43b5-8416-ab1b164feb2b": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "d5bea39f-5b7a-4eea-84f2-3f3c9bb07945": {
+          "name": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "6e4b782c-58b7-4079-bec6-7fe157198276": {
+          "description": ""
+        },
+        "6bf24dc0-0251-49fc-b9d2-04603cbb7a06": {
+          "progression_name": ""
         },
         "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
           "progression_name": "Costruzione di abilità"
         },
+        "efc2a144-0a89-4201-966f-4b4287b12177": {
+          "progression_name": ""
+        },
         "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
           "progression_name": "Costruzione di abilità"
+        },
+        "000254d0-54ca-4866-b12c-f3d4c387cbbc": {
+          "progression_name": ""
         },
         "a7cf273e-6085-402a-bf47-e5985364e7a2": {
           "progression_name": "Pratica"
@@ -577,38 +784,91 @@
           "progression_name": "Esercizi Supplementari"
         },
         "4ff7f892-7990-4917-9a54-92ad7d8c2335": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "bd7a8ad1-e3a1-441a-89e7-eba01f59a615": {
+          "description": ""
+        },
+        "690e9bfd-7ca2-49f7-bd24-2ba8a921b4c5": {
+          "name": "",
+          "description": ""
+        },
+        "e24e2e3d-eff3-4af2-b413-a78c8840ba8e": {
+          "description": ""
+        },
+        "8c2a2318-b39e-4940-b04a-eb0319ed0d45": {
+          "progression_name": ""
+        },
+        "1fc19afb-445f-4df3-90c9-379c7a7ff7b2": {
+          "name": "",
+          "description": ""
+        },
+        "4b2349b9-95c8-4e3c-80b6-13527d557f89": {
+          "name": "",
+          "description": ""
         },
         "804a67da-450d-4514-8c2e-2c9ed196e7c1": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "616fe3f0-31f4-4d6c-a96b-c2fea538d981": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "3f1252e1-8de9-4a19-bdac-cf63006671e5": {
+          "description": ""
         },
         "8e55b7ee-6a8f-41e7-8d5d-9d1465d7fadb": {
-          "name": "Il grande evento"
+          "name": "Il grande evento",
+          "progression_name": ""
         },
         "27dbb342-eff9-45e6-b918-88663a10f8a6": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "6a7ce69d-933a-4908-bf34-3bf5a9ac3c32": {
+          "description": ""
+        },
+        "add72914-74dd-4c9d-b018-93464cf14e3c": {
+          "description": ""
+        },
+        "e8051393-643c-4b38-acfd-5fbb3071c8d8": {
+          "description": ""
         },
         "63765976-e5d4-4cd0-9dcf-89119045a801": {
           "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**L'evento generato da una persona causa la reazione di un'altra persona**\n\nAssegna ad ogni alunno un evento a cui prestare attenzione e una reazione collegata a tale evento. Concatena le azioni in modo che la reazione di ogni bambino diventi un evento che innesca la reazione di un altro alunno. Continua ad assegnare eventi/reazioni fino a quando tutti hanno qualcosa da fare e tutti fanno reagire qualcun altro.\n\n**Un caos di eventi!**\n\nSuddividi la classe in gruppi. Utilizzando il telecomando degli eventi, assegna a ciascun gruppo una reazione diversa allo stesso pulsante. Fallo per tutti e tre i pulsanti, quindi osserva il caos!"
         },
+        "f320d910-3c64-4afa-9e6d-f9d4d850ebf1": {
+          "description": ""
+        },
         "3506957f-7430-4cc9-8e53-36f1d67496a7": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "fb42b64a-9f49-441b-95d8-2bdb596c93a9": {
+          "description": ""
         },
         "505b9963-28e4-43cc-81b2-51cd954beb7f": {
           "tips": [
-            null
+            ""
           ]
         },
+        "a1d91fb3-f7e1-49e4-a901-9316fa8a8327": {
+          "name": "",
+          "description": ""
+        },
         "182167a6-e7b1-425e-88d6-5f08d4b98a8b": {
-          "name": "Anteprima degli esercizi online con tutta la classe "
+          "name": "Anteprima degli esercizi online con tutta la classe ",
+          "description": ""
         },
         "707682de-e28a-4f30-8033-e5568bc30572": {
-          "name": "Una battaglia con gli eventi"
+          "name": "Una battaglia con gli eventi",
+          "description": ""
+        },
+        "dd9fba95-8daa-47d3-8c05-3429f3f25b77": {
+          "progression_name": ""
         },
         "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
           "progression_name": "Tempo di giocare"
@@ -623,106 +883,210 @@
           "progression_name": "Esercizi Supplementari"
         },
         "f7fafab8-5c1c-473a-901b-893eb23c491b": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "c6ce4e8a-c92c-4f12-8756-bc39b0047366": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link alla propria storia, si condivide anche tutto il codice che la fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n-   Pubblica online i link alle storie realizzate dai tuoi alunni\n    -   Crea anche tu una storia da condividere!\n-   Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro la storia.\n-   Dividi gli alunni in gruppi e falli confrontare sui diversi modi usati per programmare le storie.\n    -   Cosa vi ha sorpreso?\n    -   Cosa vorreste provare?\n-   Chiedi ad ogni alunno di scegliere la storia di un compagno e cliccare su `Rimescola` per personalizzarla. (Non preoccupatevi, la storia originale è al sicuro e rimarrà invariata)."
+          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link alla propria storia, si condivide anche tutto il codice che la fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n- Pubblica online i link alle storie realizzate dai tuoi alunni\n    - Crea anche tu una storia da condividere!\n- Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro la storia.\n- Dividi gli alunni in gruppi e falli confrontare sui diversi modi usati per programmare le storie.\n    - Cosa vi ha sorpreso?\n    - Cosa vorreste provare?\n- Chiedi ad ogni alunno di scegliere la storia di un compagno e cliccare su `Rimescola` per personalizzarla. (Non preoccupatevi, la storia originale è al sicuro e rimarrà invariata)."
         },
         "eeaa078b-cc45-4a32-9299-6fbb4967c502": {
           "name": "Rivedi",
+          "description": "",
           "progression_name": "Progetto"
         },
         "e69a4dc0-3f5e-4ddc-af82-12875c7cd32c": {
+          "name": "",
+          "description": "",
           "progression_name": "Progetto"
+        },
+        "0932ce4f-5756-4fd5-b1ec-e1c939906049": {
+          "description": ""
         },
         "3ee111dc-4361-4c19-a350-9690c819f49a": {
           "name": "Gestione della classe",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "8156ceb4-111d-46a8-b3e6-60c27f4cd2d8": {
           "name": "Progetto",
+          "description": "",
           "progression_name": "Progetto"
         },
         "ec336597-2c69-4bfa-b542-abe5ccf06d5c": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "dd4a292b-f2c8-4918-8ad1-73c94b06c1d9": {
+          "name": "",
+          "description": ""
         },
         "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
           "progression_name": "Il mio quartiere digitale"
         },
+        "66dc5fd4-eacf-41f8-9d21-196b81d35d7a": {
+          "description": ""
+        },
+        "fc3baf69-3ed1-46de-af6c-bed50ffd6757": {
+          "description": ""
+        },
+        "39a4de29-4980-411c-9999-90a2bb94b72b": {
+          "description": ""
+        },
+        "f06d2db8-bdc8-44ce-9d41-73fe53003e35": {
+          "description": ""
+        },
+        "e89c6579-86c7-4478-8ddf-e941751a06c5": {
+          "description": ""
+        },
         "5cd698e0-d82e-4e9d-af4f-1923b453d12b": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "23d5a35a-6de5-4a3e-92cc-0c1336f61470": {
           "tips": [
-            null
+            ""
           ]
         },
+        "3dc37e4e-05d9-463f-a734-f65322cccb1a": {
+          "description": ""
+        },
+        "128e4de4-71a8-4dac-9606-4444cac424ff": {
+          "description": ""
+        },
         "e1c4af11-08ae-4ddd-90dc-da28738444fb": {
-          "name": "Impara come Trascinare i Blocchi"
+          "name": "Impara come Trascinare i Blocchi",
+          "description": ""
         },
         "b1107182-e8bd-4439-bf3e-135d5c0ab145": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa": {
+          "description": ""
         },
         "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
           "progression_name": "Costruzione di abilità"
         },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "name": "Riflessione",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "902cde98-a6eb-4a14-b992-43ba04b6c522": {
+          "description": ""
+        },
+        "e2b3e229-08fd-47a4-9f9b-6c32f6c6406c": {
+          "description": ""
         },
         "1a3b430e-95cd-4425-b5d7-953dfae5e5d2": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "d62f31be-e1c0-4384-a410-e8a8f1b84d7b": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "7719a51a-42d9-41f0-bc30-c5475b18af7c": {
+          "name": "",
+          "progression_name": ""
+        },
+        "7beae8bf-6b0e-41da-9397-06b0c9fb0b52": {
+          "description": ""
+        },
+        "84f50800-a9f3-4ae6-b023-f63cc376e061": {
+          "description": ""
+        },
+        "a6b03761-2c05-45cd-be08-78c966e2f444": {
+          "description": ""
         },
         "c3cfdbc4-82d5-4717-bf83-22860936a687": {
           "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono anche essere utilizzate come attività extra scolastiche.\n\n**Mappe peluche**\n\n-   Usa del nastro adesivo per creare sul pavimento (o su un grande tappeto) una griglia a grandezza naturale e chiedi agli alunni di portare a scuola degli animali di peluche.\n-   Ora gli alunni possono \"programmare\" i loro compagni per spostare degli oggetti reali come indicato nei programmi.\n\n**Crea la tua mappa**\n\n-   Chiedi agli alunni di creare le proprie mappe.\n-   Chiedi ad altri alunni di risolverle usando i programmi."
         },
+        "239ba3e6-f30a-4f56-8325-0058e708421a": {
+          "name": "",
+          "description": ""
+        },
         "fadfd6a5-099f-427c-aa1f-345ee17ca150": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "32b45f59-1f1f-4ef8-8bf9-26927003d960": {
+          "description": ""
+        },
+        "d3d96ea6-986d-49e8-b48a-521536592847": {
+          "name": "",
+          "description": ""
+        },
         "382f7ddc-c4e7-4674-80b2-e8b7dac7dcf6": {
-          "name": "Anteprima degli esercizi online con tutta la classe "
+          "name": "Anteprima degli esercizi online con tutta la classe ",
+          "description": ""
+        },
+        "d639c3c7-2708-41eb-afae-cf5a65464fd8": {
+          "name": "",
+          "progression_name": ""
         },
         "30ab6f6d-deb2-4b1c-8974-136be2f6852e": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "88c2697f-a9ba-483a-8091-cc2a1b7bf027": {
           "progression_name": "Costruzione di abilità"
         },
         "a7d5f389-5e34-4cbf-91e8-e2d934992246": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "2e0974bb-0444-4738-84dc-e49bf6f27770": {
+          "description": ""
         },
         "7119f518-386e-44e7-893d-eff0fbc5a87d": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "8b694201-2213-4aea-84a2-9cf901afa9c9": {
+          "description": ""
+        },
+        "82d24278-d63c-4e22-921d-b92f4f1f8cd8": {
+          "name": "",
+          "description": ""
+        },
+        "97ccc4b6-92d5-4c46-94a4-3289d38f068d": {
+          "progression_name": ""
         },
         "487f446a-7245-403f-827c-e1e94663c256": {
           "progression_name": "Costruzione di abilità"
         },
+        "82e3c83d-e33d-4c0f-8767-ed3f153162e2": {
+          "progression_name": ""
+        },
         "af0d64b6-9076-490e-96b8-b4d56d3dc5c5": {
           "progression_name": "Costruzione di abilità"
+        },
+        "9bf3aa93-0d30-4dd2-a78e-926066cc64f3": {
+          "progression_name": ""
         },
         "05bbe6d1-d2c9-42a7-8489-2d545058f9c5": {
           "progression_name": "Pratica"
@@ -732,82 +1096,163 @@
         },
         "3719811c-4fc2-4da5-94c7-989c91ef7d1e": {
           "tips": [
-            null
+            ""
           ]
         },
+        "bfc6b9c5-a1ca-4d0a-aea3-c691a57b678d": {
+          "description": ""
+        },
         "5703506b-9469-4b74-bbe0-14b169229f01": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "49b21387-4778-47bb-b51e-1a555b3f9bb3": {
+          "description": ""
+        },
+        "d698680a-be23-490a-8445-ac076479eab4": {
+          "description": ""
         },
         "2ded9602-0160-439c-8830-204047d30796": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "71cf3779-677d-4123-8feb-f4c503c32c3e": {
-          "name": "Programmare con Rey e BB-8"
+          "name": "Programmare con Rey e BB-8",
+          "progression_name": ""
         },
         "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
           "progression_name": "Costruzione di abilità"
         },
+        "3c2f387d-dde7-4c31-befe-3bf45387d813": {
+          "progression_name": ""
+        },
         "33708a97-a66a-4797-9349-7a1fc9325c26": {
           "progression_name": "Pratica"
         },
+        "4aebed84-fb26-4d7b-97e8-6bcee3dbb701": {
+          "description": ""
+        },
         "09d28d61-e268-4516-b6a4-56ab1f2ae0d8": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "6c3b7137-b86e-4fc9-9fce-6e346df584dd": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "8c303a82-3674-4b12-bb78-bcd85a423249": {
-          "name": "Cicli felici"
+          "name": "Cicli felici",
+          "progression_name": ""
+        },
+        "bed588e7-0f5d-4308-8088-167306b5af81": {
+          "description": ""
+        },
+        "cebdc037-d1ad-4064-a828-29e7da520632": {
+          "description": ""
+        },
+        "bc754cb3-3c14-4d5a-a1a7-098abbd6cd87": {
+          "description": ""
         },
         "e3639b33-cf35-4cc9-9d0d-616eb5ee7278": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "165dd670-58dc-4d0b-899a-f4ba359d0915": {
+          "description": ""
         },
         "cb522975-96ad-44b4-942c-601fc373771c": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "1557cb99-47ef-444c-bf08-6aa33be91fb2": {
+          "description": ""
         },
         "4a7df998-47d9-40b3-9461-0e72e300effd": {
           "tips": [
-            null
+            ""
           ]
         },
+        "d1bd79aa-b64e-4e66-b7e5-657d5b990a60": {
+          "name": "",
+          "description": ""
+        },
         "62d22669-d8bd-4e18-a767-8269aa7322f8": {
-          "name": "Anteprima degli esercizi online con tutta la classe "
+          "name": "Anteprima degli esercizi online con tutta la classe ",
+          "description": ""
         },
         "bce76535-3424-40bc-a71b-acafda6a3b62": {
-          "name": "Cicli con Scrat"
+          "name": "Cicli con Scrat",
+          "description": ""
+        },
+        "bfc26aa9-b856-47f4-86c0-36818d4d9c87": {
+          "description": ""
         },
         "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
           "progression_name": "Costruzione di abilità"
         },
+        "c559cd76-a16e-4361-97c0-f4f4fcdb92b6": {
+          "progression_name": ""
+        },
         "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
           "progression_name": "Costruzione di abilità"
+        },
+        "277f1b5f-abbe-4158-9507-d91cce301994": {
+          "progression_name": ""
         },
         "483c3b98-803d-4ddf-ac49-f472bf27568b": {
           "progression_name": "Pratica"
         },
         "3cd2a8cd-efcc-40cd-a541-17ae2c95b14c": {
           "tips": [
-            null
+            ""
           ]
         },
+        "45ebca0d-233a-4082-8d6e-5cf11640c93e": {
+          "description": ""
+        },
         "319c51aa-b894-422b-8d4e-e6d3b2bd9a35": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "012f5baf-e3e9-4c36-b720-5f63fb9f6414": {
+          "description": ""
+        },
+        "2ad0c170-bdf8-4e67-8334-92bba6011a60": {
+          "description": ""
         },
         "dacbc9c3-1382-49f8-856d-5bce1247ebb4": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "5679d0c2-9bce-45bb-a7ad-713853ccb683": {
+          "name": "",
+          "description": ""
         },
         "ec7877d9-c2e0-4cd3-8665-25bc3aac4008": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "1bbb191d-3177-490d-99ad-5a0e10e21985": {
+          "description": ""
+        },
+        "74314f07-5f4d-4cd4-8d82-8208d5ce529e": {
+          "progression_name": ""
         },
         "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
           "progression_name": "Costruzione di abilità"
         },
+        "801526d2-4615-4e46-90c1-5e3c08dfe223": {
+          "progression_name": ""
+        },
         "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
           "progression_name": "Costruzione di abilità"
+        },
+        "3c97efcf-4bdd-437a-a07d-bcd1f9faad87": {
+          "progression_name": ""
         },
         "42b250a5-b499-45c1-a0f1-154447f0f2aa": {
           "progression_name": "Pratica"
@@ -815,27 +1260,45 @@
         "5580045e-132a-4c17-8c3f-522b7f01f442": {
           "progression_name": "Esercizi Supplementari"
         },
+        "46ce0bcb-9f62-42c7-91dd-a6a98b68b10b": {
+          "description": ""
+        },
         "a79a0dff-fe81-486d-9961-8198b65bdb8c": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "6f6b3e61-f640-4e12-b65a-a798a35229e8": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "13752711-384a-4249-bf95-632d8a8ad185": {
-          "name": "Al mare con i cicli"
+          "name": "Al mare con i cicli",
+          "description": ""
+        },
+        "8e4ed9a9-b50b-45bf-ac33-86251c7c10a9": {
+          "description": ""
+        },
+        "6d5074a8-2f60-46de-b974-532be01603c4": {
+          "progression_name": ""
         },
         "d060bb00-33a3-4049-925e-56db3f7508f7": {
           "progression_name": "Costruzione di abilità"
         },
+        "52392151-808b-48cd-a76b-554587d200ec": {
+          "progression_name": ""
+        },
         "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
           "progression_name": "Costruzione di abilità"
+        },
+        "879f345b-620d-4541-8467-84f00e515229": {
+          "progression_name": ""
         },
         "ac484bf5-608f-446f-ada6-d0506b7dc9a8": {
           "progression_name": "Pratica"
         },
         "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
           "tips": [
-            null
+            ""
           ],
           "progression_name": "Tempo di giocare"
         },
@@ -843,42 +1306,72 @@
           "progression_name": "Esercizi Supplementari"
         },
         "75843546-1fa3-4171-b034-3c14d8d9d5a4": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "85143426-6671-4809-8601-8502634e2f51": {
+          "description": ""
         },
         "ac847e89-ccab-4f15-8585-b06d61723c4c": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "43f50bd1-d9ac-4ebd-8ec4-a471d8c673c6": {
+          "description": ""
+        },
+        "14f82c4a-fa73-4426-adb6-b32b5f14f3be": {
+          "progression_name": ""
         },
         "6ffda847-c078-4edf-b7ca-4499b1d9249e": {
           "name": "Il grande evento",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "ab5654c4-0bfd-4ef4-8a0c-c33db9dbeecd": {
+          "description": ""
         },
         "40978575-9e16-4760-a200-0678f187ff4c": {
           "name": "Riflessione",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5": {
-          "name": "Valutazione"
+          "name": "Valutazione",
+          "description": ""
         },
         "d540fe6c-fd83-4e7d-98cc-6e78a2d36073": {
           "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**L'evento generato da una persona causa la reazione di un'altra persona**\n\nAssegna ad ogni alunno un evento a cui prestare attenzione e una reazione collegata a tale evento. Concatena le azioni in modo che la reazione di ogni bambino diventi un evento che innesca la reazione di un altro alunno. Continua ad assegnare eventi/reazioni fino a quando tutti hanno qualcosa da fare e tutti fanno reagire qualcun altro.\n\n**Un caos di eventi!**\n\nSuddividi la classe in gruppi. Utilizzando il telecomando degli eventi, assegna a ciascun gruppo una reazione diversa allo stesso pulsante. Fallo per tutti e tre i pulsanti, quindi osserva il caos!"
         },
         "cb6735d8-d986-408b-adef-61e9a52ad30f": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "59ef2dfe-0dad-4172-8225-3e844fecb36f": {
+          "description": ""
         },
         "4282b236-dd48-4702-81fd-452fb86a8288": {
           "tips": [
-            null
+            ""
           ]
         },
+        "9126c997-86b1-4d78-9eaf-3d07e06c6355": {
+          "name": "",
+          "description": ""
+        },
         "b4da0866-a056-4d28-bbca-119bbd17fe04": {
-          "name": "Anteprima degli esercizi online con tutta la classe "
+          "name": "Anteprima degli esercizi online con tutta la classe ",
+          "description": ""
         },
         "d20df183-f25b-45af-ae7c-f80a4405f2d2": {
-          "name": "In movimento con gli eventi"
+          "name": "In movimento con gli eventi",
+          "description": ""
+        },
+        "c37ca368-ea56-4b4d-a06c-1d2b94516bf8": {
+          "progression_name": ""
         },
         "4221ebcd-383b-44bf-a876-41e658bd8460": {
           "progression_name": "Tempo di giocare"
@@ -893,63 +1386,138 @@
           "progression_name": "Esercizi Supplementari"
         },
         "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "807c4bfd-ed3e-4400-a83a-a535c56f3155": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link alla propria storia, si condivide anche tutto il codice che la fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n-   Pubblica online i link alle storie realizzate dai tuoi alunni\n    -   Crea anche tu una storia da condividere!\n-   Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro la storia.\n-   Dividi gli alunni in gruppi e falli confrontare sui diversi modi usati per programmare le storie.\n    -   Cosa vi ha sorpreso?\n    -   Cosa vorreste provare?\n-   Chiedi ad ogni alunno di scegliere la storia di un compagno e cliccare su `Rimescola` per personalizzarla. (Non preoccupatevi, la storia originale è al sicuro e rimarrà invariata)."
+          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link alla propria storia, si condivide anche tutto il codice che la fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n- Pubblica online i link alle storie realizzate dai tuoi alunni\n    - Crea anche tu una storia da condividere!\n- Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro la storia.\n- Dividi gli alunni in gruppi e falli confrontare sui diversi modi usati per programmare le storie.\n    - Cosa vi ha sorpreso?\n    - Cosa vorreste provare?\n- Chiedi ad ogni alunno di scegliere la storia di un compagno e cliccare su `Rimescola` per personalizzarla. (Non preoccupatevi, la storia originale è al sicuro e rimarrà invariata)."
         },
         "4ae60932-ccb3-411c-bfb4-bc9e52149b27": {
           "name": "Rivedi",
+          "description": "",
           "progression_name": "Progetto"
         },
         "d07826c3-fe5d-4ffa-a4ff-6bd799a62342": {
+          "name": "",
+          "description": "",
           "progression_name": "Progetto"
+        },
+        "22c1ade3-49af-45ce-84bb-ba4337206074": {
+          "description": ""
         },
         "76119a2d-a3f8-4c17-b38a-c0194431de25": {
           "name": "Gestione della classe",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "0ab5b62b-a464-4801-a963-d23d293ea5ff": {
           "name": "Progetto",
+          "description": "",
           "progression_name": "Progetto"
         },
         "16e34527-4efe-46f1-970b-f365858958a9": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "adc355f7-34d5-450e-aa57-e001b2a7973c": {
+          "name": "",
+          "description": ""
+        },
+        "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
+          "name": "",
+          "description": ""
+        },
+        "b05af723-adce-4036-a645-7b9519b86a1c": {
+          "description": ""
+        },
+        "e9890d5b-6eb0-4a1c-b0b2-dc9924e7f7a0": {
+          "description": ""
+        },
+        "822262f9-4afc-493a-a3d7-0c4d40334547": {
+          "description": ""
+        },
+        "69edb680-3657-4056-82ba-59c74c6a0e96": {
+          "description": ""
+        },
+        "4e234f90-8457-4749-866d-cdd800ccaeac": {
+          "name": "",
+          "description": ""
+        },
+        "49bc6fdd-0a8e-422b-a5bc-b2a97cecb7b7": {
+          "description": ""
+        },
+        "90fd2377-1975-4ab7-9cd1-4368746230d0": {
+          "description": ""
         },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
-          "name": "I miei amici robotici"
+          "name": "I miei amici robotici",
+          "progression_name": ""
+        },
+        "f6e2fcac-b5ae-407b-8b07-029ff0bc7b8f": {
+          "description": ""
         },
         "92835cd7-aad8-4ff9-8fbb-cdd1ffb21c96": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "18c817e9-4ffc-43c1-b470-4ae4fb703372": {
+          "description": ""
+        },
+        "81f309fd-bac6-4eb6-9056-b469ccdf98b7": {
+          "description": ""
+        },
+        "d540dc8b-96d7-4d9e-9e16-b9c31aae8e4e": {
+          "description": ""
+        },
+        "0faa4b5a-9049-426f-986b-b1aaf242c6b3": {
+          "description": ""
         },
         "1d9f53b2-4d8b-4d95-83b3-a9775f72da01": {
           "name": "Riflessione",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "0919b37a-9bc1-44a3-ac64-8be4769d5ef4": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "ccbf325b-05d5-4e4a-b009-1576cdfce4a4": {
+          "name": "",
+          "description": ""
+        },
+        "a9017cdf-1f40-4812-a123-c00d67614e82": {
+          "description": ""
         },
         "bb044fed-a18b-42b3-b8bd-fb3bfb538eb2": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "9696d27a-5462-4c01-93b9-73dc86a185ef": {
+          "description": ""
         },
         "c0ffac59-84f7-4177-b960-d808e21facb3": {
           "name": "Programmare con Angry Bird",
           "tips": [
-            null
+            ""
           ]
+        },
+        "1141cba9-b65b-47c7-ac7d-59d2f06b5318": {
+          "progression_name": ""
         },
         "1ebd42df-a302-418a-be1e-6bbca930cedf": {
           "progression_name": "Costruzione di abilità"
+        },
+        "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
+          "progression_name": ""
         },
         "b879045d-ce26-4812-a901-bba02e97e846": {
           "progression_name": "Pratica"
@@ -963,20 +1531,38 @@
         "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb": {
           "progression_name": "Esercizi Supplementari"
         },
+        "b36f792a-6557-4c68-9065-3a87966f2cf6": {
+          "description": ""
+        },
         "1108a4f2-f4c2-48ca-be06-124b1270dfc5": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "53803a3b-99e9-4bfb-9acb-269e0ee146fa": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n\\*_Crea il tuo labirinto_\n\nDivisi in piccoli gruppi, fai progettare agli alunni i propri labirinti e falli sfidare tra di loro a scrivere i programmi per risolverli. Per aggiungere divertimento, puoi anche creare dei labirinti a grandezza naturale facendo interpretare agli alunni i ruoli di uccellino e maialino."
+          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Crea il tuo labirinto*\n\nDivisi in piccoli gruppi, fai progettare agli alunni i propri labirinti e falli sfidare tra di loro a scrivere i programmi per risolverli. Per aggiungere divertimento, puoi anche creare dei labirinti a grandezza naturale facendo interpretare agli alunni i ruoli di uccellino e maialino."
+        },
+        "b73a8383-482a-4e4e-844b-f1008bc0b87c": {
+          "description": ""
         },
         "34b2ac1f-8204-4cf2-817c-26a6eafb348b": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "7e3e24b8-f0bf-4e20-891a-c39951719f1d": {
+          "description": ""
         },
         "7b8e1781-6014-4299-b635-4dfc5639acb7": {
-          "name": "Correzione di errori nel labirinto"
+          "name": "Correzione di errori nel labirinto",
+          "description": ""
+        },
+        "572ba4a8-86d4-4aca-9398-b1d9c44ae669": {
+          "progression_name": ""
         },
         "9b6832e5-f80f-4baa-9049-48d9526443ba": {
           "progression_name": "Costruzione di abilità"
+        },
+        "a7458755-70c4-4b60-b6ad-729468af507f": {
+          "progression_name": ""
         },
         "fa8dd0db-5da9-43b3-8150-d3618c14ac77": {
           "progression_name": "Previsione"
@@ -987,23 +1573,36 @@
         "12488a0c-dc91-4ea4-bdc7-28e27145f721": {
           "progression_name": "Esercizi Supplementari"
         },
+        "14243604-a841-47b9-a7b3-edeccb23ae65": {
+          "description": ""
+        },
         "13cf61a7-7e92-40c5-ba55-c4fa27c516a7": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "b359086c-2524-4101-ad59-855c7a7906af": {
           "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Inserire errori**\n\nProponi agli alunni di tornare agli esercizi della lezione precedente ed aggiungere intenzionalmente degli errori alle loro soluzioni. Dopo di che devono chiedere a dei compagni di eseguire il debugging del loro programma. Questo lavoro può essere realizzato anche programmando su carta.\n\nQuando altri alunni eseguono il debugging, assicurati che le critiche siano costruttive. Se temi che questo possa essere un problema, anticipa l'attività mostrando come deve avvenire un debugging rispettoso eseguendolo con un alunno."
         },
         "c1c33567-d81d-49d9-a399-e0ba461f0165": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "dc09a9bd-5369-41a9-9737-b1159f7ed894": {
-          "name": "Anteprima degli esercizi online con tutta la classe "
+          "name": "Anteprima degli esercizi online con tutta la classe ",
+          "description": ""
         },
         "e2aaa332-2426-4380-b14b-cd681477be54": {
-          "name": "Programmare con la collezionista"
+          "name": "Programmare con la collezionista",
+          "description": ""
+        },
+        "1cecd624-a69a-4e47-9a4b-066f9b8ff31d": {
+          "progression_name": ""
         },
         "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
           "progression_name": "Costruzione di abilità"
+        },
+        "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
+          "progression_name": ""
         },
         "1237bc98-b3bd-45ac-8c6f-51bd8cc988e4": {
           "progression_name": "Pratica"
@@ -1018,21 +1617,28 @@
           "progression_name": "Esercizi Supplementari"
         },
         "02bdc7bd-ae6d-426d-8e13-7f804e2292d4": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "5ba69a56-1f3b-42fa-9be4-9463ae109962": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "3861a12f-7e0f-43bf-8d29-1d526a2c90b2": {
-          "name": "Programmare con l'artista"
+          "name": "Programmare con l'artista",
+          "description": ""
+        },
+        "e054a7d9-9c28-49d4-886f-e9fd771d378e": {
+          "progression_name": ""
         },
         "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
           "progression_name": "Costruzione di abilità"
         },
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
-            null
-          ]
+            ""
+          ],
+          "progression_name": ""
         },
         "2809e1fd-ca35-479d-b5d0-a183be995d73": {
           "progression_name": "Pratica"
@@ -1044,27 +1650,63 @@
           "progression_name": "Esercizi Supplementari"
         },
         "e7143536-5b4e-4594-b2ff-707b87e128c3": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "c288cda6-869c-440d-ae75-9b42d561ba84": {
+          "description": ""
+        },
+        "ca5c3cdd-6fa3-4e44-a85b-661236ab1852": {
+          "description": ""
+        },
+        "359899f5-314a-401a-a75f-1b0cd32829d8": {
+          "name": "",
+          "description": ""
         },
         "8896c62b-c73c-43f8-89c3-3def6c89d7bf": {
-          "name": "I miei ciclici amici robotici"
+          "name": "I miei ciclici amici robotici",
+          "progression_name": ""
+        },
+        "76533bba-6245-4429-b8ef-a406d2dd250b": {
+          "description": ""
+        },
+        "30f90b0d-b307-4fe8-b89a-c2e07583227e": {
+          "description": ""
         },
         "5e5453a7-f35f-458a-9831-b7c7b7f0fde1": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "377094f1-b92e-40c3-a27e-864858517d4d": {
+          "description": ""
+        },
         "dba044f7-494f-4657-a69b-ae2c7cf29ea0": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "a8df4441-613f-45cb-9305-592af4d64fb8": {
+          "description": ""
         },
         "ff476c40-142d-458c-8c84-04f775b46de3": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "7dff2c66-defe-471d-9bd6-4f1fee8ea728": {
+          "description": ""
+        },
+        "3ac4fdef-870d-4cad-8022-649ab64336b0": {
+          "name": "",
+          "description": ""
         },
         "870aa404-0931-4b87-ab53-5fc373ff8dc2": {
-          "name": "Anteprima degli esercizi online con tutta la classe "
+          "name": "Anteprima degli esercizi online con tutta la classe ",
+          "description": ""
         },
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
-          "name": "Cicli con Rey e BB-8"
+          "name": "Cicli con Rey e BB-8",
+          "progression_name": ""
         },
         "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
           "progression_name": "Costruzione di abilità"
@@ -1072,8 +1714,14 @@
         "cc9ef036-2cca-4863-b922-284a995c38b7": {
           "progression_name": "Previsione"
         },
+        "adc69f16-8ed9-4265-b368-4a8e99c56aa5": {
+          "progression_name": ""
+        },
         "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
           "progression_name": "Costruzione di abilità"
+        },
+        "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
+          "progression_name": ""
         },
         "069243e5-22ac-469d-afdd-0908f118d8fc": {
           "progression_name": "Pratica"
@@ -1087,20 +1735,30 @@
         "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6": {
           "progression_name": "Esercizi Supplementari"
         },
+        "351f97fd-0d87-49c1-90ee-f4243884adf9": {
+          "description": ""
+        },
         "b8bea90c-e431-4f96-846f-733476b53374": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "d0b1e312-6130-4320-b109-3d4290b36cac": {
           "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Agitiamoci**\n\n-   Dai agli alunni una serie di immagini di azioni o passi di ballo.\n-   Chiedi agli alunni di organizzare i movimenti e di aggiungere cicli alla coreografia del proprio ballo.\n-   Condividi i balli con il resto della classe.\n\n**Al contrario**\n\n-   Cerca su Youtube alcuni video di balli famosi che contengono molte ripetizioni.\n-   I tuoi alunni riescono a riconoscere i cicli?\n-   Prova a fare la stessa cosa con i testi delle canzoni!"
         },
         "dacd64e5-3f26-48ad-9e50-3d2eaca56292": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "61416522-3272-4f4f-9fa9-6ab21de140ad": {
-          "name": "Cicli con la contadina"
+          "name": "Cicli con la contadina",
+          "progression_name": ""
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
+          "description": "",
           "progression_name": "Costruzione di abilità"
+        },
+        "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
+          "progression_name": ""
         },
         "c80e175c-a3f8-4155-9900-0c6ab5829a4e": {
           "progression_name": "Pratica"
@@ -1112,56 +1770,102 @@
           "progression_name": "Esercizi Supplementari"
         },
         "809e449a-e392-48c2-9b9f-f53ce1d06366": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "d5490110-1fb8-44ca-8e62-8b0c4e3b6dbe": {
           "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Raccolto scolastico**\n\n-   Fai creare agli alunni delle pile di materiale scolastico sui loro banchi (matite, gomme, ecc.)\n-   Chiedi ai rispettivi compagni di scoprire come potrebbe camminare una contadina da una pila all'altra, raccogliendo ogni gruppo di oggetti lungo il percorso.\n-   Condividi i programmi con il resto della classe."
         },
+        "4f77bfdb-350b-4792-aa46-c2667c56e48b": {
+          "description": ""
+        },
         "aaae9aa4-7847-4f45-be5e-96f454d2e343": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "8966320f-572a-4c6c-afc5-6b3e8240e250": {
           "name": "Cicli con l'artista",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "0e769463-817e-4432-be93-87047256d015": {
+          "description": "",
+          "progression_name": ""
         },
         "9af30f82-82cd-4807-9609-900519e17c43": {
           "progression_name": "Tempo di giocare"
         },
+        "ba2a825d-3cae-456c-bb17-91711afe364a": {
+          "description": ""
+        },
         "44ad4fa6-3b97-4af4-ae1e-f9b9f3988a66": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "757cf64e-7e90-497f-b26c-1fe874540d52": {
+          "description": ""
+        },
+        "a252a858-6aeb-414f-8529-0f5b89a3791e": {
+          "name": "",
+          "description": ""
         },
         "082fb58c-df8c-4ac2-a314-22ecf1c4d14a": {
-          "name": "Vocabolario"
+          "name": "Vocabolario",
+          "description": ""
         },
         "3eb5f296-9713-4bdb-8dd8-a77dc07cb4e5": {
-          "name": "Il grande evento"
+          "name": "Il grande evento",
+          "progression_name": ""
         },
         "67fb7588-f699-4cf5-9a67-065456c6baee": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "69aeb015-b7ba-46c1-a176-5289f7de9a92": {
+          "description": ""
         },
         "abca79b2-6a21-4f74-b06d-07ea956d12bc": {
           "name": "Riflessione",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "e597d594-8df0-40d4-a4a5-9de0932f0bfc": {
-          "name": "Valutazione"
+          "name": "Valutazione",
+          "description": ""
+        },
+        "3308de52-3ab5-4909-bcf5-c43c71617303": {
+          "description": ""
         },
         "7e3d14a1-a677-4c9d-a695-e043db71c52e": {
           "tips": [
-            null
+            ""
           ]
         },
         "6cc5d299-00fd-477a-a654-60dc83031733": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "c83b9630-0560-4bd5-8574-6e4a25d4de4e": {
+          "description": ""
+        },
+        "029d4726-2804-4d14-9270-4405e9461405": {
+          "name": "",
+          "description": ""
+        },
+        "40f62515-242b-4604-9733-f33d348ac655": {
+          "name": "",
+          "description": ""
         },
         "64988ef3-1287-4486-9d41-cd475637575b": {
-          "name": "Realizzare un gioco Flappy"
+          "name": "Realizzare un gioco Flappy",
+          "description": "",
+          "progression_name": ""
         },
         "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
           "progression_name": "Costruzione di abilità"
@@ -1171,23 +1875,35 @@
         },
         "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
           "tips": [
-            null
+            ""
           ]
         },
         "a49ab9e9-2a47-4d02-93bf-ec9bd241a125": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "f9faf5dc-b81a-441f-84f6-202dd305f24b": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link al proprio gioco, si condivide anche tutto il codice che lo fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n-   Pubblica online i link dei giochi realizzati dai tuoi alunni\n    -   Crea anche tu un gioco da condividere!\n-   Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro al gioco.\n-   Discuti in gruppo sui diversi modi usati per programmare i giochi.\n    -   Cosa vi ha sorpreso?\n    -   Cosa vorreste provare?\n-   Chiedi ad ogni alunno di scegliere il gioco di un compagno e cliccare su `Rimescola` per personalizzarlo. (Non preoccupatevi, il gioco originale è al sicuro e rimarrà invariato)."
+          "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link al proprio gioco, si condivide anche tutto il codice che lo fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n- Pubblica online i link dei giochi realizzati dai tuoi alunni\n    - Crea anche tu un gioco da condividere!\n- Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro al gioco.\n- Discuti in gruppo sui diversi modi usati per programmare i giochi.\n    - Cosa vi ha sorpreso?\n    - Cosa vorreste provare?\n- Chiedi ad ogni alunno di scegliere il gioco di un compagno e cliccare su `Rimescola` per personalizzarlo. (Non preoccupatevi, il gioco originale è al sicuro e rimarrà invariato)."
+        },
+        "736fbe77-a681-409c-b263-2de52938dd92": {
+          "description": ""
         },
         "782d1991-785a-406b-963c-687abb77e247": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "4b0c023d-7e3f-4186-83ea-e8136c32de1a": {
           "name": "Giocare con gli eventi",
           "tips": [
-            null
+            ""
           ]
+        },
+        "e8c36f82-146f-40bd-a83c-0f0d9fac33d0": {
+          "description": "",
+          "progression_name": ""
+        },
+        "55ade85d-fedf-4c9d-9046-4d1e6d813638": {
+          "progression_name": ""
         },
         "a0c869e7-3fa2-4bec-8fa4-56daf0261d2d": {
           "progression_name": "Mini Progetto: Gioco di Inseguimento"
@@ -1199,56 +1915,117 @@
           "progression_name": "Esercizi Supplementari"
         },
         "27d0103f-b003-4668-bab3-46e2517d375f": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "1893ef81-2dee-4c1b-9821-490dbd22164f": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link alla propria storia, si condivide anche tutto il codice che la fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n-   Pubblica online i link alle storie realizzate dai tuoi alunni\n    -   Crea anche tu una storia da condividere!\n-   Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro la storia.\n-   Dividi gli alunni in gruppi e falli confrontare sui diversi modi usati per programmare le storie.\n    -   Cosa vi ha sorpreso?\n    -   Cosa vorreste provare?\n-   Chiedi ad ogni alunno di scegliere la storia di un compagno e cliccare su `Rimescola` per personalizzarla. (Non preoccupatevi, la storia originale è al sicuro e rimarrà invariata)."
+          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link alla propria storia, si condivide anche tutto il codice che la fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n- Pubblica online i link alle storie realizzate dai tuoi alunni\n    - Crea anche tu una storia da condividere!\n- Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro la storia.\n- Dividi gli alunni in gruppi e falli confrontare sui diversi modi usati per programmare le storie.\n    - Cosa vi ha sorpreso?\n    - Cosa vorreste provare?\n- Chiedi ad ogni alunno di scegliere la storia di un compagno e cliccare su `Rimescola` per personalizzarla. (Non preoccupatevi, la storia originale è al sicuro e rimarrà invariata)."
+        },
+        "aa392e98-dff3-420d-8dd5-4a29b7d3ce6f": {
+          "name": "",
+          "description": ""
+        },
+        "63144b5e-ca21-4844-ac12-3dd7567c9c3f": {
+          "description": ""
+        },
+        "b4d7372a-86cd-4d90-855d-0c241617237f": {
+          "description": ""
+        },
+        "7a3d8d3f-1c95-475e-b752-5df39bf0f024": {
+          "name": "",
+          "progression_name": ""
         },
         "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "a86baf8b-04ef-40a3-b988-e7dc746f97ad": {
+          "description": ""
+        },
+        "183cb29b-8912-48e6-9589-333f1aec1837": {
+          "description": ""
+        },
+        "cba35313-3a99-4833-94fb-aafc7ddfba1b": {
+          "description": ""
+        },
         "49ce681a-9731-4e09-8d4a-e6d4d8895a9a": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "e55d7d37-4ddc-467f-9a9d-f02a31886572": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "a4178e11-f338-4b3a-a74b-27cf0bf02398": {
+          "description": ""
+        },
+        "f77e3c90-8113-43bb-a9d1-31dd1827e961": {
+          "description": ""
         },
         "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d": {
-          "name": "Braccialetti binari"
+          "name": "Braccialetti binari",
+          "progression_name": ""
         },
         "9ef02596-61a9-4eee-b8b5-db290a9721d0": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "b312d8ee-86f9-478f-9a9d-539be3e6dd50": {
+          "description": ""
         },
         "1432f5df-3984-49d1-a829-436765d5cbc0": {
           "tips": [
-            null
+            ""
           ]
         },
+        "2148291c-0083-4da5-9b64-e609fabea255": {
+          "description": ""
+        },
         "02945b11-d2db-485d-9002-9aff256a4ed4": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "8988c901-48ad-4e67-81a0-8a2645be5b27": {
+          "description": ""
+        },
+        "8ab38e6e-a0b5-4cac-ace3-4336e3b01746": {
+          "description": ""
         },
         "3b646703-3875-4421-bdd8-865e9c2ace35": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Immagini binarie**\n\n-   Sul web si trovano ottime risorse per estendere in molti modi diversi questa attività.\n-   Se ai tuoi alunni interessa capire come sono rappresentate le immagini (o anche la musica) in codice binario, puoi trovare maggiori dettagli in questo documento (in lingua inglese): Thinkersmith [Binary Baubles](http://code.org/files/CSEDbinary.pdf)."
+          "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Immagini binarie**\n\n-   Sul web si trovano ottime risorse per estendere in molti modi diversi questa attività.\n-   Se ai tuoi alunni interessa capire come sono rappresentate le immagini (o anche la musica) in codice binario, puoi trovare maggiori dettagli in questo documento (in lingua inglese): Thinkersmith [Binary Baubles][0]."
         },
         "87256b2e-55f1-4ca5-825e-d84ae553b1d6": {
-          "name": "Gestione della classe"
+          "name": "Gestione della classe",
+          "description": ""
+        },
+        "bbd8c847-74fe-42a2-9276-23a5c6aaafa0": {
+          "description": ""
         },
         "11dd8aea-0a51-4c88-8517-0543fa4afb32": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "43edf2e1-94e2-4ea0-866c-83bd18bfc87f": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "1c65a4a2-b069-4b30-b733-a80c5081f8e3": {
+          "progression_name": ""
         },
         "8bc8bad1-8150-46ce-bf97-0d368dafd6ef": {
           "progression_name": "Progetto"
+        },
+        "98beea6f-7b7b-40b2-929f-ae004b2d650a": {
+          "name": "",
+          "description": ""
         },
         "2a466981-732c-4b6b-82da-7a5552e04294": {
           "name": "Introduzione"
@@ -2236,54 +3013,88 @@
         },
         "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
           "name": "Introduzione",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "03c8c7bd-1824-4ac2-b70b-a627df1abcb5": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "1c2125d9-33ff-4e9b-af87-c814567226a5": {
+          "description": ""
+        },
+        "3e550dce-3786-49bf-8181-0db85bf76550": {
+          "description": ""
         },
         "4dd75533-0a88-4007-b78d-c6237dc99e05": {
-          "name": "Impara come Trascinare i Blocchi"
+          "name": "Impara come Trascinare i Blocchi",
+          "description": ""
         },
         "f8ae0c1b-6fd2-4f09-9ab3-67830399dfe0": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "88dc7233-0f13-40b9-8ce1-8a021d175bb5": {
+          "description": ""
+        },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "6de9f22c-a1d4-45f0-bc41-d7ab54516eab": {
+          "description": ""
         },
         "bde027df-b2a3-4252-980a-7e8493d898e6": {
           "progression_name": "Costruzione di abilità"
         },
         "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "d69fc3f9-0235-4de1-90c7-13f7c8c22cc9": {
+          "description": ""
         },
         "a6a26f0a-a384-454d-bcae-e6b7f4531439": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "e3728ba7-a25a-431b-8a91-f1aee34cc177": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
+          "name": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "20e998a3-d920-48f1-9d92-ec4102990042": {
+          "description": ""
+        },
+        "1ed021eb-9033-4d39-98d7-e9e245a7f785": {
+          "progression_name": ""
         },
         "0394c5d4-246e-42bc-aca2-97d7bd159173": {
           "progression_name": "Costruzione di abilità"
         },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "f810e0b8-71b7-4b54-8c8b-4205a471ca3b": {
+          "description": ""
         },
         "14da8da8-681c-4934-97fc-01e71ad67ef3": {
           "description": "Per completare il collegamento, visualizza in anteprima un esercizio online (o due) insieme a tutta la classe.\n\n**Illustrazione** - Esegui un esercizio online completo, consigliamo l'esercizio 5. Riescono a notare delle somiglianze rispetto all'esercizio che hanno appena svolto? Quali sono le differenze principali?\n\nTrascina insieme ai tuoi alunni i blocchi di codice nell'area di lavoro in modo tale che l'uccellino (possibilmente) arrivi dal maialino.\n\n**Transizione** - A questo punto, gli alunni dovrebbero essere pronti per passare ai computer e completare gli esercizi online in autonomia."
@@ -2292,97 +3103,167 @@
           "name": "Programmare con Angry Bird",
           "progression_name": "Costruzione di abilità"
         },
+        "58491b40-8a56-4299-9f91-d96bd0af3ab0": {
+          "progression_name": ""
+        },
         "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9": {
           "progression_name": "Pratica"
         },
         "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
           "progression_name": "Esercizi Supplementari"
         },
+        "dec19d15-6248-4a60-87e3-b8bf155470bc": {
+          "description": ""
+        },
         "179a6d3a-af19-4c62-85c7-82844964d06a": {
           "tips": [
-            null
+            ""
           ]
         },
         "12c1b1b7-2a91-4f58-ae14-136ea1536a67": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "4bda804b-66e2-4290-8cf1-79b0649b470d": {
           "description": "Divisi in piccoli gruppi, fai progettare agli alunni dei labirinti di carta e falli sfidare tra di loro a scrivere i programmi per risolverli. Per aggiungere divertimento, puoi anche creare dei labirinti a grandezza naturale facendo interpretare agli alunni i ruoli di uccellino e maialino."
         },
         "5990c610-f353-48fd-9d5f-a813486a237f": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
-          "name": "Programmare con Rey e BB-8"
+          "name": "Programmare con Rey e BB-8",
+          "progression_name": ""
         },
         "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
           "progression_name": "Costruzione di abilità"
         },
+        "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa": {
+          "progression_name": ""
+        },
         "8a743287-1638-4c96-8c21-387ebf05d760": {
           "progression_name": "Pratica"
         },
+        "720aa090-bf1d-4934-9c4f-f8cad6b511ac": {
+          "description": ""
+        },
         "4f8c5eb5-a782-4698-a471-19808d1dbbc4": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "6b656efc-0576-4c50-856b-5c9bc433e5b3": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "0684b025-9c16-437c-936c-d9743cad2d94": {
-          "name": "Programmare con la contadina"
+          "name": "Programmare con la contadina",
+          "description": ""
         },
         "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "45d59019-4dd4-4a32-b08c-fd79528eab76": {
+          "progression_name": ""
         },
         "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
           "progression_name": "Costruzione di abilità"
         },
+        "629aedef-bd99-44af-a6bc-9ee890a1c7c8": {
+          "progression_name": ""
+        },
         "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
           "progression_name": "Costruzione di abilità"
+        },
+        "fc22082b-67fd-47ec-8353-11c902f9ab4c": {
+          "progression_name": ""
         },
         "6f0b2804-a745-47e0-8211-45bfc553e106": {
           "progression_name": "Pratica"
         },
+        "465fb2e2-097a-4f1b-a2e1-9dc16c0a15e1": {
+          "description": ""
+        },
         "94b18069-db8a-43d7-bbf0-8912ac563349": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "f6ac49ff-86ee-444b-9e56-62de0b794363": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "cc53970f-5da8-46dc-9d2b-ba8af22f7f27": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "388885b9-02f4-4150-b753-0b33d7db86fa": {
+          "description": ""
+        },
+        "0c3cdd42-4e3e-4b16-942b-47ce55609295": {
+          "description": ""
         },
         "c6bb8fa9-dfaa-414e-ac47-0f6196d8fa9e": {
           "tips": [
-            null
+            ""
           ]
         },
         "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
           "progression_name": "Costruzione di abilità"
         },
+        "eb340c7e-d71e-49fb-aaf8-73205f85d432": {
+          "progression_name": ""
+        },
         "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
           "progression_name": "Costruzione di abilità"
+        },
+        "0a8a7f79-b1b7-436e-8a45-b6190c180164": {
+          "progression_name": ""
         },
         "01ea78e0-acb4-4a08-8295-6257c3d3aa29": {
           "progression_name": "Pratica"
         },
+        "9a875694-a4f4-4cd2-8bf8-31f8441d4a50": {
+          "description": ""
+        },
         "0366b799-b555-4aef-b6c7-741c035590aa": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
+        },
+        "efb62b8a-4d4e-446b-aa68-1f20c45fc7a3": {
+          "description": ""
         },
         "3948532c-fefc-466f-a7ff-7d95e6692b96": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "525d11d6-d492-48d2-b775-6dd460d72215": {
+          "description": ""
         },
         "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
-          "name": "Cicli con la collezionista"
+          "name": "Cicli con la collezionista",
+          "description": ""
+        },
+        "b8fea05b-6234-4075-8416-bbfdef9e22f0": {
+          "name": "",
+          "description": ""
+        },
+        "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3": {
+          "progression_name": ""
         },
         "9aa00264-eca7-4093-92fb-60d301554a5b": {
           "progression_name": "Costruzione di abilità"
         },
+        "dead7fa5-406d-419c-a084-3a913cbd2499": {
+          "progression_name": ""
+        },
         "08049c61-d346-4c06-96f3-58775b4bf69d": {
           "progression_name": "Costruzione di abilità"
+        },
+        "46172f79-e306-4a8f-9ecd-640b05733fb6": {
+          "progression_name": ""
         },
         "c08bd0ec-993c-4554-b855-96bdf024e9ef": {
           "progression_name": "Pratica"
@@ -2391,24 +3272,39 @@
           "progression_name": "Esercizi Supplementari"
         },
         "6397718f-1733-47e6-8ace-820b3f9d1701": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "6361a98f-3232-4060-8758-b1f8064507a8": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "8cb479d1-0b50-4d24-998d-9fff971dcf0c": {
-          "name": "Al mare con i cicli"
+          "name": "Al mare con i cicli",
+          "description": ""
         },
         "b510eb90-ae82-47f6-9d8f-7b2b52700802": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "bbc61306-32dd-4de2-9a6b-35b47408093f": {
+          "description": ""
+        },
+        "7ccc621e-43b3-4402-a0cc-c626dfa1ea79": {
+          "progression_name": ""
         },
         "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
           "progression_name": "Costruzione di abilità"
         },
+        "eabc47c6-9f94-4b32-aab1-4a138064532b": {
+          "progression_name": ""
+        },
         "94271c9b-4000-4e8c-a99c-9a04d851549e": {
           "progression_name": "Costruzione di abilità"
+        },
+        "073ef24a-022b-46a3-a900-9a5bd5c2b6fe": {
+          "progression_name": ""
         },
         "c2ef410e-28ad-4ebe-9061-f5658d8fe975": {
           "progression_name": "Pratica"
@@ -2420,19 +3316,27 @@
           "progression_name": "Esercizi Supplementari"
         },
         "7043a915-b252-47d3-bb01-5975d613129c": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "b53a9767-0731-41e2-b2fe-0b8b841cd403": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
+        },
+        "e5e50ac0-9ede-4521-8a97-17ab48738bfc": {
+          "description": ""
         },
         "21511f7a-c70c-4aa0-ba16-d10d2e64fd4f": {
           "name": "Disegnare giardini con i cicli",
           "tips": [
-            null
+            ""
           ]
         },
         "1474d69b-c98f-40d9-b8c5-07cbeb090699": {
           "progression_name": "Costruzione di abilità"
+        },
+        "77de1bff-b1e2-4956-9ed2-15110f9aa640": {
+          "progression_name": ""
         },
         "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0": {
           "progression_name": "Pratica"
@@ -2444,19 +3348,29 @@
           "progression_name": "Esercizi Supplementari"
         },
         "e382cc47-35ef-4c10-80a1-4b9090d86856": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "e54a7c2e-64b2-4b83-a007-845a622ca484": {
           "name": "Introduzione",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "7d0da3ba-532d-4204-860e-8506667f52f0": {
+          "description": ""
+        },
         "76c12b77-7e58-4d27-b6b5-ae529ae291ba": {
-          "name": "Anteprima degli esercizi online con tutta la classe "
+          "name": "Anteprima degli esercizi online con tutta la classe ",
+          "description": ""
         },
         "6c8d4815-0e66-45fd-980a-dacf20015a66": {
-          "name": "In movimento con gli eventi"
+          "name": "In movimento con gli eventi",
+          "description": ""
+        },
+        "dbb4fe5e-fe4d-40d4-8509-c11f826128ae": {
+          "progression_name": ""
         },
         "708df6be-8599-4a1a-993b-13ca6e874d5c": {
           "progression_name": "Tempo di giocare"
@@ -2471,16 +3385,19 @@
           "progression_name": "Esercizi Supplementari"
         },
         "9336ef6c-3ac8-4703-8f8d-98e88518e5e9": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "93b502d2-fe7e-4895-a9e2-349a3d7a0bb0": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link alla propria storia, si condivide anche tutto il codice che la fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n-   Pubblica online i link alle storie realizzate dai tuoi alunni\n    -   Crea anche tu una storia da condividere!\n-   Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro la storia.\n-   Dividi gli alunni in gruppi e falli confrontare sui diversi modi usati per programmare le storie.\n    -   Cosa vi ha sorpreso?\n    -   Cosa vorreste provare?\n-   Chiedi ad ogni alunno di scegliere la storia di un compagno e cliccare su `Rimescola` per personalizzarla. (Non preoccupatevi, la storia originale è al sicuro e rimarrà invariata)."
+          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link alla propria storia, si condivide anche tutto il codice che la fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n- Pubblica online i link alle storie realizzate dai tuoi alunni\n    - Crea anche tu una storia da condividere!\n- Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro la storia.\n- Dividi gli alunni in gruppi e falli confrontare sui diversi modi usati per programmare le storie.\n    - Cosa vi ha sorpreso?\n    - Cosa vorreste provare?\n- Chiedi ad ogni alunno di scegliere la storia di un compagno e cliccare su `Rimescola` per personalizzarla. (Non preoccupatevi, la storia originale è al sicuro e rimarrà invariata)."
         },
         "e41f8532-e8cd-4df7-a729-43346d3df6d1": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "description": ""
         },
         "fbc5ec8c-04e4-4690-8361-be9c49c1daca": {
-          "name": "Una battaglia con gli eventi"
+          "name": "Una battaglia con gli eventi",
+          "description": ""
         },
         "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7": {
           "progression_name": "Mini Progetto: Battaglia Reale"
@@ -2492,10 +3409,11 @@
           "progression_name": "Esercizi Supplementari"
         },
         "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": ""
         },
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link alla propria storia, si condivide anche tutto il codice che la fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n-   Pubblica online i link alle storie realizzate dai tuoi alunni\n    -   Crea anche tu una storia da condividere!\n-   Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro la storia.\n-   Dividi gli alunni in gruppi e falli confrontare sui diversi modi usati per programmare le storie.\n    -   Cosa vi ha sorpreso?\n    -   Cosa vorreste provare?\n-   Chiedi ad ogni alunno di scegliere la storia di un compagno e cliccare su `Rimescola` per personalizzarla. (Non preoccupatevi, la storia originale è al sicuro e rimarrà invariata)."
+          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link alla propria storia, si condivide anche tutto il codice che la fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n- Pubblica online i link alle storie realizzate dai tuoi alunni\n    - Crea anche tu una storia da condividere!\n- Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro la storia.\n- Dividi gli alunni in gruppi e falli confrontare sui diversi modi usati per programmare le storie.\n    - Cosa vi ha sorpreso?\n    - Cosa vorreste provare?\n- Chiedi ad ogni alunno di scegliere la storia di un compagno e cliccare su `Rimescola` per personalizzarla. (Non preoccupatevi, la storia originale è al sicuro e rimarrà invariata)."
         },
         "716d5ed4-f198-4133-806e-dddeba48f571": {
           "name": "Introduzione"
