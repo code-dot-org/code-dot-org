@@ -76,8 +76,7 @@ module Pd
         SUBJECT_CSA_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
         SUBJECT_CSA_WORKSHOP_1_2 => {min_days: 2, max_days: 2, max_hours: 12},
         SUBJECT_CSA_WORKSHOP_3_4 => {min_days: 2, max_days: 2, max_hours: 12},
-        SUBJECT_CSA_TEACHER_CON => {max_hours: 33.5},
-        SUBJECT_CSA_FOR_RETURNING_TEACHERS => {max_hours: 7}
+        SUBJECT_CSA_TEACHER_CON => {max_hours: 33.5}
       },
       COURSE_CSD => {
         SUBJECT_CSD_SUMMER_WORKSHOP => {max_hours: 33.5},
