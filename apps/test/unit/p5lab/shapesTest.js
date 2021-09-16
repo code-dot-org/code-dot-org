@@ -1,5 +1,5 @@
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 
 describe('GameLab Shapes', function() {
   const propsByKeyOneItem = {

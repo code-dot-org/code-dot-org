@@ -152,7 +152,10 @@ class LessonGroup < ApplicationRecord
     summary[:display_name] = display_name
     summary[:description] = description
     summary[:big_questions] = big_questions
-    summary[:lessons] = lessons.map(&:summarize_for_unit_edit)
+    summary[:lessons] =
+      script.is_migrated ?
+        lessons.map(&:summarize_for_migrated_unit_edit) :
+        lessons.map(&:summarize_for_unit_edit)
     summary
   end
 

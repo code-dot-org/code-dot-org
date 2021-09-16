@@ -241,6 +241,7 @@ class Script < ApplicationRecord
     is_migrated
     seeded_from
     is_maker_unit
+    use_code_studio_lesson_plans
   )
 
   def self.twenty_hour_unit
@@ -1071,6 +1072,15 @@ class Script < ApplicationRecord
       temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, unit, new_suffix, editor_experiment)
       unit.reload
       unit.lesson_groups = temp_lgs
+
+      # For migrated scripts, we use the updated_at field to detect potential
+      # write conflicts when a curriculum editor tries to save an out-of-date
+      # script edit page. therefore, touch the `updated_at` column whenever we
+      # we save, even if it did not result an a change to the actual script
+      # object. that way, we'll prevent write conflicts on changes to lesson
+      # groups, as well as on fields which live only in scripts.en.yml.
+      unit.touch(:updated_at) if unit.is_migrated
+
       unit.save!
       unit.prevent_legacy_script_levels_in_migrated_units
 
@@ -1568,6 +1578,7 @@ class Script < ApplicationRecord
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
       weeklyInstructionalMinutes: weekly_instructional_minutes,
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
+      useCodeStudioLessonPlans: is_migrated && use_code_studio_lesson_plans,
       courseVersionId: get_course_version&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
@@ -1799,6 +1810,7 @@ class Script < ApplicationRecord
       :show_calendar,
       :is_migrated,
       :include_student_lesson_plans,
+      :use_code_studio_lesson_plans,
       :is_maker_unit
     ]
     not_defaulted_keys = [
