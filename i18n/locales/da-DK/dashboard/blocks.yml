@@ -1,9 +1,8 @@
----
 da:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "\"{GROUP} skift hver {N} takter \nmellem {MOVE1} og {MOVE2}\""
+        text: "\"[GROUP][0] skift hver [N][1] takter \nmellem [MOVE1][2] og [MOVE2][3]\""
         options:
           GROUP:
             sprites: alle
@@ -44,20 +43,20 @@ da:
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
       Dancelab_atTimestamp:
-        text: efter {TIMESTAMP} {UNIT}
+        text: efter [TIMESTAMP][0] [UNIT][1]
         options:
           UNIT:
             '"measures"': målt
             '"seconds"': sekunder
       Dancelab_changeColorBy:
-        text: skift {COLOR} {METHOD} by {AMOUNT}
+        text: skift [COLOR][0] [METHOD][1] by [AMOUNT][2]
         options:
           METHOD:
             '"hue"': nuance
             '"saturation"': mætning
             '"brightness"': lysstyrke
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} udfør {MOVE} {DIR} forevigt"
+        text: "[GROUP][0] udfør [MOVE][1] [DIR][2] forevigt"
         options:
           GROUP:
             sprites: alle
@@ -89,7 +88,7 @@ da:
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
       Dancelab_changeMoveLR:
-        text: "{SPRITE} udfør {MOVE} {DIR} forevigt"
+        text: "[SPRITE][0] udfør [MOVE][1] [DIR][2] forevigt"
         options:
           MOVE:
             '"next"': "(Næste)"
@@ -107,7 +106,7 @@ da:
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
       Dancelab_changePropBy:
-        text: skift {SPRITE} {PROPERTY} med {VAL}
+        text: skift [SPRITE][0] [PROPERTY][1] med [VAL][2]
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -117,7 +116,7 @@ da:
             '"x"': vandret position
             '"y"': lodret position
       Dancelab_changePropEachBy:
-        text: skift {GROUP} {PROPERTY} ved {VAL}
+        text: skift [GROUP][0] [PROPERTY][1] ved [VAL][2]
         options:
           GROUP:
             sprites: alle
@@ -141,7 +140,7 @@ da:
             '"x"': vandret position
             '"y"': lodret position
       Dancelab_doMoveEachLR:
-        text: "{GROUP} udfør {MOVE} {DIR} en gang"
+        text: "[GROUP][0] udfør [MOVE][1] [DIR][2] en gang"
         options:
           GROUP:
             sprites: alle
@@ -183,7 +182,7 @@ da:
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
       Dancelab_doMoveLR:
-        text: "{SPRITE} udfør {MOVE} {DIR} en gang"
+        text: "[SPRITE][0] udfør [MOVE][1] [DIR][2] en gang"
         options:
           MOVE:
             '"rand"': "(Tilfældig)"
@@ -211,34 +210,34 @@ da:
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
       Dancelab_everyMeasuresRange:
-        text: 'gentag hver {N} takt efter {START} '
+        text: 'gentag hver [N][0] takt efter [START][1] '
       Dancelab_everySeconds:
-        text: 'gentag hver {N} {UNIT} '
+        text: 'gentag hver [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': målt
             '"seconds"': sekunder
       Dancelab_everySecondsRange:
-        text: 'hver {N} {UNIT} fra {START} til {STOP} '
+        text: 'hver [N][0] [UNIT][1] fra [START][2] til [STOP][3] '
         options:
           UNIT:
             measures: Takt
             seconds: Sekunder
       Dancelab_everyVerseChorus:
-        text: 'hver {UNIT} '
+        text: 'hver [UNIT][0] '
         options:
           UNIT:
             '"verse"': vers
             '"chorus"': kor
       Dancelab_getEnergy:
-        text: få {RANGE}
+        text: få [RANGE][0]
         options:
           RANGE:
             '"low"': bas
             '"mid"': midt
             '"high"': diskant
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -249,15 +248,15 @@ da:
             '"y"': lodret position
             '"tint"': toning
       Dancelab_getTime:
-        text: nuværende antal gange {UNIT}
+        text: nuværende antal gange [UNIT][0]
         options:
           UNIT:
             '"measures"': målt
             '"seconds"': sekunder
       Dancelab_ifDanceIs:
         text: |-
-          hvis {SPRITE} gør {DANCE}
-          {DO1} {DO2}
+          hvis [SPRITE][0] gør [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Højt klap
@@ -273,8 +272,8 @@ da:
             MOVES.Rest: Ingen
       Dancelab_ifTime:
         text: |-
-          hvis {UNIT} er {OP} {N}
-          {DO1} {DO2}
+          hvis [UNIT][0] er [OP][1] [N][2]
+          [DO1][3] [DO2][4]
         options:
           UNIT:
             '"measures"': målt
@@ -284,7 +283,7 @@ da:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} hopper til {LOCATION}"
+        text: "[SPRITE][0] hopper til [LOCATION][1]"
         options:
           LOCATION:
             "{x: 200, y: 100}": top
@@ -298,7 +297,7 @@ da:
             "{x: 300, y: 300}": nederst højre
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfældig
       Dancelab_jumpToEach:
-        text: hop {GROUP} til {LOCATION}
+        text: hop [GROUP][0] til [LOCATION][1]
         options:
           GROUP:
             sprites: alle
@@ -326,7 +325,7 @@ da:
             "{x: 300, y: 300}": nederst højre
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": tilfældig
       Dancelab_layoutSprites:
-        text: formgiv {GROUP} som en {FORMAT}
+        text: formgiv [GROUP][0] som en [FORMAT][1]
         options:
           GROUP:
             sprites: alle
@@ -358,7 +357,7 @@ da:
             '"plus"': plus
             '"random"': tilfældig
       Dancelab_makeAnonymousDanceSprite:
-        text: lav et nyt {COSTUME} på {LOCATION}
+        text: lav et nyt [COSTUME][0] på [LOCATION][1]
         options:
           COSTUME:
             '"ALIEN"': alien
@@ -386,8 +385,8 @@ da:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfældig
       Dancelab_makeNewDanceSprite:
         text: |-
-          lav en ny {COSTUME}
-          med navnet {NAME} på {LOCATION}
+          lav en ny [COSTUME][0]
+          med navnet [NAME][1] på [LOCATION][2]
         options:
           COSTUME:
             '"ALIEN"': alien
@@ -415,8 +414,8 @@ da:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfældig
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          dan {N} en ny {COSTUME}
-          på {LAYOUT}
+          dan [N][0] en ny [COSTUME][1]
+          på [LAYOUT][2]
         options:
           'N':
             '2': '2'
@@ -467,9 +466,9 @@ da:
             '"plus"': plus
             '"random"': tilfældig
       Dancelab_mixColors:
-        text: bland {COLOR1} og {COLOR2}
+        text: bland [COLOR1][0] og [COLOR2][1]
       Dancelab_nMeasures:
-        text: "{N} målt"
+        text: "[N][0] målt"
       Dancelab_onPointerDown:
         text: på pilen ned
       Dancelab_onPointerDrag:
@@ -479,12 +478,14 @@ da:
       Dancelab_randomColor:
         text: tilfældig farve
       Dancelab_setBackground:
-        text: indstil baggrundsfarve {COLOR}
+        text: indstil baggrundsfarve [COLOR][0]
       Dancelab_setBackgroundEffect:
-        text: indstil baggrundseffekt {EFFECT} {PALETTE}
+        text: |-
+          indstil baggrundseffekt [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"none"': Ingen
+            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(Tilfældig)"
             '"circles"': Tunnel
             '"color_cycle"': Farver
             '"diamonds"': Diamanter
@@ -515,7 +516,7 @@ da:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           "indstil baggrundseffekt
-          {PALETTE} {EFFECT}"
+          [PALETTE][0] [EFFECT][1]"
         options:
           EFFECT:
             '"none"': Ingen
@@ -555,7 +556,7 @@ da:
             '"vintage"': Vintage
             '"warm"': Rød
       Dancelab_setDanceSpeed:
-        text: sæt {SPRITE} danse hastighed til {SPEED}
+        text: sæt [SPRITE][0] danse hastighed til [SPEED][1]
         options:
           SPEED:
             '1': normal
@@ -564,7 +565,7 @@ da:
             '0.5': langsom
             '0.25': meget langsom
       Dancelab_setDanceSpeedEach:
-        text: sæt {GROUP} danse hastighed til {SPEED}
+        text: sæt [GROUP][0] danse hastighed til [SPEED][1]
         options:
           GROUP:
             sprites: alle
@@ -587,10 +588,11 @@ da:
             '0.5': langsom
             '0.25': meget langsom
       Dancelab_setForegroundEffect:
-        text: indstil baggrundseffekt {EFFECT}
+        text: indstil baggrundseffekt [EFFECT][0]
         options:
           EFFECT:
             '"none"': Ingen
+            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(Tilfældig)"
             '"bubbles"': Bobler
             '"confetti"': Konfetti
             '"hearts_red"': Hjerter
@@ -605,7 +607,7 @@ da:
             '"color_lights"': Scenelys
             '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
-        text: indstil baggrundseffekt {EFFECT}
+        text: indstil baggrundseffekt [EFFECT][0]
         options:
           EFFECT:
             '"none"': Ingen
@@ -628,7 +630,7 @@ da:
             '"exploding_stars"': Starburst
             '"raining_tacos"': Tacos
       Dancelab_setProp:
-        text: 'skift {SPRITE} {PROPERTY} med {VAL} '
+        text: 'skift [SPRITE][0] [PROPERTY][1] med [VAL][2] '
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -638,7 +640,7 @@ da:
             '"x"': vandret position
             '"y"': lodret position
       Dancelab_setPropEach:
-        text: skift {GROUP} {PROPERTY} med {VAL}
+        text: skift [GROUP][0] [PROPERTY][1] med [VAL][2]
         options:
           GROUP:
             sprites: alle
@@ -663,7 +665,7 @@ da:
             '"y"': lodret position
             '"tint"': toning
       Dancelab_setPropRandom:
-        text: tilfældig {SPRITE} {PROPERTY}
+        text: tilfældig [SPRITE][0] [PROPERTY][1]
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -674,7 +676,7 @@ da:
             '"y"': lodret position
             '"tint"': toning
       Dancelab_setPropRandomEach:
-        text: randomiser {GROUP} {PROPERTY}
+        text: randomiser [GROUP][0] [PROPERTY][1]
         options:
           GROUP:
             sprites: alle
@@ -699,9 +701,9 @@ da:
             '"y"': lodret position
             '"tint"': toning
       Dancelab_setTint:
-        text: sæt {SPRITE} toningen til {VAL}
+        text: sæt [SPRITE][0] toningen til [VAL][1]
       Dancelab_setTintEach:
-        text: sæt {THIS} toningen til {VAL}
+        text: sæt [THIS][0] toningen til [VAL][1]
         options:
           THIS:
             sprites: alle
@@ -718,7 +720,7 @@ da:
             '"SLOTH"': plads
             '"UNICORN"': enhjørning
       Dancelab_setTintEachInline:
-        text: sæt {THIS} toningen til {VAL}
+        text: sæt [THIS][0] toningen til [VAL][1]
         options:
           THIS:
             sprites: alle
@@ -735,15 +737,15 @@ da:
             '"SLOTH"': plads
             '"UNICORN"': enhjørning
       Dancelab_setTintInline:
-        text: sæt {SPRITE} toningen til {VAL}
+        text: sæt [SPRITE][0] toningen til [VAL][1]
       Dancelab_setVisible:
-        text: indstil {SPRITE} synlighed til {VISIBILITY}
+        text: indstil [SPRITE][0] synlighed til [VISIBILITY][1]
         options:
           VISIBILITY:
             'true': synlig
             'false': usynlig
       Dancelab_setVisibleEach:
-        text: indstil {THIS} synlighed til {VISIBILITY}
+        text: indstil [THIS][0] synlighed til [VISIBILITY][1]
         options:
           THIS:
             sprites: alle
@@ -763,7 +765,7 @@ da:
             'true': synlig
             'false': usynlig
       Dancelab_startMapping:
-        text: "{SPRITE} starter {PROPERTY} bagefter {RANGE}"
+        text: "[SPRITE][0] starter [PROPERTY][1] bagefter [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -778,7 +780,7 @@ da:
             '"mid"': midt
             '"treble"': diskant
       Dancelab_startMappingEach:
-        text: "{GROUP} begynd {PROPERTY} efter {RANGE}"
+        text: "[GROUP][0] begynd [PROPERTY][1] efter [RANGE][2]"
         options:
           GROUP:
             sprites: alle
@@ -807,7 +809,7 @@ da:
             '"mid"': midt
             '"treble"': diskant
       Dancelab_stopMapping:
-        text: "{SPRITE} stopper {PROPERTY} efter {RANGE}"
+        text: "[SPRITE][0] stopper [PROPERTY][1] efter [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -823,7 +825,7 @@ da:
             '"mid"': midt
             '"treble"': diskant
       Dancelab_stopMappingEach:
-        text: "{GROUP} stopper {PROPERTY} efter {RANGE}"
+        text: "[GROUP][0] stopper [PROPERTY][1] efter [RANGE][2]"
         options:
           GROUP:
             sprites: alle
@@ -853,7 +855,7 @@ da:
             '"mid"': midt
             '"treble"': diskant
       Dancelab_translateStrings:
-        text: oversæt {STRING}
+        text: oversæt [STRING][0]
         options:
           STRING:
             '"music_wave"': Bølger
@@ -899,7 +901,7 @@ da:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: når {KEY} klikkes
+        text: når [KEY][0] klikkes
         options:
           KEY:
             '"up"': op
@@ -945,7 +947,7 @@ da:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: når {RANGE} topper
+        text: når [RANGE][0] topper
         options:
           RANGE:
             '0': bas
@@ -956,19 +958,19 @@ da:
       Dancelab_whenSetup2:
         text: opret
       gamelab_addBehaviorSimple:
-        text: figur {SPRITE} begynder {BEHAVIOR}
+        text: figur [SPRITE][0] begynder [BEHAVIOR][1]
       gamelab_addTarget:
         options:
           OPT:
             '"avoid"': undgå
       gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       gamelab_atTime:
         options:
           UNIT:
             '"seconds"': sekunder
       gamelab_changePropBy:
-        text: skift {SPRITE} {PROPERTY} med {VAL}
+        text: skift [SPRITE][0] [PROPERTY][1] med [VAL][2]
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -978,29 +980,29 @@ da:
             '"direction"': bevægelses retning
             '"speed"': hastighed
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} berører {SPRITE2}"
+        text: "[CONDITION][0] [SPRITE1][1] berører [SPRITE2][2]"
         options:
           CONDITION:
             '"when"': når
             '"while"': mens
       gamelab_clickedOn:
-        text: når {SPRITE} klikkes
+        text: når [SPRITE][0] klikkes
       gamelab_clickedSpritePointer:
-        text: klikket {SPRITE}
+        text: "klikket [SPRITE][0]"
       gamelab_comment:
-        text: 'kommentar: {COMMENT}'
+        text: 'kommentar: [COMMENT][0]'
       gamelab_costumeImage:
-        text: "{COSTUME}"
+        text: "[COSTUME][0]"
       gamelab_createNewSprite:
-        text: "opret en ny figur \nmed navnet {NAME} \nmed udseendet {COSTUME} \npå {LOCATION}"
+        text: "opret en ny figur \nmed navnet [NAME][0] \nmed udseendet [COSTUME][1] \npå [LOCATION][2]"
       gamelab_destroy:
-        text: slet {THIS}
+        text: slet [THIS][0]
       gamelab_draggable:
         text: kan flyttes
       gamelab_edgesDisplace:
-        text: kant brik {SPRITE} fra flytning
+        text: kant brik [SPRITE][0] fra flytning
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -1011,7 +1013,7 @@ da:
             '"tint"': toning
             '"speed"': hastighed
       gamelab_getThisSprite:
-        text: "{CHOICE} figur"
+        text: "[CHOICE][0] figur"
       gamelab_getTime:
         options:
           UNIT:
@@ -1053,11 +1055,11 @@ da:
             '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
-        text: "{SPRITE} berører kanten"
+        text: "[SPRITE][0] berører kanten"
       gamelab_jumpTo:
-        text: "{SPRITE} hopper til {LOCATION}"
+        text: "[SPRITE][0] hopper til [LOCATION][1]"
       gamelab_keyPressed:
-        text: "{CONDITION} {KEY} trykket på"
+        text: "[CONDITION][0] [KEY][1] trykket på"
         options:
           CONDITION:
             '"when"': når
@@ -1095,7 +1097,7 @@ da:
             '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
-        text: 'placering x: {X} y: {Y}'
+        text: 'placering x: [X][0] y: [Y][1]'
       gamelab_locationModifier:
         options:
           DIRECTION:
@@ -1106,17 +1108,24 @@ da:
       gamelab_locationMouse:
         text: musens placering
       gamelab_locationOf:
-        text: placeringen af {SPRITE}
+        text: placeringen af [SPRITE][0]
       gamelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': regn
       gamelab_makeNewSpriteAnon:
-        text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
+        text: dan en ny [ANIMATION_NAME][0] figur på [LOCATION][1]
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': højre
+            '90': ned
+            '180': venstre
+            '270': op
       gamelab_mirrorSprite:
-        text: "{SPRITE} kigger i retning {DIRECTION}"
+        text: "[SPRITE][0] kigger i retning [DIRECTION][1]"
         options:
           DIRECTION:
             '"right"': højre
@@ -1124,9 +1133,9 @@ da:
       gamelab_mouseLocation:
         text: musens placering
       gamelab_moveForward:
-        text: flyt {SPRITE} {DISTANCE} pixels fremad
+        text: flyt [SPRITE][0] [DISTANCE][1] pixels fremad
       gamelab_moveInDirection:
-        text: flyt {SPRITE} {DISTANCE} pixels {DIRECTION}
+        text: flyt [SPRITE][0] [DISTANCE][1] pixels [DIRECTION][2]
         options:
           DIRECTION:
             '"North"': Nord
@@ -1134,20 +1143,20 @@ da:
             '"South"': Syd
             '"West"': Vest
       gamelab_moveToward:
-        text: flyt {SPRITE} pixels {DISTANCE} imod {TARGET}
+        text: flyt [SPRITE][0] pixels [DISTANCE][1] imod [TARGET][2]
       gamelab_newSpritePointer:
-        text: klikket {SPRITE}
+        text: "klikket [SPRITE][0]"
       gamelab_objectSpritePointer:
-        text: klikket {SPRITE}
+        text: "klikket [SPRITE][0]"
       gamelab_playSound:
-        text: afspil lyd {SOUND}
+        text: afspil lyd [SOUND][0]
       gamelab_playSoundOptions:
-        text: afspil lyd {SOUND}
+        text: afspil lyd [SOUND][0]
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": kravle
       gamelab_pointInDirection:
-        text: peg {SPRITE} {DIRECTION}
+        text: peg [SPRITE][0] [DIRECTION][1]
         options:
           DIRECTION:
             '"North"': Nord
@@ -1155,7 +1164,7 @@ da:
             '"South"': Syd
             '"West"': Vest
       gamelab_printText:
-        text: udskriv {TEXT}
+        text: udskriv [TEXT][0]
       gamelab_randColor:
         text: tilfældig farve
       gamelab_randomColor:
@@ -1163,19 +1172,19 @@ da:
       gamelab_randomLocation:
         text: tilfældig placering
       gamelab_removeAllBehaviors:
-        text: "{SPRITE} stopper alt"
+        text: "[SPRITE][0] stopper alt"
       gamelab_removeBehaviorSimple:
-        text: figur {SPRITE} stopper {BEHAVIOR}
+        text: figur [SPRITE][0] stopper [BEHAVIOR][1]
       gamelab_removeTint:
-        text: fjern farve fra {THIS}
+        text: fjern farve fra [THIS][0]
       gamelab_repeatForever:
         text: Gentag for evigt
       gamelab_setAnimation:
-        text: ændre {THIS} udseende til {ANIMATION}
+        text: ændre [THIS][0] udseende til [ANIMATION][1]
       gamelab_setBackground:
-        text: indstil baggrundsfarve {COLOR}
+        text: indstil baggrundsfarve [COLOR][0]
       gamelab_setBackgroundImage:
-        text: sæt baggrund til {IMG}
+        text: sæt baggrund til [IMG][0]
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': grotte
@@ -1191,7 +1200,7 @@ da:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
             undefined: ingen
       gamelab_setBackgroundImageAs:
-        text: sæt baggrund til {IMG}
+        text: sæt baggrund til [IMG][0]
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -1200,7 +1209,7 @@ da:
             '75': mellem
             '100': large
       gamelab_setProp:
-        text: skift {SPRITE} {PROPERTY} med {VAL}
+        text: skift [SPRITE][0] [PROPERTY][1] med [VAL][2]
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -1210,7 +1219,7 @@ da:
             '"direction"': bevægelses retning
             '"speed"': hastighed
       gamelab_setProp_dropdown:
-        text: skift {SPRITE} {PROPERTY} med {SIZE}
+        text: skift [SPRITE][0] [PROPERTY][1] med [SIZE][2]
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -1220,7 +1229,7 @@ da:
             '75': mellem
             '100': large
       gamelab_setSizes:
-        text: skift {SPRITE} {PROPERTY} med {N}%
+        text: skift [SPRITE][0] [PROPERTY][1] med [N][2]%
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -1232,16 +1241,16 @@ da:
             '"when"': når
             '"while"': mens
       gamelab_subjectSpritePointer:
-        text: klikket {SPRITE}
+        text: "klikket [SPRITE][0]"
       gamelab_textVariableJoin:
-        text: "{VAR}{TEXT2}"
+        text: "[VAR][0][TEXT2][1]"
       gamelab_turn:
         options:
           DIRECTION:
             '"right"': højre
             '"left"': venstre
       gamelab_whenKey:
-        text: når {KEY} klikkes
+        text: når [KEY][0] klikkes
         options:
           KEY:
             '"up"': op
@@ -1266,7 +1275,7 @@ da:
             '"s"': s
             '"d"': d
       Mikelab_addBehaviorSimple:
-        text: figur {SPRITE} begynder {BEHAVIOR}
+        text: figur [SPRITE][0] begynder [BEHAVIOR][1]
       Mikelab_addTrainingData:
         options:
           NAME:
@@ -1274,7 +1283,7 @@ da:
           LOCATION:
             "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": fisk
       Mikelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1304,7 +1313,7 @@ da:
             '"y"': y-position
             '"direction"': bevægelses retning
       Mikelab_groupChangeAnim:
-        text: ændr {SELECT} {COSTUME} til {COSTUME2}
+        text: ændr [SELECT][0] [COSTUME][1] til [COSTUME2][2]
         options:
           SELECT:
             '"all"': alle
@@ -1319,7 +1328,7 @@ da:
             '"y"': y-position
             '"direction"': bevægelses retning
       Mikelab_groupCreateNewSprite:
-        text: lav et nyt {COSTUME} på {LOCATION}
+        text: lav et nyt [COSTUME][0] på [LOCATION][1]
         options:
           LOCATION:
             "{x: 200, y: 100}": top
@@ -1336,7 +1345,7 @@ da:
           SELECT:
             '"all"': alle
       Mikelab_groupEdgesDisplace:
-        text: kant brik {COSTUME} fra flytning
+        text: kant brik [COSTUME][0] fra flytning
       Mikelab_groupGetProp:
         options:
           PROPERTY:
@@ -1372,16 +1381,16 @@ da:
           SELECT:
             '"all"': alle
       Mikelab_groupWhenClickedOn:
-        text: når {COSTUME} klikkes
+        text: når [COSTUME][0] klikkes
       Mikelab_hideFish:
-        text: slet {TRASH}
+        text: slet [TRASH][0]
         options:
           TRASH:
             fish: fisk
       Mikelab_ifDanceIs:
         text: |-
-          hvis {SPRITE} gør {DANCE}
-          {DO1} {DO2}
+          hvis [SPRITE][0] gør [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Højt klap
@@ -1408,15 +1417,15 @@ da:
           DANCE:
             MOVES.ClapHigh: fisk
       Mikelab_joinText:
-        text: "{TEXT} {NEXT}"
+        text: "[TEXT][0] [NEXT][1]"
       Mikelab_locationAt:
-        text: 'placering x: {X} y: {Y}'
+        text: 'placering x: [X][0] y: [Y][1]'
       Mikelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       Mikelab_randomColor:
         text: tilfældig farve
       Mikelab_removeBehaviorSimple:
-        text: figur {SPRITE} stopper {BEHAVIOR}
+        text: figur [SPRITE][0] stopper [BEHAVIOR][1]
       Mikelab_repeatUntilComplete:
         text: Gentag for evigt
       Mikelab_sendBad:
@@ -1445,7 +1454,7 @@ da:
           PREPOSITION:
             '"below"': nedenfor
       Mikelab_sprite:
-        text: nyt {COSTUME} figur på {LOCATION}
+        text: nyt [COSTUME][0] figur på [LOCATION][1]
         options:
           LOCATION:
             "{x: 200, y: 100}": top
@@ -1458,9 +1467,9 @@ da:
             "{x: 100, y: 300}": nederst venstre
             "{x: 300, y: 300}": nederst højre
       Mikelab_whenClickedOn:
-        text: når {SPRITE} klikkes
+        text: når [SPRITE][0] klikkes
       Mikelab_whenKeyPressed:
-        text: når {KEY} klikkes
+        text: når [KEY][0] klikkes
         options:
           KEY:
             '"up"': pil op
@@ -1485,11 +1494,11 @@ da:
       Mikelab_whenMouseClicked:
         text: når der klikkes på mousen
       Mikelab_whenYesNoClicked:
-        text: når {KEY} klikkes
+        text: når [KEY][0] klikkes
         options:
           KEY:
-            '"yes"': ja
-            '"no"': nej
+            '"yes"': 'ja'
+            '"no"': 'nej'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1498,9 +1507,9 @@ da:
             '"left"': venstre pil
             '"right"': højre pil
       PoemBot_playSound:
-        text: afspil lyd {SOUND}
+        text: afspil lyd [SOUND][0]
       PoemBot_setBackgroundEffect:
-        text: indstil baggrundseffekt {EFFECT} {PALETTE}
+        text: indstil baggrundseffekt [BG_EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"colors"': Farver
@@ -1511,7 +1520,7 @@ da:
           PALETTE:
             '"rainbow"': Regnbue
       PoemBot_setForegroundEffect:
-        text: indstil baggrundseffekt {EFFECT}
+        text: indstil baggrundseffekt [FG_EFFECT][0]
         options:
           EFFECT:
             '"rain"': Regn
@@ -1544,29 +1553,29 @@ da:
       RyanLab_turnRight:
         text: drej til højre
       SpriteLab2Beta_spriteSay:
-        text: figur {SPRITE} siger {TEXT} i {SECONDS} sekunder
+        text: figur [SPRITE][0] siger [TEXT][1] i [SECONDS][2] sekunder
       Vector_createSpriteWith:
         text: |-
           opret figur
-          udfør{STATEMENT}
+          udfør[STATEMENT][0]
       Vector_log:
-        text: log besked {MESSAGE}
+        text: log besked [MESSAGE][0]
       Vector_positionCenter:
         text: midten
       Vector_push:
-        text: sæt hastighed {VECTOR}
+        text: sæt hastighed [VECTOR][0]
       Vector_randomLocation:
         text: tilfældig placering
       Vector_setColor:
-        text: sæt farve til {COLOR}
+        text: sæt farve til [COLOR][0]
       Vector_setSize:
-        text: sæt bredde {WIDTH} højde {HEIGHT}
+        text: sæt bredde [WIDTH][0] højde [HEIGHT][1]
       Vector_teleportTo:
-        text: sæt placering {POSITION}
+        text: sæt placering [POSITION][0]
       Vector_vectorNorth:
         text: nord
       Vector_where:
-        text: hver figur hvor {PROPERTY} er {VALUE} udfør{STATEMENT}
+        text: hver figur hvor [PROPERTY][0] er [VALUE][1] udfør[STATEMENT][2]
         options:
           PROPERTY:
             "'shapeColor'": farve
@@ -1592,37 +1601,37 @@ da:
             '0.5': half of
             '0.25': few
       binary_drawBin:
-        text: tegn binært {BIN}
+        text: tegn binært [BIN][0]
       binary_drawBinScreen:
         text: |-
           tegn på skærmen
-          {B1}
-          {B2}
-          {B3}
-          {B4}
-          {B5}
-          {B6}
-          {B7}
-          {B8}
+          [B1][0]
+          [B2][1]
+          [B3][2]
+          [B4][3]
+          [B5][4]
+          [B6][5]
+          [B7][6]
+          [B8][7]
       binary_drawDec:
-        text: tegn decimal {DEC}
+        text: tegn decimal [DEC][0]
       binary_drawPixelHere:
-        text: sæt pixel {VAL}
+        text: sæt pixel [VAL][0]
         options:
           VAL:
-            '0': fra
-            '1': til
+            '0': 'fra'
+            '1': 'til'
             '"toggle"': skift
       binary_drawString:
-        text: tegn teksten {STR}
+        text: tegn teksten [STR][0]
       binary_goTo:
-        text: hop til {LOC}
+        text: hop til [LOC][0]
       binary_goToHome:
         text: hop op til højre
       binary_gridSize:
-        text: sæt gitter størrelse {SIZE}
+        text: sæt gitter størrelse [SIZE][0]
       binary_move:
-        text: flyt {DIR}
+        text: flyt [DIR][0]
         options:
           DIR:
             '"up"': op
@@ -1630,7 +1639,7 @@ da:
             '"left"': venstre
             '"right"': højre
       binary_whenKey:
-        text: når {KEY} klikkes
+        text: når [KEY][0] klikkes
         options:
           KEY:
             '"up"': op
@@ -1644,8 +1653,8 @@ da:
             '"d"': d
       craft_ifPath:
         text: |-
-          hvis stien {DIR}
-          {STATEMENT}
+          hvis stien [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": forude
@@ -1653,8 +1662,8 @@ da:
             "'left'": til venstre
       craft_ifStandingOn:
         text: |-
-          hvis stående på {TYPE}
-          {STATEMENT}
+          hvis stående på [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": blå koral
@@ -1665,19 +1674,19 @@ da:
             "'seaLantern'": havlanterne
       craft_ifStandingOnLimit:
         text: |-
-          hvis stående på {TYPE}
-          {STATEMENT}
+          hvis stående på [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": sand
             "'darkPrismarine'": mørk prismarine
             "'seaLantern'": havlanterne
       craft_log:
-        text: log besked {MESSAGE}
+        text: log besked [MESSAGE][0]
       craft_moveForward:
         text: flyt fremad
       craft_placeBlock:
-        text: sted {blockType}
+        text: sted [blockType][0]
         options:
           blockType:
             '"strippedOak"': afbarket eg
@@ -1712,13 +1721,13 @@ da:
       craft_repeatUntilConduit:
         text: |-
           gentag, indtil kanalen er færdig
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           gentag indtil, du er i mål
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: fiskeyngel {ENTITY}
+        text: fiskeyngel [ENTITY][0]
         options:
           ENTITY:
             '"cod"': torsk
@@ -1728,10 +1737,10 @@ da:
             '"squid"': blæksprutte
             '"tropicalFish"': tropisk fisk
       craft_turn:
-        text: drej {DIR}
+        text: drej [DIR][0]
         options:
           DIR:
             right: til højre ↻
             left: til venstre ↺
       validation_validatedBackground:
-        text: sæt baggrund til {IMG}
+        text: sæt baggrund til [IMG][0]

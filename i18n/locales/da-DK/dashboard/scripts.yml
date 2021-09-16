@@ -1,4 +1,3 @@
----
 da:
   data:
     script:
@@ -46,7 +45,7 @@ da:
             Spelling Bee:
               name: Stave-bien
             'Studio: Create a Story':
-              name: Spil Lab - Opret en historie
+              name: 'Spil Lab - Opret en historie'
             The Big Event:
               name: Den store begivenhed
           student_description: Kursus 1 er designet til at give tidlige læsere mulighed for at lave programmer, som vil hjælpe dem med at lære at samarbejde med andre, løse problemer, og fortsætte gennem selv vanskelige opgaver. Ved slutningen af dette kursus opretter eleven sit helt eget spil eller historie, som kan deles med andre. Anbefales til elever i 1. klasse.
@@ -89,7 +88,7 @@ da:
             Relay programming:
               name: Stafet-programmering
             'Studio: Create a Story':
-              name: Spil Lab - Opret en historie
+              name: 'Spil Lab - Opret en historie'
             The Big Event:
               name: Den store begivenhed
             Your Digital Footprint:
@@ -142,7 +141,7 @@ da:
             'Studio: Create a Game':
               name: 'Play Lab: Opret et spil'
             'Studio: Create a Story':
-              name: Spil Lab - Opret en historie
+              name: 'Spil Lab - Opret en historie'
           student_description: Kursus 3 er til elever, der har taget Kursus 2. Eleverne kommer til at dykke dybere ned i emnerne introduceret i tidligere kurser, for at finde fleksible løsninger til mere komplekse problemer. Ved slutningen af dette kursus vil eleverne have produceret interaktive historier og spil de kan dele. Anbefales til elever i 4. -5. klasse.
         playlab:
           title: Play Lab
@@ -187,7 +186,7 @@ da:
             Artist Binary:
               name: Kunstner binære
             'Artist: For Loops':
-              name: Kunstner For loops/sløjfer
+              name: 'Kunstner For loops/sløjfer'
             'Artist: Functions':
               name: 'Kunstner: Funktioner'
             'Artist: Functions with Parameters':
@@ -529,6 +528,12 @@ da:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
@@ -568,6 +573,12 @@ da:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
@@ -577,6 +588,12 @@ da:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
@@ -795,7 +812,7 @@ da:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life algoritmer: Plante et frø'
         grade4:
-          title: 4.  klasse
+          title: 4. klasse
           description_audience: I alderen 9-99
           lessons:
             Digital Citizenship:
@@ -803,7 +820,7 @@ da:
             Songwriting:
               name: Sangskrivning
         grade1:
-          title: 1.  klasse
+          title: 1. klasse
           description_audience: Alderen 5 - 18
           lessons:
             Debugging:
@@ -817,11 +834,11 @@ da:
             Programming:
               name: Programmering
         grade5:
-          title: 5.  klasse
+          title: 5. klasse
           description_audience: Alder 10-110
           lessons:
             'Artist: For Loops':
-              name: Kunstner For loops/sløjfer
+              name: 'Kunstner For loops/sløjfer'
             'Artist: Functions with Parameters':
               name: 'Kunstner: Funktioner med parametre'
             'Artist: Variables':
@@ -842,12 +859,18 @@ da:
               name: 'Unplugged: Sangskrivning med parametre'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
               name: Afslutning
         grade3:
-          title: 3.  klasse
+          title: 3. klasse
           description_audience: Alderen 5 - 18
           lessons:
             " Bee: Conditionals":
@@ -1134,7 +1157,7 @@ da:
             Functions:
               name: Funktioner
             'null':
-              name: nul
+              name: 'nul'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1482,7 +1505,7 @@ da:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Funktioner med parametre\_
+              name: Funktioner med parametre_
             Functions with Parameters:
               name: Funktioner med parametre
         coursee-2018:
@@ -1787,7 +1810,7 @@ da:
               display_name: Oversigt
           lessons:
             'null':
-              name: nul
+              name: 'nul'
         dance-extras-gallery:
           title: Bliv ved med at danse
           description: Overskrid den første time med udvidede projektideer.
@@ -2627,7 +2650,7 @@ da:
             variables:
               display_name: Variabler
         contagion-pilot:
-          description_audience: 5.  klasse
+          description_audience: 5. klasse
           description_short: 'Brug Sprite Lab til at programmere en simulation ud af et virusudbrud. '
           description: 'Brug Sprite Lab til at programmere en simulation ud af et virusudbrud. '
           student_description: 'Brug Sprite Lab til at programmere en simulation ud af et virusudbrud. '
@@ -2691,4 +2714,8 @@ da:
         csa-u6-dev:
           lessons:
             lesson-12:
+              name: Værktøjer
+        csa-u7-dev:
+          lessons:
+            lesson-3:
               name: Værktøjer
