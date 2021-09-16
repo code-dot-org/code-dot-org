@@ -78,7 +78,7 @@ class UnitEditor extends React.Component {
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
-    initialUseCodeStudioLessonPlans: PropTypes.bool,
+    initialUseLegacyLessonPlans: PropTypes.bool,
     preventCourseVersionChange: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
 
@@ -148,7 +148,7 @@ class UnitEditor extends React.Component {
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
-      useCodeStudioLessonPlans: this.props.initialUseCodeStudioLessonPlans,
+      useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       deprecated: this.props.initialDeprecated,
       publishedState: this.props.initialPublishedState
     };
@@ -303,7 +303,7 @@ class UnitEditor extends React.Component {
       ),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans,
-      use_code_studio_lesson_plans: this.state.useCodeStudioLessonPlans,
+      use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
       is_maker_unit: this.state.isMakerUnit
     };
 
@@ -685,13 +685,11 @@ class UnitEditor extends React.Component {
             Use Code Studio Lesson Plans
             <input
               type="checkbox"
-              checked={
-                this.props.isMigrated && this.state.useCodeStudioLessonPlans
-              }
+              checked={this.props.isMigrated && this.state.useLegacyLessonPlans}
               style={styles.checkbox}
               onChange={() =>
                 this.setState({
-                  useCodeStudioLessonPlans: !this.state.useCodeStudioLessonPlans
+                  useLegacyLessonPlans: !this.state.useLegacyLessonPlans
                 })
               }
               disabled={!this.props.isMigrated}
@@ -713,7 +711,7 @@ class UnitEditor extends React.Component {
               )}
             </HelpTip>
           </label>
-          {!(this.props.isMigrated && this.state.useCodeStudioLessonPlans) && (
+          {!(this.props.isMigrated && this.state.useLegacyLessonPlans) && (
             <label>
               Curriculum Path
               <HelpTip>
