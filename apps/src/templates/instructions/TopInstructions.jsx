@@ -405,7 +405,11 @@ class TopInstructions extends Component {
    * Handle a click on the Documentation PaneButton.
    */
   handleDocumentationClick = () => {
-    const win = window.open(this.props.documentationUrl, '_blank');
+    const win = window.open(
+      this.props.documentationUrl,
+      '_blank',
+      'noopener,noreferrer'
+    );
     win.focus();
   };
 
