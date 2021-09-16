@@ -682,10 +682,12 @@ class UnitEditor extends React.Component {
 
         <CollapsibleEditorSection title="Lesson Settings">
           <label>
-            Use Code Studio Lesson Plans
+            Use Legacy Lesson Plans
             <input
               type="checkbox"
-              checked={this.props.isMigrated && this.state.useLegacyLessonPlans}
+              checked={
+                !this.props.isMigrated || this.state.useLegacyLessonPlans
+              }
               style={styles.checkbox}
               onChange={() =>
                 this.setState({
@@ -696,7 +698,7 @@ class UnitEditor extends React.Component {
             />
             <HelpTip>
               {!this.props.isMigrated && (
-                <p>this option is only available for migrated scripts.</p>
+                <p>unmigrated scripts must use legacy lesson plans.</p>
               )}
               {this.props.isMigrated && (
                 <p>
@@ -711,7 +713,7 @@ class UnitEditor extends React.Component {
               )}
             </HelpTip>
           </label>
-          {!(this.props.isMigrated && this.state.useLegacyLessonPlans) && (
+          {(!this.props.isMigrated || this.state.useLegacyLessonPlans) && (
             <label>
               Curriculum Path
               <HelpTip>
