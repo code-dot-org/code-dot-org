@@ -1,4 +1,3 @@
----
 bn:
   data:
     blocks:
@@ -187,6 +186,13 @@ bn:
             '"right"': ডানে
             '"space"': স্থান
             '"x"': এক্স
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ডানে
+            '90': নিচে
+            '180': বামে
+            '270': উপরে
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -326,7 +332,7 @@ bn:
         options:
           KEY:
             '"yes"': '"হ্যাঁ"'
-            '"no"': না
+            '"no"': 'না'
       Mikelab_whileKeyPressed:
         options:
           KEY:
