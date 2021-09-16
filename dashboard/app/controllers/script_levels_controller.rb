@@ -400,11 +400,16 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    # Grab bubble choice level that will be shown (if any),
+    # so we can check whether a student should be able to view
+    # another student's work for code review.
+    sublevel_to_view = select_bubble_choice_level
+
     user_to_view = User.find(params[:user_id])
-    if can?(:view_as_user, @script_level, user_to_view)
+    if can?(:view_as_user, @script_level, user_to_view, sublevel_to_view)
       @user = user_to_view
 
-      if can?(:view_as_user_for_code_review, @script_level, user_to_view)
+      if can?(:view_as_user_for_code_review, @script_level, user_to_view, sublevel_to_view)
         view_options(is_code_reviewing: true)
       end
     end
@@ -423,12 +428,15 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
+  def select_bubble_choice_level
+    return unless @script_level.bubble_choice? && params[:sublevel_position]
+    @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
+  end
+
   def select_level
     # If a BubbleChoice level's sublevel has been requested, return it.
-    if @script_level.bubble_choice? && params[:sublevel_position]
-      sublevel = @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
-      return sublevel if sublevel
-    end
+    bubble_choice_level = select_bubble_choice_level
+    return bubble_choice_level if bubble_choice_level
 
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
