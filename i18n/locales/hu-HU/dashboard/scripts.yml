@@ -1,4 +1,3 @@
----
 hu:
   data:
     script:
@@ -10,7 +9,7 @@ hu:
         other_category_name: Egyéb
       name:
         course1:
-          title: 1.  tanfolyam
+          title: 1. tanfolyam
           description: Az 1. tanfolyam a olvasással épp hogy csak ismerkedő korosztály számára készült számítógépes programok elkészítése céljából, amely segít számukra megtanulni a másokkal való együttműködést, fejleszteni a problémamegoldó készségeket és legyőzni a nehézségeket. A tanfolyam végére a tanulók létrehoznak egy egyedi saját játékot vagy egy történetet, amit majd meg tudnak osztani. 1. osztályosok számára ajánlott.
           description_short: Az 1. tanfolyam a olvasással épp hogy csak ismerkedő korosztály számára készült.
           description_audience: 4-től 6 éves korig
@@ -53,7 +52,7 @@ hu:
               name: A nagy esemény
           student_description: Az 1. tanfolyam a olvasással épp hogy csak ismerkedő korosztály számára készült számítógépes programok elkészítése céljából, amely segít számukra megtanulni a másokkal való együttműködést, fejleszteni a problémamegoldó készségeket és legyőzni a nehézségeket. A tanfolyam végére a tanulók létrehoznak egy egyedi saját játékot vagy egy történetet, amit majd meg tudnak osztani. 1. osztályosok számára ajánlott.
         course2:
-          title: 2.  tanfolyam
+          title: 2. tanfolyam
           description: A 2. tanfolyam a már olvasni tudó és előzetes programozási tapasztalattal bíró tanulók számára készült. Ezen a tanfolyamon a tanulók programokat készítenek majd bizonyos problémák megoldására, továbbá interaktív játékokat fognak fejleszteni vagy történetek fognak létrehozni, amelyeket majd megtudnak osztani. 2.-5. osztályosok számára ajánlott.
           description_short: A 2. tanfolyam a már olvasó korosztály számára készült.
           description_audience: Kor 6+ (olvasás szükséges)
@@ -98,7 +97,7 @@ hu:
               name: A digitális lábnyomod
           student_description: A 2. tanfolyam a már olvasni tudó és előzetes programozási tapasztalattal bíró tanulók számára készült. Ezen a tanfolyamon a tanulók programokat készítenek majd bizonyos problémák megoldására, továbbá interaktív játékokat fognak fejleszteni vagy történetek fognak létrehozni, amelyeket majd megtudnak osztani. 2.-5. osztályosok számára ajánlott.
         course3:
-          title: 3.  tanfolyam
+          title: 3. tanfolyam
           description: A 3. tanfolyam azoknak a tanulóknak ajánlott, akik már elvégezték a 2. tanfolyamot. A tanulók mélyebbre hatóan fogják tanulmányozni az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók interaktív történeteket és játékokat hoznak létre, amiket bárkivel megoszthatnak. 4.-5. osztályosok számára ajánlott.
           description_short: A 3. tanfolyam a 2. tanfolyam folytatása.
           description_audience: 8-tól 18 éves korig
@@ -179,8 +178,8 @@ hu:
               name: Művész
           student_description: Használjuk a programozást, hogy csatlakozzunk Annához és Elsához, ahogy felfedezik a jég varázsát és szépségét. Hópihéket fogsz készíteni és mintákat ahogy jégkorcsolyázol, és így egy téli csodaországot készítesz, amelyet majd megoszthatsz a barátaiddal!
         course4:
-          title: 4.  tanfolyam
-          description: 4.  tanfolyam célja a diákok akik teljesítették a 2. és 3. tanfolyamot megtanulják, hogyan boldoguljanak a növekvő bonyolultságú feladványokkal és hogyan alkalmazzanak több koncepciót a feladvány megoldásához. A tanfolyam befejezése után a diákok az általuk létrehozott programokkal demonstrálhatják a ciklusok, függvények használatát paraméterekkel. 4-8 évfolyamnak ajánlott.
+          title: 4. tanfolyam
+          description: 4. tanfolyam célja a diákok akik teljesítették a 2. és 3. tanfolyamot megtanulják, hogyan boldoguljanak a növekvő bonyolultságú feladványokkal és hogyan alkalmazzanak több koncepciót a feladvány megoldásához. A tanfolyam befejezése után a diákok az általuk létrehozott programokkal demonstrálhatják a ciklusok, függvények használatát paraméterekkel. 4-8 évfolyamnak ajánlott.
           description_short: A 4. tanfolyam azoknak a tanulóknak ajánlott, akik már befejezték a 2. és a 3. tanfolyamot.
           description_audience: 10-től 18 éves korig
           lessons:
@@ -228,7 +227,7 @@ hu:
               name: 'Gép nélküli feladatok: Dalszerzés paraméterekkel'
             'Unplugged: Tangrams':
               name: 'Gép nélküli feladatok: Tangram'
-          student_description: 4.  tanfolyam célja a diákok akik teljesítették a 2. és 3. tanfolyamot megtanulják, hogyan boldoguljanak a növekvő bonyolultságú feladványokkal és hogyan alkalmazzanak több koncepciót a feladvány megoldásához. A tanfolyam befejezése után a diákok az általuk létrehozott programokkal demonstrálhatják a ciklusok, függvények használatát paraméterekkel. 4-8 évfolyamnak ajánlott.
+          student_description: 4. tanfolyam célja a diákok akik teljesítették a 2. és 3. tanfolyamot megtanulják, hogyan boldoguljanak a növekvő bonyolultságú feladványokkal és hogyan alkalmazzanak több koncepciót a feladvány megoldásához. A tanfolyam befejezése után a diákok az általuk létrehozott programokkal demonstrálhatják a ciklusok, függvények használatát paraméterekkel. 4-8 évfolyamnak ajánlott.
         Course4pre:
           title: A 4. tanfolyam előfeltétel
           description: A fogalmak egy rövid összefoglalása azon tanulók számára, akik nem vettek részt a 2. és 3. tanfolyamon.
@@ -517,8 +516,8 @@ hu:
             Wrap-Up:
               name: Összegzés
         algebraPD2a:
-          description: '2.  Fázis: Online összetett nyári tanulmány'
-          description_short: '2.  Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           lessons:
             Booleans:
               name: Logikai adattípus
@@ -532,7 +531,7 @@ hu:
               name: Húrok és Képek
             The Design Recipe:
               name: A dizájn receptje
-          student_description: '2.  Fázis: Online összetett nyári tanulmány'
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         allthethings:
           lessons:
             AppLab:
@@ -574,8 +573,8 @@ hu:
             Dance Lab:
               name: Tánc Labor
         algebraPD2b:
-          description: '2.  Fázis: Online összetett nyári tanulmány'
-          description_short: '2.  Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           lessons:
             Booleans:
               name: Logikai adattípus
@@ -591,7 +590,7 @@ hu:
               name: Húrok és Képek
             Teacher Dashboard:
               name: Tanári nyitólap
-          student_description: '2.  Fázis: Online összetett nyári tanulmány'
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         cspfacilitator:
           lessons:
             App Lab:
@@ -607,14 +606,20 @@ hu:
             Getting Started:
               name: Első lépések
         ECSPD2:
-          description: '2.  Fázis: Online összetett nyári tanulmány'
-          description_short: '2.  Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Üdvözlünk!
             Wrap-up:
               name: Összefoglaló
-          student_description: '2.  Fázis: Online összetett nyári tanulmány'
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         algebraPD2:
           lessons:
             Lesson Prep:
@@ -626,14 +631,14 @@ hu:
             Welcome!:
               name: Üdvözlünk!
         sciencePD2b:
-          description: '2.  Fázis: Online összetett nyári tanulmány'
-          description_short: '2.  Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           lessons:
             Welcome!:
               name: Üdvözlünk!
             Wrap-Up:
               name: Összegzés
-          student_description: '2.  Fázis: Online összetett nyári tanulmány'
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         science-PD2:
           lessons:
             Welcome!:
@@ -645,32 +650,44 @@ hu:
             Getting Started:
               name: Első lépések
         sciencePD2b-iZone:
-          description: '2.  Fázis: Online összetett nyári tanulmány'
-          description_short: '2.  Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           lessons:
             Welcome!:
               name: Üdvözlünk!
             Wrap-Up:
               name: Összegzés
-          student_description: '2.  Fázis: Online összetett nyári tanulmány'
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         ECSPD2-iZone:
-          description: '2.  Fázis: Online összetett nyári tanulmány'
-          description_short: '2.  Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Üdvözlünk!
             Wrap-up:
               name: Összefoglaló
-          student_description: '2.  Fázis: Online összetett nyári tanulmány'
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         ECSPD2-NexTech:
-          description: '2.  Fázis: Online összetett nyári tanulmány'
-          description_short: '2.  Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Üdvözlünk!
             Wrap-up:
               name: Összefoglaló
-          student_description: '2.  Fázis: Online összetett nyári tanulmány'
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         CSPPD2:
           lessons:
             Getting Started:
@@ -861,26 +878,26 @@ hu:
             cspSurvey:
               display_name: Kérdőív
             csp1_1:
-              display_name: '1.  fejezet: Az információ ábrázolása és továbbítása'
+              display_name: '1. fejezet: Az információ ábrázolása és továbbítása'
             csp1_2:
-              display_name: '2.  fejezet: Az internet feltalálása'
+              display_name: '2. fejezet: Az internet feltalálása'
           lessons:
             The Internet:
               name: Az internet
             Unit 1 Chapter 1 Assessment:
-              name: 1.  lecke 1. fejezet végi értékelés
+              name: 1. lecke 1. fejezet végi értékelés
         csp2-2017:
           lesson_groups:
             csp2_1:
-              display_name: '1.  fejezet: Összetett információk kódolása és tömörítése'
+              display_name: '1. fejezet: Összetett információk kódolása és tömörítése'
             csp2_2:
-              display_name: '2.  fejezet: Adatok manipulálása és megjelenítése'
+              display_name: '2. fejezet: Adatok manipulálása és megjelenítése'
             cspSurvey:
               display_name: Kérdőív
         csp3-2017:
           lesson_groups:
             csp3_1:
-              display_name: '1.  fejezet: Programozási nyelvek és algoritmusok'
+              display_name: '1. fejezet: Programozási nyelvek és algoritmusok'
             cspAssessment:
               display_name: Fejezet végi értékelés
             cspSurvey:
@@ -895,7 +912,7 @@ hu:
             The Need for Algorithms:
               name: Algoritmusokra szükség van
             Unit 3 Chapter 1 Assessment:
-              name: 3.  lecke 1. fejezet végi értékelés
+              name: 3. lecke 1. fejezet végi értékelés
             'Anonymous student survey: Taking the AP exam':
               name: 'Névtelen tanulói kérdőív: Az AP vizsga letétele'
             Creating Functions with Parameters:
@@ -909,9 +926,9 @@ hu:
         csp5-2017:
           lesson_groups:
             csp5_1:
-              display_name: '1.  fejezet: Eseményvezérelt programozás'
+              display_name: '1. fejezet: Eseményvezérelt programozás'
             csp5_2:
-              display_name: '2.  fejezet: Programozás adatszerkezetekkel'
+              display_name: '2. fejezet: Programozás adatszerkezetekkel'
             cspSurvey:
               display_name: Kérdőív
           lessons:
@@ -1063,6 +1080,12 @@ hu:
               name: 'Gép nélküli feladatok: Dalszerzés paraméterekkel'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Üdvözlünk!
             Wrap-up:
@@ -1190,9 +1213,9 @@ hu:
         csp-pre-survey:
           lessons:
             Unit 1 Chapter 1 Assessment:
-              name: 1.  lecke 1. fejezet végi értékelés
+              name: 1. lecke 1. fejezet végi értékelés
             Unit 3 Chapter 1 Assessment:
-              name: 3.  lecke 1. fejezet végi értékelés
+              name: 3. lecke 1. fejezet végi értékelés
             'Anonymous student survey: Taking the AP exam':
               name: 'Névtelen tanulói kérdőív: Az AP vizsga letétele'
         csd1-2017:
@@ -1201,9 +1224,9 @@ hu:
             cspSurvey:
               display_name: Kérdőív
             csd1_1:
-              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
             csd1_2:
-              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
           lessons:
             Intro to Problem Solving:
               name: Bevezetés a problémamegoldásba
@@ -1527,7 +1550,7 @@ hu:
             Functions:
               name: funkciók
             'null':
-              name: semmi
+              name: 'semmi'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1702,7 +1725,7 @@ hu:
         csp3-research-mxghyt:
           lesson_groups:
             csp3_1:
-              display_name: '1.  fejezet: Programozási nyelvek és algoritmusok'
+              display_name: '1. fejezet: Programozási nyelvek és algoritmusok'
             cspAssessment:
               display_name: Fejezet végi értékelés
             cspSurvey:
@@ -1717,7 +1740,7 @@ hu:
             Creating functions with Parameters:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
-              name: 3.  lecke 1. fejezet végi értékelés
+              name: 3. lecke 1. fejezet végi értékelés
         e-f-ramp:
           lessons:
             Building a Foundation:
@@ -1751,7 +1774,7 @@ hu:
         csp3-a:
           lesson_groups:
             csp3_1:
-              display_name: '1.  fejezet: Programozási nyelvek és algoritmusok'
+              display_name: '1. fejezet: Programozási nyelvek és algoritmusok'
         new-express:
           lesson_groups:
             content:
@@ -1792,7 +1815,7 @@ hu:
         csp3-staging:
           lesson_groups:
             csp3_1:
-              display_name: '1.  fejezet: Programozási nyelvek és algoritmusok'
+              display_name: '1. fejezet: Programozási nyelvek és algoritmusok'
             cspAssessment:
               display_name: Fejezet végi értékelés
           lessons:
@@ -1805,7 +1828,7 @@ hu:
             Creating functions with Parameters:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
-              name: 3.  lecke 1. fejezet végi értékelés
+              name: 3. lecke 1. fejezet végi értékelés
         pwc:
           lessons:
             What is a Computer?:
@@ -1952,7 +1975,7 @@ hu:
             Move It, Move It:
               name: Gyerünk, gyerünk!
             Copyright and Creativity:
-              name: Remek dolog tisztességesen alkotni és játszani
+              name: Remek dolog tisztességesen alkotni és játszani 
         coursed-2018:
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -1993,7 +2016,7 @@ hu:
               display_name: Kérdőív
           lessons:
             Functions with Parameters_:
-              name: Paraméteres függvények\_
+              name: Paraméteres függvények_
             Functions with Parameters:
               name: Paraméteres függvények
         coursee-2018:
@@ -2047,12 +2070,12 @@ hu:
             cspSurvey:
               display_name: Kérdőív
             csp1_1:
-              display_name: '1.  fejezet: Az információ ábrázolása és továbbítása'
+              display_name: '1. fejezet: Az információ ábrázolása és továbbítása'
             csp1_2:
-              display_name: '2.  fejezet: Az internet feltalálása'
+              display_name: '2. fejezet: Az internet feltalálása'
           lessons:
             Unit 1 Chapter 1 Assessment:
-              name: 1.  lecke 1. fejezet végi értékelés
+              name: 1. lecke 1. fejezet végi értékelés
             The Internet:
               name: Az internet
         csd1-2018:
@@ -2061,9 +2084,9 @@ hu:
             cspSurvey:
               display_name: Kérdőív
             csd1_1:
-              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
             csd1_2:
-              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
           lessons:
             Intro to Problem Solving:
               name: Bevezetés a problémamegoldásba
@@ -2084,7 +2107,7 @@ hu:
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
-              display_name: '2.  fejezet: Digitális információ'
+              display_name: '2. fejezet: Digitális információ'
             cspAssessment:
               display_name: Fejezet végi értékelés
         csp3-2018:
@@ -2103,7 +2126,7 @@ hu:
             Creating functions with Parameters:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
-              name: 3.  lecke 1. fejezet végi értékelés
+              name: 3. lecke 1. fejezet végi értékelés
             Creating Functions with Parameters:
               name: Paraméteres függvények készítése
         csp-explore-2018:
@@ -2123,9 +2146,9 @@ hu:
         csp5-2018:
           lesson_groups:
             csp5_1:
-              display_name: '1.  fejezet: Eseményvezérelt programozás'
+              display_name: '1. fejezet: Eseményvezérelt programozás'
             csp5_2:
-              display_name: '2.  fejezet: Programozás adatszerkezetekkel'
+              display_name: '2. fejezet: Programozás adatszerkezetekkel'
             cspSurvey:
               display_name: Kérdőív
           lessons:
@@ -2248,7 +2271,7 @@ hu:
             Your Digital Footprint:
               name: A digitális lábnyomod
             Copyright and Creativity:
-              name: Remek dolog tisztességesen alkotni és játszani
+              name: Remek dolog tisztességesen alkotni és játszani 
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
         fit-test:
@@ -2438,9 +2461,9 @@ hu:
             cspSurvey:
               display_name: Kérdőív
             csd1_1:
-              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
             csd1_2:
-              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
           lessons:
             Intro to Problem Solving:
               name: Bevezetés a problémamegoldásba
@@ -2458,7 +2481,7 @@ hu:
               display_name: Tartalom
           lessons:
             'null':
-              name: semmi
+              name: 'semmi'
         dance-extras-gallery:
           title: Táncolj tovább
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
@@ -2601,18 +2624,18 @@ hu:
             cspSurvey:
               display_name: Kérdőív
             csp1_1:
-              display_name: '1.  fejezet: Az információ ábrázolása és továbbítása'
+              display_name: '1. fejezet: Az információ ábrázolása és továbbítása'
             csp1_2:
-              display_name: '2.  fejezet: Az internet feltalálása'
+              display_name: '2. fejezet: Az internet feltalálása'
           lessons:
             Unit 1 Chapter 1 Assessment:
-              name: 1.  lecke 1. fejezet végi értékelés
+              name: 1. lecke 1. fejezet végi értékelés
             The Internet:
               name: Az internet
         csp2-2019:
           lesson_groups:
             csp2_1_2018:
-              display_name: '2.  fejezet: Digitális információ'
+              display_name: '2. fejezet: Digitális információ'
             cspAssessment:
               display_name: Fejezet végi értékelés
             cspSurvey:
@@ -2633,7 +2656,7 @@ hu:
             Creating functions with Parameters:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
-              name: 3.  lecke 1. fejezet végi értékelés
+              name: 3. lecke 1. fejezet végi értékelés
         csp4-2019:
           lesson_groups:
             cspAssessment:
@@ -2643,9 +2666,9 @@ hu:
         csp5-2019:
           lesson_groups:
             csp5_1:
-              display_name: '1.  fejezet: Eseményvezérelt programozás'
+              display_name: '1. fejezet: Eseményvezérelt programozás'
             csp5_2:
-              display_name: '2.  fejezet: Programozás adatszerkezetekkel'
+              display_name: '2. fejezet: Programozás adatszerkezetekkel'
             cspSurvey:
               display_name: Kérdőív
           lessons:
@@ -2692,7 +2715,7 @@ hu:
             csp_functions:
               display_name: funkciók
         csp2-pilot-staging:
-          title: '2.  lecke: Az internet'
+          title: '2. lecke: Az internet'
           lesson_groups:
             csp_variables:
               display_name: változók
@@ -2790,9 +2813,9 @@ hu:
             cspSurvey:
               display_name: Kérdőív
             csd1_1:
-              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
             csd1_2:
-              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
           lessons:
             Intro to Problem Solving:
               name: Bevezetés a problémamegoldásba
@@ -2831,7 +2854,7 @@ hu:
         maddie-test:
           lessons:
             stage 1:
-              name: 1.  szakasz
+              name: 1. szakasz
         csp3-pilot:
           lesson_groups:
             content:
@@ -2873,9 +2896,9 @@ hu:
               display_name: Tartalom
           lessons:
             Step 1:
-              name: 1.  lépés
+              name: 1. lépés
             Step 2:
-              name: 2.  lépés
+              name: 2. lépés
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
@@ -2921,7 +2944,7 @@ hu:
         csd4-pilot:
           lesson_groups:
             csd1_2:
-              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
           lessons:
             What is a Computer?:
               name: Mi az a számítógép?
@@ -3081,9 +3104,9 @@ hu:
             cspSurvey:
               display_name: Kérdőív
             csd1_1:
-              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
             csd1_2:
-              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
           lessons:
             Intro to Problem Solving:
               name: Bevezetés a problémamegoldásba
@@ -3091,6 +3114,7 @@ hu:
               name: A probléma-megoldási folyamat
             What is a Computer?:
               name: Mi az a számítógép?
+            0:
         csd4-2020:
           lesson_groups:
             cspSurvey:
@@ -3286,7 +3310,7 @@ hu:
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
-              display_name: '1.  fejezet: Digitális információ'
+              display_name: '1. fejezet: Digitális információ'
             cspSurvey:
               display_name: Kérdőív
           lessons:
@@ -3295,7 +3319,7 @@ hu:
         csp2-2020:
           lesson_groups:
             csp_unit2_2020:
-              display_name: '2.  lecke: Az internet'
+              display_name: '2. lecke: Az internet'
         csp3-2020:
           lessons:
             Debugging:
@@ -3311,7 +3335,7 @@ hu:
             Creating functions with Parameters:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
-              name: 3.  lecke 1. fejezet végi értékelés
+              name: 3. lecke 1. fejezet végi értékelés
         jess-test-script:
           lessons:
             Tools:
@@ -3344,9 +3368,9 @@ hu:
         csp5-virtual-part2:
           lesson_groups:
             csp5_1:
-              display_name: '1.  fejezet: Eseményvezérelt programozás'
+              display_name: '1. fejezet: Eseményvezérelt programozás'
             csp5_2:
-              display_name: '2.  fejezet: Programozás adatszerkezetekkel'
+              display_name: '2. fejezet: Programozás adatszerkezetekkel'
           lessons:
             While Loops:
               name: Elől tesztelős ciklusok
@@ -3377,7 +3401,7 @@ hu:
             cspSurvey:
               display_name: Kérdőív
             csp5_1:
-              display_name: '1.  fejezet: Eseményvezérelt programozás'
+              display_name: '1. fejezet: Eseményvezérelt programozás'
         csd3-virtual:
           lessons:
             Variables:
@@ -3457,9 +3481,9 @@ hu:
             cspSurvey:
               display_name: Kérdőív
             csd1_1:
-              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
             csd1_2:
-              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
         csd2-2021:
           lessons:
             CSS Classes:
@@ -3519,11 +3543,11 @@ hu:
             cspSurvey:
               display_name: Kérdőív
             csp_unit1_2020:
-              display_name: '1.  fejezet: Digitális információ'
+              display_name: '1. fejezet: Digitális információ'
         csp2-2021:
           lesson_groups:
             csp_unit2_2020:
-              display_name: '2.  lecke: Az internet'
+              display_name: '2. lecke: Az internet'
             lessonGroup-2:
               display_name: Kérdőív
         csp3-2021:
@@ -3843,15 +3867,15 @@ hu:
             lessonGroup-3:
               display_name: Források
             lessonGroup-2:
-              display_name: 1.  rész
+              display_name: 1. rész
             lessonGroup-4:
-              display_name: 2.  rész
+              display_name: 2. rész
             lessonGroup-5:
-              display_name: 3.  rész
+              display_name: 3. rész
             lessonGroup-6:
-              display_name: 4.  rész
+              display_name: 4. rész
             lessonGroup-7:
-              display_name: 5.  rész
+              display_name: 5. rész
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3859,9 +3883,9 @@ hu:
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
-              display_name: 1.  szakasz
+              display_name: 1. szakasz
             lessonGroup-3:
-              display_name: 2.  szakasz
+              display_name: 2. szakasz
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -3901,3 +3925,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: Eszközök
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Leckék
