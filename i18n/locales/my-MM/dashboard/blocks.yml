@@ -1,4 +1,3 @@
----
 my:
   data:
     blocks:
@@ -126,11 +125,11 @@ my:
         options:
           STRING:
             '"diamond"': စိန်
-            '"x"': "×"
+            '"x"': '×'
       Dancelab_whenKey:
         options:
           KEY:
-            '"x"': "×"
+            '"x"': '×'
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -139,14 +138,14 @@ my:
       gamelab_isKeyPressed:
         options:
           KEY:
-            '"x"': "×"
+            '"x"': '×'
       gamelab_keyPressed:
         options:
           CONDITION:
             '"when"': အချိန်
             '"while"': စဉ်တွင်
           KEY:
-            '"x"': "×"
+            '"x"': '×'
       gamelab_makeBurst:
         options:
           EFFECT:
