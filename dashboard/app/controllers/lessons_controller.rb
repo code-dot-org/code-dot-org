@@ -44,6 +44,27 @@ class LessonsController < ApplicationController
     @lesson_data = @lesson.summarize_for_student_lesson_plan
   end
 
+  # GET /s/script-name/lessons/1/start
+  def start
+    # dedupe getting lesson?
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+    raise ActiveRecord::RecordNotFound unless @lesson
+    return render :forbidden unless can?(:read, @lesson)
+
+    first_script_level = @lesson.script_levels.first
+    student_lesson_plan_url = @lesson.student_lesson_plan_pdf_url
+    if first_script_level
+      return redirect_to build_script_level_path(first_script_level)
+    elsif student_lesson_plan_url
+      # This opens the PDF of the lesson plan, which is not actually the desired behavior.
+      # We should redirect to student_lesson_plan,
+      # and preferably dedupe the logic to determine whether there is a lesson plan to go to.
+      return redirect_to student_lesson_plan_url
+    end
+  end
+
   # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
   def edit_with_lesson_position
     script = Script.get_from_cache(params[:script_id])
