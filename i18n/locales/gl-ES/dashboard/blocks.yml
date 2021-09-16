@@ -1,4 +1,3 @@
----
 gl:
   data:
     blocks:
@@ -184,6 +183,13 @@ gl:
             '"left"': esquerda
             '"right"': dereita
             '"space"': espazo
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': dereita
+            '90': abaixo
+            '180': esquerda
+            '270': arriba
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -339,8 +345,8 @@ gl:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': si
-            '"no"': non
+            '"yes"': 'si'
+            '"no"': 'non'
       Mikelab_whileKeyPressed:
         options:
           KEY:
