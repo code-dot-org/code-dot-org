@@ -284,7 +284,7 @@ class Ability
     end
 
     can [:vocab, :resources, :code, :standards], Script do |script|
-      script.can_preview_lesson_plans?(user)
+      !!script.is_migrated
     end
 
     can [:read, :student_lesson_plan], Lesson do |lesson|

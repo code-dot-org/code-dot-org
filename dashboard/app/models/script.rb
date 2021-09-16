@@ -2074,10 +2074,4 @@ class Script < ApplicationRecord
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
   end
-
-  # Whether the specified user has permission to preview code studio lesson
-  # plans and other curriculum materials.
-  def can_preview_lesson_plans?(user)
-    is_migrated? && (use_code_studio_lesson_plans? || user.permission?(UserPermission::LEVELBUILDER))
-  end
 end
