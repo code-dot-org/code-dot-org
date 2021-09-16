@@ -15,10 +15,10 @@
     }
   },
   "game_id": 68,
-  "created_at": "2021-08-31T16:23:14.000Z",
+  "created_at": "2021-09-16T19:38:10.000Z",
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-09-16 19:27:21 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 19:40:04 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-16T19:38:10.721+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L3\\\"\"],\"cloned_from\":\"CSA U4L1-L3\"},{\"changed_at\":\"2021-09-16 19:38:14 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 19:40:20 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
