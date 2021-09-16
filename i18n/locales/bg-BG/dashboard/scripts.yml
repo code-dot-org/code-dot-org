@@ -1,4 +1,3 @@
----
 bg:
   data:
     script:
@@ -17,7 +16,7 @@ bg:
           description_audience: Възраст 4 + (за учещи се да четат)
           lessons:
             'Artist: Loops':
-              name: Художник - цикли
+              name: 'Художник - цикли'
             'Artist: Sequence':
               name: 'Художник: последователност'
             'Artist: Shapes':
@@ -62,7 +61,7 @@ bg:
             'Artist: Debugging':
               name: 'Художник: отстраняване на грешки'
             'Artist: Loops':
-              name: Художник - цикли
+              name: 'Художник - цикли'
             'Artist: Nested Loops':
               name: 'Художник: въвеждане на цикли'
             'Artist: Sequence':
@@ -131,7 +130,7 @@ bg:
             Digital Citizenship:
               name: Цифрови граждани
             'Farmer: While Loops':
-              name: Фермер - цикли "докато"
+              name: 'Фермер - цикли "докато"'
             Functional Suncatchers:
               name: Функционални ловци на слънце
             Internet:
@@ -143,7 +142,7 @@ bg:
             Songwriting:
               name: Писане на песен
             'Studio: Create a Game':
-              name: Театрална лаборатория - Създаване на игра
+              name: 'Театрална лаборатория - Създаване на игра'
             'Studio: Create a Story':
               name: 'Театрална лаборатория: Създаване на история'
           student_description: Курс 3 е предназначен за ученици, които са приключили курс 2. Учениците ще задълбочат знанията си в програмирането, за да могат да вземат гъвкави решения при по-сложни проблеми. До края на този курс учениците ще създават интерактивни истории и игри, които да споделят. Препоръчва се за 4-ти и 5-ти клас.
@@ -190,11 +189,11 @@ bg:
             Artist Binary:
               name: 'Художник: Бинарен код'
             'Artist: For Loops':
-              name: Художник - за циклите
+              name: 'Художник - за циклите'
             'Artist: Functions':
               name: 'Художник: функции'
             'Artist: Functions with Parameters':
-              name: Художник - Функции с Параметри
+              name: 'Художник - Функции с Параметри'
             'Artist: Variables':
               name: 'Художник: променливи'
             'Bee: For Loops':
@@ -238,7 +237,7 @@ bg:
             'Artist: Functions':
               name: 'Художник: функции'
             'Artist: Loops':
-              name: Художник - цикли
+              name: 'Художник - цикли'
             'Artist: Nested Loops':
               name: 'Художник: въвеждане на цикли'
             'Artist: Sequence':
@@ -250,7 +249,7 @@ bg:
             'Bee: Nested Loops':
               name: 'Пчела:  въвеждане на цикли'
             'Farmer: While Loops':
-              name: Фермер - цикли "докато"
+              name: 'Фермер - цикли "докато"'
             'Maze: Sequence':
               name: 'Лабиринт: последователност'
           student_description: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
@@ -525,7 +524,7 @@ bg:
               name: Пъзели
           student_description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто от себе си!
         cspunit1:
-          title: CSP Част 1 - Дигитална информация
+          title: "CSP Част 1 - Дигитална информация"
           description_short: Програмиране
           lessons:
             Binary Numbers:
@@ -552,8 +551,8 @@ bg:
               name: Компресия на текста
         algebraPD:
           title: Компютърни науки в алгебрата
-          description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
+          description: 'Онлайн въведение в ECS'
+          description_short: 'Онлайн въведение в ECS'
           lessons:
             Course Overview:
               name: Преглед на курса
@@ -567,7 +566,7 @@ bg:
               name: Учителско табло
             Why Computer Science belongs in Algebra:
               name: Защо компютърните науки са част от алгебрата
-          student_description: Онлайн въведение в ECS
+          student_description: 'Онлайн въведение в ECS'
         algPDmiami:
           title: Компютърни науки в алгебрата
           description: Научи алгебра чрез функционално програмиране
@@ -605,7 +604,7 @@ bg:
               name: Компресия на текста
           student_description: Компресиране на текст чрез идентифициране на повтарящи се модели.
         CSPPD:
-          title: " PD принципите на Компютърни науки"
+          title: ' PD принципите на Компютърни науки'
           description: 'Фаза 1: Онлайн въведение в ECP'
           description_short: 'Фаза 1: Онлайн въведение в ECP'
           lessons:
@@ -633,8 +632,8 @@ bg:
               name: Урок 15
         ECSPD:
           title: Проучване на компютърни науки PD
-          description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
+          description: 'Онлайн въведение в ECS'
+          description_short: 'Онлайн въведение в ECS'
           lessons:
             Growth Mindset:
               name: Нагласи за разтеж
@@ -648,11 +647,11 @@ bg:
               name: Стратегии за преподаване
             What is ECS?:
               name: Какво е ECS?
-          student_description: Онлайн въведение в ECS
+          student_description: 'Онлайн въведение в ECS'
         sciencePD:
           title: Компютърни науки в науката PD
-          description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
+          description: 'Онлайн въведение в ECS'
+          description_short: 'Онлайн въведение в ECS'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Моделиране на базата на сложни адаптивни системи
@@ -678,7 +677,7 @@ bg:
               name: Използване на модели в класната стая
             What to Expect:
               name: Какво да очаквате
-          student_description: Онлайн въведение в ECS
+          student_description: 'Онлайн въведение в ECS'
         rbo-reference:
           lessons:
             reference:
@@ -688,7 +687,7 @@ bg:
             PDK5 Intro:
               name: PDK5 интро
         cspunit3:
-          title: CSP блок 3 - програмиране
+          title: "CSP блок 3 - програмиране"
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
           description_short: Програмиране
           lessons:
@@ -737,9 +736,9 @@ bg:
           student_description: Научи алгебра чрез блок базирано функционално програмиране
         ECSPD-NexTech:
           title: Проучване на компютърни науки PD
-          description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
-          logo_image: nextech\_logo.png
+          description: 'Онлайн въведение в ECS'
+          description_short: 'Онлайн въведение в ECS'
+          logo_image: nextech_logo.png
           lessons:
             Growth Mindset:
               name: Нагласи за разтеж
@@ -753,12 +752,12 @@ bg:
               name: Стратегии за преподаване
             What is ECS?:
               name: Какво е ECS?
-          student_description: Онлайн въведение в ECS
+          student_description: 'Онлайн въведение в ECS'
         ECSPD-iZone:
           title: Проучване на компютърни науки PD
-          description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
-          logo_image: izone\_logo.png
+          description: 'Онлайн въведение в ECS'
+          description_short: 'Онлайн въведение в ECS'
+          logo_image: izone_logo.png
           lessons:
             Growth Mindset:
               name: Нагласи за разтеж
@@ -772,12 +771,12 @@ bg:
               name: Стратегии за преподаване
             What is ECS?:
               name: Какво е ECS?
-          student_description: Онлайн въведение в ECS
+          student_description: 'Онлайн въведение в ECS'
         algebraPD-NexTech:
           title: Компютърни науки в алгебрата
-          description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
-          logo_image: nextech\_logo.png
+          description: 'Онлайн въведение в ECS'
+          description_short: 'Онлайн въведение в ECS'
+          logo_image: nextech_logo.png
           lessons:
             Course Overview:
               name: Преглед на курса
@@ -791,12 +790,12 @@ bg:
               name: Учителско табло
             Why Computer Science belongs in Algebra:
               name: Защо компютърните науки са част от алгебрата
-          student_description: Онлайн въведение в ECS
+          student_description: 'Онлайн въведение в ECS'
         algebraPD-iZone:
           title: Компютърни науки в алгебрата
-          description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
-          logo_image: izone\_logo.png
+          description: 'Онлайн въведение в ECS'
+          description_short: 'Онлайн въведение в ECS'
+          logo_image: izone_logo.png
           lessons:
             Course Overview:
               name: Преглед на курса
@@ -810,12 +809,12 @@ bg:
               name: Учителско табло
             Why Computer Science belongs in Algebra:
               name: Защо компютърните науки са част от алгебрата
-          student_description: Онлайн въведение в ECS
+          student_description: 'Онлайн въведение в ECS'
         sciencePD-NexTech:
           title: Компютърни науки в науката PD
-          description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
-          logo_image: nextech\_logo.png
+          description: 'Онлайн въведение в ECS'
+          description_short: 'Онлайн въведение в ECS'
+          logo_image: nextech_logo.png
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Моделиране на базата на сложни адаптивни системи
@@ -841,12 +840,12 @@ bg:
               name: Използване на модели в класната стая
             What to Expect:
               name: Какво да очаквате
-          student_description: Онлайн въведение в ECS
+          student_description: 'Онлайн въведение в ECS'
         sciencePD-iZone:
           title: Компютърни науки в науката PD
-          description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
-          logo_image: izone\_logo.png
+          description: 'Онлайн въведение в ECS'
+          description_short: 'Онлайн въведение в ECS'
+          logo_image: izone_logo.png
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Моделиране на базата на сложни адаптивни системи
@@ -872,7 +871,7 @@ bg:
               name: Използване на модели в класната стая
             What to Expect:
               name: Какво да очаквате
-          student_description: Онлайн въведение в ECS
+          student_description: 'Онлайн въведение в ECS'
         sciencePD2:
           lessons:
             Welcome!:
@@ -991,6 +990,12 @@ bg:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Добре дошли!
             Wrap-up:
@@ -1036,6 +1041,12 @@ bg:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Добре дошли!
             Wrap-up:
@@ -1045,6 +1056,12 @@ bg:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Добре дошли!
             Wrap-up:
@@ -1118,7 +1135,7 @@ bg:
               name: 'Ледена епоха: игрална лаборатория'
           student_description: Създай история или си направи игра с Ледена епоха игрална лаборатория!
         cspunit3temp:
-          title: CSP блок 3 - програмиране
+          title: "CSP блок 3 - програмиране"
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
           description_short: Програмиране
           lessons:
@@ -1217,7 +1234,7 @@ bg:
           student_description: Научете функционално програмиране чрез алгебра
         algebraPD1:
           description: Научи алгебра чрез функционално програмиране
-          description_short: Онлайн въведение в ECS
+          description_short: 'Онлайн въведение в ECS'
           lessons:
             Course Overview:
               name: Преглед на курса
@@ -1338,7 +1355,7 @@ bg:
         CSF_Secret_Sample:
           description_audience: Възраст 8 + (след курс 2)
         ECSPD1:
-          description_short: Онлайн въведение в ECS
+          description_short: 'Онлайн въведение в ECS'
           lessons:
             ECS Curriculum:
               name: ECS учебна програма
@@ -1359,7 +1376,7 @@ bg:
           student_description: Научи алгебра чрез функционално програмиране
         sciencePD1:
           description: В партньорство с проект КУРАЖ
-          description_short: Онлайн въведение в ECS
+          description_short: 'Онлайн въведение в ECS'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Моделиране на базата на сложни адаптивни системи
@@ -1485,9 +1502,9 @@ bg:
           description_audience: Възраст 10-110
           lessons:
             'Artist: For Loops':
-              name: Художник - за циклите
+              name: 'Художник - за циклите'
             'Artist: Functions with Parameters':
-              name: Художник - Функции с Параметри
+              name: 'Художник - Функции с Параметри'
             'Artist: Variables':
               name: 'Художник: променливи'
             'Bee: For Loops':
@@ -1506,6 +1523,12 @@ bg:
               name: 'Ънплъгд: Писане на песни с параметри'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Добре дошли!
             Wrap-up:
@@ -1547,7 +1570,7 @@ bg:
             Bounce:
               name: Bounce
             'Farmer: While Loops':
-              name: Фермер - цикли "докато"
+              name: 'Фермер - цикли "докато"'
         alltheplcthings:
           lesson_groups:
             required:
@@ -1929,7 +1952,7 @@ bg:
             Functions:
               name: Функции
             'null':
-              name: нула
+              name: 'нула'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -2241,7 +2264,7 @@ bg:
           description: Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код.
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft: Пътуването на героя в часът на кода'
+              name: 'Minecraft\: Пътуването на героя в часът на кода'
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
           student_description: Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код.
@@ -2436,7 +2459,7 @@ bg:
               display_name: Проучване
           lessons:
             Functions with Parameters_:
-              name: Функции с параметри\_
+              name: Функции с параметри_
             Functions with Parameters:
               name: Функции с параметри
         coursee-2018:
@@ -2514,7 +2537,7 @@ bg:
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
-              display_name: Част 1 - Дигитална информация
+              display_name: 'Част 1 - Дигитална информация'
           lessons:
             Text Compression:
               name: Компресия на текста
@@ -2845,7 +2868,7 @@ bg:
             new stage:
               name: нов етап
             'null':
-              name: нула
+              name: 'нула'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2988,7 +3011,7 @@ bg:
         csp2-2019:
           lesson_groups:
             csp2_1_2018:
-              display_name: Част 1 - Дигитална информация
+              display_name: 'Част 1 - Дигитална информация'
             cspSurvey:
               display_name: Проучване
           lessons:
@@ -4184,3 +4207,9 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Джаджи
+            lesson-4:
+              name: Примери
