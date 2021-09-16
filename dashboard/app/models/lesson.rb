@@ -391,6 +391,16 @@ class Lesson < ApplicationRecord
     ScriptConfig.hoc_scripts.include?(script.name) ? edit_lesson_path(id: id) : script_lesson_edit_path(script, self)
   end
 
+  def get_uncached_show_path
+    # use a custom path for viewing hoc lesson plans on levelbuilder, so that
+    # levelbuilders can see the gray "extra links" box with a link to edit
+    # the lesson. this also sidesteps some weird problems where visiting a
+    # a path like levelbuilder-studio.code.org/s/dance/lessons/1 messes up
+    # the user's login session and requires them to reauthenticate before
+    # accessing other pages which require levelbuilder credentials.
+    ScriptConfig.hoc_scripts.include?(script.name) ? lesson_path(id: id) : script_lesson_path(script, self)
+  end
+
   def summarize_for_calendar
     {
       id: id,
@@ -463,7 +473,7 @@ class Lesson < ApplicationRecord
       courseVersionId: lesson_group.script.get_course_version&.id,
       unitIsLaunched: script.launched?,
       scriptPath: script_path(script),
-      lessonPath: script_lesson_path(script, self),
+      lessonPath: get_uncached_show_path,
       lessonExtrasAvailableForUnit: script.lesson_extras_available
     }
   end
