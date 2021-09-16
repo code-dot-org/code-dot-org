@@ -156,6 +156,13 @@ class ReviewTab extends Component {
     }
   }
 
+  onNewCommentCancel = () => {
+    this.setState({
+      saveError: false,
+      saveInProgress: false
+    });
+  };
+
   onNewCommentSubmit = commentText => {
     const {
       channelId,
@@ -380,6 +387,7 @@ class ReviewTab extends Component {
       return (
         <CommentEditor
           onNewCommentSubmit={this.onNewCommentSubmit}
+          onNewCommentCancel={this.onNewCommentCancel}
           key={forceRecreateEditorKey}
           saveInProgress={saveInProgress}
           saveError={saveError}
