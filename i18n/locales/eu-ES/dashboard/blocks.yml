@@ -1,4 +1,3 @@
----
 eu:
   data:
     blocks:
@@ -33,20 +32,20 @@ eu:
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
       Dancelab_atTimestamp:
-        text: "{TIMESTAMP} ondoren {UNIT}"
+        text: '[TIMESTAMP][0] ondoren [UNIT][1]'
         options:
           UNIT:
             '"measures"': neurriak
             '"seconds"': segundu
       Dancelab_changeColorBy:
-        text: aldatu {COLOR} {METHOD} {AMOUNT} erabiliaz
+        text: aldatu [COLOR][0] [METHOD][1] [AMOUNT][2] erabiliaz
         options:
           METHOD:
             '"hue"': tonua
             '"saturation"': saturazioa
             '"brightness"': distira
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} egin {MOVE} {DIR} betirako"
+        text: "[GROUP][0] egin [MOVE][1] [DIR][2] betirako"
         options:
           GROUP:
             '"ALIEN"': estralurtar guztiak
@@ -66,7 +65,7 @@ eu:
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
       Dancelab_changeMoveLR:
-        text: "{SPRITE} egin {MOVE} {DIR} betirako"
+        text: "[SPRITE][0] egin [MOVE][1] [DIR][2] betirako"
         options:
           MOVE:
             MOVES.Roll: Biratu
@@ -80,7 +79,7 @@ eu:
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
       Dancelab_changePropBy:
-        text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
+        text: aldatu [SPRITE][0] [PROPERTY][1] honekin [VAL][2]
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -89,7 +88,7 @@ eu:
             '"x"': posizio horizontala
             '"y"': posizio bertikala
       Dancelab_changePropEachBy:
-        text: aldatu {GROUP} {PROPERTY} honekin {VAL}
+        text: aldatu [GROUP][0] [PROPERTY][1] honekin [VAL][2]
         options:
           GROUP:
             '"ALIEN"': estralurtar guztiak
@@ -104,7 +103,7 @@ eu:
             '"x"': posizio horizontala
             '"y"': posizio bertikala
       Dancelab_doMoveEachLR:
-        text: "{GROUP} egin {MOVE} {DIR} behin"
+        text: "[GROUP][0] egin [MOVE][1] [DIR][2] behin"
         options:
           GROUP:
             '"ALIEN"': estralurtar guztiak
@@ -125,7 +124,7 @@ eu:
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
       Dancelab_doMoveLR:
-        text: "{SPRITE} egin {MOVE} {DIR} behin"
+        text: "[SPRITE][0] egin [MOVE][1] [DIR][2] behin"
         options:
           MOVE:
             MOVES.Roll: Biratu
@@ -140,32 +139,32 @@ eu:
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
       Dancelab_eval:
-        text: ebal {CODE}
+        text: ebal [CODE][0]
       Dancelab_everySeconds:
-        text: "{N} {UNIT} aldiro "
+        text: '[N][0] [UNIT][1] aldiro '
         options:
           UNIT:
             '"measures"': neurriak
             '"seconds"': segundu
       Dancelab_everySecondsRange:
-        text: "{N} {UNIT} aldiro, {START} tik {STOP} ra "
+        text: '[N][0] [UNIT][1] aldiro, [START][2] tik [STOP][3] ra '
         options:
           UNIT:
             measures: Neurriak
             seconds: Segunduak
       Dancelab_everyVerseChorus:
-        text: "{UNIT} guztietan "
+        text: '[UNIT][0] guztietan '
         options:
           UNIT:
             '"verse"': versus
             '"chorus"': koruak
       Dancelab_getEnergy:
-        text: hartu {RANGE}
+        text: hartu [RANGE][0]
         options:
           RANGE:
             '"mid"': erdi
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -369,7 +368,7 @@ eu:
             'true': ikusgai
             'false': ikusezin
       Dancelab_startMapping:
-        text: "{SPRITE} hasi {PROPERTY} jarraituz {RANGE}"
+        text: "[SPRITE][0] hasi [PROPERTY][1] jarraituz [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -398,7 +397,7 @@ eu:
           RANGE:
             '"mid"': erdi
       Dancelab_stopMapping:
-        text: "{SPRITE} gelditu {PROPERTY} jarraituz {RANGE}"
+        text: "[SPRITE][0] gelditu [PROPERTY][1] jarraituz [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -436,7 +435,7 @@ eu:
             '"w"': w
             '"x"': x
       Dancelab_whenKey:
-        text: "{KEY} zapaltzean"
+        text: '[KEY][0] zapaltzean'
         options:
           KEY:
             '"up"': gora
@@ -462,13 +461,13 @@ eu:
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
-        text: sprite {SPRITE} hasi {BEHAVIOR}
+        text: sprite [SPRITE][0] hasi [BEHAVIOR][1]
       gamelab_atTime:
         options:
           UNIT:
             '"seconds"': segundu
       gamelab_changePropBy:
-        text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
+        text: aldatu [SPRITE][0] [PROPERTY][1] honekin [VAL][2]
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -480,18 +479,18 @@ eu:
       gamelab_checkTouching:
         options:
           CONDITION:
-            '"when"': "-enean"
+            '"when"': '-enean'
             '"while"': bitartean
       gamelab_clickedOn:
-        text: "{SPRITE} klik egitean"
+        text: '[SPRITE][0] klik egitean'
       gamelab_clickedSpritePointer:
-        text: "{SPRITE}"
+        text: "[SPRITE][0]"
       gamelab_comment:
-        text: 'iruzkina: {COMMENT}'
+        text: 'iruzkina: [COMMENT][0]'
       gamelab_destroy:
-        text: ezabatu {THIS}
+        text: ezabatu [THIS][0]
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -521,7 +520,7 @@ eu:
       gamelab_keyPressed:
         options:
           CONDITION:
-            '"when"': "-enean"
+            '"when"': '-enean'
             '"while"': bitartean
           KEY:
             '"up"': gora
@@ -538,15 +537,22 @@ eu:
         options:
           EFFECT:
             '"rain"': euria
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': eskuinera
+            '90': behera
+            '180': ezkerrera
+            '270': gora
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': eskuinera
             '"left"': ezkerrera
       gamelab_newSpritePointer:
-        text: "{SPRITE}"
+        text: "[SPRITE][0]"
       gamelab_objectSpritePointer:
-        text: "{SPRITE}"
+        text: "[SPRITE][0]"
       gamelab_playSoundOptions:
         options:
           SOUND:
@@ -599,17 +605,17 @@ eu:
       gamelab_spriteClicked:
         options:
           CONDITION:
-            '"when"': "-enean"
+            '"when"': '-enean'
             '"while"': bitartean
       gamelab_subjectSpritePointer:
-        text: "{SPRITE}"
+        text: "[SPRITE][0]"
       gamelab_turn:
         options:
           DIRECTION:
             '"right"': eskuinera
             '"left"': ezkerrera
       gamelab_whenKey:
-        text: "{KEY} zapaltzean"
+        text: '[KEY][0] zapaltzean'
         options:
           KEY:
             '"up"': gora
@@ -634,7 +640,7 @@ eu:
             '"s"': s
             '"d"': d
       Mikelab_addBehaviorSimple:
-        text: sprite {SPRITE} hasi {BEHAVIOR}
+        text: sprite [SPRITE][0] hasi [BEHAVIOR][1]
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -650,7 +656,7 @@ eu:
             "{x: 300, y: 200}": eskuinera
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Ausazkoa
       Mikelab_eval:
-        text: ebal {CODE}
+        text: ebal [CODE][0]
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -690,9 +696,9 @@ eu:
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
       Mikelab_groupWhenClickedOn:
-        text: "{COSTUME} klik egitean"
+        text: '[COSTUME][0] klik egitean'
       Mikelab_hideFish:
-        text: ezabatu {TRASH}
+        text: ezabatu [TRASH][0]
       Mikelab_ifDanceIs:
         options:
           DANCE:
@@ -707,7 +713,7 @@ eu:
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
       Mikelab_joinText:
-        text: "{TEXT} {NEXT}"
+        text: "[TEXT][0] [NEXT][1]"
       Mikelab_randomColor:
         text: ausazko kolorea
       Mikelab_repeatUntilComplete:
@@ -736,9 +742,9 @@ eu:
             "{x: 300, y: 200}": eskuinera
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Ausazkoa
       Mikelab_whenClickedOn:
-        text: "{SPRITE} klik egitean"
+        text: '[SPRITE][0] klik egitean'
       Mikelab_whenKeyPressed:
-        text: "{KEY} zapaltzean"
+        text: '[KEY][0] zapaltzean'
         options:
           KEY:
             '"up"': gora gezia
@@ -761,11 +767,11 @@ eu:
             '"s"': H
             '"d"': D
       Mikelab_whenYesNoClicked:
-        text: "{KEY} klik egitean"
+        text: '[KEY][0] klik egitean'
         options:
           KEY:
-            '"yes"': bai
-            '"no"': ez
+            '"yes"': 'bai'
+            '"no"': 'ez'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -795,7 +801,7 @@ eu:
             '"left"': ezkerrera
             '"right"': eskuinera
       binary_whenKey:
-        text: "{KEY} zapaltzean"
+        text: '[KEY][0] zapaltzean'
         options:
           KEY:
             '"up"': gora
