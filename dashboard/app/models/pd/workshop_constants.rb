@@ -110,7 +110,8 @@ module Pd
     # Only courses with a pre-survey will have an entry here
     PRE_SURVEY_BY_COURSE = {
       COURSE_CSD => {course_name: 'csd-2020'},
-      COURSE_CSP => {course_name: 'csp-2020'}
+      COURSE_CSP => {course_name: 'csp-2020'},
+      COURSE_CSA => {course_name: 'csa-2020'}
     }.freeze
   end
 end
