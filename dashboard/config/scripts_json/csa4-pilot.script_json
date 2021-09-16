@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-15 20:57:42 UTC",
+    "serialized_at": "2021-09-16 17:31:40 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -232,9 +232,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "Students design and build a game engine for this project, focusing primarily on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identify its core functionalities. They write pseudocode for these components and begin the development of their project.",
-        "preparation": "* Review the project setup, requirements, and rubric\n* Print copies of the Game Engine Project Planning Guide (one per student)",
-        "student_overview": "For this project, you design the core elements for a simple game by planning and developing a game engine. You outline the game mechanics, pseudocode each component, then use an interactive design process to make a game that reacts to a user’s interaction. At the end of this project, you participate in a block party to play one another’s games!"
+        "overview": "Students design a game engine for this project, focusing on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identifying its core functionalities. They write pseudocode for these components to plan the development of their project.",
+        "preparation": "* Review the project setup, requirements, and rubric\n* Print copies of the Neighborhood Block Party Project Planning Guide (one per student)",
+        "student_overview": "For this project, you outline a simple game's core logic and structure by designing a game engine. You determine how the game functions, write pseudocode for each component, then use an iterative design approach to develop a game that responds to a player's selections and interaction. At the end of this project, you participate in The Neighborhood Block Party to play each other's games!"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -250,8 +250,8 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "In the previous lesson, students planned a game engine for a simple game and wrote pseudocode for its core functions. Students begin the development of their game engine by translating their pseudocode to Java. They participate in a code review and reflect on their progress to prepare for the final development of their game engine.",
-        "student_overview": "Now that you have a plan, today’s goal is to write code. You begin the development of your game engine by translating your pseudocode to Java. You participate in a code review and reflect on your progress to prepare for the final development of your game engine."
+        "overview": "In the previous lesson, students designed a game engine for a simple game and wrote pseudocode for its core functions. Students begin developing their game engine by translating their pseudocode to Java. They participate in a code review and reflect on their progress as they prepare for the final development of their game engine.",
+        "student_overview": "Now that you have a plan, today’s goal is to begin a simple, functional game. You begin the development of your game engine by translating your pseudocode to Java. You participate in a code review and reflect on your progress as you prepare for the final development of your game engine."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -269,7 +269,7 @@
       "properties": {
         "overview": "Students begin the second iteration of their project. After working on their code, they self-assess their work against the project rubric and create a final priority list for their last iteration. Students then complete their last iteration, and the class celebrates in the form of a block party where students play each others’ games. Students finish the project with a final reflection and identify potential next steps to continue developing their game.",
         "preparation": "* Gather 3-4 sticky notes per student",
-        "student_overview": "It’s Block Party Day! Before the party begins, you will participate in two iterations to further develop your game engine and revise your priority list based on your progress and project requirements. At the end of class, you celebrate your success by playing each other's games and celebrating your development."
+        "student_overview": "It’s Block Party Day! Before the party begins, you will participate in two iterations to further develop your simple game and revise your priority list based on your progress and project requirements. At the end of class, you celebrate your success by playing each other's games and celebrating your development."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -285,9 +285,9 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ work, they begin to work more independently, working through annotating, pseudocoding, and completing an FRQ on their own. After annotating and writing their solutions, students still discuss their results with their peers and receive support.  \n\nThe goals of this lesson are:\n* Practice annotating an FRQ\n* Practice writing pseudocode for an FRQ\n* Practice writing a solution for an FRQ\n* Practice scoring an FRQ against a scoring rubric",
-        "preparation": "* Print one copy for each student of the following handouts:\n   * FRQ Writing\n   * FRQ Scoring Guide\n* Gather one sheet of scratch paper per student\n* Gather one sticky note per student",
-        "student_overview": "Today you complete a Free Response Question (FRQ) almost completely on your own. To derive a solution for the FRQ on your own, you will follow a three step process: annotating, writing pseudocode, and writing code in Java. Finally, you score your attempt against a scoring rubric and reflect on your experience."
+        "overview": "Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ activities, they begin to work more independently by annotating, writing pseudocode, and implementing a solution on their own. Students work with their peers to evaluate their work against a scoring rubric and reflect on their progress.\n\nThe goals of this lesson are:\n* Practice annotating an FRQ\n* Practice writing pseudocode for an FRQ\n* Practice writing a solution for an FRQ\n* Practice scoring an FRQ against a scoring rubric",
+        "preparation": "* Print copies of the FRQ Writing handout (one per student)\n* Print copies of the FRQ Scoring Guide (one per student)\n* Gather one sheet of scratch paper and one sticky note per student",
+        "student_overview": "Today you complete a Free Response Question (FRQ) almost completely on your own. To develop a solution for the FRQ, you annotate the problem, write pseudocode, and translate your pseudocode to Java. Finally, you score your attempt against a scoring rubric and reflect on your experience."
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -753,7 +753,7 @@
       "key": "a113610d-b7fc-44e1-8543-85203407726c",
       "position": 2,
       "properties": {
-        "duration": 3,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -767,7 +767,7 @@
       "key": "ee77af8c-2aa8-4143-9bda-b7da30b6ef28",
       "position": 3,
       "properties": {
-        "duration": 37,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -865,7 +865,7 @@
       "key": "d1d07de0-089e-4f2b-8f38-e447c0f782a3",
       "position": 1,
       "properties": {
-        "duration": 9,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -879,7 +879,7 @@
       "key": "25bc6c0c-0451-4353-b742-c480e41459e5",
       "position": 2,
       "properties": {
-        "duration": 33,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -893,7 +893,7 @@
       "key": "12574767-34d7-4127-8006-4aa21ff5b653",
       "position": 3,
       "properties": {
-        "duration": 3,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -3002,8 +3002,8 @@
       "key": "a5897073-a906-4791-8f65-73b71fa69968",
       "position": 1,
       "properties": {
-        "description": "To bring all the ideas of this unit together, we will develop a game engine and a simple interface to interact with it.",
-        "name": "What is a Game Engine?",
+        "description": "We worked together to develop the Pop the Balloons game for The Neighborhood Block Party throughout the unit. Everyone enjoyed your work so much that now they want you to create another game for the next party!\n\nPlanning and developing a game is a lot of work. We will use components that game developers use to design a game engine and implement it into a simple game for this project.",
+        "name": "Game Engines",
         "remarks": true
       },
       "seeding_key": {
@@ -3012,25 +3012,25 @@
       }
     },
     {
-      "key": "a02ce869-500b-4836-a362-e0be98d4b6c0",
+      "key": "78c64632-b201-4d4f-b5cf-e61b8c159740",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video What is a Game Engine?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Describe a game you have played recently and its steps to update your score. What might the program logic look like to make that update happen?*\n\n**Discussion Goal:** Students differentiate between playing and designing a game. They identify the conditional logic needed to achieve the desired outcomes of a game."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Game Engine video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think about a game you have played recently and its steps to update your score. What might the program logic look like to make that update happen?*\n\n**Discussion Goal:** Students describe the rules for updating the score in a game they have played. They connect the logic for updating the score to the concepts learned in the unit, such as using if statements to check for conditions before changing the score."
       },
       "seeding_key": {
-        "activity_section.key": "a02ce869-500b-4836-a362-e0be98d4b6c0",
+        "activity_section.key": "78c64632-b201-4d4f-b5cf-e61b8c159740",
         "lesson_activity.key": "a113610d-b7fc-44e1-8543-85203407726c"
       }
     },
     {
-      "key": "ba8c3c00-fd6c-4e76-a582-9b70dc7ca20f",
+      "key": "252638b4-4a0b-4dca-b00c-849b7dc2a77a",
       "position": 3,
       "properties": {
-        "description": "Over the next three days, you will build your game engine and implement it into a simple game. We will play our games during our block party! Let’s take a look at the project requirements and rubric.",
+        "description": "Over the next three days, you will design a game engine and implement it into a simple game. At the end of our development time, you will play each other's games at The Neighborhood Block Party! Let’s start by taking a look at the project requirements and rubric.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "ba8c3c00-fd6c-4e76-a582-9b70dc7ca20f",
+        "activity_section.key": "252638b4-4a0b-4dca-b00c-849b7dc2a77a",
         "lesson_activity.key": "a113610d-b7fc-44e1-8543-85203407726c"
       }
     },
@@ -3038,7 +3038,7 @@
       "key": "37f8d35b-0360-42e2-bdd3-01c7975cb4f3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Neighborhood Block Party Project Planning Guide to each student. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read through the project description on the first page of the planning guide and then read the last page's rubric.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What code needs to be written for this project?*\n* *How can sprites be added to the game? Are they required?*\n* *Based on the rubric, what is the focus of this project?*\n\n**Discussion Goal:** Students identify the goals of the project before beginning work.  Students should identify:\n* The four required methods are `setupGame()`, `updateScore()`, `checkGameOver()`, and `isValidMove()`. Students are NOT required to develop a fully functioning game. \n* They will need to create a new class for each sprite they add. Students can use the template sprite provided in the starter code and are NOT required to write their own to meet the project specifications.\n* There is only one row in the project rubric that assesses the code of their program. Assessment of the project focuses on design practices and iterative development. An example of this would be to develop the game logic using the template sprites to make the game work before adding additional classes and visuals.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Neighborhood Block Party Project Planning Guide to each student. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read through the project description on the first page of the planning guide and then read the last page's rubric.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What code needs to be written for this project?*\n* *Based on the rubric, what is the focus of this project?*\n\n**Discussion Goal:** Students identify the requirements and goals of the project. Students note that there are four methods they need to develop and that the focus is not to develop a fully functioning game. Students also realize that only one rubric row assesses program code while the rest focuses on program design.",
         "duration": "5",
         "name": "Project Description and Rubric"
       },
@@ -3048,81 +3048,81 @@
       }
     },
     {
-      "key": "e6f38ad1-a5c3-42d8-94bf-d5df1925d296",
+      "key": "fc05c1b1-9ff0-48fe-bf5d-daf4cdf76ba1",
       "position": 2,
       "properties": {
-        "description": "We are about to begin designing our game engines. Before we begin, it is important to set our expectations for the project. You should assume that you are not going to have enough time to build out a full game. Remember - Pop the Balloons took multiple class periods over the past two weeks!",
-        "duration": "8",
+        "description": "Before we begin designing our game engines, it is important to set expectations and goals for the project. You are likely not going to have enough time to develop a complete game. Our Pop the Balloons game took multiple class periods throughout the unit to develop!",
+        "duration": "10",
         "name": "Narrowing Down the Project",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "e6f38ad1-a5c3-42d8-94bf-d5df1925d296",
+        "activity_section.key": "fc05c1b1-9ff0-48fe-bf5d-daf4cdf76ba1",
         "lesson_activity.key": "ee77af8c-2aa8-4143-9bda-b7da30b6ef28"
       }
     },
     {
-      "key": "bed81acd-79c0-4bc9-bb01-d95c62d52808",
+      "key": "790a9501-c578-4abc-8d50-0ab0b326f6ea",
       "position": 3,
       "properties": {
-        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to discuss guidelines for narrowing down a project.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> With a partner, students read through the sample project proposal in part one of their Project Planning Guides. They practice narrowing down the project's features and identifying the core algorithms needed for each of the game engine methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can this game be narrowed to fit within the time frame of this project?*\n\n**Discussion Goal:** Students identify the core components of the game and the general logic for each method.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss guidelines for narrowing down a project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with a partner to read through the sample project proposal on the second page of their Project Planning Guide and brainstorm ways to narrow it down.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we narrow down this game to be achievable within the project's timeframe?*\n\n**Discussion Goal:** Students identify the core components of the game and the general logic for each method.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Keep students focused on the four required methods. It may be that some of the gameplay needs to be revised to make it achievable within three days."
+            "markdown": "Remind students to focus on the four required methods. It may be that some of the gameplay needs to be revised to make it achievable within three days."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "bed81acd-79c0-4bc9-bb01-d95c62d52808",
+        "activity_section.key": "790a9501-c578-4abc-8d50-0ab0b326f6ea",
         "lesson_activity.key": "ee77af8c-2aa8-4143-9bda-b7da30b6ef28"
       }
     },
     {
-      "key": "05c94202-fb93-4730-a266-929aca00effc",
+      "key": "193f0795-cc00-4e59-9bed-7d03151547cf",
       "position": 4,
       "properties": {
-        "description": "Before writing code, software engineers plan and write pseudocode for their methods and algorithms. You have the next 10 minutes to pick a game and draft out the mechanics for each method of your game engine.",
-        "duration": "24",
+        "description": "Before writing code, software engineers plan and write pseudocode for their methods and algorithms. Choose a game and plan the algorithms for each method of your game engine.",
+        "duration": "20",
         "name": "Game Design",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "05c94202-fb93-4730-a266-929aca00effc",
+        "activity_section.key": "193f0795-cc00-4e59-9bed-7d03151547cf",
         "lesson_activity.key": "ee77af8c-2aa8-4143-9bda-b7da30b6ef28"
       }
     },
     {
-      "key": "42f33878-b182-4b74-bb4a-5481c5d94e53",
+      "key": "2c8a19c8-26f0-48a2-88bd-247c91d8899f",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Students begin working on their project\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Each student should choose a game to build.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to design their game logic in part two of their Project Planning Guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students look at a partner’s project design to give feedback.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete page three of their Project Planning Guide. Students choose a game and outline the functionality for each method of the game engine. Have students look at a partner's project design to give feedback.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Planning a game has the potential to take a lot of time. Use a 10-minute timer to help students stay on pace."
+            "markdown": "Planning a game can take a lot of time. Use a 10-minute timer to help students stay on pace."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "42f33878-b182-4b74-bb4a-5481c5d94e53",
+        "activity_section.key": "2c8a19c8-26f0-48a2-88bd-247c91d8899f",
         "lesson_activity.key": "ee77af8c-2aa8-4143-9bda-b7da30b6ef28"
       }
     },
     {
-      "key": "1bfb503a-4f84-4964-a2c6-7b4be27b11aa",
+      "key": "3acb0157-ca91-46a6-83ad-655a35f430b4",
       "position": 6,
       "properties": {
-        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to display the example pseudocode for the Tic-Tac-Toe game.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to create pseudocode for each of their game engine components in part three. They may choose to include additional methods for sprites but should only work on these after achieving the project requirements.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for each method of their game engine on page four of their Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students finish writing their pseudocode early, encourage them to trace through the pseudocode with a partner to make sure there are no logic errors. You may also have them begin steps four and five by accessing Lesson 12 on Code Studio to begin writing their code."
+            "markdown": "If students finish writing their pseudocode early, encourage them to trace through the pseudocode with a partner to ensure there are no logic errors. You may also have them begin the next steps in the Project Planning Guide and access Lesson 12 on Code Studio to write their code."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "1bfb503a-4f84-4964-a2c6-7b4be27b11aa",
+        "activity_section.key": "3acb0157-ca91-46a6-83ad-655a35f430b4",
         "lesson_activity.key": "ee77af8c-2aa8-4143-9bda-b7da30b6ef28"
       }
     },
@@ -3130,8 +3130,8 @@
       "key": "3062f37b-5b2e-4b56-9058-be873a5e1bba",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the reflection prompt in their Project Planning guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
-        "name": "Reflection"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 1 Reflection on page six of their Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Day 1 Reflection"
       },
       "seeding_key": {
         "activity_section.key": "3062f37b-5b2e-4b56-9058-be873a5e1bba",
@@ -3142,7 +3142,7 @@
       "key": "35e2cc26-16e7-4cd6-bbd2-487ee1c02ed4",
       "position": 2,
       "properties": {
-        "description": "**Neighborhood Block Party Project:** You can use the pseudocode or the reflection as a formative assessment for the day.",
+        "description": "**Neighborhood Block Party Project:** You can use pages 3, 4, and 6 of the Project Planning Guide as a formative assessment for the day.",
         "name": "Assessment (Optional)"
       },
       "seeding_key": {
@@ -3151,111 +3151,106 @@
       }
     },
     {
-      "key": "74cbfcfd-6acc-4252-839d-95e155aee587",
+      "key": "2928f939-3dce-4245-b78e-6f509872e2fe",
       "position": 1,
       "properties": {
-        "description": "When designing a large product, it is important for software engineers to think about the work to complete and the people they work with to complete the project. Agile development is one approach software engineers use to organize and manage their work.",
-        "name": "Using Agile Development",
+        "description": "Large projects often use an iterative design approach to add features and continually improve their work. Since we do not have a lot of development time, we will focus on practicing a few aspects of iterative design as you work on your project.",
+        "name": "Iterative Design",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "74cbfcfd-6acc-4252-839d-95e155aee587",
+        "activity_section.key": "2928f939-3dce-4245-b78e-6f509872e2fe",
         "lesson_activity.key": "bb9b9c61-8e81-4fe8-9ebb-9cad9cb2e8a3"
       }
     },
     {
-      "key": "b2857a3d-c7dc-47c4-befc-9859b1d7284a",
+      "key": "64b60eff-9a74-46ee-8423-b1aedead67eb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video What is Agile Development?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How can you use this development process to plan your project?\n\n**Discussion Goal:** Students identify the need for incremental development and teamwork to establish and achieve goals."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Iterative Design video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can you use this approach to develop your project?*\n\n**Discussion Goal:** Students share examples of how they can use iterative design components to evaluate, revise, and improve their projects."
       },
       "seeding_key": {
-        "activity_section.key": "b2857a3d-c7dc-47c4-befc-9859b1d7284a",
+        "activity_section.key": "64b60eff-9a74-46ee-8423-b1aedead67eb",
         "lesson_activity.key": "bb9b9c61-8e81-4fe8-9ebb-9cad9cb2e8a3"
       }
     },
     {
-      "key": "d58efa88-df47-4397-b856-1f157df65fee",
+      "key": "441df4f3-72ae-4b9c-8fe6-e88ca3b37c2c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Agile development is a process that is often used for large collaborative projects. Since we do not have a lot of development time, we will focus on practicing a few components of the Agile process as you work on your project. We started the process when we planned and designed our game engines yesterday. Today, we will identify priorities, begin development, and reflect on our progress to refine our priorities.\n\nYou will have three iterations of 20, 15, and 10 minutes to develop and revise your program.",
+        "description": "We started the process when we outlined our game engines yesterday. Today, we will identify priorities, begin development, and reflect on our progress to refine priorities.\n\nYou will develop your project in three iterations. We will spend 20 minutes on our first iteration, 15 minutes on our second iteration, and 10 minutes on our last iteration.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "d58efa88-df47-4397-b856-1f157df65fee",
+        "activity_section.key": "441df4f3-72ae-4b9c-8fe6-e88ca3b37c2c",
         "lesson_activity.key": "bb9b9c61-8e81-4fe8-9ebb-9cad9cb2e8a3"
       }
     },
     {
-      "key": "fd473c52-9de2-4143-914a-25bfc42bf3f9",
+      "key": "6ce7dc93-f1ae-4ad7-ab83-a4e5114d9de0",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the priority list in part five.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This priority list looks similar to those of the previous projects but is tailored towards iterative planning.  Encourage students to think about the development of each component."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to create a priority list for their first iteration with reach goals on page seven of their Project Planning Guide."
       },
       "seeding_key": {
-        "activity_section.key": "fd473c52-9de2-4143-914a-25bfc42bf3f9",
+        "activity_section.key": "6ce7dc93-f1ae-4ad7-ab83-a4e5114d9de0",
         "lesson_activity.key": "bb9b9c61-8e81-4fe8-9ebb-9cad9cb2e8a3"
       }
     },
     {
-      "key": "ad4cc42b-22b4-44d2-8c75-c2b8367e435f",
+      "key": "55ab52e8-e4fb-4b8b-b6a2-1cf58510028a",
       "position": 1,
       "properties": {
-        "description": "Now that you have planned your game engine, you will begin writing your program. Consider your goals for this first iteration. Each time you complete a goal, commit your code with a message to indicate the update. This way, if something breaks in your next stage of development, you can return to a previous version.",
+        "description": "Now that we have planned our game engines, we can start writing our programs! Consider your goals for this first iteration. Each time you complete a goal, commit your code with a message explaining the update and the achieved goal. This way, if something breaks in when you work on the next goal, you can return to the previous version.",
         "duration": "20",
-        "name": "Iteration 1",
+        "name": "First Iteration",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "ad4cc42b-22b4-44d2-8c75-c2b8367e435f",
+        "activity_section.key": "55ab52e8-e4fb-4b8b-b6a2-1cf58510028a",
         "lesson_activity.key": "79e0fed7-a9b4-46c3-a0a5-9056d2052c86"
       }
     },
     {
-      "key": "4ba32230-1cb9-4907-955c-6cef5d483507",
+      "key": "41467a2c-0c34-4bb6-9c45-b0b9246db4b3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to begin developing their game engine on Level 1 in Code Studio. Use the 20-minute timer to help students pace their work. Remind students to commit their code often as they work.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to begin developing their game engine.",
+        "progression_name": "Neighborhood Block Party Project",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to complete their reach goals if they have finished the primary methods for their game engine."
+            "markdown": "Encourage students to complete their reach goals if they finish the primary methods for their game engine."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "4ba32230-1cb9-4907-955c-6cef5d483507",
+        "activity_section.key": "41467a2c-0c34-4bb6-9c45-b0b9246db4b3",
         "lesson_activity.key": "79e0fed7-a9b4-46c3-a0a5-9056d2052c86"
       }
     },
     {
-      "key": "dd55727f-6803-4227-872f-6a10f767b376",
+      "key": "3542cb9b-5a75-4fff-a70d-c796b6ab8147",
       "position": 3,
       "properties": {
-        "description": "At the end of each iteration, developers share their work, stakeholders ask questions, and the group begins to plan the product's next iteration. We will participate in a revised code review so you can share your work as peer developers and provide feedback as potential users of your game.",
+        "description": "At the end of each iteration, developers share their work, stakeholders ask questions, and the group plans the product's next iteration. We will participate in a revised code review to share your work as peer developers and provide feedback as potential users of your game.",
         "duration": "10",
         "name": "Code Review",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "dd55727f-6803-4227-872f-6a10f767b376",
+        "activity_section.key": "3542cb9b-5a75-4fff-a70d-c796b6ab8147",
         "lesson_activity.key": "79e0fed7-a9b4-46c3-a0a5-9056d2052c86"
       }
     },
     {
-      "key": "5c40fa6f-b759-4928-ac3c-dc352dadc3b8",
+      "key": "428caa9d-bfee-429e-85ce-4afc00694140",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the three steps of the day’s code review and group students for review.\n* Step 1: Each developer spends one minute describing what they have done so far.\n* Step 2: Code Review\n* Step 3: Reflect on feedback and create a revised priority list.\n\n**Do This:** \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students share their planning guide and progress with their review partner, giving a quick overview of what they have done so far.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students return to their computers and request, receive, and review feedback on their Neighborhood Block Party Project."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the steps of the reflection and code review and group students for review.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their progress with their review partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students return to their computers to request, receive, and review feedback on their Neighborhood Block Party Project."
       },
       "seeding_key": {
-        "activity_section.key": "5c40fa6f-b759-4928-ac3c-dc352dadc3b8",
+        "activity_section.key": "428caa9d-bfee-429e-85ce-4afc00694140",
         "lesson_activity.key": "79e0fed7-a9b4-46c3-a0a5-9056d2052c86"
       }
     },
@@ -3263,7 +3258,7 @@
       "key": "b33ec2b6-544c-495a-8278-aa9a4129f5cd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Tomorrow, we will start the day with our second iteration of your project. By the end of the second iteration, you should achieve many of your priorities, but nothing needs to be in its final state of done.",
+        "description": "Tomorrow, we will start the day with our second iteration of your project. You should achieve many of your priorities by the end of the second iteration, but nothing needs to be in its final state.",
         "name": "Revisions, Updates, and Reviews",
         "remarks": true
       },
@@ -3276,7 +3271,7 @@
       "key": "4a6b5221-81c6-4f10-a649-3ece8647efe9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students review feedback from the code review to create a priority list for the second iteration of upgrades, changes, and things they still need to complete. They should complete this in the Iteration 2 section of the Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to create a priority list on page 8 of their Project Planning Guide for their second iteration based on the feedback they received from the code review and what they would like to achieve next.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3304,7 +3299,7 @@
       "key": "314161aa-3446-4d06-becd-1e0c0b6e4fd4",
       "position": 4,
       "properties": {
-        "description": "**Neighborhood Block Party Project:** You can collect the Daily Reflection and Prioritized Lists as an optional completion assessment.",
+        "description": "**Neighborhood Block Party Project:** You can use page 8 of the Project Planning Guide as a formative assessment for the day.",
         "name": "Assessment (Optional)"
       },
       "seeding_key": {
@@ -3313,101 +3308,104 @@
       }
     },
     {
-      "key": "05c1b70a-8827-47ee-9040-ffade02d31e0",
+      "key": "5be89f40-3ddb-4530-ae74-7087cf795ea6",
       "position": 1,
       "properties": {
-        "description": "Yesterday you prepared a priority list for your second iteration. You now have 15 minutes to work toward these goals, and then we will reassess. You will have 10 minutes for your final iteration. Let’s get to it!",
-        "name": "Iteration 2",
+        "description": "Yesterday you prepared a priority list for your second iteration. You now have 15 minutes to work toward these goals, and then we assess our progress. You will have 10 minutes to complete your final iteration. Let’s get to it!",
+        "duration": "20",
+        "name": "Second Iteration",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "05c1b70a-8827-47ee-9040-ffade02d31e0",
+        "activity_section.key": "5be89f40-3ddb-4530-ae74-7087cf795ea6",
         "lesson_activity.key": "b0334ef7-22c5-4d9e-9827-bb3eb98ee755"
       }
     },
     {
-      "key": "608ecb2f-bf7b-4176-8c1f-000256d14da6",
+      "key": "2e9317d8-b7c5-4690-a133-c3db7c1237f2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to their second priority list in the Project Planning Guide and Level 1 on Code Studio to finish their game engine. Use the 15-minute timer to help students pace their work. Remind students to commit their code often as they work.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their game using their second priority list.",
+        "progression_name": "Neighborhood Block Party Project",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may move at different speeds depending on their priorities. If students finish early, encourage them to complete their reach goals. Students can also complete their reflections using the rubric and begin their third iteration."
+            "markdown": "Students may move at different speeds depending on their priorities. If students finish early, encourage them to complete their reach goals."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "608ecb2f-bf7b-4176-8c1f-000256d14da6",
+        "activity_section.key": "2e9317d8-b7c5-4690-a133-c3db7c1237f2",
         "lesson_activity.key": "b0334ef7-22c5-4d9e-9827-bb3eb98ee755"
       }
     },
     {
-      "key": "4c2c4329-46d2-4bf6-80af-4a3c657dc05d",
+      "key": "ba7aa83c-9fbb-45a3-a708-dd2c57ec93cb",
       "position": 3,
       "properties": {
-        "description": "You are about to enter your last iteration to complete this project. Take the next three minutes to check your program against the rubric in the project guide. If your project was scored now, which requirements have you met? Which still needs work?",
+        "description": "You are about to begin the last iteration of your project. Let's take a moment to check your project against the rubric in the Project Planning Guide.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "4c2c4329-46d2-4bf6-80af-4a3c657dc05d",
+        "activity_section.key": "ba7aa83c-9fbb-45a3-a708-dd2c57ec93cb",
         "lesson_activity.key": "b0334ef7-22c5-4d9e-9827-bb3eb98ee755"
       }
     },
     {
-      "key": "2281197f-885c-4f32-86b8-cda7019c9838",
+      "key": "e9e04e4c-5b4d-40e9-ad7c-7a14b9c6d853",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students assess their project against the rubric outlined in the Project Planning Guide. They use this information to create a final priority list."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students assess their project against the rubric outlined in the Project Planning Guide and create a priority list for their third iteration on page nine."
       },
       "seeding_key": {
-        "activity_section.key": "2281197f-885c-4f32-86b8-cda7019c9838",
+        "activity_section.key": "e9e04e4c-5b4d-40e9-ad7c-7a14b9c6d853",
         "lesson_activity.key": "b0334ef7-22c5-4d9e-9827-bb3eb98ee755"
       }
     },
     {
-      "key": "d1a8b1f0-8108-490a-97d0-ab4da8702534",
+      "key": "3d94c5b5-d002-470e-84c5-f8a06c7e1ae6",
       "position": 5,
       "properties": {
-        "description": "We will now begin our last iteration to complete this project. Use this time to make sure you are meeting the project's requirements, and if you have time, try to begin addressing your reach goals. Remember to commit your code after adding a new feature.",
-        "name": "Iteration 3",
+        "description": "We will now begin the last iteration of our projects. Make sure you have met the project's requirements, and if you have time, try to address your reach goals. Remember to commit your code after adding a new feature.",
+        "duration": "10",
+        "name": "Third Iteration",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "d1a8b1f0-8108-490a-97d0-ab4da8702534",
+        "activity_section.key": "3d94c5b5-d002-470e-84c5-f8a06c7e1ae6",
         "lesson_activity.key": "b0334ef7-22c5-4d9e-9827-bb3eb98ee755"
       }
     },
     {
-      "key": "98998230-bffb-45c0-9375-9f0f749d8138",
+      "key": "187e3898-9d08-4146-9bdf-29214c84ffd9",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students continue working in Level 1 on their final game engine."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to finish and submit their projects."
       },
       "seeding_key": {
-        "activity_section.key": "98998230-bffb-45c0-9375-9f0f749d8138",
+        "activity_section.key": "187e3898-9d08-4146-9bdf-29214c84ffd9",
         "lesson_activity.key": "b0334ef7-22c5-4d9e-9827-bb3eb98ee755"
       }
     },
     {
-      "key": "063b46d5-d5ae-41e5-a6e4-bae5e47bb180",
+      "key": "b751381b-6a9b-4363-80ca-da9b53106ab9",
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We’ve made it to the end of our project, and the party is about to begin! Now you get to share your work with your peers.",
         "duration": "10",
-        "name": "Block Party!",
+        "name": "Block Party",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "063b46d5-d5ae-41e5-a6e4-bae5e47bb180",
+        "activity_section.key": "b751381b-6a9b-4363-80ca-da9b53106ab9",
         "lesson_activity.key": "b0334ef7-22c5-4d9e-9827-bb3eb98ee755"
       }
     },
     {
-      "key": "7a30daec-522f-42b8-9fa3-4cd524a7f5ca",
+      "key": "6b361f15-ff5f-4551-a29b-3d546d2bff04",
       "position": 8,
       "properties": {
-        "description": "**Distribute:** Give 3-4 sticky notes to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students display their games and circulate to play each other's games. As they play, they should use the sticky notes to write feedback to the game developer sharing things they like about the game and suggest innovations for the developer to consider.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give 3-4 sticky notes to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students walk around the classroom to play each other's games. As they play, they should use the sticky notes to write feedback to the game developer to share things they like about the game and suggest innovations for the developer to consider.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3416,7 +3414,7 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "7a30daec-522f-42b8-9fa3-4cd524a7f5ca",
+        "activity_section.key": "6b361f15-ff5f-4551-a29b-3d546d2bff04",
         "lesson_activity.key": "b0334ef7-22c5-4d9e-9827-bb3eb98ee755"
       }
     },
@@ -3424,7 +3422,7 @@
       "key": "f060191f-db36-478d-9612-27ba661acefc",
       "position": 1,
       "properties": {
-        "description": "Congratulations on the completion of your projects and the success of our party!  Take the last few minutes of class to read through your users’ feedback and reflect on the development process of your game.",
+        "description": "Congratulations on the completion of your projects and the success of our party! Take the last few minutes of class to read through your users’ feedback and reflect on your game development.",
         "name": "Reflection",
         "remarks": true
       },
@@ -3437,7 +3435,7 @@
       "key": "90ddc25a-ac72-4799-a1bd-0ad6d47ca556",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students read through the glows/innovations for their game. Have students complete the End of Project Self-Reflection in the Project Planning Guide. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students read through the feedback they received for their game. Have students complete the End of Project Self-Reflection on page ten in the Project Planning Guide. "
       },
       "seeding_key": {
         "activity_section.key": "90ddc25a-ac72-4799-a1bd-0ad6d47ca556",
@@ -3448,7 +3446,7 @@
       "key": "425c850f-5235-4f29-a6c7-0586d8b61ccd",
       "position": 3,
       "properties": {
-        "description": "**Neighborhood Block Party Project:** Use the rubric on the last page of the Game Engine Project Planning Guide to assess student projects.",
+        "description": "**Neighborhood Block Party Project:** Use the rubric on the last page of the Neighborhood Block Party Project Planning Guide to assess student projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
@@ -3460,7 +3458,7 @@
       "key": "78c6e42a-ef21-41b9-9932-59ca008d5060",
       "position": 1,
       "properties": {
-        "description": "Today, we will complete a free response question called BingoCaller almost completely on your own. To approach this problem, let’s apply the three steps of the Close Reading Strategy.",
+        "description": "Today, you will complete a free-response question called `BingoCaller` almost completely on your own. To approach this problem, let’s apply the three steps of our Close Reading Strategy.",
         "name": "Step 1: Annotate",
         "remarks": true
       },
@@ -3473,7 +3471,13 @@
       "key": "f4b9d4e0-8233-4901-930c-f1aadc7c2c45",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the three-step Close Reading Strategy:\n* Step 1: Annotate the question.\n* Step 2: Write pseudocode to plan the solution.\n* Step 3: Implement the solution in Java.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of FRQ Writing activity guide and a sheet of scratch paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to individually annotate the FRQ using the shapes and symbols. \n\n**Group:** Place students in groups of two.\n\n**Do This:** After students finish annotating, have students compare their annotations with their partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the directions and starter code from the FRQ Writing activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you have about approaching this Free Response Question?*\n\n**Discussion Goal:** Students share any misunderstandings or points of confusion they have about the FRQ. Point out words in the directions or starter code when addressing student questions. Some questions students may ask include:\n* How do I start the problem?\n* What methods do I need to write?\n* Is there an example I can review?\n* How will this FRQ be graded?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the Close Reading Strategy.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Writing handout and a sheet of scratch paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to individually annotate the FRQ using the shapes and symbols. \n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** After students finish annotating, have students compare their annotations with their partners.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you have about approaching this free response question?*\n\n**Discussion Goal:** Students share any misunderstandings or points of confusion they have about the FRQ.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Point out words in the directions or starter code when addressing student questions."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f4b9d4e0-8233-4901-930c-f1aadc7c2c45",
@@ -3486,7 +3490,7 @@
       "properties": {
         "description": "Before writing your solution in Java, let’s plan it using pseudocode. Writing your algorithm out in pseudocode helps you plan your algorithm without worrying about the syntax rules of the programming language.",
         "duration": "10",
-        "name": "Pseudocode",
+        "name": "Step 2: Pseudocode",
         "remarks": true
       },
       "seeding_key": {
@@ -3495,103 +3499,103 @@
       }
     },
     {
-      "key": "c08cb175-8753-41fc-93ff-7e5e6289ce41",
+      "key": "fdfe1a47-c53e-4889-b234-94d73f31e80c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to plan their solutions for part A and B using pseudocode on the provided scratch paper.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their solutions for parts A and B using pseudocode on their scratch paper.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "As students work, you may choose to use a ten minute timer to help students pace themselves. At this point, the classroom should be quiet so students can focus on writing pseudocode. After five minutes, you may suggest to students to move onto the second half of the FRQ."
+            "markdown": "After five minutes, you can suggest that students move on to the second half of the FRQ."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "c08cb175-8753-41fc-93ff-7e5e6289ce41",
+        "activity_section.key": "fdfe1a47-c53e-4889-b234-94d73f31e80c",
         "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
       }
     },
     {
-      "key": "b7a49964-573f-4b13-9169-547bee4c3a9c",
+      "key": "94c66e18-a042-4b2d-bf83-fe60bbc43cc7",
       "position": 3,
       "properties": {
-        "description": "The last step is to write your solution in Java. Using your pseudocode, write a solution in Java to the FRQ. You will have 15 minutes to complete this task.",
-        "duration": "15",
+        "description": "The last step is to write your solution in Java. Using your pseudocode, write your solution to the FRQ. You will have 10 minutes to complete this task.",
+        "duration": "10",
         "name": "Step 3: Implement",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "b7a49964-573f-4b13-9169-547bee4c3a9c",
+        "activity_section.key": "94c66e18-a042-4b2d-bf83-fe60bbc43cc7",
         "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
       }
     },
     {
-      "key": "32e8fb91-efb9-4c5d-b9e1-c6aa1ce2ba2e",
+      "key": "f374ceb8-2771-44cb-b847-18ae3a3e781e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to convert their pseudocode into Java code onto the FRQ Writing activity guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to convert their pseudocode into Java code on the FRQ Writing activity guide.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "As students work, you may choose to use a 15 minute timer to help students pace themselves. At this point, the classroom should be quiet so students can focus on writing their solution to the FRQ. If students finish early, suggest:\n* Trace their code to ensure it is correct.\n* Check their solution to ensure it aligns with their pseudocode solution."
+            "markdown": "If students finish early, suggest:\n* Trace their code to ensure it is correct.\n* Check their solution to ensure it aligns with their pseudocode solution."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "32e8fb91-efb9-4c5d-b9e1-c6aa1ce2ba2e",
+        "activity_section.key": "f374ceb8-2771-44cb-b847-18ae3a3e781e",
         "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
       }
     },
     {
-      "key": "d28b5991-9a67-4c23-9ab7-12a6048d3643",
+      "key": "7a931aa9-f6e8-41f7-a3ad-b7bcfb874ee0",
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Scoring Guide.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask students to evaluate and score their work with their partners using the FRQ Scoring Guide.",
-        "duration": "8",
+        "duration": "10",
         "name": "FRQ Scoring and Review"
       },
       "seeding_key": {
-        "activity_section.key": "d28b5991-9a67-4c23-9ab7-12a6048d3643",
+        "activity_section.key": "7a931aa9-f6e8-41f7-a3ad-b7bcfb874ee0",
         "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
       }
     },
     {
-      "key": "d490adf0-6e0f-4ab8-85cb-b87dac318223",
+      "key": "7915e5bc-3505-4893-be3c-dce8637eafb1",
       "position": 6,
       "properties": {
         "description": "Congratulations on completing another FRQ! As with any problem we solve in Java, there are multiple approaches to solving an FRQ. Let’s explore some approaches to today’s FRQ.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "d490adf0-6e0f-4ab8-85cb-b87dac318223",
+        "activity_section.key": "7915e5bc-3505-4893-be3c-dce8637eafb1",
         "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
       }
     },
     {
-      "key": "9448ead0-0835-4661-983b-6019cb91ddad",
+      "key": "f03bcb72-14e9-45ce-a1c1-81a21531b92b",
       "position": 7,
       "properties": {
-        "description": "**Do This:** Discuss possible solutions to the FRQ. For each solution, walk through each row of the FRQ Scoring Guide and point out how the solution met those requirements. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation for `hasBeenCalled()` method (Part (a))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b) continued)",
+        "description": "**Do This:** Discuss possible solutions to the FRQ. For each solution, reference each row of the FRQ Scoring Guide and point out how the solution met those requirements. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation for  `hasBeenCalled()` method (Part (a))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b) continued)",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "When discussing the solution, remind students of examples and exercises where the concepts were applied in Unit 4: \n\nExamples related part A:\n* Offsetting the index by 1: In Pop the Balloons, the index of the `Die` object with a value of 1 is 0.\n* Returning the value directly from the array: This implementation applied the DRY Principle.\n\nExamples related to B:\n* Casting randomly generated values into integers: To simulate rolling 1 to 6, students wrote `(int) (Math.random() * 6) + 1 `\n* Conditional branching with an `if/else-if/else` statement: In Pop the Balloons, `updateBalloons()` used an `if/else-if/else` statement because there were more than two balloons, and therefore more than two conditions, that could have been clicked.\n* Using `boolean` method call in a conditional statement: In Pop the Balloons, `isValidMove()` is called to determine whether a balloon can be popped."
+            "markdown": "When discussing the solution, remind students of examples and exercises where Unit 4 activities applied the concepts used in the FRQ solution."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "9448ead0-0835-4661-983b-6019cb91ddad",
+        "activity_section.key": "f03bcb72-14e9-45ce-a1c1-81a21531b92b",
         "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
       }
     },
     {
-      "key": "93b4ed14-8ff2-4fb0-9912-83f43bd0f5ee",
+      "key": "3bc7e0cc-207f-4835-9fcb-75397edcc2cb",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What were you confident about? Are there some things you left out that could have brought up your score?*\n\n**Discussion Goal:** Students identify what they achieved in their FRQ solution and areas of improvement."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What were you confident about?*\n* *Are there some things you left out that could have brought up your score?* \n\n**Discussion Goal:** Students identify what they achieved in their FRQ solution and areas of improvement."
       },
       "seeding_key": {
-        "activity_section.key": "93b4ed14-8ff2-4fb0-9912-83f43bd0f5ee",
+        "activity_section.key": "3bc7e0cc-207f-4835-9fcb-75397edcc2cb",
         "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
       }
     },
@@ -3599,12 +3603,12 @@
       "key": "50d30a5e-2dfe-4e30-b928-7dabf4317f2d",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student one sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain each step of the Give One, Get One activity:\n* On a sticky note, write one strategy for approaching an FRQ question.\n* Afterwards, exchange your sticky note with a partner. \n* Read the FRQ strategy from your partner.",
+        "description": "**Distribute:** Give each student one sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in the Give One, Get One activity.",
         "name": "Give One, Get One",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Give One, Get One** is a processing activity where after thinking or journaling about a topic, students are asked to get up and find someone across the room with whom to share their thoughts or answers. Students are thus receiving an idea in exchange for giving one. The exchange can be verbal or on sticky notes."
+            "markdown": "Give One, Get One has students find a partner to share their thoughts or answers. Students receive an idea in exchange for giving one. The exchange can be verbal or on sticky notes."
           }
         ]
       },
@@ -4934,6 +4938,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L1"
+        ],
         "progression": "Nested if Statement"
       },
       "bonus": false,
@@ -4956,6 +4963,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L2"
+        ],
         "progression": "Logical Operators"
       },
       "bonus": false,
@@ -4978,6 +4988,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L3"
+        ],
         "progression": "Logical Operators"
       },
       "bonus": false,
@@ -5000,6 +5013,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L4"
+        ],
         "progression": "Improving the Game"
       },
       "bonus": false,
@@ -5022,6 +5038,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L5"
+        ],
         "progression": "Improving the Game"
       },
       "bonus": false,
@@ -5044,6 +5063,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L6"
+        ],
         "progression": "Improving the Game"
       },
       "bonus": false,
@@ -5066,6 +5088,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5088,6 +5113,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5102,6 +5130,50 @@
       },
       "level_keys": [
         "CSA U4L10-L1"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Neighborhood Block Party Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L12-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "41467a2c-0c34-4bb6-9c45-b0b9246db4b3"
+      },
+      "level_keys": [
+        "CSA U4L12-L1"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Neighborhood Block Party Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L13-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "2e9317d8-b7c5-4690-a133-c3db7c1237f2"
+      },
+      "level_keys": [
+        "CSA U4L13-L1"
       ]
     }
   ],
@@ -5812,6 +5884,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot",
         "activity_section.key": "7328c943-e60e-47f9-b31c-36adbe5f96b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L12-L1",
+        "script_level.level_keys": [
+          "CSA U4L12-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "41467a2c-0c34-4bb6-9c45-b0b9246db4b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L13-L1",
+        "script_level.level_keys": [
+          "CSA U4L13-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "2e9317d8-b7c5-4690-a133-c3db7c1237f2"
       }
     }
   ],
@@ -6905,7 +7001,7 @@
     {
       "key": "game_engine",
       "word": "Game Engine",
-      "definition": "The core functionality of a game",
+      "definition": "The core logic and structure of a game",
       "properties": {
       },
       "seeding_key": {
@@ -6913,13 +7009,13 @@
       }
     },
     {
-      "key": "agile_development",
-      "word": "Agile Development",
-      "definition": "An iterative and collaborative software development approach involving planning and analysis, design, development, and testing before delivering a product to an end-user",
+      "key": "iterative_design",
+      "word": "Iterative Design",
+      "definition": "An approach used to continually evaluate and improve a product",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "agile_development"
+        "vocabulary.key": "iterative_design"
       }
     }
   ],
@@ -7071,7 +7167,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "vocabulary.key": "agile_development"
+        "vocabulary.key": "iterative_design"
       }
     }
   ],
@@ -7352,7 +7448,7 @@
     {
       "key": "82c94605-929c-4640-9b61-cb59f095b130",
       "properties": {
-        "description": "Design a game engine to set up a game, check whether a move is valid, update the score, and check whether the game is over"
+        "description": "Design a game engine that sets up the display of a game, checks whether a move is valid, updates the score, and checks whether the game is over"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -7372,7 +7468,7 @@
     {
       "key": "f381a44f-d9c5-4626-944d-b31073fdbbd4",
       "properties": {
-        "description": "Develop a game engine consisting of the core functions for a game"
+        "description": "Design a game engine consisting of the core logic and structure of a game"
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -7382,7 +7478,7 @@
     {
       "key": "9c5e4a1f-d94e-452a-a099-3b27727781f0",
       "properties": {
-        "description": "Write methods that incorporate conditional logic and user choice"
+        "description": "Write methods that incorporate conditional logic and player selections"
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -7392,7 +7488,7 @@
     {
       "key": "09d27374-68a6-496c-aa26-7ade8d6037ae",
       "properties": {
-        "description": "Develop a game engine consisting of the core functions for a game"
+        "description": "Design a game engine consisting of the core logic and structure of a game"
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -7402,7 +7498,7 @@
     {
       "key": "c07a9bc0-1655-4aa0-90f5-a445c7d84719",
       "properties": {
-        "description": "Write methods that incorporate conditional logic and user choice"
+        "description": "Write methods that incorporate conditional logic and player selections"
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
