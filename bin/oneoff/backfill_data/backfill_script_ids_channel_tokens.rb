@@ -1,5 +1,22 @@
 #!/usr/bin/env ruby
-# Backfill existing ChannelTokens to set script_id if it can easily be inferred because there is only one script associated with the level_id
+# This script backfills existing ChannelTokens to set script_id
+#
+# Background: previously, the channel token for a level was identified by the level_id column. However,
+# levels are shared across scripts, so we need to identify the channel token by both level_id and script_id.
+# A script_id column was added the the channel tokens table here: https://github.com/code-dot-org/code-dot-org/pull/39835
+# New channel tokens that are generated, are generated with a script_id (https://github.com/code-dot-org/code-dot-org/pull/39855).
+# The purpose of this script is to backfill the script_id for channel tokens created earlier.
+#
+# How this script works:
+# This script will iterate over channel tokens and identify the script_ID in several possible ways,
+# 1. If the level only exists in 1 script, use that script_id
+# 2. If an associated user exists, if the user has progress in one script that the level could be
+# associated with, use that script_id
+# 3. If an associated user exists, if the user has one user level that is associated with the channel
+# token level, use the script_id from the user level
+# 4. If an associated user exists but the user has no script progress or user levels possibly associated
+# with the channel token, it's likely that the user visited the level page, which generated a channel token,
+# and then left the page. In this case, assign any of the possible scripts to the channel token
 
 require_relative '../../../dashboard/config/environment'
 require 'cdo/db'
@@ -64,7 +81,7 @@ $level_to_script_ids = {}
 
 def update_script_ids
   puts "Backfilling channel token script_ids..."
-
+  puts "Script started at #{Time.now}"
   # find_each uses find_in_batches with a batch size of 1000 (https://apidock.com/rails/ActiveRecord/Batches/find_each)
   ChannelToken.where(id: $start_id..$end_id).find_each do |channel_token|
     next if channel_token.script_id.present?
@@ -82,6 +99,7 @@ def update_script_ids
       next
     end
 
+    # it's possible the channel token was generated for a logged-out user, in which case no user_id will exist
     if user_id.present?
       # get user_scripts for the associated_script_ids, if there is just one user_script, backfill with the
       # associated script_id
@@ -110,7 +128,7 @@ def update_script_ids
 
     record_failed_script_id_backfill(level, channel_token, user_id)
   end
-
+  puts "Script ended at #{Time.now}"
   puts
   puts "backfilled #{$backfill_count} script ids"
   puts "unable to backfill script id for #{$unable_to_backfill} channel tokens"
