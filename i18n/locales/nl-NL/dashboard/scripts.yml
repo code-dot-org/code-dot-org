@@ -1,4 +1,3 @@
----
 nl:
   data:
     script:
@@ -143,7 +142,7 @@ nl:
             Songwriting:
               name: Songwriting
             'Studio: Create a Game':
-              name: Speel Lab - Maak een Spel
+              name: 'Speel Lab - Maak een Spel'
             'Studio: Create a Story':
               name: 'Speel Lab: Maak een Verhaal'
           student_description: Cursus 3 is ontwikkeld voor studenten die Cursus 2 hebben gevolgd. Studenten zullen dieper ingaan op de programmeeronderwerpen die geïntroduceerd zijn in vorige cursussen om flexibele oplossingen te maken om moeilijkere problemen op te lossen. Aan het einde van deze cursus kunnen leerlingen interactieve verhalen en spellen maken die ze met iedereen kunnen delen. Aanbevolen voor rangen 4-5.
@@ -224,7 +223,7 @@ nl:
             'Unplugged: For Loop Fun':
               name: 'Unplugged: Voor-Lus plezier'
             'Unplugged: Madlibs':
-              name: Unplugged:Madlibs
+              name: 'Unplugged:Madlibs'
             'Unplugged: Songwriting with Parameters':
               name: 'Unplugged: Liedjes schrijven met Parameters'
             'Unplugged: Tangrams':
@@ -824,6 +823,12 @@ nl:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -869,6 +874,12 @@ nl:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -878,6 +889,12 @@ nl:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -1321,6 +1338,12 @@ nl:
               name: 'Unplugged: Liedjes schrijven met Parameters'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -1830,7 +1853,7 @@ nl:
             'Project: Design a Game':
               name: 'Project: Ontwerp een Spel'
             'null':
-              name: niets
+              name: 'niets'
             temp:
               name: temp
         coursef-ramp:
@@ -2191,7 +2214,7 @@ nl:
           description: Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer om door Minecraft te reizen.
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft: Heldenreis Uur Code'
+              name: 'Minecraft\: Heldenreis Uur Code'
             Minecraft Hour of Code:
               name: Minecraft programmeer uur
           student_description: Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer om door Minecraft te reizen.
@@ -2414,7 +2437,7 @@ nl:
               display_name: Vragenlijst
           lessons:
             Functions with Parameters_:
-              name: Functies met Parameters\_
+              name: Functies met Parameters_
             Functions with Parameters:
               name: Functies met Parameters
         coursee-2018:
@@ -2983,7 +3006,7 @@ nl:
             module2:
               name: module2
             'null':
-              name: niets
+              name: 'niets'
             Part 1:
               name: Deel 1
             Part 2:
@@ -3271,13 +3294,13 @@ nl:
             Intellectual Property:
               name: Intellectuele Eigendom
             'Project: Digital Information Dilemmas, pt. 1':
-              name: Project - Digitale informatie dilemma's, deel 1
+              name: 'Project - Digitale informatie dilemma''s, deel 1'
             'Project: Digital Information Dilemmas, pt. 2':
-              name: Project - Digitale informatie dilemma's, deel 2
+              name: 'Project - Digitale informatie dilemma''s, deel 2'
             'Project: Digital Information Dilemmas, pt 1':
-              name: Project - Digitale informatie dilemma's, deel 1
+              name: 'Project - Digitale informatie dilemma''s, deel 1'
             'Project: Digital Information Dilemmas, pt 2':
-              name: Project - Digitale informatie dilemma's, deel 2
+              name: 'Project - Digitale informatie dilemma''s, deel 2'
             Binary Numbers:
               name: Binaire getallen
             Overflow and Rounding:
@@ -4255,6 +4278,7 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
+            0:
             Storage:
               name: Opslag
         csd4-2020:
@@ -4829,7 +4853,7 @@ nl:
               name: Basis
         virustest:
           title: Een uitbraak simuleren
-          description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
+          description_short: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -4838,10 +4862,10 @@ nl:
             outbreak:
               display_name: Uitbraaksimulatie
           title: Uitbraaksimulator
-          description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
-          description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
+          description_short: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+          description: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
           name: uitbraak
-          student_description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
+          student_description: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
         2021drafting:
           lessons:
             Virus Simulation for Code Bytes:
@@ -5251,7 +5275,7 @@ nl:
               key: Over mij
             'Functions: Songwriting':
               name: Songwriting
-              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
           lesson_groups:
             ramp_up:
               display_name: Genestelde lussen
@@ -5358,9 +5382,9 @@ nl:
               display_name: Vragenlijst
         contagion-pilot:
           description_audience: Rang 5
-          description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
-          description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
-          student_description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
+          description_short: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+          description: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+          student_description: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
         ai-unit-pilot:
           lessons:
             intro:
@@ -5622,3 +5646,14 @@ nl:
           lessons:
             lesson-19:
               name: Project
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Hulpmiddelen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lessen
+            lessonGroup-3:
+              display_name: Project
