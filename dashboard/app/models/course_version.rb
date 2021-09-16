@@ -11,7 +11,7 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  course_offering_id :integer
-#  published_state    :string(255)      default("in_development")
+#  published_state    :string(255)
 #
 # Indexes
 #
@@ -80,6 +80,7 @@ class CourseVersion < ApplicationRecord
         display_name: content_root.version_year,
         content_root: content_root,
       )
+      course_version.published_state = content_root.published_state
     else
       course_version = nil
     end
