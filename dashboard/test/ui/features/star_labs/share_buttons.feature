@@ -27,7 +27,7 @@ Feature: Share Buttons
     And I wait until element "#gameButtons" is visible
     And element "#studio-dpad-rim" is not displayed
   
-  Scenario: Dpad appears for Sprite Lab Share
+  Scenario: Dpad appears for Game Lab Share
     Given I am on "http://studio.code.org/projects/gamelab/"
     And I wait for the page to fully load
     When I navigate to the shared version of my project
