@@ -1,4 +1,3 @@
----
 ca:
   data:
     script:
@@ -128,7 +127,7 @@ ca:
             Digital Citizenship:
               name: Ciutadania digital
             'Farmer: While Loops':
-              name: Pagesa - bucles mentre
+              name: 'Pagesa - bucles mentre'
             Internet:
               name: Internet
             Maze:
@@ -239,7 +238,7 @@ ca:
             'Bee: Nested Loops':
               name: 'Abella: bucles imbricats'
             'Farmer: While Loops':
-              name: Pagesa - bucles mentre
+              name: 'Pagesa - bucles mentre'
             'Maze: Sequence':
               name: 'Laberint: seqüència'
         usability:
@@ -462,6 +461,12 @@ ca:
               name: Fonaments de la informàtica
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Recapitulació
         sciencePD2b:
@@ -478,10 +483,22 @@ ca:
               name: Recapitulació
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Recapitulació
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Recapitulació
         asUnplugged:
@@ -681,6 +698,12 @@ ca:
               name: 'Sense connexió: Composició musical amb paràmetres'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Recapitulació
         grade3:
@@ -696,7 +719,7 @@ ca:
             Bounce:
               name: Rebota
             'Farmer: While Loops':
-              name: Pagesa - bucles mentre
+              name: 'Pagesa - bucles mentre'
         alltheplcthings:
           lesson_groups:
             required:
@@ -937,7 +960,7 @@ ca:
             Functions:
               name: Funcions
             'null':
-              name: nul
+              name: 'nul'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -951,7 +974,7 @@ ca:
         coursea-2017:
           title: Curs A
           assignment_family_title: Curs A
-          description_audience: De 4 a 7 anys
+          description_audience: 'De 4 a 7 anys'
           description_short: Una introducció a la informàtica per prelectors.
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -959,7 +982,7 @@ ca:
         courseb-2017:
           title: Curs B
           assignment_family_title: Curs B
-          description_audience: De 5 a 8 anys
+          description_audience: 'De 5 a 8 anys'
           description_short: Una introducció a la informàtica per a prelectors. (Similar al curs A però més variat per alumnes més grans.)
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -967,7 +990,7 @@ ca:
         coursec-2017:
           title: Curs C
           assignment_family_title: Curs C
-          description_audience: De 6 a 10 anys
+          description_audience: 'De 6 a 10 anys'
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
           lessons:
             'Real-life Algorithms: Paper Planes':
@@ -975,7 +998,7 @@ ca:
         coursed-2017:
           title: Curs D
           assignment_family_title: Curs D
-          description_audience: De 7 a 11 anys
+          description_audience: 'De 7 a 11 anys'
           description_short: Cobriu amb rapidesa conceptes del curs C i seguiu endavant amb algoritmes, bucles imbricats, condicionals i més.
           lessons:
             Nested Loops:
@@ -983,7 +1006,7 @@ ca:
         coursee-2017:
           title: Curs E
           assignment_family_title: Curs E
-          description_audience: De 8 a 12 anys
+          description_audience: 'De 8 a 12 anys'
           description_short: Cobriu ràpidament els conceptes del curs C i D i seguiu amb les funcions.
           lessons:
             'Algorithms: Tangrams':
@@ -997,7 +1020,7 @@ ca:
         coursef-2017:
           title: Curs F
           assignment_family_title: Curs F
-          description_audience: De 9 a 13 anys
+          description_audience: 'De 9 a 13 anys'
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
           lessons:
             'Algorithms: Tangrams':
@@ -1055,7 +1078,7 @@ ca:
         express-2017:
           title: Curs exprés
           assignment_family_title: Curs exprés
-          description_audience: De 9 a 18 anys
+          description_audience: 'De 9 a 18 anys'
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
           lessons:
             Introduction:
@@ -1075,7 +1098,7 @@ ca:
         pre-express-2017:
           title: Prelector exprés
           assignment_family_title: Prelector exprés
-          description_audience: De 4 a 8 anys
+          description_audience: 'De 4 a 8 anys'
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -1207,7 +1230,7 @@ ca:
         coursea-2018:
           assignment_family_title: Curs A
           description_short: Una introducció a la informàtica per prelectors.
-          description_audience: De 4 a 7 anys
+          description_audience: 'De 4 a 7 anys'
           lessons:
             'Programming: Happy Maps':
               name: Mapes feliços
@@ -1217,7 +1240,7 @@ ca:
           title: Curs exprés
           assignment_family_title: Curs exprés
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
-          description_audience: De 9 a 18 anys
+          description_audience: 'De 9 a 18 anys'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programació de paper quadriculat
@@ -1249,7 +1272,7 @@ ca:
               name: Programació de paper quadriculat
         courseb-2018:
           assignment_family_title: Curs B
-          description_audience: De 5 a 8 anys
+          description_audience: 'De 5 a 8 anys'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
@@ -1259,7 +1282,7 @@ ca:
               name: Mou-lo, Mou-lo
         coursed-2018:
           assignment_family_title: Curs D
-          description_audience: De 7 a 11 anys
+          description_audience: 'De 7 a 11 anys'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programació de paper quadriculat
@@ -1280,7 +1303,7 @@ ca:
         coursec-2018:
           assignment_family_title: Curs C
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: De 6 a 10 anys
+          description_audience: 'De 6 a 10 anys'
           lessons:
             Building a Foundation:
               name: Posant les bases
@@ -1293,12 +1316,12 @@ ca:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Funcions amb Paràmetres\_
+              name: Funcions amb Paràmetres_
             Functions with Parameters:
               name: Funcions amb Paràmetres
         coursee-2018:
           assignment_family_title: Curs E
-          description_audience: De 8 a 12 anys
+          description_audience: 'De 8 a 12 anys'
           lessons:
             'Programming: My Robotic Friends':
               name: Els meus amics robòtics
@@ -1319,7 +1342,7 @@ ca:
         coursef-2018:
           assignment_family_title: Curs F
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: De 9 a 13 anys
+          description_audience: 'De 9 a 13 anys'
           lessons:
             'Programming: My Robotic Friends':
               name: Els meus amics robòtics
@@ -1416,7 +1439,7 @@ ca:
         pre-express-2018:
           assignment_family_title: Prelector exprés
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
-          description_audience: De 4 a 8 anys
+          description_audience: 'De 4 a 8 anys'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
@@ -1476,7 +1499,7 @@ ca:
           student_description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
         coursef-2019:
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: De 9 a 13 anys
+          description_audience: 'De 9 a 13 anys'
           lesson_groups:
             csf_variables:
               display_name: Variables
@@ -1502,7 +1525,7 @@ ca:
             Dance Party:
               name: Festa de ball
         coursed-2019:
-          description_audience: De 7 a 11 anys
+          description_audience: 'De 7 a 11 anys'
           lesson_groups:
             csf_events:
               display_name: Esdeveniments
@@ -1528,7 +1551,7 @@ ca:
             Dance Party:
               name: Festa de ball
         coursee-2019:
-          description_audience: De 8 a 12 anys
+          description_audience: 'De 8 a 12 anys'
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
@@ -1553,7 +1576,7 @@ ca:
               name: Composició de cançons
         express-2019:
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
-          description_audience: De 9 a 18 anys
+          description_audience: 'De 9 a 18 anys'
           lesson_groups:
             csf_loops:
               display_name: Bucles
@@ -1588,14 +1611,14 @@ ca:
               display_name: Vista general
           lessons:
             'null':
-              name: nul
+              name: 'nul'
         dance-extras-gallery:
           title: Seguir ballant
           description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
           student_description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
         coursec-2019:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: De 6 a 10 anys
+          description_audience: 'De 6 a 10 anys'
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
@@ -1616,7 +1639,7 @@ ca:
           title: Laboratori de jocs
         coursea-2019:
           description_short: Una introducció a la informàtica per prelectors.
-          description_audience: De 4 a 7 anys
+          description_audience: 'De 4 a 7 anys'
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
@@ -1630,7 +1653,7 @@ ca:
             Going Places Safely:
               name: Anant a llocs segurs
         courseb-2019:
-          description_audience: De 5 a 8 anys
+          description_audience: 'De 5 a 8 anys'
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
@@ -1647,7 +1670,7 @@ ca:
               name: Fent bucles
         pre-express-2019:
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
-          description_audience: De 4 a 8 anys
+          description_audience: 'De 4 a 8 anys'
           lesson_groups:
             csf_loops:
               display_name: Bucles
@@ -1996,7 +2019,7 @@ ca:
               name: text
         coursea-2020:
           description_short: Una introducció a la informàtica per prelectors.
-          description_audience: De 4 a 7 anys
+          description_audience: 'De 4 a 7 anys'
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
@@ -2010,7 +2033,7 @@ ca:
             'Programming: Happy Maps':
               name: Mapes feliços
         courseb-2020:
-          description_audience: De 5 a 8 anys
+          description_audience: 'De 5 a 8 anys'
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
@@ -2027,7 +2050,7 @@ ca:
               name: Fent bucles
         coursec-2020:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: De 6 a 10 anys
+          description_audience: 'De 6 a 10 anys'
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
@@ -2043,7 +2066,7 @@ ca:
             'Events: The Big Event':
               name: El gran esdeveniment
         coursed-2020:
-          description_audience: De 7 a 11 anys
+          description_audience: 'De 7 a 11 anys'
           lesson_groups:
             csf_events:
               display_name: Esdeveniments
@@ -2069,7 +2092,7 @@ ca:
             Dance Party:
               name: Festa de ball
         coursee-2020:
-          description_audience: De 8 a 12 anys
+          description_audience: 'De 8 a 12 anys'
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
@@ -2082,7 +2105,7 @@ ca:
               name: Composició de cançons
         coursef-2020:
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: De 9 a 13 anys
+          description_audience: 'De 9 a 13 anys'
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
@@ -2097,7 +2120,7 @@ ca:
               name: Col·laboració oberta
         express-2020:
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
-          description_audience: De 9 a 18 anys
+          description_audience: 'De 9 a 18 anys'
           lesson_groups:
             csf_loops:
               display_name: Bucles
@@ -2114,7 +2137,7 @@ ca:
               name: Festa de ball
         pre-express-2020:
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
-          description_audience: De 4 a 8 anys
+          description_audience: 'De 4 a 8 anys'
           lesson_groups:
             csf_loops:
               display_name: Bucles
@@ -2239,7 +2262,7 @@ ca:
               display_name: Bucles
         coursea-2021:
           description_short: Una introducció a la informàtica per prelectors.
-          description_audience: De 4 a 7 anys
+          description_audience: 'De 4 a 7 anys'
           lessons:
             'Programming: Happy Maps':
               name: Mapes feliços
@@ -2251,7 +2274,7 @@ ca:
             csf_events:
               display_name: Esdeveniments
         courseb-2021:
-          description_audience: De 5 a 8 anys
+          description_audience: 'De 5 a 8 anys'
           lessons:
             Move It, Move It:
               key: Mou-lo, Mou-lo
@@ -2267,7 +2290,7 @@ ca:
               display_name: Esdeveniments
         coursec-2021:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: De 6 a 10 anys
+          description_audience: 'De 6 a 10 anys'
           lessons:
             Binary Bracelets:
               key: Polseres binàries
@@ -2284,7 +2307,7 @@ ca:
             csf_events:
               display_name: Esdeveniments
         coursed-2021:
-          description_audience: De 7 a 11 anys
+          description_audience: 'De 7 a 11 anys'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programació de paper quadriculat
@@ -2316,7 +2339,7 @@ ca:
             lessonGroup-6:
               display_name: Ciutadania digital
         coursee-2021:
-          description_audience: De 8 a 12 anys
+          description_audience: 'De 8 a 12 anys'
           lessons:
             Conditionals:
               key: Condicionals
@@ -2333,7 +2356,7 @@ ca:
               display_name: Funcions
         coursef-2021:
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: De 9 a 13 anys
+          description_audience: 'De 9 a 13 anys'
           lessons:
             Internet:
               key: Internet
@@ -2353,7 +2376,7 @@ ca:
               display_name: Ciutadania digital
         express-2021:
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
-          description_audience: De 9 a 18 anys
+          description_audience: 'De 9 a 18 anys'
           lessons:
             Dance Party:
               key: Festa de ball
@@ -2375,7 +2398,7 @@ ca:
               display_name: Esdeveniments
         pre-express-2021:
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
-          description_audience: De 4 a 8 anys
+          description_audience: 'De 4 a 8 anys'
           lesson_groups:
             csf_loops:
               display_name: Bucles
@@ -2456,4 +2479,8 @@ ca:
         csa-u6-dev:
           lessons:
             lesson-18:
+              name: Ginys
+        csa-u7-dev:
+          lessons:
+            lesson-2:
               name: Ginys
