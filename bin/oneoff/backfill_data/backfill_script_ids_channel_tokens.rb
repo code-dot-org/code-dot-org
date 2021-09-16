@@ -2,6 +2,7 @@
 # Backfill existing ChannelTokens to set script_id if it can easily be inferred because there is only one script associated with the level_id
 
 require_relative '../../../dashboard/config/environment'
+require 'cdo/db'
 require 'optparse'
 
 # We started writing script_id to the table here: https://github.com/code-dot-org/code-dot-org/pull/39855
@@ -10,8 +11,8 @@ MAX_CHANNEL_TOKEN_ID_FOR_BACKFILL = 303_500_000
 
 # Parse options
 options = {
-  start_id: nil,
-  end_id: nil,
+  start_id: 1,
+  end_id: MAX_CHANNEL_TOKEN_ID_FOR_BACKFILL,
   dry_run: false,
 }
 
@@ -52,18 +53,17 @@ end.parse!
 puts "Options: #{options}"
 options.freeze
 
-$start_id = options[:start_id] || 1
-$end_id = options[:end_id] || MAX_CHANNEL_TOKEN_ID_FOR_BACKFILL
+$start_id = options[:start_id]
+$end_id = options[:end_id]
 $is_dry_run = options[:dry_run]
 
 $backfill_count = 0
 $unable_to_backfill = 0
-$levels_missing_backfills = []
 
 $level_to_script_ids = {}
 
 def update_script_ids
-  puts "backfilling script_ids..."
+  puts "Backfilling channel token script_ids..."
 
   ChannelToken.where(id: $start_id..$end_id).find_each do |channel_token|
     next if channel_token.script_id.present?
@@ -113,12 +113,6 @@ def update_script_ids
   puts
   puts "backfilled #{$backfill_count} script ids"
   puts "unable to backfill script id for #{$unable_to_backfill} channel tokens"
-
-  # for investigation purposes
-  puts "unfilled levels:"
-  print $levels_missing_backfills.uniq
-  puts
-
   puts
 end
 
@@ -150,9 +144,9 @@ def record_failed_script_id_backfill(level, channel_token, user_id)
     print "-"
   else
     print "F"
+    CDO.log.info("Could not update channel token with ID: #{channel_token.id}")
   end
 
-  $levels_missing_backfills.push(level.id)
   $unable_to_backfill += 1
 end
 
