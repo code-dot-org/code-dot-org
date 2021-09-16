@@ -1,4 +1,3 @@
----
 fi:
   data:
     script:
@@ -610,6 +609,12 @@ fi:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Tervetuloa!
             Wrap-up:
@@ -651,6 +656,12 @@ fi:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Tervetuloa!
             Wrap-up:
@@ -660,6 +671,12 @@ fi:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Tervetuloa!
             Wrap-up:
@@ -770,7 +787,7 @@ fi:
               name: 'Tietokoneeton tekeminen: suunnitteluresepti'
           student_description: Opi funktionaalista ohjelmointia algebran avulla
         AlgebraB:
-          title: Tietotekniikka algebrassa
+          title: 'Tietotekniikka algebrassa'
           description: Opi funktionaalista ohjelmointia algebran avulla
           description_short: Opi funktionaalista ohjelmointia algebran avulla
           lessons:
@@ -949,6 +966,12 @@ fi:
               name: 'Tietokoneeton tekeminen: parametroitu sävellys'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Tervetuloa!
             Wrap-up:
@@ -1297,7 +1320,7 @@ fi:
             Functions:
               name: Funktiot
             'null':
-              name: ei mitään
+              name: 'ei mitään'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1725,7 +1748,7 @@ fi:
               display_name: Kysely
           lessons:
             Functions with Parameters_:
-              name: Parametrilliset funktiot\_
+              name: Parametrilliset funktiot_
             Functions with Parameters:
               name: Parametrilliset funktiot
         coursee-2018:
@@ -2086,7 +2109,7 @@ fi:
               display_name: Yleiskatsaus
           lessons:
             'null':
-              name: ei mitään
+              name: 'ei mitään'
         dance-extras-gallery:
           title: Jatka tanssimista
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
@@ -3192,4 +3215,8 @@ fi:
         csa-u6-dev:
           lessons:
             lesson-18:
+              name: Pienoisohjelmat
+        csa-u7-dev:
+          lessons:
+            lesson-2:
               name: Pienoisohjelmat
