@@ -30,6 +30,13 @@ class LessonsController < ApplicationController
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user, can_view_teacher_markdown?)
   end
 
+  # GET /lessons/2345
+  def show_by_id
+    return render :forbidden unless can?(:read, @lesson)
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, can_view_teacher_markdown?)
+    render :show
+  end
+
   # GET /s/script-name/lessons/1/student
   def student_lesson_plan
     script = Script.get_from_cache(params[:script_id])
