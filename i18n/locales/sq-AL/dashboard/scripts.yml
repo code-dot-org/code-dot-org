@@ -1,4 +1,3 @@
----
 sq:
   data:
     script:
@@ -140,7 +139,7 @@ sq:
             Songwriting:
               name: Të shkruarit e Këngëve
             'Studio: Create a Game':
-              name: Play Lab - Krijo një Lojë
+              name: 'Play Lab - Krijo një Lojë'
             'Studio: Create a Story':
               name: 'Play Lab: Krijo një Histori'
           student_description: Kursi 3 është dizenjuar për studentët, të cilët kanë marrë Kursin 2. Studentët do futen më thellë në temat e programimit, që janë prezantuar në kurset e mëparshme, për të krijuar zgjidhje fleksibile për problemet më të ndërlikuara. Në fund të këtij kursi, studentët krijojnë histori interaktive dhe lojëra që mund ti shpërndajnë me këdo. Rekomanduar për klasën 4-5.
@@ -225,7 +224,7 @@ sq:
             'Unplugged: Songwriting with Parameters':
               name: 'Unplugged: Të Shkruarit Këngë me Parametra'
             'Unplugged: Tangrams':
-              name: 'Unplugged: Tangrams'
+              name: "Unplugged: Tangrams\n"
           student_description: Kursi 4 është dizejnuar për studentët të cilët kanë marrë Kursin 2 dhe 3. Nxënësit do të mësojnë se si të merren me puzzles me rritjen e kompleksitetit që ata të mësojnë si të kombinojnë disa koncepte, kur bëjnë çdo sfidë. Në kohën kur ky kurs është përfunduar, studentët do të  krijojnë programe që lejojnë ata të shfaqin aftësi të shumta,  përfshirë ciklet dhe funksionet me parametra. Rekomandohet për klasat 4-8.
         Course4pre:
           title: Kushtet paraprake të Kursit 4
@@ -327,7 +326,7 @@ sq:
             'Programming Concept: Functions':
               name: 'Koncepti i Programimit: Funksionet'
             Teacher Dashboard:
-              name: Dërrasa e zezë
+              name: Dërrasa e zezë 
             Unplugged lessons:
               name: Mësimet unplugged
             Writing computer programs:
@@ -465,7 +464,7 @@ sq:
             Introduction to PD:
               name: Hyrje në PD
             Teacher Dashboard:
-              name: Dërrasa e zezë
+              name: Dërrasa e zezë 
         algPDmiami:
           lessons:
             Booleans:
@@ -511,7 +510,7 @@ sq:
             Strings and Images:
               name: Stringet dhe Figurat
             Teacher Dashboard:
-              name: Dërrasa e zezë
+              name: Dërrasa e zezë 
             The Design Recipe:
               name: Receta e Dizenjimit
         ECSPD-NexTech:
@@ -529,7 +528,7 @@ sq:
             Introduction to PD:
               name: Hyrje në PD
             Teacher Dashboard:
-              name: Dërrasa e zezë
+              name: Dërrasa e zezë 
         algebraPD-iZone:
           lessons:
             Evaluation Blocks:
@@ -537,7 +536,7 @@ sq:
             Introduction to PD:
               name: Hyrje në PD
             Teacher Dashboard:
-              name: Dërrasa e zezë
+              name: Dërrasa e zezë 
         sciencePD-NexTech:
           lessons:
             Introduction to PD:
@@ -614,7 +613,7 @@ sq:
             Strings and Images:
               name: Stringet dhe Figurat
             Teacher Dashboard:
-              name: Dërrasa e zezë
+              name: Dërrasa e zezë 
           student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         cspfacilitator:
           lessons:
@@ -632,6 +631,12 @@ sq:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Mirë se vini!
             Wrap-up:
@@ -640,7 +645,7 @@ sq:
         algebraPD2:
           lessons:
             Teacher Dashboard:
-              name: Dërrasa e zezë
+              name: Dërrasa e zezë 
             The Design Recipe:
               name: Receta e Dizenjimit
             Welcome!:
@@ -677,6 +682,12 @@ sq:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Mirë se vini!
             Wrap-up:
@@ -686,6 +697,12 @@ sq:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Mirë se vini!
             Wrap-up:
@@ -831,7 +848,7 @@ sq:
             Introduction to PD:
               name: Hyrje në PD
             Teacher Dashboard:
-              name: Dërrasa e zezë
+              name: Dërrasa e zezë 
         csp1-2017:
           lessons:
             Number Systems:
@@ -865,7 +882,7 @@ sq:
             Introduction to PD:
               name: Hyrje në PD
             Teacher Dashboard:
-              name: Dërrasa e zezë
+              name: Dërrasa e zezë 
         sciencePD1:
           lessons:
             Introduction to PD:
@@ -889,7 +906,7 @@ sq:
         CSDU4-Draft:
           lessons:
             Design Mode:
-              name: dan is a masive dick-
+              name: dan is a masive dick- 
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -927,7 +944,7 @@ sq:
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Mëso të tërheqësh dhe lëshosh mjete'
             Loops:
-              name: cikle
+              name: cikle 
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
         grade4:
@@ -949,7 +966,7 @@ sq:
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Mëso të tërheqësh dhe lëshosh mjete'
             Loops:
-              name: cikle
+              name: cikle 
         grade5:
           title: Klasat 5
           description_audience: Moshat 10-110
@@ -976,6 +993,12 @@ sq:
               name: 'Unplugged: Të Shkruarit Këngë me Parametra'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Mirë se vini!
             Wrap-up:
@@ -1053,7 +1076,7 @@ sq:
             Functions with Parameters:
               name: Funksionet me parametra
             Loops:
-              name: cikle
+              name: cikle 
             Nested Loops:
               name: Përsëritjet e Mbivendosura
             Variables:
@@ -1063,7 +1086,7 @@ sq:
         algebrapdnext:
           lessons:
             Teacher Dashboard:
-              name: Dërrasa e zezë
+              name: Dërrasa e zezë 
             The Design Recipe:
               name: Receta e Dizenjimit
             Welcome!:
@@ -1327,7 +1350,7 @@ sq:
             Functions:
               name: funksione
             'null':
-              name: pa vlerë
+              name: 'pa vlerë'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1703,7 +1726,7 @@ sq:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Funksionet me parametra\_
+              name: Funksionet me parametra_
             Functions with Parameters:
               name: Funksionet me parametra
         coursee-2018:
@@ -1932,7 +1955,7 @@ sq:
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_conditionals:
               display_name: Kushtet
             csf_binary:
@@ -1976,7 +1999,7 @@ sq:
         express-2019:
           lesson_groups:
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
@@ -2012,7 +2035,7 @@ sq:
               display_name: Përmbajtja
           lessons:
             'null':
-              name: pa vlerë
+              name: 'pa vlerë'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2020,7 +2043,7 @@ sq:
             csf_binary:
               display_name: Binare
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
             csf_data:
@@ -2037,7 +2060,7 @@ sq:
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
           lessons:
@@ -2050,7 +2073,7 @@ sq:
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
           lessons:
@@ -2063,7 +2086,7 @@ sq:
         pre-express-2019:
           lesson_groups:
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
           lessons:
@@ -2163,7 +2186,7 @@ sq:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: cikle 
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2205,7 +2228,7 @@ sq:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: cikle 
             required:
               display_name: Përmbledhja
         fit2019-novice:
@@ -2248,7 +2271,7 @@ sq:
         csl-vn:
           lesson_groups:
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
         dlp19-csd-mod-fit:
@@ -2340,7 +2363,7 @@ sq:
             Next Steps:
               name: Hapat e ardhshme
             Loops:
-              name: cikle
+              name: cikle 
             Conditionals:
               name: Kushtet
             Events:
@@ -2381,7 +2404,7 @@ sq:
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_conditionals:
               display_name: Kushtet
             csf_events:
@@ -2394,7 +2417,7 @@ sq:
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_conditionals:
               display_name: Kushtet
             csf_events:
@@ -2421,7 +2444,7 @@ sq:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: cikle 
         csd6-2020:
           lessons:
             Functions with Parameters:
@@ -2441,7 +2464,7 @@ sq:
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
           lessons:
@@ -2454,7 +2477,7 @@ sq:
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
           lessons:
@@ -2471,7 +2494,7 @@ sq:
             csf_binary:
               display_name: Binare
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
             csf_data:
@@ -2486,7 +2509,7 @@ sq:
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_conditionals:
               display_name: Kushtet
             csf_binary:
@@ -2537,7 +2560,7 @@ sq:
         express-2020:
           lesson_groups:
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
@@ -2549,7 +2572,7 @@ sq:
         pre-express-2020:
           lesson_groups:
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
           lessons:
@@ -2595,7 +2618,7 @@ sq:
         k5-onlinepd-2020:
           lessons:
             Loops:
-              name: cikle
+              name: cikle 
             Events:
               name: Ngjarje
             Conditionals:
@@ -2691,7 +2714,7 @@ sq:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: cikle 
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2700,7 +2723,7 @@ sq:
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
         courseb-2021:
@@ -2714,7 +2737,7 @@ sq:
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
         coursec-2021:
@@ -2730,7 +2753,7 @@ sq:
             csf_binary:
               display_name: Binare
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
             csf_data:
@@ -2754,7 +2777,7 @@ sq:
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_conditionals:
               display_name: Kushtet
             csf_binary:
@@ -2805,7 +2828,7 @@ sq:
         express-2021:
           lesson_groups:
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
@@ -2819,7 +2842,7 @@ sq:
         pre-express-2021:
           lesson_groups:
             csf_loops:
-              display_name: cikle
+              display_name: cikle 
             csf_events:
               display_name: Ngjarje
         csf-2021-pilot:
@@ -2855,8 +2878,8 @@ sq:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: cikle
-              name: cikle
+              key: cikle 
+              name: cikle 
             Events:
               key: Ngjarje
               name: Ngjarje
@@ -2956,3 +2979,7 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: Veglat
