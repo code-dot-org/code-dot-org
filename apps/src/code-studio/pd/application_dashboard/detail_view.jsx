@@ -11,6 +11,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ApplicationLoader from './application_loader';
 import DetailViewContents from './detail_view_contents';
+import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export default class DetailView extends React.Component {
   static propTypes = {
@@ -19,7 +20,7 @@ export default class DetailView extends React.Component {
     }).isRequired,
     route: PropTypes.shape({
       viewType: PropTypes.oneOf(['teacher', 'facilitator']),
-      course: PropTypes.oneOf(['csf', 'csd', 'csp', 'csa'])
+      course: PropTypes.oneOf(Object.values(CourseKeyMap))
     })
   };
 
