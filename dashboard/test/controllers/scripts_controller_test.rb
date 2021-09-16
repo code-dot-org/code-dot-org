@@ -1030,7 +1030,7 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      lesson_groups: '[]',
       is_migrated: true,
       published_state: SharedConstants::PUBLISHED_STATE.beta
     }
@@ -1052,7 +1052,7 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      lesson_groups: '[]',
       is_migrated: true,
       published_state: SharedConstants::PUBLISHED_STATE.in_development
     }
