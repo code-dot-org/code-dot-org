@@ -400,11 +400,18 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    sublevel_to_view = nil
+    if @script_level.bubble_choice? && params[:sublevel_position]
+      sublevel_to_view = @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
+    end
+
     user_to_view = User.find(params[:user_id])
-    if can?(:view_as_user, @script_level, user_to_view)
+    # Should we just separate these into two if statements
+    # so we don't have to do the view_as_user_for_code_review cancan check twice?
+    if can?(:view_as_user, @script_level, user_to_view, sublevel_to_view)
       @user = user_to_view
 
-      if can?(:view_as_user_for_code_review, @script_level, user_to_view)
+      if can?(:view_as_user_for_code_review, @script_level, user_to_view, sublevel_to_view)
         view_options(is_code_reviewing: true)
       end
     end
@@ -424,6 +431,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def select_level
+    # Should we put this into a helper?
     # If a BubbleChoice level's sublevel has been requested, return it.
     if @script_level.bubble_choice? && params[:sublevel_position]
       sublevel = @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
