@@ -276,6 +276,7 @@ class ScriptsController < ApplicationController
       :pilot_experiment,
       :editor_experiment,
       :include_student_lesson_plans,
+      :use_code_studio_lesson_plans,
       :lesson_groups,
       resourceTypes: [],
       resourceLinks: [],
