@@ -1,4 +1,3 @@
----
 ms:
   data:
     script:
@@ -255,6 +254,12 @@ ms:
               name: Widget Pemampatan Teks
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         sciencePD2b:
@@ -271,10 +276,22 @@ ms:
               name: Wrap-up
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         asUnplugged:
@@ -400,6 +417,12 @@ ms:
               name: 'Artis: Pemboleh Ubah'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         grade3:
@@ -802,12 +825,9 @@ ms:
               description_teacher: 'Pelajaran ini akan membimbing pelajar mempelajari langkah penyahpepijatan. Pelajar akan mempelajari mantera: "Apakah yang berlaku? Apakah yang sepatutnya berlaku? Apakah maksud yang disampaikan kepada anda?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Kegigihan: Stevie dan Projek Besar'
-              description_teacher: |-
-                Apabila pelajar berhadapan dengan halangan semasa menjawab soalan atau mengusahakan projek, ia amat mudah bagi mereka untuk merasa kecewa dan putus asa. Pelajaran ini akan memperkenalkan kepada pelajar mengenai idea bahawa kekecewaan boleh menjadi bahagian penting dalam pembelajaran. Di sini, kekecewaan ditunjukkan sebagai langkah dalam proses kreatif dan bukannya sebagai tanda kegagalan.\\r
-                \\r
-                Pelajaran ini dapat dilakukan dalam satu atau dua sesi kelas. Jika anda mempunyai lebih banyak masa, silakan meluangkan masa membina dan menyemak semula fasa aktiviti Larian Guli.
+              description_teacher: "Apabila pelajar berhadapan dengan halangan semasa menjawab soalan atau mengusahakan projek, ia amat mudah bagi mereka untuk merasa kecewa dan putus asa. Pelajaran ini akan memperkenalkan kepada pelajar mengenai idea bahawa kekecewaan boleh menjadi bahagian penting dalam pembelajaran. Di sini, kekecewaan ditunjukkan sebagai langkah dalam proses kreatif dan bukannya sebagai tanda kegagalan.\\r\n\\r\nPelajaran ini dapat dilakukan dalam satu atau dua sesi kelas. Jika anda mempunyai lebih banyak masa, silakan meluangkan masa membina dan menyemak semula fasa aktiviti Larian Guli.\n"
             'Real-life Algorithms: Plant a Seed':
-              description_teacher: Dalam pelajaran ini, pelajar akan mengaitkan kembali konsep algoritma kepada aktiviti kehidupan harian, nyata dengan menanam benih sebenar. Di sini, matlamatnya ialah untuk mula membina kemahiran dalam menterjemahkan situasi dunia nyata kepada senario dalam talian dan sebaliknya.\\r
+              description_teacher: "Dalam pelajaran ini, pelajar akan mengaitkan kembali konsep algoritma kepada aktiviti kehidupan harian, nyata dengan menanam benih sebenar. Di sini, matlamatnya ialah untuk mula membina kemahiran dalam menterjemahkan situasi dunia nyata kepada senario dalam talian dan sebaliknya.\\r"
             Learn to Drag and Drop:
               name: Penjujukan dengan Tarik dan Lepas
               description_teacher: Pelajaran ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.
@@ -931,7 +951,7 @@ ms:
             Nested Loops:
               name: Gelung Bersarang
               description_student: Gelung di dalam gelung di dalam gelung. Apakah yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda menempatkan gelung di dalam gelung lain.
-              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
+              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik `Jalankan'.
             Nested Loops in Artist:
               name: Gelung Bersarang di dalam Artis
               description_student: Di sini anda akan menggunakan gelung bersarang bagi membuat lukisan menarik untuk ditunjukkan kepada keluarga dan rakan anda.
@@ -945,17 +965,14 @@ ms:
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
               description_student: 'Gelung adalah sangat berguna dalam pengekodan. Pelajaran ini akan mengajar anda tentang jenis gelung baharu: iaitu gelung semasa!'
-              description_teacher: |-
-                Sebaik sahaja pelajar mencecah pelajaran ini, mereka sudah sepatutnya mempunyai banyak latihan menggunakan gelung `berulang`, oleh itu, sekarang sudah tiba masanya untuk mencampuradukkannya.
-
-                _Gelung semasa_ ialah gelung yang terus mengulangi perintah semasa syarat dipenuhi. Gelung semasa digunakan apabila pengatur cara tidak mengetahui bilangan perintah yang perlu diulangi, tetapi tahu syarat yang perlu menjadi benar supaya gelung terus mengulanginya. Sebagai contoh, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang. Mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran, tetapi pelajar akan tahu bahawa mereka perlu terus mengisi lubang dan menggali kotoran asalkan tanahnya tidak rata.
+              description_teacher: "Sebaik sahaja pelajar mencecah pelajaran ini, mereka sudah sepatutnya mempunyai banyak latihan menggunakan gelung `berulang`, oleh itu, sekarang sudah tiba masanya untuk mencampuradukkannya.\n\n_Gelung semasa_ ialah gelung yang terus mengulangi perintah semasa syarat dipenuhi. Gelung semasa digunakan apabila pengatur cara tidak mengetahui bilangan perintah yang perlu diulangi, tetapi tahu syarat yang perlu menjadi benar supaya gelung terus mengulanginya. Sebagai contoh, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang. Mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran, tetapi pelajar akan tahu bahawa mereka perlu terus mengisi lubang dan menggali kotoran asalkan tanahnya tidak rata.\n"
             Conditionals with Cards:
               name: 'Jika/Lain: Bersyarat dengan Kad'
               description_student: Sudah tiba masanya untuk bermain permainan yang anda memperoleh mata hanya di bawah syarat tertentu!
-              description_teacher: Pelajaran ini menunjukkan sejauh mana bersyarat boleh digunakan untuk menyesuaikan atur cara terhadap maklumat khusus. Bukan setiap kali, kami mempunyai semua maklumat yang diperlukan apabila menulis atur cara. Kadang-kadang anda mahu melakukan sesuatu yang berbeza dalam satu situasi berbanding yang lain, walaupun anda tidak tahu sama ada situasi akan berlaku atau tidak semasa kod anda berjalan. Itulah masanya situasi bersyarat dimasukkan. Bersyarat membenarkan komputer membuat keputusan, berdasarkan maklumat yang benar pada bila-bila masa kod anda dijalankan.
+              description_teacher: "Pelajaran ini menunjukkan sejauh mana bersyarat boleh digunakan untuk menyesuaikan atur cara terhadap maklumat khusus. Bukan setiap kali, kami mempunyai semua maklumat yang diperlukan apabila menulis atur cara. Kadang-kadang anda mahu melakukan sesuatu yang berbeza dalam satu situasi berbanding yang lain, walaupun anda tidak tahu sama ada situasi akan berlaku atau tidak semasa kod anda berjalan. Itulah masanya situasi bersyarat dimasukkan. Bersyarat membenarkan komputer membuat keputusan, berdasarkan maklumat yang benar pada bila-bila masa kod anda dijalankan."
             Conditionals in Bee:
               name: Bersyarat di dalam Lebah
-              description_student: Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.
+              description_student: 'Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.'
               description_teacher: Sehingga pada tahap ini, pelajar telah menulis kod yang melaksanakan cara yang betul-betul sama setiap kali ia dijalankan - andal, tetapi tidak terlalu fleksibel. Dalam pelajaran ini, kelas anda akan mula mengekod dengan bersyarat, membolehkan mereka menulis kod yang berfungsi secara berbeza bergantung pada syarat khusus yang ditemui oleh atur cara ini.
             Conditionals & Loops in Maze:
               name: Bersyarat & Gelung di dalam Pagar Sesat
@@ -972,13 +989,14 @@ ms:
                 Dengan kerjasama Pendidikan yang Munasabah, pelajaran ini membantu pelajar mempelajari berfikir secara kritis tentang maklumat pengguna yang diminta atau diperlukan oleh sesetengah laman web. Pelajar mengetahui perbezaan antara maklumat sulit dan peribadi, membezakan maklumat yang selamat dan tidak selamat dikongsi dalam talian.
 
                 Pelajar juga akan meneroka perkara yang dimaksudkan dengan bertanggungjawab dan menghormati komuniti luar dan dalam talian mereka sebagai langkah mempelajari cara menjadi warga digital yang baik.
+
             Build a Play Lab Game:
               name: Membina Permainan Makmal Mainan
               description_student: Pelajaran ini akan membimbing anda membuat permainan video anda sendiri.
               description_teacher: Dalam aktiviti dalam talian ini, pelajar berpeluang untuk mempelajari cara menggunakan peristiwa di dalam Makmal Mainan dan melaksanakan semua kemahiran pengekodan yang telah mereka pelajari untuk membuat permainan animasi. Sudah tiba masanya menjadi kreatif dan mencipta permainan di Makmal Mainan!
             'Unplugged: Binary':
               name: 'Di Luar Pengaturcaraan: Imej Binari'
-              description_student: Pelajari cara komputer menyimpan gambar dengan menggunakan idea mudah seperti hidupkan dan matikan.
+              description_student: 'Pelajari cara komputer menyimpan gambar dengan menggunakan idea mudah seperti hidupkan dan matikan.'
               description_teacher: Walaupun ramai individu menganggap binari sebagai angka sifar dan satu, pelajar akan diperkenalkan kepada idea bahawa maklumat boleh dijelaskan dalam pelbagai pilihan binari. Pelajaran ini mengambil konsep itu selangkah di hadapan kerana ia menggambarkan cara komputer boleh juga menyimpan maklumat yang lebih kompleks (seperti imej dan warna) dalam bentuk binari.
             Artist Binary:
               name: Binari di dalam Artis
@@ -1035,10 +1053,7 @@ ms:
             Explore Project Ideas:
               name: Terokai Idea Projek
               description_student: Berikut ialah beberapa permainan dan lukisan. Sila bermain dengan setiap satu daripada kedua-duanya bagi mendapatkan idea untuk projek anda sendiri!
-              description_teacher: |-
-                Empat pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina dan membentangkan hasil kerja terakhir mereka.
-
-                Pada tahap penerokaan, pelajar akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini mungkin merupakan tahap projek paling lama). Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.
+              description_teacher: "Empat pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina dan membentangkan hasil kerja terakhir mereka.\n\nPada tahap penerokaan, pelajar akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini mungkin merupakan tahap projek paling lama). Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.\n"
             The Design Process:
               name: Proses Reka Bentuk
               description_student: Projek sebesar ini mengambil masa dan banyak perancangan. Di sini, anda akan mempelajari tentang proses reka bentuk yang akan anda gunakan untuk membina ciptaan anda sendiri.
@@ -1066,6 +1081,7 @@ ms:
                 Dibangunkan oleh Pendidikan yang Munasabah, pelajaran ini ialah tentang perbezaan antara maklumat yang selamat dan tidak selamat untuk dikongsi dalam talian.
 
                 Semasa pelajar mengunjungi laman web yang meminta maklumat tentang identiti masing-masing, mereka belajar mengamalkan proses siasatan kritikal yang memperkasakan mereka untuk melindungi diri dan keluarga mereka daripada pencurian identiti. Dalam pelajaran ini, pelajar mempelajari cara berfikir secara kritis tentang maklumat pengguna yang diminta atau diperlukan oleh sesetengah laman web. Mereka mempelajari perbezaan antara maklumat sulit dan peribadi, serta cara membezakan perkara yang selamat atau tidak selamat dikongsi dalam talian.
+
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
               description_student: Rasakan kekuatan semasa anda membina permainan Star Wars anda sendiri dalam pelajaran ini.
@@ -1088,9 +1104,7 @@ ms:
               description_teacher: Pelajar telah berlatih mencipta reka bentuk yang mengagumkan di dalam Artis dan menavigasi pagar sesat di dalam Lebah, tetapi pada hari ini mereka akan menggunakan fungsi untuk menuai tanaman di dalam Peladang. Pelajaran ini akan menggalakkan pelajar menggunakan fungsi dalam cara baharu dengan menggabungkannya bersama gelung `semasa` dan pernyataan `jika / lain`.
             Determine the Concept:
               name: Tentukan Konsep
-              description_student: |-
-                Kami tidak akan mendedahkan apa-apa rahsia!
-                Pelajaran ini boleh menggunakan apa-apa kemahiran yang pernah anda pelajari setakat ini.
+              description_student: "Kami tidak akan mendedahkan apa-apa rahsia!\nPelajaran ini boleh menggunakan apa-apa kemahiran yang pernah anda pelajari setakat ini.\n"
               description_teacher: Pelajaran ini menyatupadukan konsep daripada pelajaran sebelumnya dan memberikan peluang kepada pelajar untuk berfikir secara kritis tentang cara mereka akan menyelesaikan setiap masalah, tetapi tanpa memberitahu mereka pilihan konsep yang perlu digunakan. Pelajar akan menyemak semula algoritma asas, penyahpepijatan, gelung `berulang`, bersyarat, gelung `semasa` dan fungsi.
             Build a Play Lab Game:
               name: Membina Permainan Makmal Mainan
@@ -1151,14 +1165,11 @@ ms:
             Introduction:
               name: Pengenalan kepada Teka-teki dalam Talian
               description_student: Pelajaran ini akan memberikan anda pengenalan ringkas mengenai beberapa perkara menakjubkan yang akan anda pelajari dalam kursus ini!
-              description_teacher: Dalam pelajaran ini, pelajar akan diperkenalkan kepada jujukan, gelung dan gelung bersarang bagi mempersiapkan mereka untuk konsep yang lebih rumit di bahagian akhir kursus. Pelajaran "tingkatkan" ini menyamakan tahap peluang antara pakar dan pemula di dalam kelas anda.
+              description_teacher: 'Dalam pelajaran ini, pelajar akan diperkenalkan kepada jujukan, gelung dan gelung bersarang bagi mempersiapkan mereka untuk konsep yang lebih rumit di bahagian akhir kursus. Pelajaran "tingkatkan" ini menyamakan tahap peluang antara pakar dan pemula di dalam kelas anda.'
             The Power of Words:
               name: 'Kewarganegaraan Digital: Kuasa Perkataan'
               description_student: Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian.
-              description_teacher: |-
-                Pelajar memerhatikan perkara itu semasa mereka melayari laman web kegemaran mereka, mereka mungkin menemui mesej daripada kanak-kanak lain yang boleh membuatkan mereka merasa marah, sakit hati, sedih, atau takut. Mereka menerokai cara menangani buli siber dan bertindak balas dalam menghadapi bahasa yang menjengkelkan dalam talian.
-
-                Pelajar berbincang mengenai semua cara mereka gunakan teknologi untuk komunikasi dan menerokai persamaan dan perbezaan antara komunikasi secara peribadi dan dalam talian. Kemudian, pelajar melakukan sumbang saran untuk mencari cara bertindak balas terhadap buli siber.
+              description_teacher: "Pelajar memerhatikan perkara itu semasa mereka melayari laman web kegemaran mereka, mereka mungkin menemui mesej daripada kanak-kanak lain yang boleh membuatkan mereka merasa marah, sakit hati, sedih, atau takut. Mereka menerokai cara menangani buli siber dan bertindak balas dalam menghadapi bahasa yang menjengkelkan dalam talian.\n\nPelajar berbincang mengenai semua cara mereka gunakan teknologi untuk komunikasi dan menerokai persamaan dan perbezaan antara komunikasi secara peribadi dan dalam talian. Kemudian, pelajar melakukan sumbang saran untuk mencari cara bertindak balas terhadap buli siber.\n"
             Ice Age Play Lab:
               name: Peristiwa dalam Filem Ice Age
               description_student: Cuba fikirkan permainan video kegemaran anda. Pernahkah anda terfikir cara ia dibuat? Dalam teka-teki ini, anda akan membangunkan permainan video anda sendiri bersama rakan daripada filem Ice Age!
@@ -1178,7 +1189,7 @@ ms:
             For Loop Fun:
               name: 'Gelung Untuk: Gelung Untuk yang Menyeronokkan'
               description_student: Anda akan menikmati banyak keseronokan apabila mempelajari tentang gelung `untuk`!
-              description_teacher: Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan yang dibina di dalamnya. Struktur baharu ini akan membolehkan pelajar mencipta kod yang lebih kuat dan dinamik.
+              description_teacher: 'Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan yang dibina di dalamnya. Struktur baharu ini akan membolehkan pelajar mencipta kod yang lebih kuat dan dinamik.'
             For Loops in Bee:
               name: Untuk Gelung di dalam Lebah
               description_student: Bunyi berdengung. Dalam teka-teki ini, anda akan membimbing lebah ke nektar dan madu dengan menggunakan gelung `untuk`!
@@ -1194,7 +1205,7 @@ ms:
             Conditionals and Functions in Bee:
               name: Bersyarat dan Fungsi di dalam Lebah
               description_student: Lebah memerlukan bantuan anda sekali lagi! Di sini anda akan menggunakan fungsi untuk mendapatkan nektar dan menghasilkan madu!
-              description_teacher: Pelajaran ini mengajar pelajar cara mencipta fungsi mudah yang menggunakan editor fungsi “modus” yang canggih, menyediakan cara untuk mereka memasukkan parameter dalam pelajaran pada masa depan.
+              description_teacher: 'Pelajaran ini mengajar pelajar cara mencipta fungsi mudah yang menggunakan editor fungsi “modus” yang canggih, menyediakan cara untuk mereka memasukkan parameter dalam pelajaran pada masa depan.'
             Functions with Parameters in Artist:
               name: Fungsi bersama Parameter di dalam Artis
               description_student: Bersedia dengan jari-jemari pengaturcaraan anda. Dalam teka-teki ini, anda akan membuat lukisan yang menarik di dalam Artis dengan menggunakan fungsi bersama parameter.
@@ -1206,10 +1217,7 @@ ms:
             Explore Project Ideas:
               name: Terokai Idea Projek
               description_student: Masa untuk mendapatkan sedikit inspirasi! Teka-teki ini akan menunjukkan kepada anda sebilangan permainan dan ilustrasi pradibina bagi membantu membangunkan rancangan anda untuk projek BESAR anda.
-              description_teacher: |-
-                Lima pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran, mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan hasil kerja terakhir mereka.
-
-                Pada tahap penerokaan, pelajar akan dapat melihat contoh projek di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini kemungkinan besar merupakan tahap projek paling lama). Kemudian, pelajar akan menyemak projek mereka selepas pengujian dan pendapat tambahan. Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.
+              description_teacher: "Lima pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran, mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan hasil kerja terakhir mereka.\n\nPada tahap penerokaan, pelajar akan dapat melihat contoh projek di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini kemungkinan besar merupakan tahap projek paling lama). Kemudian, pelajar akan menyemak projek mereka selepas pengujian dan pendapat tambahan. Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.\n"
             The Design Process:
               name: Proses Reka Bentuk
               description_student: Projek sebesar ini mengambil masa dan banyak perancangan. Di sini, anda akan mempelajari tentang proses reka bentuk yang akan anda gunakan untuk membina ciptaan anda sendiri.
@@ -1710,7 +1718,7 @@ ms:
               display_name: Kandungan Kursus Tambahan
           lessons:
             courseB_unplugged_MRF_2018:
-              name: courseB_unplugged_MRF\_2018
+              name: courseB_unplugged_MRF_2018
             'Programming: My Robotic Friends':
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Sequence in Maze:
@@ -1850,13 +1858,10 @@ ms:
             'Debugging: Unspotted Bugs':
               description_teacher: 'Pelajaran ini akan membimbing pelajar mempelajari langkah penyahpepijatan. Pelajar akan mempelajari mantera: "Apakah yang berlaku? Apakah yang sepatutnya berlaku? Apakah maksud yang disampaikan kepada anda?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              description_teacher: |-
-                Apabila pelajar berhadapan dengan halangan semasa menjawab soalan atau mengusahakan projek, ia amat mudah bagi mereka untuk merasa kecewa dan putus asa. Pelajaran ini akan memperkenalkan kepada pelajar mengenai idea bahawa kekecewaan boleh menjadi bahagian penting dalam pembelajaran. Di sini, kekecewaan ditunjukkan sebagai langkah dalam proses kreatif dan bukannya sebagai tanda kegagalan.\\r
-                \\r
-                Pelajaran ini dapat dilakukan dalam satu atau dua sesi kelas. Jika anda mempunyai lebih banyak masa, silakan meluangkan masa membina dan menyemak semula fasa aktiviti Larian Guli.
+              description_teacher: "Apabila pelajar berhadapan dengan halangan semasa menjawab soalan atau mengusahakan projek, ia amat mudah bagi mereka untuk merasa kecewa dan putus asa. Pelajaran ini akan memperkenalkan kepada pelajar mengenai idea bahawa kekecewaan boleh menjadi bahagian penting dalam pembelajaran. Di sini, kekecewaan ditunjukkan sebagai langkah dalam proses kreatif dan bukannya sebagai tanda kegagalan.\\r\n\\r\nPelajaran ini dapat dilakukan dalam satu atau dua sesi kelas. Jika anda mempunyai lebih banyak masa, silakan meluangkan masa membina dan menyemak semula fasa aktiviti Larian Guli.\n"
             'Real-life Algorithms: Plant a Seed':
               name: Tanam Biji Benih
-              description_teacher: Dalam pelajaran ini, pelajar akan mengaitkan kembali konsep algoritma kepada aktiviti kehidupan harian, nyata dengan menanam benih sebenar. Di sini, matlamatnya ialah untuk mula membina kemahiran dalam menterjemahkan situasi dunia nyata kepada senario dalam talian dan sebaliknya.\\r
+              description_teacher: "Dalam pelajaran ini, pelajar akan mengaitkan kembali konsep algoritma kepada aktiviti kehidupan harian, nyata dengan menanam benih sebenar. Di sini, matlamatnya ialah untuk mula membina kemahiran dalam menterjemahkan situasi dunia nyata kepada senario dalam talian dan sebaliknya.\\r"
             Learn to Drag and Drop:
               name: Pelajari Tarik dan Lepas
               description_teacher: Pelajaran ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.
@@ -2075,7 +2080,7 @@ ms:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Fungsi-fungsi dengan parameter\_
+              name: Fungsi-fungsi dengan parameter_
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
         coursee-2018:
@@ -2121,6 +2126,7 @@ ms:
                 Dibangunkan oleh Pendidikan yang Munasabah, pelajaran ini ialah tentang perbezaan antara maklumat yang selamat dan tidak selamat untuk dikongsi dalam talian.
 
                 Semasa pelajar mengunjungi laman web yang meminta maklumat tentang identiti masing-masing, mereka belajar mengamalkan proses siasatan kritikal yang memperkasakan mereka untuk melindungi diri dan keluarga mereka daripada pencurian identiti. Dalam pelajaran ini, pelajar mempelajari cara berfikir secara kritis tentang maklumat pengguna yang diminta atau diperlukan oleh sesetengah laman web. Mereka mempelajari perbezaan antara maklumat sulit dan peribadi, serta cara membezakan perkara yang selamat atau tidak selamat dikongsi dalam talian.
+
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
               description_student: Rasakan kekuatan semasa anda membina permainan Star Wars anda sendiri dalam pelajaran ini.
@@ -2140,9 +2146,7 @@ ms:
               name: Fungsi dengan Penuai
             Determine the Concept:
               name: Tentukan Konsep
-              description_student: |-
-                Kami tidak akan mendedahkan apa-apa rahsia!
-                Pelajaran ini boleh menggunakan apa-apa kemahiran yang pernah anda pelajari setakat ini.
+              description_student: "Kami tidak akan mendedahkan apa-apa rahsia!\nPelajaran ini boleh menggunakan apa-apa kemahiran yang pernah anda pelajari setakat ini.\n"
               description_teacher: Pelajaran ini menyatupadukan konsep daripada pelajaran sebelumnya dan memberikan peluang kepada pelajar untuk berfikir secara kritis tentang cara mereka akan menyelesaikan setiap masalah, tetapi tanpa memberitahu mereka pilihan konsep yang perlu digunakan. Pelajar akan menyemak semula algoritma asas, penyahpepijatan, gelung `berulang`, bersyarat, gelung `semasa` dan fungsi.
             Build a Play Lab Game:
               name: Membina Permainan Makmal Mainan
@@ -2151,10 +2155,7 @@ ms:
             Explore Project Ideas:
               name: Terokai Idea Projek
               description_student: Berikut ialah beberapa permainan dan lukisan. Sila bermain dengan setiap satu daripada kedua-duanya bagi mendapatkan idea untuk projek anda sendiri!
-              description_teacher: |-
-                Empat pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina dan membentangkan hasil kerja terakhir mereka.
-
-                Pada tahap penerokaan, pelajar akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini mungkin merupakan tahap projek paling lama). Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.
+              description_teacher: "Empat pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina dan membentangkan hasil kerja terakhir mereka.\n\nPada tahap penerokaan, pelajar akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini mungkin merupakan tahap projek paling lama). Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.\n"
             The Design Process:
               name: Proses Reka Bentuk
               description_student: Projek sebesar ini mengambil masa dan banyak perancangan. Di sini, anda akan mempelajari tentang proses reka bentuk yang akan anda gunakan untuk membina ciptaan anda sendiri.
@@ -2209,14 +2210,11 @@ ms:
               description_teacher: Pelajaran ini menunjukkan kepada kita sesuatu yang penting tentang algoritma. Asalkan anda membuat algoritma mudah, ada banyak cara untuk menggunakannya. Walau bagaimanapun, jika anda mahu memastikan semua individu mengeluarkan hasil yang sama, maka algoritma anda memerlukan lebih banyak perincian. Pelajar akan mempelajari perbezaan antara algoritma terperinci dan umum semasa bermain dengan tangram.
             Introduction:
               description_student: Pelajaran ini akan memberikan anda pengenalan ringkas mengenai beberapa perkara menakjubkan yang akan anda pelajari dalam kursus ini!
-              description_teacher: Dalam pelajaran ini, pelajar akan diperkenalkan kepada jujukan, gelung dan gelung bersarang bagi mempersiapkan mereka untuk konsep yang lebih rumit di bahagian akhir kursus. Pelajaran "tingkatkan" ini menyamakan tahap peluang antara pakar dan pemula di dalam kelas anda.
+              description_teacher: 'Dalam pelajaran ini, pelajar akan diperkenalkan kepada jujukan, gelung dan gelung bersarang bagi mempersiapkan mereka untuk konsep yang lebih rumit di bahagian akhir kursus. Pelajaran "tingkatkan" ini menyamakan tahap peluang antara pakar dan pemula di dalam kelas anda.'
             The Power of Words:
               name: Kuasa Perkataan
               description_student: Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian.
-              description_teacher: |-
-                Pelajar memerhatikan perkara itu semasa mereka melayari laman web kegemaran mereka, mereka mungkin menemui mesej daripada kanak-kanak lain yang boleh membuatkan mereka merasa marah, sakit hati, sedih, atau takut. Mereka menerokai cara menangani buli siber dan bertindak balas dalam menghadapi bahasa yang menjengkelkan dalam talian.
-
-                Pelajar berbincang mengenai semua cara mereka gunakan teknologi untuk komunikasi dan menerokai persamaan dan perbezaan antara komunikasi secara peribadi dan dalam talian. Kemudian, pelajar melakukan sumbang saran untuk mencari cara bertindak balas terhadap buli siber.
+              description_teacher: "Pelajar memerhatikan perkara itu semasa mereka melayari laman web kegemaran mereka, mereka mungkin menemui mesej daripada kanak-kanak lain yang boleh membuatkan mereka merasa marah, sakit hati, sedih, atau takut. Mereka menerokai cara menangani buli siber dan bertindak balas dalam menghadapi bahasa yang menjengkelkan dalam talian.\n\nPelajar berbincang mengenai semua cara mereka gunakan teknologi untuk komunikasi dan menerokai persamaan dan perbezaan antara komunikasi secara peribadi dan dalam talian. Kemudian, pelajar melakukan sumbang saran untuk mencari cara bertindak balas terhadap buli siber.\n"
             Ice Age Play Lab:
               description_student: Cuba fikirkan permainan video kegemaran anda. Pernahkah anda terfikir cara ia dibuat? Dalam teka-teki ini, anda akan membangunkan permainan video anda sendiri bersama rakan daripada filem Ice Age!
               description_teacher: Dalam pelajaran ini, pelajar dibimbing melalui cerita yang menampilkan watak daripada filem Ice Age. Pelajar akan menggunakan peristiwa dan gelung untuk membuat watak bergerak pada skrin dan akan mendapat peluang mencipta permainan atau cerita mereka sendiri selepas tahap dibimbing.
@@ -2237,7 +2235,7 @@ ms:
               description_teacher: Pelajar akan mendapat lebih banyak latihan mengenai pemboleh ubah dalam pelajaran ini dengan mencipta adegan di dalam Makmal Mainan. Pelajar akan menggunakan input pengguna untuk menetapkan nilai pemboleh ubah mereka, kemudian mendapatkan ruang untuk mencipta projek mini mereka sendiri dengan pemboleh ubah itu.
             For Loop Fun:
               description_student: Anda akan menikmati banyak keseronokan apabila mempelajari tentang gelung `untuk`!
-              description_teacher: Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan yang dibina di dalamnya. Struktur baharu ini akan membolehkan pelajar mencipta kod yang lebih kuat dan dinamik.
+              description_teacher: 'Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan yang dibina di dalamnya. Struktur baharu ini akan membolehkan pelajar mencipta kod yang lebih kuat dan dinamik.'
             For Loops in Bee:
               description_student: Bunyi berdengung. Dalam teka-teki ini, anda akan membimbing lebah ke nektar dan madu dengan menggunakan gelung `untuk`!
               description_teacher: Menampilkan Lebah, pelajaran ini memberikan tumpuan kepada gelung untuk dan menggunakan pemboleh ubah bertambahan bagi menyelesaikan teka-teki yang lebih rumit. Pelajar akan mula dengan menyemak gelung daripada pelajaran sebelumnya, kemudian mereka mengikuti cara penggunaan gelung untuk dengan terperinci agar boleh menyelesaikan masalah yang rumit dengan lebih berkesan.
@@ -2261,10 +2259,7 @@ ms:
             Explore Project Ideas:
               name: Terokai Idea Projek
               description_student: Masa untuk mendapatkan sedikit inspirasi! Teka-teki ini akan menunjukkan kepada anda sebilangan permainan dan ilustrasi pradibina bagi membantu membangunkan rancangan anda untuk projek BESAR anda.
-              description_teacher: |-
-                Lima pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran, mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan hasil kerja terakhir mereka.
-
-                Pada tahap penerokaan, pelajar akan dapat melihat contoh projek di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini kemungkinan besar merupakan tahap projek paling lama). Kemudian, pelajar akan menyemak projek mereka selepas pengujian dan pendapat tambahan. Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.
+              description_teacher: "Lima pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran, mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan hasil kerja terakhir mereka.\n\nPada tahap penerokaan, pelajar akan dapat melihat contoh projek di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini kemungkinan besar merupakan tahap projek paling lama). Kemudian, pelajar akan menyemak projek mereka selepas pengujian dan pendapat tambahan. Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.\n"
             The Design Process:
               name: Proses Reka Bentuk
               description_student: Projek sebesar ini mengambil masa dan banyak perancangan. Di sini, anda akan mempelajari tentang proses reka bentuk yang akan anda gunakan untuk membina ciptaan anda sendiri.
@@ -2495,12 +2490,7 @@ ms:
             The Power of Words:
               name: Kuasa Perkataan
               description_student: Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian.
-              description_teacher: |-
-                Pelajar memerhatikan perkara itu semasa mereka melayari laman web kegemaran mereka, mereka mungkin menemui mesej daripada kanak-kanak lain yang boleh membuatkan mereka merasa marah, sakit hati, sedih, atau takut. Mereka menerokai cara menangani buli siber dan bertindak balas dalam menghadapi bahasa yang menjengkelkan dalam talian.\\r
-                \\r
-                Pelajar berbincang mengenai semua cara mereka gunakan teknologi untuk komunikasi dan menerokai persamaan dan perbezaan antara komunikasi secara peribadi dan dalam talian. Kemudian, pelajar melakukan sumbang saran untuk mencari cara bertindak balas terhadap buli siber. \\r
-                \\r
-                Untuk maklumat lebih lanjut, sila kunjungi: [r kuasa perkataan pendidikan yang munasabah]
+              description_teacher: "Pelajar memerhatikan perkara itu semasa mereka melayari laman web kegemaran mereka, mereka mungkin menemui mesej daripada kanak-kanak lain yang boleh membuatkan mereka merasa marah, sakit hati, sedih, atau takut. Mereka menerokai cara menangani buli siber dan bertindak balas dalam menghadapi bahasa yang menjengkelkan dalam talian.\\r\n\\r\nPelajar berbincang mengenai semua cara mereka gunakan teknologi untuk komunikasi dan menerokai persamaan dan perbezaan antara komunikasi secara peribadi dan dalam talian. Kemudian, pelajar melakukan sumbang saran untuk mencari cara bertindak balas terhadap buli siber. \\r\n\\r\nUntuk maklumat lebih lanjut, sila kunjungi: [r kuasa perkataan pendidikan yang munasabah]\n"
             Envelope Variables:
               description_student: 'Sampul surat dan pemboleh ubah mempunyai suatu persamaan: kedua-duanya boleh menyimpan barangan berharga. Di sini anda akan mempelajari mengenai pemboleh ubah dan perkara hebat yang boleh dilakukannya.'
               description_teacher: Pemboleh ubah digunakan sebagai pemegang tempat untuk nilai seperti angka atau perkataan. Pemboleh ubah memberikan banyak kebebasan dalam pengaturcaraan. Daripada perlu menaip frasa dengan banyak kali atau mengingati angka yang terlindung, ahli sains komputer boleh menggunakan pemboleh ubah sebagai rujukannya. Pelajaran ini membantu menerangkan perkara mengenai pemboleh ubah dan cara kita boleh menggunakannya dalam pelbagai cara. Idea pemboleh ubah bukan konsep yang mudah difahami, oleh itu kami menyarankan agar banyak masa diberikan untuk perbincangan pada akhir pelajaran itu.
@@ -2510,14 +2500,14 @@ ms:
               description_teacher: Dalam pelajaran ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah boleh digunakan untuk menjadikan kod lebih mudah ditulis dan dibaca, walaupun nilainya tidak berubah pada masa jalan.
             Variables that Change in Bee:
               description_student: Lebah ini menyukai pemboleh ubah!
-              description_teacher: Pelajaran ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih kuat dengan membenarkan nilai ditukar semasa kod sedang berjalan.
+              description_teacher: 'Pelajaran ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih kuat dengan membenarkan nilai ditukar semasa kod sedang berjalan.'
             Variables that Change in Artist:
               name: Menukar Pemboleh Ubah dengan Artis
               description_student: Dalam pelajaran ini, anda akan membuat lukisan dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan.
               description_teacher: Dalam pelajaran ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah boleh digunakan untuk menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk mereka sendiri.
             For Loop Fun:
               description_student: Anda akan menikmati banyak keseronokan apabila mempelajari tentang gelung `untuk`!
-              description_teacher: Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan yang dibina di dalamnya. Struktur baharu ini akan membolehkan pelajar mencipta kod yang lebih kuat dan dinamik.
+              description_teacher: 'Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan yang dibina di dalamnya. Struktur baharu ini akan membolehkan pelajar mencipta kod yang lebih kuat dan dinamik.'
             For Loops in Bee:
               description_student: Bunyi berdengung. Dalam teka-teki ini, anda akan membimbing lebah ke nektar dan madu dengan menggunakan gelung `untuk`!
               description_teacher: Menampilkan Lebah, pelajaran ini memberikan tumpuan kepada gelung `untuk` dan menggunakan pemboleh ubah bertambahan bagi menyelesaikan teka-teki yang lebih rumit. Pelajar akan mula dengan menyemak gelung daripada pelajaran sebelumnya, kemudian mereka akan mengikuti pengenalan mengenai gelung `untuk` dengan terperinci supaya mereka boleh menyelesaikan masalah yang rumit dengan lebih berkesan.
@@ -2534,10 +2524,7 @@ ms:
             Explore Project Ideas:
               name: Terokai Idea Projek
               description_student: Masa untuk mendapatkan sedikit inspirasi! Teka-teki ini akan menunjukkan kepada anda sebilangan permainan dan ilustrasi pradibina bagi membantu membangunkan rancangan anda untuk projek BESAR anda.
-              description_teacher: |-
-                Lima pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran, mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan hasil kerja terakhir mereka.
-
-                Pada tahap penerokaan, pelajar akan dapat melihat contoh projek di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini kemungkinan besar merupakan tahap projek paling lama). Kemudian, pelajar akan menyemak projek mereka selepas pengujian dan pendapat tambahan. Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.
+              description_teacher: "Lima pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran, mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan hasil kerja terakhir mereka.\n\nPada tahap penerokaan, pelajar akan dapat melihat contoh projek di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini kemungkinan besar merupakan tahap projek paling lama). Kemudian, pelajar akan menyemak projek mereka selepas pengujian dan pendapat tambahan. Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.\n"
             The Design Process:
               name: Proses Reka Bentuk
               description_student: Projek sebesar ini mengambil masa dan banyak perancangan. Di sini, anda akan mempelajari tentang proses reka bentuk yang akan anda gunakan untuk membina ciptaan anda sendiri.
@@ -2559,13 +2546,13 @@ ms:
             Nested Loops in the Maze:
               name: Gelung Bersarang di dalam Pagar Sesat
               description_student: Gelung di dalam gelung di dalam gelung. Apakah yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda menempatkan gelung di dalam gelung lain.
-              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
+              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik `Jalankan'.
             Sequencing in the Maze:
               name: Penjujukan di dalam Pagar Sesat
             Events with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
               description_student: Cipta projek berinteraktif yang boleh dikongsikan dengan rakan sekelas.
-              description_teacher: Pelajaran ini menampilkan Makmal Peperi, iaitu platform yang membolehkan pelajar mencipta animasi dan permainan berinteraktif mereka sendiri. Di samping tingkah laku, pada hari ini pelajar akan memasukkan input pengguna sebagai peristiwa bertujuan mencipta "majlis tari-menari untuk makhluk asing".
+              description_teacher: 'Pelajaran ini menampilkan Makmal Peperi, iaitu platform yang membolehkan pelajar mencipta animasi dan permainan berinteraktif mereka sendiri. Di samping tingkah laku, pada hari ini pelajar akan memasukkan input pengguna sebagai peristiwa bertujuan mencipta "majlis tari-menari untuk makhluk asing".'
             Loops with the Artist:
               name: Melukis dengan Gelung
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!
@@ -2585,10 +2572,7 @@ ms:
             End of Course Project:
               name: Akhir Projek Kursus
               description_student: Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!
-              description_teacher: |-
-                Lima pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran, mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan hasil kerja terakhir mereka. \\r
-                \\r
-                Pada tahap penerokaan, pelajar akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Peperi, atau mana-mana antara muka lain yang anda selesa untuk sediakan. (Ini mungkin merupakan tahap projek paling lama). Kemudian, pelajar akan menyemak kod mereka selepas pengujian dan penilaian rakan sebaya. Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sekelas mereka.
+              description_teacher: "Lima pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran, mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan hasil kerja terakhir mereka. \\r\n\\r\nPada tahap penerokaan, pelajar akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Peperi, atau mana-mana antara muka lain yang anda selesa untuk sediakan. (Ini mungkin merupakan tahap projek paling lama). Kemudian, pelajar akan menyemak kod mereka selepas pengujian dan penilaian rakan sebaya. Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sekelas mereka.\n"
             Internet:
               name: Internet
               description_student: Adakah anda pernah terfikir cara maklumat bergerak merentasi internet? Ini bukan silap mata! Pelajaran ini akan mengajar anda asas-asas cara internet berfungsi.
@@ -2597,7 +2581,7 @@ ms:
               description_student: Pelajaran ini akan mengajar anda tentang sumber khalayak, proses membina projek dengan pasukan.
               description_teacher: Dalam sains komputer, kita terpaksa menghadapi beberapa masalah besar dan menggentarkan. Cabaran seperti mencari nombor perdana yang besar atau menjujuk DNA adalah agak mustahil dilakukan secara individu. Menambah kekuatan yang lain membuatkan tugas ini boleh diuruskan. Pelajaran ini akan menunjukkan kepada pelajar anda betapa kerja berpasukan boleh membantu dalam industri sains komputer.
             Digital Sharing:
-              description_student: Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta.
+              description_student: 'Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta.'
             Running Simulations:
               name: Menjalankan Simulasi
             Simulating Experiments:
@@ -2630,7 +2614,7 @@ ms:
             'Algorithms: Graph Paper Programming':
               name: Pengaturcaraan kertas graf
               description_student: Dalam pelajaran ini, anda akan mengatur cara rakan sekelas anda untuk melukis gambar!
-              description_teacher: Dengan "mengatur cara" antara satu sama lain untuk melukis gambar, pelajar mendapat peluang merasai pengalaman sebahagian daripada konsep teras pengaturcaraan melalui cara yang menyeronokkan dan mudah diakses. Kelas akan dimulakan dengan meminta pelajar menggunakan simbol untuk saling memberikan arahan mewarnakan bentuk segi empat sama di atas kertas graf dalam usaha menghasilkan semula gambar yang sedia ada. Jika ada masa, pelajaran itu boleh diakhiri dengan gambar yang dihasilkan oleh pelajar sendiri.
+              description_teacher: 'Dengan "mengatur cara" antara satu sama lain untuk melukis gambar, pelajar mendapat peluang merasai pengalaman sebahagian daripada konsep teras pengaturcaraan melalui cara yang menyeronokkan dan mudah diakses. Kelas akan dimulakan dengan meminta pelajar menggunakan simbol untuk saling memberikan arahan mewarnakan bentuk segi empat sama di atas kertas graf dalam usaha menghasilkan semula gambar yang sedia ada. Jika ada masa, pelajaran itu boleh diakhiri dengan gambar yang dihasilkan oleh pelajar sendiri.'
             Introduction to Online Puzzles:
               name: Pengenalan kepada Teka-teki dalam Talian
               description_student: Pelajaran ini akan memberikan anda latihan dalam kemahiran yang anda perlukan untuk kursus ini.
@@ -2656,7 +2640,7 @@ ms:
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
               description_student: Gelung di dalam gelung di dalam gelung. Apakah yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda mencipta gelung bersarang.
-              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
+              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik `Jalankan'.
             Nested Loops in Artist:
               name: Gelung Bersarang di dalam Artis
             Nested Loops in Frozen:
@@ -2664,30 +2648,22 @@ ms:
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
               description_student: 'Gelung adalah sangat berguna dalam pengekodan. Pelajaran ini akan mengajar anda tentang jenis gelung baharu: iaitu gelung semasa!'
-              description_teacher: |-
-                Sebaik sahaja pelajar mencecah pelajaran ini, mereka sudah sepatutnya mempunyai banyak latihan menggunakan gelung `berulang`, oleh itu, sekarang sudah tiba masanya untuk mencampuradukkannya.\\r
-                \\r
-                _Gelung semasa_ ialah gelung yang terus mengulangi perintah semasa syarat dipenuhi. Gelung `semasa` digunakan apabila pengatur cara tidak mengetahui bilangan perintah yang perlu diulangi, tetapi tahu syarat yang perlu menjadi benar supaya gelung terus mengulanginya. Sebagai contoh, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang. Mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran, tetapi pelajar akan tahu bahawa mereka perlu terus mengisi lubang dan menggali kotoran asalkan tanahnya tidak rata.
+              description_teacher: "Sebaik sahaja pelajar mencecah pelajaran ini, mereka sudah sepatutnya mempunyai banyak latihan menggunakan gelung `berulang`, oleh itu, sekarang sudah tiba masanya untuk mencampuradukkannya.\\r\n\\r\n_Gelung semasa_ ialah gelung yang terus mengulangi perintah semasa syarat dipenuhi. Gelung `semasa` digunakan apabila pengatur cara tidak mengetahui bilangan perintah yang perlu diulangi, tetapi tahu syarat yang perlu menjadi benar supaya gelung terus mengulanginya. Sebagai contoh, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang. Mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran, tetapi pelajar akan tahu bahawa mereka perlu terus mengisi lubang dan menggali kotoran asalkan tanahnya tidak rata.\n"
             Until Loops in Maze:
               description_student: Anda boleh melakukan beberapa perkara yang menakjubkan apabila anda menggunakan gelung `sehingga`!
               description_teacher: Dalam pelajaran ini, pelajar akan mempelajari tentang gelung `sehingga`. Pelajar akan membina atur cara yang mempunyai tindakan ulangan watak utama `sehingga` ia mencapai titik berhenti yang diinginkan.
             Conditionals with Cards:
               description_student: Sudah tiba masanya untuk bermain permainan yang anda memperoleh mata hanya di bawah syarat tertentu!
-              description_teacher: |-
-                Pelajaran ini menunjukkan sejauh mana bersyarat boleh digunakan untuk menyesuaikan atur cara terhadap maklumat khusus. Bukan setiap kali, kami mempunyai semua maklumat yang diperlukan apabila menulis atur cara. Kadang-kadang anda mahu melakukan sesuatu yang berbeza dalam satu situasi berbanding yang lain, walaupun anda tidak tahu sama ada situasi akan berlaku atau tidak semasa kod anda berjalan. Itulah masanya situasi bersyarat dimasukkan. Bersyarat membenarkan komputer membuat keputusan, berdasarkan maklumat yang benar pada bila-bila masa kod anda dijalankan.\\r
-                \\r
+              description_teacher: "Pelajaran ini menunjukkan sejauh mana bersyarat boleh digunakan untuk menyesuaikan atur cara terhadap maklumat khusus. Bukan setiap kali, kami mempunyai semua maklumat yang diperlukan apabila menulis atur cara. Kadang-kadang anda mahu melakukan sesuatu yang berbeza dalam satu situasi berbanding yang lain, walaupun anda tidak tahu sama ada situasi akan berlaku atau tidak semasa kod anda berjalan. Itulah masanya situasi bersyarat dimasukkan. Bersyarat membenarkan komputer membuat keputusan, berdasarkan maklumat yang benar pada bila-bila masa kod anda dijalankan.\\r\n\\r\n"
             Conditionals in Bee:
-              description_student: Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.
+              description_student: 'Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.'
               description_teacher: Sehingga pada tahap ini, pelajar telah menulis kod yang melaksanakan cara yang betul-betul sama setiap kali ia dijalankan - andal, tetapi tidak terlalu fleksibel. Dalam pelajaran ini, kelas anda akan mula mengekod dengan bersyarat, membolehkan mereka menulis kod yang berfungsi secara berbeza bergantung pada syarat khusus yang ditemui oleh atur cara ini.
             Conditionals & Loops in Harvester:
               description_student: Bukan selalunya jelas masa untuk menggunakan setiap yang bersyarat. Pelajaran ini akan membantu anda berlatih membuat keputusan mengenai perkara yang perlu dilakukan.
               description_teacher: Pelajar akan berlatih gelung `semasa`, gelung `sehingga` dan pernyataan `jika / lain`. Semua blok ini menggunakan bersyarat. Apabila berlatih dengan menggunakan ketiga-tiganya, pelajar akan mempelajari menulis kod yang kompleks dan fleksibel.
             Digital Citizenship:
               description_student: Sesetengah maklumat adalah tidak selamat dikongsi dalam talian. Pelajaran ini akan membantu anda mempelajari perbezaan antara maklumat selamat dan sulit.
-              description_teacher: |-
-                Dengan kerjasama Pendidikan yang Munasabah, pelajaran ini membantu pelajar mempelajari berfikir secara kritis tentang maklumat pengguna yang diminta atau diperlukan oleh sesetengah laman web. Pelajar mengetahui perbezaan antara maklumat sulit dan peribadi, membezakan maklumat yang selamat dan tidak selamat dikongsi dalam talian.\\r
-                \\r
-                Pelajar juga akan meneroka perkara yang dimaksudkan dengan bertanggungjawab dan menghormati komuniti luar dan dalam talian mereka sebagai langkah mempelajari cara menjadi warga digital yang baik.
+              description_teacher: "Dengan kerjasama Pendidikan yang Munasabah, pelajaran ini membantu pelajar mempelajari berfikir secara kritis tentang maklumat pengguna yang diminta atau diperlukan oleh sesetengah laman web. Pelajar mengetahui perbezaan antara maklumat sulit dan peribadi, membezakan maklumat yang selamat dan tidak selamat dikongsi dalam talian.\\r\n\\r\nPelajar juga akan meneroka perkara yang dimaksudkan dengan bertanggungjawab dan menghormati komuniti luar dan dalam talian mereka sebagai langkah mempelajari cara menjadi warga digital yang baik.\n"
             Build a Play Lab Game:
               name: Membina Permainan Makmal Mainan
             'Unplugged: Binary':
@@ -2747,10 +2723,7 @@ ms:
               description_teacher: Pelajaran ini memperkenalkan pelajar kepada gelung `semasa` dan pernyataan `jika / lain`. _Gelung semasa_ ialah gelung yang terus mengulangi perintah selagi syaratnya benar. Gelung semasa digunakan apabila pengatur cara tidak mengetahui bilangan perintah yang perlu diulangi, tetapi tahu syarat yang perlu menjadi benar supaya gelung terus menggelung. Pernyataan `jika / lain` menawarkan fleksibiliti dalam pengaturcaraan dengan menjalankan seluruh bahagian kod hanya jika terdapat sesuatu yang benar, jika tidak, ia menjalankan sesuatu yang lain.
             Private and Personal Information:
               description_student: Internet ialah sesuatu yang menyeronokkan dan menarik, tetapi adalah penting untuk kekal selamat. Pelajaran ini mengajar anda perbezaan antara maklumat yang selamat untuk dikongsi dan maklumat yang bersifat sulit.
-              description_teacher: |-
-                Dibangunkan oleh Pendidikan yang Munasabah, pelajaran ini ialah tentang perbezaan antara maklumat yang selamat dan tidak selamat untuk dikongsi dalam talian.\\r
-                \\r
-                Semasa pelajar mengunjungi laman web yang meminta maklumat tentang identiti masing-masing, mereka belajar mengamalkan proses siasatan kritikal yang memperkasakan mereka untuk melindungi diri dan keluarga mereka daripada pencurian identiti. Dalam pelajaran ini, pelajar mempelajari cara berfikir secara kritis tentang maklumat pengguna yang diminta atau diperlukan oleh sesetengah laman web. Mereka mempelajari perbezaan antara maklumat sulit dan peribadi, serta cara membezakan perkara yang selamat atau tidak selamat dikongsi dalam talian.
+              description_teacher: "Dibangunkan oleh Pendidikan yang Munasabah, pelajaran ini ialah tentang perbezaan antara maklumat yang selamat dan tidak selamat untuk dikongsi dalam talian.\\r\n\\r\nSemasa pelajar mengunjungi laman web yang meminta maklumat tentang identiti masing-masing, mereka belajar mengamalkan proses siasatan kritikal yang memperkasakan mereka untuk melindungi diri dan keluarga mereka daripada pencurian identiti. Dalam pelajaran ini, pelajar mempelajari cara berfikir secara kritis tentang maklumat pengguna yang diminta atau diperlukan oleh sesetengah laman web. Mereka mempelajari perbezaan antara maklumat sulit dan peribadi, serta cara membezakan perkara yang selamat atau tidak selamat dikongsi dalam talian.\n"
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
               description_student: Rasakan kekuatan semasa anda membina permainan Star Wars anda sendiri dalam pelajaran ini.
@@ -2772,9 +2745,7 @@ ms:
               description_teacher: Pelajar akan diperkenalkan untuk menggunakan fungsi dengan Artis. Imej yang gemilang akan dicipta dan diubah suai. Untuk corak yang lebih rumit, pelajar akan mempelajari tentang fungsi penyarangan dengan memanggil satu fungsi dari dalam yang lain.
             Determine the Concept:
               name: Tentukan Konsep
-              description_student: |-
-                Kami tidak akan mendedahkan apa-apa rahsia!
-                Pelajaran ini boleh menggunakan apa-apa kemahiran yang pernah anda pelajari setakat ini.
+              description_student: "Kami tidak akan mendedahkan apa-apa rahsia!\nPelajaran ini boleh menggunakan apa-apa kemahiran yang pernah anda pelajari setakat ini.\n"
               description_teacher: Pelajaran ini menyatupadukan konsep daripada pelajaran sebelumnya dan memberikan peluang kepada pelajar untuk berfikir secara kritis tentang cara mereka akan menyelesaikan setiap masalah, tetapi tanpa memberitahu mereka pilihan konsep yang perlu digunakan. Pelajar akan menyemak semula algoritma asas, penyahpepijatan, gelung `berulang`, bersyarat, gelung `semasa` dan fungsi.
             Learning Sprites with Sprite Lab:
               name: Ikan Berenang dengan Makmal Peperi
@@ -2783,14 +2754,11 @@ ms:
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
               description_student: Cipta projek berinteraktif yang boleh dikongsikan dengan rakan sekelas.
-              description_teacher: Pelajaran ini menampilkan Makmal Peperi, iaitu platform yang membolehkan pelajar mencipta animasi dan permainan berinteraktif mereka sendiri. Di samping tingkah laku, pada hari ini pelajar akan memasukkan input pengguna sebagai peristiwa bertujuan mencipta "majlis tari-menari untuk makhluk asing".
+              description_teacher: 'Pelajaran ini menampilkan Makmal Peperi, iaitu platform yang membolehkan pelajar mencipta animasi dan permainan berinteraktif mereka sendiri. Di samping tingkah laku, pada hari ini pelajar akan memasukkan input pengguna sebagai peristiwa bertujuan mencipta "majlis tari-menari untuk makhluk asing".'
             Explore Project Ideas:
               name: Terokai Idea Projek
               description_student: Berikut ialah beberapa permainan dan lukisan. Sila bermain dengan setiap satu daripada kedua-duanya bagi mendapatkan idea untuk projek anda sendiri!
-              description_teacher: |-
-                Empat pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina dan membentangkan hasil kerja terakhir mereka.
-
-                Pada tahap penerokaan, pelajar akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini mungkin merupakan tahap projek paling lama). Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.
+              description_teacher: "Empat pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina dan membentangkan hasil kerja terakhir mereka.\n\nPada tahap penerokaan, pelajar akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Mainan (ini mungkin merupakan tahap projek paling lama). Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.\n"
             The Design Process:
               name: Proses Reka Bentuk
               description_student: Projek sebesar ini mengambil masa dan banyak perancangan. Di sini, anda akan mempelajari tentang proses reka bentuk yang akan anda gunakan untuk membina ciptaan anda sendiri.
@@ -2813,19 +2781,19 @@ ms:
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
               description_student: Gelung di dalam gelung di dalam gelung. Apakah yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda menempatkan gelung di dalam gelung lain.
-              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
+              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik `Jalankan'.
             Nested Loops in Artist:
               name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
               description_student: Lebih banyak gelung bersarang! Kali ini, anda boleh membuat lukisan yang MENAKJUBKAN dengan gelung bersarang.
               description_teacher: Pelajar akan mencipta reka bentuk yang rumit dengan menggunakan Artis dalam set teka-teki hari ini. Apabila terus berlatih gelung bersarang dengan matlamat baharu, pelajar akan melihat lebih banyak penggunaan gelung secara umum. Kumpulan teka-teki ini juga menawarkan lebih banyak potensi kreativiti dengan peluang untuk pelajar mencipta reka bentuk mereka sendiri pada akhir tahap ini.
             Nested Loops in Frozen:
               name: Gelung Bersarang dengan Frozen
-              description_student: Anna dan Elsa mempunyai kemahiran meluncur ais yang sangat baik, tetapi mereka memerlukan bantuan anda untuk mencipta corak di ais ais. Gunakan gelung bersarang untuk mencipta sesuatu yang amat MENARIK.
+              description_student: 'Anna dan Elsa mempunyai kemahiran meluncur ais yang sangat baik, tetapi mereka memerlukan bantuan anda untuk mencipta corak di ais ais. Gunakan gelung bersarang untuk mencipta sesuatu yang amat MENARIK.'
               description_teacher: Memandangkan pelajar sudah tahu cara meletakkan lapisan gelung, mereka boleh mencipta terlalu banyak benda yang cantik. Pelajaran ini akan membawa pelajar melakukan siri latihan bagi membantu mereka mencipta imej portfolio siap mereka sendiri dengan menggunakan kemahiran meluncur ais Anna dan Elsa yang sangat baik!
             Sequencing in the Maze:
               name: Penjujukan di dalam Pagar Sesat
               description_student: Dalam pelajaran ini, anda akan mempelajari cara menulis atur cara anda sendiri!
-              description_teacher: 'Dalam kumpulan teka-teki ini, pelajar akan memulakan dengan pengenalan (atau ulasan bergantung pada pengalaman kelas anda) ruang kerja Code.org dalam talian. Akan terdapat video yang menunjukkan kefungsian ruang kerja asas termasuk butang `Jalankan`, `Tetapkan Semula` dan `Langkah`. Video ini juga ada membincangkan mengenai: menarik blok Blockly, menghapuskan blok Blockly dan menyambungkan blok Blockly. Seterusnya, pelajar akan berlatih kemahiran _penjujukan_ dan _penyahpepijatan_ mereka di dalam pagar sesat. \\r Penyahpepijatan ialah elemen penting pembelajaran untuk mengatur cara. Pelajar akan bertemu dengan beberapa teka-teki yang telah diselesaikan dengan salah. Mereka perlu meneliti kod yang sedia ada untuk mengenal pasti ralat, termasuk gelung yang tidak betul, blok yang hilang, blok tambahan dan blok yang boleh digunakan.'
+              description_teacher: "Dalam kumpulan teka-teki ini, pelajar akan memulakan dengan pengenalan (atau ulasan bergantung pada pengalaman kelas anda) ruang kerja Code.org dalam talian. Akan terdapat video yang menunjukkan kefungsian ruang kerja asas termasuk butang `Jalankan`, `Tetapkan Semula` dan `Langkah`. Video ini juga ada membincangkan mengenai: menarik blok Blockly, menghapuskan blok Blockly dan menyambungkan blok Blockly. Seterusnya, pelajar akan berlatih kemahiran _penjujukan_ dan _penyahpepijatan_ mereka di dalam pagar sesat. \\r Penyahpepijatan ialah elemen penting pembelajaran untuk mengatur cara. Pelajar akan bertemu dengan beberapa teka-teki yang telah diselesaikan dengan salah. Mereka perlu meneliti kod yang sedia ada untuk mengenal pasti ralat, termasuk gelung yang tidak betul, blok yang hilang, blok tambahan dan blok yang boleh digunakan."
             Programming and Loops with the Artist:
               name: Melukis dengan Gelung
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!
@@ -2833,25 +2801,22 @@ ms:
             End of Course Project:
               name: Akhir Projek Kursus
               description_student: Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!
-              description_teacher: |-
-                Empat pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina dan membentangkan hasil kerja terakhir mereka. \\r
-                \\r
-                Pada tahap penerokaan, pelajar akan bermain dengan contoh projek pradibina di dalam Artis dan Makmal Peperi untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek di dalam Artis, Makmal Peperi, atau antara muka lain yang mereka telah membiasakan diri dengannya (ini mungkin merupakan tahap projek paling lama). Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.
+              description_teacher: "Empat pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina dan membentangkan hasil kerja terakhir mereka. \\r\n\\r\nPada tahap penerokaan, pelajar akan bermain dengan contoh projek pradibina di dalam Artis dan Makmal Peperi untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek di dalam Artis, Makmal Peperi, atau antara muka lain yang mereka telah membiasakan diri dengannya (ini mungkin merupakan tahap projek paling lama). Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.\n"
             Conditionals in Minecraft:
               name: Bersyarat dalam Minecraft
             About Me:
               name: Tentang Saya dengan Makmal Peperi
               description_student: Apabila mencipta poster berinteraktif dengan Makmal Peperi, pelajar akan menggunakan pemahaman mereka untuk berkongsi maklumat peribadi dan sulit di laman web.
-              description_teacher: Apabila mencipta poster berinteraktif dengan Makmal Peperi, pelajar akan menggunakan pemahaman mereka untuk berkongsi maklumat peribadi dan sulit di laman web.\\r
+              description_teacher: "Apabila mencipta poster berinteraktif dengan Makmal Peperi, pelajar akan menggunakan pemahaman mereka untuk berkongsi maklumat peribadi dan sulit di laman web.\\r"
             Aquatic Conditionals in Minecraft:
               name: Bersyarat Akuatik dalam Minecraft
             Access Ability:
               name: Mereka Bentuk untuk Aksesibiliti
-              description_student: Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.
-              description_teacher: Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.
+              description_student: 'Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.'
+              description_teacher: 'Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.'
             Simon Says:
               description_student: Main permainan dan fikirkan tentang perintah yang diperlukan untuk mendapatkan hasil yang betul.
-              description_teacher: Dalam pelajaran ini, pelajar akan bermain permainan yang bertujuan membuatkan mereka berfikir tentang cara perintah perlu diberikan untuk mendapatkan hasil yang betul. Ini akan membantu mereka membawanya ke Makmal Peperi dengan lebih mudah dalam pelajaran yang akan datang.
+              description_teacher: 'Dalam pelajaran ini, pelajar akan bermain permainan yang bertujuan membuatkan mereka berfikir tentang cara perintah perlu diberikan untuk mendapatkan hasil yang betul. Ini akan membantu mereka membawanya ke Makmal Peperi dengan lebih mudah dalam pelajaran yang akan datang.'
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Bersyarat dalam Minecraft: Pelayaran Akuatik'
               description_student: Di sini anda akan mempelajari tentang bersyarat di dalam dunia Minecraft.
@@ -2984,21 +2949,21 @@ ms:
               description_teacher: Dalam siri teka-teki ini, pelajar akan terus membangunkan pemahaman mereka tentang algoritma dan penyahpepijatan. Bersama watak baharu, Pengembara Laurel, pelajar akan mencipta algoritma berjujukan untuk membantu Laurel mengambil harta karun semasa dia berjalan di sepanjang laluan.
             Programming in Artist:
               description_student: Cipta imej yang cantik dengan mengatur cara Artis.
-              description_teacher: Dalam pelajaran ini, pelajar akan mengawal Artis bagi melengkapkan lukisan pada skrin. Tahap Artis ini akan membolehkan pelajar mencipta imej kekompleksan yang meningkat dengan menggunakan blok baharu seperti `bergerak ke hadapan dengan 100 piksel` dan \`belok ke kanan sebanyak 90 darjah '.
+              description_teacher: Dalam pelajaran ini, pelajar akan mengawal Artis bagi melengkapkan lukisan pada skrin. Tahap Artis ini akan membolehkan pelajar mencipta imej kekompleksan yang meningkat dengan menggunakan blok baharu seperti `bergerak ke hadapan dengan 100 piksel` dan `belok ke kanan sebanyak 90 darjah '.
             'Loops: Getting Loopy':
               name: 'Gelung: Menjadi Bergelung'
             Loops with Rey and BB-8:
               name: Gelung dengan Rey dan BB-8
-              description_student: Bantu BB-8 melepasi pagar sesat dengan menggunakan gelung!
+              description_student: 'Bantu BB-8 melepasi pagar sesat dengan menggunakan gelung!'
               description_teacher: Membina berasaskan konsep mengulangi arahan daripada "Menjadi Bergelung," tahap ini akan mempunyai pelajar yang menggunakan gelung untuk membantu BB-8 merentasi pagar sesat dengan lebih cekap berbanding sebelum ini.
             Loops in Artist:
               name: Gelung di dalam Artis
             Loops in Harvester:
               name: Menuai Tanaman dengan Gelung
               description_student: Mari kita gunakan gelung untuk membantu penuai mengumpulkan sebahagian daripada sayuran!
-              description_teacher: Pada tahap sebelumnya, pelajar menggunakan gelung untuk mencipta lukisan yang hebat. Kini, mereka akan menggunakan gelung untuk tindakan baharu bagi membantu penuai mengumpulkan banyak sayuran yang tumbuh dalam rumpun yang besar.\\r
+              description_teacher: "Pada tahap sebelumnya, pelajar menggunakan gelung untuk mencipta lukisan yang hebat. Kini, mereka akan menggunakan gelung untuk tindakan baharu bagi membantu penuai mengumpulkan banyak sayuran yang tumbuh dalam rumpun yang besar.\\r"
             'Events: The Big Event':
-              description_student: Main permainan yang menyeronokkan untuk mengetahui tentang peristiwa.
+              description_student: 'Main permainan yang menyeronokkan untuk mengetahui tentang peristiwa.'
               description_teacher: Tidak lama lagi, pelajar akan belajar bahawa peristiwa ialah cara terbaik untuk menambahkan fleksibiliti kepada algoritma prabertulis. Kadang-kadang anda mahu program anda boleh bertindak balas kepada pengguna tepat pada masa pengguna memilihnya. Peristiwa boleh membuatkan program anda lebih menarik dan interaktif.
             Build a Flappy Game:
               name: Membina Permainan Kibasan
@@ -3007,10 +2972,7 @@ ms:
             Screen Out the Mean:
               name: Keluarkan Maksudnya
               description_student: Dalam pelajaran ini, anda akan mempelajari perkara yang perlu dilakukan jika sesuatu dalam talian membuatkan anda merasa marah, sedih, atau takut.
-              description_teacher: |-
-                Pelajaran ini membantu kanak-kanak untuk mengenali bahawa ia adalah penting untuk memberitahu orang dewasa yang dipercayai jika sesuatu dalam talian membuat mereka merasa marah, sedih, atau takut. \\r
-                \\r
-                Pelajar mengetahui bahawa kadang-kadang individu lain boleh bertindak seperti pembuli apabila mereka berada dalam talian. Mereka akan meneroka perkara yang dimaksudkan dengan buli siber dan perkara yang boleh mereka lakukan apabila mereka mengalaminya. Selepas membaca senario tentang tingkah laku dalam talian yang keji, pelajar membincangkan perkara tentang buli siber ini, sejauh mana kesannya terhadap perasaan seseorang individu dan cara bertindak balas. Akhir sekali, mereka menggunakan pengetahuan mereka untuk membuat lembaran petua mudah mengenai buli siber dalam jurnal mereka.\\r
+              description_teacher: "Pelajaran ini membantu kanak-kanak untuk mengenali bahawa ia adalah penting untuk memberitahu orang dewasa yang dipercayai jika sesuatu dalam talian membuat mereka merasa marah, sedih, atau takut. \\r\n\\r\nPelajar mengetahui bahawa kadang-kadang individu lain boleh bertindak seperti pembuli apabila mereka berada dalam talian. Mereka akan meneroka perkara yang dimaksudkan dengan buli siber dan perkara yang boleh mereka lakukan apabila mereka mengalaminya. Selepas membaca senario tentang tingkah laku dalam talian yang keji, pelajar membincangkan perkara tentang buli siber ini, sejauh mana kesannya terhadap perasaan seseorang individu dan cara bertindak balas. Akhir sekali, mereka menggunakan pengetahuan mereka untuk membuat lembaran petua mudah mengenai buli siber dalam jurnal mereka.\\r\n"
             Events in Play Lab:
               name: Permainan Mengejar dengan Peristiwa
               description_student: Sudah tiba masanya menjadi kreatif dan mencipta permainan di Makmal Mainan!
@@ -3026,7 +2988,7 @@ ms:
             'End of Course Project: Create a Play Lab Game':
               name: Akhir Projek Kursus
               description_student: Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda.
-              description_teacher: Pelajaran kemuncak ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek Makmal Mainan mereka sendiri! Dalam usaha memastikan proses ini berjalan dengan lancar, kami telah menyediakan struktur langkah demi langkah untuk diikuti oleh pelajar, daripada perancangan di atas kertas sehingga pengekodan di laman web kami. Di samping itu, kami menawarkan idea untuk membantu para guru memudahkan pengajaran terakhir!
+              description_teacher: 'Pelajaran kemuncak ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek Makmal Mainan mereka sendiri! Dalam usaha memastikan proses ini berjalan dengan lancar, kami telah menyediakan struktur langkah demi langkah untuk diikuti oleh pelajar, daripada perancangan di atas kertas sehingga pengekodan di laman web kami. Di samping itu, kami menawarkan idea untuk membantu para guru memudahkan pengajaran terakhir!'
             'Programming: My Robotic Friends':
               name: Rakan Robotik Junior Saya
               description_student: Dalam pelajaran ini, anda akan berpura-pura yang rakan sekelas anda ialah robot dan mengatur cara mereka untuk membina corak cawan yang tersusun.
@@ -3039,10 +3001,7 @@ ms:
               name: Memetakan Data
             Powerful Passwords:
               description_student: Dalam pelajaran ini, anda akan mempelajari cara kata laluan melindungi maklumat anda dan membuat kata laluan yang baik.
-              description_teacher: |-
-                Dengan kerjasama **Pendidikan yang Munasabah**, pelajaran ini telah membuatkan pelajar menerokai tujuan individu menggunakan kata laluan, mempelajari manfaat menggunakan kata laluan dan menemui strategi untuk mencipta dan menyimpan kata laluan yang kukuh dan selamat.\\r
-                \\r
-                Pelajar mempelajari petua kata laluan, menguji kata laluan sedia ada dengan permainan berinteraktif dan mencipta kata laluan baharu dengan menggunakan garis panduan untuk kata laluan yang kuat.\\r
+              description_teacher: "Dengan kerjasama **Pendidikan yang Munasabah**, pelajaran ini telah membuatkan pelajar menerokai tujuan individu menggunakan kata laluan, mempelajari manfaat menggunakan kata laluan dan menemui strategi untuk mencipta dan menyimpan kata laluan yang kukuh dan selamat.\\r\n\\r\nPelajar mempelajari petua kata laluan, menguji kata laluan sedia ada dengan permainan berinteraktif dan mencipta kata laluan baharu dengan menggunakan garis panduan untuk kata laluan yang kuat.\\r\n"
             Sticker Art with Loops:
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!
               description_teacher: Cuba lihat wajah pelajar yang ceria sebaik sahaja mereka membuat reka bentuk mereka sendiri yang sangat cantik dengan menggunakan sebilangan kecil blok dan pelekat digital! Pelajaran ini dibina berasaskan pemahaman tentang gelung daripada pelajaran sebelumnya dan memberikan peluang kepada pelajar untuk menjadi betul-betul kreatif. Aktiviti ini memang hebat untuk menghasilkan artifak bagi portfolio atau persidangan ibu bapa/guru.
@@ -3138,7 +3097,7 @@ ms:
             Sequencing with Scrat:
               name: Penjujukan dengan Scrat
             Your Digital Footprint:
-              description_student: Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web.
+              description_student: 'Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web.'
               description_teacher: Dengan kerjasama **Pendidikan yang Munasabah**, pelajaran ini membantu pelajar mempelajari tentang persamaan untuk kekal selamat di dalam dunia nyata dan apabila melayari laman web. Pelajar juga akan mempelajari bahawa maklumat yang mereka masukkan secara dalam talian meninggalkan jejak digital atau “jejak.” Jejak ini boleh menjadi besar atau kecil, berguna atau menyakitkan, bergantung pada cara mereka menguruskannya.
             'Programming: My Robotic Friends':
               name: 'Pengaturcaraan: Rakan Robotik Saya'
@@ -3151,7 +3110,7 @@ ms:
             Loops in Collector:
               name: Gelung dengan Laurel
               description_student: Atur cara pengembara Laurel mengumpulkan harta karun di dalam ruang gua yang terbuka.
-              description_teacher: Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \`dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
+              description_teacher: Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok `dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
             Loops in Artist:
               name: Melukis Taman dengan Gelung
               description_student: Gunakan corak dan gelung untuk menyiapkan imej.
@@ -3169,7 +3128,7 @@ ms:
               description_teacher: Semasa kami mula menulis atur cara yang lebih panjang dan lebih menarik, kod kami sering mengandungi banyak pengulangan. Dalam pelajaran ini, pelajar akan mempelajari tentang cara gelung boleh digunakan untuk lebih mudah menyampaikan arahan yang mempunyai banyak pengulangan dengan melihat pada corak pergerakan berulang dalam tarian.
             The Right App:
               description_student: Lakarkan aplikasi telefon pintar anda sendiri.
-              description_teacher: Pelajaran ini membuatkan pelajar menyedari bahawa sains komputer boleh membantu individu dalam kehidupan nyata. Pertama sekali, pelajar memahami dan berkongsi dengan beberapa pengguna telefon pintar fiksyen untuk membantu mereka mencari “aplikasi yang betul”, serta boleh memenuhi keperluan mereka. Kemudian, pelajar mengamalkan empati dan kreativiti untuk melakar aplikasi telefon pintar mereka sendiri yang menangani keperluan satu pengguna tambahan.
+              description_teacher: 'Pelajaran ini membuatkan pelajar menyedari bahawa sains komputer boleh membantu individu dalam kehidupan nyata. Pertama sekali, pelajar memahami dan berkongsi dengan beberapa pengguna telefon pintar fiksyen untuk membantu mereka mencari “aplikasi yang betul”, serta boleh memenuhi keperluan mereka. Kemudian, pelajar mengamalkan empati dan kreativiti untuk melakar aplikasi telefon pintar mereka sendiri yang menangani keperluan satu pengguna tambahan.'
             Loops in Harvester:
               name: Gelung dengan Penuai
               description_student: Bantu Penuai mengumpulkan lebih banyak lagi, dengan menggunakan gelung!
@@ -3181,7 +3140,7 @@ ms:
             Programming in Harvester:
               name: Pengaturcaraan dengan Penuai
               description_student: Bantu Penuai mengumpulkan sayuran di sepanjang laluan.
-              description_teacher: Pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai. Kini, daripada hanya menjadikan watak kepada matlamat, pelajar perlu mengumpulkan jagung dengan menggunakan blok baharu. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan.
+              description_teacher: 'Pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai. Kini, daripada hanya menjadikan watak kepada matlamat, pelajar perlu mengumpulkan jagung dengan menggunakan blok baharu. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan.'
             Sequencing in Maze:
               name: Penjujukan dengan Angry Birds
               description_student: Bantu Red, Angry Bird mengikuti laluan menuju ke tempat khinzir yang nakal.
@@ -3766,7 +3725,7 @@ ms:
               display_name: Acara-acara
           lessons:
             Your Digital Footprint:
-              description_student: Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web.
+              description_student: 'Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web.'
               description_teacher: Dengan kerjasama [r pendidikan yang munasabah], pelajaran ini membantu pelajar mempelajari tentang persamaan untuk kekal selamat di dalam dunia nyata dan apabila melayari laman web. Pelajar juga akan mempelajari bahawa maklumat yang mereka masukkan secara dalam talian meninggalkan jejak digital atau “jejak.” Jejak ini boleh menjadi besar atau kecil, berguna atau menyakitkan, bergantung pada cara mereka menguruskannya.
             Move It, Move It:
               description_student: Atur cara akan sekelas anda untuk melangkah dengan berhati-hati dari satu tempat ke tempat yang lain.
@@ -3782,7 +3741,7 @@ ms:
             Programming in Harvester:
               name: Pengaturcaraan dengan Penuai
               description_student: Bantu Penuai mengumpulkan sayuran di sepanjang laluan.
-              description_teacher: Pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai. Kini, daripada hanya menjadikan watak kepada matlamat, pelajar perlu mengumpulkan jagung dengan menggunakan blok baharu. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan.
+              description_teacher: 'Pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai. Kini, daripada hanya menjadikan watak kepada matlamat, pelajar perlu mengumpulkan jagung dengan menggunakan blok baharu. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan.'
             'Loops: Getting Loopy':
               description_student: Dalam pelajaran ini, kami akan mengadakan majlis tari-menari dengan menggunakan gelung berulang!
               description_teacher: Semasa kami mula menulis atur cara yang lebih panjang dan lebih menarik, kod kami sering mengandungi banyak pengulangan. Dalam pelajaran ini, pelajar akan mempelajari tentang cara gelung boleh digunakan untuk lebih mudah menyampaikan arahan yang mempunyai banyak pengulangan dengan melihat pada corak pergerakan berulang dalam tarian.
@@ -3793,14 +3752,14 @@ ms:
             Loops in Collector:
               name: Gelung dengan Laurel
               description_student: Atur cara pengembara Laurel mengumpulkan harta karun di dalam ruang gua yang terbuka.
-              description_teacher: Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \`dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
+              description_teacher: Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok `dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
             Loops in Artist:
               name: Melukis Taman dengan Gelung
               description_student: Gunakan corak dan gelung untuk menyiapkan imej.
               description_teacher: Kembali kepada gelung, pelajar mempelajari cara melukis imej dengan penggelungan jujukan arahan ringkas. Dalam pelajaran dalam talian sebelum ini, gelung digunakan untuk merentasi pagar sesat dan mengumpulkan harta karun. Di sini, pelajar menggunakan gelung untuk mewujudkan corak. Pada bahagian akhir tahap ini, pelajar akan diberikan peluang mencipta imej mereka sendiri dengan menggunakan gelung.
             The Right App:
               description_student: Lakarkan aplikasi telefon pintar anda sendiri.
-              description_teacher: Pelajaran ini membuatkan pelajar menyedari bahawa sains komputer boleh membantu individu dalam kehidupan nyata. Pertama sekali, pelajar memahami dan berkongsi dengan beberapa pengguna telefon pintar fiksyen untuk membantu mereka mencari “aplikasi yang betul”, serta boleh memenuhi keperluan mereka. Kemudian, pelajar mengamalkan empati dan kreativiti untuk melakar aplikasi telefon pintar mereka sendiri yang menangani keperluan satu pengguna tambahan.
+              description_teacher: 'Pelajaran ini membuatkan pelajar menyedari bahawa sains komputer boleh membantu individu dalam kehidupan nyata. Pertama sekali, pelajar memahami dan berkongsi dengan beberapa pengguna telefon pintar fiksyen untuk membantu mereka mencari “aplikasi yang betul”, serta boleh memenuhi keperluan mereka. Kemudian, pelajar mengamalkan empati dan kreativiti untuk melakar aplikasi telefon pintar mereka sendiri yang menangani keperluan satu pengguna tambahan.'
             'Events: The Big Event':
               name: Jr. Peristiwa Besar
               description_student: Bergerak atau berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi.
@@ -3811,7 +3770,7 @@ ms:
               description_teacher: Dalam aktiviti dalam talian ini, pelajar berpeluang untuk mempelajari cara menggunakan peristiwa di dalam Makmal Mainan dan melaksanakan semua kemahiran pengekodan yang telah mereka pelajari untuk membuat permainan animasi. Sudah tiba masanya menjadi kreatif dan mencipta permainan di Makmal Mainan!
             Digital Trails:
               name: Jejak Digital
-              description_student: Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web.
+              description_student: 'Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web.'
               description_teacher: Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. Adakah perkara yang anda lakukan dalam talian sentiasa berada dalam talian? Pelajar mempelajari bahawa maklumat yang mereka kongsi dalam talian meninggalkan jejak digital atau "jejak." Bergantung pada cara mereka menguruskannya, jejak ini boleh menjadi besar atau kecil, serta berbahaya atau bermanfaat. Pelajar membandingkan jalan berbeza dan berfikir secara kritis tentang jenis maklumat yang mereka mahu tinggalkan.
           student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
         coursec-2020:
@@ -3832,16 +3791,10 @@ ms:
             Screen Out the Mean:
               name: Keluarkan Maksudnya
               description_student: Dalam pelajaran ini, anda akan mempelajari perkara yang perlu dilakukan jika sesuatu dalam talian membuatkan anda merasa marah, sedih, atau takut.
-              description_teacher: |-
-                Pelajaran ini membantu kanak-kanak untuk mengenali bahawa ia adalah penting untuk memberitahu orang dewasa yang dipercayai jika sesuatu dalam talian membuat mereka merasa marah, sedih, atau takut. \\r
-                \\r
-                Pelajar mengetahui bahawa kadang-kadang individu lain boleh bertindak seperti pembuli apabila mereka berada dalam talian. Mereka akan meneroka perkara yang dimaksudkan dengan buli siber dan perkara yang boleh mereka lakukan apabila mereka mengalaminya. Selepas membaca senario tentang tingkah laku dalam talian yang keji, pelajar membincangkan perkara tentang buli siber ini, sejauh mana kesannya terhadap perasaan seseorang individu dan cara bertindak balas. Akhir sekali, mereka menggunakan pengetahuan mereka untuk membuat lembaran petua mudah mengenai buli siber dalam jurnal mereka.\\r
+              description_teacher: "Pelajaran ini membantu kanak-kanak untuk mengenali bahawa ia adalah penting untuk memberitahu orang dewasa yang dipercayai jika sesuatu dalam talian membuat mereka merasa marah, sedih, atau takut. \\r\n\\r\nPelajar mengetahui bahawa kadang-kadang individu lain boleh bertindak seperti pembuli apabila mereka berada dalam talian. Mereka akan meneroka perkara yang dimaksudkan dengan buli siber dan perkara yang boleh mereka lakukan apabila mereka mengalaminya. Selepas membaca senario tentang tingkah laku dalam talian yang keji, pelajar membincangkan perkara tentang buli siber ini, sejauh mana kesannya terhadap perasaan seseorang individu dan cara bertindak balas. Akhir sekali, mereka menggunakan pengetahuan mereka untuk membuat lembaran petua mudah mengenai buli siber dalam jurnal mereka.\\r\n"
             Powerful Passwords:
               description_student: Dalam pelajaran ini, anda akan mempelajari cara kata laluan melindungi maklumat anda dan membuat kata laluan yang baik.
-              description_teacher: |-
-                Pelajar menerokai tujuan individu menggunakan kata laluan, mempelajari manfaat menggunakan kata laluan dan menemui strategi untuk mencipta dan menyimpan kata laluan yang kukuh dan selamat.\\r
-                \\r
-                Pelajar mempelajari petua kata laluan, menguji kata laluan sedia ada dengan permainan berinteraktif dan mencipta kata laluan baharu dengan menggunakan garis panduan untuk kata laluan yang kuat.\\r
+              description_teacher: "Pelajar menerokai tujuan individu menggunakan kata laluan, mempelajari manfaat menggunakan kata laluan dan menemui strategi untuk mencipta dan menyimpan kata laluan yang kukuh dan selamat.\\r\n\\r\nPelajar mempelajari petua kata laluan, menguji kata laluan sedia ada dengan permainan berinteraktif dan mencipta kata laluan baharu dengan menggunakan garis panduan untuk kata laluan yang kuat.\\r\n"
             'Programming: My Robotic Friends':
               name: Rakan Robotik Junior Saya
               description_student: Dalam pelajaran ini, anda akan berpura-pura yang rakan sekelas anda ialah robot dan mengatur cara mereka untuk membina corak cawan yang tersusun.
@@ -3859,7 +3812,7 @@ ms:
               description_teacher: Dalam siri teka-teki ini, pelajar akan terus membangunkan pemahaman mereka tentang algoritma dan penyahpepijatan. Bersama watak baharu, Pengembara Laurel, pelajar akan mencipta algoritma berjujukan untuk membantu Laurel mengambil harta karun semasa dia berjalan di sepanjang laluan.
             Programming in Artist:
               description_student: Cipta imej yang cantik dengan mengatur cara Artis.
-              description_teacher: Dalam pelajaran ini, pelajar akan mengawal Artis bagi melengkapkan lukisan pada skrin. Tahap Artis ini akan membolehkan pelajar mencipta imej kekompleksan yang meningkat dengan menggunakan blok baharu seperti `bergerak ke hadapan dengan 100 piksel` dan \`belok ke kanan sebanyak 90 darjah '.
+              description_teacher: Dalam pelajaran ini, pelajar akan mengawal Artis bagi melengkapkan lukisan pada skrin. Tahap Artis ini akan membolehkan pelajar mencipta imej kekompleksan yang meningkat dengan menggunakan blok baharu seperti `bergerak ke hadapan dengan 100 piksel` dan `belok ke kanan sebanyak 90 darjah '.
             Binary Bracelets:
               description_student: Cipta gelang binari anda sendiri dan ketahui cara komputer mengingati maklumat!
               description_teacher: Binari adalah amat penting dalam dunia komputer. Sebahagian besar komputer hari ini menyimpan pelbagai jenis maklumat dalam bentuk binari. Pelajaran ini membantu menunjukkan cara sesuatu yang mungkin diambil daripada kehidupan nyata dan menterjemahkannya ke dalam siri dihidupkan dan dimatikan.
@@ -3869,12 +3822,12 @@ ms:
               description_teacher: Membina berasaskan aktiviti awal "Rakan Robotik Saya", pelajar menangani reka bentuk yang lebih besar dan lebih rumit. Dalam usaha mengatur cara "robot" mereka untuk menyelesaikan reka bentuk yang lebih besar ini, pelajar akan perlu mengenal pasti corak berulang dalam arahan mereka yang boleh digantikan dengan gelung.
             Loops with Rey and BB-8:
               name: Gelung dengan Rey dan BB-8
-              description_student: Bantu BB-8 melepasi pagar sesat dengan menggunakan gelung!
+              description_student: 'Bantu BB-8 melepasi pagar sesat dengan menggunakan gelung!'
               description_teacher: Membina berasaskan konsep mengulangi arahan daripada "Menjadi Bergelung," tahap ini akan mempunyai pelajar yang menggunakan gelung untuk membantu BB-8 merentasi pagar sesat dengan lebih cekap berbanding sebelum ini.
             Loops in Harvester:
               name: Menuai Tanaman dengan Gelung
               description_student: Mari kita gunakan gelung untuk membantu penuai mengumpulkan sebahagian daripada sayuran!
-              description_teacher: Pada tahap sebelumnya, pelajar menggunakan gelung untuk mencipta lukisan yang hebat. Kini, mereka akan menggunakan gelung untuk tindakan baharu bagi membantu penuai mengumpulkan banyak sayuran yang tumbuh dalam rumpun yang besar.\\r
+              description_teacher: "Pada tahap sebelumnya, pelajar menggunakan gelung untuk mencipta lukisan yang hebat. Kini, mereka akan menggunakan gelung untuk tindakan baharu bagi membantu penuai mengumpulkan banyak sayuran yang tumbuh dalam rumpun yang besar.\\r"
             Looking Ahead:
               description_student: Elakkan terkena lahar! Di sini anda akan mula mempelajari tentang bersyarat di dalam dunia Minecraft.
               description_teacher: Pelajaran ini pada asalnya dicipta untuk Jam Kod, bersama pasukan Minecraft. Pelajar akan mendapat peluang untuk berlatih idea yang telah mereka pelajari setakat ini, serta dapat pratonton bersyarat secara tidak rasmi!
@@ -3882,7 +3835,7 @@ ms:
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!
               description_teacher: Cuba lihat wajah pelajar yang ceria sebaik sahaja mereka membuat reka bentuk mereka sendiri yang sangat cantik dengan menggunakan sebilangan kecil blok dan pelekat digital! Pelajaran ini dibina berasaskan pemahaman tentang gelung daripada pelajaran sebelumnya dan memberikan peluang kepada pelajar untuk menjadi betul-betul kreatif. Aktiviti ini memang hebat untuk menghasilkan artifak bagi portfolio atau persidangan ibu bapa/guru.
             'Events: The Big Event':
-              description_student: Main permainan yang menyeronokkan untuk mengetahui tentang peristiwa.
+              description_student: 'Main permainan yang menyeronokkan untuk mengetahui tentang peristiwa.'
               description_teacher: Tidak lama lagi, pelajar akan belajar bahawa peristiwa ialah cara terbaik untuk menambahkan fleksibiliti kepada algoritma prabertulis. Kadang-kadang anda mahu program anda boleh bertindak balas kepada pengguna tepat pada masa pengguna memilihnya. Peristiwa boleh membuatkan program anda lebih menarik dan interaktif.
             Build a Flappy Game:
               name: Membina Permainan Kibasan
@@ -3898,7 +3851,7 @@ ms:
             'End of Course Project: Create a Play Lab Game':
               name: Akhir Projek Kursus
               description_student: Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda.
-              description_teacher: Pelajaran kemuncak ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek Makmal Mainan mereka sendiri! Dalam usaha memastikan proses ini berjalan dengan lancar, kami telah menyediakan struktur langkah demi langkah untuk diikuti oleh pelajar, daripada perancangan di atas kertas sehingga pengekodan di laman web kami. Di samping itu, kami menawarkan idea untuk membantu para guru memudahkan pengajaran terakhir!
+              description_teacher: 'Pelajaran kemuncak ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek Makmal Mainan mereka sendiri! Dalam usaha memastikan proses ini berjalan dengan lancar, kami telah menyediakan struktur langkah demi langkah untuk diikuti oleh pelajar, daripada perancangan di atas kertas sehingga pengekodan di laman web kami. Di samping itu, kami menawarkan idea untuk membantu para guru memudahkan pengajaran terakhir!'
             Putting a STOP to Online Meanness:
               name: MENGHENTIKAN Kekejian Dalam Talian
               description_student: Dalam pelajaran ini, anda akan mempelajari tentang kekejian dan perkara yang perlu dilakukan jika anda mengalaminya dalam talian.
@@ -3928,7 +3881,7 @@ ms:
             'Algorithms: Graph Paper Programming':
               name: Pengaturcaraan kertas graf
               description_student: Dalam pelajaran ini, anda akan mengatur cara rakan sekelas anda untuk melukis gambar!
-              description_teacher: Dengan "mengatur cara" antara satu sama lain untuk melukis gambar, pelajar mendapat peluang merasai pengalaman sebahagian daripada konsep teras pengaturcaraan melalui cara yang menyeronokkan dan mudah diakses. Kelas akan dimulakan dengan meminta pelajar menggunakan simbol untuk saling memberikan arahan mewarnakan bentuk segi empat sama di atas kertas graf dalam usaha menghasilkan semula gambar yang sedia ada. Jika ada masa, pelajaran itu boleh diakhiri dengan gambar yang dihasilkan oleh pelajar sendiri.
+              description_teacher: 'Dengan "mengatur cara" antara satu sama lain untuk melukis gambar, pelajar mendapat peluang merasai pengalaman sebahagian daripada konsep teras pengaturcaraan melalui cara yang menyeronokkan dan mudah diakses. Kelas akan dimulakan dengan meminta pelajar menggunakan simbol untuk saling memberikan arahan mewarnakan bentuk segi empat sama di atas kertas graf dalam usaha menghasilkan semula gambar yang sedia ada. Jika ada masa, pelajaran itu boleh diakhiri dengan gambar yang dihasilkan oleh pelajar sendiri.'
             Introduction to Online Puzzles:
               name: Pengenalan kepada Teka-teki dalam Talian
               description_student: Pelajaran ini akan memberikan anda latihan dalam kemahiran yang anda perlukan untuk kursus ini.
@@ -3958,22 +3911,17 @@ ms:
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
               description_student: Gelung di dalam gelung di dalam gelung. Apakah yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda mencipta gelung bersarang.
-              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
+              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik `Jalankan'.
             Conditionals with Cards:
               description_student: Sudah tiba masanya untuk bermain permainan yang anda memperoleh mata hanya di bawah syarat tertentu!
-              description_teacher: |-
-                Pelajaran ini menunjukkan sejauh mana bersyarat boleh digunakan untuk menyesuaikan atur cara terhadap maklumat khusus. Bukan setiap kali, kami mempunyai semua maklumat yang diperlukan apabila menulis atur cara. Kadang-kadang anda mahu melakukan sesuatu yang berbeza dalam satu situasi berbanding yang lain, walaupun anda tidak tahu sama ada situasi akan berlaku atau tidak semasa kod anda berjalan. Itulah masanya situasi bersyarat dimasukkan. Bersyarat membenarkan komputer membuat keputusan, berdasarkan maklumat yang benar pada bila-bila masa kod anda dijalankan.\\r
-                \\r
+              description_teacher: "Pelajaran ini menunjukkan sejauh mana bersyarat boleh digunakan untuk menyesuaikan atur cara terhadap maklumat khusus. Bukan setiap kali, kami mempunyai semua maklumat yang diperlukan apabila menulis atur cara. Kadang-kadang anda mahu melakukan sesuatu yang berbeza dalam satu situasi berbanding yang lain, walaupun anda tidak tahu sama ada situasi akan berlaku atau tidak semasa kod anda berjalan. Itulah masanya situasi bersyarat dimasukkan. Bersyarat membenarkan komputer membuat keputusan, berdasarkan maklumat yang benar pada bila-bila masa kod anda dijalankan.\\r\n\\r\n"
             Conditionals in Bee:
-              description_student: Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.
+              description_student: 'Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.'
               description_teacher: Sehingga pada tahap ini, pelajar telah menulis kod yang melaksanakan cara yang betul-betul sama setiap kali ia dijalankan - andal, tetapi tidak terlalu fleksibel. Dalam pelajaran ini, kelas anda akan mula mengekod dengan bersyarat, membolehkan mereka menulis kod yang berfungsi secara berbeza bergantung pada syarat khusus yang ditemui oleh atur cara ini.
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
               description_student: 'Gelung adalah sangat berguna dalam pengekodan. Pelajaran ini akan mengajar anda tentang jenis gelung baharu: iaitu gelung semasa!'
-              description_teacher: |-
-                Sebaik sahaja pelajar mencecah pelajaran ini, mereka sudah sepatutnya mempunyai banyak latihan menggunakan gelung `berulang`, oleh itu, sekarang sudah tiba masanya untuk mencampuradukkannya.\\r
-                \\r
-                _Gelung semasa_ ialah gelung yang terus mengulangi perintah semasa syarat dipenuhi. Gelung `semasa` digunakan apabila pengatur cara tidak mengetahui bilangan perintah yang perlu diulangi, tetapi tahu syarat yang perlu menjadi benar supaya gelung terus mengulanginya. Sebagai contoh, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang. Mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran, tetapi pelajar akan tahu bahawa mereka perlu terus mengisi lubang dan menggali kotoran asalkan tanahnya tidak rata.
+              description_teacher: "Sebaik sahaja pelajar mencecah pelajaran ini, mereka sudah sepatutnya mempunyai banyak latihan menggunakan gelung `berulang`, oleh itu, sekarang sudah tiba masanya untuk mencampuradukkannya.\\r\n\\r\n_Gelung semasa_ ialah gelung yang terus mengulangi perintah semasa syarat dipenuhi. Gelung `semasa` digunakan apabila pengatur cara tidak mengetahui bilangan perintah yang perlu diulangi, tetapi tahu syarat yang perlu menjadi benar supaya gelung terus mengulanginya. Sebagai contoh, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang. Mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran, tetapi pelajar akan tahu bahawa mereka perlu terus mengisi lubang dan menggali kotoran asalkan tanahnya tidak rata.\n"
             Until Loops in Maze:
               description_student: Anda boleh melakukan beberapa perkara yang menakjubkan apabila anda menggunakan gelung `sehingga`!
               description_teacher: Dalam pelajaran ini, pelajar akan mempelajari tentang gelung `sehingga`. Pelajar akan membina atur cara yang mempunyai tindakan ulangan watak utama `sehingga` ia mencapai titik berhenti yang diinginkan.
@@ -3989,10 +3937,7 @@ ms:
               description_teacher: Siri pelajaran dalam talian ini akan membentuk pelajar untuk mempelajari cara membuat imej dengan menggunakan hidupkan dan matikan.
             Digital Citizenship:
               description_student: Sesetengah maklumat adalah tidak selamat dikongsi dalam talian. Pelajaran ini akan membantu anda mempelajari perbezaan antara maklumat selamat dan sulit.
-              description_teacher: |-
-                Dengan kerjasama Pendidikan yang Munasabah, pelajaran ini membantu pelajar mempelajari berfikir secara kritis tentang maklumat pengguna yang diminta atau diperlukan oleh sesetengah laman web. Pelajar mengetahui perbezaan antara maklumat sulit dan peribadi, membezakan maklumat yang selamat dan tidak selamat dikongsi dalam talian.\\r
-                \\r
-                Pelajar juga akan meneroka perkara yang dimaksudkan dengan bertanggungjawab dan menghormati komuniti luar dan dalam talian mereka sebagai langkah mempelajari cara menjadi warga digital yang baik.
+              description_teacher: "Dengan kerjasama Pendidikan yang Munasabah, pelajaran ini membantu pelajar mempelajari berfikir secara kritis tentang maklumat pengguna yang diminta atau diperlukan oleh sesetengah laman web. Pelajar mengetahui perbezaan antara maklumat sulit dan peribadi, membezakan maklumat yang selamat dan tidak selamat dikongsi dalam talian.\\r\n\\r\nPelajar juga akan meneroka perkara yang dimaksudkan dengan bertanggungjawab dan menghormati komuniti luar dan dalam talian mereka sebagai langkah mempelajari cara menjadi warga digital yang baik.\n"
             Dance Party:
               name: Majlis Tari-Menari
               description_student: Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri.
@@ -4002,7 +3947,7 @@ ms:
             End of Course Project:
               name: Akhir Projek Kursus
               description_student: Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda.
-              description_teacher: Pelajaran kemuncak ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek mereka sendiri!
+              description_teacher: 'Pelajaran kemuncak ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek mereka sendiri!'
             Be A Super Digital Citizen:
               name: Jadilah Warganegara Super Digital
               description_student: Pelajari cara anda boleh menjadi individu bertanggungjawab apabila anda melihat buli siber.
@@ -4030,7 +3975,7 @@ ms:
             Sequencing in the Maze:
               name: Penjujukan di dalam Pagar Sesat
               description_student: Dalam pelajaran ini, anda akan mempelajari cara menulis atur cara anda sendiri!
-              description_teacher: 'Dalam kumpulan teka-teki ini, pelajar akan memulakan dengan pengenalan (atau ulasan bergantung pada pengalaman kelas anda) ruang kerja Code.org dalam talian. Akan terdapat video yang menunjukkan kefungsian ruang kerja asas termasuk butang `Jalankan`, `Tetapkan Semula` dan `Langkah`. Video ini juga ada membincangkan mengenai: menarik blok Blockly, menghapuskan blok Blockly dan menyambungkan blok Blockly. Seterusnya, pelajar akan berlatih kemahiran _penjujukan_ dan _penyahpepijatan_ mereka di dalam pagar sesat. \\r Penyahpepijatan ialah elemen penting pembelajaran untuk mengatur cara. Pelajar akan bertemu dengan beberapa teka-teki yang telah diselesaikan dengan salah. Mereka perlu meneliti kod yang sedia ada untuk mengenal pasti ralat, termasuk gelung yang tidak betul, blok yang hilang, blok tambahan dan blok yang boleh digunakan.'
+              description_teacher: "Dalam kumpulan teka-teki ini, pelajar akan memulakan dengan pengenalan (atau ulasan bergantung pada pengalaman kelas anda) ruang kerja Code.org dalam talian. Akan terdapat video yang menunjukkan kefungsian ruang kerja asas termasuk butang `Jalankan`, `Tetapkan Semula` dan `Langkah`. Video ini juga ada membincangkan mengenai: menarik blok Blockly, menghapuskan blok Blockly dan menyambungkan blok Blockly. Seterusnya, pelajar akan berlatih kemahiran _penjujukan_ dan _penyahpepijatan_ mereka di dalam pagar sesat. \\r Penyahpepijatan ialah elemen penting pembelajaran untuk mengatur cara. Pelajar akan bertemu dengan beberapa teka-teki yang telah diselesaikan dengan salah. Mereka perlu meneliti kod yang sedia ada untuk mengenal pasti ralat, termasuk gelung yang tidak betul, blok yang hilang, blok tambahan dan blok yang boleh digunakan."
             Programming and Loops with the Artist:
               name: Melukis dengan Gelung
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!
@@ -4045,7 +3990,7 @@ ms:
               description_teacher: Pelajaran ini memperkenalkan pelajar kepada gelung `semasa` dan pernyataan `jika / lain`. _Gelung semasa_ ialah gelung yang terus mengulangi perintah selagi syaratnya benar. Gelung semasa digunakan apabila pengatur cara tidak mengetahui bilangan perintah yang perlu diulangi, tetapi tahu syarat yang perlu menjadi benar supaya gelung terus menggelung. Pernyataan `jika / lain` menawarkan fleksibiliti dalam pengaturcaraan dengan menjalankan seluruh bahagian kod hanya jika terdapat sesuatu yang benar, jika tidak, ia menjalankan sesuatu yang lain.
             Simon Says:
               description_student: Main permainan dan fikirkan tentang perintah yang diperlukan untuk mendapatkan hasil yang betul.
-              description_teacher: Dalam pelajaran ini, pelajar akan bermain permainan yang bertujuan membuatkan mereka berfikir tentang cara perintah perlu diberikan untuk mendapatkan hasil yang betul. Ini akan membantu mereka membawanya ke Makmal Peperi dengan lebih mudah dalam pelajaran yang akan datang.
+              description_teacher: 'Dalam pelajaran ini, pelajar akan bermain permainan yang bertujuan membuatkan mereka berfikir tentang cara perintah perlu diberikan untuk mendapatkan hasil yang betul. Ini akan membantu mereka membawanya ke Makmal Peperi dengan lebih mudah dalam pelajaran yang akan datang.'
             Learning Sprites with Sprite Lab:
               name: Ikan Berenang dengan Makmal Peperi
               description_student: Pelajari cara mencipta dan mengedit peperi.
@@ -4053,29 +3998,29 @@ ms:
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
               description_student: Cipta projek berinteraktif yang boleh dikongsikan dengan rakan sekelas.
-              description_teacher: Pelajaran ini menampilkan Makmal Peperi, iaitu platform yang membolehkan pelajar mencipta animasi dan permainan berinteraktif mereka sendiri. Di samping tingkah laku, pada hari ini pelajar akan memasukkan input pengguna sebagai peristiwa bertujuan mencipta "majlis tari-menari untuk makhluk asing".
+              description_teacher: 'Pelajaran ini menampilkan Makmal Peperi, iaitu platform yang membolehkan pelajar mencipta animasi dan permainan berinteraktif mereka sendiri. Di samping tingkah laku, pada hari ini pelajar akan memasukkan input pengguna sebagai peristiwa bertujuan mencipta "majlis tari-menari untuk makhluk asing".'
             Private and Personal Information:
               description_student: Internet ialah sesuatu yang menyeronokkan dan menarik, tetapi adalah penting untuk kekal selamat. Pelajaran ini mengajar anda perbezaan antara maklumat yang selamat untuk dikongsi dan maklumat yang bersifat sulit.
               description_teacher: Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. Sudah menjadi kebiasaan pelajar kami untuk berkongsi dan menyambungkan dengan individu lain. Tetapi berkongsi dalam talian mempunyai beberapa risiko. Bagaimanakah kita boleh membantu kanak-kanak membina hubungan yang kuat, positif dan selamat dalam talian? Bantu pelajar anda mengetahui perbezaan antara perkara peribadi dan paling baik dibiarkan sebagai perkara sulit.
             About Me:
               name: Tentang Saya dengan Makmal Peperi
               description_student: Apabila mencipta poster berinteraktif dengan Makmal Peperi, pelajar akan menggunakan pemahaman mereka untuk berkongsi maklumat peribadi dan sulit di laman web.
-              description_teacher: Apabila mencipta poster berinteraktif dengan Makmal Peperi, pelajar akan menggunakan pemahaman mereka untuk berkongsi maklumat peribadi dan sulit di laman web.\\r
+              description_teacher: "Apabila mencipta poster berinteraktif dengan Makmal Peperi, pelajar akan menggunakan pemahaman mereka untuk berkongsi maklumat peribadi dan sulit di laman web.\\r"
             Access Ability:
               name: Mereka Bentuk untuk Aksesibiliti
-              description_student: Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.
-              description_teacher: Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.
+              description_student: 'Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.'
+              description_teacher: 'Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.'
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
               description_student: Gelung di dalam gelung di dalam gelung. Apakah yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda menempatkan gelung di dalam gelung lain.
-              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
+              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik `Jalankan'.
             Nested Loops in Artist:
               name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
               description_student: Lebih banyak gelung bersarang! Kali ini, anda boleh membuat lukisan yang MENAKJUBKAN dengan gelung bersarang.
               description_teacher: Pelajar akan mencipta reka bentuk yang rumit dengan menggunakan Artis dalam set teka-teki hari ini. Apabila terus berlatih gelung bersarang dengan matlamat baharu, pelajar akan melihat lebih banyak penggunaan gelung secara umum. Kumpulan teka-teki ini juga menawarkan lebih banyak potensi kreativiti dengan peluang untuk pelajar mencipta reka bentuk mereka sendiri pada akhir tahap ini.
             Nested Loops in Frozen:
               name: Gelung Bersarang dengan Frozen
-              description_student: Anna dan Elsa mempunyai kemahiran meluncur ais yang sangat baik, tetapi mereka memerlukan bantuan anda untuk mencipta corak di ais ais. Gunakan gelung bersarang untuk mencipta sesuatu yang amat MENARIK.
+              description_student: 'Anna dan Elsa mempunyai kemahiran meluncur ais yang sangat baik, tetapi mereka memerlukan bantuan anda untuk mencipta corak di ais ais. Gunakan gelung bersarang untuk mencipta sesuatu yang amat MENARIK.'
               description_teacher: Memandangkan pelajar sudah tahu cara meletakkan lapisan gelung, mereka boleh mencipta terlalu banyak benda yang cantik. Pelajaran ini akan membawa pelajar melakukan siri latihan bagi membantu mereka mencipta imej portfolio siap mereka sendiri dengan menggunakan kemahiran meluncur ais Anna dan Elsa yang sangat baik!
             'Functions: Songwriting':
               description_student: Malah bintang lagu rock juga memerlukan kemahiran pengaturcaraan. Pelajaran ini akan mengajar anda tentang fungsi menggunakan lirik daripada lagu.
@@ -4095,16 +4040,13 @@ ms:
             End of Course Project:
               name: Akhir Projek Kursus
               description_student: Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!
-              description_teacher: |-
-                Empat pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina dan membentangkan hasil kerja terakhir mereka. \\r
-                \\r
-                Pada tahap penerokaan, pelajar akan bermain dengan contoh projek pradibina di dalam Artis dan Makmal Peperi untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek di dalam Artis, Makmal Peperi, atau antara muka lain yang mereka telah membiasakan diri dengannya (ini mungkin merupakan tahap projek paling lama). Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.
+              description_teacher: "Empat pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina dan membentangkan hasil kerja terakhir mereka. \\r\n\\r\nPada tahap penerokaan, pelajar akan bermain dengan contoh projek pradibina di dalam Artis dan Makmal Peperi untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek di dalam Artis, Makmal Peperi, atau antara muka lain yang mereka telah membiasakan diri dengannya (ini mungkin merupakan tahap projek paling lama). Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sebaya mereka.\n"
             Digital Sharing:
-              description_student: Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta.
+              description_student: 'Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta.'
             Designing for Accessibility:
               name: Mereka Bentuk untuk Aksesibiliti
-              description_student: Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.
-              description_teacher: Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.
+              description_student: 'Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.'
+              description_teacher: 'Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.'
           student_description: Mulakan pengekodan dengan algoritma, gelung, bersyarat dan peristiwa dan kemudian anda akan bergerak kepada fungsi. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga anda.
         coursef-2020:
           title: Kursus F (2020)
@@ -4132,7 +4074,7 @@ ms:
             Events with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
               description_student: Cipta projek berinteraktif yang boleh dikongsikan dengan rakan sekelas.
-              description_teacher: Pelajaran ini menampilkan Makmal Peperi, iaitu platform yang membolehkan pelajar mencipta animasi dan permainan berinteraktif mereka sendiri. Di samping tingkah laku, pada hari ini pelajar akan memasukkan input pengguna sebagai peristiwa bertujuan mencipta "majlis tari-menari untuk makhluk asing".
+              description_teacher: 'Pelajaran ini menampilkan Makmal Peperi, iaitu platform yang membolehkan pelajar mencipta animasi dan permainan berinteraktif mereka sendiri. Di samping tingkah laku, pada hari ini pelajar akan memasukkan input pengguna sebagai peristiwa bertujuan mencipta "majlis tari-menari untuk makhluk asing".'
             Loops with the Artist:
               name: Melukis dengan Gelung
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!
@@ -4140,7 +4082,7 @@ ms:
             Nested Loops in the Maze:
               name: Gelung Bersarang di dalam Pagar Sesat
               description_student: Gelung di dalam gelung di dalam gelung. Apakah yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda menempatkan gelung di dalam gelung lain.
-              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
+              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik `Jalankan'.
             Envelope Variables:
               description_student: 'Sampul surat dan pemboleh ubah mempunyai suatu persamaan: kedua-duanya boleh menyimpan barangan berharga. Di sini anda akan mempelajari mengenai pemboleh ubah dan perkara hebat yang boleh dilakukannya.'
               description_teacher: Pemboleh ubah digunakan sebagai pemegang tempat untuk nilai seperti angka atau perkataan. Pemboleh ubah memberikan banyak kebebasan dalam pengaturcaraan. Daripada perlu menaip frasa dengan banyak kali atau mengingati angka yang terlindung, ahli sains komputer boleh menggunakan pemboleh ubah sebagai rujukannya. Pelajaran ini membantu menerangkan perkara mengenai pemboleh ubah dan cara kita boleh menggunakannya dalam pelbagai cara. Idea pemboleh ubah bukan konsep yang mudah difahami, oleh itu kami menyarankan agar banyak masa diberikan untuk perbincangan pada akhir pelajaran itu.
@@ -4150,7 +4092,7 @@ ms:
               description_teacher: Dalam pelajaran ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah boleh digunakan untuk menjadikan kod lebih mudah ditulis dan dibaca, walaupun nilainya tidak berubah pada masa jalan.
             Variables that Change in Bee:
               description_student: Lebah ini menyukai pemboleh ubah!
-              description_teacher: Pelajaran ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih kuat dengan membenarkan nilai ditukar semasa kod sedang berjalan.
+              description_teacher: 'Pelajaran ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih kuat dengan membenarkan nilai ditukar semasa kod sedang berjalan.'
             Variables that Change in Artist:
               name: Menukar Pemboleh Ubah dengan Artis
               description_student: Dalam pelajaran ini, anda akan membuat lukisan dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan.
@@ -4161,7 +4103,7 @@ ms:
               description_teacher: Dengan menjalankan simulasi mudah di dalam Makmal Peperi, pelajar akan memperoleh pengalaman cara pengkomputeran boleh digunakan untuk mengumpulkan data yang mengenal pasti arah aliran atau corak. Selepas menjalankan simulasi beberapa kali, pelajar akan mempunyai peluang membuat ramalan tentang sejauh mana dengan menukar pemboleh ubah dalam simulasi mungkin memberikan kesan kepada hasilnya dan kemudian uji hipotesis tersebut.
             For Loop Fun:
               description_student: Anda akan menikmati banyak keseronokan apabila mempelajari tentang gelung `untuk`!
-              description_teacher: Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan yang dibina di dalamnya. Struktur baharu ini akan membolehkan pelajar mencipta kod yang lebih kuat dan dinamik.
+              description_teacher: 'Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan yang dibina di dalamnya. Struktur baharu ini akan membolehkan pelajar mencipta kod yang lebih kuat dan dinamik.'
             For Loops in Bee:
               description_student: Bunyi berdengung. Dalam teka-teki ini, anda akan membimbing lebah ke nektar dan madu dengan menggunakan gelung `untuk`!
               description_teacher: Menampilkan Lebah, pelajaran ini memberikan tumpuan kepada gelung `untuk` dan menggunakan pemboleh ubah bertambahan bagi menyelesaikan teka-teki yang lebih rumit. Pelajar akan mula dengan menyemak gelung daripada pelajaran sebelumnya, kemudian mereka akan mengikuti pengenalan mengenai gelung `untuk` dengan terperinci supaya mereka boleh menyelesaikan masalah yang rumit dengan lebih berkesan.
@@ -4189,22 +4131,15 @@ ms:
               description_student: Pelajaran ini akan mengajar anda tentang sumber khalayak, proses membina projek dengan pasukan.
               description_teacher: Dalam sains komputer, kita terpaksa menghadapi beberapa masalah besar dan menggentarkan. Cabaran seperti mencari nombor perdana yang besar atau menjujuk DNA adalah agak mustahil dilakukan secara individu. Menambah kekuatan yang lain membuatkan tugas ini boleh diuruskan. Pelajaran ini akan menunjukkan kepada pelajar anda betapa kerja berpasukan boleh membantu dalam industri sains komputer.
             Digital Sharing:
-              description_student: Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta.
+              description_student: 'Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta.'
             End of Course Project:
               name: Akhir Projek Kursus
               description_student: Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!
-              description_teacher: |-
-                Lima pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran, mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan hasil kerja terakhir mereka. \\r
-                \\r
-                Pada tahap penerokaan, pelajar akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Peperi, atau mana-mana antara muka lain yang anda selesa untuk sediakan. (Ini mungkin merupakan tahap projek paling lama). Kemudian, pelajar akan menyemak kod mereka selepas pengujian dan penilaian rakan sebaya. Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sekelas mereka.
+              description_teacher: "Lima pelajaran seterusnya memberikan peluang kepada pelajar menggunakan kemahiran pengekodan mereka dalam projek kemuncak. Projek ini akan membantu individu memperoleh pengalaman dengan pengekodan dan menghasilkan contoh untuk dikongsi dengan rakan sebaya dan individu tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran, mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan hasil kerja terakhir mereka. \\r\n\\r\nPada tahap penerokaan, pelajar akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka sendiri. Mereka kemudiannya akan diberikan ruang untuk mencipta projek mereka sendiri sama ada di dalam Artis atau Makmal Peperi, atau mana-mana antara muka lain yang anda selesa untuk sediakan. (Ini mungkin merupakan tahap projek paling lama). Kemudian, pelajar akan menyemak kod mereka selepas pengujian dan penilaian rakan sebaya. Akhir sekali, pelajar akan dapat membentangkan hasil kerja kepada rakan sekelas mereka.\n"
             AI for Oceans:
               name: Kecerdasan Buatan (AI) untuk Lautan
               description_student: 'Rumusan Tutorial: Pelajar pertama mengklasifikasikan objek sebagai sama ada "ikan" atau "bukan ikan" sebagai usaha untuk mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan kumpulan data latihan mereka untuk memasukkan hidupan laut lain yang terdapat di dalam air. Dalam bahagian kedua aktiviti itu, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dihasilkan secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang sepatutnya boleh melabelkan imej baharu dengan sendirinya.'
-              description_teacher: |-
-                **Rumusan Tutorial:** Pelajar pertama mengklasifikasikan objek sebagai sama ada "ikan" atau "bukan ikan" sebagai usaha untuk mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan kumpulan data latihan mereka untuk memasukkan hidupan laut lain yang terdapat di dalam air. Dalam bahagian kedua aktiviti itu, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dihasilkan secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang sepatutnya boleh melabelkan imej baharu dengan sendirinya.\\r
-                \\r
-                \\r
-                **Menyemak Ketepatan:** Tutorial ini tidak akan memberitahu pelajar sama ada mereka melengkapkan tahap itu dengan betul. Anda boleh melangkau bahagian aktiviti yang berbeza dengan pantas. Sila galakkan pelajar menonton video, membaca arahan dan mencuba perkara yang berbeza sepanjang pengajian ini. Pada bila-bila masa, mereka boleh berkongsi penemuan mereka dengan anda atau rakan sekelas.\\r
+              description_teacher: "**Rumusan Tutorial:** Pelajar pertama mengklasifikasikan objek sebagai sama ada \"ikan\" atau \"bukan ikan\" sebagai usaha untuk mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan kumpulan data latihan mereka untuk memasukkan hidupan laut lain yang terdapat di dalam air. Dalam bahagian kedua aktiviti itu, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dihasilkan secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang sepatutnya boleh melabelkan imej baharu dengan sendirinya.\\r\n\\r\n\\r\n**Menyemak Ketepatan:** Tutorial ini tidak akan memberitahu pelajar sama ada mereka melengkapkan tahap itu dengan betul. Anda boleh melangkau bahagian aktiviti yang berbeza dengan pantas. Sila galakkan pelajar menonton video, membaca arahan dan mencuba perkara yang berbeza sepanjang pengajian ini. Pada bila-bila masa, mereka boleh berkongsi penemuan mereka dengan anda atau rakan sekelas.\\r\n"
           student_description: Pelajari menggunakan pelbagai jenis gelung, peristiwa, fungsi dan bersyarat. Selidik teknik penyelesaian masalah yang berbeza dan bincangkan kesan pengkomputeran dan internet terhadap kemasyarakatan. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga.
         express-2020:
           title: Kursus Dipercepatkan (2020)
@@ -4316,12 +4251,12 @@ ms:
               name: Pengaturcaraan dengan Rey dan BB-8
               description_teacher: Dalam pelajaran ini, pelajar akan menggunakan kemahiran pengaturcaraan yang baharu diperoleh mereka dengan cara yang lebih rumit untuk menavigasi kursus yang sukar dengan BB-8.
             Programming in Harvester:
-              description_teacher: Pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai. Kini, daripada hanya menjadikan watak kepada matlamat, pelajar perlu mengumpulkan jagung dengan menggunakan blok baharu. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan.
+              description_teacher: 'Pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai. Kini, daripada hanya menjadikan watak kepada matlamat, pelajar perlu mengumpulkan jagung dengan menggunakan blok baharu. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan.'
             Spelling Bee:
               name: Lebah Ejaan
             Loops in Collector:
               name: Gelung di dalam Pengumpul
-              description_teacher: Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \`dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
+              description_teacher: Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok `dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
             Ocean Scene with Loops:
               name: Pemandangan Lautan dengan Gelung
               description_teacher: Kembali kepada gelung, pelajar mempelajari cara melukis imej dengan penggelungan jujukan arahan ringkas. Dalam pelajaran yang menggunakan alatan digital sebelum ini, gelung digunakan untuk merentasi pagar sesat dan mengumpulkan harta karun. Di sini, gelung mewujudkan corak. Pada bahagian akhir tahap ini, pelajar akan diberikan peluang mencipta imej mereka sendiri dengan menggunakan gelung.
@@ -4420,7 +4355,7 @@ ms:
               description: Tahap ini ialah untuk kegunaan pencipta video.
         virustest:
           title: Mensimulasikan Wabak
-          description_short: Gunakan Makmal Jin untuk mencipta simulasi wabak virus.
+          description_short: 'Gunakan Makmal Jin untuk mencipta simulasi wabak virus.'
         ml-playground:
           lessons:
             AI for Oceans:
@@ -4433,10 +4368,10 @@ ms:
             outbreak:
               display_name: Simulasi Wabak
           title: Simulator Wabak
-          description_short: Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.
-          description: Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.
+          description_short: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
+          description: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
           name: wabak
-          student_description: Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.
+          student_description: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
         2021drafting:
           lessons:
             Virus Simulation for Code Bytes:
@@ -4510,6 +4445,7 @@ ms:
                 Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Kuasa internet membolehkan pelajar mengalami dan mengunjungi merata tempat yang mungkin tidak dapat mereka lihat dengan sendiri. Tetapi, seperti melakukan perjalanan di dalam dunia nyata, ia penting untuk menjaga keselamatan semasa melakukan perjalanan dalam talian. Dalam perjalanan lapangan maya ini, kanak-kanak boleh berlatih menjaga keselamatan semasa pengembaraan dalam talian.
+
             Learn to Drag and Drop:
               key: Pelajari Tarik dan Lepas
               name: Pelajari Tarik dan Lepas
@@ -4573,13 +4509,14 @@ ms:
             Digital Trails:
               key: Jejak Digital
               name: Jejak Digital
-              description_student: Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web.
+              description_student: 'Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web.'
               description_teacher: |2-
                  [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
 
                 Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Adakah perkara yang anda lakukan dalam talian sentiasa berada dalam talian? Pelajar mempelajari bahawa maklumat yang mereka kongsi dalam talian meninggalkan jejak digital atau "jejak." Bergantung pada cara mereka menguruskannya, jejak ini boleh menjadi besar atau kecil, serta berbahaya atau bermanfaat. Pelajar membandingkan jalan berbeza dan berfikir secara kritis tentang jenis maklumat yang mereka mahu tinggalkan.
+
             Move It, Move It:
               description_student: Atur cara akan sekelas anda untuk melangkah dengan berhati-hati dari satu tempat ke tempat yang lain.
             Sequencing in Maze:
@@ -4644,6 +4581,7 @@ ms:
                 Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Internet dipenuhi dengan semua jenis individu yang menarik, tetapi kadang-kadang, sebilangan daripada mereka boleh menjadi zalim antara satu sama lain. Dengan peranan ini, bantu pelajar anda memahami sebab lebih mudah bersikap zalim dalam talian daripada bersemuka dan cara menangani kekejian dalam talian apabila mereka melihatnya.
+
             Password Power-Up:
               key: Menguatkan Kata Laluan
               name: Menguatkan Kata Laluan
@@ -4684,7 +4622,7 @@ ms:
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!
             'Events: The Big Event':
               key: 'Peristiwa: Peristiwa Besar'
-              description_student: Main permainan yang menyeronokkan untuk mengetahui tentang peristiwa.
+              description_student: 'Main permainan yang menyeronokkan untuk mengetahui tentang peristiwa.'
             Build a Flappy Game:
               key: Membina Permainan Kibasan
               name: Membina Permainan Kibasan
@@ -4752,7 +4690,7 @@ ms:
               description_student: Sudah tiba masanya untuk bermain permainan yang anda memperoleh mata hanya di bawah syarat tertentu!
             Conditionals in Bee:
               key: Bersyarat di dalam Lebah
-              description_student: Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.
+              description_student: 'Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.'
             While Loops in Farmer:
               key: Gelung Semasa di dalam Peladang
               name: Gelung Semasa di dalam Peladang
@@ -4783,6 +4721,7 @@ ms:
                 Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Alatan dalam talian memperkasakan kanak-kanak dan mereka juga mempunyai tanggungjawab yang besar. Tetapi adakah kanak-kanak sentiasa mengetahui perkara yang perlu dilakukan apabila mereka mengalami buli siber? Tunjukkan kepada pelajar anda cara yang sesuai untuk mengambil tindakan dan menyelesaikan konflik, dengan menjadi individu bertanggungjawab membantu mereka yang memerlukan.
+
             End of Course Project:
               key: Akhir Projek Kursus
               name: Akhir Projek Kursus
@@ -4796,6 +4735,7 @@ ms:
                 Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
                 Kata laluan dalam talian yang lebih kuat dan selamat ialah idea yang baik untuk semua individu. Tetapi bagaimanakah kita boleh membantu kanak-kanak mencipta kata laluan yang lebih baik dan betul-betul boleh mengingatinya? Gunakan petua dalam pelajaran ini untuk membantu kanak-kanak mencipta kata laluan yang selamat dan tidak boleh dilupakan.
+
             lesson-1:
               name: Kuasa Perkataan
               description_student: Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian.
@@ -4805,6 +4745,7 @@ ms:
                 Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Oleh kerana kanak-kanak membesar, mereka akan mula berkomunikasi dengan lebih banyak secara dalam talian. Tetapi sebahagian daripada perkara yang mereka lihat boleh mengakibatkan mereka merasa sakit hati, sedih, marah, atau malah takut. Bantu pelajar anda membina empati terhadap individu lain dan pelajari strategi yang perlu digunakan apabila berhadapan dengan buli siber.
+
           lesson_groups:
             csf_sequencing:
               display_name: Penjujukan
@@ -4825,7 +4766,7 @@ ms:
               key: Penjujukan di dalam Pagar Sesat
               name: Penjujukan di dalam Pagar Sesat
               description_student: Dalam pelajaran ini, anda akan mempelajari cara menulis atur cara anda sendiri!
-              description_teacher: 'Dalam kumpulan teka-teki ini, pelajar akan memulakan dengan pengenalan (atau ulasan bergantung pada pengalaman kelas anda) ruang kerja Code.org dalam talian. Akan terdapat video yang menunjukkan kefungsian ruang kerja asas termasuk butang `Jalankan`, `Tetapkan Semula` dan `Langkah`. Video ini juga ada membincangkan mengenai: menarik blok Blockly, menghapuskan blok Blockly dan menyambungkan blok Blockly. Seterusnya, pelajar akan berlatih kemahiran _penjujukan_ dan _penyahpepijatan_ mereka di dalam pagar sesat. \\r Penyahpepijatan ialah elemen penting pembelajaran untuk mengatur cara. Pelajar akan bertemu dengan beberapa teka-teki yang telah diselesaikan dengan salah. Mereka perlu meneliti kod yang sedia ada untuk mengenal pasti ralat, termasuk gelung yang tidak betul, blok yang hilang, blok tambahan dan blok yang boleh digunakan.'
+              description_teacher: "Dalam kumpulan teka-teki ini, pelajar akan memulakan dengan pengenalan (atau ulasan bergantung pada pengalaman kelas anda) ruang kerja Code.org dalam talian. Akan terdapat video yang menunjukkan kefungsian ruang kerja asas termasuk butang `Jalankan`, `Tetapkan Semula` dan `Langkah`. Video ini juga ada membincangkan mengenai: menarik blok Blockly, menghapuskan blok Blockly dan menyambungkan blok Blockly. Seterusnya, pelajar akan berlatih kemahiran _penjujukan_ dan _penyahpepijatan_ mereka di dalam pagar sesat. \\r Penyahpepijatan ialah elemen penting pembelajaran untuk mengatur cara. Pelajar akan bertemu dengan beberapa teka-teki yang telah diselesaikan dengan salah. Mereka perlu meneliti kod yang sedia ada untuk mengenal pasti ralat, termasuk gelung yang tidak betul, blok yang hilang, blok tambahan dan blok yang boleh digunakan."
             Programming and Loops with the Artist:
               name: Melukis dengan Gelung
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -4852,12 +4793,13 @@ ms:
                 Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Sudah menjadi kebiasaan pelajar kami untuk berkongsi dan menyambungkan dengan individu lain. Tetapi berkongsi dalam talian mempunyai beberapa risiko. Bagaimanakah kita boleh membantu kanak-kanak membina hubungan yang kuat, positif dan selamat dalam talian? Bantu pelajar anda mengetahui perbezaan antara perkara peribadi dan paling baik dibiarkan sebagai perkara sulit.
+
             Digital Sharing:
-              description_student: Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta.
+              description_student: 'Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta.'
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
               description_student: Gelung di dalam gelung di dalam gelung. Apakah yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda menempatkan gelung di dalam gelung lain.
-              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
+              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempunyai peluang menambahkan pemahaman mereka tentang gelung sehingga pada tahap baharu secara keseluruhannya. Bermain dengan Lebah dan Tumbuhan lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan kepada atur cara mereka apabila mereka mengklik `Jalankan'.
             Nested Loops in Artist:
               key: Gelung Bersarang di dalam Artis
               name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
@@ -4883,8 +4825,8 @@ ms:
             Designing for Accessibility:
               key: Mereka Bentuk untuk Aksesibiliti
               name: Mereka Bentuk untuk Aksesibiliti
-              description_student: Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.
-              description_teacher: Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.
+              description_student: 'Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.'
+              description_teacher: 'Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.'
             End of Course Project:
               key: Akhir Projek Kursus
               name: Akhir Projek Kursus
@@ -4898,6 +4840,7 @@ ms:
                 Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Alatan dalam talian memperkasakan kanak-kanak dan mereka juga mempunyai tanggungjawab yang besar. Tetapi adakah kanak-kanak sentiasa mengetahui perkara yang perlu dilakukan apabila mereka mengalami buli siber? Tunjukkan kepada pelajar anda cara yang sesuai untuk mengambil tindakan dan menyelesaikan konflik, dengan menjadi individu bertanggungjawab membantu mereka yang memerlukan.
+
             lesson-1:
               name: Mereka Bentuk untuk Aksesibiliti
           lesson_groups:
@@ -4936,7 +4879,7 @@ ms:
               key: Peristiwa dengan Makmal Peperi
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
               description_student: Cipta projek berinteraktif yang boleh dikongsikan dengan rakan sekelas.
-              description_teacher: Pelajaran ini menampilkan Makmal Peperi, iaitu platform yang membolehkan pelajar mencipta animasi dan permainan berinteraktif mereka sendiri. Di samping tingkah laku, pada hari ini pelajar akan memasukkan input pengguna sebagai peristiwa bertujuan mencipta "majlis tari-menari untuk makhluk asing".
+              description_teacher: 'Pelajaran ini menampilkan Makmal Peperi, iaitu platform yang membolehkan pelajar mencipta animasi dan permainan berinteraktif mereka sendiri. Di samping tingkah laku, pada hari ini pelajar akan memasukkan input pengguna sebagai peristiwa bertujuan mencipta "majlis tari-menari untuk makhluk asing".'
             Loops with the Artist:
               name: Melukis dengan Gelung
               description_teacher: Pelajaran **membina kemahiran** ini mengalihkan tumpuan daripada Makmal Peperi kepada Artis, alat baharu yang akan diterokai oleh pelajar sepanjang tempoh kursus yang tinggal ini.
@@ -4953,6 +4896,7 @@ ms:
                 Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Oleh kerana kanak-kanak membesar, mereka akan mula berkomunikasi dengan lebih banyak secara dalam talian. Tetapi sebahagian daripada perkara yang mereka lihat boleh mengakibatkan mereka merasa sakit hati, sedih, marah, atau malah takut. Bantu pelajar anda membina empati terhadap individu lain dan pelajari strategi yang perlu digunakan apabila berhadapan dengan buli siber.
+
             Envelope Variables:
               description_student: 'Sampul surat dan pemboleh ubah mempunyai suatu persamaan: kedua-duanya boleh menyimpan barangan berharga. Di sini anda akan mempelajari mengenai pemboleh ubah dan perkara hebat yang boleh dilakukannya.'
               description_teacher: Pemboleh ubah digunakan sebagai pemegang tempat untuk nilai seperti angka atau perkataan. Pemboleh ubah memberikan banyak kebebasan dalam pengaturcaraan. Daripada perlu menaip frasa dengan banyak kali atau mengingati angka yang terlindung, ahli sains komputer boleh menggunakan pemboleh ubah sebagai rujukannya. Pelajaran ini membantu menerangkan perkara mengenai pemboleh ubah dan cara kita boleh menggunakannya dalam pelbagai cara. Idea pemboleh ubah bukan konsep yang mudah difahami, oleh itu kami menyarankan agar banyak masa diberikan untuk perbincangan pada akhir pelajaran itu.
@@ -4996,7 +4940,7 @@ ms:
               description_student: Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!
             lesson-1:
               name: Mereka Bentuk untuk Aksesibiliti
-              description_student: Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.
+              description_student: 'Dalam pelajaran ini, pelajar akan mempelajari tentang aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotesis.'
             lesson-2:
               name: Kuasa Perkataan
               description_student: Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian.
@@ -5006,6 +4950,7 @@ ms:
                 Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Oleh kerana kanak-kanak membesar, mereka akan mula berkomunikasi dengan lebih banyak secara dalam talian. Tetapi sebahagian daripada perkara yang mereka lihat boleh mengakibatkan mereka merasa sakit hati, sedih, marah, atau malah takut. Bantu pelajar anda membina empati terhadap individu lain dan pelajari strategi yang perlu digunakan apabila berhadapan dengan buli siber.
+
           lesson_groups:
             ramp_up:
               display_name: Jin
@@ -5050,7 +4995,7 @@ ms:
               key: Emping Salji dengan Anna dan Elsa
               name: Emping Salji dengan Anna dan Elsa
             If/Else with Bee:
-              description_student: Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.
+              description_student: 'Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.'
             While Loops with the Farmer:
               name: Gelung Semasa di dalam Peladang
               description_student: 'Gelung adalah sangat berguna dalam pengekodan. Pelajaran ini akan mengajar anda tentang jenis gelung baharu: iaitu gelung semasa!'
@@ -5155,7 +5100,7 @@ ms:
             Loops with Laurel:
               key: Gelung dengan Laurel
               name: Gelung dengan Laurel
-              description_teacher: Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \`dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
+              description_teacher: Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok `dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
             Ocean Scene with Loops:
               key: Pemandangan Lautan dengan Gelung
               name: Pemandangan Lautan dengan Gelung
@@ -5196,18 +5141,18 @@ ms:
             variables:
               display_name: Pembolehubah
         contagion-pilot:
-          description_short: Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.
-          description: Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.
-          student_description: Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.
+          description_short: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
+          description: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
+          student_description: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
         csa1-pilot:
           lessons:
             lesson-19:
               description_student: Hari ini anda berjaya melengkapkan Soalan Respons Bebas (FRQ) pertama anda! Ini bermaksud anda menulis kod dengan tangan untuk menyelesaikan tugas yang besar. Anda melakukan ini bersama rakan dengan bergerak di sekeliling bilik dan menyelesaikan sebahagian daripada tugas itu di setiap lokasi, serta memeriksa hasil kerja anda semasa anda meninggalkan tempat tersebut.
-              description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter` penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n\n-   Mewujudkan rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n-   Berlatih soalan mengikut cara FRQ (ditulis dengan tangan)\n-   Berfungsi sebagai penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar."
+              description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter` penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n* Mewujudkan rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n* Berlatih soalan mengikut cara FRQ (ditulis dengan tangan)\n* Berfungsi sebagai penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar.\n"
         csa2-pilot:
           lessons:
             new lesson:
-              description_student: 'Melalui pengalaman kami di dalam Kejiranan, kami mengetahui bahawa kelas dan objek ialah komponen utama bahasa pengaturcaraan Java. Tetapi bagaimanakah sebenarnya kelas mencipta objek? Di dalam pelajaran ini, anda menerokai cara objek dicipta dan belajar tentang proses yang dipanggil sebagai pengkapsulan data. '
+              description_student: "Melalui pengalaman kami di dalam Kejiranan, kami mengetahui bahawa kelas dan objek ialah komponen utama bahasa pengaturcaraan Java. Tetapi bagaimanakah sebenarnya kelas mencipta objek? Di dalam pelajaran ini, anda menerokai cara objek dicipta dan belajar tentang proses yang dipanggil sebagai pengkapsulan data. \n"
               description_teacher: Di dalam pelajaran nirplag ini, pelajar mencipta objek dan mewakili atribut yang berkaitan dengan menggunakan pemboleh ubah contoh. Pelajar mempelajari perbezaan antara `umum` dan `persendirian` dan tujuan pengkapsulan untuk menyembunyikan pelaksanaan dalaman objek.
             lesson-2:
               name: Menggunakan Pemboleh Ubah
@@ -5303,14 +5248,14 @@ ms:
           lessons:
             FRQ Day:
               description_student: Hari ini anda berjaya melengkapkan Soalan Respons Bebas (FRQ) pertama anda! Ini bermaksud anda menulis kod dengan tangan untuk menyelesaikan tugas yang besar. Anda melakukan ini bersama rakan dengan bergerak di sekeliling bilik dan menyelesaikan sebahagian daripada tugas itu di setiap lokasi, serta memeriksa hasil kerja anda semasa anda meninggalkan tempat tersebut.
-              description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter` penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n\n-   Mewujudkan rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n-   Berlatih soalan mengikut cara FRQ (ditulis dengan tangan)\n-   Berfungsi sebagai penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar."
+              description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter` penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n* Mewujudkan rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n* Berlatih soalan mengikut cara FRQ (ditulis dengan tangan)\n* Berfungsi sebagai penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar.\n"
             lesson-19:
               description_student: Hari ini anda berjaya melengkapkan Soalan Respons Bebas (FRQ) pertama anda! Ini bermaksud anda menulis kod dengan tangan untuk menyelesaikan tugas yang besar. Anda melakukan ini bersama rakan dengan bergerak di sekeliling bilik dan menyelesaikan sebahagian daripada tugas itu di setiap lokasi, serta memeriksa hasil kerja anda semasa anda meninggalkan tempat tersebut.
-              description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter` penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n\n-   Mewujudkan rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n-   Berlatih soalan mengikut cara FRQ (ditulis dengan tangan)\n-   Berfungsi sebagai penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar."
+              description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter` penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n* Mewujudkan rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n* Berlatih soalan mengikut cara FRQ (ditulis dengan tangan)\n* Berfungsi sebagai penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar.\n"
         csa2-pilot-facilitator:
           lessons:
             Defining Attributes:
-              description_student: 'Melalui pengalaman kami di dalam Kejiranan, kami mengetahui bahawa kelas dan objek ialah komponen utama bahasa pengaturcaraan Java. Tetapi bagaimanakah sebenarnya kelas mencipta objek? Di dalam pelajaran ini, anda menerokai cara objek dicipta dan belajar tentang proses yang dipanggil sebagai pengkapsulan data. '
+              description_student: "Melalui pengalaman kami di dalam Kejiranan, kami mengetahui bahawa kelas dan objek ialah komponen utama bahasa pengaturcaraan Java. Tetapi bagaimanakah sebenarnya kelas mencipta objek? Di dalam pelajaran ini, anda menerokai cara objek dicipta dan belajar tentang proses yang dipanggil sebagai pengkapsulan data. \n"
               description_teacher: Di dalam pelajaran nirplag ini, pelajar mencipta objek dan mewakili atribut yang berkaitan dengan menggunakan pemboleh ubah contoh. Pelajar mempelajari perbezaan antara `umum` dan `persendirian` dan tujuan pengkapsulan untuk menyembunyikan pelaksanaan dalaman objek.
             Using Variables:
               name: Menggunakan Pemboleh Ubah
@@ -5341,7 +5286,7 @@ ms:
             The Neighborhood Store Management Project - Day 3:
               name: Projek Pengurusan Storan Kejiranan - Hari 3
             new lesson:
-              description_student: 'Melalui pengalaman kami di dalam Kejiranan, kami mengetahui bahawa kelas dan objek ialah komponen utama bahasa pengaturcaraan Java. Tetapi bagaimanakah sebenarnya kelas mencipta objek? Di dalam pelajaran ini, anda menerokai cara objek dicipta dan belajar tentang proses yang dipanggil sebagai pengkapsulan data. '
+              description_student: "Melalui pengalaman kami di dalam Kejiranan, kami mengetahui bahawa kelas dan objek ialah komponen utama bahasa pengaturcaraan Java. Tetapi bagaimanakah sebenarnya kelas mencipta objek? Di dalam pelajaran ini, anda menerokai cara objek dicipta dan belajar tentang proses yang dipanggil sebagai pengkapsulan data. \n"
               description_teacher: Di dalam pelajaran nirplag ini, pelajar mencipta objek dan mewakili atribut yang berkaitan dengan menggunakan pemboleh ubah contoh. Pelajar mempelajari perbezaan antara `umum` dan `persendirian` dan tujuan pengkapsulan untuk menyembunyikan pelaksanaan dalaman objek.
             lesson-2:
               name: Menggunakan Pemboleh Ubah
