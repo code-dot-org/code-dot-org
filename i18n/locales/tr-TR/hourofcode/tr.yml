@@ -1127,7 +1127,6 @@ tr:
   tutorial_ticklep_name: Meraklı Papağan
   tutorial_bbot_name: Bomberbot eğlenceli ve kolay kodlama aktiviteleri
   tutorial_scratchg_name: 'Programlama: Oyun Yarat'
-  tutorial_roboticfriends_name: Benim Robot Arkadaşlarım
   tutorial_sjforest_name: 'ScratchJr: Ben korkunç bir orman yapabilir miyim?'
   tutorial_sjgreet_name: 'ScratchJr: Birbirine selam veren karakterler yapabilir miyim?'
   tutorial_sjsunset_name: 'ScratchJr: Güneşi batırabilir miyim?'
@@ -1172,7 +1171,6 @@ tr:
   tutorial_tickles_name: Sfero
   tutorial_ozogame_name: Bir Ozobot oyunu oluştur
   tutorial_vidcodeio_name: Girdi-çıktı, matematik
-  tutorial_besttech_name: En iyi teknoloji
   tutorial_tlcbrain_name: Çanta içinde beyin
   tutorial_hopquiz_name: Soru Makinası
   tutorial_unfortunate_name: Talihsiz olaylar bir dizisi
@@ -1180,7 +1178,6 @@ tr:
   tutorial_elaseq_name: 'Yazma ve kodlama: ELA ve CCS ile'
   tutorial_bbcmathi_name: Bitsbox kodlama + Matematik (3-5)
   tutorial_tlcpixel_name: Piksel Puzzles
-  tutorial_arduino_name: Arduino
   tutorial_introrobo_name: Robotik'e giriş
   tutorial_tlcinvis_name: Görünmezlik etkinliği
   tutorial_tlcjflap_name: 'JFLAP: Sonlu durum makinaları oluşturma'
@@ -1200,7 +1197,6 @@ tr:
   tutorial_tlcmind_name: Kırmızı siyah akıllar
   tutorial_tlctelebot_name: Teleporting Robot
   tutorial_tlcaus_name: Avustralyalı Sihirbaz'ın Rüyası
-  tutorial_oralhist_name: Sözlü tarih projesi
   tutorial_tlcmicro_name: mikrodalga yarışı, video içerik
   tutorial_imathematician_name: Matematikçi
   tutorial_tlcmagic_name: Tılsımlı Kitap Büyüsü
@@ -1214,7 +1210,6 @@ tr:
   tutorial_tynkercan_name: Fizik Cannon, 2 oyunculu oyun seti
   tutorial_grokflags_name: Ülke Bayrakları (Python Turtle)
   tutorial_robomind_name: RoboMind ile sanal robot
-  tutorial_scratchanimwork_name: 'Adına animasyon yap: öğretmen rehberi'
   tutorial_adventureq_name: Q ile macera
   tutorial_khan-es_name: JavaScript giriş
   tutorial_kpt_name: JavaScript giriş
@@ -1222,13 +1217,11 @@ tr:
   tutorial_khe_name: JavaScript giriş
   tutorial_kfr_name: JavaScript giriş
   tutorial_app-inventor_name: Hour of Code, AppInventor
-  tutorial_bits_name: Bitler ve brickler
   tutorial_blockly_name: Blockly
   tutorial_tynker_name: Kendi oyununu yap
   tutorial_baypt_name: Kod Baymax
   tutorial_code-combat_name: CodeCombat
   tutorial_mky_name: KodMaymunu
-  tutorial_spellcraft_name: 'KodSpells: Spellcraft'
   tutorial_pirates_name: Korsan kodlama
   tutorial_csfirst_name: ilk CS
   tutorial_loopedy_name: Loopedy-loop
@@ -1285,7 +1278,6 @@ tr:
   tutorial_soloweb_name: Bir saat içinde ilk Web sayfası!
   tutorial_khanweb_name: 'Khan Akademi: Web sayfaları'
   tutorial_khandata_name: 'Khan Akademi: veritabanları'
-  tutorial_robomeshiq_name: Blockly ile Program VEX IQ robotları
   tutorial_googlelogo_name: Kendi Google logonu oluştur
   tutorial_playtune_name: Bu Tune App ile oyna
   tutorial_computeit_name: Hesapla
@@ -1345,7 +1337,6 @@ tr:
   tutorial_stemcod_name: Video oyunları fiziği!
   tutorial_techikb_name: Etkileşimli Kotlin Temelleri
   tutorial_kanostreet_name: Sokak Sanatçısı
-  tutorial_nyblebot_name: Öcü Bot
   tutorial_codemojijs_name: JavaScript başlıyor
   tutorial_techapf_name: Gelişmiş piton özellikleri
   tutorial_techfpjs_name: JS ile fonksiyonel programlamaya pratik giriş
@@ -1361,7 +1352,6 @@ tr:
   tutorial_gpbcircle_name: İnteraktif renk çemberi yapın
   tutorial_gpbpaint_name: Kendinize boya editörü yapın
   tutorial_cocomarcade_name: 'CodeCombat: Bir Arcade Oyun oluşturun!'
-  tutorial_techcpp_name: Kodunuzu basitleştirecek 7 adet C++17 özellikleri
   tutorial_beetik_name: Franz Liszt'in müziğini kodlamak
   tutorial_codedj_name: Code DJ ile müzik bestelemek
   tutorial_rgadvan_name: RoboGarden - Gelişmiş
@@ -1434,7 +1424,6 @@ tr:
   tutorial_ifly_name: iFly
   tutorial_idowedo_name: BenYaparım BizYaparız iDo WeDo
   tutorial_diggindwarf_name: Kazma cüce
-  tutorial_rmedr_name: Blok ile Vex EDR robotlarını Programlayalım
   tutorial_spheroit_name: 'Bloklar 2: Eğer/sonra başka'
   tutorial_gameofcodes_name: Oyun Kodları
   tutorial_blocklygames_name: Blockly Oyunları
@@ -1445,7 +1434,6 @@ tr:
   tutorial_bcjs1_name: JavaScript Dünyası
   tutorial_bcjs2_name: JavaScript Dünyası 2
   tutorial_3dbearmars_name: Mars Öncüleri
-  tutorial_alexaskill_name: 'Alexa Blueprints: Bir Alexa Becerisi Oluştur'
   tutorial_bitsboxyak_name: Yak Attack! Yazılan Kodla bir Kart Yap
   tutorial_blockscadbargraphs_name: Çubuk Grafikler
   tutorial_blockscadbirdhouses_name: Kuş Evleri
@@ -1504,7 +1492,6 @@ tr:
   tutorial_codinismhero_name: Programlama Kahramanı
   tutorial_discovery_name: Sıradışı bir Keşif
   tutorial_csfirstname_name: Bir İsmi Canlandırın
-  tutorial_obstaclecourse_name: CodeSnaps ile Engel Parkurunda Gezinti
   tutorial_edisonmove_name: 'Edison ve EdPy: Edison''un hareket etmesini sağla'
   tutorial_edisonspider_name: Edison ve spiral örümcek kapanı
   tutorial_edisonspotlight_name: Edison ile sahne ışığı altında gösteri yapın
@@ -1917,7 +1904,6 @@ tr:
   tutorial_bbot_shortdescription: Öğrencilerinize (7 yaş ve üstü) programlamayı eğlenceli
     ve kolay bir şekilde öğretin. Önceden programlama bilgisi ya da deneyim gerekmez!
   tutorial_scratchg_shortdescription: Scratch ile oyun yazmayı öğrenin
-  tutorial_roboticfriends_shortdescription: Aygıtsız bir grup için çevrimdışı öğretici
   tutorial_sjforest_shortdescription: Karanlık orman ortamında farklı hayvanların
     hareket ettikleri bir program yapmak için ScratchJr programlama uygulamasını kullanın.
   tutorial_sjgreet_shortdescription: Bir kedi yavrusunun ve bir köpeğin birbirlerini
@@ -2003,8 +1989,6 @@ tr:
     oynayarak kodlamayı öğrencileri tanıtın.
   tutorial_vidcodeio_shortdescription: JavaScript işlevlerini matematik ve gerçek
     dünya problemlerine bağlayın.
-  tutorial_besttech_shortdescription: Öğrenciler, son birkaç on yıl boyunca önemli
-    teknolojik buluşları öğrenecek ve tartışacaklardır.
   tutorial_tlcbrain_shortdescription: Snap'ı oynayan öğrencilerin sayısal bir nöron
     modelini oluşturarak insan beyninin nasıl çalıştığını keşfedin.
   tutorial_hopquiz_shortdescription: Herhangi bir konuda bir arkadaşınızın bilgisini
@@ -2019,8 +2003,6 @@ tr:
     planı. '
   tutorial_tlcpixel_shortdescription: 'Basit renk-sayı ve mantıksal düşünme bulmacalarını
     çözün ve görüntü gösterimi ve sıkıştırma hakkında daha derin bir anlayış kazanın. '
-  tutorial_arduino_shortdescription: Basit bir devre nasıl yapılacağını ve hafifçe
-    yanıp sönmeyi öğrenin.
   tutorial_introrobo_shortdescription: Robotik ve programlama ile tanışan öğrenciler
     Dash ve Dot (çizgi ve nokta) kavramlarını da öğrenecekler.
   tutorial_tlcinvis_shortdescription: Tıpkı bir sihirbaz gibi görünmez bir el ve iki
@@ -2057,9 +2039,6 @@ tr:
     getirin, ama daha sonra tekrar bir araya getiriniz ve şimdi sadece 16 tane var.
   tutorial_tlcaus_shortdescription: Seçtiğiniz bir kartın tahmin ettiğiniz yerde,
     hem arama algoritmalarını hem de hesaplamalı düşünmesini tanıtan bir sihir yapın.
-  tutorial_oralhist_shortdescription: Hesaplama Eğitmenleri Sözlü Tarih Projesi (Computing
-    Educators Oral History Project), görüşmelerin yanı sıra CEOHP koleksiyonuna bağlı
-    öğretim materyalleri ve araçları koleksiyonudur.
   tutorial_tlcmicro_shortdescription: İnsanlar, basit bir görev yapmak için hangisinin
     en kolay olduğunu görmek için farklı mikrodalga tasarımları düzenliyorlar. Bazılarının
     diğerlerinden çok daha karmaşık görünüyor.
@@ -2083,7 +2062,6 @@ tr:
   tutorial_grokflags_shortdescription: Python kullanarak ülke bayraklarını çiz! Bakalım
     kaç ülke biliyorsun?
   tutorial_robomind_shortdescription: Sanal robot için kod yazın.
-  tutorial_scratchanimwork_shortdescription: Scratch için bir kılavuz.
   tutorial_adventureq_shortdescription: Programlama mantığını öğrenmek için bloklar
     kullanın.
   tutorial_khan-es_shortdescription: JavaScript ile çizmeyi öğren
@@ -2092,7 +2070,6 @@ tr:
   tutorial_khe_shortdescription: JavaScript ile çizmeyi öğren
   tutorial_kfr_shortdescription: JavaScript ile çizmeyi öğren
   tutorial_app-inventor_shortdescription: Kendi uygulamanı yap (yalnızca Android)
-  tutorial_bits_shortdescription: Biraz ilerleyin!
   tutorial_blockly_shortdescription: Çevrimdışı öğrenmek için bir ZIP dosyası indirin
   tutorial_tynker_shortdescription: Eğlenceli bulmacalar çözerek kodlamayı öğrenin
     ve kendi oyunlarınızı oluşturun.
@@ -2100,8 +2077,6 @@ tr:
   tutorial_code-combat_shortdescription: Python ve JavaScript öğrenmek bu programlama
     oyunu ile çok zevkli!
   tutorial_mky_shortdescription: Öğrenciler muz yakalamak için bir maymun programlar.
-  tutorial_spellcraft_shortdescription: CodeSpells'in gücünü kullanarak Etkinlik Odaklı
-    programlama hakkında bilgi edinin!
   tutorial_pirates_shortdescription: Güney yarımkürenin kristal sularında dolaşın,
     hazine haritalarınızı kodlayın ve altın kıyılardaki yatan zenginlikleri keşfedin.
     Kodlamanın temel kavramlarını öğrenmenin eğlenceli bir yolu.
@@ -2204,8 +2179,6 @@ tr:
   tutorial_khandata_shortdescription: Verilerle oynamak sever misin? Verileri bir
     veritabanında nasıl manipüle edeceğinizi ve kendi özel mağazanızı nasıl oluşturabileceğinizi
     öğrenin
-  tutorial_robomeshiq_shortdescription: Sanal bir çevrimiçi robot veya gerçek VEX
-    IQ robot programlayın.
   tutorial_googlelogo_shortdescription: Yaşam Hayal gücünüzü ve biraz kod da kullanarak
     Google için logo geliştirin.
   tutorial_playtune_shortdescription: Kodlama becerilerini kullanarak Müzikal bulmaca
@@ -2318,8 +2291,6 @@ tr:
   tutorial_techikb_shortdescription: Temel özellikler Özetle Kotlin
   tutorial_kanostreet_shortdescription: Kano 'nun sokak sanatı ile güzel, benzersiz
     sanat eserleri kodlaması yapmak
-  tutorial_nyblebot_shortdescription: Kodlama sihirbazı ile - çocuklara kodlamada
-    yardımcı olarak inanılmaz şeyler oluşturmak.
   tutorial_codemojijs_shortdescription: Kod ifadeleri, farklı Java komut dosyası karakterlerini
     canlandıracak gerçek Java komut komutlarını yazması için Başlangıç ​​Java komut
     dosyasını tasarlamıştır.
@@ -2347,8 +2318,6 @@ tr:
   tutorial_gpbpaint_shortdescription: Çizim uygulaması oluşturarak onu özelleştirin.
   tutorial_cocomarcade_shortdescription: Kendinize Hayatta kalma oyunu oluşturun ve
     arkadaşlarınıza meydan okuyun!
-  tutorial_techcpp_shortdescription: 7 özellikle C++ 17 ile kodunuzu basitleştirmek
-    için
   tutorial_beetik_shortdescription: Besteci Franz Liszte ait müzik kesmek için kullanın
     bu kodu kullanın.
   tutorial_codedj_shortdescription: Java komut dosyası Temelleri öğrenin ve kod DJ
@@ -2497,8 +2466,6 @@ tr:
     küçük figürleri taşımaya programla.
   tutorial_diggindwarf_shortdescription: Cücelerin JavaScript kullanarak yön bulmak,
     kazmak ve değerli taşlar toplamak için yardımına ihtiyacı var.
-  tutorial_rmedr_shortdescription: Blockly kullanarak, labirentten çıkmak üzere bir
-    VEX EDR robotu programlayın.
   tutorial_spheroit_shortdescription: Kendi hayvan ses oyununu "Animal Toss" oluştururken
     if/then, else durumları hakkında bilgi edinin!
   tutorial_gameofcodes_shortdescription: Harika Ejderha oyununu yarat ve tek bir uygulama
@@ -2517,9 +2484,6 @@ tr:
     ve insanların Mars'ta hayatta kalmak için bilmeleri gereken önemli koşulları öğreten,
     proje bazlı bir öğrenme modülüdür. Öğrenciler, Artırılmış Gerçeklikten yararlanarak
     bir koloni kuracak ve koloni tesislerini 3 boyutlu olarak yazdıracak.
-  tutorial_alexaskill_shortdescription: Alexa Skill Blueprints'i kullanarak kendi
-    Alexa Skills'inizi oluşturun. Kendi istediğiniz gibi bir Alexa Skill oluşturmak
-    için ses, yapay zeka ve makine öğrenimini kullanmayı öğrenin.
   tutorial_bitsboxyak_shortdescription: Arkadaşlarınıza ve ailenize e-posta ile gönderebileceğiniz
     bir kutlama kartı yapmak için değiştirilmiş JavaScript kodu yazın. Yak Attack!
     değişkenler, hareket komutları, döngü fonksiyonları ve çok daha fazlasını tanıtan,
@@ -2683,8 +2647,6 @@ tr:
     kendi benzersiz hikayesini oluşturabilir.
   tutorial_csfirstname_shortdescription: Bir isim seçin ve kodlamayla harflerini canlandırın.
     Takma isim, evcil hayvan ismi, hayvan, spor, yer veya hobi seçin.
-  tutorial_obstaclecourse_shortdescription: Bir robotun engel parkurunda başarılı
-    bir şekilde gezinmesi için bir program kodlamak üzere ekibiniz ile işbirliği yapın.
   tutorial_edisonmove_shortdescription: Edison robotlarını ve temelinde Python olan
     metin tabanlı bir programlama dili olan EdPy'dan yararlanarak öğrencilerinize
     metin tabanlı programlama ve temel hesaplama kavramlarından olan "dizi"yi anlatın.
@@ -3494,12 +3456,6 @@ tr:
     tanıtmakta ve onlara farklı stil oyunlarını nasıl programlayacaklarını göstermektedir.
     Oyunlar için gerekli tüm sanatlar sağlanır ve öğrenciler işleyen bir oyun yapmak
     için her şeyi birbirine nasıl bağlayacaklarını öğrenmek zorunda kalacaklardır.
-  tutorial_roboticfriends_longdescription: Önceden tanımlanmış bir "Robot Kelime"
-    öğrencisi kullanarak, öğrenciler önceden tartışmaksızın belirli görevleri yerine
-    getirmek için birbirlerine rehberlik etmeyi öğreneceklerdir. Bu ders, çocuklara
-    semboller ve eylemler arasındaki bağlantıyı ve hata ayıklamanın paha biçilemez
-    becerisini öğretir. "Robotik Arkadaşlarım" bir grup faaliyeti olarak en iyi şekilde
-    çalışır ve sınıf kullanımına yönelik bir öğretmen çalışma kitabı içerir.
   tutorial_sjforest_longdescription: '"Korkunç bir orman yapabilir miyim?", anaokulundan
     ikinci sınıfa kadar olan ve ScratchJr''nin daha gelişmiş özelliklerini öğrenmek
     ve öğrenmek için programlamayla daha önce deneyim sahibi olan çocuklar için yapılan
@@ -3731,8 +3687,6 @@ tr:
   tutorial_vidcodeio_longdescription: Bu alıştırmada, programlamayla bir matematik
     denklemi çözerek öğrencilerinizle matematik hakkında zaten bildiklerini nasıl
     ilişkilendirdiklerini göreceksiniz.
-  tutorial_besttech_longdescription: Öğrenciler, son birkaç on yıl boyunca önemli
-    teknolojik buluşları öğrenecek ve tartışacaklardır.
   tutorial_tlcbrain_longdescription: Bu aktivite, hesaplama modellemenin (hesaplamalı
     düşüncenin önemli bir parçası) biyolojik sistemleri (buradaki nöronları) anlamaya
     yardımcı olmak için nasıl kullanıldığını araştırıyor. Beynimizin çalışma şekli
@@ -3762,12 +3716,6 @@ tr:
     dayalı daha karmaşık bulmaca, yani daha az depolama alanına kadar çeşitli şekillerde
     gelirler - ancak onları geri aldırabilirsiniz! Her gösterim, görüntüyü geri getirmek
     için takip etmesi gereken kendi algoritmasına ihtiyaç duyar.
-  tutorial_arduino_longdescription: Düğmeleri bastığınızda oyuncakların nasıl sesler
-    çıkardıklarını ve nasıl ışık verdiğiniz merak ettiniz mi? Mikrodenetleyici ve
-    devreler her türlü günlük nesne kullanılır. Uzaktan kumandalı arabalardan robotlara
-    ve dronlara. Cadde ışıkları güneşin ne zaman ineceğini belirlemek için sensörleri
-    kullanır; bir araba sesi üzerindeki ses düğmesi, bir mikro denetleyici aracılığıyla
-    direnci ayarlar. Onlar heryerde!
   tutorial_introrobo_longdescription: 'Bu derste öğrenciler Robotik ve Programlama
     fikirleri tanıtılırken Dash ve Dot''u tanırlar. Öğrenciler, bir robotun ne olduğunu,
     çevrelerindeki dünyayı nasıl hissettiklerini ve programların robotları nasıl kontrol
@@ -3868,9 +3816,6 @@ tr:
     etmek için soyutlama, mantıksal akıl yürütme ve hesaplama modellemenin nasıl kullanılacağını
     gösterir. 'Delikli Kart Arama' etkinliği ile birlikte, önceki bilgisayarlar tarafından
     kullanılan bir bölme ve başarma algoritmasını tanıtır.
-  tutorial_oralhist_longdescription: Hesaplama Eğitmenleri Sözlü Tarih Projesi (Computing
-    Educators Oral History Project), görüşmelerin yanı sıra CEOHP koleksiyonuna bağlı
-    öğretim materyalleri ve araçları koleksiyonudur.
   tutorial_tlcmicro_longdescription: Bu video, insan bilgisayar etkileşimine (HCI)
     genel bir giriş olarak ve özellikle neden bu kadar çok aygıtın ihtiyaç duyulandan
     daha fazla kullanıldığını anlatmak için kullanılır. Tasarım bir fark yaratır ve
@@ -3928,11 +3873,6 @@ tr:
     programlamanın temellerini öğrenirler. Online kurs, program sunumlarıyla yardımcı
     olmak için kısa sunumlar, filmler, sınavlar ve otomatik rehberlik / ipuçları ile
     tamamen kendi içindedir. '
-  tutorial_scratchanimwork_longdescription: Bu kılavuz, Scratch'i kullanarak bir saatlik
-    bir atölye çalışması için fikirler sunar. Öğrenciler, adlarını veya en sevdikleri
-    sözcükleri canlandırırken kodlama konusunda deneyime sahip olacaklar. Bu eğitimci
-    kılavuzu, bu Çizim eğitici( scratch.mit.edu / name) ile birlikte kullanılmak üzere
-    tasarlanmıştır
   tutorial_adventureq_longdescription: 'Q ile serüven, öğretmenlerin (veya herhangi
     birinin) bir grup ayarında programlama mantığını tanıtmak için kullanacağı bir
     ders planıdır. Etkinlik, çocukların tamamlanması için farklı görevlerden oluşur.
@@ -3953,11 +3893,6 @@ tr:
     önce oluşturmaya hazır olmanızı sağlar. Kendi uygulama kreasyonlarınızı arkadaşlarınızla
     paylaşmayı hayal edin! Bu faaliyetler bireyler ve sınıflarına liderlik eden öğretmen
     için uygundur.
-  tutorial_bits_longdescription: Bit, biraz maceraperest LEGO® robottur, ancak tüm
-    küçük yaratıklarda olduğu gibi, bazen Bit programlarını doğru alamaz. Hangi programların
-    gerekli olduğunu bulmak suretiyle Bit'in zorluklarını çözmeye yardımcı olabilirsiniz.
-    Bunu, Bit'in ne yapacağını söyleyen küçük davranış blokları dizisi oluşturarak
-    bunu yapabilirsiniz.
   tutorial_blockly_longdescription: Yavaş (veya var olmayan) internet erişimli bilgisayarınız
     mı var? Code.org öğreticilerinin öncüsü olan Blockly öğreticilerini indirin -
     tek bir 3MB ZIP dosyası herhangi bir bilgisayara yüklenebilir veya taşınabilir
@@ -3976,12 +3911,6 @@ tr:
     olsun veya olmasın, eğlenceli, ödüllü bir oyundur. CodeMonkey'nin uyarlanabilir
     platformu size ihtiyacınız olan tüm talimatları ve ipuçlarını verecek ve size
     yıldız puanı ödüllendirecektir. Kod yaz. Muz yakala. Dünyayı kurtar.
-  tutorial_spellcraft_longdescription: Büyülerin gücünü kullanarak Event-Driven programlama
-    hakkında bilgi edinin! CodeSpells ile, Google'ın kullanımı kolay Blockly kodlama
-    arabirimini veya yerleşik bir JavaScript metin düzenleyicisini kullanarak kendi
-    büyü büyülerini tasarlayabilir ve yaratabilirsiniz. Büyü tasarımı ile, öğrenciler
-    olaylara dayalı kod yazmayı öğrenecek ve Event-Driven kodlama kavramlarıyla aşina
-    olacaklar.
   tutorial_pirates_longdescription: 'Kaptan Hack, hazine arayan bir korsandır. Ayrıca
     hazine haritaları yazıyor ve kod yazma gibi şeyler yapıyor. O (oyuncu) bunun için
     "korsan kodu" kullanıyor. Talimatlar ve hatta AI davranışları için kullanılan
@@ -4196,12 +4125,6 @@ tr:
     bitireceğinizi öğretir.'
   tutorial_khandata_longdescription: 'Khan Akademi: Veritabanları, bir veritabanındaki
     veriyi değiştirmenizi ve kendi özel mağazanızı yapmanızı öğretir.'
-  tutorial_robomeshiq_longdescription: Öğrenciler popüler VEX IQ robotlarını kontrol
-    etmek için Google Blockly kodunu yazar. Sanal bir robot veya gerçek VEX IQ robotları
-    için kendileri kurmuş oldukları kodu yazmayı seçebilirler ve her iki seçenek de
-    aynı web tabanlı geliştirme arayüzünde bulunur. Öğrenciler, temel robot hareketi
-    ve bir sensörün ve bir çıkış cihazının nasıl kullanılacağı hakkında bilgi sahibi
-    olurlar. Bu çok kolay ve eğlenceli.
   tutorial_googlelogo_longdescription: Kodu, hayal gücünüz ve yaratıcılığınızla kullanarak,
     Google logosunu hayata geçirin. Harfleri dans ettirin, bir hikaye anlatın veya
     bir oyun oluşturun. Herkes, Scratch ve CS First kullanarak günün tasarımcısı ve
@@ -4482,16 +4405,6 @@ tr:
     eserlerini yaratanlar, sezgisel ve çekici bir şekilde gerçek programlama dili
     kullanırken bilgisayar bilimi ilkelerini öğrenecekler. Öğretmen kaynaklarımız
     ve yönlendirilmiş içeriğimizle herkes eğlenceye katılabilir.
-  tutorial_nyblebot_longdescription: 'Boogie Bot eğlenceli ve ilginç bir programlama
-    uygulamasıdır. Yaşam ve enerji dolu olan bu 3D uygulama, Google''ın görsel programlama
-    dili Blockly''yi kullanarak, bilgisayar programlamanın temellerini çocuklara öğretir.
-    Boogie Bot, dans etmek üzere programlanabilen dans robotudur. Uygulamanın özellikleri
-    (tam sürümde mevcut olan tüm özellikler): programlama bloklarıyla programlamayı
-    öğrenmek, kendi dansınızı kodla oluşturmak, çeşitli eşsiz dans parçaları arasından
-    seçim yapmak, odanızı şık bir parti alanına dönüştürmek, sahnede etkileyici özel
-    efektler eklemek, programlama yapılarını öğrenirken coin kazanmak, harikulade
-    şeylerle odanızı süslemek, gizli fonksiyonlarla dolu interaktif bir odada oynamak
-    ve keşfetmek ve ayrıca harika kreasyonunuzun bir kaydını alarak kaydetmek.'
   tutorial_codemojijs_longdescription: JavaScript'e başlamak öğrencilerin karakter
     hareketleri üzerinde büyük etkisi olan basit komutlarla yazmalarını sağlamak için
     tasarlanmıştır. Öğrenciler karakterleri backflips'ten sese ve hatta konuşmaya
@@ -4547,9 +4460,6 @@ tr:
     Kendi çarşı hayatta kalma oyunu kurmak için bu becerileri kullanmak, sonra işlevleri
     ve Python veya JavaScript kullanarak olayları gibi gelişmiş kodlama kavramlar
     tazeleyin!
-  tutorial_techcpp_longdescription: Her C ++ programcısı kodlamanın daha basit, daha
-    temiz ve daha anlamlı yollarını amaçlamaktadır. Bu pratik öğretici, kodunuzu daha
-    güzel hale getirecek 7 harika C ++ 17 özelliği seçti.
   tutorial_beetik_longdescription: 'Bu etkinlikte, öğrenciler besteci Franz Liszt''in
     ünlü bir parçasının küçük bir bölümünü yeniden düzenlediler. Öğrenciler, döngülerin
     nasıl oluşturulduğunu ve programlama ve müzikte nasıl kullanılabileceğini öğreneceklerdir.
@@ -4926,10 +4836,6 @@ tr:
   tutorial_diggindwarf_longdescription: Cücelerin yön bulmada, gezinmede ve mücevher
     toplamada yardımına ihtiyacı var! Labirentler ve bulmacalar vasıtasıyla cücelerini
     yönlendirerek JavaScript'i nasıl kullanacağını öğren.
-  tutorial_rmedr_longdescription: Robot Mesh Studio'da Blockly'yi kullanarak çevrimiçi
-    bir VEX EDR robot "taklidi" programlayın ve bir labirentte nasıl çalıştığını izleyin.
-    Öğrenciler temel robot hareketlerini ve yaptıkları programlara nasıl üç sensör
-    ve bir çıkış koyacaklarını öğrenir.
   tutorial_spheroit_longdescription: Kendi hayvan ses oyununu "Animal Toss" oluştururken
     if/then, else durumları hakkında bilgi edinin!
   tutorial_gameofcodes_longdescription: Duvarı savunmak için muhteşem bir Ejderha
@@ -4988,11 +4894,6 @@ tr:
     insanların Mars'ta hayatta kalmak için bilmeleri gereken önemli koşulları öğreten,
     proje bazlı bir öğrenme modülüdür. Öğrenciler, Artırılmış Gerçeklikten yararlanarak
     bir koloni kuracak ve koloni tesislerini 3 boyutlu olarak yazdıracak.
-  tutorial_alexaskill_longdescription: Alexa Skill Blueprints'i kullanarak kendi Alexa
-    Skills'inizi oluşturun. Kendi istediğiniz gibi bir Alexa Skill oluşturmak için
-    ses, yapay zeka ve makine öğrenimini kullanmayı öğrenin. Alexa fıkra anlatabilir,
-    şarkı söyleyebilir veya hikaye anlatabilir. (Amazon hesap girişi gerekli) Aktivite,
-    bireyler veya öğretmen yönlendirmeli olarak tamamlanabilir.
   tutorial_bitsboxyak_longdescription: Arkadaşlarınıza ve ailenize e-posta ile gönderebileceğiniz
     bir kutlama kartı yapmak için değiştirilmiş JavaScript kodu yazın. Yak Attack!
     değişkenler, hareket komutları, döngü fonksiyonları ve çok daha fazlasını tanıtan,
@@ -5190,8 +5091,6 @@ tr:
     kendi benzersiz hikayesini oluşturabilir.
   tutorial_csfirstname_longdescription: Bir isim seçin ve kodlamayla harflerini canlandırın.
     Takma isim, evcil hayvan ismi, hayvan, spor, yer veya hobi seçin.
-  tutorial_obstaclecourse_longdescription: Bir robotun engel parkurunda başarılı bir
-    şekilde gezinmesi için bir program kodlamak üzere ekibiniz ile işbirliği yapın.
   tutorial_edisonmove_longdescription: Edison robotlarını ve temelinde Python olan
     metin tabanlı bir programlama dili olan EdPy'dan yararlanarak öğrencilerinize
     metin tabanlı programlama ve temel hesaplama kavramlarından olan "dizi"yi anlatın.
@@ -6157,7 +6056,6 @@ tr:
   tutorial_ticklep_language: Çince (Geleneksel), Danca, İngilizce, Fransızca, Japonca
   tutorial_bbot_language: Hollandaca, Suomi, İngilizce
   tutorial_scratchg_language: Sadece İngilizce
-  tutorial_roboticfriends_language: Sadece İngilizce
   tutorial_sjforest_language: Sadece İngilizce
   tutorial_sjgreet_language: Sadece İngilizce
   tutorial_sjsunset_language: Sadece İngilizce
@@ -6202,7 +6100,6 @@ tr:
   tutorial_tickles_language: Çeşitli
   tutorial_ozogame_language: Sadece İngilizce
   tutorial_vidcodeio_language: Sadece İngilizce
-  tutorial_besttech_language: Sadece İngilizce
   tutorial_tlcbrain_language: Sadece İngilizce
   tutorial_hopquiz_language: Sadece İngilizce
   tutorial_unfortunate_language: Sadece İngilizce
@@ -6210,7 +6107,6 @@ tr:
   tutorial_elaseq_language: Sadece İngilizce
   tutorial_bbcmathi_language: Sadece İngilizce
   tutorial_tlcpixel_language: Sadece İngilizce
-  tutorial_arduino_language: Sadece İngilizce
   tutorial_introrobo_language: Sadece İngilizce
   tutorial_tlcinvis_language: Sadece İngilizce
   tutorial_tlcjflap_language: Sadece İngilizce
@@ -6230,7 +6126,6 @@ tr:
   tutorial_tlcmind_language: Sadece İngilizce
   tutorial_tlctelebot_language: Sadece İngilizce
   tutorial_tlcaus_language: Sadece İngilizce
-  tutorial_oralhist_language: Sadece İngilizce
   tutorial_tlcmicro_language: Sadece İngilizce
   tutorial_imathematician_language: Sadece İngilizce
   tutorial_tlcmagic_language: Sadece İngilizce
@@ -6246,7 +6141,6 @@ tr:
   tutorial_tynkercan_language: Sadece İngilizce
   tutorial_grokflags_language: Sadece İngilizce
   tutorial_robomind_language: İngilizce, Flemenkçe
-  tutorial_scratchanimwork_language: Sadece İngilizce
   tutorial_adventureq_language: Çince (Basitleştirilmiş), İngilizce
   tutorial_khan-es_language: İspanyolca
   tutorial_kpt_language: Portekizce
@@ -6254,13 +6148,11 @@ tr:
   tutorial_khe_language: İbranice
   tutorial_kfr_language: Fransızca
   tutorial_app-inventor_language: Sadece İngilizce
-  tutorial_bits_language: İngilizce, Almanca
   tutorial_blockly_language: İspanyolca, Fransızca, diğerleri
   tutorial_tynker_language: Sadece İngilizce
   tutorial_baypt_language: Portekizce
   tutorial_code-combat_language: Çeşitli
   tutorial_mky_language: Çeşitli
-  tutorial_spellcraft_language: Sadece İngilizce
   tutorial_pirates_language: İngilizce, Danca, Almanca
   tutorial_csfirst_language: Sadece İngilizce
   tutorial_loopedy_language: Sadece İngilizce
@@ -6334,7 +6226,6 @@ tr:
   tutorial_soloweb_language: Sadece İngilizce
   tutorial_khanweb_language: İngilizce, Portekizce (Brezilya), İspanyolca
   tutorial_khandata_language: İngilizce, Portekizce (Brezilya), İspanyolca
-  tutorial_robomeshiq_language: Sadece İngilizce
   tutorial_googlelogo_language: Sadece İngilizce
   tutorial_playtune_language: Sadece İngilizce
   tutorial_computeit_language: İngilizce, Fransıca, Almanca, Endonezce, İtalyanca,
@@ -6396,7 +6287,6 @@ tr:
   tutorial_stemcod_language: Sadece İngilizce
   tutorial_techikb_language: Sadece İngilizce
   tutorial_kanostreet_language: Sadece İngilizce
-  tutorial_nyblebot_language: Sadece İngilizce
   tutorial_codemojijs_language: Sadece İngilizce
   tutorial_techapf_language: Sadece İngilizce
   tutorial_techfpjs_language: Sadece İngilizce
@@ -6412,7 +6302,6 @@ tr:
   tutorial_gpbcircle_language: Sadece İngilizce
   tutorial_gpbpaint_language: Sadece İngilizce
   tutorial_cocomarcade_language: Çeşitli
-  tutorial_techcpp_language: Sadece İngilizce
   tutorial_beetik_language: Sadece İngilizce
   tutorial_codedj_language: İngilizce, Fransızca
   tutorial_rgadvan_language: Sadece İngilizce
@@ -6488,7 +6377,6 @@ tr:
   tutorial_ifly_language: Sadece İngilizce
   tutorial_idowedo_language: Sadece İngilizce
   tutorial_diggindwarf_language: Sadece İngilizce
-  tutorial_rmedr_language: Sadece İngilizce
   tutorial_spheroit_language: Sadece İngilizce
   tutorial_gameofcodes_language: Sadece İngilizce
   tutorial_blocklygames_language: İspanyolca, Fransızca, diğerleri
@@ -6500,7 +6388,6 @@ tr:
   tutorial_bcjs1_language: Sadece İngilizce
   tutorial_bcjs2_language: Sadece İngilizce
   tutorial_3dbearmars_language: İngilizce
-  tutorial_alexaskill_language: İngilizce
   tutorial_bitsboxyak_language: İngilizce
   tutorial_blockscadbargraphs_language: Çince (Basitleştirilmiş), İngilizce, Fransızca,
     Almanca, Japonca, Norveççe (Bokmål), Sırpça (Kiril), İspanyolca (İspanya), İsveççe
@@ -6569,8 +6456,6 @@ tr:
   tutorial_codinismhero_language: İngilizce
   tutorial_discovery_language: İngilizce, İspanyolca (Meksika)
   tutorial_csfirstname_language: İngilizce, İspanyolca (Meksika)
-  tutorial_obstaclecourse_language: Çince, İngilizce, Fransızca, Almanca, İtalyanca,
-    İspanyolca
   tutorial_edisonmove_language: İngilizce
   tutorial_edisonspider_language: İngilizce
   tutorial_edisonspotlight_language: İngilizce
@@ -6921,7 +6806,6 @@ tr:
   tutorial_ticklep_string_detail_grades: gösterme
   tutorial_bbot_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_scratchg_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_roboticfriends_string_detail_grades: Bütün Yaşlar
   tutorial_sjforest_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_sjgreet_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_sjsunset_string_detail_grades: Okuma öncesi- 5. Sınıf
@@ -6966,7 +6850,6 @@ tr:
   tutorial_tickles_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_ozogame_string_detail_grades: Bütün Yaşlar
   tutorial_vidcodeio_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_besttech_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_tlcbrain_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_hopquiz_string_detail_grades: 6-8. Sınıflar
   tutorial_unfortunate_string_detail_grades: Okuma öncesi- 5. Sınıf
@@ -6974,7 +6857,6 @@ tr:
   tutorial_elaseq_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_bbcmathi_string_detail_grades: gösterme
   tutorial_tlcpixel_string_detail_grades: 2-8. Sınıflar
-  tutorial_arduino_string_detail_grades: 6-8. Sınıflar
   tutorial_introrobo_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_tlcinvis_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_tlcjflap_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
@@ -6994,7 +6876,6 @@ tr:
   tutorial_tlcmind_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tlctelebot_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_tlcaus_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_oralhist_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_tlcmicro_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_imathematician_string_detail_grades: 2-8. Sınıflar
   tutorial_tlcmagic_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
@@ -7008,7 +6889,6 @@ tr:
   tutorial_tynkercan_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_grokflags_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_robomind_string_detail_grades: 2-8. Sınıflar
-  tutorial_scratchanimwork_string_detail_grades: 2-8. Sınıflar
   tutorial_adventureq_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_khan-es_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_kpt_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
@@ -7016,13 +6896,11 @@ tr:
   tutorial_khe_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_kfr_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_app-inventor_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_bits_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_blockly_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tynker_string_detail_grades: gösterme
   tutorial_baypt_string_detail_grades: Bütün Yaşlar
   tutorial_code-combat_string_detail_grades: gösterme
   tutorial_mky_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_spellcraft_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_pirates_string_detail_grades: 2-8. Sınıflar
   tutorial_csfirst_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_loopedy_string_detail_grades: Okuma öncesi- 5. Sınıf
@@ -7079,7 +6957,6 @@ tr:
   tutorial_soloweb_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_khanweb_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_khandata_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_robomeshiq_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_googlelogo_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_playtune_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_computeit_string_detail_grades: 2. ve üzeri Sınıflar
@@ -7138,7 +7015,6 @@ tr:
   tutorial_stemcod_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_techikb_string_detail_grades: Üniversite
   tutorial_kanostreet_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_nyblebot_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_codemojijs_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_techapf_string_detail_grades: Üniversite
   tutorial_techfpjs_string_detail_grades: Üniversite
@@ -7154,7 +7030,6 @@ tr:
   tutorial_gpbcircle_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_gpbpaint_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_cocomarcade_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_techcpp_string_detail_grades: Üniversite
   tutorial_beetik_string_detail_grades: 6-8. Sınıflar
   tutorial_codedj_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_rgadvan_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
@@ -7227,7 +7102,6 @@ tr:
   tutorial_ifly_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_idowedo_string_detail_grades: 2-8. Sınıflar
   tutorial_diggindwarf_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_rmedr_string_detail_grades: 2-8. Sınıflar
   tutorial_spheroit_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_gameofcodes_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_blocklygames_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
@@ -7238,7 +7112,6 @@ tr:
   tutorial_bcjs1_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_bcjs2_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_3dbearmars_string_detail_grades: 2-8. Sınıflar
-  tutorial_alexaskill_string_detail_grades: 2-8. Sınıflar
   tutorial_bitsboxyak_string_detail_grades: 2-8. Sınıflar
   tutorial_blockscadbargraphs_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_blockscadbirdhouses_string_detail_grades: Okuma öncesi- 5. Sınıf
@@ -7295,7 +7168,6 @@ tr:
   tutorial_codinismhero_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_discovery_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_csfirstname_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_obstaclecourse_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_edisonmove_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_edisonspider_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_edisonspotlight_string_detail_grades: 2-8. Sınıflar
@@ -7656,7 +7528,6 @@ tr:
   tutorial_ticklep_string_platforms: gösterme
   tutorial_bbot_string_platforms: Bütün modern tarayıcılar
   tutorial_scratchg_string_platforms: Bütün modern tarayıcılar
-  tutorial_roboticfriends_string_platforms: İnternetsiz
   tutorial_sjforest_string_platforms: iPad app
   tutorial_sjgreet_string_platforms: iPad app
   tutorial_sjsunset_string_platforms: iPad app
@@ -7705,7 +7576,6 @@ tr:
   tutorial_ozogame_string_platforms: Tüm güncel tarayıcılar, iPad, iPhone, Android
     tablet, Andriod telefon, Ozobot robot
   tutorial_vidcodeio_string_platforms: İnternetsiz
-  tutorial_besttech_string_platforms: İnternetsiz
   tutorial_tlcbrain_string_platforms: İnternetsiz
   tutorial_hopquiz_string_platforms: iPad and iPhone
   tutorial_unfortunate_string_platforms: Dash ve Dot robotu
@@ -7714,7 +7584,6 @@ tr:
     tablet
   tutorial_bbcmathi_string_platforms: gösterme
   tutorial_tlcpixel_string_platforms: İnternetsiz
-  tutorial_arduino_string_platforms: Arduino Devre Kartları
   tutorial_introrobo_string_platforms: iPad, Android tablet, Dash ve Dot robotu
   tutorial_tlcinvis_string_platforms: İnternetsiz
   tutorial_tlcjflap_string_platforms: Bütün modern tarayıcılar
@@ -7737,7 +7606,6 @@ tr:
   tutorial_tlcmind_string_platforms: İnternetsiz
   tutorial_tlctelebot_string_platforms: İnternetsiz
   tutorial_tlcaus_string_platforms: İnternetsiz
-  tutorial_oralhist_string_platforms: Bütün modern tarayıcılar
   tutorial_tlcmicro_string_platforms: İnternetsiz
   tutorial_imathematician_string_platforms: Bütün modern tarayıcılar
   tutorial_tlcmagic_string_platforms: İnternetsiz
@@ -7755,7 +7623,6 @@ tr:
     Firefox, Safari, Android Chrome (mobile-optimized), iOS (mobile-optimized)
   tutorial_robomind_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
-  tutorial_scratchanimwork_string_platforms: Bütün modern tarayıcılar
   tutorial_adventureq_string_platforms: iPad
   tutorial_khan-es_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -7768,13 +7635,11 @@ tr:
   tutorial_kfr_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome, Firefox,
     Safari
   tutorial_app-inventor_string_platforms: Android
-  tutorial_bits_string_platforms: Bütün modern tarayıcılar
   tutorial_blockly_string_platforms: Bütün modern tarayıcılar
   tutorial_tynker_string_platforms: gösterme
   tutorial_baypt_string_platforms: Bütün modern tarayıcılar
   tutorial_code-combat_string_platforms: gösterme
   tutorial_mky_string_platforms: Bütün modern tarayıcılar
-  tutorial_spellcraft_string_platforms: Windows
   tutorial_pirates_string_platforms: Internet Explorer 11, Microsoft Edge, krom, Firefox,
     Safari, Android tablet, iPad, Android telefon, iPhone
   tutorial_csfirst_string_platforms: Bütün modern tarayıcılar
@@ -7843,8 +7708,6 @@ tr:
     telefon, iPad, iPhone
   tutorial_khanweb_string_platforms: Tüm modern tarayıcılar, Android tablet
   tutorial_khandata_string_platforms: Bütün modern tarayıcılar
-  tutorial_robomeshiq_string_platforms: Internet Explorer 11, Chrome, Firefox, Vex
-    IQ Robots
   tutorial_googlelogo_string_platforms: Bütün modern tarayıcılar
   tutorial_playtune_string_platforms: Chrome, Firefox, Safari
   tutorial_computeit_string_platforms: Bütün modern tarayıcılar
@@ -7918,7 +7781,6 @@ tr:
   tutorial_techikb_string_platforms: Tüm modern tarayıcılar, Android tablet, iPad,
     Windows telefon, Android telefon, iPhone
   tutorial_kanostreet_string_platforms: Bütün modern tarayıcılar
-  tutorial_nyblebot_string_platforms: Android tablet, iPad, Android telefon, iPhone
   tutorial_codemojijs_string_platforms: Bütün modern tarayıcılar
   tutorial_techapf_string_platforms: Tüm modern tarayıcılar, Android tablet, iPad,
     Windows telefon, Android telefon, iPhone
@@ -7939,8 +7801,6 @@ tr:
   tutorial_gpbcircle_string_platforms: Bütün modern tarayıcılar
   tutorial_gpbpaint_string_platforms: Bütün modern tarayıcılar
   tutorial_cocomarcade_string_platforms: Tüm modern tarayıcılar
-  tutorial_techcpp_string_platforms: Tüm modern tarayıcılar, Android tablet, iPad,
-    Windows telefon, Android telefon, iPhone
   tutorial_beetik_string_platforms: Chrome, Firefox, Android tablet, iPad
   tutorial_codedj_string_platforms: Chrome, Firefox, Safari, Android tablet, iPad
   tutorial_rgadvan_string_platforms: Chrome, Firefox, Android tablet
@@ -8037,7 +7897,6 @@ tr:
   tutorial_idowedo_string_platforms: Bütün modern tarayıcılar, Android tablet, Ipad,
     WeDo
   tutorial_diggindwarf_string_platforms: Chrome, Firefox, Safari
-  tutorial_rmedr_string_platforms: Bütün modern tarayıcılar
   tutorial_spheroit_string_platforms: iPad, Android tablet, iPhone, Android telefon,
     Sphero robot
   tutorial_gameofcodes_string_platforms: Tüm modern tarayıcılar, Android tablet, Android
@@ -8052,7 +7911,6 @@ tr:
   tutorial_bcjs1_string_platforms: Bütün modern tarayıcılar
   tutorial_bcjs2_string_platforms: Bütün modern tarayıcılar
   tutorial_3dbearmars_string_platforms: Android tablet, iPad, Android telefon, iPhone
-  tutorial_alexaskill_string_platforms: Bütün modern tarayıcılar
   tutorial_bitsboxyak_string_platforms: Bütün modern tarayıcılar
   tutorial_blockscadbargraphs_string_platforms: Bütün modern tarayıcılar
   tutorial_blockscadbirdhouses_string_platforms: Bütün modern tarayıcılar
@@ -8127,7 +7985,6 @@ tr:
   tutorial_codinismhero_string_platforms: Android tablet, Android telefon
   tutorial_discovery_string_platforms: Bütün modern tarayıcılar
   tutorial_csfirstname_string_platforms: Bütün modern tarayıcılar
-  tutorial_obstaclecourse_string_platforms: iPad
   tutorial_edisonmove_string_platforms: Bütün modern tarayıcılar
   tutorial_edisonspider_string_platforms: Tüm modern browserlar, iPad, Android tabletler
   tutorial_edisonspotlight_string_platforms: Tüm modern browserlar, iPad, Android
@@ -8501,7 +8358,6 @@ tr:
   tutorial_ticklep_string_detail_platforms: gösterme
   tutorial_bbot_string_detail_platforms: ''
   tutorial_scratchg_string_detail_platforms: ''
-  tutorial_roboticfriends_string_detail_platforms: İnternetsiz
   tutorial_sjforest_string_detail_platforms: iPad app
   tutorial_sjgreet_string_detail_platforms: iPad app
   tutorial_sjsunset_string_detail_platforms: iPad app
@@ -8546,7 +8402,6 @@ tr:
   tutorial_tickles_string_detail_platforms: Sfero robot
   tutorial_ozogame_string_detail_platforms: Ozobot robotu
   tutorial_vidcodeio_string_detail_platforms: İnternetsiz
-  tutorial_besttech_string_detail_platforms: İnternetsiz
   tutorial_tlcbrain_string_detail_platforms: İnternetsiz
   tutorial_hopquiz_string_detail_platforms: iOS uygulamaları
   tutorial_unfortunate_string_detail_platforms: Dash ve Dot robotu
@@ -8554,7 +8409,6 @@ tr:
   tutorial_elaseq_string_detail_platforms: İnternetsiz
   tutorial_bbcmathi_string_detail_platforms: gösterme
   tutorial_tlcpixel_string_detail_platforms: İnternetsiz
-  tutorial_arduino_string_detail_platforms: ''
   tutorial_introrobo_string_detail_platforms: Dash ve Dot robotu
   tutorial_tlcinvis_string_detail_platforms: İnternetsiz
   tutorial_tlcjflap_string_detail_platforms: ''
@@ -8574,7 +8428,6 @@ tr:
   tutorial_tlcmind_string_detail_platforms: İnternetsiz
   tutorial_tlctelebot_string_detail_platforms: İnternetsiz
   tutorial_tlcaus_string_detail_platforms: İnternetsiz
-  tutorial_oralhist_string_detail_platforms: ''
   tutorial_tlcmicro_string_detail_platforms: İnternetsiz
   tutorial_imathematician_string_detail_platforms: ''
   tutorial_tlcmagic_string_detail_platforms: İnternetsiz
@@ -8588,7 +8441,6 @@ tr:
   tutorial_tynkercan_string_detail_platforms: ''
   tutorial_grokflags_string_detail_platforms: ''
   tutorial_robomind_string_detail_platforms: ''
-  tutorial_scratchanimwork_string_detail_platforms: ''
   tutorial_adventureq_string_detail_platforms: ''
   tutorial_khan-es_string_detail_platforms: ''
   tutorial_kpt_string_detail_platforms: ''
@@ -8596,13 +8448,11 @@ tr:
   tutorial_khe_string_detail_platforms: ''
   tutorial_kfr_string_detail_platforms: ''
   tutorial_app-inventor_string_detail_platforms: Android
-  tutorial_bits_string_detail_platforms: ''
   tutorial_blockly_string_detail_platforms: ''
   tutorial_tynker_string_detail_platforms: gösterme
   tutorial_baypt_string_detail_platforms: ''
   tutorial_code-combat_string_detail_platforms: gösterme
   tutorial_mky_string_detail_platforms: ''
-  tutorial_spellcraft_string_detail_platforms: ''
   tutorial_pirates_string_detail_platforms: ''
   tutorial_csfirst_string_detail_platforms: ''
   tutorial_loopedy_string_detail_platforms: Dash ve Dot robotu
@@ -8659,7 +8509,6 @@ tr:
   tutorial_soloweb_string_detail_platforms: ''
   tutorial_khanweb_string_detail_platforms: ''
   tutorial_khandata_string_detail_platforms: ''
-  tutorial_robomeshiq_string_detail_platforms: Vex IQ Robots
   tutorial_googlelogo_string_detail_platforms: ''
   tutorial_playtune_string_detail_platforms: ''
   tutorial_computeit_string_detail_platforms: ''
@@ -8718,7 +8567,6 @@ tr:
   tutorial_stemcod_string_detail_platforms: ''
   tutorial_techikb_string_detail_platforms: ''
   tutorial_kanostreet_string_detail_platforms: ''
-  tutorial_nyblebot_string_detail_platforms: ''
   tutorial_codemojijs_string_detail_platforms: ''
   tutorial_techapf_string_detail_platforms: ''
   tutorial_techfpjs_string_detail_platforms: ''
@@ -8734,7 +8582,6 @@ tr:
   tutorial_gpbcircle_string_detail_platforms: ''
   tutorial_gpbpaint_string_detail_platforms: ''
   tutorial_cocomarcade_string_detail_platforms: ''
-  tutorial_techcpp_string_detail_platforms: ''
   tutorial_beetik_string_detail_platforms: ''
   tutorial_codedj_string_detail_platforms: ''
   tutorial_rgadvan_string_detail_platforms: ''
@@ -8807,7 +8654,6 @@ tr:
   tutorial_ifly_string_detail_platforms: Papağan mini dronları
   tutorial_idowedo_string_detail_platforms: WeDo
   tutorial_diggindwarf_string_detail_platforms: ''
-  tutorial_rmedr_string_detail_platforms: Vex EDR Robotları
   tutorial_spheroit_string_detail_platforms: Sfero robot
   tutorial_gameofcodes_string_detail_platforms: ''
   tutorial_blocklygames_string_detail_platforms: ''
@@ -8818,7 +8664,6 @@ tr:
   tutorial_bcjs1_string_detail_platforms: ''
   tutorial_bcjs2_string_detail_platforms: ''
   tutorial_3dbearmars_string_detail_platforms: 3D yazıcı
-  tutorial_alexaskill_string_detail_platforms: ''
   tutorial_bitsboxyak_string_detail_platforms: ''
   tutorial_blockscadbargraphs_string_detail_platforms: ''
   tutorial_blockscadbirdhouses_string_detail_platforms: ''
@@ -8875,7 +8720,6 @@ tr:
   tutorial_codinismhero_string_detail_platforms: ''
   tutorial_discovery_string_detail_platforms: ''
   tutorial_csfirstname_string_detail_platforms: ''
-  tutorial_obstaclecourse_string_detail_platforms: Sfero robot
   tutorial_edisonmove_string_detail_platforms: Edison robotu
   tutorial_edisonspider_string_detail_platforms: Edison robotu
   tutorial_edisonspotlight_string_detail_platforms: Edison robotu
@@ -9199,7 +9043,6 @@ tr:
   tutorial_ticklep_string_detail_programming_languages: gösterme
   tutorial_bbot_string_detail_programming_languages: Görsel programlama dili
   tutorial_scratchg_string_detail_programming_languages: Dilden bağımsız
-  tutorial_roboticfriends_string_detail_programming_languages: Dilden bağımsız
   tutorial_sjforest_string_detail_programming_languages: Bloklar
   tutorial_sjgreet_string_detail_programming_languages: Bloklar
   tutorial_sjsunset_string_detail_programming_languages: Bloklar
@@ -9245,7 +9088,6 @@ tr:
   tutorial_tickles_string_detail_programming_languages: Bloklar
   tutorial_ozogame_string_detail_programming_languages: Bloklar
   tutorial_vidcodeio_string_detail_programming_languages: Dilden bağımsız
-  tutorial_besttech_string_detail_programming_languages: Bloklar, C/C++
   tutorial_tlcbrain_string_detail_programming_languages: Dilden bağımsız
   tutorial_hopquiz_string_detail_programming_languages: Hopscotch
   tutorial_unfortunate_string_detail_programming_languages: Bloklar
@@ -9253,7 +9095,6 @@ tr:
   tutorial_elaseq_string_detail_programming_languages: Dilden bağımsız
   tutorial_bbcmathi_string_detail_programming_languages: gösterme
   tutorial_tlcpixel_string_detail_programming_languages: Dilden bağımsız
-  tutorial_arduino_string_detail_programming_languages: Arduino
   tutorial_introrobo_string_detail_programming_languages: Bloklar, JavaScript
   tutorial_tlcinvis_string_detail_programming_languages: Dilden bağımsız
   tutorial_tlcjflap_string_detail_programming_languages: Dilden bağımsız
@@ -9273,7 +9114,6 @@ tr:
   tutorial_tlcmind_string_detail_programming_languages: Dilden bağımsız
   tutorial_tlctelebot_string_detail_programming_languages: Dilden bağımsız
   tutorial_tlcaus_string_detail_programming_languages: Dilden bağımsız
-  tutorial_oralhist_string_detail_programming_languages: Dilden bağımsız
   tutorial_tlcmicro_string_detail_programming_languages: Dilden bağımsız
   tutorial_imathematician_string_detail_programming_languages: Scratch
   tutorial_tlcmagic_string_detail_programming_languages: Dilden bağımsız
@@ -9287,7 +9127,6 @@ tr:
   tutorial_tynkercan_string_detail_programming_languages: Bloklar
   tutorial_grokflags_string_detail_programming_languages: Python
   tutorial_robomind_string_detail_programming_languages: Bloklar
-  tutorial_scratchanimwork_string_detail_programming_languages: Bloklar, Scratch
   tutorial_adventureq_string_detail_programming_languages: Bloklar
   tutorial_khan-es_string_detail_programming_languages: JavaScript
   tutorial_kpt_string_detail_programming_languages: JavaScript
@@ -9295,13 +9134,11 @@ tr:
   tutorial_khe_string_detail_programming_languages: JavaScript
   tutorial_kfr_string_detail_programming_languages: JavaScript
   tutorial_app-inventor_string_detail_programming_languages: Bloklar
-  tutorial_bits_string_detail_programming_languages: Bloklar, Bağımsız dil
   tutorial_blockly_string_detail_programming_languages: Bloklar
   tutorial_tynker_string_detail_programming_languages: gösterme
   tutorial_baypt_string_detail_programming_languages: Bloklar
   tutorial_code-combat_string_detail_programming_languages: gösterme
   tutorial_mky_string_detail_programming_languages: CoffeeScript
-  tutorial_spellcraft_string_detail_programming_languages: Bloklar, JavaScript
   tutorial_pirates_string_detail_programming_languages: Bloklar, Korsan Kodu
   tutorial_csfirst_string_detail_programming_languages: Scratch
   tutorial_loopedy_string_detail_programming_languages: Bloklar
@@ -9358,7 +9195,6 @@ tr:
   tutorial_soloweb_string_detail_programming_languages: HTML, CSS
   tutorial_khanweb_string_detail_programming_languages: HTML VE CSS
   tutorial_khandata_string_detail_programming_languages: SQL
-  tutorial_robomeshiq_string_detail_programming_languages: Bloklar, Python
   tutorial_googlelogo_string_detail_programming_languages: Bloklar, Scratch
   tutorial_playtune_string_detail_programming_languages: Bloklar
   tutorial_computeit_string_detail_programming_languages: Dilden bağımsız
@@ -9417,7 +9253,6 @@ tr:
   tutorial_stemcod_string_detail_programming_languages: JavaScript
   tutorial_techikb_string_detail_programming_languages: Kotlin
   tutorial_kanostreet_string_detail_programming_languages: Bloklar, JavaScript
-  tutorial_nyblebot_string_detail_programming_languages: Bloklar
   tutorial_codemojijs_string_detail_programming_languages: JavaScript
   tutorial_techapf_string_detail_programming_languages: Python
   tutorial_techfpjs_string_detail_programming_languages: JavaScript
@@ -9434,7 +9269,6 @@ tr:
   tutorial_gpbpaint_string_detail_programming_languages: Bloklar
   tutorial_cocomarcade_string_detail_programming_languages: JavaScript, Python, Lua,
     CoffeeScript
-  tutorial_techcpp_string_detail_programming_languages: C/C++
   tutorial_beetik_string_detail_programming_languages: Bloklar
   tutorial_codedj_string_detail_programming_languages: JavaScript
   tutorial_rgadvan_string_detail_programming_languages: Bloklar, JavaScript, Python
@@ -9507,7 +9341,6 @@ tr:
   tutorial_ifly_string_detail_programming_languages: Tynker
   tutorial_idowedo_string_detail_programming_languages: Scratch
   tutorial_diggindwarf_string_detail_programming_languages: JavaScript
-  tutorial_rmedr_string_detail_programming_languages: Bloklar
   tutorial_spheroit_string_detail_programming_languages: Bloklar, JavaScript
   tutorial_gameofcodes_string_detail_programming_languages: Bloklar, Hazır, Birlik
   tutorial_blocklygames_string_detail_programming_languages: Bloklar
@@ -9519,7 +9352,6 @@ tr:
   tutorial_bcjs2_string_detail_programming_languages: JavaScript
   tutorial_3dbearmars_string_detail_programming_languages: Dile bağlı değil (birden
     çok dilde öğretilebilir), artırılmış gerçeklikte 3 boyutlu modelleme kullanır
-  tutorial_alexaskill_string_detail_programming_languages: Bloklar
   tutorial_bitsboxyak_string_detail_programming_languages: JavaScript
   tutorial_blockscadbargraphs_string_detail_programming_languages: Bloklar
   tutorial_blockscadbirdhouses_string_detail_programming_languages: Bloklar
@@ -9579,7 +9411,6 @@ tr:
   tutorial_codinismhero_string_detail_programming_languages: Python
   tutorial_discovery_string_detail_programming_languages: Bloklar, Scratch
   tutorial_csfirstname_string_detail_programming_languages: Bloklar, Scratch
-  tutorial_obstaclecourse_string_detail_programming_languages: Bloklar
   tutorial_edisonmove_string_detail_programming_languages: Python, temelinde Python
     olan metin tabanlı bir programlama dili olan EdPy.
   tutorial_edisonspider_string_detail_programming_languages: Bloklar
@@ -9678,7 +9509,7 @@ tr:
   tutorial_gamemaker_string_detail_programming_languages: JavaScript
   tutorial_duckrace_string_detail_programming_languages: Bloklar
   tutorial_allcancodeapps_string_detail_programming_languages: Bloklar
-  tutorial_n2y_string_detail_programming_languages: ''
+  tutorial_n2y_string_detail_programming_languages: İnternetsiz
   tutorial_microsoftarcade_string_detail_programming_languages: Bloklar
   tutorial_csfirstunplugged_string_detail_programming_languages: Bloklar, Bilgisayarsız,
     Scratch
@@ -9891,7 +9722,6 @@ tr:
   tutorial_eddesign_name: Tasarımcı Edison
   tutorial_edshapeup_name: Edison ile Robot Biçimlendirme
   tutorial_ozocolor_name: Pop Star|Ozobot Renk Kodları ile Fonksiyonlar Yaratma
-  tutorial_kcjanimals_name: Kanadalı bir Hayvan Hakkında
   tutorial_icomputeeggs_name: iHide Yumurtaları
   tutorial_rootunplugged_name: iRobot Kodu Kırma
   tutorial_rgtreasure_name: RoboGarden Bulmacaları - Robo Hazine Sandığı
@@ -9907,14 +9737,12 @@ tr:
   tutorial_blockscadscale_name: Scale Şehri
   tutorial_tcadloops_name: Patlayan Yıldız Tasarlamak için Tinkercad'de Döngü Kullanımı
   tutorial_phidgets_name: İşleme ile Phidget Teremini
-  tutorial_kcjmerry_name: Mutlu Micro:bits'ler
   tutorial_modvariables_name: Cubelets Kullanılarak Değişkenlerin ve Blok Değerlerinin
     Araştırılması
   tutorial_codestersmicro_name: 'Codesters: Mikro Top Oyunu Yarat'
   tutorial_codestersdata_name: 'Codesters: micro:bit Verileri Kodla ve Grafik Çiz'
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT veri kaydedici
-  tutorial_modtraits_name: GoPiGo ile Karakter Özellikleri
   tutorial_mee_name: 'Minecraft Kod Saati: Tümüyle Yapay Zeka '
   tutorial_kuborobo_name: KUBO Robotik Kodlama Güzergahları
   tutorial_ai-oceans_name: Okyanuslar için Yapay Zeka
@@ -10208,11 +10036,6 @@ tr:
     tanıtmak için giriş niteliğinde ve bağımsız bir derstir. Bu, iki derslik bir dizinin
     ilk dersidir ancak dersler ayrı ayrı yapılabilir. İkinci derste fonksiyon kavramının
     geliştirilmesinde OzoBlockly kullanılır.
-  tutorial_kcjanimals_longdescription: Kod yazmayı ve Kanada vahşi yaşamını kutlamak
-    için basit bir proje oluşturun. Çocuklar, ayı veya geyik gibi bir Kanada hayvanı
-    seçecek ve hayvanın yaşam alanı, yeme alışkanlıkları, göç modelleri vb. konularda
-    dünyasının keşfedildiği bir animasyon oluşturacaklar. Bu basit projede, öğretmen
-    veya ebeveynler çocukların ilerlemesine rahatlıkla yardımcı olabilir.
   tutorial_icomputeeggs_longdescription: Hour of Code'a uyarlanan bu öğretmen yönlendirmeli
     aktivite, öğrencilere robotik yoluyla fiziksel programlamayı keşfetme fırsatı
     sağlar. Sürükle ve bırak programlama ortamı ve programlanabilir bir robotik küre
@@ -10266,12 +10089,6 @@ tr:
     için kod ve bilgisayar destekli tasarımın (CAD) nasıl birleştirilebileceğini öğrenin.
   tutorial_phidgets_longdescription: Phidgets ve Processing ile harika bir müzik aleti
     yaratın!
-  tutorial_kcjmerry_longdescription: Kodlamayı ve tatil sezonunu kutlamak için micro:bit
-    ile etkileşimli bir kodlama projesi oluşturun. Çocuklar, parlak bir kar küresi
-    animasyonu oluşturmak için blok kodlama ve fiziksel hesaplamayı birlikte kullanacaklar.  Bu
-    basit projede, öğretmen veya ebeveynler kolaylıkla yardımcı olabilir ve çocukların
-    daha sonradan karşılaşabilecekleri bir zorlukta kendi başlarına kullanabilecekleri
-    aktivite kartları da veriliyor.
   tutorial_modvariables_longdescription: Öğrenciler, Cubelets robot bloklarını kullanarak
     verilerin bir ağda nasıl aktığını araştırırlar. Bu derste, öğrencilerin Cubelets
     robot bloklarının genel olarak nasıl çalıştığını zaten bildiklerini varsayılır.
@@ -10296,9 +10113,6 @@ tr:
   tutorial_rpisensehat_longdescription: Yakın çevresi hakkında bilgiler yakalayabilen
     bir veri kayıt cihazı oluşturmak için Sense HAT donanımını nasıl kullanacağınızı
     öğrenin.
-  tutorial_modtraits_longdescription: Öğrenciler, karakter özelliklerini analiz etmek
-    ve bu özellikleri göstermek için bir algoritma oluşturmak üzere sayısal düşünme
-    adımlarını kullanırlar.
   tutorial_mee_longdescription: 'Bir köy, yangın tehdidi altında ve bir çözüm kodlaman
     gerekiyor! Kodlama yardımcın Minecraft Agent ile tanış, sonra Agent''ı ormanda
     gezinecek ve yangına neden olan durumlar hakkında veri toplayacak şekilde programla. '
@@ -10382,7 +10196,6 @@ tr:
   tutorial_eddesign_language: İngilizce
   tutorial_edshapeup_language: İngilizce
   tutorial_ozocolor_language: İngilizce
-  tutorial_kcjanimals_language: İngilizce
   tutorial_icomputeeggs_language: İngilizce
   tutorial_rootunplugged_language: İngilizce
   tutorial_rgtreasure_language: İngilizce
@@ -10398,13 +10211,11 @@ tr:
   tutorial_blockscadscale_language: İngilizce
   tutorial_tcadloops_language: İngilizce
   tutorial_phidgets_language: İngilizce
-  tutorial_kcjmerry_language: İngilizce
   tutorial_modvariables_language: İngilizce
   tutorial_codestersmicro_language: İngilizce
   tutorial_codestersdata_language: İngilizce
   tutorial_ikodexmas_language: İngilizce
   tutorial_rpisensehat_language: İngilizce
-  tutorial_modtraits_language: İngilizce
   tutorial_mee_language: İngilizce (Amerika Birleşik Devletleri), İngilizce (İngiltere),
     Almanca, İspanyolca (İspanya), İspanyolca (Meksika), Fransızca (Fransa), Fransızca
     (Kanada), İtalyanca, Japonca, Korece, Portekizce (Brezilya), Portekizce (Portekizce),
@@ -10486,7 +10297,6 @@ tr:
   tutorial_eddesign_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_edshapeup_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_ozocolor_string_detail_grades: 2-8. Sınıflar
-  tutorial_kcjanimals_string_detail_grades: 2-8. Sınıflar
   tutorial_icomputeeggs_string_detail_grades: 2-8. Sınıflar
   tutorial_rootunplugged_string_detail_grades: 2-8. Sınıflar
   tutorial_rgtreasure_string_detail_grades: Okuma öncesi- 5. Sınıf
@@ -10502,13 +10312,11 @@ tr:
   tutorial_blockscadscale_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tcadloops_string_detail_grades: 6-8. Sınıflar
   tutorial_phidgets_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_kcjmerry_string_detail_grades: 2-8. Sınıflar
   tutorial_modvariables_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codestersmicro_string_detail_grades: 6-8. Sınıflar
   tutorial_codestersdata_string_detail_grades: 6-8. Sınıflar
   tutorial_ikodexmas_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_rpisensehat_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
-  tutorial_modtraits_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_mee_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_kuborobo_string_detail_grades: Okul Öncesi-8. Sınıf
   tutorial_ai-oceans_string_detail_grades: 3. ve üzeri Sınıflar
@@ -10603,7 +10411,6 @@ tr:
   tutorial_eddesign_string_platforms: Tüm modern browserlar, iPad, Android tabletler
   tutorial_edshapeup_string_platforms: Bütün modern tarayıcılar
   tutorial_ozocolor_string_platforms: İnternetsiz
-  tutorial_kcjanimals_string_platforms: Bütün modern tarayıcılar
   tutorial_icomputeeggs_string_platforms: Tüm modern tarayıcılar, Android telefon,
     Android tablet, iPad, iPhone
   tutorial_rootunplugged_string_platforms: İnternetsiz
@@ -10620,14 +10427,12 @@ tr:
   tutorial_blockscadscale_string_platforms: Bütün modern tarayıcılar
   tutorial_tcadloops_string_platforms: Bütün modern tarayıcılar
   tutorial_phidgets_string_platforms: Bütün modern tarayıcılar
-  tutorial_kcjmerry_string_platforms: Bütün modern tarayıcılar
   tutorial_modvariables_string_platforms: Tüm modern tarayıcılar, Android tablet,
     Android telefon, iPad, iPhone
   tutorial_codestersmicro_string_platforms: Bütün modern tarayıcılar
   tutorial_codestersdata_string_platforms: Bütün modern tarayıcılar
   tutorial_ikodexmas_string_platforms: Bütün modern tarayıcılar
   tutorial_rpisensehat_string_platforms: Bütün modern tarayıcılar
-  tutorial_modtraits_string_platforms: Bütün modern tarayıcılar
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: İnternetsiz
   tutorial_ai-oceans_string_platforms: Tüm modern tarayıcılar, modern Android tablet,
@@ -10707,7 +10512,6 @@ tr:
   tutorial_eddesign_string_detail_platforms: Edison robotu
   tutorial_edshapeup_string_detail_platforms: Edison robotu
   tutorial_ozocolor_string_detail_platforms: Ozobot
-  tutorial_kcjanimals_string_detail_platforms: ''
   tutorial_icomputeeggs_string_detail_platforms: Sphero
   tutorial_rootunplugged_string_detail_platforms: ''
   tutorial_rgtreasure_string_detail_platforms: ''
@@ -10724,13 +10528,11 @@ tr:
   tutorial_tcadloops_string_detail_platforms: ''
   tutorial_phidgets_string_detail_platforms: Phidgets Başlangıç Kiti, Phidgets Mesafe
     Sensörleri.
-  tutorial_kcjmerry_string_detail_platforms: BBC micro:bit
   tutorial_modvariables_string_detail_platforms: Cubelets Robot Blokları
   tutorial_codestersmicro_string_detail_platforms: BBC micro:bit
   tutorial_codestersdata_string_detail_platforms: BBC micro:bit
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (yazılım), SenseHAT
-  tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robotu
   tutorial_ai-oceans_string_detail_platforms: ''
@@ -10818,7 +10620,6 @@ tr:
   tutorial_edshapeup_string_detail_programming_languages: Python, temelinde Python
     olan metin tabanlı bir programlama dili olan EdPy.
   tutorial_ozocolor_string_detail_programming_languages: Bloklar
-  tutorial_kcjanimals_string_detail_programming_languages: Bloklar
   tutorial_icomputeeggs_string_detail_programming_languages: Bloklar
   tutorial_rootunplugged_string_detail_programming_languages: Bloklar
   tutorial_rgtreasure_string_detail_programming_languages: Bloklar
@@ -10835,14 +10636,12 @@ tr:
   tutorial_tcadloops_string_detail_programming_languages: Bloklar
   tutorial_phidgets_string_detail_programming_languages: Java, Phidgets başlıca programlama
     dillerinin tümünü destekler. Bu proje başka bir dile/ortama kolaylıkla uyarlanabilir.
-  tutorial_kcjmerry_string_detail_programming_languages: Bloklar
   tutorial_modvariables_string_detail_programming_languages: Dile bağlı değil (birden
     çok dilde öğretilebilir)
   tutorial_codestersmicro_string_detail_programming_languages: Python
   tutorial_codestersdata_string_detail_programming_languages: Python
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
-  tutorial_modtraits_string_detail_programming_languages: Bloklar
   tutorial_mee_string_detail_programming_languages: Bloklar
   tutorial_kuborobo_string_detail_programming_languages: Öğrencilerin birleştireceği
     Tagtiles

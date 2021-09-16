@@ -1069,7 +1069,6 @@ ar:
   tutorial_ticklep_name: لعبة "Parrot Wonder"
   tutorial_bbot_name: أنشطة برمجة سهلة وممتعة من "Bomberbot "
   tutorial_scratchg_name: برمجة الألعاب باستخدام لغة سكراتش
-  tutorial_roboticfriends_name: أصدقائي الروبوتات
   tutorial_sjforest_name: 'لغة "ScratchJr": هل أستطيع إنشاء غابة مرعبة؟'
   tutorial_sjgreet_name: 'لغة "ScratchJr": هل أستطيع أن أجعل شخصياتي تحيي بعضها البعض؟'
   tutorial_sjsunset_name: 'لغة "ScratchJr": هل أستطيع أن أجعل الشمس تغرب؟'
@@ -1117,7 +1116,6 @@ ar:
   tutorial_tickles_name: لعبة "Sphero Run"
   tutorial_ozogame_name: أنشئ لعبة "Ozobot" متعددة المستويات
   tutorial_vidcodeio_name: المدخلات والمخرجات، نشاط الرياضيات
-  tutorial_besttech_name: أفضل نشاط تكنولوجي
   tutorial_tlcbrain_name: نشاط "Brain-in-a-bag"
   tutorial_hopquiz_name: مصمِّم المسابقات
   tutorial_unfortunate_name: سلسلة من الأحداث السيئة
@@ -1125,7 +1123,6 @@ ar:
   tutorial_elaseq_name: 'الكتابة والبرمجة: تكامل ELA مع المعايير الأساسية المشتركة'
   tutorial_bbcmathi_name: برمجة Bitsbox + الرياضيات (الصفوف 3-5)
   tutorial_tlcpixel_name: لعبة "Pixel Puzzles"
-  tutorial_arduino_name: نشاط أردوينو
   tutorial_introrobo_name: مقدمة في الروبوتات
   tutorial_tlcinvis_name: نشاط خفة اليد
   tutorial_tlcjflap_name: 'برنامج "JFLAP": إنشاء عدد محدود من آلات الحالة'
@@ -1145,7 +1142,6 @@ ar:
   tutorial_tlcmind_name: نشاط السيطرة على العقول
   tutorial_tlctelebot_name: نشاط الروبوت الناقل
   tutorial_tlcaus_name: نشاط حلم الساحر الأسترالي
-  tutorial_oralhist_name: مشروع التاريخ الشفوي
   tutorial_tlcmicro_name: نشاط فيديو سباق تصميم الميكروويف
   tutorial_imathematician_name: منصة "iMathematician"
   tutorial_tlcmagic_name: سحر الكتاب السحري
@@ -1159,7 +1155,6 @@ ar:
   tutorial_tynkercan_name: لعبة "Physics Cannon"
   tutorial_grokflags_name: أعلام العالم (سلحفاة بايثون)
   tutorial_robomind_name: برمجة روبوت افتراضي بواسطة "RoboMind"
-  tutorial_scratchanimwork_name: 'حرِّك اسمك: دليل المعلم'
   tutorial_adventureq_name: لعبة "Adventure with Q"
   tutorial_khan-es_name: مقدمة في لغة جافاسكريبت
   tutorial_kpt_name: مقدمة في لغة جافاسكريبت
@@ -1167,13 +1162,11 @@ ar:
   tutorial_khe_name: مقدمة في لغة جافاسكريبت
   tutorial_kfr_name: مقدمة في لغة جافاسكريبت
   tutorial_app-inventor_name: منصة "AppInventor" وساعة من البرمجة
-  tutorial_bits_name: لعبة "Bits and bricks"
   tutorial_blockly_name: ألعاب Blockly دون اتصال بالإنترنت
   tutorial_tynker_name: أنشئ لعبتك الخاصة
   tutorial_baypt_name: منصة "Code Baymax"
   tutorial_code-combat_name: منصة "CodeCombat"
   tutorial_mky_name: منصة "CodeMonkey"
-  tutorial_spellcraft_name: 'موقع "CodeSpell": لعبة "Spellcraft"'
   tutorial_pirates_name: جمعية "Coding Pirates"
   tutorial_csfirst_name: مشروع "CS First"
   tutorial_loopedy_name: لعبة "Dance the Loopedy-Loop"
@@ -1230,7 +1223,6 @@ ar:
   tutorial_soloweb_name: أول صفحة ويب لك في ساعة!
   tutorial_khanweb_name: 'أكاديمية خان: صفحات الويب'
   tutorial_khandata_name: 'أكاديمية خان: قواعد البيانات'
-  tutorial_robomeshiq_name: برمجة VEX IQ Robots مع Blockly
   tutorial_googlelogo_name: إنشاء شعار جوجل الخاص بك
   tutorial_playtune_name: لعبة "Play That Tune App"
   tutorial_computeit_name: منصة "Compute it"
@@ -1289,7 +1281,6 @@ ar:
   tutorial_stemcod_name: فيزياء ألعاب الفيديو!
   tutorial_techikb_name: أساسيات لغة كوتلن (Kotlin) التفاعلية
   tutorial_kanostreet_name: تحدي "Street Artist"
-  tutorial_nyblebot_name: لعبة "Boogie Bot"
   tutorial_codemojijs_name: بدء تعلم لغة جافاسكريبت
   tutorial_techapf_name: مميزات لغة بايثون المتقدمة
   tutorial_techfpjs_name: مقدمة عملية للبرمجة الوظيفية باستخدام لغة جافاسكريبت
@@ -1305,7 +1296,6 @@ ar:
   tutorial_gpbcircle_name: اصنع دائرة ألوان تفاعلية
   tutorial_gpbpaint_name: أنشئ محرر الرسم الخاص بك
   tutorial_cocomarcade_name: 'منصة "CodeCombat": بناء لعبة أركيد!'
-  tutorial_techcpp_name: 7 ميزات للغة C++17 ستسهل البرمجة
   tutorial_beetik_name: برمجة موسيقى فرانز ليست
   tutorial_codedj_name: تأليف الموسيقى باستخدام Code DJ
   tutorial_rgadvan_name: برمجة RoboGarden - متقدم
@@ -1381,7 +1371,6 @@ ar:
   tutorial_ifly_name: منصة "iFly"
   tutorial_idowedo_name: منصة "iDo WeDo"
   tutorial_diggindwarf_name: لعبة "Diggin' Dwarf"
-  tutorial_rmedr_name: برمجة روبوت محاكاة VEX EDR V5 باستخدام Google Blockly
   tutorial_spheroit_name: 'الكتل البرمجية 2: (If/Then Else)'
   tutorial_gameofcodes_name: لعبة الأكواد
   tutorial_blocklygames_name: ألعاب بلوكلي
@@ -1392,7 +1381,6 @@ ar:
   tutorial_bcjs1_name: عالم الجافاسكريبت
   tutorial_bcjs2_name: عالم الجافاسكريبت 2
   tutorial_3dbearmars_name: لعبة روّاد المرّيخ "The Mars Pioneers"
-  tutorial_alexaskill_name: 'مخططات أليكسا: إنشاء مهارة أليكسا'
   tutorial_bitsboxyak_name: لعبة "Yak Attack!" أنشئ بطاقة مع كود مكتوب
   tutorial_blockscadbargraphs_name: 'الرسوم البيانية بالأعمدة '
   tutorial_blockscadbirdhouses_name: لعبة "Birdhouses"
@@ -1450,7 +1438,6 @@ ar:
   tutorial_codinismhero_name: منصة "Programming Hero"
   tutorial_discovery_name: اكتشاف غير عادي
   tutorial_csfirstname_name: تحريك الاسم
-  tutorial_obstaclecourse_name: تصفح دورة الحواجز باستخدام "CodeSnaps"
   tutorial_edisonmove_name: 'الروبوت Edison وEdPy: اجعل الروبوت اديسون يتحرك'
   tutorial_edisonspider_name: الروبوت إديسون والفخ اللولبي للعنكبوت
   tutorial_edisonspotlight_name: نفِّذ الأداء تحت الأضواء مع الروبوت اديسون
@@ -1851,8 +1838,6 @@ ar:
   tutorial_bbot_shortdescription: علم طلابك (البالغين من العمر 7 سنوات وما فوق) البرمجة
     بطريقة ممتعة وسهلة. ليس هناك حاجة إلى معرفة أو خبرة سابقة في البرمجة!
   tutorial_scratchg_shortdescription: تعرف على كيفية برمجة الألعاب بلغة سكراتش
-  tutorial_roboticfriends_shortdescription: برنامج تعليمي لا يتطلب أي أجهزة إلكترونية
-    لمجموعة من الطلاب
   tutorial_sjforest_shortdescription: استخدم تطبيق البرمجة "ScratchJr" لعمل برنامج
     تتحرك فيه الحيوانات المختلفة في غابة مظلمة.
   tutorial_sjgreet_shortdescription: استخدم تطبيق البرمجة "ScratchJr" لعمل برنامج
@@ -1937,8 +1922,6 @@ ar:
     وإنشاء مستوى لعبهم الخاص باستخدام الروبوت القابل للبرمجة Ozobot.
   tutorial_vidcodeio_shortdescription: اربط مهام جافا سكريبت بكل من مشاكل الرياضيات
     والعالم الحقيقي.
-  tutorial_besttech_shortdescription: سيتعرف الطلاب على الاختراعات التكنولوجية الهامة
-    ويناقشونها خلال العقود القليلة الماضية.
   tutorial_tlcbrain_shortdescription: اكتشف كيف يعمل دماغ الإنسان من خلال إنشاء نموذج
     حاسوبي للخلايا العصبية من الطلاب الذين يلعبون لعبة "Snap".
   tutorial_hopquiz_shortdescription: برمج مسابقة أسئلة متعددة الاختيارات لاختبار معرفة
@@ -1951,7 +1934,6 @@ ar:
   tutorial_bbcmathi_shortdescription: خطة درس مستندة إلى المعايير للمستويات 3-5.
   tutorial_tlcpixel_shortdescription: قم بحل ألغاز التفكير المنطقي البسيطة بالألوان
     والأرقام واكتسب فهمًا أعمق لتمثيل الصورة وضغطها.
-  tutorial_arduino_shortdescription: تعلَّم كيفية إنشاء دائرة أساسية وصنع وميض الضوء.
   tutorial_introrobo_shortdescription: سيتعرف الطلاب على "Dash and Dot" أثناء معرفة
     أفكار الروبوتات والبرمجة.
   tutorial_tlcinvis_shortdescription: قم بخدعة حيث يمكنك نقل بطاقة بطريقة سحرية من
@@ -1989,8 +1971,6 @@ ar:
     ولكن بعد ذلك جمعتها مرة أخرى والآن يوجد بها 16 روبوتًا فقط.
   tutorial_tlcaus_shortdescription: قم بخدعة سحرية حيث تتنبأ ببطاقة مختارة، مع تقديم
     كل من خوارزميات البحث والتفكير الحاسوبي.
-  tutorial_oralhist_shortdescription: إن مشروع التاريخ الشفوي لمعلمي الحوسبة عبارة
-    عن مجموعة من المقابلات بالإضافة إلى مواد وأدوات تعليمية مرتبطة بمجموعة "CEOHP".
   tutorial_tlcmicro_shortdescription: يتسابق الناس في تصميمات مختلفة للميكروويف لمعرفة
     أيها أسهل للاستخدام للقيام بمهمة بسيطة. ويعتبر البعض أكثر تعقيدًا من الآخرين.
   tutorial_imathematician_shortdescription: استخدم الرياضيات (نظرية الألعاب) وعلوم
@@ -2014,7 +1994,6 @@ ar:
   tutorial_grokflags_shortdescription: استخدم لغة البرمجة بايثون وأرشد السلاحف لرسم
     أعلام من جميع أنحاء العالم! كم عدد الدول التي تعرفها؟
   tutorial_robomind_shortdescription: اكتب التعليمات البرمجية لروبوت افتراضي.
-  tutorial_scratchanimwork_shortdescription: دليل ورشة عمل لتعريف الطلاب بلغة سكراتش.
   tutorial_adventureq_shortdescription: استخدم القطع البرمجة (المادية أو في اللعبة)
     لتعلم منطق البرمجة.
   tutorial_khan-es_shortdescription: تعلم الرسم باستخدام لغة جافا سكريبت
@@ -2023,7 +2002,6 @@ ar:
   tutorial_khe_shortdescription: تعلم الرسم باستخدام لغة جافا سكريبت
   tutorial_kfr_shortdescription: تعلم الرسم باستخدام لغة جافا سكريبت
   tutorial_app-inventor_shortdescription: أنشئ تطبيقك الخاص! (لهواتف الأندرويد فقط)
-  tutorial_bits_shortdescription: تحرَّك خطوة بخطوة!
   tutorial_blockly_shortdescription: قم بتنزيل ملف مضغوط للتعلم دون اتصال بالإنترنت.
   tutorial_tynker_shortdescription: تعلم البرمجة عن طريق حل الألغاز الممتعة وتصميم
     الألعاب الخاصة بك.
@@ -2031,8 +2009,6 @@ ar:
   tutorial_code-combat_shortdescription: اهزم الغول لتعلم لغة بايثون أو لغة جافاسكريبت
     في اللعبة المبرمجة!
   tutorial_mky_shortdescription: يقوم الطلاب ببرمجة قرد لصيد الموز.
-  tutorial_spellcraft_shortdescription: تعرف على البرمجة القائمة على الأحداث باستخدام
-    قوة "CodeSpells"!
   tutorial_pirates_shortdescription: انتقل عبر المياه البلورية في نصف الكرة الجنوبي،
     وقم ببرمجة خرائط كنوزك واكتشف الثروات التي تقع على الشواطئ الذهبية. إنها طريقة
     ممتعة لتعلم المفاهيم الأساسية للبرمجة.
@@ -2126,8 +2102,6 @@ ar:
     HTML ولغة CSS، والانتهاء من خلال إنشاء بطاقة التهنئة الخاصة بك.
   tutorial_khandata_shortdescription: هل تحب اللعب بالبيانات؟ تعلَّم كيفية معالجة
     البيانات في قاعدة بيانات وإنشاء متجرك المخصص
-  tutorial_robomeshiq_shortdescription: يكتب الطلاب كود بلوكلي الخاص بجوجل للتحكم
-    في روبوتات VEX IQ الشهيرة.
   tutorial_googlelogo_shortdescription: أضف الحيوية على شعار جوجل باستخدام خيالك وقليل
     من التعليمات البرمجية.
   tutorial_playtune_shortdescription: استخدم مهارات البرمجة لحل الألغاز الموسيقية
@@ -2237,8 +2211,6 @@ ar:
   tutorial_techikb_shortdescription: الميزات الأساسية للغة البرمجة "كوتلن" باختصار
   tutorial_kanostreet_shortdescription: قم بعمل عمل فني جميل وفريد من نوعه مع تحديات
     البرمجة "Street Art" على منصة "Kano"
-  tutorial_nyblebot_shortdescription: البرمجة هي سحر يساعد الأطفال على إنشاء أشياء
-    مختلفة بواسطة البرمجة.
   tutorial_codemojijs_shortdescription: صمَّمت منصة (Codemoji) سلسلة "Beginning Javascript"
     لجعل الطلاب يكتبون أوامر حقيقية بلغة جافاسكريبت تمكن من التحكم وتحريك مختلف الشخصيات.
   tutorial_techapf_shortdescription: 7 حيل مفيدة لإتقان بلغة بايثون كاحترافي!
@@ -2262,7 +2234,6 @@ ar:
   tutorial_gpbcircle_shortdescription: أنشئ ألوانًا جميلة بطريقة تفاعلية.
   tutorial_gpbpaint_shortdescription: أنشئ وخصص تطبيقًا للرسم.
   tutorial_cocomarcade_shortdescription: أنشيء لعبة الأركيد الخاصة بك وتحدي أصدقائك!
-  tutorial_techcpp_shortdescription: 7 مميزات تساعدك على تبسيط كود (C++17)
   tutorial_beetik_shortdescription: استخدم الكود لاختراق موسيقى الملحن فرانز ليزت.
   tutorial_codedj_shortdescription: تعلم أساسيات لغة جافاسكريبت وابدأ في تأليف إيقاعاتك
     الخاصة باستخدام "Code DJ"
@@ -2402,8 +2373,6 @@ ar:
     الأشكال البسيطة.
   tutorial_diggindwarf_shortdescription: يحتاج الأقزام إلى مساعدتك للتنقل والحفر وجمع
     الأحجار الكريمة باستخدام لغة جافا سكريبت.
-  tutorial_rmedr_shortdescription: برمج روبوت "VEX EDR" للتنقل في متاهة باستخدام برمجة
-    بلوكلي.
   tutorial_spheroit_shortdescription: تعلم ما يتعلق بالعبارات الشرطية الأخرى أثناء
     إنشاء لعبة صوت الحيوانات التي نطلق عليها اسم "Animal Toss!"
   tutorial_gameofcodes_shortdescription: أنشئ لعبة التنين الرائعة وقم بتصديرها كتطبيق
@@ -2423,9 +2392,6 @@ ar:
     قائمة على المشاريع التي تعلمنا الحقائق حول كوكب المريخ والظروف التي يعيش فيها
     البشر هناك. سيقوم الطلاب ببناء مستعمرة باستخدام الواقع المعزز والطباعة ثلاثية
     الأبعاد لمرافق المستعمرة.
-  tutorial_alexaskill_shortdescription: ابتكر مهارات "أليكسا" الخاصة بك باستخدام مخططات
-    "مهارات أليكسا" - تعرف على استخدام الصوت والذكاء الاصطناعي والتعلم الآلي لإنشاء
-    مهارات "أليكسا" التي تختارها.
   tutorial_bitsboxyak_shortdescription: اكتب كود جافاسكريبت المعدَّل لإنشاء بطاقة
     تهنئة يمكنك إرسالها عبر البريد الإلكتروني إلى الأصدقاء والعائلة. هجوم  ثور التيبت!
     هو نشاط مفتوح بالكامل يقدم المتغيرات وأوامر الحركة ودوال الحلقات والمزيد.
@@ -2575,8 +2541,6 @@ ar:
     قصة فريدة خاصة به باستخدام التعليمات البرمجية.
   tutorial_csfirstname_shortdescription: اختر اسمًا وأضف الحياة إلى حروف الكلمات باستخدام
     البرمجة. اختر لقبًا أو اسم حيوان أليف أو حيوانًا أو رياضة أو مكانًا أو هواية.
-  tutorial_obstaclecourse_shortdescription: تعاون مع فريقك لبرمجة برنامج ينقل الروبوت
-    بنجاح من خلال مضمار حواجز.
   tutorial_edisonmove_shortdescription: قدِّم البرمجة النصية والمفهوم الحاسوبي الأساسي
     للتسلسل لطلابك باستخدام الروبوتات "Edison" و"EdPy"، وهي برمجة نصية تعتمد على لغة
     بايثون.
@@ -3271,11 +3235,6 @@ ar:
     الحاسوب. ولكن كيف تتم برمجتها؟ هذا النشاط يقدم للطلاب لغة البرمجة "سكراتش" ثم
     يوضح لهم كيفية برمجة أنماط مختلفة من الألعاب. يتم توفير جميع الأعمال الفنية اللازمة
     للألعاب، ويجب على الطلاب معرفة كيفية ربط كل شيء معًا لإنشاء لعبة فعالة.
-  tutorial_roboticfriends_longdescription: باستخدام "روبوت المفردات" المحددة مسبقًا،
-    سيكتشف الطلاب كيفية توجيه بعضهم البعض لإنجاز مهام محددة دون مناقشتها أولاً. يعلم
-    هذا الدرس الأطفال العلاقة بين الرموز والإجراءات، بالإضافة إلى مهارة تصحيح الأخطاء
-    التي لا تُقدر بثمن. يعمل "My Robotic Friends" بشكل أفضل كنشاط جماعي ويتضمن سجل
-    عمل للمعلم للاستخدام في الفصل الدراسي.
   tutorial_sjforest_longdescription: نشاط "هل يمكنني إنشاء غابة مخيفة؟" (Can I Make
     a Spooky Forest?) هو نشاط متوسط مخصص للأطفال في رياض الأطفال حتى الصف الثاني والذين
     لديهم بعض الخبرة السابقة في البرمجة للتعرف على وإتقان المزيد من المميزات المتقدمة
@@ -3454,8 +3413,6 @@ ar:
     ليست هناك حاجة إلى أي خبرة أو معرفة سابقة بالبرمجة أو الروبوت "Ozobot" لهذا البرنامج التعليمي. ومع ذلك، حتى الطلاب الذين لديهم بعض الخبرة في البرمجة سيشاركون في ألعاب "Ozobot". تم تصميم البرنامج التعليمي للصفوف من 2 إلى 12 ويمكن تخصيصه وفقًا لقدرات طلابك.
   tutorial_vidcodeio_longdescription: في هذا التمرين، ستتحدث مع طلابك عن كيفية ارتباط
     ذلك بما يعرفونه بالفعل عن الرياضيات من خلال حل معادلة رياضية باستخدام البرمجة.
-  tutorial_besttech_longdescription: سيتعرف الطلاب على الاختراعات التكنولوجية الهامة
-    ويناقشونها خلال العقود القليلة الماضية.
   tutorial_tlcbrain_longdescription: يستكشف هذا النشاط كيف يمكن استخدام النمذجة الحاسوبية
     (جزء أساسي من التفكير الحاسوبي) للمساعدة في فهم النظم البيولوجية - الخلايا العصبية
     هنا. نرى كيف كانت طريقة عمل أدمغتنا أيضًا مصدر إلهام لطريقة جديدة لبرمجة أجهزة
@@ -3482,12 +3439,6 @@ ar:
     من أرقام تلو الأخرى إلى ألغاز أكثر تعقيدًا استنادًا إلى الضغط؛ حيث يتم تمثيل الصور
     بأرقام أقل لذا تستهلك مساحة تخزين أقل - ولكن هل يمكنك استعادتها! يحتاج كل تمثيل
     إلى خوارزمية خاصة به لاسترجاع الصورة.
-  tutorial_arduino_longdescription: هل تساءلت يومًا كيف تُحدث الألعاب ضجيجًا وتومض
-    الأضواء عند الضغط على الأزرار؟ يتم استخدام وحدات التحكم الدقيقة والدوائر في جميع
-    أنواع الأشياء اليومية. من السيارات التي يتم التحكم فيها عن بُعد إلى الروبوتات
-    والطائرات بدون طيار. تستخدم مصابيح الشوارع أجهزة استشعار لتحديد متى تغرب الشمس،
-    ومقبض التحكم في مستوى الصوت الموجود في ستريو السيارة يضبط المقاومة من خلال متحكم
-    دقيق. إنها في كل مكان!"
   tutorial_introrobo_longdescription: في هذا الدرس، سيتعرف الطلاب على الروبوت "Dash"
     والروبوت "Dot" أثناء التعرف على أفكار الروبوتات والبرمجة. سيكتسب الطلاب فهمًا
     لماهية الروبوت، وكيف يشعرون بالعالم من حولهم، وكيف يمكن للبرامج التحكم في الروبوتات.
@@ -3564,8 +3515,6 @@ ar:
     لا تُنسى. يقدم خدعة سحرية ويُظهر كيف يمكن استخدام التجريد والتفكير المنطقي والنمذجة
     الحاسوبية للتحقق من عمل الخوارزمية. وإلى جانب نشاط "Punch card searching"، فإنه
     يقدم خوارزمية فرق تسد التي كانت تستخدمها أجهزة الحاسوب الأولى.
-  tutorial_oralhist_longdescription: إن مشروع التاريخ الشفوي لمعلمي الحوسبة عبارة
-    عن مجموعة من المقابلات بالإضافة إلى مواد وأدوات تعليمية مرتبطة بمجموعة "CEOHP".
   tutorial_tlcmicro_longdescription: يمكن استخدام هذا الفيديو كمقدمة عامة للتفاعل
     بين الإنسان والحاسوب (HCI) وعلى وجه الخصوص لماذا العديد من الأدوات أكثر استخدامًا
     مما هو مطلوب. يُحدث التصميم الفارق، ومن المهم أن يتم تقييم الواجهات للتحقق من
@@ -3612,10 +3561,6 @@ ar:
   tutorial_robomind_longdescription: يتعلم الطلاب أساسيات البرمجة عن طريق التحكم في
     الروبوت الافتراضي الخاص بهم. الدورة التدريبية عبر الإنترنت متكاملة مع عروض تقديمية
     قصيرة وأفلام ومسابقات وإرشادات / تلميحات تلقائية للمساعدة في تمارين البرمجة.
-  tutorial_scratchanimwork_longdescription: 'يقدم هذا الدليل أفكارًا لقيادة ورشة عمل
-    مدتها ساعة واحدة باستخدام لغة "سكراتش". سيكتسب الطلاب خبرة في البرمجة أثناء تحريك
-    أسمائهم أو الكلمة المفضلة لديهم. دليل المعلم هذا مصمَّم للاستخدام مع هذا البرنامج
-    التعليمي الحاص بلغة "سكراتش": scratch.mit.edu/name'
   tutorial_adventureq_longdescription: درس "Adventure with Q" هي خطة درس للمعلمين
     (أو أي شخص) لاستخدامها لتقديم منطق البرمجة في إعداد المجموعة. يتكون النشاط من
     أسئلة مختلفة للأطفال لإكمالها. يتعلم الأطفال الأوامر الأساسية من خلال مساعدة  الكائن
@@ -3636,11 +3581,6 @@ ar:
     الساعة من التعليمات البرمجية للمبتدئين والخبراء على حد سواء، وستجعلك على استعداد
     لبدء إنشاء تطبيقاتك الخاصة قبل أن تعرفها. تخيَّل مشاركة إبداعاتك في التطبيقات
     مع أصدقائك! هذه الأنشطة مناسبة للأفراد وللمعلمين في الفصول.
-  tutorial_bits_longdescription: الروبوت "Bit" هو روبوت LEGO® مغامر للغاية، ولكن كما
-    هو الحال مع جميع المخلوقات الصغيرة، أحيانًا لا يتمكن الروبوت "Bit" من الحصول على
-    البرامج بشكل صحيح. يمكنك مساعدة "Bit" في حل التحديات عن طريق تحديد البرامج المطلوبة.
-    يمكنك القيام بذلك عن طريق إنشاء سلسلة من الكتل البرمجية الخاصة بالسلوك التي تخبر
-    الروبوت "Bit" بما يجب القيام به.
   tutorial_blockly_longdescription: هل لديك أجهزة حاسوب ذات اتصال بطيء بالإنترنت (أو
     غير موجود)؟ قم بتنزيل الإصدار غير المتصل من "Blockly Games" - يمكن تحميل ملف مضغوط
     واحد بحجم 3 ميجا بايت على أي جهاز حاسوب أو استخدامه خارج شريحة الذاكرة.
@@ -3657,11 +3597,6 @@ ar:
     للجميع، سواء مع أو بدون أي تجربة سابقة في البرمجة. ستمنحك منصة "CodeMonkey" جميع
     التعليمات والتلميحات التي تحتاجها، وستكافئك بعشرات النجوم. اكتب الكود. واجمع الموز.
     وأنقذ العالم.
-  tutorial_spellcraft_longdescription: تعلم البرمجة القائمة على الأحداث باستخدام قوة
-    التعويذات! باستخدام "CodeSpells"، يمكنك تصميم وإنشاء سلسلة الأسئلة الخاصة بك باستخدام
-    لغة البرمجة "بلوكلي" سهلة الاستخدام من جوجل أو محرر نصوص جافاسكريبت مدمج. ومن
-    خلال التهجئة الإملائية، سيتعلم الطلاب كيفية كتابة التعليمات البرمجية بناءً على
-    الأحداث والتعرف على مفاهيم البرمجة الموجهة بالأحداث.
   tutorial_pirates_longdescription: الكابتن "Hack" هو قرصان يبحث عن الكنز. يكتب أيضا
     خرائط الكنز، ويكتبها مثل كتابة التعليمات البرمجية. يستخدم (اللاعب) "كود القرصنة"
     لهذا الغرض. إنها لغة برمجة قائمة على الرمز، تُستخدم للتعليمات وحتى لسلوكيات الذكاء
@@ -3848,11 +3783,6 @@ ar:
     بك.'
   tutorial_khandata_longdescription: 'أكاديمية خان: تعلمك قواعد البيانات كيفية معالجة
     البيانات في قاعدة بيانات وإنشاء متجر مخصص خاص بك.'
-  tutorial_robomeshiq_longdescription: يكتب الطلاب كود "Google Blockly" للتحكم في
-    روبوتات "VEX IQ" الشهيرة. يمكنهم اختيار كتابة كود إما للروبوت الافتراضي، أو روبوت
-    حقيقي "VEX IQ" قاموا ببنائه بأنفسهم، وكلا الخيارين متاحين في نفس واجهة التطوير
-    المستندة إلى الويب. كما يتعلم الطلاب حركة الروبوت الأساسية، وكيفية استخدام جهاز
-    استشعار وجهاز الإخراج. إنه نشاط سهل وممتع.
   tutorial_googlelogo_longdescription: استخدم إبداعك وخيالك لجعل شعار جوجل ينبض بالحياة
     باستخدام البرمجة. اجعل الحروف ترقص أو احكي قصة أو أنشيء لعبة. مع لغة "سكراتش"
     و"CS First"، يمكن لأي شخص أن يصبح مُصممًا ومبرمجًا اليوم!
@@ -4083,16 +4013,6 @@ ar:
     باستخدام فرشاة الرسم، ويصنعون أعمال فنية جميلة وفريدة من نوعها. وعلى مدار النشاط،
     سيتعلم المصنعون مبادئ علوم الحاسوب أثناء استخدام لغة برمجة حقيقية بطريقة بديهية
     وجذابة. ومع موارد المعلمين والمحتوى الإرشادي، يمكن للجميع الاستمتاع.
-  tutorial_nyblebot_longdescription: تطبيق "Boogie Bot" هو تطبيق برمجة ممتع وجذاب.
-    هذا التطبيق ثلاثي الأبعاد، المليء بالحياة والطاقة، سيقدم للأطفال أساسيات برمجة
-    الحاسوب باستخدام لغة البرمجة المرئية "بلوكلي" من جوجل.  تطبيق "Boogie Bot" هو
-    روبوت راقص يمكن برمجته للقيام بحركات الرقص. مميزات التطبيق (جميع المميزات المتاحة
-    في الإصدار الكامل) تعلم كيفية البرمجة باستخدام الكتل البرمجية، وإنشاء رقصتك الخاصة
-    مع التعليمات البرمجية، والاختيار من بين العديد من أغاني الرقص الفريدة المختلفة،
-    وتحويل الغرفة إلى منطقة حفلات عصرية، وإضافة تأثيرات خاصة مذهلة على المسرح، وكسب
-    العملات المعدنية بينما تتعلم هياكل البرمجة. قم بتزيين الغرفة بأشياء رائعة، واللعب
-    والاستكشاف في غرفة تفاعلية مليئة بالمميزات المخفية، وتسجيل وحفظ مقطع فيديو من
-    إبداعك الشخصي الرائع.
   tutorial_codemojijs_longdescription: تم تصميم لغة "جافاسكريبت" في البداية لجعل الطلاب
     يكتبون أوامر بسيطة لها تأثير كبير على تصرفات الشخصيات. سيكتب الطلاب أوامر تجعل
     الشخصيات تفعل كل شيء من التقلبات الخلفية لإصدار الأصوات وحتى التحدث. سيساعدك هذا
@@ -4142,9 +4062,6 @@ ar:
   tutorial_cocomarcade_longdescription: هل أنت جاهز لإنشاء لعبة رائعة؟ أصقل مفاهيم
     البرمجة المتقدمة مثل الوظائف والأحداث باستخدام لغة "بايثون" أو "جافاسكريبت"، ثم
     استخدم هذه المهارات لبناء لعبة البقاء على قيد الحياة الخاصة بك!
-  tutorial_techcpp_longdescription: يهدف كل مبرمج يستخدم لغة "C++" إلى طرق أبسط وأنظف
-    وأكثر تعبيرًا للبرمجة. يركز هذا البرنامج التعليمي المفيد على 7 مميزات رائعة للغة
-    البرمجة "C++17" ستجعل برمجتك أجمل.
   tutorial_beetik_longdescription: في هذا النشاط، يعيد الطلاب بناء جزء صغير من قطعة
     موسيقية شهيرة للملحن فرانز ليست. سيتعلم الطلاب كيفية تضمين الحلقات وكيف يتم استخدامها
     في كل من علوم الحاسوب والموسيقى. هذا دليل خطوة بخطوة سيقدم التفكير الخوارزمي في
@@ -4476,9 +4393,6 @@ ar:
   tutorial_diggindwarf_longdescription: يحتاج الأقزام إلى مساعدتك للتنقل والحفر وجمع
     الأحجار الكريمة! تعرف على كيفية استخدام لغة "جافاسكريبت" لتوجيه قزمك من خلال المتاهات
     والألغاز.
-  tutorial_rmedr_longdescription: باستخدام لغة "بلوكلي" في "Robot Mesh Studio"، قم
-    ببرمجة روبوت VEX EDR "محاكى" عبر الإنترنت وشاهده يمر في متاهة. يتعلم الطلاب حركة
-    الروبوت الأساسية، وكيفية دمج ثلاثة أجهزة استشعار ومخرج واحد في برامجهم.
   tutorial_spheroit_longdescription: تعلم العبارات الشرطية للمرة الأولى من خلال بناء
     لعبة ممتعة حيث ستقوم برمي "Sphero" وتخمين أصوات الحيوانات. يعد هذا نشاطًا رائعًا
     بعد إكمال الكتل 1، ويمكن استخدامه في "ساعة من البرمجة".
@@ -4535,11 +4449,6 @@ ar:
     على المشاريع التي تعلمنا الحقائق حول كوكب المريخ والظروف التي يعيش فيها البشر
     هناك. سيقوم الطلاب ببناء مستعمرة باستخدام الواقع المعزز والطباعة ثلاثية الأبعاد
     لمرافق المستعمرة.
-  tutorial_alexaskill_longdescription: ابتكر مهارات "أليكسا" الخاصة بك باستخدام مخططات
-    "مهارات أليكسا" - تعرف على استخدام الصوت والذكاء الاصطناعي والتعلم الآلي لإنشاء
-    مهارات "أليكسا" التي تختارها. تستطيع "أليكسا" أن تقول نكتة أو تغني أغنية أو تشارك
-    قصة. (يلزم تسجيل الدخول إلى أمازون) يمكن إكمال النشاط بواسطة الأفراد أو توجيه
-    المعلم.
   tutorial_bitsboxyak_longdescription: اكتب كود جافاسكريبت معدَّل لإنشاء بطاقة تهنئة
     يمكنك إرسالها بالبريد الإلكتروني إلى الأصدقاء والعائلة. نشاط "Yak Attack"! هو
     نشاط مفتوح بالكامل يقدم المتغيرات وأوامر الحركة ووظائف التكرار والمزيد. هذا نشاط
@@ -4753,8 +4662,6 @@ ar:
     قصة فريدة خاصة به باستخدام التعليمات البرمجية.
   tutorial_csfirstname_longdescription: اختر اسمًا وأضف الحياة إلى حروف الكلمات باستخدام
     البرمجة. اختر لقبًا أو اسم حيوان أليف أو حيوانًا أو رياضة أو مكانًا أو هواية.
-  tutorial_obstaclecourse_longdescription: تعاون مع فريقك لبرمجة برنامج ينقل الروبوت
-    بنجاح من خلال مضمار حواجز.
   tutorial_edisonmove_longdescription: قدِّم البرمجة النصية والمفهوم الحاسوبي الأساسي
     للتسلسل لطلابك باستخدام الروبوتات "Edison" ولغة البرمجة "EdPy"، وهي لغة برمجة
     نصية تعتمد على لغة "بايثون". استكشف أساسيات علوم الحاسوب والبرمجة بما في ذلك الوظائف
@@ -5208,7 +5115,7 @@ ar:
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
     own augmented reality virtual space.
   tutorial_itchball_longdescription: Get a ball to bounce around the screen. Learn
-    about loops and conditionals within loops
+    about loops and conditionals within loops.
   tutorial_ttrace_longdescription: By calling functions and designing classes, players
     program their own race car to be fast, nimble, and powerful; during races, they
     can then hack their competitors' vehicles to scramble their controls.
@@ -5221,14 +5128,14 @@ ar:
   tutorial_itchshapes_longdescription: Learn how to draw shapes in Scratch. You will
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
-    creating your first program in an online coding editor
+    creating your first program in an online coding editor.
   tutorial_vidcodeplastiche_longdescription: تستمر مشكلة البلاستيك الذي يملأ محيطاتنا
     في التدهور. ولحسن الحظ، يمكنك جعل صوتك مسموعًا بواسطة البرمجة من خلال التلوث البلاستيكي
     "PSA". بعد برمجة "PSA" بشأن التلوث البلاستيكي باستخدام لغة "جافاسكريبت"، يمكنك
     إنشاء مقطع فيديو آخر حول أي موضوع تهتم به! تعلم استخدام الحلقات والموجات الجيبية
     والرموز التعبيرية المخصصة لإنشاء مشروع فريد.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
-    and Machine Learning, as well as programing your own chatbot!
+    and Machine Learning, as well as programming your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
     create your own game in the process!
   tutorial_codehsdesign_longdescription: 'Coders will learn how programming can support
@@ -5664,7 +5571,6 @@ ar:
     اليابانية
   tutorial_bbot_language: الهولندية، الساموي، الإنجليزية
   tutorial_scratchg_language: الإنجليزية فقط
-  tutorial_roboticfriends_language: الإنجليزية، الإسبانية
   tutorial_sjforest_language: الإنجليزية فقط
   tutorial_sjgreet_language: الإنجليزية فقط
   tutorial_sjsunset_language: الإنجليزية فقط
@@ -5710,7 +5616,6 @@ ar:
   tutorial_tickles_language: متعدد اللغات
   tutorial_ozogame_language: الإنجليزية فقط
   tutorial_vidcodeio_language: الإنجليزية فقط
-  tutorial_besttech_language: الإنجليزية فقط
   tutorial_tlcbrain_language: الإنجليزية فقط
   tutorial_hopquiz_language: الإنجليزية فقط
   tutorial_unfortunate_language: الإنجليزية فقط
@@ -5718,7 +5623,6 @@ ar:
   tutorial_elaseq_language: الإنجليزية فقط
   tutorial_bbcmathi_language: الإنجليزية فقط
   tutorial_tlcpixel_language: الإنجليزية فقط
-  tutorial_arduino_language: الإنجليزية فقط
   tutorial_introrobo_language: الإنجليزية فقط
   tutorial_tlcinvis_language: الإنجليزية فقط
   tutorial_tlcjflap_language: الإنجليزية فقط
@@ -5738,7 +5642,6 @@ ar:
   tutorial_tlcmind_language: الإنجليزية فقط
   tutorial_tlctelebot_language: الإنجليزية فقط
   tutorial_tlcaus_language: الإنجليزية فقط
-  tutorial_oralhist_language: الإنجليزية فقط
   tutorial_tlcmicro_language: الإنجليزية فقط
   tutorial_imathematician_language: الإنجليزية فقط
   tutorial_tlcmagic_language: الإنجليزية فقط
@@ -5754,7 +5657,6 @@ ar:
   tutorial_tynkercan_language: الإنجليزية فقط
   tutorial_grokflags_language: الإنجليزية فقط
   tutorial_robomind_language: الإنجليزية، الهولندية
-  tutorial_scratchanimwork_language: الإنجليزية فقط
   tutorial_adventureq_language: الصينية (المبسطة)، الإنجليزية
   tutorial_khan-es_language: الإسبانية
   tutorial_kpt_language: البرتغالية
@@ -5762,13 +5664,11 @@ ar:
   tutorial_khe_language: العبرية
   tutorial_kfr_language: الفرنسية
   tutorial_app-inventor_language: الإنجليزية فقط
-  tutorial_bits_language: الإنجليزية، الألمانية
   tutorial_blockly_language: الإنجليزية، الإسبانية، الفرنسية، 40 لغة أخرى
   tutorial_tynker_language: الإنجليزية فقط
   tutorial_baypt_language: البرتغالية
   tutorial_code-combat_language: متعدد اللغات
   tutorial_mky_language: متعدد اللغات
-  tutorial_spellcraft_language: الإنجليزية فقط
   tutorial_pirates_language: الإنجليزية، الدنماركية، الألمانية
   tutorial_csfirst_language: الإنجليزية فقط
   tutorial_loopedy_language: الإنجليزية فقط
@@ -5842,7 +5742,6 @@ ar:
   tutorial_soloweb_language: الإنجليزية فقط
   tutorial_khanweb_language: التشيكية، الإنجليزية، البرتغالية (البرازيل)، الإسبانية
   tutorial_khandata_language: التشيكية، الإنجليزية، البرتغالية (البرازيل)، الإسبانية
-  tutorial_robomeshiq_language: الإنجليزية فقط
   tutorial_googlelogo_language: الإنجليزية فقط
   tutorial_playtune_language: الإنجليزية فقط
   tutorial_computeit_language: الإنجليزية، الفرنسية، الألمانية، الإندونيسية، الإيطالية،
@@ -5904,7 +5803,6 @@ ar:
   tutorial_stemcod_language: الإنجليزية فقط
   tutorial_techikb_language: الإنجليزية فقط
   tutorial_kanostreet_language: الإنجليزية فقط
-  tutorial_nyblebot_language: الإنجليزية فقط
   tutorial_codemojijs_language: الإنجليزية فقط
   tutorial_techapf_language: الإنجليزية فقط
   tutorial_techfpjs_language: الإنجليزية فقط
@@ -5920,7 +5818,6 @@ ar:
   tutorial_gpbcircle_language: الإنجليزية فقط
   tutorial_gpbpaint_language: الإنجليزية فقط
   tutorial_cocomarcade_language: متعدد اللغات
-  tutorial_techcpp_language: الإنجليزية فقط
   tutorial_beetik_language: الإنجليزية، الإسبانية
   tutorial_codedj_language: الإنجليزية، الفرنسية
   tutorial_rgadvan_language: الإنجليزية فقط
@@ -5996,7 +5893,6 @@ ar:
   tutorial_ifly_language: الإنجليزية فقط
   tutorial_idowedo_language: الإنجليزية فقط
   tutorial_diggindwarf_language: الإنجليزية فقط
-  tutorial_rmedr_language: الإنجليزية فقط
   tutorial_spheroit_language: الإنجليزية فقط
   tutorial_gameofcodes_language: الإنجليزية، البرتغالية، الروسية، الإسبانية
   tutorial_blocklygames_language: الإنجليزية، الإسبانية، الفرنسية، 40 لغة أخرى
@@ -6008,7 +5904,6 @@ ar:
   tutorial_bcjs1_language: الإنجليزية فقط
   tutorial_bcjs2_language: الإنجليزية فقط
   tutorial_3dbearmars_language: الإنجليزية
-  tutorial_alexaskill_language: الإنجليزية
   tutorial_bitsboxyak_language: الإنجليزية
   tutorial_blockscadbargraphs_language: الصينية (المبسطة)، الإنجليزية، الفرنسية، الألمانية،
     اليابانية، النرويجية (بوكمول)، الصربية (السيريلية)، الإسبانية (إسبانيا)، السويدية
@@ -6075,8 +5970,6 @@ ar:
   tutorial_codinismhero_language: الإنجليزية
   tutorial_discovery_language: الإنجليزية، الإسبانية (المكسيك)
   tutorial_csfirstname_language: الإنجليزية، الإسبانية (المكسيك)
-  tutorial_obstaclecourse_language: الصينية، الإنجليزية، الفرنسية، الألمانية، الإيطالية،
-    الإسبانية
   tutorial_edisonmove_language: الإنجليزية
   tutorial_edisonspider_language: الإنجليزية
   tutorial_edisonspotlight_language: الإنجليزية
@@ -6427,7 +6320,6 @@ ar:
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: من الصف الثاني فما فوق
   tutorial_scratchg_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_roboticfriends_string_detail_grades: جميع الأعمار
   tutorial_sjforest_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_sjgreet_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_sjsunset_string_detail_grades: قبل تعلم القراءة - الصف 5
@@ -6472,7 +6364,6 @@ ar:
   tutorial_tickles_string_detail_grades: من الصف الثاني فما فوق
   tutorial_ozogame_string_detail_grades: جميع الأعمار
   tutorial_vidcodeio_string_detail_grades: من الصف الثاني فما فوق
-  tutorial_besttech_string_detail_grades: من الصف التاسع فما فوق
   tutorial_tlcbrain_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_hopquiz_string_detail_grades: الصفوف 6-8
   tutorial_unfortunate_string_detail_grades: قبل تعلم القراءة - الصف 5
@@ -6480,7 +6371,6 @@ ar:
   tutorial_elaseq_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: الصفوف 2-8
-  tutorial_arduino_string_detail_grades: الصفوف 6-8
   tutorial_introrobo_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_tlcinvis_string_detail_grades: من الصف الثاني فما فوق
   tutorial_tlcjflap_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -6500,7 +6390,6 @@ ar:
   tutorial_tlcmind_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_tlctelebot_string_detail_grades: من الصف الثاني فما فوق
   tutorial_tlcaus_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_oralhist_string_detail_grades: من الصف التاسع فما فوق
   tutorial_tlcmicro_string_detail_grades: من الصف الثاني فما فوق
   tutorial_imathematician_string_detail_grades: الصفوف 2-8
   tutorial_tlcmagic_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -6514,7 +6403,6 @@ ar:
   tutorial_tynkercan_string_detail_grades: من الصف الثاني فما فوق
   tutorial_grokflags_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_robomind_string_detail_grades: الصفوف 2-8
-  tutorial_scratchanimwork_string_detail_grades: الصفوف 2-8
   tutorial_adventureq_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_khan-es_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_kpt_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -6522,13 +6410,11 @@ ar:
   tutorial_khe_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_kfr_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_app-inventor_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_bits_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_blockly_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: جميع الأعمار
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: من الصف الثاني فما فوق
-  tutorial_spellcraft_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_pirates_string_detail_grades: الصفوف 2-8
   tutorial_csfirst_string_detail_grades: من الصف الثاني فما فوق
   tutorial_loopedy_string_detail_grades: قبل تعلم القراءة - الصف 5
@@ -6585,7 +6471,6 @@ ar:
   tutorial_soloweb_string_detail_grades: من الصف التاسع فما فوق
   tutorial_khanweb_string_detail_grades: من الصف الثاني فما فوق
   tutorial_khandata_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_robomeshiq_string_detail_grades: من الصف الثاني فما فوق
   tutorial_googlelogo_string_detail_grades: من الصف الثاني فما فوق
   tutorial_playtune_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_computeit_string_detail_grades: من الصف الثاني فما فوق
@@ -6644,7 +6529,6 @@ ar:
   tutorial_stemcod_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_techikb_string_detail_grades: الجامعة
   tutorial_kanostreet_string_detail_grades: قبل تعلم القراءة - الصف 5
-  tutorial_nyblebot_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_codemojijs_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_techapf_string_detail_grades: الجامعة
   tutorial_techfpjs_string_detail_grades: الجامعة
@@ -6660,7 +6544,6 @@ ar:
   tutorial_gpbcircle_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_gpbpaint_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_cocomarcade_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_techcpp_string_detail_grades: الجامعة
   tutorial_beetik_string_detail_grades: الصفوف 6-8
   tutorial_codedj_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_rgadvan_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -6733,7 +6616,6 @@ ar:
   tutorial_ifly_string_detail_grades: من الصف الثاني فما فوق
   tutorial_idowedo_string_detail_grades: الصفوف 2-8
   tutorial_diggindwarf_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_rmedr_string_detail_grades: الصفوف 2-8
   tutorial_spheroit_string_detail_grades: من الصف الثاني فما فوق
   tutorial_gameofcodes_string_detail_grades: من الصف الثاني فما فوق
   tutorial_blocklygames_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -6744,7 +6626,6 @@ ar:
   tutorial_bcjs1_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_bcjs2_string_detail_grades: من الصف التاسع فما فوق
   tutorial_3dbearmars_string_detail_grades: الصفوف 2-8
-  tutorial_alexaskill_string_detail_grades: الصفوف 2-8
   tutorial_bitsboxyak_string_detail_grades: الصفوف 2-8
   tutorial_blockscadbargraphs_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_blockscadbirdhouses_string_detail_grades: قبل تعلم القراءة - الصف 5
@@ -6801,7 +6682,6 @@ ar:
   tutorial_codinismhero_string_detail_grades: من الصف الثاني فما فوق
   tutorial_discovery_string_detail_grades: من الصف الثاني فما فوق
   tutorial_csfirstname_string_detail_grades: من الصف الثاني فما فوق
-  tutorial_obstaclecourse_string_detail_grades: من الصف الثاني فما فوق
   tutorial_edisonmove_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_edisonspider_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_edisonspotlight_string_detail_grades: الصفوف 2-8
@@ -7178,7 +7058,6 @@ ar:
   tutorial_ticklep_string_platforms: do-not-show
   tutorial_bbot_string_platforms: جميع المتصفحات الحديثة
   tutorial_scratchg_string_platforms: جميع المتصفحات الحديثة
-  tutorial_roboticfriends_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_sjforest_string_platforms: تطبيق لأجهزة آيباد
   tutorial_sjgreet_string_platforms: تطبيق لأجهزة آيباد
   tutorial_sjsunset_string_platforms: تطبيق لأجهزة آيباد
@@ -7227,7 +7106,6 @@ ar:
   tutorial_ozogame_string_platforms: جميع المتصفحات الحديثة، أجهزة آيباد، هواتف آيفون،
     أجهزة أندرويد اللوحية، هواتف أندرويد، روبوت "Ozobot"
   tutorial_vidcodeio_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
-  tutorial_besttech_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_tlcbrain_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_hopquiz_string_platforms: أجهزة آيباد وهواتف آيفون
   tutorial_unfortunate_string_platforms: الروبوت "Dash" والروبوت "Dot"
@@ -7236,7 +7114,6 @@ ar:
     الحديثة، أجهزة آيباد، أجهزة أندرويد اللوحية
   tutorial_bbcmathi_string_platforms: do-not-show
   tutorial_tlcpixel_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
-  tutorial_arduino_string_platforms: " لوحات الأردوينو  الإلكترونية"
   tutorial_introrobo_string_platforms: أجهزة آيباد، أجهزة أندرويد اللوحية، الروبوت
     "Dash" والروبوت "Dot"
   tutorial_tlcinvis_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
@@ -7261,7 +7138,6 @@ ar:
   tutorial_tlcmind_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_tlctelebot_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_tlcaus_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
-  tutorial_oralhist_string_platforms: جميع المتصفحات الحديثة
   tutorial_tlcmicro_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_imathematician_string_platforms: جميع المتصفحات الحديثة
   tutorial_tlcmagic_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
@@ -7280,7 +7156,6 @@ ar:
     Edge, Chrome, Firefox, Safari, Android Chrome (خاص بالهواتف)، نظام iOS (خاص بالهواتف)'
   tutorial_robomind_string_platforms: 'المتصفحات: Internet Explorer 11, Microsoft
     Edge, Chrome, Firefox, Safari، أجهزة أندرويد اللوحية، أجهزة آيباد'
-  tutorial_scratchanimwork_string_platforms: جميع المتصفحات الحديثة
   tutorial_adventureq_string_platforms: أجهزة آيباد
   tutorial_khan-es_string_platforms: 'المتصفحات: Internet Explorer 11, Microsoft Edge,
     Chrome, Firefox, Safari'
@@ -7293,13 +7168,11 @@ ar:
   tutorial_kfr_string_platforms: 'المتصفحات: Internet Explorer 11, Microsoft Edge,
     Chrome, Firefox, Safari'
   tutorial_app-inventor_string_platforms: نظام أندرويد
-  tutorial_bits_string_platforms: جميع المتصفحات الحديثة
   tutorial_blockly_string_platforms: جميع المتصفحات الحديثة
   tutorial_tynker_string_platforms: do-not-show
   tutorial_baypt_string_platforms: جميع المتصفحات الحديثة
   tutorial_code-combat_string_platforms: do-not-show
   tutorial_mky_string_platforms: جميع المتصفحات الحديثة
-  tutorial_spellcraft_string_platforms: نظام ويندوز (Windows)
   tutorial_pirates_string_platforms: 'المتصفحات: Internet Explorer 11, Microsoft Edge,
     Chrome, Firefox, Safari، أجهزة أندرويد اللوحية، أجهزة آيباد، هواتف أندرويد، هواتف
     آيفون'
@@ -7372,8 +7245,6 @@ ar:
     هواتف أندرويد، أجهزة آيباد، هواتف آيفون
   tutorial_khanweb_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية
   tutorial_khandata_string_platforms: جميع المتصفحات الحديثة
-  tutorial_robomeshiq_string_platforms: 'المتصفحات: Internet Explorer 11, Chrome,
-    Firefox، والروبوتات "Vex IQ"'
   tutorial_googlelogo_string_platforms: جميع المتصفحات الحديثة
   tutorial_playtune_string_platforms: 'المتصفحات: كروم، فايرفوكس، سفاري'
   tutorial_computeit_string_platforms: جميع المتصفحات الحديثة
@@ -7454,8 +7325,6 @@ ar:
   tutorial_techikb_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
     أجهزة آيباد، هواتف ويندوز، هواتف أندرويد، هواتف آيفون
   tutorial_kanostreet_string_platforms: جميع المتصفحات الحديثة
-  tutorial_nyblebot_string_platforms: أجهزة أندرويد اللوحية، أجهزة آيباد، هواتف أندرويد،
-    هواتف آيفون
   tutorial_codemojijs_string_platforms: جميع المتصفحات الحديثة
   tutorial_techapf_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
     أجهزة آيباد، هواتف ويندوز، هواتف أندرويد، هواتف آيفون
@@ -7478,8 +7347,6 @@ ar:
   tutorial_gpbpaint_string_platforms: جميع المتصفحات الحديثة
   tutorial_cocomarcade_string_platforms: متصفح Internet Explorer 11، متصفح Microsoft
     Edge، متصفح كروم، متصفح فايرفوكس
-  tutorial_techcpp_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
-    أجهزة آيباد، هواتف ويندوز، هواتف أندرويد، هواتف آيفون
   tutorial_beetik_string_platforms: متصفح كروم, متصفح فايرفوكس، أجهزة أندرويد اللوحية،
     أجهزة آيباد
   tutorial_codedj_string_platforms: متصفح كروم، متصفح فايرفوكس، متصفح سفاري، أجهزة
@@ -7590,7 +7457,6 @@ ar:
   tutorial_idowedo_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
     أجهزة آيباد، نظام "WeDo"
   tutorial_diggindwarf_string_platforms: 'المتصفحات: كروم، فايرفوكس، سفاري'
-  tutorial_rmedr_string_platforms: جميع المتصفحات الحديثة، الروبوت "Vex EDR"
   tutorial_spheroit_string_platforms: 'أجهزة آيباد، أجهزة أندرويد اللوحية، هواتف آيفون،
     هواتف أندرويد، الروبوت "Sphero" '
   tutorial_gameofcodes_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
@@ -7606,7 +7472,6 @@ ar:
   tutorial_bcjs2_string_platforms: جميع المتصفحات الحديثة
   tutorial_3dbearmars_string_platforms: أجهزة أندرويد اللوحية، أجهزة آيباد، هواتف
     أندرويد، هواتف آيفون
-  tutorial_alexaskill_string_platforms: جميع المتصفحات الحديثة
   tutorial_bitsboxyak_string_platforms: جميع المتصفحات الحديثة
   tutorial_blockscadbargraphs_string_platforms: جميع المتصفحات الحديثة
   tutorial_blockscadbirdhouses_string_platforms: جميع المتصفحات الحديثة
@@ -7688,7 +7553,6 @@ ar:
     بنظام أندرويد
   tutorial_discovery_string_platforms: جميع المتصفحات الحديثة
   tutorial_csfirstname_string_platforms: جميع المتصفحات الحديثة
-  tutorial_obstaclecourse_string_platforms: أجهزة آيباد
   tutorial_edisonmove_string_platforms: جميع المتصفحات الحديثة
   tutorial_edisonspider_string_platforms: جميع المتصفحات الحديثة، أجهزة آيباد، أجهزة
     أندرويد اللوحية
@@ -8085,7 +7949,6 @@ ar:
   tutorial_ticklep_string_detail_platforms: do-not-show
   tutorial_bbot_string_detail_platforms: ''
   tutorial_scratchg_string_detail_platforms: ''
-  tutorial_roboticfriends_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_sjforest_string_detail_platforms: تطبيق لأجهزة آيباد
   tutorial_sjgreet_string_detail_platforms: تطبيق لأجهزة آيباد
   tutorial_sjsunset_string_detail_platforms: تطبيق لأجهزة آيباد
@@ -8130,7 +7993,6 @@ ar:
   tutorial_tickles_string_detail_platforms: الروبوت "Sphero"
   tutorial_ozogame_string_detail_platforms: الروبوت "Ozobot"
   tutorial_vidcodeio_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
-  tutorial_besttech_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_tlcbrain_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_hopquiz_string_detail_platforms: تطبيق iOS
   tutorial_unfortunate_string_detail_platforms: الروبوت "Dash" والروبوت "Dot"
@@ -8138,7 +8000,6 @@ ar:
   tutorial_elaseq_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_bbcmathi_string_detail_platforms: do-not-show
   tutorial_tlcpixel_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
-  tutorial_arduino_string_detail_platforms: ''
   tutorial_introrobo_string_detail_platforms: الروبوت "Dash" والروبوت "Dot"
   tutorial_tlcinvis_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_tlcjflap_string_detail_platforms: ''
@@ -8158,7 +8019,6 @@ ar:
   tutorial_tlcmind_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_tlctelebot_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_tlcaus_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
-  tutorial_oralhist_string_detail_platforms: ''
   tutorial_tlcmicro_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_imathematician_string_detail_platforms: ''
   tutorial_tlcmagic_string_detail_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
@@ -8172,7 +8032,6 @@ ar:
   tutorial_tynkercan_string_detail_platforms: ''
   tutorial_grokflags_string_detail_platforms: ''
   tutorial_robomind_string_detail_platforms: ''
-  tutorial_scratchanimwork_string_detail_platforms: ''
   tutorial_adventureq_string_detail_platforms: ''
   tutorial_khan-es_string_detail_platforms: ''
   tutorial_kpt_string_detail_platforms: ''
@@ -8180,13 +8039,11 @@ ar:
   tutorial_khe_string_detail_platforms: ''
   tutorial_kfr_string_detail_platforms: ''
   tutorial_app-inventor_string_detail_platforms: نظام أندرويد
-  tutorial_bits_string_detail_platforms: ''
   tutorial_blockly_string_detail_platforms: ''
   tutorial_tynker_string_detail_platforms: do-not-show
   tutorial_baypt_string_detail_platforms: ''
   tutorial_code-combat_string_detail_platforms: do-not-show
   tutorial_mky_string_detail_platforms: ''
-  tutorial_spellcraft_string_detail_platforms: ''
   tutorial_pirates_string_detail_platforms: ''
   tutorial_csfirst_string_detail_platforms: ''
   tutorial_loopedy_string_detail_platforms: الروبوت "Dash" والروبوت "Dot"
@@ -8244,7 +8101,6 @@ ar:
   tutorial_soloweb_string_detail_platforms: ''
   tutorial_khanweb_string_detail_platforms: ''
   tutorial_khandata_string_detail_platforms: ''
-  tutorial_robomeshiq_string_detail_platforms: الروبوتات "Vex IQ"
   tutorial_googlelogo_string_detail_platforms: ''
   tutorial_playtune_string_detail_platforms: ''
   tutorial_computeit_string_detail_platforms: ''
@@ -8303,7 +8159,6 @@ ar:
   tutorial_stemcod_string_detail_platforms: ''
   tutorial_techikb_string_detail_platforms: ''
   tutorial_kanostreet_string_detail_platforms: ''
-  tutorial_nyblebot_string_detail_platforms: ''
   tutorial_codemojijs_string_detail_platforms: ''
   tutorial_techapf_string_detail_platforms: ''
   tutorial_techfpjs_string_detail_platforms: ''
@@ -8319,7 +8174,6 @@ ar:
   tutorial_gpbcircle_string_detail_platforms: ''
   tutorial_gpbpaint_string_detail_platforms: ''
   tutorial_cocomarcade_string_detail_platforms: ''
-  tutorial_techcpp_string_detail_platforms: ''
   tutorial_beetik_string_detail_platforms: ''
   tutorial_codedj_string_detail_platforms: ''
   tutorial_rgadvan_string_detail_platforms: ''
@@ -8392,7 +8246,6 @@ ar:
   tutorial_ifly_string_detail_platforms: الطائرات بدون طيار "Minidrones" من "Parrot"
   tutorial_idowedo_string_detail_platforms: نظام "WeDo"
   tutorial_diggindwarf_string_detail_platforms: ''
-  tutorial_rmedr_string_detail_platforms: الروبوتات "Vex EDR"
   tutorial_spheroit_string_detail_platforms: الروبوت "Sphero"
   tutorial_gameofcodes_string_detail_platforms: ''
   tutorial_blocklygames_string_detail_platforms: ''
@@ -8403,7 +8256,6 @@ ar:
   tutorial_bcjs1_string_detail_platforms: ''
   tutorial_bcjs2_string_detail_platforms: ''
   tutorial_3dbearmars_string_detail_platforms: طابعة ثلاثية الأبعاد
-  tutorial_alexaskill_string_detail_platforms: ''
   tutorial_bitsboxyak_string_detail_platforms: ''
   tutorial_blockscadbargraphs_string_detail_platforms: ''
   tutorial_blockscadbirdhouses_string_detail_platforms: ''
@@ -8460,7 +8312,6 @@ ar:
   tutorial_codinismhero_string_detail_platforms: ''
   tutorial_discovery_string_detail_platforms: ''
   tutorial_csfirstname_string_detail_platforms: ''
-  tutorial_obstaclecourse_string_detail_platforms: الروبوت "Sphero"
   tutorial_edisonmove_string_detail_platforms: الروبوت "Edison"
   tutorial_edisonspider_string_detail_platforms: الروبوت "Edison"
   tutorial_edisonspotlight_string_detail_platforms: الروبوت "Edison"
@@ -8814,7 +8665,6 @@ ar:
   tutorial_ticklep_string_detail_programming_languages: do-not-show
   tutorial_bbot_string_detail_programming_languages: لغة البرمجة المرئية
   tutorial_scratchg_string_detail_programming_languages: لغة مستقلة
-  tutorial_roboticfriends_string_detail_programming_languages: لغة مستقلة
   tutorial_sjforest_string_detail_programming_languages: القطع البرمجية
   tutorial_sjgreet_string_detail_programming_languages: القطع البرمجية
   tutorial_sjsunset_string_detail_programming_languages: القطع البرمجية
@@ -8862,7 +8712,6 @@ ar:
   tutorial_tickles_string_detail_programming_languages: القطع البرمجية
   tutorial_ozogame_string_detail_programming_languages: القطع البرمجية
   tutorial_vidcodeio_string_detail_programming_languages: لغة مستقلة
-  tutorial_besttech_string_detail_programming_languages: القطع البرمجية، C/C++
   tutorial_tlcbrain_string_detail_programming_languages: لغة مستقلة
   tutorial_hopquiz_string_detail_programming_languages: لغة البرمجة المرئية "Hopscotch"
   tutorial_unfortunate_string_detail_programming_languages: القطع البرمجية
@@ -8870,7 +8719,6 @@ ar:
   tutorial_elaseq_string_detail_programming_languages: لغة مستقلة
   tutorial_bbcmathi_string_detail_programming_languages: do-not-show
   tutorial_tlcpixel_string_detail_programming_languages: لغة مستقلة
-  tutorial_arduino_string_detail_programming_languages: الأردوينو (Arduino)
   tutorial_introrobo_string_detail_programming_languages: القطع البرمجية، لغة جافاسكريبت
   tutorial_tlcinvis_string_detail_programming_languages: لغة مستقلة
   tutorial_tlcjflap_string_detail_programming_languages: لغة مستقلة
@@ -8890,7 +8738,6 @@ ar:
   tutorial_tlcmind_string_detail_programming_languages: لغة مستقلة
   tutorial_tlctelebot_string_detail_programming_languages: لغة مستقلة
   tutorial_tlcaus_string_detail_programming_languages: لغة مستقلة
-  tutorial_oralhist_string_detail_programming_languages: لغة مستقلة
   tutorial_tlcmicro_string_detail_programming_languages: لغة مستقلة
   tutorial_imathematician_string_detail_programming_languages: لغة "سكراتش"
   tutorial_tlcmagic_string_detail_programming_languages: لغة مستقلة
@@ -8906,8 +8753,6 @@ ar:
     لغة البرمجة جافاسكريبت، لغة البرمجة بايثون
   tutorial_grokflags_string_detail_programming_languages: لغة البرمجة "بايثون"
   tutorial_robomind_string_detail_programming_languages: القطع البرمجية
-  tutorial_scratchanimwork_string_detail_programming_languages: القطع البرمجية، لغة
-    "سكراتش"
   tutorial_adventureq_string_detail_programming_languages: القطع البرمجية
   tutorial_khan-es_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_kpt_string_detail_programming_languages: لغة البرمجة جافاسكريبت
@@ -8915,13 +8760,11 @@ ar:
   tutorial_khe_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_kfr_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_app-inventor_string_detail_programming_languages: القطع البرمجية
-  tutorial_bits_string_detail_programming_languages: القطع البرمجية، لغة مستقلة
   tutorial_blockly_string_detail_programming_languages: القطع البرمجية
   tutorial_tynker_string_detail_programming_languages: do-not-show
   tutorial_baypt_string_detail_programming_languages: القطع البرمجية
   tutorial_code-combat_string_detail_programming_languages: do-not-show
   tutorial_mky_string_detail_programming_languages: لغة البرمجة "CoffeeScript"
-  tutorial_spellcraft_string_detail_programming_languages: القطع البرمجية، لغة جافاسكريبت
   tutorial_pirates_string_detail_programming_languages: القطع البرمجية، "Pirate code"
   tutorial_csfirst_string_detail_programming_languages: لغة "سكراتش"
   tutorial_loopedy_string_detail_programming_languages: القطع البرمجية
@@ -8982,8 +8825,6 @@ ar:
   tutorial_khanweb_string_detail_programming_languages: لغة البرمجة "HTML"، لغة البرمجة
     "CSS"
   tutorial_khandata_string_detail_programming_languages: لغة البرمجة "SQL"
-  tutorial_robomeshiq_string_detail_programming_languages: القطع البرمجية، لغة البرمجة
-    بايثون
   tutorial_googlelogo_string_detail_programming_languages: القطع البرمجية، لغة "سكراتش"
   tutorial_playtune_string_detail_programming_languages: القطع البرمجية
   tutorial_computeit_string_detail_programming_languages: لغة مستقلة
@@ -9051,7 +8892,6 @@ ar:
   tutorial_stemcod_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_techikb_string_detail_programming_languages: لغة البرمجة "كوتلن"
   tutorial_kanostreet_string_detail_programming_languages: القطع البرمجية، لغة جافاسكريبت
-  tutorial_nyblebot_string_detail_programming_languages: القطع البرمجية
   tutorial_codemojijs_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_techapf_string_detail_programming_languages: لغة البرمجة "بايثون"
   tutorial_techfpjs_string_detail_programming_languages: لغة البرمجة جافاسكريبت
@@ -9069,7 +8909,6 @@ ar:
   tutorial_gpbpaint_string_detail_programming_languages: القطع البرمجية
   tutorial_cocomarcade_string_detail_programming_languages: لغة البرمجة جافا سكريبت،
     لغة البرمجة بايثون، لغة البرمجة لوا، لغة البرمجة CoffeeScript
-  tutorial_techcpp_string_detail_programming_languages: لغة البرمجة "C/C++"
   tutorial_beetik_string_detail_programming_languages: القطع البرمجية
   tutorial_codedj_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_rgadvan_string_detail_programming_languages: القطع البرمجية، لغة البرمجة
@@ -9145,7 +8984,6 @@ ar:
   tutorial_ifly_string_detail_programming_languages: منصة "Tynker"
   tutorial_idowedo_string_detail_programming_languages: لغة "سكراتش"
   tutorial_diggindwarf_string_detail_programming_languages: لغة البرمجة جافاسكريبت
-  tutorial_rmedr_string_detail_programming_languages: القطع البرمجية
   tutorial_spheroit_string_detail_programming_languages: القطع البرمجية، لغة جافاسكريبت
   tutorial_gameofcodes_string_detail_programming_languages: القطع البرمجية، منصة "Ready"،
     منصة "Unity"
@@ -9158,7 +8996,6 @@ ar:
   tutorial_bcjs2_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_3dbearmars_string_detail_programming_languages: لغة مستقلة (يمكن تدريسها
     بلغات متعددة)، تستخدم النمذجة ثلاثية الأبعاد في الواقع المعزز
-  tutorial_alexaskill_string_detail_programming_languages: القطع البرمجية
   tutorial_bitsboxyak_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_blockscadbargraphs_string_detail_programming_languages: القطع البرمجية
   tutorial_blockscadbirdhouses_string_detail_programming_languages: القطع البرمجية
@@ -9227,7 +9064,6 @@ ar:
   tutorial_codinismhero_string_detail_programming_languages: لغة البرمجة "بايثون"
   tutorial_discovery_string_detail_programming_languages: القطع البرمجية، لغة "سكراتش"
   tutorial_csfirstname_string_detail_programming_languages: القطع البرمجية، لغة "سكراتش"
-  tutorial_obstaclecourse_string_detail_programming_languages: القطع البرمجية
   tutorial_edisonmove_string_detail_programming_languages: لغة البرمجة "بايثون"، لغة
     البرمجة "EdPy"، لغة برمجة نصية تعتمد على لغة "بايثون".
   tutorial_edisonspider_string_detail_programming_languages: القطع البرمجية
@@ -9332,7 +9168,7 @@ ar:
   tutorial_gamemaker_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_duckrace_string_detail_programming_languages: القطع البرمجية
   tutorial_allcancodeapps_string_detail_programming_languages: القطع البرمجية
-  tutorial_n2y_string_detail_programming_languages: ''
+  tutorial_n2y_string_detail_programming_languages: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_microsoftarcade_string_detail_programming_languages: القطع البرمجية
   tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
     Scratch
@@ -9557,7 +9393,6 @@ ar:
   tutorial_eddesign_name: درس "Edison the designer"
   tutorial_edshapeup_name: إنشاء روبوت مع إديسون
   tutorial_ozocolor_name: Pop Star | إنشاء مهام باستخدام رموز ألوان Ozobot
-  tutorial_kcjanimals_name: إنشاء رسوم متحركة عن حيوان كندي
   tutorial_icomputeeggs_name: لعبة "iHide Eggs"
   tutorial_rootunplugged_name: برنامج iRobot Code Break
   tutorial_rgtreasure_name: ألغاز RoboGarden - Robo Treasure Chest
@@ -9576,13 +9411,11 @@ ar:
   tutorial_blockscadscale_name: لعبة "Scale City"
   tutorial_tcadloops_name: استخدام الحلقات في برنامج Tinkercad لتصميم نجم متفجرة
   tutorial_phidgets_name: مشروع "A Phidgets Theremin" باستخدام المعالجة
-  tutorial_kcjmerry_name: مشروع تعليم البرمجة "Merry Micro:bits"
   tutorial_modvariables_name: التحقق من المتغيرات وقيم الكتلة باستخدام المكعبات
   tutorial_codestersmicro_name: 'منصة "Codesters": إنشاء لعبة كرة صغيرة'
   tutorial_codestersdata_name: 'منصة "Codesters": برمجة وتصميم بيانات "micro:bit"'
   tutorial_ikodexmas_name: لعبة "iKode Xmas"
   tutorial_rpisensehat_name: إنشاء مُسجِّل بيانات باستخدام "Sense HAT"
-  tutorial_modtraits_name: سمات الشخصية باستخدام أداة "GoPiGo"
   tutorial_mee_name: 'ساعة من البرمجة مع لعبة "ماين كرافت": الذكاء الاصطناعي في خدمة
     المجتمع'
   tutorial_kuborobo_name: لعبة إنشاء مسارات باستخدام "KUBO Robotics Coding"
@@ -9839,11 +9672,6 @@ ar:
     الألوان لتمثيل المهمة. هذا الدرس هو درس تمهيدي ولا يتطلب أي أجهزة إلكترونية لتقديم
     مفهوم المهام. إنه الدرس الأول من سلسلتين من الدروس، ولكن يمكن تدريس أي درس بشكل
     منفصل. يستخدم الدرس الثاني لغة "OzoBlockly" للبناء على مفهوم المهام.
-  tutorial_kcjanimals_longdescription: أنشئ مشروعًا بسيطًا للاحتفال بالبرمجة والحياة
-    البرية الكندية. سيختار الأطفال أحد الحيوانات الكندية، مثل الدب أو الموظ، ويصممون
-    رسوم متحركة تستكشف عالم الحيوان، مثل مواطن الحيوانات وعادات الأكل وأنماط الهجرة
-    وما إلى ذلك. المشروع بسيط بما يكفي للمعلمين أو أولياء الأمور لتسهيل ومساعدة الأطفال
-    على المتابعة.
   tutorial_icomputeeggs_longdescription: يوفر هذا النشاط الذي يقوده المعلم، والذي
     تم تكييفه لساعة البرمجة، فرصة للطلاب لاستكشاف البرمجة الحركية من خلال الروبوتات.
     باستخدام بيئة برمجة السحب والإفلات والمجال الآلي القابل للبرمجة، يقوم التلاميذ
@@ -9892,11 +9720,6 @@ ar:
     والتصميم بمساعدة الحاسوب (CAD) لإنشاء نموذج ثلاثي الأبعاد لنجمة متفجرة.
   tutorial_phidgets_longdescription: قم بإنشاء آلة موسيقية رائعة باستخدام "Phidgets
     and Processing"!
-  tutorial_kcjmerry_longdescription: 'قم ببناء مشروع برمجة تفاعلي باستخدام "micro:
-    bit" للاحتفال بالبرمجة وموسم العطلات. سيستخدم الأطفال مزيجًا من أكواد القطع والحوسبة
-    المادية لإنشاء رسوم متحركة لامعة على كرة الثلج. المشروع بسيط بما فيه الكفاية للمعلمين
-    أو أولياء الأمور لتسهيله ويأتي مع بطاقات النشاط التي يمكن للأطفال استخدامها بمفردهم
-    لمزيد من التحدي.'
   tutorial_modvariables_longdescription: يبحث الطلاب في كيفية تدفق البيانات عبر الشبكة
     باستخدام قطع الروبوتات المكعبة. يفترض هذا الدرس أن الطلاب على دراية بكيفية عمل
     قطع الروبوتات المكعبة بشكل عام. قم بزيارة modrobotics.com/thehub مجانًا للحصول
@@ -9916,8 +9739,6 @@ ar:
     بخطوة، وبرامج تعليمية للتلاميذ وإرشادات التقييم.
   tutorial_rpisensehat_longdescription: تعرف على كيفية استخدام جهاز "Sense HAT" لإنشاء
     جهاز لتسجيل البيانات يمكنه جمع مجموعة من المعلومات عن بيئته المباشرة.
-  tutorial_modtraits_longdescription: يستخدم الطلاب خطوات التفكير الحاسوبي لتحليل
-    سمات الشخصية وإنشاء خوارزمية لتوضيح هذه السمات.
   tutorial_mee_longdescription: قم ببرمجة لعبة "Minecraft Agent" لجمع البيانات حول
     حرائق الغابات. ثم اكتب التعليمات البرمجية للمساعدة في منع انتشار الحريق، وإنقاذ
     القرية، وإعادة الحياة إلى الغابة. تعلم أساسيات البرمجة واستكشف مثالًا حقيقيًا
@@ -10001,7 +9822,6 @@ ar:
   tutorial_eddesign_language: الإنجليزية
   tutorial_edshapeup_language: الإنجليزية
   tutorial_ozocolor_language: الإنجليزية
-  tutorial_kcjanimals_language: الإنجليزية
   tutorial_icomputeeggs_language: الإنجليزية
   tutorial_rootunplugged_language: الإنجليزية
   tutorial_rgtreasure_language: الإنجليزية
@@ -10017,13 +9837,11 @@ ar:
   tutorial_blockscadscale_language: الإنجليزية
   tutorial_tcadloops_language: الإنجليزية
   tutorial_phidgets_language: الإنجليزية
-  tutorial_kcjmerry_language: الإنجليزية
   tutorial_modvariables_language: الإنجليزية
   tutorial_codestersmicro_language: الإنجليزية
   tutorial_codestersdata_language: الإنجليزية
   tutorial_ikodexmas_language: الإنجليزية
   tutorial_rpisensehat_language: الإنجليزية
-  tutorial_modtraits_language: الإنجليزية
   tutorial_mee_language: البلغارية، الصينية (المبسطة)، الصينية (التقليدية)، التشيكية،
     الدنماركية، الهولندية، الإنجليزية (المملكة المتحدة)، الإنجليزية (الولايات المتحدة)،
     الفنلندية، الفرنسية (كندا)، الفرنسية (فرنسا)، الألمانية، اليونانية، المجرية، الإندونيسية،
@@ -10108,7 +9926,6 @@ ar:
   tutorial_eddesign_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_edshapeup_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_ozocolor_string_detail_grades: الصفوف 2-8
-  tutorial_kcjanimals_string_detail_grades: الصفوف 2-8
   tutorial_icomputeeggs_string_detail_grades: الصفوف 2-8
   tutorial_rootunplugged_string_detail_grades: الصفوف 2-8
   tutorial_rgtreasure_string_detail_grades: قبل تعلم القراءة - الصف 5
@@ -10124,13 +9941,11 @@ ar:
   tutorial_blockscadscale_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_tcadloops_string_detail_grades: الصفوف 5-6
   tutorial_phidgets_string_detail_grades: الصفوف 9+
-  tutorial_kcjmerry_string_detail_grades: الصفوف 2-8
   tutorial_modvariables_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_codestersmicro_string_detail_grades: الصفوف 6-8
   tutorial_codestersdata_string_detail_grades: الصفوف 6-8
   tutorial_ikodexmas_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_rpisensehat_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_modtraits_string_detail_grades: الصفوف 2+
   tutorial_mee_string_detail_grades: الصفوف 2+
   tutorial_kuborobo_string_detail_grades: قبل تعلم القراءة - الصفوف 8
   tutorial_ai-oceans_string_detail_grades: من الصف الثالث فما فوق
@@ -10231,7 +10046,6 @@ ar:
     أندرويد اللوحية
   tutorial_edshapeup_string_platforms: جميع المتصفحات الحديثة
   tutorial_ozocolor_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
-  tutorial_kcjanimals_string_platforms: جميع المتصفحات الحديثة
   tutorial_icomputeeggs_string_platforms: جميع المتصفحات الحديثة، هواتف أندرويد، أجهزة
     أندرويد اللوحية، أجهزة آيباد، هواتف آيفون
   tutorial_rootunplugged_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
@@ -10249,14 +10063,12 @@ ar:
   tutorial_blockscadscale_string_platforms: جميع المتصفحات الحديثة
   tutorial_tcadloops_string_platforms: جميع المتصفحات الحديثة
   tutorial_phidgets_string_platforms: جميع المتصفحات الحديثة
-  tutorial_kcjmerry_string_platforms: جميع المتصفحات الحديثة
   tutorial_modvariables_string_platforms: جميع المتصفحات الحديثة، الأجهزة أندرويد
     اللوحية، هواتف آندرويد، أجهزة آيباد، هواتف آيفون
   tutorial_codestersmicro_string_platforms: جميع المتصفحات الحديثة
   tutorial_codestersdata_string_platforms: جميع المتصفحات الحديثة
   tutorial_ikodexmas_string_platforms: جميع المتصفحات الحديثة
   tutorial_rpisensehat_string_platforms: جميع المتصفحات الحديثة
-  tutorial_modtraits_string_platforms: جميع المتصفحات الحديثة
   tutorial_mee_string_platforms: أجهزة آيباد وأجهزة الحاسوب (أنظمة التشغيل Windows
     PC و Mac)
   tutorial_kuborobo_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
@@ -10337,7 +10149,6 @@ ar:
   tutorial_eddesign_string_detail_platforms: الروبوت "Edison"
   tutorial_edshapeup_string_detail_platforms: الروبوت "Edison"
   tutorial_ozocolor_string_detail_platforms: الروبوت "Ozobot"
-  tutorial_kcjanimals_string_detail_platforms: ''
   tutorial_icomputeeggs_string_detail_platforms: منصة "Sphero"
   tutorial_rootunplugged_string_detail_platforms: ''
   tutorial_rgtreasure_string_detail_platforms: ''
@@ -10355,13 +10166,11 @@ ar:
   tutorial_tcadloops_string_detail_platforms: ''
   tutorial_phidgets_string_detail_platforms: مجموعة مشغل "Phidgets"، أجهزة استشعار
     المسافة "Phidgets".
-  tutorial_kcjmerry_string_detail_platforms: جهاز "BBC micro:bit"
   tutorial_modvariables_string_detail_platforms: القطع البرمجية "Cubelets Robot"
   tutorial_codestersmicro_string_detail_platforms: جهاز "BBC micro:bit"
   tutorial_codestersdata_string_detail_platforms: جهاز "BBC micro:bit"
   tutorial_ikodexmas_string_detail_platforms: لعبة "Kodu" من مايكروسوفت
   tutorial_rpisensehat_string_detail_platforms: Raspbian (برنامج)، SenseHAT
-  tutorial_modtraits_string_detail_platforms: الروبوت "GoPiGo"
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: الروبوت "KUBO"
   tutorial_ai-oceans_string_detail_platforms: ''
@@ -10457,7 +10266,6 @@ ar:
   tutorial_edshapeup_string_detail_programming_languages: لغة البرمجة "بايثون"، لغة
     البرمجة "EdPy"، لغة برمجة نصية تعتمد على لغة "بايثون".
   tutorial_ozocolor_string_detail_programming_languages: القطع البرمجية
-  tutorial_kcjanimals_string_detail_programming_languages: القطع البرمجية
   tutorial_icomputeeggs_string_detail_programming_languages: القطع البرمجية
   tutorial_rootunplugged_string_detail_programming_languages: القطع البرمجية
   tutorial_rgtreasure_string_detail_programming_languages: القطع البرمجية
@@ -10474,14 +10282,12 @@ ar:
   tutorial_tcadloops_string_detail_programming_languages: القطع البرمجية
   tutorial_phidgets_string_detail_programming_languages: تدعم لغة جافاسكريبت، و"Phidgets"
     جميع لغات البرمجة الرئيسية. ويمكن بسهولة تكييف هذا المشروع مع لغة / بيئة أخرى.
-  tutorial_kcjmerry_string_detail_programming_languages: القطع البرمجية
   tutorial_modvariables_string_detail_programming_languages: لغة مستقلة (يمكن تدريسها
     بلغات متعددة)
   tutorial_codestersmicro_string_detail_programming_languages: لغة البرمجة "بايثون"
   tutorial_codestersdata_string_detail_programming_languages: لغة البرمجة "بايثون"
   tutorial_ikodexmas_string_detail_programming_languages: لعبة "Kodu" من مايكروسوفت
   tutorial_rpisensehat_string_detail_programming_languages: لغة البرمجة "بايثون"
-  tutorial_modtraits_string_detail_programming_languages: القطع البرمجية
   tutorial_mee_string_detail_programming_languages: القطع البرمجية
   tutorial_kuborobo_string_detail_programming_languages: مربعات مختلفة يجمعها الطلاب
     معًا

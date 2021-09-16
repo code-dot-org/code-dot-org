@@ -1155,7 +1155,6 @@ ms:
   tutorial_ticklep_name: Burung Nuri Ajaib
   tutorial_bbot_name: Aktiviti-aktiviti Koding Mudah dan Seronok Bomberbot
   tutorial_scratchg_name: Permainan program dalam Scratch
-  tutorial_roboticfriends_name: Rakan-rakan Robotik Saya
   tutorial_sjforest_name: 'ScratchJr: Bolehkah Saya Membuat suatu Hutan yang Menyeramkan?'
   tutorial_sjgreet_name: 'ScratchJr: Bolehkah Saya membuat Watak-watak Saya Memberi
     Salam antara Satu Sama lain?'
@@ -1202,7 +1201,6 @@ ms:
   tutorial_tickles_name: Pelarian Sphero
   tutorial_ozogame_name: Mencipta suatu Tahap Permainan Ozobot
   tutorial_vidcodeio_name: Input dan Output, Aktiviti Matematik
-  tutorial_besttech_name: Aktiviti Teknologi Terbaik
   tutorial_tlcbrain_name: Aktiviti Otak-di-dalam-beg
   tutorial_hopquiz_name: Pencipta Kuiz
   tutorial_unfortunate_name: Suatu Siri Kejadian-kejadian yang Malang
@@ -1211,7 +1209,6 @@ ms:
     Sama'
   tutorial_bbcmathi_name: Koding Bitsbox + Matematik (3-5)
   tutorial_tlcpixel_name: Susun Suai Piksel
-  tutorial_arduino_name: Aktiviti Arduino
   tutorial_introrobo_name: Pengenalan kepada Robotik
   tutorial_tlcinvis_name: Aktiviti Palming yang Tidak Kelihatan
   tutorial_tlcjflap_name: 'JFLAP: Mencipta Mesin Keadaan Terhingga'
@@ -1231,7 +1228,6 @@ ms:
   tutorial_tlcmind_name: Aktiviti Red Black Mind Meld
   tutorial_tlctelebot_name: Aktiviti Robot Teleporting
   tutorial_tlcaus_name: Aktiviti Mimpi Ahli Silap Mata Australia
-  tutorial_oralhist_name: Projek Sejarah Lisan
   tutorial_tlcmicro_name: Aktiviti Video Perlumbaan Gelombang Mikro
   tutorial_imathematician_name: iAhliMatematik
   tutorial_tlcmagic_name: Buku Magik Keajaiban
@@ -1245,7 +1241,6 @@ ms:
   tutorial_tynkercan_name: Kit Permainan Pemain - Meriam Fizik 2
   tutorial_grokflags_name: Bendera Dunia (Penyu Python)
   tutorial_robomind_name: Memprogramkan suatu robot maya dengan Robomind
-  tutorial_scratchanimwork_name: 'Animasikan Nama Anda: Panduan Pendidik'
   tutorial_adventureq_name: Pengembaraan dengan Q
   tutorial_khan-es_name: Suatu pengenalan kepada JavaScript
   tutorial_kpt_name: Suatu pengenalan kepada JavaScript
@@ -1253,13 +1248,11 @@ ms:
   tutorial_khe_name: Suatu pengenalan kepada JavaScript
   tutorial_kfr_name: Suatu pengenalan kepada JavaScript
   tutorial_app-inventor_name: PenciptaAplikasi Hour of Code
-  tutorial_bits_name: Bit dan Batu Bata
   tutorial_blockly_name: Permainan Blockly Luar Talian
   tutorial_tynker_name: Membina permainan anda sendiri
   tutorial_baypt_name: Mengekod Baymax
   tutorial_code-combat_name: PertempuranKod
   tutorial_mky_name: KodMonyet
-  tutorial_spellcraft_name: 'CodeSpells: Spellcraft'
   tutorial_pirates_name: Lanun Koding
   tutorial_csfirst_name: CS Pertama
   tutorial_loopedy_name: Tarian Loopedy-Loop
@@ -1318,7 +1311,6 @@ ms:
   tutorial_soloweb_name: Laman Web Anda dalam Sejam!
   tutorial_khanweb_name: 'Akademi Khan: Laman Web'
   tutorial_khandata_name: 'Akademi Khan: Pangkalan Data'
-  tutorial_robomeshiq_name: Memprogramkan Robot-robot VEX IQ dengan Blockly
   tutorial_googlelogo_name: Mencipta logo Google anda sendiri
   tutorial_playtune_name: Bermain Aplikasi Lagu Itu
   tutorial_computeit_name: Mengirakan ia
@@ -1378,7 +1370,6 @@ ms:
   tutorial_stemcod_name: Fizik-fizik Permainan Video!
   tutorial_techikb_name: Asas-asas Kotlin yang Interaktif
   tutorial_kanostreet_name: Artis Jalanan
-  tutorial_nyblebot_name: Bot Boogie
   tutorial_codemojijs_name: Permulaan JavaScript
   tutorial_techapf_name: Ciri-ciri Canggih Python
   tutorial_techfpjs_name: Pengenalan Praktikal kepada Pengaturcaraan Kefungsian dengan
@@ -1395,7 +1386,6 @@ ms:
   tutorial_gpbcircle_name: Membuat suatu Bulatan Warna yang Interaktif
   tutorial_gpbpaint_name: Membuat Penyunting Cat Anda Sendiri
   tutorial_cocomarcade_name: 'CodeCombat: Binakan Permainan Arked!'
-  tutorial_techcpp_name: 7 Ciri-ciri C++ yang akan memudahkan kod anda
   tutorial_beetik_name: Mengekod Muzik Franz Liszt
   tutorial_codedj_name: Mengarang Muzik dengan DJ Kod
   tutorial_rgadvan_name: RoboGarden - Maju
@@ -1471,7 +1461,6 @@ ms:
   tutorial_ifly_name: iFly
   tutorial_idowedo_name: iDo WeDo
   tutorial_diggindwarf_name: Diggin' Dwarf
-  tutorial_rmedr_name: Memprogramkan Robot VEX EDR dengan Blockly
   tutorial_spheroit_name: 'Blok 2: Jika/Kemudian Itu'
   tutorial_gameofcodes_name: Permainan Kod
   tutorial_blocklygames_name: Permainan Blockly
@@ -1482,7 +1471,6 @@ ms:
   tutorial_bcjs1_name: Dunia JavaScript
   tutorial_bcjs2_name: Dunia JavaScript 2
   tutorial_3dbearmars_name: Perintis Planet Marikh
-  tutorial_alexaskill_name: 'Rangka Tindakan Alexa: Cipta Kemahiran Alexa'
   tutorial_bitsboxyak_name: Serangan Yak! Buat Kad dengan Kod Ditaip
   tutorial_blockscadbargraphs_name: Graf Bar
   tutorial_blockscadbirdhouses_name: Rumah Burung
@@ -1541,7 +1529,6 @@ ms:
   tutorial_codinismhero_name: Wira Pengaturcaraan
   tutorial_discovery_name: Penemuan Luar Biasa
   tutorial_csfirstname_name: Animasikan Nama
-  tutorial_obstaclecourse_name: Menavigasi Kursus Berhalang dengan CodeSnaps
   tutorial_edisonmove_name: 'Edison dan EdPy: Buatkan Edison bergerak'
   tutorial_edisonspider_name: Edison dan perangkap labah-labah yang bergulung-gulung
   tutorial_edisonspotlight_name: Buat persembahan di bawah lampu sorot bersama Edison
@@ -1983,8 +1970,6 @@ ms:
     sebelum ini tidak diperlukan!
   tutorial_scratchg_shortdescription: Belajar bagaimana untuk memprogramkan permainan
     dalam Scratch
-  tutorial_roboticfriends_shortdescription: Tutorial tercabut untuk suatu kumpulan
-    dengan tiada peranti
   tutorial_sjforest_shortdescription: Menggunakan aplikasi pengaturcaraan ScratchJr
     untuk membuat sebuah program di mana haiwan yang berbeza bergerak dalam suasana
     hutan yang gelap.
@@ -2079,8 +2064,6 @@ ms:
     robot Ozobot yang boleh diprogramkan.
   tutorial_vidcodeio_shortdescription: Menyambung fungsi JavaScript kepada kedua-dua
     matematik dan masalah dunia sebenar.
-  tutorial_besttech_shortdescription: Para pelajar akan mempelajari dan membincangkan
-    ciptaan teknologi yang penting sepanjang beberapa dekad yang lepas.
   tutorial_tlcbrain_shortdescription: Menerokai bagaimana otak manusia berfungsi dengan
     mencipta model pengiraan neuron para pelajar yang bermain Snap.
   tutorial_hopquiz_shortdescription: Mengekod kuiz aneka pilihan untuk menguji pengetahuan
@@ -2096,8 +2079,6 @@ ms:
   tutorial_tlcpixel_shortdescription: 'Menyelesaikan susun suai pewarnaan mengikut
     urutan nombor dan pemikiran logik yang mudah serta mendapat pemahaman yang lebih
     mendalam dalam perwakilan dan pemampatan imej. '
-  tutorial_arduino_shortdescription: Ketahui cara membuat litar asas dan buat berkelip
-    cahaya.
   tutorial_introrobo_shortdescription: Pelajar akan mengenali Dash dan Dot semasa
     diperkenalkan dengan idea-idea Robotics dan Programming.
   tutorial_tlcinvis_shortdescription: Lakukan helah di mana anda secara ajaib menggerakkan
@@ -2138,9 +2119,6 @@ ms:
     ada 16.
   tutorial_tlcaus_shortdescription: Melakukan suatu silap mata di mana anda meramalkan
     suatu kad pilihan, memperkenalkan kedua-dua algoritma carian dan pemikiran pengiraan.
-  tutorial_oralhist_shortdescription: Projek Sejarah Lisan Pendidik Komputing merupakan
-    sebuah koleksi temu bual dan juga bahan-bahan serta alat-alat pengajaran yang
-    terikat kepada koleksi CEOHP.
   tutorial_tlcmicro_shortdescription: Orang ramai berlumba untuk mencipta reka bentuk
     gelombang mikro yang berbeza untuk melihat yang mana paling mudah digunakan untuk
     melakukan satu tugas yang senang. Sesetengah adalah lebih rumit berbanding dengan
@@ -2170,8 +2148,6 @@ ms:
   tutorial_grokflags_shortdescription: Gunakan bahasa pengaturcaraan Python dan arahkan
     penyu melukis bendera dari seluruh dunia! Berapa banyak negara yang anda tahu?
   tutorial_robomind_shortdescription: Menulis kod untuk sebuah robot maya.
-  tutorial_scratchanimwork_shortdescription: Sebuah panduan bengkel untuk memperkenalkan
-    para pelajar kepada Scratch.
   tutorial_adventureq_shortdescription: Menggunakan blok pengaturcaraan (fizikal atau
     dalam permainan) untuk mempelajari logik pengaturcaraan.
   tutorial_khan-es_shortdescription: Belajar untuk melukis dalam JavaScript
@@ -2181,7 +2157,6 @@ ms:
   tutorial_kfr_shortdescription: Belajar untuk melukis dalam JavaScript
   tutorial_app-inventor_shortdescription: Membuat aplikasi anda sendiri. (hanya untuk
     Android)
-  tutorial_bits_shortdescription: Mengalih sedikit oleh sedikit!
   tutorial_blockly_shortdescription: Muat turunkan suatu fail ZIP untuk belajar secara
     di luar talian.
   tutorial_tynker_shortdescription: Belajar untuk mengekod dengan menyelesaikan susun
@@ -2191,8 +2166,6 @@ ms:
     JavaScript dalam permainan pengaturcaraan yang hebat ini!
   tutorial_mky_shortdescription: Pelajar-pelajar memprogramkan satu monyet untuk menangkap
     pisang.
-  tutorial_spellcraft_shortdescription: Pelajari tentang pengaturcaraan Berorientasikan
-    Acara dengan menggunakan kuasa CodeSpells!
   tutorial_pirates_shortdescription: Menavigasi air kristal hemisfera selatan, mengekod
     peta harta karun anda dan menemui kekayaan yang berada di pantai emas. Cara menyeronokkan
     untuk mempelajari konsep asas pengekodan.
@@ -2300,8 +2273,6 @@ ms:
   tutorial_khandata_shortdescription: Suka untuk bermain dengan data? Belajar bagaimana
     untuk memanipulasikan data dalam suatu pangkalan data dan membuat stor tersuai
     anda sendiri
-  tutorial_robomeshiq_shortdescription: Pelajar menulis kod Google Blockly untuk mengawal
-    robot VEX IQ yang popular.
   tutorial_googlelogo_shortdescription: Membawa logo Google ke hidup menggunakan imaginasi
     anda and sedikit kod.
   tutorial_playtune_shortdescription: Menggunakan kemahiran koding untuk menyelesaikan
@@ -2422,8 +2393,6 @@ ms:
   tutorial_techikb_shortdescription: Ciri-ciri Kotlin asas secara singkatnya
   tutorial_kanostreet_shortdescription: Membuat karya seni yang cantik, untuk dengan
     cabaran koding Street Art Kano
-  tutorial_nyblebot_shortdescription: Koding merupakan Magik - membantu kanak-kanak
-    mencipta benda yang menakjubkan dengan kod.
   tutorial_codemojijs_shortdescription: Codemoji merekakan Javascript Permulaan untuk
     membantu pelajar menaipkan perintah javascript benar yang akan menganimasikan
     watak-watak yang berbeza.
@@ -2456,7 +2425,6 @@ ms:
   tutorial_gpbpaint_shortdescription: Mencipta dan menyesuaikan suatu aplikasi melukis.
   tutorial_cocomarcade_shortdescription: Membina permainan bertahan hidup anda sendiri
     dan mencabar rakan-rakan anda!
-  tutorial_techcpp_shortdescription: 7 Ciri untuk membantu memudahkan Code C++17 anda
   tutorial_beetik_shortdescription: Menggunakan kod untuk menggodam muzik penggubah
     Franz Liszt.
   tutorial_codedj_shortdescription: Belajar asas Javascript dan bermula untuk mengarang
@@ -2614,8 +2582,6 @@ ms:
     kemudiannya memprogramkannya untuk mengangkut angka kecil mini.
   tutorial_diggindwarf_shortdescription: Orang kerdil memerlukan bantuan anda untuk
     mengemudi, menggali dan mengumpul permata menggunakan JavaScript.
-  tutorial_rmedr_shortdescription: Memprogramkan suatu robot VEX EDR untuk mengemudikan
-    suatu maze menggunakan pengaturcaraan Blockly.
   tutorial_spheroit_shortdescription: Ketahui mengenai keadaan jika/kemudian itu,
     kalau sementara membina permainan suara binatang anda sendiri yang kita panggilkan
     sebagai "Animal Toss!"
@@ -2635,10 +2601,6 @@ ms:
     berasaskan projek yang mengajar fakta tentang Marikh dan keadaan penting untuk
     manusia hidup di sana. Pelajar akan membina koloni dengan menggunakan Realiti
     Terimbuh dan kemudahan koloni cetakan 3D.
-  tutorial_alexaskill_shortdescription: 'Cipta Kemahiran Alexa anda sendiri dengan
-    menggunakan Rangka Tindakan Kemahiran Alexa - pelajari tentang menggunakan suara,
-    kecerdasan buatan dan pembelajaran mesin untuk mencipta Kemahiran Alexa pilihan
-    anda. '
   tutorial_bitsboxyak_shortdescription: Taipkan kod JavaScript yang diubah suai untuk
     membuat kad ucapan yang boleh anda e-melkan kepada rakan dan keluarga. Serangan
     Yak! ialah aktiviti terbuka sepenuhnya yang memperkenalkan pemboleh ubah, perintah
@@ -2807,8 +2769,6 @@ ms:
   tutorial_csfirstname_shortdescription: Pilih nama dan hidupkan huruf perkataan dengan
     menggunakan kod. Pilih nama samaran, nama haiwan peliharaan, haiwan, sukan, tempat
     atau hobi.
-  tutorial_obstaclecourse_shortdescription: Bekerjasama dengan pasukan anda untuk
-    mengekod atur cara yang berjaya menavigasi robot melalui kursus berhalang.
   tutorial_edisonmove_shortdescription: Perkenalkan pengaturcaraan berasaskan teks
     dan konsep pemikiran pengiraan utama jujukan kepada pelajar anda dengan menggunakan
     robot Edison dan EdPy, bahasa pengaturcaraan berasaskan teks berdasarkan Python.
@@ -3664,12 +3624,6 @@ ms:
     kepada mereka bagaimana untuk program gaya permainan yang berbeza. Semua seni
     diperlukan untuk permainan ada disediakan, dan pelajar perlu bekerja bagaimana
     untuk sambungkan semuanya bersama-sama untuk membuat permainan berfungsi.
-  tutorial_roboticfriends_longdescription: Menggunakan "Robot Perbendaharaan Kata"
-    yang dipratakrifkan pelajar akan mengetahui cara membimbing satu sama lain untuk
-    menyelesaikan tugasan khusus tanpa membincangkannya terlebih dahulu. Pelajaran
-    ini mengajar kanak-kanak hubungan antara simbol dan tindakan, serta kemahiran
-    penyahpepijatan yang tidak ternilai. "Rakan Robotik Saya" berfungsi paling baik
-    sebagai aktiviti kumpulan dan termasuk buku kerja guru untuk kegunaan kelas.
   tutorial_sjforest_longdescription: '"Bolehkah Saya Membuat Hutan yang Menakutkan?"
     ialah aktiviti pertengahan yang dimaksudkan untuk kanak-kanak di tadika sehingga
     gred kedua yang mempunyai sebahagian pengalaman pengaturcaraan sebelum ini untuk
@@ -3909,8 +3863,6 @@ ms:
   tutorial_vidcodeio_longdescription: Dalam latihan ini, anda akan membimbing pelajar
     anda dengan teliti sejauh mana perkara ini berkaitan dengan prngetahuan mereka
     mengenai matematik dengan menyelesaikan persamaan matematik dengan pengaturcaraan.
-  tutorial_besttech_longdescription: Para pelajar akan mempelajari dan membincangkan
-    ciptaan teknologi yang penting sepanjang beberapa dekad yang lepas.
   tutorial_tlcbrain_longdescription: Aktiviti ini menerokai bagaimana pemodelan pengiraan
     (suatu bahagian penting dalam pemikiran pengiraan) boleh digunakan untuk membantu
     memahami sistem biologi - sini neuron. Kita menganggap bagaimana otak kita berfungsi
@@ -3943,12 +3895,6 @@ ms:
     nombor, oleh itu ruang simpanan kurang digunakan – tetapi bolehkah anda mendapatkannya
     kembali! Setiap perwakilan memerlukan algoritmanya tersendiri untuk diikuti bagi
     mendapatkan imejnya kembali.
-  tutorial_arduino_longdescription: Adakah kita pernah terfikir bagaimana mainan membuat
-    bunyi dan lampu berkelip semasa anda menekan butang? Alat kawalan mikro dan litar
-    digunakan dalam semua jenis objek sehari-hari. Daripada kereta kawalan jauh sehingga
-    robot dan dron. Lampu jalan menggunakan sensor untuk menentukan apabila matahari
-    terbenam, tombol kelantangan pada stereo kereta menyesuaikan rintangan melalui
-    alat kawalan mikro. Semua ini digunakan di mana-mana sahaja!
   tutorial_introrobo_longdescription: 'Dalam pelajaran ini, pelajar akan mengenali
     Dash dan Dot sambil diperkenalkan kepada idea Robotik dan Pengaturcaraan. Pelajar
     akan memperoleh pemahaman mengenai robot, cara robot ini mengesan pergerakan di
@@ -4041,9 +3987,6 @@ ms:
     boleh digunakan untuk memeriksa fungsi algoritma. Digabungkan dengan aktiviti
     'Mencari Kad Tebuk,' ia memperkenalkan penggunaan semula algoritma secara berulang
     kali yang pernah digunakan oleh komputer terawal.
-  tutorial_oralhist_longdescription: Projek Sejarah Lisan Pendidik Komputing merupakan
-    sebuah koleksi temu bual dan juga bahan-bahan serta alat-alat pengajaran yang
-    terikat kepada koleksi CEOHP.
   tutorial_tlcmicro_longdescription: Video ini boleh digunakan sebagai pengenalan
     umum untuk interaksi komputer manusia (HCI) dan terutamanya sebab begitu banyak
     alatan lebih sukar digunakan daripada diperlukan. Reka bentuk sememangnya membuat
@@ -4104,11 +4047,6 @@ ms:
     dengan mengawal robot maya sendiri. Kursus dalam talian adalah serba-lengkap dengan
     pembentangan yang pendek, movies, kuiz dan panduan/petunjuk automatik untuk membantu
     dengan latihan pengaturcaraan. '
-  tutorial_scratchanimwork_longdescription: 'Panduan ini menawarkan idea untuk mengendalikan
-    bengkel selama sejam dengan menggunakan Scratch. Pelajar akan memperoleh pengalaman
-    dengan pengekodan semasa mereka menganimasikan nama atau perkataan kegemaran mereka.
-    Panduan pendidik ini direka bentuk untuk digunakan dengan tutorial Scratch ini:
-    scratch.mit.edu/name'
   tutorial_adventureq_longdescription: 'Pengembaraan bersama Q ialah rancangan pelajaran
     untuk guru (atau siapa sahaja) untuk digunakan bagi memperkenalkan logik pengaturcaraan
     dalam tetapan kumpulan. Aktiviti ini terdiri daripada pelbagai usaha untuk dilengkapkan
@@ -4136,11 +4074,6 @@ ms:
     sebelum anda mengetahuinya. Bayangkan berkongsi ciptaan aplikasi anda sendiri
     dengan rakan anda! Aktiviti ini sesuai untuk individu dan guru yang mengendalikan
     kelas.
-  tutorial_bits_longdescription: Bit ialah robot LEGO® kecil yang suka mengharungi
-    cabaran, tetapi seperti semua makhluk kecil, kadang-kadang Bit tidak dapat pengaturcaraannya
-    yang betul. Anda boleh membantu Bit menyelesaikan cabaran dengan mengetahui cara
-    jenis atur cara yang diperlukan. Anda melakukan ini dengan mencipta jujukan blok
-    tingkah laku kecil yang memberitahu Bit perkara yang perlu dilakukan.
   tutorial_blockly_longdescription: Terdapat komputer dengan akses Internet yang perlahan
     (atau tidak wujud)? Muat turun versi luar talian Permainan Blockly - fail ZIP
     tunggal bersaiz 3MB boleh dimuatkan ke dalam mana-mana komputer atau gunakan daripada
@@ -4160,13 +4093,6 @@ ms:
     pengekodan. Platform adaptif CodeMonkey akan memberikan anda semua arahan dan
     petunjuk yang anda perlukan dan akan memberikan anda markah bintang. Tuliskan
     kod. Tangkap Pisang. Selamatkan dunia.
-  tutorial_spellcraft_longdescription: Pelajari tentang pengaturcaraan Berorientasikan
-    Acara dengan menggunakan kuasa sihir! Dengan CodeSpells, anda boleh mereka bentuk
-    dan mencipta mantra sihir anda sendiri dengan menggunakan antara muka pengekodan
-    Blockly Google yang mudah digunakan atau editor teks JavaScript yang terbina.
-    Melalui penciptaan mantra, pelajar akan mempelajari cara menulis kod berdasarkan
-    acara sekeliling dan membiasakan diri dengan konsep pengekodan Berorientasikan
-    Acara.
   tutorial_pirates_longdescription: 'Kapten Hack ialah lanun yang mencari harta karun.
     Dia juga menulis peta harta karun dan menulisnya seperti menulis kod. Dia (pemain)
     menggunakan "kod lanun" untuk ini. Kod lanun ini ialah bahasa pengaturcaraan berasaskan
@@ -4392,12 +4318,6 @@ ms:
     sendiri.'
   tutorial_khandata_longdescription: 'Akademi Khan: Pangkalan data mengajar anda memanipulasikan
     data dalam pangkalan data dan membuat stor tersuai anda sendiri'
-  tutorial_robomeshiq_longdescription: Pelajar menulis kod Google Blockly untuk mengawal
-    robot VEX IQ yang popular. Mereka boleh memilih bagi menulis kod untuk sama ada
-    robot maya, atau robot VEX IQ sebenar yang mereka bina sendiri dan kedua-dua pilihan
-    tersedia dalam antara muka pembangunan berasaskan web yang sama. Pelajar mempelajari
-    tentang pergerakan robot asas dan cara menggunakan sensor dan peranti output.
-    Kesemuanya mudah dan menyeronokkan.
   tutorial_googlelogo_longdescription: Gunakan kreativiti dan imaginasi anda untuk
     menghidupkan logo Google dengan menggunakan kod. Buatkan huruf menari, bercerita
     atau cipta permainan. Dengan Scratch dan CS First, sesiapa sahaja boleh menjadi
@@ -4683,17 +4603,6 @@ ms:
     tersebut, pembuat akan mempelajari prinsip sains komputer sambil menggunakan bahasa
     pengaturcaraan sebenar dengan cara yang intuitif dan menarik. Bersama sumber guru
     dan kandungan terpandu kami, semua individu boleh mengecapi keseronokan ini.
-  tutorial_nyblebot_longdescription: Bot Boogie ialah aplikasi pengekodan yang menyeronokkan
-    dan menarik. Penuh dengan kehidupan dan tenaga, aplikasi 3D ini akan memperkenalkan
-    asas pengaturcaraan komputer kepada kanak-kanak dengan menggunakan bahasa pengaturcaraan
-    visual Google iaitu Blockly. Bot Boogie ialah robot menari, yang boleh diatur
-    cara untuk melakukan gerakan tarian. Ciri Aplikasi (semua ciri tersedia dalam
-    versi penuh) belajar mengekod dengan blok pengekodan, cipta tarian anda sendiri
-    dengan kod, pilih daripada beberapa trek tarian unik yang berbeza, ubah bilik
-    menjadi zon majlis tari-menari yang bergaya, tambahkan kesan khas yang luar biasa
-    di atas pentas, dapatkan syiling semasa anda mempelajari pengaturcaraan membina,
-    menghiasi bilik dengan barangan menarik, bermain dan meneroka dalam bilik berinteraktif
-    yang penuh dengan ciri tersembunyi, rakam dan simpan video ciptaan anda yang hebat.
   tutorial_codemojijs_longdescription: Pada mulanya, JavaScript direka bentuk untuk
     membuatkan pelajar menaip perintah mudah yang memberikan kesan besar pada tindakan
     watak. Pelajar akan menaip arahan yang menjadikan watak melakukan segalanya daripada
@@ -4754,9 +4663,6 @@ ms:
     yang lebih menyeronokkan? Tingkatkan kemahiran anda dalam konsep pengaturcaraan
     lanjutan seperti fungsi dan peristiwa dengan Python atau JavaScript. Kemudian
     gunakan kemahiran itu untuk membina permainan arked mempertahankan kehidupan!
-  tutorial_techcpp_longdescription: Setiap pengatur cara C++ menyasarkan cara mengekod
-    yang lebih mudah, lebih bersih dan lebih penuh perasaan. Tutorial berguna ini
-    memilih 7 ciri C++17 hebat yang akan menjadikan kod anda lebih baik.
   tutorial_beetik_longdescription: Dalam aktiviti ini, pelajar membina semula sebahagian
     kecil karya seni terkenal oleh komposer Franz Liszt. Pelajar akan mempelajari
     cara menyematkan gelung dan cara ia digunakan dalam sains komputer dan muzik.
@@ -5152,10 +5058,6 @@ ms:
     menavigasi, menggali dan mengumpulkan permata! Kini, anda perlu pelajari cara
     menggunakan JavaScript untuk membimbing orang kerdil anda melepasi pagar sesat
     dan teka-teki.
-  tutorial_rmedr_longdescription: Menggunakan Blockly in Studio Jaringan Robot, atur
-    cara robot VEX EDR secara "meniru" dalam talian dan lihat ia berjalan melepasi
-    pagar sesat. Pelajar mempelajari tentang pergerakan robot asas dan cara menggabungkan
-    tiga sensor dan satu output ke dalam pengaturcaraan mereka.
   tutorial_spheroit_longdescription: Ketahui mengenai keadaan jika/kemudian itu, kalau
     sementara membina permainan suara binatang anda sendiri yang kita panggilkan sebagai
     "Animal Toss!"
@@ -5224,11 +5126,6 @@ ms:
     berasaskan projek yang mengajar fakta tentang Marikh dan keadaan penting untuk
     manusia hidup di sana. Pelajar akan membina koloni dengan menggunakan Realiti
     Terimbuh dan kemudahan koloni cetakan 3D.
-  tutorial_alexaskill_longdescription: Cipta Kemahiran Alexa anda sendiri dengan menggunakan
-    Rangka Tindakan Kemahiran Alexa - pelajari tentang menggunakan suara, kecerdasan
-    buatan dan pembelajaran mesin untuk mencipta Kemahiran Alexa pilihan anda. Alexa
-    boleh menceritakan jenaka, menyanyikan lagu, atau berkongsi cerita. (Log masuk
-    Amazon diperlukan) Aktiviti boleh dilengkapkan oleh individu atau ketua guru.
   tutorial_bitsboxyak_longdescription: Taipkan kod JavaScript yang diubah suai untuk
     membuat kad ucapan yang boleh anda e-melkan kepada rakan dan keluarga. Serangan
     Yak! ialah aktiviti terbuka sepenuhnya yang memperkenalkan pemboleh ubah, perintah
@@ -5471,8 +5368,6 @@ ms:
   tutorial_csfirstname_longdescription: Pilih nama dan hidupkan huruf perkataan dengan
     menggunakan kod. Pilih nama samaran, nama haiwan peliharaan, haiwan, sukan, tempat
     atau hobi.
-  tutorial_obstaclecourse_longdescription: Bekerjasama dengan pasukan anda untuk mengekod
-    atur cara yang berjaya menavigasi robot melalui kursus berhalang.
   tutorial_edisonmove_longdescription: Perkenalkan pengaturcaraan berasaskan teks
     dan konsep pemikiran pengiraan utama jujukan kepada pelajar anda dengan menggunakan
     robot Edison dan EdPy, bahasa pengaturcaraan berasaskan teks berdasarkan Python.
@@ -6530,7 +6425,6 @@ ms:
     Bahasa Perancis, Bahasa Jepun
   tutorial_bbot_language: Bahasa Belanda, Bahasa Suomi, Bahasa Inggeris
   tutorial_scratchg_language: Bahasa Inggeris sahaja
-  tutorial_roboticfriends_language: Bahasa Inggeris, Bahasa Sepanyol
   tutorial_sjforest_language: Bahasa Inggeris sahaja
   tutorial_sjgreet_language: Bahasa Inggeris sahaja
   tutorial_sjsunset_language: Bahasa Inggeris sahaja
@@ -6576,7 +6470,6 @@ ms:
   tutorial_tickles_language: Pelbagai
   tutorial_ozogame_language: Bahasa Inggeris sahaja
   tutorial_vidcodeio_language: Bahasa Inggeris sahaja
-  tutorial_besttech_language: Bahasa Inggeris sahaja
   tutorial_tlcbrain_language: Bahasa Inggeris sahaja
   tutorial_hopquiz_language: Bahasa Inggeris sahaja
   tutorial_unfortunate_language: Bahasa Inggeris sahaja
@@ -6584,7 +6477,6 @@ ms:
   tutorial_elaseq_language: Bahasa Inggeris sahaja
   tutorial_bbcmathi_language: Bahasa Inggeris sahaja
   tutorial_tlcpixel_language: Bahasa Inggeris sahaja
-  tutorial_arduino_language: Bahasa Inggeris sahaja
   tutorial_introrobo_language: Bahasa Inggeris sahaja
   tutorial_tlcinvis_language: Bahasa Inggeris sahaja
   tutorial_tlcjflap_language: Bahasa Inggeris sahaja
@@ -6604,7 +6496,6 @@ ms:
   tutorial_tlcmind_language: Bahasa Inggeris sahaja
   tutorial_tlctelebot_language: Bahasa Inggeris sahaja
   tutorial_tlcaus_language: Bahasa Inggeris sahaja
-  tutorial_oralhist_language: Bahasa Inggeris sahaja
   tutorial_tlcmicro_language: Bahasa Inggeris sahaja
   tutorial_imathematician_language: Bahasa Inggeris sahaja
   tutorial_tlcmagic_language: Bahasa Inggeris sahaja
@@ -6621,7 +6512,6 @@ ms:
   tutorial_tynkercan_language: Bahasa Inggeris sahaja
   tutorial_grokflags_language: Bahasa Inggeris sahaja
   tutorial_robomind_language: Bahasa Inggeris, Bahasa Belanda
-  tutorial_scratchanimwork_language: Bahasa Inggeris sahaja
   tutorial_adventureq_language: Bahasa Cina (Ringkas), Bahasa Inggeris
   tutorial_khan-es_language: Bahasa Sepanyol
   tutorial_kpt_language: Bahasa Portugis
@@ -6629,14 +6519,12 @@ ms:
   tutorial_khe_language: Bahasa Ibrani
   tutorial_kfr_language: Bahasa Perancis
   tutorial_app-inventor_language: Bahasa Inggeris sahaja
-  tutorial_bits_language: Bahasa Inggeris, Bahasa Jerman
   tutorial_blockly_language: Bahasa Inggeris, Bahasa Sepanyol, Bahasa Perancis, 40
     bahasa yang lain
   tutorial_tynker_language: Bahasa Inggeris sahaja
   tutorial_baypt_language: Bahasa Portugis
   tutorial_code-combat_language: Pelbagai
   tutorial_mky_language: Pelbagai
-  tutorial_spellcraft_language: Bahasa Inggeris sahaja
   tutorial_pirates_language: Bahasa Inggeris, Bahasa Denmark, Bahasa Jerman
   tutorial_csfirst_language: Bahasa Inggeris sahaja
   tutorial_loopedy_language: Bahasa Inggeris sahaja
@@ -6724,7 +6612,6 @@ ms:
     Bahasa Sepanyol
   tutorial_khandata_language: Bahasa Czech, Bahasa Inggeris, Bahasa Portugis (Brazil),
     Bahasa Sepanyol
-  tutorial_robomeshiq_language: Bahasa Inggeris sahaja
   tutorial_googlelogo_language: Bahasa Inggeris sahaja
   tutorial_playtune_language: Bahasa Inggeris sahaja
   tutorial_computeit_language: Bahasa Inggeris, Bahasa Perancis, Bahasa Jerman, Bahasa
@@ -6788,7 +6675,6 @@ ms:
   tutorial_stemcod_language: Bahasa Inggeris sahaja
   tutorial_techikb_language: Bahasa Inggeris sahaja
   tutorial_kanostreet_language: Bahasa Inggeris sahaja
-  tutorial_nyblebot_language: Bahasa Inggeris sahaja
   tutorial_codemojijs_language: Bahasa Inggeris sahaja
   tutorial_techapf_language: Bahasa Inggeris sahaja
   tutorial_techfpjs_language: Bahasa Inggeris sahaja
@@ -6804,7 +6690,6 @@ ms:
   tutorial_gpbcircle_language: Bahasa Inggeris sahaja
   tutorial_gpbpaint_language: Bahasa Inggeris sahaja
   tutorial_cocomarcade_language: Pelbagai
-  tutorial_techcpp_language: Bahasa Inggeris sahaja
   tutorial_beetik_language: Bahasa Inggeris, Bahasa Sepanyol
   tutorial_codedj_language: Bahasa Inggeris, Bahasa Perancis
   tutorial_rgadvan_language: Bahasa Inggeris sahaja
@@ -6882,7 +6767,6 @@ ms:
   tutorial_ifly_language: Bahasa Inggeris sahaja
   tutorial_idowedo_language: Bahasa Inggeris sahaja
   tutorial_diggindwarf_language: Bahasa Inggeris sahaja
-  tutorial_rmedr_language: Bahasa Inggeris sahaja
   tutorial_spheroit_language: Bahasa Inggeris sahaja
   tutorial_gameofcodes_language: Bahasa Inggeris, Bahasa Portugis, Bahasa Rusia dan
     Bahasa Sepanyol
@@ -6896,7 +6780,6 @@ ms:
   tutorial_bcjs1_language: Bahasa Inggeris sahaja
   tutorial_bcjs2_language: Bahasa Inggeris sahaja
   tutorial_3dbearmars_language: Bahasa Inggeris
-  tutorial_alexaskill_language: Bahasa Inggeris
   tutorial_bitsboxyak_language: Bahasa Inggeris
   tutorial_blockscadbargraphs_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa
     Perancis, Bahasa Jerman, Bahasa Jepun, Bahasa Norway (Bokmål), Bahasa Serbia (Cyrillic),
@@ -6973,8 +6856,6 @@ ms:
   tutorial_codinismhero_language: Bahasa Inggeris
   tutorial_discovery_language: Bahasa Inggeris, Bahasa Sepanyol (Mexico)
   tutorial_csfirstname_language: Bahasa Inggeris, Bahasa Sepanyol (Mexico)
-  tutorial_obstaclecourse_language: Bahasa Cina, Bahasa Inggeris, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Itali, Bahasa Sepanyol
   tutorial_edisonmove_language: Bahasa Inggeris
   tutorial_edisonspider_language: Bahasa Inggeris
   tutorial_edisonspotlight_language: Bahasa Inggeris
@@ -7340,7 +7221,6 @@ ms:
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: Gred 2+
   tutorial_scratchg_string_detail_grades: Gred 6+
-  tutorial_roboticfriends_string_detail_grades: Semua peringkat umur
   tutorial_sjforest_string_detail_grades: Prapembaca - Gred 5
   tutorial_sjgreet_string_detail_grades: Prapembaca - Gred 5
   tutorial_sjsunset_string_detail_grades: Prapembaca - Gred 5
@@ -7385,7 +7265,6 @@ ms:
   tutorial_tickles_string_detail_grades: Gred 2+
   tutorial_ozogame_string_detail_grades: Semua peringkat umur
   tutorial_vidcodeio_string_detail_grades: Gred 2+
-  tutorial_besttech_string_detail_grades: Gred 9+
   tutorial_tlcbrain_string_detail_grades: Gred 6+
   tutorial_hopquiz_string_detail_grades: 'Gred 6-8 '
   tutorial_unfortunate_string_detail_grades: Gred 2-5
@@ -7393,7 +7272,6 @@ ms:
   tutorial_elaseq_string_detail_grades: Prapembaca - Gred 5
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: 'Gred 2-8 '
-  tutorial_arduino_string_detail_grades: 'Gred 6-8 '
   tutorial_introrobo_string_detail_grades: Gred 2-5
   tutorial_tlcinvis_string_detail_grades: Gred 2+
   tutorial_tlcjflap_string_detail_grades: Gred 6+
@@ -7413,7 +7291,6 @@ ms:
   tutorial_tlcmind_string_detail_grades: Gred 6+
   tutorial_tlctelebot_string_detail_grades: Gred 2+
   tutorial_tlcaus_string_detail_grades: Gred 6+
-  tutorial_oralhist_string_detail_grades: Gred 9+
   tutorial_tlcmicro_string_detail_grades: Gred 2+
   tutorial_imathematician_string_detail_grades: 'Gred 2-8 '
   tutorial_tlcmagic_string_detail_grades: Gred 6+
@@ -7427,7 +7304,6 @@ ms:
   tutorial_tynkercan_string_detail_grades: Gred 2+
   tutorial_grokflags_string_detail_grades: Gred 6+
   tutorial_robomind_string_detail_grades: 'Gred 2-8 '
-  tutorial_scratchanimwork_string_detail_grades: 'Gred 2-8 '
   tutorial_adventureq_string_detail_grades: Gred 2-5
   tutorial_khan-es_string_detail_grades: Gred 6+
   tutorial_kpt_string_detail_grades: Gred 6+
@@ -7435,13 +7311,11 @@ ms:
   tutorial_khe_string_detail_grades: Gred 6+
   tutorial_kfr_string_detail_grades: Gred 6+
   tutorial_app-inventor_string_detail_grades: Gred 6+
-  tutorial_bits_string_detail_grades: Gred 2-5
   tutorial_blockly_string_detail_grades: Gred 6+
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: Semua peringkat umur
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: Gred 2+
-  tutorial_spellcraft_string_detail_grades: Gred 6+
   tutorial_pirates_string_detail_grades: 'Gred 2-8 '
   tutorial_csfirst_string_detail_grades: Gred 2+
   tutorial_loopedy_string_detail_grades: Gred 2-5
@@ -7498,7 +7372,6 @@ ms:
   tutorial_soloweb_string_detail_grades: Gred 9+
   tutorial_khanweb_string_detail_grades: Gred 2+
   tutorial_khandata_string_detail_grades: Gred 6+
-  tutorial_robomeshiq_string_detail_grades: Gred 2+
   tutorial_googlelogo_string_detail_grades: Gred 2+
   tutorial_playtune_string_detail_grades: Gred 6+
   tutorial_computeit_string_detail_grades: Gred 2+
@@ -7557,7 +7430,6 @@ ms:
   tutorial_stemcod_string_detail_grades: Gred 6+
   tutorial_techikb_string_detail_grades: Universiti
   tutorial_kanostreet_string_detail_grades: Gred 2-5
-  tutorial_nyblebot_string_detail_grades: Gred 2-5
   tutorial_codemojijs_string_detail_grades: Gred 2-5
   tutorial_techapf_string_detail_grades: Universiti
   tutorial_techfpjs_string_detail_grades: Universiti
@@ -7573,7 +7445,6 @@ ms:
   tutorial_gpbcircle_string_detail_grades: Gred 6+
   tutorial_gpbpaint_string_detail_grades: Gred 6+
   tutorial_cocomarcade_string_detail_grades: Gred 6+
-  tutorial_techcpp_string_detail_grades: Universiti
   tutorial_beetik_string_detail_grades: 'Gred 6-8 '
   tutorial_codedj_string_detail_grades: Gred 6+
   tutorial_rgadvan_string_detail_grades: Gred 6+
@@ -7646,7 +7517,6 @@ ms:
   tutorial_ifly_string_detail_grades: Gred 2+
   tutorial_idowedo_string_detail_grades: 'Gred 2-8 '
   tutorial_diggindwarf_string_detail_grades: Gred 6+
-  tutorial_rmedr_string_detail_grades: 'Gred 2-8 '
   tutorial_spheroit_string_detail_grades: Gred 2+
   tutorial_gameofcodes_string_detail_grades: Gred 2+
   tutorial_blocklygames_string_detail_grades: Gred 6+
@@ -7657,7 +7527,6 @@ ms:
   tutorial_bcjs1_string_detail_grades: Gred 6+
   tutorial_bcjs2_string_detail_grades: Gred 9+
   tutorial_3dbearmars_string_detail_grades: 'Gred 2-8 '
-  tutorial_alexaskill_string_detail_grades: 'Gred 2-8 '
   tutorial_bitsboxyak_string_detail_grades: 'Gred 2-8 '
   tutorial_blockscadbargraphs_string_detail_grades: Gred 2-5
   tutorial_blockscadbirdhouses_string_detail_grades: Gred 2-5
@@ -7714,7 +7583,6 @@ ms:
   tutorial_codinismhero_string_detail_grades: Gred 2+
   tutorial_discovery_string_detail_grades: Gred 2+
   tutorial_csfirstname_string_detail_grades: Gred 2+
-  tutorial_obstaclecourse_string_detail_grades: Gred 2+
   tutorial_edisonmove_string_detail_grades: Gred 6+
   tutorial_edisonspider_string_detail_grades: Gred 6+
   tutorial_edisonspotlight_string_detail_grades: 'Gred 2-8 '
@@ -8073,7 +7941,6 @@ ms:
   tutorial_ticklep_string_platforms: do-not-show
   tutorial_bbot_string_platforms: Semua pelayar moden
   tutorial_scratchg_string_platforms: Semua pelayar moden
-  tutorial_roboticfriends_string_platforms: Nirplag
   tutorial_sjforest_string_platforms: Aplikasi iPad
   tutorial_sjgreet_string_platforms: Aplikasi iPad
   tutorial_sjsunset_string_platforms: Aplikasi iPad
@@ -8122,7 +7989,6 @@ ms:
   tutorial_ozogame_string_platforms: Semua pelayar moden, iPad, iPhone, tablet Android,
     telefon Andriod, robot Ozobot
   tutorial_vidcodeio_string_platforms: Nirplag
-  tutorial_besttech_string_platforms: Nirplag
   tutorial_tlcbrain_string_platforms: Nirplag
   tutorial_hopquiz_string_platforms: iPad dan iPhone
   tutorial_unfortunate_string_platforms: Robot Dash dan Dot
@@ -8130,7 +7996,6 @@ ms:
   tutorial_elaseq_string_platforms: Nirplag, Semua pelayan moden, iPad, tablet Android
   tutorial_bbcmathi_string_platforms: do-not-show
   tutorial_tlcpixel_string_platforms: Nirplag
-  tutorial_arduino_string_platforms: Papan Litar Arduino
   tutorial_introrobo_string_platforms: iPad, tablet Android, robot Dash dan Dot
   tutorial_tlcinvis_string_platforms: Nirplag
   tutorial_tlcjflap_string_platforms: Semua pelayar moden
@@ -8153,7 +8018,6 @@ ms:
   tutorial_tlcmind_string_platforms: Nirplag
   tutorial_tlctelebot_string_platforms: Nirplag
   tutorial_tlcaus_string_platforms: Nirplag
-  tutorial_oralhist_string_platforms: Semua pelayar moden
   tutorial_tlcmicro_string_platforms: Nirplag
   tutorial_imathematician_string_platforms: Semua pelayar moden
   tutorial_tlcmagic_string_platforms: Nirplag
@@ -8170,7 +8034,6 @@ ms:
     untuk mudah alih)
   tutorial_robomind_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, tablet Android, iPad
-  tutorial_scratchanimwork_string_platforms: Semua pelayar moden
   tutorial_adventureq_string_platforms: iPad
   tutorial_khan-es_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -8183,13 +8046,11 @@ ms:
   tutorial_kfr_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome, Firefox,
     Safari
   tutorial_app-inventor_string_platforms: Android
-  tutorial_bits_string_platforms: Semua pelayar moden
   tutorial_blockly_string_platforms: Semua pelayar moden
   tutorial_tynker_string_platforms: do-not-show
   tutorial_baypt_string_platforms: Semua pelayar moden
   tutorial_code-combat_string_platforms: do-not-show
   tutorial_mky_string_platforms: Semua pelayar moden
-  tutorial_spellcraft_string_platforms: Windows
   tutorial_pirates_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, tablet Android, iPad, telefon Android, iPhone
   tutorial_csfirst_string_platforms: Semua pelayar moden
@@ -8258,8 +8119,6 @@ ms:
     Android, iPad, iPhone
   tutorial_khanweb_string_platforms: Semua pelayan moden, tablet Android
   tutorial_khandata_string_platforms: Semua pelayar moden
-  tutorial_robomeshiq_string_platforms: Internet Explorer 11, Chrome, Firefox, Robot
-    Vex IQ
   tutorial_googlelogo_string_platforms: Semua pelayar moden
   tutorial_playtune_string_platforms: Chrome, Firefox, Safari
   tutorial_computeit_string_platforms: Semua pelayar moden
@@ -8329,7 +8188,6 @@ ms:
   tutorial_techikb_string_platforms: Semua pelayar moden, tablet Android, iPad, telefon
     Windows, telefon Android, iPhone
   tutorial_kanostreet_string_platforms: Semua pelayar moden
-  tutorial_nyblebot_string_platforms: Tablet Android, iPad, telefon Android, iPhone
   tutorial_codemojijs_string_platforms: Semua pelayar moden
   tutorial_techapf_string_platforms: Semua pelayar moden, tablet Android, iPad, telefon
     Windows, telefon Android, iPhone
@@ -8350,8 +8208,6 @@ ms:
   tutorial_gpbpaint_string_platforms: Semua pelayar moden
   tutorial_cocomarcade_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox
-  tutorial_techcpp_string_platforms: Semua pelayar moden, tablet Android, iPad, telefon
-    Windows, telefon Android, iPhone
   tutorial_beetik_string_platforms: Chrome, Firefox, tablet Android, iPad
   tutorial_codedj_string_platforms: Chrome, Firefox, Safari, tablet Android, iPad
   tutorial_rgadvan_string_platforms: Chrome, Firefox, tablet Android
@@ -8447,7 +8303,6 @@ ms:
   tutorial_ifly_string_platforms: Tablet Android, iPad, Dron Mini Parrot
   tutorial_idowedo_string_platforms: Semua pelayar moden, tablet Android, iPad, WeDo
   tutorial_diggindwarf_string_platforms: Chrome, Firefox, Safari
-  tutorial_rmedr_string_platforms: Semua pelayan moden, Robot EDR Vex
   tutorial_spheroit_string_platforms: iPad, tablet Android, iPhone, telefon Android,
     robot Sphero
   tutorial_gameofcodes_string_platforms: Semua pelayan moden, tablet Android, telefon
@@ -8462,7 +8317,6 @@ ms:
   tutorial_bcjs1_string_platforms: Semua pelayar moden
   tutorial_bcjs2_string_platforms: Semua pelayar moden
   tutorial_3dbearmars_string_platforms: Tablet Android, iPad, telefon Android, iPhone
-  tutorial_alexaskill_string_platforms: Semua pelayar moden
   tutorial_bitsboxyak_string_platforms: Semua pelayar moden
   tutorial_blockscadbargraphs_string_platforms: Semua pelayar moden
   tutorial_blockscadbirdhouses_string_platforms: Semua pelayar moden
@@ -8539,7 +8393,6 @@ ms:
   tutorial_codinismhero_string_platforms: Tablet Android, telefon Android
   tutorial_discovery_string_platforms: Semua pelayar moden
   tutorial_csfirstname_string_platforms: Semua pelayar moden
-  tutorial_obstaclecourse_string_platforms: iPad, Pembaca skrin
   tutorial_edisonmove_string_platforms: Semua pelayar moden
   tutorial_edisonspider_string_platforms: Semua pelayan moden, iPad, tablet Android
   tutorial_edisonspotlight_string_platforms: Semua pelayan moden, iPad, tablet Android
@@ -8904,7 +8757,6 @@ ms:
   tutorial_ticklep_string_detail_platforms: do-not-show
   tutorial_bbot_string_detail_platforms: ''
   tutorial_scratchg_string_detail_platforms: ''
-  tutorial_roboticfriends_string_detail_platforms: Nirplag
   tutorial_sjforest_string_detail_platforms: Aplikasi iPad
   tutorial_sjgreet_string_detail_platforms: Aplikasi iPad
   tutorial_sjsunset_string_detail_platforms: Aplikasi iPad
@@ -8949,7 +8801,6 @@ ms:
   tutorial_tickles_string_detail_platforms: Robot Sphero
   tutorial_ozogame_string_detail_platforms: Robot Ozobot
   tutorial_vidcodeio_string_detail_platforms: Nirplag
-  tutorial_besttech_string_detail_platforms: Nirplag
   tutorial_tlcbrain_string_detail_platforms: Nirplag
   tutorial_hopquiz_string_detail_platforms: Aplikasi iOS
   tutorial_unfortunate_string_detail_platforms: Robot Dash dan Dot
@@ -8957,7 +8808,6 @@ ms:
   tutorial_elaseq_string_detail_platforms: Nirplag
   tutorial_bbcmathi_string_detail_platforms: do-not-show
   tutorial_tlcpixel_string_detail_platforms: Nirplag
-  tutorial_arduino_string_detail_platforms: ''
   tutorial_introrobo_string_detail_platforms: Robot Dash dan Dot
   tutorial_tlcinvis_string_detail_platforms: Nirplag
   tutorial_tlcjflap_string_detail_platforms: ''
@@ -8977,7 +8827,6 @@ ms:
   tutorial_tlcmind_string_detail_platforms: Nirplag
   tutorial_tlctelebot_string_detail_platforms: Nirplag
   tutorial_tlcaus_string_detail_platforms: Nirplag
-  tutorial_oralhist_string_detail_platforms: ''
   tutorial_tlcmicro_string_detail_platforms: Nirplag
   tutorial_imathematician_string_detail_platforms: ''
   tutorial_tlcmagic_string_detail_platforms: Nirplag
@@ -8991,7 +8840,6 @@ ms:
   tutorial_tynkercan_string_detail_platforms: ''
   tutorial_grokflags_string_detail_platforms: ''
   tutorial_robomind_string_detail_platforms: ''
-  tutorial_scratchanimwork_string_detail_platforms: ''
   tutorial_adventureq_string_detail_platforms: ''
   tutorial_khan-es_string_detail_platforms: ''
   tutorial_kpt_string_detail_platforms: ''
@@ -8999,13 +8847,11 @@ ms:
   tutorial_khe_string_detail_platforms: ''
   tutorial_kfr_string_detail_platforms: ''
   tutorial_app-inventor_string_detail_platforms: Android
-  tutorial_bits_string_detail_platforms: ''
   tutorial_blockly_string_detail_platforms: ''
   tutorial_tynker_string_detail_platforms: do-not-show
   tutorial_baypt_string_detail_platforms: ''
   tutorial_code-combat_string_detail_platforms: do-not-show
   tutorial_mky_string_detail_platforms: ''
-  tutorial_spellcraft_string_detail_platforms: ''
   tutorial_pirates_string_detail_platforms: ''
   tutorial_csfirst_string_detail_platforms: ''
   tutorial_loopedy_string_detail_platforms: Robot Dash dan Dot
@@ -9062,7 +8908,6 @@ ms:
   tutorial_soloweb_string_detail_platforms: ''
   tutorial_khanweb_string_detail_platforms: ''
   tutorial_khandata_string_detail_platforms: ''
-  tutorial_robomeshiq_string_detail_platforms: Robot Vex IQ
   tutorial_googlelogo_string_detail_platforms: ''
   tutorial_playtune_string_detail_platforms: ''
   tutorial_computeit_string_detail_platforms: ''
@@ -9121,7 +8966,6 @@ ms:
   tutorial_stemcod_string_detail_platforms: ''
   tutorial_techikb_string_detail_platforms: ''
   tutorial_kanostreet_string_detail_platforms: ''
-  tutorial_nyblebot_string_detail_platforms: ''
   tutorial_codemojijs_string_detail_platforms: ''
   tutorial_techapf_string_detail_platforms: ''
   tutorial_techfpjs_string_detail_platforms: ''
@@ -9137,7 +8981,6 @@ ms:
   tutorial_gpbcircle_string_detail_platforms: ''
   tutorial_gpbpaint_string_detail_platforms: ''
   tutorial_cocomarcade_string_detail_platforms: ''
-  tutorial_techcpp_string_detail_platforms: ''
   tutorial_beetik_string_detail_platforms: ''
   tutorial_codedj_string_detail_platforms: ''
   tutorial_rgadvan_string_detail_platforms: ''
@@ -9210,7 +9053,6 @@ ms:
   tutorial_ifly_string_detail_platforms: Dron Mini Parrot
   tutorial_idowedo_string_detail_platforms: WeDo
   tutorial_diggindwarf_string_detail_platforms: ''
-  tutorial_rmedr_string_detail_platforms: Robot Vex EDR
   tutorial_spheroit_string_detail_platforms: Robot Sphero
   tutorial_gameofcodes_string_detail_platforms: ''
   tutorial_blocklygames_string_detail_platforms: ''
@@ -9221,7 +9063,6 @@ ms:
   tutorial_bcjs1_string_detail_platforms: ''
   tutorial_bcjs2_string_detail_platforms: ''
   tutorial_3dbearmars_string_detail_platforms: Pencetak 3D
-  tutorial_alexaskill_string_detail_platforms: ''
   tutorial_bitsboxyak_string_detail_platforms: ''
   tutorial_blockscadbargraphs_string_detail_platforms: ''
   tutorial_blockscadbirdhouses_string_detail_platforms: ''
@@ -9278,7 +9119,6 @@ ms:
   tutorial_codinismhero_string_detail_platforms: ''
   tutorial_discovery_string_detail_platforms: ''
   tutorial_csfirstname_string_detail_platforms: ''
-  tutorial_obstaclecourse_string_detail_platforms: Robot Sphero
   tutorial_edisonmove_string_detail_platforms: Robot Edison
   tutorial_edisonspider_string_detail_platforms: Robot Edison
   tutorial_edisonspotlight_string_detail_platforms: Robot Edison
@@ -9616,7 +9456,6 @@ ms:
   tutorial_ticklep_string_detail_programming_languages: do-not-show
   tutorial_bbot_string_detail_programming_languages: Bahasa pengaturcaraan visual
   tutorial_scratchg_string_detail_programming_languages: Bebas bahasa
-  tutorial_roboticfriends_string_detail_programming_languages: Bebas bahasa
   tutorial_sjforest_string_detail_programming_languages: Blok
   tutorial_sjgreet_string_detail_programming_languages: Blok
   tutorial_sjsunset_string_detail_programming_languages: Blok
@@ -9662,7 +9501,6 @@ ms:
   tutorial_tickles_string_detail_programming_languages: Blok
   tutorial_ozogame_string_detail_programming_languages: Blok
   tutorial_vidcodeio_string_detail_programming_languages: Bebas bahasa
-  tutorial_besttech_string_detail_programming_languages: Blok, C/C++
   tutorial_tlcbrain_string_detail_programming_languages: Bebas bahasa
   tutorial_hopquiz_string_detail_programming_languages: Hopscotch
   tutorial_unfortunate_string_detail_programming_languages: Blok
@@ -9670,7 +9508,6 @@ ms:
   tutorial_elaseq_string_detail_programming_languages: Bebas bahasa
   tutorial_bbcmathi_string_detail_programming_languages: do-not-show
   tutorial_tlcpixel_string_detail_programming_languages: Bebas bahasa
-  tutorial_arduino_string_detail_programming_languages: Arduino
   tutorial_introrobo_string_detail_programming_languages: Blok, JavaScript
   tutorial_tlcinvis_string_detail_programming_languages: Bebas bahasa
   tutorial_tlcjflap_string_detail_programming_languages: Bebas bahasa
@@ -9690,7 +9527,6 @@ ms:
   tutorial_tlcmind_string_detail_programming_languages: Bebas bahasa
   tutorial_tlctelebot_string_detail_programming_languages: Bebas bahasa
   tutorial_tlcaus_string_detail_programming_languages: Bebas bahasa
-  tutorial_oralhist_string_detail_programming_languages: Bebas bahasa
   tutorial_tlcmicro_string_detail_programming_languages: Bebas bahasa
   tutorial_imathematician_string_detail_programming_languages: Scratch
   tutorial_tlcmagic_string_detail_programming_languages: Bebas bahasa
@@ -9706,7 +9542,6 @@ ms:
     Python
   tutorial_grokflags_string_detail_programming_languages: Python
   tutorial_robomind_string_detail_programming_languages: Blok
-  tutorial_scratchanimwork_string_detail_programming_languages: Blok, Scratch
   tutorial_adventureq_string_detail_programming_languages: Blok
   tutorial_khan-es_string_detail_programming_languages: JavaScript
   tutorial_kpt_string_detail_programming_languages: JavaScript
@@ -9714,13 +9549,11 @@ ms:
   tutorial_khe_string_detail_programming_languages: JavaScript
   tutorial_kfr_string_detail_programming_languages: JavaScript
   tutorial_app-inventor_string_detail_programming_languages: Blok
-  tutorial_bits_string_detail_programming_languages: Blok, Bebas bahasa
   tutorial_blockly_string_detail_programming_languages: Blok
   tutorial_tynker_string_detail_programming_languages: do-not-show
   tutorial_baypt_string_detail_programming_languages: Blok
   tutorial_code-combat_string_detail_programming_languages: do-not-show
   tutorial_mky_string_detail_programming_languages: CoffeeScript
-  tutorial_spellcraft_string_detail_programming_languages: Blok, JavaScript
   tutorial_pirates_string_detail_programming_languages: Blok, kod Lanun
   tutorial_csfirst_string_detail_programming_languages: Scratch
   tutorial_loopedy_string_detail_programming_languages: Blok
@@ -9777,7 +9610,6 @@ ms:
   tutorial_soloweb_string_detail_programming_languages: HTML, CSS
   tutorial_khanweb_string_detail_programming_languages: HTML & CSS
   tutorial_khandata_string_detail_programming_languages: SQL
-  tutorial_robomeshiq_string_detail_programming_languages: Blok, Python
   tutorial_googlelogo_string_detail_programming_languages: Blok, Scratch
   tutorial_playtune_string_detail_programming_languages: Blok
   tutorial_computeit_string_detail_programming_languages: Bebas bahasa
@@ -9838,7 +9670,6 @@ ms:
   tutorial_stemcod_string_detail_programming_languages: JavaScript
   tutorial_techikb_string_detail_programming_languages: Kotlin
   tutorial_kanostreet_string_detail_programming_languages: Blok, JavaScript
-  tutorial_nyblebot_string_detail_programming_languages: Blok
   tutorial_codemojijs_string_detail_programming_languages: JavaScript
   tutorial_techapf_string_detail_programming_languages: Python
   tutorial_techfpjs_string_detail_programming_languages: JavaScript
@@ -9855,7 +9686,6 @@ ms:
   tutorial_gpbpaint_string_detail_programming_languages: Blok
   tutorial_cocomarcade_string_detail_programming_languages: JavaScript, Python, Lua,
     CoffeeScript
-  tutorial_techcpp_string_detail_programming_languages: C/C++
   tutorial_beetik_string_detail_programming_languages: Blok
   tutorial_codedj_string_detail_programming_languages: JavaScript
   tutorial_rgadvan_string_detail_programming_languages: Blok, JavaScript, Python
@@ -9928,7 +9758,6 @@ ms:
   tutorial_ifly_string_detail_programming_languages: Tynker
   tutorial_idowedo_string_detail_programming_languages: Scratch
   tutorial_diggindwarf_string_detail_programming_languages: JavaScript
-  tutorial_rmedr_string_detail_programming_languages: Blok
   tutorial_spheroit_string_detail_programming_languages: Blok, JavaScript
   tutorial_gameofcodes_string_detail_programming_languages: Blok, Sedia, Perpaduan
   tutorial_blocklygames_string_detail_programming_languages: Blok
@@ -9940,7 +9769,6 @@ ms:
   tutorial_bcjs2_string_detail_programming_languages: JavaScript
   tutorial_3dbearmars_string_detail_programming_languages: Bebas bahasa (boleh diajar
     dalam pelbagai bahasa), Gunakan pemodelan 3D dalam realiti terimbuh
-  tutorial_alexaskill_string_detail_programming_languages: Blok
   tutorial_bitsboxyak_string_detail_programming_languages: JavaScript
   tutorial_blockscadbargraphs_string_detail_programming_languages: Blok
   tutorial_blockscadbirdhouses_string_detail_programming_languages: Blok
@@ -10000,7 +9828,6 @@ ms:
   tutorial_codinismhero_string_detail_programming_languages: Python
   tutorial_discovery_string_detail_programming_languages: Blok, Scratch
   tutorial_csfirstname_string_detail_programming_languages: Blok, Scratch
-  tutorial_obstaclecourse_string_detail_programming_languages: Blok
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, bahasa pengaturcaraan
     berasaskan teks berdasarkan Python.
   tutorial_edisonspider_string_detail_programming_languages: Blok
@@ -10098,7 +9925,7 @@ ms:
   tutorial_gamemaker_string_detail_programming_languages: JavaScript
   tutorial_duckrace_string_detail_programming_languages: Blok
   tutorial_allcancodeapps_string_detail_programming_languages: Blok
-  tutorial_n2y_string_detail_programming_languages: ''
+  tutorial_n2y_string_detail_programming_languages: Nirplag
   tutorial_microsoftarcade_string_detail_programming_languages: Blok
   tutorial_csfirstunplugged_string_detail_programming_languages: Blok, Nirplag, Scratch
   tutorial_toxicodepython_string_detail_programming_languages: Python
@@ -10310,7 +10137,6 @@ ms:
   tutorial_eddesign_name: Edison pereka
   tutorial_edshapeup_name: Membentuk robot dengan Edison
   tutorial_ozocolor_name: Bintang Pop|Mencipta Fungsi Dengan Kod Warna Ozobot
-  tutorial_kcjanimals_name: Tentang Haiwan di Kanada
   tutorial_icomputeeggs_name: iHide Telur
   tutorial_rootunplugged_name: Memecah Kod iRobot
   tutorial_rgtreasure_name: Teka-teki RoboGarden - Peti Harta Karun Robo
@@ -10330,14 +10156,12 @@ ms:
   tutorial_tcadloops_name: Menggunakan Gelung dalam Tinkercad untuk Mereka Bentuk
     Bintang yang Meletus
   tutorial_phidgets_name: Theremin Phidgets dengan Pemprosesan
-  tutorial_kcjmerry_name: Selamat Mikro:bit
   tutorial_modvariables_name: Menyelidiki Pemboleh Ubah & Nilai Blok dengan Menggunakan
     Cubelets
   tutorial_codestersmicro_name: 'Codesters: Cipta Permainan Bola Mikro'
   tutorial_codestersdata_name: 'Codesters: Mengekod & Menggrafkan data mikro:bit'
   tutorial_ikodexmas_name: Krismas iKode
   tutorial_rpisensehat_name: Pencatat data Sense HAT
-  tutorial_modtraits_name: Ciri Watak dengan GoPiGo
   tutorial_mee_name: 'Jam Kod Minecraft: AI untuk Kebaikan'
   tutorial_kuborobo_name: Laluan Pengekodan Robotik KUBO
   tutorial_ai-oceans_name: AI untuk Lautan
@@ -10649,11 +10473,6 @@ ms:
     pelajaran pertama dua siri pelajaran, tetapi mana-mana pelajaran boleh diajar
     secara berasingan. Pelajaran kedua menggunakan OzoBlockly untuk membina konsep
     fungsi.
-  tutorial_kcjanimals_longdescription: Bina projek mudah untuk meraikan pengekodan
-    dan hidupan liar Negara Kanada. Kanak-kanak akan memilih haiwan Kanada, seperti
-    beruang atau moose dan mencipta animasi yang menerokai dunia haiwan, seperti habitatnya,
-    tabiat makan, corak migrasi dan banyak lagi. Projek ini cukup mudah untuk guru
-    atau ibu bapa mengendalikan dan membantu kanak-kanak mengikutinya bersama.
   tutorial_icomputeeggs_longdescription: Pelajaran yang dikendalikan oleh guru ini,
     disesuaikan dengan Jam Kod, memberikan peluang kepada murid untuk meneroka pengaturcaraan
     fizikal melalui robotik. Menggunakan persekitaran pengaturcaraan tarik dan lepas
@@ -10709,12 +10528,6 @@ ms:
     (CAD) boleh digabungkan untuk mencipta model 3D bintang yang meletus.
   tutorial_phidgets_longdescription: Cipta alat muzik yang hebat dengan Phidgets and
     Pemprosesan!
-  tutorial_kcjmerry_longdescription: Bina projek pengekodan berinteraktif dengan mikro:bit
-    untuk meraikan pengekodan dan musim percutian. Kanak-kanak akan menggunakan gabungan
-    pengekodan blok dan pengkomputeran fizikal untuk mencipta animasi bola salji yang
-    berkilauan. Projek ini cukup mudah untuk guru atau ibu bapa untuk mengendalikan
-    dan ia didatangi dengan kad aktiviti yang boleh digunakan sendiri oleh anak-anak
-    untuk cabaran selanjutnya.
   tutorial_modvariables_longdescription: 'Pelajar menyelidik cara data mengalir melalui
     rangkaian dengan menggunakan blok robot Cubelets. Pelajaran ini mengandaikan bahawa
     pelajar sudah biasa dengan cara blok robot Cubelets berfungsi secara umum. Sila
@@ -10738,8 +10551,6 @@ ms:
   tutorial_rpisensehat_longdescription: Belajar cara menggunakan perkakasan Sense
     HAT untuk membina peranti pengelogan data yang boleh merekod pelbagai maklumat
     tentang persekitarannya berdekatan.
-  tutorial_modtraits_longdescription: 'Pelajar menggunakan langkah pemikiran pengiraan
-    untuk menganalisis sifat watak dan cipta algoritma untuk menunjukkan sifat tersebut. '
   tutorial_mee_longdescription: Atur cara Agen Minecraft untuk mengumpulkan data tentang
     kebakaran hutan. Kemudian tuliskan kod untuk membantu mencegah api daripada merebak,
     menyelamatkan kampung dan menghidupkan kembali hutan. Pelajari asas pengekodan
@@ -10825,7 +10636,6 @@ ms:
   tutorial_eddesign_language: Bahasa Inggeris
   tutorial_edshapeup_language: Bahasa Inggeris
   tutorial_ozocolor_language: Bahasa Inggeris
-  tutorial_kcjanimals_language: Bahasa Inggeris
   tutorial_icomputeeggs_language: Bahasa Inggeris
   tutorial_rootunplugged_language: Bahasa Inggeris
   tutorial_rgtreasure_language: Bahasa Inggeris
@@ -10841,13 +10651,11 @@ ms:
   tutorial_blockscadscale_language: Bahasa Inggeris
   tutorial_tcadloops_language: Bahasa Inggeris
   tutorial_phidgets_language: Bahasa Inggeris
-  tutorial_kcjmerry_language: Bahasa Inggeris
   tutorial_modvariables_language: Bahasa Inggeris
   tutorial_codestersmicro_language: Bahasa Inggeris
   tutorial_codestersdata_language: Bahasa Inggeris
   tutorial_ikodexmas_language: Bahasa Inggeris
   tutorial_rpisensehat_language: Bahasa Inggeris
-  tutorial_modtraits_language: Bahasa Inggeris
   tutorial_mee_language: Bahasa Bulgaria, Bahasa Cina (Ringkas), Bahasa Cina (Tradisional),
     Bahasa Czech, Bahasa Denmark, Bahasa Belanda, Bahasa Inggeris (UK), Bahasa Inggeris
     (Amerika Syarikat), Bahasa Finland, Bahasa Perancis (Kanada), Bahasa Perancis
@@ -10930,7 +10738,6 @@ ms:
   tutorial_eddesign_string_detail_grades: Gred 6+
   tutorial_edshapeup_string_detail_grades: Gred 6+
   tutorial_ozocolor_string_detail_grades: 'Gred 2-8 '
-  tutorial_kcjanimals_string_detail_grades: 'Gred 2-8 '
   tutorial_icomputeeggs_string_detail_grades: 'Gred 2-8 '
   tutorial_rootunplugged_string_detail_grades: 'Gred 2-8 '
   tutorial_rgtreasure_string_detail_grades: Prapembaca - Gred 5
@@ -10946,13 +10753,11 @@ ms:
   tutorial_blockscadscale_string_detail_grades: Gred 6+
   tutorial_tcadloops_string_detail_grades: Gred 5-6
   tutorial_phidgets_string_detail_grades: Gred 9+
-  tutorial_kcjmerry_string_detail_grades: 'Gred 2-8 '
   tutorial_modvariables_string_detail_grades: Gred 6+
   tutorial_codestersmicro_string_detail_grades: 'Gred 6-8 '
   tutorial_codestersdata_string_detail_grades: 'Gred 6-8 '
   tutorial_ikodexmas_string_detail_grades: Gred 2-5
   tutorial_rpisensehat_string_detail_grades: Gred 6+
-  tutorial_modtraits_string_detail_grades: Gred 2+
   tutorial_mee_string_detail_grades: Gred 2+
   tutorial_kuborobo_string_detail_grades: Prapembaca - Gred 8
   tutorial_ai-oceans_string_detail_grades: "  Gred 3+  "
@@ -11037,7 +10842,6 @@ ms:
   tutorial_eddesign_string_platforms: Semua pelayan moden, iPad, tablet Android
   tutorial_edshapeup_string_platforms: Semua pelayar moden
   tutorial_ozocolor_string_platforms: Nirplag
-  tutorial_kcjanimals_string_platforms: Semua pelayar moden
   tutorial_icomputeeggs_string_platforms: Semua pelayan moden, telefon Android, tablet
     Android, iPad, iPhone
   tutorial_rootunplugged_string_platforms: Nirplag
@@ -11054,14 +10858,12 @@ ms:
   tutorial_blockscadscale_string_platforms: Semua pelayar moden
   tutorial_tcadloops_string_platforms: Semua pelayar moden
   tutorial_phidgets_string_platforms: Semua pelayar moden
-  tutorial_kcjmerry_string_platforms: Semua pelayar moden
   tutorial_modvariables_string_platforms: Semua pelayan moden, tablet Android, telefon
     Android, iPad, iPhone
   tutorial_codestersmicro_string_platforms: 'Semua pelayar moden '
   tutorial_codestersdata_string_platforms: 'Semua pelayar moden '
   tutorial_ikodexmas_string_platforms: Semua pelayar moden
   tutorial_rpisensehat_string_platforms: Semua pelayar moden
-  tutorial_modtraits_string_platforms: Semua pelayar moden
   tutorial_mee_string_platforms: iPad, Komputer (Windows PC, Mac)
   tutorial_kuborobo_string_platforms: Nirplag
   tutorial_ai-oceans_string_platforms: 'Semua pelayar moden, tablet Android moden,
@@ -11141,7 +10943,6 @@ ms:
   tutorial_eddesign_string_detail_platforms: Robot Edison
   tutorial_edshapeup_string_detail_platforms: Robot Edison
   tutorial_ozocolor_string_detail_platforms: Ozobot
-  tutorial_kcjanimals_string_detail_platforms: ''
   tutorial_icomputeeggs_string_detail_platforms: Sphero
   tutorial_rootunplugged_string_detail_platforms: ''
   tutorial_rgtreasure_string_detail_platforms: ''
@@ -11158,13 +10959,11 @@ ms:
   tutorial_tcadloops_string_detail_platforms: ''
   tutorial_phidgets_string_detail_platforms: Phidgets Mendapat Kit Permulaan, Sensor
     Jarak Phidgets.
-  tutorial_kcjmerry_string_detail_platforms: mikro:bit BBC
   tutorial_modvariables_string_detail_platforms: Blok Robot Cubelets
   tutorial_codestersmicro_string_detail_platforms: mikro:bit BBC
   tutorial_codestersdata_string_detail_platforms: mikro:bit BBC
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (perisian), SenseHAT
-  tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: Robot KUBO
   tutorial_ai-oceans_string_detail_platforms: ''
@@ -11253,7 +11052,6 @@ ms:
   tutorial_edshapeup_string_detail_programming_languages: Python, EdPy, bahasa pengaturcaraan
     berasaskan teks berdasarkan Python.
   tutorial_ozocolor_string_detail_programming_languages: Blok
-  tutorial_kcjanimals_string_detail_programming_languages: Blok
   tutorial_icomputeeggs_string_detail_programming_languages: Blok
   tutorial_rootunplugged_string_detail_programming_languages: Blok
   tutorial_rgtreasure_string_detail_programming_languages: Blok
@@ -11271,14 +11069,12 @@ ms:
   tutorial_phidgets_string_detail_programming_languages: Java, Phidgets menyokong
     SEMUA bahasa pengaturcaraan utama. Boleh menyesuaikan projek ini dengan bahasa/persekitaran
     lain dengan mudah.
-  tutorial_kcjmerry_string_detail_programming_languages: Blok
   tutorial_modvariables_string_detail_programming_languages: Bebas bahasa (boleh diajar
     dalam pelbagai bahasa)
   tutorial_codestersmicro_string_detail_programming_languages: Python
   tutorial_codestersdata_string_detail_programming_languages: Python
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
-  tutorial_modtraits_string_detail_programming_languages: Blok
   tutorial_mee_string_detail_programming_languages: Blok
   tutorial_kuborobo_string_detail_programming_languages: Letakkan jubin tag hasil
     kerja pelajar bersama
