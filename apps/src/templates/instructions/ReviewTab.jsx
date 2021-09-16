@@ -374,7 +374,7 @@ class ReviewTab extends Component {
       // on a peer's project and the project has peer review disabled.
       return (
         <div style={{...styles.reviewDisabledText, ...styles.messageText}}>
-          {javalabMsg.peerReviewDisabled()}
+          {javalabMsg.errorPeerReviewDisabled()}
         </div>
       );
     } else {
