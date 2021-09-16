@@ -30,8 +30,13 @@
           "word": "Variable",
           "definition": "un marcador de posición para una información que puede cambiar."
         },
+        "prompt/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
         "input/coursef/2021": {
-          "word": "Entrada"
+          "word": "Entrada",
+          "definition": ""
         },
         "loop/coursef/2021": {
           "word": "Bucle",
@@ -44,6 +49,10 @@
         "for_loop/coursef/2021": {
           "word": "Bucles desde",
           "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "machine_learning/coursef/2021": {
           "word": "Aprendizaje automático",
@@ -293,6 +302,10 @@
           "word": "Condicionales",
           "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
         },
+        "pseudocode/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
         "condition/coursed/2021": {
           "word": "Condición",
           "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
@@ -342,7 +355,8 @@
           "definition": "una acción que hace que algo suceda."
         },
         "code/express/2021": {
-          "word": "programar"
+          "word": "programar",
+          "definition": ""
         },
         "loop/express/2021": {
           "word": "Bucle",
@@ -379,6 +393,10 @@
         "variable/express/2021": {
           "word": "Variable",
           "definition": "un marcador de posición para una información que puede cambiar."
+        },
+        "prompt/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "for_loop/express/2021": {
           "word": "Bucles desde",
@@ -456,6 +474,10 @@
           "word": "Comportamiento",
           "definition": "Una acción que un sprite realiza continuamente hasta que se le dice que se detenga."
         },
+        "algorithm/coursee/2021": {
+          "word": "",
+          "definition": ""
+        },
         "sprite/coursee/2021": {
           "word": "Sprite",
           "definition": "Un gráfico en la pantalla con una ubicación, tamaño y apariencia."
@@ -465,7 +487,8 @@
           "definition": "una acción que hace que algo suceda."
         },
         "copyright/coursee/2021": {
-          "word": "Derechos de autor"
+          "word": "Derechos de autor",
+          "definition": ""
         },
         "loop/coursee/2021": {
           "word": "Bucle",
