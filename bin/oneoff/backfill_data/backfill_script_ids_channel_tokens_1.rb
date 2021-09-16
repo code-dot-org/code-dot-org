@@ -58,9 +58,7 @@ $is_dry_run = options[:dry_run]
 
 $backfill_count = 0
 $unable_to_backfill = 0
-$template_unable_to_backfill = 0
 $levels_missing_backfills = []
-$template_levels_missing_backfills = []
 
 $level_to_script_ids = {}
 
@@ -73,20 +71,8 @@ def update_script_ids
     level = channel_token.level
     user_id = user_id_for_storage_id(channel_token.storage_id)
 
-    # get all the possible scripts the channel token could be associated with
-    # search user scripts, if there's just one result use that script id
-    # see what's left
+    # get all the possible scripts the channel_token could be associated with
     associated_script_ids = get_associated_script_ids(level)
-    if user_id.present? && script_id_from_user_scripts = script_id_by_user_scripts(user_id, associated_script_ids)
-      update_channel_token(channel_token, script_id_from_user_scripts)
-      next
-    end
-
-    # if the user has only user_level associated with the level, use the script on that user_level
-    if user_id.present? && user_level_script_id = script_id_from_user_level(user_id, level)
-      update_channel_token(channel_token, user_level_script_id)
-      next
-    end
 
     # if the level is associated with only one script_level, use that script
     if associated_script_ids.length == 1
@@ -95,24 +81,43 @@ def update_script_ids
       next
     end
 
-    #----- after this we could potentially just pick a script ID there may be multiple from user scripts
-    # if we had a logged in user and they have no trace of progress
+    if user_id.present?
+      # get user_scripts for the associated_script_ids, if there is just one user_script, backfill with the
+      # associated script_id
+      script_ids_from_user_scripts = associated_script_ids_by_user_scripts(user_id, associated_script_ids)
+      if script_ids_from_user_scripts.count == 1
+        update_channel_token(channel_token, script_ids_from_user_scripts[0])
+        next
+      end
+
+      # get user_levels for the associated_script_ids, if there is just one user_level, backfill with the
+      # associated script_id
+      script_ids_from_user_levels = associated_script_ids_from_user_levels(user_id, level)
+      if script_ids_from_user_levels.count == 1
+        update_channel_token(channel_token, script_ids_from_user_levels[0])
+        next
+      end
+
+      # if the user has no associated user_levels or user_scripts, it's possible that the user visited a channel backed
+      # level which generated a channel_token and then the user left the page without making any progress. In this case it doesn't
+      # matter which script_id we pick, so backfill with the first associated_script_ids
+      if associated_script_ids.count > 0 && script_ids_from_user_scripts.blank? && script_ids_from_user_levels.blank?
+        update_channel_token(channel_token, associated_script_ids[0])
+        next
+      end
+    end
 
     record_failed_script_id_backfill(level, channel_token, user_id)
   end
 
   puts
   puts "backfilled #{$backfill_count} script ids"
-  puts "unable to backfill script id for #{$unable_to_backfill} channel tokens (non-template)"
-  puts "unable to backfill script id for #{$template_unable_to_backfill} channel tokens (template)"
+  puts "unable to backfill script id for #{$unable_to_backfill} channel tokens"
 
   # for investigation purposes
   puts "unfilled levels:"
-  print $levels_missing_backfills.uniq!
+  print $levels_missing_backfills.uniq
   puts
-
-  puts "unfilled template levels:"
-  print $template_levels_missing_backfills.uniq!
 
   puts
 end
@@ -123,10 +128,12 @@ def get_associated_script_ids(level)
   end
 
   script_ids = level.script_levels.map(&:script_id)
+
   level.parent_levels.map do |parent_level|
     parent_level_script_ids = parent_level.script_levels.map(&:script_id)
     script_ids.concat(parent_level_script_ids)
   end
+
   $level_to_script_ids[level.id] = script_ids.uniq
   return $level_to_script_ids[level.id]
 end
@@ -137,30 +144,24 @@ def update_channel_token(channel_token, script_id)
   $backfill_count += 1
 end
 
+# record data used for debugging purposes
 def record_failed_script_id_backfill(level, channel_token, user_id)
-  print "f"
-  if level.name.downcase.include?("template")
-    $template_levels_missing_backfills.push(level.id)
-    $template_unable_to_backfill += 1
+  if user_id.blank?
+    print "-"
   else
-    if user_id.present?
-      puts
-      print "level_id: #{level.id}, channel_token_id: #{channel_token.id}, level_name: #{level.name}"
-      puts
-    end
-    $levels_missing_backfills.push(level.id)
-    $unable_to_backfill += 1
+    print "F"
   end
+
+  $levels_missing_backfills.push(level.id)
+  $unable_to_backfill += 1
 end
 
-def script_id_by_user_scripts(user_id, script_ids)
+def associated_script_ids_by_user_scripts(user_id, script_ids)
   user_scripts = UserScript.where(user_id: user_id, script_id: script_ids)
-  return user_scripts[0].script_id if user_scripts.count == 1
+  return user_scripts.map(&:script_id).uniq
 end
 
-# Given a channel token, this method returns the associated script_id if it can
-# be identified based on user_level
-def script_id_from_user_level(user_id, level)
+def associated_script_ids_from_user_levels(user_id, level)
   associated_user_levels = UserLevel.where(
     user_id: user_id,
     level_id: level.id
@@ -174,14 +175,12 @@ def script_id_from_user_level(user_id, level)
     )
   end
 
-  if associated_user_levels.count == 1
-    return associated_user_levels[0].script_id
-  elsif associated_user_levels.count > 1
-    recent_user_levels = associated_user_levels.order(updated_at: :desc)
-    script_id = recent_user_levels[0].script_id
-    # TODO: add logging so we can determine where we might have missing progress
-    return script_id
+  if associated_user_levels.count == 0 && level.parent_levels.any?
+    parent_level_ids = level.parent_levels(&:id)
+    associated_user_levels = UserLevel.where(user_id: user_id, level_id: parent_level_ids)
   end
+
+  return associated_user_levels.map(&:script_id).uniq
 end
 
 update_script_ids
