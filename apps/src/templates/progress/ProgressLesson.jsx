@@ -32,7 +32,8 @@ class ProgressLesson extends React.Component {
     lessonIsVisible: PropTypes.func.isRequired,
     lessonIsLockedForUser: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.string,
-    lockableAuthorized: PropTypes.bool.isRequired,
+    lockableAuthorized: PropTypes.bool,
+    lockableAuthorizedLoaded: PropTypes.bool.isRequired,
     lessonIsLockedForAllStudents: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
   };
@@ -125,6 +126,10 @@ class ProgressLesson extends React.Component {
     // TODO: Make the back-end return a lesson url as part of the lesson metadata so we
     // don't need to pass it separately from lesson here and in ProgressLessonTeacherInfo.
     const lessonUrl = levels[0] && levels[0].url;
+
+    const lockableUnauthorized =
+      this.props.lockableAuthorizedLoaded && !this.props.lockableAuthorized;
+
     return (
       <div
         className="uitest-progress-lesson"
@@ -187,7 +192,7 @@ class ProgressLesson extends React.Component {
               )}
           </div>
           {lesson.lockable &&
-            !this.props.lockableAuthorized &&
+            lockableUnauthorized &&
             viewAs === ViewType.Teacher && (
               <div style={styles.notAuthorizedWarning}>
                 {i18n.unverifiedTeacherLockWarning()}
@@ -299,6 +304,7 @@ export default connect(state => ({
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
   lockableAuthorized: state.lessonLock.lockableAuthorized,
+  lockableAuthorizedLoaded: state.lessonLock.lockableAuthorizedLoaded,
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
   lessonIsLockedForUser: (lesson, levels, viewAs) =>
     lessonIsLockedForUser(lesson, levels, state, viewAs),
