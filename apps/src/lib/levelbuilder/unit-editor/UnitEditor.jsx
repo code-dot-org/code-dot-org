@@ -681,46 +681,40 @@ class UnitEditor extends React.Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
-          <label>
-            Use Legacy Lesson Plans
-            <input
-              type="checkbox"
-              checked={
-                !this.props.isMigrated || this.state.useLegacyLessonPlans
-              }
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({
-                  useLegacyLessonPlans: !this.state.useLegacyLessonPlans
-                })
-              }
-              disabled={!this.props.isMigrated}
-            />
-            <HelpTip>
-              {!this.props.isMigrated && (
-                <p>unmigrated scripts must use legacy lesson plans.</p>
-              )}
-              {this.props.isMigrated && (
-                <p>
-                  Whether to show our users the code-studio-based lesson plans
-                  for this unit, as opposed to showing them the lesson plans on
-                  curriculum builder. When a script is first migrated, this box
-                  is left unchecked. Once you're satisfied with the contents of
-                  the new lesson plans on levelbuilder, check this box to make
-                  the code studio lesson plans visible to our teachers and
-                  students.
-                </p>
-              )}
-            </HelpTip>
-          </label>
-          {(!this.props.isMigrated || this.state.useLegacyLessonPlans) && (
+          {this.props.isMigrated && this.props.initialUseLegacyLessonPlans && (
             <label>
-              Curriculum Path
+              Use Legacy Lesson Plans
+              <input
+                type="checkbox"
+                checked={this.state.useLegacyLessonPlans}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({
+                    useLegacyLessonPlans: !this.state.useLegacyLessonPlans
+                  })
+                }
+              />
               <HelpTip>
                 <p>
-                  When "Use Code Studio Lesson Plans" is unchecked, this field
-                  determines the location of the lesson plan. If left blank, it
-                  will look for special file under
+                  Whether to show legacy lesson plans for this unit. legacy
+                  lesson plans live either on curriculum builder or google docs,
+                  as opposed to on code studio. When lesson plans are first
+                  imported from curriculum builder, this box is initially
+                  checked so that you can review the new code studio lesson plan
+                  content before it goes live. Once you're satisfied with the
+                  content, uncheck this box to make the code studio lesson plans
+                  visible to teachers and students.
+                </p>
+              </HelpTip>
+            </label>
+          )}
+          {(!this.props.isMigrated || this.state.useLegacyLessonPlans) && (
+            <label>
+              Legacy Lesson Plan Path
+              <HelpTip>
+                <p>
+                  This field determines the location of the legacy lesson plan.
+                  If left blank, it will look for special file under
                   code.org/curriculum/[unit]/[lesson]. If you want to disable
                   lesson plans entirely, you must go to each lesson edit page
                   and uncheck "Has Lesson Plan".
