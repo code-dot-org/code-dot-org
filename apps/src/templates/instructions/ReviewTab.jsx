@@ -196,7 +196,7 @@ class ReviewTab extends Component {
       .fail(result => {
         if (result.status === 404) {
           this.setState({authorizationError: true, saveInProgress: false});
-        } else if (result.status === 500) {
+        } else {
           this.setState({saveError: true, saveInProgress: false});
         }
       });
