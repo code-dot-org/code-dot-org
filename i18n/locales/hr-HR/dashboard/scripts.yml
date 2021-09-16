@@ -1,4 +1,3 @@
----
 hr:
   data:
     script:
@@ -128,7 +127,7 @@ hr:
             Digital Citizenship:
               name: Digitalno građanstvo
             'Farmer: While Loops':
-              name: Farmer - petlja Dok
+              name: 'Farmer - petlja Dok'
             Functional Suncatchers:
               name: Funkcionalni ukrasi
             Internet:
@@ -245,7 +244,7 @@ hr:
             'Bee: Nested Loops':
               name: 'Pčela: Ugniježđene petlje'
             'Farmer: While Loops':
-              name: Farmer - petlja Dok
+              name: 'Farmer - petlja Dok'
             'Maze: Sequence':
               name: 'Labirint: Slijed'
           student_description: Kratko objašnjenje pojmova za učenike koji nisu prošli Tečajeve 2 i 3.
@@ -517,6 +516,12 @@ hr:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Dobro došli!
             Wrap-up:
@@ -554,6 +559,12 @@ hr:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Dobro došli!
             Wrap-up:
@@ -563,6 +574,12 @@ hr:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Dobro došli!
             Wrap-up:
@@ -808,6 +825,12 @@ hr:
               name: 'Izvanmrežno: Pisanje pjesama s parametrima'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Dobro došli!
             Wrap-up:
@@ -824,7 +847,7 @@ hr:
             Bounce:
               name: Odskok
             'Farmer: While Loops':
-              name: Farmer - petlja Dok
+              name: 'Farmer - petlja Dok'
         alltheplcthings:
           lesson_groups:
             required:
@@ -1095,7 +1118,7 @@ hr:
             Functions:
               name: Funkcije
             'null':
-              name: ništa
+              name: 'ništa'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1427,7 +1450,7 @@ hr:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Funkcije s parametrima\_
+              name: Funkcije s parametrima_
             Functions with Parameters:
               name: Funkcije s parametrima
         coursee-2018:
@@ -1696,7 +1719,7 @@ hr:
               display_name: Pregled
           lessons:
             'null':
-              name: ništa
+              name: 'ništa'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2093,6 +2116,7 @@ hr:
           lessons:
             What is a Computer?:
               name: Što je računalo?
+            0:
         csd6-2020:
           lessons:
             Functions with Parameters:
