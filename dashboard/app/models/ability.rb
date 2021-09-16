@@ -114,23 +114,25 @@ class Ability
         can?(:manage, section) || user.sections_as_student.include?(section)
       end
 
-      can :view_as_user, ScriptLevel do |script_level, user_to_assume|
-        can?(:view_as_user_for_code_review, script_level, user_to_assume) ||
+      can :view_as_user, ScriptLevel do |script_level, user_to_assume, sublevel_to_view|
+        user.project_validator? ||
           user_to_assume.student_of?(user) ||
-          user.project_validator?
+          can?(:view_as_user_for_code_review, script_level, user_to_assume, sublevel_to_view)
       end
 
-      can :view_as_user_for_code_review, ScriptLevel do |script_level, user_to_assume|
+      can :view_as_user_for_code_review, ScriptLevel do |script_level, user_to_assume, level_to_view|
         can_view_as_user_for_code_review = false
+
+        level_to_view ||= script_level&.oldest_active_level
 
         # Only allow a student to view another student's project
         # only on levels where we have our peer review feature.
         # For now, that's only Javalab.
-        if script_level&.oldest_active_level&.is_a?(Javalab)
+        if level_to_view&.is_a?(Javalab)
           reviewable_project = ReviewableProject.find_by(
             user_id: user_to_assume.id,
             script_id: script_level.script_id,
-            level_id: script_level.oldest_active_level&.id
+            level_id: level_to_view&.id
           )
 
           if reviewable_project &&
