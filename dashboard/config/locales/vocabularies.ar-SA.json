@@ -3,17 +3,24 @@
     "data": {
       "vocabularies": {
         "sprite/coursef/2021": {
-          "word": "شبح"
+          "word": "شبح",
+          "definition": ""
+        },
+        "user/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
-          "word": "السلوك"
+          "word": "السلوك",
+          "definition": ""
         },
         "program/coursef/2021": {
           "word": "البرنامج",
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "algorithm/coursef/2021": {
-          "word": "الخوارزمية"
+          "word": "الخوارزمية",
+          "definition": ""
         },
         "event/coursef/2021": {
           "word": "الحدث",
@@ -23,8 +30,13 @@
           "word": "متغير",
           "definition": "عنصر نائب عن قطعة من المعلومات التي يمكن أن تتغير."
         },
+        "prompt/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
         "input/coursef/2021": {
-          "word": "الإدخال"
+          "word": "الإدخال",
+          "definition": ""
         },
         "loop/coursef/2021": {
           "word": "الحلقة",
@@ -37,6 +49,10 @@
         "for_loop/coursef/2021": {
           "word": "حلقة \"For\"",
           "definition": "حلقات لها بداية ونهاية ومقدار زيادة محدد سلفًا (مقدار الخطوة)."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "machine_learning/coursef/2021": {
           "word": "التعلم الآلي",
@@ -283,7 +299,12 @@
           "definition": "تعليمات للكمبيوتر. توضع العديد من الأوامر معًا لتشكيل خوارزميات وبرامج كمبيوتر."
         },
         "conditionals/coursed/2021": {
-          "word": "الجمل الشرطية"
+          "word": "الجمل الشرطية",
+          "definition": ""
+        },
+        "pseudocode/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "condition/coursed/2021": {
           "word": "الشرط",
@@ -294,7 +315,8 @@
           "definition": "حلقة تستمر في التكرار طالما كان الشرط صحيحًا."
         },
         "until/coursed/2021": {
-          "word": "حتى"
+          "word": "حتى",
+          "definition": ""
         },
         "algorithm/express/2021": {
           "word": "الخوارزمية",
@@ -321,17 +343,20 @@
           "definition": "فن تصميم برنامج."
         },
         "behavior/express/2021": {
-          "word": "السلوك"
+          "word": "السلوك",
+          "definition": ""
         },
         "sprite/express/2021": {
-          "word": "شبح"
+          "word": "شبح",
+          "definition": ""
         },
         "event/express/2021": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/express/2021": {
-          "word": "الكود"
+          "word": "الكود",
+          "definition": ""
         },
         "loop/express/2021": {
           "word": "الحلقة",
@@ -350,14 +375,16 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/express/2021": {
-          "word": "الجمل الشرطية"
+          "word": "الجمل الشرطية",
+          "definition": ""
         },
         "while_loop/express/2021": {
           "word": "حلقة \"While\"",
           "definition": "حلقة تستمر في التكرار طالما كان الشرط صحيحًا."
         },
         "until/express/2021": {
-          "word": "حتى"
+          "word": "حتى",
+          "definition": ""
         },
         "function/express/2021": {
           "word": "وظيفة ",
@@ -366,6 +393,10 @@
         "variable/express/2021": {
           "word": "متغير",
           "definition": "عنصر نائب عن قطعة من المعلومات التي يمكن أن تتغير."
+        },
+        "prompt/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "for_loop/express/2021": {
           "word": "حلقة \"For\"",
@@ -440,17 +471,24 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "behavior/coursee/2021": {
-          "word": "السلوك"
+          "word": "السلوك",
+          "definition": ""
+        },
+        "algorithm/coursee/2021": {
+          "word": "",
+          "definition": ""
         },
         "sprite/coursee/2021": {
-          "word": "شبح"
+          "word": "شبح",
+          "definition": ""
         },
         "event/coursee/2021": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "copyright/coursee/2021": {
-          "word": "حقوق النسخ"
+          "word": "حقوق النسخ",
+          "definition": ""
         },
         "loop/coursee/2021": {
           "word": "الحلقة",
@@ -469,7 +507,8 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/coursee/2021": {
-          "word": "الجمل الشرطية"
+          "word": "الجمل الشرطية",
+          "definition": ""
         },
         "while_loop/coursee/2021": {
           "word": "حلقة \"While\"",
