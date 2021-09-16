@@ -509,7 +509,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with ID lookup' do
-    level = Script.first.script_levels.first.level
+    level = Script.find_by_name(Script::FLAPPY_NAME).script_levels.first.level
 
     populate_cache_and_disconnect_db
 
@@ -517,7 +517,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with name lookup' do
-    level = Script.first.script_levels.first.level
+    level = Script.find_by_name(Script::FLAPPY_NAME).script_levels.first.level
 
     populate_cache_and_disconnect_db
 
