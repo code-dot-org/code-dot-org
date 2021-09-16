@@ -11,6 +11,7 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  course_offering_id :integer
+#  published_state    :string(255)      default("in_development")
 #
 # Indexes
 #
