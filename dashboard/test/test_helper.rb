@@ -146,12 +146,14 @@ class ActiveSupport::TestCase
   include CaptureQueries
 
   setup_all do
-    # Some of the functionality we're testing here is data-specific, and needs
-    # scripts with certain names to work. In the old fixture-based model, this
-    # data was all provided; in the new factory-based model, we need to do a
-    # little prep.
+    # Some of the functionality we're testing here relies on Scripts with
+    # certain hardcoded names. In the old fixture-based model, this data was
+    # all provided; in the new factory-based model, we need to do a little
+    # prep.
     tested_script_names = [
       'ECSPD',
+      'allthethings',
+      Script::COURSE1_NAME,
       Script::FLAPPY_NAME,
       Script::FROZEN_NAME,
       Script::HOC_NAME,
