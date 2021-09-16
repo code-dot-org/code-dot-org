@@ -993,6 +993,22 @@ class LessonTest < ActiveSupport::TestCase
     assert_includes(lesson.lesson_plan_pdf_url, "curriculum/#{lesson.script.name}/5/Teacher.pdf")
   end
 
+  test 'uncached lesson path helpers' do
+    hoc_unit = create :script, name: 'dance'
+    hoc_lesson_group = create :lesson_group, script: hoc_unit
+    hoc_lesson = create :lesson, script: hoc_unit, lesson_group: hoc_lesson_group
+
+    assert_equal "/lessons/#{hoc_lesson.id}", hoc_lesson.get_uncached_show_path
+    assert_equal "/lessons/#{hoc_lesson.id}/edit", hoc_lesson.get_uncached_edit_path
+
+    other_unit = create :script
+    other_lesson_group = create :lesson_group, script: other_unit
+    other_lesson = create :lesson, script: other_unit, lesson_group: other_lesson_group
+
+    assert_equal "/s/#{other_unit.name}/lessons/1", other_lesson.get_uncached_show_path
+    assert_equal "/s/#{other_unit.name}/lessons/1/edit", other_lesson.get_uncached_edit_path
+  end
+
   class LessonCopyTests < ActiveSupport::TestCase
     setup do
       Script.any_instance.stubs(:write_script_json)
