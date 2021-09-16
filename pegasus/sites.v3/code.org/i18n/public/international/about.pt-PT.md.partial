@@ -4,10 +4,10 @@ theme: responsive
 video_player: true
 ---
 
-# About Us
+# Sobre nós
 
 <div class="col-60">
-  Code.org® é uma organização sem fins lucrativos dedicada à expansão do acesso à informática nas escolas e aumento da participação de mulheres e minorias sub-representadas. A nossa visão é que todos alunos de cada escola tenham a oportunidade de aprender informática assim, como a biologia, química ou álgebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. O Code.org é apoiado por doadores generosos, incluindo a Amazon, Facebook, Google, a Infosys Foundation, Microsoft e <a href="/about/donors">muitas outras</a>.
+  A Code.org® é uma organização sem fins lucrativos cuja missão é alargar o acesso às ciências da computação nas escolas e aumentar a participação das mulheres jovens e dos alunos de outros grupos com pouca representatividade. A nossa visão é que todos alunos de cada escola tenham a oportunidade de aprender informática assim, como a biologia, química ou álgebra. Proporcionamos o currículo mais usado no ensino das ciências da computação em escolas primárias e secundárias, organizando também a campanha anual <a href="https://hourofcode.com">Hora de Código</a>, que já alcançou 10% de todos os alunos pelo mundo. O Code.org é apoiado por doadores generosos, incluindo a Amazon, Facebook, Google, a Infosys Foundation, Microsoft e <a href="/about/donors">muitas outras</a>.
 </div>
 
 [col-40]
@@ -49,6 +49,6 @@ Todos os recursos curriculares e tutoriais que criamos serão sempre gratuitos p
 
 ## Segue-nos
 
-[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+[Inscreva-se para receber atualizações](/about/hear-from-us) sobre os progressos no movimento de ciências da computação para crianças e adolescentes e sobre o trabalho da Code.org. Ou siga a Code.org nas redes sociais:
 
 {{ social_media_codeorg }}

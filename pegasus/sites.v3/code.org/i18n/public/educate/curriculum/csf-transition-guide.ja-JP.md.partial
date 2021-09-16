@@ -1,5 +1,5 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: コンピューターサイエンス基礎コース・トランジションガイド
 theme: responsive
 style_min: true
 ---
@@ -11,8 +11,8 @@ style_min: true
 * [概要](#overview)
 * [新しいコースを教える](#newcourses)
 * [サークル タイム ストーリー (コース A と B)](#circletime)
-* [レッスン材料 & チャレンジ パズル (全年齢対象)](#scaffolding)
-* [アンプラグド レッスンのためのブリッジ活動 (全年齢対象)](#unplugged)
+* [レッスンの足場組み（scaffolding） & チャレンジ パズル (全年齢対象)](#scaffolding)
+* [アンプラグド レッスンのためのブリッジング活動 (全年齢対象)](#unplugged)
 * [コース修了プロジェクト (コース E & F)](#endofcourse)
 * [まとめ](#conclusion)
 * [よくある質問](#faq)
@@ -20,9 +20,9 @@ style_min: true
 <a id="overview"></a>
 
 ## 概要
-コンピュータ サイエンス教育の風景は、オリジナルのコンピューター科学基礎コース創設以降、大きく変わりました。 もともとコース 1-4 は、学びに来ていた生徒の年齢に関係なく、基礎を修得する出発点として設計されました。  今では多くの地区、都市、州で、幼稚園から始まるコンピューター科学コースが実施され、教師たちは、中学校/高校にいたる生徒のために、より多くのコンテンツを求めています。
+当初のコンピューターサイエンス基礎コース創設以降、コンピューターサイエンスの教育の状況は大きく変わりました。 コース 1-4 は、当初学びに来られた生徒の年齢に関係なく、基礎を習得するためのスターティングポイントとして考案されました。  今では多くの地区、都市、州で、幼稚園から始まるコンピューターサイエンスコースが施行され、中学校・高校に至るまで、教師は生徒のために、より多くの教育内容を求めています。
 
-その問題への私たちの答えは、コンピューター科学基礎コース A - F です。  学年毎のカリキュラム作成は、資料の提示のしかたを立ち返り考え直すきっかけとなりました。  それにより、心をこめて私たちをサポートする熱心な先生達が集まるコミュニティからのフィードバックを組み込むこともできました。 全国津々浦々の最高の小学校 CS 教育専門家の助けを借りて、コース A ~ F は、過去私たちのレッスンを行った学生に提示するのに、余分な専門能力の開発ではなく十分に新鮮で身近に感じます。
+その問題に対する私たちの答えは、コンピューターサイエンス基礎コース A - F にあります。  学年毎のカリキュラム作成は、資料の提示のしかたを立ち返り考え直すきっかけとなりました。  それにより、心をこめて私たちをサポートする熱心な先生達が集まるコミュニティからのフィードバックを組み込むこともできました。 コース A-F は、全国の最高の小学校 CS 教育専門家のサポートを受け、余計な専門能力開発を取り入れることなく親しみやすいように考案されており、また、以前私たちのレッスンを受けた生徒に提示しても十分に新鮮に感じられるようになっています。
 
 * コース A: 幼稚園
 * コース B: 1年生
@@ -38,107 +38,107 @@ CS 基礎の最大のアップデートは、4 つのコース (コース 1-4) �
 <a id="newcourses"></a>
 
 ## 新しいコースを教える
-As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+先に述べた通り、当コースは馴染みやすく感じますが、異なる点があります。  Code.orgの専門的能力開発ワークショップに参加したことがあれば、新しいコースを教える準備が整っているのです。 わずかに変更部分はありますが、プラットフォーム、カリキュラム、教育理念は全体的に変更はありません。 まだ参加していない方は、Code.org では、1日間無料のワークショップが体験でき、カリキュラムの理解方法、Code.orgプラットフォームのナビゲート方法、アンプラグド レッスンの指導法が習得できるようサポートします。
 
-The main updates to the courses are:
+コースの主な更新は次のとおりです：
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* 幼い学習者用のサークルタイムのストーリー
+* 足場組み（scaffolding）と実践/適用のコンセプトへの新たなアプローチ
+* アンプラグド・レッスンからプラグド・レッスンへの移行を強化するためのブリッジングング活動
+* 年長の生徒のためのコース修了プロジェクト
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+このガイドの残り内容については、それぞれのアイデアをより詳細に提示し、教室の改革を実行に移すヒントやコツについて掲載しています。
 
 <a id="circletime"></a>
 
 ## サークル タイム ストーリー (コース A と B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+コンセプトの中には、幼い生徒にとって、活動やパズルだけでは教えるのが難しいものもあります。  これが、幼稚園や小学校の1年生のカリキュラムでわずかなサークルタイムのストーリーを導入した理由です。 これらのストーリーは、デバッグ、パーシステンス、フラストレーションなどの重要なアイディアについて話し合う過程の中で、教師がクラスで読み上げることを目的としています。  私たちが願うことは、生徒がストーリーのキャラクターを通してこれらの難しいコンセプトを体験できることで、これからのレッスンでは同じコンセプトを認識できるようになることです。
 
-Here is how the circle-time stories are intended to be used:
+サークルタイムストーリーの使用方法は次のとおりです。
 
-### Read the appropriate story to your class
-  - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-  - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-  - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
+### あなたのクラスに適したストーリーを読んであげてください
+  - 活動中、有用な時に質問やコメントして理解しているか確認してください。
+  - その後、ストーリーについて話し合います。 生徒が何を聞いていましたか？ 生徒の気を引くアイディアはありますか？
+  - 生徒にキャラクターと自分を重ね合わせてもらってください。  ストーリーの登場人物の1人を思い出させるような彼らの人生の中で生きてくる何かがありますか？
 
-### Remind students about the story before they begin the next activity.
-  - Do you remember the main ideas we discussed?
-  - How will you know if you see that idea today?
-  - What did the character do to handle that idea? What would you do?
+### 次の活動を始める前に、生徒にストーリーについて思い出させてください。
+  - 私たちが話し合った主なアイディアをあなたは覚えていますか？
+  - 今日そのアイディアを理解しているかどうかをどうすれば把握することができますか？
+  - そのアイディアを操っているキャラクターはどのようなことをしましたか？ あなたならどうしますか？
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
-  - Describe for a student how the position that they are in resembles a situation from the book.
-  - Ask a student to think about the characters and figure out what they might do.  Does that help the student figure out a next step?
+### 活動中に交わる時、ストーリーと生徒との間のシチュエーションの類似点を挙げてください。
+  - 生徒の立場が、本の中のシチュエーションといかに類似しているかを生徒に説明してください。
+  - 生徒にキャラクターについて考えるように指示し、そのキャラクターがどう行動するかを考えさせてください。  それは生徒が次のステップを理解するのに役立ちますか？
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+クラス全体をまとめることができない場合、Code.orgは該当するレッスンの始めに、ビデオのオプションを使って、少しアニメーションを取り入れたストーリーを展開させてきました。 これらのビデオではまったく同じ体験を流すわけではありません。コースの残りの時間に進む前に、コンセプトとキャラクターに触れることができます。
 
 <a id="scaffolding"></a>
 
-## レッスン材料 & チャレンジ パズル (全年齢対象)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+## レッスンの足場組み（scaffolding） & チャレンジ パズル (全年齢対象)
+コース A～Fは、以前のコースより全体的に足場組み（scaffolding）が少なくなっています。  つまり、特にデバッグすることを学んでいない場合、生徒が最初からできるだけ頻繁にコードを作成するように努めます。  この考案の一貫として、ほとんどのオンラインレッスンでは、レッスンの開始時は簡単なパズルを提示し、生徒がアイディアを把握し、定着するまで徐々に新しいコンセプトを導入して演習を行います。  次に、チャレンジパズルを提示します。これは生徒たちにコンセプトを新しい複雑な方法で考えさせることを目的としています。
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+チャレンジパズルはコースA〜Fで新しくなりました。  チャレンジパズルの目的は、生徒が粘り強さと自立した思考へと鍛錬することができるよう、超難易度の問題にチャレンジさせることです。  チャレンジパズルは意図的に難易度が高くしており、コンセプトを本当に理解している生徒のみが程よい時期に合格できるように考案されています。  つまり、最初はかなりの数の生徒が成功できません。 これには、生徒と教師の双方が距離を取る特別な態度が必要です。
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. 生徒はこれらのチャレンジパズルに取り組んでみて、それから一旦置いて、そしてまた続きをやります。  その演習によって、非常に重要なことが２つ起こります：
+2. 生徒は、勉強しているコンセプトをいつどのように用いるかについて理解を深めます。 次のパズルはそれ自体は難しいパズルですが、チャレンジ後には簡単に感じられます。
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+生徒はいつでもレッスンを受けることができ、未完成のままのパズルに再チャレンジできます。  難問に再チャレンジする前に、十分な睡眠を釣ることが非常に有用な場合があります。
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+生徒はチャレンジを終えると、ステージの前半で体験したものと類似した演習を何問かすることになります。 これらのパズルは、学習しているテーマに関して生徒の明確さをテストするために意図的に導入しています。  前に体験したパズルを考えると、これらは簡単すぎるように思えるかもしれませんが、同じステージで望まれる正確な能力レベルを実証するために作成されました。
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+場合によっては、自由活動スタイルのレベルでレッスンを終了します。  これらのレベルでは、答えに「間違い」がないかもしれないし、あるいは中核となる問題を解決するためにいくつかの異なる方法をやっても構わないことになっているかもしれません。  たとえ生徒ができるとしても、ただ単に[続行] をクリックするだけでなく、ベストを尽くすように促してださい。
 
-Some final notes for this area:
+このエリアに関するいくつかの最終メモ：
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* 学生は説明書を読むことが必要としてください。  If they are having a hard time, let them read the instructions out loud to a classmate.
-* ヒントを使っても大丈夫です！  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* 難しいと感じる問題に対しては、生徒に粘り強く取り組ませ、デバッグ（誤りを見つけ手直しをする）スキルを使用するように指導してください。
+* ビデオを使うと役に立つことが多いです。  生徒が行き詰まった時には、2回目、3回目、さらには4回目でも動画を視聴してもらってください。
+* 生徒に説明書を読ませるようにしてください。  生徒が苦戦しているときには、説明書を読んであげてください。
+* ヒントを使っても大丈夫です！  生徒は必要なだけのヒントを使用しなければなりませんが、新しいパズルを提供されるまでに必ず少なくとも1問はパズルを解決してください。
 
 <a id="unplugged"></a>
 
-## アンプラグド レッスンのためのブリッジ活動 (全年齢対象)
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+## アンプラグド レッスンのためのブリッジング活動 (全年齢対象)
+アンプラグド活動は、生徒がすでに日常生活で重要なCSのコンセプトをいかに使用しているかについて注目している点で生徒に合っています。  生徒はループ文や条件文などの基本的なアイデアを特定できれば、プログラミングオンラインで初めてそれらを使用しようとしたときに起こり得る思考の停止（mental block) を克服できます。
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
+アンプラグド体験は非常に重要ですので、私たちはさらに一歩踏み込んで、アンプラグド・レッスンをオンラインレッスンに橋渡しするブリッジング活動を取り入れることを決意しました。  コースA〜Fでは、レッスンプランの中に、オフライン演習の実施方法や、レッスンを次のオンラインパズル一式に移行させる方法例が含まれています。  これらについては、「ブリッジングング活動」といいます。
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise.  In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+大抵の場合、アンプラグド演習の課題に取り組み、それを紙のブロックリー・ブロックで実行することで、あるいはオンラインパズルに取り組み、アンプラグド演習で言語を使用して解決することで、ブリッジング活動を実践しています。  場合によっては、違う関連のものを導入しますが、例題の全てが、オフライン体験が過度に抽象的または関連の全くないものにならないように考案されています。
 
 <a id="endofcourse"></a>
 
 ## コース修了プロジェクト (コース E & F)
-For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+年長の生徒用に、私たちはコースE & Fで、充実したコース終了プロジェクトを導入しました。Code.orgでは「プロジェクト」を構築する能力をかなり前から提供してきましたが、生徒が正式な内容でプロジェクトを計画および実行できるようにするには、本当に必要な視点を取り入れなければならないと思いました。
 
-The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+もちろん、プロジェクトの終わりは比較的簡単です。  4〜5週間にわたって、生徒はプロジェクトのアイデアをレビューし、その応用を計画し、プログラムをコード化し、フィードバックに基づいて修正し（5年生）、完成した作業を提示します。  これらの各ステップでは、役立つ資料や全体像を強調する教師のレッスン計画が手引きとなっています。
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point.  These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**復習：</ strong>生徒は、これまでに学んだスキルを使って実行できる驚くべきことを紹介するために作成された、いくつかの意欲的なプロジェクトを見ていきます。  これらのプロジェクトはPlay LabまたはArtistのいずれかで作成されていますが、生徒がTynker、Scratch、または教師が適切と判断した場合はテキストベースの言語のプロジェクトも自由にレビューできます。</p>
 
-**Plan:** The intention here is for students to sit back and think about what is really possible.  They will need to think about the games that they saw, and the limitations that they faced when editing them.  Afterward, they will sketch out a plan to create something unique.  Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life.  The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**計画：**ここでの目的は、生徒が実際に何ができるかをじっくりと腰を据えて考えることです。  生徒は彼らが見たゲームと、それらを編集するときに直面した制限について考える必要があります。  その後、彼らは唯一無二なものを作成するためにあらましの計画を立てます。  生徒は、ビジョンを実現するための時間とリソースが限られているため、現実に留まるように注意する必要がある場合があります。  ここの資料は、ArtistまたはPlay Labの使用を前提としていますが、プロジェクトは、特定の教室ごとに機能するプラットフォームに移動できます。
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper.  Students will face tough choices when it comes to trying to make things work as they run into one barrier after another.  They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**作成：**紙に描いた計画を実行するのに1日では足りません。  生徒は、次から次への壁にぶつかりながら物事をうまくやっていこうとするとき、難しい選択に直面します。  彼らはバグを編集、適応し、プログラムの制限によって、限られた時間の中で快適に達成できるという彼らの認識を変えていきます。
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved.  Students will practice constructive critique, as well as group brainstorming and persistence.
+**修正：**年長の生徒の場合、クラスメートのフィードバックに基づいてプログラムを修正する1日は、最終的なものに修正するのに役立ち、彼らが達成したことで、他の人に刺激を与えることができます。  生徒は発展的な評論方法や、グループの中でのブレーンストーミング（集団の中で意見を出し合うこと）を練習し、粘り強さを身に付けます。
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come.  Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**現在：**制作中1か月近く、これは生徒たちが立ち上がって自分の進歩を誇りに思う機会です。  私たちの授業計画は口頭発表を前提としていますが、教師は代わりに書面またはマルチメディアプレゼンテーションを提案することもできます。
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+生徒が自分のプロジェクトに打ち込めばそれだけコンピュータサイエンスの創造性と問題解決のプロセスについて役立つことを学ぶことができます。
 
 <a id="conclusion"></a>
 
 ## まとめ
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+ご覧のとおり、コンピュータサイエンスの基礎コースA~Fには、コンピュータサイエンスの基礎を教える教師と世話人コミュニティの意見を参考にしたエキサイティングなenhancementsが含まれています。
 
-We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
+この概要が参考になれば幸いです。  この変更について質問やコメントがある場合は、http：//forum.code.org/c/csfにアクセスしてフォーラムに投稿してください。  弊社は、皆さんのご質問にできるだけ早く答えられるように努めております。  それまでは、コースAFに関するよくある質問をいくつか紹介します。
 
 <a id="faq"></a>
 
 ## よくある質問
 
-| 質問                                                                                                                                                          | 答え                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
-| **いつコースA-Fは利用できるようになりますか？**                                                                                                                                 | 今、コースA-Fは利用できます！                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
-| **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
-| **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| 質問                                                                      | 回答                                                                                                                                                                                                                  |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **新しい一連のコースを開始します。つまり、コース1〜4が廃止されるということですか。**                           | 番号。 コース1〜4を生徒/子供が必要とする体験をよりよく表現していると感じる人のために、弊社オリジナルの20時間コースが弊社のウェブサイトで引き続き利用できますし、弊社ではこれを保持していく予定です。                                                                                                               |
+| **いつコースA～Fを利用できるようになりますか？**                                             | コースA～Fは今すぐご利用になれます！                                                                                                                                                                                                 |
+| **私のお気に入りのレッスン/パズルのいくつかがコースA～Fにはありません！**                                | 何も怖くない！ コース1〜4または加速20時間コースでそれらを残した場所にまだ存在します。                                                                                                                                                                       |
+| **そのパズルは、非常に難しいように思えます。  私の子供たちには難しすぎるのではないかと心配しています。**                 | 学生が自ら考え、問題を解決し、粘り強さを鍛えてもらいたいという願望がこの新コースの骨格となっています。  パズルがあまりにも簡単に完成していまう場合、やる必要はありません。  というわけで、パズルの難易度を高めることにしました。  これらのスキルを高めるためにクラスをリードする方法については、教師用ガイドを参照してください。  オンラインパズルに夢中になる前に、アンプラグド・レッスンの重要性を決して侮らないでください。 |
+| **パズルの中には、指定のブロック数しか使用できないものもあります。  生徒がループを理解するはるか前にコード化したい場合はどうしますか？** | 指定ブロックを制限するパズルがいくつかあります。 これは、足場の新しい足場組み（scaffolding）の1つです。  それは、作業場内でピースに足場を組みすぎることなく、方向性を与える方法です。  困惑する前にパズルをコーディングするのが好きな学生（そして実際、すべての学生が常に）は、キーボードの横にジャーナルやメモ用紙を置いて、アルゴリズムをなんらかの方法で理解できると便利です。最も自然に来る。           |
 

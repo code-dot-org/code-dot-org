@@ -1,20 +1,20 @@
 ---
-title: About
+title: เกี่ยวกับ
 theme: responsive
 video_player: true
 ---
 
-# About Us
+# เกี่ยวกับเรา
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry, or algebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+  Code.org® คือองค์กรที่ไม่แสวงหาผลกำไร ที่มุ่งเพิ่มโอกาสในการเข้าถึงวิทยาการคอมพิวเตอร์ภายในโรงเรียน และเพิ่มการมีส่วนร่วมของหญิงสาวและนักเรียนจากกลุ่มด้อยความสำคัญอื่น ๆ วิสัยทัศน์ของเราคือ การให้เด็กนักเรียนทุกคนในทุกโรงเรียนมีโอกาสได้เรียนรู้เรื่องวิทยาการคอมพิวเตอร์ ให้เหมือนกับที่ได้เรียนวิชาชีวะ เคมีหรือพีชคณิต เราเลือกใช้หลักสูตรที่ใช้กันอย่างกว้างขวางที่สุดเมื่อสอนวิทยาการคอมพิวเตอร์ในโรงเรียนระดับประถมศึกษาและมัธยมศึกษา และยังได้จัดทำแคมเปญ <a href="https://hourofcode.com">ชั่วโมงเขียนโค้ด</a> เป็นประจำทุกปีซึ่งมีนักเรียน 10% จากนักเรียนทั้งหมดในทั่วโลกเข้ามามีส่วนร่วม ทั้งนี้ Code.org ได้รับการสนับสนุนจากผู้บริจาคที่ให้ความเมตตาหลายราย รวมถึง Amazon, Facebook, Google, Infosys Foundation, Microsoft และ<a href="/about/donors">อีกมากมาย</a>
 </div>
 
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
   
-  <font size="4" color="#FFFFFF"><b>Code.org courses are used by tens of millions of students and by one million teachers all around the world.</b></font>
+  <font size="4" color="#FFFFFF"><b>หลักสูตรของ Code.org นำมาใช้ในหมู่นักเรียนหลายสิบล้านคน และครูอีกราวหนึ่งล้านคนทั่วโลก</b></font>
  
 </div>
 
@@ -22,33 +22,33 @@ video_player: true
 
 <div style="clear:both"></div>
 
-## History
+## ประวัติความเป็นมา
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
+Code.org เปิดตัวในปี 2013 โดยพี่น้องฝาแฝด Hadi และ Ali Partovi ผ่านทาง[วิดีโอประชาสัมพันธ์เรื่องวิทยาการคอมพิวเตอร์](https://www.youtube.com/watch?v=nKIu9yen5nc) วิดีโอนี้รั้งอันดับ 1 บน YouTube ได้ในเวลาหนึ่งวัน และโรงเรียน 15,000 แห่งติดต่อเราเพื่อขอความช่วยเหลือ ซึ่งตั้งแต่นั้นเป็นต้นมา เราจากเพียงกลุ่มอาสาสมัครที่มาช่วยกันทำงาน ได้ขยับขยายจนกลายเป็นองค์กรเต็มรูปแบบที่ให้การสนับสนุนความเคลื่อนไหวในทั่วโลก เราเชื่อว่า ผู้ทีี่ควรได้มีโอกาสศึกษาวิทยาการคอมพิวเตอร์ที่มีคุณภาพคือเด็กทุกคน ไม่ใช่แค่ผู้โชคดีไม่กี่คนเท่านั้น
 <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## What We Do
+## สิ่งที่เราทำ
 
-We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. Our work builds on decades of effort, by countless organizations and individuals who have helped establish, fund, and spread computer science education. We're grateful for the tireless work of the broader computer science education community, and we thank all the partners and individuals who have expanded our impact over the years.
+เราเข้าไปมีส่วนในทุกสเปกตรัมของการศึกษา: ออกแบบ[หลักสูตรของเราเอง](https://studio.code.org/courses) หรือจับมือกับฝ่ายอื่น ครูฝึกอบรม เป็นหุ้นส่วนกับเขตโรงเรียนขนาดใหญ่ ช่วยเปลี่ยนแปลงนโยบายของรัฐบาล ขยายบทบาทในระดับสากลด้วยการเป็นหุ้นส่วน และทำการตลาดเพื่อทะลายคตินิยม งานของเราเกิดขึ้นจากความเพียรพยายามมานานนับทศวรรษ ไม่ว่าจากองค์กรหรือปัจเจกบุคคลจำนวนมากจนนับไม่ถ้วน ที่ได้ช่วยกันสร้าง ระดมทุนและเผยแพร่การศึกษาแขนงวิทยาการคอมพิวเตอร์ออกไปอย่างกว้างขวาง เรารู้สึกปลาบปลื้มกับชุมชนการศึกษาแขนงวิทยาการคอมพิวเตอร์ซึ่งมีขนาดใหญ่ขึ้นและทำงานกันอย่างไม่รู้จักเหน็ดเหนื่อย และขอขอบคุณหุ้นส่วนทุกรายและทุกคนที่ช่วยขยายบทบาทของเราออกไปตลอดหลายปีมานี้
 
-## Code.org's International Reach
+## บทบาทในระดับสากลของ Code.org
 
-Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organisation for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization.
+กว่า 40% ของการเยี่ยมชมเว็บไซต์ของเรามาจากนอกประเทศสหรัฐฯ และตัวเลขนี้สูงขึ้นเรื่อย ๆ การเปิดโอกาสให้เข้าถึงวิทยาการคอมพิวเตอร์ในระดับโลกได้มากขึ้นนั้น สิ่งที่ทีมของเราต้องมีคือ การร่วมมือกับ[หุ้นส่วนระหว่างประเทศกว่า 100 ราย](/about/partners)อย่างใกล้ชิด เพื่อช่วยหุ้นส่วนเหล่านั้นประชาสัมพันธ์กิจกรรม "ชั่วโมงเขียนโค้ด" สนับสนุนให้มีการเปลี่ยนแปลงนโยบายและจัดการฝึกอบรมครูผู้สอน เราทำให้วิทยาการคอมพิวเตอร์กลายเป็นส่วนหนึ่งของการแนะนำการศึกษาระดับระหว่างประเทศด้วยการเป็นหุ้นส่วนกับกระทรวงศึกษาธิการจากทั่วโลก และทำงานร่วมกับองค์กรระหว่างประเทศ เช่น องค์การเพื่อความร่วมมือและการพัฒนาทางเศรษฐกิจและองค์การเพื่อการศึกษา วิทยาศาสตร์ และวัฒนธรรมแห่งสหประชาชาติ
 
-<img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%" />
+<img alt="หุ้นส่วนระหว่างประเทศของ Code.org" src="/images/international/international_partners.jpg" width="100%" />
 
-## Translation
+## การแปล
 
-Want to have a direct impact on students in your country? Help us make Code.org content available in their native language! If you volunteer to help translate our tutorials and lessons, you'll be joining a community of more than 7,000 translators who help bring computer science education to students around the world. Take a look at our [translation guide](/translate) for more information.
+อยากจะให้เกิดผลกระทบกับนักเรียนในประเทศของคุณโดยตรงใช่ไหม งั้นมาช่วยกันสร้างคอนเทนต์ของ Code.org ในภาษาที่พวกเขาใช้กันเป็นประจำกันเถอะ! หากคุณมีจิตอาสาและช่วยเราแปลทั้งในส่วนบทช่วยสอนและบทเรียน เราจะได้เป็นส่วนหนึ่งของชุมชนนักแปลกว่า 7,000 คนที่เป็นสะพานบุญนำการศึกษาแขนงวิทยาการคอมพิวเตอร์ไปให้กับนักเรียนในทั่วโลก ดูรายละเอียดเพิ่มเติมได้จาก[คู่มือการแปล](/translate)ของเรา
 
-## Our commitment to free curriculum and open source technology
+## เรากับความมุ่งมั่นที่มีต่อการเสนอหลักสูตรฟรีและเทคโนโลยีโอเพ่นซอร์ส
 
-All curriculum resources and tutorials we create will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+แหล่งข้อมูลและบทช่วยสอนสำหรับหลักสูตรทั้งหมดนั้น เราได้พัฒนาขึ้นและใช้ได้ฟรีไปตลอด ทั้งยังมีใบอนุญาตแบบเปิดกว้างภายใต้ใบอนุญาต [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) ซึ่งจะเปิดโอกาสให้บุคคลอื่นสามารถจัดทำแหล่งข้อมูลเพื่อการศึกษาที่เหมาะสมให้ได้ด้วยโดยไม่มีวัตถุประสงค์ในทางการค้า หากคุณสนใจซื้อใบอนุญาตเพื่อใช้เอกสารประกอบการเรียนการสอนของเราในเชิงการค้า โปรด[ติดต่อเรา](/contact) หลักสูตรของเราได้รับการแปลเพื่อใช้ในทั่วโลก และโดยผู้พูดภาษาต่าง ๆ และเทคโนโลยีของเราได้รับการพัฒนาในรูปของ[โปรเจ็กต์โอเพ่นซอร์ส](https://github.com/code-dot-org/code-dot-org)
 
-<img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%" />
+<img alt="นักเรียนกับแล็บท็อป" src="/images/international/group_computer.jpg" width="100%" />
 
-## Follow us
+## ติดตามเรา
 
-[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+[ลงทะเบียนรับข้อมูลสถานะ](/about/hear-from-us)เพื่อแจ้งความคืบหน้าของวิชาวิทยาการคอมพิวเตอร์สำหรับ K-12 และการทำงานของ Code.org หรือติดตาม Code.org บนโซเชียลมีเดีย:
 
 {{ social_media_codeorg }}

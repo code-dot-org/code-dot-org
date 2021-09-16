@@ -1,144 +1,144 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: Ghid de tranziție - Bazele științei calculatoarelor
 theme: responsive
 style_min: true
 ---
 
-# Teaching Courses A-F
+# Predarea Cursurilor A-F
 
 ## Cuprins
 
 * [Rezumat](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
-* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
-* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
-* [End of Course Projects (Courses E & F)](#endofcourse)
+* [Predarea noilor cursuri](#newcourses)
+* [Povești - activități în cerc (Cursurile A și B)](#circletime)
+* [Sprijin temporar (scaffolding) în & timpul lecției și puzzle-uri de tip provocare (Toate vârstele)](#scaffolding)
+* [Activități de legătură pentru lecțiile offline (Toate vârstele)](#unplugged)
+* [Proiecte de final de curs (Cursurile E & F)](#endofcourse)
 * [Concluzie](#conclusion)
 * [Întrebări frecvente](#faq)
 
 <a id="overview"></a>
 
 ## Rezumat
-The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+Peisajul educațional în domeniul științei calculatoarelor s-a schimbat foarte mult de la crearea cursurilor inițiale în care se predau Bazele științei calculatoarelor. Inițial, Cursurile 1-4 au fost concepute ca un punct de plecare pentru asimilarea elementelor de bază, indiferent de vârsta cursantului care studia această disciplină.  În prezent tot mai multe districte, orașe și state au implementat cursuri de știință a calculatoarelor începând de la grădiniță, iar profesorii cer mai mult conținut pentru cursuri destinate elevilor de gimnaziu/liceu.
 
-Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+Cursurile A-F de Bazele științei calculatoarelor reprezintă răspunsul nostru la această problemă.  Crearea unui curriculum pentru fiecare clasă în parte ne-a permis să regândim modul în care prezentăm materialele.  De asemenea, ne-a oferit șansa de a include feedback-ul din partea comunității de profesori dedicați care ne-a susținut în această misiune. Concepute cu ajutorul unora dintre cei mai buni specialiști în domeniul științei calculatoarelor din școlile primare din întreaga țară, Cursurile A-F ar trebui să fie suficient de familiare pentru a fi predate fără să fie necesară o dezvoltare profesională suplimentară, dar suficient de inovatoare și atractive încât să fie predate elevilor care au urmat lecțiile noastre în trecut.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* Curs A: Grădiniță
+* Curs B: Clasa I
+* Curs C: Clasa a II-a
+* Curs D: Clasa a III-a
+* Curs E: Clasa a IV-a
+* Curs F: Clasa a V-a
+* Curs expres pentru preșcolari: Grădiniță - Clasa I
+* Curs expres: Clasa a II-a - Clasa a V-a
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).  In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development.  Note the addition of two different “Express” courses, one for pre-readers and one for all other grades.  These are similar to the previous suite’s “accelerated” version.
+Cea mai importantă actualizare a noțiunilor de bază de știința calculatoarelor este faptul că tot conținutul celor patru cursuri (Cursurile 1-4) va fi acum repartizat în șase cursuri, aliniate la fiecare nivel de clasă K-5 (Cursurile A-F).  Astfel, lecțiile sunt mai adaptate la nivelurile adecvate necesare pentru citire, matematică și dezvoltarea cognitivă generală.  Rețineți că s-au adăugat două cursuri „Expres” diferite, unul pentru preșcolari și unul pentru toate celelalte clase.  Acestea sunt similare cu versiunea „accelerată” a cursurilor din suita anterioară.
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
-As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+## Predarea noilor cursuri
+După cum am menționat mai devreme, cursurile ar trebui să fie familiare, dar diferite.  Dacă ați participat la un atelier de dezvoltare profesională Code.org, atunci sunteți pregătit(ă) să predați noile cursuri. S-au efectuat câteva mici schimbări, dar platforma, programa de studii și filosofia de predare rămân neschimbate. Dacă încă nu ați participat la acestea, Code.org organizează ateliere de lucru cu durata de o zi, gratuit, pentru a vă ajuta să înțelegeți programa școlară, să navigați pe platforma Code.org și să predați lecțiile offline.
 
-The main updates to the courses are:
+Principalele actualizări ale cursurilor sunt:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* Povești - activități în cerc pentru micii cursanți
+* O nouă abordare a sprijinului temporar („scaffolding”) și exersarea/aplicarea conceptelor
+* Activități de legătură pentru o tranziție mai ușoară de la lecțiile offline la cele online
+* Proiecte de final de curs pentru elevii mai mari
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+Restul acestui ghid va prezenta fiecare idee mai detaliat, oferind sfaturi și trucuri pentru implementarea schimbărilor în sala de clasă.
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+## Povești - activități în cerc (Cursurile A și B)
+Unele concepte sunt dificil de predat doar prin activități și puzzle-uri, în special pentru elevii de vârste mai mici.  Acesta este motivul pentru care am ales varianta unor povestiri de tip activitate în cerc pentru programa școlară pentru grădiniță și clasa I. Aceste povestiri sunt citite de către profesor întregii clase, cu opriri pe parcurs pentru a discuta aspecte esențiale cum ar fi depanarea, perseverența și frustrarea.  Sperăm că, dacă procedăm în așa fel încât elevii să poată experimenta aceste concepte dificile prin intermediul personajelor din povești, aceasta îi va ajuta să recunoască aceleași noțiuni atunci când acestea apar în lecțiile viitoare.
 
-Here is how the circle-time stories are intended to be used:
+Iată cum trebuie folosite poveștile în cerc:
 
-### Read the appropriate story to your class
-  - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-  - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-  - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
+### Citiți povestea clasei dvs.
+  - Asigurați-vă pe parcurs că elevii înțeleg subiectul acesteia, cu ajutorul întrebărilor și comentariilor adresate în timpul acțiunii.
+  - Discutați apoi despre povești. Ce au auzit elevii dumneavoastră? Există vreo idee care le-a rămas în minte?
+  - Încercați să-i faceți pe elevi să se identifice cu personajele.  Există vreo activitate din viața lor care le amintește de unul dintre personajele din poveste?
 
-### Remind students about the story before they begin the next activity.
-  - Do you remember the main ideas we discussed?
-  - How will you know if you see that idea today?
-  - What did the character do to handle that idea? What would you do?
+### Reamintiți-le elevilor povestea înainte de a începe următoarea activitate.
+  - Vă amintiți ideile principale pe care le-am discutat?
+  - Cum veți ști dacă vă întâlniți din nou cu acea idee astăzi?
+  - Ce a făcut personajul pentru a gestiona această idee? Tu ce ai face?
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
-  - Describe for a student how the position that they are in resembles a situation from the book.
-  - Ask a student to think about the characters and figure out what they might do.  Does that help the student figure out a next step?
+### Evidențiați asemănările dintre poveste și situația elevilor, atunci când acestea apar în timpul unei activități.
+  - Descrieți unui elev modul în care poziția în care se află seamănă cu una dintre situațiile din carte.
+  - Rugați un elev să se gândească la personaje și să încerce să-și dea cu părerea cu privire la ce ar face acestea.  Îl ajută asta pe elev să identifice următorul pas?
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+Dacă nu puteți lucra cu elevii întregii clase în același loc, Code.org vă pune la dispoziție o opțiune video la începutul lecției, în care se prezintă poveștile cu animații limitate. Deși aceste videoclipuri nu garantează aceeași experiență, ele le vor permite elevilor să se familiarizeze cu conceptele și personajele înainte de a continua cursul.
 
 <a id="scaffolding"></a>
 
-## Lesson Scaffolding & Challenge Puzzles (All Ages)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+## Sprijin temporar (scaffolding) în & timpul lecției și puzzle-uri de tip provocare (Toate vârstele)
+În general, cursurile A-F asigură un sprijin temporar mai puțin substanțial, comparativ cu cursurile noastre anterioare.  Aceasta înseamnă că, în majoritatea situațiilor, încercăm să îi determinăm pe elevi să programeze de la început, cu excepția cazului în care învață să depaneze.  În cadrul acestei structuri, majoritatea lecțiilor noastre online urmează o tendință în care prezentăm un puzzle simplu cu care începem lecția, apoi continuăm cu un nou concept până când elevii înțeleg ideea de bază.  În continuare le prezentăm un puzzle de tip provocare, cu ajutorul căruia elevii se vor gândi la acest concept într-un mod nou și complicat.
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+Puzzle-urile de tip provocare sunt un element nou al cursurilor A-F.  Intenția din spatele puzzle-urilor de tip provocare este să îi expună pe elevi la noțiuni de nivel ridicat, pentru ca aceștia să dea dovadă de perseverență și să gândească independent.  Puzzle-urile de tip provocare sunt dificile și sunt concepute în așa fel încât doar elevii care înțeleg cu adevărat conceptul să le poată rezolva într-un interval de timp rezonabil.  Acest lucru înseamnă că un număr mare de elevi nu vor reuși să rezolve cu succes provocările de la prima încercare. Pentru a reuși, atât elevul, cât și profesorul trebuie să adopte o anumită atitudine.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. Elevii trebuie să încerce să rezolve provocările, apoi să le pună deoparte și să continue cu alte activități.  În cadrul acestei activități se întâmplă două lucruri foarte importante:
+2. Elevii înțeleg mai bine când și de ce trebuie să folosească conceptul studiat. Puzzle-urile următoarele par mai ușoare după provocare, chiar dacă în realitate sunt dificile.
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+Rețineți că elevii pot parcurge lecțiile și pot încerca să rezolve din nou puzzle-urile neterminate în orice moment.  Uneori noaptea este un sfetnic bun când doriți să rezolvați o problemă dificilă.
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+După ce elevii au trecut de această provocare, vor găsi câteva exerciții asemănătoare cu cele pe care le-au rezolvat în prima jumătate a acestei etape. Aceste puzzle-uri au fost introduse intenționat, pentru a vedea cât de clare sunt noțiunile studiate pentru elev.  Acestea pot părea mult prea ușoare, dacă ne gândim la puzzle-urile anterioare, dar au fost create pentru a indica nivelul de competență necesar pentru etapa respectivă.
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+În unele cazuri, lecțiile vor fi încheiate cu niveluri de joc liber.  În cazul acestor niveluri fie nu există un răspuns „greșit”, fie există mai multe moduri de a rezolva problema principală.  Încurajați-i pe elevi să facă tot posibilul pentru a rezolva problemele și să nu apese pe „Continuă”, chiar dacă pot face aceasta.
 
-Some final notes for this area:
+Câteva remarci de final de secțiune:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* Reamintiți-le elevilor să fie perseverenți și să își folosească abilitățile de depanare în cazul problemelor care li se par dificile.
+* Clipurile video sunt utile.  Când elevii se blochează, cereți-le să urmărească din nou clipul video, chiar dacă este a doua, a treia sau chiar a patra vizionare.
+* Cereți-le elevilor să citească instrucțiunile.  Dacă le este greu, lăsați-i să citească instrucțiunile cu voce tare unui coleg de clasă.
+* Puteți să folosiți indicii!  Elevii trebuie să folosească toate indiciile de care au nevoie, dar asigurați-vă că încearcă cel puțin o dată să rezolve din nou puzzle-ul, după ce le oferiți indicii.
 
 <a id="unplugged"></a>
 
-## Bridging Activities For Unplugged Lessons (All Ages)
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+## Activități de legătură pentru lecțiile offline (Toate vârstele)
+Prin intermediul activităților offline, elevii indică modul în care folosesc deja concepte importante de ȘC în viața de zi cu zi.  După ce elevii pot identifica conceptele fundamentale, cum ar fi buclele și relațiile de condiționalitate, aceștia vor trece de blocajele mentale care pot apărea atunci când încearcă să le folosească pentru prima dată în activitatea de programare online.
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
+Experiențele offline sunt foarte importante și prin urmare am ales să le aprofundăm și să includem activități care să facă legătura între lecțiile offline și cele online.  În cursurile A-F veți găsi acum planuri de lecție care exemplifică modul în care trebuie să procedați cu exercițiile offline și să transpuneți lecțiile în următorul set de puzzle-uri online.  Acestea poartă numele de „activități de legătură”, și pe bună dreptate.
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise.  In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+În cea mai mare parte, activitățile de legătură pot fi create fie abordând exercițiul offline și executându-l cu blocuri Blockly de hârtie, fie selectând un puzzle online și rezolvându-l cu ajutorul limbajului din exercițiul offline.  În unele cazuri este introdusă o relație diferită, dar rolul tuturor exemplelor este de a evita ca experiențele offline să fie prea abstracte sau să nu aibă legătură între ele.
 
 <a id="endofcourse"></a>
 
-## End of Course Projects (Courses E & F)
-For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+## Proiecte de final de curs (Cursurile E & F)
+Pentru elevii de vârste mai mari am introdus proiecte substanțiale de final de curs pentru cursurile E & F. Deși Code.org oferă de ceva vreme posibilitatea de a construi „proiecte”, am considerat că acestea adaugă o perspectivă utilă pentru elevi, și anume abilitatea de a-și planifica și executa proiectele într-un context formal.
 
-The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+Proiectele de final de curs sunt relativ ușor de înțeles.  Pe parcursul a patru-cinci săptămâni, elevii vor analiza idei de proiect, își vor planifica aplicația, vor scrie programul, îl vor revizui pe baza feedback-ului (clasa a V-a), apoi vor prezenta proiectul finalizat.  Pentru fiecare dintre aceste etape există o broșură utilă, precum și un plan de lecție pentru profesori, care subliniază pentru imaginea de ansamblu.
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point.  These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**Revizuire:** Elevii vor analiza o serie de proiecte create pentru a prezenta toate lucrurile uimitoare care pot fi realizate cu ajutorul abilităților pe care le-au dezvoltat până în acest moment.  Aceste proiecte au fost create fie în Laboratorul de joacă, fie în Artist, dar elevii pot analiza proiecte din Tynker, Scratch sau chiar proiecte create cu limbaje bazate pe text, dacă profesorul consideră că această măsură este necesară.
 
-**Plan:** The intention here is for students to sit back and think about what is really possible.  They will need to think about the games that they saw, and the limitations that they faced when editing them.  Afterward, they will sketch out a plan to create something unique.  Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life.  The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**Plan:** Obiectivul este ca elevii să se gândească la ceea ce este cu realmente posibil.  Aceștia trebuie să se gândească la jocurile pe care le-au văzut și la limitările cu care s-au confruntat atunci când le-au editat.  După aceea, elevii vor schița un plan pentru a crea ceva unic.  Este posibil să fie necesar să li se reamintească elevilor că trebuie să fie realiști, deoarece vor avea la dispoziție timp și resurse limitate pentru a-și transforma viziunea în realitate.  În materialele de față se presupune că se va utiliza Artist sau Laboratorul de joacă, dar proiectele pot fi transferate pe orice platformă potrivită pentru fiecare clasă în parte.
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper.  Students will face tough choices when it comes to trying to make things work as they run into one barrier after another.  They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**Construire:** Nu avem prea mult timp la dispoziție într-o singură zi pentru a executa un plan care a fost pus pe hârtie.  Elevii se vor confrunta cu alegeri dificile atunci când vor încerca să facă lucrurile să funcționeze, deoarece se vor confrunta cu bariere succesive.  Aceștia vor învăța să editeze și să se adapteze pe măsură ce erorile și limitările programului le schimbă percepția asupra a ceea ce se poate realiza într-un interval de timp limitat.
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved.  Students will practice constructive critique, as well as group brainstorming and persistence.
+**Revizuire:** Pentru elevii de vârste mai mari, ziua de revizuire a programelor pe baza feedback-ului transmis de colegii de clasă poate fi utilă pentru îmbunătățirea programului final și îi vor putea astfel inspira pe ceilalți cu ceea ce au realizat.  Studenții vor utiliza critici constructive, dar și sesiuni de brainstorming de grup și vor da dovadă de perseverență.
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come.  Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**Prezentare:** După aproape o lună de pregătire, elevii au posibilitatea de a se mândri cu ceea ce au învățat și realizat.  Planul nostru de lecție include o prezentare orală, dar profesorii au posibilitatea de a propune și prezentări scrise sau multimedia.
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+Indiferent de gradul de implicare a elevilor în proiecte, aceștia vor învăța cu siguranță lucruri utile despre procesele de creativitate și de rezolvare a problemelor în știința calculatoarelor.
 
 <a id="conclusion"></a>
 
 ## Concluzie
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+După cum ați remarcat, cursurile A-F de Bazele științei calculatoarelor conțin îmbunătățiri interesante, influențate de feedback-ul primit de la comunitățile de profesori & instructori care predau Bazele științei calculatoarelor.
 
-We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
+Sperăm că această prezentare generală a fost utilă.  Dacă aveți întrebări sau comentarii cu privire la această modificare, vizitați http://forum.code.org/c/csf și postați-le pe forumul nostru.  Vă vom răspunde la întrebări cât mai curând posibil.  Până atunci, iată câteva dintre întrebările frecvente referitoare la cursurile A-F.
 
 <a id="faq"></a>
 
 ## Întrebări frecvente
 
-| Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
-| **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
-| **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
-| **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| Întrebare                                                                                                                                                                                     | Răspuns                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Lansați un nou set de cursuri - aceasta înseamnă că vor dispărea cursurile 1-4?**                                                                                                           | Nu. Așa cum cursul nostru inițial cu durata de 20 de ore este încă utilizat și disponibil pe site-ul nostru, intenționăm să păstrăm și cursurile 1-4 pentru cei care consideră că acestea se potrivesc mai bine elevilor/copiilor lor.                                                                                                                                                                                                                                                                                                                                                           |
+| **Când putem începe să folosim cursurile A-F?**                                                                                                                                               | Cursurile A-F sunt disponibile chiar acum!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Unele dintre lecțiile/puzzle-urile mele preferate lipsesc din cursurile A-F!**                                                                                                              | Nu vă faceți griji! Acestea există în continuare în Cursurile 1-4 sau în Cursul accelerat cu durata de 20 de ore.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Aceste puzzle-uri par mult mai dificile.  Sunt îngrijorată că sunt prea dificile pentru micuții mei.**                                                                                      | La baza acestor noi cursuri se află intenția noastră de a-i face pe elevi să gândească, să rezolve probleme și să fie perseverenți.  Niciunul dintre aceste lucruri nu este necesar atunci când puzzle-urile sunt prea ușor de realizat.  Din acest motiv, am fost nevoiți să elaborăm puzzle-urile mai dificile.  Vă rugăm să consultați ghidul profesorului pentru a vă ajuta să vă organizați lucrul în clasă în sensul dezvoltării acestor abilități.  Nu subestimați importanța utilizării lecțiilor offline, înainte de a trece la puzzle-urile online.                                    |
+| **Unele puzzle-uri permit doar utilizarea unui anumit număr de blocuri specifice.  Ce se întâmplă dacă elevii mei doresc să programeze ceva în formă extinsă înainte de a înțelege buclele?** | Există câteva puzzle-uri în care anumite blocuri sunt restricționate. Acesta este unul dintre noile noastre moduri de acordare de sprijin temporar (scaffolding).  Este un mod de a imprima o direcție, fără însă a aglomera piesele în spațiul de lucru.  Pentru elevii cărora le place să creeze puzzle-uri în formă extinsă înainte de utilizarea instrumentelor de simplificare (și, de fapt, pentru toți elevii, oricare ar fi momentul), este util să aveți un notes sau hârtie de scris lângă tastatură, pentru ca aceștia să înțeleagă cum funcționează algoritmul cum le vine mai ușor. |
 
