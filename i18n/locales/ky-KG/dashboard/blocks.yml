@@ -1,4 +1,3 @@
----
 ky:
   data:
     blocks:
@@ -291,6 +290,13 @@ ky:
         options:
           EFFECT:
             '"rain"': жаан
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': оңго
+            '90': ылдый
+            '180': солго
+            '270': өйдө
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -487,8 +493,8 @@ ky:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': ооба
-            '"no"': жок
+            '"yes"': 'ооба'
+            '"no"': 'жок'
       Mikelab_whileKeyPressed:
         options:
           KEY:
