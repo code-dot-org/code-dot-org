@@ -1,4 +1,3 @@
----
 ga:
   data:
     script:
@@ -579,6 +578,12 @@ ga:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Fáilte!
             Wrap-up:
@@ -621,6 +626,12 @@ ga:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Fáilte!
             Wrap-up:
@@ -630,6 +641,12 @@ ga:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Fáilte!
             Wrap-up:
@@ -989,6 +1006,12 @@ ga:
               name: 'Díphlugáilte: Ceapadh Ceoil le Paraiméadair'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Fáilte!
             Wrap-up:
@@ -1445,7 +1468,7 @@ ga:
             Functions:
               name: Feidhmeanna
             'null':
-              name: nialas
+              name: 'nialas'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -2069,7 +2092,7 @@ ga:
               display_name: Suirbhé
           lessons:
             Functions with Parameters_:
-              name: Feidhmeanna a ghlacann le Paraiméadair\_
+              name: Feidhmeanna a ghlacann le Paraiméadair_
             Functions with Parameters:
               name: Feidhmeanna a ghlacann le Paraiméadair
         coursee-2018:
@@ -2630,7 +2653,7 @@ ga:
               display_name: Ábhar
           lessons:
             'null':
-              name: nialas
+              name: 'nialas'
         dance-extras-gallery:
           title: Lean ort ag damhsa
           description_short: Téigh thar an Uair Chódála leis an ngníomhaíocht seo a leanann Cóisir Dhamhsa Code.org.
@@ -4154,7 +4177,7 @@ ga:
               key: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
               name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
             About Me:
-              name: Maidir Liomsa i Saotharlann na Sprideanna
+              name: 'Maidir Liomsa i Saotharlann na Sprideanna'
             'Functions: Songwriting':
               name: Ceapadh Ceoil
           lesson_groups:
@@ -4446,3 +4469,12 @@ ga:
           lessons:
             lesson-19:
               name: Tionscadal
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Giuirléidí
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ceachtanna
+            lessonGroup-3:
+              display_name: Tionscadal
