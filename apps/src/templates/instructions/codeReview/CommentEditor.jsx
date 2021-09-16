@@ -8,6 +8,7 @@ import color from '@cdo/apps/util/color';
 export default class CommentEditor extends Component {
   static propTypes = {
     onNewCommentSubmit: PropTypes.func.isRequired,
+    onNewCommentCancel: PropTypes.func.isRequired,
     saveError: PropTypes.bool,
     saveInProgress: PropTypes.bool
   };
@@ -44,6 +45,11 @@ export default class CommentEditor extends Component {
     );
   }
 
+  onCommentCancel = () => {
+    this.setState({comment: ''});
+    this.props.onNewCommentCancel();
+  };
+
   render() {
     const {comment} = this.state;
     const {saveInProgress} = this.props;
@@ -57,13 +63,13 @@ export default class CommentEditor extends Component {
           value={this.state.comment}
         />
         <div style={styles.commentFooter}>
-          {this.renderSaveStatus()}
+          {comment && this.renderSaveStatus()}
           <div style={styles.buttonContainer}>
             {comment && (
               <Button
                 key="cancel"
                 text={msg.cancel()}
-                onClick={() => this.setState({comment: ''})}
+                onClick={this.onCommentCancel}
                 color="gray"
                 style={{...styles.buttons.all, ...styles.buttons.cancel}}
                 disabled={saveInProgress}
@@ -138,6 +144,6 @@ const styles = {
   },
   iconError: {
     color: color.light_orange,
-    fontSize: 28
+    fontSize: 30
   }
 };
