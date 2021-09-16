@@ -558,7 +558,26 @@
         "courseF_sprites_positioning": "Позиционирование спрайтов",
         "courseF_sprites_properties": "Свойства спрайтов",
         "courseF_sprites_ship": "Анимирование парусного судна",
-        "international_outbreak_freeplay": "Поделиться посланием"
+        "international_outbreak_freeplay": "Поделиться посланием",
+        "courseF_events_conflict": "События времени",
+        "courseF_events_freeplay_air": "В полете",
+        "courseF_events_freeplay_animals": "Милые животные",
+        "courseF_events_freeplay_aquatic": "Водный мир",
+        "courseF_events_freeplay_blank": "Чистый лист",
+        "courseF_events_freeplay_food": "Счастливая еда",
+        "courseF_events_freeplay_space": "Межгалактическое пространство",
+        "courseF_events_key": "События времени",
+        "courseF_events_ship": "Старт!",
+        "courseF_events_stops": "События времени",
+        "courseF_events_time": "События времени",
+        "courseF_sprites_freeplay_air": "В полете",
+        "courseF_sprites_freeplay_animals": "Милые животные",
+        "courseF_sprites_freeplay_aquatic": "Водный мир",
+        "courseF_sprites_freeplay_blank": "Чистый лист",
+        "courseF_sprites_freeplay_food": "Счастливая еда",
+        "courseF_sprites_freeplay_space": "Межгалактическое пространство",
+        "courseF_text_print": "События времени",
+        "courseF_text_review": "События времени"
       }
     }
   }
