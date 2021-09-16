@@ -495,7 +495,7 @@
           "description": "Tworzyć program, w celu utworzenia obrazu używając czynności sekwencyjnych."
         },
         "36081e5f-1a5d-4102-a1de-27865168ee09": {
-          "description": "Łamać skomplikowane kształty w proste części."
+          "description": "Rozłóż złożone kształty na prostsze części."
         },
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
           "description": "Definiować \"duszka\" jako postać lub obiekt na ekranie, który można przemieszczać i zmieniać."
@@ -516,13 +516,13 @@
           "description": "Programować rozwiązania problemów, które wyłaniają się przy projektowaniu wirtualnego zwierzątka takich jak: karmienie czy monitorowanie jego poczucia szczęścia."
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
-          "description": "Opracowywać programy reagujące na określone czasowo wydarzenia"
+          "description": "Twórz programy reagujące na określone czasowo zdarzenia"
         },
         "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c": {
-          "description": "Opracowywać programy reagujące na dane wejściowe użytkowników"
+          "description": "Twórz programy reagujące na dane wejściowe użytkowników"
         },
         "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
-          "description": "Tworzyć animacje tańców przy pomocy kodu"
+          "description": "Twórz animacje tańców za pomocą kodu"
         },
         "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
           "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
@@ -594,7 +594,7 @@
           "description": "Łączyć w pary pętlę i wyrażenie warunkowe."
         },
         "1ece8579-425f-4324-a041-8f47ce736f42": {
-          "description": "Używać funkcji, aby uprościć skomplikowane programy."
+          "description": "Używaj funkcji, aby upraszczać złożone programy."
         },
         "4f16bc65-a8b7-485b-b34e-5b67c0c68259": {
           "description": "Używać określonych wcześniej funkcji do realizacji zwykle powtarzanych zadań."
@@ -756,7 +756,7 @@
           "description": "Opisać sposób, w jaki funkcje mogą ułatwiać pisanie."
         },
         "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
-          "description": "Używać funkcji, aby uprościć skomplikowane programy."
+          "description": "Używaj funkcji, aby upraszczać złożone programy."
         },
         "763f0ac3-d0b3-487a-b83d-151e2b3bee94": {
           "description": "Używać określonych wcześniej funkcji do realizacji zwykle powtarzanych zadań."

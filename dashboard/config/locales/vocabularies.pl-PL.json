@@ -314,7 +314,7 @@
         },
         "algorithm/express/2021": {
           "word": "Algorytm",
-          "definition": "Lista działań pozwalających wykonać zadanie."
+          "definition": "Lista działań do ukończenia zadania."
         },
         "bug/express/2021": {
           "word": "Błąd",
@@ -349,7 +349,7 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/express/2021": {
-          "word": "kodować"
+          "word": "koduj"
         },
         "loop/express/2021": {
           "word": "Pętla",
@@ -372,7 +372,7 @@
           "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
         },
         "while_loop/express/2021": {
-          "word": "Pętla \"dopóki\" (While)",
+          "word": "Pętla \"dopóki\"",
           "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
         },
         "until/express/2021": {
@@ -388,7 +388,7 @@
           "definition": "Etykieta informacji użyta w programie."
         },
         "for_loop/express/2021": {
-          "word": "Pętla \"dla\" (for)",
+          "word": "Pętla \"dla\"",
           "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
         },
         "define/express/2021": {
