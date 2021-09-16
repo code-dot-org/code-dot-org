@@ -21,11 +21,12 @@
           "type": "information",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-09 20:08:19 UTC",
+    "serialized_at": "2021-09-15 18:59:05 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd7-2021"
