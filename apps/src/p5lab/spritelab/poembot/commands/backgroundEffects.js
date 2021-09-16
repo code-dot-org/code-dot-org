@@ -8,6 +8,21 @@ export const commands = {
       this.p5.background(color);
     };
   },
+
+  setBackgroundImageAs(imageName) {
+    if (
+      this.p5._predefinedSpriteAnimations &&
+      this.p5._predefinedSpriteAnimations[imageName]
+    ) {
+      let backgroundImage = this.p5._predefinedSpriteAnimations[imageName];
+      backgroundImage.name = imageName;
+      backgroundImage.resize(400, 400);
+      this.backgroundEffect = () => {
+        this.p5.image(backgroundImage);
+      };
+    }
+  },
+
   // TODO: would it be possible to re-use the background/foreground effect code from dance party?
   setBackgroundEffect(effectName, palette) {
     this.validationInfo.backgroundEffect = effectName;
