@@ -1,4 +1,3 @@
----
 ka:
   data:
     blocks:
@@ -454,6 +453,13 @@ ka:
         options:
           EFFECT:
             '"rain"': წვიმა
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': მარჯვნივ
+            '90': ქვემოთ
+            '180': მარცხნივ
+            '270': ზემოთ
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -740,8 +746,8 @@ ka:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': დიახ
-            '"no"': არა
+            '"yes"': 'დიახ'
+            '"no"': 'არა'
       Mikelab_whileKeyPressed:
         options:
           KEY:
