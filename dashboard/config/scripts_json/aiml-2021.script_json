@@ -13,11 +13,12 @@
       "include_student_lesson_plans": true,
       "version_year": "2021",
       "is_course": true,
-      "has_verified_resources": true
+      "has_verified_resources": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-08-17 17:08:59 UTC",
+    "serialized_at": "2021-09-15 22:51:46 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "aiml-2021"
