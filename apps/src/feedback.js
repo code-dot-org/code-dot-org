@@ -1,10 +1,21 @@
+// Globals used in this file:
+//   Blockly
+
 import $ from 'jquery';
 import {getStore} from './redux';
 import React from 'react';
 import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
+import msg from '@cdo/locale';
+import dom from './dom';
 import LegacyDialog from './code-studio/LegacyDialog';
+import ChallengeDialog from './templates/ChallengeDialog';
 import project from './code-studio/initApp/project';
+import FeedbackBlocks from './feedbackBlocks';
+import puzzleRatingUtils from './puzzleRatingUtils';
+import DialogButtons from './templates/DialogButtons';
+import CodeWritten from './templates/feedback/CodeWritten';
+import GeneratedCode from './templates/feedback/GeneratedCode';
 import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
@@ -26,7 +37,10 @@ import clientState from '@cdo/apps/code-studio/clientState';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
-var UNCOUNTED_BLOCK_TYPES = ['draw_colour', 'alpha', 'comment'];
+const UNCOUNTED_BLOCK_TYPES = ['draw_colour', 'alpha', 'comment'];
+
+const FIREHOSE_STUDY = 'feedback_dialog';
+let dialog_type = 'default';
 
 /**
  * Bag of utility functions related to building and displaying feedback
@@ -39,23 +53,6 @@ var FeedbackUtils = function(studioApp) {
   this.studioApp_ = studioApp;
 };
 module.exports = FeedbackUtils;
-
-// Globals used in this file:
-//   Blockly
-
-/** @type {Object<string, function>} */
-var msg = require('@cdo/locale');
-var dom = require('./dom');
-var FeedbackBlocks = require('./feedbackBlocks');
-var puzzleRatingUtils = require('./puzzleRatingUtils');
-var DialogButtons = require('./templates/DialogButtons');
-var CodeWritten = require('./templates/feedback/CodeWritten');
-var GeneratedCode = require('./templates/feedback/GeneratedCode');
-
-import ChallengeDialog from './templates/ChallengeDialog';
-
-const FIREHOSE_STUDY = 'feedback_dialog';
-let dialog_type = 'default';
 
 /**
  * @typedef {Object} FeedbackOptions
