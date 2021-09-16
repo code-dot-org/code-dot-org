@@ -33,7 +33,7 @@ class ProgressLesson extends React.Component {
     lessonIsLockedForUser: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.string,
     lockableAuthorized: PropTypes.bool,
-    lockableAuthorizedLoaded: PropTypes.bool.isRequired,
+    lockableAuthorizedLoaded: PropTypes.bool,
     lessonIsLockedForAllStudents: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
   };
