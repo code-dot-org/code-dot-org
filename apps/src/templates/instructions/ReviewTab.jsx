@@ -40,7 +40,9 @@ class ReviewTab extends Component {
     forceRecreateEditorKey: 0,
     reviewablePeers: [],
     projectOwnerName: '',
-    authorizationError: false
+    authorizationError: false,
+    saveError: false,
+    saveInProgress: false
   };
 
   onSelectPeer = peer => {
@@ -161,6 +163,10 @@ class ReviewTab extends Component {
       serverLevelId
     } = getStore().getState().pageConstants;
     const {token} = this.state;
+    this.setState({
+      saveError: false,
+      saveInProgress: true
+    });
 
     codeReviewDataApi
       .submitNewCodeReviewComment(
@@ -176,12 +182,15 @@ class ReviewTab extends Component {
 
         this.setState({
           comments: comments,
-          forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1
+          forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1,
+          saveInProgress: false
         });
       })
       .fail(result => {
         if (result.status === 404) {
-          this.setState({authorizationError: true});
+          this.setState({authorizationError: true, saveInProgress: false});
+        } else if (result.status === 500) {
+          this.setState({saveError: true, saveInProgress: false});
         }
       });
   };
@@ -358,14 +367,22 @@ class ReviewTab extends Component {
   }
 
   renderCommentEditor(forceRecreateEditorKey) {
+    const {
+      authorizationError,
+      isReadyForReview,
+      saveInProgress,
+      saveError
+    } = this.state;
     if (
-      !this.state.authorizationError &&
-      (this.state.isReadyForReview || this.props.viewAs === ViewType.Teacher)
+      !authorizationError &&
+      (isReadyForReview || this.props.viewAs === ViewType.Teacher)
     ) {
       return (
         <CommentEditor
           onNewCommentSubmit={this.onNewCommentSubmit}
           key={forceRecreateEditorKey}
+          saveInProgress={saveInProgress}
+          saveError={saveError}
         />
       );
     }
