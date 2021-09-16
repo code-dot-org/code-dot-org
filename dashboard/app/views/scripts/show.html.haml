@@ -76,7 +76,7 @@
         %ul
           - @script.unit_groups.each do |course|
             %li= link_to course_path(course)
-      -if lesson_plans.count > 0
+      -if lesson_plans && lesson_plans.count > 0
         ="There are #{lesson_plans.count} code studio lesson plans in this unit:"
         - lesson_plans.each do |lesson_plan|
           %li= link_to lesson_plan[:name], lesson_plan[:url]
