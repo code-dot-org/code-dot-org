@@ -1,4 +1,3 @@
----
 az:
   data:
     blocks:
@@ -130,7 +129,7 @@ az:
             MOVES.XBend: Qatlamaq
             MOVES.XClapSide: alqış
             MOVES.Dab: Dab
-            MOVES.XFever: Disko
+            MOVES.XFever: "Disko\n"
             MOVES.Drop: Burax
             MOVES.Floss: ip
             MOVES.Fresh: təzə
@@ -151,7 +150,7 @@ az:
             MOVES.XBend: Qatlamaq
             MOVES.XClapSide: alqış
             MOVES.Dab: Dab
-            MOVES.XFever: Disko
+            MOVES.XFever: "Disko\n"
             MOVES.Drop: Burax
             MOVES.Floss: ip
             MOVES.Fresh: təzə
@@ -367,6 +366,7 @@ az:
         options:
           EFFECT:
             '"none"': Heç biri
+            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(İxtiyari)"
             '"circles"': Çevrələr
             '"color_cycle"': Rənglər
             '"diamonds"': Almazlar
@@ -431,6 +431,7 @@ az:
         options:
           EFFECT:
             '"none"': Heç biri
+            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(İxtiyari)"
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -802,6 +803,13 @@ az:
           EFFECT:
             '"burst"': partlayış
             '"rain"': yağış
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': sağa
+            '90': aşağı
+            '180': sola
+            '270': yuxarı
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1081,8 +1089,8 @@ az:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': bəli
-            '"no"': xeyr
+            '"yes"': 'bəli'
+            '"no"': 'xeyr'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1099,24 +1107,16 @@ az:
       PoemBot_startBehavior:
         options:
           BEHAVIOR:
-            jittering: |-
-              titrəmək
-              (hər hansı cihazın titrəməsi)
-            shrinking: |-
-              kiçilmək
-              (ölçüdə və ya miqdarda kiçik olmaq)
+            jittering: "titrəmək\n(hər hansı cihazın titrəməsi)"
+            shrinking: "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)"
             swimming_left_and_right: üzmə
             wandering: gəzən
             wobbling: titrəmə(titrəmək)
       PoemBot_stopBehavior:
         options:
           BEHAVIOR:
-            jittering: |-
-              titrəmək
-              (hər hansı cihazın titrəməsi)
-            shrinking: |-
-              kiçilmək
-              (ölçüdə və ya miqdarda kiçik olmaq)
+            jittering: "titrəmək\n(hər hansı cihazın titrəməsi)"
+            shrinking: "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)"
             swimming_left_and_right: üzmə
             wandering: gəzən
             wobbling: titrəmə(titrəmək)

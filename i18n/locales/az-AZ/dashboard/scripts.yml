@@ -1,4 +1,3 @@
----
 az:
   data:
     script:
@@ -27,7 +26,7 @@ az:
         math_category_name: Riyaziyyat
         research_studies_category_name: "Tədqiqat işləri \nğ"
         twenty_hour_category_name: 20-Saat
-        tts_category_name: Mətndən nitqə
+        tts_category_name: Mətndən nitqə 
         other_category_name: Digər
       name:
         course1:
@@ -80,7 +79,7 @@ az:
             'Bee: Conditionals':
               name: 'Arı: Şərti ifadələr'
             'Bee: Debugging':
-              name: Arı Sazlama
+              name: 'Arı Sazlama'
             'Bee: Loops':
               name: 'Arı: Dövrlər'
             Conditionals:
@@ -115,7 +114,7 @@ az:
             'Bee: Conditionals':
               name: 'Arı: Şərti ifadələr'
             'Bee: Debugging':
-              name: Arı Sazlama
+              name: 'Arı Sazlama'
             'Bee: Functions':
               name: 'Arı: Funksiyalar'
             Bounce:
@@ -218,7 +217,7 @@ az:
             'Bee: Conditionals':
               name: 'Arı: Şərti ifadələr'
             'Bee: Debugging':
-              name: Arı Sazlama
+              name: 'Arı Sazlama'
             'Farmer: While Loops':
               name: 'Fermer: "Hələ ki" dövrləri'
             'Maze: Sequence':
@@ -240,7 +239,7 @@ az:
             'Eval: Strings and Images':
               name: Sətir və Şəkillər
             'Eval: Writing Contracts':
-              name: Yazılı razılaşma
+              name: Yazılı razılaşma 
             'Play Lab: Animation (Big Game)':
               name: Böyük Oyun - Animasiya
             'Play Lab: Boolean (Big Game)':
@@ -376,7 +375,7 @@ az:
             Binary Numbers:
               name: İkilik rəqəmlər
             Bytes and File Sizes:
-              name: Bayt və Fayl ölçüləri
+              name: Bayt və Fayl ölçüləri 
             Number Systems:
               name: Say sistemləri
             Sending Binary Messages:
@@ -416,7 +415,7 @@ az:
             Teaching Strategies:
               name: Öyrətmə strategiyası
             What is ECS?:
-              name: ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.
+              name: "ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.\n"
         rbo-reference:
           lessons:
             reference:
@@ -440,7 +439,7 @@ az:
             Teaching Strategies:
               name: Öyrətmə strategiyası
             What is ECS?:
-              name: ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.
+              name: "ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.\n"
         ECSPD-iZone:
           lessons:
             Impact of Computer Science:
@@ -448,7 +447,7 @@ az:
             Teaching Strategies:
               name: Öyrətmə strategiyası
             What is ECS?:
-              name: ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.
+              name: "ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.\n"
         algebraPD-NexTech:
           lessons:
             Teacher Dashboard:
@@ -540,7 +539,7 @@ az:
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
             Writing Contracts:
-              name: Yazılı razılaşma
+              name: Yazılı razılaşma 
         cspfacilitator:
           lessons:
             App Lab:
@@ -555,6 +554,12 @@ az:
               name: Planlama
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Xoş gəldiniz!
             Wrap-up:
@@ -585,12 +590,24 @@ az:
               name: Yekun
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Xoş gəldiniz!
             Wrap-up:
               name: Yekun
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Xoş gəldiniz!
             Wrap-up:
@@ -653,7 +670,7 @@ az:
             Search Terms:
               name: Axtarış Şərtləri
             Unique IDs, Delete and Update Records:
-              name: Unikal IDlər, Məlumatları Sil və Yenilə
+              name: Unikal IDlər, Məlumatları Sil və Yenilə 
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -789,7 +806,7 @@ az:
               display_name: Sorğu
           lessons:
             Bytes and File Sizes:
-              name: Bayt və Fayl ölçüləri
+              name: Bayt və Fayl ölçüləri 
             Cleaning Data:
               name: Məlumatların Təmizlənməsi
             Intro to Data:
@@ -948,6 +965,12 @@ az:
               name: 'Sərbəst: Parametrlətlə musiqi yazma'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Xoş gəldiniz!
             Wrap-up:
@@ -1031,11 +1054,11 @@ az:
         transferring-over:
           lessons:
             20-hr Stage 2:
-              name: 20 saatlıq Mərhələ 2
+              name: 20 saatlıq Mərhələ 2 
             20-hr Stage 9:
               name: 20 saatlıq Mərhələ 9
             Course 2 Stage 17:
-              name: Kurs 2 Mərhələ 17
+              name: Kurs 2 Mərhələ 17 
             Course 3 Stage 16:
               name: Kurs 3 Mərhələ 16
             Course 3 Stage 17:
@@ -1375,7 +1398,7 @@ az:
             'Project: Design a Game':
               name: 'Layihə: Dizayn və Oyun'
             'null':
-              name: boş
+              name: 'boş'
             temp:
               name: temp
         coursef-ramp:
@@ -1788,7 +1811,7 @@ az:
               display_name: Sorğu
           lessons:
             Functions with Parameters_:
-              name: Parametrli funksiyalar\_
+              name: Parametrli funksiyalar_
             Functions with Parameters:
               name: Parametrli funksiyalar
         coursee-2018:
@@ -1849,7 +1872,7 @@ az:
         csp2-2018:
           lessons:
             Bytes and File Sizes:
-              name: Bayt və Fayl ölçüləri
+              name: Bayt və Fayl ölçüləri 
             Intro to Data:
               name: Data-ya Giriş
             Cleaning Data:
@@ -2187,7 +2210,7 @@ az:
             new stage:
               name: yeni mərhələ
             'null':
-              name: boş
+              name: 'boş'
             andrea-stage1:
               name: andrea-mərhələ1
             andrea-test-stage1:
@@ -2332,7 +2355,7 @@ az:
               display_name: Sorğu
           lessons:
             Bytes and File Sizes:
-              name: Bayt və Fayl ölçüləri
+              name: Bayt və Fayl ölçüləri 
         csp3-2019:
           lesson_groups:
             cspSurvey:
@@ -2764,6 +2787,7 @@ az:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            0:
             Storage:
               name: Yaddaş
         csd4-2020:
@@ -3443,3 +3467,10 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+        csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: Alətlər
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dərslər
