@@ -1072,6 +1072,13 @@ ur:
             '"rain"': بارش
       gamelab_makeNewSpriteAnon:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': درست
+            '90': نیچے
+            '180': بائیں
+            '270': اوپر
       gamelab_mirrorSprite:
         text: "{SPRITE} چہرہ {DIRECTION}"
         options:
