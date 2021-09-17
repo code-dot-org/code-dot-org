@@ -39,13 +39,11 @@ Resources:
             Prefix: "sources/"
             Status: "Enabled"
           -
-            ExpiredObjectDeleteMarker: true
             Id: "Clean Test Sources"
             NoncurrentVersionExpirationInDays: 1
             Prefix: "sources_test/"
             Status: "Enabled"
           -
-            ExpiredObjectDeleteMarker: true
             Id: "Clean Circle Sources"
             NoncurrentVersionExpirationInDays: 1
             Prefix: "sources_circle/"
