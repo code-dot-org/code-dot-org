@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-16 18:54:18 UTC",
+    "serialized_at": "2021-09-16 19:50:13 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csa4-exemplars"
@@ -602,10 +602,338 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L1-PredictCode Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      },
+      "level_keys": [
+        "CSA U4L1-L1-PredictCode Placeholder"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L2 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      },
+      "level_keys": [
+        "CSA U4L1-L2 Placeholder"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L3 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      },
+      "level_keys": [
+        "CSA U4L1-L3 Placeholder"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L4 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      },
+      "level_keys": [
+        "CSA U4L1-L4 Placeholder"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L5 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      },
+      "level_keys": [
+        "CSA U4L1-L5 Placeholder"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L6 Exemplar"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      },
+      "level_keys": [
+        "CSA U4L1-L6 Exemplar"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L7 Exemplar"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      },
+      "level_keys": [
+        "CSA U4L1-L7 Exemplar"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L8 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      },
+      "level_keys": [
+        "CSA U4L1-L8 Placeholder"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L12-1 Exemplar"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "f9a7e9b7-ce9a-4722-b4ef-f6d36ab42c9d"
+      },
+      "level_keys": [
+        "CSA U4L12-1 Exemplar"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L13-L1 Exemplar"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "c22ce3f3-d9be-408b-848c-ceecdfe8120b"
+      },
+      "level_keys": [
+        "CSA U4L13-L1 Exemplar"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L1-PredictCode Placeholder",
+        "script_level.level_keys": [
+          "CSA U4L1-L1-PredictCode Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L2 Placeholder",
+        "script_level.level_keys": [
+          "CSA U4L1-L2 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L3 Placeholder",
+        "script_level.level_keys": [
+          "CSA U4L1-L3 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L4 Placeholder",
+        "script_level.level_keys": [
+          "CSA U4L1-L4 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L5 Placeholder",
+        "script_level.level_keys": [
+          "CSA U4L1-L5 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L6 Exemplar",
+        "script_level.level_keys": [
+          "CSA U4L1-L6 Exemplar"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L7 Exemplar",
+        "script_level.level_keys": [
+          "CSA U4L1-L7 Exemplar"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L8 Placeholder",
+        "script_level.level_keys": [
+          "CSA U4L1-L8 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "a59c0fe6-6f39-4bf7-bcfd-2c1bb975876d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L12-1 Exemplar",
+        "script_level.level_keys": [
+          "CSA U4L12-1 Exemplar"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "f9a7e9b7-ce9a-4722-b4ef-f6d36ab42c9d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L13-L1 Exemplar",
+        "script_level.level_keys": [
+          "CSA U4L13-L1 Exemplar"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-exemplars",
+        "activity_section.key": "c22ce3f3-d9be-408b-848c-ceecdfe8120b"
+      }
+    }
   ],
   "resources": [
 
