@@ -29,10 +29,6 @@ Resources:
     Type: "AWS::S3::Bucket"
     Properties:
       BucketName: "cdo-v3-sources"
-      BucketEncryption:
-        ServerSideEncryptionConfiguration:
-          - ServerSideEncryptionByDefault:
-              SSEAlgorithm: "aws:kms"
       VersioningConfiguration:
         Status: "Enabled"
       LifecycleConfiguration:
