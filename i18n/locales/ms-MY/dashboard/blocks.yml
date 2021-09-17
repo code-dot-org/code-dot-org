@@ -1065,6 +1065,13 @@ ms:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION} 123_321
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': kanan
+            '90': bawah
+            '180': kiri
+            '270': atas
       gamelab_mirrorSprite:
         text: "{SPRITE} muka {DIRECTION}"
         options:
