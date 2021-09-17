@@ -3269,3 +3269,7 @@ fi:
           lessons:
             lesson-18:
               name: Pienoisohjelmat
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Pienoisohjelmat

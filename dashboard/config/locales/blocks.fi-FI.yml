@@ -1102,6 +1102,13 @@ fi:
             '"rain"': sade
       gamelab_makeNewSpriteAnon:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': oikealle
+            '90': alas
+            '180': vasemmalle
+            '270': ylös
       gamelab_mirrorSprite:
         text: "{SPRITE} kasvot {DIRECTION}"
         options:
