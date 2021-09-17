@@ -312,7 +312,7 @@ class UnitGroup < ApplicationRecord
   # Returns whether the course id is valid, even if it is not "stable" yet.
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
-  def self.valid_course_id?(course_id, user = nil)
+  def self.valid_course_id?(course_id, user)
     UnitGroup.valid_courses(user: user).any? {|unit_group| unit_group.id == course_id.to_i}
   end
 
