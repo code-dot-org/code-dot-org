@@ -1149,6 +1149,13 @@ uk:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       gamelab_makeNumSprites:
         text: створити {NUM} нових {ANIMATION_NAME} спрайтів
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': праворуч
+            '90': вниз
+            '180': ліворуч
+            '270': вгору
       gamelab_mirrorSprite:
         text: повернути {SPRITE} у напрямку {DIRECTION}
         options:
