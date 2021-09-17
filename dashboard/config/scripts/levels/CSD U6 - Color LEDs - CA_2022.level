@@ -70,7 +70,7 @@
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "// Track the index of the current LED with a variable\nvar LED = 0;\n\nonEvent(\"toggle_button\", \"click\", function() {\n  //toggle the current led\n  colorLeds[__].toggle();\n  //increase the led counter\n  \n  // Make the led counter loop back to the beginning\n  if (LED == 10) {\n    LED = 0;\n  }\n});\n",
+    "start_blocks": "// Track the index of the current LED with a variable\r\nvar LED = 0;\r\n\r\nonEvent(\"toggle_button\", \"click\", function() {\r\n  //toggle the current led\r\n  colorLeds[__].toggle();\r\n  //increase the led counter\r\n  \r\n  // Make the led counter loop back to the beginning\r\n  if (LED == 10) {\r\n    LED = 0;\r\n  }\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -107,7 +107,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# TODO\r\n\r\n- Update this to be a challenge level for LED lesson. Supply if-statement to loop back around; the challenge is using the variable and counter pattern to iterate through\r\n\r\n<hr />\r\n\r\n# Knowing When to Stop\r\n\r\nIf you clicked the button too many times in the last level, you got an error. Whenever you're writing code that repeats, you should think about when to _stop_ repeating.\r\n\r\n# Do This\r\n\r\nThis program is similar to the previous one, but there is a conditional inside the event handler. You'll need to complete the conditional so that we don't try to toggle an LED that doesn't exist.\r\n\r\n_Would your code work without changes for a board with more or fewer LEDs? If not, could you modify it so it would?_",
+    "long_instructions": "# TODO\r\n- Add \"show me where\" links and callouts for each one\r\n\r\n<hr />\r\n\r\n# LED Counter\r\n\r\nWe can create a program that toggles the LEDs one at a time in a circle. This requires using variables to keep track of the LED you want to turn on and off, and an if-statement to loop back to the start when you reach the end of the ring. This program has already been started for you - you need to fill in the missing pieces.\r\n\r\n# Do This\r\n\r\n- Use your variable to toggle the LED (show me where)\r\n- Use the counter pattern to update the LED so that the next time the button is pressed, it will update the next LED (show me where)",
     "encrypted_examples": "Tdp/2LM98q6uQMzSF6Dx2URKnjbO+frPSGs3zc0CXG37XDTLgt/fcuWmM4h4\nI9kBWzjph2Xu12vwt95/VPcxvw==\n",
     "parent_level_id": 20541,
     "name_suffix": "_2021",
@@ -124,12 +124,12 @@
     "preload_asset_list": null
   },
   "game_id": 41,
+  "published": true,
   "created_at": "2021-09-01T23:59:23.000Z",
   "level_num": "custom",
   "user_id": 1,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T23:59:23.825+00:00\",\"changed\":[\"cloned from \\\"CSD U6 for loop click exit_2021\\\"\"],\"cloned_from\":\"CSD U6 for loop click exit_2021\"},{\"changed_at\":\"2021-09-02 00:01:04 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-02 00:01:45 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T23:59:23.825+00:00\",\"changed\":[\"cloned from \\\"CSD U6 for loop click exit_2021\\\"\"],\"cloned_from\":\"CSD U6 for loop click exit_2021\"},{\"changed_at\":\"2021-09-02 00:01:04 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-02 00:01:45 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 15:56:53 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 15:59:42 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

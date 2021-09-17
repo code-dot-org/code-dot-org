@@ -22605,8 +22605,8 @@ en:
               description_teacher: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. To get started, students explore APIs and their documentation to identify features to add to their programs. Students use `import` statements to import The Playground, implement clickable images, and begin developing the Pop the Balloon game for the block party.
             lesson-2:
               name: Neighborhood Block Party Project - Day 1
-              description_student: For this project, you design the core elements for a simple game by planning and developing a game engine. You outline the game mechanics, pseudocode each component, then use an interactive design process to make a game that reacts to a user’s interaction. At the end of this project, you participate in a block party to play one another’s games!
-              description_teacher: Students design and build a game engine for this project, focusing primarily on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identify its core functionalities. They write pseudocode for these components and begin the development of their project.
+              description_student: For this project, you outline a simple game's core logic and structure by designing a game engine. You determine how the game functions, write pseudocode for each component, then use an iterative design approach to develop a game that responds to a player's selections and interaction. At the end of this project, you participate in The Neighborhood Block Party to play each other's games!
+              description_teacher: Students design a game engine for this project, focusing on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identifying its core functionalities. They write pseudocode for these components to plan the development of their project.
             lesson-3:
               name: Solving Problems with the Math Class
               description_student: Another class in the Java API is the `Math` class, which contains methods for performing mathematical functions. In this lesson, you explore the `Math` class to learn about its structure and methods. As you review the documentation for the `Math` class, you discover the purpose and use of `final` classes and static methods. You practice using methods in the `Math` class and the `Scanner` class to solve problems.
@@ -22645,16 +22645,23 @@ en:
               description_teacher: Students learn how to construct truth tables to represent compound Boolean expressions. Students work together to use truth tables to prove De Morgan’s Laws and explore open-source code.
             lesson-12:
               name: Neighborhood Block Party Project - Day 2
-              description_student: Now that you have a plan, today’s goal is to write code. You begin the development of your game engine by translating your pseudocode to Java. You participate in a code review and reflect on your progress to prepare for the final development of your game engine.
-              description_teacher: In the previous lesson, students planned a game engine for a simple game and wrote pseudocode for its core functions. Students begin the development of their game engine by translating their pseudocode to Java. They participate in a code review and reflect on their progress to prepare for the final development of their game engine.
+              description_student: Now that you have a plan, today’s goal is to begin a simple, functional game. You begin the development of your game engine by translating your pseudocode to Java. You participate in a code review and reflect on your progress as you prepare for the final development of your game engine.
+              description_teacher: In the previous lesson, students designed a game engine for a simple game and wrote pseudocode for its core functions. Students begin developing their game engine by translating their pseudocode to Java. They participate in a code review and reflect on their progress as they prepare for the final development of their game engine.
             lesson-13:
               name: Neighborhood Block Party Project - Day 3
-              description_student: It’s Block Party Day! Before the party begins, you will participate in two iterations to further develop your game engine and revise your priority list based on your progress and project requirements. At the end of class, you celebrate your success by playing each other's games and celebrating your development.
+              description_student: It’s Block Party Day! Before the party begins, you will participate in two iterations to further develop your simple game and revise your priority list based on your progress and project requirements. At the end of class, you celebrate your success by playing each other's games and celebrating your development.
               description_teacher: Students begin the second iteration of their project. After working on their code, they self-assess their work against the project rubric and create a final priority list for their last iteration. Students then complete their last iteration, and the class celebrates in the form of a block party where students play each others’ games. Students finish the project with a final reflection and identify potential next steps to continue developing their game.
             lesson-14:
               name: FRQ Day
-              description_student: 'Today you complete a Free Response Question (FRQ) almost completely on your own. To derive a solution for the FRQ on your own, you will follow a three step process: annotating, writing pseudocode, and writing code in Java. Finally, you score your attempt against a scoring rubric and reflect on your experience.'
-              description_teacher: "Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ work, they begin to work more independently, working through annotating, pseudocoding, and completing an FRQ on their own. After annotating and writing their solutions, students still discuss their results with their peers and receive support.  \n\nThe goals of this lesson are:\n* Practice annotating an FRQ\n* Practice writing pseudocode for an FRQ\n* Practice writing a solution for an FRQ\n* Practice scoring an FRQ against a scoring rubric"
+              description_student: Today you complete a Free Response Question (FRQ) almost completely on your own. To develop a solution for the FRQ, you annotate the problem, write pseudocode, and translate your pseudocode to Java. Finally, you score your attempt against a scoring rubric and reflect on your experience.
+              description_teacher: |-
+                Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ activities, they begin to work more independently by annotating, writing pseudocode, and implementing a solution on their own. Students work with their peers to evaluate their work against a scoring rubric and reflect on their progress.
+
+                The goals of this lesson are:
+                * Practice annotating an FRQ
+                * Practice writing pseudocode for an FRQ
+                * Practice writing a solution for an FRQ
+                * Practice scoring an FRQ against a scoring rubric
             lesson-15:
               name: Assessment Day
               description_student: In this unit, you expanded the expressions used in conditionals and iteration to use relational and logical operators. You used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. You developed an understanding of De Morgan's Laws and writing truth tables. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
@@ -26128,3 +26135,106 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        csa4-exemplars:
+          lessons:
+            new lesson:
+              name: Using Existing Libraries to Add Capabilities
+              description_student: 
+              description_teacher: 
+            lesson-1:
+              name: Using Existing Libraries to Add Capabilities
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Solving Problems with the Math Class
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Treating Data as a Different Type
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Comparing Values to Make Decisions
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Adding Randomness to a Program
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Comparing Object References and Data
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Providing an Alternate Path of Execution
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Testing Multiple Conditions
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Using Logical Operators
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Applying De Morgan's Laws to Boolean Expressions
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: Neighborhood Block Party Project - Day 1
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: Neighborhood Block Party Project - Day 2
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: Neighborhood Block Party Project - Day 3
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: FRQ Day
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: Assessment Day
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lesson group:
+              display_name: Content
+            content:
+              display_name: Content
+            show_what_you_know:
+              display_name: Show What You Know
+            lesson_group:
+              display_name: Content
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa4-exemplars
+          title: Unit 4 - Expanding Program Logic [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ai-ethics:
+          lessons: {}
+          lesson_groups: {}
+          name: ai-ethics
+          title: Hour of Code - AI-Ethics
+          description_audience: grades 6-12
+          description_short: 'In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. '
+          description: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+          student_description: 'Conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of your choice. '
+        dance-unplugged:
+          lessons: {}
+          lesson_groups: {}
+          name: dance-unplugged
+          title: Hour of Code - Dance Party - Unplugged
+          description_audience: grades K-12
+          description_short: 'Learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment and learn to think about controlling actions using events. '
+          description: Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
+          student_description: Learn to think about controlling actions using events. Events are widely used in programming and should be easily recognizable after this lesson.
