@@ -407,6 +407,13 @@ sl:
         options:
           EFFECT:
             '"rain"': dež
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': desno
+            '90': dol
+            '180': levo
+            '270': gor
       gamelab_mirrorSprite:
         options:
           DIRECTION:
