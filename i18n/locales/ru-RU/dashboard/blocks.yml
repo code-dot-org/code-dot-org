@@ -1010,6 +1010,13 @@ ru:
         text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       gamelab_makeNumSprites:
         text: создать {NUM} новый {ANIMATION_NAME} слайдов
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': вправо
+            '90': вниз
+            '180': влево
+            '270': вверх
       gamelab_mirrorSprite:
         text: "{SPRITE} Лицо {DIRECTION}"
         options:
