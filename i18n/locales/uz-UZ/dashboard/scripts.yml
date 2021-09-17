@@ -17156,3 +17156,14 @@ uz:
               name: Accelerometer
             lesson-19:
               name: Loyiha
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Vidjetlar
+            lesson-3:
+              name: Asboblar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Darslar
+            lessonGroup-3:
+              display_name: Loyiha

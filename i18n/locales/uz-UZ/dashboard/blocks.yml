@@ -1139,6 +1139,13 @@ uz:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       gamelab_makeNumSprites:
         text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': o‘ng
+            '90': pastga
+            '180': chap
+            '270': yuqoriga
       gamelab_mirrorSprite:
         text: "{SPRITE} {DIRECTION} ga yuzlangan"
         options:
