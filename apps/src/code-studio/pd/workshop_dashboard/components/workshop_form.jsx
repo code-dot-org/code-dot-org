@@ -1020,7 +1020,9 @@ export class WorkshopForm extends React.Component {
           </Row>
           <Row>
             <Col sm={10}>
-              {this.state.course && this.renderWorkshopTypeOptions(validation)}
+              {this.state.course &&
+                this.state.course !== 'Admin' &&
+                this.renderWorkshopTypeOptions(validation)}
             </Col>
           </Row>
           <Row>
