@@ -4,6 +4,7 @@ import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 export default class CommentEditor extends Component {
   static propTypes = {
@@ -24,7 +25,7 @@ export default class CommentEditor extends Component {
     let saveMessageText = '';
 
     if (saveInProgress) {
-      icon = <span className="fa fa-spin fa-spinner" style={styles.spinner} />;
+      icon = <Spinner size="small" style={styles.spinner} />;
       saveMessageTitle = javalabMsg.saving();
     } else if (saveError) {
       icon = (

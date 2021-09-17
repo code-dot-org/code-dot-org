@@ -41,8 +41,8 @@ class ReviewTab extends Component {
     reviewablePeers: [],
     projectOwnerName: '',
     authorizationError: false,
-    saveError: false,
-    saveInProgress: false
+    commentSaveError: false,
+    commentSaveInProgress: false
   };
 
   onSelectPeer = peer => {
@@ -158,8 +158,8 @@ class ReviewTab extends Component {
 
   onNewCommentCancel = () => {
     this.setState({
-      saveError: false,
-      saveInProgress: false
+      commentSaveError: false,
+      commentSaveInProgress: false
     });
   };
 
@@ -171,8 +171,8 @@ class ReviewTab extends Component {
     } = getStore().getState().pageConstants;
     const {token} = this.state;
     this.setState({
-      saveError: false,
-      saveInProgress: true
+      commentSaveError: false,
+      commentSaveInProgress: true
     });
 
     codeReviewDataApi
@@ -190,14 +190,17 @@ class ReviewTab extends Component {
         this.setState({
           comments: comments,
           forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1,
-          saveInProgress: false
+          commentSaveInProgress: false
         });
       })
       .fail(result => {
         if (result.status === 404) {
-          this.setState({authorizationError: true, saveInProgress: false});
+          this.setState({
+            authorizationError: true,
+            commentSaveInProgress: false
+          });
         } else {
-          this.setState({saveError: true, saveInProgress: false});
+          this.setState({commentSaveError: true, commentSaveInProgress: false});
         }
       });
   };
@@ -377,8 +380,8 @@ class ReviewTab extends Component {
     const {
       authorizationError,
       isReadyForReview,
-      saveInProgress,
-      saveError
+      commentSaveInProgress,
+      commentSaveError
     } = this.state;
     if (
       !authorizationError &&
@@ -389,8 +392,8 @@ class ReviewTab extends Component {
           onNewCommentSubmit={this.onNewCommentSubmit}
           onNewCommentCancel={this.onNewCommentCancel}
           key={forceRecreateEditorKey}
-          saveInProgress={saveInProgress}
-          saveError={saveError}
+          saveInProgress={commentSaveInProgress}
+          saveError={commentSaveError}
         />
       );
     }
