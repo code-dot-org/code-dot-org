@@ -1,9 +1,12 @@
 {
   "clicked": "rákattintva",
   "clickedSprite": "szereplőre kattintva",
+  "new": "új",
   "newSprite": "új szereplő",
   "subject": "téma",
+  "subjectSprite": "tárgy karakter",
   "object": "tárgy",
+  "objectSprite": "eszköz karakter",
   "errorLoadingAnimation": " Úgy néz ki, hogy problémákba ütköztünk a \"{animationName}\" betöltésével. Győzödjön meg arról, hogy jó az internet kapcsolata és próbálja meg újratölteni az oldalt. Hogyha ez a probléma folytatódik, lehetséges, hogy ez az animáció törött. Ebben az esetben, az animáció letörlésével tudnád folytatni.",
   "reinfFeedbackMsg": "Befejezted! Nyomd meg a \"Folytatást\" hogy tovább tudj lépni a következő szintre.",
   "shareGame": "Oszd meg a játékodat:",
