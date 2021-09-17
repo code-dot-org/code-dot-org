@@ -172,6 +172,13 @@ kk:
             '"right"': оңға
             '"space"': кеңестік
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': оңға
+            '90': төмен
+            '180': солға
+            '270': жоғары
       gamelab_mirrorSprite:
         options:
           DIRECTION:
