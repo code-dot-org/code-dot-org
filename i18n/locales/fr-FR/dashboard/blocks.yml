@@ -1115,6 +1115,15 @@ fr:
             '"rain"': pluie
       gamelab_makeNewSpriteAnon:
         text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
+      gamelab_makeNumSprites:
+        text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': vers la droite
+            '90': vers le bas
+            '180': vers la gauche
+            '270': vers le haut
       gamelab_mirrorSprite:
         text: "{SPRITE} orienté vers {DIRECTION}"
         options:

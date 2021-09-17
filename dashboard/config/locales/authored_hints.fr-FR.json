@@ -6902,7 +6902,7 @@
           "courseD_maze_until8_c": "Avec ton bloc `« Si/Sinon »` : s’il n’y a pas de chemin en face, de quel côté dois-tu tourner ?"
         },
         "courseD_maze_until9": {
-          "courseD_maze_until8_a": "`si chemin va tout droit` te permettra d'avancer, tant que possible, et d’éviter ainsi les chemins avec des mâchoires.",
+          "courseD_maze_until8_a": "Tu pourras continuer d'avancer tant que possible en utilisant `si chemin devant`, en t'aidant à manquer les chemins avec des plantes carnivores.",
           "courseD_maze_until8_b": "Dans quelle direction aller s'il n'y a pas de chemin en face ?",
           "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour atteindre le tournesol !"
         },

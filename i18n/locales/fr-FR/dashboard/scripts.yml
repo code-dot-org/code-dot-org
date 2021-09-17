@@ -17272,3 +17272,14 @@ fr:
               name: Accéléromètre
             lesson-19:
               name: Projet
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Outils
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Leçons
+            lessonGroup-3:
+              display_name: Projet
