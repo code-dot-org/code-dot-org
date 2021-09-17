@@ -3,16 +3,20 @@
     "data": {
       "resources": {
         "introducing_sprite_lab/coursef/2021": {
-          "name": "स्प्राइट लैब का परिचय"
+          "name": "स्प्राइट लैब का परिचय",
+          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
         },
         "exploring_apps/coursef/2021": {
-          "name": "ऐप्स की पड़ताल करना"
+          "name": "ऐप्स की पड़ताल करना",
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "name": "स्प्राइट लैब का परिचय"
+          "name": "स्प्राइट लैब का परिचय",
+          "url": "https://youtu.be/yd-9xZ275dM"
         },
         "exploring_apps_1/coursef/2021": {
-          "name": "ऐप्स की पड़ताल करना"
+          "name": "ऐप्स की पड़ताल करना",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
           "name": "स्प्राइट्स बनाएं"
