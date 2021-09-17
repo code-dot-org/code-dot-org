@@ -236,6 +236,13 @@ lt:
             '"right"': dešinėn
             '"space"': kosmosas
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': dešinėn
+            '90': žemyn
+            '180': kairėn
+            '270': aukštyn
       gamelab_mirrorSprite:
         options:
           DIRECTION:
