@@ -4722,3 +4722,10 @@ nn:
           lessons:
             lesson-19:
               name: Prosjekt
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Moduler
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Prosjekt
