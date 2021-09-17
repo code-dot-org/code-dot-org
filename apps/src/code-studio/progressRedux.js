@@ -340,7 +340,9 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
     method: 'GET',
     data: {user_id: userId}
   }).done(data => {
-    data = data || {};
+    if (!data || _.isEmpty(data)) {
+      return;
+    }
 
     if (data.isVerifiedTeacher) {
       dispatch(setVerified());
