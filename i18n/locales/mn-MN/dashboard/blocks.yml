@@ -1111,6 +1111,13 @@ mn:
             '"rain"': бороотой
       gamelab_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': баруун
+            '90': доошоо
+            '180': зүүн
+            '270': дээшээ
       gamelab_mirrorSprite:
         text: "{SPRITE} нь {DIRECTION} руу харж байна"
         options:
