@@ -725,6 +725,13 @@ pt:
             '"rain"': chuva
       gamelab_makeNewSpriteAnon:
         text: fazer novo {ANIMATION_NAME} sprite at sprite at sprite at spr {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': para a direita
+            '90': para baixo
+            '180': para a esquerda
+            '270': para cima
       gamelab_mirrorSprite:
         text: "{SPRITE} Cara {DIRECTION}"
         options:
