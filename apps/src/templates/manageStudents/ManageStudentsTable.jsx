@@ -674,7 +674,7 @@ class ManageStudentsTable extends Component {
     const {sectionId} = this.props;
     const url =
       teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
   }
 
   showSectionCodeDialog() {
