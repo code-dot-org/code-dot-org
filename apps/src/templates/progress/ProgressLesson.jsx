@@ -127,8 +127,13 @@ class ProgressLesson extends React.Component {
     // don't need to pass it separately from lesson here and in ProgressLessonTeacherInfo.
     const lessonUrl = levels[0] && levels[0].url;
 
-    const lockableUnauthorized =
-      this.props.lockableAuthorizedLoaded && !this.props.lockableAuthorized;
+    // If a teacher is not verified they will not be lockableAuthorized (meaning they can't
+    // lock or unlock lessons). For lockableUnauthorizedTeacher we will display a warning explaining
+    // that they need to be verified to unlock lessons.
+    const lockableUnauthorizedTeacher =
+      viewAs === ViewType.Teacher &&
+      this.props.lockableAuthorizedLoaded &&
+      !this.props.lockableAuthorized;
 
     return (
       <div
@@ -191,19 +196,17 @@ class ProgressLesson extends React.Component {
                 </span>
               )}
           </div>
-          {lesson.lockable &&
-            lockableUnauthorized &&
-            viewAs === ViewType.Teacher && (
-              <div style={styles.notAuthorizedWarning}>
-                {i18n.unverifiedTeacherLockWarning()}
-                <a
-                  style={styles.learnMoreLink}
-                  href="https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-"
-                >
-                  {i18n.learnMoreWithPeriod()}
-                </a>
-              </div>
-            )}
+          {lesson.lockable && lockableUnauthorizedTeacher && (
+            <div style={styles.notAuthorizedWarning}>
+              {i18n.unverifiedTeacherLockWarning()}
+              <a
+                style={styles.learnMoreLink}
+                href="https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-"
+              >
+                {i18n.learnMoreWithPeriod()}
+              </a>
+            </div>
+          )}
           {!this.state.collapsed && (
             <ProgressLessonContent
               description={description}
