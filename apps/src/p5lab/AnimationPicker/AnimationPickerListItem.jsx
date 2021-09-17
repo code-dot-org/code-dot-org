@@ -6,6 +6,7 @@ import color from '@cdo/apps/util/color';
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 import AnimationPreview from './AnimationPreview';
+import experiments from '@cdo/apps/util/experiments';
 
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
@@ -72,6 +73,8 @@ class AnimationPickerListItem extends React.Component {
       padding: 0
     };
 
+    const displayMultiSelect = experiments.isEnabled(experiments.MULTISELECT);
+
     const thumbnailStyleWithHover = [thumbnailStyle, hover && hoverBorder];
 
     return (
@@ -103,7 +106,7 @@ class AnimationPickerListItem extends React.Component {
           )}
         </div>
         {label && <div style={labelStyle}>{label}</div>}
-        {animationProps && loaded && hover && (
+        {animationProps && loaded && hover && displayMultiSelect && (
           <i className="fa fa-plus fa-3x" style={hoverIcon} />
         )}
       </div>
