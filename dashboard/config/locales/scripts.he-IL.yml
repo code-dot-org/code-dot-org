@@ -3897,3 +3897,14 @@ he:
           lessons:
             lesson-19:
               name: פּרוֹיֶקט
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: ווידג'טים
+            lesson-3:
+              name: כלים
+          lesson_groups:
+            lessonGroup-2:
+              display_name: שיעורים
+            lessonGroup-3:
+              display_name: פּרוֹיֶקט

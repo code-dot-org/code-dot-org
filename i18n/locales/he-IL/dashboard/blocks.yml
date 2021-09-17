@@ -1115,6 +1115,13 @@ he:
         text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
       gamelab_makeNumSprites:
         text: צור {NUM} דמויות {ANIMATION_NAME} חדשות
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ימינה
+            '90': למטה
+            '180': שמאלה
+            '270': למעלה
       gamelab_mirrorSprite:
         text: "{SPRITE} פונה ל{DIRECTION}"
         options:
