@@ -38,8 +38,8 @@ export default class CommentEditor extends Component {
       <div style={styles.saveStatus}>
         <div style={styles.saveStatusIcon}>{icon}</div>
         <div style={styles.saveMessage}>
-          <div style={styles.saveMessageTitle}>{saveMessageTitle}</div>
-          <div style={styles.saveMessageText}>{saveMessageText}</div>
+          <p style={styles.saveMessageTitle}>{saveMessageTitle}</p>
+          <p style={styles.saveMessageText}>{saveMessageText}</p>
         </div>
       </div>
     );
@@ -126,11 +126,13 @@ const styles = {
   },
   saveMessageTitle: {
     fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 14
+    fontSize: 14,
+    marginBottom: 0
   },
   saveMessageText: {
     fontStyle: 'italic',
-    fontSize: 12
+    fontSize: 12,
+    marginBottom: 0
   },
   saveMessage: {
     color: color.dark_charcoal
