@@ -7,7 +7,6 @@
       "off": null,
       "toggle": null,
       "color": null,
-      "rgb": null,
       "blink": null,
       "intensity": null
     },
@@ -46,8 +45,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# Adding Some Color\r\n\r\nYou probably noticed when you used `colorLeds[0].on()` in the last level, the LEDs turned on as white. If you don't specify a color, `on()` will turn on all three parts of the LED (red, green, and blue) to produce white. You'll see a new command in the toolbox called `colorLeds[0].color()` which lets you specify a color, either as a string like \"blue\" or an RGB value using color `color()` command.\r\n\r\n# Do This\r\n\r\nUse the `.color()` command to set each of the color LEDs to a different color.",
-    "start_blocks": "colorLeds[0].color(\"teal\");\r\ncolorLeds[1].color(rgb(221,160,221));",
+    "long_instructions": "# Adding Some Color\r\n\r\nYou probably noticed when you used `colorLeds[0].on()` in the last level, the LEDs turned on as white. If you don't specify a color, `on()` will turn on all three parts of the LED (red, green, and blue) to produce white. You'll see a new command in the toolbox called `colorLeds[0].color()` which lets you specify a color. Try different colors like \"orange\" or \"yellow\" or \"magenta\" to see which colors work with the LEDs.\r\n\r\n# Do This\r\n\r\nUse the `.color()` command to set each of the color LEDs to a different color.",
+    "start_blocks": "colorLeds[0].color(\"teal\");\ncolorLeds[1].color(\"lime\");\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -63,19 +62,20 @@
     ],
     "map_reference": "/docs/concepts/maker-toolkit/color-lights/",
     "mini_rubric": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "preload_asset_list": null
   },
   "game_id": 41,
-  "published": true,
   "created_at": "2021-08-31T18:09:52.000Z",
   "level_num": "custom",
   "user_id": 155,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T18:09:52.849+00:00\",\"changed\":[\"cloned from \\\"CSD U6 LEDs color_2021\\\"\"],\"cloned_from\":\"CSD U6 LEDs color_2021\"},{\"changed_at\":\"2021-08-31 18:10:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T18:09:52.849+00:00\",\"changed\":[\"cloned from \\\"CSD U6 LEDs color_2021\\\"\"],\"cloned_from\":\"CSD U6 LEDs color_2021\"},{\"changed_at\":\"2021-08-31 18:10:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 15:44:46 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 15:47:47 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 15:49:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
