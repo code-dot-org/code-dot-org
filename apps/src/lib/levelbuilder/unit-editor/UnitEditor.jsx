@@ -25,6 +25,7 @@ import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import Button from '@cdo/apps/templates/Button';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -683,27 +684,23 @@ class UnitEditor extends React.Component {
         <CollapsibleEditorSection title="Lesson Settings">
           {this.props.isMigrated && this.props.initialUseLegacyLessonPlans && (
             <label>
-              Use Legacy Lesson Plans
-              <input
-                type="checkbox"
-                checked={this.state.useLegacyLessonPlans}
-                style={styles.checkbox}
-                onChange={() =>
+              <Button
+                text={'Use Code Studio Lesson Plans'}
+                size={Button.ButtonSize.narrow}
+                color={Button.ButtonColor.white}
+                style={{margin: 0, height: 30, lineHeight: '8px'}}
+                onClick={() =>
                   this.setState({
-                    useLegacyLessonPlans: !this.state.useLegacyLessonPlans
+                    useLegacyLessonPlans: false
                   })
                 }
+                disabled={!this.state.useLegacyLessonPlans}
               />
               <HelpTip>
                 <p>
-                  Whether to show legacy lesson plans for this unit. legacy
-                  lesson plans live either on curriculum builder or google docs,
-                  as opposed to on code studio. When lesson plans are first
-                  imported from curriculum builder, this box is initially
-                  checked so that you can review the new code studio lesson plan
-                  content before it goes live. Once you're satisfied with the
-                  content, uncheck this box to make the code studio lesson plans
-                  visible to teachers and students.
+                  Click to stop using legacy lesson plans on curriculum.code.org
+                  or google docs, and start using lesson plans on
+                  studio.code.org, for all lessons in this unit.
                 </p>
               </HelpTip>
             </label>
@@ -715,7 +712,8 @@ class UnitEditor extends React.Component {
                 <p>
                   This field determines the location of the legacy lesson plan.
                   If left blank, it will look for special file under
-                  code.org/curriculum/[unit]/[lesson]. If you want to disable
+                  code.org/curriculum/[unit]/[lesson] which redirects to
+                  curriculum.code.org or google docs. If you want to disable
                   lesson plans entirely, you must go to each lesson edit page
                   and uncheck "Has Lesson Plan".
                 </p>
