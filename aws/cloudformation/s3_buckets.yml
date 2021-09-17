@@ -27,6 +27,7 @@ Resources:
   ## Create S3 bucket for student sources (project code)
   SourcesBucket:
     Type: "AWS::S3::Bucket"
+    DeletionPolicy: Retain
     Properties:
       BucketName: "cdo-v3-sources"
       VersioningConfiguration:
