@@ -7190,3 +7190,10 @@ is:
           lessons:
             lesson-19:
               name: Verkefni
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Græjur
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verkefni

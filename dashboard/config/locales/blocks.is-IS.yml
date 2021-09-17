@@ -1136,6 +1136,13 @@ is:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       gamelab_makeNumSprites:
         text: búa til {NUM} nýja {ANIMATION_NAME} kvika
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': hægri
+            '90': niður
+            '180': vinstri
+            '270': upp
       gamelab_mirrorSprite:
         text: "{SPRITE} snýr {DIRECTION}"
         options:
