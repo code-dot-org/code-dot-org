@@ -120,6 +120,8 @@ class Api::V1::RegionalPartnersController < ApplicationController
         workshops.where(course: COURSE_CSD).where.not(subject: SUBJECT_CSD_FIT)
       when :csp_teachers
         workshops.where(course: COURSE_CSP).where.not(subject: SUBJECT_CSP_FIT)
+      when :csa_teachers
+        workshops.where(course: COURSE_CSA).where.not(subject: SUBJECT_CSA_FIT)
       else
         # Should never get here. This value will cause an exception on the next calculation,
         # which expects an ActiveRecord::Relation.
