@@ -605,6 +605,18 @@ id-ID:
         content1: deskripsi di sini
       CSD U2 L1 Overview:
         content1: deskripsi di sini
+        markdown: |-
+          #Ikhtisar
+
+          Pelajaran ini mencakup tujuan yang mungkin dilayani situs web, baik untuk pengguna maupun kreator. Kelas ini mengeksplorasi beberapa situs web yang paling sering digunakan di Amerika Serikat dan mendiskusikan bagaimana setiap situs tersebut bermanfaat bagi pegguna dan bagaimana juga situs tersebut dapat melayani kreatornya.
+          ##Kosakata
+
+          * **Situs web**- lokasi yang terhubung ke internet yang mengelola satu atau beberapa halaman World Wide Web.
+
+          ##Sumber
+
+          *[Tujuan Situs Web - Panduan Aktifitas]
+          (https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
       CSD U2 L2 Overview:
         content1: deskripsi di sini
       CSD U2 L3 Overview:
@@ -4500,7 +4512,8 @@ id-ID:
         - text: Lebah akan bergerak ke awan lalu diam saja, apa pun yang terjadi.
           feedback: Salah. Blok `if at flower` memastikan lebahnya akan mencoba mengisap
             nektar jika ada bunga di bawah awan.
-        - feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
+        - text: Lebah tidak akan sampai ke awan.
+          feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
             mengisap nektar jika ada bunga di bawah awan.
         questions:
         - text: Awan menghalangi pemandangan. Mungkin ada bunga di bawah awan ini.
@@ -4543,7 +4556,9 @@ id-ID:
         - text: Lebah akan mencoba mengambil madu dari bunga dan sarang.
           feedback: Salah. Salah. Blok `if at flower` membiarkan lebah mendapat madu
             bunga di setiap bunga dan membuat madu di setiap sarang lebah..
-        - feedback: Salah. Salah. Blok `if at flower` membiarkan lebah mendapat madu
+        - text: Lebah tidak mengambil madu dan tidak membuat madu dari bunga dan di
+            sarang lebah.
+          feedback: Salah. Salah. Blok `if at flower` membiarkan lebah mendapat madu
             bunga di setiap bunga dan membuat madu di setiap sarang lebah..
         questions:
         - text: 'Perhatikan baik-baik kode di bawah. Menurut Anda, apa yang akan terjadi
