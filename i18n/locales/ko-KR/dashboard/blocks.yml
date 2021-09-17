@@ -1137,6 +1137,13 @@ ko:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       gamelab_makeNumSprites:
         text: "{NUM}개의 새 {ANIMATION_NAME} 스프라이트를 만드세요"
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': 오른쪽으로
+            '90': 아래로
+            '180': 왼쪽으로
+            '270': 위로
       gamelab_mirrorSprite:
         text: "{SPRITE} 얼굴 {DIRECTION}"
         options:

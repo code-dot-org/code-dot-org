@@ -18446,3 +18446,14 @@ ko:
               name: 가속도 센서
             lesson-19:
               name: 프로젝트
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: 위젯
+            lesson-3:
+              name: 툴
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 레슨
+            lessonGroup-3:
+              display_name: 프로젝트
