@@ -228,7 +228,7 @@ describe('Java Lab Editor Test', () => {
         javalabEditor.onRenameFile('Class2.java');
         // after rename with existing filename, dialog should not close and
         // error message should be populated
-        expect(store.getState().javalab.renameFileError).to.not.be.null;
+        expect(javalabEditor.state.renameFileError).to.exist;
         expect(javalabEditor.state.openDialog).to.equal('renameFile');
         expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
           'file-0',
@@ -260,9 +260,17 @@ describe('Java Lab Editor Test', () => {
             'file-0': 'Class1.java'
           }
         });
+
+        expect(javalabEditor.state.renameFileError).to.be.null;
+        expect(javalabEditor.state.openDialog).to.equal('renameFile');
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java'
+        });
+
         // We are trying to rename Class1.java -> ''
         javalabEditor.onRenameFile('');
-        expect(store.getState().javalab.renameFileError).to.not.be.null;
+
+        expect(javalabEditor.state.renameFileError).to.exist;
         expect(javalabEditor.state.openDialog).to.equal('renameFile');
         expect(javalabEditor.state.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java'
@@ -289,9 +297,17 @@ describe('Java Lab Editor Test', () => {
             'file-0': 'Class1.java'
           }
         });
-        // We are trying to rename Class1.java -> 'an invalid file name .java'
+
+        expect(javalabEditor.state.renameFileError).to.be.null;
+        expect(javalabEditor.state.openDialog).to.equal('renameFile');
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java'
+        });
+
+        // We are trying to rename Class1.java -> ''
         javalabEditor.onRenameFile('an invalid file name .java');
-        expect(store.getState().javalab.renameFileError).to.not.be.null;
+
+        expect(javalabEditor.state.renameFileError).to.exist;
         expect(javalabEditor.state.openDialog).to.equal('renameFile');
         expect(javalabEditor.state.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java'
@@ -434,7 +450,7 @@ describe('Java Lab Editor Test', () => {
         javalabEditor.onCreateFile(newFilename);
         // after create with existing filename, dialog should not close and
         // error message should be populated
-        expect(store.getState().javalab.newFileError).to.not.be.null;
+        expect(javalabEditor.state.newFileError).to.exist;
         expect(javalabEditor.state.openDialog).to.equal('createFile');
         expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
           'file-0',
@@ -465,8 +481,16 @@ describe('Java Lab Editor Test', () => {
             'file-0': 'Class1.java'
           }
         });
+
+        expect(javalabEditor.state.newFileError).to.be.null;
+        expect(javalabEditor.state.openDialog).to.equal('createFile');
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java'
+        });
+
         javalabEditor.onCreateFile('');
-        expect(store.getState().javalab.newFileError).to.not.be.null;
+
+        expect(javalabEditor.state.newFileError).to.exist;
         expect(javalabEditor.state.openDialog).to.equal('createFile');
         expect(javalabEditor.state.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java'
@@ -492,8 +516,16 @@ describe('Java Lab Editor Test', () => {
             'file-0': 'Class1.java'
           }
         });
+
+        expect(javalabEditor.state.newFileError).to.be.null;
+        expect(javalabEditor.state.openDialog).to.equal('createFile');
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java'
+        });
+
         javalabEditor.onCreateFile('an invalid file name .java');
-        expect(store.getState().javalab.newFileError).to.not.be.null;
+
+        expect(javalabEditor.state.newFileError).to.exist;
         expect(javalabEditor.state.openDialog).to.equal('createFile');
         expect(javalabEditor.state.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java'
