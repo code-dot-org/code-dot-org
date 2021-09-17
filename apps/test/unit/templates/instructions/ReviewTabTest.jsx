@@ -156,6 +156,35 @@ describe('Code Review Tab', () => {
     ).to.equal(testCommentText);
   });
 
+  it('hides comment box if there is an authorization error on comment', () => {
+    // first, enable peer review
+    stubReviewableStatusProjectServerCall({
+      canMarkReviewable: false,
+      reviewEnabled: true
+    });
+
+    const testCommentText = 'test comment text';
+    server.respond();
+
+    // initial server response loads a comment
+    expect(wrapper.find(CommentEditor).length).to.equal(1);
+    expect(wrapper.find(Comment).length).to.equal(1);
+
+    // fake a 404 for saving a comment
+    server.respondWith('POST', '/code_review_comments', [
+      404,
+      {'Content-Type': 'application/json'},
+      'error'
+    ]);
+
+    wrapper.instance().onNewCommentSubmit(testCommentText);
+    server.respond();
+    // should still only have 1 comment, not 2
+    expect(wrapper.find(Comment).length).to.equal(1);
+    expect(wrapper.find(CommentEditor).length).to.equal(0);
+    expect(wrapper.state().authorizationError).to.be.true;
+  });
+
   it('removes a comment when one is deleted', () => {
     server.respond();
 

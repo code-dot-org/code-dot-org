@@ -124,10 +124,13 @@ export default class PoemBotLibrary extends CoreLibrary {
       },
 
       setPoem(key) {
-        if (POEMS[key]) {
+        const poem = POEMS[key];
+        if (poem) {
           this.poemState = {
             ...this.poemState,
-            ...POEMS[key]
+            author: poem.author,
+            title: poem.title,
+            lines: [...poem.lines]
           };
         }
       },
