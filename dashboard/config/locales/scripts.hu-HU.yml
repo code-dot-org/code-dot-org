@@ -4064,6 +4064,8 @@ hu:
           lessons:
             lesson-12:
               name: Eszközök
+            lesson-17:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Leckék
@@ -4087,3 +4089,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: Eszközök
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Leckék
