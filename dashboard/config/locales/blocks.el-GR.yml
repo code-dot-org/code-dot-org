@@ -1116,6 +1116,13 @@ el:
             '"rain"': βροχή
       gamelab_makeNewSpriteAnon:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': δεξιά
+            '90': κάτω
+            '180': αριστερά
+            '270': επάνω
       gamelab_mirrorSprite:
         text: "{SPRITE} γύρνα προς {DIRECTION}"
         options:
