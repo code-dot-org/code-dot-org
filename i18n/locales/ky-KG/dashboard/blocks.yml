@@ -291,6 +291,13 @@ ky:
         options:
           EFFECT:
             '"rain"': жаан
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': оңго
+            '90': ылдый
+            '180': солго
+            '270': өйдө
       gamelab_mirrorSprite:
         options:
           DIRECTION:
