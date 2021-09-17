@@ -1100,6 +1100,13 @@ ga:
             '"rain"': báisteach
       gamelab_makeNewSpriteAnon:
         text: déan sprid nua {ANIMATION_NAME} {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ar dheis
+            '90': síos
+            '180': ar chlé
+            '270': suas
       gamelab_mirrorSprite:
         text: aghaidh {SPRITE} {DIRECTION}
         options:
