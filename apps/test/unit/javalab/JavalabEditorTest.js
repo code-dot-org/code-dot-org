@@ -239,6 +239,64 @@ describe('Java Lab Editor Test', () => {
           'file-1': 'Class2.java'
         });
       });
+
+      it('displays error message if file name is blank', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        store.dispatch(
+          setAllSources({
+            'Class1.java': {text: '', isVisible: true, isValidation: false}
+          })
+        );
+
+        javalabEditor.setState({
+          showMenu: false,
+          contextTarget: null,
+          editTabKey: 'file-0',
+          editTabFilename: 'Class1.java',
+          openDialog: 'renameFile',
+          orderedTabKeys: ['file-0'],
+          fileMetadata: {
+            'file-0': 'Class1.java'
+          }
+        });
+        // We are trying to rename Class1.java -> ''
+        javalabEditor.onRenameFile('');
+        expect(store.getState().javalab.renameFileError).to.not.be.null;
+        expect(javalabEditor.state.openDialog).to.equal('renameFile');
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java'
+        });
+      });
+
+      it('displays error message if file name is an invalid java file name', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        store.dispatch(
+          setAllSources({
+            'Class1.java': {text: '', isVisible: true, isValidation: false}
+          })
+        );
+
+        javalabEditor.setState({
+          showMenu: false,
+          contextTarget: null,
+          editTabKey: 'file-0',
+          editTabFilename: 'Class1.java',
+          openDialog: 'renameFile',
+          orderedTabKeys: ['file-0'],
+          fileMetadata: {
+            'file-0': 'Class1.java'
+          }
+        });
+        // We are trying to rename Class1.java -> 'an invalid file name .java'
+        javalabEditor.onRenameFile('an invalid file name .java');
+        expect(store.getState().javalab.renameFileError).to.not.be.null;
+        expect(javalabEditor.state.openDialog).to.equal('renameFile');
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java'
+        });
+      });
     });
 
     describe('componentDidUpdate', () => {
@@ -385,6 +443,60 @@ describe('Java Lab Editor Test', () => {
         expect(javalabEditor.state.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java',
           'file-1': 'Class2.java'
+        });
+      });
+
+      it('displays error message if file name is blank', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        store.dispatch(
+          setAllSources({
+            'Class1.java': {text: '', isVisible: true, isValidation: false}
+          })
+        );
+
+        javalabEditor.setState({
+          showMenu: false,
+          contextTarget: null,
+          openDialog: 'createFile',
+          orderedTabKeys: ['file-0'],
+          lastTabKeyIndex: 1,
+          fileMetadata: {
+            'file-0': 'Class1.java'
+          }
+        });
+        javalabEditor.onCreateFile('');
+        expect(store.getState().javalab.newFileError).to.not.be.null;
+        expect(javalabEditor.state.openDialog).to.equal('createFile');
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java'
+        });
+      });
+
+      it('displays error message if file name is an invalid java file name', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        store.dispatch(
+          setAllSources({
+            'Class1.java': {text: '', isVisible: true, isValidation: false}
+          })
+        );
+
+        javalabEditor.setState({
+          showMenu: false,
+          contextTarget: null,
+          openDialog: 'createFile',
+          orderedTabKeys: ['file-0'],
+          lastTabKeyIndex: 1,
+          fileMetadata: {
+            'file-0': 'Class1.java'
+          }
+        });
+        javalabEditor.onCreateFile('an invalid file name .java');
+        expect(store.getState().javalab.newFileError).to.not.be.null;
+        expect(javalabEditor.state.openDialog).to.equal('createFile');
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java'
         });
       });
     });
