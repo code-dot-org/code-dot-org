@@ -242,6 +242,7 @@ class Script < ApplicationRecord
     seeded_from
     is_maker_unit
     use_legacy_lesson_plans
+    skip_translating_lesson_plans
   )
 
   def self.twenty_hour_unit
@@ -1579,6 +1580,7 @@ class Script < ApplicationRecord
       weeklyInstructionalMinutes: weekly_instructional_minutes,
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
       useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
+      skipTranslatingLessonPlans: skip_translating_lesson_plans,
       courseVersionId: get_course_version&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
@@ -1811,6 +1813,7 @@ class Script < ApplicationRecord
       :is_migrated,
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
+      :skip_translating_lesson_plans,
       :is_maker_unit
     ]
     not_defaulted_keys = [

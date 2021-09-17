@@ -80,6 +80,7 @@ class UnitEditor extends React.Component {
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
     initialUseLegacyLessonPlans: PropTypes.bool,
+    initialSkipTranslatingLessonPlans: PropTypes.bool,
     preventCourseVersionChange: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
 
@@ -149,7 +150,7 @@ class UnitEditor extends React.Component {
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
-      useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
+      skipTranslatingLessonPlans: this.props.initialSkipTranslatingLessonPlans,
       deprecated: this.props.initialDeprecated,
       publishedState: this.props.initialPublishedState
     };
@@ -304,7 +305,8 @@ class UnitEditor extends React.Component {
       ),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans,
-      use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
+      use_legacy_lesson_plans: this.props.initialUseLegacyLessonPlans,
+      skip_translating_lesson_plans: this.state.skipTranslatingLessonPlans,
       is_maker_unit: this.state.isMakerUnit
     };
 
@@ -682,37 +684,42 @@ class UnitEditor extends React.Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
-          {this.props.isMigrated && this.props.initialUseLegacyLessonPlans && (
-            <label>
-              {/* TODO(dave): enable or remove this button, once we figure out
-              what controls we want to make available to curriculum writers. */}
-              <Button
-                text={'Use Code Studio Lesson Plans'}
-                size={Button.ButtonSize.narrow}
-                color={Button.ButtonColor.white}
-                style={{margin: 0, height: 30, lineHeight: '8px'}}
-                onClick={e => {
-                  e.preventDefault();
-                  const msg = 'Are you sure? This action cannot be undone.';
-                  if (window.confirm(msg)) {
-                    this.setState({useLegacyLessonPlans: false});
-                  }
-                }}
-                disabled
-              />
-              <HelpTip>
-                <p>
-                  This unit contains lesson plans which have been imported from
-                  curriculum.code.org to studio.code.org, however we are still
-                  pointing our users to lesson plans on curriculum.code.org.
-                  Once you have reviewed the new content, click this button to
-                  start using the lesson plans on studio.code.org, for all
-                  lessons in this unit.
-                </p>
-              </HelpTip>
-            </label>
-          )}
-          {(!this.props.isMigrated || this.state.useLegacyLessonPlans) && (
+          {this.props.isMigrated &&
+            this.props.initialUseLegacyLessonPlans &&
+            this.props.initialSkipTranslatingLessonPlans && (
+              <label>
+                <Button
+                  text={'Translate Lesson Plans'}
+                  size={Button.ButtonSize.narrow}
+                  color={Button.ButtonColor.white}
+                  style={{margin: 0, height: 30, lineHeight: '8px'}}
+                  onClick={e => {
+                    e.preventDefault();
+                    const msg = 'Are you sure? This action cannot be undone.';
+                    if (window.confirm(msg)) {
+                      this.setState({
+                        skipTranslatingLessonPlans: false
+                      });
+                    }
+                  }}
+                  disabled={!this.state.skipTranslatingLessonPlans}
+                />
+                <HelpTip>
+                  <p>
+                    This unit contains lesson plans which have been imported
+                    from curriculum.code.org to studio.code.org, however we are
+                    still pointing our users to lesson plans on
+                    curriculum.code.org. Once you have reviewed the imported
+                    lesson plan content, click this button to indicate that it
+                    is finalized and ready to be translated. Once the lesson
+                    plans have been translated, the engineering team will launch
+                    them to our end users.
+                  </p>
+                </HelpTip>
+              </label>
+            )}
+          {(!this.props.isMigrated ||
+            this.props.initialUseLegacyLessonPlans) && (
             <label>
               Legacy Lesson Plan Path
               <HelpTip>
@@ -782,7 +789,7 @@ class UnitEditor extends React.Component {
               }
             />
           )}
-          {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
+          {this.props.isMigrated && !this.props.initialUseLegacyLessonPlans && (
             <label>
               Include student-facing lesson plans
               <input
@@ -863,7 +870,7 @@ class UnitEditor extends React.Component {
             )}
           </div>
         </CollapsibleEditorSection>
-        {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
+        {this.props.isMigrated && !this.props.initialUseLegacyLessonPlans && (
           <CollapsibleEditorSection title="Unit Calendar Settings">
             <label>
               Show Calendar

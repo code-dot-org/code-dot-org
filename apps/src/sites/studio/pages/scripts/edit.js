@@ -105,6 +105,9 @@ export default function initPage(unitEditorData) {
           scriptData.includeStudentLessonPlans || false
         }
         initialUseLegacyLessonPlans={scriptData.useLegacyLessonPlans || false}
+        initialSkipTranslatingLessonPlans={
+          scriptData.skipTranslatingLessonPlans || false
+        }
         scriptPath={scriptData.scriptPath}
       />
     </Provider>,

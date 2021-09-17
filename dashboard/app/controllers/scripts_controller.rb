@@ -281,6 +281,7 @@ class ScriptsController < ApplicationController
       :editor_experiment,
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
+      :skip_translating_lesson_plans,
       :lesson_groups,
       resourceTypes: [],
       resourceLinks: [],
