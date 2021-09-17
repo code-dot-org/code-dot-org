@@ -2064,13 +2064,13 @@ class Script < ApplicationRecord
   end
 
   def get_unit_overview_pdf_url
-    if is_migrated? && use_code_studio_lesson_plans?
+    if is_migrated? && !use_legacy_lesson_plans?
       Services::CurriculumPdfs.get_script_overview_url(self)
     end
   end
 
   def get_unit_resources_pdf_url
-    if is_migrated? && use_code_studio_lesson_plans?
+    if is_migrated? && !use_legacy_lesson_plans?
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
   end

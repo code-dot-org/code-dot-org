@@ -172,8 +172,8 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal nil, lesson2_summary[:lesson_plan_html_url]
   end
 
-  test 'can summarize lesson with new lesson plan link in migrated script' do
-    script = create :script, name: 'test-script', is_migrated: true, use_code_studio_lesson_plans: true
+  test 'can summarize lesson with code studio lesson plans in migrated script' do
+    script = create :script, name: 'test-script', is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true, lockable: true
     lesson2 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false, lockable: true
@@ -190,8 +190,8 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal nil, lesson4_summary[:lesson_plan_html_url]
   end
 
-  test 'can summarize lesson with old lesson plan link in partially migrated script' do
-    script = create :script, name: 'test-script', is_migrated: true, use_code_studio_lesson_plans: false
+  test 'can summarize lesson with legacy lesson plan link in migrated script' do
+    script = create :script, name: 'test-script', is_migrated: true, use_legacy_lesson_plans: true
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true, lockable: true
     lesson2 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false, lockable: true
