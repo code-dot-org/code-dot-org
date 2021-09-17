@@ -35529,6 +35529,8 @@ es-MX:
               display_name: "¡Demuestra lo que sabes!"
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: Plantilla
             lesson-2:
               name: Innovaciones en computación
             lesson-9:
@@ -35537,3 +35539,16 @@ es-MX:
               name: Acelerómetro
             lesson-19:
               name: Proyecto
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Herramientas
+            lesson-4:
+              name: Ejemplos
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lecciones
+            lessonGroup-3:
+              display_name: Proyecto
