@@ -253,6 +253,13 @@ lv:
         options:
           DIRECTION:
             '"North"': Ziemeļi
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': pa labi
+            '90': uz leju
+            '180': pa kreisi
+            '270': uz augšu
       gamelab_mirrorSprite:
         options:
           DIRECTION:
