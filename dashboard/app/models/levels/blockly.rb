@@ -230,7 +230,9 @@ class Blockly < Level
   def self.remove_counter_mutations(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     return xml_string if xml.nil?
-    xml.xpath("//mutation[@counter='counter']").each(&:remove)
+    xml.xpath('//mutation').each do |block|
+      block.remove if block.attributes["counter"] && block.attributes["counter"].value == 'counter'
+    end
     xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
 
