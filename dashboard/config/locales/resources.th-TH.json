@@ -86,8 +86,30 @@
         "implementation_guide/courseb/2021": {
           "name": "คู่มือการใช้งาน"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "ความปลอดภัยในสังคมออนไลน์ของฉัน: สไลด์บทเรียน",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "ความปลอดภัยในสังคมออนไลน์ของฉัน: สังคมออนไลน์ของฉัน",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "ความปลอดภัยในสังคมออนไลน์ของฉัน: ความปลอดภัย: นี่คือกฏ!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "ความปลอดภัยในสังคมออนไลน์ของฉัน: หยุดคิดสักนิด",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "การจับคู่เพื่อเขียนโปรแกรม"
+        },
+        "20_20_20_rule/coursea/2021": {
+          "name": "กฎ 20/20/20"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "จะจัดชั้นเรียนบน Code.org อย่างไร"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "แผนที่แห่งความสุข"

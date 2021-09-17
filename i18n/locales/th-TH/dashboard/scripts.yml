@@ -6201,3 +6201,7 @@ th:
           lessons:
             lesson-19:
               name: โปรเจกต์
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: โปรเจกต์
