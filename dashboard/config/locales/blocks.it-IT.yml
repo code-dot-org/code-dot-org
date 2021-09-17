@@ -1148,6 +1148,13 @@ it:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       gamelab_makeNumSprites:
         text: crea {NUM} nuovi sprite {ANIMATION_NAME}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': a destra
+            '90': in basso
+            '180': a sinistra
+            '270': in alto
       gamelab_mirrorSprite:
         text: Orienta {SPRITE} verso {DIRECTION}
         options:
