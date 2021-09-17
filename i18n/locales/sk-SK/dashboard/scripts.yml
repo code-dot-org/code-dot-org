@@ -9353,3 +9353,14 @@ sk:
               name: Farebné LEDky
             lesson-19:
               name: Projekt
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgety
+            lesson-3:
+              name: Nástroje
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hodiny
+            lessonGroup-3:
+              display_name: Projekt

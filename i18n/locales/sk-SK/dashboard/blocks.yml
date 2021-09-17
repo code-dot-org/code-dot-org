@@ -1160,6 +1160,13 @@ sk:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNumSprites:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': vpravo
+            '90': dole
+            '180': vľavo
+            '270': hore
       gamelab_mirrorSprite:
         text: "{SPRITE} smeruje {DIRECTION}"
         options:
