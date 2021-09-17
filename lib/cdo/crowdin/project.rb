@@ -53,7 +53,9 @@ module Crowdin
       end
 
       only_head ? self.class.head("/export-file", options) : self.class.get("/export-file", options)
-    rescue Net::ReadTimeout => error
+
+      timeouts = [Net::ReadTimeout, Net::OpenTimeout]
+    rescue *timeouts => error
       # Handle a timeout by simply retrying. We default to three attempts before
       # giving up; if this doesn't work out, other things we could consider:
       #
