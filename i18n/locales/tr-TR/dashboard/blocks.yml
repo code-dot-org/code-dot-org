@@ -1065,6 +1065,13 @@ tr:
         text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
         text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': sağ
+            '90': aşağı
+            '180': sol
+            '270': yukarı
       gamelab_mirrorSprite:
         text: "{SPRITE} yüz {DIRECTION}"
         options:
