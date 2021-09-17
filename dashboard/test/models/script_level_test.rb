@@ -888,7 +888,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'cannot add variant to legacy script' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    script = create :script
+    script = create :script, is_migrated: false
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
     level1 = create :level, level_num: 'custom'

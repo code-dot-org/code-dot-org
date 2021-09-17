@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../../../util/deprecatedChai';
+import {assert} from '../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import EligibilityChecklist from '@cdo/apps/lib/kits/maker/ui/EligibilityChecklist';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';

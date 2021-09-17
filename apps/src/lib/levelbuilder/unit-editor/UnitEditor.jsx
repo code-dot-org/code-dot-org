@@ -17,14 +17,11 @@ import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import {
-  getSerializedLessonGroups,
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {
-  lessonGroupShape,
-  resourceShape as migratedResourceShape
-} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 import {PublishedState} from '@cdo/apps/util/sharedConstants';
@@ -81,12 +78,12 @@ class UnitEditor extends React.Component {
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
+    initialUseCodeStudioLessonPlans: PropTypes.bool,
     preventCourseVersionChange: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
-    levelKeyList: PropTypes.object.isRequired,
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
       .isRequired,
     studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
@@ -151,6 +148,7 @@ class UnitEditor extends React.Component {
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
+      useCodeStudioLessonPlans: this.props.initialUseCodeStudioLessonPlans,
       deprecated: this.props.initialDeprecated,
       publishedState: this.props.initialPublishedState
     };
@@ -223,19 +221,6 @@ class UnitEditor extends React.Component {
         shouldCloseAfterSave = false;
       }
     }
-    // HACK: until the unit edit page no longer overwrites changes to the
-    // arrangement of levels within lessons, give the user a warning
-    if (
-      window.lessonEditorOpened &&
-      !confirm(
-        'WARNING: It looks like you opened a lesson edit page from this unit edit page. ' +
-          'If you made any changes on the lesson edit page which you do not ' +
-          'wish to lose, please click cancel now and reload this page before ' +
-          'saving any changes to this unit edit page.'
-      )
-    ) {
-      shouldCloseAfterSave = false;
-    }
 
     if (this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
       this.setState({
@@ -290,12 +275,9 @@ class UnitEditor extends React.Component {
       project_widget_visible: this.state.projectWidgetVisible,
       project_widget_types: this.state.projectWidgetTypes,
       lesson_extras_available: this.state.lessonExtrasAvailable,
-      script_text: this.props.isMigrated
-        ? getSerializedLessonGroups(
-            this.props.lessonGroups,
-            this.props.levelKeyList
-          )
-        : this.state.lessonLevelData,
+      lesson_groups:
+        this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
+      script_text: !this.props.isMigrated && this.state.lessonLevelData,
       last_updated_at: this.state.lastUpdatedAt,
       old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
@@ -321,6 +303,7 @@ class UnitEditor extends React.Component {
       ),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans,
+      use_code_studio_lesson_plans: this.state.useCodeStudioLessonPlans,
       is_maker_unit: this.state.isMakerUnit
     };
 
@@ -341,7 +324,7 @@ class UnitEditor extends React.Component {
         } else {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
-          this.props.init(lessonGroups, this.props.levelKeyList);
+          this.props.init(lessonGroups);
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
@@ -698,9 +681,51 @@ class UnitEditor extends React.Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
-          {!this.props.isMigrated && (
+          <label>
+            Use Code Studio Lesson Plans
+            <input
+              type="checkbox"
+              checked={
+                this.props.isMigrated && this.state.useCodeStudioLessonPlans
+              }
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  useCodeStudioLessonPlans: !this.state.useCodeStudioLessonPlans
+                })
+              }
+              disabled={!this.props.isMigrated}
+            />
+            <HelpTip>
+              {!this.props.isMigrated && (
+                <p>this option is only available for migrated scripts.</p>
+              )}
+              {this.props.isMigrated && (
+                <p>
+                  Whether to show our users the code-studio-based lesson plans
+                  for this unit, as opposed to showing them the lesson plans on
+                  curriculum builder. When a script is first migrated, this box
+                  is left unchecked. Once you're satisfied with the contents of
+                  the new lesson plans on levelbuilder, check this box to make
+                  the code studio lesson plans visible to our teachers and
+                  students.
+                </p>
+              )}
+            </HelpTip>
+          </label>
+          {!(this.props.isMigrated && this.state.useCodeStudioLessonPlans) && (
             <label>
               Curriculum Path
+              <HelpTip>
+                <p>
+                  When "Use Code Studio Lesson Plans" is unchecked, this field
+                  determines the location of the lesson plan. If left blank, it
+                  will look for special file under
+                  code.org/curriculum/[unit]/[lesson]. If you want to disable
+                  lesson plans entirely, you must go to each lesson edit page
+                  and uncheck "Has Lesson Plan".
+                </p>
+              </HelpTip>
               <input
                 value={this.state.curriculumPath}
                 style={styles.input}
@@ -1027,7 +1052,6 @@ export const UnconnectedUnitEditor = UnitEditor;
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    levelKeyList: state.levelKeyList,
     migratedTeacherResources: state.resources,
     studentResources: state.studentResources
   }),
