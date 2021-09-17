@@ -26221,10 +26221,12 @@ en:
           description: ''
           student_description: ''
         ai-ethics:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Our AI Code of Ethics
           lesson_groups: {}
           name: ai-ethics
-          title: Hour of Code - AI-Ethics
+          title: Our AI Code of Ethics
           description_audience: grades 6-12
           description_short: 'In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. '
           description: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
