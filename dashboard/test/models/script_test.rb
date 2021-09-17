@@ -833,8 +833,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.find_by_name('ECSPD').professional_learning_course?
   end
 
-  test 'should summarize fully migrated unit' do
-    unit = create(:script, name: 'single-lesson-script', use_code_studio_lesson_plans: true)
+  test 'should summarize migrated unit' do
+    unit = create(:script, name: 'single-lesson-script')
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
@@ -851,8 +851,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '/resources-pdf-url', summary[:scriptResourcesPdfUrl]
   end
 
-  test 'should summarize partially migrated unit' do
-    unit = create(:script, name: 'single-lesson-script', use_code_studio_lesson_plans: false)
+  test 'should summarize migrated unit with legacy lesson plans' do
+    unit = create(:script, name: 'single-lesson-script', use_legacy_lesson_plans: true)
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
