@@ -66,8 +66,10 @@ class I18nStringTrackerWorker {
     this.buffer = {};
     this.pendingFlush = null;
 
-    // Record the i18n string usage data.
-    sendRecords(records);
+    if (Math.floor(Math.random() * 100) === 0) {
+      // Record the i18n string usage data.
+      sendRecords(records);
+    }
   }
 }
 
