@@ -1168,10 +1168,19 @@ in:
             '"burst"': crwdns2692825:0crwdne2692825:0
             '"pop"': crwdns2692827:0crwdne2692827:0
             '"rain"': crwdns2692829:0crwdne2692829:0
+            '"zigzag"': crwdns2693583:0crwdne2693583:0
       gamelab_makeNewSpriteAnon:
         text: crwdns401076:0[ANIMATION_NAME]crwdnd401076:0[0]crwdnd401076:0[LOCATION]crwdnd401076:0[1]crwdne401076:0
       gamelab_makeNumSprites:
         text: crwdns2463966:0[NUM]crwdnd2463966:0[0]crwdnd2463966:0[ANIMATION_NAME]crwdnd2463966:0[1]crwdne2463966:0
+      gamelab_makeProjectile:
+        text: crwdns2693585:0[ANIMATION_NAME]crwdnd2693585:0[0]crwdnd2693585:0[LOCATION]crwdnd2693585:0[1]crwdnd2693585:0[SPEED]crwdnd2693585:0[2]crwdnd2693585:0[DIRECTION]crwdnd2693585:0[3]crwdne2693585:0
+        options:
+          DIRECTION:
+            '0': crwdns2693587:0crwdne2693587:0
+            '90': crwdns2693589:0crwdne2693589:0
+            '180': crwdns2693591:0crwdne2693591:0
+            '270': crwdns2693593:0crwdne2693593:0
       gamelab_mirrorSprite:
         text: crwdns169085:0[SPRITE]crwdnd169085:0[0]crwdnd169085:0[DIRECTION]crwdnd169085:0[1]crwdne169085:0
         options:
