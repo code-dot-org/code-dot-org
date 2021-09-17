@@ -782,7 +782,7 @@ class UnitEditor extends React.Component {
               }
             />
           )}
-          {this.props.isMigrated && (
+          {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
             <label>
               Include student-facing lesson plans
               <input
@@ -863,7 +863,7 @@ class UnitEditor extends React.Component {
             )}
           </div>
         </CollapsibleEditorSection>
-        {this.props.isMigrated && (
+        {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
           <CollapsibleEditorSection title="Unit Calendar Settings">
             <label>
               Show Calendar
