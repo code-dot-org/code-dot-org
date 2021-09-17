@@ -698,9 +698,12 @@ class UnitEditor extends React.Component {
               />
               <HelpTip>
                 <p>
-                  Click to stop using legacy lesson plans on curriculum.code.org
-                  or google docs, and start using lesson plans on
-                  studio.code.org, for all lessons in this unit.
+                  This unit contains lesson plans which have been imported from
+                  curriculum.code.org to studio.code.org, however we are still
+                  pointing our users to lesson plans on curriculum.code.org.
+                  Once you have reviewed the new content, click this button to
+                  start using the lesson plans on studio.code.org, for all
+                  lessons in this unit.
                 </p>
               </HelpTip>
             </label>
