@@ -684,6 +684,8 @@ class UnitEditor extends React.Component {
         <CollapsibleEditorSection title="Lesson Settings">
           {this.props.isMigrated && this.props.initialUseLegacyLessonPlans && (
             <label>
+              {/* TODO(dave): enable or remove this button, once we figure out
+              what controls we want to make available to curriculum writers. */}
               <Button
                 text={'Use Code Studio Lesson Plans'}
                 size={Button.ButtonSize.narrow}
@@ -696,7 +698,7 @@ class UnitEditor extends React.Component {
                     this.setState({useLegacyLessonPlans: false});
                   }
                 }}
-                disabled={!this.state.useLegacyLessonPlans}
+                disabled
               />
               <HelpTip>
                 <p>
