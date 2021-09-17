@@ -1,13 +1,13 @@
 ---
-title: 私たちについて
+title: 弊所概要
 theme: responsive
 video_player: true
 ---
 
-# 私たちについて
+# 弊所概要
 
 <div class="col-60">
-  Code.org®は教育機関におけるコンピュータサイエンスを身近にし、女性やマイノリティが参加する機会を増やすことを目的とした非営利団体です。 私たちのヴィジョンは、全ての学校の全ての生徒がコンピュータサイエンスを学ぶ機会を持つことです。ちょうど生物学や化学、代数学を学ぶのと同じように。 We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.orgはアマゾン、フェイスブック、グーグル、インフォシス財団、マイクロソフトを含む、<a href="/about/donors">その他たくさん</a>の寛大な寄付者によって支えられています。
+  Code.org®は、教育機関でコンピューターサイエンスを学ぶ機会を広げ、女性やマイノリティの人々も参加できるように機会を増やすことを目的とした非営利団体です。 全ての学校の全ての生徒が、生物学、化学、代数学を学ぶのと同じようにコンピュータサーイエンスも学ぶ機会が得られることが、弊所のビジョンでもあります。 弊社は、小学校と中学校でコンピューターサイエンスを教えるために最も使用されているカリキュラムを提供し、例年行われる<a href="https://hourofcode.com"> Hour of Code </a>キャンペーンを企画しています。 このキャンペーンには全世界の10％の生徒が参加しています。 Code.orgはアマゾン、フェイスブック、グーグル、インフォシス財団、マイクロソフトを含む、<a href="/about/donors">その他たくさん</a>の寛大な寄付者によって支えられています。
 </div>
 
 [col-40]
@@ -24,31 +24,31 @@ video_player: true
 
 ## 歴史
 
-2013年、Code.orgはHadiとAli Partoviの2人の双子の兄弟による[コンピュータサイエンスの普及動画](https://www.youtube.com/watch?v=nKIu9yen5nc)として始まりました。 この動画は1日でYouTubeのナンバー1となり、15,000の学校が私たちに協力を求めてきました。 それ以来、私たちはこの世界的な動きをサポートする完全な組織を作るため、立ち上げ時のボランティアスタッフから拡大を続けてきています。 私たちは質の高いコンピュータサイエンス教育が、少数の恵まれた児童だけでなく、全ての児童に届けられるべきだと信じています。
+2013年、Code.orgは、HadiとAli Partoviの2人の双子の兄弟が、コンピューターサイエンスのプロモーション・ビデオ[を創設しました](https://www.youtube.com/watch?v=nKIu9yen5nc)。 この動画はYouTubeの１日アクセスが1位となり、15,000校もの学校が弊所にサポートを依頼してきました。 それ以来、弊所はこの世界的な動向をサポートする完璧な組織を築けるよう、創設時からのボランティア・スタッフからさらに人員拡大を続けてきています。 弊所は、この質の高いコンピュータサイエンス教育を、一握りの恵まれた子どもだけではなく、全ての子どもにも届けられると信じています。
 <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## 行うこと
+## 弊所の活動
 
-私たちは教育スペクトルを横断して、[独自コース](https://studio.code.org/courses)の設計や他者との協力、教師の訓練、大きな学区との協力、政策変更への助力、パートナーを通じた国際展開、そして固定観念を壊すマーケティングといった活動を行います。 私たちの活動は、コンピューターサイエンス教育を確立し、資金提供し、普及するのを手伝ってきた数えきれないほどの組織と個人による、数十年におよぶ努力に基づいています。 広範なコンピューターサイエンス教育コミュニティのたゆまない活動と、私たちのもたらす影響を何年にもわたり拡大してきてくれたパートナーと個人のみなさまに感謝します。
+弊所は教育スペクトラムを通じて：[独自コース](https://studio.code.org/courses)の考案や他者との共調、教師の研修、大規模な学区との協力、政府の政策の変更への助力、パートナーシップを通じて行う国際展開、そして固定観念を打破するマーケティングなどの活動を行っています。 弊所の活動は、コンピューターサイエンス教育を確立し、資金提供し、普及活動をサポートしてくださっている、数多くの組織と個人による数十年におよぶ努力に基づいています。 コンピューターサイエンス教育の広いコミュニティの不断の努力と、何年にもわたり弊所の活動を広めてくださったパートナーや個人のみなさまに大変感謝しております。
 
 ## Code.orgの国際的研究
 
-Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organisation for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization.
+弊所のウェブサイトのトラフィックの40％以上が米国以外からのトラフィックであり、その数は増え続けています。 コンピュータサイエンスの利用を世界規模で拡大できるよう、弊所のチームは、[ の100以上の国際的なパートナー](/about/partners)と緊密に連携し、Hour of Code(アワーオブコード) の推進、改革への支持、 教師の養成を支援しています。 弊所は、世界中の教育省と提携し、経済協力開発機構 (Organisation for Economic Co-operation and Development) や国際連合教育科学文化機関 (Unesco) などの国際機関と協力することにより、コンピューターサイエンスを国際的な教育言説の一環として位置付けています。
 
 <img alt="Code.org国際パートナー" src="/images/international/international_partners.jpg" width="100%" />
 
 ## 翻訳
 
-Want to have a direct impact on students in your country? Help us make Code.org content available in their native language! If you volunteer to help translate our tutorials and lessons, you'll be joining a community of more than 7,000 translators who help bring computer science education to students around the world. Take a look at our [translation guide](/translate) for more information.
+あなたの国の生徒に直接教えたいですか？ Code.orgのコンテンツを母国語で利用できるようにしてください！ 弊所のチュートリアルとレッスンの翻訳を手伝ってくれるボランティアをしてくだるなら、世界中の学生にコンピューターサイエンス教育をサポートしている7,000人を超える翻訳者コミュニティに参加できます。 詳細につきましては、[翻訳ガイド](/translate)をご覧ください。
 
-## 無料カリキュラムとオープンソース技術へのコミットメント
+## 弊所の無料カリキュラムとオープンソース技術への取組み
 
-All curriculum resources and tutorials we create will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+弊所が作成するすべてのカリキュラムリソース及びチュートリアルは、[Creative Commons（クリエイティブコモンズ）](http://creativecommons.org/licenses/by-nc-sa/4.0/)の許可を得て、オープンライセンスが付与されます。 商用目的で弊所のマテリアルのライセンシングにご関心のある場合は、[お問い合わせください](/contact)。 弊所のコースは世界中で使用できるように、さまざまな言語の話者が翻訳しています。 弊所のテクノロジーは、[オープンソースプロジェクト](https://github.com/code-dot-org/code-dot-org)として開発されています。
 
-<img alt="ラップトップを持つ生徒たち" src="/images/international/group_computer.jpg" width="100%" />
+<img alt="パソコンを持っている生徒たち" src="/images/international/group_computer.jpg" width="100%" />
 
-## フォローする
+## 弊所をフォローする
 
-[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+[登録して、K-12（幼稚園から高校までの）コンピュータサイエンスの動向やCode.orgの活動に関する最新情報を受け取る](/about/hear-from-us)。 または、 ソーシャルメディアで、Code.org をフォローする
 
 {{ social_media_codeorg }}
