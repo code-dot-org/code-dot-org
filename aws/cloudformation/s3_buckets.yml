@@ -51,7 +51,7 @@ Resources:
             Status: "Enabled"
       LoggingConfiguration:
         DestinationBucketName: "cdo-logs"
-        LogFilePrefix: "s3/cdo-v3-sources"
+        LogFilePrefix: "s3/cdo-v3-sources/"
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
         BlockPublicPolicy: true
