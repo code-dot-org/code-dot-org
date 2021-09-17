@@ -928,6 +928,13 @@ mr:
             '"v"': v
             '"w"': w
             '"z"': z
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': उजवा
+            '90': खाली
+            '180': डावा
+            '270': वर
       gamelab_mirrorSprite:
         options:
           DIRECTION:
