@@ -21,7 +21,8 @@ class AnimationPickerListItem extends React.Component {
   };
 
   state = {
-    loaded: false
+    loaded: false,
+    hover: false
   };
 
   render() {
@@ -33,13 +34,14 @@ class AnimationPickerListItem extends React.Component {
       playAnimations,
       label
     } = this.props;
+    const {loaded, hover} = this.state;
     const rootStyle = [styles.root, !label && styles.noLabel];
 
     const thumbnailStyle = [
       styles.thumbnail,
       icon && styles.thumbnailIcon,
       animationProps && {
-        display: this.state.loaded ? 'block' : 'none'
+        display: loaded ? 'block' : 'none'
       }
     ];
 
@@ -47,7 +49,7 @@ class AnimationPickerListItem extends React.Component {
       styles.label,
       icon && styles.labelIcon,
       animationProps && {
-        display: this.state.loaded ? 'block' : 'none'
+        display: loaded ? 'block' : 'none'
       }
     ];
     const iconImageSrc = category
@@ -60,13 +62,27 @@ class AnimationPickerListItem extends React.Component {
     };
 
     const hoverIcon = [styles.hoverIcon, centerStyle];
+
+    const hoverBorder = {
+      borderStyle: 'solid',
+      borderRadius: 12,
+      cursor: 'pointer',
+      borderColor: color.purple,
+      borderWidth: '3px',
+      padding: 0
+    };
+
+    const thumbnailStyleWithHover = [thumbnailStyle, hover && hoverBorder];
+
     return (
       <div
         style={rootStyle}
         onClick={onClick}
         className="uitest-animation-picker-item"
+        onMouseEnter={() => this.setState({hover: true})}
+        onMouseLeave={() => this.setState({hover: false})}
       >
-        <div style={thumbnailStyle}>
+        <div style={thumbnailStyleWithHover}>
           {animationProps && (
             <AnimationPreview
               animationProps={animationProps}
@@ -87,7 +103,9 @@ class AnimationPickerListItem extends React.Component {
           )}
         </div>
         {label && <div style={labelStyle}>{label}</div>}
-        {animationProps && <i className="fa fa-plus fa-3x" style={hoverIcon} />}
+        {animationProps && loaded && hover && (
+          <i className="fa fa-plus fa-3x" style={hoverIcon} />
+        )}
       </div>
     );
   }
@@ -109,12 +127,7 @@ const styles = {
     borderWidth: THUMBNAIL_BORDER_WIDTH,
     borderRadius: 12,
     padding: '2px',
-    cursor: 'pointer',
-    ':hover': {
-      borderColor: color.purple,
-      borderWidth: '3px',
-      padding: 0
-    }
+    cursor: 'pointer'
   },
   thumbnailIcon: {
     color: color.white,
