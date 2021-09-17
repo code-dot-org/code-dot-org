@@ -183,6 +183,13 @@ ne:
             '"right"': दाँया
             '"space"': space
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': दाँया
+            '90': तल
+            '180': बाँया
+            '270': माथि
       gamelab_mirrorSprite:
         options:
           DIRECTION:
