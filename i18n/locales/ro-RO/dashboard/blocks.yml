@@ -1120,6 +1120,13 @@ ro:
             '"rain"': ploaie
       gamelab_makeNewSpriteAnon:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': dreapta
+            '90': jos
+            '180': stânga
+            '270': sus
       gamelab_mirrorSprite:
         text: "{SPRITE} îndreptat {DIRECTION}"
         options:
