@@ -258,7 +258,7 @@ module LessonImportHelper
         position += 1
         lesson_activity.save!
         lesson_activity.reload
-        lesson_activity.activity_sections = create_activity_sections(a['content'], lesson_activity.id, levels)
+        lesson_activity.activity_sections = create_activity_sections(a['content'].strip_utf8mb4, lesson_activity.id, levels)
         lesson_activity
       end
     end.compact
