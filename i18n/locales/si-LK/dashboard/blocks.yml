@@ -230,6 +230,13 @@ si:
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': දකුණ
+            '90': යට
+            '180': වම
+            '270': උඩ
       gamelab_mirrorSprite:
         options:
           DIRECTION:
