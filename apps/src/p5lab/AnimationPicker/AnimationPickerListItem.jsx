@@ -58,8 +58,8 @@ class AnimationPickerListItem extends React.Component {
       : '';
 
     const centerStyle = {
-      top: THUMBNAIL_SIZE / 2 - 18,
-      left: THUMBNAIL_SIZE / 2 - 18
+      top: THUMBNAIL_SIZE / 2 - 11,
+      left: THUMBNAIL_SIZE / 2 - 11
     };
 
     const hoverIcon = [styles.hoverIcon, centerStyle];
@@ -107,7 +107,7 @@ class AnimationPickerListItem extends React.Component {
         </div>
         {label && <div style={labelStyle}>{label}</div>}
         {animationProps && loaded && hover && displayMultiSelect && (
-          <i className="fa fa-plus fa-3x" style={hoverIcon} />
+          <i className="fa fa-plus fa-2x" style={hoverIcon} />
         )}
       </div>
     );
@@ -167,8 +167,9 @@ const styles = {
     borderWidth: '2px',
     top: 0,
     left: 0,
-    height: 36,
-    width: 36
+    height: 22,
+    width: 22,
+    borderRadius: 5
   }
 };
 
