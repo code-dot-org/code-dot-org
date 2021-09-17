@@ -857,6 +857,13 @@ et:
         options:
           EFFECT:
             '"rain"': vihm
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': paremale
+            '90': alla
+            '180': vasakule
+            '270': üles
       gamelab_mirrorSprite:
         options:
           DIRECTION:
