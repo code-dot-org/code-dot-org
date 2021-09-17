@@ -1,5 +1,6 @@
 import * as utils from './utils';
 import {PALETTES} from '../constants';
+import {APP_WIDTH, APP_HEIGHT} from '../../../constants';
 
 export const commands = {
   setBackground(color) {
@@ -10,13 +11,10 @@ export const commands = {
   },
 
   setBackgroundImageAs(imageName) {
-    if (
-      this.p5._predefinedSpriteAnimations &&
-      this.p5._predefinedSpriteAnimations[imageName]
-    ) {
-      let backgroundImage = this.p5._predefinedSpriteAnimations[imageName];
+    const backgroundImage = this.p5._predefinedSpriteAnimations?.[imageName];
+    if (backgroundImage) {
       backgroundImage.name = imageName;
-      backgroundImage.resize(400, 400);
+      backgroundImage.resize(APP_WIDTH, APP_HEIGHT);
       this.backgroundEffect = () => {
         this.p5.image(backgroundImage);
       };
