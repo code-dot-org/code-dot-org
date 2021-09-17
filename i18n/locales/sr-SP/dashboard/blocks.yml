@@ -474,6 +474,13 @@ sr:
         options:
           EFFECT:
             '"rain"': киша
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': десно
+            '90': доле
+            '180': лево
+            '270': горе
       gamelab_mirrorSprite:
         options:
           DIRECTION:
