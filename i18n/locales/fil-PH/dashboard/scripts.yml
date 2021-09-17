@@ -12151,3 +12151,7 @@ fil:
               name: Mga Pagbabago sa Pag-Compute
             lesson-13:
               name: Accelerometer
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Mga Widget

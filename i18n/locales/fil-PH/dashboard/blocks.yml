@@ -1105,6 +1105,13 @@ fil:
             '"rain"': ulan
       gamelab_makeNewSpriteAnon:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': kanan
+            '90': baba
+            '180': kaliwa
+            '270': paitaas
       gamelab_mirrorSprite:
         text: "{SPRITE} mukha {DIRECTION}"
         options:
