@@ -64,8 +64,8 @@ def parse_options
         $quiet = true
       end
 
-      opts.on('-u', '--unit_name unit-name', 'Unit name to import. The unit must have only one lesson.') do |unit_name|
-        options.unit_name = unit_name
+      opts.on('-u', '--unit_name unit-name-1,unit-name-2', Array, 'Unit name to import. The unit must have only one lesson.') do |unit_names|
+        options.unit_names = unit_names
       end
 
       opts.on('-v', '--verbose', 'Use verbose debug logging.') do
@@ -83,38 +83,40 @@ def parse_options
 end
 
 def main(options)
-  unit = Script.find_by_name!(options.unit_name)
-  if unit.lessons.count != 1
-    raise "hoc unit #{unit.name.dump} must have only one lesson, but found: #{unit.lessons.map(&:name)}"
+  options.unit_names.each do |unit_name|
+    unit = Script.find_by_name!(unit_name)
+    if unit.lessons.count != 1
+      raise "hoc unit #{unit.name.dump} must have only one lesson, but found: #{unit.lessons.map(&:name)}"
+    end
+    log "found code studio unit named #{unit.name.dump} with id #{unit.id}"
+    lesson = unit.lessons.first
+
+    cb_url_prefix = options.local ? 'http://localhost:8000' : 'http://www.codecurricula.com'
+
+    # If a path is not found, curriculum builder returns a 302 redirect the same
+    # path with the /en-us prefix, which then returns 404. to make error
+    # handling a bit easier, just include the /en-us prefix so that we get a 404
+    # on the first try if the path cannot be found.
+    url = "#{cb_url_prefix}/en-us#{options.lesson_path}.json?format=json"
+
+    cb_lesson_json = fetch(url)
+    cb_lesson = JSON.parse(cb_lesson_json)
+
+    LessonImportHelper.update_lesson(lesson, options.models, cb_lesson)
+    log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson.to_json[0, 50]}...")
+
+    unit.update!(
+      is_migrated: true,
+      use_legacy_lesson_plans: true,
+      skip_translating_lesson_plans: true
+    )
+
+    unit.fix_script_level_positions
+    unit.write_script_dsl
+    unit.write_script_json
+
+    puts "successfully updated unit #{unit.name}"
   end
-  log "found code studio unit named #{unit.name.dump} with id #{unit.id}"
-  lesson = unit.lessons.first
-
-  cb_url_prefix = options.local ? 'http://localhost:8000' : 'http://www.codecurricula.com'
-
-  # If a path is not found, curriculum builder returns a 302 redirect the same
-  # path with the /en-us prefix, which then returns 404. to make error
-  # handling a bit easier, just include the /en-us prefix so that we get a 404
-  # on the first try if the path cannot be found.
-  url = "#{cb_url_prefix}/en-us#{options.lesson_path}.json?format=json"
-
-  cb_lesson_json = fetch(url)
-  cb_lesson = JSON.parse(cb_lesson_json)
-
-  LessonImportHelper.update_lesson(lesson, options.models, cb_lesson)
-  log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson.to_json[0, 50]}...")
-
-  unit.update!(
-    is_migrated: true,
-    use_legacy_lesson_plans: true,
-    skip_translating_lesson_plans: true
-  )
-
-  unit.fix_script_level_positions
-  unit.write_script_dsl
-  unit.write_script_json
-
-  puts "successfully updated unit #{unit.name}"
 end
 
 def fetch(url)
@@ -127,7 +129,7 @@ def fetch(url)
 end
 
 options = parse_options
-raise "unit_name is required. Use -h for options." unless options.unit_name.present?
+raise "unit_names is required. Use -h for options." unless options.unit_names.present?
 raise "lesson_path is required. Use -h for options." unless options.lesson_path.present?
 options.models ||= %w(Lesson Activity Resource Objective Vocabulary ProgrammingExpression Standard)
 
