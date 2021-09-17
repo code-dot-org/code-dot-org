@@ -1139,7 +1139,6 @@ ro:
   tutorial_ticklep_name: Papagal minune
   tutorial_bbot_name: Distracție cu Bomberbot şi activități ușoare de codificare
   tutorial_scratchg_name: Jocuri de programare în Scratch
-  tutorial_roboticfriends_name: Prietenii mei robotici
   tutorial_sjforest_name: 'ScratchJr: Pot să fac o pădure înfricoșătoare?'
   tutorial_sjgreet_name: 'ScratchJr: Pot face personajele mele să se salute reciproc?'
   tutorial_sjsunset_name: 'ScratchJr: Pot face soarele să apună?'
@@ -1185,7 +1184,6 @@ ro:
   tutorial_tickles_name: Sphero Run
   tutorial_ozogame_name: Creați un nivel la jocul Ozobot
   tutorial_vidcodeio_name: Intrare și Ieșire, Activitate Matematică
-  tutorial_besttech_name: 'Activitatea: cea mai bună tehnologie'
   tutorial_tlcbrain_name: Activitatea Brain-in-bag
   tutorial_hopquiz_name: Creator de chestionare
   tutorial_unfortunate_name: O serie de evenimente nefericite
@@ -1194,7 +1192,6 @@ ro:
     de bază'
   tutorial_bbcmathi_name: Codificare Bitsbox + matematică (3-5)
   tutorial_tlcpixel_name: Puzzle-uri de pixeli
-  tutorial_arduino_name: Activitatea Arduino
   tutorial_introrobo_name: Introducere în robotică
   tutorial_tlcinvis_name: Activitatea Invizibilă De Palmuire
   tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines'
@@ -1214,7 +1211,6 @@ ro:
   tutorial_tlcmind_name: The Red Black Mind Meld Activity
   tutorial_tlctelebot_name: The Teleporting Robot Activity
   tutorial_tlcaus_name: 'Activitatea: visul magicianului australian'
-  tutorial_oralhist_name: Proiectul de istorie orală
   tutorial_tlcmicro_name: Microwave Racing Video Activity
   tutorial_imathematician_name: iMatematician
   tutorial_tlcmagic_name: Magia Cartii Magice
@@ -1228,7 +1224,6 @@ ro:
   tutorial_tynkercan_name: Physics Cannon 2-Player Game Kit
   tutorial_grokflags_name: Steagurile lumii (Python Turtle)
   tutorial_robomind_name: Programați un robot virtual cu RoboMind
-  tutorial_scratchanimwork_name: 'Animați-vă numele: Ghidul educatorului'
   tutorial_adventureq_name: Aventura cu Q
   tutorial_khan-es_name: Introducere în JavaScript
   tutorial_kpt_name: Introducere în JavaScript
@@ -1236,13 +1231,11 @@ ro:
   tutorial_khe_name: Introducere în JavaScript
   tutorial_kfr_name: Introducere în JavaScript
   tutorial_app-inventor_name: AppInventor Hour of Code
-  tutorial_bits_name: Bits and bricks
   tutorial_blockly_name: Blockly Games Offline
   tutorial_tynker_name: Construiți jocul dvs. propriu
   tutorial_baypt_name: Cod Baymax
   tutorial_code-combat_name: CodeCombat
   tutorial_mky_name: MaimuțicaCode
-  tutorial_spellcraft_name: 'CodeSpells: Spellcraft'
   tutorial_pirates_name: Coding Pirates
   tutorial_csfirst_name: CS First
   tutorial_loopedy_name: Dance the Loopedy-Loop
@@ -1299,7 +1292,6 @@ ro:
   tutorial_soloweb_name: Prima ta pagină de web într-o oră!
   tutorial_khanweb_name: 'Khan Academy: pagini de web'
   tutorial_khandata_name: 'Khan Academy: baze de date'
-  tutorial_robomeshiq_name: Program Vex IQ Roboti cu Blocuri
   tutorial_googlelogo_name: Create your own Google logo
   tutorial_playtune_name: Play That Tune App
   tutorial_computeit_name: Compute It
@@ -1358,7 +1350,6 @@ ro:
   tutorial_stemcod_name: The Physics of Video Games!
   tutorial_techikb_name: Interactive Kotlin Basics
   tutorial_kanostreet_name: Street Artist
-  tutorial_nyblebot_name: Boogie Bot
   tutorial_codemojijs_name: Beginning JavaScript
   tutorial_techapf_name: Advanced Python Features
   tutorial_techfpjs_name: Practical Introduction to Functional Programming with JS
@@ -1374,7 +1365,6 @@ ro:
   tutorial_gpbcircle_name: Make an Interactive Color Circle
   tutorial_gpbpaint_name: Make Your Own Paint Editor
   tutorial_cocomarcade_name: 'CodeCombat: construi un joc arcade!'
-  tutorial_techcpp_name: 7 Features of C++17 that will simplify your code
   tutorial_beetik_name: Code the Music of Franz Liszt
   tutorial_codedj_name: Compose Music with Code DJ
   tutorial_rgadvan_name: RoboGarden Coding - Advanced
@@ -1447,7 +1437,6 @@ ro:
   tutorial_ifly_name: iFly
   tutorial_idowedo_name: iDo WeDo
   tutorial_diggindwarf_name: Diggin' Dwarf
-  tutorial_rmedr_name: Program a simulated VEX EDR V5 robot using Google Blockly
   tutorial_spheroit_name: 'Blocks 2: If/Then Else'
   tutorial_gameofcodes_name: Game Of Codes
   tutorial_blocklygames_name: Blockly Games
@@ -1458,7 +1447,6 @@ ro:
   tutorial_bcjs1_name: World of JavaScript
   tutorial_bcjs2_name: World of JavaScript 2
   tutorial_3dbearmars_name: The Mars Pioneers
-  tutorial_alexaskill_name: 'Alexa Blueprints: Create an Alexa Skill'
   tutorial_bitsboxyak_name: Yak Attack! Make a Card with Typed Code
   tutorial_blockscadbargraphs_name: Bar Graphs
   tutorial_blockscadbirdhouses_name: Birdhouses
@@ -1515,7 +1503,6 @@ ro:
   tutorial_codinismhero_name: Programming Hero
   tutorial_discovery_name: An Unusual Discovery
   tutorial_csfirstname_name: Animate a Name
-  tutorial_obstaclecourse_name: Navigating an Obstacle Course with CodeSnaps
   tutorial_edisonmove_name: 'Edison and EdPy: Get Edison moving'
   tutorial_edisonspider_name: Edison and the spiralling spider trap
   tutorial_edisonspotlight_name: Perform in the spotlight with Edison
@@ -1940,8 +1927,6 @@ ro:
   tutorial_bbot_shortdescription: Teach your students (ages 7 and up) programming
     in a fun and easy way. No prior programming knowledge or experience needed!
   tutorial_scratchg_shortdescription: Learn how to program games in Scratch
-  tutorial_roboticfriends_shortdescription: Unplugged tutorial for a group with no
-    devices
   tutorial_sjforest_shortdescription: Use the ScratchJr programming app to make a
     program in which different animals move in a dark forest setting.
   tutorial_sjgreet_shortdescription: Use the ScratchJr programming app to make a program
@@ -2025,8 +2010,6 @@ ro:
     Ozobot și creând propriul lor nivel de joc cu robotul programabil Ozobot.
   tutorial_vidcodeio_shortdescription: Conectați funcțiile JavaScript la problemele
     de matematică și la cele lumii reale.
-  tutorial_besttech_shortdescription: Studenții vor învăța despre și vor discuta importante
-    invenții tehnologice de-a lungul ultimelor decenii.
   tutorial_tlcbrain_shortdescription: Explorați cum funcționează creierul uman, creând
     un model computațional de neuroni din studenții care joacă Snap.
   tutorial_hopquiz_shortdescription: Codați un test cu alegeri multiple pentru a testa
@@ -2042,8 +2025,6 @@ ro:
   tutorial_tlcpixel_shortdescription: 'Rezolvați puzzle-uri simple de culoare după
     număr, de gândire logică și obține o înțelegere mai profundă a reprezentării imaginii
     și a comprimării. '
-  tutorial_arduino_shortdescription: Învățați cum să faceți un circuit de bază și
-    o clipire de lumină.
   tutorial_introrobo_shortdescription: Studenții vor cunoaște Dash și Dot în timp
     ce vor fi introduşi la ideile de Robotică și Programare.
   tutorial_tlcinvis_shortdescription: Faceți un truc în care mutați într-o manieră
@@ -2082,9 +2063,6 @@ ro:
     dar apoi puneți-l împreună din nou și acum are doar 16.
   tutorial_tlcaus_shortdescription: Faceți un truc magic în care preziceți un card
     ales, introducând ambele algoritmi de căutare și gândire computațională.
-  tutorial_oralhist_shortdescription: Proiectul de Istorie Orală a Profesorilor de
-    Computare este o colecție de interviuri, precum și materiale și instrumente didactice
-    legate de colecția CEOHP.
   tutorial_tlcmicro_shortdescription: Oamenii concurează diferite modele de microunde
     pentru a vedea care este cel mai ușor de folosit pentru a face o sarcină simplă.
     Unele sunt considerate a fi mult mai complicate decât altele.
@@ -2112,8 +2090,6 @@ ro:
   tutorial_grokflags_shortdescription: Use the programming language Python and instruct
     a turtle to draw flags from around the world! How many countries do you know?
   tutorial_robomind_shortdescription: Write code for a virtual robot.
-  tutorial_scratchanimwork_shortdescription: A workshop guide for introducing students
-    to Scratch.
   tutorial_adventureq_shortdescription: Use programming blocks (physical or in game)
     to learn programming logics.
   tutorial_khan-es_shortdescription: Learn to draw in JavaScript
@@ -2122,7 +2098,6 @@ ro:
   tutorial_khe_shortdescription: Learn to draw in JavaScript
   tutorial_kfr_shortdescription: Learn to draw in JavaScript
   tutorial_app-inventor_shortdescription: Make your own app. (Android-only)
-  tutorial_bits_shortdescription: Move Bit by bit!
   tutorial_blockly_shortdescription: Download a ZIP file to learn offline.
   tutorial_tynker_shortdescription: Learn to code by solving fun puzzles and build
     your own games.
@@ -2130,8 +2105,6 @@ ro:
   tutorial_code-combat_shortdescription: Defeat ogres to learn Python or JavaScript
     in this epic programming game!
   tutorial_mky_shortdescription: Students program a monkey to catch bananas.
-  tutorial_spellcraft_shortdescription: Learn about Event-Driven programming using
-    the power of CodeSpells!
   tutorial_pirates_shortdescription: Navigate the crystal waters of the southern hemisphere,
     code your treasure maps and discover the riches that lie on the golden shores.
     A fun way to learn the basic concepts of coding.
@@ -2230,8 +2203,6 @@ ro:
     HTML și CSS, finalizând-o făcând cardul dvs proprie de felicitare.
   tutorial_khandata_shortdescription: Vă place să jucați cu datele? Învățați cum să
     manipulați datele într-o bază de date și să creați propriul vostru magazin personalizat
-  tutorial_robomeshiq_shortdescription: Studenții scriu codul Google Blockly pentru
-    a controla roboții VEX IQ populari.
   tutorial_googlelogo_shortdescription: Aduceți sigla Google-ului la viața folosind
     imaginația dvs și un pic de cod.
   tutorial_playtune_shortdescription: Utilizați abilitățile de codificare pentru a
@@ -2349,8 +2320,6 @@ ro:
   tutorial_techikb_shortdescription: Basics Kotlin features in a nutshell
   tutorial_kanostreet_shortdescription: Make beautiful, unique artwork with Kano's
     Street Art coding challenges
-  tutorial_nyblebot_shortdescription: Coding is Magic - helping kids create amazing
-    things with code.
   tutorial_codemojijs_shortdescription: Codemoji designed Beginning Javascript to
     get students typing real javascript commands that will in turn animate the different
     characters.
@@ -2377,7 +2346,6 @@ ro:
   tutorial_gpbpaint_shortdescription: Create and customize a drawing application.
   tutorial_cocomarcade_shortdescription: Build your own arcade survival game and challenge
     your friends!
-  tutorial_techcpp_shortdescription: 7 features to help simplify your C++17 code
   tutorial_beetik_shortdescription: Use code to hack the music of composer Franz Liszt.
   tutorial_codedj_shortdescription: Learn Javascript basics and start composing your
     own beats with Code DJ
@@ -2527,8 +2495,6 @@ ro:
     apoi programați-l pentru a transporta mini figure.
   tutorial_diggindwarf_shortdescription: Piticii au nevoie de ajutorul dvs. pentru
     a naviga, sapaţi, și colectaţi pietrele folosind JavaScript.
-  tutorial_rmedr_shortdescription: Programați un robot VEX EDR pentru a naviga într-un
-    labirint folosind programarea Blockly.
   tutorial_spheroit_shortdescription: Learn about if/then, else conditions while building
     your very own animal sound game we like to call "Animal Toss!"
   tutorial_gameofcodes_shortdescription: Build your awesome Dragon game and export
@@ -2547,9 +2513,6 @@ ro:
     module that teaches facts about Mars and the crucial conditions for human beings
     to survive there. The students will build a colony using Augmented Reality and
     3D-print the colony facilities.
-  tutorial_alexaskill_shortdescription: 'Create your own Alexa Skills using Alexa
-    Skill Blueprints - learn about using voice, artificial intelligence, and machine
-    learning to create an Alexa Skill of your choosing. '
   tutorial_bitsboxyak_shortdescription: Type modified JavaScript code to make a greeting
     card that you can email to friends and family. Yak Attack! is a completely open-ended
     activity that introduces variables, motion commands, loop functions, and more.
@@ -2709,8 +2672,6 @@ ro:
   tutorial_csfirstname_shortdescription: Pick a name and bring the letters of the
     word to life using code. Choose a nickname, a pet's name, an animal, a sport,
     a place or a hobby.
-  tutorial_obstaclecourse_shortdescription: Collaborate with your team to code a program
-    that successfully navigates a robot through an obstacle course.
   tutorial_edisonmove_shortdescription: Introduce text-based programming and the key
     computational concept of sequence to your students using Edison robots and EdPy,
     a text-based programming language based on Python.
@@ -2913,7 +2874,7 @@ ro:
     as you battle in a wild 4-player arena that is shrinking amidst lava!
   tutorial_landscape_shortdescription: Use Python's pen drawing feature to compose
     a landscape using code. Use the landscape items already created for you or design
-    our own structures. Publish and share your creations!
+    your own structures. Publish and share your creations!
   tutorial_pets_shortdescription: Create a fun game about pets – either real or imaginary!
     Beginners can use the self-guided tutorial while more advanced coders have the
     option to start off with a blank project.
@@ -3123,7 +3084,7 @@ ro:
     you along the way. You will use code and think outside the box to win as many
     stars as possible. Good luck!
   tutorial_processfound_longdescription: What does it mean to write software to do
-    the things that you often do with your hands, with paper, with pencil with paint?
+    the things that you often do with your hands, with paper, with pencil, with paint?
     Could you use a computer to create drawings? To create animations? To create images?
   tutorial_tynkerhomo_longdescription: You'll follow step-by-step instructions to
     animate an interactive story with a lot of homophones in it! Each time a character
@@ -3497,12 +3458,6 @@ ro:
     Scratch programming language and then shows them how to program different styles
     of games. All the necessary art for the games are provided, and students have
     to work out how to connect everything together to make a functioning game.
-  tutorial_roboticfriends_longdescription: Using a pre-defined "Robot Vocabulary"
-    students will figure out how to guide each other to accomplish specific tasks
-    without discussing them first. This lesson teaches children the connection between
-    symbols and actions, as well as the invaluable skill of debugging. "My Robotic
-    Friends" works best as a group activity and includes a teacher workbook for classroom
-    use.
   tutorial_sjforest_longdescription: '"Can I Make a Spooky Forest?" is an intermediate
     activity meant for children in kindergarten through second grade who have some
     prior experience with programming to learn about and master more advanced features
@@ -3716,8 +3671,6 @@ ro:
   tutorial_vidcodeio_longdescription: In this exercise, you'll walk through with your
     students how this relates to what they already know about math by solving a math
     equation with programming.
-  tutorial_besttech_longdescription: Studenții vor învăța despre și vor discuta importante
-    invenții tehnologice de-a lungul ultimelor decenii.
   tutorial_tlcbrain_longdescription: This activity explores how computational modelling
     (a key part of computational thinking) can be used to help understand biological
     systems – here neurones. We see how the way our brains work has also been the
@@ -3746,12 +3699,6 @@ ro:
     mai complexe bazate pe compresie unde imaginile sunt reprezentate de mai puține
     numere, astfel ia mai puțin loc - dar poți să le recuperezi! Fiecare reprezentare
     are nevoie de algoritmul propriu de urmărit pentru a lua înapoi imaginea.
-  tutorial_arduino_longdescription: V-ați întrebat vreodată cum jucăriile produc zgomote
-    și clipiri de lumini când apăsați pe butoane? Microcontrolorii și circuitele sunt
-    utilizate în toate felurile de obiecte de zi cu zi. De la mașini cu telecomandă
-    la roboți și droni. Luminile de stradă folosesc senzori pentru a determina când
-    soarele apune, butonul de volum al unei mașini stereo aranjează rezistența printr-un
-    microcontrolor. Ei sunt peste tot!
   tutorial_introrobo_longdescription: 'În lecția asta, studenții se vor cunoaște cu
     Dash și Dot în timp ce sunt introduși la ideile de Robotică și Programare. Studenții
     vor câştiga o înțelegere despre ce este un robot, cum simt lumea din jurul lor,
@@ -3840,9 +3787,6 @@ ro:
     reasoning and computational modelling can be used to check the algorithm works.
     Combined with the 'Punch card searching' activity it introduces a divide and conquer
     algorithm used by early computers.
-  tutorial_oralhist_longdescription: Proiectul de Istorie Orală a Profesorilor de
-    Computare este o colecție de interviuri, precum și materiale și instrumente didactice
-    legate de colecția CEOHP.
   tutorial_tlcmicro_longdescription: This video can be used as a general introduction
     to human computer interaction (HCI) and in particular why so many gadgets areharder
     to use than need be. Design does make a difference and it is important that interfaces
@@ -3899,10 +3843,6 @@ ro:
     controlling their own virtual robot. The online course is fully self-contained
     with short presentations, movies, quizzes and automatic guidance/hints to help
     with the programming exercises. '
-  tutorial_scratchanimwork_longdescription: 'This guide offers ideas for leading a
-    one-hour workshop using Scratch. Students will gain experience with coding as
-    they animate their names or a favorite word. This educator guide is designed for
-    use with this Scratch tutorial: scratch.mit.edu/name'
   tutorial_adventureq_longdescription: 'Adventure with Q is a lesson plan for teachers
     (or anyone) to use to introduce programming logic in a group setting. The activity
     consists of different quests for kids to complete. Kids learn the basic commands
@@ -3923,11 +3863,6 @@ ro:
     your own apps before you know it. Imagine sharing your own app creations with
     your friends! These activities are suitable for individuals and for teachers leading
     classes.
-  tutorial_bits_longdescription: Bit is a little, very adventurous LEGO® robot, but
-    as with all small creatures, sometimes Bit cannot get its programs right. You
-    can help Bit solve the challenges by figuring out which programs are needed. You
-    do this by creating a sequence of small behavior blocks that tells Bit what to
-    do.
   tutorial_blockly_longdescription: Got computers with slow (or non-existent) Internet
     access? Download the offline version of Blockly Games - a single 3MB ZIP file
     can be loaded onto any computer or used off a memory stick.
@@ -3944,11 +3879,6 @@ ro:
     with or without any coding experience. CodeMonkey's adaptive platform will give
     you all the instructions and hints you need, and will reward you star scores.
     Write code. Catch Bananas. Save the world.
-  tutorial_spellcraft_longdescription: Learn about Event-Driven programming using
-    the power of spells! With CodeSpells, you can design and create your very own
-    wizarding spells using Google's easy-to-use Blockly coding interface or a built-in
-    JavaScript text editor. Through spell creation, students will learn how to write
-    code based around events and become familiar with Event-Driven coding concepts.
   tutorial_pirates_longdescription: 'Captain Hack is a pirate looking for treasure.
     He also writes treasure maps, and writing those like writing code. He (the player)
     uses "pirate code" for this. It is a symbol-based programming language, used for
@@ -4154,12 +4084,6 @@ ro:
     card.'
   tutorial_khandata_longdescription: 'Khan Academy: Databases teaches you to manipulate
     data in a database and make your own custom store.'
-  tutorial_robomeshiq_longdescription: Studenții scriu codul Google Blockly pentru
-    a controla roboții VEX IQ populari. Ei pot alege să scrie coduri pentru fie un
-    robot virtual, sau pentru un robot VEX IQ real pe care l-au construit înșiși,
-    și ambele opțiuni sunt valabile în aceeași interfață de dezvoltare bazată pe web.
-    Elevii învață despre mișcarea de bază a robotului, și cum să utilizeze un senzor
-    și un dispozitiv de ieșire. Este ușor și distractiv.
   tutorial_googlelogo_longdescription: Use your creativity and imagination to bring
     the Google logo to life using code. Make the letters dance, tell a story or create
     a game. With Scratch and CS First, anyone can become a designer and programmer
@@ -4416,16 +4340,6 @@ ro:
     computer science principles while using a real programming language in an intuitive
     and engaging way. With our teacher resources and guided content, everyone can
     get in on the fun.
-  tutorial_nyblebot_longdescription: Boogie Bot is a fun and engaging coding app.
-    Bursting with life and energy, this 3D app will introduce kids to the basics of
-    computer programming using Google's visual programming language Blockly. Boogie
-    Bot is a dancing robot, who can be programmed to do dance moves. App Features
-    (all features available in full version) learn to code with coding blocks, create
-    your own dance with code, choose from several different unique dance tracks, transform
-    the room to a trendy party zone, add stunning special effects on stage, earn coins
-    as you learn programming constructs, decorate the room with cool stuff, play and
-    explore in an interactive room full of hidden features, record and save a video
-    of your awesome creation.
   tutorial_codemojijs_longdescription: Beginning JavaScript is designed to get students
     typing simple commands that have a big impact on the characters' actions. The
     students will type commands that make the characters do everything from backflips
@@ -4481,9 +4395,6 @@ ro:
     Perie pe concepte avansate de codare, cum ar fi funcțiile și evenimente folosind
     Python sau JavaScript, apoi utilizați aceste abilități pentru a construi propriul
     joc arcade de supraviețuire!
-  tutorial_techcpp_longdescription: Every C++ programmer aims for simpler, cleaner
-    and more expressive ways to code. This handy tutorial picked 7 cool C++17 features
-    that will make your code nicer.
   tutorial_beetik_longdescription: In this activity, students reconstruct a small
     part of a famous piece by composer Franz Liszt. Students will learn how to embed
     loops and how they're used in both computer science and music. This is a step-by-step
@@ -4843,10 +4754,6 @@ ro:
   tutorial_diggindwarf_longdescription: Dwarfs need your help to navigate, dig, and
     collect gems!  Learn how to use JavaScript to guide your dwarf through mazes and
     puzzles.
-  tutorial_rmedr_longdescription: Using Blockly in Robot Mesh Studio, program a VEX
-    EDR robot "mimic" online and watch it run through a maze. Students learn about
-    basic robot movement, and how to incorporate three sensors and one output into
-    their programming.
   tutorial_spheroit_longdescription: Learn your first "if/then, else" condition by
     building a fun game where you will be throwing Sphero and guessing animal sounds.
     This is a great activity after you complete Blocks 1, and can be used for the
@@ -4908,11 +4815,6 @@ ro:
     module that teaches facts about Mars and the crucial conditions for human beings
     to survive there. The students will build a colony using Augmented Reality and
     3D-print the colony facilities.
-  tutorial_alexaskill_longdescription: Create your own Alexa Skills using Alexa Skill
-    Blueprints - learn about using voice, artificial intelligence, and machine learning
-    to create an Alexa Skill of your choosing. Alexa can tell a joke, sing a song,
-    or share a story. (Amazon login required) Activity can be completed by individuals
-    or teacher lead.
   tutorial_bitsboxyak_longdescription: Type modified JavaScript code to make a greeting
     card that you can email to friends and family. Yak Attack! is a completely open-ended
     activity that introduces variables, motion commands, loop functions, and more.
@@ -5124,7 +5026,7 @@ ro:
     design! '
   tutorial_codewards_longdescription: Join an exciting mission to save the underwater
     city. Experience the work of a rescue engineer fixing damaged city systems with
-    commands and algorithms. Overcome various challenges to proveyour skills, intelligence
+    commands and algorithms. Overcome various challenges to prove your skills, intelligence
     and courage!
   tutorial_olympics_longdescription: 'Together with Elsie get prepared for Robot Olympics!
     Along with programming concepts learn how to drive, collect details and create
@@ -5137,8 +5039,6 @@ ro:
   tutorial_csfirstname_longdescription: Pick a name and bring the letters of the word
     to life using code. Choose a nickname, a pet's name, an animal, a sport, a place
     or a hobby.
-  tutorial_obstaclecourse_longdescription: Collaborate with your team to code a program
-    that successfully navigates a robot through an obstacle course.
   tutorial_edisonmove_longdescription: Introduce text-based programming and the key
     computational concept of sequence to your students using Edison robots and EdPy,
     a text-based programming language based on Python. Explore computer science and
@@ -5606,7 +5506,7 @@ ro:
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
     own augmented reality virtual space.
   tutorial_itchball_longdescription: Get a ball to bounce around the screen. Learn
-    about loops and conditionals within loops
+    about loops and conditionals within loops.
   tutorial_ttrace_longdescription: By calling functions and designing classes, players
     program their own race car to be fast, nimble, and powerful; during races, they
     can then hack their competitors' vehicles to scramble their controls.
@@ -5619,7 +5519,7 @@ ro:
   tutorial_itchshapes_longdescription: Learn how to draw shapes in Scratch. You will
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
-    creating your first program in an online coding editor
+    creating your first program in an online coding editor.
   tutorial_vidcodeplastiche_longdescription: Problema umplerii cu plastice a oceanelor
     noastre continuă să se înrăutățească. Din fericire, poți să îți faci auzită vocea
     cu codificare prin Plastic Pollution PSA. După codificarea unei PSA  privind poluarea
@@ -5627,7 +5527,7 @@ ro:
     te interesează! Învață să folosești bucle, unde sinusoidale și emoji-uri personalizate
     ca să creezi un proiect unic.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
-    and Machine Learning, as well as programing your own chatbot!
+    and Machine Learning, as well as programming your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
     create your own game in the process!
   tutorial_codehsdesign_longdescription: 'Coders will learn how programming can support
@@ -6059,7 +5959,6 @@ ro:
   tutorial_ticklep_language: Chinese (Traditional), Danish, English, French, Japanese
   tutorial_bbot_language: Dutch, Suomi, English
   tutorial_scratchg_language: English only
-  tutorial_roboticfriends_language: English, Spanish
   tutorial_sjforest_language: English only
   tutorial_sjgreet_language: English only
   tutorial_sjsunset_language: English only
@@ -6104,7 +6003,6 @@ ro:
   tutorial_tickles_language: Multiple
   tutorial_ozogame_language: English only
   tutorial_vidcodeio_language: English only
-  tutorial_besttech_language: English only
   tutorial_tlcbrain_language: English only
   tutorial_hopquiz_language: English only
   tutorial_unfortunate_language: English only
@@ -6112,7 +6010,6 @@ ro:
   tutorial_elaseq_language: English only
   tutorial_bbcmathi_language: English only
   tutorial_tlcpixel_language: English only
-  tutorial_arduino_language: English only
   tutorial_introrobo_language: English only
   tutorial_tlcinvis_language: English only
   tutorial_tlcjflap_language: English only
@@ -6132,7 +6029,6 @@ ro:
   tutorial_tlcmind_language: English only
   tutorial_tlctelebot_language: English only
   tutorial_tlcaus_language: English only
-  tutorial_oralhist_language: English only
   tutorial_tlcmicro_language: English only
   tutorial_imathematician_language: English only
   tutorial_tlcmagic_language: English only
@@ -6148,7 +6044,6 @@ ro:
   tutorial_tynkercan_language: English only
   tutorial_grokflags_language: English only
   tutorial_robomind_language: English, Dutch
-  tutorial_scratchanimwork_language: English only
   tutorial_adventureq_language: Chinese (Simplified), English
   tutorial_khan-es_language: Spanish
   tutorial_kpt_language: Portuguese
@@ -6156,13 +6051,11 @@ ro:
   tutorial_khe_language: Hebrew
   tutorial_kfr_language: French
   tutorial_app-inventor_language: English only
-  tutorial_bits_language: English, German
   tutorial_blockly_language: English, Spanish, French, 40 others
   tutorial_tynker_language: English only
   tutorial_baypt_language: Portuguese
   tutorial_code-combat_language: Multiple
   tutorial_mky_language: Multiple
-  tutorial_spellcraft_language: English only
   tutorial_pirates_language: English, Danish, German
   tutorial_csfirst_language: English only
   tutorial_loopedy_language: English only
@@ -6236,7 +6129,6 @@ ro:
   tutorial_soloweb_language: English only
   tutorial_khanweb_language: Czech, English, Portuguese (Brazil), Spanish
   tutorial_khandata_language: Czech, English, Portuguese (Brazil), Spanish
-  tutorial_robomeshiq_language: English only
   tutorial_googlelogo_language: English only
   tutorial_playtune_language: English only
   tutorial_computeit_language: English, French, German, Indonesian, Italian, Portuguese,
@@ -6298,7 +6190,6 @@ ro:
   tutorial_stemcod_language: English only
   tutorial_techikb_language: English only
   tutorial_kanostreet_language: English only
-  tutorial_nyblebot_language: English only
   tutorial_codemojijs_language: English only
   tutorial_techapf_language: English only
   tutorial_techfpjs_language: English only
@@ -6314,7 +6205,6 @@ ro:
   tutorial_gpbcircle_language: English only
   tutorial_gpbpaint_language: English only
   tutorial_cocomarcade_language: Multiple
-  tutorial_techcpp_language: English only
   tutorial_beetik_language: English, Spanish
   tutorial_codedj_language: English, French
   tutorial_rgadvan_language: English only
@@ -6390,7 +6280,6 @@ ro:
   tutorial_ifly_language: English only
   tutorial_idowedo_language: English only
   tutorial_diggindwarf_language: English only
-  tutorial_rmedr_language: English only
   tutorial_spheroit_language: English only
   tutorial_gameofcodes_language: English, Portuguese, Russian, and Spanish
   tutorial_blocklygames_language: English, Spanish, French, 40 others
@@ -6402,7 +6291,6 @@ ro:
   tutorial_bcjs1_language: English only
   tutorial_bcjs2_language: English only
   tutorial_3dbearmars_language: Română
-  tutorial_alexaskill_language: Română
   tutorial_bitsboxyak_language: Română
   tutorial_blockscadbargraphs_language: Chinese (Simplified), English, French, German,
     Japanese, Norwegian (Bokmål), Serbian (Cyrillic), Spanish (Spain), Swedish
@@ -6469,7 +6357,6 @@ ro:
   tutorial_codinismhero_language: Română
   tutorial_discovery_language: English, Spanish (Mexico)
   tutorial_csfirstname_language: English, Spanish (Mexico)
-  tutorial_obstaclecourse_language: Chinese, English, French, German, Italian, Spanish
   tutorial_edisonmove_language: Română
   tutorial_edisonspider_language: Română
   tutorial_edisonspotlight_language: Română
@@ -6814,7 +6701,6 @@ ro:
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: Clasele II+
   tutorial_scratchg_string_detail_grades: Gradul 6 și peste
-  tutorial_roboticfriends_string_detail_grades: All ages
   tutorial_sjforest_string_detail_grades: Pre-reader - Grade 5
   tutorial_sjgreet_string_detail_grades: Pre-reader - Grade 5
   tutorial_sjsunset_string_detail_grades: Pre-reader - Grade 5
@@ -6859,7 +6745,6 @@ ro:
   tutorial_tickles_string_detail_grades: Clasele II+
   tutorial_ozogame_string_detail_grades: All ages
   tutorial_vidcodeio_string_detail_grades: Clasele II+
-  tutorial_besttech_string_detail_grades: Clasele IX+
   tutorial_tlcbrain_string_detail_grades: Gradul 6 și peste
   tutorial_hopquiz_string_detail_grades: Grades 6-8
   tutorial_unfortunate_string_detail_grades: Grades 2-5
@@ -6867,7 +6752,6 @@ ro:
   tutorial_elaseq_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: Grades 2-8
-  tutorial_arduino_string_detail_grades: Grades 6-8
   tutorial_introrobo_string_detail_grades: Grades 2-5
   tutorial_tlcinvis_string_detail_grades: Clasele II+
   tutorial_tlcjflap_string_detail_grades: Gradul 6 și peste
@@ -6887,7 +6771,6 @@ ro:
   tutorial_tlcmind_string_detail_grades: Gradul 6 și peste
   tutorial_tlctelebot_string_detail_grades: Clasele II+
   tutorial_tlcaus_string_detail_grades: Gradul 6 și peste
-  tutorial_oralhist_string_detail_grades: Clasele IX+
   tutorial_tlcmicro_string_detail_grades: Clasele II+
   tutorial_imathematician_string_detail_grades: Grades 2-8
   tutorial_tlcmagic_string_detail_grades: Gradul 6 și peste
@@ -6901,7 +6784,6 @@ ro:
   tutorial_tynkercan_string_detail_grades: Clasele II+
   tutorial_grokflags_string_detail_grades: Gradul 6 și peste
   tutorial_robomind_string_detail_grades: Grades 2-8
-  tutorial_scratchanimwork_string_detail_grades: Grades 2-8
   tutorial_adventureq_string_detail_grades: Grades 2-5
   tutorial_khan-es_string_detail_grades: Gradul 6 și peste
   tutorial_kpt_string_detail_grades: Gradul 6 și peste
@@ -6909,13 +6791,11 @@ ro:
   tutorial_khe_string_detail_grades: Gradul 6 și peste
   tutorial_kfr_string_detail_grades: Gradul 6 și peste
   tutorial_app-inventor_string_detail_grades: Gradul 6 și peste
-  tutorial_bits_string_detail_grades: Grades 2-5
   tutorial_blockly_string_detail_grades: Gradul 6 și peste
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: All ages
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: Clasele II+
-  tutorial_spellcraft_string_detail_grades: Gradul 6 și peste
   tutorial_pirates_string_detail_grades: Grades 2-8
   tutorial_csfirst_string_detail_grades: Clasele II+
   tutorial_loopedy_string_detail_grades: Grades 2-5
@@ -6972,7 +6852,6 @@ ro:
   tutorial_soloweb_string_detail_grades: Clasele IX+
   tutorial_khanweb_string_detail_grades: Clasele II+
   tutorial_khandata_string_detail_grades: Gradul 6 și peste
-  tutorial_robomeshiq_string_detail_grades: Clasele II+
   tutorial_googlelogo_string_detail_grades: Clasele II+
   tutorial_playtune_string_detail_grades: Gradul 6 și peste
   tutorial_computeit_string_detail_grades: Clasele II+
@@ -7031,7 +6910,6 @@ ro:
   tutorial_stemcod_string_detail_grades: Gradul 6 și peste
   tutorial_techikb_string_detail_grades: University
   tutorial_kanostreet_string_detail_grades: Grades 2-5
-  tutorial_nyblebot_string_detail_grades: Grades 2-5
   tutorial_codemojijs_string_detail_grades: Grades 2-5
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
@@ -7047,7 +6925,6 @@ ro:
   tutorial_gpbcircle_string_detail_grades: Gradul 6 și peste
   tutorial_gpbpaint_string_detail_grades: Gradul 6 și peste
   tutorial_cocomarcade_string_detail_grades: Gradul 6 și peste
-  tutorial_techcpp_string_detail_grades: University
   tutorial_beetik_string_detail_grades: Grades 6-8
   tutorial_codedj_string_detail_grades: Gradul 6 și peste
   tutorial_rgadvan_string_detail_grades: Gradul 6 și peste
@@ -7120,7 +6997,6 @@ ro:
   tutorial_ifly_string_detail_grades: Clasele II+
   tutorial_idowedo_string_detail_grades: Grades 2-8
   tutorial_diggindwarf_string_detail_grades: Gradul 6 și peste
-  tutorial_rmedr_string_detail_grades: Grades 2-8
   tutorial_spheroit_string_detail_grades: Clasele II+
   tutorial_gameofcodes_string_detail_grades: Clasele II+
   tutorial_blocklygames_string_detail_grades: Gradul 6 și peste
@@ -7131,7 +7007,6 @@ ro:
   tutorial_bcjs1_string_detail_grades: Gradul 6 și peste
   tutorial_bcjs2_string_detail_grades: Clasele IX+
   tutorial_3dbearmars_string_detail_grades: Grades 2-8
-  tutorial_alexaskill_string_detail_grades: Grades 2-8
   tutorial_bitsboxyak_string_detail_grades: Grades 2-8
   tutorial_blockscadbargraphs_string_detail_grades: Grades 2-5
   tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
@@ -7188,7 +7063,6 @@ ro:
   tutorial_codinismhero_string_detail_grades: Clasele II+
   tutorial_discovery_string_detail_grades: Clasele II+
   tutorial_csfirstname_string_detail_grades: Clasele II+
-  tutorial_obstaclecourse_string_detail_grades: Clasele II+
   tutorial_edisonmove_string_detail_grades: Gradul 6 și peste
   tutorial_edisonspider_string_detail_grades: Gradul 6 și peste
   tutorial_edisonspotlight_string_detail_grades: Grades 2-8
@@ -7550,7 +7424,6 @@ ro:
   tutorial_ticklep_string_platforms: do-not-show
   tutorial_bbot_string_platforms: Toate browserele moderne
   tutorial_scratchg_string_platforms: Toate browserele moderne
-  tutorial_roboticfriends_string_platforms: Unplugged
   tutorial_sjforest_string_platforms: iPad app
   tutorial_sjgreet_string_platforms: iPad app
   tutorial_sjsunset_string_platforms: iPad app
@@ -7599,7 +7472,6 @@ ro:
   tutorial_ozogame_string_platforms: All modern browsers, iPad, iPhone, Android tablet,
     Andriod phone, Ozobot robot
   tutorial_vidcodeio_string_platforms: Unplugged
-  tutorial_besttech_string_platforms: Unplugged
   tutorial_tlcbrain_string_platforms: Unplugged
   tutorial_hopquiz_string_platforms: iPad and iPhone
   tutorial_unfortunate_string_platforms: Dash and Dot robot
@@ -7608,7 +7480,6 @@ ro:
     tablet
   tutorial_bbcmathi_string_platforms: do-not-show
   tutorial_tlcpixel_string_platforms: Unplugged
-  tutorial_arduino_string_platforms: Arduino Circut Boards
   tutorial_introrobo_string_platforms: iPad, Android tablet, Dash and Dot robot
   tutorial_tlcinvis_string_platforms: Unplugged
   tutorial_tlcjflap_string_platforms: Toate browserele moderne
@@ -7631,7 +7502,6 @@ ro:
   tutorial_tlcmind_string_platforms: Unplugged
   tutorial_tlctelebot_string_platforms: Unplugged
   tutorial_tlcaus_string_platforms: Unplugged
-  tutorial_oralhist_string_platforms: Toate browserele moderne
   tutorial_tlcmicro_string_platforms: Unplugged
   tutorial_imathematician_string_platforms: Toate browserele moderne
   tutorial_tlcmagic_string_platforms: Unplugged
@@ -7650,7 +7520,6 @@ ro:
     Firefox, Safari, Android Chrome (mobile-optimized), iOS (mobile-optimized)
   tutorial_robomind_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
-  tutorial_scratchanimwork_string_platforms: Toate browserele moderne
   tutorial_adventureq_string_platforms: iPad
   tutorial_khan-es_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -7663,13 +7532,11 @@ ro:
   tutorial_kfr_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome, Firefox,
     Safari
   tutorial_app-inventor_string_platforms: Android
-  tutorial_bits_string_platforms: Toate browserele moderne
   tutorial_blockly_string_platforms: Toate browserele moderne
   tutorial_tynker_string_platforms: do-not-show
   tutorial_baypt_string_platforms: Toate browserele moderne
   tutorial_code-combat_string_platforms: do-not-show
   tutorial_mky_string_platforms: Toate browserele moderne
-  tutorial_spellcraft_string_platforms: Windows
   tutorial_pirates_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad, Android phone, iPhone
   tutorial_csfirst_string_platforms: Toate browserele moderne
@@ -7738,8 +7605,6 @@ ro:
     phone, iPad, iPhone
   tutorial_khanweb_string_platforms: All modern browsers, Android tablet
   tutorial_khandata_string_platforms: Toate browserele moderne
-  tutorial_robomeshiq_string_platforms: Internet Explorer 11, Chrome, Firefox, Vex
-    IQ Robots
   tutorial_googlelogo_string_platforms: Toate browserele moderne
   tutorial_playtune_string_platforms: Chrome, Firefox, Safari
   tutorial_computeit_string_platforms: Toate browserele moderne
@@ -7813,7 +7678,6 @@ ro:
   tutorial_techikb_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_kanostreet_string_platforms: Toate browserele moderne
-  tutorial_nyblebot_string_platforms: Android tablet, iPad, Android phone, iPhone
   tutorial_codemojijs_string_platforms: Toate browserele moderne
   tutorial_techapf_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
@@ -7833,8 +7697,6 @@ ro:
   tutorial_gpbcircle_string_platforms: Toate browserele moderne
   tutorial_gpbpaint_string_platforms: Toate browserele moderne
   tutorial_cocomarcade_string_platforms: Toate browserele moderne
-  tutorial_techcpp_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
   tutorial_beetik_string_platforms: Chrome, Firefox, Android tablet, iPad
   tutorial_codedj_string_platforms: Toate browserele moderne
   tutorial_rgadvan_string_platforms: Chrome, Firefox, Android tablet
@@ -7931,7 +7793,6 @@ ro:
   tutorial_ifly_string_platforms: Android tablet, iPad, Parrot Minidrones
   tutorial_idowedo_string_platforms: All modern browsers, Android tablet, iPad, WeDo
   tutorial_diggindwarf_string_platforms: Chrome, Firefox, Safari
-  tutorial_rmedr_string_platforms: Toate browserele moderne
   tutorial_spheroit_string_platforms: iPad, Android tablet, iPhone, Android phone,
     Sphero robot
   tutorial_gameofcodes_string_platforms: All modern browsers, Android tablet, Android
@@ -7946,7 +7807,6 @@ ro:
   tutorial_bcjs1_string_platforms: Toate browserele moderne
   tutorial_bcjs2_string_platforms: Toate browserele moderne
   tutorial_3dbearmars_string_platforms: Android tablet, iPad, Android phone, iPhone
-  tutorial_alexaskill_string_platforms: Toate browserele moderne
   tutorial_bitsboxyak_string_platforms: Toate browserele moderne
   tutorial_blockscadbargraphs_string_platforms: Toate browserele moderne
   tutorial_blockscadbirdhouses_string_platforms: Toate browserele moderne
@@ -8021,7 +7881,6 @@ ro:
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
   tutorial_discovery_string_platforms: Toate browserele moderne
   tutorial_csfirstname_string_platforms: Toate browserele moderne
-  tutorial_obstaclecourse_string_platforms: iPad, Screen reader
   tutorial_edisonmove_string_platforms: Toate browserele moderne
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -8395,7 +8254,6 @@ ro:
   tutorial_ticklep_string_detail_platforms: do-not-show
   tutorial_bbot_string_detail_platforms: ''
   tutorial_scratchg_string_detail_platforms: ''
-  tutorial_roboticfriends_string_detail_platforms: Unplugged
   tutorial_sjforest_string_detail_platforms: iPad app
   tutorial_sjgreet_string_detail_platforms: iPad app
   tutorial_sjsunset_string_detail_platforms: iPad app
@@ -8440,7 +8298,6 @@ ro:
   tutorial_tickles_string_detail_platforms: Sphero robot
   tutorial_ozogame_string_detail_platforms: Ozobot robot
   tutorial_vidcodeio_string_detail_platforms: Unplugged
-  tutorial_besttech_string_detail_platforms: Unplugged
   tutorial_tlcbrain_string_detail_platforms: Unplugged
   tutorial_hopquiz_string_detail_platforms: iOS app
   tutorial_unfortunate_string_detail_platforms: Dash and Dot robot
@@ -8448,7 +8305,6 @@ ro:
   tutorial_elaseq_string_detail_platforms: Unplugged
   tutorial_bbcmathi_string_detail_platforms: do-not-show
   tutorial_tlcpixel_string_detail_platforms: Unplugged
-  tutorial_arduino_string_detail_platforms: ''
   tutorial_introrobo_string_detail_platforms: Dash and Dot robot
   tutorial_tlcinvis_string_detail_platforms: Unplugged
   tutorial_tlcjflap_string_detail_platforms: ''
@@ -8468,7 +8324,6 @@ ro:
   tutorial_tlcmind_string_detail_platforms: Unplugged
   tutorial_tlctelebot_string_detail_platforms: Unplugged
   tutorial_tlcaus_string_detail_platforms: Unplugged
-  tutorial_oralhist_string_detail_platforms: ''
   tutorial_tlcmicro_string_detail_platforms: Unplugged
   tutorial_imathematician_string_detail_platforms: ''
   tutorial_tlcmagic_string_detail_platforms: Unplugged
@@ -8482,7 +8337,6 @@ ro:
   tutorial_tynkercan_string_detail_platforms: ''
   tutorial_grokflags_string_detail_platforms: ''
   tutorial_robomind_string_detail_platforms: ''
-  tutorial_scratchanimwork_string_detail_platforms: ''
   tutorial_adventureq_string_detail_platforms: ''
   tutorial_khan-es_string_detail_platforms: ''
   tutorial_kpt_string_detail_platforms: ''
@@ -8490,13 +8344,11 @@ ro:
   tutorial_khe_string_detail_platforms: ''
   tutorial_kfr_string_detail_platforms: ''
   tutorial_app-inventor_string_detail_platforms: Android
-  tutorial_bits_string_detail_platforms: ''
   tutorial_blockly_string_detail_platforms: ''
   tutorial_tynker_string_detail_platforms: do-not-show
   tutorial_baypt_string_detail_platforms: ''
   tutorial_code-combat_string_detail_platforms: do-not-show
   tutorial_mky_string_detail_platforms: ''
-  tutorial_spellcraft_string_detail_platforms: ''
   tutorial_pirates_string_detail_platforms: ''
   tutorial_csfirst_string_detail_platforms: ''
   tutorial_loopedy_string_detail_platforms: Dash and Dot robot
@@ -8553,7 +8405,6 @@ ro:
   tutorial_soloweb_string_detail_platforms: ''
   tutorial_khanweb_string_detail_platforms: ''
   tutorial_khandata_string_detail_platforms: ''
-  tutorial_robomeshiq_string_detail_platforms: Vex IQ Robots
   tutorial_googlelogo_string_detail_platforms: ''
   tutorial_playtune_string_detail_platforms: ''
   tutorial_computeit_string_detail_platforms: ''
@@ -8612,7 +8463,6 @@ ro:
   tutorial_stemcod_string_detail_platforms: ''
   tutorial_techikb_string_detail_platforms: ''
   tutorial_kanostreet_string_detail_platforms: ''
-  tutorial_nyblebot_string_detail_platforms: ''
   tutorial_codemojijs_string_detail_platforms: ''
   tutorial_techapf_string_detail_platforms: ''
   tutorial_techfpjs_string_detail_platforms: ''
@@ -8628,7 +8478,6 @@ ro:
   tutorial_gpbcircle_string_detail_platforms: ''
   tutorial_gpbpaint_string_detail_platforms: ''
   tutorial_cocomarcade_string_detail_platforms: ''
-  tutorial_techcpp_string_detail_platforms: ''
   tutorial_beetik_string_detail_platforms: ''
   tutorial_codedj_string_detail_platforms: ''
   tutorial_rgadvan_string_detail_platforms: ''
@@ -8701,7 +8550,6 @@ ro:
   tutorial_ifly_string_detail_platforms: Parrot Minidrones
   tutorial_idowedo_string_detail_platforms: WeDo
   tutorial_diggindwarf_string_detail_platforms: ''
-  tutorial_rmedr_string_detail_platforms: Vex EDR Robots
   tutorial_spheroit_string_detail_platforms: Sphero robot
   tutorial_gameofcodes_string_detail_platforms: ''
   tutorial_blocklygames_string_detail_platforms: ''
@@ -8712,7 +8560,6 @@ ro:
   tutorial_bcjs1_string_detail_platforms: ''
   tutorial_bcjs2_string_detail_platforms: ''
   tutorial_3dbearmars_string_detail_platforms: 3D printer
-  tutorial_alexaskill_string_detail_platforms: ''
   tutorial_bitsboxyak_string_detail_platforms: ''
   tutorial_blockscadbargraphs_string_detail_platforms: ''
   tutorial_blockscadbirdhouses_string_detail_platforms: ''
@@ -8769,7 +8616,6 @@ ro:
   tutorial_codinismhero_string_detail_platforms: ''
   tutorial_discovery_string_detail_platforms: ''
   tutorial_csfirstname_string_detail_platforms: ''
-  tutorial_obstaclecourse_string_detail_platforms: Sphero robot
   tutorial_edisonmove_string_detail_platforms: Edison robot
   tutorial_edisonspider_string_detail_platforms: Edison robot
   tutorial_edisonspotlight_string_detail_platforms: Edison robot
@@ -9094,7 +8940,6 @@ ro:
   tutorial_ticklep_string_detail_programming_languages: do-not-show
   tutorial_bbot_string_detail_programming_languages: Visual programming language
   tutorial_scratchg_string_detail_programming_languages: Indiferent de limbă
-  tutorial_roboticfriends_string_detail_programming_languages: Indiferent de limbă
   tutorial_sjforest_string_detail_programming_languages: Blocuri
   tutorial_sjgreet_string_detail_programming_languages: Blocuri
   tutorial_sjsunset_string_detail_programming_languages: Blocuri
@@ -9140,7 +8985,6 @@ ro:
   tutorial_tickles_string_detail_programming_languages: Blocuri
   tutorial_ozogame_string_detail_programming_languages: Blocuri
   tutorial_vidcodeio_string_detail_programming_languages: Indiferent de limbă
-  tutorial_besttech_string_detail_programming_languages: Blocks, C/C++
   tutorial_tlcbrain_string_detail_programming_languages: Indiferent de limbă
   tutorial_hopquiz_string_detail_programming_languages: Hopscotch
   tutorial_unfortunate_string_detail_programming_languages: Blocuri
@@ -9148,7 +8992,6 @@ ro:
   tutorial_elaseq_string_detail_programming_languages: Indiferent de limbă
   tutorial_bbcmathi_string_detail_programming_languages: do-not-show
   tutorial_tlcpixel_string_detail_programming_languages: Indiferent de limbă
-  tutorial_arduino_string_detail_programming_languages: Arduino
   tutorial_introrobo_string_detail_programming_languages: Blocuri, JavaScript
   tutorial_tlcinvis_string_detail_programming_languages: Indiferent de limbă
   tutorial_tlcjflap_string_detail_programming_languages: Indiferent de limbă
@@ -9168,7 +9011,6 @@ ro:
   tutorial_tlcmind_string_detail_programming_languages: Indiferent de limbă
   tutorial_tlctelebot_string_detail_programming_languages: Indiferent de limbă
   tutorial_tlcaus_string_detail_programming_languages: Indiferent de limbă
-  tutorial_oralhist_string_detail_programming_languages: Indiferent de limbă
   tutorial_tlcmicro_string_detail_programming_languages: Indiferent de limbă
   tutorial_imathematician_string_detail_programming_languages: Zgarietura
   tutorial_tlcmagic_string_detail_programming_languages: Indiferent de limbă
@@ -9182,7 +9024,6 @@ ro:
   tutorial_tynkercan_string_detail_programming_languages: Blocuri
   tutorial_grokflags_string_detail_programming_languages: Python
   tutorial_robomind_string_detail_programming_languages: Blocuri
-  tutorial_scratchanimwork_string_detail_programming_languages: Blocks, Scratch
   tutorial_adventureq_string_detail_programming_languages: Blocuri
   tutorial_khan-es_string_detail_programming_languages: JavaScript
   tutorial_kpt_string_detail_programming_languages: JavaScript
@@ -9190,13 +9031,11 @@ ro:
   tutorial_khe_string_detail_programming_languages: JavaScript
   tutorial_kfr_string_detail_programming_languages: JavaScript
   tutorial_app-inventor_string_detail_programming_languages: Blocuri
-  tutorial_bits_string_detail_programming_languages: Blocks, Language independent
   tutorial_blockly_string_detail_programming_languages: Blocuri
   tutorial_tynker_string_detail_programming_languages: do-not-show
   tutorial_baypt_string_detail_programming_languages: Blocuri
   tutorial_code-combat_string_detail_programming_languages: do-not-show
   tutorial_mky_string_detail_programming_languages: CoffeeScript
-  tutorial_spellcraft_string_detail_programming_languages: Blocuri, JavaScript
   tutorial_pirates_string_detail_programming_languages: Blocks, Pirate code
   tutorial_csfirst_string_detail_programming_languages: Zgarietura
   tutorial_loopedy_string_detail_programming_languages: Blocuri
@@ -9253,7 +9092,6 @@ ro:
   tutorial_soloweb_string_detail_programming_languages: HTML, CSS
   tutorial_khanweb_string_detail_programming_languages: HTML & CSS
   tutorial_khandata_string_detail_programming_languages: SQL
-  tutorial_robomeshiq_string_detail_programming_languages: Blocks, Python
   tutorial_googlelogo_string_detail_programming_languages: Blocks, Scratch
   tutorial_playtune_string_detail_programming_languages: Blocuri
   tutorial_computeit_string_detail_programming_languages: Indiferent de limbă
@@ -9312,7 +9150,6 @@ ro:
   tutorial_stemcod_string_detail_programming_languages: JavaScript
   tutorial_techikb_string_detail_programming_languages: Kotlin
   tutorial_kanostreet_string_detail_programming_languages: Blocuri, JavaScript
-  tutorial_nyblebot_string_detail_programming_languages: Blocuri
   tutorial_codemojijs_string_detail_programming_languages: JavaScript
   tutorial_techapf_string_detail_programming_languages: Python
   tutorial_techfpjs_string_detail_programming_languages: JavaScript
@@ -9329,7 +9166,6 @@ ro:
   tutorial_gpbpaint_string_detail_programming_languages: Blocuri
   tutorial_cocomarcade_string_detail_programming_languages: JavaScript, Python, Lua,
     CoffeeScript
-  tutorial_techcpp_string_detail_programming_languages: C/C++
   tutorial_beetik_string_detail_programming_languages: Blocuri
   tutorial_codedj_string_detail_programming_languages: JavaScript
   tutorial_rgadvan_string_detail_programming_languages: Blocks, JavaScript, Python
@@ -9402,7 +9238,6 @@ ro:
   tutorial_ifly_string_detail_programming_languages: Tynker
   tutorial_idowedo_string_detail_programming_languages: Zgarietura
   tutorial_diggindwarf_string_detail_programming_languages: JavaScript
-  tutorial_rmedr_string_detail_programming_languages: Blocuri
   tutorial_spheroit_string_detail_programming_languages: Blocuri, JavaScript
   tutorial_gameofcodes_string_detail_programming_languages: Blocks, Ready, Unity
   tutorial_blocklygames_string_detail_programming_languages: Blocuri
@@ -9414,7 +9249,6 @@ ro:
   tutorial_bcjs2_string_detail_programming_languages: JavaScript
   tutorial_3dbearmars_string_detail_programming_languages: Language independent (can
     be taught in multiple languages), Uses 3D modeling in augmented reality
-  tutorial_alexaskill_string_detail_programming_languages: Blocuri
   tutorial_bitsboxyak_string_detail_programming_languages: JavaScript
   tutorial_blockscadbargraphs_string_detail_programming_languages: Blocuri
   tutorial_blockscadbirdhouses_string_detail_programming_languages: Blocuri
@@ -9474,7 +9308,6 @@ ro:
   tutorial_codinismhero_string_detail_programming_languages: Python
   tutorial_discovery_string_detail_programming_languages: Blocks, Scratch
   tutorial_csfirstname_string_detail_programming_languages: Blocks, Scratch
-  tutorial_obstaclecourse_string_detail_programming_languages: Blocuri
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
   tutorial_edisonspider_string_detail_programming_languages: Blocuri
@@ -9573,7 +9406,7 @@ ro:
   tutorial_gamemaker_string_detail_programming_languages: JavaScript
   tutorial_duckrace_string_detail_programming_languages: Blocuri
   tutorial_allcancodeapps_string_detail_programming_languages: Blocuri
-  tutorial_n2y_string_detail_programming_languages: ''
+  tutorial_n2y_string_detail_programming_languages: Unplugged
   tutorial_microsoftarcade_string_detail_programming_languages: Blocuri
   tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
     Scratch
@@ -9784,7 +9617,6 @@ ro:
   tutorial_eddesign_name: Edison the designer
   tutorial_edshapeup_name: Robot shape-up with Edison
   tutorial_ozocolor_name: Pop Star|Creating Functions With Ozobot Color Codes
-  tutorial_kcjanimals_name: About a Canadian Animal
   tutorial_icomputeeggs_name: iHide Eggs
   tutorial_rootunplugged_name: iRobot Code Break
   tutorial_rgtreasure_name: RoboGarden Puzzles - Robo Treasure Chest
@@ -9801,13 +9633,11 @@ ro:
   tutorial_blockscadscale_name: Scale City
   tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
   tutorial_phidgets_name: A Phidgets Theremin with Processing
-  tutorial_kcjmerry_name: Merry Micro:bits
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
   tutorial_codestersmicro_name: 'Codesters: Create a Micro Ball Game'
   tutorial_codestersdata_name: 'Codesters: Code & Graph micro:bit Data'
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
-  tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_ai-oceans_name: IA pentru Oceane
@@ -10083,11 +9913,6 @@ ro:
     and unplugged lesson to introduce the concept of functions. It is the first lesson
     of a two lesson series, but either lesson can be taught in isolation. The second
     lesson utilizes OzoBlockly to build on the concept of functions. '
-  tutorial_kcjanimals_longdescription: Build a simple project to celebrate coding
-    and Canadian wildlife. Kids will choose a Canadian animal, like a bear or a moose,
-    and create an animation that explores the animal's world, such as its habitat,
-    eating habits, migration patterns and so on. The project is simple enough for
-    teachers or parents to facilitate and help the kids follow along.
   tutorial_icomputeeggs_longdescription: This teacher-led activity, adapted for the
     Hour of Code, provides pupils with an opportunity to explore physical programming
     through robotics. Using a drag-and-drop programming environment and a programmable
@@ -10139,11 +9964,6 @@ ro:
     can be combined to create a 3D model of a bursting star.
   tutorial_phidgets_longdescription: Create an awesome musical instrument with Phidgets
     and Processing!
-  tutorial_kcjmerry_longdescription: Build an interactive coding project with the
-    micro:bit to celebrate coding and the holiday season. Kids will use a combination
-    of block coding and physical computing to create a sparkling snow globe animation.
-    The project is simple enough for teachers or parents to facilitate and it comes
-    with activity cards that kids can use on their own for a further challenge.
   tutorial_modvariables_longdescription: 'Students investigate how data flows through
     a network using Cubelets robot blocks. This lesson assumes students are already
     familiar with how Cubelets robot blocks work in general.  Visit modrobotics.com/thehub
@@ -10165,8 +9985,6 @@ ro:
   tutorial_rpisensehat_longdescription: Learn how use the Sense HAT hardware to build
     a data-logging device which can capture a range of information about its immediate
     environment.
-  tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
-    to analyze character traits and create an algorithm to demonstrate those traits. '
   tutorial_mee_longdescription: Program the Minecraft Agent to collect data about
     forest fires. Then write code to help prevent the spread of fire, save the village,
     and bring life back to the forest. Learn coding basics and explore a real-world
@@ -10252,7 +10070,6 @@ ro:
   tutorial_eddesign_language: Română
   tutorial_edshapeup_language: Română
   tutorial_ozocolor_language: Română
-  tutorial_kcjanimals_language: Română
   tutorial_icomputeeggs_language: Română
   tutorial_rootunplugged_language: Română
   tutorial_rgtreasure_language: Română
@@ -10268,13 +10085,11 @@ ro:
   tutorial_blockscadscale_language: Română
   tutorial_tcadloops_language: Română
   tutorial_phidgets_language: Română
-  tutorial_kcjmerry_language: Română
   tutorial_modvariables_language: Română
   tutorial_codestersmicro_language: Română
   tutorial_codestersdata_language: Română
   tutorial_ikodexmas_language: Română
   tutorial_rpisensehat_language: Română
-  tutorial_modtraits_language: Română
   tutorial_mee_language: Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech,
     Danish, Dutch, English (UK), English (United States), Finnish, French (Canada),
     French (France), German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean,
@@ -10355,7 +10170,6 @@ ro:
   tutorial_eddesign_string_detail_grades: Gradul 6 și peste
   tutorial_edshapeup_string_detail_grades: Gradul 6 și peste
   tutorial_ozocolor_string_detail_grades: Grades 2-8
-  tutorial_kcjanimals_string_detail_grades: Grades 2-8
   tutorial_icomputeeggs_string_detail_grades: Grades 2-8
   tutorial_rootunplugged_string_detail_grades: Grades 2-8
   tutorial_rgtreasure_string_detail_grades: Pre-reader - Grade 5
@@ -10371,13 +10185,11 @@ ro:
   tutorial_blockscadscale_string_detail_grades: Gradul 6 și peste
   tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: Clasele IX+
-  tutorial_kcjmerry_string_detail_grades: Grades 2-8
   tutorial_modvariables_string_detail_grades: Gradul 6 și peste
   tutorial_codestersmicro_string_detail_grades: Grades 6-8
   tutorial_codestersdata_string_detail_grades: Grades 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
   tutorial_rpisensehat_string_detail_grades: Gradul 6 și peste
-  tutorial_modtraits_string_detail_grades: Clasele II+
   tutorial_mee_string_detail_grades: Clasele II+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_ai-oceans_string_detail_grades: Clasele 3+
@@ -10472,7 +10284,6 @@ ro:
   tutorial_eddesign_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edshapeup_string_platforms: Toate browserele moderne
   tutorial_ozocolor_string_platforms: Unplugged
-  tutorial_kcjanimals_string_platforms: Toate browserele moderne
   tutorial_icomputeeggs_string_platforms: All modern browers, Android phone, Android
     tablet, iPad, iPhone
   tutorial_rootunplugged_string_platforms: Unplugged
@@ -10489,14 +10300,12 @@ ro:
   tutorial_blockscadscale_string_platforms: Toate browserele moderne
   tutorial_tcadloops_string_platforms: Toate browserele moderne
   tutorial_phidgets_string_platforms: Toate browserele moderne
-  tutorial_kcjmerry_string_platforms: Toate browserele moderne
   tutorial_modvariables_string_platforms: All modern browsers, Android tablet, Android
     phone, iPad, iPhone
   tutorial_codestersmicro_string_platforms: 'All modern browsers '
   tutorial_codestersdata_string_platforms: 'All modern browsers '
   tutorial_ikodexmas_string_platforms: Toate browserele moderne
   tutorial_rpisensehat_string_platforms: Toate browserele moderne
-  tutorial_modtraits_string_platforms: Toate browserele moderne
   tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
   tutorial_kuborobo_string_platforms: Unplugged
   tutorial_ai-oceans_string_platforms: |2-
@@ -10577,7 +10386,6 @@ ro:
   tutorial_eddesign_string_detail_platforms: Edison robot
   tutorial_edshapeup_string_detail_platforms: Edison robot
   tutorial_ozocolor_string_detail_platforms: Ozobot
-  tutorial_kcjanimals_string_detail_platforms: ''
   tutorial_icomputeeggs_string_detail_platforms: Sphero
   tutorial_rootunplugged_string_detail_platforms: ''
   tutorial_rgtreasure_string_detail_platforms: ''
@@ -10594,13 +10402,11 @@ ro:
   tutorial_tcadloops_string_detail_platforms: ''
   tutorial_phidgets_string_detail_platforms: Phidgets Getting Started Kit, Phidgets
     Distance Sensors.
-  tutorial_kcjmerry_string_detail_platforms: BBC micro:bit
   tutorial_modvariables_string_detail_platforms: Cubelets Robot Blocks
   tutorial_codestersmicro_string_detail_platforms: BBC micro:bit
   tutorial_codestersdata_string_detail_platforms: BBC micro:bit
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
-  tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_ai-oceans_string_detail_platforms: ''
@@ -10687,7 +10493,6 @@ ro:
   tutorial_edshapeup_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
   tutorial_ozocolor_string_detail_programming_languages: Blocuri
-  tutorial_kcjanimals_string_detail_programming_languages: Blocuri
   tutorial_icomputeeggs_string_detail_programming_languages: Blocuri
   tutorial_rootunplugged_string_detail_programming_languages: Blocuri
   tutorial_rgtreasure_string_detail_programming_languages: Blocuri
@@ -10704,14 +10509,12 @@ ro:
   tutorial_tcadloops_string_detail_programming_languages: Blocuri
   tutorial_phidgets_string_detail_programming_languages: Java, Phidgets support ALL
     major programming languages. Can easily adapt this project to another language/environment.
-  tutorial_kcjmerry_string_detail_programming_languages: Blocuri
   tutorial_modvariables_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_codestersmicro_string_detail_programming_languages: Python
   tutorial_codestersdata_string_detail_programming_languages: Python
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
-  tutorial_modtraits_string_detail_programming_languages: Blocuri
   tutorial_mee_string_detail_programming_languages: Blocuri
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together

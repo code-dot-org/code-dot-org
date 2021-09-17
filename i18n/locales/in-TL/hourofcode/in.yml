@@ -737,7 +737,6 @@ in:
   tutorial_ticklep_name: crwdns105184:0crwdne105184:0
   tutorial_bbot_name: crwdns105185:0crwdne105185:0
   tutorial_scratchg_name: crwdns105186:0crwdne105186:0
-  tutorial_roboticfriends_name: crwdns105187:0crwdne105187:0
   tutorial_sjforest_name: crwdns105188:0crwdne105188:0
   tutorial_sjgreet_name: crwdns105189:0crwdne105189:0
   tutorial_sjsunset_name: crwdns105190:0crwdne105190:0
@@ -782,7 +781,6 @@ in:
   tutorial_tickles_name: crwdns105229:0crwdne105229:0
   tutorial_ozogame_name: crwdns105230:0crwdne105230:0
   tutorial_vidcodeio_name: crwdns105231:0crwdne105231:0
-  tutorial_besttech_name: crwdns105232:0crwdne105232:0
   tutorial_tlcbrain_name: crwdns105233:0crwdne105233:0
   tutorial_hopquiz_name: crwdns105234:0crwdne105234:0
   tutorial_unfortunate_name: crwdns105235:0crwdne105235:0
@@ -790,7 +788,6 @@ in:
   tutorial_elaseq_name: crwdns105237:0crwdne105237:0
   tutorial_bbcmathi_name: crwdns105238:0crwdne105238:0
   tutorial_tlcpixel_name: crwdns105239:0crwdne105239:0
-  tutorial_arduino_name: crwdns105240:0crwdne105240:0
   tutorial_introrobo_name: crwdns105241:0crwdne105241:0
   tutorial_tlcinvis_name: crwdns105242:0crwdne105242:0
   tutorial_tlcjflap_name: crwdns105243:0crwdne105243:0
@@ -810,7 +807,6 @@ in:
   tutorial_tlcmind_name: crwdns105257:0crwdne105257:0
   tutorial_tlctelebot_name: crwdns105258:0crwdne105258:0
   tutorial_tlcaus_name: crwdns105259:0crwdne105259:0
-  tutorial_oralhist_name: crwdns105260:0crwdne105260:0
   tutorial_tlcmicro_name: crwdns105261:0crwdne105261:0
   tutorial_imathematician_name: crwdns105262:0crwdne105262:0
   tutorial_tlcmagic_name: crwdns105263:0crwdne105263:0
@@ -824,7 +820,6 @@ in:
   tutorial_tynkercan_name: crwdns105271:0crwdne105271:0
   tutorial_grokflags_name: crwdns105272:0crwdne105272:0
   tutorial_robomind_name: crwdns105273:0crwdne105273:0
-  tutorial_scratchanimwork_name: crwdns105274:0crwdne105274:0
   tutorial_adventureq_name: crwdns105275:0crwdne105275:0
   tutorial_khan-es_name: crwdns105276:0crwdne105276:0
   tutorial_kpt_name: crwdns105277:0crwdne105277:0
@@ -832,13 +827,11 @@ in:
   tutorial_khe_name: crwdns105279:0crwdne105279:0
   tutorial_kfr_name: crwdns105280:0crwdne105280:0
   tutorial_app-inventor_name: crwdns105281:0crwdne105281:0
-  tutorial_bits_name: crwdns105282:0crwdne105282:0
   tutorial_blockly_name: crwdns105283:0crwdne105283:0
   tutorial_tynker_name: crwdns105284:0crwdne105284:0
   tutorial_baypt_name: crwdns105285:0crwdne105285:0
   tutorial_code-combat_name: crwdns105286:0crwdne105286:0
   tutorial_mky_name: crwdns105287:0crwdne105287:0
-  tutorial_spellcraft_name: crwdns105288:0crwdne105288:0
   tutorial_pirates_name: crwdns105289:0crwdne105289:0
   tutorial_csfirst_name: crwdns105290:0crwdne105290:0
   tutorial_loopedy_name: crwdns105291:0crwdne105291:0
@@ -895,7 +888,6 @@ in:
   tutorial_soloweb_name: crwdns105342:0crwdne105342:0
   tutorial_khanweb_name: crwdns105344:0crwdne105344:0
   tutorial_khandata_name: crwdns105345:0crwdne105345:0
-  tutorial_robomeshiq_name: crwdns105346:0crwdne105346:0
   tutorial_googlelogo_name: crwdns108355:0crwdne108355:0
   tutorial_playtune_name: crwdns108356:0crwdne108356:0
   tutorial_computeit_name: crwdns108357:0crwdne108357:0
@@ -954,7 +946,6 @@ in:
   tutorial_stemcod_name: crwdns108410:0crwdne108410:0
   tutorial_techikb_name: crwdns108411:0crwdne108411:0
   tutorial_kanostreet_name: crwdns108412:0crwdne108412:0
-  tutorial_nyblebot_name: crwdns108413:0crwdne108413:0
   tutorial_codemojijs_name: crwdns108414:0crwdne108414:0
   tutorial_techapf_name: crwdns108416:0crwdne108416:0
   tutorial_techfpjs_name: crwdns108417:0crwdne108417:0
@@ -970,7 +961,6 @@ in:
   tutorial_gpbcircle_name: crwdns108430:0crwdne108430:0
   tutorial_gpbpaint_name: crwdns108431:0crwdne108431:0
   tutorial_cocomarcade_name: crwdns108432:0crwdne108432:0
-  tutorial_techcpp_name: crwdns108433:0crwdne108433:0
   tutorial_beetik_name: crwdns108434:0crwdne108434:0
   tutorial_codedj_name: crwdns108435:0crwdne108435:0
   tutorial_rgadvan_name: crwdns108436:0crwdne108436:0
@@ -1043,7 +1033,6 @@ in:
   tutorial_ifly_name: crwdns109583:0crwdne109583:0
   tutorial_idowedo_name: crwdns109584:0crwdne109584:0
   tutorial_diggindwarf_name: crwdns109585:0crwdne109585:0
-  tutorial_rmedr_name: crwdns109586:0crwdne109586:0
   tutorial_spheroit_name: crwdns110238:0crwdne110238:0
   tutorial_gameofcodes_name: crwdns110239:0crwdne110239:0
   tutorial_blocklygames_name: crwdns110240:0crwdne110240:0
@@ -1054,7 +1043,6 @@ in:
   tutorial_bcjs1_name: crwdns110245:0crwdne110245:0
   tutorial_bcjs2_name: crwdns110246:0crwdne110246:0
   tutorial_3dbearmars_name: crwdns328084:0crwdne328084:0
-  tutorial_alexaskill_name: crwdns328086:0crwdne328086:0
   tutorial_bitsboxyak_name: crwdns328088:0crwdne328088:0
   tutorial_blockscadbargraphs_name: crwdns328090:0crwdne328090:0
   tutorial_blockscadbirdhouses_name: crwdns328092:0crwdne328092:0
@@ -1111,7 +1099,6 @@ in:
   tutorial_codinismhero_name: crwdns328194:0crwdne328194:0
   tutorial_discovery_name: crwdns328196:0crwdne328196:0
   tutorial_csfirstname_name: crwdns328198:0crwdne328198:0
-  tutorial_obstaclecourse_name: crwdns328200:0crwdne328200:0
   tutorial_edisonmove_name: crwdns328202:0crwdne328202:0
   tutorial_edisonspider_name: crwdns328204:0crwdne328204:0
   tutorial_edisonspotlight_name: crwdns328206:0crwdne328206:0
@@ -1431,7 +1418,6 @@ in:
   tutorial_ticklep_shortdescription: crwdns105457:0crwdne105457:0
   tutorial_bbot_shortdescription: crwdns105458:0crwdne105458:0
   tutorial_scratchg_shortdescription: crwdns105459:0crwdne105459:0
-  tutorial_roboticfriends_shortdescription: crwdns105460:0crwdne105460:0
   tutorial_sjforest_shortdescription: crwdns105461:0crwdne105461:0
   tutorial_sjgreet_shortdescription: crwdns105462:0crwdne105462:0
   tutorial_sjsunset_shortdescription: crwdns105463:0crwdne105463:0
@@ -1476,7 +1462,6 @@ in:
   tutorial_tickles_shortdescription: crwdns105502:0crwdne105502:0
   tutorial_ozogame_shortdescription: crwdns105503:0crwdne105503:0
   tutorial_vidcodeio_shortdescription: crwdns105504:0crwdne105504:0
-  tutorial_besttech_shortdescription: crwdns105505:0crwdne105505:0
   tutorial_tlcbrain_shortdescription: crwdns105506:0crwdne105506:0
   tutorial_hopquiz_shortdescription: crwdns105507:0crwdne105507:0
   tutorial_unfortunate_shortdescription: crwdns105508:0crwdne105508:0
@@ -1484,7 +1469,6 @@ in:
   tutorial_elaseq_shortdescription: crwdns105510:0crwdne105510:0
   tutorial_bbcmathi_shortdescription: crwdns105511:0crwdne105511:0
   tutorial_tlcpixel_shortdescription: crwdns105512:0crwdne105512:0
-  tutorial_arduino_shortdescription: crwdns105513:0crwdne105513:0
   tutorial_introrobo_shortdescription: crwdns105514:0crwdne105514:0
   tutorial_tlcinvis_shortdescription: crwdns105515:0crwdne105515:0
   tutorial_tlcjflap_shortdescription: crwdns105516:0crwdne105516:0
@@ -1504,7 +1488,6 @@ in:
   tutorial_tlcmind_shortdescription: crwdns105530:0crwdne105530:0
   tutorial_tlctelebot_shortdescription: crwdns105531:0crwdne105531:0
   tutorial_tlcaus_shortdescription: crwdns105532:0crwdne105532:0
-  tutorial_oralhist_shortdescription: crwdns105533:0crwdne105533:0
   tutorial_tlcmicro_shortdescription: crwdns105534:0crwdne105534:0
   tutorial_imathematician_shortdescription: crwdns105535:0crwdne105535:0
   tutorial_tlcmagic_shortdescription: crwdns105536:0crwdne105536:0
@@ -1518,7 +1501,6 @@ in:
   tutorial_tynkercan_shortdescription: crwdns105544:0crwdne105544:0
   tutorial_grokflags_shortdescription: crwdns105545:0crwdne105545:0
   tutorial_robomind_shortdescription: crwdns105546:0crwdne105546:0
-  tutorial_scratchanimwork_shortdescription: crwdns105547:0crwdne105547:0
   tutorial_adventureq_shortdescription: crwdns105548:0crwdne105548:0
   tutorial_khan-es_shortdescription: crwdns105549:0crwdne105549:0
   tutorial_kpt_shortdescription: crwdns105550:0crwdne105550:0
@@ -1526,13 +1508,11 @@ in:
   tutorial_khe_shortdescription: crwdns105552:0crwdne105552:0
   tutorial_kfr_shortdescription: crwdns105553:0crwdne105553:0
   tutorial_app-inventor_shortdescription: crwdns105554:0crwdne105554:0
-  tutorial_bits_shortdescription: crwdns105555:0crwdne105555:0
   tutorial_blockly_shortdescription: crwdns105556:0crwdne105556:0
   tutorial_tynker_shortdescription: crwdns105557:0crwdne105557:0
   tutorial_baypt_shortdescription: crwdns105558:0crwdne105558:0
   tutorial_code-combat_shortdescription: crwdns105559:0crwdne105559:0
   tutorial_mky_shortdescription: crwdns105560:0crwdne105560:0
-  tutorial_spellcraft_shortdescription: crwdns105561:0crwdne105561:0
   tutorial_pirates_shortdescription: crwdns105562:0crwdne105562:0
   tutorial_csfirst_shortdescription: crwdns105563:0crwdne105563:0
   tutorial_loopedy_shortdescription: crwdns105564:0crwdne105564:0
@@ -1589,7 +1569,6 @@ in:
   tutorial_soloweb_shortdescription: crwdns105615:0crwdne105615:0
   tutorial_khanweb_shortdescription: crwdns105617:0crwdne105617:0
   tutorial_khandata_shortdescription: crwdns105618:0crwdne105618:0
-  tutorial_robomeshiq_shortdescription: crwdns105619:0crwdne105619:0
   tutorial_googlelogo_shortdescription: crwdns108452:0crwdne108452:0
   tutorial_playtune_shortdescription: crwdns108453:0crwdne108453:0
   tutorial_computeit_shortdescription: crwdns108454:0crwdne108454:0
@@ -1648,7 +1627,6 @@ in:
   tutorial_stemcod_shortdescription: crwdns108507:0crwdne108507:0
   tutorial_techikb_shortdescription: crwdns108508:0crwdne108508:0
   tutorial_kanostreet_shortdescription: crwdns108509:0crwdne108509:0
-  tutorial_nyblebot_shortdescription: crwdns108510:0crwdne108510:0
   tutorial_codemojijs_shortdescription: crwdns108511:0crwdne108511:0
   tutorial_techapf_shortdescription: crwdns108513:0crwdne108513:0
   tutorial_techfpjs_shortdescription: crwdns108514:0crwdne108514:0
@@ -1664,7 +1642,6 @@ in:
   tutorial_gpbcircle_shortdescription: crwdns108527:0crwdne108527:0
   tutorial_gpbpaint_shortdescription: crwdns108528:0crwdne108528:0
   tutorial_cocomarcade_shortdescription: crwdns108529:0crwdne108529:0
-  tutorial_techcpp_shortdescription: crwdns108530:0crwdne108530:0
   tutorial_beetik_shortdescription: crwdns108531:0crwdne108531:0
   tutorial_codedj_shortdescription: crwdns108532:0crwdne108532:0
   tutorial_rgadvan_shortdescription: crwdns108533:0crwdne108533:0
@@ -1737,7 +1714,6 @@ in:
   tutorial_ifly_shortdescription: crwdns109637:0crwdne109637:0
   tutorial_idowedo_shortdescription: crwdns109638:0crwdne109638:0
   tutorial_diggindwarf_shortdescription: crwdns109639:0crwdne109639:0
-  tutorial_rmedr_shortdescription: crwdns109640:0crwdne109640:0
   tutorial_spheroit_shortdescription: crwdns110251:0crwdne110251:0
   tutorial_gameofcodes_shortdescription: crwdns110252:0crwdne110252:0
   tutorial_blocklygames_shortdescription: crwdns110253:0crwdne110253:0
@@ -1748,7 +1724,6 @@ in:
   tutorial_bcjs1_shortdescription: crwdns110258:0crwdne110258:0
   tutorial_bcjs2_shortdescription: crwdns110259:0crwdne110259:0
   tutorial_3dbearmars_shortdescription: crwdns328368:0crwdne328368:0
-  tutorial_alexaskill_shortdescription: crwdns328370:0crwdne328370:0
   tutorial_bitsboxyak_shortdescription: crwdns328372:0crwdne328372:0
   tutorial_blockscadbargraphs_shortdescription: crwdns328374:0crwdne328374:0
   tutorial_blockscadbirdhouses_shortdescription: crwdns328376:0crwdne328376:0
@@ -1805,7 +1780,6 @@ in:
   tutorial_codinismhero_shortdescription: crwdns328478:0crwdne328478:0
   tutorial_discovery_shortdescription: crwdns328480:0crwdne328480:0
   tutorial_csfirstname_shortdescription: crwdns328482:0crwdne328482:0
-  tutorial_obstaclecourse_shortdescription: crwdns328484:0crwdne328484:0
   tutorial_edisonmove_shortdescription: crwdns328486:0crwdne328486:0
   tutorial_edisonspider_shortdescription: crwdns328488:0crwdne328488:0
   tutorial_edisonspotlight_shortdescription: crwdns328490:0crwdne328490:0
@@ -2010,7 +1984,6 @@ in:
   tutorial_ticklep_longdescription: crwdns105730:0crwdne105730:0
   tutorial_bbot_longdescription: crwdns105731:0crwdne105731:0
   tutorial_scratchg_longdescription: crwdns105732:0crwdne105732:0
-  tutorial_roboticfriends_longdescription: crwdns105733:0crwdne105733:0
   tutorial_sjforest_longdescription: crwdns105734:0crwdne105734:0
   tutorial_sjgreet_longdescription: crwdns105735:0crwdne105735:0
   tutorial_sjsunset_longdescription: crwdns105736:0crwdne105736:0
@@ -2055,7 +2028,6 @@ in:
   tutorial_tickles_longdescription: crwdns105775:0crwdne105775:0
   tutorial_ozogame_longdescription: crwdns105776:0crwdne105776:0
   tutorial_vidcodeio_longdescription: crwdns105777:0crwdne105777:0
-  tutorial_besttech_longdescription: crwdns105778:0crwdne105778:0
   tutorial_tlcbrain_longdescription: crwdns105779:0crwdne105779:0
   tutorial_hopquiz_longdescription: crwdns105780:0crwdne105780:0
   tutorial_unfortunate_longdescription: crwdns105781:0crwdne105781:0
@@ -2063,7 +2035,6 @@ in:
   tutorial_elaseq_longdescription: crwdns105783:0crwdne105783:0
   tutorial_bbcmathi_longdescription: crwdns105784:0crwdne105784:0
   tutorial_tlcpixel_longdescription: crwdns105785:0crwdne105785:0
-  tutorial_arduino_longdescription: crwdns105786:0crwdne105786:0
   tutorial_introrobo_longdescription: crwdns105787:0crwdne105787:0
   tutorial_tlcinvis_longdescription: crwdns105788:0crwdne105788:0
   tutorial_tlcjflap_longdescription: crwdns105789:0crwdne105789:0
@@ -2083,7 +2054,6 @@ in:
   tutorial_tlcmind_longdescription: crwdns105803:0crwdne105803:0
   tutorial_tlctelebot_longdescription: crwdns105804:0crwdne105804:0
   tutorial_tlcaus_longdescription: crwdns105805:0crwdne105805:0
-  tutorial_oralhist_longdescription: crwdns105806:0crwdne105806:0
   tutorial_tlcmicro_longdescription: crwdns105807:0crwdne105807:0
   tutorial_imathematician_longdescription: crwdns105808:0crwdne105808:0
   tutorial_tlcmagic_longdescription: crwdns105809:0crwdne105809:0
@@ -2097,7 +2067,6 @@ in:
   tutorial_tynkercan_longdescription: crwdns105817:0crwdne105817:0
   tutorial_grokflags_longdescription: crwdns105818:0crwdne105818:0
   tutorial_robomind_longdescription: crwdns105819:0crwdne105819:0
-  tutorial_scratchanimwork_longdescription: crwdns105820:0crwdne105820:0
   tutorial_adventureq_longdescription: crwdns105821:0crwdne105821:0
   tutorial_khan-es_longdescription: crwdns105822:0crwdne105822:0
   tutorial_kpt_longdescription: crwdns105823:0crwdne105823:0
@@ -2105,13 +2074,11 @@ in:
   tutorial_khe_longdescription: crwdns105825:0crwdne105825:0
   tutorial_kfr_longdescription: crwdns105826:0crwdne105826:0
   tutorial_app-inventor_longdescription: crwdns105827:0crwdne105827:0
-  tutorial_bits_longdescription: crwdns105828:0crwdne105828:0
   tutorial_blockly_longdescription: crwdns105829:0crwdne105829:0
   tutorial_tynker_longdescription: crwdns105830:0crwdne105830:0
   tutorial_baypt_longdescription: crwdns105831:0crwdne105831:0
   tutorial_code-combat_longdescription: crwdns105832:0crwdne105832:0
   tutorial_mky_longdescription: crwdns105833:0crwdne105833:0
-  tutorial_spellcraft_longdescription: crwdns105834:0crwdne105834:0
   tutorial_pirates_longdescription: crwdns105835:0crwdne105835:0
   tutorial_csfirst_longdescription: crwdns105836:0crwdne105836:0
   tutorial_loopedy_longdescription: crwdns105837:0crwdne105837:0
@@ -2168,7 +2135,6 @@ in:
   tutorial_soloweb_longdescription: crwdns105888:0crwdne105888:0
   tutorial_khanweb_longdescription: crwdns105890:0crwdne105890:0
   tutorial_khandata_longdescription: crwdns105891:0crwdne105891:0
-  tutorial_robomeshiq_longdescription: crwdns105892:0crwdne105892:0
   tutorial_googlelogo_longdescription: crwdns108549:0crwdne108549:0
   tutorial_playtune_longdescription: crwdns108550:0crwdne108550:0
   tutorial_computeit_longdescription: crwdns108551:0crwdne108551:0
@@ -2227,7 +2193,6 @@ in:
   tutorial_stemcod_longdescription: crwdns108604:0crwdne108604:0
   tutorial_techikb_longdescription: crwdns108605:0crwdne108605:0
   tutorial_kanostreet_longdescription: crwdns108606:0crwdne108606:0
-  tutorial_nyblebot_longdescription: crwdns108607:0crwdne108607:0
   tutorial_codemojijs_longdescription: crwdns108608:0crwdne108608:0
   tutorial_techapf_longdescription: crwdns108610:0crwdne108610:0
   tutorial_techfpjs_longdescription: crwdns108611:0crwdne108611:0
@@ -2243,7 +2208,6 @@ in:
   tutorial_gpbcircle_longdescription: crwdns108624:0crwdne108624:0
   tutorial_gpbpaint_longdescription: crwdns108625:0crwdne108625:0
   tutorial_cocomarcade_longdescription: crwdns108626:0crwdne108626:0
-  tutorial_techcpp_longdescription: crwdns108627:0crwdne108627:0
   tutorial_beetik_longdescription: crwdns108628:0crwdne108628:0
   tutorial_codedj_longdescription: crwdns108629:0crwdne108629:0
   tutorial_rgadvan_longdescription: crwdns108630:0crwdne108630:0
@@ -2316,7 +2280,6 @@ in:
   tutorial_ifly_longdescription: crwdns109691:0crwdne109691:0
   tutorial_idowedo_longdescription: crwdns109692:0crwdne109692:0
   tutorial_diggindwarf_longdescription: crwdns109693:0crwdne109693:0
-  tutorial_rmedr_longdescription: crwdns109694:0crwdne109694:0
   tutorial_spheroit_longdescription: crwdns110264:0crwdne110264:0
   tutorial_gameofcodes_longdescription: crwdns110265:0crwdne110265:0
   tutorial_blocklygames_longdescription: crwdns110266:0crwdne110266:0
@@ -2327,7 +2290,6 @@ in:
   tutorial_bcjs1_longdescription: crwdns110271:0crwdne110271:0
   tutorial_bcjs2_longdescription: crwdns110272:0crwdne110272:0
   tutorial_3dbearmars_longdescription: crwdns328652:0crwdne328652:0
-  tutorial_alexaskill_longdescription: crwdns328654:0crwdne328654:0
   tutorial_bitsboxyak_longdescription: crwdns328656:0crwdne328656:0
   tutorial_blockscadbargraphs_longdescription: crwdns328658:0crwdne328658:0
   tutorial_blockscadbirdhouses_longdescription: crwdns328660:0crwdne328660:0
@@ -2384,7 +2346,6 @@ in:
   tutorial_codinismhero_longdescription: crwdns328762:0crwdne328762:0
   tutorial_discovery_longdescription: crwdns328764:0crwdne328764:0
   tutorial_csfirstname_longdescription: crwdns328766:0crwdne328766:0
-  tutorial_obstaclecourse_longdescription: crwdns328768:0crwdne328768:0
   tutorial_edisonmove_longdescription: crwdns328770:0crwdne328770:0
   tutorial_edisonspider_longdescription: crwdns328772:0crwdne328772:0
   tutorial_edisonspotlight_longdescription: crwdns328774:0crwdne328774:0
@@ -2705,7 +2666,6 @@ in:
   tutorial_ticklep_language: crwdns106003:0crwdne106003:0
   tutorial_bbot_language: crwdns106004:0crwdne106004:0
   tutorial_scratchg_language: crwdns106005:0crwdne106005:0
-  tutorial_roboticfriends_language: crwdns106006:0crwdne106006:0
   tutorial_sjforest_language: crwdns106007:0crwdne106007:0
   tutorial_sjgreet_language: crwdns106008:0crwdne106008:0
   tutorial_sjsunset_language: crwdns106009:0crwdne106009:0
@@ -2750,7 +2710,6 @@ in:
   tutorial_tickles_language: crwdns106048:0crwdne106048:0
   tutorial_ozogame_language: crwdns106049:0crwdne106049:0
   tutorial_vidcodeio_language: crwdns106050:0crwdne106050:0
-  tutorial_besttech_language: crwdns106051:0crwdne106051:0
   tutorial_tlcbrain_language: crwdns106052:0crwdne106052:0
   tutorial_hopquiz_language: crwdns106053:0crwdne106053:0
   tutorial_unfortunate_language: crwdns106054:0crwdne106054:0
@@ -2758,7 +2717,6 @@ in:
   tutorial_elaseq_language: crwdns106056:0crwdne106056:0
   tutorial_bbcmathi_language: crwdns106057:0crwdne106057:0
   tutorial_tlcpixel_language: crwdns106058:0crwdne106058:0
-  tutorial_arduino_language: crwdns106059:0crwdne106059:0
   tutorial_introrobo_language: crwdns106060:0crwdne106060:0
   tutorial_tlcinvis_language: crwdns106061:0crwdne106061:0
   tutorial_tlcjflap_language: crwdns106062:0crwdne106062:0
@@ -2778,7 +2736,6 @@ in:
   tutorial_tlcmind_language: crwdns106076:0crwdne106076:0
   tutorial_tlctelebot_language: crwdns106077:0crwdne106077:0
   tutorial_tlcaus_language: crwdns106078:0crwdne106078:0
-  tutorial_oralhist_language: crwdns106079:0crwdne106079:0
   tutorial_tlcmicro_language: crwdns106080:0crwdne106080:0
   tutorial_imathematician_language: crwdns106081:0crwdne106081:0
   tutorial_tlcmagic_language: crwdns106082:0crwdne106082:0
@@ -2792,7 +2749,6 @@ in:
   tutorial_tynkercan_language: crwdns106090:0crwdne106090:0
   tutorial_grokflags_language: crwdns106091:0crwdne106091:0
   tutorial_robomind_language: crwdns106092:0crwdne106092:0
-  tutorial_scratchanimwork_language: crwdns106093:0crwdne106093:0
   tutorial_adventureq_language: crwdns106094:0crwdne106094:0
   tutorial_khan-es_language: crwdns106095:0crwdne106095:0
   tutorial_kpt_language: crwdns106096:0crwdne106096:0
@@ -2800,13 +2756,11 @@ in:
   tutorial_khe_language: crwdns106098:0crwdne106098:0
   tutorial_kfr_language: crwdns106099:0crwdne106099:0
   tutorial_app-inventor_language: crwdns106100:0crwdne106100:0
-  tutorial_bits_language: crwdns106101:0crwdne106101:0
   tutorial_blockly_language: crwdns106102:0crwdne106102:0
   tutorial_tynker_language: crwdns106103:0crwdne106103:0
   tutorial_baypt_language: crwdns106104:0crwdne106104:0
   tutorial_code-combat_language: crwdns106105:0crwdne106105:0
   tutorial_mky_language: crwdns106106:0crwdne106106:0
-  tutorial_spellcraft_language: crwdns106107:0crwdne106107:0
   tutorial_pirates_language: crwdns106108:0crwdne106108:0
   tutorial_csfirst_language: crwdns106109:0crwdne106109:0
   tutorial_loopedy_language: crwdns106110:0crwdne106110:0
@@ -2863,7 +2817,6 @@ in:
   tutorial_soloweb_language: crwdns106161:0crwdne106161:0
   tutorial_khanweb_language: crwdns106163:0crwdne106163:0
   tutorial_khandata_language: crwdns106164:0crwdne106164:0
-  tutorial_robomeshiq_language: crwdns106165:0crwdne106165:0
   tutorial_googlelogo_language: crwdns108646:0crwdne108646:0
   tutorial_playtune_language: crwdns108647:0crwdne108647:0
   tutorial_computeit_language: crwdns108648:0crwdne108648:0
@@ -2922,7 +2875,6 @@ in:
   tutorial_stemcod_language: crwdns108701:0crwdne108701:0
   tutorial_techikb_language: crwdns108702:0crwdne108702:0
   tutorial_kanostreet_language: crwdns108703:0crwdne108703:0
-  tutorial_nyblebot_language: crwdns108704:0crwdne108704:0
   tutorial_codemojijs_language: crwdns108705:0crwdne108705:0
   tutorial_techapf_language: crwdns108707:0crwdne108707:0
   tutorial_techfpjs_language: crwdns108708:0crwdne108708:0
@@ -2938,7 +2890,6 @@ in:
   tutorial_gpbcircle_language: crwdns108721:0crwdne108721:0
   tutorial_gpbpaint_language: crwdns108722:0crwdne108722:0
   tutorial_cocomarcade_language: crwdns108723:0crwdne108723:0
-  tutorial_techcpp_language: crwdns108724:0crwdne108724:0
   tutorial_beetik_language: crwdns108725:0crwdne108725:0
   tutorial_codedj_language: crwdns108726:0crwdne108726:0
   tutorial_rgadvan_language: crwdns108727:0crwdne108727:0
@@ -3011,7 +2962,6 @@ in:
   tutorial_ifly_language: crwdns109745:0crwdne109745:0
   tutorial_idowedo_language: crwdns109746:0crwdne109746:0
   tutorial_diggindwarf_language: crwdns109747:0crwdne109747:0
-  tutorial_rmedr_language: crwdns109748:0crwdne109748:0
   tutorial_spheroit_language: crwdns110277:0crwdne110277:0
   tutorial_gameofcodes_language: crwdns110278:0crwdne110278:0
   tutorial_blocklygames_language: crwdns110279:0crwdne110279:0
@@ -3022,7 +2972,6 @@ in:
   tutorial_bcjs1_language: crwdns110284:0crwdne110284:0
   tutorial_bcjs2_language: crwdns110285:0crwdne110285:0
   tutorial_3dbearmars_language: crwdns328936:0crwdne328936:0
-  tutorial_alexaskill_language: crwdns328938:0crwdne328938:0
   tutorial_bitsboxyak_language: crwdns328940:0crwdne328940:0
   tutorial_blockscadbargraphs_language: crwdns328942:0crwdne328942:0
   tutorial_blockscadbirdhouses_language: crwdns328944:0crwdne328944:0
@@ -3079,7 +3028,6 @@ in:
   tutorial_codinismhero_language: crwdns329046:0crwdne329046:0
   tutorial_discovery_language: crwdns329048:0crwdne329048:0
   tutorial_csfirstname_language: crwdns329050:0crwdne329050:0
-  tutorial_obstaclecourse_language: crwdns329052:0crwdne329052:0
   tutorial_edisonmove_language: crwdns329054:0crwdne329054:0
   tutorial_edisonspider_language: crwdns329056:0crwdne329056:0
   tutorial_edisonspotlight_language: crwdns329058:0crwdne329058:0
@@ -3400,7 +3348,6 @@ in:
   tutorial_ticklep_string_detail_grades: crwdns106276:0crwdne106276:0
   tutorial_bbot_string_detail_grades: crwdns106277:0crwdne106277:0
   tutorial_scratchg_string_detail_grades: crwdns106278:0crwdne106278:0
-  tutorial_roboticfriends_string_detail_grades: crwdns106279:0crwdne106279:0
   tutorial_sjforest_string_detail_grades: crwdns106280:0crwdne106280:0
   tutorial_sjgreet_string_detail_grades: crwdns106281:0crwdne106281:0
   tutorial_sjsunset_string_detail_grades: crwdns106282:0crwdne106282:0
@@ -3445,7 +3392,6 @@ in:
   tutorial_tickles_string_detail_grades: crwdns106321:0crwdne106321:0
   tutorial_ozogame_string_detail_grades: crwdns106322:0crwdne106322:0
   tutorial_vidcodeio_string_detail_grades: crwdns106323:0crwdne106323:0
-  tutorial_besttech_string_detail_grades: crwdns106324:0crwdne106324:0
   tutorial_tlcbrain_string_detail_grades: crwdns106325:0crwdne106325:0
   tutorial_hopquiz_string_detail_grades: crwdns106326:0crwdne106326:0
   tutorial_unfortunate_string_detail_grades: crwdns106327:0crwdne106327:0
@@ -3453,7 +3399,6 @@ in:
   tutorial_elaseq_string_detail_grades: crwdns106329:0crwdne106329:0
   tutorial_bbcmathi_string_detail_grades: crwdns106330:0crwdne106330:0
   tutorial_tlcpixel_string_detail_grades: crwdns106331:0crwdne106331:0
-  tutorial_arduino_string_detail_grades: crwdns106332:0crwdne106332:0
   tutorial_introrobo_string_detail_grades: crwdns106333:0crwdne106333:0
   tutorial_tlcinvis_string_detail_grades: crwdns106334:0crwdne106334:0
   tutorial_tlcjflap_string_detail_grades: crwdns106335:0crwdne106335:0
@@ -3473,7 +3418,6 @@ in:
   tutorial_tlcmind_string_detail_grades: crwdns106349:0crwdne106349:0
   tutorial_tlctelebot_string_detail_grades: crwdns106350:0crwdne106350:0
   tutorial_tlcaus_string_detail_grades: crwdns106351:0crwdne106351:0
-  tutorial_oralhist_string_detail_grades: crwdns106352:0crwdne106352:0
   tutorial_tlcmicro_string_detail_grades: crwdns106353:0crwdne106353:0
   tutorial_imathematician_string_detail_grades: crwdns106354:0crwdne106354:0
   tutorial_tlcmagic_string_detail_grades: crwdns106355:0crwdne106355:0
@@ -3487,7 +3431,6 @@ in:
   tutorial_tynkercan_string_detail_grades: crwdns106363:0crwdne106363:0
   tutorial_grokflags_string_detail_grades: crwdns106364:0crwdne106364:0
   tutorial_robomind_string_detail_grades: crwdns106365:0crwdne106365:0
-  tutorial_scratchanimwork_string_detail_grades: crwdns106366:0crwdne106366:0
   tutorial_adventureq_string_detail_grades: crwdns106367:0crwdne106367:0
   tutorial_khan-es_string_detail_grades: crwdns106368:0crwdne106368:0
   tutorial_kpt_string_detail_grades: crwdns106369:0crwdne106369:0
@@ -3495,13 +3438,11 @@ in:
   tutorial_khe_string_detail_grades: crwdns106371:0crwdne106371:0
   tutorial_kfr_string_detail_grades: crwdns106372:0crwdne106372:0
   tutorial_app-inventor_string_detail_grades: crwdns106373:0crwdne106373:0
-  tutorial_bits_string_detail_grades: crwdns106374:0crwdne106374:0
   tutorial_blockly_string_detail_grades: crwdns106375:0crwdne106375:0
   tutorial_tynker_string_detail_grades: crwdns106376:0crwdne106376:0
   tutorial_baypt_string_detail_grades: crwdns106377:0crwdne106377:0
   tutorial_code-combat_string_detail_grades: crwdns106378:0crwdne106378:0
   tutorial_mky_string_detail_grades: crwdns106379:0crwdne106379:0
-  tutorial_spellcraft_string_detail_grades: crwdns106380:0crwdne106380:0
   tutorial_pirates_string_detail_grades: crwdns106381:0crwdne106381:0
   tutorial_csfirst_string_detail_grades: crwdns106382:0crwdne106382:0
   tutorial_loopedy_string_detail_grades: crwdns106383:0crwdne106383:0
@@ -3558,7 +3499,6 @@ in:
   tutorial_soloweb_string_detail_grades: crwdns106434:0crwdne106434:0
   tutorial_khanweb_string_detail_grades: crwdns106436:0crwdne106436:0
   tutorial_khandata_string_detail_grades: crwdns106437:0crwdne106437:0
-  tutorial_robomeshiq_string_detail_grades: crwdns106438:0crwdne106438:0
   tutorial_googlelogo_string_detail_grades: crwdns108743:0crwdne108743:0
   tutorial_playtune_string_detail_grades: crwdns108744:0crwdne108744:0
   tutorial_computeit_string_detail_grades: crwdns108745:0crwdne108745:0
@@ -3617,7 +3557,6 @@ in:
   tutorial_stemcod_string_detail_grades: crwdns108798:0crwdne108798:0
   tutorial_techikb_string_detail_grades: crwdns108799:0crwdne108799:0
   tutorial_kanostreet_string_detail_grades: crwdns108800:0crwdne108800:0
-  tutorial_nyblebot_string_detail_grades: crwdns108801:0crwdne108801:0
   tutorial_codemojijs_string_detail_grades: crwdns108802:0crwdne108802:0
   tutorial_techapf_string_detail_grades: crwdns108804:0crwdne108804:0
   tutorial_techfpjs_string_detail_grades: crwdns108805:0crwdne108805:0
@@ -3633,7 +3572,6 @@ in:
   tutorial_gpbcircle_string_detail_grades: crwdns108818:0crwdne108818:0
   tutorial_gpbpaint_string_detail_grades: crwdns108819:0crwdne108819:0
   tutorial_cocomarcade_string_detail_grades: crwdns108820:0crwdne108820:0
-  tutorial_techcpp_string_detail_grades: crwdns108821:0crwdne108821:0
   tutorial_beetik_string_detail_grades: crwdns108822:0crwdne108822:0
   tutorial_codedj_string_detail_grades: crwdns108823:0crwdne108823:0
   tutorial_rgadvan_string_detail_grades: crwdns108824:0crwdne108824:0
@@ -3706,7 +3644,6 @@ in:
   tutorial_ifly_string_detail_grades: crwdns109799:0crwdne109799:0
   tutorial_idowedo_string_detail_grades: crwdns109800:0crwdne109800:0
   tutorial_diggindwarf_string_detail_grades: crwdns109801:0crwdne109801:0
-  tutorial_rmedr_string_detail_grades: crwdns109802:0crwdne109802:0
   tutorial_spheroit_string_detail_grades: crwdns110290:0crwdne110290:0
   tutorial_gameofcodes_string_detail_grades: crwdns110291:0crwdne110291:0
   tutorial_blocklygames_string_detail_grades: crwdns110292:0crwdne110292:0
@@ -3717,7 +3654,6 @@ in:
   tutorial_bcjs1_string_detail_grades: crwdns110297:0crwdne110297:0
   tutorial_bcjs2_string_detail_grades: crwdns110298:0crwdne110298:0
   tutorial_3dbearmars_string_detail_grades: crwdns329220:0crwdne329220:0
-  tutorial_alexaskill_string_detail_grades: crwdns329222:0crwdne329222:0
   tutorial_bitsboxyak_string_detail_grades: crwdns329224:0crwdne329224:0
   tutorial_blockscadbargraphs_string_detail_grades: crwdns329226:0crwdne329226:0
   tutorial_blockscadbirdhouses_string_detail_grades: crwdns329228:0crwdne329228:0
@@ -3774,7 +3710,6 @@ in:
   tutorial_codinismhero_string_detail_grades: crwdns329330:0crwdne329330:0
   tutorial_discovery_string_detail_grades: crwdns329332:0crwdne329332:0
   tutorial_csfirstname_string_detail_grades: crwdns329334:0crwdne329334:0
-  tutorial_obstaclecourse_string_detail_grades: crwdns329336:0crwdne329336:0
   tutorial_edisonmove_string_detail_grades: crwdns329338:0crwdne329338:0
   tutorial_edisonspider_string_detail_grades: crwdns329340:0crwdne329340:0
   tutorial_edisonspotlight_string_detail_grades: crwdns329342:0crwdne329342:0
@@ -4095,7 +4030,6 @@ in:
   tutorial_ticklep_string_platforms: crwdns106549:0crwdne106549:0
   tutorial_bbot_string_platforms: crwdns106550:0crwdne106550:0
   tutorial_scratchg_string_platforms: crwdns106551:0crwdne106551:0
-  tutorial_roboticfriends_string_platforms: crwdns106552:0crwdne106552:0
   tutorial_sjforest_string_platforms: crwdns106553:0crwdne106553:0
   tutorial_sjgreet_string_platforms: crwdns106554:0crwdne106554:0
   tutorial_sjsunset_string_platforms: crwdns106555:0crwdne106555:0
@@ -4140,7 +4074,6 @@ in:
   tutorial_tickles_string_platforms: crwdns106594:0crwdne106594:0
   tutorial_ozogame_string_platforms: crwdns106595:0crwdne106595:0
   tutorial_vidcodeio_string_platforms: crwdns106596:0crwdne106596:0
-  tutorial_besttech_string_platforms: crwdns106597:0crwdne106597:0
   tutorial_tlcbrain_string_platforms: crwdns106598:0crwdne106598:0
   tutorial_hopquiz_string_platforms: crwdns106599:0crwdne106599:0
   tutorial_unfortunate_string_platforms: crwdns106600:0crwdne106600:0
@@ -4148,7 +4081,6 @@ in:
   tutorial_elaseq_string_platforms: crwdns106602:0crwdne106602:0
   tutorial_bbcmathi_string_platforms: crwdns106603:0crwdne106603:0
   tutorial_tlcpixel_string_platforms: crwdns106604:0crwdne106604:0
-  tutorial_arduino_string_platforms: crwdns106605:0crwdne106605:0
   tutorial_introrobo_string_platforms: crwdns106606:0crwdne106606:0
   tutorial_tlcinvis_string_platforms: crwdns106607:0crwdne106607:0
   tutorial_tlcjflap_string_platforms: crwdns106608:0crwdne106608:0
@@ -4168,7 +4100,6 @@ in:
   tutorial_tlcmind_string_platforms: crwdns106622:0crwdne106622:0
   tutorial_tlctelebot_string_platforms: crwdns106623:0crwdne106623:0
   tutorial_tlcaus_string_platforms: crwdns106624:0crwdne106624:0
-  tutorial_oralhist_string_platforms: crwdns106625:0crwdne106625:0
   tutorial_tlcmicro_string_platforms: crwdns106626:0crwdne106626:0
   tutorial_imathematician_string_platforms: crwdns106627:0crwdne106627:0
   tutorial_tlcmagic_string_platforms: crwdns106628:0crwdne106628:0
@@ -4182,7 +4113,6 @@ in:
   tutorial_tynkercan_string_platforms: crwdns106636:0crwdne106636:0
   tutorial_grokflags_string_platforms: crwdns106637:0crwdne106637:0
   tutorial_robomind_string_platforms: crwdns106638:0crwdne106638:0
-  tutorial_scratchanimwork_string_platforms: crwdns106639:0crwdne106639:0
   tutorial_adventureq_string_platforms: crwdns106640:0crwdne106640:0
   tutorial_khan-es_string_platforms: crwdns106641:0crwdne106641:0
   tutorial_kpt_string_platforms: crwdns106642:0crwdne106642:0
@@ -4190,13 +4120,11 @@ in:
   tutorial_khe_string_platforms: crwdns106644:0crwdne106644:0
   tutorial_kfr_string_platforms: crwdns106645:0crwdne106645:0
   tutorial_app-inventor_string_platforms: crwdns106646:0crwdne106646:0
-  tutorial_bits_string_platforms: crwdns106647:0crwdne106647:0
   tutorial_blockly_string_platforms: crwdns106648:0crwdne106648:0
   tutorial_tynker_string_platforms: crwdns106649:0crwdne106649:0
   tutorial_baypt_string_platforms: crwdns106650:0crwdne106650:0
   tutorial_code-combat_string_platforms: crwdns106651:0crwdne106651:0
   tutorial_mky_string_platforms: crwdns106652:0crwdne106652:0
-  tutorial_spellcraft_string_platforms: crwdns106653:0crwdne106653:0
   tutorial_pirates_string_platforms: crwdns106654:0crwdne106654:0
   tutorial_csfirst_string_platforms: crwdns106655:0crwdne106655:0
   tutorial_loopedy_string_platforms: crwdns106656:0crwdne106656:0
@@ -4253,7 +4181,6 @@ in:
   tutorial_soloweb_string_platforms: crwdns106707:0crwdne106707:0
   tutorial_khanweb_string_platforms: crwdns106709:0crwdne106709:0
   tutorial_khandata_string_platforms: crwdns106710:0crwdne106710:0
-  tutorial_robomeshiq_string_platforms: crwdns106711:0crwdne106711:0
   tutorial_googlelogo_string_platforms: crwdns108840:0crwdne108840:0
   tutorial_playtune_string_platforms: crwdns108841:0crwdne108841:0
   tutorial_computeit_string_platforms: crwdns108842:0crwdne108842:0
@@ -4312,7 +4239,6 @@ in:
   tutorial_stemcod_string_platforms: crwdns108895:0crwdne108895:0
   tutorial_techikb_string_platforms: crwdns108896:0crwdne108896:0
   tutorial_kanostreet_string_platforms: crwdns108897:0crwdne108897:0
-  tutorial_nyblebot_string_platforms: crwdns108898:0crwdne108898:0
   tutorial_codemojijs_string_platforms: crwdns108899:0crwdne108899:0
   tutorial_techapf_string_platforms: crwdns108901:0crwdne108901:0
   tutorial_techfpjs_string_platforms: crwdns108902:0crwdne108902:0
@@ -4328,7 +4254,6 @@ in:
   tutorial_gpbcircle_string_platforms: crwdns108915:0crwdne108915:0
   tutorial_gpbpaint_string_platforms: crwdns108916:0crwdne108916:0
   tutorial_cocomarcade_string_platforms: crwdns108917:0crwdne108917:0
-  tutorial_techcpp_string_platforms: crwdns108918:0crwdne108918:0
   tutorial_beetik_string_platforms: crwdns108919:0crwdne108919:0
   tutorial_codedj_string_platforms: crwdns108920:0crwdne108920:0
   tutorial_rgadvan_string_platforms: crwdns108921:0crwdne108921:0
@@ -4401,7 +4326,6 @@ in:
   tutorial_ifly_string_platforms: crwdns109853:0crwdne109853:0
   tutorial_idowedo_string_platforms: crwdns109854:0crwdne109854:0
   tutorial_diggindwarf_string_platforms: crwdns109855:0crwdne109855:0
-  tutorial_rmedr_string_platforms: crwdns109856:0crwdne109856:0
   tutorial_spheroit_string_platforms: crwdns110303:0crwdne110303:0
   tutorial_gameofcodes_string_platforms: crwdns110304:0crwdne110304:0
   tutorial_blocklygames_string_platforms: crwdns110305:0crwdne110305:0
@@ -4412,7 +4336,6 @@ in:
   tutorial_bcjs1_string_platforms: crwdns110310:0crwdne110310:0
   tutorial_bcjs2_string_platforms: crwdns110311:0crwdne110311:0
   tutorial_3dbearmars_string_platforms: crwdns329504:0crwdne329504:0
-  tutorial_alexaskill_string_platforms: crwdns329506:0crwdne329506:0
   tutorial_bitsboxyak_string_platforms: crwdns329508:0crwdne329508:0
   tutorial_blockscadbargraphs_string_platforms: crwdns329510:0crwdne329510:0
   tutorial_blockscadbirdhouses_string_platforms: crwdns329512:0crwdne329512:0
@@ -4469,7 +4392,6 @@ in:
   tutorial_codinismhero_string_platforms: crwdns329614:0crwdne329614:0
   tutorial_discovery_string_platforms: crwdns329616:0crwdne329616:0
   tutorial_csfirstname_string_platforms: crwdns329618:0crwdne329618:0
-  tutorial_obstaclecourse_string_platforms: crwdns329620:0crwdne329620:0
   tutorial_edisonmove_string_platforms: crwdns329622:0crwdne329622:0
   tutorial_edisonspider_string_platforms: crwdns329624:0crwdne329624:0
   tutorial_edisonspotlight_string_platforms: crwdns329626:0crwdne329626:0
@@ -4790,7 +4712,6 @@ in:
   tutorial_ticklep_string_detail_platforms: crwdns106822:0crwdne106822:0
   tutorial_bbot_string_detail_platforms: crwdns106823:0crwdne106823:0
   tutorial_scratchg_string_detail_platforms: crwdns106824:0crwdne106824:0
-  tutorial_roboticfriends_string_detail_platforms: crwdns106825:0crwdne106825:0
   tutorial_sjforest_string_detail_platforms: crwdns106826:0crwdne106826:0
   tutorial_sjgreet_string_detail_platforms: crwdns106827:0crwdne106827:0
   tutorial_sjsunset_string_detail_platforms: crwdns106828:0crwdne106828:0
@@ -4835,7 +4756,6 @@ in:
   tutorial_tickles_string_detail_platforms: crwdns106867:0crwdne106867:0
   tutorial_ozogame_string_detail_platforms: crwdns106868:0crwdne106868:0
   tutorial_vidcodeio_string_detail_platforms: crwdns106869:0crwdne106869:0
-  tutorial_besttech_string_detail_platforms: crwdns106870:0crwdne106870:0
   tutorial_tlcbrain_string_detail_platforms: crwdns106871:0crwdne106871:0
   tutorial_hopquiz_string_detail_platforms: crwdns106872:0crwdne106872:0
   tutorial_unfortunate_string_detail_platforms: crwdns106873:0crwdne106873:0
@@ -4843,7 +4763,6 @@ in:
   tutorial_elaseq_string_detail_platforms: crwdns106875:0crwdne106875:0
   tutorial_bbcmathi_string_detail_platforms: crwdns106876:0crwdne106876:0
   tutorial_tlcpixel_string_detail_platforms: crwdns106877:0crwdne106877:0
-  tutorial_arduino_string_detail_platforms: crwdns106878:0crwdne106878:0
   tutorial_introrobo_string_detail_platforms: crwdns106879:0crwdne106879:0
   tutorial_tlcinvis_string_detail_platforms: crwdns106880:0crwdne106880:0
   tutorial_tlcjflap_string_detail_platforms: crwdns106881:0crwdne106881:0
@@ -4863,7 +4782,6 @@ in:
   tutorial_tlcmind_string_detail_platforms: crwdns106895:0crwdne106895:0
   tutorial_tlctelebot_string_detail_platforms: crwdns106896:0crwdne106896:0
   tutorial_tlcaus_string_detail_platforms: crwdns106897:0crwdne106897:0
-  tutorial_oralhist_string_detail_platforms: crwdns106898:0crwdne106898:0
   tutorial_tlcmicro_string_detail_platforms: crwdns106899:0crwdne106899:0
   tutorial_imathematician_string_detail_platforms: crwdns106900:0crwdne106900:0
   tutorial_tlcmagic_string_detail_platforms: crwdns106901:0crwdne106901:0
@@ -4877,7 +4795,6 @@ in:
   tutorial_tynkercan_string_detail_platforms: crwdns106909:0crwdne106909:0
   tutorial_grokflags_string_detail_platforms: crwdns106910:0crwdne106910:0
   tutorial_robomind_string_detail_platforms: crwdns106911:0crwdne106911:0
-  tutorial_scratchanimwork_string_detail_platforms: crwdns106912:0crwdne106912:0
   tutorial_adventureq_string_detail_platforms: crwdns106913:0crwdne106913:0
   tutorial_khan-es_string_detail_platforms: crwdns106914:0crwdne106914:0
   tutorial_kpt_string_detail_platforms: crwdns106915:0crwdne106915:0
@@ -4885,13 +4802,11 @@ in:
   tutorial_khe_string_detail_platforms: crwdns106917:0crwdne106917:0
   tutorial_kfr_string_detail_platforms: crwdns106918:0crwdne106918:0
   tutorial_app-inventor_string_detail_platforms: crwdns106919:0crwdne106919:0
-  tutorial_bits_string_detail_platforms: crwdns106920:0crwdne106920:0
   tutorial_blockly_string_detail_platforms: crwdns106921:0crwdne106921:0
   tutorial_tynker_string_detail_platforms: crwdns106922:0crwdne106922:0
   tutorial_baypt_string_detail_platforms: crwdns106923:0crwdne106923:0
   tutorial_code-combat_string_detail_platforms: crwdns106924:0crwdne106924:0
   tutorial_mky_string_detail_platforms: crwdns106925:0crwdne106925:0
-  tutorial_spellcraft_string_detail_platforms: crwdns106926:0crwdne106926:0
   tutorial_pirates_string_detail_platforms: crwdns106927:0crwdne106927:0
   tutorial_csfirst_string_detail_platforms: crwdns106928:0crwdne106928:0
   tutorial_loopedy_string_detail_platforms: crwdns106929:0crwdne106929:0
@@ -4948,7 +4863,6 @@ in:
   tutorial_soloweb_string_detail_platforms: crwdns106980:0crwdne106980:0
   tutorial_khanweb_string_detail_platforms: crwdns106982:0crwdne106982:0
   tutorial_khandata_string_detail_platforms: crwdns106983:0crwdne106983:0
-  tutorial_robomeshiq_string_detail_platforms: crwdns106984:0crwdne106984:0
   tutorial_googlelogo_string_detail_platforms: crwdns108937:0crwdne108937:0
   tutorial_playtune_string_detail_platforms: crwdns108938:0crwdne108938:0
   tutorial_computeit_string_detail_platforms: crwdns108939:0crwdne108939:0
@@ -5007,7 +4921,6 @@ in:
   tutorial_stemcod_string_detail_platforms: crwdns108992:0crwdne108992:0
   tutorial_techikb_string_detail_platforms: crwdns108993:0crwdne108993:0
   tutorial_kanostreet_string_detail_platforms: crwdns108994:0crwdne108994:0
-  tutorial_nyblebot_string_detail_platforms: crwdns108995:0crwdne108995:0
   tutorial_codemojijs_string_detail_platforms: crwdns108996:0crwdne108996:0
   tutorial_techapf_string_detail_platforms: crwdns108998:0crwdne108998:0
   tutorial_techfpjs_string_detail_platforms: crwdns108999:0crwdne108999:0
@@ -5023,7 +4936,6 @@ in:
   tutorial_gpbcircle_string_detail_platforms: crwdns109012:0crwdne109012:0
   tutorial_gpbpaint_string_detail_platforms: crwdns109013:0crwdne109013:0
   tutorial_cocomarcade_string_detail_platforms: crwdns109014:0crwdne109014:0
-  tutorial_techcpp_string_detail_platforms: crwdns109015:0crwdne109015:0
   tutorial_beetik_string_detail_platforms: crwdns109016:0crwdne109016:0
   tutorial_codedj_string_detail_platforms: crwdns109017:0crwdne109017:0
   tutorial_rgadvan_string_detail_platforms: crwdns109018:0crwdne109018:0
@@ -5096,7 +5008,6 @@ in:
   tutorial_ifly_string_detail_platforms: crwdns109907:0crwdne109907:0
   tutorial_idowedo_string_detail_platforms: crwdns109908:0crwdne109908:0
   tutorial_diggindwarf_string_detail_platforms: crwdns109909:0crwdne109909:0
-  tutorial_rmedr_string_detail_platforms: crwdns109910:0crwdne109910:0
   tutorial_spheroit_string_detail_platforms: crwdns110316:0crwdne110316:0
   tutorial_gameofcodes_string_detail_platforms: crwdns110317:0crwdne110317:0
   tutorial_blocklygames_string_detail_platforms: crwdns110318:0crwdne110318:0
@@ -5107,7 +5018,6 @@ in:
   tutorial_bcjs1_string_detail_platforms: crwdns110323:0crwdne110323:0
   tutorial_bcjs2_string_detail_platforms: crwdns110324:0crwdne110324:0
   tutorial_3dbearmars_string_detail_platforms: crwdns329788:0crwdne329788:0
-  tutorial_alexaskill_string_detail_platforms: crwdns329790:0crwdne329790:0
   tutorial_bitsboxyak_string_detail_platforms: crwdns329792:0crwdne329792:0
   tutorial_blockscadbargraphs_string_detail_platforms: crwdns329794:0crwdne329794:0
   tutorial_blockscadbirdhouses_string_detail_platforms: crwdns329796:0crwdne329796:0
@@ -5164,7 +5074,6 @@ in:
   tutorial_codinismhero_string_detail_platforms: crwdns329898:0crwdne329898:0
   tutorial_discovery_string_detail_platforms: crwdns329900:0crwdne329900:0
   tutorial_csfirstname_string_detail_platforms: crwdns329902:0crwdne329902:0
-  tutorial_obstaclecourse_string_detail_platforms: crwdns329904:0crwdne329904:0
   tutorial_edisonmove_string_detail_platforms: crwdns329906:0crwdne329906:0
   tutorial_edisonspider_string_detail_platforms: crwdns329908:0crwdne329908:0
   tutorial_edisonspotlight_string_detail_platforms: crwdns329910:0crwdne329910:0
@@ -5485,7 +5394,6 @@ in:
   tutorial_ticklep_string_detail_programming_languages: crwdns107095:0crwdne107095:0
   tutorial_bbot_string_detail_programming_languages: crwdns107096:0crwdne107096:0
   tutorial_scratchg_string_detail_programming_languages: crwdns107097:0crwdne107097:0
-  tutorial_roboticfriends_string_detail_programming_languages: crwdns107098:0crwdne107098:0
   tutorial_sjforest_string_detail_programming_languages: crwdns107099:0crwdne107099:0
   tutorial_sjgreet_string_detail_programming_languages: crwdns107100:0crwdne107100:0
   tutorial_sjsunset_string_detail_programming_languages: crwdns107101:0crwdne107101:0
@@ -5530,7 +5438,6 @@ in:
   tutorial_tickles_string_detail_programming_languages: crwdns107140:0crwdne107140:0
   tutorial_ozogame_string_detail_programming_languages: crwdns107141:0crwdne107141:0
   tutorial_vidcodeio_string_detail_programming_languages: crwdns107142:0crwdne107142:0
-  tutorial_besttech_string_detail_programming_languages: crwdns107143:0crwdne107143:0
   tutorial_tlcbrain_string_detail_programming_languages: crwdns107144:0crwdne107144:0
   tutorial_hopquiz_string_detail_programming_languages: crwdns107145:0crwdne107145:0
   tutorial_unfortunate_string_detail_programming_languages: crwdns107146:0crwdne107146:0
@@ -5538,7 +5445,6 @@ in:
   tutorial_elaseq_string_detail_programming_languages: crwdns107148:0crwdne107148:0
   tutorial_bbcmathi_string_detail_programming_languages: crwdns107149:0crwdne107149:0
   tutorial_tlcpixel_string_detail_programming_languages: crwdns107150:0crwdne107150:0
-  tutorial_arduino_string_detail_programming_languages: crwdns107151:0crwdne107151:0
   tutorial_introrobo_string_detail_programming_languages: crwdns107152:0crwdne107152:0
   tutorial_tlcinvis_string_detail_programming_languages: crwdns107153:0crwdne107153:0
   tutorial_tlcjflap_string_detail_programming_languages: crwdns107154:0crwdne107154:0
@@ -5558,7 +5464,6 @@ in:
   tutorial_tlcmind_string_detail_programming_languages: crwdns107168:0crwdne107168:0
   tutorial_tlctelebot_string_detail_programming_languages: crwdns107169:0crwdne107169:0
   tutorial_tlcaus_string_detail_programming_languages: crwdns107170:0crwdne107170:0
-  tutorial_oralhist_string_detail_programming_languages: crwdns107171:0crwdne107171:0
   tutorial_tlcmicro_string_detail_programming_languages: crwdns107172:0crwdne107172:0
   tutorial_imathematician_string_detail_programming_languages: crwdns107173:0crwdne107173:0
   tutorial_tlcmagic_string_detail_programming_languages: crwdns107174:0crwdne107174:0
@@ -5572,7 +5477,6 @@ in:
   tutorial_tynkercan_string_detail_programming_languages: crwdns107182:0crwdne107182:0
   tutorial_grokflags_string_detail_programming_languages: crwdns107183:0crwdne107183:0
   tutorial_robomind_string_detail_programming_languages: crwdns107184:0crwdne107184:0
-  tutorial_scratchanimwork_string_detail_programming_languages: crwdns107185:0crwdne107185:0
   tutorial_adventureq_string_detail_programming_languages: crwdns107186:0crwdne107186:0
   tutorial_khan-es_string_detail_programming_languages: crwdns107187:0crwdne107187:0
   tutorial_kpt_string_detail_programming_languages: crwdns107188:0crwdne107188:0
@@ -5580,13 +5484,11 @@ in:
   tutorial_khe_string_detail_programming_languages: crwdns107190:0crwdne107190:0
   tutorial_kfr_string_detail_programming_languages: crwdns107191:0crwdne107191:0
   tutorial_app-inventor_string_detail_programming_languages: crwdns107192:0crwdne107192:0
-  tutorial_bits_string_detail_programming_languages: crwdns107193:0crwdne107193:0
   tutorial_blockly_string_detail_programming_languages: crwdns107194:0crwdne107194:0
   tutorial_tynker_string_detail_programming_languages: crwdns107195:0crwdne107195:0
   tutorial_baypt_string_detail_programming_languages: crwdns107196:0crwdne107196:0
   tutorial_code-combat_string_detail_programming_languages: crwdns107197:0crwdne107197:0
   tutorial_mky_string_detail_programming_languages: crwdns107198:0crwdne107198:0
-  tutorial_spellcraft_string_detail_programming_languages: crwdns107199:0crwdne107199:0
   tutorial_pirates_string_detail_programming_languages: crwdns107200:0crwdne107200:0
   tutorial_csfirst_string_detail_programming_languages: crwdns107201:0crwdne107201:0
   tutorial_loopedy_string_detail_programming_languages: crwdns107202:0crwdne107202:0
@@ -5643,7 +5545,6 @@ in:
   tutorial_soloweb_string_detail_programming_languages: crwdns107253:0crwdne107253:0
   tutorial_khanweb_string_detail_programming_languages: crwdns107255:0crwdne107255:0
   tutorial_khandata_string_detail_programming_languages: crwdns107256:0crwdne107256:0
-  tutorial_robomeshiq_string_detail_programming_languages: crwdns107257:0crwdne107257:0
   tutorial_googlelogo_string_detail_programming_languages: crwdns109034:0crwdne109034:0
   tutorial_playtune_string_detail_programming_languages: crwdns109035:0crwdne109035:0
   tutorial_computeit_string_detail_programming_languages: crwdns109036:0crwdne109036:0
@@ -5702,7 +5603,6 @@ in:
   tutorial_stemcod_string_detail_programming_languages: crwdns109089:0crwdne109089:0
   tutorial_techikb_string_detail_programming_languages: crwdns109090:0crwdne109090:0
   tutorial_kanostreet_string_detail_programming_languages: crwdns109091:0crwdne109091:0
-  tutorial_nyblebot_string_detail_programming_languages: crwdns109092:0crwdne109092:0
   tutorial_codemojijs_string_detail_programming_languages: crwdns109093:0crwdne109093:0
   tutorial_techapf_string_detail_programming_languages: crwdns109095:0crwdne109095:0
   tutorial_techfpjs_string_detail_programming_languages: crwdns109096:0crwdne109096:0
@@ -5718,7 +5618,6 @@ in:
   tutorial_gpbcircle_string_detail_programming_languages: crwdns109109:0crwdne109109:0
   tutorial_gpbpaint_string_detail_programming_languages: crwdns109110:0crwdne109110:0
   tutorial_cocomarcade_string_detail_programming_languages: crwdns109111:0crwdne109111:0
-  tutorial_techcpp_string_detail_programming_languages: crwdns109112:0crwdne109112:0
   tutorial_beetik_string_detail_programming_languages: crwdns109113:0crwdne109113:0
   tutorial_codedj_string_detail_programming_languages: crwdns109114:0crwdne109114:0
   tutorial_rgadvan_string_detail_programming_languages: crwdns109115:0crwdne109115:0
@@ -5791,7 +5690,6 @@ in:
   tutorial_ifly_string_detail_programming_languages: crwdns109961:0crwdne109961:0
   tutorial_idowedo_string_detail_programming_languages: crwdns109962:0crwdne109962:0
   tutorial_diggindwarf_string_detail_programming_languages: crwdns109963:0crwdne109963:0
-  tutorial_rmedr_string_detail_programming_languages: crwdns109964:0crwdne109964:0
   tutorial_spheroit_string_detail_programming_languages: crwdns110329:0crwdne110329:0
   tutorial_gameofcodes_string_detail_programming_languages: crwdns110330:0crwdne110330:0
   tutorial_blocklygames_string_detail_programming_languages: crwdns110331:0crwdne110331:0
@@ -5802,7 +5700,6 @@ in:
   tutorial_bcjs1_string_detail_programming_languages: crwdns110336:0crwdne110336:0
   tutorial_bcjs2_string_detail_programming_languages: crwdns110337:0crwdne110337:0
   tutorial_3dbearmars_string_detail_programming_languages: crwdns330072:0crwdne330072:0
-  tutorial_alexaskill_string_detail_programming_languages: crwdns330074:0crwdne330074:0
   tutorial_bitsboxyak_string_detail_programming_languages: crwdns330076:0crwdne330076:0
   tutorial_blockscadbargraphs_string_detail_programming_languages: crwdns330078:0crwdne330078:0
   tutorial_blockscadbirdhouses_string_detail_programming_languages: crwdns330080:0crwdne330080:0
@@ -5859,7 +5756,6 @@ in:
   tutorial_codinismhero_string_detail_programming_languages: crwdns330182:0crwdne330182:0
   tutorial_discovery_string_detail_programming_languages: crwdns330184:0crwdne330184:0
   tutorial_csfirstname_string_detail_programming_languages: crwdns330186:0crwdne330186:0
-  tutorial_obstaclecourse_string_detail_programming_languages: crwdns330188:0crwdne330188:0
   tutorial_edisonmove_string_detail_programming_languages: crwdns330190:0crwdne330190:0
   tutorial_edisonspider_string_detail_programming_languages: crwdns330192:0crwdne330192:0
   tutorial_edisonspotlight_string_detail_programming_languages: crwdns330194:0crwdne330194:0
@@ -6139,7 +6035,6 @@ in:
   tutorial_eddesign_name: crwdns2067670:0crwdne2067670:0
   tutorial_edshapeup_name: crwdns2067672:0crwdne2067672:0
   tutorial_ozocolor_name: crwdns2067674:0crwdne2067674:0
-  tutorial_kcjanimals_name: crwdns2067676:0crwdne2067676:0
   tutorial_icomputeeggs_name: crwdns2067678:0crwdne2067678:0
   tutorial_rootunplugged_name: crwdns2067680:0crwdne2067680:0
   tutorial_rgtreasure_name: crwdns2067682:0crwdne2067682:0
@@ -6155,13 +6050,11 @@ in:
   tutorial_blockscadscale_name: crwdns2067702:0crwdne2067702:0
   tutorial_tcadloops_name: crwdns2067704:0crwdne2067704:0
   tutorial_phidgets_name: crwdns2067706:0crwdne2067706:0
-  tutorial_kcjmerry_name: crwdns2067708:0crwdne2067708:0
   tutorial_modvariables_name: crwdns2067710:0crwdne2067710:0
   tutorial_codestersmicro_name: crwdns2067712:0crwdne2067712:0
   tutorial_codestersdata_name: crwdns2067714:0crwdne2067714:0
   tutorial_ikodexmas_name: crwdns2067716:0crwdne2067716:0
   tutorial_rpisensehat_name: crwdns2067718:0crwdne2067718:0
-  tutorial_modtraits_name: crwdns2067720:0crwdne2067720:0
   tutorial_mee_name: crwdns2071332:0crwdne2071332:0
   tutorial_kuborobo_name: crwdns2071370:0crwdne2071370:0
   tutorial_ai-oceans_name: crwdns2289981:0crwdne2289981:0
@@ -6238,7 +6131,6 @@ in:
   tutorial_eddesign_longdescription: crwdns2067862:0crwdne2067862:0
   tutorial_edshapeup_longdescription: crwdns2067864:0crwdne2067864:0
   tutorial_ozocolor_longdescription: crwdns2067866:0crwdne2067866:0
-  tutorial_kcjanimals_longdescription: crwdns2067868:0crwdne2067868:0
   tutorial_icomputeeggs_longdescription: crwdns2067870:0crwdne2067870:0
   tutorial_rootunplugged_longdescription: crwdns2067872:0crwdne2067872:0
   tutorial_rgtreasure_longdescription: crwdns2067874:0crwdne2067874:0
@@ -6254,13 +6146,11 @@ in:
   tutorial_blockscadscale_longdescription: crwdns2067894:0crwdne2067894:0
   tutorial_tcadloops_longdescription: crwdns2067896:0crwdne2067896:0
   tutorial_phidgets_longdescription: crwdns2067898:0crwdne2067898:0
-  tutorial_kcjmerry_longdescription: crwdns2067900:0crwdne2067900:0
   tutorial_modvariables_longdescription: crwdns2067902:0crwdne2067902:0
   tutorial_codestersmicro_longdescription: crwdns2067904:0crwdne2067904:0
   tutorial_codestersdata_longdescription: crwdns2067906:0crwdne2067906:0
   tutorial_ikodexmas_longdescription: crwdns2067908:0crwdne2067908:0
   tutorial_rpisensehat_longdescription: crwdns2067910:0crwdne2067910:0
-  tutorial_modtraits_longdescription: crwdns2067912:0crwdne2067912:0
   tutorial_mee_longdescription: crwdns2071334:0crwdne2071334:0
   tutorial_kuborobo_longdescription: crwdns2071372:0crwdne2071372:0
   tutorial_ai-oceans_longdescription: crwdns2289983:0crwdne2289983:0
@@ -6337,7 +6227,6 @@ in:
   tutorial_eddesign_language: crwdns2068054:0crwdne2068054:0
   tutorial_edshapeup_language: crwdns2068056:0crwdne2068056:0
   tutorial_ozocolor_language: crwdns2068058:0crwdne2068058:0
-  tutorial_kcjanimals_language: crwdns2068060:0crwdne2068060:0
   tutorial_icomputeeggs_language: crwdns2068062:0crwdne2068062:0
   tutorial_rootunplugged_language: crwdns2068064:0crwdne2068064:0
   tutorial_rgtreasure_language: crwdns2068066:0crwdne2068066:0
@@ -6353,13 +6242,11 @@ in:
   tutorial_blockscadscale_language: crwdns2068086:0crwdne2068086:0
   tutorial_tcadloops_language: crwdns2068088:0crwdne2068088:0
   tutorial_phidgets_language: crwdns2068090:0crwdne2068090:0
-  tutorial_kcjmerry_language: crwdns2068092:0crwdne2068092:0
   tutorial_modvariables_language: crwdns2068094:0crwdne2068094:0
   tutorial_codestersmicro_language: crwdns2068096:0crwdne2068096:0
   tutorial_codestersdata_language: crwdns2068098:0crwdne2068098:0
   tutorial_ikodexmas_language: crwdns2068100:0crwdne2068100:0
   tutorial_rpisensehat_language: crwdns2068102:0crwdne2068102:0
-  tutorial_modtraits_language: crwdns2068104:0crwdne2068104:0
   tutorial_mee_language: crwdns2071336:0crwdne2071336:0
   tutorial_kuborobo_language: crwdns2071374:0crwdne2071374:0
   tutorial_ai-oceans_language: crwdns2289985:0crwdne2289985:0
@@ -6436,7 +6323,6 @@ in:
   tutorial_eddesign_string_detail_grades: crwdns2068246:0crwdne2068246:0
   tutorial_edshapeup_string_detail_grades: crwdns2068248:0crwdne2068248:0
   tutorial_ozocolor_string_detail_grades: crwdns2068250:0crwdne2068250:0
-  tutorial_kcjanimals_string_detail_grades: crwdns2068252:0crwdne2068252:0
   tutorial_icomputeeggs_string_detail_grades: crwdns2068254:0crwdne2068254:0
   tutorial_rootunplugged_string_detail_grades: crwdns2068256:0crwdne2068256:0
   tutorial_rgtreasure_string_detail_grades: crwdns2068258:0crwdne2068258:0
@@ -6452,13 +6338,11 @@ in:
   tutorial_blockscadscale_string_detail_grades: crwdns2068278:0crwdne2068278:0
   tutorial_tcadloops_string_detail_grades: crwdns2068280:0crwdne2068280:0
   tutorial_phidgets_string_detail_grades: crwdns2068282:0crwdne2068282:0
-  tutorial_kcjmerry_string_detail_grades: crwdns2068284:0crwdne2068284:0
   tutorial_modvariables_string_detail_grades: crwdns2068286:0crwdne2068286:0
   tutorial_codestersmicro_string_detail_grades: crwdns2068288:0crwdne2068288:0
   tutorial_codestersdata_string_detail_grades: crwdns2068290:0crwdne2068290:0
   tutorial_ikodexmas_string_detail_grades: crwdns2068292:0crwdne2068292:0
   tutorial_rpisensehat_string_detail_grades: crwdns2068294:0crwdne2068294:0
-  tutorial_modtraits_string_detail_grades: crwdns2068296:0crwdne2068296:0
   tutorial_mee_string_detail_grades: crwdns2071338:0crwdne2071338:0
   tutorial_kuborobo_string_detail_grades: crwdns2071376:0crwdne2071376:0
   tutorial_ai-oceans_string_detail_grades: crwdns2289987:0crwdne2289987:0
@@ -6535,7 +6419,6 @@ in:
   tutorial_eddesign_string_platforms: crwdns2068438:0crwdne2068438:0
   tutorial_edshapeup_string_platforms: crwdns2068440:0crwdne2068440:0
   tutorial_ozocolor_string_platforms: crwdns2068442:0crwdne2068442:0
-  tutorial_kcjanimals_string_platforms: crwdns2068444:0crwdne2068444:0
   tutorial_icomputeeggs_string_platforms: crwdns2068446:0crwdne2068446:0
   tutorial_rootunplugged_string_platforms: crwdns2068448:0crwdne2068448:0
   tutorial_rgtreasure_string_platforms: crwdns2068450:0crwdne2068450:0
@@ -6551,13 +6434,11 @@ in:
   tutorial_blockscadscale_string_platforms: crwdns2068470:0crwdne2068470:0
   tutorial_tcadloops_string_platforms: crwdns2068472:0crwdne2068472:0
   tutorial_phidgets_string_platforms: crwdns2068474:0crwdne2068474:0
-  tutorial_kcjmerry_string_platforms: crwdns2068476:0crwdne2068476:0
   tutorial_modvariables_string_platforms: crwdns2068478:0crwdne2068478:0
   tutorial_codestersmicro_string_platforms: crwdns2068480:0crwdne2068480:0
   tutorial_codestersdata_string_platforms: crwdns2068482:0crwdne2068482:0
   tutorial_ikodexmas_string_platforms: crwdns2068484:0crwdne2068484:0
   tutorial_rpisensehat_string_platforms: crwdns2068486:0crwdne2068486:0
-  tutorial_modtraits_string_platforms: crwdns2068488:0crwdne2068488:0
   tutorial_mee_string_platforms: crwdns2071340:0crwdne2071340:0
   tutorial_kuborobo_string_platforms: crwdns2071378:0crwdne2071378:0
   tutorial_ai-oceans_string_platforms: crwdns2289989:0crwdne2289989:0
@@ -6634,7 +6515,6 @@ in:
   tutorial_eddesign_string_detail_platforms: crwdns2068630:0crwdne2068630:0
   tutorial_edshapeup_string_detail_platforms: crwdns2068632:0crwdne2068632:0
   tutorial_ozocolor_string_detail_platforms: crwdns2068634:0crwdne2068634:0
-  tutorial_kcjanimals_string_detail_platforms: crwdns2068636:0crwdne2068636:0
   tutorial_icomputeeggs_string_detail_platforms: crwdns2068638:0crwdne2068638:0
   tutorial_rootunplugged_string_detail_platforms: crwdns2068640:0crwdne2068640:0
   tutorial_rgtreasure_string_detail_platforms: crwdns2068642:0crwdne2068642:0
@@ -6650,13 +6530,11 @@ in:
   tutorial_blockscadscale_string_detail_platforms: crwdns2068662:0crwdne2068662:0
   tutorial_tcadloops_string_detail_platforms: crwdns2068664:0crwdne2068664:0
   tutorial_phidgets_string_detail_platforms: crwdns2068666:0crwdne2068666:0
-  tutorial_kcjmerry_string_detail_platforms: crwdns2068668:0crwdne2068668:0
   tutorial_modvariables_string_detail_platforms: crwdns2068670:0crwdne2068670:0
   tutorial_codestersmicro_string_detail_platforms: crwdns2068672:0crwdne2068672:0
   tutorial_codestersdata_string_detail_platforms: crwdns2068674:0crwdne2068674:0
   tutorial_ikodexmas_string_detail_platforms: crwdns2068676:0crwdne2068676:0
   tutorial_rpisensehat_string_detail_platforms: crwdns2068678:0crwdne2068678:0
-  tutorial_modtraits_string_detail_platforms: crwdns2068680:0crwdne2068680:0
   tutorial_mee_string_detail_platforms: crwdns2071342:0crwdne2071342:0
   tutorial_kuborobo_string_detail_platforms: crwdns2071380:0crwdne2071380:0
   tutorial_ai-oceans_string_detail_platforms: crwdns2289991:0crwdne2289991:0
@@ -6733,7 +6611,6 @@ in:
   tutorial_eddesign_string_detail_programming_languages: crwdns2068822:0crwdne2068822:0
   tutorial_edshapeup_string_detail_programming_languages: crwdns2068824:0crwdne2068824:0
   tutorial_ozocolor_string_detail_programming_languages: crwdns2068826:0crwdne2068826:0
-  tutorial_kcjanimals_string_detail_programming_languages: crwdns2068828:0crwdne2068828:0
   tutorial_icomputeeggs_string_detail_programming_languages: crwdns2068830:0crwdne2068830:0
   tutorial_rootunplugged_string_detail_programming_languages: crwdns2068832:0crwdne2068832:0
   tutorial_rgtreasure_string_detail_programming_languages: crwdns2068834:0crwdne2068834:0
@@ -6749,13 +6626,11 @@ in:
   tutorial_blockscadscale_string_detail_programming_languages: crwdns2068854:0crwdne2068854:0
   tutorial_tcadloops_string_detail_programming_languages: crwdns2068856:0crwdne2068856:0
   tutorial_phidgets_string_detail_programming_languages: crwdns2068858:0crwdne2068858:0
-  tutorial_kcjmerry_string_detail_programming_languages: crwdns2068860:0crwdne2068860:0
   tutorial_modvariables_string_detail_programming_languages: crwdns2068862:0crwdne2068862:0
   tutorial_codestersmicro_string_detail_programming_languages: crwdns2068864:0crwdne2068864:0
   tutorial_codestersdata_string_detail_programming_languages: crwdns2068866:0crwdne2068866:0
   tutorial_ikodexmas_string_detail_programming_languages: crwdns2068868:0crwdne2068868:0
   tutorial_rpisensehat_string_detail_programming_languages: crwdns2068870:0crwdne2068870:0
-  tutorial_modtraits_string_detail_programming_languages: crwdns2068872:0crwdne2068872:0
   tutorial_mee_string_detail_programming_languages: crwdns2071344:0crwdne2071344:0
   tutorial_kuborobo_string_detail_programming_languages: crwdns2071382:0crwdne2071382:0
   tutorial_ai-oceans_string_detail_programming_languages: crwdns2289993:0crwdne2289993:0

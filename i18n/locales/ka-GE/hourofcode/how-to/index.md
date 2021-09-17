@@ -15,7 +15,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 - [Watch the Hour of Code how-to video](#how-to-video)
 - [Explore activities and tutorials](#explore-activities)
 - [Create your plan for the day](#create-your-plan)
-- [გაუწიეთ პოპულარიზაცია თქვენს კოდირების საათს](#promote-your-hour)
+- [გაუწიეთ პოპულარიზაცია თქვენს კოდის საათს](#promote-your-hour)
 - [How to start your Hour of Code strong](#how-to-start)
 - [Get coding](#code)
 - [Celebrate your students' success](#celebrate)
