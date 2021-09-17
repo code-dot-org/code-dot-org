@@ -58,8 +58,8 @@ class AnimationPickerListItem extends React.Component {
       : '';
 
     const centerStyle = {
-      top: THUMBNAIL_SIZE / 2 - 11,
-      left: THUMBNAIL_SIZE / 2 - 11
+      top: THUMBNAIL_SIZE / 2 - 12,
+      left: THUMBNAIL_SIZE / 2 - 12
     };
 
     const hoverIcon = [styles.hoverIcon, centerStyle];
@@ -167,8 +167,8 @@ const styles = {
     borderWidth: '2px',
     top: 0,
     left: 0,
-    height: 22,
-    width: 22,
+    height: 24,
+    width: 24,
     borderRadius: 5
   }
 };
