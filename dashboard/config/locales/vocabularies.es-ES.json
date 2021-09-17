@@ -5,6 +5,10 @@
         "sprite/coursef/2021": {
           "word": "Sprite"
         },
+        "user/coursef/2021": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
         "behavior/coursef/2021": {
           "word": "Comportamiento"
         },
@@ -13,7 +17,8 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "algorithm/coursef/2021": {
-          "word": "Algoritmo"
+          "word": "Algoritmo",
+          "definition": "Una lista de pasos para completar una tarea."
         },
         "event/coursef/2021": {
           "word": "Evento",

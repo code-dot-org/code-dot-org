@@ -1146,6 +1146,13 @@ es:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       gamelab_makeNumSprites:
         text: hacer {NUM} nuevos {ANIMATION_NAME} sprites
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': derecha
+            '90': abajo
+            '180': izquierda
+            '270': arriba
       gamelab_mirrorSprite:
         text: "{SPRITE} hacia {DIRECTION}"
         options:
@@ -1741,6 +1748,9 @@ es:
         text: los monstruos dejan de moverse
       PoemBot_playSound:
         text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            '"sound://category_background/ocean_waves.mp3"': Océano
       PoemBot_setBackgroundEffect:
         text: stablecer efecto de fondo {EFFECT} {PALETTE}
         options:
@@ -1751,6 +1761,8 @@ es:
             '"stars"': Estrellas
             '"ripples"': Ondas
           PALETTE:
+            '"sky"': Sky
+            '"ocean"': Océano
             '"rainbow"': Arcoíris
       PoemBot_setForegroundEffect:
         text: establecer efecto de primer plano {EFFECT}
@@ -1761,7 +1773,12 @@ es:
             '"hearts"': Corazones coloridos
             '"confetti"': Confeti
             '"starburst"': Explosión de estrellas
+      PoemBot_setPoem:
+        options:
+          POEM:
+            '"rumi_2"': Océano
       PoemBot_startBehavior:
+        text: 'gráfico {ANIMATION_NAME} inicia {BEHAVIOR} '
         options:
           BEHAVIOR:
             fluttering: revoloteando
@@ -1774,6 +1791,7 @@ es:
             wandering: vagando
             wobbling: tambaleándose
       PoemBot_stopBehavior:
+        text: 'gráfico {ANIMATION_NAME} detiene {BEHAVIOR} '
         options:
           BEHAVIOR:
             fluttering: revoloteando
