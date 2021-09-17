@@ -7024,3 +7024,7 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Modulat
