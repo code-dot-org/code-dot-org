@@ -157,6 +157,10 @@ export class WorkshopForm extends React.Component {
       this.loadAvailableFacilitators(props.workshop.course);
     }
 
+    if (props.workshop.course === 'Admin') {
+      initialState.suppress_email = true;
+    }
+
     this.loadRegionalPartners();
 
     return initialState;
@@ -359,6 +363,7 @@ export class WorkshopForm extends React.Component {
 
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
+    const isAdmin = this.state.course === 'Admin';
     const showFeeInput = isCsf;
     const showMapChoice = isCsf;
 
@@ -383,19 +388,21 @@ export class WorkshopForm extends React.Component {
             </p>
           </FormGroup>
         )}
-        <Row>
-          <Col smOffset={1}>
-            <Row>
-              {showFeeInput && (
-                <Col sm={6}>{this.renderFeeInput(validation)}</Col>
-              )}
-            </Row>
-            {showMapChoice && this.renderOnMapRadios(validation)}
-            {/* A small gap to resemble the gap below the fee input. */}
-            {showFeeInput && <div style={{height: 7}}>&nbsp;</div>}
-            {this.renderFundedSelect(validation)}
-          </Col>
-        </Row>
+        {!isAdmin && (
+          <Row>
+            <Col smOffset={1}>
+              <Row>
+                {showFeeInput && (
+                  <Col sm={6}>{this.renderFeeInput(validation)}</Col>
+                )}
+              </Row>
+              {showMapChoice && this.renderOnMapRadios(validation)}
+              {/* A small gap to resemble the gap below the fee input. */}
+              {showFeeInput && <div style={{height: 7}}>&nbsp;</div>}
+              {this.renderFundedSelect(validation)}
+            </Col>
+          </Row>
+        )}
         <Row>
           <Col sm={5}>
             <FormGroup validationState={validation.style.virtual}>
@@ -416,35 +423,37 @@ export class WorkshopForm extends React.Component {
               <HelpBlock>{validation.help.virtual}</HelpBlock>
             </FormGroup>
           </Col>
-          <Col sm={5}>
-            <FormGroup validationState={validation.style.suppress_email}>
-              <ControlLabel>
-                Enable workshop reminders?
-                <HelpTip>
-                  <p>
-                    <strong>
-                      This functionality is disabled for all academic year
-                      workshops.
-                    </strong>
-                  </p>
-                  <p>
-                    For in-person CSF workshops, choose if you'd like automated
-                    10-day and 3-day pre-workshop reminders to be sent to your
-                    participants.
-                  </p>
-                </HelpTip>
-              </ControlLabel>
-              <SelectSuppressEmail
-                onChange={this.handleSuppressEmailChange}
-                value={this.state.suppress_email || false}
-                readOnly={
-                  this.props.readOnly ||
-                  MustSuppressEmailSubjects.includes(this.state.subject)
-                }
-              />
-              <HelpBlock>{validation.help.suppress_email}</HelpBlock>
-            </FormGroup>
-          </Col>
+          {!isAdmin && (
+            <Col sm={5}>
+              <FormGroup validationState={validation.style.suppress_email}>
+                <ControlLabel>
+                  Enable workshop reminders?
+                  <HelpTip>
+                    <p>
+                      <strong>
+                        This functionality is disabled for all academic year
+                        workshops.
+                      </strong>
+                    </p>
+                    <p>
+                      For in-person CSF workshops, choose if you'd like
+                      automated 10-day and 3-day pre-workshop reminders to be
+                      sent to your participants.
+                    </p>
+                  </HelpTip>
+                </ControlLabel>
+                <SelectSuppressEmail
+                  onChange={this.handleSuppressEmailChange}
+                  value={this.state.suppress_email || false}
+                  readOnly={
+                    this.props.readOnly ||
+                    MustSuppressEmailSubjects.includes(this.state.subject)
+                  }
+                />
+                <HelpBlock>{validation.help.suppress_email}</HelpBlock>
+              </FormGroup>
+            </Col>
+          )}
         </Row>
       </FormGroup>
     );
@@ -1020,9 +1029,7 @@ export class WorkshopForm extends React.Component {
           </Row>
           <Row>
             <Col sm={10}>
-              {this.state.course &&
-                this.state.course !== 'Admin' &&
-                this.renderWorkshopTypeOptions(validation)}
+              {this.state.course && this.renderWorkshopTypeOptions(validation)}
             </Col>
           </Row>
           <Row>
