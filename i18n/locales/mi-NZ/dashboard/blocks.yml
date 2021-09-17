@@ -1064,6 +1064,13 @@ mi:
         options:
           EFFECT:
             '"rain"': ua
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': matau
+            '90': raro
+            '180': mauī
+            '270': runga
       gamelab_mirrorSprite:
         options:
           DIRECTION:
