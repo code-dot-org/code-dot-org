@@ -463,6 +463,7 @@
           <title name="NAME">draw a spiral edge</title>
           <statement name="STACK">
             <block type="controls_for_counter" inline="true">
+              <mutation counter="counter"/>
               <value name="FROM">
                 <block type="parameters_get">
                   <title name="VAR">min</title>
@@ -606,6 +607,7 @@
         </category>
         <category name="Loops">
           <block type="controls_for_counter" inline="true">
+            <mutation counter="counter"/>
             <value name="FROM">
               <block type="math_number">
                 <title name="NUM">???</title>

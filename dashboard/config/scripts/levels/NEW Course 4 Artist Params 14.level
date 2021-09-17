@@ -100,6 +100,7 @@
                   </value>
                   <next>
                     <block type="controls_for_counter" inline="true">
+                      <mutation counter="counter"/>
                       <value name="FROM">
                         <block type="math_number">
                           <title name="NUM">5</title>
@@ -130,6 +131,7 @@
                           </value>
                           <next>
                             <block type="controls_for_counter" inline="true">
+                              <mutation counter="counter"/>
                               <value name="FROM">
                                 <block type="math_number">
                                   <title name="NUM">10</title>
@@ -168,6 +170,7 @@
                                       </value>
                                       <next>
                                         <block type="controls_for_counter" inline="true">
+                                          <mutation counter="counter"/>
                                           <value name="FROM">
                                             <block type="math_number">
                                               <title name="NUM">2</title>
@@ -296,6 +299,7 @@
     <recommended_blocks>
       <xml>
         <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"/>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">5</title>
@@ -313,6 +317,7 @@
           </value>
         </block>
         <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"/>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">10</title>
@@ -330,6 +335,7 @@
           </value>
         </block>
         <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"/>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">2</title>
@@ -404,6 +410,7 @@
                   </value>
                   <next>
                     <block type="controls_for_counter" inline="true">
+                      <mutation counter="counter"/>
                       <value name="FROM">
                         <block type="math_number">
                           <title name="NUM">5</title>
@@ -455,6 +462,7 @@
                               </value>
                               <next>
                                 <block type="controls_for_counter" inline="true">
+                                  <mutation counter="counter"/>
                                   <value name="FROM">
                                     <block type="math_number">
                                       <title name="NUM">10</title>
@@ -506,6 +514,7 @@
                                           </value>
                                           <next>
                                             <block type="controls_for_counter" inline="true">
+                                              <mutation counter="counter"/>
                                               <value name="FROM">
                                                 <block type="math_number">
                                                   <title name="NUM">2</title>
