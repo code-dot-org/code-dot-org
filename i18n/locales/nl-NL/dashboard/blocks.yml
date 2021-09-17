@@ -1098,6 +1098,13 @@ nl:
             '"rain"': regen
       gamelab_makeNewSpriteAnon:
         text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': rechts
+            '90': omlaag
+            '180': links
+            '270': omhoog
       gamelab_mirrorSprite:
         text: "{SPRITE} gezicht {DIRECTION}"
         options:
