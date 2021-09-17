@@ -918,6 +918,7 @@ ja:
         lightbot: 'Lightbot'
       robotics:
         kodable: 'Kodable'
+        raspberry: 'Raspberry Pi'
       workshop_course:
         csd: 'コンピューターサイエンス 発展'
         csp: 'コンピューターサイエンス 入門'

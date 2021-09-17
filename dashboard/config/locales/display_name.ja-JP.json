@@ -173,8 +173,8 @@
         "CourseF_app_computer": "コンピュータを作る",
         "courseF_apps_aquarium": "バーチャル水族館",
         "courseF_apps_collector": "コレクターゲーム",
-        "courseF_apps_madlib": "ストーリーじゆうちょう",
-        "courseF_editable_madlib": "ストーリーじゆうちょう",
+        "courseF_apps_madlib": "ブランクスペースストーリー",
+        "courseF_editable_madlib": "ブランクスペースストーリー",
         "courseA_EOC_artist_1": "アーティスト：動物園",
         "courseA_EOC_artist_2": "アーティスト：ガーデン",
         "courseF_sprites_make": "スプライトを作る",
@@ -266,9 +266,10 @@
         "courseF_variables_card_finish": "グリーティングカード、パート2",
         "courseF_variables_chatbot": "チャットボット、パート1",
         "courseF_variables_chatbot_finish": "チャットボット、パート2",
-        "courseF_variables_madlib": "ストーリー自由帳、パート1",
-        "courseF_variables_madlib_finish": "ストーリー自由帳、パート2",
-        "ramp_artist_loops6v1_2021": "階段"
+        "courseF_variables_madlib": "ブランクスペースストーリー、パート1",
+        "courseF_variables_madlib_finish": "ブランクスペースストーリー、パート2",
+        "ramp_artist_loops6v1_2021": "階段",
+        "international_outbreak_freeplay": "標準ツールボックス"
       }
     }
   }

@@ -1114,6 +1114,13 @@ ja:
             '"rain"': 雨
       gamelab_makeNewSpriteAnon:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': 右 に
+            '90': 下 に
+            '180': 左 に
+            '270': 上 に
       gamelab_mirrorSprite:
         text: "{SPRITE} 顔 {DIRECTION}"
         options:
