@@ -38,7 +38,7 @@ class TeacherPanel extends React.Component {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired
     }),
-    unitHasLockableLessons: PropTypes.bool.isRequired,
+    unitHasLockableLessons: PropTypes.bool,
     unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape),
     levelsWithProgress: PropTypes.array,
