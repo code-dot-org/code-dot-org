@@ -1094,6 +1094,13 @@ sv:
             '"rain"': regn
       gamelab_makeNewSpriteAnon:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': höger
+            '90': ner
+            '180': vänster
+            '270': upp
       gamelab_mirrorSprite:
         text: "{SPRITE} Ansikte {DIRECTION}"
         options:
