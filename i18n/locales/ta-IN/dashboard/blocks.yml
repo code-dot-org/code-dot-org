@@ -995,6 +995,13 @@ ta:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': வலது
+            '90': கீழே
+            '180': இடது
+            '270': மேலே
       gamelab_mirrorSprite:
         options:
           DIRECTION:

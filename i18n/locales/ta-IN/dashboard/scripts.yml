@@ -2115,3 +2115,10 @@ ta:
               name: அக்கம்பக்கத்து கடை மேலாண்மை திட்டம் - நாள் 2
             lesson-13:
               name: அக்கம்பக்கத்து கடை மேலாண்மை திட்டம் - நாள் 3
+        csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: கருவிகள்
+          lesson_groups:
+            lessonGroup-2:
+              display_name: பாடங்கள்
