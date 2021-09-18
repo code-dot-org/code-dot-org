@@ -9,6 +9,14 @@ const MAX_SESSIONS = 10;
 
 export {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT, MAX_SESSIONS, COURSE_CSF};
 
+// When selecting whether a workshop is virtual through the UI,
+// a user is really selecting two things:
+//  a) whether the workshop is occurring virtually, and
+//  b) if there's a third party responsible for the content/structure of the workshop.
+// These two things are stored as separate attributes in the workshop model.
+export const virtualWorkshopTypes = ['regional', 'friday_institute'];
+export const thirdPartyProviders = ['friday_institute'];
+
 export const workshopShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   facilitators: PropTypes.array.isRequired,

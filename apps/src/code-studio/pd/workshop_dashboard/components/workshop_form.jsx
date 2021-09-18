@@ -28,7 +28,9 @@ import {
   TIME_FORMAT,
   DATE_FORMAT,
   DATETIME_FORMAT,
-  workshopShape
+  workshopShape,
+  virtualWorkshopTypes,
+  thirdPartyProviders
 } from '../workshopConstants';
 import {PermissionPropType, WorkshopAdmin} from '../permission';
 import {
@@ -49,14 +51,6 @@ const placeholderSession = {
   startTime: '9:00am',
   endTime: '5:00pm'
 };
-
-// When selecting whether a workshop is virtual through the UI,
-// a user is really selecting two things:
-//  a) whether the workshop is occurring virtually, and
-//  b) if there's a third party responsible for the content/structure of the workshop.
-// These two things are stored as separate attributes in the workshop model.
-const virtualWorkshopTypes = ['regional', 'friday_institute'];
-const thirdPartyProviders = ['friday_institute'];
 
 export class WorkshopForm extends React.Component {
   static contextTypes = {
@@ -697,12 +691,6 @@ export class WorkshopForm extends React.Component {
                   }
                   fundingType={this.state.funding_type}
                   funded={this.state.funded}
-                  handleCustomizeFeeChange={this.handleCustomizeFeeChange}
-                  handleFieldChange={this.handleFieldChange}
-                  handleFundingChange={this.handleFundingChange}
-                  handleRadioChange={this.handleRadioChange}
-                  handleSuppressEmailChange={this.handleSuppressEmailChange}
-                  handleVirtualChange={this.handleVirtualChange}
                   suppressEmail={this.state.suppress_email}
                   toggleTypeOptionsHelpDisplay={
                     this.toggleTypeOptionsHelpDisplay
@@ -712,6 +700,12 @@ export class WorkshopForm extends React.Component {
                   fee={this.state.fee}
                   virtual={this.state.virtual}
                   thirdPartyProvider={this.state.third_party_provider}
+                  handleCustomizeFeeChange={this.handleCustomizeFeeChange}
+                  handleFieldChange={this.handleFieldChange}
+                  handleFundingChange={this.handleFundingChange}
+                  handleRadioChange={this.handleRadioChange}
+                  handleSuppressEmailChange={this.handleSuppressEmailChange}
+                  handleVirtualChange={this.handleVirtualChange}
                 />
               )}
             </Col>

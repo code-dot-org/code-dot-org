@@ -18,8 +18,7 @@ import {
   MustSuppressEmailSubjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-
-const virtualWorkshopTypes = ['regional', 'friday_institute'];
+import {virtualWorkshopTypes} from '../workshopConstants';
 
 export default class WorkshopTypeOptions extends React.Component {
   static propTypes = {
