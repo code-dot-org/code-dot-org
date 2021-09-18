@@ -14,35 +14,12 @@ import {
   CsfFacilitator,
   PermissionPropType
 } from '../permission';
+import {workshopShape} from '../workshopConstants';
 
 export class RegionalPartnerSelector extends React.Component {
   static propTypes = {
     permission: PermissionPropType.isRequired,
-    workshop: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      facilitators: PropTypes.array.isRequired,
-      location_name: PropTypes.string.isRequired,
-      location_address: PropTypes.string,
-      capacity: PropTypes.number.isRequired,
-      on_map: PropTypes.bool.isRequired,
-      funded: PropTypes.bool.isRequired,
-      funding_type: PropTypes.string,
-      course: PropTypes.string.isRequired,
-      subject: PropTypes.string,
-      fee: PropTypes.string,
-      notes: PropTypes.string,
-      sessions: PropTypes.array.isRequired,
-      enrolled_teacher_count: PropTypes.number.isRequired,
-      regional_partner_name: PropTypes.string,
-      regional_partner_id: PropTypes.number,
-      virtual: PropTypes.bool,
-      third_party_provider: PropTypes.string,
-      suppress_email: PropTypes.bool,
-      organizer: PropTypes.shape({
-        id: PropTypes.number,
-        name: PropTypes.string
-      })
-    }),
+    workshop: workshopShape,
     readOnly: PropTypes.bool,
     inputStyle: PropTypes.object,
     handleRegionalPartnerSelect: PropTypes.func.isRequired,

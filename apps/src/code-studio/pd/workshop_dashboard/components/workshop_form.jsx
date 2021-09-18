@@ -24,7 +24,12 @@ import {
   ButtonToolbar,
   Alert
 } from 'react-bootstrap';
-import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
+import {
+  TIME_FORMAT,
+  DATE_FORMAT,
+  DATETIME_FORMAT,
+  workshopShape
+} from '../workshopConstants';
 import {PermissionPropType, WorkshopAdmin} from '../permission';
 import {
   Subjects,
@@ -61,31 +66,7 @@ export class WorkshopForm extends React.Component {
   static propTypes = {
     permission: PermissionPropType.isRequired,
     facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
-    workshop: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      facilitators: PropTypes.array.isRequired,
-      location_name: PropTypes.string.isRequired,
-      location_address: PropTypes.string,
-      capacity: PropTypes.number.isRequired,
-      on_map: PropTypes.bool.isRequired,
-      funded: PropTypes.bool.isRequired,
-      funding_type: PropTypes.string,
-      course: PropTypes.string.isRequired,
-      subject: PropTypes.string,
-      fee: PropTypes.string,
-      notes: PropTypes.string,
-      sessions: PropTypes.array.isRequired,
-      enrolled_teacher_count: PropTypes.number.isRequired,
-      regional_partner_name: PropTypes.string,
-      regional_partner_id: PropTypes.number,
-      virtual: PropTypes.bool,
-      third_party_provider: PropTypes.string,
-      suppress_email: PropTypes.bool,
-      organizer: PropTypes.shape({
-        id: PropTypes.number,
-        name: PropTypes.string
-      })
-    }),
+    workshop: workshopShape,
     onSaved: PropTypes.func,
     readOnly: PropTypes.bool,
     children: PropTypes.node
