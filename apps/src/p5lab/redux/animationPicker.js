@@ -83,7 +83,10 @@ export default function reducer(state, action) {
 
     case SELECT_ANIMATION:
       return _.assign({}, state, {
-        selectedAnimations: state.selectedAnimations.push(action.animation)
+        selectedAnimations: [].concat(
+          state.selectedAnimations,
+          action.animation
+        )
       });
 
     default:
@@ -276,6 +279,25 @@ export function pickLibraryAnimation(animation, multiSelect = false) {
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendLibraryFrames(animation));
     }
+    if (!multiSelect) {
+      dispatch(hide());
+    }
+  };
+}
+
+/**
+ * The user wants to save the selected animations to their project. This concludes our picking
+ * process. Loop through all selectedAnimations and save each individually to the project.
+ * Only triggered at the end of multiselect.
+ * @returns {function}
+ */
+export function saveSelectedAnimations() {
+  return (dispatch, getState) => {
+    const animations = getState().animationPicker.selectedAnimations;
+    const isSpriteLab = getState().animationPicker.isSpriteLab;
+    animations.map(animation => {
+      dispatch(addLibraryAnimation(animation, isSpriteLab));
+    });
     dispatch(hide());
   };
 }
