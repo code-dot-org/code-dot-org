@@ -155,10 +155,10 @@ export class WorkshopForm extends React.Component {
         props.workshop.sessions
       );
       this.loadAvailableFacilitators(props.workshop.course);
-    }
 
-    if (props.workshop.course === 'Admin') {
-      initialState.suppress_email = true;
+      if (props.workshop.course === 'Admin/Counselor Workshop - Welcome') {
+        initialState.suppress_email = true;
+      }
     }
 
     this.loadRegionalPartners();
@@ -363,7 +363,8 @@ export class WorkshopForm extends React.Component {
 
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
-    const isAdmin = this.state.course === 'Admin';
+    const isAdminCounselor =
+      this.state.course === 'Admin/Counselor Workshop - Welcome';
     const showFeeInput = isCsf;
     const showMapChoice = isCsf;
 
@@ -388,7 +389,7 @@ export class WorkshopForm extends React.Component {
             </p>
           </FormGroup>
         )}
-        {!isAdmin && (
+        {!isAdminCounselor && (
           <Row>
             <Col smOffset={1}>
               <Row>
@@ -423,7 +424,7 @@ export class WorkshopForm extends React.Component {
               <HelpBlock>{validation.help.virtual}</HelpBlock>
             </FormGroup>
           </Col>
-          {!isAdmin && (
+          {!isAdminCounselor && (
             <Col sm={5}>
               <FormGroup validationState={validation.style.suppress_email}>
                 <ControlLabel>

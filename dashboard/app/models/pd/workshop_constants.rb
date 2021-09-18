@@ -28,7 +28,8 @@ module Pd
       COURSE_CS_IN_S => 'csins_workshop',
       COURSE_CSD => 'csd_workshop',
       COURSE_COUNSELOR => 'counselor_workshop',
-      COURSE_ADMIN => 'admin_workshop'
+      COURSE_ADMIN => 'admin_workshop',
+      COURSE_ADMIN_COUNSELOR => 'admin_counselor_workshop'
     }.freeze
     SECTION_TYPES = SECTION_TYPE_MAP.values.freeze
 

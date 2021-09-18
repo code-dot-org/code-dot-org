@@ -78,6 +78,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN
   end
 
+  def teacher_enrollment_receipt__admin_counselor
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN_COUNSELOR
+  end
+
   def teacher_enrollment_receipt__csp_for_returning_teachers
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
   end
@@ -243,6 +247,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_ADMIN
   end
 
+  def teacher_enrollment_reminder__admin_counselor
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_ADMIN_COUNSELOR
+  end
+
   def teacher_enrollment_receipt__counselor
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_COUNSELOR
   end
@@ -401,6 +409,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def detail_change_notification__admin
     mail :detail_change_notification, Pd::Workshop::COURSE_ADMIN
+  end
+
+  def detail_change_notification__admin_counselor
+    mail :detail_change_notification, Pd::Workshop::COURSE_ADMIN_COUNSELOR
   end
 
   # Exit survey has variations for CSF and CSP Local Summer. It's the same for all other courses.
