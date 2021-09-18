@@ -26237,7 +26237,11 @@ en:
           description: ''
           student_description: ''
         ai-ethics:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: 'Star Wars: Building a Galaxy with Code'
+              description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. '
+              description_teacher: "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. \r\n\r\n**Option 1: Blocks**\r\n\r\nThe first option uses drag-drop blocks. This version works best for:\r\n\r\n - Students on mobile devices without keyboards\r\n - Younger students (6+ because the tutorial requires reading)\r\n - International students\r\n\r\nWe recommend this for international students because JavaScript syntax is not translated and for the first Hour of Code, the translated blocks provide a better introduction.\r\n\r\n**Option 2: JavaScript**\r\n\r\nThis option teaches the same basic concepts, but because it uses both drag-drop blocks and JavaScript, the students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+."
           lesson_groups: {}
           name: ai-ethics
           title: Hour of Code - AI-Ethics
