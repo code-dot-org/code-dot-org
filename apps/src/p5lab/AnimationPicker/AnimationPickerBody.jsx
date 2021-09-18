@@ -157,15 +157,14 @@ export default class AnimationPickerBody extends React.Component {
     ));
   }
 
-  animationItemsRendering(animations) {
-    const multiSelectEnabled = experiments.isEnabled(experiments.MultiSelect);
+  animationItemsRendering(animations, multiSelect) {
     return animations.map(animationProps => (
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
         label={this.props.hideAnimationNames ? undefined : animationProps.name}
         animationProps={animationProps}
         onClick={() =>
-          this.props.onPickLibraryAnimation(animationProps, multiSelectEnabled)
+          this.props.onPickLibraryAnimation(animationProps, multiSelect)
         }
         playAnimations={this.props.playAnimations}
       />
@@ -173,6 +172,7 @@ export default class AnimationPickerBody extends React.Component {
   }
 
   render() {
+    const multiSelectEnabled = experiments.isEnabled(experiments.MultiSelect);
     if (!this.props.libraryManifest) {
       return <div>{msg.loading()}</div>;
     }
@@ -243,15 +243,17 @@ export default class AnimationPickerBody extends React.Component {
             categoryQuery === '' &&
             this.animationCategoriesRendering()}
           {(searchQuery !== '' || categoryQuery !== '') &&
-            this.animationItemsRendering(results || [])}
+            this.animationItemsRendering(results || [], multiSelectEnabled)}
         </ScrollableList>
-        <div style={animationPickerStyles.footer}>
-          <Button
-            text={msg.done()}
-            onClick={() => console.log('Submit selections')}
-            color={Button.ButtonColor.orange}
-          />
-        </div>
+        {multiSelectEnabled && (
+          <div style={animationPickerStyles.footer}>
+            <Button
+              text={msg.done()}
+              onClick={() => console.log('Submit selections')}
+              color={Button.ButtonColor.orange}
+            />
+          </div>
+        )}
       </div>
     );
   }
