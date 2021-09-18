@@ -24,6 +24,7 @@ export default class AnimationPickerBody extends React.Component {
     onDrawYourOwnClick: PropTypes.func.isRequired,
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
+    onAnimationSelectionDone: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
     libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
@@ -172,7 +173,7 @@ export default class AnimationPickerBody extends React.Component {
   }
 
   render() {
-    const multiSelectEnabled = experiments.isEnabled(experiments.MultiSelect);
+    const multiSelectEnabled = experiments.isEnabled(experiments.MULTISELECT);
     if (!this.props.libraryManifest) {
       return <div>{msg.loading()}</div>;
     }
@@ -181,7 +182,8 @@ export default class AnimationPickerBody extends React.Component {
       hideUploadOption,
       is13Plus,
       onDrawYourOwnClick,
-      onUploadClick
+      onUploadClick,
+      onAnimationSelectionDone
     } = this.props;
 
     return (
@@ -249,7 +251,7 @@ export default class AnimationPickerBody extends React.Component {
           <div style={animationPickerStyles.footer}>
             <Button
               text={msg.done()}
-              onClick={() => console.log('Submit selections')}
+              onClick={onAnimationSelectionDone}
               color={Button.ButtonColor.orange}
             />
           </div>
