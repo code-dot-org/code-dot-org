@@ -124,8 +124,7 @@ def main(options)
     unless unit.is_migrated
       unit.update!(
         is_migrated: true,
-        use_legacy_lesson_plans: true,
-        skip_translating_lesson_plans: true
+        use_legacy_lesson_plans: true
       )
     end
 
