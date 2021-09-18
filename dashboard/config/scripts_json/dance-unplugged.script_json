@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-09-17 16:47:47 UTC",
+    "family_name": "dance-unplugged",
+    "serialized_at": "2021-09-18 15:02:14 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "dance-unplugged"
