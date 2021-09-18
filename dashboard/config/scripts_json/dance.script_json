@@ -8,12 +8,11 @@
       "tts": true,
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true,
-      "skip_translating_lesson_plans": true
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "dance",
-    "serialized_at": "2021-09-18 14:56:44 UTC",
+    "serialized_at": "2021-09-18 22:15:24 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "dance"
