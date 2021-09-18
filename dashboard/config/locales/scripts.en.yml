@@ -26236,7 +26236,11 @@ en:
           description: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
           student_description: 'Conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of your choice. '
         dance-unplugged:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: 'Dance Party: Unplugged'
+              description_student: 'Have a class dance party to learn about events. '
+              description_teacher: Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
           lesson_groups: {}
           name: dance-unplugged
           title: Hour of Code - Dance Party - Unplugged
