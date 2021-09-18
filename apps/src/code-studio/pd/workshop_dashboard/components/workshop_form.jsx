@@ -5,7 +5,6 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import Select from 'react-select';
 import _ from 'lodash';
 import moment from 'moment';
 import Spinner from '../../components/spinner';
@@ -26,13 +25,7 @@ import {
   Alert
 } from 'react-bootstrap';
 import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
-import {
-  PermissionPropType,
-  WorkshopAdmin,
-  Organizer,
-  ProgramManager,
-  CsfFacilitator
-} from '../permission';
+import {PermissionPropType, WorkshopAdmin} from '../permission';
 import {
   Subjects,
   VirtualOnlySubjects,
@@ -42,6 +35,7 @@ import CourseSelect from './CourseSelect';
 import SubjectSelect from './SubjectSelect';
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
 import WorkshopTypeOptions from './WorkshopTypeOptions';
+import RegionalPartnerSelector from './RegionalPartnerSelector';
 
 // Default to today, 9am-5pm.
 const placeholderSession = {
@@ -266,67 +260,6 @@ export class WorkshopForm extends React.Component {
 
   shouldRenderSubject() {
     return this.state.course && Subjects[this.state.course];
-  }
-
-  renderRegionalPartnerSelect() {
-    const editDisabled =
-      this.props.readOnly ||
-      // Enabled for these permissions
-      (!this.props.permission.hasAny(
-        WorkshopAdmin,
-        Organizer,
-        ProgramManager
-      ) &&
-        // Enabled for CSF facilitators when they are creating a new workshop
-        !(this.props.permission.has(CsfFacilitator) && !this.props.workshop));
-
-    const options = [];
-    if (
-      this.props.permission.has(CsfFacilitator) ||
-      this.props.permission.has(WorkshopAdmin)
-    ) {
-      options.push({value: '', label: 'None'});
-    }
-
-    if (this.state.regionalPartners) {
-      const sortedPartners = _.sortBy(
-        this.state.regionalPartners,
-        partner => partner.name
-      );
-      options.push(
-        ...sortedPartners.map(partner => ({
-          value: partner.id,
-          label: partner.name
-        }))
-      );
-    } else if (this.props.workshop) {
-      // Display the currently selected partner name, even if the list hasn't yet loaded.
-      options.push({
-        value: this.props.workshop.regional_partner_id || '',
-        label: this.props.workshop.regional_partner_name
-      });
-    }
-
-    return (
-      <FormGroup>
-        <ControlLabel>Regional Partner</ControlLabel>
-        {options.length > 1 && (
-          <Select
-            id="regional-partner-select"
-            name="regional_partner_id"
-            onChange={this.handleRegionalPartnerSelect}
-            style={this.getInputStyle()}
-            value={this.state.regional_partner_id || ''}
-            options={options}
-            // Facilitators (who are not organizers, partners, nor admins) cannot edit this field
-            disabled={editDisabled}
-          />
-        )}
-        {options.length === 1 && (
-          <p id="regional-partner-name">{options[0].label}</p>
-        )}
-      </FormGroup>
-    );
   }
 
   getInputStyle() {
@@ -803,7 +736,18 @@ export class WorkshopForm extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col sm={10}>{this.renderRegionalPartnerSelect()}</Col>
+            <Col sm={10}>
+              {
+                <RegionalPartnerSelector
+                  handleRegionalPartnerSelect={this.handleRegionalPartnerSelect}
+                  readOnly={this.props.readOnly}
+                  workshop={this.props.workshop}
+                  inputStyle={this.getInputStyle()}
+                  regionalPartnerId={this.state.regional_partner_id}
+                  regionalPartners={this.state.regionalPartners}
+                />
+              }
+            </Col>
           </Row>
           <Row>
             <Col sm={10}>
