@@ -21,9 +21,9 @@ title: "Workshop Survey for Counselors and Administrators"
   previous_response = DB[:forms].where(kind: 'PdWorkshopSurveyCounselorAdmin', source_id: enrollment[:id]).first
 
   course = workshop[:course]
-  pass unless ['Counselor', 'Admin'].include? course
+  pass unless ['Counselor', 'Admin', 'Admin/Counselor Workshop - Welcome'].include? course
   # We can't access workshop.course_name here, but follow the same pattern anyway for consistency.
-  course_name = course == 'Admin' ? 'Administrator' : 'Counselor'
+  course_name = course == 'Admin' ? 'Administrator' : course
 
 :javascript
   window.pdWorkshopSurvey = {

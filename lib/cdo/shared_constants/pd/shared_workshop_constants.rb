@@ -9,7 +9,8 @@ module Pd
       COURSE_CSD = 'CS Discoveries'.freeze,
       COURSE_COUNSELOR = 'Counselor'.freeze,
       COURSE_ADMIN = 'Admin'.freeze,
-      COURSE_FACILITATOR = 'Facilitator'.freeze
+      COURSE_FACILITATOR = 'Facilitator'.freeze,
+      COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop - Welcome'.freeze
     ].freeze
 
     STATES = [

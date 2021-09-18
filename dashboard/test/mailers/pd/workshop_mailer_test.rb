@@ -111,6 +111,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
   test 'detail change notification links are complete urls' do
     courses = [
       Pd::Workshop::COURSE_ADMIN,
+      Pd::Workshop::COURSE_ADMIN_COUNSELOR,
       Pd::Workshop::COURSE_CSF
     ]
 
@@ -184,6 +185,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
   test 'teacher enrollment receipt links are complete urls' do
     test_cases = [
       {course: Pd::Workshop::COURSE_ADMIN, subject: nil},
+      {course: Pd::Workshop::COURSE_ADMIN_COUNSELOR, subject: nil},
       {course: Pd::Workshop::COURSE_COUNSELOR, subject: nil},
       {course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_3},
       {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1},
@@ -216,6 +218,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
   test 'teacher enrollment reminder links are complete urls' do
     test_cases = [
       {course: Pd::Workshop::COURSE_ADMIN, subject: nil},
+      {course: Pd::Workshop::COURSE_ADMIN_COUNSELOR, subject: nil},
       {course: Pd::Workshop::COURSE_COUNSELOR, subject: nil},
       {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 3},
