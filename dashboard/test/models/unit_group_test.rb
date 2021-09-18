@@ -866,6 +866,31 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal UnitGroup.valid_courses(user: teacher), [csp_2019]
   end
 
+  test "assignable_for_user?: normal courses" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    course = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.stable
+
+    refute course.assignable_for_user?(student)
+    assert course.assignable_for_user?(teacher)
+    assert course.assignable_for_user?(levelbuilder)
+  end
+
+  test "assignable_for_user?: works for pilot courses" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
+    assert UnitGroup.any?(&:pilot?)
+
+    refute pilot_course.assignable_for_user?(student)
+    refute pilot_course.assignable_for_user?(teacher)
+    assert pilot_course.assignable_for_user?(pilot_teacher)
+    assert pilot_course.assignable_for_user?(levelbuilder)
+  end
+
   test "update_teacher_resources" do
     unit_group = create :unit_group
     unit_group.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
