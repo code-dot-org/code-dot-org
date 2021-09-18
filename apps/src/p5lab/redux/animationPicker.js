@@ -26,6 +26,7 @@ const SHOW_BACKGROUND = 'AnimationPicker/SHOW_BACKGROUND';
 const HIDE = 'AnimationPicker/HIDE';
 const BEGIN_UPLOAD = 'AnimationPicker/BEGIN_UPLOAD';
 const HANDLE_UPLOAD_ERROR = 'AnimationPicker/HANDLE_UPLOAD_ERROR';
+const SELECT_ANIMATION = 'AnimationPicker/SELECT_ANIMATION';
 
 // Default state, which we reset to any time we hide the animation picker.
 const initialState = {
@@ -35,7 +36,9 @@ const initialState = {
   uploadFilename: null,
   uploadError: null,
   isSpriteLab: false,
-  isBackground: false
+  isBackground: false,
+  // List of animations selected to be added through multiselect
+  selectedAnimations: []
 };
 
 export default function reducer(state, action) {
@@ -76,6 +79,11 @@ export default function reducer(state, action) {
       return _.assign({}, state, {
         uploadInProgress: false,
         uploadError: action.status
+      });
+
+    case SELECT_ANIMATION:
+      return _.assign({}, state, {
+        selectedAnimations: state.selectedAnimations.push(action.animation)
       });
 
     default:
@@ -204,6 +212,18 @@ export function handleUploadError(status) {
 }
 
 /**
+ * An animation has been selected.  Add it to the list to later save.
+ * @param {!AnimationProps} animation
+ * @returns {{type: string, status: string}}
+ */
+export function handleSelectedAnimation(animation) {
+  return {
+    type: SELECT_ANIMATION,
+    animation: animation
+  };
+}
+
+/**
  * The user chose to draw their own animation.  This concludes our picking
  * process.  Dispatch action to add a new image, and then close the animation
  * picker.
@@ -229,9 +249,11 @@ export function pickNewAnimation() {
  * process. Dispatch root gamelab action to add appropriate metadata and then
  * close the animation picker.
  * @param {!AnimationProps} animation
+ * @param {!boolean} multiSelect - boolean determines if we are in the multiselect experiment. Will
+ *    be removed after experiment
  * @returns {function}
  */
-export function pickLibraryAnimation(animation) {
+export function pickLibraryAnimation(animation, multiSelect = false) {
   firehoseClient.putRecord({
     study: 'sprite-use',
     study_group: 'before-update-v2',
@@ -244,9 +266,13 @@ export function pickLibraryAnimation(animation) {
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      dispatch(
-        addLibraryAnimation(animation, getState().animationPicker.isSpriteLab)
-      );
+      if (multiSelect) {
+        dispatch(handleSelectedAnimation(animation));
+      } else {
+        dispatch(
+          addLibraryAnimation(animation, getState().animationPicker.isSpriteLab)
+        );
+      }
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendLibraryFrames(animation));
     }
