@@ -1004,7 +1004,7 @@ export class WorkshopForm extends React.Component {
                 <HelpBlock>{validation.help.capacity}</HelpBlock>
               </FormGroup>
             </Col>
-            <Col sm={3}>
+            <Col sm={5}>
               <CourseSelect
                 course={this.state.course}
                 facilitatorCourses={this.props.facilitatorCourses}
