@@ -3,7 +3,7 @@ version_year 'unversioned'
 published_state 'preview'
 is_course true
 
-lesson 'Minecraft Hour of Code', display_name: 'Minecraft Hour of Code', has_lesson_plan: false
+lesson 'Minecraft Hour of Code', display_name: 'Minecraft Hour of Code', has_lesson_plan: true
 level 'MC_HOC_2017_01_RETRY'
 level 'MC_HOC_2017_02_Cole'
 level 'MC_HOC_2017_03_Cole'
