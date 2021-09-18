@@ -2092,7 +2092,9 @@ en:
           lesson_groups: {}
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: MINECRAFT Hour of Code
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
         oceans:
           title: AI for Oceans
@@ -4438,7 +4440,9 @@ en:
           lesson_groups: {}
           lessons:
             Minecraft Hour of Code Designer:
-              name: Minecraft Hour of Code Designer
+              name: MINECRAFT Hour of Code
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Program animals and other Minecraft creatures in your own version of Minecraft.
         flappy-impact-study:
           title: Flappy Code with Survey
@@ -7820,7 +7824,9 @@ en:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft\: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: MINECRAFT Hour of Code
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
         applab-intro-staging:
           title: Intro to App Lab Staging
@@ -10852,7 +10858,9 @@ en:
           lesson_groups: {}
           lessons:
             Aquatic:
-              name: Aquatic
+              name: MINECRAFT Hour of Code
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
         sconyers:
           title: Tracey's Playground
