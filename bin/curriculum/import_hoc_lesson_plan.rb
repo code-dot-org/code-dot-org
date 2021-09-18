@@ -102,6 +102,8 @@ def main(options)
     cb_lesson_json = fetch(url)
     cb_lesson = JSON.parse(cb_lesson_json)
 
+    next if options.dry_run
+
     LessonImportHelper.update_lesson(lesson, options.models, cb_lesson)
     log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson.to_json[0, 50]}...")
 
