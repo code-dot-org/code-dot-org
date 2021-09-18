@@ -12,33 +12,11 @@ import {
   searchAssets,
   filterOutBackgrounds
 } from '@cdo/apps/code-studio/assets/searchAssets';
+import experiments from '@cdo/apps/util/experiments';
+import Button from '@cdo/apps/templates/Button';
 
 const MAX_SEARCH_RESULTS = 40;
 const MAX_HEIGHT = 460;
-
-const animationPickerStyles = {
-  allAnimations: {
-    color: color.purple,
-    fontFamily: "'Gotham 7r', sans-serif",
-    cursor: 'pointer'
-  },
-  breadCrumbs: {
-    margin: '8px 0',
-    fontSize: 14,
-    display: 'inline-block'
-  },
-  pagination: {
-    float: 'right',
-    display: 'inline',
-    marginTop: 10
-  },
-  emptyResults: {
-    paddingBottom: 10
-  },
-  navigation: {
-    minHeight: 30
-  }
-};
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
@@ -180,12 +158,15 @@ export default class AnimationPickerBody extends React.Component {
   }
 
   animationItemsRendering(animations) {
+    const multiSelectEnabled = experiments.isEnabled(experiments.MultiSelect);
     return animations.map(animationProps => (
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
         label={this.props.hideAnimationNames ? undefined : animationProps.name}
         animationProps={animationProps}
-        onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
+        onClick={() =>
+          this.props.onPickLibraryAnimation(animationProps, multiSelectEnabled)
+        }
         playAnimations={this.props.playAnimations}
       />
     ));
@@ -264,6 +245,13 @@ export default class AnimationPickerBody extends React.Component {
           {(searchQuery !== '' || categoryQuery !== '') &&
             this.animationItemsRendering(results || [])}
         </ScrollableList>
+        <div style={animationPickerStyles.footer}>
+          <Button
+            text={msg.done()}
+            onClick={() => console.log('Submit selections')}
+            color={Button.ButtonColor.orange}
+          />
+        </div>
       </div>
     );
   }
@@ -276,4 +264,32 @@ export const WarningLabel = ({children}) => (
 );
 WarningLabel.propTypes = {
   children: PropTypes.node
+};
+
+const animationPickerStyles = {
+  allAnimations: {
+    color: color.purple,
+    fontFamily: "'Gotham 7r', sans-serif",
+    cursor: 'pointer'
+  },
+  breadCrumbs: {
+    margin: '8px 0',
+    fontSize: 14,
+    display: 'inline-block'
+  },
+  pagination: {
+    float: 'right',
+    display: 'inline',
+    marginTop: 10
+  },
+  emptyResults: {
+    paddingBottom: 10
+  },
+  navigation: {
+    minHeight: 30
+  },
+  footer: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  }
 };
