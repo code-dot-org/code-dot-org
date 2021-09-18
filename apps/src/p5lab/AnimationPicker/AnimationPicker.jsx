@@ -11,7 +11,8 @@ import {
   pickLibraryAnimation,
   beginUpload,
   handleUploadComplete,
-  handleUploadError
+  handleUploadError,
+  saveSelectedAnimations
 } from '../redux/animationPicker';
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
@@ -58,7 +59,8 @@ class AnimationPicker extends React.Component {
     onUploadStart: PropTypes.func.isRequired,
     onUploadDone: PropTypes.func.isRequired,
     onUploadError: PropTypes.func.isRequired,
-    playAnimations: PropTypes.bool.isRequired
+    playAnimations: PropTypes.bool.isRequired,
+    onAnimationSelectionDone: PropTypes.func.isRequired
   };
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
@@ -77,6 +79,7 @@ class AnimationPicker extends React.Component {
         onDrawYourOwnClick={this.props.onPickNewAnimation}
         onPickLibraryAnimation={this.props.onPickLibraryAnimation}
         onUploadClick={this.onUploadClick}
+        onAnimationSelectionDone={this.props.onAnimationSelectionDone}
         playAnimations={this.props.playAnimations}
         libraryManifest={this.props.libraryManifest}
         hideUploadOption={this.props.hideUploadOption}
@@ -158,6 +161,9 @@ export default connect(
     },
     onUploadError(status) {
       dispatch(handleUploadError(status));
+    },
+    onAnimationSelectionDone() {
+      dispatch(saveSelectedAnimations());
     }
   })
 )(AnimationPicker);
