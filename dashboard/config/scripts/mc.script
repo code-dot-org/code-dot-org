@@ -3,7 +3,7 @@ version_year 'unversioned'
 published_state 'preview'
 is_course true
 
-lesson 'Hour of Code 2015', display_name: 'Hour of Code 2015', has_lesson_plan: false
+lesson 'Hour of Code 2015', display_name: 'Hour of Code 2015', has_lesson_plan: true
 level 'Overworld Move to Sheep'
 level 'Overworld Chop Tree'
 level 'Overworld Shear Sheep'

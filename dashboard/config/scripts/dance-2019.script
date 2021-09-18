@@ -4,7 +4,7 @@ published_state 'preview'
 tts true
 is_course true
 
-lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: false
+lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: true
 level 'Dance_2019_01'
 level 'Dance_2019_02'
 level 'Dance_2019_03'

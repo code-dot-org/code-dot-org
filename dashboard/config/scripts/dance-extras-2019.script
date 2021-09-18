@@ -4,7 +4,7 @@ published_state 'preview'
 tts true
 is_course true
 
-lesson 'Dance Party - Go Further', display_name: 'Dance Party - Go Further', has_lesson_plan: false
+lesson 'Dance Party - Go Further', display_name: 'Dance Party - Go Further', has_lesson_plan: true
 level 'Dance_Party_extras_intro_2019', progression: 'Keep On Dancing!'
 level 'Dance_Party_extras_alternate_2019', progression: 'Back and Forth'
 level 'Dance_Party_extras_mixed_2019', progression: 'More Buttons'
