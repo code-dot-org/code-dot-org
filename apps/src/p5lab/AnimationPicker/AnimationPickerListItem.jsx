@@ -10,6 +10,7 @@ import experiments from '@cdo/apps/util/experiments';
 
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
+const HOVER_PLUS_SIZE = 24;
 
 class AnimationPickerListItem extends React.Component {
   static propTypes = {
@@ -25,6 +26,10 @@ class AnimationPickerListItem extends React.Component {
     loaded: false,
     hover: false
   };
+
+  componentDidMount() {
+    this.multiSelectEnabled_ = experiments.isEnabled(experiments.MULTISELECT);
+  }
 
   render() {
     const {
@@ -57,25 +62,10 @@ class AnimationPickerListItem extends React.Component {
       ? `/blockly/media/p5lab/animation-previews/category_${category}.png`
       : '';
 
-    const centerStyle = {
-      top: THUMBNAIL_SIZE / 2 - 12,
-      left: THUMBNAIL_SIZE / 2 - 12
-    };
-
-    const hoverIcon = [styles.hoverIcon, centerStyle];
-
-    const hoverBorder = {
-      borderStyle: 'solid',
-      borderRadius: 12,
-      cursor: 'pointer',
-      borderColor: color.purple,
-      borderWidth: '3px',
-      padding: 0
-    };
-
-    const displayMultiSelect = experiments.isEnabled(experiments.MULTISELECT);
-
-    const thumbnailStyleWithHover = [thumbnailStyle, hover && hoverBorder];
+    const thumbnailStyleWithHover = [
+      thumbnailStyle,
+      hover && styles.hoverBorder
+    ];
 
     return (
       <div
@@ -106,8 +96,8 @@ class AnimationPickerListItem extends React.Component {
           )}
         </div>
         {label && <div style={labelStyle}>{label}</div>}
-        {animationProps && loaded && hover && displayMultiSelect && (
-          <i className="fa fa-plus fa-2x" style={hoverIcon} />
+        {animationProps && loaded && hover && this.multiSelectEnabled_ && (
+          <i className="fa fa-plus fa-2x" style={styles.hoverIcon} />
         )}
       </div>
     );
@@ -165,11 +155,19 @@ const styles = {
     borderColor: color.purple,
     borderStyle: 'solid',
     borderWidth: '2px',
-    top: 0,
-    left: 0,
-    height: 24,
-    width: 24,
-    borderRadius: 5
+    height: HOVER_PLUS_SIZE,
+    width: HOVER_PLUS_SIZE,
+    borderRadius: 5,
+    top: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2,
+    left: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2
+  },
+  hoverBorder: {
+    borderStyle: 'solid',
+    borderRadius: 12,
+    cursor: 'pointer',
+    borderColor: color.purple,
+    borderWidth: '3px',
+    padding: 0
   }
 };
 
