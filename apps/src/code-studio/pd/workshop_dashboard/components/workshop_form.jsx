@@ -825,7 +825,7 @@ export class WorkshopForm extends React.Component {
   };
 
   shouldShowFacilitators() {
-    return !['Counselor'].includes(this.state.course);
+    return !['Counselor', 'Admin'].includes(this.state.course);
   }
 
   renderFormButtons() {
