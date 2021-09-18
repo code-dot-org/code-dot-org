@@ -10829,6 +10829,8 @@ en:
               name: new stage
             Dance Party:
               name: Dance Party
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Code your own dance party to share with your friends!
         frozen-2018-test-b:
           title: New Frozen Script
@@ -10964,7 +10966,9 @@ en:
           lesson_groups: {}
           lessons:
             Dance Party - Go Further:
-              name: Dance Party - Go Further
+              name: Dance Party
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
         coursef-2019:
           title: Course F (2019)
@@ -15206,6 +15210,8 @@ en:
           lessons:
             Dance Party:
               name: Dance Party
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Code your own dance party to share with your friends!
         k5-onlinepd-2019:
           title: Teaching Computer Science Fundamentals (2019)
@@ -15326,9 +15332,9 @@ en:
           lesson_groups: {}
           lessons:
             Dance Party - Go Further:
-              name: Dance Party - Go Further
-              description_student: ''
-              description_teacher: ''
+              name: Dance Party
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
         csp10-pilot:
           title: Cybersecurity and Global Impacts
