@@ -105,11 +105,13 @@ def main(options)
     LessonImportHelper.update_lesson(lesson, options.models, cb_lesson)
     log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson.to_json[0, 50]}...")
 
-    unit.update!(
-      is_migrated: true,
-      use_legacy_lesson_plans: true,
-      skip_translating_lesson_plans: true
-    )
+    unless unit.is_migrated
+      unit.update!(
+        is_migrated: true,
+        use_legacy_lesson_plans: true,
+        skip_translating_lesson_plans: true
+      )
+    end
 
     unit.fix_script_level_positions
     unit.write_script_dsl
