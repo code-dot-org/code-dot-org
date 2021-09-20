@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-16 17:31:40 UTC",
+    "serialized_at": "2021-09-17 20:54:43 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -3633,7 +3633,8 @@
       "key": "8295a615-6cbb-4672-bc4c-faadcf90bed4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 4 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 4 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit 4 Assessment"
       },
       "seeding_key": {
         "activity_section.key": "8295a615-6cbb-4672-bc4c-faadcf90bed4",
@@ -5138,6 +5139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L12-L1"
+        ],
         "progression": "Neighborhood Block Party Project"
       },
       "bonus": false,
@@ -5160,6 +5164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L13-L1"
+        ],
         "progression": "Neighborhood Block Party Project"
       },
       "bonus": false,
@@ -5174,6 +5181,28 @@
       },
       "level_keys": [
         "CSA U4L13-L1"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 4 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 4 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "8295a615-6cbb-4672-bc4c-faadcf90bed4"
+      },
+      "level_keys": [
+        "CSA Unit 4 Pilot Assessment 2021"
       ]
     }
   ],
@@ -5908,6 +5937,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa4-pilot",
         "activity_section.key": "2e9317d8-b7c5-4690-a133-c3db7c1237f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 4 Pilot Assessment 2021",
+        "script_level.level_keys": [
+          "CSA Unit 4 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "8295a615-6cbb-4672-bc4c-faadcf90bed4"
       }
     }
   ],
