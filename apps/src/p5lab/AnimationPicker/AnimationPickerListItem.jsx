@@ -6,9 +6,11 @@ import color from '@cdo/apps/util/color';
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 import AnimationPreview from './AnimationPreview';
+import experiments from '@cdo/apps/util/experiments';
 
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
+const HOVER_PLUS_SIZE = 24;
 
 class AnimationPickerListItem extends React.Component {
   static propTypes = {
@@ -21,62 +23,82 @@ class AnimationPickerListItem extends React.Component {
   };
 
   state = {
-    loaded: false
+    loaded: false,
+    hover: false
   };
 
+  componentDidMount() {
+    this.multiSelectEnabled_ = experiments.isEnabled(experiments.MULTISELECT);
+  }
+
   render() {
-    const rootStyle = [styles.root, !this.props.label && styles.noLabel];
+    const {
+      icon,
+      animationProps,
+      category,
+      onClick,
+      playAnimations,
+      label
+    } = this.props;
+    const {loaded, hover} = this.state;
+    const rootStyle = [styles.root, !label && styles.noLabel];
 
     const thumbnailStyle = [
       styles.thumbnail,
-      this.props.icon && styles.thumbnailIcon,
-      this.props.animationProps && {
-        display: this.state.loaded ? 'block' : 'none'
+      icon && styles.thumbnailIcon,
+      animationProps && {
+        display: loaded ? 'block' : 'none'
       }
     ];
 
     const labelStyle = [
       styles.label,
-      this.props.icon && styles.labelIcon,
-      this.props.animationProps && {
-        display: this.state.loaded ? 'block' : 'none'
+      icon && styles.labelIcon,
+      animationProps && {
+        display: loaded ? 'block' : 'none'
       }
     ];
-    const iconImageSrc = this.props.category
-      ? `/blockly/media/p5lab/animation-previews/category_${
-          this.props.category
-        }.png`
+    const iconImageSrc = category
+      ? `/blockly/media/p5lab/animation-previews/category_${category}.png`
       : '';
+
+    const thumbnailStyleWithHover = [
+      thumbnailStyle,
+      hover && styles.hoverBorder
+    ];
 
     return (
       <div
         style={rootStyle}
-        onClick={this.props.onClick}
+        onClick={onClick}
         className="uitest-animation-picker-item"
+        onMouseEnter={() => this.setState({hover: true})}
+        onMouseLeave={() => this.setState({hover: false})}
       >
-        <div style={thumbnailStyle}>
-          {this.props.animationProps && (
+        <div style={thumbnailStyleWithHover}>
+          {animationProps && (
             <AnimationPreview
-              animationProps={this.props.animationProps}
-              sourceUrl={this.props.animationProps.sourceUrl}
+              animationProps={animationProps}
+              sourceUrl={animationProps.sourceUrl}
               width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
               height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-              playBehavior={
-                !this.props.playAnimations ? PlayBehavior.NEVER_PLAY : null
-              }
+              playBehavior={!playAnimations ? PlayBehavior.NEVER_PLAY : null}
               onPreviewLoad={() => this.setState({loaded: true})}
             />
           )}
-          {this.props.icon && <i className={'fa fa-' + this.props.icon} />}
-          {this.props.category && (
+          {icon && <i className={'fa fa-' + icon} />}
+          {category && (
             <img
-              className={this.props.category}
+              className={category}
               style={styles.categoryImage}
               src={iconImageSrc}
             />
           )}
         </div>
-        {this.props.label && <div style={labelStyle}>{this.props.label}</div>}
+        {label && <div style={labelStyle}>{label}</div>}
+        {animationProps && loaded && hover && this.multiSelectEnabled_ && (
+          <i className="fa fa-plus fa-2x" style={styles.hoverIcon} />
+        )}
       </div>
     );
   }
@@ -88,7 +110,8 @@ const styles = {
     width: THUMBNAIL_SIZE,
     textAlign: 'center',
     marginRight: 10,
-    marginBottom: 10
+    marginBottom: 10,
+    position: 'relative'
   },
   thumbnail: {
     height: THUMBNAIL_SIZE,
@@ -96,10 +119,8 @@ const styles = {
     borderColor: color.light_gray,
     borderWidth: THUMBNAIL_BORDER_WIDTH,
     borderRadius: 12,
-    cursor: 'pointer',
-    ':hover': {
-      borderColor: color.purple
-    }
+    padding: '2px',
+    cursor: 'pointer'
   },
   thumbnailIcon: {
     color: color.white,
@@ -126,6 +147,27 @@ const styles = {
   },
   categoryImage: {
     borderRadius: 10
+  },
+  hoverIcon: {
+    position: 'absolute',
+    color: color.purple,
+    backgroundColor: color.white,
+    borderColor: color.purple,
+    borderStyle: 'solid',
+    borderWidth: '2px',
+    height: HOVER_PLUS_SIZE,
+    width: HOVER_PLUS_SIZE,
+    borderRadius: 5,
+    top: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2,
+    left: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2
+  },
+  hoverBorder: {
+    borderStyle: 'solid',
+    borderRadius: 12,
+    cursor: 'pointer',
+    borderColor: color.purple,
+    borderWidth: '3px',
+    padding: 0
   }
 };
 

@@ -302,7 +302,33 @@ class JavalabEditor extends React.Component {
     });
   }
 
+  // Checks if the given file name is valid and if not,
+  // updates the state with the appropriate error message.
+  // Returns whether or not the file name is valid.
+  validateFileName(filename, errorStateKey) {
+    let errorMessage;
+
+    if (!filename) {
+      errorMessage = javalabMsg.missingFilenameError();
+    } else if (filename.endsWith('.java') && /\s/g.test(filename)) {
+      // Java file names cannot contains spaces
+      errorMessage = javalabMsg.invalidJavaFilename();
+    }
+
+    if (errorMessage) {
+      this.setState({
+        [errorStateKey]: errorMessage
+      });
+    }
+
+    return !errorMessage;
+  }
+
   onRenameFile(newFilename) {
+    newFilename = newFilename.trim();
+    if (!this.validateFileName(newFilename, 'renameFileError')) {
+      return;
+    }
     const {fileMetadata, editTabKey} = this.state;
     // check for duplicate filename
     if (Object.keys(this.props.sources).includes(newFilename)) {
@@ -335,6 +361,10 @@ class JavalabEditor extends React.Component {
   }
 
   onCreateFile(filename, fileContents) {
+    filename = filename.trim();
+    if (!this.validateFileName(filename, 'newFileError')) {
+      return;
+    }
     fileContents = fileContents || '';
     if (Object.keys(this.props.sources).includes(filename)) {
       this.setState({
