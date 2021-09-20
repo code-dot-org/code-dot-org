@@ -32,7 +32,8 @@ export default class AnimationPickerBody extends React.Component {
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
-    canDraw: PropTypes.bool.isRequired
+    canDraw: PropTypes.bool.isRequired,
+    selectedAnimations: PropTypes.arrayOf(PropTypes.object).isRequired
   };
 
   state = {
@@ -168,6 +169,9 @@ export default class AnimationPickerBody extends React.Component {
           this.props.onPickLibraryAnimation(animationProps, multiSelect)
         }
         playAnimations={this.props.playAnimations}
+        selected={this.props.selectedAnimations.some(
+          e => e.sourceUrl === animationProps.sourceUrl
+        )}
       />
     ));
   }

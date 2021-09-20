@@ -19,7 +19,8 @@ class AnimationPickerListItem extends React.Component {
     label: PropTypes.string,
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
-    category: PropTypes.string
+    category: PropTypes.string,
+    selected: PropTypes.bool
   };
 
   state = {
@@ -38,7 +39,8 @@ class AnimationPickerListItem extends React.Component {
       category,
       onClick,
       playAnimations,
-      label
+      label,
+      selected
     } = this.props;
     const {loaded, hover} = this.state;
     const rootStyle = [styles.root, !label && styles.noLabel];
@@ -62,10 +64,11 @@ class AnimationPickerListItem extends React.Component {
       ? `/blockly/media/p5lab/animation-previews/category_${category}.png`
       : '';
 
-    const thumbnailStyleWithHover = [
+    let thumbnailStyleWithHover = [
       thumbnailStyle,
-      hover && styles.highlightBorder,
-      hover && styles.hoverBorder
+      hover && styles.multiSelectBorder,
+      hover && styles.hoverBorder,
+      selected && styles.selectBorder
     ];
 
     return (
@@ -162,7 +165,7 @@ const styles = {
     top: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2,
     left: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2
   },
-  highlightBorder: {
+  multiSelectBorder: {
     borderStyle: 'solid',
     borderRadius: 12,
     cursor: 'pointer',
@@ -173,7 +176,9 @@ const styles = {
     borderColor: color.purple
   },
   selectBorder: {
-    borderColor: color.purple
+    borderWidth: '3px',
+    padding: 0,
+    borderColor: color.level_perfect
   }
 };
 
