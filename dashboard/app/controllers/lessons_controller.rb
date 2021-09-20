@@ -46,6 +46,8 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1/start
   def start
+    script = Script.get_from_cache(params[:script_id])
+    return render :forbidden unless script.is_migrated && script.include_student_lesson_plans
     # dedupe getting lesson?
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
