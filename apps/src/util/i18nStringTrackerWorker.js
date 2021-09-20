@@ -46,7 +46,8 @@ class I18nStringTrackerWorker {
     }
 
     this.buffer[source] = this.buffer[source] || new Set();
-    this.buffer[source].add(stringKey);
+    this.buffer[source].add(`${source}.${stringKey}`);
+    console.log('this.buffer :', this.buffer);
 
     // schedule a buffer flush if there isn't already one.
     if (!this.pendingFlush) {
