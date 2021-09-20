@@ -62,6 +62,7 @@ export const SongTitlesToArtistTwitterHandle = {
   sayso_dojacat: 'DojaCat',
   // 2021 Songs
   aire_jessejoy: 'jesseyjoy',
+  despedidaycierre_vanesamartin: 'vanesamartin_',
   // These tracks available locally, tweet @codeorg to avoid spamming anyone.
   jazzy_beats: 'codeorg',
   synthesize: 'codeorg',
@@ -82,6 +83,5 @@ export const SongTitlesToArtistTwitterHandle = {
   showdaspoderosas_anitta: 'Anitta',
   janti_muratboz: 'MuratBoz',
   gee_girlsgen: 'GirlsGeneration',
-  growingpains_alessiacara: 'AlessiaCara',
-  despedidaycierre_vanesamartin: 'vanesamartin_'
+  growingpains_alessiacara: 'AlessiaCara'
 };
