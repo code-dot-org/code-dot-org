@@ -1,20 +1,27 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2021-08-31T16:22:47.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "access scanner class documentation\r\n\r\nwith a partner, navigate to the scanner class documentation and answer the questions",
+    "long_instructions": "Find the `Scanner` class in the Java API.\r\n\r\nWith a partner, find the following for the `Scanner` class:\r\n\r\n* Description\r\n\r\n* Constructors\r\n\r\n* Methods\r\n\r\n* The package it is in",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "import java.util.Scanner;\n\npublic class MyConsole {\n  public static void main(String[] args) {\n    Scanner input = new Scanner(System.in);\n\n    System.out.print(\"Enter a number: \");\n    int number = input.nextInt();\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-08-31T16:22:47.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-09-16 19:24:47 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 19:26:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
