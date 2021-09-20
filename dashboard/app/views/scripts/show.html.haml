@@ -21,6 +21,7 @@
 - scriptOverviewData = {scriptData: script_data.merge(additional_script_data)}
 - if @script.professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
   -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
+- lesson_plans = @script.is_migrated && @script.use_legacy_lesson_plans && @script.lessons.select(&:has_lesson_plan).map {|lesson| {name: lesson.name, url: lesson.get_uncached_show_path}}
 - content_for(:head) do
   %script{ src: webpack_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
 
@@ -76,3 +77,7 @@
         %ul
           - @script.unit_groups.each do |course|
             %li= link_to course_path(course)
+      -if lesson_plans && lesson_plans.count > 0
+        ="There are #{lesson_plans.count} unlaunched code studio lesson plans in this unit:"
+        - lesson_plans.each do |lesson_plan|
+          %li= link_to lesson_plan[:name], lesson_plan[:url]
