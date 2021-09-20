@@ -28,6 +28,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @csp_script = create(:script, name: 'csp1', published_state: SharedConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
     @csp_script.reload
+
+    Script.clear_cache
   end
 
   test 'logged out cannot list sections' do
@@ -478,6 +480,62 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     assert_nil returned_json['course_id']
     assert_nil returned_section.unit_group
+  end
+
+  test 'pilot teacher can assign the pilot course id' do
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    sign_in pilot_teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      course_id: pilot_unit_group.id
+    }
+    assert_response :success
+
+    assert_equal pilot_unit_group.id, returned_json['course_id']
+    assert_equal pilot_unit_group, returned_section.unit_group
+  end
+
+  test 'non pilot teacher cannot assign the pilot course id' do
+    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      course_id: pilot_unit_group.id
+    }
+    assert_response :success
+    # TODO: Better to fail here?
+
+    assert_nil returned_json['course_id']
+    assert_nil returned_section.unit_group
+  end
+
+  test 'pilot teacher can assign pilot script' do
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    sign_in pilot_teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      script: {id: pilot_script.id}
+    }
+    assert_response :success
+
+    assert_equal pilot_script.id, returned_json['script']['id']
+    assert_equal pilot_script, returned_section.script
+  end
+
+  test 'non pilot teacher cannot assign a pilot script' do
+    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      script: {id: pilot_script.id}
+    }
+    assert_response :success
+    # TODO: Better to fail here?
+
+    assert_nil returned_json['script']['id']
+    assert_nil returned_section.script
   end
 
   test 'can create with a script id but no course id' do

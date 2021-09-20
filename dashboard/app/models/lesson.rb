@@ -89,6 +89,34 @@ class Lesson < ApplicationRecord
 
   include CodespanOnlyMarkdownHelper
 
+  def self.update_lessons_in_migrated_unit(unit, lesson_group, raw_lessons, counters)
+    raw_lessons.map do |raw_lesson|
+      lesson = fetch_lesson(raw_lesson, unit)
+
+      lesson.assign_attributes(
+        lesson_group: lesson_group,
+        absolute_position: (counters.lesson_position += 1),
+        relative_position: lesson.numbered_lesson? ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
+      )
+      lesson.save! if lesson.changed?
+      lesson
+    end
+  end
+
+  def self.fetch_lesson(raw_lesson, unit)
+    if raw_lesson[:id]
+      return Lesson.find_by!(script: unit, id: raw_lesson[:id], key: raw_lesson[:key])
+    end
+    Lesson.prevent_blank_display_name(raw_lesson)
+    Lesson.create!(
+      key: raw_lesson[:key],
+      script: unit,
+      name: raw_lesson[:name],
+      relative_position: 0,  # will be updated by the caller, but can't be nil
+      has_lesson_plan: true
+    )
+  end
+
   def self.add_lessons(unit, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
     unit.lessons.reload
     raw_lessons.map do |raw_lesson|
@@ -100,7 +128,7 @@ class Lesson < ApplicationRecord
           key: raw_lesson[:key],
           script: unit
         ) do |l|
-          l.name = "" # will be updated below, but cant be null
+          l.name = raw_lesson[:name]
           l.relative_position = 0 # will be updated below, but cant be null
           l.has_lesson_plan = true # will be reset below if specified
         end
@@ -243,7 +271,7 @@ class Lesson < ApplicationRecord
   end
 
   def localized_lesson_plan
-    return script_lesson_path(script, self) if script.is_migrated
+    return script_lesson_path(script, self) if script.is_migrated? && !script.use_legacy_lesson_plans?
 
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
@@ -316,7 +344,7 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonEditPath: edit_lesson_path(id: id)
+        lessonEditPath: get_uncached_edit_path
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -354,6 +382,25 @@ class Lesson < ApplicationRecord
     lesson_summary.freeze
   end
 
+  def get_uncached_edit_path
+    # for hoc scripts, everything under /s/[script-name]/lessons/* is cached,
+    # and user-identifying cookies are stripped. this means we can't tell if
+    # a user trying to edit a lesson plan via /s/[script-name]/lessons/1/edit
+    # has sufficient permissions or not. therefore, use a different path
+    # when editing lesson plans in hoc scripts.
+    ScriptConfig.hoc_scripts.include?(script.name) ? edit_lesson_path(id: id) : script_lesson_edit_path(script, self)
+  end
+
+  def get_uncached_show_path
+    # use a custom path for viewing hoc lesson plans on levelbuilder, so that
+    # levelbuilders can see the gray "extra links" box with a link to edit
+    # the lesson. this also sidesteps some weird problems where visiting a
+    # a path like levelbuilder-studio.code.org/s/dance/lessons/1 messes up
+    # the user's login session and requires them to reauthenticate before
+    # accessing other pages which require levelbuilder credentials.
+    ScriptConfig.hoc_scripts.include?(script.name) ? lesson_path(id: id) : script_lesson_path(script, self)
+  end
+
   def summarize_for_calendar
     {
       id: id,
@@ -366,16 +413,26 @@ class Lesson < ApplicationRecord
     }
   end
 
-  # Provides data about this lesson needed by the unit edit page.
-  #
-  # TODO: [PLAT-369] trim down to only include those fields needed on the
-  # unit edit page
+  # Provides data about this lesson needed by the edit page for unmigrated units.
   def summarize_for_unit_edit
     summary = summarize(true, for_edit: true).dup
     # Do not let unit name override lesson name when there is only one lesson
     summary[:name] = name
     summary[:lesson_group_display_name] = lesson_group&.display_name
     summary.freeze
+  end
+
+  def summarize_for_migrated_unit_edit
+    {
+      id: id,
+      name: name,
+      key: key,
+      assessment: !!assessment,
+      lockable: !!lockable,
+      hasLessonPlan: has_lesson_plan,
+      unplugged: unplugged,
+      lessonEditPath: get_uncached_edit_path
+    }
   end
 
   # Provides all the editable data related to this lesson and its activities for
@@ -416,7 +473,7 @@ class Lesson < ApplicationRecord
       courseVersionId: lesson_group.script.get_course_version&.id,
       unitIsLaunched: script.launched?,
       scriptPath: script_path(script),
-      lessonPath: script_lesson_path(script, self),
+      lessonPath: get_uncached_show_path,
       lessonExtrasAvailableForUnit: script.lesson_extras_available
     }
   end
@@ -768,7 +825,7 @@ class Lesson < ApplicationRecord
   def copy_to_unit(destination_unit, new_level_suffix = nil)
     return if script == destination_unit
     raise 'Both lesson and unit must be migrated' unless script.is_migrated? && destination_unit.is_migrated?
-    raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil? || script.get_course_version.nil?
+    raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil?
 
     copied_lesson = dup
     copied_lesson.key = copied_lesson.name

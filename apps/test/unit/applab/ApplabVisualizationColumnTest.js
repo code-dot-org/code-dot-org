@@ -1,4 +1,4 @@
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedApplabVisualizationColumn} from '@cdo/apps/applab/ApplabVisualizationColumn';

@@ -275,6 +275,26 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
+  test 'student in same CSA code review enabled section as student seeking code review can view as peer on bubble choice level' do
+    javalab_sublevel = create(:javalab)
+    bubble_choice_level = create :bubble_choice_level, sublevels: [javalab_sublevel]
+    bubble_choice_script_level = create :script_level,
+      levels: [bubble_choice_level]
+
+    project_owner = create :student
+    peer_reviewer = create :student
+    section = create :section, code_review_enabled: true
+    section.add_student project_owner
+    section.add_student peer_reviewer
+    create :reviewable_project,
+      user_id: project_owner.id,
+      script_id: bubble_choice_script_level.script_id,
+      level_id: javalab_sublevel.id
+
+    assert Ability.new(peer_reviewer).can? :view_as_user, bubble_choice_script_level, project_owner, javalab_sublevel
+    assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, bubble_choice_script_level, project_owner, javalab_sublevel
+  end
+
   test 'student in same CSA non code review enabled section as student seeking code review cannot view as peer' do
     # We enable read only access to other student work only on Javalab levels
     javalab_script_level = create :script_level,

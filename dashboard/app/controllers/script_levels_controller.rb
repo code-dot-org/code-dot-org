@@ -19,6 +19,7 @@ class ScriptLevelsController < ApplicationController
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
   before_action :disable_session_for_cached_pages
+  before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
 
   def disable_session_for_cached_pages
@@ -92,6 +93,7 @@ class ScriptLevelsController < ApplicationController
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
       if Script.family_names.include?(params[:script_id])
+        session[:show_unversioned_redirect_warning] = true unless new_script.is_course
         Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
       end
 
@@ -105,6 +107,9 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning]
+    session[:show_unversioned_redirect_warning] = false
+
     # will be true if the user is in any unarchived section where tts autoplay is enabled
     @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
 
@@ -113,10 +118,6 @@ class ScriptLevelsController < ApplicationController
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
     authorize! :read, @script_level, params.slice(:login_required)
-
-    @code_review_enabled = @script_level.level.is_a?(Javalab) &&
-      current_user.present? &&
-      (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
@@ -403,11 +404,16 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    # Grab bubble choice level that will be shown (if any),
+    # so we can check whether a student should be able to view
+    # another student's work for code review.
+    sublevel_to_view = select_bubble_choice_level
+
     user_to_view = User.find(params[:user_id])
-    if can?(:view_as_user, @script_level, user_to_view)
+    if can?(:view_as_user, @script_level, user_to_view, sublevel_to_view)
       @user = user_to_view
 
-      if can?(:view_as_user_for_code_review, @script_level, user_to_view)
+      if can?(:view_as_user_for_code_review, @script_level, user_to_view, sublevel_to_view)
         view_options(is_code_reviewing: true)
       end
     end
@@ -426,12 +432,15 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
+  def select_bubble_choice_level
+    return unless @script_level.bubble_choice? && params[:sublevel_position]
+    @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
+  end
+
   def select_level
     # If a BubbleChoice level's sublevel has been requested, return it.
-    if @script_level.bubble_choice? && params[:sublevel_position]
-      sublevel = @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
-      return sublevel if sublevel
-    end
+    bubble_choice_level = select_bubble_choice_level
+    return bubble_choice_level if bubble_choice_level
 
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
@@ -504,6 +513,10 @@ class ScriptLevelsController < ApplicationController
         level_id: ''
       )
     end
+
+    @code_review_enabled = @level.is_a?(Javalab) &&
+      current_user.present? &&
+      (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
 
     view_options(
       full_width: true,

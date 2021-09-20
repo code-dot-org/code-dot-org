@@ -140,6 +140,7 @@ class ApplicationController < ActionController::Base
     :hashed_email,
     :terms_of_service_version,
     :email_preference_opt_in,
+    :share_teacher_email_reg_partner_opt_in_radio_choice,
     :data_transfer_agreement_accepted,
     :data_transfer_agreement_required,
     :parent_email_preference_opt_in_required,
@@ -257,6 +258,10 @@ class ApplicationController < ActionController::Base
 
   def require_admin
     authorize! :read, :reports
+  end
+
+  def redirect_admin_from_labs
+    redirect_to root_path, flash: {alert: 'Labs not allowed for admins.'} if current_user&.admin?
   end
 
   # Pairings are stored as an array of user ids in the session

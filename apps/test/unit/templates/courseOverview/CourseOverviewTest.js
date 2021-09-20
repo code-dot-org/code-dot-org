@@ -1,4 +1,4 @@
-import {assert, expect} from '../../../util/deprecatedChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
@@ -19,7 +19,6 @@ const defaultProps = {
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   sectionsInfo: [],
   teacherResources: [],
-  isTeacher: true,
   viewAs: ViewType.Teacher,
   scripts: [
     {

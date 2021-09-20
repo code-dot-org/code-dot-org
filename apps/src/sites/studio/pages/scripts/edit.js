@@ -29,7 +29,7 @@ export default function initPage(unitEditorData) {
     isRtl
   });
   const store = getStore();
-  store.dispatch(init(lessonGroups, unitEditorData.levelKeyList));
+  store.dispatch(init(lessonGroups));
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({
       type,
@@ -104,6 +104,7 @@ export default function initPage(unitEditorData) {
         initialIncludeStudentLessonPlans={
           scriptData.includeStudentLessonPlans || false
         }
+        initialUseLegacyLessonPlans={scriptData.useLegacyLessonPlans || false}
         scriptPath={scriptData.scriptPath}
       />
     </Provider>,

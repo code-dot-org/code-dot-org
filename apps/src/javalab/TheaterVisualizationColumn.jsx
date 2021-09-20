@@ -41,7 +41,7 @@ class TheaterVisualizationColumn extends React.Component {
           <ProtectedVisualizationDiv>
             <div id="theater-container" style={styles.theater}>
               <img id="theater" style={styles.theaterImage} />
-              <audio id="theater-audio" autoPlay="true" />
+              <audio id="theater-audio" />
             </div>
           </ProtectedVisualizationDiv>
         </div>
@@ -57,6 +57,8 @@ const styles = {
     height: 800
   },
   theaterImage: {
+    // Start hidden so we can start the audio and gif at the same time.
+    visibility: 'hidden',
     width: 800,
     height: 800
   }

@@ -19,6 +19,8 @@
 #
 
 class ChannelToken < ApplicationRecord
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   belongs_to :user
   belongs_to :level
 
@@ -28,7 +30,8 @@ class ChannelToken < ApplicationRecord
 
   # @param [Level] level The level associated with the channel token request.
   # @param [String] ip The IP address making the channel token request.
-  # @param [String] user_storage_id The if of the storage app associated with the channel token request.
+  # @param [String] user_storage_id The ID of the storage app associated with the channel token request.
+  # @param [Integer] script_id The ID of the script associated with the channel token.
   # @param [Hash] data
   # @return [ChannelToken] The channel token (new or existing).
   def self.find_or_create_channel_token(level, ip, user_storage_id, script_id = nil, data = {})
@@ -39,7 +42,7 @@ class ChannelToken < ApplicationRecord
     SeamlessDatabasePool.use_master_connection do
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         # your own channel
-        channel_token = find_by(level: level.host_level, storage_id: user_storage_id)
+        channel_token = find_channel_token(level, user_storage_id, script_id)
 
         return channel_token if channel_token
 
@@ -55,8 +58,21 @@ class ChannelToken < ApplicationRecord
     end
   end
 
-  def self.find_channel_token(level, user_storage_id)
-    find_by(level: level.host_level, storage_id: user_storage_id)
+  # Finds the channel token. If a channel token exists for the user and level with and without a script ID,
+  # the channel token with the script_id takes precedence.
+  #
+  # Background: The Channel Tokens table did not always have a script_id column. Originally, a channel token for a level
+  # was identified by the level_id. Since we use the same level in different scripts, we needed to include
+  # script_id to identify the correct channel token for a level (https://codedotorg.atlassian.net/browse/LP-1395). As part of
+  # this work, we had to backfill the channel tokens table with the proper script_id. For some channel tokens it was not
+  # possible to identify which script they were associated with. For these channel tokens the script_id was left empty, which
+  # is why we need to query for a channel token with script_id and fallback on one without script_id.
+  #
+  # @param [Level] level The level associated with the channel token request.
+  # @param [String] user_storage_id The ID of the storage app associated with the channel token request.
+  # @param [Integer] script_id The ID of the script associated with the channel token.
+  def self.find_channel_token(level, user_storage_id, script_id)
+    order(script_id: 'desc').find_by(level: level.host_level, storage_id: user_storage_id, script_id: [nil, script_id])
   end
 
   # Create a new channel.
