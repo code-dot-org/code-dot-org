@@ -47,6 +47,7 @@ class LevelsController < ApplicationController
     NetSim,
     Odometer,
     Pixelation,
+    Poetry,
     PublicKeyCryptography,
     StandaloneVideo,
     StarWarsGrid,
