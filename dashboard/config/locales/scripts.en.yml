@@ -26240,3 +26240,16 @@ en:
           description_short: 'Learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment and learn to think about controlling actions using events. '
           description: Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
           student_description: Learn to think about controlling actions using events. Events are widely used in programming and should be easily recognizable after this lesson.
+        csc-things:
+          lessons:
+            lesson-1:
+              name: Poetry Scratch Paper
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csc-things
+          title: 'CSC Brain Dump '
+          description_audience: ''
+          description_short: ''
+          description: 'These are just a work in progress :) '
+          student_description: ''
