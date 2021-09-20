@@ -17,6 +17,11 @@
         Hour of Code 2018. Edit #{link_to 'library', edit_library_path(id: 'DanceLab')}, #{link_to 'blocks', blocks_path(pool: 'Dancelab')}.
   %li= link_to 'Build a Minecraft Level', new_level_path(type: 'Craft')
   %li= link_to 'Build a Star Wars Grid Level', new_level_path(type: 'StarWarsGrid')
+  %li
+    =link_to 'Build a Poetry Level', new_level_path(type: 'Poetry')
+    %ul
+      %li
+        Hour of Code 2021. Edit #{link_to 'blocks', blocks_path(pool: 'Poetry')}
 
 %h2 Content
 %ul
