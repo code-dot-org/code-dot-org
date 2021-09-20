@@ -1657,24 +1657,27 @@
     react-chartjs-2 "^2.11.1"
     reselect "^4.0.0"
 
-"@code-dot-org/p5.play@^1.3.17-cdo":
-  version "1.3.17-cdo"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.17-cdo.tgz#c7d3dd3744c626dd2d2b90bda735fe64f64be662"
-  integrity sha512-0H423zbBWym1EyuJ7HfaCb68W4bGQd0E6DD5ENjmLBPZq/PXyf6Rn/agBnlKPZ1OGMStEVwlgRbg8IhpYRhWZA==
+"@code-dot-org/p5.play@^1.3.20-cdo":
+  version "1.3.20-cdo"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.20-cdo.tgz#7627bc6372bb9f6d818e62a3ea805cffb0c960bd"
+  integrity sha512-rRFLJdUMFARXvaPNXYolWx5dVl3NG4uz63PwmPoUXEbsTEfzEu8ATKXbmxtukSG7PLUk6X8oVqraQedjj5a3MA==
   dependencies:
-    "@code-dot-org/p5" "0.5.4-cdo.9"
+    "@code-dot-org/p5" "0.5.4-cdo.10"
 
-"@code-dot-org/p5@0.5.4-cdo.9":
-  version "0.5.4-cdo.9"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5/-/p5-0.5.4-cdo.9.tgz#8d5e7a75130bf3b4ee21678a7601fabed9858c7d"
-  integrity sha512-spJZkp8f2Hfqq6Xg8aiZlFSEtoPLln01e/MCX0ak4/7uX+NpgN0SkPKfzREp+NaLCOEZG0u+45XkSWYaFAGXvA==
+"@code-dot-org/p5@0.5.4-cdo.10":
+  version "0.5.4-cdo.10"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5/-/p5-0.5.4-cdo.10.tgz#4a915c4af0a762e59606bf3582dbb22a4c625139"
+  integrity sha512-UnlIasrM4YOULFhWLnnvx2DFznQEuEtSwL9JGD1zWfpEWoQ5hnfJcDuTKvmy7wUlt5hrE2M5aF2aMwxBfEYGTQ==
   dependencies:
     opentype.js "^0.4.9"
     reqwest "^1.1.5"
 
-"@code-dot-org/piskel@0.13.0-cdo.6":
-  version "0.13.0-cdo.6"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.6.tgz#0e919b94e76f9d33dce673e980ac18f3395a62fc"
+"@code-dot-org/piskel@0.13.0-cdo.7":
+  version "0.13.0-cdo.7"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.7.tgz#b7793889485ac953af0b268fa5545dad7c6078db"
+  integrity sha512-sdPuYTksDB2oLG/SFmCOpGf2IudUuHI30SwMyyHb6AxOUkrx+CwT6vIzqvy20Ejt6f0rK4J15HSLuojfelGqkw==
+  dependencies:
+    messageformat "^2.3.0"
 
 "@code-dot-org/redactable-markdown@0.4.0":
   version "0.4.0"
@@ -3701,10 +3704,10 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-blockly@5.20210325.1:
-  version "5.20210325.1"
-  resolved "https://registry.yarnpkg.com/blockly/-/blockly-5.20210325.1.tgz#c0a73174318dc61f4de116548ace2b2970dd4a58"
-  integrity sha512-qrilYPovJeDfxKDWm1YBUCPVNElh/iyC1szaHTIPZHj9C9YPpSzZOeFyyrPBbYRudzbo8kjBOWMtHnN1bLjkoQ==
+blockly@6.20210701.0:
+  version "6.20210701.0"
+  resolved "https://registry.yarnpkg.com/blockly/-/blockly-6.20210701.0.tgz#578dbdc59a61339a6ba29a69d0dc7bebeb8a19d1"
+  integrity sha512-cNrwFOAxXE5Pbs1FJAyLTlSRzpNW/C+0gPT2rGQDOJVVKcyF3vhFC1StgnxvQNsv//ueuksKWIXxDuSWh1VI4w==
   dependencies:
     jsdom "15.2.1"
 
@@ -10274,7 +10277,7 @@ messageformat-parser@^4.1.2:
   resolved "https://registry.yarnpkg.com/messageformat-parser/-/messageformat-parser-4.1.3.tgz#b824787f57fcda7d50769f5b63e8d4fda68f5b9e"
   integrity sha512-2fU3XDCanRqeOCkn7R5zW5VQHWf+T3hH65SzuqRvjatBK7r4uyFa5mEX+k6F9Bd04LVM5G4/BHBTUJsOdW7uyg==
 
-messageformat@2.3.0:
+messageformat@2.3.0, messageformat@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/messageformat/-/messageformat-2.3.0.tgz#de263c49029d5eae65d7ee25e0754f57f425ad91"
   integrity sha512-uTzvsv0lTeQxYI2y1NPa1lItL5VRI8Gb93Y2K2ue5gBPyrbJxfDi/EYWxh2PKv5yO42AJeeqblS9MJSh/IEk4w==
