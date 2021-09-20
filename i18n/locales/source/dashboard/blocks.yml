@@ -1186,10 +1186,19 @@ en:
             '"burst"': burst
             '"pop"': pop
             '"rain"': rain
+            '"zigzag"': zig-zag
       gamelab_makeNewSpriteAnon:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       gamelab_makeNumSprites:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites
+      gamelab_makeProjectile:
+        text: "create projectile \n[ANIMATION_NAME][0] from [LOCATION][1] with speed [SPEED][2]direction[DIRECTION][3]"
+        options:
+          DIRECTION:
+            '0': right
+            '90': down
+            '180': left
+            '270': up
       gamelab_mirrorSprite:
         text: "[SPRITE][0] face [DIRECTION][1]"
         options:
@@ -1226,9 +1235,25 @@ en:
           SOUND:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": accent
             "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": twinkle
             "'sound://category_app/app_button_1.mp3'": button
             "'sound://category_collect/clicky_crunch.mp3'": crunch
             "'sound://category_swish/quick_swing.mp3'": swing
+            "'sound://category_nature/summer_night_loop.mp3'": summer night
+            "'sound://category_background/ocean_waves.mp3'": ocean waves
+            "'sound://category_animals/dolphin.mp3'": dolphin clicks
+            "'sound://category_nature/thunderstorm_1.mp3'": thunderstorm
+            "'sound://category_animals/chick.mp3'": bird tweet
+            "'sound://category_animals/dog.mp3'": dog bark
+            "'sound://category_animals/tiger.mp3'": tiger roar
+            "'sound://category_transition/trippy_robotic_transition.mp3'": robot voice
+            "'sound://category_transition/star_dust_particle_10.mp3'": star dust
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": space ship
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magic spell
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": ping
+            "'sound://category_retro/retro_game_classic_player_death_9.mp3'": game over
+            "'sound://category_digital/jump_7.mp3'": jump
       gamelab_playSpeech:
         text: play speech [SOUND][0]
       gamelab_pointInDirection:
@@ -1882,8 +1907,12 @@ en:
         text: monsters stop moving
       PoemBot_addLine:
         text: add line [LINE][0]
+      PoemBot_destroy:
+        text: remove [ANIMATION_NAME][0]
       PoemBot_hidePoem:
         text: hide poem
+      PoemBot_makeNumSprites:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites
       PoemBot_playSound:
         text: play sound [SOUND][0]
         options:
@@ -1929,6 +1958,8 @@ en:
             '"grayscale"': Black & White
             '"rainbow"': Rainbow
             '"roses"': Roses
+      PoemBot_setBackgroundImageAs:
+        text: set background to [IMG][0]
       PoemBot_setFont:
         text: set font [FONT][0]
         options:
@@ -1973,6 +2004,10 @@ en:
             '"rumi_2"': Ocean
             '"hughes_1"': Dream Variations
             '"hughes"': Harlem
+      PoemBot_setPrompt:
+        text: prompt user [NAME][0][RIGHT_QUOTE][1] for variable [VAR][2]
+      PoemBot_setPromptWithChoices:
+        text: prompt user [TEXT][0][RIGHT_QUOTE][1] for variable [VAR][2] with choices [A][3][RIGHT_QUOTE_A][4] [LEFT_QUOTE_B][5][B][6][RIGHT_QUOTE_B][7] [LEFT_QUOTE_C][8][C][9][RIGHT_QUOTE_C][10]
       PoemBot_setSize:
         text: set [SPRITE][0] size to [VAL][1]
       PoemBot_setTextEffect:
@@ -2028,8 +2063,12 @@ en:
         text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"
       PoemBot_textConcat:
         text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
+      PoemBot_textVariableJoin:
+        text: "[VAR][0][TEXT2][1]"
       PoemBot_whenLineShows:
         text: when line [N][0] shows
+      PoemBot_whenPromptAnswered:
+        text: when [VAR][0] answered
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:
@@ -2147,71 +2186,6 @@ en:
             '"quarantining"': quarantining when sick
             '"avoiding"': social distancing
             '"none"': staying still
-      batman_batmanSay:
-        text: "[IMG][0]say [SPEECH][1]"
-        options:
-          SPEECH:
-            '"I am Batman!"': I am Batman!
-            '"Being kind is never wasted."': Being kind is never wasted.
-            '"When you know better, you do better."': When you know better, you do better.
-            '"You always pass failure on the way to success."': You always pass failure on the way to success.
-            '"Make each day your masterpiece."': Make each day your masterpiece.
-      batman_batwomanSay:
-        text: "[IMG][0]say [SPEECH][1]"
-        options:
-          SPEECH:
-            '"I am Batwoman!"': I am Batwoman!
-      batman_bruceSay:
-        text: "[IMG][0]say [SPEECH][1]"
-        options:
-          SPEECH:
-            '"Call me Bruce"': Call me Bruce.
-            '"Being kind is never wasted."': Being kind is never wasted.
-            '"When you know better, you do better."': When you know better, you do better.
-            '"You always pass failure on the way to success."': You always pass failure on the way to success.
-            '"Make each day your masterpiece."': Make each day your masterpiece.
-      batman_catwomanSay:
-        text: "[IMG][0]say [SPEECH][1]"
-        options:
-          SPEECH:
-            '"I am Catwoman!"': I am Catwoman!
-            '"Never quit!"': Never quit!
-            '"Live Fast."': Live Fast.
-      batman_freezeSay:
-        text: "[IMG][0]say [SPEECH][1]"
-        options:
-          SPEECH:
-            '"I''m Mr. Freeze!"': I'm Mr. Freeze!
-            '"Stay Cool!"': Stay Cool!
-            '"Everyone, chill!"': Everyone, chill!
-            '"Cool party!"': Cool party!
-            '"Allow me to break the ice."': Allow me to break the ice.
-            '"Tonight’s forecast… a freeze is coming!"': Tonight’s forecast… a freeze is coming!
-      batman_harleySay:
-        text: "[IMG][0]say [SPEECH][1]"
-        options:
-          SPEECH:
-            '"I am Harley Quinn!"': I am Harley Quinn!
-      batman_jokerSay:
-        text: "[IMG][0]say [SPEECH][1]"
-        options:
-          SPEECH:
-            '"I''m the Joker!"': I'm the Joker!
-      batman_nightwingSay:
-        text: "[IMG][0]say [SPEECH][1]"
-        options:
-          SPEECH:
-            '"I am Nightwing!"': I am Nightwing!
-      batman_poisonivySay:
-        text: "[IMG][0]say [SPEECH][1]"
-        options:
-          SPEECH:
-            '"I am Poison Ivy!"': I am Poison Ivy!
-      batman_robinSay:
-        text: "[IMG][0]say [SPEECH][1]"
-        options:
-          SPEECH:
-            '"I am Robin!"': I am Robin!
       binary_drawBin:
         text: draw binary [BIN][0]
       binary_drawBinScreen:
