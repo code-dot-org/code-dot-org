@@ -1302,15 +1302,13 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose) {
 
   var headerElement;
 
-  var puzzleTitle = msg.puzzleTitle({
-    stage_total: level.lesson_total,
-    puzzle_number: level.puzzle_number
-  });
-
   if (isMarkdownMode) {
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
-    headerElement.innerHTML = puzzleTitle;
+    headerElement.innerHTML = msg.puzzleTitle({
+      stage_total: level.lesson_total,
+      puzzle_number: level.puzzle_number
+    });
     if (!this.icon) {
       headerElement.className += ' no-modal-icon';
     }
