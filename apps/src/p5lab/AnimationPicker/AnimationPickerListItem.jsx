@@ -64,6 +64,7 @@ class AnimationPickerListItem extends React.Component {
 
     const thumbnailStyleWithHover = [
       thumbnailStyle,
+      hover && styles.highlightBorder,
       hover && styles.hoverBorder
     ];
 
@@ -161,13 +162,18 @@ const styles = {
     top: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2,
     left: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2
   },
-  hoverBorder: {
+  highlightBorder: {
     borderStyle: 'solid',
     borderRadius: 12,
     cursor: 'pointer',
-    borderColor: color.purple,
     borderWidth: '3px',
     padding: 0
+  },
+  hoverBorder: {
+    borderColor: color.purple
+  },
+  selectBorder: {
+    borderColor: color.purple
   }
 };
 
