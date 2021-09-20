@@ -1295,13 +1295,7 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose) {
     !!reduxState.instructions.longInstructions &&
     !reduxState.instructionsDialog.imgOnly;
 
-  var instructionsDiv = document.createElement('div');
-  instructionsDiv.className = isMarkdownMode
-    ? 'markdown-instructions-container'
-    : 'instructions-container';
-
   var headerElement;
-
   if (isMarkdownMode) {
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
@@ -1320,6 +1314,10 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose) {
   // elements that don't want to be rendered until they are in the DOM
   var instructionsReactContainer = document.createElement('div');
   instructionsReactContainer.className = 'instructions-content';
+  var instructionsDiv = document.createElement('div');
+  instructionsDiv.className = isMarkdownMode
+    ? 'markdown-instructions-container'
+    : 'instructions-container';
   instructionsDiv.appendChild(instructionsReactContainer);
 
   var buttons = document.createElement('div');
