@@ -4,10 +4,8 @@ import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import i18n from '@cdo/javalab/locale';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
-import {
-  UnconnectedCommitDialog as CommitDialog,
-  CommitDialogFile
-} from '@cdo/apps/javalab/CommitDialog';
+import {UnconnectedCommitDialog as CommitDialog} from '@cdo/apps/javalab/CommitDialog';
+import CommitDialogFile from '@cdo/apps/javalab/CommitDialogFile';
 
 describe('CommitDialog test', () => {
   let defaultProps,
