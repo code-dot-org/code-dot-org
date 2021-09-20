@@ -53,6 +53,7 @@ class AnimationPicker extends React.Component {
     uploadInProgress: PropTypes.bool.isRequired,
     uploadError: PropTypes.string,
     is13Plus: PropTypes.bool,
+    selectedAnimations: PropTypes.arrayOf(PropTypes.object).isRequired,
     onClose: PropTypes.func.isRequired,
     onPickNewAnimation: PropTypes.func.isRequired,
     onPickLibraryAnimation: PropTypes.func.isRequired,
@@ -88,6 +89,7 @@ class AnimationPicker extends React.Component {
         defaultQuery={this.props.defaultQuery}
         hideBackgrounds={this.props.hideBackgrounds}
         canDraw={this.props.canDraw}
+        selectedAnimations={this.props.selectedAnimations}
       />
     );
   }
@@ -131,7 +133,8 @@ export default connect(
     uploadInProgress: state.animationPicker.uploadInProgress,
     uploadError: state.animationPicker.uploadError,
     is13Plus: state.pageConstants.is13Plus,
-    playAnimations: !state.pageConstants.allAnimationsSingleFrame
+    playAnimations: !state.pageConstants.allAnimationsSingleFrame,
+    selectedAnimations: state.animationPicker.selectedAnimations
   }),
   dispatch => ({
     onClose() {
