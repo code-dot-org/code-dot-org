@@ -6,11 +6,12 @@
     "properties": {
       "is_migrated": true,
       "version_year": "unversioned",
-      "is_course": true
+      "is_course": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "dance-unplugged",
-    "serialized_at": "2021-09-18 15:14:04 UTC",
+    "serialized_at": "2021-09-20 19:23:20 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "dance-unplugged"
