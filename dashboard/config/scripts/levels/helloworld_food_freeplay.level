@@ -62,7 +62,7 @@
   "level_num": "custom",
   "user_id": 833,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-13T20:56:51.860+00:00\",\"changed\":[\"cloned from \\\"helloworld_project_freeplay\\\"\"],\"cloned_from\":\"helloworld_project_freeplay\"},{\"changed_at\":\"2021-09-13 20:56:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:55:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-13T20:56:51.860+00:00\",\"changed\":[\"cloned from \\\"helloworld_project_freeplay\\\"\"],\"cloned_from\":\"helloworld_project_freeplay\"},{\"changed_at\":\"2021-09-13 20:56:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:55:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-17 21:01:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
