@@ -1,0 +1,23 @@
+{
+  "category": "World",
+  "config": {
+    "func": "textVariableJoin",
+    "blockText": "{VAR}{TEXT2}",
+    "returnType": "String",
+    "color": [
+      312,
+      0.32,
+      0.62
+    ],
+    "args": [
+      {
+        "name": "VAR",
+        "variableInput": true
+      },
+      {
+        "name": "TEXT2",
+        "type": "String"
+      }
+    ]
+  }
+}
