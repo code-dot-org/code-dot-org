@@ -148,7 +148,11 @@ DropletTooltipManager.prototype.showDocFor = function(functionName) {
 
   var tooltip = this.getDropletTooltip(functionName);
   if (tooltip.customDocURL) {
-    var win = window.open(tooltip.customDocURL, '_blank');
+    var win = window.open(
+      tooltip.customDocURL,
+      '_blank',
+      'noopener,noreferrer'
+    );
     win.focus();
     return;
   }
