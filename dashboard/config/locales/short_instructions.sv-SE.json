@@ -511,9 +511,9 @@
         "CourseF_outbreak2": "Gör friska monster sjuka när de rör vid varandra.",
         "CourseF_outbreak3": "Ändra monster till monster med munskydd när du klickar på dem.",
         "CourseF_outbreak4": "Ändra antalet och storleken på monster-sprites i din simulering.",
-        "CourseF_outbreak6": "Lägg till en viss procentandels chans att monster blir sjuka när friska monster rör vid sjuka monster. Gör detta för alla kombinationer av monster med och utan munskydd.",
-        "CourseF_outbreak7": "Skapa en ny dräkt för monster med immunitet mot viruset och använd den i din simulering.",
-        "CourseF_outbreak8": "Dela ett meddelande med din simulering.",
+        "CourseF_outbreak6": "Gör så att alla sjuka monster börjar återhämta sig när ett friskt monster rör vid ett sjukt monster.",
+        "CourseF_outbreak7": "Lägg till en viss procentandels chans att monster blir sjuka när friska monster rör vid sjuka monster. Gör detta för alla kombinationer av monster med och utan munskydd.",
+        "CourseF_outbreak8": "Skapa en ny dräkt för monster med immunitet mot viruset och använd den i din simulering.",
         "Function intro Ryan_2021": "Använd \"bygg bro\"-funktionen två gånger för att skapa en väg till facklan.",
         "HOC 2018 Level_12_2021": "Designa din egen undervattensmiljö – det är helt upp till dig!",
         "MC_HOC_2017_01_RETRY_2021": "Ta agenten till tryckplattan, tryck sedan på \"Kör\" och använd piltangenterna för att styra spelaren ut ur huset och ta kistan. ",
@@ -555,7 +555,9 @@
         "courseF_artist_for_challenge2_2021": "Kan du lista ut hur du kan återskapa denna ritning med en enda slinga?",
         "courseF_bee2": "Kan du använda en loop för att samla all nektar?",
         "courseF_bee_for8_2021": "Du kan detta! Vad bör din ökning vara för att samla 3, 6, 9, 12, 15 nektar? \\\r Ledtråd: Vad behöver du lägga till varje nummer för att få numret efter det?",
-        "courseF_bee_for_challenge2_2021": "Lösa detta pussel med minsta möjliga antal block."
+        "courseF_bee_for_challenge2_2021": "Lösa detta pussel med minsta möjliga antal block.",
+        "CourseF_outbreak5": "Ändra antalet och storleken på monster-sprites i din simulering.",
+        "international_outbreak_freeplay": "Dela ett meddelande med din simulering."
       }
     }
   }

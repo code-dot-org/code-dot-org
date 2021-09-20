@@ -5502,8 +5502,10 @@ nl:
               name: Module 2
             Module 3:
               key: Module 3
+              name: Module 3
             Module 4:
               key: Module 4
+              name: Module 4
             Module 5:
               key: Module 5
             Module 6:
@@ -5557,6 +5559,12 @@ nl:
           lessons:
             lesson-2:
               name: Les 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Niveau 1
+            lessonGroup-3:
+              display_name: Niveau 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -5610,3 +5618,7 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: Project

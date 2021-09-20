@@ -5,6 +5,7 @@ pt:
       actor: personagem
       color: cor
       counter: contador
+      direction: direção
       height: altura
       honey: mel
       left: para esquerda

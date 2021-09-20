@@ -534,6 +534,10 @@ eu:
             '"s"': s
             '"w"': w
             '"x"': x
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': euria
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -543,6 +547,10 @@ eu:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": karraska
       gamelab_randColor:
         text: ausazko kolorea
       gamelab_randomColor:
@@ -765,14 +773,6 @@ eu:
             '"down"': behera gezia
             '"left"': ezker gezia
             '"right"': eskuin gezia
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': ostadarra
-      PoemBot_setForegroundEffect:
-        options:
-          FG_EFFECT:
-            '"rain"': euria
       RyanLab_moveForward:
         text: mugitu aurrera
       RyanLab_turnLeft:

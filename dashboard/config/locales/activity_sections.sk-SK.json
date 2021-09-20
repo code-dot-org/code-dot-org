@@ -2542,35 +2542,71 @@
           "name": "Reflexia"
         },
         "716d5ed4-f198-4133-806e-dddeba48f571": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "**Mysli, nájdi si dvojicu, podeľ sa o zistenia:** Vynikáš v nejakej svojej záľube, športe alebo činnosti? Čo potrebuješ na to, aby sa ti pri tom darilo? Potrebuješ niekedy myslieť naraz na viacero vecí alebo vykonať naraz viacero činností?"
+        },
+        "9e06ffd5-03ee-42b2-a6aa-0c555dc3c9aa": {
+          "description": "-   Ktoré časti svojho tela používaš? Mení sa to v istých bodoch?\n-   Potrebuješ niekedy zastaviť nejakú činnosť, než začneš inú? (Napríklad musíš prestať driblovať, ak chceš hodiť loptu do koša.)\n\n**Cieľ:** Pomôžete študentom zamyslieť sa na činnosti, pri ktorých musia naraz vykonávať viacero činností alebo pokynov. V rámci hlavnej aktivity budú študenti vykonávať rôzne zábavné činnosti, či už postupne, alebo súbežne. Nakoniec na to nadviažeme, keď si budeme hovoriť o novom spôsobe programovania, ale ešte diskusiu nemusíte viesť týmto smerom."
+        },
+        "9a413780-6d7b-4341-9041-e8a1e3f540b6": {
+          "name": "Sleduj algoritmus",
+          "description": "Dnes si zahráme krátku hru. V tejto hre vám dám príkazy, ktoré máte splniť, a vašou úlohou bude dodržať moje pokyny. Všetky tieto príkazy budú začínať slovami „začni“ alebo „prestaň“. Keď vám poviem, aby ste niečo začali robiť, začnete robiť, čo vám poviem, a budete to robiť, až kým vám nepoviem, že máte prestať. Môžem vám tiež povedať: „prestaň všetko“, čo znamená, že máte prestať plniť všetky pokyny, ktoré ste odo mňa do tej chvíle dostali. Zahráme si tri kolá a po každom kole vám dám zopár otázok.",
+          "progression_name": "Sleduj algoritmus - Odpojená aktivita"
+        },
+        "0a66d8ca-05c2-4614-8349-39caa7d993db": {
+          "description": "#### Pravidlá\n\n_Všetky príkazy musia začínať slovom „začni“ alebo „prestaň“._\n\nKeď hráči dostanú príkaz „začni“ pre najakú činnosť, musia ju vykonávať, kým nedostanú príkaz „prestaň“. Napríklad by hráči nemali dostať príkaz „tleskni raz“, ale môžu dostať príkaz „začni tlieskať“ a mali by tlieskať, až kým nedostanú príkaz „prestaň tlieskať“, aj keď medzitým dostanú ďalšie príkazy. \n\n_Vedúci hry môže dať hráčom aj príkaz „prestaň všetko“._ \n\nPo tomto príkaze by mali všetci hráči ostať pokojne stáť bez ohľadu na predchádzajúce príkazy.\n\nAko učiteľ by ste mali zaujať rolu vedúceho hry. Môžete si vymyslieť vlastné postupnosti, no tu je niekoľko takých, ktoré si môžete vyskúšať. Medzi jednotlivými príkazmi nechajte krátku pauzu. Najskôr cez celú postupnosť v týchto sekciách prebehnite bez diskusie a potom ich znova zopakujte po zhrnutí, keď mali všetci možnosť spracovať informácie a osvojiť si princíp hry.\n\n#### 1. kolo (ľahké):\n\n-   Začni pochodovať na mieste.\n-   Prestaň pochodovať na mieste.\n-   Začni tlieskať.\n-   Prestaň tlieskať.\n-   Začni pochodovať na mieste.\n-   Začni tlieskať.\n-   Prestaň všetko.\n\n**Diskusia po aktivite:** _Čo sa stalo, keď ste dostali príkaz tlieskať, ale už ste pochodovali na mieste? Čo sa stane, keď naraz dostanete dva príkazy, aby ste niečo spravili?_\n\n#### 2. kolo (stredne ťažké):\n\n-   Začni mávať ramenami vo vzduchu.\n-   Začni kývať hlavou.\n-   Prestaň mávať ramenami vo vzduchu.\n-   Prestaň kývať hlavou.\n-   Začni triasť kolenami.\n-   Začni mávať ramenami ako vták.\n-   Prestaň triasť kolenami.\n-   Začni kývať hlavou.\n-   Začni pochodovať na mieste.\n-   Prestaň mávať ramenami ako vták.\n-   Prestaň všetko.\n\n**Diskusia po aktivite:**\n\n_Aké typy aktivít spôsobili, že sa ľudia začali mýliť?\nAké postupy sú podľa vás užitočné na to, aby ste dokázali správne nasledovať pokyny?\nPrečo je dôležité samostatne sledovať každú činnosť?_\n\n#### 3. kolo (ťažké)\n\n-   Začni čupieť.\n-   Začni si ťukať na čelo.\n-   Presťaň čupieť.\n-   Prestaň si ťukať na čelo.\n-   Začni skákať.\n-   Začni si ťukať na čelo.\n-   Prestaň všetko.\n-   Začni tlieskať.\n-   Začni mávať ramenami ako vták.\n-   Predstaň všetko.\n-   Začni čupieť.\n-   Začni skákať.\n-   Prestaň všetko.\n-   Začni si búchať do kolien.\n-   Začni si ťukať na čelo.\n-   Prestaň všetko.\n-   Začni sa dočiť doľava.\n-   Začni sa točiť doprava.\n-   Prestaň sa točiť doľava.\n-   Prestaň sa točiť doprava.\n\n**Diskusia:** _Čo sa stane, keď sú dve činnosti zdanlivo protichodné?_\n\n_Čo treba spraviť, keď dostaneš naraz príkaz tlieskať rukami a mávať ramenami?_\n\n_Ako môžeš skákať, keď čupíš?_\n\n_Čo sa stane, keď si máš naraz búchať do kolien a ťukať na čelo?_\n\n_Čo robili ostatní hráči, keď ste dostali príkaz točiť sa do protichodných smerov?_ \n\n_Čo by sa stalo, ak by ste dostali príkaz točiť sa doľava aj doprava naraz?_\n\nŠtudenti by mali chápať, že niektoré činnosti sú protichodné, čo môže viesť k nepredvídateľným výsledkom. Dve protichodné činnosti sa môžu navzájom zrušiť."
+        },
+        "9751f5fd-eb6c-48bc-b3fc-6b61cc318a68": {
+          "description": "#### Rozšírenie\n\nAk chcete veci ešte viac skomplikovať, môžete pravidlá zmeniť tak, aby niektoré príkazy plnili iba niektorí hráči. Môžete napríklad skúsiť príkazy ako „Všetky dievčatá: začni sa točiť doľava”, „Všetci chlapci, začnite tlieskať rukami” alebo „Všetci: prestaňte všetko“."
+        },
+        "8a86be08-902a-47c7-8ed7-4aa78767ce45": {
+          "name": "Čo sme sa naučili?",
+          "description": "**Povedzte:** _Pri tejto aktivite ste postupne plnili pokyny, ktoré som vám dával(-a). Tomuto hovoríme_ **_algoritmus_**.\n\nPovedzte študentom, nech si spomenú na iné situácie vo svojom živote, kedy používajú alebo nasledujú algoritmy. Príkladmi môžu byť harmonogram alebo denný plán.  Oznámte študentom, že v rámci ďalšej lekcie sa naučia dať _počítaču_ algoritmus, ktorý bude nasledovať. "
         },
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
           "name": "Reflexia",
+          "description": "**Podnet:**\n\nSpomeňte si na činnosť alebo záľubu, o ktorej ste sa rozprávali na začiatku hodiny. Pomocou príkazov „začni“ a „prestaň“ napíšte pokyny, ktoré by ste dali niekomu, ak by ste chceli, aby oni vykonávali túto činnosť. Nezabudnite na chvíle, keď musia s niečím prestať, než budú môcť začať robiť niečo iné.",
           "tips": [
-            null
+            "Podnety na zamyslenie možno realizovať rôznymi spôsobmi. Zapisovanie do denníka alebo diskusia (v skupinách alebo s partnermi) sú skvelými možnosťami."
           ]
         },
         "b75bc492-bca4-410c-8c94-8d1c919597c3": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "Študenti sa dnes naučia pracovať s objektmi v Sprite Labe.\n\n**Diskusia:** Povedzte študentom, že postavička zobrazená na obrazovke sa nazýva sprajt.  Je to grafický objekt ovládaný programom.  V rámci tejto lekcie si budú môcť študenti vybrať svoje vlastné sprajty, ktoré budú ovládať."
+        },
+        "f97e8c9b-cbce-4b38-a2ff-1e1356a6ab54": {
+          "description": "Táto ukážka a diskusia môže pomôcť študentom spojiť si predchádzajúcu lekciu bez počítača „Sleduj algoritmus“ s novým prostredím Sprite Labu."
         },
         "28c00081-75fd-4379-8855-6546c064c4a6": {
+          "description": "#### [Plávajúca ryba - priestor učiteľa](https://studio.code.org/levels/18623)\n\nPomocou projektora predveďte izolovanú úroveň svojim študentom. Cieľom je nadviazať na predchádzajúcu lekciu a ukázať im jedinečné spôsoby, ako Sprite Lab funguje. Napíšte zopár modelových programov a požiadajte študentov, aby sa podelili o svoje postrehy.",
           "tips": [
-            null
+            "Sprite Lab funguje v istých ohľadoch inak ako iné online nástroje používané v rámci kurzu. V prvom rade sa všetok kód spúšťa v poradí a okamžite, pokiaľ nie je pripojený k bloku s udalosťou. Nie je to teda to isté ako v prípade iných nástrojov, pri ktorých sa naraz vykonáva len jeden riadok kódu s pozorovateľnou prestávkou medzi jednotlivými riadkami."
           ]
+        },
+        "b26f3740-cbf8-45da-b3d7-4f3701c57df2": {
+          "description": "-   _Aké bloky by sme potrebovali prepojiť, aby sa klbko sena otáčalo?_\n-   _Čo by sa stalo, ak by sme sprajtu dali pokyn, aby začal vykonávať dve činnosti naraz?_\n-   _Prestane sprajt niekedy vykonávať tieto činnosti sám od seba?_\n-   _Čo musíme spraviť, ak chceme, aby sprajt prestal vykonávať istú činnosť, keď naň klikneme?_\n\nSkôr než prejdete na hlavnú aktivitu, predstavte alebo si zopakujte slovník pre dnešnú lekciu."
         },
         "e83fa08f-d3bb-4e23-b749-ecb175cbce13": {
-          "name": "Plávajúca ryba so Sprite Labom"
+          "name": "Plávajúca ryba so Sprite Labom",
+          "description": "**Cieľ:** Dnes študenti naprogramujú svoje vlastné akvárium. Začnú tým, že sa naučia umiestňovať sprajty na obrazovku, potom ich rozhýbu. Napokon si svoje akvárium prispôsobia tak, že doň pridajú tvory alebo predmety, ktoré \nchcú."
         },
         "65fd5465-cd74-4e68-a4de-c174e2cbd8f6": {
+          "description": "**Prechod:** Usaďte študentov za počítače. Povedzte im, že majú postupovať podľa pokynov pre každý hlavolam. Prízvukujte im, že ide o kreatívnu aktivitu, ktorej cieľom je pomôcť im naučiť sa používať Sprite Lab.  V žiadnom prípade nejde o hodnotiacu aktivitu.",
           "tips": [
-            null
+            "Podporujte študentov pomocou otázok alebo ich vyzvite k tomu, aby sa spýtali svojho partnera. Nezodpovedané otázky môžete položiť blízkej skupine, ktorá už môže poznať riešenie. Požiadajte študentov, aby opísali problém, ktorý pred sebou vidia:  \n\n-   Čo to má robiť? \n-   Čo to robí? \n-   Čo to podľa teba znamená?"
           ]
+        },
+        "331e6451-5472-4491-bf96-d630d7f902a4": {
+          "progression_name": "Video: Predstavenie Sprite Labu"
         },
         "75de5d52-becb-4805-82d8-5be30d0dca7d": {
           "progression_name": "Predpoklad"
         },
         "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
           "progression_name": "Budovanie zručností"
+        },
+        "d344a21b-2267-48e7-9b27-b3fe923209e9": {
+          "progression_name": "Video: Ako vytvoriť sprajt"
         },
         "30997374-8929-4152-b55b-94e459e3ee58": {
           "progression_name": "Cvičenie"
@@ -2579,19 +2615,28 @@
           "progression_name": "Voľná hra"
         },
         "c925e7be-2487-4ebe-892b-bfe452625d91": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Otázky pre triedu:**\n\n-   O čom bola dnešná lekcia?\n-   Ako sa vám páčila dnešná lekcia?\n-   Ako sa vám páčilo vytvoriť kreatívnejšiu scénu?\n-   Bolo pre vás ťažké dokončiť lekciu bez jednoznačne „správnych“ a „nesprávnych“ riešení?"
         },
         "aad9aa38-56b3-42ef-b751-03065c308d0e": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "Dnes študenti spoznajú udalosti v programovaní.\n\n#### Séria udalostí\n\n_Pozrime sa, či tu nájdeme nejaký vzor:_\n\n-   _Keď prepneš vypínač, svetlo sa zažne._\n-   _Keď klepneš na obrazovku zariadenia, spustí sa aplikácia._\n-   _Keď zazvoní budík, vstaneš z postele._\n-   _Keď (udalosť)_, _(akcia)_.\n\n_V informatike spôsobujú udalosti vykonanie iných akcií. Dnešné nové slovo do nášho slovníka je_ **udalosť**.    _Obvykle, keď počujeme slovo „udalosť“, napadne nám:_\n\n-   zájazd\n-   súťaž\n-   narodeninová oslava\n\n_Dnes sa naučíme nový význam slova „udalosť“. Zamerajme sa na udalosti, ktoré spôsobujú vykonanie iných akcií, napríklad prepnutie vypínača spôsobí zažatie svetiel alebo stlačenie tlačidla spôsobí pohyb postavičky v hre._\n\nDnes budú študenti pracovať v Sprite Labe, ale udalosti, na ktorých budú pracovať, budú viac podobné videohrám, ktoré hrávajú. **Udalosti** budú mať podobu akcií, napríklad kliknutie na obrazovku alebo kolízia dvoch postavičiek."
         },
         "9f5b1627-f04c-42a1-8955-17c994ad2b18": {
           "name": "Mimozemská tanečná párty so Sprite Labom",
+          "description": "**Cieľ:** Dnes si študenti vytvoria vlastnú mimozemskú tanečnú párty! Začnú tým, že si zopakujú umiestňovanie postavičiek na obrazovku, potom im priradia správanie a naučia sa, ako zmeniť toto správanie pri aktivovaní udalosti.",
           "tips": [
-            null
+            "Podporujte študentov pomocou otázok alebo ich vyzvite k tomu, aby sa spýtali svojho partnera. Nezodpovedané otázky môžete položiť blízkej skupine, ktorá už môže poznať riešenie. Požiadajte študentov, aby opísali problém, ktorý pred sebou vidia:  \n\n-   Čo to má robiť? \n-   Čo to robí? \n-   Čo to podľa teba znamená?"
           ]
+        },
+        "e6231ccd-be57-4480-b049-ef0dda99d28c": {
+          "description": "**Prechod:** Usaďte študentov za počítače. Povedzte im, že majú postupovať podľa pokynov pre každý hlavolam. Prízvukujte im, že ide o kreatívnu aktivitu, ktorej cieľom je pomôcť im naučiť sa používať Sprite Lab.  V žiadnom prípade nejde o hodnotiacu aktivitu."
         },
         "96bbba0e-e5f3-443f-b2c6-f228953a7b98": {
           "progression_name": "Predpoklad"
+        },
+        "1620d22b-10cf-4c91-bb52-cda64a75b666": {
+          "progression_name": "Video: Sprajty v akcii"
         },
         "5661328f-256c-4f27-988b-ea102fde1cbd": {
           "progression_name": "Budovanie zručností"
@@ -2603,10 +2648,37 @@
           "progression_name": "Voľná hra"
         },
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Otázky pre triedu:**\n\n-   O čom bola dnešná lekcia?\n-   Ako sa vám páčila dnešná lekcia?\n-   Ako sa vám páčilo mať kontrolu nad tým, čo vaše postavičky dokážu?\n-   Upravili ste nejakým spôsobom program, aby bol viac podľa vašich predstáv?"
+        },
+        "fe0cef4a-d3fd-446e-9874-8270ccda6a52": {
+          "name": "Kľúčová slovná zásoba",
+          "description": "-   **kyberšikanovanie**: používanie digitálnych zariadení, stránok a aplikácií na zastrašovanie, ubližovanie a poburovanie druhých\n-   **digitálny občan**: niekto, kto technológie používa zodpovedne na učenie, tvorenie a zapájanie sa\n-   **ochranca**: osoba, ktorá podporuje iných a nebojí sa ich chrániť\n\n**Pred lekciou**: Pred lekciou môžete študentom umožniť zahrať si hru [E-volve](https://www.digitalpassport.org/evolve.html) z balíka Digital Passport™ od organizácie Common Sense Education. Pomôže vám to predstaviť kľúčové koncepty tejto lekcie. Ďalšie informácie nájdete v [príručke k hrám Digital Passport pre učiteľov](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Spýtajte sa**: _Máte obľúbeného superhrdinu? Ak áno, kto je to a prečo? Ak nie, prečo nie? Porozprávajte sa o tom s vaším partnerom._ ([snímka 4](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3e441b4e86_1_16))\n\nVyzvite študentov, nech rozprávajú pred celou triedou. Potom sa spýtajte študentov na konkrétne superschopnosti ich obľúbených superhrdinov. Upriamte ich pozornosť na to, že všetci superhrdinovia majú spoločné to, že svoje schopnosti využívajú na pomoc iným.\n\n**Povedzte**: _Dnes sa porozprávame o tom, ako sa môžeme všetci stať superhrdinami a pomáhať iným. Pozrieme si video o tom, ako sa stať super digitálnymi občanmi. Kým budeme pozerať, zamyslite sa nad otázkou: „Čím sa vyznačuje super digitálny občan?“_\n\n**Prehrajte** video [Super digitálny občan](https://www.commonsense.org/education/videos/super-digital-citizen) na [snímke 5](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_18).\n\n**Vyzvite** študentov, aby sa podelili o svoje odpovede. Ich odpovede by mali vychádzať z toho, s čím Super digitálny občan pomôže postavičke vo videu:\n\n-   _Zmení heslo na bezpečné._\n-   _Chráni tablet pomocou puzdra a nosí ho v ruksaku, aby sa nerozbil._\n-   _Skôr než zverejní fotku Srdiečka online, vypýta si jej povolenie._\n\n**Spýtajte sa**: _Určite ste si všimli, že sa aj Žalúdok stal superhrdinom. Ako to dokázal?_\n\nVyzvite študentov, aby odpovedali. Vysvetlite im, že Žalúdok sa stal superhrdinom preto, lebo pomohol sebe aj iným byť zodpovedný online. Definujte pojem **digitálny občan** ako _niekoho, kto technológie používa zodpovedne na učenie, tvorenie a zapájanie sa._ ([snímka 6](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_30))"
+        },
+        "7e360811-1e9b-4495-b285-e2c0f955383a": {
+          "description": "**Povedzte**: _Jednou zo situácií, na ktorú môže super digitálny občan naraziť online, je kyberšikanovanie. **Kyberšikanovanie** je používanie digitálnych zariadení, stránok a aplikácií na zastrašovanie, ubližovanie a poburovanie druhých._ ([snímka 7](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3e441b4e86_1_43))\n\nVysvetlite, že kyberšikanovanie môže mať mnoho podôb, napríklad tieto:\n\n-   niekto si opakovane robí posmech z druhého alebo na neho vyvíja nátlak;\n-   komentáre, mémy, súkromné správy alebo čety;\n-   šikanovaná osoba nepozná osoby , ktoré ju šikanujú (keďže ľudia môžu ukryť svoju totožnosť online);\n-   skupina osôb, ktorá sa spolčila proti niekomu.\n\n**Spýtajte sa**: _Takže ako môžeš napríklad zastaviť kyberšikanovanie niekoho druhého? Porozprávaj sa o tom so svojím partnerom._\n\nPožiadajte študentov, aby odpovedali. Poukážte na tri možné spôsoby riešenia kyberšikanovania:\n\n-   chrániť alebo podporovať šikanovanú osobu;\n-   povedať dospelej osobe, ktorej dieťa dôveruje;\n-   priamo vyriešiť so šikanujúcou osobou.\n\n**Vysvetlite** študentom, že keď spravia hociktorú z týchto troch vecí, stanú sa ochrancami. **Ochranca** je _osoba, ktorá podporuje niekoho druhého a zastane sa ho._ ([snímka 8](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_124))\n\n**Rozdajte** [študentský materiál Čo by spravil super digitálny občan?](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) všetkým študentom a požiadajte ich, aby nahlas prečítali pokyny pre 1. časť. Dajte študentom päť minút na dokončenie aktivity. ([snímka 9](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3dbf0be0a2_0_0))"
+        },
+        "f5c5daf1-2eb7-48dc-900b-5a97b914ac0b": {
+          "description": "**Rozdajte** farebné ceruzky alebo fixky a povedzte študentom: _Vytvoríte si vlastného digitálneho občana – superhrdinu, ktorý pomôže ľuďom ako Brucho stať sa super digitálnymi občanmi._\n\n**Rozdajte** [študentské podklady „Digitálny občan – superhrdina“](https://drive.google.com/open?id=1N08fwGRYn4kSknNE9avenBRfa71FaKlP9YjWxlEn4J8) a nahlas prečítajte pokyny. ([snímka 10](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g410938bbc1_132_0))\n\n**Dobrovoľná aktivita**: Požiadajte študentov, aby si pomocou aplikácie [Create Your Own Superhero spoločnosti Marvel](https://www.marvelhq.com/create-your-own-super-hero) vytvorili superhrdinu, uložili obrázok a prilepili ho do materiálu.\n\n**Dajte** študentom 10 minút na prácu so svojimi superhrdinami. Ak máte dostatok času, požiadajte študentov, aby svojich superhrdinov predstavili triede alebo ich vystavili na chodbe."
+        },
+        "b9be51e8-d7f3-4be9-977b-de93c09c9a67": {
+          "description": "**Požiadajte** študentov, aby sa vrátili k [študentským podkladom „Čo by spravil super digitálny občan?“](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) a prešli na 2. časť. Požiadajte niektorého študenta, nech nahlas prečíta pokyny, než si študenti vytvoria svoje vlastné komixové príbehy. ([snímka 11](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3dbf0be0a2_1_0))\n\n**Dobrovoľná aktivita**: Povedzte študentom, nech použijú nástroj na vytváranie digitálnych komixov. Pozrite si naše odporúčania: [Weby a aplikácie na vytváranie komixov, ktoré sú vhodné pre triedy](https://www.commonsense.org/education/top-picks/classroom-friendly-websites-and-apps-for-making-comics).\n\n**Požiadajte** študentov, aby vyplnili [kvíz pre lekciu](https://docs.google.com/forms/d/1n6jk1xkdFm8yGe1wrokxTq5phpauwRPipZgDGoKnEbY/copy)."
+        },
+        "d41c813d-c7c8-45df-82fc-7dfa577689c7": {
+          "description": "Tu sú ďalšie podklady, ktoré môžete poskytnúť študentom na rozšírenie učenia:\n\n-   [Rodinná aktivita](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw)\n-   [Tipy pre rodinu](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\n-   Požiadajte študentov, aby po brainstormingu napísali úvahu na tému: Čo znamená veta „S veľkou silou prichádza veľká zodpovednosť.“ v digitálnom svete. Prečo je prístup na internet „veľká sila“? Akú zodpovednosť máme voči sebe samým aj ostatným? Študenti môžu svoje úvahy uverejniť v blogu alebo na stránke triedy."
         },
         "c350027b-7b9e-4782-af88-dc1015043bac": {
           "progression_name": "Buď super digitálny občan"
+        },
+        "bec84680-216c-4711-b91f-5b37260fd598": {
+          "name": "Kľúčová slovná zásoba",
+          "description": "-   **vrodené**: niečo, s čím ste sa narodili\n-   **osobné informácie**: informácie o vás, podľa ktorých vás nemožno identifikovať, pretože sa vzťahujú aj na mnoho ďalších ľudí (napríklad farba vlasov alebo mesto, v ktorom žiješ)\n-   **súkromné informácie**: informácie o vás, podľa ktorých vás možno identifikovať, pretože sú pre vás jedinečné (napríklad celé meno alebo adresa)\n-   **registrácia (online)**: zadanie svojich informácií s cieľom získať prístupový účet a prístup na web alebo do aplikácie\n\n**Pred lekciou**: Ako dobrovoľnú aktivitu pred lekciou požiadajte študentov, aby si zahrali hru [Share Jumper](https://www.digitalpassport.org/share-jumper.html) z balíka Digital Passport™ od organizácie Common Sense Education. Pomôže vám to predstaviť kľúčové koncepty tejto lekcie. Ďalšie informácie nájdete v [príručke k hrám Digital Passport pre učiteľov](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Povedzte**: _Dnes začneme krátkou hrou. Pri každom výroku, ktorý prečítam a je pre vás pravdivý, sa postavte. Ak nie je pravdivý, zostaňte sedieť. Po každom výroku sa rozhliadnite, aby ste videli, kto ďalší sa postavil alebo zostal sedieť._ ([snímka 4](https://docs.google.com/presentation/d/1P0Tx1SFou3XvAfgiL_JzNIv329degBTvO0APtk2vg3w/edit#slide=id.g3c5590bcca_0_283))\n\n**Prečítajte** nasledujúce výroky triede, pričom po každom výroku dajte študentom čas na to, aby sa postavili alebo zostali sedieť. Skôr než prejdete na ďalší výrok, povedzte študentom, nech si všetci sadnú.\n\n-   _Postavte sa, ak vy alebo niekto z vašej rodiny hovorí aj inak ako po slovensky._\n-   _Postavte sa, ak máte dvoch alebo viacerých súrodencov._\n-   _Postavte sa, ak máte domáce zvieratko._\n-   _Postavte sa, ak ste už niekedy boli na YouTube._\n-   _Postavte sa, ak ste už niekedy zdieľali nejaké informácie o sebe na internete._\n\n**Požiadajte** študentov, aby si všetci zas sadli, a spýtajte sa ich: _Čo ste sa naučili z tejto aktivity? Páčila sa vám? Prečo áno alebo prečo nie?_\n\nPožiadajte dobrovoľníkov, aby odpovedali nahlas. Ak je to potrebné, požiadajte odpovedajúcich, aby vysvetlili, prečo sa im niečo páčilo a prečo nie.\n\n**Povedzte**: _Cieľom tejto aktivity bolo zábavným spôsobom lepšie spoznať jeden druhého. Existuje mnoho situácií, v ktorých môže byť zdieľanie informácií o sebe zábavné a pozitívne. Jednou z takýchto situácií je zdieľanie informácií o tom, čo sa vám páči, vašich názorov a iných osobných informácií na internete, nie však súkromných informácií._"
+        },
+        "d27c13c6-7296-49ce-a80c-b1a33cd4f57a": {
+          "description": "**Povedzte**: _V rámci dnešnej lekcie sa porozprávame o správaní na internete a o zábavných spôsoboch, ako môžete zdieľať informácie o sebe, a spojiť sa tak s inými. Tiež sa porozprávame o spôsoboch, ako sa môžete chrániť, aby ste o sebe nevyzradili viac, ako by ste mali._\n\n**Projekt** \"Vedeli ste?\" na [snímke 5](https://docs.google.com/presentation/d/1P0Tx1SFou3XvAfgiL_JzNIv329degBTvO0APtk2vg3w/edit#slide=id.g3c5590bcca_0_93).\n\n**Spýtajte sa**: _Čo vidíte na tejto snímke? Akú hlavnú myšlienku sa snaží znázorniť? Povedzte svoje názory partnerovi._\n\nPožiadajte študentov, aby sa podelili o svoje odpovede. Ak je to potrebné, objasnite význam slova **vrodené** ako _niečo, s čím ste sa narodili_, že zdieľanie je niečo, čo je pre ľudí prirodzené a že má mnoho výhod.\n\n**Povedzte**: _Čo by ste mohli o sebe iným povedať, aby ste získali niektorú z týchto výhod? Porozprávajte sa o tom so svojím partnerom._\n\nPožiadajte študentov, nech nahlas odpovedia. Potom sa ich spýtajte, ktorú výhodu by tým dosiahli (dobrý pocit, získanie informácií, spojenie alebo presvedčenie). Ak študent nevie naisto, preberte to s celou triedou. Príklady sa môžu spájať s viacerými výhodami."
+        },
+        "5fdf93a4-2be8-4e07-9b54-85fd0daa04ce": {
+          "description": "**Povedzte**: _Takže existuje mnoho dôvodov, prečo zdieľať informácie o sebe. Nemali by ste však zdieľať úplne všetko. Pozrieme si krátke video o zdieľaní informácií na internete. Kým budeme pozerať, zamyslite sa nad tým, aké informácie môžete zdieľať a aké by ste zdieľať nemali._\n\n**Projekt** Zobrazte [snímku 6](https://docs.google.com/presentation/d/1P0Tx1SFou3XvAfgiL_JzNIv329degBTvO0APtk2vg3w/edit#slide=id.g3ed1f0b992_10_0) a prehrajte video **Súkromné a osobné informácie**. Po videu požiadajte študentov, aby odpovedali na otázky na diskusiu a uviedli príklady súkromných a osobných informácií. Vysvetlite,  že zdieľať **súkromné informácie** je veľmi nebezpečné, pretože pomocou nich možno identifikovať konkrétne osoby. ([Snímka 7](https://docs.google.com/presentation/d/1P0Tx1SFou3XvAfgiL_JzNIv329degBTvO0APtk2vg3w/edit#slide=id.g3c5590bcca_0_376))\n\n**Povedzte**: _Teraz si zahráme ďalšiu hru. Pri každom príklade, ktorý poviem, prediskutujte s partnerom, či ide o súkromné alebo osobné informácie. Rozhodnite sa podľa otázky: „Sú to informácie, ktoré sú pravdivé aj pre mnoho iných ľudí?“. Ak áno, sú to osobné informácie. Inak sú to súkromné informácie._ ([Slide 8](https://docs.google.com/presentation/d/1P0Tx1SFou3XvAfgiL_JzNIv329degBTvO0APtk2vg3w/edit#slide=id.g3c5590bcca_0_501))\n\nPrečítajte nahlas prvý príklad – „Vek“. Pripomeňte študentom, že sa majú zamyslieť nad tým, či sú tieto informácie pravdivé aj pre mnoho ďalších ľudí. Ak áno, ide o osobné informácie. Ak nie, sú súkromné. Dajte študentom minútu na diskusiu a rozhodnutie.\n\n**Povedzte**: _Ak si myslíte, že ide o osobné informácie, postavte sa. Ak si myslíte, že sú osobné, zostaňte sedieť._\n\nKeď sa študenti postavia alebo zostanú sedieť, požiadajte ich, nech vysvetlia, prečo vybrali danú odpoveď. Potom ich vyzvite, nech si zas pozrú definície súkromných a osobných informácií. Ak je to potrebné, vysvetlite študentom, že existuje mnoho ľudí (v škole, meste či dokonca aj triede), ktorí majú rovnaký vek ako oni.\n\n**Povedzte**: _Vy, čo ste zostali sedieť, máte pravdu. Sú to osobné informácie, nie súkromné._\n\nZopakujte hru s nasledujúcimi príkladmi:\n\n-   domáca adresa (**súkromná informácia**)\n-   e-mailová adresa (**súkromná informácia**)\n-   dátum narodenia (**súkromná informácia**)\n-   obľúbená hudba (**osobná informácia**)\n-   počet súrodencov (**osobná informácia**)\n-   phone numbers (**súkromná informácia**)\n-   informácie o platobnej karte (**súkromné informácie**)\n-   obľúbené jedlo (**osobná informácia**)\n-   meno domáceho zvieratka (**osobná informácia**)\n-   názov školy (**súkromná informácia**) (Vysvetlite, že hoci sa názov školy vzťahuje na mnoho ľudí, nie je bezpečné ho zdieľať s osobami, ktoré nepoznajú, a najprv by sa mali spýtať dospelej osoby, ktorej dôverujú.)"
         },
         "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
           "name": "Úvod"

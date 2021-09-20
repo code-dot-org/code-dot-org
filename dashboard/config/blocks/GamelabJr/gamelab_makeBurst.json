@@ -32,6 +32,10 @@
           [
             "rain",
             "\"rain\""
+          ],
+          [
+            "zig-zag",
+            "\"zigzag\""
           ]
         ]
       }

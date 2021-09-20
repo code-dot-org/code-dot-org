@@ -1,0 +1,12 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-09-16T19:48:25.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-09-16T19:48:25.324+00:00\",\"changed\":[\"cloned from \\\"CSA U4L13-L1\\\"\"],\"cloned_from\":\"CSA U4L13-L1\"},{\"changed_at\":\"2021-09-16 19:48:40 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 21:01:28 +0000\",\"changed\":[\"encrypted\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "encrypted_properties": "aNsSnqBwpDD9ZtSljJLbajVf3SL+tP2rdlwe0XrqKncNB/xz62Jy/5yJH9Wl\nwBTf/sZlFCI6lUp5IlSuPSUijRRLU4K38PfNl1ePRWiriAHOC5kTiNd9lpaG\nLIcCYHJs42llIzgAOul3mBuuxmr/IAwwGK5k7c+vczvzwo2Lmqy3KBhjmNlu\nOdFUze8xiyWTgwJ5OAL09kx7qIhrPGN8EdCjSW7GncUdRJdgF+sqobefYHug\niEn5fnLOAh/KZLVFGR2koj61qz/BhAVlfdEpuE80rkrVAbdHqRXT3K1Xso7M\nYtAArjjCTBRdEXDc1GZZ\n",
+  "encrypted_notes": null
+}]]></config>
+</Javalab>

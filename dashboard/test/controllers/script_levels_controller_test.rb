@@ -855,6 +855,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
+  test "reset redirects admins to root" do
+    sign_in create(:admin)
+    get :reset, params: {script_id: Script::HOC_NAME}
+    assert_redirected_to root_path
+  end
+
   test "show with the reset param should reset session when not logged in" do
     client_state.set_level_progress(create(:script_level), 10)
     refute client_state.level_progress_is_empty_for_test
@@ -987,6 +993,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal('//test.code.org/api/hour/finish/starwars', script_completion_redirect(Script.find_by_name(Script::STARWARS_NAME)))
   end
 
+  test "show redirects admins to root" do
+    sign_in create(:admin)
+    get :show, params: {script_id: Script::HOC_NAME, chapter: '20'}
+    assert_redirected_to root_path
+  end
+
   test 'end of HoC for logged in user works' do
     sign_in(create(:user))
     get :show, params: {script_id: Script::HOC_NAME, chapter: '20'}
@@ -1008,6 +1020,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   #   assert(!@response.body.include?('hoc_wrapup'))
   #   assert(@response.body.include?('/s/1/level/show?chapter=next'))
   # end
+
+  test "next redirects admins to root" do
+    sign_in create(:admin)
+    get :next, params: {script_id: Script::HOC_NAME}
+    assert_redirected_to root_path
+  end
 
   test 'next for non signed in user' do
     get :next, params: {script_id: Script::HOC_NAME}
@@ -1844,6 +1862,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
     assert_response :success
     assert_nil assigns(:view_options)[:is_challenge_level]
+  end
+
+  test "lesson_extras redirects admins to root" do
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: script, bonus: true
+
+    sign_in create(:admin)
+    get :lesson_extras, params: {
+      script_id: script,
+      lesson_position: 1,
+      level_name: script_level.level.name
+    }
+
+    assert_redirected_to root_path
   end
 
   test "specifying a bonus level name will direct to that level" do

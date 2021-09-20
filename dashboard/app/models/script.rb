@@ -53,7 +53,7 @@ class Script < ApplicationRecord
   belongs_to :user
   has_many :unit_group_units
   has_many :unit_groups, through: :unit_group_units
-  has_one :course_version, as: :content_root
+  has_one :course_version, as: :content_root, dependent: :destroy
 
   scope :with_associated_models, -> do
     includes(
@@ -241,6 +241,7 @@ class Script < ApplicationRecord
     is_migrated
     seeded_from
     is_maker_unit
+    use_legacy_lesson_plans
   )
 
   def self.twenty_hour_unit
@@ -272,19 +273,19 @@ class Script < ApplicationRecord
   end
 
   def self.lesson_extras_script_ids
-    @@lesson_extras_scripts ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
+    @@lesson_extras_script_ids ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
   end
 
   def self.maker_units
-    visible_units.select(&:is_maker_unit?)
+    @@maker_units ||= visible_units.select(&:is_maker_unit?)
   end
 
   def self.text_to_speech_unit_ids
-    all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
+    @@text_to_speech_unit_ids ||= all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
   end
 
   def self.pre_reader_unit_ids
-    all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
+    @@pre_reader_unit_ids ||= all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
   end
 
   # Get the set of units that are valid for the current user, ignoring those
@@ -329,7 +330,7 @@ class Script < ApplicationRecord
     private
 
     def visible_units
-      all_scripts.select(&:launched?).to_a.freeze
+      @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
     end
   end
 
@@ -1071,6 +1072,15 @@ class Script < ApplicationRecord
       temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, unit, new_suffix, editor_experiment)
       unit.reload
       unit.lesson_groups = temp_lgs
+
+      # For migrated scripts, we use the updated_at field to detect potential
+      # write conflicts when a curriculum editor tries to save an out-of-date
+      # script edit page. therefore, touch the `updated_at` column whenever we
+      # we save, even if it did not result an a change to the actual script
+      # object. that way, we'll prevent write conflicts on changes to lesson
+      # groups, as well as on fields which live only in scripts.en.yml.
+      unit.touch(:updated_at) if unit.is_migrated
+
       unit.save!
       unit.prevent_legacy_script_levels_in_migrated_units
 
@@ -1293,18 +1303,47 @@ class Script < ApplicationRecord
     Script.includes(:levels, :script_levels, lessons: :script_levels)
   end
 
+  def get_lesson_groups_i18n(lesson_groups_data)
+    lessons_data = lesson_groups_data.map {|lg| lg['lessons']}.flatten
+
+    # Do not write the names of existing lessons. Once a lesson has been
+    # created, its name is owned by the lesson edit page.
+    lessons_i18n = lessons_data.reject {|l| l['id']}.map do |lesson_data|
+      [lesson_data['key'], {name: lesson_data['name']}]
+    end.to_h
+
+    lesson_groups_i18n = lesson_groups_data.select {|lg| lg['user_facing']}.map do |lg_data|
+      [lg_data['key'], {display_name: lg_data['display_name']}]
+    end.to_h
+
+    {
+      name => {
+        lessons: lessons_i18n,
+        lesson_groups: lesson_groups_i18n
+      }
+    }.deep_stringify_keys
+  end
+
   # Update strings and serialize changes to .script file
   def update_text(unit_params, unit_text, metadata_i18n, general_params)
     unit_name = unit_params[:name]
     begin
-      unit_data, i18n = ScriptDSL.parse(unit_text, 'input', unit_name)
+      # avoid ScriptDSL path for migrated scripts
+      unit_data, i18n =
+        if general_params[:is_migrated]
+          lesson_groups = general_params[:lesson_groups]
+          raise 'lesson_groups param is required for migrated scripts' unless lesson_groups
+          [{lesson_groups: lesson_groups}, get_lesson_groups_i18n(lesson_groups)]
+        else
+          ScriptDSL.parse(unit_text, 'input', unit_name)
+        end
       Script.add_unit(
         {
           name: unit_name,
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-          published_state: general_params[:published_state],
+          published_state: (unit_group.present? && general_params[:published_state] == unit_group.published_state) ? nil : general_params[:published_state],
           properties: Script.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
@@ -1539,6 +1578,7 @@ class Script < ApplicationRecord
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
       weeklyInstructionalMinutes: weekly_instructional_minutes,
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
+      useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
       courseVersionId: get_course_version&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
@@ -1612,7 +1652,8 @@ class Script < ApplicationRecord
     {
       displayName: title_for_display,
       link: link,
-      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)}
+      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)},
+      publishedState: get_published_state
     }
   end
 
@@ -1696,6 +1737,8 @@ class Script < ApplicationRecord
     @@unit_family_cache = nil
     @@level_cache = nil
     @@all_scripts = nil
+    @@visible_units = nil
+    @@maker_units = nil
     Rails.cache.delete UNIT_CACHE_KEY
   end
 
@@ -1767,6 +1810,7 @@ class Script < ApplicationRecord
       :show_calendar,
       :is_migrated,
       :include_student_lesson_plans,
+      :use_legacy_lesson_plans,
       :is_maker_unit
     ]
     not_defaulted_keys = [
@@ -2020,13 +2064,13 @@ class Script < ApplicationRecord
   end
 
   def get_unit_overview_pdf_url
-    if is_migrated?
+    if is_migrated? && !use_legacy_lesson_plans?
       Services::CurriculumPdfs.get_script_overview_url(self)
     end
   end
 
   def get_unit_resources_pdf_url
-    if is_migrated?
+    if is_migrated? && !use_legacy_lesson_plans?
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
   end

@@ -143,7 +143,7 @@
         },
         "2-3 Bee Functions 9": {
           "2-3_Bee_Functions_8_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!",
-          "2-3_Bee_Functions_8_b": "Denk er aan dat je je code bouwt binnen het groene functie blok.\n\n[][0]"
+          "2-3_Bee_Functions_8_b": "Denk er aan dat je je code bouwt binnen het groene functie blok.\n\n![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)"
         },
         "2-3 Bee Loops 2": {
           "2-3_Bee_Loops_2_a": "Uiteindelijk moet je 4 blokken in jouw lus hebben."
@@ -846,12 +846,12 @@
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "courseA_artist_loops_challenge1_c": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "courseA_artist_loops_challenge1_d": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
-          "courseA_artist_loops_challenge1_a": "Je kan op deze manier lussen gebruiken om de muren en het dak te maken. Probeer verschillende blokken te herhalen.\n\n[][0]\n\nOntwerp je eigen idee of klik op [][1] voor enkele ideeën!"
+          "courseA_artist_loops_challenge1_a": "Je kan op deze manier lussen gebruiken om de muren en het dak te maken. Probeer verschillende blokken te herhalen.\n\n![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)\n\nOntwerp je eigen idee of klik op ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) voor enkele ideeën!"
         },
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_c": "Beweeg tweemaal naar het oosten tussen elk pad.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nJe kan dit doen met slechts 14 blokken. De volgende hint bevat de oplossing.",
-          "courseB_collector_loops_challenge1_b": "Start door de commando's `beweeg zuid` en `pak schat` in een lus te plaatsen.\n\n[blockly block][0]",
-          "courseB_collector_loops_challenge1_a": "Het noordpatroon is een beetje anders dan het zuidpatroon.\n\n[blockly block][0]"
+          "courseB_collector_loops_challenge1_b": "Start door de commando's `beweeg zuid` en `pak schat` in een lus te plaatsen.\n\n<xml>\n  <block type=\"maze_moveSouth\"/><next>\n  <block type=\"collector_collect\"/></next>\n  </xml>",
+          "courseB_collector_loops_challenge1_a": "Het noordpatroon is een beetje anders dan het zuidpatroon.\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>"
         },
         "course1_collector_loops_challenge4": {
           "courseB_collector_loops_challenge2_c": "Probeer een `herhaal` blok te gebruiken om de schatstapel aan het einde te verzamelen!",
@@ -884,8 +884,8 @@
         "course2_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "Je zou deze puzzle kunnen oplossen met een zigzag-patroon.  Maar je kunt hem ook oplossen met een spiraalvormige route!  Dit soort puzzles heeft een heleboel verschillende oplossingen.  Houd vol!",
           "courseC_harvester_loops_challenge2_b": "Je kan `beweeg vooruit` en `pluk sla` herhalen zo vaak je maar wilt. Gebruik `draai rechtsom` in elke hoek.",
-          "courseC_harvester_loops_challenge2_c": "Door dit zigzag-patroon te herhalen kun je de puzzle oplossen met slechts 20 blokken!\n\n[][0]",
-          "courseC_harvester_loops_challenge2_d": "Deze spiraal route kun je programmeren met slechts 18 blokken!!\n\n[][0]"
+          "courseC_harvester_loops_challenge2_c": "Door dit zigzag-patroon te herhalen kun je de puzzle oplossen met slechts 20 blokken!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Deze spiraal route kun je programmeren met slechts 18 blokken!!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_b": "De kortste oplossing gebruikt enkel 5 blokken, gebruik makende van de `herhaal` blok!"
@@ -1774,7 +1774,7 @@
           "courseE_playLab_scaffold4_a": "Gebruik `scoor punt` om een punt toe te voegen, en `verwijder punt` om een punt weg te nemen."
         },
         "course3_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "[blockly block][0]\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n[][1]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "course3_playLab_challenge1": {
           "courseE_playLab_challenge1_a": "Hier zijn wat dingen die je zou kunnen doen als de speler het spel wint:\n\n-   Laat de dinosaurus verdwijnen.\n-   Stop de eekhoorns.\n-   Maak de eekhoorns en de ridder blij.\n-   Verander de achtergrond.\n-   Zorg dat de ridder de spelter bedankt voor de hulp.\n-   Laat alle spelers verdwijnen en toon een boodschap \"Je hebt gewonnen!\".",
@@ -1785,7 +1785,7 @@
           "courseE_artist_concept_challenge2_b": "Met dit commando kun je naar een willekeurige plaats op het canvas springen."
         },
         "course4_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "[blockly block][0]\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n[][1]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "Je kunt het blok `geef speler 1 een ??? uiterlijk` gebruiken om een nieuwe speler op het toneel te zetten.",
@@ -3358,11 +3358,11 @@
           "courseA_collector_loops_challenge1_c": "Er zijn 6 edelstenen aan de rechterkant van de grot, maar je hoeft maar 5 keer te verplaatsen en te verzamelen. Weet je waarom?"
         },
         "course1_collector_loops_challenge2": {
-          "courseA_collector_loops_challenge2_b": "Je hoeft maar één [][0] blok te gebruiken om dit op te lossen.",
-          "courseA_collector_loops_challenge2_a": "Je kunt een tweede keer over het pad gaan voordat je naar het zuiden gaat.\n\n[][0]"
+          "courseA_collector_loops_challenge2_b": "Je hoeft maar één ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png>) blok te gebruiken om dit op te lossen.",
+          "courseA_collector_loops_challenge2_a": "Je kunt een tweede keer over het pad gaan voordat je naar het zuiden gaat.\n\n![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)"
         },
         "course1_playlab_events_challenge1": {
-          "courseA_playlab_events_challenge1_e": "Laat tot slot Wendel de tovenaar zien als je op Spiff klikt!\n\n[blockly block][0]"
+          "courseA_playlab_events_challenge1_e": "Laat tot slot Wendel de tovenaar zien als je op Spiff klikt!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_b": "Gebruik lussen, want anders heb je niet genoeg `verzamel`-blokken!"

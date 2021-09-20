@@ -111,6 +111,10 @@ en-GB:
           KEY:
             '"space"': space
             '"x"': x
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
       gamelab_randColor:
         text: random colour
       gamelab_randomColor:
@@ -166,10 +170,6 @@ en-GB:
           KEY:
             '"yes"': 'yes'
             '"no"': 'no'
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': rainbow
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:

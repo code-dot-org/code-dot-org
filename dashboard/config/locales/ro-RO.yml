@@ -228,6 +228,10 @@ ro:
     email_preference_yes: Da
     email_preference_no: Nu
     email_preference_required: Trebuie să specificaţi un email preferat.
+    share_teacher_email_reg_partner_preference_yes: Da
+    share_teacher_email_reg_partner_preference_no: Nu
+    share_teacher_email_reg_partner_preference_required: Trebuie să specificaţi un
+      email preferat.
     parent_account_checkbox: Sunt un părinte/tutore care se înscrie în numele copilului
       meu
     parent_account_email_progress_permission: Putem să vă trimitem un email cu actualizări

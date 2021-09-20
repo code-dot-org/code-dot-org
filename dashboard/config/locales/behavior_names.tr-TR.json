@@ -1302,19 +1302,19 @@
           "moving east and looping": "doğuya doğru hareket ve döngü"
         },
         "CourseF_outbreak1": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme"
         },
         "CourseF_outbreak2": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme"
         },
         "CourseF_outbreak3": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme"
         },
         "CourseF_outbreak4": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme",
           "moving east": "doğuya ilerleme",
           "spinning left": "sola dönme",
@@ -1330,15 +1330,15 @@
           "moving with arrow keys": "ok tuşları ile hareket"
         },
         "CourseF_outbreak5": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme"
         },
         "CourseF_outbreak6": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme"
         },
         "CourseF_outbreak7": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme",
           "moving east": "doğuya ilerleme",
           "spinning left": "sola dönme",
@@ -1354,7 +1354,7 @@
           "moving with arrow keys": "ok tuşları ile hareket"
         },
         "CourseF_outbreak8": {
-          "recovering": "iyileşiyor",
+          "recovering": "iyileşme",
           "wandering": "gezinme",
           "moving east": "doğuya ilerleme",
           "spinning left": "sola dönme",
@@ -2771,6 +2771,22 @@
           "wobbling": "sallanma",
           "moving west and looping": "batıya doğru hareket ve döngü",
           "moving east and looping": "doğuya doğru hareket ve döngü"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "iyileşme",
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "moving left and right": "sola ve sağa hareket",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "kontrol sağlama",
+          "moving with arrow keys": "ok tuşları ile hareket"
         }
       }
     }

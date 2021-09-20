@@ -470,11 +470,19 @@ sr:
             '"space"': Простор
             '"x"': x
             '"y"': у
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': киша
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': десно
             '"left"': лево
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": крц
       gamelab_randColor:
         text: насумична боја
       gamelab_randomColor:
@@ -665,15 +673,6 @@ sr:
             '"down"': стрелица доле
             '"left"': стрелица лево
             '"right"': стрелица десно
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"solid"': попуњено
-            '"rainbow"': Дуга
-      PoemBot_setForegroundEffect:
-        options:
-          FG_EFFECT:
-            '"rain"': киша
       RyanLab_moveForward:
         text: помери се напред
       RyanLab_turnLeft:

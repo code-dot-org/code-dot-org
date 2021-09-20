@@ -1099,6 +1099,10 @@ fil:
         text: Lokasyon ng {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ulan
       gamelab_makeNewSpriteAnon:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       gamelab_mirrorSprite:
@@ -1121,6 +1125,11 @@ fil:
         text: nag-click {SPRITE}
       gamelab_playSound:
         text: Ang ... {SOUND}
+      gamelab_playSoundOptions:
+        text: Ang ... {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
       gamelab_pointInDirection:
         text: punto {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1544,17 +1553,26 @@ fil:
         text: x coordinate ng {SPRITE}
       Mikelab_yLocationOf:
         text: y ang mga {SPRITE}
+      PoemBot_playSound:
+        text: Ang ... {SOUND}
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"solid"': solid
-            '"rainbow"': bahaghari
+          EFFECT:
+            '"colors"': Mga Kulay
+            '"squiggles"': Squiggles
+            '"stars"': Mga Bituin
+            '"ripples"': Ripples
+          PALETTE:
+            '"rainbow"': Bahaghari
       PoemBot_setForegroundEffect:
-        text: itakda ang foreground effect {FG_EFFECT}
+        text: itakda ang foreground effect {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': ulan
-            '"bubbles"': bubbles
+          EFFECT:
+            '"rain"': Ulan
+            '"bubbles"': Bubbles
+            '"hearts"': Makulay na mga Puso
+            '"confetti"': Confetti
+            '"starburst"': Starburst
       RyanLab_moveForward:
         text: umabante
       RyanLab_turnLeft:

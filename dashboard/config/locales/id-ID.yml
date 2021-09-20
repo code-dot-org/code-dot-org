@@ -235,6 +235,10 @@ id:
     email_preference_yes: Ya
     email_preference_no: Tidak
     email_preference_required: Anda harus menentukan preferensi email.
+    share_teacher_email_reg_partner_preference_yes: Ya
+    share_teacher_email_reg_partner_preference_no: Tidak
+    share_teacher_email_reg_partner_preference_required: Anda harus menentukan preferensi
+      email.
     parent_account_checkbox: Saya orang tua/wali yang mendaftar untuk anak saya
     parent_account_email_progress_permission: Dapatkah kami sesekali mengirimi Anda
       email tentang info terkini kemajuan dan proyek anak Anda, serta pembaruan kursus

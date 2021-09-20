@@ -1172,6 +1172,11 @@ pl:
         text: pozycja {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': wybuch
+            '"rain"': deszcz
       gamelab_makeNewSpriteAnon:
         text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
       gamelab_makeNumSprites:
@@ -1206,6 +1211,12 @@ pl:
         text: patrolowanie w górę i w dół
       gamelab_playSound:
         text: PlaySound {SOUND}
+      gamelab_playSoundOptions:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": przycisk
+            "'sound://category_collect/clicky_crunch.mp3'": chrzęst
       gamelab_pointInDirection:
         text: punkt {SPRITE} {DIRECTION}
         options:
@@ -1817,16 +1828,23 @@ pl:
         text: potwory zatrzymują się
       PoemBot_addLine:
         text: dodaj linię {LINE}
+      PoemBot_playSound:
+        text: PlaySound {SOUND}
       PoemBot_randomWord:
         text: losowe słowo
       PoemBot_setAuthor:
         text: ustaw autora wiersza {AUTHOR}
       PoemBot_setBackgroundEffect:
-        text: ustaw efekt tła {BG_EFFECT}
+        text: ustaw efekt tła {EFFECT}
         options:
-          BG_EFFECT:
-            '"solid"': trwały
-            '"rainbow"': tęcza
+          EFFECT:
+            '"colors"': Kolory
+            '"squiggles"': Pokręcone linie
+            '"space"': Przestrzeń
+            '"stars"': Gwiazdy
+            '"ripples"': Fale
+          PALETTE:
+            '"rainbow"': Tęcza
       PoemBot_setFont:
         text: ustaw czcionkę {FONT}
         options:
@@ -1841,27 +1859,46 @@ pl:
             '"Tahoma"': Tahoma
             '"Verdana"': Verdana
       PoemBot_setFontColor:
-        text: ustaw kolor czcionki {COLOR}
+        text: ustaw kolor czcionki {FILL}
       PoemBot_setForegroundEffect:
-        text: ustaw efekt pierwszego planu {FG_EFFECT}
+        text: ustaw efekt pierwszego planu {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': deszcz
-            '"bubbles"': bąbelki
+          EFFECT:
+            '"rain"': Deszcz
+            '"bubbles"': Bąbelki
+            '"hearts"': Kolorowe Serca
+            '"confetti"': Konfetti
+            '"starburst"': Rozprysk
       PoemBot_setPoem:
-        text: ustaw wiersz {BG_EFFECT}
-        options:
-          BG_EFFECT:
-            '"---"': "---"
-            '"wordsworth"': Wędrowałem samotnie jak chmura
-            '"dickinson"': Jeśli mogę zatrzymać jedno serce przed złamaniem
-            '"silverstein"': Batty
+        text: ustaw wiersz {POEM}
       PoemBot_setTitle:
         text: ustaw tytuł wiersza {TITLE}
       PoemBot_showPoem:
         text: pokaż wiersz
-      PoemBot_stringConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: trzepotanie
+            growing: rośnięcie
+            jittering: trzęsienie się
+            shrinking: zwężenie
+            spinning_left: obracanie się w lewo
+            spinning_right: obracanie się w prawo
+            swimming_left_and_right: pływanie
+            wandering: wędrowanie
+            wobbling: chybotanie
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: trzepotanie
+            growing: rośnięcie
+            jittering: trzęsienie się
+            shrinking: zwężenie
+            spinning_left: obracanie się w lewo
+            spinning_right: obracanie się w prawo
+            swimming_left_and_right: pływanie
+            wandering: wędrowanie
+            wobbling: chybotanie
       PoemBot_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:

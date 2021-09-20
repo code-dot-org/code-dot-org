@@ -4295,6 +4295,12 @@ bg:
           lessons:
             lesson-2:
               name: Урок 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Етап 1
+            lessonGroup-3:
+              display_name: Етап 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -4309,6 +4315,8 @@ bg:
               name: Общ преглед
         csa-u6-dev:
           lessons:
+            lesson-13:
+              name: Примери
             lesson-18:
               name: Джаджи
         csa1-pilot-facilitator:

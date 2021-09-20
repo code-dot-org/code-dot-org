@@ -538,7 +538,27 @@
         "ramp_artist_loops4_2021": "Звезда",
         "scrat_loops_C-F_video_2021": "Циклы в видео \"Ледниковый период\"",
         "courseA_EOC_artist_3": " Космос",
-        "courseA_EOC_playlab_animals": " Животные"
+        "courseA_EOC_playlab_animals": " Животные",
+        "CourseF_app_computer": "Сборка компьютера",
+        "CourseF_outbreak5": "Модифицируйте ваш симулятор",
+        "courseF_apps_aquarium": "Виртуальный аквариум",
+        "courseF_apps_card": "Поздравительная открытка",
+        "courseF_apps_chatbot": "Чат-бот X-9",
+        "courseF_apps_collector": "Игра «Собиратель»",
+        "courseF_apps_madlib": "История с чистого листа",
+        "courseF_apps_pet": "Виртуальный питомец",
+        "courseF_editable_card": "Поздравительная открытка",
+        "courseF_editable_madlib": "История с чистого листа",
+        "courseF_place_fruit": "Измени размер фрукта.",
+        "courseF_sprites_behaviors": "Поведения спрайтов",
+        "courseF_sprites_clouds": "Ветреный день",
+        "courseF_sprites_desert": "Пустынный пейзаж",
+        "courseF_sprites_make": "Создание спрайтов",
+        "courseF_sprites_moreSprites": "Позиционирование спрайтов",
+        "courseF_sprites_positioning": "Позиционирование спрайтов",
+        "courseF_sprites_properties": "Свойства спрайтов",
+        "courseF_sprites_ship": "Анимирование парусного судна",
+        "international_outbreak_freeplay": "Поделиться посланием"
       }
     }
   }

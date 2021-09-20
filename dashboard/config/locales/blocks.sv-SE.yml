@@ -1088,6 +1088,10 @@ sv:
         text: plats av {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
       gamelab_makeNewSpriteAnon:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
       gamelab_mirrorSprite:
@@ -1110,6 +1114,11 @@ sv:
         text: klickade {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
+      gamelab_playSoundOptions:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": krasch
       gamelab_pointInDirection:
         text: Punkt {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1536,18 +1545,28 @@ sv:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
+      PoemBot_playSound:
+        text: PlaySound {SOUND}
       PoemBot_setBackgroundEffect:
-        text: täll in bakgrundseffekt {BG_EFFECT} [PALETTE][1]
+        text: täll in bakgrundseffekt {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': solid
-            '"rainbow"': regnbåge
+          EFFECT:
+            '"colors"': Färger
+            '"squiggles"': Krumelurer
+            '"space"': Mellanslag
+            '"stars"': Stjärnor
+            '"ripples"': Krusningar
+          PALETTE:
+            '"rainbow"': Regnbåge
       PoemBot_setForegroundEffect:
-        text: ställ in förgrundseffekt {FG_EFFECT}
+        text: ställ in förgrundseffekt {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': regn
-            '"bubbles"': bubblor
+          EFFECT:
+            '"rain"': Regn
+            '"bubbles"': Bubblor
+            '"hearts"': Färgglada hjärtan
+            '"confetti"': Konfetti
+            '"starburst"': Stjärnfall
       RyanLab_moveForward:
         text: gå framåt
       RyanLab_turnLeft:

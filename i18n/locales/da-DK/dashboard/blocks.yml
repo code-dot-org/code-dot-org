@@ -1109,6 +1109,10 @@ da:
         text: placeringen af {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
       gamelab_makeNewSpriteAnon:
         text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
       gamelab_mirrorSprite:
@@ -1137,6 +1141,11 @@ da:
         text: klikket {SPRITE}
       gamelab_playSound:
         text: afspil lyd {SOUND}
+      gamelab_playSoundOptions:
+        text: afspil lyd {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": kravle
       gamelab_pointInDirection:
         text: peg {SPRITE} {DIRECTION}
         options:
@@ -1488,18 +1497,46 @@ da:
             '"down"': pil ned
             '"left"': venstre pil
             '"right"': højre pil
+      PoemBot_playSound:
+        text: afspil lyd {SOUND}
       PoemBot_setBackgroundEffect:
-        text: indstil baggrundseffekt {BG_EFFECT} [PALETTE][1]
+        text: indstil baggrundseffekt {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': solid
-            '"rainbow"': regnbue
+          EFFECT:
+            '"colors"': Farver
+            '"squiggles"': Kruseduller
+            '"space"': Ydre rum
+            '"stars"': Stjerner
+            '"ripples"': Krusninger
+          PALETTE:
+            '"rainbow"': Regnbue
       PoemBot_setForegroundEffect:
-        text: indstil baggrundseffekt {FG_EFFECT}
+        text: indstil baggrundseffekt {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': regn
-            '"bubbles"': bobler
+          EFFECT:
+            '"rain"': Regn
+            '"bubbles"': Bobler
+            '"hearts"': Farvede hjerter
+            '"confetti"': Konfetti
+            '"starburst"': Starburst
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: vokser
+            jittering: rystende
+            shrinking: krymper
+            spinning_left: spinning til venstre
+            spinning_right: spinning til højre
+            wandering: vandrende
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: vokser
+            jittering: rystende
+            shrinking: krymper
+            spinning_left: spinning til venstre
+            spinning_right: spinning til højre
+            wandering: vandrende
       RyanLab_moveForward:
         text: flyt fremad
       RyanLab_turnLeft:

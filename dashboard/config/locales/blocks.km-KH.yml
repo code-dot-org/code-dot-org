@@ -287,11 +287,19 @@ km:
             '"space"': លំហ​អាកាស
             '"x"': x
             '"y"': y
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ភ្លៀង
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': ស្តាំ
             '"left"': ឆ្វេង
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": ខាំ
       gamelab_randColor:
         text: ពណ៌​ព្រាវ
       gamelab_randomColor:
@@ -514,15 +522,6 @@ km:
             '"down"': ព្រួញចុះក្រោម
             '"left"': ព្រួញខាងឆ្វេង
             '"right"': ព្រួញខាងស្តាំ
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"solid"': គំនូស​ជាប់
-            '"rainbow"': ឥន្ទធនូ
-      PoemBot_setForegroundEffect:
-        options:
-          FG_EFFECT:
-            '"rain"': ភ្លៀង
       RyanLab_moveForward:
         text: រំកិល​ទៅមុខ
       RyanLab_turnLeft:

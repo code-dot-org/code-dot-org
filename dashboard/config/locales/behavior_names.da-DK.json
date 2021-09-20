@@ -2262,6 +2262,22 @@
           "moving north": "bevæger sig nordpå",
           "jittering": "rystende",
           "patrolling": "patruljerer"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "kommer sig",
+          "wandering": "vandrende",
+          "moving east": "bevæger sig østpå",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "shrinking": "krymper",
+          "growing": "vokser",
+          "moving south": "bevæger sig sydpå",
+          "moving left and right": "bevæger sig til venstre og højre",
+          "moving north": "bevæger sig nordpå",
+          "jittering": "rystende",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         }
       }
     }
