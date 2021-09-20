@@ -1107,6 +1107,10 @@ he:
         text: מיקום {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': גשום
       gamelab_makeNewSpriteAnon:
         text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
       gamelab_makeNumSprites:
@@ -1133,6 +1137,12 @@ he:
         text: לחץ {SPRITE}
       gamelab_playSound:
         text: נגן צליל {SOUND}
+      gamelab_playSoundOptions:
+        text: נגן צליל {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": כפתור
+            "'sound://category_collect/clicky_crunch.mp3'": מעיכה
       gamelab_pointInDirection:
         text: נקודה {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1566,18 +1576,46 @@ he:
         text: x קואורדינטות של {SPRITE}
       Mikelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
+      PoemBot_playSound:
+        text: נגן צליל {SOUND}
       PoemBot_setBackgroundEffect:
-        text: קבעו אפקט רקע {BG_EFFECT} [PALETTE][1]
+        text: קבעו אפקט רקע {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': אטום
+          EFFECT:
+            '"colors"': צבעים
+            '"squiggles"': קווים מתפתלים
+            '"space"': חלל
+            '"stars"': כוכבים
+            '"ripples"': אדוות
+          PALETTE:
             '"rainbow"': קשת
       PoemBot_setForegroundEffect:
-        text: קבע אפקט חזית {FG_EFFECT}
+        text: קבע אפקט חזית {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': גשום
+          EFFECT:
+            '"rain"': גשם
             '"bubbles"': בועות
+            '"hearts"': לבבות צבעוניים
+            '"confetti"': קונפטי
+            '"starburst"': כוכבים
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: לגדול
+            jittering: לרעוד
+            shrinking: להתכווץ
+            spinning_left: להסתובב שמאלה
+            spinning_right: להסתובב ימינה
+            wandering: לשוטט
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: לגדול
+            jittering: לרעוד
+            shrinking: להתכווץ
+            spinning_left: להסתובב שמאלה
+            spinning_right: להסתובב ימינה
+            wandering: לשוטט
       RyanLab_moveForward:
         text: זוז קדימה
       RyanLab_turnLeft:

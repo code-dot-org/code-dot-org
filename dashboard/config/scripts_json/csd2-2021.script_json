@@ -15,12 +15,21 @@
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
       "include_student_lesson_plans": true,
-      "tts": true
+      "tts": true,
+      "announcements": [
+        {
+          "notice": "Supports to Teach CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-10 17:57:44 UTC",
-    "published_state": null,
+    "serialized_at": "2021-09-09 22:38:17 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -9461,7 +9470,7 @@
     },
     {
       "name": "Internet Scavenger Hunt",
-      "url": "https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/edit",
+      "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit",
       "key": "internet-scavenger-hunt",
       "properties": {
         "type": "Activity Guide",
@@ -9847,7 +9856,7 @@
     },
     {
       "name": "Social Sleuth",
-      "url": "https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/",
+      "url": "https://docs.google.com/document/d/1FX4Js8yX867G4feEbRuWxCdDD2R33f-oHfm5sBD2rnw/edit",
       "key": "social-sleuth-exemplar-2020",
       "properties": {
         "type": "Exemplar",

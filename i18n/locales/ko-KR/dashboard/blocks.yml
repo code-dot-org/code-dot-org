@@ -1129,6 +1129,10 @@ ko:
         text: 위치 {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': 비
       gamelab_makeNewSpriteAnon:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       gamelab_makeNumSprites:
@@ -1157,6 +1161,12 @@ ko:
         text: 위 아래로 순찰
       gamelab_playSound:
         text: Playsound {SOUND}
+      gamelab_playSoundOptions:
+        text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": 버튼
+            "'sound://category_collect/clicky_crunch.mp3'": 부서짐 소리
       gamelab_pointInDirection:
         text: 지점 {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1615,20 +1625,46 @@ ko:
         text: x 좌표 {SPRITE}
       Mikelab_yLocationOf:
         text: y 좌표 {SPRITE}
+      PoemBot_playSound:
+        text: Playsound {SOUND}
       PoemBot_setBackgroundEffect:
-        text: 배경 효과 {BG_EFFECT} [PALETTE][1] 설정
+        text: 배경 효과 {EFFECT} {PALETTE} 설정
         options:
-          BG_EFFECT:
-            '"solid"': 채우기
-            '"rainbow"': 비
+          EFFECT:
+            '"colors"': 색상
+            '"squiggles"': 구불구불
+            '"space"': 우주
+            '"stars"': 별
+            '"ripples"': 물결
+          PALETTE:
+            '"rainbow"': 무지개
       PoemBot_setForegroundEffect:
-        text: 전경 효과 {FG_EFFECT} 설정
+        text: 전경 효과 {EFFECT} 설정
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': 비
             '"bubbles"': 거품
-      PoemBot_stringConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+            '"hearts"': 형형색색 하트
+            '"confetti"': 색종이
+            '"starburst"': 스타버스트
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: 성장
+            jittering: 지터링
+            shrinking: 감소
+            spinning_left: 왼쪽으로 회전
+            spinning_right: 오른쪽으로 회전
+            wandering: 배회
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: 성장
+            jittering: 지터링
+            shrinking: 감소
+            spinning_left: 왼쪽으로 회전
+            spinning_right: 오른쪽으로 회전
+            wandering: 배회
       PoemBot_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:

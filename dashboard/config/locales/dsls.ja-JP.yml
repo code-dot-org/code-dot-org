@@ -3549,8 +3549,88 @@ ja-JP:
           トランプを使って、"もし 赤いカードなら、1ポイント ゲット" や "もし 黒いカードなら、1ポイント ゲット" といったルールを作ってみよう。
       CourseF_outbreak_story:
         content1: 説明
+        markdown: |-
+          # 大流行：自分だけのシミュレーションを作ってみましょう
+
+          ## モンスタータウンへようこそ！
+          モンスタータウンは、いつもはハッピーで元気いっぱいの場所でした。 モンスタータウンのモンスターたちは、あちこちのお友だちの家に行くのが大好きでした。
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ある日、モンスターの1人が病気になりました。このモンスターは**ウイルス**にかかったのです！ ウイルスというのは、みんなを病気にする小さなバイキンのことです。 他のモンスターはあまり心配しないで、お友だちの所にいつもどおり遊びに行きました。
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          その後すぐに、さらに2人のモンスターが病気になりました。 同じウイルスでした！ 2人はお友だちからウイルスをもらったようです。
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ウイルスはゆっくりと近所の他のモンスターにも広がりました。 元気なモンスターは、全員が病気になるのではないかと心配し始めました。病気のモンスターは、他のみんなにウイルスをうつすのではないかと心配し始めました。
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## 広がるのを止める
+          うれしいことに、モンスタータウンのみんながウイルスをじっくり調べると、大切なことが分かりました。口にマスクをかけると、ウイルスが広がりにくいことに気づいたのです。 マスクをかけると、病気のモンスターが元気なモンスターにウイルスをうつすことも少なくなります。
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## 次の手順は？
+
+          今日はコードを書いて、モンスタータウンのウイルス大流行の**シミュレーション**を作成して実行します。 シミュレーションとは、プロセスまたはシステムのコンピュータモデルのことです。 コーディングをして、モンスタータウンのみんなに何が起きるか予測する方法を学びましょう。
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *ウイルスはどのくらいの速さで広がりますか？*
+
+          * *だれもが病気になりますか？*
+
+          * *フェイスマスクはどのように役立ちますか？*
+
+
+          終わったら、シミュレーションをお友だちと共有しましょう。自分の町にウイルスがやってきたときに、他の人たちの健康を守るためにできると思うことについて、意見を出し合いましょう。
       CourseF_outbreak_story2:
         content1: 説明
+        markdown: |
+          # 大流行：科学者のように考える
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          シミュレーションは、現実の世界で観察しづらいことについて知るための最高の方法です。科学者が問題を解いて、新しいアイデアを安全に、そして効率よくテストするのを手助けします。 このシミュレーションは、モンスタータウンで、ウイルスの大流行がどのように広がるのかを見せてくれる1つの方法です。
+
+          ## リセットしてもう一度！
+          自分でコードを書いたとしても、「実行」をクリックするまでは、何が起こるか正確に知ることはできません。モンスターは自由に動き回っているので、ウイルスが素早く広がるのか、ゆっくり広がるのか分からないのです。コードを変更するときはいつでも、数回はシミュレーションを実行しましょう。なにごとも2度、同じように起きることはありません！
+
+          ## データを集める
+          シミュレーションを実行したら、観察したことを書きとめましょう。病気になったモンスターの数を数えたり、タイマーを使って、色々なことがどれほど速く起こるかチェックしましょう。たとえば、マスクをかけていないモンスター全員が病気になるまで、たいてい、どのくらいの時間がかかりますか？
+
+          ## 予測する
+          自分のモデルを理解していれば、それを使って予測もできます。 シミュレーションを実行する方法を変更して、どういった違いが出るか予測したりもできます。例えば：
+          * モンスターの数が2倍になると、どうなりますか？
+          *モンスターが半分のスピードで動くと、どうなりますか？
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## モンスタータウンは現実の世界に似ていますか？
+          どれほど現実的に見えるモデルでも、それには限界があります。
+          * シミュレーションは、実際のウイルスの大流行とどのような点で同じですか？
+          * どのような違いがありますか？
+          このアクティビティが終わったら、これらの質問について先生や家族と話し合いましょう！
+
+          ## 他にはどのようなものをモデル化できますか？
+          ここでは、モンスタータウンのウイルス大流行について、実用的なモデルを作成しました。 シミュレーションでできないこと、または、できれば良いと思うことは何ですか？ 「続ける」をクリックして、モデル化のやり方をもっと学びましょう。
+          * シミュレーションでモンスターの数を増やす
+          * モンスターがウイルスから回復するのを助ける
+          * 確率、免疫、ワクチンなど！
+
+          また、シミュレーションモデルをお友だちと共有したり、ウイルスが自分の町で広がったときに、みんなの健康を守るためにできると思うことについて、意見を出し合ったりしましょう。
       DesigningForAccessibilityMarkdownLevel_2021:
         markdown: |
           # 使いやすさの設計
@@ -3628,8 +3708,10 @@ ja-JP:
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       courseAB_EOC_2021:
         display_name: コース最後のプロジェクト
+        description: さいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
       courseB_EOC_2021:
         display_name: コース最後のプロジェクト
+        description: さいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: 正三角形。
@@ -3639,7 +3721,8 @@ ja-JP:
         - text: 正方形
           correct: true
           feedback: せいかい！
-        - {}
+        - text: アーティストは五角形をかく
+          feedback: ふせいかい。正方形でした。
         questions:
         - text: プログラムを実行（じっこう）したら、どんな図形が書けますか？
       courseC_multi_harvester_loops11_predict1_2021:
@@ -3657,12 +3740,18 @@ ja-JP:
         - text: プログラムを実行（じっこう）したら、いくつ カボチャを あつめることが できますか？
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: スクラットはどんぐりにとうちゃくする。コードにバグはない。
+          feedback: ふせいかい。 まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
+        - text: スクラットはまちがった方に曲がるため、ドングリにとうちゃくしない。
+          correct: true
+          feedback: せいかい！まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
+        - text: "「まえにすすむ」ブロックが十分でないため、スクラットはドングリにとうちゃくしません。"
+          correct: true
+          feedback: せいかい！まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
+        - text: スクラットはさいしょのブロックから動かない。
+          feedback: このコードには2つのバグがあります。まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
         questions:
-        - {}
+        - text: このコードにあるバグを見つけましょう。スクラットはドングリにとうちゃくしますか、それとも、まだ問題がありますか？
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: トリさんは ブタの一歩手前まで行くことができる。
@@ -3672,7 +3761,8 @@ ja-JP:
           feedback: せいかい！
         - text: トリさんは TNTにぶつかる。
           feedback: ふせいかい。このプログラムで トリさんは ブタのところまで 行くことができます。
-        - feedback: ふせいかい。このプログラムで トリさんは ブタのところまで 行くことができます。
+        - text: トリさんは壁にぶつかる。
+          feedback: ふせいかい。このプログラムで トリさんは ブタのところまで 行くことができます。
         questions:
         - text: "”実行（じっこう）”ボタンをおしたら どうなるか考えてみよう。"
       courseC_multi_starWars_predict1_2021:
@@ -3684,7 +3774,8 @@ ja-JP:
         - text: ５回前にすすんで、すべてのスクラップをあつめる。
           correct: true
           feedback: せいかい！
-        - feedback: ふせいかい。くりかえしブロックにより、５回前にすすみます。
+        - text: BB-8は3つだけ前に進む。
+          feedback: ふせいかい。くりかえしブロックにより、５回前にすすみます。
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
       courseC_multi_starWars_predict2_2021:
@@ -3696,11 +3787,13 @@ ja-JP:
           feedback: せいかい！
         - text: BB-8は、すべてのスクラップを あつめることが できる。
           feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
-        - feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
+        - text: BB-8はさいしょのくり返しの後、まちがった方に曲がる
+          feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
       courseD_EOC_2021:
         display_name: コース最後のプロジェクト
+        description: コースDのさいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -3710,7 +3803,8 @@ ja-JP:
           feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
         - text: C
           feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
-        - feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
+        - text: 上の回答のどれでもない
+          feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
         markdown: |+
           <table>
           <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
@@ -3729,7 +3823,8 @@ ja-JP:
           feedback: せいかい！
         - text: 'ハチはくものところまで行くけど、その後は何もしない。 '
           feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
-        - feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
+        - text: みつばちは雲まで行けない。
+          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
         questions:
         - text: くもの下は見えないけど、花があるはず。もし 花があれば、ミツを集めよう。花じゃなかったら、何もしなくていいよ。 "実行（じっこう）"をクリックしたら、どうなるか考えてみよう。
       courseD_multi_bee_conditionals1_predict1_dani:
@@ -3754,7 +3849,8 @@ ja-JP:
           feedback: ふせいかい。`もし 花で` ブロックで ハチは花でミツをとって、ハチの巣でハチミツを作るようにしています。
         - text: ハチは花でもハチの巣でもハチミツを作ろうとする。
           feedback: ふせいかい。`もし 花で` ブロックで ハチは花でミツをとって、ハチの巣でハチミツを作るようにしています。
-        - feedback: ふせいかい。`もし 花で` ブロックで ハチは花でミツをとって、ハチの巣でハチミツを作るようにしています。
+        - text: みつばちは花とハチの巣の両方で、ハチミツやミツをあつめようとする。
+          feedback: ふせいかい。`もし 花で` ブロックで ハチは花でミツをとって、ハチの巣でハチミツを作るようにしています。
         questions:
         - text: '"実行（じっこう）" をクリックしたら、どうなりますか？ただし、くもの下にかくれているのは、ハチの巣が*1つ* か 花が *1つ*
             です。'
@@ -3767,7 +3863,8 @@ ja-JP:
         - text: ハチは すべてのミツを ゲットする。
           correct: true
           feedback: せいかい！
-        - feedback: ふせいかい、ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
+        - text: みつばちはまちがった方にまがる。
+          feedback: ふせいかい、ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
         questions:
         - text: '"実行（じっこう）"をクリックしたら どうなりますか？プログラムは くりかえしが 入れ子に なっているよ。'
       courseD_multi_bee_nestedLoops9_predict2_2021:
@@ -3795,7 +3892,8 @@ ja-JP:
         - text: カボチャ以外の作物は、全部収かくする。
           correct: true
           feedback: せいかい！
-        - feedback: ふせいかい、農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくしますが、カボチャは収かくしません。
+        - text: カボチャを２つだけ2しゅうかくする。
+          feedback: ふせいかい、農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくしますが、カボチャは収かくしません。
         markdown: |
           葉っぱは、トウモロコシとレタスになります。
           <br/>
@@ -3810,7 +3908,8 @@ ja-JP:
           feedback: せいかい！
         - text: あなが なくなる。
           feedback: ふせいかい、`～の間`は、じょうけんを みたす間 くりかえしますが、その中に 土をかたづけて 山を平らにする めいれいは ありません。
-        - feedback: ふせいかい、土をかたづけて 山を平らにする めいれいは 入っていません。
+        - text: さいごの穴はそのままになる。
+          feedback: ふせいかい、土をかたづけて 山を平らにする めいれいは 入っていません。
         questions:
         - text: このプログラムを動かしたら、どうなるかな？
       courseD_multi_farmer_while4_predict1_2021:
@@ -3822,7 +3921,8 @@ ja-JP:
         - text: 農夫は山がなくなるまで、土をかたづけつづける。
           correct: true
           feedback: せいかい！
-        - feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫は一度だけ土をかたづける。
+          feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
       courseD_multi_maze_until10_predict2_2021:
@@ -3834,7 +3934,8 @@ ja-JP:
           feedback: 不正解、ゾンビは行ったり来たりをくり返します。
         - text: ゾンビは、右に曲がったら、その一角を回りつづける。
           feedback: 不正解、ゾンビは行ったり来たりをくり返します。
-        - feedback: このプログラムでは、ゾンビは行ったり来たりをくり返します。
+        - text: ゾンビは道のおわりから前に進めなくなる。
+          feedback: このプログラムでは、ゾンビは行ったり来たりをくり返します。
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
       courseD_multi_maze_until2_predict1_2021:
@@ -3846,22 +3947,29 @@ ja-JP:
           feedback: せいかい！
         - text: 道をまっすぐ進んで、TNTに ぶつかる。
           feedback: ふせいかい、道を進んで つきあたったら 左に曲がる を くりかえして ブタにたどり着きます！
-        - feedback: 道を進んで つきあたったら 左に曲がる を くりかえして ブタにたどり着きます！
+        - text: トリさんはまちがった方にまがる。
+          feedback: 道を進んで つきあたったら 左に曲がる を くりかえして ブタにたどり着きます！
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
       courseE_EOC_2021:
         display_name: コース最後のプロジェクト
+        description: コースEのさいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
       courseE_EOC_examples_2021:
         display_name: コース最後のプロジェクト
+        description: コースEのさいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: なにも起こらない。
-        - {}
-        - correct: true
+          feedback: ふせいかい。エイリアンは画面を上下に動きはじめます。
+        - text: エイリアンが右から左へパトロールを始めます。
+          feedback: ふせいかい。エイリアンは画面を上下に動きはじめます。
+        - text: エイリアンは画面を上下に動きはじめます。
+          correct: true
           feedback: せいかい！
-        - {}
+        - text: エイリアンは画面の上部からすがたを消します。
+          feedback: ふせいかい。青いエイリアンが画面上を上下に動きはじめます。
         questions:
-        - {}
+        - text: 下のコードをよく見てください。 エイリアンをクリックするとどうなるでしょう？
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: カボチャを２つしゅうかくする。
@@ -3904,36 +4012,53 @@ ja-JP:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: なにも起こらない。
-        - {}
-        - correct: true
+          feedback: ふせいかい。タンブルウィードはころがり始めます
+        - text: タンブルウィードは画面の上まで浮かびあがる
+          feedback: ふせいかい。タンブルウィードはころがり始めます
+        - text: タンブルウィードはころがり始める
+          correct: true
           feedback: せいかい！
-        - {}
+        - text: タンブルウィードはチカチカし始める
+          feedback: ふせいかい。タンブルウィードはころがり始めます
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
       courseF_EOC_2021:
         display_name: コース最後のプロジェクト
+        description: コースFのさいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
       courseF_EOC_examples_2021:
         display_name: コース最後のプロジェクト
+        description: コースFのさいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
       courseF_EOC_samples_2021:
         display_name: コース最後のプロジェクト
+        description: これで、さいごのプロジェクトになります。始める前に、サンプルのプロジェクトを見てみましょう。
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: スプライトは右に回るだけ。
+          feedback: ふせいかい。スプライトは東に進みもします。
+        - text: スプライトは東に進むだけ。
+          feedback: ふせいかい。スプライトは回転をとめないので、どちらもどうじにおこなわれます。
+        - text: スプライトは回りながら進む。
+          correct: true
           feedback: 'せいかい！ '
-        - {}
+        - text: スプライトはまず回って、そのあと、進む。
+          feedback: ふせいかい。スプライトロボでは、つなげられたブロックは、そのまえのブロックのすぐあとに起きるので、両方の動きはどうじにはっせいします。
         questions:
-        - {}
+        - text: コードを読んで、予測しましょう。
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "「ピザを1枚、すぐお持ちします！」"
+          feedback: ふせいかい。変数ラベルが一致していません。
+        - text: "「1皿、すぐお持ちします！」"
+          feedback: ふせいかい。変数ラベルがプリントされていません。
+        - text: "「お一人分、すぐお持ちします！」"
+          feedback: ふせいかい。変数ラベルがプリントされていません。
+        - text: "「1つ、すごお持ちします！」"
+          correct: true
+          feedback: せいかい！変数ラベルが一致しています。
+        - text: 何もプリントされない。
+          feedback: ふせいかい。イベントとプリントブロックはまだ動いています。
         questions:
-        - {}
+        - text: このコードは見覚えがあるかもしれませんが、じっくり読んでみましょう。 ユーザーが「ピザ」と入力すると何がプリントされますか？
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: 一辺が50ピクセルの三角形をかく。
@@ -3943,7 +4068,8 @@ ja-JP:
           feedback: 不正解、変数`length`は、`くりかえし`の回数ではありません。
         - text: 50度曲がった線を3本かく
           feedback: 不正解、変数`length`は、`まがる`角度ではありません。
-        - feedback: "`動く 前に`の前で 変数`length`に50をセットしているので、アーティストは 一辺が 50ピクセルの三角形をかきます。"
+        - text: ユーザーにプロンプトして数字のインプットを求めます。
+          feedback: "`動く 前に`の前で 変数`length`に50をセットしているので、アーティストは 一辺が 50ピクセルの三角形をかきます。"
         questions:
         - text: 変数 "length"に50をセットしました。"実行（じっこう）"をクリックしたら どうなるかな？
       courseF_multi_bee_for3_predict1_2021:
@@ -3955,7 +4081,8 @@ ja-JP:
           feedback: せいかい！
         - text: 'ハチはすべての花からミツを1つづつ集める。 '
           feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
-        - feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
+        - text: みつばちは前に進んで、花の1と4から1回分のミツを集める。
+          feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
         markdown: |+
           うーん！  このパズルは、`まつ` を使えば かんたんにクリアすることができる！
 
@@ -3964,22 +4091,50 @@ ja-JP:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: どちらの飛行機も、グリッドに沿って1つのスペースを移動して、その後、止まります。
+          feedback: ふせいかい。これらのスプライトには、止まるように言われるまですすみつづける「動き」があります。
+        - text: どちらの飛行機も移動し始めると、止まることはありません。
+          correct: true
+          feedback: せいかい！ひこうきに動きはじめて、そのままつづけるように伝えます。
+        - text: 片方の飛行機がまず動いて、もう片方が次に動きます。
+          feedback: ふせいかい。スプライトラボのコードの、それぞれのブロックは、次のブロックのすぐあとで動きます。
+        - text: 飛行機は墜落します。
+          feedback: ふせいかい。ひこうきはせっしょくするような位置にはありません。
         questions:
-        - {}
+        - text: コードを読んで、予測しましょう。
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: プログラムが「こんにちは、～さん！」とプリントします。
+          feedback: ふせいかい。名前ブロックは、タイプしたものにとりかえられます。
+        - text: プログラムが、あなたが入力した名前で歓迎してくれます。
+          correct: true
+          feedback: せいかい！名前ブロックの代わりに、入力したものが使われます。
+        - text: スプライトのサイズが変わる。
+          feedback: ふせいかい。テキストが画面にプリントされます。
+        - text: コンピュータが別の質問をする。
+          feedback: ふせいかい。プログラムが始まったときに、1問だけ質問されます。
         questions:
-        - {}
+        - text: このプログラムでは、キーボードで入力して質問に答えられます。「プリント」ブロックが画面にテキストを表示します。 ここで予測してみましょう。質問に答えた後はどうなるでしょうか？
       courseF_variables_stop:
         content1: 説明
+        markdown: |
+          # ちょっと待って！
+
+          ## 次に進む準備はできていますか？
+
+
+          次のレベルでは、プロジェクトのコードを書き始めます。すでに計画がある人にぴったりです。
+
+          完成した計画には、次のものが入っていなくてはなりません。
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * 作っているプロジェクトの種類。 たとえば、グリーティングカード、チャットボット、ストーリー自由帳などです。
+          * ユーザーに尋ねる質問のリスト。
+          * 画面に表示するその他のテキスト。
+          * 必要なスプライト（とその動作）の説明または図。
+
+          次に進む準備ができているかどうかわからない場合は、先生に確認してください！
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: アーティストは、ちゃんと絵をかいて、パズルをクリアする。
@@ -3995,12 +4150,40 @@ ja-JP:
         - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
       csf_be_a_super_digital_citizen_2021:
         content1: 説明
+        markdown: |-
+          # スーパーデジタルシティズン
+
+          ##  ネットいじめを見たときには、いじめられている人を助けてあげられるでしょう？
       csf_password_power-up_2021:
         content1: 説明
+        markdown: |-
+          # パスワードをパワーアップしましょう
+
+          ## おぼえておきたいパスワードのヒント
+
+          * おぼえやすい**フレーズ**から始めます。
+          * **お父さんかお母さん**だけにパスワードを知らせます。
+          * パスワードには**こじんてきな** ID情報をぜったいに使ってはいけません。
+          * さいてい** 8 **文字のパスワードを作成しましょう。
+          * パスワードには文字、数字、そして**記号**を使います。
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: 説明
+        markdown: |-
+          # 意地悪はやめましょう
+
+          ## ネットで誰かに意地悪をされたらどうすればよいですか？
+
+          そこから離れましょう。
+          しんらいできる大人にそのことを伝えましょう。
+          だいじょうぶだと言われたサイトをまず使いましょう。
+          ネット上でも立ち止まって、よく考えましょう。
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       express_EOC_2021:
         display_name: コース最後のプロジェクト
+        description: コースEのさいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: ４つ
@@ -4010,6 +4193,134 @@ ja-JP:
           feedback: せいかい！
         - text: ローレルは すべての たからものを あつめることができる。
           feedback: ふせいかい。ローレルは たからものが ないところで たからものを あつめようとします。
-        - feedback: ふせいかい。ローレルは たからものが ないところで たからものを あつめようとします。
+        - text: このコードを使うと、ローレルはたからものを1つあつめる。
+          feedback: ふせいかい。ローレルは たからものが ないところで たからものを あつめようとします。
         questions:
         - text: プログラムを 実行したら どうなりますか？
+      courseF_intro_apps:
+        description: "「コンピュータサイエンスの基礎」へようこそ！ ここにあるプロジェクトはすべて、スプライトラボで作成されました。 今すぐ、何ができるのか試してみましょう。このコースの終わりまでに、このような自分だけのプロジェクト…そして、さらに沢山のことができるようになります！"
+        display_name: スプライトラボアプリ
+        teacher_markdown: |-
+          ＃選択レベルの概要
+          選択レベルには、生徒が追加で完了できるレベルのメニューが用意されています。ここでは少なくとも1つのサブレベルを完了する必要がありますが、生徒（または先生）の希望に合わせて取り組むことができます。
+
+          ここにある選択肢から、生徒はサンプルのアプリを探索できます。このアクティビティは、[レッスンプラン](.././) にあるアプリ探索ワークシートに対応するよう作られています。
+      csd-post-survey-levelgroup-2018:
+        title: CS発見期末アンケート
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # ネットのご近所さん
+
+          ## ネットで安全なおつきあいをするにはどうすれば良いでしょう？
+      csf_digital_trails_2021:
+        markdown: |-
+          # デジタルの足あとをたどる
+
+          ## デジタルフットプリント（足あと）にどのような情報が含まれていても大丈夫でしょうか？
+      courseD_EOC_examples_2021:
+        description: これで、さいごのプロジェクトになります。始める前に、サンプルのプロジェクトを見てみましょう。
+        display_name: サンプルのプロジェクト
+      express_EOC_examples_2021:
+        description: これで、さいごのプロジェクトになります。始める前に、サンプルのプロジェクトを見てみましょう。
+        display_name: サンプルのプロジェクト
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # アルゴリズムに従う
+
+          ゲームをして、正しい結果を出すのに必要なコマンドについて考えましょう。
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # プライベート情報と個人情報
+
+          ## オンラインで共有しても良い、あなたについての情報はどのようなものですか？
+      courseF_sprites_practice:
+        description: ここまでよくできました！次のアクティビティを選んでください。できるだけたくさんやってみましょう。スプライトと動作を使ってれんしゅうをつづけましょう！
+        display_name: スプライト練習
+        teacher_markdown: |-
+          # 選択レベルのまとめ
+          選択レベルは、生徒が完了できるレベルのメニューを追加で提供するものです。 生徒はここで少なくとも1つのサブレベルを完了する必要がありますが、生徒（または先生）が好きなだけ練習できます。
+
+          下にある説明を使用して、生徒が自分で選択するのを手伝ったり、完了する必要のあるサブレベルの数を設定したりできます。
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |さばくのシーン|フルーツのサイズを変える|船をアニメにする|さわやかな日|
+          |-|-|-|-|-|
+          | ***タイプ*** |**レビュー**|**Review**|**レビュー**|**レビュー**|
+          | ***コンセプト***|*sprites, locations*|*スプライト、プロパティ*|*sprites, locations, behaviors*|
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # ネットのご近所さん
+
+          ## ネットで安全なおつきあいをするにはどうすれば良いでしょう？
+      courseF_events_freeplay:
+        display_name: イベント - じゆうあそび
+        description: これで、学んだことを使ってプロジェクトをもっと良いものにできます！プログラムにもっとつけ足しをしたり、新しいことを始めたりしましょう！
+      courseF_sprites_freeplay:
+        description: ここでは、あたながすきなものを作りましょう！どんなプロジェクトを作りたいですか？
+        display_name: スプライト - じゆうあそび
+      courseF_text_practice:
+        teacher_markdown: |-
+          # 選択レベルのまとめ
+          選択レベルは、生徒が完了できるレベルのメニューを追加で提供するものです。 生徒はここで少なくとも1つのサブレベルを完了する必要がありますが、生徒（または先生）が好きなだけ練習できます。
+
+          下にある説明を使用して、生徒が自分で選択するのを手伝ったり、完了する必要のあるサブレベルの数を設定したりできます。
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |テキスト用スピーチの利用|プロンプト用テキスト|ロボットに名前をつけましょう！|変数ラベル|ビッグテキスト|色のプロンプト|ゼロから始める|
+          |-|-|-|-|-|-|-|-|
+          | ***｜*** |**レビュー**|**Debug**|**デバッグ**|**Debug**|**optionalコンテンツ**|**Optional Content**|**じゆうあそび**
+          | ***コンセプト***|*print block, events*|*プロンプト、イベント*|*adding spaces*|*変数ラベルの一致*|*title screen blocks*|*色の保存* | *新しいコンテンツなし*
+        display_name: テキストとプロンプトの練習
+        description: ここまでよくできました！次のアクティビティを選んでください。できるだけたくさんやってみましょう。テキストとプロンプトを使って練習をつづけましょう！
+      courseF_variables_projects:
+        teacher_markdown: |-
+          # 選択レベルのまとめ
+          選択レベルは、生徒が完了できるレベルのメニューを追加で提供するものです。 生徒はここで少なくとも1つのサブレベルを完了する必要がありますが、同じプロジェクトの**2**つのレベルを完了することを推奨します。
+
+          ここにある選択肢のナビゲート方法を生徒に理解してもらうため、かなり明確な指示が必要な場合があります。プロジェクトの選択肢ごとに、ここには2つのサブレベルがあります。まず、「パート1」と記されたレベルの1つを選んでもらいます。そのレベルを終えたら、ここに戻って、*同じ*プロジェクトの「パート2」を選んでもらいます。各選択肢の最初のレベルで、生徒がプロジェクトの基本的な要素を作ったら、フィードバックを提供します。2つ目のレベルは、生徒が好きなようにコードに変更を加えることを狙いとした「じゆうあそび」です。
+        description: グリーティングカード、チャットボット、またはストーリー自由帳のいずれかを作成します。プロジェクトの「パート1」がもう終わっていれば、「パート2」に進んでください。
+        display_name: プロジェクトを選択する
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: CS発見期末アンケート
+      courseF_artist_practice:
+        display_name: アーティスト練習
+        description: ここまでよくできました！次のアクティビティを選んでください。できるだけたくさんやってみましょう。ループとアーティストを使って練習をつづけましょう！
+      courseF_beeFor_practice:
+        display_name: みつばちの練習
+        description: ここまでよくできました！次のアクティビティを選んでください。できるだけたくさんやってみましょう。ループとみつばちを使って練習をつづけましょう！
+      courseF_beeVar_practice:
+        display_name: みつばちの練習
+        description: ここまでよくできました！次のアクティビティを選んでください。できるだけたくさんやってみましょう。変数とみつばちを使って練習をつづけましょう！
+      courseF_bee_practice:
+        display_name: みつばちの練習
+        description: ここまでよくできました！次のアクティビティを選んでください。できるだけたくさんやってみましょう。ループとみつばちを使って練習をつづけましょう！
+      courseF_events_practice:
+        description: ここまでよくできました！次のアクティビティを選んでください。できるだけたくさんやってみましょう。スプライトと動きを使って練習をつづけましょう！
+        display_name: イベント練習
+        teacher_markdown: |
+          # 選択レベルのまとめ
+          選択レベルは、生徒が完了できるレベルのメニューを追加で提供するものです。 生徒はここで少なくとも1つのサブレベルを完了する必要がありますが、生徒（または先生）が好きなだけ練習できます。
+
+          下にある説明を使用して、生徒が自分で選択するのを手伝ったり、完了する必要のあるサブレベルの数を設定したりできます。
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |発射!|飛ぶ練習|一回転|小さくしたり大きくしたり|魚をぷっくり！|ペンギンはいどう中|
+          |-|-|-|-|-|-|-|
+          | ***タイプ*** |**レビュー**|**Debug**|**デバッグ**|**Debug**|**オプショナルコンテンツ**|**オプショナルコンテンツ**
+          | ***コンセプト***|*events, behaviors*|*イベント、動き*|*events, behaviors*|*イベント、動き*|*when/while events*|*とき/あいだのイベント*|
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |-
+          # ストーリーじゆうちょう
+
+          このレッスンでは、ストーリーじゆうちょうのストーリーの使い方と書き方を学びます。このビデオを見て、これがコンピュータサイエンスにどうつながるか学びましょう。
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          ＃言葉の力
+
+          ## 誰かがインターネット上で意地悪な、または人を傷つけるような言葉を使っていたら、あなたはどうしたらよいでしょう？
+      courseF_variables_samples:
+        description: グリーティングカード、チャットボット、またはストーリー自由帳のいずれかを作成します。始める前に、下のサンプルプロジェクトをじっくり見て、作りたいものを決めましょう。自分だけのプログラムを計画する準備ができたら、「おわり」を押します。
+        display_name: 探索 - プログラムのサンプル
+        teacher_markdown: |+
+          ＃選択レベルの概要
+          選択レベルには、生徒が追加で完了できるレベルのメニューが用意されています。ここでは少なくとも1つのサブレベルを完了する必要がありますが、生徒（または先生）の希望に合わせて取り組むことができます。
+
+          生徒は、作成するものを決める前に、これらのプロジェクトをじっくりと検討する必要があります。クラス全体で一緒に見たり、生徒に自分で探求させたりすることができます。
+

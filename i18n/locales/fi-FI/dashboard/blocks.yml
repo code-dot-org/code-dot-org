@@ -1095,6 +1095,10 @@ fi:
         text: "{SPRITE} sijainti"
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': sade
       gamelab_makeNewSpriteAnon:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
       gamelab_mirrorSprite:
@@ -1125,6 +1129,11 @@ fi:
         text: napsautti {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
+      gamelab_playSoundOptions:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": murskaa
       gamelab_pointInDirection:
         text: suuntaa {SPRITE} {DIRECTION}
         options:
@@ -1562,18 +1571,27 @@ fi:
         text: x koordinaatti {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinaatti {SPRITE}
+      PoemBot_playSound:
+        text: PlaySound {SOUND}
       PoemBot_setBackgroundEffect:
-        text: aseta taustaefekti {BG_EFFECT} [PALETTE][1]
+        text: aseta taustaefekti {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': kiinteä
-            '"rainbow"': sateenkaari
+          EFFECT:
+            '"colors"': Värit
+            '"space"': Avaruus
+            '"stars"': Äänet
+            '"ripples"': Aaltoilu
+          PALETTE:
+            '"rainbow"': Sateenkaari
       PoemBot_setForegroundEffect:
-        text: aseta etuefekti {FG_EFFECT}
+        text: aseta etuefekti {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': sade
-            '"bubbles"': kuplat
+          EFFECT:
+            '"rain"': Sade
+            '"bubbles"': Kuplat
+            '"hearts"': Värikkäät sydämet
+            '"confetti"': Konfetti
+            '"starburst"': Tähtisäteet
       RyanLab_moveForward:
         text: siirry eteenpäin
       RyanLab_turnLeft:

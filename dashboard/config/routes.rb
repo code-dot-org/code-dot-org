@@ -298,6 +298,7 @@ Dashboard::Application.routes.draw do
 
   resources :lessons, only: [:edit, :update] do
     member do
+      get :show, to: 'lessons#show_by_id'
       post :clone
     end
   end
@@ -430,6 +431,7 @@ Dashboard::Application.routes.draw do
   post '/admin/pilots/', to: 'admin_search#create_pilot', as: 'create_pilot'
   get '/admin/pilots/:pilot_name', to: 'admin_search#show_pilot', as: 'show_pilot'
   post '/admin/add_to_pilot', to: 'admin_search#add_to_pilot', as: 'add_to_pilot'
+  post '/admin/remove_from_pilot', to: 'admin_search#remove_from_pilot', as: 'remove_from_pilot'
 
   # internal engineering dashboards
   get '/admin/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
@@ -453,6 +455,8 @@ Dashboard::Application.routes.draw do
   post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
   post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
   get '/admin/user_progress', to: 'admin_users#user_progress_form', as: 'user_progress_form'
+  get '/admin/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
+  post '/admin/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
   get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
   post '/census/review', to: 'census_reviewers#create'
 

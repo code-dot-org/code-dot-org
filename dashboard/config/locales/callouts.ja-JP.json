@@ -1588,6 +1588,124 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_collector": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_pet": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "ここをクリックして、動きのカテゴリを開きましょう。"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "ここをクリックして、スプライトのカテゴリを開きましょう。"
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "ここをクリックして、場所のカテゴリを開きましょう。"
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "ここで新しいブロックをさがしましょう。"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "ここでプログラムのスピードをゆっくりにできます。"
+        },
+        "courseF_events_time": {
+          "events_category": "ここをクリックして、イベントのカテゴリを開きましょう。"
+        },
+        "courseF_text_events": {
+          "events_category": "ここをクリックして、イベントのカテゴリを開きましょう。"
+        },
+        "courseF_events_conflict": {
+          "stops_block": "新しいブロックです！"
+        },
+        "courseF_events_key": {
+          "whenKey": "ここにある新しいイベントブロックを使いましょう。"
+        },
+        "courseF_text_print": {
+          "print_block": "ここでプリントブロックを見つけましょう！",
+          "text_print_finish": "メッセージが上にプリントされましたか？もしそうならば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "ここでプロンプトブロックを見つけましょう！"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "ブロックを展開するには、ここをクリック。",
+          "pointerlocation": "「主語」ブロックをここにドラッグする。"
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "クリックして新しいコスチュームを追加"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "一度に1ブロックずつコードをすすめてみましょう。"
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "「とき」を「あいだ」に変えてみましょう。"
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "このブロックのじゅんばんは正しくありません。"
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
+        },
+        "courseF_text_answer": {
+          "answered_block": "ここで新しいブロックをさがしましょう。"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "質問に答えたときに背景の色は変わりましたか？ そうであれば「おわり」をクリックします。 そうでなければ「リセット」を押してコードを変更し、もう一度「実行」を押します。"
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "終わりましたか？そうであれば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
+        },
+        "courseF_text_choice_title": {
+          "title_block": "ここで2つの新しいブロックを探しましょう！",
+          "text_answer_finish": "タイトル画面が3秒間表示されましたか？ そうであれば、「おわり」をクリックします。 そうでなければ、「リセット」を押してコードを変更し、もう一度「実行」を押します。"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "ここで新しいブロックをさがしましょう。"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
         }
       }
     }

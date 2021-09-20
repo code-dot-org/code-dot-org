@@ -127,6 +127,8 @@ ur-PK:
   learn_classes: علاقائی کلاسوں کو تلاش کریں
   hoc_is_here: "#HourOfCode یہاں ہے - اسے جانچيں! @codeorg"
   just_did_hoc: 'میں نے کیا #HourOfCode -اسے جانچیں! @codeorg'
+  just_did_accelerated: میں نے ابھی تیز کردہ کورس ختم کر لیا ہے – اس کی پڑتال کریں!
+    @codeorg
   just_did_hoc_donor: 'میں صرف #HourOfCode تھا - اسے باہر کی جانچ پڑتال! (@codeorg
     کی حمایت کے لئے شکریہ %{donor_twitter})'
   learn_hoc: سیکھیں ایک گھنٹے کا کوڈ
@@ -409,6 +411,7 @@ ur-PK:
   dashboard_students_name: نام
   dashboard_students_join_link: اپنے اکاؤنٹ بنانے اور آپ کے سیکشن میں شامل ہونے کے
     لیے اپنے طلبہ کو بتائیں
+  dashboard_pre-express: 'پری ریڈر ایکسپریس کورس:'
   dashboard_curriculum_ecs: 'کمپیوٹر سائنس کی تلاش:'
   dashboard_grade_other: دیگر
   dashboard_login_none: Email
@@ -422,6 +425,30 @@ ur-PK:
   starwars_name: 'سٹار وارز: ایک کہکشاں کے کوڈ کے ساتھ عمارت'
   flappy_name: ایک فلاپپی کر کھیل
   blockly_name: Blockly
+  coursea-draft_name: کورس A
+  coursea_name: کورس A
+  courseb-draft_name: کورس B
+  courseb_name: کورس B
+  coursec-draft_name: کورس C
+  coursec_name: کورس C
+  coursed-draft_name: کورس D
+  coursed_name: کورس D
+  coursee-draft_name: کورس E
+  coursee_name: کورس E
+  coursef-draft_name: کورس F
+  coursef_name: کورس F
+  coursea-2017_name: کورس A (2017)
+  coursec-2017_name: کورس C (2017)
+  coursed-2017_name: کورس D (2017)
+  coursee-2017_name: کورس E (2017)
+  coursef-2017_name: کورس F (2017)
+  coursed-2021_name: کورس D (2021)
+  pre-express-2018_name: پری ریڈر ایکسپریس کورس (2018)
+  pre-express-2019_name: پری ریڈر ایکسپریس کورس (2019)
+  pre-express-2020_name: پری ریڈر ایکسپریس کورس (2020)
+  accelerated_name: تیز کردہ کورس
+  pre-express_name: پری ریڈر ایکسپریس کورس
+  20-hour_name: تیز کردہ کورس
   iceage_name: برفانی عہد
   codeorg_gradelevel: عمر 4-104
   codeintl_gradelevel: عمر 4-104
@@ -591,6 +618,42 @@ ur-PK:
   starwars_platformtext: ماڈرن براؤزر + ٹیبلٹس
   frozen_shortdescription: آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن کرسکیں
     کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
+  coursea_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+  courseb_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔ (کورس
+    A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
+  coursed_shortdescription_congrats: کورس C سے تصورات کا تیزی سے احاطہ کریں، پھر الگورتھمز،
+    نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔
+  coursee_shortdescription_congrats: کورس C اور D میں تصورات کا تیزی سے احاطہ کریں
+    اور پھر فنکشنز کے ساتھ آگے بڑھیں۔
+  coursef_shortdescription_congrats: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں
+    اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+  coursea-2017_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+  courseb-2017_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+    (کورس A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
+  coursed-2017_shortdescription_congrats: کورس C سے تصورات کا تیزی سے احاطہ کریں،
+    پھر الگورتھمز، نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔
+  coursee-2017_shortdescription_congrats: کورس C اور D میں تصورات کا تیزی سے احاطہ
+    کریں اور پھر فنکشنز کے ساتھ آگے بڑھیں۔
+  coursef-2017_shortdescription_congrats: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات
+    سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+  coursea-2018_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+  courseb-2018_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+    (کورس A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
+  coursed-2018_shortdescription_congrats: کورس C سے تصورات کا تیزی سے احاطہ کریں،
+    پھر الگورتھمز، نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔
+  coursee-2018_shortdescription_congrats: کورس C اور D میں تصورات کا تیزی سے احاطہ
+    کریں اور پھر فنکشنز کے ساتھ آگے بڑھیں۔
+  coursef-2018_shortdescription_congrats: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات
+    سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+  coursea-2019_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+  courseb-2019_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+    (کورس A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
+  coursed-2019_shortdescription_congrats: کورس C سے تصورات کا تیزی سے احاطہ کریں،
+    پھر الگورتھمز، نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔
+  coursee-2019_shortdescription_congrats: کورس C اور D میں تصورات کا تیزی سے احاطہ
+    کریں اور پھر فنکشنز کے ساتھ آگے بڑھیں۔
+  coursef-2019_shortdescription_congrats: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات
+    سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
   thinkersmith2_longdescription: 'سٹوڈنٹس آن اینڈ آف فنکشن کے زریعے حروف کو binary
     کوڈ میں محفوظ کرنا  سیکھتے ہیں۔ یہاں تک کے تمام کلاس اپنے initials انکوڈ کرنا
     سیکھ لیتے ہیں۔ '
@@ -661,6 +724,8 @@ ur-PK:
     کی سرگرمیوں کا پیکٹ شیئر کریں.
   hoc2018_creativity_create: بنائیں
   hoc2018_creativity_what_will_you_create: آپ کیا بنائیں گے؟
+  hoc2018_creativity_courses_link: <a href="https://studio.code.org/courses">Code.org
+    کورسز</a> کے ساتھ مزید آگے بڑھیں
   hoc2018_mc_start: شروع کریں
   hoc2018_mc_educators_box2_button: ڈاؤن لوڈ، اتارنا
   hoc2018_mc_video_1min: 1 منٹ

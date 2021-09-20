@@ -2586,6 +2586,8 @@ ar:
               name: أوراق الأنماط الخارجية
             Usability and Accessibility:
               name: سهولة الاستخدام وإمكانية الوصول
+            Peer Review:
+              name: استعراض النظراء
             Describing Web Pages:
               name: وصف صفحات الويب
         CSF_Secret_Sample_Story:
@@ -3427,6 +3429,8 @@ ar:
               name: الفصول الدراسية
             External Style Sheets:
               name: أوراق الأنماط الخارجية
+            Peer Review:
+              name: استعراض النظراء
             Box Model and Page Layout:
               name: نموذج المربعات وتخطيط الصفحة
             Digital Footprint:
@@ -4988,6 +4992,8 @@ ar:
               name: مواقع ويب متعددة الصفحات
             Classes:
               name: الفصول الدراسية
+            Peer Review:
+              name: استعراض النظراء
             Digital Footprint:
               name: البصمة الرقمية
             Publishing a Website:
@@ -18048,6 +18054,14 @@ ar:
               display_name: 'الدخول في التفاصيل: الدورات التدريبية E - F'
             Introduction:
               display_name: مقدمة
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: الدرس 3
+            Lesson 4:
+              display_name: الدرس 4
+            Lesson 5:
+              display_name: الدرس 5
         pl-playground:
           lessons:
             Module 1:
@@ -18170,8 +18184,10 @@ ar:
               name: الوحدة 2
             Module 3:
               key: الوحدة 3
+              name: الوحدة 3
             Module 4:
               key: الوحدة 4
+              name: الوحدة 4
             Module 5:
               key: الوحدة 5
             Module 6:
@@ -18238,6 +18254,12 @@ ar:
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: المرحلة 1
+            lessonGroup-3:
+              display_name: المرحلة 2
         dlp21-csp-mod1:
           title: وحدة 1 التعلم العميق في مبادئ علوم الكمبيوتر
         dlp21-csd:
@@ -18315,3 +18337,11 @@ ar:
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: ابتكارات في الحوسبة
+            lesson-13:
+              name: مقياس التسارع
+            lesson-19:
+              name: مشروع

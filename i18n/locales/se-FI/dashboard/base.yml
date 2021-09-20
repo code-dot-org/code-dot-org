@@ -160,6 +160,7 @@ se:
     error: "Okta boastuvuohta čuožžilii."
     email_preference_question: "Sáhttit go epoastta sáddet dutnje mas leat ođasmahttimat min kurssaide, báikkálaš vejolašvuođat, dahje eará dihtordiehtaga ođđasat? (sullii ovtta geardde mánus)"
     email_preference_required: "Don fertet spesifiseret epoastta preferánssaid."
+    share_teacher_email_reg_partner_preference_required: "Don fertet spesifiseret epoastta preferánssaid."
     parent_account_checkbox: "Mun lean váhnen/oapmehaš ráhkadeamen konto mu máná ovddas"
     parent_account_email_progress_permission: "Sáhttit go epoastta sáddet dutnje mas leat bieđggus ođasmahttimat du máná ovdáneami ja prošeavttaid ektui, ja ođasmahttimat sin kurssa ja dihtordiehtaga birra. [(Geahča min persovdnasuodjalus njuolggadusaid)](%{privacy_policy_url})"
     parent_account_email_label: "Váhnema/Oapmehačča Epoasta"

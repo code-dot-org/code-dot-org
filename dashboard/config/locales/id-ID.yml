@@ -235,6 +235,10 @@ id:
     email_preference_yes: Ya
     email_preference_no: Tidak
     email_preference_required: Anda harus menentukan preferensi email.
+    share_teacher_email_reg_partner_preference_yes: Ya
+    share_teacher_email_reg_partner_preference_no: Tidak
+    share_teacher_email_reg_partner_preference_required: Anda harus menentukan preferensi
+      email.
     parent_account_checkbox: Saya orang tua/wali yang mendaftar untuk anak saya
     parent_account_email_progress_permission: Dapatkah kami sesekali mengirimi Anda
       email tentang info terkini kemajuan dan proyek anak Anda, serta pembaruan kursus
@@ -706,6 +710,7 @@ id:
     code_from_html: Code.org menggunakan p5.play, yang berlisensi <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Didukung oleh Amazon Web Services
+    built_on_github: Bawaan GitHub dari Microsoft
     google_copyright: "&copy: Google inc. digunakan dalam ijin. Google Clasroom adalah
       merek dagang dari Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
@@ -719,12 +724,14 @@ id:
     tos_short: Ketentuan
     tos: Ketentuan Layanan
     privacy: Kebijakan privasi
+    privacy_updated: Kebijakan Privasi Diperbarui
     secure: Versi yang Aman
     report_abuse: Laporkan Penyalahgunaan
     built_on_code_studio: Dibuat di Code Studio
     make_my_own_app: Membuat aplikasi saya sendiri
     how_it_works: Cara Kerjanya (Lihat Code)
     try_hour_of_code: Cobalah Hour of Code!
+    store: Toko
   reference_area:
     title: Perlu bantuan?
     subtitle: Lihat video ini dan tips lainnya

@@ -228,6 +228,10 @@ hu:
     email_preference_yes: Igen
     email_preference_no: Nem
     email_preference_required: Meg kell adnod egy e-mail címet.
+    share_teacher_email_reg_partner_preference_yes: Igen
+    share_teacher_email_reg_partner_preference_no: Nem
+    share_teacher_email_reg_partner_preference_required: Meg kell adnod egy e-mail
+      címet.
     parent_account_checkbox: Szülő/gondviselő vagyok, a gyermekem nevében jelentkezem
     parent_account_email_progress_permission: Küldhetünk Önnek esetenként e-mailt
       a gyermeke fejlődéséről és projektjeiről, valamint frissítéseket a tanfolyamáról

@@ -36,7 +36,16 @@ export const commands = {
   },
 
   playSound(url) {
+    this.soundLog.push(url);
     audioCommands.playSound({url, loop: false});
+  },
+
+  playSpeech(speech) {
+    audioCommands.playSpeech({
+      text: speech,
+      gender: 'female',
+      language: 'English'
+    });
   },
 
   printText(text) {
@@ -49,19 +58,24 @@ export const commands = {
   },
 
   // Deprecated. The new background block is setBackgroundImageAs
-  setBackgroundImage(img) {
-    if (this.p5._preloadedBackgrounds && this.p5._preloadedBackgrounds[img]) {
-      let backgroundImage = this.p5._preloadedBackgrounds[img];
+  setBackgroundImage(imageName) {
+    if (
+      this.p5._preloadedBackgrounds &&
+      this.p5._preloadedBackgrounds[imageName]
+    ) {
+      let backgroundImage = this.p5._preloadedBackgrounds[imageName];
+      backgroundImage.name = imageName;
       this.setBackground(backgroundImage);
     }
   },
 
-  setBackgroundImageAs(img) {
+  setBackgroundImageAs(imageName) {
     if (
       this.p5._predefinedSpriteAnimations &&
-      this.p5._predefinedSpriteAnimations[img]
+      this.p5._predefinedSpriteAnimations[imageName]
     ) {
-      let backgroundImage = this.p5._predefinedSpriteAnimations[img];
+      let backgroundImage = this.p5._predefinedSpriteAnimations[imageName];
+      backgroundImage.name = imageName;
       this.setBackground(backgroundImage);
     }
   },

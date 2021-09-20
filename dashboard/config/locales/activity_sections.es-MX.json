@@ -180,6 +180,9 @@
         "fcaf009c-58ce-43f6-bb24-dfdae991fdd2": {
           "description": "### Proporcionar energía para tu mascota virtual (60-90 minutos)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Ciencias de la computación + artes del lenguaje + ciencia**\n\n[Proporcionar energía para tu mascota virtual](https://docs.google.com/document/d/1SV51NrXzinuXHLToGarIDnVMd6GA8ZaD2LfWMDqTg0M/edit?usp=sharing) es una actividad opcional alineada con las normas básicas comunes ELA y las normas de ciencias de última generación, escritas por nuestra comunidad de docentes. Los estudiantes crearán un modelo científico que muestra cómo su mascota virtual recibirá la energía que necesita para sobrevivir. \n\n_Normas abordadas:_\n\n-   **CCSS.ELA.RI.5.7:** aprovechar la información de varias fuentes impresas o digitales, demostrando la capacidad de encontrar una respuesta a una pregunta rápidamente o de resolver un problema de manera eficiente. \n\n-   **CCSS.ELA.RI.5.9:** integrar información de varios textos sobre el mismo tema para escribir o hablar sobre el tema con conocimiento. \n\n-   **5- PS3-1:** utilizar modelos para describir que la energía en la comida de los animales (utilizada para reparar el cuerpo, crecer, moverse y mantener el calor corporal) alguna vez fue energía del Sol. \n\n-   **5-LS2-1:** desarrollar un modelo para describir el movimiento de la materia entre plantas, animales, descomponedores y el medio ambiente. \n\n-   **SL.5.5:** incluir componentes multimedia (por ejemplo, gráficos, sonido) y presentaciones visuales cuando sea apropiado para mejorar el desarrollo de ideas o temas principales. "
         },
+        "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
+          "name": "Vocabulario Clave"
+        },
         "06057973-b621-4a48-a991-4f99aafdedca": {
           "progression_name": "El Poder de las Palabras - Actividad Desconectada"
         },
@@ -549,6 +552,7 @@
           "description": "Si sus estudiantes ya se sienten cómodos con los conceptos de codificación, motívelos a que intenten crear sus proyectos en otra plataforma, como [Scratch](https://scratch.mit.edu/) o [Alice](http://www.alice.org/index.php)."
         },
         "4c778537-489f-4c5c-913b-38cbf385737c": {
+          "name": "Vocabulario Clave: ",
           "progression_name": "Vídeo: Sigue el Rastro Digital"
         },
         "0747338b-f02e-459d-b669-3c0f11486ae1": {
@@ -1254,6 +1258,9 @@
             null
           ]
         },
+        "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
+          "name": "Vocabulario Clave"
+        },
         "69edb680-3657-4056-82ba-59c74c6a0e96": {
           "description": "A continuación se presentan recursos adicionales que puedes proporcionar a los alumnos para mejorar su aprendizaje:\n\n-   [Actividad Familiar](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8) \n-   [Consejos Familiares](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
         },
@@ -1640,6 +1647,9 @@
         },
         "8bc8bad1-8150-46ce-bf97-0d368dafd6ef": {
           "progression_name": "Proyecto"
+        },
+        "b8f03681-d01e-4384-b88f-5e562eab172f": {
+          "name": "Vocabulario Clave"
         },
         "2a466981-732c-4b6b-82da-7a5552e04294": {
           "name": "Introducción"
@@ -2217,7 +2227,7 @@
           ]
         },
         "af6b778e-d5bf-4e72-bc11-ac8f839bf656": {
-          "progression_name": "Vídeo: Presentación del Laboratorio de Sprites"
+          "progression_name": "Video: Introducción al Sprite Lab"
         },
         "cc4cf469-32ea-4a00-9080-7726f48f08c6": {
           "progression_name": "Predicción"
@@ -2226,7 +2236,7 @@
           "progression_name": "Desarrollo de habilidades"
         },
         "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb": {
-          "progression_name": "Vídeo: Cómo Hacer un Sprite"
+          "progression_name": "Video: Cómo crear un sprite"
         },
         "a8372901-5a6f-40c1-88ec-bf6c62c79c95": {
           "progression_name": "Práctica"
@@ -2257,7 +2267,7 @@
         },
         "60d05bd8-d452-4ff7-8d42-afc78df62133": {
           "description": "**Haz esto:** reproduce el video “Cómo crear un sprite”",
-          "progression_name": "Vídeo: Cómo Hacer un Sprite"
+          "progression_name": "Video: Cómo crear un sprite"
         },
         "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
           "description": "#### Desarrollo de habilidades y práctica (20 minutos)\n\n**Transición:** haz que los estudiantes vayan a su computadora e inicien sesión.\n\nEstas actividades son adecuadas para el aprendizaje independiente o la programación en pareja.\n\nLos estudiantes deben completar los niveles de desarrollo de habilidades y, en el tiempo restante, elegir entre las diversas actividades de práctica.",
@@ -2268,7 +2278,7 @@
         },
         "676dfae2-cb99-4395-a262-f61ed61a3d28": {
           "description": "#### Juego libre (10 minutos)\n\n**Transición:** los estudiantes ahora deben pasar al nivel final de la lección, donde podrán crear su propio proyecto.",
-          "progression_name": "Juego Libre: Hacer una Escena"
+          "progression_name": "Juego libre: crear una escena"
         },
         "a35138b5-f6fc-4fac-9a73-991bed07f6d1": {
           "name": "Reflexión",
@@ -2293,7 +2303,7 @@
         },
         "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
           "description": "#### Video: Sprites en acción (3 minutos)\n\n**Haz esto:** reproduce el video “Sprites en acción”",
-          "progression_name": "Vídeo: Sprites en Acción"
+          "progression_name": "Video: Sprites en acción"
         },
         "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
           "description": "#### Desarrollo de habilidades y práctica (20 minutos)\n\n**Transición:** haz que los estudiantes vayan a su computadora e inicien sesión. Estas actividades son adecuadas para el aprendizaje independiente o la programación en pareja.\n\nLos estudiantes deben completar los niveles de desarrollo de habilidades y, en el tiempo restante, elegir entre las diversas actividades de práctica.",
@@ -2304,7 +2314,7 @@
         },
         "482633ae-1c8c-4ca2-b44b-ba150352c610": {
           "description": "#### Juego libre (10 minutos)\n\n**Transición:** los estudiantes ahora deben pasar al nivel final de la lección, donde verán las mismas opciones de juego libre que en las lecciones anteriores. Anima a los estudiantes a agregar eventos a sus últimos proyectos o comenzar un nuevo proyecto.",
-          "progression_name": "Juego Libre: Hacer una Escena Interactiva"
+          "progression_name": "Juego libre: Crear una escena interactiva"
         },
         "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
           "name": "Reflexión",
@@ -3305,7 +3315,7 @@
           ]
         },
         "331e6451-5472-4491-bf96-d630d7f902a4": {
-          "progression_name": "Vídeo: Presentación del Laboratorio de Sprites"
+          "progression_name": "Video: Introducción al Sprite Lab"
         },
         "75de5d52-becb-4805-82d8-5be30d0dca7d": {
           "progression_name": "Predicción"
@@ -3314,7 +3324,7 @@
           "progression_name": "Desarrollo de habilidades"
         },
         "d344a21b-2267-48e7-9b27-b3fe923209e9": {
-          "progression_name": "Vídeo: Cómo Hacer un Sprite"
+          "progression_name": "Video: Cómo crear un sprite"
         },
         "30997374-8929-4152-b55b-94e459e3ee58": {
           "progression_name": "Práctica"
@@ -3338,7 +3348,7 @@
           "progression_name": "Predicción"
         },
         "1620d22b-10cf-4c91-bb52-cda64a75b666": {
-          "progression_name": "Vídeo: Sprites en Acción"
+          "progression_name": "Video: Sprites en acción"
         },
         "5661328f-256c-4f27-988b-ea102fde1cbd": {
           "progression_name": "Desarrollo de habilidades"
@@ -3352,8 +3362,14 @@
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
           "name": "Reflexión"
         },
+        "fe0cef4a-d3fd-446e-9874-8270ccda6a52": {
+          "name": "Vocabulario Clave"
+        },
         "c350027b-7b9e-4782-af88-dc1015043bac": {
           "progression_name": "Cómo ser un Súper Ciudadano Digital"
+        },
+        "bec84680-216c-4711-b91f-5b37260fd598": {
+          "name": "Vocabulario Clave"
         },
         "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
           "name": "Introducción"

@@ -15,12 +15,21 @@
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
       "include_student_lesson_plans": true,
-      "tts": true
+      "tts": true,
+      "announcements": [
+        {
+          "notice": "Supports to Teach CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 16:28:10 UTC",
-    "published_state": null,
+    "serialized_at": "2021-09-09 22:52:58 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -15747,7 +15756,7 @@
     },
     {
       "name": "CS in Entertainment",
-      "url": "https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/edit",
+      "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
       "key": "cs-entertainment-activity",
       "properties": {
         "type": "Activity Guide",
@@ -15828,7 +15837,7 @@
     },
     {
       "name": "Drawing Shapes",
-      "url": "https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/15FeSXeuREENXZ8ghAK7c4V7VWbSLG0kBr6nmuHQv7Cc/edit",
       "key": "drawing-shapes-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -16192,7 +16201,7 @@
     },
     {
       "name": "Mini Project - Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/edit",
+      "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
       "key": "mini-project-captioned-scenes-2020",
       "properties": {
         "type": "Exemplar",
@@ -16240,10 +16249,9 @@
     },
     {
       "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/edit",
+      "url": "https://docs.google.com/document/d/1JcjgqryqRKeyxieHrJlNlFQnSBybBjPIp3zolO3iJAE/edit",
       "key": "platform-game-project-guide",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
@@ -16253,10 +16261,9 @@
     },
     {
       "name": "Defender Game",
-      "url": "https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1vazgDOA8UtbbTfDLXC45DHVINs0LCKCOuJIc7tnFytY/edit",
       "key": "project-guide-defender-game",
       "properties": {
-        "type": "Project Guide (Filled Out)",
         "audience": "Student",
         "include_in_pdf": true
       },
@@ -16266,10 +16273,9 @@
     },
     {
       "name": "Random Dot Flipbook",
-      "url": "https://docs.google.com/drawings/d/1KO4s3j9Zbc6rBxLijxxKIYlN24wej906HHJZ7GQDi9U/edit?usp=sharing",
+      "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit",
       "key": "random-dot-flipbook",
       "properties": {
-        "type": "Manipulative",
         "audience": "Teacher"
       },
       "seeding_key": {
@@ -16278,10 +16284,9 @@
     },
     {
       "name": "Random Sprite Flipbook",
-      "url": "https://docs.google.com/drawings/d/1mVt8SE1N5KYy2TfOlqtvkL_2MmYk6wFpiouMZ-P-kQY/edit?usp=sharing",
+      "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit",
       "key": "random-sprite-flipbook",
       "properties": {
-        "type": "Manipulative",
         "audience": "Teacher"
       },
       "seeding_key": {
@@ -16353,7 +16358,7 @@
     },
     {
       "name": "Sprite Scene Planning",
-      "url": "https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/edit",
+      "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
       "key": "sprite-scene-planning",
       "properties": {
         "type": "Activity Guide",

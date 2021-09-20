@@ -14640,6 +14640,8 @@ hi:
               name: स्प्राइट लैब का परिचय
             Virus Simulation for Code Bytes:
               name: एक सिम्युलेशन की कोडिंग
+            Making Sprites:
+              name: स्प्राइट्स बनाएं
             Sprites in Action:
               name: क्रिया में स्प्राइट्स
           lesson_groups:
@@ -15825,6 +15827,8 @@ hi:
               description_teacher: 'इस पाठ में, छात्र विचारविमर्श और परिकल्पित ऐप्स के लिए सुलभ समाधान तैयार करने के माध्यम से सुलभता और समानुभूति के बारे में सीखेंगे। '
             lesson-6:
               name: स्प्राइट लैब का परिचय
+            lesson-7:
+              name: स्प्राइट्स बनाएं
             lesson-8:
               name: क्रिया में स्प्राइट्स
             lesson-2:
@@ -15982,6 +15986,8 @@ hi:
               name: डांस पार्टी
               description_student: जश्न मनाने का समय है! इस पाठ में, आप अपनी खुद की संवादात्मक डांस पार्टी को प्रोग्राम करेंगे।
               description_teacher: इस पाठ में, आप अपनी खुद की संवादात्मक डांस पार्टी को प्रोग्राम करेंगे। इस गतिविधि के लिए ध्वनि की जरूरत है क्योंकि टूल संगीत पर प्रतिक्रिया करने वाला बनाया गया था।
+            lesson-2:
+              name: स्प्राइट्स बनाएं
             lesson-3:
               name: क्रिया में स्प्राइट्स
           lesson_groups:
@@ -16072,6 +16078,8 @@ hi:
               name: एक सिम्युलेशन की कोडिंग
             Course F Introduction:
               name: स्प्राइट लैब का परिचय
+            Making Sprites:
+              name: स्प्राइट्स बनाएं
             Sprites in Action:
               name: क्रिया में स्प्राइट्स
             introducing-spritelab:
@@ -16330,6 +16338,14 @@ hi:
               display_name: 'गहन अध्ययन करना: कोर्स E और F के लिए'
             Introduction:
               display_name: परिचय
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: पाठ 3
+            Lesson 4:
+              display_name: पाठ 4
+            Lesson 5:
+              display_name: पाठ 5
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -16443,8 +16459,10 @@ hi:
               name: मॉड्यूल 2
             Module 3:
               key: मॉड्यूल 3
+              name: मॉड्यूल 3
             Module 4:
               key: मॉड्यूल 4
+              name: मॉड्यूल 4
             Module 5:
               key: मॉड्यूल 5
             Module 6:
@@ -16482,6 +16500,10 @@ hi:
           lesson_groups:
             lessonGroup-3:
               display_name: संसाधन
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Star 2
         dlp21-csp-mod1:
           title: CS के मूल सिद्धांत गहन प्रशिक्षण मॉड्यूल 1
         dlp21-csd:
@@ -16510,3 +16532,11 @@ hi:
           lesson_groups:
             lessonGroup-3:
               display_name: प्रोजेक्ट
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: कंप्यूटिंग में अन्वेषण
+            lesson-13:
+              name: त्वरणमापी
+            lesson-19:
+              name: प्रोजेक्ट

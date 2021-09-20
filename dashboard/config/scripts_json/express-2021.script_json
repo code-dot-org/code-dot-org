@@ -15,11 +15,12 @@
       "curriculum_umbrella": "CSF",
       "is_course": true,
       "is_migrated": true,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-07-20 22:21:24 UTC",
+    "serialized_at": "2021-09-13 21:55:53 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "express-2021"

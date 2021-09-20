@@ -181,5 +181,15 @@
   "startingSpritesShouldNotTouch": "開始之前，確保你的角色都沒有觸碰到。使用位置積木的圖釘給他們設定不同的位置。",
   "clickButNoPrint": "你點擊了角色，但沒有列印任何文字。在你的「當點擊後」事件中加入「列印」積木。",
   "secondClickButNoPrint": "你點擊了第二個角色，但沒有列印任何文字。在你的「當點擊後」事件中加入「列印」積木。",
-  "thirdClickButNoPrint": "你點擊了第三個角色，但沒有列印任何文字。在你的「當點擊後」事件中加入「列印」積木。"
+  "thirdClickButNoPrint": "你點擊了第三個角色，但沒有列印任何文字。在你的「當點擊後」事件中加入「列印」積木。",
+  "sayBlock": "輸入你想讓你的角色在 `說話` 方塊說的話。 <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">你好呀！</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"預設\"</title></block></value></block></xml>",
+  "clickButNoSay": "你點了一個角色，但這個角色沒有說任何的話。請添加一個 `說話` 方塊到你的 `點一下` 事件. <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">你好呀！</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"預設\"</title></block></value></block></xml>",
+  "singleSpriteNotClicked": "請確認你點到了你的角色，並確認在你的工作區中有對應的正確事件。 <xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"當\"</title></block></xml>",
+  "clickButNoSpeech": "你點了一個角色，但沒有任何角色說話。請添加 `說話` 方塊到你的 `點一下` 事件. <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">你好呀！</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"預設\"</title></block></value></block></xml>",
+  "secondClickButNoSpeech": "你點了超過一個角色，但其中一個角色沒有說話。請增加一個 `說話` 方塊在每個 `點一下` 事件。 <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">你好呀！</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"預設\"</title></block></value></block></xml>",
+  "thirdClickButNoSpeech": "你點了兩個角色，但其中一個角色沒有說話。請增加一個 `說話` 方塊在每個 `點一下` 事件。 <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">你好呀！</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"預設\"</title></block></value></block></xml>",
+  "changeOrSetSize": "你的角色都沒有改變大小。",
+  "changeOrSetCostume": "你的角色都沒有改變服裝。",
+  "changeBackground": "背景沒有改變。",
+  "poemBotMakeBackground": "你需要新增背景效果。"
 }

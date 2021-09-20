@@ -206,6 +206,10 @@
           "name": "crwdns2592072:0crwdne2592072:0",
           "url": "crwdns2689449:0crwdne2689449:0"
         },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "crwdns2693197:0crwdne2693197:0",
+          "url": "crwdns2693199:0crwdne2693199:0"
+        },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "crwdns2592112:0crwdne2592112:0",
           "url": "crwdns2689451:0crwdne2689451:0"
@@ -381,6 +385,10 @@
         "teacher_forum_1/courseb/2021": {
           "name": "crwdns2592988:0crwdne2592988:0",
           "url": "crwdns2689569:0crwdne2689569:0"
+        },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "crwdns2693201:0crwdne2693201:0",
+          "url": "crwdns2693203:0crwdne2693203:0"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "crwdns2593026:0crwdne2593026:0",
@@ -578,6 +586,10 @@
           "name": "crwdns2593894:0crwdne2593894:0",
           "url": "crwdns2689693:0crwdne2689693:0"
         },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "crwdns2693205:0crwdne2693205:0",
+          "url": "crwdns2693207:0crwdne2693207:0"
+        },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "crwdns2593932:0crwdne2593932:0",
           "url": "crwdns2689695:0crwdne2689695:0"
@@ -749,6 +761,10 @@
         "teacher_forum_1/coursec/2021": {
           "name": "crwdns2594920:0crwdne2594920:0",
           "url": "crwdns2689799:0crwdne2689799:0"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "crwdns2693209:0crwdne2693209:0",
+          "url": "crwdns2693211:0crwdne2693211:0"
         },
         "password_power-up_lesson_slides/coursed/2021": {
           "name": "crwdns2594958:0crwdne2594958:0",
@@ -941,6 +957,10 @@
         "teacher_forum_1/coursed/2021": {
           "name": "crwdns2596056:0crwdne2596056:0",
           "url": "crwdns2689907:0crwdne2689907:0"
+        },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "crwdns2693213:0crwdne2693213:0",
+          "url": "crwdns2693215:0crwdne2693215:0"
         },
         "unplugged_maze_blocks/express/2021": {
           "name": "crwdns2596114:0crwdne2596114:0",
@@ -1253,6 +1273,10 @@
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "crwdns2599490:0crwdne2599490:0",
           "url": "crwdns2690115:0crwdne2690115:0"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "crwdns2693217:0crwdne2693217:0",
+          "url": "crwdns2693219:0crwdne2693219:0"
         }
       }
     }

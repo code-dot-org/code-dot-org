@@ -234,6 +234,10 @@ uz:
     email_preference_yes: Ha
     email_preference_no: yo‘q
     email_preference_required: Siz elektron pochta parametrlarini belgilashingiz kerak.
+    share_teacher_email_reg_partner_preference_yes: Ha
+    share_teacher_email_reg_partner_preference_no: yo‘q
+    share_teacher_email_reg_partner_preference_required: Siz elektron pochta parametrlarini
+      belgilashingiz kerak.
     parent_account_checkbox: Men farzandim nomidan ro'yxatdan o'tgan ota-ona/vasiyiman
     parent_account_email_progress_permission: Biz sizga elektron pochta orqali bolangizning
       taraqqiyoti va loyihalari to‘g‘risida, ularning kursi va kompyuter fanlari haqidagi

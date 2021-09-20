@@ -1094,6 +1094,10 @@ ga:
         text: suíomh {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': báisteach
       gamelab_makeNewSpriteAnon:
         text: déan sprid nua {ANIMATION_NAME} {LOCATION}
       gamelab_mirrorSprite:
@@ -1112,6 +1116,10 @@ ga:
         text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: patrólú suas anuas
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": cnagadh
       gamelab_printText:
         text: priontáil {TEXT}
       gamelab_randColor:
@@ -1512,14 +1520,39 @@ ga:
         text: comhordanáid y de {SPRITE}
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"rainbow"': tuar ceatha
+          EFFECT:
+            '"colors"': Dathanna
+            '"squiggles"': Caisirníní
+            '"space"': An Spás
+            '"stars"': Réaltaí
+            '"ripples"': Tonnáin
+          PALETTE:
+            '"rainbow"': Tuar ceatha
       PoemBot_setForegroundEffect:
-        text: 'socraigh éifeacht an tulra: {FG_EFFECT}'
+        text: 'socraigh éifeacht an tulra: {EFFECT}'
         options:
-          FG_EFFECT:
-            '"rain"': báisteach
-            '"bubbles"': boilgeoga
+          EFFECT:
+            '"rain"': Báisteach
+            '"bubbles"': Boilgeoga
+            '"hearts"': Croíthe Daite
+            '"confetti"': Coinfití
+            '"starburst"': Pléascadh Réaltaí
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: fás
+            jittering: crith
+            shrinking: crapadh
+            spinning_right: casadh ar deiseal
+            wandering: fánaíocht
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: fás
+            jittering: crith
+            shrinking: crapadh
+            spinning_right: casadh ar deiseal
+            wandering: fánaíocht
       RyanLab_moveForward:
         text: téigh ar aghaidh
       RyanLab_turnLeft:

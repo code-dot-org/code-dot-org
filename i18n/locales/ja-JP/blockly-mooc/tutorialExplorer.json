@@ -21,6 +21,7 @@
   "filterPlatformIos": "iPad/iPhone",
   "filterPlatformNoInternet": "インターネット接続（せつぞく）なし",
   "filterPlatformNoComputers": "コンピューターやデバイス無し",
+  "filterPlatformScreenReader": "スクリーンリーダー",
   "filterTopics": "トピック",
   "filterTopicsScience": "科学",
   "filterTopicsMath": "計算(けいさん)",

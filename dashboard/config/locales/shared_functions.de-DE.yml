@@ -3,12 +3,15 @@ de:
   data:
     shared_functions:
       driving with arrow keys: fahren mit den Pfeiltasten
+      fluttering: flattern
       growing: wachsend
       jittering: zitternd
       moving east: nach Osten gehend
+      moving east and looping: nach Osten bewegen und eine Schleife drehen
       moving north: nach Norden gehend
       moving south: nach Süden gehend
       moving west: nach Westen gehend
+      moving west and looping: nach Westen bewegen und eine Schleife drehen
       moving with arrow keys: Scrollen mit Pfeiltasten
       patrolling: patrouillierend
       shrinking: schrumpfend

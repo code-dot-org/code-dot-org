@@ -30,7 +30,6 @@ sk:
       Challenge: Výzva
       Challenge Levels: Úrovne výzvy
       Challenges: Výzvy
-      Chance: Šanca
       Change: Zmeň
       Checking for a Winner: Určuje sa víťaz
       'Circuit Playground: Introduction': 'Cvičný obvod: Úvod'
@@ -51,7 +50,6 @@ sk:
       Create Your Own Animation: Vytvor svoju vlastnú animáciu
       Create a Story: Vytvor príbeh
       Create your project: Vytvor svoj projekt
-      Creating a Simulation: Vytvorenie simulácie
       Customize: Prispôsobiť
       Dance Crews: Tanečné skupiny
       Data Visualization: Vykreslenie údajov
@@ -116,6 +114,7 @@ sk:
       Introduction to Variables: Predstavenie premenných
       Introduction to Variables - Part 1: Predstavenie premenných - 1. časť
       Iteration and Parameters: Opakovanie a parametre
+      Keep On Dancing!: Pokračuj v tancovaní!
       Keyboard Input: Stlačenie kláves ako vstup
       LED Apps: Appky s LEDkami
       Layout with CSS: Rozloženie pomocou CSS
@@ -131,6 +130,7 @@ sk:
       Making Scenes: Vytvávaranie scén
       Making Songs: Tvorba pesničiek
       Making Sounds: Tvorba zvukov
+      Making an Interactive Card: Vytvorenie interaktívnej pohľadnice
       'Maze Intro: Programming with Blocks': 'Úvod k bludiskám: Programovanie pomocou
         blokov'
       Measures: Takty
@@ -151,7 +151,6 @@ sk:
       Modify simulation variables: Zmeň premenné simulácie
       More Buttons: Viac tlačidiel
       More Input: Ďalšie vstupy
-      More Monsters: Ďalšie príšery
       More Parameters: Ďalšie parametre
       Motorcycle: Motorka
       Movement with the Counter Pattern: Pohyb pomocou počítacieho vzorca
@@ -177,7 +176,6 @@ sk:
       Predict: Predvídať
       Prediction: Predpoklad
       Problem Solving: Riešenie problémov
-      Programming with Events: Programovanie pomocou udalostí
       Programming with Rey and BB-8: Programovanie s Rey a BB-8
       Programs that Repeat: Opakujúce sa programy
       Project: Projekt
@@ -189,7 +187,6 @@ sk:
       Quarter Notes: Štvrťové doby
       RGB Exploration: Objavovanie RGB
       Reading Sensors: Čítanie snímačov
-      Recovery: Zotavenie
       Reflection: Reflexia
       Repeat Blocks: Opakujúce sa bloky
       Repeat Blocks with BB-8: Opakujúce sa bloky s BB-8
@@ -209,7 +206,6 @@ sk:
       Setting Properties: Základné nastavenia
       Shapes and the Draw Loop: Tvary  a vykresľovací cyklus
       Share Your App: Zdieľaj svoju appku
-      Share Your Message: Zdieľajte správu
       Side Scroller: Posúvačka (side-scroller)
       Simple Circuits: Jednoduché el. obvody
       Skill Building: Budovanie zručností
@@ -223,7 +219,6 @@ sk:
       Sprite Velocity: Rýchlosť "sprite" objektu
       Sprites and the Draw Loop: '"Sprite" objekty a vykresľovací cyklus'
       Star Chaser: Lovec hviezd
-      Stopping the Outbreak with Masks: Zastaviť nákazu pomocou masiek
       Styling Text: Tvarovanie textu
       Styling with Classes: Tvarovanie pomocou tried
       Styling your Website: Úprava tvojej webstránky
@@ -243,7 +238,6 @@ sk:
       Using the LED: Používanie LEDiek
       Using the Repeat Block: Používanie bloku opakuj
       Using the Switch: Používanie prepínača
-      Vaccines: Vakcíny
       Variables: Premenné
       Velocity: Rýchlosť
       Video: Video

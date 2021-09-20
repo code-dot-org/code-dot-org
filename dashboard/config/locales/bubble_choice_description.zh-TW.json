@@ -9,10 +9,10 @@
         "ramp_artist_loops8_2021": "找到規律，用迴圈讓這個程式更簡潔！",
         "CourseF_app_computer": "連接所有的部分，弄明白如何打開電腦！",
         "CourseF_outbreak4": "改變模擬的方式並預測未來會發生什麼事。",
-        "CourseF_outbreak5": "幫助你的精靈自動地恢復！",
-        "CourseF_outbreak6": "病毒並不是一直都在傳播，而且戴口罩也不能完全遏止病毒傳播。透過讓感染隨機發生來增進你的模擬。",
-        "CourseF_outbreak7": "藉由給你的精靈免疫力來防止他生病。",
-        "CourseF_outbreak8": "使用你的專案來分享訊息。你希望其他人從你的專案裡面學習到什麼呢？",
+        "CourseF_outbreak5": "改變模擬的方式並預測未來會發生什麼事。",
+        "CourseF_outbreak6": "幫助你的精靈自動地恢復！",
+        "CourseF_outbreak7": "病毒並不是一直都在傳播，而且戴口罩也不能完全遏止病毒傳播。透過讓感染隨機發生來增進你的模擬。",
+        "CourseF_outbreak8": "藉由給你的精靈免疫力來防止他生病。",
         "courseC_artist_prog7_2021": "這個寵物名稱標籤是特殊形狀！",
         "courseC_artist_prog_challenge2a_2021": "幫我在這條道路上畫黃線！",
         "courseD_bee_nestedLoops2_2021": "用盡可能少的積木來收集所有花蜜。",
@@ -87,7 +87,8 @@
         "outbreak_freeplay": "透過函式、變數等，擴展你的專案！",
         "outbreak_freeplay_basic": "使用你之前看過的模組繼續前進！",
         "ramp_artist_loops4_2021": "通過循環一個序列來創建這個星形圖案",
-        "ramp_artist_loops6v1_2021": "使用循環來繪製這個樓梯。"
+        "ramp_artist_loops6v1_2021": "使用循環來繪製這個樓梯。",
+        "international_outbreak_freeplay": "使用你的專案來分享訊息。你希望其他人從你的專案裡面學習到什麼呢？"
       }
     }
   }

@@ -241,6 +241,10 @@ lt:
           DIRECTION:
             '"right"': dešinėn
             '"left"': kairėn
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": trakšt
       gamelab_randColor:
         text: Atsitiktinė spalva
       gamelab_randomColor:
@@ -414,11 +418,6 @@ lt:
             '"down"': rodyklė į apačią
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"solid"': storai
-            '"rainbow"': vaivorykštė
       RyanLab_moveForward:
         text: judėk į priekį
       RyanLab_turnLeft:

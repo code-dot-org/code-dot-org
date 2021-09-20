@@ -3170,6 +3170,12 @@ el:
               display_name: Μονάδα 4
             lessonGroup-7:
               display_name: Μονάδα 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Στάδιο 1
+            lessonGroup-3:
+              display_name: Στάδιο 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -3186,3 +3192,7 @@ el:
           lesson_groups:
             lessonGroup-3:
               display_name: Έργο
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: Έργο

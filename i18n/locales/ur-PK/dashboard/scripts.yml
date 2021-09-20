@@ -175,6 +175,8 @@ ur:
           lessons:
             Envelope Variables:
               name: لفافہ متغیرات
+        csp5-support:
+          description: "#### **یہ کورس اس کورس کے ورژن سے وابستہ ہے جو اب مزید معاونت یافتہ نہیں ہے۔ ہمارے سب سے موجودہ نصاب دیکھنے کے لیے ہمارا کورسز کا عمومی جائزہ صفحہ (<https://studio.code.org/courses>) ملاحظہ کریں۔**\n\nیہ یونٹ 5 پڑھانے کی تیاری کرنے والے CSP اساتذہ کے لیے پروفیشنل لرننگ کورس میں منظم کردہ آن لائن معاونتوں کا ایک مجموعہ ہے۔"
         csd6-draft:
           lessons:
             Lists:
@@ -205,10 +207,32 @@ ur:
               name: شرائط
             'null':
               name: نَل
+        coursea-2017:
+          title: کورس A
+          assignment_family_title: کورس A
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+        courseb-2017:
+          title: کورس B
+          assignment_family_title: کورس B
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔ (کورس A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
+        coursec-2017:
+          title: کورس C
+          assignment_family_title: کورس C
+        coursed-2017:
+          title: کورس D
+          assignment_family_title: کورس D
+          description_short: کورس C سے تصورات کا تیزی سے احاطہ کریں، پھر الگورتھمز، نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔
         coursee-2017:
+          title: کورس E
+          assignment_family_title: کورس E
+          description_short: کورس C اور D میں تصورات کا تیزی سے احاطہ کریں اور پھر فنکشنز کے ساتھ آگے بڑھیں۔
           lessons:
             Envelope Variables:
               name: لفافہ متغیرات
+        coursef-2017:
+          title: کورس F
+          assignment_family_title: کورس F
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
         express-2017:
           lessons:
             Envelope Variables:
@@ -257,21 +281,32 @@ ur:
           lessons:
             Lists:
               name: فہرستیں
+        coursea-2018:
+          assignment_family_title: کورس A
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
         express-2018:
           lessons:
             Envelope Variables:
               name: لفافہ متغیرات
             'Unplugged: Binary':
               name: ثنائی تصاویر
+        courseb-2018:
+          assignment_family_title: کورس B
         coursed-2018:
+          assignment_family_title: کورس D
           lessons:
             'Unplugged: Binary':
               name: ثنائی تصاویر
+        coursec-2018:
+          assignment_family_title: کورس C
         coursee-2018:
+          assignment_family_title: کورس E
           lessons:
             Minecraft Hour of Code:
               name: Minecraft کوڈ کی گھڑی
         coursef-2018:
+          assignment_family_title: کورس F
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
           lessons:
             Envelope Variables:
               name: لفافہ متغیرات
@@ -295,6 +330,7 @@ ur:
             csp_conditionals:
               display_name: شرائط
         coursef-2019:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
           lesson_groups:
             csf_variables:
               display_name: متغیرات
@@ -344,6 +380,7 @@ ur:
             csf_events:
               display_name: ایونٹس/واقعات
         coursea-2019:
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
           lesson_groups:
             csf_loops:
               display_name: لوپس
@@ -518,6 +555,7 @@ ur:
             Text:
               name: متن
         coursea-2020:
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
           lesson_groups:
             csf_loops:
               display_name: لوپس
@@ -549,6 +587,7 @@ ur:
             Dance Party:
               name: ڈانس پارٹی
         coursef-2020:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
           lesson_groups:
             csf_variables:
               display_name: متغیرات
@@ -614,6 +653,16 @@ ur:
           lessons:
             Lesson:
               name: سبق
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: کورس A
+            Course B:
+              name: کورس B
+            Course E:
+              name: کورس E
+            Course F:
+              name: کورس F
         virustest:
           title: وباء کے پھیلنے کا سیمیولیشن
           description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
@@ -662,6 +711,7 @@ ur:
             csp_loops:
               display_name: لوپس
         coursea-2021:
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
           lesson_groups:
             csf_loops:
               display_name: لوپس
@@ -680,6 +730,7 @@ ur:
             csf_events:
               display_name: ایونٹس/واقعات
         coursed-2021:
+          title: کورس D (2021)
           lessons:
             Dance Party:
               key: ڈانس پارٹی
@@ -701,6 +752,7 @@ ur:
             csf_nested_loops:
               display_name: شرائط
         coursef-2021:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
           lessons:
             Envelope Variables:
               key: لفافہ متغیرات

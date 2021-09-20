@@ -262,6 +262,10 @@ lv:
         options:
           DIRECTION:
             '"North"': Ziemeļi
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": kraukš
       gamelab_pointInDirection:
         options:
           DIRECTION:
@@ -409,9 +413,8 @@ lv:
             '"right"': bultiņa pa labi
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"solid"': ciets
-            '"rainbow"': varavīksne
+          EFFECT:
+            '"colors"': Krāsas
       RyanLab_moveForward:
         text: pārvietot uz priekšu
       RyanLab_turnLeft:

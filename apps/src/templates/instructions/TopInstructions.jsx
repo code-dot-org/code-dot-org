@@ -254,7 +254,7 @@ class TopInstructions extends Component {
    * Height can get below min height iff we resize the window to be super small.
    * If we then resize it to be larger again, we want to increase height.
    */
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (
       !nextProps.isCollapsed &&
       nextProps.height < MIN_HEIGHT &&
@@ -405,7 +405,11 @@ class TopInstructions extends Component {
    * Handle a click on the Documentation PaneButton.
    */
   handleDocumentationClick = () => {
-    const win = window.open(this.props.documentationUrl, '_blank');
+    const win = window.open(
+      this.props.documentationUrl,
+      '_blank',
+      'noopener,noreferrer'
+    );
     win.focus();
   };
 

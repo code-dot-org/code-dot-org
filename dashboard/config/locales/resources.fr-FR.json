@@ -14,6 +14,9 @@
         "exploring_apps_1/coursef/2021": {
           "name": "Explorer les Applications"
         },
+        "making_sprites/coursef/2021": {
+          "name": "Faire des sprites"
+        },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Documentation sur le Labo des Lutins"
         },
@@ -30,7 +33,7 @@
           "name": "Jouer avec les Boucles « Pour »"
         },
         "flf-assessment-teacher-key/coursef/2021": {
-          "name": "Amusement avec la Boucle For - Clé d'Évaluation"
+          "name": "Amusement avec la Boucle « Pour » - Clé d'Évaluation"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "Jouer avec les Boucles « Pour »"
@@ -409,6 +412,9 @@
         },
         "sprite_lab_documentation/express/2021": {
           "name": "Documentation sur le Labo des Lutins"
+        },
+        "making_sprites/express/2021": {
+          "name": "Faire des sprites"
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "Documentation sur le Labo des Lutins"

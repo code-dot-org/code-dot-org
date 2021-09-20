@@ -32,8 +32,9 @@ class ScriptTest < ActiveSupport::TestCase
     # We also want to test level_concept_difficulties, so make sure to give it
     # one.
     @cacheable_level = create(:level, :with_script, level_concept_difficulty: create(:level_concept_difficulty))
+  end
 
-    # ensure that we have freshly generated caches with this unit_group/unit
+  setup do
     UnitGroup.clear_cache
     Script.clear_cache
   end
@@ -423,6 +424,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
       }]
@@ -431,6 +433,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
       }]
@@ -442,6 +445,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
       }]
@@ -450,6 +454,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
       }]
@@ -828,19 +833,35 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.find_by_name('ECSPD').professional_learning_course?
   end
 
-  test 'should summarize unit' do
+  test 'should summarize migrated unit' do
     unit = create(:script, name: 'single-lesson-script')
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
     unit.teacher_resources = [['curriculum', '/link/to/curriculum']]
-
+    Services::CurriculumPdfs.stubs(:get_script_overview_url).returns('/overview-pdf-url')
+    Services::CurriculumPdfs.stubs(:get_unit_resources_url).returns('/resources-pdf-url')
     summary = unit.summarize
 
     assert_equal 1, summary[:lessons].count
     assert_nil summary[:peerReviewLessonInfo]
     assert_equal 0, summary[:peerReviewsRequired]
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
+    assert_equal '/overview-pdf-url', summary[:scriptOverviewPdfUrl]
+    assert_equal '/resources-pdf-url', summary[:scriptResourcesPdfUrl]
+  end
+
+  test 'should summarize migrated unit with legacy lesson plans' do
+    unit = create(:script, name: 'single-lesson-script', use_legacy_lesson_plans: true)
+    lesson_group = create(:lesson_group, key: 'key1', script: unit)
+    lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
+    create(:script_level, script: unit, lesson: lesson)
+    Services::CurriculumPdfs.stubs(:get_script_overview_url).returns('/overview-pdf-url')
+    Services::CurriculumPdfs.stubs(:get_unit_resources_url).returns('/resources-pdf-url')
+    summary = unit.summarize
+
+    refute summary[:scriptOverviewPdfUrl]
+    refute summary[:scriptResourcesPdfUrl]
   end
 
   test 'should summarize unit with peer reviews' do
@@ -2067,25 +2088,25 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
+    Script.destroy_all
     user = create(:user)
-    unit = create(:script)
-    alternate_unit = build(:script)
+    create(:script, published_state: SharedConstants::PUBLISHED_STATE.stable, name: 'original-unit')
+    alternate_unit = build(:script, published_state: SharedConstants::PUBLISHED_STATE.stable, name: 'alternate-unit')
 
     UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Rails.cache.stubs(:fetch).returns([unit])
-    unit.stubs(:alternate_script).returns(alternate_unit)
+    Script.any_instance.stubs(:alternate_script).returns(alternate_unit)
 
     units = Script.valid_scripts(user)
     assert_equal [alternate_unit], units
   end
 
   test "self.valid_scripts: returns original unit if user has a course experiment with no alternate unit" do
+    Script.destroy_all
     user = create(:user)
-    unit = create(:script)
+    unit = create(:script, published_state: SharedConstants::PUBLISHED_STATE.stable)
 
     UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Rails.cache.stubs(:fetch).returns([unit])
-    unit.stubs(:alternate_script).returns(nil)
+    Script.any_instance.stubs(:alternate_script).returns(nil)
 
     units = Script.valid_scripts(user)
     assert_equal [unit], units
@@ -2592,7 +2613,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can move lesson to later lesson group in unit' do
-    unit = create :script, name: 'lesson-group-test-script'
+    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
     lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
     lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
     lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1
@@ -2626,7 +2647,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can move last lesson group up' do
-    unit = create :script, name: 'lesson-group-test-script'
+    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
     lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
     lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
     lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1
@@ -3218,6 +3239,34 @@ class ScriptTest < ActiveSupport::TestCase
       refute_equal @standalone_unit.student_resources[0], cloned_unit.student_resources[0]
       assert_equal @unit_in_course.resources[0], cloned_unit.resources[0]
       assert_equal @unit_in_course.student_resources[0], cloned_unit.student_resources[0]
+    end
+
+    test 'can copy a script without a course version' do
+      source_unit = create :script, is_course: true, is_migrated: true
+      lesson = create :lesson, script: source_unit
+      create :lesson_group, script: source_unit, lessons: [lesson]
+
+      cloned_unit = source_unit.clone_migrated_unit('cloned-unit', family_name: 'family-name', version_year: 'unversioned')
+      assert_equal 1, cloned_unit.lesson_groups.count
+      assert_equal 1, cloned_unit.lessons.count
+      refute_nil cloned_unit.get_course_version
+    end
+
+    test 'clone raises exception if destination_unit_group does not have a course version' do
+      versionless_unit_group = create :unit_group
+      assert_nil versionless_unit_group.course_version
+      assert_raises do
+        @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: versionless_unit_group.name)
+      end
+    end
+
+    test 'clone raises exception if cloning as standalone without family name or version year' do
+      assert_raises do
+        @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022')
+      end
+      assert_raises do
+        @standalone_unit.clone_migrated_unit('standalone-2022', family_name: 'standalone')
+      end
     end
   end
 

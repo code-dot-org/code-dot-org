@@ -150,6 +150,11 @@
         },
         "simcustom_2021": {
           "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "αναρρώνοντας",
+          "moving left and right": "κίνηση αριστερά και δεξιά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
         }
       }
     }

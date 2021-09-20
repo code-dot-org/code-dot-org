@@ -1448,6 +1448,7 @@ pl:
             Unit 6 lessons:
               name: Jednostka 6 Lekcje
         cspunit4draft:
+          title: Podstawy informatyki Jednostka 4 - Dane
           description_short: Dane
           lessons:
             Check Your Assumptions:
@@ -1537,6 +1538,7 @@ pl:
             Teaching Support - Lessons 8-12:
               name: Wsparcie nauczania - Lekcje 8-12
         CSPPD3-Unit2:
+          title: 'Podstawy informatyki: Jednostka 2 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1579,6 +1581,7 @@ pl:
               name: Epoka Lodowcowa w Play Lab
           student_description: Utwórz historyjkę lub grę z pomoc Epoki Lodowcotej w Play Lab!
         CSPPD3-Unit3:
+          title: 'Podstawy informatyki: Jednostka 3 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1621,6 +1624,7 @@ pl:
             While Loops:
               name: Pętle Dopóki (While)
         CSP-Unit3-Support:
+          title: 'Podstawy informatyki: Jednostka 3 Rozwój zawodowy (PD)'
           lessons:
             Chunk 1 Overview:
               name: Część 1 Przeląd
@@ -1677,6 +1681,7 @@ pl:
               name: Oceany
           student_description: Poznaj sposób, w jaki sztuczna inteligencja i uczenie maszynowe mogą być wykorzystywana do zajmowania się problemami całego świata.
         CSPPD3-Unit3-pt2:
+          title: 'Podstawy informatyki: Jednostka 3 Wyzwania zawodowego rozwoju'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1773,6 +1778,7 @@ pl:
             Visualizing Data:
               name: Wizualizacja danych
         CSPPD3-Unit5:
+          title: 'Podstawy informatyki: Jednostka 5 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1810,6 +1816,7 @@ pl:
             Visualizing Data:
               name: Wizualizacja danych
         AlgebraA:
+          title: 'Informatyka w algebrze: Kurs A'
           description: Poznaj programowanie funkcjonalne za pomocą algebry
           description_short: Poznaj programowanie funkcjonalne za pomocą algebry
           lessons:
@@ -6705,6 +6712,10 @@ pl:
               name: CSP przed ankietą  2021
             CSP post-survey 2020:
               name: CSP po ankiecie 2020
+            CSP pre-survey 21-2:
+              name: CSP wstępna ankieta 21-22
+            CSD pre-survey 21-2:
+              name: CSD wstępna ankieta 21-22
           name: wszystkie ankiety
         k1hoc2017:
           title: K - 1 Godzina Kodowania 2017
@@ -16369,6 +16380,8 @@ pl:
               name: Poznaj AI Lab
             videoLevels:
               name: Poziomy nagrywania filmu
+            CSP Tester:
+              name: CSP Tester
           title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI dla CSD. W przypadku pytań na ten temat, należy zwrócić się do Dana Schneidera.
@@ -18754,6 +18767,8 @@ pl:
               name: Dzień FRQ
             lesson-15:
               name: Dzień sprawdzianu
+            lesson-1:
+              name: Jednostka 2 Badanie pilotażowe
           lesson_groups:
             lesson group:
               display_name: Treści
@@ -18794,6 +18809,8 @@ pl:
               name: Dzień FRQ
             lesson-15:
               name: Dzień sprawdzianu
+            lesson-16:
+              name: Jednostka 3 Badanie pilotażowe
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -19289,10 +19306,10 @@ pl:
               name: Moduł 2
             Module 3:
               key: Moduł 3
-              name: 'Moduł 3: Jednostka 5, używanie list w aplikacjach i rozpoznawanie umiejętności CS w klasie'
+              name: Moduł 3
             Module 4:
               key: Moduł 4
-              name: 'Moduł 4: Jednostka 5 i używanie zestawów danych w aplikacjach'
+              name: Moduł 4
             Module 5:
               key: Moduł 5
               name: 'Moduł 5: Jednostka 7 i zrozumienie funkcji z parametrami i zwracaniem wartości'
@@ -19679,7 +19696,6 @@ pl:
               name: 'Krok 2: Wykaż zrozumienie'
           name: dlp21-csd-mod2
           title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 2 dla Warsztatu 2
-          description: "## Ten moduł zostanie w pełni opublikowany przed 3 września 2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
         dlp21-csd-mod3:
           lessons:
             lesson-1:
@@ -19706,7 +19722,6 @@ pl:
               name: 'Krok 2: Wykaż zrozumienie'
           name: dlp21-csp-mod2
           title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 2 dla Warsztatu 2
-          description: "## Ten moduł zostanie w pełni opublikowany przed 3 września 2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
         dlp21-csp-mod3:
           lessons:
             lesson-1:
@@ -19783,6 +19798,8 @@ pl:
               display_name: Przekładowe dema
             lessonGroup-3:
               display_name: Rozwój poziomami
+            lessonGroup-4:
+              display_name: Prezentacje i zasoby
           name: csa-u6-dev
           title: CSA Jednostka 6 Rozwój
         hello-world-draft:
@@ -19790,7 +19807,66 @@ pl:
             lesson-1:
               name: Witaj świecie!
           name: hello-world-draft
-          title: Witaj świecie
+          title: '"Witaj świecie!"'
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: Poruszanie się po platformie edukacyjnej Code.org
+              description_teacher: |-
+                **Dowiesz się, jak:**
+
+                -   Poruszać się po stronie Code.org i narzędziach dla nauczycieli.
+
+                **Sugerowany czas:** 30 minut
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **Dowiesz się, jak:**
+
+                -   Znaleźć i wykorzystać plany lekcji kursu i zasoby nauczyciela.
+
+                **Sugerowany czas:** 30 minut
+            Navigating support:
+              description_teacher: |-
+                **Dowiesz się, jak:**
+
+                -   Uzyskać wsparcie ucząc Odkryć informatyki
+
+                **Sugerowany czas:** 15 minut
+            lesson-4:
+              key: lekcja 4
+              description_teacher: |-
+                **Dowiesz się, jak:**
+
+                -   Poruszać się po stronie Code.org i narzędziach dla nauczycieli.
+
+                **Sugerowany czas:** 30 minut
+            lesson-3:
+              key: lekcja 3
+              description_teacher: |-
+                **Dowiesz się, jak:**
+
+                -   Znaleźć i wykorzystać plany lekcji kursu i zasoby nauczyciela.
+
+                **Sugerowany czas:** 25 minut
+            lesson-8:
+              key: lekcja 8
+              description_teacher: |-
+                **Dowiesz się, jak:**
+
+                -   Uzyskać wsparcie ucząc Odkryć informatyki
+
+                **Sugerowany czas:** 15 minut
+          title: Nawigacja po Code.org dla nauczycieli pilotażowych CSA
+          description: |-
+            Ten moduł ma na celu zorientowanie Ciebie w narzędziach, których będziesz używać do wspierania uczniów podczas nauczania CSA.
+
+            **Dowiesz się, jak:**
+
+            -   Poruszać się po stronie Code.org i narzędziach dla nauczycieli.
+            -   Znaleźć i wykorzystać plany lekcji kursu i zasoby nauczyciela.
+
+            **Sugerowany czas:** 1 godzina
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             Welcome to CSA:
@@ -19849,65 +19925,91 @@ pl:
             Assessment Day:
               name: Dzień sprawdzianu
             lesson-1:
+              key: lekcja 1
               description_student: Na tej lekcji poznasz wartości inżynierii oprogramowania i sposoby, w jakie je praktykujesz w innych aspektach swojego życia. Pod koniec tej lekcji odkryjesz własną tożsamość inżynierii oprogramowania!
               description_teacher: Wiara we własną tożsamość inżynierii oprogramowania rozwija pewność siebie i wytrwałość. Ta lekcja wprowadza podstawowe wartości inżynierii oprogramowania i bada typowe spostrzeżenia, jakie mogą mieć uczniowie. Zastanawiają się oni, jak już praktykują wiele z tych wartości, aby odkryć własną tożsamość inżynierii oprogramowania.
             lesson-2:
+              key: lekcja 2
               description_student: Zbadasz, jak działa The Neighborhood i poznasz niektóre kluczowe komponenty języka programowania Java. Spotykasz „Malarza” i wprowadzisz zmiany w kodzie, aby dowiedzieć się, co potrafi „Malarz".
               description_teacher: 'Uczniowie korzystają z Java Lab, aby zbadać The Neighborhood i zapoznają się z klasą „Malarz”. Badają kod startowy i dokonują prostych modyfikacji, aby otrzymać różne wyniki za pomocą obiektu „Malarz” i ćwiczą tworzenie obiektu „Malarz”, aby zidentyfikować relacje między klasą a obiektem. '
             lesson-3:
+              key: lekcja 3
               name: Korzystanie z poleceń
               description_student: Teraz, gdy poznałeś „Malarza”, możesz użyć poleceń akcji w tej lekcji, aby przesunąć „Malarza” po okolicy. Dowiesz się o niektórych zasadach Javy, których musisz przestrzegać, aby Malarz się poruszał.
               description_teacher: Podczas tej lekcji uczniowie wdrażają rozwiązania za pomocą poleceń akcji, aby poruszać „Malarzem” po okolicy. Rozwijają umiejętności myślenia komputacyjnego, tłumacząc rozwiązania na kod Java, ćwicząc powielanie wzorców. Podczas rozwiązywania tych problemów, uczą się, jak ważne jest uwzględnianie wielkości liter i średników w Javie, i są narażeni na użycie notacji kropkowej do wywoływania poleceń „Malarz”.
             lesson-4:
+              key: lekcja 4
               name: Warunki i debugowanie
               description_student: Teraz, gdy wiesz, jak używać poleceń akcji, pomagasz `Malarzowi` w podejmowaniu decyzji dotyczących interakcji z sąsiedztwem za pomocą poleceń zbierających informacje. Dowiesz się również o debugowaniu i zidentyfikujesz strategie do wykorzystania przez cały rok.
               description_teacher: 'Na tej lekcji uczniowie modyfikują programy przy użyciu trzech poleceń zwrotnych: `isOnPaint ()`, `isOnBucket ()` i `canMove ()`. Instrukcje logiczne, instrukcje warunkowe i instrukcje powrotu są wprowadzane za pomocą instrukcji `jeżli` i poleceń powrotu`Malarz`, aby mogli ćwiczyć używanie logiki warunkowej w swoich programach. Pojęcia te zostaną omówione bardziej szczegółowo na przyszłych lekcjach i utrwalone w trakcie kursu. Uczniowie opracowują również strategie debugowania, identyfikując błędy składniowe i logiczne. '
             lesson-5:
+              key: lekcja 5
               name: Więcej z obiektami
               description_student: Na tej lekcji nauczysz się, jak tworzyć obiekty typu „Malarz”, określając, gdzie zaczyna się „Malarz”, w jakim kierunku jest zwrócony oraz jaki jest kolor farby. Zastanawiasz się również, co składa się na „dobry kod” i ćwiczysz pisanie wydajnego kodu.
               description_teacher: Relacja między klasami i obiektami jest wzmacniana, gdy uczniowie tworzą własne obiekty; są oni wprowadzani do tworzenia obiektów zarówno z parametrami, jak i bez nich. Zaczynają także, na czym polega „dobry kod” i ćwiczą pisanie skutecznych rozwiązań.
             lesson-6:
+              key: lekcja 6
               name: Pętle "dopóki" i praktyka
               description_student: Ćwiczyłeś przesuwanie „Malarza” i używanie warunków, aby pomóc „Malarzowi” w podejmowaniu decyzji dotyczących interakcji z sąsiedztwem. A co by było, gdyby "Malarz" mógł powtarzać polecenia? Na tej lekcji nauczysz się używać pętli `dopóki` z kilkoma nowymi poleceniami do przemieszczania "Malarza" po okolicy.
               description_teacher: Uczniowie wiele się nauczyli w pierwszym tygodniu! Na tej lekcji zapoznają się z pętlą „dopóki” i dodatkowymi metodami kontrolowania ruchu „Malarza” w Sąsiedztwie. Łączą swoją wiedzę o metodach, konstruktorach i strukturach sterujących, aby rozwijać rozwiązania dla coraz bardziej złożonych łamigłówek
             lesson-7:
+              key: lekcja 7
               name: Więcej z warunkami
               description_student: Używałeś instrukcji „jeśli”, aby pomóc „Malarzowi” w podejmowaniu decyzji o interakcji z Sąsiedztwem. Na tej lekcji użyjesz instrukcji „jeśli-w przeciwnym razie”, aby spowodować inne działania „Malarza”. Dowiesz się również o operatorze `!` (Nie), który pomoże w podejmowaniu decyzji, które podejmuje `Malarz`.
               description_teacher: Uczniowie poszerzają swoją wiedzę na temat struktur sterujących i wyrażeń logicznych za pomocą instrukcji „jeśli-w przeciwnym razie” i operatora logicznego „!” (Nie). Ćwiczą używanie instrukcji `jeśli-w przeciwnym razie` i`!`(Nie) do rozwiązywania bardziej złożonych problemów, w uzupełnieniu poleceń `Malarza`, których używali do tej pory.
             lesson-8:
+              key: lekcja 8
               name: Wprowadzenie do weryfikacji kodu
               description_student: Jako inżynier oprogramowania chcesz tworzyć kod, który z czasem będzie łatwy do odczytania, utrzymania i modyfikowania przez innych. Na tej lekcji przećwiczysz używanie recenzji kodu do opininiowania i omawiania strategii przekazywania i wykorzystywania informacji zwrotnych. Te strategie będą przydatne przez cały rok!
               description_teacher: Na tym kursie uczniowie przyjmują rolę inżynierów oprogramowania i modelują umiejętności zawodowe w świecie rzeczywistym. Inżynierowie oprogramowania używają recenzji kodu w całej branży do tworzenia kodu, który jest łatwy do odczytania, utrzymania i modyfikowania przez innych w czasie. Uczniowie są wprowadzani do procesu recenzowania kodu, aby położyć podwaliny pod umiejętności, które będą dalej rozwijać w trakcie kursu.
             lesson-9:
+              key: lekcja 9
               name: Dziedziczenie i metody
               description_student: Do tej pory zauważyłeś, że twój „Malarz” ma ograniczone polecenia poruszania się po Sąsiedztwie. Na tej lekcji utworzysz nowy typ „Malarza”, który może zrobić wszystko, co „Malarz”, a także coś, czego „Malarz” nie może!
               description_teacher: Uczniowie są wprowadzani do dziedziczenia poprzez wyprowadzenie podklasy „Painter” z większą liczbą poleceń. Używają słowa kluczowego `super` w konstruktorach i uczą się, jak pisać własne metody w klasie `PainterPlus`. Odkrywają, że wywoływane metody muszą być zdefiniowane w ich własnej klasie lub nadklasie. Na przyszłych lekcjach uczniowie dodają dodatkowe metody i podklasy „Paiter”.
             lesson-10:
+              key: lekcja 10
               name: Więcej metod, więcej właściwości
               description_student: Na tej lekcji dasz swojej klasie `PainterPlus` nowe sposoby poruszania się i interakcji z Sąsiedztwem, Podczas implementacji nowych metod bierzesz pod uwagę przypadki skrajne.
               description_teacher: 'Na tej lekcji uczniowie nadal stosują zasadę dziedziczenia w swoim kodzie, rozszerzając klasę `PainterPlus` o trzy dodatkowe metody: `turnAround()`, `takeAllPaint()` i `moveFast()`. Aby przećwiczyć składnię języka Java i myślenie algorytmiczne, uczniowie konstruują krok po kroku proces ręcznego wdrażania każdej z metod przed zakodowaniem jej w języku Java. Kontynuując pisanie i używanie nowych metod, uczniowie doświadczają korzyści wynikających z ponownego wykorzystania. '
             lesson-11:
+              key: lekcja 11
               name: Metody malowania
               description_student: 'Na tej lekcji kontynuujesz rozwijanie swojej klasy ''PainterPlus'', tym razem dodając metody do przesuwania się i malowania linii poziomych, pionowych i ukośnych. Przeglądasz również kod, aby przekazywać i otrzymywać informacje zwrotne dotyczące jego ulepszania. '
             lesson-12:
+              key: lekcja 12
               name: Malarz natryskowy
             lesson-13:
+              key: lekcja 13
               name: Malarz stempli
             lesson-14:
+              key: lekcja 14
               name: Skrajne przypadki
             lesson-15:
+              key: lekcja 15
               name: Podsumowanie inżynierii oprogramowania
+            lesson-16:
+              key: lekcja 16
+            lesson-17:
+              key: lekcja 17
+            lesson-18:
+              key: lekcja 18
             lesson-19:
+              key: lekcja 19
               name: Dzień FRQ
               description_student: Dzisiaj wypełnij swoje pierwsze pytanie z wolną odpowiedzią (FRQ)! Oznacza to, że ręcznie piszesz kod, aby wykonać duże zadanie. Robisz to z partnerem, poruszając się po pokoju i wykonując części zadania w każdej lokalizacji, sprawdzając swoją pracę w trakcie.
               description_teacher: "Na tej lekcji uczniowie rozwiązują swoje pierwsze zadanie w stylu pytania o wolną odpowiedź (FRQ). Zaznaczają pytanie jako klasę, a następnie implementują pełną klasę `SpiralPainter` w parach poprzez działanie w stylu „Dookoła świata”.\n\nCele tej lekcji są trojakie:\n\n-   Stworzenie poczucia ekscytacji i spełnienia podczas wypełniania FRQ\n-   Przećwiczenie pytania w stylu FRQ (napisane odręcznie)\n-   Podsumowujące ocenienie treści z Jednostki 1\n\nChociaż format tej FRQ nie jest taki sam jak FRQ na egzaminie AP, jest to element składowy pomagający uczniom przygotować się do rozwiązywania tego typu pytań. W miarę postępów uczniów podczas kursu, napotykane przez nich pytania FRQ powoli zbliżają się do rzeczywistych rzeczy. "
             lesson-20:
+              key: lekcja 20
               name: Dzień sprawdzianu
+            lesson-21:
+              key: lekcja 21
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+          name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
           lessons:
             Defining Attributes:
@@ -19943,45 +20045,65 @@ pl:
               name: Dzień FRQ
             Assessment Day:
               name: Dzień sprawdzianu
+            Unit 2 Pilot Survey:
+              name: Jednostka 2 Badanie pilotażowe
             new lesson:
               key: nowa lekcja
               description_student: Dzięki naszym doświadczeniom w The Neighborhood wiemy, że klasy i obiekty są kluczowymi komponentami języka programowania Java. Ale jak dokładnie klasy tworzą obiekty? Na tej lekcji poznasz sposób tworzenia obiektu i poznasz proces zwany hermetyzacją danych.
               description_teacher: Podczas tej lekcji bez komputerów uczniowie tworzą obiekty i reprezentują odpowiednie atrybuty za pomocą zmiennych instancji. Poznają różnicę między „publicznym” i „prywatnym” oraz cel hermetyzacji, aby ukryć wewnętrzną implementację obiektu.
             lesson-2:
+              key: lekcja 2
               name: Stosowanie zmiennych
             lesson-3:
+              key: lekcja 3
               name: Pisząc konstruktory
               description_student: Projekt Mercury Pastries food truck potrzebuje Twojej pomocy! Właściciel chce sprzedawać desery w w Sąsiedztwie, ale musi mieć możliwość wprowadzania i przechowywania deserów w programie. Poproszono Cię o wykorzystanie umiejętności inżynierii oprogramowania do stworzenia programu, który może tworzyć obiekty deserowe, aby właściciel mógł śledzić swoje zapasy. Zaczynasz od utworzenia klasy „Deser”, aby właściciel mógł wprowadzić smak, dostępną ilość i cenę każdego sprzedawanego przez siebie deseru.
               description_teacher: Uczniowie zapoznają się z projektem Mercury Pastries food truckem i potrzebą właściciela programu do wprowadzania i przechowywania deserów. Jako inżynierowie oprogramowania uczniowie  wykorzystują strategie projektowania zorientowanego obiektowo, aby zidentyfikować niezbędne atrybuty i odpowiednie typy danych dla klasy „Deser”. Uczniowie piszą konstruktor i używają obiektu `Skaner` w celu uzyskania wartości zmiennych instancji w celu zainicjowania obiektu`Deser`.
             lesson-4:
+              key: lekcja 4
               name: Dodawanie wielu konstruktorów
             lesson-5:
+              key: lekcja 5
               name: Manipulowanie zmiennymi i danymi obiektów
             lesson-6:
+              key: lekcja 6
               name: Minimalizowanie błędów w inicjalizacji
             lesson-7:
+              key: lekcja 7
               name: Pisanie konstruktorów dla hierarchii
             lesson-8:
+              key: lekcja 8
               name: Udostępnianie danych obiektu
             lesson-9:
+              key: lekcja 9
               name: Modyfikowanie danych obiektu
             lesson-10:
+              key: lekcja 10
               name: Wyświetlanie informacji o obiekcie
             lesson-11:
+              key: lekcja 11
               name: Projekt zarządzania sąsiedzkim sklepem - dzień 1
             lesson-12:
+              key: lekcja 12
               name: Projekt zarządzania sąsiedzkim sklepem - dzień 2
             lesson-13:
+              key: lekcja 13
               name: Projekt zarządzania sąsiedzkim sklepem - dzień 3
             lesson-14:
+              key: lekcja 14
               name: Dzień FRQ
             lesson-15:
+              key: lekcja 15
               name: Dzień sprawdzianu
+            lesson-1:
+              key: lekcja 1
+              name: Jednostka 2 Badanie pilotażowe
           lesson_groups:
             lesson group:
               display_name: Treści
             lessonGroup-2:
               display_name: Pokaż, co wiesz
+          name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
           lessons:
             Creating Arrays:
@@ -20016,43 +20138,83 @@ pl:
               name: Dzień FRQ
             Assessment Day:
               name: Dzień sprawdzianu
+            Unit 3 Pilot Survey:
+              name: Jednostka 3 Badanie pilotażowe
             lesson-1:
+              key: lekcja 1
               name: Tworzenie tablic
               description_student: Właścicielka food trucka powiększyła swój asortyment deserów. Wcześniej musiałeś deklarować osobne zmienne, aby śledzić zapasy, ale co, jeśli masz 150 deserów? To byłoby wiele zmiennych! W tej lekcji dowiesz się, jak utworzyć tablicę jednowymiarową (1D), określić jej długość i użyć wartości indeksu, aby uzyskać dostęp do poszczególnych elementów.
               description_teacher: Na tej lekcji bez komputerów, uczniowie tworzą jednowymiarowe (1D) tablice do przechowywania list wartości. Uczniowie uczą się, jak odnosić się do długości tablicy 1D i uzyskiwać dostęp do poszczególnych elementów, które są przechowywane.
             lesson-2:
+              key: lekcja 2
               name: Uzyskiwanie dostępu i modyfikowanie elementów
               description_student: Tablice do przechowywania wartości tworzy się za pomocą słowa kluczowego „new”. Eksplorujesz The Theatre, który pozwala manipulować dźwiękami i kształtami. Korzystasz z The Neighborhood i The Theatre, aby ćwiczyć dostęp i modyfikowanie elementów w tablicach za pomocą wartości indeksów.
               description_teacher: Podczas tej lekcji uczniowie tworzą tablice do przechowywania wartości za pomocą słowa kluczowego „nowy”. Eksplorują Teatr, który pozwala im manipulować dźwiękami i kształtami. Używają Sąsiedztwa i Teatr, aby ćwiczyć dostęp i modyfikowanie elementów w tablicach za pomocą wartości indeksów.
             lesson-3:
+              key: lekcja 3
               name: Trawersowanie tablic z pętlami "dla"
               description_student: Na tej lekcji dowiesz się o pętlach „dla” i sposobach ich używania do przechodzenia przez tablice. Ponownie odwiedzasz Sąsiedztwo i użyjesz tabel śledzenia, aby udokumentować, jak kod jest wykonywany w pętli "dla". Użyjesz pętli „dla” do rozwiązywania problemów w Sąsiedztwie i uzyskasz informacje zwrotne na temat swojej pracy poprzez przegląd kodu.
               description_teacher: Uczniowie piszą pętle „dla” do przechodzenia przez tablice oraz do wyszukiwania i modyfikowania elementów spełniających określone warunki. Ponownie odwiedzają Sąsiedztwo i używają tabel śledzenia do udokumentowania, jak kod działa w pętli „dla”. Uczestniczą w przeglądzie kodu po ukończeniu wybranego poziomu i poprawiają swój kod.
             lesson-4:
+              key: lekcja 4
               name: Trawersowanie tablic z pętlami "dopóki"
+              description_student: 'Czy pamiętasz pętle „dopóki”? Na tej lekcji badasz przypadki pętli "dopóki": tworzysz powiązania między pętlami „dopóki” i "dla”. Tworzysz wizualizacje do swojej muzyki za pomocą klasy „Prostokąt”. '
+              description_teacher: Uczniowie przeglądają pętle „dopóki” i poznają nieskończone pętle. Badają tworzenie wizualizacji przed konwersją między pętlami „dopóki” i „dla”. Tworzą własne wizualizacje muzyczne za pomocą klasy „Prostokąt”.
             lesson-5:
+              key: lekcja 5
               name: Przechowywanie obiektów w tablicach
+              description_student: Eksplorujesz funkcjonalność i korzyści wynikające z zasady zorientowanej obiektowo zwanej polimorfizmem, aby tworzyć i przeglądać tablicę obiektów „Zwierzę”. Po przejrzeniu dziedziczenia odkryjesz, że każda z podklas może mieć własne wersje zachowań. Tworzysz nową scenę na swój koncert w Teatrze, używając tablicy obiektów `Zwierzę` i używasz każdej z wersji `Zwierzę` ich metody `speak()`.
             lesson-6:
+              key: lekcja 6
               name: Trawersowanie tablic z rozbudowanymi pętlami "dla"
             lesson-7:
+              key: lekcja 7
               name: Korzystanie ze zmiennych i stałych statycznych
             lesson-8:
+              key: lekcja 8
               name: Odpowiadanie na pytania za pomocą tablic
             lesson-9:
+              key: lekcja 9
               name: Rozwiązywanie problemów za pomocą tablic
             lesson-10:
+              key: lekcja 10
               name: Manipulowanie elementami w tablicy
+            lesson-11:
+              key: lekcja 11
+            lesson-12:
+              key: lekcja 12
+              description_teacher: Na poprzedniej lekcji uczniowie napisali algorytm remiksu i połączyli go z algorytmami opracowanymi na wcześniejszych lekcjach. Używają statycznych zmiennych i stałych, aby dodać ograniczenia do długości koncertu. Dodają wizualizacje do koncertu za pomocą tablicy `Shape`, a następnie uczestniczą w przeglądzie kodu, aby przekazać i wykorzystać opinie podczas opracowywania swojego programu.
+            lesson-13:
+              key: lekcja 13
             lesson-14:
+              key: lekcja 14
               name: Dzień FRQ
             lesson-15:
+              key: lekcja 15
               name: Dzień sprawdzianu
+            lesson-16:
+              key: lekcja 16
+              name: Jednostka 3 Badanie pilotażowe
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+          name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
           lessons:
+            Comparing Object References and Data:
+              description_student: Porównaliśmy dwa „int” lub „double” pod kątem równości, ale jak porównać obiekty? Czy dwa łańcuchy mogą być równe? A co z dwoma pączkami? Odkrywasz, jak przetestować dwa obiekty pod kątem równości i wdrożyć swoje odkrycia w grze Pop the Balloons.
+              description_teacher: Uczniowie rozróżniają porównania obiektów i wartości pierwotnych. Badają efekty używania `==` lub `!=` z obiektami, aby zidentyfikować potrzebę zastosowania metody `equals()` do porównywania danych obiektowych.
+            Providing an Alternate Path of Execution:
+              description_student: Przeglądasz instrukcje `jeśli/w przeciwnym razie` i używasz ich do implementowania alternatywnych działań na podstawie wartości wyrażenia logicznego. Stosujesz instrukcje `jeśli/w przeciwnym razie`, aby uzyskać dostęp do elementów z tablic i używasz metody `Math.random()`, aby uzyskać dostęp do elementów losowych. Następnie implementujesz instrukcje `jeśli/w przeciwnym razie` w grze Pop the Balloons, aby sprawdzić, czy ruch jest prawidłowy.
+              description_teacher: Uczniowie przeglądają instrukcje `jeśli/w przeciwnym razie` i używają ich do implementowania alternatywnych działań na podstawie wartości wyrażenia logicznego. Stosują instrukcje `jeśli/w przeciwnym razie`, aby uzyskać dostęp do elementów z tablic i używają metody `Math.random()`, aby uzyskać dostęp do elementów losowych. Następnie implementują instrukcje `jeśli/w przeciwnym razie` w grze Pop the Balloons, aby sprawdzić, czy ruch jest prawidłowy.
+            Testing Multiple Conditions:
+              description_student: Dzisiaj chodzi o ocenę wielu warunków w celu wybrania konkretnego pożądanego rezultatu. W The Neighborhood używa się instrukcji `jeśli/w przeciwnym razie-jeśli/w przeciwnym razie` do rozwiązywania problemów dla `Malarza`. Następnie implementujesz instrukcje `jeśli/w przeciwnym razie-jeśli/w przeciwnym razie` w grze Pop the Balloons, aby zaktualizować obraz balonu, jeśli został on wystrzelony.
+              description_teacher: Uczniowie stosują instrukcje 'jeśli/w przeciwnym razie-jeśli/w przeciwnym razie' do oceny wielu warunków, by wybrać określony pożądany wynik. Opracowują funkcję wyświetlania balonów w grze Pop the Balloons, używając instrukcji 'jeśli/w przeciwnym razie-jeśli/w przeciwnym razie', aby zmienić obraz balonu, jeśli został on wystrzelony.
+            Using Logical Operators:
+              description_student: Dowiesz się, jak pisać zagnieżdżone instrukcje i wyrażenia „jeśli” zawierające trzy operatory logiczne. Upraszczasz bardziej złożone wielokrotne warunki warunkowe, używając operatorów logicznych do rozwiązywania problemów. Wracasz do The Neighborhood i dodajesz zagnieżdżone instrukcja `jeśli`, aby rozwiązać dany problem dla `Malarza`. Następnie implementujesz zagnieżdżone instrukcje „jeśli” i operatory logiczne w grze Pop the Balloons, aby sprawdzić, ile pozostało ruchów i obliczyć wynik gry.
+              description_teacher: Uczniowie badają problemy dotyczące wielu warunków i piszą zagnieżdżone instrukcje „jeśli”, aby utworzyć rozwiązania tych problemów. Piszą wyrażenia zawierające operatory logiczne w instrukcjach warunkowych i identyfikują wpływ operatorów logicznych na wynik wyrażenia. Zagnieżdżone instrukcje „jeśli” i operatory logiczne są następnie implementowane w grze Pop the Balloons, aby sprawdzić, ile ruchów pozostało i obliczyć wynik.
             Neighborhood Block Party Project - Day 1:
               description_student: W tym projekcie projektujesz podstawowe elementy prostej gry, planując i rozwijając silnik gry. Nakreślasz mechanikę gry, pseudokodujesz każdy komponent, a następnie używasz interaktywnego procesu projektowania, aby stworzyć grę, która reaguje na interakcję użytkownika. Pod koniec tego projektu bierzesz udział w imprezie blokowej, aby grać nawzajem w gry!
               description_teacher: Studenci projektują i budują silnik gry dla tego projektu, skupiając się przede wszystkim na logice warunkowej potrzebnej do tego, aby gra była interaktywna i responsywna. Rozpoczynają od wybrania prostej gry i określenia jej podstawowych funkcji. Piszą pseudokod dla tych komponentów i rozpoczynają rozwijanie swojego projektu.
@@ -20066,24 +20228,50 @@ pl:
               name: Dzień FRQ
             Assessment Day:
               name: Dzień sprawdzianu
+            lesson-1:
+              key: lekcja 1
+            lesson-3:
+              key: lekcja 3
+            lesson-4:
+              key: lekcja 4
+            lesson-5:
+              key: lekcja 5
+            lesson-6:
+              key: lekcja 6
+            lesson-7:
+              key: lekcja 7
+            lesson-8:
+              key: lekcja 8
+            lesson-9:
+              key: lekcja 9
+            lesson-10:
+              key: lekcja 10
+            lesson-11:
+              key: lekcja 11
             lesson-2:
+              key: lekcja 2
               description_student: W tym projekcie projektujesz podstawowe elementy prostej gry, planując i rozwijając silnik gry. Nakreślasz mechanikę gry, pseudokodujesz każdy komponent, a następnie używasz interaktywnego procesu projektowania, aby stworzyć grę, która reaguje na interakcję użytkownika. Pod koniec tego projektu bierzesz udział w imprezie blokowej, aby grać nawzajem w gry!
               description_teacher: Studenci projektują i budują silnik gry dla tego projektu, skupiając się przede wszystkim na logice warunkowej potrzebnej do tego, aby gra była interaktywna i responsywna. Rozpoczynają od wybrania prostej gry i określenia jej podstawowych funkcji. Piszą pseudokod dla tych komponentów i rozpoczynają rozwijanie swojego projektu.
             lesson-12:
+              key: lekcja 12
               description_student: Teraz, gdy masz już plan, dzisiejszym celem jest napisanie kodu. Rozwój silnika gry rozpoczynasz od przetłumaczenia pseudokodu na język Java. Przeglądasz kod i zastanawiasz się nad postępem, aby przygotować się do ostatecznego opracowania silnika gry.
               description_teacher: Na poprzedniej lekcji uczniowie zaplanowali silnik gry dla prostej gry i napisali pseudokod dla jej podstawowych funkcji. Rozpoczynają tworzenie silnika gry od przetłumaczenia pseudokodu na język Java. Uczestniczą w przeglądzie kodu i zastanawiają się nad swoimi postępami, aby przygotować się do ostatecznego opracowania silnika gry.
             lesson-13:
+              key: lekcja 13
               description_student: To Dzień Blokowej Imprezy! Przed rozpoczęciem imprezy weźmiesz udział w dwóch iteracjach, aby dalej rozwijać silnik gry i zrewidować listę priorytetów w oparciu o postępy i wymagania projektu. Pod koniec zajęć świętujesz swój sukces, grając w gry innych i świętując swój rozwój.
               description_teacher: Uczniowie rozpoczynają drugą iterację swojego projektu. Po pracy nad swoim kodem, oceniają swoją pracę według rubryki projektu i tworzą ostateczną listę priorytetów dla swojej ostatniej iteracji. Następnie kończą swoją ostatnią iterację, a klasa świętuje w formie imprezy blokowej, podczas której uczniowie grają nawzajem w swoje gry. Kończą projekt ostateczną refleksją i identyfikują potencjalne kolejne kroki, aby kontynuować rozwój swojej gry.
             lesson-14:
+              key: lekcja 14
               name: Dzień FRQ
             lesson-15:
+              key: lekcja 15
               name: Dzień sprawdzianu
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+          name: csa4-pilot-facilitator
         csa5-pilot-facilitator:
           lessons:
             Creating Tables of Data:
@@ -20129,49 +20317,75 @@ pl:
             Assessment Day:
               name: Dzień sprawdzianu
             lesson-1:
+              key: lekcja 1
               name: Tworzenie tablic z danymi
               description_student: Na poprzednich lekcjach używałeś tablic jednowymiarowych (1D) do przechowywania wartości tego samego typu. Dzisiaj dowiesz się, jak tworzyć i używać dwuwymiarowych (2D) tablic, tablic przechowujących tablice tego samego typu. Tablice 2D są przydatne do przechowywania danych reprezentowanych w postaci tabeli. Na tej lekcji użyjesz tablic 2D do przechowywania danych reprezentujących ekspansję biznesową projektu Mercury Pastries Food Truck.
               description_teacher: Uczniowie poznają budowę dwuwymiarowych (2D) tablic oraz identyfikują podobieństwa i różnice między tablicami 1D i 2D. Tworzą tablice 2D do przechowywania elementów „int” i „double” za pomocą słowa kluczowego „new” i list inicjalizacji, aby reprezentować rozszerzony inwentarz projektu Mercury Pastries Food Truck. Uzyskują dostęp do poszczególnych elementów i modyfikują je, odwołując się do wartości indeksów wierszy i kolumn w celu uzyskania i oceny danych przechowywanych w tablicy 2D.
             lesson-2:
+              key: lekcja 2
               name: Trawersowanie tablicy 2D wierszami
               description_student: Teraz, gdy widziałeś już tablice 2D, piszesz zagnieżdżone pętle „dla”, aby je przemierzać! Wracasz do Teatru, aby przygotować nowy koncert, aby edukować The Neighborhood na temat zrównoważonego transportu. Po wybraniu początkowego obrazu powitalnego na koncercie, napisz metodę `getPixels()`, która przechowuje piksele z obrazu w tablicy 2D, aby wykorzystać ją w nadchodzących lekcjach do tworzenia efektów obrazu.
               description_teacher: Uczniowie używają zagnieżdżonych pętli „dla” do przechodzenia przez tablice 2D w kolejności wiersz główny i stosują standardowy algorytm, który napisali w Jednostce 3. do oceny danych. Ponownie odwiedzają Teatr, aby rozpocząć tworzenie nowego koncertu, który ma na celu edukowanie The Neighborhood na temat zrównoważonego transportu. Wybierają początkowy obraz powitalny na koncercie i piszą metodę `getPixels()`, która przechowuje piksele z obrazu w tablicy 2D, aby wykorzystać ją na nadchodzących lekcjach do tworzenia efektów graficznych.
             lesson-3:
+              key: lekcja 3
               name: Trawersowanie tablicy 2D kolumnami
               description_student: Dane są zorganizowane w wiersze i kolumny. W poprzedniej lekcji trawersowałeś tablicę 2D, aby uzyskać dostęp do elementów i wykonać obliczenia w rzędzie. Dzisiaj dowiesz się, jak przemierzać tablicę 2D w kolejności kolumn. Korzystając z tego algorytmu przechodzenia, tworzysz efekty obrazu, które manipulują pikselami w celu odbicia obrazu w pionie.
               description_teacher: Uczniowie używają zagnieżdżonych pętli „dla” do przechodzenia przez tablicę 2D w kolejności kolumn. Rozróżniają kolejność względem kolumn i wierszy oraz wyjaśniają, kiedy mogą zastosować jedno podejście zamiast drugiego. Stosują przechodzenie kolumnami, aby obliczyć całkowite zapasy według deserów w ramach projektu Mercury Pastries Food Truck i dalej rozwijać koncert w Teatrze. Uczniowie manipulują pikselami na obrazie za pomocą przechodzenia kolumnami w celu pionowego odzwierciedlenia obrazu i wdrożenia efektu na koncercie.
             lesson-4:
+              key: lekcja 4
               name: Stosowanie ulepszonych pętli
               description_student: Dzisiaj poznasz strukturę wykorzystania ulepszonych pętli „dla” do przechodzenia przez tablice 2D. Identyfikujesz podobieństwa i różnice między używaniem rozszerzonej pętli „dla” z tablicami 1D i 2D. Używasz zagnieżdżonej rozszerzonej pętli „dla” do pisania metod modyfikujących wartości kolorów pikseli i tworzenia efektów na obrazach koncertu.
               description_teacher: Uczniowie poznają strukturę ulepszonych pętli „dla” do przechodzenia tablice 2D. Identyfikują podobieństwa i różnice między używaniem ulepszonych pętli „dla” z tablicami 1D i 2D. Używają zagnieżdżonych, ulepszonych pętli „dla”, aby napisać metody modyfikowania wartości kolorów pikseli i tworzenia efektów na obrazach podczas koncertu.
             lesson-5:
+              key: lekcja 5
               name: Ocena tablic 2D
               description_student: Burmistrz poprosił Project Mercury Pastries Food Truck o przygotowanie deserów na nadchodzącym koncercie. Aby pomóc właścicielowi, wdrażasz nowe algorytmy przygotowujące do wydarzenia. Eksplorujesz wykonywanie instrukcji `zwróć` wewnątrz pętli w porównaniu do poza pętlą. Piszesz nowe standardowe algorytmy, aby sprawdzić, czy wartości są podzielne równomiernie przez inną liczbę całkowitą i znaleźć liczbę elementów, które spełniają określone kryteria.
               description_teacher: Uczniowie badają efekt wykonania instrukcji `zwróć` wewnątrz pętli w porównaniu z wykonaniem poza pętlą. Piszą nowe standardowe algorytmy, aby sprawdzić, czy wartości są równomiernie podzielne przez inną liczbę całkowitą i znaleźć liczbę elementów spełniających określone kryteria. Rozwiązują problemy w ramach projektu Mercury Pastries Food Truck, wdrażając te algorytmy.
             lesson-6:
+              key: lekcja 6
               name: Stosowanie standardowych algorytmów
               description_student: Standardowe algorytmy, które napisałeś w Jednostce 3, działają również z tablicami 2D i mogą tworzyć efekty wizualne na obrazach. W tej lekcji będziesz rozwijać swój koncert w Teatrze, pisząc metodę `grayscale()`. Znajdź minimalne i maksymalne wartości koloru czerwonego, zielonego lub niebieskiego i użyj tej wartości do ustawienia wszystkich innych wartości czerwonego, zielonego lub niebieskiego. Uczestniczysz w przeglądach kodu, aby dawać, otrzymywać i wdrażać informacje zwrotne na temat nowych metod i postępów.
               description_teacher: Uczniowie stosują standardowe algorytmy, które napisali w Jednostce 3, do tablic 2D, aby tworzyć efekty wizualne na obrazach. Kontynuują opracowywanie koncertu w Teatrze, pisząc metodę `grayscale()`, która znajduje średnią wartości RGB piksela na obrazie i ustawia piksel na tę średnią wartość. Uczniowie znajdują minimalne i maksymalne wartości koloru czerwonego, zielonego lub niebieskiego i używają tych wartości do ustawienia wszystkich innych wartości czerwonego, zielonego lub niebieskiego. Uczniowie uczestniczą w przeglądach kodu, aby dawać, otrzymywać i wdrażać informacje zwrotne na temat swoich nowych metod i postępów.
             lesson-7:
+              key: lekcja 7
               name: Odwracanie elementów
             lesson-8:
+              key: lekcja 8
               name: Przesuwanie elementów
             lesson-9:
+              key: lekcja 9
               name: Znajdowanie duplikatów
             lesson-10:
+              key: lekcja 10
               name: Poszukiwanie elementów
             lesson-11:
+              key: lekcja 11
               name: Projekt Zrównoważonego Sąsiedztwa - Dzień 1
             lesson-12:
+              key: lekcja 12
               name: Projekt Zrównoważonego Sąsiedztwa - Dzień 2
             lesson-13:
+              key: lekcja 13
               name: Projekt Zrównoważonego Sąsiedztwa - Dzień 3
             lesson-14:
+              key: lekcja 14
               name: Dzień FRQ
             lesson-15:
+              key: lekcja 15
               name: Dzień sprawdzianu
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+          name: csa5-pilot-facilitator
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Innowacje w informatyce
+            lesson-9:
+              name: Kolorowe LED
+            lesson-13:
+              name: Akcelerometr
+            lesson-19:
+              name: Projekt

@@ -139,11 +139,11 @@
           "2-3_Bee_Functions_6_a": "Fonksiyonla döngü kullanman gerekmiyor. Fonksiyonu kullanarak ilerle sonra da tekrar fonksiyonu kullanarak ilerle."
         },
         "2-3 Bee Functions 8": {
-          "2-3_Bee_Functions_8_a": "Bulmaca zorlu görünüyorsa fonksiyonu adım adım oluşturmayı deneyin.  \n\nBirkaç blok ekleyin, sonra deneyin. Biraz daha ekleyin, sonra tekrar deneyin. Çok geçmeden başaracaksınız!\n\n[][0]"
+          "2-3_Bee_Functions_8_a": "Bulmaca zorlu görünüyorsa fonksiyonu adım adım oluşturmayı deneyin.  \n\nBirkaç blok ekleyin, sonra deneyin. Biraz daha ekleyin, sonra tekrar deneyin. Çok geçmeden başaracaksınız!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         },
         "2-3 Bee Functions 9": {
           "2-3_Bee_Functions_8_a": "Bulmaca zorlu görünüyorsa, fonksiyonu her seferinde bir blok ekleyerek oluşturun.\n Bazı bloklar ekleyin, sonra çalıştırın. Daha fazla blok ekleyin, sonra yeniden deneyin.  Çözüme ulaşacaksınız! ",
-          "2-3_Bee_Functions_8_b": "Kodunuzu yeşil fonksiyon bloğu içinde oluşturmayı unutmayın!\n\n[][0]"
+          "2-3_Bee_Functions_8_b": "Kodunuzu yeşil fonksiyon bloğu içinde oluşturmayı unutmayın!\n\n![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)"
         },
         "2-3 Bee Loops 2": {
           "2-3_Bee_Loops_2_a": "Döngü içinde 4 blok olsun."
@@ -1205,15 +1205,15 @@
           "courseB_maze_seq_challenge1_b": "Batıya ilerlemeyi deneyerek başlayın."
         },
         "course1_playlab_events_challenge1": {
-          "courseA_playlab_events_challenge1_a": "Robin'e tıkladığınızda Waddles the Penguin'in görünmesini sağlayın!\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge1_b": "Waddles'a tıkladığınızda Boo the Ghost'un görünmesini sağlayın!\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge1_c": "Boo'ya tıkladığınızda Fuzzy the Monster'ın görünmesini sağlayın!\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge1_d": "Monster'a tıkladığınızda Spiff the Robot'un görünmesini sağlayın!\n\n[blockly block][0]"
+          "courseA_playlab_events_challenge1_a": "Robin'e tıkladığınızda Waddles the Penguin'in görünmesini sağlayın!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Waddles'a tıkladığınızda Boo the Ghost'un görünmesini sağlayın!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Boo'ya tıkladığınızda Fuzzy the Monster'ın görünmesini sağlayın!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Monster'a tıkladığınızda Spiff the Robot'un görünmesini sağlayın!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "course1_playlab_events_challenge2": {
-          "courseA_playlab_events_challenge2_a": "Bir kuşun ötmesini sağlayabilirsiniz.\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge2_b": "Bir robotun \"bip\" sesi çıkarmasını sağlayabilirsiniz.\n\n[blockly block][0]",
-          "courseA_playlab_events_challenge2_c": "Öfkeli bir canavarın homurdamasını sağlayabilirsiniz.\n\n[blockly block][0]"
+          "courseA_playlab_events_challenge2_a": "Bir kuşun ötmesini sağlayabilirsiniz.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Bir robotun \"bip\" sesi çıkarmasını sağlayabilirsiniz.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "Öfkeli bir canavarın homurdamasını sağlayabilirsiniz.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "course2_artist_nestedLoops_challenge1": {
           "courseD_artist_nestedLoops_challenge1_a": "Dört tane sekizgen oluşturmak için iç içe döngü yaparak başla. Sekizgen yapmak için 45 derece dön. Zıpla ve her birinden sonra 90 derce dön.",
@@ -1251,8 +1251,8 @@
         "course2_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "Bunu çözmenin bir yolu zikzak gibi görünüyor. Bir diğer yol sarmal gibi görünüyor. Bunun gibi bir bulmacayı çözmenin birçok farklı yolu var. Israrcı ol!",
           "courseC_harvester_loops_challenge2_b": "İhtiyaç duyduğun kadar 'ilerle' ve 'marul al' komutlarını tekrar edip, sonra her köşede dönebilirsin.",
-          "courseC_harvester_loops_challenge2_c": "Bulmacayı sadece 20 blok ile bitirmek için bu zikzak deseni iki kez tekrarlanabilir!\n\n[][0]",
-          "courseC_harvester_loops_challenge2_d": "Bu sarmal desen sadece 18 blok ile kodlanabilir!\n\n[][0]"
+          "courseC_harvester_loops_challenge2_c": "Bulmacayı sadece 20 blok ile bitirmek için bu zikzak deseni iki kez tekrarlanabilir!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Bu sarmal desen sadece 18 blok ile kodlanabilir!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
         "course2_maze_loops_challenge1": {
           "courseC_maze_loops_challenge1_a": "Bu yolu üç farklı parça olarak düşün. Her birinin tekrar edebileceğin bir deseni vardır.",
@@ -1266,7 +1266,7 @@
           "courseE_artist_functions_challenge1_a": "Eğer fonksiyonu bir kez daha çalıştırırsanız, son köşede aynı tasarımı oluşturabilirsiniz. Aynı zamanda farklı pozisyonlara da atlayabilir veya istediğiniz her şeyi değiştirebilirsiniz!"
         },
         "course3_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "[blockly block][0]\n\nBu \"atla\" bloğu Zombie Artist'i istediğiniz zaman ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Bunu, zombiyi piksel sayısı kadar sağa ve piksel sayısı kadar aşağıya taşıyarak yapar. Her zaman sol üst köşeden sayılır, Zombi Artist'in komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!\n\n[][1]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nBu \"atla\" bloğu Zombie Artist'i istediğiniz zaman ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Bunu, zombiyi piksel sayısı kadar sağa ve piksel sayısı kadar aşağıya taşıyarak yapar. Her zaman sol üst köşeden sayılır, Zombi Artist'in komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "course3_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Bu programın neden ilk yarısı çalıştı? Arıların neden geriye gitmeleri gerektiği hakkında düşünün. Çiçeklerin üzerinden her geçtiklerinde arılar ne kadar nektar toplarlar?",
@@ -1318,10 +1318,10 @@
         },
         "course4_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "Bir fonksiyonu bir kez tanımladığınızda tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz!",
-          "courseE_artist_concept_challenge2_b": "Bu komutu kullanarak tuval üzerinde farklı konumlara atlayabilirsin:\n\n[blockly block][0]"
+          "courseE_artist_concept_challenge2_b": "Bu komutu kullanarak tuval üzerinde farklı konumlara atlayabilirsin:\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
         },
         "course4_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "[blockly block][0]\n\nBu \"atla\" bloğu Zombie Artist'i istediğiniz zaman ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Bunu, zombiyi piksel sayısı kadar sağa ve piksel sayısı kadar aşağıya taşıyarak yapar. Her zaman sol üst köşeden sayılır, Zombi Artist'in komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!\n\n[][1]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nBu \"atla\" bloğu Zombie Artist'i istediğiniz zaman ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Bunu, zombiyi piksel sayısı kadar sağa ve piksel sayısı kadar aşağıya taşıyarak yapar. Her zaman sol üst köşeden sayılır, Zombi Artist'in komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "course4_artist_variables_challenge1": {
           "courseF_artist_variables_challenge1_a": "Her bir dikey çizgi '10' uzunluğunda. Her bir yatay çizgi 'uzunluk' (length) uzunluğunda olmalı.",

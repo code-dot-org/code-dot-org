@@ -25,7 +25,7 @@ import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
-import {CsaViewMode} from './constants';
+import {CsaViewMode, InputMessageType} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
 import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
@@ -103,7 +103,6 @@ Javalab.prototype.init = function(config) {
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
-  const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
 
   switch (this.level.csaViewMode) {
     case CsaViewMode.NEIGHBORHOOD:
@@ -139,7 +138,6 @@ Javalab.prototype.init = function(config) {
     bodyElement.style.overflow = 'hidden';
     bodyElement.className = bodyElement.className + ' pin_bottom';
     container.className = container.className + ' pin_bottom';
-    this.studioApp_.initVersionHistoryUI(config);
     this.studioApp_.initTimeSpent();
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
 
@@ -229,10 +227,6 @@ Javalab.prototype.init = function(config) {
   // Dispatches a redux update of isDarkMode
   getStore().dispatch(setIsDarkMode(this.isDarkMode));
 
-  // ensure autosave is executed on first run by manually setting
-  // projectChanged to true.
-  project.projectChanged();
-
   getStore().dispatch(
     setBackpackApi(new BackpackClientApi(config.backpackChannel))
   );
@@ -256,9 +250,12 @@ Javalab.prototype.init = function(config) {
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
-        handleVersionHistory={handleVersionHistory}
         visualization={this.visualization}
         viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
+        isProjectTemplateLevel={!!this.level.projectTemplateLevelName}
+        handleClearPuzzle={() => {
+          return this.studioApp_.handleClearPuzzle(config);
+        }}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -282,6 +279,12 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
+  if (this.studioApp_.attempts === 0) {
+    // ensure we save to S3 on the first run.
+    // Javabuilder requires code to be saved to S3.
+    project.projectChanged();
+  }
+
   this.studioApp_.attempts++;
   if (this.studioApp_.hasContainedLevels) {
     lockContainedLevelAnswers();
@@ -315,7 +318,17 @@ Javalab.prototype.onStop = function() {
 
 // Called by Javalab console to send a message to Javabuilder.
 Javalab.prototype.onInputMessage = function(message) {
-  this.javabuilderConnection.sendMessage(message);
+  this.onJavabuilderMessage(InputMessageType.SYSTEM_IN, message);
+};
+
+// Called by the console or mini apps to send a message to Javabuilder.
+Javalab.prototype.onJavabuilderMessage = function(messageType, message) {
+  this.javabuilderConnection.sendMessage(
+    JSON.stringify({
+      messageType,
+      message
+    })
+  );
 };
 
 // Called by the Javalab app when it wants to go to the next level.
