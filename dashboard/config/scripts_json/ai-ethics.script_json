@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-17 16:32:05 UTC",
+    "serialized_at": "2021-09-17 20:27:33 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "ai-ethics"
@@ -28,7 +28,21 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Our AI Code of Ethics",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-ethics"
+      }
+    }
   ],
   "lesson_activities": [
 
