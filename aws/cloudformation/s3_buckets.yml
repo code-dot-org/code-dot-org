@@ -35,8 +35,8 @@ Resources:
       LifecycleConfiguration:
         Rules:
           -
-            Id: "60-day expiration of old versions"
-            NoncurrentVersionExpirationInDays: 60
+            Id: "365-day expiration of old versions"
+            NoncurrentVersionExpirationInDays: 365
             Prefix: "sources/"
             Status: "Enabled"
           -
