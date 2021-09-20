@@ -82,5 +82,6 @@ export const SongTitlesToArtistTwitterHandle = {
   showdaspoderosas_anitta: 'Anitta',
   janti_muratboz: 'MuratBoz',
   gee_girlsgen: 'GirlsGeneration',
-  growingpains_alessiacara: 'AlessiaCara'
+  growingpains_alessiacara: 'AlessiaCara',
+  despedidaycierre_vanesamartin: 'vanesamartin_'
 };
