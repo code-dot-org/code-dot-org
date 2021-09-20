@@ -271,7 +271,7 @@ class Lesson < ApplicationRecord
   end
 
   def localized_lesson_plan
-    return script_lesson_path(script, self) if script.is_migrated
+    return script_lesson_path(script, self) if script.is_migrated? && !script.use_legacy_lesson_plans?
 
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
@@ -344,7 +344,7 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonEditPath: edit_lesson_path(id: id)
+        lessonEditPath: get_uncached_edit_path
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -382,6 +382,25 @@ class Lesson < ApplicationRecord
     lesson_summary.freeze
   end
 
+  def get_uncached_edit_path
+    # for hoc scripts, everything under /s/[script-name]/lessons/* is cached,
+    # and user-identifying cookies are stripped. this means we can't tell if
+    # a user trying to edit a lesson plan via /s/[script-name]/lessons/1/edit
+    # has sufficient permissions or not. therefore, use a different path
+    # when editing lesson plans in hoc scripts.
+    ScriptConfig.hoc_scripts.include?(script.name) ? edit_lesson_path(id: id) : script_lesson_edit_path(script, self)
+  end
+
+  def get_uncached_show_path
+    # use a custom path for viewing hoc lesson plans on levelbuilder, so that
+    # levelbuilders can see the gray "extra links" box with a link to edit
+    # the lesson. this also sidesteps some weird problems where visiting a
+    # a path like levelbuilder-studio.code.org/s/dance/lessons/1 messes up
+    # the user's login session and requires them to reauthenticate before
+    # accessing other pages which require levelbuilder credentials.
+    ScriptConfig.hoc_scripts.include?(script.name) ? lesson_path(id: id) : script_lesson_path(script, self)
+  end
+
   def summarize_for_calendar
     {
       id: id,
@@ -412,7 +431,7 @@ class Lesson < ApplicationRecord
       lockable: !!lockable,
       hasLessonPlan: has_lesson_plan,
       unplugged: unplugged,
-      lessonEditPath: edit_lesson_path(id: id)
+      lessonEditPath: get_uncached_edit_path
     }
   end
 
@@ -454,7 +473,7 @@ class Lesson < ApplicationRecord
       courseVersionId: lesson_group.script.get_course_version&.id,
       unitIsLaunched: script.launched?,
       scriptPath: script_path(script),
-      lessonPath: script_lesson_path(script, self),
+      lessonPath: get_uncached_show_path,
       lessonExtrasAvailableForUnit: script.lesson_extras_available
     }
   end
