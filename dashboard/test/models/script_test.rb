@@ -833,19 +833,35 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.find_by_name('ECSPD').professional_learning_course?
   end
 
-  test 'should summarize unit' do
+  test 'should summarize migrated unit' do
     unit = create(:script, name: 'single-lesson-script')
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
     unit.teacher_resources = [['curriculum', '/link/to/curriculum']]
-
+    Services::CurriculumPdfs.stubs(:get_script_overview_url).returns('/overview-pdf-url')
+    Services::CurriculumPdfs.stubs(:get_unit_resources_url).returns('/resources-pdf-url')
     summary = unit.summarize
 
     assert_equal 1, summary[:lessons].count
     assert_nil summary[:peerReviewLessonInfo]
     assert_equal 0, summary[:peerReviewsRequired]
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
+    assert_equal '/overview-pdf-url', summary[:scriptOverviewPdfUrl]
+    assert_equal '/resources-pdf-url', summary[:scriptResourcesPdfUrl]
+  end
+
+  test 'should summarize migrated unit with legacy lesson plans' do
+    unit = create(:script, name: 'single-lesson-script', use_legacy_lesson_plans: true)
+    lesson_group = create(:lesson_group, key: 'key1', script: unit)
+    lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
+    create(:script_level, script: unit, lesson: lesson)
+    Services::CurriculumPdfs.stubs(:get_script_overview_url).returns('/overview-pdf-url')
+    Services::CurriculumPdfs.stubs(:get_unit_resources_url).returns('/resources-pdf-url')
+    summary = unit.summarize
+
+    refute summary[:scriptOverviewPdfUrl]
+    refute summary[:scriptResourcesPdfUrl]
   end
 
   test 'should summarize unit with peer reviews' do
@@ -2597,7 +2613,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can move lesson to later lesson group in unit' do
-    unit = create :script, name: 'lesson-group-test-script'
+    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
     lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
     lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
     lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1
@@ -2631,7 +2647,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can move last lesson group up' do
-    unit = create :script, name: 'lesson-group-test-script'
+    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
     lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
     lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
     lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1

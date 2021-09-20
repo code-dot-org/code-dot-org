@@ -1,4 +1,4 @@
-import {assert} from '../util/deprecatedChai';
+import {assert} from '../util/reconfiguredChai';
 var testUtils = require('./../util/testUtils');
 
 import instructions, {

@@ -298,6 +298,7 @@ Dashboard::Application.routes.draw do
 
   resources :lessons, only: [:edit, :update] do
     member do
+      get :show, to: 'lessons#show_by_id'
       post :clone
     end
   end
