@@ -171,19 +171,28 @@ module AWS
           Prefix: cloudfront[:log][:prefix]
         },
         Origins: [
-          {
-            Id: 'cdo',
-            CustomOriginConfig: {
-              OriginProtocolPolicy: 'match-viewer',
-              OriginSSLProtocols: %w(TLSv1.2 TLSv1.1)
-            },
-            DomainName: origin,
-            OriginPath: '',
-            OriginShield: {
-              Enabled: true,
-              OriginShieldRegion: {Ref: 'AWS::Region'}
+          *HTTP_CACHE.keys.map do |app_name|
+            proxy = (app == :hourofcode) ? :pegasus : app
+            {
+              Id: app_name == proxy ? 'cdo' : app_name,
+              CustomOriginConfig: {
+                OriginProtocolPolicy: 'match-viewer',
+                OriginSSLProtocols: %w(TLSv1.2 TLSv1.1)
+              },
+              DomainName: origin,
+              OriginPath: '',
+              OriginShield: {
+                Enabled: true,
+                OriginShieldRegion: {Ref: 'AWS::Region'}
+              },
+              OriginCustomHeaders: app_name == proxy ? [] : [
+                {
+                  HeaderName: 'X-Cdo-Backend',
+                  HeaderValue: app_name
+                }
+              ]
             }
-          },
+          end,
           {
             Id: 'cdo-assets',
             DomainName: "#{CDO.assets_bucket}.s3.amazonaws.com",
@@ -271,7 +280,7 @@ module AWS
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,
         SmoothStreaming: false,
-        TargetOriginId: (s3 ? behavior_config[:proxy] : 'cdo'),
+        TargetOriginId: (behavior_config[:proxy] || 'cdo'),
         TrustedSigners: behavior_config[:trusted_signer] ? ['self'] : [],
         ViewerProtocolPolicy: 'redirect-to-https'
       }.tap do |behavior|
