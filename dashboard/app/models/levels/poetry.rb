@@ -26,7 +26,7 @@
 
 class Poetry < GamelabJr
   def self.skins
-    ['poetry']
+    ['gamelab']
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -37,9 +37,13 @@ class Poetry < GamelabJr
         level_num: 'custom',
         properties: {
           block_pools: [
-            "PoemBot",
+            "GamelabJr",
+            "PoemBot"
           ],
-          helper_libraries: [],
+          helper_libraries: [
+            "NativeSpriteLab",
+          ],
+          use_default_sprites: true,
           hide_animation_mode: true,
           show_type_hints: true,
           use_modal_function_editor: true,
