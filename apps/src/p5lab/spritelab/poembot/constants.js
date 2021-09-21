@@ -178,5 +178,21 @@ export const POEMS = {
       'Night coming tenderly',
       '  Black like me.'
     ]
+  },
+  hopler: {
+    author: 'Jay Hopler',
+    title: 'In the Garden',
+    lines: [
+      'And the sky!',
+      'Nooned with the steadfast blue enthusiasm',
+      'Of an empty nursery.',
+      'Crooked lizards grassed in yellow shade.',
+      'The grass was lizarding,',
+      'Green and on a rampage.',
+      'Shade tenacious in the crook of a bent stem.',
+      'Noon. This noon—',
+      'Skyed, blue and full of hum, full of bloom.',
+      'The grass was lizarding.'
+    ]
   }
 };

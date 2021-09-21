@@ -220,6 +220,9 @@ P5Lab.prototype.init = function(config) {
     this.skin.winAvatar = mediaUrl;
     this.skin.failureAvatar = mediaUrl;
 
+    // SpriteLab projects don't allow users to include dpad controls
+    defaultMobileControlsConfig.dpadVisible = false;
+
     injectErrorHandler(
       new BlocklyModeErrorHandler(() => this.JSInterpreter, null)
     );
