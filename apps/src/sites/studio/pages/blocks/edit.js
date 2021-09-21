@@ -6,7 +6,7 @@ import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blocks';
-import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/P5Lab';
+import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/constants';
 import animationList, {
   setInitialAnimationList
 } from '@cdo/apps/p5lab/redux/animationList';
