@@ -113,21 +113,24 @@ module Services
 
           # we've been having some issues with these title page PDFs not
           # existing on the filesystem when it comes time to make the rollup.
+          #
           # It's not yet clear whether that's because this step is failing to
-          # generate or because the file is getting vanished after generation.
-          # Adding some logging here to help diagnose.
-          unless $?.success?
+          # generate or because the file is getting vanished after generation,
+          # but logging that we added in the past indicates that the problem is
+          # mostly likely that this step is failing to generate.
+          #
+          # Because it's not yet clear *why* this step is failing to generate,
+          # we add some retries as a band-aid.
+          total_retries = 3
+          total_retries.times do |current_retry|
+            break if File.exist?(path)
             ChatClient.log(
-              "PDF generation exited with status code #{$?.exitstatus.inspect}",
+              "File #{path.inspect} does not exist after generation; retrying (#{current_retry + 1}/#{total_retries})",
               color: 'red'
             )
+            PDF.generate_from_html(page_content, path)
           end
-          unless File.exist?(path)
-            ChatClient.log(
-              "File #{path.inspect} does not exist after generation",
-              color: 'red'
-            )
-          end
+          raise "File #{path.inspect} does not exist after generation" unless File.exist?(path)
 
           return path
         end
