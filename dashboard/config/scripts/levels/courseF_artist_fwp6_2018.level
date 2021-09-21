@@ -53,7 +53,6 @@
           <title name="NAME">draw a spiral edge</title>
           <statement name="STACK">
             <block type="controls_for_counter" inline="true">
-              <mutation counter="counter"/>
               <value name="FROM">
                 <block type="math_number">
                   <title name="NUM">3</title>
@@ -248,7 +247,6 @@
           <title name="NAME">draw a spiral edge</title>
           <statement name="STACK">
             <block type="controls_for_counter" inline="true">
-              <mutation counter="counter"/>
               <value name="FROM">
                 <block type="math_number">
                   <title name="NUM">3</title>
