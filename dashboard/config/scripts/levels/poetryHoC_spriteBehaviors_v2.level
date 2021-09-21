@@ -18,8 +18,8 @@
     "all_animations_single_frame": "true",
     "use_modal_function_editor": "true",
     "embed": "false",
-    "instructions_important": "false",
-    "long_instructions": "Sprites can have their own behaviors, which are actions they will do over and over while the program runs.\r\n\r\n* Drag out a behavior block, the `sprite begins` block.  \r\n* Explore different behaviors. \r\n\r\n**Challenge**: *Have your sprite begin two different behaviors at the same time.*\r\n",
+    "instructions_important": "true",
+    "long_instructions": "Sprites can have their own behaviors, which are actions they will do over and over while the program runs.\r\n\r\n* Drag out a behavior block, the `sprite begins` block.  \r\n* Explore different behaviors. \r\n\r\n*Extra Challenge:* Use an **event** to make a sprite begin a behavior when the mood shifts!",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -49,7 +49,7 @@
   "created_at": "2021-09-21T18:24:57.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2021-09-21T18:24:57.782+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_spriteBehaviors\\\"\"],\"cloned_from\":\"poetryHoC_spriteBehaviors\"},{\"changed_at\":\"2021-09-21 18:25:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-21T18:24:57.782+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_spriteBehaviors\\\"\"],\"cloned_from\":\"poetryHoC_spriteBehaviors\"},{\"changed_at\":\"2021-09-21 18:25:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 20:33:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_important\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:34:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:46:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1458,6 +1458,9 @@
             </block>
           </value>
         </block>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">5</title>
+        </block>
         <block type="gamelab_makeNumSprites">
           <title name="ANIMATION_NAME">"tropicalfish_04"</title>
           <value name="NUM">
@@ -1468,7 +1471,7 @@
         </block>
         <block type="PoemBot_setSize">
           <title name="SPRITE">"alligator_mouth_closed"</title>
-          <title name="VAL"/>
+          <title name="VAL">0</title>
         </block>
         <block type="PoemBot_startBehavior">
           <title name="ANIMATION_NAME">"tropicalfish_04"</title>

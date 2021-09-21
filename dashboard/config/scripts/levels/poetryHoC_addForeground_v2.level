@@ -19,7 +19,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "Add another effect that match the **mood** of this poem. You can add more than one!\r\n\r\n* Drag out the `do effect` block. \r\n* Choose an effect that matches the **mood** of the poem. \r\n* Click \"Run.\"",
+    "long_instructions": "Add another effect that matches the **mood** of this poem. You can add more than one!\r\n\r\n* Drag out the `do effect` block. \r\n* Choose an effect that matches the **mood** of the poem. \r\n* Click \"Run.\"\r\n\r\n*Extra Challenge:* Use an **event** to make an effect happen when the mood shifts!",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -49,7 +49,7 @@
   "created_at": "2021-09-21T18:23:13.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2021-09-21T18:23:13.069+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_addForeground\\\"\"],\"cloned_from\":\"poetryHoC_addForeground\"},{\"changed_at\":\"2021-09-21 18:23:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-21T18:23:13.069+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_addForeground\\\"\"],\"cloned_from\":\"poetryHoC_addForeground\"},{\"changed_at\":\"2021-09-21 18:23:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 20:25:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:28:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:28:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:39:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:41:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:34:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:54:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -86,6 +86,9 @@
         </block>
         <block type="PoemBot_setForegroundEffect">
           <title name="EFFECT">"rain"</title>
+        </block>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">9</title>
         </block>
       </xml>
     </toolbox_blocks>

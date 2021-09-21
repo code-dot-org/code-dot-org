@@ -19,7 +19,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "You can change the **size** of a sprite you already made. \r\n\r\n* Change the size of your sprite by changing the `???` to a number, like `25`. ",
+    "long_instructions": "You can change the **size** of a sprite you already made. \r\n\r\n* Change the size of your sprite by changing the `???` to a number, like `25`. \r\n\r\n*Extra Challenge:* Use an **event** to change the size of a sprite when the mood shifts!",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -50,7 +50,7 @@
   "created_at": "2021-09-21T18:24:36.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2021-09-21T18:24:35.984+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_spriteProperties\\\"\"],\"cloned_from\":\"poetryHoC_spriteProperties\"},{\"changed_at\":\"2021-09-21 18:24:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-21T18:24:35.984+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_spriteProperties\\\"\"],\"cloned_from\":\"poetryHoC_spriteProperties\"},{\"changed_at\":\"2021-09-21 18:24:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 20:32:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:32:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:44:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -142,6 +142,9 @@
             </block>
           </value>
         </block>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">5</title>
+        </block>
         <block type="gamelab_makeBurst">
           <title name="EFFECT">"burst"</title>
           <title name="ANIMATION_NAME">"tropicalfish_04"</title>
@@ -161,7 +164,7 @@
         </block>
         <block type="PoemBot_setSize">
           <title name="SPRITE">"alligator_mouth_closed"</title>
-          <title name="VAL"/>
+          <title name="VAL">0</title>
         </block>
       </xml>
     </toolbox_blocks>
