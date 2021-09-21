@@ -328,7 +328,7 @@ describe('ProgressLesson', () => {
         viewAs={ViewType.Teacher}
         lesson={fakeLesson('lesson1', 1, true)}
         lockableAuthorizedLoaded={false}
-        lockableAuthorized={false}
+        lockableAuthorized={null}
       />
     );
     expect(wrapper.text()).to.not.include(

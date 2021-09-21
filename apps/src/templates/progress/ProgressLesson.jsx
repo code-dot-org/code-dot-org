@@ -33,7 +33,7 @@ class ProgressLesson extends React.Component {
     lessonIsLockedForUser: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.string,
     lockableAuthorized: PropTypes.bool,
-    lockableAuthorizedLoaded: PropTypes.bool,
+    lockableAuthorizedLoaded: PropTypes.bool.isRequired,
     lessonIsLockedForAllStudents: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
   };
@@ -128,9 +128,10 @@ class ProgressLesson extends React.Component {
     const lessonUrl = levels[0] && levels[0].url;
 
     // If a teacher is not verified they will not be lockableAuthorized (meaning they can't
-    // lock or unlock lessons). For lockableUnauthorizedTeacher we will display a warning explaining
-    // that they need to be verified to unlock lessons.
-    const lockableUnauthorizedTeacher =
+    // lock or unlock lessons). For a lockable lesson where teacher is not authorized, we will
+    // display a warning explaining that they need to be verified to unlock lessons.
+    const showNotAuthorizedWarning =
+      lesson.lockable &&
       viewAs === ViewType.Teacher &&
       this.props.lockableAuthorizedLoaded &&
       !this.props.lockableAuthorized;
@@ -196,7 +197,7 @@ class ProgressLesson extends React.Component {
                 </span>
               )}
           </div>
-          {lesson.lockable && lockableUnauthorizedTeacher && (
+          {showNotAuthorizedWarning && (
             <div style={styles.notAuthorizedWarning}>
               {i18n.unverifiedTeacherLockWarning()}
               <a
