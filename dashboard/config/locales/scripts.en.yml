@@ -26253,3 +26253,16 @@ en:
           description_short: ''
           description: 'These are just a work in progress :) '
           student_description: ''
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Poetry HoC v2
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poetry-hoc2
+          title: Poetry HoC v2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
