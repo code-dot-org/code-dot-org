@@ -105,6 +105,7 @@ Javalab.prototype.init = function(config) {
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
+  const onJavabuilderMessage = this.onJavabuilderMessage.bind(this);
 
   switch (this.level.csaViewMode) {
     case CsaViewMode.NEIGHBORHOOD:
@@ -127,7 +128,11 @@ Javalab.prototype.init = function(config) {
       this.visualization = <TheaterVisualizationColumn />;
       break;
     case CsaViewMode.PLAYGROUND:
-      this.miniApp = new Playground();
+      this.miniApp = new Playground(
+        this.onOutputMessage,
+        this.onNewlineMessage,
+        onJavabuilderMessage
+      );
       this.visualization = <PlaygroundVisualizationColumn />;
       break;
   }
