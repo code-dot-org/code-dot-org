@@ -40,7 +40,9 @@ class ReviewTab extends Component {
     forceRecreateEditorKey: 0,
     reviewablePeers: [],
     projectOwnerName: '',
-    authorizationError: false
+    authorizationError: false,
+    commentSaveError: false,
+    commentSaveInProgress: false
   };
 
   onSelectPeer = peer => {
@@ -154,6 +156,13 @@ class ReviewTab extends Component {
     }
   }
 
+  onNewCommentCancel = () => {
+    this.setState({
+      commentSaveError: false,
+      commentSaveInProgress: false
+    });
+  };
+
   onNewCommentSubmit = commentText => {
     const {
       channelId,
@@ -161,6 +170,10 @@ class ReviewTab extends Component {
       serverLevelId
     } = getStore().getState().pageConstants;
     const {token} = this.state;
+    this.setState({
+      commentSaveError: false,
+      commentSaveInProgress: true
+    });
 
     codeReviewDataApi
       .submitNewCodeReviewComment(
@@ -176,12 +189,18 @@ class ReviewTab extends Component {
 
         this.setState({
           comments: comments,
-          forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1
+          forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1,
+          commentSaveInProgress: false
         });
       })
       .fail(result => {
         if (result.status === 404) {
-          this.setState({authorizationError: true});
+          this.setState({
+            authorizationError: true,
+            commentSaveInProgress: false
+          });
+        } else {
+          this.setState({commentSaveError: true, commentSaveInProgress: false});
         }
       });
   };
@@ -358,14 +377,23 @@ class ReviewTab extends Component {
   }
 
   renderCommentEditor(forceRecreateEditorKey) {
+    const {
+      authorizationError,
+      isReadyForReview,
+      commentSaveInProgress,
+      commentSaveError
+    } = this.state;
     if (
-      !this.state.authorizationError &&
-      (this.state.isReadyForReview || this.props.viewAs === ViewType.Teacher)
+      !authorizationError &&
+      (isReadyForReview || this.props.viewAs === ViewType.Teacher)
     ) {
       return (
         <CommentEditor
           onNewCommentSubmit={this.onNewCommentSubmit}
+          onNewCommentCancel={this.onNewCommentCancel}
           key={forceRecreateEditorKey}
+          saveInProgress={commentSaveInProgress}
+          saveError={commentSaveError}
         />
       );
     }
