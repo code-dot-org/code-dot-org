@@ -3,7 +3,7 @@
   "config": {
     "func": "setPromptWithChoices",
     "inline": true,
-    "blockText": "prompt user {TEXT}{RIGHT_QUOTE} for variable {VAR} with choices {A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}",
+    "blockText": "prompt user {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} for variable {VAR} with choices {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}",
     "args": [
       {
         "name": "LEFT_QUOTE",
