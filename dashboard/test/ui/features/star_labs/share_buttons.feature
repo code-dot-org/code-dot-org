@@ -17,3 +17,21 @@ Feature: Share Buttons
     When I navigate to the shared version of my project
     And I wait until element "#gameButtons" is visible
     And element "#open-workspace" does not exist
+
+  # Making DPad button show up in Game Lab and not in Sprite Lab for mobile
+
+  @no_ie @no_safari @no_firefox @no_chrome
+  Scenario: Dpad does not appear for Sprite Lab Share
+    Given I am on "http://studio.code.org/projects/spritelab/"
+    And I wait for the page to fully load
+    When I navigate to the shared version of my project
+    And I wait until element "#gameButtons" is visible
+    And element "#studio-dpad-rim" is not displayed
+
+  @no_ie @no_safari @no_firefox @no_chrome
+  Scenario: Dpad appears for Game Lab Share
+    Given I am on "http://studio.code.org/projects/gamelab/"
+    And I wait for the page to fully load
+    When I navigate to the shared version of my project
+    And I wait until element "#gameButtons" is visible
+    And element "#studio-dpad-rim" is displayed

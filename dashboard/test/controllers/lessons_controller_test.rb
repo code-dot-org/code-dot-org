@@ -163,6 +163,19 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
                               params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot lesson'
 
+  # also limit access to lesson plans in pilots when showing lesson by id
+  test_user_gets_response_for :show_by_id, response: :redirect, user: nil,
+                              params: -> {{id: @pilot_lesson.id}},
+                              name: 'signed out user cannot view pilot lesson by id'
+
+  test_user_gets_response_for :show_by_id, response: :forbidden, user: :teacher,
+                              params: -> {{id: @pilot_lesson.id}},
+                              name: 'teacher without pilot access cannot view pilot lesson by id'
+
+  test_user_gets_response_for :show_by_id, response: :success, user: :levelbuilder,
+                              params: -> {{id: @pilot_lesson.id}},
+                              name: 'levelbuilder can view pilot lesson by id'
+
   # limit access to student lesson plans in pilots
   test_user_gets_response_for :student_lesson_plan, response: :not_found, user: nil,
                               params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}},
