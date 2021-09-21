@@ -1018,6 +1018,51 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal({}, unit.properties)
   end
 
+  test 'published_state is set to nil for script within course' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    course = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: nil
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
+    stub_file_writes(unit.name)
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      lesson_groups: '[]',
+      is_migrated: true,
+      published_state: SharedConstants::PUBLISHED_STATE.beta
+    }
+    assert_response :success
+    unit.reload
+
+    assert_nil unit.published_state
+  end
+
+  test 'published_state is set for script within course when different' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    course = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: nil
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
+    stub_file_writes(unit.name)
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      lesson_groups: '[]',
+      is_migrated: true,
+      published_state: SharedConstants::PUBLISHED_STATE.in_development
+    }
+    assert_response :success
+    unit.reload
+
+    refute_nil unit.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit.published_state
+  end
+
   test 'add lesson to unmigrated unit' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true

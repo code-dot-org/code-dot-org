@@ -6,13 +6,12 @@
     "properties": {
       "is_migrated": true,
       "version_year": "unversioned",
-      "pilot_experiment": "poembot-hoc",
       "is_course": true
     },
     "new_name": null,
     "family_name": "poembot-hoc",
-    "serialized_at": "2021-09-08 16:35:59 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2021-09-16 16:53:05 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "poetry-hoc"
     }

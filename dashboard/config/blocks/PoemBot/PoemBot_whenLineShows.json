@@ -14,7 +14,8 @@
     "args": [
       {
         "name": "N",
-        "type": "Number"
+        "type": "Number",
+        "field": true
       }
     ],
     "eventBlock": true

@@ -104,6 +104,7 @@ export default function initPage(unitEditorData) {
         initialIncludeStudentLessonPlans={
           scriptData.includeStudentLessonPlans || false
         }
+        initialUseLegacyLessonPlans={scriptData.useLegacyLessonPlans || false}
         scriptPath={scriptData.scriptPath}
       />
     </Provider>,

@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
@@ -11,13 +11,9 @@ import ReactDOM from 'react-dom';
 import sinon from 'sinon';
 
 const DEFAULT_FEEDBACK = {
+  id: 1,
   seen_on_feedback_page_at: null,
   student_first_visited_at: null,
-  lessonName: 'A Lesson',
-  lessonNum: 1,
-  levelNum: 5,
-  linkToLevel: '/link-to-level',
-  unitName: 'A Unit',
   created_at: new Date(),
   comment: 'Great Work',
   performance: 'performanceLevel1',
@@ -25,26 +21,14 @@ const DEFAULT_FEEDBACK = {
   is_awaiting_teacher_review: false
 };
 
-const setUp = (overrideFeedback, useMount = false) => {
+const setUp = overrideFeedback => {
   const props = {
     feedback: {...DEFAULT_FEEDBACK, ...overrideFeedback}
   };
-  return useMount
-    ? mount(<LevelFeedbackEntry {...props} />)
-    : shallow(<LevelFeedbackEntry {...props} />);
+  return mount(<LevelFeedbackEntry {...props} />);
 };
 
 describe('LevelFeedbackEntry', () => {
-  it('displays the expected header', () => {
-    const wrapper = setUp();
-    expect(wrapper.contains('A Lesson 1: Level 5')).to.be.true;
-  });
-
-  it('displays the unit name', () => {
-    const wrapper = setUp();
-    expect(wrapper.contains('A Unit')).to.be.true;
-  });
-
   it('displays the created date', () => {
     const createdDate = new Date();
     const wrapper = setUp({created_at: createdDate});
@@ -53,19 +37,20 @@ describe('LevelFeedbackEntry', () => {
     expect(timeAgoComponent.props().dateString).to.equal(createdDate);
   });
 
-  it('displays background as white if student has not seed feedback', () => {
+  it('displays background as lightest_gray with no opacity set if the student has not seen feedback', () => {
     const wrapper = setUp();
-    expect(wrapper.first().props().style.backgroundColor).to.equal(color.white);
+    const containerStyle = wrapper.childAt(0).props().style;
+    expect(containerStyle.backgroundColor).to.equal(color.lightest_gray);
+    expect(containerStyle.opacity).to.equal(undefined);
   });
 
-  it('displays background as gray if student has seen feedback', () => {
+  it('displays opacity as 60% if student has seen feedback', () => {
     const wrapper = setUp({
       student_first_visited_at: new Date().toString(),
       seen_on_feedback_page_at: new Date().toString()
     });
-    expect(wrapper.first().props().style.backgroundColor).to.equal(
-      color.background_gray
-    );
+    const containerStyle = wrapper.childAt(0).props().style;
+    expect(containerStyle.opacity).to.equal('60%');
   });
 
   it('displays review state badge if review state is keep working (not awaiting review)', () => {
@@ -107,21 +92,21 @@ describe('LevelFeedbackEntry', () => {
 
   it('hides the comment expander if the comment is not long', () => {
     sinon.stub(ReactDOM, 'findDOMNode').returns({offsetHeight: 20});
-    const wrapper = setUp({}, true);
+    const wrapper = setUp({});
     expect(wrapper.find({icon: 'caret-right'})).have.length(0);
     ReactDOM.findDOMNode.restore();
   });
 
   it('displays the comment expander if the comment is long', () => {
     sinon.stub(ReactDOM, 'findDOMNode').returns({offsetHeight: 60});
-    const wrapper = setUp({}, true);
+    const wrapper = setUp({});
     expect(wrapper.find({icon: 'caret-right'})).to.have.length(1);
     ReactDOM.findDOMNode.restore();
   });
 
   it('displays the fade if the comment is long (and collapsed)', () => {
     sinon.stub(ReactDOM, 'findDOMNode').returns({offsetHeight: 60});
-    const wrapper = setUp({}, true);
+    const wrapper = setUp({});
     expect(wrapper.find('#comment-fade')).to.have.length(1);
     ReactDOM.findDOMNode.restore();
   });

@@ -7,10 +7,12 @@
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "customInput": "costumePicker"
       },
       {
-        "name": "VAL"
+        "name": "VAL",
+        "type": "Number",
+        "field": true
       }
     ]
   }
