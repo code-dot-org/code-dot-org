@@ -54,12 +54,15 @@ export default function StylizedBaseDialog(props) {
     return passThrough;
   }
 
-  const title =
-    typeof props.title === 'string' ? (
-      <h1 style={styles.title}>{props.title}</h1>
-    ) : (
-      props.title
-    );
+  function renderTitle() {
+    const {title} = props;
+    if (typeof title === 'string') {
+      return <h1 style={styles.title}>{title}</h1>;
+    } else {
+      return title;
+    }
+  }
+
   const horizontalRule =
     props.type === 'simple' ? null : <hr style={styles.hr} />;
   const defaultButtons = [
@@ -79,9 +82,9 @@ export default function StylizedBaseDialog(props) {
 
   return (
     <BaseDialog {...passThroughProps()} useUpdatedStyles>
-      {title && (
+      {props.title && (
         <>
-          <div style={styles.container}>{title}</div>
+          <div style={styles.container}>{renderTitle()}</div>
           {horizontalRule}
         </>
       )}
