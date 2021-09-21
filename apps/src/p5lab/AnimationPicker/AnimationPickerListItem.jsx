@@ -64,11 +64,20 @@ class AnimationPickerListItem extends React.Component {
       ? `/blockly/media/p5lab/animation-previews/category_${category}.png`
       : '';
 
-    let thumbnailStyleWithHover = [
+    const thumbnailStyleWithHover = [
       thumbnailStyle,
       hover && styles.multiSelectBorder,
       hover && styles.hoverBorder,
       selected && styles.selectBorder
+    ];
+
+    const multiSelectIconClassName = `fa ${
+      selected ? 'fa-check-square' : 'fa-plus'
+    } fa-2x`;
+    const multiSelectIconStyle = [
+      styles.multiSelectIcon,
+      hover && styles.hoverIcon,
+      selected && styles.selectIcon
     ];
 
     return (
@@ -100,9 +109,15 @@ class AnimationPickerListItem extends React.Component {
           )}
         </div>
         {label && <div style={labelStyle}>{label}</div>}
-        {animationProps && loaded && hover && this.multiSelectEnabled_ && (
-          <i className="fa fa-plus fa-2x" style={styles.hoverIcon} />
-        )}
+        {animationProps &&
+          loaded &&
+          (hover || selected) &&
+          this.multiSelectEnabled_ && (
+            <i
+              className={multiSelectIconClassName}
+              style={multiSelectIconStyle}
+            />
+          )}
       </div>
     );
   }
@@ -152,11 +167,8 @@ const styles = {
   categoryImage: {
     borderRadius: 10
   },
-  hoverIcon: {
+  multiSelectIcon: {
     position: 'absolute',
-    color: color.purple,
-    backgroundColor: color.white,
-    borderColor: color.purple,
     borderStyle: 'solid',
     borderWidth: '2px',
     height: HOVER_PLUS_SIZE,
@@ -164,6 +176,16 @@ const styles = {
     borderRadius: 5,
     top: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2,
     left: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2
+  },
+  hoverIcon: {
+    color: color.purple,
+    backgroundColor: color.white,
+    borderColor: color.purple
+  },
+  selectIcon: {
+    color: color.white,
+    backgroundColor: color.level_perfect,
+    borderColor: color.level_perfect
   },
   multiSelectBorder: {
     borderStyle: 'solid',
