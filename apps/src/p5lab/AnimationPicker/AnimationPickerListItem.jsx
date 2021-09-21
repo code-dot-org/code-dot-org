@@ -72,7 +72,7 @@ class AnimationPickerListItem extends React.Component {
     ];
 
     const multiSelectIconClassName = `fa ${
-      selected ? 'fa-check-square' : 'fa-plus'
+      selected ? 'fa-check' : 'fa-plus'
     } fa-2x`;
     const multiSelectIconStyle = [
       styles.multiSelectIcon,
