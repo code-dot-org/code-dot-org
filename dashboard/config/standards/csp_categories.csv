@@ -1,0 +1,69 @@
+framework,parent,category,type,description
+csp,,1.1,EU,Creative development can be an essential process for creating computational artifacts.
+csp,,1.2,EU,Computing enables people to use creative development processes to create computational artifacts for creative expression or to solve a problem.
+csp,,1.3,EU,Computing can extend traditional forms of human expression and experience.
+csp,,2.1,EU,A variety of abstractions built upon binary sequences can be used to represent all digital data.
+csp,,2.2,EU,Multiple levels of abstraction are used to write programs or create other computational artifacts
+csp,,2.3,EU,Models and simulations use abstraction to generate new understanding and knowledge.
+csp,,3.1,EU,People use computer programs to process information to gain insight and knowledge.
+csp,,3.2,EU,Computing facilitates exploration and the discovery of connections in information.
+csp,,3.3,EU,There are trade offs when representing information as digital data.
+csp,,4.1,EU,Algorithms are precise sequences of instructions for processes that can be executed by a computer and are implemented using programming languages.
+csp,,4.2,EU,Algorithms can solve many but not all computational problems.
+csp,,5.1,EU,"Programs can be developed for creative expression, to satisfy personal curiosity, to create new knowledge, or to solve problems (to help people, organizations, or society)."
+csp,,5.2,EU,People write programs to execute algorithms.
+csp,,5.3,EU,Programming is facilitated by appropriate abstractions.
+csp,,5.4,EU,"Programs are developed, maintained, and used by people for different purposes."
+csp,,5.5,EU,Programming uses mathematical and logical concepts.
+csp,,6.1,EU,The Internet is a network of autonomous systems.
+csp,,6.2,EU,Characteristics of the Internet influence the systems built on it.
+csp,,6.3,EU,Cybersecurity is an important concern for the Internet and the systems built on it.
+csp,,7.1,EU,"Computing enhances communication, interaction, and cognition."
+csp,,7.2,EU,Computing enables innovation in nearly every field.
+csp,,7.3,EU,Computing has a global affect -- both beneficial and harmful -- on people and society.
+csp,,7.4,EU,"Computing innovations influence and are influenced by the economic, social, and cultural contexts in which they are designed and used."
+csp,,7.5,EU,An investigative process is aided by effective organization and selection of resources. Appropriate technologies and tools facilitate the accessing of information and enable the ability to evaluate the credibility of sources.
+csp,1.1,1.1.1,LO,Apply a creative development process when creating computational artifacts. [P2]
+csp,1.2,1.2.1,LO,Create a computational artifact for creative expression. [P2]
+csp,1.2,1.2.2,LO,Create a computational artifact using computing tools and techniques to solve a problem. [P2]
+csp,1.2,1.2.3,LO,Create a new computational artifact by combining or modifying existing artifacts. [P2]
+csp,1.2,1.2.4,LO,Collaborate in the creation of computational artifacts. [P6]
+csp,1.2,1.2.5,LO,"Analyze the correctness, usability, functionality, and suitability of computational artifacts. [P4]"
+csp,1.3,1.3.1,LO,Use computing tools and techniques for creative expression. [P2]
+csp,2.1,2.1.1,LO,Describe the variety of abstractions used to represent data. [P3]
+csp,2.1,2.1.2,LO,Explain how binary sequences are used to represent digital data. [P5]
+csp,2.2,2.2.1,LO,Develop an abstraction when writing a program or creating other computational artifacts. [P2]
+csp,2.2,2.2.2,LO,Use multiple levels of abstraction to write programs. [P3]
+csp,2.2,2.2.3,LO,Identify multiple levels of abstractions that are used when writing programs. [P3]
+csp,2.3,2.3.1,LO,Use models and simulations to represent phenomena. [P3]
+csp,2.3,2.3.2,LO,"Use models and simulations to formulate, refine, and test hypotheses. [P3]"
+csp,3.1,3.1.1,LO,"Use computers to process information, find patterns, and test hypotheses about digitally processed information to gain insight and knowledge. [P4]"
+csp,3.1,3.1.2,LO,Collaborate when processing information to gain insight and knowledge. [P6]
+csp,3.1,3.1.3,LO,"Explain the insight and knowledge gained from digitally processed data by using appropriate visualizations, notations, and precise language. [P5]"
+csp,3.2,3.2.1,LO,"Extract information from data to discover and explain connections, patterns, or trends. [P1]"
+csp,3.2,3.2.2,LO,Use large data sets to explore and discover information and knowledge. [P3]
+csp,3.3,3.3.1,LO,"Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]"
+csp,4.1,4.1.1,LO,Develop an algorithm for implementation in a program. [P2]
+csp,4.1,4.1.2,LO,Express an algorithm in a language. [P5]
+csp,4.2,4.2.1,LO,Explain the difference between algorithms that run in a reasonable time and those that do not run in a reasonable time. [P1]
+csp,4.2,4.2.2,LO,Explain the difference between solvable and unsolvable problems in computer science. [P1]
+csp,4.2,4.2.3,LO,Explain the existence of undecidable problems in computer science. [P1]
+csp,4.2,4.2.4,LO,"Evaluate algorithms analytically and empirically for efficiency, correctness, and clarity. [P4]"
+csp,5.1,5.1.1,LO,"Develop a program for creative expression, to satisfy personal curiosity, or to create new knowledge. [P2]"
+csp,5.1,5.1.2,LO,Develop a correct program to solve problems. [P2]
+csp,5.1,5.1.3,LO,Collaborate to develop a program. [P6]
+csp,5.2,5.2.1,LO,Explain how programs implement algorithms. [P3]
+csp,5.3,5.3.1,LO,Use abstraction to manage complexity in programs. [P3]
+csp,5.4,5.4.1,LO,Evaluate the correctness of a program. [P4]
+csp,5.5,5.5.1,LO,Employ appropriate mathematical and logical concepts in programming. [P1]
+csp,6.1,6.1.1,LO,Explain the abstractions in the Internet and how the Internet functions. [P3]
+csp,6.2,6.2.1,LO,Explain characteristics of the Internet and the systems built on it. [P5]
+csp,6.2,6.2.2,LO,Explain how the characteristics of the Internet influence the systems built on it. [P4]
+csp,6.3,6.3.1,LO,Identify existing cybersecurity concerns and potential options to address these issues with the Internet and the systems built on it. [P1]
+csp,7.1,7.1.1,LO,"Explain how computing innovations affect communication, interaction, and cognition. [P4]"
+csp,7.1,7.1.2,LO,Explain how people participate in a problem solving process that scales. [P4]
+csp,7.2,7.2.1,LO,Explain how computing has impacted innovations in other fields. [P1]
+csp,7.3,7.3.1,LO,Analyze the beneficial and harmful effects of computing. [P4]
+csp,7.4,7.4.1,LO,"Explain the connections between computing and economic, social, and cultural contexts. [P1]"
+csp,7.5,7.5.1,LO,"Access, manage, and attribute information using effective strategies. [P1]"
+csp,7.5,7.5.2,LO,Evaluate online and print sources for appropriateness and credibility [P5]

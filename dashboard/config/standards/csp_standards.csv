@@ -1,0 +1,313 @@
+framework,category,standard,description
+csp,1.1.1,1.1.1A,"A creative process in the development of a computational artifact can include, but is not limited to, employing nontraditional, nonprescribed techniques; the use of novel combinations of artifacts, tools, and techniques; and the exploration of personal cu"
+csp,1.1.1,1.1.1B,Creating computational artifacts employs an iterative and often exploratory process to translate ideas into tangible form.
+csp,1.2.1,1.2.1A,"A computational artifact is anything created by a human using a computer and can be, but is not limited to, a program, an image, audio, video, a presentation, or a web page file."
+csp,1.2.1,1.2.1B,Creating computational artifacts requires understanding and using software tools and services.
+csp,1.2.1,1.2.1C,"Computing tools and techniques are used to create computational artifacts and can include, but are not limited to, programming IDEs, spreadsheets, 3D printers, or text editors."
+csp,1.2.1,1.2.1D,"A creatively developed computational artifact can be created by using nontraditional, nonprescribed computing techniques."
+csp,1.2.1,1.2.1E,Creative expressions in a computational artifact can reflect personal expressions of ideas or interests.
+csp,1.2.2,1.2.2A,Computing tools and techniques can enhance the process of finding a solution to a problem.
+csp,1.2.2,1.2.2B,A creative development process for creating computational artifacts can be used to solve problems when traditional or prescribed computing techniques are not effective.
+csp,1.2.3,1.2.3A,Creating computational artifacts can be done by combining and modifying existing artifacts or by creating new artifacts.
+csp,1.2.3,1.2.3B,Computation facilitates the creation and modification of computational artifacts with enhanced detail and precision.
+csp,1.2.3,1.2.3C,Combining or modifying existing artifacts can show personal expression of ideas.
+csp,1.2.4,1.2.4A,A collaboratively created computational artifact reflects effort by more than one person.
+csp,1.2.4,1.2.4B,Effective collaborative teams consider the use of online collaborative tools.
+csp,1.2.4,1.2.4C,"Effective collaborative teams practice interpersonal communication, consensus building, conflict resolution, and negotiation."
+csp,1.2.4,1.2.4D,Effective collaboration strategies enhance performance.
+csp,1.2.4,1.2.4E,Collaboration facilitates the application of multiple perspectives (including sociocultural perspectives) and diverse talents and skills in developing computational artifacts.
+csp,1.2.4,1.2.4F,A collaboratively created computational artifact can reflect personal expressions of ideas.
+csp,1.2.5,1.2.5A,"The context in which an artifact is used determines the correctness, usability, functionality, and suitability of the artifact."
+csp,1.2.5,1.2.5B,"A computational artifact may have weaknesses, mistakes, or errors depending on the type of artifact."
+csp,1.2.5,1.2.5C,The functionality of a computational artifact may be related to how it is used or perceived.
+csp,1.2.5,1.2.5D,The suitability (or appropriateness) of a computational artifact may be related to how it is used or perceived.
+csp,1.3.1,1.3.1A,"Creating digital effects, images, audio, video, and animations has transformed industries."
+csp,1.3.1,1.3.1B,"Digital audio and music can be created by synthesizing sounds, sampling existing audio and music, and recording and manipulating sounds, including layering and looping."
+csp,1.3.1,1.3.1C,"Digital images can be created by generating pixel patterns, manipulating existing digital images, or combining images."
+csp,1.3.1,1.3.1D,Digital effects and animations can be created by using existing software or modified software that includes functionality to implement the effects and animations.
+csp,1.3.1,1.3.1E,Computing enables creative exploration of both real and virtual phenomena.
+csp,2.1.1,2.1.1A,Digital data is represented by abstractions at different levels.
+csp,2.1.1,2.1.1B,"At the lowest level, all digital data are represented by bits."
+csp,2.1.1,2.1.1C,"At a higher level, bits are grouped to represent abstractions, including but not limited to numbers, characters, and color."
+csp,2.1.1,2.1.1D,"Number bases, including binary, decimal, and hexadecimal, are used to represent and investigate digital data."
+csp,2.1.1,2.1.1E,"At one of the lowest levels of abstraction, digital data is represented in binary (base 2) using only combinations of the digits zero and one."
+csp,2.1.1,2.1.1F,Hexadecimal (base 16) is used to represent digital data because hexadecimal representation uses fewer digits than binary.
+csp,2.1.1,2.1.1G,Numbers can be converted from any base to any other base.
+csp,2.1.2,2.1.2A,A finite representation is used to model the infinite mathematical concept of a number. 
+csp,2.1.2,2.1.2B,"In many programming languages, the fixed number of bits used to represent characters or integers limits the range of integer values and mathematical operations; this limitation can result in overflow or other errors."
+csp,2.1.2,2.1.2C,"In many programming languages, the fixed number of bits used to represent real numbers (as floating point numbers) limits the range of floating  point values and mathematical operations; this limitation can result in round"
+csp,2.1.2,2.1.2D,The interpretation of a binary sequence depends on how it is used.
+csp,2.1.2,2.1.2E,A sequence of bits may represent instructions or data.
+csp,2.1.2,2.1.2F,A sequence of bits may represent different types of data in different contexts.
+csp,2.2.1,2.2.1A,The process of developing an abstraction involves removing detail and generalizing functionality.
+csp,2.2.1,2.2.1B,An abstraction extracts common features from specific examples in order to generalize concepts.
+csp,2.2.1,2.2.1C,An abstraction generalizes functionality with input parameters that allow software reuse.
+csp,2.2.2,2.2.2A,"Software is developed using multiple levels of abstractions, such as constants, expressions, statements, procedures, and libraries."
+csp,2.2.2,2.2.2B,Being aware of and using multiple levels of abstraction in developing programs helps to more effectively apply available resources and tools to solve problems.
+csp,2.2.3,2.2.3A,Different programming languages offer different levels of abstraction.
+csp,2.2.3,2.2.3B,High level programming languages provide more abstractions for the programmer and make it easier for people to read and write a program.
+csp,2.2.3,2.2.3C,Code in a programming language is often translated into code in another (lowerlevel) language to be executed on a computer.
+csp,2.2.3,2.2.3D,"In an abstraction hierarchy, higher levels of abstraction (the most general concepts) would be placed toward the top and lower level abstractions (the more specific concepts) toward the bottom."
+csp,2.2.3,2.2.3E,"Binary data is processed by physical layers of computing hardware, including gates, chips, and components."
+csp,2.2.3,2.2.3F,A logic gate is a hardware abstraction that is modeled by a Boolean function.
+csp,2.2.3,2.2.3G,A chip is an abstraction composed of low level components and circuits that perform a specific function.
+csp,2.2.3,2.2.3H,A hardware component can be low level like a transistor or high level like a video card.
+csp,2.2.3,2.2.3I,"Hardware is built using multiple levels of abstractions, such as transistors, logic gates, chips, memory, motherboards, special purposes cards, and storage devices."
+csp,2.2.3,2.2.3J,"Applications and systems are designed, developed, and analyzed using levels of hardware, software, and conceptual abstractions."
+csp,2.2.3,2.2.3K,"Lowerlevel abstractions can be combined to make higher level abstractions, such as short message services (SMS) or email messages, images, audio files, and videos."
+csp,2.3.1,2.3.1A,Models and simulations are simplified representations of more complex objects or phenomena.
+csp,2.3.1,2.3.1B,Models may use different abstractions or levels of abstraction depending on the objects or phenomena being posed.
+csp,2.3.1,2.3.1C,Models often omit unnecessary features of the objects or phenomena that are being modeled.
+csp,2.3.1,2.3.1D,Simulations mimic real world events without the cost or danger of building and testing the phenomena in the real world.
+csp,2.3.2,2.3.2A,Models and simulations facilitate the formulation and refinement of hypotheses related to the objects or phenomena under consideration.
+csp,2.3.2,2.3.2B,Hypotheses are formulated to explain the objects or phenomena being modeled.
+csp,2.3.2,2.3.2C,Hypotheses are refined by examining the insights that models and simulations provide into the objects or phenomena.
+csp,2.3.2,2.3.2D,The results of simulations may generate new knowledge and new hypotheses related to the phenomena being modeled.
+csp,2.3.2,2.3.2E,Simulations allow hypotheses to be tested without the constraints of the real world.
+csp,2.3.2,2.3.2F,Simulations can facilitate extensive and rapid testing of models.
+csp,2.3.2,2.3.2G,"The time required for simulations is impacted by the level of detail and quality of the models, and the software and hardware used for the simulation."
+csp,2.3.2,2.3.2H,Rapid and extensive testing allows models to be changed to accurately reflect the objects or phenomena being modeled.
+csp,3.1.1,3.1.1A,Computers are used in an iterative and interactive way when processing digital information to gain insight and knowledge.
+csp,3.1.1,3.1.1B,Digital information can be filtered and cleaned by using computers to process information.
+csp,3.1.1,3.1.1C,"Combining data sources, clustering data, and data classification are part of the process of using computers to process information."
+csp,3.1.1,3.1.1D,Insight and knowledge can be obtained from translating and transforming digitally represented information.
+csp,3.1.1,3.1.1E,Patterns can emerge when data is transformed using computational tools.
+csp,3.1.2,3.1.2A,Collaboration is an important part of solving data driven problems.
+csp,3.1.2,3.1.2B,"Collaboration facilitates solving computational problems by applying multiple perspectives, experiences, and skill sets."
+csp,3.1.2,3.1.2C,Communication between participants working on data driven problems gives rise to enhanced insights and knowledge.
+csp,3.1.2,3.1.2D,"Collaboration in developing hypotheses and questions, and in testing hypotheses and answering questions, about data helps participants gain insight and knowledge."
+csp,3.1.2,3.1.2E,Collaborating face-to-face and using online collaborative tools can facilitate processing information to gain insight and knowledge.
+csp,3.1.2,3.1.2F,Investigating large data sets collaboratively can lead to insight and knowledge not obtained when working alone.
+csp,3.1.3,3.1.3A,Visualization tools and software can communicate information about data.
+csp,3.1.3,3.1.3B,"Tables, diagrams, and textual displays can be used in communicating insight and knowledge gained from data."
+csp,3.1.3,3.1.3C,Summaries of data analyzed computationally can be effective in communicating insight and knowledge gained from digitally represented information.
+csp,3.1.3,3.1.3D,Transforming information can be effective in communicating knowledge gained from data.
+csp,3.1.3,3.1.3E,Interactivity with data is an aspect of communicating.
+csp,3.2.1,3.2.1A,Large data sets provide opportunities and challenges for extracting information and knowledge.
+csp,3.2.1,3.2.1B,"Large data sets provide opportunities for identifying trends, making connections in data, and solving problems."
+csp,3.2.1,3.2.1C,Computing tools facilitate the discovery of connections in information within large data sets.
+csp,3.2.1,3.2.1D,Search tools are essential for efficiently finding information.
+csp,3.2.1,3.2.1E,Information filtering systems are important tools for finding information and recognizing patterns in the information.
+csp,3.2.1,3.2.1F,"Software tools, including spreadsheets and databases, help to efficiently organize and find trends in information."
+csp,3.2.1,3.2.1G,Metadata is data about data.
+csp,3.2.1,3.2.1H,"Metadata can be descriptive data about an image, a Web page, or other complex objects."
+csp,3.2.1,3.2.1I,Metadata can increase the effective use of data or data sets by providing additional information about various aspects of that data.
+csp,3.2.2,3.2.2A,"Large data sets include data such as transactions, measurements, text, sound, images, and video."
+csp,3.2.2,3.2.2B,"The storing, processing, and curating of large data sets is challenging."
+csp,3.2.2,3.2.2C,Structuring large data sets for analysis can be challenging.
+csp,3.2.2,3.2.2D,Maintaining privacy of large data sets containing personal information can be challenging.
+csp,3.2.2,3.2.2E,Scalability of systems is an important consideration when data sets are large.
+csp,3.2.2,3.2.2F,The size or scale of a system that stores data affects how that data set is used.
+csp,3.2.2,3.2.2G,The effective use of large data sets requires computational solutions.
+csp,3.2.2,3.2.2H,"Analytical techniques to store, manage, transmit, and process data sets change as the size of data sets scale."
+csp,3.3.1,3.3.1A,"Digital data representations involve trade  offs related to storage, security, and privacy concerns."
+csp,3.3.1,3.3.1B,Security concerns engender tradeoffs in storing and transmitting information.
+csp,3.3.1,3.3.1C,There are trade offs in using lossy and lossless compression techniques for storing and transmitting data.
+csp,3.3.1,3.3.1D,Lossless data compression reduces the number of bits stored or transmitted but allows complete reconstruction of the original data
+csp,3.3.1,3.3.1E,Lossy data compression can significantly reduce the number of bits stored or transmitted at the cost of being able to reconstruct only an approximation of the original data.
+csp,3.3.1,3.3.1F,Security and privacy concerns arise with data containing personal information.
+csp,3.3.1,3.3.1G,"Data is stored in many formats depending on its characteristics (e.g., size and intended use)"
+csp,3.3.1,3.3.1H,The choice of storage media affects both the methods and costs of manipulating the data it contains.
+csp,3.3.1,3.3.1I,Reading data and updating data have different storage requirements.
+csp,4.1.1,4.1.1A,"Sequencing, selection, and iteration are building blocks of algorithms."
+csp,4.1.1,4.1.1B,Sequencing is the application of each step of an algorithm in the order in which the statements are given.
+csp,4.1.1,4.1.1C,Selection uses a Boolean condition to determine which of two parts of an algorithm is used.
+csp,4.1.1,4.1.1D,Iteration is the repetition of part of an algorithm until a condition is met or for a specified number of times.
+csp,4.1.1,4.1.1E,Algorithms can be combined to make new algorithms.
+csp,4.1.1,4.1.1F,Using existing correct algorithms as building blocks for constructing a new algorithm helps ensure the new algorithm is correct.
+csp,4.1.1,4.1.1G,Knowledge of standard algorithms can help in constructing new algorithms.
+csp,4.1.1,4.1.1H,Different algorithms can be developed to solve the same problem.
+csp,4.1.1,4.1.1I,Developing a new algorithm to solve a problem can yield insight into the problem.
+csp,4.1.2,4.1.2A,"Languages for algorithms include natural language, pseudocode, and visual and textual programming languages."
+csp,4.1.2,4.1.2B,Natural language and pseudocode describe algorithms so that humans can understand them.
+csp,4.1.2,4.1.2C,Algorithms described in programming languages can be executed on a computer.
+csp,4.1.2,4.1.2D,Different languages are better suited for expressing different algorithms.
+csp,4.1.2,4.1.2E,Some programming languages are designed for specific domains and are better for expressing algorithms in those domains.
+csp,4.1.2,4.1.2F,The language used to express an algorithm can affect characteristics such as clarity or readability but not whether an algorithmic solution exists.
+csp,4.1.2,4.1.2G,"Every algorithm can be constructed using only sequencing, selection, and iteration."
+csp,4.1.2,4.1.2H,Nearly all programming languages are equivalent in terms of being able to express any algorithm.
+csp,4.1.2,4.1.2I,Clarity and readability are important considerations when expressing an algorithm in a language.
+csp,4.2.1,4.2.1A,Many problems can be solved in a reasonable time.
+csp,4.2.1,4.2.1B,"Reasonable time means that as the input size grows, the number of steps the algorithm takes is proportional to the square (or cube, fourth power, fifth power, etc.) of the size of the input. "
+csp,4.2.1,4.2.1C,"Some problems cannot be solved in a reasonable time, even for small input sizes."
+csp,4.2.1,4.2.1D,"Some problems can be solved but not in a reasonable time. In these cases, heuristic approaches may be helpful to find solutions in reasonable time."
+csp,4.2.2,4.2.2A,A heuristic is a technique that may allow us to find an approximate solution when typical methods fail to find an exact solution.
+csp,4.2.2,4.2.2B,Heuristics may be helpful for finding an approximate solution more quickly when exact methods are too slow.
+csp,4.2.2,4.2.2C,"Some optimization problems such as â€œfind the bestâ€ or â€œfind the smallestâ€ cannot be solved in a reasonable time, but approximations to the optimal solution can."
+csp,4.2.2,4.2.2D,Some problems cannot be solved using any algorithm.
+csp,4.2.3,4.2.3A,"An undecidable problem may have instances that have an algorithmic solution, but there is no algorithmic solution that solves all instances of the problem."
+csp,4.2.3,4.2.3B,"A decidable problem is one in which an algorithm can be constructed to answer â€œyesâ€ or â€œnoâ€ for all inputs (e.g., â€œis the number even?â€)"
+csp,4.2.3,4.2.3C,An undecidable problem is one in which no algorithm can be constructed that always leads to a correct yes or no answer
+csp,4.2.4,4.2.4A,Determining an algorithmâ€™s efficiency is done by reasoning formally or mathematically about the algorithm.
+csp,4.2.4,4.2.4B,Empirical analysis of an algorithm is done by implementing the algorithm and running it on different inputs.
+csp,4.2.4,4.2.4C,"The correctness of an algorithm is determined by reasoning formally or mathematically about the algorithm, not by testing an implementation of the algorithm."
+csp,4.2.4,4.2.4D,Different correct algorithms for the same problem can have different efficiencies.
+csp,4.2.4,4.2.4E,Sometimes more efficient algorithms are more complex.
+csp,4.2.4,4.2.4F,Finding an efficient algorithm for a problem can help solve larger instances of the problem.
+csp,4.2.4,4.2.4G,Efficiency includes both execution time and memory usage.
+csp,4.2.4,4.2.4H,Linear search can be used when searching for an item in any list; binary search can be used only when the list is sorted.
+csp,5.1.1,5.1.1A,Programs are developed and used in a variety of ways by a wide range of people depending on the goals of the programmer.
+csp,5.1.1,5.1.1B,"Programs developed for creative expression, to satisfy personal curiosity, or to create new knowledge may have visual, audible, or tactile inputs and outputs."
+csp,5.1.1,5.1.1C,"Programs developed for creative expression, to satisfy personal curiosity, or to create new knowledge may be developed with different standards or methods than programs developed for widespread distribution."
+csp,5.1.1,5.1.1D,Additional desired outcomes may be realized independently of the original purpose of the program.
+csp,5.1.1,5.1.1E,"A computer program or the results of running a program may be rapidly shared with a large number of users and can have widespread impact on individuals, organizations, and society"
+csp,5.1.1,5.1.1F,Advances in computing have generated and increased creativity in other fields.
+csp,5.1.2,5.1.2A,An iterative process of program development helps in developing a correct program to solve problems.
+csp,5.1.2,5.1.2B,Developing correct program components and then combining them helps in creating correct programs.
+csp,5.1.2,5.1.2C,"Incrementally adding tested program segments to correct, working programs helps create large correct programs."
+csp,5.1.2,5.1.2D,Program documentation helps programmers develop and maintain correct programs to efficiently solve problems.
+csp,5.1.2,5.1.2E,"Documentation about program components, such as blocks and procedures, helps in developing and maintaining programs."
+csp,5.1.2,5.1.2F,Documentation helps in developing and maintaining programs when working individually or in collaborative programming environments
+csp,5.1.2,5.1.2G,Program development includes identifying programmer and user concerns that affect the solution to problems.
+csp,5.1.2,5.1.2H,Consultation and communication with program users is an important aspect of program development to solve problems.
+csp,5.1.2,5.1.2I,A programmerâ€™s knowledge and skill affects how a program is developed and how it is used to solve a problem.
+csp,5.1.2,5.1.2J,"A programmer designs, implements, tests, debugs, and maintains programs when solving problems."
+csp,5.1.3,5.1.3A,Collaboration can decrease the size and complexity of tasks required of individual programmers.
+csp,5.1.3,5.1.3B,Collaboration facilitates multiple perspectives in developing ideas for solving problems by programming.
+csp,5.1.3,5.1.3C,Collaboration in the iterative development of a program requires different skills than developing a program alone.
+csp,5.1.3,5.1.3D,Collaboration can make it easier to find and correct errors when developing programs.
+csp,5.1.3,5.1.3E,Collaboration facilitates developing program components independently.
+csp,5.1.3,5.1.3F,Effective communication between participants is required for successful collaboration when developing programs.
+csp,5.2.1,5.2.1A,Algorithms are implemented using program instructions that are processed during program execution.
+csp,5.2.1,5.2.1B,Program instructions are executed sequentially.
+csp,5.2.1,5.2.1C,"Program instructions may involve variables that are initialized and updated, read, and written"
+csp,5.2.1,5.2.1D,An understanding of instruction processing and program execution is useful for programming.
+csp,5.2.1,5.2.1E,Program execution automates processes.
+csp,5.2.1,5.2.1F,"Processes use memory, a central processing unit (CPU), and input and output."
+csp,5.2.1,5.2.1G,A process may execute by itself or with other processes.
+csp,5.2.1,5.2.1H,A process may execute on one or several CPUs.
+csp,5.2.1,5.2.1I,Executable programs increase the scale of problems that can be addressed.
+csp,5.2.1,5.2.1J,Simple algorithms can solve a large set of problems when automated.
+csp,5.2.1,5.2.1K,"Improvements in algorithms, hardware, and software increase the kinds of problems and the size of problems solvable by programming."
+csp,5.3.1,5.3.1A,Procedures are reusable programming abstractions.
+csp,5.3.1,5.3.1B,A function is a named grouping of programming instructions.
+csp,5.3.1,5.3.1C,Procedures reduce the complexity of writing and maintaining programs.
+csp,5.3.1,5.3.1D,Procedures have names and may have parameters and return values.
+csp,5.3.1,5.3.1E,Parameterization can generalize a specific solution.
+csp,5.3.1,5.3.1F,Parameters generalize a solution by allowing a function to be used instead of duplicated code
+csp,5.3.1,5.3.1G,Parameters provide different values as input to procedures when they are called in a program.
+csp,5.3.1,5.3.1H,Data abstraction provides a means of separating behavior from implementation.
+csp,5.3.1,5.3.1I,"Strings and string operations, including concatenation and some form of substring, are common in many programs."
+csp,5.3.1,5.3.1J,Integers and floatingpoint numbers are used in programs without requiring understanding of how they are implemented.
+csp,5.3.1,5.3.1K,"Lists and list operations, such as add, remove, and search, are common in many programs."
+csp,5.3.1,5.3.1L,Using lists and procedures as abstractions in programming can result in programs that are easier to develop and maintain.
+csp,5.3.1,5.3.1M,Application program interfaces (APIs) and libraries simplify complex programming tasks.
+csp,5.3.1,5.3.1N,Documentation for an API/library is an important aspect of programming.
+csp,5.3.1,5.3.1O,"APIs connect software components, allowing them to communicate."
+csp,5.4.1,5.4.1A,Program style can affect the determination of program correctness.
+csp,5.4.1,5.4.1B,Duplicated code can make it harder to reason about a program.
+csp,5.4.1,5.4.1C,Meaningful names for variables and procedures help people better understand programs.
+csp,5.4.1,5.4.1D,Longer code blocks are harder to reason about than shorter code blocks in a program.
+csp,5.4.1,5.4.1E,Locating and correcting errors in a program is called debugging the program.
+csp,5.4.1,5.4.1F,Knowledge of what a program is supposed to do is required in order to find most program errors.
+csp,5.4.1,5.4.1G,Examples of intended behavior on specific inputs help people understand what a program is supposed to do.
+csp,5.4.1,5.4.1H,Visual displays (or different modalities) of program state can help in finding errors.
+csp,5.4.1,5.4.1I,Programmers justify and explain a programâ€™s correctness.
+csp,5.4.1,5.4.1J,Justification can include a written explanation about how a program meets its specifications.
+csp,5.4.1,5.4.1K,"Correctness of a program depends on correctness of program components, including code blocks and procedures."
+csp,5.4.1,5.4.1L,An explanation of a program helps people understand the functionality and purpose of it.
+csp,5.4.1,5.4.1M,The functionality of a program is often described by how a user interacts with it.
+csp,5.4.1,5.4.1N,"The functionality of a program is best described at a high level by what the program does, not at the lower level of how the program statements work to accomplish this."
+csp,5.5.1,5.5.1A,Numbers and numerical concepts are fundamental to programming.
+csp,5.5.1,5.5.1B,Integers may be constrained in the maximum and minimum values that can be represented in a program because of storage limitations.
+csp,5.5.1,5.5.1C,Real numbers are approximated by floating  point representations that do not necessarily have infinite precision.
+csp,5.5.1,5.5.1D,Mathematical expressions using arithmetic operators are part of most programming languages.
+csp,5.5.1,5.5.1E,Logical concepts and Boolean algebra are fundamental to programming.
+csp,5.5.1,5.5.1F,"Compound expressions using and, or, and not are part of most programming languages. "
+csp,5.5.1,5.5.1G,Intuitive and formal reasoning about program components using Boolean concepts helps in developing correct programs.
+csp,5.5.1,5.5.1H,Computational methods may use lists and collections to solve problems.
+csp,5.5.1,5.5.1I,Lists and other collections can be treated as abstract data types (ADTs) in developing programs.
+csp,5.5.1,5.5.1J,"Basic operations on collections include adding elements, removing elements, iterating over all elements, and determining whether an element is in a collection."
+csp,6.1.1,6.1.1A,The Internet connects devices and networks all over the world.
+csp,6.1.1,6.1.1B,An end to end architecture facilitates connecting new devices and networks on the Internet.
+csp,6.1.1,6.1.1C,Devices and networks that make up the Internet are connected and communicate using addresses and protocols.
+csp,6.1.1,6.1.1D,The Internet and the systems built on it facilitate collaboration.
+csp,6.1.1,6.1.1E,Connecting new devices to the Internet is enabled by assignment of an Internet protocol (IP) address.
+csp,6.1.1,6.1.1F,"The Internet is built on evolving standards, including those for addresses and names."
+csp,6.1.1,6.1.1G,The domain name system (DNS) translates names to IP addresses.
+csp,6.1.1,6.1.1H,The number of devices that could use an IP address has grown so fast that a new protocol (IPv6) has been established to handle routing of many more devices.
+csp,6.1.1,6.1.1I,"Standards such as hypertext transfer protocol (HTTP), IP, and simple mail transfer protocol (SMTP) are developed and overseen by the Internet Engineering Task Force (IETF)."
+csp,6.2.1,6.2.1A,The Internet and the systems built on it are hierarchical and redundant.
+csp,6.2.1,6.2.1B,The domain name syntax is hierarchical
+csp,6.2.1,6.2.1C,IP addresses are hierarchical.
+csp,6.2.1,6.2.1D,Routing on the Internet is fault tolerant and redundant.
+csp,6.2.2,6.2.2A,Hierarchy and redundancy help systems scale.
+csp,6.2.2,6.2.2B,"The redundancy of routing (i.e., more than one way to route data) between two points on the Internet increases the reliability of the Internet and helps it scale to more devices and more people."
+csp,6.2.2,6.2.2C,Hierarchy in the DNS helps that system scale.
+csp,6.2.2,6.2.2D,Interfaces and protocols enable widespread use of the Internet.
+csp,6.2.2,6.2.2E,Open standards fuel the growth of the Internet.
+csp,6.2.2,6.2.2F,"The Internet is a packet-switched system through which digital data is sent by breaking the data into blocks of bits called packets, which contain both the data being transmitted and control information for routing the data."
+csp,6.2.2,6.2.2G,Standards for packets and routing include transmission control protocol/Internet protocol (TCP/IP).
+csp,6.2.2,6.2.2H,Standards for sharing information and communicating between browsers and servers on the Web include HTTP and secure sockets layer/transport layer security (SSL/TLS).
+csp,6.2.2,6.2.2I,The size and speed of systems affect their use.
+csp,6.2.2,6.2.2J,The bandwidth of a system is a measure of bit rate â€” the amount of data (measured in bits) that can be sent in a fixed amount of time.
+csp,6.2.2,6.2.2K,The latency of a system is the time elapsed between the transmission and the receipt of a request.
+csp,6.3.1,6.3.1A,The trust model of the Internet involves tradeoffs.
+csp,6.3.1,6.3.1B,The domain name system (DNS) was not designed to be completely secure.
+csp,6.3.1,6.3.1C,"Implementing cybersecurity has software, hardware, and human components."
+csp,6.3.1,6.3.1D,Cyber warfare and cyber crime have widespread and potentially devastating effects.
+csp,6.3.1,6.3.1E,Distributed denial of service attacks (DDoS) compromise a target by flooding it with requests from multiple systems.
+csp,6.3.1,6.3.1F,"Phishing, viruses, and other attacks have human and software components."
+csp,6.3.1,6.3.1G,Antivirus software and firewalls can help prevent unauthorized access to private data.
+csp,6.3.1,6.3.1H,Cryptography is essential to many models of cybersecurity.
+csp,6.3.1,6.3.1I,Cryptography has a mathematical foundation.
+csp,6.3.1,6.3.1J,Open standards help ensure cryptography is secure.
+csp,6.3.1,6.3.1K,Symmetric encryption is a method of encryption involving one key for encryption and decryption.
+csp,6.3.1,6.3.1L,"Public key encryption, which is not symmetric, is an encryption method that is widely used because of the enhanced security associated with its use."
+csp,6.3.1,6.3.1M,Certificate authorities (CAs) issue digital certificates that validate the ownership of encrypted keys used in secured communication and are based on a trust model.
+csp,7.1.1,7.1.1A,"Email, short message service (SMS), and chat have fostered new ways to communicate and collaborate."
+csp,7.1.1,7.1.1B,Video conferencing and video chat have fostered new ways to communicate and collaborate.
+csp,7.1.1,7.1.1C,Social media continues to evolve and foster new ways to communicate.
+csp,7.1.1,7.1.1D,Cloud computing fosters new ways to communicate and collaborate.
+csp,7.1.1,7.1.1E,"Widespread access to information facilitates the identification of problems, development of solutions, and dissemination of results."
+csp,7.1.1,7.1.1F,Public data provides widespread access and enables solutions to identified problems.
+csp,7.1.1,7.1.1G,Search trends are predictors.
+csp,7.1.1,7.1.1H,"Social media, such as blogs and Twitter, have enhanced dissemination."
+csp,7.1.1,7.1.1I,"Global Positioning System (GPS) and related technologies have changed how humans travel, navigate, and find information related to geolocation."
+csp,7.1.1,7.1.1J,Sensor networks facilitate new ways of interacting with the environment and with physical systems.
+csp,7.1.1,7.1.1K,"Smart grids, smart buildings, and smart transportation are changing and facilitating human capabilities."
+csp,7.1.1,7.1.1L,Computing contributes to many assistive technologies that enhance human capabilities.
+csp,7.1.1,7.1.1M,The Internet and the Web have enhanced methods of and opportunities for communication and collaboration.
+csp,7.1.1,7.1.1N,"The Internet and the Web have changed many areas, including ecommerce, health care, access to information and entertainment, and online learning."
+csp,7.1.1,7.1.1O,"The Internet and the Web have impacted productivity, positively and negatively, in many areas."
+csp,7.1.2,7.1.2A,Distributed solutions must scale to solve some problems.
+csp,7.1.2,7.1.2B,Science has been impacted by using scale and â€œcitizen scienceâ€ to solve scientific problems using home computers in scientific research.
+csp,7.1.2,7.1.2C,Human computation harnesses contributions from many humans to solve problems related to digital data and the Web.
+csp,7.1.2,7.1.2D,Human capabilities are enhanced by digitally enabled collaboration.
+csp,7.1.2,7.1.2E,Some online services use the contributions of many people to benefit both individuals and society.
+csp,7.1.2,7.1.2F,"Crowdsourcing offers new models for collaboration, such as connecting people with jobs and businesses with funding."
+csp,7.1.2,7.1.2G,The move from desktop computers to a proliferation of alwayson mobile computers is leading to new applications.
+csp,7.2.1,7.2.1A,"Machine learning and data mining have enabled innovation in medicine, business, and science."
+csp,7.2.1,7.2.1B,Scientific computing has enabled innovation in science and business.
+csp,7.2.1,7.2.1C,Computing enables innovation by providing access to and sharing of information.
+csp,7.2.1,7.2.1D,Open access and Creative Commons have enabled broad access to digital information.
+csp,7.2.1,7.2.1E,Open and curated scientific databases have benefited scientific researchers.
+csp,7.2.1,7.2.1F,Moore's law has encouraged industries that use computers to effectively plan future research and development based on anticipated increases in computing power.
+csp,7.2.1,7.2.1G,Advances in computing as an enabling technology have generated and increased the creativity in other fields.
+csp,7.3.1,7.3.1A,Innovations enabled by computing raise legal and ethical concerns.
+csp,7.3.1,7.3.1B,Commercial access to music and movie downloads and streaming raises legal and ethical concerns.
+csp,7.3.1,7.3.1C,Access to digital content via peer to peer networks raises legal and ethical concerns.
+csp,7.3.1,7.3.1D,Both authenticated and anonymous access to digital information raise legal and ethical concerns.
+csp,7.3.1,7.3.1E,Commercial and governmental censorship of digital information raise legal and ethical concerns.
+csp,7.3.1,7.3.1F,Open source and licensing of software and content raise legal and ethical concerns.
+csp,7.3.1,7.3.1G,Privacy and security concerns arise in the development and use of computational systems and artifacts.
+csp,7.3.1,7.3.1H,"Aggregation of information, such as geolocation, cookies, and browsing history, raises privacy and security concerns."
+csp,7.3.1,7.3.1I,Anonymity in online interactions can be enabled through the use of online anonymity software and proxy servers.
+csp,7.3.1,7.3.1J,"Technology enables the collection, use, and exploitation of information about, by, and for individuals, groups, and institutions."
+csp,7.3.1,7.3.1K,People can have instant access to vast amounts of information online; accessing this information can enable the collection of both individual and aggregate data that can be used and collected.
+csp,7.3.1,7.3.1L,Commercial and governmental curation of information may be exploited if privacy and other protections are ignored.
+csp,7.3.1,7.3.1M,"Targeted advertising is used to help individuals, but it can be misused at both individual and aggregate levels."
+csp,7.3.1,7.3.1N,Widespread access to digitized information raises questions about intellectual property.
+csp,7.3.1,7.3.1O,"Creation of digital audio, video, and textual content by combining existing content has been impacted by copyright concerns."
+csp,7.3.1,7.3.1P,The Digital Millennium Copyright Act (DMCA) has been a benefit and a challenge in making copyrighted digital material widely available.
+csp,7.3.1,7.3.1Q,"Open source and free software have practical, business, and ethical impacts on widespread access to programs, libraries, and code."
+csp,7.4.1,7.4.1A,The innovation and impact of social media and online access is different in different countries and in different socioeconomic groups.
+csp,7.4.1,7.4.1B,"Mobile, wireless, and networked computing have an impact on innovation throughout the world."
+csp,7.4.1,7.4.1C,"The global distribution of computing resources raises issues of equity, access, and power."
+csp,7.4.1,7.4.1D,Groups and individuals are affected by the â€œdigital divideâ€ â€” differing access to computing and the Internet based on socioeconomic or geographic characteristics.
+csp,7.4.1,7.4.1E,Networks and infrastructure are supported by both commercial and governmental initiatives.
+csp,7.5.1,7.5.1A,Online databases and libraries catalog and house secondary and some primary resources
+csp,7.5.1,7.5.1B,"Advanced search tools, Boolean logic, and key words can refine the search focus and/or limit search results based on a variety of factors (e.g., peer-review status, type of publication)"
+csp,7.5.1,7.5.1C,Plagiarism is a serious offense that occurs when a person presents another's ideas or words as his or her own. Plagiarism may be avoided by accurately acknowledging sources. 7.5.2 Evaluate online and print sources for appropriateness and credibility [P5]
+csp,7.5.2,7.5.2A,"Determining the credibility of a soruce requires considering and evaluating the reputation and credentials of the author(s), publisher(s), site owner(s), and/or sponsor(s)."
+csp,7.5.2,7.5.2B,Information from a source is considered relevant when it supports an appropriate claim or the purpose of the investigation
