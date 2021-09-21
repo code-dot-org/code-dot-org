@@ -18,8 +18,7 @@ module Pd::Payment
 
         return PaymentCalculatorCounselorAdmin if [
           Pd::Workshop::COURSE_COUNSELOR,
-          Pd::Workshop::COURSE_ADMIN,
-          Pd::Workshop::COURSE_ADMIN_COUNSELOR
+          Pd::Workshop::COURSE_ADMIN
         ].include?(workshop.course)
       else
         # TODO: elijah remove this condition once we stop funded these legacy
