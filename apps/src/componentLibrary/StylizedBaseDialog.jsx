@@ -43,6 +43,7 @@ FooterButton.propTypes = {
 FooterButton.defaultProps = {
   type: 'default'
 };
+
 export default function StylizedBaseDialog(props) {
   // Remove any props that should *not* be passed through to <BaseDialog/>.
   function passThroughProps() {
@@ -53,6 +54,14 @@ export default function StylizedBaseDialog(props) {
     return passThrough;
   }
 
+  const title =
+    typeof props.title === 'string' ? (
+      <h1 style={styles.title}>{props.title}</h1>
+    ) : (
+      props.title
+    );
+  const horizontalRule =
+    props.type === 'simple' ? null : <hr style={styles.hr} />;
   const defaultButtons = [
     <FooterButton
       key="cancel"
@@ -70,14 +79,23 @@ export default function StylizedBaseDialog(props) {
 
   return (
     <BaseDialog {...passThroughProps()} useUpdatedStyles>
-      <div style={styles.container}>
-        <h1 style={styles.title}>{props.title}</h1>
+      {title && (
+        <>
+          <div style={styles.container}>{title}</div>
+          {horizontalRule}
+        </>
+      )}
+      <div
+        style={{
+          ...styles.container,
+          ...(props.type === 'simple' ? {} : {padding: GUTTER})
+        }}
+      >
+        {props.body}
       </div>
-      <hr style={styles.hr} />
-      <div style={{...styles.container, ...styles.body}}>{props.body}</div>
       {!props.hideFooter && (
         <div>
-          <hr style={styles.hr} />
+          {horizontalRule}
           <div
             style={{
               ...styles.container,
@@ -94,7 +112,7 @@ export default function StylizedBaseDialog(props) {
 }
 
 StylizedBaseDialog.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   body: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
   footerJustification: PropTypes.oneOf([
     'flex-start',
@@ -107,7 +125,8 @@ StylizedBaseDialog.propTypes = {
   cancellationButtonText: PropTypes.string.isRequired,
   handleConfirmation: PropTypes.func,
   handleClose: PropTypes.func.isRequired,
-  handleCancellation: PropTypes.func
+  handleCancellation: PropTypes.func,
+  type: PropTypes.oneOf(['default', 'simple'])
 };
 
 StylizedBaseDialog.defaultProps = {
@@ -115,7 +134,8 @@ StylizedBaseDialog.defaultProps = {
   renderFooter: buttons => buttons,
   hideFooter: false,
   confirmationButtonText: i18n.dialogOK(),
-  cancellationButtonText: i18n.dialogCancel()
+  cancellationButtonText: i18n.dialogCancel(),
+  type: 'default'
 };
 
 const GUTTER = 20;
@@ -129,9 +149,6 @@ const styles = {
   hr: {
     margin: 0,
     borderColor: color.lighter_gray
-  },
-  body: {
-    padding: GUTTER
   },
   footer: {
     display: 'flex',
