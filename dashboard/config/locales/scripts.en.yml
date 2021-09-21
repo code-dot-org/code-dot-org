@@ -181,6 +181,8 @@ en:
           lessons:
             Play Lab:
               name: Play Lab
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           description_audience: ''
           student_description: Create a story or make a game with Play Lab!
         artist:
@@ -365,6 +367,8 @@ en:
           lessons:
             Infinity:
               name: Infinity
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Use Play Lab to create a story or game starring Disney Infinity characters.
         algebrademo:
           title: Algebra Demo
@@ -1983,6 +1987,8 @@ en:
           lessons:
             Ice Age Play Lab:
               name: Ice Age Play Lab
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Create a story or make a game with Ice Age Play Lab!
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -2066,6 +2072,8 @@ en:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           description_audience: ''
           student_description: Create a story or make a game with Gumball Play Lab!
         starwars:
