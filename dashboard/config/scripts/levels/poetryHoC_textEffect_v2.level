@@ -19,7 +19,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "Find text effect that match the feeling of this poem. \r\n\r\n* Explore the new `text effect` blocks\r\n* Choose **at least two effects** that matches the mood of the poem. \r\n* Click \"Run.\"",
+    "long_instructions": "Find text effect that match the feeling of this poem. \r\n\r\n* Explore the new `text effect` blocks\r\n* Choose **at least two effects** that matches the mood of the poem. \r\n* Click \"Run.\"\r\n\r\n*Extra Challenge:* Use an **event** to make a text effect happen when the mood shifts!",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -49,7 +49,7 @@
   "created_at": "2021-09-21T18:23:48.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2021-09-21T18:23:48.079+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_textEffect\\\"\"],\"cloned_from\":\"poetryHoC_textEffect\"},{\"changed_at\":\"2021-09-21 18:23:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-21T18:23:48.079+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_textEffect\\\"\"],\"cloned_from\":\"poetryHoC_textEffect\"},{\"changed_at\":\"2021-09-21 18:23:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 20:28:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:29:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:39:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:43:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -104,6 +104,9 @@
         </block>
         <block type="PoemBot_setTextEffect">
           <title name="EFFECT">"fade"</title>
+        </block>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">2</title>
         </block>
       </xml>
     </toolbox_blocks>
