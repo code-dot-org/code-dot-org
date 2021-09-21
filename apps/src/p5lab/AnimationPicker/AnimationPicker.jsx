@@ -134,7 +134,7 @@ export default connect(
     uploadError: state.animationPicker.uploadError,
     is13Plus: state.pageConstants.is13Plus,
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
-    selectedAnimations: state.animationPicker.selectedAnimations
+    selectedAnimations: Object.values(state.animationPicker.selectedAnimations)
   }),
   dispatch => ({
     onClose() {

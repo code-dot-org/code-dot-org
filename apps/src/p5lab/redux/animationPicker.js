@@ -38,7 +38,7 @@ const initialState = {
   isSpriteLab: false,
   isBackground: false,
   // List of animations selected to be added through multiselect
-  selectedAnimations: []
+  selectedAnimations: {}
 };
 
 export default function reducer(state, action) {
@@ -82,12 +82,13 @@ export default function reducer(state, action) {
       });
 
     case SELECT_ANIMATION:
-      return _.assign({}, state, {
-        selectedAnimations: [].concat(
-          state.selectedAnimations,
-          action.animation
-        )
-      });
+      return {
+        ...state,
+        selectedAnimations: {
+          [action.animation.sourceUrl]: action.animation,
+          ...state.selectedAnimations
+        }
+      };
 
     default:
       return state;
@@ -219,7 +220,7 @@ export function handleUploadError(status) {
  * @param {!AnimationProps} animation
  * @returns {{type: string, status: string}}
  */
-export function handleSelectedAnimation(animation) {
+export function addSelectedAnimation(animation) {
   return {
     type: SELECT_ANIMATION,
     animation: animation
@@ -270,7 +271,7 @@ export function pickLibraryAnimation(animation, multiSelect = false) {
     const goal = getState().animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
       if (multiSelect) {
-        dispatch(handleSelectedAnimation(animation));
+        dispatch(addSelectedAnimation(animation));
       } else {
         dispatch(
           addLibraryAnimation(animation, getState().animationPicker.isSpriteLab)
@@ -293,7 +294,9 @@ export function pickLibraryAnimation(animation, multiSelect = false) {
  */
 export function saveSelectedAnimations() {
   return (dispatch, getState) => {
-    const animations = getState().animationPicker.selectedAnimations;
+    const animations = Object.values(
+      getState().animationPicker.selectedAnimations
+    );
     const isSpriteLab = getState().animationPicker.isSpriteLab;
     animations.map(animation => {
       dispatch(addLibraryAnimation(animation, isSpriteLab));
