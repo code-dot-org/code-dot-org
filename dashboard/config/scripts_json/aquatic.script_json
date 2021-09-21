@@ -33,7 +33,7 @@
   "lessons": [
     {
       "key": "Aquatic",
-      "name": "MINECRAFT Hour of Code",
+      "name": "Aquatic",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,

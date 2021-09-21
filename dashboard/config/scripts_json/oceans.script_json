@@ -33,7 +33,7 @@
   "lessons": [
     {
       "key": "Oceans",
-      "name": "AI For Oceans",
+      "name": "Oceans",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,

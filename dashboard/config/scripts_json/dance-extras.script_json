@@ -34,7 +34,7 @@
   "lessons": [
     {
       "key": "Dance Party - Go Further",
-      "name": "Dance Party",
+      "name": "Dance Party - Go Further",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
