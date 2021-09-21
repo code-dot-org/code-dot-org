@@ -2625,7 +2625,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can move lesson to later lesson group in unit' do
-    unit = create :script, name: 'lesson-group-test-script'
+    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
     lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
     lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
     lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1
@@ -2659,7 +2659,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can move last lesson group up' do
-    unit = create :script, name: 'lesson-group-test-script'
+    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
     lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
     lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
     lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1
