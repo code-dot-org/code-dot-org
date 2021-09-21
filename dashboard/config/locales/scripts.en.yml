@@ -193,6 +193,8 @@ en:
           lessons:
             Artist:
               name: Artist
+              description_student: Create beautiful images by programming the Artist.
+              description_teacher: In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using new blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.
           student_description: Draw cool pictures and designs with the Artist!
         hourofcode:
           title: Classic Maze
@@ -4177,6 +4179,8 @@ en:
           lessons:
             Bounce:
               name: Bounce
+              description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
+              description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
           student_description: Choose your team and make a basketball game
         sample-csp5:
           lessons:
@@ -4191,6 +4195,8 @@ en:
           lessons:
             Simple Encryption:
               name: Simple Encryption
+              description_student: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.  Students try their own hand at cracking a message encoded with the classic Caesar cipher and also a Random Substitution Cipher.  Students should become well-acquainted with idea that in an age of powerful computational tools, techniques of encryption will need to be more sophisticated.  The most important aspect of this lesson is to understand how and why encryption plays a role in all of our lives every day on the Internet, and that making good encryption is not trivial.  Students will get their feet wet with understanding the considerations that must go into making strong encryption in the face of powerful computational tools that can be used to crack it. The need for secrecy when sending bits over the Internet is important for anyone using the Internet.
+              description_teacher: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.  Students try their own hand at cracking a message encoded with the classic Caesar cipher and also a Random Substitution Cipher.  Students should become well-acquainted with idea that in an age of powerful computational tools, techniques of encryption will need to be more sophisticated.  The most important aspect of this lesson is to understand how and why encryption plays a role in all of our lives every day on the Internet, and that making good encryption is not trivial.  Students will get their feet wet with understanding the considerations that must go into making strong encryption in the face of powerful computational tools that can be used to crack it. The need for secrecy when sending bits over the Internet is important for anyone using the Internet.
           student_description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
         csd2-2017:
           title: CSD Unit 2 - Web Development ('17-'18)
@@ -4797,6 +4803,8 @@ en:
           lessons:
             Sports:
               name: Sports
+              description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
+              description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
           student_description: Mix and match across sports
         2016_sciencePD-phase2b:
           title: ''
