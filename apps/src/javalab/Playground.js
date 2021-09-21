@@ -1,10 +1,10 @@
 import {PlaygroundSignalType} from './constants';
 
 export default class Playground {
-  constructor(onOutputMessage, onNewlineMessage, onInputMessage) {
+  constructor(onOutputMessage, onNewlineMessage, onJavabuilderMessage) {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
-    this.onInputMessage = onInputMessage;
+    this.onJavabuilderMessage = onJavabuilderMessage;
     this.isGameRunning = false;
     this.isGameOver = false;
   }
