@@ -287,7 +287,7 @@ class Ability
       !!script.is_migrated
     end
 
-    can [:read, :start, :student_lesson_plan], Lesson do |lesson|
+    can [:read, :student_lesson_plan], Lesson do |lesson|
       script = lesson.script
       if script.in_development?
         user.permission?(UserPermission::LEVELBUILDER)

@@ -29,6 +29,8 @@ module LevelsHelper
       end
     elsif params[:sublevel_position]
       sublevel_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
+    # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
+    # not include the '/lockable/' piece added in this elsif case
     elsif !script_level.lesson.numbered_lesson?
       script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
