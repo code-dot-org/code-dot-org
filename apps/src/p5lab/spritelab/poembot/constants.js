@@ -134,7 +134,7 @@ export const POEMS = {
   },
   hughes: {
     author: 'Langston Hughes',
-    title: 'Dream Deferred',
+    title: 'Harlem',
     lines: [
       'What happens to a dream deferred? ',
       'Does it dry up',
@@ -179,20 +179,20 @@ export const POEMS = {
       '  Black like me.'
     ]
   },
-  hughes_2: {
-    author: 'Langston Hughes',
-    title: 'Dream Deferred',
+  hopler: {
+    author: 'Jay Hopler',
+    title: 'In the Garden',
     lines: [
-      'What happens to a dream deferred?',
-      'Does it dry up,',
-      'Like a raisin in the sun?',
-      'Or fester like a sore --',
-      'And then run?',
-      'Does it stink like rotten meat?',
-      'Or crust and sugar over --',
-      'Like a syrupy sweet?',
-      'Maybe it just sags',
-      'Like a heavy load.'
+      'And the sky!',
+      'Nooned with the steadfast blue enthusiasm',
+      'Of an empty nursery.',
+      'Crooked lizards grassed in yellow shade.',
+      'The grass was lizarding,',
+      'Green and on a rampage.',
+      'Shade tenacious in the crook of a bent stem.',
+      'Noon. This noon—',
+      'Skyed, blue and full of hum, full of bloom.',
+      'The grass was lizarding.'
     ]
   }
 };

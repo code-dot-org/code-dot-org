@@ -1,0 +1,6 @@
+name 'poetry_predict_mood1_multi'
+question 'Read the poem. What mood are you feeling from this poem?'
+wrong 'Gloomy', feedback: 'Incorrect. Gloomy means sad, but this poem has a hopeful mood.'
+right 'Hopeful', feedback: 'Correct! The poet uses words that make the reader feel hopeful.'
+wrong 'Lonely', feedback: 'Incorrect. The poem uses the word lonely, but the feeling is hopeful.'
+wrong 'Funny', feedback: 'Incorrect. The poem is not meant to be a joke. The poet uses words that make the reader feel hopeful. '

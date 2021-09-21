@@ -39,7 +39,10 @@ class ReviewTab extends Component {
     token: '',
     forceRecreateEditorKey: 0,
     reviewablePeers: [],
-    projectOwnerName: ''
+    projectOwnerName: '',
+    authorizationError: false,
+    commentSaveError: false,
+    commentSaveInProgress: false
   };
 
   onSelectPeer = peer => {
@@ -153,6 +156,13 @@ class ReviewTab extends Component {
     }
   }
 
+  onNewCommentCancel = () => {
+    this.setState({
+      commentSaveError: false,
+      commentSaveInProgress: false
+    });
+  };
+
   onNewCommentSubmit = commentText => {
     const {
       channelId,
@@ -160,6 +170,10 @@ class ReviewTab extends Component {
       serverLevelId
     } = getStore().getState().pageConstants;
     const {token} = this.state;
+    this.setState({
+      commentSaveError: false,
+      commentSaveInProgress: true
+    });
 
     codeReviewDataApi
       .submitNewCodeReviewComment(
@@ -175,8 +189,19 @@ class ReviewTab extends Component {
 
         this.setState({
           comments: comments,
-          forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1
+          forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1,
+          commentSaveInProgress: false
         });
+      })
+      .fail(result => {
+        if (result.status === 404) {
+          this.setState({
+            authorizationError: true,
+            commentSaveInProgress: false
+          });
+        } else {
+          this.setState({commentSaveError: true, commentSaveInProgress: false});
+        }
       });
   };
 
@@ -252,21 +277,23 @@ class ReviewTab extends Component {
 
     return (
       <div style={styles.checkboxContainer}>
-        <label style={styles.label}>
-          {loadingReviewableState ? (
-            <Spinner size="small" style={styles.checkbox} />
-          ) : (
-            <input
-              type="checkbox"
-              checked={isReadyForReview}
-              onChange={() => {
-                this.setReadyForReview(!isReadyForReview);
-              }}
-              style={styles.checkbox}
-            />
-          )}
-          {javalabMsg.enablePeerReview()}
-        </label>
+        <div style={styles.reviewCheckboxRow}>
+          <label>
+            {loadingReviewableState ? (
+              <Spinner size="small" style={styles.checkbox} />
+            ) : (
+              <input
+                type="checkbox"
+                checked={isReadyForReview}
+                onChange={() => {
+                  this.setReadyForReview(!isReadyForReview);
+                }}
+                style={styles.checkbox}
+              />
+            )}
+            {javalabMsg.enablePeerReview()}
+          </label>
+        </div>
       </div>
     );
   }
@@ -350,20 +377,43 @@ class ReviewTab extends Component {
   }
 
   renderCommentEditor(forceRecreateEditorKey) {
-    if (this.state.isReadyForReview || this.props.viewAs === ViewType.Teacher) {
+    const {
+      authorizationError,
+      isReadyForReview,
+      commentSaveInProgress,
+      commentSaveError
+    } = this.state;
+    if (
+      !authorizationError &&
+      (isReadyForReview || this.props.viewAs === ViewType.Teacher)
+    ) {
       return (
         <CommentEditor
           onNewCommentSubmit={this.onNewCommentSubmit}
+          onNewCommentCancel={this.onNewCommentCancel}
           key={forceRecreateEditorKey}
+          saveInProgress={commentSaveInProgress}
+          saveError={commentSaveError}
         />
       );
     }
-
-    return (
-      <div style={styles.messageText}>
-        {javalabMsg.disabledPeerReviewMessage()}
-      </div>
-    );
+    if (this.state.authorizationError) {
+      // this error messages is displayed if a student is trying to write a comment
+      // on a peer's project and the project has peer review disabled.
+      return (
+        <div style={{...styles.reviewDisabledText, ...styles.messageText}}>
+          {javalabMsg.errorPeerReviewDisabled()}
+        </div>
+      );
+    } else {
+      // this message is displayed if a student is viewing their own project that has
+      // peer review disabled
+      return (
+        <div style={styles.messageText}>
+          {javalabMsg.disabledPeerReviewMessage()}
+        </div>
+      );
+    }
   }
 
   renderPeerDropdown(reviewablePeers, onSelectPeer) {
@@ -495,7 +545,7 @@ const styles = {
   reviewsContainer: {
     margin: '25px 5%'
   },
-  label: {
+  reviewCheckboxRow: {
     margin: 0,
     display: 'flex',
     justifyContent: 'flex-end',
@@ -540,5 +590,8 @@ const styles = {
   backToProjectButton: {
     margin: 0,
     paddingTop: 0
+  },
+  reviewDisabledText: {
+    fontStyle: 'italic'
   }
 };
