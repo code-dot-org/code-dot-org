@@ -243,16 +243,16 @@ class Lesson < ApplicationRecord
     return result
   end
 
+  # If there is a script_level, build_script_level_path will provide the correct url,
+  # even if it's a lockable lesson. Otherwise, we give the url to the student resources
+  # page, and the lesson plan pdf as a backup.
   def start_url
-    # we should maybe pull out the logic in the if statement in student_lesson_plan_pdf_url
-    # to identify lessons where we have lesson plans generally?
-    #
-    # We only want to make this start URL accessible for lessons
-    # that have studnet resources or have levels.
-    if script_levels.first || student_lesson_plan_pdf_url
-      # This URL path does not work for lockable lessons (see the last lesson in
-      # /s/csd4-2021 for an example, which is a survey)
-      CDO.studio_url("/s/#{script.name}/lessons/#{relative_position}/start", CDO.default_scheme)
+    if script_levels.first
+      return url_from_path(build_script_level_path(script_levels.first))
+    elsif script.include_student_lesson_plans && script.is_migrated
+      return url_from_path(script_lesson_student_path(script, self))
+    elsif student_lesson_plan_pdf_url
+      return student_lesson_plan_pdf_url
     end
   end
 
