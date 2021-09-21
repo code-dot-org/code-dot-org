@@ -163,6 +163,19 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
                               params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot lesson'
 
+  # also limit access to lesson plans in pilots when showing lesson by id
+  test_user_gets_response_for :show_by_id, response: :redirect, user: nil,
+                              params: -> {{id: @pilot_lesson.id}},
+                              name: 'signed out user cannot view pilot lesson by id'
+
+  test_user_gets_response_for :show_by_id, response: :forbidden, user: :teacher,
+                              params: -> {{id: @pilot_lesson.id}},
+                              name: 'teacher without pilot access cannot view pilot lesson by id'
+
+  test_user_gets_response_for :show_by_id, response: :success, user: :levelbuilder,
+                              params: -> {{id: @pilot_lesson.id}},
+                              name: 'levelbuilder can view pilot lesson by id'
+
   # limit access to student lesson plans in pilots
   test_user_gets_response_for :student_lesson_plan, response: :not_found, user: nil,
                               params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}},
@@ -226,7 +239,7 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'can not show lesson when lesson is in a non-migrated script' do
     sign_in @levelbuilder
-    script2 = create :script, name: 'unmigrated-course'
+    script2 = create :script, name: 'unmigrated-course', is_migrated: false
     lesson_group2 = create :lesson_group, script: script2
     unmigrated_lesson = create(
       :lesson,
@@ -842,9 +855,8 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'update lesson with new resources' do
-    course_version = create :course_version
+    course_version = create :course_version, content_root: @lesson.script
     resource = create :resource, course_version: course_version
-    @lesson.script.course_version = course_version
 
     sign_in @levelbuilder
     new_update_params = @update_params.merge({resources: [resource.key].to_json})
@@ -854,11 +866,10 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'update lesson removing and adding resources' do
-    course_version = create :course_version
+    course_version = create :course_version, content_root: @lesson.script
     resource_to_keep = create :resource, course_version: course_version
     resource_to_add = create :resource, course_version: course_version
     resource_to_remove = create :resource, course_version: course_version
-    @lesson.script.course_version = course_version
 
     @lesson.resources << resource_to_keep
     @lesson.resources << resource_to_remove
@@ -874,16 +885,16 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'update lesson by removing and adding vocabularies' do
-    course_version = create :course_version
+    course_version = create :course_version, content_root: @lesson.script
     vocab_to_keep = create :vocabulary, course_version: course_version
     vocab_to_remove = create :vocabulary, course_version: course_version
     vocab_to_add = create :vocabulary, course_version: course_version
-    @lesson.script.course_version = course_version
     @lesson.vocabularies = [vocab_to_keep, vocab_to_remove]
 
     sign_in @levelbuilder
     new_update_params = @update_params.merge({vocabularies: [vocab_to_keep.key, vocab_to_add.key].to_json})
     put :update, params: new_update_params
+    assert_response 200
     @lesson.reload
 
     assert_equal 2, @lesson.vocabularies.count

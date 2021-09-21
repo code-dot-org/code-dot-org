@@ -1067,6 +1067,10 @@ nn:
         text: plassering av {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
       gamelab_mirrorSprite:
         text: "{SPRITE} se til {DIRECTION}"
         options:
@@ -1093,6 +1097,11 @@ nn:
         text: "{SPRITE}"
       gamelab_playSound:
         text: spillLyd {SOUND}
+      gamelab_playSoundOptions:
+        text: spillLyd {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": knas
       gamelab_pointInDirection:
         text: pek {SPRITE} {DIRECTION}
         options:
@@ -1470,18 +1479,24 @@ nn:
         text: x-koordinator til {SPRITE}
       Mikelab_yLocationOf:
         text: y-koordinator til {SPRITE}
+      PoemBot_playSound:
+        text: spillLyd {SOUND}
       PoemBot_setBackgroundEffect:
-        text: vel bakgrunnseffekt {BG_EFFECT} [PALETTE][1]
+        text: vel bakgrunnseffekt {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': heil
-            '"rainbow"': regnboge
+          EFFECT:
+            '"colors"': Fargar
+            '"space"': Verdensrom
+            '"stars"': Stjerner
+          PALETTE:
+            '"rainbow"': Regnboge
       PoemBot_setForegroundEffect:
-        text: velg forgrunnseffekt {FG_EFFECT}
+        text: velg forgrunnseffekt {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': regn
-            '"bubbles"': bobler
+          EFFECT:
+            '"rain"': Regn
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
       RyanLab_moveForward:
         text: gå framover
       RyanLab_turnLeft:

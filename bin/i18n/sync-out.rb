@@ -126,9 +126,9 @@ def restore_redacted_files
     ERR
   end
 
-  puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count} processes"
+  puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
-  Parallel.each(locales) do |prop|
+  Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
     locale = prop[:locale_s]
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
@@ -317,9 +317,9 @@ end
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations(upload_manifests)
   locales = Languages.get_locale
-  puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count} processes"
+  puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
-  Parallel.each(locales) do |prop|
+  Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
     locale = prop[:locale_s]
     locale_dir = File.join("i18n/locales", locale)
     next if locale == 'en-US'
@@ -358,7 +358,7 @@ def distribute_translations(upload_manifests)
     ### Animation library
     spritelab_animation_translation_path = "/animations/spritelab_animation_library.json"
     if file_changed?(locale, spritelab_animation_translation_path)
-      @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true})
+      @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
       spritelab_animation_translation_file = File.join(locale_dir, spritelab_animation_translation_path)
       translations = JSON.load(File.open(spritelab_animation_translation_file))
       # Use js_locale here as the animation library is used by apps

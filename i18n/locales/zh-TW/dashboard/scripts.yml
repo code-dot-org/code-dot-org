@@ -15615,6 +15615,8 @@ zh-TW:
               name: 運行中的角色
             End of Course Project:
               name: 課程結束專案
+            Outbreaklab:
+              name: 疫情爆發獨立實驗室
           lesson_groups:
             introduction:
               display_name: 介紹
@@ -16961,6 +16963,8 @@ zh-TW:
               name: 製作精靈圖
             lesson-8:
               name: 運行中的角色
+            lesson-5:
+              name: 疫情爆發
             lesson-2:
               name: 語言的力量
               description_student: 欺凌絕對是不恰當的行為。本課堂會教導你可以和不可以在線上做些甚麼。
@@ -17511,6 +17515,23 @@ zh-TW:
               display_name: 深造：課程 E 和 F
             Introduction:
               display_name: 介紹
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: 第 3 課
+            Lesson 4:
+              display_name: 第 4 課
+            Lesson 5:
+              display_name: 第 5 課
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: 歡迎來到怪物城鎮
+          lesson_groups:
+            Outbreak Module:
+              display_name: 疫情爆發模組
+          name: 疫情爆發模組
+          title: 疫情爆發模組\_V2
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -17524,6 +17545,11 @@ zh-TW:
           student_description: 歡迎來到 Code.org 電腦科學原理課後問卷調查。本問卷調查需要大約 15 分鐘完成。你的回覆將會保持私密與匿名 -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
         aiml-2021:
           lessons:
+            lesson9:
+              description_teacher: |-
+                在本課中，學生參與一個線下活動，模擬僵屍疫情爆發。學生必須利用鄰近城鎮的數據來預測城鎮的哪一部分擁有最少的僵屍。學生們將使用相似度和平均值來預測某一特定地點的僵屍數量。然後，學生得到拯救，並將他們的預測與實際數字進行比較，以討論數字數據與分類數據的準確性有何不同。
+
+                **今日問題。**電腦如何學習用數字資料進行預測？
             lesson-22:
               name: 設計數據收集
           lesson_groups:
@@ -17531,6 +17557,11 @@ zh-TW:
               display_name: 問卷
         csd7-2021:
           lessons:
+            Similarity Models:
+              description_teacher: |-
+                在本課中，學生參與一個線下活動，模擬僵屍疫情爆發。學生必須利用鄰近城鎮的數據來預測城鎮的哪一部分擁有最少的僵屍。學生們將使用相似度和平均值來預測某一特定地點的僵屍數量。然後，學生得到拯救，並將他們的預測與實際數字進行比較，以討論數字數據與分類數據的準確性有何不同。
+
+                **今日問題。**電腦如何學習用數字資料進行預測？
             Survey Planning:
               name: 設計數據收集
           lesson_groups:
@@ -17624,8 +17655,10 @@ zh-TW:
               name: 模組 2
             Module 3:
               key: 模組 3
+              name: 模組 3
             Module 4:
               key: 模組 4
+              name: 模組 4
             Module 5:
               key: 模組 5
             Module 6:
@@ -17663,6 +17696,9 @@ zh-TW:
               name: 單元 2：網頁開發
             lesson-6:
               name: 資料與社會
+        outbreak-module:
+          name: 疫情爆發-模組
+          title: 疫情爆發
         csa1-exemplars:
           lessons:
             lesson-20:
@@ -17702,6 +17738,12 @@ zh-TW:
           lessons:
             lesson-3:
               name: 測試
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 階段 1
+            lessonGroup-3:
+              display_name: 階段 2
         dlp21-csp-mod1:
           title: 電腦科學原理深入學習 模組 1
         dlp21-csd:
@@ -17781,3 +17823,13 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: 運算上的創新
+            lesson-9:
+              name: 彩色顯示器
+            lesson-13:
+              name: 加速計
+            lesson-19:
+              name: 專案

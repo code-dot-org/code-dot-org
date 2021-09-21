@@ -1128,6 +1128,10 @@ is:
         text: staður {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
       gamelab_makeNewSpriteAnon:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       gamelab_makeNumSprites:
@@ -1162,6 +1166,11 @@ is:
         text: rásar upp og niður
       gamelab_playSound:
         text: spilaHljóð {SOUND}
+      gamelab_playSoundOptions:
+        text: spilaHljóð {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": kremja
       gamelab_pointInDirection:
         text: beina {SPRITE} {DIRECTION}
         options:
@@ -1638,18 +1647,28 @@ is:
         text: x hnit {SPRITE}
       Mikelab_yLocationOf:
         text: y hnit {SPRITE}
+      PoemBot_playSound:
+        text: spilaHljóð {SOUND}
       PoemBot_setBackgroundEffect:
-        text: stilla bakgrunnshrifin {BG_EFFECT} [PALETTE][1]
+        text: stilla bakgrunnshrifin {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': gegnheill
-            '"rainbow"': regnbogi
+          EFFECT:
+            '"colors"': Litir
+            '"squiggles"': Hrafnaspark
+            '"space"': Geimur
+            '"stars"': Stjörnur
+            '"ripples"': Gárur
+          PALETTE:
+            '"rainbow"': Regnbogi
       PoemBot_setForegroundEffect:
-        text: stilla á forgrunnshrifin {FG_EFFECT}
+        text: stilla á forgrunnshrifin {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': regn
-            '"bubbles"': sápukúlur
+          EFFECT:
+            '"rain"': Rigning
+            '"bubbles"': Sápukúlur
+            '"hearts"': Litrík hjörtu
+            '"confetti"': Skraut
+            '"starburst"': Stjörnublossi
       RyanLab_moveForward:
         text: færa áfram
       RyanLab_turnLeft:

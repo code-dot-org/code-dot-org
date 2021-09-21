@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
-import {assert} from '../../util/deprecatedChai';
+import {assert} from '../../util/reconfiguredChai';
 import {
   getConfigRef,
   getProjectDatabase

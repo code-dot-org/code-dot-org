@@ -1092,11 +1092,21 @@ te:
           KEY:
             '"yes"': అవును
             '"no"': లేదు
-      PoemBot_setForegroundEffect:
-        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ {FG_EFFECT}
+      PoemBot_setBackgroundEffect:
         options:
-          FG_EFFECT:
+          EFFECT:
+            '"colors"': రంగులు
+            '"space"': స్పేస్
+            '"stars"': స్టార్స్
+          PALETTE:
+            '"rainbow"': రెయిన్‌బో
+      PoemBot_setForegroundEffect:
+        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ {EFFECT}
+        options:
+          EFFECT:
+            '"rain"': రెయిన్
             '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
       aalab_layoutSprites:
         options:
           FORMAT:

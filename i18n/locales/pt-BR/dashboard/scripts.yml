@@ -18,10 +18,13 @@ pt:
         csp_2021_category_name: Princípios da CC (2021-2022)
         cspexams_category_name: Teste prático dos princípios da CC
         csp17_category_name: Princípios da CC (2017-2018)
+        aiml_2021_category_name: IA / AM
         full_course_category_name: Cursos Completos
         hoc_category_name: Hora do Código
         math_category_name: Matemática
         research_studies_category_name: Trabalhos de Investigação
+        twenty_hour_category_name: 10-Horas
+        tts_category_name: Texto-para-Voz
         other_category_name: Outros
       name:
         course1:
@@ -17417,8 +17420,10 @@ pt:
               name: Módulo 2
             Module 3:
               key: Módulo 3
+              name: Módulo 3
             Module 4:
               key: Módulo 4
+              name: Módulo 4
             Module 5:
               key: Módulo 5
             Module 6:
@@ -17499,6 +17504,12 @@ pt:
           lessons:
             lesson-2:
               name: Lição 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Fase 1
+            lessonGroup-3:
+              display_name: Fase 2
         dlp21-csp-mod1:
           title: Princípios do CS Módulo de Aprendizagem Mais Profunda 1
         dlp21-csd:
@@ -17524,6 +17535,8 @@ pt:
           lessons:
             lesson-12:
               name: Ferramentas
+            lesson-13:
+              name: Exemplos
             lesson-17:
               name: Console
             lesson-18:
@@ -17578,3 +17591,13 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Inovações em Computação
+            lesson-9:
+              name: LEDs Coloridos
+            lesson-13:
+              name: Acelerômetro
+            lesson-19:
+              name: Projeto

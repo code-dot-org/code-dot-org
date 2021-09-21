@@ -239,6 +239,10 @@ pl:
     email_preference_yes: Tak
     email_preference_no: Nie
     email_preference_required: Musisz podać preferencje adresu e-mail.
+    share_teacher_email_reg_partner_preference_yes: Tak
+    share_teacher_email_reg_partner_preference_no: Nie
+    share_teacher_email_reg_partner_preference_required: Musisz podać preferencje
+      adresu e-mail.
     parent_account_checkbox: Jestem rodzicem/opiekunem rejestrującym się w imieniu
       mojego dziecka
     parent_account_email_progress_permission: Czy możemy od czasu do czasu przesyłać

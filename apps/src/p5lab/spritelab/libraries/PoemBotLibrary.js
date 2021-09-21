@@ -23,7 +23,7 @@ export default class PoemBotLibrary extends CoreLibrary {
       lines: [],
       font: {
         fill: 'black',
-        stroke: 'black',
+        stroke: 'rgba(0,0,0,0)',
         font: 'Arial'
       },
       isVisible: true,
@@ -124,10 +124,13 @@ export default class PoemBotLibrary extends CoreLibrary {
       },
 
       setPoem(key) {
-        if (POEMS[key]) {
+        const poem = POEMS[key];
+        if (poem) {
           this.poemState = {
             ...this.poemState,
-            ...POEMS[key]
+            author: poem.author,
+            title: poem.title,
+            lines: [...poem.lines]
           };
         }
       },

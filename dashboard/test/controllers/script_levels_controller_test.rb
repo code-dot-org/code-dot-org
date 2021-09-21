@@ -58,6 +58,37 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
     pilot_section = create :section, user: @pilot_teacher, script: pilot_script
     @pilot_student = create(:follower, section: pilot_section).student_user
+
+    # Some of the functionality we're testing here is data-specific,
+    # and needs scripts with certain names to work. In the old
+    # fixture-based model, this data was all provided; in the new
+    # factory-based model, we need to do a little prep.
+    tested_script_names = [
+      'ECSPD',
+      Script::FLAPPY_NAME,
+      Script::FROZEN_NAME,
+      Script::HOC_NAME,
+      Script::PLAYLAB_NAME
+    ]
+
+    tested_script_names.each do |script_name|
+      script = Script.find_by_name(script_name)
+
+      # create the Script if we don't have one already
+      unless script.present?
+        script = create(:script, :with_levels, levels_count: 5, name: script_name)
+      end
+
+      # make sure that all the Script's ScriptLevels have associated
+      # Levels. This is expected during the interim period where we've
+      # removed the levels fixture but not yet the other fixtures.
+      levelless_script_levels = script.script_levels.select do |script_level|
+        script_level.levels.blank?
+      end
+      levelless_script_levels.each do |script_level|
+        script_level.levels << create(:level)
+      end
+    end
   end
 
   setup do
@@ -196,11 +227,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should not log an activity monitor start for netsim' do
-    allthethings_script = Script.find_by_name('allthethings')
-    netsim_level = allthethings_script.levels.find {|level| level.game == Game.netsim}
-    netsim_script_level = allthethings_script.script_levels.find {|script_level| script_level.level_id == netsim_level.id}
+    netsim_level = create(:level, :with_script, game: Game.netsim)
+    netsim_script_level = netsim_level.script_levels.first
     get :show, params: {
-      script_id: allthethings_script,
+      script_id: netsim_script_level.script,
       lesson_position: netsim_script_level.lesson.relative_position,
       id: netsim_script_level.position
     }
@@ -820,7 +850,21 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show new style unplugged level with PDF link' do
-    script_level = Script.find_by_name('course1').script_levels.first
+    level = create(:unplugged, :with_script)
+    script_level = level.script_levels.first
+    script_level.lesson.update(has_lesson_plan: true)
+
+    custom_i18n = {
+      data: {
+        unplugged: {
+          level.name => {
+            title: 'Test Title',
+            desc: 'Test Description'
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.default_locale, custom_i18n
 
     get :show, params: {
       script_id: script_level.script,
@@ -830,20 +874,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert_select 'div.unplugged > h1', 'Happy Maps'
-    assert_select 'div.unplugged > p', 'Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.'
+    assert_select 'div.unplugged > h1', 'Test Title'
+    assert_select 'div.unplugged > p', 'Test Description'
     assert_select '.pdf-button', 2
-
-    unplugged_curriculum_path_start = "curriculum/#{script_level.script.name}/#{script_level.lesson.absolute_position}"
-    assert_select '.pdf-button' do
-      assert_select ":match('href', ?)", /.*#{unplugged_curriculum_path_start}.*/
-    end
+    assert_select '.pdf-button', href: script_level.lesson.lesson_plan_html_url
 
     assert_equal script_level, assigns(:script_level)
   end
 
   test "show with the login_required param should redirect when not logged in" do
-    script_level = Script.find_by_name('courseb-2017').script_levels.first
+    level = create(:level, :with_script)
+    script_level = level.script_levels.first
 
     get :show, params: {
       script_id: script_level.script,
@@ -855,11 +896,18 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
+  test "reset redirects admins to root" do
+    sign_in create(:admin)
+    get :reset, params: {script_id: Script::HOC_NAME}
+    assert_redirected_to root_path
+  end
+
   test "show with the reset param should reset session when not logged in" do
     client_state.set_level_progress(create(:script_level), 10)
     refute client_state.level_progress_is_empty_for_test
 
-    get :reset, params: {script_id: Script::HOC_NAME}
+    script = create(:script, :with_levels, levels_count: 2)
+    get :reset, params: {script_id: script.name}
 
     assert_response 200
 
@@ -868,7 +916,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show with the reset param should destroy the storage_id cookie when not logged in" do
-    get :reset, params: {script_id: Script::HOC_NAME}
+    script = create(:script, :with_levels, levels_count: 2)
+    get :reset, params: {script_id: script.name}
     assert_response 200
     # Ensure storage_id is set to empty value and domain is correct
     cookie_header = response.header['Set-Cookie']
@@ -878,8 +927,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show with the reset param should not create a new storage_id cookie when logged in" do
     sign_in(create(:user))
-
-    get :reset, params: {script_id: Script::HOC_NAME}
+    script = create(:script, :with_levels, levels_count: 2)
+    get :reset, params: {script_id: script.name}
     assert_response 302
     # Ensure storage_id is not being set
     cookie_header = response.header['Set-Cookie']
@@ -888,10 +937,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show with the reset param should not reset session when logged in" do
     sign_in(create(:user))
-    get :reset, params: {script_id: Script::HOC_NAME}
-
-    assert_redirected_to hoc_chapter_path(chapter: 1)
-
+    script = create(:script, :with_levels, levels_count: 2)
+    get :reset, params: {script_id: script.name}
+    assert_redirected_to build_script_level_path(script.script_levels.first)
     # still logged in
     assert signed_in_user_id
   end
@@ -987,6 +1035,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal('//test.code.org/api/hour/finish/starwars', script_completion_redirect(Script.find_by_name(Script::STARWARS_NAME)))
   end
 
+  test "show redirects admins to root" do
+    sign_in create(:admin)
+    get :show, params: {script_id: Script::HOC_NAME, chapter: '20'}
+    assert_redirected_to root_path
+  end
+
   test 'end of HoC for logged in user works' do
     sign_in(create(:user))
     get :show, params: {script_id: Script::HOC_NAME, chapter: '20'}
@@ -1008,6 +1062,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   #   assert(!@response.body.include?('hoc_wrapup'))
   #   assert(@response.body.include?('/s/1/level/show?chapter=next'))
   # end
+
+  test "next redirects admins to root" do
+    sign_in create(:admin)
+    get :next, params: {script_id: Script::HOC_NAME}
+    assert_redirected_to root_path
+  end
 
   test 'next for non signed in user' do
     get :next, params: {script_id: Script::HOC_NAME}
@@ -1309,10 +1369,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'under 13 gets redirected when trying to access applab' do
-    sl = ScriptLevel.joins(:script, :levels).find_by(
-      scripts: {name: 'allthethings'},
-      levels: Level.key_to_params('U3L2 Using Simple Commands')
-    )
+    level = create(:applab, :with_script)
+    sl = level.script_levels.first
 
     sign_in @young_student
 
@@ -1326,10 +1384,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'over 13 does not get redirected when trying to access applab' do
-    sl = ScriptLevel.joins(:script, :levels).find_by(
-      scripts: {name: 'allthethings'},
-      levels: Level.key_to_params('U3L2 Using Simple Commands')
-    )
+    level = create(:applab, :with_script)
+    sl = level.script_levels.first
 
     sign_in @student
 
@@ -1844,6 +1900,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
     assert_response :success
     assert_nil assigns(:view_options)[:is_challenge_level]
+  end
+
+  test "lesson_extras redirects admins to root" do
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: script, bonus: true
+
+    sign_in create(:admin)
+    get :lesson_extras, params: {
+      script_id: script,
+      lesson_position: 1,
+      level_name: script_level.level.name
+    }
+
+    assert_redirected_to root_path
   end
 
   test "specifying a bonus level name will direct to that level" do

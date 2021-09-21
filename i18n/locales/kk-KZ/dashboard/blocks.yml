@@ -177,6 +177,10 @@ kk:
           DIRECTION:
             '"right"': оңға
             '"left"': солға
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": шағылу
       gamelab_randColor:
         text: кездейсоқ түс
       gamelab_randomColor:
@@ -326,10 +330,6 @@ kk:
             '"down"': төмен қарай
             '"left"': солға қарай
             '"right"': оңға қарай
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': кемпірқосақ
       RyanLab_moveForward:
         text: алдыға қозғалу
       RyanLab_turnLeft:

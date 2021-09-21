@@ -163,7 +163,15 @@ zh-CN:
     user_type_button: 更新帐户类型
     user_type_label: 帐户类型
     user_type_student: 学生
+    user_type_student_desc: 探索我们的所有课程和活动，还有：
+    user_type_student_ability_1: 保存你的进度和项目
+    user_type_student_ability_2: 加入老师的课堂小组
     user_type_teacher: 老师
+    user_type_teacher_desc: 学生能访问的所有东西，还有：
+    user_type_teacher_ability_1: 创建课堂小组
+    user_type_teacher_ability_2: 分配和跟踪学生作业
+    user_type_teacher_ability_3: 注册专业学习
+    user_type_teacher_ability_4: 在我们的教师论坛上互动
     field_is_required: 必填
     accept_terms: 必须同意创建一个帐户。
     error: 发生错误。
@@ -172,6 +180,9 @@ zh-CN:
     email_preference_yes: 对
     email_preference_no: 不
     email_preference_required: 你必须指定一个电子邮件地址。
+    share_teacher_email_reg_partner_preference_yes: 对
+    share_teacher_email_reg_partner_preference_no: 不
+    share_teacher_email_reg_partner_preference_required: 你必须指定一个电子邮件地址。
     parent_account_checkbox: 我是家长/监护人，代表我的孩子登录
     parent_account_email_progress_permission: 我们是否可以偶尔通过电子邮件向你发送关于你孩子进度和项目的最新信息，以及关于其课程和计算机科学的最新信息？[(参见我们的隐私政策)](%{privacy_policy_url})
     parent_account_email_label: 家长/监护人电子邮箱
@@ -276,6 +287,7 @@ zh-CN:
       blank_code: 请输入一节代码
       cant_join_own_section: 对不起，不能加入自己的小组。
       provider_managed_section: 这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过 %{provider} 将你加入，并重新同步该小组。
+      restricted_section: 我们无法将您添加到%{section_code}小组，因为它被锁定。请联系你的老师寻求帮助。
     mail:
       student_disassociated:
         subject: Code.org 提醒：%{student_name} 已不再是您的学生。

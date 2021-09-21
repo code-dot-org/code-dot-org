@@ -38,6 +38,11 @@ mk:
           CONDITION:
             '"when"': Кога
             '"while"': Додека
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": копче
+            "'sound://category_collect/clicky_crunch.mp3'": криза
       gamelab_randColor:
         text: случајна боја
       gamelab_randomColor:
@@ -63,10 +68,6 @@ mk:
             '"a"': А
             '"s"': Југ
             '"d"': Д
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"solid"': цврсто
       aalab_layoutSprites:
         options:
           FORMAT:

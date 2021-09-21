@@ -109,6 +109,20 @@ class TestI18nStringUrlTracker < Minitest::Test
     assert_equal(expected_record, @redis_record)
   end
 
+  def test_flush_given_false_dcdo_flag_should_clear_buffer_and_not_call_redis
+    unstub_redis
+    RedisClient.instance.expects(:put_record).never
+    test_record = {string_key: 'string.key', url: 'https://code.org', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    unstub_dcdo
+    stub_dcdo(false)
+    I18nStringUrlTracker.instance.send(:flush)
+
+    # Verify the internal @buffer has been cleared
+    buffer = I18nStringUrlTracker.instance.instance_variable_get :@buffer
+    assert_equal(0, buffer.size)
+  end
+
   def test_log_given_false_dcdo_flag_should_not_call_redis
     unstub_redis
     unstub_dcdo
@@ -200,7 +214,7 @@ class TestI18nStringUrlTracker < Minitest::Test
 
   def test_log_given_interval_should_log_data_after_the_given_time_has_passed
     test_record = {string_key: 'string.key', url: 'https://studio.code.org/home', source: 'test'}
-    interval = 0.2
+    interval = 0.2.seconds
     I18nStringUrlTracker.instance.send(:set_flush_interval, interval)
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     # verify that no redis information has been logged because the interval has not passed yet

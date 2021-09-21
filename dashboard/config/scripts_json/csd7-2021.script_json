@@ -12,11 +12,21 @@
       "weekly_instructional_minutes": 225,
       "has_verified_resources": true,
       "show_calendar": true,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "announcements": [
+        {
+          "notice": "Supports for Teaching CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-17 17:17:01 UTC",
+    "serialized_at": "2021-09-15 18:59:05 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd7-2021"

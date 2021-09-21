@@ -2666,6 +2666,22 @@
           "jittering": "抖動",
           "moving west": "向西移動",
           "patrolling": "巡邏"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "恢復",
+          "wandering": "徘徊",
+          "moving east": "向東移動",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "shrinking": "縮小",
+          "growing": "放大",
+          "moving south": "向南移動",
+          "moving left and right": "左右移動",
+          "moving north": "向北移動",
+          "jittering": "抖動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "moving with arrow keys": "使用方向鍵移動"
         }
       }
     }

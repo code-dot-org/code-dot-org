@@ -3346,6 +3346,14 @@ az:
               display_name: Giriş
             Introduction:
               display_name: Giriş
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Dərs 3
+            Lesson 4:
+              display_name: Dərs 4
+            Lesson 5:
+              display_name: Dərs 5
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -3390,6 +3398,12 @@ az:
           lessons:
             lesson-3:
               name: Yoxla
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Mərhələ 1
+            lessonGroup-3:
+              display_name: Mərhələ 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

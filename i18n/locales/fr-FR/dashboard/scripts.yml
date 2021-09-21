@@ -196,7 +196,6 @@ fr:
         course4:
           title: Cours 4
           description: Le Cours 4 s'adresse aux élèves qui ont déjà suivi les Cours 2 et 3. Les élèves approfondiront les sujets de programmation introduits aux cours précédents - des solutions souples à des problèmes plus complexes. À la fin de ce cours, les élèves créent des histoires et des jeux interactifs qu'ils peuvent partager avec n'importe qui. Recommandé pour les niveaux CM1-4e.
-          description_short: Les élèves qui prennent le Cours 4 doivent déjà avoir suivi les Cours 2 et 3.
           description_audience: De 10 à 18 ans
           lessons:
             Artist:
@@ -204,7 +203,7 @@ fr:
             Artist Binary:
               name: Artiste binaire
             'Artist: For Loops':
-              name: 'Artiste: Boucles « Pour »'
+              name: 'Artiste: Les Boucles « Pour »'
             'Artist: Functions':
               name: 'Artiste: Fonctions'
             'Artist: Functions with Parameters':
@@ -212,7 +211,7 @@ fr:
             'Artist: Variables':
               name: 'Artiste: Variables'
             'Bee: For Loops':
-              name: 'Abeille: Boucles « Pour »'
+              name: 'Abeille: Les Boucles « Pour »'
             'Bee: Functions with Parameters':
               name: 'Abeille: Fonctions avec des paramètres'
             Extreme Challenge - Comprehensive:
@@ -275,7 +274,7 @@ fr:
             Binary:
               name: Binaire
             For Loops:
-              name: Boucles « Pour »
+              name: Les Boucles « Pour »
             Functions and Functions with Parameters:
               name: Fonctions et les fonctions avec paramètres
             Intro:
@@ -535,7 +534,7 @@ fr:
           description_short: Relevez le défi !
           lessons:
             Puzzles:
-              name: Enigmes
+              name: Énigmes
           student_description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutoriel - Défi d'énigmes sur Code Studio
@@ -543,7 +542,7 @@ fr:
           description_short: Relevez le défi !
           lessons:
             Puzzles:
-              name: Enigmes
+              name: Énigmes
           student_description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
         cspunit1:
           lessons:
@@ -2796,13 +2795,13 @@ fr:
           description_audience: De 10 à 110 ans
           lessons:
             'Artist: For Loops':
-              name: 'Artiste: Boucles « Pour »'
+              name: 'Artiste: Les Boucles « Pour »'
             'Artist: Functions with Parameters':
               name: 'Artiste: Fonctions avec des paramètres'
             'Artist: Variables':
               name: 'Artiste: Variables'
             'Bee: For Loops':
-              name: 'Abeille: Boucles « Pour »'
+              name: 'Abeille: Les Boucles « Pour »'
             'Bee: Functions with Parameters':
               name: 'Abeille: Fonctions avec des paramètres'
             Digital Citizenship:
@@ -3185,7 +3184,7 @@ fr:
             Events:
               name: Événements
             For Loops:
-              name: Boucles « Pour »
+              name: Les Boucles « Pour »
             Functions:
               name: fonctions
             Functions with Parameters:
@@ -3927,7 +3926,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             'Functions with Parameters: Songwriting with Parameters':
               name: 'Les Fonctions avec Paramètres : L''Écriture Musicale avec des Paramètres'
             Functions with Parameters in Artist:
@@ -4257,17 +4256,17 @@ fr:
             Timed Loops:
               name: Boucles temporisées
             For Loops:
-              name: Boucles « Pour »
+              name: Les Boucles « Pour »
             Physical Input:
               name: Entrée physique
             List and For Loops:
-              name: Liste et boucles Pour
+              name: Liste et Boucles « Pour »
             'Project: Board Output':
               name: 'Projet: Utilisation du circuit comme sortie'
             For Loops with UI and Board:
-              name: Boucle Pour avec le circuit et une interface utilisateur
+              name: Les Boucles « Pour » avec le circuit et une interface utilisateur
             Lists and For Loops:
-              name: Listes et boucles Pour
+              name: Listes et Boucles « Pour »
             Analog Input:
               name: Entrée analogique
             Polling Events:
@@ -4297,7 +4296,7 @@ fr:
             Making Music:
               name: Créer de la Musique
             Arrays and For Loops:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
             Circuits and Physical Prototypes:
               name: Circuits et prototypes physiques
             Accelerometer:
@@ -4471,11 +4470,11 @@ fr:
               description_student: En utilisant le concept de listes de la leçon précédente, la classe écrit un programme qui contrôle les dix LEDs colorées sur le Circuit Playground.
               description_teacher: Le Circuit Playground est équipé de 10 LEDs colorées réparties en cercle sur le bord du circuit. Ces LEDs sont accessibles dans le code à partir d'une liste appelée `colorLeds`. En utilisant leur compréhension des listes acquise lors de la leçon précédente, les élèves écrivent un programme qui contrôle les LEDs colorées en accédant à une liste.
             For Loops:
-              name: Boucles « Pour »
-              description_student: La classe apprend à répéter des instructions en utilisant une boucle _pour_, d'abord en contrôlant un "robot" sur une grille, puis dans App Lab.
+              name: Les Boucles « Pour »
+              description_student: La classe apprend à répéter des instructions en utilisant une _boucle pour_, d'abord en contrôlant un "robot" sur une grille, puis dans App Lab.
               description_teacher: Dans cette leçon, les élèves apprennent la boucle _pour_ comme moyen de répéter du code un certain nombre de fois. Les élèves commence avec une activité manuelle où ils utilisent un boucle pour déplacer un robot sur une grille. Une fois terminé, les élèves utilisent leur connaissance dans App Lab pour écrire des programmes avec des répétitions utilisant des boucles _pour_.
             Lists and For Loops:
-              name: Listes et boucles Pour
+              name: Listes et Boucles « Pour »
               description_student: En combinant _listes_ et boucles _pour_, vous pouvez écrire des programmes qui utilisent tous les éléments d'une liste, quelle que soit sa longueur. La classe utilise cette structure pour écrire des programmes utilisant tous les éléments dans des listes, y compris la liste des LEDs colorées.
               description_teacher: 'L''utilisation de boucle _pour_ pour parcourir tous les éléments d''un tableau est une structure très utile dans la plupart des langages de programmation. Dans cette leçon, les élèves combinent ce qu''ils ont appris sur les listes et les boucles pour apprendre cette structure. Les élèves utilisent une boucle for pour parcourir tous les éléments de la liste, un par un, sans avoir à écrire du code pour chaque élément. Vers la fin de la leçon, les élèves vont appliquer cette structure sur la liste `colorLed` du circuit. '
             Timed Loops:
@@ -4531,7 +4530,7 @@ fr:
               description_student: Dans cette leçon, vous allez utiliser le buzzer à son potentiel maximum, pour produire des sons, des notes et de la musique. Nous commencerons par un court rappel paramètres du buzzer, la fréquence et la durée, puis nous aborderons le concept de notes. Les notes permettent de se restreindre aux fréquences utilisées dans la musique occidentale, et donner un cadre pour comprendre quelles sont les fréquences qui s'accordent le mieux. Une fois que vous pouvez jouer des notes en utilisant le buzzer, utilisez un tableau pour jouer des séquences de notes représentant une mélodie.
               description_teacher: Dans cette leçon, vous allez utiliser le buzzer à son potentiel maximum, pour produire des sons, des notes et de la musique. Nous commencerons par un court rappel paramètres du buzzer, la fréquence et la durée, puis nous aborderons le concept de notes. Les notes permettent de se restreindre aux fréquences utilisées dans la musique occidentale, et donner un cadre pour comprendre quelles sont les fréquences qui s'accordent le mieux. Une fois que vous pouvez jouer des notes en utilisant le buzzer, utilisez un tableau pour jouer des séquences de notes représentant une mélodie.
             Arrays and For Loops:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
               description_student: En combinant _listes_ et boucles _pour_, vous pouvez écrire des programmes qui utilisent tous les éléments d'une liste, quelle que soit sa longueur. La classe utilise cette structure pour écrire des programmes utilisant tous les éléments dans des listes, y compris la liste des LEDs colorées.
               description_teacher: L'utilisation d'une boucle _pour_ pour parcourir tous les éléments d'un tableau est une construction très utile dans la plupart des langages de programmation. Dans cette leçon, les élèves apprennent les bases pour répéter du code en utilisant la boucle _pour_, et les combinent avec leur connaissance des tableaux pour écrire des programmes qui traitent tous les éléments du tableau. Les élèves utilisent des boucles _pour_ pour accéder aux éléments un par un sans écrire de code pour chaque élément. A la fin de la leçon, les élèves appliqueront cette structure sur la liste `colorLed` pour créer une application qui change toutes les LEDs chaque fois que l'on appuie sur un bouton.
             Accelerometer:
@@ -4591,7 +4590,7 @@ fr:
               description_student: Dans cette leçon, vous allez utiliser le buzzer à son potentiel maximum, pour produire des sons, des notes et de la musique. Nous commencerons par un court rappel paramètres du buzzer, la fréquence et la durée, puis nous aborderons le concept de notes. Les notes permettent de se restreindre aux fréquences utilisées dans la musique occidentale, et donner un cadre pour comprendre quelles sont les fréquences qui s'accordent le mieux. Une fois que vous pouvez jouer des notes en utilisant le buzzer, utilisez un tableau pour jouer des séquences de notes représentant une mélodie.
               description_teacher: Dans cette leçon, vous allez utiliser le buzzer à son potentiel maximum, pour produire des sons, des notes et de la musique. Nous commencerons par un court rappel paramètres du buzzer, la fréquence et la durée, puis nous aborderons le concept de notes. Les notes permettent de se restreindre aux fréquences utilisées dans la musique occidentale, et donner un cadre pour comprendre quelles sont les fréquences qui s'accordent le mieux. Une fois que vous pouvez jouer des notes en utilisant le buzzer, utilisez un tableau pour jouer des séquences de notes représentant une mélodie.
             Arrays and For Loops_:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
               description_student: En combinant _listes_ et boucles _pour_, vous pouvez écrire des programmes qui utilisent tous les éléments d'une liste, quelle que soit sa longueur. La classe utilise cette structure pour écrire des programmes utilisant tous les éléments dans des listes, y compris la liste des LEDs colorées.
               description_teacher: L'utilisation d'une boucle _pour_ pour parcourir tous les éléments d'un tableau est une construction très utile dans la plupart des langages de programmation. Dans cette leçon, les élèves apprennent les bases pour répéter du code en utilisant la boucle _pour_, et les combinent avec leur connaissance des tableaux pour écrire des programmes qui traitent tous les éléments du tableau. Les élèves utilisent des boucles _pour_ pour accéder aux éléments un par un sans écrire de code pour chaque élément. A la fin de la leçon, les élèves appliqueront cette structure sur la liste `colorLed` pour créer une application qui change toutes les LEDs chaque fois que l'on appuie sur un bouton.
             Accelerometer_:
@@ -5235,7 +5234,7 @@ fr:
               description_student: 'Les boucles sont si utiles dans le codage. Cette leçon t''apprendra un nouveau type de boucle : les boucles tant que !'
               description_teacher: Au moment où les élèves atteignent cette leçon, ils devraient déjà avoir beaucoup de pratique dans l'utilisation des boucles de `répéter`. Il est donc temps de mélanger les choses. _Les boucles tant que_ sont des boucles qui continuent de répéter des commandes lorsqu'une condition est remplie. Les boucles tant que sont utilisées lorsque le programmeur ne connaît pas le nombre exact de fois où les commandes doivent être répétées, mais sait quelle condition doit être vraie pour que la boucle continue de se répéter. Par exemple, les étudiants travailleront à remplir des trous et à creuser la saleté dans la Fermière. Ils ne connaîtront pas la taille des trous ou la hauteur des montagnes de saleté, mais les étudiants sauront qu'ils doivent continuer à remplir les trous et à creuser la saleté tant que le sol n'est pas plat.
             Conditionals with Cards:
-              name: 'Si/Sinon : Les Conditions Avec Cartes'
+              name: "« Si/Sinon » : Les Conditions Avec Cartes"
               description_student: Il est temps de jouer à un jeu où tu ne gagnes des points que sous certaines conditions !
               description_teacher: Cette leçon montre comment les conditions peuvent être utilisées pour adapter un programme à des informations spécifiques. Nous n'avons pas toujours toutes les informations dont nous avons besoin pour écrire un programme. Parfois, tu voudras faire quelque chose de différent dans une situation que dans une autre, même si tu ne sais pas quelle situation sera vraie lorsque ton code s'exécutera. C'est là qu'interviennent les conditions. Les conditions permettent à un ordinateur de prendre une décision, en fonction des informations qui sont vraies chaque fois que ton code est exécuté.
             Conditionals in Bee:
@@ -5312,7 +5311,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Conditionals and Functions in Bee:
@@ -5455,7 +5454,7 @@ fr:
               description_student: Bientôt, tu apprendras à faire interagir des personnages dans un jeu en utilisant des variables !
               description_teacher: Les élèves s'entraîneront davantage avec les variables dans cette leçon en créant des scènes dans le Labo du Jeu. Les étudiants travailleront avec la saisie de l'utilisateur pour définir les valeurs de leurs variables, puis auront l'opportunité de créer leur propre mini-projet avec des variables.
             For Loop Fun:
-              name: 'Les Boucles Pour : S''amuser avec la Boucle Pour'
+              name: 'Les Boucles « Pour » : S''amuser avec la Boucle « Pour »'
               description_student: Vous allez avoir beaucoup de plaisir à découvrir les boucles `pour` !
               description_teacher: 'Nous savons que les boucles nous permettent de faire des choses encore et encore, mais maintenant nous allons apprendre à utiliser des boucles qui ont des structures supplémentaires intégrées. Ces nouvelles structures permettront aux élèves de créer du code plus puissant et plus dynamique. '
             For Loops in Bee:
@@ -5463,7 +5462,7 @@ fr:
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les boucles for et l'utilisation d'une variable d'incrémentation pour résoudre des énigmes plus compliquées. Les élèves commenceront par passer en revue les boucles des leçons précédentes, puis continueront en utilisant des boucles for pour résoudre, plus efficacement, des problèmes compliqués.
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles `pour` pour faire des images à couper le souffle.
               description_teacher: Dans cette leçon, les élèves continuent de pratiquer les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles `for` pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.
             Songwriting with Parameters:
@@ -5892,7 +5891,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Functions in Bee:
@@ -5930,7 +5929,7 @@ fr:
             'Variables: Envelope Variables':
               name: 'Les Variables : Variables Enveloppe'
             'For Loops: For Loop Fun':
-              name: 'Les Boucles Pour : S''amuser avec la Boucle Pour'
+              name: 'Les Boucles « Pour » : S''amuser avec la Boucle « Pour »'
             'Functions: Songwriting with Parameters':
               name: 'Les Fonctions : L''Écriture Musicale avec des Paramètres'
             Building a Foundation:
@@ -6298,11 +6297,11 @@ fr:
             Variables in Play Lab:
               name: Les Variables dans le Labo du Jeu
             'For Loops: For Loop Fun':
-              name: 'Les Boucles Pour : S''amuser avec la Boucle Pour'
+              name: 'Les Boucles « Pour » : S''amuser avec la Boucle « Pour »'
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             'Functions: Songwriting with Parameters':
               name: 'Les Fonctions : L''Écriture Musicale avec des Paramètres'
             Functions in Bee:
@@ -6453,7 +6452,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Functions in Bee:
@@ -6515,8 +6514,6 @@ fr:
           lessons:
             subgoal assessments:
               name: évaluations du sous-objectif
-            lg by itself:
-              name: lg by itself
             test of single level lg:
               name: test of single level lg
             submittable question at end of lessson:
@@ -6933,7 +6930,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Functions in Bee:
@@ -6975,9 +6972,9 @@ fr:
             Lights:
               name: Lumières
             For Loops:
-              name: Boucles « Pour »
+              name: Les Boucles « Pour »
             Lists and For Loops:
-              name: Listes et boucles Pour
+              name: Listes et Boucles « Pour »
             Timed Loops:
               name: Boucles temporisées
             'Project: Board Output':
@@ -7369,11 +7366,11 @@ fr:
             Variables in Play Lab:
               name: Les Variables dans le Labo du Jeu
             'For Loops: For Loop Fun':
-              name: 'Les Boucles Pour : S''amuser avec la Boucle Pour'
+              name: 'Les Boucles « Pour » : S''amuser avec la Boucle « Pour »'
             For Loops in Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
             For Loops in Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
             'Functions: Songwriting with Parameters':
               name: 'Les Fonctions : L''Écriture Musicale avec des Paramètres'
             Functions in Bee:
@@ -7393,7 +7390,7 @@ fr:
             Present Your Project:
               name: Présente Ton Projet
             Conditionals in Bee:
-              name: Si/Sinon avec l'Abeille
+              name: "« Si/Sinon » avec l'Abeille"
             Until Loops in Maze:
               name: Les Boucles Jusqu'à ce que dans le Labyrinthe
             Programming in Maze:
@@ -7539,7 +7536,7 @@ fr:
             Conditionals with Cards:
               name: Instructions conditionnelles avec des cartes
             Conditionals in Bee:
-              name: Si/Sinon avec l'Abeille
+              name: "« Si/Sinon » avec l'Abeille"
             Conditionals & Loops in Maze:
               name: Les Conditions et les Boucles dans le Labyrinthe
             Conditionals & Loops in Farmer:
@@ -7584,7 +7581,7 @@ fr:
             Using Behaviors:
               name: Utiliser les Comportements
             Using Forever Loops:
-              name: Utiliser les Boucles Pour Toujours
+              name: Utiliser les Boucles « Pour Toujours »
             Virtual Pet - Behaviors:
               name: Animaux de Compagnie Virtuels - Les Comportements
             Fish Tank:
@@ -7742,7 +7739,7 @@ fr:
             Making Music_:
               name: Faire De La Musique\_
             Arrays and For Loops_:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »\_
             Accelerometer_:
               name: Accéléromètre\_
             Functions with Parameters_:
@@ -7774,7 +7771,7 @@ fr:
             Making Music:
               name: Créer de la Musique
             Arrays and For Loops:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
             Accelerometer:
               name: Accéléromètre
             Functions with Parameters:
@@ -7970,11 +7967,11 @@ fr:
               description_student: Vous allez avoir beaucoup de plaisir à découvrir les boucles `pour` !
               description_teacher: 'Nous savons que les boucles nous permettent de faire des choses encore et encore, mais maintenant nous allons apprendre à utiliser des boucles qui ont des structures supplémentaires intégrées. Ces nouvelles structures permettront aux élèves de créer du code plus puissant et plus dynamique. '
             For Loops in Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les boucles for et l'utilisation d'une variable d'incrémentation pour résoudre des énigmes plus compliquées. Les élèves commenceront par passer en revue les boucles des leçons précédentes, puis continueront en utilisant des boucles for pour résoudre, plus efficacement, des problèmes compliqués.
             For Loops in Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles `pour` pour faire des images à couper le souffle.
               description_teacher: Dans cette leçon, les élèves continuent de pratiquer les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles `for` pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.
             Songwriting with Parameters:
@@ -9216,7 +9213,7 @@ fr:
             csf_variables:
               display_name: variables
             csf_for_loops:
-              display_name: Boucles « Pour »
+              display_name: Les Boucles « Pour »
             csf_internet:
               display_name: Internet
             csf_sprites:
@@ -9276,11 +9273,11 @@ fr:
               description_student: Vous allez avoir beaucoup de plaisir à découvrir les boucles `pour` !
               description_teacher: 'Nous savons que les boucles nous permettent de faire des choses encore et encore, mais maintenant nous allons apprendre à utiliser des boucles qui ont des structures supplémentaires intégrées. Ces nouvelles structures permettront aux élèves de créer du code plus puissant et plus dynamique. '
             For Loops in Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les boucles `for` et l'utilisation d'une variable d'incrémentation pour résoudre des énigmes plus compliquées. Les élèves commenceront par revoir les boucles des leçons précédentes, puis seront initiés aux boucles `for` afin de résoudre, plus efficacement, des problèmes compliqués.
             For Loops in Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles `pour` pour faire des images à couper le souffle.
               description_teacher: Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles `for` pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.
             Learning Sprites with Sprite Lab:
@@ -9442,7 +9439,7 @@ fr:
               description_student: Il est temps de jouer à un jeu où tu ne gagnes des points que sous certaines conditions !
               description_teacher: Cette leçon montre comment les conditions peuvent être utilisées pour adapter un programme à des informations spécifiques. Nous n'avons pas toujours toutes les informations dont nous avons besoin quand nous écrivons un programme. Parfois, nous voudrons faire quelque chose de différent dans une situation par rapport à une autre, même si nous ne savons pas quelle situation sera vraie lorsque le code s'exécutera. C'est là qu'interviennent les conditions. Les conditions permettent à un ordinateur de prendre une décision, en fonction des informations qui sont vraies, chaque fois que le code est exécuté.
             Conditionals in Bee:
-              name: Si/Sinon avec l'Abeille
+              name: "« Si/Sinon » avec l'Abeille"
               description_student: 'Maintenant que tu comprends les conditions, il est temps de programmer l''Abeille pour les utiliser lors de la collecte de miel et de nectar. '
               description_teacher: Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.
             Conditionals & Loops in Harvester:
@@ -9652,7 +9649,7 @@ fr:
             csf_variables:
               display_name: variables
             csf_for_loops:
-              display_name: Boucles « Pour »
+              display_name: Les Boucles « Pour »
             csf_sprites:
               display_name: Les Lutins
           lessons:
@@ -9689,7 +9686,7 @@ fr:
             Conditionals with Cards:
               name: Instructions conditionnelles avec des cartes
             Conditionals in Bee:
-              name: Si/Sinon avec l'Abeille
+              name: "« Si/Sinon » avec l'Abeille"
             Conditionals & Loops in Harvester:
               name: Récolter avec les Conditions
             'Functions: Songwriting':
@@ -9721,9 +9718,9 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
             For Loops in Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
             For Loops in Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
             Learning Sprites with Sprite Lab:
               name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
@@ -10590,7 +10587,7 @@ fr:
             Making Music:
               name: Créer de la Musique
             Arrays and For Loops:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
             Accelerometer:
               name: Accéléromètre
             Functions with Parameters:
@@ -12819,7 +12816,7 @@ fr:
             Variables:
               name: variables
             For Loops:
-              name: Boucles « Pour »
+              name: Les Boucles « Pour »
             End-of-course projects:
               name: Les Projets de Fin de Cours
             Who is this section for?:
@@ -13661,7 +13658,7 @@ fr:
             Making Music:
               name: Créer de la Musique
             Arrays and For Loops:
-              name: Tableaux et boucles Pour
+              name: Tableaux et boucles « Pour »
             Accelerometer:
               name: Accéléromètre
             Functions with Parameters:
@@ -14036,7 +14033,7 @@ fr:
               description_student: Il est temps de jouer à un jeu où tu ne gagnes des points que sous certaines conditions !
               description_teacher: Cette leçon montre comment les conditions peuvent être utilisées pour adapter un programme à des informations spécifiques. Nous n'avons pas toujours toutes les informations dont nous avons besoin quand nous écrivons un programme. Parfois, nous voudrons faire quelque chose de différent dans une situation par rapport à une autre, même si nous ne savons pas quelle situation sera vraie lorsque le code s'exécutera. C'est là qu'interviennent les conditions. Les conditions permettent à un ordinateur de prendre une décision, en fonction des informations qui sont vraies, chaque fois que le code est exécuté.
             Conditionals in Bee:
-              name: Si/Sinon avec l'Abeille
+              name: "« Si/Sinon » avec l'Abeille"
               description_student: 'Maintenant que tu comprends les conditions, il est temps de programmer l''Abeille pour les utiliser lors de la collecte de miel et de nectar. '
               description_teacher: Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.
             While Loops in Farmer:
@@ -14185,7 +14182,7 @@ fr:
             csf_variables:
               display_name: variables
             csf_for_loops:
-              display_name: Boucles « Pour »
+              display_name: Les Boucles « Pour »
             csf_sprites:
               display_name: Les Lutins
             end_of_course_project:
@@ -14236,11 +14233,11 @@ fr:
               description_student: Vous allez avoir beaucoup de plaisir à découvrir les boucles `pour` !
               description_teacher: 'Nous savons que les boucles nous permettent de faire des choses encore et encore, mais maintenant nous allons apprendre à utiliser des boucles qui ont des structures supplémentaires intégrées. Ces nouvelles structures permettront aux élèves de créer du code plus puissant et plus dynamique. '
             For Loops in Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les boucles `for` et l'utilisation d'une variable d'incrémentation pour résoudre des énigmes plus compliquées. Les élèves commenceront par revoir les boucles des leçons précédentes, puis seront initiés aux boucles `for` afin de résoudre, plus efficacement, des problèmes compliqués.
             For Loops in Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles `pour` pour faire des images à couper le souffle.
               description_teacher: Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles `for` pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.
             Internet:
@@ -14292,7 +14289,7 @@ fr:
             csf_variables:
               display_name: variables
             csf_for_loops:
-              display_name: Boucles « Pour »
+              display_name: Les Boucles « Pour »
             csf_sprites:
               display_name: Les Lutins
             end_of_course_project:
@@ -14335,7 +14332,7 @@ fr:
             For Loops in Bee:
               name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles Pour dans l'Artiste
+              name: Les Boucles « Pour » dans l'Artiste
             Learning Sprites with Sprite Lab:
               name: Découvrir les Lutins avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
@@ -14361,7 +14358,7 @@ fr:
             Snowflakes with Anna and Elsa:
               name: Les Flocons de Neige avec Anna et Elsa
             If/Else with Bee:
-              name: Si/Sinon avec l'Abeille
+              name: "« Si/Sinon » avec l'Abeille"
             While Loops with the Farmer:
               name: Les Boucles Tant Que avec la Fermière
             Harvesting with Conditionals:
@@ -14377,9 +14374,9 @@ fr:
             Changing Variables with Artist:
               name: Modifier des Variables avec l'Artiste
             For Loops with Bee:
-              name: Les Boucles Pour avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
             For Loops with Artist:
-              name: Les Boucles For avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
             Swimming Fish in Sprite Lab:
               name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party:
@@ -14905,7 +14902,7 @@ fr:
             Variables:
               name: variables
             For Loops:
-              name: Boucles « Pour »
+              name: Les Boucles « Pour »
             Sprite Lab:
               name: Le Labo des Lutins
             Reviewing your reflections:
@@ -15104,6 +15101,8 @@ fr:
               name: Les Lutins en Action
             End of Course Project:
               name: Fin du projet.
+            Outbreaklab:
+              name: Laboratoire autonome d'épidémie
           lesson_groups:
             introduction:
               display_name: Introduction
@@ -15458,8 +15457,8 @@ fr:
               key: Créer de la Musique
               name: Créer de la Musique
             Arrays and For Loops:
-              key: Tableaux et boucles Pour
-              name: Tableaux et boucles Pour
+              key: Tableaux et boucles « Pour »
+              name: Tableaux et boucles « Pour »
               description_teacher: L'utilisation d'une boucle _pour_ pour parcourir tous les éléments d'un tableau est une construction très utile dans la plupart des langages de programmation. Dans cette leçon, les élèves apprennent les bases pour répéter du code en utilisant la boucle _pour_, et les combinent avec leur connaissance des tableaux pour écrire des programmes qui traitent tous les éléments du tableau. Les élèves utilisent des boucles _pour_ pour accéder aux éléments un par un sans écrire de code pour chaque élément. A la fin de la leçon, les élèves appliqueront cette structure sur la liste `colorLed` pour créer une application qui change toutes les LEDs chaque fois que l'on appuie sur un bouton.
             Accelerometer:
               key: Accéléromètre
@@ -16137,7 +16136,7 @@ fr:
               description_student: Il est temps de jouer à un jeu où tu ne gagnes des points que sous certaines conditions !
             Conditionals in Bee:
               key: Les Conditions dans l'Abeille
-              name: Si/Sinon avec l'Abeille
+              name: "« Si/Sinon » avec l'Abeille"
               description_student: 'Maintenant que tu comprends les conditions, il est temps de programmer l''Abeille pour les utiliser lors de la collecte de miel et de nectar. '
               description_teacher: Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.
             While Loops in Farmer:
@@ -16372,13 +16371,12 @@ fr:
               description_teacher: Nous savons que les boucles nous permettent de faire des choses encore et encore, mais maintenant nous allons apprendre à utiliser des boucles qui ont des structures supplémentaires intégrées. Ces nouvelles structures permettront aux élèves de créer du code plus puissant et plus dynamique.
             For Loops in Bee:
               key: Les Boucles Pour dans l'Abeille
-              name: Les Boucles Pour avec l'Abeille
-              description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles "for" !
-              description_teacher: Avec l'Abeille, cette leçon se concentre sur les boucles `for` et l'utilisation d'une variable d'incrémentation pour résoudre des énigmes plus compliquées. Les élèves commenceront par revoir les boucles des leçons précédentes, puis seront initiés aux boucles `for` afin de résoudre, plus efficacement, des problèmes compliqués.
+              name: Les Boucles « Pour » avec l'Abeille
+              description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !
             For Loops in Artist:
-              key: Les Boucles Pour dans l'Artiste
-              name: Les Boucles For avec l'Artiste
-              description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles `for` pour faire des images à couper le souffle.
+              key: Les Boucles « Pour » dans l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
+              description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle.
               description_teacher: Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles `for` pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.
             Editing Behaviors:
               name: Les Comportements dans le Labo des Lutins
@@ -16402,6 +16400,8 @@ fr:
               name: Faire des sprites
             lesson-8:
               name: Les Lutins en Action
+            lesson-5:
+              name: Épidémie
             lesson-2:
               name: Le Pouvoir des Mots
               description_student: Le harcèlement n'est jamais acceptable. Cette leçon vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
@@ -16411,9 +16411,9 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_variables:
-              display_name: Boucles « Pour »
+              display_name: Les Boucles « Pour »
             csf_for_loops:
-              display_name: Boucles « Pour »
+              display_name: Les Boucles « Pour »
             csf_sprites:
               display_name: Les Impacts de l'Informatique
             end_of_course_project:
@@ -16474,8 +16474,8 @@ fr:
               description_student: Évite la lave! Ici, tu vas commencer à apprendre dac que sont les conditions dans le monde de Minecraft.
               description_teacher: Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !
             If/Else with Bee:
-              key: Si/Sinon avec l'Abeille
-              name: Si/Sinon avec l'Abeille
+              key: "« Si/Sinon » avec l'Abeille"
+              name: "« Si/Sinon » avec l'Abeille"
               description_student: 'Maintenant que tu comprends les conditions, il est temps de programmer l''Abeille pour les utiliser lors de la collecte de miel et de nectar. '
               description_teacher: Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.
             While Loops with the Farmer:
@@ -16526,14 +16526,13 @@ fr:
               name: Modifier des Variables avec l'Artiste
               description_student: Dans cette leçon, tu vas faire des dessins en utilisant des variables qui changent au fur et à mesure que le programme s'exécute.
             For Loops with Bee:
-              key: Les Boucles Pour avec l'Abeille
-              name: Les Boucles Pour avec l'Abeille
-              description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles "for" !
-              description_teacher: Avec l'Abeille, cette leçon se concentre sur les boucles `for` et l'utilisation d'une variable d'incrémentation pour résoudre des énigmes plus compliquées. Les élèves commenceront par revoir les boucles des leçons précédentes, puis seront initiés aux boucles `for` afin de résoudre, plus efficacement, des problèmes compliqués.
+              key: Les Boucles « Pour » avec l'Abeille
+              name: Les Boucles « Pour » avec l'Abeille
+              description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !
             For Loops with Artist:
-              key: Les Boucles For avec l'Artiste
-              name: Les Boucles For avec l'Artiste
-              description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles `for` pour faire des images à couper le souffle.
+              key: Les Boucles « Pour » avec l'Artiste
+              name: Les Boucles « Pour » avec l'Artiste
+              description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle.
               description_teacher: Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles `for` pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.
             Swimming Fish in Sprite Lab:
               key: Des Poissons qui Nagent, avec le Labo des Lutins
@@ -16581,7 +16580,7 @@ fr:
             csf_variables:
               display_name: variables
             csf_for_loops:
-              display_name: Boucles « Pour »
+              display_name: Les Boucles « Pour »
             csf_sprites:
               display_name: Les Lutins
             end_of_course_project:
@@ -16870,6 +16869,10 @@ fr:
           description_short: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
           description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
           student_description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
+        ai-unit-pilot:
+          lessons:
+            intro:
+              name: Leçon 1
         csa1-pilot:
           lessons:
             lesson-20:
@@ -16933,8 +16936,8 @@ fr:
               key: variables
               name: variables
             For Loops:
-              key: Boucles « Pour »
-              name: Boucles « Pour »
+              key: Les Boucles « Pour »
+              name: Les Boucles « Pour »
             Sprite Lab:
               key: Le Labo des Lutins
             Reviewing your reflections:
@@ -16955,6 +16958,8 @@ fr:
               display_name: Introduction
         haikubot-pilot:
           lesson_groups:
+            Lesson 1:
+              display_name: Leçon 1
             Lesson 2:
               display_name: Leçon 2
             Lesson 3:
@@ -16963,6 +16968,15 @@ fr:
               display_name: Leçon 4
             Lesson 5:
               display_name: Leçon 5
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: Épidémie à Monster Town
+          lesson_groups:
+            Outbreak Module:
+              display_name: Module d'épidémie
+          name: Module d'épidémie
+          title: Module d'épidémie\_V2
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -16976,6 +16990,11 @@ fr:
           student_description: Bienvenue dans l'Enquête Post-Cours CS Principles de Code.org. Cette enquête prend environ 15 minutes. Tes réponses sont privées et anonymes -- ton professeur peut voir des résultats agrégés anonymes pour toute la classe. Les résultats sont essentiels pour ton professeur et Code.org afin de maintenir et d'améliorer le cours.  Merci pour ton temps et ta considération.
         aiml-2021:
           lessons:
+            lesson9:
+              description_teacher: |-
+                Dans cette leçon, les élèves participent à une activité « déconnectée » simulant une épidémie de zombies. Ils doivent prédire quelles parties de la ville auront le moins de zombies en exploitant les données d’une ville voisine. À l’aide des degrés de similitude et des moyennes, ils pourront faire des prédictions sur le nombre de zombies à un endroit particulier. Ensuite, les ils devront comparer leurs prédictions aux chiffres réels afin d’observer et de définir ensemble comment évolue le niveau de précision entre données numériques et données catégorielles.
+
+                \*\*La question du jour : \*\* Comment les ordinateurs apprennent-ils à faire des prédictions avec des données numériques ?
             lesson-22:
               name: Concevoir la Collecte de Données
           lesson_groups:
@@ -16983,6 +17002,11 @@ fr:
               display_name: Enquête
         csd7-2021:
           lessons:
+            Similarity Models:
+              description_teacher: |-
+                Dans cette leçon, les élèves participent à une activité « déconnectée » simulant une épidémie de zombies. Ils doivent prédire quelles parties de la ville auront le moins de zombies en exploitant les données d’une ville voisine. À l’aide des degrés de similitude et des moyennes, ils pourront faire des prédictions sur le nombre de zombies à un endroit particulier. Ensuite, les ils devront comparer leurs prédictions aux chiffres réels afin d’observer et de définir ensemble comment évolue le niveau de précision entre données numériques et données catégorielles.
+
+                \*\*La question du jour : \*\* Comment les ordinateurs apprennent-ils à faire des prédictions avec des données numériques ?
             Survey Planning:
               name: Concevoir la Collecte de Données
           lesson_groups:
@@ -17076,8 +17100,10 @@ fr:
               name: Module 2
             Module 3:
               key: Module 3
+              name: Module 3
             Module 4:
               key: Module 4
+              name: Module 4
             Module 5:
               key: Module 5
             Module 6:
@@ -17113,6 +17139,9 @@ fr:
               name: 'Unité 2 : Développement Web'
             lesson-6:
               name: Les Données et la Société
+        outbreak-module:
+          name: module-d'épidémie
+          title: Épidémie
         csa1-exemplars:
           lessons:
             lesson-20:
@@ -17152,6 +17181,12 @@ fr:
           lessons:
             lesson-2:
               name: Leçon 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Processus 1
+            lessonGroup-3:
+              display_name: Processus 2
         dlp21-csp-mod1:
           title: CS Principles Apprentissage Approfondi Module 1
         dlp21-csd:
@@ -17229,3 +17264,11 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Innovations en informatique
+            lesson-13:
+              name: Accéléromètre
+            lesson-19:
+              name: Projet

@@ -1092,6 +1092,8 @@ mr:
             '"scale"': आकार
             '"rotation"': फिरणे
             '"direction"': हालचालीची दिशा
+      Mikelab_setupOutbreak:
+        text: "आऊटब्रेक सेटअप\nलोकसंख्या:{SPRITE2N}\n{TOGGLE}विषाणू  "
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1121,13 +1123,31 @@ mr:
         text: राक्षस इकडे तिकडे फिरायला सुरुवात करतात
       Outbreak_beginWearingMasks:
         text: राक्षस मास्क्स घालायला सुरुवात करतात
+      Outbreak_layoutBorder:
+        text: राक्षसांना सीमेवर ठेवा
+      Outbreak_layoutClusters:
+        text: राक्षसांना  {NUM} च्या क्लस्टरमध्ये ठेवा
+      Outbreak_layoutGrid:
+        text: राक्षस एका ग्रीडमध्ये बसवा
+      Outbreak_layoutRandom:
+        text: राक्षसांना तुम्हाला हवे त्या ठिकाणी ठेवा
       Outbreak_stopMoving:
         text: राक्षस हालचाल थांबायला सुरुवात करतात
-      PoemBot_setForegroundEffect:
-        text: अग्रभूमीचा प्रभाव {FG_EFFECT} करा
+      PoemBot_setBackgroundEffect:
         options:
-          FG_EFFECT:
+          EFFECT:
+            '"colors"': रंग
+            '"space"': स्पेस
+            '"stars"': तारे
+          PALETTE:
+            '"rainbow"': इंद्रधनुष्य
+      PoemBot_setForegroundEffect:
+        text: अग्रभूमीचा प्रभाव {EFFECT} करा
+        options:
+          EFFECT:
+            '"rain"': पाऊस
             '"bubbles"': फुगे
+            '"confetti"': कॉन्फेटी
       aalab_layoutSprites:
         options:
           FORMAT:

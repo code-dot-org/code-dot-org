@@ -149,6 +149,8 @@ sv:
       lokala erbjudanden eller andra nyheter i ämnet datavetenskap?
     email_preference_yes: Ja
     email_preference_no: Nej
+    share_teacher_email_reg_partner_preference_yes: Ja
+    share_teacher_email_reg_partner_preference_no: Nej
     parent_account_checkbox: Jag är en förälder / målsman som anmäler mitt barn
     parent_account_email_progress_permission: Har vi tillstånd att skicka dig e-post
       då och då för att uppdatera dig om ditt barns framsteg och projekt samt om deras

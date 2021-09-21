@@ -2435,6 +2435,12 @@ ca:
               display_name: Unitat 4
             lessonGroup-7:
               display_name: Unitat 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Etapa 1
+            lessonGroup-3:
+              display_name: Etapa 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

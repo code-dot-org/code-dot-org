@@ -5911,6 +5911,79 @@ ru-RU:
            Сыграй в карточную игру, создав правила, такие как "если я вытяну карту красной масти, я получу очку" и "если я вытяну карту черной масти, ты получишь очко"
       CourseF_outbreak_story:
         content1: описание здесь
+        markdown: "# Эпидемия: Создай свой собственный симулятор\n\n## Добро пожаловать
+          в Город Монстров!\nГород Монстров всегда был благополучным и здоровым местом.
+          Монстры из Города Монстров любили гулять и заходить в гости к друзьям. \n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nОднажды один из монстров почувствовал себя неважно.
+          Он заразился **вирусом**! Вирус - это крошечный микроб, от которого можно
+          заболеть. Остальные монстры не особо волновались. Они продолжали навещать
+          своих друзей.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nВскоре после этого стало плохо еще двум монстрам.
+          Все тот же вирус! Судя по всему, они подхватили его у своего друга.\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nВирус медленно распространялся на других монстров,
+          находившихся поблизости. Здоровые монстры начали беспокоиться, что все они
+          заболеют. Больные монстры забеспокоились, что передадут вирус всем остальным.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Остановка распространения\nК счастью,
+          изучив вирус, соседи Города Монстров сделали важное открытие. Они поняли,
+          что с меньшей вероятностью будут распространять вирус, если будут носить
+          маски. С масками на лице больные монстры с меньшей вероятностью передавали
+          бы вирус здоровым.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Что дальше?\n\nСегодня вам предстоит написать код для создания и запуска
+          собственного **симулятора** вирусной эпидемии в Городе Монстров. Симуляция
+          - это компьютерная модель процесса или системы. Научитесь кодировать и делать
+          прогнозы о том, что произойдет с соседями Города Монстров.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Как быстро будет распространяться
+          вирус?*\n\n* *Все ли заболеют?*\n\n* *Чем могут помочь маски?*\n\n\nЗакончив,
+          поделитесь вашим симулятором с другими. Расскажите нам о том, что, по вашему
+          мнению, мы можем сделать, чтобы помочь другим сохранить здоровье, когда
+          в город придет вирус.\n"
       CourseF_outbreak_story2:
         content1: описание здесь
         markdown: |
@@ -6599,7 +6672,7 @@ ru-RU:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Прочитай код, затем сделай прогноз.
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -6675,12 +6748,21 @@ ru-RU:
 '
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Оба самолета переместятся на один шаг вдоль сетки, затем остановятся.
+          feedback: Неправильно. Эти спрайты будут двигаться до тех пор, пока им не
+            скажут остановиться.
+        - text: Оба самолета начнут двигаться и не остановятся.
+          correct: true
+          feedback: Правильно! Поведение этих самолетов заключается в том, что они
+            начнут двигаться и не будут останавливаться.
+        - text: Один самолет начнет движение первым, другой самолет начнет двигаться
+            позднее.
+          feedback: Неправильно. Каждый блок кода в Лаборатории спрайтов выполняется
+            сразу же после предыдущего.
+        - text: Самолеты разобьются.
+          feedback: Неправильно. Расположение самолетов исключает возможность их столкновения.
         questions:
-        - {}
+        - text: Прочитай код, затем сделай прогноз.
       courseF_variables_predict_multi:
         answers:
         - {}
@@ -6747,3 +6829,35 @@ ru-RU:
         questions:
         - text: Внимательно посмотри на этот код. Что, по-твоему, произойдет при запуске
             программы?
+      courseF_intro_apps:
+        description: Добро пожаловать в Основы информатики! Эти проекты были созданы
+          с помощью лаборатории спрайтов. Познакомься с ними, чтобы понять их возможности.
+          В конце курса ты сможешь создавать свои собственные проекты, подобные этим
+          проектам, а также многое другое!
+        display_name: Приложения лаборатории спрайтов
+        teacher_markdown: |-
+          # Обзор уровней выбора
+          В уровнях выбора есть меню дополнительных уровней, которые необходимо пройти студентам. Ученики должны пройти как минимум один из подуровней, при этом максимальное количество подуровней для прохождения не ограничено.
+
+          Выбор, сделанный здесь, направляет студентов к приложениям-примерам, которые они могут изучать. Эти задания выполняют координацию с вкладкой Изучение приложений, которая находится в [план занятия](.././).
+      courseF_sprites_practice:
+        description: Пока что все идет отлично! Выбери свое следующее задание. Выполни
+          как можно больше. Продолжай упражняться со спрайтами и поведениями!
+        display_name: Практика со спрайтами
+        teacher_markdown: |+
+          # Обзор уровней выбора
+          В уровнях выбора есть меню дополнительных уровней, которые необходимо пройти учащимся. Учащиеся должны пройти как минимум один из подуровней, при этом максимальное количество подуровней для прохождения не ограничено.
+
+          Вы можете использовать приведенные ниже описания, чтобы помочь учащимся сделать самостоятельный выбор или установить ожидания по поводу того, сколько подуровней они должны пройти.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Пустынный пейзаж|Измени размер фрукта.|Анимируй парусное судно|Ветреный день|
+          |-|-|-|-|-|
+          | ***Тип*** |**Обзор**|**Обзор**|**Обзор**|**Обзор**|
+          | ***Концепт***|*спрайты, расположения*|*спрайты, свойства*|*спрайты, расположения, поведения*|*поведения*|
+
+
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # Мое интернет-окружение
+
+          ## Как обеспечить свою безопасность в Интернете?
