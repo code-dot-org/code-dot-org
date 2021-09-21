@@ -175,7 +175,7 @@ class Pd::Enrollment < ApplicationRecord
 
     # Admin and Counselor still use Pegasus form
     pegasus_enrollments, _ = other_enrollments.partition do |enrollment|
-      enrollment.workshop.course == COURSE_ADMIN || enrollment.workshop.course == COURSE_COUNSELOR || enrollment.workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
+      enrollment.workshop.course == COURSE_ADMIN || enrollment.workshop.course == COURSE_COUNSELOR
     end
 
     # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer,
@@ -214,7 +214,7 @@ class Pd::Enrollment < ApplicationRecord
   def exit_survey_url
     if workshop.course == Pd::Workshop::COURSE_CSF && workshop.subject == Pd::Workshop::SUBJECT_CSF_101
       CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
-    elsif [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN_COUNSELOR].include? workshop.course
+    elsif [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
