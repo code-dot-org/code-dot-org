@@ -33,7 +33,7 @@
   "lessons": [
     {
       "key": "Hour of Code 2015",
-      "name": "MINECRAFT Hour of Code",
+      "name": "Hour of Code 2015",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,

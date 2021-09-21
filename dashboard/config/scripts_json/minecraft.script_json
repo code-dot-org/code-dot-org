@@ -33,7 +33,7 @@
   "lessons": [
     {
       "key": "Minecraft Hour of Code Designer",
-      "name": "MINECRAFT Hour of Code",
+      "name": "Minecraft Hour of Code Designer",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
