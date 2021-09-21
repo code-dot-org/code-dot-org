@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:04 UTC",
+    "serialized_at": "2021-09-20 18:12:08 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "haikubot-pilot"
