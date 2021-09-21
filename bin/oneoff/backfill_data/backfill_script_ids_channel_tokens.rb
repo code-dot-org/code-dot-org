@@ -126,8 +126,9 @@ def update_script_ids
       end
     end
 
-    record_failed_script_id_backfill(level, channel_token, user_id)
+    log_backfill_failed(channel_token)
   end
+  puts
   puts "Script ended at #{Time.now}"
   puts
   puts "backfilled #{$backfill_count} script ids"
@@ -152,20 +153,21 @@ def get_associated_script_ids(level)
 end
 
 def update_channel_token(channel_token, script_id)
+  unless $is_dry_run
+    did_save = channel_token.update_attributes(script_id: script_id)
+
+    unless did_save
+      log_backfill_failed(channel_token.id)
+      return
+    end
+  end
   print "."
-  channel_token.update_attributes(script_id: script_id) unless $is_dry_run
   $backfill_count += 1
 end
 
-# record data used for debugging purposes
-def record_failed_script_id_backfill(level, channel_token, user_id)
-  if user_id.blank?
-    print "-"
-  else
-    print "F"
-    CDO.log.info("Could not update channel token with ID: #{channel_token.id}")
-  end
-
+def log_backfill_failed(channel_token_id)
+  print "F"
+  CDO.log.info("Could not update channel token with ID: #{channel_token_id}")
   $unable_to_backfill += 1
 end
 
