@@ -220,6 +220,7 @@ class LevelsController < ApplicationController
     blocks_xml = params[:program]
     type = params[:type]
     set_solution_image_url(@level) if type == 'solution_blocks'
+    blocks_xml = Blockly.remove_counter_mutations(blocks_xml)
     blocks_xml = Blockly.convert_toolbox_to_category(blocks_xml) if type == 'toolbox_blocks'
     @level.properties[type] = blocks_xml
     @level.log_changes(current_user)
