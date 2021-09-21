@@ -338,7 +338,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   end
 
   def teacher_enrollment_subject(workshop)
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN_COUNSELOR].include? workshop.course
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?
       if @is_first_pre_survey_email
@@ -355,7 +355,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   end
 
   def detail_change_notification_subject(workshop)
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN_COUNSELOR].include? workshop.course
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       "Details for your upcoming #{workshop.course_name} workshop have changed"
     else
       'Details for your upcoming Code.org workshop have changed'
