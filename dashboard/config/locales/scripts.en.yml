@@ -5935,7 +5935,7 @@ en:
             CSP post survey 2018 staging:
               name: CSP post survey 2018 staging
             CSP post-course survey:
-              name: CSP post-course survey
+              name: CSP Student Post-Course Survey ('17-'18)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         public-key-cryptography:
           title: Public Key Cryptography Widgets
@@ -10483,7 +10483,7 @@ en:
               display_name: Post-Course Survey
           lessons:
             CSD post-course survey:
-              name: CSD post-course survey
+              name: CSD Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         csd-novice-18:
           title: CS Discoveries Novice Reflections 2018-2019
@@ -11912,7 +11912,7 @@ en:
               display_name: Survey
           lessons:
             CSP Mid-year survey:
-              name: CSP Mid-year survey
+              name: CSP Student Mid-year Survey
           student_description: Welcome to the Code.org CS Principles Mid-Year Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         gamelab:
           title: Game Lab
@@ -14146,7 +14146,7 @@ en:
               display_name: Survey
           lessons:
             CSD post-course survey:
-              name: CSD post-course survey
+              name: CSD Student Post-Course Survey ('18-'19)
           student_description: "The CS Discoveries Post-Course Survey is an important tool we use to get feedback from you and make improvements to the course. \r\n The survey is private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration."
         csp-post-survey-2018:
           title: CSP Student Post-Course Survey ('18-'19)
@@ -14158,7 +14158,7 @@ en:
               display_name: Survey
           lessons:
             CSP post-course survey:
-              name: CSP post-course survey
+              name: CSP Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         csp5-pilot:
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
