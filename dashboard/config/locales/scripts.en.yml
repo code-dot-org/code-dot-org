@@ -26220,3 +26220,36 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ai-ethics:
+          lessons:
+            lesson-1:
+              name: Our AI Code of Ethics
+          lesson_groups: {}
+          name: ai-ethics
+          title: Our AI Code of Ethics
+          description_audience: grades 6-12
+          description_short: 'In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. '
+          description: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+          student_description: 'Conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of your choice. '
+        dance-unplugged:
+          lessons: {}
+          lesson_groups: {}
+          name: dance-unplugged
+          title: Hour of Code - Dance Party - Unplugged
+          description_audience: grades K-12
+          description_short: 'Learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment and learn to think about controlling actions using events. '
+          description: Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
+          student_description: Learn to think about controlling actions using events. Events are widely used in programming and should be easily recognizable after this lesson.
+        csc-things:
+          lessons:
+            lesson-1:
+              name: Poetry Scratch Paper
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csc-things
+          title: 'CSC Brain Dump '
+          description_audience: ''
+          description_short: ''
+          description: 'These are just a work in progress :) '
+          student_description: ''

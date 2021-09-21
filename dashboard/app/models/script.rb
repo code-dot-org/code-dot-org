@@ -1303,7 +1303,7 @@ class Script < ApplicationRecord
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-          published_state: general_params[:published_state],
+          published_state: (unit_group.present? && general_params[:published_state] == unit_group.published_state) ? nil : general_params[:published_state],
           properties: Script.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
@@ -2022,13 +2022,13 @@ class Script < ApplicationRecord
   end
 
   def get_unit_overview_pdf_url
-    if is_migrated?
+    if is_migrated? && !use_legacy_lesson_plans?
       Services::CurriculumPdfs.get_script_overview_url(self)
     end
   end
 
   def get_unit_resources_pdf_url
-    if is_migrated?
+    if is_migrated? && !use_legacy_lesson_plans?
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
   end
