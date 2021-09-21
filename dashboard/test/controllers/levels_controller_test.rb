@@ -81,14 +81,15 @@ class LevelsControllerTest < ActionController::TestCase
   test "should get filtered levels with level_type" do
     get :get_filtered_levels, params: {page: 1, level_type: 'Odometer'}
     assert_equal 1, JSON.parse(@response.body)['levels'].length
-    assert_equal "Odometer", JSON.parse(@response.body)['levels'][0]["name"]
+    assert_equal 'Odometer', JSON.parse(@response.body)['levels'][0]["name"]
     assert_equal 1, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with script_id" do
-    get :get_filtered_levels, params: {page: 1, script_id: 2}
+    script = create(:script, :with_levels, levels_count: 7)
+    get :get_filtered_levels, params: {page: 1, script_id: script.id}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
-    assert_equal 3, JSON.parse(@response.body)['numPages']
+    assert_equal 1, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with owner_id" do

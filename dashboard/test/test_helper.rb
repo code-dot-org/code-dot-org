@@ -145,6 +145,37 @@ class ActiveSupport::TestCase
   include ActiveSupport::Testing::TransactionalTestCase
   include CaptureQueries
 
+  setup_all do
+    # Some of the functionality we're testing here relies on Scripts with
+    # certain hardcoded names. In the old fixture-based model, this data was
+    # all provided; in the new factory-based model, we need to do a little
+    # prep.
+    tested_script_names = [
+      'ECSPD',
+      'allthethings',
+      Script::COURSE1_NAME,
+      Script::FLAPPY_NAME,
+      Script::FROZEN_NAME,
+      Script::HOC_NAME,
+      Script::PLAYLAB_NAME
+    ]
+
+    tested_script_names.each do |script_name|
+      # create a placeholder factory-provided Script if we don't already have a
+      # fixture-provided one
+      script = Script.find_by_name(script_name) ||
+        create(:script, :with_levels, levels_count: 5, name: script_name)
+
+      # make sure that all the Script's ScriptLevels have associated Levels.
+      # This is expected during the interim period where we are no longer
+      # generating Levels from fixtures, but are still generating Scripts
+      script.script_levels.each do |script_level|
+        next unless script_level.levels.empty?
+        script_level.levels = [create(:level)]
+      end
+    end
+  end
+
   def assert_creates(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
       yield

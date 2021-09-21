@@ -25,6 +25,7 @@ import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import Button from '@cdo/apps/templates/Button';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -78,6 +79,7 @@ class UnitEditor extends React.Component {
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
+    initialUseLegacyLessonPlans: PropTypes.bool,
     preventCourseVersionChange: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
 
@@ -147,6 +149,7 @@ class UnitEditor extends React.Component {
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
+      useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       deprecated: this.props.initialDeprecated,
       publishedState: this.props.initialPublishedState
     };
@@ -301,6 +304,7 @@ class UnitEditor extends React.Component {
       ),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans,
+      use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
       is_maker_unit: this.state.isMakerUnit
     };
 
@@ -678,9 +682,49 @@ class UnitEditor extends React.Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
-          {!this.props.isMigrated && (
+          {this.props.isMigrated && this.props.initialUseLegacyLessonPlans && (
             <label>
-              Curriculum Path
+              {/* TODO(dave): enable or remove this button, once we figure out
+              what controls we want to make available to curriculum writers. */}
+              <Button
+                text={'Use Code Studio Lesson Plans'}
+                size={Button.ButtonSize.narrow}
+                color={Button.ButtonColor.white}
+                style={{margin: 0, height: 30, lineHeight: '8px'}}
+                onClick={e => {
+                  e.preventDefault();
+                  const msg = 'Are you sure? This action cannot be undone.';
+                  if (window.confirm(msg)) {
+                    this.setState({useLegacyLessonPlans: false});
+                  }
+                }}
+                disabled
+              />
+              <HelpTip>
+                <p>
+                  This unit contains lesson plans which have been imported from
+                  curriculum.code.org to studio.code.org, however we are still
+                  pointing our users to lesson plans on curriculum.code.org.
+                  Once you have reviewed the new content, click this button to
+                  start using the lesson plans on studio.code.org, for all
+                  lessons in this unit.
+                </p>
+              </HelpTip>
+            </label>
+          )}
+          {(!this.props.isMigrated || this.state.useLegacyLessonPlans) && (
+            <label>
+              Legacy Lesson Plan Path
+              <HelpTip>
+                <p>
+                  This field determines the location of the legacy lesson plan.
+                  If left blank, it will look for special file under
+                  code.org/curriculum/[unit]/[lesson] which redirects to
+                  curriculum.code.org or google docs. If you want to disable
+                  lesson plans entirely, you must go to each lesson edit page
+                  and uncheck "Has Lesson Plan".
+                </p>
+              </HelpTip>
               <input
                 value={this.state.curriculumPath}
                 style={styles.input}
@@ -738,7 +782,7 @@ class UnitEditor extends React.Component {
               }
             />
           )}
-          {this.props.isMigrated && (
+          {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
             <label>
               Include student-facing lesson plans
               <input
@@ -819,7 +863,7 @@ class UnitEditor extends React.Component {
             )}
           </div>
         </CollapsibleEditorSection>
-        {this.props.isMigrated && (
+        {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
           <CollapsibleEditorSection title="Unit Calendar Settings">
             <label>
               Show Calendar
