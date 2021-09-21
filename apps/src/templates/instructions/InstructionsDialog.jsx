@@ -14,7 +14,7 @@ export function InstructionsDialog(props) {
       isOpen={props.isOpen}
       title={
         props.title &&
-        props.showTitle && <h1 style={{fontSize: 24}}>{props.title}</h1>
+        props.showTitle && <h1 style={styles.title}>{props.title}</h1>
       }
       // TODO: make this scrollable instead of entire dialog scrolling?
       body={<DialogInstructions />}
@@ -40,10 +40,6 @@ InstructionsDialog.propTypes = {
   showTitle: PropTypes.bool
 };
 
-InstructionsDialog.defaultProps = {
-  showTitle: true
-};
-
 export default connect(
   state => ({
     isOpen: state.instructionsDialog.open,
@@ -56,3 +52,9 @@ export default connect(
     handleClose: () => dispatch(closeDialog())
   })
 )(InstructionsDialog);
+
+const styles = {
+  title: {
+    fontSize: 24
+  }
+};
