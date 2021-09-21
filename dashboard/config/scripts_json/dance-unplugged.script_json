@@ -33,7 +33,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "new lesson",
+      "name": "Dance Party: Unplugged",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,

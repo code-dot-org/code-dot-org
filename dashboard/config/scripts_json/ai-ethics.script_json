@@ -33,7 +33,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "new lesson",
+      "name": "Our AI Code of Ethics",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
