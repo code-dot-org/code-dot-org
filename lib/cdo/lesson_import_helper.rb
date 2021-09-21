@@ -35,7 +35,6 @@ module LessonImportHelper
       end
     else
       if models_to_import.include?('Lesson')
-        lesson.name = cb_lesson_data['title']
         lesson.overview = cb_lesson_data['teacher_desc']
         lesson.student_overview = cb_lesson_data['student_desc']
         lesson.purpose = cb_lesson_data['cs_content']
