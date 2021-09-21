@@ -214,13 +214,6 @@
       "key": "1075ac4c-7e51-43bf-8416-6b0710b37870",
       "position": 2,
       "properties": {
-        "tips": [
-          {
-            "key": "guide",
-            "type": null,
-            "markdown": ""
-          }
-        ]
       },
       "seeding_key": {
         "activity_section.key": "1075ac4c-7e51-43bf-8416-6b0710b37870",
@@ -294,13 +287,6 @@
       "key": "87fa5477-1577-488f-8c50-4e1766f85c69",
       "position": 8,
       "properties": {
-        "tips": [
-          {
-            "key": "guide",
-            "type": null,
-            "markdown": ""
-          }
-        ]
       },
       "seeding_key": {
         "activity_section.key": "87fa5477-1577-488f-8c50-4e1766f85c69",
