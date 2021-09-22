@@ -391,11 +391,15 @@ class Documents < Sinatra::Base
       # translator accidentally translates the path to the template, we simply
       # render nothing rather than throwing an error
       template_content.
-        gsub(/{{([^,]*),([^}]*)}}/) do
-          uri = $1.strip
+        # Extract anything between {{ and }}.
+        gsub(/{{([^}]*)}}/) do
+          # Extract the partial name, and possibly a string with all the parameters.
+          split = $1.scan(/\s*([^ ,]*)[, ]*(.*)/)[0]
 
-          # Adapted from https://stackoverflow.com/a/23612782.
-          locals = $2.scan(/("(?:\\.|[^"])*"|[^\s]*):\s*("(?:\\.|[^"])*"|[^\s]*)/).
+          uri = split[0]
+
+          # Parse the parameters.  Adapted from https://stackoverflow.com/a/23612782.
+          locals = split[1].scan(/("(?:\\.|[^"])*"|[^\s]*):\s*("(?:\\.|[^"])*"|[^\s]*)/).
             map(&:compact).
             to_h.
             transform_values(&:undump)
