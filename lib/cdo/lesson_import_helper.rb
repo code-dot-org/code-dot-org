@@ -392,6 +392,7 @@ module LessonImportHelper
   end
 
   def self.create_tip(type, key, markdown)
+    key.downcase!
     tip_map = {
       "tip" => "teachingTip",
       "content" => "contentCorner",
