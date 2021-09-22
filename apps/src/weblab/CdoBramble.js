@@ -182,7 +182,7 @@ export default class CdoBramble {
   }
 
   handleFileChange(path) {
-    var cleanedPath = this.cleanPath(path);
+    const cleanedPath = this.cleanPath(path);
     const hasExistingChangeForPath = this.recentChanges.some(
       change => change.operation === 'change' && change.file === cleanedPath
     );
