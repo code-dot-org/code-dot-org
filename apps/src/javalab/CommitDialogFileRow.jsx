@@ -6,7 +6,7 @@ import {fileShape} from './CommitDialogBody';
 
 const PADDING = 8;
 
-export default function CommitDialogFile({file, onToggleFile}) {
+export default function CommitDialogFileRow({file, onToggleFile}) {
   return (
     <div style={styles.fileRow}>
       <div style={styles.fileLabelContainer}>
@@ -30,7 +30,7 @@ export default function CommitDialogFile({file, onToggleFile}) {
   );
 }
 
-CommitDialogFile.propTypes = {
+CommitDialogFileRow.propTypes = {
   file: PropTypes.shape(fileShape).isRequired,
   onToggleFile: PropTypes.func.isRequired
 };

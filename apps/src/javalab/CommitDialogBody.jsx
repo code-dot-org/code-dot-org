@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
-import CommitDialogFile from './CommitDialogFile';
+import CommitDialogFileRow from './CommitDialogFileRow';
 
 export const fileShape = {
   name: PropTypes.string.isRequired,
@@ -35,7 +35,7 @@ export default function CommitDialogBody({
       </div>
       {files.map(file => {
         return (
-          <CommitDialogFile
+          <CommitDialogFileRow
             file={file}
             onToggleFile={onToggleFile}
             key={file.name}
