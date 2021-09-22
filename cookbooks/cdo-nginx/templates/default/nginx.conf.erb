@@ -42,12 +42,21 @@ http {
     default "pegasus";
   }
 
+  map $http_x_cdo_backend $upstream_host {
+    # Override host using X-Cdo-Backend header.
+    dashboard "<%=CDO.dashboard_hostname%>";
+    pegasus "<%=CDO.pegasus_hostname%>";
+
+    # Default to original host variable.
+    default $http_host;
+  }
+
   server {
     listen 80 default_server deferred;
     server_name _;
     location / {
       proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
-      proxy_set_header Host $http_host;
+      proxy_set_header Host $upstream_host;
     }
   }
 <%   redirects = node['cdo-varnish']['redirects'].group_by(&:last).transform_values {|v| v.to_h.keys}
