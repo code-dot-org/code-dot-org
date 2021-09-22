@@ -1065,6 +1065,13 @@ ms:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION} 123_321
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': kanan
+            '90': bawah
+            '180': kiri
+            '270': atas
       gamelab_mirrorSprite:
         text: "{SPRITE} muka {DIRECTION}"
         options:
@@ -1087,6 +1094,9 @@ ms:
         text: PlaySound {SOUND}
       gamelab_playSoundOptions:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1467,6 +1477,8 @@ ms:
             '"ripples"': Riak
           PALETTE:
             '"rainbow"': Pelangi
+      PoemBot_setBackgroundImageAs:
+        text: tetapkan latar belakang ke {IMG}
       PoemBot_setForegroundEffect:
         text: tetapkan kesan {EFFECT} latar depan
         options:
