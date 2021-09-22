@@ -72,7 +72,7 @@
   "level_num": "custom",
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-13T20:26:35.502+00:00\",\"changed\":[\"cloned from \\\"helloworld_emoji_click\\\"\"],\"cloned_from\":\"helloworld_emoji_click\"},{\"changed_at\":\"2021-09-13 20:26:40 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:43:52 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 17:13:52 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 17:30:07 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:07:55 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:09:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:09:59 +0000\",\"changed\":[],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:10:04 +0000\",\"changed\":[],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-13T20:26:35.502+00:00\",\"changed\":[\"cloned from \\\"helloworld_emoji_click\\\"\"],\"cloned_from\":\"helloworld_emoji_click\"},{\"changed_at\":\"2021-09-13 20:26:40 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:43:52 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 17:13:52 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 17:30:07 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:07:55 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:09:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:09:59 +0000\",\"changed\":[],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:10:04 +0000\",\"changed\":[],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-17 20:22:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -115,7 +115,7 @@
           </value>
           <next>
             <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
-              <title name="SPEECH">The sky looks beautiful today</title>
+              <title name="SPEECH">The sky looks beautiful today.</title>
               <value name="SPRITE">
                 <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                   <title name="ANIMATION">"retrocreature_03"</title>
@@ -133,7 +133,7 @@
           </value>
           <next>
             <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
-              <title name="SPEECH">I've landed</title>
+              <title name="SPEECH">I've landed!</title>
               <value name="SPRITE">
                 <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                   <title name="ANIMATION">"retroship_13"</title>
