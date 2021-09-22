@@ -3,6 +3,7 @@
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
 import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
 
-let locale = safeLoadLocale('fish_locale');
-locale = localeWithI18nStringTracker(locale, 'fish');
-module.exports = locale;
+export const locale = localeWithI18nStringTracker(
+  safeLoadLocale('fish_locale'),
+  'fish'
+);
