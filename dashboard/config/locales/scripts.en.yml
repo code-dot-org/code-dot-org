@@ -714,6 +714,8 @@ en:
           lessons:
             Text Compression:
               name: Text Compression
+              description_student: 'At some point we reach a physical limit of how fast we can send bits and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must compress the data.  '
+              description_teacher: "At some point we reach a physical limit of how fast we can send bits and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must **compress** the data. In this lesson, students will use the Text Compression Widget to compress segments of English text by looking for patterns and substituting symbols for larger patterns of text.\r\n"
           student_description: Compress text by identifying repeated patterns.
         CSPPD:
           title: Computer Science Principles PD
