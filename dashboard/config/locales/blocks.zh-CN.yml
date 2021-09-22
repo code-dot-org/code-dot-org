@@ -1149,6 +1149,13 @@ zh-CN:
         text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵图
       gamelab_makeNumSprites:
         text: 做{NUM}新{ANIMATION_NAME}精灵图
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': 向右
+            '90': 向下
+            '180': 向左
+            '270': 向上
       gamelab_mirrorSprite:
         text: "{SPRITE} 面向 {DIRECTION}"
         options:
@@ -1184,6 +1191,7 @@ zh-CN:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": 紧缩
+            "'sound://category_digital/jump_7.mp3'": 跳跃
       gamelab_pointInDirection:
         text: 指向 {SPRITE} {DIRECTION}
         options:
@@ -1721,6 +1729,8 @@ zh-CN:
         text: 随机布局怪物
       Outbreak_stopMoving:
         text: 怪物停止移动
+      PoemBot_makeNumSprites:
+        text: 做{NUM}新{ANIMATION_NAME}精灵图
       PoemBot_playSound:
         text: 播放音效{SOUND}
       PoemBot_setBackgroundEffect:
@@ -1734,6 +1744,8 @@ zh-CN:
             '"ripples"': 波纹
           PALETTE:
             '"rainbow"': 彩虹
+      PoemBot_setBackgroundImageAs:
+        text: 设置背景为 {IMG}
       PoemBot_setForegroundEffect:
         text: 设置前景效果为 {EFFECT}
         options:
@@ -1771,6 +1783,10 @@ zh-CN:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      PoemBot_whenPromptAnswered:
+        text: 当{VAR}被回答
       RyanLab_moveForward:
         text: 向前移动
       RyanLab_turnLeft:

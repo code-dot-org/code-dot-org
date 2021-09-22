@@ -3443,3 +3443,20 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+        csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: Alətlər
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dərslər
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Məzmun
+            content:
+              display_name: Məzmun
+            lesson_group:
+              display_name: Məzmun
+            lessonGroup-2:
+              display_name: Məzmun

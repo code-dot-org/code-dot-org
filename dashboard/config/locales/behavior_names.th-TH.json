@@ -776,7 +776,16 @@
           "wandering": "เคลื่อนที่",
           "moving left and right": "เคลื่อนที่ไปทางซ้ายและขวา",
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving east": "เคลื่อนไปทางตะวันออก",
+          "spinning left": "หมุนไปทางซ้าย",
+          "spinning right": "หมุนไปทางขวา",
+          "shrinking": "หดตัว",
+          "growing": "ขยายตัว",
+          "moving south": "เคลื่อนที่ไปทางใต้",
+          "jittering": "กระวนกระวาย",
+          "moving west": "เคลื่อนที่ไปทางตะวันตก",
+          "patrolling": "ลาดตระเวน"
         }
       }
     }

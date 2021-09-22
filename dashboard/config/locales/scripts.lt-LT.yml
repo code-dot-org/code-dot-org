@@ -3023,3 +3023,13 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Turinys
+            content:
+              display_name: Turinys
+            lesson_group:
+              display_name: Turinys
+            lessonGroup-2:
+              display_name: Turinys

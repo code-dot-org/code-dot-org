@@ -1115,6 +1115,13 @@ he:
         text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
       gamelab_makeNumSprites:
         text: צור {NUM} דמויות {ANIMATION_NAME} חדשות
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ימינה
+            '90': למטה
+            '180': שמאלה
+            '270': למעלה
       gamelab_mirrorSprite:
         text: "{SPRITE} פונה ל{DIRECTION}"
         options:
@@ -1143,6 +1150,7 @@ he:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": כפתור
             "'sound://category_collect/clicky_crunch.mp3'": מעיכה
+            "'sound://category_digital/jump_7.mp3'": קפוץ
       gamelab_pointInDirection:
         text: נקודה {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1577,6 +1585,8 @@ he:
         text: x קואורדינטות של {SPRITE}
       Mikelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
+      PoemBot_makeNumSprites:
+        text: צור {NUM} דמויות {ANIMATION_NAME} חדשות
       PoemBot_playSound:
         text: נגן צליל {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1590,6 +1600,8 @@ he:
             '"ripples"': אדוות
           PALETTE:
             '"rainbow"': קשת
+      PoemBot_setBackgroundImageAs:
+        text: להגדיר רקע ל {IMG}
       PoemBot_setForegroundEffect:
         text: קבע אפקט חזית {EFFECT}
         options:

@@ -35529,6 +35529,8 @@ es-MX:
               display_name: "¡Demuestra lo que sabes!"
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: Plantilla
             lesson-2:
               name: Innovaciones en computación
             lesson-9:
@@ -35537,3 +35539,59 @@ es-MX:
               name: Acelerómetro
             lesson-19:
               name: Proyecto
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Herramientas
+            lesson-4:
+              name: Ejemplos
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lecciones
+            lessonGroup-3:
+              display_name: Proyecto
+        csa4-exemplars:
+          lessons:
+            new lesson:
+              name: Utiliza las Bibliotecas Existentes para Añadir Capacidades
+            lesson-1:
+              name: Utiliza las Bibliotecas Existentes para Añadir Capacidades
+            lesson-2:
+              name: Resolviendo Problemas con la Clase de Matemáticas
+            lesson-4:
+              name: Comparando Valores para Tomar Decisiones
+            lesson-5:
+              name: Añadiendo Aleatoriedad a un Programa
+            lesson-6:
+              name: Comparando Referencias a Objetos y Datos
+            lesson-7:
+              name: Proporcionando una Ruta Alternativa de Ejecución
+            lesson-8:
+              name: Probando Múltiples Condiciones
+            lesson-9:
+              name: Usando Operadores Lógicos
+            lesson-10:
+              name: Aplicando las Leyes de De Morgan a las Expresiones Booleanas
+            lesson-12:
+              name: El Barrio - Proyecto de fiesta vecinal - Día 2
+            lesson-13:
+              name: El Barrio - Proyecto de fiesta vecinal - Día 3
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lesson group:
+              display_name: Contenido
+            content:
+              display_name: Contenido
+            show_what_you_know:
+              display_name: "¡Demuestra lo que sabes!"
+            lesson_group:
+              display_name: Contenido
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"

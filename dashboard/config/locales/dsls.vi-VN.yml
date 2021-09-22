@@ -2553,59 +2553,98 @@ vi-VN:
         display_name: Dự án tổng kết khóa học
       courseC_multi_artist_prog6_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Họa sĩ sẽ vẽ một hình tam giác có ba cạnh bằng nhau.
+          feedback: Sai rồi. Họa sĩ vẽ một hình vuông.
+        - text: Họa sĩ sẽ vẽ một đoạn thẳng duy nhất.
+          feedback: Sai rồi. Họa sĩ vẽ một hình vuông.
+        - text: Họa sĩ sẽ vẽ một hình vuông.
+          correct: true
           feedback: Chính xác!
         - text: Họa sĩ sẽ vẽ hình ngũ giác
           feedback: Sai. Họa sĩ vẽ hình vuông.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh sau đây. Điều gì sẽ xảy ra khi bạn nhấp chuột vào
+            nút “Run” (Chạy)?
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
+          feedback: Sai rồi. Với mỗi vòng lặp trong số 3 vòng lặp, người nông dân
+            sẽ thu thập 4 bí ngô. 4 nhân 3 là 12!
         - text: '12'
           correct: true
           feedback: Chính xác!
         - text: '15'
+          feedback: Sai rồi. Với mỗi vòng lặp trong số 3 vòng lặp, người nông dân
+            sẽ thu thập 4 bí ngô. 4 nhân 3 là 12!
         - text: '20'
+          feedback: Sai rồi. Với mỗi vòng lặp trong số 3 vòng lặp, người nông dân
+            sẽ thu thập 4 bí ngô. 4 nhân 3 là 12!
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Scrat sẽ đến được chỗ hạt sồi. Không có lỗi trong mã lệnh.
+          feedback: Sai rồi. Thứ nhất, Scrat xoay sai hướng, sau đó Scrat không tiến
+            lên đủ số lần để đến chỗ hạt sồi.
+        - text: Scrat sẽ không đến được chỗ hạt sồi bóng vì cậu xoay sai hướng.
+          correct: true
+          feedback: Chính xác! Thứ nhất, Scrat xoay sai hướng, sau đó Scrat không
+            tiến lên đủ số lần để đến chỗ hạt sồi.
+        - text: Scrat sẽ không đến được chỗ hạt sồi vì không có đủ số lượng khối `move
+            forward` (tiến lên).
+          correct: true
+          feedback: Chính xác! Thứ nhất, Scrat xoay sai hướng, sau đó Scrat không
+            tiến lên đủ số lần để đến chỗ hạt sồi.
         - text: Scrat sẽ không di chuyển từ khối đầu tiên.
+          feedback: Có hai lỗi trong mã lệnh này. Thứ nhất, Scrat xoay sai hướng,
+            sau đó Scrat không tiến lên đủ số lần để đến chỗ hạt sồi.
         questions:
-        - {}
+        - text: Hãy tìm lỗi trong mã lệnh này. Liệu Scrat có đến được chỗ hạt sồi
+            không hay có vấn đề gì xảy ra?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Cuối cùng, chú chim còn cách con heo một bước.
+          feedback: Sai rồi. Mã lệnh này đưa chú chim đến đúng chỗ con heo.
+        - text: Chú chim sẽ đến được chỗ con heo.
+          correct: true
           feedback: Chính xác!
-        - {}
+        - text: Chú chim sẽ lao vào thuốc nổ.
+          feedback: Sai rồi. Mã lệnh này đưa chú chim đến đúng chỗ con heo.
         - text: Chú chim sẽ va vào tường.
+          feedback: Sai rồi. Mã lệnh này đưa chú chim đến đúng chỗ con heo.
         questions:
-        - {}
+        - text: Hãy đọc mã lệnh dưới đây thật cẩn thận. Điều gì sẽ xảy ra khi bạn
+            nhấp chuột vào nút “Run” (chạy)?
       courseC_multi_starWars_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 sẽ không di chuyển.
+          feedback: Sai rồi. Khối lặp lại sẽ khiến BB-8 tiến lên 5 lần.
+        - text: BB-8 sẽ chỉ di chuyển một ô
+          feedback: Sai rồi. Khối lặp lại sẽ khiến BB-8 tiến lên 5 lần.
+        - text: BB-8 sẽ di chuyển 5 lần và lấy toàn bộ phế liệu
+          correct: true
           feedback: Chính xác!
         - text: BB-8 sẽ chỉ di chuyển 3 ô.
+          feedback: Sai rồi. Khối lặp lại sẽ khiến BB-8 tiến lên 5 lần.
         questions:
-        - {}
+        - text: Bạn nghĩ điều gì sẽ xảy ra khi bạn nhấp chuột vào nút “Run” (chạy)?
       courseC_multi_starWars_predict2_2021:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 sẽ đi quá xa trong vòng lặp đầu tiên.
+          feedback: Sai rồi. Vòng lặp đầu tiên chỉ giúp BB-8 tiến lên 2 ô mặc dù cậu
+            ta cần tiến lên 3 ô.
+        - text: BB-8 không đi đủ xa trong vòng lặp đầu tiên để lấy hết phế liệu.
+          correct: true
           feedback: Chính xác!
-        - {}
+        - text: BB-8 sẽ thu thập toàn bộ phế liệu mà không gặp trở ngại gì.
+          feedback: Sai rồi. Vòng lặp đầu tiên chỉ giúp BB-8 tiến lên 2 ô mặc dù cậu
+            ta cần tiến lên 3 ô.
         - text: BB-8 sẽ rẽ sai hướng sau vòng lặp đầu tiên.
+          feedback: Sai rồi. Vòng lặp đầu tiên chỉ giúp BB-8 tiến lên 2 ô mặc dù cậu
+            ta cần tiến lên 3 ô.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra khi bạn nhấp chuột
+            vào nút “Run” (chạy)?
       courseD_EOC_2021:
         description: Bạn đã tới bài học cuối cùng của Khóa D! Hãy tạo một dự án bạn
           muốn nhé.
@@ -2708,7 +2747,8 @@ vi-VN:
       courseD_multi_maze_until2_predict1_2021:
         answers:
         - {}
-        - correct: true
+        - text: Chú chim sẽ đến được chỗ con heo.
+          correct: true
           feedback: Chính xác!
         - {}
         - text: Chú chim sẽ quay sai hướng.
@@ -2772,8 +2812,10 @@ vi-VN:
         - {}
       courseF_EOC_2021:
         display_name: Dự án tổng kết khóa học
+        description: Bạn đã đến phần cuối của Khóa học F! Hãy chọn một dự án để tạo.
       courseF_EOC_examples_2021:
         display_name: Dự án tổng kết khóa học
+        description: Bạn đã đến phần cuối của Khóa học F! Hãy chọn một dự án để tạo.
       courseF_EOC_samples_2021:
         description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
           hãy dành thời gian xem xét các dự án mẫu.
@@ -2869,29 +2911,27 @@ vi-VN:
         - text: Họa sĩ sẽ vẽ đa giác 50 cạnh, mỗi cạnh 3 pixel.
           feedback: Sai rồi. Biến `length` (chiều dài) cần phải ở trong vòng lặp `repeat`
             (lặp lại) để làm được điều đó.
-        - text: Họa sĩ sẽ vẽ ba cạnh mở có các góc rẽ 50 độ.
+        - text: Họa sĩ sẽ vẽ ba cạnh mở có các góc xoay 50 độ.
           feedback: Sai rồi. Biến `length` (chiều dài) cần được dùng trong khối `repeat`
             (lặp lại) để làm được điều đó.
         - text: Máy tính sẽ nhắc người dùng nhập số.
           feedback: Biến `length` được đặt giá trị 50 và đang được dùng trong khối
-            `move forward by` (tiến về phía trước một khoảng), vì vậy họa sĩ sẽ vẽ
-            hình tam giác có cạnh 50 pixel.
+            `move forward by` (tiến lên một khoảng), vì vậy họa sĩ sẽ vẽ hình tam
+            giác có cạnh 50 pixel.
         questions:
         - text: Chúng ta đã đặt biến “length” (chiều dài) thành 50. Điều gì sẽ xảy
             ra khi bạn nhấp chuột vào nút “Run” (Chạy)?
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - text: Chú ong sẽ tiến về phía trước và thu thập tất cả mật hoa từ mỗi bông
-            hoa.
+        - text: Chú ong sẽ tiến lên và thu thập tất cả mật hoa từ mỗi bông hoa.
           feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong thu thập lượng mật
             hoa phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông
             hoa mà thôi.
-        - text: Chú ong sẽ tiến về phía trước và thu thập tất cả mật hoa từ mỗi bông
-            hoa, trừ một bông.
+        - text: Chú ong sẽ tiến lên và thu thập tất cả mật hoa từ mỗi bông hoa, trừ
+            một bông.
           correct: true
           feedback: Chính xác!
-        - text: Chú ong sẽ tiến về phía trước và thu thập một mật hoa từ mỗi bông
-            hoa.
+        - text: Chú ong sẽ tiến lên và thu thập một mật hoa từ mỗi bông hoa.
           feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong thu thập lượng mật
             hoa phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông
             hoa mà thôi.
@@ -2903,8 +2943,8 @@ vi-VN:
         questions:
         - text: Hãy đọc mã lệnh dưới đây. Điều gì sẽ xảy ra khi bạn nhấp chuột vào
             nút “Run” (Chạy)?
-        markdown: A! Sử dụng các vòng lặp `for` (với) sẽ khiến bài tập này đơn giản
-          hơn rất nhiều!
+        markdown: Đúng rồi! Dùng vòng lặp `for` (với) sẽ khiến bài tập này đơn giản
+          hơn rất nhiều đấy!
       courseF_sprites_freeplay:
         description: Đến lượt bạn tự sáng tạo bằng ý tưởng của chính mình rồi! Bạn
           sẽ thực hiện loại dự án nào?
@@ -3046,13 +3086,22 @@ vi-VN:
         display_name: Ví dụ dự án
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel sẽ thu thập 4 mảnh báu vật khi sử dụng mã lệnh này.
+          feedback: Sai rồi. Laurel cố gắng thu thập ở ô không có báu vật và do đó
+            bị lỗi.
+        - text: Laurel sẽ cố gắng thu thập báu vật ở ô không có báu vật và do đó bị
+            lỗi.
+          correct: true
           feedback: Chính xác!
-        - {}
+        - text: Laurel sẽ thu thập toàn bộ báu vật.
+          feedback: Sai rồi. Laurel cố gắng thu thập ở ô không có báu vật và do đó
+            bị lỗi.
         - text: Laurel sẽ thu thập 1 mẩu kho báu bằng cách sử dụng mã lệnh này.
+          feedback: Sai rồi. Laurel cố gắng thu thập ở ô không có báu vật và do đó
+            bị lỗi.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh này. Bạn nghĩ điều gì sẽ xảy ra khi chạy chương
+            trình?
       HappyMaps-Unplugged_2021:
         markdown: |-
           # மகிழ்ச்சியான வரைபடம்
@@ -3068,3 +3117,32 @@ vi-VN:
           # Moc slov
 
           ## Co byste měli dělat, když někdo na internetu použije zlovolnou nebo urážející mluvu?
+      BigEvent-Unplugged_2021:
+        markdown: |-
+          # Sự kiện lớn
+
+          Trong khoa học máy tính, sự kiện là những thao tác được máy tính giám sát. Trong bài học này, bạn sẽ có những phản ứng khác nhau tùy thuộc vào nút được nhấn.
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # Bắt lấy Loopy
+
+          Bài học này sẽ giới thiệu khái niệm vòng lặp trong lập trình thông qua hoạt động khiêu vũ.
+      Internet-Unplugged_2021:
+        markdown: |
+          # Internet
+
+          Hãy tự tạo ra hệ thống Internet của riêng bạn trong lớp học chỉ bằng những mẩu giấy.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # Di chuyển nào
+
+          Hãy dùng bản đồ và đưa ra mệnh lệnh để đến đích.
+      TheRightAppMarkdownLevel_2021:
+        markdown: |
+          # Ứng dụng phù hợp
+
+          * Ngày nay mọi người đều sử dụng máy tính, đặc biệt là điện thoại thông minh.
+          * Các ứng dụng trên điện thoại thông minh giúp mọi người làm những việc như nói chuyện với bạn bè, nghe nhạc, mua sắm hoặc đơn giản là duyệt web.
+          * Lập trình viên cần phải hiểu nhu cầu của mọi người và thiết kế ứng dụng phù hợp với họ!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)

@@ -1073,6 +1073,13 @@ ur:
             '"rain"': بارش
       gamelab_makeNewSpriteAnon:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': درست
+            '90': نیچے
+            '180': بائیں
+            '270': اوپر
       gamelab_mirrorSprite:
         text: "{SPRITE} چہرہ {DIRECTION}"
         options:
@@ -1095,6 +1102,9 @@ ur:
         text: پلے آواز {SOUND}
       gamelab_playSoundOptions:
         text: پلے آواز {SOUND}
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": چھلانگ لگایں
       gamelab_pointInDirection:
         text: نقطہ {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1467,6 +1477,8 @@ ur:
             '"ripples"': ریپلز
           PALETTE:
             '"rainbow"': قوس قزح
+      PoemBot_setBackgroundImageAs:
+        text: پس منظر کو {IMG} پر سیٹ کریں
       PoemBot_setForegroundEffect:
         text: پس منظر اثر {EFFECT} سیٹ کریں
         options:
