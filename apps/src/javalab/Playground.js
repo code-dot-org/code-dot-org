@@ -1,5 +1,6 @@
 import {PlaygroundSignalType} from './constants';
 import {assets, starterAssets} from '@cdo/apps/clientApi';
+import javalabMsg from '@cdo/javalab/locale';
 
 export default class Playground {
   constructor(
@@ -7,6 +8,7 @@ export default class Playground {
     onNewlineMessage,
     onJavabuilderMessage,
     levelName,
+    // Only used for testing
     starterAssetsApi,
     assetsApi
   ) {
@@ -17,6 +19,8 @@ export default class Playground {
     this.isGameOver = false;
     this.levelName = levelName;
     this.starterAssetFilenames = [];
+
+    // Assigned only for testing; should use imports from clientApi normally
     this.starterAssetsApi = starterAssetsApi || starterAssets;
     this.assetsApi = assetsApi || assets;
     this.imageData = {};
@@ -34,6 +38,11 @@ export default class Playground {
     response.starter_assets.forEach(asset => {
       this.starterAssetFilenames.push(asset.filename);
     });
+  };
+
+  onFileLoadError = filename => {
+    this.onOutputMessage(javalabMsg.fileLoadError({filename}));
+    this.onNewlineMessage();
   };
 
   handleSignal(data) {
@@ -145,19 +154,24 @@ export default class Playground {
       return;
     }
 
+    const filename = backgroundData.filename;
+
     const backgroundElement = this.getBackgroundElement();
-    backgroundElement.src = this.getUrl(backgroundData.filename);
+    backgroundElement.onerror = () => {
+      this.onFileLoadError(filename);
+    };
+    backgroundElement.src = this.getUrl(filename);
     backgroundElement.style.opacity = 1.0;
   }
 
   reset() {
     this.isGameOver = false;
     this.isGameRunning = false;
-
     const playground = this.getPlaygroundElement();
     while (playground.lastElementChild) {
       playground.removeChild(playground.lastElementChild);
     }
+    this.resetBackgroundElement();
   }
 
   // TODO: Call this from click handler on new clickable items
@@ -245,5 +259,12 @@ export default class Playground {
     return dimension + coordinate > 800
       ? `${dimension + coordinate - 800}px`
       : 0;
+  }
+
+  resetBackgroundElement() {
+    const backgroundElement = this.getBackgroundElement();
+    backgroundElement.onerror = undefined;
+    backgroundElement.src = undefined;
+    backgroundElement.style.opacity = 0.0;
   }
 }
