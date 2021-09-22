@@ -381,17 +381,26 @@ class Documents < Sinatra::Base
     end
 
     def render_partials(template_content)
-      # Template types that do not have thier own way of rendering partials
+      # Template types that do not have their own way of rendering partials
       # (ie, markdown) can include other partials with the syntax:
       #
       #     {{ path/to/partial }}
+      #     {{ path/to/partial, param1: "value1", param2: "value2" }}
       #
       # Because such content can be translated, we want to make sure that if a
       # translator accidentally translates the path to the template, we simply
       # render nothing rather than throwing an error
       template_content.
-        gsub(/{{([^}]*)}}/) do
-          view($1.strip)
+        gsub(/{{([^,]*),([^}]*)}}/) do
+          uri = $1.strip
+
+          # Adapted from https://stackoverflow.com/a/23612782.
+          locals = $2.scan(/("(?:\\.|[^"])*"|[^\s]*):\s*("(?:\\.|[^"])*"|[^\s]*)/).
+            map(&:compact).
+            to_h.
+            transform_values(&:undump)
+
+          view(uri, locals)
         rescue
           ''
         end
