@@ -54,6 +54,7 @@
   "fileImportError": "One or more file names are reserved by Java Lab and cannot be imported into this project. Files unable to be imported:",
   "fileImportWarning": "You have one or more duplicate file names between this project and your selected backpack files. Duplicate file names are:",
   "fileImportWarningConfirm": "Do you want to replace these files with the files from your backpack?",
+  "fileLoadError": "There was an error loading the file {filename}.",
   "genericSaveErrorTitle": "Save error",
   "genericErrorMessage": "Please try again",
   "import": "Import",
