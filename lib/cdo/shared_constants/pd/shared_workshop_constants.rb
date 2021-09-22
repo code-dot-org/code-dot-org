@@ -10,7 +10,7 @@ module Pd
       COURSE_COUNSELOR = 'Counselor'.freeze,
       COURSE_ADMIN = 'Admin'.freeze,
       COURSE_FACILITATOR = 'Facilitator'.freeze,
-      COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop - Welcome'.freeze
+      COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze
     ].freeze
 
     STATES = [
@@ -39,7 +39,8 @@ module Pd
       SUBJECT_FIT: SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze,
       SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze,
       SUBJECT_VIRTUAL_KICKOFF: SUBJECT_VIRTUAL_KICKOFF = 'Virtual Workshop Kickoff'.freeze,
-      SUBJECT_CSP_FOR_RETURNING_TEACHERS: SUBJECT_CSP_FOR_RETURNING_TEACHERS = 'Workshop for Returning Teachers'.freeze
+      SUBJECT_CSP_FOR_RETURNING_TEACHERS: SUBJECT_CSP_FOR_RETURNING_TEACHERS = 'Workshop for Returning Teachers'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_WELCOME: SUBJECT_ADMIN_COUNSELOR_WELCOME = 'Welcome'.freeze
     }
 
     SUBJECTS = {
@@ -89,6 +90,9 @@ module Pd
         SUBJECT_CSF_101,
         SUBJECT_CSF_201,
         SUBJECT_CSF_FIT = SUBJECT_FIT
+      ],
+      COURSE_ADMIN_COUNSELOR => [
+        SUBJECT_ADMIN_COUNSELOR_WELCOME
       ]
     }.freeze
 
@@ -96,8 +100,7 @@ module Pd
       SUBJECT_VIRTUAL_KICKOFF
     ].freeze
 
-    # Used to suppress post-workshop emails and in create/edit workshop UI
-    MUST_SUPPRESS_EMAIL_SUBJECTS = ACADEMIC_YEAR_WORKSHOP_SUBJECTS = [
+    ACADEMIC_YEAR_WORKSHOP_SUBJECTS = [
       SUBJECT_VIRTUAL_KICKOFF,
       SUBJECT_WORKSHOP_1,
       SUBJECT_WORKSHOP_2,
@@ -106,6 +109,9 @@ module Pd
       SUBJECT_WORKSHOP_1_2,
       SUBJECT_WORKSHOP_3_4
     ].freeze
+
+    # Used to suppress post-workshop emails and in create/edit workshop UI
+    MUST_SUPPRESS_EMAIL_SUBJECTS = ACADEMIC_YEAR_WORKSHOP_SUBJECTS.concat([SUBJECT_ADMIN_COUNSELOR_WELCOME])
 
     LEGACY_SUBJECTS = {
       COURSE_CSP => [

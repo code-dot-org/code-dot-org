@@ -282,13 +282,13 @@ FactoryGirl.define do
 
     factory :admin_counselor_workshop do
       course Pd::Workshop::COURSE_ADMIN_COUNSELOR
-      subject nil
+      subject Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_WELCOME
       capacity 35          # Average capacity
       on_map false         # Never on map
-      funded               # More than half are funded
+      funded false         # Never funded
       num_sessions 1       # Most have 1 session
-      num_facilitators 0   # Most have no facilitators
-      each_session_hours 2 # The most common session length
+      num_facilitators 1   # Want to work with facilitators
+      each_session_hours 2 # Not sure on session length
     end
 
     factory :counselor_workshop do

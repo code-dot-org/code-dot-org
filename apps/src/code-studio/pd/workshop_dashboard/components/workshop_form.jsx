@@ -156,7 +156,7 @@ export class WorkshopForm extends React.Component {
       );
       this.loadAvailableFacilitators(props.workshop.course);
 
-      if (props.workshop.course === 'Admin/Counselor Workshop - Welcome') {
+      if (props.workshop.course === 'Admin/Counselor Workshop') {
         initialState.suppress_email = true;
       }
     }
@@ -363,8 +363,7 @@ export class WorkshopForm extends React.Component {
 
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
-    const isAdminCounselor =
-      this.state.course === 'Admin/Counselor Workshop - Welcome';
+    const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
     const showFeeInput = isCsf;
     const showMapChoice = isCsf;
 
