@@ -4,7 +4,7 @@ import GeneratedCode from './feedback/GeneratedCode';
 import React from 'react';
 
 const wrapperStyle = {
-  marginTop: 200
+  marginTop: 100
 };
 
 export default storybook => {
