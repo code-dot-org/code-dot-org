@@ -892,62 +892,6 @@
         "framework.shortcode": "csta2011",
         "standard.shortcode": "CT.L3B:4"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csp",
-        "standard.shortcode": "1.2.2A"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csp",
-        "standard.shortcode": "3.3.1B"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csp",
-        "standard.shortcode": "3.3.1F"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csp",
-        "standard.shortcode": "6.3.1C"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csp",
-        "standard.shortcode": "6.3.1H"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csp",
-        "standard.shortcode": "6.3.1I"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csp",
-        "standard.shortcode": "6.3.1K"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csp",
-        "standard.shortcode": "7.3.1G"
-      }
     }
   ],
   "lessons_opportunity_standards": [
