@@ -127,10 +127,10 @@ class ProgressLessonTeacherInfo extends React.Component {
         {lesson.lockable && lockableAuthorized && !hasNoSections && (
           <LessonLock lesson={lesson} />
         )}
-        {lesson.lessonStartPath && !(lesson.lockable && !lockableAuthorized) && (
+        {lesson.lessonStartUrl && !(lesson.lockable && !lockableAuthorized) && (
           <div style={styles.buttonContainer}>
             <SendLesson
-              lessonUrl={lesson.lessonStartPath}
+              lessonUrl={lesson.lessonStartUrl}
               lessonTitle={lesson.name}
               courseid={courseId}
               analyticsData={JSON.stringify(this.firehoseData())}
