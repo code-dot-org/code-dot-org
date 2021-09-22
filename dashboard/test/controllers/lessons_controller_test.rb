@@ -1328,6 +1328,32 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal [1, 2], section.script_levels.map(&:position)
   end
 
+  test 'legacy lesson clone fails if destination course does not use code studio lessons' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    destination_script = create :script, use_legacy_lesson_plans: true
+    original_script = create :script, use_legacy_lesson_plans: false
+    lesson = create :lesson, script: original_script
+    put :clone, params: {id: lesson.id, 'destinationUnitName': destination_script.name}
+
+    assert_response :not_acceptable
+    assert @response.body.include?('error')
+  end
+
+  test 'legacy lesson clone fails if origin course does not use code studio lessons' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    destination_script = create :script, use_legacy_lesson_plans: false
+    original_script = create :script, use_legacy_lesson_plans: true
+    lesson = create :lesson, script: original_script
+    put :clone, params: {id: lesson.id, 'destinationUnitName': destination_script.name}
+
+    assert_response :not_acceptable
+    assert @response.body.include?('error')
+  end
+
   test 'lesson clone fails if script cannot be found' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -1342,11 +1368,29 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
+    script = create :script, use_legacy_lesson_plans: false
     create :course_version, content_root: script, key: '2021'
-    original_script = create :script
+    original_script = create :script, use_legacy_lesson_plans: false
     lesson = create :lesson, script: original_script
     create :course_version, content_root: original_script, key: '2021'
+    cloned_lesson = create :lesson, script: script
+    Lesson.any_instance.stubs(:copy_to_unit).returns(cloned_lesson)
+    put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
+
+    assert_response 200
+    assert @response.body.include?('editLessonUrl')
+    assert @response.body.include?('editScriptUrl')
+  end
+
+  test 'lesson clone is successful between version years' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, use_legacy_lesson_plans: false
+    create :course_version, content_root: script, key: '2021'
+    original_script = create :script, use_legacy_lesson_plans: false
+    lesson = create :lesson, script: original_script
+    create :course_version, content_root: original_script, key: '2020'
     cloned_lesson = create :lesson, script: script
     Lesson.any_instance.stubs(:copy_to_unit).returns(cloned_lesson)
     put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
