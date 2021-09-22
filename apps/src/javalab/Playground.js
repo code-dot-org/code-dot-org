@@ -1,13 +1,38 @@
 import {PlaygroundSignalType} from './constants';
+import {assets, starterAssets} from '@cdo/apps/clientApi';
 
 export default class Playground {
-  constructor(onOutputMessage, onNewlineMessage, onJavabuilderMessage) {
+  constructor(
+    onOutputMessage,
+    onNewlineMessage,
+    onJavabuilderMessage,
+    levelName,
+    starterAssetsApi,
+    assetsApi
+  ) {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.onJavabuilderMessage = onJavabuilderMessage;
     this.isGameRunning = false;
     this.isGameOver = false;
+    this.levelName = levelName;
+    this.starterAssetFilenames = [];
+    this.starterAssetsApi = starterAssetsApi || starterAssets;
+    this.assetsApi = assetsApi || assets;
+
+    this.starterAssetsApi.getStarterAssets(
+      levelName,
+      this.onStarterAssetsReceived,
+      () => {}
+    );
   }
+
+  onStarterAssetsReceived = result => {
+    const response = JSON.parse(result.response);
+    response.starter_assets.forEach(asset => {
+      this.starterAssetFilenames.push(asset.filename);
+    });
+  };
 
   handleSignal(data) {
     switch (data.value) {
@@ -89,6 +114,10 @@ export default class Playground {
       // can't set background if game is over
       return;
     }
+
+    const backgroundElement = this.getBackgroundElement();
+    backgroundElement.src = this.getUrl(backgroundData.filename);
+    backgroundElement.style.opacity = 1.0;
   }
 
   reset() {
@@ -102,5 +131,19 @@ export default class Playground {
       // can only handle click events if game is not over and game is running
       return;
     }
+  }
+
+  getUrl(filename) {
+    if (this.starterAssetFilenames.includes(filename)) {
+      return this.starterAssetsApi
+        .withLevelName(this.levelName)
+        .basePath(filename);
+    } else {
+      return this.assetsApi.basePath(filename);
+    }
+  }
+
+  getBackgroundElement() {
+    return document.getElementById('playground-background');
   }
 }
