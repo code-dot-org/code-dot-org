@@ -21,9 +21,8 @@ module LessonImportHelper
   # @param [Hash] cb_lesson_data - Lesson and activity data to import.
   def self.update_lesson(lesson, models_to_import = [], cb_lesson_data = {})
     raise unless [:development, :adhoc, :levelbuilder].include? rack_env
-    raise unless lesson.script.hidden
 
-    # course version id should always be present for CSF/CSD/CSP 2020 courses.
+    # course version id should always be present for CSF/CSD/CSP 2020 courses and hoc courses.
     course_version_id = lesson.script&.get_course_version&.id
     raise "Script must have course version" unless course_version_id
 
@@ -36,7 +35,6 @@ module LessonImportHelper
       end
     else
       if models_to_import.include?('Lesson')
-        lesson.name = cb_lesson_data['title']
         lesson.overview = cb_lesson_data['teacher_desc']
         lesson.student_overview = cb_lesson_data['student_desc']
         lesson.purpose = cb_lesson_data['cs_content']
@@ -259,7 +257,7 @@ module LessonImportHelper
         position += 1
         lesson_activity.save!
         lesson_activity.reload
-        lesson_activity.activity_sections = create_activity_sections(a['content'], lesson_activity.id, levels)
+        lesson_activity.activity_sections = create_activity_sections(a['content'].strip_utf8mb4, lesson_activity.id, levels)
         lesson_activity
       end
     end.compact
