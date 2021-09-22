@@ -56,7 +56,7 @@ social:
 As a program manager on <a href="https://about.google/" target="_blank">Google</a>’s Responsible AI team, <strong>Taylor Roper</strong> works with a lot of amazing research scientists, software engineers, and others to develop and manage tools, processes, and programs to help Google's teams develop AI responsibly. Taylor is an alumna of Howard University, graduating in 2020 with a B.B.A. in Information Systems.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-developing-responsible-artificial-intelligence-registration-168002151959" target="_blank"><button>Register my class</button></a>
+<a href="https://code.zoom.us/rec/share/S0iGc__as1P7ojySOWcUbyzzjWE_t95g6kcRLvwNVyvrgJ6BxBPGb1Pxy1HGtuyU.WneOY6X_RCiEeue-" target="_blank"><button>Watch the chat</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>

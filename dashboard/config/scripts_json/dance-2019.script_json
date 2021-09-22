@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "dance-2019",
-    "serialized_at": "2021-09-18 22:15:24 UTC",
+    "serialized_at": "2021-09-22 12:57:06 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "dance-2019"
@@ -58,7 +58,6 @@
       "key": "0f7585ce-d117-4b61-aee9-d54444cd83b0",
       "position": 1,
       "properties": {
-        "duration": 0,
         "name": "Getting Started (5 minutes)"
       },
       "seeding_key": {
@@ -72,7 +71,6 @@
       "key": "82dec89b-f375-4238-a251-ffae17c2dfd1",
       "position": 2,
       "properties": {
-        "duration": 0,
         "name": "Activity (30-45 minutes)"
       },
       "seeding_key": {
@@ -86,7 +84,6 @@
       "key": "239ba7ce-544c-4508-9e5c-e956de964002",
       "position": 3,
       "properties": {
-        "duration": 0,
         "name": "Wrap Up (5 minutes)"
       },
       "seeding_key": {
@@ -100,7 +97,6 @@
       "key": "4cf19609-58ef-497b-b48d-2b9a0281a490",
       "position": 4,
       "properties": {
-        "duration": 0,
         "name": "Go Viral"
       },
       "seeding_key": {
@@ -114,7 +110,6 @@
       "key": "7afb9d6e-2c07-44d2-8504-90df0cecc778",
       "position": 5,
       "properties": {
-        "duration": 0,
         "name": "Assessment (2 minutes)"
       },
       "seeding_key": {
@@ -157,7 +152,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If you have time and would like to prepare your students with an unplugged activity, consider delivering [\"Dance Party: Unplugged\"](https://curriculum.code.org/hoc/unplugged/4/) before your Hour of Code event. This brief lesson introduces students to the idea of events triggering different dance moves.\r\n\r\n"
           }
@@ -197,7 +191,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "One way to introduce the Hour of Code if you are not very familiar with coding yourself is to show one of [our inspirational videos](https://hourofcode.com/promote/resources#videos). Choose one you think your students will find inspiring, and share it now. For learners in the middle grades, we suggest [The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw).\r\n"
           }
@@ -261,7 +254,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is **not checked for correctness** in order to encourage experimentation instead of solving a specific task.\r\n"
           }
@@ -276,7 +268,7 @@
       "key": "c346faf4-d1e9-4d7f-8aa6-de43695d67ae",
       "position": 5,
       "properties": {
-        "description": "#### Level 9\r\n\r\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\r\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \r\n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\r\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. Click the “Finish” button to move on.\r\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\r\n\r\n\r\n#### Level 10\r\n\r\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\r\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\r\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else! \r\n\r\n\r\n\r\n</details>\r\n\r\n<details>\r\n\r\n<summary>2018 Tutorial - [View on Code Studio](https://studio.code.org/s/dance)</summary>\r\n\r\n#### Level 1\r\n\r\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\r\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.\r\n\r\n#### Level 2\r\n\r\n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \r\n* Connecting the purple block under the green event block should make the character perform a dance move after the number of measures you indicate.\r\n\r\n#### Level 3\r\n\r\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath.\r\n\r\n#### Level 4\r\n\r\n* Drag out the `set background effect` block. \r\n* This block can be connected inside `setup`, under an event block, or in both places!\r\n\r\n#### Level 5\r\n\r\n* With the right code, you should see the dancer cycle through a different move every 2 measures.\r\n* Make sure there is a purple `do forever` block connected inside the `every 2 measures` block. \r\n* Make sure the `do forever` block is set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\r\n\r\n#### Level 6\r\n\r\n* Be careful to avoid putting the red `make a new` block inside the `every 2 measures` block. This will cause your program to create multiple identical dancers at the same location. \r\n\r\n#### Level 7\r\n\r\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it a smaller scale. In this level, you'll create this effect by making the two dancers on the ends smaller.\r\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancer has been created. To solve this puzzle, place a `set backup_dancer2 size to 50` block somewhere under the `make a new robot called backup_dancer2` block.\r\n\r\n#### Level 8\r\n\r\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have the made the dancer in your program. For example, placing it as the first step in the `setup` area of your program will have no effect.\r\n\r\n#### Level 9\r\n\r\n* Computer science allows to process input information into interesting types of output. In this level, students can explore how a dancer's properties can be updated automatically based on the actual sound of the music."
+        "description": "#### Level 9\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. Click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n\n\n#### Level 10\n\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else! \n\n\n\n</details>\n"
       },
       "seeding_key": {
         "activity_section.key": "c346faf4-d1e9-4d7f-8aa6-de43695d67ae",
@@ -289,7 +281,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is **not checked for correctness** in order to encourage experimentation instead of solving a specific task.\r\n"
           }
@@ -297,17 +288,6 @@
       },
       "seeding_key": {
         "activity_section.key": "fb0d33cd-099d-463e-95ac-040575cf0193",
-        "lesson_activity.key": "82dec89b-f375-4238-a251-ffae17c2dfd1"
-      }
-    },
-    {
-      "key": "d9edb93a-a4fe-4f8c-b5d8-860e59acd98b",
-      "position": 7,
-      "properties": {
-        "description": "!!!tip <tip-0>\r\n\r\n    By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is **not checked for correctness** in order to encourage experimentation instead of solving a specific task.\r\n\r\n#### Level 10-11\r\n\r\n* These levels are about making the dance interactive. Try out the new `when pressed` event to make the dancers respond to key presses.\r\n* You can use the arrow keys on your computer keyboard or click the orange buttons under the display area.\r\n* Note that the **code students write in these levels is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Encourage students to determine for themselves whether the code is doing what they expect before moving on.\r\n\r\n#### Level 12\r\n\r\n* The top six blocks in this tool box look familiar but all work in a different way. Instead of creating or controlling one dancer, they work with groups of dancers.\r\n* Like the previous levels, **code is not checked for correctness here**. Students should feel free to experiment with groups in ways that are interesting to them.\r\n\r\n#### Level 13\r\n\r\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\r\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\r\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else! \r\n\r\n</details>"
-      },
-      "seeding_key": {
-        "activity_section.key": "d9edb93a-a4fe-4f8c-b5d8-860e59acd98b",
         "lesson_activity.key": "82dec89b-f375-4238-a251-ffae17c2dfd1"
       }
     },
@@ -387,6 +367,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_01"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -408,6 +391,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_02"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -429,6 +415,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_03"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -450,6 +439,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_04"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -471,6 +463,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_05"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -492,6 +487,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_06"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -513,6 +511,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_07"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -534,6 +535,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_08"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -555,6 +559,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_09"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -576,6 +583,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
