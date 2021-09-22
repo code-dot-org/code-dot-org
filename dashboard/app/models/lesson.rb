@@ -266,7 +266,7 @@ class Lesson < ApplicationRecord
     # The behavior to show the script title instead of the lesson name in
     # single-lesson scripts is deprecated.
     #
-    # TODO(dave): once all scripts are migrated and no longer
+    # TODO(dave): once all scripts with exactly one lesson are migrated and no longer
     # using legacy lesson plans, remove this condition and consolidate with
     # localized_name_for_lesson_show.
     if script.lessons.many? || (script.is_migrated && !script.use_legacy_lesson_plans)
