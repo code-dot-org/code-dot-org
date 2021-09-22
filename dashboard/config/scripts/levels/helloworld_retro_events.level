@@ -65,15 +65,18 @@
     "short_instructions": "Use the `when clicked` event to make a sprite say something.",
     "instructions_icon": "retro",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Connect a `say` block under a `when click` event block:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\">\\n    <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"retro_powerup_heart\\\"</title>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"gamelab_spriteSay\\\">\\n        <title name=\\\"SPEECH\\\">POWERUP!</title>\\n        <value name=\\\"SPRITE\\\">\\n          <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n            <title name=\\\"ANIMATION\\\">\\\"retro_powerup_heart\\\"</title>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block></xml>\",\"hint_id\":\"hello_world_click\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db4684f80de2b03bb311a1aec559cc6a/helloworld_retro_events.mp3\"}]",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "user_id": 9,
   "game_id": 64,
+  "published": true,
   "created_at": "2021-09-13T20:31:26.000Z",
   "level_num": "custom",
-  "published": true,
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-13T20:31:26.358+00:00\",\"changed\":[\"cloned from \\\"helloworld_emoji_events\\\"\"],\"cloned_from\":\"helloworld_emoji_events\"},{\"changed_at\":\"2021-09-13 20:31:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:44:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 18:19:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:14:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"start_animations\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:16:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:17:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:18:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-13T20:31:26.358+00:00\",\"changed\":[\"cloned from \\\"helloworld_emoji_events\\\"\"],\"cloned_from\":\"helloworld_emoji_events\"},{\"changed_at\":\"2021-09-13 20:31:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:44:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 18:19:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:14:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"start_animations\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:16:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:17:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 20:18:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-17 20:23:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-17 20:43:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -701,7 +704,7 @@
           </value>
         </block>
         <block type="gamelab_spriteSay">
-          <title name="SPEECH">POWERUP!</title>
+          <title name="SPEECH">Power up!</title>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
               <title name="ANIMATION">"retro_powerup_heart"</title>
