@@ -10952,3 +10952,17 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Vật dụng
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Nội dung
+            content:
+              display_name: Nội dung
+            lesson_group:
+              display_name: Nội dung
+            lessonGroup-2:
+              display_name: Nội dung

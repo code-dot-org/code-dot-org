@@ -1853,18 +1853,18 @@
           "hint1": "Nhấn vào phím `+` trên khối sự kiện. Điền khối `nội dung` có trong đó vào chỗ trống trong khối `đổi trang phục`.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Để cho quái vật đeo khẩu trang, hãy sử dụng khối `đổi trang phục` bằng sự kiện `khi nhấn`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nHãy đảm bảo bạn kéo vào cả khối `đã nhấn` nhỏ có màu đỏ nhé!",
-          "hint2": "Mã lệnh mới cho cấp độ này sẽ như sau:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Để cho quái vật đeo khẩu trang, hãy sử dụng khối `đổi trang phục` bằng sự kiện `khi nhấn`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nHãy đảm bảo bạn kéo vào cả khối `đã nhấn` nhỏ có màu đỏ nhé!",
+          "hint2": "Mã lệnh mới cho cấp độ này sẽ như sau:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
           "challenge": "## Bạn muốn tăng thêm thử thách?\n\nBạn còn có thể làm cho quái vật di chuyển nhanh hơn hoặc chậm hơn.\n\n1.  Nhấn vào `Sửa` trong khối này <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Tăng hoặc giảm con số trong khối này: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nĐể làm quái vật di chuyển chậm hơn, chọn một số thập phân như `0,5` hoặc `0,25`. Để làm quái vật di chuyển nhanh hơn, chọn một số bất kỳ lớn hơn 1."
         },
         "CourseF_outbreak6": {
           "hint2": "Đảm bạo bạn di chuyển các khối \"hành động\" vào trong khối \"nếu có khả năng\":\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Bạn sẽ cần thêm 3 sự kiện `khi chạm` nữa để kiểm tra tất cả các cách kết hợp có thể của các lượt `chạm vào` giữa các nhân vật khỏe mạnh và bị nhiễm bệnh.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "Bạn sẽ cần thêm 3 sự kiện `khi chạm` nữa để kiểm tra tất cả các cách kết hợp có thể của các lượt `chạm vào` giữa các nhân vật khỏe mạnh và bị nhiễm bệnh.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## Vắc xin\n\nBạn có thể mô phỏng việc tiêm vắc xin cho quái vật khi bạn nhấn vào quái vật đó. Để làm vậy, hãy sử dụng khối `đổi trang phục` với sự kiện này:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Vắc xin\n\nBạn có thể mô phỏng việc tiêm vắc xin cho quái vật khi bạn nhấn vào quái vật đó. Để làm vậy, hãy sử dụng khối `đổi trang phục` với sự kiện này:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Bạn cảm thấy bế tắc? Bạn luôn có thể đặt lại mã bằng cách nhấn vào `Lịch sử phiên bản` ở dưới rồi chọn `Bắt đầu lại`."
         },
         "Function intro Ryan_2021": {
@@ -1965,16 +1965,21 @@
         },
         "courseA_artist_loops9_2021": {
           "courseA_artist_loops9_a": "Thêm một khối khác vào mã bạn được cung cấp để vẽ phần còn lại của cầu thang.",
-          "courseA_artist_loops9_c": "Nếu bạn chưa tìm ra nơi để đặt vòng lặp, hãy thử viết mã của bạn từng bước một và tìm ra sự lặp lại trong đó."
+          "courseA_artist_loops9_c": "Nếu bạn chưa tìm ra nơi để đặt vòng lặp, hãy thử viết mã của bạn từng bước một và tìm ra sự lặp lại trong đó.",
+          "courseA_artist_loops9_b": "Khối bạn thêm vào cần nằm bên trong\n\nvòng lặp\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>"
         },
         "courseA_harvester_loops5_2021": {
-          "courseA_harvester_loops5_a": "Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố sau khi chia nó làm hai phần, phần trước góc và phần sau góc."
+          "courseA_harvester_loops5_a": "Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố sau khi chia nó làm hai phần, phần trước góc và phần sau góc.",
+          "courseA_harvester_loops5_b": "Mã lệnh cuối cùng sẽ có **một** vòng lặp `repeat` (lặp lại) <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **một** khối `move South` (xuống dưới) <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> và **một** khối `move East` (sang phải) <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_c": "Hãy đi đường này để nhặt toàn bộ ngô nhé!"
         },
         "courseA_harvester_seq2_2021": {
-          "courseA_harvester_seq2_b": "Thử viết các bước xuống một tờ giấy để tìm ra giải pháp!"
+          "courseA_harvester_seq2_b": "Thử viết các bước xuống một tờ giấy để tìm ra giải pháp!",
+          "courseA_harvester_seq2_a": "Đừng quên sử dụng <xml><block type=\"harvester_corn\"/></xml> để nhặt ngô nhé!"
         },
         "courseA_harvester_seq3_2021": {
-          "courseA_harvester_seq3_b": "Hãy nói to từng bước và xem việc này có thể giúp bạn tìm ra giải pháp không."
+          "courseA_harvester_seq3_b": "Hãy nói to từng bước và xem việc này có thể giúp bạn tìm ra giải pháp không.",
+          "courseA_harvester_seq3_a": "Bạn có nhớ sử dụng khối này không?\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_maze_ramp2_2021": {
           "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -2049,7 +2054,8 @@
         },
         "courseA_playLab_events6_2021": {
           "courseA_playLab_events6_a": "Here is the event block that you would use to have Jorge do something when clicked:\nĐây là khối sẽ giúp Jorge làm gì đó khi được click vào.\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
-          "courseA_playLab_events6_b": "Đây là khối bạn cần dùng để thay đổi hình nền:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>"
+          "courseA_playLab_events6_b": "Đây là khối bạn cần dùng để thay đổi hình nền:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>",
+          "courseA_playLab_events6_c": "Đây là khối bạn sẽ sử dụng để phát âm thanh ngẫu nhiên:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
         },
         "courseA_playLab_events7_2021": {
           "courseA_playLab_events7_a": "Dùng khối này khi các nhân vật va vào nhau.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
@@ -2074,10 +2080,13 @@
           "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_artist_loops2_2021": {
-          "courseB_artist_loops2_a": "Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn có thể thay đổi số ở đầu khối lệnh."
+          "courseB_artist_loops2_a": "Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn có thể thay đổi số ở đầu khối lệnh.",
+          "courseB_artist_loops2_b": "Hãy thử chạy mã lệnh trước để xem họa sĩ đang dừng lại ở đâu."
         },
         "courseB_artist_loops9_2021": {
-          "courseB_artist_loops9_c": "Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết mã từng bước một và tìm sự lặp lại trong đó."
+          "courseB_artist_loops9_c": "Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết mã từng bước một và tìm sự lặp lại trong đó.",
+          "courseB_artist_loops9_a": "Hãy nhớ rằng bạn có thể dùng các khối nhảy để di chuyển mà không vẽ đoạn thẳng.",
+          "courseB_artist_loops9_b": "Bạn cần sử dụng khối W để giải bài tập này."
         },
         "courseB_iceage_loops10_2021": {
           "courseB_iceage_loops10_a": "Hãy coi chừng băng vỡ! Scrat sẽ rơi xuống nước đấy!",
@@ -2094,7 +2103,8 @@
           "courseB_iceage_loops2_c": "Đi theo con đường này để đưa Scrat đến với hạt sồi."
         },
         "courseB_iceage_loops3_2021": {
-          "courseB_iceage_loops3_b": "Để lặp lại đoạn mã, hãy kéo khối `lặp lại` ra <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, sau đó đặt khối bạn muốn vào bên trong nó."
+          "courseB_iceage_loops3_b": "Để lặp lại đoạn mã, hãy kéo khối `lặp lại` ra <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, sau đó đặt khối bạn muốn vào bên trong nó.",
+          "courseB_iceage_loops3_a": "Hãy dùng khối mới này!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>"
         },
         "courseB_iceage_loops4_2021": {
           "courseB_iceage_loops4_a": "Hãy thử viết ra các bước mà Scrat sẽ thực hiện để đến với hạt sồi. Bạn có thấy một sự lặp lại nào không?",
@@ -2181,7 +2191,10 @@
           "courseE_playLab_scaffold1_c": "Khi bạn hoàn thành, bạn có thể di chuyển nhân vật anh hùng của bạn bằng các phím mũi tên!"
         },
         "courseC_maze_programming6_2021": {
-          "courseC_maze_programming6_a": "Có hai cách để giải câu đố này!"
+          "courseC_maze_programming6_a": "Có hai cách để giải câu đố này!",
+          "courseC_maze_programming6_b": "Dùng ngón tay lần theo đường đi từ chỗ chú chim đến chỗ con heo, bạn đã thực hiện những bước nào?",
+          "courseC_maze_programming6_c": "Hãy nhớ rằng trước tiên bạn phải xoay, vì ban đầu chú chim quay mặt vào tường.",
+          "courseC_maze_programming6_d": "Bạn bí rồi à? Hãy xem đường đi này nè!"
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "Chẳng phải mô hình này giống một chuỗi bậc thang khổng lồ sao? Hãy xem liệu bạn có thể sử dụng những kiến thức đã học được trong các bài tập trước để lấy tất cả các lệnh rẽ hay không.",
@@ -2346,47 +2359,57 @@
           "card_idea3": "Bạn có thể tăng tính tương tác cho chương trình của mình bằng cách cho những sự kiện khác xảy ra khi người dùng nhấn phím hoặc sau một khoảng thời gian nhất định.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“khi”</title>\n    <title name=\"KEY\">“lên”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“tỷ lệ”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "coursea_maze_ramp1_2021": {
-          "courseC_maze_programming1_b": "Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu nó chưa đúng, hãy thử một cái khác!"
+          "courseC_maze_programming1_b": "Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu nó chưa đúng, hãy thử một cái khác!",
+          "courseC_maze_programming1_a": "Nếu chú chim không đến được chỗ con heo, hãy kiểm tra xem hai khối đã gắn hoàn toàn với nhau hay chưa, rồi nhấp chuột vào nút “Run” (chạy) một lần nữa."
         },
         "iceage_hello1": {
           "iceage_hello1_a": "Bạn chỉ cần thêm một khối để giải quyết thử thách này. Kéo khối `nói` ra từ thanh công cụ và nối nó vào khối sự kiện `khi chạy` đã có sẵn trong vùng làm việc. Sau đó, gõ \"Xin chào!\" vào trong."
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "*“Nếu bạn sử dụng khối <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, tôi sẽ vẽ một đường thẳng.”*",
-          "courseC_artist_prog2_b": "Bạn gặp khó khăn khi cần rẽ ở góc? Hãy sử dụng khối <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "*“Nếu bạn sử dụng khối <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, tôi sẽ vẽ một đoạn thẳng.”*",
+          "courseC_artist_prog2_b": "Bạn gặp khó khăn khi cần xoay ở góc? Hãy sử dụng khối <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog3_2021": {
-          "courseC_artist_prog3_a": "Để tạo cửa sổ, chỉ cần vẽ một hình vuông với các cạnh 100 pixel.\n\n-   tiến về phía trước\n-   rẽ\n-   tiến về phía trước\n-   rẽ\n-   tiến về phía trước\n-   rẽ\n-   tiến về phía trước",
+          "courseC_artist_prog3_a": "Để tạo cửa sổ, chỉ cần vẽ một hình vuông với các cạnh 100 pixel.\n\n-   tiến lên\n-   xoay\n-   tiến lên\n-   xoay\n-   tiến lên\n-   xoay\n-   tiến lên",
           "courseC_artist_prog3_b": "Bạn muốn tạo mã lệnh ngắn hơn à? Hãy thử sử dụng vòng lặp trong bài tập này nhé."
         },
         "courseC_artist_prog4_2021": {
           "courseC_artist_prog4_a": "Để hoàn thành tên lửa, chỉ cần vẽ hình tam giác phía trên!",
-          "courseC_artist_prog4_b": "Bạn có thể sử dụng menu thả xuống trên các khối `turn` (rẽ) để xem bạn cần góc nào!",
-          "courseC_artist_prog4_c": "Để vẽ hình tam giác, bạn cần:\n\n-   tiến về phía trước\n-   rẽ trái 120 độ\n-   tiến về phía trước\n-   rẽ trái 120 độ\n-   tiến về phía trước"
+          "courseC_artist_prog4_b": "Bạn có thể sử dụng menu thả xuống trên các khối `turn` (xoay) để xem bạn cần góc nào!",
+          "courseC_artist_prog4_c": "Để vẽ hình tam giác, bạn cần:\n\n-   tiến lên\n-   xoay trái 120 độ\n-   tiến lên\n-   xoay trái 120 độ\n-   tiến lên"
         },
         "courseC_artist_prog5_2021": {
-          "courseC_artist_prog5_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+          "courseC_artist_prog5_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này.",
+          "courseC_artist_prog5_a": "Kéo thanh trượt xuống mức chậm hết cỡ cho đến khi bạn có thể chạy từng dòng mã lệnh để xem sai sót nằm ở đâu.",
+          "courseC_artist_prog5_c": "Bạn có thể sử dụng menu thả xuống trong các khối để thay đổi chức năng của chúng đấy!",
+          "courseC_artist_prog5_d": "Mỗi lượt xoay nên có giá trị 90 độ về bên phải."
         },
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_a": "Tất cả các góc đều là 45 hoặc 90 độ.",
-          "courseC_artist_prog7_c": "Bạn có thể sử dụng menu thả xuống trên các khối rẽ để xem bạn cần góc nào!",
-          "courseC_artist_prog7_e": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+          "courseC_artist_prog7_c": "Bạn có thể sử dụng menu thả xuống trên các khối xoay để xem bạn cần góc nào!",
+          "courseC_artist_prog7_e": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này.",
+          "courseC_artist_prog7_b": "Bước đầu tiên có hiệu quả không?\\\nBước thứ hai thì sao?\\\nSai sót nằm ở đâu?",
+          "courseC_artist_prog7_d": "Bạn cần:\n\n-   tiến lên\n-   xoay phải 45 độ\n-   tiến lên\n-   xoay phải 90 độ\n-   tiến\n-   xoay phải 45 độ\n\nLặp lại quy luật này 2 lần nhé!"
         },
         "courseC_artist_prog_challenge1_2021": {
-          "courseC_artist_prog_challenge1_a": "Bạn có thể vẽ căn phòng hình chữ nhật với một đường thẳng ở giữa hoặc hai hình vuông khác nhau!"
+          "courseC_artist_prog_challenge1_a": "Bạn có thể vẽ căn phòng hình chữ nhật với một đoạn thẳng ở giữa hoặc hai hình vuông khác nhau!"
         },
         "courseC_artist_prog_challenge2a_2021": {
-          "courseC_artist_prog_challenge2_a": "Sau khi bạn vẽ đường thẳng đầu tiên, hãy rẽ trái trước khi vẽ đường thẳng thứ hai.",
-          "courseC_artist_prog_challenge2_b": "Sau khi vẽ đường thẳng thứ hai, hãy rẽ phải trước khi vẽ đường thẳng thứ ba."
+          "courseC_artist_prog_challenge2_a": "Sau khi bạn vẽ đoạn thẳng đầu tiên, hãy xoay trái trước khi vẽ đoạn thẳng thứ hai.",
+          "courseC_artist_prog_challenge2_b": "Sau khi vẽ đoạn thẳng thứ hai, hãy xoay phải trước khi vẽ đoạn thẳng thứ ba."
         },
         "courseC_collector_prog2_2021": {
-          "courseC_collector_prog2_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+          "courseC_collector_prog2_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này.",
+          "courseC_collector_prog2_a": "Bạn có thể sử dụng bốn khối <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> hoặc sử dụng khối <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> để làm cho chương trình ngắn hơn."
         },
         "courseC_collector_prog4_2021": {
-          "courseC_collector_prog4_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+          "courseC_collector_prog4_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này.",
+          "courseC_collector_prog4_a": "Nếu gặp khó khăn, hãy thử viết các bước ra một mảnh giấy.",
+          "courseC_collector_prog4_c": "Thử đường đi ví dụ này xem."
         },
         "courseC_maze_programming8_2021": {
-          "courseC_maze_programming8_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+          "courseC_maze_programming8_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này.",
+          "courseC_maze_programming8_a": "Hãy nhớ rằng bạn có thể sử dụng nút “Step” (bước) để xem từng dòng mã lệnh nếu gặp khó khăn."
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "Mã lệnh không hoạt động? Hãy thử sử dụng nút “Step” (Bước) để xem điều gì xảy ra ở từng dòng mã lệnh nhé.",
@@ -2403,20 +2426,23 @@
           "courseD_bee_nestedLoops2_c": "Hãy nhớ rằng bạn có thể đặt nhiều hơn một khối bên trong một vòng lặp."
         },
         "courseD_bee_nestedLoops7_2021": {
-          "courseD_bee_nestedLoops7_a": "Bạn cần lặp lại khối `get nectar` (lấy mật hoa) bên trong một khối `repeat` (lặp lại) khác có sẵn khối `move forward` (tiến về phía trước) ở trong.",
+          "courseD_bee_nestedLoops7_a": "Bạn cần lặp lại khối `get nectar` (lấy mật hoa) bên trong một khối `repeat` (lặp lại) khác có sẵn khối `move forward` (tiến lên) ở trong.",
           "courseD_bee_nestedLoops7_b": "Bạn cần sử dụng cả ba khối `repeat` (lặp lại) có sẵn để giải bài tập này."
         },
         "courseD_maze_intro5a_2021": {
-          "courseC_maze_programming5_c": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+          "courseC_maze_programming5_c": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này.",
+          "courseC_maze_programming5_a": "Thử sử dụng nút “Step” (bước) để chạy từng dòng mã lệnh. Bạn có thể tìm ra xem mình cần làm tiếp theo không?"
         },
         "courseD_maze_ramp1_2021": {
           "courseC_maze_programming1_b": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
         },
         "courseD_maze_ramp5_2021": {
-          "courseC_maze_programming5_c": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+          "courseC_maze_programming5_c": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này.",
+          "courseC_maze_programming5_a": "Thử sử dụng nút “Step” (bước) để chạy từng dòng mã lệnh. Bạn có thể tìm ra xem mình cần làm tiếp theo không?"
         },
         "courseD_maze_ramp5b_2021": {
-          "courseC_maze_programming5_c": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+          "courseC_maze_programming5_c": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này.",
+          "courseC_maze_programming5_a": "Thử sử dụng nút “Step” (bước) để chạy từng dòng mã lệnh. Bạn có thể tìm ra xem mình cần làm tiếp theo không?"
         },
         "courseF_artist_variables10_2021": {
           "courseF_artist_variables10_a": "Chơi đùa thỏa thích trong cấp độ này đi nào! Hãy xem những thay đổi nhỏ có tác dụng gì với mã lệnh của bạn.",
@@ -2425,17 +2451,475 @@
         "courseF_artist_variables7_2021": {
           "courseF_artist_variables7_a": "Hãy bắt đầu mã lệnh bằng cách sử dụng khối `set length` (đặt chiều dài). Đặt biến chiều dài thành 150.",
           "courseF_artist_variables7_b": "Bạn có thể sử dụng vòng lặp `repeat` (lặp lại) để khiến mã lệnh vẽ hình tam giác được đơn giản hơn.",
-          "courseF_artist_variables7_c": "Bạn cần rẽ trái 120 độ để tạo các góc của hình tam giác."
+          "courseF_artist_variables7_c": "Bạn cần xoay trái 120 độ để tạo các góc của hình tam giác."
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "Bạn sẽ cần hai khối trong vòng lặp ‘repeat’ (lặp lại) của mình để thu thập tất cả mật hoa."
         },
         "courseF_bee_for2_2021": {
           "courseF_bee_for2_a": "Nếu bạn bối rối, hãy xử lý từng bông hoa một và thường xuyên kiểm tra.",
-          "courseF_bee_for2_b": "Nhớ tiến về phía trước giữa mỗi vòng lặp để đến chỗ từng bông hoa nhé."
+          "courseF_bee_for2_b": "Nhớ tiến lên giữa mỗi vòng lặp để đến chỗ từng bông hoa nhé."
         },
         "courseF_bee_for4_2021": {
-          "courseF_bee_for4_a": "Hãy sử dụng vòng lặp `for` (với) có giá trị từ 1 đến 7, với gia số là 1 để giải bài tập này."
+          "courseF_bee_for4_a": "Hãy sử dụng vòng lặp `for` (với) có giá trị từ 1 đến 7, với gia số là 1 để giải bài tập này.",
+          "courseF_bee_for4_b": "Trong vòng lặp `for` (với), bạn sẽ cần lệnh `move forward` (tiến lên) và một vòng lặp để thu thập mật hoa.",
+          "courseF_bee_for4_c": "Nhớ sử dụng biến `counter` (đếm) trong vòng lặp `repeat` (lặp lại) lồng nhau để lấy đủ mật hoa nhé!"
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "Các khối giống như <xml>  <block type=\"simple_move_up_left\"/></xml> sẽ giúp họa sĩ di chuyển theo đường chéo!",
+          "courseA_artist_loops_challenge2_b": "Sau khi vẽ xong một cái lều, hãy `jump` (nhảy) hai lần để đến cái lều tiếp theo!",
+          "courseA_artist_loops_challenge2_c": "Tất cả các khối cần phải nằm trong một vòng lặp để hoàn thành bài tập này."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "Sau khi di chuyển đến ô có báu vật, hãy sử dụng khối này để nhặt lên.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "Bạn sẽ phải di chuyển trước khi có thể thu thập bất kỳ báu vật nào.",
+          "courseA_collector_loops2_b": "Sau khi di chuyển đến ô có báu vật, hãy sử dụng khối này để nhặt lên.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "Để thay đổi quãng đường mà Laurel cần đi, hãy thay đổi số lần chạy vòng lặp."
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "Bạn không tìm ra lỗi sai ở đâu ư? Hãy thử chạy mã lệnh vài lần để xem điều gì sẽ xảy ra."
+        },
+        "courseA_harvester_loops1_2021": {
+          "courseA_harvester_loops1_a": "Khi bạn di chuyển đến vị trí bắp ngô, hãy sử dụng khối này để nhặt!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops2_2021": {
+          "courseA_harvester_loops2_a": "Mã lệnh sẽ có **bốn** khối `move west` (sang trái)\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nvà **bốn** khối <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>.",
+          "courseA_harvester_loops2_b": "Nếu bạn vẫn gặp khó khăn, hãy thử đọc to các bước."
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_a": "Hãy dùng một khối `repeat` (lặp lại) như thế này để hỗ trợ!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
+          "courseA_harvester_loops3_b": "Để lặp lại mã lệnh, hãy kéo ra một vòng lặp `repeat` (lặp lại) (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>), sau đó đặt khối bạn muốn vào bên trong."
+        },
+        "courseA_harvester_loops4_2021": {
+          "courseA_harvester_loops4_a": "Đừng ngại nhấn `Run` (chạy) để xem điều gì sẽ xảy ra nhé!",
+          "courseA_harvester_loops4_b": "Ở đây bao nhiêu bắp ngô? Mã lệnh của bạn lặp lại bao nhiêu lần?"
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "Bạn sẽ cần các vòng lặp `repeat`(lặp lại) <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> liên tiếp nhau.",
+          "courseA_harvester_loops5a_b": "Một vòng lặp sẽ lặp lại khối `move South` (xuống dưới) <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, còn vòng lặp kia sẽ lặp lại khối `move East` (sang phải) <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_c": "Hãy đi theo đường này để di chuyển theo một hướng, rồi di chuyển theo hướng còn lại."
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "Hãy nhấn `Run` (chạy) và xem điều gì sẽ xảy ra!",
+          "courseA_harvester_loops5b_b": "Các vòng lặp có đang lặp lại đúng số lần không?",
+          "courseA_harvester_loops5b_c": "Hãy đi theo đường này để di chuyển theo một hướng, rồi di chuyển theo hướng còn lại."
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "Nếu gặp khó khăn, hãy thử viết các bước trên giấy và tìm quy luật lặp lại.",
+          "courseA_harvester_loops6_b": "Đây là đường bạn nên đi để nhặt hết ngô."
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_a": "Bạn sẽ cần hai vòng lặp `repeat` (lặp lại) <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> nối tiếp nhau!",
+          "courseA_harvester_loops7_b": "Hãy dùng hai vòng lặp để đi theo đường này."
+        },
+        "courseA_harvester_loops9_2021": {
+          "courseA_harvester_loops9_a": "Hãy chia bài tập này thành ba phần khác nhau. Một phần ở góc đầu tiên, một phần ở góc thứ hai và một phần ở cuối.",
+          "courseA_harvester_loops9_b": "Đừng ngại chạy mã lệnh sau mỗi phần để xem điều gì sẽ xảy ra!",
+          "courseA_harvester_loops9_c": "Hãy đi theo đường này để nhặt hết ngô."
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "Bạn không nghĩ ra ư? Trước tiên, hãy thử viết ra các bước trên một tờ giấy.",
+          "courseA_harvester_seq10_b": "Bạn cần phải `Move East` (sang phải), sau đó là `Move North` (lên trên). Hãy làm vậy hai lần. Đừng quên nhặt toàn bộ ngô nữa nhé!",
+          "courseA_harvester_seq10_c": "Hãy thử đi đường này để nhặt toàn bộ ngô."
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "Hãy dùng khối này để nhặt ngô khi người thu hoạch đến được vị trí.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "Hãy dùng khối sau để nhặt ngô khi người thu hoạch tìm thấy!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "Người thu hoạch sẽ cần phải di chuyển sang phải ba lần để lấy ngô. Hãy dùng khối này:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "Có bao nhiêu khoảng trống giữa Người thu hoạch và ngô? Có bao nhiêu khối đã có trong không gian làm việc của bạn?",
+          "courseA_harvester_seq4_b": "Bạn sẽ cần năm khối `Move East` (sang phải) và một khối `Pick Corn` (nhặt ngô):\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "Khối nào khiến người thu hoạch đi sai đường?",
+          "courseA_harvester_seq5_b": "Bạn cần gỡ một khối.",
+          "courseA_harvester_seq5_c": "Hãy bỏ khối này vào thùng rác!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "Nếu gặp khó khăn, hãy thử đọc to các bước. Cách này có thể giúp bạn tìm ra đường đi chính xác."
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "Hãy thử giải bài tập thành 2 phần, một phần trước khi tới góc và một phần sau khi qua góc.",
+          "courseA_harvester_seq7_b": "Bạn gặp khó khăn ư? Đây là đường mà người thu hoạch nên đi."
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "Mã lệnh cuối cùng phải có **4** khối di chuyển và **2** khối nhặt."
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "Hãy chạy mã lệnh vài lần để xem điều gì sẽ xảy ra. Người thu hoạch dừng ở đâu?",
+          "courseA_harvester_seq9_b": "Đừng quên nhặt tất cả ngô nhé! Bạn sẽ cần **3** khối nhặt ngô.",
+          "courseA_harvester_seq9_c": "Bạn nên đi theo đường này để nhặt hết ngô."
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "Có hai đáp án cho bài tập này."
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "Hãy thử đếm khoảng cách bằng ngón tay của bạn. Đừng đếm khoảng cách ở điểm khởi đầu nhé!"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "Hãy cho Chim cánh cụt Waddles xuất hiện khi bạn nhấp chuột vào Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Hãy cho Hồn ma Boo xuất hiện khi bạn nhấp chuột vào Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Hãy cho Quát vật lông lá Jayden xuất hiện khi bạn nhấp chuột vào Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Hãy cho Robot Spiff xuất hiện khi bạn nhấp chuột vào quái vật!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "Cuối cùng, hãy cho Phù thủy Wendel xuất hiện khi bạn nhấp chuột vào Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "Bạn có thể cho một chú chim hót.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Bạn có thể tạo ra tiếng bíp cho robot.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "Bạn có thể khiến con quái vật giận dữ gầm gừ.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "Nhớ sử dụng vòng lặp `repeat` (lặp lại) <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> để có mã lệnh hiệu quả hơn nhé!",
+          "courseB_artist_loops3_b": "Họa sĩ cần đi xuống dưới để vẽ đường này."
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "Khối nhảy giúp bạn tiến lên mà không vẽ đoạn thẳng.",
+          "courseB_artist_loops4_b": "Bạn sẽ cần thêm một khối bên trong vòng lặp lặp lại để giải bài tập này.",
+          "courseB_artist_loops4_c": "Đừng quên thay đổi số lần lặp lại vòng lặp nhé."
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "Kéo vòng lặp `repeat` (lặp lại) <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> ra ngoài, sau đó đặt các khối khác vào bên trong vòng lặp đó. Bạn cần lặp lại bao nhiêu lần?"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "Hãy thử viết các bước di chuyển vào một mảnh giấy và tìm quy luật."
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "Thử thách này sử dụng **4** vòng lặp nối tiếp nhau!",
+          "courseB_artist_loops7_b": "Lưu ý rằng mỗi vòng lặp tạo ra một quy luật bậc thang đi theo một hướng khác nhau.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "Các vòng lặp nên làm như sau:\n\n-   Vòng lặp 1\n    -   Phải\n    -   Xuống\n\n-   Vòng lặp 2\n    -   Phải\n    -   Lên\n\n-   Vòng lặp 3\n    -   Trái\n    -   Lên\n\n-   Vòng lặp 4\n    -   Trái\n    -   Xuống"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "Bạn nên lặp lại quy luật bao nhiêu lần để tạo thành chiếc thang?",
+          "courseB_artist_loops8_b": "Hãy thử chạy mã lệnh cho sẵn xem mã lệnh đó có tác dụng gì."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "Các khối giống như <xml>  <block type=\"simple_move_up_right\"/></xml> sẽ giúp họa sĩ di chuyển theo đường chéo!",
+          "courseB_artist_loops_challenge1_b": "Khi bạn hoàn thành một trong những viên xúc xắc, hãy `jump` (nhảy) sang viên tiếp theo!",
+          "courseB_artist_loops_challenge1_c": "Có một số hàng mà bạn bạn cần phải `move` (di chuyển) hoặc `jump` (nhảy) qua hai lần."
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "Bạn đã có trong tay mã lệnh để vẽ một dấu X. Tất cả những gì bạn cần làm là lặp lại dấu X và `jump` (nhảy) đến vị trí tiếp theo.",
+          "courseB_artist_loops_challenge2_b": "Bạn có thể sử dụng các khối `jump` (nhảy) để di chuyển đến các khoảng trống khác mà không cần vẽ."
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "Nếu không tìm được vị trí đặt các vòng lặp `repeat` (lặp lại), hãy thử viết ra từng bước trong mã lệnh và tìm quy luật.",
+          "courseB_collector_loops10_b": "Hãy thử viết các bước di chuyển vào một tờ giấy và tìm quy luật."
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "Bạn có thể sử dụng khối <xml><block type=\"collector_collect_simplified\"/></xml> để nhặt báu vật khi bạn đang đứng trên đó."
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "Bạn sẽ phải di chuyển trước khi có thể thu thập bất kỳ báu vật nào.",
+          "courseB_collector_loops2_b": "Khi bạn đã đến vị trí có báu vật, hãy sử dụng khối <xml><block type=\"collector_collect\"/></xml> để nhặt."
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "Hãy thử dùng khối <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> để thu thập báu vật của bạn.",
+          "courseB_collector_prog3_b": "Hãy nhớ rằng bạn có thể đặt nhiều hơn một khối bên vòng lặp lặp lại."
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "Hãy thử sử dụng nút bước để tìm ra phần bị sai.",
+          "courseB_collector_loops4_b": "Để thay đổi quãng đường mà Laurel cần đi, hãy thay đổi số lần chạy vòng lặp.",
+          "courseB_collector_loops4_c": "Laurel cần phải đi xuống và thu thập báu vật sau khi cô ấy hoàn thành vòng lặp `repeat` (lặp lại) <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "Hãy dùng nhiều vòng lặp để hoàn thành công việc.",
+          "courseB_collector_loops5_b": "Hãy thử chạy mã vài lần để xem điều gì sẽ xảy ra."
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "Bạn không tìm được phần bắt đầu bị sai ư? Hãy dùng nút “Step” (bước) để chạy từng khối trong chương trình của bạn.",
+          "courseB_collector_loops6_b": "Bạn có thể thay đổi số lần chạy vòng lặp lặp lại bằng cách nhấp chuột vào “3” và chọn số khác.",
+          "courseB_collector_loops6_c": "Bạn cần sử dụng 3 vòng lặp `repeat` (lặp lại) <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> để giải bài tập này.",
+          "courseB_collector_loops6_d": "Nếu bạn bị rối, hãy thử chia bài tập này thành 3 phần."
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "Nếu bạn đang gặp khó khăn ở bài tập này, hãy thử vẽ ra giấy để giúp bạn hình dung.",
+          "courseB_collector_loops7_b": "Bạn sẽ cần 3 vòng lặp lặp lại để giải bài tập này, và đừng quên một phần báu vật nữa ở cuối nhé!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "Nếu không tìm được vị trí đặt các vòng lặp lặp lại, hãy thử viết ra từng bước trong mã lệnh và tìm quy luật."
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "Bài tập này có vẻ quá khó ư? Hãy chia thành 3 bài tập nhỏ để thấy dễ hơn.",
+          "courseB_collector_loops9_b": "Bạn sẽ cần 3 vòng lặp lặp lại liên tiếp nhau để giải bài tập này."
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "Hãy bắt đầu bằng cách lặp các lệnh sau:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Sang phải hai lần giữa mỗi đường đi.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nBạn có thể làm vậy chỉ với 14 khối. Hãy nhấp chuột để xem thêm một gợi ý giải bài tập.",
+          "courseB_collector_loops_challenge1_d": "Hãy thử cách này xem sao!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "Nếu phát sinh sự cố, hãy thử sửa lỗi. Đừng bỏ cuộc nhé!",
+          "courseB_collector_loops_challenge2a_b": "Hãy xem phương án này để thoát khỏi mê cung. Bạn có thấy quy luật mà bạn có thể lặp lại không?",
+          "courseB_collector_loops_challenge2a_c": "Để thu thập toàn bộ báu vật, bạn cần thêm hai khối <xml> <block type=\"collector_collect\"/></xml> trong vòng lặp hoặc đặt khối này bên trong khối `repeat` (lặp lại) của chính khối đó."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "Hãy gắn các khối với khối <xml><block type=\"when_run\"/></xml> để Scrat di chuyển!",
+          "courseB_maze_seq1_b": "Kéo ba trong số các mũi tên <xml><block type=\"maze_moveSouth\"/></xml> này ra ngoài và gắn chúng với khối <xml><block type=\"when_run\"/></xml> để đưa Scrat đến chỗ hạt sồi."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "Hãy thử thêm từng chỉ dẫn một cho đến khi bạn đến được chỗ hạt sồi.",
+          "courseB_maze_seq4_b": "Bạn cần sử dụng khối <xml><block type=\"maze_moveEast\"/></xml> để giải bài tập này."
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "Nếu bạn gặp khó khăn, hãy thử vẽ đường đi trên giấy.",
+          "courseB_maze_seq5_b": "Có 2 cách để giải bài tập này!",
+          "courseB_maze_seq5_c": "Bạn không chắc chắn cách đến chỗ hạt sồi ư? Hãy thử đường đi này nhé."
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "Mã lệnh cuối cùng phải có ba khối di chuyển.",
+          "courseB_maze_seq5_c": "Có hai cách để giải bài tập này."
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_c": "Có hai cách để giải bài tập này."
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "Đây là khối giúp Daisy nói:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "Đây là khối bạn nên sử dụng để thêm sự kiện:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "Đây là khối bạn cần để thay đổi tâm trạng của Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "Đây là sự kiện điều khiển mũi tên sang trái:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_b": "Đây là khối khiến hiệp sĩ di chuyển sang trái.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "Hãy cho các loài động vật khác đi xuống khi bạn nhấn `▼`.\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "Hãy thay đổi tốc độ của con vật bằng khối sau:\n\n[khối liền khối] [0]",
+          "courseB_playlab_events_challenge1_c": "Mọi người sẽ nói gì khi cuộc đua kết thúc? Hãy cho họ nói chuyện bằng sự kiện này:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "Mỗi con vật trong trò chơi sẽ biến mất khi nhấp chuột vào. Con vật đó cũng sẽ xuất hiện lại sau một hoặc hai giây!",
+          "courseB_playlab_events_challenge2_b": "Hãy dùng các khối sự kiện còn lại để làm cho những con vật khác biến mất nhé!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "Hãy dùng lệnh bổ sung để phát âm thanh hoặc ghi điểm khi bạn nhấp chuột vào các con vật!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "Hãy kết hợp nào!\n\nHãy cho một số con vật cho nhiều điểm hơn những con khác.\nHãy dùng các âm thanh khác nhau.\nThay đổi tâm trạng của con vật đi!"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "Đây là khối đầu tiên mà bạn cần:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "Hãy dùng khối này để vẽ hình dán!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "Đây là khối đầu tiên bạn sẽ cần:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nBạn có thể chọn trái hoặc phải và bất kỳ số đo góc nào."
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "Họa sĩ đang quay mặt đúng hướng để vẽ đoạn thẳng đầu tiên.",
+          "courseC_artist_prog6_b": "Hình thoi này thực ra chỉ là một hình vuông dựng đứng trên góc của nó mà thôi.",
+          "courseC_artist_prog6_c": "Vì hình thoi này cũng là hình vuông nên nhớ xoay 90 độ ở các góc nhé."
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "Hãy dùng vòng lặp để bạn bị thiếu khối `collect` (thu thập)!"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "Khi bạn đang đứng trên ô có báu vật, hãy sử dụng khối <xml><block type=\"collector_collect\"/></xml> để nhặt.",
+          "courseC_collector_prog1_b": "Giải pháp đơn giản nhất là tiến lên một ô, sau đó thu thập báu vật."
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "Chương trình sẽ chỉ chạy các khối gắn với với khối <xml><block type=\"when_run\"/></xml>.",
+          "courseC_collector_prog3_b": "Hãy thử sử dụng nút “Step” (bước) để chạy từng dòng mã lệnh. Bạn có thấy mã lệnh sai ở đâu không?",
+          "courseC_collector_prog3_c": "Nếu bạn gặp khó khăn khi giải bài tập này, hãy thử viết các bước đi ra một tờ giấy."
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "“Bước đầu tiên có hiệu quả không?\nBước thứ hai có hiệu quả không?\nSai sót nằm ở đâu?”",
+          "courseC_collector_prog5_b": "Nếu bạn đã sửa một lỗi mà chương trình vẫn không hoạt động, hãy dùng các bước ở trên để tìm thêm lỗi.",
+          "courseC_collector_prog5_c": "Nếu gặp khó khăn, hãy thử viết các bước ra một mảnh giấy.",
+          "courseC_collector_prog5_d": "Đi theo con đường để thu thập báu vật."
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "Bạn có thể tìm ra sai sót nằm ở đâu không?  \n\nHãy thử dùng nút “Step” (bước) để tìm lỗi bằng cách chạy từng dòng mã lệnh.",
+          "courseC_collector_prog6_b": "Bí rồi à? Hãy thử đường đi này để thu thập báu vật nhé."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "Trong không gian làm việc đã có sẵn rất nhiều mã lệnh tuyệt vời rồi. Bạn không cần phải xóa bất kỳ khối nào trong số đó để giải bài tập này.",
+          "courseC_collector_prog7_b": "Bạn không thấy khối bạn cần để đưa nhà thám hiểm đi đúng hướng? Hãy kéo một khối ra từ hộp công cụ.",
+          "courseC_collector_prog7_c": "Bạn không tìm ra được đường đi để thu thập toàn bộ báu vật ư? Hãy thử đường đi này nhé!"
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "Bạn có thể sử dụng khối `collect` (thu thập) nhiều lần để thu thập thêm báu vật."
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "Bạn có thể sử dụng nhiều hơn một khối `collect` (thu thập) tại mỗi ô.",
+          "courseC_collector_prog_challenge1_b": "Bạn lạc đường ư? Hãy thử đường đi này để giải bài tập nhé!"
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "Nếu gặp khó khăn, hãy thử viết các bước trên giấy và tìm quy luật lặp lại."
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này.",
+          "courseC_harvester_loops3_c": "Nếu bạn muốn đơn giản hóa mã lệnh của mình, bạn thực sự có thể đặt một vòng lặp bên trong một vòng lặp khác! Cách này gọi là **vòng lặp lồng nhau**."
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_c": "Nếu bạn muốn đơn giản hóa mã lệnh của mình, bạn thực sự có thể đặt một vòng lặp bên trong một vòng lặp khác! Cách này gọi là **vòng lặp lồng nhau**."
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   Mọi thứ có ổn ở bước đầu tiên không?\n-   Bước thứ hai vẫn hiệu quả chứ?\n-   Sai sót nằm ở đâu?",
+          "courseC_maze_debugging1_b": "Có 1 khối bạn cần thêm để hoàn thành bài tập này."
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "Có rất nhiều mã lệnh hữu ích trong không gian làm việc. Đừng vội xóa tất cả và làm lại từ đầu!",
+          "courseC_maze_debugging2_b": "-   Mọi thứ có ổn ở bước đầu tiên không?\n-   Bước thứ hai vẫn hiệu quả chứ?\n-   Sai sót nằm ở đâu?",
+          "courseC_maze_debugging2_c": "Bạn không tìm ra lỗi sai ở đâu ư? Hãy thử chạy mã lệnh vài lần để xem điều gì sẽ xảy ra."
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "Để xóa một khối nằm trong mã lệnh, hãy kéo tất cả các khối sang một phần khác của không gian làm việc.\n\nKéo khối bạn muốn xóa trở lại hộp công cụ.\n\nCuối cùng, đặt các khối còn lại của bạn trở lại đúng chỗ.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Bạn không tìm ra lỗi sai ở đâu ư? Hãy thử chạy mã lệnh vài lần để xem điều gì sẽ xảy ra."
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "Hãy dùng nút “Step” (bước) để xem từng hướng dẫn một. Cách đó có giúp bạn tìm ra điểm lỗi sai không?",
+          "courseC_maze_debugging4_b": "Một trong những lượt xoay đang khiến Scrat đi sai hướng. Bạn có thể tìm ra đó là lượt xoay nào không?"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "Có rất nhiều khối hữu ích trong không gian làm việc. Đừng xóa tất cả nhé!\n\nHãy dùng nút “Step” (bước) để xem qua và tìm ra bị trí mã lệnh bị sai.",
+          "courseC_maze_debugging5_c": "Bạn có thể thay đổi hướng của khối xoay bằng cách nhấp chuột vào menu thả xuống.",
+          "courseC_maze_debugging5_b": "Hãy thử đọc lên những hành động Scrat nên làm. Những hành động có khớp với mã lệnh trong không gian làm việc không? Sai sót nằm ở đâu?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   Lẽ ra Scrat phải làm gì?\n-   Scrat đang làm gì?\n-   Từ đó rút ra được điều gì?",
+          "courseC_maze_debugging6_b": "Khi bạn tìm ra và sửa lỗi đầu tiên, hãy thực hiện lại quy trình sửa lỗi để tìm lỗi thứ hai.\n\nHãy lặp lại quá trình cho đến khi chương trình hoạt động!"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   Mọi thứ có ổn ở bước đầu tiên không?\n-   Bước thứ hai thì sao?\n-   Sai sót nằm ở đâu?",
+          "courseC_maze_debugging7_b": "Đừng quên sử dụng nút “Step” (bước) để chạy từng dòng trong chương trình!",
+          "courseC_maze_debugging7_c": "Sau khi tìm ra và sửa lỗi đầu tiên, hãy thực hiện lại quy trình sửa lỗi để tìm lỗi tiếp theo.\n\nHãy lặp lại quá trình sửa lỗi cho đến khi chương trình hoạt động!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "Trái hay phải? Tùy bạn đó!",
+          "courseC_maze_debugging_challenge1_b": "Đường đi của Scrat là hình chữ nhật! Cậu ta cần phải xoay theo cùng một hướng trong mỗi lượt.",
+          "courseC_maze_debugging_challenge1_c": "Nếu gặp khó khăn, bạn luôn có thể bắt đầu lại và tìm đường đi mới!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "Nếu đang gặp khó khăn, hãy thử sửa lỗi mã lệnh. Mã lệnh sai ở đâu?",
+          "courseC_maze_debugging_challenge2_c": "Bạn có thể đi theo hai con đường khác nhau mà chỉ cần tiến lên và xoay bốn lần. Nếu bạn tìm ra một cách để sử dụng một vòng lặp, có thể còn nhiều nhiều cách khác nữa!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_loops_challenge1a_2021": {
+          "courseC_maze_loops_challenge1_a": "Hãy coi đường đi này gồm hai đoạn đường khác nhau. Mỗi đoạn có một quy luật để bạn có thể lặp lại.",
+          "courseC_maze_loops_challenge1_b": "Bạn có nhớ cách sử dụng vòng lặp để lặp lại quy luật bậc thang không?"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "Nhớ kiểm tra xem tất cả các khối đã được gắn hoàn toàn với nhau hay chưa, sau đó nhấp chuột vào “Run” (chạy) một lần nữa."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "Để sử dụng khối <xml><block type=\"maze_moveForward\"/></xml>, hãy kéo khối này ra khỏi hộp công cụ và gắn vào khối <xml><block type=\"when_run\"/></xml>.",
+          "courseC_maze_programming2_b": "Nhớ kiểm tra xem tất cả các khối đã được gắn hoàn toàn với nhau hay chưa, sau đó nhấp chuột vào “Run” (chạy) một lần nữa."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "Hãy thử chạy mã lệnh trước để xem lỗi sai nằm ở đâu.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nĐể xóa một khối nằm trong mã lệnh, hãy kéo tất cả các khối sang một phần khác của không gian làm việc.\n\nKéo khối bạn muốn xóa trở lại hộp công cụ.\n\nCuối cùng, đặt các khối còn lại của bạn trở lại đúng chỗ."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "Hãy nhớ rằng khi xoay, bạn đang xoay theo góc nhìn của _chú chim_. Nếu bạn xoay phải, chú chim sẽ quay xuống dưới.",
+          "courseC_maze_programming4_b": "Cách đi theo con đường:\n\n-   tiến lên\n-   xoay một hướng\n-   tiến lên\n-   xoay hướng ngược lại\n-   tiến lên"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "Thử sử dụng nút “Step” (bước) để chạy từng dòng mã lệnh. Bạn có thể tìm ra xem mình cần làm tiếp theo không?",
+          "courseC_maze_programming5_b": "Chú chim cần phải xoay một lần để hoàn thành bài tập này. Bạn có tìm được cách nào không?",
+          "courseC_maze_programming5_c": "Lời giải sẽ có hai khối `move forward` (tiến lên), một khối xoay và hai khối `move forward` (tiến lên) nữa."
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "Đừng quên sử dụng nút “Step” (bước) để xem từng khối và tìm ra lỗi.",
+          "courseC_maze_programming7_b": "Nếu bạn gặp khó khăn khi giải bài tập này, hãy thử viết các bước đi ra một tờ giấy."
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "Có nhiều cách để đến chỗ con heo. Hãy dùng ngón tay của bạn để tìm đường đi rồi lập trình!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "_“Nếu bạn cho tui đi ngược lại, nhớ để tôi xoay đúng hướng đấy nhé!”_",
+          "courseC_maze_programming_challenge2_b": "Lời giải ngắn nhất chỉ sử dụng 5 khối, nhưng cần dùng tới khối này:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_c": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+        },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_a": "Hãy dùng nút “Step” (bước) để xem bước đầu tiên có hiệu quả hay không.\n\nBước thứ hai thì sao?\n\nSai sót nằm ở đâu?"
+        },
+        "courseD_collector_debugging2a_2021": {
+          "courseD_collector_debugging2a_a": "Hãy dùng nút “Step” (bước) để xem bước đầu tiên có hiệu quả hay không.\n\nBước thứ hai thì sao?\n\nSai sót nằm ở đâu?"
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_d": "**Đáp án:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_maze_until4_2021": {
+          "courseD_maze_until4_a": "Hãy dùng nút “Step” (bước) để xem từng dòng mã lệnh.\n\n-   Mọi thứ có ổn ở bước đầu tiên không?\n-   Mọi thứ có ổn ở bước thứ hai không?\n-   Sai sót nằm ở đâu?"
+        },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_a": "Bạn có thể tạo ra hình ảnh trong bức tranh bằng cách sử dụng bộ đếm cho `set alpha` (đặt giá trị alpha) và `counter`/10 làm kích thước cọ.",
+          "courseF_artist_for10_b": "Hình ảnh trong bức tranh sử dụng góc xoay 61 độ.",
+          "courseF_artist_for10_c": "Bạn muốn biết hình ảnh mẫu đã được tạo ra như thế nào?\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "Bạn có thể vẽ giống như thế này không:\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "Vòng lặp `for` (với) sẽ đếm từ 15 đến 300 với gia số 15.",
+          "courseF_artist_for6_b": "Hãy đặt một khối `move forward` (tiến lên) và khối `turn` (xoay) trong vòng lặp `for` (với) này.",
+          "courseF_artist_for6_c": "Tất cả những gì bạn phải thay đổi là số đo góc trong khối `turn` (xoay)."
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_a": "Trong bài tập này, nét bút sẽ mảnh hơn. Bạn sẽ cần đặt giá trị thành `1` trước khi bắt đầu.",
+          "courseF_artist_for7_b": "Lưu ý rằng hình xoắn ốc này xoay sang phải thay vì sang trái nhé!",
+          "courseF_artist_for7_c": "Trong bài tập này, vòng lặp `for` (với) đếm từ 15 đến 300 với gia số 2.",
+          "courseF_artist_for7_d": "Bạn có thể tạo ra hình này bằng cách chỉ xoay 89 độ."
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_a": "Giữ nguyên mọi chi tiết khác trong mã lệnh, chỉ cần thay đổi góc xoay.",
+          "courseF_artist_for8_b": "Nếu muốn, bạn có thể chọn màu khác cho hình xoắn ốc của mình đấy!"
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "Nếu bạn đặt khối `set alpha` (đặt giá trị alpha) trong vòng lặp `for` (với) và dùng biến `counter` (đếm) để thay đổi, bạn có thể tạo ra thiết kế như thế này.",
+          "courseF_artist_for9_b": "Khối `set alpha` (đặt giá trị alpha) thay đổi độ mờ của một màu. Giá trị càng nhỏ thì màu càng trong suốt."
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_a": "`pen width` (độ dày nét bút) là 1. Hình vuông đầu tiên có các cạnh 50 pixel và mỗi hình vuông tiếp theo lớn hơn hình vuông trước đó 50 pixel.",
+          "courseF_artist_for_challenge1_b": "Độ mờ của cọ luôn là `counter`/2.",
+          "courseF_artist_for_challenge1_c": "Sau khi bạn tạo ra từng hình vuông, đừng quên nhảy ngược lại, xoay, nhảy một lần nữa, rồi xoay ngược lại nhé!",
+          "courseF_artist_for_challenge1_d": "**Đáp án:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_c": "Vòng lặp `for` (với) đếm từ 5 đến 250 với gia số 2.",
+          "courseF_artist_for_challenge2_a": "Bạn có thể thay đổi màu sắc bằng cách dùng khối `set color with red, green, blue` (đặt màu đỏ, xanh lá, xanh dương). Màu đỏ được đặt giá trị cố định là 255, màu xanh lá luôn là giá trị của `counter` và màu xanh dương luôn là `255 - counter`.",
+          "courseF_artist_for_challenge2_b": "Mã lệnh cho thao tác này đơn giản hơn bạn nghĩ đấy. Chỉ cần đặt màu bên trong vòng lặp `for` (với), `move forward` (tiến lên), rồi `turn` (xoay).",
+          "courseF_artist_for_challenge2_d": "**Đáp án:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_a": "Bạn có thể tìm ra quy luật giữa số bước bạn cần thực hiện và số mật hoa cần thu thập không?",
+          "courseF_bee_for10_b": "Bụi hoa đầu tiên có tổng cộng **14 bông hoa**. Để đến được bụi hoa đầu tiên này, chú ong phải bay xuống **7 ô** (hoặc 14 ô chia 2.) Bụi hoa tiếp theo có bao nhiêu bông hoa và chú ong sẽ phải đi bao nhiêu ô để đến đó?",
+          "courseF_bee_for10_d": "Bạn sẽ cần 2 lần lặp lại, trong đó có một lần sử dụng khối tính toán."
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_a": "Lần này, khối `move forward` (tiến lên) và khối `get nectar` (lấy mật hoa) cần nằm trong các vòng lặp `repeat` (lặp lại) riêng biệt, cả hai đều nằm trong cùng một vòng lặp `for` (với).",
+          "courseF_bee_for5_b": "Hãy dùng biến `counter` (đếm( trong mỗi vòng lặp để chú ong di chuyển những khoảng cách khác nhau giữa mỗi bông hoa.",
+          "courseF_bee_for5_c": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này."
+        },
+        "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "Đừng quên sử dụng biến `counter` (đếm) trong vòng lặp `repeat` (lặp lại) nhé.",
+          "courseF_bee_for6_b": "Trong vòng lặp `for` (với), bạn sẽ cần lệnh `move forward` (tiến lên) và một vòng lặp để thu thập mật hoa.",
+          "courseF_bee_for6_c": "Vòng lặp cần đếm **từ 5 về 1**."
+        },
+        "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "Vòng lặp `for` (với) cần đếm từ 1 đến 7 với gia số 2.",
+          "courseF_bee_for7_b": "Trong vòng lặp `for` (với), bạn sẽ cần lệnh `move forward` (tiến lên) và một vòng lặp để thu thập mật hoa.",
+          "courseF_bee_for7_c": "Nhớ sử dụng biến `counter` (đếm) trong vòng lặp`repeat` (lặp lại) nhé."
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_a": "Nếu vòng lặp đang đếm xuôi, gia số sẽ được cộng vào biến đếm mỗi lượt đếm.\n\nBạn cần cộng thêm bao nhiêu vào mỗi con số để lấy số mật hoa tiếp theo?",
+          "courseF_bee_for8_b": "Trong bài tập này, bạn cần di chuyển theo hình bậc thang để đến chỗ bông hoa."
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_a": "Hãy thử làm một số phép tính với biến đếm.\n\nBạn cần phải đếm như thế nào ở mỗi bông hoa để có giá trị bằng số mật hoa cần lấy?",
+          "courseF_bee_for9_c": "Có lẽ bạn sẽ phải cho chú ong xoay khi bắt đầu mỗi lượt vòng lặp nếu bạn muốn giải bài tập này.",
+          "courseF_bee_for9_b": "**Hãy nhớ:** Nếu vòng lặp đang đếm xuôi, gia số sẽ được cộng vào biến `counter` (đếm) của bạn mỗi lượt."
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_a": "Hãy xem phương án di chuyển sau:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
+          "courseF_bee_for_challenge2_b": "Hãy thử dùng hai vòng lặp `for` (với): Một vòng lặp để leo lên và lấy mật hoa, vòng lặp còn lại để leo xuống và làm mật ong.",
+          "courseF_bee_for_challenge2_c": "Lưu ý rằng một vòng lặp `for` (với) cần vài vòng lặp thông thường bên để lặp lại số lần `counter` (đếm), tạo ra quy luật bậc thang tăng dần.\n\nVòng lặp `for` (với) còn lại chỉ cần một vòng lặp thông thường để `counter` (đếm) lượng mật ong.",
+          "courseF_bee_for_challenge2_d": "**Đáp án:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         }
       }
     }
