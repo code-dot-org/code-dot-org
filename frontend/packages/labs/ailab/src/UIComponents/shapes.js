@@ -25,3 +25,9 @@ export const currentColumnInspectorShape = PropTypes.shape({
   description: PropTypes.string.isRequired,
   isSelectable: PropTypes.bool.isRequired
 });
+
+export const crossTabDataShape = PropTypes.shape({
+  labelName: PropTypes.string.isRequired,
+  featureNames: PropTypes.array.isRequired,
+  results: PropTypes.arrayOf(PropTypes.objectOf).isRequired
+});

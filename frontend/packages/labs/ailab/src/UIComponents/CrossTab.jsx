@@ -10,10 +10,11 @@ import { connect } from "react-redux";
 import { getCrossTabData } from "../selectors/visualizationSelectors";
 import { styles } from "../constants.js";
 import ScrollableContent from "./ScrollableContent";
+import { crossTabDataShape } from "./shapes";
 
 class CrossTab extends Component {
   static propTypes = {
-    crossTabData: PropTypes.object
+    crossTabData: crossTabDataShape
   };
 
   getCellStyle = percent => {
