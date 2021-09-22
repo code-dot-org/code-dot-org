@@ -4,7 +4,8 @@ import {
   NeighborhoodExceptionType,
   SoundExceptionType,
   MediaExceptionType,
-  TheaterExceptionType
+  TheaterExceptionType,
+  PlaygroundExceptionType
 } from './constants';
 
 export function handleException(exceptionDetails, callback) {
@@ -90,6 +91,14 @@ export function handleException(exceptionDetails, callback) {
       break;
     case TheaterExceptionType.INVALID_SHAPE:
       error = msg.errorTheaterInvalidShape();
+      break;
+
+    // Playground exceptions
+    case PlaygroundExceptionType.PLAYGROUND_RUNNING:
+      error = msg.errorPlaygroundRunning();
+      break;
+    case PlaygroundExceptionType.PLAYGROUND_NOT_RUNNING:
+      error = msg.errorPlaygroundNotRunning();
       break;
 
     default:
