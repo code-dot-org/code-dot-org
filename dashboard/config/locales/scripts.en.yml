@@ -205,6 +205,8 @@ en:
           lessons:
             Maze:
               name: Maze
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for young learners, ages 4-10, but can be adapted for older learners using the differentiation suggestions provided.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for young learners, ages 4-10, but can be adapted for older learners using the differentiation suggestions provided.
           student_description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
           title: Code with Anna and Elsa
