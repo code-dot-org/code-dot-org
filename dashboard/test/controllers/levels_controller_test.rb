@@ -81,8 +81,9 @@ class LevelsControllerTest < ActionController::TestCase
   test "should get filtered levels with level_type" do
     get :get_filtered_levels, params: {page: 1, level_type: 'Odometer'}
     initial_count = JSON.parse(@response.body)['levels'].length
-    
     create(:level, type: 'Odometer', name: 'Test Odometer Level')
+    
+    get :get_filtered_levels, params: {page: 1, level_type: 'Odometer'}
     assert_equal initial_count + 1, JSON.parse(@response.body)['levels'].length
     assert_equal 'Test Odometer Level', JSON.parse(@response.body)['levels'].last["name"]
     assert_equal 1, JSON.parse(@response.body)['numPages']
