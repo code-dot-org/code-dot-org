@@ -17,3 +17,11 @@ export const numericalColumnDetailsShape = PropTypes.shape({
   extrema: PropTypes.objectOf(PropTypes.number).isRequired,
   containsOnlyNumbers: PropTypes.bool.isRequired
 });
+
+export const currentColumnInspectorShape = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  readOnly: PropTypes.bool.isRequired,
+  dataType: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  isSelectable: PropTypes.bool.isRequired
+});

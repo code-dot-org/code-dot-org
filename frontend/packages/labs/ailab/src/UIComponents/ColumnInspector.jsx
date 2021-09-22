@@ -16,15 +16,18 @@ import ColumnDataTypeDropdown from "./ColumnDataTypeDropdown";
 import AddFeatureButton from "./AddFeatureButton";
 import SelectLabelButton from "./SelectLabelButton";
 import UniqueOptionsWarning from "./UniqueOptionsWarning";
+import { currentColumnInspectorShape } from "./shapes";
 
 class ColumnInspector extends Component {
   static propTypes = {
-    currentColumnDetails: PropTypes.object,
+    currentColumnDetails: currentColumnInspectorShape,
     currentPanel: PropTypes.string
   };
 
   render() {
     const { currentColumnDetails, currentPanel } = this.props;
+
+    
 
     const selectingFeatures = currentPanel === "dataDisplayFeatures";
     const selectingLabel = currentPanel === "dataDisplayLabel";
@@ -37,7 +40,7 @@ class ColumnInspector extends Component {
     if (!currentColumnDetails) {
       return null;
     }
-
+    console.log("Column Inspector Component", currentColumnDetails)
     return (
       currentColumnDetails && (
         <div
