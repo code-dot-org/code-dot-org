@@ -16,7 +16,6 @@ export function InstructionsDialog(props) {
         props.title &&
         props.showTitle && <h1 style={styles.title}>{props.title}</h1>
       }
-      // TODO: make this scrollable instead of entire dialog scrolling?
       body={<DialogInstructions />}
       renderFooter={() => (
         <FooterButton
@@ -45,7 +44,7 @@ export default connect(
     isOpen: state.instructionsDialog.open,
     // The presence of longInstructions determines showTitle because
     // the grandchild of this component, <Instructions/>, uses this same calculation
-    // in its renderMainBody method. This avoids rendering the title twice.
+    // in its renderMainBody method. This prevents rendering the title twice.
     showTitle: !!state.instructions.longInstructions
   }),
   dispatch => ({
