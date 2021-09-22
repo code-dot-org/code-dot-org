@@ -60,4 +60,38 @@ class PairedUserLevel < ApplicationRecord
         memo
       end
   end
+
+  # Returns the User object representing the driver. Note that this returns nil
+  # if the driver's user account or the driver's progress was deleted.
+  def driver
+    driver_user_id = driver_user_level&.user_id
+    User.where(id: driver_user_id).first if driver_user_id
+  end
+
+  # Returns the level_source_id from the driver's user_level. Note that this
+  # returns nil if the driver's progress was deleted.
+  def driver_level_source_id
+    driver_user_level&.level_source_id
+  end
+
+  # Returns the display names of the navigators that are also associated with
+  # the same driver_user_level. Note that the returned array may include nil
+  # elements if a navigator's user account or a navigator's progress was deleted.
+  def navigators_names(exclude_self: false)
+    excluded_navigator_user_level_ids =
+      exclude_self ? [navigator_user_level_id] : []
+
+    # Get user_ids of navigator. Array may include nil elements if the
+    # navigator's progress was deleted.
+    navigator_user_ids = PairedUserLevel.
+      left_joins(:navigator_user_level).
+      where(driver_user_level_id: driver_user_level_id).
+      where.not(navigator_user_level_id: excluded_navigator_user_level_ids).
+      order('paired_user_levels.id DESC').
+      pluck('user_levels.user_id')
+
+    names_by_user_id = User.where(id: navigator_user_ids.compact).pluck(:id, :name).to_h
+
+    navigator_user_ids.map {|user_id| names_by_user_id[user_id] unless user_id.nil?}
+  end
 end

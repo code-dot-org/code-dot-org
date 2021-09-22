@@ -175,9 +175,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
       id: bubble_choice.id.to_s,
       contained: false,
       submitLevel: false,
-      paired: nil,
+      paired: false,
+      isDriver: nil,
+      isNavigator: nil,
       driver: nil,
-      navigator: nil,
+      navigators: nil,
       isConceptLevel: false,
       userId: student.id,
       passed: false,
@@ -269,7 +271,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal true, summary1[:paired]
     assert_equal true, summary2[:paired]
     assert_equal student.name, summary2[:driver]
-    assert_equal student2.name, summary1[:navigator]
+    assert_equal student2.name, summary1[:navigators][0]
   end
 
   test 'teacher panel summarize for lesson extra' do
