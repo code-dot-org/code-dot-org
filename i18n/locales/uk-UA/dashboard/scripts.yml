@@ -5627,3 +5627,26 @@ uk:
               name: Акселерометр
             lesson-19:
               name: Проект
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Віджети
+            lesson-3:
+              name: Інструменти
+            lesson-4:
+              name: Приклади
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Уроки
+            lessonGroup-3:
+              display_name: Проект
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Зміст
+            content:
+              display_name: Зміст
+            lesson_group:
+              display_name: Зміст
+            lessonGroup-2:
+              display_name: Зміст
