@@ -9834,3 +9834,17 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: ვიჯეტები
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: შიგთავსი
+            content:
+              display_name: შიგთავსი
+            lesson_group:
+              display_name: შიგთავსი
+            lessonGroup-2:
+              display_name: შიგთავსი
