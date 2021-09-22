@@ -262,9 +262,9 @@ class LessonsControllerTest < ActionController::TestCase
   test 'show lesson when lesson is the only lesson in script' do
     script = create :script, name: 'one-lesson-script', is_migrated: true
     lesson_group = create :lesson_group, script: script
-    @solo_lesson_in_script = create(
+    solo_lesson_in_script = create(
       :lesson,
-      name: 'lesson display name',
+      name: @lesson_name,
       script_id: script.id,
       lesson_group_id: lesson_group.id,
       has_lesson_plan: true,
@@ -278,10 +278,10 @@ class LessonsControllerTest < ActionController::TestCase
       'data' => {
         'script' => {
           'name' => {
-            @solo_lesson_in_script.script.name => {
+            script.name => {
               'title' => @script_title,
               'lessons' => {
-                @lesson.name => {
+                solo_lesson_in_script.key => {
                   'name' => @lesson_name
                 }
               }
@@ -292,19 +292,17 @@ class LessonsControllerTest < ActionController::TestCase
     }
 
     I18n.backend.store_translations 'en-US', custom_i18n
-    assert_equal @script_title, @solo_lesson_in_script.script.localized_title
-
-    # a bit weird, but this is what happens when there is only one lesson.
-    assert_equal @script_title, @solo_lesson_in_script.localized_name
+    assert_equal @lesson_name, solo_lesson_in_script.localized_name
 
     get :show, params: {
       script_id: script.name,
-      position: @solo_lesson_in_script.relative_position
+      position: solo_lesson_in_script.relative_position
     }
     assert_response :ok
     assert(@response.body.include?(@script_title))
-    assert(@response.body.include?(@solo_lesson_in_script.overview))
-    assert(@response.body.include?(script_lesson_path(@solo_lesson_in_script.script, @solo_lesson_in_script)))
+    assert(@response.body.include?(@lesson_name))
+    assert(@response.body.include?(solo_lesson_in_script.overview))
+    assert(@response.body.include?(script_lesson_path(solo_lesson_in_script.script, solo_lesson_in_script)))
   end
 
   test 'show lesson when script has multiple lessons' do
