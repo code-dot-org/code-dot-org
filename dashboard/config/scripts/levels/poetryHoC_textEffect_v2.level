@@ -1,0 +1,111 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr",
+      "PoemBot"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "Find text effect that match the feeling of this poem. \r\n\r\n* Explore the new `text effect` blocks\r\n* Choose **at least two effects** that matches the mood of the poem. \r\n* Click \"Run.\"",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "instructions_icon": "octiSomber",
+    "callout_json": "[]",
+    "parent_level_id": 29612,
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can change the color of your text by clicking on the color block. \\n\\n<xml><block type=\\\"PoemBot_setFontColor\\\"><value name=\\\"FILL\\\"><block type=\\\"colour_picker\\\"><title name=\\\"COLOUR\\\">#333333</title></block></value></block></xml>\\n \\n\\n\\n\\nThink about how different colors feel more happy or sad. Choose colors that match the mood of the poem.\\n\\n![](https://images.code.org/9e334ef513aac006c06548e7eb4c6105-image-1630688009831.53.08 AM.png)\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8ce94b7d4ee0c78a311ae3555bd64105/poetryHoC_textEffect.mp3\"}]",
+    "validation_code": "var validationInfo = getValidationInfo();\r\nvar isFontSet = validationInfo.font.font != 'Arial';\r\nvar isColorSet = validationInfo.font.fill != 'black' || validationInfo.font.stroke != 'white';\r\nvar hasTextEffect = validationInfo.textEffects.length > 0;\r\n\r\n// Pass the level if they have at least two of the three effects.\r\nif (isFontSet && isColorSet || isFontSet && hasTextEffect || isColorSet && hasTextEffect) {\r\n  setSuccessFrame();\r\n}\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    if (isFontSet && isColorSet && hasTextEffect) {\r\n      // 3 effects\r\n      levelFailure(0, 'poemBotSuccessLevel3');\r\n    } else {\r\n      // 2 effects\r\n      levelFailure(0, 'genericSuccess');\r\n    }\r\n  } else {\r\n    if (isFontSet || isColorSet || hasTextEffect) {\r\n      // 1 effect\r\n      levelFailure(3, 'poemBotOneTextEffect');\r\n    } else {\r\n      // 0 effects\r\n      levelFailure(3, 'poemBotNoTextEffects');\r\n    }\r\n  }\r\n}",
+    "short_instructions": "Find text effect that match the feeling of this poem.  Choose **at least two effects** that matches the mood of the poem.",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 64,
+  "published": true,
+  "created_at": "2021-09-21T18:23:48.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2021-09-21T18:23:48.079+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_textEffect\\\"\"],\"cloned_from\":\"poetryHoC_textEffect\"},{\"changed_at\":\"2021-09-21 18:23:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false">
+          <next>
+            <block type="PoemBot_setPoem" can_disconnect_from_parent="false">
+              <title name="POEM">"rumi_2"</title>
+              <next>
+                <block type="PoemBot_setBackgroundEffect">
+                  <title name="EFFECT">"colors"</title>
+                  <title name="PALETTE">"sunrise"</title>
+                  <next>
+                    <block type="PoemBot_setForegroundEffect">
+                      <title name="EFFECT">"twinkling"</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_setBackground">
+          <value name="COLOR">
+            <block type="colour_picker">
+              <title name="COLOUR">#666666</title>
+            </block>
+          </value>
+        </block>
+        <block type="PoemBot_setBackgroundEffect">
+          <title name="EFFECT">"colors"</title>
+          <title name="PALETTE">"grayscale"</title>
+        </block>
+        <block type="PoemBot_setForegroundEffect">
+          <title name="EFFECT">"rain"</title>
+        </block>
+        <block type="PoemBot_setFont">
+          <title name="FONT">"Tahoma"</title>
+        </block>
+        <block type="PoemBot_setFontColor">
+          <value name="FILL">
+            <block type="colour_picker">
+              <title name="COLOUR">#000099</title>
+            </block>
+          </value>
+        </block>
+        <block type="PoemBot_setTextEffect">
+          <title name="EFFECT">"fade"</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>
