@@ -22,7 +22,7 @@ class TranslationService
     locales = Dir.glob(locales_dir.join("*")).map {|dir| File.basename(dir)}
     locales.each do |locale|
       translations = {}
-      Dir.glob(locales_dir.join("#{locale}/blockly-mooc/*.json")).each do |loc_file|
+      Dir.glob(locales_dir.join("#{locale}/blockly-*/*.json")).each do |loc_file|
         name = File.basename(loc_file, ".*")
         translations[name] = JSON.load(File.read(loc_file)).to_h
       end
