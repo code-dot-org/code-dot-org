@@ -207,17 +207,6 @@ export default class Playground {
     return image;
   }
 
-  changeImage(imageData) {
-    const id = imageData.id;
-    let image = document.getElementById(id);
-    // if we can't find the image, ignore this request
-    if (image) {
-      let originalData = this.imageData[id];
-      this.imageData[id] = {...originalData, ...imageData};
-      this.styleImage(image, this.imageData[id]);
-    }
-  }
-
   styleImage(image, imageData) {
     // coordinates come to us in a 400x400 image size,
     // but we use 800x800 on the frontend to allow for higher
