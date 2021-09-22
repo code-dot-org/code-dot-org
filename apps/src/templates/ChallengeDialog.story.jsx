@@ -27,6 +27,23 @@ export default storybook => {
       )
     },
     {
+      name: 'Starting dialog with large avatar',
+      description: 'Shrinks the avatar to prevent overlap with dialog content.',
+      story: () => (
+        <div style={wrapperStyle}>
+          <ChallengeDialog
+            hideBackdrop
+            avatar="/blockly/media/spritelab/avatar.png"
+            cancelButtonLabel="Skip for now"
+            primaryButtonLabel="I'm Ready!"
+            text="Challenge Puzzles are lessons designed to stretch your brain! Just do the best that you can!"
+            title="Challenge Puzzle!"
+            isIntro
+          />
+        </div>
+      )
+    },
+    {
       name: 'Starting Dialog if previously completed',
       description: 'Shows up as soon as you load the puzzle.',
       story: () => (
