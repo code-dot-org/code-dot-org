@@ -207,6 +207,8 @@ class User < ApplicationRecord
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
 
+  has_many :pd_attendances, class_name: 'Pd::Attendance', foreign_key: :teacher_id
+
   has_many :sign_ins
   has_many :user_geos, -> {order 'updated_at desc'}
 
@@ -515,6 +517,10 @@ class User < ApplicationRecord
   def make_teachers_21
     return unless teacher?
     self.age = 21
+  end
+
+  def account_age_in_years
+    ((Time.now - created_at.to_time) / 1.year).floor
   end
 
   def normalize_email
@@ -1570,6 +1576,15 @@ class User < ApplicationRecord
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
     visible_scripts.map(&:unit_group).compact.concat(section_courses).uniq
+  end
+
+  # Returns a list of all grades that the teacher currently has sections for
+  def grades_being_taught
+    sections.map(&:grade).uniq
+  end
+
+  def has_attended_pd?
+    pd_attendances.any?
   end
 
   # Checks if there are any launched scripts assigned to the user.

@@ -359,6 +359,15 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: user.get_active_experiment_names.to_json, domain: :all}
+
+    # The following cookies are used by marketing to create personalized experiences for teachers, such as displaying
+    # specific banner content.
+    if user.teacher?
+      auth.cookies[environment_specific_cookie_name("_teacher_locale")] = {value: user.locale, domain: :all}
+      auth.cookies[environment_specific_cookie_name("_teacher_account_age_in_years")] = {value: user.account_age_in_years, domain: :all}
+      auth.cookies[environment_specific_cookie_name("_teacher_grades_taught")] = {value: user.grades_being_taught.to_json, domain: :all}
+      auth.cookies[environment_specific_cookie_name("_teacher_has_attended_pd")] = {value: user.has_attended_pd?, domain: :all}
+    end
   end
 
   Warden::Manager.before_logout do |_, auth|
