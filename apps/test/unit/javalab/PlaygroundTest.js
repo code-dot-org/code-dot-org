@@ -145,7 +145,7 @@ describe('Playground', () => {
 
     playground.reset();
 
-    expect(backgroundElement.src).to.be.undefined;
+    expect(backgroundElement.src).to.equal('');
     expect(backgroundElement.style.opacity).to.equal(0);
     expect(backgroundElement.onerror).to.be.undefined;
   });

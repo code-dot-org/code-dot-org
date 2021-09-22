@@ -165,7 +165,7 @@ export default class Playground {
   resetBackgroundElement() {
     const backgroundElement = this.getBackgroundElement();
     backgroundElement.onerror = undefined;
-    backgroundElement.src = undefined;
+    backgroundElement.src = '';
     backgroundElement.style.opacity = 0.0;
   }
 }
