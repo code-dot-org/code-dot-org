@@ -40,6 +40,10 @@ class PlaygroundVisualizationColumn extends React.Component {
         <div style={{opacity}}>
           <ProtectedVisualizationDiv>
             <div id="playground-container" style={styles.playground}>
+              <img
+                id="playground-background"
+                style={styles.playgroundBackground}
+              />
               <div id="playground" style={styles.playgroundDiv} />
               <audio id="playground-audio" autoPlay={true} />
             </div>
@@ -60,6 +64,15 @@ const styles = {
     width: 800,
     height: 800,
     overflow: 'hidden'
+  },
+  playgroundBackground: {
+    position: 'absolute',
+    width: 800,
+    height: 800,
+    top: 0,
+    left: 0,
+    opacity: 0,
+    zIndex: -1
   }
 };
 
