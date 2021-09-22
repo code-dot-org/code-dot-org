@@ -3,7 +3,7 @@
   "config": {
     "func": "setPrompt",
     "inline": true,
-    "blockText": "prompt user {NAME}{RIGHT_QUOTE} for variable {VAR}",
+    "blockText": "prompt user {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} for variable {VAR}",
     "args": [
       {
         "name": "LEFT_QUOTE",
