@@ -28,6 +28,15 @@ export const currentColumnInspectorShape = PropTypes.shape({
 
 export const crossTabDataShape = PropTypes.shape({
   labelName: PropTypes.string.isRequired,
-  featureNames: PropTypes.array.isRequired,
+  uniqueLabelValues: PropTypes.array.isRequired,
+  featureNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   results: PropTypes.arrayOf(PropTypes.objectOf).isRequired
 });
+
+export const metadataCardShape = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  card: PropTypes.objectOf(PropTypes.string).isRequired,
+  defaultLabelColumn: PropTypes.string.isRequired,
+  fields: PropTypes.arrayOf(PropTypes.object).isRequired
+});
+
