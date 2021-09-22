@@ -167,8 +167,11 @@ describe('ProgressLessonTeacherInfo', () => {
     assert.equal(wrapper.find('Connect(LessonLock)').length, 0);
   });
 
-  it('renders SendLessonDialog when there is a lessonUrl', () => {
-    const lesson = fakeLesson('Maze', 1);
+  it('renders SendLessonDialog when there is a pdf url', () => {
+    const lesson = {
+      ...fakeLesson('Maze', 1),
+      student_lesson_plan_pdf_url: 'foo/bar/student'
+    };
 
     const wrapper = shallow(
       <ProgressLessonTeacherInfo
@@ -186,6 +189,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
+    console.log(wrapper.find('SendLesson'));
     assert.equal(wrapper.find('SendLesson').length, 1);
   });
 
