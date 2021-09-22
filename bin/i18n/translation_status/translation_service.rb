@@ -16,10 +16,10 @@ class TranslationService
     I18n.exists?(key, locale: locale)
   end
 
-  # Aggregate all blockly-mooc translation JSON files to be loaded into i18n
+  # Aggregate all blockly-mooc and blockly-core translation JSON files to be loaded into i18n
   def store_frontend_translations
     locales_dir = Rails.root.join("../i18n/locales")
-    locales = Dir.glob(locales_dir.join("*")).map {|dir| File.basename(dir)}
+    locales = Dir.glob(locales_dir.join("*-*")).map {|dir| File.basename(dir)}
     locales.each do |locale|
       translations = {}
       Dir.glob(locales_dir.join("#{locale}/blockly-*/*.json")).each do |loc_file|
