@@ -96,6 +96,32 @@ export const TheaterExceptionType = makeEnum(
   'INVALID_SHAPE'
 );
 
+export const PlaygroundExceptionType = {
+  PLAYGROUND_RUNNING: 'PLAYGROUND_RUNNING',
+  PLAYGROUND_NOT_RUNNING: 'PLAYGROUND_NOT_RUNNING'
+};
+
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
 
 export const STATUS_MESSAGE_PREFIX = '[JAVALAB]';
+
+export const PlaygroundSignalType = {
+  // Indicate that the Playground game has started
+  RUN: 'RUN',
+  // Indicate that the Playground game has ended
+  EXIT: 'EXIT',
+  // Add an image item to the Playground
+  ADD_IMAGE_ITEM: 'ADD_IMAGE_ITEM',
+  // Add a clickable item to the Playground
+  ADD_CLICKABLE_ITEM: 'ADD_CLICKABLE_ITEM',
+  // Add a text item to the Playground
+  ADD_TEXT_ITEM: 'ADD_TEXT_ITEM',
+  // Remove an item from the Playground
+  REMOVE_ITEM: 'REMOVE_ITEM',
+  // Change an item's properties
+  CHANGE_ITEM: 'CHANGE_ITEM',
+  // Play a sound
+  PLAY_SOUND: 'PLAY_SOUND',
+  // Set the background image of the Playground
+  SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE'
+};

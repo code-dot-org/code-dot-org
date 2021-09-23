@@ -12,5 +12,9 @@ import 'pepjs';
 
 import CDOBlockly from '@code-dot-org/blockly';
 import initializeCdoBlocklyWrapper from '@cdo/apps/blockly/cdoBlocklyWrapper';
+import trackBlocklyStrings from '@cdo/apps/util/i18nBlockyStringTracker';
 
 window.Blockly = initializeCdoBlocklyWrapper(CDOBlockly);
+
+// Track the strings used by the Blockly code.
+trackBlocklyStrings();
