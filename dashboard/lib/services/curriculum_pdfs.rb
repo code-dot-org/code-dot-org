@@ -69,7 +69,7 @@ module Services
     # in order to generate the overview pdf. When a course is in-development or pilot
     # signed out users can not see the unit overview page
     def self.should_generate_overview_pdf?(unit)
-      !unit.unit_without_lesson_plans? || ![SharedConstants::PUBLISHED_STATE.pilot, SharedConstants::PUBLISHED_STATE.in_development].include?(unit.get_published_state)
+      !(unit.unit_without_lesson_plans? || [SharedConstants::PUBLISHED_STATE.pilot, SharedConstants::PUBLISHED_STATE.in_development].include?(unit.get_published_state))
     end
 
     # Do no generate the resources pdf is there are no lesson plans since
@@ -89,8 +89,8 @@ module Services
       end
 
       # Script Resources and Overview PDFs
-      generate_script_resources_pdf(script, pdf_dir) if should_generate_resource_pdf?
-      generate_script_overview_pdf(script, pdf_dir) if should_generate_overview_pdf?
+      generate_script_resources_pdf(script, pdf_dir) if should_generate_resource_pdf?(script)
+      generate_script_overview_pdf(script, pdf_dir) if should_generate_overview_pdf?(script)
 
       # Persist PDFs to S3
       upload_generated_pdfs_to_s3(pdf_dir)
