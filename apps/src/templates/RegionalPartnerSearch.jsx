@@ -127,6 +127,10 @@ class RegionalPartnerSearch extends Component {
       .fail(this.partnerZipFail);
   };
 
+  shouldDisplayApplicationLink() {
+    return this.state.applicationsClosed === false;
+  }
+
   render() {
     const partnerInfo = this.state.partnerInfo;
 
@@ -181,10 +185,10 @@ class RegionalPartnerSearch extends Component {
             <br />
             <div>
               We are unable to find this ZIP code.
-              {!this.state.applicationsClosed &&
+              {this.shouldDisplayApplicationLink() &&
                 ' You can still apply directly:'}
             </div>
-            {!this.state.applicationsClosed && (
+            {this.shouldDisplayApplicationLink() && (
               <StartApplicationButton
                 buttonOnly={true}
                 nominated={this.state.nominated}
@@ -207,7 +211,7 @@ class RegionalPartnerSearch extends Component {
                 We do not have a Regional Partner in your area. However, we have
                 a number of partners in nearby states or regions who may have
                 space available in their program.
-                {!this.state.applicationsClosed &&
+                {this.shouldDisplayApplicationLink() &&
                   ` If you are willing to travel, please fill out the application. `}
                 We'll let you know if we can find you a nearby spot in the
                 program!
@@ -243,7 +247,7 @@ class RegionalPartnerSearch extends Component {
                 </a>{' '}
                 for other Professional Development options in your area.
               </p>
-              {!this.state.applicationsClosed && (
+              {this.shouldDisplayApplicationLink() && (
                 <StartApplicationButton
                   buttonOnly={true}
                   nominated={this.state.nominated}
@@ -259,7 +263,7 @@ class RegionalPartnerSearch extends Component {
             <hr style={styles.hr} />
 
             <div style={styles.action}>
-              {!this.state.applicationsClosed &&
+              {this.shouldDisplayApplicationLink() &&
                 appState === WorkshopApplicationStates.currently_open &&
                 !partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
@@ -270,7 +274,7 @@ class RegionalPartnerSearch extends Component {
                   />
                 )}
 
-              {!this.state.applicationsClosed &&
+              {this.shouldDisplayApplicationLink() &&
                 appState === WorkshopApplicationStates.currently_open &&
                 partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
@@ -400,7 +404,7 @@ class RegionalPartnerSearch extends Component {
             </div>
 
             {/* These two links duplicate the buttons that appear above. */}
-            {!this.state.applicationsClosed &&
+            {this.shouldDisplayApplicationLink() &&
               appState === WorkshopApplicationStates.currently_open &&
               !partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
@@ -411,7 +415,7 @@ class RegionalPartnerSearch extends Component {
                 />
               )}
 
-            {!this.state.applicationsClosed &&
+            {this.shouldDisplayApplicationLink() &&
               appState === WorkshopApplicationStates.currently_open &&
               partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
