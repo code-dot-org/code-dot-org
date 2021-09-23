@@ -1136,6 +1136,13 @@ cs:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNumSprites:
         text: vytvoř {NUM} nových {ANIMATION_NAME} postav
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': vpravo
+            '90': dolů
+            '180': vlevo
+            '270': nahoru
       gamelab_mirrorSprite:
         text: "{SPRITE} tvář {DIRECTION}"
         options:
@@ -1171,6 +1178,7 @@ cs:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": křupnutí
+            "'sound://category_digital/jump_7.mp3'": skoč
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
         options:
@@ -1643,6 +1651,8 @@ cs:
         text: nakonfigurujte Město příšer s{COUNT}příšerami
       Outbreak_stopMoving:
         text: příšery se přestávají pohybovat
+      PoemBot_makeNumSprites:
+        text: vytvoř {NUM} nových {ANIMATION_NAME} postav
       PoemBot_playSound:
         text: přehraj zvuk {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1655,6 +1665,8 @@ cs:
             '"ripples"': Vlny
           PALETTE:
             '"rainbow"': Duha
+      PoemBot_setBackgroundImageAs:
+        text: nastav pozadí na {IMG}
       PoemBot_setForegroundEffect:
         options:
           EFFECT:

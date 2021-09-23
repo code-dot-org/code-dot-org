@@ -22,123 +22,123 @@ style_min: true
 ## Genel Bakış
 Bilgisayar bilimi eğitiminin doğası, orijinal Bilgisayar Bilimi Temelleri derslerinin oluşturulmasından bu yana çok ilerlemiştir. Temel olarak, 1-4 arası kurslar öğrencilerin temelleri anlaması için başlangıç noktası olarak tasarlandı, yaşı ne olursa olsun bu disipline giren herkes için.  Anaokulundan başlamak üzere çok daha fazla bölge, şehir ve ülke bilgisayar bilimlerini öğretmeye başladıkça, öğretmenler de orta okul ve lise öğrencileri için daha fazla içerik talep ediyorlar.
 
-Bilgisayar Bilimi Temelleri Kursları A-F, bu soruna çözüm olarak hazırlanmıştır.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+Bilgisayar Bilimi Temelleri Kursları A-F, bu soruna çözüm olarak hazırlanmıştır.  Sınıf bazında bir müfredatın oluşturulması, geriye dönüp materyalleri sunma şeklimizi yeniden düşünmemizi sağladı.  Ayrıca, bu görevde bizi destekleyen özel öğretmen topluluğundan gelen geri bildirimleri gönülden dahil etme şansı da sağladı. Ülkedeki en iyi ilkokul CS eğitimi uzmanlarından bazılarının yardımıyla tasarlanan Kurslar A-F, ekstra mesleki gelişim olmadan çalışacak kadar tanıdık olmalı, ancak geçmişteki derslerimizi tamamlamış öğrencilere sunacak kadar yeni olmalıdır.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* Kurs A: Anaokulu
+* Kurs B: 1. Sınıf
+* Kurs C: 2. Sınıf
+* Kurs D: 3. Sınıf
+* Kurs E: 4. Sınıf
+* Kurs F: 5. Sınıf
+* Okul Öncesi Çocuklar için Hızlandırılmış Kurs: Anaokulu - 1. Sınıf
+* Hızlandırılmış Kurs: Anaokulu - 2. Sınıf - 5. Sınıf
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).  In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development.  Note the addition of two different “Express” courses, one for pre-readers and one for all other grades.  These are similar to the previous suite’s “accelerated” version.
+CS Fundamentals için yapılan en büyük güncelleme, içeriğin, dört kurstan (Kurslar 1-4) ila her birinin K-5 sınıf düzeyi ile uyumlu olduğu altı kursa (Kurslar A-F) geçecek olmasıdır.  Bunu yaparken dersler, okuma, matematik ve genel bilişsel gelişim için uygun seviyelere daha uygun hale gelmiştir.  Biri okuma yazma bilmeyenler ve diğeri tüm diğer sınıflar için olmak üzere iki farklı "Hızlı" kursun eklendiğine dikkat edin.  Bunlar, önceki paketin "hızlandırılmış" versiyonuna benzerdir.
 
 <a id="newcourses"></a>
 
 ## Yeni Kursları Öğretme
-As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+Daha önce bahsedildiği üzere kurslar tanıdık ancak farklı olmalıdır.  Bir Code.org mesleki gelişim atölyesine gittiyseniz, yeni kursları öğretmeye hazırsınız demektir. Birkaç değişiklik var, ancak genel platform, müfredat ve pedagojik felsefe değişmemiştir. Henüz gitmediyseniz, Code.org, müfredatı nasıl anlayacağınızı, Code.org platformunu nasıl kullanacağınızı ve bağlantısız dersleri nasıl öğreteceğinizi öğrenmenize yardımcı olmak için ücretsiz olarak 1 günlük atölye çalışmaları sunar.
 
-The main updates to the courses are:
+Kurslara yönelik yapılan ana güncellemeler şunlardır:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* Daha küçük öğrenciler için çember oluşturarak hikayeler anlatma
+* Kavramları pekiştirmeye ve pratik etmeye/uygulamaya yönelik yeni bir yaklaşım
+* Bağlantısız derslerden bağlantılı derslere geçişi arttırmak için köprüleme aktiviteleri
+* Daha büyük öğrenciler için kurs projelerinin sonu
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+Bu kılavuzun geri kalanı, sınıfınızda değişiklikleri uygulamanız için ipuçları ve taktikler sunarak her bir fikri daha ayrıntılı bir şekilde sunacaktır.
 
 <a id="circletime"></a>
 
 ## Çember Zamanı Hikayeleri( Ders A ve B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+Bazı kavramları, özellikle küçük öğrenciler için yalnızca aktiviteler ve bulmacalar vasıtasıyla öğretmek zordur.  Bu nedenle, Anaokulu ve Birinci Sınıf müfredatında çember oluşturulan az sayıda hikayeyi dahil ettik. Hata ayıklama, ısrar ve hayal kırıklığı gibi önemli fikirler hakkında tartışmak için yol boyunca duraklayarak, bu hikayelerin öğretmen tarafından tüm sınıfa okunması amaçlanmıştır.  Umudumuz, öğrencilerin bu zor kavramları hikaye karakterleri aracılığıyla deneyimlemelerine izin vermenin, gelecekteki derslerde ortaya çıktıklarında aynı kavramları tanımalarına yardımcı olacağıdır.
 
-Here is how the circle-time stories are intended to be used:
+İşte çember oluşturulan hikayeler şu amaçla kullanılır:
 
-### Read the appropriate story to your class
-  - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-  - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-  - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
+### Sınıfınız için uygun hikayeyi okuyun
+  - Hareket sırasında faydalı anlarda soru ve yorumlarla anladıklarını kontrol ettiğinizden emin olun.
+  - Sonrasında hikayeler hakkında tartışın. Öğrencilerini neler duymuş? Akıllarına takılan herhangi bir fikir var mı?
+  - Öğrencilerin karakterlerle özdeşleşmelerini sağlamaya çalışın.  Hayatlarında yaptıkları, onlara hikayedeki karakterlerden birini hatırlatan bir şey var mı?
 
-### Remind students about the story before they begin the next activity.
-  - Do you remember the main ideas we discussed?
-  - How will you know if you see that idea today?
-  - What did the character do to handle that idea? What would you do?
+### Sonraki aktiviteye başlamadan önce öğrencilere hikayeyi hatırlatın.
+  - Tartıştığımız ana fikirleri hatırlıyor musunuz?
+  - Bu fikri bugün görüp görmediğinizi nasıl anlarsınız?
+  - Karakter bu fikri işlemek için ne yaptı? Siz ne yapardınız?
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
-  - Describe for a student how the position that they are in resembles a situation from the book.
-  - Ask a student to think about the characters and figure out what they might do.  Does that help the student figure out a next step?
+### Bir aktivite sırasında kesiştiklerinde hikaye ile öğrencinin durumları arasındaki benzerliklere dikkat edin.
+  - Bir öğrenciye, içinde bulundukları konumun kitaptaki bir duruma nasıl benzediğini anlatın.
+  - Bir öğrenciden karakterler hakkında düşünmesini ve ne yapabileceklerini bulmasını isteyin.  Bu, öğrencinin bir sonraki adımı bulmasına yardımcı olur mu?
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+Tüm sınıfınızı bir araya toplayamıyorsanız, Code.org, hikayeleri sınırlı animasyonlarla sunan uygun dersin başında bir video seçeneği sunmuştur. Bu videolar tam olarak aynı deneyimi sunmasa da, öğrencilerin kursun geri kalanına devam etmeden önce kavramları ve karakterleri görmelerine olanak tanıyacak.
 
 <a id="scaffolding"></a>
 
 ## Yapı İskelesi Dersi & Zorlu Bulmacalar ( Tüm Yaşlar)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+A-F kursları genel olarak önceki kurslarımıza göre daha az pekiştirilir.  Bu, özellikle hata ayıklamayı öğrenmedikleri sürece, öğrencilerin kodlarını mümkün olduğunca sık bir şekilde en baştan oluşturmalarını sağlamaya çalıştığımız anlamına gelir.  Bu tasarımın bir kısmı olarak, çevrimiçi derslerimizin çoğu, derse başlamak için basit bir bulmaca sunduğumuz ve ardından öğrencilerin arkasındaki fikri anlama şansı bulduğu noktaya kadar yeni bir kavramla yavaşça ilerleyeceğimiz bir eğilimi takip ediyor.  Sonrasında, öğrencilerin yeni ve karmaşık bir şekilde kavram hakkında düşünmelerini sağlamayı amaçlayan çetrefilli bir bulmacayı sunarız.
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+Çetrefilli bulmacalar, Kurslar A-F'de yenidir.  Çetrefilli bulmacaların amacı, öğrencileri ısrar ve bağımsız düşünce pratiği yapabilecekleri yüksek bir çıtaya maruz bırakmaktır.  Çetrefilli bulmacalar kasten zordur ve yalnızca kavramı tam anlamıyla anlayan öğrencilerin makul bir zaman içerisinde geçeceği şekilde tasarlanır.  Bu, çok sayıda öğrencinin ilk seferinde karşılaştıkları zorluklarda başarılı olamayacağı anlamına gelir. Bu, hem öğrencinin hem de öğretmenin üstesinden gelmesi için belirli bir tutum gerektirir.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. Öğrenciler, bu zorlukları içtenlikle denemeli, sonra bir kenara bırakıp devam etmelidir.  Bu pratik, çok önemli iki şeyin olmasına izin verir:
+2. Öğrenciler, çalışılan kavramın ne zaman ve neden kullanılacağını daha iyi anlar. Aşağıdaki bulmacalar, kendi başına ciddi bulmacalar olmasına rağmen bu zorluktan sonra daha kolay gelir.
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+Öğrencilerin derslerden geçebileceklerini ve eksik bulmacaları istedikleri zaman yeniden deneyebileceklerini unutmayın.  Bazen zor bir problemi tekrar gözden geçirmeden önce iyi bir gece uykusu almak oldukça yardımcı olabilir.
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+Öğrenciler bu zorluğu aştıklarında, sahnenin ilk yarısında deneyimlediklerine benzer bir sürü alıştırma bulacaklar. Bu bulmacalar, bir öğrencinin çalışılan konudaki netliğini test etmek için kasıtlı olarak yerleştirilmiştir.  Daha önce yapılan bulmacalar göz önünde bulundurulduğunda bunlar çok basit görünebilir, ancak bunlar, karşılık gelen aşamadan istenen tam yeterlilik düzeyini göstermek üzere oluşturulmuştur.
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+Bazı örneklerde, derslerimizi serbest oyun tarzı seviyeler ile sonlandırırız.  Bu seviyelerin "yanlış" cevabı olmayabilir veya temel problemlerini çözmek için birkaç farklı yola izin verebilirler.  Lütfen öğrencileri ellerinden gelenin en iyisini yapmaya teşvik edin ve yapabilecekleri halde sadece "Devam Et" i tıklamayın.
 
-Some final notes for this area:
+Bu alan için birkaç final notu:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* Öğrencilere ısrarcı olmalarını ve zor görünen problemlerde hata ayıklama becerilerini kullanmalarını hatırlatın.
+* Videolar genelde yardımcı olur.  Öğrenciler sıkıştığında, onlara videoyu iki, üç veya hatta dört kere yeniden izletin.
+* Öğrencilerden talimatları okumasını isteyin.  Zorlanıyorlarsa talimatları bir sınıf arkadaşına yüksek sesle okumalarına izin verin.
+* İpuçlarını kullanmak sorun değil!  Öğrenciler ihtiyaç duydukları kadar çok ipucu kullanmalıdır, ancak her yeni ipucu arasında bulmacayı en az bir kere yeniden çözmeye çalıştığınızdan emin olun.
 
 <a id="unplugged"></a>
 
 ## Bağlantısız Dersler için Köprüleme Aktiviteleri (Tüm Yaşlar)
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+Bağlantısız aktiviteler, günlük yaşamlarında önemli CS kavramlarını halihazırda nasıl kullandıklarını gösterme açısından bulundukları yerde öğrencilerle buluşur.  Öğrenciler döngüler ve koşullar gibi temel fikirleri belirledikten sonra, ilk çevrimiçi programlama için bunları kullanmaya çalışırken ortaya çıkabilecek zihinsel engelleri aşarlar.
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
+Bağlantısız deneyimler o kadar önemlidir ki onları bir adım daha ileri götürmeyi seçtik ve bağlantısız dersleri çevrimiçi benzerleri ile birleştiren aktiviteler yapmaya başladık.  Kurslar A-F'de şimdi ders planlarının, çevrimdışı alıştırmaları nasıl yapacağınıza ve dersleri aşağıdaki çevrimiçi bulmacalara nasıl çevireceğinize dair örnekler sunduğunu göreceksiniz.  Buna uygun olarak bunlara "Köprüleme Aktiviteleri" deriz
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise.  In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+Çoğunlukla, köprüleme aktiviteleri ya bağlantısız alıştırmanın konusunu alıp kağıt Blockly blokları ile yürüterek ya da çevrimiçi bir bulmaca alıp bağlantısız alıştırmadan dili kullanıp bunu çözerek oluşturulabilir.  Bazı durumlarda, farklı bir ilişki ortaya çıkar ancak tüm örnekler çevrimdışı deneyimlerin çok soyut veya ilgisiz hissettirmesini engellemeye yöneliktir.
 
 <a id="endofcourse"></a>
 
 ## Kurs Projeleri Bitiş ( Kurs E & F)
-For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+Daha büyük öğrenciler için Kurslar E & F'deki kurs projelerinin büyük ölçüde sonunu getirdik. Code.org uzunca bir süredir "projeler" oluşturma becerisi sağlamasına rağmen, öğrencilerin projelerini resmi bir bağlamda planlayıp yürütebilmeleri için çok ihtiyaç duyulan bakış açısını dahil edeceğini düşündük.
 
-The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+Kurs projelerinin sonu nispeten basittir.  Dört ila beş haftalık bir süre boyunca öğrenciler proje fikirlerini gözden geçirecek, uygulamalarını planlayacak, programlarını kodlayacak, geri bildirime göre revize edecek (5. sınıf), ardından tamamladıkları çalışmaları sunacaklar.  Bu adımların her biri, yardımcı bir notun yanı sıra büyük resmi vurgulayan bir öğretmen ders planıyla yönlendirilir.
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point.  These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**Gözden Geçirme:** Öğrenciler, bu noktaya kadar öğrendikleri becerilerle yapılabilecek inanılmaz şeyleri sergilemek için oluşturulmuş istek uyandıran bir sürü projeye bir göz atacaklar.  Bu projeler Play Lab veya Oyuncuda oluşturulmuştur, ancak öğrenciler Tynker, Scratch'den ve hatta öğretmen uygun görürse metin tabanlı dillerdeki projeleri incelemekte özgürdür.
 
-**Plan:** The intention here is for students to sit back and think about what is really possible.  They will need to think about the games that they saw, and the limitations that they faced when editing them.  Afterward, they will sketch out a plan to create something unique.  Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life.  The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**Planlama:** Buradaki hedef, öğrencilerin arkalarına yaslanıp gerçekte neyin mümkün olduğunu düşünmeleridir.  Gördükleri oyunları ve bunları düzenlerken karşılaştıkları sınırlamaları düşünmeleri gerekecek.  Daha sonra, eşsiz bir şey oluşturmak için bir planın taslağını çıkaracaklar.  Vizyonlarını hayata geçirirken zaman ve kaynaklar sınırlı olacağından dolayı, öğrencilere gerçekçi kalmalarının hatırlatılması gerekebilir.  Buradaki materyaller, Sanatçının veya Play Lab'ın kullanımını gerektirir, ancak projeler, her bir belirli sınıf için hangi platform işe yarıyorsa oraya geçirilebilir.
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper.  Students will face tough choices when it comes to trying to make things work as they run into one barrier after another.  They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**Oluşturma:** Bir gün, kâğıt üzerine yazılmış bir planı uygulamak için çok fazla zaman değildir.  Öğrenciler, birbiri ardına bir engelle karşılaştıklarında işleri yürütmek söz konusu olduğunda zor seçimlerle karşılaşacaklar.  Hatalar ve program sınırlamaları, kısıtlı bir zaman diliminde rahatlıkla nelerin başarılabileceğine dair algılarını değiştirdikçe düzenlemeyi ve uyarlamayı öğrenecekler.
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved.  Students will practice constructive critique, as well as group brainstorming and persistence.
+**İnceleme:** Daha büyük öğrenciler için, sınıf arkadaşlarının geri bildirimlerine göre programlarını bir gün boyunca incelemek, nihai ürünlerini geliştirmelerine yardımcı olabilir ve başardıkları şeylerle başkalarına ilham vermelerini sağlayabilir.  Öğrenciler, yapıcı eleştiri ve ayrıca grupla beyin fırtınası ve ısrarcı olma pratiği yapacaklar.
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come.  Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**Sunma:** Yapım aşamasında yaklaşık bir ay boyunca, bu, öğrencilerin ayağa kalkma ve ne kadar ilerlediklerinden gurur duyma şansıdır.  Ders planımız, sözlü bir sunum gerektirir, ancak öğretmenlerin bunun yerine yazılı veya multimedya sunumları önerme seçeneği vardır.
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+Öğrenciler kendilerini projelerine ne kadar derinlemesine dahil ederlerse etsinler, bilgisayar bilimlerinde yaratıcılık ve problem çözme süreçleri hakkında faydalı bir şeyler öğreneceklerinden eminiz.
 
 <a id="conclusion"></a>
 
 ## Sonuç
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+Görebileceğiniz gibi, Computer Science Fundamentals alanındaki Kurslar A-F, büyük CS Fundamentals öğretmeninden ve & kolaylaştırıcı topluluklardan gelen geri bildirimden etkilenen heyecan verici gelişimleri içerir.
 
-We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
+Bu genel bakışın aydınlatıcı olduğunu umuyoruz.  Bu değişiklik hakkında herhangi bir soru veya yorumunuz varsa, lütfen http://forum.code.org/c/csf web sitesini ziyaret edin ve bunları forumumuzda gönderi olarak paylaşın.  Sorularınızın mümkün olan en kısa sürede yanıtlanacağından emin olacağız.  O zamana kadar, burada Kurslar A-F hakkında sık sorulan sorulardan bazıları verilmiştir.
 
 <a id="faq"></a>
 
 ## SSS
 
-| Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
-| **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
-| **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
-| **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| Soru                                                                                                                                                | Cevap                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Yeni bir kurs dizisini başlatıyorsunuz-- bu Kurslar 1-4'ün geçtiği anlamına mı geliyor?**                                                         | Hayır. 20 Saatlik asıl kursumuz hala web sitemizde mevcut ve kullanımda olduğu için, öğrencilerin/çocukların ihtiyaç duyduğu deneyimi daha iyi temsil ettiğini düşünenler için Kurslar 1-4'ü hazırda bulundurmayı planlıyoruz.                                                                                                                                                                                                                                                                         |
+| **Kurslar A-F'yi kullanmaya ne zaman başlayabiliriz?**                                                                                              | Kurslar A-F halihazırda mevcut!                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **En sevdiğim derslerden/bulmacalardan bazıları Kurslar A-F'de eksik!**                                                                             | Korkmana gerek yok! Kurslar 1-4'te veya Hızlandırılmış 20 Saatlik kursta hala onları bıraktığınız yerdeler.                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Bu bulmacalar çok daha zor görünüyor.  Benim küçük çocuklarım için aşırı zor olacağından korkuyorum.**                                            | Bu yeni kursların dayanağı, öğrencilerin düşünmesini, problem çözmesini ve ısrarcı olmak için pratik yapmasını sağlama isteğidir.  Bu şeylerin hiçbiri, bulmacaların tamamlanmasının aşırı kolay olduğu zaman gerekmez.  Bu nedenle bulmacaları daha da zorlaştırdık.  Bu becerileri geliştirmede sınıfınıza liderlik etme konusunda yardım için lütfen öğretmen kılavuzuna bakın.  Her zaman olduğu gibi, çevrimiçi bulmacalara atlamadan önce bağlantısız dersleri kullanmanın önemini küçümsemeyin. |
+| **Bazı bulmacalar yalnızca belirli sayıda spesifik bloğa izin verir.  Peki ya öğrencilerim döngüleri çözmeden çok önce bir şeyi kodlamak isterse?** | Spesifik blokları kısıtlayan birkaç bulmaca vardır. Bu yeni pekiştirme yöntemlerinden biridir.  Çalışma alanındaki parçaları fazla pekiştirmeden yön vermenin bir yoludur.  Bulmacaları çözmeden çok önce kodlamayı seven öğrenciler için (ve aslında tüm öğrenciler için her zaman) klavyenin yanında, her ne şekilde olursa olsun en doğal olarak gelen algoritmayı bulabilecekleri bir günlük veya karalama kağıdına sahip olmak yararlıdır.                                                        |
 

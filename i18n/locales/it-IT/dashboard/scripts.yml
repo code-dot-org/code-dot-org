@@ -9104,3 +9104,24 @@ it:
               name: LED colorati
             lesson-19:
               name: Progetto
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Componenti
+            lesson-3:
+              name: Strumenti
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lezioni
+            lessonGroup-3:
+              display_name: Progetto
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Contenuto
+            content:
+              display_name: Contenuto
+            lesson_group:
+              display_name: Contenuto
+            lessonGroup-2:
+              display_name: Contenuto

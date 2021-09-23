@@ -65,6 +65,22 @@
             "'sound://category_animals/tiger.mp3'"
           ],
           [
+            "trill",
+            "'sound://category_collect/trill_stings.mp3'"
+          ],
+          [
+            "harp",
+            "'sound://category_instrumental/harpe_pluck_1.mp3'"
+          ],
+          [
+            "bright",
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'"
+          ],
+          [
+            "mystical",
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'"
+          ],
+          [
             "robot voice",
             "'sound://category_transition/trippy_robotic_transition.mp3'"
           ],
@@ -85,8 +101,8 @@
             "'sound://category_retro/retro_game_ui_select_6.mp3'"
           ],
           [
-            "game over",
-            "'sound://category_retro/retro_game_classic_player_death_9.mp3'"
+            "sci fi",
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'"
           ],
           [
             "jump",

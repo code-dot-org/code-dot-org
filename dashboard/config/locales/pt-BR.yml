@@ -201,6 +201,7 @@ pt:
     user_type_button: Atualizar Tipo de Conta
     user_type_label: Tipo de conta
     user_type_student: Estudante
+    user_type_student_ability_1: Salvar seu progresso e projetos
     user_type_teacher: Professor
     field_is_required: é obrigatório
     accept_terms: Você precisa aceitar para criar uma conta.

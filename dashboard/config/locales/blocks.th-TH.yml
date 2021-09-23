@@ -1105,6 +1105,13 @@ th:
             '"rain"': มีฝน
       gamelab_makeNewSpriteAnon:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ขวา
+            '90': เป็นตำแหน่ง
+            '180': ซ้าย
+            '270': ขึ้นข้างบน
       gamelab_mirrorSprite:
         text: "{SPRITE} หน้า {DIRECTION}"
         options:
@@ -1130,6 +1137,7 @@ th:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": ครัชช์
+            "'sound://category_digital/jump_7.mp3'": กระโดดออกไปที่
       gamelab_pointInDirection:
         text: จุด {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1581,6 +1589,8 @@ th:
             '"ripples"': ระลอกคลื่น
           PALETTE:
             '"rainbow"': สายรุ้ง
+      PoemBot_setBackgroundImageAs:
+        text: ตั้งค่าพื้นหลังเป็น {IMG}
       PoemBot_setForegroundEffect:
         text: กำหนดโฟร์กราวด์เอฟเฟค {EFFECT}
         options:

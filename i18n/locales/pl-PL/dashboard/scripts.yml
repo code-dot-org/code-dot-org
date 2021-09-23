@@ -649,6 +649,7 @@ pl:
               name: Strategie nauczenia
             What is ECS?:
               name: Co to jest ECS?
+          name: ECSPD
         sciencePD:
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -8628,6 +8629,7 @@ pl:
             Complete Unit 3 Deeper Learning Reflections:
               name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
           student_description: 'To jest Dział 1 "Planu pogłębionej nauki" dla prowadzących "Odkrycia informatyki" Code.org w trakcie szkolenia. Tutaj znajdziesz podpowiedzi i wytyczne wynikające z przemyśleń umożliwiających wykazywanie biegłości w roli prowadzącego realizującego materiał działu 1 programu "Odkryć informatyki" Code.org. W dolnej części tej strony dostępne są pozycje do weryfikacji przez rówieśników po przedłożeniu przez Ciebie Twoich własnych przemyśleń dotyczących tego działu. '
+          name: csd1-dlp-18
         csd2-dlp-18:
           title: "  Odkrycia Informatyki, Jednostka 2, Pogłębiona Nauka 2018-2019"
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia 2019 [CS Discoveries Facilitators in Training 2019]
@@ -16256,9 +16258,9 @@ pl:
             csf:
               name: Podstawy Informatyki
             sprites_in_action_2021:
-              name: 'Sprite Lab: Duszki w akcji (CSF 2021 Pilotaż)'
+              name: 'Sprite Lab: Duszki w akcji'
             text_and_prompts_2021:
-              name: 'Sprite Lab: Tekst i zachęty (Pilotaż CSF 2021) '
+              name: 'Sprite Lab: Tekst i zachęty'
             csp_functions_2021:
               name: 'Zasady informatyki: funkcje'
             minitoolbox_2021:
@@ -16365,7 +16367,7 @@ pl:
             appendix:
               name: Appendix
             intro-categorical:
-              name: Lekcja 6
+              name: Wprowadzenie do AI Lab
             model-cards:
               name: Plac zabaw dla modeli kart
             bug-bash:
@@ -18822,6 +18824,11 @@ pl:
             lesson-2:
               description_student: W tym projekcie projektujesz podstawowe elementy prostej gry, planując i rozwijając silnik gry. Nakreślasz mechanikę gry, pseudokodujesz każdy komponent, a następnie używasz interaktywnego procesu projektowania, aby stworzyć grę, która reaguje na interakcję użytkownika. Pod koniec tego projektu bierzesz udział w imprezie blokowej, aby grać nawzajem w gry!
               description_teacher: Studenci projektują i budują silnik gry dla tego projektu, skupiając się przede wszystkim na logice warunkowej potrzebnej do tego, aby gra była interaktywna i responsywna. Rozpoczynają od wybrania prostej gry i określenia jej podstawowych funkcji. Piszą pseudokod dla tych komponentów i rozpoczynają rozwijanie swojego projektu.
+            lesson-7:
+              description_student: Porównaliśmy dwa „int” lub „double” pod kątem równości, ale jak porównać obiekty? Co może oznaczać, że dwa 'łańcuchy' są równe? A co z dwoma pączkami? Odkrywasz, jak przetestować dwa obiekty pod kątem równości i wdrożyć swoje odkrycia w grze Pop the Balloons.
+              description_teacher: uczniowie rozróżniają porównania obiektów i wartości pierwotnych. Badają efekty używania `==` lub `!=` z obiektami, aby zidentyfikować potrzebę zastosowania metody `equals()` do porównywania obiektów jako danych. Używając metody `equals()`, uczniowie dodają do gry Pop the Balloons, aby porównać obiekty `Balloon` i określić, czy pozostały prawidłowe ruchy.
+            lesson-10:
+              description_teacher: Uczniowie badają problemy dotyczące wielu warunków i piszą zagnieżdżone instrukcje „jeśli”, aby utworzyć rozwiązania tych problemów. Piszą wyrażenia zawierające operatory logiczne w instrukcjach warunkowych i identyfikują wpływ operatorów logicznych na wynik wyrażenia. Zagnieżdżone instrukcje „jeśli” i operatory logiczne są następnie implementowane w grze Pop the Balloons, aby sprawdzić, ile ruchów pozostało i obliczyć wynik.
             lesson-12:
               description_student: Teraz, gdy masz już plan, dzisiejszym celem jest napisanie kodu. Rozwój silnika gry rozpoczynasz od przetłumaczenia pseudokodu na język Java. Przeglądasz kod i zastanawiasz się nad postępem, aby przygotować się do ostatecznego opracowania silnika gry.
               description_teacher: Na poprzedniej lekcji uczniowie zaplanowali silnik gry dla prostej gry i napisali pseudokod dla jej podstawowych funkcji. Rozpoczynają tworzenie silnika gry od przetłumaczenia pseudokodu na język Java. Uczestniczą w przeglądzie kodu i zastanawiają się nad swoimi postępami, aby przygotować się do ostatecznego opracowania silnika gry.
@@ -19106,7 +19113,7 @@ pl:
             lesson4:
               description_student: "**Pytanie dnia:** Jak komputery uczą się klasyfikować dane?"
             lesson5:
-              name: Lekcja 6
+              name: Wprowadzenie do AI Lab
             lesson9:
               name: KNN bez komputera
               description_student: Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji.
@@ -19168,7 +19175,7 @@ pl:
             Classification Models:
               description_student: "**Pytanie dnia:** Jak komputery uczą się klasyfikować dane?"
             Introduction to AI Lab:
-              name: Lekcja 6
+              name: Wprowadzenie do AI Lab
             Similarity Models:
               name: KNN bez komputera
               description_student: Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji.
@@ -19611,6 +19618,7 @@ pl:
               name: Test
           name: ai-lab
           title: AI Lab
+          student_description: Skorzystaj z tych poziomów, aby poznać AI Lab i wykorzystać w innych lekcjach lub zajęciach. Aby korzystać z tych narzędzi, musisz utworzyć konto Code.org i zalogować się.
         poster-experiment:
           name: plakat-eksperyment
           title: Tablica historii (V1 - Eksperyment)
@@ -20379,13 +20387,191 @@ pl:
             lessonGroup-3:
               display_name: Pokaż, co wiesz
           name: csa5-pilot-facilitator
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: Nastroje i postawy
+          name: poetry-hoc
+          title: Poezja Godziny Kodowania
+          description_short: Aktywność Godziny Kodowania - V2
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: Szablon
             lesson-2:
               name: Innowacje w informatyce
+            lesson-3:
+              name: Wyjścia na płytce (brzęczyk LED)
+              description_teacher: |-
+                -   Użyj brzęczyka na płytce z układem
+                -   Użyj diody na płytce z układem
+                -   ŻADNYCH zmiennych; ŻADNYCH instrukcji 'jeśli'; ŻADNYCH elementów ekranu
+            lesson-4:
+              name: Wyjścia App Lab (setProperty)
+              description_teacher: |-
+                -   Użyj setProperty() do zmiany elementów na ekranie
+                    -   Skoncentruj się na kolorach i pozycjach x/y za pomocą liczb losowych
+                -   Użyj setText(), aby zmienić tekst na ekranie
+                -   ŻADNEGO placu zabaw; ŻĄDNYCH INSTRUKCJI 'jeśli'; ŻADNYCH zmiennych
+            lesson-5:
+              name: Czujniki
+            lesson-6:
+              name: Wejścia płytki (Button Toggle)
+              description_teacher: "-   użyj przycisków do zmiany elementów na ekranie\n-   użyj przełącznika, aby zmienić elementy na ekranie\n-   użyj przycisków i przełącz z brzęczykiem na płytce układu\n-   ŻĄDNYCH INSTRUKCJI 'jeśli'; ŻADNYCH zmiennych; OK wyjścia na ekranie; "
+            lesson-7:
+              name: Zmienne + instrukcje 'jeśli'
+              description_teacher: |-
+                -   użyj zmiennych + licznika, aby zaktualizować elementy na ekranie
+                -   przykład: licz, ile razy przycisk został naciśnięty
+                -   użyj instrukcji 'jeśli', aby sprawdzić pozycję przełącznika
+                -   użyj zmiennych do sprawdzenia wartości zmiennej
+                -   na przykład: odtwórz brzęczyk po określonej liczbie kliknięć
+            lesson-8:
+              name: 'Mini-Proj: Wyścig Emoji'
             lesson-9:
               name: Kolorowe LED
+              description_teacher: |-
+                -   użyj zdarzeń na ekranie, aby zmienić kolor diod LED na płytce układu
+                -   użyj funkcji LED on(), off(), pulse(), toggle() i blink()
+                -   zmień intensywność kolorowych diod LED
+                -   NIE UWZGLĘDNIAJ: tablice.
+                -   Potrzebna jest tylko pojęcia liczenia od 0 i mapowania pozycji (tj.: [0] odpowiada określonej diodzie LED na CP; [5] odpowiada innej diodzie LED na CP)
+            lesson-10:
+              name: Wejścia App Lab (getProperty, getText) (Dropdowns Inputs Sliders?)
+              description_teacher: |-
+                Tylko w App Lab — bez płytki układu (jeszcze).
+
+                Wszystko o getProperty, zmiennych i instrukcjach 'jeśli'
+
+                -   pobierz właściwość z listy rozwijanej. Jeśli (X) -> wykonaj (Y)
+                -   pobierz właściwość z suwaka. Użyj do aktualizacji pozycji czegoś na ekranie?
+                -   pobierz tekst z wejścia. Użyj, aby zaktualizować etykietę
+
+                **Skoncentruj się na nowym poleceniu getProperty() i na tym, jak go używać z nowymi opcjami projektowymi. Zachowaj wejścia/wyjścia płytki na jutro!**
+
+                W jutrzejszej lekcji włącz grę motocyklową, w której możesz nacisnąć CP i coś zmienić na ekranie.
+            lesson-11:
+              name: Łączenie wejść
+              description_teacher: |-
+                -   Użyj rozwijanych menu i suwaków, aby zaktualizować aspekty placu zabaw z układami
+                -   Mając CP wejścia uaktualnij elementy ekranu za pomocą getProperty() i setProperty()
+                -   Wejście na ekran \<> Wyjście na tablicę jest przygotowaniem do projektu Maker na końcu Ch 1
+
+                **UWAGA DO SIEBIE: Te poziomy powinny używać kolorowych diod LED zamiast zwykłych diod LED.** W oryginalnym programie mieliśmy dostęp tylko do diody LED i brzęczyka. Ale teraz mamy kolorowe diody LED, więc użyjmy ich tutaj
+            lesson-12:
+              name: 'Projekt: Maker'
             lesson-13:
               name: Akcelerometr
+            lesson-14:
+              name: Muzyka + tablice
+            lesson-15:
+              name: 'Mini projekt: Czujniki'
+              description_teacher: Oparte na projektach czujników Dana - zdmuchnij świece, zapal theramin, zmierz objętość
+            lesson-17:
+              name: Fizyczne wyjścia (LEDy)
+            lesson-16:
+              name: Fizyczne wejścia
+            lesson-18:
+              name: Prototypowanie
             lesson-19:
               name: Projekt
+            lesson-20:
+              name: Funkcje + Funkcje z parametrami
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Szablony
+            lessonGroup-2:
+              display_name: Rozdział 1
+            lessonGroup-4:
+              display_name: Rozdział 2
+          name: csdu6-playground
+          title: CSD Jednostka 6 Plac zabaw
+          description_short: CSD Jednostka 6 Plac zabaw. Zobacz Dana Schneidera w przypadku pytań
+          student_description: CSD Jednostka 6 Plac zabaw. Zobacz Dana Schneidera w przypadku pytań
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Witaj świecie
+          name: hello-world-food
+          title: Witaj świecie
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widżety
+            lesson-3:
+              name: Narzędzia
+            lesson-4:
+              name: Badanie obiektów całkowitych i podwójnych
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lekcje
+            lessonGroup-3:
+              display_name: Projekt
+            lessonGroup-4:
+              display_name: Prezentacje i zasoby
+          name: csa-u7-dev
+          title: CSA Jednostka 7 Rozwój
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Witaj świecie
+          name: hello-world-animals
+          title: Witaj świecie
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Witaj świecie
+          name: hello-world-emoji
+          title: Witaj świecie
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Witaj świecie
+          name: hello-world-retro
+          title: Witaj świecie
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Witaj świecie
+          name: hello-world-batman
+          title: Witaj świecie
+        csa4-exemplars:
+          lessons:
+            lesson-3:
+              name: Traktowanie danych jako innego typu
+            lesson-14:
+              name: Dzień FRQ
+            lesson-15:
+              name: Dzień sprawdzianu
+          lesson_groups:
+            lesson group:
+              display_name: Treści
+            content:
+              display_name: Treści
+            show_what_you_know:
+              display_name: Pokaż, co wiesz
+            lesson_group:
+              display_name: Treści
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+          name: csa4-exemplars
+          title: Jednostka 4 - Rozszerzanie logiki programu [Exemplars]
+        ai-ethics:
+          lessons:
+            lesson-1:
+              name: Godzina kodowania - Etyka AI
+          name: ai-ethics
+          title: Godzina kodowania - Etyka AI
+          description_audience: klasy 6-12
+          description_short: W małych grupach uczniowie prowadzą badania, korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez siebie obszarze sztucznej inteligencji (AI).
+          description: W małych grupach uczniowie prowadzą badania, korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez siebie obszarze sztucznej inteligencji (AI). Następnie każda grupa opracowuje co najmniej jedną zasadę zorientowaną na rozwiązanie, która odnosi się do wybranego obszaru. Zasady te są następnie łączone w ogólnoklasowy zasób „Nasz kodeks etyki sztucznej inteligencji” (np. prezentacja slajdów, dokument lub strona internetowa) dla twórców sztucznej inteligencji i ustawodawców na całym świecie.
+          student_description: Przeprowadź badania korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez Ciebie obszarze sztucznej inteligencji (AI).
+        dance-unplugged:
+          name: dance-unplugged
+          title: Godzina Kodowania - Potańcówka - Bez komputera
+          description_audience: klasy 0-12
+          description_short: Uczniowie w każdym wieku otrzymują wstępne doświadczenia z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku i uczą się myśleć o kontrolowaniu działań za pomocą zdarzeń.
+          description: Uczniowie dowiedzą się, że zdarzenia są przydatnym sposobem sterowania akcjami, a nawet mogą być stosowane do spowodowania, że wiele wydarzy się synchronicznie. W programowaniu zdarzenia są wykorzystywane, by reagować na działania użytkownika (np. na naciśnięcie przycisku lub kliknięcie myszką). Zdarzenia mogą uczynić Twój program bardziej interesującym i interaktywnym.
+          student_description: Naucz się myśleć o kontrolowaniu działań za pomocą zdarzeń. Zdarzenia są szeroko stosowane w programowaniu i powinny być łatwo rozpoznawalne po tej lekcji.

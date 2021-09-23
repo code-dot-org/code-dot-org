@@ -2,9 +2,11 @@
   "fr-FR": {
     "data": {
       "lessons": {
+        "coursef-2021/lesson-6": {
+          "overview": "Dans ce cours de **mise en contexte**, les élèves discuteront du rôle des ordinateurs et de la technologie dans leur vie, en se concentrant sur la façon dont les applications et les outils donnent aux utilisateurs des choix sur la façon de les utiliser. Les élèves exploreront également des applications similaires à celles qu'ils créeront eux-mêmes plus tard. "
+        },
         "coursef-2021/Virtual Pet": {
           "overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
-          "preparation": "",
           "student_overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !"
         },
         "coursef-2021/lesson-2": {
@@ -12,22 +14,18 @@
         },
         "coursef-2021/Loops with the Artist": {
           "overview": "Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.",
-          "preparation": "",
           "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
         },
         "coursef-2021/Variables that Change in Artist": {
           "overview": "Dans cette leçon, les élèves exploreront la création de dessins répétitifs à l'aide de variables dans l'environnement de L'Artiste. Les élèves apprendront comment les variables peuvent être utilisées pour rendre le code plus facile à écrire et à lire. Après des énigmes guidées, les élèves termineront dans un niveau de jeu libre pour montrer ce qu'ils ont appris et créer leurs propres conceptions.",
-          "preparation": "",
           "student_overview": "Dans cette leçon, tu vas faire des dessins en utilisant des variables qui changent au fur et à mesure que le programme s'exécute."
         },
         "coursef-2021/Nested Loops in the Maze": {
           "overview": "Dans cette activité en ligne, les étudiants auront l'occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l'Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu'elle soit à l'intérieur d'une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l'une ou l'autre boucle affecteront leur programme quand ils cliqueront sur \"Exécuter\".",
-          "preparation": "",
           "student_overview": "Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu places une boucle dans une autre boucle."
         },
         "coursef-2021/Variables that Change in Bee": {
           "overview": "Cette leçon aidera à illustrer comment les variables peuvent rendre les programmes plus puissants en permettant aux valeurs de changer pendant que le code est en cours d'exécution.",
-          "preparation": "",
           "student_overview": "Cette abeille aime les variables !"
         },
         "coursef-2021/For Loop Fun": {
@@ -35,12 +33,10 @@
           "student_overview": "Vous allez avoir beaucoup de plaisir à découvrir les boucles `for` !"
         },
         "coursef-2021/For Loops in Bee": {
-          "preparation": "",
           "student_overview": "Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !"
         },
         "coursef-2021/For Loops in Artist": {
           "overview": "Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles `for` pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.",
-          "preparation": "",
           "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle."
         },
         "coursef-2021/Simulating Experiments": {
@@ -48,7 +44,6 @@
           "student_overview": "Exécute des simulations sur l'ordinateur et expérimente en changeant les variables."
         },
         "coursef-2021/lesson-5": {
-          "preparation": "",
           "purpose": "Dans la leçon précédente, les élèves ont collecté et interprété les données d'une simulation simple. Dans cette leçon, les ils suivront des instructions pour coder leur propre modèle de simulation. Les connaissances préalables des élèves sur les épidémies de virus dans le monde réel seront appliquées à un scénario fictif. "
         },
         "coursef-2021/Internet": {
@@ -190,7 +185,6 @@
           "student_overview": "Aide BB-8 à travers des labyrinthes en utilisant des boucles ! "
         },
         "coursec-2021/Loops in Harvester": {
-          "preparation": "",
           "student_overview": "Utilisons des boucles pour aider la Moissonneuse à ramasser des légumes !"
         },
         "coursec-2021/Sticker Art with Loops": {
@@ -203,12 +197,10 @@
         },
         "coursec-2021/Build a Flappy Game": {
           "overview": "Dans cette étape spéciale, les élèves peuvent créer leur propre jeu d'Oiseaux Flappy en utilisant des gestionnaires d'événements pour détecter les clics de souris et les collisions d'objets. À la fin du niveau, les élèves seront capables de personnaliser leur jeu en changeant les visuels ou les règles.",
-          "preparation": "",
           "student_overview": "Construis ton propre jeu d'Oiseaux Flappy, comme te le souhaites, puis partage-le avec tes amis !"
         },
         "coursec-2021/Events in Play Lab": {
           "overview": "Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !",
-          "preparation": "",
           "purpose": "Ici, les étudiants développeront leur compréhension des événements en utilisant le Labo du Jeu. Les élèves utiliseront les événements pour faire bouger les personnages sur l'écran, créer des bruits et modifier les arrière-plans en fonction des entrées de l'utilisateur. À la fin de la séquence de l'énigme, les étudiants auront l'occasion de partager leurs projets.  ",
           "student_overview": "Il est temps de faire preuve de créativité et de créer un jeu dans le Labo du Jeu !"
         },
@@ -234,7 +226,6 @@
         },
         "coursed-2021/Introduction to Online Puzzles": {
           "overview": "Dans cet ensemble d'énigmes, les élèves commenceront par une introduction à (ou une révision de, en fonction de l'expérience de votre classe) l'espace de travail en ligne de Code.org . Des vidéos souligneront les fonctionnalités de base de l'espace de travail, y compris les boutons `Exécuter`, `Réinitialiser` et `Étape`. Seront également discutés, dans ces vidéos : glisser des blocs Blockly, supprimer des blocs Blockly et connecter des blocs Blockly. Ensuite, les élèves pratiqueront leurs compétences en _séquençage_ et débogage, dans le labyrinthe. De là, les élèves découvriront de nouveaux types d'énigmes comme le Collecteur, l'Artiste et la Moissonneuse, quand ils apprendront les bases de _boucles_.",
-          "preparation": "",
           "purpose": "Nous reconnaissons que chaque classe possède un spectre de compréhension pour chaque sujet. Certains élèves de votre classe peuvent être des informaticiens en herbe, tandis que d'autres n'ont que peu ou prou d'expérience. Afin de créer un terrain de jeu (et d'apprentissage) égalitaire, nous avons développé cette « Étape Montée en Puissance » pour le Cours D. Cela peut être utilisé comme une introduction ou une révision de la façon d'utiliser Code.org et des concepts informatiques de base. Cette étape couvre tous les prérequis nécessaires pour commencer le Cours D.",
           "student_overview": "Cette leçon sera un entraînement pour les compétences dont tu auras besoin pour ce cours."
         },
@@ -243,7 +234,6 @@
         },
         "coursed-2021/Debugging in Collector": {
           "overview": "Dans cette activité en ligne, les étudiants pratiqueront le débogage dans l'environnement \"collecteur\". Les élèves pratiqueront la lecture et l'édition du code, afin de résoudre des énigmes avec des algorithmes simples, des boucles et des boucles imbriquées.",
-          "preparation": "",
           "student_overview": "As-tu déjà rencontré des problèmes lors du codage ? Dans cette leçon, tu apprendras les secrets du débogage. Le débogage est le processus de recherche et de résolution des problèmes dans ton code."
         },
         "coursed-2021/Events in Bounce": {
@@ -266,12 +256,10 @@
         },
         "coursed-2021/Loops in Artist": {
           "overview": "Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est également un exercice de débogage, pour une pratique supplémentaire de résolution de problèmes.",
-          "preparation": "",
           "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec l'Artiste !"
         },
         "coursed-2021/Nested Loops in Bee": {
           "overview": "Dans cette activité en ligne, les étudiants auront l'occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l'Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu'elle soit à l'intérieur d'une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l'une ou l'autre boucle affecteront leur programme quand ils cliqueront sur \"Exécuter\".",
-          "preparation": "",
           "student_overview": "Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu crées une boucle imbriquée."
         },
         "coursed-2021/Conditionals with Cards": {
@@ -283,16 +271,13 @@
         },
         "coursed-2021/Conditionals in Bee": {
           "overview": "Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.",
-          "preparation": "",
           "student_overview": "Maintenant que tu comprends les conditions, il est temps de programmer l'Abeille pour les utiliser lors de la collecte de miel et de nectar. "
         },
         "coursed-2021/While Loops in Farmer": {
-          "preparation": "",
           "student_overview": "Les boucles sont si utiles dans le codage. Cette leçon t'apprendra un nouveau type de boucle : les boucles tant que !"
         },
         "coursed-2021/Until Loops in Maze": {
           "overview": "Dans cette leçon, les élèves découvriront les boucles `jusqu'à ce que`. Les étudiants construiront des programmes qui feront répéter des actions au personnage principal `jusqu'à ce qu'`'il atteigne le point d'arrêt désiré.",
-          "preparation": "",
           "student_overview": "Tu peux faire des choses incroyables lorsque tu utilises des boucles `jusqu'à ce que` !"
         },
         "coursed-2021/End of Course Project": {
@@ -317,9 +302,6 @@
         "express-2021/Swimming Fish in Sprite Lab": {
           "overview": "Dans cette leçon, les élèves apprendront les deux concepts au cœur de Sprite Lab: les sprites et les comportements. Les Sprites sont des personnages ou des objets à l'écran que les élèves peuvent déplacer, modifier et manipuler. Les comportements sont des actions que les sprites prendront continuellement jusqu'à ce qu'ils soient arrêtés.",
           "student_overview": "Apprends à créer et modifier les lutins."
-        },
-        "express-2021/lesson-3": {
-          "purpose": ""
         },
         "express-2021/Virtual Pet with Sprite Lab": {
           "overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
@@ -451,17 +433,14 @@
         },
         "coursee-2021/Simon Says": {
           "overview": "Dans cette leçon, les élèves joueront à un jeu destiné à les faire réfléchir à la façon dont les commandes doivent être données pour produire le bon résultat. Cela les aidera à transporter, plus facilement, au Labo des Lutins, dans les leçons à venir. ",
-          "preparation": "",
           "student_overview": "Joue à un jeu et réfléchis aux commandes nécessaires pour obtenir le bon résultat."
         },
         "coursee-2021/Learning Sprites with Sprite Lab": {
           "overview": "Dans cette leçon, les élèves apprendront les deux concepts au cœur de Sprite Lab: les sprites et les comportements. Les Sprites sont des personnages ou des objets à l'écran que les élèves peuvent déplacer, modifier et manipuler. Les comportements sont des actions que les sprites prendront continuellement jusqu'à ce qu'ils soient arrêtés.",
-          "preparation": "",
           "student_overview": "Apprends à créer et modifier les lutins."
         },
         "coursee-2021/Alien Dance Party with Sprite Lab": {
           "overview": "Cette leçon présente le Labo des Lutins, une plate-forme où les élèves peuvent créer leurs propres animations et jeux interactifs. Aujourd'hui, en plus des comportements, les étudiants intégreront les entrées de l'utilisateur en tant qu'événements pour créer une « soirée dansante extraterrestre ».  ",
-          "preparation": "",
           "student_overview": "Crée un projet interactif qui peut être partagé avec tes camarades de classe."
         },
         "coursee-2021/Private and Personal Information": {
@@ -475,7 +454,6 @@
         },
         "coursee-2021/Programming and Loops with the Artist": {
           "overview": "Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.",
-          "preparation": "",
           "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
         },
         "coursee-2021/Nested Loops in Artist": {
@@ -493,12 +471,10 @@
         },
         "coursee-2021/Functions in Minecraft": {
           "overview": "Les étudiants commenceront à comprendre comment les fonctions peuvent être utiles dans cette aventure amusante et interactive de Minecraft !",
-          "preparation": "",
           "student_overview": "Peux-tu-vous déterminer comment utiliser des fonctions pour le code le plus efficace ?"
         },
         "coursee-2021/Functions in Artist": {
           "overview": "Les élèves seront initiés à l'utilisation de fonctions avec l'Artiste. Des images magnifiques seront créées et modifiées. Pour les motifs plus compliqués, les élèves apprendront les fonctions d'imbrication en appelant une fonction de l'intérieur d'une autre.",
-          "preparation": "",
           "student_overview": "Fais des dessins complexes plus facilement avec les fonctions !"
         },
         "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
@@ -507,12 +483,10 @@
         },
         "coursee-2021/Conditionals": {
           "overview": "Cette leçon initie les élèves aux boucles `tant que` et aux déclarations `si / sinon`. Les _boucles Tant Que_ sont des boucles qui continuent de répéter des commandes tant qu'une condition est vraie. Les boucles Tant Que sont utilisées lorsque le programmeur ne connaît pas le nombre exact de fois que les commandes doivent être répétées, mais il sait quelle condition doit être vraie pour que la boucle continue de boucler. Les instructions `Si / Sinon` offrent une flexibilité dans la programmation, en exécutant des sections entières de code uniquement si quelque chose est vrai, sinon elle exécute autre chose.",
-          "preparation": "",
           "student_overview": "Tu pourras dire à l'ordinateur ce qu'il faut faire dans certaines conditions, dans cette série amusante et stimulante."
         },
         "coursee-2021/Functions in Harvester": {
           "overview": "Les étudiants se sont entraînés à créer des dessins impressionnants dans l'Artiste et à naviguer dans les labyrinthes dans l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures dans la Moissonneuse. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.",
-          "preparation": "",
           "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !"
         },
         "coursee-2021/lesson-1": {

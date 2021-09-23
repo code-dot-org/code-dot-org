@@ -1314,6 +1314,8 @@ hu:
           lesson_groups:
             content:
               display_name: Tartalom
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Digital Citizenship:
               name: Digitális állampolgárság
@@ -1331,6 +1333,8 @@ hu:
           lesson_groups:
             content:
               display_name: Tartalom
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Digital Citizenship:
               name: Digitális állampolgárság
@@ -1403,6 +1407,8 @@ hu:
               name: Összegzés
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
             content:
               display_name: Tartalom
           lessons:
@@ -1571,6 +1577,9 @@ hu:
             Nested Loops:
               name: Egymásba ágyazott ciklusok
         coursee-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             'Algorithms: Tangrams':
               name: 'Algoritmusok: tangram'
@@ -1587,6 +1596,9 @@ hu:
             Nested Loops:
               name: Egymásba ágyazott ciklusok
         coursef-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             'Algorithms: Tangrams':
               name: 'Algoritmusok: tangram'
@@ -1668,6 +1680,8 @@ hu:
           lesson_groups:
             content:
               display_name: Tartalom
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Introduction:
               name: Bevezető
@@ -1719,6 +1733,9 @@ hu:
             Unit 3 Chapter 1 Assessment:
               name: 3.  lecke 1. fejezet végi értékelés
         e-f-ramp:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Building a Foundation:
               name: Az alap megépítése
@@ -1756,6 +1773,8 @@ hu:
           lesson_groups:
             content:
               display_name: Tartalom
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Introduction:
               name: Bevezető
@@ -1764,6 +1783,9 @@ hu:
             Nested Loops:
               name: Egymásba ágyazott ciklusok
         new-e:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Building a Foundation:
               name: Az alap megépítése
@@ -1776,6 +1798,9 @@ hu:
             Crowdsourcing:
               name: Csoportos megoldás
         new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Building a Foundation:
               name: Az alap megépítése
@@ -1825,6 +1850,9 @@ hu:
             cspSurvey:
               display_name: Kérdőív
         course-e-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Building a Foundation:
               name: Az alap megépítése
@@ -1841,6 +1869,9 @@ hu:
             Crowdsourcing:
               name: Csoportos megoldás
         course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Building a Foundation:
               name: Az alap megépítése
@@ -1997,6 +2028,9 @@ hu:
             Functions with Parameters:
               name: Paraméteres függvények
         coursee-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             'Programming: My Robotic Friends':
               name: A robot barátaim
@@ -2021,6 +2055,9 @@ hu:
             Copyright and Creativity:
               name: Digitális megosztás
         coursef-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             'Programming: My Robotic Friends':
               name: A robot barátaim
@@ -2315,6 +2352,8 @@ hu:
               display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Building a Foundation:
               name: Az alap megépítése
@@ -2328,6 +2367,8 @@ hu:
               name: A Művész
             Sprite Lab Behaviors:
               name: Sprite labor viselkedések
+            End of Course Project:
+              name: Kurzus Projekt vége
             Internet:
               name: Az internet
             Crowdsourcing:
@@ -2350,6 +2391,8 @@ hu:
               display_name: Bináris
             csf_digcit:
               display_name: Digitális állampolgárság
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Grafikus programozás
@@ -2374,6 +2417,8 @@ hu:
               display_name: Egymásba ágyazott ciklusok
             csf_functions:
               display_name: funkciók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Building a Foundation:
               name: Az alap megépítése
@@ -2389,6 +2434,8 @@ hu:
               name: Internet
             Crowdsourcing:
               name: Csoportos megoldás
+            End of Course Project:
+              name: Kurzus Projekt vége
             Digital Sharing:
               name: Digitális megosztás
             Simon Says:
@@ -2430,6 +2477,8 @@ hu:
               name: Internet
             Crowdsourcing:
               name: Csoportos megoldás
+            Build A Project:
+              name: Kurzus Projekt vége
             Dance Party:
               name: Táncos buli
         csd1-2019:
@@ -2475,6 +2524,8 @@ hu:
               display_name: Események
             csf_data:
               display_name: Adat
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Hétköznapi algoritmusok: Papírrepülők'
@@ -2486,6 +2537,8 @@ hu:
               name: A nagy esemény
             Binary Bracelets:
               name: Bináris karkötők
+            'End of Course Project: Create a Play Lab Game':
+              name: Kurzus Projekt vége
             Powerful Passwords:
               name: Erős jelszavak
             Picturing Data:
@@ -3003,11 +3056,15 @@ hu:
               display_name: Egymásba ágyazott ciklusok
             csf_functions:
               display_name: funkciók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Crowdsourcing:
               name: Csoportos megoldás
             Conditionals with Cards:
               name: Feltételek kártyákkal
+            End of Course Project:
+              name: Kurzus Projekt vége
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -3171,6 +3228,8 @@ hu:
               display_name: Események
             csf_data:
               display_name: Adat
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Powerful Passwords:
               name: Erős jelszavak
@@ -3184,6 +3243,8 @@ hu:
               name: A nagy esemény
             Picturing Data:
               name: Az adatok leképezése
+            'End of Course Project: Create a Play Lab Game':
+              name: Kurzus Projekt vége
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -3196,6 +3257,8 @@ hu:
               display_name: Bináris
             csf_digcit:
               display_name: Digitális állampolgárság
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Grafikus programozás
@@ -3210,6 +3273,8 @@ hu:
               name: Digitális állampolgárság
             Dance Party:
               name: Táncos buli
+            End of Course Project:
+              name: Kurzus Projekt vége
         coursee-2020:
           lesson_groups:
             csf_sprites:
@@ -3220,6 +3285,8 @@ hu:
               display_name: Egymásba ágyazott ciklusok
             csf_functions:
               display_name: funkciók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Simon Says:
               name: Simon mondja
@@ -3227,6 +3294,8 @@ hu:
               name: Magán és személyes információk
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
+            End of Course Project:
+              name: Kurzus Projekt vége
             Digital Sharing:
               name: Digitális megosztás
         coursef-2020:
@@ -3241,6 +3310,8 @@ hu:
               display_name: Számláló ciklusok
             csf_sprites:
               display_name: manók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Envelope Variables:
               name: Boríték változók
@@ -3252,6 +3323,8 @@ hu:
               name: Csoportos megoldás
             Digital Sharing:
               name: Digitális megosztás
+            End of Course Project:
+              name: Kurzus Projekt vége
         express-2020:
           lesson_groups:
             csf_loops:
@@ -3266,11 +3339,15 @@ hu:
               display_name: Számláló ciklusok
             csf_sprites:
               display_name: manók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
           lessons:
             Dance Party:
               name: Táncos buli
             Loops with Rey and BB-8:
               name: Ciklusok Reyjel és BB-8-tel
+            End of Course Project:
+              name: Kurzus Projekt vége
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -3434,6 +3511,9 @@ hu:
             csf:
               name: A számítógép-tudomány alapjai
         2021drafting:
+          lessons:
+            End of Course Project:
+              name: Kurzus Projekt vége
           lesson_groups:
             introduction:
               display_name: Bevezető
@@ -3560,6 +3640,8 @@ hu:
               name: Programozás Rey és BB-8 segítségével
               description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
               description_teacher: Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.
+            lesson-1:
+              name: Kurzus Projekt vége
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
@@ -3567,6 +3649,8 @@ hu:
               display_name: hurkok
             csf_events:
               display_name: Események
+            lessonGroup-5:
+              display_name: Kurzus Projekt vége
         courseb-2021:
           lessons:
             Move It, Move It:
@@ -3577,6 +3661,8 @@ hu:
             The Right App:
               key: A megfelelő alkalmazás
               name: A megfelelő alkalmazás
+            lesson-1:
+              name: Kurzus Projekt vége
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
@@ -3584,6 +3670,8 @@ hu:
               display_name: hurkok
             csf_events:
               display_name: Események
+            lessonGroup-6:
+              display_name: Kurzus Projekt vége
         coursec-2021:
           lessons:
             Binary Bracelets:
@@ -3599,6 +3687,8 @@ hu:
             Picturing Data:
               key: Az adatok leképezése
               name: Az adatok leképezése
+            'End of Course Project: Create a Play Lab Game':
+              name: Kurzus Projekt vége
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
@@ -3610,6 +3700,8 @@ hu:
               display_name: Események
             csf_data:
               display_name: Adat
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
         coursed-2021:
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -3628,6 +3720,9 @@ hu:
               name: Bináris képek
             Artist Binary:
               key: 'Művész: a kettes számrendszer'
+            End of Course Project:
+              key: Kurzus Projekt vége
+              name: Kurzus Projekt vége
           lesson_groups:
             csf_events:
               display_name: Események
@@ -3639,6 +3734,8 @@ hu:
               display_name: Bináris
             csf_digcit:
               display_name: Digitális állampolgárság
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
             lessonGroup-6:
               display_name: Digitális állampolgárság
         coursee-2021:
@@ -3655,6 +3752,9 @@ hu:
               name: Digitális megosztás
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
+            End of Course Project:
+              key: Kurzus Projekt vége
+              name: Kurzus Projekt vége
           lesson_groups:
             ramp_up:
               display_name: Egymásba ágyazott ciklusok
@@ -3666,6 +3766,8 @@ hu:
               display_name: Feltételek
             csf_functions:
               display_name: funkciók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
         coursef-2021:
           lessons:
             Envelope Variables:
@@ -3677,6 +3779,9 @@ hu:
             For Loop Fun:
               key: Szórakozás a For ciklussal
               name: Szórakozás a For ciklussal
+            End of Course Project:
+              key: Kurzus Projekt vége
+              name: Kurzus Projekt vége
           lesson_groups:
             ramp_up:
               display_name: manók
@@ -3686,6 +3791,8 @@ hu:
               display_name: Számláló ciklusok
             csf_for_loops:
               display_name: Számláló ciklusok
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
             lessonGroup-8:
               display_name: változók
             lessonGroup-9:
@@ -3701,6 +3808,9 @@ hu:
               key: Ciklusok Reyjel és BB-8-tel
               name: Ciklusok Reyjel és BB-8-tel
               description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! '
+            End of Course Project:
+              key: Kurzus Projekt vége
+              name: Kurzus Projekt vége
             lesson-1:
               name: Táncos buli
           lesson_groups:
@@ -3716,6 +3826,8 @@ hu:
               display_name: Számláló ciklusok
             csf_sprites:
               display_name: manók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
             lessonGroup-9:
               display_name: Események
         pre-express-2021:
@@ -3878,6 +3990,8 @@ hu:
           lessons:
             lesson-12:
               name: Eszközök
+            lesson-17:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Leckék
@@ -3899,5 +4013,22 @@ hu:
               display_name: Tartalom
         csa5-pilot-facilitator:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: Eszközök
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Leckék
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Tartalom
+            content:
+              display_name: Tartalom
+            lesson_group:
+              display_name: Tartalom
             lessonGroup-2:
               display_name: Tartalom

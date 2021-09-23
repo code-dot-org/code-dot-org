@@ -151,6 +151,10 @@ my:
         options:
           EFFECT:
             '"rain"': မိုးရွာသည်
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": ခုန်ပါ
       gamelab_randColor:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:

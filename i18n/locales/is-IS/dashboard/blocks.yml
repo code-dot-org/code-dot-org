@@ -1136,6 +1136,13 @@ is:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       gamelab_makeNumSprites:
         text: búa til {NUM} nýja {ANIMATION_NAME} kvika
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': hægri
+            '90': niður
+            '180': vinstri
+            '270': upp
       gamelab_mirrorSprite:
         text: "{SPRITE} snýr {DIRECTION}"
         options:
@@ -1171,6 +1178,7 @@ is:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": kremja
+            "'sound://category_digital/jump_7.mp3'": hoppa
       gamelab_pointInDirection:
         text: beina {SPRITE} {DIRECTION}
         options:
@@ -1647,6 +1655,8 @@ is:
         text: x hnit {SPRITE}
       Mikelab_yLocationOf:
         text: y hnit {SPRITE}
+      PoemBot_makeNumSprites:
+        text: búa til {NUM} nýja {ANIMATION_NAME} kvika
       PoemBot_playSound:
         text: spilaHljóð {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1660,6 +1670,8 @@ is:
             '"ripples"': Gárur
           PALETTE:
             '"rainbow"': Regnbogi
+      PoemBot_setBackgroundImageAs:
+        text: stilla bakgrunn á {IMG}
       PoemBot_setForegroundEffect:
         text: stilla á forgrunnshrifin {EFFECT}
         options:
@@ -1669,6 +1681,10 @@ is:
             '"hearts"': Litrík hjörtu
             '"confetti"': Skraut
             '"starburst"': Stjörnublossi
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      PoemBot_whenPromptAnswered:
+        text: þegar {VAR} er svarað
       RyanLab_moveForward:
         text: færa áfram
       RyanLab_turnLeft:

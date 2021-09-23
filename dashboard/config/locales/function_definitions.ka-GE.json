@@ -451,7 +451,7 @@
           "draw an octagon": {
             "name": "რვაკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -554,12 +554,12 @@
         "InspirationalArtwork": {
           "n-sided shape": {
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a loop": {
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw spiral circle": {
@@ -571,7 +571,7 @@
         "InspirationalArtwork_2018": {
           "draw a loop": {
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw spiral circle": {
@@ -727,7 +727,7 @@
           "draw a hexagon": {
             "name": "ექვსკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -735,13 +735,13 @@
           "draw a polygon": {
             "name": "მრავალკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "do something": {
             "name": "გააკეთეთ რამე",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -749,7 +749,7 @@
           "draw a polygon": {
             "name": "მრავალკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -757,7 +757,7 @@
           "draw a polygon": {
             "name": "მრავალკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -765,14 +765,14 @@
           "draw a polygon": {
             "name": "მრავალკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
         "NEW Course 4 Artist Params 14": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -781,7 +781,7 @@
             "name": "ვარსკვლავის დახატვა",
             "parameters": {
               "points": "ქულები",
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a circle": {
@@ -790,32 +790,32 @@
           "draw a pinwheel": {
             "name": "ბზრიალას დახატვა",
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "repeat": "გაიმეორეთ"
             }
           },
           "draw a triangle": {
             "name": "სამკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a shape": {
             "name": "ფორმის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a house": {
             "name": "სახლის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -836,7 +836,7 @@
         "NEW Course 4 Artist Params 4": {
           "draw a triangle with length": {
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -844,7 +844,7 @@
           "draw a pentagon": {
             "name": "ხუთკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -852,25 +852,25 @@
           "draw a triangle": {
             "name": "სამკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a hexagon": {
             "name": "ექვსკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a sqaure": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -878,14 +878,14 @@
           "draw a triangle": {
             "name": "სამკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
         "NEW Course 4 Artist Params 8": {
           "draw a triangle with length": {
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -893,7 +893,7 @@
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "do something": {
@@ -904,7 +904,7 @@
           "draw a polygon": {
             "name": "მრავალკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -1139,7 +1139,7 @@
           "pick row": {
             "name": "მწკრივის არჩევა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -1147,7 +1147,7 @@
           "pick row": {
             "name": "მწკრივის არჩევა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -2589,7 +2589,7 @@
           },
           "black outline": {
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -2597,7 +2597,7 @@
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "checker": {
@@ -2616,7 +2616,7 @@
           },
           "black outline": {
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -2624,7 +2624,7 @@
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -2632,7 +2632,7 @@
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a square2": {
@@ -2649,7 +2649,7 @@
           },
           "black outline": {
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -2657,7 +2657,7 @@
           "draw a polygon": {
             "name": "მრავალკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -2665,21 +2665,21 @@
           "draw a polygon": {
             "name": "მრავალკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
         "courseF_artist_fwp6": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
         "courseF_artist_fwp7": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "min": "მინ"
             }
           }
@@ -2687,7 +2687,7 @@
         "courseF_artist_fwp8": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "min": "მინ"
             }
           }
@@ -2697,7 +2697,7 @@
             "name": "ვარსკვლავის დახატვა",
             "parameters": {
               "points": "ქულები",
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a circle": {
@@ -2706,37 +2706,37 @@
           "draw a pinwheel": {
             "name": "ბზრიალას დახატვა",
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "repeat": "გაიმეორეთ"
             }
           },
           "draw a triangle": {
             "name": "სამკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a shape": {
             "name": "ფორმის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a house": {
             "name": "სახლის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a spiral edge": {
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "min": "მინ"
             }
           }
@@ -2762,7 +2762,7 @@
           "draw an octagon": {
             "name": "რვაკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -2847,7 +2847,7 @@
         "courseF_bee_fwp4": {
           "rowOfNectar": {
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -2890,7 +2890,7 @@
           "pick row": {
             "name": "მწკრივის არჩევა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -2898,7 +2898,7 @@
           "pick row": {
             "name": "მწკრივის არჩევა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -2977,7 +2977,7 @@
             "name": "ვარსკვლავის დახატვა",
             "parameters": {
               "points": "ქულები",
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a circle": {
@@ -2986,32 +2986,32 @@
           "draw a pinwheel": {
             "name": "ბზრიალას დახატვა",
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "repeat": "გაიმეორეთ"
             }
           },
           "draw a triangle": {
             "name": "სამკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a shape": {
             "name": "ფორმის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a house": {
             "name": "სახლის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -3025,7 +3025,7 @@
             "name": "ვარსკვლავის დახატვა",
             "parameters": {
               "points": "ქულები",
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a circle": {
@@ -3034,32 +3034,32 @@
           "draw a pinwheel": {
             "name": "ბზრიალას დახატვა",
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "repeat": "გაიმეორეთ"
             }
           },
           "draw a triangle": {
             "name": "სამკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a shape": {
             "name": "ფორმის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a house": {
             "name": "სახლის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -3068,7 +3068,7 @@
             "name": "ვარსკვლავის დახატვა",
             "parameters": {
               "points": "ქულები",
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a circle": {
@@ -3077,32 +3077,32 @@
           "draw a pinwheel": {
             "name": "ბზრიალას დახატვა",
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "repeat": "გაიმეორეთ"
             }
           },
           "draw a triangle": {
             "name": "სამკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a shape": {
             "name": "ფორმის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a house": {
             "name": "სახლის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -3111,7 +3111,7 @@
             "name": "ვარსკვლავის დახატვა",
             "parameters": {
               "points": "ქულები",
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a circle": {
@@ -3120,32 +3120,32 @@
           "draw a pinwheel": {
             "name": "ბზრიალას დახატვა",
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "repeat": "გაიმეორეთ"
             }
           },
           "draw a triangle": {
             "name": "სამკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a shape": {
             "name": "ფორმის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a house": {
             "name": "სახლის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -3154,7 +3154,7 @@
             "name": "ვარსკვლავის დახატვა",
             "parameters": {
               "points": "ქულები",
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a circle": {
@@ -3163,32 +3163,32 @@
           "draw a pinwheel": {
             "name": "ბზრიალას დახატვა",
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "repeat": "გაიმეორეთ"
             }
           },
           "draw a triangle": {
             "name": "სამკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a shape": {
             "name": "ფორმის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a house": {
             "name": "სახლის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },

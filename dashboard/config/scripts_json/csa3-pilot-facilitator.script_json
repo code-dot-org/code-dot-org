@@ -15,8 +15,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-31 20:37:05 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2021-09-14 21:48:33 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csa3-pilot-facilitator"
     }

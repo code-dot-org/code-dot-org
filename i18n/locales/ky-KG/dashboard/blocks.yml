@@ -291,11 +291,22 @@ ky:
         options:
           EFFECT:
             '"rain"': жаан
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': оңго
+            '90': ылдый
+            '180': солго
+            '270': өйдө
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': оңго
             '"left"': солго
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": секир
       gamelab_randColor:
         text: кокус түс
       gamelab_randomColor:

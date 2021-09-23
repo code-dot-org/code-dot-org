@@ -37,7 +37,6 @@ MONITORING_GROUPS = {
   'cspalooza' => ['CSP'],
   'developers' => ['Developers'],
   'disco-party' => ['CSD'],
-  'ed-programs-tools' => ['PLC Tools'],
   'foundations' => ['Accounts'],
   'international' => ['International'],
   'learning-platform' => ['Learning Platform'],
@@ -66,7 +65,7 @@ GROUP_FILTERS = {
 
 # Slack room -> username of a code.org email
 MONITORING_USERS = {
-  'ed-programs-tools' => ['zendesk-curricplatform'],
+  'ed-programs-tools' => ['zendesk-plctools'],
   'outreach_honky-tonk' => ['zendesk-outreach'],
   'pl-team-only' => ['zendesk-pl']
 }

@@ -39,7 +39,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "c5589504-a584-4599-8ee2-22e32a2374da": {
           "progression_name": "Pratica"
@@ -62,7 +62,7 @@
           "progression_name": "Previsione"
         },
         "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "8afac6a6-bc6b-47a8-ad11-3d42bd53b0e7": {
           "progression_name": "Pratica"
@@ -123,7 +123,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "472a5254-b0e4-4069-a6f4-940ed9fda07a": {
           "progression_name": "Pratica"
@@ -161,10 +161,10 @@
           "name": "Introduzione"
         },
         "ef504f91-6fca-4859-a960-7e792de6223e": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "411a2b66-714e-40fe-9636-a184b62c44bf": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "08a8ba95-17db-446d-9a47-2ed7927d1957": {
           "progression_name": "Pratica"
@@ -179,7 +179,7 @@
           "progression_name": "Previsione"
         },
         "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "d6137926-640f-4180-a257-20c5f32317f5": {
           "progression_name": "Tempo di giocare"
@@ -192,7 +192,7 @@
         },
         "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20": {
           "name": "Cicli annidati nel labirinto",
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6": {
           "progression_name": "Pratica"
@@ -210,7 +210,7 @@
         },
         "aa24a7a8-7cec-408b-b980-89e9c457605a": {
           "name": "Modifica delle variabili con l'ape",
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "94f3b6b8-77fa-42ef-bee6-80a47bdd050e": {
           "progression_name": "Pratica"
@@ -256,7 +256,7 @@
           "progression_name": "Previsione"
         },
         "b500137c-9df8-40c5-8b4d-e4f364f8255e": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "729a9e74-6bd2-4833-8b46-12f83a6a83b7": {
           "progression_name": "Pratica"
@@ -278,7 +278,7 @@
           "progression_name": "Esplorazione"
         },
         "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
           "progression_name": "Tempo di giocare"
@@ -322,10 +322,13 @@
           ]
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
           "progression_name": "Imparare dalle simulazioni"
+        },
+        "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
+          "progression_name": "Mini progetto - Simulatore di pandemia"
         },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "Riflessione"
@@ -447,7 +450,7 @@
           ]
         },
         "b43821ea-fcde-4389-a55f-285b77e61964": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
           "name": "Riflessione"
@@ -461,7 +464,7 @@
           "name": "Programmare con Angry Bird"
         },
         "a60dc5a3-0c97-439c-86a4-628f733b0916": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "02e3f29b-3c7a-4226-8503-1b2cc47a2028": {
           "progression_name": "Pratica"
@@ -492,10 +495,10 @@
           ]
         },
         "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "9f24e731-b41f-4339-877d-314aa5813f01": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "270d2335-43e2-42a0-a4fe-4035d2e071b5": {
           "progression_name": "Pratica"
@@ -524,10 +527,10 @@
           "name": "Cicli con la contadina"
         },
         "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "cb321e7e-953a-4d73-a614-39cb86ef8b15": {
           "progression_name": "Pratica"
@@ -539,10 +542,10 @@
           "name": "Introduzione"
         },
         "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "8c213233-f661-45be-9898-31c343bba987": {
           "progression_name": "Pratica"
@@ -562,10 +565,10 @@
           ]
         },
         "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "a7cf273e-6085-402a-bf47-e5985364e7a2": {
           "progression_name": "Pratica"
@@ -675,7 +678,7 @@
           ]
         },
         "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "name": "Riflessione",
@@ -708,7 +711,7 @@
           ]
         },
         "88c2697f-a9ba-483a-8091-cc2a1b7bf027": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "a7d5f389-5e34-4cbf-91e8-e2d934992246": {
           "name": "Riflessione"
@@ -719,10 +722,10 @@
           ]
         },
         "487f446a-7245-403f-827c-e1e94663c256": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "af0d64b6-9076-490e-96b8-b4d56d3dc5c5": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "05bbe6d1-d2c9-42a7-8489-2d545058f9c5": {
           "progression_name": "Pratica"
@@ -745,7 +748,7 @@
           "name": "Programmare con Rey e BB-8"
         },
         "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "33708a97-a66a-4797-9349-7a1fc9325c26": {
           "progression_name": "Pratica"
@@ -779,10 +782,10 @@
           "name": "Cicli con Scrat"
         },
         "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "483c3b98-803d-4ddf-ac49-f472bf27568b": {
           "progression_name": "Pratica"
@@ -804,10 +807,10 @@
           ]
         },
         "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "42b250a5-b499-45c1-a0f1-154447f0f2aa": {
           "progression_name": "Pratica"
@@ -825,10 +828,10 @@
           "name": "Al mare con i cicli"
         },
         "d060bb00-33a3-4049-925e-56db3f7508f7": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "ac484bf5-608f-446f-ada6-d0506b7dc9a8": {
           "progression_name": "Pratica"
@@ -949,7 +952,7 @@
           ]
         },
         "1ebd42df-a302-418a-be1e-6bbca930cedf": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "b879045d-ce26-4812-a901-bba02e97e846": {
           "progression_name": "Pratica"
@@ -976,7 +979,7 @@
           "name": "Correzione di errori nel labirinto"
         },
         "9b6832e5-f80f-4baa-9049-48d9526443ba": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "fa8dd0db-5da9-43b3-8150-d3618c14ac77": {
           "progression_name": "Previsione"
@@ -1003,7 +1006,7 @@
           "name": "Programmare con la collezionista"
         },
         "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "1237bc98-b3bd-45ac-8c6f-51bd8cc988e4": {
           "progression_name": "Pratica"
@@ -1027,7 +1030,7 @@
           "name": "Programmare con l'artista"
         },
         "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
@@ -1067,13 +1070,13 @@
           "name": "Cicli con Rey e BB-8"
         },
         "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "cc9ef036-2cca-4863-b922-284a995c38b7": {
           "progression_name": "Previsione"
         },
         "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "069243e5-22ac-469d-afdd-0908f118d8fc": {
           "progression_name": "Pratica"
@@ -1100,7 +1103,7 @@
           "name": "Cicli con la contadina"
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "c80e175c-a3f8-4155-9900-0c6ab5829a4e": {
           "progression_name": "Pratica"
@@ -1164,7 +1167,7 @@
           "name": "Realizzare un gioco Flappy"
         },
         "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "b6624ca7-5ffe-462e-ad60-5580ffb87066": {
           "progression_name": "Mini Progetto: Gioco Flappy"
@@ -1279,7 +1282,7 @@
           ]
         },
         "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "b60e2fce-2cac-4440-8d56-d3a78c50d34d": {
           "progression_name": "Pratica"
@@ -1310,7 +1313,7 @@
           "name": "Debugging con la collezionista"
         },
         "0fee56da-4a47-490c-b500-a54be824f01c": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "04939762-e87a-4924-8049-62fb65e8dc0c": {
           "progression_name": "Pratica"
@@ -1350,7 +1353,7 @@
           "name": "Realizza un gioco con Star Wars"
         },
         "72b1888f-765e-42c0-bccc-0e32a5724f40": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
           "tips": [
@@ -1403,10 +1406,10 @@
           "name": "Cicli con l'Era glaciale"
         },
         "dad54c78-6c91-4ba8-bb15-eff5861db842": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "0bfe26b9-1f90-4d17-a7df-2336f31b6f90": {
           "progression_name": "Pratica"
@@ -1426,10 +1429,10 @@
           "name": "Cicli con l'artista"
         },
         "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "1d0954f1-dbad-49b1-b3f3-19b4273adeac": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "ed79cfbb-8420-46b1-8cf2-ed9e0ae885f1": {
           "progression_name": "Pratica"
@@ -1444,13 +1447,13 @@
           "name": "Cicli annidati nel labirinto"
         },
         "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "8c793bd1-bbbf-415c-ab5b-12d502b5f39f": {
           "progression_name": "Previsione"
         },
         "802e73fc-cff0-462f-8d3d-24c0855bce28": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "be5e4d78-ed9e-4cd3-84bc-86138cab5637": {
           "progression_name": "Pratica"
@@ -1487,7 +1490,7 @@
         },
         "2f024770-481d-43dc-aa55-7133819f6663": {
           "name": "Uno sguardo avanti con Minecraft",
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
           "progression_name": "Tempo di giocare"
@@ -1508,10 +1511,10 @@
           "progression_name": "Previsione"
         },
         "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "3f6678b5-e568-42f2-a629-56defb6374fe": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "27ad7403-2d40-4d31-9f89-bc6680589bdb": {
           "progression_name": "Previsione"
@@ -1538,13 +1541,13 @@
           "name": "Cicli \"mentre\" con la contadina"
         },
         "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "87c83177-38ac-4fc9-b6a7-ef90a1a4d321": {
           "progression_name": "Previsione"
         },
         "60c8c247-570f-4f82-92a1-dddff86de3eb": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "5ae9d162-1094-49a9-b0fb-bb22a9e6f3b4": {
           "progression_name": "Pratica"
@@ -1560,13 +1563,13 @@
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
           "name": "Cicli \"fino a che\" nel labirinto",
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "6ba7d996-6da1-49e6-a73a-924609f4e472": {
           "progression_name": "Previsione"
         },
         "35caf44d-4c1f-4dd0-942d-27132dd2c2ee": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "132b1ee7-77db-4d54-bf1f-e3efc761aa3a": {
           "progression_name": "Pratica"
@@ -1610,7 +1613,7 @@
           ]
         },
         "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "5c2218aa-1499-47a7-a606-11c067735cc6": {
           "progression_name": "Pratica"
@@ -1637,7 +1640,7 @@
           "name": "Debugging con Scrat"
         },
         "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "73d03eeb-a7b1-4ee8-ad5b-85638d568511": {
           "progression_name": "Previsione"
@@ -1664,7 +1667,7 @@
           "name": "Programmare con la collezionista"
         },
         "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "c88b15d4-5935-4d02-b036-bd3107c97185": {
           "progression_name": "Pratica"
@@ -1688,7 +1691,7 @@
           "name": "Programmare con l'artista"
         },
         "d9b1cf39-8041-44b2-a8f8-a2e396647ab2": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
@@ -1722,7 +1725,7 @@
           "progression_name": "Previsione"
         },
         "90de173c-642d-4906-a7fe-c3d9ad3123ec": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "a8372901-5a6f-40c1-88ec-bf6c62c79c95": {
           "progression_name": "Pratica"
@@ -1743,7 +1746,7 @@
           "progression_name": "Previsione"
         },
         "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "8fd35c57-6015-4e9b-97cd-a8ade679fe05": {
           "progression_name": "Pratica"
@@ -1761,7 +1764,7 @@
           "progression_name": "Previsione"
         },
         "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "25d274b2-36a3-49fc-8646-93275a5162a0": {
           "progression_name": "Pratica"
@@ -1826,7 +1829,7 @@
           "progression_name": "Previsione"
         },
         "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "f14b4515-adef-4ed1-a576-a2ae5838273a": {
           "progression_name": "Pratica"
@@ -1896,7 +1899,7 @@
         },
         "89a3d9b1-6f7c-4581-8abc-9d6501a009cc": {
           "name": "Cicli annidati con Frozen",
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "777ee476-c14c-4005-8226-8b5d93d34181": {
           "progression_name": "Pratica"
@@ -1909,7 +1912,7 @@
         },
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
           "name": "Uno sguardo avanti con Minecraft",
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
           "progression_name": "Tempo di giocare"
@@ -1927,10 +1930,10 @@
           "progression_name": "Previsione"
         },
         "2c223051-9787-4ae5-afb2-c999300ee231": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "431e814c-2fdb-4385-ac49-7a3ad70c8411": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "f29415f9-cf77-4f28-ac49-633e5d430981": {
           "progression_name": "Previsione"
@@ -1954,13 +1957,13 @@
           "name": "Cicli \"mentre\" con la contadina"
         },
         "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "3bcc5818-64c5-43b1-b0c3-44535e842497": {
           "progression_name": "Previsione"
         },
         "d1f28a2a-eb91-4271-aeef-7c155109fac4": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "7b5da851-cc60-4e3a-9447-54c8ab3e79e5": {
           "progression_name": "Pratica"
@@ -1981,13 +1984,13 @@
           "name": "Istruzioni condizionali in Minecraft - Viaggio acquatico"
         },
         "0c1c356b-b51e-49e9-902a-9bb743c4acbc": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "ebbb5af1-a268-4256-a63b-a179d5813d8d": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "Tempo di giocare"
@@ -2000,13 +2003,13 @@
         },
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
           "name": "Cicli \"fino a che\" nel labirinto",
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "a45d0ea2-26ce-41c6-9128-3833b39cb233": {
           "progression_name": "Previsione"
         },
         "308b7268-008e-40c7-9ab3-6977bfd38927": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "ac1fbc06-ba6b-4b67-bf20-041eb07fb41b": {
           "progression_name": "Pratica"
@@ -2024,7 +2027,7 @@
           "name": "Istruzioni condizionali & cicli con la contadina"
         },
         "38760d27-fbe5-48c9-bd46-2b7eeac81ca2": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "5af3711a-0ea0-4c82-b622-a250349a8389": {
           "progression_name": "Pratica"
@@ -2054,13 +2057,13 @@
           ]
         },
         "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "08364a41-ef59-40a4-b3ec-e55ca40c2e6f": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "f05f4ec1-71a1-4e00-8d93-935c6f47e01d": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "91e51520-32ea-4e43-bc6e-603cf76a7d22": {
           "progression_name": "Tempo di giocare"
@@ -2130,7 +2133,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "3ae6f1d6-b2f9-4a9f-9877-673ee1f0a654": {
           "progression_name": "Pratica"
@@ -2148,7 +2151,7 @@
           "progression_name": "Previsione"
         },
         "79a73c29-5877-4ffc-8570-fad97926f939": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "47be5db0-347f-4617-a652-e0b01325b180": {
           "progression_name": "Tempo di giocare"
@@ -2161,7 +2164,7 @@
         },
         "60fb6e02-bbf3-49df-ab58-79496259ada1": {
           "name": "Modifica delle variabili con l'ape",
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "66e1664f-4e5a-4df9-a902-d0eb19537997": {
           "progression_name": "Pratica"
@@ -2182,7 +2185,7 @@
           "progression_name": "Previsione"
         },
         "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "6ac3cc21-4cce-40dd-8698-d9bc4b8c9e6e": {
           "progression_name": "Pratica"
@@ -2206,7 +2209,7 @@
           "progression_name": "Esplorazione"
         },
         "5cb283f5-dd23-4694-a205-a97ffd80c3cc": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "1582774d-bc37-4642-8f63-dccb08adea1c": {
           "progression_name": "Tempo di giocare"
@@ -2259,7 +2262,7 @@
           ]
         },
         "bde027df-b2a3-4252-980a-7e8493d898e6": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
           "name": "Riflessione"
@@ -2280,7 +2283,7 @@
           ]
         },
         "0394c5d4-246e-42bc-aca2-97d7bd159173": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
           "name": "Riflessione"
@@ -2290,7 +2293,7 @@
         },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
           "name": "Programmare con Angry Bird",
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9": {
           "progression_name": "Pratica"
@@ -2316,7 +2319,7 @@
           "name": "Programmare con Rey e BB-8"
         },
         "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "8a743287-1638-4c96-8c21-387ebf05d760": {
           "progression_name": "Pratica"
@@ -2336,10 +2339,10 @@
           ]
         },
         "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "6f0b2804-a745-47e0-8211-45bfc553e106": {
           "progression_name": "Pratica"
@@ -2361,10 +2364,10 @@
           ]
         },
         "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "01ea78e0-acb4-4a08-8295-6257c3d3aa29": {
           "progression_name": "Pratica"
@@ -2379,10 +2382,10 @@
           "name": "Cicli con la collezionista"
         },
         "9aa00264-eca7-4093-92fb-60d301554a5b": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "08049c61-d346-4c06-96f3-58775b4bf69d": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "c08bd0ec-993c-4554-b855-96bdf024e9ef": {
           "progression_name": "Pratica"
@@ -2405,10 +2408,10 @@
           ]
         },
         "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "94271c9b-4000-4e8c-a99c-9a04d851549e": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "c2ef410e-28ad-4ebe-9061-f5658d8fe975": {
           "progression_name": "Pratica"
@@ -2432,7 +2435,7 @@
           ]
         },
         "1474d69b-c98f-40d9-b8c5-07cbeb090699": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0": {
           "progression_name": "Pratica"
@@ -2523,7 +2526,7 @@
           "progression_name": "Previsione"
         },
         "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "30997374-8929-4152-b55b-94e459e3ee58": {
           "progression_name": "Pratica"
@@ -2547,10 +2550,10 @@
           "progression_name": "Previsione"
         },
         "5661328f-256c-4f27-988b-ea102fde1cbd": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "dc08f2e2-dab1-43b0-8349-9ce3161eec83": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
           "progression_name": "Tempo di giocare"
@@ -2592,10 +2595,10 @@
           "name": "Introduzione"
         },
         "257e3a1f-5cc5-444e-94e3-ee18c5d7169e": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "9982dc06-ec1f-4b15-b4e8-16cc5663bf8c": {
           "progression_name": "Pratica"
@@ -2615,10 +2618,10 @@
           ]
         },
         "35342825-ca7b-4305-b02a-365e6095e8f6": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "7f4ec132-6df2-4a23-abe3-853efe35701d": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "b74deff4-5709-42c9-bd89-609b29df9368": {
           "progression_name": "Pratica"
@@ -2693,13 +2696,13 @@
           ]
         },
         "cd4d43da-dace-4324-a934-618f8c5b6ec7": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "4130a39a-0232-45ed-b6c7-1f2badada9ee": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "8543e376-7910-45df-b486-372036c19fdc": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "faa2f676-cf14-4bd7-b277-8e0a30245c0d": {
           "progression_name": "Tempo di giocare"
@@ -2715,7 +2718,7 @@
           "progression_name": "Previsione"
         },
         "c8b7ed1a-7b68-48e5-bf78-c411d209179a": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "c29e178e-6a22-48e2-9df0-06269e2000b2": {
           "progression_name": "Pratica"
@@ -2733,13 +2736,13 @@
           "name": "Istruzioni condizionali in Minecraft - Viaggio acquatico"
         },
         "ace06bbe-f40f-4333-806c-928527edede6": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "735452ce-870a-4728-8b1b-00a77c5bffbb": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "Tempo di giocare"
@@ -2755,16 +2758,16 @@
           "tips": [
             null
           ],
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "22826fb5-5cdf-4918-970d-680d9ba82f88": {
           "progression_name": "Previsione"
         },
         "af239dc4-fc39-4765-a761-8d1979ef5e11": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "c6d24990-be45-4b52-b095-48004fcaca4a": {
           "progression_name": "Pratica"
@@ -2776,7 +2779,7 @@
           "name": "Introduzione"
         },
         "6da14073-1ba0-4603-989b-5b9c9758c047": {
-          "progression_name": "Costruzione di abilità"
+          "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "1fedc5de-50c7-478d-8173-e2d8ffd4d97a": {
           "progression_name": "Pratica"
