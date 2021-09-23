@@ -116,6 +116,11 @@ export default class Playground {
       // can't play sound if game is over
       return;
     }
+
+    const filename = soundData.filename;
+
+    const audioElement = this.getAudioElement();
+    this.setMediaElement(audioElement, filename);
   }
 
   setBackgroundImage(backgroundData) {
@@ -125,19 +130,23 @@ export default class Playground {
     }
 
     const filename = backgroundData.filename;
-
     const backgroundElement = this.getBackgroundElement();
-    backgroundElement.onerror = () => {
+    this.setMediaElement(backgroundElement, filename);
+    backgroundElement.style.opacity = 1.0;
+  }
+
+  setMediaElement(element, filename) {
+    element.onerror = () => {
       this.onFileLoadError(filename);
     };
-    backgroundElement.src = this.getUrl(filename);
-    backgroundElement.style.opacity = 1.0;
+    element.src = this.getUrl(filename);
   }
 
   reset() {
     this.isGameOver = false;
     this.isGameRunning = false;
     this.resetBackgroundElement();
+    this.resetAudioElement();
   }
 
   // TODO: Call this from click handler on new clickable items
@@ -162,10 +171,23 @@ export default class Playground {
     return document.getElementById('playground-background');
   }
 
+  getAudioElement() {
+    return document.getElementById('playground-audio');
+  }
+
+  resetAudioElement() {
+    const audioElement = this.getAudioElement();
+    this.resetMediaElement(audioElement);
+  }
+
   resetBackgroundElement() {
     const backgroundElement = this.getBackgroundElement();
-    backgroundElement.onerror = undefined;
-    backgroundElement.src = undefined;
+    this.resetMediaElement(backgroundElement);
     backgroundElement.style.opacity = 0.0;
+  }
+
+  resetMediaElement(element) {
+    element.onerror = undefined;
+    element.src = '';
   }
 }
