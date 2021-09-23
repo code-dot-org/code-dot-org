@@ -338,10 +338,7 @@ export class WorkshopForm extends React.Component {
               value={value}
               onChange={this.handleFundingChange}
               style={this.getInputStyle()}
-              disabled={
-                this.props.readOnly ||
-                NotFundedSubjects.includes(this.state.subject)
-              }
+              disabled={this.props.readOnly}
             >
               <option />
               {options.map((o, i) => (
