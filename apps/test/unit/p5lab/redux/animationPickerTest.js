@@ -190,9 +190,11 @@ describe('animationPicker', function() {
 
     beforeEach(() => {
       stubRedux();
-      registerReducers(commonReducers);
-      registerReducers({animationPicker: reducer});
-      registerReducers({animationList: animationListReducer});
+      registerReducers({
+        ...commonReducers,
+        animationPicker: reducer,
+        animationList: animationListReducer
+      });
       getStore().dispatch(show(Goal.NEW_ANIMATION, true));
     });
 
