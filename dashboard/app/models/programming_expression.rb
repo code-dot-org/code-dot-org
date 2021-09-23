@@ -29,6 +29,8 @@ class ProgrammingExpression < ApplicationRecord
   serialized_attrs %w(
     color
     syntax
+    short_description
+    video_key
   )
 
   KEY_CHAR_RE = /[A-Za-z0-9\-\_\.]/
@@ -157,6 +159,18 @@ class ProgrammingExpression < ApplicationRecord
       link: documentation_path,
       programmingEnvironmentName: programming_environment.name,
       uniqueKey: [key, programming_environment.name].join('/')
+    }
+  end
+
+  def summarize_for_edit
+    {
+      id: id,
+      key: key,
+      name: name,
+      lastUpdated: updated_at,
+      programmingEnvironmentName: programming_environment.name,
+      shortDescription: short_description || '',
+      videoKey: video_key
     }
   end
 
