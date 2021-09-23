@@ -1,6 +1,8 @@
 {
+  "backgroundOrTextEffect": "You need to add a background or text effect.",
   "deletedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
   "effectWithEvent": "Try using a new foreground or background effect under your `when line shows` event block.",
+  "foregroundEffectWithEvent": "You need to add a foreground effect using an event.",
   "makeBackground": "You need to add a background effect.",
   "makeForeground": "You need to add a foreground effect.",
   "noBehavior": "Click on the **Sprites** toolbox to find this block.\n<xml><block type=\"PoemBot_startBehavior\"><title name=\"ANIMATION_NAME\">\"tropicalfish_04_1\"</title><title name=\"BEHAVIOR\">swimming_left_and_right</title></block></xml>",
