@@ -5,7 +5,7 @@ import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
-import styles from './styles';
+import * as dialogStyles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {
@@ -14,6 +14,7 @@ import {
 } from '@cdo/apps/code-studio/assets/searchAssets';
 import experiments from '@cdo/apps/util/experiments';
 import Button from '@cdo/apps/templates/Button';
+import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 
 const MAX_SEARCH_RESULTS = 40;
 const MAX_HEIGHT = 460;
@@ -24,7 +25,7 @@ export default class AnimationPickerBody extends React.Component {
     onDrawYourOwnClick: PropTypes.func.isRequired,
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
-    onAnimationSelectionDone: PropTypes.func.isRequired,
+    onAnimationSelectionComplete: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
     libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
@@ -33,7 +34,7 @@ export default class AnimationPickerBody extends React.Component {
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
     canDraw: PropTypes.bool.isRequired,
-    selectedAnimations: PropTypes.arrayOf(PropTypes.object).isRequired
+    selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired
   };
 
   state = {
@@ -41,6 +42,10 @@ export default class AnimationPickerBody extends React.Component {
     categoryQuery: '',
     currentPage: 0
   };
+
+  componentDidMount() {
+    this.multiSelectEnabled_ = experiments.isEnabled(experiments.MULTISELECT);
+  }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.defaultQuery !== nextProps.defaultQuery) {
@@ -172,12 +177,12 @@ export default class AnimationPickerBody extends React.Component {
         selected={this.props.selectedAnimations.some(
           e => e.sourceUrl === animationProps.sourceUrl
         )}
+        multiSelectEnabled={this.multiSelectEnabled_}
       />
     ));
   }
 
   render() {
-    const multiSelectEnabled = experiments.isEnabled(experiments.MULTISELECT);
     if (!this.props.libraryManifest) {
       return <div>{msg.loading()}</div>;
     }
@@ -187,12 +192,12 @@ export default class AnimationPickerBody extends React.Component {
       is13Plus,
       onDrawYourOwnClick,
       onUploadClick,
-      onAnimationSelectionDone
+      onAnimationSelectionComplete
     } = this.props;
 
     return (
       <div style={{marginBottom: 10}}>
-        <h1 style={styles.title}>{msg.animationPicker_title()}</h1>
+        <h1 style={dialogStyles.title}>{msg.animationPicker_title()}</h1>
         {!is13Plus && !hideUploadOption && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
@@ -201,13 +206,13 @@ export default class AnimationPickerBody extends React.Component {
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
         {(searchQuery !== '' || categoryQuery !== '') && (
-          <div style={animationPickerStyles.navigation}>
+          <div style={styles.navigation}>
             {categoryQuery !== '' && (
-              <div style={animationPickerStyles.breadCrumbs}>
+              <div style={styles.breadCrumbs}>
                 {this.props.navigable && (
                   <span
                     onClick={this.onClearCategories}
-                    style={animationPickerStyles.allAnimations}
+                    style={styles.allAnimations}
                   >
                     {`${msg.animationPicker_allCategories()} > `}
                   </span>
@@ -224,7 +229,7 @@ export default class AnimationPickerBody extends React.Component {
           {' '}
           {(searchQuery !== '' || categoryQuery !== '') &&
             results.length === 0 && (
-              <div style={animationPickerStyles.emptyResults}>
+              <div style={styles.emptyResults}>
                 {msg.animationPicker_noResultsFound()}
               </div>
             )}
@@ -249,13 +254,16 @@ export default class AnimationPickerBody extends React.Component {
             categoryQuery === '' &&
             this.animationCategoriesRendering()}
           {(searchQuery !== '' || categoryQuery !== '') &&
-            this.animationItemsRendering(results || [], multiSelectEnabled)}
+            this.animationItemsRendering(
+              results || [],
+              this.multiSelectEnabled_
+            )}
         </ScrollableList>
-        {multiSelectEnabled && (
-          <div style={animationPickerStyles.footer}>
+        {this.multiSelectEnabled_ && (
+          <div style={styles.footer}>
             <Button
               text={msg.done()}
-              onClick={onAnimationSelectionDone}
+              onClick={onAnimationSelectionComplete}
               color={Button.ButtonColor.orange}
             />
           </div>
@@ -274,7 +282,7 @@ WarningLabel.propTypes = {
   children: PropTypes.node
 };
 
-const animationPickerStyles = {
+const styles = {
   allAnimations: {
     color: color.purple,
     fontFamily: "'Gotham 7r', sans-serif",

@@ -16,6 +16,7 @@ import {
 } from '../redux/animationPicker';
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
+import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 
 // Some operating systems round their file sizes, so max size is 101KB even
 // though our error message says 100KB, to help users avoid confusion.
@@ -53,7 +54,7 @@ class AnimationPicker extends React.Component {
     uploadInProgress: PropTypes.bool.isRequired,
     uploadError: PropTypes.string,
     is13Plus: PropTypes.bool,
-    selectedAnimations: PropTypes.arrayOf(PropTypes.object).isRequired,
+    selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     onClose: PropTypes.func.isRequired,
     onPickNewAnimation: PropTypes.func.isRequired,
     onPickLibraryAnimation: PropTypes.func.isRequired,
@@ -61,7 +62,7 @@ class AnimationPicker extends React.Component {
     onUploadDone: PropTypes.func.isRequired,
     onUploadError: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
-    onAnimationSelectionDone: PropTypes.func.isRequired
+    onAnimationSelectionComplete: PropTypes.func.isRequired
   };
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
@@ -80,7 +81,7 @@ class AnimationPicker extends React.Component {
         onDrawYourOwnClick={this.props.onPickNewAnimation}
         onPickLibraryAnimation={this.props.onPickLibraryAnimation}
         onUploadClick={this.onUploadClick}
-        onAnimationSelectionDone={this.props.onAnimationSelectionDone}
+        onAnimationSelectionComplete={this.props.onAnimationSelectionComplete}
         playAnimations={this.props.playAnimations}
         libraryManifest={this.props.libraryManifest}
         hideUploadOption={this.props.hideUploadOption}
@@ -165,7 +166,7 @@ export default connect(
     onUploadError(status) {
       dispatch(handleUploadError(status));
     },
-    onAnimationSelectionDone() {
+    onAnimationSelectionComplete() {
       dispatch(saveSelectedAnimations());
     }
   })
