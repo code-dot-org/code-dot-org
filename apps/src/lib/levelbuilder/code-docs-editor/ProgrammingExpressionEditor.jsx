@@ -66,6 +66,7 @@ export default function ProgrammingExpressionEditor({
           onChange={e => setVideoKey(e.target.value)}
           style={styles.selectInput}
         >
+          <option value={''}>---</option>
           {videoOptions.map(video => (
             <option key={video.key} value={video.key}>
               {video.name}
