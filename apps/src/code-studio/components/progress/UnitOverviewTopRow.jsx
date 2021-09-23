@@ -51,7 +51,8 @@ class UnitOverviewTopRow extends React.Component {
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
-    publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired
+    publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
+    noLessonPlans: PropTypes.bool
   };
 
   recordAndNavigateToPdf = (e, firehoseKey, url) => {
@@ -79,8 +80,13 @@ class UnitOverviewTopRow extends React.Component {
     const {
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
-      publishedState
+      publishedState,
+      noLessonPlans
     } = this.props;
+
+    if (noLessonPlans) {
+      return [];
+    }
 
     const showOverviewPDFOption =
       publishedState !== PublishedState.pilot &&
