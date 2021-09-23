@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import {navigateToHref} from '@cdo/apps/utils';
 
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression,
@@ -60,7 +61,11 @@ export default function ProgrammingExpressionEditor({
       </label>
       <label>
         Video
-        <select value={videoKey} onChange={e => setVideoKey(e.target.value)}>
+        <select
+          value={videoKey}
+          onChange={e => setVideoKey(e.target.value)}
+          style={styles.selectInput}
+        >
           {videoOptions.map(video => (
             <option key={video.key} value={video.key}>
               {video.name}
@@ -80,6 +85,7 @@ export default function ProgrammingExpressionEditor({
         handleSave={() => setIsSaving(true)}
         isSaving={isSaving}
         lastSaved={lastUpdated}
+        handleView={() => navigateToHref('/')}
       />
     </div>
   );
@@ -101,5 +107,13 @@ const styles = {
     border: '1px solid #ccc',
     borderRadius: 4,
     margin: 0
+  },
+  selectInput: {
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    marginLeft: 5
   }
 };
