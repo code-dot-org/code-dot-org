@@ -28,4 +28,17 @@ class ProgrammingExpressionsController < ApplicationController
       render :not_acceptable, json: programming_expression.errors
     end
   end
+
+  def update
+    underscored_params = params.transform_keys(&:underscore).permit(:id, :name, :short_description, :video_key)
+    programming_expression = ProgrammingExpression.find_by_id(underscored_params[:id])
+    unless programming_expression
+      render :not_found
+      return
+    end
+    programming_expression.name = underscored_params[:name]
+    programming_expression.short_description = underscored_params[:short_description]
+    programming_expression.video_key = underscored_params[:video_key]
+    programming_expression.save! if programming_expression.changed?
+  end
 end
