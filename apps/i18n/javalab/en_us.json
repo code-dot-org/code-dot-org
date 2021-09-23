@@ -55,7 +55,7 @@
   "fileImportWarning": "You have one or more duplicate file names between this project and your selected backpack files. Duplicate file names are:",
   "fileImportWarningConfirm": "Do you want to replace these files with the files from your backpack?",
   "fileLoadError": "There was an error loading the file {filename}.",
-  "fileNotFoundException": "Your code threw a FileNotFoundException while running: {causeMessage}",
+  "fileNotFoundException": "Your code threw a FileNotFoundException while running for file name: {causeMessage}",
   "genericSaveErrorTitle": "Save error",
   "genericErrorMessage": "Please try again",
   "import": "Import",
