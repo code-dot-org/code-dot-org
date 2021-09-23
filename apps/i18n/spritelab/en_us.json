@@ -191,7 +191,7 @@
   "changeOrSetSize": "None of your sprites changed size.",
   "changeOrSetCostume": "None of your sprites changed costumes.",
   "changeBackground": "The background was not changed.",
-  "allSayBlocks": "Make sure each sprite uses a `say` block. m<xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
+  "allSayBlocks": "Make sure each sprite uses a `say` block. \n<xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
   "clickAnySprite": "Make sure to click on any sprite after pressing *\"Run\"*.",
   "changeOrSetCostumeEvent": "Make sure to use an event to change a sprite's costume.",
   "noSound": "You need to play a sound.",
