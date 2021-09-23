@@ -1,0 +1,34 @@
+---
+title: CS Connections
+video_player: true
+theme: responsive
+style_min: true
+---
+
+# Heading
+
+First part of content.
+
+## Section 0
+
+<div style="width: 100px">{{ codebreak_promoreel }}</div>
+
+## Section 1
+
+{{ csc_module, title: "Title 1", grades: "3-5", description: "Some kind of \"description goes\" here." }}
+
+{{ csc_module, title: "Title 2", description: "Another description here.", action: "Do action" }}
+
+## Section 2
+
+<div style="width: 100px">{{codebreak_promoreel}}</div>
+
+## Section 3
+
+{{ csc_module, title: "Title 3", grades: "3-5", description: "Some kind of \"description goes\" here." }}
+
+{{ csc_module, title: "Title 4", description: "Another description here, isn't it!", action: "Do action" }}
+
+## Section 4
+
+<div style="width: 100px">{{ codebreak_promoreel }}</div>
