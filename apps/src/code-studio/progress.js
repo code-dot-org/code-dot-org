@@ -304,7 +304,8 @@ progress.renderCourseProgress = function(scriptData) {
         showUnversionedRedirectWarning={
           scriptData.show_unversioned_redirect_warning
         }
-        publishedState={scriptData.published_state}
+        publishedState={scriptData.publishedState}
+        noLessonPlans={scriptData.noLessonPlans}
       />
     </Provider>,
     mountPoint

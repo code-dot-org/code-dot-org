@@ -62,6 +62,7 @@ class UnitOverview extends React.Component {
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
+    noLessonPlans: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
     showUnversionedRedirectWarning: PropTypes.bool,
 
@@ -135,7 +136,8 @@ class UnitOverview extends React.Component {
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
       publishedState,
-      showUnversionedRedirectWarning
+      showUnversionedRedirectWarning,
+      noLessonPlans
     } = this.props;
 
     const displayRedirectDialog =
@@ -220,6 +222,7 @@ class UnitOverview extends React.Component {
               scriptOverviewPdfUrl={scriptOverviewPdfUrl}
               scriptResourcesPdfUrl={scriptResourcesPdfUrl}
               publishedState={publishedState}
+              noLessonPlans={noLessonPlans}
             />
           </div>
         )}
