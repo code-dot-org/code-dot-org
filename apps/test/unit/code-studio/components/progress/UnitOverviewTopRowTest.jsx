@@ -31,7 +31,8 @@ const defaultProps = {
   studentResources: [],
   showAssignButton: true,
   publishedState: 'beta',
-  isMigrated: false
+  isMigrated: false,
+  noLessonPlans: false
 };
 
 describe('UnitOverviewTopRow', () => {
@@ -281,6 +282,19 @@ describe('UnitOverviewTopRow', () => {
         />
       )
     ).to.be.false;
+  });
+
+  it('does not render dropdown button for printing options when no lesson plans', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow
+        {...defaultProps}
+        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+        viewAs={ViewType.Teacher}
+        noLessonPlans={true}
+      />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(0);
   });
 
   it('renders dropdown button with links to printing options when published state is not pilot or indevelopment', () => {
