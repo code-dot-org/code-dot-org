@@ -2782,3 +2782,13 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Контент
+            content:
+              display_name: Контент
+            lesson_group:
+              display_name: Контент
+            lessonGroup-2:
+              display_name: Контент

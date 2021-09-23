@@ -779,6 +779,13 @@ bg:
         options:
           EFFECT:
             '"rain"': дъжд
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': надясно
+            '90': надолу
+            '180': наляво
+            '270': нагоре
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -792,6 +799,7 @@ bg:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": криза
+            "'sound://category_digital/jump_7.mp3'": скок
       gamelab_randColor:
         text: случаен цвят
       gamelab_randomColor:

@@ -54,6 +54,10 @@ zu:
         options:
           CONDITION:
             '"when"': nini
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": gxuma
       gamelab_setSizes:
         options:
           PROPERTY:
