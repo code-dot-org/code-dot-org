@@ -18,10 +18,13 @@ de:
         csp_2021_category_name: Grundsätze der Informatik ('21-'22)
         cspexams_category_name: Praxistest Grundlagen der Informatik
         csp17_category_name: CS Principles ('17-'18)
+        aiml_2021_category_name: KI / ML
         full_course_category_name: Vollständige Kurse
         hoc_category_name: Hour of Code
         math_category_name: Mathematik
         research_studies_category_name: Forschung
+        twenty_hour_category_name: 20-Stunden
+        tts_category_name: Text-zu-Sprache
         other_category_name: Andere
       name:
         course1:
@@ -347,6 +350,7 @@ de:
             The Design Recipe:
               name: Das Design-Rezept
         K5PD:
+          description: 'For the latest online Professional Development resources for elementary school teachers here: <https://studio.code.org/s/k5-onlinepd>'
           lessons:
             Computer Science Pedagogy:
               name: Pädagogik der Informatik
@@ -374,6 +378,7 @@ de:
               name: Computerprogramme schreiben
             new stage:
               name: neue Etappe
+          student_description: 'For the latest online Professional Development resources for elementary school teachers here: <https://studio.code.org/s/k5-onlinepd>'
         netsim:
           title: Internet-Simulator
           lessons:
@@ -522,10 +527,12 @@ de:
               name: Hour of Code 2013
           student_description: Teste die Grundlagen der Informatik mit Charakteren aus Angry Birds und Pflanzen gegen Zombies!
         CodeStudioPuzzleChallenge:
+          description_short: Fordere Dich selbst heraus!
           lessons:
             Puzzles:
               name: Aufgabe
         Tutorial Video - Code Studio Puzzle Challenge:
+          description_short: Fordere Dich selbst heraus!
           lessons:
             Puzzles:
               name: Aufgabe
@@ -1663,18 +1670,20 @@ de:
               name: Gumball Spielelabor
           student_description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
         starwars:
+          title: 'Star Wars: Erschaffe eine Galaxie mit Code (JavaScript)'
           description: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
           description_short: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
           lessons:
             Hour of Code 2015:
-              name: Programmierstunde 2015
+              name: Hour of Code 2015
           student_description: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
         starwarsblocks:
+          title: 'Star Wars: Erschaffe eine Galaxie mit Code (Blocky)'
           description: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
           description_short: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
           lessons:
             Hour of Code 2015:
-              name: Programmierstunde 2015
+              name: Hour of Code 2015
           student_description: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
         mc:
           title: Minecraft Hour of Code
@@ -1682,7 +1691,7 @@ de:
           description_short: Erkunde eine Minecraft-Welt durch programmieren
           lessons:
             Hour of Code 2015:
-              name: Programmierstunde 2015
+              name: Hour of Code 2015
           student_description: Verwende Code-Bausteine, um Steve oder Alex auf einem Abenteuer durch die Minecraft-Welt zu begleiten.
         oceans:
           title: KI für Meere
@@ -5541,6 +5550,7 @@ de:
             Nested Loops with Frozen:
               name: Eingebettete Schleifen mit Frozen
           student_description: Lerne die Verwendung verschiedener Arten von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein Capstone Projekt, das du mit Freunden und Familie teilen kannst.
+          name: coursef-2017
         csdnovice:
           title: Informatik - Erkenntnisse LehrerCon Neue Moderatoren
           description_audience: Erkenntnisse aus der Informatik Neue Moderatoren
@@ -5981,6 +5991,7 @@ de:
             Until Loops in Maze:
               name: "‚Bis‘-Schleifen im Labyrinth"
           student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          name: express-2017
         pre-express-2017:
           title: Schnellkurs für Leseanfänger
           assignment_family_title: Schnellkurs für Leseanfänger
@@ -6017,6 +6028,7 @@ de:
             Spelling Bee:
               name: Buchstabierwettbewerb
           student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          name: pre-express-2017
         subgoal-labels-opt-in:
           title: Subgoal Labels Study Opt-in
           lessons:
@@ -6029,8 +6041,7 @@ de:
             Thanks:
               name: Danke
             '': {}
-            " ":
-              name: ''
+            " ": {}
         csp-pre-survey-test-2017:
           lessons:
             new stage:
@@ -7481,7 +7492,7 @@ de:
             Learning Sprites with Sprite Lab:
               name: Sprite Lab erlernen
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens
+              name: Tanzparty für Außerirdische
             Pet Giraffe with Sprite Lab:
               name: Haustier Giraffe
             Binary Bracelets:
@@ -7621,7 +7632,7 @@ de:
             Virtual Pet - Forever:
               name: Virtuelles Haustier - Endlosigkeit
             Alien Dance Party - Input:
-              name: Tanzparty für Aliens - Input
+              name: Tanzparty für Außerirdische - Eingabe
             Virtual Pet - Interactions:
               name: Virtuelles Haustier - Interaktionen
         petgame:
@@ -7924,7 +7935,7 @@ de:
             Learning Sprites with Sprite Lab:
               name: Sprite Lab erlernen
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens
+              name: Tanzparty für Außerirdische
             Pet Giraffe with Sprite Lab:
               name: Haustier Giraffe
             Copyright and Creativity:
@@ -8056,7 +8067,7 @@ de:
             Learning Sprites with Sprite Lab:
               name: Sprite Lab erlernen
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens
+              name: Tanzparty für Außerirdische
             Pet Giraffe with Sprite Lab:
               name: Haustier Giraffe
             Functions in Minecraft:
@@ -8627,7 +8638,7 @@ de:
             Fish Tank - Creating Sprites:
               name: 'Aquarium: Sprites erstellen'
             Alien Dance Party - Input:
-              name: Tanzparty für Aliens - Input
+              name: Tanzparty für Außerirdische - Eingabe
             Virtual Pet - Interactions:
               name: Virtuelles Haustier - Interaktionen
           student_description: Dies ist ein Pilotkurs für Code.org's neues Sprite Lab-Werkzeuge für die Kurse E und F
@@ -9095,7 +9106,7 @@ de:
             Fish Tank - Creating Sprites:
               name: 'Aquarium: Sprites erstellen'
             Alien Dance Party - Input:
-              name: Tanzparty für Aliens - Input
+              name: Tanzparty für Außerirdische - Eingabe
             Virtual Pet - Interactions:
               name: Virtuelles Haustier - Interaktionen
         2018hoc-ab:
@@ -9134,7 +9145,7 @@ de:
             Fish Tank - Creating Sprites:
               name: 'Aquarium: Sprites erstellen'
             Alien Dance Party - Input:
-              name: Tanzparty für Aliens - Input
+              name: Tanzparty für Außerirdische - Eingabe
             Virtual Pet - Interactions:
               name: Virtuelles Haustier - Interaktionen
           student_description: Dies ist ein Pilotkurs für Code.org's neues Sprite Lab-Werkzeuge für die Kurse E und F
@@ -9144,7 +9155,7 @@ de:
             Fish Tank - Creating Sprites:
               name: 'Aquarium: Sprites erstellen'
             Alien Dance Party - Input:
-              name: Tanzparty für Aliens - Input
+              name: Tanzparty für Außerirdische - Eingabe
             Virtual Pet - Interactions:
               name: Virtuelles Haustier - Interaktionen
         craft18:
@@ -9165,13 +9176,13 @@ de:
         dance:
           title: Tanzparty (2018)
           description_short: Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und 25 weiteren!
-          description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
+          description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
           lessons:
             new stage:
               name: neue Etappe
             Dance Party:
               name: Tanzparty
-          student_description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
+          student_description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
         frozen-2018-test-b:
           title: Neues `Frozen`- Skript
           lessons:
@@ -9360,7 +9371,7 @@ de:
               description_student: Lernen Sie, wie man Sprites erstellt und bearbeitet.
               description_teacher: 'In dieser Lektion lernen die SchülerInnen die beiden wesentlichen Konzepte von Sprite Lab kennen: Sprites und Behaviors. Sprites sind Zeichen oder Objekte auf dem Bildschirm, die von den SchülerInnen bewegt, geändert und manipuliert werden können. Behaviors oder Verhaltensweisen sind Aktionen, die Sprites kontinuierlich ausführen, bis sie angehalten werden.'
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Außerirdische mit Sprite-Labor
             Pet Giraffe with Sprite Lab:
               name: Haustier-Giraffe mit Sprite Lab
             Explore Project Ideas:
@@ -9397,9 +9408,9 @@ de:
             Programming and Loops with the Artist:
               name: Programmierung und Schleifen mit dem Künstler
             Events with Sprite Lab:
-              name: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Außerirdische mit Sprite-Labor
               description_student: Erstellen Sie ein interaktives Projekt, das Sie mit den KlassenkameradInnen teilen können.
-              description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Behaviors werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Aliens" zu erstellen.
+              description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Verhaltensweisen werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Außerirdische" zu erstellen.
             Loops with the Artist:
               name: Zeichen mit Schleifen
               description_student: In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!
@@ -9443,14 +9454,14 @@ de:
           student_description: Lerne die Verwendung verschiedener Arten von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein Capstone Projekt, das du mit Freunden und Familie teilen kannst.
         dance-low:
           title: Tanzparty (niedrige Bandbreite)
-          description_short: Kodieren Sie Ihre eigene Tanzparty, um sie mit Ihren Freunden zu teilen! (Diese Version ist für langsame Verbindungen)
+          description_short: Programmiere Deine eigene Tanzparty, um sie mit Deinen Freunden zu teilen! (Diese Version ist für langsame Verbindungen)
           lessons:
             Dance Party:
               name: Tanzparty
         coursed-2019:
           title: Kurs D (2019)
           description: Die SchülerInnen entwickeln ihr Verständnis für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen auch etwas über digitale Bürgerschaft.
-          description_short: Erfahren Sie mehr über bedingte Aussagen. Kreieren Sie Ihre eigene Kunst, Spiele und sogar eine Tanzparty.
+          description_short: Erfahre mehr über bedingte Anweisungen. Kreiere Deine eigene Kunst, Deine eigenen Spiele und sogar eine Tanzparty.
           description_audience: 'Alter: 7-11'
           lesson_groups:
             csf_sequencing:
@@ -9549,7 +9560,7 @@ de:
               description_teacher: In dieser Lektion üben die SchülerInnen die Verwendung von Ereignissen, um ein Spiel zu erstellen, das sie online mit anderen teilen können. Mit R2-D2 und anderen Star Wars-Charakteren werden die SchülerInnen durch die Ereignisse geführt und erhalten dann Raum, um ihr eigenes Spiel zu erstellen.
             Dance Party:
               name: Tanzparty
-              description_student: Zeit zum Feiern! In dieser Lektion programmieren Sie Ihre eigene interaktive Tanzparty.
+              description_student: Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty.
               description_teacher: In dieser Lektion programmieren die SchülerInnen ihre eigene interaktive Tanzparty. Diese Aktivität erfordert Ton, da das Werkzeug so gebaut wurde, dass es auf Musik reagiert.
           student_description: Die SchülerInnen entwickeln ihr Verständnis für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen auch etwas über digitale Bürgerschaft.
         coursee-2019:
@@ -9632,9 +9643,9 @@ de:
               description_student: Lernen Sie, wie man Sprites erstellt und bearbeitet.
               description_teacher: 'In dieser Lektion lernen die SchülerInnen die beiden wesentlichen Konzepte von Sprite Lab kennen: Sprites und Behaviors. Sprites sind Zeichen oder Objekte auf dem Bildschirm, die von den SchülerInnen bewegt, geändert und manipuliert werden können. Behaviors oder Verhaltensweisen sind Aktionen, die Sprites kontinuierlich ausführen, bis sie angehalten werden.'
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Außerirdische mit Sprite-Labor
               description_student: Erstellen Sie ein interaktives Projekt, das Sie mit den KlassenkameradInnen teilen können.
-              description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Behaviors werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Aliens" zu erstellen.
+              description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Verhaltensweisen werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Aliens" zu erstellen.
             Pet Giraffe with Sprite Lab:
               name: Haustier-Giraffe mit Sprite Lab
             Explore Project Ideas:
@@ -9808,7 +9819,7 @@ de:
             Learning Sprites with Sprite Lab:
               name: Schwimmende Fische in Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens
+              name: Tanzparty für Außerirdische
             Pet Giraffe with Sprite Lab:
               name: Haustier-Giraffe mit Sprite Lab
             Explore Project Ideas:
@@ -9844,6 +9855,7 @@ de:
             Concept Practice with Minecraft:
               name: Konzepte mit Minecraft üben
           student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          name: express-2019
         csd1-2019:
           title: Erkenntnisse aus der Informatik Lerneinheit 1 - Problemlösung und Datenverarbeitung ('19-'20)
           description_short: Erfahren Sie, wie Menschen mit Computern arbeiten, um Probleme zu lösen.
@@ -10281,6 +10293,7 @@ de:
             Ocean Scene with Loops:
               name: Meeresszene mit Schleifen
           student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          name: pre-express-2019
         removed19:
           title: Für 2019 aus CSF gestrichen
           lessons:
@@ -11243,7 +11256,7 @@ de:
             Learning Sprites with Sprite Lab:
               name: Sprites mit Sprite Lab lernen
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Außerirdische mit Sprite-Labor
             Pet Giraffe with Sprite Lab:
               name: Haustier-Giraffe mit Sprite Lab
             Build a Flappy Game:
@@ -12585,6 +12598,7 @@ de:
               name: 'Schritt 1: Verständnis entwickeln'
             'Step 2: Demonstrate Understanding':
               name: 'Schritt 2: Verständnis demonstrieren'
+          name: dlp19-csp-mod-w2
         dlp19-csp-mod-w3:
           title: Grundsätze der Informatik Vertieftes Lernen Modul für Workshop 3
           description_audience: Grundsätze der Informatik - Moderatoren in der Ausbildung 2019
@@ -12619,6 +12633,7 @@ de:
               name: 'Schritt 1: Verständnis entwickeln'
             'Step 2: Demonstrate Understanding':
               name: 'Schritt 2: Verständnis demonstrieren'
+          name: dlp19-csp-mod-w4
         csd-pilot:
           title: Erkenntnisse aus der Informatik - Pilotkurs
           lessons:
@@ -12821,11 +12836,11 @@ de:
               name: 'Kollisionsdetektor: Verarbeitung mit Ereignissen'
         dance-2019:
           title: Tanzparty (2019)
-          description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
+          description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
           lessons:
             Dance Party:
               name: Tanzparty
-          student_description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
+          student_description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
         k5-onlinepd-2019:
           description: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium, wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org Informatik unterrichtet!
           description_short: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium, wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org Informatik unterrichtet.
@@ -12912,6 +12927,7 @@ de:
             End of Course projects:
               name: Projekte am Ende des Kurses
           student_description: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium, wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org Informatik unterrichtet!
+          name: k5-onlinepd-2019
         dance-extras-2019:
           title: Keep On Dancing (2019)
           description: Überschreite die erste Stunde mit erweiterten Projektideen.
@@ -13029,7 +13045,7 @@ de:
             Learning Sprites with Sprite Lab:
               name: Sprites mit Sprite Lab lernen
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Außerirdische mit Sprite-Labor
             Private and Personal Information:
               name: Private und persönliche Informationen
             About Me:
@@ -13169,7 +13185,7 @@ de:
             Learning Sprites with Sprite Lab:
               name: Sprites mit Sprite Lab lernen
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Außerirdische mit Sprite-Labor
             Private and Personal Information:
               name: Private und persönliche Informationen
             About Me:
@@ -13213,7 +13229,7 @@ de:
             Learning Sprites with Sprite Lab:
               name: Sprites mit Sprite Lab lernen
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Außerirdische mit Sprite-Labor
             Private and Personal Information:
               name: Private und persönliche Informationen
             About Me:
@@ -14298,7 +14314,7 @@ de:
         coursed-2020:
           title: Kurs D (2019)
           description: Die SchülerInnen entwickeln ihr Verständnis für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen auch etwas über digitale Bürgerschaft.
-          description_short: Erfahren Sie mehr über bedingte Aussagen. Kreieren Sie Ihre eigene Kunst, Spiele und sogar eine Tanzparty.
+          description_short: Erfahre mehr über bedingte Anweisungen. Kreiere Deine eigene Kunst, Deine eigenen Spiele und sogar eine Tanzparty.
           description_audience: 'Alter: 7-11'
           lesson_groups:
             csf_sequencing:
@@ -14391,7 +14407,7 @@ de:
                 Die SchülerInnen werden auch untersuchen, was es bedeutet, verantwortungsvoll und respektvoll mit ihren Offline- und Online-Gemeinschaften umzugehen, um zu lernen, wie man ein guter digitaler Bürger sein kann.
             Dance Party:
               name: Tanzparty
-              description_student: Zeit zum Feiern! In dieser Lektion programmieren Sie Ihre eigene interaktive Tanzparty.
+              description_student: Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty.
               description_teacher: In dieser Lektion programmieren die SchülerInnen ihre eigene interaktive Tanzparty. Diese Aktivität erfordert Ton, da das Werkzeug so gebaut wurde, dass es auf Musik reagiert.
             Dance Part:
               name: Tanzparty
@@ -14447,9 +14463,9 @@ de:
               description_student: Lernen Sie, wie man Sprites erstellt und bearbeitet.
               description_teacher: 'In dieser Lektion lernen die SchülerInnen die beiden wesentlichen Konzepte von Sprite Lab kennen: Sprites und Behaviors. Sprites sind Zeichen oder Objekte auf dem Bildschirm, die von den SchülerInnen bewegt, geändert und manipuliert werden können. Behaviors oder Verhaltensweisen sind Aktionen, die Sprites kontinuierlich ausführen, bis sie angehalten werden.'
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Außerirdische mit Sprite-Labor
               description_student: Erstellen Sie ein interaktives Projekt, das Sie mit den KlassenkameradInnen teilen können.
-              description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Behaviors werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Aliens" zu erstellen.
+              description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Verhaltensweisen werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Aliens" zu erstellen.
             Private and Personal Information:
               name: Private und persönliche Informationen
               description_student: Das Internet macht Spaß und ist aufregend, aber es ist auch wichtig, auf die eigene Sicherheit zu achten. In dieser Lektion lernen Sie den Unterschied zwischen Informationen, die sicher ausgetauscht werden können, und Informationen, die privater Natur sind.
@@ -14532,9 +14548,9 @@ de:
               description_student: Lernen Sie, wie man Sprites erstellt und bearbeitet.
               description_teacher: 'In dieser Lektion lernen die SchülerInnen die beiden wesentlichen Konzepte von Sprite Lab kennen: Sprites und Behaviors. Sprites sind Zeichen oder Objekte auf dem Bildschirm, die von den SchülerInnen bewegt, geändert und manipuliert werden können. Behaviors oder Verhaltensweisen sind Aktionen, die Sprites kontinuierlich ausführen, bis sie angehalten werden.'
             Events with Sprite Lab:
-              name: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Außerirdische mit Sprite-Labor
               description_student: Erstellen Sie ein interaktives Projekt, das Sie mit den KlassenkameradInnen teilen können.
-              description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Behaviors werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Aliens" zu erstellen.
+              description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Verhaltensweisen werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Außerirdische" zu erstellen.
             Loops with the Artist:
               name: Zeichen mit Schleifen
               description_student: In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!
@@ -14605,6 +14621,7 @@ de:
             AI for Oceans:
               name: KI für Meere
           student_description: Lerne die Verwendung verschiedener Arten von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein Capstone Projekt, das du mit Freunden und Familie teilen kannst.
+          name: coursef-2020
         express-2020:
           title: Expresskurs (2019)
           description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
@@ -14679,7 +14696,7 @@ de:
             Learning Sprites with Sprite Lab:
               name: Sprites mit Sprite Lab lernen
             Alien Dance Party with Sprite Lab:
-              name: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Außerirdische mit Sprite-Labor
             Editing Behaviors:
               name: Behaviors bearbeiten
             Virtual Pet with Sprite Lab:
@@ -14727,7 +14744,7 @@ de:
             Swimming Fish in Sprite Lab:
               name: Schwimmende Fische in Sprite Lab
             Alien Dance Party:
-              name: Tanzparty für Aliens
+              name: Tanzparty für Außerirdische
             Behaviors in Sprite Lab:
               name: Behaviors im Sprite-Labor
           student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
@@ -15416,6 +15433,7 @@ de:
             k5_next_steps_1:
               display_name: Nächste Schritte
           student_description: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium, wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org Informatik unterrichtet!
+          name: k5-onlinepd-2020
         dani-test-2020: {}
         dani-june-2020-test:
           lessons:
@@ -15628,7 +15646,9 @@ de:
               name: Modul 7
             Module 8:
               name: Modul 8
-        vpl-csp-2020: {}
+          name: vpl-csd-2020
+        vpl-csp-2020:
+          name: vpl-csp-2020
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -15675,6 +15695,8 @@ de:
               name: Sprites in Aktion
             End of Course Project:
               name: Projekt am Ende des Kurses
+            Outbreaklab:
+              name: Standalone Labor – Ausbruch
           lesson_groups:
             introduction:
               display_name: Einführung
@@ -16468,6 +16490,7 @@ de:
             csp_unit10_2020:
               display_name: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
         coursea-2021:
+          title: Kurs A (2021)
           description_short: Eine Einführung in die Informatik für Leseanfänger.
           description_audience: 'Alter: 4-7'
           lessons:
@@ -16544,8 +16567,10 @@ de:
               display_name: Ereignisse
             lessonGroup-5:
               display_name: Projekt am Ende des Kurses
+          name: coursea-2021
           student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
         courseb-2021:
+          title: Kurs B (2021)
           description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich wie Kurs A, aber mit mehr Konzepttiefe.)
           description_audience: 'Alter: 5-8'
           lessons:
@@ -16622,8 +16647,10 @@ de:
               display_name: Ereignisse
             lessonGroup-6:
               display_name: Projekt am Ende des Kurses
+          name: courseb-2021
           student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
         coursec-2021:
+          title: Kurs C (2021)
           description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
           description_audience: 'Alter: 6-10'
           lessons:
@@ -16723,10 +16750,11 @@ de:
               display_name: Daten
             end_of_course_project:
               display_name: Projekt am Ende des Kurses
+          name: coursec-2021
           student_description: Erstellen Sie Programme mit Sequenzen, Schleifen und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen können!
         coursed-2021:
           title: Kurs D (2021)
-          description_short: Erfahren Sie mehr über bedingte Aussagen. Kreieren Sie Ihre eigene Kunst, Spiele und sogar eine Tanzparty.
+          description_short: Erfahre mehr über bedingte Anweisungen. Kreiere Deine eigene Kunst, Deine eigenen Spiele und sogar eine Tanzparty.
           description_audience: 'Alter: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -16761,8 +16789,8 @@ de:
             Dance Party:
               key: Tanzparty
               name: Tanzparty
-              description_student: Zeit zum Feiern! In dieser Lektion programmieren Sie Ihre eigene interaktive Tanzparty.
-              description_teacher: In dieser Lektion programmieren die SchülerInnen ihre eigene interaktive Tanzparty. Diese Aktivität erfordert Ton, da das Werkzeug so gebaut wurde, dass es auf Musik reagiert.
+              description_student: Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty.
+              description_teacher: In dieser Lektion bauen SchülerInnen ihr Können aus und programmieren ihre eigene interaktive Tanzparty.
             Loops in Ice Age:
               key: Schleifen in Ice Age
               name: Schleifen in Ice Age
@@ -16842,7 +16870,9 @@ de:
               display_name: Projekt am Ende des Kurses
             lessonGroup-6:
               display_name: Digitalen Staatsbürgerschaft
+          name: coursed-2021
         coursee-2021:
+          title: Kurs E (2021)
           description_audience: 'Alter: 8-12'
           lessons:
             Sequencing in the Maze:
@@ -16875,8 +16905,8 @@ de:
               description_student: Lernen Sie, wie man Sprites erstellt und bearbeitet.
               description_teacher: 'In dieser Lektion lernen die SchülerInnen die beiden wesentlichen Konzepte von Sprite Lab kennen: Sprites und Behaviors. Sprites sind Zeichen oder Objekte auf dem Bildschirm, die von den SchülerInnen bewegt, geändert und manipuliert werden können. Behaviors oder Verhaltensweisen sind Aktionen, die Sprites kontinuierlich ausführen, bis sie angehalten werden.'
             Alien Dance Party with Sprite Lab:
-              key: Tanzparty für Aliens mit Sprite Lab
-              name: Tanzparty für Aliens mit Sprite Lab
+              key: Tanzparty für Außerirdische mit Sprite-Labor
+              name: Tanzparty für Außerirdische mit Sprite-Labor
               description_student: Erstellen Sie ein interaktives Projekt, das Sie mit den KlassenkameradInnen teilen können.
               description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Behaviors werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Aliens" zu erstellen.
             Private and Personal Information:
@@ -16955,7 +16985,9 @@ de:
               display_name: Projekt am Ende des Kurses
             lessonGroup-7:
               display_name: Auswirkungen der Datenverarbeitung
+          name: coursee-2021
         coursef-2021:
+          title: Kurs F (2021)
           description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
           description_audience: 'Alter: 9-13'
           lessons:
@@ -16970,9 +17002,9 @@ de:
               description_student: Lernen Sie, wie man Sprites erstellt und bearbeitet.
               description_teacher: 'In dieser Lektion lernen die SchülerInnen die beiden wesentlichen Konzepte von Sprite Lab kennen: Sprites und Behaviors. Sprites sind Zeichen oder Objekte auf dem Bildschirm, die von den SchülerInnen bewegt, geändert und manipuliert werden können. Behaviors oder Verhaltensweisen sind Aktionen, die Sprites kontinuierlich ausführen, bis sie angehalten werden.'
             Events with Sprite Lab:
-              name: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Außerirdische mit Sprite-Labor
               description_student: Erstellen Sie ein interaktives Projekt, das Sie mit den KlassenkameradInnen teilen können.
-              description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Behaviors werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Aliens" zu erstellen.
+              description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Verhaltensweisen werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Außerirdische" zu erstellen.
             Loops with the Artist:
               name: Zeichen mit Schleifen
               description_student: In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!
@@ -17053,6 +17085,8 @@ de:
               name: Einführung Sprite Lab
             lesson-8:
               name: Sprites in Aktion
+            lesson-5:
+              name: Ausbruch
             lesson-2:
               name: Die Macht der Worte
               description_student: Mobbing ist nie in Ordnung. In dieser Lektion erfahren Sie, was man im Internet sagen darf und was nicht.
@@ -17075,6 +17109,7 @@ de:
               display_name: entfernen
             lessonGroup-7:
               display_name: Digitalen Staatsbürgerschaft
+          name: coursef-2021
         express-2021:
           description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
           description_short: 'Eine Einführung in die Informatik: kombiniert das Beste aus unserem Grundschullehrplan für ältere SchülerInnen.'
@@ -17193,8 +17228,8 @@ de:
               description_student: Lernen Sie, wie man Sprites erstellt und bearbeitet.
               description_teacher: 'In dieser Lektion lernen die SchülerInnen die beiden wesentlichen Konzepte von Sprite Lab kennen: Sprites und Behaviors. Sprites sind Zeichen oder Objekte auf dem Bildschirm, die von den SchülerInnen bewegt, geändert und manipuliert werden können. Behaviors oder Verhaltensweisen sind Aktionen, die Sprites kontinuierlich ausführen, bis sie angehalten werden.'
             Alien Dance Party:
-              key: Tanzparty für Aliens
-              name: Tanzparty für Aliens
+              key: Tanzparty für Außerirdische
+              name: Tanzparty für Außerirdische
               description_student: Erstellen Sie ein interaktives Projekt, das Sie mit den KlassenkameradInnen teilen können.
               description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Behaviors werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Aliens" zu erstellen.
             Behaviors in Sprite Lab:
@@ -17213,8 +17248,8 @@ de:
               description_student: Freuen Sie sich auf eine ganze Menge Programmierung! Es ist an der Zeit, mit der Erstellung Ihres Projekts zu beginnen.
             lesson-1:
               name: Tanzparty
-              description_student: Zeit zum Feiern! In dieser Lektion programmieren Sie Ihre eigene interaktive Tanzparty.
-              description_teacher: In dieser Lektion programmieren die SchülerInnen ihre eigene interaktive Tanzparty. Diese Aktivität erfordert Ton, da das Werkzeug so gebaut wurde, dass es auf Musik reagiert.
+              description_student: Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty.
+              description_teacher: In dieser Lektion bauen SchülerInnen ihr Können aus und programmieren ihre eigene interaktive Tanzparty.
             lesson-3:
               name: Sprites in Aktion
           lesson_groups:
@@ -17238,6 +17273,7 @@ de:
               display_name: Projekt am Ende des Kurses
             lessonGroup-9:
               display_name: Ereignisse
+          name: express-2021
           student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
         pre-express-2021:
           description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
@@ -17614,6 +17650,7 @@ de:
               display_name: 'Diving Deeper: Courses E and F'
             Introduction:
               display_name: Einführung
+          name: k5-onlinepd-2021
         haikubot-pilot:
           lesson_groups:
             Lesson 3:
@@ -17632,7 +17669,15 @@ de:
         ai-classroom-test: {}
         poembot-springforum21: {}
         pl-playground: {}
-        outbreakmodule: {}
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: Ausbruch in Monster Town
+          lesson_groups:
+            Outbreak Module:
+              display_name: Modul Ausbruch
+          name: Ausbruchsmodul
+          title: Modul Ausbruch\_V2
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -17646,6 +17691,11 @@ de:
           student_description: Willkommen bei der Befragung nach dem Kurs zu Grundsätzen der Informatik von Code.org. Diese Befragung dauert ca. 15 Minuten. Ihre Antworten sind privat und anonym- Ihr Lehrer kann anonyme Gesamtergebnisse für die gesamte Klasse einsehen. Die Ergebnisse sind für Ihren Lehrer und für Code.org von entscheidender Bedeutung, um den Kurs weiterzuführen und zu verbessern. Vielen Dank für Ihre Zeit und Aufmerksamkeit.
         aiml-2021:
           lessons:
+            lesson9:
+              description_teacher: |-
+                In dieser Lektion nehmen die Schüler an einer Offline-Übung teil, die einen Zombie-Ausbruch simuliert. Die Schüler müssen anhand der Daten aus einer Nachbarstadt vorhersagen, in welchen Stadtteilen es die wenigsten Zombies gibt. Die Schüler verwenden Ähnlichkeitsstufen und Durchschnittswerte, um Vorhersagen über die Anzahl der Zombies an einem bestimmten Ort zu treffen. Anschließend werden die Schüler gerettet und können ihre Vorhersagen mit den tatsächlichen Zahlen vergleichen, um zu erörtern, wie genau die numerischen Daten im Vergleich zu den Daten der Kategorie sind.
+
+                **Frage des Tages:** Wie lernen Computer, auf der Basis numerischer Daten Vorhersagen zu erstellen?
             lesson-22:
               name: Entwurf einer Datenerhebung
             lesson-1: {}
@@ -17654,6 +17704,11 @@ de:
               display_name: Umfrage
         csd7-2021:
           lessons:
+            Similarity Models:
+              description_teacher: |-
+                In dieser Lektion nehmen die Schüler an einer Offline-Übung teil, die einen Zombie-Ausbruch simuliert. Die Schüler müssen anhand der Daten aus einer Nachbarstadt vorhersagen, in welchen Stadtteilen es die wenigsten Zombies gibt. Die Schüler verwenden Ähnlichkeitsstufen und Durchschnittswerte, um Vorhersagen über die Anzahl der Zombies an einem bestimmten Ort zu treffen. Anschließend werden die Schüler gerettet und können ihre Vorhersagen mit den tatsächlichen Zahlen vergleichen, um zu erörtern, wie genau die numerischen Daten im Vergleich zu den Daten der Kategorie sind.
+
+                **Frage des Tages:** Wie lernen Computer, auf der Basis numerischer Daten Vorhersagen zu erstellen?
             Survey Planning:
               name: Entwurf einer Datenerhebung
             Post-Unit Survey: {}
@@ -17698,6 +17753,7 @@ de:
             Next Steps:
               key: Nächste Schritte
               name: Nächste Schritte
+          name: kodea-pd-2021
         vpl-csd-2021:
           lessons:
             Module 1:
@@ -17823,7 +17879,9 @@ de:
         poembot:
           lessons:
             lesson-1: {}
-        outbreak-module: {}
+        outbreak-module:
+          name: modul-ausbruch
+          title: Ausbruch
         csa1-exemplars:
           lessons:
             lesson-1: {}
@@ -17850,6 +17908,7 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+          name: csa1-exemplars
         csa2-exemplars:
           lessons:
             lesson-1: {}
@@ -17871,6 +17930,7 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+          name: csa2-exemplars
         csa-videos:
           lessons:
             lesson-24: {}
@@ -17931,6 +17991,7 @@ de:
         sb-chardev-v1:
           lessons:
             lesson-1: {}
+          name: sb-chardev-v1
         dlp21-csp-mod4:
           lessons:
             lesson-1: {}
@@ -17940,10 +18001,12 @@ de:
               display_name: Stufe 1
             lessonGroup-3:
               display_name: Teil 2
+          name: dlp21-csp-mod4
         dlp21-csp-mod1:
           lessons:
             lesson-1: {}
             lesson-2: {}
+          name: dlp21-csp-mod1
           title: Grundsätze der Informatik - Vertieftes Lernen Modul 1
         dlp21-csd:
           lesson_groups:
@@ -17960,27 +18023,34 @@ de:
           lessons:
             lesson-1: {}
             lesson-2: {}
+          name: dlp21-csd-mod1
         dlp21-csd-mod2:
           lessons:
             lesson-1: {}
             lesson-2: {}
+          name: dlp21-csd-mod2
         dlp21-csd-mod3:
           lessons:
             lesson-1: {}
             lesson-2: {}
+          name: dlp21-csd-mod3
         dlp21-csd-mod4:
           lessons:
             lesson-1: {}
             lesson-2: {}
+          name: dlp21-csd-mod4
         dlp21-csp-mod2:
           lessons:
             lesson-1: {}
             lesson-2: {}
+          name: dlp21-csp-mod2
         dlp21-csp-mod3:
           lessons:
             lesson-1: {}
             lesson-2: {}
-        dlp21-overview: {}
+          name: dlp21-csp-mod3
+        dlp21-overview:
+          name: dlp21-overview
         dlp21-csd-overview:
           lessons:
             lesson-1:
@@ -18117,9 +18187,79 @@ de:
             lesson-13:
               name: Beschleunigungssensor
             lesson-14: {}
+            lesson-15: {}
             lesson-17: {}
+            lesson-16: {}
+            lesson-18: {}
             lesson-19:
               name: Projekt
+            lesson-20: {}
         hello-world-food:
+          lessons:
+            lesson-1: {}
+        csa-u7-dev:
+          lessons:
+            lesson-1: {}
+            lesson-5: {}
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Werkzeuge
+            lesson-4: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unterrichtsstunden
+            lessonGroup-3:
+              display_name: Projekt
+        hello-world-animals:
+          lessons:
+            lesson-1: {}
+        hello-world-emoji:
+          lessons:
+            lesson-1: {}
+        hello-world-retro:
+          lessons:
+            lesson-1: {}
+        hello-world-batman:
+          lessons:
+            lesson-1: {}
+        csa4-exemplars:
+          lessons:
+            new lesson: {}
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15:
+              name: Prüfungstag
+          lesson_groups:
+            lesson group:
+              display_name: Inhalt
+            content:
+              display_name: Inhalt
+            lesson_group:
+              display_name: Inhalt
+            lessonGroup-2:
+              display_name: Inhalt
+        csc-things:
           lessons:
             lesson-1: {}

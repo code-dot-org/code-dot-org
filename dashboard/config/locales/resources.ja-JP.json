@@ -19,74 +19,228 @@
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
-          "name": "スプライトを作る"
+          "name": "スプライトを作る",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
-          "name": "スプライトラボのドキュメント"
+          "name": "スプライトラボのドキュメント",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "実行中のスプライト"
+          "name": "実行中のスプライト",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
+        },
+        "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "言葉の力：レッスンスライド",
+          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": "言葉の力：言葉の力\t",
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2021": {
+          "name": "言葉の力：言葉が人の心を傷つける",
+          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
+        },
+        "the_power_of_words_lesson_quiz/coursef/2021": {
+          "name": "言葉の力：レッスンクイズ",
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
+        },
+        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
+          "name": "言葉の力：レッスンクイズ",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
+        },
+        "variables_blank_space_stories/coursef/2021": {
+          "name": "変数：ブランクスペースストーリー",
+          "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "ブランクスペースストーリー",
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+        },
+        "blank_space_stories/coursef/2021": {
+          "name": "ブランクスペースストーリー",
+          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
+        },
+        "text_and_prompts/coursef/2021": {
+          "name": "テキストとプロンプト",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
+        },
+        "user_input_programs/coursef/2021": {
+          "name": "ユーザーインプットプログラム",
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+        },
+        "mini_project_user_input_programs/coursef/2021": {
+          "name": "ミニプロジェクト：ユーザーインプットプログラム",
+          "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68"
+        },
+        "teacher_sandbox_level/coursef/2021": {
+          "name": "教師用サンドボックスレベル",
+          "url": "https://studio.code.org/levels/27300"
+        },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "ミニプロジェクト：ユーザーインプットプログラム",
+          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "オンラインでたちどまって考える",
           "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Forループを楽しむ"
+          "name": "Forループを楽しむ",
+          "url": "https://youtu.be/mX857v5B4gE"
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "Forループゲーム - 評価キー",
+          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Forループを楽しむ"
+          "name": "Forループを楽しむ",
+          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Forループを楽しむ"
+          "name": "Forループを楽しむ",
+          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Forループを楽しむ"
+          "name": "Forループを楽しむ",
+          "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Forループを楽しむ"
+          "name": "Forループを楽しむ",
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
+        },
+        "course-cf-blockly-blocks/coursef/2021": {
+          "name": "アンプラグドブロック（コースC-F）",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "running-simulations/coursef/2021": {
-          "name": "シミュレーションの実行"
+          "name": "シミュレーションの実行",
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai-ml/coursef/2021": {
-          "name": " 機械学習"
+          "name": " 機械学習",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk><https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "ai-training/coursef/2021": {
+          "name": "人工知能（AI）：トレーニングデータとバイアス",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "ai-societal/coursef/2021": {
+          "name": "人工知能（AI）：社会への影響",
+          "url": "https://youtu.be/ng4c1g3COfs"
         },
         "unplugged-video-internet/coursef/2021": {
-          "name": "インターネット"
+          "name": "インターネット",
+          "url": "https://youtu.be/mFOUbqYv1Sc"
+        },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "IPアドレスカードと配信タイプカード",
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
         },
         "csf-internet-assessment/coursef/2021": {
-          "name": "インターネット"
+          "name": "インターネット",
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
         },
         "assessment-answer-internet/coursef/2021": {
-          "name": "インターネット"
+          "name": "インターネット",
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
+        },
+        "get-site-ip-com/coursef/2021": {
+          "name": "get-site-ip-com",
+          "url": "http://get-site-ip.com/"
+        },
+        "design-process/coursef/2021": {
+          "name": "設計プロセス",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "最終プロジェクト設計",
+          "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "name": "コンピュータサイエンスの基礎 最終プロジェクト",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+        },
+        "csta_standards_mapping/coursef/2021": {
+          "name": "CSTA標準マッピング",
+          "url": "https://studio.code.org/s/coursef-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "コモンコアおよびNGSSガイダンス",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "教科横断的なエクステンションアクティビティ",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": "コースボキャブラリー\t",
+          "url": "https://studio.code.org/s/coursef-2021/vocab"
         },
         "implementation_guide/coursef/2021": {
-          "name": "実装ガイド"
+          "name": "実装ガイド",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursef/2021": {
+          "name": "レッスンタイプガイド",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/coursef/2021": {
+          "name": "デバッグガイド",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursef/2021": {
-          "name": "カリキュラム ガイド"
+          "name": "カリキュラム ガイド",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursef/2021": {
+          "name": "2021年 ログの変更",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursef/2021": {
-          "name": "先生用フォーラム"
+          "name": "先生用フォーラム",
+          "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursef/2021": {
-          "name": "スプライトラボのドキュメント"
+          "name": "スプライトラボのドキュメント",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "バーチャルレッスンの変更",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "name": "デジタル証跡：レッスンスライド",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": " デジタルトレイルをたどる"
+          "name": " デジタル証跡：デジタル証跡をたどる",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "デジタル証跡：デジタル証跡スクエア",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "name": "デジタル証跡：動物の足あと",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
         },
         "mimi-activity/courseb/2021": {
-          "name": "動かせ！動かせ！"
+          "name": "動かせ！動かせ！",
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
         },
         "mimi-debugging/courseb/2021": {
-          "name": "動かせ！動かせ！"
+          "name": "動かせ！動かせ！",
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "動かせ！動かせ！"
+          "name": "動かせ！動かせ！",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "teacher-video-move-it/courseb/2021": {
-          "name": "動かせ！動かせ！"
+          "name": "動かせ！動かせ！",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
         },
         "feeling_faces_emotion_image/courseb/2021": {
           "name": "フィーリングフェイス絵文字",
@@ -96,52 +250,145 @@
           "name": "フィーリングフェイス",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
+        "jigsaw/courseb/2021": {
+          "name": "ドラッグアンドドロップの練習",
+          "url": "https://studio.code.org/s/jigsaw"
+        },
+        "class-section-video/courseb/2021": {
+          "name": "Code.orgでクラスセクションを作成する方法",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "name": "アンプラグドブロックリーブロック（1年生）",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
         "pair-programming-vid/courseb/2021": {
-          "name": "ペアプログラミング"
+          "name": "ペアプログラミング",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "name": "Wiggles - GoNoodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+        },
+        "20_20_20_rule/courseb/2021": {
+          "name": "20/20/20ルール",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "ハッピーマップゲームピース",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "compass-rose/courseb/2021": {
+          "name": "コンパスローズ",
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
           "name": "フィーリングフェイス - 絵文字",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "stevie_and_the_big_project/courseb/2021": {
-          "name": "スティーヴィーと大きなプロジェクト"
+          "name": "スティーヴィーと大きなプロジェクト",
+          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
         },
         "unspotted_bugs/courseb/2021": {
-          "name": "気づかれていないバグ"
+          "name": "気づかれていないバグ",
+          "url": "https://youtu.be/rah3DYlp5nQ"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
-          "name": "ルーピーをゲット"
+          "name": "ルーピーをゲット",
+          "url": "https://youtu.be/JoKTqHCni0M"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
-          "name": "ルーピーをゲット"
+          "name": "ルーピーをゲット",
+          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "ルーピーをゲット"
+          "name": "ルーピーをゲット",
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
-          "name": "ルーピーをゲット"
+          "name": "ルーピーをゲット",
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+        },
+        "csf-lesson-recommend/courseb/2021": {
+          "name": "コンピュータサイエンスの基礎 メインアクティビティのヒント",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "オンラインでたちどまって考える",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
+        "the-right-app-scenarios/courseb/2021": {
+          "name": "「ぴったりのアプリ」のシナリオ",
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+        },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "ビッグイベント"
+          "name": "ビッグイベント",
+          "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/courseb/2021": {
-          "name": "ビッグイベント"
+          "name": "ビッグイベント",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
         },
         "assessment-answer-big-event/courseb/2021": {
-          "name": "ビッグイベント"
+          "name": "ビッグイベント",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "ビッグイベント（コースA、B）",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+        },
+        "play_lab_project_planning_guide/courseb/2021": {
+          "name": "プレイラボプロジェクト計画ガイド",
+          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
+        },
+        "play_lab_project_planning_guide_1/courseb/2021": {
+          "name": "プレイラボプロジェクト計画ガイド",
+          "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
+        },
+        "csta_standards_mapping/courseb/2021": {
+          "name": "CSTA標準マッピング",
+          "url": "https://studio.code.org/s/courseb-2021/standards"
+        },
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "コモンコアおよびNGSSガイダンス",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
+        "cross-curricular_extension_activities/courseb/2021": {
+          "name": "教科横断的なエクステンションアクティビティ",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/courseb/2021": {
+          "name": "コースボキャブラリー",
+          "url": "https://studio.code.org/s/courseb-2021/vocab"
         },
         "implementation_guide/courseb/2021": {
-          "name": "実装ガイド"
+          "name": "実装ガイド",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/courseb/2021": {
+          "name": "レッスンタイプガイド",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "デバッグガイド",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/courseb/2021": {
-          "name": "カリキュラム ガイド"
+          "name": "カリキュラム ガイド",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/courseb/2021": {
+          "name": "2021年 ログの変更",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/courseb/2021": {
-          "name": "先生用フォーラム"
+          "name": "先生用フォーラム",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "バーチャルレッスンの変更",
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
           "name": " 私のオンラインネイバーフッド"
@@ -151,13 +398,42 @@
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
         },
         "pair-programming-vid/coursea/2021": {
-          "name": "ペアプログラミング"
+          "name": "ペアプログラミング",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "20_20_20_rule/coursea/2021": {
+          "name": "20/20/20ルール",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "ハッピーマップ"
+          "name": "ハッピーマップ",
+          "url": "https://youtu.be/hrnhiKAQ1_k"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "ハッピーマップゲームピース",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
           "name": "フィーリングフェイス - 絵文字"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "アンプラグドブロックリーブロック（1年生）",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "20/20/20ルール",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "name": "Wiggles - GoNoodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "ステップボタンでデバッグする",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4><https://videos.code.org/csf/debugging-k1-blocks.mp4"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "フィーリングフェイス絵文字",
@@ -175,9 +451,15 @@
           "name": "フィーリングフェイス",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
+        "pair-programming/coursea/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "フィーリングフェイス絵文字",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "csf_lesson_recommendations/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "オンラインでたちどまって考える",
@@ -187,31 +469,78 @@
           "name": "フィーリングフェイス絵文字",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
+        "csf_lesson_recommendations_1/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
         "unplugged-video-big-event/coursea/2021": {
-          "name": "ビッグイベント"
+          "name": "ビッグイベント",
+          "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursea/2021": {
-          "name": "ビッグイベント"
+          "name": "ビッグイベント",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
         },
         "assessment-answer-big-event/coursea/2021": {
-          "name": "ビッグイベント"
+          "name": "ビッグイベント",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "ビッグイベント（コースA、B）",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
           "name": "フィーリングフェイス - 絵文字",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "コンピュータサイエンスの基礎 メインアクティビティのヒント",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
           "name": "フィーリングフェイス - 絵文字",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
+        "csf_lesson_recommendations_2/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "CSTA標準マッピング"
+        },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "コモンコアおよびNGSSガイダンス"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "教科横断的なエクステンションアクティビティ"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "コースボキャブラリー"
+        },
         "implementation_guide/coursea/2021": {
-          "name": "実装ガイド"
+          "name": "実装ガイド",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursea/2021": {
+          "name": "レッスンタイプガイド",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "デバッグガイド",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursea/2021": {
-          "name": "カリキュラム ガイド"
+          "name": "カリキュラム ガイド",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursea/2021": {
+          "name": "2021年 ログの変更",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursea/2021": {
-          "name": "先生用フォーラム"
+          "name": "先生用フォーラム",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "バーチャルレッスンの変更"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "ネット上の意地悪への4つの対策：レッスンスライド",
@@ -222,41 +551,63 @@
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "私のロボットの友だち"
+          "name": "ロボットのお友だち"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "私のロボットの友だち"
+          "name": "ロボットのお友だち"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "私のロボットの友だち"
+          "name": "ロボットのお友だち",
+          "url": "https://youtu.be/xaW3PAzHxCU"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "私のロボットの友だち"
+          "name": "ロボットのお友だち"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "私のロボットの友だち"
+          "name": "ロボットのお友だち"
+        },
+        "unplugged-maze-blocks/coursec/2021": {
+          "name": "アンプラグド迷路ブロック",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "ペアプログラミング"
+          "name": "ペアプログラミング",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "コンピュータサイエンスの基礎 メインアクティビティのヒント",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "debugging_guide/coursec/2021": {
+          "name": "デバッグガイド",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
+        },
+        "course-cf-blockly-blocks/coursec/2021": {
+          "name": "アンプラグドブロック（コースC-F）",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "フィーリングフェイス絵文字"
         },
         "unplugged-video-big-event/coursec/2021": {
-          "name": "ビッグイベント"
+          "name": "ビッグイベント",
+          "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "name": "ビッグイベント"
+          "name": "ビッグイベント",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
         },
         "assessment-answer-big-event/coursec/2021": {
-          "name": "ビッグイベント"
+          "name": "ビッグイベント",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "pause_and_think_online/coursec/2021": {
           "name": "オンラインでたちどまって考える",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "バイナリ ブレスレット"
+          "name": "バイナリ ブレスレット",
+          "url": "https://youtu.be/3S2YfoO4_CM"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "バイナリ ブレスレット"
@@ -270,20 +621,55 @@
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "バイナリ ブレスレット"
         },
+        "play-lab-project-guide/coursec/2021": {
+          "name": "プレイラボプロジェクト計画ガイド"
+        },
+        "csta_standards_mapping/coursec/2021": {
+          "name": "CSTA標準マッピング"
+        },
+        "common_core_and_ngss_guidance/coursec/2021": {
+          "name": "コモンコアおよびNGSSガイダンス"
+        },
+        "cross-curricular_extension_activities/coursec/2021": {
+          "name": "教科横断的なエクステンションアクティビティ",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursec/2021": {
+          "name": "コースボキャブラリー"
+        },
         "implementation_guide/coursec/2021": {
-          "name": "実装ガイド"
+          "name": "実装ガイド",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursec/2021": {
+          "name": "レッスンタイプガイド",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "デバッグガイド",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursec/2021": {
-          "name": "カリキュラム ガイド"
+          "name": "カリキュラム ガイド",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursec/2021": {
+          "name": "2021年 ログの変更",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursec/2021": {
-          "name": "先生用フォーラム"
+          "name": "先生用フォーラム",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "バーチャルレッスンの変更"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "グラフ用紙のプログラミング"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "グラフ用紙のプログラミング"
+          "name": "グラフ用紙のプログラミング",
+          "url": "https://youtu.be/Y_paSrH2ffw"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
           "name": "グラフ用紙のプログラミング"
@@ -298,7 +684,8 @@
           "name": "グラフ用紙のプログラミング"
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "ペアプログラミング"
+          "name": "ペアプログラミング",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "プログラミングをリレーする"
@@ -307,10 +694,12 @@
           "name": "プログラミングをリレーする"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "プログラミングをリレーする"
+          "name": "プログラミングをリレーする",
+          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "プログラミングをリレーする"
+          "name": "プログラミングをリレーする",
+          "url": "https://youtu.be/l5MKkXbzOsk"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "プログラミングをリレーする"
@@ -318,9 +707,17 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "プログラミングをリレーする"
         },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": "アンプラグドブロック（コースC-F）",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
         "pause_and_think_online/coursed/2021": {
           "name": "オンラインでたちどまって考える",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "dance_party_unplugged/coursed/2021": {
+          "name": "ダンスパーティー：アンプラグド",
+          "url": "https://curriculum.code.org/hoc/unplugged/4/"
         },
         "feeling-faces-image/coursed/2021": {
           "name": "フィーリングフェイス",
@@ -331,7 +728,8 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "カードと条件"
+          "name": "カードと条件",
+          "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "カードと条件"
@@ -345,26 +743,68 @@
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "カードと条件"
         },
+        "csta_standards_mapping/coursed/2021": {
+          "name": "CSTA標準マッピング"
+        },
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "コモンコアおよびNGSSガイダンス"
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
+          "name": "教科横断的なエクステンションアクティビティ",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursed/2021": {
+          "name": "コースボキャブラリー"
+        },
         "implementation_guide/coursed/2021": {
-          "name": "実装ガイド"
+          "name": "実装ガイド",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursed/2021": {
+          "name": "レッスンタイプガイド",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "デバッグガイド",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursed/2021": {
-          "name": "カリキュラム ガイド"
+          "name": "カリキュラム ガイド",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursed/2021": {
+          "name": "2021年 ログの変更",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "先生用フォーラム"
+          "name": "先生用フォーラム",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "バーチャルレッスンの変更"
+        },
+        "unplugged_maze_blocks/express/2021": {
+          "name": "アンプラグド迷路ブロック",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair_programming/express/2021": {
-          "name": "ペアプログラミング"
+          "name": "ペアプログラミング",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "unplugged_blocks_courses_c-f_/express/2021": {
+          "name": "アンプラグドブロック（コースC-F）",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "sprite_lab_documentation/express/2021": {
-          "name": "スプライトラボのドキュメント"
+          "name": "スプライトラボのドキュメント",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
           "name": "スプライトを作る"
         },
         "sprite_lab_documentation_1/express/2021": {
-          "name": "スプライトラボのドキュメント"
+          "name": "スプライトラボのドキュメント",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
           "name": "実行中のスプライト"
@@ -373,28 +813,95 @@
           "name": "オンラインでたちどまって考える",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
+        "pair_programming_video/express/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "unplugged_blocks_courses_c-f__1/express/2021": {
+          "name": "アンプラグドブロック（コースC-F）",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__2/express/2021": {
+          "name": "アンプラグドブロック（コースC-F）",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__3/express/2021": {
+          "name": "アンプラグドブロック（コースC-F）",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": "アンプラグドブロック（コースC-F）",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": "アンプラグドブロック（コースC-F）",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "text_and_prompts/express/2021": {
+          "name": "テキストとプロンプト",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
+        },
         "variables_video/express/2021": {
           "name": "変数（へんすう）"
         },
+        "rubric-csf-final-projects/express/2021": {
+          "name": "コンピュータサイエンスの基礎 最終プロジェクト",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+        },
+        "csta_standards_mapping/express/2021": {
+          "name": "CSTA標準マッピング"
+        },
+        "course_vocabulary_1/express/2021": {
+          "name": "コースボキャブラリー\t"
+        },
         "teacher_forum_1/express/2021": {
-          "name": "先生用フォーラム"
+          "name": "先生用フォーラム",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "debugging_guide/express/2021": {
+          "name": "デバッグガイド"
         },
         "pair-programming-vid/pre-express/2021": {
-          "name": "ペアプログラミング"
+          "name": "ペアプログラミング",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "class-section-video/pre-express/2021": {
+          "name": "Code.orgでクラスセクションを作成する方法",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "feeling-faces-image/pre-express/2021": {
           "name": "フィーリングフェイス",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "20/20/20ルール",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+        },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "オンラインでたちどまって考える",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
+        "csta_standards_mapping/pre-express/2021": {
+          "name": "CSTA標準マッピング"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "name": "コースボキャブラリー\t"
+        },
         "teacher_forum_1/pre-express/2021": {
-          "name": "先生用フォーラム"
+          "name": "先生用フォーラム",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "デバッグガイド"
+        },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "Follow the Algorithm"
         },
         "sprite_lab_documentation/coursee/2021": {
-          "name": "スプライトラボのドキュメント"
+          "name": "スプライトラボのドキュメント",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
           "name": " スーパー デジタル市民"
@@ -403,20 +910,80 @@
           "name": "オンラインでたちどまって考える",
           "url": "https://youtu.be/X_duZ-1LApg"
         },
+        "unplugged-video-songwriting-functions/coursee/2021": {
+          "name": "関数を使ったソングライティング",
+          "url": "https://youtu.be/5iDCKkI6y2Y"
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "関数アンプラグド：ソングライティング"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": "関数アンプラグド：ソングライティング"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": "関数アンプラグド：ソングライティング"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": "関数アンプラグド：ソングライティング"
+        },
+        "course-cf-blockly-blocks/coursee/2021": {
+          "name": "アンプラグドブロック（コースC-F）",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "アクセシビリティのための設計"
         },
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "コンピュータサイエンスの基礎 最終プロジェクト",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+        },
+        "design-process/coursee/2021": {
+          "name": "設計プロセス",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+        },
+        "csta_standards_mapping/coursee/2021": {
+          "name": "CSTA標準マッピング"
+        },
+        "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "コモンコアおよびNGSSガイダンス"
+        },
+        "cross-curricular_extension_activities/coursee/2021": {
+          "name": "教科横断的なエクステンションアクティビティ",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursee/2021": {
+          "name": "コースボキャブラリー\t"
+        },
         "implementation_guide/coursee/2021": {
-          "name": "実装ガイド"
+          "name": "実装ガイド",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursee/2021": {
+          "name": "レッスンタイプガイド",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/coursee/2021": {
+          "name": "デバッグガイド",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursee/2021": {
-          "name": "カリキュラム ガイド"
+          "name": "カリキュラム ガイド",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursee/2021": {
+          "name": "2021年 ログの変更",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursee/2021": {
-          "name": "先生用フォーラム"
+          "name": "先生用フォーラム",
+          "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursee/2021": {
-          "name": "スプライトラボのドキュメント"
+          "name": "スプライトラボのドキュメント",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "バーチャルレッスンの変更"
         }
       }
     }

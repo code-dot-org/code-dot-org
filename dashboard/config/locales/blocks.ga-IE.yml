@@ -1100,6 +1100,13 @@ ga:
             '"rain"': báisteach
       gamelab_makeNewSpriteAnon:
         text: déan sprid nua {ANIMATION_NAME} {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ar dheis
+            '90': síos
+            '180': ar chlé
+            '270': suas
       gamelab_mirrorSprite:
         text: aghaidh {SPRITE} {DIRECTION}
         options:
@@ -1120,6 +1127,7 @@ ga:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": cnagadh
+            "'sound://category_digital/jump_7.mp3'": léim
       gamelab_printText:
         text: priontáil {TEXT}
       gamelab_randColor:
@@ -1532,6 +1540,8 @@ ga:
             '"ripples"': Tonnáin
           PALETTE:
             '"rainbow"': Tuar ceatha
+      PoemBot_setBackgroundImageAs:
+        text: 'socraigh an cúlra: {IMG}'
       PoemBot_setForegroundEffect:
         text: 'socraigh éifeacht an tulra: {EFFECT}'
         options:
@@ -1557,6 +1567,8 @@ ga:
             shrinking: crapadh
             spinning_right: casadh ar deiseal
             wandering: fánaíocht
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       RyanLab_moveForward:
         text: téigh ar aghaidh
       RyanLab_turnLeft:

@@ -16,7 +16,7 @@
   "spritelabFeedbackCreateTwoSprites": "Du benötigst genauch zwei Sprites.",
   "spritelabFeedbackTwoSpritesWithCostumes": "Deine beiden Sprites benötigen unterschiedliche Kostüme.",
   "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "Du musst zwei verschiedene Sprites mit unterschiedlichen Kostümen erstellen, von denen beide ein Verhalten zugewiesen haben.",
-  "spritelabFeedbackClickSprite": "Stelle sicher, dass du du auf deinen Sprite klickst nachdem du auf `Ausführen` geklickt hast.",
+  "spritelabFeedbackClickSprite": "Achte darauf, dass du  deine  Sprite anklickst, nachdem du auf `Ausführen` geklickt hast.",
   "spritelabFeedbackUseSpinningBehavior": "Dein Sprite sollte beginnen sich zu drehen. Versuche das Verhalten zu verändern.",
   "spritelabFeedbackPinkAlienBehavior": "Dein Sprite des rosa Außerirdischen hat sein Verhalten nicht begonnen.",
   "spritelabFeedbackCreateThreeAliens": "Du musst einen blauen, einen rosa-farbenen und einen gelben Außerirdischen erstellen.",

@@ -1114,6 +1114,13 @@ ja:
             '"rain"': 雨
       gamelab_makeNewSpriteAnon:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': 右 に
+            '90': 下 に
+            '180': 左 に
+            '270': 上 に
       gamelab_mirrorSprite:
         text: "{SPRITE} 顔 {DIRECTION}"
         options:
@@ -1140,6 +1147,7 @@ ja:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": ボタン
             "'sound://category_collect/clicky_crunch.mp3'": ドスン
+            "'sound://category_digital/jump_7.mp3'": ジャンプする
       gamelab_pointInDirection:
         text: ポイント {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1590,6 +1598,8 @@ ja:
             '"ripples"': さざ波
           PALETTE:
             '"rainbow"': 虹
+      PoemBot_setBackgroundImageAs:
+        text: 背景を次の値に設定する {IMG}
       PoemBot_setForegroundEffect:
         text: 前景エフェクトを {EFFECT} にセット
         options:

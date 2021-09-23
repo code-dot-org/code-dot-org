@@ -1102,6 +1102,13 @@ fi:
             '"rain"': sade
       gamelab_makeNewSpriteAnon:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': oikealle
+            '90': alas
+            '180': vasemmalle
+            '270': ylös
       gamelab_mirrorSprite:
         text: "{SPRITE} kasvot {DIRECTION}"
         options:
@@ -1135,6 +1142,7 @@ fi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": murskaa
+            "'sound://category_digital/jump_7.mp3'": hyppää
       gamelab_pointInDirection:
         text: suuntaa {SPRITE} {DIRECTION}
         options:
@@ -1584,6 +1592,8 @@ fi:
             '"ripples"': Aaltoilu
           PALETTE:
             '"rainbow"': Sateenkaari
+      PoemBot_setBackgroundImageAs:
+        text: aseta tausta {IMG}
       PoemBot_setForegroundEffect:
         text: aseta etuefekti {EFFECT}
         options:

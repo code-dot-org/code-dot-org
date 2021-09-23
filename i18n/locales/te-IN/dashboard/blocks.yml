@@ -916,6 +916,13 @@ te:
             '"v"': v
             '"w"': w
             '"z"': z
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': కుడి
+            '90': డౌన్
+            '180': ఎడమ
+            '270': అప్
       gamelab_mirrorSprite:
         options:
           DIRECTION:

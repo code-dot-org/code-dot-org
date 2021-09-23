@@ -1616,6 +1616,10 @@
           "moving north": "北に動かす",
           "moving east": "東に動かす",
           "shrinking": "小さくする"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "回復する",
+          "moving left and right": "左右に動かす"
         }
       }
     }

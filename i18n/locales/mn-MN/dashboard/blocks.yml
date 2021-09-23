@@ -1111,6 +1111,13 @@ mn:
             '"rain"': бороотой
       gamelab_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': баруун
+            '90': доошоо
+            '180': зүүн
+            '270': дээшээ
       gamelab_mirrorSprite:
         text: "{SPRITE} нь {DIRECTION} руу харж байна"
         options:
@@ -1142,6 +1149,7 @@ mn:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": хямрах
+            "'sound://category_digital/jump_7.mp3'": үсрэх
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION}-г заах"
         options:
@@ -1601,6 +1609,8 @@ mn:
             '"ripples"': Долгионууд
           PALETTE:
             '"rainbow"': Солонго
+      PoemBot_setBackgroundImageAs:
+        text: суурь өнгийг {IMG} руу тохируулах
       PoemBot_setForegroundEffect:
         text: урд газрын нөлөөг {EFFECT}-р тохируулах
         options:
@@ -1610,6 +1620,8 @@ mn:
             '"hearts"': Өнгөлөг зүрх
             '"confetti"': Конфетти
             '"starburst"': Оддын тэсрэлт
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       RyanLab_moveForward:
         text: урагш хөдлөх
       RyanLab_turnLeft:
