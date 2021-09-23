@@ -37,6 +37,7 @@ import {
 import {
   Subjects,
   VirtualOnlySubjects,
+  NotFundedSubjects,
   MustSuppressEmailSubjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -155,10 +156,6 @@ export class WorkshopForm extends React.Component {
         props.workshop.sessions
       );
       this.loadAvailableFacilitators(props.workshop.course);
-
-      if (props.workshop.course === 'Admin/Counselor Workshop') {
-        initialState.suppress_email = true;
-      }
     }
 
     this.loadRegionalPartners();
@@ -341,7 +338,10 @@ export class WorkshopForm extends React.Component {
               value={value}
               onChange={this.handleFundingChange}
               style={this.getInputStyle()}
-              disabled={this.props.readOnly}
+              disabled={
+                this.props.readOnly ||
+                NotFundedSubjects.includes(this.state.subject)
+              }
             >
               <option />
               {options.map((o, i) => (
@@ -366,6 +366,7 @@ export class WorkshopForm extends React.Component {
     const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
     const showFeeInput = isCsf;
     const showMapChoice = isCsf;
+    const showFundedInput = !isAdminCounselor;
 
     return (
       <FormGroup>
@@ -388,21 +389,19 @@ export class WorkshopForm extends React.Component {
             </p>
           </FormGroup>
         )}
-        {!isAdminCounselor && (
-          <Row>
-            <Col smOffset={1}>
-              <Row>
-                {showFeeInput && (
-                  <Col sm={6}>{this.renderFeeInput(validation)}</Col>
-                )}
-              </Row>
-              {showMapChoice && this.renderOnMapRadios(validation)}
-              {/* A small gap to resemble the gap below the fee input. */}
-              {showFeeInput && <div style={{height: 7}}>&nbsp;</div>}
-              {this.renderFundedSelect(validation)}
-            </Col>
-          </Row>
-        )}
+        <Row>
+          <Col smOffset={1}>
+            <Row>
+              {showFeeInput && (
+                <Col sm={6}>{this.renderFeeInput(validation)}</Col>
+              )}
+            </Row>
+            {showMapChoice && this.renderOnMapRadios(validation)}
+            {/* A small gap to resemble the gap below the fee input. */}
+            {showFeeInput && <div style={{height: 7}}>&nbsp;</div>}
+            {showFundedInput && this.renderFundedSelect(validation)}
+          </Col>
+        </Row>
         <Row>
           <Col sm={5}>
             <FormGroup validationState={validation.style.virtual}>
@@ -423,37 +422,35 @@ export class WorkshopForm extends React.Component {
               <HelpBlock>{validation.help.virtual}</HelpBlock>
             </FormGroup>
           </Col>
-          {!isAdminCounselor && (
-            <Col sm={5}>
-              <FormGroup validationState={validation.style.suppress_email}>
-                <ControlLabel>
-                  Enable workshop reminders?
-                  <HelpTip>
-                    <p>
-                      <strong>
-                        This functionality is disabled for all academic year
-                        workshops.
-                      </strong>
-                    </p>
-                    <p>
-                      For in-person CSF workshops, choose if you'd like
-                      automated 10-day and 3-day pre-workshop reminders to be
-                      sent to your participants.
-                    </p>
-                  </HelpTip>
-                </ControlLabel>
-                <SelectSuppressEmail
-                  onChange={this.handleSuppressEmailChange}
-                  value={this.state.suppress_email || false}
-                  readOnly={
-                    this.props.readOnly ||
-                    MustSuppressEmailSubjects.includes(this.state.subject)
-                  }
-                />
-                <HelpBlock>{validation.help.suppress_email}</HelpBlock>
-              </FormGroup>
-            </Col>
-          )}
+          <Col sm={5}>
+            <FormGroup validationState={validation.style.suppress_email}>
+              <ControlLabel>
+                Enable workshop reminders?
+                <HelpTip>
+                  <p>
+                    <strong>
+                      This functionality is disabled for all academic year
+                      workshops.
+                    </strong>
+                  </p>
+                  <p>
+                    For in-person CSF workshops, choose if you'd like automated
+                    10-day and 3-day pre-workshop reminders to be sent to your
+                    participants.
+                  </p>
+                </HelpTip>
+              </ControlLabel>
+              <SelectSuppressEmail
+                onChange={this.handleSuppressEmailChange}
+                value={this.state.suppress_email || false}
+                readOnly={
+                  this.props.readOnly ||
+                  MustSuppressEmailSubjects.includes(this.state.subject)
+                }
+              />
+              <HelpBlock>{validation.help.suppress_email}</HelpBlock>
+            </FormGroup>
+          </Col>
         </Row>
       </FormGroup>
     );
@@ -738,6 +735,12 @@ export class WorkshopForm extends React.Component {
   handleSubjectChange = event => {
     const subject = this.handleFieldChange(event);
 
+    if (NotFundedSubjects.includes(subject)) {
+      this.setState({
+        funded: false
+      });
+    }
+
     if (VirtualOnlySubjects.includes(subject)) {
       this.setState({
         virtual: true
@@ -1003,7 +1006,7 @@ export class WorkshopForm extends React.Component {
                 <HelpBlock>{validation.help.capacity}</HelpBlock>
               </FormGroup>
             </Col>
-            <Col sm={5}>
+            <Col sm={4}>
               <CourseSelect
                 course={this.state.course}
                 facilitatorCourses={this.props.facilitatorCourses}
