@@ -6181,8 +6181,7 @@ zh-TW:
               name: 其它
             Thanks:
               name: 謝謝
-            " ":
-              name: ''
+            " ": {}
         csp-pre-survey-test-2017:
           lessons:
             new stage:
@@ -17833,3 +17832,27 @@ zh-TW:
               name: 加速計
             lesson-19:
               name: 專案
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: 視窗元件
+            lesson-3:
+              name: 工具
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 階段
+            lessonGroup-3:
+              display_name: 專案
+        csa4-exemplars:
+          lessons:
+            lesson-15:
+              name: 評估日
+          lesson_groups:
+            lesson group:
+              display_name: 內容
+            content:
+              display_name: 內容
+            lesson_group:
+              display_name: 內容
+            lessonGroup-2:
+              display_name: 內容

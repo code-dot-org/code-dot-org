@@ -451,7 +451,7 @@
           "Course_4_SCV_6_f": "**Lösung:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"variables_set\" inline=\"false\">\n            <title name=\"VAR\">red1</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">0</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">green1</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">175</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"variables_set\" inline=\"false\">\n                    <title name=\"VAR\">blue1</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">200</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"variables_set\" inline=\"false\">\n                        <title name=\"VAR\">red2</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">100</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"variables_set\" inline=\"false\">\n                            <title name=\"VAR\">green2</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">50</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"variables_set\" inline=\"false\">\n                                <title name=\"VAR\">blue2</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">150</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"variables_set\" inline=\"false\">\n                                    <title name=\"VAR\">length</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">70</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"variables_set\" inline=\"false\">\n                                        <title name=\"VAR\">sides</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">5</title>\n                                          </block>\n                                        </value>\n                                        <next>\n                                          <block type=\"controls_repeat_ext\" inline=\"true\">\n                                            <value name=\"TIMES\">\n                                              <block type=\"math_arithmetic\" inline=\"true\">\n                                                <title name=\"OP\">MULTIPLY</title>\n                                                <value name=\"A\">\n                                                  <block type=\"math_number\">\n                                                    <title name=\"NUM\">2</title>\n                                                  </block>\n                                                </value>\n                                                <value name=\"B\">\n                                                  <block type=\"variables_get\">\n                                                    <title name=\"VAR\">sides</title>\n                                                  </block>\n                                                </value>\n                                              </block>\n                                            </value>\n                                            <statement name=\"DO\">\n                                              <block type=\"controls_repeat_ext\" inline=\"true\">\n                                                <value name=\"TIMES\">\n                                                  <block type=\"variables_get\">\n                                                    <title name=\"VAR\">sides</title>\n                                                  </block>\n                                                </value>\n                                                <statement name=\"DO\">\n                                                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                                                    <value name=\"TIMES\">\n                                                      <block type=\"variables_get\">\n                                                        <title name=\"VAR\">sides</title>\n                                                      </block>\n                                                    </value>\n                                                    <statement name=\"DO\">\n                                                      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                                                        <value name=\"COLOUR\">\n                                                          <block type=\"colour_rgb\" inline=\"false\">\n                                                            <value name=\"RED\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">red1</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"GREEN\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">green1</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"BLUE\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">blue1</title>\n                                                            </block>\n                                                            </value>\n                                                          </block>\n                                                        </value>\n                                                        <next>\n                                                          <block type=\"draw_move\" inline=\"true\">\n                                                            <title name=\"DIR\">moveForward</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">length</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_turn\" inline=\"true\">\n                                                            <title name=\"DIR\">turnLeft</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"math_number\">\n                                                            <title name=\"NUM\">360</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                                                            <value name=\"COLOUR\">\n                                                            <block type=\"colour_rgb\" inline=\"false\">\n                                                            <value name=\"RED\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">red2</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"GREEN\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">green2</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"BLUE\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">blue2</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_move\" inline=\"true\">\n                                                            <title name=\"DIR\">moveForward</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">length</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_turn\" inline=\"true\">\n                                                            <title name=\"DIR\">turnRight</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"math_number\">\n                                                            <title name=\"NUM\">360</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </next>\n                                                            </block>\n                                                            </next>\n                                                            </block>\n                                                            </next>\n                                                            </block>\n                                                            </next>\n                                                          </block>\n                                                        </next>\n                                                      </block>\n                                                    </statement>\n                                                    <next>\n                                                      <block type=\"draw_turn\" inline=\"true\">\n                                                        <title name=\"DIR\">turnRight</title>\n                                                        <value name=\"VALUE\">\n                                                          <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"math_number\">\n                                                            <title name=\"NUM\">360</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                          </block>\n                                                        </value>\n                                                      </block>\n                                                    </next>\n                                                  </block>\n                                                </statement>\n                                                <next>\n                                                  <block type=\"draw_turn\" inline=\"true\">\n                                                    <title name=\"DIR\">turnRight</title>\n                                                    <value name=\"VALUE\">\n                                                      <block type=\"math_arithmetic\" inline=\"true\">\n                                                        <title name=\"OP\">DIVIDE</title>\n                                                        <value name=\"A\">\n                                                          <block type=\"math_number\">\n                                                            <title name=\"NUM\">180</title>\n                                                          </block>\n                                                        </value>\n                                                        <value name=\"B\">\n                                                          <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                          </block>\n                                                        </value>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </next>\n                                              </block>\n                                            </statement>\n                                          </block>\n                                        </next>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "CourseD_Dance_2020_01": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.\n\n_Dieser Level endet nach 4 Takten._",
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Stelle sicher, dass ein Tänzer auf dem Bildschirm erscheint.\n\n_Dieser Level endet nach 4 Takten._",
           "challenges": "**Weitere Herausforderungen** \n\n-   Wähle das Abspielen eines anderen Songs aus.\n-   Bringen Deine Tänzer an einen neuen Ort. \n-   Erstelle mehr als einen Tänzer."
         },
         "CourseD_Dance_2020_02": {
@@ -463,10 +463,10 @@
           "challenges": "**Optionale Herausforderung** \n\n-   Lasse eine Tänzerin auf die Pfeiltasten links und rechts reagieren."
         },
         "CourseD_Dance_2020_04": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.\n\n_Dieser Level endet nach 8 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.\n\n_Dieser Level endet nach 7 Takten._"
         },
         "CourseD_Dance_2020_05": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.\n\n_Dieser Level endet nach 12 Takten._",
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Nach 6 Takten muss Dein Tänzer einen anderen Tanz machen als nach 4 Takten.\n\n_Dieser Level endet nach 11 Takten._",
           "challenges": "**Optionale Herausforderung** \n\n-   Ändere den Hintergrund, wenn die Tänzer eine andere Bewegung durchführen."
         },
         "CourseD_Dance_2020_06": {
@@ -487,41 +487,41 @@
           "next_previous": "**Optionale Herausforderung**\n\n-   Du kannst diesen neuen Ereignis-Block auch verwenden, um durch eine Liste von Tanzschritten zu gehen, indem Du bei den Schritten `(Zufall)`, `(Nächster)` oder `(Vorheriger)` auswählst.\n     <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
-          "alternate": "Der 'alterniere' Baustein befindet sich in der Kategorie \"Tänzer\"."
+          "alternate": "Der Baustein für Muster von Tanzbewegungen befindet sich in der Kategorie \"Tänzer\"."
         },
         "CourseD_Dance_Party_01": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.\n\n_Dieser Level endet nach 4 Takten._",
-          "challenges": "**Optionale Herausforderungen**\n\n-   Wähle einen anderen Song.\n-   Benenne deine Tänzer um."
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Stelle sicher, dass ein Tänzer auf dem Bildschirm erscheint.\n\n_Dieser Level endet nach 4 Takten._",
+          "challenges": "**Optionale Herausforderungen**\n\n-   Wähle einen anderen Song.\n-   Benenne Deinen Tänzer um."
         },
         "CourseD_Dance_Party_02": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.\n\n_Dieser Level endet nach 8 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.\n\n_Dieser Level endet nach 7 Takten._"
         },
         "CourseD_Dance_Party_03": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.\n\n_Dieser Level endet nach 12 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Nach 6 Takten muss Dein Tänzer einen anderen Tanz machen als nach 4 Takten.\n\n_Dieser Level endet nach 11 Takten._"
         },
         "CourseD_Dance_Party_04": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.\n\n_Dieser Level endet nach 10 Takten._",
-          "challenges": "**Optionale Herausforderung**\n\nÄndern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"Takte\"</title></block></xml>-Ereignissen verbinden."
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Du musst sicherstellen, dass sich der Hintergrundeffekt irgendwann vor dem siebten Takt des Songs verändert.\n\n_Dieser Level endet nach 9 Takten._",
+          "challenges": "**Optionale Herausforderung**\n\nÄndere den Hintergrundeffekt an unterschiedlichen Stellen des Songs, in dem Du den neuen Block unter den <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> Events verknüpfst."
         },
         "CourseD_Dance_Party_06": {
           "validation": "**Wie schaffe ich dieses Level?**\n\n-   Du musst mindestens zwei Tänzer haben.\n\n_Dieses Level endet nach 5 Takten._",
-          "challenges": "**Optionale Herausforderung**\n\n-   Fügen Sie einen dritten Tänzer hinzu (oder so viele Sie möchten!)\n-   Lassen Sie alle Ihre Tänzer an verschiedenen Stellen in dem Song verschiedene Bewegungen ausführen."
+          "challenges": "**Optionale Herausforderung**\n\n-   Füge einen dritten Tänzer hinzu (oder so viele, wie Du möchtest!)\n-   Lasse alle Deine Tänzer an verschiedenen Stellen in dem Song verschiedene Bewegungen ausführen."
         },
         "CourseD_Dance_Party_08": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Zwei Tänzer benötigen eine andere Größe als 100.\n\n_Dieser Level endet nach 6 Takten._",
-          "challenges": "**Optionale Herausforderung**\n\n-   Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Zwei Tänzer müssen eine andere Größe als 100 haben.\n\n_Dieser Level endet nach 5 Takten._",
+          "challenges": "**Optionale Herausforderung**\n\n-   Experimentiere damit, andere Eigenschaften zu verändern (z.B. Breite, Höhe oder Rotation)"
         },
         "CourseD_Dance_Party_09": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Ändern Sie den Farbton mindestens eines Tänzers.\n\n_Dieser Level endet nach 8 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Ändere den Farbton von mindestens einem Tänzer.\n\n_Dieser Level endet nach 7 Takten._"
         },
         "CourseD_Dance_Party_10": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Eigenschaften für zwei oder mehr Tänzer müssen geändert werden.\n\n_Dieser Level endet nach 8 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Eigenschaften für zwei oder mehr Tänzer müssen geändert werden.\n\n_Dieser Level endet nach 7 Takten._"
         },
         "CourseD_Dance_Party_11": {
-          "validation": "**Wie schaffe ich dieses Level?**\n\n-   Sei einfach kreativ!\n\n_Dieses Level endet nach 7 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Sei einfach kreativ!\n\n_Dieser Level endet nach 7 Takten._"
         },
         "CourseD_Dance_Party_11_5": {
-          "validation": "**Wie schaffe ich dieses Level?**\n\n-   Sei einfach kreativ!\n\n_Dieses Level endet nach 7 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Sei einfach kreativ!\n\n_Dieser Level endet nach 7 Takten._"
         },
         "CourseD_Dance_Party_11b": {
           "validation": "**Wie schaffe ich diesen Level?**\n\n-   Verwenden Sie den Block \"Wenn Pfeiltaste nach links gedrückt\", um den Roboter einen Tanzschritt tun zu lassen, wenn Sie sie drücken.\n\n_Dieser Level endet nach 8 Takten._"
@@ -539,13 +539,13 @@
           "aquatic7": "Du kannst den ´wenn´ Baustein verwenden, um die richtigen Drehung zu machen."
         },
         "CourseE_HOC 2018 Level_9b": {
-          "voyage_aquatic_9a": "Was für ein wunderschönes Korallenriff! Die blaue Koralle ist der **rechte** Weg. Pass auf, dass die rote Koralle nicht **links** ist!"
+          "voyage_aquatic_9a": "Siehst du die roten und blauen \"Korallen\"-Blöcke? Benutze sie als Wegpunkte, um **rechts** oder **links** im Korallenriff abzubiegen."
         },
         "CourseE_HOC 2018 Level_9b_2020": {
-          "voyage_aquatic_9a": "Was für ein wunderschönes Korallenriff! Die blaue Koralle ist der **rechte** Weg. Pass auf, dass die rote Koralle nicht **links** ist!"
+          "voyage_aquatic_9a": "Siehst du die roten und blauen \"Korallen\"-Blöcke? Benutze sie als Wegpunkte, um **rechts** oder **links** im Korallenriff abzubiegen."
         },
         "Dance_2019_01": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.\n\n_Dieser Level endet nach 4 Takten._",
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Stelle sicher, dass ein Tänzer auf dem Bildschirm erscheint.\n\n_Dieser Level endet nach 4 Takten._",
           "challenges": "**Weitere Herausforderungen** \n\n-   Wähle das Abspielen eines anderen Songs aus.\n-   Bringen Deine Tänzer an einen neuen Ort. \n-   Erstelle mehr als einen Tänzer."
         },
         "Dance_2019_02": {
@@ -557,10 +557,10 @@
           "challenges": "**Optionale Herausforderung** \n\n-   Lasse eine Tänzerin auf die Pfeiltasten links und rechts reagieren."
         },
         "Dance_2019_04": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.\n\n_Dieser Level endet nach 8 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.\n\n_Dieser Level endet nach 7 Takten._"
         },
         "Dance_2019_05": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.\n\n_Dieser Level endet nach 12 Takten._",
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Nach 6 Takten muss Dein Tänzer einen anderen Tanz machen als nach 4 Takten.\n\n_Dieser Level endet nach 11 Takten._",
           "challenges": "**Optionale Herausforderung** \n\n-   Ändere den Hintergrund, wenn die Tänzer eine andere Bewegung durchführen."
         },
         "Dance_2019_06": {
@@ -581,47 +581,47 @@
           "next_previous": "**Optionale Herausforderung**\n\n-   Du kannst diesen neuen Ereignis-Block auch verwenden, um durch eine Liste von Tanzschritten zu gehen, indem Du bei den Schritten `(Zufall)`, `(Nächster)` oder `(Vorheriger)` auswählst.\n     <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.\n\n_Dieser Level endet nach 4 Takten._",
-          "challenges": "**Optionale Herausforderungen**\n\n-   Wähle einen anderen Song.\n-   Benenne deine Tänzer um."
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Stelle sicher, dass ein Tänzer auf dem Bildschirm erscheint.\n\n_Dieser Level endet nach 4 Takten._",
+          "challenges": "**Optionale Herausforderungen**\n\n-   Wähle einen anderen Song.\n-   Benenne Deinen Tänzer um."
         },
         "Dance_Party_02": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.\n\n_Dieser Level endet nach 8 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.\n\n_Dieser Level endet nach 7 Takten._"
         },
         "Dance_Party_03": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.\n\n_Dieser Level endet nach 12 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Nach 6 Takten muss Dein Tänzer einen anderen Tanz machen als nach 4 Takten.\n\n_Dieser Level endet nach 11 Takten._"
         },
         "Dance_Party_04": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.\n\n_Dieser Level endet nach 10 Takten._",
-          "challenges": "**Optionale Herausforderung**\n\nÄndern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"Takte\"</title></block></xml>-Ereignissen verbinden."
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Du musst sicherstellen, dass sich der Hintergrundeffekt irgendwann vor dem siebten Takt des Songs verändert.\n\n_Dieser Level endet nach 9 Takten._",
+          "challenges": "**Optionale Herausforderung**\n\nÄndere den Hintergrundeffekt an unterschiedlichen Stellen des Songs, in dem Du den neuen Block unter den <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> Events verknüpfst."
         },
         "Dance_Party_05": {
-          "validation": "\\*\\*Wie kann ich zur nächsten Stufe gelangen? \\*\\*\n\n-   Dein Tänzer sollte mindestens 4 verschiedene Tanzbewegungen durchlaufen, bevor das Level zuende ist.\n\n_Das Level endet nach 12 Takten._"
+          "validation": "**Wie komme ich durch diesen Level?**\n\n-   Dein Tänzer sollte mindestens 4 verschiedene Tanzbewegungen durchlaufen, bevor das Level zu Ende ist.\n\n_Das Level endet nach 12 Takten._"
         },
         "Dance_Party_06": {
           "validation": "**Wie schaffe ich dieses Level?**\n\n-   Du musst mindestens zwei Tänzer haben.\n\n_Dieses Level endet nach 5 Takten._",
-          "challenges": "**Optionale Herausforderung**\n\n-   Fügen Sie einen dritten Tänzer hinzu (oder so viele Sie möchten!)\n-   Lassen Sie alle Ihre Tänzer an verschiedenen Stellen in dem Song verschiedene Bewegungen ausführen."
+          "challenges": "**Optionale Herausforderung**\n\n-   Füge einen dritten Tänzer hinzu (oder so viele, wie Du möchtest!)\n-   Lasse alle Deine Tänzer an verschiedenen Stellen in dem Song verschiedene Bewegungen ausführen."
         },
         "Dance_Party_08": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Zwei Tänzer benötigen eine andere Größe als 100.\n\n_Dieser Level endet nach 6 Takten._",
-          "challenges": "**Optionale Herausforderung**\n\n-   Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Zwei Tänzer müssen eine andere Größe als 100 haben.\n\n_Dieser Level endet nach 5 Takten._",
+          "challenges": "**Optionale Herausforderung**\n\n-   Experimentiere damit, andere Eigenschaften zu verändern (z.B. Breite, Höhe oder Rotation)"
         },
         "Dance_Party_09": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Ändern Sie den Farbton mindestens eines Tänzers.\n\n_Dieser Level endet nach 8 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Ändere den Farbton von mindestens einem Tänzer.\n\n_Dieser Level endet nach 7 Takten._"
         },
         "Dance_Party_10": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Eigenschaften für zwei oder mehr Tänzer müssen geändert werden.\n\n_Dieser Level endet nach 8 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Eigenschaften für zwei oder mehr Tänzer müssen geändert werden.\n\n_Dieser Level endet nach 7 Takten._"
         },
         "Dance_Party_11": {
-          "validation": "**Wie schaffe ich dieses Level?**\n\n-   Sei einfach kreativ!\n\n_Dieses Level endet nach 7 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Sei einfach kreativ!\n\n_Dieser Level endet nach 7 Takten._"
         },
         "Dance_Party_11_5": {
-          "validation": "**Wie schaffe ich dieses Level?**\n\n-   Sei einfach kreativ!\n\n_Dieses Level endet nach 7 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Sei einfach kreativ!\n\n_Dieser Level endet nach 7 Takten._"
         },
         "Dance_Party_11b": {
-          "validation": "**Wie schaffe ich dieses Level?**\n\n-   Verwenden den Block \"Wenn Pfeiltaste nach links gedrückt\", um den Roboter einen Tanzschritt machen zu lassen, wenn Du sie drückst.\n\n_Dieses Level endet nach 7 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Verwende den Block `Wenn Pfeiltaste nach links gedrückt`, um den Roboter einen Tanzschritt machen zu lassen, wenn Du sie drückst.\n\n_Dieser Level endet nach 7 Takten_"
         },
         "Dance_Party_extras_alternate_2019": {
-          "alternate": "Der 'alterniere' Baustein befindet sich in der Kategorie \"Tänzer\"."
+          "alternate": "Der Baustein für Muster von Tanzbewegungen befindet sich in der Kategorie \"Tänzer\"."
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_b": "Wenn du die Funktionen korrekt aufrufst, ist dies der Weg, den du gehen werden...",
@@ -642,7 +642,7 @@
           "aquatic7": "Du kannst den ´wenn´ Baustein verwenden, um die richtigen Drehung zu machen."
         },
         "HOC 2018 Level_9b": {
-          "voyage_aquatic_9a": "Was für ein wunderschönes Korallenriff! Die blaue Koralle ist der **rechte** Weg. Pass auf, dass die rote Koralle nicht **links** ist!"
+          "voyage_aquatic_9a": "Siehst du die roten und blauen \"Korallen\"-Blöcke? Benutze sie als Wegpunkte, um **rechts** oder **links** im Korallenriff abzubiegen."
         },
         "MC_HOC_2017_01_RETRY": {
           "MC_HOC_2017_01_RETRY_a": "Ziehe einen \"vorwärts bewegen\"-Block aus der Werkzeugkiste in den Arbeitsbereich und füge ihn unter dem \"beim Ausführen\"-Block an.",
@@ -884,183 +884,183 @@
           "courseF_artist_variables5_d": "Dies ist das Muster, dem dein Künstler folgen wird: \n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "Overworld Avoid Monsters": {
-          "mc_8_a": "Es gibt ein paar Wege, die du einschlagen können. Welcher ist der kürzeste?",
-          "mc_8_b": "Verwende `Wiederholen`-Schleifen\\`, um deinen Code zu vereinfachen.",
+          "mc_8_a": "Es gibt ein paar Wege, die du einschlagen kannst. Welcher ist der Kürzeste?",
+          "mc_8_b": "Verwende `Wiederholen`-Schleifen, um deinen Code zu vereinfachen.",
           "mc_8_c": "Es ist dein Ziel, in die Türöffnung des Hauses am oberen Rand des Bildschirms zu gelangen."
         },
         "Overworld Avoid Monsters_2019": {
-          "mc_8_a": "Es gibt ein paar Wege, die du einschlagen können. Welcher ist der kürzeste?",
-          "mc_8_b": "Verwende `Wiederholen`-Schleifen\\`, um deinen Code zu vereinfachen.",
+          "mc_8_a": "Es gibt ein paar Wege, die du einschlagen kannst. Welcher ist der Kürzeste?",
+          "mc_8_b": "Verwende `Wiederholen`-Schleifen, um deinen Code zu vereinfachen.",
           "mc_8_c": "Es ist dein Ziel, in die Türöffnung des Hauses am oberen Rand des Bildschirms zu gelangen."
         },
         "Overworld Avoid Monsters_2020": {
-          "mc_8_a": "Es gibt ein paar Wege, die du einschlagen können. Welcher ist der kürzeste?",
-          "mc_8_b": "Verwende `Wiederholen`-Schleifen\\`, um deinen Code zu vereinfachen.",
+          "mc_8_a": "Es gibt ein paar Wege, die du einschlagen kannst. Welcher ist der Kürzeste?",
+          "mc_8_b": "Verwende `Wiederholen`-Schleifen, um deinen Code zu vereinfachen.",
           "mc_8_c": "Es ist dein Ziel, in die Türöffnung des Hauses am oberen Rand des Bildschirms zu gelangen."
         },
         "Overworld Chop Tree": {
-          "mc_2_a": "Du musst zweimal „vorwärts bewegen“ verwenden, um vor dem Baum zu stehen.",
-          "mc_2_b": "Der Befehl `Zerstören` sägt den Baum vor dir ab."
+          "mc_2_a": "Du musst zweimal `bewege vorwärts` verwenden, um vor dem Baum zu stehen.",
+          "mc_2_b": "Der `Zerstören`-Block sägt den Baum vor dir ab."
         },
         "Overworld Chop Tree_2019": {
-          "mc_2_a": "Du musst zweimal „vorwärts bewegen“ verwenden, um vor dem Baum zu stehen.",
-          "mc_2_b": "Der Befehl `Zerstören` sägt den Baum vor dir ab."
+          "mc_2_a": "Du musst zweimal `bewege vorwärts` verwenden, um vor dem Baum zu stehen.",
+          "mc_2_b": "Der `Zerstören`-Block sägt den Baum vor dir ab."
         },
         "Overworld Chop Tree_2020": {
-          "mc_2_a": "Du musst zweimal „vorwärts bewegen“ verwenden, um vor dem Baum zu stehen.",
-          "mc_2_b": "Der Befehl `Zerstören` sägt den Baum vor dir ab."
+          "mc_2_a": "Du musst zweimal `bewege vorwärts` verwenden, um vor dem Baum zu stehen.",
+          "mc_2_b": "Der `Zerstören`-Block sägt den Baum vor dir ab."
         },
         "Overworld Chop Trees": {
           "mc_4_a": "Du kannst die Bäume in beliebiger Reihenfolge fällen. Welcher Weg erfordert die geringste Anzahl von Blöcken?",
-          "mc_4_b": "Der Befehl `Zerstören` sägt den Baum vor dir ab."
+          "mc_4_b": "Der `Zerstören`-Block sägt den Baum vor dir ab."
         },
         "Overworld Chop Trees_2019": {
           "mc_4_a": "Du kannst die Bäume in beliebiger Reihenfolge fällen. Welcher Weg erfordert die geringste Anzahl von Blöcken?",
-          "mc_4_b": "Der Befehl `Zerstören` sägt den Baum vor dir ab."
+          "mc_4_b": "Der `Zerstören`-Block sägt den Baum vor dir ab."
         },
         "Overworld Chop Trees_2020": {
           "mc_4_a": "Du kannst die Bäume in beliebiger Reihenfolge fällen. Welcher Weg erfordert die geringste Anzahl von Blöcken?",
-          "mc_4_b": "Der Befehl `Zerstören` sägt den Baum vor dir ab."
+          "mc_4_b": "Der `Zerstören`-Block sägt den Baum vor dir ab."
         },
         "Overworld House Frame Chosen": {
           "mc_6_a": "Klicke auf den Pfeil auf dem `Platzieren`-Block, um auszuwählen, was du platzieren möchten.",
           "mc_6_b": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
-          "mc_6_c": "Du kannst mehr als einen Block in eine Wiederholungsschleife einfügen."
+          "mc_6_c": "Du kannst mehr als einen Block in eine `Wiederholen`-Schleife einfügen."
         },
         "Overworld House Frame Chosen_2019": {
           "mc_6_a": "Klicke auf den Pfeil auf dem `Platzieren`-Block, um auszuwählen, was du platzieren möchten.",
           "mc_6_b": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
-          "mc_6_c": "Du kannst mehr als einen Block in eine Wiederholungsschleife einfügen."
+          "mc_6_c": "Du kannst mehr als einen Block in eine `Wiederholen`-Schleife einfügen."
         },
         "Overworld House Frame Chosen_2020": {
           "mc_6_a": "Klicke auf den Pfeil auf dem `Platzieren`-Block, um auszuwählen, was du platzieren möchten.",
           "mc_6_b": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
-          "mc_6_c": "Du kannst mehr als einen Block in eine Wiederholungsschleife einfügen."
+          "mc_6_c": "Du kannst mehr als einen Block in eine `Wiederholen`-Schleife einfügen."
         },
         "Overworld Move to Sheep": {
-          "mc_1_a": "Der \"Vorwärts\"-Block befindet sich oben in der Werkzeugkiste.",
-          "mc_1_b": "Pass dabei auf, dass beide `vorwärts bewegen`-Blöcke an den `wenn ausgeführt`-Block angehängt sind."
+          "mc_1_a": "Der `bewege vorwärts`-Block befindet sich oben in der Werkzeugkiste.",
+          "mc_1_b": "Pass dabei auf, dass beide `Vorwärts bewegen`-Blöcke an den `wenn ausgeführt`-Block angehängt sind."
         },
         "Overworld Move to Sheep_2019": {
-          "mc_1_a": "Der \"Vorwärts\"-Block befindet sich oben in der Werkzeugkiste.",
-          "mc_1_b": "Pass dabei auf, dass beide `vorwärts bewegen`-Blöcke an den `wenn ausgeführt`-Block angehängt sind."
+          "mc_1_a": "Der `bewege vorwärts`-Block befindet sich oben in der Werkzeugkiste.",
+          "mc_1_b": "Pass dabei auf, dass beide `Vorwärts bewegen`-Blöcke an den `wenn ausgeführt`-Block angehängt sind."
         },
         "Overworld Move to Sheep_2020": {
-          "mc_1_a": "Der \"Vorwärts\"-Block befindet sich oben in der Werkzeugkiste.",
-          "mc_1_b": "Pass dabei auf, dass beide `vorwärts bewegen`-Blöcke an den `wenn ausgeführt`-Block angehängt sind."
+          "mc_1_a": "Der `bewege vorwärts`-Block befindet sich oben in der Werkzeugkiste.",
+          "mc_1_b": "Pass dabei auf, dass beide `Vorwärts bewegen`-Blöcke an den `wenn ausgeführt`-Block angehängt sind."
         },
         "Overworld Place Wall": {
-          "mc_5_a": "Verwende zuerst den `Platzieren`-Block und dann den `Verschieben`-Block.",
-          "mc_5_b": "Achte darauf, dass sich beide Blöcke innerhalb der \\`Wiederholen'-Schleife befinden, damit der Code mehr als einmal ausgeführt wird.",
+          "mc_5_a": "Verwende zuerst den `Platzieren`-Block und dann den `Bewegen`-Block.",
+          "mc_5_b": "Achte darauf, dass sich beide Blöcke innerhalb der \\`Wiederholen´-Schleife befinden, damit der Code mehr als einmal ausgeführt wird.",
           "mc_5_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Overworld Place Wall_2019": {
-          "mc_5_a": "Verwende zuerst den `Platzieren`-Block und dann den `Verschieben`-Block.",
-          "mc_5_b": "Achte darauf, dass sich beide Blöcke innerhalb der \\`Wiederholen'-Schleife befinden, damit der Code mehr als einmal ausgeführt wird.",
+          "mc_5_a": "Verwende zuerst den `Platzieren`-Block und dann den `Bewegen`-Block.",
+          "mc_5_b": "Achte darauf, dass sich beide Blöcke innerhalb der \\`Wiederholen´-Schleife befinden, damit der Code mehr als einmal ausgeführt wird.",
           "mc_5_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Overworld Place Wall_2020": {
-          "mc_5_a": "Verwende zuerst den `Platzieren`-Block und dann den `Verschieben`-Block.",
-          "mc_5_b": "Achte darauf, dass sich beide Blöcke innerhalb der \\`Wiederholen'-Schleife befinden, damit der Code mehr als einmal ausgeführt wird.",
+          "mc_5_a": "Verwende zuerst den `Platzieren`-Block und dann den `Bewegen`-Block.",
+          "mc_5_b": "Achte darauf, dass sich beide Blöcke innerhalb der \\`Wiederholen´-Schleife befinden, damit der Code mehr als einmal ausgeführt wird.",
           "mc_5_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Overworld Plant Crops": {
-          "mc_7_a": "Verwende den Block \"Pflanzen\", um etwas an dem Ort zu pflanzen, an dem du stehst.",
-          "mc_7_b": "Beide Streifen dunkelbraunes Land am Wasser müssen mit Erntegut gefüllt werden.",
-          "mc_7_c": "Du kannst mehr als einen Block in eine Wiederholungsschleife einfügen."
+          "mc_7_a": "Verwende den Block `Pflanzen`, um etwas an dem Ort zu pflanzen, an dem du stehst.",
+          "mc_7_b": "Beide Streifen aus dunkelbraunem Land neben dem Wasser müssen mit Saatgut gefüllt werden.",
+          "mc_7_c": "Du kannst mehr als einen Block in eine `Wiederholen`-Schleife einfügen."
         },
         "Overworld Plant Crops_2019": {
-          "mc_7_a": "Verwende den Block \"Pflanzen\", um etwas an dem Ort zu pflanzen, an dem du stehst.",
-          "mc_7_b": "Beide Streifen dunkelbraunes Land am Wasser müssen mit Erntegut gefüllt werden.",
-          "mc_7_c": "Du kannst mehr als einen Block in eine Wiederholungsschleife einfügen."
+          "mc_7_a": "Verwende den Block `Pflanzen`, um etwas an dem Ort zu pflanzen, an dem du stehst.",
+          "mc_7_b": "Beide Streifen aus dunkelbraunem Land neben dem Wasser müssen mit Saatgut gefüllt werden.",
+          "mc_7_c": "Du kannst mehr als einen Block in eine `Wiederholen`-Schleife einfügen."
         },
         "Overworld Plant Crops_2020": {
-          "mc_7_a": "Verwende den Block \"Pflanzen\", um etwas an dem Ort zu pflanzen, an dem du stehst.",
-          "mc_7_b": "Beide Streifen dunkelbraunes Land am Wasser müssen mit Erntegut gefüllt werden.",
-          "mc_7_c": "Du kannst mehr als einen Block in eine Wiederholungsschleife einfügen."
+          "mc_7_a": "Verwende den Block `Pflanzen`, um etwas an dem Ort zu pflanzen, an dem du stehst.",
+          "mc_7_b": "Beide Streifen aus dunkelbraunem Land neben dem Wasser müssen mit Saatgut gefüllt werden.",
+          "mc_7_c": "Du kannst mehr als einen Block in eine `Wiederholen`-Schleife einfügen."
         },
         "Overworld Powered Minecart": {
-          "mc_13_a": "Verwende `Schiene legen`, um Schienen auf dem Quadrat zu legen, wo du stehst.",
-          "mc_13_b": "Verwende `Wiederholen“-Schleifen`, um deinen Code zu verkürzen."
+          "mc_13_a": "Verwende `platziere Schiene`, um Schienen auf das Quadrat zu legen, wo du stehst.",
+          "mc_13_b": "Verwende `Wiederholen`-Schleifen, um deinen Code zu verkürzen."
         },
         "Overworld Powered Minecart_2019": {
-          "mc_13_a": "Verwende `Schiene legen`, um Schienen auf dem Quadrat zu legen, wo du stehst.",
-          "mc_13_b": "Verwende `Wiederholen“-Schleifen`, um deinen Code zu verkürzen."
+          "mc_13_a": "Verwende `platziere Schiene`, um Schienen auf das Quadrat zu legen, wo du stehst.",
+          "mc_13_b": "Verwende `Wiederholen`-Schleifen, um deinen Code zu verkürzen."
         },
         "Overworld Powered Minecart_2020": {
-          "mc_13_a": "Verwende `Schiene legen`, um Schienen auf dem Quadrat zu legen, wo du stehst.",
-          "mc_13_b": "Verwende `Wiederholen“-Schleifen`, um deinen Code zu verkürzen."
+          "mc_13_a": "Verwende `platziere Schiene`, um Schienen auf das Quadrat zu legen, wo du stehst.",
+          "mc_13_b": "Verwende `Wiederholen`-Schleifen, um deinen Code zu verkürzen."
         },
         "Overworld Shear Sheep": {
-          "mc_3_a": "Der Block \"Scheren\" bringt die Schafe zu dir. Stehst du den Schafen gegenüber?",
-          "mc_3_b": "Wenn du deine Blickrichtung ändern musst, verwende einen \"Wende\"-Block.",
+          "mc_3_a": "Der Block `Scheren` bringt die Schafe zu dir. Stehst du den Schafen gegenüber?",
+          "mc_3_b": "Wenn du deine Blickrichtung ändern musst, verwende einen `Drehen`-Block.",
           "mc_3_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Overworld Shear Sheep_2019": {
-          "mc_3_a": "Der Block \"Scheren\" bringt die Schafe zu dir. Stehst du den Schafen gegenüber?",
-          "mc_3_b": "Wenn du deine Blickrichtung ändern musst, verwende einen \"Wende\"-Block.",
+          "mc_3_a": "Der Block `Scheren` bringt die Schafe zu dir. Stehst du den Schafen gegenüber?",
+          "mc_3_b": "Wenn du deine Blickrichtung ändern musst, verwende einen `Drehen`-Block.",
           "mc_3_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Overworld Shear Sheep_2020": {
-          "mc_3_a": "Der Block \"Scheren\" bringt die Schafe zu dir. Stehst du den Schafen gegenüber?",
-          "mc_3_b": "Wenn du deine Blickrichtung ändern musst, verwende einen \"Wende\"-Block.",
+          "mc_3_a": "Der Block `Scheren` bringt die Schafe zu dir. Stehst du den Schafen gegenüber?",
+          "mc_3_b": "Wenn du deine Blickrichtung ändern musst, verwende einen `Drehen`-Block.",
           "mc_3_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Underground Avoiding Lava": {
-          "mc_11_a": "Du hast den gesamten Code, um nach Lava zu suchen und damit umzugehen. Du musst nur noch einen Block hinzufügen, mit dem du dich bewegen kannst.",
-          "mc_11_b": "Sollte dein \"Vorwärts\"-Befehl innerhalb der \"Wenn\"-Anweisung oder danach stehen?"
+          "mc_11_a": "Du hast den gesamten Code fertig, um nach Lava zu suchen und diese zu überspringen. Du musst nur noch einen Block hinzufügen, mit dem du dich bewegen kannst.",
+          "mc_11_b": "Sollte dein \\`bewege vorwärts\"-Befehl innerhalb der ´Wenn´-Anweisung oder danach stehen?"
         },
         "Underground Avoiding Lava_2019": {
-          "mc_11_a": "Du hast den gesamten Code, um nach Lava zu suchen und damit umzugehen. Du musst nur noch einen Block hinzufügen, mit dem du dich bewegen kannst.",
-          "mc_11_b": "Sollte dein \"Vorwärts\"-Befehl innerhalb der \"Wenn\"-Anweisung oder danach stehen?"
+          "mc_11_a": "Du hast den gesamten Code fertig, um nach Lava zu suchen und diese zu überspringen. Du musst nur noch einen Block hinzufügen, mit dem du dich bewegen kannst.",
+          "mc_11_b": "Sollte dein \\`bewege vorwärts\"-Befehl innerhalb der ´Wenn´-Anweisung oder danach stehen?"
         },
         "Underground Avoiding Lava_2020": {
-          "mc_11_a": "Du hast den gesamten Code, um nach Lava zu suchen und damit umzugehen. Du musst nur noch einen Block hinzufügen, mit dem du dich bewegen kannst.",
-          "mc_11_b": "Sollte dein \"Vorwärts\"-Befehl innerhalb der \"Wenn\"-Anweisung oder danach stehen?"
+          "mc_11_a": "Du hast den gesamten Code fertig, um nach Lava zu suchen und diese zu überspringen. Du musst nur noch einen Block hinzufügen, mit dem du dich bewegen kannst.",
+          "mc_11_b": "Sollte dein \\`bewege vorwärts\"-Befehl innerhalb der ´Wenn´-Anweisung oder danach stehen?"
         },
         "Underground If Statements": {
-          "mc_12_a": "Die rot gesprenkelten Flächen sind dort, wo du Redstone findest.",
-          "mc_12_b": "Kannst du eine „Wiederholen“-Schleife\\` verwenden, um deinen Code zu verkürzen?",
-          "mc_12_c": "Verwende eine \"Wenn\"-Anweisung, um Bereiche auf Lava zu überprüfen, und lege dann Pflastersteine aus."
+          "mc_12_a": "In den rot gesprenkelten Flächen findest du rote Steine.",
+          "mc_12_b": "Kannst du eine `Wiederholen`-Schleife verwenden, um deinen Code zu verkürzen?",
+          "mc_12_c": "Verwende eine `Wenn`-Anweisung, um Felder auf Lava zu überprüfen, und lege dann Bruchsteine aus."
         },
         "Underground If Statements_2019": {
-          "mc_12_a": "Die rot gesprenkelten Flächen sind dort, wo du Redstone findest.",
-          "mc_12_b": "Kannst du eine „Wiederholen“-Schleife\\` verwenden, um deinen Code zu verkürzen?",
-          "mc_12_c": "Verwende eine \"Wenn\"-Anweisung, um Bereiche auf Lava zu überprüfen, und lege dann Pflastersteine aus."
+          "mc_12_a": "In den rot gesprenkelten Flächen findest du rote Steine.",
+          "mc_12_b": "Kannst du eine `Wiederholen`-Schleife verwenden, um deinen Code zu verkürzen?",
+          "mc_12_c": "Verwende eine `Wenn`-Anweisung, um Felder auf Lava zu überprüfen, und lege dann Bruchsteine aus."
         },
         "Underground If Statements_2020": {
-          "mc_12_a": "Die rot gesprenkelten Flächen sind dort, wo du Redstone findest.",
-          "mc_12_b": "Kannst du eine „Wiederholen“-Schleife\\` verwenden, um deinen Code zu verkürzen?",
-          "mc_12_c": "Verwende eine \"Wenn\"-Anweisung, um Bereiche auf Lava zu überprüfen, und lege dann Pflastersteine aus."
+          "mc_12_a": "In den rot gesprenkelten Flächen findest du rote Steine.",
+          "mc_12_b": "Kannst du eine `Wiederholen`-Schleife verwenden, um deinen Code zu verkürzen?",
+          "mc_12_c": "Verwende eine `Wenn`-Anweisung, um Felder auf Lava zu überprüfen, und lege dann Bruchsteine aus."
         },
         "Underground Iron": {
           "mc_10_a": "Die Eisenblöcke sind die gesprenkelten Bereiche hinter der Fackel! Wie willst du dort hinkommen?",
-          "mc_10_b": "Wenn du am Rand der Lava stehst, verwende `Pflastersteine vor dir`, um dir einen sicheren Weg zu schaffen. Dann kannst du die Lava überqueren!",
+          "mc_10_b": "Wenn du am Rand der Lava stehst, verwende `Platziere Bruchstein voraus`, um dir einen sicheren Weg zu schaffen. Dann kannst du die Lava überqueren!",
           "mc_10_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Underground Iron_2019": {
           "mc_10_a": "Die Eisenblöcke sind die gesprenkelten Bereiche hinter der Fackel! Wie willst du dort hinkommen?",
-          "mc_10_b": "Wenn du am Rand der Lava stehst, verwende `Pflastersteine vor dir`, um dir einen sicheren Weg zu schaffen. Dann kannst du die Lava überqueren!",
+          "mc_10_b": "Wenn du am Rand der Lava stehst, verwende `Platziere Bruchstein voraus`, um dir einen sicheren Weg zu schaffen. Dann kannst du die Lava überqueren!",
           "mc_10_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Underground Iron_2020": {
           "mc_10_a": "Die Eisenblöcke sind die gesprenkelten Bereiche hinter der Fackel! Wie willst du dort hinkommen?",
-          "mc_10_b": "Wenn du am Rand der Lava stehst, verwende `Pflastersteine vor dir`, um dir einen sicheren Weg zu schaffen. Dann kannst du die Lava überqueren!",
+          "mc_10_b": "Wenn du am Rand der Lava stehst, verwende `Platziere Bruchstein voraus`, um dir einen sicheren Weg zu schaffen. Dann kannst du die Lava überqueren!",
           "mc_10_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Underground Mining Coal": {
-          "mc_9_a": "Gehst du in die richtige Richtung? Der `zerstören-Block` vermint den Block vor dir.",
-          "mc_9_b": "Die schwarzen Flecken in der Wand sind Kohle! Verwende diese \"Vernichten-Blöcke“ darauf, um die Kohle abzubauen.",
+          "mc_9_a": "Gehst du in die richtige Richtung? Der `Zerstören`-Block macht den Block vor dir kaputt.",
+          "mc_9_b": "Die schwarzen Flecken in der Wand sind Kohle! Verwende diese `Zerstören`-Blöcke darauf, um die Kohle abzubauen.",
           "mc_9_c": "Verwende die Funktion `Platziere eine Fackel`, um eine Fackel in den Raum zu stellen, in dem du stehst."
         },
         "Underground Mining Coal_2019": {
-          "mc_9_a": "Gehst du in die richtige Richtung? Der `zerstören-Block` vermint den Block vor dir.",
-          "mc_9_b": "Die schwarzen Flecken in der Wand sind Kohle! Verwende diese \"Vernichten-Blöcke“ darauf, um die Kohle abzubauen.",
+          "mc_9_a": "Gehst du in die richtige Richtung? Der `Zerstören`-Block macht den Block vor dir kaputt.",
+          "mc_9_b": "Die schwarzen Flecken in der Wand sind Kohle! Verwende diese `Zerstören`-Blöcke darauf, um die Kohle abzubauen.",
           "mc_9_c": "Verwende die Funktion `Platziere eine Fackel`, um eine Fackel in den Raum zu stellen, in dem du stehst."
         },
         "Underground Mining Coal_2020": {
-          "mc_9_a": "Gehst du in die richtige Richtung? Der `zerstören-Block` vermint den Block vor dir.",
-          "mc_9_b": "Die schwarzen Flecken in der Wand sind Kohle! Verwende diese \"Vernichten-Blöcke“ darauf, um die Kohle abzubauen.",
+          "mc_9_a": "Gehst du in die richtige Richtung? Der `Zerstören`-Block macht den Block vor dir kaputt.",
+          "mc_9_b": "Die schwarzen Flecken in der Wand sind Kohle! Verwende diese `Zerstören`-Blöcke darauf, um die Kohle abzubauen.",
           "mc_9_c": "Verwende die Funktion `Platziere eine Fackel`, um eine Fackel in den Raum zu stellen, in dem du stehst."
         },
         "behaviors 2": {
@@ -1193,7 +1193,7 @@
           "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die `wenn bei Blume` Bausteine, wird der Code innerhalb eines `solange Nektar > 0` nur ausgeführt, wenn sich die Biene an einer Blume befindet. Der Hauptunterschied besteht darin, dass der Code im Inneren wiederholt ausgeführt wird, bis kein Nektar mehr vorhanden ist.  Versuche dieses Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die `wenn bei Blume` Bausteine, wird der Code innerhalb eines `solange Nektar > 0` nur ausgeführt, wenn sich die Biene an einer Blume befindet. Der Hauptunterschied besteht darin, dass der Code im Inneren wiederholt ausgeführt wird, bis kein Nektar mehr vorhanden ist.  Versuche dieses Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Der Originalcode würde gut funktionieren - wenn es nur einen Schatz in jedem Stapel gäbe!",
@@ -1252,8 +1252,8 @@
           "courseF_bee_functions_challenge2_b": "**Lösung:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Hier ist die vollständige Lösung für dieses Rätsel.\n\n[blockly block][1]"
         },
@@ -2303,15 +2303,15 @@
           "courseA_playlab_events_challenge2_c": "Du kannst das grantige Monster knurren lassen.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseB_Scrat_ramp1_2018": {
-          "1": "Wenn Scrat nicht das tut, was du willst, vergewissere dich, dass beide Blöcke vollständig zusammengeklickt wurden und klicke dann wieder auf \"Ausführen\".",
+          "1": "Wenn Scrat nicht das tut, was du willst, vergewissere dich, dass beide Blöcke vollständig zusammengesteckt wurden und klicke dann wieder auf \"Ausführen\".",
           "2": "Hab keine Angst, einen Fehler zu machen! Probiere etwas aus, und wenn es nicht funktioniert, versuche etwas anderes!"
         },
         "courseB_Scrat_ramp1_2019": {
-          "1": "Wenn Scrat nicht das tut, was du willst, vergewissere dich, dass beide Blöcke vollständig zusammengeklickt wurden und klicke dann wieder auf \"Ausführen\".",
+          "1": "Wenn Scrat nicht das tut, was du willst, vergewissere dich, dass beide Blöcke vollständig zusammengesteckt wurden und klicke dann wieder auf \"Ausführen\".",
           "2": "Hab keine Angst, einen Fehler zu machen! Probiere etwas aus, und wenn es nicht funktioniert, versuche etwas anderes!"
         },
         "courseB_Scrat_ramp1_2020": {
-          "1": "Wenn Scrat nicht das tut, was du willst, vergewissere dich, dass beide Blöcke vollständig zusammengeklickt wurden und klicke dann wieder auf \"Ausführen\".",
+          "1": "Wenn Scrat nicht das tut, was du willst, vergewissere dich, dass beide Blöcke vollständig zusammengesteckt wurden und klicke dann wieder auf \"Ausführen\".",
           "2": "Hab keine Angst, einen Fehler zu machen! Probiere etwas aus, und wenn es nicht funktioniert, versuche etwas anderes!"
         },
         "courseB_Scrat_ramp2_2018": {
@@ -3198,159 +3198,159 @@
         },
         "courseB_starWars_prog1": {
           "courseB_starWars_prog1_a": "Versuche, einen Block nach dem anderen hinzuzufügen, und klicke dann auf \"Ausführen\", um zu sehen, was passiert.",
-          "courseB_starWars_prog1_b": "Du solltest dich nach Osten bewegen, um dieses Rätsel zu lösen. Wie weit musst du dich bewegen, um dieses Rätsel zu lösen?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Du solltest dich nach Osten bewegen, um dieses Rätsel zu lösen. Wie weit musst du gehen?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2018": {
           "courseB_starWars_prog1_a": "Versuche, einen Block nach dem anderen hinzuzufügen, und klicke dann auf \"Ausführen\", um zu sehen, was passiert.",
-          "courseB_starWars_prog1_b": "Du solltest dich nach Osten bewegen, um dieses Rätsel zu lösen. Wie weit musst du dich bewegen, um dieses Rätsel zu lösen?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Du solltest dich nach Osten bewegen, um dieses Rätsel zu lösen. Wie weit musst du gehen?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2019": {
           "courseB_starWars_prog1_a": "Versuche, einen Block nach dem anderen hinzuzufügen, und klicke dann auf \"Ausführen\", um zu sehen, was passiert.",
-          "courseB_starWars_prog1_b": "Du solltest dich nach Osten bewegen, um dieses Rätsel zu lösen. Wie weit musst du dich bewegen, um dieses Rätsel zu lösen?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Du solltest dich nach Osten bewegen, um dieses Rätsel zu lösen. Wie weit musst du gehen?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2020": {
           "courseB_starWars_prog1_a": "Versuche, einen Block nach dem anderen hinzuzufügen, und klicke dann auf \"Ausführen\", um zu sehen, was passiert.",
-          "courseB_starWars_prog1_b": "Du solltest dich nach Osten bewegen, um dieses Rätsel zu lösen. Wie weit musst du dich bewegen, um dieses Rätsel zu lösen?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Du solltest dich nach Osten bewegen, um dieses Rätsel zu lösen. Wie weit musst du gehen?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2": {
-          "courseB_starWars_prog2_a": "Teile diese Aufgabe in zwei Teile auf. Besorge dir einen Haufen Schrott und finde dann heraus, wie du an den zweiten Teil kommst."
+          "courseB_starWars_prog2_a": "Teile dieses Problem in zwei Teile auf. Nimm einen Haufen Schrott und finde dann heraus, wie du an den anderen kommst."
         },
         "courseB_starWars_prog2_2018": {
           "courseB_starWars_prog2_a": "Teile dieses Problem in zwei Teile auf. Nimm einen Haufen Schrott und finde dann heraus, wie du an den anderen kommst."
         },
         "courseB_starWars_prog2_2019": {
-          "courseB_starWars_prog2_a": "Teile diese Aufgabe in zwei Teile auf. Besorge dir einen Haufen Schrott und finde dann heraus, wie du an den zweiten Teil kommst."
+          "courseB_starWars_prog2_a": "Teile dieses Problem in zwei Teile auf. Nimm einen Haufen Schrott und finde dann heraus, wie du an den anderen kommst."
         },
         "courseB_starWars_prog2_2020": {
-          "courseB_starWars_prog2_a": "Teile diese Aufgabe in zwei Teile auf. Besorge dir einen Haufen Schrott und finde dann heraus, wie du an den zweiten Teil kommst."
+          "courseB_starWars_prog2_a": "Teile dieses Problem in zwei Teile auf. Nimm einen Haufen Schrott und finde dann heraus, wie du an den anderen kommst."
         },
         "courseB_starWars_prog3": {
-          "courseB_starWars_prog3_a": "Du musst drei unterschiedliche Bewegungen machen, um dieses Rätsel zu lösen.",
+          "courseB_starWars_prog3_a": "Du musst dich in 3 Richtungen bewegen, um dieses Rätsel zu lösen.",
           "courseB_starWars_prog3_b": "Baue ein Stück Code nach dem anderen auf. Führe diesen Code aus, um herauszufinden, was du dann machen solltest."
         },
         "courseB_starWars_prog3_2018": {
-          "courseB_starWars_prog3_a": "Du musst drei unterschiedliche Bewegungen machen, um dieses Rätsel zu lösen.",
+          "courseB_starWars_prog3_a": "Du musst dich in 3 Richtungen bewegen, um dieses Rätsel zu lösen.",
           "courseB_starWars_prog3_b": "Baue ein Stück Code nach dem anderen auf. Führe diesen Code aus, um herauszufinden, was du dann machen solltest."
         },
         "courseB_starWars_prog3_2019": {
-          "courseB_starWars_prog3_a": "Du musst drei unterschiedliche Bewegungen machen, um dieses Rätsel zu lösen.",
+          "courseB_starWars_prog3_a": "Du musst dich in 3 Richtungen bewegen, um dieses Rätsel zu lösen.",
           "courseB_starWars_prog3_b": "Baue ein Stück Code nach dem anderen auf. Führe diesen Code aus, um herauszufinden, was du dann machen solltest."
         },
         "courseB_starWars_prog3_2020": {
-          "courseB_starWars_prog3_a": "Du musst drei unterschiedliche Bewegungen machen, um dieses Rätsel zu lösen.",
+          "courseB_starWars_prog3_a": "Du musst dich in 3 Richtungen bewegen, um dieses Rätsel zu lösen.",
           "courseB_starWars_prog3_b": "Baue ein Stück Code nach dem anderen auf. Führe diesen Code aus, um herauszufinden, was du dann machen solltest."
         },
         "courseB_starWars_prog4": {
           "courseB_starWars_prog4_a": "Baue ein Stück Code nach dem anderen auf. Führe diesen Code aus, um herauszufinden, was du dann machen solltest.",
-          "courseB_starWars_prog4_b": "Versuche, den `Wiederholungsblock` für einen kürzeren Code zu verwenden.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Versuche, den `Wiederholen`-Block zu verwenden, um den Code kürzer zu machen.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2018": {
           "courseB_starWars_prog4_a": "Baue ein Stück Code nach dem anderen auf. Führe diesen Code aus, um herauszufinden, was du dann machen solltest.",
-          "courseB_starWars_prog4_b": "Versuche, den `Wiederholungsblock` für einen kürzeren Code zu verwenden.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Versuche, den `Wiederholen`-Block zu verwenden, um den Code kürzer zu machen.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2019": {
           "courseB_starWars_prog4_a": "Baue ein Stück Code nach dem anderen auf. Führe diesen Code aus, um herauszufinden, was du dann machen solltest.",
-          "courseB_starWars_prog4_b": "Versuche, den `Wiederholungsblock` für einen kürzeren Code zu verwenden.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Versuche, den `Wiederholen`-Block zu verwenden, um den Code kürzer zu machen.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2020": {
           "courseB_starWars_prog4_a": "Baue ein Stück Code nach dem anderen auf. Führe diesen Code aus, um herauszufinden, was du dann machen solltest.",
-          "courseB_starWars_prog4_b": "Versuche, den `Wiederholungsblock` für einen kürzeren Code zu verwenden.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Versuche, den `Wiederholen`-Block zu verwenden, um den Code kürzer zu machen.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5": {
-          "courseB_starWars_prog5_a": "Ist dieses Muster nicht ein wenig so wie in dem letzten Rätsel?",
-          "courseB_starWars_prog5_b": "BB-8 holt den Schrott, während er darüber wegrollt.",
-          "courseB_starWars_prog5_c": "Verfolge dieses Muster mit dem Finger. Zähle die Metallstücke bei dieser Bewegung.",
+          "courseB_starWars_prog5_a": "Ist dieses Muster nicht so ähnlich wie im letzten Rätsel?",
+          "courseB_starWars_prog5_b": "BB-8 sammelt den Schrott auf, indem er darüber rollt.",
+          "courseB_starWars_prog5_c": "Zeichne den Weg mit dem Finger nach und zähle dabei die Metallstücke.",
           "courseB_starWars_prog5_da": "Schaue, was passiert, wenn du die gleiche Lösung wie beim Rätsel mit den Treppenstufen verwendest: \n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2018": {
-          "courseB_starWars_prog5_a": "Ist dieses Muster nicht ein wenig so wie in dem letzten Rätsel?",
-          "courseB_starWars_prog5_b": "BB-8 holt den Schrott, während er darüber wegrollt.",
-          "courseB_starWars_prog5_c": "Verfolge dieses Muster mit dem Finger. Zähle die Metallstücke bei dieser Bewegung.",
+          "courseB_starWars_prog5_a": "Ist dieses Muster nicht so ähnlich wie im letzten Rätsel?",
+          "courseB_starWars_prog5_b": "BB-8 sammelt den Schrott auf, indem er darüber rollt.",
+          "courseB_starWars_prog5_c": "Zeichne den Weg mit dem Finger nach und zähle dabei die Metallstücke.",
           "courseB_starWars_prog5_da": "Schaue, was passiert, wenn du die gleiche Lösung wie beim Rätsel mit den Treppenstufen verwendest: \n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2019": {
-          "courseB_starWars_prog5_a": "Ist dieses Muster nicht ein wenig so wie in dem letzten Rätsel?",
-          "courseB_starWars_prog5_b": "BB-8 holt den Schrott, während er darüber wegrollt.",
-          "courseB_starWars_prog5_c": "Verfolge dieses Muster mit dem Finger. Zähle die Metallstücke bei dieser Bewegung.",
+          "courseB_starWars_prog5_a": "Ist dieses Muster nicht so ähnlich wie im letzten Rätsel?",
+          "courseB_starWars_prog5_b": "BB-8 sammelt den Schrott auf, indem er darüber rollt.",
+          "courseB_starWars_prog5_c": "Zeichne den Weg mit dem Finger nach und zähle dabei die Metallstücke.",
           "courseB_starWars_prog5_da": "Schaue, was passiert, wenn du die gleiche Lösung wie beim Rätsel mit den Treppenstufen verwendest: \n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2020": {
-          "courseB_starWars_prog5_a": "Ist dieses Muster nicht ein wenig so wie in dem letzten Rätsel?",
-          "courseB_starWars_prog5_b": "BB-8 holt den Schrott, während er darüber wegrollt.",
-          "courseB_starWars_prog5_c": "Verfolge dieses Muster mit dem Finger. Zähle die Metallstücke bei dieser Bewegung.",
+          "courseB_starWars_prog5_a": "Ist dieses Muster nicht so ähnlich wie im letzten Rätsel?",
+          "courseB_starWars_prog5_b": "BB-8 sammelt den Schrott auf, indem er darüber rollt.",
+          "courseB_starWars_prog5_c": "Zeichne den Weg mit dem Finger nach und zähle dabei die Metallstücke.",
           "courseB_starWars_prog5_da": "Schaue, was passiert, wenn du die gleiche Lösung wie beim Rätsel mit den Treppenstufen verwendest: \n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6": {
-          "courseB_starWars_prog6_a": "Dieses Muster ist einfach nur ein Treppenschritt mit zwei Bewegungen pro Richtung!",
-          "courseB_starWars_prog6_b": "Versuche, den `Wiederholungsblock` für einen kürzeren Code zu verwenden.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_a": "Dieses Muster ist einfach nur eine Treppenstufe mit zwei Bewegungen pro Richtung!",
+          "courseB_starWars_prog6_b": "Versuche, den `Wiederholen`-Block zu verwenden, um den Code kürzer zu machen.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2018": {
-          "courseB_starWars_prog6_a": "Dieses Muster ist einfach nur ein Treppenschritt mit zwei Bewegungen pro Richtung!",
-          "courseB_starWars_prog6_b": "Versuche, den `Wiederholungsblock` für einen kürzeren Code zu verwenden.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_a": "Dieses Muster ist einfach nur eine Treppenstufe mit zwei Bewegungen pro Richtung!",
+          "courseB_starWars_prog6_b": "Versuche, den `Wiederholen`-Block zu verwenden, um den Code kürzer zu machen.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2019": {
-          "courseB_starWars_prog6_a": "Dieses Muster ist einfach nur ein Treppenschritt mit zwei Bewegungen pro Richtung!",
-          "courseB_starWars_prog6_b": "Versuche, den `Wiederholungsblock` für einen kürzeren Code zu verwenden.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_a": "Dieses Muster ist einfach nur eine Treppenstufe mit zwei Bewegungen pro Richtung!",
+          "courseB_starWars_prog6_b": "Versuche, den `Wiederholen`-Block zu verwenden, um den Code kürzer zu machen.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2020": {
-          "courseB_starWars_prog6_a": "Dieses Muster ist einfach nur ein Treppenschritt mit zwei Bewegungen pro Richtung!",
-          "courseB_starWars_prog6_b": "Versuche, den `Wiederholungsblock` für einen kürzeren Code zu verwenden.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_a": "Dieses Muster ist einfach nur eine Treppenstufe mit zwei Bewegungen pro Richtung!",
+          "courseB_starWars_prog6_b": "Versuche, den `Wiederholen`-Block zu verwenden, um den Code kürzer zu machen.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7": {
-          "courseB_starWars_prog7_a": "Ist dieses Muster nicht ein wenig so wie in dem letzten Rätsel?",
-          "courseB_starWars_prog7_b": "BB-8 holt den Schrott, während er darüber wegrollt.",
-          "courseB_starWars_prog7_c": "Versuche, das große Muster der Treppenstufen über dieses Rätsel zu zeichnen. Bedeckt es den gesamten Metallschrott?"
+          "courseB_starWars_prog7_a": "Ist dieses Muster nicht so ähnlich wie im letzten Rätsel?",
+          "courseB_starWars_prog7_b": "BB-8 sammelt den Schrott auf, indem er darüber rollt.",
+          "courseB_starWars_prog7_c": "Versuche, das große Treppenstufenmuster bei diesem Rätsel anzuwenden. Deckt es den gesamten Metallschrott ab?"
         },
         "courseB_starWars_prog7_2018": {
-          "courseB_starWars_prog7_a": "Ist dieses Muster nicht ein wenig so wie in dem letzten Rätsel?",
-          "courseB_starWars_prog7_b": "BB-8 holt den Schrott, während er darüber wegrollt.",
-          "courseB_starWars_prog7_c": "Versuche, das große Muster der Treppenstufen über dieses Rätsel zu zeichnen. Bedeckt es den gesamten Metallschrott?"
+          "courseB_starWars_prog7_a": "Ist dieses Muster nicht so ähnlich wie im letzten Rätsel?",
+          "courseB_starWars_prog7_b": "BB-8 sammelt den Schrott auf, indem er darüber rollt.",
+          "courseB_starWars_prog7_c": "Versuche, das große Treppenstufenmuster bei diesem Rätsel anzuwenden. Deckt es den gesamten Metallschrott ab?"
         },
         "courseB_starWars_prog7_2019": {
-          "courseB_starWars_prog7_a": "Ist dieses Muster nicht ein wenig so wie in dem letzten Rätsel?",
-          "courseB_starWars_prog7_b": "BB-8 holt den Schrott, während er darüber wegrollt.",
-          "courseB_starWars_prog7_c": "Versuche, das große Muster der Treppenstufen über dieses Rätsel zu zeichnen. Bedeckt es den gesamten Metallschrott?"
+          "courseB_starWars_prog7_a": "Ist dieses Muster nicht so ähnlich wie im letzten Rätsel?",
+          "courseB_starWars_prog7_b": "BB-8 sammelt den Schrott auf, indem er darüber rollt.",
+          "courseB_starWars_prog7_c": "Versuche, das große Treppenstufenmuster bei diesem Rätsel anzuwenden. Deckt es den gesamten Metallschrott ab?"
         },
         "courseB_starWars_prog7_2020": {
-          "courseB_starWars_prog7_a": "Ist dieses Muster nicht ein wenig so wie in dem letzten Rätsel?",
-          "courseB_starWars_prog7_b": "BB-8 holt den Schrott, während er darüber wegrollt.",
-          "courseB_starWars_prog7_c": "Versuche, das große Muster der Treppenstufen über dieses Rätsel zu zeichnen. Bedeckt es den gesamten Metallschrott?"
+          "courseB_starWars_prog7_a": "Ist dieses Muster nicht so ähnlich wie im letzten Rätsel?",
+          "courseB_starWars_prog7_b": "BB-8 sammelt den Schrott auf, indem er darüber rollt.",
+          "courseB_starWars_prog7_c": "Versuche, das große Treppenstufenmuster bei diesem Rätsel anzuwenden. Deckt es den gesamten Metallschrott ab?"
         },
         "courseB_starWars_prog8": {
-          "courseB_starWars_prog8_a": "Es zulässig, über eine Reihe von Flächen zurückzugehen, die du bei deinen Bewegungen bereits berührt hast.",
-          "courseB_starWars_prog8_b": "Versuche, den `Wiederholungsblock` zu verwenden, um zu sehen, was mit dem Code passiert, den du hineingelegt hast.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "Es ist ok, über Flächen zurückzugehen, auf denen du bereits warst.",
+          "courseB_starWars_prog8_b": "Probiere aus, was mit dem Code passiert, wenn du ihn in den `Wiederholen`-Block steckst.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2018": {
-          "courseB_starWars_prog8_a": "Es zulässig, über eine Reihe von Flächen zurückzugehen, die du bei deinen Bewegungen bereits berührt hast.",
-          "courseB_starWars_prog8_b": "Versuche, den `Wiederholungsblock` zu verwenden, um zu sehen, was mit dem Code passiert, den du hineingelegt hast.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "Es ist ok, über Flächen zurückzugehen, auf denen du bereits warst.",
+          "courseB_starWars_prog8_b": "Probiere aus, was mit dem Code passiert, wenn du ihn in den `Wiederholen`-Block steckst.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2019": {
-          "courseB_starWars_prog8_a": "Es zulässig, über eine Reihe von Flächen zurückzugehen, die du bei deinen Bewegungen bereits berührt hast.",
-          "courseB_starWars_prog8_b": "Versuche, den `Wiederholungsblock` zu verwenden, um zu sehen, was mit dem Code passiert, den du hineingelegt hast.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "Es ist ok, über Flächen zurückzugehen, auf denen du bereits warst.",
+          "courseB_starWars_prog8_b": "Probiere aus, was mit dem Code passiert, wenn du ihn in den `Wiederholen`-Block steckst.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2020": {
-          "courseB_starWars_prog8_a": "Es zulässig, über eine Reihe von Flächen zurückzugehen, die du bei deinen Bewegungen bereits berührt hast.",
-          "courseB_starWars_prog8_b": "Versuche, den `Wiederholungsblock` zu verwenden, um zu sehen, was mit dem Code passiert, den du hineingelegt hast.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "Es ist ok, über Flächen zurückzugehen, auf denen du bereits warst.",
+          "courseB_starWars_prog8_b": "Probiere aus, was mit dem Code passiert, wenn du ihn in den `Wiederholen`-Block steckst.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
           "courseB_starWars_prog9_b": "Es gibt viele Möglichkeiten, wie du dieses Rätsel lösen kannst.",
-          "courseB_starWars_prog9_c": "Könnte hier eine \"Wiederholungsschleife\" helfen?"
+          "courseB_starWars_prog9_c": "Könnte hier eine `Wiederholungsschleife` helfen?"
         },
         "courseB_starWars_prog9_2018": {
           "courseB_starWars_prog9_a": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
           "courseB_starWars_prog9_b": "Es gibt viele Möglichkeiten, wie du dieses Rätsel lösen kannst.",
-          "courseB_starWars_prog9_c": "Könnte eine `wiederhole` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> Schleife hier helfen?"
+          "courseB_starWars_prog9_c": "Könnte eine `Wiederholen` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> Schleife hier helfen?"
         },
         "courseB_starWars_prog9_2019": {
           "courseB_starWars_prog9_a": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
           "courseB_starWars_prog9_b": "Es gibt viele Möglichkeiten, wie du dieses Rätsel lösen kannst.",
-          "courseB_starWars_prog9_c": "Könnte eine `wiederhole` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> Schleife hier helfen?"
+          "courseB_starWars_prog9_c": "Könnte eine `Wiederholen` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> Schleife hier helfen?"
         },
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
           "courseB_starWars_prog9_b": "Es gibt viele Möglichkeiten, wie du dieses Rätsel lösen kannst.",
-          "courseB_starWars_prog9_c": "Könnte eine `wiederhole` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> Schleife hier helfen?"
+          "courseB_starWars_prog9_c": "Könnte eine `Wiederholen` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> Schleife hier helfen?"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "Du kannst den Baustein `Figur 1 in Bild ??? einfügen` verwenden, um der Szene eine Figur hinzuzufügen.",
@@ -4808,13 +4808,13 @@
           "courseC_starWars_loops5_a": "Die beste Lösung verwendet eine Drehung, dann ein einzelnes 'vorwärts bewegen', nochmal eine Drehung und dann eine Schleife."
         },
         "courseC_starWars_loops5_2018": {
-          "courseC_starWars_loops5_a": "Die beste Lösung besteht aus einem einzigen \"bewege vorwärts\", dann einer Kurve und dann einer Schleife."
+          "courseC_starWars_loops5_a": "Die beste Lösung besteht aus einem einzigen `bewege vorwärts`, dann einer Drehung und dann einer Schleife."
         },
         "courseC_starWars_loops5_2019": {
-          "courseC_starWars_loops5_a": "Die beste Lösung besteht aus einem einzigen \"bewege vorwärts\", dann einer Kurve und dann einer Schleife."
+          "courseC_starWars_loops5_a": "Die beste Lösung besteht aus einem einzigen `bewege vorwärts`, dann einer Drehung und dann einer Schleife."
         },
         "courseC_starWars_loops5_2020": {
-          "courseC_starWars_loops5_a": "Die beste Lösung besteht aus einem einzigen \"bewege vorwärts\", dann einer Kurve und dann einer Schleife."
+          "courseC_starWars_loops5_a": "Die beste Lösung besteht aus einem einzigen `bewege vorwärts`, dann einer Drehung und dann einer Schleife."
         },
         "courseC_starWars_loops5_copy": {
           "courseC_starWars_loops5_b": "Um nach unten zu gehen, musst du dich zuerst in die Richtung drehen und dann wieder vorwärts gehen.",
@@ -5711,16 +5711,16 @@
           "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Warum funktioniert die erste Hälfte dieses Programms? Denk darüber nach, warum die Biene sich rückwärts bewegen muss. Wie viel Nektar sammelt die Biene jedes Mal, wenn sie sich über eine Blüte bewegt?",
@@ -6001,8 +6001,8 @@
           "courseD_collector_debugging9_b": "Überlege, wie du die Aufgabe lösen würdest, und versuche dann schrittweise, den Code an das, was du dir vorstellst, anzupassen."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur **zwei** Edelsteine von jedem der ersten **zwei** Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur **zwei** Edelsteine von jedem der ersten **zwei** Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Hier ist die vollständige Lösung für dieses Rätsel.\n\n[blockly block][1]"
         },
@@ -8692,7 +8692,7 @@
           "verionhistory": "Wenn du nicht weiterkommst, kannst du deinen Code immer zurücksetzen. Klicke unten auf `Versionsverlauf` und wähle dann \"Neu beginnen\"."
         },
         "CourseD_Dance_2020_01_2021": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.\n\n_Dieser Level endet nach 4 Takten._",
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Stelle sicher, dass ein Tänzer auf dem Bildschirm erscheint.\n\n_Dieser Level endet nach 4 Takten._",
           "challenges": "**Weitere Herausforderungen** \n\n-   Wähle das Abspielen eines anderen Songs aus.\n-   Bringen Deine Tänzer an einen neuen Ort. \n-   Erstelle mehr als einen Tänzer."
         },
         "CourseD_Dance_2020_02_2021": {
@@ -8704,10 +8704,10 @@
           "challenges": "**Optionale Herausforderung** \n\n-   Lasse eine Tänzerin auf die Pfeiltasten links und rechts reagieren."
         },
         "CourseD_Dance_2020_04_2021": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.\n\n_Dieser Level endet nach 8 Takten._"
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.\n\n_Dieser Level endet nach 7 Takten._"
         },
         "CourseD_Dance_2020_05_2021": {
-          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.\n\n_Dieser Level endet nach 12 Takten._",
+          "validation": "**Wie schaffe ich diesen Level?**\n\n-   Nach 6 Takten muss Dein Tänzer einen anderen Tanz machen als nach 4 Takten.\n\n_Dieser Level endet nach 11 Takten._",
           "challenges": "**Optionale Herausforderung** \n\n-   Ändere den Hintergrund, wenn die Tänzer eine andere Bewegung durchführen."
         },
         "CourseD_Dance_2020_06_2021": {
@@ -8728,7 +8728,7 @@
           "next_previous": "**Optionale Herausforderung**\n\n-   Du kannst diesen neuen Ereignis-Block auch verwenden, um durch eine Liste von Tanzschritten zu gehen, indem Du bei den Schritten `(Zufall)`, `(Nächster)` oder `(Vorheriger)` auswählst.\n     <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
-          "alternate": "Der 'alterniere' Baustein befindet sich in der Kategorie \"Tänzer\"."
+          "alternate": "Der Baustein für Muster von Tanzbewegungen befindet sich in der Kategorie \"Tänzer\"."
         },
         "CourseE_HOC 2018 Level_10_2021": {
           "voyage_aquatic_10a": "Die **Seelaternen**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kannst du mit ihnen eine Bedingung verwenden, um das Ozeanmonument zu erreichen?"
@@ -8737,7 +8737,7 @@
           "aquatic7": "Du kannst den ´wenn´ Baustein verwenden, um die richtigen Drehung zu machen."
         },
         "CourseE_HOC 2018 Level_9b_2021": {
-          "voyage_aquatic_9a": "Was für ein wunderschönes Korallenriff! Die blaue Koralle ist der **rechte** Weg. Pass auf, dass die rote Koralle nicht **links** ist!"
+          "voyage_aquatic_9a": "Siehst du die roten und blauen \"Korallen\"-Blöcke? Benutze sie als Wegpunkte, um **rechts** oder **links** im Korallenriff abzubiegen."
         },
         "CourseF_outbreak1": {
           "step1": "Erstelle mit diesen Blöcken Sprites:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nDiesen Block findest du in der Kategorie **Sprites** der Toolbox.",
@@ -8748,18 +8748,18 @@
           "hint1": "Klicke auf die Schaltfläche `+` auf dem Ereignis-Block. Schiebe den Block `Subjekt`, den du innen gefunden hast, in den Block `Kostüm ändern`.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Um den Monstern eine Maske zu geben, verwende den Block `Kostüm ändern` mit einem Ereignis `wenn berührt`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nZiehe auch den kleinen roten Block `angeklickt` hinein!",
-          "hint2": "So soll der neue Code für diesen Level aussehen:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Um den Monstern eine Maske zu geben, verwende den Block `Kostüm ändern` mit einem Ereignis `wenn berührt`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nZiehe auch den kleinen roten Block `angeklickt` hinein!",
+          "hint2": "So soll der neue Code für diesen Level aussehen:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
-          "challenge": "## Duch suchst eine zusätzliche Aufgabe?\n\nDu kannst einstellen, dass sich deine Monster schneller oder langsamer bewegen.\n\n1.  Klicke  in diesem Block <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> auf `Bearbeiten`\n2.  Erhöhe oder verringere die Zahl in diesem Block: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nWähle eine Dezimalzahl wie `0.5` or `0.25`, wenn sich die Monster langsamer bewegen sollen. Wähle eine beliebige Zahl, die größer als 1 ist, damit sie sich schneller bewegen."
+          "challenge": "## Eine zusätzliche Herausforderung?\n\nDu kannst einstellen, dass sich deine Monster schneller oder langsamer bewegen.\n\n1.  Klicke auf `Bearbeiten` in diesem Block <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Erhöhe oder verringer die Anzahl in diesem Block: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nWähle eine Dezimalzahl wie `0.5` oder `0.25`, wenn sich die Monster langsamer bewegen sollen. Wähle eine beliebige Zahl größer 1, damit sie sich schneller bewegen."
         },
         "CourseF_outbreak6": {
           "hint2": "Verschiebe die anderen Blöcke \"Aktion\" in den Block `wenn Wahrscheinlichkeit`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Du musst 3 weitere Ereignisse `wenn berührt` hinzufügen, um alle möglichen Kombinationen von `Berührungen` zwischen gesunden und infizierten Sprites zu erfassen.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "Du musst 3 weitere Ereignisse `wenn berührt` hinzufügen, um alle möglichen Kombinationen von `Berührungen` zwischen gesunden und infizierten Sprites zu erfassen.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## Impfungen\n\nDu kannst simulieren, dass die Monster eine Impfung erhalten, wenn du sie anklickst. Verwende dazu den Block `Kostüm ändern` mit diesem Ereignis:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Impfungen\n\nDu kannst simulieren, dass die Monster eine Impfung erhalten, wenn du sie anklickst. Verwende dazu den Block `Kostüm ändern` mit diesem Ereignis:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Wenn du nicht weiterkommst, kannst du deinen Code immer zurücksetzen. Klicke unten auf `Versionsverlauf` und wähle dann \"Neu beginnen\"."
         },
         "Function intro Ryan_2021": {
@@ -8816,63 +8816,63 @@
           "MC_HOC_2017_13_Cole_a": "Versuche, den Agenten einige Brücken bauen zu lassen, damit Alex oder Steve auf der Karte weiterlaufen können."
         },
         "Overworld Avoid Monsters_2021": {
-          "mc_8_a": "Es gibt ein paar Wege, die du einschlagen können. Welcher ist der kürzeste?",
-          "mc_8_b": "Verwende `Wiederholen`-Schleifen\\`, um deinen Code zu vereinfachen.",
+          "mc_8_a": "Es gibt ein paar Wege, die du einschlagen kannst. Welcher ist der Kürzeste?",
+          "mc_8_b": "Verwende `Wiederholen`-Schleifen, um deinen Code zu vereinfachen.",
           "mc_8_c": "Es ist dein Ziel, in die Türöffnung des Hauses am oberen Rand des Bildschirms zu gelangen."
         },
         "Overworld Chop Tree_2021": {
-          "mc_2_a": "Du musst zweimal „vorwärts bewegen“ verwenden, um vor dem Baum zu stehen.",
-          "mc_2_b": "Der Befehl `Zerstören` sägt den Baum vor dir ab."
+          "mc_2_a": "Du musst zweimal `bewege vorwärts` verwenden, um vor dem Baum zu stehen.",
+          "mc_2_b": "Der `Zerstören`-Block sägt den Baum vor dir ab."
         },
         "Overworld Chop Trees_2021": {
           "mc_4_a": "Du kannst die Bäume in beliebiger Reihenfolge fällen. Welcher Weg erfordert die geringste Anzahl von Blöcken?",
-          "mc_4_b": "Der Befehl `Zerstören` sägt den Baum vor dir ab."
+          "mc_4_b": "Der `Zerstören`-Block sägt den Baum vor dir ab."
         },
         "Overworld House Frame Chosen_2021": {
           "mc_6_a": "Klicke auf den Pfeil auf dem `Platzieren`-Block, um auszuwählen, was du platzieren möchten.",
           "mc_6_b": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
-          "mc_6_c": "Du kannst mehr als einen Block in eine Wiederholungsschleife einfügen."
+          "mc_6_c": "Du kannst mehr als einen Block in eine `Wiederholen`-Schleife einfügen."
         },
         "Overworld Move to Sheep_2021": {
-          "mc_1_a": "Der \"Vorwärts\"-Block befindet sich oben in der Werkzeugkiste.",
-          "mc_1_b": "Pass dabei auf, dass beide `vorwärts bewegen`-Blöcke an den `wenn ausgeführt`-Block angehängt sind."
+          "mc_1_a": "Der `bewege vorwärts`-Block befindet sich oben in der Werkzeugkiste.",
+          "mc_1_b": "Pass dabei auf, dass beide `Vorwärts bewegen`-Blöcke an den `wenn ausgeführt`-Block angehängt sind."
         },
         "Overworld Place Wall_2021": {
-          "mc_5_a": "Verwende zuerst den `Platzieren`-Block und dann den `Verschieben`-Block.",
-          "mc_5_b": "Achte darauf, dass sich beide Blöcke innerhalb der \\`Wiederholen'-Schleife befinden, damit der Code mehr als einmal ausgeführt wird.",
+          "mc_5_a": "Verwende zuerst den `Platzieren`-Block und dann den `Bewegen`-Block.",
+          "mc_5_b": "Achte darauf, dass sich beide Blöcke innerhalb der \\`Wiederholen´-Schleife befinden, damit der Code mehr als einmal ausgeführt wird.",
           "mc_5_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Overworld Plant Crops_2021": {
-          "mc_7_a": "Verwende den Block \"Pflanzen\", um etwas an dem Ort zu pflanzen, an dem du stehst.",
-          "mc_7_b": "Beide Streifen dunkelbraunes Land am Wasser müssen mit Erntegut gefüllt werden.",
-          "mc_7_c": "Du kannst mehr als einen Block in eine Wiederholungsschleife einfügen."
+          "mc_7_a": "Verwende den Block `Pflanzen`, um etwas an dem Ort zu pflanzen, an dem du stehst.",
+          "mc_7_b": "Beide Streifen aus dunkelbraunem Land neben dem Wasser müssen mit Saatgut gefüllt werden.",
+          "mc_7_c": "Du kannst mehr als einen Block in eine `Wiederholen`-Schleife einfügen."
         },
         "Overworld Powered Minecart_2021": {
-          "mc_13_a": "Verwende `Schiene legen`, um Schienen auf dem Quadrat zu legen, wo du stehst.",
-          "mc_13_b": "Verwende `Wiederholen“-Schleifen`, um deinen Code zu verkürzen."
+          "mc_13_a": "Verwende `platziere Schiene`, um Schienen auf das Quadrat zu legen, wo du stehst.",
+          "mc_13_b": "Verwende `Wiederholen`-Schleifen, um deinen Code zu verkürzen."
         },
         "Overworld Shear Sheep_2021": {
-          "mc_3_a": "Der Block \"Scheren\" bringt die Schafe zu dir. Stehst du den Schafen gegenüber?",
-          "mc_3_b": "Wenn du deine Blickrichtung ändern musst, verwende einen \"Wende\"-Block.",
+          "mc_3_a": "Der Block `Scheren` bringt die Schafe zu dir. Stehst du den Schafen gegenüber?",
+          "mc_3_b": "Wenn du deine Blickrichtung ändern musst, verwende einen `Drehen`-Block.",
           "mc_3_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Underground Avoiding Lava_2021": {
-          "mc_11_a": "Du hast den gesamten Code, um nach Lava zu suchen und damit umzugehen. Du musst nur noch einen Block hinzufügen, mit dem du dich bewegen kannst.",
-          "mc_11_b": "Sollte dein \"Vorwärts\"-Befehl innerhalb der \"Wenn\"-Anweisung oder danach stehen?"
+          "mc_11_a": "Du hast den gesamten Code fertig, um nach Lava zu suchen und diese zu überspringen. Du musst nur noch einen Block hinzufügen, mit dem du dich bewegen kannst.",
+          "mc_11_b": "Sollte dein \\`bewege vorwärts\"-Befehl innerhalb der ´Wenn´-Anweisung oder danach stehen?"
         },
         "Underground If Statements_2021": {
-          "mc_12_a": "Die rot gesprenkelten Flächen sind dort, wo du Redstone findest.",
-          "mc_12_b": "Kannst du eine „Wiederholen“-Schleife\\` verwenden, um deinen Code zu verkürzen?",
-          "mc_12_c": "Verwende eine \"Wenn\"-Anweisung, um Bereiche auf Lava zu überprüfen, und lege dann Pflastersteine aus."
+          "mc_12_a": "In den rot gesprenkelten Flächen findest du rote Steine.",
+          "mc_12_b": "Kannst du eine `Wiederholen`-Schleife verwenden, um deinen Code zu verkürzen?",
+          "mc_12_c": "Verwende eine `Wenn`-Anweisung, um Felder auf Lava zu überprüfen, und lege dann Bruchsteine aus."
         },
         "Underground Iron_2021": {
           "mc_10_a": "Die Eisenblöcke sind die gesprenkelten Bereiche hinter der Fackel! Wie willst du dort hinkommen?",
-          "mc_10_b": "Wenn du am Rand der Lava stehst, verwende `Pflastersteine vor dir`, um dir einen sicheren Weg zu schaffen. Dann kannst du die Lava überqueren!",
+          "mc_10_b": "Wenn du am Rand der Lava stehst, verwende `Platziere Bruchstein voraus`, um dir einen sicheren Weg zu schaffen. Dann kannst du die Lava überqueren!",
           "mc_10_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "Underground Mining Coal_2021": {
-          "mc_9_a": "Gehst du in die richtige Richtung? Der `zerstören-Block` vermint den Block vor dir.",
-          "mc_9_b": "Die schwarzen Flecken in der Wand sind Kohle! Verwende diese \"Vernichten-Blöcke“ darauf, um die Kohle abzubauen.",
+          "mc_9_a": "Gehst du in die richtige Richtung? Der `Zerstören`-Block macht den Block vor dir kaputt.",
+          "mc_9_b": "Die schwarzen Flecken in der Wand sind Kohle! Verwende diese `Zerstören`-Blöcke darauf, um die Kohle abzubauen.",
           "mc_9_c": "Verwende die Funktion `Platziere eine Fackel`, um eine Fackel in den Raum zu stellen, in dem du stehst."
         },
         "courseA_artist_loops2_2021": {
@@ -9154,7 +9154,7 @@
           "courseA_playlab_events_challenge2_c": "Du kannst das grantige Monster knurren lassen.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseB_Scrat_ramp1_2021": {
-          "1": "Wenn Scrat nicht das tut, was du willst, vergewissere dich, dass beide Blöcke vollständig zusammengeklickt wurden und klicke dann wieder auf \"Ausführen\".",
+          "1": "Wenn Scrat nicht das tut, was du willst, vergewissere dich, dass beide Blöcke vollständig zusammengesteckt wurden und klicke dann wieder auf \"Ausführen\".",
           "2": "Hab keine Angst, einen Fehler zu machen! Probiere etwas aus, und wenn es nicht funktioniert, versuche etwas anderes!"
         },
         "courseB_Scrat_ramp2_2021": {
@@ -9309,7 +9309,7 @@
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1_a": "Verbinde weitere Bausteine mit dem <xml><block type=\"when_run\"/></xml> Baustein um Scrat zu bewegen!",
-          "courseB_maze_seq1_b": "Schleife drei von diesen <xml><block type=\"maze_moveSouth\"/></xml>-Pfeilen heraus und verbinde diese mit dem <xml><block type=\"when_run\"/></xml>-Block, sodass Scrat zur Eichel gelangt."
+          "courseB_maze_seq1_b": "Nehme drei von den <xml><block type=\"maze_moveSouth\"/></xml>-Pfeilen heraus und verbinde diese mit dem <xml><block type=\"when_run\"/></xml>-Block, sodass Scrat zur Eichel gelangt."
         },
         "courseB_maze_seq4_2021": {
           "courseB_maze_seq4_a": "Versuche eine Anweisung nach der anderen hinzuzufügen, bis du an die Eichel kommst.",
@@ -9333,7 +9333,7 @@
         },
         "courseB_maze_seq8_2021": {
           "courseB_maze_seq8_a": "Versuche, einen Block nach dem anderen hinzuzufügen, bis du das Rätsel gelöst hast.",
-          "courseB_maze_seq8_b": "Es gibt mehr als eine Möglichkeiten um dieses Puzzle zu lösen!",
+          "courseB_maze_seq8_b": "Es gibt mehr als eine Möglichkeit um dieses Rätsel zu lösen!",
           "courseB_maze_seq8_c": "Du weißt nicht, in welche Richtung du gehen sollst? Probiere diesen Weg aus!"
         },
         "courseB_maze_seq9_2021": {
@@ -9388,42 +9388,42 @@
         },
         "courseB_starWars_prog1_2021": {
           "courseB_starWars_prog1_a": "Versuche, einen Block nach dem anderen hinzuzufügen, und klicke dann auf \"Ausführen\", um zu sehen, was passiert.",
-          "courseB_starWars_prog1_b": "Du solltest dich nach Osten bewegen, um dieses Rätsel zu lösen. Wie weit musst du dich bewegen, um dieses Rätsel zu lösen?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Du solltest dich nach Osten bewegen, um dieses Rätsel zu lösen. Wie weit musst du gehen?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2_2021": {
           "courseB_starWars_prog2_a": "Teile diese Aufgabe in zwei Teile auf. Besorge dir einen Haufen Schrott und finde dann heraus, wie du an den zweiten Teil kommst."
         },
         "courseB_starWars_prog3_2021": {
-          "courseB_starWars_prog3_a": "Du musst drei unterschiedliche Bewegungen machen, um dieses Rätsel zu lösen.",
+          "courseB_starWars_prog3_a": "Du musst dich in 3 Richtungen bewegen, um dieses Rätsel zu lösen.",
           "courseB_starWars_prog3_b": "Baue ein Stück Code nach dem anderen auf. Führe diesen Code aus, um herauszufinden, was du dann machen solltest."
         },
         "courseB_starWars_prog4_2021": {
           "courseB_starWars_prog4_a": "Baue ein Stück Code nach dem anderen auf. Führe diesen Code aus, um herauszufinden, was du dann machen solltest.",
-          "courseB_starWars_prog4_b": "Versuche, den `Wiederholungsblock` für einen kürzeren Code zu verwenden.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Versuche, den `Wiederholen`-Block zu verwenden, um den Code kürzer zu machen.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5_2021": {
-          "courseB_starWars_prog5_a": "Ist dieses Muster nicht ein wenig so wie in dem letzten Rätsel?",
-          "courseB_starWars_prog5_b": "BB-8 holt den Schrott, während er darüber wegrollt.",
-          "courseB_starWars_prog5_c": "Verfolge dieses Muster mit dem Finger. Zähle die Metallstücke bei dieser Bewegung.",
+          "courseB_starWars_prog5_a": "Ist dieses Muster nicht so ähnlich wie im letzten Rätsel?",
+          "courseB_starWars_prog5_b": "BB-8 sammelt den Schrott auf, indem er darüber rollt.",
+          "courseB_starWars_prog5_c": "Zeichne den Weg mit dem Finger nach und zähle dabei die Metallstücke.",
           "courseB_starWars_prog5_da": "Schaue, was passiert, wenn du die gleiche Lösung wie beim Rätsel mit den Treppenstufen verwendest: \n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6_2021": {
-          "courseB_starWars_prog6_a": "Dieses Muster ist einfach nur ein Treppenschritt mit zwei Bewegungen pro Richtung!",
-          "courseB_starWars_prog6_b": "Versuche, den `Wiederholungsblock` für einen kürzeren Code zu verwenden.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_a": "Dieses Muster ist einfach nur eine Treppenstufe mit zwei Bewegungen pro Richtung!",
+          "courseB_starWars_prog6_b": "Versuche, den `Wiederholen`-Block zu verwenden, um den Code kürzer zu machen.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7_2021": {
-          "courseB_starWars_prog7_a": "Ist dieses Muster nicht ein wenig so wie in dem letzten Rätsel?",
-          "courseB_starWars_prog7_b": "BB-8 holt den Schrott, während er darüber wegrollt.",
-          "courseB_starWars_prog7_c": "Versuche, das große Muster der Treppenstufen über dieses Rätsel zu zeichnen. Bedeckt es den gesamten Metallschrott?"
+          "courseB_starWars_prog7_a": "Ist dieses Muster nicht so ähnlich wie im letzten Rätsel?",
+          "courseB_starWars_prog7_b": "BB-8 sammelt den Schrott auf, indem er darüber rollt.",
+          "courseB_starWars_prog7_c": "Versuche, das große Treppenstufenmuster bei diesem Rätsel anzuwenden. Deckt es den gesamten Metallschrott ab?"
         },
         "courseB_starWars_prog8_2021": {
-          "courseB_starWars_prog8_a": "Es zulässig, über eine Reihe von Flächen zurückzugehen, die du bei deinen Bewegungen bereits berührt hast.",
-          "courseB_starWars_prog8_b": "Versuche, den `Wiederholungsblock` zu verwenden, um zu sehen, was mit dem Code passiert, den du hineingelegt hast.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "Es ist ok, über Flächen zurückzugehen, auf denen du bereits warst.",
+          "courseB_starWars_prog8_b": "Probiere aus, was mit dem Code passiert, wenn du ihn in den `Wiederholen`-Block steckst.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9_2021": {
           "courseB_starWars_prog9_a": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
           "courseB_starWars_prog9_b": "Es gibt viele Möglichkeiten, wie du dieses Rätsel lösen kannst.",
-          "courseB_starWars_prog9_c": "Könnte eine `wiederhole` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> Schleife hier helfen?"
+          "courseB_starWars_prog9_c": "Könnte eine `Wiederholen` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> Schleife hier helfen?"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "Du kannst den Baustein `Figur 1 in Bild ??? einfügen` verwenden, um der Szene eine Figur hinzuzufügen.",
@@ -9789,7 +9789,7 @@
           "courseC_starWars_loops4_b": "Jede 'wiederholen'-Schleife enthält nur einen Befehl: 'vorwärts bewegen'."
         },
         "courseC_starWars_loops5_2021": {
-          "courseC_starWars_loops5_a": "Die beste Lösung besteht aus einem einzigen \"bewege vorwärts\", dann einer Kurve und dann einer Schleife."
+          "courseC_starWars_loops5_a": "Die beste Lösung besteht aus einem einzigen `bewege vorwärts`, dann einer Drehung und dann einer Schleife."
         },
         "courseC_starWars_loops5_dani": {
           "courseC_starWars_loops5_b": "Um nach unten zu gehen, musst du dich zuerst in die Richtung drehen und dann wieder vorwärts gehen.",
@@ -9999,7 +9999,7 @@
           "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "Funktioniert das nicht? Versuche, mit der Schaltfläche \"Step“ herauszufinden, was Zeile für Zeile geschieht.",

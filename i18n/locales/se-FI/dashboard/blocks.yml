@@ -1358,6 +1358,8 @@ se:
         text: x koordináhta {SPRITE}
       Mikelab_yLocationOf:
         text: y koordináhta {SPRITE}
+      PoemBot_makeNumSprites:
+        text: ráhkat{NUM} ođđa {ANIMATION_NAME} sprite:id
       PoemBot_playSound:
         text: čuojatJiena {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1370,6 +1372,8 @@ se:
             '"ripples"': Bárožat
           PALETTE:
             '"rainbow"': Arvedávgi
+      PoemBot_setBackgroundImageAs:
+        text: bija duogábeali dása {IMG}
       PoemBot_setForegroundEffect:
         text: bija ovddabeal-effeavtta {EFFECT}
         options:

@@ -995,6 +995,13 @@ ta:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': வலது
+            '90': கீழே
+            '180': இடது
+            '270': மேலே
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1004,6 +1011,10 @@ ta:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": குதி
       gamelab_randColor:
         text: ஏதாவது ஒரு நிறம்
       gamelab_randomColor:

@@ -26,6 +26,9 @@
         "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
           "name": "Zusammenfassung"
         },
+        "86dafe20-4778-4665-94eb-cf837951259b": {
+          "name": "Vertiefendes Lernen"
+        },
         "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737": {
           "name": "Aufwärmübung"
         },
@@ -77,6 +80,9 @@
         "5c35a689-64d1-49a2-b19f-688ddf190d1e": {
           "name": "Prüfung"
         },
+        "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
+          "name": "Vertiefendes Lernen"
+        },
         "8362c620-cea5-4a56-b0b4-74a606bf62da": {
           "name": "Aufwärmübung"
         },
@@ -98,6 +104,9 @@
         "7e800d16-2b68-4b95-9071-327a7a9ce611": {
           "name": "Zusammenfassung"
         },
+        "3a4858ae-3857-4ae0-bc29-6b0e3fa421d2": {
+          "name": "Vertiefendes Lernen"
+        },
         "9fc4791f-a664-44db-9185-6162b40db705": {
           "name": "Aufwärmübung"
         },
@@ -110,6 +119,9 @@
         "3f386349-319f-49fa-a87b-4de41f39f1d4": {
           "name": "Zusammenfassung"
         },
+        "5e959966-cfc9-4300-a563-9427222987c8": {
+          "name": "Vertiefendes Lernen"
+        },
         "d9d579ea-18fb-4735-90ea-c04c59ba1a71": {
           "name": "Aufwärmübung"
         },
@@ -119,26 +131,53 @@
         "19c350ea-4420-4a94-a91e-f7d798799cc4": {
           "name": "Prüfung"
         },
+        "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
+          "name": "Vertiefendes Lernen"
+        },
+        "add79bbe-c639-4e83-9191-993c430f08e9": {
+          "name": "Vertiefendes Lernen"
+        },
         "e4cb9683-b230-44f6-9e23-48bd955d1aa4": {
           "name": "Aufwärmübung"
+        },
+        "4782266a-9011-4f00-8335-bced225a346d": {
+          "name": "Hauptaktivität"
         },
         "339d5151-756f-4b66-b647-0f86a1dce7f9": {
           "name": "Zusammenfassung"
         },
+        "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe": {
+          "name": "Vertiefendes Lernen"
+        },
         "0912bd0e-91c8-4f72-88ee-70d5ccd443f3": {
           "name": "Aufwärmübung"
+        },
+        "248075ed-be23-4145-bbe5-f629eb3df448": {
+          "name": "Hauptaktivität"
         },
         "ec7e4b2d-6d77-4493-a10c-6f62f3280d58": {
           "name": "Zusammenfassung"
         },
+        "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
+          "name": "Vertiefendes Lernen"
+        },
         "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
           "name": "Aufwärmübung"
+        },
+        "394eeb9e-8c66-4a17-bfb8-294a6f91b6d6": {
+          "name": "Hauptaktivität"
         },
         "8a245dd2-d857-40ab-8120-ef2bd8777377": {
           "name": "Zusammenfassung"
         },
+        "25e921a3-616c-4b8d-accb-c360ef37c266": {
+          "name": "Vertiefendes Lernen"
+        },
         "a9428abc-3bd7-4e69-a4fc-34672f65bca9": {
           "name": "Aufwärmübung"
+        },
+        "1a0d4eb7-44ac-4f69-8562-7d55a8324950": {
+          "name": "Hauptaktivität"
         },
         "715995ae-a584-4451-9240-29bbfb084ce2": {
           "name": "Zusammenfassung"
@@ -146,23 +185,41 @@
         "f5cb74b0-f882-49c4-97ca-2695652b352c": {
           "name": "Aufwärmübung"
         },
+        "288af6d5-c632-4696-a9d4-64bdf7cefdc9": {
+          "name": "Hauptaktivität"
+        },
         "240e1172-8a94-4e2b-931b-2d87bef6f364": {
           "name": "Prüfung"
         },
         "ee775447-c327-4e95-a523-663a02856cad": {
           "name": "Zusammenfassung"
         },
+        "4a617b6e-9d56-472c-8a50-31052d127232": {
+          "name": "Vertiefendes Lernen"
+        },
         "10140329-cade-4307-8132-d9ac56d8182c": {
           "name": "Aufwärmübung"
+        },
+        "287b6295-2274-4349-a7c3-fab998a09e1c": {
+          "name": "Hauptaktivität"
         },
         "1e93bc2c-4f03-4b43-8695-529bbfbe53dc": {
           "name": "Zusammenfassung"
         },
+        "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
+          "name": "Vertiefendes Lernen"
+        },
         "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
           "name": "Aufwärmübung"
         },
+        "3a35e6b5-a46a-47b7-b0b8-99ddadcc8fad": {
+          "name": "Hauptaktivität"
+        },
         "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
           "name": "Aufwärmübung"
+        },
+        "8227e109-9b6a-448c-a107-e70498299438": {
+          "name": "Hauptaktivität"
         },
         "ad9b2654-4506-4741-9f53-5699cb20615d": {
           "name": "Zusammenfassung"
@@ -179,20 +236,35 @@
         "edc16824-0eba-4aa8-b4a5-0cbac9b9afe7": {
           "name": "Aufwärmübung"
         },
+        "6b4566b2-8785-4170-bfaf-3f2575da50a0": {
+          "name": "Hauptaktivität"
+        },
         "19f85d4a-d5ea-4069-8f68-bcaab2a90119": {
           "name": "Zusammenfassung"
         },
         "d8fbee53-640e-4f66-ac46-024f36fd2f54": {
           "name": "Prüfung"
         },
+        "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
+          "name": "Vertiefendes Lernen"
+        },
         "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
           "name": "Aufwärmübung"
+        },
+        "b170b2ef-82f1-4067-aadc-add8074acb80": {
+          "name": "Hauptaktivität"
         },
         "61306f7a-d493-40e5-a6ed-68d2b0e97624": {
           "name": "Zusammenfassung"
         },
+        "2672684d-adc1-4050-9d44-d42d9e1a2e0c": {
+          "name": "Vertiefendes Lernen"
+        },
         "f9683417-64ad-4bc3-b152-bf0e90b35c41": {
           "name": "Aufwärmübung"
+        },
+        "381e6872-ab89-4df5-81a1-36e77c90b9a5": {
+          "name": "Hauptaktivität"
         },
         "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
           "name": "Zusammenfassung"
@@ -210,7 +282,7 @@
           "name": "Pause & Denk-Moment"
         },
         "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
-          "name": "Erweitertes Lernen"
+          "name": "Vertiefendes Lernen"
         },
         "07c33815-2515-4a63-91f1-51db34b0a00e": {
           "name": "Aufwärmübung"
@@ -222,7 +294,7 @@
           "name": "Zusammenfassung"
         },
         "9ef71984-8749-46e9-ada3-889815c8f1b9": {
-          "name": "Erweitertes Lernen"
+          "name": "Vertiefendes Lernen"
         },
         "620c06c7-711d-459f-9f67-af3d142eb29c": {
           "name": "Fächerübergreifende Gelegenheit"
@@ -237,7 +309,7 @@
           "name": "Zusammenfassung"
         },
         "0915a618-f1c1-47be-b8fb-80664fa62e50": {
-          "name": "Erweitertes Lernen"
+          "name": "Vertiefendes Lernen"
         },
         "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
           "name": "Aufwärmübung"
@@ -252,7 +324,7 @@
           "name": "Zusammenfassung"
         },
         "519099ff-6a78-427c-91d6-4ef9a2cba286": {
-          "name": "Erweitertes Lernen"
+          "name": "Vertiefendes Lernen"
         },
         "ad255314-ba48-44b7-a6b8-1f0cc1e24157": {
           "name": "Aufwärmübung"
@@ -264,7 +336,7 @@
           "name": "Zusammenfassung"
         },
         "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
-          "name": "Erweitertes Lernen"
+          "name": "Vertiefendes Lernen"
         },
         "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
           "name": "Fächerübergreifende Gelegenheit"
@@ -288,7 +360,7 @@
           "name": "Zusammenfassung"
         },
         "924d773a-f021-4b86-bde2-95ddf2dc12ae": {
-          "name": "Erweitertes Lernen"
+          "name": "Vertiefendes Lernen"
         },
         "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
           "name": "Aufwärmübung"
@@ -303,7 +375,7 @@
           "name": " Zusammenfassung"
         },
         "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
-          "name": "Erweitertes Lernen"
+          "name": "Vertiefendes Lernen"
         },
         "92c5197c-d135-4891-9504-ba1393dd8ca6": {
           "name": "Fächerübergreifende Gelegenheit"
@@ -339,7 +411,7 @@
           "name": "Zusammenfassung"
         },
         "32810ead-80cc-47b1-863f-ea8d023aaa94": {
-          "name": "Erweitertes Lernen"
+          "name": "Vertiefendes Lernen"
         },
         "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
           "name": "Aufwärmübung"
@@ -354,7 +426,7 @@
           "name": "Zusammenfassung"
         },
         "98f951f7-63b2-4d62-82c9-d472b3505b68": {
-          "name": "Erweitertes Lernen"
+          "name": "Vertiefendes Lernen"
         },
         "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c": {
           "name": "Aufwärmübung"
@@ -364,6 +436,9 @@
         },
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Zusammenfassung"
+        },
+        "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
+          "name": "Vertiefendes Lernen"
         },
         "9d9055c3-143a-452e-9703-ef90cd9a9469": {
           "name": "Level"
@@ -380,17 +455,32 @@
         "260a48d0-8cd7-4f15-b303-32e5c685a349": {
           "name": "Aufwärmübung"
         },
+        "679fd0a3-4fa5-445a-a58d-2789ae6af602": {
+          "name": "Hauptaktivität"
+        },
         "d582f103-5fb1-4236-80df-100080cc01b9": {
           "name": "Zusammenfassung"
+        },
+        "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
+          "name": "Vertiefendes Lernen"
         },
         "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
           "name": "Aufwärmübung"
         },
+        "62f7dfaa-f865-461e-a17f-6d5c09893246": {
+          "name": "Hauptaktivität"
+        },
         "24b3a120-756e-4a3c-8b8e-29e9a3256869": {
           "name": "Zusammenfassung"
         },
+        "756542f6-213e-4c07-9442-d1cf97e1ff26": {
+          "name": "Vertiefendes Lernen"
+        },
         "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
           "name": "Aufwärmübung"
+        },
+        "e0fe20d3-be99-4212-83f8-21599085fcad": {
+          "name": "Hauptaktivität"
         },
         "8a35ec67-caeb-48fa-95bc-d2c3177f6cf9": {
           "name": "Zusammenfassung"
@@ -398,8 +488,14 @@
         "b5b68733-e757-4aec-84e2-8bea7936175b": {
           "name": "Aufwärmübung"
         },
+        "440ff812-8ffc-4ac3-a6c8-1ed73872fcdd": {
+          "name": "Hauptaktivität"
+        },
         "5f64e89f-e102-47ee-b219-5e637db83913": {
           "name": "Zusammenfassung"
+        },
+        "27034f13-f0bf-41c0-a198-385c740be6ab": {
+          "name": "Vertiefendes Lernen"
         },
         "1c265744-1a1f-44f4-8380-7328759249ea": {
           "name": "Aufwärmübung"
@@ -410,20 +506,38 @@
         "899be5b5-0668-4472-909d-46a1e44e98e2": {
           "name": "Zusammenfassung"
         },
+        "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9": {
+          "name": "Vertiefendes Lernen"
+        },
         "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
           "name": "Aufwärmübung"
+        },
+        "e36b6776-3c22-498e-94ef-44fae2c28065": {
+          "name": "Hauptaktivität"
         },
         "3cf1342b-1aed-4419-a0cf-a26c438f58fa": {
           "name": "Zusammenfassung"
         },
+        "d905457a-3a72-4927-a3a6-910b2fba3a53": {
+          "name": "Vertiefendes Lernen"
+        },
         "8d168c1a-0b80-4cff-8626-1f03a8ba046c": {
           "name": "Aufwärmübung"
+        },
+        "84af3892-0fdd-462d-8815-99e6e2edf15f": {
+          "name": "Hauptaktivität"
         },
         "92a24c72-3fd9-4843-b701-ebb3832e29e5": {
           "name": "Zusammenfassung"
         },
+        "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
+          "name": "Vertiefendes Lernen"
+        },
         "63075b82-d582-409b-afd8-a8967040c94c": {
           "name": "Aufwärmübung"
+        },
+        "b20f1e20-6bb7-4cfb-9fe5-17928dc3ab60": {
+          "name": "Hauptaktivität"
         },
         "533abcef-ea93-4b33-902c-7b70e22ffe31": {
           "name": "Zusammenfassung"
@@ -431,23 +545,44 @@
         "8d10f0a0-909f-482c-a17f-3477280c7375": {
           "name": "Aufwärmübung"
         },
+        "4e9e15eb-a14e-4b52-ba13-768f4a7900c3": {
+          "name": "Hauptaktivität"
+        },
         "2c76698a-3f76-4cfd-8b21-5ff264c2f1bb": {
           "name": "Zusammenfassung"
+        },
+        "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4": {
+          "name": "Vertiefendes Lernen"
         },
         "38b78816-4a04-4c9b-b112-3704e9511c42": {
           "name": "Aufwärmübung"
         },
+        "7ec11452-1367-44ef-afe4-c8cf354bb183": {
+          "name": "Hauptaktivität"
+        },
         "9b5aab20-f47d-48fd-aadc-eaba286d48b5": {
           "name": "Zusammenfassung"
+        },
+        "7c0129f4-ba20-475d-b304-a85ddd87507e": {
+          "name": "Vertiefendes Lernen"
         },
         "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
           "name": "Aufwärmübung"
         },
+        "b0a66dc2-0e44-413c-8364-97799728aa5f": {
+          "name": "Hauptaktivität"
+        },
         "7a0a25e1-d2a6-47ec-a890-69a3182d5ef0": {
           "name": "Zusammenfassung"
         },
+        "cf4ad357-07b4-48e1-bd8f-108301e7aa0a": {
+          "name": "Erweitertes Lernen"
+        },
         "300fccda-4810-433a-bbc6-14ceee1a1b5f": {
           "name": "Aufwärmübung"
+        },
+        "e0ae16fd-eea3-47f4-8fa4-3355e57f9894": {
+          "name": "Hauptaktivität"
         },
         "81828841-d023-4593-896d-b4ce1481da6f": {
           "name": "Zusammenfassung"
@@ -455,17 +590,29 @@
         "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
           "name": "Aufwärmübung"
         },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": "Hauptaktivität "
+        },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Zusammenfassung"
         },
         "8667da08-85cd-4d60-a4f1-ff2608e4d240": {
           "name": "Prüfung"
         },
+        "af629d31-87ab-476d-a2d3-6da008802f3c": {
+          "name": "Erweitertes Lernen"
+        },
         "617a65b9-bbea-4e3e-ae4b-cbb106b09af0": {
           "name": "Aufwärmübung"
         },
+        "f96503b6-c295-4deb-8e47-c3440041a689": {
+          "name": "Hauptaktivität"
+        },
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Zusammenfassung"
+        },
+        "e735098e-abab-465e-949c-a7e92e771b84": {
+          "name": "Vertiefendes Lernen"
         },
         "f5985094-20d7-4316-a052-e7b18a78572e": {
           "name": "Level"
@@ -473,11 +620,20 @@
         "ae81cfe6-45ff-4093-bd79-7c5e3f2b3c7e": {
           "name": "Aufwärmübung"
         },
+        "523e695a-12e0-443c-bad6-8e816c672adb": {
+          "name": "Hauptaktivität"
+        },
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Zusammenfassung"
         },
+        "c401b0f4-97af-418d-b58b-a58493c7570c": {
+          "name": "Vertiefendes Lernen"
+        },
         "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
           "name": "Aufwärmübung"
+        },
+        "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
+          "name": "Hauptaktivität"
         },
         "09c54a0a-44a3-43f6-b468-9bbf2b718717": {
           "name": "Zusammenfassung"
@@ -485,11 +641,20 @@
         "f9529bed-1eeb-4e6c-b078-e5adda35308a": {
           "name": "Aufwärmübung"
         },
+        "8b62bbe8-a1c9-4288-bb21-9f7a31e96b1e": {
+          "name": "Hauptaktivität"
+        },
         "1b4d0af0-9d4a-492b-8c23-2fb711c488d3": {
           "name": "Zusammenfassung"
         },
+        "da433c13-5e0a-48fe-a697-d2288e831912": {
+          "name": "Vertiefendes Lernen"
+        },
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Aufwärmübung"
+        },
+        "d05decb3-7f64-4886-8da0-088e7d73216d": {
+          "name": "Hauptaktivität"
         },
         "7104b634-df9c-44bd-bc2d-fd226d3a1ee4": {
           "name": "Zusammenfassung"
@@ -497,11 +662,20 @@
         "1d6a34ca-5dad-4492-8a1c-6b56f85874fa": {
           "name": "Aufwärmübung"
         },
+        "04f6a743-e334-43ba-a72c-2b68a8163c0a": {
+          "name": "Hauptaktivität"
+        },
         "592a6eba-5e83-43f7-b622-1c58f47e3dea": {
           "name": "Zusammenfassung"
         },
+        "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
+          "name": "Vertiefendes Lernen"
+        },
         "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
           "name": "Aufwärmübung"
+        },
+        "2ffe8a66-a950-4b74-91e5-5149b2808279": {
+          "name": "Hauptaktivität"
         },
         "0ba4a78d-b13f-442c-90f2-58125ef3ff64": {
           "name": "Zusammenfassung"
@@ -511,6 +685,9 @@
         },
         "75477df5-5a1f-4ee8-a294-37c3bb1f1153": {
           "name": "Aufwärmübung"
+        },
+        "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
+          "name": "Vertiefendes Lernen"
         },
         "46464e07-b5ac-4ca4-84b2-3b43873360da": {
           "name": "Aufwärmübung"
@@ -530,17 +707,26 @@
         "544b7b1e-6622-4ce0-b5ed-6c8b8980c832": {
           "name": "Prüfung"
         },
+        "22ad368d-3a00-4720-a21a-72985c642b8d": {
+          "name": "Vertiefendes Lernen"
+        },
         "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
           "name": "Aufwärmübung"
         },
         "386b2a92-c44c-403c-a19e-44bbf2ed7786": {
           "name": "Zusammenfassung"
         },
+        "f72b0518-8373-4e23-9798-b4973072e86e": {
+          "name": "Vertiefendes Lernen"
+        },
         "e9ce9579-635c-4885-a9fd-6c260ae09dd4": {
           "name": "Aufwärmübung"
         },
         "1887e2d0-98de-4534-8fb3-780ed4e8fe3c": {
           "name": "Zusammenfassung"
+        },
+        "8fce2a3e-4d8d-4b01-9926-bcd5b2f5a3de": {
+          "name": "Vertiefendes Lernen"
         },
         "e2c8f30f-bc96-4c09-8765-e5986e61d230": {
           "name": "Aufwärmübung"
@@ -566,11 +752,17 @@
         "160b0f38-c5d3-4b28-b797-981888824dcf": {
           "name": "Zusammenfassung"
         },
+        "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
+          "name": "Vertiefendes Lernen"
+        },
         "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
           "name": "Aufwärmübung"
         },
         "4a54982d-83d3-4040-b499-46d8dc535774": {
           "name": "Zusammenfassung"
+        },
+        "4cdf3492-9941-452b-8da8-f2aa6f10df90": {
+          "name": "Vertiefendes Lernen"
         },
         "0fbc0a74-9eca-48af-960b-6ec8e381e852": {
           "name": "Aufwärmübung"
@@ -583,6 +775,9 @@
         },
         "ab1fc6fb-495e-4ae1-9685-c0c64d5bfa06": {
           "name": "Zusammenfassung"
+        },
+        "1d75c580-140f-4796-9e75-5863162c676b": {
+          "name": "Vertiefendes Lernen"
         },
         "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
           "name": "Aufwärmübung"
@@ -620,6 +815,9 @@
         "a3dd3aa4-52be-42e3-8093-b5f2bd7441f0": {
           "name": "Zusammenfassung"
         },
+        "3392a940-9b70-4634-bfa5-a197b8d2941e": {
+          "name": "Vertiefendes Lernen"
+        },
         "e1b92a7f-657f-4825-aa00-576f89e67200": {
           "name": "Aufwärmübung"
         },
@@ -644,11 +842,17 @@
         "8e27bf8f-68a5-42b3-ae4e-c58c2dd2d355": {
           "name": "Zusammenfassung"
         },
+        "62694f2e-0bae-4e9d-b285-ce262bc3dfce": {
+          "name": "Vertiefendes Lernen"
+        },
         "4c3dc207-714d-4cee-bcc7-249ff9b10f0c": {
           "name": "Aufwärmübung"
         },
         "00f7b6d4-a585-4d87-ba85-2c780734b876": {
           "name": "Zusammenfassung"
+        },
+        "95494f38-9a95-4778-a3db-bc35cd58cbc0": {
+          "name": "Vertiefendes Lernen"
         },
         "f7461142-82fd-41d4-b3e2-93ca77d0a546": {
           "name": "Aufwärmübung"
@@ -661,6 +865,9 @@
         },
         "6b43b84e-bffc-427b-8b1f-983968a21f29": {
           "name": "Zusammenfassung"
+        },
+        "d8254f7a-d3ba-4079-932c-1e0f6e2f03b2": {
+          "name": "Vertiefendes Lernen"
         },
         "4b6c37da-c087-41f8-94bd-6eddba55804d": {
           "name": "Aufwärmübung"
@@ -685,6 +892,9 @@
         },
         "c91f6f2e-3f06-42b8-9733-1bd1b2ccfee1": {
           "name": "Zusammenfassung"
+        },
+        "0f7c86d3-05c8-4faa-9054-4c649cbb7f17": {
+          "name": "Vertiefendes Lernen"
         },
         "92dee8e9-e57d-4efc-baf7-a3ff2dba0d42": {
           "name": "Aufwärmübung"
@@ -734,14 +944,23 @@
         "72bef51e-2edb-4bfe-8995-1c1c0c126e11": {
           "name": "Zusammenfassung"
         },
+        "0ce37c1b-33ce-4d9a-9a0f-1508a3279e5a": {
+          "name": "Vertiefendes Lernen"
+        },
         "dde11556-b732-467c-a7bf-70b47c9cc8ad": {
           "name": "Aufwärmübung"
         },
         "514be718-37b6-4bca-9bea-138eac8ae77c": {
           "name": "Zusammenfassung"
         },
+        "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
+          "name": "Vertiefendes Lernen"
+        },
         "0396f06e-4a9e-443d-859c-dc77fa229769": {
           "name": "Zusammenfassung"
+        },
+        "3aaee60c-904c-4592-8092-b7abf66d9fac": {
+          "name": "Vertiefendes Lernen"
         },
         "f1cadd9a-0974-4abd-b152-5c923d0195e2": {
           "name": "Aufwärmübung"
@@ -757,6 +976,9 @@
         },
         "65eecebd-7353-4fca-9e51-e34aa5e14a8e": {
           "name": "Aufwärmübung"
+        },
+        "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
+          "name": "Vertiefendes Lernen"
         },
         "59675efe-890a-48b9-bd56-947f991df50b": {
           "name": "Aufwärmübung"
@@ -779,14 +1001,23 @@
         "ad29aebb-c28d-4b6a-9769-4b6b7d62e6d8": {
           "name": "Zusammenfassung"
         },
+        "9209915b-655f-4e9e-b106-3843617f4034": {
+          "name": "Vertiefendes Lernen"
+        },
         "3eb2dbe1-88c5-4306-83e5-0f057590e7d5": {
           "name": "Aufwärmübung"
         },
         "291b174a-b478-463d-aff6-af66feda095a": {
           "name": "Zusammenfassung"
         },
+        "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
+          "name": "Vertiefendes Lernen"
+        },
         "5b27bb73-d7a0-4ff5-b8b4-3cc29aa2cc9e": {
           "name": "Aufwärmübung"
+        },
+        "f0a9525c-5225-44d5-9a87-99a70c73b197": {
+          "name": "Hauptaktivität"
         },
         "b0345ccb-8e3c-4b40-a86e-5b02ac2ab780": {
           "name": "Zusammenfassung"
@@ -794,14 +1025,26 @@
         "d7c5d028-ebdb-4366-9856-f36f780cd472": {
           "name": "Aufwärmübung"
         },
+        "7007138d-bc16-4bc0-8d30-252440672814": {
+          "name": "Hauptaktivität"
+        },
         "6db6a634-e996-4369-9bc6-b32a570beaff": {
           "name": "Zusammenfassung"
         },
         "8f8f7be8-e984-40ce-9b30-b423814535f8": {
           "name": "Aufwärmübung"
         },
+        "7ae8b822-0da7-4701-9c2d-068197f8fe14": {
+          "name": "Hauptaktivität"
+        },
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Zusammenfassung"
+        },
+        "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
+          "name": "Vertiefendes Lernen"
+        },
+        "02429a22-ab18-4df6-9062-d88960fe9ae8": {
+          "name": "Vertiefendes Lernen"
         },
         "b0422816-99eb-45d4-ad51-c872770be86c": {
           "name": "Level"
@@ -809,14 +1052,26 @@
         "b93a77e0-76ff-4b91-9ec1-c19b04e0cca1": {
           "name": "Aufwärmübung"
         },
+        "0177419f-4d26-4ccc-bcf3-ac4275a5fd17": {
+          "name": "Hauptaktivität"
+        },
         "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
           "name": "Zusammenfassung"
+        },
+        "7ccdedb5-15bf-4d75-9efb-e65349644266": {
+          "name": "Hauptaktivität"
         },
         "d41159ef-433a-4547-a067-2695e41120ae": {
           "name": "Zusammenfassung"
         },
+        "27b493bd-61be-4305-b021-8b40d59ee55a": {
+          "name": "Vertiefendes Lernen"
+        },
         "1014e6a8-473d-46e2-a448-ca92a6697405": {
           "name": "Aufwärmübung"
+        },
+        "d47466c2-3004-476e-a652-d45c8374b24d": {
+          "name": "Hauptaktivität"
         },
         "875f6137-2035-4bb3-aec9-0c2f30fcbb1d": {
           "name": "Zusammenfassung"
@@ -824,11 +1079,20 @@
         "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
           "name": "Aufwärmübung"
         },
+        "d8e700f9-bc93-424a-9ab3-3a06b63816b0": {
+          "name": "Hauptaktivität"
+        },
         "aa8015a6-3a2c-401c-a8ff-4d0116ee1358": {
           "name": "Zusammenfassung"
         },
+        "6354e763-cca6-4b98-b56e-16609de67f85": {
+          "name": "Vertiefendes Lernen"
+        },
         "02d69cfa-0438-4f7e-ad96-91985effa0dc": {
           "name": "Aufwärmübung"
+        },
+        "8fecfdd9-352e-4816-8964-e4fa6d36c0aa": {
+          "name": "Hauptaktivität"
         },
         "3c16545b-4916-4493-b8ad-6e73aa6ac515": {
           "name": "Zusammenfassung"
@@ -836,14 +1100,23 @@
         "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
           "name": "Aufwärmübung"
         },
+        "b4ae143b-f79d-4ab9-9346-dca177438f61": {
+          "name": "Hauptaktivität"
+        },
         "6aed97c6-89bd-4bc0-a4dd-ac23af33e065": {
           "name": "Zusammenfassung"
         },
         "a0d784ef-8d53-486a-ac4c-eba8617be681": {
           "name": "Prüfung"
         },
+        "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
+          "name": "Vertiefendes Lernen"
+        },
         "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
           "name": "Aufwärmübung"
+        },
+        "0da29d00-d95a-4538-ac89-116513fba104": {
+          "name": "Hauptaktivität"
         },
         "151ce93d-fb9d-4e64-89a5-6367fc58fb57": {
           "name": "Zusammenfassung"
@@ -851,23 +1124,44 @@
         "9d8a6daa-38de-42a0-995f-16d869ca1101": {
           "name": "Aufwärmübung"
         },
+        "3f3d661f-eb79-4d76-a889-dad31cd540f2": {
+          "name": "Hauptaktivität"
+        },
         "6254961e-5863-4a98-8d8f-7ef4565c1f8f": {
           "name": "Zusammenfassung"
+        },
+        "1a3eff43-27c8-476a-9d18-2e277fa416b9": {
+          "name": "Vertiefendes Lernen"
         },
         "da87c8ba-9486-43e4-9dde-e6eac223396e": {
           "name": "Aufwärmübung"
         },
+        "c80d72fc-575e-4dc2-bfe7-444acb269cc9": {
+          "name": "Hauptaktivität"
+        },
         "dc47da0d-484b-481e-bfaf-17f9de229688": {
           "name": "Zusammenfassung"
+        },
+        "3f414667-5259-49ac-a7a3-af4a9ef62fdf": {
+          "name": "Vertiefendes Lernen"
         },
         "82c8173b-040e-41ec-b6ca-f1369b308268": {
           "name": "Aufwärmübung"
         },
+        "9db395da-6afb-43e0-9115-6e0604f89208": {
+          "name": "Hauptaktivität"
+        },
         "b320db90-d678-4814-9003-f7569a443c19": {
           "name": "Zusammenfassung"
         },
+        "8026f93e-6bc5-4824-9f7a-d21fa69476ed": {
+          "name": "Vertiefendes Lernen"
+        },
         "eb0992db-a3cc-4724-a525-6a0c1d88c700": {
           "name": "Aufwärmübung"
+        },
+        "0d2d5e5c-1742-4883-a2d8-73284a6cd40e": {
+          "name": "Hauptaktivität"
         },
         "ba1bc1f7-f9be-4735-8bcb-de57cc5c2d4a": {
           "name": "Zusammenfassung"
@@ -875,11 +1169,17 @@
         "0118e81c-812d-4001-976a-ad2dd2a8dd77": {
           "name": "Aufwärmübung"
         },
+        "c79703f5-9051-4665-95b6-cfae7c304f6d": {
+          "name": "Hauptaktivität"
+        },
         "b2227118-727d-4eff-be1c-fafe331297fd": {
           "name": "Zusammenfassung"
         },
         "49051b73-a04d-4a2b-b99e-9b5fe43d235b": {
           "name": "Projekt am Ende des Kurses"
+        },
+        "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
+          "name": "Vertiefendes Lernen"
         }
       }
     }

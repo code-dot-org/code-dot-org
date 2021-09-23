@@ -802,6 +802,13 @@ az:
           EFFECT:
             '"burst"': partlayış
             '"rain"': yağış
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': sağa
+            '90': aşağı
+            '180': sola
+            '270': yuxarı
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -812,6 +819,7 @@ az:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": düymə
             "'sound://category_collect/clicky_crunch.mp3'": çatlamış
+            "'sound://category_digital/jump_7.mp3'": atıl
       gamelab_randColor:
         text: ixtiyari rəng
       gamelab_randomColor:

@@ -18375,3 +18375,27 @@ zh-CN:
               name: 加速传感器
             lesson-19:
               name: 项目
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: 小部件
+            lesson-3:
+              name: 工具
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 课程
+            lessonGroup-3:
+              display_name: 项目
+        csa4-exemplars:
+          lessons:
+            lesson-15:
+              name: 评估日
+          lesson_groups:
+            lesson group:
+              display_name: 内容
+            content:
+              display_name: 内容
+            lesson_group:
+              display_name: 内容
+            lessonGroup-2:
+              display_name: 内容

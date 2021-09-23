@@ -1682,7 +1682,8 @@
             "parameters": {
               "points": "điểm",
               "length": "chiều dài"
-            }
+            },
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
           },
           "draw a circle": {
             "name": "vẽ một hình tròn",
@@ -1732,7 +1733,8 @@
             "parameters": {
               "points": "điểm",
               "length": "chiều dài"
-            }
+            },
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
           },
           "draw a circle": {
             "name": "vẽ một hình tròn",
@@ -1781,7 +1783,8 @@
             "parameters": {
               "points": "điểm",
               "length": "chiều dài"
-            }
+            },
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
           },
           "draw a circle": {
             "name": "vẽ một hình tròn",
@@ -1830,7 +1833,8 @@
             "parameters": {
               "points": "điểm",
               "length": "chiều dài"
-            }
+            },
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
           },
           "draw a circle": {
             "name": "vẽ một hình tròn",
@@ -2453,6 +2457,16 @@
         "courseC_artist_prog4_2021": {
           "booster": {
             "name": "bảo bối"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "lời giải tiềm năng"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "di chuyển và lấy mật hoa bằng biến đếm"
           }
         }
       }
