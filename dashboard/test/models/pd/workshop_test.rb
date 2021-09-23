@@ -379,7 +379,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
-  test 'send_exit_surveys sends no surveys for EIR:Admin+Counselor workshops' do
+  test 'send_exit_surveys sends no surveys for EIR:Admin/Counselor workshops' do
     # Make a EIR workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
     workshop = create :admin_counselor_workshop, :ended
@@ -1445,6 +1445,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute workshop.valid?
 
     workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'EIR:Admin/Counselor Welcome workshop must suppress email' do
+    workshop = build :admin_counselor_workshop, course: COURSE_ADMIN_COUNSELOR
+
+    workshop.subject = SUBJECT_ADMIN_COUNSELOR_WELCOME
+    workshop.suppress_email = false
+    refute workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'EIR:Admin/Counselor Welcome workshop must not be funded' do
+    workshop = build :admin_counselor_workshop, course: COURSE_ADMIN_COUNSELOR
+
+    workshop.subject = SUBJECT_ADMIN_COUNSELOR_WELCOME
+    workshop.funded = true
+    refute workshop.valid?
+
+    workshop.funded = false
     assert workshop.valid?
   end
 

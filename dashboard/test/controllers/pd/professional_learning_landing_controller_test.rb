@@ -67,7 +67,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_nil response[:last_workshop_survey_course]
   end
 
-  test 'EIR Admin+Counselor workshops do not show up as pending exit surveys' do
+  test 'EIR:Admin/Counselor workshops do not show up as pending exit surveys' do
     # Fake EIR workshop, which should not produce an exit survey
     eir_workshop = create :admin_counselor_workshop, :ended
 
