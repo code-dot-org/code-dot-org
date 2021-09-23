@@ -16,7 +16,6 @@ import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/Resourc
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -50,9 +49,7 @@ class UnitOverviewTopRow extends React.Component {
     showCalendar: PropTypes.bool,
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
-    scriptResourcesPdfUrl: PropTypes.string,
-    publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
-    noLessonPlans: PropTypes.bool
+    scriptResourcesPdfUrl: PropTypes.string
   };
 
   recordAndNavigateToPdf = (e, firehoseKey, url) => {
