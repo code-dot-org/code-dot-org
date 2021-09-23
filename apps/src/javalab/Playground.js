@@ -31,6 +31,11 @@ export default class Playground {
     );
   }
 
+  onStop() {
+    const audioElement = this.getAudioElement();
+    this.resetMediaElement(audioElement);
+  }
+
   onStarterAssetsReceived = result => {
     const response = JSON.parse(result.response);
     response.starter_assets.forEach(asset => {
