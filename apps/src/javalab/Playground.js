@@ -32,8 +32,8 @@ export default class Playground {
   }
 
   onStop() {
-    const audioElement = this.getAudioElement();
-    this.resetMediaElement(audioElement);
+    this.endGame();
+    this.resetAudioElement();
   }
 
   onStarterAssetsReceived = result => {
@@ -54,8 +54,7 @@ export default class Playground {
         this.isGameRunning = true;
         break;
       case PlaygroundSignalType.EXIT:
-        this.isGameRunning = false;
-        this.isGameOver = true;
+        this.endGame();
         break;
       case PlaygroundSignalType.ADD_CLICKABLE_ITEM:
         this.addClickableItem(data.detail);
@@ -122,10 +121,7 @@ export default class Playground {
       return;
     }
 
-    const filename = soundData.filename;
-
-    const audioElement = this.getAudioElement();
-    this.setMediaElement(audioElement, filename);
+    this.setMediaElement(this.getAudioElement(), soundData.filename);
   }
 
   setBackgroundImage(backgroundData) {
@@ -182,17 +178,23 @@ export default class Playground {
 
   resetAudioElement() {
     const audioElement = this.getAudioElement();
+    audioElement.pause();
     this.resetMediaElement(audioElement);
   }
 
   resetBackgroundElement() {
     const backgroundElement = this.getBackgroundElement();
-    this.resetMediaElement(backgroundElement);
     backgroundElement.style.opacity = 0.0;
+    this.resetMediaElement(backgroundElement);
   }
 
   resetMediaElement(element) {
     element.onerror = undefined;
     element.src = '';
+  }
+
+  endGame() {
+    this.isGameRunning = false;
+    this.isGameOver = true;
   }
 }
