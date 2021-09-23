@@ -77,23 +77,10 @@ class UnitOverviewTopRow extends React.Component {
   };
 
   compilePdfDropdownOptions = () => {
-    const {
-      scriptOverviewPdfUrl,
-      scriptResourcesPdfUrl,
-      publishedState,
-      noLessonPlans
-    } = this.props;
-
-    if (noLessonPlans) {
-      return [];
-    }
-
-    const showOverviewPDFOption =
-      publishedState !== PublishedState.pilot &&
-      publishedState !== PublishedState.in_development;
+    const {scriptOverviewPdfUrl, scriptResourcesPdfUrl} = this.props;
 
     const options = [];
-    if (scriptOverviewPdfUrl && showOverviewPDFOption) {
+    if (scriptOverviewPdfUrl) {
       options.push({
         key: 'lessonPlans',
         name: i18n.printLessonPlans(),

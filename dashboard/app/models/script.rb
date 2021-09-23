@@ -1582,8 +1582,7 @@ class Script < ApplicationRecord
       courseVersionId: get_course_version&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
-      updated_at: updated_at.to_s,
-      noLessonPlans: unit_without_lesson_plans
+      updated_at: updated_at.to_s
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1599,7 +1598,7 @@ class Script < ApplicationRecord
     summary
   end
 
-  def unit_without_lesson_plans
+  def unit_without_lesson_plans?
     lessons.select(&:has_lesson_plan).empty?
   end
 
