@@ -1265,13 +1265,16 @@
           "patrolling": "순찰"
         },
         "CourseF_outbreak1": {
-          "wandering": "배회"
+          "wandering": "배회",
+          "recovering": "복구 중"
         },
         "CourseF_outbreak2": {
-          "wandering": "배회"
+          "wandering": "배회",
+          "recovering": "복구 중"
         },
         "CourseF_outbreak3": {
-          "wandering": "배회"
+          "wandering": "배회",
+          "recovering": "복구 중"
         },
         "CourseF_outbreak4": {
           "wandering": "배회",
@@ -1285,13 +1288,16 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "recovering": "복구 중"
         },
         "CourseF_outbreak5": {
-          "wandering": "배회"
+          "wandering": "배회",
+          "recovering": "복구 중"
         },
         "CourseF_outbreak6": {
-          "wandering": "배회"
+          "wandering": "배회",
+          "recovering": "복구 중"
         },
         "CourseF_outbreak7": {
           "wandering": "배회",
@@ -1304,7 +1310,9 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "recovering": "복구 중",
+          "moving left and right": "왼쪽과 오른쪽으로 이동"
         },
         "CourseF_outbreak8": {
           "wandering": "배회",
@@ -1317,7 +1325,9 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "recovering": "복구 중",
+          "moving left and right": "왼쪽과 오른쪽으로 이동"
         },
         "Dance Party 2_2021": {
           "spinning left": "왼쪽으로 회전",
@@ -2483,7 +2493,9 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "recovering": "회복 중",
+          "moving left and right": "왼쪽과 오른쪽으로 이동"
         }
       }
     }

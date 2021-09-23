@@ -277,6 +277,13 @@ hr:
         options:
           EFFECT:
             '"rain"': kiša
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': desno
+            '90': dolje
+            '180': lijevo
+            '270': gore
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -286,6 +293,7 @@ hr:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": krckati
+            "'sound://category_digital/jump_7.mp3'": skoči
       gamelab_randColor:
         text: nasumično odabrana boja
       gamelab_randomColor:

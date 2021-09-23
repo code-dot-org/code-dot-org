@@ -1137,6 +1137,13 @@ ko:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       gamelab_makeNumSprites:
         text: "{NUM}개의 새 {ANIMATION_NAME} 스프라이트를 만드세요"
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': 오른쪽으로
+            '90': 아래로
+            '180': 왼쪽으로
+            '270': 위로
       gamelab_mirrorSprite:
         text: "{SPRITE} 얼굴 {DIRECTION}"
         options:
@@ -1167,6 +1174,7 @@ ko:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": 버튼
             "'sound://category_collect/clicky_crunch.mp3'": 부서짐 소리
+            "'sound://category_digital/jump_7.mp3'": 점프
       gamelab_pointInDirection:
         text: 지점 {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1305,7 +1313,7 @@ ko:
       gamelab_whenSpriteCreated:
         text: "{SPRITE}가 만들어질 때"
       gamelab_whenTouching:
-        text: 때 {SPRITE1} 접촉 {SPRITE2}
+        text: "{SPRITE1}이(가) {SPRITE2}을(를) 터치할 때"
       gamelab_whenUpArrow:
         text: 위쪽 화살표를 눌렀을 때
       gamelab_whileDownArrow:
@@ -1467,7 +1475,7 @@ ko:
       Mikelab_groupWhenClickedOn:
         text: 때 {COSTUME} 클릭
       Mikelab_groupWhenXTouchesY:
-        text: 때{COSTUME} 접촉 {COSTUME2}
+        text: "{COSTUME}이(가) {COSTUME2}을(를) 터치할 때"
       Mikelab_groupWhileClicked:
         text: "{COSTUME}을 클릭하는 동안"
       Mikelab_groupWhileTouchingAny:
@@ -1625,6 +1633,8 @@ ko:
         text: x 좌표 {SPRITE}
       Mikelab_yLocationOf:
         text: y 좌표 {SPRITE}
+      PoemBot_makeNumSprites:
+        text: "{NUM}개의 새 {ANIMATION_NAME} 스프라이트를 만드세요"
       PoemBot_playSound:
         text: Playsound {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1638,6 +1648,8 @@ ko:
             '"ripples"': 물결
           PALETTE:
             '"rainbow"': 무지개
+      PoemBot_setBackgroundImageAs:
+        text: 배경을 {IMG}으로 설정
       PoemBot_setForegroundEffect:
         text: 전경 효과 {EFFECT} 설정
         options:
@@ -1669,6 +1681,10 @@ ko:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      PoemBot_whenPromptAnswered:
+        text: "{VAR}이란 답이 나올 때"
       RyanLab_moveForward:
         text: 앞으로 이동
       RyanLab_turnLeft:

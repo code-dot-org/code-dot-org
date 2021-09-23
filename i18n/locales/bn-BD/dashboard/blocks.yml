@@ -187,6 +187,13 @@ bn:
             '"right"': ডানে
             '"space"': স্থান
             '"x"': এক্স
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ডানে
+            '90': নিচে
+            '180': বামে
+            '270': উপরে
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -196,6 +203,7 @@ bn:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": কড়্কড়্ শব্দ
+            "'sound://category_digital/jump_7.mp3'": লাফান
       gamelab_randColor:
         text: যেকোনো রঙ
       gamelab_randomColor:

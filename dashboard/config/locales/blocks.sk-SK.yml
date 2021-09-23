@@ -1160,6 +1160,13 @@ sk:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNumSprites:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': vpravo
+            '90': dole
+            '180': vľavo
+            '270': hore
       gamelab_mirrorSprite:
         text: "{SPRITE} smeruje {DIRECTION}"
         options:
@@ -1196,6 +1203,7 @@ sk:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": tlačidlo
             "'sound://category_collect/clicky_crunch.mp3'": chrúmať
+            "'sound://category_digital/jump_7.mp3'": skoč
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
         options:
@@ -1723,6 +1731,8 @@ sk:
         text: y súradnica {SPRITE}
       Outbreak_beginCongregating:
         text: Príšerky sa začínajú zhromažďovať
+      PoemBot_makeNumSprites:
+        text: vytvor {NUM} nových {ANIMATION_NAME} postáv
       PoemBot_playSound:
         text: playSound {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1736,6 +1746,8 @@ sk:
             '"ripples"': Vlnky
           PALETTE:
             '"rainbow"': Dúha
+      PoemBot_setBackgroundImageAs:
+        text: nastav pozadie na {IMG}
       PoemBot_setForegroundEffect:
         text: nastav efekt popredia {EFFECT}
         options:
@@ -1773,6 +1785,10 @@ sk:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      PoemBot_whenPromptAnswered:
+        text: keď {VAR} zodpovedaná
       RyanLab_moveForward:
         text: posuň sa dopredu
       RyanLab_turnLeft:

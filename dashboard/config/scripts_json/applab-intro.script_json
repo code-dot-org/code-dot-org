@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "applab-intro",
-    "serialized_at": "2021-09-18 22:15:24 UTC",
+    "serialized_at": "2021-09-22 12:14:32 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "applab-intro"
@@ -42,10 +42,10 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Tutorial Summary:** This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. \r\n\r\n**Age Appropriateness:** The tutorial is designed for students over 13. Because it allows students to upload custom sounds and images, young students should not use this without supervision. To protect students privacy, if your students are under 13, they will not be able to use this tutorial unless you first set up accounts for them in a section you manage.\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. Encourage students to use the target images and directions provided in every level to know if they are on the right track. If students want to move on past a particularly tricky level they can simply click \"Finish\" and continue on.\r\n\r\nHave fun completing your Hour of Code with App Lab!\r\n\r\n",
+        "overview": "This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. \n\n**Age Appropriateness:** The tutorial is designed for students over 13. Because it allows students to upload custom sounds and images, young students should not use this without supervision. To protect students' privacy, if your students are under 13, they will not be able to use this tutorial unless you first set up accounts for them in a section you manage.\n\n",
         "preparation": "### One Week Before Your Hour of Code\r\n\r\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \r\n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to receive swag or classroom support.\r\n- Review and complete the online tutorial yourself\r\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\r\n\r\n### One Day Before Your Hour of Code\r\n\r\n- Print one or more of the [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at the end of this lesson plan, or create your own. \r\n- Each student who completes the activity should receive a certificate. [Print one](http://code.org/certificates) for everyone in advance to make this easier at the end of your Hour of Code.\r\n",
         "purpose": "This lesson is your students' first step with App Lab. The tutorial itself should be an approachable introduction to a powerful tool with broad functionality. Students should have a positive experience during the tutorial and more importantly should be motivated to keep building in App Lab. They are only scratching the surface of what the tool is capable of here, so afterwards they should use the code.org/applab page or the project gallery to get inspired for more complex types of projects they want to make.",
-        "student_overview": "Tutorial Summary: This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. "
+        "student_overview": "This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. "
       },
       "seeding_key": {
         "lesson.key": "Intro to App Lab",
@@ -59,7 +59,6 @@
       "key": "f4670c8c-98ec-47d0-b458-02a96f130b76",
       "position": 1,
       "properties": {
-        "duration": 0,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -73,7 +72,6 @@
       "key": "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685",
       "position": 2,
       "properties": {
-        "duration": 0,
         "name": "Activity"
       },
       "seeding_key": {
@@ -87,7 +85,6 @@
       "key": "8e673a7c-56ec-49ed-b7ca-36799cb40b2f",
       "position": 3,
       "properties": {
-        "duration": 0,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -128,7 +125,7 @@
       "key": "430134f0-2f85-4888-abd3-f55fbf0753da",
       "position": 1,
       "properties": {
-        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on\r\n\r\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students if they seem like they need help.\r\n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before completing a level for a student ensure they've actually looked closely at the target image and read all the text there.\r\n* **Stuck? Click here:** Each level includes a GIF showing exactly how to complete the level. If students want help they can and should use these GIFs. If they only want to use them as a hint, just have them close the GIF once they've seen the first part.\r\n* **Move On and Come Back:** Sometimes students will benefit more from coming back to a tricky level. Except for the \"Design Mode\" sequence, all levels are independent of one another, though they do rely to some degree on previously introduced concepts.",
+        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on\n\n* **Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. Encourage students to use the target images and directions provided in every level to know if they are on the right track. If students want to move on past a particularly tricky level they can simply click \"Finish\" and continue on.\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students if they seem like they need help.\n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before completing a level for a student ensure they've actually looked closely at the target image and read all the text there.\n* **Stuck? Click here:** Each level includes a GIF showing exactly how to complete the level. If students want help they can and should use these GIFs. If they only want to use them as a hint, just have them close the GIF once they've seen the first part.\n* **Move On and Come Back:** Sometimes students will benefit more from coming back to a tricky level. Except for the \"Design Mode\" sequence, all levels are independent of one another, though they do rely to some degree on previously introduced concepts.",
         "name": "General Support\r"
       },
       "seeding_key": {
@@ -166,7 +163,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Finding Images:** Students do not need to search for images or sounds online in order to complete this lesson, but they may wish to. You'll likely want to prepare in advance to advise responsible and appropriate searching for images.\r\n"
           }
@@ -289,6 +285,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Getting Started"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -311,6 +310,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Screen Color"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -333,6 +335,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Text 2"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -355,6 +360,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Full Text"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -377,6 +385,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -399,6 +410,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent intro"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -421,6 +435,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -443,6 +460,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -465,6 +485,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - playSound"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -487,6 +510,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Design Mode"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -509,6 +535,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -531,6 +560,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -553,6 +585,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -575,6 +610,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Share Your App"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -597,6 +635,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,

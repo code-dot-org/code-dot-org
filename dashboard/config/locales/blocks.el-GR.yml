@@ -1116,6 +1116,13 @@ el:
             '"rain"': βροχή
       gamelab_makeNewSpriteAnon:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': δεξιά
+            '90': κάτω
+            '180': αριστερά
+            '270': επάνω
       gamelab_mirrorSprite:
         text: "{SPRITE} γύρνα προς {DIRECTION}"
         options:
@@ -1148,6 +1155,7 @@ el:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": κουμπί
             "'sound://category_collect/clicky_crunch.mp3'": τρίξιμο
+            "'sound://category_digital/jump_7.mp3'": πήδα
       gamelab_pointInDirection:
         text: στρίψε το {SPRITE} {DIRECTION}
         options:
@@ -1613,6 +1621,8 @@ el:
             '"ripples"': Πτυχώσεις
           PALETTE:
             '"rainbow"': Ουράνιο τόξο
+      PoemBot_setBackgroundImageAs:
+        text: Ορισμός φόντου σε {IMG}
       PoemBot_setForegroundEffect:
         text: όρισε προσκήνιο σε {EFFECT}
         options:

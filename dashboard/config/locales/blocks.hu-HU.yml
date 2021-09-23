@@ -1143,6 +1143,13 @@ hu:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       gamelab_makeNumSprites:
         text: csinálj {NUM} új {ANIMATION_NAME} szereplőt
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': jobbra
+            '90': le
+            '180': balra
+            '270': fel
       gamelab_mirrorSprite:
         text: "{SPRITE} fordul {DIRECTION}"
         options:
@@ -1179,6 +1186,7 @@ hu:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": gomb
             "'sound://category_collect/clicky_crunch.mp3'": ropogás
+            "'sound://category_digital/jump_7.mp3'": Ugorj
       gamelab_pointInDirection:
         text: "{SPRITE} fordulj {DIRECTION} felé"
         options:
@@ -1217,9 +1225,13 @@ hu:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': sivatag
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxis
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rács
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': rét
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': szivárvány
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': szakasz
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': csillagok
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metró
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': metró
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': vízalatti
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': téli
             undefined: Semennyit
@@ -1576,6 +1588,10 @@ hu:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': város
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': rét
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': szakasz
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metró
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': metró
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1657,6 +1673,8 @@ hu:
         text: "{SPRITE} x koordinátája"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinátája"
+      PoemBot_makeNumSprites:
+        text: csinálj {NUM} új {ANIMATION_NAME} szereplőt
       PoemBot_playSound:
         text: játszd le a {SOUND} hangot
       PoemBot_setBackgroundEffect:
@@ -1670,6 +1688,8 @@ hu:
             '"ripples"': Lüktetés
           PALETTE:
             '"rainbow"': Szivárvány
+      PoemBot_setBackgroundImageAs:
+        text: háttér beállítása {IMG}
       PoemBot_setForegroundEffect:
         text: 'előtéreffekt beállítása: {EFFECT}'
         options:
@@ -1695,6 +1715,10 @@ hu:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      PoemBot_whenPromptAnswered:
+        text: ha {VAR} a válasz
       RyanLab_moveForward:
         text: előrelépni
       RyanLab_turnLeft:
