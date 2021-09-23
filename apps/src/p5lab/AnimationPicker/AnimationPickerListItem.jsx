@@ -6,7 +6,6 @@ import color from '@cdo/apps/util/color';
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 import AnimationPreview from './AnimationPreview';
-import experiments from '@cdo/apps/util/experiments';
 
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
@@ -20,17 +19,14 @@ class AnimationPickerListItem extends React.Component {
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
     category: PropTypes.string,
-    selected: PropTypes.bool
+    selected: PropTypes.bool,
+    multiSelectEnabled: PropTypes.bool
   };
 
   state = {
     loaded: false,
     hover: false
   };
-
-  componentDidMount() {
-    this.multiSelectEnabled_ = experiments.isEnabled(experiments.MULTISELECT);
-  }
 
   render() {
     const {
@@ -40,7 +36,8 @@ class AnimationPickerListItem extends React.Component {
       onClick,
       playAnimations,
       label,
-      selected
+      selected,
+      multiSelectEnabled
     } = this.props;
     const {loaded, hover} = this.state;
     const rootStyle = [styles.root, !label && styles.noLabel];
@@ -112,7 +109,7 @@ class AnimationPickerListItem extends React.Component {
         {animationProps &&
           loaded &&
           (hover || selected) &&
-          this.multiSelectEnabled_ && (
+          multiSelectEnabled && (
             <i
               className={multiSelectIconClassName}
               style={multiSelectIconStyle}

@@ -224,7 +224,7 @@ export function handleUploadError(status) {
 /**
  * An animation has been selected to be added to the list to save later.
  * @param {!AnimationProps} animation
- * @returns {{type: string, status: string}}
+ * @returns {{type: string, animation: AnimationProps}}
  */
 export function addSelectedAnimation(animation) {
   return {
@@ -236,7 +236,7 @@ export function addSelectedAnimation(animation) {
 /**
  * Remove an animation that was selected has been selected to save later.
  * @param {!AnimationProps} animation
- * @returns {{type: string, status: string}}
+ * @returns {{type: string, animation: AnimationProps}}
  */
 export function removeSelectedAnimation(animation) {
   return {
