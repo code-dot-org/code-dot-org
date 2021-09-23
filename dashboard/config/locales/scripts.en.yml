@@ -26290,3 +26290,16 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Mood Study
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poetry-hoc3
+          title: Poetry HoC v3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
