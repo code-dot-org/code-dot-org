@@ -242,9 +242,9 @@ ka:
   front_volunteers: გვესაჭიროება ტექ–მოხალისეები
   front_start_learning: სწავლის დაწყება
   header_menu_resources: რესურსები
-  header_menu_faq: ხშირად დასმული კითხვები
-  header_menu_how_to: როგორ ვიხმაროთ
-  header_menu_promote: გაუწიეთ პოპულარიზაცია
+  header_menu_faq: ხდკ
+  header_menu_how_to: გამოყენება
+  header_menu_promote: გავრცელება
   header_menu_activities: აქტივობები
   not_found_title: გვერდი ვერ მოიძებნა
   not_found_desc: ეს გვერდი ვერ მოიძებნა
@@ -378,17 +378,17 @@ ka:
   company_wcschools: უილსონის საგრაფოს სკოლები
   company_yelp: Yelp
   nav_back_to_resources: რესურსებში დაბრუნება
-  how_to_nav_educators: მასწავლებლებისთვის
+  how_to_nav_educators: პედაგოგებისთვის
   how_to_nav_after_school: სკოლის შემდგომი აქტივობისთვის
   how_to_nav_parents: მშობლებისთვის
   how_to_nav_public_officials: საჯარო ოფიციალური პირებისთვის
   how_to_nav_districts: რაიონებისთვის
   how_to_nav_assemblies: სასკოლო შეკრებებისთვის
   how_to_nav_organizations: ორგანიზატორებისთვის
-  how_to_nav_companies: კომპანიებს
+  how_to_nav_companies: კომპანიებისთვის
   how_to_nav_afterschool_educators: სკოლის შემდგომი პერიოდის პედაგოგებისთვის
-  how_to_nav_volunteers: მოხალისეებს
-  how_to_nav_virtual: For virtual events
+  how_to_nav_volunteers: მოხალისეებისთვის
+  how_to_nav_virtual: ვირტუალური ღონისძიებებისთვის
   whats_next_header: და შემდეგ?
   whats_next_description: თქვენი ღონისძიებისთვის ჩვენ გამოგიგზავნით დამხმარე მასალებსა
     და სასარგებლო რჩევებს. 2015 წლის ახალი ტუტორიალები მალე დაიდება და მათი გავლა
@@ -464,13 +464,14 @@ ka:
   front_join_us_learn_more: Learn more
   signup_closed: ამჟამად რეგისტრაცია კოდის ერთ საათზე დახურულია. შემდეგ კოდის ერთ
     საათზე დასარეგისტრირებლად გთხოვთ, კიდევ ერთხელ სცადოთ ოქტომბერში.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
-  signup_registration_not_required_markdown: You don't need to register to participate!
-    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
-    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
+  signup_registration_not_required: მონაწილეობისთვის რეგისტრაცია არ გჭირდებათ! კოდის
+    ერთი საათის აქტივობები მუდამ ხელმისაწვდომია. <a href='%{hoc_activities_url}'>სცადეთ
+    აქტივობა</a>, ან წაიკითხეთ ჩვენი <a href='%{howto_guide_url}'>სახელმძღვანელო</a>,
+    რომ დაგეგმოთ ღონისძიება თქვენი კლასისთვის.
+  signup_registration_not_required_markdown: მონაწილეობისთვის რეგისტრაცია არ გჭირდებათ!
+    კოდის ერთი საათის აქტივობები მუდამ ხელმისაწვდომია. [სცადეთ აქტივობა](%{hoc_activities_url})
+    ან წაიკითხეთ ჩვენი [სახელმძღვანელო](%{howto_guide_url}), რომ დაგეგმოთ ღონისძიება
+    თქვენი კლასისთვის.
   signup_registration_closed: And every year in December, your class can join millions
     of students around the world celebrating Computer Science Education Week with
     the Hour of Code. We'll open registration for the annual celebration in October.
@@ -502,8 +503,8 @@ ka:
   signup_email_preference_opt_in: შეგვიძლია, გამოგიგზავნოთ ხოლმე სიახლეები Code.org-ის
     კურსების, ადგილობრივი შესაძლებლობების ან კომპიუტერული მეცნიერების სამყაროს შესახებ?
   signup_email_preference_privacy: "(ნახეთ ჩვენი კონფიდენციალურობის პოლიტიკა)"
-  signup_email_preference_yes: 'Yes'
-  signup_email_preference_no: 'No'
+  signup_email_preference_yes: დიახ
+  signup_email_preference_no: არა
   signup_email_preference_error: Email preference is required
   signup_multiple_event_warning: თუ რამდნიმე ღონისძიებას ატარებთ, ყოველისთვის უნიკალური
     სახელი ან ელფოსტა შეარჩიეთ. ჩვენ ვითვლით ღონისძიებებს სახელისა და ელფოსტის უნიკალური
@@ -582,7 +583,7 @@ ka:
     (Thanks %{random_donor} for supporting @codeorg)'
   twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
     Are you? (Thanks %{random_donor} for supporting @codeorg)'
-  hoc_faq_title: ხშირად დასმული კითხვები
+  hoc_faq_title: ხდკ
   hoc_faq_what_is_hoc_q: რა არის კოდის ერთი საათი?
   hoc_faq_what_is_hoc_a: კოდის ერთი საათი არის ერთსაათიანი შესავალი კურსი კომპიუტერულ
     მეცნიერებებში, რომლის მიზანიცაა აჩვენოს, რომ პროგრამირების საწყისების სწავლა შეუძლია
@@ -594,18 +595,19 @@ ka:
   hoc_faq_last_year: სცადეთ ტუტორიალები
   hoc_faq_when_is_hoc_q: როდისაა კოდის ერთი საათი?
   hoc_faq_when_is_hoc_a: კოდის ერთი საათი ტარდება ყოველ წელს <a href='%{csedweek_url}'>კომპიუტერული
-    მეცნიერების საგანმანათლებლო კვირის განმავლობაში</a> შეგიძლიათ. %{campaign_date_year}
-    საგანმანათლებლო კვირა ჩატაარდება %{campaign_date_full}-ში,, მაგრამ კოდის ერთი
-    საათის თავად ჩატარება წლის ნებისმიერ მონაკვეთში შეგიძლიათ. კომპიუტერული მეცნიერების
-    საგანმანათლებლო კვირა ყოველწლიურად <a href='%{grace_hopper}'>ადმირალი გრეის მიურეი
-    ჰოპერის</a>, კომპიუტერული პიონერის, დაბადების დღის - 1906 წლის 9 დეკემბრის - აღსანიშნავად
-    ტარდება.
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+    მეცნიერების საგანმანათლებლო კვირეულის განმავლობაში</a>. %{campaign_date_year}
+    წლის კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეული ჩატარდება ამ დღეებში
+    — %{campaign_date_full}, მაგრამ კოდის ერთი საათი წლის ნებისმიერ მონაკვეთში შეგიძლიათ
+    ჩაატაროთ. კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული ყოველწლიურად <a href='%{grace_hopper}'>ადმირალი
+    გრეის მიურეი ჰოპერის</a>, კომპიუტერული პიონერის, დაბადების დღის - 1906 წლის 9
+    დეკემბრის - აღსანიშნავად ტარდება.
+  hoc_faq_when_is_hoc_a_markdown: კოდის ერთი საათი ტარდება ყოველ წელს [კომპიუტერული
+    მეცნიერების საგანმანათლებლო კვირეულის განმავლობაში](%{csedweek_url}). %{campaign_date_year}
+    წლის კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეული ჩატარდება ამ დღეებში
+    — %{campaign_date_full}, მაგრამ კოდის ერთი საათი წლის ნებისმიერ მონაკვეთში შეგიძლიათ
+    ჩაატაროთ. კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული ყოველწლიურად [ადმირალი
+    გრეის მიურეი ჰოპერის](%{grace_hopper}), კომპიუტერული პიონერის, დაბადების დღის
+    - 1906 წლის 9 დეკემბრის - აღსანიშნავად ტარდება.
   hoc_faq_why_cs_q: რატომ კომპიუტერული მეცნიერება?
   hoc_faq_why_cs_a: "<i>ყოველ</i>მოსწავლეს უნდა ჰქონდეს შესაძლებლობა, ისწავლოს ინფორმატიკა.
     ინფორმატიკის სწავლა ავითარებს პრობლემების გადაჭრის უნარს, ლოგიკასა და შემოქმედებით
@@ -674,14 +676,16 @@ ka:
     ერთი საათის გავლა მთელ ჯგუფს ერთად შეუძლია. უყურეთ ვიდეოებს ერთად, ამოცანები კი
     რიგ-რიგობით გააკეთეთ.<li><b> ისწავლეთ ოფლაინ.</b> ჩვენ გვაქვს <a href=''%{unplugged_url}''>ტუტორიალები,
     რომელთაც კომპიუტერები საერთოდ</a> არ სჭირდება. </ul>'
-  hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
-
-    _Here are a few options:_
-
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+  hoc_faq_need_computers_a_markdown: "არა. ჩვენ გვაქვს კოდის ერთი საათის ისეთი ტუტორიალები,
+    რომლებიც მუშაობს კომპიუტერებზე, სმარტფონებზე, პლანშეტებზე, ზოგს კი საერთოდ არ
+    სჭირდება არანაირი მოწყობილობა! არა აქვს მნიშვნელობა, სად ხართ და რა გაქვთ. \n\n_აი,
+    რამდენიმე იდეა:_ \n\n- **იმუშავეთ წყვილებად.** [კვლევები გვაჩვენებს](%{pair_programming_research}),
+    რომ ბავშვები საუკეთესოდ სწავლობენ მაშინ, როცა [კოდს წერენ წყვილებში](%{pair_programming_video})
+    ერთი კომპიუტერის გამოყენებით. დაყავით თქვენი მოსწავლეები ორ-ორად. \n- **გამოიყენეთ
+    პროექტორი.** თუ გაქვთ წვდომა ინტერნეტსა და პროექტორზე, კოდის ერთი საათის გავლა
+    მთელ ჯგუფს ერთად შეუძლია. უყურეთ ვიდეოებს ერთად, ამოცანები კი რიგ-რიგობით გააკეთეთ.\n-
+    **ისწავლეთ ოფლაინ.** ჩვენ გვაქვს [ტუტორიალები, რომელთაც კომპიუტერები საერთოდ არ
+    სჭირდება](%{unplugged_url})."
   hoc_faq_international_q: მე ვარ <country>ში. როგორ მივიღო მონაწილეობა?
   hoc_faq_international_a: კოდის ერთი საათის ღონისძიების ჩატარება შეუზლია ყველას და
     ყველგან. შარშანაც მოსწავლეები მთელი მსოფლიოს მასშტაბით გაერთიანდნენ კოდის ერთი
@@ -695,19 +699,19 @@ ka:
     ტუტორიალებს, მაგრამ ჩვენი ძირითადი მიზანია მაქსიმალურად მარტივი და საინტერესო
     გავხადოთ სწავლა იმათთვის, ვინც პროგრამირებას პირველად კოდის ერთი საათის ფარგლებში
     შეეხება.
-  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
-    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
-    a variety of engaging options, but the primary goal is to optimize the experience
-    for students and teachers who are new to computer science.
+  hoc_faq_tutorial_a_markdown: თუ გინდათ გახდეთ ჩვენი პარტნიორი და შექმნათ ტუტორიალი,
+    [გაეცანით ჩვენს სახელმძღვანელოს და ინსტრუქციებს](%{tutorial_guidelines}). ჩვენ
+    სიამოვნებით მივიღებდით სხვადასხვა ფორმატის ტუტორიალებს, მაგრამ ჩვენი ძირითადი
+    მიზანია მაქსიმალურად მარტივი და საინტერესო გავხადოთ კომპიუტერული მეცნიერება მოსწავლეებისა
+    და მასწავლებლებისთვის ვინც პირველად ეცნობა მას.
   hoc_faq_account_q: სჭირდებათ თუ არა მოსწავლეებს ანგარიშის შექმნა და სადმე შესვლა?
   hoc_faq_account_a: არა. რეგისტრაცია ან საიტზე შესვლა არ არის საჭირო მოსწავლეებისთვის
     კოდის ერთ საათში მონაწილეობის მისაღებად. <a href='http://code.org/learn/beyond'>განგრძობადი
     კურსების</a> უმეტესობა ანგარიშის შექმნას მოსწავლის შედეგების შესანახად მოითხოვს.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
+  hoc_faq_account_a_markdown: არა. რეგისტრაცია, ან საიტზე შესვლა არ არის საჭირო მოსწავლეებისთვის
+    კოდის ერთ საათში მონაწილეობის მისაღებად. [განგრძობადი კურსების](%{codeorg_url}/learn/beyond))
+    უმეტესობა ანგარიშის შექმნას მოსწავლის შედეგების შესანახად მოითხოვს. ასევე, კოდის
+    ერთი საათისთვის რეგისტრაცია ავტომატურად არ ქმნის კოდის სტუდიის ანგარიშს.
   hoc_faq_high_school_q: რა აქტივობები ავირჩიო დამამთავრებელი კლასების მოსწავლეებისთვის?
   hoc_faq_high_school_a: ჩვენი ვარსკვლავური ომებისა და Minecraft-ის ახალი ტუტორიალები
     გადასარევია უფროსკლასელებისთვის, განსაკუთრებით ვარსკვალვური ომების JavaScript
@@ -716,13 +720,13 @@ ka:
     მაგალითად Angry Birds ან ანასა და ელზას ტუტორიალებით. დამამთავრებელი კლასების
     მოსწავლეს უნდა შეეძლოს მათი 30 წუთში დასრულება, შემდეგ კი უფრო რთულ JavaScript
     ტუტორიალეზე გადასვლა, მაგალითად ხანის აკადემიის ან CodeHS ტუტორიალებზე.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: ჩვენი ვარსკვლავური ომებისა და Minecraft-ის ტუტორიალები
+    გადასარევია უფროსკლასელებისთვის, განსაკუთრებით ვარსკვლავური ომების JavaScript
+    ვერსია და ორივე ტუტორიალზე უფასო სათამაშო დონე. ნებისმიერი ასაკისთვის ჩვენი რჩევაა
+    დაიწყოთ დამწყები დონის ტუტორიალით  [%{partner_url}/learn](%{codeorg_url}/learn),
+    მაგალითად Angry Birds ან ანასა და ელზას ტუტორიალებით. დამამთავრებელი კლასების
+    მოსწავლეს უნდა შეეძლოს მათი 30 წუთში დასრულება, შემდეგ კი უფრო რთულ JavaScript
+    ტუტორიალზე გადასვლა, მაგალითად ხანის აკადემიის ან CodeHS ტუტორიალებზე.
   hoc_faq_scratch_q: კოდის ერთი საათისთვის სკრატჩის ტუტორიალი ავირჩიე, მაგრამ რა მოხდება,
     თუ ჩემს მოსწავლეებს ლეპტოპების მაგვირად პლანშეტები აქვთ?
   hoc_faq_scratch_a: სკრატჩი არ მუშაობს პლანშეტებზე. თუ პატარა მოსწავლეები გყავთ,
@@ -740,22 +744,20 @@ ka:
     მონაცემებს და რამდენიმე ღონისძიებას ერთ წერტილად ასახავს. თუ დააჭირეთ რიცხვს რუკის
     ზემოთ, გადახვალთ ღონისძიებების სიაში, სადაც აუცილებლად იქნება თქვენიც. კიდევ ერთი
     რამ: რუკა და სია ძირითადად 48 საათში ერთხელ ახლდება. შეამოწმეთ რამდენიმე დღეში!'
-  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
-    of Code map. Because of the tens of thousands of organizers who sign up, the map
-    aggregates the data and displays one point for several events. If you click the
-    [events page](%{events_url}) link below the map you will be directed to a list
-    of all events by state and can find your event listed there. Additionally, given
-    the thousands of people signing up for the Hour of Code, the map and event list
-    usually takes 48 hours to update. Check back in a few days!
+  hoc_faq_map_a_markdown: 'ძალიან ვწუხთ, რომ კოდის ერთი საათის რუკაზე თქვენს ღონისძიებას
+    ვერ ხედავთ. რადგანაც ათობით ათასი ორგანიზატორი რეგისტრირდება, რუკა აერთიანებს
+    მონაცემებს და რამდენიმე ღონისძიებას ერთ წერტილად ასახავს. თუ დააჭერთ [ღონისძიებების
+    გვერდის](%{events_url}) ბმულს რუკის ქვემოთ, გადახვალთ ღონისძიებების სიაში, სადაც
+    აუცილებლად იქნება თქვენიც. კიდევ ერთი რამ: რუკა და სია ძირითადად 48 საათში ერთხელ
+    ახლდება. შეამოწმეთ რამდენიმე დღეში!'
   hoc_faq_count_hoc_a: კოდის ერთი საათის ტრეკერი არ არის გაზომვის ზუსტი მოწყობილობა.
     ჩვენ ვერ აღვრიცხავთ უნიკალური მოსწავლეების ID-ების ზუსტად, იმიტომ რომ არ ვთხოვთ
     მათ რეგისტრაციას ან საიტზე შესვლას. შედეგად, ჩვენ ვითვლით როგორც მეტობით, ასევე
     ნაკლებობით ერთდროულად. დეტალებს გაეცანით <a href='http://code. org/loc'>აქ </a>.
-  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
-    of usage. We do not count unique student IDs perfectly when tracking participation
-    in the Hour of Code, especially because we don't require students to log in or
-    register. As a result, we both over-count and under-count participants at the
-    same time. Read all the details [here](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: კოდის ერთი საათის ზუსტად წამი წამში შესრულება არ არის
+    აუცილებელი. ჩვენ ვერ აღვრიცხავთ უნიკალური მოსწავლეების ID-ებს ზუსტად, იმიტომ რომ
+    არ ვთხოვთ მათ რეგისტრაციას ან საიტზე შესვლას. შედეგად, ჩვენ ვითვლით როგორც მეტობით,
+    ასევე ნაკლებობით ერთდროულად. დეტალებს გაეცანით [აქ](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: რამდენის სწავლაა შესაძლებელი ერთ საათში?
   hoc_faq_one_hour_a: 'კოდის ერთი საათის მიზანი არ არის ერთ საათში ვინმე პროგრამირების
     ექსპერტი გახადოს. ერთი საათი მხოლოდ იმისთვისაა საკმარისი, რომ მოსწავლეებმა გაიგონ:
@@ -772,11 +774,11 @@ ka:
     ყველაზე მნიშვნელოვანი, რასაც ყველა სწავლობს ამ ერთ საათში არის მარტივი ჭეშმარიტება
     – ჩვენ ამის გაკეთება შეგვიძლია.'
   hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+    კოდის ერთი საათის მიზანი არ არის ერთ საათში ვინმე პროგრამირების ექსპერტი გახადოს. ერთი საათი მხოლოდ იმისთვისაა საკმარისი, რომ მოსწავლეებმა გაიგონ: პროგრამირება არის სახალისო, შემოქმედებითი, ყველასთვის მისაწვდომი აქტივობა. წარმატების საზომი არ არის ის, თუ რამდენს ისწავლიან მოსწავლეები ამ ერთ საათში – არამედ, რამდენი სხვადასხვა გენდერული, სოციოეკონომიკური და ეთნიკური ჯგუფის წარმომადგენელი მოსწავლე ჩაერთვება ამ ღონისძიებაში და შემდეგ რამდენი გააგრძელებს პროგრამირების სწავლას. მილიონობით მასწავლებელი და მოსწავლე აგრძელებს პროგრამირებას კოდის ერთი საათის შემდეგ – სწავლობენ მთელი დღე, მთელი კვირა, ან მეტიც და შედეგად ბევრი მოსწავლე სწავლობს სრულ კურსს ან სულაც პროფესიად ირჩევს პროგრამირებას.
 
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+    ბავშვების გარდა „მოსწავლე“ არის პედაგოგიც, რომელიც, კოდის ერთი საათის ჩატარების შემდეგ ხვდება, რომ მას შეუძლია ასწავლოს კომპიუტერული მეცნიერება; სკოლის ადმინისტრაცია კი ხვდება, რომ პროგრამირება არის საგანი, რომლის სწავლაც სურთ მოსწავლეებს და რომლის სწავლებაც შეუძლიათ მათ მასწავლებლებს.
 
-    Above all, what all participants can learn in an hour is that we can do this.
+    ყველაზე მნიშვნელოვანი, რასაც ყველა სწავლობს ამ ერთ საათში არის მარტივი ჭეშმარიტება – პროგრამირება ყველას შეუძლია.
   hoc_faq_more_questions_q: კიდევ გაქვთ კითხვები?
   hoc_faq_more_questions_a: სცადეთ იპოვოთ პასუხი <a href='http://support.code.org'>დახმარების
     ფორუმზე</a>.
@@ -786,31 +788,30 @@ ka:
     დროს. ტუტორიალები ჩვენს საიტზე მთელი წლის განმავლობაში არის წარდგენილი. გადადით
     <a href='/promote'>ჩვენი რესურსების</a> გვერდზე და გაიგეთ, როგორ უნდა ჩაატაროთ
     ღონისძიება.
-  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
-    tutorials stay up year-round. You can expect all our tutorials and curriculum
-    to be available on our site in perpetuity. Please go to [our resources](%{promote})
-    for event how-to guides and other resources to help make your Hour of Code event
-    a success.
+  hoc_faq_keep_learning_a_markdown: კოდის ერთი საათის ჩატარება შეუძლია ნებისმიერ ადამიანს
+    ნებისმიერ დროს. ტუტორიალები ჩვენს საიტზე მთელი წლის განმავლობაში არის წარდგენილი.
+    გადადით [ჩვენი რესურსების](%{promote}) გვერდზე და გაიგეთ, როგორ უნდა ჩაატაროთ
+    წარმატებული ღონისძიება.
   hoc_faq_certificates_q: სად ამოვბეჭდო სერტიფიკატები ჩემი სტუდენტებისთვის?
   hoc_faq_certificates_a: გადადით ჩვენს <a href='%{codeorg_url}/certificates'>სერტიფიკატების
     გვერდზე</a>, სადაც წინასწარ შეძლებთ ამობეჭდოთ სერტიფიკატები მთელი თქვენი კლასისთვის.
     ასევე შეგიძლიათ ამობეჭდოთ <a href='%{codeorg_url}/certificates?course=mc'>სპეციალური
     სერტიფიკატები</a> იმ მოსწვლეებისთვის, რომლებიც Minecraft-ის ტუტორიალს გაივლიან.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: გადადით ჩვენს [სერტიფიკატების გვერდზე](%{codeorg_url}/certificates),
+    სადაც წინასწარ შეძლებთ ამობეჭდოთ სერტიფიკატები მთელი კლასისთვის. ასევე შეგიძლიათ
+    ამობეჭდოთ [სპეციალური სერტიფიკატები](%{codeorg_url}/certificates?course=mc) იმ
+    მოსწავლეებისთვის, რომლებიც Minecraft-ის ტუტორიალს გაივლიან.
   hoc_faq_logo_q: არსებობს თუ არა რამე შეზღუდვები კოდის ერთი საათის ლოგოსა ან სახელის
     გამოყენებაზე?
   hoc_faq_logo_a: Hour of Code (კოდის ერთი საათი) სასაქონლო ნიშანია. ჩვენ არ გვსურს
     მისი გამოყენების შეზღუდვა, მაგრამ გვინდა დავრწმუნდეთ, რომ იგი გარკვეულ წესებს
     შეესაბამება. გთხოვთ, ნახეთ<a href='%{logo_url}'>გამოყენების წესები</a>.
-  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
-    usage, but we want to make sure its usage fits within a few limits. Please see
-    [these guidelines for usage](%{logo_url}).
+  hoc_faq_logo_a_markdown: Hour of Code (კოდის ერთი საათი) სავაჭრო ნიშანია. ჩვენ არ
+    გვსურს მისი გამოყენების შეზღუდვა, მაგრამ გვინდა დავრწმუნდეთ, რომ იგი გარკვეულ
+    წესებს შეესაბამება. გთხოვთ, ნახეთ [გამოყენების წესები](%{logo_url}).
   stats_hoc_2013_image_alt: 2013 წლის კოდის ერთი საათის სტატისტიკა
   stats_growth: ჩვენ ყველაზე სწრაფად მივაწვდინეთ ხმა 15 მილიონ მომხმარებელს.
-  stats_i18n: მოსწავლეები სწავლობენ 40 ენაზე
+  stats_i18n: ხელმისაწვდომია 45-ზე მეტ ენაზე
   stats_tumblr: 'Tumblr: 3.5 წელი'
   stats_facebook: 'Facebook: 3 წელი'
   stats_twitter: 'Twitter: 2.5 წელი'
@@ -850,11 +851,11 @@ ka:
   resources_country_resources: რესურსები ქვეყნების მიხედვით
   resources_stickers: სტიკერები
   resources_how_to_guides: ინსტრუქციები
-  resources_promote: გაუწიეთ პოპულარიზაცია
+  resources_promote: გავრცელება
   resources_nav_tutorials: სცადეთ ტუტორიალები
   resources_nav_promote: გაავრცელეთ ინფორმაცია
   resources_nav_spread_word: როგორ მივიღოთ მონაწილეობა
-  resources_banner_promote_text: გაუწიეთ პოპულარიზაცია
+  resources_banner_promote_text: გავრცელება
   resources_banner_promote_button: 'წაახალისეთ სხვებიც, რომ დარეგისტრირდნენ: გამოიყენეთ
     ბროშურები, შთამაგონებელი პოსტერები და სოციალური ქსელების ბანერები.'
   resources_banner_howto_text: როგორ უნდა
@@ -909,7 +910,7 @@ ka:
   events_orgs_title: კოდის ერთი საათის ყველა ღონისძიება ორგნიზებული პარტნიორი ორგანიზეციების
     მიერ
   event: ღონისძიება
-  events: ღონისძიებები
+  events: ღონისძიება
   highlights_title: მნიშვნელოვანი ნაწილები
   highlights_header: კოდის ერთი საათის მნიშვნელოვანი მომენტები
   highlights_description: ჩვენი საყვარელი მომენტები კოდის ერთი საათის კამპანიიდან.
@@ -943,23 +944,23 @@ ka:
   footer_copyright_message: "%{current_year} წლის Code.org-ის საავტორო უფლებები. ყველა
     უფლება დაცულია."
   footer_trademark_message: კოდის ერთი საათი™ არის Code.org-ის სავაჭრო ნიშანი.
-  footer_built_on_github: Built on GitHub from Microsoft
+  footer_built_on_github: შექმნილია Microsoft-ის GitHub-ზე
   footer_menu_partners: პარტნიორები
   footer_menu_contact: დაგვიკავშირდით
   footer_menu_support: მხარდაჭერა
   footer_menu_terms: პირობები
   footer_menu_privacy: კონფიდენციალურობის პოლიტიკა
   learn_banner_heading: კოდის ერთი საათი
-  learn_banner_blurb: სცადეთ ერთსაათიანი ტუტორიალი, რომელიც შექმნილია ყველა ასაკისთვის,
-    45 ენაზე. შემოუერთდით მილიონობით მოსწავლესა და მასწავლებელს 180-ზე მეტი ქვეყნიდან,
-    რომლებიც იწყებენ კოდის ერთი საათით.
+  learn_banner_blurb: სცადეთ ერთსაათიანი ტუტორიალები, რომლებიც ყველა ასაკზე არის მორგებული
+    და 45 ენაზეა ხელმისაწვდომი. შემოუერთდით მილიონობით მოსწავლესა და მასწავლებელს
+    180-ზე მეტი ქვეყნიდან, რომლებიც მონაწილეობენ კოდის ერთ საათში.
   learn_banner_beyond: სწავლის გაგრძელება გინდათ? <a id='learn_banner_beyond'>გასცდით
     ერთ საათს</a>
   learn_banner_beyond_markdown: სწავლის გაგრძელება გინდათ? [გასცდით ერთ საათს](%{url})
   learn_banner_teachers: 'მასწავლებლებო: <a id=''teacher_banner_host''>უმასპინძლეთ
     საათს</a> ან <a id=''teacher_banner_howto''>წაიკითხეთ "თუ-როგორ" სახელმძღვანელო</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'მასწავლებლებო: [ჩაატარეთ კოდის ერთი საათი](%{host_url}),
+    ან [წაიკითხეთ სახელმძღვანელო](%{howto_url})'
   learn_robotics_banner_heading: რობოტიკა
   learn_robotics_banner_blurb: გყავთ რობოტები? გამოიყენეთ ისინი ქვემოთ მოცემულ აქტივობებში
     და ჩაატარეთ კოდის ერთი საათი ყველა ასაკის მოსწავლისათვის!
@@ -1077,7 +1078,6 @@ ka:
   tutorial_ticklep_name: თუთიყუშების საოცრება
   tutorial_bbot_name: მხიარულება ბომბერბოტთან ერთად და მარტივი პროგრამირების აქტივობები
   tutorial_scratchg_name: თამაშების დაპროგრამება Sratch-ში
-  tutorial_roboticfriends_name: ჩემი რობოტული მეგობრები
   tutorial_sjforest_name: 'ScratchJr: შემიძლია, შევქმნა საშიში ტყე?'
   tutorial_sjgreet_name: 'ScratchJr: შემიძლია, ისე გავაკეთო, რომ ჩემი პერსონაჟები
     ერთმამენთს მიესალმონ?'
@@ -1124,7 +1124,6 @@ ka:
   tutorial_tickles_name: Sphero სირბილი
   tutorial_ozogame_name: შექმენით Ozobot-ის თამაშის დონე
   tutorial_vidcodeio_name: შეყვანა და გამოყვანა, მათემატიკური აქტივობა
-  tutorial_besttech_name: საუკეთესო ტექნოლოგიური აქტივობა
   tutorial_tlcbrain_name: ტვინი-ჩანთაში აქტივობა
   tutorial_hopquiz_name: ქვიზების შემქმნელი
   tutorial_unfortunate_name: უიღბლო მოვლენების მიმდევრობა
@@ -1132,7 +1131,6 @@ ka:
   tutorial_elaseq_name: 'წერა და პროგრამირება: ELA ინტეგრაცია საერთო ძირითად სტანდარტებთან'
   tutorial_bbcmathi_name: Bitsbox პროგრამირება + მათემატიკა (3-5)
   tutorial_tlcpixel_name: პიქსელური თავსატეხები
-  tutorial_arduino_name: არდუინოს აქტივობა
   tutorial_introrobo_name: შესავალი რობოტიკაში
   tutorial_tlcinvis_name: უჩინარი შემოტყუების აქტივობა
   tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines'
@@ -1152,7 +1150,6 @@ ka:
   tutorial_tlcmind_name: The Red Black Mind Meld Activity
   tutorial_tlctelebot_name: ტელეპორტირებადი რობოტის აქტივობა
   tutorial_tlcaus_name: ავსტრალიელი ჯადოქრის სიზმრის აქტივობა
-  tutorial_oralhist_name: ისტორიის ზეპირსიტყვიერი პროექტი
   tutorial_tlcmicro_name: მიკროტალღურ ღუმელზე რბოლის ვიდეოს აქტივობა
   tutorial_imathematician_name: iმათემატიკოსი
   tutorial_tlcmagic_name: ჯადოსნური წიგნის მაგია
@@ -1166,8 +1163,6 @@ ka:
   tutorial_tynkercan_name: ფიზიკური ზარბაზნის თამაშის კომპლექტი 2 მოთამაშისთვის
   tutorial_grokflags_name: მსოფლიოს დროშები (Python კუ)
   tutorial_robomind_name: დააპროგრამეთ ვირტუალური რობოტი RoboMind-ის საშუალებით
-  tutorial_scratchanimwork_name: 'მოახდინეთ თქვენი სახელის ანიმაცია: მასწავლებლის
-    სახელმძღვანელო'
   tutorial_adventureq_name: თავგადასავალი Q-სთან ერთად
   tutorial_khan-es_name: შესავალი JavaScript-ში
   tutorial_kpt_name: შესავალი JavaScript-ში
@@ -1175,13 +1170,11 @@ ka:
   tutorial_khe_name: შესავალი JavaScript-ში
   tutorial_kfr_name: შესავალი JavaScript-ში
   tutorial_app-inventor_name: აპლიკაციების შემქმნელის კოდის ერთი საათი
-  tutorial_bits_name: ბიტები და აგურები
   tutorial_blockly_name: ბლოკური
   tutorial_tynker_name: შექმენით თქვენი საკუთარი თამაში
   tutorial_baypt_name: დააპროგრამეთ Baymax-ი
   tutorial_code-combat_name: CodeCombat
   tutorial_mky_name: CodeMonkey
-  tutorial_spellcraft_name: 'CodeSpells: Spellcraft'
   tutorial_pirates_name: მეკობრეების დაპროგრამება
   tutorial_csfirst_name: კომპიუტერული მეცნიერება პირველ რიგში
   tutorial_loopedy_name: იცეკვეთ ციკლურ ციკლში
@@ -1238,7 +1231,6 @@ ka:
   tutorial_soloweb_name: თქვენი პირველი ვებგვერდი ერთ საათში!
   tutorial_khanweb_name: 'ხანის აკადემია: ვებგვერდები'
   tutorial_khandata_name: 'ხანის აკადემია: მონაცემთა ბაზები'
-  tutorial_robomeshiq_name: დააპროგრამეთ VEX IQ რობოტები Blockly-ს საშუალებით
   tutorial_googlelogo_name: შექმენით თქვენი საკუთარი Google-ის ლოგო
   tutorial_playtune_name: აპლიკაცია "დაუკარით ეს მელოდია"
   tutorial_computeit_name: გამოთვალეთ კომპიუტერის საშუალებით
@@ -1297,7 +1289,6 @@ ka:
   tutorial_stemcod_name: ვიდეო თამაშების ფიზიკა!
   tutorial_techikb_name: Kotlin-ის ინტერაქტიული საფუძვლები
   tutorial_kanostreet_name: ქუჩის მხატვარი
-  tutorial_nyblebot_name: ბუგი ბოტი
   tutorial_codemojijs_name: შესავალი JavaScript-ში
   tutorial_techapf_name: Python-ის დამატებითი ფუნქციები
   tutorial_techfpjs_name: პრაქტიკული შესავალი ფუნქციონალურ პროგრამირებაში JS-ის საშუალებით
@@ -1313,7 +1304,6 @@ ka:
   tutorial_gpbcircle_name: შექმენით ინტერაქტიული ფერადი წრე
   tutorial_gpbpaint_name: შექმენით თქვენი საკუთარი სახატავი რედაქტორი
   tutorial_cocomarcade_name: 'CodeCombat: ააწყე არკადული თამაში!'
-  tutorial_techcpp_name: C++ 17-ის 7 თვისება, რომლებიც თქვენს კოდს გაამარტივებს
   tutorial_beetik_name: დააპროგრამეთ ფრანც ლისტცის მუსიკა
   tutorial_codedj_name: დააპროგრამეთ მუსიკა Code DJ-სთან ერთად
   tutorial_rgadvan_name: რობო ბაღი - მოწინავე დონე
@@ -1387,7 +1377,6 @@ ka:
   tutorial_ifly_name: iFly
   tutorial_idowedo_name: iDo WeDo
   tutorial_diggindwarf_name: მთხრელი ჯუჯა
-  tutorial_rmedr_name: დააპროგრამეთ VEX EDR-ის რობოტები Blockly-ს გამოყენებით
   tutorial_spheroit_name: 'Blocks 2: If/Then Else'
   tutorial_gameofcodes_name: Game Of Codes
   tutorial_blocklygames_name: Blockly Games
@@ -1398,7 +1387,6 @@ ka:
   tutorial_bcjs1_name: World of JavaScript
   tutorial_bcjs2_name: World of JavaScript 2
   tutorial_3dbearmars_name: The Mars Pioneers
-  tutorial_alexaskill_name: 'Alexa Blueprints: Create an Alexa Skill'
   tutorial_bitsboxyak_name: Yak Attack! Make a Card with Typed Code
   tutorial_blockscadbargraphs_name: Bar Graphs
   tutorial_blockscadbirdhouses_name: Birdhouses
@@ -1455,7 +1443,6 @@ ka:
   tutorial_codinismhero_name: Programming Hero
   tutorial_discovery_name: An Unusual Discovery
   tutorial_csfirstname_name: Animate a Name
-  tutorial_obstaclecourse_name: Navigating an Obstacle Course with CodeSnaps
   tutorial_edisonmove_name: 'Edison and EdPy: Get Edison moving'
   tutorial_edisonspider_name: Edison and the spiralling spider trap
   tutorial_edisonspotlight_name: Perform in the spotlight with Edison
@@ -1877,7 +1864,6 @@ ka:
     პროგრამირება ხალისიანი და მარტივი გზით. პროგრამირების ცოდნა ან გამოცდილება საჭირო
     არ არის!
   tutorial_scratchg_shortdescription: ისწავლეთ თამაშების დაპროგრამება Scratch-ში
-  tutorial_roboticfriends_shortdescription: ტუტორიალი მოწყობილობების არმქონე ჯგუფებისთვის
   tutorial_sjforest_shortdescription: გამოიყენეთ ScratchJr დასაპროგრამებელი აპლიკაცია,
     რათა შექმნათ პროგრამა, რომელშიც სხვადასხვა სახეობის ცხოველები იმოძრავებენ ბნელი
     ტყის გარემოცვაში.
@@ -1961,8 +1947,6 @@ ka:
     რობოტის, Ozobot-ის დახმარებით.
   tutorial_vidcodeio_shortdescription: დაუკავშირეთ JavaScript-ის ფუნქციები, როგორც
     მათემატიკურ, ასევე რეალური სამყაროს პრობლემებს.
-  tutorial_besttech_shortdescription: მოსწავლეები გაიგებენ და იმსჯელებენ ბოლო ათწლეულების
-    განმავლობაში შექმნილი ტექნოლოგიური ინოვაციების შესახებ.
   tutorial_tlcbrain_shortdescription: გამოიკვლიეთ, როგორ მუშაობს ადამიანის ტვინი.
     ამისათვის, მოსწავლისგან, რომელიც თამაშობს Snap-ს, შექმენით ნეირონების კომპიუტერისთვის
     გასაგები მოდელი.
@@ -1977,8 +1961,6 @@ ka:
   tutorial_tlcpixel_shortdescription: 'ამოხსენით მარტივი ლოგიკური აზროვნებისა და რიცხვის
     შესაბამისად გაფერადების თავსატეხები და უფრო სიღრმისეულად გაიაზრეთ, როგორ ხდება
     გამოსახულების წარმოდგენა და შეკუმშვა. '
-  tutorial_arduino_shortdescription: გაიგეთ, თუ როგორ უნდა შექმნათ საბაზისო სქემა
-    და აციმციმოთ შუქი.
   tutorial_introrobo_shortdescription: რობოტიკისა და პროგრამირების იდეების წარდგენისას
     მოსწავლეები გაიცნობენ Dash-სა და Dot-ს.
   tutorial_tlcinvis_shortdescription: გააკეთეთ ფოკუსი, რომელშიც ჯადოსნურად გადაიტანთ
@@ -2017,9 +1999,6 @@ ka:
     იყო, მაგრამ შემდეგი აწყობის მერე აღმოჩნდა, რომ თავსატეხში მხოლოდ 16 რობოტია.
   tutorial_tlcaus_shortdescription: შეასრულეთ ფოკუსი, სადაც თქვენ არჩეულ კარტს გამოიცნობთ,
     რაც ძებნის ალგორითმებსა და გამოთვლით აზროვნებას გაგაცნობთ.
-  tutorial_oralhist_shortdescription: პროექტი "Computing Educators Oral History" არის
-    ინტერვიუების და, ასევე, სწავლების მასალების და CEOHP კოლექციაზე მიბმული ხელსაწყოების
-    კოლექცია.
   tutorial_tlcmicro_shortdescription: ხალხი მიკროტალღური ღუმლის დიზაინის შეჯიბრში
     მონაწილეობს, რათა დაინახოს, რომელი დიზაინის არის ყველაზე მარტივად გამოყენებადი
     მარტივი მიზნებისთვის. ზოგი დიზაინი შედარებით რთულია.
@@ -2046,8 +2025,6 @@ ka:
   tutorial_grokflags_shortdescription: გამოიყენეთ პროგრამირების ენა Python, რათა დაახატინოთ
     კუს დროშები. რამდენი ქვეყანა იცით?
   tutorial_robomind_shortdescription: დაწერეთ კოდი ვირტუალური რობოტისთვის.
-  tutorial_scratchanimwork_shortdescription: მოსწავლეებისთვის Scratch-ის გასაცნობად
-    სემინარის ინსტრუქცია.
   tutorial_adventureq_shortdescription: გამოიყენეთ პროგრამული ბლოკები (ფიზიკური ან
     თამაშშიდა), რათა შეისწავლოთ პროგრამული ლოგიკა.
   tutorial_khan-es_shortdescription: ისსწავლეთ ხატვა JavaScript-ში
@@ -2057,7 +2034,6 @@ ka:
   tutorial_kfr_shortdescription: ისსწავლეთ ხატვა JavaScript-ში
   tutorial_app-inventor_shortdescription: შექმენით თქვენი საკუთარი აპლიკაცია. (მხოლოდ
     Android-ისთვის)
-  tutorial_bits_shortdescription: იმოძრავეთ ბიტ-ბიტ!
   tutorial_blockly_shortdescription: გადმოწერეთ ZIP ფაილი, რათა ისწავლოთ ინტერნეტთან
     კავშირის გარეშე
   tutorial_tynker_shortdescription: ისწავლეთ კოდის წერა თავსატეხების ამოხსნის და საკუთარი
@@ -2067,8 +2043,6 @@ ka:
     ან JavaScript-ი ამ ეპიკურ პროგრამირების თამაშში!
   tutorial_mky_shortdescription: მოსწავლეები აპროგრამებენ მაიმუნს ისე, რომ მან დაიჭიროს
     ბანანები.
-  tutorial_spellcraft_shortdescription: გაიგეთ მეტი მოვლენებზე დაფუძნებული პროგრამირების
-    შესახებ CodeSpells-ის ძალის საშუალებით!
   tutorial_pirates_shortdescription: Navigate the crystal waters of the southern hemisphere,
     code your treasure maps and discover the riches that lie on the golden shores.
     A fun way to learn the basic concepts of coding.
@@ -2173,8 +2147,6 @@ ka:
     ვებგვერდების შექმნა. საბოლოოდ თქვენ შექმნით თქვენს საკუთარ მისალოც ბარათს.
   tutorial_khandata_shortdescription: შეისწავლეთ მონაცემების მანიპულირება მონაცემთა
     ბაზაში და თქვენი საკუთარი მაღაზიის შექმნა
-  tutorial_robomeshiq_shortdescription: დააპროგრამეთ ან ვირტუალური ონლაინ რობოტი ან
-    ნამდვილი VEX IQ რობოტი.
   tutorial_googlelogo_shortdescription: გააცოცხლეთ Google-ის ლოგო თქვენი წარმოსახვის
     უნარის და ცოტაოდენი კოდის გამოყენებით.
   tutorial_playtune_shortdescription: გამოიყენეთ პროგრამირების უნარები მუსიკალური
@@ -2296,8 +2268,6 @@ ka:
   tutorial_techikb_shortdescription: ორი სიტყვით Kotlin-ის საფუძვლებზე
   tutorial_kanostreet_shortdescription: შექმენით ლამაზი და უნიკალური ხელოვნების ნიმუშები
     კანოს ქუჩის ხელოვნების პროგრამირების გამოწვევებთან ერთად
-  tutorial_nyblebot_shortdescription: პროგრამირება მაგიაა - ვეხმარებით ბავშვებს კოდის
-    საშუალებით საოცარი რაღაცების შექმნაში.
   tutorial_codemojijs_shortdescription: Codemoji-მ შექმნა Beginning Javascript, რათა
     დააწერინოს მოსწავლეებს ნამდვილი javascript-ის ბრძანებები, რომლებიც სხვადასხვა
     პერსონაჟის ანიმირებას გააკეთებს.
@@ -2329,8 +2299,6 @@ ka:
   tutorial_gpbpaint_shortdescription: შექმენით და დაამუშავეთ სახატავი აპლიკაცია.
   tutorial_cocomarcade_shortdescription: შექმენით თქვენი საკუთარი არკადული გადარჩენის
     ჟანრის თამაში და შეეჯიბრეთ თქვენს მეგობრებს!
-  tutorial_techcpp_shortdescription: 7 თვისება, რომელბიც დაგეხმარებათ თქვენი C++ 17-ის
-    კოდის გამარტივებაში
   tutorial_beetik_shortdescription: გამოიყენეთ კოდი, რათა გაიგოთ კომპოზიტორ ფრანც
     ლისტზის მუსიკა.
   tutorial_codedj_shortdescription: ისწავლეთ Javascrip-ის საფუძვლები და დაიწყეთ თქვენი
@@ -2481,8 +2449,6 @@ ka:
     კი დააპროგრამეთ ისე, რომ გადაადგილოთ მინი ფიგურები.
   tutorial_diggindwarf_shortdescription: ჯუჯებს თქვენი დახმარება სჭირდებათ ნავიგაციაში,
     გამოთხრებსა და ძვირფასი ქვების მოგროვებაში JavaScript-ის გამოყენებით.
-  tutorial_rmedr_shortdescription: Blockly პროგრამირების გამოყენებით დააპროგრამეთ
-    VEX EDR რობოტი ლაბირინთის ნავიგაციისთვის.
   tutorial_spheroit_shortdescription: Learn about if/then, else conditions while building
     your very own animal sound game we like to call "Animal Toss!"
   tutorial_gameofcodes_shortdescription: Build your awesome Dragon game and export
@@ -2501,9 +2467,6 @@ ka:
     module that teaches facts about Mars and the crucial conditions for human beings
     to survive there. The students will build a colony using Augmented Reality and
     3D-print the colony facilities.
-  tutorial_alexaskill_shortdescription: 'Create your own Alexa Skills using Alexa
-    Skill Blueprints - learn about using voice, artificial intelligence, and machine
-    learning to create an Alexa Skill of your choosing. '
   tutorial_bitsboxyak_shortdescription: Type modified JavaScript code to make a greeting
     card that you can email to friends and family. Yak Attack! is a completely open-ended
     activity that introduces variables, motion commands, loop functions, and more.
@@ -2663,8 +2626,6 @@ ka:
   tutorial_csfirstname_shortdescription: Pick a name and bring the letters of the
     word to life using code. Choose a nickname, a pet's name, an animal, a sport,
     a place or a hobby.
-  tutorial_obstaclecourse_shortdescription: Collaborate with your team to code a program
-    that successfully navigates a robot through an obstacle course.
   tutorial_edisonmove_shortdescription: Introduce text-based programming and the key
     computational concept of sequence to your students using Edison robots and EdPy,
     a text-based programming language based on Python.
@@ -2867,7 +2828,7 @@ ka:
     as you battle in a wild 4-player arena that is shrinking amidst lava!
   tutorial_landscape_shortdescription: Use Python's pen drawing feature to compose
     a landscape using code. Use the landscape items already created for you or design
-    our own structures. Publish and share your creations!
+    your own structures. Publish and share your creations!
   tutorial_pets_shortdescription: Create a fun game about pets – either real or imaginary!
     Beginners can use the self-guided tutorial while more advanced coders have the
     option to start off with a blank project.
@@ -3475,12 +3436,6 @@ ka:
     სტილის თამაში. თამაშისთვის საჭირო ყველა დეტალი მოცემულია და მოსწავლეებმა უნდა
     მოიფიქრონ, როგორ დააკავშირონ ერთმანეთთან ყველაფერი ისე, რომ შექმნან ფუნქციონირებადი
     თამაში.
-  tutorial_roboticfriends_longdescription: წინასწარ განსაზღვრული "Robot Vocabulary"-ს
-    გამოყენებით მოსწავლეები გაიგებენ, როგორ შეასრულონ კონკრეტული ამოცანები წინასწარ
-    განხილვის გარეშე ერთმანეთის ხელმძღვანელობით. ეს გაკვეთილი ასწავლის ბავშვებს კავშირს
-    სიმბოლოებსა და მოქმედებებს შორის და, ასევე, გამართვის ფასდაუდებელ უნარს. "My Robotic
-    Friends" უფრო შედეგიანია ჯგუფურ აქტივობაში, მასწავლებლისთვის კი კლასში სამუშაო
-    წიგნს შეიცავს.
   tutorial_sjforest_longdescription: '"Can I Make a Spooky Forest?" is an intermediate
     activity meant for children in kindergarten through second grade who have some
     prior experience with programming to learn about and master more advanced features
@@ -3724,8 +3679,6 @@ ka:
   tutorial_vidcodeio_longdescription: ამ სავარჯიშოში მოსწავლეებთან ერთად გაივლით,
     როგორ უკავშირდება ეს იმას, რაც უკვე იციან მათემატიკის შესახებ, მათემატიკის განტოლების
     პროგრამირების დახმარებით ამოხსნით.
-  tutorial_besttech_longdescription: მოსწავლეები გაიგებენ და იმსჯელებენ ბოლო ათწლეულების
-    განმავლობაში შექმნილი ტექნოლოგიური ინოვაციების შესახებ.
   tutorial_tlcbrain_longdescription: ეს აქტივობა იძიებს, როგორ შეიძლება კომპიუტერული
     მოდელირება (კომპიუტერული აზროვნების ძირითადი ნაწილი) გამოვიყენოთ ბიოლოგიური სისტემის,
     აქ - ნეირონების, უკეთ გასაგებად. დავინახავთ, ის, თუ როგორ მუშაობს ჩვენი ტვინი,
@@ -3756,12 +3709,6 @@ ka:
     on compression where images are represented by fewer numbers so take up less storage
     – but can you get them back! Each representation needs its own algorithm to follow
     to get the image back.
-  tutorial_arduino_longdescription: ოდესმე დაფიქრებულხართ, როგორ გამოსცემენ სათამაშოები
-    ხმებს და როგორ ანათებენ, როცა ღილაკებს ვაწვებით? მიკროკონრტოლერები და სქემები
-    გამოიყენება ყველანაირ ყოველდღიურ ობიექტში, დაწყებული დისტანციური პულტით და დამთავრებული
-    რობოტებით და დრონებით. ქუჩის სანათები იყენებენ სენსორს, რომელიც განსაზღვრავს,
-    როდის ჩადის მზე, მანქანის აუდიო მოწყობილობის ხმის მარეგულირებელი ღილაკი არეგულირებს
-    წინაღობას მიკროკონტროლერის დახმარებით. ისინი ყველგან არიან!
   tutorial_introrobo_longdescription: 'ამ გაკვეთილში მოსწავლეები გაიგებენ დეშის და
     დოთის შესახებ, გაეცნობიან რობოტიკისა და პროგრამირების იდეებს, მოსწავლეები შეიტყობენ
     რა არის რობოტი, როგორ გრძნობენ ისინი გარესამყაროს და როგორ შეუძლიათ პროგრამებს
@@ -3859,9 +3806,6 @@ ka:
     reasoning and computational modelling can be used to check the algorithm works.
     Combined with the 'Punch card searching' activity it introduces a divide and conquer
     algorithm used by early computers.
-  tutorial_oralhist_longdescription: პროექტი "Computing Educators Oral History" არის
-    ინტერვიუების და, ასევე, სწავლების მასალების და CEOHP კოლექციაზე მიბმული ხელსაწყოების
-    კოლექცია.
   tutorial_tlcmicro_longdescription: ეს ვიდეო შეგიძლიათ, გამოიყენოთ, როგორც ზოგადი
     შესავალი ადამიანისა და კომპიუტერის ურთიერთქმებაში (HCI - Human Computer Interaction).
     გაიგებთ, თუ რატომ არის ამდენი მოწყობილობის გამოყენება უფრო რთული, ვიდრე საჭიროა.
@@ -3920,10 +3864,6 @@ ka:
     ისწავლიან პროგრამირების საფუძვლებს. ეს ონლაინ გაკვეთილი მოიცავს ყველაფერს, რაც
     გჭირდებათ: პრეზენტაციებს, ფილმებს, ქვიზებსა და ავტომატურ გზამკვლევ/რჩევებს, რომლებიც
     დაეხმარებათ მოსწავლეებს პროგრამირების ამოცანების ამოხსნაში. '
-  tutorial_scratchanimwork_longdescription: 'This guide offers ideas for leading a
-    one-hour workshop using Scratch. Students will gain experience with coding as
-    they animate their names or a favorite word. This educator guide is designed for
-    use with this Scratch tutorial: scratch.mit.edu/name'
   tutorial_adventureq_longdescription: 'Adventure with Q is a lesson plan for teachers
     (or anyone) to use to introduce programming logic in a group setting. The activity
     consists of different quests for kids to complete. Kids learn the basic commands
@@ -3949,11 +3889,6 @@ ka:
     your own apps before you know it. Imagine sharing your own app creations with
     your friends! These activities are suitable for individuals and for teachers leading
     classes.
-  tutorial_bits_longdescription: Bit is a little, very adventurous LEGO® robot, but
-    as with all small creatures, sometimes Bit cannot get its programs right. You
-    can help Bit solve the challenges by figuring out which programs are needed. You
-    do this by creating a sequence of small behavior blocks that tells Bit what to
-    do.
   tutorial_blockly_longdescription: გაქვთ კომპიუტერი ნელი (ან არარსებული) ინტერნეტ
     კავშირით? გადმოწერეთ Code.org-ის გაკვეთილების წინამორბედი Blockly-ს გაკვეთილები
     - ერთი 3MB ზომის ZIP ფაილი, რომელიც შეგიძლიათ, გადმოტვირთოთ კომპიუტერზე ან გამოიყენოთ
@@ -3971,11 +3906,6 @@ ka:
     როგორც პროგრამირების მცოდნეებისთვის, ასევე ახალბედებისთვის. CodeMonkey-ს ადაპტიური
     პლატფორმა მოგაწვდით ყველა მითითებასა და ინსტრუქციას, რომელიც დაგჭირდებათ და ვარსკვლავებით
     შეგიფასებთ თქვენს ნამუშევრებს. დაწერეთ კოდი. დაიჭირეთ ბანანები. გადაარჩინეთ სამყარო.
-  tutorial_spellcraft_longdescription: Learn about Event-Driven programming using
-    the power of spells! With CodeSpells, you can design and create your very own
-    wizarding spells using Google's easy-to-use Blockly coding interface or a built-in
-    JavaScript text editor. Through spell creation, students will learn how to write
-    code based around events and become familiar with Event-Driven coding concepts.
   tutorial_pirates_longdescription: 'Captain Hack is a pirate looking for treasure.
     He also writes treasure maps, and writing those like writing code. He (the player)
     uses "pirate code" for this. It is a symbol-based programming language, used for
@@ -4188,12 +4118,6 @@ ka:
     მისასალმებელ ბარათს.'
   tutorial_khandata_longdescription: 'ხანის აკადემია: მონაცემთა ბაზები გასწავლიან
     მონაცემების მანიპულირებას მონაცემთა ბაზაში და თქვენი საკუთარი მაღაზიის შექმნას.'
-  tutorial_robomeshiq_longdescription: მოსწავლეები წერენ Google Blockly კოდს პოპულარული
-    VEX IQ რობოტის გასაკონტროლებლად. მათ შეუძლიათ, აირჩიონ კოდის დაწერა ვირტუალური
-    რობოტისთვის ან ნამდვილი VEX IQ რობოტისთვის, რომელსაც თავად შექმნიან. ორივე ვარიანტი
-    ხელმისაწვდომია ერთი ვებზე დაფუძნებული ინტერფეისით. მოსწავლეებს შეუძლიათ, ისწავლონ
-    რობოტების საბაზისო მოძრაობები და სენსორისა და შედეგის გამოტანის ხელსაწყოს გამოყენება.
-    ეს აქტივობა არის მარტივი და სახალისო.
   tutorial_googlelogo_longdescription: გამოიყენეთ თქვენი კრეატიულობა და წარმოსახვა
     და გააცოცხლეთ Google-ის ლოგო კოდის დახმარებით. ააცეკვეთ ასოები, მოჰყევით ამბავს
     ან შექმენით თამაში. Scratch-თან და CS First-თან ერთად, ყველას შეუძლია, გახდეს
@@ -4474,15 +4398,6 @@ ka:
     პროგრამული ენის გამოყენებით ისინი ინტუიციურად და საინტერესოდ ისწავლიან კომპიუტერული
     მეცნიერების პრინციპებს. ჩვენი მასწავლებლების რესურსებით და მართვადი მასალით ყველას
     შეუძლია, ისიამოვნოს სწავლით.
-  tutorial_nyblebot_longdescription: Boogie Bot არის კოდის წერის სახალისო აპლიკაცია.
-    ეს სამგანზომილებიანი აპლიკაცია, რომელიც სავსეა სიცოცხლითა და ენერგიით, ბავშვებს
-    გააცნობს კომპიუტერული პროგრამირების საფუძვლებს Google-ის ვიზუალური პროგრამირების
-    ენის, Blockly-ის, გამოყენებით. Boogie Bot არის მოცეკვავე რობოტი, რომელიც შეიძლება
-    დაპროგრამდეს ცეკვის ილეთების შესასრულებლად. "აპლიკაციის თვისებები" (ყველა თვისება
-    ხელმისაწვდომია სრულ ვერსიაში) ისწავლეთ კოდის წერა ბლოკებით, შექმენით საკუთარი
-    სპეც-ეფექტები სცენაზე, მიიღეთ მონეტები პროგრამირების კონსტრუქტების სწავლისას,
-    მოაწყვეთ ოთახი მაგარი ნივთებით, ითამაშეთ და გამოიკვლიეთ დამალული ნივთებით სავსე
-    ოთახი, ჩაწერეთ და შეინახეთ თქვენი შესანიშნავი ნამუშევრის ვიდეო.
   tutorial_codemojijs_longdescription: შესავალი JavaScript-ში შექმნილია იმისთვის,
     რომ ასწავლოს მოსწავლეებს მარტივი ბრძანებები, რომლებსაც აქვთ მნიშვნელოვანი შედეგები
     პერსონაჟის ქმედებებზე. მოსწავლეები დაწერენ ბრძანებებს, რომელთა დახმარებითაც პერსონაჟები
@@ -4539,9 +4454,6 @@ ka:
     შეისწავლეთ პროგრამირების რთული კონცეპტები, როგორიაა ფუნქციები და მოვლენები Python-ისა
     და JavaScript-ის დახმარებით, შემდეგ კი გამოიყენეთ ეს უნარები და შექმენი საკუთარი
     არკადული გადარჩენის ჟანრის თამაში!
-  tutorial_techcpp_longdescription: ყოველი C++-ის პროგრამისტი უმიზნებს კოდის წერის
-    უფრო მარტივ, უფრო სუფთა და უფრო გამომხატველ გზებს. ამ მოსახერხებელ გაკვეთილში
-    ჩვენ შევაგროვეთ 7 C++ 17-ის თვისება, რომლებიც გახდიან თქვენს კოდს უკეთესს.
   tutorial_beetik_longdescription: ამ აქტივობაში მოსწავლეები აღადგენენ ფრანც ლისტის
     ცნობილი ნაწარმოების მცირე ნაწილს. ისინი ისწავლიან, როგორ იქმნება ციკლები და როგორ
     შეიძლება მათი გამოყენება როგორც პროგრამირებაში, ისე მუსიკაში. ეს არის ნაბიჯ-ნაბიჯ
@@ -4910,10 +4822,6 @@ ka:
   tutorial_diggindwarf_longdescription: ჯუჯებს თქვენი დახმარება სჭირდებათ ნავიგაციაში,
     გამოთხრებსა და ძვირფასი ქვების მოგროვებაში! ისწავლეთ, როგორ გამოიყენოთ JavaScript,
     რომ გზა გაუკვლიოთ თქვენს ჯუჯას ლაბირინთებსა და თავსატეხებში.
-  tutorial_rmedr_longdescription: Robot Mesh Studio-ში Blockly-ს გამოყენებით დააპროგრამეთ
-    VEX EDR რობოტი "mimic" ონლაინ და ნახეთ, როგორ გაივლის იგი ლაბირინთს. მოსწავლეები
-    ისწავლიან რობოტის საბაზისო მოძრაობებს და პროგრამირებისას სამი სენსორისა და ერთი
-    გამომავალი მონაცემის გამოყენებას.
   tutorial_spheroit_longdescription: Learn your first "if/then, else" condition by
     building a fun game where you will be throwing Sphero and guessing animal sounds.
     This is a great activity after you complete Blocks 1, and can be used for the
@@ -4975,11 +4883,6 @@ ka:
     module that teaches facts about Mars and the crucial conditions for human beings
     to survive there. The students will build a colony using Augmented Reality and
     3D-print the colony facilities.
-  tutorial_alexaskill_longdescription: Create your own Alexa Skills using Alexa Skill
-    Blueprints - learn about using voice, artificial intelligence, and machine learning
-    to create an Alexa Skill of your choosing. Alexa can tell a joke, sing a song,
-    or share a story. (Amazon login required) Activity can be completed by individuals
-    or teacher lead.
   tutorial_bitsboxyak_longdescription: Type modified JavaScript code to make a greeting
     card that you can email to friends and family. Yak Attack! is a completely open-ended
     activity that introduces variables, motion commands, loop functions, and more.
@@ -5191,7 +5094,7 @@ ka:
     design! '
   tutorial_codewards_longdescription: Join an exciting mission to save the underwater
     city. Experience the work of a rescue engineer fixing damaged city systems with
-    commands and algorithms. Overcome various challenges to proveyour skills, intelligence
+    commands and algorithms. Overcome various challenges to prove your skills, intelligence
     and courage!
   tutorial_olympics_longdescription: 'Together with Elsie get prepared for Robot Olympics!
     Along with programming concepts learn how to drive, collect details and create
@@ -5204,8 +5107,6 @@ ka:
   tutorial_csfirstname_longdescription: Pick a name and bring the letters of the word
     to life using code. Choose a nickname, a pet's name, an animal, a sport, a place
     or a hobby.
-  tutorial_obstaclecourse_longdescription: Collaborate with your team to code a program
-    that successfully navigates a robot through an obstacle course.
   tutorial_edisonmove_longdescription: Introduce text-based programming and the key
     computational concept of sequence to your students using Edison robots and EdPy,
     a text-based programming language based on Python. Explore computer science and
@@ -5671,7 +5572,7 @@ ka:
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
     own augmented reality virtual space.
   tutorial_itchball_longdescription: Get a ball to bounce around the screen. Learn
-    about loops and conditionals within loops
+    about loops and conditionals within loops.
   tutorial_ttrace_longdescription: By calling functions and designing classes, players
     program their own race car to be fast, nimble, and powerful; during races, they
     can then hack their competitors' vehicles to scramble their controls.
@@ -5684,14 +5585,14 @@ ka:
   tutorial_itchshapes_longdescription: Learn how to draw shapes in Scratch. You will
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
-    creating your first program in an online coding editor
+    creating your first program in an online coding editor.
   tutorial_vidcodeplastiche_longdescription: The problem of plastic filling our oceans
     continues to worsen. Luckily, you can make your voice heard with code through
     the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
     you can make a second video about any subject you care about! Learn to use loops,
     sine waves and customized emojis to make a unique project.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
-    and Machine Learning, as well as programing your own chatbot!
+    and Machine Learning, as well as programming your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
     create your own game in the process!
   tutorial_codehsdesign_longdescription: 'Coders will learn how programming can support
@@ -6125,7 +6026,6 @@ ka:
   tutorial_ticklep_language: ჩინური (ტრადიციული), დანიური, ინგლისური, ფრანგული, იაპონური
   tutorial_bbot_language: ჰოლანდიური, სუომი, ინგლისური
   tutorial_scratchg_language: მხოლოდ ინგლისური
-  tutorial_roboticfriends_language: მხოლოდ ინგლისური
   tutorial_sjforest_language: მხოლოდ ინგლისური
   tutorial_sjgreet_language: მხოლოდ ინგლისური
   tutorial_sjsunset_language: მხოლოდ ინგლისური
@@ -6171,7 +6071,6 @@ ka:
   tutorial_tickles_language: რამდენიმე
   tutorial_ozogame_language: მხოლოდ ინგლისური
   tutorial_vidcodeio_language: მხოლოდ ინგლისური
-  tutorial_besttech_language: მხოლოდ ინგლისური
   tutorial_tlcbrain_language: მხოლოდ ინგლისური
   tutorial_hopquiz_language: მხოლოდ ინგლისური
   tutorial_unfortunate_language: მხოლოდ ინგლისური
@@ -6179,7 +6078,6 @@ ka:
   tutorial_elaseq_language: მხოლოდ ინგლისური
   tutorial_bbcmathi_language: მხოლოდ ინგლისური
   tutorial_tlcpixel_language: მხოლოდ ინგლისური
-  tutorial_arduino_language: მხოლოდ ინგლისური
   tutorial_introrobo_language: მხოლოდ ინგლისური
   tutorial_tlcinvis_language: მხოლოდ ინგლისური
   tutorial_tlcjflap_language: მხოლოდ ინგლისური
@@ -6199,7 +6097,6 @@ ka:
   tutorial_tlcmind_language: მხოლოდ ინგლისური
   tutorial_tlctelebot_language: მხოლოდ ინგლისური
   tutorial_tlcaus_language: მხოლოდ ინგლისური
-  tutorial_oralhist_language: მხოლოდ ინგლისური
   tutorial_tlcmicro_language: მხოლოდ ინგლისური
   tutorial_imathematician_language: მხოლოდ ინგლისური
   tutorial_tlcmagic_language: მხოლოდ ინგლისური
@@ -6215,7 +6112,6 @@ ka:
   tutorial_tynkercan_language: მხოლოდ ინგლისური
   tutorial_grokflags_language: მხოლოდ ინგლისური
   tutorial_robomind_language: ინგლისური, ჰოლანდიური
-  tutorial_scratchanimwork_language: მხოლოდ ინგლისური
   tutorial_adventureq_language: ჩინური (გამარტივებული), ინგლისური
   tutorial_khan-es_language: ესპანური
   tutorial_kpt_language: პორტუგალიური
@@ -6223,13 +6119,11 @@ ka:
   tutorial_khe_language: ებრაული
   tutorial_kfr_language: ფრანგული
   tutorial_app-inventor_language: მხოლოდ ინგლისური
-  tutorial_bits_language: ინგლისური, გერმანული
   tutorial_blockly_language: ესპანური, ფრანგული, მრავალი სხვა
   tutorial_tynker_language: მხოლოდ ინგლისური
   tutorial_baypt_language: პორტუგალიური
   tutorial_code-combat_language: რამდენიმე
   tutorial_mky_language: რამდენიმე
-  tutorial_spellcraft_language: მხოლოდ ინგლისური
   tutorial_pirates_language: ინგლისური, დანიური, გერმანული
   tutorial_csfirst_language: მხოლოდ ინგლისური
   tutorial_loopedy_language: მხოლოდ ინგლისური
@@ -6303,7 +6197,6 @@ ka:
   tutorial_soloweb_language: მხოლოდ ინგლისური
   tutorial_khanweb_language: ინგლისური, პორტუგალიური (ბრაზილიური), ესპანური
   tutorial_khandata_language: ინგლისური, პორტუგალიური (ბრაზილიური), ესპანური
-  tutorial_robomeshiq_language: მხოლოდ ინგლისური
   tutorial_googlelogo_language: მხოლოდ ინგლისური
   tutorial_playtune_language: მხოლოდ ინგლისური
   tutorial_computeit_language: ინგლისური, ფრანგული, ინდონეზიური, იტალიური, პორტუგალიური,
@@ -6365,7 +6258,6 @@ ka:
   tutorial_stemcod_language: მხოლოდ ინგლისური
   tutorial_techikb_language: მხოლოდ ინგლისური
   tutorial_kanostreet_language: მხოლოდ ინგლისური
-  tutorial_nyblebot_language: მხოლოდ ინგლისური
   tutorial_codemojijs_language: მხოლოდ ინგლისური
   tutorial_techapf_language: მხოლოდ ინგლისური
   tutorial_techfpjs_language: მხოლოდ ინგლისური
@@ -6381,7 +6273,6 @@ ka:
   tutorial_gpbcircle_language: მხოლოდ ინგლისური
   tutorial_gpbpaint_language: მხოლოდ ინგლისური
   tutorial_cocomarcade_language: რამდენიმე
-  tutorial_techcpp_language: მხოლოდ ინგლისური
   tutorial_beetik_language: მხოლოდ ინგლისური
   tutorial_codedj_language: ინგლისური, ფრანგული
   tutorial_rgadvan_language: მხოლოდ ინგლისური
@@ -6458,7 +6349,6 @@ ka:
   tutorial_ifly_language: მხოლოდ ინგლისური
   tutorial_idowedo_language: მხოლოდ ინგლისური
   tutorial_diggindwarf_language: მხოლოდ ინგლისური
-  tutorial_rmedr_language: მხოლოდ ინგლისური
   tutorial_spheroit_language: მხოლოდ ინგლისური
   tutorial_gameofcodes_language: მხოლოდ ინგლისური
   tutorial_blocklygames_language: ესპანური, ფრანგული, მრავალი სხვა
@@ -6470,7 +6360,6 @@ ka:
   tutorial_bcjs1_language: მხოლოდ ინგლისური
   tutorial_bcjs2_language: მხოლოდ ინგლისური
   tutorial_3dbearmars_language: ქართული
-  tutorial_alexaskill_language: ქართული
   tutorial_bitsboxyak_language: ქართული
   tutorial_blockscadbargraphs_language: Chinese (Simplified), English, French, German,
     Japanese, Norwegian (Bokmål), Serbian (Cyrillic), Spanish (Spain), Swedish
@@ -6539,7 +6428,6 @@ ka:
   tutorial_codinismhero_language: ქართული
   tutorial_discovery_language: English, Spanish (Mexico)
   tutorial_csfirstname_language: English, Spanish (Mexico)
-  tutorial_obstaclecourse_language: Chinese, English, French, German, Italian, Spanish
   tutorial_edisonmove_language: ქართული
   tutorial_edisonspider_language: ქართული
   tutorial_edisonspotlight_language: ქართული
@@ -6882,7 +6770,6 @@ ka:
   tutorial_ticklep_string_detail_grades: არ-აჩვენო
   tutorial_bbot_string_detail_grades: კლასები 2+
   tutorial_scratchg_string_detail_grades: კლასები 6+
-  tutorial_roboticfriends_string_detail_grades: ყველა ასაკისთვის
   tutorial_sjforest_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_sjgreet_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_sjsunset_string_detail_grades: დამწყებები - მე-5 კლასი
@@ -6927,7 +6814,6 @@ ka:
   tutorial_tickles_string_detail_grades: კლასები 2+
   tutorial_ozogame_string_detail_grades: ყველა ასაკისთვის
   tutorial_vidcodeio_string_detail_grades: კლასები 2+
-  tutorial_besttech_string_detail_grades: კლასები 9+
   tutorial_tlcbrain_string_detail_grades: კლასები 6+
   tutorial_hopquiz_string_detail_grades: კლასები 6-8
   tutorial_unfortunate_string_detail_grades: დამწყებები - მე-5 კლასი
@@ -6935,7 +6821,6 @@ ka:
   tutorial_elaseq_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_bbcmathi_string_detail_grades: არ-აჩვენო
   tutorial_tlcpixel_string_detail_grades: კლასები 2-8
-  tutorial_arduino_string_detail_grades: კლასები 6-8
   tutorial_introrobo_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_tlcinvis_string_detail_grades: კლასები 2+
   tutorial_tlcjflap_string_detail_grades: კლასები 6+
@@ -6955,7 +6840,6 @@ ka:
   tutorial_tlcmind_string_detail_grades: კლასები 6+
   tutorial_tlctelebot_string_detail_grades: კლასები 2+
   tutorial_tlcaus_string_detail_grades: კლასები 6+
-  tutorial_oralhist_string_detail_grades: კლასები 9+
   tutorial_tlcmicro_string_detail_grades: კლასები 2+
   tutorial_imathematician_string_detail_grades: კლასები 2-8
   tutorial_tlcmagic_string_detail_grades: კლასები 6+
@@ -6969,7 +6853,6 @@ ka:
   tutorial_tynkercan_string_detail_grades: კლასები 2+
   tutorial_grokflags_string_detail_grades: კლასები 6+
   tutorial_robomind_string_detail_grades: კლასები 2-8
-  tutorial_scratchanimwork_string_detail_grades: კლასები 2-8
   tutorial_adventureq_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_khan-es_string_detail_grades: კლასები 6+
   tutorial_kpt_string_detail_grades: კლასები 6+
@@ -6977,13 +6860,11 @@ ka:
   tutorial_khe_string_detail_grades: კლასები 6+
   tutorial_kfr_string_detail_grades: კლასები 6+
   tutorial_app-inventor_string_detail_grades: კლასები 6+
-  tutorial_bits_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_blockly_string_detail_grades: კლასები 6+
   tutorial_tynker_string_detail_grades: არ-აჩვენო
   tutorial_baypt_string_detail_grades: ყველა ასაკისთვის
   tutorial_code-combat_string_detail_grades: არ-აჩვენო
   tutorial_mky_string_detail_grades: კლასები 2+
-  tutorial_spellcraft_string_detail_grades: კლასები 6+
   tutorial_pirates_string_detail_grades: კლასები 2-8
   tutorial_csfirst_string_detail_grades: კლასები 2+
   tutorial_loopedy_string_detail_grades: დამწყებები - მე-5 კლასი
@@ -7040,7 +6921,6 @@ ka:
   tutorial_soloweb_string_detail_grades: კლასები 9+
   tutorial_khanweb_string_detail_grades: კლასები 2+
   tutorial_khandata_string_detail_grades: კლასები 6+
-  tutorial_robomeshiq_string_detail_grades: კლასები 2+
   tutorial_googlelogo_string_detail_grades: კლასები 2+
   tutorial_playtune_string_detail_grades: კლასები 6+
   tutorial_computeit_string_detail_grades: კლასები 2+
@@ -7057,7 +6937,7 @@ ka:
   tutorial_grokem_string_detail_grades: კლასები 6+
   tutorial_kodmaze_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_codestersa_string_detail_grades: კლასები 2-8
-  tutorial_cmdodo_string_detail_grades: 2-5 კლასები
+  tutorial_cmdodo_string_detail_grades: კლასები 3-5
   tutorial_tynkerspace_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_gfbloons_string_detail_grades: კლასები 9+
   tutorial_raspipong_string_detail_grades: კლასები 9+
@@ -7099,7 +6979,6 @@ ka:
   tutorial_stemcod_string_detail_grades: კლასები 6+
   tutorial_techikb_string_detail_grades: უნივერსიტეტი
   tutorial_kanostreet_string_detail_grades: დამწყებები - მე-5 კლასი
-  tutorial_nyblebot_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_codemojijs_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_techapf_string_detail_grades: უნივერსიტეტი
   tutorial_techfpjs_string_detail_grades: უნივერსიტეტი
@@ -7115,7 +6994,6 @@ ka:
   tutorial_gpbcircle_string_detail_grades: კლასები 6+
   tutorial_gpbpaint_string_detail_grades: კლასები 6+
   tutorial_cocomarcade_string_detail_grades: კლასები 6+
-  tutorial_techcpp_string_detail_grades: უნივერსიტეტი
   tutorial_beetik_string_detail_grades: კლასები 6-8
   tutorial_codedj_string_detail_grades: კლასები 6+
   tutorial_rgadvan_string_detail_grades: კლასები 6+
@@ -7188,7 +7066,6 @@ ka:
   tutorial_ifly_string_detail_grades: კლასები 2+
   tutorial_idowedo_string_detail_grades: კლასები 2-8
   tutorial_diggindwarf_string_detail_grades: კლასები 6+
-  tutorial_rmedr_string_detail_grades: კლასები 2-8
   tutorial_spheroit_string_detail_grades: კლასები 2+
   tutorial_gameofcodes_string_detail_grades: კლასები 2+
   tutorial_blocklygames_string_detail_grades: კლასები 6+
@@ -7199,7 +7076,6 @@ ka:
   tutorial_bcjs1_string_detail_grades: კლასები 6+
   tutorial_bcjs2_string_detail_grades: კლასები 9+
   tutorial_3dbearmars_string_detail_grades: კლასები 2-8
-  tutorial_alexaskill_string_detail_grades: კლასები 2-8
   tutorial_bitsboxyak_string_detail_grades: კლასები 2-8
   tutorial_blockscadbargraphs_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_blockscadbirdhouses_string_detail_grades: დამწყებები - მე-5 კლასი
@@ -7256,7 +7132,6 @@ ka:
   tutorial_codinismhero_string_detail_grades: კლასები 2+
   tutorial_discovery_string_detail_grades: კლასები 2+
   tutorial_csfirstname_string_detail_grades: კლასები 2+
-  tutorial_obstaclecourse_string_detail_grades: კლასები 2+
   tutorial_edisonmove_string_detail_grades: კლასები 6+
   tutorial_edisonspider_string_detail_grades: კლასები 6+
   tutorial_edisonspotlight_string_detail_grades: კლასები 2-8
@@ -7467,7 +7342,7 @@ ka:
     iPad, უსადენო
   tutorial_danceparty_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad
-  tutorial_chibitronics_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_chibitronics_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_athlete_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_moana_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, iPad
   tutorial_star-wars_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
@@ -7544,7 +7419,7 @@ ka:
     Firefox, Safari, Android ტაბლეტი, iPad
   tutorial_cmgame_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_codesters_string_platforms: არ-აჩვენო
-  tutorial_qrm_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_qrm_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_texas-instruments_string_platforms: TI-84, TI-83 გრაფული კალკულატორები
   tutorial_cajava_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -7619,7 +7494,6 @@ ka:
   tutorial_ticklep_string_platforms: არ-აჩვენო
   tutorial_bbot_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_scratchg_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_roboticfriends_string_platforms: უსადენო
   tutorial_sjforest_string_platforms: iPad-ის აპლიკაცია
   tutorial_sjgreet_string_platforms: iPad-ის აპლიკაცია
   tutorial_sjsunset_string_platforms: iPad-ის აპლიკაცია
@@ -7668,7 +7542,6 @@ ka:
   tutorial_ozogame_string_platforms: ყველა თანამედროვე ბრაუზერი, iPad, iPhone, Android
     ტაბლეტი, Andriod ტელეფონი, Ozobot რობოტი
   tutorial_vidcodeio_string_platforms: უსადენო
-  tutorial_besttech_string_platforms: უსადენო
   tutorial_tlcbrain_string_platforms: უსადენო
   tutorial_hopquiz_string_platforms: iPad და iPhone
   tutorial_unfortunate_string_platforms: Dash and Dot რობოტი
@@ -7677,7 +7550,6 @@ ka:
     ტაბლეტი
   tutorial_bbcmathi_string_platforms: არ-აჩვენო
   tutorial_tlcpixel_string_platforms: უსადენო
-  tutorial_arduino_string_platforms: არდუინოს სქემები
   tutorial_introrobo_string_platforms: iPad, Android tablet, Dash and Dot robot
   tutorial_tlcinvis_string_platforms: უსადენო
   tutorial_tlcjflap_string_platforms: ყველა თანამედროვე ბრაუზერი
@@ -7700,7 +7572,6 @@ ka:
   tutorial_tlcmind_string_platforms: უსადენო
   tutorial_tlctelebot_string_platforms: უსადენო
   tutorial_tlcaus_string_platforms: უსადენო
-  tutorial_oralhist_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_tlcmicro_string_platforms: უსადენო
   tutorial_imathematician_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_tlcmagic_string_platforms: უსადენო
@@ -7720,7 +7591,6 @@ ka:
     ოპტიმიზირებული)
   tutorial_robomind_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android ტაბლეტი, iPad
-  tutorial_scratchanimwork_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_adventureq_string_platforms: iPad
   tutorial_khan-es_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -7733,13 +7603,11 @@ ka:
   tutorial_kfr_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome, Firefox,
     Safari
   tutorial_app-inventor_string_platforms: Android
-  tutorial_bits_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_blockly_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_tynker_string_platforms: არ-აჩვენო
   tutorial_baypt_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_code-combat_string_platforms: არ-აჩვენო
   tutorial_mky_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_spellcraft_string_platforms: Windows
   tutorial_pirates_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android ტაბლეტი, iPad, Android ტელეფონი, iPhone
   tutorial_csfirst_string_platforms: ყველა თანამედროვე ბრაუზერი
@@ -7808,8 +7676,6 @@ ka:
     iPad-ი, Android ტელეფონი, iPad, iPhone
   tutorial_khanweb_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი
   tutorial_khandata_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_robomeshiq_string_platforms: Internet Explorer 11, Chrome, Firefox, VEX
-    IQ რობოტები
   tutorial_googlelogo_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_playtune_string_platforms: Chrome, Firefox, Safari
   tutorial_computeit_string_platforms: ყველა თანამედროვე ბრაუზერი
@@ -7885,7 +7751,6 @@ ka:
   tutorial_techikb_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad, Windows ტელეფონი, Android ტელეფონი, iPhone
   tutorial_kanostreet_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_nyblebot_string_platforms: Android ტაბლეტი, iPad, Android ტელეფონი, iPhone
   tutorial_codemojijs_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_techapf_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad, Windows ტელეფონი, Android ტელეფონი, iPhone
@@ -7895,7 +7760,7 @@ ka:
     iPad, Windows ტელეფონი, Android ტელეფონი, iPhone
   tutorial_gpbcatapult_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_quorumastro_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad, Windows ტელეფონი, Android ტელეფონი, iPhone
+    iPad, Windows ტელეფონი, Android ტელეფონი, iPhone, ეკრანის წამკითხველი
   tutorial_alicewonder_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_rginter_string_platforms: Chrome, Firefox, Android ტაბლეტი
   tutorial_cssgrid_string_platforms: ყველა თანამედროვე ბრაუზერი
@@ -7907,8 +7772,6 @@ ka:
   tutorial_gpbpaint_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_cocomarcade_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox
-  tutorial_techcpp_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad, Windows ტელეფონი, Android ტელეფონი, iPhone
   tutorial_beetik_string_platforms: Chrome, Firefox, Android ტაბლეტი, iPad
   tutorial_codedj_string_platforms: Chrome, Firefox, Safari, Android ტაბლეტი, iPad
   tutorial_rgadvan_string_platforms: Chrome, Firefox, Android ტაბლეტი
@@ -8010,7 +7873,6 @@ ka:
   tutorial_idowedo_string_platforms: ყველა თანამედროვე ბრაუზერი, Android tablet, iPad,
     WeDo
   tutorial_diggindwarf_string_platforms: Chrome, Firefox, Safari
-  tutorial_rmedr_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_spheroit_string_platforms: iPad, Android ტაბლეტი, iPhone, Android ტელეფონი,
     რობოტი Sphero
   tutorial_gameofcodes_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
@@ -8025,7 +7887,6 @@ ka:
   tutorial_bcjs1_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_bcjs2_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_3dbearmars_string_platforms: Android ტაბლეტი, iPad, Android ტელეფონი, iPhone
-  tutorial_alexaskill_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_bitsboxyak_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_blockscadbargraphs_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_blockscadbirdhouses_string_platforms: ყველა თანამედროვე ბრაუზერი
@@ -8036,37 +7897,37 @@ ka:
   tutorial_blockscadsugar_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_bsgridlight_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_bpartscratch_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bpartvid_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bpenglishscratch_string_platforms: ყველა თანამედროვე ბრაუზერი, Android
-    ტაბლეტი, iPad
+    ტაბლეტი, iPad, ეკრანის წამკითხველი
   tutorial_bpenglishvid_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bphealthscratch_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bphealthvid_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bpmathscratch_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bpmathvid_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bpmlkscratch_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bpmlkvid_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bpsafetyscratch_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bpsafetyvid_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bpsciencescratch_string_platforms: ყველა თანამედროვე ბრაუზერი, Android
-    ტაბლეტი, iPad
+    ტაბლეტი, iPad, ეკრანის წამკითხველი
   tutorial_bpsciencevid_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bptechscratch_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_bptechvid_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_caflags_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad
   tutorial_matariki_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
@@ -8097,15 +7958,14 @@ ka:
   tutorial_codesparkcreate_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad, iPhone
   tutorial_hardvsoft_string_platforms: უსადენო
-  tutorial_codestersecard_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_codesterslogo_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_codesterstshirt_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_codestersecard_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
+  tutorial_codesterslogo_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
+  tutorial_codesterstshirt_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_codewards_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_olympics_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_codinismhero_string_platforms: Android ტაბლეტი, Android ტელეფონი
   tutorial_discovery_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_csfirstname_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_obstaclecourse_string_platforms: iPad
   tutorial_edisonmove_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
@@ -8113,7 +7973,8 @@ ka:
   tutorial_gamefrootsquid_string_platforms: ყველა თანამედროვე ბრაუზერი, iPad
   tutorial_duckpiano_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_gpsound_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_groklearningpython_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_groklearningpython_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის
+    წამკითხველი
   tutorial_htmltimetravel_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_hp_flappy_string_platforms: iPad
   tutorial_appytappin_string_platforms: ყველა თანამედროვე ბრაუზერი
@@ -8224,7 +8085,7 @@ ka:
     iPad
   tutorial_allcancodeapps_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_n2y_string_platforms: უსადენო
-  tutorial_microsoftarcade_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_microsoftarcade_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_csfirstunplugged_string_platforms: All modern browsers, Unplugged
   tutorial_toxicodepython_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_codecombatozaria_string_platforms: ყველა თანამედროვე ბრაუზერი
@@ -8263,12 +8124,13 @@ ka:
   tutorial_csfirstdialogue_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_codemonkeybeaver_string_platforms: ყველა თანამედროვე ბრაუზერი, Android
     ტაბლეტი, iPad
-  tutorial_codestersdistance_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_codestersdistance_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის
+    წამკითხველი
   tutorial_itchspace_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_vidcodemagic_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_vidcodemagices_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+    iPad, ეკრანის წამკითხველი
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8288,17 +8150,17 @@ ka:
   tutorial_educodebasics_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_codehsdesign_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad, Windows ტელეფონი, Android ტელეფონი, iPhone
-  tutorial_htmlacademyphp_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_htmlacademyphp_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_gamefrootdistance_string_platforms: ყველა თანამედროვე ბრაუზერი, Android
     ტაბლეტი, iPad
-  tutorial_codesterscovid_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_codesterscovid_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_ttbunker_string_platforms: Chrome
   tutorial_cuttle_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, iPad,
     Windows ტელეფონი, Android ტელეფონი, iPhone
   tutorial_bsdjokes_string_platforms: Chrome
   tutorial_rptree_string_platforms: Chrome, Firefox
-  tutorial_codestersunity_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_codesterssoccer_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_codestersunity_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
+  tutorial_codesterssoccer_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_breakoutlock_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad, iPhone
   tutorial_thunkablemask_string_platforms: ყველა თანამედროვე ბრაუზერი
@@ -8323,7 +8185,8 @@ ka:
   tutorial_scigirlscc_string_platforms: უსადენო
   tutorial_irobotpicture_string_platforms: უსადენო
   tutorial_kcjmyself_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_nearpodalgorithms_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_nearpodalgorithms_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის
+    წამკითხველი
   tutorial_kibodrop_string_platforms: უსადენო
   tutorial_ozobotcolor1_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_scigirlspixels_string_platforms: უსადენო
@@ -8356,11 +8219,11 @@ ka:
   tutorial_nasa3d_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_blupants_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_legodance_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_nearpodcoding_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_nearpodcoding_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_kcjplastic_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_legojourney_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_legohopper_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_catrobatembroidery_string_platforms: Android phone, Screen reader
+  tutorial_catrobatembroidery_string_platforms: Android ტელეფონი, ეკრანის წამკითხველი
   tutorial_irobotphone_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_codeguppydraw_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
@@ -8483,7 +8346,6 @@ ka:
   tutorial_ticklep_string_detail_platforms: არ-აჩვენო
   tutorial_bbot_string_detail_platforms: ''
   tutorial_scratchg_string_detail_platforms: ''
-  tutorial_roboticfriends_string_detail_platforms: უსადენო
   tutorial_sjforest_string_detail_platforms: iPad-ის აპლიკაცია
   tutorial_sjgreet_string_detail_platforms: iPad-ის აპლიკაცია
   tutorial_sjsunset_string_detail_platforms: iPad-ის აპლიკაცია
@@ -8528,7 +8390,6 @@ ka:
   tutorial_tickles_string_detail_platforms: რობოტი Sphero
   tutorial_ozogame_string_detail_platforms: რობოტი Ozobot-ი
   tutorial_vidcodeio_string_detail_platforms: უსადენო
-  tutorial_besttech_string_detail_platforms: უსადენო
   tutorial_tlcbrain_string_detail_platforms: უსადენო
   tutorial_hopquiz_string_detail_platforms: iOS აპლიკაცია
   tutorial_unfortunate_string_detail_platforms: Dash and Dot რობოტი
@@ -8536,7 +8397,6 @@ ka:
   tutorial_elaseq_string_detail_platforms: უსადენო
   tutorial_bbcmathi_string_detail_platforms: არ-აჩვენო
   tutorial_tlcpixel_string_detail_platforms: უსადენო
-  tutorial_arduino_string_detail_platforms: ''
   tutorial_introrobo_string_detail_platforms: Dash and Dot რობოტი
   tutorial_tlcinvis_string_detail_platforms: უსადენო
   tutorial_tlcjflap_string_detail_platforms: ''
@@ -8556,7 +8416,6 @@ ka:
   tutorial_tlcmind_string_detail_platforms: უსადენო
   tutorial_tlctelebot_string_detail_platforms: უსადენო
   tutorial_tlcaus_string_detail_platforms: უსადენო
-  tutorial_oralhist_string_detail_platforms: ''
   tutorial_tlcmicro_string_detail_platforms: უსადენო
   tutorial_imathematician_string_detail_platforms: ''
   tutorial_tlcmagic_string_detail_platforms: უსადენო
@@ -8570,7 +8429,6 @@ ka:
   tutorial_tynkercan_string_detail_platforms: ''
   tutorial_grokflags_string_detail_platforms: ''
   tutorial_robomind_string_detail_platforms: ''
-  tutorial_scratchanimwork_string_detail_platforms: ''
   tutorial_adventureq_string_detail_platforms: ''
   tutorial_khan-es_string_detail_platforms: ''
   tutorial_kpt_string_detail_platforms: ''
@@ -8578,13 +8436,11 @@ ka:
   tutorial_khe_string_detail_platforms: ''
   tutorial_kfr_string_detail_platforms: ''
   tutorial_app-inventor_string_detail_platforms: Android
-  tutorial_bits_string_detail_platforms: ''
   tutorial_blockly_string_detail_platforms: ''
   tutorial_tynker_string_detail_platforms: არ-აჩვენო
   tutorial_baypt_string_detail_platforms: ''
   tutorial_code-combat_string_detail_platforms: არ-აჩვენო
   tutorial_mky_string_detail_platforms: ''
-  tutorial_spellcraft_string_detail_platforms: ''
   tutorial_pirates_string_detail_platforms: ''
   tutorial_csfirst_string_detail_platforms: ''
   tutorial_loopedy_string_detail_platforms: Dash and Dot რობოტი
@@ -8641,7 +8497,6 @@ ka:
   tutorial_soloweb_string_detail_platforms: ''
   tutorial_khanweb_string_detail_platforms: ''
   tutorial_khandata_string_detail_platforms: ''
-  tutorial_robomeshiq_string_detail_platforms: VEX IQ რობოტები
   tutorial_googlelogo_string_detail_platforms: ''
   tutorial_playtune_string_detail_platforms: ''
   tutorial_computeit_string_detail_platforms: ''
@@ -8700,7 +8555,6 @@ ka:
   tutorial_stemcod_string_detail_platforms: ''
   tutorial_techikb_string_detail_platforms: ''
   tutorial_kanostreet_string_detail_platforms: ''
-  tutorial_nyblebot_string_detail_platforms: ''
   tutorial_codemojijs_string_detail_platforms: ''
   tutorial_techapf_string_detail_platforms: ''
   tutorial_techfpjs_string_detail_platforms: ''
@@ -8716,7 +8570,6 @@ ka:
   tutorial_gpbcircle_string_detail_platforms: ''
   tutorial_gpbpaint_string_detail_platforms: ''
   tutorial_cocomarcade_string_detail_platforms: ''
-  tutorial_techcpp_string_detail_platforms: ''
   tutorial_beetik_string_detail_platforms: ''
   tutorial_codedj_string_detail_platforms: ''
   tutorial_rgadvan_string_detail_platforms: ''
@@ -8789,7 +8642,6 @@ ka:
   tutorial_ifly_string_detail_platforms: Parrot Minidrones
   tutorial_idowedo_string_detail_platforms: Wedo
   tutorial_diggindwarf_string_detail_platforms: ''
-  tutorial_rmedr_string_detail_platforms: Vex EDR Robots
   tutorial_spheroit_string_detail_platforms: რობოტი Sphero
   tutorial_gameofcodes_string_detail_platforms: ''
   tutorial_blocklygames_string_detail_platforms: ''
@@ -8800,7 +8652,6 @@ ka:
   tutorial_bcjs1_string_detail_platforms: ''
   tutorial_bcjs2_string_detail_platforms: ''
   tutorial_3dbearmars_string_detail_platforms: 3D printer
-  tutorial_alexaskill_string_detail_platforms: ''
   tutorial_bitsboxyak_string_detail_platforms: ''
   tutorial_blockscadbargraphs_string_detail_platforms: ''
   tutorial_blockscadbirdhouses_string_detail_platforms: ''
@@ -8857,7 +8708,6 @@ ka:
   tutorial_codinismhero_string_detail_platforms: ''
   tutorial_discovery_string_detail_platforms: ''
   tutorial_csfirstname_string_detail_platforms: ''
-  tutorial_obstaclecourse_string_detail_platforms: რობოტი Sphero
   tutorial_edisonmove_string_detail_platforms: Edison robot
   tutorial_edisonspider_string_detail_platforms: Edison robot
   tutorial_edisonspotlight_string_detail_platforms: Edison robot
@@ -9182,7 +9032,6 @@ ka:
   tutorial_ticklep_string_detail_programming_languages: არ-აჩვენო
   tutorial_bbot_string_detail_programming_languages: ვიზუალური პროგრამირების ენა
   tutorial_scratchg_string_detail_programming_languages: ენისგან დამოუკიდებელი
-  tutorial_roboticfriends_string_detail_programming_languages: ენისგან დამოუკიდებელი
   tutorial_sjforest_string_detail_programming_languages: ბლოკები
   tutorial_sjgreet_string_detail_programming_languages: ბლოკები
   tutorial_sjsunset_string_detail_programming_languages: ბლოკები
@@ -9229,7 +9078,6 @@ ka:
   tutorial_tickles_string_detail_programming_languages: ბლოკები
   tutorial_ozogame_string_detail_programming_languages: ბლოკები
   tutorial_vidcodeio_string_detail_programming_languages: ენისგან დამოუკიდებელი
-  tutorial_besttech_string_detail_programming_languages: ბლოკები, C/C++
   tutorial_tlcbrain_string_detail_programming_languages: ენისგან დამოუკიდებელი
   tutorial_hopquiz_string_detail_programming_languages: Hopscotch
   tutorial_unfortunate_string_detail_programming_languages: ბლოკები
@@ -9237,7 +9085,6 @@ ka:
   tutorial_elaseq_string_detail_programming_languages: ენისგან დამოუკიდებელი
   tutorial_bbcmathi_string_detail_programming_languages: არ-აჩვენო
   tutorial_tlcpixel_string_detail_programming_languages: ენისგან დამოუკიდებელი
-  tutorial_arduino_string_detail_programming_languages: Arduino
   tutorial_introrobo_string_detail_programming_languages: ბლოკები, JavaScript
   tutorial_tlcinvis_string_detail_programming_languages: ენისგან დამოუკიდებელი
   tutorial_tlcjflap_string_detail_programming_languages: ენისგან დამოუკიდებელი
@@ -9257,7 +9104,6 @@ ka:
   tutorial_tlcmind_string_detail_programming_languages: ენისგან დამოუკიდებელი
   tutorial_tlctelebot_string_detail_programming_languages: ენისგან დამოუკიდებელი
   tutorial_tlcaus_string_detail_programming_languages: ენისგან დამოუკიდებელი
-  tutorial_oralhist_string_detail_programming_languages: ენისგან დამოუკიდებელი
   tutorial_tlcmicro_string_detail_programming_languages: ენისგან დამოუკიდებელი
   tutorial_imathematician_string_detail_programming_languages: Scratch
   tutorial_tlcmagic_string_detail_programming_languages: ენისგან დამოუკიდებელი
@@ -9271,7 +9117,6 @@ ka:
   tutorial_tynkercan_string_detail_programming_languages: ბლოკები
   tutorial_grokflags_string_detail_programming_languages: Python
   tutorial_robomind_string_detail_programming_languages: ბლოკები
-  tutorial_scratchanimwork_string_detail_programming_languages: ბლოკები, Scratch
   tutorial_adventureq_string_detail_programming_languages: ბლოკები
   tutorial_khan-es_string_detail_programming_languages: JavaScript
   tutorial_kpt_string_detail_programming_languages: JavaScript
@@ -9279,13 +9124,11 @@ ka:
   tutorial_khe_string_detail_programming_languages: JavaScript
   tutorial_kfr_string_detail_programming_languages: JavaScript
   tutorial_app-inventor_string_detail_programming_languages: ბლოკები
-  tutorial_bits_string_detail_programming_languages: Blocks, ენისგან დამოუკიდებელი
   tutorial_blockly_string_detail_programming_languages: ბლოკები
   tutorial_tynker_string_detail_programming_languages: არ-აჩვენო
   tutorial_baypt_string_detail_programming_languages: ბლოკები
   tutorial_code-combat_string_detail_programming_languages: არ-აჩვენო
   tutorial_mky_string_detail_programming_languages: CoffeeScript
-  tutorial_spellcraft_string_detail_programming_languages: ბლოკები, JavaScript
   tutorial_pirates_string_detail_programming_languages: Blocks, მეკობრეული კოდი
   tutorial_csfirst_string_detail_programming_languages: Scratch
   tutorial_loopedy_string_detail_programming_languages: ბლოკები
@@ -9344,7 +9187,6 @@ ka:
   tutorial_soloweb_string_detail_programming_languages: HTML, CSS
   tutorial_khanweb_string_detail_programming_languages: HTML და CSS
   tutorial_khandata_string_detail_programming_languages: SQL
-  tutorial_robomeshiq_string_detail_programming_languages: ბლოკები, Python
   tutorial_googlelogo_string_detail_programming_languages: ბლოკები, Scratch
   tutorial_playtune_string_detail_programming_languages: ბლოკები
   tutorial_computeit_string_detail_programming_languages: ენისგან დამოუკიდებელი
@@ -9403,7 +9245,6 @@ ka:
   tutorial_stemcod_string_detail_programming_languages: JavaScript
   tutorial_techikb_string_detail_programming_languages: Kotlin
   tutorial_kanostreet_string_detail_programming_languages: ბლოკები, JavaScript
-  tutorial_nyblebot_string_detail_programming_languages: ბლოკები
   tutorial_codemojijs_string_detail_programming_languages: JavaScript
   tutorial_techapf_string_detail_programming_languages: Python
   tutorial_techfpjs_string_detail_programming_languages: JavaScript
@@ -9419,7 +9260,6 @@ ka:
   tutorial_gpbcircle_string_detail_programming_languages: ბლოკები
   tutorial_gpbpaint_string_detail_programming_languages: ბლოკები
   tutorial_cocomarcade_string_detail_programming_languages: JavaScript, Python
-  tutorial_techcpp_string_detail_programming_languages: C/C++
   tutorial_beetik_string_detail_programming_languages: ბლოკები
   tutorial_codedj_string_detail_programming_languages: JavaScript
   tutorial_rgadvan_string_detail_programming_languages: ბლოკები, JavaScript, Python
@@ -9492,7 +9332,6 @@ ka:
   tutorial_ifly_string_detail_programming_languages: Tynker
   tutorial_idowedo_string_detail_programming_languages: Scratch
   tutorial_diggindwarf_string_detail_programming_languages: JavaScript
-  tutorial_rmedr_string_detail_programming_languages: ბლოკები
   tutorial_spheroit_string_detail_programming_languages: ბლოკები, JavaScript
   tutorial_gameofcodes_string_detail_programming_languages: Blocks, Ready, Unity
   tutorial_blocklygames_string_detail_programming_languages: ბლოკები
@@ -9504,7 +9343,6 @@ ka:
   tutorial_bcjs2_string_detail_programming_languages: JavaScript
   tutorial_3dbearmars_string_detail_programming_languages: Language independent (can
     be taught in multiple languages), Uses 3D modeling in augmented reality
-  tutorial_alexaskill_string_detail_programming_languages: ბლოკები
   tutorial_bitsboxyak_string_detail_programming_languages: JavaScript
   tutorial_blockscadbargraphs_string_detail_programming_languages: ბლოკები
   tutorial_blockscadbirdhouses_string_detail_programming_languages: ბლოკები
@@ -9564,7 +9402,6 @@ ka:
   tutorial_codinismhero_string_detail_programming_languages: Python
   tutorial_discovery_string_detail_programming_languages: ბლოკები, Scratch
   tutorial_csfirstname_string_detail_programming_languages: ბლოკები, Scratch
-  tutorial_obstaclecourse_string_detail_programming_languages: ბლოკები
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
   tutorial_edisonspider_string_detail_programming_languages: ბლოკები
@@ -9663,7 +9500,7 @@ ka:
   tutorial_gamemaker_string_detail_programming_languages: JavaScript
   tutorial_duckrace_string_detail_programming_languages: ბლოკები
   tutorial_allcancodeapps_string_detail_programming_languages: ბლოკები
-  tutorial_n2y_string_detail_programming_languages: ''
+  tutorial_n2y_string_detail_programming_languages: უსადენო
   tutorial_microsoftarcade_string_detail_programming_languages: ბლოკები
   tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
     Scratch
@@ -9873,7 +9710,6 @@ ka:
   tutorial_eddesign_name: Edison the designer
   tutorial_edshapeup_name: Robot shape-up with Edison
   tutorial_ozocolor_name: Pop Star|Creating Functions With Ozobot Color Codes
-  tutorial_kcjanimals_name: About a Canadian Animal
   tutorial_icomputeeggs_name: iHide Eggs
   tutorial_rootunplugged_name: iRobot Code Break
   tutorial_rgtreasure_name: RoboGarden Puzzles - Robo Treasure Chest
@@ -9890,13 +9726,11 @@ ka:
   tutorial_blockscadscale_name: Scale City
   tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
   tutorial_phidgets_name: A Phidgets Theremin with Processing
-  tutorial_kcjmerry_name: Merry Micro:bits
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
   tutorial_codestersmicro_name: 'Codesters: Create a Micro Ball Game'
   tutorial_codestersdata_name: 'Codesters: Code & Graph micro:bit Data'
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
-  tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_ai-oceans_name: AI for Oceans
@@ -10172,11 +10006,6 @@ ka:
     and unplugged lesson to introduce the concept of functions. It is the first lesson
     of a two lesson series, but either lesson can be taught in isolation. The second
     lesson utilizes OzoBlockly to build on the concept of functions. '
-  tutorial_kcjanimals_longdescription: Build a simple project to celebrate coding
-    and Canadian wildlife. Kids will choose a Canadian animal, like a bear or a moose,
-    and create an animation that explores the animal's world, such as its habitat,
-    eating habits, migration patterns and so on. The project is simple enough for
-    teachers or parents to facilitate and help the kids follow along.
   tutorial_icomputeeggs_longdescription: This teacher-led activity, adapted for the
     Hour of Code, provides pupils with an opportunity to explore physical programming
     through robotics. Using a drag-and-drop programming environment and a programmable
@@ -10228,11 +10057,6 @@ ka:
     can be combined to create a 3D model of a bursting star.
   tutorial_phidgets_longdescription: Create an awesome musical instrument with Phidgets
     and Processing!
-  tutorial_kcjmerry_longdescription: Build an interactive coding project with the
-    micro:bit to celebrate coding and the holiday season. Kids will use a combination
-    of block coding and physical computing to create a sparkling snow globe animation.
-    The project is simple enough for teachers or parents to facilitate and it comes
-    with activity cards that kids can use on their own for a further challenge.
   tutorial_modvariables_longdescription: 'Students investigate how data flows through
     a network using Cubelets robot blocks. This lesson assumes students are already
     familiar with how Cubelets robot blocks work in general.  Visit modrobotics.com/thehub
@@ -10254,8 +10078,6 @@ ka:
   tutorial_rpisensehat_longdescription: Learn how use the Sense HAT hardware to build
     a data-logging device which can capture a range of information about its immediate
     environment.
-  tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
-    to analyze character traits and create an algorithm to demonstrate those traits. '
   tutorial_mee_longdescription: Program the Minecraft Agent to collect data about
     forest fires. Then write code to help prevent the spread of fire, save the village,
     and bring life back to the forest. Learn coding basics and explore a real-world
@@ -10339,7 +10161,6 @@ ka:
   tutorial_eddesign_language: ქართული
   tutorial_edshapeup_language: ქართული
   tutorial_ozocolor_language: ქართული
-  tutorial_kcjanimals_language: ქართული
   tutorial_icomputeeggs_language: ქართული
   tutorial_rootunplugged_language: ქართული
   tutorial_rgtreasure_language: ქართული
@@ -10355,13 +10176,11 @@ ka:
   tutorial_blockscadscale_language: ქართული
   tutorial_tcadloops_language: ქართული
   tutorial_phidgets_language: ქართული
-  tutorial_kcjmerry_language: ქართული
   tutorial_modvariables_language: ქართული
   tutorial_codestersmicro_language: ქართული
   tutorial_codestersdata_language: ქართული
   tutorial_ikodexmas_language: ქართული
   tutorial_rpisensehat_language: ქართული
-  tutorial_modtraits_language: ქართული
   tutorial_mee_language: Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech,
     Danish, Dutch, English (UK), English (United States), Finnish, French (Canada),
     French (France), German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean,
@@ -10442,7 +10261,6 @@ ka:
   tutorial_eddesign_string_detail_grades: კლასები 6+
   tutorial_edshapeup_string_detail_grades: კლასები 6+
   tutorial_ozocolor_string_detail_grades: კლასები 2-8
-  tutorial_kcjanimals_string_detail_grades: კლასები 2-8
   tutorial_icomputeeggs_string_detail_grades: კლასები 2-8
   tutorial_rootunplugged_string_detail_grades: კლასები 2-8
   tutorial_rgtreasure_string_detail_grades: დამწყებები - მე-5 კლასი
@@ -10454,17 +10272,15 @@ ka:
   tutorial_microbit15_string_detail_grades: კლასები 2-8
   tutorial_unity_string_detail_grades: კლასები 9+
   tutorial_blockscadtarget_string_detail_grades: კლასები 6+
-  tutorial_tcadicicles_string_detail_grades: კლასები 6-8
+  tutorial_tcadicicles_string_detail_grades: კლასები 7-8
   tutorial_blockscadscale_string_detail_grades: კლასები 6+
-  tutorial_tcadloops_string_detail_grades: კლასები 6-8
+  tutorial_tcadloops_string_detail_grades: კლასები 5-6
   tutorial_phidgets_string_detail_grades: კლასები 9+
-  tutorial_kcjmerry_string_detail_grades: კლასები 2-8
   tutorial_modvariables_string_detail_grades: კლასები 6+
   tutorial_codestersmicro_string_detail_grades: კლასები 6-8
   tutorial_codestersdata_string_detail_grades: კლასები 6-8
   tutorial_ikodexmas_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_rpisensehat_string_detail_grades: კლასები 6+
-  tutorial_modtraits_string_detail_grades: კლასები 2+
   tutorial_mee_string_detail_grades: კლასები 2+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_ai-oceans_string_detail_grades: Grades 3+
@@ -10507,7 +10323,7 @@ ka:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: ყველა თანამედროვე ბრაუზერი, iPad
   tutorial_trinketgirl_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad, Windows ტელეფონი, Android ტელეფონი, iPhone
+    iPad, Windows ტელეფონი, Android ტელეფონი, iPhone, ეკრანის წამკითხველი
   tutorial_rpimosquito_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad
   tutorial_tynkermars_string_platforms: ყველა თანამედროვე ბრაუზერი, iPad
@@ -10524,7 +10340,7 @@ ka:
   tutorial_uwcloud_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad
   tutorial_htmlmuffin_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_microsoftpizza_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_microsoftpizza_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_stemc_blckhole_string_platforms: ყველა თანამედროვე ბრაუზერი, iPad
   tutorial_careconfigure_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_rpiscratch_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
@@ -10536,7 +10352,7 @@ ka:
   tutorial_ttfrog_string_platforms: Chrome, Firefox
   tutorial_codemojijava_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_ccfirewall_string_platforms: ყველა თანამედროვე ბრაუზერი, iPad
-  tutorial_htmljs_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_htmljs_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_ttaqueducts_string_platforms: Chrome, Firefox
   tutorial_vtgame_string_platforms: ყველა თანამედროვე ბრაუზერი, iPad
   tutorial_baroborav_string_platforms: ყველა თანამედროვე ბრაუზერი
@@ -10560,7 +10376,6 @@ ka:
   tutorial_eddesign_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edshapeup_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_ozocolor_string_platforms: უსადენო
-  tutorial_kcjanimals_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_icomputeeggs_string_platforms: All modern browers, Android phone, Android
     tablet, iPad, iPhone
   tutorial_rootunplugged_string_platforms: უსადენო
@@ -10577,14 +10392,12 @@ ka:
   tutorial_blockscadscale_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_tcadloops_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_phidgets_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_kcjmerry_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_modvariables_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
     iPad-ი, Android ტელეფონი, iPad, iPhone
   tutorial_codestersmicro_string_platforms: 'All modern browsers '
   tutorial_codestersdata_string_platforms: 'All modern browsers '
   tutorial_ikodexmas_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_rpisensehat_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_modtraits_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
   tutorial_kuborobo_string_platforms: უსადენო
   tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
@@ -10664,7 +10477,6 @@ ka:
   tutorial_eddesign_string_detail_platforms: Edison robot
   tutorial_edshapeup_string_detail_platforms: Edison robot
   tutorial_ozocolor_string_detail_platforms: Ozobot
-  tutorial_kcjanimals_string_detail_platforms: ''
   tutorial_icomputeeggs_string_detail_platforms: Sphero
   tutorial_rootunplugged_string_detail_platforms: ''
   tutorial_rgtreasure_string_detail_platforms: ''
@@ -10681,13 +10493,11 @@ ka:
   tutorial_tcadloops_string_detail_platforms: ''
   tutorial_phidgets_string_detail_platforms: Phidgets Getting Started Kit, Phidgets
     Distance Sensors.
-  tutorial_kcjmerry_string_detail_platforms: BBC micro:bit
   tutorial_modvariables_string_detail_platforms: Cubelets Robot Blocks
   tutorial_codestersmicro_string_detail_platforms: BBC micro:bit
   tutorial_codestersdata_string_detail_platforms: BBC micro:bit
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
-  tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_ai-oceans_string_detail_platforms: ''
@@ -10774,7 +10584,6 @@ ka:
   tutorial_edshapeup_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
   tutorial_ozocolor_string_detail_programming_languages: ბლოკები
-  tutorial_kcjanimals_string_detail_programming_languages: ბლოკები
   tutorial_icomputeeggs_string_detail_programming_languages: ბლოკები
   tutorial_rootunplugged_string_detail_programming_languages: ბლოკები
   tutorial_rgtreasure_string_detail_programming_languages: ბლოკები
@@ -10791,14 +10600,12 @@ ka:
   tutorial_tcadloops_string_detail_programming_languages: ბლოკები
   tutorial_phidgets_string_detail_programming_languages: Java, Phidgets support ALL
     major programming languages. Can easily adapt this project to another language/environment.
-  tutorial_kcjmerry_string_detail_programming_languages: ბლოკები
   tutorial_modvariables_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_codestersmicro_string_detail_programming_languages: Python
   tutorial_codestersdata_string_detail_programming_languages: Python
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
-  tutorial_modtraits_string_detail_programming_languages: ბლოკები
   tutorial_mee_string_detail_programming_languages: ბლოკები
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together

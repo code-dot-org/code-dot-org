@@ -5771,3 +5771,24 @@ nl:
           lessons:
             lesson-19:
               name: Project
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Hulpmiddelen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lessen
+            lessonGroup-3:
+              display_name: Project
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Content
+            content:
+              display_name: Content
+            lesson_group:
+              display_name: Content
+            lessonGroup-2:
+              display_name: Content

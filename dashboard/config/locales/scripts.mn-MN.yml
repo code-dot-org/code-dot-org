@@ -24650,3 +24650,12 @@ mn:
               name: Хурдасгуур хэмжигч
             lesson-19:
               name: Төсөл
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Виджетүүд
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Хичээлүүд
+            lessonGroup-3:
+              display_name: Төсөл

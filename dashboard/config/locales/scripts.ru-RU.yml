@@ -4493,6 +4493,9 @@ ru:
           title: 'Майнкрафт: Водное путешествие'
           description_short: Используйте навыки креативности и решения проблем, чтобы
             изучать и строить подводные миры с помощью программирования!
+          lessons:
+            Aquatic:
+              name: Водный мир
         dance--draft:
           lessons:
             Dance Party:
@@ -8072,3 +8075,24 @@ ru:
           lessons:
             lesson-19:
               name: Проект
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Виджеты
+            lesson-3:
+              name: Инструменты
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Уроки
+            lessonGroup-3:
+              display_name: Проект
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Содержимое
+            content:
+              display_name: Содержимое
+            lesson_group:
+              display_name: Содержимое
+            lessonGroup-2:
+              display_name: Содержимое

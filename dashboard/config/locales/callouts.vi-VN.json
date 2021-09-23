@@ -756,6 +756,89 @@
         },
         "courseF_events_predict": {
           "behaviors_edit": "Nhấp chuột vào đây để xem cách hoạt động của hành vi này."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Con số này có nghĩa là chỉ được dùng một khối loại này trong câu trả lời cuối cùng."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Bạn có biết rằng bạn có thể vẽ lại đè lên một đường bất cứ khi nào bạn cần không?"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Hãy dùng khối này để thu thập báu vật."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Hãy nhấp chuột vào bóng đèn khi bạn cần gợi ý nhé!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Đây là chú thích"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Nhấp chuột vào đây để thay đổi hướng của mũi tên sự kiện."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "Trong hộp công cụ chỉ có một khối như vậy. Bạn sẽ dùng khối đó như thế nào?"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Hãy dùng khối này để thu thập báu vật."
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Hãy dùng mũi tên thả xuống màu xanh lá để đổi hướng."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Khối này rất quan trọng đối với dự án này. Nhớ sử dụng nhé!"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Bạn có thấy một số khối mới trong hộp công cụ không? Đừng lo lắng, chúng tôi sẽ hướng dẫn bạn cách sử dụng các khối này trong một bài học khác."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Bạn có thể lấy thêm khối từ hộp công cụ nếu cần đấy!"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Các khối này đã bị khóa và không thể xóa được!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Kéo các khối từ hộp công cụ vào không gian làm việc của bạn."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Bạn có thể kéo các khối bị dưa vào hộp công cụ để bỏ đi.",
+          "courseC_maze_programming3_3": "Những khối này là đá và không thể bỏ đi."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Đây là giới hạn số lượng khối. Con số này cho bạn biết bạn còn lại bao nhiêu khối trong số những khối này để dùng."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Đây là bài tập thử thách đầu tiên của bạn! Những bài tập này tương đối khó và có thể phải thử vài lần.",
+          "courseC_maze_programming7_2": "Những khối này làm bằng đá và không thể bỏ đi."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Đây là giới hạn số lượng khối. Con số này cho bạn biết bạn còn lại bao nhiêu khối trong số những khối này để dùng."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Bạn có thể kéo các khối bị dưa vào hộp công cụ để bỏ đi."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Hộp công cụ ở chế độ “danh mục” để tạo thêm chỗ cho mã lệnh. Vòng lặp `for` (với) có ở đây."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Bạn sẽ tìm thấy vòng lặp `for` (với) ở đây!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Bạn sẽ thấy khối `math` (tính toán) tại đây."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Sau khi gắn tất cả các khối lại với nhau, hãy nhấn “Run” (chạy) để bắt đầu chương trình."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Kéo các khối từ hộp công cụ vào không gian làm việc của bạn."
         }
       }
     }

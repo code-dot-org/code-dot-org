@@ -215,5 +215,12 @@
   "poemBotSuccessLevel7": "crwdns2693101:0crwdne2693101:0",
   "poemBotSuccessLevel8": "crwdns2693103:0crwdne2693103:0",
   "poemBotSuccessLevel9": "crwdns2693105:0crwdne2693105:0",
-  "poemBotSuccessLevel10": "crwdns2693107:0crwdne2693107:0"
+  "poemBotSuccessLevel10": "crwdns2693107:0crwdne2693107:0",
+  "allSayBlocks": "crwdns2693595:0crwdne2693595:0",
+  "clickAnySprite": "crwdns2693597:0crwdne2693597:0",
+  "poemBotSuccessTextEvent": "crwdns2693599:0crwdne2693599:0",
+  "poemBotSuccessEffectWithEvent": "crwdns2693601:0crwdne2693601:0",
+  "changeOrSetCostumeEvent": "crwdns2693603:0crwdne2693603:0",
+  "noSound": "crwdns2693605:0crwdne2693605:0",
+  "chooseSound": "crwdns2693607:0crwdne2693607:0"
 }
