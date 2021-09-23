@@ -1105,6 +1105,13 @@ fil:
             '"rain"': ulan
       gamelab_makeNewSpriteAnon:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': kanan
+            '90': baba
+            '180': kaliwa
+            '270': paitaas
       gamelab_mirrorSprite:
         text: "{SPRITE} mukha {DIRECTION}"
         options:
@@ -1130,6 +1137,7 @@ fil:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_digital/jump_7.mp3'": talon
       gamelab_pointInDirection:
         text: punto {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1564,6 +1572,8 @@ fil:
             '"ripples"': Ripples
           PALETTE:
             '"rainbow"': Bahaghari
+      PoemBot_setBackgroundImageAs:
+        text: Itakda ang background sa {IMG}
       PoemBot_setForegroundEffect:
         text: itakda ang foreground effect {EFFECT}
         options:

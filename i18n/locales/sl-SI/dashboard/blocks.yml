@@ -407,6 +407,13 @@ sl:
         options:
           EFFECT:
             '"rain"': dež
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': desno
+            '90': dol
+            '180': levo
+            '270': gor
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -416,6 +423,7 @@ sl:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": hrustati
+            "'sound://category_digital/jump_7.mp3'": skoči
       gamelab_randColor:
         text: naključna barva
       gamelab_randomColor:

@@ -96,6 +96,11 @@ export const TheaterExceptionType = makeEnum(
   'INVALID_SHAPE'
 );
 
+export const PlaygroundExceptionType = {
+  PLAYGROUND_RUNNING: 'PLAYGROUND_RUNNING',
+  PLAYGROUND_NOT_RUNNING: 'PLAYGROUND_NOT_RUNNING'
+};
+
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
 
 export const STATUS_MESSAGE_PREFIX = '[JAVALAB]';

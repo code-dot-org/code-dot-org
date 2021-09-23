@@ -172,7 +172,16 @@
           "student_overview": "Na internete zažijeme veľa zábavy, ale je tiež dôležité myslieť na bezpečnosť. V tejto lekcii sa naučíme rozlišovať medzi informáciami, ktoré je bezpečné zdieľať online a a informáciami, ktoré majú zostať súkromné."
         },
         "coursee-2021/About Me": {
-          "student_overview": "Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných a osobných údajov na internete"
+          "overview": "V rámci tohto **mini projektu** študenti využijú svoje nadobudnuté vedomosti o zdieľaní osobných a súkromných informácií na webe vytvorením interaktívneho plagátu.",
+          "preparation": "-   (Nepovinné) Vytlačte kópie **\\*sprievodcu plánovaním** pre študentov alebo im rozdajte digitálne kópie.\n-   Môžete vytvoriť aj svoj vlastný vzorový projekt, ktorý ukážete triede. \n-   Uistite sa, že každý študent má zápisník na poznámky.",
+          "purpose": "Cieľom tejto lekcie je spraviť predchádzajúcu lekciu o osobných a súkromných informáciách osobne relevantnou pre študentov. Študenti si precvičia bezpečné sebavyjadrenie na webe s ohľadom na príklady BEZPEČNÝCH (osobných) a NEBEZPEČNÝCH (súkromných) informácií tak, že si v SpriteLabe navrhnú vlastné kostýmy postavičiek a vygenerujú text.",
+          "student_overview": "Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdieľaní súkromných a osobných údajov na internete"
+        },
+        "coursee-2021/Digital Sharing": {
+          "overview": "Táto **prieskumná** lekcia pomôže študentom pochopiť výzvy a prínosy rešpektovania vlastníctva a autorských práv, obzvlášť v digitálnom prostredí. ",
+          "preparation": "-   Vyhľadajte **\\*video o zdieľaní autorských práv** v časti „Odkazy“ nižšie\n-   Stiahnite a preštudujte si celý **\\*plán lekcie o digitálnom zdieľaní** od organizácie Copyright and Creativity\n-   Ako učiteľ vytvorte nejaké dielo pre lekciu (obrázok, skladbu, prezentáciu atď.) \n-   Uistite sa, že každý študent má zápisník na poznámky.\n-   Budete potrebovať tablet alebo smartfón na simuláciu zdieľania položky.",
+          "purpose": "Študenti budú čoskoro vytvárať projekty na zdieľanie, pričom väčšina z týchto projektov bude obsahovať kód alebo obrázky, ktoré študenti nevytvorili sami. Cieľom tejto lekcie je ukázať študentom, ako správne používať obsah, ktorý nepatrí im.",
+          "student_overview": "V rámci tejto lekcie sa dozviete o výzvach a prínosoch vlastníctva a autorských práv. "
         },
         "coursee-2021/Programming and Loops with the Artist": {
           "overview": "Sledujte nadšenie na tvárach vašich študentov ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu. Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel pre portfólio, či ako ukážku pre rodičov. "

@@ -1190,7 +1190,7 @@ de:
       einloggen, keinen Fortschritt speichern und keine Zertifikate ausdrucken. Die
       Lehrer sollten diese möglicherweise vorher <a href="%{url}">hier</a> ausdrucken.'
     minecraft_name: Minecraft "Hour of Code"
-    starwars_blocks_name: 'Star Wars: Aufbau einer Galaxis mit Code (Blöcke)'
+    starwars_blocks_name: 'Star Wars: Aufbau einer Galaxis mit Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Aufbau einer Galaxis mit Code (JavaScript)'
     download_message: "%{app_name} zur Offline-Nutzung (136MB) herunterladen"
     download_in_Albanian: 'Download auf Albanisch:'

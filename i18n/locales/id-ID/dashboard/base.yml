@@ -172,6 +172,7 @@ id:
     user_type_student_ability_1: "Simpan kemajuan dan proyek anda"
     user_type_student_ability_2: "Bergabung dengan bagian kelas guru"
     user_type_teacher: "Guru"
+    user_type_teacher_desc: "Setiap siswa memiliki akses ke, ditambah:"
     user_type_teacher_ability_1: "Membuat bagian kelas"
     user_type_teacher_ability_2: "Menetapkan dan melacak pekerjaan siswa"
     user_type_teacher_ability_3: "Mendaftar dalam pembelajaran profesional"

@@ -454,6 +454,13 @@ ka:
         options:
           EFFECT:
             '"rain"': წვიმა
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': მარჯვნივ
+            '90': ქვემოთ
+            '180': მარცხნივ
+            '270': ზემოთ
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -472,6 +479,7 @@ ka:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": ხრაშუნი
+            "'sound://category_digital/jump_7.mp3'": ახტომა
       gamelab_pointInDirection:
         options:
           DIRECTION:

@@ -332,7 +332,7 @@
           "arrow_buttons": "Drücke zum Steuern Deiner Tänzerin die Pfeiltasten."
         },
         "CourseD_Dance_2020_04": {
-          "dance_callout_02": "Füge diesen Baustein deinem Programm hinzu!"
+          "dance_callout_02": "Füge diesen Block Deinem Programm hinzu!"
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "Füge deinem Programm ein neues Ereignis hinzu."
@@ -348,23 +348,23 @@
           "new_block_4": "Neuer Block!"
         },
         "CourseD_Dance_Party_01": {
-          "dance_callout_01": "Füge diesen Baustein deinem Programm hinzu!"
+          "dance_callout_01": "Füge diesen Block Deinem Programm hinzu!"
         },
         "CourseD_Dance_Party_02": {
-          "dance_callout_02": "Füge diesen Baustein deinem Programm hinzu!"
+          "dance_callout_02": "Füge diesen Block Deinem Programm hinzu!"
         },
         "CourseD_Dance_Party_04": {
-          "dance_callout_04": "Füge diesen Baustein deinem Programm hinzu!"
+          "dance_callout_04": "Füge diesen Block Deinem Programm hinzu!"
         },
         "CourseD_Dance_Party_06": {
-          "dance_callout_06": "Füge hier deinen neuen Tänzer hinzu"
+          "dance_callout_06": "Füge hier Deinen neuen Tänzer hinzu"
         },
         "CourseD_Dance_Party_11": {
           "dance_callout_11_a": "Neuer Block!",
           "dance_callout_11_b": "Neuer Block!"
         },
         "CourseD_Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Schaue hier nach dem \"alle Enten\" Bausteinen"
+          "dance_party_11_5_groups": "Schaue hier nach dem Block \"alle Enten\""
         },
         "Dance_2019_01": {
           "dance_callout_01": "Wähle hier den Typ des Tänzers aus."
@@ -374,7 +374,7 @@
           "arrow_buttons": "Drücke zum Steuern Deiner Tänzerin die Pfeiltasten."
         },
         "Dance_2019_04": {
-          "dance_callout_02": "Füge diesen Baustein deinem Programm hinzu!"
+          "dance_callout_02": "Füge diesen Block Deinem Programm hinzu!"
         },
         "Dance_2019_05": {
           "dance_callout_05": "Füge deinem Programm ein neues Ereignis hinzu."
@@ -390,23 +390,23 @@
           "new_block_4": "Neuer Block!"
         },
         "Dance_Party_01": {
-          "dance_callout_01": "Füge diesen Baustein deinem Programm hinzu!"
+          "dance_callout_01": "Füge diesen Block Deinem Programm hinzu!"
         },
         "Dance_Party_02": {
-          "dance_callout_02": "Füge diesen Baustein deinem Programm hinzu!"
+          "dance_callout_02": "Füge diesen Block Deinem Programm hinzu!"
         },
         "Dance_Party_04": {
-          "dance_callout_04": "Füge diesen Baustein deinem Programm hinzu!"
+          "dance_callout_04": "Füge diesen Block Deinem Programm hinzu!"
         },
         "Dance_Party_06": {
-          "dance_callout_06": "Füge hier deinen neuen Tänzer hinzu"
+          "dance_callout_06": "Füge hier Deinen neuen Tänzer hinzu"
         },
         "Dance_Party_11": {
           "dance_callout_11_a": "Neuer Block!",
           "dance_callout_11_b": "Neuer Block!"
         },
         "Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Schaue hier nach dem \"alle Enten\" Bausteinen"
+          "dance_party_11_5_groups": "Schaue hier nach dem Block \"alle Enten\""
         },
         "Fish Tank 3-validated_2019": {
           "spritelab_comment": "Verwende diesen Baustein, um dir selbst oder Deinem Lehrer Notizen darüber zu machen, wie Dein Code funktioniert."
@@ -562,15 +562,15 @@
         },
         "Overworld Move to Sheep": {
           "craft_run_button_callout": "Drücke auf \"Ausführen\", um dein Programm auszuprobieren.",
-          "craft_drag_block_callout": "Ziehe einen \"Vorwärts\"-Block und hänge ihn unter dem anderen Block an"
+          "craft_drag_block_callout": "Ziehe einen `bewege vorwärts`-Block und hänge ihn unter dem anderen Block an."
         },
         "Overworld Move to Sheep_2019": {
           "craft_run_button_callout": "Drücke auf \"Ausführen\", um dein Programm auszuprobieren.",
-          "craft_drag_block_callout": "Ziehe einen \"Vorwärts\"-Block und hänge ihn unter dem anderen Block an"
+          "craft_drag_block_callout": "Ziehe einen `bewege vorwärts`-Block und hänge ihn unter dem anderen Block an."
         },
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Drücke auf \"Ausführen\", um dein Programm auszuprobieren.",
-          "craft_drag_block_callout": "Ziehe einen \"Vorwärts\"-Block und hänge ihn unter dem anderen Block an"
+          "craft_drag_block_callout": "Ziehe einen `bewege vorwärts`-Block und hänge ihn unter dem anderen Block an."
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Wiederhole Aktionen, indem du hier Bausteine hineinsetzt."
@@ -1632,7 +1632,7 @@
           "arrow_buttons": "Drücke zum Steuern Deiner Tänzerin die Pfeiltasten."
         },
         "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "Füge diesen Baustein deinem Programm hinzu!"
+          "dance_callout_02": "Füge diesen Block Deinem Programm hinzu!"
         },
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Füge deinem Programm ein neues Ereignis hinzu."
@@ -1648,7 +1648,7 @@
           "new_block_4": "Neuer Block!"
         },
         "CourseF_outbreak2": {
-          "minitoolbox": "Klicke hier, um den Block zu erweitern.",
+          "minitoolbox": "Klicke hier, um den Block zu auszuklappen.",
           "pointerlocation": "Ziehe einen Subjekt-Block hierher."
         },
         "CourseF_outbreak7": {
@@ -1680,7 +1680,7 @@
         },
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Drücke auf \"Ausführen\", um dein Programm auszuprobieren.",
-          "craft_drag_block_callout": "Ziehe einen \"Vorwärts\"-Block und hänge ihn unter dem anderen Block an"
+          "craft_drag_block_callout": "Ziehe einen `bewege vorwärts`-Block und hänge ihn unter dem anderen Block an."
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Wiederhole Aktionen, indem du hier Bausteine hineinsetzt."
