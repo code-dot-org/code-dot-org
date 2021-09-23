@@ -167,7 +167,6 @@ class ProgrammingExpression < ApplicationRecord
       id: id,
       key: key,
       name: name,
-      lastUpdated: updated_at,
       programmingEnvironmentName: programming_environment.name,
       shortDescription: short_description || '',
       videoKey: video_key
