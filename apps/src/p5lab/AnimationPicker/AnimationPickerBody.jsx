@@ -164,14 +164,17 @@ export default class AnimationPickerBody extends React.Component {
     ));
   }
 
-  animationItemsRendering(animations, multiSelect) {
+  animationItemsRendering(animations, isMultiSelectEnabled) {
     return animations.map(animationProps => (
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
         label={this.props.hideAnimationNames ? undefined : animationProps.name}
         animationProps={animationProps}
         onClick={() =>
-          this.props.onPickLibraryAnimation(animationProps, multiSelect)
+          this.props.onPickLibraryAnimation(
+            animationProps,
+            isMultiSelectEnabled
+          )
         }
         playAnimations={this.props.playAnimations}
         selected={this.props.selectedAnimations.some(

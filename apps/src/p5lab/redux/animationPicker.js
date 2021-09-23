@@ -271,11 +271,11 @@ export function pickNewAnimation() {
  * process. Dispatch root gamelab action to add appropriate metadata and then
  * close the animation picker.
  * @param {!AnimationProps} animation
- * @param {!boolean} multiSelect - boolean determines if we are in the multiselect experiment. Will
+ * @param {!boolean} isMultiSelectEnabled - boolean determines if we are in the multiselect experiment. Will
  *    be removed after experiment
  * @returns {function}
  */
-export function pickLibraryAnimation(animation, multiSelect = false) {
+export function pickLibraryAnimation(animation, isMultiSelectEnabled = false) {
   firehoseClient.putRecord({
     study: 'sprite-use',
     study_group: 'before-update-v2',
@@ -289,7 +289,7 @@ export function pickLibraryAnimation(animation, multiSelect = false) {
     const goal = getState().animationPicker.goal;
     const selectedAnimations = getState().animationPicker.selectedAnimations;
     if (goal === Goal.NEW_ANIMATION) {
-      if (multiSelect) {
+      if (isMultiSelectEnabled) {
         if (!!selectedAnimations[animation.sourceUrl]) {
           dispatch(removeSelectedAnimation(animation));
         } else {
@@ -303,7 +303,7 @@ export function pickLibraryAnimation(animation, multiSelect = false) {
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendLibraryFrames(animation));
     }
-    if (!multiSelect) {
+    if (!isMultiSelectEnabled) {
       dispatch(hide());
     }
   };
