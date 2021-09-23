@@ -17,6 +17,7 @@ module Services
         end
 
         def get_script_overview_url(script)
+          return nil unless Services::CurriculumPdfs.should_generate_overview_pdf?(script)
           pathname = get_script_overview_pathname(script, true)
           return nil unless pathname.present?
           File.join(get_base_url, pathname)
