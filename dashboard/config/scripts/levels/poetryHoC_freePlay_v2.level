@@ -19,7 +19,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "# Free Play\r\n\r\nLet's get moody! Illustrate a poem however you'd like and share it with your friends!\r\n",
+    "long_instructions": "Let's get moody! Illustrate a poem however you'd like and share it with your friends!\r\n",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -47,7 +47,7 @@
   "created_at": "2021-09-21T18:26:23.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2021-09-21T18:26:23.546+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_freePlay\\\"\"],\"cloned_from\":\"poetryHoC_freePlay\"},{\"changed_at\":\"2021-09-21 18:26:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-21T18:26:23.546+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_freePlay\\\"\"],\"cloned_from\":\"poetryHoC_freePlay\"},{\"changed_at\":\"2021-09-21 18:26:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 20:43:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 20:52:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 21:35:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 21:41:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 21:56:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1379,93 +1379,83 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="World">
-          <block type="gamelab_setBackground">
-            <value name="COLOR">
-              <block type="colour_picker">
-                <title name="COLOUR">#666666</title>
-              </block>
-            </value>
-          </block>
-          <block type="PoemBot_setBackgroundEffect">
-            <title name="EFFECT">"colors"</title>
-            <title name="PALETTE">"grayscale"</title>
-          </block>
-          <block type="PoemBot_setForegroundEffect">
-            <title name="EFFECT">"rain"</title>
-          </block>
-          <block type="PoemBot_playSound">
-            <title name="SOUND">"sound://category_bell/bells_win_low.mp3"</title>
-          </block>
-          <block type="PoemBot_showPoem"/>
-          <block type="PoemBot_hidePoem"/>
-        </category>
-        <category name="Text">
-          <block type="PoemBot_setFont">
-            <title name="FONT">"Arial"</title>
-          </block>
-          <block type="PoemBot_setFontColor">
-            <value name="FILL">
-              <block type="colour_picker">
-                <title name="COLOUR">#3366ff</title>
-              </block>
-            </value>
-          </block>
-          <block type="PoemBot_setTextEffect">
-            <title name="EFFECT">"fade"</title>
-          </block>
-        </category>
-        <category name="Sprites">
-          <block type="gamelab_makeNewSpriteAnon">
-            <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
-            <value name="LOCATION">
-              <block type="gamelab_location_picker">
-                <title name="LOCATION">{"x":325,"y":75}</title>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_makeNumSprites">
-            <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
-            <value name="NUM">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_makeBurst">
-            <title name="EFFECT">"burst"</title>
-            <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
-            <value name="NUM">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
-          </block>
-          <block type="PoemBot_setSize">
-            <title name="SPRITE">"alligator_mouth_closed"</title>
-            <title name="VAL"/>
-          </block>
-          <block type="gamelab_destroy">
-            <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"alligator_mouth_closed"</title>
-              </block>
-            </value>
-          </block>
-          <block type="PoemBot_startBehavior">
-            <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
-            <title name="BEHAVIOR">fluttering</title>
-          </block>
-          <block type="PoemBot_stopBehavior">
-            <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
-            <title name="BEHAVIOR">fluttering</title>
-          </block>
-        </category>
-        <category name="Events">
-          <block type="PoemBot_whenLineShows">
-            <title name="N"/>
-          </block>
-        </category>
+        <block type="gamelab_setBackground">
+          <value name="COLOR">
+            <block type="colour_picker">
+              <title name="COLOUR">#666666</title>
+            </block>
+          </value>
+        </block>
+        <block type="PoemBot_setBackgroundEffect">
+          <title name="EFFECT">"colors"</title>
+          <title name="PALETTE">"grayscale"</title>
+        </block>
+        <block type="PoemBot_setTextEffect">
+          <title name="EFFECT">"fade"</title>
+        </block>
+        <block type="PoemBot_setFont">
+          <title name="FONT">"Arial"</title>
+        </block>
+        <block type="PoemBot_setFontColor">
+          <value name="FILL">
+            <block type="colour_picker">
+              <title name="COLOUR">#3366ff</title>
+            </block>
+          </value>
+        </block>
+        <block type="PoemBot_playSound">
+          <title name="SOUND">"sound://category_bell/bells_win_low.mp3"</title>
+        </block>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">???</title>
+        </block>
+        <block type="PoemBot_setForegroundEffect">
+          <title name="EFFECT">"rain"</title>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon">
+          <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker">
+              <title name="LOCATION">{"x":325,"y":75}</title>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeNumSprites">
+          <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
+          <value name="NUM">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeBurst">
+          <title name="EFFECT">"burst"</title>
+          <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
+          <value name="NUM">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="PoemBot_setSize">
+          <title name="SPRITE">"alligator_mouth_closed"</title>
+          <title name="VAL">0</title>
+        </block>
+        <block type="PoemBot_startBehavior">
+          <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
+          <title name="BEHAVIOR">fluttering</title>
+        </block>
+        <block type="PoemBot_stopBehavior">
+          <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
+          <title name="BEHAVIOR">fluttering</title>
+        </block>
+        <block type="gamelab_destroy">
+          <value name="THIS">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"alligator_mouth_closed"</title>
+            </block>
+          </value>
+        </block>
       </xml>
     </toolbox_blocks>
   </blocks>
