@@ -80,10 +80,11 @@ class Pd::Workshop < ApplicationRecord
   validate :subject_must_be_valid_for_course
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
-  validate :all_academic_year_workshops_suppress_email
+  validate :suppress_email_subjects_must_suppress_email
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
   validate :friday_institute_workshops_must_be_virtual
   validate :virtual_only_subjects_must_be_virtual
+  validate :not_funded_subjects_must_not_be_funded
 
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
@@ -113,9 +114,15 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  def all_academic_year_workshops_suppress_email
+  def suppress_email_subjects_must_suppress_email
     if MUST_SUPPRESS_EMAIL_SUBJECTS.include?(subject) && !suppress_email?
-      errors.add :properties, 'All academic year workshops must suppress email.'
+      errors.add :properties, 'All academic year workshops and the Admin/Counselor - Welcome workshop must suppress email.'
+    end
+  end
+
+  def not_funded_subjects_must_not_be_funded
+    if NOT_FUNDED_SUBJECTS.include?(subject) && !funded?
+      errors.add :properties, 'Admin/Counselor - Welcome workshop must not be funded.'
     end
   end
 

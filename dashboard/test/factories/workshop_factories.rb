@@ -289,6 +289,7 @@ FactoryGirl.define do
       num_sessions 1       # Most have 1 session
       num_facilitators 1   # Want to work with facilitators
       each_session_hours 2 # Not sure on session length
+      suppress_email true  # Should suppress reminder emails.
     end
 
     factory :counselor_workshop do
