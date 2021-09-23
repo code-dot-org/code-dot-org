@@ -726,6 +726,13 @@ pt:
             '"rain"': chuva
       gamelab_makeNewSpriteAnon:
         text: fazer novo {ANIMATION_NAME} sprite at sprite at sprite at spr {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': para a direita
+            '90': para baixo
+            '180': para a esquerda
+            '270': para cima
       gamelab_mirrorSprite:
         text: "{SPRITE} Cara {DIRECTION}"
         options:
@@ -754,6 +761,7 @@ pt:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": botão
             "'sound://category_collect/clicky_crunch.mp3'": triturar
+            "'sound://category_digital/jump_7.mp3'": saltar
       gamelab_pointInDirection:
         text: ponto {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1165,6 +1173,8 @@ pt:
         text: y coordenada de {SPRITE}
       PoemBot_playSound:
         text: PlaySound {SOUND}
+      PoemBot_setBackgroundImageAs:
+        text: definir fundo para {IMG}
       RyanLab_moveForward:
         text: segue em frente
       RyanLab_turnLeft:

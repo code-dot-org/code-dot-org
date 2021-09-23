@@ -1139,6 +1139,13 @@ uz:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       gamelab_makeNumSprites:
         text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': o‘ng
+            '90': pastga
+            '180': chap
+            '270': yuqoriga
       gamelab_mirrorSprite:
         text: "{SPRITE} {DIRECTION} ga yuzlangan"
         options:
@@ -1174,6 +1181,7 @@ uz:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": siqilish
+            "'sound://category_digital/jump_7.mp3'": sakramoq
       gamelab_pointInDirection:
         text: " {SPRITE} ga {DIRECTION} berish"
         options:
@@ -1623,6 +1631,8 @@ uz:
         text: "{SPRITE} x koordinatasi"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      PoemBot_makeNumSprites:
+        text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
       PoemBot_playSound:
         text: " {SOUND} ijro etish"
       PoemBot_setBackgroundEffect:
@@ -1635,6 +1645,8 @@ uz:
             '"ripples"': To‘lqinlar
           PALETTE:
             '"rainbow"': Kamalak
+      PoemBot_setBackgroundImageAs:
+        text: orqa fonni {IMG} ga o'zgartirish
       PoemBot_setForegroundEffect:
         text: old plan effektini {EFFECT} o'rnatish
         options:
@@ -1664,6 +1676,8 @@ uz:
             spinning_right: o'ng tarafga aylanish
             swimming_left_and_right: suzmoqda
             wandering: daydish
+      PoemBot_whenPromptAnswered:
+        text: "{VAR} javob berilganda"
       RyanLab_moveForward:
         text: oldinga siljish
       RyanLab_turnLeft:

@@ -1099,6 +1099,13 @@ nl:
             '"rain"': regen
       gamelab_makeNewSpriteAnon:
         text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': rechts
+            '90': omlaag
+            '180': links
+            '270': omhoog
       gamelab_mirrorSprite:
         text: "{SPRITE} gezicht {DIRECTION}"
         options:
@@ -1124,6 +1131,7 @@ nl:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": kraak
+            "'sound://category_digital/jump_7.mp3'": spring
       gamelab_pointInDirection:
         text: punt {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1569,6 +1577,8 @@ nl:
             '"ripples"': Rimpelingen
           PALETTE:
             '"rainbow"': Regenboog
+      PoemBot_setBackgroundImageAs:
+        text: set achtergrond naar {IMG}
       PoemBot_setForegroundEffect:
         text: stel {EFFECT} in als voorgrondeffect
         options:
