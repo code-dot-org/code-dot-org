@@ -1,0 +1,24 @@
+%link{href: "/css/tutorial-promo2.css", rel: "stylesheet"}
+
+.tutorial-promo-container
+  .img-container
+    %img.background-img{width: 1940, height: 671, src: background_image}
+  %h1.tutorial-heading= heading
+
+  .col-25.specific-tutorial.left-tutorial
+    .tutorial-box
+      %h2.specific-tutorial-heading= left_heading
+      .tutorial-details
+        %p.tutorial-description= left_description
+        %p.tutorial-specs= left_specs
+      %a{href: left_button_link, target: '_self'}
+        %button.tutorial-button= left_button_text
+
+  .col-25.specific-tutorial.right-tutorial
+    .tutorial-box
+      %h2.specific-tutorial-heading= right_heading
+      .tutorial-details
+        %p.tutorial-description= right_description
+        %p.tutorial-specs= right_specs
+      %a{href: right_button_link, target: '_self'}
+        %button.tutorial-button= right_button_text
