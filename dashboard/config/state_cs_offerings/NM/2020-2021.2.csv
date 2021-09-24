@@ -1,0 +1,148 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+ALAMOGORDO HIGH,,350003000001,344,PLTW Computer Science Essentials (ICS),59,8,0,28,0,0,30,10,0
+ALAMOGORDO HIGH,,350003000001,345,AP PLTW Computer Science Principles (CSP),16,0,0,0,0,0,0,0,0
+ALBUQUERQUE HIGH,,350006000024,324,Programming,17,8,0,11,0,0,0,0,0
+ALBUQUERQUE HIGH,,350006000024,327,AP Computer Science A,13,0,0,6,0,0,0,0,0
+CAREER ENRICHMENT,,350006000456,324,Programming,23,0,0,6,0,0,8,0,0
+CIBOLA HIGH,,350006000038,324,Programming,0,0,0,0,0,0,0,0,0
+COLLEGE AND CAREER HIGH SCHOOL,,350006001100,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+COLLEGE AND CAREER HIGH SCHOOL,,350006001100,324,Programming,0,0,0,0,0,0,0,0,0
+DEL NORTE HIGH,,350006000044,324,Programming,73,37,0,39,12,0,0,20,17
+DEL NORTE HIGH,,350006000044,336,AP Computer Science Principles,32,8,0,18,0,0,0,23,0
+DIGITAL ARTS AND TECHNOLOGY ACADEMY,,350006000853,323,Computer Science/Programming,13,0,0,9,0,0,0,0,0
+EARLY COLLEGE ACADEMY,,350006000916,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+EAST MOUNTAIN HIGH SCHOOL,,350006000808,324,Programming,0,0,0,0,0,0,0,0,0
+EAST MOUNTAIN HIGH SCHOOL,,350006000808,336,AP Computer Science Principles,14,0,0,0,0,0,0,0,0
+ECADEMY,,350006001099,324,Programming,39,11,0,22,0,0,16,0,0
+HIGHLAND HIGH,,350006000063,326,Computer Programming-Other Lang,0,0,0,0,0,0,0,0,0
+HIGHLAND HIGH,,350006000063,327,AP Computer Science A,11,0,0,6,0,0,0,0,0
+LA CUEVA HIGH,,350006000698,324,Programming,34,0,0,8,0,0,0,0,0
+LA CUEVA HIGH,,350006000698,327,AP Computer Science A,25,8,0,0,0,0,0,0,0
+LA CUEVA HIGH,,350006000698,336,AP Computer Science Principles,39,11,0,0,0,0,0,0,0
+MANZANO HIGH,,350006000082,336,AP Computer Science Principles,13,0,0,0,0,0,6,0,0
+NEX GEN ACADEMY,,350006001075,324,Programming,0,0,0,0,0,0,0,0,0
+SANDIA HIGH,,350006000106,328,IB Computer Studies,20,14,0,9,0,0,0,0,0
+SANDIA HIGH,,350006000106,336,AP Computer Science Principles,32,0,0,17,0,0,10,0,0
+VALLEY HIGH,,350006000116,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+VALLEY HIGH,,350006000116,344,PLTW Computer Science Essentials (ICS),39,11,0,30,0,0,11,0,0
+VALLEY HIGH,,350006000116,346,AP PLTW Computer Science A,0,0,0,0,0,0,0,0,0
+VOLCANO VISTA HIGH,,350006000966,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+VOLCANO VISTA HIGH,,350006000966,336,AP Computer Science Principles,44,10,0,19,0,0,6,0,0
+WEST MESA HIGH,,350006000119,336,AP Computer Science Principles,19,8,0,14,0,0,0,0,0
+ALMA D'ARTE CHARTER,,350011600900,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+AMY BIEHL CHARTER HIGH SCHOOL,,350013100810,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+BLOOMFIELD HIGH,,350024000156,323,Computer Science/Programming,10,0,0,0,0,0,0,0,0
+BLOOMFIELD HIGH,,350024000156,324,Programming,11,0,0,0,0,0,0,0,0
+BLOOMFIELD HIGH,,350024000156,325,Advanced Programming,0,0,0,0,0,0,0,0,0
+BLOOMFIELD HIGH,,350024000156,327,AP Computer Science A,14,0,0,0,0,0,0,0,0
+CAPITAN HIGH,,350027000161,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+CARLSBAD HIGH,,350030000163,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+JEFFERSON MONTESSORI,,350030000859,312,Computer Science/Programming,23,10,0,10,0,0,9,6,0
+JEFFERSON MONTESSORI,,350030000859,324,Programming,21,12,0,12,0,0,16,0,0
+PECOS CONNECTIONS ACADEMY,,350030001127,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+PECOS CONNECTIONS ACADEMY,,350030001127,324,Programming,0,0,0,0,0,0,0,0,0
+PECOS CONNECTIONS ACADEMY,,350030001127,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+CENTRAL HIGH,,350039000179,323,Computer Science/Programming,18,0,0,0,0,0,0,0,0
+NEWCOMB HIGH,,350039000654,323,Computer Science/Programming,23,9,0,0,18,0,0,0,10
+NEWCOMB HIGH,,350039000654,326,Computer Programming-Other Lang,11,0,0,0,0,0,0,0,0
+CIMARRON HIGH,,350048000198,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+MORENO VALLEY HIGH,,350048000857,336,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+CLOUDCROFT HIGH,,350054000207,323,Computer Science/Programming,15,0,0,0,0,0,8,0,0
+CLOUDCROFT HIGH,,350054000207,336,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+CLOVIS HIGH,,350057000213,327,AP Computer Science A,13,0,0,0,0,0,0,0,0
+COBRE HIGH,,350060000227,345,AP PLTW Computer Science Principles (CSP),0,0,0,0,0,0,0,0,0
+DEAP,,350017401113,312,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+DEMING INTERMEDIATE,,350069000240,349,PLTW Computer Science for Innovators and Makers,63,33,0,50,0,0,0,8,14
+DORA HIGH,,350079000251,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+ESPANOLA VALLEY HIGH,,350090000268,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+ESTANCIA HIGH,,350093000279,324,Programming,0,0,0,0,0,0,0,0,0
+ESTANCIA VALLEY CLASSICAL ACADEMY,,350015201085,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+EUNICE HIGH,,350096000622,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+PIEDRA VISTA HIGH,,350099000787,327,AP Computer Science A,21,0,0,7,0,0,10,0,0
+SANTA TERESA HIGH,,350108000323,336,AP Computer Science Principles,38,14,0,0,0,0,0,0,0
+SANTA TERESA HIGH,,350108000323,344,PLTW Computer Science Essentials (ICS),82,20,0,0,0,0,0,16,20
+SANTA TERESA HIGH,,350108000323,346,AP PLTW Computer Science A,22,7,0,0,0,0,0,0,0
+CROWNPOINT HIGH,,350111000301,344,PLTW Computer Science Essentials (ICS),30,14,0,0,0,0,0,0,0
+MIYAMURA HIGH SCHOOL,,350111000768,323,Computer Science/Programming,39,16,0,9,29,0,0,0,10
+GRANTS HIGH,,350117000329,323,Computer Science/Programming,41,20,0,17,20,0,0,0,7
+LAGUNA-ACOMA HIGH,,350117000330,344,PLTW Computer Science Essentials (ICS),0,0,0,0,0,0,0,0,0
+LAGUNA-ACOMA MIDDLE,,350117000665,349,PLTW Computer Science for Innovators and Makers,0,0,0,0,0,0,0,0,0
+HAGERMAN HIGH,,350120000340,324,Programming,0,0,0,0,0,0,0,0,0
+HOBBS HIGH,,350126000350,344,PLTW Computer Science Essentials (ICS),39,17,0,27,0,0,0,0,0
+HOBBS HIGH,,350126000350,345,AP PLTW Computer Science Principles (CSP),0,0,0,0,0,0,0,0,0
+LAKE ARTHUR HIGH,,350147000375,324,Programming,10,6,0,0,0,0,0,0,0
+CENTENNIAL HIGH SCHOOL,,350150001090,323,Computer Science/Programming,75,6,0,43,0,0,25,11,0
+CENTENNIAL HIGH SCHOOL,,350150001090,324,Programming,46,29,0,38,0,0,21,14,0
+CENTENNIAL HIGH SCHOOL,,350150001090,327,AP Computer Science A,10,0,0,0,0,0,0,0,0
+CENTENNIAL HIGH SCHOOL,,350150001090,336,AP Computer Science Principles,57,11,0,35,0,0,9,0,0
+EARLY COLLEGE HIGH SCHOOL,,350069001144,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+LAS CRUCES HIGH,,350150000386,323,Computer Science/Programming,14,0,0,0,0,0,0,0,0
+LAS CRUCES HIGH,,350150000386,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+LAS CRUCES HIGH,,350150000386,336,AP Computer Science Principles,31,9,0,20,0,0,9,0,0
+MAYFIELD HIGH,,350150000390,323,Computer Science/Programming,50,0,0,40,0,0,20,6,0
+ONATE HIGH,,350150000720,323,Computer Science/Programming,147,25,0,104,0,0,40,16,13
+ONATE HIGH,,350150000720,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+ONATE HIGH,,350150000720,336,AP Computer Science Principles,10,0,0,6,0,0,0,0,0
+LORDSBURG HIGH,,350162000424,326,Computer Programming-Other Lang,0,0,0,0,0,0,0,0,0
+LOS ALAMOS HIGH,,350165000431,323,Computer Science/Programming,67,21,0,15,0,0,0,17,0
+LOS ALAMOS HIGH,,350165000431,327,AP Computer Science A,10,0,0,0,0,0,0,0,0
+TOPPER FRESHMAN ACADEMY,,350165001122,323,Computer Science/Programming,11,0,0,0,0,0,0,0,0
+LOVINGTON HIGH,,350174000448,326,Computer Programming-Other Lang,30,0,0,22,0,0,0,0,0
+MEDIA ARTS COLLABORATIVE CHARTER,,350010901030,323,Computer Science/Programming,19,8,0,0,0,0,6,0,0
+MEDIA ARTS COLLABORATIVE CHARTER,,350010901030,324,Programming,0,0,0,0,0,0,0,0,0
+MIDDLE COLLEGE HIGH SCHOOL CHARTER - GALLUP,,350018600860,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+MORIARTY HIGH,,350189000468,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+MORIARTY HIGH,,350189000468,324,Programming,0,0,0,0,0,0,0,0,0
+MOUNTAINAIR HIGH,,350195000473,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+NEW MEXICO CONNECTIONS ACADEMY,,350016001096,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+PENASCO HIGH,,350204000481,326,Computer Programming-Other Lang,0,0,0,0,0,0,0,0,0
+PENASCO MIDDLE,,350204000695,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+QUESTA HIGH,,350216000496,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+CLEVELAND HIGH SCHOOL,,350001001024,323,Computer Science/Programming,68,11,0,25,6,0,13,0,0
+CLEVELAND HIGH SCHOOL,,350001001024,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+RIO RANCHO CYBER ACADEMY,,350001000954,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+RIO RANCHO CYBER ACADEMY,,350001000954,336,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+RIO RANCHO HIGH,,350001000779,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+RIO RANCHO HIGH,,350001000779,344,PLTW Computer Science Essentials (ICS),60,8,0,32,0,0,13,0,0
+GODDARD HIGH,,350225000513,323,Computer Science/Programming,18,0,0,8,0,0,8,0,0
+RUIDOSO HIGH,,350231000529,323,Computer Science/Programming,10,0,0,6,0,0,0,0,0
+SAN JON HIGH,,350234000533,336,AP Computer Science Principles,10,6,0,6,0,0,6,0,0
+ACADEMY FOR TECHNOLOGY & CLASSICS,,350237000841,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+CAPITAL HIGH,,350237000724,323,Computer Science/Programming,68,16,0,0,0,0,0,6,13
+CAPITAL HIGH,,350237000724,324,Programming,50,15,0,0,0,0,0,14,21
+CAPITAL HIGH,,350237000724,336,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+MILAGRO MIDDLE,,350237001139,323,Computer Science/Programming,72,25,0,0,0,0,43,12,19
+SANTA FE HIGH,,350237000551,323,Computer Science/Programming,66,12,0,51,0,0,29,16,13
+SANTA FE HIGH,,350237000551,327,AP Computer Science A,15,0,0,0,0,0,0,0,0
+SANTA FE HIGH,,350237000551,336,AP Computer Science Principles,16,0,0,0,0,0,0,0,0
+SANTA ROSA HIGH,,350240000557,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+CLIFF HIGH,,350243000560,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+SILVER HIGH,,350243000564,344,PLTW Computer Science Essentials (ICS),11,0,0,8,0,0,0,0,0
+SILVER HIGH,,350243000564,345,AP PLTW Computer Science Principles (CSP),0,0,0,0,0,0,0,0,0
+SOCORRO HIGH,,350246000571,324,Programming,17,6,0,10,0,0,0,0,0
+SOCORRO HIGH,,350246000571,336,AP Computer Science Principles,20,0,0,12,0,0,0,0,0
+SPRINGER HIGH,,350249000575,312,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+SW AERONAUTICS MATHEMATICS AND SCIENCE ACADEMY,,350015101088,324,Programming,0,0,0,0,0,0,0,0,0
+TAOS CYBER MAGNET,,350252000951,324,Programming,0,0,0,0,0,0,0,0,0
+TAOS HIGH,,350252000583,323,Computer Science/Programming,17,0,0,8,0,0,0,0,0
+TAOS HIGH,,350252000583,326,Computer Programming-Other Lang,0,0,0,0,0,0,0,0,0
+TAOS HIGH,,350252000583,327,AP Computer Science A,0,0,0,0,0,0,0,0,0
+TAOS HIGH,,350252000583,336,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+THE ASK ACADEMY,,350012601070,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+THE ASK ACADEMY,,350012601070,325,Advanced Programming,10,0,0,0,0,0,0,0,0
+THE MASTERS PROGRAM,,350012501069,323,Computer Science/Programming,0,0,0,0,0,0,0,0,0
+THE MASTERS PROGRAM,,350012501069,326,Computer Programming-Other Lang,0,0,0,0,0,0,0,0,0
+TIERRA ENCANTADA CHARTER SCHOOL,,350017300950,325,Advanced Programming,0,0,0,0,0,0,0,0,0
+WALATOWA CHARTER HIGH,,350015800883,323,Computer Science/Programming,50,26,0,6,0,0,0,0,36
+SOUTH VALLEY ACADEMY,,350006000809,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TECHNOLOGY LEADERSHIP HIGH SCHOOL,,350006001112,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CARLSBAD EARLY COLLEGE HIGH,,350030001109,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EARLY COLLEGE HIGH SCHOOL,,350150001064,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TIERRA ADENTRO,,350012401068,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EXPLORE ACADEMY,,350016701103,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NM SCHOOL FOR THE ARTS,,350011901058,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LOVING HIGH,,350171000443,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MONTE DEL SOL CHARTER,,350017000816,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CORONADO HIGH,,350138000366,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+INDEPENDENCE HIGH SCHOOL,,350001000805,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ALTA VISTA EARLY COLLEGE HIGH SCHOOL,,350108001104,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
