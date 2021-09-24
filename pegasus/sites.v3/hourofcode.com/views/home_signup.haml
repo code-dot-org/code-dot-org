@@ -4,7 +4,7 @@
 %a#hocsignupform{name: 'signup'}
 #join
   %h1#join-us-header=hoc_s(:front_join_us_button)
-  -if ["post-hoc", false].include?(hoc_mode)
+  -if ["actual-hoc", "post-hoc", false].include?(hoc_mode)
     #signup-closed
       !=hoc_s(:signup_registration_not_required_markdown, markdown: :inline, locals: {hoc_activities_url: resolve_url('/learn'), howto_guide_url: resolve_url('/how-to')})
       =hoc_s(:signup_registration_closed)

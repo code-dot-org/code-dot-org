@@ -26172,3 +26172,29 @@ pt:
               name: Acelerômetro
             lesson-19:
               name: Projeto
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Ferramentas
+            lesson-4:
+              name: Exemplos
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lições
+            lessonGroup-3:
+              display_name: Projeto
+        csa4-exemplars:
+          lessons:
+            lesson-15:
+              name: Dia de Avaliação
+          lesson_groups:
+            lesson group:
+              display_name: Conteúdo
+            content:
+              display_name: Conteúdo
+            lesson_group:
+              display_name: Conteúdo
+            lessonGroup-2:
+              display_name: Conteúdo

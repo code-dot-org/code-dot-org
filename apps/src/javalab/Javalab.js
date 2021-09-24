@@ -131,7 +131,8 @@ Javalab.prototype.init = function(config) {
       this.miniApp = new Playground(
         this.onOutputMessage,
         this.onNewlineMessage,
-        onJavabuilderMessage
+        onJavabuilderMessage,
+        this.level.name
       );
       this.visualization = <PlaygroundVisualizationColumn />;
       break;
@@ -323,6 +324,7 @@ Javalab.prototype.onRun = function() {
 
 // Called by the Javalab app when it wants to stop student code execution
 Javalab.prototype.onStop = function() {
+  this.miniApp?.onStop?.();
   this.javabuilderConnection.closeConnection();
 };
 

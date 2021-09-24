@@ -41,6 +41,9 @@
           "overview": "Durch die Durchführung einer einfachen Simulation in Sprite Lab lernen die SchülerInnen, wie die Datenverarbeitung genutzt werden kann, um Daten zu sammeln, mit denen man Trends oder Muster erkennen kann. Nach mehrmaligem Ausführen der Simulation können die SchülerInnen eine Prognose darüber treffen, wie sich die Änderung einer Variablen in der Simulation auf das Ergebnis auswirken könnte, und dann diese Hypothese testen.",
           "student_overview": "Führen Sie Simulationen auf dem Computer durch und experimentieren Sie durch die Veränderung von Variablen."
         },
+        "coursef-2021/lesson-5": {
+          "purpose": "In der letzten Lektion haben die Schüler Daten einer einfachen Simulation gesammelt und interpretiert. In dieser Lektion befolgen die Schüler die Programmieranleitung für ihr eigenes Simulationsmodell. Das Wissen der Schüler über Virenausbrüche in der realen Welt werden in einem fiktiven Szenario angewandt. "
+        },
         "coursef-2021/Internet": {
           "overview": "Auch wenn viele Menschen das Internet täglich nutzen, wissen nicht sehr viele, wie es funktioniert. In dieser Lektion werden die SchülerInnen so tun, als würden sie durch das Internet gleiten, während sie gleichzeitig etwas über Verbindungen, URLs, IP-Adressen und das DNS lernen.",
           "student_overview": "Haben Sie sich jemals gefragt, wie sich Informationen im Internet verbreiten? Es ist keine Hexerei! In dieser Lektion lernen Sie die Grundlagen der Funktionsweise des Internets kennen."
@@ -116,7 +119,7 @@
         "coursea-2021/Sequencing with Scrat": {
           "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
           "preparation": "-   Schneide Richtungsblöcke aus **\\*Manipulatives** aus, um sie mit der Happy Maps Überbrückungsaktivität zu verwenden. - Stelle sicher, dass jeder SchülerInnen ein Reflection Journal hat.",
-          "purpose": "In dieser Lektion werden die SchülerInnen Programmier- und Debugging-Fähigkeiten auf einer Computerplattform entwickeln. Das blockbasierte Format dieser Puzzles hilft den Schülern, die Reihenfolge und Konzepte zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
+          "purpose": "In dieser Lektion werden die SchülerInnen Programmier- und Debugging-Fähigkeiten auf einer Computerplattform entwickeln. Das blockbasierte Format dieser Puzzles hilft den SchülerInnen dabei, die Reihenfolge und Konzepte zu lernen, ohne sich dabei um die Perfektionierung der Syntax kümmern zu müssen.",
           "student_overview": "Programmieren Sie Scrat, dass er die Eichel erreicht."
         },
         "coursea-2021/Programming in Ice Age": {
@@ -258,8 +261,8 @@
           "student_overview": "Spüren Sie die Kraft, wenn Sie in dieser Lektion Ihr eigenes Star Wars-Spiel entwickeln."
         },
         "coursed-2021/Dance Party": {
-          "overview": "In dieser Lektion programmieren die SchülerInnen ihre eigene interaktive Tanzparty. Diese Aktivität erfordert Ton, da das Werkzeug so gebaut wurde, dass es auf Musik reagiert.",
-          "student_overview": "Zeit zum Feiern! In dieser Lektion programmieren Sie Ihre eigene interaktive Tanzparty."
+          "overview": "In dieser Lektion bauen SchülerInnen ihr Können aus und programmieren ihre eigene interaktive Tanzparty.",
+          "student_overview": "Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty."
         },
         "coursed-2021/Loops in Ice Age": {
           "overview": "Als schnelles Update (oder Einführung) in die Verwendung von Schleifen werden die SchülerInnen in dieser Phase den Baustein `wiederholen` verwenden, um Scrat effizienter an die Eichel zu bringen.",
@@ -319,8 +322,8 @@
           "student_overview": "In dieser Lektion entwickeln die SchülerInnen ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie sie es sich wünschen. Die SchülerInnen verwenden das \"Costume\"-Werkzeug von Sprite Lab, um das Aussehen ihres Haustiers ihren Wünschen anzupassen. Anschließend verwenden sie Ereignisse, Behaviors und andere Konzepte, die sie gelernt haben, um ihrem Haustier sein eigenes Leben zu geben!"
         },
         "express-2021/lesson-1": {
-          "overview": "In dieser Lektion programmieren die SchülerInnen ihre eigene interaktive Tanzparty. Diese Aktivität erfordert Ton, da das Werkzeug so gebaut wurde, dass es auf Musik reagiert.",
-          "student_overview": "Zeit zum Feiern! In dieser Lektion programmieren Sie Ihre eigene interaktive Tanzparty."
+          "overview": "In dieser Lektion bauen SchülerInnen ihr Können aus und programmieren ihre eigene interaktive Tanzparty.",
+          "student_overview": "Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty."
         },
         "express-2021/Loops with Rey and BB-8": {
           "student_overview": "Hilf BB-8 durch Labyrinthe mit Schleifen! "

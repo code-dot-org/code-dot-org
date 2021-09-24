@@ -263,11 +263,21 @@ class Lesson < ApplicationRecord
   end
 
   def localized_name
-    if script.lessons.many?
+    # The behavior to show the script title instead of the lesson name in
+    # single-lesson scripts is deprecated.
+    #
+    # TODO(dave): once all scripts with exactly one lesson are migrated and no longer
+    # using legacy lesson plans, remove this condition and consolidate with
+    # localized_name_for_lesson_show.
+    if script.lessons.many? || (script.is_migrated && !script.use_legacy_lesson_plans)
       I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
+  end
+
+  def localized_name_for_lesson_show
+    I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
   end
 
   def localized_lesson_plan
@@ -485,7 +495,7 @@ class Lesson < ApplicationRecord
       position: relative_position,
       lockable: lockable,
       key: key,
-      displayName: localized_name,
+      displayName: localized_name_for_lesson_show,
       overview: render_property(:overview),
       announcements: announcements,
       purpose: render_property(:purpose),

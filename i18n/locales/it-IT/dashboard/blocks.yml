@@ -1147,6 +1147,13 @@ it:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       gamelab_makeNumSprites:
         text: crea {NUM} nuovi sprite {ANIMATION_NAME}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': a destra
+            '90': in basso
+            '180': a sinistra
+            '270': in alto
       gamelab_mirrorSprite:
         text: Orienta {SPRITE} verso {DIRECTION}
         options:
@@ -1183,6 +1190,7 @@ it:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": pulsante
             "'sound://category_collect/clicky_crunch.mp3'": sgranocchiamento
+            "'sound://category_digital/jump_7.mp3'": salta
       gamelab_pointInDirection:
         text: orienta {SPRITE} in direzione {DIRECTION}
         options:
@@ -1671,6 +1679,8 @@ it:
         text: coordinata x di {SPRITE}
       Mikelab_yLocationOf:
         text: coordinata y di {SPRITE}
+      PoemBot_makeNumSprites:
+        text: crea {NUM} nuovi sprite {ANIMATION_NAME}
       PoemBot_playSound:
         text: riproduci il suono {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1684,6 +1694,8 @@ it:
             '"ripples"': Increspature
           PALETTE:
             '"rainbow"': Arcobaleno
+      PoemBot_setBackgroundImageAs:
+        text: imposta lo sfondo {IMG}
       PoemBot_setForegroundEffect:
         text: imposta effetto di primo piano {EFFECT}
         options:

@@ -295,6 +295,9 @@
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "Введение"
         },
+        "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "progression_name": "Добро пожаловать в Город Монстров"
+        },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
             null
@@ -302,6 +305,9 @@
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "progression_name": "Формирование навыков"
+        },
+        "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
+          "progression_name": "Обучение по симуляторам"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
           "progression_name": " Симулятор эпидемии"

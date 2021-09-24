@@ -857,6 +857,13 @@ et:
         options:
           EFFECT:
             '"rain"': vihm
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': paremale
+            '90': alla
+            '180': vasakule
+            '270': üles
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -870,6 +877,7 @@ et:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": purustama
+            "'sound://category_digital/jump_7.mp3'": hüppa
       gamelab_randColor:
         text: juhuslik värv
       gamelab_randomColor:

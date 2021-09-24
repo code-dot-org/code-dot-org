@@ -1,32 +1,32 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: คู่มือเตรียมความพร้อมสำหรับพื้นฐานของวิทยาการคอมพิวเตอร์
 theme: responsive
 style_min: true
 ---
 
-# Teaching Courses A-F
+# หลักสูตรการเรียนการสอน A-F
 
-## Table of Contents
+## สารบัญ
 
-* [Overview](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
+* [ภาพรวม](#overview)
+* [การสอนหลักสูตรใหม่](#newcourses)
+* [เรื่องราวของวงจรเวลา (หลักสูตร A และ B)](#circletime)
 * [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
 * [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
-* [End of Course Projects (Courses E & F)](#endofcourse)
-* [Conclusion](#conclusion)
-* [FAQs](#faq)
+* [โปรเจ็กต์ปิดท้ายหลักสูตร (หลักสูตร E & F)](#endofcourse)
+* [บทสรุป](#conclusion)
+* [คำถามที่พบบ่อย](#faq)
 
 <a id="overview"></a>
 
-## Overview
-The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+## ภาพรวม
+ภูมิทัศน์ของการศึกษาในแขนงวิทยาการคอมพิวเตอร์เปลี่ยนแปลงอย่างเห็นได้ชัดตั้งแต่มีการพัฒนาหลักสูตรพื้นฐานของวิทยาการคอมพิวเตอร์ในยุคแรก ๆ ซึ่งแต่เดิมนั้น หลักสูตร 1-4 พัฒนาขึ้นเพื่อใช้เป็นจุดตั้งต้นเพื่อศึกษาพื้นฐานของเรื่องนี้ไม่ว่าผู้เรียนที่จะมีอายุเท่าใดก็ตาม  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
 
 Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
 
 * Course A: Kindergarten
 * Course B: 1st Grade
-* Course C: 2nd Grade
+* Course B: 1st Grade
 * Course D: 3rd Grade
 * Course E: 4th Grade
 * Course F: 5th Grade
@@ -37,7 +37,7 @@ The biggest update to CS Fundamentals is that content will move from four course
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
+## การสอนหลักสูตรใหม่
 As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
 
 The main updates to the courses are:
@@ -51,7 +51,7 @@ The rest of this guide will present each idea in more detail, offering tips and 
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
+## เรื่องราวของวงจรเวลา (หลักสูตร A และ B)
 Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
 
 Here is how the circle-time stories are intended to be used:
@@ -100,13 +100,13 @@ Some final notes for this area:
 ## Bridging Activities For Unplugged Lessons (All Ages)
 Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
+Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online Thailand  Appropriately, we call these "Bridging Activities."
 
 For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise.  In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
 
 <a id="endofcourse"></a>
 
-## End of Course Projects (Courses E & F)
+## โปรเจ็กต์ปิดท้ายหลักสูตร (หลักสูตร E & F)
 For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
 
 The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
@@ -125,14 +125,14 @@ No matter how thoroughly students embed themselves in their projects, they are s
 
 <a id="conclusion"></a>
 
-## Conclusion
+## บทสรุป
 As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
 
 We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
 
 <a id="faq"></a>
 
-## FAQs
+## คำถามที่พบบ่อย
 
 | Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

@@ -1148,6 +1148,13 @@ zh-TW:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
       gamelab_makeNumSprites:
         text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': 向右
+            '90': 向下
+            '180': " 向左"
+            '270': 向上
       gamelab_mirrorSprite:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 向
         options:
@@ -1183,6 +1190,7 @@ zh-TW:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": 緊縮
+            "'sound://category_digital/jump_7.mp3'": 定位到
       gamelab_pointInDirection:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 度
         options:
@@ -1734,6 +1742,8 @@ zh-TW:
         text: 隨機佈局怪物
       Outbreak_stopMoving:
         text: 怪物停止移動
+      PoemBot_makeNumSprites:
+        text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
       PoemBot_playSound:
         text: 播放音效 {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1747,6 +1757,8 @@ zh-TW:
             '"ripples"': 漣漪
           PALETTE:
             '"rainbow"': 彩虹
+      PoemBot_setBackgroundImageAs:
+        text: 背景設為 {IMG}
       PoemBot_setForegroundEffect:
         text: 前景效果設為 {EFFECT}
         options:

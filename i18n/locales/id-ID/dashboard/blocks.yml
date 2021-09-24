@@ -1113,6 +1113,13 @@ id:
             '"rain"': hujan
       gamelab_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': kanan
+            '90': turun
+            '180': kiri
+            '270': atas
       gamelab_mirrorSprite:
         text: "{SPRITE} wajah {DIRECTION}"
         options:
@@ -1140,6 +1147,7 @@ id:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": menjongkok
+            "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1596,6 +1604,8 @@ id:
             '"ripples"': Riak
           PALETTE:
             '"rainbow"': Pelangi
+      PoemBot_setBackgroundImageAs:
+        text: atur latar belakang ke {IMG}
       PoemBot_setForegroundEffect:
         text: tetapkan efek latar depan {EFFECT}
         options:
