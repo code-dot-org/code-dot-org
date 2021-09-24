@@ -2,7 +2,7 @@ import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
-import PlaygroundImage from '../../../src/javalab/PlaygroundImage';
+import PlaygroundImage from '@cdo/apps/javalab/PlaygroundImage';
 
 describe('PlaygroundImageTest', () => {
   it('sets styles correctly', () => {
@@ -22,7 +22,8 @@ describe('PlaygroundImageTest', () => {
       .find('img')
       .first()
       .props().style;
-    // spot check some styles: we double width, we set the marginLeft based on x * 2, we set the right clip path
+    // spot check some styles: we double width, we set the marginLeft
+    // based on x * 2, we set the right clip path
     expect(imageStyles.width).to.equal(500);
     expect(imageStyles.marginLeft).to.equal(700);
     expect(imageStyles.clipPath).to.equal('inset(0 400px 0 0)');
