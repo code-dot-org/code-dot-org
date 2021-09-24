@@ -19,12 +19,20 @@ describe('Playground', () => {
     starterAssetsApi,
     assetsApi,
     playground,
-    playgroundElement;
+    playgroundElement,
+    addPlaygroundItem,
+    removePlaygroundItem,
+    setPlaygroundItems,
+    changePlaygroundItem;
 
   beforeEach(() => {
     onOutputMessage = sinon.stub();
     onNewlineMessage = sinon.stub();
     onJavabuilderMessage = sinon.stub();
+    addPlaygroundItem = sinon.stub();
+    removePlaygroundItem = sinon.stub();
+    setPlaygroundItems = sinon.stub();
+    changePlaygroundItem = sinon.stub();
     starterAssetsApi = {
       getStarterAssets: (levelName, onSuccess, onFailure) => {
         onSuccess({
@@ -52,6 +60,10 @@ describe('Playground', () => {
       onNewlineMessage,
       onJavabuilderMessage,
       levelName,
+      addPlaygroundItem,
+      removePlaygroundItem,
+      changePlaygroundItem,
+      setPlaygroundItems,
       starterAssetsApi,
       assetsApi
     );
@@ -192,16 +204,8 @@ describe('Playground', () => {
       }
     };
 
-    expect(playgroundElement.childNodes.length).to.equal(0);
-
     playground.handleSignal(data);
-
-    expect(playgroundElement.childNodes.length).to.equal(1);
-    const element = playgroundElement.firstChild;
-    expect(element.src).to.contain(`${levelName}/${starterAsset1}`);
-    // width, height, x, y are doubled. Spot check width was calculated correctly
-    expect(element.style.width).to.equal('200px');
-    expect(element.id).to.equal(id);
+    expect(addPlaygroundItem).to.have.been.calledOnce;
   });
 
   it('adds clickable image when receiving a ADD_CLICKABLE_ITEM message for an uploaded asset', () => {
@@ -219,13 +223,8 @@ describe('Playground', () => {
       }
     };
 
-    expect(playgroundElement.childNodes.length).to.equal(0);
-
     playground.handleSignal(data);
-
-    expect(playgroundElement.childNodes.length).to.equal(1);
-    const element = playgroundElement.firstChild;
-    expect(element.src).to.contain(`assets/${assetFile}`);
+    expect(addPlaygroundItem).to.have.been.calledOnce;
   });
 
   it('can add multiple images via ADD_IMAGE_ITEM', () => {
@@ -241,17 +240,10 @@ describe('Playground', () => {
       detail: createSampleImageDetails(assetFile, secondId)
     };
 
-    expect(playgroundElement.childNodes.length).to.equal(0);
-
     playground.handleSignal(firstData);
     playground.handleSignal(secondData);
 
-    expect(playgroundElement.childNodes.length).to.equal(2);
-    const firstElement = playgroundElement.firstChild;
-    expect(firstElement.src).to.contain(`assets/${assetFile}`);
-    expect(firstElement.id).to.equal(firstId);
-    const secondElement = playgroundElement.childNodes[1];
-    expect(secondElement.id).to.equal(secondId);
+    expect(addPlaygroundItem).to.have.been.calledTwice;
   });
 
   it('does not add duplicate images from ADD_IMAGE_ITEM', () => {
@@ -262,41 +254,76 @@ describe('Playground', () => {
       detail: createSampleImageDetails(assetFile, id)
     };
 
-    expect(playgroundElement.childNodes.length).to.equal(0);
-
     playground.handleSignal(data);
     playground.handleSignal(data);
 
-    expect(playgroundElement.childNodes.length).to.equal(1);
-    const firstElement = playgroundElement.firstChild;
-    expect(firstElement.id).to.equal(id);
+    expect(addPlaygroundItem).to.have.been.calledOnce;
   });
 
-  // it('makes correct changes to image after CHANGE_ITEM', () => {
-  //   const assetFile = 'assetFile';
-  //   const id = 'first_id';
-  //   const addData = {
-  //     value: PlaygroundSignalType.ADD_IMAGE_ITEM,
-  //     detail: createSampleImageDetails(assetFile, id)
-  //   };
-  //   const changeData = {
-  //     value: PlaygroundSignalType.CHANGE_ITEM,
-  //     detail: {
-  //       id: id,
-  //       height: 200
-  //     }
-  //   };
+  it('call changeItem after CHANGE_ITEM', () => {
+    const assetFile = 'assetFile';
+    const id = 'first_id';
+    const addData = {
+      value: PlaygroundSignalType.ADD_IMAGE_ITEM,
+      detail: createSampleImageDetails(assetFile, id)
+    };
+    const changeData = {
+      value: PlaygroundSignalType.CHANGE_ITEM,
+      detail: {
+        id: id,
+        height: 200
+      }
+    };
 
-  //   expect(playgroundElement.childNodes.length).to.equal(0);
+    playground.handleSignal(addData);
+    playground.handleSignal(changeData);
 
-  //   playground.handleSignal(addData);
-  //   playground.handleSignal(changeData);
+    expect(addPlaygroundItem).to.have.been.calledOnce;
+    expect(changePlaygroundItem).to.have.been.calledOnce;
+  });
 
-  //   expect(playgroundElement.childNodes.length).to.equal(1);
-  //   const firstElement = playgroundElement.firstChild;
-  //   expect(firstElement.id).to.equal(id);
-  //   expect(firstElement.style.height).to.equal('400px');
-  // });
+  it('call removeItem after REMOVE_ITEM', () => {
+    const assetFile = 'assetFile';
+    const id = 'first_id';
+    const addData = {
+      value: PlaygroundSignalType.ADD_IMAGE_ITEM,
+      detail: createSampleImageDetails(assetFile, id)
+    };
+    const removeData = {
+      value: PlaygroundSignalType.REMOVE_ITEM,
+      detail: {
+        id: id
+      }
+    };
+
+    playground.handleSignal(addData);
+    playground.handleSignal(removeData);
+
+    expect(addPlaygroundItem).to.have.been.calledOnce;
+    expect(removePlaygroundItem).to.have.been.calledOnce;
+  });
+
+  it('does not try to remove an already removed item', () => {
+    const assetFile = 'assetFile';
+    const id = 'first_id';
+    const addData = {
+      value: PlaygroundSignalType.ADD_IMAGE_ITEM,
+      detail: createSampleImageDetails(assetFile, id)
+    };
+    const removeData = {
+      value: PlaygroundSignalType.REMOVE_ITEM,
+      detail: {
+        id: id
+      }
+    };
+
+    playground.handleSignal(addData);
+    playground.handleSignal(removeData);
+    playground.handleSignal(removeData);
+
+    expect(addPlaygroundItem).to.have.been.calledOnce;
+    expect(removePlaygroundItem).to.have.been.calledOnce;
+  });
 
   function verifyOnFileLoadError(filename) {
     sinon.assert.calledOnce(onOutputMessage);
