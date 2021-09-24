@@ -200,7 +200,6 @@ export default class Playground {
       // can only handle click events if game is not over and game is running
       return;
     }
-    console.log('in onClick for id ' + imageId);
   }
 
   getUrl(filename) {
