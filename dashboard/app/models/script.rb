@@ -1598,6 +1598,10 @@ class Script < ApplicationRecord
     summary
   end
 
+  def unit_without_lesson_plans?
+    lessons.select(&:has_lesson_plan).empty?
+  end
+
   def summarize_for_rollup(user = nil)
     summary = {
       title: title_for_display,
