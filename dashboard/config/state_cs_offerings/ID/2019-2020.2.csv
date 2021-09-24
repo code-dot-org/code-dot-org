@@ -1,0 +1,150 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+PRIEST RIVER LAMANNA HIGH,,160000100084,101520,Computer Programming & Software Development I,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SANDPOINT HIGH SCHOOL,,160000200087,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),63,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VICTORY CHARTER SCHOOL,,160000300858,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IDAHO VIRTUAL ACADEMY,,160000400859,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DEARY SCHOOL,,160001000579,100190,Computer Science I,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY CHARTER SCHOOL,,160001200867,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SALMON RIVER JR/SR HIGH SCHOOL,,160013800944,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VISION CHARTER SCHOOL,,160014100942,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+iSUCCEED VIRTUAL HIGH SCHOOL,,160014400967,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+iSUCCEED VIRTUAL HIGH SCHOOL,,160014400967,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ANOTHER CHOICE VIRTUAL CHARTER,,160015501008,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH IDAHO STEM CHARTER ACADEMY,,160016001020,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IDAHO TECHNICAL CAREER ACADEMY,,160017101069,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GEM PREP: ONLINE SCHOOL,,160017200846,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GEM PREP: ONLINE SCHOOL,,160017200846,101522,Programming & Software Development I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COEUR D'ALENE CHARTER ACADEMY SCHOOL,,160017300765,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COEUR D'ALENE CHARTER ACADEMY SCHOOL,,160017300765,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH STAR CHARTER SCHOOL,,160017400803,210092,Introduction to Robotics,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PROJECT IMPACT STEM ACADEMY,,160018201102,101522,Programming & Software Development I,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PROJECT IMPACT STEM ACADEMY,,160018201102,101523,Programming & Software Development II,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLACKFOOT HIGH SCHOOL,,160027000022,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLACKFOOT HIGH SCHOOL,,160027000022,101520,Computer Programming & Software Development I,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WOOD RIVER HIGH SCHOOL,,160030000038,100191,Computer Science II,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WOOD RIVER HIGH SCHOOL,,160030000038,101522,Programming & Software Development I,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WOOD RIVER MIDDLE SCHOOL,,160030000493,210092,Introduction to Robotics,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLISS SCHOOL,,160033000040,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOISE SENIOR HIGH SCHOOL,,160036000044,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),78,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BORAH SENIOR HIGH SCHOOL,,160036000045,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),86,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAPITAL SENIOR HIGH SCHOOL,,160036000047,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAPITAL SENIOR HIGH SCHOOL,,160036000047,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),34,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TREASURE VALLEY MATH/SCIENCE,,160036000823,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EAST JUNIOR HIGH SCHOOL,,160036001002,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BONNERS FERRY HIGH SCHOOL,,160042000089,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BONNERS FERRY HIGH SCHOOL,,160042000089,101520,Computer Programming & Software Development I,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BONNERS FERRY HIGH SCHOOL,,160042000089,100190,Computer Science I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BONNERS FERRY HIGH SCHOOL,,160042000089,100140,PLTW Computer Science A,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUTTE COUNTY MIDDLE/HIGH SCHOOL,,160049000008,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CALDWELL SENIOR HIGH SCHOOL,,160051000104,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VALLIVUE HIGH SCHOOL,,160060000118,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),72,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+THOMAS JEFFERSON CHARTER,,160060000839,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RIDGEVUE HIGH SCHOOL,,160060001078,101522,Programming & Software Development I,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RIDGEVUE HIGH SCHOOL,,160060001078,101523,Programming & Software Development II,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BURLEY SENIOR HIGH SCHOOL,,160066000124,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OAKLEY JR/SR HIGH SCHOOL,,160066000132,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CASSIA REGIONAL TECHNICAL CENTER,,160066000782,210092,Introduction to Robotics,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CASSIA REGIONAL TECHNICAL CENTER,,160066000782,101522,Programming & Software Development I,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CASSIA REGIONAL TECHNICAL CENTER,,160066000782,101523,Programming & Software Development II,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHALLIS JR/SR HIGH SCHOOL,,160072000140,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COEUR D'ALENE HIGH SCHOOL,,160078000149,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAKE CITY HIGH SCHOOL,,160078000291,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAKE CITY HIGH SCHOOL,,160078000291,100190,Computer Science I,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAKE CITY HIGH SCHOOL,,160078000291,101522,Programming & Software Development I,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRAIRIE JR/SR HIGH SCHOOL,,160081000161,101520,Computer Programming & Software Development I,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CULDESAC SCHOOL,,160087000164,210092,Introduction to Robotics,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BONNEVILLE HIGH SCHOOL,,160093000169,101520,Computer Programming & Software Development I,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BONNEVILLE ONLINE SCHOOL,,160093001050,101520,Computer Programming & Software Development I,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BONNEVILLE ONLINE SCHOOL,,160093001050,100520,Computer Science-Database Design & Programming,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TECHNICAL CAREERS HIGH SCHOOL,,160093001063,101522,Programming & Software Development I,51,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TECHNICAL CAREERS HIGH SCHOOL,,160093001063,101523,Programming & Software Development II,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TECHNICAL CAREERS HIGH SCHOOL,,160093001063,101524,Programming & Software Development III,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRESTON HIGH SCHOOL,,160096000182,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRESTON HIGH SCHOOL,,160096000182,210092,Introduction to Robotics,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHEAST IDAHO PROFESSIONAL TECHNICAL SCHOOL,,160096001045,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHEAST IDAHO PROFESSIONAL TECHNICAL SCHOOL,,160096001045,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHEAST IDAHO PROFESSIONAL TECHNICAL SCHOOL,,160096001045,100190,Computer Science I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHEAST IDAHO PROFESSIONAL TECHNICAL SCHOOL,,160096001045,100191,Computer Science II,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHEAST IDAHO PROFESSIONAL TECHNICAL SCHOOL,,160096001045,210092,Introduction to Robotics,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FILER HIGH SCHOOL,,160105000194,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH FREMONT JR/SR HIGH SCHOOL,,160111000203,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH FREMONT HIGH SCHOOL,,160111000205,210092,Introduction to Robotics,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GARDEN VALLEY SCHOOL,,160117000830,100190,Computer Science I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAGERMAN SCHOOL,,160138000840,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAGERMAN SCHOOL,,160138000840,101520,Computer Programming & Software Development I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IDAHO FALLS SENIOR HIGH SCHOOL,,160153000262,101522,Programming & Software Development I,114,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IDAHO FALLS SENIOR HIGH SCHOOL,,160153000262,101523,Programming & Software Development II,57,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SKYLINE SENIOR HIGH SCHOOL,,160153000268,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COMPASS ACADEMY,,160153001043,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COMPASS ACADEMY,,160153001043,101522,Programming & Software Development I,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RIGBY HIGH SCHOOL,,160157000277,101520,Computer Programming & Software Development I,72,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RIGBY HIGH SCHOOL,,160157000277,210092,Introduction to Robotics,65,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JEROME HIGH SCHOOL,,160159000284,101522,Programming & Software Development I,119,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JEROME HIGH SCHOOL,,160159000284,101523,Programming & Software Development II,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KELLOGG HIGH SCHOOL,,160165000293,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIMBERLY HIGH SCHOOL,,160171000635,101520,Computer Programming & Software Development I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIMBERLY HIGH SCHOOL,,160171000635,101522,Programming & Software Development I,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KUNA HIGH SCHOOL,,160177000307,101522,Programming & Software Development I,42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KUNA HIGH SCHOOL,,160177000307,101523,Programming & Software Development II,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KUNA HIGH SCHOOL,,160177000307,101524,Programming & Software Development III,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAKELAND SENIOR HIGH SCHOOL,,160180000311,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TIMBERLAKE SENIOR HIGH SCHOOL,,160180000843,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEWISTON HIGH SCHOOL,,160186000323,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MACKAY JR/SR HIGH SCHOOL,,160190000332,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MADISON JUNIOR HIGH SCHOOL,,160192000340,210092,Introduction to Robotics,73,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MADISON SENIOR HIGH SCHOOL,,160192000341,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MCCALL-DONNELLY HIGH SCHOOL,,160203000354,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTENNIAL HIGH SCHOOL,,160210000674,101522,Programming & Software Development I,75,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTENNIAL HIGH SCHOOL,,160210000674,101523,Programming & Software Development II,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTENNIAL HIGH SCHOOL,,160210000674,101524,Programming & Software Development III,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MERIDIAN TECHNICAL CHARTER HIGH SCHOOL,,160210000759,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MERIDIAN TECHNICAL CHARTER HIGH SCHOOL,,160210000759,101522,Programming & Software Development I,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MERIDIAN TECHNICAL CHARTER HIGH SCHOOL,,160210000759,101523,Programming & Software Development II,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MERIDIAN TECHNICAL CHARTER HIGH SCHOOL,,160210000759,101524,Programming & Software Development III,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MIDDLETON HIGH SCHOOL,,160213000377,101520,Computer Programming & Software Development I,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARTEC CHARTER SCHOOL,,160219000883,100190,Computer Science I,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARTEC CHARTER SCHOOL,,160219000883,101522,Programming & Software Development I,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARTEC CHARTER SCHOOL,,160219000883,101523,Programming & Software Development II,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOSCOW HIGH SCHOOL,,160222000394,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOSCOW HIGH SCHOOL,,160222000394,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOSCOW HIGH SCHOOL,,160222000394,100190,Computer Science I,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUNTAIN HOME SR HIGH SCHOOL,,160225000397,101520,Computer Programming & Software Development I,84,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUNTAIN HOME SR HIGH SCHOOL,,160225000397,100520,Computer Science-Database Design & Programming,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUNTAIN HOME SR HIGH SCHOOL,,160225000397,101523,Programming & Software Development II,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SKYVIEW HIGH SCHOOL,,160234000515,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IDAHO ARTS CHARTER SCHOOL,,160234000834,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COLUMBIA HIGH SCHOOL,,160234000870,101522,Programming & Software Development I,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COLUMBIA HIGH SCHOOL,,160234000870,101523,Programming & Software Development II,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COLUMBIA HIGH SCHOOL,,160234000870,101524,Programming & Software Development III,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEW PLYMOUTH HIGH SCHOOL,,160237000736,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEW PLYMOUTH HIGH SCHOOL,,160237000736,100520,Computer Science-Database Design & Programming,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEZPERCE SCHOOL,,160240000848,101520,Computer Programming & Software Development I,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MALAD SENIOR HIGH SCHOOL,,160249000433,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OROFINO HIGH SCHOOL,,160252000440,101520,Computer Programming & Software Development I,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TIMBERLINE HIGH SCHOOL,,160252000445,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TIMBERLINE HIGH SCHOOL,,160252000445,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),110,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PARMA HIGH SCHOOL,,160255000451,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HIGHLAND HIGH SCHOOL,,160264000472,101520,Computer Programming & Software Development I,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POCATELLO HIGH SCHOOL,,160264000478,210092,Introduction to Robotics,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTURY HIGH SCHOOL,,160264000646,101520,Computer Programming & Software Development I,84,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RICHFIELD SCHOOL,,160276000497,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROCKLAND PUBLIC SCHOOL,,160282000501,101522,Programming & Software Development I,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SHELLEY SENIOR HIGH SCHOOL,,160291000510,100190,Computer Science I,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SNAKE RIVER HIGH SCHOOL,,160297000521,101520,Computer Programming & Software Development I,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SNAKE RIVER HIGH SCHOOL,,160297000521,100520,Computer Science-Database Design & Programming,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SODA SPRINGS HIGH SCHOOL,,160300000526,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SODA SPRINGS HIGH SCHOOL,,160300000526,3208,AP/Dual Credit Computer Science – Science (11th-12th grade content),10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TWIN FALLS HIGH SCHOOL,,160324000555,101520,Computer Programming & Software Development I,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TWIN FALLS HIGH SCHOOL,,160324000555,100191,Computer Science II,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TWIN FALLS HIGH SCHOOL,,160324000555,101522,Programming & Software Development I,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TWIN FALLS HIGH SCHOOL,,160324000555,101523,Programming & Software Development II,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CANYON RIDGE HIGH SCHOOL,,160324000998,10157,AP Computer Science A,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEISER HIGH SCHOOL,,160333000568,2204,AP/Dual Credit Computer Science - Mathematics (11-12 grade content),39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST SIDE SENIOR HIGH SCHOOL,,160342000388,100190,Computer Science I,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST SIDE SENIOR HIGH SCHOOL,,160342000388,100191,Computer Science II,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARTE I RPTCS (Regional Professional Technical Charter School),,160219001117,101520,Computer Programming & Software Development I,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARTE I RPTCS (Regional Professional Technical Charter School),,160219001117,100191,Computer Science II,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARTE I RPTCS (Regional Professional Technical Charter School),,160219001117,210092,Introduction to Robotics,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARTE I RPTCS (Regional Professional Technical Charter School),,160219001117,101522,Programming & Software Development I,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARTE I RPTCS (Regional Professional Technical Charter School),,160219001117,101523,Programming & Software Development II,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KAMIAH SENIOR HIGH,,160162000457,101520,Computer Programming & Software Development I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
