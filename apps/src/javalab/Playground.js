@@ -217,10 +217,6 @@ export default class Playground {
     return document.getElementById('playground-background');
   }
 
-  getPlaygroundElement() {
-    return document.getElementById('playground');
-  }
-
   getAudioElement() {
     return document.getElementById('playground-audio');
   }

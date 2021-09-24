@@ -20,7 +20,6 @@ describe('Playground', () => {
     starterAssetsApi,
     assetsApi,
     playground,
-    playgroundElement,
     addPlaygroundItem,
     removePlaygroundItem,
     setPlaygroundItems,
@@ -54,7 +53,6 @@ describe('Playground', () => {
       }
     };
 
-    playgroundElement = document.createElement('div');
     audioElement = {pause: () => {}};
 
     playground = new Playground(
@@ -71,7 +69,6 @@ describe('Playground', () => {
     );
 
     playground.getBackgroundElement = () => backgroundElement;
-    playground.getPlaygroundElement = () => playgroundElement;
     playground.getAudioElement = () => audioElement;
   });
 
@@ -228,30 +225,6 @@ describe('Playground', () => {
     expect(backgroundElement.onerror).to.be.undefined;
   });
 
-  it('sets background image when receiving a SET_BACKGROUND_IMAGE message for an uploaded asset', () => {
-    const assetFile = 'assetFile';
-    const data = {
-      value: PlaygroundSignalType.SET_BACKGROUND_IMAGE,
-      detail: {
-        filename: assetFile
-      }
-    };
-
-    expect(backgroundElement.src).to.be.undefined;
-    expect(backgroundElement.style.opacity).to.equal(0);
-    expect(backgroundElement.onerror).to.be.undefined;
-
-    playground.handleSignal(data);
-
-    expect(backgroundElement.src).to.equal(`assets/${assetFile}`);
-    expect(backgroundElement.style.opacity).to.equal(1.0);
-    expect(backgroundElement.onerror).to.exist;
-
-    // Verify onerror callback
-    backgroundElement.onerror();
-    verifyOnFileLoadError(assetFile);
-  });
-
   it('adds clickable image when receiving a ADD_CLICKABLE_ITEM message for a starter asset', () => {
     const id = 'test_id';
     const data = {
@@ -317,7 +290,14 @@ describe('Playground', () => {
     };
 
     playground.handleSignal(data);
-    expect(addPlaygroundItem).to.have.been.calledOnce;
+
+    expect(audioElement.src).to.exist;
+    expect(audioElement.onerror).to.exist;
+
+    playground.onStop();
+
+    expect(audioElement.src).to.equal('');
+    expect(audioElement.onerror).to.be.undefined;
   });
 
   it('can add multiple images via ADD_IMAGE_ITEM', () => {
@@ -416,14 +396,6 @@ describe('Playground', () => {
 
     expect(addPlaygroundItem).to.have.been.calledOnce;
     expect(removePlaygroundItem).to.have.been.calledOnce;
-
-    expect(audioElement.src).to.exist;
-    expect(audioElement.onerror).to.exist;
-
-    playground.onStop();
-
-    expect(audioElement.src).to.equal('');
-    expect(audioElement.onerror).to.be.undefined;
   });
 
   function verifyOnFileLoadError(filename) {
