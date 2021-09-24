@@ -519,10 +519,6 @@ class User < ApplicationRecord
     self.age = 21
   end
 
-  def account_age_in_years
-    ((Time.now - created_at.to_time) / 1.year).floor
-  end
-
   def normalize_email
     return unless email.present?
     self.email = email.strip.downcase
@@ -1578,20 +1574,6 @@ class User < ApplicationRecord
     visible_scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
-  # Returns a list of all grades that the teacher currently has sections for
-  def grades_being_taught
-    sections.map(&:grade).uniq
-  end
-
-  # Returns a list of all courses that the teacher currently has sections for
-  def courses_being_taught
-    sections.map {|section| section.script.curriculum_umbrella}
-  end
-
-  def has_attended_pd?
-    pd_attendances.any?
-  end
-
   # Checks if there are any launched scripts assigned to the user.
   # @return [Array] of Scripts
   def visible_assigned_scripts
@@ -2089,6 +2071,10 @@ class User < ApplicationRecord
     TERMS_OF_SERVICE_VERSIONS.last
   end
 
+  def school
+    @school ||= Queries::SchoolInfo.last_complete(self)&.school
+  end
+
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
@@ -2098,7 +2084,7 @@ class User < ApplicationRecord
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
   # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
   def school_donor_name
-    school_id = Queries::SchoolInfo.last_complete(self)&.school&.id
+    school_id = school&.id
     donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 
     donor_name
@@ -2364,7 +2350,46 @@ class User < ApplicationRecord
     save! if persisted?
   end
 
+  # The data returned by this method is set to cookies for the marketing team to
+  # use in Optimizely for segmenting teacher user experience.
+  def marketing_segment_data
+    return unless user.teacher?
+
+    {
+      locale: locale,
+      account_age_in_years: account_age_in_years,
+      grades: grades_being_taught.any? ? grades_being_taught.to_json : nil,
+      courses: courses_being_taught.any? ? courses_being_taught.to_json : nil,
+      has_attended_pd: has_attended_pd?,
+      within_us: within_united_states?,
+      school_percent_frl: school_stats&.frl_eligible_total,
+      school_title_i: school_stats&.title_i_status
+    }.compact
+  end
+
   private
+
+  def account_age_in_years
+    ((Time.now - created_at.to_time) / 1.year).floor
+  end
+
+  # Returns a list of all grades that the teacher currently has sections for
+  def grades_being_taught
+    sections.map(&:grade).uniq
+  end
+
+  # Returns a list of all courses that the teacher currently has sections for
+  def courses_being_taught
+    sections.map {|section| section.script.curriculum_umbrella}
+  end
+
+  def has_attended_pd?
+    pd_attendances.any?
+  end
+
+  def school_stats
+    @school_stats ||= school&.most_recent_school_stats
+  end
 
   def hidden_lesson_ids(sections)
     return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
