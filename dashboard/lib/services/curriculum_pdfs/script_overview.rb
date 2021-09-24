@@ -28,6 +28,7 @@ module Services
         #
         # For example: https://lesson-plans.code.org/csp1-2021/20210909014219/Digital+Information+%28%2721-%2722%29.pdf
         def get_script_overview_url(script)
+          return nil unless Services::CurriculumPdfs.should_generate_overview_pdf?(script)
           pathname = get_script_overview_pathname(script, true)
           return nil unless pathname.present?
           File.join(get_base_url, pathname)

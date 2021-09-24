@@ -643,8 +643,15 @@ StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function() {
   }
 };
 
+// When pairing, source code is stored only with the driver. If the user completed
+// this level as a navigator, show an alert with a link to the (read-only) source
+// code stored in the driver's account.
 StudioApp.prototype.alertIfCompletedWhilePairing = function(config) {
-  if (!!config.level.pairingDriver) {
+  if (!config.level.isNavigator) {
+    return;
+  }
+
+  if (config.level.pairingDriver) {
     this.displayWorkspaceAlert(
       'warning',
       <div>
@@ -658,6 +665,14 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function(config) {
           </a>
         )}
       </div>
+    );
+  } else {
+    // This case -- where config.level.isNavigator is true but
+    // config.level.pairingDriver is null -- occurs when the driver's user
+    // account was deleted or the driver's progress was deleted.
+    this.displayWorkspaceAlert(
+      'warning',
+      <div>{msg.pairingNavigatorUnknownDriver()}</div>
     );
   }
 };

@@ -31,7 +31,6 @@ import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/Google
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
 import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -62,7 +61,6 @@ class UnitOverview extends React.Component {
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
-    publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
     showUnversionedRedirectWarning: PropTypes.bool,
 
     // redux provided
@@ -134,7 +132,6 @@ class UnitOverview extends React.Component {
       isMigrated,
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
-      publishedState,
       showUnversionedRedirectWarning
     } = this.props;
 
@@ -219,7 +216,6 @@ class UnitOverview extends React.Component {
               isMigrated={isMigrated}
               scriptOverviewPdfUrl={scriptOverviewPdfUrl}
               scriptResourcesPdfUrl={scriptResourcesPdfUrl}
-              publishedState={publishedState}
             />
           </div>
         )}
