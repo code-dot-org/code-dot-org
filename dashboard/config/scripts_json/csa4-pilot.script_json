@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-17 20:54:43 UTC",
+    "serialized_at": "2021-09-23 19:28:46 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -42,6 +42,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandbox"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-pilot"
       }
     }
@@ -311,6 +323,66 @@
       "seeding_key": {
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Java Lab",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "The Theater",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-19",
+      "name": "The Playground",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-pilot"
       }
     }
@@ -927,6 +999,54 @@
         "lesson_activity.key": "2f957b2d-2e7e-4cd7-845f-7a833d9c7f84",
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "620c1e22-7f2a-41a6-8c66-6a9b8f31e07d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "620c1e22-7f2a-41a6-8c66-6a9b8f31e07d",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "3c841f12-6a59-4269-baac-ee2fb3eb54c1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3c841f12-6a59-4269-baac-ee2fb3eb54c1",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "a857d799-ba86-4996-9ed5-e5be3f4d061a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a857d799-ba86-4996-9ed5-e5be3f4d061a",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "98737d71-d8ed-4676-8db3-b514a09a4279",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98737d71-d8ed-4676-8db3-b514a09a4279",
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-pilot"
       }
     }
@@ -2076,12 +2196,12 @@
       "key": "cb15560a-3541-4337-8e3f-0e3c2f7bf2d7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Equals and Aliasing video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for an `equals()` method for the `Cake` class on the second page of the Comparing Objects handout. Students then navigate to Level 4 on Code Studio to write and test their method.",
-        "progression_name": "The Same Cake",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Equals and Aliasing video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have write pseudocode for an `equals()` method for the `Dessert` class on the second page of the Comparing Objects handout. Direct students to Level 4 on Code Studio to write and test their method.",
+        "progression_name": "The Same Dessert",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Ask additional probing questions as needed, such as:\n* *What does it mean for two `Cake` objects to be equal?*\n* *How do we obtain values for the attributes of a `Cake` object?*"
+            "markdown": "Ask additional probing questions as needed, such as:\n* *What does it mean for two `Dessert` objects to be equal?*\n* *How do we obtain values for the attributes of a `Dessert` object?*"
           }
         ]
       },
@@ -2091,8 +2211,20 @@
       }
     },
     {
-      "key": "375b82b4-860b-4077-9aac-92ada62d9835",
+      "key": "74b23116-f963-40c2-a663-da385d3e6f46",
       "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we needed to check if two `Cake` objects are equal?*\n\n**Discussion Goal:** Students recall that a `Cake` object has additional attributes. In addition to checking if the flavors are the same, they might also want to check if the topping is the same.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate using `super()` to call a superclass method inside the subclass method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that `super()` can be used to call a superclass method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to write the `equals()` method for the `Cake` class.",
+        "progression_name": "The Same Cake"
+      },
+      "seeding_key": {
+        "activity_section.key": "74b23116-f963-40c2-a663-da385d3e6f46",
+        "lesson_activity.key": "2a93488f-3895-4574-8739-bc988d5866be"
+      }
+    },
+    {
+      "key": "375b82b4-860b-4077-9aac-92ada62d9835",
+      "position": 9,
       "properties": {
         "description": "Now that we’ve spent some time working with object equality, we will apply this concept to our Pop the Balloons game. Your task is to determine whether two `Balloon` sprites are equal.\n\nSince each `Balloon` object has a different value, we do not need to check whether the values are equal. However, we do want to know whether the popped status of both `Balloon` objects is equal. We'll use this information to determine whether or not there are valid moves left in the game.",
         "duration": "10",
@@ -2106,9 +2238,9 @@
     },
     {
       "key": "e98c8c00-9e1b-4269-9a29-e718f83280e3",
-      "position": 9,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio. Students add an `equals()` method to the `Balloon` class, then add a `movesLeft()` method to the game to check whether valid moves are left.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio. Students add an `equals()` method to the `Balloon` class, then add a `movesLeft()` method to the game to check whether valid moves are left.",
         "progression_name": "Checking Balloons for Valid Moves"
       },
       "seeding_key": {
@@ -3658,6 +3790,50 @@
         "activity_section.key": "2238e357-3992-40c4-9913-90f4ee854f38",
         "lesson_activity.key": "2f957b2d-2e7e-4cd7-845f-7a833d9c7f84"
       }
+    },
+    {
+      "key": "2201b689-447b-4b31-b18a-d3869a5236c7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Java Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "2201b689-447b-4b31-b18a-d3869a5236c7",
+        "lesson_activity.key": "620c1e22-7f2a-41a6-8c66-6a9b8f31e07d"
+      }
+    },
+    {
+      "key": "4267d8e6-f70f-45bb-9a67-a54a1d034e81",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "4267d8e6-f70f-45bb-9a67-a54a1d034e81",
+        "lesson_activity.key": "3c841f12-6a59-4269-baac-ee2fb3eb54c1"
+      }
+    },
+    {
+      "key": "69b164df-70ff-46e2-a8ee-fc1b030ad8fc",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Theater"
+      },
+      "seeding_key": {
+        "activity_section.key": "69b164df-70ff-46e2-a8ee-fc1b030ad8fc",
+        "lesson_activity.key": "a857d799-ba86-4996-9ed5-e5be3f4d061a"
+      }
+    },
+    {
+      "key": "208773d5-723b-4227-be8a-31b213ecb549",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Playground"
+      },
+      "seeding_key": {
+        "activity_section.key": "208773d5-723b-4227-be8a-31b213ecb549",
+        "lesson_activity.key": "98737d71-d8ed-4676-8db3-b514a09a4279"
+      }
     }
   ],
   "script_levels": [
@@ -4565,14 +4741,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U4L6-L4"
+          "CSA U4L6-L4 v2"
         ],
-        "progression": "The Same Cake"
+        "progression": "The Same Dessert"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L6-L4"
+          "CSA U4L6-L4 v2"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -4580,7 +4756,7 @@
         "activity_section.key": "cb15560a-3541-4337-8e3f-0e3c2f7bf2d7"
       },
       "level_keys": [
-        "CSA U4L6-L4"
+        "CSA U4L6-L4 v2"
       ]
     },
     {
@@ -4590,39 +4766,39 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U4L6-L5"
+          "CSA U4L6-L5 v2"
         ],
-        "progression": "Checking Balloons for Valid Moves"
+        "progression": "The Same Cake"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L6-L5"
+          "CSA U4L6-L5 v2"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot",
-        "activity_section.key": "e98c8c00-9e1b-4269-9a29-e718f83280e3"
+        "activity_section.key": "74b23116-f963-40c2-a663-da385d3e6f46"
       },
       "level_keys": [
-        "CSA U4L6-L5"
+        "CSA U4L6-L5 v2"
       ]
     },
     {
       "chapter": 39,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U4L6-L6"
+          "CSA U4L6-L6 v2"
         ],
         "progression": "Checking Balloons for Valid Moves"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L6-L6"
+          "CSA U4L6-L6 v2"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -4630,24 +4806,49 @@
         "activity_section.key": "e98c8c00-9e1b-4269-9a29-e718f83280e3"
       },
       "level_keys": [
-        "CSA U4L6-L6"
+        "CSA U4L6-L6 v2"
       ]
     },
     {
       "chapter": 40,
       "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U4L6-L7 v2"
+        ],
+        "progression": "Checking Balloons for Valid Moves"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L6-L7 v2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "e98c8c00-9e1b-4269-9a29-e718f83280e3"
+      },
+      "level_keys": [
+        "CSA U4L6-L7 v2"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSA U4L6-L7"
+          "CSA U4L6-L8"
         ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L6-L7"
+          "CSA U4L6-L8"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -4655,11 +4856,11 @@
         "activity_section.key": "5f11abe3-73f7-49a0-b97a-ee5fd87f5bc4"
       },
       "level_keys": [
-        "CSA U4L6-L7"
+        "CSA U4L6-L8"
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4684,7 +4885,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4709,7 +4910,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4734,7 +4935,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4759,7 +4960,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4784,7 +4985,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -4809,7 +5010,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4834,7 +5035,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4859,7 +5060,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4884,7 +5085,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4909,7 +5110,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4934,7 +5135,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4959,7 +5160,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4984,7 +5185,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -5009,7 +5210,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5034,7 +5235,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5059,7 +5260,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5084,7 +5285,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5109,7 +5310,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5134,7 +5335,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5159,7 +5360,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5184,11 +5385,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 4 Pilot Assessment 2021"
+        ],
         "progression": "Unit 4 Assessment"
       },
       "bonus": false,
@@ -5203,6 +5407,106 @@
       },
       "level_keys": [
         "CSA Unit 4 Pilot Assessment 2021"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "progression": "Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "2201b689-447b-4b31-b18a-d3869a5236c7"
+      },
+      "level_keys": [
+        "CSA Java Lab Sandbox"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "progression": "The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "4267d8e6-f70f-45bb-9a67-a54a1d034e81"
+      },
+      "level_keys": [
+        "CSA Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "progression": "The Theater"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "69b164df-70ff-46e2-a8ee-fc1b030ad8fc"
+      },
+      "level_keys": [
+        "CSA Theater Sandbox"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Playground Sandbox"
+        ],
+        "progression": "The Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Playground Sandbox"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "208773d5-723b-4227-be8a-31b213ecb549"
+      },
+      "level_keys": [
+        "CSA Playground Sandbox"
       ]
     }
   ],
@@ -5641,9 +5945,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L6-L4",
+        "level.key": "CSA U4L6-L4 v2",
         "script_level.level_keys": [
-          "CSA U4L6-L4"
+          "CSA U4L6-L4 v2"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5653,9 +5957,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L6-L5",
+        "level.key": "CSA U4L6-L5 v2",
         "script_level.level_keys": [
-          "CSA U4L6-L5"
+          "CSA U4L6-L5 v2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "74b23116-f963-40c2-a663-da385d3e6f46"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L6-L6 v2",
+        "script_level.level_keys": [
+          "CSA U4L6-L6 v2"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5665,9 +5981,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L6-L6",
+        "level.key": "CSA U4L6-L7 v2",
         "script_level.level_keys": [
-          "CSA U4L6-L6"
+          "CSA U4L6-L7 v2"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5677,9 +5993,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L6-L7",
+        "level.key": "CSA U4L6-L8",
         "script_level.level_keys": [
-          "CSA U4L6-L7"
+          "CSA U4L6-L8"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5949,6 +6265,54 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa4-pilot",
         "activity_section.key": "8295a615-6cbb-4672-bc4c-faadcf90bed4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Java Lab Sandbox",
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "2201b689-447b-4b31-b18a-d3869a5236c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "4267d8e6-f70f-45bb-9a67-a54a1d034e81"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "69b164df-70ff-46e2-a8ee-fc1b030ad8fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Playground Sandbox",
+        "script_level.level_keys": [
+          "CSA Playground Sandbox"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "208773d5-723b-4227-be8a-31b213ecb549"
       }
     }
   ],
