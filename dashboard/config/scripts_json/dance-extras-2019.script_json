@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "dance-extras-2019",
-    "serialized_at": "2021-09-18 22:15:24 UTC",
+    "serialized_at": "2021-09-24 21:57:46 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "dance-extras-2019"
@@ -41,10 +41,10 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.",
-        "preparation": "### One Week Before Your Hour of Code\r\n\r\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \r\n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\r\n- Review and complete the online tutorial yourself: [Dance Party](https://studio.code.org/s/dance-2019) \r\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\r\n- Review the supplementary lesson plan, [\"The Big Dance Party\"](https://curriculum.code.org/hoc/unplugged/4/) to determine whether or not you'd like to lead this lesson in advance of your Hour of Code.\r\n\r\n### One Day Before Your Hour of Code\r\n\r\n- Each student who completes the activity should receive a certificate. [Print one](http://code.org/certificates) for everyone in advance to make this easier at the end of your Hour of Code.\r\n- (optional) Encourage students to bring in headphones to use during the activity.\r\n",
+        "overview": "In this lesson, learners of all ages continue their experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.",
+        "preparation": "* Review and complete the online tutorial yourself: [Dancy Party](https://studio.code.org/s/dance-2019)\n\n* Be sure to test it first before asking your students to complete it. \n* Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n",
         "purpose": "This lesson introduces the core CS concepts of coding and event programming (using blocks).",
-        "student_overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music."
+        "student_overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. "
       },
       "seeding_key": {
         "lesson.key": "Dance Party - Go Further",
@@ -58,8 +58,8 @@
       "key": "ad2299c9-28bf-4e9f-b320-cb44ff94bdba",
       "position": 1,
       "properties": {
-        "duration": 0,
-        "name": "Getting Started (5 minutes)"
+        "duration": 5,
+        "name": "Getting Started "
       },
       "seeding_key": {
         "lesson_activity.key": "ad2299c9-28bf-4e9f-b320-cb44ff94bdba",
@@ -72,7 +72,6 @@
       "key": "544fd00b-84f3-47e4-9e02-cb27a6cfbbca",
       "position": 2,
       "properties": {
-        "duration": 0,
         "name": "Activity (30-45 minutes)"
       },
       "seeding_key": {
@@ -86,7 +85,6 @@
       "key": "2f9c446a-0802-48b0-91ff-a7df9fe4afe2",
       "position": 3,
       "properties": {
-        "duration": 0,
         "name": "Wrap Up (5 minutes)"
       },
       "seeding_key": {
@@ -100,7 +98,6 @@
       "key": "1423bf33-10cd-4e03-a95f-d00151589ba5",
       "position": 4,
       "properties": {
-        "duration": 0,
         "name": "Go Viral"
       },
       "seeding_key": {
@@ -114,7 +111,6 @@
       "key": "1a4d5cec-bd30-41f9-8012-4f16018769f9",
       "position": 5,
       "properties": {
-        "duration": 0,
         "name": "Assessment (2 minutes)"
       },
       "seeding_key": {
@@ -143,7 +139,7 @@
       "key": "1f9abc1c-6217-4fb4-a348-e0293042dc7a",
       "position": 1,
       "properties": {
-        "description": "Welcome students to class and very briefly introduce the day’s activity.",
+        "description": "Welcome students to class and very briefly introduce the day’s activity. Encourage students to take their time with the activity and experiment.",
         "name": "Setting the Stage\r"
       },
       "seeding_key": {
@@ -155,13 +151,6 @@
       "key": "8dfec789-571c-452d-b3ff-5441c8529a5b",
       "position": 2,
       "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "If you have time and would like to prepare your students with an unplugged activity, consider delivering [\"Dance Party: Unplugged\"](https://curriculum.code.org/hoc/unplugged/4/) before your Hour of Code event. This brief lesson introduces students to the idea of events triggering different dance moves.\r\n\r\n"
-          }
-        ]
       },
       "seeding_key": {
         "activity_section.key": "8dfec789-571c-452d-b3ff-5441c8529a5b",
@@ -172,7 +161,7 @@
       "key": "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69",
       "position": 3,
       "properties": {
-        "description": "Today we're going to do something really creative. What's your favorite way to be creative?",
+        "description": "What's your favorite way to be creative?",
         "remarks": true
       },
       "seeding_key": {
@@ -192,27 +181,10 @@
       }
     },
     {
-      "key": "5a08d4e6-6d43-4fdc-9bfe-e948a66efc68",
+      "key": "2b020959-fedc-4265-832e-d663520a5427",
       "position": 5,
       "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "One way to introduce the Hour of Code if you are not very familiar with coding yourself is to show one of [our inspirational videos](https://hourofcode.com/promote/resources#videos). Choose one you think your students will find inspiring, and share it now. For learners in the middle grades, we suggest [The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw).\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5a08d4e6-6d43-4fdc-9bfe-e948a66efc68",
-        "lesson_activity.key": "ad2299c9-28bf-4e9f-b320-cb44ff94bdba"
-      }
-    },
-    {
-      "key": "2b020959-fedc-4265-832e-d663520a5427",
-      "position": 6,
-      "properties": {
-        "description": "Explain that today we're going to be creative with \"code\", which just means means a set of instructions that a computer can understand. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\r\n\r\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this [r dance-party-playlist] to help kick things off. Capture your class's moves on video.\r\n\r\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        "description": "Explain that today we're going to be creative with \"code\", which just means using a set of instructions that a computer can understand. Just like choosing which colors of paint to use, or what words you write with can express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:**  Announce to the class that today we're going to see how we can combine coding with dancing in even more  creative ways. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw ) to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
       },
       "seeding_key": {
         "activity_section.key": "2b020959-fedc-4265-832e-d663520a5427",
@@ -223,7 +195,7 @@
       "key": "8c86b05c-3d26-4b91-b5a1-dca6c7fd5800",
       "position": 1,
       "properties": {
-        "description": "This tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this [r spotify-playlist-pg-13]. We are using radio-safe versions of all songs and for students under 13, we limit the music to this filtered list [r dance-party-playlist]. If you would like to use the filtered list with older students, you can share [this link](https://studio.code.org/s/dance?songfilter=on) with your classroom.",
+        "description": "This tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw ). We are using radio-safe versions of all songs for students under 13, we limit the music to this filtered list.\n",
         "name": "Music Filtering\r"
       },
       "seeding_key": {
@@ -235,7 +207,7 @@
       "key": "faf90391-c01a-42d3-b79c-0becac0a50d2",
       "position": 2,
       "properties": {
-        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on\r\n\r\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students if they seem like they need help. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \r\n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before completing a level for a student ensure they've actually looked closely at the target image and read all the text there.\r\n* ![](https://curriculum.code.org/media/uploads/hint.png){: height='35px'}**Stuck? Look for hints:** Each level includes a hint with further details about how to pass the level. If students are trying to pass puzzles as quickly as possible, they might find they just need to wait a certain amount of time for all of the code to play out before moving on. Many levels contain a second hint with suggestions of ways to get even more creative by extending the task.\r\n* **Move On and Come Back:** Sometimes students will benefit more from coming back to a tricky level. All levels are independent of one another, though they do rely to some degree on previously introduced concepts.\r\n* **Take your time and experiment.** Even though the first couple levels tell students exactly what they need to do to pass, they should also feel free to try out their own ideas.",
+        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on:\n\n\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students if they seem like they need help. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before completing a level for a student ensure they've actually looked closely at the target image and read all the text there.\n* ![](https://curriculum.code.org/media/uploads/hint.png)**Stuck? Look for hints:** Each level includes a hint with further details about how to pass the level. If students are trying to pass puzzles as quickly as possible, they might find they just need to wait a certain amount of time for all of the code to play out before moving on. Many levels contain a second hint with suggestions of ways to get even more creative by extending the task.\n* **Move On and Come Back:** Sometimes students will benefit more from coming back to a tricky level. All levels are independent of one another, though they do rely to some degree on previously introduced concepts.\n* **Take your time and experiment.** Even though the first couple levels tell students exactly what they need to do to pass, they should also feel free to try out their own ideas.",
         "name": "General Support\r"
       },
       "seeding_key": {
@@ -247,7 +219,7 @@
       "key": "ba99b408-e5d2-417e-a4a5-791575ae3e8b",
       "position": 3,
       "properties": {
-        "description": "<details>\r\n<summary>2019 Tutorial - [View on Code Studio](https://studio.code.org/s/dance-2019)</summary>\r\n\r\n#### Level 1\r\n\r\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\r\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.\r\n\r\n#### Level 2\r\n\r\n* Levels 2-3 are about making the dance interactive. \r\n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \r\n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\r\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\r\n\r\n#### Level 3\r\n\r\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\r\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\r\n\r\n#### Level 4\r\n\r\n* Levels 4-5 are about synchronizing the dance to the music. \r\n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\r\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\r\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.\r\n\r\n#### Level 5\r\n\r\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath.\r\n\r\n#### Level 6\r\n\r\n* Level 6 is about creating groups of dancers quickly.\r\n* Use the new block provided into the toolbox to create a set of smaller dancers.\r\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\r\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it a smaller scale. In the next level you’ll be able to fine tune this effect.\r\n\r\n#### Level 7\r\n\r\n* Levels 7-9 are about adjusting the properties (e.g. size, color) of the dancers.\r\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \r\n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100.\r\n\r\n#### Level 8\r\n\r\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect.",
+        "description": "\n\n#### Level 1\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.\n\n#### Level 2\n\n* Levels 2-3 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n\n#### Level 3\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n\n#### Level 4\n\n* Levels 4-5 are about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.\n\n#### Level 5\n\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath.\n\n#### Level 6\n\n* Level 6 is about creating groups of dancers quickly.\n* Use the new block provided into the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it a smaller scale. In the next level you’ll be able to fine tune this effect.\n\n#### Level 7\n\n* Levels 7-9 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100.\n\n#### Level 8\n\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect.",
         "name": "Level by Level\r"
       },
       "seeding_key": {
@@ -261,7 +233,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is **not checked for correctness** in order to encourage experimentation instead of solving a specific task.\r\n"
           }
@@ -289,7 +260,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is **not checked for correctness** in order to encourage experimentation instead of solving a specific task.\r\n"
           }
@@ -477,6 +447,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_extras_intro_2019"
+        ],
         "progression": "Keep On Dancing!"
       },
       "bonus": false,
@@ -499,6 +472,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_extras_alternate_2019"
+        ],
         "progression": "Back and Forth"
       },
       "bonus": false,
@@ -521,6 +497,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_extras_mixed_2019"
+        ],
         "progression": "More Buttons"
       },
       "bonus": false,
@@ -543,6 +522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_extras_layout_2019"
+        ],
         "progression": "Get In Formation"
       },
       "bonus": false,
@@ -565,6 +547,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_extras_visible_2019"
+        ],
         "progression": "Where'd They Go?"
       },
       "bonus": false,
@@ -587,6 +572,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_extras_battle_2019"
+        ],
         "progression": "Dance Crews"
       },
       "bonus": false,
@@ -609,6 +597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_extras_every_beat_2019"
+        ],
         "progression": "Quarter Notes"
       },
       "bonus": false,
@@ -631,6 +622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_extras_on_beat_2019"
+        ],
         "progression": "Bass, Mid, and Treble"
       },
       "bonus": false,
@@ -653,6 +647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_extras_speed_2019"
+        ],
         "progression": "Speed it Up, Slow it Down"
       },
       "bonus": false,
@@ -864,33 +861,33 @@
   ],
   "objectives": [
     {
-      "key": "05e29dd7-750e-49d3-9efa-797d9ace9e47",
+      "key": "83f493e8-9941-4154-b2f4-f34836741746",
       "properties": {
-        "description": "Develop programs that respond to timed events"
+        "description": "Define \"coding\" and \"computer science\"."
       },
       "seeding_key": {
         "lesson.key": "Dance Party - Go Further",
-        "objective.key": "05e29dd7-750e-49d3-9efa-797d9ace9e47"
+        "objective.key": "83f493e8-9941-4154-b2f4-f34836741746"
       }
     },
     {
-      "key": "6d00772f-e7bd-4d10-a8c1-2f8390cb64a5",
+      "key": "58cd5fc3-375f-4840-a5ac-fdb527a38ebd",
       "properties": {
-        "description": "Develop programs that respond to user input"
+        "description": "Identify key computer science vocabulary."
       },
       "seeding_key": {
         "lesson.key": "Dance Party - Go Further",
-        "objective.key": "6d00772f-e7bd-4d10-a8c1-2f8390cb64a5"
+        "objective.key": "58cd5fc3-375f-4840-a5ac-fdb527a38ebd"
       }
     },
     {
-      "key": "fc1c0a7b-9d93-4143-9d99-341b5b2aa477",
+      "key": "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3",
       "properties": {
-        "description": "Create dance animations with code"
+        "description": "Identify places to go to continue learning computer science and coding."
       },
       "seeding_key": {
         "lesson.key": "Dance Party - Go Further",
-        "objective.key": "fc1c0a7b-9d93-4143-9d99-341b5b2aa477"
+        "objective.key": "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3"
       }
     }
   ],
