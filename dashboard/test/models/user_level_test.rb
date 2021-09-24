@@ -54,34 +54,40 @@ class UserLevelTest < ActiveSupport::TestCase
     assert_equal UserLevel.by_lesson(lesson), [first_user_level, second_user_level]
   end
 
-  test "driver?" do
+  test "driver? for paired and unpaired progress" do
     assert_equal false, @unpaired_user_level.driver?
     assert_equal true, @driver_user_level.driver?
     assert_equal false, @navigator_user_level.driver?
   end
 
-  test "navigator?" do
+  test "navigator? for paired and unpaired progress" do
     assert_equal false, @unpaired_user_level.navigator?
     assert_equal false, @driver_user_level.navigator?
     assert_equal true, @navigator_user_level.navigator?
   end
 
-  test "paired?" do
+  test "paired? for paired and unpaired progress" do
     assert_equal false, @unpaired_user_level.paired?
     assert_equal true, @driver_user_level.paired?
     assert_equal true, @navigator_user_level.paired?
   end
 
-  test "driver" do
+  test "driver for paired and unpaired progress" do
     assert_equal nil, @unpaired_user_level.driver
     assert_equal @driver, @driver_user_level.driver
     assert_equal @driver, @navigator_user_level.driver
   end
 
-  test "navigators_names" do
+  test "navigators_names for paired and unpaired progress" do
     assert_equal nil, @unpaired_user_level.navigators_names
     assert_equal [@navigator.name], @driver_user_level.navigators_names
     assert_equal [], @navigator_user_level.navigators_names
+  end
+
+  test "navigator_count for paired and unpaired progress" do
+    assert_equal nil, @unpaired_user_level.navigator_count
+    assert_equal 1, @driver_user_level.navigator_count
+    assert_equal 1, @navigator_user_level.navigator_count
   end
 
   test "perfect? finished? and passing? should be able to handle ScriptLevels that have nil as best_result" do

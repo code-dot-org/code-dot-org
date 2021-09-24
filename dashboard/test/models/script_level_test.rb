@@ -132,6 +132,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal LEVEL_STATUS.not_tried, summary[:status]
     assert_equal false, summary[:passed]
     assert_equal student.id, summary[:userId]
+    assert_equal false, summary[:paired]
   end
 
   test 'teacher panel summarize with progress on this level in another script' do
