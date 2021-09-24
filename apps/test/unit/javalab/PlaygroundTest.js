@@ -3,6 +3,13 @@ import {expect} from '../../util/reconfiguredChai';
 import Playground from '@cdo/apps/javalab/Playground';
 import {PlaygroundSignalType} from '@cdo/apps/javalab/constants';
 import javalabMsg from '@cdo/javalab/locale';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
+import playgroundRedux from '@cdo/apps/javalab/playgroundRedux';
 
 describe('Playground', () => {
   const levelName = 'level';
@@ -19,20 +26,14 @@ describe('Playground', () => {
     onJavabuilderMessage,
     starterAssetsApi,
     assetsApi,
-    playground,
-    addPlaygroundItem,
-    removePlaygroundItem,
-    setPlaygroundItems,
-    changePlaygroundItem;
+    playground;
 
   beforeEach(() => {
+    stubRedux();
+    registerReducers({playground: playgroundRedux});
     onOutputMessage = sinon.stub();
     onNewlineMessage = sinon.stub();
     onJavabuilderMessage = sinon.stub();
-    addPlaygroundItem = sinon.stub();
-    removePlaygroundItem = sinon.stub();
-    setPlaygroundItems = sinon.stub();
-    changePlaygroundItem = sinon.stub();
     starterAssetsApi = {
       getStarterAssets: (levelName, onSuccess, onFailure) => {
         onSuccess({
@@ -60,16 +61,17 @@ describe('Playground', () => {
       onNewlineMessage,
       onJavabuilderMessage,
       levelName,
-      addPlaygroundItem,
-      removePlaygroundItem,
-      changePlaygroundItem,
-      setPlaygroundItems,
       starterAssetsApi,
       assetsApi
     );
 
     playground.getBackgroundElement = () => backgroundElement;
     playground.getAudioElement = () => audioElement;
+  });
+
+  afterEach(() => {
+    sinon.restore();
+    restoreRedux();
   });
 
   it('sets background image when receiving a SET_BACKGROUND_IMAGE message for a starter asset', () => {
@@ -240,7 +242,8 @@ describe('Playground', () => {
     };
 
     playground.handleSignal(data);
-    expect(addPlaygroundItem).to.have.been.calledOnce;
+    const itemData = getStore().getState().playground.itemData;
+    expect(itemData[id].width).to.equal(100);
   });
 
   it('adds clickable image when receiving a ADD_CLICKABLE_ITEM message for an uploaded asset', () => {
@@ -259,7 +262,8 @@ describe('Playground', () => {
     };
 
     playground.handleSignal(data);
-    expect(addPlaygroundItem).to.have.been.calledOnce;
+    const itemData = getStore().getState().playground.itemData;
+    expect(itemData[id].height).to.equal(50);
   });
 
   it('resets sound element on reset()', () => {
@@ -316,7 +320,8 @@ describe('Playground', () => {
     playground.handleSignal(firstData);
     playground.handleSignal(secondData);
 
-    expect(addPlaygroundItem).to.have.been.calledTwice;
+    const itemData = getStore().getState().playground.itemData;
+    expect(Object.keys(itemData).length).to.equal(2);
   });
 
   it('does not add duplicate images from ADD_IMAGE_ITEM', () => {
@@ -330,7 +335,8 @@ describe('Playground', () => {
     playground.handleSignal(data);
     playground.handleSignal(data);
 
-    expect(addPlaygroundItem).to.have.been.calledOnce;
+    const itemData = getStore().getState().playground.itemData;
+    expect(Object.keys(itemData).length).to.equal(1);
   });
 
   it('call changeItem after CHANGE_ITEM', () => {
@@ -351,11 +357,11 @@ describe('Playground', () => {
     playground.handleSignal(addData);
     playground.handleSignal(changeData);
 
-    expect(addPlaygroundItem).to.have.been.calledOnce;
-    expect(changePlaygroundItem).to.have.been.calledOnce;
+    const itemData = getStore().getState().playground.itemData;
+    expect(itemData[id].height).to.equal(200);
   });
 
-  it('call removeItem after REMOVE_ITEM', () => {
+  it('can remove an item with REMOVE_ITEM', () => {
     const assetFile = 'assetFile';
     const id = 'first_id';
     const addData = {
@@ -372,30 +378,8 @@ describe('Playground', () => {
     playground.handleSignal(addData);
     playground.handleSignal(removeData);
 
-    expect(addPlaygroundItem).to.have.been.calledOnce;
-    expect(removePlaygroundItem).to.have.been.calledOnce;
-  });
-
-  it('does not try to remove an already removed item', () => {
-    const assetFile = 'assetFile';
-    const id = 'first_id';
-    const addData = {
-      value: PlaygroundSignalType.ADD_IMAGE_ITEM,
-      detail: createSampleImageDetails(assetFile, id)
-    };
-    const removeData = {
-      value: PlaygroundSignalType.REMOVE_ITEM,
-      detail: {
-        id: id
-      }
-    };
-
-    playground.handleSignal(addData);
-    playground.handleSignal(removeData);
-    playground.handleSignal(removeData);
-
-    expect(addPlaygroundItem).to.have.been.calledOnce;
-    expect(removePlaygroundItem).to.have.been.calledOnce;
+    const itemData = getStore().getState().playground.itemData;
+    expect(Object.keys(itemData).length).to.equal(0);
   });
 
   function verifyOnFileLoadError(filename) {
