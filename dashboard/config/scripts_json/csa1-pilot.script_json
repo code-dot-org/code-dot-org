@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-14 21:47:51 UTC",
+    "serialized_at": "2021-09-23 17:51:25 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -55,6 +55,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Sandbox"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-pilot"
       }
     }
@@ -434,6 +446,51 @@
       "seeding_key": {
         "lesson.key": "lesson-21",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lesson-24",
+      "name": "Java Lab",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-24",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lesson-22",
+      "name": "The Neighborhood",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 23,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lesson-23",
+      "name": "The Theater",
+      "absolute_position": 24,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 24,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-pilot"
       }
     }
@@ -1312,6 +1369,42 @@
         "lesson_activity.key": "0314f960-244c-40ad-9fc4-c43bf8dec7d5",
         "lesson.key": "lesson-21",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "b656112c-2ce7-4abc-a352-fc8b7eff89f8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b656112c-2ce7-4abc-a352-fc8b7eff89f8",
+        "lesson.key": "lesson-24",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "71278f29-453a-4c32-a958-9962df3a9ae2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "71278f29-453a-4c32-a958-9962df3a9ae2",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "d6d27b91-504e-4b67-8e04-5e0bc5060b42",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d6d27b91-504e-4b67-8e04-5e0bc5060b42",
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-pilot"
       }
     }
@@ -4738,6 +4831,39 @@
         "activity_section.key": "7f6ac50e-f299-4118-8c09-d8a5f1a51b7d",
         "lesson_activity.key": "0314f960-244c-40ad-9fc4-c43bf8dec7d5"
       }
+    },
+    {
+      "key": "54c5c180-9643-4650-993d-f029f8d259be",
+      "position": 1,
+      "properties": {
+        "progression_name": "Java Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "54c5c180-9643-4650-993d-f029f8d259be",
+        "lesson_activity.key": "b656112c-2ce7-4abc-a352-fc8b7eff89f8"
+      }
+    },
+    {
+      "key": "154a69d4-bc63-479e-bf05-73131f43b744",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "154a69d4-bc63-479e-bf05-73131f43b744",
+        "lesson_activity.key": "71278f29-453a-4c32-a958-9962df3a9ae2"
+      }
+    },
+    {
+      "key": "9eb64d9a-f464-4e96-a40e-938eb7dcf532",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Theater"
+      },
+      "seeding_key": {
+        "activity_section.key": "9eb64d9a-f464-4e96-a40e-938eb7dcf532",
+        "lesson_activity.key": "d6d27b91-504e-4b67-8e04-5e0bc5060b42"
+      }
     }
   ],
   "script_levels": [
@@ -6489,6 +6615,72 @@
       "level_keys": [
         "CSA Pilot Survey Unit 1"
       ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "lesson-24",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "54c5c180-9643-4650-993d-f029f8d259be"
+      },
+      "level_keys": [
+        "CSA Java Lab Sandbox"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "154a69d4-bc63-479e-bf05-73131f43b744"
+      },
+      "level_keys": [
+        "CSA Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Theater"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9eb64d9a-f464-4e96-a40e-938eb7dcf532"
+      },
+      "level_keys": [
+        "CSA Theater Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7330,6 +7522,42 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot",
         "activity_section.key": "7f6ac50e-f299-4118-8c09-d8a5f1a51b7d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Java Lab Sandbox",
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "lesson-24",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "54c5c180-9643-4650-993d-f029f8d259be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "154a69d4-bc63-479e-bf05-73131f43b744"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9eb64d9a-f464-4e96-a40e-938eb7dcf532"
       }
     }
   ],

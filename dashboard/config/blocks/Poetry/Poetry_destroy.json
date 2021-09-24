@@ -2,9 +2,9 @@
   "category": "Sprites",
   "config": {
     "color": [
-      184,
-      1,
-      0.74
+      355,
+      ".7",
+      ".7"
     ],
     "func": "destroy",
     "docFunc": "gamelab_destroy",
