@@ -161,6 +161,7 @@ export default class Neighborhood {
     this.controller.reset(false, false);
   }
 
+  // TODO: Call this function when we enable stopping a program
   onStop() {
     timeoutList.clearTimeouts();
     this.resetSignalQueue();
