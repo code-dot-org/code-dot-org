@@ -26,8 +26,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-15 18:59:05 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-09-22 15:42:09 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd7-2021"
     }
@@ -500,8 +500,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "c7c9975a-6ebc-42fb-8d9a-fbc7b99af9ee",
+      "key": "430b1921-1d02-451a-a74f-a573525f3ac9",
       "position": 1,
+      "properties": {
+        "name": "Before the Unit"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "430b1921-1d02-451a-a74f-a573525f3ac9",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd7-2021"
+      }
+    },
+    {
+      "key": "c7c9975a-6ebc-42fb-8d9a-fbc7b99af9ee",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -515,7 +528,7 @@
     },
     {
       "key": "3dd1254c-b1de-486d-803a-cd5b89ea1a47",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -529,7 +542,7 @@
     },
     {
       "key": "dbda3944-701f-4885-9581-dfb5c9fe8a2d",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -543,7 +556,7 @@
     },
     {
       "key": "7d8c47b5-9e3b-43d6-88b2-e5693d2aef12",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Lesson Feedback"
       },
@@ -1706,6 +1719,17 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "1d97fa88-30c5-494c-81e0-c884102fe8e3",
+      "position": 1,
+      "properties": {
+        "description": "This unit assumes students are already familiar with the design elements of App Lab and the onEvent and setScreen commands - essentially what is covered in Unit 4 of CS Discoveries or the App Lab Hour of Code tutorial. Students will use App Lab for the first time in Lesson 7. \n\nIf you have students who have not worked in App Lab and Design Mode before, you may consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. [Click here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to read our recommendations for how to do this."
+      },
+      "seeding_key": {
+        "activity_section.key": "1d97fa88-30c5-494c-81e0-c884102fe8e3",
+        "lesson_activity.key": "430b1921-1d02-451a-a74f-a573525f3ac9"
+      }
+    },
     {
       "key": "1d222524-316a-4988-b206-b1f948cfbee7",
       "position": 1,
@@ -3766,7 +3790,7 @@
       "key": "5a04c389-cc19-4c32-8f86-5bafbfa5775f",
       "position": 1,
       "properties": {
-        "description": "Students will be interacting with a survey as part of this lesson. Before class, you can create your own copy of the survey here: [click to make a copy](https://docs.google.com/forms/d/1hc5nuA2DSxCaonYlKPUJv6ywtHWuX6Oc928ixMp0JPE/copy). Once you make a copy, you can have students take this version of the survey rather than the generic one in the lesson plan. Interacting with this version of the survey can be more personalized, since students can see data from other students within the class.",
+        "description": "**Student Survey:** Students will be interacting with a survey as part of this lesson. Before class, you can create your own copy of the survey here: [click to make a copy](https://docs.google.com/forms/d/1hc5nuA2DSxCaonYlKPUJv6ywtHWuX6Oc928ixMp0JPE/copy). Once you make a copy, you can have students take this version of the survey rather than the generic one in the lesson plan. Interacting with this version of the survey can be more personalized, since students can see data from other students within the class.\n\n**App Lab Experience:** This is the first lesson where students will use App Lab. If students have not seen App Lab before, you might consider postponing this lesson and instead spending a few extra class periods introducing students to App Lab and Design Mode. [Click here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to read more about our recommendations for how to introduce students to App Lab.",
         "name": "Pre-Work"
       },
       "seeding_key": {
@@ -3849,24 +3873,8 @@
       }
     },
     {
-      "key": "882cb880-7d47-4ddd-a585-a58946d5fb3d",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**App Lab Experience:** This unit assumes students are already familiar with the design elements of App Lab and the onEvent and setScreen commands - essentially what is covered in Unit 4 of CS Discoveries. If you have students who have not seen these elements before, consider postponing this lesson and instead spending a few extra class periods introducing students to App Lab and design mode with these two lessons:\n\n- [Unit 4 Lesson 14 - Design Mode in App Lab](https://studio.code.org/s/csd4-2021/lessons/14)\n- [Unit 4 Lesson 16- Events in App Lab](https://studio.code.org/s/csd4-2021/lessons/16)\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "882cb880-7d47-4ddd-a585-a58946d5fb3d",
-        "lesson_activity.key": "d5076b4a-5a03-45cd-b650-5469ab56c98f"
-      }
-    },
-    {
       "key": "52e962a0-c40b-49c4-859e-bad1e64068ee",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first contains a working version of the app that students will create today. Have students run the program a few times.",
         "duration": "15",
@@ -3880,7 +3888,7 @@
     },
     {
       "key": "ccf7e7f8-142b-475e-ba7a-4c6be96379ae",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "What is your Ideal Vacation?"
       },
@@ -3891,7 +3899,7 @@
     },
     {
       "key": "73ce1ded-8856-4156-bfc4-c114b2bae063",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** _What design elements did you see in this app?_\n\nHave students brainstorm on their own or record a list in their journals, then invite them to share as a full class.\n\n **Discussion Goal:** Students will probably notice that buttons, images, and text labels are used extensively. Be sure to remind students that each screen is an element as well. If students are missing any elements, use this as an opportunity to remind students of design mode in App Lab.",
         "tips": [
@@ -3908,7 +3916,7 @@
     },
     {
       "key": "9a6a30be-65eb-4ba0-ac15-d35a4120f163",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What coding commands would you expect to see in this app?_\n\nHave students brainstorm on their own or record a list in their journals, then invite them to share as a full class. \n\n**Discussion Goal:** Students should predict that onEvent is being used for each button, and that setScreen is used to switch between screens. If students have been through Unit 3 of CS Discoveries, they may also predict that if-statements are used to generate the final answer, but it is okay if this isn’t discussed.",
         "tips": [
@@ -3925,7 +3933,7 @@
     },
     {
       "key": "0de901b0-640e-45fe-9a9f-4277864af5cc",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _The app is missing two questions from the survey:_\n- _Which type of sandwich is your favorite?_\n- _What kind of day do you like?_\n\n_Why do you think those questions didn't make it into the model?_\n\n**Discussion Goal:** Guide students towards the conclusion that these questions probably didn't have strong relationships in the data or lead to an accurate model. Students may hypothesize that this is because the questions didn't seem to be related to books, but we'll never know for sure without seeing the actual data. "
       },
@@ -3936,7 +3944,7 @@
     },
     {
       "key": "0d89923e-93b3-4a03-b79e-b262c4a71f72",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _This class considered asking about gender on the survey to help recommend a book, but decided against it._\n\n_Do you think there is any harm in including a question about gender in the survey? Why or why not?_\n\n**Discussion Goal:** This is an opportunity to explore how demographic features, like gender or race or age, should or shouldn't be used in machine learning models. Some students may think it's harmless to include gender in the survey, since it may have a strong relation to certain types of books. Other students may bring up how about gender can lead to stereotypes, or how there may not be enough data to be gender inclusive in the survey especially for non-binary students.\n\nGuide students to consider whether or not it feels like the best type of question to ask considering that the class is trying to predict a book recommendation. Have the class consider whether gender feels like a necessary question, or if other questions will also lead to accurate recommendations. In this way, asking about gender is similar to the previous two questions about which sandwich you like or the type of day you're having: the other questions are probably better predictors of what type of book you may read.",
         "tips": [
@@ -3953,7 +3961,7 @@
     },
     {
       "key": "d3990be6-8d37-475a-bb3e-5a4f4fc990ca",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. Here they will import a model into their app and test that it works correctly. Have them follow the instructions on the screen to import their first model.",
         "duration": "20",
@@ -3973,7 +3981,7 @@
     },
     {
       "key": "a1ec9125-076f-4d00-881d-202874c8ff0b",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _Can you identify the line where the button press happens?_\n- _Can you identify where all of our data is collected into a variable?_\n- _Can you identify the line where our prediction happens?_\n\nHave students talk with a partner first before having a full-class discussion. Students will likely be unsure about some of their answers - encourage them to think of these as predictions rather than definite answers."
       },
@@ -3984,7 +3992,7 @@
     },
     {
       "key": "5df59188-5c51-4a5c-800e-5b0bc5cabd7f",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": " **Discussion Goal:** Help students identify the following information:\n\n- The button press happens on line 2 with the yellow [`onEvent`(#fff176)](/docs/applab/onEvent/) block\n- The data is collected on lines 3 through 6 with the [`addPair`(#BB77C7)](/docs/applab/addPair/) blocks and the yellow [`getText`(#fff176)](/docs/applab/getText/) blocks\n- The prediction happens on line 8 with the green [`getPrediction`(#d3e965)](/docs/applab/getPrediction/) block"
       },
@@ -3995,7 +4003,7 @@
     },
     {
       "key": "5a973bf5-4e72-406f-800b-535e12f1150a",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level. As they progress, they will update the style of their app using Themes and will add a “Welcome Screen” to the app for when a user first loads the app.\n"
       },
@@ -4006,7 +4014,7 @@
     },
     {
       "key": "24852ddc-3470-46ba-b727-e205b2a6da3c",
-      "position": 12,
+      "position": 11,
       "properties": {
         "progression_name": "Customize Your App"
       },
@@ -4017,7 +4025,7 @@
     },
     {
       "key": "a93eb670-a170-422f-b5cc-1bb0cba75be3",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "**Circulate:** As students complete these levels, they will continue automatically to keep customizing their apps. Here are some tips for how to support students in each level:\n\n- **Level 3:** Students will update the text on their app so it is easier for a user to understand. Instead of the one or two word description from the pre-generated design elements, students will use the same questions they saw in the survey.\n- **Level 4:** Students will choose a theme to update the design of their app. For now, just have them choose a theme. Later on, they can continue to customize their app with Design Mode\n- **Level 5:** Students add a home screen to their app. The instructions for this level may be difficult to keep track of - encourage students to “check off” each step as they complete it. They can also use the animated example on the level as a guide for how to complete this task.\n- **Level 6:** Students add a button from the home screen to the predict screen, and add an event to connect the two screens together. Support students in reading through the instructions and “checking off” each piece as they go along. They can also click the “Show Me How” lines in the instructions for screenshots of what each step can look like.",
         "tips": [
@@ -4034,7 +4042,7 @@
     },
     {
       "key": "35bd3261-9e58-490f-a4f7-6f6188cf278e",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "**Choice Levels:** Once students have created their Book Recommender app, they can choose from several example activities to continue improving their app. Each level uses the same Book Recommender app they’ve already built as a template to add to. Students can choose to complete as many of these levels as they would like - each one lets them continue to customize and improve their app.",
         "progression_name": "Choice Levels: Customize Your App",

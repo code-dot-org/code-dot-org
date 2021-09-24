@@ -1,3 +1,3 @@
 function setSize(spriteArg, size){
-  setProp(spriteArg, "scale", size);
+  setProp({costume: spriteArg}, "scale", size);
 }
