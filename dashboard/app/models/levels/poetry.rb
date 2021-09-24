@@ -38,7 +38,7 @@ class Poetry < GamelabJr
         properties: {
           block_pools: [
             "GamelabJr",
-            "PoemBot"
+            "Poetry"
           ],
           helper_libraries: [
             "NativeSpriteLab",
