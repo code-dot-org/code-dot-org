@@ -41,6 +41,11 @@ export default class Playground {
     );
   }
 
+  onStop() {
+    this.endGame();
+    this.resetAudioElement();
+  }
+
   onStarterAssetsReceived = result => {
     const response = JSON.parse(result.response);
     response.starter_assets.forEach(asset => {
@@ -59,8 +64,7 @@ export default class Playground {
         this.isGameRunning = true;
         break;
       case PlaygroundSignalType.EXIT:
-        this.isGameRunning = false;
-        this.isGameOver = true;
+        this.endGame();
         break;
       case PlaygroundSignalType.ADD_CLICKABLE_ITEM:
         this.addClickableItem(data.detail);
@@ -158,6 +162,8 @@ export default class Playground {
       // can't play sound if game is over
       return;
     }
+
+    this.setMediaElement(this.getAudioElement(), soundData.filename);
   }
 
   setBackgroundImage(backgroundData) {
@@ -167,13 +173,16 @@ export default class Playground {
     }
 
     const filename = backgroundData.filename;
-
     const backgroundElement = this.getBackgroundElement();
-    backgroundElement.onerror = () => {
+    this.setMediaElement(backgroundElement, filename);
+    backgroundElement.style.opacity = 1.0;
+  }
+
+  setMediaElement(element, filename) {
+    element.onerror = () => {
       this.onFileLoadError(filename);
     };
-    backgroundElement.src = this.getUrl(filename);
-    backgroundElement.style.opacity = 1.0;
+    element.src = this.getUrl(filename);
   }
 
   reset() {
@@ -182,6 +191,7 @@ export default class Playground {
     // reset playground items to be empty
     this.setPlaygroundItems({});
     this.resetBackgroundElement();
+    this.resetAudioElement();
   }
 
   // TODO: Call this from click handler on new clickable items
@@ -211,11 +221,30 @@ export default class Playground {
     return document.getElementById('playground');
   }
 
+  getAudioElement() {
+    return document.getElementById('playground-audio');
+  }
+
+  resetAudioElement() {
+    const audioElement = this.getAudioElement();
+    audioElement.pause();
+    this.resetMediaElement(audioElement);
+  }
+
   resetBackgroundElement() {
     const backgroundElement = this.getBackgroundElement();
-    backgroundElement.onerror = undefined;
-    backgroundElement.src = undefined;
     backgroundElement.style.opacity = 0.0;
+    this.resetMediaElement(backgroundElement);
+  }
+
+  resetMediaElement(element) {
+    element.onerror = undefined;
+    element.src = '';
+  }
+
+  endGame() {
+    this.isGameRunning = false;
+    this.isGameOver = true;
   }
 
   imageItemExists(itemData) {

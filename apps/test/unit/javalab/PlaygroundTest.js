@@ -13,6 +13,7 @@ describe('Playground', () => {
   };
 
   let backgroundElement,
+    audioElement,
     onOutputMessage,
     onNewlineMessage,
     onJavabuilderMessage,
@@ -54,6 +55,7 @@ describe('Playground', () => {
     };
 
     playgroundElement = document.createElement('div');
+    audioElement = {pause: () => {}};
 
     playground = new Playground(
       onOutputMessage,
@@ -70,6 +72,7 @@ describe('Playground', () => {
 
     playground.getBackgroundElement = () => backgroundElement;
     playground.getPlaygroundElement = () => playgroundElement;
+    playground.getAudioElement = () => audioElement;
   });
 
   it('sets background image when receiving a SET_BACKGROUND_IMAGE message for a starter asset', () => {
@@ -80,9 +83,8 @@ describe('Playground', () => {
       }
     };
 
-    expect(backgroundElement.src).to.be.undefined;
+    verifyDefaultMediaElementState(backgroundElement);
     expect(backgroundElement.style.opacity).to.equal(0);
-    expect(backgroundElement.onerror).to.be.undefined;
 
     playground.handleSignal(data);
 
@@ -95,6 +97,26 @@ describe('Playground', () => {
     verifyOnFileLoadError(starterAsset1);
   });
 
+  it('sets audio when receiving a PLAY_SOUND message for a starter asset', () => {
+    const data = {
+      value: PlaygroundSignalType.PLAY_SOUND,
+      detail: {
+        filename: starterAsset1
+      }
+    };
+
+    verifyDefaultMediaElementState(audioElement);
+
+    playground.handleSignal(data);
+
+    expect(audioElement.src).to.equal(`${levelName}/${starterAsset1}`);
+    expect(audioElement.onerror).to.exist;
+
+    // Verify onerror callback
+    audioElement.onerror();
+    verifyOnFileLoadError(starterAsset1);
+  });
+
   it('sets background image when receiving a SET_BACKGROUND_IMAGE message for an uploaded asset', () => {
     const assetFile = 'assetFile';
     const data = {
@@ -104,9 +126,8 @@ describe('Playground', () => {
       }
     };
 
-    expect(backgroundElement.src).to.be.undefined;
+    verifyDefaultMediaElementState(backgroundElement);
     expect(backgroundElement.style.opacity).to.equal(0);
-    expect(backgroundElement.onerror).to.be.undefined;
 
     playground.handleSignal(data);
 
@@ -116,6 +137,27 @@ describe('Playground', () => {
 
     // Verify onerror callback
     backgroundElement.onerror();
+    verifyOnFileLoadError(assetFile);
+  });
+
+  it('sets audio when receiving a PLAY_SOUND message for an uploaded asset', () => {
+    const assetFile = 'assetFile';
+    const data = {
+      value: PlaygroundSignalType.PLAY_SOUND,
+      detail: {
+        filename: assetFile
+      }
+    };
+
+    verifyDefaultMediaElementState(audioElement);
+
+    playground.handleSignal(data);
+
+    expect(audioElement.src).to.equal(`assets/${assetFile}`);
+    expect(audioElement.onerror).to.exist;
+
+    // Verify onerror callback
+    audioElement.onerror();
     verifyOnFileLoadError(assetFile);
   });
 
@@ -133,16 +175,36 @@ describe('Playground', () => {
 
     playground.handleSignal(exitMessage);
 
-    expect(backgroundElement.src).to.be.undefined;
+    verifyDefaultMediaElementState(backgroundElement);
     expect(backgroundElement.style.opacity).to.equal(0);
-    expect(backgroundElement.onerror).to.be.undefined;
 
     playground.handleSignal(data);
 
     // Background should not update
-    expect(backgroundElement.src).to.be.undefined;
+    verifyDefaultMediaElementState(backgroundElement);
     expect(backgroundElement.style.opacity).to.equal(0);
-    expect(backgroundElement.onerror).to.be.undefined;
+  });
+
+  it("doesn't play sound if game is over", () => {
+    const exitMessage = {
+      value: PlaygroundSignalType.EXIT
+    };
+
+    const data = {
+      value: PlaygroundSignalType.PLAY_SOUND,
+      detail: {
+        filename: 'filename'
+      }
+    };
+
+    playground.handleSignal(exitMessage);
+
+    verifyDefaultMediaElementState(audioElement);
+
+    playground.handleSignal(data);
+
+    // Audio element should not update
+    verifyDefaultMediaElementState(audioElement);
   });
 
   it('resets the background image on reset()', () => {
@@ -161,7 +223,7 @@ describe('Playground', () => {
 
     playground.reset();
 
-    expect(backgroundElement.src).to.be.undefined;
+    expect(backgroundElement.src).to.equal('');
     expect(backgroundElement.style.opacity).to.equal(0);
     expect(backgroundElement.onerror).to.be.undefined;
   });
@@ -220,6 +282,37 @@ describe('Playground', () => {
         width: 100,
         height: 50,
         id: id
+      }
+    };
+
+    playground.handleSignal(data);
+    expect(addPlaygroundItem).to.have.been.calledOnce;
+  });
+
+  it('resets sound element on reset()', () => {
+    const data = {
+      value: PlaygroundSignalType.PLAY_SOUND,
+      detail: {
+        filename: 'filename'
+      }
+    };
+
+    playground.handleSignal(data);
+
+    expect(audioElement.src).to.exist;
+    expect(audioElement.onerror).to.exist;
+
+    playground.reset();
+
+    expect(audioElement.src).to.equal('');
+    expect(audioElement.onerror).to.be.undefined;
+  });
+
+  it('resets sound element when stopped', () => {
+    const data = {
+      value: PlaygroundSignalType.PLAY_SOUND,
+      detail: {
+        filename: 'filename'
       }
     };
 
@@ -323,6 +416,14 @@ describe('Playground', () => {
 
     expect(addPlaygroundItem).to.have.been.calledOnce;
     expect(removePlaygroundItem).to.have.been.calledOnce;
+
+    expect(audioElement.src).to.exist;
+    expect(audioElement.onerror).to.exist;
+
+    playground.onStop();
+
+    expect(audioElement.src).to.equal('');
+    expect(audioElement.onerror).to.be.undefined;
   });
 
   function verifyOnFileLoadError(filename) {
@@ -343,5 +444,10 @@ describe('Playground', () => {
       height: 50,
       id: id
     };
+  }
+
+  function verifyDefaultMediaElementState(element) {
+    expect(element.src).to.be.undefined;
+    expect(element.onerror).to.be.undefined;
   }
 });
