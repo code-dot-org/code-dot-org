@@ -15345,8 +15345,8 @@ en:
           lessons:
             Dance Party - Go Further:
               name: Dance Party - Go Further
-              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
-              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
+              description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. '
+              description_teacher: In this lesson, learners of all ages continue their experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
         csp10-pilot:
           title: Cybersecurity and Global Impacts
