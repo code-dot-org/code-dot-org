@@ -3,6 +3,11 @@
   "config": {
     "func": "startBehavior",
     "blockText": "sprite {ANIMATION_NAME} begins {BEHAVIOR} ",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
     "args": [
       {
         "name": "ANIMATION_NAME",
