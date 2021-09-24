@@ -324,7 +324,6 @@ Javalab.prototype.onRun = function() {
 
 // Called by the Javalab app when it wants to stop student code execution
 Javalab.prototype.onStop = function() {
-  this.miniApp?.onStop?.();
   this.javabuilderConnection.closeConnection();
 };
 
