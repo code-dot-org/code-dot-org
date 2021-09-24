@@ -183,7 +183,7 @@ export const changePlaygroundItemData = (itemId, changeItemData) => {
   return {
     type: CHANGE_PLAYGROUND_ITEM_DATA,
     itemId: itemId,
-    changeItemData: changeItemData
+    itemData: changeItemData
   };
 };
 

@@ -18,7 +18,8 @@ import javalab, {
   setDisableFinishButton,
   addPlaygroundItemData,
   removePlaygroundItemData,
-  changePlaygroundItemData
+  changePlaygroundItemData,
+  setPlaygroundItemData
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -115,6 +116,8 @@ Javalab.prototype.init = function(config) {
     getStore().dispatch(removePlaygroundItemData(itemId));
   const changePlaygroundItem = (itemId, itemData) =>
     getStore().dispatch(changePlaygroundItemData(itemId, itemData));
+  const setPlaygroundItems = itemData =>
+    getStore().dispatch(setPlaygroundItemData(itemData));
 
   switch (this.level.csaViewMode) {
     case CsaViewMode.NEIGHBORHOOD:
@@ -144,7 +147,8 @@ Javalab.prototype.init = function(config) {
         this.level.name,
         addPlaygroundItem,
         removePlaygroundItem,
-        changePlaygroundItem
+        changePlaygroundItem,
+        setPlaygroundItems
       );
       this.visualization = <PlaygroundVisualizationColumn />;
       break;

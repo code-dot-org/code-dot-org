@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 export default class PlaygroundImage extends React.Component {
   constructor(props) {
     super(props);
-    console.log('in playground image constructor');
   }
   static propTypes = {
     fileUrl: PropTypes.string.isRequired,
@@ -51,7 +50,6 @@ export default class PlaygroundImage extends React.Component {
   render() {
     const {fileUrl, id, onClick} = this.props;
     const dynamicStyles = this.getDynamicStyles();
-    console.log(dynamicStyles);
     return (
       <img
         src={fileUrl}

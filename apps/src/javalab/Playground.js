@@ -11,6 +11,7 @@ export default class Playground {
     addPlaygroundItem,
     removePlaygroundItem,
     changePlaygroundItem,
+    setPlaygroundItems,
     // Only used for testing
     starterAssetsApi,
     assetsApi
@@ -32,6 +33,7 @@ export default class Playground {
     this.addPlaygroundItem = addPlaygroundItem;
     this.removePlaygroundItem = removePlaygroundItem;
     this.changePlaygroundItem = changePlaygroundItem;
+    this.setPlaygroundItems = setPlaygroundItems;
 
     this.starterAssetsApi.getStarterAssets(
       levelName,
@@ -133,8 +135,6 @@ export default class Playground {
     if (this.imageData[itemData.id]) {
       delete this.imageData[itemData.id];
       this.removePlaygroundItem(itemData.id);
-      // const item = document.getElementById(itemData.id);
-      // item.remove();
     }
     // TODO: handle text deletion
   }
@@ -145,23 +145,10 @@ export default class Playground {
       return;
     }
     if (this.imageData[itemData.id]) {
-      const newImageData = {};
-      if (itemData.x) {
-        newImageData.x = itemData.x;
-      }
-      if (itemData.y) {
-        newImageData.y = itemData.y;
-      }
-      if (itemData.width) {
-        newImageData.width = itemData.width;
-      }
-      if (itemData.height) {
-        newImageData.height = itemData.height;
-      }
+      const newImageData = {...itemData};
       if (itemData.filename) {
         newImageData.fileUrl = this.getUrl(itemData.filename);
       }
-      //this.changeImageItem(itemData);
       this.changePlaygroundItem(itemData.id, newImageData);
     }
     // TODO: handle text changes
@@ -203,10 +190,8 @@ export default class Playground {
   reset() {
     this.isGameOver = false;
     this.isGameRunning = false;
-    // const playground = this.getPlaygroundElement();
-    // while (playground.lastElementChild) {
-    //   playground.removeChild(playground.lastElementChild);
-    // }
+    // reset playground items to be empty
+    this.setPlaygroundItems({});
     this.resetBackgroundElement();
   }
 
