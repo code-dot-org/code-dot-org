@@ -27,8 +27,7 @@ export default class Playground {
     // Assigned only for testing; should use imports from clientApi normally
     this.starterAssetsApi = starterAssetsApi || starterAssets;
     this.assetsApi = assetsApi || assets;
-    this.imageData = {};
-    this.textData = {};
+    this.imageItemIds = [];
 
     this.addPlaygroundItem = addPlaygroundItem;
     this.removePlaygroundItem = removePlaygroundItem;
@@ -97,11 +96,11 @@ export default class Playground {
 
   addImageHelper(itemData, isClickable) {
     // ignore request if the game is over or if the item already exists
-    if (this.isGameOver || this.imageData[itemData.id]) {
+    if (this.isGameOver || this.imageItemExists(itemData)) {
       // can't add new items if the game is over
       return;
     }
-    this.imageData[itemData.id] = itemData;
+    this.imageItemIds.push(itemData.id);
     let onClick = () => {};
     if (isClickable) {
       onClick = () => this.handleImageClick(itemData.id);
@@ -132,8 +131,8 @@ export default class Playground {
       // can't remove items if game is over
       return;
     }
-    if (this.imageData[itemData.id]) {
-      delete this.imageData[itemData.id];
+    if (this.imageItemExists(itemData)) {
+      this.imageItemIds.splice(this.imageItemIds.indexOf(itemData.id), 1);
       this.removePlaygroundItem(itemData.id);
     }
     // TODO: handle text deletion
@@ -144,7 +143,7 @@ export default class Playground {
       // can't change items if game is over
       return;
     }
-    if (this.imageData[itemData.id]) {
+    if (this.imageItemExists(itemData)) {
       const newImageData = {...itemData};
       if (itemData.filename) {
         newImageData.fileUrl = this.getUrl(itemData.filename);
@@ -152,16 +151,6 @@ export default class Playground {
       this.changePlaygroundItem(itemData.id, newImageData);
     }
     // TODO: handle text changes
-  }
-
-  changeImageItem(itemData) {
-    const id = itemData.id;
-    let image = document.getElementById(id);
-    if (image) {
-      let originalData = this.imageData[id];
-      this.imageData[id] = {...originalData, ...itemData};
-      this.styleImage(image, this.imageData[id]);
-    }
   }
 
   playSound(soundData) {
@@ -222,60 +211,14 @@ export default class Playground {
     return document.getElementById('playground');
   }
 
-  setUpImage(imageData) {
-    const image = document.createElement('img');
-    this.styleImage(image, imageData);
-    image.style.zIndex = imageData.index;
-    return image;
-  }
-
-  styleImage(image, imageData) {
-    // coordinates come to us in a 400x400 image size,
-    // but we use 800x800 on the frontend to allow for higher
-    // resolution screens. Therefore we need to scale up the
-    // coordinates by 2.
-    const x = imageData.x * 2;
-    const y = imageData.y * 2;
-    const width = imageData.width * 2;
-    const height = imageData.height * 2;
-    image.src = this.getUrl(imageData.filename);
-    image.style.width = width + 'px';
-    image.style.height = height + 'px';
-    image.id = imageData.id;
-    image.style.position = 'absolute';
-    this.setImageMargins(image, x, y, width, height);
-  }
-
-  getPixelValue(configValue) {
-    return configValue + 'px';
-  }
-
-  setImageMargins(image, x, y, width, height) {
-    image.style.marginTop = this.getPixelValue(y);
-    image.style.marginLeft = this.getPixelValue(x);
-    this.setClipPath(image, x, y, width, height);
-  }
-
-  // If the image would go outside of the 800x800 box we put playground
-  // into, cut it off at the appropriate dimension. This will crop any images
-  // that go outside of the box, which is our expected behavior.
-  setClipPath(image, x, y, width, height) {
-    image.style.clipPath = `inset(0 ${this.getClipPath(
-      width,
-      x
-    )} ${this.getClipPath(height, y)} 0)`;
-  }
-
-  getClipPath(dimension, coordinate) {
-    return dimension + coordinate > 800
-      ? `${dimension + coordinate - 800}px`
-      : 0;
-  }
-
   resetBackgroundElement() {
     const backgroundElement = this.getBackgroundElement();
     backgroundElement.onerror = undefined;
     backgroundElement.src = undefined;
     backgroundElement.style.opacity = 0.0;
+  }
+
+  imageItemExists(itemData) {
+    return this.imageItemIds.includes(itemData.id);
   }
 }
