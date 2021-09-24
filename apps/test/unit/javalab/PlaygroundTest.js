@@ -45,7 +45,7 @@ describe('Playground', () => {
       }
     };
 
-    audioElement = {};
+    audioElement = {pause: () => {}};
 
     playground = new Playground(
       onOutputMessage,
