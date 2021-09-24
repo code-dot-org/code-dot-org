@@ -196,12 +196,12 @@ export default class Playground {
     this.resetAudioElement();
   }
 
-  // TODO: Call this from click handler on new clickable items
   handleImageClick(imageId) {
     if (this.isGameOver || !this.isGameRunning) {
       // can only handle click events if game is not over and game is running
       return;
     }
+    this.onJavabuilderMessage('PLAYGROUND', imageId);
   }
 
   getUrl(filename) {
