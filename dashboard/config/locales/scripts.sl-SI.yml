@@ -2344,3 +2344,13 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Vsebina
+            content:
+              display_name: Vsebina
+            lesson_group:
+              display_name: Vsebina
+            lessonGroup-2:
+              display_name: Vsebina

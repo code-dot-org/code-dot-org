@@ -1147,6 +1147,13 @@ es:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       gamelab_makeNumSprites:
         text: hacer {NUM} nuevos {ANIMATION_NAME} sprites
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': derecha
+            '90': abajo
+            '180': izquierda
+            '270': arriba
       gamelab_mirrorSprite:
         text: "{SPRITE} hacia {DIRECTION}"
         options:
@@ -1183,6 +1190,7 @@ es:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": botón
             "'sound://category_collect/clicky_crunch.mp3'": aplastar
+            "'sound://category_digital/jump_7.mp3'": salta
       gamelab_pointInDirection:
         text: apuntar {SPRITE} {DIRECTION}
         options:
@@ -1743,8 +1751,13 @@ es:
         text: Configurar Monster Town con{COUNT}monstruos
       Outbreak_stopMoving:
         text: los monstruos dejan de moverse
+      PoemBot_makeNumSprites:
+        text: hacer {NUM} nuevos {ANIMATION_NAME} sprites
       PoemBot_playSound:
         text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            '"sound://category_background/ocean_waves.mp3"': Océano
       PoemBot_setBackgroundEffect:
         text: stablecer efecto de fondo {EFFECT} {PALETTE}
         options:
@@ -1755,7 +1768,11 @@ es:
             '"stars"': Estrellas
             '"ripples"': Ondas
           PALETTE:
+            '"sky"': Sky
+            '"ocean"': Océano
             '"rainbow"': Arcoíris
+      PoemBot_setBackgroundImageAs:
+        text: establecer fondo a {IMG}
       PoemBot_setForegroundEffect:
         text: establecer efecto de primer plano {EFFECT}
         options:
@@ -1765,7 +1782,12 @@ es:
             '"hearts"': Corazones coloridos
             '"confetti"': Confeti
             '"starburst"': Explosión de estrellas
+      PoemBot_setPoem:
+        options:
+          POEM:
+            '"rumi_2"': Océano
       PoemBot_startBehavior:
+        text: 'gráfico {ANIMATION_NAME} inicia {BEHAVIOR} '
         options:
           BEHAVIOR:
             fluttering: revoloteando
@@ -1778,6 +1800,7 @@ es:
             wandering: vagando
             wobbling: tambaleándose
       PoemBot_stopBehavior:
+        text: 'gráfico {ANIMATION_NAME} detiene {BEHAVIOR} '
         options:
           BEHAVIOR:
             fluttering: revoloteando
@@ -1793,6 +1816,10 @@ es:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      PoemBot_whenPromptAnswered:
+        text: cuando {VAR} respondió
       RyanLab_moveForward:
         text: avanzar
       RyanLab_turnLeft:

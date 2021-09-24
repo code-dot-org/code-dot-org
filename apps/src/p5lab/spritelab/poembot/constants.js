@@ -194,5 +194,34 @@ export const POEMS = {
       'Skyed, blue and full of hum, full of bloom.',
       'The grass was lizarding.'
     ]
+  },
+  lomeli: {
+    author: 'Caia Lomeli',
+    title: 'Return',
+    lines: [
+      'Anywhere the air settles its hand on your head like a gentle father',
+      'And the morning sings to you —',
+      'or',
+      'When you find your reflection in another breathing body',
+      'And carry a calm pebble in your chest ',
+      '',
+      'Here',
+      'you are home'
+    ]
+  },
+  singer: {
+    author: 'Marilyn Singer\nfrom CENTRAL HEARTING (Knopf, 2005)',
+    title: 'Toasting Marshmallows',
+    lines: [
+      'It hinges on a second, an inch.',
+      'A shade too long, a hair too close, ',
+      'and perfect crisp brown ',
+      'turns to bitter charcoal,',
+      'gentle melting ',
+      'becomes ooze. ',
+      'And you lose the game, ',
+      'the marshmallow ',
+      'to the flame. '
+    ]
   }
 };

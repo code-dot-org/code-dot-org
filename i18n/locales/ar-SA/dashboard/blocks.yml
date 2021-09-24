@@ -1131,6 +1131,13 @@ ar:
             '"rain"': مطر
       gamelab_makeNewSpriteAnon:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': اليمين
+            '90': الأسفل
+            '180': اليسار
+            '270': الأعلى
       gamelab_mirrorSprite:
         text: "{SPRITE} وجه {DIRECTION}"
         options:
@@ -1163,6 +1170,7 @@ ar:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": زر
             "'sound://category_collect/clicky_crunch.mp3'": سحق
+            "'sound://category_digital/jump_7.mp3'": قفز
       gamelab_pointInDirection:
         text: نقطه {SPRITE} {DIRECTION}
         options:
@@ -1631,6 +1639,8 @@ ar:
             '"ripples"': تموجات
           PALETTE:
             '"rainbow"': ألوان
+      PoemBot_setBackgroundImageAs:
+        text: تعيين الخلفية إلى {IMG}
       PoemBot_setForegroundEffect:
         text: عيّن التأثيرات الأمامية {EFFECT}
         options:

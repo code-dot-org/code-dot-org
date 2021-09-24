@@ -1115,6 +1115,15 @@ fr:
             '"rain"': pluie
       gamelab_makeNewSpriteAnon:
         text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
+      gamelab_makeNumSprites:
+        text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': vers la droite
+            '90': vers le bas
+            '180': vers la gauche
+            '270': vers le haut
       gamelab_mirrorSprite:
         text: "{SPRITE} orienté vers {DIRECTION}"
         options:
@@ -1148,6 +1157,7 @@ fr:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_digital/jump_7.mp3'": sauter
       gamelab_pointInDirection:
         text: diriger {SPRITE} vers {DIRECTION}
         options:
@@ -1612,6 +1622,8 @@ fr:
         text: dispose les monstres au hasard
       Outbreak_stopMoving:
         text: les monstres ne bougent plus
+      PoemBot_makeNumSprites:
+        text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
       PoemBot_playSound:
         text: jouer le son {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1625,6 +1637,8 @@ fr:
             '"ripples"': Ondulations
           PALETTE:
             '"rainbow"': Arc-en-ciel
+      PoemBot_setBackgroundImageAs:
+        text: établir {IMG} comme arrière-plan
       PoemBot_setForegroundEffect:
         text: définir l’effet de premier plan {EFFECT}
         options:

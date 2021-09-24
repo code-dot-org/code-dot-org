@@ -1255,6 +1255,8 @@ ku:
             '"stars"': ئەستێرە
           PALETTE:
             '"rainbow"': پەلكەزێرینە
+      PoemBot_setBackgroundImageAs:
+        text: پاشبنەما دابنێ {IMG}
       PoemBot_setForegroundEffect:
         text: ئیفێکتی پێشبنەما دابنێ {EFFECT}
         options:

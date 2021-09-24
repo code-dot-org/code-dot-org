@@ -1169,7 +1169,6 @@ ta:
   tutorial_ticklep_name: கிளி அதிசயம்
   tutorial_bbot_name: பாம்பர்போட் வேடிக்கை மற்றும் எளிதான குறியீட்டு நடவடிக்கைகள்
   tutorial_scratchg_name: கீறலில் நிரலாக்க விளையாட்டுகள்
-  tutorial_roboticfriends_name: எனது ரோபோ நண்பர்கள்
   tutorial_sjforest_name: 'ScratchJr: நான் ஒரு பயமுறுத்தும் வனத்தை உருவாக்க முடியுமா?'
   tutorial_sjgreet_name: ScratchJr:எனது கதாபாத்திரங்கள் ஒருவருக்கொருவர் வாழ்த்த முடியுமா?
   tutorial_sjsunset_name: ScratchJr:நான் சூரிய அஸ்தமனம் செய்யலாமா?
@@ -1217,7 +1216,6 @@ ta:
   tutorial_tickles_name: Sphero Run
   tutorial_ozogame_name: ஓசோபோட் விளையாட்டு நிலையை உருவாக்கவும்
   tutorial_vidcodeio_name: உள்ளீடு மற்றும் வெளியீடு, கணித செயல்பாடு
-  tutorial_besttech_name: சிறந்த தொழில்நுட்ப செயல்பாடு
   tutorial_tlcbrain_name: Brain-in-a-bag Activity
   tutorial_hopquiz_name: Quiz Creator
   tutorial_unfortunate_name: துரதிர்ஷ்டவசமான நிகழ்வுகளின் தொடர்
@@ -1226,7 +1224,6 @@ ta:
     ELA ஒருங்கிணைப்பு'
   tutorial_bbcmathi_name: பிட்ஸ்பாக்ஸ் குறியீட்டு + கணிதம் (3-5)
   tutorial_tlcpixel_name: பிக்சல் புதிர்கள்
-  tutorial_arduino_name: Arduino செயல்பாடு
   tutorial_introrobo_name: ரோபாட்டிக்ஸ் அறிமுகம்
   tutorial_tlcinvis_name: கண்ணுக்கு தெரியாத பாமிங் செயல்பாடு
   tutorial_tlcjflap_name: 'JFLAP: வரையறுக்கப்பட்ட ஸ்டேட் மெஷின் உருவாக்குதல்'
@@ -1246,7 +1243,6 @@ ta:
   tutorial_tlcmind_name: ரெட் பிளாக் மைண்ட் மெல்ட் செயல்பாடு
   tutorial_tlctelebot_name: டெலிபோர்டிங் ரோபோ செயல்பாடு
   tutorial_tlcaus_name: ஆஸ்திரேலிய மந்திரவாதியின் கனவு செயல்பாடு
-  tutorial_oralhist_name: வாய்வழி வரலாறு திட்டம்
   tutorial_tlcmicro_name: மைக்ரோவேவ் ரேசிங் வீடியோ செயல்பாடு
   tutorial_imathematician_name: iMathematician
   tutorial_tlcmagic_name: மந்திர புத்தக மேஜிக்
@@ -1260,7 +1256,6 @@ ta:
   tutorial_tynkercan_name: 'பிசிக்ஸ் கேனான் 2-பிளேயர் கேம்  கிட் '
   tutorial_grokflags_name: பிளாக்ஸ் ஆப் தி வேர்ல்ட்  (Python Turtle)
   tutorial_robomind_name: ரோபோ மைண்டுடன் ஒரு மெய்நிகர் ரோபோவை நிரல் செய்யவும்
-  tutorial_scratchanimwork_name: 'உங்கள் பெயரை உயிரூட்டுக: கல்வியாளர் வழிகாட்டி'
   tutorial_adventureq_name: 'அட்வென்ச்சர் வித் Q '
   tutorial_khan-es_name: ஜாவாஸ்கிரிப்ட் அறிமுகம்
   tutorial_kpt_name: ஜாவாஸ்கிரிப்ட் அறிமுகம்
@@ -1268,13 +1263,11 @@ ta:
   tutorial_khe_name: ஜாவாஸ்கிரிப்ட் அறிமுகம்
   tutorial_kfr_name: ஜாவாஸ்கிரிப்ட் அறிமுகம்
   tutorial_app-inventor_name: AppInventor Hour of Code
-  tutorial_bits_name: 'பிட்ஸ் அண்ட் பிரிக்ஸ் '
   tutorial_blockly_name: தடுப்பு விளையாட்டு ஆஃப்லைன்
   tutorial_tynker_name: உங்கள் சொந்த விளையாட்டை உருவாக்குங்கள்
   tutorial_baypt_name: குறியீடு பேமேக்ஸ்
   tutorial_code-combat_name: கோட்காம்பாட்
   tutorial_mky_name: கோட்மன்கி
-  tutorial_spellcraft_name: 'CodeSpells: Spellcraft'
   tutorial_pirates_name: பைரேட்ஸ் குறியீடு
   tutorial_csfirst_name: CS First
   tutorial_loopedy_name: லூப்பி-லூப்பை நடனமாடுங்கள்
@@ -1332,7 +1325,6 @@ ta:
   tutorial_soloweb_name: ஒரு மணி நேரத்தில் உங்கள் முதல் வலைப்பக்கம்!
   tutorial_khanweb_name: 'Khan Academy: Webpages'
   tutorial_khandata_name: 'Khan Academy: Databases'
-  tutorial_robomeshiq_name: நிரல் VEX IQ ரோபோக்கள் பிளாக்லியுடன்
   tutorial_googlelogo_name: உங்கள் சொந்த Google லோகோவை உருவாக்கவும்
   tutorial_playtune_name: ந்த டியூன் பயன்பாட்டை இயக்கு
   tutorial_computeit_name: அதைக் கணக்கிடுங்கள்
@@ -1396,7 +1388,6 @@ ta:
 
 '
   tutorial_kanostreet_name: வீடியோ கேம்களின் இயற்பியல்!
-  tutorial_nyblebot_name: பூகி பாட்
   tutorial_codemojijs_name: ஜாவாஸ்கிரிப்ட் தொடங்குகிறது
   tutorial_techapf_name: மேம்பட்ட பைதான் அம்சங்கள்
   tutorial_techfpjs_name: JS உடன் செயல்பாட்டு நிரலாக்கத்திற்கான நடைமுறை அறிமுகம்
@@ -1412,7 +1403,6 @@ ta:
   tutorial_gpbcircle_name: ஒரு ஊடாடும் வண்ண வட்டத்தை உருவாக்கவும்
   tutorial_gpbpaint_name: உங்கள் சொந்த பெயிண்ட் எடிட்டரை உருவாக்குங்கள்
   tutorial_cocomarcade_name: 'CodeCombat: ஒரு ஆர்கேட் விளையாட்டை உருவாக்குங்கள்!'
-  tutorial_techcpp_name: சி ++ 17 இன் 7 அம்சங்கள் உங்கள் குறியீட்டை எளிதாக்கும்
   tutorial_beetik_name: ஃபிரான்ஸ் லிஸ்டின் இசையை குறியிடவும்
   tutorial_codedj_name: கோட் டி.ஜே உடன் இசையமைக்கவும்
   tutorial_rgadvan_name: ரோபோகார்டன் குறியீட்டு முறை - மேம்பட்டது
@@ -1489,8 +1479,6 @@ ta:
   tutorial_ifly_name: iFly
   tutorial_idowedo_name: iDo WeDo
   tutorial_diggindwarf_name: Diggin' Dwarf
-  tutorial_rmedr_name: Google Blockly ஐப் பயன்படுத்தி உருவகப்படுத்தப்பட்ட VEX EDR
-    V5 ரோபோவை நிரல் செய்யவும்
   tutorial_spheroit_name: 'Blocks 2: If/Then Else'
   tutorial_gameofcodes_name: குறியீடுகளின் விளையாட்டு
   tutorial_blocklygames_name: தடுப்பு விளையாட்டு
@@ -1501,7 +1489,6 @@ ta:
   tutorial_bcjs1_name: ஜாவாஸ்கிரிப்ட் உலகம்
   tutorial_bcjs2_name: ஜாவாஸ்கிரிப்ட் உலகம் 2
   tutorial_3dbearmars_name: செவ்வாய் முன்னோடிகள்
-  tutorial_alexaskill_name: 'அலெக்சா புளூபிரிண்ட்ஸ்: அலெக்ஸா திறனை உருவாக்குங்கள்'
   tutorial_bitsboxyak_name: யாக் தாக்குதல்! தட்டச்சு செய்த குறியீட்டைக் கொண்டு ஒரு
     அட்டையை உருவாக்கவும்
   tutorial_blockscadbargraphs_name: பார் வரைபடங்கள்
@@ -1563,7 +1550,6 @@ ta:
   tutorial_codinismhero_name: புரோகிராமிங் ஹீரோ
   tutorial_discovery_name: ஒரு அசாதாரண கண்டுபிடிப்பு
   tutorial_csfirstname_name: ஒரு பெயரை உயிரூட்டுக
-  tutorial_obstaclecourse_name: கோட்ஸ்நாப்ஸுடன் ஒரு தடை பாடநெறிக்கு செல்லவும்
   tutorial_edisonmove_name: 'Edison and EdPy: எடிசன் நகரும்'
   tutorial_edisonspider_name: எடிசன் மற்றும் சுழல் சிலந்தி பொறி
   tutorial_edisonspotlight_name: எடிசனுடன் கவனத்தை ஈர்க்கவும்
@@ -2023,8 +2009,6 @@ ta:
     அல்லது அனுபவம் தேவையில்லை!
   tutorial_scratchg_shortdescription: கீறலில் கேம்களை எவ்வாறு நிரல் செய்வது என்பதை
     அறிக
-  tutorial_roboticfriends_shortdescription: சாதனங்கள் இல்லாத குழுவிற்கான பிரிக்கப்படாத
-    பயிற்சி
   tutorial_sjforest_shortdescription: இருண்ட வன அமைப்பில் வெவ்வேறு விலங்குகள் நகரும்
     ஒரு திட்டத்தை உருவாக்க ஸ்க்ராட்ச்ஜெர் நிரலாக்க பயன்பாட்டைப் பயன்படுத்தவும்.
   tutorial_sjgreet_shortdescription: ஒரு பூனைக்குட்டியும் நாயும் ஒருவருக்கொருவர் "சந்தித்து"
@@ -2110,8 +2094,6 @@ ta:
     மூலமும் குறியீட்டுக்கு மாணவர்களை அறிமுகப்படுத்துங்கள்.
   tutorial_vidcodeio_shortdescription: ஜாவாஸ்கிரிப்ட் செயல்பாடுகளை கணித மற்றும் நிஜ
     உலக சிக்கல்களுடன் இணைக்கவும்.
-  tutorial_besttech_shortdescription: கடந்த சில தசாப்தங்களாக மாணவர்கள் முக்கியமான
-    தொழில்நுட்ப கண்டுபிடிப்புகளைப் பற்றி அறிந்து கொள்வார்கள்.
   tutorial_tlcbrain_shortdescription: ஸ்னாப் விளையாடும் மாணவர்களிடமிருந்து நியூரான்களின்
     கணக்கீட்டு மாதிரியை உருவாக்குவதன் மூலம் மனித மூளை எவ்வாறு செயல்படுகிறது என்பதை
     ஆராயுங்கள்.
@@ -2127,8 +2109,6 @@ ta:
   tutorial_tlcpixel_shortdescription: எளிய வண்ணம்-எண் மற்றும் தர்க்கரீதியான சிந்தனை
     புதிர்களைத் தீர்த்து, பட பிரதிநிதித்துவம் மற்றும் சுருக்கத்தைப் பற்றிய ஆழமான புரிதலைப்
     பெறுங்கள்.
-  tutorial_arduino_shortdescription: ஒரு அடிப்படை சுற்று மற்றும் ஒளி சிமிட்டுவது எப்படி
-    என்பதை அறிக.
   tutorial_introrobo_shortdescription: ரோபாட்டிக்ஸ் மற்றும் புரோகிராமிங் யோசனைகளை
     அறிமுகப்படுத்தும்போது மாணவர்கள் டாஷ் மற்றும் டாட் பற்றி அறிந்து கொள்வார்கள்.
   tutorial_tlcinvis_shortdescription: ஒரு அட்டையை ஒரு குவியலிலிருந்து இன்னொரு இடத்திற்கு
@@ -2171,9 +2151,6 @@ ta:
   tutorial_tlcaus_shortdescription: தேடல் வழிமுறைகள் மற்றும் கணக்கீட்டு சிந்தனை இரண்டையும்
     அறிமுகப்படுத்தி, தேர்ந்தெடுக்கப்பட்ட அட்டையை நீங்கள் கணிக்கும் இடத்தில் ஒரு மந்திர
     தந்திரத்தை செய்யுங்கள்
-  tutorial_oralhist_shortdescription: கம்ப்யூட்டிங் கல்வியாளர்கள் வாய்வழி வரலாறு திட்டம்
-    என்பது சி.இ.ஓ.எச்.பி சேகரிப்புடன் இணைக்கப்பட்ட நேர்காணல்கள் மற்றும் கற்பித்தல்
-    பொருட்கள் மற்றும் கருவிகளின் தொகுப்பாகும்
   tutorial_tlcmicro_shortdescription: ஒரு எளிய பணியைச் செய்வதற்கு எது எளிதானது என்பதைப்
     பார்க்க மக்கள் வெவ்வேறு நுண்ணலை வடிவமைப்புகளை ஓட்டுகிறார்கள். சில மற்றவர்களை விட
     மிகவும் சிக்கலானதாகக் காணப்படுகின்றன.
@@ -2201,8 +2178,6 @@ ta:
   tutorial_grokflags_shortdescription: நிரலாக்க மொழியான பைத்தானைப் பயன்படுத்தி, உலகெங்கிலும்
     இருந்து கொடிகளை வரைய ஆமைக்கு அறிவுறுத்துங்கள்! உங்களுக்கு எத்தனை நாடுகள் தெரியும்?
   tutorial_robomind_shortdescription: மெய்நிகர் ரோபோவிற்கு குறியீட்டை எழுதவும்.
-  tutorial_scratchanimwork_shortdescription: ஸ்க்ரேட்ச்க்கு மாணவர்களை அறிமுகப்படுத்துவதற்கான
-    ஒரு பட்டறை வழிகாட்டி.
   tutorial_adventureq_shortdescription: நிரலாக்க தர்க்கங்களை அறிய நிரலாக்க தொகுதிகள்
     (உடல் அல்லது விளையாட்டில்) பயன்படுத்தவும்.
   tutorial_khan-es_shortdescription: ஜாவாஸ்கிரிப்டில் வரைய கற்றுக்கொள்ளுங்கள்
@@ -2212,7 +2187,6 @@ ta:
   tutorial_kfr_shortdescription: ஜாவாஸ்கிரிப்டில் வரைய கற்றுக்கொள்ளுங்கள்
   tutorial_app-inventor_shortdescription: உங்கள் சொந்த பயன்பாட்டை உருவாக்கவும். (Android
     மட்டும்)
-  tutorial_bits_shortdescription: பிட் மூலம் பிட் நகர்த்து!
   tutorial_blockly_shortdescription: ஆஃப்லைனில் அறிய ஒரு ZIP கோப்பைப் பதிவிறக்கவும்.
   tutorial_tynker_shortdescription: வேடிக்கையான புதிர்களைத் தீர்ப்பதன் மூலம் குறியீட்டைக்
     கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த விளையாட்டுகளை உருவாக்குங்கள்.
@@ -2220,8 +2194,6 @@ ta:
   tutorial_code-combat_shortdescription: இந்த காவிய நிரலாக்க விளையாட்டில் பைதான் அல்லது
     ஜாவாஸ்கிரிப்ட் ஐ கற்றுக்கொள்ள தோற்கடிக்கவும்!
   tutorial_mky_shortdescription: வாழைப்பழங்களைப் பிடிக்க மாணவர்கள் ஒரு குரங்கைத் திட்டமிடுகிறார்கள்.
-  tutorial_spellcraft_shortdescription: கோட்ஸ்பெல்ஸின் சக்தியைப் பயன்படுத்தி நிகழ்வு-உந்துதல்
-    நிரலாக்கத்தைப் பற்றி அறிக!
   tutorial_pirates_shortdescription: |2-
 
     தெற்கு அரைக்கோளத்தின் படிக நீரில் செல்லவும், உங்கள் புதையல் வரைபடங்களைக் குறிக்கவும், தங்கக் கரையில் இருக்கும் செல்வத்தைக் கண்டறியவும். குறியீட்டு முறையின் அடிப்படைக் கருத்துகளைக் கற்றுக்கொள்ள ஒரு வேடிக்கையான வழி.
@@ -2328,8 +2300,6 @@ ta:
   tutorial_khandata_shortdescription: தரவுடன் விளையாடுவது பிடிக்குமா? ஒரு தரவுத்தளத்தில்
     தரவை எவ்வாறு கையாள்வது மற்றும் உங்கள் சொந்த தனிப்பயன் கடையை உருவாக்குவது எப்படி
     என்பதை அறிக
-  tutorial_robomeshiq_shortdescription: பிரபலமான VEX IQ ரோபோக்களைக் கட்டுப்படுத்த
-    மாணவர்கள் Google Blockly குறியீட்டை எழுதுகிறார்கள்.
   tutorial_googlelogo_shortdescription: உங்கள் கற்பனை மற்றும் ஒரு பிட் குறியீட்டைப்
     பயன்படுத்தி Google லோகோவை உயிர்ப்பிக்கவும்.
   tutorial_playtune_shortdescription: இசை புதிர்களைத் தீர்க்க மற்றும் Android பயன்பாட்டை
@@ -2450,8 +2420,6 @@ ta:
   tutorial_techikb_shortdescription: சுருக்கமாக கோட்லின் அம்சங்கள்
   tutorial_kanostreet_shortdescription: கனோவின் ஸ்ட்ரீட் ஆர்ட் குறியீட்டு சவால்களைக்
     கொண்டு அழகான, தனித்துவமான கலைப்படைப்புகளை உருவாக்கவும்
-  tutorial_nyblebot_shortdescription: குறியீட்டு முறை மேஜிக் - குறியீட்டைக் கொண்டு
-    அற்புதமான விஷயங்களை உருவாக்க குழந்தைகளுக்கு உதவுகிறது.
   tutorial_codemojijs_shortdescription: உண்மையான ஜாவாஸ்கிரிப்ட் கட்டளைகளை மாணவர்கள்
     தட்டச்சு செய்வதற்காக கோட்மோஜி தொடக்க ஜாவாஸ்கிரிப்டை வடிவமைத்தார், இது வெவ்வேறு
     எழுத்துக்களை உயிரூட்டுகிறது.
@@ -2481,7 +2449,6 @@ ta:
   tutorial_gpbpaint_shortdescription: வரைதல் பயன்பாட்டை உருவாக்கி தனிப்பயனாக்கவும்.
   tutorial_cocomarcade_shortdescription: உங்கள் சொந்த ஆர்கேட் பிழைப்பு விளையாட்டை
     உருவாக்கி, உங்கள் நண்பர்களுக்கு சவால் விடுங்கள்!
-  tutorial_techcpp_shortdescription: உங்கள் C ++ 17 குறியீட்டை எளிதாக்க உதவும் 7 அம்சங்கள்
   tutorial_beetik_shortdescription: இசையமைப்பாளர் ஃபிரான்ஸ் லிஸ்டின் இசையை ஹேக் செய்ய
     குறியீட்டைப் பயன்படுத்தவும்.
   tutorial_codedj_shortdescription: ஜாவாஸ்கிரிப்ட் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள்
@@ -2642,8 +2609,6 @@ ta:
     மினி புள்ளிவிவரங்களை கொண்டு செல்ல அதை நிரல் செய்யவும்.
   tutorial_diggindwarf_shortdescription: ஜாவாஸ்கிரிப்டைப் பயன்படுத்தி ரத்தினங்களை
     செல்லவும், தோண்டவும், சேகரிக்கவும் குள்ளர்களுக்கு உங்கள் உதவி தேவை.
-  tutorial_rmedr_shortdescription: பிளாக்லி நிரலாக்கத்தைப் பயன்படுத்தி ஒரு பிரமைக்கு
-    செல்ல ஒரு VEX EDR ரோபோவை நிரல் செய்யவும்.
   tutorial_spheroit_shortdescription: '"அனிமல் டாஸ்!" என்று நாங்கள் அழைக்க விரும்பும்
     உங்கள் சொந்த விலங்கு ஒலி விளையாட்டை உருவாக்கும்போது / பிற நிலைமைகளைப் பற்றி அறிக.'
   tutorial_gameofcodes_shortdescription: உங்கள் அற்புதமான டிராகன் விளையாட்டை உருவாக்கி,
@@ -2662,10 +2627,6 @@ ta:
     அங்கு உயிர்வாழ்வதற்கான முக்கியமான நிலைமைகளையும் கற்பிக்கும் ஒரு திட்ட அடிப்படையிலான
     கற்றல் தொகுதி செவ்வாய் முன்னோடிகள் ஆகும். மாணவர்கள் ஆக்மென்ட் ரியாலிட்டி மற்றும்
     3 டி-பிரிண்ட் காலனி வசதிகளைப் பயன்படுத்தி ஒரு காலனியைக் கட்டுவார்கள்.
-  tutorial_alexaskill_shortdescription: அலெக்சா திறன் புளூபிரிண்ட்களைப் பயன்படுத்தி
-    உங்கள் சொந்த அலெக்சா திறன்களை உருவாக்கவும் - நீங்கள் தேர்ந்தெடுக்கும் அலெக்சா
-    திறனை உருவாக்க குரல், செயற்கை நுண்ணறிவு மற்றும் இயந்திர கற்றல் ஆகியவற்றைப் பற்றி
-    அறிந்து கொள்ளுங்கள்.
   tutorial_bitsboxyak_shortdescription: நண்பர்களுக்கும் குடும்பத்தினருக்கும் மின்னஞ்சல்
     அனுப்பக்கூடிய வாழ்த்து அட்டையை உருவாக்க மாற்றியமைக்கப்பட்ட ஜாவாஸ்கிரிப்ட் குறியீட்டைத்
     தட்டச்சு செய்க. யாக் தாக்குதல்! மாறிகள், இயக்க கட்டளைகள், லூப் செயல்பாடுகள் மற்றும்
@@ -2839,8 +2800,6 @@ ta:
   tutorial_csfirstname_shortdescription: ஒரு பெயரைத் தேர்ந்தெடுத்து குறியீட்டைப் பயன்படுத்தி
     வார்த்தையின் எழுத்துக்களை உயிர்ப்பிக்கவும். புனைப்பெயர், செல்லப்பிராணியின் பெயர்,
     விலங்கு, விளையாட்டு, இடம் அல்லது பொழுதுபோக்கைத் தேர்வுசெய்க.
-  tutorial_obstaclecourse_shortdescription: ஒரு தடையாக ஒரு ரோபோவை வெற்றிகரமாக வழிநடத்தும்
-    ஒரு நிரலைக் குறியிட உங்கள் குழுவுடன் ஒத்துழைக்கவும்.
   tutorial_edisonmove_shortdescription: எடிசன் ரோபோக்கள் மற்றும் பைத்தானை அடிப்படையாகக்
     கொண்ட உரை அடிப்படையிலான நிரலாக்க மொழியான EdPy ஆகியவற்றைப் பயன்படுத்தி உரை அடிப்படையிலான
     நிரலாக்கத்தையும் வரிசைமுறையின் முக்கிய கணக்கீட்டு கருத்தையும் அறிமுகப்படுத்துங்கள்.
@@ -3668,12 +3627,6 @@ ta:
     Scratch programming language and then shows them how to program different styles
     of games. All the necessary art for the games are provided, and students have
     to work out how to connect everything together to make a functioning game.
-  tutorial_roboticfriends_longdescription: முன்பே வரையறுக்கப்பட்ட "ரோபோ சொல்லகராதி"
-    மாணவர்களைப் பயன்படுத்துவதன் மூலம், குறிப்பிட்ட பணிகளை முதலில் விவாதிக்காமல் ஒருவருக்கொருவர்
-    எவ்வாறு வழிநடத்துவது என்பதைக் கண்டுபிடிப்பார்கள். இந்த பாடம் குழந்தைகளுக்கு சின்னங்களுக்கும்
-    செயல்களுக்கும் இடையிலான தொடர்பையும், பிழைத்திருத்தத்தின் விலைமதிப்பற்ற திறனையும்
-    கற்பிக்கிறது. "எனது ரோபோடிக் நண்பர்கள்" குழு செயல்பாடாக சிறப்பாக செயல்படுகிறது
-    மற்றும் வகுப்பறை பயன்பாட்டிற்கான ஆசிரியர் பணிப்புத்தகத்தையும் உள்ளடக்கியது.
   tutorial_sjforest_longdescription: '"நான் ஒரு பயமுறுத்தும் வனத்தை உருவாக்க முடியுமா?"
     ஸ்க்ராட்ச்ஜரின் மேம்பட்ட அம்சங்களைப் பற்றி அறிந்துகொள்வதற்கும் மாஸ்டர் செய்வதற்கும்
     நிரலாக்கத்தில் சில முன் அனுபவங்களைக் கொண்ட இரண்டாம் வகுப்பு முதல் மழலையர் பள்ளியில்
@@ -3879,8 +3832,6 @@ ta:
   tutorial_vidcodeio_longdescription: இந்த பயிற்சியில், நிரலாக்கத்துடன் கணித சமன்பாட்டைத்
     தீர்ப்பதன் மூலம் கணிதத்தைப் பற்றி ஏற்கனவே அறிந்தவற்றுடன் இது எவ்வாறு தொடர்புடையது
     என்பதை உங்கள் மாணவர்களுடன் நீங்கள் நடத்துவீர்கள்.
-  tutorial_besttech_longdescription: கடந்த சில தசாப்தங்களாக மாணவர்கள் முக்கியமான தொழில்நுட்ப
-    கண்டுபிடிப்புகளைப் பற்றி அறிந்து கொள்வார்கள்.
   tutorial_tlcbrain_longdescription: உயிரியல் அமைப்புகளைப் புரிந்துகொள்ள உதவும் கணக்கீட்டு
     மாடலிங் (கணக்கீட்டு சிந்தனையின் முக்கிய பகுதி) எவ்வாறு பயன்படுத்தப்படலாம் என்பதை
     இந்த செயல்பாடு ஆராய்கிறது - இங்கே நியூரான்கள். கணினிகளை நிரல் செய்வதற்கான புதிய
@@ -3913,13 +3864,6 @@ ta:
     எனவே குறைந்த சேமிப்பிடத்தை எடுத்துக் கொள்ளுங்கள் - ஆனால் அவற்றை நீங்கள் திரும்பப்
     பெற முடியுமா! படத்தை திரும்பப் பெற ஒவ்வொரு பிரதிநிதித்துவத்திற்கும் அதன் சொந்த
     வழிமுறை தேவை.
-  tutorial_arduino_longdescription: நீங்கள் பொத்தான்களை அழுத்தும்போது பொம்மைகள் சத்தம்
-    மற்றும் ஒளிரும் விளக்குகளை எவ்வாறு உருவாக்குகின்றன என்று எப்போதாவது ஆச்சரியப்படுகிறீர்களா?
-    மைக்ரோகண்ட்ரோலர்கள் மற்றும் சுற்றுகள் எல்லா வகையான அன்றாட பொருட்களிலும் பயன்படுத்தப்படுகின்றன.
-    ரிமோட் கண்ட்ரோல்ட் கார்கள் முதல் ரோபோக்கள் மற்றும் ட்ரோன்கள் வரை. வீதி விளக்குகள்
-    சென்சார்களைப் பயன்படுத்தி சூரியன் மறையும் போது தீர்மானிக்க, ஒரு கார் ஸ்டீரியோவின்
-    தொகுதி குமிழ் ஒரு மைக்ரோகண்ட்ரோலர் மூலம் எதிர்ப்பை சரிசெய்கிறது. அவர்கள் எல்லா
-    இடங்களிலும் இருக்கிறார்கள்!
   tutorial_introrobo_longdescription: இந்த பாடத்தில், ரோபோடிக்ஸ் மற்றும் புரோகிராமிங்
     யோசனைகளை அறிமுகப்படுத்தும்போது மாணவர்கள் டாஷ் மற்றும் டாட் பற்றி அறிந்து கொள்வார்கள்.
     ரோபோ என்றால் என்ன, தங்களைச் சுற்றியுள்ள உலகத்தை அவர்கள் எப்படி உணருகிறார்கள்,
@@ -4012,9 +3956,6 @@ ta:
     மற்றும் கணக்கீட்டு மாடலிங் எவ்வாறு பயன்படுத்தப்படலாம் என்பதைக் காட்டுகிறது. 'பன்ச்
     கார்டு தேடல்' செயல்பாட்டுடன் இணைந்து இது ஆரம்பகால கணினிகளால் பயன்படுத்தப்படும்
     ஒரு பிளவு மற்றும் வெற்றி வழிமுறையை அறிமுகப்படுத்துகிறது.
-  tutorial_oralhist_longdescription: கம்ப்யூட்டிங் கல்வியாளர்கள் வாய்வழி வரலாறு திட்டம்
-    என்பது சி.இ.ஓ.எச்.பி சேகரிப்புடன் இணைக்கப்பட்ட நேர்காணல்கள் மற்றும் கற்பித்தல்
-    பொருட்கள் மற்றும் கருவிகளின் தொகுப்பாகும்
   tutorial_tlcmicro_longdescription: இந்த வீடியோவை மனித கணினி தொடர்புக்கு (HCI) பொதுவான
     அறிமுகமாகப் பயன்படுத்தலாம், குறிப்பாக பல கேஜெட்டுகள் தேவையை விட ஏன் பயன்படுத்த
     வேண்டும். வடிவமைப்பு ஒரு வித்தியாசத்தை ஏற்படுத்துகிறது மற்றும் இடைமுகங்கள் பயன்படுத்த
@@ -4076,11 +4017,6 @@ ta:
     மூலம் நிரலாக்கத்தின் அடிப்படைகளைக் கற்றுக்கொள்கிறார்கள். ஆன்லைன் பாடநெறி குறுகிய
     விளக்கக்காட்சிகள், திரைப்படங்கள், வினாடி வினாக்கள் மற்றும் நிரலாக்க பயிற்சிகளுக்கு
     உதவ தானியங்கி வழிகாட்டுதல் / குறிப்புகள் ஆகியவற்றைக் கொண்டுள்ளது.
-  tutorial_scratchanimwork_longdescription: 'இந்த வழிகாட்டி கீறலைப் பயன்படுத்தி ஒரு
-    மணி நேர பட்டறைக்கு வழிநடத்துவதற்கான யோசனைகளை வழங்குகிறது. மாணவர்கள் தங்கள் பெயர்களை
-    அல்லது பிடித்த வார்த்தையை உயிரூட்டும்போது குறியீட்டுடன் அனுபவத்தைப் பெறுவார்கள்.
-    இந்த கீறல் டுடோரியலுடன் பயன்படுத்த இந்த கல்வியாளர் வழிகாட்டி வடிவமைக்கப்பட்டுள்ளது:
-    scratch.mit.edu/name'
   tutorial_adventureq_longdescription: Q உடன் சாகசம் என்பது குழு அமைப்பில் நிரலாக்க
     தர்க்கத்தை அறிமுகப்படுத்த ஆசிரியர்கள் (அல்லது யாராவது) பயன்படுத்த ஒரு பாட திட்டமாகும்.
     இந்த செயல்பாடு குழந்தைகள் முடிக்க வெவ்வேறு தேடல்களைக் கொண்டுள்ளது. Q தனது வன சாகசத்தில்
@@ -4107,11 +4043,6 @@ ta:
     சொந்த பயன்பாடுகளை உருவாக்கத் தயாராகிறது. உங்கள் சொந்த பயன்பாட்டு படைப்புகளை உங்கள்
     நண்பர்களுடன் பகிர்வதை கற்பனை செய்து பாருங்கள்! இந்த நடவடிக்கைகள் தனிநபர்களுக்கும்,
     முன்னணி வகுப்புகளுக்கு ஆசிரியர்களுக்கும் ஏற்றது.
-  tutorial_bits_longdescription: பிட் ஒரு சிறிய, மிகவும் துணிச்சலான LEGO® ரோபோ, ஆனால்
-    எல்லா சிறிய உயிரினங்களையும் போலவே, சில சமயங்களில் பிட் அதன் திட்டங்களை சரியாகப்
-    பெற முடியாது. எந்த திட்டங்கள் தேவை என்பதைக் கண்டுபிடிப்பதன் மூலம் சவால்களைத் தீர்க்க
-    பிட் உதவலாம். பிட் என்ன செய்ய வேண்டும் என்று சொல்லும் சிறிய நடத்தை தொகுதிகளின்
-    வரிசையை உருவாக்குவதன் மூலம் இதைச் செய்கிறீர்கள்.
   tutorial_blockly_longdescription: மெதுவான (அல்லது இல்லாத) இணைய அணுகல் உள்ள கணினிகள்
     கிடைத்ததா? பிளாக்லி கேம்களின் ஆஃப்லைன் பதிப்பைப் பதிவிறக்குங்கள் - ஒரு 3MB ZIP
     கோப்பை எந்த கணினியிலும் ஏற்றலாம் அல்லது மெமரி ஸ்டிக்கிலிருந்து பயன்படுத்தலாம்.
@@ -4131,12 +4062,6 @@ ta:
     தளம் உங்களுக்கு தேவையான அனைத்து வழிமுறைகளையும் குறிப்புகளையும் வழங்கும், மேலும்
     நட்சத்திர மதிப்பெண்களை உங்களுக்கு வழங்கும். குறியீட்டை எழுதுங்கள். பனானாஸைப் பிடிக்கவும்.
     உலகை காப்பாற்று.
-  tutorial_spellcraft_longdescription: எழுத்துகளின் சக்தியைப் பயன்படுத்தி நிகழ்வு-உந்துதல்
-    நிரலாக்கத்தைப் பற்றி அறிக! கோட்ஸ்பெல்ஸ் மூலம், கூகிளின் சுலபமாக பயன்படுத்தக்கூடிய
-    தடுப்பு குறியீட்டு இடைமுகம் அல்லது உள்ளமைக்கப்பட்ட ஜாவாஸ்கிரிப்ட் உரை திருத்தியைப்
-    பயன்படுத்தி உங்கள் சொந்த வழிகாட்டி எழுத்துக்களை வடிவமைத்து உருவாக்கலாம். எழுத்துப்பிழை
-    உருவாக்கம் மூலம், மாணவர்கள் நிகழ்வுகளைச் சுற்றி குறியீட்டை எவ்வாறு எழுதுவது என்பதைக்
-    கற்றுக்கொள்வார்கள் மற்றும் நிகழ்வு-உந்துதல் குறியீட்டு கருத்தாக்கங்களை நன்கு அறிவார்கள்.
   tutorial_pirates_longdescription: கேப்டன் ஹேக் புதையலைத் தேடும் ஒரு கொள்ளையர். அவர்
     புதையல் வரைபடங்களையும் எழுதுகிறார், மேலும் குறியீடு எழுதுவது போன்றவற்றை எழுதுகிறார்.
     அவர் (பிளேயர்) இதற்காக "பைரேட் குறியீடு" பயன்படுத்துகிறார். இது ஒரு குறியீட்டு
@@ -4364,12 +4289,6 @@ ta:
     உங்கள் சொந்த வாழ்த்து அட்டையை உருவாக்குவதன் மூலம் முடிக்கின்றன.'
   tutorial_khandata_longdescription: 'கான் அகாடமி: தரவுத்தளத்தில் தரவைக் கையாளவும்,
     உங்கள் சொந்த தனிப்பயன் கடையை உருவாக்கவும் தரவுத்தளங்கள் உங்களுக்குக் கற்பிக்கின்றன.'
-  tutorial_robomeshiq_longdescription: பிரபலமான VEX IQ ரோபோக்களைக் கட்டுப்படுத்த மாணவர்கள்
-    Google Blockly குறியீட்டை எழுதுகிறார்கள். அவர்கள் ஒரு மெய்நிகர் ரோபோ அல்லது அவர்கள்
-    உருவாக்கிய ஒரு உண்மையான VEX IQ ரோபோவிற்கான குறியீட்டை எழுத தேர்வு செய்யலாம், மேலும்
-    இரண்டு விருப்பங்களும் ஒரே வலை அடிப்படையிலான மேம்பாட்டு இடைமுகத்தில் கிடைக்கின்றன.
-    அடிப்படை ரோபோ இயக்கம் மற்றும் சென்சார் மற்றும் வெளியீட்டு சாதனத்தை எவ்வாறு பயன்படுத்துவது
-    என்பது பற்றி மாணவர்கள் கற்றுக்கொள்கிறார்கள். இது எளிதானது மற்றும் வேடிக்கையானது.
   tutorial_googlelogo_longdescription: குறியீட்டைப் பயன்படுத்தி Google லோகோவை உயிர்ப்பிக்க
     உங்கள் படைப்பாற்றல் மற்றும் கற்பனையைப் பயன்படுத்தவும். எழுத்துக்களை நடனமாடுங்கள்,
     ஒரு கதையைச் சொல்லுங்கள் அல்லது விளையாட்டை உருவாக்கவும். கீறல் மற்றும் சிஎஸ் முதல்,
@@ -4654,18 +4573,6 @@ ta:
     உண்மையான நிரலாக்க மொழியை உள்ளுணர்வு மற்றும் ஈடுபாட்டுடன் பயன்படுத்தும் போது தயாரிப்பாளர்கள்
     கணினி அறிவியல் கொள்கைகளை கற்றுக்கொள்வார்கள். எங்கள் ஆசிரியர் வளங்கள் மற்றும் வழிகாட்டப்பட்ட
     உள்ளடக்கம் மூலம், எல்லோரும் வேடிக்கையாகப் பெறலாம்.
-  tutorial_nyblebot_longdescription: பூகி பாட் ஒரு வேடிக்கையான மற்றும் ஈர்க்கக்கூடிய
-    குறியீட்டு பயன்பாடாகும். வாழ்க்கை மற்றும் ஆற்றலுடன் வெடிக்கும் இந்த 3D பயன்பாடு
-    கூகிளின் காட்சி நிரலாக்க மொழியைத் தடுக்கும் வகையில் கணினி நிரலாக்கத்தின் அடிப்படைகளை
-    குழந்தைகளுக்கு அறிமுகப்படுத்தும். பூகி பாட் ஒரு நடனம் ரோபோ, அவர் நடன நகர்வுகள்
-    செய்ய திட்டமிடப்படலாம். பயன்பாட்டு அம்சங்கள் (முழு பதிப்பில் கிடைக்கும் அனைத்து
-    அம்சங்களும்) குறியீட்டுத் தொகுதிகளுடன் குறியீட்டைக் கற்றுக் கொள்ளுங்கள், குறியீட்டைக்
-    கொண்டு உங்கள் சொந்த நடனத்தை உருவாக்கவும், பல தனித்துவமான நடன தடங்களிலிருந்து தேர்வு
-    செய்யவும், அறையை ஒரு நவநாகரீக கட்சி மண்டலமாக மாற்றவும், மேடையில் அதிர்ச்சியூட்டும்
-    சிறப்பு விளைவுகளைச் சேர்க்கவும், நாணயங்களை சம்பாதிக்கவும் நிரலாக்க கட்டுமானங்களைக்
-    கற்றுக் கொள்ளும்போது, அறையை அருமையான விஷயங்களுடன் அலங்கரிக்கவும், மறைக்கப்பட்ட
-    அம்சங்கள் நிறைந்த ஒரு ஊடாடும் அறையில் விளையாடவும் ஆராயவும், உங்கள் அற்புதமான படைப்பின்
-    வீடியோவைப் பதிவுசெய்து சேமிக்கவும்.
   tutorial_codemojijs_longdescription: ஜாவாஸ்கிரிப்ட் தொடங்கி, மாணவர்களின் எளிய கட்டளைகளை
     தட்டச்சு செய்ய வடிவமைக்கப்பட்டுள்ளது, இது கதாபாத்திரங்களின் செயல்களில் பெரிய தாக்கத்தை
     ஏற்படுத்தும். மாணவர்கள் கட்டளைகளை தட்டச்சு செய்வார்கள், அவை எழுத்துக்களை பேக்ஃப்ளிப்களில்
@@ -4723,9 +4630,6 @@ ta:
     பைதான் அல்லது ஜாவாஸ்கிரிப்டைப் பயன்படுத்தி செயல்பாடுகள் மற்றும் நிகழ்வுகள் போன்ற
     மேம்பட்ட குறியீட்டு கருத்துக்களைத் துலக்குங்கள், பின்னர் உங்கள் சொந்த ஆர்கேட்
     உயிர்வாழும் விளையாட்டை உருவாக்க அந்த திறன்களைப் பயன்படுத்துங்கள்!
-  tutorial_techcpp_longdescription: ஒவ்வொரு சி ++ புரோகிராமரும் குறியீட்டிற்கான எளிய,
-    தூய்மையான மற்றும் வெளிப்படையான வழிகளை நோக்கமாகக் கொண்டுள்ளது. இந்த எளிமையான பயிற்சி
-    உங்கள் குறியீட்டை இனிமையாக்கும் 7 குளிர் சி ++ 17 அம்சங்களைத் தேர்ந்தெடுத்தது.
   tutorial_beetik_longdescription: இந்த செயல்பாட்டில், இசையமைப்பாளர் ஃபிரான்ஸ் லிஸ்ஸ்டால்
     ஒரு பிரபலமான பகுதியின் ஒரு சிறிய பகுதியை மாணவர்கள் புனரமைக்கின்றனர். மாணவர்கள்
     சுழல்களை எவ்வாறு உட்பொதிப்பது மற்றும் கணினி அறிவியல் மற்றும் இசை இரண்டிலும் எவ்வாறு
@@ -5128,10 +5032,6 @@ ta:
   tutorial_diggindwarf_longdescription: ரத்தினங்களை செல்லவும், தோண்டவும், சேகரிக்கவும்
     குள்ளர்களுக்கு உங்கள் உதவி தேவை! பிரமைகள் மற்றும் புதிர்கள் மூலம் உங்கள் குள்ளனை
     வழிநடத்த ஜாவாஸ்கிரிப்டை எவ்வாறு பயன்படுத்துவது என்பதை அறிக.
-  tutorial_rmedr_longdescription: ரோபோ மெஷ் ஸ்டுடியோவில் பிளாக்லியைப் பயன்படுத்தி,
-    ஒரு VEX EDR ரோபோவை "மிமிக்" ஆன்லைனில் நிரல் செய்து, பிரமை வழியாக இயங்குவதைப் பாருங்கள்.
-    மாணவர்கள் அடிப்படை ரோபோ இயக்கம் பற்றியும், மூன்று சென்சார்கள் மற்றும் ஒரு வெளியீட்டை
-    தங்கள் நிரலாக்கத்தில் எவ்வாறு இணைப்பது என்பதையும் அறிந்து கொள்கிறார்கள்.
   tutorial_spheroit_longdescription: ஒரு வேடிக்கையான விளையாட்டை உருவாக்குவதன் மூலம்
     உங்கள் முதல் "if / then, else" நிலையை அறிந்து கொள்ளுங்கள், அங்கு நீங்கள் ஸ்பீரோவை
     எறிந்து விலங்குகளின் ஒலிகளை யூகிக்கிறீர்கள். நீங்கள் பிளாக்ஸ் 1 ஐ முடித்த பிறகு
@@ -5203,12 +5103,6 @@ ta:
     அங்கு உயிர்வாழ்வதற்கான முக்கியமான நிலைமைகளையும் கற்பிக்கும் ஒரு திட்ட அடிப்படையிலான
     கற்றல் தொகுதி செவ்வாய் முன்னோடிகள் ஆகும். மாணவர்கள் ஆக்மென்ட் ரியாலிட்டி மற்றும்
     3 டி-பிரிண்ட் காலனி வசதிகளைப் பயன்படுத்தி ஒரு காலனியைக் கட்டுவார்கள்.
-  tutorial_alexaskill_longdescription: அலெக்சா திறன் புளூபிரிண்ட்களைப் பயன்படுத்தி
-    உங்கள் சொந்த அலெக்சா திறன்களை உருவாக்கவும் - நீங்கள் தேர்ந்தெடுக்கும் அலெக்சா
-    திறனை உருவாக்க குரல், செயற்கை நுண்ணறிவு மற்றும் இயந்திர கற்றல் ஆகியவற்றைப் பற்றி
-    அறிந்து கொள்ளுங்கள். அலெக்ஸா ஒரு நகைச்சுவையைச் சொல்லலாம், ஒரு பாடலைப் பாடலாம்
-    அல்லது ஒரு கதையைப் பகிர்ந்து கொள்ளலாம். (அமேசான் உள்நுழைவு தேவை) தனிநபர்கள் அல்லது
-    ஆசிரியர் முன்னணி மூலம் செயல்பாட்டை முடிக்க முடியும்.
   tutorial_bitsboxyak_longdescription: நண்பர்களுக்கும் குடும்பத்தினருக்கும் மின்னஞ்சல்
     அனுப்பக்கூடிய வாழ்த்து அட்டையை உருவாக்க மாற்றியமைக்கப்பட்ட ஜாவாஸ்கிரிப்ட் குறியீட்டைத்
     தட்டச்சு செய்க. யாக் தாக்குதல்! மாறிகள், இயக்க கட்டளைகள், லூப் செயல்பாடுகள் மற்றும்
@@ -5469,8 +5363,6 @@ ta:
   tutorial_csfirstname_longdescription: ஒரு பெயரைத் தேர்ந்தெடுத்து குறியீட்டைப் பயன்படுத்தி
     வார்த்தையின் எழுத்துக்களை உயிர்ப்பிக்கவும். புனைப்பெயர், செல்லப்பிராணியின் பெயர்,
     விலங்கு, விளையாட்டு, இடம் அல்லது பொழுதுபோக்கைத் தேர்வுசெய்க.
-  tutorial_obstaclecourse_longdescription: ஒரு தடையாக ஒரு ரோபோவை வெற்றிகரமாக வழிநடத்தும்
-    ஒரு நிரலைக் குறியிட உங்கள் குழுவுடன் ஒத்துழைக்கவும்.
   tutorial_edisonmove_longdescription: எடிசன் ரோபோக்கள் மற்றும் பைத்தானை அடிப்படையாகக்
     கொண்ட உரை அடிப்படையிலான நிரலாக்க மொழியான EdPy ஆகியவற்றைப் பயன்படுத்தி உரை அடிப்படையிலான
     நிரலாக்கத்தையும் வரிசைமுறையின் முக்கிய கணக்கீட்டு கருத்தையும் அறிமுகப்படுத்துங்கள்.
@@ -6501,7 +6393,6 @@ ta:
   tutorial_ticklep_language: சீன (பாரம்பரிய), டேனிஷ், ஆங்கிலம், பிரஞ்சு, ஜப்பானிய
   tutorial_bbot_language: டச்சு, சுவோமி, ஆங்கிலம்
   tutorial_scratchg_language: ஆங்கிலம் மட்டும்
-  tutorial_roboticfriends_language: ஆங்கிலம், ஸ்பானிஷ்
   tutorial_sjforest_language: ஆங்கிலம் மட்டும்
   tutorial_sjgreet_language: ஆங்கிலம் மட்டும்
   tutorial_sjsunset_language: ஆங்கிலம் மட்டும்
@@ -6546,7 +6437,6 @@ ta:
   tutorial_tickles_language: பல
   tutorial_ozogame_language: ஆங்கிலம் மட்டும்
   tutorial_vidcodeio_language: ஆங்கிலம் மட்டும்
-  tutorial_besttech_language: ஆங்கிலம் மட்டும்
   tutorial_tlcbrain_language: ஆங்கிலம் மட்டும்
   tutorial_hopquiz_language: ஆங்கிலம் மட்டும்
   tutorial_unfortunate_language: ஆங்கிலம் மட்டும்
@@ -6554,7 +6444,6 @@ ta:
   tutorial_elaseq_language: ஆங்கிலம் மட்டும்
   tutorial_bbcmathi_language: ஆங்கிலம் மட்டும்
   tutorial_tlcpixel_language: ஆங்கிலம் மட்டும்
-  tutorial_arduino_language: ஆங்கிலம் மட்டும்
   tutorial_introrobo_language: ஆங்கிலம் மட்டும்
   tutorial_tlcinvis_language: ஆங்கிலம் மட்டும்
   tutorial_tlcjflap_language: ஆங்கிலம் மட்டும்
@@ -6574,7 +6463,6 @@ ta:
   tutorial_tlcmind_language: ஆங்கிலம் மட்டும்
   tutorial_tlctelebot_language: ஆங்கிலம் மட்டும்
   tutorial_tlcaus_language: ஆங்கிலம் மட்டும்
-  tutorial_oralhist_language: ஆங்கிலம் மட்டும்
   tutorial_tlcmicro_language: ஆங்கிலம் மட்டும்
   tutorial_imathematician_language: ஆங்கிலம் மட்டும்
   tutorial_tlcmagic_language: ஆங்கிலம் மட்டும்
@@ -6590,7 +6478,6 @@ ta:
   tutorial_tynkercan_language: ஆங்கிலம் மட்டும்
   tutorial_grokflags_language: ஆங்கிலம் மட்டும்
   tutorial_robomind_language: ஆங்கிலம், டச்சு
-  tutorial_scratchanimwork_language: ஆங்கிலம் மட்டும்
   tutorial_adventureq_language: சீன (எளிமைப்படுத்தப்பட்ட), ஆங்கிலம்
   tutorial_khan-es_language: ஸ்பானிஷ்
   tutorial_kpt_language: போர்த்துகீசியம்
@@ -6598,13 +6485,11 @@ ta:
   tutorial_khe_language: ஹீப்ரு
   tutorial_kfr_language: பிரஞ்சு
   tutorial_app-inventor_language: ஆங்கிலம் மட்டும்
-  tutorial_bits_language: ஆங்கிலம், ஜெர்மன்
   tutorial_blockly_language: ஆங்கிலம், ஸ்பானிஷ், பிரஞ்சு, 40 பேர்
   tutorial_tynker_language: ஆங்கிலம் மட்டும்
   tutorial_baypt_language: போர்த்துகீசியம்
   tutorial_code-combat_language: பல
   tutorial_mky_language: பல
-  tutorial_spellcraft_language: ஆங்கிலம் மட்டும்
   tutorial_pirates_language: ஆங்கிலம், டேனிஷ், ஜெர்மன்
   tutorial_csfirst_language: ஆங்கிலம் மட்டும்
   tutorial_loopedy_language: ஆங்கிலம் மட்டும்
@@ -6678,7 +6563,6 @@ ta:
   tutorial_soloweb_language: ஆங்கிலம் மட்டும்
   tutorial_khanweb_language: செக், ஆங்கிலம், போர்த்துகீசியம் (பிரேசில்), ஸ்பானிஷ்
   tutorial_khandata_language: செக், ஆங்கிலம், போர்த்துகீசியம் (பிரேசில்), ஸ்பானிஷ்
-  tutorial_robomeshiq_language: ஆங்கிலம் மட்டும்
   tutorial_googlelogo_language: ஆங்கிலம் மட்டும்
   tutorial_playtune_language: ஆங்கிலம் மட்டும்
   tutorial_computeit_language: ஆங்கிலம், பிரஞ்சு, ஜெர்மன், இந்தோனேசிய, இத்தாலியன்,
@@ -6740,7 +6624,6 @@ ta:
   tutorial_stemcod_language: ஆங்கிலம் மட்டும்
   tutorial_techikb_language: ஆங்கிலம் மட்டும்
   tutorial_kanostreet_language: ஆங்கிலம் மட்டும்
-  tutorial_nyblebot_language: ஆங்கிலம் மட்டும்
   tutorial_codemojijs_language: ஆங்கிலம் மட்டும்
   tutorial_techapf_language: ஆங்கிலம் மட்டும்
   tutorial_techfpjs_language: ஆங்கிலம் மட்டும்
@@ -6756,7 +6639,6 @@ ta:
   tutorial_gpbcircle_language: ஆங்கிலம் மட்டும்
   tutorial_gpbpaint_language: ஆங்கிலம் மட்டும்
   tutorial_cocomarcade_language: பல
-  tutorial_techcpp_language: ஆங்கிலம் மட்டும்
   tutorial_beetik_language: ஆங்கிலம், ஸ்பானிஷ்
   tutorial_codedj_language: ஆங்கிலம், பிரஞ்சு
   tutorial_rgadvan_language: ஆங்கிலம் மட்டும்
@@ -6832,7 +6714,6 @@ ta:
   tutorial_ifly_language: ஆங்கிலம் மட்டும்
   tutorial_idowedo_language: ஆங்கிலம் மட்டும்
   tutorial_diggindwarf_language: ஆங்கிலம் மட்டும்
-  tutorial_rmedr_language: ஆங்கிலம் மட்டும்
   tutorial_spheroit_language: ஆங்கிலம் மட்டும்
   tutorial_gameofcodes_language: ஆங்கிலம், போர்த்துகீசியம், ரஷ்ய மற்றும் ஸ்பானிஷ்
   tutorial_blocklygames_language: ஆங்கிலம், ஸ்பானிஷ், பிரஞ்சு, 40 பேர்
@@ -6844,7 +6725,6 @@ ta:
   tutorial_bcjs1_language: ஆங்கிலம் மட்டும்
   tutorial_bcjs2_language: ஆங்கிலம் மட்டும்
   tutorial_3dbearmars_language: English
-  tutorial_alexaskill_language: English
   tutorial_bitsboxyak_language: English
   tutorial_blockscadbargraphs_language: சீன (எளிமைப்படுத்தப்பட்ட), ஆங்கிலம், பிரஞ்சு,
     ஜெர்மன், ஜப்பானிய, நோர்வே (போக்மால்), செர்பியன் (சிரிலிக்), ஸ்பானிஷ் (ஸ்பெயின்),
@@ -6912,7 +6792,6 @@ ta:
   tutorial_codinismhero_language: English
   tutorial_discovery_language: ஆங்கிலம், ஸ்பானிஷ் (மெக்சிகோ)
   tutorial_csfirstname_language: ஆங்கிலம், ஸ்பானிஷ் (மெக்சிகோ)
-  tutorial_obstaclecourse_language: சீன, ஆங்கிலம், பிரஞ்சு, ஜெர்மன், இத்தாலியன், ஸ்பானிஷ்
   tutorial_edisonmove_language: English
   tutorial_edisonspider_language: English
   tutorial_edisonspotlight_language: English
@@ -7264,7 +7143,6 @@ ta:
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: தரங்கள் 2+
   tutorial_scratchg_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
-  tutorial_roboticfriends_string_detail_grades: அனைத்து வயதினரும்
   tutorial_sjforest_string_detail_grades: முன் வாசகர்-தரம் 5
   tutorial_sjgreet_string_detail_grades: முன் வாசகர்-தரம் 5
   tutorial_sjsunset_string_detail_grades: முன் வாசகர்-தரம் 5
@@ -7309,7 +7187,6 @@ ta:
   tutorial_tickles_string_detail_grades: தரங்கள் 2+
   tutorial_ozogame_string_detail_grades: அனைத்து வயதினரும்
   tutorial_vidcodeio_string_detail_grades: தரங்கள் 2+
-  tutorial_besttech_string_detail_grades: தரங்கள் 9+
   tutorial_tlcbrain_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_hopquiz_string_detail_grades: 'தரங்கள் 6-8 '
   tutorial_unfortunate_string_detail_grades: தரங்கள் 2-5
@@ -7317,7 +7194,6 @@ ta:
   tutorial_elaseq_string_detail_grades: முன் வாசகர்-தரம் 5
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: தரம் 2 - 8
-  tutorial_arduino_string_detail_grades: 'தரங்கள் 6-8 '
   tutorial_introrobo_string_detail_grades: தரங்கள் 2-5
   tutorial_tlcinvis_string_detail_grades: தரங்கள் 2+
   tutorial_tlcjflap_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
@@ -7337,7 +7213,6 @@ ta:
   tutorial_tlcmind_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_tlctelebot_string_detail_grades: தரங்கள் 2+
   tutorial_tlcaus_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
-  tutorial_oralhist_string_detail_grades: தரங்கள் 9+
   tutorial_tlcmicro_string_detail_grades: தரங்கள் 2+
   tutorial_imathematician_string_detail_grades: தரம் 2 - 8
   tutorial_tlcmagic_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
@@ -7351,7 +7226,6 @@ ta:
   tutorial_tynkercan_string_detail_grades: தரங்கள் 2+
   tutorial_grokflags_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_robomind_string_detail_grades: தரம் 2 - 8
-  tutorial_scratchanimwork_string_detail_grades: தரம் 2 - 8
   tutorial_adventureq_string_detail_grades: தரங்கள் 2-5
   tutorial_khan-es_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_kpt_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
@@ -7359,13 +7233,11 @@ ta:
   tutorial_khe_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_kfr_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_app-inventor_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
-  tutorial_bits_string_detail_grades: தரங்கள் 2-5
   tutorial_blockly_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: அனைத்து வயதினரும்
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: தரங்கள் 2+
-  tutorial_spellcraft_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_pirates_string_detail_grades: தரம் 2 - 8
   tutorial_csfirst_string_detail_grades: தரங்கள் 2+
   tutorial_loopedy_string_detail_grades: தரங்கள் 2-5
@@ -7422,7 +7294,6 @@ ta:
   tutorial_soloweb_string_detail_grades: தரங்கள் 9+
   tutorial_khanweb_string_detail_grades: தரங்கள் 2+
   tutorial_khandata_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
-  tutorial_robomeshiq_string_detail_grades: தரங்கள் 2+
   tutorial_googlelogo_string_detail_grades: தரங்கள் 2+
   tutorial_playtune_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_computeit_string_detail_grades: தரங்கள் 2+
@@ -7481,7 +7352,6 @@ ta:
   tutorial_stemcod_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_techikb_string_detail_grades: பல்கலைக்கழகம்
   tutorial_kanostreet_string_detail_grades: தரங்கள் 2-5
-  tutorial_nyblebot_string_detail_grades: தரங்கள் 2-5
   tutorial_codemojijs_string_detail_grades: தரங்கள் 2-5
   tutorial_techapf_string_detail_grades: பல்கலைக்கழகம்
   tutorial_techfpjs_string_detail_grades: பல்கலைக்கழகம்
@@ -7497,7 +7367,6 @@ ta:
   tutorial_gpbcircle_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_gpbpaint_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_cocomarcade_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
-  tutorial_techcpp_string_detail_grades: பல்கலைக்கழகம்
   tutorial_beetik_string_detail_grades: 'தரங்கள் 6-8 '
   tutorial_codedj_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_rgadvan_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
@@ -7570,7 +7439,6 @@ ta:
   tutorial_ifly_string_detail_grades: தரங்கள் 2+
   tutorial_idowedo_string_detail_grades: தரம் 2 - 8
   tutorial_diggindwarf_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
-  tutorial_rmedr_string_detail_grades: தரம் 2 - 8
   tutorial_spheroit_string_detail_grades: தரங்கள் 2+
   tutorial_gameofcodes_string_detail_grades: தரங்கள் 2+
   tutorial_blocklygames_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
@@ -7581,7 +7449,6 @@ ta:
   tutorial_bcjs1_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_bcjs2_string_detail_grades: தரங்கள் 9+
   tutorial_3dbearmars_string_detail_grades: தரம் 2 - 8
-  tutorial_alexaskill_string_detail_grades: தரம் 2 - 8
   tutorial_bitsboxyak_string_detail_grades: தரம் 2 - 8
   tutorial_blockscadbargraphs_string_detail_grades: தரங்கள் 2-5
   tutorial_blockscadbirdhouses_string_detail_grades: தரங்கள் 2-5
@@ -7638,7 +7505,6 @@ ta:
   tutorial_codinismhero_string_detail_grades: தரங்கள் 2+
   tutorial_discovery_string_detail_grades: தரங்கள் 2+
   tutorial_csfirstname_string_detail_grades: தரங்கள் 2+
-  tutorial_obstaclecourse_string_detail_grades: தரங்கள் 2+
   tutorial_edisonmove_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_edisonspider_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_edisonspotlight_string_detail_grades: தரம் 2 - 8
@@ -8006,7 +7872,6 @@ ta:
   tutorial_ticklep_string_platforms: do-not-show
   tutorial_bbot_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_scratchg_string_platforms: அனைத்து நவீன உலாவிகளும்
-  tutorial_roboticfriends_string_platforms: அவிழ்க்கப்பட்டது
   tutorial_sjforest_string_platforms: ஐபாட் பயன்பாடு
   tutorial_sjgreet_string_platforms: ஐபாட் பயன்பாடு
   tutorial_sjsunset_string_platforms: ஐபாட் பயன்பாடு
@@ -8055,7 +7920,6 @@ ta:
   tutorial_ozogame_string_platforms: அனைத்து நவீன உலாவிகள், ஐபாட், ஐபோன், ஆண்ட்ராய்டு
     டேப்லெட், ஆண்ட்ரியட் தொலைபேசி, ஓசோபோட் ரோபோ
   tutorial_vidcodeio_string_platforms: அவிழ்க்கப்பட்டது
-  tutorial_besttech_string_platforms: அவிழ்க்கப்பட்டது
   tutorial_tlcbrain_string_platforms: அவிழ்க்கப்பட்டது
   tutorial_hopquiz_string_platforms: ஐபாட் மற்றும் ஐபோன்
   tutorial_unfortunate_string_platforms: கோடு மற்றும் டாட் ரோபோ
@@ -8064,7 +7928,6 @@ ta:
     டேப்லெட்
   tutorial_bbcmathi_string_platforms: do-not-show
   tutorial_tlcpixel_string_platforms: அவிழ்க்கப்பட்டது
-  tutorial_arduino_string_platforms: Arduino சர்க்யூட் போர்டுகள்
   tutorial_introrobo_string_platforms: ஐபாட், ஆண்ட்ராய்டு டேப்லெட், டாஷ் மற்றும் டாட்
     ரோபோ
   tutorial_tlcinvis_string_platforms: அவிழ்க்கப்பட்டது
@@ -8089,7 +7952,6 @@ ta:
   tutorial_tlcmind_string_platforms: அவிழ்க்கப்பட்டது
   tutorial_tlctelebot_string_platforms: அவிழ்க்கப்பட்டது
   tutorial_tlcaus_string_platforms: அவிழ்க்கப்பட்டது
-  tutorial_oralhist_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_tlcmicro_string_platforms: அவிழ்க்கப்பட்டது
   tutorial_imathematician_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_tlcmagic_string_platforms: அவிழ்க்கப்பட்டது
@@ -8109,7 +7971,6 @@ ta:
     உகந்ததாக)
   tutorial_robomind_string_platforms: இன்டர்நெட் எக்ஸ்ப்ளோரர் 11, மைக்ரோசாஃப்ட் எட்ஜ்,
     குரோம், பயர்பாக்ஸ், சஃபாரி, ஆண்ட்ராய்டு டேப்லெட், ஐபாட்
-  tutorial_scratchanimwork_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_adventureq_string_platforms: iPad
   tutorial_khan-es_string_platforms: இன்டர்நெட் எக்ஸ்ப்ளோரர் 11, மைக்ரோசாஃப்ட் எட்ஜ்,
     குரோம், பயர்பாக்ஸ், சஃபாரி
@@ -8122,13 +7983,11 @@ ta:
   tutorial_kfr_string_platforms: இன்டர்நெட் எக்ஸ்ப்ளோரர் 11, மைக்ரோசாஃப்ட் எட்ஜ்,
     குரோம், பயர்பாக்ஸ், சஃபாரி
   tutorial_app-inventor_string_platforms: 'ஆண்ட்ராய்டு '
-  tutorial_bits_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_blockly_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_tynker_string_platforms: do-not-show
   tutorial_baypt_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_code-combat_string_platforms: do-not-show
   tutorial_mky_string_platforms: அனைத்து நவீன உலாவிகளும்
-  tutorial_spellcraft_string_platforms: விண்டோஸ்
   tutorial_pirates_string_platforms: இன்டர்நெட் எக்ஸ்ப்ளோரர் 11, மைக்ரோசாஃப்ட் எட்ஜ்,
     குரோம், பயர்பாக்ஸ், சஃபாரி, ஆண்ட்ராய்டு டேப்லெட், ஐபாட், ஆண்ட்ராய்டு போன், ஐபோன்
   tutorial_csfirst_string_platforms: அனைத்து நவீன உலாவிகளும்
@@ -8200,8 +8059,6 @@ ta:
     தொலைபேசி, ஐபாட், ஐபோன்
   tutorial_khanweb_string_platforms: அனைத்து நவீன உலாவிகள், Android டேப்லெட்
   tutorial_khandata_string_platforms: அனைத்து நவீன உலாவிகளும்
-  tutorial_robomeshiq_string_platforms: இன்டர்நெட் எக்ஸ்ப்ளோரர் 11, குரோம், பயர்பாக்ஸ்,
-    வெக்ஸ் ஐக்யூ ரோபோக்கள்
   tutorial_googlelogo_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_playtune_string_platforms: குரோம், பயர்பாக்ஸ், சஃபாரி
   tutorial_computeit_string_platforms: அனைத்து நவீன உலாவிகளும்
@@ -8281,7 +8138,6 @@ ta:
   tutorial_techikb_string_platforms: அனைத்து நவீன உலாவிகள், Android டேப்லெட், ஐபாட்,
     விண்டோஸ் தொலைபேசி, Android தொலைபேசி, ஐபோன்
   tutorial_kanostreet_string_platforms: அனைத்து நவீன உலாவிகளும்
-  tutorial_nyblebot_string_platforms: Android டேப்லெட், ஐபாட், Android தொலைபேசி, ஐபோன்
   tutorial_codemojijs_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_techapf_string_platforms: அனைத்து நவீன உலாவிகள், Android டேப்லெட், ஐபாட்,
     விண்டோஸ் தொலைபேசி, Android தொலைபேசி, ஐபோன்
@@ -8303,8 +8159,6 @@ ta:
   tutorial_gpbpaint_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_cocomarcade_string_platforms: இன்டர்நெட் எக்ஸ்ப்ளோரர் 11, மைக்ரோசாஃப்ட்
     எட்ஜ், குரோம், பயர்பாக்ஸ்
-  tutorial_techcpp_string_platforms: அனைத்து நவீன உலாவிகள், Android டேப்லெட், ஐபாட்,
-    விண்டோஸ் தொலைபேசி, Android தொலைபேசி, ஐபோன்
   tutorial_beetik_string_platforms: குரோம், பயர்பாக்ஸ், ஆண்ட்ராய்டு டேப்லெட், ஐபாட்
   tutorial_codedj_string_platforms: குரோம், பயர்பாக்ஸ், சஃபாரி, ஆண்ட்ராய்டு டேப்லெட்,
     ஐபாட்
@@ -8411,7 +8265,6 @@ ta:
   tutorial_idowedo_string_platforms: அனைத்து நவீன உலாவிகள், Android டேப்லெட், ஐபாட்,
     WeDo
   tutorial_diggindwarf_string_platforms: குரோம், பயர்பாக்ஸ், சஃபாரி
-  tutorial_rmedr_string_platforms: அனைத்து நவீன உலாவிகளும், வெக்ஸ் ஈடிஆர் ரோபோக்கள்
   tutorial_spheroit_string_platforms: ஐபாட், ஆண்ட்ராய்டு டேப்லெட், ஐபோன், ஆண்ட்ராய்டு
     போன், ஸ்பீரோ ரோபோ
   tutorial_gameofcodes_string_platforms: அனைத்து நவீன உலாவிகள், Android டேப்லெட்,
@@ -8427,7 +8280,6 @@ ta:
   tutorial_bcjs2_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_3dbearmars_string_platforms: Android டேப்லெட், ஐபாட், Android தொலைபேசி,
     ஐபோன்
-  tutorial_alexaskill_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_bitsboxyak_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_blockscadbargraphs_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_blockscadbirdhouses_string_platforms: அனைத்து நவீன உலாவிகளும்
@@ -8507,7 +8359,6 @@ ta:
   tutorial_codinismhero_string_platforms: ஆண்ட்ராய்டு டேப்லெட், ஆண்ட்ராய்டு போன்
   tutorial_discovery_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_csfirstname_string_platforms: அனைத்து நவீன உலாவிகளும்
-  tutorial_obstaclecourse_string_platforms: ஐபாட், ஸ்கிரீன் ரீடர்
   tutorial_edisonmove_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_edisonspider_string_platforms: அனைத்து நவீன உலாவிகள், ஐபாட், ஆண்ட்ராய்டு
     டேப்லெட்டுகள்
@@ -8896,7 +8747,6 @@ ta:
   tutorial_ticklep_string_detail_platforms: do-not-show
   tutorial_bbot_string_detail_platforms: ''
   tutorial_scratchg_string_detail_platforms: ''
-  tutorial_roboticfriends_string_detail_platforms: அவிழ்க்கப்பட்டது
   tutorial_sjforest_string_detail_platforms: ஐபாட் பயன்பாடு
   tutorial_sjgreet_string_detail_platforms: ஐபாட் பயன்பாடு
   tutorial_sjsunset_string_detail_platforms: ஐபாட் பயன்பாடு
@@ -8941,7 +8791,6 @@ ta:
   tutorial_tickles_string_detail_platforms: ஸ்பீரோ ரோபோ
   tutorial_ozogame_string_detail_platforms: ஓசோபோட் ரோபோ
   tutorial_vidcodeio_string_detail_platforms: அவிழ்க்கப்பட்டது
-  tutorial_besttech_string_detail_platforms: அவிழ்க்கப்பட்டது
   tutorial_tlcbrain_string_detail_platforms: அவிழ்க்கப்பட்டது
   tutorial_hopquiz_string_detail_platforms: iOS பயன்பாடு
   tutorial_unfortunate_string_detail_platforms: கோடு மற்றும் டாட் ரோபோ
@@ -8949,7 +8798,6 @@ ta:
   tutorial_elaseq_string_detail_platforms: அவிழ்க்கப்பட்டது
   tutorial_bbcmathi_string_detail_platforms: do-not-show
   tutorial_tlcpixel_string_detail_platforms: அவிழ்க்கப்பட்டது
-  tutorial_arduino_string_detail_platforms: ''
   tutorial_introrobo_string_detail_platforms: கோடு மற்றும் டாட் ரோபோ
   tutorial_tlcinvis_string_detail_platforms: அவிழ்க்கப்பட்டது
   tutorial_tlcjflap_string_detail_platforms: ''
@@ -8969,7 +8817,6 @@ ta:
   tutorial_tlcmind_string_detail_platforms: அவிழ்க்கப்பட்டது
   tutorial_tlctelebot_string_detail_platforms: அவிழ்க்கப்பட்டது
   tutorial_tlcaus_string_detail_platforms: அவிழ்க்கப்பட்டது
-  tutorial_oralhist_string_detail_platforms: ''
   tutorial_tlcmicro_string_detail_platforms: அவிழ்க்கப்பட்டது
   tutorial_imathematician_string_detail_platforms: ''
   tutorial_tlcmagic_string_detail_platforms: அவிழ்க்கப்பட்டது
@@ -8983,7 +8830,6 @@ ta:
   tutorial_tynkercan_string_detail_platforms: ''
   tutorial_grokflags_string_detail_platforms: ''
   tutorial_robomind_string_detail_platforms: ''
-  tutorial_scratchanimwork_string_detail_platforms: ''
   tutorial_adventureq_string_detail_platforms: ''
   tutorial_khan-es_string_detail_platforms: ''
   tutorial_kpt_string_detail_platforms: ''
@@ -8991,13 +8837,11 @@ ta:
   tutorial_khe_string_detail_platforms: ''
   tutorial_kfr_string_detail_platforms: ''
   tutorial_app-inventor_string_detail_platforms: 'ஆண்ட்ராய்டு '
-  tutorial_bits_string_detail_platforms: ''
   tutorial_blockly_string_detail_platforms: ''
   tutorial_tynker_string_detail_platforms: do-not-show
   tutorial_baypt_string_detail_platforms: ''
   tutorial_code-combat_string_detail_platforms: do-not-show
   tutorial_mky_string_detail_platforms: ''
-  tutorial_spellcraft_string_detail_platforms: ''
   tutorial_pirates_string_detail_platforms: ''
   tutorial_csfirst_string_detail_platforms: ''
   tutorial_loopedy_string_detail_platforms: கோடு மற்றும் டாட் ரோபோ
@@ -9054,7 +8898,6 @@ ta:
   tutorial_soloweb_string_detail_platforms: ''
   tutorial_khanweb_string_detail_platforms: ''
   tutorial_khandata_string_detail_platforms: ''
-  tutorial_robomeshiq_string_detail_platforms: Vex IQ ரோபோக்கள்
   tutorial_googlelogo_string_detail_platforms: ''
   tutorial_playtune_string_detail_platforms: ''
   tutorial_computeit_string_detail_platforms: ''
@@ -9113,7 +8956,6 @@ ta:
   tutorial_stemcod_string_detail_platforms: ''
   tutorial_techikb_string_detail_platforms: ''
   tutorial_kanostreet_string_detail_platforms: ''
-  tutorial_nyblebot_string_detail_platforms: ''
   tutorial_codemojijs_string_detail_platforms: ''
   tutorial_techapf_string_detail_platforms: ''
   tutorial_techfpjs_string_detail_platforms: ''
@@ -9129,7 +8971,6 @@ ta:
   tutorial_gpbcircle_string_detail_platforms: ''
   tutorial_gpbpaint_string_detail_platforms: ''
   tutorial_cocomarcade_string_detail_platforms: ''
-  tutorial_techcpp_string_detail_platforms: ''
   tutorial_beetik_string_detail_platforms: ''
   tutorial_codedj_string_detail_platforms: ''
   tutorial_rgadvan_string_detail_platforms: ''
@@ -9202,9 +9043,6 @@ ta:
   tutorial_ifly_string_detail_platforms: Parrot Minidrones
   tutorial_idowedo_string_detail_platforms: WeDo
   tutorial_diggindwarf_string_detail_platforms: ''
-  tutorial_rmedr_string_detail_platforms: 'Vex EDR Robots
-
-'
   tutorial_spheroit_string_detail_platforms: ஸ்பீரோ ரோபோ
   tutorial_gameofcodes_string_detail_platforms: ''
   tutorial_blocklygames_string_detail_platforms: ''
@@ -9215,7 +9053,6 @@ ta:
   tutorial_bcjs1_string_detail_platforms: ''
   tutorial_bcjs2_string_detail_platforms: ''
   tutorial_3dbearmars_string_detail_platforms: 3D அச்சுப்பொறி
-  tutorial_alexaskill_string_detail_platforms: ''
   tutorial_bitsboxyak_string_detail_platforms: ''
   tutorial_blockscadbargraphs_string_detail_platforms: ''
   tutorial_blockscadbirdhouses_string_detail_platforms: ''
@@ -9272,7 +9109,6 @@ ta:
   tutorial_codinismhero_string_detail_platforms: ''
   tutorial_discovery_string_detail_platforms: ''
   tutorial_csfirstname_string_detail_platforms: ''
-  tutorial_obstaclecourse_string_detail_platforms: ஸ்பீரோ ரோபோ
   tutorial_edisonmove_string_detail_platforms: எடிசன் ரோபோ
   tutorial_edisonspider_string_detail_platforms: எடிசன் ரோபோ
   tutorial_edisonspotlight_string_detail_platforms: எடிசன் ரோபோ
@@ -9600,7 +9436,6 @@ ta:
   tutorial_ticklep_string_detail_programming_languages: do-not-show
   tutorial_bbot_string_detail_programming_languages: காட்சி நிரலாக்க மொழி
   tutorial_scratchg_string_detail_programming_languages: மொழி சுயாதீனமானது
-  tutorial_roboticfriends_string_detail_programming_languages: மொழி சுயாதீனமானது
   tutorial_sjforest_string_detail_programming_languages: தொகுதிகள்
   tutorial_sjgreet_string_detail_programming_languages: தொகுதிகள்
   tutorial_sjsunset_string_detail_programming_languages: தொகுதிகள்
@@ -9647,7 +9482,6 @@ ta:
   tutorial_tickles_string_detail_programming_languages: தொகுதிகள்
   tutorial_ozogame_string_detail_programming_languages: தொகுதிகள்
   tutorial_vidcodeio_string_detail_programming_languages: மொழி சுயாதீனமானது
-  tutorial_besttech_string_detail_programming_languages: தொகுதிகள், சி / சி ++
   tutorial_tlcbrain_string_detail_programming_languages: மொழி சுயாதீனமானது
   tutorial_hopquiz_string_detail_programming_languages: ஹாப்ஸ்கோட்ச்
   tutorial_unfortunate_string_detail_programming_languages: தொகுதிகள்
@@ -9655,7 +9489,6 @@ ta:
   tutorial_elaseq_string_detail_programming_languages: மொழி சுயாதீனமானது
   tutorial_bbcmathi_string_detail_programming_languages: do-not-show
   tutorial_tlcpixel_string_detail_programming_languages: மொழி சுயாதீனமானது
-  tutorial_arduino_string_detail_programming_languages: அர்டுயினோ
   tutorial_introrobo_string_detail_programming_languages: பிளாக்ஸ், ஜாவாஸ்கிரிப்ட்
   tutorial_tlcinvis_string_detail_programming_languages: மொழி சுயாதீனமானது
   tutorial_tlcjflap_string_detail_programming_languages: மொழி சுயாதீனமானது
@@ -9675,7 +9508,6 @@ ta:
   tutorial_tlcmind_string_detail_programming_languages: மொழி சுயாதீனமானது
   tutorial_tlctelebot_string_detail_programming_languages: மொழி சுயாதீனமானது
   tutorial_tlcaus_string_detail_programming_languages: மொழி சுயாதீனமானது
-  tutorial_oralhist_string_detail_programming_languages: மொழி சுயாதீனமானது
   tutorial_tlcmicro_string_detail_programming_languages: மொழி சுயாதீனமானது
   tutorial_imathematician_string_detail_programming_languages: ஸ்க்ரேட்ச்
   tutorial_tlcmagic_string_detail_programming_languages: மொழி சுயாதீனமானது
@@ -9689,7 +9521,6 @@ ta:
   tutorial_tynkercan_string_detail_programming_languages: பிளாக்ஸ், ஜாவா, iOS / ஸ்விஃப்ட்
   tutorial_grokflags_string_detail_programming_languages: பைதான்
   tutorial_robomind_string_detail_programming_languages: தொகுதிகள்
-  tutorial_scratchanimwork_string_detail_programming_languages: பிளாக்ஸ், ஸ்க்ரேட்ச்
   tutorial_adventureq_string_detail_programming_languages: தொகுதிகள்
   tutorial_khan-es_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
   tutorial_kpt_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
@@ -9697,13 +9528,11 @@ ta:
   tutorial_khe_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
   tutorial_kfr_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
   tutorial_app-inventor_string_detail_programming_languages: தொகுதிகள்
-  tutorial_bits_string_detail_programming_languages: தொகுதிகள், மொழி சுயாதீனமானவை
   tutorial_blockly_string_detail_programming_languages: தொகுதிகள்
   tutorial_tynker_string_detail_programming_languages: do-not-show
   tutorial_baypt_string_detail_programming_languages: தொகுதிகள்
   tutorial_code-combat_string_detail_programming_languages: do-not-show
   tutorial_mky_string_detail_programming_languages: காபிஸ்கிரிப்ட்
-  tutorial_spellcraft_string_detail_programming_languages: பிளாக்ஸ், ஜாவாஸ்கிரிப்ட்
   tutorial_pirates_string_detail_programming_languages: பிளாக்ஸ், பைரேட் குறியீடு
   tutorial_csfirst_string_detail_programming_languages: ஸ்க்ரேட்ச்
   tutorial_loopedy_string_detail_programming_languages: தொகுதிகள்
@@ -9762,7 +9591,6 @@ ta:
 
 '
   tutorial_khandata_string_detail_programming_languages: SQL
-  tutorial_robomeshiq_string_detail_programming_languages: பிளாக்ஸ், பைதான்
   tutorial_googlelogo_string_detail_programming_languages: பிளாக்ஸ், ஸ்க்ரேட்ச்
   tutorial_playtune_string_detail_programming_languages: தொகுதிகள்
   tutorial_computeit_string_detail_programming_languages: மொழி சுயாதீனமானது
@@ -9822,7 +9650,6 @@ ta:
   tutorial_stemcod_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
   tutorial_techikb_string_detail_programming_languages: கோட்லின்
   tutorial_kanostreet_string_detail_programming_languages: பிளாக்ஸ், ஜாவாஸ்கிரிப்ட்
-  tutorial_nyblebot_string_detail_programming_languages: தொகுதிகள்
   tutorial_codemojijs_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
   tutorial_techapf_string_detail_programming_languages: பைதான்
   tutorial_techfpjs_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
@@ -9838,7 +9665,6 @@ ta:
   tutorial_gpbcircle_string_detail_programming_languages: தொகுதிகள்
   tutorial_gpbpaint_string_detail_programming_languages: தொகுதிகள்
   tutorial_cocomarcade_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட், பைதான்
-  tutorial_techcpp_string_detail_programming_languages: C/C++
   tutorial_beetik_string_detail_programming_languages: தொகுதிகள்
   tutorial_codedj_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
   tutorial_rgadvan_string_detail_programming_languages: பிளாக்ஸ், ஜாவாஸ்கிரிப்ட்,
@@ -9914,7 +9740,6 @@ ta:
   tutorial_ifly_string_detail_programming_languages: டைங்கர்
   tutorial_idowedo_string_detail_programming_languages: ஸ்க்ரேட்ச்
   tutorial_diggindwarf_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
-  tutorial_rmedr_string_detail_programming_languages: தொகுதிகள்
   tutorial_spheroit_string_detail_programming_languages: பிளாக்ஸ், ஜாவாஸ்கிரிப்ட்
   tutorial_gameofcodes_string_detail_programming_languages: தொகுதிகள், தயார், ஒற்றுமை
   tutorial_blocklygames_string_detail_programming_languages: தொகுதிகள்
@@ -9926,7 +9751,6 @@ ta:
   tutorial_bcjs2_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
   tutorial_3dbearmars_string_detail_programming_languages: மொழி சுயாதீனமானது (பல மொழிகளில்
     கற்பிக்கப்படலாம்), வளர்ந்த யதார்த்தத்தில் 3D மாடலிங் பயன்படுத்துகிறது
-  tutorial_alexaskill_string_detail_programming_languages: தொகுதிகள்
   tutorial_bitsboxyak_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
   tutorial_blockscadbargraphs_string_detail_programming_languages: தொகுதிகள்
   tutorial_blockscadbirdhouses_string_detail_programming_languages: தொகுதிகள்
@@ -9986,7 +9810,6 @@ ta:
   tutorial_codinismhero_string_detail_programming_languages: பைதான்
   tutorial_discovery_string_detail_programming_languages: பிளாக்ஸ், ஸ்க்ரேட்ச்
   tutorial_csfirstname_string_detail_programming_languages: பிளாக்ஸ், ஸ்க்ரேட்ச்
-  tutorial_obstaclecourse_string_detail_programming_languages: தொகுதிகள்
   tutorial_edisonmove_string_detail_programming_languages: பைத்தான், EdPy, பைத்தானை
     அடிப்படையாகக் கொண்ட உரை அடிப்படையிலான நிரலாக்க மொழி.
   tutorial_edisonspider_string_detail_programming_languages: தொகுதிகள்
@@ -10086,7 +9909,7 @@ ta:
   tutorial_gamemaker_string_detail_programming_languages: ஜாவாஸ்கிரிப்ட்
   tutorial_duckrace_string_detail_programming_languages: தொகுதிகள்
   tutorial_allcancodeapps_string_detail_programming_languages: தொகுதிகள்
-  tutorial_n2y_string_detail_programming_languages: ''
+  tutorial_n2y_string_detail_programming_languages: அவிழ்க்கப்பட்டது
   tutorial_microsoftarcade_string_detail_programming_languages: தொகுதிகள்
   tutorial_csfirstunplugged_string_detail_programming_languages: பிளாக்ஸ், பிரிக்கப்படாத,
     கீறல்
@@ -10304,7 +10127,6 @@ ta:
   tutorial_eddesign_name: எடிசன் வடிவமைப்பாளர்
   tutorial_edshapeup_name: எடிசனுடன் ரோபோ வடிவம்
   tutorial_ozocolor_name: பாப் ஸ்டார் | ஓசோபோட் வண்ண குறியீடுகளுடன் செயல்பாடுகளை உருவாக்குதல்
-  tutorial_kcjanimals_name: கனடிய விலங்கு பற்றி
   tutorial_icomputeeggs_name: iHide முட்டைகள்
   tutorial_rootunplugged_name: iRobot குறியீடு இடைவெளி
   tutorial_rgtreasure_name: ரோபோகார்டன் புதிர்கள் - ரோபோ புதையல் மார்பு
@@ -10324,7 +10146,6 @@ ta:
   tutorial_tcadloops_name: வெடிக்கும் நட்சத்திரத்தை வடிவமைக்க டிங்கர்கேடில் சுழல்களைப்
     பயன்படுத்துதல்
   tutorial_phidgets_name: செயலாக்கத்துடன் ஒரு பிட்ஜெட்ஸ் தெர்மின்
-  tutorial_kcjmerry_name: 'மெர்ரி மைக்ரோ: பிட்கள்'
   tutorial_modvariables_name: க்யூப்லெட்டுகளைப் பயன்படுத்தி மாறிகள் மற்றும் தொகுதி
     மதிப்புகளை விசாரித்தல்
   tutorial_codestersmicro_name: 'குறியீட்டாளர்கள்: மைக்ரோ பால் விளையாட்டை உருவாக்கவும்'
@@ -10332,7 +10153,6 @@ ta:
     தரவு'
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: சென்ஸ் HAT டேட்டா லாகர்
-  tutorial_modtraits_name: GoPiGo உடன் எழுத்து பண்புக
   tutorial_mee_name: 'Minecraft Hour of Code: AI க்கான நல்லது'
   tutorial_kuborobo_name: KUBO ரோபாட்டிக்ஸ் குறியீட்டு வழிகள்
   tutorial_ai-oceans_name: பெருங்கடல்களுக்கான AI
@@ -10644,11 +10464,6 @@ ta:
     இந்த பாடம் செயல்பாடுகளின் கருத்தை அறிமுகப்படுத்த ஒரு அறிமுக மற்றும் பிரிக்கப்படாத
     பாடமாகும். இது இரண்டு பாடம் தொடரின் முதல் பாடம், ஆனால் பாடம் தனிமையில் கற்பிக்கப்படலாம்.
     இரண்டாவது பாடம் செயல்பாடுகளின் கருத்தை உருவாக்க ஓசோ பிளாக்லியைப் பயன்படுத்துகிறது.
-  tutorial_kcjanimals_longdescription: குறியீட்டு மற்றும் கனடிய வனவிலங்குகளைக் கொண்டாட
-    ஒரு எளிய திட்டத்தை உருவாக்குங்கள். குழந்தைகள் ஒரு கரடி அல்லது ஒரு மூஸ் போன்ற கனடிய
-    விலங்கைத் தேர்ந்தெடுத்து, விலங்குகளின் வாழ்விடம், உணவுப் பழக்கம், இடம்பெயர்வு
-    முறைகள் மற்றும் பலவற்றை ஆராயும் அனிமேஷனை உருவாக்குவார்கள். இந்த திட்டம் ஆசிரியர்கள்
-    அல்லது பெற்றோருக்கு குழந்தைகளைப் பின்தொடர உதவுவதற்கும் உதவுவதற்கும் போதுமானது.
   tutorial_icomputeeggs_longdescription: ஆசிரியர் தலைமையிலான இந்த செயல்பாடு, மணிநேர
     குறியீட்டிற்கு ஏற்றது, மாணவர்களுக்கு ரோபாட்டிக்ஸ் மூலம் உடல் நிரலாக்கத்தை ஆராயும்
     வாய்ப்பை வழங்குகிறது. இழுத்தல் மற்றும் சொட்டு நிரலாக்க சூழல் மற்றும் நிரல்படுத்தக்கூடிய
@@ -10703,12 +10518,6 @@ ta:
     குறியீடு மற்றும் கணினி உதவி வடிவமைப்பு (சிஏடி) எவ்வாறு இணைக்கப்படலாம் என்பதை அறிக.
   tutorial_phidgets_longdescription: பிட்ஜெட்டுகள் மற்றும் செயலாக்கத்துடன் ஒரு அற்புதமான
     இசைக்கருவியை உருவாக்கவும்!
-  tutorial_kcjmerry_longdescription: 'குறியீட்டு மற்றும் விடுமுறை காலத்தை கொண்டாட
-    மைக்ரோ: பிட் மூலம் ஊடாடும் குறியீட்டு திட்டத்தை உருவாக்குங்கள். குழந்தைகள் பளபளப்பான
-    பனி குளோப் அனிமேஷனை உருவாக்க தொகுதி குறியீட்டு மற்றும் இயற்பியல் கணினி கலவையைப்
-    பயன்படுத்துவார்கள். இந்த திட்டம் ஆசிரியர்கள் அல்லது பெற்றோருக்கு வசதியாக போதுமானதாக
-    உள்ளது, மேலும் இது செயல்பாட்டு அட்டைகளுடன் வருகிறது, மேலும் சவால்களுக்கு குழந்தைகள்
-    சொந்தமாக பயன்படுத்தலாம்.'
   tutorial_modvariables_longdescription: கியூப்லெட்ஸ் ரோபோ தொகுதிகளைப் பயன்படுத்தி
     பிணையத்தின் மூலம் தரவு எவ்வாறு பாய்கிறது என்பதை மாணவர்கள் ஆராய்கின்றனர். கியூப்லெட்ஸ்
     ரோபோ தொகுதிகள் பொதுவாக எவ்வாறு செயல்படுகின்றன என்பதை மாணவர்கள் ஏற்கனவே அறிந்திருக்கிறார்கள்
@@ -10734,9 +10543,6 @@ ta:
   tutorial_rpisensehat_longdescription: தரவு-பதிவு சாதனத்தை உருவாக்க சென்ஸ் ஹாட் வன்பொருளை
     எவ்வாறு பயன்படுத்துவது என்பதை அறிக, அதன் உடனடி சூழலைப் பற்றிய பல தகவல்களைப் பிடிக்க
     முடியும்.
-  tutorial_modtraits_longdescription: மாணவர்கள் பண்புக்கூறுகளை பகுப்பாய்வு செய்வதற்கும்
-    அந்த பண்புகளை நிரூபிக்க ஒரு வழிமுறையை உருவாக்குவதற்கும் கணக்கீட்டு சிந்தனையின்
-    படிகளைப் பயன்படுத்துகின்றனர்.
   tutorial_mee_longdescription: காட்டுத் தீ பற்றிய தரவுகளை சேகரிக்க Minecraft முகவரை
     நிரல் செய்யவும். தீ பரவாமல் தடுக்கவும், கிராமத்தை காப்பாற்றவும், மீண்டும் காட்டுக்கு
     உயிரைக் கொண்டுவரவும் குறியீட்டை எழுதுங்கள். குறியீட்டு அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள்
@@ -10820,7 +10626,6 @@ ta:
   tutorial_eddesign_language: English
   tutorial_edshapeup_language: English
   tutorial_ozocolor_language: English
-  tutorial_kcjanimals_language: English
   tutorial_icomputeeggs_language: English
   tutorial_rootunplugged_language: English
   tutorial_rgtreasure_language: English
@@ -10836,13 +10641,11 @@ ta:
   tutorial_blockscadscale_language: English
   tutorial_tcadloops_language: English
   tutorial_phidgets_language: English
-  tutorial_kcjmerry_language: English
   tutorial_modvariables_language: English
   tutorial_codestersmicro_language: English
   tutorial_codestersdata_language: English
   tutorial_ikodexmas_language: English
   tutorial_rpisensehat_language: English
-  tutorial_modtraits_language: English
   tutorial_mee_language: பல்கேரிய, சீன (எளிமைப்படுத்தப்பட்ட), சீன (பாரம்பரிய), செக்,
     டேனிஷ், டச்சு, ஆங்கிலம் (யுகே), ஆங்கிலம் (அமெரிக்கா), பின்னிஷ், பிரஞ்சு (கனடா),
     பிரெஞ்சு (பிரான்ஸ்), ஜெர்மன், கிரேக்கம், ஹங்கேரிய, இந்தோனேசிய, இத்தாலியன் , ஜப்பானிய,
@@ -10924,7 +10727,6 @@ ta:
   tutorial_eddesign_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_edshapeup_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_ozocolor_string_detail_grades: தரம் 2 - 8
-  tutorial_kcjanimals_string_detail_grades: தரம் 2 - 8
   tutorial_icomputeeggs_string_detail_grades: தரம் 2 - 8
   tutorial_rootunplugged_string_detail_grades: தரம் 2 - 8
   tutorial_rgtreasure_string_detail_grades: முன் வாசகர்-தரம் 5
@@ -10940,13 +10742,11 @@ ta:
   tutorial_blockscadscale_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_tcadloops_string_detail_grades: தரங்கள் 5-6
   tutorial_phidgets_string_detail_grades: தரங்கள் 9+
-  tutorial_kcjmerry_string_detail_grades: தரம் 2 - 8
   tutorial_modvariables_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
   tutorial_codestersmicro_string_detail_grades: 'தரங்கள் 6-8 '
   tutorial_codestersdata_string_detail_grades: 'தரங்கள் 6-8 '
   tutorial_ikodexmas_string_detail_grades: தரங்கள் 2-5
   tutorial_rpisensehat_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
-  tutorial_modtraits_string_detail_grades: தரங்கள் 2+
   tutorial_mee_string_detail_grades: தரங்கள் 2+
   tutorial_kuborobo_string_detail_grades: முன் வாசகர் - தரங்கள் 8
   tutorial_ai-oceans_string_detail_grades: தரங்கள் 3+
@@ -11043,7 +10843,6 @@ ta:
   tutorial_eddesign_string_platforms: அனைத்து நவீன உலாவிகள், ஐபாட், ஆண்ட்ராய்டு டேப்லெட்டுகள்
   tutorial_edshapeup_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_ozocolor_string_platforms: அவிழ்க்கப்பட்டது
-  tutorial_kcjanimals_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_icomputeeggs_string_platforms: அனைத்து நவீன உலாவிகள், Android தொலைபேசி,
     Android டேப்லெட், ஐபாட், ஐபோன்
   tutorial_rootunplugged_string_platforms: அவிழ்க்கப்பட்டது
@@ -11060,14 +10859,12 @@ ta:
   tutorial_blockscadscale_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_tcadloops_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_phidgets_string_platforms: அனைத்து நவீன உலாவிகளும்
-  tutorial_kcjmerry_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_modvariables_string_platforms: அனைத்து நவீன உலாவிகள், Android டேப்லெட்,
     Android தொலைபேசி, ஐபாட், ஐபோன்
   tutorial_codestersmicro_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_codestersdata_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_ikodexmas_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_rpisensehat_string_platforms: அனைத்து நவீன உலாவிகளும்
-  tutorial_modtraits_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_mee_string_platforms: ஐபாட், கணினிகள் (விண்டோஸ் பிசி, மேக்)
   tutorial_kuborobo_string_platforms: அவிழ்க்கப்பட்டது
   tutorial_ai-oceans_string_platforms: அனைத்து நவீன உலாவிகள், நவீன Android டேப்லெட்டுகள்,
@@ -11147,7 +10944,6 @@ ta:
   tutorial_eddesign_string_detail_platforms: எடிசன் ரோபோ
   tutorial_edshapeup_string_detail_platforms: எடிசன் ரோபோ
   tutorial_ozocolor_string_detail_platforms: ஓசோபோட்
-  tutorial_kcjanimals_string_detail_platforms: ''
   tutorial_icomputeeggs_string_detail_platforms: கோளம்
   tutorial_rootunplugged_string_detail_platforms: ''
   tutorial_rgtreasure_string_detail_platforms: ''
@@ -11166,7 +10962,6 @@ ta:
     Distance Sensors.
 
 '
-  tutorial_kcjmerry_string_detail_platforms: BBC micro:bit
   tutorial_modvariables_string_detail_platforms: க்யூப்லெட்ஸ் ரோபோ பிளாக்ஸ்
   tutorial_codestersmicro_string_detail_platforms: BBC micro:bit
   tutorial_codestersdata_string_detail_platforms: BBC micro:bit
@@ -11174,7 +10969,6 @@ ta:
   tutorial_rpisensehat_string_detail_platforms: 'Raspbian (software), SenseHAT
 
 '
-  tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO ரோபோ
   tutorial_ai-oceans_string_detail_platforms: ''
@@ -11265,7 +11059,6 @@ ta:
   tutorial_edshapeup_string_detail_programming_languages: பைத்தான், EdPy, பைத்தானை
     அடிப்படையாகக் கொண்ட உரை அடிப்படையிலான நிரலாக்க மொழி.
   tutorial_ozocolor_string_detail_programming_languages: தொகுதிகள்
-  tutorial_kcjanimals_string_detail_programming_languages: தொகுதிகள்
   tutorial_icomputeeggs_string_detail_programming_languages: தொகுதிகள்
   tutorial_rootunplugged_string_detail_programming_languages: தொகுதிகள்
   tutorial_rgtreasure_string_detail_programming_languages: தொகுதிகள்
@@ -11283,14 +11076,12 @@ ta:
   tutorial_phidgets_string_detail_programming_languages: ஜாவா, ஃபிட்ஜெட்டுகள் எல்லா
     முக்கிய நிரலாக்க மொழிகளையும் ஆதரிக்கின்றன. இந்த திட்டத்தை மற்றொரு மொழி / சூழலுடன்
     எளிதில் மாற்றியமைக்க முடியும்.
-  tutorial_kcjmerry_string_detail_programming_languages: தொகுதிகள்
   tutorial_modvariables_string_detail_programming_languages: மொழி சுயாதீனமானது (பல
     மொழிகளில் கற்பிக்கப்படலாம்)
   tutorial_codestersmicro_string_detail_programming_languages: பைதான்
   tutorial_codestersdata_string_detail_programming_languages: பைதான்
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: பைதான்
-  tutorial_modtraits_string_detail_programming_languages: தொகுதிகள்
   tutorial_mee_string_detail_programming_languages: தொகுதிகள்
   tutorial_kuborobo_string_detail_programming_languages: மாணவர்கள் ஒன்றாக இணைக்கும்
     குறிச்சொற்கள்

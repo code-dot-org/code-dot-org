@@ -2,7 +2,7 @@
   "category": "",
   "config": {
     "func": "setForegroundEffect",
-    "blockText": "do {EFFECT} effect",
+    "blockText": "do {EFFECT} foreground effect",
     "args": [
       {
         "name": "EFFECT",
