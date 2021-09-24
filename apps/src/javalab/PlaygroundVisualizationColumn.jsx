@@ -22,7 +22,6 @@ class PlaygroundVisualizationColumn extends React.Component {
 
   getItems() {
     const {playgroundItemData} = this.props;
-    console.log(playgroundItemData);
     const items = Object.keys(playgroundItemData).map(itemId => {
       const itemData = playgroundItemData[itemId];
       if (itemData.type === 'image') {
