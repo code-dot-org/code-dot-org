@@ -362,13 +362,8 @@ Devise.setup do |config|
 
     # The following cookies are used by marketing to create personalized experiences for teachers, such as displaying
     # specific banner content.
-    if user.teacher?
-      auth.cookies[environment_specific_cookie_name("_teacher_locale")] = {value: user.locale, domain: :all}
-      auth.cookies[environment_specific_cookie_name("_teacher_account_age_in_years")] = {value: user.account_age_in_years, domain: :all}
-      auth.cookies[environment_specific_cookie_name("_teacher_grades")] = {value: user.grades_being_taught.to_json, domain: :all}
-      auth.cookies[environment_specific_cookie_name("_teacher_courses")] = {value: user.courses_being_taught.to_json, domain: :all}
-      auth.cookies[environment_specific_cookie_name("_teacher_has_attended_pd")] = {value: user.has_attended_pd?, domain: :all}
-      auth.cookies[environment_specific_cookie_name("_teacher_within_us")] = {value: user.within_united_states?, domain: :all}
+    user.marketing_segment_data&.each do |segment_name, value|
+      auth.cookies[environment_specific_cookie_name("_teacher_#{segment_name}")] = {value: value, domain: :all}
     end
   end
 
@@ -378,6 +373,10 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+
+    user.marketing_segment_data&.each do |segment_name, _|
+      auth.cookies[environment_specific_cookie_name("_teacher_#{segment_name}")] = {value: "", expires: Time.at(0), domain: :all}
+    end
   end
 
   # ==> Mountable engine configurations
