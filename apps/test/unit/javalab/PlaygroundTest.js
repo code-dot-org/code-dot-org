@@ -188,7 +188,7 @@ describe('Playground', () => {
 
     playground.handleSignal(data);
 
-    // Background should not update
+    // Audio element should not update
     verifyDefaultMediaElementState(audioElement);
   });
 
