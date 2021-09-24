@@ -1583,6 +1583,11 @@ class User < ApplicationRecord
     sections.map(&:grade).uniq
   end
 
+  # Returns a list of all courses that the teacher currently has sections for
+  def courses_being_taught
+    sections.map {|section| section.script.curriculum_umbrella}
+  end
+
   def has_attended_pd?
     pd_attendances.any?
   end
