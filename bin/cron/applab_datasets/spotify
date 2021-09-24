@@ -25,9 +25,11 @@ CHART_TYPE = {
 }
 
 def get_token
+  client_id = CDO.spotify_api_client_id
+  client_secret = CDO.spotify_api_client_secret
   url = "https://accounts.spotify.com/api/token"
   headers = {
-    'authorization' => 'Basic ' + Base64.strict_encode64(CLIENT_ID + ':' + CLIENT_SECRET),
+    'authorization' => 'Basic ' + Base64.strict_encode64(client_id + ':' + client_secret),
     'content-type' => 'application/x-www-form-urlencoded',
   }
   form = {
