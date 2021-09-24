@@ -121,7 +121,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def not_funded_subjects_must_not_be_funded
-    if NOT_FUNDED_SUBJECTS.include?(subject) && !funded?
+    if NOT_FUNDED_SUBJECTS.include?(subject) && funded?
       errors.add :properties, 'Admin/Counselor - Welcome workshop must not be funded.'
     end
   end
@@ -558,7 +558,7 @@ class Pd::Workshop < ApplicationRecord
   # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
     # FiT workshops should not send exit surveys
-    return if SUBJECT_FIT == subject || COURSE_FACILITATOR == course
+    return if SUBJECT_FIT == subject || COURSE_FACILITATOR == course || COURSE_ADMIN_COUNSELOR == course
 
     resolve_enrolled_users
 
