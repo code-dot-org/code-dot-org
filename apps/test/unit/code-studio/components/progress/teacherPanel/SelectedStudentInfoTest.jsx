@@ -92,7 +92,7 @@ describe('SelectedStudentInfo', () => {
       paired: true,
       isDriver: true,
       status: LevelStatus.perfect,
-      navigators: [null, 'Student 3']
+      navigators: []
     };
     const wrapper = setUp({levelWithProgress});
 

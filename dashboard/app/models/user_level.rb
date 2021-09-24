@@ -90,15 +90,15 @@ class UserLevel < ApplicationRecord
   # Returns whether this UserLevel represents progress completed by a pairing
   # group where the user was the driver.
   def driver?
-    !latest_paired_user_level.nil? &&
-      id == latest_paired_user_level.driver_user_level_id
+    return false if latest_paired_user_level.nil?
+    id == latest_paired_user_level.driver_user_level_id
   end
 
   # Returns whether this UserLevel represents progress completed by a pairing
   # group where the user was a navigator.
   def navigator?
-    !latest_paired_user_level.nil? &&
-      id == latest_paired_user_level.navigator_user_level_id
+    return false if latest_paired_user_level.nil?
+    id == latest_paired_user_level.navigator_user_level_id
   end
 
   # Returns whether this UserLevel represents progress completed by a pairing
@@ -127,11 +127,16 @@ class UserLevel < ApplicationRecord
   # UserLevel represents the driver's progress, this method will return the
   # names of all navigators in the pairing group. If this UserLevel represents
   # a navigator's progress, that navigator will be omitted from the returned
-  # list.  The list of navigator names may include nil when the navigator's
-  # name is no longer available because the navigator or the navigator's
-  # progress was deleted.
+  # list. Navigators whose user account or progress was deleted are omitted from
+  # the list.
   def navigators_names
     latest_paired_user_level&.navigators_names(exclude_self: navigator?)
+  end
+
+  # Returns the number of navigators in the pairing group if this UserLevel
+  # represents progress completed when in a pairing group.
+  def navigator_count
+    latest_paired_user_level&.navigator_count
   end
 
   def calculate_total_time_spent(additional_time)
