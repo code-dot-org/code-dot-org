@@ -15,7 +15,10 @@ import javalab, {
   setLevelName,
   appendNewlineToConsoleLog,
   setIsRunning,
-  setDisableFinishButton
+  setDisableFinishButton,
+  addPlaygroundItemData,
+  removePlaygroundItemData,
+  changePlaygroundItemData
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -106,6 +109,12 @@ Javalab.prototype.init = function(config) {
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   const onJavabuilderMessage = this.onJavabuilderMessage.bind(this);
+  const addPlaygroundItem = (itemId, itemData) =>
+    getStore().dispatch(addPlaygroundItemData(itemId, itemData));
+  const removePlaygroundItem = itemId =>
+    getStore().dispatch(removePlaygroundItemData(itemId));
+  const changePlaygroundItem = (itemId, itemData) =>
+    getStore().dispatch(changePlaygroundItemData(itemId, itemData));
 
   switch (this.level.csaViewMode) {
     case CsaViewMode.NEIGHBORHOOD:
@@ -132,7 +141,10 @@ Javalab.prototype.init = function(config) {
         this.onOutputMessage,
         this.onNewlineMessage,
         onJavabuilderMessage,
-        this.level.name
+        this.level.name,
+        addPlaygroundItem,
+        removePlaygroundItem,
+        changePlaygroundItem
       );
       this.visualization = <PlaygroundVisualizationColumn />;
       break;
