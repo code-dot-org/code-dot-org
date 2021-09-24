@@ -34,7 +34,7 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "instructions_icon": "octiSomber",
-    "callout_json": "[]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_foreground\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"2\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"poetry_event\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "parent_level_id": 29616,
     "video_key": "poembot-playtest-events",
     "validation_code": "var spriteIds = getSpriteIdsInUse();\r\nvar validationInfo = getValidationInfo();\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {};\r\n}\r\n\r\nvar hasLineEvent = validationInfo.lineEvents.length > 0;\r\nvar newForegroundEffect =\r\n    validationProps.previous.numForegroundEffects <\r\n    validationInfo.foregroundEffects.length;\r\nvar newBackgroundEffect =\r\n    validationProps.previous.backgroundEffect !=\r\n    validationInfo.backgroundEffect;\r\nvar newTextEffect = validationProps.previous.numTextEffects < validationInfo.textEffects.length;\r\nif (hasLineEvent && (newForegroundEffect || newBackgroundEffect || newTextEffect)) {\r\n  setSuccessFrame();\r\n  validationProps.previous.newForegroundEffect =\r\n    validationProps.previous.newForegroundEffect || newForegroundEffect;\r\n  validationProps.previous.newBackgroundEffect =\r\n    validationProps.previous.newBackgroundEffect || newBackgroundEffect;\r\n  validationProps.previous.newTextEffect =\r\n    validationProps.previous.newTextEffect || newTextEffect;\r\n}\r\nvalidationProps.previous.numForegroundEffects = validationInfo.foregroundEffects.length;\r\nvalidationProps.previous.backgroundEffect = validationInfo.backgroundEffect;\r\nvalidationProps.previous.numTextEffects = validationInfo.textEffects.length;\r\n\r\ndrawProgressBar();\r\n\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    if (validationProps.previous.newForegroundEffect && \r\n        validationProps.previous.newBackgroundEffect && \r\n        validationProps.previous.newTextEffect) {\r\n      levelFailure(0, 'poemBotSuccessLevel7');\r\n      console.log(\"Congratulations! You completed Level 7.\");\r\n    } else if (validationProps.previous.newForegroundEffect ||\r\n               validationProps.previous.newBackgroundEffect ||\r\n               validationProps.previous.newTextEffect) {\r\n      // levelFailure(0, 'poemBotSuccessEffectWithEvent');\r\n      levelFailure(0, 'genericExplore');\r\n      console.log(\"Congratulations, you added an effect to your code! You can click 'Keep playing' to add even more effects.\");\r\n    }\r\n  } else {\r\n    levelFailure(3, 'poemBotEffectWithEvent');\r\n  }\r\n}",
@@ -51,7 +51,7 @@
   "created_at": "2021-09-21T18:25:30.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2021-09-21T18:25:30.046+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_events1\\\"\"],\"cloned_from\":\"poetryHoC_events1\"},{\"changed_at\":\"2021-09-21 18:25:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 20:20:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:27:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:57:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:58:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:02:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:06:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:47:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:49:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-21T18:25:30.046+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_events1\\\"\"],\"cloned_from\":\"poetryHoC_events1\"},{\"changed_at\":\"2021-09-21 18:25:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 20:20:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:27:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:57:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:58:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:02:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:06:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:47:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:49:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-23 16:25:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-23 16:46:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-23 20:54:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-23 20:58:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-23 20:59:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -71,7 +71,7 @@
           </next>
         </block>
         <block type="PoemBot_whenLineShows">
-          <title name="N"/>
+          <title name="N">0</title>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>
@@ -1391,22 +1391,22 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">0</title>
+        </block>
+        <block type="PoemBot_setForegroundEffect">
+          <title name="EFFECT">"rain"</title>
+        </block>
         <block type="gamelab_setBackground">
           <value name="COLOR">
             <block type="colour_picker">
-              <title name="COLOUR">#666666</title>
+              <title name="COLOUR">#ffcc66</title>
             </block>
           </value>
         </block>
         <block type="PoemBot_setBackgroundEffect">
           <title name="EFFECT">"ripples"</title>
           <title name="PALETTE">"sky"</title>
-        </block>
-        <block type="PoemBot_setForegroundEffect">
-          <title name="EFFECT">"rain"</title>
-        </block>
-        <block type="PoemBot_whenLineShows">
-          <title name="N">0</title>
         </block>
       </xml>
     </toolbox_blocks>
