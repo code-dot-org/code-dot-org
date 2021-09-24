@@ -151,6 +151,8 @@ export default class Playground {
       const newImageData = {...itemData};
       if (itemData.filename) {
         newImageData.fileUrl = this.getUrl(itemData.filename);
+        // we don't need to pass filename as imageData
+        delete newImageData.filename;
       }
       this.changePlaygroundItem(itemData.id, newImageData);
     }
