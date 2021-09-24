@@ -442,7 +442,8 @@ class Pd::Workshop < ApplicationRecord
       SUBJECT_CSP_FIT,
       SUBJECT_CSD_TEACHER_CON,
       SUBJECT_CSD_FIT,
-      SUBJECT_CSF_FIT
+      SUBJECT_CSF_FIT,
+      SUBJECT_ADMIN_COUNSELOR_WELCOME
     ].include? subject
   end
 
