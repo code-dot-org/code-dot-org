@@ -10,7 +10,7 @@ import {
 
 export function handleException(exceptionDetails, callback) {
   const type = exceptionDetails.value;
-  const {connectionId, cause} =
+  const {connectionId, cause, causeMessage} =
     exceptionDetails.detail && exceptionDetails.detail;
   let error;
   switch (type) {
@@ -35,6 +35,9 @@ export function handleException(exceptionDetails, callback) {
       break;
     case JavabuilderExceptionType.CLASS_NOT_FOUND:
       error = msg.classNotFound();
+      break;
+    case JavabuilderExceptionType.FILE_NOT_FOUND:
+      error = msg.fileNotFoundException({causeMessage});
       break;
 
     // Internal exceptions
