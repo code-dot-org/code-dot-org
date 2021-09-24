@@ -365,8 +365,10 @@ Devise.setup do |config|
     if user.teacher?
       auth.cookies[environment_specific_cookie_name("_teacher_locale")] = {value: user.locale, domain: :all}
       auth.cookies[environment_specific_cookie_name("_teacher_account_age_in_years")] = {value: user.account_age_in_years, domain: :all}
-      auth.cookies[environment_specific_cookie_name("_teacher_grades_taught")] = {value: user.grades_being_taught.to_json, domain: :all}
+      auth.cookies[environment_specific_cookie_name("_teacher_grades")] = {value: user.grades_being_taught.to_json, domain: :all}
+      auth.cookies[environment_specific_cookie_name("_teacher_courses")] = {value: user.courses_being_taught.to_json, domain: :all}
       auth.cookies[environment_specific_cookie_name("_teacher_has_attended_pd")] = {value: user.has_attended_pd?, domain: :all}
+      auth.cookies[environment_specific_cookie_name("_teacher_within_us")] = {value: user.within_united_states?, domain: :all}
     end
   end
 
