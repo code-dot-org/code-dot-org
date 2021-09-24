@@ -1,45 +1,55 @@
 <GamelabJr>
   <config><![CDATA[{
   "properties": {
-    "encrypted": "false",
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
       "GamelabJr",
+      "NativeSpriteLab",
       "PoemBot"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zBehaviorWatcherPrototype"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
-    "show_type_hints": true,
-    "hide_custom_blocks": true,
-    "all_animations_single_frame": "true",
-    "use_modal_function_editor": "true",
-    "embed": "false",
+    "show_type_hints": "true",
+    "include_shared_functions": "false",
+    "embed": "true",
     "instructions_important": "false",
-    "long_instructions": "You can change the **size** of a sprite you already made. \r\n\r\n* Change the size of your sprite by changing the `???` to a number, like `25`. \r\n\r\n*Extra Challenge:* Use an **event** to change the size of a sprite when the mood shifts!",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
-    "hide_share_and_remix": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "include_shared_functions": "true",
     "free_play": "false",
     "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"6f0bf06a-e1d5-4c1c-8c1c-f981d275234c\",\r\n    \"574efee1-2fd2-4b42-800c-1f4948143cc9\",\r\n    \"fa8483ad-8ea6-43a7-923d-6eb6e0da9f28\",\r\n    \"8eececb5-16f3-4ea1-9d32-68c7419beef5\",\r\n    \"012d45f6-57ca-41a9-b2f4-86f683785646\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"6f0bf06a-e1d5-4c1c-8c1c-f981d275234c\": {\r\n      \"name\": \"book_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/zDgovsfKXlBCmc.iyiZ1QwthoihYm6dj/category_school_objects/book.png\",\r\n      \"frameSize\": {\r\n        \"x\": 109,\r\n        \"y\": 125\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"zDgovsfKXlBCmc.iyiZ1QwthoihYm6dj\",\r\n      \"categories\": [\r\n        \"school_objects\"\r\n      ]\r\n    },\r\n    \"574efee1-2fd2-4b42-800c-1f4948143cc9\": {\r\n      \"name\": \"emoji_05_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/NxaX3YQWiFYsZndIf9OBIPpFIhBaIPbd/category_emoji/emoji_05.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"NxaX3YQWiFYsZndIf9OBIPpFIhBaIPbd\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ]\r\n    },\r\n    \"fa8483ad-8ea6-43a7-923d-6eb6e0da9f28\": {\r\n      \"name\": \"open_book_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/Q7WrWsZuBG5wHivjAj10ooky63oYeGlf/category_school_objects/open_book.png\",\r\n      \"frameSize\": {\r\n        \"x\": 116,\r\n        \"y\": 112\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Q7WrWsZuBG5wHivjAj10ooky63oYeGlf\",\r\n      \"categories\": [\r\n        \"school_objects\"\r\n      ]\r\n    },\r\n    \"8eececb5-16f3-4ea1-9d32-68c7419beef5\": {\r\n      \"name\": \"green_shirt_books_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/Cdj6_FVDCJx_ztcX_HgY3.Kj_erWrKTZ/category_people/green_shirt_books.png\",\r\n      \"frameSize\": {\r\n        \"x\": 155,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Cdj6_FVDCJx_ztcX_HgY3.Kj_erWrKTZ\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"012d45f6-57ca-41a9-b2f4-86f683785646\": {\r\n      \"name\": \"red_shirt_hands_in_pockets2_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/Ri2bRRgD55pXt0Gw72bfUZGqUzVdoxna/category_people/red_shirt_hands_in_pockets2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 123,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Ri2bRRgD55pXt0Gw72bfUZGqUzVdoxna\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "hide_custom_blocks": "false",
+    "short_instructions": "Make a prediction!",
+    "validation_code": "var validationInfo = getValidationInfo();\r\nif (!validationInfo.successFrame) {\r\n  setSuccessFrame();\r\n}\r\n\r\nif (World.frameCount == validationInfo.endTime+30) {\r\n  levelFailure(0, 'genericSuccess');\r\n}",
+    "authored_hints": "[]",
+    "long_instructions": "Read the poem. Press Run, then read it again and watch the sprites.",
+    "parent_level_id": 27317,
+    "auto_run_setup": "DRAW_LOOP",
+    "callout_json": "[]",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "name_suffix": "_2020",
     "validation_enabled": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "instructions_icon": "octiHopeful",
-    "callout_json": "[]",
-    "parent_level_id": 29614,
-    "validation_code": "var validationInfo = getValidationInfo();\r\nvar spriteIds = getSpriteIdsInUse();\r\nvar hasLineEvent = validationInfo.lineEvents.length > 0;\r\n\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {\r\n    usedEvent: false\r\n  };\r\n}\r\n\r\n// Keep track of sprites' current sizes\r\nif(!validationProps.spritesSizes) {\r\n  validationProps.spritesSizes = {};\r\n}\r\n\r\nfor (var spriteId in spriteIds) {\r\n  var spriteSize = getProp({id: spriteId}, \"scale\");\r\n  if (World.frameCount == 1) {\r\n    if (spriteSize !== 100) {\r\n      setSuccessFrame();\r\n    }\r\n    validationProps.spritesSizes[spriteId] = spriteSize;\r\n  } else {\r\n    if (spriteSize !== validationProps.spritesSizes[spriteId] && hasLineEvent) {\r\n      validationProps.previous.usedEvent = true;\r\n      setSuccessFrame();\r\n      break;\r\n    }\r\n  }\r\n}\r\n\r\n\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    if (validationProps.previous.usedEvent) {\r\n      levelFailure(0, 'genericBonusSuccess');\r\n    } else {\r\n      levelFailure(0, 'poemBotSuccessLevel5');\r\n    }\r\n  } else if (spriteIds.length == 0) {\r\n    levelFailure(3, 'poemBotRemovedSprite');\r\n  } else {\r\n    levelFailure(3, 'poemBotSetSize');\r\n  }\r\n}",
-    "start_animations": "{\"orderedKeys\":[\"3162fc52-fa85-41c5-a868-d4385a606d52\",\"6177d06a-8a05-46ad-a040-54ef5335cef2\",\"37850892-967a-4e53-8a17-722db2347a41\",\"3e2a7ab5-a483-4a83-8b2a-1a9f43a77dd1\",\"517da35c-10db-4338-8a04-1b42541bd97b\",\"2a5fd9db-b928-449f-8324-59ec017d2047\",\"8049a4d7-0200-4fc0-9da6-2a0296ea4277\",\"793f7e4b-b7e8-43e1-bb3b-a175f01d5fa3\",\"5e17010d-35e5-4739-9c1b-24afa58b321f\",\"ab9a03a7-96bf-46ba-b838-0beb52d5200e\",\"5a1764a7-ad27-4195-ae93-568f0024d66d\",\"5d528e89-d938-4aff-a9c3-b1a25a1c1b29\",\"98e58762-9e0b-4d05-a8a9-91fbdf00d689\",\"8c566beb-77a6-4332-a201-ea415d7eb408\",\"cedf0809-13f4-4081-a499-486f49e533c4\",\"1f2bc2dd-3ea9-4e15-a538-8dd0ada7aaf8\",\"97013c58-70d9-4622-8ac2-3869655276a5\"],\"propsByKey\":{\"97013c58-70d9-4622-8ac2-3869655276a5\":{\"name\":\"clog\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-03T16:50:53.000Z\",\"pngLastModified\":\"2021-09-03T16:53:09.000Z\",\"version\":\"RtOSLwdMf67WuHWlWTGuUhEVqbMK9IZu\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RtOSLwdMf67WuHWlWTGuUhEVqbMK9IZu/clog.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"1f2bc2dd-3ea9-4e15-a538-8dd0ada7aaf8\":{\"name\":\"wind\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:08.000Z\",\"pngLastModified\":\"2021-09-02T00:35:27.000Z\",\"version\":\"0H8fbGkjIrIe7YCxj67gu5XLqcPBddbq\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/0H8fbGkjIrIe7YCxj67gu5XLqcPBddbq/wind.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"cedf0809-13f4-4081-a499-486f49e533c4\":{\"name\":\"twinkling_star\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:08.000Z\",\"pngLastModified\":\"2021-09-02T00:35:23.000Z\",\"version\":\"vjb.CoEaXyBgW9Y2UQpWm0GupWu_LGVX\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/vjb.CoEaXyBgW9Y2UQpWm0GupWu_LGVX/twinkling_star.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"8c566beb-77a6-4332-a201-ea415d7eb408\":{\"name\":\"smiling_sun\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:40:17.000Z\",\"pngLastModified\":\"2021-09-02T00:35:25.000Z\",\"version\":\"iyXXWnXSMWujUL1Kc2.E0BjaTZ9oMOeH\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/iyXXWnXSMWujUL1Kc2.E0BjaTZ9oMOeH/smiling_sun.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"98e58762-9e0b-4d05-a8a9-91fbdf00d689\":{\"name\":\"night_star\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:10.000Z\",\"pngLastModified\":\"2021-09-02T00:35:23.000Z\",\"version\":\"NLCaSULDfYRSqkUj7CA6TBnjsyxgSf1F\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/NLCaSULDfYRSqkUj7CA6TBnjsyxgSf1F/night_star.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"5d528e89-d938-4aff-a9c3-b1a25a1c1b29\":{\"name\":\"night_moon\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:10.000Z\",\"pngLastModified\":\"2021-09-02T00:35:22.000Z\",\"version\":\"Y5hqneuuT25yNdgpP74PlbkBB3SpKggi\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Y5hqneuuT25yNdgpP74PlbkBB3SpKggi/night_moon.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"5a1764a7-ad27-4195-ae93-568f0024d66d\":{\"name\":\"night_cloud\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:11.000Z\",\"pngLastModified\":\"2021-09-02T00:35:24.000Z\",\"version\":\"Gc.QvUXL142ZHgCNk9KKmWx_3a1pvMEg\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Gc.QvUXL142ZHgCNk9KKmWx_3a1pvMEg/night_cloud.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"ab9a03a7-96bf-46ba-b838-0beb52d5200e\":{\"name\":\"library\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:11.000Z\",\"pngLastModified\":\"2021-09-02T00:35:21.000Z\",\"version\":\"S6NXQa5A7rzgpM6NDhXsHCHwIRm1PszB\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/S6NXQa5A7rzgpM6NDhXsHCHwIRm1PszB/library.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"5e17010d-35e5-4739-9c1b-24afa58b321f\":{\"name\":\"lake\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:13.000Z\",\"pngLastModified\":\"2021-09-02T00:35:21.000Z\",\"version\":\"6SvDTNnDBPouYh1c3Xp0JRJkgu3sHcHd\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/6SvDTNnDBPouYh1c3Xp0JRJkgu3sHcHd/lake.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"793f7e4b-b7e8-43e1-bb3b-a175f01d5fa3\":{\"name\":\"drop\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:14.000Z\",\"pngLastModified\":\"2021-09-02T00:35:13.000Z\",\"version\":\"03g9texyGWM1wCQDddu1vH53Zw.lopXe\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/03g9texyGWM1wCQDddu1vH53Zw.lopXe/drop.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"8049a4d7-0200-4fc0-9da6-2a0296ea4277\":{\"name\":\"daffodil2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:14.000Z\",\"pngLastModified\":\"2021-09-02T00:35:26.000Z\",\"version\":\"FGt5YuYuVNSCNTOm8R19ajvSLwoNurrP\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/FGt5YuYuVNSCNTOm8R19ajvSLwoNurrP/daffodil2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2a5fd9db-b928-449f-8324-59ec017d2047\":{\"name\":\"daffodil1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:15.000Z\",\"pngLastModified\":\"2021-09-02T00:35:25.000Z\",\"version\":\"3myTIS7gTz0CJy1o8aZx0NYSNIuxX6Mr\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/3myTIS7gTz0CJy1o8aZx0NYSNIuxX6Mr/daffodil1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"517da35c-10db-4338-8a04-1b42541bd97b\":{\"name\":\"cloud_single\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:40:16.000Z\",\"pngLastModified\":\"2021-09-02T00:35:26.000Z\",\"version\":\"tZmLxFQGrKnltSQuVsWwGhaX.xmPRvKt\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/tZmLxFQGrKnltSQuVsWwGhaX.xmPRvKt/cloud_single.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"3e2a7ab5-a483-4a83-8b2a-1a9f43a77dd1\":{\"name\":\"books\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:16.000Z\",\"pngLastModified\":\"2021-09-02T00:35:22.000Z\",\"version\":\"dGQwCtdcO_hpk64_eVgnfzNW3e2ds83b\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/dGQwCtdcO_hpk64_eVgnfzNW3e2ds83b/books.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"37850892-967a-4e53-8a17-722db2347a41\":{\"name\":\"tropicalfish_04\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":324},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-03 17:03:25 UTC\",\"pngLastModified\":\"2021-09-03 17:03:25 UTC\",\"version\":\"HgcCG6ctH2acGz3C0qLMoA4c_UbzCyya\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/HgcCG6ctH2acGz3C0qLMoA4c_UbzCyya/category_animals/tropicalfish_04.png\",\"sourceSize\":{\"x\":400,\"y\":324}},\"6177d06a-8a05-46ad-a040-54ef5335cef2\":{\"name\":\"alligator_mouth_open\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:18.000Z\",\"pngLastModified\":\"2021-09-02T00:35:28.000Z\",\"version\":\"wM4wxgwJzoIKHGb3uQiRuQFmjrD372Cd\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/wM4wxgwJzoIKHGb3uQiRuQFmjrD372Cd/alligator_mouth_open.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"3162fc52-fa85-41c5-a868-d4385a606d52\":{\"name\":\"alligator_mouth_closed\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:19.000Z\",\"pngLastModified\":\"2021-09-02T00:35:28.000Z\",\"version\":\"oM0isJgyj9Fl7nqWEXON0U9xB.vnyNFm\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/oM0isJgyj9Fl7nqWEXON0U9xB.vnyNFm/alligator_mouth_closed.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Find this number block and double click the \\\"???\\\"\\n<xml><block type=\\\"math_number\\\"><title name=\\\"NUM\\\">???</title></block></xml>\\n\\nTry changing the number to 25. \\n\\n<xml><block type=\\\"math_number\\\"><title name=\\\"NUM\\\">25</title></block></xml>\\n\\nWhat happens when the number is 150? \\n<xml><block type=\\\"math_number\\\"><title name=\\\"NUM\\\">150</title></block></xml>\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cab275365a74e5a7d0f5177cadaf2724/poetryHoC_spriteProperties.mp3\"}]",
-    "short_instructions": "You can change the **size** of a sprite you already made. ",
+    "instructions_icon": "octiGeneral",
     "preload_asset_list": null,
     "encrypted_examples": [
 
@@ -47,55 +57,191 @@
   },
   "game_id": 64,
   "published": true,
-  "created_at": "2021-09-21T18:24:36.000Z",
+  "created_at": "2021-09-22T20:00:53.000Z",
   "level_num": "custom",
-  "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2021-09-21T18:24:35.984+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_spriteProperties\\\"\"],\"cloned_from\":\"poetryHoC_spriteProperties\"},{\"changed_at\":\"2021-09-21 18:24:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 20:32:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:32:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:44:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 16:48:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 16:51:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 16:53:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 16:54:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 16:57:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 17:04:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 17:07:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 17:10:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 19:01:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 19:08:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 19:10:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 19:19:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 20:18:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 21:02:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 21:03:02 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 21:19:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 21:20:25 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 21:21:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 21:34:17 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "user_id": 831,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-09-22T20:00:53.787+00:00\",\"changed\":[\"cloned from \\\"poetry_predict_mood2\\\"\"],\"cloned_from\":\"poetry_predict_mood2\"},{\"changed_at\":\"2021-09-22 20:01:03 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 20:41:47 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-22 20:42:56 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-22 20:51:25 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-22 20:53:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-22 20:53:38 +0000\",\"changed\":[\"start_blocks\",\"embed\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-22 20:56:32 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false">
+        <block type="PoemBot_whenLineShows">
+          <title name="N">4</title>
+          <next>
+            <block type="gamelab_destroy">
+              <value name="THIS">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <title name="ANIMATION">"book_1"</title>
+                </block>
+              </value>
+              <next>
+                <block type="PoemBot_setFontColor">
+                  <value name="FILL">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#000000</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="PoemBot_setBackgroundEffect">
+                      <title name="EFFECT">"clouds"</title>
+                      <title name="PALETTE">"sunrise"</title>
+                      <next>
+                        <block type="gamelab_makeBurst">
+                          <title name="EFFECT">"pop"</title>
+                          <title name="ANIMATION_NAME">"open_book_1"</title>
+                          <value name="NUM">
+                            <block type="math_number">
+                              <title name="NUM">20</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="when_run">
           <next>
             <block type="PoemBot_setPoem" can_disconnect_from_parent="false">
-              <title name="POEM">"rumi_1"</title>
+              <title name="POEM">"rios"</title>
               <next>
-                <block type="PoemBot_setFont">
-                  <title name="FONT">"Arial Black"</title>
+                <block type="PoemBot_setFontColor">
+                  <value name="FILL">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#ffffff</title>
+                    </block>
+                  </value>
                   <next>
-                    <block type="PoemBot_setFontColor">
-                      <value name="FILL">
-                        <block type="colour_picker">
-                          <title name="COLOUR">#006600</title>
-                        </block>
-                      </value>
+                    <block type="PoemBot_setBackgroundEffect">
+                      <title name="EFFECT">"darkCircles"</title>
+                      <title name="PALETTE">"sunset"</title>
                       <next>
-                        <block type="PoemBot_setTextEffect">
-                          <title name="EFFECT">"fade"</title>
+                        <block type="PoemBot_setForegroundEffect">
+                          <title name="EFFECT">"glass"</title>
                           <next>
                             <block type="gamelab_makeNewSpriteAnon">
-                              <title name="ANIMATION_NAME">"night_star"</title>
+                              <title name="ANIMATION_NAME">"book_1"</title>
                               <value name="LOCATION">
                                 <block type="gamelab_location_picker">
-                                  <title name="LOCATION">{"x":336,"y":54}</title>
+                                  <title name="LOCATION">{"x":195,"y":205}</title>
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_makeNewSpriteAnon">
-                                  <title name="ANIMATION_NAME">"night_moon"</title>
-                                  <value name="LOCATION">
-                                    <block type="gamelab_location_picker">
-                                      <title name="LOCATION">{"x":59,"y":61}</title>
-                                    </block>
-                                  </value>
+                                <block type="PoemBot_startBehavior">
+                                  <title name="ANIMATION_NAME">"book_1"</title>
+                                  <title name="BEHAVIOR">growing</title>
                                 </block>
                               </next>
                             </block>
                           </next>
                         </block>
                       </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">10</title>
+          <next>
+            <block type="PoemBot_setBackgroundEffect">
+              <title name="EFFECT">"stars"</title>
+              <title name="PALETTE">"sunrise"</title>
+              <next>
+                <block type="PoemBot_setForegroundEffect">
+                  <title name="EFFECT">"twinkling"</title>
+                  <next>
+                    <block type="gamelab_destroy">
+                      <value name="THIS">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <title name="ANIMATION">"emoji_05_1"</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_makeNewSpriteAnon">
+                          <title name="ANIMATION_NAME">"red_shirt_hands_in_pockets2_1"</title>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker">
+                              <title name="LOCATION">{"x":32,"y":341}</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">7</title>
+          <next>
+            <block type="PoemBot_setFontColor">
+              <value name="FILL">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="PoemBot_setBackgroundEffect">
+                  <title name="EFFECT">"squiggles"</title>
+                  <title name="PALETTE">"autumn"</title>
+                  <next>
+                    <block type="gamelab_makeNumSprites">
+                      <title name="ANIMATION_NAME">"emoji_05_1"</title>
+                      <value name="NUM">
+                        <block type="math_number">
+                          <title name="NUM">10</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="PoemBot_setSize">
+                          <title name="SPRITE">"emoji_05_1"</title>
+                          <title name="VAL">50</title>
+                          <next>
+                            <block type="PoemBot_startBehavior">
+                              <title name="ANIMATION_NAME">"emoji_05_1"</title>
+                              <title name="BEHAVIOR">jittering</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">11</title>
+          <next>
+            <block type="gamelab_destroy">
+              <value name="THIS">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <title name="ANIMATION">"red_shirt_hands_in_pockets2_1"</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon">
+                  <title name="ANIMATION_NAME">"green_shirt_books_1"</title>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker">
+                      <title name="LOCATION">{"x":31,"y":340}</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="PoemBot_setForegroundEffect">
+                      <title name="EFFECT">"emojis"</title>
                     </block>
                   </next>
                 </block>
@@ -1420,60 +1566,7 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
-        <block type="gamelab_setBackground">
-          <value name="COLOR">
-            <block type="colour_picker">
-              <title name="COLOUR">#666666</title>
-            </block>
-          </value>
-        </block>
-        <block type="PoemBot_setBackgroundEffect">
-          <title name="EFFECT">"fadeColors"</title>
-          <title name="PALETTE">"ocean"</title>
-        </block>
-        <block type="PoemBot_setTextEffect">
-          <title name="EFFECT">"fade"</title>
-        </block>
-        <block type="PoemBot_setFont">
-          <title name="FONT">"Arial"</title>
-        </block>
-        <block type="PoemBot_setFontColor">
-          <value name="FILL">
-            <block type="colour_picker">
-              <title name="COLOUR">#3333ff</title>
-            </block>
-          </value>
-        </block>
-        <block type="PoemBot_playSound">
-          <title name="SOUND">"sound://category_bell/bells_win_low.mp3"</title>
-        </block>
-        <block type="PoemBot_setForegroundEffect">
-          <title name="EFFECT">"twinkling"</title>
-        </block>
-        <block type="PoemBot_whenLineShows">
-          <title name="N">???</title>
-        </block>
-        <block type="gamelab_makeNewSpriteAnon">
-          <title name="ANIMATION_NAME">"night_cloud"</title>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker">
-              <title name="LOCATION">{"x":198,"y":325}</title>
-            </block>
-          </value>
-        </block>
-        <block type="PoemBot_setSize">
-          <title name="SPRITE">"night_moon"</title>
-          <title name="VAL">???</title>
-        </block>
-        <block type="gamelab_destroy">
-          <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation">
-              <title name="ANIMATION">"night_cloud"</title>
-            </block>
-          </value>
-        </block>
-      </xml>
+      <xml/>
     </toolbox_blocks>
   </blocks>
 </GamelabJr>

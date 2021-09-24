@@ -54,13 +54,26 @@ class RegionalPartnerSearch extends Component {
       loading = true;
     }
 
+    // Get the flag that indicates whether applications are closed site-wide
+    // (versus the regional partner's own application close date)
+    $.ajax({
+      method: 'GET',
+      url: `/dashboardapi/v1/pd/applications/applications_closed`,
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        applicationsClosed: data
+      });
+    });
+
     this.state = {
       showZip: showZip,
       partnerInfo: undefined,
       zipValue: zipValue,
       error: error,
       loading: loading,
-      nominated: nominated
+      nominated: nominated,
+      applicationsClosed: undefined
     };
   }
 
@@ -113,6 +126,10 @@ class RegionalPartnerSearch extends Component {
       .done(this.partnerZipSuccess)
       .fail(this.partnerZipFail);
   };
+
+  shouldDisplayApplicationLink() {
+    return this.state.applicationsClosed === false;
+  }
 
   render() {
     const partnerInfo = this.state.partnerInfo;
@@ -167,13 +184,17 @@ class RegionalPartnerSearch extends Component {
           <div>
             <br />
             <div>
-              We are unable to find this ZIP code. You can still apply directly:
+              We are unable to find this ZIP code.
+              {this.shouldDisplayApplicationLink() &&
+                ' You can still apply directly:'}
             </div>
-            <StartApplicationButton
-              buttonOnly={true}
-              nominated={this.state.nominated}
-              priorityDeadlineDate={appsPriorityDeadlineDate}
-            />
+            {this.shouldDisplayApplicationLink() && (
+              <StartApplicationButton
+                buttonOnly={true}
+                nominated={this.state.nominated}
+                priorityDeadlineDate={appsPriorityDeadlineDate}
+              />
+            )}
           </div>
         )}
 
@@ -189,9 +210,11 @@ class RegionalPartnerSearch extends Component {
               <p>
                 We do not have a Regional Partner in your area. However, we have
                 a number of partners in nearby states or regions who may have
-                space available in their program. If you are willing to travel,
-                please fill out the application. We'll let you know if we can
-                find you a nearby spot in the program!
+                space available in their program.
+                {this.shouldDisplayApplicationLink() &&
+                  ` If you are willing to travel, please fill out the application. `}
+                We'll let you know if we can find you a nearby spot in the
+                program!
               </p>
               <p>
                 If we find a spot, we'll let you know the workshop dates and
@@ -224,11 +247,13 @@ class RegionalPartnerSearch extends Component {
                 </a>{' '}
                 for other Professional Development options in your area.
               </p>
-              <StartApplicationButton
-                buttonOnly={true}
-                nominated={this.state.nominated}
-                priorityDeadlineDate={appsPriorityDeadlineDate}
-              />
+              {this.shouldDisplayApplicationLink() && (
+                <StartApplicationButton
+                  buttonOnly={true}
+                  nominated={this.state.nominated}
+                  priorityDeadlineDate={appsPriorityDeadlineDate}
+                />
+              )}
             </div>
           </div>
         )}
@@ -238,7 +263,8 @@ class RegionalPartnerSearch extends Component {
             <hr style={styles.hr} />
 
             <div style={styles.action}>
-              {appState === WorkshopApplicationStates.currently_open &&
+              {this.shouldDisplayApplicationLink() &&
+                appState === WorkshopApplicationStates.currently_open &&
                 !partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
                     className="professional_learning_link"
@@ -248,7 +274,8 @@ class RegionalPartnerSearch extends Component {
                   />
                 )}
 
-              {appState === WorkshopApplicationStates.currently_open &&
+              {this.shouldDisplayApplicationLink() &&
+                appState === WorkshopApplicationStates.currently_open &&
                 partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
                     className="professional_learning_link"
@@ -377,7 +404,8 @@ class RegionalPartnerSearch extends Component {
             </div>
 
             {/* These two links duplicate the buttons that appear above. */}
-            {appState === WorkshopApplicationStates.currently_open &&
+            {this.shouldDisplayApplicationLink() &&
+              appState === WorkshopApplicationStates.currently_open &&
               !partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
                   className="professional_learning_link"
@@ -387,7 +415,8 @@ class RegionalPartnerSearch extends Component {
                 />
               )}
 
-            {appState === WorkshopApplicationStates.currently_open &&
+            {this.shouldDisplayApplicationLink() &&
+              appState === WorkshopApplicationStates.currently_open &&
               partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
                   className="professional_learning_link"
