@@ -19,13 +19,19 @@ const lessonExtra = PropTypes.shape({
   nextLevelPath: PropTypes.string
 });
 
+// This is the shape of the data returned by summarize_for_teacher_panel in
+// script_level.rb.  Note that this data is also directly passed to code that
+// expects an object with shape levelWithProgressType (defined in
+// progress/progressTypes.js) so it must be compatible with that shape.
 export const levelWithProgress = PropTypes.shape({
   id: PropTypes.string.isRequired,
   contained: PropTypes.bool,
   submitLevel: PropTypes.bool,
   paired: PropTypes.bool,
+  isDriver: PropTypes.bool,
+  isNavigator: PropTypes.bool,
   driver: PropTypes.string,
-  navigator: PropTypes.string,
+  navigators: PropTypes.arrayOf(PropTypes.string),
   isConceptLevel: PropTypes.bool,
   userId: PropTypes.number.isRequired,
   passed: PropTypes.bool.isRequired,

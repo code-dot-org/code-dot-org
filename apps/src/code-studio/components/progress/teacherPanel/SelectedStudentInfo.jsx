@@ -90,13 +90,20 @@ export default class SelectedStudentInfo extends React.Component {
     }
 
     const {
-      paired,
-      navigator,
+      isDriver,
+      isNavigator,
       driver,
+      navigators,
       submitLevel,
       status,
       updatedAt
     } = levelWithProgress;
+
+    const paired = isDriver || isNavigator;
+    const partner =
+      (isDriver && navigators && navigators[0]) ||
+      (isNavigator && driver) ||
+      i18n.pairingUnknownPartnerName();
 
     return (
       <div style={styles.main}>
@@ -110,12 +117,8 @@ export default class SelectedStudentInfo extends React.Component {
           {paired && (
             <div>
               <div>{i18n.workedWith()}</div>
-              {navigator && (
-                <div key={navigator}>{i18n.partner({partner: navigator})}</div>
-              )}
-              {driver && (
-                <div key={driver}>{i18n.loggedIn({partner: driver})}</div>
-              )}
+              {isDriver && <div>{i18n.partner({partner: partner})}</div>}
+              {isNavigator && <div>{i18n.loggedIn({partner: partner})}</div>}
             </div>
           )}
           <div style={styles.bubble}>
