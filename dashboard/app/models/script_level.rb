@@ -555,14 +555,11 @@ class ScriptLevel < ApplicationRecord
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
     contained = contained_levels.any?
 
-    if user_level
-      paired = user_level.paired?
-
-      driver_info = UserLevel.most_recent_driver(script, levels, student)
-      driver = driver_info[0] if driver_info
-
-      navigator_info = UserLevel.most_recent_navigator(script, levels, student)
-      navigator = navigator_info[0] if navigator_info
+    if user_level && user_level.paired?
+      is_driver = user_level.driver?
+      is_navigator = user_level.navigator?
+      driver = user_level.driver&.name
+      navigators = user_level.navigators_names
     end
 
     if teacher.present?
@@ -575,9 +572,11 @@ class ScriptLevel < ApplicationRecord
       id: level.id.to_s,
       contained: contained,
       submitLevel: level.properties['submittable'] == 'true',
-      paired: paired,
+      paired: is_driver || is_navigator || false,
+      isDriver: is_driver,
+      isNavigator: is_navigator,
       driver: driver,
-      navigator: navigator,
+      navigators: navigators,
       isConceptLevel: level.concept_level?,
       userId: student.id,
       passed: passed,
