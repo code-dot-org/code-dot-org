@@ -198,12 +198,14 @@ class WordOrPictureLogins extends React.Component {
     // Wrapping `write` calls in an onload event listener
     // to allow contentDocument/contentWindow initialization.
     printIframe.addEventListener('load', event => {
+      printIframe.contentDocument.open();
       printIframe.contentDocument.write(
         `<html><head><title>${i18n.printLoginCards_windowTitle({
           sectionName: section.name
-        })}</title></head>`
+        })}</title></head>
+        <body>${printArea}</body></html>`
       );
-      printIframe.contentDocument.write(`<body>${printArea}</body></html>`);
+      printIframe.contentDocument.close();
       printIframe.contentWindow.print();
     });
     document.body.appendChild(printIframe);
