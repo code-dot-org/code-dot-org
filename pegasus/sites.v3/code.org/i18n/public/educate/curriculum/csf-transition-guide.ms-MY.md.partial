@@ -1,144 +1,144 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: Panduan Peralihan Asas Sains Komputer
 theme: responsive
 style_min: true
 ---
 
-# Teaching Courses A-F
+# Mengajar Kursus A-F
 
-## Table of Contents
+## Kandungan
 
-* [Overview](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
-* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
-* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
-* [End of Course Projects (Courses E & F)](#endofcourse)
-* [Conclusion](#conclusion)
-* [FAQs](#faq)
+* [Gambaran Keseluruhan](#overview)
+* [Mengajar kursus baharu](#newcourses)
+* [Cerita Masa Berkumpulan (Kursus A dan B)](#circletime)
+* [Sokongan Pelajaran & Cabaran Teka-teki (Semua Peringkat Umur)](#scaffolding)
+* [Aktiviti Merapatkan Jurang Untuk Pelajaran Nirplag (Semua Peringkat Umur)](#unplugged)
+* [Akhir Projek Kursus (Kursus E & F)](#endofcourse)
+* [Kesimpulan](#conclusion)
+* [Soalan Lazim](#faq)
 
 <a id="overview"></a>
 
-## Overview
-The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+## Gambaran Keseluruhan
+Landskap pendidikan sains komputer telah banyak berubah sejak penciptaan kursus Asas Sains Komputer yang asal. Pada asalnya, Kursus 1-4 telah direka bentuk sebagai titik permulaan untuk mendapatkan asasnya, tanpa mengambil kira peringkat umur pelajar yang memasuki bidang disiplin itu.  Kini, lebih banyak daerah, bandar raya dan negeri telah melaksanakan kursus sains komputer bermula pada peringkat Tadika, para guru meminta lebih banyak kandungan untuk melihat pelajar mempelajarinya hingga peringkat sekolah menengah rendah.
 
-Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+Kursus Asas Sains Komputer A-F, ialah jawapan kami untuk isu itu.  Penubuhan kurikulum mengikut kelas membolehkan kami menilai sejenak dan memikirkan semula cara kami menyampaikan bahan kursus.  Perkara ini juga membolehkan kami berpeluang menggabungkan maklum balas dengan sepenuh hati daripada komuniti guru berdedikasi yang telah menyokong kami dalam misi ini. Direka bentuk dengan bantuan beberapa pakar pendidikan CS sekolah rendah yang terbaik di seluruh negara, Kursus A-F sepatutnya sudah cukup biasa dilaksanakan tanpa pembangunan profesional tambahan, tetapi cukup terkini untuk disampaikan kepada pelajar yang telah mengikuti pelajaran kami pada masa lalu.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* Kursus A: Tadika
+* Kursus B: Gred Pertama
+* Kursus C: Gred Ke-2
+* Kursus D: Gred Ke-3
+* Kursus E: Gred Ke-4
+* Kursus F: Gred Ke-5
+* Kursus Ekspres Prapembaca: Tadika - Gred Pertama
+* Kursus Ekspres: Gred Ke-2 - 5
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).  In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development.  Note the addition of two different “Express” courses, one for pre-readers and one for all other grades.  These are similar to the previous suite’s “accelerated” version.
+Kemas kini terbesar kepada Asas CS ialah kandungannya akan berubah daripada empat kursus (Kursus 1-4) kepada enam kursus yang sejajar dengan setiap tahap gred K-5 (Kursus A-F).  Dengan berbuat demikian, pengajaran telah menjadi lebih dijajarkan mengikut tahap yang sesuai untuk membaca, matematik dan perkembangan kognitif secara keseluruhan.  Perhatikan terdapat penambahan dua kursus “Ekspres” yang berbeza, satu untuk prapembaca dan satu lagi untuk semua gred lain.  Semua ini serupa dengan versi “dipercepatkan” suit terdahulu.
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
-As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+## Mengajar kursus baharu
+Seperti yang disebutkan sebelumnya, kursus tersebut sepatutnya sudah cukup biasa, tetapi berbeza.  Jika anda pernah menghadiri bengkel pembangunan profesional Code.org, maka anda sudah bersedia mengajar kursus baharu. Terdapat sebahagian kecil perubahan, tetapi keseluruhan platform, kurikulum dan falsafah pedagogi tidak berubah. Jika anda masih belum menghadirinya, Code.org menawarkan bengkel 1 hari secara percuma untuk membantu anda mempelajari cara memahami kurikulum, menavigasi platform Code.org dan mengajar pelajaran nirplag.
 
-The main updates to the courses are:
+Kemas kini utama kursus ialah:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* Cerita masa berkumpulan untuk pelajar yang lebih muda
+* Pendekatan baharu untuk menyokong dan mengamalkan/menggunakan konsep
+* Aktiviti merapatkan jurang bagi meningkatkan peralihan daripada pelajaran nirplag kepada pelajaran yang menggunakan alatan digital
+* Akhir projek kursus untuk pelajar lebih tua
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+Panduan yang selebihnya akan menyampaikan setiap idea dengan lebih terperinci, menawarkan petua dan cara melaksanakan perubahan di dalam kelas anda.
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+## Cerita Masa Berkumpulan (Kursus A dan B)
+Sesetengah konsep sukar diajar melalui aktiviti dan teka-teki semata-mata, terutamanya untuk pelajar muda.  Ini ialah antara sebab kami telah memperkenalkan sebilangan kecil cerita masa berkumpulan dalam kurikulum Tadika dan Gred Pertama. Cerita ini bertujuan untuk dibaca oleh guru kepada seluruh kelas, dengan berhenti di beberapa bahagian untuk membincangkan idea kritikal seperti penyahpepijatan, ketabahan dan kekecewaan.  Harapan kami ialah dengan membolehkan pelajar merasai pengalaman konsep yang sukar ini melalui watak cerita akan membantu mereka mengenali tanggapan yang sama apabila konsep ini muncul dalam pelajaran yang akan datang.
 
-Here is how the circle-time stories are intended to be used:
+Berikut ialah cara tujuan cerita masa berkumpulan digunakan:
 
-### Read the appropriate story to your class
-  - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-  - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-  - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
+### Baca cerita yang sesuai kepada kelas anda
+  - Pastikan untuk menyemak pemahaman sepanjang tempoh kursus dengan soalan dan komen pada masa yang berguna semasa menyampaikan kandungan.
+  - Bincangkan tentang cerita berkenaan selepas itu. Apakah yang telah didengari oleh pelajar anda? Adakah terdapat apa-apa idea yang tidak dapat diluahkan oleh mereka?
+  - Cuba membuatkan pelajar mengenal pasti wataknya.  Adakah terdapat sesuatu yang mereka lakukan dalam kehidupan mereka sehingga mengingatkan mereka kepada satu daripada watak di dalam cerita itu?
 
-### Remind students about the story before they begin the next activity.
-  - Do you remember the main ideas we discussed?
-  - How will you know if you see that idea today?
-  - What did the character do to handle that idea? What would you do?
+### Ingatkan para pelajar tentang cerita itu sebelum mereka memulakan aktiviti yang seterusnya.
+  - Adakah anda ingat tentang idea utama yang kita bincangkan?
+  - Bagaimanakah anda akan mengetahuinya jika anda melihat idea itu pada hari ini?
+  - Apakah yang dilakukan oleh watak tersebut untuk melaksanakan idea itu? Apakah yang akan anda lakukan?
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
-  - Describe for a student how the position that they are in resembles a situation from the book.
-  - Ask a student to think about the characters and figure out what they might do.  Does that help the student figure out a next step?
+### Tunjukkan persamaan antara cerita dan situasi pelajar apabila kedua-duanya bertemu semasa melakukan aktiviti.
+  - Huraikan kepada pelajar kedudukan yang sedang mereka alami semasa berhadapan dengan situasi serupa seperti dalam buku.
+  - Minta pelajar fikirkan tentang watak dan tentukan perkara yang mungkin mereka lakukan.  Adakah perkara itu boleh membantu pelajar menentukan langkah seterusnya?
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+Jika anda tidak dapat menggabungkan keseluruhan kelas anda bersama, Code.org telah menyediakan pilihan video bahagian permulaan pelajaran berkenaan yang memaparkan cerita dengan animasi terhad. Meskipun video ini tidak menunjukkan pengalaman yang hampir sama, tetapi ia akan membolehkan para pelajar mendapat pendedahan kepada konsep dan watak sebelum meneruskan ke dalam bahagian kursus yang lainnya.
 
 <a id="scaffolding"></a>
 
-## Lesson Scaffolding & Challenge Puzzles (All Ages)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+## Sokongan Pelajaran & Cabaran Teka-teki (Semua Peringkat Umur)
+Kursus A-F kurang disokong secara keseluruhan berbanding kursus kami yang terdahulu.  Itu bermaksud bahawa kami berusaha meminta pelajar mencipta kod mereka dari mula sekerap yang mungkin, melainkan jika mereka belajar melakukan nyahpepijat secara khusus.  Sebagai sebahagian daripada reka bentuk ini, kebanyakan pelajaran dalam talian kami mengikuti arah aliran apabila kami menyampaikan teka-teki mudah untuk memulakan pelajaran, kemudian secara perlahan bergerak ke hadapan dengan konsep baharu sehingga pelajar berpeluang memahami idea yang menjadi dasarnya.  Seterusnya, kami memberikan teka-teki cabaran, yang bertujuan membuatkan pelajar berfikir tentang konsep dalam cara baharu dan rumit.
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+Teka-teki cabaran adalah sesuatu yang baharu dalam Kursus A-F.  Tujuan teka-teki cabaran ialah mendedahkan pelajar kepada bar yang tinggi apabila mereka boleh mengamalkan ketabahan dan pemikiran bebas.  Teka-teki cabaran dengan sengaja dibuat sukar dan direka bentuk supaya hanya pelajar yang benar-benar memahami konsep akan lulus dalam rangka masa yang munasabah.  Ini bermaksud bahawa sebilangan besar pelajar tidak akan berjaya melepasi cabaran yang pertama kali mereka lalui. Ini memerlukan sikap tertentu daripada pelajar dan guru untuk bertindak cemerlang.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. Pelajar hendaklah menyahut cabaran ini dengan bersungguh-sungguh, kemudian mengetepikannya dan meneruskan usaha.  Amalan tersebut membolehkan dua perkara yang amat penting berlaku:
+2. Pelajar memperoleh pemahaman lebih baik tentang masa dan sebab menggunakan konsep yang dikaji itu. Teka-teki berikut menjadi lebih mudah untuk diselesaikan selepas cabaran itu, walaupun ia adalah teka-teki serius seperti yang dijangkakan.
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+Perlu diingatkan bahawa pelajar boleh mengikuti pelajaran dan mencuba semula teka-teki yang masih belum diselesaikan pada bila-bila masa.  Kadang-kadang, ia amat berguna untuk tidur pada waktu malam dengan nyenyak sebelum cuba menyelesaikan semula masalah yang sukar.
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+Sebaik sahaja pelajar berjaya melepasi cabaran tersebut, mereka akan menerima sebilangan kecil latihan yang sudah menanti mereka, serupa dengan cabaran yang mereka hadapi pada separuh pertama tahap itu. Teka-teki ini diletakkan secara sengaja bagi menguji kejelasan pelajar mengenai subjek yang sedang dipelajari.  Teka-teki tersebut mungkin kelihatan terlalu mudah, jika dibandingkan dengan yang diberikan sebelumnya, tetapi teka-teki ini diciptakan untuk menunjukkan tahap kecekapan sebenar yang dikehendaki daripada peringkat yang sepadan.
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+Dalam sesetengah keadaan, kami mengakhiri pelajaran kami dengan tahap gaya permainan bebas.  Tahap ini mungkin sama ada tidak mempunyai jawapan yang “salah”, atau ia mungkin membenarkan beberapa cara berbeza untuk menyelesaikan masalah teras mereka.  Diminta supaya pelajar diberikan galakan untuk melakukan yang terbaik dan bukan hanya mengklik “Teruskan” walaupun mereka boleh berbuat demikian.
 
-Some final notes for this area:
+Beberapa catatan akhir untuk bahagian ini:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* Ingatkan pelajar supaya berusaha dengan gigih dan menggunakan kemahiran penyahpepijatan mereka ke atas masalah yang dirasakan sukar.
+* Video yang disediakan sering berguna.  Apabila pelajar menghadapi masalah, diminta supaya mereka dapat menonton semula video untuk kali kedua, ketiga, mahupun keempat.
+* Mewajibkan pelajar membaca arahan.  Jika mereka menghadapi kesukaran, biarkan mereka membaca arahan dengan kuat kepada rakan sekelas mereka.
+* Tiada masalah untuk menggunakan petunjuk!  Pelajar sepatutnya menggunakan seberapa banyak petunjuk yang perlu, tetapi pastikan mereka cuba menyelesaikan semula teka-teki berkenaan sekurang-kurangnya sekali antara setiap petunjuk baharu yang diterima.
 
 <a id="unplugged"></a>
 
-## Bridging Activities For Unplugged Lessons (All Ages)
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+## Aktiviti Merapatkan Jurang Untuk Pelajaran Nirplag (Semua Peringkat Umur)
+Aktiviti niplag seperti bertemu para pelajar diadakan apabila mereka mahu menunjukkan setakat mana mereka telah menggunakan konsep CS penting dalam kehidupan seharian.  Sebaik sahaja pelajar boleh mengenal pasti idea asas seperti gelung dan bersyarat, mereka pasti dapat mengatasi masalah mental yang boleh berlaku apabila cuba menggunakannya untuk pertama kali mengatur cara dalam talian.
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
+Pengalaman nirplag adalah amat penting sehingga kami memilih untuk menggunakannya selangkah lebih lanjut dan melakukan aktiviti yang merapatkan pelajaran nirplag kepada rakan dalam talian mereka.  Dalam Kursus A-F, kini anda akan mendapati bahawa rancangan pelajaran memberikan contoh cara melakukan latihan secara luar talian dan menterjemahkan pelajaran kepada set teka-teki dalam talian yang berikut.  Sewajarnya, kami memanggilnya sebagai "Aktiviti Merapatkan Jurang."
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise.  In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+Sebahagian besarnya, aktiviti merapatkan jurang boleh diwujudkan sama ada dengan mengambil subjek latihan nirplag dan melaksanakannya dengan kertas blok Blockly, atau mengambil teka-teki dalam talian dan menyelesaikannya dengan menggunakan bahasa daripada latihan nirplag.  Dalam beberapa kes, hubungan berbeza diperkenalkan, tetapi semua contoh adalah dimaksudkan untuk menjaga pengalaman luar talian daripada dirasai terlalu abstrak atau tidak berkaitan.
 
 <a id="endofcourse"></a>
 
-## End of Course Projects (Courses E & F)
-For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+## Akhir Projek Kursus (Kursus E & F)
+Untuk pelajar yang lebih tua, kami telah memperkenalkan banyak projek akhir kursus dalam Kursus E & F.  Meskipun Code.org telah memberikan kebolehan untuk membina “projek” untuk sekian lama, kami merasakan bahawa ia akan menambahkan beberapa perspektif yang sangat diperlukan supaya pelajar dapat merancang dan melaksanakan projek mereka di dalam konteks rasmi.
 
-The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+Bahagian akhir projek kursus adalah agak jelas dan mudah.  Sepanjang tempoh empat hingga lima minggu ini, pelajar akan mengkaji semula idea projek, merancang aplikasi mereka, mengekod atur cara mereka, menyemak semula berdasarkan maklum balas (gred ke-5) dan kemudian membentangkan kerja mereka yang telah dilengkapkan.  Setiap langkah ini dibimbing oleh kertas sebaran yang berguna, serta rancangan pelajaran guru yang menonjolkan gambaran lebih besar.
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point.  These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**Mengkaji Semula:** Pelajar akan melihat sebilangan kecil projek aspirasi, dibina untuk mempamerkan perkara luar biasa yang boleh dilakukan dengan kemahiran mereka pelajari hingga tahap ini.  Projek ini telah dibina sama ada di dalam Makmal Mainan atau Artis, tetapi pelajar bebas mengkaji semula projek daripada Tynker, Scratch, atau malah bahasa berasaskan teks jika guru berpendapat ia sesuai dilakukan sedemikian.
 
-**Plan:** The intention here is for students to sit back and think about what is really possible.  They will need to think about the games that they saw, and the limitations that they faced when editing them.  Afterward, they will sketch out a plan to create something unique.  Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life.  The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**Rancangan:** Di sini, tujuannya ialah supaya pelajar merenung sejenak dan memikirkan tentang perkara sebenar yang boleh dilakukan.  Mereka perlu memikirkan tentang permainan yang mereka lihat dan pengehadan yang dihadapi apabila mengeditnya.  Sesudah itu, mereka akan melakarkan rancangan untuk mencipta sesuatu yang unik.  Pelajar mungkin perlu diingatkan supaya kekal realistik, kerana mereka akan mempunyai masa dan sumber yang terhad apabila merealisasikan visi mereka.  Di sini, bahan diandai menggunakan Artis atau Makmal Mainan, tetapi projek boleh dipindahkan ke mana-mana platform yang berfungsi untuk setiap kelas tertentu.
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper.  Students will face tough choices when it comes to trying to make things work as they run into one barrier after another.  They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**Membina:** Satu hari bukan keseluruhan masa yang diperuntukkan untuk melaksanakan rancangan yang telah disusun di atas kertas.  Pelajar akan berhadapan pilihan sukar apabila berusaha menjayakan sesuatu rancangan supaya berjalan lancar kerana mereka terpaksa menempuhi satu halangan demi satu halangan yang lain.  Mereka akan belajar mengedit dan menyesuaikan diri kerana pepijat dan pengehadan atur cara mengubah persepsi mereka tentang perkara yang boleh diselesaikan dengan selesa dalam jangka masa terhad.
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved.  Students will practice constructive critique, as well as group brainstorming and persistence.
+**Menyemak Semula:** Untuk pelajar yang lebih tua, sehari suntuk masa yang diambil bagi menyemak semula atur cara mereka berdasarkan maklum balas rakan sekelas dapat membantu mereka menambah baik produk akhir mereka dan membolehkan mereka memberikan inspirasi kepada individu lain dengan perkara yang telah mereka capai.  Pelajar akan mengamalkan kritikan membina, serta sumbang saran dan ketabahan mengikut kumpulan.
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come.  Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**Membentangkan:** Ini merupakan peluang untuk pelajar berdiri dan berbangga dengan pencapaian mereka setakat ini selepas hampir sebulan berusaha menyiapkannya.  Rancangan pelajaran kami bertanggungjawab terhadap pembentangan secara lisan, tetapi sebaliknya guru mempunyai pilihan untuk mencadangkan pembentangan secara bertulis atau multimedia.
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+Tanpa mengambil kira sejauh mana penglibatan menyeluruh pelajar dalam projek mereka, sudah pasti mereka akan mempelajari sesuatu yang berguna tentang proses kreativiti dan penyelesaian masalah dalam sains komputer.
 
 <a id="conclusion"></a>
 
-## Conclusion
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+## Kesimpulan
+Seperti yang anda boleh lihat, Kursus A-F dalam Asas Sains Komputer mengandungi peningkatan yang menarik, dipengaruhi oleh maklum balas daripada guru Asas CS yang meluas & komuniti fasilitator.
 
-We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
+Kami berharap gambaran keseluruhan ini dapat memberikan pemahaman yang tepat dan mendalam.  Jika anda mempunyai apa-apa soalan atau komen tentang perubahan ini, sila kunjungi http://forum.code.org/c/csf dan kirimkannya kepada forum kami.  Kami akan memastikan soalan anda dijawab secepat mungkin.  Hingga setakat ini, berikut ialah sebahagian daripada soalan lazim tentang Kursus A-F.
 
 <a id="faq"></a>
 
-## FAQs
+## Soalan Lazim
 
-| Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
-| **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
-| **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
-| **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| Soalan                                                                                                                                                                                             | Jawapan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Anda melancarkan set kursus baharu-- adakah itu bermaksud bahawa Kursus 1-4 akan dihentikan?**                                                                                                   | Tidak. Sama sahaja dengan kursus 20 Jam kami yang asal, masih tersedia dan digunakan dalam laman web, kami merancang untuk mengekalkan Kursus 1-4 bagi mereka yang merasakan bahawa kursus tersebut lebih mencerminkan pengalaman yang diperlukan oleh pelajar/anak mereka.                                                                                                                                                                                                                                                                                                          |
+| **Bilakah kita boleh mula menggunakan Kursus A-F?**                                                                                                                                                | Kursus A-F sememangnya tersedia sekarang!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Sebahagian daripada pelajaran/teka-teki kegemaran saya tidak dapat ditemui dalam Kursus A-F!**                                                                                                   | Jangan risau! Pelajaran dan teka-teki tersebut masih lagi wujud dalam Kursus 1-4 atau kursus 20 Jam Dipercepatkan semasa anda meninggalkan kedua-duanya.                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Nampaknya, teka-teki ini menjadi lebih sukar.  Saya bimbang yang teka-teki ini menjadi terlalu sukar untuk anak kecil saya.**                                                                    | Tunggak kursus baharu ini ialah keinginan untuk membuatkan pelajar berfikir, menyelesaikan masalah dan mengamalkan ketabahan.  Kesemuanya ini tidak diperlukan apabila teka-teki terlalu mudah diselesaikan.  Atas sebab ini, kami perlu membuat teka-teki yang lebih sukar.  Sila rujuk panduan guru untuk mendapatkan bantuan dengan memimpin kelas anda dalam membina kemahiran ini.  Seperti biasa, jangan memandang rendah kepentingan menggunakan pelajaran nirplag sebelum mengambil keputusan menggunakan teka-teki dalam talian.                                            |
+| **Sesetengah teka-teki hanya membenarkan bilangan blok khusus yang tertentu.  Bagaimanakah jika pelajar saya mahu mengekod sesuatu yang sangat penting sebelum mereka mengetahui tentang gelung?** | Terdapat beberapa teka-teki yang menyekat blok yang khusus. Ini ialah satu daripada cara baharu kami semasa memberikan sokongan.  Ini ialah cara memberikan arahan, tanpa menyokong teka-teki tersebut secara berlebihan di ruang kerja itu sendiri.  Untuk pelajar yang suka mengekod teka-teki yang sangat penting sebelum ia berkurangan (dan, sebenarnya untuk semua pelajar, sepanjang masa) adalah amat berguna mempunyai jurnal atau kertas catatan di sebelah papan kekunci apabila mereka boleh menemui algoritma dengan cara apa sekalipun yang datang secara semula jadi. |
 

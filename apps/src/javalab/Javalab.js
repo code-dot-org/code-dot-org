@@ -131,7 +131,8 @@ Javalab.prototype.init = function(config) {
       this.miniApp = new Playground(
         this.onOutputMessage,
         this.onNewlineMessage,
-        onJavabuilderMessage
+        onJavabuilderMessage,
+        this.level.name
       );
       this.visualization = <PlaygroundVisualizationColumn />;
       break;

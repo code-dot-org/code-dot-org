@@ -906,7 +906,18 @@ class UnitEditor extends React.Component {
         )}
 
         {this.props.isLevelbuilder && (
-          <CollapsibleEditorSection title="Professional Learning Settings">
+          <CollapsibleEditorSection
+            title="Deeper Learning Settings"
+            collapsed={true}
+          >
+            <b>
+              <i>
+                These settings are only used for deeper learning courses which
+                use the peer review system which is not part of the normal
+                course model. All other courses should be built in the normal
+                course model.
+              </i>
+            </b>
             <label>
               Deprecated
               <input

@@ -2106,7 +2106,7 @@ en:
             Oceans:
               name: Oceans
               description_student: 'Tutorial Summary: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.'
-              description_teacher: "**Tutorial Summary:** First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\r\n\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\r\n\r\nHave fun completing your Hour of Code!\r\n\r\n"
+              description_teacher: First, students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
           student_description: Learn how AI and machine learning can be used to address world problems.
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -5941,7 +5941,7 @@ en:
             CSP post survey 2018 staging:
               name: CSP post survey 2018 staging
             CSP post-course survey:
-              name: CSP post-course survey
+              name: CSP Student Post-Course Survey ('17-'18)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         public-key-cryptography:
           title: Public Key Cryptography Widgets
@@ -7136,8 +7136,8 @@ en:
               name: Intro to AppLab - Getting Started
             Intro to App Lab:
               name: Intro to App Lab
-              description_student: 'Tutorial Summary: This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial students are given time to either extend a project they started building into a "Choose Your Own Adventure", "Greeting Card", or "Personality Quiz" app. They can also continue on to build more projects featured on the code.org/applab page. '
-              description_teacher: "**Tutorial Summary:** This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. \r\n\r\n**Age Appropriateness:** The tutorial is designed for students over 13. Because it allows students to upload custom sounds and images, young students should not use this without supervision. To protect students privacy, if your students are under 13, they will not be able to use this tutorial unless you first set up accounts for them in a section you manage.\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. Encourage students to use the target images and directions provided in every level to know if they are on the right track. If students want to move on past a particularly tricky level they can simply click \"Finish\" and continue on.\r\n\r\nHave fun completing your Hour of Code with App Lab!\r\n\r\n"
+              description_student: 'This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a "Choose Your Own Adventure", "Greeting Card", or "Personality Quiz" app. They can also continue on to build more projects featured on the code.org/applab page. '
+              description_teacher: "This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. \n\n**Age Appropriateness:** The tutorial is designed for students over 13. Because it allows students to upload custom sounds and images, young students should not use this without supervision. To protect students' privacy, if your students are under 13, they will not be able to use this tutorial unless you first set up accounts for them in a section you manage.\n\n"
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
           student_description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
@@ -10493,7 +10493,7 @@ en:
               display_name: Post-Course Survey
           lessons:
             CSD post-course survey:
-              name: CSD post-course survey
+              name: CSD Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         csd-novice-18:
           title: CS Discoveries Novice Reflections 2018-2019
@@ -11928,7 +11928,7 @@ en:
               display_name: Survey
           lessons:
             CSP Mid-year survey:
-              name: CSP Mid-year survey
+              name: CSP Student Mid-year Survey
           student_description: Welcome to the Code.org CS Principles Mid-Year Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         gamelab:
           title: Game Lab
@@ -14162,7 +14162,7 @@ en:
               display_name: Survey
           lessons:
             CSD post-course survey:
-              name: CSD post-course survey
+              name: CSD Student Post-Course Survey ('18-'19)
           student_description: "The CS Discoveries Post-Course Survey is an important tool we use to get feedback from you and make improvements to the course. \r\n The survey is private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration."
         csp-post-survey-2018:
           title: CSP Student Post-Course Survey ('18-'19)
@@ -14174,7 +14174,7 @@ en:
               display_name: Survey
           lessons:
             CSP post-course survey:
-              name: CSP post-course survey
+              name: CSP Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         csp5-pilot:
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
@@ -26286,6 +26286,19 @@ en:
           lesson_groups: {}
           name: poetry-hoc2
           title: Poetry HoC v2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Mood Study
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poetry-hoc3
+          title: Poetry HoC v3
           description_audience: ''
           description_short: ''
           description: ''

@@ -402,6 +402,7 @@ class Level < ApplicationRecord
     'NetSim', # widget
     'Odometer', # widget
     'Pixelation', # widget
+    'Poetry', # no ideal solution
     'PublicKeyCryptography', # widget
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
