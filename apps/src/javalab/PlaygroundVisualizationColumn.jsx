@@ -5,6 +5,7 @@ import PreviewPaneHeader from './PreviewPaneHeader';
 import classNames from 'classnames';
 import {toggleVisualizationCollapsed} from './javalabRedux';
 import PlaygroundImage from './PlaygroundImage';
+import {PlaygroundItemType} from './constants';
 
 class PlaygroundVisualizationColumn extends React.Component {
   static propTypes = {
@@ -24,7 +25,7 @@ class PlaygroundVisualizationColumn extends React.Component {
     const {playgroundItemData} = this.props;
     const items = Object.keys(playgroundItemData).map(itemId => {
       const itemData = playgroundItemData[itemId];
-      if (itemData.type === 'image') {
+      if (itemData.type === PlaygroundItemType.IMAGE) {
         return <PlaygroundImage key={itemId} id={itemId} {...itemData} />;
       }
     });
@@ -100,7 +101,7 @@ export default connect(
   state => ({
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     isCollapsed: state.javalab.isVisualizationCollapsed,
-    playgroundItemData: state.javalab.playgroundItemData,
+    playgroundItemData: state.playground.itemData,
     isResponsive: state.pageConstants.isResponsive
   }),
   dispatch => ({
