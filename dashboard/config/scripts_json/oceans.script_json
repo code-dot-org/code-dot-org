@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "oceans",
-    "serialized_at": "2021-09-18 22:15:25 UTC",
+    "serialized_at": "2021-09-22 12:11:21 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "oceans"
@@ -40,7 +40,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Tutorial Summary:** First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\r\n\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\r\n\r\nHave fun completing your Hour of Code!\r\n\r\n",
+        "overview": "First, students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
         "preparation": "### One Week Before Your Hour of Code\r\n\r\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) in order to begin to plan your Hour of Code event. \r\n- [Register your Hour of Code event](http://hourofcode.com).\r\n- Review and complete the online tutorial yourself.\r\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\r\n\r\n### One Day Before Your Hour of Code\r\n\r\n- Each student who completes the activity should receive a certificate. [Print one](https://code.org/certificates?script=oceans) for everyone in advance to make this easier at the end of your Hour of Code.\r\n",
         "purpose": "This tutorial is designed to quickly introduce students to **machine learning**, a type of **artificial intelligence**. Students will explore how **training data** is used to enable a machine learning model to classify new data. Students should have a positive experience during the tutorial and more importantly should be motivated to keep learning computer science. ",
         "student_overview": "Tutorial Summary: First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own."
@@ -57,7 +57,6 @@
       "key": "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0",
       "position": 1,
       "properties": {
-        "duration": 0,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -71,7 +70,6 @@
       "key": "160cbd69-f567-4fb4-9623-0e69ecec9b3a",
       "position": 2,
       "properties": {
-        "duration": 0,
         "name": "Activity"
       },
       "seeding_key": {
@@ -85,7 +83,6 @@
       "key": "04400eef-5989-4325-a801-ab4ad451f130",
       "position": 3,
       "properties": {
-        "duration": 0,
         "name": "Extended Learning"
       },
       "seeding_key": {
@@ -99,7 +96,6 @@
       "key": "b304de28-91d8-4215-a853-27f5a3f8a157",
       "position": 4,
       "properties": {
-        "duration": 0,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -113,7 +109,6 @@
       "key": "422a9a0d-186b-4332-93a8-8ccc5c407ec6",
       "position": 5,
       "properties": {
-        "duration": 0,
         "name": "Digging into the Information View"
       },
       "seeding_key": {
@@ -154,7 +149,7 @@
       "key": "276f818d-6f12-436b-9183-778f6a4eb670",
       "position": 1,
       "properties": {
-        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on\r\n\r\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor to discuss what they are experiencing. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students.\r\n* **Read the Instructions:** The instructions usually provide helpful information about what is happening behind the scenes. \r\n* **Go back and try different things:** If students finish quickly, encourage them to go back to \"Train More\". In the last part of the activity, students can also go back and choose a \"New Word\". More training data tends to make the machine learning model more accurate and consistent. Students can also learn by purposefully training their model incorrectly, or not training it at all.",
+        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n\n* **Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor to discuss what they are experiencing. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students.\n* **Read the Instructions:** The instructions usually provide helpful information about what is happening behind the scenes. \n* **Go back and try different things:** If students finish quickly, encourage them to go back to \"Train More\". In the last part of the activity, students can also go back and choose a \"New Word\". More training data tends to make the machine learning model more accurate and consistent. Students can also learn by purposefully training their model incorrectly, or not training it at all.",
         "name": "General Support\r"
       },
       "seeding_key": {
@@ -169,7 +164,6 @@
         "name": "Level 1 - [Machine Learning](https://studio.code.org/s/oceans/stage/1/puzzle/1)\r",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "You can share these stories with your class to help them see how AI will impact the future.\r\n\r\n* [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\r\n* [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\r\n* [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\r\n* [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\r\n* [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\r\n* [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\r\n* [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)\r\n"
           }
@@ -197,7 +191,6 @@
       "properties": {
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Get students acquainted with the world of artificial intelligence.  Reflect on the prevalence of artificial intelligence in our lives and think broadly about potential future innovations."
           }
@@ -226,7 +219,6 @@
         "name": "Levels 2-4 - [Train AI to Clean the Ocean](https://studio.code.org/s/oceans/stage/1/puzzle/2)\r",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Every image in this part of the tutorial is fed into a neural network that has been pre-trained on a huge set of data called [ImageNet](http://www.image-net.org/). The database contains over 14 million hand-annotated images. ImageNet contains more than 20,000 categories with a typical category, such as \"balloon\" or \"strawberry\", consisting of several hundred images. When A.I. is scanning new images and making its own predictions in the tutorial, it is actually comparing the possible categories for the new image with the patterns it found in the training dataset. \r\n"
           }
@@ -277,7 +269,6 @@
       "properties": {
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\r\n\r\n"
           }
@@ -306,7 +297,6 @@
         "name": "Levels 6 - [Using Training Data](https://studio.code.org/s/oceans/stage/1/puzzle/6)\r",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "The fish in this tutorial are randomly generated based on some pre-defined components, including mouths, tails, eyes, scales, and fins, with a randomly chosen body color, shape, and size. Rather than looking at the actual image data, A.I. is now looking for patterns in these components based on how the student classifies each fish. It will be more likely to label a fish the same way the student would have if it has matching traits.\r\n"
           }
@@ -357,7 +347,6 @@
       "properties": {
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** The goal of this discussion is to bring students back to the context of artificial intelligence in the real world. \r\n"
           }
@@ -468,6 +457,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -489,6 +481,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -510,6 +505,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -531,6 +529,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -552,6 +553,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Training_Data"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -573,6 +577,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -594,6 +601,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Societal_Implications"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -615,6 +625,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long"
+        ]
       },
       "bonus": false,
       "seeding_key": {

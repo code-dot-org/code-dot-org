@@ -25915,3 +25915,27 @@ ar:
               name: مقياس التسارع
             lesson-19:
               name: مشروع
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: عناصر واجهة المستخدم
+            lesson-3:
+              name: الأدوات
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الدروس
+            lessonGroup-3:
+              display_name: مشروع
+        csa4-exemplars:
+          lessons:
+            lesson-15:
+              name: يوم التقييم
+          lesson_groups:
+            lesson group:
+              display_name: محتوى
+            content:
+              display_name: محتوى
+            lesson_group:
+              display_name: محتوى
+            lessonGroup-2:
+              display_name: محتوى

@@ -906,7 +906,7 @@ de:
     instructions_headline: 'Keine Internetverbindung?'
     instructions: 'Einführung für Lehrer: Wenn sie über eine schlechte Internetverbindung verfügen, können sie diese Hour of Code Tutorials downloaden und offline installieren. Suchen sie die Sprache und das Betriebssystem aus und downloaden sie es, damit sie es auf den Computern in den Klassenräumen installieren können. Sie können dazu auch ein USB Speicher verwenden. Achtung: Die Schüler können sich nicht einloggen, keinen Fortschritt speichern und keine Zertifikate ausdrucken. Die Lehrer sollten diese möglicherweise vorher <a href="%{url}">hier</a> ausdrucken.'
     minecraft_name: 'Minecraft "Hour of Code"'
-    starwars_blocks_name: 'Star Wars: Aufbau einer Galaxis mit Code (Blöcke)'
+    starwars_blocks_name: 'Star Wars: Aufbau einer Galaxis mit Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Aufbau einer Galaxis mit Code (JavaScript)'
     download_message: '%{app_name} zur Offline-Nutzung (136MB) herunterladen'
     download_in_Albanian: 'Download auf Albanisch:'

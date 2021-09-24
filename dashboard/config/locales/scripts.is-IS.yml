@@ -7965,3 +7965,20 @@ is:
           lessons:
             lesson-19:
               name: Verkefni
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Græjur
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verkefni
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Innihald
+            content:
+              display_name: Innihald
+            lesson_group:
+              display_name: Innihald
+            lessonGroup-2:
+              display_name: Innihald

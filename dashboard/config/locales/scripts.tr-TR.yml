@@ -26544,3 +26544,27 @@ tr:
               name: İvme Ölçer
             lesson-19:
               name: Proje
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Araçlar
+            lesson-3:
+              name: Araçlar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dersler
+            lessonGroup-3:
+              display_name: Proje
+        csa4-exemplars:
+          lessons:
+            lesson-15:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lesson group:
+              display_name: İçerik
+            content:
+              display_name: İçerik
+            lesson_group:
+              display_name: İçerik
+            lessonGroup-2:
+              display_name: İçerik

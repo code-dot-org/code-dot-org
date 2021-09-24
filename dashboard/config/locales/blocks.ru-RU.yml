@@ -1011,6 +1011,13 @@ ru:
         text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       gamelab_makeNumSprites:
         text: создать {NUM} новый {ANIMATION_NAME} слайдов
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': вправо
+            '90': вниз
+            '180': влево
+            '270': вверх
       gamelab_mirrorSprite:
         text: "{SPRITE} Лицо {DIRECTION}"
         options:
@@ -1047,6 +1054,7 @@ ru:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": кнопка
             "'sound://category_collect/clicky_crunch.mp3'": хруст
+            "'sound://category_digital/jump_7.mp3'": прыгнуть
       gamelab_pointInDirection:
         text: точка {SPRITE} {DIRECTION}
         options:
@@ -1483,6 +1491,8 @@ ru:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
+      PoemBot_makeNumSprites:
+        text: создать {NUM} новый {ANIMATION_NAME} слайдов
       PoemBot_playSound:
         text: playSound {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1495,6 +1505,8 @@ ru:
             '"ripples"': Круги на воде
           PALETTE:
             '"rainbow"': Радуга
+      PoemBot_setBackgroundImageAs:
+        text: установить фон для {IMG}
       PoemBot_setForegroundEffect:
         text: задать эффект переднего плана {EFFECT}
         options:

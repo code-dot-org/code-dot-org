@@ -3,22 +3,47 @@
     "data": {
       "resources": {
         "introducing_sprite_lab/coursef/2021": {
-          "name": "स्प्राइट लैब का परिचय"
+          "name": "स्प्राइट लैब का परिचय",
+          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
         },
         "exploring_apps/coursef/2021": {
-          "name": "ऐप्स की पड़ताल करना"
+          "name": "ऐप्स की पड़ताल करना",
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "name": "स्प्राइट लैब का परिचय"
+          "name": "स्प्राइट लैब का परिचय",
+          "url": "https://youtu.be/yd-9xZ275dM"
         },
         "exploring_apps_1/coursef/2021": {
-          "name": "ऐप्स की पड़ताल करना"
+          "name": "ऐप्स की पड़ताल करना",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
-          "name": "स्प्राइट्स बनाएं"
+          "name": "स्प्राइट्स बनाएं",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "स्प्राइट लैब दस्तावेज",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "क्रिया में स्प्राइट्स"
+          "name": "क्रिया में स्प्राइट्स",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
+        },
+        "variables_blank_space_stories/coursef/2021": {
+          "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "खाली स्थान कहानियां",
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+        },
+        "blank_space_stories/coursef/2021": {
+          "name": "खाली स्थान कहानियां",
+          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
+        },
+        "text_and_prompts/coursef/2021": {
+          "name": "टेक्सट और अनुबोध",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "विराम व ऑनलाइन सोचना"
@@ -65,11 +90,17 @@
         "rubric-csf-final-projects/coursef/2021": {
           "name": "CS के मूल सिद्धांत फाइनल प्रोजेक्ट"
         },
+        "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "कॉमन कोर और NGSS गाइडैंस"
+        },
         "implementation_guide/coursef/2021": {
           "name": "कार्यान्वयन गाइड"
         },
         "teacher_forum_1/coursef/2021": {
           "name": "अध्यापक फोरम"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "mimi-activity/courseb/2021": {
           "name": "इसे मूव करें, इसे मूव करें"
@@ -134,6 +165,9 @@
         "the_big_event_courses_a_b_/courseb/2021": {
           "name": "विशाल इवेंट (कोर्स A, B)"
         },
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "कॉमन कोर और NGSS गाइडैंस"
+        },
         "implementation_guide/courseb/2021": {
           "name": "कार्यान्वयन गाइड"
         },
@@ -185,11 +219,20 @@
         "csf-lesson-recommend/coursea/2021": {
           "name": "CS के मूल सिद्धांत मुख्य गतिविधि सुझाव"
         },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "कॉमन कोर और NGSS गाइडैंस"
+        },
         "implementation_guide/coursea/2021": {
           "name": "कार्यान्वयन गाइड"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "अध्यापक फोरम"
+        },
+        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
+          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
+        },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "मेरे रोबोटिक दोस्त"
@@ -211,6 +254,10 @@
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "CS के मूल सिद्धांत मुख्य गतिविधि सुझाव"
+        },
+        "debugging_guide/coursec/2021": {
+          "name": "डीबगिंग गाइड",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
         },
         "csf-artist-intro-video/coursec/2021": {
           "name": "कलाकार का परिचय"
@@ -236,17 +283,24 @@
         "pause_and_think_online/coursec/2021": {
           "name": "विराम व ऑनलाइन सोचना"
         },
+        "open-ended_programming_levels_1/coursec/2021": {
+          "url": "https://docs.google.com/document/d/14WiSwDT88XDVVoUn5tuFDI0muLj4FUYN_NqcOCXIAp4/view"
+        },
         "csf-bit-byte-video/coursec/2021": {
-          "name": "बिट्स बनाम बाइट्स"
+          "name": "बिट्स बनाम बाइट्स",
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "युग्मक ब्रैस्लेट्स"
+          "name": "युग्मक ब्रैस्लेट्स",
+          "url": "https://youtu.be/3S2YfoO4_CM"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "युग्मक ब्रैस्लेट्स"
+          "name": "युग्मक ब्रैस्लेट्स",
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
-          "name": "युग्मक ब्रैस्लेट्स"
+          "name": "युग्मक ब्रैस्लेट्स",
+          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "युग्मक ब्रैस्लेट्स"
@@ -254,29 +308,65 @@
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "युग्मक ब्रैस्लेट्स"
         },
+        "play-lab-project-planning-guide-exemplar/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
+        },
+        "play-lab-project-guide/coursec/2021": {
+          "name": "प्ले लैब प्रोजेक्ट प्लानिंग गाइड",
+          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit"
+        },
+        "csta_standards_mapping/coursec/2021": {
+          "name": "CSTA मानक मानचित्रण",
+          "url": "https://studio.code.org/s/coursec-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursec/2021": {
+          "name": "कॉमन कोर और NGSS गाइडैंस",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
+        },
+        "course_vocabulary/coursec/2021": {
+          "url": "https://studio.code.org/s/coursec-2021/vocab"
+        },
         "implementation_guide/coursec/2021": {
           "name": "कार्यान्वयन गाइड"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "डीबगिंग गाइड"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "पाठ्यक्रम गाइड"
+        },
+        "2021_change_log/coursec/2021": {
+          "name": "2021 चेंज लॉग"
         },
         "teacher_forum_1/coursec/2021": {
           "name": "अध्यापक फोरम"
         },
+        "virtual_lesson_modifications/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
+        },
         "graph-paper-programming/coursed/2021": {
-          "name": "ग्राफ पेपर प्रोग्रामिंग"
+          "name": "ग्राफ पेपर प्रोग्रामिंग",
+          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "ग्राफ पेपर प्रोग्रामिंग"
+          "name": "ग्राफ पेपर प्रोग्रामिंग",
+          "url": "https://youtu.be/Y_paSrH2ffw"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "ग्राफ पेपर प्रोग्रामिंग"
+          "name": "ग्राफ पेपर प्रोग्रामिंग",
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "ग्राफ पेपर प्रोग्रामिंग"
+          "name": "ग्राफ पेपर प्रोग्रामिंग",
+          "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "ग्राफ पेपर प्रोग्रामिंग"
+          "name": "ग्राफ पेपर प्रोग्रामिंग",
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "ग्राफ पेपर प्रोग्रामिंग"
+          "name": "ग्राफ पेपर प्रोग्रामिंग",
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "जोड़ी प्रोग्रामिंग"
@@ -332,6 +422,9 @@
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "कार्डों के साथ सापेक्ष"
         },
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "कॉमन कोर और NGSS गाइडैंस"
+        },
         "implementation_guide/coursed/2021": {
           "name": "कार्यान्वयन गाइड"
         },
@@ -350,8 +443,16 @@
         "turns_angles_1/express/2021": {
           "name": "घुमाव और कोण"
         },
+        "sprite_lab_documentation/express/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
         "making_sprites/express/2021": {
-          "name": "स्प्राइट्स बनाएं"
+          "name": "स्प्राइट्स बनाएं",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "स्प्राइट लैब दस्तावेज",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
           "name": "क्रिया में स्प्राइट्स"
@@ -361,6 +462,10 @@
         },
         "dance-party-playlist/express/2021": {
           "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)"
+        },
+        "text_and_prompts/express/2021": {
+          "name": "टेक्सट और अनुबोध",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
           "name": "चर"
@@ -382,6 +487,12 @@
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "अध्यापक फोरम"
+        },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "कलन विधि का अनुसरण करें"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "विराम व ऑनलाइन सोचना"
@@ -419,11 +530,17 @@
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
           "name": "आपके छात्रों के लिए यह दिखाने के 72 रचनात्मक तरीके कि वो क्या जानते हैं"
         },
+        "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "कॉमन कोर और NGSS गाइडैंस"
+        },
         "implementation_guide/coursee/2021": {
           "name": "कार्यान्वयन गाइड"
         },
         "teacher_forum_1/coursee/2021": {
           "name": "अध्यापक फोरम"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
         }
       }
     }

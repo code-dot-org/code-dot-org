@@ -115,6 +115,7 @@ en-GB:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_digital/jump_7.mp3'": jump
       gamelab_randColor:
         text: random colour
       gamelab_randomColor:

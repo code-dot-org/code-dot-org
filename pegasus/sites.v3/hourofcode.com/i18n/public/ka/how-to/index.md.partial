@@ -6,18 +6,18 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# როგორ დაგეგმოთ თქვენი კოდის საათი
+# როგორ დაგეგმოთ კოდის ერთი საათი
 
-### Join the movement and introduce your students to computer science with these steps.
+### შეუერთდით მოძრაობას და გააცანით თქვენს მოსწავლეებს კომპიუტერული მეცნიერება შემდეგი საფეხურების მიხედვით.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+გამოთვლითი აზროვნება გვეხმარება პრობლემის გადაწყვეტის უნარების, ლოგიკის და კრეატიულობის განვითარებაში. ტექნოლოგია მსოფლიოში ყველა ინდუსტრიას ცვლის. დღეს, მოსწავლეებმა უნდა ისწავლონ როგორ შექმნან ტექნოლოგია და არა მარტო გამოიყენონ ის. ბავშვობიდანვე დაწყებით მათ ექნებათ ფუნდამენტი, რომელიც გამოადგებათ 21-ე საუკუნის ნებისმიერ პროფესიაში.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. კითხვების არსებობის შემთხვევაში, </a>გადაავლეთ თვალი  მონაწილეობის სახელმძღვანელოს. </p> 
+კოდის ერთი საათი არის მარტივი და მხიარული საშუალება გააცნოთ მოსწავლეებს კომპიუტერული მეცნიერება, თუნდაც პირველად, და ამ ღონისძიების ჩატარება შეგიძლიათ როგორც კლასში ისე მის გარეთ. კითხვების შემთხვევაში, </a>გადაავლეთ თვალი სახელმძღვანელოს. </p> 
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
-- [გაუწიეთ პოპულარიზაცია თქვენს კოდირების საათს](#promote-your-hour)
+- [უყურეთ ვიდეოს კოდის ერთი საათის შესახებ](#how-to-video)
+- [გადახედეთ აქტივობებსა და ტუტორიალებს](#explore-activities)
+- [შექმენით დღის გეგმა](#create-your-plan)
+- [გაუწიეთ პოპულარიზაცია თქვენს კოდის საათს](#promote-your-hour)
 - [How to start your Hour of Code strong](#how-to-start)
 - [Get coding](#code)
 - [Celebrate your students' success](#celebrate)
@@ -29,17 +29,17 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. უყურეთ ვიდეოს კოდის ერთი საათის შესახებ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. გადახედეთ აქტივობებსა და ტუტორიალებს
 
-ჩვენ მხიარულ და მრავალფეროვან არჩევანს გთავაზობთ [ მოსწავლეზე მორგებულ ტუტორიალებს ]({{ urls/learn }}) ყველა ასაკობრივი ჯგუფისა და გამოცდილების დონისათვის. მოსწავლეებში პოპულარულია თვითინსტრუქტაჟის ტუტორიალები, თუმცა ბევრი აქტივობა, ასევე მოიცავს საგაკვეთილო გეგმებს მასწავლებლებისათთვის, რომელიც მათ დაეხმარებათ დისკუსიის წარმართვაში, თუ აქტივობის გახანგრძლივებაში.
+[მოსწავლეზე მორგებული მხიარული ტუტორიალების]({{ urls/learn }}) მრავალფეროვან არჩევანს გთავაზობთ ყველა ასაკობრივი ჯგუფისა და გამოცდილების დონისათვის. მოსწავლეებში პოპულარულია დამოუკიდებლად სამუშაო ტუტორიალები, თუმცა ბევრ აქტივობას, ასევე აქვს გაკვეთილის გეგმები მასწავლებლებისათვის, რომლებიც მათ დაეხმარებათ დისკუსიის წარმართვაში, თუ აქტივობის გავრცობაში.
 
-გამოიკვლიეთ აქტივობები და წინასწარ გადაწყვიტეთ, ყველა მოსწავლისათვის ერთი ტუტორიალი გირჩევნიათ, თუ მისცემთ ბავშვს იმის საშუალებას, რომ თავად აირჩიონ სასურველი.
+დაათვალიერეთ აქტივობები და წინასწარ მოიფიქრეთ რა გირჩევნიათ — ყველა მოსწავლემ ერთი და იგივე ტუტორიალი გააკეთოს, თუ მოსწავლეებს შეეძლოთ თავად აირჩიონ რომელიც უნდათ.
 
 [![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
@@ -47,7 +47,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. შექმენით დღის გეგმა
 
 ### იფიქრეთ ტექნოლოგიის მოთხოვნებზე - კომპიუტერები არასავალდებულოა!
 

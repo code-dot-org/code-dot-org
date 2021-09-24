@@ -20,6 +20,7 @@ export const WebSocketMessageType = {
 export const JavabuilderExceptionType = {
   CLASS_NOT_FOUND: 'CLASS_NOT_FOUND',
   COMPILER_ERROR: 'COMPILER_ERROR',
+  FILE_NOT_FOUND: 'FILE_NOT_FOUND',
   ILLEGAL_METHOD_ACCESS: 'ILLEGAL_METHOD_ACCESS',
   INTERNAL_COMPILER_EXCEPTION: 'INTERNAL_COMPILER_EXCEPTION',
   INTERNAL_EXCEPTION: 'INTERNAL_EXCEPTION',
@@ -95,6 +96,11 @@ export const TheaterExceptionType = makeEnum(
   'DUPLICATE_PLAY_COMMAND',
   'INVALID_SHAPE'
 );
+
+export const PlaygroundExceptionType = {
+  PLAYGROUND_RUNNING: 'PLAYGROUND_RUNNING',
+  PLAYGROUND_NOT_RUNNING: 'PLAYGROUND_NOT_RUNNING'
+};
 
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
 

@@ -1780,6 +1780,18 @@
         },
         "courseF_sprites_properties": {
           "sprites_category2": "Поищи новый блок здесь."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Здесь новые блоки!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Используй найденный здесь новый блок события."
+        },
+        "courseF_events_time": {
+          "events_category": "Щелкни здесь, чтобы открыть категорию “События”."
+        },
+        "courseF_text_events": {
+          "events_category": "Щелкни здесь, чтобы открыть категорию “События”."
         }
       }
     }
