@@ -8,6 +8,9 @@ export default class Playground {
     onNewlineMessage,
     onJavabuilderMessage,
     levelName,
+    addPlaygroundItem,
+    removePlaygroundItem,
+    changePlaygroundItem,
     // Only used for testing
     starterAssetsApi,
     assetsApi
@@ -25,6 +28,10 @@ export default class Playground {
     this.assetsApi = assetsApi || assets;
     this.imageData = {};
     this.textData = {};
+
+    this.addPlaygroundItem = addPlaygroundItem;
+    this.removePlaygroundItem = removePlaygroundItem;
+    this.changePlaygroundItem = changePlaygroundItem;
 
     this.starterAssetsApi.getStarterAssets(
       levelName,
@@ -93,11 +100,22 @@ export default class Playground {
       return;
     }
     this.imageData[itemData.id] = itemData;
-    const image = this.setUpImage(itemData);
+    let onClick = () => {};
     if (isClickable) {
-      image.addEventListener('click', () => this.handleImageClick(itemData.id));
+      onClick = () => this.handleImageClick(itemData.id);
     }
-    this.getPlaygroundElement().appendChild(image);
+
+    const imageData = {
+      fileUrl: this.getUrl(itemData.filename),
+      x: itemData.x,
+      y: itemData.y,
+      height: itemData.height,
+      width: itemData.width,
+      index: itemData.index,
+      onClick: onClick,
+      type: 'image'
+    };
+    this.addPlaygroundItem(itemData.id, imageData);
   }
 
   addTextItem(itemData) {
@@ -114,8 +132,9 @@ export default class Playground {
     }
     if (this.imageData[itemData.id]) {
       delete this.imageData[itemData.id];
-      const item = document.getElementById(itemData.id);
-      item.remove();
+      this.removePlaygroundItem(itemData.id);
+      // const item = document.getElementById(itemData.id);
+      // item.remove();
     }
     // TODO: handle text deletion
   }
@@ -126,7 +145,24 @@ export default class Playground {
       return;
     }
     if (this.imageData[itemData.id]) {
-      this.changeImageItem(itemData);
+      const newImageData = {};
+      if (itemData.x) {
+        newImageData.x = itemData.x;
+      }
+      if (itemData.y) {
+        newImageData.y = itemData.y;
+      }
+      if (itemData.width) {
+        newImageData.width = itemData.width;
+      }
+      if (itemData.height) {
+        newImageData.height = itemData.height;
+      }
+      if (itemData.filename) {
+        newImageData.fileUrl = this.getUrl(itemData.filename);
+      }
+      //this.changeImageItem(itemData);
+      this.changePlaygroundItem(itemData.id, newImageData);
     }
     // TODO: handle text changes
   }
@@ -167,10 +203,10 @@ export default class Playground {
   reset() {
     this.isGameOver = false;
     this.isGameRunning = false;
-    const playground = this.getPlaygroundElement();
-    while (playground.lastElementChild) {
-      playground.removeChild(playground.lastElementChild);
-    }
+    // const playground = this.getPlaygroundElement();
+    // while (playground.lastElementChild) {
+    //   playground.removeChild(playground.lastElementChild);
+    // }
     this.resetBackgroundElement();
   }
 
@@ -180,6 +216,7 @@ export default class Playground {
       // can only handle click events if game is not over and game is running
       return;
     }
+    console.log('in onClick for id ' + imageId);
   }
 
   getUrl(filename) {
