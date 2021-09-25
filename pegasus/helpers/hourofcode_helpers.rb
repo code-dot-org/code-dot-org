@@ -182,9 +182,18 @@ def company_count
   return fetch_hoc_metrics['hoc_company_totals'][@company]
 end
 
+# We get counts for the individual countries in Latin America,
+#  so let's sum those up to get the total for all of Latam
+def latam_count(totals)
+  latam_totals = totals.slice(*LATAM_COUNTRY_CODES)
+  return latam_totals.inject(0) {|sum, tuple| sum + tuple[1]}
+end
+
 def country_count
   code = HOC_COUNTRIES[@country]['country_code'] || @country
-  return fetch_hoc_metrics['hoc_country_totals'][code.upcase]
+  totals = fetch_hoc_metrics['hoc_country_totals']
+
+  return @country == 'la' ? latam_count(totals) : totals[code.upcase]
 end
 
 def country_full_name
