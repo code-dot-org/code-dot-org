@@ -391,7 +391,20 @@ class Documents < Sinatra::Base
       # render nothing rather than throwing an error
       template_content.
         gsub(/{{([^}]*)}}/) do
-          view($1.strip)
+          # Extract the partial name, and possibly a string with all the parameters.
+          split = $1.scan(/\s*([^ ,]*)[, ]*(.*)/)[0]
+
+          uri = split[0]
+
+          # Parse the parameters.  Adapted from https://stackoverflow.com/a/23612782.
+          locals = split[1].scan(/("(?:\\.|[^"])*"|[^\s]*):\s*("(?:\\.|[^"])*"|[^\s]*)/).
+            map(&:compact).
+            to_h.
+            transform_values(&:undump)
+
+          result = view(uri, locals, !locals.empty?)
+          locals.each {|k, v| result.gsub!("%#{k}%", v)}
+          result
         rescue
           ''
         end
@@ -586,8 +599,9 @@ class Documents < Sinatra::Base
       metadata
     end
 
-    def view(uri, locals={})
+    def view(uri, locals={}, html_only=false)
       path = resolve_template('views', settings.template_extnames, uri.to_s)
+      raise "View `#{uri}` must be .html. #{File.extname(path)}" if html_only && File.extname(path) != ".html"
       raise "View '#{uri}' not found." unless path
       render_template(path, locals)
     end
