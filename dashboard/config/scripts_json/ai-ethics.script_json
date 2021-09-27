@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2021-09-20 19:23:20 UTC",
+    "serialized_at": "2021-09-27 19:22:04 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "ai-ethics"
@@ -99,7 +99,6 @@
       "key": "740f1945-7982-48c2-9ff3-f45c0648beed",
       "position": 4,
       "properties": {
-        "duration": 0,
         "name": "Extended Learning"
       },
       "seeding_key": {
@@ -127,7 +126,7 @@
       "key": "9dbb65b4-9099-49c2-bd60-2d8f19bda742",
       "position": 2,
       "properties": {
-        "description": "We humans can think, feel, create, and act on our own. We can decide to do things independently, unlike machines, which are programmed to perform specific tasks. So why do we call what machines have “intelligence” in the first place? The key term is “artificial”, which you might think of as “_like_”, as in “_like_ intelligence”. For example, virtual assistants - such as Apple’s Siri, Amazon’s Alexa, Microsoft’s Cortana, or Google’s Assistant - are obviously not humans, but they can demonstrate something that seems a bit _like_ human intelligence when they talk to us.",
+        "description": "We humans can think, feel, create, and act on our own. We can decide to do things independently, unlike machines, which are programmed to perform specific tasks. So why, in the first place, do we call what machines have - “intelligence” ? The key term is “artificial”, which you might think of as “_like_”, as in “_like_ intelligence”. For example, virtual assistants - such as Apple’s Siri, Amazon’s Alexa, Microsoft’s Cortana, or Google’s Assistant - are obviously not humans, but they can demonstrate something that seems a bit _like_ human intelligence when they talk to us.",
         "remarks": true
       },
       "seeding_key": {
@@ -186,8 +185,8 @@
       "key": "1a93cc89-e65b-44d5-92e6-9a9413b782ed",
       "position": 1,
       "properties": {
-        "description": "**Groups**: Place students in groups of three or four.",
-        "name": "Research and Reflect\r"
+        "description": "\n\n###Research and Reflect\n**Groups**: Place students in groups of three or four.",
+        "name": "Our AI Code of Ethics"
       },
       "seeding_key": {
         "activity_section.key": "1a93cc89-e65b-44d5-92e6-9a9413b782ed",
@@ -210,7 +209,7 @@
       "key": "609afe62-77fe-4acd-88b8-5678c8d7b6db",
       "position": 3,
       "properties": {
-        "description": "**Distribute**: Share the **AI Ethics Research Areas** document with each group. Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  Then, provide each group with one copy of the **AI Ethics Research Reflection **handout. \r\n\r\n**Work**: Have groups research their area with their fellow group members, answering questions on the handout along the way. Encourage students to skim longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\r\n\r\n**Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout."
+        "description": "**Distribute**: Share the **AI Ethics Research Areas** document with each group. Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  Then, provide each group with one copy of the **AI Ethics Research Reflection** handout. \n\n**Work**: Have groups research their area with their fellow group members, answering questions on the handout along the way. Encourage students to skim longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n**Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout."
       },
       "seeding_key": {
         "activity_section.key": "609afe62-77fe-4acd-88b8-5678c8d7b6db",
@@ -221,8 +220,7 @@
       "key": "ff631d39-5a3b-4f29-87fa-96eb5786386f",
       "position": 4,
       "properties": {
-        "description": "**Display**: Once students have completed their research, share an example of an AI code of ethics similar to what they will be creating, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\r\n\r\n**Prompt**: Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow? \r\n\r\n**Work**: Allow groups time to write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page). The format of the resource is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation, or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!",
-        "name": "Draft “Our AI Code of Ethics” Resource \r"
+        "description": "###Draft “Our AI Code of Ethics” Resource \n\n**Display**: Once students have completed their research, share an example of an AI code of ethics similar to what they will be creating, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n**Prompt**: Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow? \n\n**Work**: Allow groups time to write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page). The format of the resource is completely up to you and your students. For example, you might ask groups to create a poster, or for each to take a single slide from a shared presentation, or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!"
       },
       "seeding_key": {
         "activity_section.key": "ff631d39-5a3b-4f29-87fa-96eb5786386f",
