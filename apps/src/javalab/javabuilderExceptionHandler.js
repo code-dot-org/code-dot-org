@@ -39,6 +39,12 @@ export function handleException(exceptionDetails, callback) {
     case JavabuilderExceptionType.FILE_NOT_FOUND:
       error = msg.fileNotFoundException({causeMessage});
       break;
+    case JavabuilderExceptionType.INVALID_JAVA_FILE_NAME:
+      error = msg.javabuilderJavaFilenameError({causeMessage});
+      break;
+    case JavabuilderExceptionType.MISSING_PROJECT_FILE_NAME:
+      error = msg.javabuilderMissingFilenameError();
+      break;
 
     // Internal exceptions
     case JavabuilderExceptionType.INTERNAL_RUNTIME_EXCEPTION:
