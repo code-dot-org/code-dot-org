@@ -52,12 +52,12 @@ export default class PlaygroundImage extends React.Component {
     const {fileUrl, id, onClick, isClickable} = this.props;
     let dynamicStyles = this.getDynamicStyles();
     if (isClickable) {
-      dynamicStyles = {...dynamicStyles, ...styles.clickableImageStyle};
+      dynamicStyles = {...dynamicStyles, ...styles.clickableImage};
     }
     return (
       <img
         src={fileUrl}
-        style={{...dynamicStyles, ...styles.imageStyle}}
+        style={{...dynamicStyles, ...styles.image}}
         id={id}
         onClick={isClickable ? onClick : undefined}
       />
@@ -66,10 +66,10 @@ export default class PlaygroundImage extends React.Component {
 }
 
 const styles = {
-  imageStyle: {
+  image: {
     position: 'absolute'
   },
-  clickableImageStyle: {
+  clickableImage: {
     cursor: 'pointer'
   }
 };
