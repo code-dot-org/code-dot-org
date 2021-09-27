@@ -122,6 +122,18 @@ class ScriptTest < ActiveSupport::TestCase
     assert_not_equal script_level_id, unit.script_levels[4].id
   end
 
+  test 'can create course version when seeding a unit' do
+    unit = Script.add_unit(
+      {name: 'unit-name', family_name: 'family', version_year: 'unversioned', published_state: SharedConstants::PUBLISHED_STATE.preview, is_course: true},
+      {}
+    )
+    course_version = unit.course_version
+    assert_not_nil course_version
+    assert_equal 'unversioned', course_version.key
+    assert_equal 'family', course_version.course_offering&.key
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, course_version.published_state
+  end
+
   test 'cannot rename a unit without a new_name' do
     l = create :level
     dsl = <<-UNIT

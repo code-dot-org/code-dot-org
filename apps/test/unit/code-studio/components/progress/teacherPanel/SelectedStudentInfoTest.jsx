@@ -11,8 +11,10 @@ const LEVEL_WITH_PROGRESS = {
   driver: null,
   isConceptLevel: false,
   levelNumber: 4,
-  navigator: null,
+  navigators: null,
   paired: null,
+  isDriver: null,
+  isNavigator: null,
   passed: false,
   status: LevelStatus.not_tried,
   userId: 1
@@ -72,13 +74,31 @@ describe('SelectedStudentInfo', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
       paired: true,
+      isDriver: true,
       status: LevelStatus.perfect,
-      navigator: 'Student 2'
+      navigators: ['Student 2', 'Student 3']
     };
     const wrapper = setUp({levelWithProgress});
 
     expect(wrapper.contains('Worked With:')).to.equal(true);
     expect(wrapper.contains('Partner: Student 2')).to.equal(true);
+    expect(wrapper.contains('Logged in:')).to.equal(false);
+    expect(wrapper.contains('Last Updated:')).to.equal(true);
+  });
+
+  it('displays time and unknown navigator if paired as driver on level', () => {
+    const levelWithProgress = {
+      ...LEVEL_WITH_PROGRESS,
+      paired: true,
+      isDriver: true,
+      status: LevelStatus.perfect,
+      navigators: []
+    };
+    const wrapper = setUp({levelWithProgress});
+
+    expect(wrapper.contains('Worked With:')).to.equal(true);
+    expect(wrapper.contains('Partner: n/a')).to.equal(true);
+    expect(wrapper.contains('Logged in:')).to.equal(false);
     expect(wrapper.contains('Last Updated:')).to.equal(true);
   });
 
@@ -86,6 +106,7 @@ describe('SelectedStudentInfo', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
       paired: true,
+      isNavigator: true,
       status: LevelStatus.perfect,
       driver: 'Student 2'
     };
@@ -93,6 +114,23 @@ describe('SelectedStudentInfo', () => {
 
     expect(wrapper.contains('Worked With:')).to.equal(true);
     expect(wrapper.contains('Logged in: Student 2')).to.equal(true);
+    expect(wrapper.contains('Partner:')).to.equal(false);
+    expect(wrapper.contains('Last Updated:')).to.equal(true);
+  });
+
+  it('displays time and unknown driver if paired as navigator on level', () => {
+    const levelWithProgress = {
+      ...LEVEL_WITH_PROGRESS,
+      paired: true,
+      isNavigator: true,
+      status: LevelStatus.perfect,
+      driver: null
+    };
+    const wrapper = setUp({levelWithProgress});
+
+    expect(wrapper.contains('Worked With:')).to.equal(true);
+    expect(wrapper.contains('Logged in: n/a')).to.equal(true);
+    expect(wrapper.contains('Partner:')).to.equal(false);
     expect(wrapper.contains('Last Updated:')).to.equal(true);
   });
 });
