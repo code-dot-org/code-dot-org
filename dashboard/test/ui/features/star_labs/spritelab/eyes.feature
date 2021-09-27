@@ -7,13 +7,8 @@ Scenario: Basic Sprite Lab level
   And I start a new Sprite Lab project
   And I wait until I don't see selector "#p5_loading"
 
-  Then I press "versions-header"
-  And I wait until element "button:contains(Restore this Version):eq(0)" is visible
-  And element "button.version-preview" is visible
-  And I click selector "button:contains(Restore this Version):eq(0)"
-  And I wait until element "#showVersionsModal" is gone
+  Then I reset the puzzle to the starting version
   And I wait until I don't see selector "#p5_loading"
-  And I wait until there's an SVG image "/category_animals/bunny2.png"
 
   Then I see no difference for "initial load"
   And I've initialized the workspace for the sample Sprite Lab project
