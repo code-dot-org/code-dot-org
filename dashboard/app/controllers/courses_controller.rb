@@ -96,8 +96,11 @@ class CoursesController < ApplicationController
   def update
     unit_group = UnitGroup.find_by_name!(params[:course_name])
     unit_group.persist_strings_and_units_changes(params[:scripts], params[:alternate_units], i18n_params)
-    unit_group.update(course_params)
-    CourseOffering.add_course_offering(unit_group)
+    unit_group.assign_attributes(course_params)
+    ActiveRecord::Base.transaction do
+      CourseOffering.add_course_offering(unit_group)
+      unit_group.save!
+    end
     unit_group.reload
 
     unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless unit_group.has_migrated_unit?
