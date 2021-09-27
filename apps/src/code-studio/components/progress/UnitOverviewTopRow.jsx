@@ -75,6 +75,7 @@ class UnitOverviewTopRow extends React.Component {
 
   compilePdfDropdownOptions = () => {
     const {scriptOverviewPdfUrl, scriptResourcesPdfUrl} = this.props;
+
     const options = [];
     if (scriptOverviewPdfUrl) {
       options.push({

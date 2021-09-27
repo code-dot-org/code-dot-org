@@ -54,7 +54,7 @@ export default class CdoTrashcan extends GoogleBlockly.Trashcan {
    */
   position() {
     // Not yet initialized.
-    if (!this.verticalSpacing_) {
+    if (!this.initialized_) {
       return;
     }
     var metrics = this.workspace_.getMetrics();
@@ -64,7 +64,7 @@ export default class CdoTrashcan extends GoogleBlockly.Trashcan {
     }
 
     this.left_ = Math.round(metrics.flyoutWidth / 2 - this.WIDTH_ / 2);
-    this.top_ = this.verticalSpacing_;
+    this.top_ = this.MARGIN_VERTICAL_ * 2;
 
     this.svgGroup_.setAttribute(
       'transform',

@@ -113,6 +113,8 @@ lv:
     error: Radusies kļūda.
     email_preference_yes: Jā
     email_preference_no: Nē
+    share_teacher_email_reg_partner_preference_yes: Jā
+    share_teacher_email_reg_partner_preference_no: Nē
   school_info:
     select_school_type: Skolas tips
     other: Citi

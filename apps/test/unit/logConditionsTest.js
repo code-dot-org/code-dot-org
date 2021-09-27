@@ -1,4 +1,4 @@
-import {assert} from '../util/deprecatedChai';
+import {assert} from '../util/reconfiguredChai';
 import {TestResults} from '@cdo/apps/constants';
 
 var executionLog = require('@cdo/apps/executionLog');

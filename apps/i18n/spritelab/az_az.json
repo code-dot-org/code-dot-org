@@ -71,5 +71,6 @@
   "printMoreText": "Bu yaxşı bir başlanğıcdır. Səviyyəni bitirmək üçün daha çox mətn əlavə etməyə davam edin.",
   "addTitleScreen": "Layihənizə bir başlıq ekranı əlavə etməlisiniz.",
   "noTitleScreen": "Başlıq ekranı göstərilmədi.",
-  "titleVariable": "Başlıq ekranınızda ismarıcdan mətn daxil deyildi."
+  "titleVariable": "Başlıq ekranınızda ismarıcdan mətn daxil deyildi.",
+  "poemBotMakeBackground": "Arxa fon effekti əlavə etməlisiniz."
 }

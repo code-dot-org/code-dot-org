@@ -3790,7 +3790,8 @@
             "name": "風車をかく",
             "parameters": {
               "length": "長さ",
-              "repeat": "くりかえし"
+              "repeat": "くりかえし",
+              "sides": "辺"
             }
           },
           "draw a triangle": {
@@ -3802,7 +3803,8 @@
           "draw a shape": {
             "name": "図形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw a house": {
@@ -3888,7 +3890,8 @@
             "name": "風車をかく",
             "parameters": {
               "length": "長さ",
-              "repeat": "くりかえし"
+              "repeat": "くりかえし",
+              "sides": "辺"
             }
           },
           "draw a triangle": {
@@ -3900,7 +3903,8 @@
           "draw a shape": {
             "name": "図形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw a house": {

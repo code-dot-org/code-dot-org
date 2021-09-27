@@ -683,13 +683,15 @@ const STANDARD_INPUT_TYPES = {
   [INLINE_DUMMY_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       if (inputConfig.customOptions && inputConfig.customOptions.assetUrl) {
-        currentInputRow.appendTitle(
-          new Blockly.FieldImage(
-            Blockly.assetUrl(inputConfig.customOptions.assetUrl),
-            inputConfig.customOptions.width,
-            inputConfig.customOptions.height
-          )
-        );
+        currentInputRow
+          .appendTitle(inputConfig.label)
+          .appendTitle(
+            new Blockly.FieldImage(
+              Blockly.assetUrl(inputConfig.customOptions.assetUrl),
+              inputConfig.customOptions.width,
+              inputConfig.customOptions.height
+            )
+          );
       }
     },
     generateCode(block, inputConfig) {

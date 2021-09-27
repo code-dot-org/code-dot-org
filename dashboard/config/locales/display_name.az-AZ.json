@@ -70,8 +70,6 @@
         "CourseF_outbreak2": "Virus Simulyasiyası",
         "CourseF_outbreak3": "Virus Simulyasiyası",
         "CourseF_outbreak4": "Simulyasiyyanızı dəyişin",
-        "CourseF_outbreak6": "təsadüfi dəyişim",
-        "CourseF_outbreak8": "Mesajı paylaşın",
         "Oceans_Video_Machine_Learning": "Video: Maşın öyrənməsi",
         "Oceans_Video_Training_Data": "Video: Məlumatların təlim edilməsi",
         "courseF_bee_for10_2021": "meydan oxumaq",
@@ -314,7 +312,10 @@
         "courseF_variables_chatbot": "Chat bot, 1-ci hissə",
         "courseF_variables_chatbot_finish": "Chat bot, 2-ci hissə",
         "courseF_video_csMatters": "Kurs Layihələri",
-        "csd U3 conditional statements video_2019": "Video: Şərti Bəyanatlar"
+        "csd U3 conditional statements video_2019": "Video: Şərti Bəyanatlar",
+        "CourseF_outbreak5": "Simulyasiyyanızı dəyişin",
+        "CourseF_outbreak7": "təsadüfi dəyişim",
+        "international_outbreak_freeplay": "Mesajı paylaşın"
       }
     }
   }

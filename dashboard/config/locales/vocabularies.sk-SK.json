@@ -75,7 +75,20 @@
           "word": "Hľadanie a odstraňovanie chýb"
         },
         "behavior/coursee/2021": {
-          "word": "Správanie"
+          "word": "Správanie",
+          "definition": "Akcia, ktorú postavička neustále vykonáva, kým nedostane príkaz, aby prestala. "
+        },
+        "algorithm/coursee/2021": {
+          "word": "algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy."
+        },
+        "sprite/coursee/2021": {
+          "word": "Sprajt",
+          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
+        },
+        "event/coursee/2021": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "copyright/coursee/2021": {
           "word": "Autorské práva"

@@ -2484,9 +2484,9 @@
         "CourseF_outbreak2": "Sog'lom monstrlarni kasal monstrlarga tegganda o'zgartiring.",
         "CourseF_outbreak3": "Monstrlarni chertganingizda ular yuzida maska taqilsin.",
         "CourseF_outbreak4": "Simulyatsiya qilish uchun monstr spraytlarining sonini va hajmini o'zgartiring.",
-        "CourseF_outbreak6": "Sog'lom monstrlar kasal monstrlarga tegganda, monstrl kasal bo'lishi ehtimolligini foizda qo'shing. Niqobli va niqobsiz monstrlarning barcha kombinatsiyalari uchun buni bajaring.",
-        "CourseF_outbreak7": "Virusga qarshi immunitetga ega bo'lgan hayvonlar uchun yangi kostyum yarating va uni o'zingizning simulyatsiyangizda ishlating.",
-        "CourseF_outbreak8": "Simulyatsiya bilan xabarni ulashing.",
+        "CourseF_outbreak6": "Sog'lom monstr kasal hayvonga tegsa, barcha kasal monstrlar sog'aya boshlasin.",
+        "CourseF_outbreak7": "Sog'lom monstrlar kasal monstrlarga tegganda, monstrl kasal bo'lishi ehtimolligini foizda qo'shing. Niqobli va niqobsiz monstrlarning barcha kombinatsiyalari uchun buni bajaring.",
+        "CourseF_outbreak8": "Virusga qarshi immunitetga ega bo'lgan hayvonlar uchun yangi kostyum yarating va uni o'zingizning simulyatsiyangizda ishlating.",
         "Dance Party 2_2021": "\"Sprite boshlaydi\" blokidagi xatti-harakatlar blokini boshqasiga almashtiring, natijada o'zga sayyoralik aylana boshlasin!",
         "Dance Party 4_2021": "Uchinchi sprayt yarating, u sariq o'zga sayyoralik odamga o'xshasin, u bosilganda raqsga tushsin, barcha o'zga sayyoraliklarni gorizontal chiziqda turishga sozlang.",
         "Dance Party Freeplay_2021": "Endi o'zga sayyoraliklar diskotekasini yarating!",
@@ -2990,7 +2990,9 @@
         "ramp_artist_loops6_2021": "Mana shu zinapoyani chizish uchun sikldan foydalaning.",
         "ramp_artist_loops7_2021": "O‘xshashlikni qidiring va sikllardan foydalangan holda hozirgi kodni qisqartiring!",
         "ramp_artist_loops8_2021": "O‘xshashlikni qidiring va sikllardan foydalangan holda hozirgi kodni qisqartiring!",
-        "ramp_artist_loops9_2021": "Bu boshqotirmani to‘rtburchak chizgan holda yeching."
+        "ramp_artist_loops9_2021": "Bu boshqotirmani to‘rtburchak chizgan holda yeching.",
+        "CourseF_outbreak5": "Simulyatsiya qilish uchun monstr spraytlarining sonini va hajmini o'zgartiring.",
+        "international_outbreak_freeplay": "Simulyatsiya bilan xabarni ulashing."
       }
     }
   }

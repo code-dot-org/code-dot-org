@@ -638,10 +638,10 @@
         "CourseF_outbreak2": "病毒模擬",
         "CourseF_outbreak3": "病毒模擬",
         "CourseF_outbreak4": "修改你的模擬",
-        "CourseF_outbreak5": "恢復",
-        "CourseF_outbreak6": "隨機幾率",
-        "CourseF_outbreak7": "免疫和疫苗",
-        "CourseF_outbreak8": "分享資訊",
+        "CourseF_outbreak5": "修改你的模擬",
+        "CourseF_outbreak6": "恢復",
+        "CourseF_outbreak7": "隨機幾率",
+        "CourseF_outbreak8": "免疫和疫苗",
         "CourseF_video_introSpriteLab_2021": "這是 Sprite Lab",
         "OPD-K5 WhatIsCS_dani": "計算機科學是什麼？",
         "courseF_apps_collector": "收集遊戲",
@@ -767,7 +767,8 @@
         "outbreak_freeplay_basic": "標準工具箱",
         "ramp_artist_loops6v1_2021": "樓梯",
         "ramp_artist_loops8_2021": "八邊形",
-        "scrat_loops_C-F_video_2021": "冰河歷險紀中的迴圈影片"
+        "scrat_loops_C-F_video_2021": "冰河歷險紀中的迴圈影片",
+        "international_outbreak_freeplay": "分享資訊"
       }
     }
   }

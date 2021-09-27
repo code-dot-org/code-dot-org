@@ -109,17 +109,18 @@
         "CourseF_outbreak2": "Virussimulering",
         "CourseF_outbreak3": "Virussimulering",
         "CourseF_outbreak4": "Ændre din Simulering",
-        "CourseF_outbreak6": "Tilfældig chance",
-        "CourseF_outbreak7": "Immunitet og vacciner",
-        "CourseF_outbreak8": "Del en besked",
+        "CourseF_outbreak6": "Kommer sig",
+        "CourseF_outbreak7": "Tilfældig chance",
+        "CourseF_outbreak8": "Immunitet og vacciner",
         "courseF_bee_for5_2021": "Variabler",
         "courseF_events_freeplay_aquatic": "Akvatisk",
         "courseF_sprites_freeplay_aquatic": "Akvatisk",
         "ramp_artist_loops4_2021": "Stjerne",
         "CourseD_Dance_2020_bonus1_2021": "Frem og tilbage",
         "CourseD_Dance_2020_bonus3_2021": "Tag stilling",
-        "CourseF_outbreak5": "Kommer sig",
-        "outbreak5": "Kommer sig"
+        "CourseF_outbreak5": "Ændre din Simulering",
+        "outbreak5": "Kommer sig",
+        "international_outbreak_freeplay": "Del en besked"
       }
     }
   }

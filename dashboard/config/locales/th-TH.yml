@@ -137,6 +137,8 @@ th:
     accept_terms: คุณต้อง ยอมรับ เพื่อสร้างบัญชี
     email_preference_yes: ใช่
     email_preference_no: ไม่ใช่
+    share_teacher_email_reg_partner_preference_yes: ใช่
+    share_teacher_email_reg_partner_preference_no: ไม่ใช่
     parent_account_checkbox: ฉันเป็นผู้ปกครอง/ผู้พิทักษ์ ลงชื่อในนามของบุตรหลานของฉัน
     parent_account_email_progress_permission: เราสามารถส่งอีเมลถึงคุณเพื่ออัปเดตเป็นครั้งคราวเกี่ยวกับความคืบหน้าและโครงการของบุตรหลานของคุณ
       และการอัปเดตเกี่ยวกับหลักสูตรและวิทยาการคอมพิวเตอร์ของพวกเขาได้หรือไม่? [(ดูนโยบายความเป็นส่วนตัวของเรา)]%{privacy_policy_url}

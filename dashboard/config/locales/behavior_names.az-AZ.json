@@ -2006,6 +2006,19 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "bərpa etmək",
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "moving south": "cənuba hərəkət",
+          "moving left and right": "sola və sağa hərəkət",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin"
         }
       }
     }

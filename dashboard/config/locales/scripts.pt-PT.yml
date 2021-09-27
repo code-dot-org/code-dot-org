@@ -3911,6 +3911,14 @@ pt:
               display_name: Introdução
             Introduction:
               display_name: Introdução
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lição 3
+            Lesson 4:
+              display_name: Lição 4
+            Lesson 5:
+              display_name: Lição 5
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -3965,6 +3973,12 @@ pt:
           lessons:
             lesson-3:
               name: Teste
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.ª ETAPA
+            lessonGroup-3:
+              display_name: 2.ª ETAPA
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -4006,5 +4020,30 @@ pt:
               display_name: Conteúdo
         csa5-pilot-facilitator:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: Projecto
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Ferramentas
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Aulas
+            lessonGroup-3:
+              display_name: Projecto
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Conteúdo
+            content:
+              display_name: Conteúdo
+            lesson_group:
+              display_name: Conteúdo
             lessonGroup-2:
               display_name: Conteúdo

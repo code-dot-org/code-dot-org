@@ -116,6 +116,8 @@ bs:
     error: Došlo je do greške.
     email_preference_yes: Da
     email_preference_no: Ne
+    share_teacher_email_reg_partner_preference_yes: Da
+    share_teacher_email_reg_partner_preference_no: Ne
   school_info:
     title: Informacije o školi (nije obavezno)
     public: Javno

@@ -524,10 +524,10 @@
         "CourseF_outbreak2": "Simulácia vírusu",
         "CourseF_outbreak3": "Simulácia vírusu",
         "CourseF_outbreak4": "Upravte svoju simuláciu",
-        "CourseF_outbreak5": "Zotavenie",
-        "CourseF_outbreak6": "Náhodná šanca",
-        "CourseF_outbreak7": "Imunita a očkovanie",
-        "CourseF_outbreak8": "Zdieľať správu",
+        "CourseF_outbreak5": "Upravte svoju simuláciu",
+        "CourseF_outbreak6": "Zotavenie",
+        "CourseF_outbreak7": "Náhodná šanca",
+        "CourseF_outbreak8": "Imunita a očkovanie",
         "CourseF_video_introSpriteLab_2021": "Toto je Sprite Lab",
         "MC_HOC_2017_01_RETRY_2021": "Usadlosť",
         "MC_HOC_2017_02_Cole_2021": "Farma",
@@ -551,7 +551,20 @@
         "ramp_artist_loops4_2021": "Star",
         "scrat_loops_C-F_video_2021": "Cykly v Dobe ľadovej - Video",
         "CSD U2 publish video": "Publikovanie tvojej webstránky",
-        "CSD U3 if else predict": "Predvídať"
+        "CSD U3 if else predict": "Predvídať",
+        "CourseD_EOC_artist_example2021": "Plážová krajina (Umelec)",
+        "CourseD_EOC_bounce1_example_2021": "Náhodná rýchlosť pri odraze",
+        "CourseD_EOC_dance_examples_2021": "Tanečná párty",
+        "CourseD_EOC_starwars_example_2021": "Vyhýbaj sa vojakom Impéria zla!",
+        "courseA_EOC_artist_1": "Umelec: Zoo",
+        "courseA_EOC_artist_2": "Kreslič: Záhrada",
+        "courseA_EOC_artist_3": "Umelec: Vesmír",
+        "courseA_EOC_playlab_animals": "Play Lab: Zvieratá",
+        "courseA_EOC_playlab_fantasy": "Play Lab: Fantázia",
+        "courseA_EOC_playlab_people": "Play Lab: Ľudia",
+        "courseC19_playLab_sample1_2021": "Hladná veverička",
+        "courseC19_playLab_sample2_2021": "Príbeh mimozemšťana",
+        "international_outbreak_freeplay": "Zdieľať správu"
       }
     }
   }

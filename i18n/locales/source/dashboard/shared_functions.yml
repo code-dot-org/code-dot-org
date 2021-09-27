@@ -9,7 +9,9 @@ en:
       moving east: moving east
       moving east and looping: moving east and looping
       moving north: moving north
+      moving north and looping: moving north and looping
       moving south: moving south
+      moving south and looping: moving south and looping
       moving west: moving west
       moving west and looping: moving west and looping
       moving with arrow keys: moving with arrow keys

@@ -6446,9 +6446,8 @@ th:
               key: 'การเขียนโปรแกรม: แผนที่สุดหรรษา'
               name: แผนที่แห่งความสุข
               description_student: เขียนคำสั่งเพื่อพาเจ้าเฉิ่มนี่ไปที่ผลไม้
-              description_teacher: สิ่งที่เชื่อมโยงอัลกอริธึมไปยังการเขียนโปรแกรมนั้น
-                อาจใก้ลเคียงมากๆ ถ้านักเรียนเข้าใจความแตกต่างระหว่างการวางแผนว่าอะไรมาก่อนอะไรมาหลัง
-                และการเขียนโค้ดตามลำดับด้วยภาษาที่เหมาะสม กิจกรรมนี้จะช่วยให้นักเรียนได้รับประสบการณ์การอ่านและการเขียนโค้ดอย่างย่อๆ
+              description_teacher: 'บทเรียน **context-setting** จะรวมทีมไว้ด้วยงานง่าย
+                ๆ: พาเจ้าเฉิ่มนี่ไปที่ผลไม้ โดยนักเรียนจะได้ฝึกเขียนคำสั่งที่แน่นอนขณะที่ทำงานเพื่อแปลคำสั่งเป็นสัญลักษณ์ที่ให้ไว้-------------------'
             Sequencing with Scrat:
               key: การจัดลำดับด้วย Scrat
               name: การจัดลำดับด้วย Scrat
@@ -7357,6 +7356,12 @@ th:
               display_name: หน่วยที่ 4
             lessonGroup-7:
               display_name: หน่วยที่ 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ขั้นตอนที่ 1
+            lessonGroup-3:
+              display_name: ขั้นตอนที่ 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -7370,6 +7375,14 @@ th:
             lesson-1:
               name: ภาพรวม
         csa-u6-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: โปรเจกต์
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: โปรเจกต์
+        csa-u7-dev:
           lesson_groups:
             lessonGroup-3:
               display_name: โปรเจกต์

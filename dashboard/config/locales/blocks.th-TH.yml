@@ -1099,8 +1099,19 @@ th:
         text: ที่ตั้งของ {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': มีฝน
       gamelab_makeNewSpriteAnon:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ขวา
+            '90': เป็นตำแหน่ง
+            '180': ซ้าย
+            '270': ขึ้นข้างบน
       gamelab_mirrorSprite:
         text: "{SPRITE} หน้า {DIRECTION}"
         options:
@@ -1121,6 +1132,12 @@ th:
         text: "[SPRITE]คลิก[0]"
       gamelab_playSound:
         text: เล่นเสียง {SOUND}
+      gamelab_playSoundOptions:
+        text: เล่นเสียง {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": ครัชช์
+            "'sound://category_digital/jump_7.mp3'": กระโดดออกไปที่
       gamelab_pointInDirection:
         text: จุด {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1559,18 +1576,38 @@ th:
         text: สัตว์ประหลาดเริ่มสวมหน้ากาก
       Outbreak_stopMoving:
         text: สัตว์ประหลาดหยุดเคลื่อนไหว
+      PoemBot_playSound:
+        text: เล่นเสียง {SOUND}
       PoemBot_setBackgroundEffect:
-        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {BG_EFFECT} [PALETTE][1]
+        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {EFFECT} {PALETTE}
         options:
-          BG_EFFECT:
-            '"solid"': ของแข็ง
-            '"rainbow"': รุ้งกินน้ำ
+          EFFECT:
+            '"colors"': สี
+            '"squiggles"': เส้นขะยุกขะยิก
+            '"space"': พื้นที่
+            '"stars"': ดาว
+            '"ripples"': ระลอกคลื่น
+          PALETTE:
+            '"rainbow"': สายรุ้ง
+      PoemBot_setBackgroundImageAs:
+        text: ตั้งค่าพื้นหลังเป็น {IMG}
       PoemBot_setForegroundEffect:
-        text: กำหนดโฟร์กราวด์เอฟเฟค {FG_EFFECT}
+        text: กำหนดโฟร์กราวด์เอฟเฟค {EFFECT}
         options:
-          FG_EFFECT:
-            '"rain"': มีฝน
+          EFFECT:
+            '"rain"': ฝน
             '"bubbles"': ฟองสบู่
+            '"hearts"': หัวใจหลากสี
+            '"confetti"': กระดาษสี
+            '"starburst"': ดาวกระจาย
+      PoemBot_startBehavior:
+        options:
+          BEHAVIOR:
+            wandering: เคลื่อนที่
+      PoemBot_stopBehavior:
+        options:
+          BEHAVIOR:
+            wandering: เคลื่อนที่
       RyanLab_moveForward:
         text: ไปข้างหน้า
       RyanLab_turnLeft:

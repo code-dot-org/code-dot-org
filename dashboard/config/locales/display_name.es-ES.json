@@ -859,10 +859,10 @@
         "CourseF_outbreak2": "Simulación de un virus",
         "CourseF_outbreak3": "Simulación de un virus",
         "CourseF_outbreak4": "Modificar tu simulación",
-        "CourseF_outbreak5": "Recuperación",
-        "CourseF_outbreak6": "Probabilidad Aleatoria",
-        "CourseF_outbreak7": "Inmunidad y vacunas",
-        "CourseF_outbreak8": "Comparte un mensaje",
+        "CourseF_outbreak5": "Modificar tu simulación",
+        "CourseF_outbreak6": "Recuperación",
+        "CourseF_outbreak7": "Probabilidad Aleatoria",
+        "CourseF_outbreak8": "Inmunidad y vacunas",
         "CourseF_video_introSpriteLab_2021": "Esto es Laboratorio de sprites",
         "OPD-K5 WhatIsCS_dani": "¿Qué son las Ciencias de la Computación?",
         "courseC_artist_prog7_2021": "Placa de Identificación de la Mascota",
@@ -933,7 +933,8 @@
         "courseF_variables_madlib": "Historia del Espacio en Blanco, Parte 1",
         "courseF_variables_madlib_finish": "Historia del Espacio en Blanco, Parte 2",
         "ramp_artist_loops6v1_2021": "Escalera",
-        "ramp_artist_loops8_2021": "Octógono"
+        "ramp_artist_loops8_2021": "Octógono",
+        "international_outbreak_freeplay": "Comparte un mensaje"
       }
     }
   }

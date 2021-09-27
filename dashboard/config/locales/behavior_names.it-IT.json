@@ -2775,6 +2775,22 @@
           "wobbling": "barcollamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
           "moving east and looping": "spostamento verso est e ciclo"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "guarigione",
+          "wandering": "movimento casuale",
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "moving left and right": "movimento sinistra-destra",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "patrolling": "pattugliamento",
+          "moving with arrow keys": "movimento con tasti freccia"
         }
       }
     }

@@ -2805,6 +2805,22 @@
           "wobbling": "tambaleándose",
           "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
           "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "recuperando",
+          "wandering": "vagando",
+          "moving east": "avanzando al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "reducción",
+          "growing": "creciente",
+          "moving south": "avanzando hacia el sur",
+          "moving left and right": "moviéndose a la izquierda y a la derecha",
+          "moving north": "avanzando hacia el norte",
+          "jittering": "nerviosismo",
+          "moving west": "avanzando hacia el oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las flechas del teclado"
         }
       }
     }

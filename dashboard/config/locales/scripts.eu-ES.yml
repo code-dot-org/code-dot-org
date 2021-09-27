@@ -2541,6 +2541,12 @@ eu:
               display_name: Gaia 4
             lessonGroup-7:
               display_name: Gaia 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  etapa
+            lessonGroup-3:
+              display_name: 2.  etapa
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

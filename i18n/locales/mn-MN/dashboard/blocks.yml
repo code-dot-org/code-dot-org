@@ -1105,8 +1105,19 @@ mn:
         text: "{SPRITE}-н байршил"
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': бороотой
       gamelab_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': баруун
+            '90': доошоо
+            '180': зүүн
+            '270': дээшээ
       gamelab_mirrorSprite:
         text: "{SPRITE} нь {DIRECTION} руу харж байна"
         options:
@@ -1133,6 +1144,12 @@ mn:
         text: "{SPRITE} дээр дарсан"
       gamelab_playSound:
         text: хөгжимтоглох {SOUND}
+      gamelab_playSoundOptions:
+        text: хөгжимтоглох {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": хямрах
+            "'sound://category_digital/jump_7.mp3'": үсрэх
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION}-г заах"
         options:
@@ -1580,16 +1597,31 @@ mn:
         text: "{SPRITE}-н х тэнхлэг"
       Mikelab_yLocationOf:
         text: "{SPRITE}-н у тэнхлэг"
+      PoemBot_playSound:
+        text: хөгжимтоглох {SOUND}
       PoemBot_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"rainbow"': солонго
+          EFFECT:
+            '"colors"': Өнгөнүүд
+            '"squiggles"': Жижиг долгио
+            '"space"': Сансар
+            '"stars"': Одод
+            '"ripples"': Долгионууд
+          PALETTE:
+            '"rainbow"': Солонго
+      PoemBot_setBackgroundImageAs:
+        text: суурь өнгийг {IMG} руу тохируулах
       PoemBot_setForegroundEffect:
-        text: урд газрын нөлөөг {FG_EFFECT}-р тохируулах
+        text: урд газрын нөлөөг {EFFECT}-р тохируулах
         options:
-          FG_EFFECT:
-            '"rain"': бороотой
-            '"bubbles"': хөөс
+          EFFECT:
+            '"rain"': Бороо
+            '"bubbles"': Хөөс
+            '"hearts"': Өнгөлөг зүрх
+            '"confetti"': Конфетти
+            '"starburst"': Оддын тэсрэлт
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       RyanLab_moveForward:
         text: урагш хөдлөх
       RyanLab_turnLeft:

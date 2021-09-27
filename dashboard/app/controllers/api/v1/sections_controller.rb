@@ -47,7 +47,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: script_to_assign ? script_to_assign.id : params[:script_id],
-        course_id: params[:course_id] && UnitGroup.valid_course_id?(params[:course_id]) ?
+        course_id: params[:course_id] && UnitGroup.valid_course_id?(params[:course_id], current_user) ?
           params[:course_id].to_i : nil,
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
@@ -220,7 +220,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Update course_id if user provided valid course_id
   # Set course_id to nil if invalid or no course_id provided
   def set_course_id(course_id)
-    return course_id if UnitGroup.valid_course_id?(course_id)
+    return course_id if UnitGroup.valid_course_id?(course_id, current_user)
     nil
   end
 end

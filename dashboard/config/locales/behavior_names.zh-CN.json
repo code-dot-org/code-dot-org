@@ -2801,6 +2801,22 @@
           "jittering": "抖动",
           "moving west": "向左移动\n",
           "patrolling": "巡逻"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "恢复",
+          "wandering": "徘徊",
+          "moving east": "向右推动",
+          "spinning left": "向左旋转\n",
+          "spinning right": "向右旋转\n",
+          "shrinking": "收缩",
+          "growing": "生长",
+          "moving south": "向下移动\n",
+          "moving left and right": "左右移动",
+          "moving north": "向上移动\n",
+          "jittering": "抖动",
+          "moving west": "向左移动\n",
+          "patrolling": "巡逻",
+          "moving with arrow keys": "使用方向键移动"
         }
       }
     }

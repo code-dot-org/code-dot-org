@@ -13,10 +13,10 @@
         "spritelab_extras_repeat": "¡Crea muchos sprites iguales rápidamente, usando bucles!",
         "CourseF_app_computer": "¡Conecta todas las piezas y averigua cómo encender la computadora!",
         "CourseF_outbreak4": "Cambia el funcionamiento de la simulación y haz una predicción sobre lo que ocurrirá.",
-        "CourseF_outbreak5": "¡Ayuda a tus sprites a mejorar automáticamente con el paso del tiempo!",
-        "CourseF_outbreak6": "Un virus no siempre se transmite, y las mascarillas tampoco detienen la transmisión del todo. Haz que las infecciones se produzcan al azar para mejorar tu simulación.",
-        "CourseF_outbreak7": "Otorga inmunidad a tus sprites para evitar que se enfermen.",
-        "CourseF_outbreak8": "Utiliza tu proyecto para compartir un mensaje. ¿Qué quieres que aprendan los demás de todo esto?",
+        "CourseF_outbreak5": "Cambia el funcionamiento de la simulación y haz una predicción sobre lo que ocurrirá.",
+        "CourseF_outbreak6": "¡Ayuda a tus sprites a mejorar automáticamente con el paso del tiempo!",
+        "CourseF_outbreak7": "Un virus no siempre se transmite, y las mascarillas tampoco detienen la transmisión del todo. Haz que las infecciones se produzcan al azar para mejorar tu simulación.",
+        "CourseF_outbreak8": "Otorga inmunidad a tus sprites para evitar que se enfermen.",
         "courseC_artist_prog7_2021": "¡La placa de identificación de esta mascota tiene una forma especial!",
         "courseC_artist_prog_challenge1_2021": "Dibuja habitaciones para cada uno de los animales. ",
         "courseC_artist_prog_challenge2a_2021": "¡Ayúdame a pintar las líneas amarillas de esta carretera!",
@@ -89,7 +89,8 @@
         "courseF_variables_madlib_finish": "¡Agrega los toques finales a tu proyecto y luego compártelo!",
         "ramp_artist_loops4_2021": "Haz un bucle en una secuencia para crear este patrón de estrellas",
         "ramp_artist_loops6v1_2021": "Utiliza un bucle para dibujar esta escalera.",
-        "ramp_artist_loops8_2021": "Busca un patrón y acorta este código a través de los bucles."
+        "ramp_artist_loops8_2021": "Busca un patrón y acorta este código a través de los bucles.",
+        "international_outbreak_freeplay": "Utiliza tu proyecto para compartir un mensaje. ¿Qué quieres que aprendan los demás de todo esto?"
       }
     }
   }

@@ -120,12 +120,13 @@
         "CourseF_outbreak2": "סימולציית וירוסים",
         "CourseF_outbreak3": "סימולציית וירוסים",
         "CourseF_outbreak4": "שנו את הסימולציה שלכם",
-        "CourseF_outbreak5": "החלמה",
-        "CourseF_outbreak6": "סיכוי אקראי",
-        "CourseF_outbreak8": "שתפו מסר",
+        "CourseF_outbreak5": "שנו את הסימולציה שלכם",
+        "CourseF_outbreak6": "החלמה",
         "courseF_bee_for5_2021": "משתנים",
         "courseF_sprites_properties": "מאפייני ספרייט",
-        "ramp_artist_loops4_2021": "כוכב"
+        "ramp_artist_loops4_2021": "כוכב",
+        "CourseF_outbreak7": "סיכוי אקראי",
+        "international_outbreak_freeplay": "שתפו מסר"
       }
     }
   }

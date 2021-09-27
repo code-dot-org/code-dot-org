@@ -802,9 +802,9 @@
         "CourseF_outbreak2": "病毒模拟",
         "CourseF_outbreak3": "病毒模拟",
         "CourseF_outbreak4": "修改你的模拟",
-        "CourseF_outbreak6": "随机几率",
-        "CourseF_outbreak7": "免疫和疫苗",
-        "CourseF_outbreak8": "分享信息",
+        "CourseF_outbreak6": "恢复",
+        "CourseF_outbreak7": "随机几率",
+        "CourseF_outbreak8": "免疫和疫苗",
         "CourseF_video_introSpriteLab_2021": "这是精灵图实验室",
         "OPD-K5 WhatIsCS_dani": "什么是计算机科学？",
         "courseF_artist_for1_2021": "For 循环自由游戏 (开始)",
@@ -930,7 +930,8 @@
         "ramp_artist_loops6v1_2021": "楼梯",
         "ramp_artist_loops8_2021": "八边形",
         "scrat_loops_C-F_video_2021": "冰河时代视频中的循环",
-        "outbreak5": "恢复"
+        "outbreak5": "恢复",
+        "international_outbreak_freeplay": "分享信息"
       }
     }
   }

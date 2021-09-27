@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-26 20:06:03 UTC",
+    "serialized_at": "2021-09-13 17:08:44 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "ai-lab"
@@ -112,10 +112,20 @@
       "key": "5d4d3e5f-06b4-47f3-876f-3a0ab715ca65",
       "position": 3,
       "properties": {
-        "progression_name": "AI Lab Videos"
+        "progression_name": "Open Exploration"
       },
       "seeding_key": {
         "activity_section.key": "5d4d3e5f-06b4-47f3-876f-3a0ab715ca65",
+        "lesson_activity.key": "169c0788-35c0-43e2-b7cc-24bf4fd97448"
+      }
+    },
+    {
+      "key": "ecdce41a-a595-494c-8f88-c07ce2af197c",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ecdce41a-a595-494c-8f88-c07ce2af197c",
         "lesson_activity.key": "169c0788-35c0-43e2-b7cc-24bf4fd97448"
       }
     },
@@ -267,6 +277,50 @@
     },
     {
       "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Open Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-class test-ai lab choice-5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-lab",
+        "activity_section.key": "5d4d3e5f-06b4-47f3-876f-3a0ab715ca65"
+      },
+      "level_keys": [
+        "ml-class test-ai lab choice-5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Open Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-exploration-app lab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-lab",
+        "activity_section.key": "5d4d3e5f-06b4-47f3-876f-3a0ab715ca65"
+      },
+      "level_keys": [
+        "ml-exploration-app lab"
+      ]
+    },
+    {
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -291,7 +345,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -316,7 +370,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -341,7 +395,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -413,6 +467,30 @@
         "lesson_group.key": "",
         "script.name": "ai-lab",
         "activity_section.key": "c950f58e-2e27-406f-9ff0-5496606b793b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-class test-ai lab choice-5",
+        "script_level.level_keys": [
+          "ml-class test-ai lab choice-5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-lab",
+        "activity_section.key": "5d4d3e5f-06b4-47f3-876f-3a0ab715ca65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-exploration-app lab",
+        "script_level.level_keys": [
+          "ml-exploration-app lab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-lab",
+        "activity_section.key": "5d4d3e5f-06b4-47f3-876f-3a0ab715ca65"
       }
     },
     {

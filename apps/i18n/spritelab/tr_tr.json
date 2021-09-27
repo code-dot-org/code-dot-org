@@ -54,5 +54,6 @@
   "genericReplay": "Devam etmeden önce programınızı birkaç kez tekrar ettiğinizden emin olun!",
   "genericExplore": "İyi! Kodunuzda değişiklik yapmak ve tekrar çalıştırmak için \"Oynamaya Devam Et\" i tıklayın. Bir sonraki sınava hazır olduğunuzda Devam Et'a basın.",
   "genericBonusSuccess": "İyi iş! Ekstra meydan okuma dahil seviyeyi bitirdiniz!",
-  "debugSprites": "Sprite ile ilgili bir hatanız var."
+  "debugSprites": "Sprite ile ilgili bir hatanız var.",
+  "poemBotMakeBackground": "Bir arka planı efekti eklemeniz gerekiyor."
 }

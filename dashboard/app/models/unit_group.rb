@@ -26,7 +26,7 @@ class UnitGroup < ApplicationRecord
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
-  has_one :course_version, as: :content_root
+  has_one :course_version, as: :content_root, dependent: :destroy
 
   after_save :write_serialization
 
@@ -285,9 +285,6 @@ class UnitGroup < ApplicationRecord
   # @return [Array<UnitGroup>]
   def self.valid_courses(user: nil)
     courses = all_courses.select(&:launched?)
-    if user && has_any_course_experiments?(user)
-      return courses
-    end
 
     if user && has_any_pilot_access?(user)
       pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
@@ -312,16 +309,11 @@ class UnitGroup < ApplicationRecord
     Experiment.any_enabled?(user: user, experiment_names: UnitGroupUnit.experiments)
   end
 
-  # Get the set of valid courses for the dropdown in our sections table.
-  def self.valid_courses_without_cache
-    UnitGroup.all.select(&:launched?)
-  end
-
   # Returns whether the course id is valid, even if it is not "stable" yet.
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
-  def self.valid_course_id?(course_id)
-    valid_courses.any? {|unit_group| unit_group.id == course_id.to_i}
+  def self.valid_course_id?(course_id, user)
+    UnitGroup.valid_courses(user: user).any? {|unit_group| unit_group.id == course_id.to_i}
   end
 
   # @param user [User]
@@ -329,7 +321,7 @@ class UnitGroup < ApplicationRecord
   # Users should only be able to assign one of their valid courses.
   def assignable_for_user?(user)
     if user&.teacher?
-      UnitGroup.valid_course_id?(id)
+      UnitGroup.valid_course_id?(id, user)
     end
   end
 

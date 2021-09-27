@@ -1,10 +1,26 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "back-to-school-2021"
+    "/home": "nextsteps-faq"
   },
 
   "banners": {
+    "nextsteps-faq": {
+      "image": "/images/csjourneys/nextsteps-faq-banner3.png",
+      "title": "Demystify next steps for your students",
+      "body": "Give high school students the opportunity to hear answers to some of the most common questions about computer science, including what career options are available and how artificial intelligence and big data will shape the job market.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-1",
+      "buttonId": "nextsteps-faq-details"
+    },  
+    "csjourneys": {
+      "image": "/images/csjourneys/teacher-banner.png",
+      "title": "Explore the wide world of computer science",
+      "body": "Bring CS to life with Code.org’s new career inspiration and exploration program! Sign up for live, engaging classroom experiences like virtual field trips and class chats, or let students explore with short videos and other resources.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/csjourneys",
+      "buttonId": "csjourneys-dashboard"
+    },
     "class-schedule-survey": {
       "image": "/images/class-schedule-survey.png",
       "title": "Fall 2021 Class Schedule Survey",

@@ -2256,9 +2256,9 @@
         "CourseF_outbreak2": "Gawing may sakit na halimaw ang malulusog na halimaw kapag dumampi sila.",
         "CourseF_outbreak3": "Palitan ang mga halimaw kapag na-click mo sila sa mga halimaw na may mga mask sa mukha.",
         "CourseF_outbreak4": "Baguhin ang bilang at laki ng mga tianak ng halimaw sa iyong simulasyon.",
-        "CourseF_outbreak6": "Magdagdag ng isang porsyentong posibilidad sa mga halimaw na magkasakit tuwing dumampi ang mga may sakit na halimaw sa malulusog na halimaw. Gawin ito para sa lahat ng mga kumbinasyon ng mga halimaw na meron at walang mga mask.",
-        "CourseF_outbreak7": "Lumikha ng isang bagong kasuutan para sa mga halimaw na may imyunidad sa virus at gamitin ito sa simulasyon mo.",
-        "CourseF_outbreak8": "Magbahagi ng isang mensahe sa iyong simulasyon.",
+        "CourseF_outbreak6": "Gawin ang lahat ng mga may sakit na halimaw na magsimulang gumaling kapag ang isang malusog na halimaw ay dumampi sa isang may sakit na halimaw.",
+        "CourseF_outbreak7": "Magdagdag ng isang porsyentong posibilidad sa mga halimaw na magkasakit tuwing dumampi ang mga may sakit na halimaw sa malulusog na halimaw. Gawin ito para sa lahat ng mga kumbinasyon ng mga halimaw na meron at walang mga mask.",
+        "CourseF_outbreak8": "Lumikha ng isang bagong kasuutan para sa mga halimaw na may imyunidad sa virus at gamitin ito sa simulasyon mo.",
         "Function intro Ryan_2021": "Gamitin ang `build_bridge` na function nang dalawang beses para makagawa ng landas sa Restone Torch.",
         "MC_HOC_2017_01_RETRY_2021": "Magsulat ng code para mapapunta ang Ahente sa pressure plate, pagkatapos ay pindutin ang \"Run\" at gamitin ang mga arrow key para mapagalaw ang manlalaro palabas ng bahay para mangolekta ng baol. ",
         "MC_HOC_2017_02_Cole_2021": "Ilipat ang Ahente sa pressure plate para ang {currentPlayerName} ay makakapunta sa mapa. ",
@@ -2664,7 +2664,9 @@
         "ramp_artist_loops6_2021": "Baguhin ang iyong loop para iguhit ang hagdanang ito.",
         "ramp_artist_loops7_2021": "Maghanap ng paterno at paikilin ang code na ito gamit ang mga loop!",
         "ramp_artist_loops8_2021": "Maghanap ng paterno at paikilin ang code na ito gamit ang mga loop.",
-        "ramp_artist_loops9_2021": "Lutasin ang palaisipang ito sa pamamagitan ng pagguhit ng isang parisukat."
+        "ramp_artist_loops9_2021": "Lutasin ang palaisipang ito sa pamamagitan ng pagguhit ng isang parisukat.",
+        "CourseF_outbreak5": "Baguhin ang bilang at laki ng mga tianak ng halimaw sa iyong simulasyon.",
+        "international_outbreak_freeplay": "Magbahagi ng isang mensahe sa iyong simulasyon."
       }
     }
   }

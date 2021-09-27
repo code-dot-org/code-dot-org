@@ -2308,6 +2308,22 @@
           "wandering": "التحرك",
           "shrinking": "الانقباض",
           "spinning left": "الدوران ناحية اليسار"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "التعافي",
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving left and right": "تحريك إلى اليسار وإلى اليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
         }
       }
     }

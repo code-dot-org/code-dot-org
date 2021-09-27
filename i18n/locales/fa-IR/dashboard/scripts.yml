@@ -2600,6 +2600,14 @@ fa:
               display_name: مقدمه
             Introduction:
               display_name: مقدمه
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: درس 3
+            Lesson 4:
+              display_name: درس 4
+            Lesson 5:
+              display_name: درس 5
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
@@ -2617,6 +2625,12 @@ fa:
               display_name: واحد 4
             lessonGroup-7:
               display_name: واحد 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: مرحله 1
+            lessonGroup-3:
+              display_name: مرحله 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

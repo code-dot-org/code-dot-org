@@ -10,7 +10,6 @@ import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
-import InputPrompt from './InputPrompt';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -63,21 +62,60 @@ class JavalabConsole extends React.Component {
     this._consoleLogs.scrollTop = this._consoleLogs.scrollHeight;
   };
 
-  displayConsoleLogs() {
-    return this.props.consoleLogs.map((log, i) => {
+  // Transform this.props.consoleLogs into an array of strings, with each string
+  // representing a single line that will appear in the console.
+  getConsoleLines() {
+    const lines = [];
+    let currentLine = 0;
+
+    lines[currentLine] = '';
+
+    for (const log of this.props.consoleLogs) {
       if (log.type === 'newline') {
+        lines[++currentLine] = '';
+      } else {
+        const text = log.type === 'input' ? log.text + '\n' : log.text;
+        const splitText = text.split(/\r?\n/).entries();
+        for (const [i, value] of splitText) {
+          if (i > 0) {
+            lines[++currentLine] = value;
+          } else {
+            lines[currentLine] += value;
+          }
+        }
+      }
+    }
+
+    return lines;
+  }
+
+  // Returns a rendering of the console log.  It includes the input field following the final
+  // content, taking up the remaining width of the line.
+  renderConsoleLogs(isDarkMode) {
+    const lines = this.getConsoleLines();
+
+    return lines.map((line, index) => {
+      if (index === lines.length - 1) {
         return (
-          <p key={`log-${i}`} style={styles.log}>
-            <br />
-          </p>
+          <div key={index} style={{display: 'flex'}}>
+            {line}
+            <input
+              id="console-input"
+              type="text"
+              spellCheck="false"
+              style={{
+                ...styles.input,
+                ...(isDarkMode ? styles.darkModeInput : styles.lightModeInput)
+              }}
+              onKeyDown={this.onInputKeyDown}
+              aria-label="console input"
+              ref={ref => (this.inputRef = ref)}
+              autoFocus
+            />
+          </div>
         );
       } else {
-        return (
-          <p key={`log-${i}`} style={{...styles.lineWrapper, ...styles.log}}>
-            {log.type === 'input' && <InputPrompt />}
-            {log.text}
-          </p>
-        );
+        return <div key={index}>{line.length === 0 ? ' ' : line}</div>;
       }
     });
   }
@@ -101,6 +139,10 @@ class JavalabConsole extends React.Component {
       moveCaretToEndOfDiv(e.target);
       e.preventDefault(); // Block default Home/End-like behavior in Chrome
     }
+  };
+
+  onLogsClick = () => {
+    this.inputRef.focus();
   };
 
   render() {
@@ -130,19 +172,8 @@ class JavalabConsole extends React.Component {
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
           >
-            <div style={styles.logs}>{this.displayConsoleLogs()}</div>
-            <div style={styles.lineWrapper}>
-              <InputPrompt onClick={this.focus} />
-              <input
-                type="text"
-                spellCheck="false"
-                style={{
-                  ...styles.input,
-                  ...(isDarkMode ? styles.darkMode : styles.lightMode)
-                }}
-                onKeyDown={this.onInputKeyDown}
-                aria-label="console input"
-              />
+            <div onClick={this.onLogsClick} style={styles.logs}>
+              {this.renderConsoleLogs(isDarkMode)}
             </div>
           </div>
           {bottomRow && [
@@ -175,6 +206,15 @@ const styles = {
     backgroundColor: color.white,
     color: color.black
   },
+  darkModeInput: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: color.white,
+    float: 'left'
+  },
+  lightModeInput: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: color.black
+  },
   container: {
     marginTop: 30,
     display: 'flex',
@@ -191,24 +231,19 @@ const styles = {
   logs: {
     lineHeight: 'normal',
     cursor: 'text',
-    whiteSpace: 'pre-wrap',
-    flexGrow: 1
+    whiteSpace: 'pre-wrap'
   },
-  lineWrapper: {
-    flexGrow: 0,
-    flexShrink: 0,
-    display: 'flex',
-    alignItems: 'center',
-    overflow: 'auto',
-    fontSize: 14
+  logLine: {
+    display: 'flex'
   },
   input: {
-    flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none',
     border: 'none',
     padding: 0,
-    fontFamily: 'monospace'
+    fontFamily: 'monospace',
+    flexGrow: 1,
+    marginTop: -2
   },
   spacer: {
     width: 8

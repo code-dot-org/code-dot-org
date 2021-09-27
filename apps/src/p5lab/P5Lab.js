@@ -77,7 +77,6 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import createLibrary from './spritelab/libraries/libraryFactory';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const defaultMobileControlsConfig = {
@@ -246,6 +245,9 @@ P5Lab.prototype.init = function(config) {
     this.skin.staticAvatar = mediaUrl;
     this.skin.winAvatar = mediaUrl;
     this.skin.failureAvatar = mediaUrl;
+
+    // SpriteLab projects don't allow users to include dpad controls
+    defaultMobileControlsConfig.dpadVisible = false;
 
     injectErrorHandler(
       new BlocklyModeErrorHandler(() => this.JSInterpreter, null)
@@ -1101,9 +1103,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
     }
 
     if (this.isSpritelab) {
-      this.spritelabLibrary = createLibrary(this.level, {
-        p5: this.p5Wrapper.p5
-      });
+      this.spritelabLibrary = this.createLibrary({p5: this.p5Wrapper.p5});
 
       const spritelabCommands = this.spritelabLibrary.commands;
       for (const command in spritelabCommands) {

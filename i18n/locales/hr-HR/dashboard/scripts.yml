@@ -2527,6 +2527,12 @@ hr:
               display_name: Cjelina 4
             lessonGroup-7:
               display_name: Cjelina 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nivo 1
+            lessonGroup-3:
+              display_name: Nivo 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

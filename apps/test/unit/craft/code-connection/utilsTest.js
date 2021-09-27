@@ -1,4 +1,4 @@
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {parseElement} from '@cdo/apps/xml';
 import {convertBlocksXml} from '@cdo/apps/craft/code-connection/utils';
 

@@ -2660,6 +2660,12 @@ km:
           lesson_groups:
             lessonGroup-3:
               display_name: ប្រភពមេរៀន
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ដំណាក់កាល 1
+            lessonGroup-3:
+              display_name: ដំណាក់កាល 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

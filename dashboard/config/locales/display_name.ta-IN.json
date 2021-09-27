@@ -41,9 +41,9 @@
         "CourseF_outbreak2": "வைரஸ் உருவகப்படுத்துதல்",
         "CourseF_outbreak3": "வைரஸ் உருவகப்படுத்துதல்",
         "CourseF_outbreak4": "உங்கள் உருவகப்படுத்துதலை மாற்றவும்\n",
-        "CourseF_outbreak6": "சீரற்ற வாய்ப்பு",
-        "CourseF_outbreak7": "நோய் எதிர்ப்பு சக்தி மற்றும் தடுப்பூசிகள்",
-        "CourseF_outbreak8": "ஒரு செய்தியைப் பகிரவும்",
+        "CourseF_outbreak6": "மீட்பு",
+        "CourseF_outbreak7": "சீரற்ற வாய்ப்பு",
+        "CourseF_outbreak8": "நோய் எதிர்ப்பு சக்தி மற்றும் தடுப்பூசிகள்",
         "Dance_Party_extras_alternate_2019": "முன்னும் பின்னுமாக",
         "Dance_Party_extras_mixed_2019": "மேலும் பொத்தான்கள்",
         "MC_HOC_2017_01_RETRY": "ஹோம்ஸ்டெட்",
@@ -101,7 +101,9 @@
         "CourseD_EOC_bounce1_example_2021": "பவுன்ஸ் மீது சீரற்ற வேகம்",
         "CourseD_EOC_dance_examples_2021": "டிஸ்கோ கட்சி",
         "courseC19_playLab_sample1_2021": "அணில் பசி ",
-        "courseC19_playLab_sample2_2021": "ஏலியன் கதை"
+        "courseC19_playLab_sample2_2021": "ஏலியன் கதை",
+        "CourseF_outbreak5": "உங்கள் உருவகப்படுத்துதலை மாற்றவும்\n",
+        "international_outbreak_freeplay": "ஒரு செய்தியைப் பகிரவும்"
       }
     }
   }

@@ -2781,6 +2781,22 @@
           "wobbling": "chybotanie",
           "moving west and looping": "przechodząc na zachód i powtarzając w pętli",
           "moving east and looping": "przechodząc na wschód i powtarzając w pętli"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "wyzdrowieć",
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "moving left and right": "poruszając się w lewo i w prawo",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek"
         }
       }
     }

@@ -1,4 +1,4 @@
-import {assert} from '../../../../util/deprecatedChai';
+import {assert} from '../../../../util/reconfiguredChai';
 
 describe('CommandHistory', function() {
   var CommandHistory = require('@cdo/apps/lib/tools/jsdebugger/CommandHistory');

@@ -107,7 +107,8 @@ export class TeacherFeedback extends Component {
           script_id: this.props.serverScriptId,
           level_id: this.props.serverLevelId,
           old_state: this.getLatestReviewState(),
-          new_state: this.state.reviewState
+          new_state: this.state.reviewState,
+          section_id: this.props.selectedSectionId
         })
       },
       {includeUserId: true}

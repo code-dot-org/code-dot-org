@@ -321,6 +321,7 @@ function loadAppAsync(appOptions) {
           );
         }
 
+        appOptions.level.isNavigator = data.isNavigator;
         if (data.pairingDriver) {
           appOptions.level.pairingDriver = data.pairingDriver;
           appOptions.level.pairingAttempt = data.pairingAttempt;

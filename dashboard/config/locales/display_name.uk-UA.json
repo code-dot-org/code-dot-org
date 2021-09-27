@@ -532,10 +532,10 @@
         "CourseF_outbreak2": "Моделювання поширення вірусу",
         "CourseF_outbreak3": "Моделювання поширення вірусу",
         "CourseF_outbreak4": "Змініть свою симуляцію",
-        "CourseF_outbreak5": "Одужання",
-        "CourseF_outbreak6": "Випадковість",
-        "CourseF_outbreak7": "Імунітет та вакцини",
-        "CourseF_outbreak8": "Поділитись повідомленням",
+        "CourseF_outbreak5": "Змініть свою симуляцію",
+        "CourseF_outbreak6": "Одужання",
+        "CourseF_outbreak7": "Випадковість",
+        "CourseF_outbreak8": "Імунітет та вакцини",
         "CourseF_video_introSpriteLab_2021": "Це Спрайт Лаб",
         "MC_HOC_2017_01_RETRY_2021": "Садиба",
         "MC_HOC_2017_02_Cole_2021": "Ферма",
@@ -557,7 +557,8 @@
         "courseF_pilotVideo_events": "Як зробити спрайт",
         "courseF_pilotVideo_prompts": "Як зробити спрайт",
         "courseF_sprites_freeplay_aquatic": "Водні",
-        "ramp_artist_loops4_2021": "Зірка"
+        "ramp_artist_loops4_2021": "Зірка",
+        "international_outbreak_freeplay": "Поділитись повідомленням"
       }
     }
   }

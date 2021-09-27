@@ -630,9 +630,9 @@ fr:
         C4_bee_conditional: Abeilles et instructions conditionnelles
         C4_variables_artist: Variables - Artiste
         C4_variables_playlab: Variables - Labo de jeux
-        C4_for_loops: Boucles « Pour »
-        C4_for_loops_bee: Boucles « Pour »
-        C4_for_loops_no_bee: Boucles « Pour »
+        C4_for_loops: Les Boucles « Pour »
+        C4_for_loops_bee: Les Boucles « Pour »
+        C4_for_loops_no_bee: Les Boucles « Pour »
         C4_math_artist: Programmation de l'Artiste avec des Maths
         C4_function_edit: Modification de fonctions
         C4_function_create: Création de Fonctions
@@ -641,7 +641,7 @@ fr:
         C4_unplugged_algorithms: Algorithmes avec des Tangrams
         C4_unplugged_madlibs: Mad Libs (histoire à trous)
         C4_unplugged_variables: Variables en Enveloppes
-        C4_unplugged_forloops: Boucles « Pour »
+        C4_unplugged_forloops: Les Boucles « Pour »
         C4_unplugged_parameters: La composition de chansons avec des paramètres
         C4_unplugged_binary: Binaire
         CSF_a_b_artist_loops: Les Boucles dans Artiste
@@ -768,12 +768,12 @@ fr:
         CSF_scrat_loops_K1: Boucles dans l'Âge de Glace
         CSF_scrat_loops_CF: Boucles dans l'Âge de Glace
         CSF_if_allskins: Le Bloc Si
-        CSF_ifelse_allskins: Utiliser les Blocs Si/Sinon
-        CSF_ifelseifelse_allskins: Utiliser les Blocs Si/SinonSi/Sinon
+        CSF_ifelse_allskins: Utiliser les Blocs « Si/Sinon »
+        CSF_ifelseifelse_allskins: Utiliser les Blocs « Si/Sinon »
         CSF_loops_AB: boucles
         csd_gamelab_booleans: Expressions Booléennes
         csd_gamelab_conditional_statements: Déclarations Conditionnelles
-        csd_gamelab_if_else: Déclarations Si/Sinon
+        csd_gamelab_if_else: Instructions « Si/Sinon »
         CSF_SpriteLabIntro_CDEF: Voici le Labo du Lutin
         CSF_Spritelab_MakeSprite_CDEF: Comment Créer un Lutin dans le Labo du Lutin
         CDEF_Video_SpritesInAction: Les Lutins en Action
@@ -956,7 +956,7 @@ fr:
         repeat: Place des blocs à l'intérieur de la boucle pour répéter les commandes
         if_bee_nectar: Utilise le bloc « Si » pour décider si l'abeille doit obtenir
           du nectar ou non
-        if_else_bee: Utilise le bloc «Si/Sinon» pour que l'abeille butine le nectar
+        if_else_bee: Utilise le bloc « Si/Sinon » pour que l'abeille butine le nectar
           d'une fleur, ou fasse du miel si ce n'est pas une fleur
         repeat_full_circle: Entre le nombre de fois que le zombie doit se déplacer
           pour faire un cercle complet

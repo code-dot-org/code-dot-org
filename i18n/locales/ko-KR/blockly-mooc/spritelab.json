@@ -16,5 +16,6 @@
   "didntMoveUp": "스프라이트가 위쪽으로 올라가지 않았습니다.",
   "didntMoveDown": "스프라이트가 아래쪽으로 내려가지 않았습니다.",
   "didntMoveLeft": "스프라이트가 왼쪽으로 이동하지 않았습니다.",
-  "didntMoveRight": "스프라이트가 오른쪽으로 이동하지 않았습니다."
+  "didntMoveRight": "스프라이트가 오른쪽으로 이동하지 않았습니다.",
+  "poemBotMakeBackground": "배경 효과를 추가해야 합니다."
 }

@@ -563,6 +563,7 @@ FactoryGirl.define do
   end
 
   factory :bounce, parent: :level, class: Bounce do
+    game {Game.bounce}
   end
 
   factory :artist, parent: :level, class: Artist do
@@ -704,6 +705,7 @@ FactoryGirl.define do
   factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
+    is_migrated true
 
     trait :with_levels do
       transient do

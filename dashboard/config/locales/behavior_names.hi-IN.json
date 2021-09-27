@@ -710,7 +710,8 @@
           "moving west": "पश्चिम की ओर मूव करें",
           "spinning right": "दाएं घुमाना",
           "swimming left and right": "बाएं और दाएं तैराकी करना",
-          "moving east": "पूर्व की ओर मूव करें"
+          "moving east": "पूर्व की ओर मूव करें",
+          "spinning left": "बाएं घुमाना"
         },
         "Dance Party 3_2021": {
           "spinning left": "बाएं घुमाना",
@@ -1635,7 +1636,14 @@
           "shrinking": "सिकुड़ना",
           "growing": "बढ़ना",
           "moving south": "दक्षिण की ओर मूव करें",
-          "moving north": "उत्तर की ओर मूव करें"
+          "moving north": "उत्तर की ओर मूव करें",
+          "mystery behavior": "रहस्यमय व्यवहार",
+          "running east": "पूर्व की ओर दौड़ना"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "रिकवरिंग",
+          "moving left and right": "बाएं और दाएं मूव करना",
+          "moving with arrow keys": "एरो कीज के साथ मूव करना।"
         }
       }
     }

@@ -150,6 +150,11 @@
         },
         "simcustom_2021": {
           "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "recuperare",
+          "moving left and right": "mișcare de la stânga la dreapta",
+          "moving with arrow keys": "mutare cu tastele săgeată"
         }
       }
     }

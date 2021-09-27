@@ -239,6 +239,10 @@ it:
     email_preference_no: 'No'
     email_preference_required: Devi specificare una preferenza relativa all'indirizzo
       email.
+    share_teacher_email_reg_partner_preference_yes: Sì
+    share_teacher_email_reg_partner_preference_no: 'No'
+    share_teacher_email_reg_partner_preference_required: Devi specificare una preferenza
+      relativa all'indirizzo email.
     parent_account_checkbox: Sono un genitore/tutore e mi iscrivo per conto di mio
       figlio
     parent_account_email_progress_permission: Possiamo inviarti aggiornamenti occasionali

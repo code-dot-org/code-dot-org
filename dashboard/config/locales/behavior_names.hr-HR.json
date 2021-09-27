@@ -2483,6 +2483,20 @@
           "jittering": "treperenje",
           "moving west": "krećući se prema zapadu",
           "patrolling": "patroliranje"
+        },
+        "international_outbreak_freeplay": {
+          "wandering": "lutanje",
+          "moving east": "krećući se prema istoku",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "shrinking": "skupljanje",
+          "growing": "rastući",
+          "moving south": "krećući se prema jugu",
+          "moving north": "krećući se prema sjeveru",
+          "jittering": "treperenje",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "moving with arrow keys": "vožnja sa strelicama"
         }
       }
     }

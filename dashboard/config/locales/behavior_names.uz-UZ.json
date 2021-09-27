@@ -2390,6 +2390,22 @@
           "jittering": "titrash",
           "moving west": "g'arbga yurish",
           "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "tiklanish",
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "moving left and right": "chapga va o'ngga harakat qilish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         }
       }
     }

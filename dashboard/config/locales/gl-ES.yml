@@ -166,6 +166,10 @@ gl:
     email_preference_yes: Si
     email_preference_no: Non
     email_preference_required: Tes que especificar un e-mail de preferencia.
+    share_teacher_email_reg_partner_preference_yes: Si
+    share_teacher_email_reg_partner_preference_no: Non
+    share_teacher_email_reg_partner_preference_required: Tes que especificar un e-mail
+      de preferencia.
   school_info:
     title: Información da escola (opcional)
     school_country: País da escola

@@ -2,6 +2,12 @@
   "ru-RU": {
     "data": {
       "lessons": {
+        "coursef-2021/lesson-6": {
+          "overview": "На этом занятии по **настройке контекста** ученики обсудят роль компьютеров и технологий в их жизни, фокусируясь на том, как приложения и инструменты позволяют пользователям выбирать порядок их использования. Ученики также рассмотрят приложения, аналогичные тем, которые они позднее будут создавать самостоятельно.",
+          "preparation": "-   Determine how students will login to Code.org.\n-   If needed, create Code.org accounts for students.\n-   Assign Introducing Sprite Lab to students.\n-   Print copies of **\\*Exploring Apps** worksheet (or post the digital version to your LMS).",
+          "purpose": "Первое занятие посвящено тому, как пробудить у учеников интерес к курсу и привязать их персональные интересы к информатике.",
+          "student_overview": "You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them."
+        },
         "coursef-2021/Nested Loops in the Maze": {
           "student_overview": "Цикл внутри цикла. Что это значит? Этот урок объяснит вам, что происходит, когда вы помещаете цикл внутри другого цикла."
         },

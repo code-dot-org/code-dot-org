@@ -141,5 +141,6 @@
   "spritelabFeedbackUseFishCostume": "អ្នកត្រូវការប្រើសំលៀកបំពាក់ត្រីយ៉ាងតិចមួយ។\n",
   "spriteLabFeedbackGiveFishBehavior": "\nអ្នកត្រូវផ្តល់ទម្រង់ដល់ត្រីរបស់អ្នក។",
   "spritelabFeedbackCreateTwoDifferentSprites": "\nអ្នកត្រូវការspritesពីរជាមួយសំលៀកបំពាក់ផ្សេងៗគ្នា។",
-  "spritelabFeedbackGiveSecondSpriteBehavior": "\nSpritesទី ២ របស់អ្នកត្រូវការអាកប្បកិរិយា។\n"
+  "spritelabFeedbackGiveSecondSpriteBehavior": "\nSpritesទី ២ របស់អ្នកត្រូវការអាកប្បកិរិយា។\n",
+  "poemBotMakeBackground": "អ្នកត្រូវបញ្ចូលផ្ទាំងរូបខាងក្រោយ"
 }

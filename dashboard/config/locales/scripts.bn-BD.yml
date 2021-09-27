@@ -1788,6 +1788,12 @@ bn:
               display_name: ইউনিট 4
             lessonGroup-7:
               display_name: ইউনিট 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ধাপ ১
+            lessonGroup-3:
+              display_name: ধাপ ২
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

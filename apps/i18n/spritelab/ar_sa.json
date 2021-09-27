@@ -54,5 +54,6 @@
   "spritelabFeedbackCreateTwoDifferentSprites": "على الرسومين المتحرّكين أن يكون لهما زي مختلف.",
   "spritelabFeedbackGiveSecondSpriteBehavior": "يحتاج رسومك المتحرك إلى تصرف.",
   "growAndShrink": "على رسومك المتحرك أن يتقلص و يكبر.",
-  "addAdditionalPrompts": "لم يقم برنامجك بتوليد نصوص كافية."
+  "addAdditionalPrompts": "لم يقم برنامجك بتوليد نصوص كافية.",
+  "poemBotMakeBackground": "تحتاج إلى إضافة خلفية."
 }

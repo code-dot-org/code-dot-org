@@ -649,6 +649,7 @@ pl:
               name: Strategie nauczenia
             What is ECS?:
               name: Co to jest ECS?
+          name: ECSPD
         sciencePD:
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -1448,6 +1449,7 @@ pl:
             Unit 6 lessons:
               name: Jednostka 6 Lekcje
         cspunit4draft:
+          title: Podstawy informatyki Jednostka 4 - Dane
           description_short: Dane
           lessons:
             Check Your Assumptions:
@@ -1537,6 +1539,7 @@ pl:
             Teaching Support - Lessons 8-12:
               name: Wsparcie nauczania - Lekcje 8-12
         CSPPD3-Unit2:
+          title: 'Podstawy informatyki: Jednostka 2 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1579,6 +1582,7 @@ pl:
               name: Epoka Lodowcowa w Play Lab
           student_description: Utwórz historyjkę lub grę z pomoc Epoki Lodowcotej w Play Lab!
         CSPPD3-Unit3:
+          title: 'Podstawy informatyki: Jednostka 3 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1621,6 +1625,7 @@ pl:
             While Loops:
               name: Pętle Dopóki (While)
         CSP-Unit3-Support:
+          title: 'Podstawy informatyki: Jednostka 3 Rozwój zawodowy (PD)'
           lessons:
             Chunk 1 Overview:
               name: Część 1 Przeląd
@@ -1677,6 +1682,7 @@ pl:
               name: Oceany
           student_description: Poznaj sposób, w jaki sztuczna inteligencja i uczenie maszynowe mogą być wykorzystywana do zajmowania się problemami całego świata.
         CSPPD3-Unit3-pt2:
+          title: 'Podstawy informatyki: Jednostka 3 Wyzwania zawodowego rozwoju'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1773,6 +1779,7 @@ pl:
             Visualizing Data:
               name: Wizualizacja danych
         CSPPD3-Unit5:
+          title: 'Podstawy informatyki: Jednostka 5 Rozwój zawodowy (PD)'
           lessons:
             Challenge Overview:
               name: Przeląd wyzwań
@@ -1810,6 +1817,7 @@ pl:
             Visualizing Data:
               name: Wizualizacja danych
         AlgebraA:
+          title: 'Informatyka w algebrze: Kurs A'
           description: Poznaj programowanie funkcjonalne za pomocą algebry
           description_short: Poznaj programowanie funkcjonalne za pomocą algebry
           lessons:
@@ -8621,6 +8629,7 @@ pl:
             Complete Unit 3 Deeper Learning Reflections:
               name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
           student_description: 'To jest Dział 1 "Planu pogłębionej nauki" dla prowadzących "Odkrycia informatyki" Code.org w trakcie szkolenia. Tutaj znajdziesz podpowiedzi i wytyczne wynikające z przemyśleń umożliwiających wykazywanie biegłości w roli prowadzącego realizującego materiał działu 1 programu "Odkryć informatyki" Code.org. W dolnej części tej strony dostępne są pozycje do weryfikacji przez rówieśników po przedłożeniu przez Ciebie Twoich własnych przemyśleń dotyczących tego działu. '
+          name: csd1-dlp-18
         csd2-dlp-18:
           title: "  Odkrycia Informatyki, Jednostka 2, Pogłębiona Nauka 2018-2019"
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia 2019 [CS Discoveries Facilitators in Training 2019]
@@ -16249,9 +16258,9 @@ pl:
             csf:
               name: Podstawy Informatyki
             sprites_in_action_2021:
-              name: 'Sprite Lab: Duszki w akcji (CSF 2021 Pilotaż)'
+              name: 'Sprite Lab: Duszki w akcji'
             text_and_prompts_2021:
-              name: 'Sprite Lab: Tekst i zachęty (Pilotaż CSF 2021) '
+              name: 'Sprite Lab: Tekst i zachęty'
             csp_functions_2021:
               name: 'Zasady informatyki: funkcje'
             minitoolbox_2021:
@@ -16358,7 +16367,7 @@ pl:
             appendix:
               name: Appendix
             intro-categorical:
-              name: Lekcja 6
+              name: Wprowadzenie do AI Lab
             model-cards:
               name: Plac zabaw dla modeli kart
             bug-bash:
@@ -18815,6 +18824,11 @@ pl:
             lesson-2:
               description_student: W tym projekcie projektujesz podstawowe elementy prostej gry, planując i rozwijając silnik gry. Nakreślasz mechanikę gry, pseudokodujesz każdy komponent, a następnie używasz interaktywnego procesu projektowania, aby stworzyć grę, która reaguje na interakcję użytkownika. Pod koniec tego projektu bierzesz udział w imprezie blokowej, aby grać nawzajem w gry!
               description_teacher: Studenci projektują i budują silnik gry dla tego projektu, skupiając się przede wszystkim na logice warunkowej potrzebnej do tego, aby gra była interaktywna i responsywna. Rozpoczynają od wybrania prostej gry i określenia jej podstawowych funkcji. Piszą pseudokod dla tych komponentów i rozpoczynają rozwijanie swojego projektu.
+            lesson-7:
+              description_student: Porównaliśmy dwa „int” lub „double” pod kątem równości, ale jak porównać obiekty? Co może oznaczać, że dwa 'łańcuchy' są równe? A co z dwoma pączkami? Odkrywasz, jak przetestować dwa obiekty pod kątem równości i wdrożyć swoje odkrycia w grze Pop the Balloons.
+              description_teacher: uczniowie rozróżniają porównania obiektów i wartości pierwotnych. Badają efekty używania `==` lub `!=` z obiektami, aby zidentyfikować potrzebę zastosowania metody `equals()` do porównywania obiektów jako danych. Używając metody `equals()`, uczniowie dodają do gry Pop the Balloons, aby porównać obiekty `Balloon` i określić, czy pozostały prawidłowe ruchy.
+            lesson-10:
+              description_teacher: Uczniowie badają problemy dotyczące wielu warunków i piszą zagnieżdżone instrukcje „jeśli”, aby utworzyć rozwiązania tych problemów. Piszą wyrażenia zawierające operatory logiczne w instrukcjach warunkowych i identyfikują wpływ operatorów logicznych na wynik wyrażenia. Zagnieżdżone instrukcje „jeśli” i operatory logiczne są następnie implementowane w grze Pop the Balloons, aby sprawdzić, ile ruchów pozostało i obliczyć wynik.
             lesson-12:
               description_student: Teraz, gdy masz już plan, dzisiejszym celem jest napisanie kodu. Rozwój silnika gry rozpoczynasz od przetłumaczenia pseudokodu na język Java. Przeglądasz kod i zastanawiasz się nad postępem, aby przygotować się do ostatecznego opracowania silnika gry.
               description_teacher: Na poprzedniej lekcji uczniowie zaplanowali silnik gry dla prostej gry i napisali pseudokod dla jej podstawowych funkcji. Rozpoczynają tworzenie silnika gry od przetłumaczenia pseudokodu na język Java. Uczestniczą w przeglądzie kodu i zastanawiają się nad swoimi postępami, aby przygotować się do ostatecznego opracowania silnika gry.
@@ -19099,7 +19113,7 @@ pl:
             lesson4:
               description_student: "**Pytanie dnia:** Jak komputery uczą się klasyfikować dane?"
             lesson5:
-              name: Lekcja 6
+              name: Wprowadzenie do AI Lab
             lesson9:
               name: KNN bez komputera
               description_student: Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji.
@@ -19161,7 +19175,7 @@ pl:
             Classification Models:
               description_student: "**Pytanie dnia:** Jak komputery uczą się klasyfikować dane?"
             Introduction to AI Lab:
-              name: Lekcja 6
+              name: Wprowadzenie do AI Lab
             Similarity Models:
               name: KNN bez komputera
               description_student: Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji.
@@ -19299,10 +19313,10 @@ pl:
               name: Moduł 2
             Module 3:
               key: Moduł 3
-              name: 'Moduł 3: Jednostka 5, używanie list w aplikacjach i rozpoznawanie umiejętności CS w klasie'
+              name: Moduł 3
             Module 4:
               key: Moduł 4
-              name: 'Moduł 4: Jednostka 5 i używanie zestawów danych w aplikacjach'
+              name: Moduł 4
             Module 5:
               key: Moduł 5
               name: 'Moduł 5: Jednostka 7 i zrozumienie funkcji z parametrami i zwracaniem wartości'
@@ -19604,6 +19618,7 @@ pl:
               name: Test
           name: ai-lab
           title: AI Lab
+          student_description: Skorzystaj z tych poziomów, aby poznać AI Lab i wykorzystać w innych lekcjach lub zajęciach. Aby korzystać z tych narzędzi, musisz utworzyć konto Code.org i zalogować się.
         poster-experiment:
           name: plakat-eksperyment
           title: Tablica historii (V1 - Eksperyment)
@@ -19689,7 +19704,6 @@ pl:
               name: 'Krok 2: Wykaż zrozumienie'
           name: dlp21-csd-mod2
           title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 2 dla Warsztatu 2
-          description: "## Ten moduł zostanie w pełni opublikowany przed 3 września 2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
         dlp21-csd-mod3:
           lessons:
             lesson-1:
@@ -19716,7 +19730,6 @@ pl:
               name: 'Krok 2: Wykaż zrozumienie'
           name: dlp21-csp-mod2
           title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 2 dla Warsztatu 2
-          description: "## Ten moduł zostanie w pełni opublikowany przed 3 września 2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
         dlp21-csp-mod3:
           lessons:
             lesson-1:
@@ -20266,10 +20279,7 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
-<<<<<<< HEAD
           name: csa4-pilot-facilitator
-=======
->>>>>>> staging
         csa5-pilot-facilitator:
           lessons:
             Creating Tables of Data:
@@ -20315,55 +20325,36 @@ pl:
             Assessment Day:
               name: Dzień sprawdzianu
             lesson-1:
-<<<<<<< HEAD
               key: lekcja 1
-=======
->>>>>>> staging
               name: Tworzenie tablic z danymi
               description_student: Na poprzednich lekcjach używałeś tablic jednowymiarowych (1D) do przechowywania wartości tego samego typu. Dzisiaj dowiesz się, jak tworzyć i używać dwuwymiarowych (2D) tablic, tablic przechowujących tablice tego samego typu. Tablice 2D są przydatne do przechowywania danych reprezentowanych w postaci tabeli. Na tej lekcji użyjesz tablic 2D do przechowywania danych reprezentujących ekspansję biznesową projektu Mercury Pastries Food Truck.
               description_teacher: Uczniowie poznają budowę dwuwymiarowych (2D) tablic oraz identyfikują podobieństwa i różnice między tablicami 1D i 2D. Tworzą tablice 2D do przechowywania elementów „int” i „double” za pomocą słowa kluczowego „new” i list inicjalizacji, aby reprezentować rozszerzony inwentarz projektu Mercury Pastries Food Truck. Uzyskują dostęp do poszczególnych elementów i modyfikują je, odwołując się do wartości indeksów wierszy i kolumn w celu uzyskania i oceny danych przechowywanych w tablicy 2D.
             lesson-2:
-<<<<<<< HEAD
               key: lekcja 2
-=======
->>>>>>> staging
               name: Trawersowanie tablicy 2D wierszami
               description_student: Teraz, gdy widziałeś już tablice 2D, piszesz zagnieżdżone pętle „dla”, aby je przemierzać! Wracasz do Teatru, aby przygotować nowy koncert, aby edukować The Neighborhood na temat zrównoważonego transportu. Po wybraniu początkowego obrazu powitalnego na koncercie, napisz metodę `getPixels()`, która przechowuje piksele z obrazu w tablicy 2D, aby wykorzystać ją w nadchodzących lekcjach do tworzenia efektów obrazu.
               description_teacher: Uczniowie używają zagnieżdżonych pętli „dla” do przechodzenia przez tablice 2D w kolejności wiersz główny i stosują standardowy algorytm, który napisali w Jednostce 3. do oceny danych. Ponownie odwiedzają Teatr, aby rozpocząć tworzenie nowego koncertu, który ma na celu edukowanie The Neighborhood na temat zrównoważonego transportu. Wybierają początkowy obraz powitalny na koncercie i piszą metodę `getPixels()`, która przechowuje piksele z obrazu w tablicy 2D, aby wykorzystać ją na nadchodzących lekcjach do tworzenia efektów graficznych.
             lesson-3:
-<<<<<<< HEAD
               key: lekcja 3
-=======
->>>>>>> staging
               name: Trawersowanie tablicy 2D kolumnami
               description_student: Dane są zorganizowane w wiersze i kolumny. W poprzedniej lekcji trawersowałeś tablicę 2D, aby uzyskać dostęp do elementów i wykonać obliczenia w rzędzie. Dzisiaj dowiesz się, jak przemierzać tablicę 2D w kolejności kolumn. Korzystając z tego algorytmu przechodzenia, tworzysz efekty obrazu, które manipulują pikselami w celu odbicia obrazu w pionie.
               description_teacher: Uczniowie używają zagnieżdżonych pętli „dla” do przechodzenia przez tablicę 2D w kolejności kolumn. Rozróżniają kolejność względem kolumn i wierszy oraz wyjaśniają, kiedy mogą zastosować jedno podejście zamiast drugiego. Stosują przechodzenie kolumnami, aby obliczyć całkowite zapasy według deserów w ramach projektu Mercury Pastries Food Truck i dalej rozwijać koncert w Teatrze. Uczniowie manipulują pikselami na obrazie za pomocą przechodzenia kolumnami w celu pionowego odzwierciedlenia obrazu i wdrożenia efektu na koncercie.
             lesson-4:
-<<<<<<< HEAD
               key: lekcja 4
-=======
->>>>>>> staging
               name: Stosowanie ulepszonych pętli
               description_student: Dzisiaj poznasz strukturę wykorzystania ulepszonych pętli „dla” do przechodzenia przez tablice 2D. Identyfikujesz podobieństwa i różnice między używaniem rozszerzonej pętli „dla” z tablicami 1D i 2D. Używasz zagnieżdżonej rozszerzonej pętli „dla” do pisania metod modyfikujących wartości kolorów pikseli i tworzenia efektów na obrazach koncertu.
               description_teacher: Uczniowie poznają strukturę ulepszonych pętli „dla” do przechodzenia tablice 2D. Identyfikują podobieństwa i różnice między używaniem ulepszonych pętli „dla” z tablicami 1D i 2D. Używają zagnieżdżonych, ulepszonych pętli „dla”, aby napisać metody modyfikowania wartości kolorów pikseli i tworzenia efektów na obrazach podczas koncertu.
             lesson-5:
-<<<<<<< HEAD
               key: lekcja 5
-=======
->>>>>>> staging
               name: Ocena tablic 2D
               description_student: Burmistrz poprosił Project Mercury Pastries Food Truck o przygotowanie deserów na nadchodzącym koncercie. Aby pomóc właścicielowi, wdrażasz nowe algorytmy przygotowujące do wydarzenia. Eksplorujesz wykonywanie instrukcji `zwróć` wewnątrz pętli w porównaniu do poza pętlą. Piszesz nowe standardowe algorytmy, aby sprawdzić, czy wartości są podzielne równomiernie przez inną liczbę całkowitą i znaleźć liczbę elementów, które spełniają określone kryteria.
               description_teacher: Uczniowie badają efekt wykonania instrukcji `zwróć` wewnątrz pętli w porównaniu z wykonaniem poza pętlą. Piszą nowe standardowe algorytmy, aby sprawdzić, czy wartości są równomiernie podzielne przez inną liczbę całkowitą i znaleźć liczbę elementów spełniających określone kryteria. Rozwiązują problemy w ramach projektu Mercury Pastries Food Truck, wdrażając te algorytmy.
             lesson-6:
-<<<<<<< HEAD
               key: lekcja 6
-=======
->>>>>>> staging
               name: Stosowanie standardowych algorytmów
               description_student: Standardowe algorytmy, które napisałeś w Jednostce 3, działają również z tablicami 2D i mogą tworzyć efekty wizualne na obrazach. W tej lekcji będziesz rozwijać swój koncert w Teatrze, pisząc metodę `grayscale()`. Znajdź minimalne i maksymalne wartości koloru czerwonego, zielonego lub niebieskiego i użyj tej wartości do ustawienia wszystkich innych wartości czerwonego, zielonego lub niebieskiego. Uczestniczysz w przeglądach kodu, aby dawać, otrzymywać i wdrażać informacje zwrotne na temat nowych metod i postępów.
               description_teacher: Uczniowie stosują standardowe algorytmy, które napisali w Jednostce 3, do tablic 2D, aby tworzyć efekty wizualne na obrazach. Kontynuują opracowywanie koncertu w Teatrze, pisząc metodę `grayscale()`, która znajduje średnią wartości RGB piksela na obrazie i ustawia piksel na tę średnią wartość. Uczniowie znajdują minimalne i maksymalne wartości koloru czerwonego, zielonego lub niebieskiego i używają tych wartości do ustawienia wszystkich innych wartości czerwonego, zielonego lub niebieskiego. Uczniowie uczestniczą w przeglądach kodu, aby dawać, otrzymywać i wdrażać informacje zwrotne na temat swoich nowych metod i postępów.
             lesson-7:
-<<<<<<< HEAD
               key: lekcja 7
               name: Odwracanie elementów
             lesson-8:
@@ -20389,31 +20380,198 @@ pl:
               name: Dzień FRQ
             lesson-15:
               key: lekcja 15
-=======
-              name: Odwracanie elementów
-            lesson-8:
-              name: Przesuwanie elementów
-            lesson-9:
-              name: Znajdowanie duplikatów
-            lesson-10:
-              name: Poszukiwanie elementów
-            lesson-11:
-              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 1
-            lesson-12:
-              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 2
-            lesson-13:
-              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 3
-            lesson-14:
-              name: Dzień FRQ
-            lesson-15:
->>>>>>> staging
               name: Dzień sprawdzianu
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
-<<<<<<< HEAD
           name: csa5-pilot-facilitator
-=======
->>>>>>> staging
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: Nastroje i postawy
+          name: poetry-hoc
+          title: Poezja Godziny Kodowania
+          description_short: Aktywność Godziny Kodowania - V2
+        csdu6-playground:
+          lessons:
+            lesson-1:
+              name: Szablon
+            lesson-2:
+              name: Innowacje w informatyce
+            lesson-3:
+              name: Wyjścia na płytce (brzęczyk LED)
+              description_teacher: |-
+                -   Użyj brzęczyka na płytce z układem
+                -   Użyj diody na płytce z układem
+                -   ŻADNYCH zmiennych; ŻADNYCH instrukcji 'jeśli'; ŻADNYCH elementów ekranu
+            lesson-4:
+              name: Wyjścia App Lab (setProperty)
+              description_teacher: |-
+                -   Użyj setProperty() do zmiany elementów na ekranie
+                    -   Skoncentruj się na kolorach i pozycjach x/y za pomocą liczb losowych
+                -   Użyj setText(), aby zmienić tekst na ekranie
+                -   ŻADNEGO placu zabaw; ŻĄDNYCH INSTRUKCJI 'jeśli'; ŻADNYCH zmiennych
+            lesson-5:
+              name: Czujniki
+            lesson-6:
+              name: Wejścia płytki (Button Toggle)
+              description_teacher: "-   użyj przycisków do zmiany elementów na ekranie\n-   użyj przełącznika, aby zmienić elementy na ekranie\n-   użyj przycisków i przełącz z brzęczykiem na płytce układu\n-   ŻĄDNYCH INSTRUKCJI 'jeśli'; ŻADNYCH zmiennych; OK wyjścia na ekranie; "
+            lesson-7:
+              name: Zmienne + instrukcje 'jeśli'
+              description_teacher: |-
+                -   użyj zmiennych + licznika, aby zaktualizować elementy na ekranie
+                -   przykład: licz, ile razy przycisk został naciśnięty
+                -   użyj instrukcji 'jeśli', aby sprawdzić pozycję przełącznika
+                -   użyj zmiennych do sprawdzenia wartości zmiennej
+                -   na przykład: odtwórz brzęczyk po określonej liczbie kliknięć
+            lesson-8:
+              name: 'Mini-Proj: Wyścig Emoji'
+            lesson-9:
+              name: Kolorowe LED
+              description_teacher: |-
+                -   użyj zdarzeń na ekranie, aby zmienić kolor diod LED na płytce układu
+                -   użyj funkcji LED on(), off(), pulse(), toggle() i blink()
+                -   zmień intensywność kolorowych diod LED
+                -   NIE UWZGLĘDNIAJ: tablice.
+                -   Potrzebna jest tylko pojęcia liczenia od 0 i mapowania pozycji (tj.: [0] odpowiada określonej diodzie LED na CP; [5] odpowiada innej diodzie LED na CP)
+            lesson-10:
+              name: Wejścia App Lab (getProperty, getText) (Dropdowns Inputs Sliders?)
+              description_teacher: |-
+                Tylko w App Lab — bez płytki układu (jeszcze).
+
+                Wszystko o getProperty, zmiennych i instrukcjach 'jeśli'
+
+                -   pobierz właściwość z listy rozwijanej. Jeśli (X) -> wykonaj (Y)
+                -   pobierz właściwość z suwaka. Użyj do aktualizacji pozycji czegoś na ekranie?
+                -   pobierz tekst z wejścia. Użyj, aby zaktualizować etykietę
+
+                **Skoncentruj się na nowym poleceniu getProperty() i na tym, jak go używać z nowymi opcjami projektowymi. Zachowaj wejścia/wyjścia płytki na jutro!**
+
+                W jutrzejszej lekcji włącz grę motocyklową, w której możesz nacisnąć CP i coś zmienić na ekranie.
+            lesson-11:
+              name: Łączenie wejść
+              description_teacher: |-
+                -   Użyj rozwijanych menu i suwaków, aby zaktualizować aspekty placu zabaw z układami
+                -   Mając CP wejścia uaktualnij elementy ekranu za pomocą getProperty() i setProperty()
+                -   Wejście na ekran \<> Wyjście na tablicę jest przygotowaniem do projektu Maker na końcu Ch 1
+
+                **UWAGA DO SIEBIE: Te poziomy powinny używać kolorowych diod LED zamiast zwykłych diod LED.** W oryginalnym programie mieliśmy dostęp tylko do diody LED i brzęczyka. Ale teraz mamy kolorowe diody LED, więc użyjmy ich tutaj
+            lesson-12:
+              name: 'Projekt: Maker'
+            lesson-13:
+              name: Akcelerometr
+            lesson-14:
+              name: Muzyka + tablice
+            lesson-15:
+              name: 'Mini projekt: Czujniki'
+              description_teacher: Oparte na projektach czujników Dana - zdmuchnij świece, zapal theramin, zmierz objętość
+            lesson-17:
+              name: Fizyczne wyjścia (LEDy)
+            lesson-16:
+              name: Fizyczne wejścia
+            lesson-18:
+              name: Prototypowanie
+            lesson-19:
+              name: Projekt
+            lesson-20:
+              name: Funkcje + Funkcje z parametrami
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Szablony
+            lessonGroup-2:
+              display_name: Rozdział 1
+            lessonGroup-4:
+              display_name: Rozdział 2
+          name: csdu6-playground
+          title: CSD Jednostka 6 Plac zabaw
+          description_short: CSD Jednostka 6 Plac zabaw. Zobacz Dana Schneidera w przypadku pytań
+          student_description: CSD Jednostka 6 Plac zabaw. Zobacz Dana Schneidera w przypadku pytań
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Witaj świecie
+          name: hello-world-food
+          title: Witaj świecie
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widżety
+            lesson-3:
+              name: Narzędzia
+            lesson-4:
+              name: Badanie obiektów całkowitych i podwójnych
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lekcje
+            lessonGroup-3:
+              display_name: Projekt
+            lessonGroup-4:
+              display_name: Prezentacje i zasoby
+          name: csa-u7-dev
+          title: CSA Jednostka 7 Rozwój
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Witaj świecie
+          name: hello-world-animals
+          title: Witaj świecie
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Witaj świecie
+          name: hello-world-emoji
+          title: Witaj świecie
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Witaj świecie
+          name: hello-world-retro
+          title: Witaj świecie
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Witaj świecie
+          name: hello-world-batman
+          title: Witaj świecie
+        csa4-exemplars:
+          lessons:
+            lesson-3:
+              name: Traktowanie danych jako innego typu
+            lesson-14:
+              name: Dzień FRQ
+            lesson-15:
+              name: Dzień sprawdzianu
+          lesson_groups:
+            lesson group:
+              display_name: Treści
+            content:
+              display_name: Treści
+            show_what_you_know:
+              display_name: Pokaż, co wiesz
+            lesson_group:
+              display_name: Treści
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+          name: csa4-exemplars
+          title: Jednostka 4 - Rozszerzanie logiki programu [Exemplars]
+        ai-ethics:
+          lessons:
+            lesson-1:
+              name: Godzina kodowania - Etyka AI
+          name: ai-ethics
+          title: Godzina kodowania - Etyka AI
+          description_audience: klasy 6-12
+          description_short: W małych grupach uczniowie prowadzą badania, korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez siebie obszarze sztucznej inteligencji (AI).
+          description: W małych grupach uczniowie prowadzą badania, korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez siebie obszarze sztucznej inteligencji (AI). Następnie każda grupa opracowuje co najmniej jedną zasadę zorientowaną na rozwiązanie, która odnosi się do wybranego obszaru. Zasady te są następnie łączone w ogólnoklasowy zasób „Nasz kodeks etyki sztucznej inteligencji” (np. prezentacja slajdów, dokument lub strona internetowa) dla twórców sztucznej inteligencji i ustawodawców na całym świecie.
+          student_description: Przeprowadź badania korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez Ciebie obszarze sztucznej inteligencji (AI).
+        dance-unplugged:
+          name: dance-unplugged
+          title: Godzina Kodowania - Potańcówka - Bez komputera
+          description_audience: klasy 0-12
+          description_short: Uczniowie w każdym wieku otrzymują wstępne doświadczenia z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku i uczą się myśleć o kontrolowaniu działań za pomocą zdarzeń.
+          description: Uczniowie dowiedzą się, że zdarzenia są przydatnym sposobem sterowania akcjami, a nawet mogą być stosowane do spowodowania, że wiele wydarzy się synchronicznie. W programowaniu zdarzenia są wykorzystywane, by reagować na działania użytkownika (np. na naciśnięcie przycisku lub kliknięcie myszką). Zdarzenia mogą uczynić Twój program bardziej interesującym i interaktywnym.
+          student_description: Naucz się myśleć o kontrolowaniu działań za pomocą zdarzeń. Zdarzenia są szeroko stosowane w programowaniu i powinny być łatwo rozpoznawalne po tej lekcji.
