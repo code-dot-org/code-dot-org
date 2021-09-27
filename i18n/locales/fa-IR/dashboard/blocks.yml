@@ -246,6 +246,13 @@ fa:
             '"right"': سمت راست
             '"space"': فضا
             '"x"': طول (x)
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': سمت راست
+            '90': پایین
+            '180': سمت چپ
+            '270': بالا
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -255,6 +262,7 @@ fa:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": خرد شدن
+            "'sound://category_digital/jump_7.mp3'": پرش
       gamelab_randColor:
         text: رنگ تصادفی
       gamelab_randomColor:

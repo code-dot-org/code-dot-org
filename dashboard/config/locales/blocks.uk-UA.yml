@@ -1147,10 +1147,18 @@ uk:
           EFFECT:
             '"burst"': вибух
             '"rain"': дощ
+            '"zigzag"': зигзаг
       gamelab_makeNewSpriteAnon:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       gamelab_makeNumSprites:
         text: створити {NUM} нових {ANIMATION_NAME} спрайтів
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': праворуч
+            '90': вниз
+            '180': ліворуч
+            '270': вгору
       gamelab_mirrorSprite:
         text: повернути {SPRITE} у напрямку {DIRECTION}
         options:
@@ -1185,8 +1193,10 @@ uk:
         text: грати звук {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": акцент
             "'sound://category_app/app_button_1.mp3'": кнопка
             "'sound://category_collect/clicky_crunch.mp3'": хрускіт
+            "'sound://category_digital/jump_7.mp3'": стрибок
       gamelab_pointInDirection:
         text: Точки {SPRITE} {DIRECTION}
         options:
@@ -1223,12 +1233,20 @@ uk:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': суду
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': пустеля
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': пустельна
+              дорога
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': сільськогосподарська
+              земля
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': галактики
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': сітка
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': кухня
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': вітальня
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': луг
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': веселка
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': науково-фантастичного
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': зірки
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': сонце
+              і веселка
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': підводний
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
             undefined: немає
@@ -1291,6 +1309,10 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_spriteSayChoices:
+        options:
+          SPEECH:
+            '"I am Catwoman!"': Я Жінка-кішка!
       gamelab_stopCollectingData:
         text: припинити збір даних
       gamelab_subjectSpritePointer:
@@ -1569,6 +1591,10 @@ uk:
         text: 'місце розташування x: {X} Y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        options:
+          TEXT1:
+            '"A chubby cat "': 'Пухлявий кіт '
       Mikelab_randomColor:
         text: випадковий колір
       Mikelab_removeBehaviorSimple:
@@ -1583,7 +1609,15 @@ uk:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': пустельна
+              дорога
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': сільськогосподарська
+              земля
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': кухня
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': вітальня
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': луг
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': сонце
+              і веселка
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1665,8 +1699,17 @@ uk:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
+      PoemBot_makeNumSprites:
+        text: створити {NUM} нових {ANIMATION_NAME} спрайтів
       PoemBot_playSound:
         text: грати звук {SOUND}
+        options:
+          SOUND:
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Ліс
+            '"sound://category_background/ocean_waves.mp3"': Океан
+            '"sound://category_background/rainforest_ambient_sound.mp3"': Тропічний
+              ліс
+            '"sound://category_background/waterfall.mp3"': Водоспад
       PoemBot_setBackgroundEffect:
         text: |-
           встановити ефект тла
@@ -1679,7 +1722,17 @@ uk:
             '"stars"': Зірки
             '"ripples"': Брижі
           PALETTE:
+            '"sky"': Небо
+            '"ocean"': Океан
+            '"sunrise"': Схід сонця
+            '"sunset"': Захід сонця
+            '"spring"': Весна
+            '"summer"': Літо
+            '"autumn"': Осінь
+            '"winter"': Зима
             '"rainbow"': Веселка
+      PoemBot_setBackgroundImageAs:
+        text: встановити фон {IMG}
       PoemBot_setForegroundEffect:
         text: встановити ефект переднього плану {EFFECT}
         options:
@@ -1689,6 +1742,10 @@ uk:
             '"hearts"': Різнокольорові серця
             '"confetti"': Конфеті
             '"starburst"': Вибухаюча зірка
+      PoemBot_setPoem:
+        options:
+          POEM:
+            '"rumi_2"': Океан
       PoemBot_startBehavior:
         options:
           BEHAVIOR:
@@ -1711,6 +1768,10 @@ uk:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      PoemBot_whenPromptAnswered:
+        text: коли відповідь {VAR}
       RyanLab_moveForward:
         text: рухатись вперед
       RyanLab_turnLeft:

@@ -492,9 +492,9 @@
         "CourseF_outbreak2": "Simulazione del virus",
         "CourseF_outbreak3": "Simulazione del virus",
         "CourseF_outbreak4": "Modifica la tua simulazione",
-        "CourseF_outbreak5": "Modifica la tua simulazione",
+        "CourseF_outbreak5": "Guarigione",
         "CourseF_outbreak6": "Guarigione",
-        "CourseF_outbreak7": "Probabilità",
+        "CourseF_outbreak7": "Immunità e vaccini",
         "CourseF_outbreak8": "Immunità e vaccini",
         "CourseF_video_introSpriteLab_2021": "Questo è il Laboratorio dei personaggi",
         "MC_HOC_2017_01_RETRY_2021": "Podere",
@@ -519,7 +519,7 @@
         "outbreak_freeplay_basic": "Cassetta deli attrezzi base",
         "ramp_artist_loops4_2021": "Stella",
         "scrat_loops_C-F_video_2021": "Video: Cicli con l'Era Glaciale",
-        "international_outbreak_freeplay": "Condividi un messaggio"
+        "international_outbreak_freeplay": "Cassetta deli attrezzi base"
       }
     }
   }

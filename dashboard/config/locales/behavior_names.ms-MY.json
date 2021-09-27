@@ -154,7 +154,18 @@
         "international_outbreak_freeplay": {
           "recovering": "pulih",
           "moving left and right": "bergerak kiri dan kanan",
-          "moving with arrow keys": "bergerak dengan kunci arah"
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "wandering": "bergerak",
+          "moving east": "ke timur",
+          "spinning left": "putar kiri",
+          "spinning right": "putar kanan",
+          "shrinking": "kecut",
+          "growing": "kembang",
+          "moving south": "ke selatan",
+          "moving north": "ke utara",
+          "jittering": "gelisah",
+          "moving west": "ke barat",
+          "patrolling": "ronda"
         }
       }
     }

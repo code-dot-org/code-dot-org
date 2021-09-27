@@ -538,6 +538,13 @@ eu:
         options:
           EFFECT:
             '"rain"': euria
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': eskuinera
+            '90': behera
+            '180': ezkerrera
+            '270': gora
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -551,6 +558,7 @@ eu:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": karraska
+            "'sound://category_digital/jump_7.mp3'": salto egin
       gamelab_randColor:
         text: ausazko kolorea
       gamelab_randomColor:

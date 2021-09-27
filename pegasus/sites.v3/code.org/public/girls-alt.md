@@ -7,16 +7,13 @@ theme: responsive
 <div style="text-align: center;">
 <img src="/images/code_like_a_girl.jpg" width="1000">
 </div>
-<br>
+<p><br>
+In U.S. high schools, the Advanced Placement exam in Computer Science has historically (since the beginning of the century) had only <strong>22 percent participation by young women</strong>. This gender gap problem extends to university programs and to the software workplace, which suffer a similar lack of diversity. 
+<p>
+While things are starting to move in the right direction, we have a long way to go to reach a balanced population in computer science. Code.org focuses on K-12 learning because data shows that experiences in K-12 directly impact students’ future in computer science. <strong>Among young women, those who try AP Computer Science in high school are 10 times more likely to major in computer science.</strong>
+<p><br>
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe><br></center><Br>
-<p><br>
-Of the 60 million students using Code.org, <strong>27 million of them are young women</strong>. We focus on K-12 learning because data shows that experiences in K-12 directly impact students’ future in computer science. <strong>Among young women, those who try AP Computer Science in high school are 10 times more likely to major in computer science.</strong>
-<p><br>
-The charts below show participation in the AP Computer Science exam among young women since 2007. The improvements aren't the result of Code.org's work alone. There is a whole community of organizations working on diversity in CS, but the real credit belongs to the thousands of teachers who have worked for years to improve diversity in their classrooms. 
-<div style="text-align: center;">
-<img src="/images/csp-results-female-2.jpg" width="700">
-</div>
-While things are moving in the right direction, we have a long way to go to reach a balanced population in computer science. That's why it's critical to inspire girls to learn computer science.
+
 <h1>How You Can Help</h1>
 
 Computer science is foundational to many fields and students of all genders report being not only interested in the subject but confident of their abilities as well. Despite this, not enough girls are choosing to study it. <strong>Here are some proven methods for encouraging girls to try computer science:</strong>*
@@ -43,7 +40,7 @@ Perhaps the single most effective way to get women into CS classes is also one o
 
 <table style="border-style:hidden;">
   <tr>
-    <td colspan="10" style="background-color:#0094ca; color:white; text-align:center; font-style:bold; border-style:hidden;""> If your students are in High School, encourage them to take the AP exam too! Women who had the opportunity to take the AP Computer Science exam were <b>46% more likely</b> to indicate interest in a Computer Science major.
+    <td colspan="10" style="background-color:#0094ca; color:white; text-align:center; font-style:bold; border-style:hidden;""> If your students are in high school, encourage them to take the AP exam too! Women who had the opportunity to take the AP Computer Science exam were <b>46% more likely</b> to indicate interest in a Computer Science major.
       </td>
     </tr>
   </table>

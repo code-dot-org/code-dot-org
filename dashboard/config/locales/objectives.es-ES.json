@@ -2,6 +2,33 @@
   "es-ES": {
     "data": {
       "objectives": {
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Describir la importancia del usuario en el proceso de diseño."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Identificar sprites en un programa informático en ejecución."
+        },
+        "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
+          "description": "Crear nuevos sprites y asignarles disfraces y comportamientos."
+        },
+        "06a89cf1-1a4d-429a-9797-934770d0ed18": {
+          "description": "Crea una animación con sprites y comportamientos."
+        },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Desarrollar programas que respondan a eventos cronometrados."
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "Desarrollar programas que respondan a las entradas de los usuarios."
+        },
+        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
+          "description": "Crear una animación interactiva mediante eventos."
+        },
+        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
+          "description": "Crear una mascota virtual interactiva mediante eventos, comportamientos y arte personalizado."
+        },
+        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
+          "description": "Programar soluciones a los problemas que surgen al diseñar una mascota virtual, entre ellos, cómo alimentarla."
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Declare una variable"
         },
@@ -154,6 +181,12 @@
         },
         "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
           "description": "Identificar y solucionar fallos o errores en las instrucciones secuenciadas"
+        },
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Modelar los comportamientos adecuados en el laboratorio de informática"
+        },
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Experimenta con acciones de programación estándar basadas en bloques como: hacer clic, arrastrar y soltar, etc."
         },
         "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
           "description": "Construir un programa reorganizando los movimientos secuenciales"
@@ -461,6 +494,24 @@
         "36081e5f-1a5d-4102-a1de-27865168ee09": {
           "description": "Dividir formas complejas en partes simples."
         },
+        "09281dd0-4b33-4537-9543-a2377bc2f923": {
+          "description": "Crear nuevos sprites y asignarles disfraces y comportamientos."
+        },
+        "30a80046-d715-46b1-8b89-65c410d04690": {
+          "description": "Crear nuevos sprites y asignarles disfraces y comportamientos."
+        },
+        "e0d4a883-51dc-4647-8c9f-59652f699aec": {
+          "description": "Crea una animación con sprites y comportamientos."
+        },
+        "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
+          "description": "Crear una animación interactiva mediante eventos."
+        },
+        "d9604b08-064f-43e3-83ac-d3a91f321627": {
+          "description": "Desarrollar programas que respondan a eventos cronometrados."
+        },
+        "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
+          "description": "Desarrollar programas que respondan a las entradas de los usuarios."
+        },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "Desarrollar programas que respondan a eventos cronometrados"
         },
@@ -643,6 +694,9 @@
         },
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Compartir un artefacto creativo con otros estudiantes."
+        },
+        "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
+          "description": "Crear nuevos sprites y asignarles disfraces y comportamientos."
         },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "Identificar acciones que se correlacionan con eventos de entrada."

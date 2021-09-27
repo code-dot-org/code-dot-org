@@ -11,7 +11,7 @@
     "new_name": null,
     "family_name": null,
     "serialized_at": "2021-08-03 22:47:48 UTC",
-    "published_state": "pilot",
+    "published_state": null,
     "seeding_key": {
       "script.name": "time4cs-experiment-unit-2"
     }

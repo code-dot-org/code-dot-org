@@ -2094,11 +2094,9 @@ de-DE:
         markdown: |
           # Tanze weiter!
 
-          In Teil 2 erstellst du dein eigenes Projekt! Hier gibt es keine Aufgaben, sondern eine ganze Reihe von Projekten die zeigen wie du komplexere Tanzpartys erstellen kannst.
+          In Teil 2 erstellst du dein eigenes Projekt. Hier gibt es keine Rätsel, sondern eine ganze Reihe von Projekten, die zeigen wie du komplexere Tanzpartys erstellen kannst.
 
-          Du kannst die Level _in egal welcher Reihenfolge_ machen. Schau dir an wie etwas im vorigen Level gemacht wurde, oder vermische Konzepte der einzelnen Projekte. Probiere alle aus, wähle dein Lieblingsprojekt, und erweitere dieses mit deinen Ideen.
-
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Weiter</a>
+          Du kannst diese Stufen _in jeder beliebigen Reihenfolge_ machen. Schau dir an wie etwas in der vorigen Stufe gemacht wurde, oder kombiniere Konzepte zwischen Projekten. Probiere alle aus, wähle dein Lieblingsprojekt, und erweitere dieses mit deinen Ideen.
 
           <div class="clearfix"></div>
 
@@ -2165,11 +2163,9 @@ de-DE:
         markdown: |
           # Tanze weiter!
 
-          Für Teil 2 wirst du Dein eigenes Projekt erstellen. Es gibt hier keine Rätsel - stattdessen gibt es eine Reihe von Projekten, die verschiedene Wege aufzeigen, komplexere Tanzpartys zu gestalten.
+          In Teil 2 erstellst du dein eigenes Projekt. Hier gibt es keine Rätsel, sondern eine ganze Reihe von Projekten die zeigen wie du komplexere Tanzpartys erstellen kannst.
 
-          Du kannst diese Stufen in beliebiger Reihenfolge durchführen. Springe herum, um zu sehen, wie etwas in einem früheren Level gemacht wurde, oder kombiniere Konzepte aus verschiedenen Projekten. Probiere alle aus, wähle Deine Favoriten und verbringe Deine Zeit damit, dieses Projekt zu erweitern, um es zu Deinem eigenen zu machen.
-
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Weiter</a>
+          Du kannst die Level _in jeder Reihenfolge_ machen. Schau dir an wie etwas im vorigen Level gemacht wurde, oder kombiniere Konzepte zwischen Projekten. Probiere alle aus, wähle dein Lieblingsprojekt, und erweitere dieses mit deinen Ideen.
 
           <div class="clearfix"></div>
 
@@ -2196,7 +2192,7 @@ de-DE:
           <div style="float: left; margin: 10px">
           <a href="4">
           <h2>
-          In Formation bringen
+          Formation einnehmen
           </h2>
 
           <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
@@ -2429,12 +2425,12 @@ de-DE:
         markdown: |
           # Happy Maps
 
-          Erstellen Sie einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
+          Erstelle einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
       HappyMaps-Unplugged_2020:
         markdown: |
           # Happy Maps
 
-          Erstellen Sie einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
+          Erstelle einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
       Internet Simulator Setup:
         content1: hier die Beschreibung
         markdown: "# Code.org  Internet-Simulator \n\n_Hinweis: \n\nDie Anweisungen
@@ -6724,7 +6720,7 @@ de-DE:
         markdown: |
           # Happy Maps
 
-          Erstellen Sie einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
+          Erstelle einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
       Internet-Unplugged_2021:
         markdown: |
           # Das Internet
@@ -6939,6 +6935,8 @@ de-DE:
         display_name: Projekt am Ende des Kurses
       courseD_EOC_examples_2021:
         display_name: Projektbeispiele
+        description: Du stehst kurz davor, dein Abschlussprojekt zu starten. Nimm
+          dir etwas Zeit, um dir die Beispielprojekte anzusehen, bevor du beginnst.
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -7305,6 +7303,8 @@ de-DE:
         display_name: Projekt am Ende des Kurses
       courseF_EOC_samples_2021:
         display_name: Projekt am Ende des Kurses
+        description: Du stehst kurz davor, dein Abschlussprojekt zu starten. Nimm
+          dir etwas Zeit, um dir die Beispielprojekte anzusehen, bevor du beginnst.
       courseF_events_predict_multi:
         answers:
         - correct: true
@@ -7456,6 +7456,8 @@ de-DE:
         display_name: Projekt am Ende des Kurses
       express_EOC_examples_2021:
         display_name: Projektbeispiele
+        description: Du stehst kurz davor, dein Abschlussprojekt zu starten. Nimm
+          dir etwas Zeit, um dir die Beispielprojekte anzusehen, bevor du beginnst.
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Laurel wird 4 Schätze einsammeln.

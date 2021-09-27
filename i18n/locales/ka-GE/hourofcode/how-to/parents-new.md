@@ -16,7 +16,7 @@ You can try the Hour of Code with a computer, a tablet, a smartphone, or complet
 
 ***
 
-## 1) Explore activities and tutorials.
+## 1) გადახედეთ აქტივობებსა და ტუტორიალებს.
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 
