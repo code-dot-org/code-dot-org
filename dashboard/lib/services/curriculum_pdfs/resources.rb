@@ -7,9 +7,16 @@ require 'pdf/conversion'
 
 module Services
   module CurriculumPdfs
+    # Contains all code related to generating rollup PDFs containing all
+    # resources within a given script.
     module Resources
       extend ActiveSupport::Concern
       class_methods do
+        # Build the full path of the resource PDF for the given script. This
+        # will be based not only on the name of the script but also the current
+        # version of the script in the environment.
+        #
+        # For example: <Pathname:csp1-2021/20210909014219/Digital+Information+('21-'22)+-+Resources.pdf>
         def get_script_resources_pathname(script, as_url = false)
           filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
           filename = CGI.escape(filename) if as_url
@@ -19,12 +26,19 @@ module Services
           return Pathname.new(File.join(subdirectory, filename))
         end
 
+        # Build the full user-facing url where a Resource Rollup PDF can be
+        # found for the given script.
+        #
+        # For example: https://lesson-plans.code.org/csp1-2021/20210909014219/Digital+Information+%28%2721-%2722%29+-+Resources.pdf
         def get_unit_resources_url(script)
+          return nil unless Services::CurriculumPdfs.should_generate_resource_pdf?(script)
           pathname = get_script_resources_pathname(script, true)
           return nil unless pathname.present?
           File.join(get_base_url, pathname)
         end
 
+        # Generate a PDF containing a rollup of all Resources in the given
+        # Script, grouped by Lesson
         def generate_script_resources_pdf(script, directory="/tmp/")
           ChatClient.log("Generating script resources PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
@@ -45,8 +59,9 @@ module Services
           end
 
           # Merge all gathered PDFs
-          destination = File.join(directory, get_script_resources_pdf_pathname(script))
+          destination = File.join(directory, get_script_resources_pathname(script))
           FileUtils.mkdir_p(File.dirname(destination))
+
           # We've been having an intermittent issue where this step will fail
           # with a ghostscript error. The only way I've been able to reproduce
           # this error locally is by deleting one of the PDFs out from under
@@ -82,19 +97,18 @@ module Services
           return destination
         end
 
-        def get_script_resources_pdf_pathname(script)
-          filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
-          subdirectory = File.dirname(get_script_overview_pathname(script))
-          return Pathname.new(File.join(subdirectory, filename))
-        end
-
+        # Check s3 to see if we've already generated a resource rollup PDF for
+        # the given script
         def script_resources_pdf_exists_for?(script)
           AWS::S3.cached_exists_in_bucket?(
             S3_BUCKET,
-            get_script_resources_pdf_pathname(script).to_s
+            get_script_resources_pathname(script).to_s
           )
         end
 
+        # Generates a title page for the given lesson; this is used in the
+        # final PDF rollup to group the resources by the lesson in which they
+        # appear.
         def generate_lesson_resources_title_page(lesson, directory="/tmp/")
           @lesson_resources_title_page_template ||= File.read(
             File.join(File.dirname(__FILE__), 'lesson_resources_title_page.html.haml')
@@ -135,13 +149,18 @@ module Services
           return path
         end
 
-        def google_drive_file_by_url(url)
-          @google_drive_session ||= GoogleDrive::Session.from_service_account_key(
-            StringIO.new(CDO.gdrive_export_secret&.to_json || "")
-          )
-          return @google_drive_session.file_by_url(url)
+        # Given a Resource object, persist a PDF of that Resource (with a name
+        # based on the key of that Resource) to the given directory.
+        def fetch_resource_pdf(resource, directory="/tmp/")
+          filename = ActiveStorage::Filename.new("resource.#{resource.key}.pdf").sanitized
+          path = File.join(directory, filename)
+          return path if File.exist?(path)
+          return fetch_url_to_path(resource.url, path)
         end
 
+        # Given a URL representing a Resource, persist a PDF of that resource
+        # to the given path. Supports Google Docs, PDFs hosted on Google Drive,
+        # and arbitrary URLs that end in ".pdf"
         def fetch_url_to_path(url, path)
           if url.start_with?("https://docs.google.com/document/d/")
             file = google_drive_file_by_url(url)
@@ -170,11 +189,14 @@ module Services
           return nil
         end
 
-        def fetch_resource_pdf(resource, directory="/tmp/")
-          filename = ActiveStorage::Filename.new("resource.#{resource.key}.pdf").sanitized
-          path = File.join(directory, filename)
-          return path if File.exist?(path)
-          return fetch_url_to_path(resource.url, path)
+        # Returns a GoogleDrive::File object for the given url
+        #
+        # @see https://www.rubydoc.info/gems/google_drive/GoogleDrive/File
+        def google_drive_file_by_url(url)
+          @google_drive_session ||= GoogleDrive::Session.from_service_account_key(
+            StringIO.new(CDO.gdrive_export_secret&.to_json || "")
+          )
+          return @google_drive_session.file_by_url(url)
         end
       end
     end
