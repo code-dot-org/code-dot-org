@@ -7,7 +7,6 @@ $(document).ready(() => {
   const programmingEnvironmentsForSelect = getScriptData(
     'programmingEnvironmentsForSelect'
   );
-  console.log(programmingEnvironmentsForSelect);
   ReactDOM.render(
     <NewProgrammingExpressionForm
       programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}

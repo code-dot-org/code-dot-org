@@ -14,12 +14,18 @@ class ProgrammingExpressionsController < ApplicationController
 
   def new
     @programming_environments_for_select = ProgrammingEnvironment.all.map {|env| {id: env.id, name: env.name}}
-    puts @programming_environments_for_select.inspect
   end
 
   def create
-    puts params[:key]
-    puts params[:programming_environment_id]
-    ProgrammingExpression.create!(key: params[:key], name: params[:key], programming_environment_id: params[:programming_environment_id])
+    unless ProgrammingEnvironment.find_by_id(params[:programming_environment_id])
+      render :not_acceptable, json: {error: 'Valid programming environment is required'}
+      return
+    end
+    programming_expression = ProgrammingExpression.new(key: params[:key], name: params[:key], programming_environment_id: params[:programming_environment_id])
+    if programming_expression.save
+      redirect_to '/home/'
+    else
+      render :not_acceptable, json: programming_expression.errors
+    end
   end
 end
