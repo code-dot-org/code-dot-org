@@ -10,6 +10,7 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import playgroundRedux from '@cdo/apps/javalab/playgroundRedux';
+import color from '@cdo/apps/util/color';
 
 describe('Playground', () => {
   const levelName = 'level';
@@ -21,6 +22,7 @@ describe('Playground', () => {
 
   let backgroundElement,
     audioElement,
+    containerElement,
     onOutputMessage,
     onNewlineMessage,
     onJavabuilderMessage,
@@ -56,6 +58,8 @@ describe('Playground', () => {
 
     audioElement = {pause: () => {}};
 
+    containerElement = {style: {}};
+
     playground = new Playground(
       onOutputMessage,
       onNewlineMessage,
@@ -67,6 +71,7 @@ describe('Playground', () => {
 
     playground.getBackgroundElement = () => backgroundElement;
     playground.getAudioElement = () => audioElement;
+    playground.getContainer = () => containerElement;
   });
 
   afterEach(() => {
@@ -302,6 +307,14 @@ describe('Playground', () => {
 
     expect(audioElement.src).to.equal('');
     expect(audioElement.onerror).to.be.undefined;
+  });
+
+  it('resets container on reset', () => {
+    expect(containerElement.style.backgroundColor).to.be.undefined;
+
+    playground.reset();
+
+    expect(containerElement.style.backgroundColor).to.equal(color.white);
   });
 
   it('can add multiple images via ADD_IMAGE_ITEM', () => {
