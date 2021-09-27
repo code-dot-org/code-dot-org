@@ -39,8 +39,10 @@ class NeighborhoodVisualizationColumn extends React.Component {
           isCollapsed={isCollapsed}
           toggleVisualizationCollapsed={toggleVisualizationCollapsed}
         />
-        <div style={{...styles.neighborhoodPreviewBackground, opacity}}>
-          <MazeVisualization />
+        <div style={{opacity}}>
+          <div style={styles.neighborhoodPreviewBackground}>
+            <MazeVisualization />
+          </div>
           <svg id="slider" version="1.1" width="150" height="50">
             {/* Slow icon. */}
             <clipPath id="slowClipPath">
