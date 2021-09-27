@@ -11,6 +11,7 @@ export default function NewProgrammingExpressionForm({
       <RailsAuthenticityToken />
       <label>
         Programming Expression Slug
+        <input name="key" style={styles.inputStyle} required />
         <HelpTip>
           <p>
             The programming expression slug is used in URLs and cannot be
@@ -18,11 +19,14 @@ export default function NewProgrammingExpressionForm({
             and dashes.
           </p>
         </HelpTip>
-        <input name="key" />
       </label>
       <label>
         Programming Environment
-        <select name="programming_environment_id">
+        <select
+          name="programming_environment_id"
+          style={styles.inputStyle}
+          required
+        >
           {programmingEnvironmentsForSelect.map(programmingEnvironment => (
             <option
               key={programmingEnvironment.id}
@@ -45,4 +49,10 @@ NewProgrammingExpressionForm.propTypes = {
   programmingEnvironmentsForSelect: PropTypes.arrayOf(
     PropTypes.shape({id: PropTypes.number, name: PropTypes.string})
   ).isRequired
+};
+
+const styles = {
+  inputStyle: {
+    marginLeft: 5
+  }
 };
