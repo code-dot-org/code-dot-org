@@ -24,10 +24,6 @@ const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
 const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
-const ADD_PLAYGROUND_ITEM_DATA = 'javalab/ADD_PLAYGROUND_ITEM_DATA';
-const REMOVE_PLAYGROUND_ITEM_DATA = 'javalab/REMOVE_PLAYGROUND_ITEM_DATA';
-const CHANGE_PLAYGROUND_ITEM_DATA = 'javalab/CHANGE_PLAYGROUND_IMAGE_DATA';
-const SET_PLAYGROUND_ITEM_DATA = 'javalab/SET_PLAYGROUND_IMAGE_DATA';
 
 const initialState = {
   consoleLogs: [],
@@ -46,8 +42,7 @@ const initialState = {
   isStartMode: false,
   levelName: undefined,
   disableFinishButton: false,
-  isVisualizationCollapsed: false,
-  playgroundItemData: {}
+  isVisualizationCollapsed: false
 };
 
 // Action Creators
@@ -161,36 +156,6 @@ export const setDisableFinishButton = disableFinishButton => {
   return {
     type: SET_DISABLE_FINISH_BUTTON,
     disableFinishButton
-  };
-};
-
-export const addPlaygroundItemData = (itemId, itemData) => {
-  return {
-    type: ADD_PLAYGROUND_ITEM_DATA,
-    itemId: itemId,
-    itemData: itemData
-  };
-};
-
-export const removePlaygroundItemData = itemId => {
-  return {
-    type: REMOVE_PLAYGROUND_ITEM_DATA,
-    itemId: itemId
-  };
-};
-
-export const changePlaygroundItemData = (itemId, changeItemData) => {
-  return {
-    type: CHANGE_PLAYGROUND_ITEM_DATA,
-    itemId: itemId,
-    itemData: changeItemData
-  };
-};
-
-export const setPlaygroundItemData = itemData => {
-  return {
-    type: SET_PLAYGROUND_ITEM_DATA,
-    itemData: itemData
   };
 };
 
@@ -412,39 +377,6 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isVisualizationCollapsed: !state.isVisualizationCollapsed
-    };
-  }
-  if (action.type === ADD_PLAYGROUND_ITEM_DATA) {
-    const newPlaygroundItemData = {...state.playgroundItemData};
-    newPlaygroundItemData[action.itemId] = action.itemData;
-    return {
-      ...state,
-      playgroundItemData: newPlaygroundItemData
-    };
-  }
-  if (action.type === REMOVE_PLAYGROUND_ITEM_DATA) {
-    const newPlaygroundItemData = {...state.playgroundItemData};
-    delete newPlaygroundItemData[action.itemId];
-    return {
-      ...state,
-      playgroundItemData: newPlaygroundItemData
-    };
-  }
-  if (action.type === CHANGE_PLAYGROUND_ITEM_DATA) {
-    const newPlaygroundItemData = {...state.playgroundItemData};
-    newPlaygroundItemData[action.itemId] = {
-      ...state.playgroundItemData[action.itemId],
-      ...action.itemData
-    };
-    return {
-      ...state,
-      playgroundItemData: newPlaygroundItemData
-    };
-  }
-  if (action.type === SET_PLAYGROUND_ITEM_DATA) {
-    return {
-      ...state,
-      playgroundItemData: action.itemData
     };
   }
   return state;

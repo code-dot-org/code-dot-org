@@ -1,6 +1,14 @@
-import {PlaygroundSignalType} from './constants';
+import {PlaygroundSignalType, PlaygroundItemType} from './constants';
 import {assets, starterAssets} from '@cdo/apps/clientApi';
 import javalabMsg from '@cdo/javalab/locale';
+import {getStore} from '../redux';
+import {
+  addItemData,
+  removeItemData,
+  changeItemData,
+  setItemData,
+  getItemIds
+} from './playgroundRedux';
 
 export default class Playground {
   constructor(
@@ -8,10 +16,6 @@ export default class Playground {
     onNewlineMessage,
     onJavabuilderMessage,
     levelName,
-    addPlaygroundItem,
-    removePlaygroundItem,
-    changePlaygroundItem,
-    setPlaygroundItems,
     // Only used for testing
     starterAssetsApi,
     assetsApi
@@ -27,12 +31,15 @@ export default class Playground {
     // Assigned only for testing; should use imports from clientApi normally
     this.starterAssetsApi = starterAssetsApi || starterAssets;
     this.assetsApi = assetsApi || assets;
-    this.imageItemIds = [];
 
-    this.addPlaygroundItem = addPlaygroundItem;
-    this.removePlaygroundItem = removePlaygroundItem;
-    this.changePlaygroundItem = changePlaygroundItem;
-    this.setPlaygroundItems = setPlaygroundItems;
+    this.addPlaygroundItem = (itemId, itemData) =>
+      getStore().dispatch(addItemData(itemId, itemData));
+    this.removePlaygroundItem = itemId =>
+      getStore().dispatch(removeItemData(itemId));
+    this.changePlaygroundItem = (itemId, itemData) =>
+      getStore().dispatch(changeItemData(itemId, itemData));
+    this.setPlaygroundItems = itemData =>
+      getStore().dispatch(setItemData(itemData));
 
     this.starterAssetsApi.getStarterAssets(
       levelName,
@@ -101,14 +108,11 @@ export default class Playground {
   addImageHelper(itemData, isClickable) {
     // ignore request if the game is over or if the item already exists
     if (this.isGameOver || this.imageItemExists(itemData)) {
-      // can't add new items if the game is over
       return;
     }
-    this.imageItemIds.push(itemData.id);
-    let onClick = () => {};
-    if (isClickable) {
-      onClick = () => this.handleImageClick(itemData.id);
-    }
+    let onClick = isClickable
+      ? () => this.handleImageClick(itemData.id)
+      : () => {};
 
     const imageData = {
       fileUrl: this.getUrl(itemData.filename),
@@ -118,7 +122,7 @@ export default class Playground {
       width: itemData.width,
       index: itemData.index,
       onClick: onClick,
-      type: 'image'
+      type: PlaygroundItemType.IMAGE
     };
     this.addPlaygroundItem(itemData.id, imageData);
   }
@@ -136,7 +140,6 @@ export default class Playground {
       return;
     }
     if (this.imageItemExists(itemData)) {
-      this.imageItemIds.splice(this.imageItemIds.indexOf(itemData.id), 1);
       this.removePlaygroundItem(itemData.id);
     }
     // TODO: handle text deletion
@@ -245,6 +248,6 @@ export default class Playground {
   }
 
   imageItemExists(itemData) {
-    return this.imageItemIds.includes(itemData.id);
+    return getItemIds(getStore().getState().playground).includes(itemData.id);
   }
 }
