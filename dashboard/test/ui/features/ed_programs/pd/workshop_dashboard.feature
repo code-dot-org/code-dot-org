@@ -71,6 +71,7 @@ Scenario: New workshop: CSD units 2-3 with 2 facilitators
   And I see no difference for "new workshop details: CSD"
 
   And I press "button:contains('Publish')" using jQuery
+  And I wait for 30 seconds
   And I wait until element ".panel-title:contains('Your workshop sign-up link:')" is visible
   And I see jquery selector button.btn-orange:contains('Start Workshop')
 
