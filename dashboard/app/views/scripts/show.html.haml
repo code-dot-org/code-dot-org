@@ -16,8 +16,7 @@
                             locale_code: request.locale,
                             course_link: @script.course_link(params[:section_id]),
                             course_title: @script.course_title || I18n.t('view_all_units'),
-                            sections: @sections_with_assigned_info,
-                            published_state: @script.get_published_state}
+                            sections: @sections_with_assigned_info}
 - scriptOverviewData = {scriptData: script_data.merge(additional_script_data)}
 - if @script.professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
   -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}

@@ -1086,8 +1086,7 @@ class Script < ApplicationRecord
 
       unit.generate_plc_objects
 
-      CourseOffering.add_course_offering(unit)
-
+      CourseOffering.add_course_offering(unit) if unit.is_course
       unit
     end
   end
@@ -1596,6 +1595,10 @@ class Script < ApplicationRecord
     summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
 
     summary
+  end
+
+  def unit_without_lesson_plans?
+    lessons.select(&:has_lesson_plan).empty?
   end
 
   def summarize_for_rollup(user = nil)

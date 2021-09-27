@@ -349,10 +349,7 @@ describe('Code Review Tab', () => {
       id: 2
     };
 
-    stubGetReviewablePeersServerCall([
-      [peer1.id, peer1.name],
-      [peer2.id, peer2.name]
-    ]);
+    stubGetReviewablePeersServerCall([peer1, peer2]);
 
     server.respond();
 

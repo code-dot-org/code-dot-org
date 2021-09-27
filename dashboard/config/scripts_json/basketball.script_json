@@ -4,13 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "tts": true,
       "version_year": "unversioned",
-      "is_course": true
+      "tts": true,
+      "is_course": true,
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "basketball",
-    "serialized_at": "2021-08-03 22:47:01 UTC",
+    "serialized_at": "2021-09-21 22:03:29 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "basketball"
@@ -35,9 +37,14 @@
       "name": "Bounce",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.",
+        "preparation": " - Make sure every student has a journal.\r\n - Play through the puzzles to find any potential problem areas for your class.\r\n - Read the \"Events in Bounce - How Do They Happen?\" slide deck (to be presented to students at end of class).",
+        "purpose": "Events are very common in computer programs, especially in video games.  \r\n\r\nIn this lesson, students will develop their understanding of events by making a sports-based game. Students will learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will get to customize their game to make it more unique!",
+        "student_overview": "Ever wish you could play video games in school? In this lesson, you will get to make your own!"
       },
       "seeding_key": {
         "lesson.key": "Bounce",
@@ -47,21 +54,166 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e",
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    },
+    {
+      "key": "dca1904a-ae71-49d2-b77f-708aa02d2707",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dca1904a-ae71-49d2-b77f-708aa02d2707",
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    },
+    {
+      "key": "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b",
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    },
+    {
+      "key": "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499",
+      "position": 4,
+      "properties": {
+        "duration": 0,
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499",
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "8295d7d8-acb1-4cc1-b178-8d89613aa6b6",
+      "position": 1,
+      "properties": {
+        "description": "Ask the students to come sit down near you. Now tell them to all stand up!\r\n\r\nTell the students what you just did was declare an event and an action. When you say to sit down, it is an event. The action responding to this event is the class sitting down. This is the same when you ask the class to stand up. Events and actions are easily identifiable in our lives.\r\n\r\nSome other events and actions include:\r\n\r\n - Feeling hungry and eating food\r\n - Stubbing your toe and yelling \"Ouch!\"\r\n - Getting the basketball in the basket and scoring a point for your team!\r\n\r\nAsk the class to come up with a couple of more events. Tell them that they will be making a game where the program will have actions associated to events that they code!",
+        "name": "Introduction\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "8295d7d8-acb1-4cc1-b178-8d89613aa6b6",
+        "lesson_activity.key": "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e"
+      }
+    },
+    {
+      "key": "41a58fa3-ee0d-46ca-be76-89def06d2062",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062",
+        "lesson_activity.key": "dca1904a-ae71-49d2-b77f-708aa02d2707"
+      }
+    },
+    {
+      "key": "720eaa7d-2623-4fab-bd98-ee2dda7831fc",
+      "position": 2,
+      "properties": {
+        "description": "At the end of the set of puzzles, students will have the opportunity to make their game unique. Have the students try new ways to make the game more challenging. For example, try playing with many balls at once, or each time the ball bounces off a wall, launch more balls.",
+        "name": "Online Puzzles\r",
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think].\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "720eaa7d-2623-4fab-bd98-ee2dda7831fc",
+        "lesson_activity.key": "dca1904a-ae71-49d2-b77f-708aa02d2707"
+      }
+    },
+    {
+      "key": "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0",
+      "position": 1,
+      "properties": {
+        "description": "Present the **Events in Bounce - How Do They Happen?** slide deck to students. Allow them to record the correct order of events on the second slide in their journals first. Call on a few students to share their answers before revealing the third slide. Discuss the correct sequence with the class.",
+        "name": "Assessment\r",
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "Although introduced in this lesson, the slide deck \"Events in Bounce - How Do They Happen?\" can be applied more generally to express the relationship between hardware and software. Particularly, the final slide simplifies the input-to-output sequence and can be made into a poster for your classroom.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0",
+        "lesson_activity.key": "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b"
+      }
+    },
+    {
+      "key": "2754bec9-70a7-46db-8991-16bbf01adbe7",
+      "position": 2,
+      "properties": {
+        "description": "**Correct Order: D, B, A, C**"
+      },
+      "seeding_key": {
+        "activity_section.key": "2754bec9-70a7-46db-8991-16bbf01adbe7",
+        "lesson_activity.key": "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b"
+      }
+    },
+    {
+      "key": "e124e99b-c415-4c20-929d-310c8a23986e",
+      "position": 3,
+      "properties": {
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - What did you do to make your game super cool?\r\n - What kind of game do you want to code in the future?",
+        "name": "Journaling\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "e124e99b-c415-4c20-929d-310c8a23986e",
+        "lesson_activity.key": "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b"
+      }
+    },
+    {
+      "key": "0eade685-f4a5-4d81-bc38-4371a06fbb06",
+      "position": 1,
+      "properties": {
+        "description": "#### Take Me Out to the Ball Game\r\n\r\nTake the students outside to play some sort of ball game. Keep track of events and actions. For example, not dribbling in basketball results in a traveling foul and the other team gets the ball. In soccer, kicking the ball out of bounds results in the other team kicking the ball in. Getting the ball to the goal results in a point! Make up more events if your students are into it. Have the all of the students yell \"Yippee\" when the captain of one team scores a point. Have everyone fall to the ground and roll around if a student makes two goals in a row!"
+      },
+      "seeding_key": {
+        "activity_section.key": "0eade685-f4a5-4d81-bc38-4371a06fbb06",
+        "lesson_activity.key": "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "bounce_1_basketball"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -70,7 +222,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       },
       "level_keys": [
         "bounce_1_basketball"
@@ -79,12 +232,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "bounce_2_basketball"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -93,7 +243,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       },
       "level_keys": [
         "bounce_2_basketball"
@@ -102,12 +253,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "bounce_5_basketball"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -116,7 +264,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       },
       "level_keys": [
         "bounce_5_basketball"
@@ -125,12 +274,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "bounce_6_basketball"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -139,7 +285,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       },
       "level_keys": [
         "bounce_6_basketball"
@@ -148,12 +295,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "bounce_7_basketball"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -162,7 +306,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       },
       "level_keys": [
         "bounce_7_basketball"
@@ -171,12 +316,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "bounce_10_basketball"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -185,7 +327,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       },
       "level_keys": [
         "bounce_10_basketball"
@@ -194,12 +337,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "bounce_11_basketball"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -208,7 +348,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       },
       "level_keys": [
         "bounce_11_basketball"
@@ -217,12 +358,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "bounce_12_basketball"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -231,7 +369,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       },
       "level_keys": [
         "bounce_12_basketball"
@@ -247,7 +386,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       }
     },
     {
@@ -258,7 +398,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       }
     },
     {
@@ -269,7 +410,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       }
     },
     {
@@ -280,7 +422,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       }
     },
     {
@@ -291,7 +434,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       }
     },
     {
@@ -302,7 +446,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       }
     },
     {
@@ -313,7 +458,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       }
     },
     {
@@ -324,15 +470,32 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "basketball"
+        "script.name": "basketball",
+        "activity_section.key": "41a58fa3-ee0d-46ca-be76-89def06d2062"
       }
     }
   ],
   "resources": [
-
+    {
+      "name": "Events in Bounce - How Do They Happen?",
+      "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing",
+      "key": "events-in-bounce-how-do-they-happen",
+      "properties": {
+        "type": "Slide Deck",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "events-in-bounce-how-do-they-happen"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "resource.key": "events-in-bounce-how-do-they-happen"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -341,19 +504,82 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "vocabulary.key": "event"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "901c5c67-68b8-4eef-9d36-2966bbe0ce05",
+      "properties": {
+        "description": "Identify actions that correlate to input events."
+      },
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "objective.key": "901c5c67-68b8-4eef-9d36-2966bbe0ce05"
+      }
+    },
+    {
+      "key": "73964b0e-cea1-43cf-a130-410017addf73",
+      "properties": {
+        "description": "Create an interactive game using sequence and event-handlers."
+      },
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "objective.key": "73964b0e-cea1-43cf-a130-410017addf73"
+      }
+    },
+    {
+      "key": "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f",
+      "properties": {
+        "description": "Share a creative artifact with other students."
+      },
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "objective.key": "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
