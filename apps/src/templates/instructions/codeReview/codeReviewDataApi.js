@@ -1,11 +1,43 @@
 import $ from 'jquery';
 
-export function getCodeReviewCommentsForProject(channelId) {
-  return $.ajax({
-    url: `/code_review_comments/project_comments`,
-    method: 'GET',
-    data: {channel_id: channelId}
-  });
+export class dataApi {
+  constructor(channelId, levelId, scriptId) {
+    this.channelId = channelId;
+    this.levelId = levelId;
+    this.scriptId = scriptId;
+  }
+
+  getCodeReviewCommentsForProject() {
+    return $.ajax({
+      url: `/code_review_comments/project_comments`,
+      method: 'GET',
+      data: {channel_id: this.channelId}
+    });
+  }
+
+  getPeerReviewStatus() {
+    return $.ajax({
+      url: `/reviewable_projects/reviewable_status`,
+      type: 'GET',
+      data: {
+        channel_id: this.channelId,
+        level_id: this.levelId,
+        script_id: this.scriptId
+      }
+    });
+  }
+
+  getReviewablePeers() {
+    return $.ajax({
+      url: `/reviewable_projects/for_level`,
+      type: 'GET',
+      data: {
+        channel_id: this.channelId,
+        level_id: this.levelId,
+        script_id: this.scriptId
+      }
+    });
+  }
 }
 
 export function submitNewCodeReviewComment(
@@ -49,18 +81,6 @@ export function disablePeerReview(projectId, token) {
   });
 }
 
-export function getPeerReviewStatus(channelId, levelId, scriptId) {
-  return $.ajax({
-    url: `/reviewable_projects/reviewable_status`,
-    type: 'GET',
-    data: {
-      channel_id: channelId,
-      level_id: levelId,
-      script_id: scriptId
-    }
-  });
-}
-
 export function resolveCodeReviewComment(commentId, resolvedStatus, token) {
   return $.ajax({
     url: `/code_review_comments/${commentId}/toggle_resolved`,
@@ -75,17 +95,5 @@ export function deleteCodeReviewComment(commentId, token) {
     url: `/code_review_comments/${commentId}`,
     type: 'DELETE',
     headers: {'X-CSRF-Token': token}
-  });
-}
-
-export function getReviewablePeers(channelId, levelId, scriptId) {
-  return $.ajax({
-    url: `/reviewable_projects/for_level`,
-    type: 'GET',
-    data: {
-      channel_id: channelId,
-      level_id: levelId,
-      script_id: scriptId
-    }
   });
 }
