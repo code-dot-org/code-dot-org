@@ -163,6 +163,19 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
                               params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot lesson'
 
+  # also limit access to lesson plans in pilots when showing lesson by id
+  test_user_gets_response_for :show_by_id, response: :redirect, user: nil,
+                              params: -> {{id: @pilot_lesson.id}},
+                              name: 'signed out user cannot view pilot lesson by id'
+
+  test_user_gets_response_for :show_by_id, response: :forbidden, user: :teacher,
+                              params: -> {{id: @pilot_lesson.id}},
+                              name: 'teacher without pilot access cannot view pilot lesson by id'
+
+  test_user_gets_response_for :show_by_id, response: :success, user: :levelbuilder,
+                              params: -> {{id: @pilot_lesson.id}},
+                              name: 'levelbuilder can view pilot lesson by id'
+
   # limit access to student lesson plans in pilots
   test_user_gets_response_for :student_lesson_plan, response: :not_found, user: nil,
                               params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}},
@@ -249,9 +262,9 @@ class LessonsControllerTest < ActionController::TestCase
   test 'show lesson when lesson is the only lesson in script' do
     script = create :script, name: 'one-lesson-script', is_migrated: true
     lesson_group = create :lesson_group, script: script
-    @solo_lesson_in_script = create(
+    solo_lesson_in_script = create(
       :lesson,
-      name: 'lesson display name',
+      name: @lesson_name,
       script_id: script.id,
       lesson_group_id: lesson_group.id,
       has_lesson_plan: true,
@@ -265,10 +278,10 @@ class LessonsControllerTest < ActionController::TestCase
       'data' => {
         'script' => {
           'name' => {
-            @solo_lesson_in_script.script.name => {
+            script.name => {
               'title' => @script_title,
               'lessons' => {
-                @lesson.name => {
+                solo_lesson_in_script.key => {
                   'name' => @lesson_name
                 }
               }
@@ -279,19 +292,17 @@ class LessonsControllerTest < ActionController::TestCase
     }
 
     I18n.backend.store_translations 'en-US', custom_i18n
-    assert_equal @script_title, @solo_lesson_in_script.script.localized_title
-
-    # a bit weird, but this is what happens when there is only one lesson.
-    assert_equal @script_title, @solo_lesson_in_script.localized_name
+    assert_equal @lesson_name, solo_lesson_in_script.localized_name
 
     get :show, params: {
       script_id: script.name,
-      position: @solo_lesson_in_script.relative_position
+      position: solo_lesson_in_script.relative_position
     }
     assert_response :ok
     assert(@response.body.include?(@script_title))
-    assert(@response.body.include?(@solo_lesson_in_script.overview))
-    assert(@response.body.include?(script_lesson_path(@solo_lesson_in_script.script, @solo_lesson_in_script)))
+    assert(@response.body.include?(@lesson_name))
+    assert(@response.body.include?(solo_lesson_in_script.overview))
+    assert(@response.body.include?(script_lesson_path(solo_lesson_in_script.script, solo_lesson_in_script)))
   end
 
   test 'show lesson when script has multiple lessons' do
@@ -1315,6 +1326,32 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal [1, 2], section.script_levels.map(&:position)
   end
 
+  test 'legacy lesson clone fails if destination course does not use code studio lessons' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    destination_script = create :script, use_legacy_lesson_plans: true
+    original_script = create :script, use_legacy_lesson_plans: false
+    lesson = create :lesson, script: original_script
+    put :clone, params: {id: lesson.id, 'destinationUnitName': destination_script.name}
+
+    assert_response :not_acceptable
+    assert @response.body.include?('error')
+  end
+
+  test 'legacy lesson clone fails if origin course does not use code studio lessons' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    destination_script = create :script, use_legacy_lesson_plans: false
+    original_script = create :script, use_legacy_lesson_plans: true
+    lesson = create :lesson, script: original_script
+    put :clone, params: {id: lesson.id, 'destinationUnitName': destination_script.name}
+
+    assert_response :not_acceptable
+    assert @response.body.include?('error')
+  end
+
   test 'lesson clone fails if script cannot be found' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -1329,11 +1366,29 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
+    script = create :script, use_legacy_lesson_plans: false
     create :course_version, content_root: script, key: '2021'
-    original_script = create :script
+    original_script = create :script, use_legacy_lesson_plans: false
     lesson = create :lesson, script: original_script
     create :course_version, content_root: original_script, key: '2021'
+    cloned_lesson = create :lesson, script: script
+    Lesson.any_instance.stubs(:copy_to_unit).returns(cloned_lesson)
+    put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
+
+    assert_response 200
+    assert @response.body.include?('editLessonUrl')
+    assert @response.body.include?('editScriptUrl')
+  end
+
+  test 'lesson clone is successful between version years' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, use_legacy_lesson_plans: false
+    create :course_version, content_root: script, key: '2021'
+    original_script = create :script, use_legacy_lesson_plans: false
+    lesson = create :lesson, script: original_script
+    create :course_version, content_root: original_script, key: '2020'
     cloned_lesson = create :lesson, script: script
     Lesson.any_instance.stubs(:copy_to_unit).returns(cloned_lesson)
     put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}

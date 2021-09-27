@@ -8,15 +8,13 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "playground",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tOOKutcoECsKgbm95L5\nRfnPjzQx/roQdasmT1i2Mgr6m/F3Go83MhMIGn51Epw57tk=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-08-31T16:34:44.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-03 16:06:29 +0000\",\"changed\":[\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-03 16:06:29 +0000\",\"changed\":[\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 19:45:52 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
