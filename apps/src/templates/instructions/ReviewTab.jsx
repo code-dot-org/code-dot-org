@@ -118,14 +118,7 @@ class ReviewTab extends Component {
       initialLoadPromises.push(
         codeReviewDataApi
           .getReviewablePeers(channelId, serverLevelId, serverScriptId)
-          .done(data => {
-            this.setState({
-              reviewablePeers: _.chain(data)
-                .filter(peerEntry => peerEntry && peerEntry.length === 2)
-                .map(peerEntry => ({id: peerEntry[0], name: peerEntry[1]}))
-                .value()
-            });
-          })
+          .done(data => this.setState({reviewablePeers: data}))
           .fail(() => {
             this.setState({
               errorLoadingReviewblePeers: true
