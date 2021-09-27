@@ -4,6 +4,7 @@ import Sounds from '@cdo/apps/Sounds';
 import {getStore} from '@cdo/apps/redux';
 import {clearConsole} from '../redux/textConsole';
 import {clearPrompts, popPrompt} from '../redux/spritelabInput';
+import CoreLibrary from './CoreLibrary';
 
 var SpriteLab = function() {
   P5Lab.call(this);
@@ -12,6 +13,14 @@ var SpriteLab = function() {
 SpriteLab.prototype = Object.create(P5Lab.prototype);
 
 module.exports = SpriteLab;
+
+SpriteLab.prototype.createLibrary = function(args) {
+  if (!args.p5) {
+    console.warn('cannot create SpriteLab library without p5 instance');
+    return;
+  }
+  return new CoreLibrary(args.p5);
+};
 
 SpriteLab.prototype.preview = function() {
   if (getStore().getState().runState.isRunning) {
