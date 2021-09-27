@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-24 18:12:27 UTC",
+    "serialized_at": "2021-09-27 16:03:19 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poetry-hoc3"
@@ -245,30 +245,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "poetryHoC_spriteProperties_v2"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "poetryHoC_spriteProperties_v2"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "poetry-hoc3",
-        "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc"
-      },
-      "level_keys": [
-        "poetryHoC_spriteProperties_v2"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "poetryHoC_spriteBehaviors_v2"
         ]
       },
@@ -284,6 +260,30 @@
       },
       "level_keys": [
         "poetryHoC_spriteBehaviors_v2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetryHoC_spriteProperties_v2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetryHoC_spriteProperties_v2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poetry-hoc3",
+        "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc"
+      },
+      "level_keys": [
+        "poetryHoC_spriteProperties_v2"
       ]
     },
     {
@@ -386,9 +386,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetryHoC_spriteProperties_v2",
+        "level.key": "poetryHoC_spriteBehaviors_v2",
         "script_level.level_keys": [
-          "poetryHoC_spriteProperties_v2"
+          "poetryHoC_spriteBehaviors_v2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -398,9 +398,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetryHoC_spriteBehaviors_v2",
+        "level.key": "poetryHoC_spriteProperties_v2",
         "script_level.level_keys": [
-          "poetryHoC_spriteBehaviors_v2"
+          "poetryHoC_spriteProperties_v2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

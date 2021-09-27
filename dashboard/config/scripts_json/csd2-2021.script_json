@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-14 21:48:01 UTC",
+    "serialized_at": "2021-09-27 14:57:41 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd2-2021"
@@ -2733,7 +2733,11 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "**Goals**\n\n**Key Vocabulary:**\n\n- CSS - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n- CSS Selector - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\nStudents should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page."
+            "markdown": "**Key Vocabulary**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\nStudents should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it.  So, for example, the structure could include different headings and paragraphs, but would say nothing about the color of text or how big it is displayed.  The style of the page is the specifics of its appearance.  Without a particular style, each web browser would decide how to display different web page elements on their own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen.  Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page.  This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "**Images in the Video**: Around the 40 second mark, the video briefly mentions that students have learned how to add images to their website. In a previous version of the curriculum when this video was originally recorded, students learned images before learning CSS. In the current version of the curriculum, students haven't seen videos yet. It's a small moment in the video, but if students ask about it, use the moment to build excitement since students will be learning about images in just a few lessons!"
           }
         ]
       },

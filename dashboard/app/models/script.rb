@@ -1086,8 +1086,7 @@ class Script < ApplicationRecord
 
       unit.generate_plc_objects
 
-      CourseOffering.add_course_offering(unit)
-
+      CourseOffering.add_course_offering(unit) if unit.is_course
       unit
     end
   end
