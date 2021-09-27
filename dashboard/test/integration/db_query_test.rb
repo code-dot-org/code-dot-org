@@ -51,7 +51,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level.id
     )
 
-    assert_cached_queries(12) do
+    assert_cached_queries(11) do
       get user_progress_path,
         headers: {'HTTP_USER_AGENT': 'test'}
       assert_response :success

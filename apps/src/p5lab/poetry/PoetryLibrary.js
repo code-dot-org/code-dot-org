@@ -1,8 +1,8 @@
-import CoreLibrary from './CoreLibrary';
-import {POEMS} from '../poembot/constants';
-import * as utils from '../poembot/commands/utils';
-import {commands as backgroundEffects} from '../poembot/commands/backgroundEffects';
-import {commands as foregroundEffects} from '../poembot/commands/foregroundEffects';
+import CoreLibrary from '../spritelab/CoreLibrary';
+import {POEMS} from './constants';
+import * as utils from './commands/utils';
+import {commands as backgroundEffects} from './commands/backgroundEffects';
+import {commands as foregroundEffects} from './commands/foregroundEffects';
 
 const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
@@ -10,7 +10,7 @@ const FONT_SIZE = 25;
 const PLAYSPACE_SIZE = 400;
 const POEM_DURATION = 400;
 
-export default class PoemBotLibrary extends CoreLibrary {
+export default class PoetryLibrary extends CoreLibrary {
   constructor(p5) {
     super(p5);
     // Extra information for validation code to be able to inspect the program state
