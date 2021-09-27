@@ -1,4 +1,8 @@
-import {PlaygroundSignalType, PlaygroundItemType} from './constants';
+import {
+  PlaygroundSignalType,
+  PlaygroundItemType,
+  WebSocketMessageType
+} from './constants';
 import {assets, starterAssets} from '@cdo/apps/clientApi';
 import javalabMsg from '@cdo/javalab/locale';
 import {getStore} from '../redux';
@@ -204,7 +208,7 @@ export default class Playground {
       // can only handle click events if game is not over and game is running
       return;
     }
-    this.onJavabuilderMessage('PLAYGROUND', imageId);
+    this.onJavabuilderMessage(WebSocketMessageType.PLAYGROUND, imageId);
   }
 
   getUrl(filename) {
