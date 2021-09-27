@@ -84,7 +84,7 @@ export default class UnitCalendarDialog extends Component {
         </div>
         <UnitCalendar
           lessons={lessons}
-          weeklyInstructionalMinutes={this.state.instructionalMinutes}
+          weeklyInstructionalMinutes={Number(this.state.instructionalMinutes)}
           weekWidth={WEEK_WIDTH}
         />
         <Button
