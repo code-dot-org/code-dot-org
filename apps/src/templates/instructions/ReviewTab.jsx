@@ -34,7 +34,7 @@ class ReviewTab extends Component {
     reviewableProjectId: '',
     loadingReviewableState: false,
     errorSavingReviewableProject: false,
-    errorLoadingReviewblePeers: false,
+    errorLoadingReviewablePeers: false,
     comments: [],
     forceRecreateEditorKey: 0,
     reviewablePeers: [],
@@ -119,7 +119,7 @@ class ReviewTab extends Component {
           .done(data => this.setState({reviewablePeers: data}))
           .fail(() => {
             this.setState({
-              errorLoadingReviewblePeers: true
+              errorLoadingReviewablePeers: true
             });
           })
       );
@@ -386,14 +386,14 @@ class ReviewTab extends Component {
   renderHeader = () => {
     const {
       reviewablePeers,
-      errorLoadingReviewblePeers,
+      errorLoadingReviewablePeers,
       reviewCheckboxEnabled
     } = this.state;
     const {viewAsCodeReviewer} = this.props;
     let dropdownView = null;
     let reviewCheckbox = null;
 
-    if (errorLoadingReviewblePeers) {
+    if (errorLoadingReviewablePeers) {
       // TODO: Handle this error state
     } else {
       dropdownView = viewAsCodeReviewer
