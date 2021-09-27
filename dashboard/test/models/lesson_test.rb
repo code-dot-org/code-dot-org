@@ -1003,10 +1003,13 @@ class LessonTest < ActiveSupport::TestCase
 
     other_unit = create :script
     other_lesson_group = create :lesson_group, script: other_unit
-    other_lesson = create :lesson, script: other_unit, lesson_group: other_lesson_group
+    lesson_without_plan = create :lesson, script: other_unit, lesson_group: other_lesson_group, relative_position: 1, absolute_position: 1, has_lesson_plan: false
+    lesson_with_plan = create :lesson, script: other_unit, lesson_group: other_lesson_group, relative_position: 1, absolute_position: 2, has_lesson_plan: true
 
-    assert_equal "/s/#{other_unit.name}/lessons/1", other_lesson.get_uncached_show_path
-    assert_equal "/s/#{other_unit.name}/lessons/1/edit", other_lesson.get_uncached_edit_path
+    assert_equal "/s/#{other_unit.name}/lessons/1", lesson_with_plan.get_uncached_show_path
+    assert_equal "/s/#{other_unit.name}/lessons/1/edit", lesson_with_plan.get_uncached_edit_path
+
+    assert_equal "/lessons/#{lesson_without_plan.id}/edit", lesson_without_plan.get_uncached_edit_path
   end
 
   class LessonCopyTests < ActiveSupport::TestCase
