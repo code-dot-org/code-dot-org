@@ -8,7 +8,7 @@
 # The purpose of this script is to backfill the script_id for channel tokens created earlier.
 #
 # How this script works:
-# This script will iterate over channel tokens and identify the script_ID in several possible ways,
+# This script will iterate over channel tokens and identify the script_id in several possible ways,
 # 1. If the level only exists in 1 script, use that script_id
 # 2. If an associated user exists, if the user has progress in one script that the level could be
 # associated with, use that script_id
@@ -17,6 +17,12 @@
 # 4. If an associated user exists but the user has no script progress or user levels possibly associated
 # with the channel token, it's likely that the user visited the level page, which generated a channel token,
 # and then left the page. In this case, assign any of the possible scripts to the channel token
+#
+# It's possible that we will not be able to determine a script_id for the channel token with the data in our database.
+# Many of these cases are for logged-out users where we don't store user level or user script data, so there is no
+# way to determine which of the scripts the channel token was generated for. We will be leaving the script_id column
+# empty for these channel token records.
+#
 
 require_relative '../../../dashboard/config/environment'
 require 'cdo/db'
@@ -71,7 +77,7 @@ end.parse!
 puts "Options: #{options}"
 options.freeze
 
-# we're storing channel token ids that failed backfill in a csv for easy lookup later
+# We're storing channel token ids that failed backfill in a csv for easy lookup later
 $csv_filename = "bin/oneoff/backfill_data/channel-token-backfill-failures.csv"
 $start_id = options[:start_id]
 $end_id = options[:end_id]
@@ -79,7 +85,11 @@ $is_dry_run = options[:dry_run]
 
 $unable_to_backfill = 0
 
+# This hash caches a mapping from level id to associated script ids
 $level_to_script_ids = {}
+
+# This hash caches a mapping from level id to level active record
+$level_id_to_level = {}
 
 def update_script_ids
   puts "Backfilling channel token script_ids..."
@@ -93,11 +103,10 @@ def update_script_ids
       next if channel_token.script_id.present?
 
       begin
-        level = channel_token.level
-        user_id = user_id_for_storage_id(channel_token.storage_id)
+        level_id = channel_token.level_id
 
         # get all the possible scripts the channel_token could be associated with
-        associated_script_ids = get_associated_script_ids(level)
+        associated_script_ids = get_associated_script_ids(level_id)
 
         # if the level is associated with only one script_level, use that script
         if associated_script_ids.length == 1
@@ -106,11 +115,12 @@ def update_script_ids
           next
         end
 
+        user_id = user_id_for_storage_id(channel_token.storage_id)
         # it's possible the channel token was generated for a logged-out user, in which case no user_id will exist
         if user_id.present?
           # get user_scripts for the associated_script_ids, if there is just one user_script, backfill with the
           # associated script_id
-          script_ids_from_user_scripts = associated_script_ids_by_user_scripts(user_id, associated_script_ids)
+          script_ids_from_user_scripts = associated_script_ids_from_user_scripts(user_id, associated_script_ids)
           if script_ids_from_user_scripts.count == 1
             update_channel_token(channel_token, script_ids_from_user_scripts[0], csv)
             next
@@ -118,7 +128,7 @@ def update_script_ids
 
           # get user_levels for the associated_script_ids, if there is just one user_level, backfill with the
           # associated script_id
-          script_ids_from_user_levels = associated_script_ids_from_user_levels(user_id, level)
+          script_ids_from_user_levels = associated_script_ids_from_user_levels(user_id, level_id)
           if script_ids_from_user_levels.count == 1
             update_channel_token(channel_token, script_ids_from_user_levels[0], csv)
             next
@@ -133,7 +143,7 @@ def update_script_ids
           end
         end
       rescue StandardError
-        print "[E]"
+        print "[Err]"
       end
 
       log_backfill_failed(channel_token.id, csv)
@@ -147,11 +157,12 @@ def update_script_ids
   puts
 end
 
-def get_associated_script_ids(level)
-  if $level_to_script_ids[level.id].present?
-    return $level_to_script_ids[level.id]
+def get_associated_script_ids(level_id)
+  unless $level_to_script_ids[level_id].nil?
+    return $level_to_script_ids[level_id]
   end
 
+  level = get_level(level_id)
   script_ids = level.script_levels.map(&:script_id)
 
   level.parent_levels.map do |parent_level|
@@ -161,6 +172,16 @@ def get_associated_script_ids(level)
 
   $level_to_script_ids[level.id] = script_ids.uniq
   return $level_to_script_ids[level.id]
+end
+
+def get_level(level_id)
+  unless $level_id_to_level[level_id].nil?
+    return $level_id_to_level[level_id]
+  end
+
+  level = Level.find(level_id)
+  $level_id_to_level[level_id] = level
+  level
 end
 
 def update_channel_token(channel_token, script_id, csv)
@@ -181,31 +202,34 @@ def log_backfill_failed(channel_token_id, csv)
   csv << [channel_token_id]
 end
 
-def associated_script_ids_by_user_scripts(user_id, script_ids)
-  user_scripts = UserScript.where(user_id: user_id, script_id: script_ids)
-  return user_scripts.map(&:script_id).uniq
+def associated_script_ids_from_user_scripts(user_id, script_ids)
+  script_ids = UserScript.where(user_id: user_id, script_id: script_ids).pluck(:script_id)
+  return script_ids.uniq
 end
 
-def associated_script_ids_from_user_levels(user_id, level)
-  associated_user_levels = UserLevel.where(
-    user_id: user_id,
-    level_id: level.id
-  )
+def associated_script_ids_from_user_levels(user_id, level_id)
+  script_ids_from_user_levels = user_level_script_ids(user_id, level_id)
 
-  if associated_user_levels.count == 0 && level.contained_levels.any?
+  level = get_level(level_id)
+
+  if script_ids_from_user_levels.any? && level.contained_levels.any?
     contained_level_id = level.contained_levels.first
-    associated_user_levels = UserLevel.where(
-      user_id: user_id,
-      level_id: contained_level_id
-    )
+    script_ids_from_user_levels = user_level_script_ids(user_id, contained_level_id)
   end
 
-  if associated_user_levels.count == 0 && level.parent_levels.any?
+  if script_ids_from_user_levels.any? && level.parent_levels.any?
     parent_level_ids = level.parent_levels(&:id)
-    associated_user_levels = UserLevel.where(user_id: user_id, level_id: parent_level_ids)
+    script_ids_from_user_levels = user_level_script_ids(user_id, parent_level_ids)
   end
 
-  return associated_user_levels.map(&:script_id).uniq
+  return script_ids_from_user_levels.uniq
+end
+
+def user_level_script_ids(user_id, level_id)
+  UserLevel.where(
+    user_id: user_id,
+    level_id: level_id
+  ).pluck(:script_id)
 end
 
 update_script_ids
