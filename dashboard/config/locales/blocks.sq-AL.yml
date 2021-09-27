@@ -275,6 +275,13 @@ sq:
             '"g"': g
             '"q"': q
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': djathtas
+            '90': poshtë
+            '180': majtas
+            '270': lart
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -284,6 +291,7 @@ sq:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": përtyp
+            "'sound://category_digital/jump_7.mp3'": hidhu
       gamelab_randColor:
         text: ngjyrë e rastësishme
       gamelab_randomColor:

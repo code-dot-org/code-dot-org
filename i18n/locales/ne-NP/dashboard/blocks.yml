@@ -183,6 +183,13 @@ ne:
             '"right"': दाँया
             '"space"': space
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': दाँया
+            '90': तल
+            '180': बाँया
+            '270': माथि
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -192,6 +199,7 @@ ne:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_digital/jump_7.mp3'": jump
       gamelab_randColor:
         text: कुनै एक  रङ
       gamelab_randomColor:

@@ -1,20 +1,24 @@
 <Javalab>
   <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Find the `String` class in the Java API.\r\n\r\nWith a partner, find the following for the `String` class:\r\n\r\n* Description\r\n\r\n* Constructors\r\n\r\n* Methods\r\n\r\n* The package it is in",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String name = \"my name\";\n    String newName = new String(\"my name\");\n    \n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
   "game_id": 68,
   "created_at": "2021-08-31T16:23:14.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "properties": {
-    "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "access string class documentation\r\n\r\nwith a partner, navigate to the string class documentation and answer the questions",
-    "mini_rubric": "false",
-    "submittable": "false",
-    "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
-  },
-  "published": true
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-09-16 19:27:21 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 19:40:04 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -2583,6 +2583,7 @@ hu-HU:
       courseD_EOC_2020:
         description: Elértél a D tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseD_project_exemplars_2020_2021:
         markdown: |+
           # Project Példák
@@ -2604,6 +2605,7 @@ hu-HU:
       courseE_EOC_2020:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseE_project_exemplars_2019_2020:
         markdown: "# Projekt példák\n\nNekiállhatsz az utolsó projektednek. Mielőtt
           elkezded, szánj egy kis időt, hogy megnézz néhány példa projektet. \n\n##
@@ -2623,6 +2625,7 @@ hu-HU:
       courseExpress_EOC_2020:
         description: Elértél az Express Tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseExpress_project_exemplars_2019_2020:
         markdown: "# Projekt Példák\n\nElkezdheted az utolsó projektedet. Mielőtt
           nekilátsz, szánj egy kis időt arra, hogy megnézel néhány példa projektet.
@@ -2642,6 +2645,7 @@ hu-HU:
       courseF_EOC_2020:
         description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseF_project_exemplars_2019_2020:
         markdown: "# Projekt Példák\n\nElkezdheted az utolsó projektedet. Mielőtt
           nekilátsz, szánj egy kis időt arra, hogy megnézel néhány példa projektet.
@@ -2790,6 +2794,7 @@ hu-HU:
       courseD_EOC_2021:
         description: Elértél a D tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -2895,9 +2900,11 @@ hu-HU:
       courseE_EOC_2021:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseE_EOC_examples_2021:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseE_multi_dance_events_predict1_2021:
         answers:
         - {}
@@ -2944,9 +2951,11 @@ hu-HU:
       courseF_EOC_2021:
         description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseF_EOC_examples_2021:
         description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseF_events_predict_multi:
         answers:
         - {}
@@ -3055,6 +3064,7 @@ hu-HU:
       express_EOC_2021:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
@@ -3072,3 +3082,9 @@ hu-HU:
         questions:
         - text: Nézd meg ezt a kódot figyelmesen! Mit gondolsz, mi történik, ha lefuttatod
             a programot?
+      courseAB_EOC_2021:
+        display_name: Kurzus Projekt vége
+      courseB_EOC_2021:
+        display_name: Kurzus Projekt vége
+      courseF_EOC_samples_2021:
+        display_name: Kurzus Projekt vége

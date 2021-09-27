@@ -5155,6 +5155,7 @@ sk:
               description_teacher: V informatike čelíme viacerým veľkým problémom (napríklad hľadanie najväčšieho prvočísla či analýza DNA), ktoré by jednotlivci osamote neboli schopní vyriešiť. Spojenými silami sa však aj s takýmito úlohami vieme popasovať. V tejto lekcii študenti zažijú, akou užitočnou môže byť v informatike tímová práca.
             Digital Sharing:
               name: Digitálne zdieľanie
+              description_student: 'V rámci tejto lekcie sa dozviete o výzvach a prínosoch vlastníctva a autorských práv. '
               description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne prostredie. Študenti by mali byť vedení k dodržiavaniu autorských práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho občana.
             Simulating Experiments:
               name: Simulácia experimentov
@@ -7584,6 +7585,7 @@ sk:
               name: Záverečný projekt
             Digital Sharing:
               name: Digitálne zdieľanie
+              description_student: 'V rámci tejto lekcie sa dozviete o výzvach a prínosoch vlastníctva a autorských práv. '
               description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne prostredie. Študenti by mali byť vedení k dodržiavaniu autorských práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho občana.
           student_description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
         coursef-2020:
@@ -7657,6 +7659,7 @@ sk:
               description_teacher: V informatike čelíme viacerým veľkým problémom (napríklad hľadanie najväčšieho prvočísla či analýza DNA), ktoré by jednotlivci osamote neboli schopní vyriešiť. Spojenými silami sa však aj s takýmito úlohami vieme popasovať. V tejto lekcii študenti zažijú, akou užitočnou môže byť v informatike tímová práca.
             Digital Sharing:
               name: Digitálne zdieľanie
+              description_student: 'V rámci tejto lekcie sa dozviete o výzvach a prínosoch vlastníctva a autorských práv. '
               description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne prostredie. Študenti by mali byť vedení k dodržiavaniu autorských práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho občana.
             End of Course Project:
               name: Záverečný projekt
@@ -8775,10 +8778,12 @@ sk:
               description_student: Na internete zažijeme veľa zábavy, ale je tiež dôležité myslieť na bezpečnosť. V tejto lekcii sa naučíme rozlišovať medzi informáciami, ktoré je bezpečné zdieľať online a a informáciami, ktoré majú zostať súkromné.
             About Me:
               name: '"O mne" so Sprite Labom'
-              description_student: Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných a osobných údajov na internete
+              description_student: Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdieľaní súkromných a osobných údajov na internete
             Digital Sharing:
               key: Digitálne zdieľanie
               name: Digitálne zdieľanie
+              description_student: 'V rámci tejto lekcie sa dozviete o výzvach a prínosoch vlastníctva a autorských práv. '
+              description_teacher: 'Táto **prieskumná** lekcia pomôže študentom pochopiť výzvy a prínosy rešpektovania vlastníctva a autorských práv, obzvlášť v digitálnom prostredí. '
             Nested Loops in Bee:
               key: Vnorené cykly s včelou
               name: Vnorené cykly v bludisku
@@ -9353,3 +9358,24 @@ sk:
               name: Farebné LEDky
             lesson-19:
               name: Projekt
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgety
+            lesson-3:
+              name: Nástroje
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hodiny
+            lessonGroup-3:
+              display_name: Projekt
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Obsah
+            content:
+              display_name: Obsah
+            lesson_group:
+              display_name: Obsah
+            lessonGroup-2:
+              display_name: Obsah

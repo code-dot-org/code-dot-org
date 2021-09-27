@@ -22,7 +22,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
 
     params = {
       script_id: 1,
-      level_id: Level.first.id,
+      level_id: create(:level).id,
       feedback_type: 1,
       feedback_xml: '',
     }
@@ -45,7 +45,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
 
     params = {
       script_id: 1,
-      level_id: Level.first.id,
+      level_id: create(:level).id,
       feedback_type: 1,
       feedback_xml: '',
     }
@@ -91,9 +91,10 @@ class HintViewRequestsControllerTest < ActionController::TestCase
 
     sign_in driver
     @controller.send :pairings=, {pairings: [navigator], section_id: section.id}
+    level = create(:level, :with_script)
     post :create, params: {
-      script_id: Script.first.id,
-      level_id: Script.first.script_levels.first.level,
+      script_id: level.script_levels.first.script.id,
+      level_id: level.id,
       feedback_type: 1,
       feedback_xml: 'test_hint',
     }

@@ -188,6 +188,12 @@
         "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
           "description": "Identificar y corregir bugs o errores en instrucciones en secuencia"
         },
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Modelar los comportamientos adecuados en el laboratorio de informática"
+        },
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Experimenta con acciones de programación estándar basadas en bloques como: hacer clic, arrastrar y soltar, etc."
+        },
         "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
           "description": "Crear un programa mediante la reorganización de movimientos secuenciales"
         },

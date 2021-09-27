@@ -571,6 +571,7 @@ FactoryGirl.define do
   end
 
   factory :bounce, parent: :level, class: Bounce do
+    game {Game.bounce}
   end
 
   factory :artist, parent: :level, class: Artist do

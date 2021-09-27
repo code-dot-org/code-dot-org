@@ -306,6 +306,9 @@
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "소개"
         },
+        "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "progression_name": "몬스터 타운에 오신 것을 환영합니다"
+        },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
             null
@@ -313,6 +316,9 @@
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "progression_name": "실력 향상"
+        },
+        "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
+          "progression_name": "시뮬레이션으로 학습"
         },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "성찰"

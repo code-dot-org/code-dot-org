@@ -765,6 +765,13 @@ ca:
             '"right"': dret
             '"space"': espai
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': dret
+            '90': avall
+            '180': esquerra
+            '270': cap amunt
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -774,6 +781,7 @@ ca:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": cruixit
+            "'sound://category_digital/jump_7.mp3'": salt
       gamelab_randColor:
         text: color aleatori
       gamelab_randomColor:

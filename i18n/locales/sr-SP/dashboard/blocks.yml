@@ -474,6 +474,13 @@ sr:
         options:
           EFFECT:
             '"rain"': киша
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': десно
+            '90': доле
+            '180': лево
+            '270': горе
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -483,6 +490,7 @@ sr:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": крц
+            "'sound://category_digital/jump_7.mp3'": скок
       gamelab_randColor:
         text: насумична боја
       gamelab_randomColor:

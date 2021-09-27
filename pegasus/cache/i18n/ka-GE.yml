@@ -214,7 +214,17 @@ ka-GE:
   if_you_enjoyed: თუ მოგეწონათ სწავლა, შესთავაზეთ მეგობრებსაც! ჩვენ გვინდა, რომ მთელმა
     სამყარომ ისწავლოს პროგრამირება.
   personalize_certificate: სერტიფიკატის პერსონიფიკაცია
+  print_batch_certificates: ამობეჭდეთ სერტიფიკატების დასტა
   print_certificates: სერტიფიკატის ამობეჭდვა
+  print_ice_art_from_frozen: ამობეჭდეთ ნახატები „გაყინულის“ ტუტორიალიდან
+  want_a_blank_certificate_template: ცარიელი სერტიფიკატი გინდათ, რომ ხელით ჩაწეროთ
+    მოსწავლეების სახელები?
+  landscape_recommended_certificates: გირჩევთ ქაღალდის **ჰორიზონტალური ორიენტაცია**
+    მიუთითოთ ამობეჭდვის დროს.
+  print_one_here_certificates: აქედან ამობეჭდეთ.
+  enter_certificate_names: ერთდროულად 30 სახელი შეგილიათ დაწეროთ, **თითო ხაზზე ერთი**.
+    დააჭირეთ ღილაკს **სერტიფიკატის ამობეჭდვა** და გაიხსნება გვერდი საიდანაც შეძლებთ
+    ამობეჭდოთ %{script_name} სერტიფიკატები.
   share_achievement: მიღწევის გაზიარება
   beyond_hour_message: გააგრძელეთ ჩვენი <a href='http://studio.code.org'>სხვა კურსები</a>
     ან გაიგეთ, კიდევ როგორ შეგიძლითა <a href='/learn/beyond'>ისწავლოთ ერთი საათის
@@ -494,8 +504,8 @@ ka-GE:
   mc_gradelevel: ასაკი 6-106
   mc_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   mc_specs: სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6+
-  minecraft_designer: Minecraft-ის დიზაინერი
-  minecraft_adventurer: Minecraft-ის თავაგადასავლები
+  minecraft_designer: Minecraft დიზაინერი
+  minecraft_adventurer: Minecraft თავგადასავალი
   minecraft_tutorials: 'Minecraft-ის კოდის ერთი საათი: ტუტორიალები'
   minecraft_specs: სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | 2+ კლასი
   minecraft_agent_button: დაწყება
@@ -506,8 +516,10 @@ ka-GE:
     თავგადასავალი.
   minecraft_adventurer_button: დაწყება
   minecraft_no_internet: არ გაქვთ ინტერნეტი?
-  minecraft_download_adventurer: მაინკრაფთის ოფლაინ–ვერსიის გადმოწერა.
+  minecraft_download_adventurer: Minecraft თავგადასავლის გადმოწერა.
   minecraft_subtitle: Minecraft-ის კოდის ერთი საათი
+  minecraft_og_designer: Minecraft-ი დაბრუნდა ახალი აქტივობით კოდის ერთი საათისთვის.
+    დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის საკუთარ სამყაროში.
   sports_page_title: 'კოდის ერთი საათი: სპორტი'
   sports_og_title: აჯობე საკუთარ თავს. სწავლა ყველას შეუძლია.
   sports_og_description: ჩემპიონები და ოქროს მედლების მფლობელები მოგიწოდებენ, სცადო
@@ -1916,6 +1928,8 @@ ka-GE:
   header_legal_privacy: კონფიდენციალურობის პოლიტიკა
   header_legal_tos: მომსახურების პირობები
   header_tutorials: ტუტორიალები
+  header_screen_reader_hamburger: მენიუ
+  header_screen_reader_help: დახმარების მენიუ
   header_documentation: დოკუმენტაცია
   user_header_label: გამარჯობა %{username}
   user_header_team: გუნდი
@@ -1966,15 +1980,15 @@ ka-GE:
   hoc2018_mc_page_title: 'Minecraft-ის კოდის ერთი საათი: ტუტორიალები'
   hoc2018_mc_details: სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | 2+
     კლასი
-  hoc2018_mc_designer_title: Minecraft-ის დიზაინერი
+  hoc2018_mc_designer_title: Minecraft დიზაინერი
   hoc2018_mc_designer_description: დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის
     საკუთარ სამყაროში.
-  hoc2018_mc_adventurer_title: Minecraft-ის თავაგადასავლები
+  hoc2018_mc_adventurer_title: Minecraft თავგადასავალი
   hoc2018_mc_adventurer_description: გამოიყენეთ კოდი და შექმენით ალექსის ან სტივის
     თავგადასავალი.
   hoc2018_mc_start: დაწყება
   hoc2018_mc_no_internet: არ გაქვთ ინტერნეტი?
-  hoc2018_mc_download_adventurer: მაინკრაფთის ოფლაინ–ვერსიის გადმოწერა.
+  hoc2018_mc_download_adventurer: Minecraft თავგადასავლის გადმოწერა.
   hoc2018_mc_educators_box2_button: გადმოწერა
   hoc2018_mc_watch_videos: სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს
   hoc2018_mc_videos_more: მეტი <a href='%{inspiring_videos_playlist}'>შთამაგონებელი

@@ -172,7 +172,7 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal nil, lesson2_summary[:lesson_plan_html_url]
   end
 
-  test 'can summarize lesson with new lesson plan link in migrated script' do
+  test 'can summarize lesson with code studio lesson plans in migrated script' do
     script = create :script, name: 'test-script', is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true, lockable: true
@@ -187,6 +187,24 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal "/s/#{script.name}/lessons/#{lesson1.relative_position}", lesson1_summary[:lesson_plan_html_url]
     assert_equal nil, lesson2_summary[:lesson_plan_html_url]
     assert_equal "/s/#{script.name}/lessons/#{lesson3.relative_position}", lesson3_summary[:lesson_plan_html_url]
+    assert_equal nil, lesson4_summary[:lesson_plan_html_url]
+  end
+
+  test 'can summarize lesson with legacy lesson plan link in migrated script' do
+    script = create :script, name: 'test-script', is_migrated: true, use_legacy_lesson_plans: true
+    lesson_group = create :lesson_group, script: script
+    lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true, lockable: true
+    lesson2 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false, lockable: true
+    lesson3 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true, lockable: false
+    lesson4 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false, lockable: false
+
+    lesson1_summary = lesson1.summarize
+    lesson2_summary = lesson2.summarize
+    lesson3_summary = lesson3.summarize
+    lesson4_summary = lesson4.summarize
+    assert_equal '//test.code.org/curriculum/test-script/1/Teacher', lesson1_summary[:lesson_plan_html_url]
+    assert_equal nil, lesson2_summary[:lesson_plan_html_url]
+    assert_equal '//test.code.org/curriculum/test-script/3/Teacher', lesson3_summary[:lesson_plan_html_url]
     assert_equal nil, lesson4_summary[:lesson_plan_html_url]
   end
 
@@ -973,6 +991,22 @@ class LessonTest < ActiveSupport::TestCase
     lesson = create(:lesson, script: script, absolute_position: 5, relative_position: 5)
     assert_includes(lesson.lesson_plan_html_url, "curriculum/#{lesson.script.name}/5/Teacher")
     assert_includes(lesson.lesson_plan_pdf_url, "curriculum/#{lesson.script.name}/5/Teacher.pdf")
+  end
+
+  test 'uncached lesson path helpers' do
+    hoc_unit = create :script, name: 'dance'
+    hoc_lesson_group = create :lesson_group, script: hoc_unit
+    hoc_lesson = create :lesson, script: hoc_unit, lesson_group: hoc_lesson_group
+
+    assert_equal "/lessons/#{hoc_lesson.id}", hoc_lesson.get_uncached_show_path
+    assert_equal "/lessons/#{hoc_lesson.id}/edit", hoc_lesson.get_uncached_edit_path
+
+    other_unit = create :script
+    other_lesson_group = create :lesson_group, script: other_unit
+    other_lesson = create :lesson, script: other_unit, lesson_group: other_lesson_group
+
+    assert_equal "/s/#{other_unit.name}/lessons/1", other_lesson.get_uncached_show_path
+    assert_equal "/s/#{other_unit.name}/lessons/1/edit", other_lesson.get_uncached_edit_path
   end
 
   class LessonCopyTests < ActiveSupport::TestCase
