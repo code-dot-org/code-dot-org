@@ -311,6 +311,17 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal false, app_options[:level][:isStarted]
   end
 
+  test 'applab levels should include isNavigator=false when viewed by driver' do
+    @level = create :applab
+    @driver = create :student
+    @navigator = create :student
+    create_applab_progress_for_pair @level, @driver, @navigator
+
+    # "Load the level" as the driver
+    sign_in @driver
+    assert_equal false, app_options[:level]['isNavigator']
+  end
+
   test 'applab levels should include pairing_driver and pairing_channel_id when viewed by navigator' do
     @level = create :applab
     @driver = create :student
@@ -319,6 +330,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     # "Load the level" as the navigator
     sign_in @navigator
+    assert_equal true, app_options[:level]['isNavigator']
     assert_not_nil app_options[:level]['pairingDriver']
     assert_not_nil app_options[:level]['pairingChannelId']
 
@@ -348,6 +360,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     # "Load the level" as the navigator
     sign_in @navigator
+    assert_equal true, app_options[:level]['isNavigator']
     assert_nil app_options[:level]['pairingDriver']
     assert_nil app_options[:level]['pairingChannelId']
   end
@@ -355,7 +368,8 @@ class LevelsHelperTest < ActionView::TestCase
   def create_applab_progress_for_pair(level, driver, navigator)
     driver_user_level = create :user_level, user: driver, level: level
     navigator_user_level = create :user_level, user: navigator, level: level
-    driver_user_level.navigator_user_levels << navigator_user_level
+    create :paired_user_level,
+      driver_user_level: driver_user_level, navigator_user_level: navigator_user_level
     create :channel_token, level: level, storage_id: storage_id_for_user_id(driver.id)
   end
 

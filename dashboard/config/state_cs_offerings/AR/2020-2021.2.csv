@@ -1,0 +1,1503 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+DEWITT HIGH SCHOOL,,50000100216,465010,Computer Science with Programming/Coding Emphasis Level 1,8,6,1,0,0,0,4,0,0
+DEWITT HIGH SCHOOL,,50000100216,465020,Computer Science with Programming/Coding Emphasis Level 2,6,4,2,0,0,0,5,0,0
+DEWITT HIGH SCHOOL,,50000100216,465030,Computer Science with Programming/Coding Emphasis Level 3,2,2,0,0,0,0,2,0,0
+DEWITT HIGH SCHOOL,,50000100216,465040,Computer Science with Programming/Coding Emphasis Level 4,2,2,0,0,0,0,2,0,0
+DEWITT HIGH SCHOOL,,50000100216,465510,Robotics Level 1,9,5,0,0,0,0,4,3,0
+DEWITT HIGH SCHOOL,,50000100216,465520,Robotics Level 2,9,5,0,0,0,0,4,3,0
+STUTTGART HIGH SCHOOL,,51296001055,465010,Computer Science with Programming/Coding Emphasis Level 1,45,24,17,6,0,0,45,12,3
+STUTTGART HIGH SCHOOL,,51296001055,465020,Computer Science with Programming/Coding Emphasis Level 2,38,20,12,6,0,0,38,8,3
+STUTTGART HIGH SCHOOL,,51296001055,465030,Computer Science with Programming/Coding Emphasis Level 3,11,10,1,1,0,0,11,3,3
+STUTTGART HIGH SCHOOL,,51296001055,465040,Computer Science with Programming/Coding Emphasis Level 4,11,10,1,1,0,0,11,3,3
+STUTTGART HIGH SCHOOL,,51296001055,465650,Advanced Programming: Game Design Level 1,5,5,0,0,0,0,5,1,0
+STUTTGART HIGH SCHOOL,,51296001055,465660,Advanced Programming: Game Design Level 2,5,5,0,0,0,0,5,1,0
+STUTTGART HIGH SCHOOL,,51296001055,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,4,2,1,1,0,0,4,0,0
+STUTTGART HIGH SCHOOL,,51296001055,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,4,2,1,1,0,0,4,0,0
+CROSSETT HIGH SCHOOL,,50480000202,465010,Computer Science with Programming/Coding Emphasis Level 1,2,2,0,0,0,0,0,1,0
+CROSSETT HIGH SCHOOL,,50480000202,465020,Computer Science with Programming/Coding Emphasis Level 2,3,2,1,0,0,0,1,1,0
+CROSSETT HIGH SCHOOL,,50480000202,465210,Computer Science with Information Security Emphasis Level 1,3,1,1,0,0,0,0,1,0
+CROSSETT HIGH SCHOOL,,50480000202,465220,Computer Science with Information Security Emphasis Level 2,3,1,1,0,0,0,0,1,0
+CROSSETT HIGH SCHOOL,,50480000202,465510,Robotics Level 1,8,6,0,1,0,0,4,0,1
+CROSSETT HIGH SCHOOL,,50480000202,465520,Robotics Level 2,7,5,0,1,0,0,4,0,1
+CROSSETT HIGH SCHOOL,,50480000202,565910,Other Concurrent Credit Computer Science 1,3,2,2,0,0,0,1,0,0
+CROSSETT HIGH SCHOOL,,50480000202,565920,Other Concurrent Credit Computer Science 2,3,2,2,0,0,0,1,0,0
+CROSSETT HIGH SCHOOL,,50480000202,565930,Other Concurrent Credit Computer Science 3,1,1,1,0,0,0,0,0,0
+HAMBURG HIGH SCHOOL,,50004201281,465010,Computer Science with Programming/Coding Emphasis Level 1,6,6,0,4,0,0,5,0,3
+HAMBURG HIGH SCHOOL,,50004201281,465020,Computer Science with Programming/Coding Emphasis Level 2,6,6,0,4,0,0,5,0,3
+HAMBURG HIGH SCHOOL,,50004201281,465050,Advanced Programming Level 1,1,1,0,1,0,0,1,0,1
+HAMBURG HIGH SCHOOL,,50004201281,465060,Advanced Programming Level 2,1,1,0,1,0,0,1,0,1
+HAMBURG HIGH SCHOOL,,50004201281,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,3,2,2,1,0,0,2,1,0
+HAMBURG HIGH SCHOOL,,50004201281,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,2,2,1,1,0,0,1,1,0
+COTTER HIGH SCHOOL,,50468000194,465010,Computer Science with Programming/Coding Emphasis Level 1,18,16,0,0,1,0,18,1,0
+COTTER HIGH SCHOOL,,50468000194,465020,Computer Science with Programming/Coding Emphasis Level 2,17,16,0,0,1,0,16,1,0
+COTTER HIGH SCHOOL,,50468000194,465030,Computer Science with Programming/Coding Emphasis Level 3,2,2,0,0,0,0,2,1,0
+COTTER HIGH SCHOOL,,50468000194,465040,Computer Science with Programming/Coding Emphasis Level 4,2,2,0,0,0,0,2,1,0
+COTTER HIGH SCHOOL,,50468000194,465210,Computer Science with Information Security Emphasis Level 1,2,2,0,0,0,0,2,0,0
+MOUNTAIN HOME CAREER ACADEMIES,,50004300676,465010,Computer Science with Programming/Coding Emphasis Level 1,39,24,0,3,0,1,15,7,0
+MOUNTAIN HOME CAREER ACADEMIES,,50004300676,465020,Computer Science with Programming/Coding Emphasis Level 2,37,23,0,3,0,1,15,6,1
+MOUNTAIN HOME CAREER ACADEMIES,,50004300676,465030,Computer Science with Programming/Coding Emphasis Level 3,20,20,0,0,0,0,9,1,0
+MOUNTAIN HOME CAREER ACADEMIES,,50004300676,465040,Computer Science with Programming/Coding Emphasis Level 4,20,20,0,0,0,0,9,1,0
+MOUNTAIN HOME CAREER ACADEMIES,,50004300676,465050,Advanced Programming Level 1,2,2,0,0,0,0,1,1,0
+MOUNTAIN HOME CAREER ACADEMIES,,50004300676,465060,Advanced Programming Level 2,2,2,0,0,0,0,1,1,0
+MOUNTAIN HOME CAREER ACADEMIES,,50004300676,465110,Computer Science with  Networking/Hardware Emphasis Level 1,51,41,0,2,1,1,22,9,1
+MOUNTAIN HOME CAREER ACADEMIES,,50004300676,465120,Computer Science with  Networking/Hardware Emphasis Level 2,52,42,0,2,1,1,19,9,2
+MOUNTAIN HOME CAREER ACADEMIES,,50004300676,465130,Computer Science with  Networking/Hardware Emphasis Level 3,27,25,0,0,0,0,7,3,0
+MOUNTAIN HOME CAREER ACADEMIES,,50004300676,465140,Computer Science with  Networking/Hardware Emphasis Level 4,28,26,0,0,0,0,7,3,0
+NORFORK HIGH SCHOOL,,51056000774,465010,Computer Science with Programming/Coding Emphasis Level 1,2,2,0,0,0,0,1,1,0
+NORFORK HIGH SCHOOL,,51056000774,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+BENTONVILLE HIGH SCHOOL,,50306000073,465010,Computer Science with Programming/Coding Emphasis Level 1,79,68,0,5,2,0,15,4,2
+BENTONVILLE HIGH SCHOOL,,50306000073,465020,Computer Science with Programming/Coding Emphasis Level 2,73,64,0,5,2,0,13,3,2
+BENTONVILLE HIGH SCHOOL,,50306000073,465030,Computer Science with Programming/Coding Emphasis Level 3,22,20,1,2,0,0,2,13,1
+BENTONVILLE HIGH SCHOOL,,50306000073,465040,Computer Science with Programming/Coding Emphasis Level 4,20,18,1,1,0,0,2,12,1
+BENTONVILLE HIGH SCHOOL,,50306000073,465230,Computer Science with Information Security Emphasis Level 3,6,5,0,1,0,0,2,4,0
+BENTONVILLE HIGH SCHOOL,,50306000073,465240,Computer Science with Information Security Emphasis Level 4,5,5,0,1,0,0,2,4,0
+BENTONVILLE HIGH SCHOOL,,50306000073,465330,Mobile Application Development Level 3,12,10,1,0,0,0,2,4,0
+BENTONVILLE HIGH SCHOOL,,50306000073,465340,Mobile Application Development Level 4,10,9,0,0,0,0,2,4,0
+BENTONVILLE HIGH SCHOOL,,50306000073,465910,Computer Science Independent Study Level I,25,21,0,2,1,0,2,2,0
+BENTONVILLE HIGH SCHOOL,,50306000073,465920,Computer Science Independent Study Level II,25,21,0,2,1,0,2,1,0
+BENTONVILLE HIGH SCHOOL,,50306000073,465950,Computer Science Internship Level I,7,7,1,1,0,0,0,0,0
+BENTONVILLE HIGH SCHOOL,,50306000073,465960,Computer Science Internship Level II,7,7,1,1,0,0,0,0,0
+BENTONVILLE HIGH SCHOOL,,50306000073,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,147,100,2,5,0,0,9,7,1
+BENTONVILLE HIGH SCHOOL,,50306000073,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,146,99,2,5,0,0,9,7,1
+BENTONVILLE HIGH SCHOOL,,50306000073,565110,College Board Advanced Placement (AP) Computer Science A Level 1,31,28,2,1,0,0,3,5,0
+BENTONVILLE HIGH SCHOOL,,50306000073,565120,College Board Advanced Placement (AP) Computer Science A Level 2,29,27,2,1,0,0,2,4,0
+BENTONVILLE HIGH SCHOOL,,50306000073,565810,Weighted Concurrent Credit Computer Science 1,25,21,0,2,1,0,2,0,0
+BENTONVILLE HIGH SCHOOL,,50306000073,565820,Weighted Concurrent Credit Computer Science 2,25,21,0,2,1,0,2,0,0
+BENTONVILLE HIGH SCHOOL,,50306000073,565830,Weighted Concurrent Credit Computer Science 3,7,7,1,1,0,0,0,0,0
+BENTONVILLE HIGH SCHOOL,,50306000073,565840,Weighted Concurrent Credit Computer Science 4,7,7,1,1,0,0,0,0,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465010,Computer Science with Programming/Coding Emphasis Level 1,68,58,1,10,1,0,12,8,2
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465020,Computer Science with Programming/Coding Emphasis Level 2,64,55,1,9,1,0,12,8,1
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465030,Computer Science with Programming/Coding Emphasis Level 3,23,22,2,2,0,0,2,11,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465040,Computer Science with Programming/Coding Emphasis Level 4,20,19,1,2,0,0,2,6,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465230,Computer Science with Information Security Emphasis Level 3,16,14,0,3,2,0,3,5,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465240,Computer Science with Information Security Emphasis Level 4,16,14,0,2,2,0,4,5,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465330,Mobile Application Development Level 3,8,7,0,2,0,0,1,2,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465340,Mobile Application Development Level 4,8,7,0,2,0,0,1,3,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465910,Computer Science Independent Study Level I,9,7,1,2,0,0,2,2,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465920,Computer Science Independent Study Level II,9,7,1,2,0,0,2,2,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465950,Computer Science Internship Level I,7,7,0,0,0,0,1,2,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,465960,Computer Science Internship Level II,7,7,0,0,0,0,1,2,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,45,31,4,5,1,0,7,2,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,45,31,4,5,1,0,7,2,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,565110,College Board Advanced Placement (AP) Computer Science A Level 1,16,11,1,3,0,0,2,2,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,565120,College Board Advanced Placement (AP) Computer Science A Level 2,15,10,1,3,0,0,2,2,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,565810,Weighted Concurrent Credit Computer Science 1,9,7,1,2,0,0,2,1,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,565820,Weighted Concurrent Credit Computer Science 2,9,7,1,2,0,0,2,1,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,565830,Weighted Concurrent Credit Computer Science 3,7,7,0,0,0,0,1,2,0
+BENTONVILLE WEST HIGH SCHOOL,,50306001618,565840,Weighted Concurrent Credit Computer Science 4,7,7,0,0,0,0,1,2,0
+DECATUR HIGH SCHOOL,,50498000221,465010,Computer Science with Programming/Coding Emphasis Level 1,2,2,0,1,0,0,2,0,0
+DECATUR HIGH SCHOOL,,50498000221,565110,College Board Advanced Placement (AP) Computer Science A Level 1,2,2,0,1,0,0,2,0,0
+DECATUR HIGH SCHOOL,,50498000221,565120,College Board Advanced Placement (AP) Computer Science A Level 2,2,2,0,1,0,0,2,0,0
+DECATUR HIGH SCHOOL,,50498000221,565910,Other Concurrent Credit Computer Science 1,1,1,0,0,0,0,1,0,0
+GENTRY HIGH SCHOOL CONVERSION CHARTER,,50654000390,465010,Computer Science with Programming/Coding Emphasis Level 1,8,7,0,1,0,0,3,2,1
+GENTRY HIGH SCHOOL CONVERSION CHARTER,,50654000390,465020,Computer Science with Programming/Coding Emphasis Level 2,8,7,0,1,0,0,3,2,1
+GENTRY HIGH SCHOOL CONVERSION CHARTER,,50654000390,465030,Computer Science with Programming/Coding Emphasis Level 3,2,2,0,0,0,0,0,1,0
+GENTRY HIGH SCHOOL CONVERSION CHARTER,,50654000390,465040,Computer Science with Programming/Coding Emphasis Level 4,2,2,0,0,0,0,0,1,0
+GENTRY HIGH SCHOOL CONVERSION CHARTER,,50654000390,465510,Robotics Level 1,11,9,0,1,1,0,4,4,2
+GENTRY HIGH SCHOOL CONVERSION CHARTER,,50654000390,465520,Robotics Level 2,12,9,0,1,1,0,4,4,2
+GENTRY HIGH SCHOOL CONVERSION CHARTER,,50654000390,465530,Robotics Level 3,5,4,0,1,0,0,3,3,1
+GENTRY HIGH SCHOOL CONVERSION CHARTER,,50654000390,465540,Robotics Level 4,5,4,0,1,0,0,3,3,1
+GRAVETTE HIGH SCHOOL,,50684000414,465010,Computer Science with Programming/Coding Emphasis Level 1,21,17,0,1,1,0,9,3,1
+GRAVETTE HIGH SCHOOL,,50684000414,465020,Computer Science with Programming/Coding Emphasis Level 2,21,17,0,1,1,0,8,3,1
+GRAVETTE HIGH SCHOOL,,50684000414,465030,Computer Science with Programming/Coding Emphasis Level 3,5,5,0,1,0,0,1,4,0
+GRAVETTE HIGH SCHOOL,,50684000414,465040,Computer Science with Programming/Coding Emphasis Level 4,5,5,0,1,0,0,1,3,0
+ROGERS HIGH SCHOOL,,51197000958,465010,Computer Science with Programming/Coding Emphasis Level 1,22,20,0,9,0,0,8,3,5
+ROGERS HIGH SCHOOL,,51197000958,465020,Computer Science with Programming/Coding Emphasis Level 2,15,14,0,5,0,0,5,3,3
+ROGERS HIGH SCHOOL,,51197000958,465650,Advanced Programming: Game Design Level 1,13,13,1,6,0,0,7,6,1
+ROGERS HIGH SCHOOL,,51197000958,465660,Advanced Programming: Game Design Level 2,13,13,1,6,0,0,7,4,1
+ROGERS HIGH SCHOOL,,51197000958,465910,Computer Science Independent Study Level I,1,1,0,0,0,0,1,1,0
+ROGERS HIGH SCHOOL,,51197000958,565110,College Board Advanced Placement (AP) Computer Science A Level 1,34,30,2,10,0,0,9,2,3
+ROGERS HIGH SCHOOL,,51197000958,565120,College Board Advanced Placement (AP) Computer Science A Level 2,33,29,2,9,0,0,8,1,3
+ROGERS HERITAGE HIGH SCHOOL,,51197001483,465010,Computer Science with Programming/Coding Emphasis Level 1,42,37,0,17,0,0,24,8,12
+ROGERS HERITAGE HIGH SCHOOL,,51197001483,465020,Computer Science with Programming/Coding Emphasis Level 2,38,32,0,15,0,0,20,8,10
+ROGERS HERITAGE HIGH SCHOOL,,51197001483,565110,College Board Advanced Placement (AP) Computer Science A Level 1,9,8,0,1,0,0,5,8,0
+ROGERS HERITAGE HIGH SCHOOL,,51197001483,565120,College Board Advanced Placement (AP) Computer Science A Level 2,11,10,0,1,0,0,6,8,0
+ROGERS NEW TECHNOLOGY HIGH SCHOOL,,51197001586,465310,Mobile Application Development Level 1,23,19,0,8,0,0,12,1,2
+ROGERS NEW TECHNOLOGY HIGH SCHOOL,,51197001586,465320,Mobile Application Development Level 2,21,17,0,6,0,0,10,1,0
+ROGERS NEW TECHNOLOGY HIGH SCHOOL,,51197001586,465330,Mobile Application Development Level 3,6,5,0,2,0,0,3,2,0
+ROGERS NEW TECHNOLOGY HIGH SCHOOL,,51197001586,465340,Mobile Application Development Level 4,6,5,0,2,0,0,3,2,0
+ROGERS NEW TECHNOLOGY HIGH SCHOOL,,51197001586,465910,Computer Science Independent Study Level I,2,2,0,1,0,0,1,2,0
+ROGERS NEW TECHNOLOGY HIGH SCHOOL,,51197001586,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,29,20,0,12,0,1,13,3,5
+ROGERS NEW TECHNOLOGY HIGH SCHOOL,,51197001586,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,27,20,0,13,0,1,14,2,5
+ROGERS NEW TECHNOLOGY HIGH SCHOOL,,51197001586,565110,College Board Advanced Placement (AP) Computer Science A Level 1,10,9,1,2,0,0,3,5,0
+ROGERS NEW TECHNOLOGY HIGH SCHOOL,,51197001586,565120,College Board Advanced Placement (AP) Computer Science A Level 2,10,9,1,2,0,0,3,4,0
+SILOAM SPRINGS HIGH SCHOOL CONVERSION CHARTER,,51245001003,465010,Computer Science with Programming/Coding Emphasis Level 1,41,36,0,11,1,0,14,4,5
+SILOAM SPRINGS HIGH SCHOOL CONVERSION CHARTER,,51245001003,465020,Computer Science with Programming/Coding Emphasis Level 2,29,25,0,10,0,0,12,2,5
+SILOAM SPRINGS HIGH SCHOOL CONVERSION CHARTER,,51245001003,465510,Robotics Level 1,12,11,0,2,1,0,1,7,1
+SILOAM SPRINGS HIGH SCHOOL CONVERSION CHARTER,,51245001003,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,13,12,0,2,1,0,4,4,1
+SILOAM SPRINGS HIGH SCHOOL CONVERSION CHARTER,,51245001003,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,13,12,0,2,1,0,4,2,1
+PEA RIDGE HIGH SCHOOL,,50303000072,465010,Computer Science with Programming/Coding Emphasis Level 1,13,12,0,0,0,0,6,1,0
+PEA RIDGE HIGH SCHOOL,,50303000072,465020,Computer Science with Programming/Coding Emphasis Level 2,13,12,0,0,0,0,6,2,0
+PEA RIDGE HIGH SCHOOL,,50303000072,465030,Computer Science with Programming/Coding Emphasis Level 3,4,4,0,0,0,0,2,2,0
+PEA RIDGE HIGH SCHOOL,,50303000072,465040,Computer Science with Programming/Coding Emphasis Level 4,5,5,0,0,0,0,2,1,0
+PEA RIDGE HIGH SCHOOL,,50303000072,465050,Advanced Programming Level 1,1,1,0,0,0,0,0,0,0
+PEA RIDGE HIGH SCHOOL,,50303000072,465060,Advanced Programming Level 2,1,1,0,0,0,0,0,1,0
+PEA RIDGE HIGH SCHOOL,,50303000072,465110,Computer Science with  Networking/Hardware Emphasis Level 1,20,18,0,0,0,0,3,2,0
+PEA RIDGE HIGH SCHOOL,,50303000072,465120,Computer Science with  Networking/Hardware Emphasis Level 2,16,14,0,0,0,0,3,2,0
+PEA RIDGE HIGH SCHOOL,,50303000072,465130,Computer Science with  Networking/Hardware Emphasis Level 3,4,4,0,0,0,0,1,2,0
+PEA RIDGE HIGH SCHOOL,,50303000072,465140,Computer Science with  Networking/Hardware Emphasis Level 4,2,2,0,0,0,0,1,1,0
+PEA RIDGE HIGH SCHOOL,,50303000072,565910,Other Concurrent Credit Computer Science 1,1,1,0,0,0,0,0,0,0
+PEA RIDGE JUNIOR HIGH SCHOOL,,50303000169,465010,Computer Science with Programming/Coding Emphasis Level 1,8,7,0,1,0,0,3,3,0
+PEA RIDGE JUNIOR HIGH SCHOOL,,50303000169,465020,Computer Science with Programming/Coding Emphasis Level 2,6,5,0,1,0,0,2,3,0
+ARKANSAS ARTS ACADEMY HIGH SCHOOL,,50005501508,465010,Computer Science with Programming/Coding Emphasis Level 1,22,14,1,3,0,0,7,2,2
+ARKANSAS ARTS ACADEMY HIGH SCHOOL,,50005501508,465020,Computer Science with Programming/Coding Emphasis Level 2,21,13,1,3,0,0,7,2,2
+ARKANSAS ARTS ACADEMY HIGH SCHOOL,,50005501508,465650,Advanced Programming: Game Design Level 1,16,14,0,0,0,0,4,6,1
+ARKANSAS ARTS ACADEMY HIGH SCHOOL,,50005501508,465660,Advanced Programming: Game Design Level 2,10,8,0,0,0,0,3,4,1
+ARKANSAS ARTS ACADEMY HIGH SCHOOL,,50005501508,565110,College Board Advanced Placement (AP) Computer Science A Level 1,2,0,0,1,0,0,0,3,0
+ARKANSAS ARTS ACADEMY HIGH SCHOOL,,50005501508,565120,College Board Advanced Placement (AP) Computer Science A Level 2,2,0,0,1,0,0,0,3,0
+ARKANSAS ARTS ACADEMY HIGH SCHOOL,,50005501508,565910,Other Concurrent Credit Computer Science 1,1,0,0,1,0,0,0,0,0
+NORTHWEST ARKANSAS CLASSICAL ACADEMY HIGH,,50040901606,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,0,1,0
+NORTHWEST ARKANSAS CLASSICAL ACADEMY HIGH,,50040901606,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,0,1,0
+NORTHWEST ARKANSAS CLASSICAL ACADEMY HIGH,,50040901606,565910,Other Concurrent Credit Computer Science 1,1,0,0,0,0,0,0,0,0
+WEST LITTLE ROCK CLASSICAL ACADEMY,,50040901685,465010,Computer Science with Programming/Coding Emphasis Level 1,2,1,0,0,0,0,0,0,0
+WEST LITTLE ROCK CLASSICAL ACADEMY,,50040901685,465020,Computer Science with Programming/Coding Emphasis Level 2,3,1,0,0,0,0,0,1,0
+WEST LITTLE ROCK CLASSICAL ACADEMY,,50040901685,465210,Computer Science with Information Security Emphasis Level 1,3,3,0,0,1,0,0,2,0
+WEST LITTLE ROCK CLASSICAL ACADEMY,,50040901685,465220,Computer Science with Information Security Emphasis Level 2,4,4,0,0,1,0,0,2,0
+ARKANSAS CONNECTIONS ACADEMY HIGH,,50041701632,465010,Computer Science with Programming/Coding Emphasis Level 1,24,17,3,2,0,0,12,4,0
+ARKANSAS CONNECTIONS ACADEMY HIGH,,50041701632,465050,Advanced Programming Level 1,6,6,0,0,0,0,1,3,0
+ARKANSAS CONNECTIONS ACADEMY HIGH,,50041701632,465650,Advanced Programming: Game Design Level 1,20,19,3,3,0,0,11,2,0
+ARKANSAS CONNECTIONS ACADEMY HIGH,,50041701632,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,1,0,0,0,0,0,0,0
+ALPENA HIGH SCHOOL,,50228000007,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,0,3,0
+ALPENA HIGH SCHOOL,,50228000007,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,0,0,0
+ALPENA HIGH SCHOOL,,50228000007,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,1,1,0,0,0,0,1,2,0
+BERGMAN HIGH SCHOOL,,50309000078,465010,Computer Science with Programming/Coding Emphasis Level 1,13,10,0,2,0,0,4,0,0
+BERGMAN HIGH SCHOOL,,50309000078,465020,Computer Science with Programming/Coding Emphasis Level 2,9,7,0,0,0,0,2,0,0
+BERGMAN HIGH SCHOOL,,50309000078,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,3,2,0,0,0,0,3,0,0
+BERGMAN HIGH SCHOOL,,50309000078,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,3,2,0,0,0,0,3,0,0
+HARRISON HIGH SCHOOL CONVERSION CHARTER,,50738000452,465010,Computer Science with Programming/Coding Emphasis Level 1,32,27,0,2,1,0,16,3,0
+HARRISON HIGH SCHOOL CONVERSION CHARTER,,50738000452,465020,Computer Science with Programming/Coding Emphasis Level 2,27,23,0,2,1,0,14,2,0
+HARRISON HIGH SCHOOL CONVERSION CHARTER,,50738000452,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,0,0
+HARRISON HIGH SCHOOL CONVERSION CHARTER,,50738000452,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,0,0
+HARRISON HIGH SCHOOL CONVERSION CHARTER,,50738000452,465230,Computer Science with Information Security Emphasis Level 3,3,3,0,0,0,0,0,1,0
+HARRISON HIGH SCHOOL CONVERSION CHARTER,,50738000452,465240,Computer Science with Information Security Emphasis Level 4,1,1,0,0,0,0,0,1,0
+HARRISON HIGH SCHOOL CONVERSION CHARTER,,50738000452,565910,Other Concurrent Credit Computer Science 1,1,0,0,0,0,0,0,0,0
+OMAHA HIGH SCHOOL,,51092000821,465010,Computer Science with Programming/Coding Emphasis Level 1,4,4,0,0,0,0,4,0,0
+OMAHA HIGH SCHOOL,,51092000821,465020,Computer Science with Programming/Coding Emphasis Level 2,4,4,0,0,0,0,4,0,0
+VALLEY SPRINGS HIGH SCHOOL,,51335001093,465010,Computer Science with Programming/Coding Emphasis Level 1,13,9,0,1,0,0,4,0,1
+VALLEY SPRINGS HIGH SCHOOL,,51335001093,465020,Computer Science with Programming/Coding Emphasis Level 2,10,7,0,1,0,0,2,0,1
+VALLEY SPRINGS HIGH SCHOOL,,51335001093,465030,Computer Science with Programming/Coding Emphasis Level 3,1,1,0,1,0,0,1,1,1
+LEAD HILL HIGH SCHOOL,,50342000103,465010,Computer Science with Programming/Coding Emphasis Level 1,5,4,0,0,0,0,5,1,0
+LEAD HILL HIGH SCHOOL,,50342000103,465020,Computer Science with Programming/Coding Emphasis Level 2,3,2,0,0,0,0,3,1,0
+HERMITAGE HIGH SCHOOL,,50771000485,465110,Computer Science with  Networking/Hardware Emphasis Level 1,1,1,0,0,0,0,1,1,0
+HERMITAGE HIGH SCHOOL,,50771000485,465120,Computer Science with  Networking/Hardware Emphasis Level 2,1,1,0,0,0,0,1,0,0
+WARREN HIGH SCHOOL,,50000601130,465110,Computer Science with  Networking/Hardware Emphasis Level 1,49,23,13,15,0,0,49,3,3
+WARREN HIGH SCHOOL,,50000601130,465120,Computer Science with  Networking/Hardware Emphasis Level 2,52,24,14,16,0,0,51,3,3
+WARREN HIGH SCHOOL,,50000601130,465130,Computer Science with  Networking/Hardware Emphasis Level 3,18,9,2,5,0,0,18,0,1
+WARREN HIGH SCHOOL,,50000601130,465140,Computer Science with  Networking/Hardware Emphasis Level 4,19,11,2,5,0,0,19,1,1
+WARREN HIGH SCHOOL,,50000601130,465910,Computer Science Independent Study Level I,74,37,29,23,0,0,74,9,5
+WARREN HIGH SCHOOL,,50000601130,465920,Computer Science Independent Study Level II,73,37,27,23,0,0,73,10,5
+HAMPTON HIGH SCHOOL,,50723000441,465010,Computer Science with Programming/Coding Emphasis Level 1,21,9,9,0,0,0,12,2,0
+HAMPTON HIGH SCHOOL,,50723000441,465020,Computer Science with Programming/Coding Emphasis Level 2,20,9,9,0,0,0,11,2,0
+HAMPTON HIGH SCHOOL,,50723000441,465030,Computer Science with Programming/Coding Emphasis Level 3,5,5,2,1,0,0,2,8,1
+HAMPTON HIGH SCHOOL,,50723000441,465040,Computer Science with Programming/Coding Emphasis Level 4,4,4,2,1,0,0,2,9,1
+HAMPTON HIGH SCHOOL,,50723000441,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,3,0
+HAMPTON HIGH SCHOOL,,50723000441,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,2,0
+BERRYVILLE HIGH SCHOOL,,50315000080,465010,Computer Science with Programming/Coding Emphasis Level 1,26,22,0,6,0,1,22,1,5
+BERRYVILLE HIGH SCHOOL,,50315000080,465020,Computer Science with Programming/Coding Emphasis Level 2,26,22,0,6,0,1,22,1,5
+BERRYVILLE HIGH SCHOOL,,50315000080,465030,Computer Science with Programming/Coding Emphasis Level 3,3,2,0,0,0,0,1,0,0
+BERRYVILLE HIGH SCHOOL,,50315000080,465040,Computer Science with Programming/Coding Emphasis Level 4,1,1,0,0,0,0,1,0,0
+BERRYVILLE HIGH SCHOOL,,50315000080,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,7,6,0,2,0,0,3,4,0
+BERRYVILLE HIGH SCHOOL,,50315000080,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,6,5,0,2,0,0,2,4,0
+EUREKA SPRINGS HIGH SCHOOL,,50597000306,465010,Computer Science with Programming/Coding Emphasis Level 1,9,8,1,0,0,0,4,0,0
+EUREKA SPRINGS HIGH SCHOOL,,50597000306,465020,Computer Science with Programming/Coding Emphasis Level 2,9,8,1,0,0,0,4,0,0
+EUREKA SPRINGS HIGH SCHOOL,,50597000306,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,0,0
+GREEN FOREST HIGH SCHOOL,,50687000416,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,0,0
+GREEN FOREST HIGH SCHOOL,,50687000416,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+DERMOTT HIGH SCHOOL,,50517000239,465010,Computer Science with Programming/Coding Emphasis Level 1,1,0,0,0,0,0,1,1,0
+DERMOTT HIGH SCHOOL,,50517000239,465020,Computer Science with Programming/Coding Emphasis Level 2,1,0,0,0,0,0,1,1,0
+LAKESIDE HIGH SCHOOL,,50864000578,465010,Computer Science with Programming/Coding Emphasis Level 1,26,11,19,1,0,0,26,0,0
+LAKESIDE HIGH SCHOOL,,50864000578,465020,Computer Science with Programming/Coding Emphasis Level 2,26,11,19,1,0,0,26,0,0
+ARKADELPHIA HIGH SCHOOL,,50243000018,465010,Computer Science with Programming/Coding Emphasis Level 1,4,2,0,4,0,0,0,0,0
+ARKADELPHIA HIGH SCHOOL,,50243000018,465020,Computer Science with Programming/Coding Emphasis Level 2,4,2,0,4,0,0,0,0,0
+ARKADELPHIA HIGH SCHOOL,,50243000018,465210,Computer Science with Information Security Emphasis Level 1,3,1,0,0,0,0,0,1,0
+ARKADELPHIA HIGH SCHOOL,,50243000018,465220,Computer Science with Information Security Emphasis Level 2,3,1,0,0,0,0,0,1,0
+ARKADELPHIA HIGH SCHOOL,,50243000018,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,17,16,4,3,0,0,4,2,0
+ARKADELPHIA HIGH SCHOOL,,50243000018,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,15,14,4,2,0,0,3,2,0
+ARKADELPHIA HIGH SCHOOL,,50243000018,565110,College Board Advanced Placement (AP) Computer Science A Level 1,4,4,1,0,0,0,1,0,0
+ARKADELPHIA HIGH SCHOOL,,50243000018,565120,College Board Advanced Placement (AP) Computer Science A Level 2,4,4,1,0,0,0,1,0,0
+GURDON HIGH SCHOOL,,50711000430,465010,Computer Science with Programming/Coding Emphasis Level 1,5,3,0,3,0,0,4,1,1
+GURDON HIGH SCHOOL,,50711000430,465020,Computer Science with Programming/Coding Emphasis Level 2,2,1,0,2,0,0,1,1,1
+CORNING HIGH SCHOOL,,50000900191,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,0,0
+CORNING HIGH SCHOOL,,50000900191,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+CORNING HIGH SCHOOL,,50000900191,565910,Other Concurrent Credit Computer Science 1,1,1,0,1,0,0,1,2,0
+CORNING HIGH SCHOOL,,50000900191,565920,Other Concurrent Credit Computer Science 2,1,1,0,1,0,0,1,0,0
+CORNING HIGH SCHOOL,,50000900191,565930,Other Concurrent Credit Computer Science 3,1,1,0,1,0,0,1,0,0
+RECTOR HIGH SCHOOL,,50437001274,465010,Computer Science with Programming/Coding Emphasis Level 1,2,2,0,0,0,0,1,0,0
+RECTOR HIGH SCHOOL,,50437001274,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+RECTOR HIGH SCHOOL,,50437001274,465210,Computer Science with Information Security Emphasis Level 1,2,2,0,0,0,0,1,0,0
+RECTOR HIGH SCHOOL,,50437001274,465220,Computer Science with Information Security Emphasis Level 2,2,2,0,0,0,0,1,0,0
+HEBER SPRINGS HIGH SCHOOL,,50756000467,465010,Computer Science with Programming/Coding Emphasis Level 1,27,23,0,0,0,0,14,2,0
+HEBER SPRINGS HIGH SCHOOL,,50756000467,465020,Computer Science with Programming/Coding Emphasis Level 2,20,17,0,0,0,0,9,2,0
+HEBER SPRINGS HIGH SCHOOL,,50756000467,465210,Computer Science with Information Security Emphasis Level 1,8,3,0,0,0,0,5,1,0
+HEBER SPRINGS HIGH SCHOOL,,50756000467,465220,Computer Science with Information Security Emphasis Level 2,4,2,0,0,0,0,1,1,0
+HEBER SPRINGS HIGH SCHOOL,,50756000467,465310,Mobile Application Development Level 1,12,7,0,1,0,0,8,8,1
+HEBER SPRINGS HIGH SCHOOL,,50756000467,465320,Mobile Application Development Level 2,8,4,0,1,0,0,6,3,1
+QUITMAN HIGH SCHOOL,,51188000947,465010,Computer Science with Programming/Coding Emphasis Level 1,7,5,0,0,0,0,4,1,0
+QUITMAN HIGH SCHOOL,,51188000947,465020,Computer Science with Programming/Coding Emphasis Level 2,6,4,0,0,0,0,3,0,0
+QUITMAN HIGH SCHOOL,,51188000947,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,4,0
+QUITMAN HIGH SCHOOL,,51188000947,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,4,0
+WEST SIDE HIGH SCHOOL,,51404001147,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+WEST SIDE HIGH SCHOOL,,51404001147,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,5,3,0,0,0,0,5,0,0
+WEST SIDE HIGH SCHOOL,,51404001147,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,5,3,0,0,0,0,5,0,0
+WOODLAWN HIGH SCHOOL,,51440001172,465010,Computer Science with Programming/Coding Emphasis Level 1,1,0,0,0,0,0,1,0,0
+WOODLAWN HIGH SCHOOL,,51440001172,465020,Computer Science with Programming/Coding Emphasis Level 2,2,0,0,0,0,0,1,0,0
+WOODLAWN HIGH SCHOOL,,51440001172,465210,Computer Science with Information Security Emphasis Level 1,2,2,1,1,0,0,2,0,1
+WOODLAWN HIGH SCHOOL,,51440001172,465220,Computer Science with Information Security Emphasis Level 2,2,2,1,1,0,0,2,0,1
+RISON HIGH SCHOOL,,50006700951,465010,Computer Science with Programming/Coding Emphasis Level 1,8,7,3,0,0,0,4,1,0
+RISON HIGH SCHOOL,,50006700951,465020,Computer Science with Programming/Coding Emphasis Level 2,6,6,2,0,0,0,2,1,0
+RISON HIGH SCHOOL,,50006700951,465110,Computer Science with  Networking/Hardware Emphasis Level 1,4,4,2,0,0,0,3,2,0
+RISON HIGH SCHOOL,,50006700951,465120,Computer Science with  Networking/Hardware Emphasis Level 2,3,3,2,0,0,0,3,2,0
+RISON HIGH SCHOOL,,50006700951,465210,Computer Science with Information Security Emphasis Level 1,2,1,0,0,0,0,2,1,0
+RISON HIGH SCHOOL,,50006700951,465220,Computer Science with Information Security Emphasis Level 2,2,1,0,0,0,0,2,1,0
+RISON HIGH SCHOOL,,50006700951,465230,Computer Science with Information Security Emphasis Level 3,1,0,0,0,0,0,0,0,0
+RISON HIGH SCHOOL,,50006700951,465240,Computer Science with Information Security Emphasis Level 4,1,0,0,0,0,0,0,0,0
+MAGNOLIA HIGH SCHOOL,,50004400656,465010,Computer Science with Programming/Coding Emphasis Level 1,30,19,15,1,0,0,19,0,1
+MAGNOLIA HIGH SCHOOL,,50004400656,465020,Computer Science with Programming/Coding Emphasis Level 2,20,15,8,0,0,0,12,0,0
+EMERSON HIGH SCHOOL,,50006800292,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,0,0
+EMERSON HIGH SCHOOL,,50006800292,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+BRADLEY HIGH SCHOOL,,50006800109,465010,Computer Science with Programming/Coding Emphasis Level 1,4,4,1,1,0,0,0,2,0
+BRADLEY HIGH SCHOOL,,50006800109,465020,Computer Science with Programming/Coding Emphasis Level 2,2,2,0,1,0,0,0,2,0
+BRADLEY HIGH SCHOOL,,50006800109,565910,Other Concurrent Credit Computer Science 1,1,1,0,0,0,0,0,1,0
+BRADLEY HIGH SCHOOL,,50006800109,565920,Other Concurrent Credit Computer Science 2,1,1,0,0,0,0,0,1,0
+BRADLEY HIGH SCHOOL,,50006800109,565930,Other Concurrent Credit Computer Science 3,1,1,0,0,0,0,0,1,0
+TAYLOR HIGH SCHOOL,,50006801063,465210,Computer Science with Information Security Emphasis Level 1,1,0,0,0,0,0,0,0,0
+TAYLOR HIGH SCHOOL,,50006801063,465220,Computer Science with Information Security Emphasis Level 2,1,0,0,0,0,0,0,0,0
+NEMO VISTA HIGH SCHOOL,,51041000760,465010,Computer Science with Programming/Coding Emphasis Level 1,3,2,0,1,0,0,2,0,0
+NEMO VISTA HIGH SCHOOL,,51041000760,465020,Computer Science with Programming/Coding Emphasis Level 2,3,2,0,1,0,0,2,0,0
+NEMO VISTA HIGH SCHOOL,,51041000760,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,0,0
+NEMO VISTA HIGH SCHOOL,,51041000760,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,1,1,0,0,0,0,0,0,0
+WONDERVIEW HIGH SCHOOL,,51437001170,465010,Computer Science with Programming/Coding Emphasis Level 1,2,2,0,0,0,0,0,0,0
+WONDERVIEW HIGH SCHOOL,,51437001170,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,0,0,0
+WONDERVIEW HIGH SCHOOL,,51437001170,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,0,0
+WONDERVIEW HIGH SCHOOL,,51437001170,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,0,0
+WONDERVIEW HIGH SCHOOL,,51437001170,465230,Computer Science with Information Security Emphasis Level 3,1,1,0,0,0,0,0,0,0
+WONDERVIEW HIGH SCHOOL,,51437001170,465240,Computer Science with Information Security Emphasis Level 4,1,1,0,0,0,0,0,0,0
+MORRILTON SR. HIGH SCHOOL,,51252001242,465010,Computer Science with Programming/Coding Emphasis Level 1,10,7,3,2,0,0,10,0,1
+MORRILTON SR. HIGH SCHOOL,,51252001242,465020,Computer Science with Programming/Coding Emphasis Level 2,5,3,2,2,0,0,5,0,1
+MORRILTON SR. HIGH SCHOOL,,51252001242,465210,Computer Science with Information Security Emphasis Level 1,6,6,0,1,0,0,6,3,1
+MORRILTON SR. HIGH SCHOOL,,51252001242,465220,Computer Science with Information Security Emphasis Level 2,11,9,1,1,0,0,11,1,1
+MORRILTON SR. HIGH SCHOOL,,51252001242,465520,Robotics Level 2,14,13,0,0,0,0,14,2,0
+MORRILTON SR. HIGH SCHOOL,,51252001242,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,2,2,0,0,0,0,2,1,0
+MORRILTON SR. HIGH SCHOOL,,51252001242,565110,College Board Advanced Placement (AP) Computer Science A Level 1,3,3,0,0,0,0,3,1,0
+MORRILTON SR. HIGH SCHOOL,,51252001242,565120,College Board Advanced Placement (AP) Computer Science A Level 2,1,1,0,0,0,0,1,2,0
+BAY HIGH SCHOOL,,50282000051,465110,Computer Science with  Networking/Hardware Emphasis Level 1,1,1,0,0,0,0,1,2,0
+BAY HIGH SCHOOL,,50282000051,465120,Computer Science with  Networking/Hardware Emphasis Level 2,1,1,0,0,0,0,1,0,0
+BAY HIGH SCHOOL,,50282000051,465130,Computer Science with  Networking/Hardware Emphasis Level 3,1,1,0,0,0,0,1,0,0
+BAY HIGH SCHOOL,,50282000051,465140,Computer Science with  Networking/Hardware Emphasis Level 4,1,1,0,0,0,0,1,0,0
+WESTSIDE HIGH SCHOOL,,51402001267,465010,Computer Science with Programming/Coding Emphasis Level 1,16,12,0,0,0,0,5,5,0
+WESTSIDE HIGH SCHOOL,,51402001267,465020,Computer Science with Programming/Coding Emphasis Level 2,14,10,0,0,0,0,4,5,0
+WESTSIDE HIGH SCHOOL,,51402001267,465030,Computer Science with Programming/Coding Emphasis Level 3,17,14,1,0,0,0,6,1,0
+WESTSIDE HIGH SCHOOL,,51402001267,465040,Computer Science with Programming/Coding Emphasis Level 4,17,14,1,0,0,0,6,1,0
+WESTSIDE HIGH SCHOOL,,51402001267,465050,Advanced Programming Level 1,6,6,0,0,0,0,1,4,0
+WESTSIDE HIGH SCHOOL,,51402001267,465060,Advanced Programming Level 2,6,6,0,0,0,0,1,4,0
+WESTSIDE HIGH SCHOOL,,51402001267,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,17,10,0,2,0,0,6,0,1
+WESTSIDE HIGH SCHOOL,,51402001267,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,13,6,0,2,0,0,6,0,1
+WESTSIDE HIGH SCHOOL,,51402001267,565910,Other Concurrent Credit Computer Science 1,3,2,0,0,0,0,0,0,0
+WESTSIDE HIGH SCHOOL,,51402001267,565920,Other Concurrent Credit Computer Science 2,2,1,0,0,0,0,0,0,0
+BROOKLAND HIGH SCHOOL,,50364000116,465010,Computer Science with Programming/Coding Emphasis Level 1,23,19,1,0,0,0,12,1,2
+BROOKLAND HIGH SCHOOL,,50364000116,465020,Computer Science with Programming/Coding Emphasis Level 2,17,15,1,0,0,0,12,1,2
+BROOKLAND HIGH SCHOOL,,50364000116,465030,Computer Science with Programming/Coding Emphasis Level 3,5,4,0,0,0,0,2,7,0
+BROOKLAND HIGH SCHOOL,,50364000116,465040,Computer Science with Programming/Coding Emphasis Level 4,3,3,0,0,0,0,1,6,0
+BROOKLAND HIGH SCHOOL,,50364000116,465130,Computer Science with  Networking/Hardware Emphasis Level 3,1,1,0,0,0,0,0,1,0
+BROOKLAND HIGH SCHOOL,,50364000116,465140,Computer Science with  Networking/Hardware Emphasis Level 4,1,1,0,0,0,0,0,1,0
+BROOKLAND JUNIOR HIGH SCHOOL,,50364001534,465010,Computer Science with Programming/Coding Emphasis Level 1,7,6,0,0,0,0,3,3,0
+BROOKLAND JUNIOR HIGH SCHOOL,,50364001534,465020,Computer Science with Programming/Coding Emphasis Level 2,7,6,0,0,0,0,3,2,0
+BUFFALO ISLAND CENTRAL HIGH SCHOOL,,50371001271,465010,Computer Science with Programming/Coding Emphasis Level 1,23,12,0,7,0,0,17,4,4
+BUFFALO ISLAND CENTRAL HIGH SCHOOL,,50371001271,465020,Computer Science with Programming/Coding Emphasis Level 2,23,12,0,7,0,0,17,2,4
+ANNIE CAMP JR. HIGH SCHOOL,,50828000547,465010,Computer Science with Programming/Coding Emphasis Level 1,9,6,5,1,0,0,9,0,0
+ANNIE CAMP JR. HIGH SCHOOL,,50828000547,465020,Computer Science with Programming/Coding Emphasis Level 2,6,4,3,0,0,0,5,0,0
+DOUGLAS MACARTHUR JUNIOR HIGH SCHOOL,,50828000548,465010,Computer Science with Programming/Coding Emphasis Level 1,8,7,3,3,0,0,8,0,0
+DOUGLAS MACARTHUR JUNIOR HIGH SCHOOL,,50828000548,465020,Computer Science with Programming/Coding Emphasis Level 2,6,5,2,2,0,0,6,0,0
+THE ACADEMIES AT JONESBORO HIGH SCHOOL,,50828000551,465010,Computer Science with Programming/Coding Emphasis Level 1,45,26,16,12,0,0,44,3,3
+THE ACADEMIES AT JONESBORO HIGH SCHOOL,,50828000551,465020,Computer Science with Programming/Coding Emphasis Level 2,37,23,11,12,0,0,35,3,3
+THE ACADEMIES AT JONESBORO HIGH SCHOOL,,50828000551,465110,Computer Science with  Networking/Hardware Emphasis Level 1,19,18,4,4,0,0,19,1,3
+THE ACADEMIES AT JONESBORO HIGH SCHOOL,,50828000551,465120,Computer Science with  Networking/Hardware Emphasis Level 2,18,17,4,4,0,0,18,2,3
+THE ACADEMIES AT JONESBORO HIGH SCHOOL,,50828000551,465130,Computer Science with  Networking/Hardware Emphasis Level 3,25,23,9,4,0,0,25,1,3
+THE ACADEMIES AT JONESBORO HIGH SCHOOL,,50828000551,465140,Computer Science with  Networking/Hardware Emphasis Level 4,22,21,7,4,0,0,22,0,3
+THE ACADEMIES AT JONESBORO HIGH SCHOOL,,50828000551,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,26,17,3,5,0,0,26,3,0
+THE ACADEMIES AT JONESBORO HIGH SCHOOL,,50828000551,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,26,17,3,5,0,0,26,2,0
+THE ACADEMIES AT JONESBORO HIGH SCHOOL,,50828000551,565110,College Board Advanced Placement (AP) Computer Science A Level 1,15,8,1,1,0,0,15,3,0
+THE ACADEMIES AT JONESBORO HIGH SCHOOL,,50828000551,565120,College Board Advanced Placement (AP) Computer Science A Level 2,16,9,1,1,0,0,16,1,0
+NETTLETON HIGH SCHOOL,,51044000762,465010,Computer Science with Programming/Coding Emphasis Level 1,28,18,16,1,0,0,13,5,0
+NETTLETON HIGH SCHOOL,,51044000762,465020,Computer Science with Programming/Coding Emphasis Level 2,18,13,7,1,0,0,7,3,0
+NETTLETON HIGH SCHOOL,,51044000762,465110,Computer Science with  Networking/Hardware Emphasis Level 1,9,9,2,1,0,0,4,4,0
+NETTLETON HIGH SCHOOL,,51044000762,465120,Computer Science with  Networking/Hardware Emphasis Level 2,8,8,2,1,0,0,3,2,0
+NETTLETON HIGH SCHOOL,,51044000762,465130,Computer Science with  Networking/Hardware Emphasis Level 3,7,7,2,1,0,0,3,0,0
+NETTLETON HIGH SCHOOL,,51044000762,465140,Computer Science with  Networking/Hardware Emphasis Level 4,7,7,2,1,0,0,3,0,0
+NETTLETON HIGH SCHOOL,,51044000762,465910,Computer Science Independent Study Level I,9,9,2,1,0,0,4,1,0
+NETTLETON HIGH SCHOOL,,51044000762,465920,Computer Science Independent Study Level II,8,8,2,1,0,0,4,1,0
+NETTLETON HIGH SCHOOL,,51044000762,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,7,4,1,0,0,0,0,0,0
+NETTLETON HIGH SCHOOL,,51044000762,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,6,4,0,0,0,0,0,0,0
+NETTLETON HIGH SCHOOL,,51044000762,565110,College Board Advanced Placement (AP) Computer Science A Level 1,3,1,1,0,0,0,1,6,0
+NETTLETON HIGH SCHOOL,,51044000762,565120,College Board Advanced Placement (AP) Computer Science A Level 2,3,1,1,0,0,0,1,2,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465010,Computer Science with Programming/Coding Emphasis Level 1,8,4,0,0,0,0,4,1,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465020,Computer Science with Programming/Coding Emphasis Level 2,6,3,0,0,0,0,2,1,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465050,Advanced Programming Level 1,9,9,0,1,0,0,3,1,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465060,Advanced Programming Level 2,6,6,0,1,0,0,3,1,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465110,Computer Science with  Networking/Hardware Emphasis Level 1,1,1,0,0,0,0,0,1,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465120,Computer Science with  Networking/Hardware Emphasis Level 2,1,1,0,0,0,0,0,1,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465330,Mobile Application Development Level 3,3,3,0,0,0,0,0,0,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465340,Mobile Application Development Level 4,3,3,0,0,0,0,0,0,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465510,Robotics Level 1,20,20,1,0,0,0,5,3,1
+VALLEY VIEW HIGH SCHOOL,,51338001095,465520,Robotics Level 2,18,18,0,0,0,0,3,2,1
+VALLEY VIEW HIGH SCHOOL,,51338001095,465530,Robotics Level 3,5,5,0,0,0,0,0,0,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465540,Robotics Level 4,5,5,0,0,0,0,0,0,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465910,Computer Science Independent Study Level I,3,3,0,0,0,0,0,2,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,465920,Computer Science Independent Study Level II,3,3,0,0,0,0,0,1,0
+VALLEY VIEW HIGH SCHOOL,,51338001095,565110,College Board Advanced Placement (AP) Computer Science A Level 1,15,12,1,1,0,0,4,2,3
+VALLEY VIEW HIGH SCHOOL,,51338001095,565120,College Board Advanced Placement (AP) Computer Science A Level 2,12,10,1,1,0,0,2,1,2
+VALLEY VIEW JUNIOR HIGH SCHOOL,,51338001580,465010,Computer Science with Programming/Coding Emphasis Level 1,6,5,0,1,0,0,1,0,0
+VALLEY VIEW JUNIOR HIGH SCHOOL,,51338001580,465020,Computer Science with Programming/Coding Emphasis Level 2,5,4,0,0,0,0,1,0,0
+VALLEY VIEW JUNIOR HIGH SCHOOL,,51338001580,465330,Mobile Application Development Level 3,8,8,0,0,0,0,1,5,0
+VALLEY VIEW JUNIOR HIGH SCHOOL,,51338001580,465340,Mobile Application Development Level 4,8,8,0,0,0,0,1,5,0
+RIVERSIDE HIGH SCHOOL,,50001201538,465010,Computer Science with Programming/Coding Emphasis Level 1,26,14,0,1,1,0,15,6,0
+RIVERSIDE HIGH SCHOOL,,50001201538,465020,Computer Science with Programming/Coding Emphasis Level 2,13,5,0,0,0,0,7,3,0
+RIVERSIDE HIGH SCHOOL,,50001201538,465030,Computer Science with Programming/Coding Emphasis Level 3,6,5,0,1,0,0,3,1,0
+RIVERSIDE HIGH SCHOOL,,50001201538,465040,Computer Science with Programming/Coding Emphasis Level 4,5,4,0,1,0,0,3,0,0
+RIVERSIDE HIGH SCHOOL,,50001201538,465650,Advanced Programming: Game Design Level 1,1,0,0,1,0,0,1,0,0
+RIVERSIDE HIGH SCHOOL,,50001201538,465660,Advanced Programming: Game Design Level 2,1,0,0,1,0,0,1,0,0
+ALMA HIGH SCHOOL,,50225000004,565910,Other Concurrent Credit Computer Science 1,8,6,0,1,0,0,1,1,0
+CEDARVILLE HIGH SCHOOL,,50408000150,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,0,0
+CEDARVILLE HIGH SCHOOL,,50408000150,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,8,5,0,0,0,0,8,1,0
+CEDARVILLE HIGH SCHOOL,,50408000150,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,7,5,0,0,0,0,7,1,0
+CEDARVILLE HIGH SCHOOL,,50408000150,565110,College Board Advanced Placement (AP) Computer Science A Level 1,8,6,0,0,0,0,8,0,0
+CEDARVILLE HIGH SCHOOL,,50408000150,565120,College Board Advanced Placement (AP) Computer Science A Level 2,7,5,0,0,0,0,7,0,0
+CEDARVILLE HIGH SCHOOL,,50408000150,565930,Other Concurrent Credit Computer Science 3,1,1,0,0,1,0,1,2,0
+MOUNTAINBURG HIGH SCHOOL,,51026000751,465010,Computer Science with Programming/Coding Emphasis Level 1,1,0,0,0,0,0,1,0,0
+MOUNTAINBURG HIGH SCHOOL,,51026000751,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+MOUNTAINBURG HIGH SCHOOL,,51026000751,565930,Other Concurrent Credit Computer Science 3,1,1,0,0,0,0,1,0,0
+MULBERRY HIGH SCHOOL,,51029000753,465010,Computer Science with Programming/Coding Emphasis Level 1,22,17,0,0,0,0,22,0,0
+MULBERRY HIGH SCHOOL,,51029000753,465020,Computer Science with Programming/Coding Emphasis Level 2,21,16,0,0,0,0,21,0,0
+VAN BUREN HIGH SCHOOL,,51341001103,465010,Computer Science with Programming/Coding Emphasis Level 1,7,7,0,0,0,0,2,0,1
+VAN BUREN HIGH SCHOOL,,51341001103,465020,Computer Science with Programming/Coding Emphasis Level 2,8,7,0,0,0,0,2,1,1
+VAN BUREN HIGH SCHOOL,,51341001103,465030,Computer Science with Programming/Coding Emphasis Level 3,10,9,0,1,0,0,7,1,1
+VAN BUREN HIGH SCHOOL,,51341001103,465040,Computer Science with Programming/Coding Emphasis Level 4,9,8,0,1,0,0,6,1,1
+VAN BUREN HIGH SCHOOL,,51341001103,465210,Computer Science with Information Security Emphasis Level 1,9,9,0,2,0,0,4,2,1
+VAN BUREN HIGH SCHOOL,,51341001103,465220,Computer Science with Information Security Emphasis Level 2,8,8,0,1,0,0,3,2,0
+VAN BUREN HIGH SCHOOL,,51341001103,565110,College Board Advanced Placement (AP) Computer Science A Level 1,3,3,0,0,0,0,2,0,2
+VAN BUREN HIGH SCHOOL,,51341001103,565120,College Board Advanced Placement (AP) Computer Science A Level 2,3,3,0,0,0,0,2,0,2
+VAN BUREN FRESHMAN ACADEMY,,51341001631,465010,Computer Science with Programming/Coding Emphasis Level 1,35,30,2,6,1,0,16,4,1
+VAN BUREN FRESHMAN ACADEMY,,51341001631,465020,Computer Science with Programming/Coding Emphasis Level 2,33,28,2,5,1,0,15,4,0
+RIVER VALLEY VIRTUAL ACADEMY,,51341001650,465010,Computer Science with Programming/Coding Emphasis Level 1,4,2,0,0,0,0,1,1,0
+RIVER VALLEY VIRTUAL ACADEMY,,51341001650,465020,Computer Science with Programming/Coding Emphasis Level 2,3,1,0,0,0,0,1,1,0
+EARLE HIGH SCHOOL,,50555000266,465010,Computer Science with Programming/Coding Emphasis Level 1,18,8,18,0,0,0,18,2,0
+EARLE HIGH SCHOOL,,50555000266,465020,Computer Science with Programming/Coding Emphasis Level 2,18,8,18,0,0,0,18,2,0
+EARLE HIGH SCHOOL,,50555000266,565910,Other Concurrent Credit Computer Science 1,1,0,1,0,0,0,1,0,0
+EAST JUNIOR HIGH SCHOOL,,50804000523,465010,Computer Science with Programming/Coding Emphasis Level 1,38,12,38,0,0,0,38,2,0
+EAST JUNIOR HIGH SCHOOL,,50804000523,465510,Robotics Level 1,34,26,30,1,0,0,34,2,1
+WEST JUNIOR HIGH SCHOOL,,50804000529,465010,Computer Science with Programming/Coding Emphasis Level 1,20,15,13,0,0,0,20,2,0
+WEST JUNIOR HIGH SCHOOL,,50804000529,465510,Robotics Level 1,24,17,16,0,0,0,24,2,0
+WONDER JUNIOR HIGH SCHOOL,,50804000532,465010,Computer Science with Programming/Coding Emphasis Level 1,21,19,20,0,0,0,20,0,0
+WONDER JUNIOR HIGH SCHOOL,,50804000532,465510,Robotics Level 1,14,13,13,0,0,0,13,4,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,465010,Computer Science with Programming/Coding Emphasis Level 1,34,22,28,0,0,0,34,3,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,465020,Computer Science with Programming/Coding Emphasis Level 2,35,22,29,0,0,0,35,0,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,465210,Computer Science with Information Security Emphasis Level 1,21,14,10,0,0,0,21,3,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,465220,Computer Science with Information Security Emphasis Level 2,21,14,10,0,0,0,21,3,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,465230,Computer Science with Information Security Emphasis Level 3,7,4,6,0,0,0,7,1,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,465240,Computer Science with Information Security Emphasis Level 4,6,3,5,0,0,0,6,1,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,465510,Robotics Level 1,16,14,10,0,0,0,16,3,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,465520,Robotics Level 2,15,13,9,0,0,0,15,4,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,465530,Robotics Level 3,12,9,8,1,0,0,12,0,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,465540,Robotics Level 4,11,8,7,1,0,0,11,1,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,565110,College Board Advanced Placement (AP) Computer Science A Level 1,6,4,5,0,0,0,6,2,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,565120,College Board Advanced Placement (AP) Computer Science A Level 2,6,4,5,0,0,0,6,2,0
+THE ACADEMIES OF WEST MEMPHIS CHARTER SCHOOL,,50804001594,565910,Other Concurrent Credit Computer Science 1,1,0,0,1,0,0,1,4,0
+MARION HIGH SCHOOL,,50939000682,465010,Computer Science with Programming/Coding Emphasis Level 1,38,25,18,2,0,0,26,5,2
+MARION HIGH SCHOOL,,50939000682,465020,Computer Science with Programming/Coding Emphasis Level 2,34,24,16,2,0,0,23,2,2
+MARION HIGH SCHOOL,,50939000682,465210,Computer Science with Information Security Emphasis Level 1,35,28,17,2,0,0,24,2,1
+MARION HIGH SCHOOL,,50939000682,465220,Computer Science with Information Security Emphasis Level 2,35,28,17,2,0,0,24,3,1
+MARION HIGH SCHOOL,,50939000682,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,36,14,14,2,0,0,14,0,0
+MARION HIGH SCHOOL,,50939000682,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,33,14,11,2,0,0,11,0,0
+CROSS CNTY HIGH A NEW TECH SCH,,50774001537,465310,Mobile Application Development Level 1,13,6,1,0,0,0,13,0,0
+CROSS CNTY HIGH A NEW TECH SCH,,50774001537,465320,Mobile Application Development Level 2,9,5,1,0,0,0,9,0,0
+CROSS CNTY HIGH A NEW TECH SCH,,50774001537,465330,Mobile Application Development Level 3,4,3,0,0,0,0,4,1,0
+CROSS CNTY HIGH A NEW TECH SCH,,50774001537,465340,Mobile Application Development Level 4,3,2,0,0,0,0,3,3,0
+CROSS CNTY HIGH A NEW TECH SCH,,50774001537,465950,Computer Science Internship Level I,3,2,1,0,0,0,3,3,0
+WYNNE HIGH SCHOOL,,51443001176,465310,Mobile Application Development Level 1,8,5,4,0,0,0,4,1,0
+WYNNE HIGH SCHOOL,,51443001176,465320,Mobile Application Development Level 2,7,4,4,0,0,0,4,1,0
+WYNNE HIGH SCHOOL,,51443001176,465330,Mobile Application Development Level 3,10,7,1,0,0,0,3,0,0
+WYNNE HIGH SCHOOL,,51443001176,465340,Mobile Application Development Level 4,10,7,1,0,0,0,3,1,0
+WYNNE HIGH SCHOOL,,51443001176,465910,Computer Science Independent Study Level I,7,5,1,1,0,0,3,2,0
+WYNNE HIGH SCHOOL,,51443001176,465920,Computer Science Independent Study Level II,7,5,1,1,0,0,3,3,0
+FORDYCE HIGH SCHOOL,,50621000335,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,2,0
+FORDYCE HIGH SCHOOL,,50621000335,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+FORDYCE HIGH SCHOOL,,50621000335,465510,Robotics Level 1,7,5,2,0,0,0,7,0,0
+FORDYCE HIGH SCHOOL,,50621000335,465520,Robotics Level 2,5,4,2,0,0,0,5,1,0
+FORDYCE HIGH SCHOOL,,50621000335,465530,Robotics Level 3,3,1,0,0,0,0,3,1,0
+FORDYCE HIGH SCHOOL,,50621000335,465540,Robotics Level 4,3,1,0,0,0,0,3,1,0
+DUMAS JUNIOR HIGH SCHOOL,,50550000261,465010,Computer Science with Programming/Coding Emphasis Level 1,15,8,8,5,0,0,15,1,4
+DUMAS JUNIOR HIGH SCHOOL,,50550000261,465020,Computer Science with Programming/Coding Emphasis Level 2,11,7,4,5,0,0,11,1,4
+DUMAS HIGH SCHOOL,,50550000262,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,8,4,3,0,0,0,8,1,0
+DUMAS HIGH SCHOOL,,50550000262,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,7,4,2,0,0,0,7,1,0
+MCGEHEE HIGH SCHOOL,,50963000705,465010,Computer Science with Programming/Coding Emphasis Level 1,34,15,17,1,0,0,34,1,1
+MCGEHEE HIGH SCHOOL,,50963000705,465020,Computer Science with Programming/Coding Emphasis Level 2,33,14,17,1,0,0,33,1,1
+MCGEHEE HIGH SCHOOL,,50963000705,465030,Computer Science with Programming/Coding Emphasis Level 3,13,9,8,1,0,0,13,1,1
+MCGEHEE HIGH SCHOOL,,50963000705,465040,Computer Science with Programming/Coding Emphasis Level 4,13,9,8,1,0,0,13,1,1
+MCGEHEE HIGH SCHOOL,,50963000705,465510,Robotics Level 1,31,24,15,0,0,0,31,4,0
+MCGEHEE HIGH SCHOOL,,50963000705,465520,Robotics Level 2,33,26,16,0,0,0,33,4,0
+MCGEHEE HIGH SCHOOL,,50963000705,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,18,9,2,1,0,0,18,0,0
+MCGEHEE HIGH SCHOOL,,50963000705,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,18,9,2,1,0,0,18,0,0
+MCGEHEE HIGH SCHOOL,,50963000705,565110,College Board Advanced Placement (AP) Computer Science A Level 1,11,4,5,0,0,0,11,1,0
+MCGEHEE HIGH SCHOOL,,50963000705,565120,College Board Advanced Placement (AP) Computer Science A Level 2,11,4,5,0,0,0,11,1,0
+DREW CENTRAL HIGH SCHOOL,,50547000259,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,1,0,0,1,1,1
+DREW CENTRAL HIGH SCHOOL,,50547000259,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,1,0,0,1,0,1
+DREW CENTRAL HIGH SCHOOL,,50547000259,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,0,0
+DREW CENTRAL HIGH SCHOOL,,50547000259,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,0,0
+MONTICELLO HIGH SCHOOL,,50984000721,465010,Computer Science with Programming/Coding Emphasis Level 1,13,9,3,1,0,0,3,3,0
+MONTICELLO HIGH SCHOOL,,50984000721,465020,Computer Science with Programming/Coding Emphasis Level 2,11,7,3,1,0,0,3,3,0
+MONTICELLO HIGH SCHOOL,,50984000721,565110,College Board Advanced Placement (AP) Computer Science A Level 1,4,4,1,0,0,0,1,0,0
+MONTICELLO HIGH SCHOOL,,50984000721,565120,College Board Advanced Placement (AP) Computer Science A Level 2,3,3,0,0,0,0,0,0,0
+CONWAY HIGH SCHOOL,,50459000184,465010,Computer Science with Programming/Coding Emphasis Level 1,25,17,7,3,0,0,10,6,1
+CONWAY HIGH SCHOOL,,50459000184,465020,Computer Science with Programming/Coding Emphasis Level 2,24,16,6,3,0,0,9,6,1
+CONWAY HIGH SCHOOL,,50459000184,465030,Computer Science with Programming/Coding Emphasis Level 3,38,31,7,3,0,0,16,5,1
+CONWAY HIGH SCHOOL,,50459000184,465040,Computer Science with Programming/Coding Emphasis Level 4,36,31,5,3,0,0,13,5,0
+CONWAY HIGH SCHOOL,,50459000184,465110,Computer Science with  Networking/Hardware Emphasis Level 1,21,19,4,2,0,0,7,1,0
+CONWAY HIGH SCHOOL,,50459000184,465120,Computer Science with  Networking/Hardware Emphasis Level 2,21,19,4,2,0,0,7,1,0
+CONWAY HIGH SCHOOL,,50459000184,465650,Advanced Programming: Game Design Level 1,10,8,2,0,0,0,2,2,0
+CONWAY HIGH SCHOOL,,50459000184,465660,Advanced Programming: Game Design Level 2,10,8,2,0,0,0,2,2,0
+CONWAY HIGH SCHOOL,,50459000184,465910,Computer Science Independent Study Level I,24,22,4,2,0,0,7,3,0
+CONWAY HIGH SCHOOL,,50459000184,465920,Computer Science Independent Study Level II,24,22,4,2,0,0,7,3,0
+CONWAY HIGH SCHOOL,,50459000184,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,47,35,3,3,0,0,5,4,1
+CONWAY HIGH SCHOOL,,50459000184,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,45,34,3,3,0,0,5,3,1
+CONWAY HIGH SCHOOL,,50459000184,565110,College Board Advanced Placement (AP) Computer Science A Level 1,13,9,3,0,0,0,3,1,0
+CONWAY HIGH SCHOOL,,50459000184,565120,College Board Advanced Placement (AP) Computer Science A Level 2,12,8,3,0,0,0,3,0,0
+CONWAY JUNIOR HIGH SCHOOL,,50459000182,465010,Computer Science with Programming/Coding Emphasis Level 1,49,36,5,1,0,0,13,7,1
+CONWAY JUNIOR HIGH SCHOOL,,50459000182,465020,Computer Science with Programming/Coding Emphasis Level 2,45,32,4,1,0,0,9,6,1
+GREENBRIER HIGH SCHOOL,,50690000418,465010,Computer Science with Programming/Coding Emphasis Level 1,33,20,0,0,0,0,10,9,0
+GREENBRIER HIGH SCHOOL,,50690000418,465020,Computer Science with Programming/Coding Emphasis Level 2,32,19,0,0,0,0,9,8,0
+GREENBRIER HIGH SCHOOL,,50690000418,465030,Computer Science with Programming/Coding Emphasis Level 3,24,17,0,0,1,0,8,7,0
+GREENBRIER HIGH SCHOOL,,50690000418,465040,Computer Science with Programming/Coding Emphasis Level 4,23,17,0,0,1,0,9,7,0
+GREENBRIER HIGH SCHOOL,,50690000418,465110,Computer Science with  Networking/Hardware Emphasis Level 1,3,3,0,0,0,0,0,0,0
+GREENBRIER HIGH SCHOOL,,50690000418,465120,Computer Science with  Networking/Hardware Emphasis Level 2,3,3,0,0,0,0,0,0,0
+GREENBRIER HIGH SCHOOL,,50690000418,465210,Computer Science with Information Security Emphasis Level 1,1,0,0,0,0,0,0,3,0
+GREENBRIER HIGH SCHOOL,,50690000418,465220,Computer Science with Information Security Emphasis Level 2,1,0,0,0,0,0,0,3,0
+GREENBRIER HIGH SCHOOL,,50690000418,565110,College Board Advanced Placement (AP) Computer Science A Level 1,16,13,0,1,0,0,3,4,0
+GREENBRIER HIGH SCHOOL,,50690000418,565120,College Board Advanced Placement (AP) Computer Science A Level 2,7,6,0,0,0,0,0,3,0
+GREENBRIER JUNIOR HIGH SCHOOL,,50690000270,465010,Computer Science with Programming/Coding Emphasis Level 1,46,33,1,1,0,0,11,5,0
+GREENBRIER JUNIOR HIGH SCHOOL,,50690000270,465020,Computer Science with Programming/Coding Emphasis Level 2,39,27,1,1,0,0,11,3,0
+GUY-PERKINS HIGH SCHOOL,,50714000434,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,4,0
+MAYFLOWER HIGH SCHOOL,,50954000698,465010,Computer Science with Programming/Coding Emphasis Level 1,7,7,0,0,0,0,4,4,0
+MAYFLOWER HIGH SCHOOL,,50954000698,465020,Computer Science with Programming/Coding Emphasis Level 2,4,4,0,0,0,0,2,2,0
+MAYFLOWER HIGH SCHOOL,,50954000698,465210,Computer Science with Information Security Emphasis Level 1,1,0,0,0,0,0,1,2,0
+MAYFLOWER HIGH SCHOOL,,50954000698,465220,Computer Science with Information Security Emphasis Level 2,2,1,0,0,0,0,2,0,0
+VILONIA HIGH SCHOOL,,51353001110,465210,Computer Science with Information Security Emphasis Level 1,52,49,0,5,1,0,13,6,2
+VILONIA HIGH SCHOOL,,51353001110,465220,Computer Science with Information Security Emphasis Level 2,52,49,0,5,1,0,13,7,2
+VILONIA HIGH SCHOOL,,51353001110,465230,Computer Science with Information Security Emphasis Level 3,8,8,0,0,0,0,0,2,0
+VILONIA HIGH SCHOOL,,51353001110,465240,Computer Science with Information Security Emphasis Level 4,8,8,0,0,0,0,0,1,0
+CHARLESTON HIGH SCHOOL,,50420000158,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,12,6,0,1,0,0,3,0,0
+CHARLESTON HIGH SCHOOL,,50420000158,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,11,5,0,1,0,0,3,0,0
+CHARLESTON HIGH SCHOOL,,50420000158,565930,Other Concurrent Credit Computer Science 3,1,1,0,0,0,0,1,0,0
+COUNTY LINE HIGH SCHOOL,,50474000198,465010,Computer Science with Programming/Coding Emphasis Level 1,3,2,0,0,1,0,2,1,0
+COUNTY LINE HIGH SCHOOL,,50474000198,465020,Computer Science with Programming/Coding Emphasis Level 2,3,2,0,0,1,0,2,1,0
+COUNTY LINE HIGH SCHOOL,,50474000198,465210,Computer Science with Information Security Emphasis Level 1,4,4,0,0,0,0,2,4,0
+COUNTY LINE HIGH SCHOOL,,50474000198,465220,Computer Science with Information Security Emphasis Level 2,4,4,0,0,0,0,2,4,0
+OZARK JR/SR HIGH SCHOOL,,51101000830,465010,Computer Science with Programming/Coding Emphasis Level 1,19,14,0,3,0,0,5,0,1
+OZARK JR/SR HIGH SCHOOL,,51101000830,465020,Computer Science with Programming/Coding Emphasis Level 2,13,12,0,2,0,0,2,0,1
+MAMMOTH SPRING HIGH SCHOOL,,50927000666,465010,Computer Science with Programming/Coding Emphasis Level 1,30,22,0,0,0,0,30,1,0
+MAMMOTH SPRING HIGH SCHOOL,,50927000666,465020,Computer Science with Programming/Coding Emphasis Level 2,18,14,0,0,0,0,18,1,0
+MAMMOTH SPRING HIGH SCHOOL,,50927000666,565810,Weighted Concurrent Credit Computer Science 1,5,1,0,0,0,0,5,0,0
+SALEM HIGH SCHOOL,,51209000975,465010,Computer Science with Programming/Coding Emphasis Level 1,5,2,0,0,0,0,3,6,0
+SALEM HIGH SCHOOL,,51209000975,465020,Computer Science with Programming/Coding Emphasis Level 2,4,2,0,0,0,0,3,6,0
+SALEM HIGH SCHOOL,,51209000975,465210,Computer Science with Information Security Emphasis Level 1,2,2,0,0,0,0,1,1,0
+SALEM HIGH SCHOOL,,51209000975,465230,Computer Science with Information Security Emphasis Level 3,4,4,0,0,0,0,2,1,0
+SALEM HIGH SCHOOL,,51209000975,465240,Computer Science with Information Security Emphasis Level 4,4,4,0,0,0,0,2,1,0
+SALEM HIGH SCHOOL,,51209000975,565910,Other Concurrent Credit Computer Science 1,1,1,0,0,0,0,1,0,0
+SALEM HIGH SCHOOL,,51209000975,565920,Other Concurrent Credit Computer Science 2,1,1,0,0,0,0,1,0,0
+SALEM HIGH SCHOOL,,51209000975,565930,Other Concurrent Credit Computer Science 3,1,1,0,0,0,0,1,0,0
+VIOLA HIGH SCHOOL,,51356001112,465010,Computer Science with Programming/Coding Emphasis Level 1,2,2,0,0,0,0,0,0,0
+VIOLA HIGH SCHOOL,,51356001112,565910,Other Concurrent Credit Computer Science 1,2,0,0,0,0,0,1,1,0
+CUTTER-MORNING STAR HIGH SCHOOL,,50486000210,465010,Computer Science with Programming/Coding Emphasis Level 1,9,6,0,1,0,0,5,3,0
+CUTTER-MORNING STAR HIGH SCHOOL,,50486000210,465020,Computer Science with Programming/Coding Emphasis Level 2,9,6,0,1,0,0,5,2,0
+CUTTER-MORNING STAR HIGH SCHOOL,,50486000210,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,0,0,0,0,0,0,0,0
+CUTTER-MORNING STAR HIGH SCHOOL,,50486000210,565120,College Board Advanced Placement (AP) Computer Science A Level 2,1,0,0,0,0,0,0,4,0
+FOUNTAIN LAKE CHARTER HIGH SCHOOL,,50642000384,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,4,0
+FOUNTAIN LAKE CHARTER HIGH SCHOOL,,50642000384,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+FOUNTAIN LAKE CHARTER HIGH SCHOOL,,50642000384,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,1,0
+FOUNTAIN LAKE CHARTER HIGH SCHOOL,,50642000384,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,1,0
+HOT SPRINGS JUNIOR ACADEMY,,50789000514,465010,Computer Science with Programming/Coding Emphasis Level 1,79,41,26,16,0,0,77,2,10
+HOT SPRINGS JUNIOR ACADEMY,,50789000514,465020,Computer Science with Programming/Coding Emphasis Level 2,72,38,26,16,0,0,70,2,10
+HOT SPRINGS WORLD CLASS HIGH SCHOOL,,50789000509,465010,Computer Science with Programming/Coding Emphasis Level 1,4,4,3,0,0,0,4,0,0
+HOT SPRINGS WORLD CLASS HIGH SCHOOL,,50789000509,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+HOT SPRINGS WORLD CLASS HIGH SCHOOL,,50789000509,465310,Mobile Application Development Level 1,2,2,1,0,0,0,2,1,0
+HOT SPRINGS WORLD CLASS HIGH SCHOOL,,50789000509,465320,Mobile Application Development Level 2,2,2,1,0,0,0,2,1,0
+HOT SPRINGS WORLD CLASS HIGH SCHOOL,,50789000509,465510,Robotics Level 1,3,3,1,1,0,0,3,1,0
+HOT SPRINGS WORLD CLASS HIGH SCHOOL,,50789000509,465520,Robotics Level 2,3,3,1,1,0,0,3,0,0
+HOT SPRINGS WORLD CLASS HIGH SCHOOL,,50789000509,465530,Robotics Level 3,1,1,0,1,0,0,1,1,0
+HOT SPRINGS WORLD CLASS HIGH SCHOOL,,50789000509,465540,Robotics Level 4,1,1,0,1,0,0,1,1,0
+HOT SPRINGS WORLD CLASS HIGH SCHOOL,,50789000509,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,1,0,0,0,0,1,0,0
+HOT SPRINGS WORLD CLASS HIGH SCHOOL,,50789000509,565120,College Board Advanced Placement (AP) Computer Science A Level 2,1,1,0,0,0,0,1,0,0
+JESSIEVILLE HIGH SCHOOL,,50792000516,465010,Computer Science with Programming/Coding Emphasis Level 1,6,6,0,1,0,0,6,0,0
+JESSIEVILLE HIGH SCHOOL,,50792000516,465020,Computer Science with Programming/Coding Emphasis Level 2,6,6,0,1,0,0,6,0,0
+JESSIEVILLE HIGH SCHOOL,,50792000516,465310,Mobile Application Development Level 1,1,1,0,0,0,0,1,1,0
+JESSIEVILLE HIGH SCHOOL,,50792000516,465320,Mobile Application Development Level 2,1,1,0,0,0,0,1,1,0
+JESSIEVILLE HIGH SCHOOL,,50792000516,565910,Other Concurrent Credit Computer Science 1,1,0,0,1,0,0,1,12,0
+JESSIEVILLE HIGH SCHOOL,,50792000516,565920,Other Concurrent Credit Computer Science 2,1,0,0,1,0,0,1,12,0
+JESSIEVILLE HIGH SCHOOL,,50792000516,565930,Other Concurrent Credit Computer Science 3,1,0,0,1,0,0,1,2,0
+LAKE HAMILTON HIGH SCHOOL,,50861000575,465010,Computer Science with Programming/Coding Emphasis Level 1,45,27,1,8,0,0,25,5,2
+LAKE HAMILTON HIGH SCHOOL,,50861000575,465020,Computer Science with Programming/Coding Emphasis Level 2,42,25,1,8,0,0,23,4,2
+LAKE HAMILTON HIGH SCHOOL,,50861000575,465030,Computer Science with Programming/Coding Emphasis Level 3,29,17,0,9,0,0,10,4,1
+LAKE HAMILTON HIGH SCHOOL,,50861000575,465040,Computer Science with Programming/Coding Emphasis Level 4,27,14,0,9,0,0,9,5,2
+LAKE HAMILTON HIGH SCHOOL,,50861000575,465910,Computer Science Independent Study Level I,5,3,0,0,0,0,1,3,0
+LAKE HAMILTON HIGH SCHOOL,,50861000575,465920,Computer Science Independent Study Level II,7,5,0,0,0,0,1,1,0
+LAKE HAMILTON HIGH SCHOOL,,50861000575,565110,College Board Advanced Placement (AP) Computer Science A Level 1,6,3,0,0,0,0,2,0,0
+LAKE HAMILTON HIGH SCHOOL,,50861000575,565120,College Board Advanced Placement (AP) Computer Science A Level 2,5,3,0,0,0,0,2,0,0
+LAKE HAMILTON HIGH SCHOOL,,50861000575,565810,Weighted Concurrent Credit Computer Science 1,5,5,0,0,0,0,0,0,0
+LAKE HAMILTON JR. HIGH SCHOOL,,50861000574,465010,Computer Science with Programming/Coding Emphasis Level 1,60,43,1,6,0,0,27,4,3
+LAKE HAMILTON JR. HIGH SCHOOL,,50861000574,465020,Computer Science with Programming/Coding Emphasis Level 2,57,41,0,8,0,0,25,4,3
+LAKESIDE HIGH SCHOOL,,50864000578,465210,Computer Science with Information Security Emphasis Level 1,6,4,0,0,0,0,2,1,0
+LAKESIDE HIGH SCHOOL,,50864000578,465220,Computer Science with Information Security Emphasis Level 2,6,4,0,0,0,0,2,1,0
+LAKESIDE HIGH SCHOOL,,50864000578,465950,Computer Science Internship Level I,2,1,0,0,0,0,1,0,0
+LAKESIDE HIGH SCHOOL,,50864000578,465960,Computer Science Internship Level II,2,1,0,0,0,0,1,0,0
+LAKESIDE HIGH SCHOOL,,50864000578,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,107,49,5,12,1,1,14,5,0
+LAKESIDE HIGH SCHOOL,,50864000578,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,100,45,5,11,1,1,13,4,0
+LAKESIDE HIGH SCHOOL,,50864000578,565910,Other Concurrent Credit Computer Science 1,1,1,0,0,0,0,0,1,0
+SHERIDAN HIGH SCHOOL,,50001500997,465010,Computer Science with Programming/Coding Emphasis Level 1,40,32,0,2,0,0,7,8,2
+SHERIDAN HIGH SCHOOL,,50001500997,465020,Computer Science with Programming/Coding Emphasis Level 2,41,33,0,3,0,0,7,7,3
+SHERIDAN HIGH SCHOOL,,50001500997,465030,Computer Science with Programming/Coding Emphasis Level 3,13,12,0,0,0,0,3,1,0
+SHERIDAN HIGH SCHOOL,,50001500997,465040,Computer Science with Programming/Coding Emphasis Level 4,13,12,0,0,0,0,3,1,0
+SHERIDAN HIGH SCHOOL,,50001500997,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,9,7,0,0,0,0,0,1,0
+SHERIDAN HIGH SCHOOL,,50001500997,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,9,7,0,0,0,0,0,1,0
+SHERIDAN HIGH SCHOOL,,50001500997,565110,College Board Advanced Placement (AP) Computer Science A Level 1,5,4,0,0,0,0,0,0,0
+SHERIDAN HIGH SCHOOL,,50001500997,565120,College Board Advanced Placement (AP) Computer Science A Level 2,5,4,0,0,0,0,0,2,0
+SHERIDAN HIGH SCHOOL,,50001500997,565810,Weighted Concurrent Credit Computer Science 1,1,1,0,0,0,0,0,1,0
+SHERIDAN HIGH SCHOOL,,50001500997,565910,Other Concurrent Credit Computer Science 1,3,2,0,0,0,0,1,0,0
+SHERIDAN HIGH SCHOOL,,50001500997,565920,Other Concurrent Credit Computer Science 2,3,2,0,0,0,0,1,0,0
+MARMADUKE HIGH SCHOOL,,50001600691,465010,Computer Science with Programming/Coding Emphasis Level 1,2,1,0,0,0,0,0,0,0
+MARMADUKE HIGH SCHOOL,,50001600691,465020,Computer Science with Programming/Coding Emphasis Level 2,2,1,0,0,0,0,0,0,0
+MARMADUKE HIGH SCHOOL,,50001600691,465230,Computer Science with Information Security Emphasis Level 3,2,2,0,0,0,0,1,3,0
+MARMADUKE HIGH SCHOOL,,50001600691,465240,Computer Science with Information Security Emphasis Level 4,2,2,0,0,0,0,1,2,0
+MARMADUKE HIGH SCHOOL,,50001600691,565910,Other Concurrent Credit Computer Science 1,2,1,0,0,0,0,0,0,0
+GREENE CTY TECH HIGH SCHOOL,,51308001066,465110,Computer Science with  Networking/Hardware Emphasis Level 1,1,1,0,0,0,0,0,1,0
+GREENE CTY TECH HIGH SCHOOL,,51308001066,465120,Computer Science with  Networking/Hardware Emphasis Level 2,1,1,0,0,0,0,0,0,0
+GREENE CTY TECH HIGH SCHOOL,,51308001066,465130,Computer Science with  Networking/Hardware Emphasis Level 3,1,1,0,0,0,0,0,0,0
+GREENE CTY TECH HIGH SCHOOL,,51308001066,465140,Computer Science with  Networking/Hardware Emphasis Level 4,1,1,0,0,0,0,0,0,0
+GREENE CTY TECH HIGH SCHOOL,,51308001066,465910,Computer Science Independent Study Level I,1,1,0,0,0,0,0,0,0
+GREENE CTY TECH HIGH SCHOOL,,51308001066,465920,Computer Science Independent Study Level II,1,1,0,0,0,0,0,0,0
+GREENE CTY TECH HIGH SCHOOL,,51308001066,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,18,12,0,0,0,0,3,0,0
+GREENE CTY TECH HIGH SCHOOL,,51308001066,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,17,11,0,0,0,0,3,0,0
+PARAGOULD HIGH SCHOOL,,50001701295,465010,Computer Science with Programming/Coding Emphasis Level 1,42,28,3,5,0,0,42,2,3
+PARAGOULD HIGH SCHOOL,,50001701295,465020,Computer Science with Programming/Coding Emphasis Level 2,36,25,3,5,0,0,36,1,3
+PARAGOULD HIGH SCHOOL,,50001701295,465110,Computer Science with  Networking/Hardware Emphasis Level 1,2,2,0,0,0,0,2,0,0
+PARAGOULD HIGH SCHOOL,,50001701295,465120,Computer Science with  Networking/Hardware Emphasis Level 2,2,2,0,0,0,0,2,0,0
+PARAGOULD HIGH SCHOOL,,50001701295,465130,Computer Science with  Networking/Hardware Emphasis Level 3,2,2,0,0,0,0,2,0,0
+PARAGOULD HIGH SCHOOL,,50001701295,465140,Computer Science with  Networking/Hardware Emphasis Level 4,2,2,0,0,0,0,2,0,0
+PARAGOULD HIGH SCHOOL,,50001701295,465910,Computer Science Independent Study Level I,2,2,0,0,0,0,2,0,0
+PARAGOULD HIGH SCHOOL,,50001701295,465920,Computer Science Independent Study Level II,2,2,0,0,0,0,2,0,0
+PARAGOULD HIGH SCHOOL,,50001701295,565110,College Board Advanced Placement (AP) Computer Science A Level 1,9,9,0,0,0,0,9,0,0
+PARAGOULD HIGH SCHOOL,,50001701295,565120,College Board Advanced Placement (AP) Computer Science A Level 2,8,8,0,0,0,0,8,0,0
+PARAGOULD HIGH SCHOOL,,50001701295,565810,Weighted Concurrent Credit Computer Science 1,1,1,0,0,0,0,1,0,0
+PARAGOULD HIGH SCHOOL,,50001701295,565910,Other Concurrent Credit Computer Science 1,3,3,0,1,0,0,3,0,0
+PARAGOULD HIGH SCHOOL,,50001701295,565920,Other Concurrent Credit Computer Science 2,3,3,0,1,0,0,3,0,0
+BLEVINS HIGH SCHOOL,,50330000090,465010,Computer Science with Programming/Coding Emphasis Level 1,27,13,2,0,0,0,23,1,0
+BLEVINS HIGH SCHOOL,,50330000090,465020,Computer Science with Programming/Coding Emphasis Level 2,24,13,2,0,0,0,21,1,0
+BLEVINS HIGH SCHOOL,,50330000090,465210,Computer Science with Information Security Emphasis Level 1,26,10,2,7,0,0,20,3,3
+BLEVINS HIGH SCHOOL,,50330000090,465220,Computer Science with Information Security Emphasis Level 2,16,5,1,5,0,0,12,6,2
+BLEVINS HIGH SCHOOL,,50330000090,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,4,2,0,2,0,0,3,4,0
+BLEVINS HIGH SCHOOL,,50330000090,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,2,2,0,2,0,0,2,0,0
+HOPE HIGH SCHOOL,,50784000498,465010,Computer Science with Programming/Coding Emphasis Level 1,7,6,3,2,0,0,7,0,2
+HOPE HIGH SCHOOL,,50784000498,465020,Computer Science with Programming/Coding Emphasis Level 2,7,6,3,2,0,0,7,0,2
+HOPE HIGH SCHOOL,,50784000498,465310,Mobile Application Development Level 1,20,9,10,8,0,0,20,1,7
+HOPE HIGH SCHOOL,,50784000498,465320,Mobile Application Development Level 2,19,8,9,8,0,0,19,0,7
+HOPE HIGH SCHOOL,,50784000498,465330,Mobile Application Development Level 3,7,5,2,3,0,0,7,0,3
+HOPE HIGH SCHOOL,,50784000498,465340,Mobile Application Development Level 4,7,5,2,3,0,0,7,1,3
+HOPE HIGH SCHOOL,,50784000498,465510,Robotics Level 1,49,34,24,14,0,0,49,8,7
+HOPE HIGH SCHOOL,,50784000498,465520,Robotics Level 2,49,34,24,14,0,0,49,7,7
+HOPE HIGH SCHOOL,,50784000498,465530,Robotics Level 3,14,11,4,7,0,0,14,2,5
+HOPE HIGH SCHOOL,,50784000498,465540,Robotics Level 4,14,11,4,7,0,0,14,2,5
+SPRING HILL HIGH SCHOOL,,51263001018,465050,Advanced Programming Level 1,1,1,0,0,0,0,0,4,0
+SPRING HILL HIGH SCHOOL,,51263001018,465060,Advanced Programming Level 2,1,1,0,0,0,0,0,3,0
+SPRING HILL HIGH SCHOOL,,51263001018,465210,Computer Science with Information Security Emphasis Level 1,8,7,0,0,0,0,2,3,1
+SPRING HILL HIGH SCHOOL,,51263001018,465220,Computer Science with Information Security Emphasis Level 2,6,5,0,0,0,0,1,1,1
+SPRING HILL HIGH SCHOOL,,51263001018,465310,Mobile Application Development Level 1,1,1,0,1,0,0,1,0,0
+SPRING HILL HIGH SCHOOL,,51263001018,465330,Mobile Application Development Level 3,6,2,0,0,0,0,2,3,0
+SPRING HILL HIGH SCHOOL,,51263001018,465340,Mobile Application Development Level 4,5,1,0,0,0,0,2,3,0
+BISMARCK HIGH SCHOOL,,50324000086,465010,Computer Science with Programming/Coding Emphasis Level 1,7,6,0,0,0,0,2,1,0
+BISMARCK HIGH SCHOOL,,50324000086,465020,Computer Science with Programming/Coding Emphasis Level 2,6,5,0,0,0,0,2,2,0
+GLEN ROSE HIGH SCHOOL,,50663000398,465010,Computer Science with Programming/Coding Emphasis Level 1,20,16,0,0,1,0,11,2,0
+GLEN ROSE HIGH SCHOOL,,50663000398,465020,Computer Science with Programming/Coding Emphasis Level 2,14,11,0,0,0,0,5,1,0
+GLEN ROSE HIGH SCHOOL,,50663000398,465030,Computer Science with Programming/Coding Emphasis Level 3,5,5,0,0,0,0,1,2,0
+GLEN ROSE HIGH SCHOOL,,50663000398,465040,Computer Science with Programming/Coding Emphasis Level 4,4,4,0,0,0,0,1,10,0
+MALVERN HIGH SCHOOL,,50924001372,465310,Mobile Application Development Level 1,12,10,4,2,0,0,7,8,1
+MALVERN HIGH SCHOOL,,50924001372,465320,Mobile Application Development Level 2,9,7,3,1,0,0,5,2,0
+OUACHITA HIGH SCHOOL,,51098000828,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,2,0
+OUACHITA HIGH SCHOOL,,51098000828,465210,Computer Science with Information Security Emphasis Level 1,1,0,0,0,0,0,0,0,0
+DIERKS HIGH SCHOOL,,50534000249,465010,Computer Science with Programming/Coding Emphasis Level 1,3,1,0,0,0,0,2,0,0
+DIERKS HIGH SCHOOL,,50534000249,465020,Computer Science with Programming/Coding Emphasis Level 2,4,1,0,0,0,0,3,0,0
+NASHVILLE HIGH SCHOOL,,51038000757,465510,Robotics Level 1,7,3,0,5,0,0,7,0,4
+NASHVILLE HIGH SCHOOL,,51038000757,465520,Robotics Level 2,6,3,0,4,0,0,6,0,3
+NASHVILLE HIGH SCHOOL,,51038000757,465530,Robotics Level 3,3,3,0,0,0,0,3,1,0
+NASHVILLE HIGH SCHOOL,,51038000757,465540,Robotics Level 4,1,1,0,0,0,0,1,0,0
+BATESVILLE HIGH SCHOOL,,50001900043,465010,Computer Science with Programming/Coding Emphasis Level 1,25,21,1,3,1,0,10,4,1
+BATESVILLE HIGH SCHOOL,,50001900043,465020,Computer Science with Programming/Coding Emphasis Level 2,20,17,1,3,1,0,9,2,1
+BATESVILLE HIGH SCHOOL,,50001900043,465110,Computer Science with  Networking/Hardware Emphasis Level 1,14,12,0,2,0,0,4,5,1
+BATESVILLE HIGH SCHOOL,,50001900043,465120,Computer Science with  Networking/Hardware Emphasis Level 2,12,11,0,2,0,0,5,1,1
+BATESVILLE HIGH SCHOOL,,50001900043,465510,Robotics Level 1,24,21,0,4,1,0,15,5,1
+BATESVILLE HIGH SCHOOL,,50001900043,465520,Robotics Level 2,26,22,0,5,1,0,15,5,2
+SOUTHSIDE JUNIOR HIGH SCHOOL,,51254001542,465010,Computer Science with Programming/Coding Emphasis Level 1,7,7,0,1,0,0,1,0,0
+SOUTHSIDE JUNIOR HIGH SCHOOL,,51254001542,465020,Computer Science with Programming/Coding Emphasis Level 2,6,6,0,0,0,0,0,0,0
+SOUTHSIDE JUNIOR HIGH SCHOOL,,51254001542,465210,Computer Science with Information Security Emphasis Level 1,4,4,0,0,0,0,3,1,0
+SOUTHSIDE JUNIOR HIGH SCHOOL,,51254001542,465220,Computer Science with Information Security Emphasis Level 2,3,3,0,0,0,0,2,1,0
+SOUTHSIDE CHARTER HIGH SCHOOL,,51254001012,465010,Computer Science with Programming/Coding Emphasis Level 1,2,2,0,0,0,0,0,0,0
+SOUTHSIDE CHARTER HIGH SCHOOL,,51254001012,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,0,0,0
+SOUTHSIDE CHARTER HIGH SCHOOL,,51254001012,465030,Computer Science with Programming/Coding Emphasis Level 3,1,1,0,0,0,0,0,2,0
+SOUTHSIDE CHARTER HIGH SCHOOL,,51254001012,465040,Computer Science with Programming/Coding Emphasis Level 4,1,1,0,0,0,0,0,2,0
+SOUTHSIDE CHARTER HIGH SCHOOL,,51254001012,465210,Computer Science with Information Security Emphasis Level 1,2,1,0,0,0,0,1,1,0
+SOUTHSIDE CHARTER HIGH SCHOOL,,51254001012,465220,Computer Science with Information Security Emphasis Level 2,2,1,0,0,0,0,1,0,0
+MIDLAND HIGH SCHOOL,,50002001298,465010,Computer Science with Programming/Coding Emphasis Level 1,5,3,1,0,0,0,5,1,0
+MIDLAND HIGH SCHOOL,,50002001298,465020,Computer Science with Programming/Coding Emphasis Level 2,4,3,1,0,0,0,4,1,0
+MIDLAND HIGH SCHOOL,,50002001298,565910,Other Concurrent Credit Computer Science 1,2,0,0,0,0,0,2,1,0
+CEDAR RIDGE HIGH SCHOOL,,50007000768,465210,Computer Science with Information Security Emphasis Level 1,10,10,0,0,1,0,10,1,0
+CEDAR RIDGE HIGH SCHOOL,,50007000768,465220,Computer Science with Information Security Emphasis Level 2,10,10,0,0,1,0,10,4,0
+CEDAR RIDGE HIGH SCHOOL,,50007000768,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,0,0,0,0,0,1,4,0
+CEDAR RIDGE HIGH SCHOOL,,50007000768,565120,College Board Advanced Placement (AP) Computer Science A Level 2,1,0,0,0,0,0,1,1,0
+CEDAR RIDGE HIGH SCHOOL,,50007000768,565890,Weighted Concurrent Credit Computer Science 9,1,1,0,0,0,0,1,1,0
+CEDAR RIDGE HIGH SCHOOL,,50007000768,565970,Other Concurrent Credit Computer Science 7,1,1,0,0,0,0,1,0,0
+CEDAR RIDGE HIGH SCHOOL,,50007000768,565980,Other Concurrent Credit Computer Science 8,1,1,0,0,0,0,1,0,0
+CALICO ROCK HIGH SCHOOL,,50384000132,465010,Computer Science with Programming/Coding Emphasis Level 1,17,7,0,0,0,0,15,1,0
+CALICO ROCK HIGH SCHOOL,,50384000132,465020,Computer Science with Programming/Coding Emphasis Level 2,16,7,0,0,0,0,15,0,0
+MELBOURNE HIGH SCHOOL,,50972000711,465010,Computer Science with Programming/Coding Emphasis Level 1,10,6,0,0,0,0,9,1,0
+MELBOURNE HIGH SCHOOL,,50972000711,465020,Computer Science with Programming/Coding Emphasis Level 2,9,6,0,0,0,0,8,1,0
+MELBOURNE HIGH SCHOOL,,50972000711,465210,Computer Science with Information Security Emphasis Level 1,6,5,0,0,0,0,4,1,0
+MELBOURNE HIGH SCHOOL,,50972000711,465220,Computer Science with Information Security Emphasis Level 2,3,3,0,0,0,0,3,1,0
+IZARD CO. CONS. HIGH SCHOOL,,50002101300,465010,Computer Science with Programming/Coding Emphasis Level 1,11,7,0,1,0,0,9,2,0
+IZARD CO. CONS. HIGH SCHOOL,,50002101300,465020,Computer Science with Programming/Coding Emphasis Level 2,11,7,0,1,0,0,9,2,0
+NEWPORT HIGH SCHOOL,,50002300772,465010,Computer Science with Programming/Coding Emphasis Level 1,19,12,6,2,0,0,19,1,1
+NEWPORT HIGH SCHOOL,,50002300772,465020,Computer Science with Programming/Coding Emphasis Level 2,18,11,5,2,0,0,18,2,1
+TUCKERMAN HIGH SCHOOL,,51323001083,465010,Computer Science with Programming/Coding Emphasis Level 1,4,4,0,0,0,0,3,3,0
+TUCKERMAN HIGH SCHOOL,,51323001083,465020,Computer Science with Programming/Coding Emphasis Level 2,4,4,0,0,0,0,3,2,0
+DOLLARWAY HIGH SCHOOL,,50541000253,465010,Computer Science with Programming/Coding Emphasis Level 1,66,36,62,1,0,0,66,1,0
+DOLLARWAY HIGH SCHOOL,,50541000253,465020,Computer Science with Programming/Coding Emphasis Level 2,63,34,59,1,0,0,63,0,0
+DOLLARWAY HIGH SCHOOL,,50541000253,465030,Computer Science with Programming/Coding Emphasis Level 3,2,1,2,0,0,0,2,0,0
+DOLLARWAY HIGH SCHOOL,,50541000253,465040,Computer Science with Programming/Coding Emphasis Level 4,2,1,2,0,0,0,2,0,0
+DOLLARWAY HIGH SCHOOL,,50541000253,465050,Advanced Programming Level 1,2,0,2,0,0,0,2,2,0
+DOLLARWAY HIGH SCHOOL,,50541000253,465060,Advanced Programming Level 2,1,0,1,0,0,0,1,2,0
+PINE BLUFF HIGH SCHOOL,,50002600867,465010,Computer Science with Programming/Coding Emphasis Level 1,10,7,10,0,0,0,10,1,0
+PINE BLUFF HIGH SCHOOL,,50002600867,465020,Computer Science with Programming/Coding Emphasis Level 2,7,4,7,0,0,0,6,1,0
+WATSON CHAPEL HIGH SCHOOL,,51393001140,465010,Computer Science with Programming/Coding Emphasis Level 1,11,9,7,1,0,0,11,0,0
+WATSON CHAPEL HIGH SCHOOL,,51393001140,465020,Computer Science with Programming/Coding Emphasis Level 2,11,9,7,1,0,0,11,0,0
+WATSON CHAPEL HIGH SCHOOL,,51393001140,465210,Computer Science with Information Security Emphasis Level 1,87,40,79,0,0,0,87,6,0
+WATSON CHAPEL HIGH SCHOOL,,51393001140,465220,Computer Science with Information Security Emphasis Level 2,69,28,61,0,0,0,69,4,0
+WHITE HALL HIGH SCHOOL,,51414001156,465010,Computer Science with Programming/Coding Emphasis Level 1,39,33,7,0,0,0,15,3,0
+WHITE HALL HIGH SCHOOL,,51414001156,465020,Computer Science with Programming/Coding Emphasis Level 2,40,34,7,0,0,0,15,3,0
+WHITE HALL HIGH SCHOOL,,51414001156,465030,Computer Science with Programming/Coding Emphasis Level 3,7,5,1,0,0,0,1,2,0
+WHITE HALL HIGH SCHOOL,,51414001156,465040,Computer Science with Programming/Coding Emphasis Level 4,6,4,1,0,0,0,1,2,0
+WHITE HALL HIGH SCHOOL,,51414001156,465050,Advanced Programming Level 1,3,3,0,0,0,0,0,7,0
+WHITE HALL HIGH SCHOOL,,51414001156,465060,Advanced Programming Level 2,3,3,0,0,0,0,0,6,0
+WHITE HALL HIGH SCHOOL,,51414001156,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,30,20,4,0,0,0,11,0,0
+WHITE HALL HIGH SCHOOL,,51414001156,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,29,19,4,0,0,0,10,0,0
+WHITE HALL HIGH SCHOOL,,51414001156,565110,College Board Advanced Placement (AP) Computer Science A Level 1,8,8,0,0,0,0,0,0,0
+WHITE HALL HIGH SCHOOL,,51414001156,565120,College Board Advanced Placement (AP) Computer Science A Level 2,8,8,0,0,0,0,0,0,0
+FRIENDSHIP ASPIRE ACADEMY SOUTHEAST PINE BLUFF HIGH,,,465010,Computer Science with Programming/Coding Emphasis Level 1,20,12,20,0,0,0,20,1,0
+FRIENDSHIP ASPIRE ACADEMY SOUTHEAST PINE BLUFF HIGH,,,465020,Computer Science with Programming/Coding Emphasis Level 2,16,9,16,0,0,0,16,1,0
+CLARKSVILLE JUNIOR HIGH SCHOOL,,50438000167,465010,Computer Science with Programming/Coding Emphasis Level 1,22,9,0,7,0,0,13,1,3
+CLARKSVILLE JUNIOR HIGH SCHOOL,,50438000167,465020,Computer Science with Programming/Coding Emphasis Level 2,22,9,0,7,0,0,13,1,3
+CLARKSVILLE HIGH SCHOOL,,50438000166,465010,Computer Science with Programming/Coding Emphasis Level 1,10,6,0,4,0,0,6,7,0
+CLARKSVILLE HIGH SCHOOL,,50438000166,465020,Computer Science with Programming/Coding Emphasis Level 2,8,5,0,3,0,0,4,3,0
+CLARKSVILLE HIGH SCHOOL,,50438000166,565110,College Board Advanced Placement (AP) Computer Science A Level 1,5,4,0,0,0,0,3,1,0
+CLARKSVILLE HIGH SCHOOL,,50438000166,565120,College Board Advanced Placement (AP) Computer Science A Level 2,4,4,0,0,0,0,2,1,0
+LAMAR HIGH SCHOOL,,50870000585,465010,Computer Science with Programming/Coding Emphasis Level 1,3,2,0,0,0,0,2,1,0
+LAMAR HIGH SCHOOL,,50870000585,465020,Computer Science with Programming/Coding Emphasis Level 2,3,2,0,0,0,0,2,1,0
+LAMAR HIGH SCHOOL,,50870000585,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,0,0
+LAMAR HIGH SCHOOL,,50870000585,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,1,1,0,0,0,0,1,0,0
+LAMAR HIGH SCHOOL,,50870000585,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,1,1,0,0,0,0,1,0,0
+WESTSIDE HIGH SCHOOL,,51402001267,465010,Computer Science with Programming/Coding Emphasis Level 1,8,5,0,0,0,0,8,1,0
+WESTSIDE HIGH SCHOOL,,51402001267,465020,Computer Science with Programming/Coding Emphasis Level 2,8,5,0,0,0,0,8,1,0
+LAFAYETTE COUNTY HIGH SCHOOL,,50006500727,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,0,1,0
+LAFAYETTE COUNTY HIGH SCHOOL,,50006500727,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,0,1,0
+LAFAYETTE COUNTY HIGH SCHOOL,,50006500727,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,3,1,1,0,0,0,2,1,0
+LAFAYETTE COUNTY HIGH SCHOOL,,50006500727,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,2,0,1,0,0,0,2,5,0
+HOXIE HIGH SCHOOL,,50799000518,465010,Computer Science with Programming/Coding Emphasis Level 1,6,4,0,0,0,0,6,2,0
+HOXIE HIGH SCHOOL,,50799000518,465020,Computer Science with Programming/Coding Emphasis Level 2,6,4,0,0,0,0,6,2,0
+HOXIE HIGH SCHOOL,,50799000518,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,3,0
+HOXIE HIGH SCHOOL,,50799000518,465510,Robotics Level 1,5,5,0,0,0,0,5,1,0
+SLOAN-HENDRIX HIGH SCHOOL,,51248001007,465010,Computer Science with Programming/Coding Emphasis Level 1,1,0,0,0,0,0,0,0,0
+HILLCREST HIGH SCHOOL,,50007101010,465310,Mobile Application Development Level 1,12,7,0,0,0,0,8,2,0
+HILLCREST HIGH SCHOOL,,50007101010,465320,Mobile Application Development Level 2,10,6,0,0,0,0,7,1,0
+HILLCREST HIGH SCHOOL,,50007101010,465330,Mobile Application Development Level 3,4,3,0,0,0,0,2,1,0
+HILLCREST HIGH SCHOOL,,50007101010,465340,Mobile Application Development Level 4,4,3,0,0,0,0,2,1,0
+HILLCREST HIGH SCHOOL,,50007101010,565110,College Board Advanced Placement (AP) Computer Science A Level 1,4,0,0,1,0,0,2,0,0
+HILLCREST HIGH SCHOOL,,50007101010,565120,College Board Advanced Placement (AP) Computer Science A Level 2,1,0,0,1,0,0,0,0,0
+WALNUT RIDGE HIGH SCHOOL,,50008201216,465010,Computer Science with Programming/Coding Emphasis Level 1,1,0,0,0,0,0,1,0,0
+WALNUT RIDGE HIGH SCHOOL,,50008201216,465020,Computer Science with Programming/Coding Emphasis Level 2,2,1,0,0,0,0,1,0,0
+WALNUT RIDGE HIGH SCHOOL,,50008201216,465330,Mobile Application Development Level 3,1,1,0,0,0,0,0,0,0
+WALNUT RIDGE HIGH SCHOOL,,50008201216,465340,Mobile Application Development Level 4,1,1,0,0,0,0,0,0,0
+WALNUT RIDGE HIGH SCHOOL,,50008201216,465650,Advanced Programming: Game Design Level 1,3,2,0,0,0,0,2,0,0
+WALNUT RIDGE HIGH SCHOOL,,50008201216,465660,Advanced Programming: Game Design Level 2,3,2,0,0,0,0,2,0,0
+WALNUT RIDGE HIGH SCHOOL,,50008201216,565910,Other Concurrent Credit Computer Science 1,19,7,0,0,0,0,3,0,0
+LEE HIGH SCHOOL,,50936000675,465010,Computer Science with Programming/Coding Emphasis Level 1,40,24,35,2,0,0,40,3,0
+LEE HIGH SCHOOL,,50936000675,465020,Computer Science with Programming/Coding Emphasis Level 2,47,26,41,3,0,0,47,3,1
+STAR CITY HIGH SCHOOL,,50002801042,465010,Computer Science with Programming/Coding Emphasis Level 1,1,0,0,0,0,0,0,0,0
+STAR CITY HIGH SCHOOL,,50002801042,465030,Computer Science with Programming/Coding Emphasis Level 3,13,11,1,1,0,0,9,2,0
+STAR CITY HIGH SCHOOL,,50002801042,465040,Computer Science with Programming/Coding Emphasis Level 4,12,10,1,1,0,0,8,1,0
+STAR CITY HIGH SCHOOL,,50002801042,465210,Computer Science with Information Security Emphasis Level 1,12,10,0,0,0,0,4,2,0
+STAR CITY HIGH SCHOOL,,50002801042,465220,Computer Science with Information Security Emphasis Level 2,12,10,0,0,0,0,4,1,0
+STAR CITY HIGH SCHOOL,,50002801042,465230,Computer Science with Information Security Emphasis Level 3,3,3,0,0,0,0,1,1,0
+STAR CITY HIGH SCHOOL,,50002801042,465240,Computer Science with Information Security Emphasis Level 4,3,3,0,0,0,0,1,1,0
+STAR CITY HIGH SCHOOL,,50002801042,465510,Robotics Level 1,10,10,0,0,0,0,7,0,0
+STAR CITY HIGH SCHOOL,,50002801042,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,28,20,7,5,0,0,21,3,2
+STAR CITY HIGH SCHOOL,,50002801042,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,1,0,0,0,0,0,0,0
+ASHDOWN HIGH SCHOOL,,50258000028,465010,Computer Science with Programming/Coding Emphasis Level 1,3,3,2,0,0,0,2,0,0
+ASHDOWN HIGH SCHOOL,,50258000028,465020,Computer Science with Programming/Coding Emphasis Level 2,2,2,2,0,0,0,2,2,0
+ASHDOWN HIGH SCHOOL,,50258000028,465230,Computer Science with Information Security Emphasis Level 3,1,1,1,0,0,0,1,2,0
+FOREMAN HIGH SCHOOL,,50624000338,465010,Computer Science with Programming/Coding Emphasis Level 1,4,2,0,0,0,0,2,0,0
+FOREMAN HIGH SCHOOL,,50624000338,465020,Computer Science with Programming/Coding Emphasis Level 2,4,2,0,0,0,0,2,0,0
+BOONEVILLE HIGH SCHOOL,,50345000105,465010,Computer Science with Programming/Coding Emphasis Level 1,4,4,1,1,0,0,4,0,0
+BOONEVILLE HIGH SCHOOL,,50345000105,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+MAGAZINE HIGH SCHOOL,,,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,0,0
+MAGAZINE HIGH SCHOOL,,,465310,Mobile Application Development Level 1,9,7,0,0,0,0,6,4,0
+MAGAZINE HIGH SCHOOL,,,465320,Mobile Application Development Level 2,8,6,0,0,0,0,5,5,0
+MAGAZINE HIGH SCHOOL,,,465650,Advanced Programming: Game Design Level 1,7,7,0,0,0,0,5,0,0
+MAGAZINE HIGH SCHOOL,,,465660,Advanced Programming: Game Design Level 2,6,6,0,0,0,0,5,1,0
+MAGAZINE HIGH SCHOOL,,,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,1,0,0,0,0,1,1,0
+PARIS HIGH SCHOOL,,51113000837,465010,Computer Science with Programming/Coding Emphasis Level 1,19,9,0,1,0,0,19,2,1
+PARIS HIGH SCHOOL,,51113000837,465020,Computer Science with Programming/Coding Emphasis Level 2,13,7,0,1,0,0,13,0,1
+PARIS HIGH SCHOOL,,51113000837,465030,Computer Science with Programming/Coding Emphasis Level 3,7,6,0,0,0,0,7,2,1
+PARIS HIGH SCHOOL,,51113000837,465040,Computer Science with Programming/Coding Emphasis Level 4,7,6,0,0,0,0,7,2,1
+PARIS HIGH SCHOOL,,51113000837,465910,Computer Science Independent Study Level I,1,0,0,0,0,0,1,2,0
+PARIS HIGH SCHOOL,,51113000837,465920,Computer Science Independent Study Level II,1,0,0,0,0,0,1,2,0
+SCRANTON HIGH SCHOOL,,51218000981,465010,Computer Science with Programming/Coding Emphasis Level 1,2,2,0,0,0,0,0,0,0
+SCRANTON HIGH SCHOOL,,51218000981,465020,Computer Science with Programming/Coding Emphasis Level 2,2,2,0,0,0,0,0,0,0
+LONOKE HIGH SCHOOL,,50906000642,465010,Computer Science with Programming/Coding Emphasis Level 1,80,52,18,9,0,0,55,8,7
+LONOKE HIGH SCHOOL,,50906000642,465020,Computer Science with Programming/Coding Emphasis Level 2,77,50,18,7,0,0,51,9,5
+LONOKE HIGH SCHOOL,,50906000642,465030,Computer Science with Programming/Coding Emphasis Level 3,10,8,1,1,0,0,7,1,0
+LONOKE HIGH SCHOOL,,50906000642,465040,Computer Science with Programming/Coding Emphasis Level 4,10,8,1,1,0,0,7,1,0
+LONOKE HIGH SCHOOL,,50906000642,465510,Robotics Level 1,5,4,3,1,0,0,3,0,0
+LONOKE HIGH SCHOOL,,50906000642,465520,Robotics Level 2,5,4,3,1,0,0,3,0,0
+ENGLAND HIGH SCHOOL,,50585000296,465010,Computer Science with Programming/Coding Emphasis Level 1,2,2,0,1,0,0,2,0,1
+ENGLAND HIGH SCHOOL,,50585000296,465020,Computer Science with Programming/Coding Emphasis Level 2,3,3,0,1,0,0,2,0,1
+CARLISLE HIGH SCHOOL,,50396000140,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,1,0,0,1,1,1
+CARLISLE HIGH SCHOOL,,50396000140,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,1,0,0,1,1,1
+CARLISLE HIGH SCHOOL,,50396000140,465510,Robotics Level 1,5,4,1,0,0,0,1,0,0
+CARLISLE HIGH SCHOOL,,50396000140,465520,Robotics Level 2,5,4,1,0,0,0,1,0,0
+CARLISLE HIGH SCHOOL,,50396000140,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,13,3,1,0,0,0,2,3,0
+CARLISLE HIGH SCHOOL,,50396000140,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,13,3,1,0,0,0,2,4,0
+CABOT HIGH SCHOOL,,50375000123,465010,Computer Science with Programming/Coding Emphasis Level 1,43,37,1,3,1,0,19,4,2
+CABOT HIGH SCHOOL,,50375000123,465020,Computer Science with Programming/Coding Emphasis Level 2,41,34,1,3,1,0,18,2,2
+CABOT HIGH SCHOOL,,50375000123,465030,Computer Science with Programming/Coding Emphasis Level 3,35,33,1,1,0,0,14,5,0
+CABOT HIGH SCHOOL,,50375000123,465040,Computer Science with Programming/Coding Emphasis Level 4,29,28,1,1,0,0,10,4,0
+CABOT HIGH SCHOOL,,50375000123,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,19,16,0,1,0,0,3,1,0
+CABOT HIGH SCHOOL,,50375000123,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,19,16,0,1,0,0,3,1,0
+CABOT HIGH SCHOOL,,50375000123,565110,College Board Advanced Placement (AP) Computer Science A Level 1,6,4,0,0,0,0,2,0,0
+CABOT HIGH SCHOOL,,50375000123,565120,College Board Advanced Placement (AP) Computer Science A Level 2,6,4,0,0,0,0,2,0,0
+CABOT HIGH SCHOOL,,50375000123,565810,Weighted Concurrent Credit Computer Science 1,1,1,0,0,0,0,0,0,0
+CABOT HIGH SCHOOL,,50375000123,565910,Other Concurrent Credit Computer Science 1,3,3,0,0,0,0,0,7,0
+CABOT FRESHMAN ACADEMY,,50375001553,465010,Computer Science with Programming/Coding Emphasis Level 1,45,40,0,1,1,0,17,11,0
+CABOT FRESHMAN ACADEMY,,50375001553,465020,Computer Science with Programming/Coding Emphasis Level 2,39,35,0,1,1,0,14,5,0
+ACADEMIC CENTER FOR EXCELLENCE,,50375001019,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,1,0,0,0,0,1,0
+ACADEMIC CENTER FOR EXCELLENCE,,50375001019,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,1,0,0,0,0,1,0
+HUNTSVILLE HIGH SCHOOL,,50813000538,465010,Computer Science with Programming/Coding Emphasis Level 1,14,11,0,3,1,0,10,1,2
+HUNTSVILLE HIGH SCHOOL,,50813000538,465020,Computer Science with Programming/Coding Emphasis Level 2,13,11,0,3,1,0,9,0,2
+HUNTSVILLE HIGH SCHOOL,,50813000538,465510,Robotics Level 1,12,11,0,2,0,0,7,0,0
+HUNTSVILLE HIGH SCHOOL,,50813000538,465520,Robotics Level 2,10,9,0,1,0,0,5,0,0
+FLIPPIN HIGH SCHOOL,,50615000331,465010,Computer Science with Programming/Coding Emphasis Level 1,20,15,0,1,0,0,20,5,0
+FLIPPIN HIGH SCHOOL,,50615000331,465020,Computer Science with Programming/Coding Emphasis Level 2,18,14,0,1,0,0,18,6,0
+FLIPPIN HIGH SCHOOL,,50615000331,465030,Computer Science with Programming/Coding Emphasis Level 3,2,2,0,0,0,0,2,1,0
+FLIPPIN HIGH SCHOOL,,50615000331,465040,Computer Science with Programming/Coding Emphasis Level 4,2,2,0,0,0,0,2,0,0
+YELLVILLE-SUMMIT HIGH SCHOOL,,51449001178,465010,Computer Science with Programming/Coding Emphasis Level 1,13,9,1,0,1,0,13,0,0
+YELLVILLE-SUMMIT HIGH SCHOOL,,51449001178,465020,Computer Science with Programming/Coding Emphasis Level 2,13,9,1,0,1,0,13,6,0
+YELLVILLE-SUMMIT HIGH SCHOOL,,51449001178,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,5,0
+YELLVILLE-SUMMIT HIGH SCHOOL,,51449001178,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,3,0
+GENOA CENTRAL HIGH SCHOOL,,50411000152,465010,Computer Science with Programming/Coding Emphasis Level 1,20,18,0,0,1,1,8,5,1
+GENOA CENTRAL HIGH SCHOOL,,50411000152,465020,Computer Science with Programming/Coding Emphasis Level 2,15,14,0,0,1,1,5,2,1
+GENOA CENTRAL HIGH SCHOOL,,50411000152,465210,Computer Science with Information Security Emphasis Level 1,2,2,0,0,0,0,0,0,0
+GENOA CENTRAL HIGH SCHOOL,,50411000152,465220,Computer Science with Information Security Emphasis Level 2,2,2,0,0,0,0,0,0,0
+FOUKE HIGH SCHOOL,,50636000380,465010,Computer Science with Programming/Coding Emphasis Level 1,10,7,0,0,0,0,5,0,0
+FOUKE HIGH SCHOOL,,50636000380,465020,Computer Science with Programming/Coding Emphasis Level 2,7,6,0,0,0,0,5,0,0
+FOUKE HIGH SCHOOL,,50636000380,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,0,0
+FOUKE HIGH SCHOOL,,50636000380,465220,Computer Science with Information Security Emphasis Level 2,2,2,0,0,1,0,0,0,0
+NORTH HEIGHTS JR. HIGH SCHOOL,,51311001073,465010,Computer Science with Programming/Coding Emphasis Level 1,14,12,3,3,0,0,14,1,1
+ARKANSAS HIGH SCHOOL,,51311001068,465010,Computer Science with Programming/Coding Emphasis Level 1,56,28,32,4,1,0,56,8,2
+ARKANSAS HIGH SCHOOL,,51311001068,465020,Computer Science with Programming/Coding Emphasis Level 2,52,25,28,4,1,0,52,8,2
+ARKANSAS HIGH SCHOOL,,51311001068,465030,Computer Science with Programming/Coding Emphasis Level 3,10,8,3,0,0,0,10,1,0
+ARKANSAS HIGH SCHOOL,,51311001068,465040,Computer Science with Programming/Coding Emphasis Level 4,9,7,3,0,0,0,9,1,0
+ARKANSAS HIGH SCHOOL,,51311001068,465310,Mobile Application Development Level 1,25,16,19,1,0,0,25,7,0
+ARKANSAS HIGH SCHOOL,,51311001068,465320,Mobile Application Development Level 2,23,14,17,1,0,0,23,5,0
+ARKANSAS HIGH SCHOOL,,51311001068,465510,Robotics Level 1,32,23,19,3,0,0,32,12,0
+ARKANSAS HIGH SCHOOL,,51311001068,465520,Robotics Level 2,31,21,18,3,0,0,31,11,0
+ARKANSAS HIGH SCHOOL,,51311001068,465530,Robotics Level 3,13,12,6,0,0,0,13,5,0
+ARKANSAS HIGH SCHOOL,,51311001068,465540,Robotics Level 4,13,12,6,0,0,0,13,5,0
+ARKANSAS HIGH SCHOOL,,51311001068,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,7,7,0,0,0,0,7,1,0
+ARKANSAS HIGH SCHOOL,,51311001068,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,7,7,0,0,0,0,7,1,0
+ARKANSAS HIGH SCHOOL,,51311001068,565910,Other Concurrent Credit Computer Science 1,8,2,4,0,0,0,8,2,0
+ARMOREL HIGH SCHOOL,,50255000027,465010,Computer Science with Programming/Coding Emphasis Level 1,10,9,0,1,0,0,5,2,0
+ARMOREL HIGH SCHOOL,,50255000027,465020,Computer Science with Programming/Coding Emphasis Level 2,10,9,0,1,0,0,5,0,0
+ARMOREL HIGH SCHOOL,,50255000027,465030,Computer Science with Programming/Coding Emphasis Level 3,1,1,0,0,0,0,0,0,0
+ARMOREL HIGH SCHOOL,,50255000027,465040,Computer Science with Programming/Coding Emphasis Level 4,1,1,0,0,0,0,0,1,0
+ARMOREL HIGH SCHOOL,,50255000027,465910,Computer Science Independent Study Level I,6,6,0,0,0,0,2,1,0
+ARMOREL HIGH SCHOOL,,50255000027,465920,Computer Science Independent Study Level II,6,6,0,0,0,0,2,1,0
+BLYTHEVILLE HIGH SCHOOL-A NEW TECH SCHOOL,,50332001578,465010,Computer Science with Programming/Coding Emphasis Level 1,2,1,1,0,0,0,2,2,0
+BLYTHEVILLE HIGH SCHOOL-A NEW TECH SCHOOL,,50332001578,465020,Computer Science with Programming/Coding Emphasis Level 2,2,1,1,0,0,0,2,1,0
+BLYTHEVILLE HIGH SCHOOL-A NEW TECH SCHOOL,,50332001578,465030,Computer Science with Programming/Coding Emphasis Level 3,7,5,5,0,0,0,7,2,0
+BLYTHEVILLE HIGH SCHOOL-A NEW TECH SCHOOL,,50332001578,465040,Computer Science with Programming/Coding Emphasis Level 4,7,5,5,0,0,0,7,1,0
+RIVERCREST HIGH SCHOOL,,50004501204,465010,Computer Science with Programming/Coding Emphasis Level 1,1,0,0,0,0,0,1,1,0
+RIVERCREST HIGH SCHOOL,,50004501204,565920,Other Concurrent Credit Computer Science 2,5,1,2,0,0,0,5,0,0
+RIVERCREST HIGH SCHOOL,,50004501204,565930,Other Concurrent Credit Computer Science 3,5,1,2,0,0,0,5,5,0
+GOSNELL HIGH SCHOOL,,50002901277,465010,Computer Science with Programming/Coding Emphasis Level 1,4,0,0,0,0,0,2,4,0
+GOSNELL HIGH SCHOOL,,50002901277,465020,Computer Science with Programming/Coding Emphasis Level 2,4,0,0,0,0,0,2,0,0
+MANILA HIGH SCHOOL,,50004600668,465010,Computer Science with Programming/Coding Emphasis Level 1,13,10,0,1,0,0,5,1,0
+MANILA HIGH SCHOOL,,50004600668,465020,Computer Science with Programming/Coding Emphasis Level 2,13,10,0,1,0,0,5,6,0
+MANILA HIGH SCHOOL,,50004600668,465030,Computer Science with Programming/Coding Emphasis Level 3,2,2,0,0,0,0,0,5,0
+MANILA HIGH SCHOOL,,50004600668,465040,Computer Science with Programming/Coding Emphasis Level 4,2,2,0,0,0,0,0,1,0
+MANILA HIGH SCHOOL,,50004600668,465050,Advanced Programming Level 1,1,1,0,0,0,0,0,1,0
+MANILA HIGH SCHOOL,,50004600668,465060,Advanced Programming Level 2,1,1,0,0,0,0,0,2,0
+OSCEOLA HIGH SCHOOL,,51095000825,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,6,2,6,0,0,0,6,2,0
+OSCEOLA HIGH SCHOOL,,51095000825,565910,Other Concurrent Credit Computer Science 1,1,0,0,0,0,0,1,0,0
+BRINKLEY HIGH SCHOOL,,50363000112,465010,Computer Science with Programming/Coding Emphasis Level 1,18,12,13,0,1,0,18,4,0
+BRINKLEY HIGH SCHOOL,,50363000112,465020,Computer Science with Programming/Coding Emphasis Level 2,19,12,14,0,1,0,18,4,0
+CLARENDON HIGH SCHOOL,,50435000164,465010,Computer Science with Programming/Coding Emphasis Level 1,4,2,2,0,0,0,4,2,0
+CLARENDON HIGH SCHOOL,,50435000164,465020,Computer Science with Programming/Coding Emphasis Level 2,2,0,0,0,0,0,2,2,0
+CADDO HILLS HIGH SCHOOL,,50377000127,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,0,0,0
+CADDO HILLS HIGH SCHOOL,,50377000127,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,0,0,0
+CADDO HILLS HIGH SCHOOL,,50377000127,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,0,0
+CADDO HILLS HIGH SCHOOL,,50377000127,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,0,0
+MOUNT IDA HIGH SCHOOL,,50999000733,465010,Computer Science with Programming/Coding Emphasis Level 1,5,5,0,0,0,0,4,0,0
+MOUNT IDA HIGH SCHOOL,,50999000733,465020,Computer Science with Programming/Coding Emphasis Level 2,5,4,0,0,0,0,4,0,0
+MOUNT IDA HIGH SCHOOL,,50999000733,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,0,0
+MOUNT IDA HIGH SCHOOL,,50999000733,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,0,0
+PRESCOTT HIGH SCHOOL,,51182000899,465010,Computer Science with Programming/Coding Emphasis Level 1,52,27,20,5,0,0,52,0,3
+PRESCOTT HIGH SCHOOL,,51182000899,465020,Computer Science with Programming/Coding Emphasis Level 2,52,27,20,5,0,0,52,0,3
+PRESCOTT HIGH SCHOOL,,51182000899,465030,Computer Science with Programming/Coding Emphasis Level 3,4,3,2,0,1,0,4,0,0
+PRESCOTT HIGH SCHOOL,,51182000899,465040,Computer Science with Programming/Coding Emphasis Level 4,4,3,2,0,1,0,4,0,0
+NEVADA HIGH  SCHOOL,,50003001405,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,1,1,0,0,0,0,1,0,0
+NEVADA HIGH  SCHOOL,,50003001405,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,1,1,0,0,0,0,1,0,0
+JASPER HIGH SCHOOL,,50824000545,465010,Computer Science with Programming/Coding Emphasis Level 1,32,17,0,0,0,0,22,0,0
+JASPER HIGH SCHOOL,,50824000545,465510,Robotics Level 1,11,8,0,0,0,0,9,0,0
+JASPER HIGH SCHOOL,,50824000545,465520,Robotics Level 2,11,8,0,0,0,0,9,0,0
+JASPER HIGH SCHOOL,,50824000545,465530,Robotics Level 3,1,1,0,0,0,0,1,0,0
+OARK HIGH SCHOOL,,50824000811,465010,Computer Science with Programming/Coding Emphasis Level 1,1,0,0,0,0,0,0,0,0
+OARK HIGH SCHOOL,,50824000811,465020,Computer Science with Programming/Coding Emphasis Level 2,1,0,0,0,0,0,0,0,0
+OARK HIGH SCHOOL,,50824000811,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,0,0,0,0,0,1,0,0
+OARK HIGH SCHOOL,,50824000811,565120,College Board Advanced Placement (AP) Computer Science A Level 2,1,0,0,0,0,0,1,4,0
+DEER K-12 SCHOOL,,50007201621,465010,Computer Science with Programming/Coding Emphasis Level 1,11,6,0,1,0,0,9,4,0
+DEER K-12 SCHOOL,,50007201621,465020,Computer Science with Programming/Coding Emphasis Level 2,15,8,0,1,0,0,13,0,0
+DEER K-12 SCHOOL,,50007201621,465030,Computer Science with Programming/Coding Emphasis Level 3,6,5,0,0,0,0,6,0,0
+DEER K-12 SCHOOL,,50007201621,465040,Computer Science with Programming/Coding Emphasis Level 4,5,5,0,0,0,0,5,0,0
+DEER K-12 SCHOOL,,50007201621,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,0,0
+DEER K-12 SCHOOL,,50007201621,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,0,0
+MT. JUDEA K-12 SCHOOL,,50007201630,465010,Computer Science with Programming/Coding Emphasis Level 1,11,7,0,0,0,0,11,0,0
+MT. JUDEA K-12 SCHOOL,,50007201630,465020,Computer Science with Programming/Coding Emphasis Level 2,8,5,0,0,0,0,8,2,0
+MT. JUDEA K-12 SCHOOL,,50007201630,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,1,0
+MT. JUDEA K-12 SCHOOL,,50007201630,465310,Mobile Application Development Level 1,6,5,0,0,0,0,6,0,0
+MT. JUDEA K-12 SCHOOL,,50007201630,465320,Mobile Application Development Level 2,7,5,0,0,0,0,7,0,0
+BEARDEN HIGH SCHOOL,,50003200053,465010,Computer Science with Programming/Coding Emphasis Level 1,2,1,0,0,0,0,1,6,0
+BEARDEN HIGH SCHOOL,,50003200053,465020,Computer Science with Programming/Coding Emphasis Level 2,1,0,0,0,0,0,1,6,0
+CAMDEN FAIRVIEW HIGH SCHOOL,,50606000312,465010,Computer Science with Programming/Coding Emphasis Level 1,40,23,22,1,0,0,40,0,0
+CAMDEN FAIRVIEW HIGH SCHOOL,,50606000312,465020,Computer Science with Programming/Coding Emphasis Level 2,35,20,20,1,0,0,35,0,0
+CAMDEN FAIRVIEW HIGH SCHOOL,,50606000312,465220,Computer Science with Information Security Emphasis Level 2,1,0,0,0,0,0,1,0,0
+CAMDEN FAIRVIEW HIGH SCHOOL,,50606000312,465310,Mobile Application Development Level 1,22,17,7,1,0,0,22,0,0
+CAMDEN FAIRVIEW HIGH SCHOOL,,50606000312,465320,Mobile Application Development Level 2,18,15,5,1,0,0,18,5,0
+SPARKMAN K-12 SCHOOL,,50729001016,465010,Computer Science with Programming/Coding Emphasis Level 1,5,3,1,1,0,0,4,5,1
+SPARKMAN K-12 SCHOOL,,50729001016,465020,Computer Science with Programming/Coding Emphasis Level 2,5,3,1,1,0,0,4,5,1
+SPARKMAN K-12 SCHOOL,,50729001016,465210,Computer Science with Information Security Emphasis Level 1,2,2,1,0,0,0,1,1,0
+SPARKMAN K-12 SCHOOL,,50729001016,465220,Computer Science with Information Security Emphasis Level 2,2,2,1,0,0,0,1,0,0
+SPARKMAN K-12 SCHOOL,,50729001016,465230,Computer Science with Information Security Emphasis Level 3,1,1,1,0,0,0,0,0,0
+SPARKMAN K-12 SCHOOL,,50729001016,465240,Computer Science with Information Security Emphasis Level 4,1,1,1,0,0,0,0,0,0
+HARMONY GROVE HIGH SCHOOL,,50729000443,465010,Computer Science with Programming/Coding Emphasis Level 1,8,5,2,0,0,0,3,0,0
+HARMONY GROVE HIGH SCHOOL,,50729000443,465020,Computer Science with Programming/Coding Emphasis Level 2,5,3,0,0,0,0,1,0,0
+HARMONY GROVE HIGH SCHOOL,,50729000443,465210,Computer Science with Information Security Emphasis Level 1,6,1,1,2,0,0,4,1,0
+HARMONY GROVE HIGH SCHOOL,,50729000443,465220,Computer Science with Information Security Emphasis Level 2,6,1,1,2,0,0,4,1,0
+HARMONY GROVE HIGH SCHOOL,,50729000443,465230,Computer Science with Information Security Emphasis Level 3,1,1,0,0,0,0,0,0,0
+HARMONY GROVE HIGH SCHOOL,,50729000443,465240,Computer Science with Information Security Emphasis Level 4,1,1,0,0,0,0,0,3,0
+BIGELOW HIGH SCHOOL,,50558000268,465010,Computer Science with Programming/Coding Emphasis Level 1,20,13,0,2,1,0,12,7,0
+BIGELOW HIGH SCHOOL,,50558000268,465020,Computer Science with Programming/Coding Emphasis Level 2,23,13,0,2,0,0,14,4,0
+BIGELOW HIGH SCHOOL,,50558000268,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,0,0
+PERRYVILLE HIGH SCHOOL,,51134000850,465010,Computer Science with Programming/Coding Emphasis Level 1,6,1,0,0,0,0,3,0,0
+PERRYVILLE HIGH SCHOOL,,51134000850,465020,Computer Science with Programming/Coding Emphasis Level 2,6,2,0,0,0,0,3,0,0
+PERRYVILLE HIGH SCHOOL,,51134000850,465510,Robotics Level 1,9,9,0,0,0,0,5,0,0
+PERRYVILLE HIGH SCHOOL,,51134000850,465520,Robotics Level 2,9,9,0,0,0,0,5,3,0
+PERRYVILLE HIGH SCHOOL,,51134000850,465910,Computer Science Independent Study Level I,1,1,0,0,0,0,0,3,0
+PERRYVILLE HIGH SCHOOL,,51134000850,465920,Computer Science Independent Study Level II,1,1,0,0,0,0,0,0,0
+BARTON HIGH SCHOOL,,50273000040,465010,Computer Science with Programming/Coding Emphasis Level 1,1,0,1,0,0,0,1,0,0
+BARTON HIGH SCHOOL,,50273000040,465510,Robotics Level 1,10,5,2,0,0,0,10,2,0
+BARTON HIGH SCHOOL,,50273000040,465520,Robotics Level 2,9,5,2,0,0,0,9,2,0
+CENTRAL HIGH SCHOOL,,50900000607,465010,Computer Science with Programming/Coding Emphasis Level 1,16,3,16,0,0,0,16,0,0
+CENTRAL HIGH SCHOOL,,50900000607,465020,Computer Science with Programming/Coding Emphasis Level 2,16,3,16,0,0,0,16,2,0
+MARVELL-ELAINE HIGH SCHOOL,,50951000694,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,1,0,0,0,1,2,0
+MARVELL-ELAINE HIGH SCHOOL,,50951000694,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,1,0,0,0,1,2,0
+KIPP:DELTA COLLEGIATE HIGH SCHOOL,,50006201451,465010,Computer Science with Programming/Coding Emphasis Level 1,1,0,1,0,0,0,1,2,0
+KIPP BLYTHEVILLE COLLEGIATE HIGH SCHOOL,,50006201595,465010,Computer Science with Programming/Coding Emphasis Level 1,2,0,1,0,0,0,2,2,0
+KIPP BLYTHEVILLE COLLEGIATE HIGH SCHOOL,,50006201595,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,1,0,0,0,0,0,1,2,0
+KIPP BLYTHEVILLE COLLEGIATE HIGH SCHOOL,,50006201595,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,1,0,0,0,0,0,1,1,0
+CENTERPOINT HIGH SCHOOL,,50669000341,465010,Computer Science with Programming/Coding Emphasis Level 1,8,2,0,2,0,0,4,1,0
+CENTERPOINT HIGH SCHOOL,,50669000341,465020,Computer Science with Programming/Coding Emphasis Level 2,7,2,0,1,0,0,4,0,0
+CENTERPOINT HIGH SCHOOL,,50669000341,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,0,0
+CENTERPOINT HIGH SCHOOL,,50669000341,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,0,0
+KIRBY HIGH SCHOOL,,50849000566,465010,Computer Science with Programming/Coding Emphasis Level 1,33,18,0,2,1,0,32,0,1
+KIRBY HIGH SCHOOL,,50849000566,465020,Computer Science with Programming/Coding Emphasis Level 2,29,18,0,4,0,0,29,5,0
+KIRBY HIGH SCHOOL,,50849000566,465110,Computer Science with  Networking/Hardware Emphasis Level 1,7,6,0,1,0,0,7,1,0
+KIRBY HIGH SCHOOL,,50849000566,465120,Computer Science with  Networking/Hardware Emphasis Level 2,7,6,0,1,0,0,6,4,0
+KIRBY HIGH SCHOOL,,50849000566,465510,Robotics Level 1,3,2,0,0,0,0,3,5,0
+KIRBY HIGH SCHOOL,,50849000566,465520,Robotics Level 2,4,3,0,0,0,0,4,0,0
+KIRBY HIGH SCHOOL,,50849000566,465530,Robotics Level 3,2,2,0,0,0,0,2,0,0
+KIRBY HIGH SCHOOL,,50849000566,465540,Robotics Level 4,2,2,0,0,0,0,2,0,0
+MURFREESBORO HIGH SCHOOL,,51032000755,465010,Computer Science with Programming/Coding Emphasis Level 1,15,9,0,1,0,0,9,3,1
+MURFREESBORO HIGH SCHOOL,,51032000755,465020,Computer Science with Programming/Coding Emphasis Level 2,5,2,0,0,0,0,2,1,0
+MURFREESBORO HIGH SCHOOL,,51032000755,465030,Computer Science with Programming/Coding Emphasis Level 3,1,0,0,0,0,0,0,0,0
+HARRISBURG COLLEGE & CAREER PREPARATORY SCHOOL,,50735000447,465010,Computer Science with Programming/Coding Emphasis Level 1,9,9,0,0,0,0,9,3,0
+HARRISBURG COLLEGE & CAREER PREPARATORY SCHOOL,,50735000447,465120,Computer Science with  Networking/Hardware Emphasis Level 2,1,1,0,0,0,0,1,0,0
+HARRISBURG COLLEGE & CAREER PREPARATORY SCHOOL,,50735000447,465130,Computer Science with  Networking/Hardware Emphasis Level 3,1,1,0,0,0,0,1,0,0
+HARRISBURG COLLEGE & CAREER PREPARATORY SCHOOL,,50735000447,465140,Computer Science with  Networking/Hardware Emphasis Level 4,1,1,0,0,0,0,1,0,0
+HARRISBURG COLLEGE & CAREER PREPARATORY SCHOOL,,50735000447,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,1,0
+HARRISBURG COLLEGE & CAREER PREPARATORY SCHOOL,,50735000447,465910,Computer Science Independent Study Level I,1,1,0,0,0,0,1,0,0
+HARRISBURG COLLEGE & CAREER PREPARATORY SCHOOL,,50735000447,565910,Other Concurrent Credit Computer Science 1,1,1,0,0,0,0,1,1,0
+MARKED TREE HIGH SCHOOL,,50942000687,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,1,0,0,0,1,1,0
+MARKED TREE HIGH SCHOOL,,50942000687,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,1,0,0,0,1,0,0
+TRUMANN HIGH SCHOOL,,50004701079,465010,Computer Science with Programming/Coding Emphasis Level 1,12,10,0,0,0,0,12,1,0
+TRUMANN HIGH SCHOOL,,50004701079,465020,Computer Science with Programming/Coding Emphasis Level 2,12,10,0,0,0,0,12,1,0
+MENA HIGH SCHOOL,,50975000713,465010,Computer Science with Programming/Coding Emphasis Level 1,9,6,0,2,2,0,4,0,0
+MENA HIGH SCHOOL,,50975000713,465020,Computer Science with Programming/Coding Emphasis Level 2,7,5,0,1,1,0,4,0,0
+MENA HIGH SCHOOL,,50975000713,465030,Computer Science with Programming/Coding Emphasis Level 3,3,3,0,0,0,0,2,0,0
+MENA HIGH SCHOOL,,50975000713,465040,Computer Science with Programming/Coding Emphasis Level 4,2,2,0,0,0,0,1,1,0
+MENA HIGH SCHOOL,,50975000713,565910,Other Concurrent Credit Computer Science 1,2,0,0,0,0,0,1,1,0
+ACORN HIGH SCHOOL,,50007300002,465010,Computer Science with Programming/Coding Emphasis Level 1,20,14,0,1,2,0,13,2,0
+ACORN HIGH SCHOOL,,50007300002,465020,Computer Science with Programming/Coding Emphasis Level 2,15,9,0,1,2,0,9,2,0
+ACORN HIGH SCHOOL,,50007300002,465030,Computer Science with Programming/Coding Emphasis Level 3,4,2,0,0,0,0,4,2,0
+ACORN HIGH SCHOOL,,50007300002,465040,Computer Science with Programming/Coding Emphasis Level 4,1,1,0,0,0,0,1,2,0
+ACORN HIGH SCHOOL,,50007300002,465910,Computer Science Independent Study Level I,14,7,0,1,0,0,8,0,0
+ACORN HIGH SCHOOL,,50007300002,465920,Computer Science Independent Study Level II,14,6,0,1,0,0,7,0,0
+ACORN HIGH SCHOOL,,50007300002,565910,Other Concurrent Credit Computer Science 1,7,1,0,0,0,0,2,0,0
+ODEN SCHOOLS,,50007301642,465010,Computer Science with Programming/Coding Emphasis Level 1,2,1,0,0,0,0,1,1,0
+ODEN SCHOOLS,,50007301642,465020,Computer Science with Programming/Coding Emphasis Level 2,2,1,0,0,0,0,1,1,0
+ODEN SCHOOLS,,50007301642,565910,Other Concurrent Credit Computer Science 1,1,1,0,0,0,0,1,0,0
+COSSATOT RIVER HIGH SCHOOL,,50040501591,465010,Computer Science with Programming/Coding Emphasis Level 1,5,3,0,3,0,0,5,0,3
+COSSATOT RIVER HIGH SCHOOL,,50040501591,465020,Computer Science with Programming/Coding Emphasis Level 2,5,2,0,3,0,0,5,2,3
+COSSATOT RIVER HIGH SCHOOL,,50040501591,465210,Computer Science with Information Security Emphasis Level 1,4,4,0,1,0,0,4,0,0
+COSSATOT RIVER HIGH SCHOOL,,50040501591,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,1,0,0,1,0,1
+ATKINS HIGH SCHOOL,,50261000033,465010,Computer Science with Programming/Coding Emphasis Level 1,5,5,0,0,0,0,1,1,0
+ATKINS HIGH SCHOOL,,50261000033,465020,Computer Science with Programming/Coding Emphasis Level 2,4,4,0,0,0,0,1,1,0
+ATKINS HIGH SCHOOL,,50261000033,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,2,2,0,0,0,0,0,0,0
+ATKINS HIGH SCHOOL,,50261000033,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,2,2,0,0,0,0,0,0,0
+DOVER HIGH SCHOOL,,50543000257,465010,Computer Science with Programming/Coding Emphasis Level 1,6,6,0,0,0,0,2,0,0
+DOVER HIGH SCHOOL,,50543000257,465020,Computer Science with Programming/Coding Emphasis Level 2,3,3,0,0,0,0,1,0,0
+DOVER HIGH SCHOOL,,50543000257,465210,Computer Science with Information Security Emphasis Level 1,3,3,0,0,0,0,2,4,0
+DOVER HIGH SCHOOL,,50543000257,465220,Computer Science with Information Security Emphasis Level 2,3,3,0,0,0,0,2,4,0
+DOVER HIGH SCHOOL,,50543000257,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,1,1,0,0,0,0,0,0,0
+DOVER HIGH SCHOOL,,50543000257,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,1,1,0,0,0,0,0,0,0
+HECTOR HIGH SCHOOL,,50762000472,465010,Computer Science with Programming/Coding Emphasis Level 1,3,3,0,0,0,0,3,0,0
+HECTOR HIGH SCHOOL,,50762000472,465020,Computer Science with Programming/Coding Emphasis Level 2,2,2,0,0,0,0,2,0,0
+HECTOR HIGH SCHOOL,,50762000472,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,1,0,0,1,0,1
+POTTSVILLE HIGH SCHOOL,,51170000891,465010,Computer Science with Programming/Coding Emphasis Level 1,9,7,2,0,0,0,3,5,0
+POTTSVILLE HIGH SCHOOL,,51170000891,465020,Computer Science with Programming/Coding Emphasis Level 2,5,5,2,0,0,0,2,5,0
+POTTSVILLE HIGH SCHOOL,,51170000891,465210,Computer Science with Information Security Emphasis Level 1,1,0,0,0,0,0,0,2,0
+POTTSVILLE JUNIOR HIGH SCHOOL,,51170001180,465010,Computer Science with Programming/Coding Emphasis Level 1,9,9,0,2,0,0,3,3,0
+POTTSVILLE JUNIOR HIGH SCHOOL,,51170001180,465020,Computer Science with Programming/Coding Emphasis Level 2,6,6,0,2,0,0,2,4,0
+RUSSELLVILLE JR. HIGH SCHOOL,,51206000968,465010,Computer Science with Programming/Coding Emphasis Level 1,17,17,0,4,0,0,8,4,0
+RUSSELLVILLE JR. HIGH SCHOOL,,51206000968,465020,Computer Science with Programming/Coding Emphasis Level 2,15,15,0,4,0,0,7,2,0
+RUSSELLVILLE HIGH SCHOOL,,51206000971,465010,Computer Science with Programming/Coding Emphasis Level 1,25,19,0,5,0,0,11,3,4
+RUSSELLVILLE HIGH SCHOOL,,51206000971,465020,Computer Science with Programming/Coding Emphasis Level 2,24,19,0,5,0,0,11,2,4
+RUSSELLVILLE HIGH SCHOOL,,51206000971,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,31,25,0,7,0,0,12,4,1
+RUSSELLVILLE HIGH SCHOOL,,51206000971,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,28,23,0,5,0,0,10,6,1
+RUSSELLVILLE HIGH SCHOOL,,51206000971,565110,College Board Advanced Placement (AP) Computer Science A Level 1,13,13,0,0,0,0,1,5,0
+RUSSELLVILLE HIGH SCHOOL,,51206000971,565120,College Board Advanced Placement (AP) Computer Science A Level 2,11,11,0,0,0,0,1,1,0
+CENTRAL HIGH SCHOOL,,50900000607,465030,Computer Science with Programming/Coding Emphasis Level 3,63,54,15,3,0,0,16,5,2
+CENTRAL HIGH SCHOOL,,50900000607,465040,Computer Science with Programming/Coding Emphasis Level 4,59,50,12,3,0,0,12,4,2
+CENTRAL HIGH SCHOOL,,50900000607,465310,Mobile Application Development Level 1,26,19,17,1,0,0,18,2,1
+CENTRAL HIGH SCHOOL,,50900000607,465320,Mobile Application Development Level 2,20,17,12,1,0,0,13,2,1
+CENTRAL HIGH SCHOOL,,50900000607,465910,Computer Science Independent Study Level I,3,1,3,0,0,0,2,0,0
+CENTRAL HIGH SCHOOL,,50900000607,465920,Computer Science Independent Study Level II,3,1,3,0,0,0,2,0,0
+CENTRAL HIGH SCHOOL,,50900000607,465950,Computer Science Internship Level I,3,1,3,0,0,0,2,0,0
+CENTRAL HIGH SCHOOL,,50900000607,465960,Computer Science Internship Level II,3,1,3,0,0,0,2,0,0
+CENTRAL HIGH SCHOOL,,50900000607,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,16,15,2,0,0,0,0,0,1
+CENTRAL HIGH SCHOOL,,50900000607,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,16,15,2,0,0,0,0,0,1
+CENTRAL HIGH SCHOOL,,50900000607,565110,College Board Advanced Placement (AP) Computer Science A Level 1,26,24,0,1,0,0,0,0,1
+CENTRAL HIGH SCHOOL,,50900000607,565120,College Board Advanced Placement (AP) Computer Science A Level 2,25,23,0,1,0,0,0,0,1
+CENTRAL HIGH SCHOOL,,50900000607,565890,Weighted Concurrent Credit Computer Science 9,5,5,0,0,0,0,0,0,0
+CENTRAL HIGH SCHOOL,,50900000607,565970,Other Concurrent Credit Computer Science 7,8,7,0,0,0,0,0,1,0
+CENTRAL HIGH SCHOOL,,50900000607,565980,Other Concurrent Credit Computer Science 8,6,6,0,0,0,0,0,1,0
+PARKVIEW MAGNET HIGH SCHOOL,,50900000627,465010,Computer Science with Programming/Coding Emphasis Level 1,7,6,3,3,0,0,3,1,1
+PARKVIEW MAGNET HIGH SCHOOL,,50900000627,465020,Computer Science with Programming/Coding Emphasis Level 2,8,7,4,3,0,0,3,0,1
+PARKVIEW MAGNET HIGH SCHOOL,,50900000627,465030,Computer Science with Programming/Coding Emphasis Level 3,1,0,0,0,0,0,0,0,0
+PARKVIEW MAGNET HIGH SCHOOL,,50900000627,465040,Computer Science with Programming/Coding Emphasis Level 4,1,0,0,0,0,0,0,0,0
+PARKVIEW MAGNET HIGH SCHOOL,,50900000627,465910,Computer Science Independent Study Level I,2,2,1,1,0,0,1,0,0
+PARKVIEW MAGNET HIGH SCHOOL,,50900000627,465920,Computer Science Independent Study Level II,1,1,0,1,0,0,1,0,0
+PARKVIEW MAGNET HIGH SCHOOL,,50900000627,465950,Computer Science Internship Level I,2,2,1,1,0,0,1,4,0
+PARKVIEW MAGNET HIGH SCHOOL,,50900000627,465960,Computer Science Internship Level II,1,1,0,1,0,0,1,4,0
+PARKVIEW MAGNET HIGH SCHOOL,,50900000627,565110,College Board Advanced Placement (AP) Computer Science A Level 1,7,5,3,0,0,0,2,2,0
+PARKVIEW MAGNET HIGH SCHOOL,,50900000627,565120,College Board Advanced Placement (AP) Computer Science A Level 2,7,5,3,0,0,0,2,2,0
+LITTLE ROCK WEST HIGH SCHOOL OF INNOVATION,,,465010,Computer Science with Programming/Coding Emphasis Level 1,7,6,4,0,0,0,3,0,2
+LITTLE ROCK WEST HIGH SCHOOL OF INNOVATION,,,465020,Computer Science with Programming/Coding Emphasis Level 2,6,5,4,0,0,0,3,0,1
+LITTLE ROCK WEST HIGH SCHOOL OF INNOVATION,,,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,1,0,0,0,0,0,0,0
+LITTLE ROCK WEST HIGH SCHOOL OF INNOVATION,,,565120,College Board Advanced Placement (AP) Computer Science A Level 2,2,2,0,0,0,0,0,0,1
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465010,Computer Science with Programming/Coding Emphasis Level 1,52,34,30,19,0,0,51,7,16
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465020,Computer Science with Programming/Coding Emphasis Level 2,51,34,31,18,0,0,50,6,14
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465030,Computer Science with Programming/Coding Emphasis Level 3,6,4,4,2,0,0,5,4,1
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465040,Computer Science with Programming/Coding Emphasis Level 4,5,3,4,1,0,0,5,4,0
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465310,Mobile Application Development Level 1,40,30,26,12,0,0,40,4,8
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465320,Mobile Application Development Level 2,39,30,24,13,0,0,39,3,9
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465330,Mobile Application Development Level 3,4,4,3,0,0,0,4,1,0
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465340,Mobile Application Development Level 4,4,4,3,0,0,0,4,1,0
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465510,Robotics Level 1,97,83,57,34,0,0,97,7,29
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465520,Robotics Level 2,97,84,55,35,0,0,95,7,30
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465530,Robotics Level 3,4,4,1,3,0,0,4,0,3
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,465540,Robotics Level 4,4,4,1,3,0,0,4,0,3
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,5,2,4,0,0,0,5,1,0
+LITTLE ROCK SOUTHWEST  HIGH SCHOOL,,,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,5,2,4,0,0,0,5,1,0
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465010,Computer Science with Programming/Coding Emphasis Level 1,11,10,3,5,0,0,11,1,5
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465020,Computer Science with Programming/Coding Emphasis Level 2,10,10,3,5,0,0,10,1,5
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465310,Mobile Application Development Level 1,10,8,8,2,0,0,10,0,2
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465320,Mobile Application Development Level 2,10,8,8,2,0,0,10,0,2
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465510,Robotics Level 1,27,22,16,7,0,0,27,1,7
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465520,Robotics Level 2,24,19,15,6,0,0,24,0,6
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465530,Robotics Level 3,8,7,4,1,0,0,8,1,1
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465540,Robotics Level 4,7,6,3,1,0,0,7,1,1
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465910,Computer Science Independent Study Level I,1,1,1,0,0,0,1,0,0
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465920,Computer Science Independent Study Level II,1,1,1,0,0,0,1,0,0
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465950,Computer Science Internship Level I,1,1,1,0,0,0,1,0,0
+LITTLE ROCK HALL STEAM MAGNET HIGH SCHOOL,,,465960,Computer Science Internship Level II,1,1,1,0,0,0,1,0,0
+NORTH LITTLE ROCK HIGH SCHOOL,,51068001566,465010,Computer Science with Programming/Coding Emphasis Level 1,33,28,15,4,0,0,33,1,4
+NORTH LITTLE ROCK HIGH SCHOOL,,51068001566,465020,Computer Science with Programming/Coding Emphasis Level 2,28,24,13,2,0,0,28,2,3
+NORTH LITTLE ROCK HIGH SCHOOL,,51068001566,465110,Computer Science with  Networking/Hardware Emphasis Level 1,99,75,57,14,0,0,97,7,12
+NORTH LITTLE ROCK HIGH SCHOOL,,51068001566,465120,Computer Science with  Networking/Hardware Emphasis Level 2,88,68,50,13,0,0,84,12,12
+NORTH LITTLE ROCK HIGH SCHOOL,,51068001566,465130,Computer Science with  Networking/Hardware Emphasis Level 3,13,9,9,1,0,0,13,7,1
+NORTH LITTLE ROCK HIGH SCHOOL,,51068001566,465140,Computer Science with  Networking/Hardware Emphasis Level 4,12,8,9,1,0,0,12,1,1
+NORTH LITTLE ROCK CENTER OF EXCELLENCE,,51068001641,465010,Computer Science with Programming/Coding Emphasis Level 1,17,11,10,0,0,0,17,3,0
+NORTH LITTLE ROCK CENTER OF EXCELLENCE,,51068001641,465020,Computer Science with Programming/Coding Emphasis Level 2,10,7,6,0,0,0,10,8,0
+NORTH LITTLE ROCK CENTER OF EXCELLENCE,,51068001641,465510,Robotics Level 1,10,6,2,2,0,0,10,6,0
+NORTH LITTLE ROCK CENTER OF EXCELLENCE,,51068001641,465520,Robotics Level 2,12,8,3,3,0,0,12,1,0
+NORTH LITTLE ROCK CENTER OF EXCELLENCE,,51068001641,565110,College Board Advanced Placement (AP) Computer Science A Level 1,7,5,2,2,0,0,7,1,0
+NORTH LITTLE ROCK CENTER OF EXCELLENCE,,51068001641,565120,College Board Advanced Placement (AP) Computer Science A Level 2,7,5,2,2,0,0,7,16,0
+MILLS UNIVERSITY STUDIES HIGH SCHOOL,,51185000945,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,11,6,6,2,0,0,11,15,0
+MILLS UNIVERSITY STUDIES HIGH SCHOOL,,51185000945,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,10,6,5,2,0,0,10,1,0
+JOE T. ROBINSON HIGH SCHOOL,,51185000923,465010,Computer Science with Programming/Coding Emphasis Level 1,31,24,10,4,0,0,4,6,1
+JOE T. ROBINSON HIGH SCHOOL,,51185000923,465020,Computer Science with Programming/Coding Emphasis Level 2,28,22,10,4,0,0,3,4,1
+JOE T. ROBINSON HIGH SCHOOL,,51185000923,465030,Computer Science with Programming/Coding Emphasis Level 3,2,2,1,0,0,0,0,0,0
+JOE T. ROBINSON HIGH SCHOOL,,51185000923,465040,Computer Science with Programming/Coding Emphasis Level 4,1,1,0,0,0,0,0,0,0
+SYLVAN HILLS HIGH SCHOOL,,51185000941,465010,Computer Science with Programming/Coding Emphasis Level 1,52,42,21,5,0,0,14,7,1
+SYLVAN HILLS HIGH SCHOOL,,51185000941,465020,Computer Science with Programming/Coding Emphasis Level 2,45,38,20,4,0,0,11,6,1
+SYLVAN HILLS HIGH SCHOOL,,51185000941,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,13,7,2,2,0,0,2,0,0
+SYLVAN HILLS HIGH SCHOOL,,51185000941,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,14,7,3,2,0,0,2,1,0
+MAUMELLE HIGH SCHOOL,,51185001559,465010,Computer Science with Programming/Coding Emphasis Level 1,42,31,19,1,1,0,8,6,1
+MAUMELLE HIGH SCHOOL,,51185001559,465020,Computer Science with Programming/Coding Emphasis Level 2,32,22,13,1,1,0,5,3,1
+MAUMELLE HIGH SCHOOL,,51185001559,465030,Computer Science with Programming/Coding Emphasis Level 3,16,12,1,2,0,0,3,3,0
+MAUMELLE HIGH SCHOOL,,51185001559,465040,Computer Science with Programming/Coding Emphasis Level 4,16,12,1,2,0,0,3,4,0
+MAUMELLE HIGH SCHOOL,,51185001559,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,41,29,10,0,0,1,3,3,0
+MAUMELLE HIGH SCHOOL,,51185001559,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,40,28,9,0,0,1,2,3,0
+JACKSONVILLE HIGH SCHOOL,,50041900919,465010,Computer Science with Programming/Coding Emphasis Level 1,2,1,0,0,0,0,1,1,0
+JACKSONVILLE HIGH SCHOOL,,50041900919,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,2,0
+JACKSONVILLE HIGH SCHOOL,,50041900919,465210,Computer Science with Information Security Emphasis Level 1,65,50,30,6,2,0,65,7,4
+JACKSONVILLE HIGH SCHOOL,,50041900919,465220,Computer Science with Information Security Emphasis Level 2,41,33,19,5,2,0,41,7,3
+JACKSONVILLE HIGH SCHOOL,,50041900919,465230,Computer Science with Information Security Emphasis Level 3,6,5,3,1,0,0,6,2,1
+JACKSONVILLE HIGH SCHOOL,,50041900919,465240,Computer Science with Information Security Emphasis Level 4,5,5,3,1,0,0,5,1,1
+JACKSONVILLE HIGH SCHOOL,,50041900919,465310,Mobile Application Development Level 1,3,0,1,0,0,0,2,1,0
+JACKSONVILLE HIGH SCHOOL,,50041900919,465320,Mobile Application Development Level 2,1,0,1,0,0,0,1,3,0
+MAUMELLE CHARTER HIGH SCHOOL,,50005900741,465010,Computer Science with Programming/Coding Emphasis Level 1,90,51,11,8,0,0,22,11,4
+MAUMELLE CHARTER HIGH SCHOOL,,50005900741,465020,Computer Science with Programming/Coding Emphasis Level 2,92,53,10,8,0,0,20,10,4
+MAUMELLE CHARTER HIGH SCHOOL,,50005900741,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,0,0
+MAUMELLE CHARTER HIGH SCHOOL,,50005900741,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,0,0
+MAUMELLE CHARTER HIGH SCHOOL,,50005900741,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,9,7,2,0,0,0,1,1,0
+MAUMELLE CHARTER HIGH SCHOOL,,50005900741,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,10,7,3,0,0,0,2,1,0
+MAUMELLE CHARTER HIGH SCHOOL,,50005900741,565810,Weighted Concurrent Credit Computer Science 1,4,2,0,0,0,0,0,0,0
+MAUMELLE CHARTER HIGH SCHOOL,,50005900741,565910,Other Concurrent Credit Computer Science 1,5,3,0,0,0,0,0,2,0
+MAUMELLE CHARTER HIGH SCHOOL,,50005900741,565920,Other Concurrent Credit Computer Science 2,5,3,0,0,0,0,0,1,0
+SCOTT CHARTER SCHOOL,,50005901619,465010,Computer Science with Programming/Coding Emphasis Level 1,12,8,6,2,1,0,7,0,1
+SCOTT CHARTER SCHOOL,,50005901619,465020,Computer Science with Programming/Coding Emphasis Level 2,12,8,6,2,1,0,7,0,1
+LISA ACADEMY WEST HIGH  SCHOOL,,50007401107,465010,Computer Science with Programming/Coding Emphasis Level 1,100,45,44,30,2,0,58,5,35
+LISA ACADEMY WEST HIGH  SCHOOL,,50007401107,465020,Computer Science with Programming/Coding Emphasis Level 2,101,47,42,31,2,0,59,5,36
+LISA ACADEMY WEST HIGH  SCHOOL,,50007401107,465220,Computer Science with Information Security Emphasis Level 2,1,1,1,0,0,0,0,0,0
+LISA ACADEMY WEST HIGH  SCHOOL,,50007401107,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,27,9,8,9,1,0,13,2,3
+LISA ACADEMY WEST HIGH  SCHOOL,,50007401107,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,26,8,8,8,1,0,12,4,3
+LISA ACADEMY WEST HIGH  SCHOOL,,50007401107,565110,College Board Advanced Placement (AP) Computer Science A Level 1,10,10,1,1,0,0,3,3,1
+LISA ACADEMY WEST HIGH  SCHOOL,,50007401107,565120,College Board Advanced Placement (AP) Computer Science A Level 2,11,11,1,1,0,0,3,1,1
+LISA ACADEMY NORTH HIGH SCHOOL,,50007401501,465010,Computer Science with Programming/Coding Emphasis Level 1,41,23,23,4,0,0,23,2,6
+LISA ACADEMY NORTH HIGH SCHOOL,,50007401501,465020,Computer Science with Programming/Coding Emphasis Level 2,43,23,23,4,0,0,23,2,6
+LISA ACADEMY NORTH HIGH SCHOOL,,50007401501,465030,Computer Science with Programming/Coding Emphasis Level 3,20,11,6,7,0,0,11,1,3
+LISA ACADEMY NORTH HIGH SCHOOL,,50007401501,465040,Computer Science with Programming/Coding Emphasis Level 4,20,11,6,7,0,0,11,2,3
+LISA ACADEMY NORTH HIGH SCHOOL,,50007401501,465210,Computer Science with Information Security Emphasis Level 1,3,3,1,1,0,0,2,1,0
+LISA ACADEMY NORTH HIGH SCHOOL,,50007401501,465220,Computer Science with Information Security Emphasis Level 2,3,3,1,1,0,0,2,14,0
+LISA ACADEMY NORTH HIGH SCHOOL,,50007401501,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,13,9,3,4,1,0,8,11,1
+LISA ACADEMY NORTH HIGH SCHOOL,,50007401501,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,10,9,2,3,1,0,7,0,1
+LISA ACADEMY NORTH HIGH SCHOOL,,50007401501,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,1,0,1,0,0,1,0,0
+LISA ACADEMY NORTH HIGH SCHOOL,,50007401501,565120,College Board Advanced Placement (AP) Computer Science A Level 2,1,1,0,1,0,0,1,0,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,465110,Computer Science with  Networking/Hardware Emphasis Level 1,24,22,1,1,1,0,13,5,1
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,465120,Computer Science with  Networking/Hardware Emphasis Level 2,17,16,1,1,1,0,12,4,1
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,465130,Computer Science with  Networking/Hardware Emphasis Level 3,1,1,0,0,0,0,0,0,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,465140,Computer Science with  Networking/Hardware Emphasis Level 4,2,2,0,0,0,0,0,6,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,465210,Computer Science with Information Security Emphasis Level 1,17,14,2,1,0,0,8,10,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,465220,Computer Science with Information Security Emphasis Level 2,14,12,2,1,0,0,7,2,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,465310,Mobile Application Development Level 1,37,29,4,2,1,0,20,7,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,465320,Mobile Application Development Level 2,23,19,4,1,1,0,12,5,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,465340,Mobile Application Development Level 4,1,0,1,0,0,0,0,0,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,465920,Computer Science Independent Study Level II,1,1,0,0,0,0,0,0,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,1,1,0,0,0,0,0,0,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,565810,Weighted Concurrent Credit Computer Science 1,1,0,0,0,0,0,1,0,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,565890,Weighted Concurrent Credit Computer Science 9,1,0,0,0,0,0,1,4,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,565910,Other Concurrent Credit Computer Science 1,3,1,0,0,0,0,1,4,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,565920,Other Concurrent Credit Computer Science 2,1,1,0,0,0,0,0,19,0
+ARKANSAS VIRTUAL ACADEMY HIGH SCHOOL,,50039401604,565930,Other Concurrent Credit Computer Science 3,3,3,0,0,0,0,0,20,0
+ESTEM JUNIOR HIGH PUBLIC CHARTER SCHOOL,,50039801658,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,4,4,1,0,0,0,2,1,0
+ESTEM JUNIOR HIGH PUBLIC CHARTER SCHOOL,,50039801658,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,3,3,1,0,0,0,2,0,0
+ESTEM HIGH SCHOOL,,50039801470,465010,Computer Science with Programming/Coding Emphasis Level 1,60,23,30,2,0,0,20,6,0
+ESTEM HIGH SCHOOL,,50039801470,465020,Computer Science with Programming/Coding Emphasis Level 2,58,22,28,2,0,0,18,6,0
+ESTEM HIGH SCHOOL,,50039801470,465210,Computer Science with Information Security Emphasis Level 1,4,4,1,1,0,0,0,0,0
+ESTEM HIGH SCHOOL,,50039801470,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,0,0
+ESTEM HIGH SCHOOL,,50039801470,465510,Robotics Level 1,44,30,10,9,0,0,12,3,2
+ESTEM HIGH SCHOOL,,50039801470,465520,Robotics Level 2,37,27,8,6,0,0,10,14,1
+ESTEM HIGH SCHOOL,,50039801470,565110,College Board Advanced Placement (AP) Computer Science A Level 1,4,3,1,0,0,0,1,13,0
+ESTEM HIGH SCHOOL,,50039801470,565120,College Board Advanced Placement (AP) Computer Science A Level 2,4,3,1,0,0,0,1,4,0
+ESTEM EAST VILLAGE JUNIOR HIGH PUBLIC CHARTER SCHOOL,,50039801658,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,2,1,2,0,0,0,0,3,0
+ESTEM EAST VILLAGE JUNIOR HIGH PUBLIC CHARTER SCHOOL,,50039801658,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,2,1,2,0,0,0,0,1,0
+JACKSONVILLE LIGHTHOUSE COLLEGE PREP ACADEMY HIGH,,50041900919,465020,Computer Science with Programming/Coding Emphasis Level 2,1,0,1,0,0,0,0,1,0
+JACKSONVILLE LIGHTHOUSE COLLEGE PREP ACADEMY HIGH,,50041900919,565110,College Board Advanced Placement (AP) Computer Science A Level 1,2,2,1,0,0,0,1,1,0
+JACKSONVILLE LIGHTHOUSE COLLEGE PREP ACADEMY HIGH,,50041900919,565120,College Board Advanced Placement (AP) Computer Science A Level 2,1,1,0,0,0,0,0,1,0
+THE EXCEL CENTER,,50042001638,465010,Computer Science with Programming/Coding Emphasis Level 1,5,4,3,1,0,0,0,0,0
+THE EXCEL CENTER,,50042001638,465020,Computer Science with Programming/Coding Emphasis Level 2,4,4,3,0,0,0,0,0,0
+ARK. SCHOOL FOR THE BLIND H.S.,,50003501420,465010,Computer Science with Programming/Coding Emphasis Level 1,2,2,1,0,0,0,2,3,0
+ARKANSAS CONSOLIDATED HIGH SCHOOL-ALEXANDER,,50039001561,465010,Computer Science with Programming/Coding Emphasis Level 1,12,12,4,0,0,0,9,1,0
+ARKANSAS CONSOLIDATED HIGH SCHOOL-ALEXANDER,,50039001561,465210,Computer Science with Information Security Emphasis Level 1,4,4,2,0,0,0,3,0,0
+ARKANSAS CONSOLIDATED HIGH SCHOOL-DERMOTT,,50039001561,465010,Computer Science with Programming/Coding Emphasis Level 1,5,5,3,1,0,0,1,0,0
+ARKANSAS CONSOLIDATED HIGH SCHOOL-DERMOTT,,50039001561,465210,Computer Science with Information Security Emphasis Level 1,3,3,1,1,0,0,2,0,0
+ARKANSAS CONSOLIDATED HIGH SCHOOL-MANSFIELD,,50039001561,465010,Computer Science with Programming/Coding Emphasis Level 1,4,4,2,1,0,0,1,0,0
+ARKANSAS CONSOLIDATED HIGH SCHOOL-MANSFIELD,,50039001561,465210,Computer Science with Information Security Emphasis Level 1,4,4,2,0,0,0,1,5,0
+ARKANSAS CONSOLIDATED HIGH SCHOOL-HARRISBURG,,50039001561,465010,Computer Science with Programming/Coding Emphasis Level 1,1,0,0,0,0,0,0,3,0
+CSTP CIVILIAN STUDENT TRAINING PROGRAM,,50039001674,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,0,0,0
+CSTP CIVILIAN STUDENT TRAINING PROGRAM,,50039001674,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,0,0
+MAYNARD HIGH SCHOOL,,50957000700,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,0,0
+MAYNARD HIGH SCHOOL,,50957000700,465020,Computer Science with Programming/Coding Emphasis Level 2,2,2,0,0,0,0,2,0,0
+MAYNARD HIGH SCHOOL,,50957000700,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,2,2,0,0,0,0,2,0,0
+MAYNARD HIGH SCHOOL,,50957000700,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,2,2,0,0,0,0,2,0,0
+POCAHONTAS HIGH SCHOOL,,51161000884,465010,Computer Science with Programming/Coding Emphasis Level 1,30,21,0,2,0,0,11,3,0
+POCAHONTAS HIGH SCHOOL,,51161000884,465020,Computer Science with Programming/Coding Emphasis Level 2,30,22,0,2,0,0,12,3,0
+POCAHONTAS HIGH SCHOOL,,51161000884,465230,Computer Science with Information Security Emphasis Level 3,15,8,0,0,0,0,5,2,0
+POCAHONTAS HIGH SCHOOL,,51161000884,465240,Computer Science with Information Security Emphasis Level 4,15,9,0,0,0,0,6,2,0
+POCAHONTAS JUNIOR HIGH SCHOOL,,51161001438,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,4,0
+POCAHONTAS JUNIOR HIGH SCHOOL,,51161001438,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,4,0
+FORREST CITY HIGH SCHOOL,,50627000344,465010,Computer Science with Programming/Coding Emphasis Level 1,137,73,129,2,0,0,137,5,2
+FORREST CITY HIGH SCHOOL,,50627000344,465020,Computer Science with Programming/Coding Emphasis Level 2,135,72,128,1,0,0,134,5,2
+PALESTINE-WHEATLEY SENIOR HIGH,,50005100833,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,1,0
+PALESTINE-WHEATLEY SENIOR HIGH,,50005100833,565910,Other Concurrent Credit Computer Science 1,8,3,1,0,0,0,8,1,0
+BAUXITE HIGH SCHOOL,,50279000047,465010,Computer Science with Programming/Coding Emphasis Level 1,19,14,1,1,0,0,4,2,0
+BAUXITE HIGH SCHOOL,,50279000047,465020,Computer Science with Programming/Coding Emphasis Level 2,19,14,1,1,0,0,4,2,0
+BAUXITE HIGH SCHOOL,,50279000047,465030,Computer Science with Programming/Coding Emphasis Level 3,4,4,0,0,0,0,1,0,0
+BAUXITE HIGH SCHOOL,,50279000047,465040,Computer Science with Programming/Coding Emphasis Level 4,4,4,0,0,0,0,1,0,0
+BAUXITE HIGH SCHOOL,,50279000047,465210,Computer Science with Information Security Emphasis Level 1,2,2,0,0,0,0,0,0,0
+BAUXITE HIGH SCHOOL,,50279000047,465220,Computer Science with Information Security Emphasis Level 2,2,2,0,0,0,0,0,0,0
+BENTON HIGH SCHOOL,,50296000063,465010,Computer Science with Programming/Coding Emphasis Level 1,2,1,0,0,0,0,0,1,0
+BENTON HIGH SCHOOL,,50296000063,465020,Computer Science with Programming/Coding Emphasis Level 2,3,1,0,0,0,0,0,1,0
+BENTON HIGH SCHOOL,,50296000063,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,29,21,2,5,0,0,6,2,0
+BENTON HIGH SCHOOL,,50296000063,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,29,21,2,5,0,0,6,4,0
+BENTON HIGH SCHOOL,,50296000063,565110,College Board Advanced Placement (AP) Computer Science A Level 1,8,6,0,1,0,0,0,9,0
+BENTON HIGH SCHOOL,,50296000063,565120,College Board Advanced Placement (AP) Computer Science A Level 2,8,6,0,1,0,0,0,1,0
+BRYANT JUNIOR HIGH SCHOOL,,50369001676,465010,Computer Science with Programming/Coding Emphasis Level 1,45,25,10,7,0,0,22,2,1
+BRYANT JUNIOR HIGH SCHOOL,,50369001676,465020,Computer Science with Programming/Coding Emphasis Level 2,25,14,7,3,0,0,13,0,0
+BRYANT JUNIOR HIGH SCHOOL,,50369001676,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,29,19,4,3,0,0,7,6,0
+BRYANT JUNIOR HIGH SCHOOL,,50369001676,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,25,17,4,2,0,0,6,5,0
+BRYANT HIGH SCHOOL,,50369000118,465030,Computer Science with Programming/Coding Emphasis Level 3,44,38,6,7,0,0,14,4,2
+BRYANT HIGH SCHOOL,,50369000118,465040,Computer Science with Programming/Coding Emphasis Level 4,43,36,6,6,0,0,14,4,2
+BRYANT HIGH SCHOOL,,50369000118,465210,Computer Science with Information Security Emphasis Level 1,11,7,3,1,0,0,3,0,1
+BRYANT HIGH SCHOOL,,50369000118,465220,Computer Science with Information Security Emphasis Level 2,6,5,1,1,0,0,1,1,1
+BRYANT HIGH SCHOOL,,50369000118,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,31,19,8,2,0,0,9,3,0
+BRYANT HIGH SCHOOL,,50369000118,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,30,19,8,2,0,0,9,2,0
+BRYANT HIGH SCHOOL,,50369000118,565110,College Board Advanced Placement (AP) Computer Science A Level 1,30,27,3,2,0,0,4,2,2
+BRYANT HIGH SCHOOL,,50369000118,565120,College Board Advanced Placement (AP) Computer Science A Level 2,26,23,2,2,0,0,2,4,2
+HARMONY GROVE HIGH SCHOOL,,50729000443,465010,Computer Science with Programming/Coding Emphasis Level 1,9,8,1,0,0,0,3,2,0
+HARMONY GROVE HIGH SCHOOL,,50729000443,465020,Computer Science with Programming/Coding Emphasis Level 2,9,8,1,0,0,0,3,1,0
+HARMONY GROVE HIGH SCHOOL,,50729000443,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,1,0
+HARMONY GROVE HIGH SCHOOL,,50729000443,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,0,0
+HARMONY GROVE HIGH SCHOOL,,50729000443,465310,Mobile Application Development Level 1,1,0,0,0,0,0,1,0,0
+HARMONY GROVE HIGH SCHOOL,,50729000443,465320,Mobile Application Development Level 2,1,0,0,0,0,0,1,15,0
+WALDRON HIGH SCHOOL,,51368001122,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,2,1,0,1,0,0,1,14,0
+WALDRON HIGH SCHOOL,,51368001122,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,1,0,0,1,0,0,0,0,0
+MARSHALL HIGH SCHOOL,,50948000693,465010,Computer Science with Programming/Coding Emphasis Level 1,6,6,0,0,0,0,6,1,0
+MARSHALL HIGH SCHOOL,,50948000693,465020,Computer Science with Programming/Coding Emphasis Level 2,5,5,0,0,0,0,5,4,0
+MARSHALL HIGH SCHOOL,,50948000693,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,4,0
+MARSHALL HIGH SCHOOL,,50948000693,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,0,0
+ST. JOE K-12 SCHOOL,,50007601643,465010,Computer Science with Programming/Coding Emphasis Level 1,4,1,0,0,0,0,4,0,0
+ST. JOE K-12 SCHOOL,,50007601643,565910,Other Concurrent Credit Computer Science 1,1,1,0,0,0,0,1,1,0
+WESTERN GROVE K-12 SCHOOL,,50007601646,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,1,0
+WESTERN GROVE K-12 SCHOOL,,50007601646,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,0,0
+BRUNO-PYATT K-12 SCHOOL,,50007601645,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,0,0
+L. A. CHAFFIN JR. HIGH SCHOOL,,50633000358,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,22,14,1,2,0,0,9,0,0
+L. A. CHAFFIN JR. HIGH SCHOOL,,50633000358,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,22,14,1,2,0,0,9,0,0
+NORTHSIDE HIGH SCHOOL,,50633000367,465010,Computer Science with Programming/Coding Emphasis Level 1,62,46,4,34,1,0,48,2,14
+NORTHSIDE HIGH SCHOOL,,50633000367,465020,Computer Science with Programming/Coding Emphasis Level 2,52,38,2,32,1,0,41,2,12
+NORTHSIDE HIGH SCHOOL,,50633000367,465030,Computer Science with Programming/Coding Emphasis Level 3,12,7,1,5,0,0,9,3,2
+NORTHSIDE HIGH SCHOOL,,50633000367,465040,Computer Science with Programming/Coding Emphasis Level 4,11,7,0,5,0,0,9,1,2
+NORTHSIDE HIGH SCHOOL,,50633000367,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,6,5,0,0,0,0,2,0,0
+NORTHSIDE HIGH SCHOOL,,50633000367,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,6,5,0,0,0,0,2,0,0
+NORTHSIDE HIGH SCHOOL,,50633000367,565110,College Board Advanced Placement (AP) Computer Science A Level 1,12,9,0,4,0,0,7,6,2
+NORTHSIDE HIGH SCHOOL,,50633000367,565120,College Board Advanced Placement (AP) Computer Science A Level 2,8,7,0,3,0,0,3,6,1
+NORTHSIDE HIGH SCHOOL,,50633000367,565810,Weighted Concurrent Credit Computer Science 1,3,2,0,2,0,0,3,0,0
+NORTHSIDE HIGH SCHOOL,,50633000367,565820,Weighted Concurrent Credit Computer Science 2,2,2,0,2,0,0,2,0,0
+NORTHSIDE HIGH SCHOOL,,50633000367,565830,Weighted Concurrent Credit Computer Science 3,2,1,0,2,0,0,2,2,0
+NORTHSIDE HIGH SCHOOL,,50633000367,565850,Weighted Concurrent Credit Computer Science 5,1,1,0,1,0,0,1,1,0
+NORTHSIDE HIGH SCHOOL,,50633000367,565910,Other Concurrent Credit Computer Science 1,8,7,1,1,0,0,5,2,1
+NORTHSIDE HIGH SCHOOL,,50633000367,565930,Other Concurrent Credit Computer Science 3,1,1,0,1,0,0,1,2,0
+SOUTHSIDE HIGH SCHOOL,,50633000373,465010,Computer Science with Programming/Coding Emphasis Level 1,26,24,0,5,0,0,11,3,3
+SOUTHSIDE HIGH SCHOOL,,50633000373,465020,Computer Science with Programming/Coding Emphasis Level 2,27,25,0,4,0,0,11,2,3
+SOUTHSIDE HIGH SCHOOL,,50633000373,465310,Mobile Application Development Level 1,23,23,1,2,0,0,9,1,3
+SOUTHSIDE HIGH SCHOOL,,50633000373,465320,Mobile Application Development Level 2,24,24,1,2,0,0,9,2,3
+SOUTHSIDE HIGH SCHOOL,,50633000373,465330,Mobile Application Development Level 3,9,8,0,0,0,0,3,2,1
+SOUTHSIDE HIGH SCHOOL,,50633000373,465340,Mobile Application Development Level 4,6,5,0,0,0,0,2,1,1
+SOUTHSIDE HIGH SCHOOL,,50633000373,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,20,18,1,2,0,0,6,1,1
+SOUTHSIDE HIGH SCHOOL,,50633000373,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,18,16,1,1,0,0,4,1,1
+SOUTHSIDE HIGH SCHOOL,,50633000373,565110,College Board Advanced Placement (AP) Computer Science A Level 1,17,13,0,0,0,0,4,2,0
+SOUTHSIDE HIGH SCHOOL,,50633000373,565120,College Board Advanced Placement (AP) Computer Science A Level 2,15,11,0,0,0,0,3,2,0
+SOUTHSIDE HIGH SCHOOL,,50633000373,565810,Weighted Concurrent Credit Computer Science 1,5,5,0,0,0,0,1,0,0
+SOUTHSIDE HIGH SCHOOL,,50633000373,565820,Weighted Concurrent Credit Computer Science 2,4,4,0,0,0,0,0,0,0
+SOUTHSIDE HIGH SCHOOL,,50633000373,565910,Other Concurrent Credit Computer Science 1,3,3,0,1,0,0,2,0,0
+SOUTHSIDE HIGH SCHOOL,,50633000373,565930,Other Concurrent Credit Computer Science 3,3,3,0,0,0,0,0,0,0
+GREENWOOD HIGH SCHOOL,,50699000424,465010,Computer Science with Programming/Coding Emphasis Level 1,8,8,0,1,0,0,2,1,1
+GREENWOOD HIGH SCHOOL,,50699000424,465020,Computer Science with Programming/Coding Emphasis Level 2,8,8,0,1,0,0,2,1,1
+GREENWOOD HIGH SCHOOL,,50699000424,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,0,0
+GREENWOOD HIGH SCHOOL,,50699000424,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,0,0
+GREENWOOD HIGH SCHOOL,,50699000424,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,1,0,0,0,1,0,0,1,0
+GREENWOOD HIGH SCHOOL,,50699000424,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,1,0,0,0,1,0,0,1,0
+GREENWOOD HIGH SCHOOL,,50699000424,565110,College Board Advanced Placement (AP) Computer Science A Level 1,5,5,0,1,0,0,0,0,0
+GREENWOOD HIGH SCHOOL,,50699000424,565120,College Board Advanced Placement (AP) Computer Science A Level 2,5,5,0,1,0,0,0,9,0
+GREENWOOD HIGH SCHOOL,,50699000424,565820,Weighted Concurrent Credit Computer Science 2,6,5,0,2,0,0,1,7,0
+GREENWOOD HIGH SCHOOL,,50699000424,565830,Weighted Concurrent Credit Computer Science 3,4,4,0,0,0,0,1,0,0
+GREENWOOD HIGH SCHOOL,,50699000424,565840,Weighted Concurrent Credit Computer Science 4,4,4,0,0,0,0,1,0,0
+GREENWOOD HIGH SCHOOL,,50699000424,565850,Weighted Concurrent Credit Computer Science 5,1,1,0,0,0,0,0,0,0
+GREENWOOD HIGH SCHOOL,,50699000424,565860,Weighted Concurrent Credit Computer Science 6,1,1,0,0,0,0,0,0,0
+GREENWOOD HIGH SCHOOL,,50699000424,565910,Other Concurrent Credit Computer Science 1,8,7,0,2,0,0,1,2,0
+GREENWOOD HIGH SCHOOL,,50699000424,565920,Other Concurrent Credit Computer Science 2,6,5,0,0,0,0,1,2,0
+GREENWOOD HIGH SCHOOL,,50699000424,565930,Other Concurrent Credit Computer Science 3,8,7,0,0,0,0,2,1,0
+GREENWOOD HIGH SCHOOL,,50699000424,565940,Other Concurrent Credit Computer Science 4,7,7,0,1,0,0,3,0,0
+GREENWOOD HIGH SCHOOL,,50699000424,565970,Other Concurrent Credit Computer Science 7,7,7,0,1,0,0,3,0,0
+GREENWOOD HIGH SCHOOL,,50699000424,565980,Other Concurrent Credit Computer Science 8,1,1,0,0,0,0,0,0,0
+GREENWOOD HIGH SCHOOL,,50699000424,565990,Other Concurrent Credit Computer Science 9,1,1,0,0,0,0,0,0,0
+GREENWOOD FRESHMAN CENTER,,50699001634,465010,Computer Science with Programming/Coding Emphasis Level 1,233,118,0,8,9,0,68,22,3
+GREENWOOD FRESHMAN CENTER,,50699001634,465020,Computer Science with Programming/Coding Emphasis Level 2,216,105,0,7,8,0,60,23,3
+GREENWOOD FRESHMAN CENTER,,50699001634,465510,Robotics Level 1,15,13,0,0,1,0,8,5,0
+GREENWOOD FRESHMAN CENTER,,50699001634,465520,Robotics Level 2,14,12,0,0,1,0,7,4,0
+GREENWOOD FRESHMAN CENTER,,50699001634,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,23,4,0,0,1,0,3,4,0
+GREENWOOD FRESHMAN CENTER,,50699001634,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,23,5,0,0,1,0,4,2,0
+HACKETT HIGH SCHOOL,,50717000435,465010,Computer Science with Programming/Coding Emphasis Level 1,4,1,0,0,0,0,4,2,0
+HACKETT HIGH SCHOOL,,50717000435,465020,Computer Science with Programming/Coding Emphasis Level 2,4,1,0,0,0,0,4,1,0
+LAVACA HIGH SCHOOL,,50873000587,465210,Computer Science with Information Security Emphasis Level 1,4,1,0,0,0,0,2,0,0
+LAVACA HIGH SCHOOL,,50873000587,465220,Computer Science with Information Security Emphasis Level 2,10,6,0,0,1,0,3,1,0
+LAVACA HIGH SCHOOL,,50873000587,465310,Mobile Application Development Level 1,74,39,1,6,0,0,31,6,0
+LAVACA HIGH SCHOOL,,50873000587,465320,Mobile Application Development Level 2,71,40,1,6,0,0,30,6,0
+LAVACA HIGH SCHOOL,,50873000587,465330,Mobile Application Development Level 3,18,15,0,0,1,0,5,2,0
+LAVACA HIGH SCHOOL,,50873000587,465340,Mobile Application Development Level 4,18,15,0,0,1,0,5,2,0
+LAVACA HIGH SCHOOL,,50873000587,565910,Other Concurrent Credit Computer Science 1,2,2,0,0,0,0,1,0,0
+LAVACA HIGH SCHOOL,,50873000587,565920,Other Concurrent Credit Computer Science 2,2,2,0,0,0,0,1,0,0
+MANSFIELD HIGH SCHOOL,,50933001036,465010,Computer Science with Programming/Coding Emphasis Level 1,13,5,0,0,1,0,9,2,0
+MANSFIELD HIGH SCHOOL,,50933001036,465020,Computer Science with Programming/Coding Emphasis Level 2,13,5,0,0,1,0,9,2,0
+MANSFIELD HIGH SCHOOL,,50933001036,465210,Computer Science with Information Security Emphasis Level 1,6,4,0,0,0,0,5,1,0
+MANSFIELD HIGH SCHOOL,,50933001036,465220,Computer Science with Information Security Emphasis Level 2,3,2,0,0,0,0,3,0,0
+FUTURE SCHOOL OF FORT SMITH,,50041801627,465010,Computer Science with Programming/Coding Emphasis Level 1,21,16,0,3,2,0,16,0,0
+FUTURE SCHOOL OF FORT SMITH,,50041801627,565930,Other Concurrent Credit Computer Science 3,1,1,0,0,0,0,1,1,0
+FUTURE SCHOOL OF FORT SMITH,,50041801627,565950,Other Concurrent Credit Computer Science 5,1,1,0,0,0,0,1,0,0
+FUTURE SCHOOL OF FORT SMITH,,50041801627,565960,Other Concurrent Credit Computer Science 6,1,1,0,0,0,0,1,0,0
+DEQUEEN HIGH SCHOOL,,50004900235,465010,Computer Science with Programming/Coding Emphasis Level 1,4,3,0,3,0,0,4,1,0
+DEQUEEN HIGH SCHOOL,,50004900235,465020,Computer Science with Programming/Coding Emphasis Level 2,4,3,0,3,0,0,4,1,0
+DEQUEEN HIGH SCHOOL,,50004900235,565110,College Board Advanced Placement (AP) Computer Science A Level 1,5,5,0,4,0,0,4,1,0
+DEQUEEN HIGH SCHOOL,,50004900235,565120,College Board Advanced Placement (AP) Computer Science A Level 2,3,3,0,2,0,0,3,0,0
+HORATIO HIGH SCHOOL,,50786000502,465010,Computer Science with Programming/Coding Emphasis Level 1,9,8,0,1,0,0,6,2,0
+HORATIO HIGH SCHOOL,,50786000502,465020,Computer Science with Programming/Coding Emphasis Level 2,9,8,0,1,0,0,6,2,0
+CAVE CITY HIGH CAREER & COLLEGIATE PREPARATORY SCHOOL,,50405000148,465010,Computer Science with Programming/Coding Emphasis Level 1,28,15,1,1,0,0,23,1,0
+CAVE CITY HIGH CAREER & COLLEGIATE PREPARATORY SCHOOL,,50405000148,465020,Computer Science with Programming/Coding Emphasis Level 2,25,12,1,0,0,0,20,1,0
+CAVE CITY HIGH CAREER & COLLEGIATE PREPARATORY SCHOOL,,50405000148,565910,Other Concurrent Credit Computer Science 1,1,0,0,0,0,0,1,0,0
+HIGHLAND HIGH SCHOOL,,50777000491,465010,Computer Science with Programming/Coding Emphasis Level 1,9,8,0,1,0,0,9,1,0
+HIGHLAND HIGH SCHOOL,,50777000491,465020,Computer Science with Programming/Coding Emphasis Level 2,8,7,0,0,0,0,8,1,0
+HIGHLAND HIGH SCHOOL,,50777000491,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,1,1,0,0,0,0,1,21,0
+HIGHLAND HIGH SCHOOL,,50777000491,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,1,0,0,0,0,1,15,0
+HIGHLAND HIGH SCHOOL,,50777000491,565910,Other Concurrent Credit Computer Science 1,1,0,0,0,0,0,1,1,0
+MOUNTAIN VIEW HIGH SCHOOL,,51020000749,465010,Computer Science with Programming/Coding Emphasis Level 1,3,2,0,0,0,0,3,1,0
+MOUNTAIN VIEW HIGH SCHOOL,,51020000749,465020,Computer Science with Programming/Coding Emphasis Level 2,3,2,0,0,0,0,3,0,0
+MOUNTAIN VIEW HIGH SCHOOL,,51020000749,465210,Computer Science with Information Security Emphasis Level 1,2,2,0,0,0,0,2,1,0
+MOUNTAIN VIEW HIGH SCHOOL,,51020000749,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,1,0
+TIMBO HIGH SCHOOL,,51020001087,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,0,0
+TIMBO HIGH SCHOOL,,51020001087,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,0,0
+EL DORADO HIGH SCHOOL,,50568000274,465010,Computer Science with Programming/Coding Emphasis Level 1,36,31,10,4,0,0,35,6,2
+EL DORADO HIGH SCHOOL,,50568000274,465020,Computer Science with Programming/Coding Emphasis Level 2,32,28,9,4,0,0,31,10,2
+EL DORADO HIGH SCHOOL,,50568000274,465030,Computer Science with Programming/Coding Emphasis Level 3,9,8,3,0,0,0,9,5,0
+EL DORADO HIGH SCHOOL,,50568000274,465040,Computer Science with Programming/Coding Emphasis Level 4,7,6,2,0,0,0,7,0,0
+EL DORADO HIGH SCHOOL,,50568000274,465210,Computer Science with Information Security Emphasis Level 1,19,12,7,1,0,0,19,0,0
+EL DORADO HIGH SCHOOL,,50568000274,465220,Computer Science with Information Security Emphasis Level 2,17,10,6,2,0,0,17,0,0
+EL DORADO HIGH SCHOOL,,50568000274,465230,Computer Science with Information Security Emphasis Level 3,5,5,1,0,0,0,5,0,0
+EL DORADO HIGH SCHOOL,,50568000274,465240,Computer Science with Information Security Emphasis Level 4,5,5,1,0,0,0,5,1,0
+JUNCTION CITY HIGH SCHOOL,,50834000558,465010,Computer Science with Programming/Coding Emphasis Level 1,10,9,4,0,0,0,5,2,0
+JUNCTION CITY HIGH SCHOOL,,50834000558,465020,Computer Science with Programming/Coding Emphasis Level 2,9,9,3,0,0,0,4,1,0
+JUNCTION CITY HIGH SCHOOL,,50834000558,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,0,0,0
+JUNCTION CITY HIGH SCHOOL,,50834000558,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,2,0
+PARKERS CHAPEL HIGH SCHOOL,,51122000841,465010,Computer Science with Programming/Coding Emphasis Level 1,12,10,1,0,0,0,5,0,0
+PARKERS CHAPEL HIGH SCHOOL,,51122000841,465020,Computer Science with Programming/Coding Emphasis Level 2,12,10,1,0,0,0,5,1,0
+SMACKOVER HIGH SCHOOL,,51251001009,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,8,4,0,1,0,0,3,1,0
+SMACKOVER HIGH SCHOOL,,51251001009,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,6,3,0,1,0,0,2,0,0
+CLINTON HIGH SCHOOL,,50441000172,465210,Computer Science with Information Security Emphasis Level 1,1,1,0,0,0,0,1,0,0
+CLINTON HIGH SCHOOL,,50441000172,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,0,0
+CLINTON HIGH SCHOOL,,50441000172,465510,Robotics Level 1,11,10,0,1,0,0,11,0,0
+CLINTON HIGH SCHOOL,,50441000172,465520,Robotics Level 2,12,11,0,2,0,0,12,0,0
+CLINTON HIGH SCHOOL,,50441000172,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,1,1,0,0,0,0,1,0,0
+CLINTON HIGH SCHOOL,,50441000172,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,1,1,0,0,0,0,1,2,0
+CLINTON HIGH SCHOOL,,50441000172,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,1,0,0,0,0,1,2,0
+CLINTON HIGH SCHOOL,,50441000172,565120,College Board Advanced Placement (AP) Computer Science A Level 2,1,1,0,0,0,0,1,0,0
+ELKINS HIGH SCHOOL,,50576000290,465010,Computer Science with Programming/Coding Emphasis Level 1,26,22,0,2,0,0,10,2,1
+ELKINS HIGH SCHOOL,,50576000290,465020,Computer Science with Programming/Coding Emphasis Level 2,23,20,0,2,0,0,8,1,1
+ELKINS HIGH SCHOOL,,50576000290,465210,Computer Science with Information Security Emphasis Level 1,23,20,1,1,1,0,6,6,0
+ELKINS HIGH SCHOOL,,50576000290,465220,Computer Science with Information Security Emphasis Level 2,20,18,0,1,1,0,6,4,0
+ELKINS HIGH SCHOOL,,50576000290,465510,Robotics Level 1,20,16,0,0,1,1,6,3,0
+ELKINS HIGH SCHOOL,,50576000290,465520,Robotics Level 2,16,13,0,0,1,1,3,3,0
+FARMINGTON JUNIOR HIGH SCHOOL,,50609001608,465010,Computer Science with Programming/Coding Emphasis Level 1,26,20,1,4,0,0,8,0,2
+FARMINGTON JUNIOR HIGH SCHOOL,,50609001608,465020,Computer Science with Programming/Coding Emphasis Level 2,13,11,0,1,0,0,1,0,1
+FARMINGTON HIGH SCHOOL,,50609000315,465010,Computer Science with Programming/Coding Emphasis Level 1,16,12,0,3,0,0,6,3,2
+FARMINGTON HIGH SCHOOL,,50609000315,465020,Computer Science with Programming/Coding Emphasis Level 2,9,6,0,1,0,0,3,1,1
+FARMINGTON HIGH SCHOOL,,50609000315,465510,Robotics Level 1,13,13,0,1,0,0,7,2,1
+FARMINGTON HIGH SCHOOL,,50609000315,465520,Robotics Level 2,13,13,0,0,0,0,7,0,1
+FARMINGTON HIGH SCHOOL,,50609000315,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,1,0,0,0,0,0,0,0
+FARMINGTON HIGH SCHOOL,,50609000315,565120,College Board Advanced Placement (AP) Computer Science A Level 2,1,1,0,0,0,0,0,0,0
+RAMAY JUNIOR HIGH SCHOOL,,50612000324,465510,Robotics Level 1,12,12,1,1,0,0,6,0,0
+RAMAY JUNIOR HIGH SCHOOL,,50612000324,465520,Robotics Level 2,13,13,1,1,0,0,7,1,0
+WOODLAND JUNIOR HIGH SCHOOL,,50612000327,465510,Robotics Level 1,16,11,2,1,0,0,8,2,0
+WOODLAND JUNIOR HIGH SCHOOL,,50612000327,465520,Robotics Level 2,14,10,1,1,0,0,6,2,0
+FAYETTEVILLE HIGH SCHOOL,,50612000319,465010,Computer Science with Programming/Coding Emphasis Level 1,61,52,3,6,0,1,21,7,2
+FAYETTEVILLE HIGH SCHOOL,,50612000319,465020,Computer Science with Programming/Coding Emphasis Level 2,58,49,3,6,0,1,18,7,2
+FAYETTEVILLE HIGH SCHOOL,,50612000319,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,47,26,1,5,0,0,9,3,1
+FAYETTEVILLE HIGH SCHOOL,,50612000319,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,46,26,0,5,0,0,9,3,1
+FAYETTEVILLE HIGH SCHOOL,,50612000319,565110,College Board Advanced Placement (AP) Computer Science A Level 1,20,15,0,3,0,0,3,3,1
+FAYETTEVILLE HIGH SCHOOL,,50612000319,565120,College Board Advanced Placement (AP) Computer Science A Level 2,19,15,0,3,0,0,2,3,0
+FAYETTEVILLE VIRTUAL ACADEMY A DISTRICT CONVERSION CHARTER SCHOOL,,50612001636,565110,College Board Advanced Placement (AP) Computer Science A Level 1,1,1,0,0,0,0,0,0,0
+GREENLAND HIGH SCHOOL,,50693000420,465010,Computer Science with Programming/Coding Emphasis Level 1,25,11,0,4,0,0,18,1,0
+GREENLAND HIGH SCHOOL,,50693000420,465020,Computer Science with Programming/Coding Emphasis Level 2,19,8,0,4,0,0,13,0,0
+GREENLAND HIGH SCHOOL,,50693000420,465030,Computer Science with Programming/Coding Emphasis Level 3,10,8,0,1,0,0,7,0,0
+GREENLAND HIGH SCHOOL,,50693000420,465040,Computer Science with Programming/Coding Emphasis Level 4,9,7,0,1,0,0,6,0,0
+GREENLAND HIGH SCHOOL,,50693000420,465210,Computer Science with Information Security Emphasis Level 1,5,4,0,0,0,0,2,3,0
+GREENLAND HIGH SCHOOL,,50693000420,465220,Computer Science with Information Security Emphasis Level 2,5,4,0,0,0,0,2,3,0
+GREENLAND HIGH SCHOOL,,50693000420,465510,Robotics Level 1,5,5,0,0,0,0,1,1,0
+GREENLAND HIGH SCHOOL,,50693000420,465520,Robotics Level 2,5,5,0,0,0,0,1,1,0
+GREENLAND HIGH SCHOOL,,50693000420,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,3,2,0,0,0,0,1,0,0
+GREENLAND HIGH SCHOOL,,50693000420,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,3,2,0,0,0,0,1,0,0
+LINCOLN HIGH SCHOOL,,50894001569,465010,Computer Science with Programming/Coding Emphasis Level 1,22,15,0,4,0,0,15,4,0
+LINCOLN HIGH SCHOOL,,50894001569,465020,Computer Science with Programming/Coding Emphasis Level 2,19,13,0,3,0,0,14,3,0
+LINCOLN HIGH SCHOOL,,50894001569,465210,Computer Science with Information Security Emphasis Level 1,2,2,0,1,0,0,1,2,1
+LINCOLN HIGH SCHOOL,,50894001569,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,11,11,0,1,0,0,5,4,1
+LINCOLN HIGH SCHOOL,,50894001569,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,11,11,0,1,0,0,5,5,1
+PRAIRIE GROVE HIGH SCHOOL,,51176000895,465010,Computer Science with Programming/Coding Emphasis Level 1,24,20,1,2,0,0,11,4,2
+PRAIRIE GROVE HIGH SCHOOL,,51176000895,465020,Computer Science with Programming/Coding Emphasis Level 2,20,18,1,1,0,0,9,4,1
+PRAIRIE GROVE HIGH SCHOOL,,51176000895,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,1,0
+PRAIRIE GROVE HIGH SCHOOL,,51176000895,565110,College Board Advanced Placement (AP) Computer Science A Level 1,5,5,0,0,0,0,1,4,0
+PRAIRIE GROVE HIGH SCHOOL,,51176000895,565120,College Board Advanced Placement (AP) Computer Science A Level 2,6,6,0,0,0,0,2,1,0
+CENTRAL JUNIOR HIGH SCHOOL,,51266001020,465010,Computer Science with Programming/Coding Emphasis Level 1,54,38,2,18,0,1,26,7,5
+CENTRAL JUNIOR HIGH SCHOOL,,51266001020,465020,Computer Science with Programming/Coding Emphasis Level 2,35,24,1,12,0,0,17,5,2
+SOUTHWEST JUNIOR HIGH SCHOOL,,51266001024,465010,Computer Science with Programming/Coding Emphasis Level 1,9,9,0,6,0,1,7,0,1
+SOUTHWEST JUNIOR HIGH SCHOOL,,51266001024,465020,Computer Science with Programming/Coding Emphasis Level 2,9,9,0,6,0,1,7,0,1
+SPRINGDALE HIGH SCHOOL,,51266001025,465010,Computer Science with Programming/Coding Emphasis Level 1,34,30,1,20,0,5,29,8,8
+SPRINGDALE HIGH SCHOOL,,51266001025,465020,Computer Science with Programming/Coding Emphasis Level 2,33,29,1,19,0,5,28,8,7
+SPRINGDALE HIGH SCHOOL,,51266001025,465030,Computer Science with Programming/Coding Emphasis Level 3,9,6,0,8,0,0,8,1,0
+SPRINGDALE HIGH SCHOOL,,51266001025,465040,Computer Science with Programming/Coding Emphasis Level 4,9,6,0,8,0,0,8,1,0
+SPRINGDALE HIGH SCHOOL,,51266001025,465210,Computer Science with Information Security Emphasis Level 1,17,14,0,10,0,4,14,6,2
+SPRINGDALE HIGH SCHOOL,,51266001025,465220,Computer Science with Information Security Emphasis Level 2,17,14,0,10,0,4,14,4,2
+SPRINGDALE HIGH SCHOOL,,51266001025,465230,Computer Science with Information Security Emphasis Level 3,9,7,0,9,0,0,8,3,0
+SPRINGDALE HIGH SCHOOL,,51266001025,465240,Computer Science with Information Security Emphasis Level 4,9,7,0,9,0,0,8,2,0
+SPRINGDALE HIGH SCHOOL,,51266001025,465510,Robotics Level 1,22,21,0,13,0,2,17,2,8
+SPRINGDALE HIGH SCHOOL,,51266001025,465520,Robotics Level 2,22,21,0,13,0,2,17,2,8
+SPRINGDALE HIGH SCHOOL,,51266001025,465530,Robotics Level 3,6,4,0,4,0,0,5,1,1
+SPRINGDALE HIGH SCHOOL,,51266001025,465540,Robotics Level 4,6,4,0,4,0,0,5,6,1
+SPRINGDALE HIGH SCHOOL,,51266001025,465910,Computer Science Independent Study Level I,1,1,0,0,0,0,0,5,0
+SPRINGDALE HIGH SCHOOL,,51266001025,465920,Computer Science Independent Study Level II,1,1,0,0,0,0,0,5,0
+SPRINGDALE HIGH SCHOOL,,51266001025,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,15,10,0,8,0,5,14,4,1
+SPRINGDALE HIGH SCHOOL,,51266001025,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,17,11,0,8,0,5,14,0,1
+SPRINGDALE HIGH SCHOOL,,51266001025,565110,College Board Advanced Placement (AP) Computer Science A Level 1,7,6,0,4,0,0,6,1,2
+SPRINGDALE HIGH SCHOOL,,51266001025,565120,College Board Advanced Placement (AP) Computer Science A Level 2,7,6,0,4,0,0,6,2,2
+SPRINGDALE HIGH SCHOOL,,51266001025,565310,International Baccalaureate (IB) Computer Science HL Level 1,3,0,0,2,0,1,3,2,0
+SPRINGDALE HIGH SCHOOL,,51266001025,565320,International Baccalaureate (IB) Computer Science HL Level 2,3,0,0,2,0,1,3,1,0
+GEORGE JUNIOR HIGH SCHOOL,,51266001077,465010,Computer Science with Programming/Coding Emphasis Level 1,33,25,0,27,0,3,29,0,16
+GEORGE JUNIOR HIGH SCHOOL,,51266001077,465020,Computer Science with Programming/Coding Emphasis Level 2,12,9,0,9,0,2,10,3,4
+HAR-BER HIGH SCHOOL,,51266001118,465010,Computer Science with Programming/Coding Emphasis Level 1,23,18,1,11,0,1,13,3,5
+HAR-BER HIGH SCHOOL,,51266001118,465020,Computer Science with Programming/Coding Emphasis Level 2,20,15,2,9,0,1,10,1,4
+HAR-BER HIGH SCHOOL,,51266001118,465030,Computer Science with Programming/Coding Emphasis Level 3,13,11,0,3,0,1,5,2,0
+HAR-BER HIGH SCHOOL,,51266001118,465040,Computer Science with Programming/Coding Emphasis Level 4,13,11,0,3,0,1,5,1,0
+HAR-BER HIGH SCHOOL,,51266001118,465530,Robotics Level 3,4,4,0,1,0,0,2,3,0
+HAR-BER HIGH SCHOOL,,51266001118,465540,Robotics Level 4,5,5,0,1,0,0,3,1,0
+HAR-BER HIGH SCHOOL,,51266001118,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,10,8,0,1,0,1,2,2,0
+HAR-BER HIGH SCHOOL,,51266001118,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,9,8,0,1,0,0,1,2,0
+HAR-BER HIGH SCHOOL,,51266001118,565110,College Board Advanced Placement (AP) Computer Science A Level 1,14,12,0,3,0,1,7,1,0
+HAR-BER HIGH SCHOOL,,51266001118,565120,College Board Advanced Placement (AP) Computer Science A Level 2,15,13,0,3,0,1,7,2,0
+LAKESIDE JUNIOR HIGH SCHOOL,,51266001562,465010,Computer Science with Programming/Coding Emphasis Level 1,15,12,1,9,0,0,10,1,4
+LAKESIDE JUNIOR HIGH SCHOOL,,51266001562,465020,Computer Science with Programming/Coding Emphasis Level 2,12,10,0,7,0,0,8,3,4
+DON TYSON SCHOOL OF INNOVATION,,51266001633,465010,Computer Science with Programming/Coding Emphasis Level 1,21,17,1,3,1,0,7,5,0
+DON TYSON SCHOOL OF INNOVATION,,51266001633,465020,Computer Science with Programming/Coding Emphasis Level 2,22,18,1,3,1,1,7,7,1
+DON TYSON SCHOOL OF INNOVATION,,51266001633,465030,Computer Science with Programming/Coding Emphasis Level 3,9,6,0,5,0,0,4,4,1
+DON TYSON SCHOOL OF INNOVATION,,51266001633,465040,Computer Science with Programming/Coding Emphasis Level 4,10,7,0,5,0,0,4,1,1
+DON TYSON SCHOOL OF INNOVATION,,51266001633,465310,Mobile Application Development Level 1,4,4,0,1,0,0,1,1,1
+DON TYSON SCHOOL OF INNOVATION,,51266001633,465320,Mobile Application Development Level 2,2,2,0,0,0,0,0,1,0
+DON TYSON SCHOOL OF INNOVATION,,51266001633,465910,Computer Science Independent Study Level I,3,3,0,0,0,0,0,1,0
+DON TYSON SCHOOL OF INNOVATION,,51266001633,465920,Computer Science Independent Study Level II,1,1,0,0,0,0,0,0,0
+DON TYSON SCHOOL OF INNOVATION,,51266001633,565110,College Board Advanced Placement (AP) Computer Science A Level 1,2,1,0,1,0,0,1,0,0
+DON TYSON SCHOOL OF INNOVATION,,51266001633,565120,College Board Advanced Placement (AP) Computer Science A Level 2,1,0,0,1,0,0,1,2,0
+WEST FORK HIGH SCHOOL,,51401001144,465010,Computer Science with Programming/Coding Emphasis Level 1,27,14,0,0,0,0,6,2,0
+WEST FORK HIGH SCHOOL,,51401001144,465020,Computer Science with Programming/Coding Emphasis Level 2,27,14,0,0,0,0,6,0,0
+WEST FORK HIGH SCHOOL,,51401001144,465210,Computer Science with Information Security Emphasis Level 1,3,3,0,0,0,0,0,0,0
+WEST FORK HIGH SCHOOL,,51401001144,465220,Computer Science with Information Security Emphasis Level 2,3,3,0,0,0,0,0,1,0
+HAAS HALL ACADEMY,,50007801078,465010,Computer Science with Programming/Coding Emphasis Level 1,23,16,1,0,0,0,0,5,0
+HAAS HALL ACADEMY,,50007801078,465020,Computer Science with Programming/Coding Emphasis Level 2,21,15,1,0,0,0,0,3,0
+HAAS HALL ACADEMY,,50007801078,565110,College Board Advanced Placement (AP) Computer Science A Level 1,21,15,1,0,0,0,0,2,0
+HAAS HALL ACADEMY,,50007801078,565120,College Board Advanced Placement (AP) Computer Science A Level 2,21,15,1,0,0,0,0,2,0
+HAAS HALL ACADEMY JONES CENTER,,50007801640,465010,Computer Science with Programming/Coding Emphasis Level 1,13,9,0,2,0,0,0,1,1
+HAAS HALL ACADEMY JONES CENTER,,50007801640,465020,Computer Science with Programming/Coding Emphasis Level 2,12,9,0,2,0,0,0,1,1
+HAAS HALL ACADEMY JONES CENTER,,50007801640,565110,College Board Advanced Placement (AP) Computer Science A Level 1,2,2,0,0,0,0,0,1,0
+HAAS HALL ACADEMY JONES CENTER,,50007801640,565120,College Board Advanced Placement (AP) Computer Science A Level 2,2,2,0,0,0,0,0,6,0
+HAAS HALL ACADEMY AT THE LANE,,50007801639,465010,Computer Science with Programming/Coding Emphasis Level 1,22,15,0,3,0,0,1,4,0
+HAAS HALL ACADEMY AT THE LANE,,50007801639,465020,Computer Science with Programming/Coding Emphasis Level 2,20,13,0,3,0,0,1,5,0
+HAAS HALL ACADEMY AT THE LANE,,50007801639,565110,College Board Advanced Placement (AP) Computer Science A Level 1,10,9,0,1,0,0,0,4,0
+HAAS HALL ACADEMY AT THE LANE,,50007801639,565120,College Board Advanced Placement (AP) Computer Science A Level 2,10,9,0,1,0,0,0,4,0
+HAAS HALL BENTONVILLE,,50041601611,465010,Computer Science with Programming/Coding Emphasis Level 1,25,23,1,1,0,0,0,3,0
+HAAS HALL BENTONVILLE,,50041601611,465020,Computer Science with Programming/Coding Emphasis Level 2,25,23,1,1,0,0,0,3,0
+HAAS HALL BENTONVILLE,,50041601611,565110,College Board Advanced Placement (AP) Computer Science A Level 1,14,14,0,1,0,0,0,4,0
+HAAS HALL BENTONVILLE,,50041601611,565120,College Board Advanced Placement (AP) Computer Science A Level 2,14,14,0,1,0,0,0,3,0
+BALD KNOB HIGH SCHOOL,,50270000038,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,0,1,0
+BEEBE HIGH SCHOOL,,50288000057,465010,Computer Science with Programming/Coding Emphasis Level 1,11,10,0,1,0,0,4,2,1
+BEEBE HIGH SCHOOL,,50288000057,465020,Computer Science with Programming/Coding Emphasis Level 2,10,9,0,1,0,0,4,2,0
+BEEBE HIGH SCHOOL,,50288000057,465030,Computer Science with Programming/Coding Emphasis Level 3,7,7,0,0,0,0,3,2,0
+BEEBE HIGH SCHOOL,,50288000057,465040,Computer Science with Programming/Coding Emphasis Level 4,7,7,0,0,0,0,2,2,1
+BEEBE HIGH SCHOOL,,50288000057,465050,Advanced Programming Level 1,8,8,1,0,0,0,4,2,0
+BEEBE HIGH SCHOOL,,50288000057,465060,Advanced Programming Level 2,7,7,1,0,0,0,3,2,0
+BEEBE HIGH SCHOOL,,50288000057,465210,Computer Science with Information Security Emphasis Level 1,10,7,0,0,0,0,7,0,0
+BEEBE HIGH SCHOOL,,50288000057,465220,Computer Science with Information Security Emphasis Level 2,10,8,0,0,0,0,6,0,0
+BEEBE HIGH SCHOOL,,50288000057,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,4,3,0,0,0,0,1,2,0
+BEEBE HIGH SCHOOL,,50288000057,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,4,3,0,0,0,0,1,1,0
+BEEBE HIGH SCHOOL,,50288000057,565110,College Board Advanced Placement (AP) Computer Science A Level 1,2,2,0,0,0,0,0,0,0
+BEEBE HIGH SCHOOL,,50288000057,565120,College Board Advanced Placement (AP) Computer Science A Level 2,2,2,0,0,0,0,0,0,0
+BEEBE HIGH SCHOOL,,50288000057,565910,Other Concurrent Credit Computer Science 1,2,2,0,0,0,0,1,0,0
+BEEBE HIGH SCHOOL,,50288000057,565930,Other Concurrent Credit Computer Science 3,1,1,0,0,0,0,0,0,0
+BRADFORD HIGH SCHOOL,,50348000107,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,1,3,0
+BRADFORD HIGH SCHOOL,,50348000107,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,1,3,0
+WHITE CO. CENTRAL HIGH SCHOOL,,50417000156,465010,Computer Science with Programming/Coding Emphasis Level 1,14,12,0,2,0,0,10,1,2
+WHITE CO. CENTRAL HIGH SCHOOL,,50417000156,465020,Computer Science with Programming/Coding Emphasis Level 2,12,10,0,2,0,0,8,1,2
+WHITE CO. CENTRAL HIGH SCHOOL,,50417000156,465030,Computer Science with Programming/Coding Emphasis Level 3,5,5,0,2,0,0,3,0,2
+WHITE CO. CENTRAL HIGH SCHOOL,,50417000156,465040,Computer Science with Programming/Coding Emphasis Level 4,4,4,0,2,0,0,2,0,2
+RIVERVIEW HIGH SCHOOL,,50840000242,465010,Computer Science with Programming/Coding Emphasis Level 1,23,13,0,8,0,0,16,1,2
+RIVERVIEW HIGH SCHOOL,,50840000242,465020,Computer Science with Programming/Coding Emphasis Level 2,8,3,0,3,0,0,5,0,0
+RIVERVIEW HIGH SCHOOL,,50840000242,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,0,0,0
+PANGBURN HIGH SCHOOL,,51107000835,465010,Computer Science with Programming/Coding Emphasis Level 1,41,28,1,3,0,1,22,2,0
+PANGBURN HIGH SCHOOL,,51107000835,465020,Computer Science with Programming/Coding Emphasis Level 2,41,28,1,3,0,0,23,2,0
+PANGBURN HIGH SCHOOL,,51107000835,465030,Computer Science with Programming/Coding Emphasis Level 3,6,6,0,0,0,0,3,1,0
+PANGBURN HIGH SCHOOL,,51107000835,465040,Computer Science with Programming/Coding Emphasis Level 4,5,5,0,0,0,0,3,1,0
+PANGBURN HIGH SCHOOL,,51107000835,465210,Computer Science with Information Security Emphasis Level 1,4,3,0,0,0,0,2,0,0
+PANGBURN HIGH SCHOOL,,51107000835,465220,Computer Science with Information Security Emphasis Level 2,4,3,0,0,0,0,2,0,0
+ROSE BUD HIGH SCHOOL,,51200000962,465010,Computer Science with Programming/Coding Emphasis Level 1,4,4,0,0,0,0,2,0,0
+ROSE BUD HIGH SCHOOL,,51200000962,465020,Computer Science with Programming/Coding Emphasis Level 2,2,2,0,0,0,0,1,1,0
+ROSE BUD HIGH SCHOOL,,51200000962,465510,Robotics Level 1,6,6,0,0,0,0,4,1,0
+ROSE BUD HIGH SCHOOL,,51200000962,465520,Robotics Level 2,5,5,0,0,0,0,3,0,0
+SEARCY HIGH SCHOOL,,51221000985,465010,Computer Science with Programming/Coding Emphasis Level 1,31,25,4,2,0,0,9,3,0
+SEARCY HIGH SCHOOL,,51221000985,465020,Computer Science with Programming/Coding Emphasis Level 2,26,21,4,2,0,0,9,3,0
+SEARCY HIGH SCHOOL,,51221000985,465030,Computer Science with Programming/Coding Emphasis Level 3,10,9,0,2,0,0,3,1,1
+SEARCY HIGH SCHOOL,,51221000985,465040,Computer Science with Programming/Coding Emphasis Level 4,10,9,0,2,0,0,3,1,1
+SEARCY HIGH SCHOOL,,51221000985,465310,Mobile Application Development Level 1,8,3,2,1,0,0,3,0,0
+SEARCY HIGH SCHOOL,,51221000985,465320,Mobile Application Development Level 2,6,2,2,1,0,0,1,0,0
+MCCRORY HIGH SCHOOL,,50960000702,465010,Computer Science with Programming/Coding Emphasis Level 1,1,1,0,0,0,0,0,2,0
+MCCRORY HIGH SCHOOL,,50960000702,465020,Computer Science with Programming/Coding Emphasis Level 2,1,1,0,0,0,0,0,2,0
+MCCRORY HIGH SCHOOL,,50960000702,465210,Computer Science with Information Security Emphasis Level 1,2,2,1,0,0,0,2,1,0
+MCCRORY HIGH SCHOOL,,50960000702,465220,Computer Science with Information Security Emphasis Level 2,1,1,0,0,0,0,1,1,0
+DANVILLE HIGH SCHOOL,,50489000212,465010,Computer Science with Programming/Coding Emphasis Level 1,40,18,1,21,0,0,31,3,9
+DANVILLE HIGH SCHOOL,,50489000212,465020,Computer Science with Programming/Coding Emphasis Level 2,35,15,1,20,0,0,26,2,9
+DANVILLE HIGH SCHOOL,,50489000212,465030,Computer Science with Programming/Coding Emphasis Level 3,1,1,0,0,0,0,1,0,0
+DANVILLE HIGH SCHOOL,,50489000212,465040,Computer Science with Programming/Coding Emphasis Level 4,1,1,0,0,0,0,1,0,0
+DANVILLE HIGH SCHOOL,,50489000212,465210,Computer Science with Information Security Emphasis Level 1,2,2,0,1,0,0,2,0,0
+DANVILLE HIGH SCHOOL,,50489000212,465220,Computer Science with Information Security Emphasis Level 2,2,2,0,1,0,0,2,0,0
+DARDANELLE HIGH SCHOOL,,50493000214,465010,Computer Science with Programming/Coding Emphasis Level 1,12,4,0,4,0,0,7,0,0
+DARDANELLE HIGH SCHOOL,,50493000214,465020,Computer Science with Programming/Coding Emphasis Level 2,11,4,0,3,0,0,6,0,0
+DARDANELLE HIGH SCHOOL,,50493000214,565010,College Board Advanced Placement (AP) Computer Science Principles Level 1,21,10,0,8,0,0,12,3,0
+DARDANELLE HIGH SCHOOL,,50493000214,565020,College Board Advanced Placement (AP) Computer Science Principles Level 2,21,10,0,8,0,0,12,3,0
+WESTERN YELL CO. HIGH SCHOOL,,50004101315,465030,Computer Science with Programming/Coding Emphasis Level 3,1,1,0,0,0,0,0,3,0
+WESTERN YELL CO. HIGH SCHOOL,,50004101315,465040,Computer Science with Programming/Coding Emphasis Level 4,1,1,0,0,0,0,0,3,0
+TWO RIVERS HIGH SCHOOL,,50007901521,465010,Computer Science with Programming/Coding Emphasis Level 1,6,4,1,1,0,0,6,1,1
+TWO RIVERS HIGH SCHOOL,,50007901521,465020,Computer Science with Programming/Coding Emphasis Level 2,7,5,1,1,0,0,6,2,1
+TWO RIVERS HIGH SCHOOL,,50007901521,465030,Computer Science with Programming/Coding Emphasis Level 3,4,3,0,1,0,0,4,2,0
+TWO RIVERS HIGH SCHOOL,,50007901521,465040,Computer Science with Programming/Coding Emphasis Level 4,4,3,0,1,0,0,4,2,0
+TWO RIVERS HIGH SCHOOL,,50007901521,465510,Robotics Level 1,1,0,0,0,0,0,1,0,0
+TWO RIVERS HIGH SCHOOL,,50007901521,465520,Robotics Level 2,3,1,0,0,0,0,3,1,0
+CENTRAL HIGH SCHOOL,,50768000476,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+J.D. LEFTWICH HIGH SCHOOL,,50915000650,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

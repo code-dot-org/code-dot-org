@@ -150,14 +150,22 @@ class ActiveSupport::TestCase
     # certain hardcoded names. In the old fixture-based model, this data was
     # all provided; in the new factory-based model, we need to do a little
     # prep.
+    #
+    # NOTE for any future developers: please DO NOT add new scripts to this
+    # list. This exists to provide backwards compatibility to old tests which
+    # are dependent on factory-provided content. If you are writing new tests,
+    # please make sure that they are instead relying on factory-provided
+    # content.
     tested_script_names = [
       'ECSPD',
       'allthethings',
       Script::COURSE1_NAME,
+      Script::COURSE4_NAME,
       Script::FLAPPY_NAME,
       Script::FROZEN_NAME,
       Script::HOC_NAME,
-      Script::PLAYLAB_NAME
+      Script::PLAYLAB_NAME,
+      Script::TWENTY_HOUR_NAME
     ]
 
     tested_script_names.each do |script_name|

@@ -70,6 +70,7 @@ module ViewOptionsHelper
     :unsubmit_url,
     :iframe_embed,
     :iframe_embed_app_and_code,
+    :is_navigator,
     :pairing_driver,
     :pairing_attempt,
     :pairing_channel_id,
