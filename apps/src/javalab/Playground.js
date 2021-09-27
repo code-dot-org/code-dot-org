@@ -114,9 +114,6 @@ export default class Playground {
     if (this.isGameOver || this.imageItemExists(itemData)) {
       return;
     }
-    let onClick = isClickable
-      ? () => this.handleImageClick(itemData.id)
-      : () => {};
 
     const imageData = {
       fileUrl: this.getUrl(itemData.filename),
@@ -125,9 +122,12 @@ export default class Playground {
       height: itemData.height,
       width: itemData.width,
       index: itemData.index,
-      onClick: onClick,
+      isClickable: isClickable,
       type: PlaygroundItemType.IMAGE
     };
+    if (isClickable) {
+      imageData.onClick = () => this.handleImageClick(itemData.id);
+    }
     this.addPlaygroundItem(itemData.id, imageData);
   }
 
