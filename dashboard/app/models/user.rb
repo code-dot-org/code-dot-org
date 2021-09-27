@@ -2353,10 +2353,10 @@ class User < ApplicationRecord
   # The data returned by this method is set to cookies for the marketing team to
   # use in Optimizely for segmenting teacher user experience.
   def marketing_segment_data
-    return unless user.teacher?
+    return unless teacher?
 
     {
-      locale: locale,
+      locale: read_attribute(:locale),
       account_age_in_years: account_age_in_years,
       grades: grades_being_taught.any? ? grades_being_taught.to_json : nil,
       courses: courses_being_taught.any? ? courses_being_taught.to_json : nil,
@@ -2380,7 +2380,7 @@ class User < ApplicationRecord
 
   # Returns a list of all courses that the teacher currently has sections for
   def courses_being_taught
-    sections.map {|section| section.script.curriculum_umbrella}
+    sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
   end
 
   def has_attended_pd?
