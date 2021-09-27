@@ -35,6 +35,8 @@ import {
 } from '../containedLevels';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
+import Playground from './Playground';
+import PlaygroundVisualizationColumn from './PlaygroundVisualizationColumn';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -103,6 +105,7 @@ Javalab.prototype.init = function(config) {
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
+  const onJavabuilderMessage = this.onJavabuilderMessage.bind(this);
 
   switch (this.level.csaViewMode) {
     case CsaViewMode.NEIGHBORHOOD:
@@ -121,9 +124,17 @@ Javalab.prototype.init = function(config) {
       this.visualization = <NeighborhoodVisualizationColumn />;
       break;
     case CsaViewMode.THEATER:
-    case CsaViewMode.PLAYGROUND:
       this.miniApp = new Theater(this.onOutputMessage, this.onNewlineMessage);
       this.visualization = <TheaterVisualizationColumn />;
+      break;
+    case CsaViewMode.PLAYGROUND:
+      this.miniApp = new Playground(
+        this.onOutputMessage,
+        this.onNewlineMessage,
+        onJavabuilderMessage,
+        this.level.name
+      );
+      this.visualization = <PlaygroundVisualizationColumn />;
       break;
   }
 
@@ -313,6 +324,7 @@ Javalab.prototype.onRun = function() {
 
 // Called by the Javalab app when it wants to stop student code execution
 Javalab.prototype.onStop = function() {
+  this.miniApp?.onStop?.();
   this.javabuilderConnection.closeConnection();
 };
 

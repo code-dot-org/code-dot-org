@@ -1099,6 +1099,13 @@ vi:
             '"rain"': mưa
       gamelab_makeNewSpriteAnon:
         text: làm mới {ANIMATION_NAME} sprite tại {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': phải
+            '90': xuống
+            '180': trái
+            '270': trên
       gamelab_mirrorSprite:
         text: "{SPRITE} mặt {DIRECTION}"
         options:
@@ -1124,6 +1131,7 @@ vi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": khủng hoảng
+            "'sound://category_digital/jump_7.mp3'": nhảy
       gamelab_pointInDirection:
         text: điểm {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1593,6 +1601,8 @@ vi:
             '"ripples"': Gợn sóng
           PALETTE:
             '"rainbow"': Cầu vồng
+      PoemBot_setBackgroundImageAs:
+        text: thiết lập nền để {IMG}
       PoemBot_setForegroundEffect:
         text: thiết lập hiệu ứng tiền cảnh {EFFECT}
         options:

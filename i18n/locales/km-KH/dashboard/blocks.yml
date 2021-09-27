@@ -291,6 +291,13 @@ km:
         options:
           EFFECT:
             '"rain"': ភ្លៀង
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ស្តាំ
+            '90': ចុះ
+            '180': ឆ្វេង
+            '270': ឡើង
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -300,6 +307,7 @@ km:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": ខាំ
+            "'sound://category_digital/jump_7.mp3'": លោត
       gamelab_randColor:
         text: ពណ៌​ព្រាវ
       gamelab_randomColor:

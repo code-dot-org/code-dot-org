@@ -14,6 +14,9 @@
         "machine_learning/coursef/2021": {
           "word": "Maschinelles Lernen"
         },
+        "dns/coursef/2021": {
+          "word": "DNS"
+        },
         "internet/coursef/2021": {
           "word": "Internet"
         },
@@ -23,14 +26,35 @@
         "define/coursef/2021": {
           "word": "Definiere"
         },
+        "algorithm/courseb/2021": {
+          "word": "Algorithmus"
+        },
+        "bug/courseb/2021": {
+          "word": "Fehler"
+        },
         "debugging/courseb/2021": {
           "word": "Debugging/Fehlerbeseitigung"
+        },
+        "click/courseb/2021": {
+          "word": "Klick"
+        },
+        "drag/courseb/2021": {
+          "word": "Ziehen"
         },
         "drop/courseb/2021": {
           "word": "Fallen lassen"
         },
+        "double_click/courseb/2021": {
+          "word": "Doppelklick"
+        },
+        "program/courseb/2021": {
+          "word": "Programm"
+        },
         "programming/courseb/2021": {
           "word": "Programmierung"
+        },
+        "loop/courseb/2021": {
+          "word": "Schleife"
         },
         "algorithm/coursea/2021": {
           "word": "Algorithmus",
@@ -80,8 +104,17 @@
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
+        "algorithm/coursec/2021": {
+          "word": "Algorithmus"
+        },
+        "bug/coursec/2021": {
+          "word": "Fehler"
+        },
         "debugging/coursec/2021": {
           "word": "Debugging/Fehlerbeseitigung"
+        },
+        "program/coursec/2021": {
+          "word": "Programm"
         },
         "sequencing/coursec/2021": {
           "word": "Sequencing"
@@ -89,17 +122,47 @@
         "programming/coursec/2021": {
           "word": "Programmierung"
         },
+        "loop/coursec/2021": {
+          "word": "Schleife"
+        },
         "binary/coursec/2021": {
           "word": "Binärdatei"
+        },
+        "algorithm/coursed/2021": {
+          "word": "Algorithmus"
+        },
+        "program/coursed/2021": {
+          "word": "Programm"
+        },
+        "bug/coursed/2021": {
+          "word": "Fehler"
         },
         "debugging/coursed/2021": {
           "word": "Debugging/Fehlerbeseitigung"
         },
+        "loop/coursed/2021": {
+          "word": "Schleife"
+        },
         "programming/coursed/2021": {
           "word": "Programmierung"
         },
+        "frustrated/coursed/2021": {
+          "word": "Frustriert"
+        },
+        "code/coursed/2021": {
+          "word": "Code"
+        },
+        "command/coursed/2021": {
+          "word": "Befehl"
+        },
         "conditionals/coursed/2021": {
           "word": "Bedingungen"
+        },
+        "condition/coursed/2021": {
+          "word": "Bedingung"
+        },
+        "bug/express/2021": {
+          "word": "Fehler"
         },
         "debugging/express/2021": {
           "word": "Debugging/Fehlerbeseitigung"
@@ -113,6 +176,12 @@
         "behavior/express/2021": {
           "word": "Verhalten"
         },
+        "command/express/2021": {
+          "word": "Befehl"
+        },
+        "condition/express/2021": {
+          "word": "Bedingung"
+        },
         "conditionals/express/2021": {
           "word": "Bedingungen"
         },
@@ -125,8 +194,20 @@
         "define/express/2021": {
           "word": "Definiere"
         },
+        "click/pre-express/2021": {
+          "word": "Klick"
+        },
+        "drag/pre-express/2021": {
+          "word": "Ziehen"
+        },
         "drop/pre-express/2021": {
           "word": "Fallen lassen"
+        },
+        "double_click/pre-express/2021": {
+          "word": "Doppelklick"
+        },
+        "bug/pre-express/2021": {
+          "word": "Fehler"
         },
         "debugging/pre-express/2021": {
           "word": "Debugging/Fehlerbeseitigung"
@@ -142,6 +223,9 @@
         },
         "function/coursee/2021": {
           "word": "Funktion"
+        },
+        "condition/coursee/2021": {
+          "word": "Bedingung"
         },
         "conditionals/coursee/2021": {
           "word": "Bedingungen"

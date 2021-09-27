@@ -4883,6 +4883,21 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       CSD U2 L1 Overview:
         content1: tafsilotlar bu yerda
+        markdown: |
+          # Umumiy ma'lumot
+
+          Bu dars veb-sayt foydalanuvchilari uchun ham, yaratuvchilari uchun ham xizmat qilishi mumkin bo'lgan maqsadlarni o'z ichiga oladi. Sinf Amerika Qo'shma Shtatlarida eng ko'p foydalaniladigan veb-saytlarni o'rganadi va ularning har biri foydalanuvchilar uchun nima bilan foydali ekanligini va saytyaratuvchilariga qanday xizmat qilishi mumkinligini muhokama qilinadi.
+
+          ## Lug'at
+
+          * **Vebsayt** - World Wide Web - Butunjahon tarmoqda bir yoki bir nechta sahifalarni saqlaydigan Internetga  ulangan joy.
+
+
+          ## Resurslar
+
+          * [Vebsaytlar maqsadi - Yo'riqlar](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Veb-saytlar maqsadi - Namuna](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
         content1: tafsilotlar bu yerda
       CSD U2 L3 Overview:
@@ -6905,3 +6920,22 @@ uz-UZ:
           ## Resurslar
 
           * [Alumin qayiqlar](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Yo'riqnoma ( [MS Word] fayl ko'rinishida nusxa olish (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+        teacher_markdown: |
+          [key]
+
+          * [Alumin Qayiqlar - Namuna](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Yo'riqlar ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
+      CSD U2 Top Websites:
+        markdown: |
+          # AQShdagi Top veb-saytlar
+
+          Quyida AQShda eng ko'p tashrif buyuriladigan veb-saytlar keltirilgan. Ularning har biri veb-saytning asosiy funksiyasining qisqacha tavsifini o'z ichiga oladi.
+
+
+          1. Google.com - veb-saytlar, rasmlar, videolar va boshqa ommaviy axborot vositalarini qidirish tizimi
+          2. Youtube.com - Foydalanuvchilar tomonidan video yuklash, baholash va sharhlash imkoniyatini beradigan sayt - video-hosting
+          3. Facebook.com - foydalanuvchilarga do'stlari bilan ma'lumot almashish imkonini beradigan ijtimoiy tarmoq
+          4. Amazon.com - har xil turdagi tovarlarni onlayn xarid qilish sayti
+          4. Yahoo.com - qidiruv tizimi, elektron pochta provayderi va yangiliklar manbasi
+          5. Wikipedia.org - foydalanuvchilar tomonidan yaratilgan kontentli bepul ensiklopediya

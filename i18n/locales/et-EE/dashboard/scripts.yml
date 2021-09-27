@@ -3385,3 +3385,17 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Vidinad
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Sisu
+            content:
+              display_name: Sisu
+            lesson_group:
+              display_name: Sisu
+            lessonGroup-2:
+              display_name: Sisu

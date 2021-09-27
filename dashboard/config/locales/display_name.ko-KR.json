@@ -231,7 +231,15 @@
         "courseF_sprites_properties": "스프라이트 속성",
         "ramp_artist_loops4_2021": "별",
         "scrat_loops_C-F_video_2021": "아이스 에이지 내 루프 동영상",
-        "CSD Problem Solving Process Video": "영상: 문제 해결 과정"
+        "CSD Problem Solving Process Video": "영상: 문제 해결 과정",
+        "CourseF_outbreak1": "바이러스 시뮬레이션",
+        "CourseF_outbreak2": "바이러스 시뮬레이션",
+        "CourseF_outbreak3": "바이러스 시뮬레이션",
+        "CourseF_outbreak5": "복구",
+        "CourseF_outbreak6": "무작위 기회",
+        "CourseF_outbreak7": "면역과 백신",
+        "CourseF_outbreak8": "메시지 공유",
+        "international_outbreak_freeplay": "표준 도구 상자"
       }
     }
   }

@@ -170,9 +170,6 @@
         "pair-programming-vid/coursea/2021": {
           "name": "Juftlikda dasturlash"
         },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "Code.org sinf bilan ishlash"
-        },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Xursand Xaritalar"
         },
@@ -215,6 +212,24 @@
         "csf-lesson-recommend/coursea/2021": {
           "name": "CS asoslari. Asosiy mashg'ulot uchun maslahatlar"
         },
+        "artist_project_planning_guide/coursea/2021": {
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "url": "https://studio.code.org/s/coursea-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursea/2021": {
+          "url": "https://studio.code.org/s/coursea-2021/vocab"
+        },
         "implementation_guide/coursea/2021": {
           "name": "Implementation Guide"
         },
@@ -223,6 +238,9 @@
         },
         "teacher_forum_1/coursea/2021": {
           "name": "O‘qituvchilar forumi"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "My Robotic Friends"

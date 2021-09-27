@@ -1071,6 +1071,13 @@ nn:
         options:
           EFFECT:
             '"rain"': regn
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': høgre
+            '90': ned
+            '180': venstre
+            '270': opp
       gamelab_mirrorSprite:
         text: "{SPRITE} se til {DIRECTION}"
         options:
@@ -1102,6 +1109,7 @@ nn:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": knas
+            "'sound://category_digital/jump_7.mp3'": hopp
       gamelab_pointInDirection:
         text: pek {SPRITE} {DIRECTION}
         options:

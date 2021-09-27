@@ -172,6 +172,13 @@ kk:
             '"right"': оңға
             '"space"': кеңестік
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': оңға
+            '90': төмен
+            '180': солға
+            '270': жоғары
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -181,6 +188,7 @@ kk:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": шағылу
+            "'sound://category_digital/jump_7.mp3'": секіру
       gamelab_randColor:
         text: кездейсоқ түс
       gamelab_randomColor:

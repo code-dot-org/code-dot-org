@@ -58,19 +58,19 @@ de:
         parameters: Funktionen mit Parametern
     level:
       instructions:
-        maze_2_2: 'Hilfst du mir, das freche Schwein zu fangen? Stecke ein paar „vorwärts bewegen“-Bausteine zusammen und drücke „Ausführen“, um mir zu helfen dort zu gelangen.  '
-        maze_2_1: Dieses Schwein lässt meine Federn zu Berge stehen. Hilf mir, es zu finden!
-        maze_2_2_5: Verfolge den Pfad und führe mich zum Schwein. Vermeide das TNT, sonst fliegen die Federn!
+        maze_2_2: 'Kannst du mir helfen, das freche Schwein zu fangen? Stecke ein paar „vorwärts bewegen“-Bausteine zusammen und drücke „Ausführen“, um mir zu helfen. '
+        maze_2_1: Dieses Schwein lässt mir die Federn zu Berge stehen. Hilf mir es zu finden!
+        maze_2_2_5: Folge dem Weg und führe mich zum Schwein. Lass mich nicht ins TNT laufen, sonst fliegen die Federn!
         maze_2_3: Führe mich zu dem grünen Bösewicht! (Pass auf das TNT auf)
-        maze_2_4: Bleib ruhig und hilf mir, dass böse Schwein zu finden. Sonst werde ich wütend!
-        maze_2_5: Es ist möglich, mit nur zwei Bausteinen zum grünen Schweinchen zu kommen. Weißt du, wie?
+        maze_2_4: Immer ruhig bleiben – und hilf mir, das böse Schwein zu finden. Sonst werde ich noch wütend!
+        maze_2_5: Es gibt einen Weg, mit dem ich mit nur zwei Bausteinen zum grünen Schweinchen komme. Findest du ihn?
         maze_2_6: Versuche, mich mit nur drei Bausteinen zum grünen Eindringling zu bringen.
         maze_2_7: Bring mich mit möglichst wenig Bausteinen zum fiesen Schweinchen. Versuche es mit mehr als einem „Wiederholen“-Baustein.
         maze_2_8: 'Graue Bausteine können nicht gelöscht werden. Löse diese Aufgabe, indem du den „Wiederholen“-Baustein mit drei Wiederholungen nimmst. Probiere mal, diese drei Bausteine in den grauen „Wiederholen“-Baustein zu setzen: bewegen, bewegen, drehen.'
         maze_2_9: Probiere den neuen „Wiederholen-bis“-Baustein aus – dieser wiederholt alle Aktionen, bis ich das grüne Schwein erreiche.
         maze_2_10: Okay, eine letzte Übung - kannst du das mit nur 4 Bausteinen lösen?
-        maze_2_11: Guter Mensch.  Ich Zombie. Ich hungrig. Muss ... zur ... Sonnenblume. Kannst du mich mit nur 5 Bausteinen hinbringen?
-        maze_2_12: Okay, das ist ähnlich, aber etwas anders. Kannst du es mit nur fünf Bausteinen?
+        maze_2_11: Hallo Mensch. Ich Zombie. Ich hungrig. Muss… zur… Sonnenblume… gelangen. Kannst du mich mit nur 5 Bausteinen dorthin bringen?
+        maze_2_12: OK, das ist ähnlich, aber etwas anders. Schaffst du es mit nur 5 Bausteinen?
         maze_2_13: 'Benutze den neuen "Wenn"-Baustein, damit ich entscheiden kann, wann ich mich drehe.  Hinweis: du brauchst nur einen weiteren Baustein, aber sieh dir an, wie wir das machen, damit du es beim nächsten Mal alleine hinbekommst.'
         maze_2_14: Ok, das ist wie die letzte Aufgabe, aber erinnere dich daran, wie du den "Wenn"-Baustein und den "Wiederholen"-Baustein zusammen verwendet hast.
         maze_2_15: Ich will Sonnenblume! Verwende einen "Wenn"-Baustein, um mich mit der geringsten Anzahl an Bausteinen zum Ziel zu bringen.
@@ -202,7 +202,7 @@ de:
         studio_c3_game_4: Kannst du den Pinguin "Autsch!" sagen lassen und einen "Getroffen" Ton abspielen, wenn er in den Dinosaurier läuft, und ihn dazu mit den Pfeiltasten zu bewegen?
         studio_c3_game_5: Kannst du einen Baustein hinzufügen um eine Punkt zu erzeilen, wenn der Pinguin in den Tintenfisch rennt, und ihn dann mit den Pfeiltasten bewegen bis du einen Punkt erzielst?
         studio_c3_game_6: Kannst du Bausteine hinzufügen um den Hintergrund und die Geschwindigkeit des Pinguins zu ändern, und in dann mit den Pfeiltasten zu bewegen bis du punktest?
-        studio_c3_game_7: Programmiere dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
+        studio_c3_game_7: Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
         studio_playlab_1: Der Pinguin möchte "Hallo" sagen - kannst du ihm helfen?
         studio_playlab_2: Der Höhlenjunge (Figur 1) and Jasmine (Figur 2) möchten einander „Hallo“ sagen. Kannst du ihnen helfen, indem du zweimal den „sagen“-Baustein verwendest?
         studio_playlab_3: Kannst du der Tennisspielerin helfen, die Fahne zu erreichen?
@@ -212,7 +212,7 @@ de:
         studio_playlab_7: Mit dem „ewig wiederholen“-Baustein kannst du den Code kontinuierlich ausführen. Kannst Du Bausteine hinzufügen und dem Zauberer helfen, ständig nach rechts und links zu gehen?
         studio_playlab_8: Kannst du Bausteine hinzufügen, um einen Punkt zu erzielen und einen Geräusch abzuspielen, wenn das Einhorn gegen den Zauberer läuft, und es mit den Pfeiltasten bewegen, bis du punktest?
         studio_playlab_9: Lege den Hintergrund für die Alien-Invasion fest und hilf dem Spacebot, schneller zum Alien zu gelangen, indem du seine Geschwindigkeit änderst. Bewege ihn dann mit den Pfeiltasten, um zum Spacebot zu gelangen und warne die anderen.
-        studio_playlab_10: Programmiere dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
+        studio_playlab_10: Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
         studio_iceage_hello1: Sid möchte alle seine Freunde für ein neues Abenteuer versammeln. Kannst du ihm helfen, "Hallo" zu sagen, indem du den Baustein "sage" in den Arbeitsbereich ziehst und das Wort "Hallo" eingibst?
         studio_iceage_hello2: Sid (Figur 1) hat Manny (Figur 2) gefunden, und möchte ihn zum Abenteuer einladen.  Hilf den beiden, einander zu grüßen, indem du den „Figur sagt“-Baustein zweimal verwendest.
         studio_iceage_move_to_flag: Scrat sucht nach seiner Eichel!  Hilf ihm dabei, die letzten 200 Pixel zurückzulegen, indem du den "bewegen"-Baustein benutzt.
@@ -235,7 +235,7 @@ de:
         studio_gumball_warn_food_fight: Darwin ist gerade einer Essensschlacht entkommen! Ändere den Hintergrund zu "Figuren", setze Darwins Geschwindigkeit auf „schnell“, klicke auf "Ausführen" und bewege ihn zu Penny, um sie zu warnen.
         studio_gumball_join_food_fight: Nimm an der Essensschlacht teil! Verwende den Baustein "Figur wirf Gegenstand nach rechts" damit Banana Joe (Figur 1) Essen nach Anton (Figur 2) wirft. Ändere Antons Stimmung zu "wütend", wenn er getroffen wird.
         studio_gumball_free_play: Programmiere dein eigenes Spiel oder deine eigene Geschichte! Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones, Tablets oder Computer ausprobieren.
-        studio_full_sandbox: Programmiere dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
+        studio_full_sandbox: Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
         studio_k1_1: Kannst du diesen Hund "Hallo Welt" sagen lassen?
         studio_k1_2: Kannst du erst den Hund und danach die Katze etwas sagen lassen?
         studio_k1_3: Kannst du ein Program schreiben, bei welchem der Hund auf die Katze zugeht?
@@ -255,7 +255,7 @@ de:
         applab_ec_simple: Erstelle deine Anwendung mithilfe der Bausteine in der Werkzeugkiste.
         turtle_ec_1_2: 'Zeichne jetzt ein Quadrat. HINWEIS: Verwende deine Lieblingsfarbe, indem du sie mit dem neuen „penColour“-Baustein auswählst.'
         turtle_ec_1_10: 'Geschafft! Jetzt kannst du selbst kreativ werden. Einige lustige Ideen: ein Strichmännchen, eine Schneeflocke oder eine Spirale. Probiere auch den neuen „penWidth“-Baustein aus. Viel Spaß!'
-        studio_ec_sandbox: Programmiere dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
+        studio_ec_sandbox: Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
     video:
       name:
         maze_intro: Labyrinth Einführung
@@ -438,11 +438,11 @@ de:
         applab_hoc_designmode: App-Labor Hour of Code - Entwurfsmodus
         applab_hoc_share: App-Labor Hour of Code - Teilen
         mc_2017_agent_intro: Minecraft Hour of Code - Der Agent
-        mc_2017_repeat: Minecraft Hour of Code - Schleifen
+        mc_2017_repeat: Minecraft Hour of Code - Wiederholen-Schleifen
         mc_2017_functions: Minecraft Hour of Code - Funktionen
         mc_2017_congratulations: Minecraft Hour of Code - Gratuliere
         mc_2017_puzzle_1: Minecraft Hour of Code - Der Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Schleifen
+        mc_2017_puzzle_3: Minecraft Hour of Code - Wiederholen-Schleifen
         mc_2017_puzzle_8: Minecraft Hour of Code - Funktionen
         mc_2017_puzzle_12: Minecraft Hour of Code - Freies Spiel
         hint_videos_d_11_3_first: 'Hinweisvideo: D.11.3 zuerst'
@@ -492,7 +492,7 @@ de:
         hoc_dance_warmup: Tanzparty- Aufwärmen
         hoc_dance_events: Tanzparty - Ereignisse
         hoc_dance_properties: Tanzparty - Eigenschaften
-        hoc_dance_congrats: Tanzparty- Party los!
+        hoc_dance_congrats: Tanzparty - Los geht's!
         c_and_c_great_to_create: Es ist großartig etwas zu erschaffen und fair zu spielen
         c_and_c_digital_sharing: Digitale Teilhabe
         teaching_csf_how_it_works: 'Informatik Grundlagen: Wie der Kurs funktioniert'
@@ -546,6 +546,7 @@ de:
         codebreak_e04: Code Break 4.0 Informationen mit Mike Krieger und Alice Keeler
         codebreak_e05: 'Code Break 5.0: Simulation & Daten mit Bill Gates'
         csd_how_teamwork_works: Wie Teamarbeit funktioniert
+        outbreak_mike: CodeBytes Episode 3 mit Mike – Ausbruchssimulator
         playlab_2021: Einführung ins Spielelabor
         playlab_2021_reader: Einführung ins Spielelabor
     callout:

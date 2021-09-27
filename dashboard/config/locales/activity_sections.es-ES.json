@@ -3,48 +3,87 @@
     "data": {
       "activity_sections": {
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "En este curso aprenderemos a programar. El código se utiliza para crear aplicaciones, juegos, páginas web, simulaciones y muchas cosas más que usamos en una computadora."
+        },
+        "ae9c68f5-dc04-4e99-917b-e2ba8424692f": {
+          "description": "**Haz esto:**  utiliza las diapositivas de la lección o una pizarra para mostrar a los estudiantes un gráfico en T con la etiqueta \"Aplicaciones y juegos favoritos\" a la izquierda y \"Por qué nos gustan\" a la derecha. Después de presentar un ejemplo, pide a los estudiantes que sugieran opciones para agregar a la lista. Mientras los estudiantes explican por qué les gusta una aplicación en particular, reafirma sus ideas y céntrate en las _elecciones_ y en los momentos en que el usuario puede _elegir_ cómo jugar o usarla. Sigue adelante cuando los estudiantes vean la conexión con el hecho de que las personas prefieren poder tomar decisiones."
+        },
+        "bee82cce-d1ce-452a-b733-b9e750e54b90": {
+          "description": "Cuando se crean aplicaciones y juegos, se diseñan pensando en el usuario. El usuario eres tú, o cualquier persona que use y juegue con la aplicación. Los creadores tienen ideas sobre cómo deben usarse sus aplicaciones, ¡pero las elecciones dependen del usuario!\nHoy vamos a explorar cómo (y por qué) los creadores de aplicaciones y juegos nos permiten tomar decisiones."
         },
         "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205": {
+          "description": "**Haz esto:** muestra la diapositiva de Elecciones del usuario, que se encuentra en la sección Recursos.\n\n**Debate:** para cada aplicación o juego que ven, ¿qué opciones creen que el creador de la aplicación les está dando al usuario?\n\n**Objetivo:** los estudiantes deben debatir no solo de qué se tratan las aplicaciones, sino también sobre las elecciones específicas que el usuario puede tomar. Por ejemplo, Talk Box permite a los usuarios elegir un avatar o una representación digital de ellos mismos. Esta elección es algo bueno porque ayuda al usuario a sentir que la aplicación es realmente para él.",
           "tips": [
-            null
+            "Esta lección incluye una presentación de diapositivas con algunas aplicaciones simuladas para usar con fines de discusión. Puedes complementar o reemplazar estos ejemplos con otros según los intereses de tus estudiantes."
           ]
+        },
+        "75264b2e-950d-4494-9313-aa20451bfd50": {
+          "description": "Podemos ver que, en todas estas aplicaciones, el usuario puede elegir cómo las usa. Estas elecciones pueden motivar a más personas a querer usar la aplicación."
+        },
+        "85dd5032-f0e5-446e-a687-45d34b5229c5": {
+          "description": "**Reflexión:** ¿cuál es tu aplicación o juego favorito? ¿Qué elecciones puedes hacer mientras lo usas?"
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
           "name": "Presentamos el Laboratorio de sprites",
+          "description": "**Haz esto:** reproduce el video **\\*Introducción al Sprite Lab**.",
           "progression_name": "Vídeo: Presentación del Laboratorio de Sprites"
+        },
+        "24a7b06d-f1c9-47fb-b723-8e7894957e27": {
+          "description": "Pronto aprenderemos a escribir código y crear nuestros propios proyectos de Sprite Lab. Comenzaremos explorando las posibilidades. ¡Hoy eres el usuario! Tu tarea es jugar y usar los programas de muestra que encontrarás en el sitio web de Code.org. Por cada uno que pruebes, describirás los disfraces de sprites que ves y cualquier elección que puedas hacer como usuario."
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
           "name": "Exploración de aplicaciones",
+          "description": "_Explora al menos 3 programas del Sprite Lab en Code.org. Para cada programa, escribe los sprites que ves y describe las elecciones que haces como usuario._\n\n**Haz esto:** \n\n-   Proporciona a cada persona (o grupo) una copia impresa o digital de la hoja de trabajo **\\*Exploración de aplicaciones**. \n\n-   Dirige a los estudiantes al nivel 2 de Code Studio (Exploración: aplicaciones de muestra). \n\n-   Considera modelar una aplicación con la clase antes de que completen la tarea por su cuenta.",
           "tips": [
-            null
+            "Si es la primera vez que tus estudiantes utilizan Code.org, dedica algo de tiempo a ayudarlos a comprender cómo navegar el sitio e iniciar sesión en sus cuentas."
           ],
           "progression_name": "Exploración: Ejemplos de Aplicaciones"
         },
+        "f321b39c-8051-4fc9-9e40-24f25216f88c": {
+          "name": "Compartir",
+          "description": "**Debate:** ¿cuáles fueron las elecciones más interesantes que pudiste hacer con estas aplicaciones? ¿Hubo un momento en el que quisiste cambiar algo en la aplicación pero no tuviste la opción?\n\n**Objetivo:** los estudiantes deben poder nombrar elecciones específicas que hicieron, pero también deben conversar por qué creen que el creador nos dio esa opción. Las elecciones a resaltar incluyen las palabras que escriben (por ejemplo, Chat Bot), el tipo de sprites que se utilizan (por ejemplo, Juego de recolector) o la forma en que interactúan con algo."
+        },
+        "efa336e3-b101-4300-9bce-45771a6e114d": {
+          "name": "Proponer una mejora",
+          "description": "**Actividad:** piensa en una aplicación que hayas utilizado y cómo mejorarla para dar más opciones al usuario.\n\nSi tienes tiempo, pide a los estudiantes que realicen la actividad anterior a través de uno o más de los siguientes métodos:\n\n-   Busca voluntarios para que expongan sus ideas en un debate grupal.\n-   Organiza un debate con parejas o grupos pequeños.\n-   Pide a los estudiantes que creen un boceto o póster con sus ideas."
+        },
         "1fa1e4c0-3147-4057-8131-07b03520b95e": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "Hoy aprendimos sobre algunas de las formas en que los creadores de aplicaciones nos permiten realizar elecciones como usuarios. También aprendimos sobre sprites. Los sprites son gráficos en pantalla con diferentes propiedades, como tamaño, rotación y ubicación. Los sprites también tienen un disfraz que determina cómo aparecen."
         },
         "0ba8ddb2-a34b-4dfe-bdc7-b6384049aab1": {
+          "description": "**Actividades: (elige una)**\n\n-   ¿Cuál es un ejemplo de una elección que te gustaría poder hacer en los juegos o aplicaciones que usas?\n-   ¿Qué tipo de aplicación o juego te gustaría crear?",
           "tips": [
-            null
+            "Las actividades de reflexión como estas se pueden completar de diversas formas. ¡Escribir un diario o debatir (con grupos o pares) son excelentes opciones! "
           ]
         },
         "6409ca44-ee4a-45b7-9b07-f46e4d8983ba": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "#### Instrucciones para una escene"
+        },
+        "a7ddf80c-6efc-4650-bc93-fb329d06bca1": {
+          "description": "La última vez, exploramos aplicaciones y juegos creados con Sprite Lab. Hoy vamos a empezar a escribir nuestro propio código para crear animaciones con sprites simples."
+        },
+        "dc4cc0f9-6fee-47a9-8bea-502e9ec777c5": {
+          "description": "**Haz esto:** usa las diapositivas de preparación de la lección, o este [proyecto de muestra](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), para mostrar a los estudiantes la animación de la hormiga y la libélula.\n\n**Debate:** _¿Cómo pueden describir esta escena del sprite?\nSi quisieran que alguien creara esta escena para ustedes en una computadora, ¿qué instrucciones necesitaría?_\n\n**Objetivo del debate:** los estudiantes deben identificar ambos sprites en este proyecto, describir sus comportamientos (movimientos) y también notar el fondo.\nPermite que los estudiantes intercambien ideas. Si no están seguros de qué decir, aclara que solo les estás pidiendo que expresen sus observaciones sobre lo que ven.\n\nLuego, muestra el código real utilizado para este proyecto e invita a los estudiantes a intentar leerlo.\n\n**Reflexión:** ¿Qué hay de similar o de diferente entre nuestras instrucciones y este código?"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
           "name": "Creación de Sprites",
+          "description": "#### Predicción (3 minutos)\n\n**Haz esto:** los estudiantes deben leer el código provisto y hacer una predicción sobre lo que sucederá. Después de presionar “Ejecutar”, permite que los estudiantes reflexionen sobre cualquier cosa que les haya parecido interesante o que los sorprendió.",
           "tips": [
-            null
+            " En los acertijos de predicción, se pide a los estudiantes que lean un programa proporcionado y respondan una pregunta al respecto. La pregunta debe ser respondida antes de que el estudiante presione el botón \"Ejecutar\". Si bien es posible utilizar estas preguntas como una forma de evaluación, ten en cuenta que a menudo están al comienzo de una lección como una forma de hacer que los estudiantes hagan preguntas sobre algo nuevo antes de que se les muestre formalmente cómo funciona. "
           ],
           "progression_name": "Predicción"
         },
         "3eb6f356-a55c-4c86-a056-e8af46058092": {
+          "description": "**Haz esto:** reproduce el video “Cómo crear un sprite”",
           "progression_name": "Vídeo: Cómo Hacer un Sprite"
         },
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
+          "description": "#### Desarrollo de habilidades y práctica (20 minutos)\n\n**Transición:** haz que los estudiantes vayan a su computadora e inicien sesión.\n\nEstas actividades son adecuadas para el aprendizaje independiente o la programación en pareja.\n\nLos estudiantes deben completar los niveles de desarrollo de habilidades y, en el tiempo restante, elegir entre las diversas actividades de práctica.",
           "tips": [
-            null
+            "Muchas lecciones de este curso incluyen los niveles de \"Desarrollo de habilidades\" y \"Práctica\". En términos de evaluación, todos los estudiantes deben completar la sección de desarrollo de habilidades. Los niveles de práctica se pueden utilizar para diferenciar u ofrecer más opciones a los estudiantes."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -52,52 +91,78 @@
           "progression_name": "Practica"
         },
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
+          "description": "#### Juego libre (10 minutos)\n\n**Transición:** los estudiantes ahora deben pasar al nivel final de la lección, donde podrán crear su propio proyecto.",
           "tips": [
-            null
+            "Los niveles de juego libre están diseñados para brindar una oportunidad rápida a los estudiantes de que apliquen de manera creativa lo que han aprendido. Los estudiantes deben experimentar con sus propias ideas y se los puede animar a compartir y colaborar entre ellos."
           ],
           "progression_name": "Juego Libre: Hacer una Escena"
         },
         "a594c37e-142d-44f1-93c9-e49ecce1e716": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "Hoy aprendiste a escribir código para crear programas en Sprite Lab.\n\n**Programa**: un algoritmo que se codificó como algo que puede ser ejecutado por una máquina.\n\n**Algoritmo**: una lista de pasos para completar una tarea."
+        },
+        "84a55315-a3fb-4f8c-a451-b167ff8700cb": {
+          "description": "#### Escribir en el diario\n\nHacer que los estudiantes escriban acerca de lo que aprendieron, por qué es útil y cómo se sienten, puede ayudar a solidificar el conocimiento que hayan obtenido hoy y crear una hoja de revisión que pueden consultar en el futuro.\n\n**Actividades:**\n¿Qué consejo le darías a un amigo que está interesado en crear sus propios programas en Sprite Lab?"
+        },
+        "18cec2c2-3023-4456-b199-32f93d8b5287": {
+          "description": "**Haz esto:** revisa o introduce la palabra **algoritmo**: una lista de pasos para completar una tarea."
         },
         "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
           "name": "Sigue el algoritmo",
+          "description": "Hoy vamos a empezar con un juego rápido. En este juego, les daré todos los comandos a seguir y su trabajo es seguir el **algoritmo**. Los comandos siempre empiezan con \"comenzar\" o \"detener\". Si les digo que comiencen a hacer algo, deben comenzar con ese comportamiento y continuar hasta que les diga que se detengan. También podría decirles que \"detengan todo\", lo que significa que pueden finalizar todos los comportamientos que les he dado hasta ahora. Jugaremos 3 rondas y, después de cada ronda, les haré un par de preguntas.",
           "tips": [
-            null
+            "Asegúrense de dejar un poco de espacio entre los comandos. Para cada una de estas secciones, consideren ejecutar la secuencia completa sin ninguna discusión y repetirla nuevamente después de que todos hayan tenido la oportunidad de informar y procesar cualquier confusión."
           ]
+        },
+        "294a81ac-fc2a-417c-b3c5-e9330376b5a8": {
+          "description": "#### Ronda 1 (básica):\n\n-   Comenzar a marchar en el lugar.\n-   Dejar de marchar en el lugar.\n-   Empezar a aplaudir.\n-   Dejar de aplaudir.\n-   Comenzar a marchar en el lugar.\n-   Empezar a aplaudir.\n-   Detener todo.\n\n**Debate:** \\_¿Qué sucede cuando les dijeron que aplaudieran pero ya marchaban en el lugar? ¿Qué sucede si les dicen que comiencen con dos comportamientos diferentes a la vez? \\_\\_\n\nLos estudiantes deben comprender que pueden ocurrir múltiples comportamientos a la vez.\n\n#### Ronda 2 (intermedia):\n\n-   Empezar a agitar los brazos en el aire.\n-   Empezar a mover la cabeza.\n-   Dejar de agitar los brazos en el aire.\n-   Dejar de mover la cabeza.\n-   Empezar a sacudir las rodillas.\n-   Empezar a agitar los brazos como un pájaro.\n-   Dejar de sacudir tus rodillas.\n-   Empezar a mover la cabeza.\n-   Empezar a marchar en el lugar.\n-   Dejar de agitar los brazos como un pájaro.\n-   Detener todo.\n\n**Debate:**\n\n_¿Qué tipo de instrucciones hicieron que las personas cometieran errores?\n¿Qué estrategias creen que son útiles para asegurarse de seguir las instrucciones correctamente?\n¿Por qué es importante realizar un seguimiento de cada comportamiento por separado?_\n\nLos estudiantes deben comprender que cada comportamiento debe detenerse individualmente. Necesitan realizar un seguimiento de cada uno por separado.\n\n#### Difícil\n\n-   Empezar a agacharse.\n-   Empezar a tocar su cabeza.\n-   Dejar de agacharse.\n-   Dejar de tocarse la cabeza.\n-   Empezar a saltar arriba y abajo.\n-   Empezar a tocar su cabeza.\n-   Detener todo.\n-   Empezar a aplaudir.\n-   Empezar a agitar los brazos como un pájaro.\n-   Detener todo.\n-   Empezar a agacharse.\n-   Empezar a saltar arriba y abajo.\n-   Detener todo.\n-   Empezar a tocar sus rodillas.\n-   Empezar a tocar su cabeza.\n-   Detener todo.\n-   Empezar a girar hacia la izquierda.\n-   Empezar a girar hacia la derecha.\n-   Dejar de girar hacia la izquierda.\n-   Dejar de girar hacia la derecha.\n\n**Debate:** _¿Qué sucede si dos comportamientos parecen entrar en conflicto entre sí?_\n\n_¿Qué deben hacer cuando les diga que aplaudan y agiten los brazos al mismo tiempo?_\n\n_¿Cómo pueden saltar arriba y abajo mientras están agachados?_\n\n_¿Qué sucede si necesitan tocarse las rodillas y la cabeza al mismo tiempo?_\n\n_Cuando les dijiste que giraran en dos direcciones opuestas, ¿qué hicieron?_ \n\n_¿Qué pasaría si les dijeran que giren a la izquierda y a la derecha al mismo tiempo?_\n\nLos estudiantes deben entender que algunos comportamientos entran en conflicto entre sí, lo que puede generar resultados inesperados. Es posible que dos comportamientos opuestos se cancelen entre sí."
         },
         "34bd73dd-0031-4051-86a2-8f6a86735b34": {
           "name": "Sprites en acción",
+          "description": "#### Predicción (2 minutos)\n\n**Haz esto:** los estudiantes deben leer el código provisto y hacer una predicción sobre lo que sucederá. Después de presionar “Ejecutar”, permite que los estudiantes reflexionen sobre cualquier cosa que les haya parecido interesante o que los sorprendió.",
           "progression_name": "Predicción"
         },
         "275316f1-8a17-411e-881a-0841ede9cd01": {
+          "description": "#### Video: Sprites en acción (3 minutos)\n\n**Haz esto:** reproduce el video “Sprites en acción”",
           "progression_name": "Vídeo: Sprites en Acción"
         },
         "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
+          "description": "#### Desarrollo de habilidades y práctica (20 minutos)\n\n**Transición:** haz que los estudiantes vayan a su computadora e inicien sesión. Estas actividades son adecuadas para el aprendizaje independiente o la programación en pareja.\n\nLos estudiantes deben completar los niveles de desarrollo de habilidades y, en el tiempo restante, elegir entre las diversas actividades de práctica.",
           "progression_name": "Desarrollo de Habilidades"
         },
         "8afac6a6-bc6b-47a8-ad11-3d42bd53b0e7": {
           "progression_name": "Practica"
         },
         "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
+          "description": "#### Juego libre (10 minutos)\n\n**Transición:** los estudiantes ahora deben pasar al nivel final de la lección, donde verán las mismas opciones de juego libre que en las lecciones anteriores. Anima a los estudiantes a agregar eventos a sus últimos proyectos o comenzar un nuevo proyecto.",
           "tips": [
-            null
+            "Las opciones de juego libre de esta lección reflejan las de la lección anterior. De hecho, cualquier código creado por el estudiante en la última lección se transferirá a la actual. La principal diferencia es que ahora los estudiantes tienen más bloques en su caja de herramientas que deben usar para que sus programas sean más interesantes o complejos. "
           ],
           "progression_name": "Juego Libre: Hacer una Escena Interactiva"
         },
         "47bca048-39fb-4014-a480-e21d163469db": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "Hoy aprendiste a crear programas que cambian con el tiempo usando eventos. \n\n**Evento**: _una acción que hace que suceda algo._"
+        },
+        "663232b3-1a0c-4d35-a039-f6219180dd04": {
+          "description": "#### Escribir en el diario\n\nHacer que los estudiantes escriban acerca de lo que aprendieron, por qué es útil y cómo se sienten, puede ayudar a solidificar el conocimiento que hayan obtenido hoy y crear una hoja de revisión que pueden consultar en el futuro.\n\n**Actividades:**\nLas teclas de flecha son una forma de hacer que un programa sea más interactivo. ¿De qué otras formas un usuario podría tener control sobre lo que sucede en una aplicación o juego?"
         },
         "d8d29dde-b2c8-40bd-a9ce-b8fb74189ed9": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "Revisa _eventos_ y _comportamientos_ en programación. Además, introduce la herramienta \"Disfraces\" de Sprite Lab que permite a los estudiantes dibujar sus propios disfraces.\n\n**Repaso:** pregunta a los estudiantes acerca de eventos y comportamientos. \n\n-   ¿Recuerdan qué es un evento?\n\n-   ¿Recuerdan qué es un comportamiento?\n\n-   ¿Pueden recordar algunos de los comportamientos que utilizaron? ¿Qué acción realizan?\n    -   \"patrullar\"\n    -   \"temblar\"\n    -   \"girar a derecha/izquierda\" \n\n**Presentación:** comienza mostrando el nivel 1 de la lección de hoy a tus estudiantes.\n\n**Reflexión en pareja:** pide a los estudiantes que predigan lo que sucederá cuando se ejecuta el código y que hablen con su compañero de al lado. Ejecuta el código y analiza el resultado.\n\n**Presentación:** muestra el nivel 2. Demuestra brevemente cómo hacer lo siguiente:\n\n-   Navegar entre las pestañas _Código_ y _Disfraces_. \n-   Dibujar un disfraz. \n-   Elegir un disfraz de la biblioteca de disfraces.\n-   Cambiar el disfraz del sprite de la mascota virtual por uno personalizado."
         },
         "8093d6bd-6d62-46dc-9fe1-1a4999a1dcf8": {
-          "name": "Mascota Virtual"
+          "name": "Mascota Virtual",
+          "description": "**Objetivo:** ¡hoy los estudiantes crearán su propia mascota virtual! Comenzarán dibujando o seleccionando un nuevo disfraz para un sprite. Luego, crearán eventos que causen acciones y comportamientos al interactuar."
         },
         "eabbaa23-0f57-46ed-84bc-8bff04cefaf3": {
+          "description": "#### Acertijos en línea\n\n**Transición:** lleva a los estudiantes a sus máquinas. Anima a los estudiantes a seguir las instrucciones de cada acertijo. Ayúdalos a darse cuenta de que esta es una actividad creativa, destinada a ayudarlos a aprender el Sprite Lab.",
           "tips": [
-            null
+            "Anima a los estudiantes con preguntas/desafíos a comenzar a preguntarle a su compañero. Las preguntas sin respuesta se pueden realizar a un grupo cercano, que quizás ya conozca la solución. Haz que los estudiantes describan el problema que están viendo:\n\n-   ¿Qué se supone que haga?\n-   ¿Qué hace?\n-   ¿Qué te dice eso?"
           ]
+        },
+        "7a70ca98-817b-49cf-87dd-37c1e69d6d8c": {
+          "description": "**Recordatorio:** si los acertijos se pueden compartir, recuerda a los estudiantes que sólo compartan su trabajo con sus amigos cercanos o familiares."
         },
         "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
           "progression_name": "Exploración"
@@ -109,7 +174,14 @@
           "progression_name": "Juego libre"
         },
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Actividades:**\n\n-   ¿De qué se trató la lección de hoy?\n-   ¿Cómo se sintieron con la lección de hoy?\n-   ¿Qué otras opciones les gustaría que su mascota hiciera?"
+        },
+        "fcaf009c-58ce-43f6-bb24-dfdae991fdd2": {
+          "description": "### Proporcionar energía para tu mascota virtual (60-90 minutos)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Ciencias de la computación + artes del lenguaje + ciencia**\n\n[Proporcionar energía para tu mascota virtual](https://docs.google.com/document/d/1SV51NrXzinuXHLToGarIDnVMd6GA8ZaD2LfWMDqTg0M/edit?usp=sharing) es una actividad opcional alineada con las normas básicas comunes ELA y las normas de ciencias de última generación, escritas por nuestra comunidad de docentes. Los estudiantes crearán un modelo científico que muestra cómo su mascota virtual recibirá la energía que necesita para sobrevivir. \n\n_Normas abordadas:_\n\n-   **CCSS.ELA.RI.5.7:** aprovechar la información de varias fuentes impresas o digitales, demostrando la capacidad de encontrar una respuesta a una pregunta rápidamente o de resolver un problema de manera eficiente. \n\n-   **CCSS.ELA.RI.5.9:** integrar información de varios textos sobre el mismo tema para escribir o hablar sobre el tema con conocimiento. \n\n-   **5- PS3-1:** utilizar modelos para describir que la energía en la comida de los animales (utilizada para reparar el cuerpo, crecer, moverse y mantener el calor corporal) alguna vez fue energía del Sol. \n\n-   **5-LS2-1:** desarrollar un modelo para describir el movimiento de la materia entre plantas, animales, descomponedores y el medio ambiente. \n\n-   **SL.5.5:** incluir componentes multimedia (por ejemplo, gráficos, sonido) y presentaciones visuales cuando sea apropiado para mejorar el desarrollo de ideas o temas principales. "
+        },
+        "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
+          "name": "Vocabulario Clave"
         },
         "06057973-b621-4a48-a991-4f99aafdedca": {
           "progression_name": "El Poder de las Palabras - Actividad Desconectada"
@@ -147,6 +219,7 @@
           "progression_name": "Vídeo: Texto y Avisos"
         },
         "e64a2440-c243-4f49-8181-171a72e38c5c": {
+          "description": "#### Desarrollo de habilidades y práctica (20 minutos)\n\n**Transición:** haz que los estudiantes vayan a su computadora e inicien sesión. Estas actividades son adecuadas para el aprendizaje independiente o la programación en pareja.\n\nLos estudiantes deben completar los niveles de desarrollo de habilidades y, en el tiempo restante, elegir entre las diversas actividades de práctica.",
           "tips": [
             null
           ],
@@ -479,6 +552,7 @@
           "description": "Si sus estudiantes ya se sienten cómodos con los conceptos de codificación, motívelos a que intenten crear sus proyectos en otra plataforma, como [Scratch](https://scratch.mit.edu/) o [Alice](http://www.alice.org/index.php)."
         },
         "4c778537-489f-4c5c-913b-38cbf385737c": {
+          "name": "Vocabulario Clave: ",
           "progression_name": "Vídeo: Sigue el Rastro Digital"
         },
         "0747338b-f02e-459d-b669-3c0f11486ae1": {
@@ -816,7 +890,7 @@
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
           "description": "Los profesores desempeñan un papel fundamental en la enseñanza de las ciencias de la computación y en el apoyo a un entorno de colaboración y dinamismo en el aula. Durante los rompecabezas en línea, el papel del profesor es principalmente de estímulo y apoyo. Los rompecabezas en línea están pensados para centrarse en el alumno, por lo que los profesores deben evitar intervenir cuando los alumnos se atascan. Algunas ideas sobre cómo hacerlo son:",
           "tips": [
-            null
+            "Muestra a los alumnos la forma correcta de ayudar a los compañeros:\n\n-   No sentarse en la silla del compañero\n-   No utilizar el teclado del compañero\n-   No tocar el ratón del compañero\n-   Asegúrate de que el compañero puede describirte la solución en voz alta antes de que te vayas"
           ]
         },
         "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa": {
@@ -829,7 +903,7 @@
           "name": "Reflexión",
           "description": "Pedir a los alumnos que escriban sobre lo que han aprendido, por qué es útil y cómo se sienten al respecto puede ayudarles a consolidar los conocimientos que han obtenido hoy y a crear una hoja de repaso a la que puedan recurrir en el futuro.\n\n**Sugerencias:**\n\n-   ¿Puedes dibujar una secuencia para prepararte para ir al laboratorio de informática?\n-   Dibuja un \"hacer\" y un \"no hacer\" en el laboratorio de informática\n-   Dibuja y rotula el nombre de la parte del ordenador que utilizaste al hacer clic y arrastrar durante los rompecabezas. (botón del ratón, pantalla táctil, trackpad)",
           "tips": [
-            null
+            "Las actividades de reflexión como estas se pueden completar de diversas formas. ¡Escribir un diario o debatir (con grupos o pares) son excelentes opciones!"
           ]
         },
         "902cde98-a6eb-4a14-b992-43ba04b6c522": {
@@ -863,6 +937,10 @@
         },
         "c3cfdbc4-82d5-4717-bf83-22860936a687": {
           "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o de enriquecimiento.\n\n**Mapas de Peluches**\n\n-   Crea una cuadrícula de tamaño natural en la alfombra con cinta adhesiva y pide a los alumnos que traigan peluches a la escuela.\n-   Ahora los alumnos pueden programar a sus amigos para que muevan sus peluches reales como se indica en los programas.\n\n**Crea tu propio mapa**\n\n-   Pide a los estudiantes que creen sus propios mapas.\n-   Pide a otros alumnos que los resuelvan usando programas."
+        },
+        "239ba3e6-f30a-4f56-8325-0058e708421a": {
+          "name": "Comportamiento en el Laboratorio de Informática",
+          "description": "Repasar las expectativas y cómo comportarse cuando entran en el laboratorio de informática."
         },
         "fadfd6a5-099f-427c-aa1f-345ee17ca150": {
           "description": "**Debatir:** Ten una buena deliberación sobre las expectativas del laboratorio de informática para asegurarte de que los alumnos entienden las reglas. Algunos temas de debate podrían ser:\n\n-   ¿Está bien correr en el laboratorio de informática?\n-   ¿Cómo de ruidoso debemos caminar cuando estamos en el laboratorio de informática?\n-   ¿Qué debes hacer si te quedas atascado en un rompecabezas?\n-   Si te frustras, ¿te ayudará golpear el ordenador?\n-   Cuando estemos a punto de ir al laboratorio de informática, ¿cómo debemos prepararnos?",
@@ -905,7 +983,7 @@
           "name": "La Fundación Desconectada",
           "description": "Repaso de la Actividad Desconectada\n\nEsta lección se basa en muchas de las ideas desconectadas que los alumnos han aprendido en las semanas anteriores a esta primera actividad en línea.  Es importante que traigan esos conceptos (como la persistencia, la depuración, los algoritmos y los programas) en un círculo completo para que su clase pueda beneficiarse de ellos en su trabajo en línea también.",
           "tips": [
-            null
+            "Si en tu clase ya han aprendido los puntos cardinales, cambiar \"Arriba\" y \"Abajo\" por \"Norte\" y \"Sur\" no debería ser un problema.  Si no lo han hecho, hemos proporcionado una práctica hoja de trabajo con la Rosa de los vientos de Code.org que puedes utilizar para que los alumnos se familiaricen con ella.  Esta conversión será muy útil para casi todos los rompecabezas en línea dirigidos a los niños de preescolar y primer grado.\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nInforma a los estudiantes de que verán esas letras en sus programas en línea junto a las flechas de dirección.  "
           ]
         },
         "8b694201-2213-4aea-84a2-9cf901afa9c9": {
@@ -992,25 +1070,45 @@
         "cebdc037-d1ad-4064-a828-29e7da520632": {
           "description": "**Debatir**\nEl objetivo de esta reflexión es que los alumnos vean que, a veces, se repiten muchos símbolos y que pueden agrupar todos esos movimientos en un solo icono. \n\nProporciona a los alumnos la oportunidad de hacer una propuesta de ideas sobre formas más cortas de transmitir el código que están creando.  (Esta parte puede saltarse si tus alumnos empiezan a decir cosas como \"Avanzar 6 veces\". Ya que eso abrirá un debate sobre cómo mostrar \"seis veces\" con símbolos.)\n\nLo ideal es que los alumnos lleguen a un método parecido a éste:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.38.png)\n\nLo que puede reducirse aún más a esto:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.47.png)\n\nCon el tiempo, los alumnos pueden escribir programas como éste sobre la marcha:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.19.06.png)\n\n**Define:** Una vez que los alumnos hayan comprendido la idea de repetir código, dales el vocabulario que lo rodea.  Asegúrate de compartir con ellos que a menudo los términos \"repetir algo\" y \"hacer un bucle de algo\" se utilizarán indistintamente en Code Studio.\n\n* * *"
         },
+        "bc754cb3-3c14-4d5a-a1a7-098abbd6cd87": {
+          "description": "#### Bucles Felices\n\nAhora que los alumnos están familiarizados con la posibilidad de repetir mucho código utilizando un único bucle, selecciona un mapa XL y deja que te ayuden a escribir código para la situación.  Haz esto tantas veces como necesites, y luego pon a los estudiantes en grupos a resolver algunos problemas por su cuenta. Es posible que también necesites añadir el **\\*Paquete de piezas de juego** para adaptar esta actividad a los bucles.\n\n**Circula**: Asegúrate de que los alumnos recorran su código mientras tú los observas.  ¿Hay algún error?  Utiliza las preguntas de depuración para ayudarles a encontrar una solución.\n\n-   ¿Qué hace?\n-   ¿Qué se supone que hace?\n-   ¿Qué te dice eso?\n-   ¿Funciona en el primer paso?\n-   ¿Funciona en el segundo paso?\n-   ¿Dónde deja de funcionar?"
+        },
         "e3639b33-cf35-4cc9-9d0d-616eb5ee7278": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   Haz que los alumnos escriban o dibujen en su diario algo que les recuerde más tarde lo que son los bucles. Las sugerencias incluyen:\n    -   ¿Qué significa \"repetir\" para ti?\n    -   Haz un dibujo de ti repitiendo algo."
+        },
+        "165dd670-58dc-4d0b-899a-f4ba359d0915": {
+          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o como enriquecimiento.\n\n-   Crea una cuadrícula de tamaño natural en la alfombra con cinta adhesiva y haz que los estudiantes traigan sus peluches a la escuela.  Ahora los estudiantes pueden programar a sus amigos para que muevan sus stuffies reales como se indica en los programas.\n-   Haz que los estudiantes creen sus propios mapas para que otros estudiantes los resuelvan utilizando bucles.\n-   Dibuja un programa en la pizarra que utilice varios conjuntos de comandos repetidos y haz que los estudiantes se turnen para pasar al frente e intercambiar los símbolos de los bucles repetidos."
         },
         "cb522975-96ad-44b4-942c-601fc373771c": {
           "name": "La Fundación Desconectada",
+          "description": "Esta lección se basa en el concepto de bucles de repetición que los alumnos aprendieron en la actividad anterior, Bucles Felices.  Es importante trasladar esta idea del mundo real a la forma digital para que los alumnos entiendan cómo utilizar los bloques Blockly para repetir una tarea varias veces.",
           "tips": [
-            null
+            "Si en tu clase ya han aprendido los puntos cardinales, cambiar \"Arriba\" y \"Abajo\" por \"Norte\" y \"Sur\" no debería ser un problema.  Si no lo han hecho, hemos proporcionado una práctica hoja de trabajo con la Rosa de los vientos de Code.org que puede utilizar para que los alumnos se familiaricen con ella.  Esta conversión será muy útil para casi todos los rompecabezas en línea dirigidos a los niños de preescolar y primer grado.\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nInforma a los estudiantes de que verán esas letras en sus programas en línea junto a las flechas de dirección.  "
           ]
+        },
+        "1557cb99-47ef-444c-bf08-6aa33be91fb2": {
+          "description": "**Muestra:** Muestra a los estudiantes el mapa del ejercicio \"Bucles Felices\" que completaron en las lecciones anteriores a ésta. \n\n**Comenta:** Pide a los alumnos que recuerden los símbolos utilizados en \"Los bucles felices\".    \n\n-   _¿Qué sucede cuando la flecha \"Este\" está rodeada por el número 3? (Se mueve  E 3 veces)_\n-   _¿Cómo se llama cuando se rodea una flecha y se añade un número? `repetir`_\n\n**Transición:** Una vez que estés convencido de que tus alumnos recuerdan los \"Bucles Felices\", puedes pasar a la Actividad Puente."
         },
         "4a7df998-47d9-40b3-9461-0e72e300effd": {
           "tips": [
-            null
+            "Si piensas que tus alumnos van a tener problemas con la idea de utilizar bucles de `repetición` no sólo para mover, sino también para recoger maíz, puedes introducir esta idea en la Actividad puente. Esto ayudará a los alumnos a entender que los bucles pueden tener muchos usos diferentes."
           ]
         },
+        "d1bd79aa-b64e-4e66-b7e5-657d5b990a60": {
+          "name": "Actividad Desconectada Utilizando Bloques de Papel",
+          "description": "Selecciona un mapa de flurbs vacío de la **\\*Hoja de trabajo** y entrega a los alumnos **\\*Bloques Blockly** precargados con el comando `recolección`, un bucle `repetición` y los comandos cardinales como `E →` (Este) y `W ←` (Oeste). Ahora, haz que los alumnos programen el flurb desde sus mesas utilizando los bloques de papel Blockly para que los flurbs recolecten la fruta.  ¡Asegúrate de que entienden que los bloques deben ir de arriba a abajo y que todos deben tocarse!\n\n#### -O-"
+        },
         "62d22669-d8bd-4e18-a767-8269aa7322f8": {
-          "name": "Previsualizar desafíos online como clase"
+          "name": "Previsualizar desafíos online como clase",
+          "description": "Selecciona un rompecabezas de los que se encuentran en línea. Recomendamos el rompecabezas 4. Utilizando flechas, haz que los alumnos tracen un patrón que crean que llevará a _Scrat_ hasta la bellota. Pide a los alumnos que lo compartan. Comprueba cuántos otros estudiantes tienen la misma respuesta."
         },
         "bce76535-3424-40bc-a71b-acafda6a3b62": {
-          "name": "Bucles con Scrat"
+          "name": "Bucles con Scrat",
+          "description": "#### Fundamentos en línea - Vista previa de los bucles en la Edad de Hielo\n\nPara terminar la conexión, previsualiza un rompecabezas en línea (o dos) como una clase.\n\n**Modelo:** Presenta un rompecabezas online completo de la progresión que viene.  Recomendamos la lección 8, puzzle 5.  Señala el \"Área de juego\" con _Scrat_ y la bellota, así como el \"Espacio de trabajo\" con el código Blockly.  Explica que este código Blockly es ahora el lenguaje que la clase utilizará para ayudar a _Scrat_ a llegar a la bellota. ¿Ven los alumnos alguna similitud con el ejercicio que acaban de hacer?  ¿Cuáles son las grandes diferencias?\n\nTrabaja con tu clase para arrastrar el código al espacio de trabajo de manera que _Scrat_ (finalmente) llegue a la bellota. \n\n**Transición:** Los alumnos deberían estar ahora preparados para pasar a los ordenadores y completar los rompecabezas en línea por su cuenta."
+        },
+        "bfc26aa9-b856-47f4-86c0-36818d4d9c87": {
+          "description": "A medida que los estudiantes trabajan con los rompecabezas, comprueba si pueden averiguar cuántos bloques utilizan con bucle y sin bucle."
         },
         "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
           "progression_name": "Desarrollo de Habilidades"
@@ -1029,19 +1127,37 @@
         },
         "3cd2a8cd-efcc-40cd-a541-17ae2c95b14c": {
           "tips": [
-            null
+            "Muestra a los alumnos la forma _correcta_ de ayudar a los compañeros de clase:\n\n-   No sentarse en la silla del compañero\n-   No utilizar el teclado del compañero\n-   No tocar el ratón del compañero\n-   Asegurarse de que el compañero puede describirle la solución en voz alta antes de que usted se vaya"
           ]
         },
+        "45ebca0d-233a-4082-8d6e-5cf11640c93e": {
+          "description": "**Circular:** Los profesores desempeñan un papel fundamental en la enseñanza de las ciencias de la computación y en el apoyo a un entorno de colaboración y de vida en el aula. Durante las actividades en línea, el papel del profesor es principalmente de estímulo y apoyo. Las lecciones en línea están pensadas para ser centradas en el estudiante, por lo que los profesores deben evitar intervenir cuando los estudiantes se atascan. Algunas ideas sobre cómo hacerlo son: \n\n-   Utiliza la **\\*Programación por parejas** siempre que sea posible\n-   Animar a los estudiantes con preguntas/retos a que empiecen preguntando a su compañero\n-   Las preguntas sin respuesta pueden ser remitidas a un grupo cercano, que podría conocer ya la solución\n-   Recuerda a los alumnos que deben utilizar el proceso de depuración antes de acercarse\n-   Haz que los alumnos describan el problema que están viendo. ¿Qué se supone que hace? ¿Qué hace? ¿Qué les dice eso?\n-   Recuerda a los alumnos frustrados que la frustración es un paso en el camino del aprendizaje y que la persistencia dará sus frutos.\n-   Si un alumno sigue atascado después de todo esto, hazle preguntas orientativas para que detecte un error por sí mismo."
+        },
         "319c51aa-b894-422b-8d4e-e6d3b2bd9a35": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   Dibuja a _Scrat_ y una bellota.\n-   Dibújate a ti mismo utilizando un bucle para hacer una actividad cotidiana, como lavarte los dientes."
+        },
+        "012f5baf-e3e9-4c36-b720-5f63fb9f6414": {
+          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o de enriquecimiento.\n\n**Así que, a moverse**\n\n-   Proporciona a los alumnos imágenes de acciones o movimientos de baile que puedan realizar.\n    -   Haz que los alumnos organicen los movimientos y añadan bucles para coreografiar su propio baile.\n-   Comparte los bailes con el resto de la clase.\n\n**Conéctalo de nuevo**\n\n-   Busca algunos vídeos de YouTube de bailes populares que se repitan.\n-   ¿Puede tu clase encontrar los bucles?\n-   Intenta hacer lo mismo con las canciones."
+        },
+        "2ad0c170-bdf8-4e67-8334-92bba6011a60": {
+          "description": "### Ayuda a tu girasol a crecer (90-120 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Informática + Lengua Inglesa + Matemáticas + Ciencias**\n\n[Ayuda a tu girasol a crecer](https://docs.google.com/document/d/1R2dh01_VVwP0lNnz45DTYDTbFYpwntJW0l53LLCGG4g/edit?usp=sharing)  es una actividad opcional alineada con los estándares de Common Core ELA, Common Core Math y Next Generation Science, escrita por nuestra comunidad de profesores. Los estudiantes practicarán la secuenciación utilizando tarjetas tangibles. \n\n\\__Normas que se aplican:_ \n\n-   **NGSS K.LS.1** Utiliza las observaciones para describir patrones de lo que las plantas y los animales (incluidos los humanos) necesitan para sobrevivir.\n\n-   **CCSS.MATH.CONTENT.K.CC.B.4.A** Al contar los objetos, diga los nombres de los números en el orden estándar, emparejando cada objeto con uno y sólo un nombre de número y cada nombre de número con uno y sólo un objeto.\n\n-   **CCSS.MATH.CONTENT.K.G.A.1** Describir los objetos del entorno utilizando nombres de formas, y describir las posiciones relativas de estos objetos utilizando términos como encima, debajo, al lado, delante, detrás y al lado.\n\n-   **CCSS.ELA-LITERACY.L.K.4.A** Determinar o aclarar el significado de palabras y frases desconocidas y de significado múltiple basándose en la lectura y el contenido del jardín de infancia."
         },
         "dacbc9c3-1382-49f8-856d-5bce1247ebb4": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "Repasa rápidamente la definición de bucle, la acción de hacer algo una y otra vez.\n\n-   ¿Qué son los bucles?\n-   ¿Por qué los utilizamos?"
+        },
+        "5679d0c2-9bce-45bb-a7ad-713853ccb683": {
+          "name": "Demostración del Profesor",
+          "description": "Hemos incluido algunos niveles de predicción de opción múltiple que son difíciles para los no lectores. Estos niveles son opcionales para que los revises con tu clase y te ayuden a preparar los rompecabezas que vienen. También se pueden utilizar después de terminar la etapa como repaso para la clase."
         },
         "ec7877d9-c2e0-4cd3-8665-25bc3aac4008": {
           "tips": [
-            null
+            "Algunos alumnos pueden tener curiosidad por saber qué ocurre cuando se añaden más bloques dentro de un bucle de repetición. Asegúrate de explicar que el bucle de repetición pasa por cada bloque dentro de él una vez, y luego vuelve a empezar desde el principio y lo repite. No se limita a repetir cada bloque dentro de ese número de veces y pasar al siguiente."
           ]
+        },
+        "1bbb191d-3177-490d-99ad-5a0e10e21985": {
+          "description": "Niveles de Predicción:\n\n-   [Curso A, Bucles en Recolector #1](https://studio.code.org/levels/8728)\n-   [Curso A, Bucles en Recolector #2](https://studio.code.org/levels/8727)"
         },
         "74314f07-5f4d-4cd4-8d82-8208d5ce529e": {
           "progression_name": "Vídeo: El Coleccionista"
@@ -1064,8 +1180,12 @@
         "5580045e-132a-4c17-8c3f-522b7f01f442": {
           "progression_name": "Lecciones adicionales"
         },
+        "46ce0bcb-9f62-42c7-91dd-a6a98b68b10b": {
+          "description": "A medida que los estudiantes trabajan con los rompecabezas, vea si pueden averiguar cuántos bloques utilizan con un bucle y sin un bucle."
+        },
         "a79a0dff-fe81-486d-9961-8198b65bdb8c": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   ¿Cómo hicieron los bucles que tu programa fuera más fácil de escribir?\n-   Dibuja algo que utilice bucles."
         },
         "6f6b3e61-f640-4e12-b65a-a798a35229e8": {
           "name": "Introducción"
@@ -1183,6 +1303,9 @@
           "tips": [
             null
           ]
+        },
+        "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
+          "name": "Vocabulario Clave"
         },
         "69edb680-3657-4056-82ba-59c74c6a0e96": {
           "description": "A continuación se presentan recursos adicionales que puedes proporcionar a los alumnos para mejorar su aprendizaje:\n\n-   [Actividad Familiar](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8) \n-   [Consejos Familiares](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
@@ -1571,6 +1694,9 @@
         "8bc8bad1-8150-46ce-bf97-0d368dafd6ef": {
           "progression_name": "Proyecto"
         },
+        "b8f03681-d01e-4384-b88f-5e562eab172f": {
+          "name": "Vocabulario Clave"
+        },
         "2a466981-732c-4b6b-82da-7a5552e04294": {
           "name": "Introducción"
         },
@@ -1747,6 +1873,9 @@
         "9c113356-76b9-4324-b22f-e35ce5a49216": {
           "name": "Evaluación",
           "description": "Pídele a los alumnos que añadan sus notas adhesivas \"importantes\" o tarjetas de notas a su mapa mental de \"Ciencias de Computación\" antes de que salgan de clase. Trata de llenar el cuadro con muchas ideas acerca de lo que son las Ciencias de Computación y por qué son importantes."
+        },
+        "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
+          "name": "Oportunidad multidisciplinaria"
         },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Introducción a los bucles"
@@ -2134,7 +2263,7 @@
         },
         "b64e8b68-fcfb-4aa3-9769-2c23d35a9b21": {
           "tips": [
-            null
+            "Anima a los estudiantes con preguntas/desafíos a comenzar a preguntarle a su compañero. Las preguntas sin respuesta se pueden realizar a un grupo cercano, que quizás ya conozca la solución. Haz que los estudiantes describan el problema que están viendo:\n\n-   ¿Qué se supone que haga?\n-   ¿Qué hace?\n-   ¿Qué te dice eso?"
           ]
         },
         "af6b778e-d5bf-4e72-bc11-ac8f839bf656": {
@@ -2159,64 +2288,91 @@
           "name": "Reflexión"
         },
         "9b131ffd-535f-4044-b7f7-d8aa2ba715ae": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "#### Instrucciones para una escene"
+        },
+        "5a8f455d-1681-4101-b70c-73117d7172a4": {
+          "description": "La última vez, exploramos aplicaciones y juegos creados con Sprite Lab. Hoy vamos a empezar a escribir nuestro propio código para crear animaciones con sprites simples."
+        },
+        "d3c5cb2c-aa26-41cb-9e54-dd8e8ae43402": {
+          "description": "**Haz esto:** usa las diapositivas de preparación de la lección, o este [proyecto de muestra](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), para mostrar a los estudiantes la animación de la hormiga y la libélula.\n\n**Debate:** _¿Cómo pueden describir esta escena del sprite?\nSi quisieran que alguien creara esta escena para ustedes en una computadora, ¿qué instrucciones necesitaría?_\n\n**Objetivo del debate:** los estudiantes deben identificar ambos sprites en este proyecto, describir sus comportamientos (movimientos) y también notar el fondo.\nPermite que los estudiantes intercambien ideas. Si no están seguros de qué decir, aclara que solo les estás pidiendo que expresen sus observaciones sobre lo que ven.\n\nLuego, muestra el código real utilizado para este proyecto e invita a los estudiantes a intentar leerlo.\n\n**Reflexión:** ¿Qué hay de similar o de diferente entre nuestras instrucciones y este código?"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
           "name": "Creación de Sprites",
+          "description": "#### Predicción (3 minutos)\n\n**Haz esto:** los estudiantes deben leer el código provisto y hacer una predicción sobre lo que sucederá. Después de presionar “Ejecutar”, permite que los estudiantes reflexionen sobre cualquier cosa que les haya parecido interesante o que los sorprendió.",
           "tips": [
-            null
+            " En los acertijos de predicción, se pide a los estudiantes que lean un programa proporcionado y respondan una pregunta al respecto. La pregunta debe ser respondida antes de que el estudiante presione el botón \"Ejecutar\". Si bien es posible utilizar estas preguntas como una forma de evaluación, ten en cuenta que a menudo están al comienzo de una lección como una forma de hacer que los estudiantes hagan preguntas sobre algo nuevo antes de que se les muestre formalmente cómo funciona. "
           ],
           "progression_name": "Predicción"
         },
         "60d05bd8-d452-4ff7-8d42-afc78df62133": {
+          "description": "**Haz esto:** reproduce el video “Cómo crear un sprite”",
           "progression_name": "Vídeo: Cómo Hacer un Sprite"
         },
         "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
+          "description": "#### Desarrollo de habilidades y práctica (20 minutos)\n\n**Transición:** haz que los estudiantes vayan a su computadora e inicien sesión.\n\nEstas actividades son adecuadas para el aprendizaje independiente o la programación en pareja.\n\nLos estudiantes deben completar los niveles de desarrollo de habilidades y, en el tiempo restante, elegir entre las diversas actividades de práctica.",
           "progression_name": "Desarrollo de Habilidades"
         },
         "8fd35c57-6015-4e9b-97cd-a8ade679fe05": {
           "progression_name": "Practica"
         },
         "676dfae2-cb99-4395-a262-f61ed61a3d28": {
+          "description": "#### Juego libre (10 minutos)\n\n**Transición:** los estudiantes ahora deben pasar al nivel final de la lección, donde podrán crear su propio proyecto.",
           "progression_name": "Juego Libre: Hacer una Escena"
         },
         "a35138b5-f6fc-4fac-9a73-991bed07f6d1": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "Hoy aprendiste a escribir código para crear programas en Sprite Lab.\n\n**Programa**: un algoritmo que se codificó como algo que puede ser ejecutado por una máquina.\n\n**Algoritmo**: una lista de pasos para completar una tarea."
+        },
+        "e80dde92-1c60-43ad-86ab-8688fbc0b52b": {
+          "description": "#### Escribir en el diario\n\nHacer que los estudiantes escriban acerca de lo que aprendieron, por qué es útil y cómo se sienten, puede ayudar a solidificar el conocimiento que hayan obtenido hoy y crear una hoja de revisión que pueden consultar en el futuro.\n\n**Actividades:**\n¿Qué consejo le darías a un amigo que está interesado en crear sus propios programas en Sprite Lab?"
         },
         "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
           "name": "Sigue el algoritmo",
           "tips": [
-            null
+            "Asegúrense de dejar un poco de espacio entre los comandos. Para cada una de estas secciones, consideren ejecutar la secuencia completa sin ninguna discusión y repetirla nuevamente después de que todos hayan tenido la oportunidad de informar y procesar cualquier confusión."
           ]
+        },
+        "5c75924f-ef1f-4b61-9850-820fb68c0972": {
+          "description": "#### Ronda 1 (básica):\n\n-   Comenzar a marchar en el lugar.\n-   Dejar de marchar en el lugar.\n-   Empezar a aplaudir.\n-   Dejar de aplaudir.\n-   Comenzar a marchar en el lugar.\n-   Empezar a aplaudir.\n-   Detener todo.\n\n**Debate:** \\_¿Qué sucede cuando les dijeron que aplaudieran pero ya marchaban en el lugar? ¿Qué sucede si les dicen que comiencen con dos comportamientos diferentes a la vez? \\_\\_\n\nLos estudiantes deben comprender que pueden ocurrir múltiples comportamientos a la vez.\n\n#### Ronda 2 (intermedia):\n\n-   Empezar a agitar los brazos en el aire.\n-   Empezar a mover la cabeza.\n-   Dejar de agitar los brazos en el aire.\n-   Dejar de mover la cabeza.\n-   Empezar a sacudir las rodillas.\n-   Empezar a agitar los brazos como un pájaro.\n-   Dejar de sacudir tus rodillas.\n-   Empezar a mover la cabeza.\n-   Empezar a marchar en el lugar.\n-   Dejar de agitar los brazos como un pájaro.\n-   Detener todo.\n\n**Debate:**\n\n_¿Qué tipo de instrucciones hicieron que las personas cometieran errores?\n¿Qué estrategias creen que son útiles para asegurarse de seguir las instrucciones correctamente?\n¿Por qué es importante realizar un seguimiento de cada comportamiento por separado?_\n\nLos estudiantes deben comprender que cada comportamiento debe detenerse individualmente. Necesitan realizar un seguimiento de cada uno por separado.\n\n#### Difícil\n\n-   Empezar a agacharse.\n-   Empezar a tocar su cabeza.\n-   Dejar de agacharse.\n-   Dejar de tocarse la cabeza.\n-   Empezar a saltar arriba y abajo.\n-   Empezar a tocar su cabeza.\n-   Detener todo.\n-   Empezar a aplaudir.\n-   Empezar a agitar los brazos como un pájaro.\n-   Detener todo.\n-   Empezar a agacharse.\n-   Empezar a saltar arriba y abajo.\n-   Detener todo.\n-   Empezar a tocar sus rodillas.\n-   Empezar a tocar su cabeza.\n-   Detener todo.\n-   Empezar a girar hacia la izquierda.\n-   Empezar a girar hacia la derecha.\n-   Dejar de girar hacia la izquierda.\n-   Dejar de girar hacia la derecha.\n\n**Debate:** _¿Qué sucede si dos comportamientos parecen entrar en conflicto entre sí?_\n\n_¿Qué deben hacer cuando les diga que aplaudan y agiten los brazos al mismo tiempo?_\n\n_¿Cómo pueden saltar arriba y abajo mientras están agachados?_\n\n_¿Qué sucede si necesitan tocarse las rodillas y la cabeza al mismo tiempo?_\n\n_Cuando les dijiste que giraran en dos direcciones opuestas, ¿qué hicieron?_ \n\n_¿Qué pasaría si les dijeran que giren a la izquierda y a la derecha al mismo tiempo?_\n\nLos estudiantes deben entender que algunos comportamientos entran en conflicto entre sí, lo que puede generar resultados inesperados. Es posible que dos comportamientos opuestos se cancelen entre sí."
         },
         "bc9a48f5-47d1-4044-89fc-a38283b796e2": {
           "name": "Sprites en acción",
+          "description": "#### Predicción (2 minutos)\n\n**Haz esto:** los estudiantes deben leer el código provisto y hacer una predicción sobre lo que sucederá. Después de presionar “Ejecutar”, permite que los estudiantes reflexionen sobre cualquier cosa que les haya parecido interesante o que los sorprendió.",
           "progression_name": "Predicción"
         },
         "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
+          "description": "#### Video: Sprites en acción (3 minutos)\n\n**Haz esto:** reproduce el video “Sprites en acción”",
           "progression_name": "Vídeo: Sprites en Acción"
         },
         "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
+          "description": "#### Desarrollo de habilidades y práctica (20 minutos)\n\n**Transición:** haz que los estudiantes vayan a su computadora e inicien sesión. Estas actividades son adecuadas para el aprendizaje independiente o la programación en pareja.\n\nLos estudiantes deben completar los niveles de desarrollo de habilidades y, en el tiempo restante, elegir entre las diversas actividades de práctica.",
           "progression_name": "Desarrollo de Habilidades"
         },
         "25d274b2-36a3-49fc-8646-93275a5162a0": {
           "progression_name": "Practica"
         },
         "482633ae-1c8c-4ca2-b44b-ba150352c610": {
+          "description": "#### Juego libre (10 minutos)\n\n**Transición:** los estudiantes ahora deben pasar al nivel final de la lección, donde verán las mismas opciones de juego libre que en las lecciones anteriores. Anima a los estudiantes a agregar eventos a sus últimos proyectos o comenzar un nuevo proyecto.",
           "progression_name": "Juego Libre: Hacer una Escena Interactiva"
         },
         "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "Hoy aprendiste a crear programas que cambian con el tiempo usando eventos. \n\n**Evento**: _una acción que hace que suceda algo._"
+        },
+        "c2c39f4c-ffb6-483d-931a-222e52751d81": {
+          "description": "#### Escribir en el diario\n\nHacer que los estudiantes escriban acerca de lo que aprendieron, por qué es útil y cómo se sienten, puede ayudar a solidificar el conocimiento que hayan obtenido hoy y crear una hoja de revisión que pueden consultar en el futuro.\n\n**Actividades:**\nLas teclas de flecha son una forma de hacer que un programa sea más interactivo. ¿De qué otras formas un usuario podría tener control sobre lo que sucede en una aplicación o juego?"
         },
         "c536d74f-f3af-41d7-b4e4-475b9a3f45c8": {
           "name": "Introducción"
         },
         "660e66d6-d582-4568-9274-8971b0f5b344": {
-          "name": "Mascota Virtual"
+          "name": "Mascota Virtual",
+          "description": "**Objetivo:** ¡hoy los estudiantes crearán su propia mascota virtual! Comenzarán dibujando o seleccionando un nuevo disfraz para un sprite. Luego, crearán eventos que causen acciones y comportamientos al interactuar."
         },
         "1dbfd53a-9ab8-45e6-85fd-c35f5fd99997": {
           "tips": [
-            null
+            "Anima a los estudiantes con preguntas/desafíos a comenzar a preguntarle a su compañero. Las preguntas sin respuesta se pueden realizar a un grupo cercano, que quizás ya conozca la solución. Haz que los estudiantes describan el problema que están viendo:\n\n-   ¿Qué se supone que haga?\n-   ¿Qué hace?\n-   ¿Qué te dice eso?"
           ]
         },
         "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85": {
@@ -2269,6 +2425,9 @@
         },
         "93b0085f-79bb-48eb-a786-f20c04016a31": {
           "name": "Reflexión"
+        },
+        "163a2d46-638a-490a-81b4-f34a3d78a096": {
+          "name": "Oportunidad multidisciplinaria"
         },
         "ee5c8682-facd-4fcb-88e1-597ca5e436c4": {
           "name": "Introducción"
@@ -2656,6 +2815,7 @@
           "progression_name": "Vídeo:  Texto y Avisos"
         },
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
+          "description": "#### Desarrollo de habilidades y práctica (20 minutos)\n\n**Transición:** haz que los estudiantes vayan a su computadora e inicien sesión. Estas actividades son adecuadas para el aprendizaje independiente o la programación en pareja.\n\nLos estudiantes deben completar los niveles de desarrollo de habilidades y, en el tiempo restante, elegir entre las diversas actividades de práctica.",
           "tips": [
             null
           ],
@@ -2878,7 +3038,7 @@
         },
         "179a6d3a-af19-4c62-85c7-82844964d06a": {
           "tips": [
-            null
+            "Muestra a los alumnos la forma _correcta_ de ayudar a los compañeros de clase:\n\n-   No sentarse en la silla del compañero\n-   No utilizar el teclado del compañero\n-   No tocar el ratón del compañero\n-   Asegurarse de que el compañero puede describirle la solución en voz alta antes de que usted se vaya"
           ]
         },
         "12c1b1b7-2a91-4f58-ae14-136ea1536a67": {
@@ -2964,7 +3124,7 @@
         },
         "c6bb8fa9-dfaa-414e-ac47-0f6196d8fa9e": {
           "tips": [
-            null
+            "Muestra a los alumnos la forma _correcta_ de ayudar a los compañeros de clase:\n\n-   No sentarse en la silla del compañero\n-   No utilizar el teclado del compañero\n-   No tocar el ratón del compañero\n-   Asegurarse de que el compañero puede describirle la solución en voz alta antes de que usted se vaya"
           ]
         },
         "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
@@ -3175,7 +3335,7 @@
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
           "name": "Reflexión",
           "tips": [
-            null
+            "Las actividades de reflexión como estas se pueden completar de diversas formas. ¡Escribir un diario o debatir (con grupos o pares) son excelentes opciones! "
           ]
         },
         "b75bc492-bca4-410c-8c94-8d1c919597c3": {
@@ -3191,7 +3351,7 @@
         },
         "65fd5465-cd74-4e68-a4de-c174e2cbd8f6": {
           "tips": [
-            null
+            "Anima a los estudiantes con preguntas/desafíos a comenzar a preguntarle a su compañero. Las preguntas sin respuesta se pueden realizar a un grupo cercano, que quizás ya conozca la solución. Haz que los estudiantes describan el problema que están viendo:\n\n-   ¿Qué se supone que haga?\n-   ¿Qué hace?\n-   ¿Qué te dice eso?"
           ]
         },
         "331e6451-5472-4491-bf96-d630d7f902a4": {
@@ -3221,7 +3381,7 @@
         "9f5b1627-f04c-42a1-8955-17c994ad2b18": {
           "name": "Eventos con el Laboratorio de sprites",
           "tips": [
-            null
+            "Anima a los estudiantes con preguntas/desafíos a comenzar a preguntarle a su compañero. Las preguntas sin respuesta se pueden realizar a un grupo cercano, que quizás ya conozca la solución. Haz que los estudiantes describan el problema que están viendo:\n\n-   ¿Qué se supone que haga?\n-   ¿Qué hace?\n-   ¿Qué te dice eso?"
           ]
         },
         "96bbba0e-e5f3-443f-b2c6-f228953a7b98": {
@@ -3242,8 +3402,14 @@
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
           "name": "Reflexión"
         },
+        "fe0cef4a-d3fd-446e-9874-8270ccda6a52": {
+          "name": "Vocabulario Clave"
+        },
         "c350027b-7b9e-4782-af88-dc1015043bac": {
           "progression_name": "Cómo ser un Súper Ciudadano Digital"
+        },
+        "bec84680-216c-4711-b91f-5b37260fd598": {
+          "name": "Vocabulario Clave"
         },
         "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
           "name": "Introducción"
@@ -3258,6 +3424,9 @@
         },
         "2e6aa365-ef8d-4f04-8a5e-fcc6bb53bc1d": {
           "progression_name": "Acerca de mí con Sprite Lab"
+        },
+        "e7f9b4de-f4a4-401b-99ad-207a2fad7964": {
+          "name": "Compartir"
         },
         "abd54ca8-cb9c-46ad-be0a-814b9eb36162": {
           "name": "Reflexión"

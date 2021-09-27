@@ -1094,6 +1094,13 @@ hi:
             '"rain"': बारिश
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': सही
+            '90': नीचे
+            '180': बाएं
+            '270': ऊपर
       gamelab_mirrorSprite:
         text: "{SPRITE} सामने की ओर {DIRECTION} "
         options:
@@ -1125,6 +1132,7 @@ hi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": चरमराना
+            "'sound://category_digital/jump_7.mp3'": कूदें
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION} की ओर संकेत दें"
         options:
@@ -1583,6 +1591,8 @@ hi:
             '"ripples"': लहरें
           PALETTE:
             '"rainbow"': इंद्रधनुष
+      PoemBot_setBackgroundImageAs:
+        text: पृष्ठभूमि के तौर पर {IMG} सेट करें
       PoemBot_setForegroundEffect:
         text: आगे के भाग का प्रभाव {EFFECT} सेट करें
         options:

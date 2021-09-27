@@ -16,8 +16,9 @@ class I18nStringUrlTracker
   I18N_STRING_TRACKING_DCDO_KEY = 'i18n_string_tracking'.freeze
 
   # The amount of time which will pass before the buffered i18n usage data is uploaded to Firehose.
-  # TODO: increase this interval to 12.hours once we verify everything is working.
-  FLUSH_INTERVAL = 1.hour
+  # Select a random interval time between the MIN and MAX so we can avoid all the servers flushing data at the same time.
+  FLUSH_INTERVAL_MIN = 8.hours
+  FLUSH_INTERVAL_MAX = 16.hours
 
   MAX_BUFFER_SIZE = 250.megabytes
 
@@ -52,7 +53,8 @@ class I18nStringUrlTracker
     @buffer_size_max = MAX_BUFFER_SIZE
 
     # Flushes the buffer in a loop which executes at the given interval
-    @task = Concurrent::TimerTask.execute(execution_interval: FLUSH_INTERVAL) {flush}
+    interval = rand(FLUSH_INTERVAL_MIN...FLUSH_INTERVAL_MAX)
+    @task = Concurrent::TimerTask.execute(execution_interval: interval) {flush}
   end
 
   # Records the given string_key and URL so we can analyze later what strings are present on what pages.
@@ -113,6 +115,9 @@ class I18nStringUrlTracker
       @buffer.extend(MonitorMixin) # Adds synchronization
       @buffer_size = 0
     end
+
+    # If the DCDO flag has changed since data was buffered, we want to clear the buffer and not log/flush the data.
+    return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
 
     # log every <string_key>:<url>:<source> combination to Firehose
     buffer&.each_key do |url|

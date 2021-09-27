@@ -189,6 +189,13 @@ hy:
             '"right"': ճիշտ
             '"space"': տարածություն
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ճիշտ
+            '90': ներքեւ
+            '180': ձախ
+            '270': մինչեւ
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -198,6 +205,7 @@ hy:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": ճռճռոց
+            "'sound://category_digital/jump_7.mp3'": ցատկել
       gamelab_randColor:
         text: կամայական գույն
       gamelab_randomColor:

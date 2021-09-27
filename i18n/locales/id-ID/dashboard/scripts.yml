@@ -18246,3 +18246,27 @@ id:
               name: Akselerometer
             lesson-19:
               name: Proyek
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widget
+            lesson-3:
+              name: Tool
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pelajaran
+            lessonGroup-3:
+              display_name: Proyek
+        csa4-exemplars:
+          lessons:
+            lesson-15:
+              name: Hari Penilaian
+          lesson_groups:
+            lesson group:
+              display_name: Konten
+            content:
+              display_name: Konten
+            lesson_group:
+              display_name: Konten
+            lessonGroup-2:
+              display_name: Konten
