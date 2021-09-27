@@ -13,7 +13,8 @@ export default class PlaygroundImage extends React.Component {
     height: PropTypes.string.isRequired,
     width: PropTypes.string.isRequired,
     index: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
+    isClickable: PropTypes.bool.isRequired,
+    onClick: PropTypes.func
   };
 
   getDynamicStyles() {
@@ -48,14 +49,17 @@ export default class PlaygroundImage extends React.Component {
   }
 
   render() {
-    const {fileUrl, id, onClick} = this.props;
-    const dynamicStyles = this.getDynamicStyles();
+    const {fileUrl, id, onClick, isClickable} = this.props;
+    let dynamicStyles = this.getDynamicStyles();
+    if (isClickable) {
+      dynamicStyles = {...dynamicStyles, ...styles.clickableImageStyle};
+    }
     return (
       <img
         src={fileUrl}
         style={{...dynamicStyles, ...styles.imageStyle}}
         id={id}
-        onClick={onClick}
+        onClick={isClickable ? onClick : undefined}
       />
     );
   }
@@ -64,5 +68,8 @@ export default class PlaygroundImage extends React.Component {
 const styles = {
   imageStyle: {
     position: 'absolute'
+  },
+  clickableImageStyle: {
+    cursor: 'pointer'
   }
 };
