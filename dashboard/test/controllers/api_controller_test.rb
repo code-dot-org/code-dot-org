@@ -1240,7 +1240,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_out :user
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
-    script = Script.find_by_name('algebra')
+    script = create(:script, :with_levels, levels_count: 5)
 
     get :script_structure, params: {script: script.id}
     assert_response :success

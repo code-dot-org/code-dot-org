@@ -1,4 +1,4 @@
-import {assert} from '../../util/deprecatedChai';
+import {assert} from '../../util/reconfiguredChai';
 var NetSimSlider = require('@cdo/apps/netsim/NetSimSlider');
 
 describe('NetSimSlider', function() {

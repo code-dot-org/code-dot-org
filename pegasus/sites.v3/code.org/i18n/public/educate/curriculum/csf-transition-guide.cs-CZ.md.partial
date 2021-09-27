@@ -1,144 +1,144 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: Přechodový průvodce Základy počítačových věd
 theme: responsive
 style_min: true
 ---
 
-# Teaching Courses A-F
+# Výukové kurzy A-F
 
-## Table of Contents
+## Obsah
 
-* [Overview](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
-* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
-* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
-* [End of Course Projects (Courses E & F)](#endofcourse)
-* [Conclusion](#conclusion)
-* [FAQs](#faq)
+* [Přehled](#overview)
+* [Výuka nových kurzů](#newcourses)
+* [Příběhy v kroužku (kurzy A a B)](#circletime)
+* [Osnova lekce a náročné hlavolamy (všechny věkové kategorie)](#scaffolding)
+* [Překlenovací aktivity pro offline lekce (všechny věkové kategorie)](#unplugged)
+* [Projekty konce kurzu (kurzy E a F)](#endofcourse)
+* [Závěr](#conclusion)
+* [Nejčastější dotazy](#faq)
 
 <a id="overview"></a>
 
-## Overview
-The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+## Přehled
+Krajina vzdělávání v oboru počítačových věd se od doby vytvoření původních kurzů „Základy počítačových věd“ nesmírně změnila. Původně byly kurzy 1-4 navrženy jako výchozí bod k získání základů bez ohledu na věk studenta, který si tuto disciplínu vyvolil.  Teď, když čím dál více okresů, měst a států zavádí kurzy počítačových věd už od mateřské školy, učitelé žádají o více obsahu, který by mohli studentům předkládat až do druhého stupně základní a začátku střední školy.
 
-Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+Odpovědí na tento problém jsou naše Základy počítačových věd, Kurzy A-F.  Vytváření osnov po stupních nám umožnilo ohlédnout se zpět a znovu si promyslet způsob, jak prezentujeme materiál.  Také nám to umožnilo srdečně přijmout zpětnou vazbu od oddaného společenství učitelů, které nás na této misi podpořilo. Kurzy A-F, navržené za podpory několika specialistů na základoškolskou výuku počítačových věd patřících k nejlepším v této zemi, by pro Vás měly být dostatečně povědomé na to, abyste je zvládli bez nějakých speciálních příprav, ale zároveň dostatečně nové na to, abyste je předložili studentům, kteří už v minulosti absolvovali některou z našich lekcí.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* Kurz A: Mateřská škola
+* Kurz B: První třída
+* Kurz C: Druhá třída
+* Kurz D: Třetí třída
+* Kurz E: Čtvrtá třída
+* Kurz F: Pátá třída
+* Rychlokurz pro předškoláky: Mateřská škola - 1. třída
+* Rychlokurz: 2. - 5. třída
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).  In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development.  Note the addition of two different “Express” courses, one for pre-readers and one for all other grades.  These are similar to the previous suite’s “accelerated” version.
+Největší aktualizací Základů počítačových věd je, že obsah se přesune ze čtyř kurzů (kurzy 1-4) na šest kurzů přiřazených jednotlivým třídám systému K-5 (kurzy A-F).  Tím, že to bylo provedeno, začaly být lekce lépe uzpůsobeny vhodné úrovni čtení, matematiky a celkového kognitivního rozvoje.  Povšimněte si přidání dvou různých rychlokurzů, jednoho pro předškoláky a jednoho pro všechny ostatní třídy.  Jsou to obdoby „zrychlené“ verze z minulé sady.
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
-As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+## Výuka nových kurzů
+Jak už bylo zmíněno dříve, kurzy by Vám měly být povědomé, ale jsou odlišné.  Jestliže jste byli v profesionální vývojové dílně Code.org, pak jste připraveni vyučovat nové kurzy. Je tu několik málo změn, ale celkově se platforma, osnovy a filozofie výuky nezměnily. Jestliže jste tam ještě nebyli, Code.org Vám nabízí jednodenní bezplatné dílny, které Vám pomohou naučit se pochopit tyto osnovy, projít si platformu Code.org a vyučovat offline lekce.
 
-The main updates to the courses are:
+Hlavní aktualizace kurzů jsou tyto:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* Příběhy v kroužku pro mladé žactvo
+* Nový přístup k lešení a praktikování a aplikaci koncepcí
+* Překlenovací aktivity ke zlepšení přechodu od offline lekcí k online lekcím
+* Projekty k zakončení kurzu pro starší studenty
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+V ostatku tohoto průvodce budou jednotlivé myšlenky prezentovány detailněji a budou nabídnuty tipy a triky k implementaci změn ve Vaší třídě.
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+## Příběhy v kroužku (kurzy A a B)
+Některé koncepce je obtížné vyučovat jen aktivitami a hlavolamy, zejména u mladších studentů.  To je důvodem, proč jsme do osnov pro mateřskou školu a první třídu zavedli několik málo příběhů v kroužku. Tyto příběhy bude učitel muset předčítat celé třídě, přičemž se bude zastavovat a diskutovat o kriticky významných myšlenkách, jako je například odstraňování chyb, vytrvalost a neúspěch.  Doufáme v to, že umožnit studentům prožívat tyto náročné koncepce zprostředkovaně přes postavy z příběhu jim pomůže tyto stejné koncepce rozpoznat, až na ně dojde v následujících lekcích.
 
-Here is how the circle-time stories are intended to be used:
+Tady je popsáno, jak mají být příběhy v kroužku používány:
 
-### Read the appropriate story to your class
-  - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-  - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-  - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
+### Přečtěte své třídě příslušný příběh
+  - Ve vhodných chvílích během akce se průběžně ujišťujte otázkami a komentáři, zda všemu rozumíte.
+  - Poté o těchto příbězích diskutujte. Co Vaši studenti slyšeli? Jsou nějaké myšlenky, které na ně zapůsobily?
+  - Pokuste se přimět studenty, aby se s těmi postavami identifikovali.  Je něco, co ve svém životě dělali a co jim připomíná některou z postav v příběhu?
 
-### Remind students about the story before they begin the next activity.
-  - Do you remember the main ideas we discussed?
-  - How will you know if you see that idea today?
-  - What did the character do to handle that idea? What would you do?
+### Připomeňte studentům tento příběh, než přejdou k další aktivitě.
+  - Pamatujete si hlavní myšlenky, které jsme probírali?
+  - Jak se dozvíte, zda tuto myšlenku dnes uvidíte?
+  - Co postava udělala pro to, aby tuto myšlenku zpracovala? Co byste dělali?
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
-  - Describe for a student how the position that they are in resembles a situation from the book.
-  - Ask a student to think about the characters and figure out what they might do.  Does that help the student figure out a next step?
+### Poukažte na podobnosti mezi příběhem a situacemi, v kterých se ocitají studenti, když se střetávají v rámci nějaké aktivity.
+  - Popište nějakému studentovi, jak situace, v které se nachází, připomíná situaci z knihy.
+  - Požádejte nějakého studenta, aby se zamyslel nad postavami a aby zjistil, co by mohly dělat.  Pomůže to tomu studentovi vyřešit další krok?
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+Jestliže se Vám nepodaří shromáždit celou třídu, společnost Code.org zajistila možnost videa na začátku příslušné lekce, která tyto příběhy prezentuje omezenými anotacemi. Ačkoli tato videa nenabízejí celkem stejný prožitek, umožní studentům získat přístup k příslušným koncepcím a postavám než se vydají na cestu ostatkem kurzu.
 
 <a id="scaffolding"></a>
 
-## Lesson Scaffolding & Challenge Puzzles (All Ages)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+## Osnova lekce a náročné hlavolamy (všechny věkové kategorie)
+Kurzy A-F mají méně „lešení“ než kurzy jim předcházející.  To znamená, že se pokud možno co nejčastěji budeme snažit nechat studenty vytvářet kód od začátku, pokud nemají za cíl konkrétně učit se odstraňovat chyby.  V rámci tohoto návrhu bude většina našich online lekcí dodržovat trend, kdy na začátek lekce předložíme jednoduchý hlavolam a poté pomalu postupujeme s novou koncepcí až do bodu, kdy studenti už měli šanci pochopit myšlenku do hloubky.  Dále jim předložíme náročný hlavolam jako výzvu, což je určeno k tomu, aby se studenti nad myšlenkou zamysleli nějak nově a komplikovaně.
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+Náročné hlavolamy jsou v kurzech A-F nové.  Záměrem náročných hlavolamů je nastavit studentům vyšší laťku, aby měli možnost praktikovat vytrvalost a nezávislé myšlení.  Náročné hlavolamy jsou záměrně obtížné a navržené tak, aby je za přiměřenou dobu stihli vyřešit jen studenti, kteří pochopili příslušnou koncepci.  To znamená, že značný počet studentů nevyřeší problémy úspěšně hned napoprvé. Aby toto mohlo začít, vyžaduje to od studenta a učitele určitý konkrétní postoj.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. Studenti by měli tyto problémy srdnatě zkoušet a potom je odložit a pokračovat dál.  Tato praxe umožňuje, aby nastaly dvě velmi důležité věci:
+2. Studenti získají lepší porozumění toho, kdy a proč mají použít studovanou koncepci. Následující hlavolamy bývají po absolvování výzvy snadnější, i když samy o sobě jsou to náročné hlavolamy.
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+Pamatujte, že studenti mají možnost kdykoli si lekce projít a pokusit se nedokončené hlavolamy vyřešit znovu.  Někdy bývá být dobré se před opakovaným pokusem o vyřešení náročného problému dobře vyspat.
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+Když už se studentovi podaří problém zvládnout, zjistí, že na něj čeká několik cvičení, která jsou obdobou toho, co třeba zažil v první polovině výzvy. Tyto hlavolamy byly umístěny záměrně za účelem vyzkoušení toho, nakolik je studentovi studovaný předmět jasný.  Možná Vám připadají až příliš snadné v porovnání s těmi hlavolamy, které byly řešeny předtím, ale vytvořeny byly za účelem předvést tu přesnou úroveň kompetencí, která je od dané fáze vyžadována.
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+V některých případech své lekce zakončujeme úrovněmi ve volném stylu.  Tyto úrovně buďto nemusejí mít žádnou „nesprávnou“ odpověď, nebo mohou mít několik různých způsobů, jak vyřešit jejich jádrový problém.  Vybídněte prosím studenty, aby se pokusili o co nejlepší výkon a ne aby jen klikli na „Pokračovat“, i když udělat to mohou.
 
-Some final notes for this area:
+Několik poznámek na konec k této oblasti:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* Připomeňte studentům, aby byli vytrvalí a využívali svých schopností odstraňování chyb při práci na problémech, které jim připadají obtížné.
+* Videa často pomáhají.  Když to studentům nepůjde, nechejte je znovu sledovat video, podruhé, potřetí, třeba i počtvrté.
+* Vyžadujte od studentů, aby si přečetli návod.  Jestliže jim to nepůjde, nechejte je nahlas číst návod spolužákovi.
+* Je v pořádku používat nápovědy!  Studenti by měli používat právě tolik nápovědy, kolik budou potřebovat, ale určitě se pokuste hlavolam znovu řešit alespoň jednou před každým dalším nabídnutím.
 
 <a id="unplugged"></a>
 
-## Bridging Activities For Unplugged Lessons (All Ages)
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+## Překlenovací aktivity pro offline lekce (všechny věkové kategorie)
+Offline aktivity se se studenty střetávají právě v tom bodě, kde jsou z hlediska toho, jak to, jak už používají důležité koncepce z počítačových věd ve svém každodenním životě.  Až se studenti naučí identifikovat základní koncepce jako cykly a podmínky, přenesou se přes mentální zábrany, ke kterým může docházet, když se je budou poprvé snažit použít při programování online.
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
+Offline zkušenost je natolik důležitá, že jsme se rozhodli zajít s ní o kus dál a začlenit aktivity, které by posloužily k překlenutí předělu mezi offline aktivitami a jejich online protějšky.  V kurzech A-F nyní shledáte, že plány lekcí poskytují příklady toho, jak vzít offline cvičení a převést lekce na následující sadu online hlavolamů.  Toto vhodně nazýváme „Překlenovací aktivity“.
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise.  In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+Překlenovací aktivity lze z větší části vytvořit buďto vzetím předmětu offline cvičení a jeho provedením na papíře pomocí bloků Blockly nebo vzetím online hlavolamu a jeho vyřešením pomocí jazyka z offline cvičení.  V některých případech je zaveden jiný vztah, ale všechny příklady mají za cíl zajisti, aby offline prožitek nebyl příliš abstraktní ani odtažitý.
 
 <a id="endofcourse"></a>
 
-## End of Course Projects (Courses E & F)
-For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+## Projekty konce kurzu (kurzy E a F)
+Pro starší studenty jsme do kurzů E a F zavedli podstatné projekty na zakončení kurzu. Ačkoli společnost Code.org již nějakou dobu zajišťuje schopnost budovat „projekty“, měli jsme pocit, že by přidalo trochu velmi potřebné perspektivy, kdyby studenti měli možnost si své projekty plánovat a vykonávat je ve formálním kontextu.
 
-The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+Zakončovací projekty kurzů jsou relativně přímočaré.  Během období čtyř až pěti týdnů budou studenti revidovat projektové nápady, plánovat svou aplikaci, programovat svůj program, revidovat na základě zpětné vazby (5. třída) a poté předkládat svou vyhotovenou práci.  Ke každému z těchto kroků je pomocný návod a plán lekcí pro učitele, který ozřejmuje celkovou koncepci.
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point.  These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**Revize:** Studenti se podívají na něco málo aspiračních projektů vybudovaných tak, aby představily úžasné věci, které lze dělat s dovednostmi, které se naučili až doposud.  Tyto projekty byly vybudovány buďto v Laboratoři her nebo v Umělci, ale studenti se mohou svobodně rozhodnout revidovat projekty z Tynker, Scratch, nebo i z textových jazyků, pokud to učitel bude považovat za vhodné.
 
-**Plan:** The intention here is for students to sit back and think about what is really possible.  They will need to think about the games that they saw, and the limitations that they faced when editing them.  Afterward, they will sketch out a plan to create something unique.  Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life.  The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**Plán:** Cílem tady je to, aby si studenti sedli a zamysleli se nad tím, co je doopravdy možné.  Budou se muset zamyslet nad hrami, které viděli, a nad omezeními, na která naráželi při jejich upravování.  Poté načrtnou plán na vytvoření něčeho jedinečného.  Studenti možná budou potřebovat připomenout, že mají být realističtí, protože na uvedení svých vizí do života budou mít jen omezené množství času a prostředků.  Zde uvedené materiály předpokládají použití Umělce nebo Laboratoře her, ale projekty lze přesunout na jakoukoli platformu, která bude pro danou třídu fungovat.
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper.  Students will face tough choices when it comes to trying to make things work as they run into one barrier after another.  They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**Budujte:** Jeden den není právě spousta času na vykonání plánu vypracovaného na papíře.  Když dojde na to zařídit, aby něco fungovalo, studenti budou vystaveni nutnosti náročného rozhodování, protože budou narážet na jednu překážku za druhou.  Jak budou chyby a omezení programu postupně měnit jejich vnímání toho, čeho lze pohodlně dosáhnout za omezené časové období, budou se učit upravovat a přizpůsobovat se.
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved.  Students will practice constructive critique, as well as group brainstorming and persistence.
+**Revize:** Starším studentům může jeden den revidování jejich programů na základě zpětné vazby od spolužáků pomoci zlepšit jejich výsledný produkt a umožní jim to inspirovat ostatní věcmi, kterých se jim podařilo dosáhnout.  Studenti budou praktikovat konstruktivní kritiku, ale i skupinový brainstorming a vytrvalost.
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come.  Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**Přítomnost:** Po téměř měsíci příprav je tohle ta příležitost, kdy se mohou studenti postavit a být hrdí na to, kam až dospěli.  Náš plán lekcí předpokládá ústní prezentaci, ale učitelé mají možnost navrhnout namísto ní písemnou nebo multimediální prezentaci.
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+Bez ohledu na to, jak důkladně se studenti ponoří do svých projektů, jistě se naučí něco významného o procesech kreativity a o řešení problémů v počítačových vědách.
 
 <a id="conclusion"></a>
 
-## Conclusion
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+## Závěr
+Jak vidíte, kurzy A-F ze základů počítačových věd obsahují vzrušující vylepšení ovlivněná zpětnou vazbou od masivních společenství učitelů a usnadňovatelů základů počítačových věd.
 
-We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
+Doufáme, že Vám tento přehled byl k užitku.  Jestliže máte k této změně nějaké otázky nebo komentáře, jděte prosím na adresu http://forum.code.org/c/csf a pošlete nám je na naše fórum.  Zaručeně Vám Vaše otázky zodpovíme ihned, jak to bude možné.  Do té doby je tu několik často kladených otázek o kurzech A-F.
 
 <a id="faq"></a>
 
-## FAQs
+## Nejčastější dotazy
 
-| Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
-| **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
-| **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
-| **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| Otázka                                                                                                                                           | Odpověď                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Spouštíte novou sadu kurzů - znamená to, že končíte s kurzy 1-4?**                                                                             | Ne. Stejně jako náš původní dvacetihodinový kurz je stále dostupný a používaný na našich webových stránkách, máme v úmyslu ponechat tady i kurzy 1-4 pro ty, kdo mají pocit, že to lépe reprezentuje ten prožitek, který jejich studenti nebo děti potřebují.                                                                                                                                                                                                                                |
+| **Kdy můžeme začít používat kurzy A-F?**                                                                                                         | Kurzy A-F jsou nyní dostupné!                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Některé z mých oblíbených lekcí/úkolů v kurzech A-F chybí!**                                                                                   | Nebojte se! Dosud existují tam, kde jste je zanechali v Kurzech 1-4 nebo ve zrychleném dvacetihodinovém kurzu.                                                                                                                                                                                                                                                                                                                                                                               |
+| **Tyto hlavolamy se zdají být mnohem náročnější.  Mám starost, že budou pro mé nejmenší až příliš obtížné.**                                     | Páteří těchto nových kurzů je touha přimět studenty zamyslet se, řešit problémy, a praktikovat vytrvalost.  Žádná z těchto věcí není potřebná, když jsou hlavolamy příliš snadno řešitelné.  Z tohoto důvodu jsme hlavolamy museli udělat poněkud obtížnější.  Podívejte se prosím do průvodce pro učitele, kde najdete nápovědu k tomu, jak vést třídu při budování těchto schopností.  Jako vždy, nepodceňujte význam používání offline lekcí předtím, než se vrhnete na online hlavolamy. |
+| **Některé hlavolamy umožňují jen určitý počet konkrétních bloků.  Co když moji studenti chtějí naprogramovat něco delšího, než se naučí cykly?** | Je tam několik hlavolamů, které omezují konkrétní bloky. To je jeden z našich nových způsobů používání „lešení“.  Je to způsob vyznačení směru bez nadměrného zaplnění kusů v samotném pracovním prostoru „lešením“.  Pro studenty, kteří rádi programují hlavolamy dlouze, než to zkrátí (a ve skutečnosti pro všechny studenty a vždy) bývá užitečné mít vedle klávesnice deník nebo poznámkový papír, kde mohou algoritmus vyřešit tak, jak jim to připadá nejpřirozenější.               |
 

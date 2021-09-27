@@ -44,7 +44,8 @@ const editorSetup = [
     ...commentKeymap,
     defaultTabBinding
   ]),
-  java()
+  java(),
+  EditorState.tabSize.of(2)
 ];
 
 export {editorSetup};

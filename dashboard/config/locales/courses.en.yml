@@ -90,8 +90,20 @@ en:
         csd-2021:
           title: Computer Science Discoveries ('21-'22)
           description_short: An introductory computer science course that empowers students to create authentic artifacts
-          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-          description_teacher: "Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.\r\n\r\n**Did You Know?**\r\n\r\n- This course is modular and can be taught in different configurations based on the needs of each classroom. Check out the *CSD Implementation Guide* in the Teacher Resources menu below to learn about the different options\r\n\r\n- You can find the *Curriculum Guide*, *Getting Started Guide*, *Guide to Assessment*, and many other resources to help you implement this curriculum in the Teacher Resources menu below\r\n"
+          description_student: |-
+            Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+
+            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+          description_teacher: |
+            Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - This course is modular and can be taught in different configurations based on the needs of each classroom. Check out the *CSD Implementation Guide* in the Teacher Resources menu below to learn about the different options
+
+            - You can find the *Curriculum Guide*, *Getting Started Guide*, *Guide to Assessment*, and many other resources to help you implement this curriculum in the Teacher Resources menu below
           version_title: "'21-'22"
         csa-pilot:
           title: CSA Pilot

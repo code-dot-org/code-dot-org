@@ -24,6 +24,7 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -62,9 +63,14 @@ class LessonOverview extends Component {
   };
 
   compilePdfDropdownOptions = () => {
-    const {lessonPlanPdfUrl, scriptResourcesPdfUrl} = this.props.lesson;
+    const {lessonPlanPdfUrl, scriptResourcesPdfUrl, unit} = this.props.lesson;
+
+    const showOverviewPDFOption =
+      unit.publishedState !== PublishedState.pilot &&
+      unit.publishedState !== PublishedState.in_development;
+
     const options = [];
-    if (lessonPlanPdfUrl) {
+    if (lessonPlanPdfUrl && showOverviewPDFOption) {
       options.push({
         key: 'singleLessonPlan',
         name: i18n.printLessonPlan(),

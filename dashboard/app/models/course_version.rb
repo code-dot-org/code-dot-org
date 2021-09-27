@@ -11,6 +11,7 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  course_offering_id :integer
+#  published_state    :string(255)      default("in_development")
 #
 # Indexes
 #
@@ -25,6 +26,9 @@ class CourseVersion < ApplicationRecord
   belongs_to :course_offering
   has_many :resources
   has_many :vocabularies
+
+  attr_readonly :content_root_type
+  attr_readonly :content_root_id
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
@@ -76,13 +80,19 @@ class CourseVersion < ApplicationRecord
         display_name: content_root.version_year,
         content_root: content_root,
       )
-      if content_root.prevent_course_version_change? && content_root.course_version != course_version
-        raise "cannot change course version of #{content_root.name}"
-      end
-      course_version.save!
+      course_version.published_state = content_root.published_state
     else
       course_version = nil
     end
+
+    # Check if we should prevent saving the new course version:
+    # - We can always add a course version if the content_root didn't previously have one
+    # - If the content root's previous course version equals the new one, then there's no change
+    # - If the content_root doesn't prevent a course version change, we can safely change it
+    if content_root.course_version && content_root.course_version != course_version && content_root.prevent_course_version_change?
+      raise "cannot change course version of #{content_root.name}"
+    end
+    course_version.save! if course_version
 
     # Destroy the previously associated CourseVersion and CourseOffering if appropriate. This can happen if either:
     #   - family_name or version_year was changed

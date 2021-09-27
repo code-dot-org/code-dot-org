@@ -1,0 +1,234 @@
+---
+title: Základy informatiky bez počítača
+video_player: true
+theme: responsive
+---
+
+# Základy informatiky bez počítača
+
+Spísali sme zoznam všetkých našich aktivít bez počítača, ktoré môžete využiť v triede. Vďaka nim môžete učiť základy informatiky, či už máte v triede počítače alebo nie.
+<br>
+<div class="col-50">
+Na lekcie, v rámci ktorých žiaci nepracujú na počítači, používame označenie „bez počítača“. Žiaci na nich často pracujú s papierom a ceruzkou, prípadne s inými učebnými pomôckami.  Tieto špeciálne pripravené pomôcky využívajú kinestetický štýl učenia a pomáhajú žiakom spracovať zložité koncepty tým, že tieto koncepty priblížia ich reálnemu životu. <br><br>
+Hodiny bez počítača sú užitočné najmä preto, že v triede vytvárajú a udržiavajú atmosféru spolupráce. Užitočné sú však aj tým, že žiakom poskytujú zaujímavý úvodný zážitok, na ktorý môžete odkazovať pri predstavovaní abstraktnejších konceptov. Každá z týchto aktivít sa dá využívať buď samostatne, alebo v rámci iných hodín informatiky zameraných na príbuzné koncepty.
+</div>
+
+<div class="col-50" style="text-align:center">
+<img src="/images/new-main.jpg" width="90%">
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Odporúčaný vek: 4+, iba po anglicky
+</div>
+
+<div style="clear: both;"></div>
+
+***
+## Lekcie bez počítača v Základoch informatiky 2021 – 2022
+Nasledujúce lekcie sú súčasťou kurzu <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">Základy informatiky 2021 – 2022</a>. <br><br>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+#t01 {
+  width: 10%;
+  background-color: #ffa400;
+}
+#t02 {
+  width: 10%;
+  background-color: #ffb81d;
+}
+#t03 {
+  width: 10%;
+  background-color: #b9bf15;
+}
+#t04 {
+  width: 10%;
+  background-color: #00adbc;
+}
+#t05 {
+  width: 10%;
+  background-color: #0094ca;
+}
+#t06 {
+  width: 10%;
+  background-color: #7765a0;
+}
+</style>
+<table style="width:100%">
+  <tr>
+    <th><center><big>Kurz</th>
+    <th><center><big>Plán hodiny</th> 
+    <th width=10%><center><big>Koncept</th>
+    <th width=20%><center><big>Video</th>
+     <tr>
+    <th rowspan="3" id="t01">Kurz A</th>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 – Veselé mapy</a><br><small>Na tejto hodine bez počítača sa tímy ocitnú pred jednoduchou úlohou: dostať príšerku Flurb k ovociu. Žiaci budú zapisovať inštrukcie pomocou poskytnutých symbolov, čím si precvičia písanie presných inštrukcií. Ak sa v kóde objavia chyby, žiaci by mali spoločne hľadať ich zdroj a vymýšľať riešenia.</td><td>Vytváranie postupností</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">A.7 – Veselé cykly</a><br><small>Táto aktivita nadväzuje na aktivitu Veselé mapy. Tentokrát budú žiaci pomocou svojho kódu riešiť väčšie a dlhšie úlohy. Uvedomia si tak praktickosť štruktúr, ktoré im umožňujú písať dlhší kód jednoduchšie.</td><td>Cykly</td> <td><img src="/images/a7.png" width="90%"></td>
+  <tr>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">A.11 – Veľká udalosť (junior)</a><br><small>Udalosti sú výborný spôsob, ako dodať existujúcemu algoritmu rôznorodosť. Niekedy potrebujeme dosiahnuť, aby program dokázal reagovať na používateľa presne vtedy, keď to používateľ chce. Na toto sa používajú udalosti.</td><td>Udalosti</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
+  </tr>
+       <tr>
+    <th rowspan="3" id="t02">Kurz B</th>
+    <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">B.2 – Pohni sa, pohni sa</a><br><small>Táto lekcia žiakov mentálne pripraví na programovacie cvičenia, s ktorými sa budú počas kurzu stretávať. Žiaci budú pracovať v malých tímoch a trochu sa pritom aj rozhýbu. Budú totiž programovať svojich spolužiakov tak, aby sa opatrne presúvali z miesta na miesto, až kým nedosiahnu svoj cieľ.</td><td>Vytváranie postupností</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">B.6 – Cykly sa zacykľujú</a><br><small>Keď začíname písať dlhšie a zaujímavejšie programy, náš kód sa často výrazne opakuje. V tejto lekcii sa žiaci naučia, ako sa dajú inštrukcie s množstvom opakovaní zjednodušiť pomocou cyklov. Zistia to sledovaním opakujúcich sa tanečných pohybov.</td><td>Cykly</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">B.10 – Správna aplikácia</a><br><small>Táto lekcia žiakom ukáže, že informatika môže ľuďom pomáhať v reálnom živote. Žiaci sa najprv zoznámia s niekoľkými fiktívnymi používateľmi smartfónov a pomôžu im nájsť tú správnu aplikáciu, ktorá rieši ich potreby. Potom využijú svoju empatiu a tvorivosť na to, aby si načrtli vlastnú aplikáciu na smartfón, ktorá rieši potreby jedného ďalšieho používateľa.</td><td>Vplyv počítačov</td> <td><img src="/images/b10.png" width="90%"></td>
+  </tr>
+       <tr>
+    <th rowspan="4" id="t03">Kurz C</th>
+    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.3 – Moji robotickí kamaráti (junior)</a><br><i>*Potrebujete: Plastové poháre (10 ks pre každú skupinu 2 – 3 žiakov)</i><br><small>Namiesto kódu budú žiaci používať súbor symbolov, pomocou ktorých budú navrhovať algoritmy na to, aby robot naukladal poháre do rôznych zoskupení. Žiaci sa budú striedať v úlohe robota a budú reagovať iba na algoritmus, ktorý naprogramovali ostatní členovia ich tímu. Táto aktivita žiakom ukáže spojitosť medzi symbolmi a akciami, rozdiel medzi algoritmom a programom, ako aj cennú zručnosť ladenia, teda odstraňovania chýb.</td><td>Vytváranie postupností</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+  </tr><tr>
+   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 – Moji robotickí kamaráti s cyklami (junior)</a><br><i>*Potrebujete: Papierové poháre (20 ks pre každú skupinu 4 žiakov)</i><br><small>Prehľad
+Táto aktivita vychádza z pôvodnej aktivity „Moji robotickí kamaráti“, pričom žiaci sa v nej už venujú väčším a náročnejším úlohám. Ak chcú svojich „robotov“ naprogramovať tak, aby tieto úlohy zvládli splniť, musia vo svojich inštrukciách rozoznať opakovania, ktoré by sa dali nahradiť cyklami.</td><td>Cykly</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+  </tr>  <tr>
+   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">C.11 – Veľká udalosť</a><br><small>Žiaci sa čoskoro naučia, že udalosti sú výborným spôsobom, ako existujúcemu algoritmu dodať flexibilitu. Niekedy potrebujeme dosiahnuť, aby program dokázal reagovať na používateľa presne vtedy, keď to používateľ chce. Vďaka udalostiam môžu byť programy zaujímavejšie a interaktívnejšie.</td><td>Udalosti</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   </tr> 
+       </tr> 
+     <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 – Binárne náramky</a><br><i>*Potrebujete: fixky. Nepovinné – 18 čiernych a 18 bielych korálikov, 1 šnúrka na náramok pre každého žiaka</i><br><small>Binárny kód je vo svete počítačov nesmierne dôležitý. Väčšina dnešných počítačov totiž ukladá rôzne druhy informácií v binárnej podobe. Táto lekcia žiakom ukáže, ako vziať niečo z reálneho sveta a premeniť to na sled jednotiek a núl.</td><td>Binárny kód</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+  </tr>
+         <tr>
+    <th rowspan="3" id="t04">Kurz D</th>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 – Programovanie na štvorčekovom papieri<br></a><small>Žiaci sa budú navzájom „programovať“ tak, aby kreslili obrázky. Získajú teda príležitosť zábavným a prístupným spôsobom si zažiť niektoré zo základných konceptov programovania. Na začiatku hodiny si budú žiaci pomocou symbolov dávať pokyny, aby na štvorčekovom papieri vymaľovávali štvorčeky s cieľom zreprodukovať existujúci obrázok. Ak zvýši čas, na konci hodiny môžu žiaci vyrábať vlastné obrázky.</td><td>Vytváranie postupností</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 – Štafetové programovanie<br></a><small>Táto aktivita začína krátkym vysvetlením ladenia (odstraňovania chýb) a rozprávaním o vytrvalosti. Potom rýchlo prechádza na súťaž s časovým limitom, v rámci ktorej žiaci pracujú v tímoch a postupne píšu program.</td><td>Vytváranie postupností</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+  </tr><tr>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 – Podmienky s kartami</a><br><small>Táto lekcia ukazuje, ako pomocou podmienok prispôsobiť program konkrétnym informáciám. Pri písaní programu občas nemáme k dispozícii všetky informácie. Niekedy sa stane, že v rôznych situáciách chceme spraviť niečo iné, aj keď pri spustení kódu ešte nevieme, či takáto situácia nastane. Práve na to sa používajú podmienky. Podmienky počítaču umožňujú robiť rozhodnutia na základe informácií, ktoré platia v čase spustenia kódu.
+</td><td>Podmienky</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+
+    </tr>
+         <tr>
+    <th rowspan="3" id="t05">Kurz E</th>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 – Digitálne zdieľanie</a><br><i>*Potrebujete: smartfón alebo tablet</i><br><small>Túto lekciu sme si do Základov informatiky požičali z projektu Copyright and Creativity (Autorské práva a tvorivosť). Pomáha žiakom pochopiť výzvy a výhody, ktoré so sebou prinášajú autorské práva a vlastníctvo, a to najmä v digitálnom prostredí. Žiakov treba podporiť v tom, aby rešpektovali práva umelcov, keďže ide o dôležitú súčasť etického správania digitálneho občana.</td><td>Digitálne občianstvo</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 – Písanie piesní</a><br><small>Medzi najúžasnejšie štruktúry vo svete informatiky patria funkcie. Funkcie (občas nazývané aj „procedúry“) sú drobné programy, ktoré sa dajú opätovne používať v rámci väčšieho programu. Táto lekcia žiakom pomôže intuitívne pochopiť, prečo dokáže byť kombinovanie menších kusov kódu do funkcií užitočné.</td><td>Funkcie</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 – Bezbariérový dizajn</a><br><small>V tejto lekcii sa žiaci naučia viac o bezbariérovosti a dôležitosti empatie. Budú vymýšľať a navrhovať bezbariérové riešenia do vymyslených aplikácií.</td><td>Vplyv počítačov</td><td><img src="/images/e18.png" width="90%"></td>
+  </tr>
+    </tr>
+         <tr>
+    <th rowspan="3" id="t06">Kurz F</th>
+           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 – Príbehy s prázdnymi kolónkami</a><br><i>*Potrebujete: 6 obálok (môžete použiť aj papiere alebo kartotékové lístky preložené napoly)</i><br><small>Žiaci budú využívať príbehy s prázdnymi kolónkami, aby získali kontext na pochopenie toho, ako počítače získavajú a ukladajú vstupné informácie od používateľa a ako ich neskôr po spustení programu používajú.
+   </td><td>Premenné</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>  
+  </tr>
+        <tr>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 – Zábava s cyklami „for“</a><br><i>*Potrebujete : kocky (3 ks na každú skupinu 2 – 4 žiakov</i><br><small>Vieme, že cykly nám umožňujú robiť veci opakovane. Teraz sa však naučíme, ako používať cykly, ktoré majú v sebe zabudované ďalšie funkcie. Tieto nové štruktúry žiakom umožnia písať kód, ktorý je užitočnejší a dynamickejší.</td><td>Cykly „for“</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 – Internet</a><br><small>Hoci mnohí ľudia používajú internet každý deň, máloktorí z nich vedia, ako funguje. V tejto lekcii sa budú žiaci hrať, že prechádzajú internetom, a naučia sa popri tom o spojeniach, URL adresách, IP adresách a DNS.</td><td>Dáta</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+  </tr>
+</table>
+
+<p style="clear:both"></p>
+
+***
+## Ďalšie lekcie bez počítača
+
+Nasledujúce lekcie sú roztriedené podľa konceptov a sú prevzaté zo starších verzií nášho kurzu Základy informatiky. Ak plánujete tieto lekcie využiť, mohli by sa vám zísť tieto dodatočné zdroje:
+* [Kurz A – F 2019: sprievodca učebným plánom](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview) | [Kurz A – F 2019: zoznam potrebných materiálov](https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub) | [Kurz 2019: zoznamy výrobkov na Amazone](https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA)
+* [Kurz A – F 2018: sprievodca učebným plánom](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf)
+* [Kurz A – F 2017: sprievodca učebným plánom (verzia 2)](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf)
+* [Kurz 1 – 4: sprievodca učebným plánom](http://code.org/curriculum/docs/k-5/complete_compressed.pdf)
+* [Základy informatiky: výukové kartičky](https://code.org/curriculum/docs/k-5/flashCards.pdf) <br><br>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+#t07 {
+  width: 10%;
+  background-color: #c6cacd;
+  color: #000000
+}
+</style>
+<table style="width:100%">
+  <tr>
+    <th><center><big>Koncept</th>
+    <th width=65%><center><big>Plán hodiny<br>
+<small> Plán hodiny obsahuje aj ďalšie zdroje (prezentácie, videá či hárky s odpoveďami).
+</th> 
+    <th><center><big>Materiály</th>
+     <tr>
+    <th rowspan="2" id=t07 width=5%>Digitálne občianstvo</th>
+    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+      <td colspan="2">*Nezisková organizácia Common Sense Education má <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">plnohodnotný učebný plán venovaný digitálnemu občianstvu</a>, ktorý zahŕňa množstvo aktivít bez počítača.</td>
+    <tr>
+    <th id=t07>Binárny kód</th>
+        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Binárne obrázky </a><br><small>*Potrebujete: Nepovinné – skupiny protikladných predmetov na ukázanie žiakom. Hoci mnohí ľudia si binárny kód predstavujú len ako jednotky a nuly, žiaci sa dozvedia, že informácie sa dajú zachytiť pomocou rozličných binárnych vyobrazení. Táto lekcia ide s týmto konceptom ešte o krok ďalej, keďže ukazuje, ako počítač dokáže v binárnom kóde ukladať aj zložitejšie informácie (napríklad obrázky či farby).</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
+ </tr>
+    <tr>
+    <th id=t07>Cykly</th>
+        <td><a href="https://curriculum.code.org/csf-18/coursee/6/">Moji robotickí kamaráti s cyklami</a><br><small>Tu sa žiaci naučia, aké jednoduché a užitočné sú cykly, tým, že budú svojich kamarátov programovať pomocou jazyka z lekcie Moji robotickí kamaráti Keď sa oboznámia s cyklami, žiaci si všimnú, že zložitejšie štruktúry dokážu vytvárať rýchlejšie.
+</td> <td>{{ curriculum/unplugged/archive_two_video_thumbnail }}</td>
+  </tr>
+     <th rowspan="2" id=t07>Funkcie</th>
+    <td><a href="https://code.org/curriculum/course3/4/Teacher">Funkčné lapače slnka</a><br><small>V tejto lekcii si žiaci vyrobia lapač slnka zo šnúrky, korálikov a špeciálnej ozdoby. Žiaci budú postupovať podľa súboru opakujúcich sa krokov. Potom dostanú za úlohu zistiť, ktoré „zručnosti“ sa využívajú viackrát. Keď tieto zručnosti zadefinujú, budú ich spúšťať z hlavného programu a celý postup tvorby sa zachytí na jediný list papiera. Konečný program bude určený pre celú triedu nezávisle od toho, aký typ šnúrky, korálikov či špeciálnych ozdôb jednotliví žiaci používali. Aby to bolo možné, žiaci budú musieť „vyabstrahovať“ podrobnosti o konkrétnych materiáloch a použiť na ich označenie menej konkrétne výrazy. Toto použitie generických zástupných prvkov je výborným úvodom do premenných.</td> <td><a href="https://youtu.be/d1MdyeXy0v0">Video k lekcii</a><br><a href="https://www.youtube.com/watch?v=Rb5DNYhLb7I">Lekcia v akcii</a><br><a href="https://www.code.org/curriculum/course3/4/Key-Activity4-FunctionalSuncatchers.pdf">Kľúč s odpoveďami k aktivite<a href="https://www.code.org/curriculum/course3/4/Key-Assessment4-FunctionalSkills.pdf">Kľúč s odpoveďami k záverečnému testu</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://curriculum.code.org/csf-1718/coursef/21/">Písanie piesní pomocou parametrov.</a><br><small>Medzi najúžasnejšie štruktúry vo svete informatiky patria funkcie. Funkcie (občas nazývané aj „procedúry“) sú drobné programy, ktoré sa dajú opätovne používať v rámci väčšieho programu. Táto lekcia žiakom pomôže intuitívne pochopiť, prečo dokáže byť kombinovanie menších kusov kódu do funkcií užitočné a ako dokážu tieto štruktúry používať, aj keď sú kusy kódu obsiahnuté vnútri trochu odlišné.
+</td> <td>{{ curriculum/unplugged/archive_three_video_thumbnail }}</td>
+  </tr>
+     <th rowspan="6" id=t07>Algoritmy</th>
+    <td><a href="https://curriculum.code.org/csf-1718/coursee/10/">Preteky kociek</a><br><small>V rámci tejto lekcie si žiaci spoja koncept algoritmov s každodennými činnosťami, konkrétne prostredníctvom pretekov kociek. Cieľom aktivity je začať u žiakov vytvárať zručnosti, ktoré im umožnia preniesť situácie z reálneho sveta do on‑line prostredia a naopak.
+</td> <td>{{ curriculum/unplugged/archive_four_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://curriculum.code.org/csf-18/coursee/1">Moji robotickí kamaráti</a><br><small>Vaši žiaci sa naučia, ako sa môžu pomocou vopred určených symbolov navzájom naviesť na to, aby splnili konkrétne úlohy aj bez akýchkoľvek slovných pokynov. Táto aktivita žiakom ukáže spojitosť medzi symbolmi a akciami, rozdiel medzi algoritmom a programom, ako aj cennú zručnosť ladenia, teda odstraňovania chýb.</td> <td>{{ curriculum/unplugged/archive_five_video_thumbnail }}</td>
+  </tr>
+    <tr>
+    <td><a href="https://curriculum.code.org/csf-18/coursec/4/">Algoritmy z reálneho života: Papierové lietadielka</a><br><small>V rámci tejto lekcie si žiaci spoja koncept algoritmov s každodennými činnosťami. Po prediskutovaní konceptu algoritmov si žiaci pomocou algoritmu vytvoria papierové lietadielko. Cieľom aktivity je začať u žiakov budovať zručnosti, ktoré im umožnia preniesť situácie z reálneho sveta do on‑line prostredia a naopak.</td> <td>{{ curriculum/unplugged/archive_six_video_thumbnail }}</td>
+  </tr>
+    <tr>
+    <td><a href="https://curriculum.code.org/csf-18/coursea/3/">Algoritmy z reálneho života: Zasaď semienko</a><br><small>V rámci tejto lekcie si žiaci spoja koncept algoritmov s každodennými činnosťami, konkrétne zasadením skutočného semienka. Cieľom aktivity je začať u žiakov budovať zručnosti, ktoré im umožnia preniesť situácie z reálneho sveta do on‑line prostredia a naopak.</td> <td>{{ curriculum/unplugged/archive_seven_video_thumbnail }}</td>
+  </tr>
+    <tr>
+    <td><a href="https://curriculum.code.org/csf-1718/coursef/10/">Tangramy</a><br><small>Táto lekcia nás naučí niečo dôležité o algoritmoch. Pokiaľ je algoritmus jednoduchý, existuje množstvo spôsobov, ako ho využiť. Ak ale človek chce, aby sa jeho algoritmom každý dopracoval k rovnakému výsledku, algoritmus musí byť podrobnejší. Žiaci sa prostredníctvom hry s tangramami naučia rozdiel medzi podrobnými a všeobecnými algoritmami.</td> <td>{{ curriculum/unplugged/archive_eight_video_thumbnail }}</td>
+  </tr>
+  </tr>
+    <tr>
+  </tr>
+    </tr>
+     <th id=t07 rowspan="4">Informatické myslenie</th>
+        <tr>
+        <td><a href="https://code.org/curriculum/course3/1/Teacher">Informatické myslenie</a><br><small>Pri tejto aktivite nie sú potrebné žiadne inštrukcie. Žiaci budú využívať príklady toho, čo robili vymyslení hráči, aby zistili, aké má hra pravidlá. Táto lekcia dáva žiakom príležitosť precvičiť si v rámci jednej kompaktnej aktivity štyri základné zručnosti informatického myslenia (dekompozícia, hľadanie vzorov, abstrakcia a použitie algoritmov).</td> <td><a href="https://youtu.be/TlAaklrolA0">Video k lekcii</a><br><a href="https://www.youtube.com/watch?v=b4a7Ty1TpKU">Lekcia v akcii</a><br><a href="https://www.code.org/curriculum/course3/1/Key-Activity1-ComputationalThinking.pdf">Kľúč s odpoveďami k aktivite</a></td>
+        </tr>
+        <td><a href="https://studio.code.org/unplugged/unplug2.pdf">Informatické myslenie s príšerkami</a><br><small>Žiaci sa iba pomocou papiera a fixky naučia štyri súčasti informatického myslenia. Žiaci by sa mali po krátkom úvode rozdeliť do skupín, v ktorých budú ostatným žiakom zadávať pokyny, ako nakresliť konkrétnu príšerku (vybranú z vopred pripraveného katalógu príšeriek). Celú úlohu si najprv treba rozložiť na menšie časti. Tímy potom budú analyzovať všetky príšerky v katalógu a hľadať v nich vzory, vyabstrahujú z nich podobnosti v detailoch a použijú získané informácie na vytvorenie algoritmu (pokynov), na základe ktorého bude iný tím kresliť príšerku. Každý tím si potom vymení svoj algoritmus s inou skupinou a nakreslí príšerku podľa toho, čo je v algoritme uvedené. Podarilo sa mu nakresliť obrázok, ktorý mal pôvodný tím na mysli?</td> <td>{{ curriculum/unplugged/archive_nine_video_thumbnail }}</td>
+  
+  <tr>
+    <td><a href="https://curriculum.code.org/csf-18/coursea/1/">Chrobáky bez bodiek</a><br><small>Táto lekcia žiakov prevedie krokmi ladenia, teda odstraňovania chýb. Žiaci sa naučia neustále si klásť nasledujúce otázky: „Čo sa stalo? Malo sa to stať? Čo to pre mňa znamená?“ </td> <td>{{ curriculum/unplugged/archive_ten_video_thumbnail }}</td>
+  </tr>
+    </tr>
+     <th rowspan="2" id=t07>Vytrvalosť</th>
+  <td><a href="https://curriculum.code.org/csf-18/coursec/1/">Budovanie základov</a><br><small>Nové a nevyriešené problémy sú často pomerne náročné. Ak chceme mať možnosť vytvoriť niečo kreatívne, užitočné a šikovné, musíme mať odvahu pustiť sa do riešenia náročných problémov, aj keby to znamenalo, že kým sa dopracujeme k úspechu, zopárkrát aj zlyháme. V tejto lekcii žiaci vytvoria stavbu z bežne dostupných materiálov. Pevnosť stavby sa potom bude testovať tak, že overia, či dokáže desať sekúnd udržať učebnicu. Väčšine žiakov sa to na prvý pokus nepodarí, ale je dôležité, aby sa nevzdali a skúsili to znova.</td> <td>{{ curriculum/unplugged/archive_eleven_video_thumbnail }}</td>
+  </tr>
+  <tr>
+ <td><a href="https://curriculum.code.org/csf-18/coursea/2/">Stevie a veľký projekt</a><br><small>Keď žiaci pri odpovedaní na otázku alebo pracovaní na projekte narazia na prekážku, ľahko ich ovládne pocit frustrácie a vzdajú sa. Táto lekcia žiakom ukáže, že frustrácia môže byť dôležitou súčasťou učenia. Frustráciu prezentuje ako jeden z krokov v tvorivom procese, nie ako znak zlyhania. Túto lekciu môžu žiaci absolvovať v rámci jednej alebo dvoch vyučovacích hodín. Ak máte k dispozícii viac času, pokojne žiakom dovoľte venovať viac času stavaniu a upravovaniu guľôčkovej dráhy.</td> <td>{{ curriculum/unplugged/archive_twelve_video_thumbnail }}</td>
+  </tr>
+     <th id=t07>Abstrakcia</th>
+    <td><a href="https://code.org/curriculum/course4/5/Teacher">Príbeh na doplnenie</a><br><small>Abstrakcia patrí medzi najdôležitejšie zručnosti, ktoré si musí informatik osvojiť. Umožňuje zjednodušovať problémy a pomáha predchádzať zbytočnému opakovaniu. Dobrý programátor používa abstrakciu prakticky vždy, keď vytvára program. Pri tejto aktivite budú vaši žiaci analyzovať príbehy a hľadať v nich rozdiely, aby ich mohli vyabstrahovať. Abstrahované príbehy poslúžia ako šablóna na zábavné a bláznivé nové príbehy.</td> <td><a href="https://youtu.be/TctGRrUdkcc">Video k lekcii</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Activity5-MadGlibs.pdf">Kľúč s odpoveďami k aktivite</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Assessment5-MadGlibs.pdf">Kľúč s odpoveďami k záverečnému testu </a></td>
+  </tr>
+<tr>
+   <th id=t07>Premenné</th>
+​     <td><a href="https://curriculum.code.org/csf-20/coursef/7/">Premenné v obálkach</a><br><i>*Potrebujete: obálky (1 – 4 ks na každú skupinu 2 – 4 žiakov)</i><br><small>Premennými zastupujeme hodnoty, napríklad čísla či slová. Premenné nám v programovaní dávajú veľkú slobodu. Namiesto toho, aby museli veľakrát vypisovať celé vety alebo si pamätať komplikované čísla, informatici na tieto hodnoty odkazujú pomocou premenných. Táto lekcia pomáha vysvetliť, čo sú premenné a akými mnohými rôznymi spôsobmi ich vieme využívať. Koncept premenných nie je jednoduchý na pochopenie, preto odporúčame vyhradiť na konci hodiny dostatok času na diskusiu.</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
+</tr>
+</table>
+
+
+<p style="clear:both"></p>
+

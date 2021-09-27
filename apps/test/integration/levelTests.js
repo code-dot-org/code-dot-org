@@ -9,7 +9,7 @@
 // todo - should we also have tests around which blocks to show as part of the
 // feedback when a user gets the puzzle wrong?
 
-import {assert} from '../util/deprecatedChai';
+import {assert} from '../util/reconfiguredChai';
 import sinon from 'sinon';
 import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 import jQuery from 'jquery';

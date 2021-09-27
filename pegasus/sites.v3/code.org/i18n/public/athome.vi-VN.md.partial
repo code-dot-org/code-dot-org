@@ -1,162 +1,344 @@
 ---
-title: Learning computer science when schools are closed in response to Covid19
+title: Khoa học máy tính tại nhà
 video_player: true
 theme: responsive
 ---
 
-<a id="top"></a>
+<link href="/css/tools.css" rel="stylesheet" />
 
-# Learning computer science when schools are closed
+<a id="top"></a>
+<h1>Khoa học máy tính tại nhà</h1>
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
-{{ athome_vid_intro }}
+  <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="Mẹ giúp con gái sử dụng máy tính xách tay">
 </div>
 
-<p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
-<p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
-<p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
-<p><a href="#apps">No computer at home? See smartphone options</a></p>
+<p>Cho dù bạn là phụ huynh/người giám hộ hay học sinh tự học, các lựa chọn dưới đây là những cách hấp dẫn, dễ thử để bắt đầu khám phá khoa học máy tính.</p>
+<ul>
+    <li><a class="linktag" id="hoc-nav" href="#hoc">Thử tham gia Giờ lập trình</a></li>
+    <li><a class="linktag" id="videos-nav" href="#videos">Xem loạt video ngắn kiến thức cơ bản về KHMT</a></li>
+    <li><a class="linktag" id="self-paced-nav" href="#express">Tham gia khóa học nhập môn theo nhịp độ của bản thân</a></li>
+    <li><a class="linktag" id="labs-nav" href="#labs">Làm game hoặc một ứng dụng</a></li>
+    <li><a class="linktag" id="unplugged-nav" href="#unplugged">Thử học KHMT mà không cần máy tính (tùy chọn ‘không dùng thiết bị điện tử’ & thiết bị di động)</a></li>
+    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Học KHMT từ nhóm Code.org và các vị khách mời đặc biệt</a></li>
+</ul>
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
-
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
-
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
-
-## Hour of Code: Try these engaging, introductory tutorials
-Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
-* [Dance Party](https://code.org/dance)  - Code a dance party featuring music by Katy Perry, Shawn Mendes, and more.
-* [Minecraft](https://code.org/api/hour/begin/mc) - Use your creativity and problem solving skill to journey and explore new worlds.
-* [AI for Oceans](https://code.org/oceans) - Learn how AI and machine learning can be used to address world problems.
-* [Flappy Code](http://studio.code.org/s/flappy/reset) - Write your own flappy game code.
-* [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
-* And many [more tutorials](https://code.org/hourofcode/overview)!
-
-<p><a href="#top">[Back to top]</a></p>
-
-<div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
-
-## Videos: Watch these easy 3-5 minute educational videos
-
-{{ athome_videos }}
+<a id="hoc"></a>
+<h2>Hãy thử Giờ lập trình với bài hướng dẫn giới thiệu thú vị sau</h2>
+<p>Hãy thử <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">bài hướng dẫn một giờ</a> có các game và tựa phim phổ biến như Minecraft, Frozen và Chiến tranh giữa các vì sao. Nhiều bài hướng dẫn có cấu trúc giống như game, được thiết kế để dạy các khái niệm cơ bản về khoa học máy tính theo những phương pháp thú vị và hấp dẫn.</p>
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="danceparty" href="/dance" target="_blank">
+        <img class="tutorial-tile-img" src="/images/dance_party_2019.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Bữa tiệc khiêu vũ">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Bữa tiệc khiêu vũ</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Lập trình Bữa tiệc khiêu vũ để chia sẻ với bạn bè và gia đình. Với sự tham gia của Katy Perry, Shawn Mendes, Panic! Ở vũ trường, Lil Nas X, Jonas Brothers, Nicki Minaj, và 34 ngôi sao khác!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Thử hoạt động</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="minecraft" href="/minecraft" target="_blank">
+        <img class="tutorial-tile-img" src="//code.org/shared/images/fill-484x234/courses/logo_tall_aquatic.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Minecraft Thủy sinh">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Giờ lập trình</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft trở lại với Giờ lập trình trong một hoạt động hoàn toàn mới! Hành trình Minecraft với Mã lệnh.</div>
+        <br>
+        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Thử hoạt động</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-484x234/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Trí tuệ nhân tạo cho Đại dương">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Trí tuệ nhân tạo cho đại dương</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Giúp làm sạch đại dương bằng cách đào tạo AI phát hiện ra rác thải! Tìm hiểu về dữ liệu đào tạo và định kiến ​cũng như cách AI có thể giải quyết các vấn đề của thế giới. View <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
+        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Try activity</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<p><a href="#top">[Trở lại đầu trang]</a></p>
+
+<br>
+<br>
+
+<a id="videos"></a>
+<div class="col-100" style="padding:25px; border-radius: 15px; background-color: #ebe8f1">
+<h2 style="margin-top:0">Xem loạt video ngắn hấp dẫn để tìm hiểu cách hoạt động của máy tính, Internet và AI</h2>
+<p>Tìm hiểu kiến thức cơ bản về khoa học máy tính qua các video có sự tham gia của các chuyên gia công nghệ nổi tiếng như Bill Gates và Satya Nadella, cũng như một số diễn giả có xuất thân từ nhiều ngành nghề và tổ chức.</p>
+<br>
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/computers-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Cách máy tính hoạt động với Bill Gates">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Cách máy tính hoạt động</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Với bài giới thiệu của Bill Gates, loạt 6 video ngắn này giải thích bản chất của máy tính và cách hoạt động của các mạch điện trong máy tính.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Xem loạt video</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/internet-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Cách hoạt động của Internet">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cách hoạt động của Internet</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Trong loạt 8 video ngắn này, bạn sẽ tìm hiểu cách Internet ra đời, khái niệm HTML và cách hoạt động của các công cụ tìm kiếm như Google.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Xem loạt video</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/ai/ai-intro-2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" "How AI Works with Satya Nadella">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cách hoạt động của AI</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tìm hiểu cách hoạt động và tầm quan trọng của AI trong loạt video ngắn này. Với sự tham gia của Giám đốc điều hành Microsoft Satya Nadella và đội ngũ chuyên gia trong nhiều lĩnh vực.</div>
+        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Xem loạt video</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both"></div>
+
+<p>Xem thêm video, bao gồm các video ngắn truyền cảm hứng với sự tham gia của người nổi tiếng như Steph Curry và Shakira <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">tại đây</a>.</p>
+<br>
+<p><a href="#top">[Trở lại đầu trang]</a></p>
+
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
 
 <a id="express"></a>
+<h2>Tìm hiểu các nguyên tắc cơ bản thông qua các khóa học theo tiến độ tùy ý</h2>
+<h3>Các khóa học nhập môn theo nhịp độ của bản thân</h3>
+<p>Lựa chọn tuyệt vời cho học sinh bắt đầu tự học. Bạn sẽ tìm hiểu các nguyên tắc cơ bản của khoa học máy tính bằng các khối kéo & thả. Tạo bản vẽ và game của riêng bạn. Lưu ý: Các khóa học cấp tốc hiện có tiếng Anh, tiếng Hindi, tiếng Ý và tiếng Tây Ban Nha. Đối với các ngôn ngữ khác, chúng tôi đề xuất <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Khóa học tăng tốc</a> kéo dài 20 giờ. Để xem những nội dung có sẵn bằng ngôn ngữ của bạn, hãy truy cập <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">danh mục khóa học</a> của chúng tôi.</p>
 
-## Learn the fundamentals with our self-paced courses
-### **Express courses**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+<br>
 
-<div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank"><img src="/images/curriculum/course-tile-express.png" style="width: 100%" alt="Khóa học cấp tốc"></a><br/><a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank">Khóa học cấp tốc</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Khóa học cấp tốc cho trẻ chưa biết đọc"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Khóa học cấp tốc cho trẻ chưa biết đọc</a>
 
 </div>
 <div style="clear: both"></div>
 
+<h3>Bài giới thiệu theo nhịp độ của bản thân về Game Lab và App Lab</h3>
+<p>Được điều chỉnh từ các khóa học Khám phá KHMT và Nguyên tắc cơ bản của KHMT của chúng tôi, các học phần ngắn, có nhịp độ tùy chỉnh này là phương pháp tuyệt vời để học các khái niệm trải dài trên tất cả các ngôn ngữ và công cụ lập trình. <i>Cần có tài khoản Code.org để truy cập</i>.</p>
+
+<br>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/alien2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Giới thiệu về Game Lab">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Giới thiệu về Game Lab</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Lập trình hoạt họa, tác phẩm tương tác và game trong Game Lab. Bắt đầu từ các hình dạng đơn giản và xây dựng thành các chuyển động nhân vật và game phức tạp hơn.</div>
+        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Thử học phần</button> </a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Lập trình Chú rùa trong App Lab">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Lập trình Chú rùa trong App Lab</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sử dụng các lệnh JavaScript để vẽ các hình khối và hình ảnh bằng một “chú rùa” ảo. Thiết kế và lập trình cảnh vật kỹ thuật số của chính bạn!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Thử học phần</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/events3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Lập trình hướng sự kiện trong App Lab">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Lập trình hướng sự kiện trong App Lab</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tìm hiểu cách thiết kế ứng dụng phản hồi với lượt nhấp chuột và nhấn phím. Hãy tạo loạt ứng dụng (app) đơn giản hoạt động trên web!</div>
+        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Thử học phần</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<br>
+
+<p><a href="#top">[Trở lại đầu trang]</a></p>
+
 <hr />
 
-{{ athome_olderstudents }}
+<a id="labs"></a>
+<h2>Hãy sáng tạo nào!</h2>
+<p>Trước tiên, hãy tìm nguồn cảm hứng nhé! Xem <a href="https://studio.code.org/projects" target="_blank">thư viện dự án</a> của chúng tôi – chơi một số game hoặc thử một số ứng dụng mà học sinh đã sáng tạo. Bạn có thể “phối lại” dự án để biến thành của riêng bạn hoặc xây dựng dự án mới trong App Lab, Game Lab hoặc Web Lab.</p>
 
-<div style="clear: both; margin-bottom: 30px"></div>
+<br>
 
-<p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-
-## Learn to design and build apps with App Lab
-
-<div class="col-33" style="padding-right: 20px;">
-
-<img src="/images/app-lab/applab-tool.png" style="width: 100%"/>
-
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <p style="color:#ffffff">App Lab là môi trường lập trình để bạn có thể tạo các ứng dụng đơn giản. Hãy thiết kế ứng dụng, mã lệnh bằng các khối hoặc JavaScript để làm ứng dụng hoạt động rồi chia sẻ ứng dụng của bạn ngay lập tức.</p>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Tạo ứng dụng</button></a>
+  </div>
+  <div style="clear: both"></div>
 </div>
 
-<div class="col-66">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
+    <p style="color:#ffffff">Game Lab là môi trường lập trình để bạn có thể tạo các hoạt ảnh và game đơn giản bằng các đối tượng và nhân vật tương tác với nhau.</p>
+    <br>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Làm game</button></a>
+  </div>
+  <div style="clear: both"></div>
+</div>
 
-<p>App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, and share your creation with family and friends.</p>
-<p>Ages 13+, all modern browsers, English only</p>
-<a href="https://code.org/educate/applab"><button>Try it out</button></a>
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
+    <p style="color:#ffffff">Web Lab là môi trường lập trình để bạn có thể tạo các trang web đơn giản bằng HTML và CSS. Hãy thiết kế các trang web của bạn và chia sẻ ngay lập tức.</p>
+    <br>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Tạo trang web</button></a>
+  </div>
+  <div style="clear: both"></div>
+</div>
 
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<p><a href="#top">[Trở lại đầu trang]</a></p>
+
+<a id="unplugged"></a>
+<h2>Các hoạt động ‘không dùng thiết bị điện tử’: Khoa học máy tính không dùng máy tính</h2>
+
+<div class="col-25" style="padding-bottom:15px; text-align:center">
+  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">
+    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="Các hoạt động không dùng thiết bị điện tử cho Giờ lập trình">
+  </a>
+  <p><i>Nhấp chuột vào hình ảnh để xem dưới dạng PDF</i></p>
+</div>
+<div class="col-75" style="padding-left:15px">
+  <p>Không có màn hình cũng không sao hết! Chúng tôi đã tập hợp một bộ hoạt động KHMT ‘mẫu’ nhanh chóng, thú vị mà bạn có thể thực hiện mà không cần thiết bị. Tổ chức một Bữa tiệc khiêu vũ gia đình trong khi tìm hiểu về các sự kiện, hoặc ‘lập chương trình’ cho người khác vẽ tranh!</p>
+  <br>
+  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>Xem các hoạt động không dùng thiết bị điện tử</button></a>
+</div>
+
+<div style="clear: both; margin-bottom: 10px"></div>
+
+<p>Hoặc xem các tùy chọn không dùng thiết bị điện tử sau từ các tổ chức khác:</p>
+<ul>
+  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Xin chào Ruby</a> – Cách kỳ lạ nhất thế giới để tìm hiểu về máy tính, công nghệ và lập trình. Các hoạt động về một loạt các chủ đề KHMT như khả năng phân tích vấn đề, xác định kiểu mẫu, tư duy bằng thuật toán, gỡ lỗi các sự cố và làm việc nhóm. (dành cho độ tuổi 4-10)</li>
+  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">KHMT Không dùng thiết bị điện tử</a> – Bộ sưu tập tài liệu đào tạo miễn phí để dạy khoa học máy tính thông qua các trò chơi và câu đố hấp dẫn sử dụng thẻ, dây, bút màu và rất nhiều trò chơi vận động. (dành cho độ tuổi 5-14)</li>
+</ul>
+
+<h2>Bạn không có máy tính ở nhà? Thử học KHMT trên điện thoại với các ứng dụng từ đối tác của chúng tôi</h2>
+
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Đảo hộp"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Đảo hộp</strong></h3></a>Game lập trình di động hấp dẫn đưa người học vào một chuyến phiêu lưu thú vị, đồng thời dạy các nguyên tắc cơ bản khi viết mã lệnh như thuật toán, nhận dạng mẫu, trình tự, vòng lặp và lệnh điều kiện. <i>(dành cho mọi lứa tuổi)</i>
+</div>
+
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Nền tảng học viết mã lệnh danh tiếng dành cho trẻ từ 5-9 tuổi. Giải đố và lập trình game với The Foos, đồng thời học viết mã lệnh. <strong>Lưu ý: codeSpark đang cung cấp bản dùng thử 3 tháng miễn phí. Địa chỉ email của phụ huynh và thông tin thẻ tín dụng là bắt buộc khi đăng ký.</strong><i>(dành cho trẻ chưa biết đọc đến Lớp 5)</i>
+</div>
+
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Châu chấu"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Châu chấu</strong></h3></a>Học lập trình với những bài học nhanh và thú vị trên điện thoại, dạy bạn viết JavaScript thực tế. Mã lệnh với Chương trình Google. <i>(dành cho cấp trung học cơ sở trở lên)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-<a id="apps"></a>
 
-## No computer at home? Try these smartphone apps
+<p><a href="#top">[Trở lại đầu trang]</a></p>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+<a id="livecoding"></a>
+<h2>Học hỏi từ đội ngũ Code.org và các khách mời đặc biệt!</h2>
 
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
-
+<div class="col-50">
+  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
+      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Logo CodeBytes">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes là những bài học tương tác 20 phút dễ hiểu, kết hợp giữa khoa học máy tính với các chủ đề trong thế giới thực. Đào tạo AI để đọc ngôn ngữ ký hiệu, thiết kế ứng dụng có ích, khám phá thế giới Minecraft và nhiều điều thú vị khác!</div>
+        <br>
+        <br>
+        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Xem các tập</button></a>
+    </span>
+  </div>
+</div>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-
+<div class="col-50">
+  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
+      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Giờ giải lao lập trình">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Giờ giải lao lập trình</strong></h3>
+        <div class="smalltext" style="color: dimgray; ">Khiến cho khoa học máy tính trở nên thú vị bằng cách tham gia Giờ giải lao lập trình! Bạn có thể tạo thuật toán cùng Ashton Kutcher, tìm hiểu về biến với Yara Shahidi và thậm chí là khám phá cách hoạt động của Internet với nhà phát minh thực tế của Internet, là Vint Cerf.</div>
+        <br>
+        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Kết nối</button></a>
+    </span>
+  </div>
+</div>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+<div style="clear: both; margin-bottom: 20px"></div>
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
-
-</div>
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Back to top]</a></p>
-
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-
-## Limited or no internet access? Check out these unplugged activities
-* [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
-* [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
-
-<p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-<a id="teacher-support"></a>
-
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
-</div>
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Back to top]</a></p>
-
-<div style="clear: both; padding-top: 40px; "></div>
+<a href="#top">[Quay lại đầu trang]</a>
+<br>
