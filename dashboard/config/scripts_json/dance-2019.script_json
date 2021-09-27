@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "dance-2019",
-    "serialized_at": "2021-09-24 21:56:27 UTC",
+    "serialized_at": "2021-09-27 16:04:05 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "dance-2019"
@@ -239,22 +239,11 @@
       }
     },
     {
-      "key": "37bf4044-546e-4c84-9e79-c62efa9f0afa",
+      "key": "d737dd0e-b1aa-47df-b9a2-620d324f9c10",
       "position": 1,
       "properties": {
-        "description": "\n#### Level 1\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.\n\n\n\n\n\n\n\n\n\n\n\n",
-        "name": "Level by Level\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "37bf4044-546e-4c84-9e79-c62efa9f0afa",
-        "lesson_activity.key": "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4"
-      }
-    },
-    {
-      "key": "d737dd0e-b1aa-47df-b9a2-620d324f9c10",
-      "position": 2,
-      "properties": {
-        "description": "#### Level 1\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area."
+        "description": "#### Level 1\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.",
+        "name": "Level by Level"
       },
       "seeding_key": {
         "activity_section.key": "d737dd0e-b1aa-47df-b9a2-620d324f9c10",
@@ -263,7 +252,7 @@
     },
     {
       "key": "02028482-b4db-44c7-a8ab-9576f6c34b29",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "#### Level 2\n\n* Levels 2-3 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n"
       },
@@ -274,7 +263,7 @@
     },
     {
       "key": "ec0922cd-fda5-4e54-a44f-bb63f86b9eda",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "#### Level 3\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n"
       },
@@ -285,7 +274,7 @@
     },
     {
       "key": "e07e7231-6932-46d6-9f35-7c8ec34fb25d",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "#### Level 4\n\n* Levels 4-5 are about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels."
       },
@@ -296,7 +285,7 @@
     },
     {
       "key": "42f6ef23-a698-4d94-a9d6-917a7dda0fa6",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "#### Level 5\n\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath."
       },
@@ -307,7 +296,7 @@
     },
     {
       "key": "760263d5-a994-4722-af9a-758d7f028a8d",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "#### Level 6\n\n* Level 6 is about creating groups of dancers quickly.\n* Use the new block provided in the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it in a smaller scale. In the next level you’ll be able to fine tune this effect."
       },
@@ -318,7 +307,7 @@
     },
     {
       "key": "d29c2e16-c0a1-4a6b-a1bd-86962b471ea9",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "#### Level 7\n\n* Levels 7-9 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100."
       },
@@ -329,7 +318,7 @@
     },
     {
       "key": "79a5c039-7ca6-41bb-acb5-ec5e0e29b122",
-      "position": 9,
+      "position": 8,
       "properties": {
         "tips": [
           {
@@ -345,7 +334,7 @@
     },
     {
       "key": "165b8450-bd88-42b3-b955-2e8ecd1dc93f",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "#### Level 8\n\n* As with the previous level, make sure to only use the `set tint to (color)` block *after* you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect."
       },
@@ -356,7 +345,7 @@
     },
     {
       "key": "e04d58b1-6687-4e9b-ae31-1796d5232ce2",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "#### Level 9\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. The students must click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n"
       },
@@ -367,7 +356,7 @@
     },
     {
       "key": "8ab0ecdc-93e2-4959-a1d8-2aaad168be42",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "#### Level 10\n\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else! "
       },
@@ -466,6 +455,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_02"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -487,6 +479,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_03"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -508,6 +503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_04"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -529,6 +527,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_05"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -550,6 +551,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_06"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -571,6 +575,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_07"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -592,6 +599,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_08"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -613,6 +623,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_09"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -634,6 +647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
