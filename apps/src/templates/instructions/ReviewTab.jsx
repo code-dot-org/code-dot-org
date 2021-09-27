@@ -78,22 +78,26 @@ class ReviewTab extends Component {
       return;
     }
 
+    const crda = new codeReviewDataApi.dataApi(
+      channelId,
+      serverLevelId,
+      serverScriptId
+    );
+
     const initialLoadPromises = [];
 
     initialLoadPromises.push(
-      codeReviewDataApi
-        .getCodeReviewCommentsForProject(channelId)
-        .done((data, _, request) => {
-          this.setState({
-            comments: data,
-            token: request.getResponseHeader('csrf-token')
-          });
-        })
+      crda.getCodeReviewCommentsForProject().done((data, _, request) => {
+        this.setState({
+          comments: data,
+          token: request.getResponseHeader('csrf-token')
+        });
+      })
     );
 
     initialLoadPromises.push(
-      codeReviewDataApi
-        .getPeerReviewStatus(channelId, serverLevelId, serverScriptId)
+      crda
+        .getPeerReviewStatus()
         .done(data => {
           const id = (data && data.id) || null;
           this.setState({
@@ -116,8 +120,8 @@ class ReviewTab extends Component {
       this.props.viewAs !== ViewType.Teacher
     ) {
       initialLoadPromises.push(
-        codeReviewDataApi
-          .getReviewablePeers(channelId, serverLevelId, serverScriptId)
+        crda
+          .getReviewablePeers()
           .done(data => this.setState({reviewablePeers: data}))
           .fail(() => {
             this.setState({
