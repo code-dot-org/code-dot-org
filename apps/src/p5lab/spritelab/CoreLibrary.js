@@ -1,5 +1,5 @@
 import {createUuid} from '@cdo/apps/utils';
-import commands from '../commands/index';
+import commands from './commands/index';
 
 export default class CoreLibrary {
   constructor(p5) {

@@ -1,5 +1,5 @@
 module Pd
-  module Teacher2122ApplicationConstants
+  module TeacherApplicationConstants
     YES_NO = %w(Yes No).freeze
 
     # Remove newlines and leading whitespace from multiline strings
@@ -395,6 +395,21 @@ module Pd
       ]
     }
 
+    TEXT_FIELDS = {
+      other_with_text: 'Other:'.freeze,
+      other_please_list: 'Other (Please List):'.freeze,
+      other_please_explain: 'Other (Please Explain):'.freeze,
+      not_teaching_this_year: "I'm not teaching this year (Please Explain):".freeze,
+      not_teaching_next_year: "I'm not teaching next year (Please Explain):".freeze,
+      dont_know_if_i_will_teach_explain: "I don't know if I will teach this course (Please Explain):".freeze,
+      unable_to_attend: 'I’m not able to attend any of the above workshop dates. (Please Explain):',
+      able_to_attend_single: "Yes, I'm able to attend".freeze,
+      no_explain: "No (Please Explain):".freeze,
+      no_pay_fee: 'No, my school/district will not be able to pay the program fee. I would like to be considered for a scholarship.',
+      i_dont_know_explain: "I don't know (Please Explain):",
+      not_sure_explain: 'Not sure (Please Explain):'
+    }.freeze
+
     SUBJECTS_TAUGHT_IN_PAST = [
       'CS Fundamentals',
       'CS in Algebra',
@@ -412,21 +427,6 @@ module Pd
       'Robotics',
       'ScratchEd'
     ].freeze
-
-    TEXT_FIELDS = {
-      other_with_text: 'Other:'.freeze,
-      other_please_list: 'Other (Please List):'.freeze,
-      other_please_explain: 'Other (Please Explain):'.freeze,
-      not_teaching_this_year: "I'm not teaching this year (Please Explain):".freeze,
-      not_teaching_next_year: "I'm not teaching next year (Please Explain):".freeze,
-      dont_know_if_i_will_teach_explain: "I don't know if I will teach this course (Please Explain):".freeze,
-      unable_to_attend: 'I’m not able to attend any of the above workshop dates. (Please Explain):',
-      able_to_attend_single: "Yes, I'm able to attend".freeze,
-      no_explain: "No (Please Explain):".freeze,
-      no_pay_fee: 'No, my school/district will not be able to pay the program fee. I would like to be considered for a scholarship.',
-      i_dont_know_explain: "I don't know (Please Explain):",
-      not_sure_explain: 'Not sure (Please Explain):'
-    }.freeze
 
     SUBJECTS_THIS_YEAR = [
       'Computer Science',
