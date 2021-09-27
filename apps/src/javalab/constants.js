@@ -126,3 +126,8 @@ export const PlaygroundSignalType = {
   // Set the background image of the Playground
   SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE'
 };
+
+export const PlaygroundItemType = {
+  IMAGE: 'image',
+  TEXT: 'text'
+};

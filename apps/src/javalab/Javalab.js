@@ -15,12 +15,9 @@ import javalab, {
   setLevelName,
   appendNewlineToConsoleLog,
   setIsRunning,
-  setDisableFinishButton,
-  addPlaygroundItemData,
-  removePlaygroundItemData,
-  changePlaygroundItemData,
-  setPlaygroundItemData
+  setDisableFinishButton
 } from './javalabRedux';
+import playground from './playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './JavabuilderConnection';
@@ -110,14 +107,6 @@ Javalab.prototype.init = function(config) {
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   const onJavabuilderMessage = this.onJavabuilderMessage.bind(this);
-  const addPlaygroundItem = (itemId, itemData) =>
-    getStore().dispatch(addPlaygroundItemData(itemId, itemData));
-  const removePlaygroundItem = itemId =>
-    getStore().dispatch(removePlaygroundItemData(itemId));
-  const changePlaygroundItem = (itemId, itemData) =>
-    getStore().dispatch(changePlaygroundItemData(itemId, itemData));
-  const setPlaygroundItems = itemData =>
-    getStore().dispatch(setPlaygroundItemData(itemData));
 
   switch (this.level.csaViewMode) {
     case CsaViewMode.NEIGHBORHOOD:
@@ -144,11 +133,7 @@ Javalab.prototype.init = function(config) {
         this.onOutputMessage,
         this.onNewlineMessage,
         onJavabuilderMessage,
-        this.level.name,
-        addPlaygroundItem,
-        removePlaygroundItem,
-        changePlaygroundItem,
-        setPlaygroundItems
+        this.level.name
       );
       this.visualization = <PlaygroundVisualizationColumn />;
       break;
@@ -197,7 +182,7 @@ Javalab.prototype.init = function(config) {
     isSubmitted: !!config.level.submitted
   });
 
-  registerReducers({javalab});
+  registerReducers({javalab, playground});
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
   if (config.level.editBlocks) {
