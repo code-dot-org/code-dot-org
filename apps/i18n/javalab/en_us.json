@@ -66,6 +66,8 @@
   "invalidJavaFilename": "Invalid file name. Java file names cannot have spaces.",
   "generatingResults": "Generating results...",
   "javaExtensionMissing": "Invalid file name. File names must end in '.java'.",
+  "javabuilderJavaFilenameError": "Java file: {causeMessage} has an invalid file name. Java file names cannot contain spaces or special characters.",
+  "javabuilderMissingFilenameError": "One or more of your project files are missing file names.",
   "missingFilenameError": "File name cannot be blank.",
   "newFile": "New File",
   "noMainMethod": "Error: your program does not contain a main method.",
