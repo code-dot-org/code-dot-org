@@ -7,11 +7,14 @@ class UserLevelTest < ActiveSupport::TestCase
     @user = create(:user)
     @level = create(:level)
 
+    # records for testing pairing-related methods
+    @unpaired_user_level = create :user_level, user: @user, level: @level
     @driver = create :student, name: 'DriverName'
-    @navigator = create :student
+    @navigator = create :student, name: 'NavigatorName'
     @driver_user_level = create :user_level, user: @driver, level: @level
     @navigator_user_level = create :user_level, user: @navigator, level: @level
-    @driver_user_level.navigator_user_levels << @navigator_user_level
+    create :paired_user_level,
+      driver_user_level: @driver_user_level, navigator_user_level: @navigator_user_level
   end
 
   test "by_lesson" do
@@ -49,6 +52,42 @@ class UserLevelTest < ActiveSupport::TestCase
     second_user_level = create :user_level, script: script, level: second_level
 
     assert_equal UserLevel.by_lesson(lesson), [first_user_level, second_user_level]
+  end
+
+  test "driver? for paired and unpaired progress" do
+    assert_equal false, @unpaired_user_level.driver?
+    assert_equal true, @driver_user_level.driver?
+    assert_equal false, @navigator_user_level.driver?
+  end
+
+  test "navigator? for paired and unpaired progress" do
+    assert_equal false, @unpaired_user_level.navigator?
+    assert_equal false, @driver_user_level.navigator?
+    assert_equal true, @navigator_user_level.navigator?
+  end
+
+  test "paired? for paired and unpaired progress" do
+    assert_equal false, @unpaired_user_level.paired?
+    assert_equal true, @driver_user_level.paired?
+    assert_equal true, @navigator_user_level.paired?
+  end
+
+  test "driver for paired and unpaired progress" do
+    assert_equal nil, @unpaired_user_level.driver
+    assert_equal @driver, @driver_user_level.driver
+    assert_equal @driver, @navigator_user_level.driver
+  end
+
+  test "navigators_names for paired and unpaired progress" do
+    assert_equal nil, @unpaired_user_level.navigators_names
+    assert_equal [@navigator.name], @driver_user_level.navigators_names
+    assert_equal [], @navigator_user_level.navigators_names
+  end
+
+  test "navigator_count for paired and unpaired progress" do
+    assert_equal nil, @unpaired_user_level.navigator_count
+    assert_equal 1, @driver_user_level.navigator_count
+    assert_equal 1, @navigator_user_level.navigator_count
   end
 
   test "perfect? finished? and passing? should be able to handle ScriptLevels that have nil as best_result" do
@@ -277,31 +316,9 @@ class UserLevelTest < ActiveSupport::TestCase
     assert PeerReview.exists?(review_2.id)
   end
 
-  test "driver and navigator user levels" do
-    assert_equal [@navigator_user_level],
-      @driver_user_level.navigator_user_levels
-    assert_equal [@driver_user_level], @navigator_user_level.driver_user_levels
-  end
-
   test "virtual attribute `locked` sets `unlocked_at`" do
     ul = UserLevel.create(user: @user, level: @level, locked: false)
     assert_not_nil ul.send(:unlocked_at)
-  end
-
-  test 'most_recent_driver returns nil if no pair programming' do
-    UserLevel.create(user: @user, level: @level)
-    assert_nil UserLevel.most_recent_driver(nil, @level, @user)
-  end
-
-  test 'most_recent_driver returns deleted user if driver is deleted' do
-    @driver.destroy
-    assert_equal 'deleted user',
-      UserLevel.most_recent_driver(nil, @level, @navigator).first
-  end
-
-  test 'most_recent_driver returns driver name' do
-    assert_equal 'DriverName',
-      UserLevel.most_recent_driver(nil, @level, @navigator).first
   end
 
   test 'count passed levels for users' do

@@ -57,6 +57,25 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+  ## Create S3 bucket used to store weblab files and dance party thumbnails (possibly other use cases)
+  FilesBucket:
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: "cdo-v3-files"
+      VersioningConfiguration:
+        Status: "Enabled"
+      LifecycleConfiguration:
+        Rules:
+          -
+            Id: "60-day expiration of old versions"
+            NoncurrentVersionExpirationInDays: 60
+            Status: "Enabled"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
   DroneLibraryBucketPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
