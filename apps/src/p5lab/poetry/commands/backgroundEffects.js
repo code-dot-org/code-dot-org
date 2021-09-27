@@ -1,6 +1,6 @@
 import * as utils from './utils';
 import {PALETTES} from '../constants';
-import {APP_WIDTH, APP_HEIGHT} from '../../../constants';
+import {APP_WIDTH, APP_HEIGHT} from '../../constants';
 
 export const commands = {
   setBackground(color) {
