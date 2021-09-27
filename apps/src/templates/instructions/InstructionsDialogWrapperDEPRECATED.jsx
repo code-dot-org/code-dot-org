@@ -3,6 +3,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 /**
+ * This component is deprecated and should not be used. Its only current usage is in StudioApp.js,
+ * but multiple apps/scenarios need to be migrated before we can remove this component.
+ * Any new consumers should use apps/src/templates/instructions/InstructionsDialog.jsx instead.
+ *
  * A component for managing our instructions dialog. Right now the entirety of
  * the actual content is managed by showInstructionsDialog rather than this
  * component, with this component just determining when we should show the
