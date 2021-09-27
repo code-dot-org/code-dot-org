@@ -39,7 +39,7 @@ class NeighborhoodVisualizationColumn extends React.Component {
           isCollapsed={isCollapsed}
           toggleVisualizationCollapsed={toggleVisualizationCollapsed}
         />
-        <div style={{opacity}}>
+        <div style={{...styles.neighborhoodPreviewBackground, opacity}}>
           <MazeVisualization />
           <svg id="slider" version="1.1" width="150" height="50">
             {/* Slow icon. */}
@@ -72,6 +72,15 @@ class NeighborhoodVisualizationColumn extends React.Component {
     );
   }
 }
+
+const styles = {
+  neighborhoodPreviewBackground: {
+    backgroundImage: 'url("/blockly/media/javalab/Neighborhood.png")',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'top'
+  }
+};
 
 export default connect(
   state => ({
