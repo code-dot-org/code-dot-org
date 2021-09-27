@@ -29,6 +29,11 @@ class ProgrammingExpressionsController < ApplicationController
     end
   end
 
+  def edit
+    @programming_expression = ProgrammingExpression.find_by_id(params[:id])
+    return render :not_found unless @programming_expression
+  end
+
   def update
     underscored_params = params.transform_keys(&:underscore).permit(:id, :name, :short_description, :video_key)
     programming_expression = ProgrammingExpression.find_by_id(underscored_params[:id])
