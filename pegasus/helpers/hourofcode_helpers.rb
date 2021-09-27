@@ -193,6 +193,8 @@ def country_count
   code = HOC_COUNTRIES[@country]['country_code'] || @country
   totals = fetch_hoc_metrics['hoc_country_totals']
 
+  # If the country is Latam, return the sum of all events in Latam.
+  #  Otherwise return the total for the given country.
   return @country == 'la' ? latam_count(totals) : totals[code.upcase]
 end
 
