@@ -13,6 +13,9 @@ import {
   setItemData,
   getItemIds
 } from './playgroundRedux';
+import color from '@cdo/apps/util/color';
+
+const DEFAULT_BACKGROUND_COLOR = color.white;
 
 export default class Playground {
   constructor(
@@ -201,6 +204,7 @@ export default class Playground {
     this.setPlaygroundItems({});
     this.resetBackgroundElement();
     this.resetAudioElement();
+    this.resetContainer();
   }
 
   handleImageClick(imageId) {
@@ -229,6 +233,10 @@ export default class Playground {
     return document.getElementById('playground-audio');
   }
 
+  getContainer() {
+    return document.getElementById('playground-container');
+  }
+
   resetAudioElement() {
     const audioElement = this.getAudioElement();
     audioElement.pause();
@@ -244,6 +252,11 @@ export default class Playground {
   resetMediaElement(element) {
     element.onerror = undefined;
     element.src = '';
+  }
+
+  resetContainer() {
+    const containerElement = this.getContainer();
+    containerElement.style.backgroundColor = DEFAULT_BACKGROUND_COLOR;
   }
 
   endGame() {
