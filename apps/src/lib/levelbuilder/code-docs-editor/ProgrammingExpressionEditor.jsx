@@ -38,6 +38,10 @@ export default function ProgrammingExpressionEditor({
   return (
     <div>
       <h1>{`Editing ${initialProgrammingExpression.name}`}</h1>
+      <h2>
+        This feature is in development. Please continue to use curriculum
+        builder to edit code documentation.
+      </h2>
       <label>
         Display Name
         <input
@@ -72,8 +76,15 @@ export default function ProgrammingExpressionEditor({
   );
 }
 
+const programmingExpressionShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  shortDescription: PropTypes.string
+});
+
 ProgrammingExpressionEditor.propTypes = {
-  initialProgrammingExpression: PropTypes.object.isRequired
+  initialProgrammingExpression: programmingExpressionShape.isRequired
 };
 
 const styles = {

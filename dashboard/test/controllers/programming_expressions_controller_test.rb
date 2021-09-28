@@ -25,4 +25,21 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     end
     assert @response.body.include? "Valid programming environment is required"
   end
+
+  test 'can update programming expression from params' do
+    sign_in @levelbuilder
+
+    programming_expression = create :programming_expression
+    post :update, params: {
+      id: programming_expression.id,
+      key: programming_expression.key,
+      name: 'new name',
+      shortDescription: 'short description of code'
+    }
+    assert_response :ok
+    programming_expression.reload
+
+    assert_equal 'new name', programming_expression.name
+    assert_equal 'short description of code', programming_expression.short_description
+  end
 end
