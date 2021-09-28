@@ -51,20 +51,8 @@ $(document).ready(() => {
   init();
 
   function init() {
-    // TO-DELETE ONCE CLEARER USER TYPE BUTTONS OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
-    if (experiments.isEnabled(experiments.CLEARER_SIGN_UP_USER_TYPE)) {
-      // If in variant, toggle large buttons
-      document.getElementById('select-user-type-original').style.cssText =
-        'display:none;';
-    } else {
-      // Otherwise (also the default), keep original dropdown
-      document.getElementById('select-user-type-variant').style.cssText =
-        'display:none;';
-      document.getElementById('signup-select-user-type-label').style.cssText =
-        'width:220px;';
-    }
-    // TO-DELETE ONCE CLEARER USER TYPE BUTTONS OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
     setUserType(getUserType());
+    styleSelectedUserTypeButton(getUserType());
     renderSchoolInfo();
     renderParentSignUpSection();
   }
@@ -79,9 +67,8 @@ $(document).ready(() => {
       return false;
     }
 
-    // Optimizely-related code for new sign-up user-type buttons (start)
+    // Trigger Optimizely counter for user type selection
     optimizelyCountUserTypeSelection(getUserType());
-    // Optimizely-related code for new sign-up user-type buttons (end)
 
     // Optimizely-related code for teacher opting to share email with regional partner (start)
     optimizelyCountSuccessSignupWithRegPartnerOpt();
@@ -134,7 +121,6 @@ $(document).ready(() => {
     }
   }
 
-  // Keep if sign-up user type experiment favors variant (start)
   // Event listeners for changing the user type
   document.addEventListener('selectUserTypeTeacher', e => {
     $('#user_user_type').val('teacher');
@@ -156,9 +142,8 @@ $(document).ready(() => {
       teacherButton.classList.remove('select-user-type-button-selected');
     }
   }
-  // Keep if sign-up user type experiment favors variant (end)
 
-  // Optimizely-related code for new sign-up user-type buttons
+  // Optimizely metric for seeing which user type new users select
   function optimizelyCountUserTypeSelection(userType) {
     window['optimizely'] = window['optimizely'] || [];
     window['optimizely'].push({type: 'event', eventName: userType});
@@ -170,16 +155,8 @@ $(document).ready(() => {
     window['optimizely'].push({type: 'event', eventName: 'successSignUp'});
   }
 
-  // Keep if sign-up user type experiment favors original (just func. below)
-  $('#user_user_type').change(function() {
-    var value = $(this).val();
-    setUserType(value);
-  });
-
   function getUserType() {
-    var value = $('#user_user_type')[0].value;
-    styleSelectedUserTypeButton(value);
-    return value;
+    return $('#user_user_type')[0].value;
   }
 
   function setUserType(userType) {
