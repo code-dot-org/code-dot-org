@@ -446,7 +446,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">wandering</title>
+          <title name="NAME" id="wandering">wandering</title>
           <statement name="STACK">
             <block type="controls_if">
               <value name="IF0">
