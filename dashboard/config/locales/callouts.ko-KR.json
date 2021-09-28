@@ -1637,6 +1637,10 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "여기를 클릭하여 블록을 확장하세요.",
+          "pointerlocation": "대상 블록을 여기로 끌어 오세요."
         }
       }
     }

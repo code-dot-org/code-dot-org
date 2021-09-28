@@ -6382,6 +6382,8 @@ sk:
                 akou užitočnou môže byť v informatike tímová práca.
             Digital Sharing:
               name: Digitálne zdieľanie
+              description_student: 'V rámci tejto lekcie sa dozviete o výzvach a prínosoch
+                vlastníctva a autorských práv. '
               description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských
                 práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám
                 rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne
@@ -9992,6 +9994,8 @@ sk:
               name: Záverečný projekt
             Digital Sharing:
               name: Digitálne zdieľanie
+              description_student: 'V rámci tejto lekcie sa dozviete o výzvach a prínosoch
+                vlastníctva a autorských práv. '
               description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských
                 práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám
                 rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne
@@ -10106,6 +10110,8 @@ sk:
                 akou užitočnou môže byť v informatike tímová práca.
             Digital Sharing:
               name: Digitálne zdieľanie
+              description_student: 'V rámci tejto lekcie sa dozviete o výzvach a prínosoch
+                vlastníctva a autorských práv. '
               description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských
                 práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám
                 rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne
@@ -11519,11 +11525,16 @@ sk:
             About Me:
               name: '"O mne" so Sprite Labom'
               description_student: Prostredníctvom tvorby interaktívneho plagátu v
-                SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných
+                SpriteLabe si študenti overia, čo sa naučili o zdieľaní súkromných
                 a osobných údajov na internete
             Digital Sharing:
               key: Digitálne zdieľanie
               name: Digitálne zdieľanie
+              description_student: 'V rámci tejto lekcie sa dozviete o výzvach a prínosoch
+                vlastníctva a autorských práv. '
+              description_teacher: 'Táto **prieskumná** lekcia pomôže študentom pochopiť
+                výzvy a prínosy rešpektovania vlastníctva a autorských práv, obzvlášť
+                v digitálnom prostredí. '
             Nested Loops in Bee:
               key: Vnorené cykly s včelou
               name: Vnorené cykly v bludisku
@@ -12195,3 +12206,24 @@ sk:
               name: Farebné LEDky
             lesson-19:
               name: Projekt
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgety
+            lesson-3:
+              name: Nástroje
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hodiny
+            lessonGroup-3:
+              display_name: Projekt
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Obsah
+            content:
+              display_name: Obsah
+            lesson_group:
+              display_name: Obsah
+            lessonGroup-2:
+              display_name: Obsah

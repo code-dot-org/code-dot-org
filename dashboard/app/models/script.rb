@@ -241,7 +241,7 @@ class Script < ApplicationRecord
     is_migrated
     seeded_from
     is_maker_unit
-    use_code_studio_lesson_plans
+    use_legacy_lesson_plans
   )
 
   def self.twenty_hour_unit
@@ -1086,8 +1086,7 @@ class Script < ApplicationRecord
 
       unit.generate_plc_objects
 
-      CourseOffering.add_course_offering(unit)
-
+      CourseOffering.add_course_offering(unit) if unit.is_course
       unit
     end
   end
@@ -1578,7 +1577,7 @@ class Script < ApplicationRecord
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
       weeklyInstructionalMinutes: weekly_instructional_minutes,
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
-      useCodeStudioLessonPlans: is_migrated && use_code_studio_lesson_plans,
+      useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
       courseVersionId: get_course_version&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
@@ -1596,6 +1595,10 @@ class Script < ApplicationRecord
     summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
 
     summary
+  end
+
+  def unit_without_lesson_plans?
+    lessons.select(&:has_lesson_plan).empty?
   end
 
   def summarize_for_rollup(user = nil)
@@ -1810,7 +1813,7 @@ class Script < ApplicationRecord
       :show_calendar,
       :is_migrated,
       :include_student_lesson_plans,
-      :use_code_studio_lesson_plans,
+      :use_legacy_lesson_plans,
       :is_maker_unit
     ]
     not_defaulted_keys = [
@@ -2064,13 +2067,13 @@ class Script < ApplicationRecord
   end
 
   def get_unit_overview_pdf_url
-    if is_migrated?
+    if is_migrated? && !use_legacy_lesson_plans?
       Services::CurriculumPdfs.get_script_overview_url(self)
     end
   end
 
   def get_unit_resources_pdf_url
-    if is_migrated?
+    if is_migrated? && !use_legacy_lesson_plans?
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
   end

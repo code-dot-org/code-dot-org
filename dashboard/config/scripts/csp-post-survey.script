@@ -1,8 +1,7 @@
 login_required true
 has_verified_resources true
-published_state 'preview'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CSP post-course survey', display_name: 'CSP post-course survey', has_lesson_plan: false
+lesson 'CSP post-course survey', display_name: 'CSP Student Post-Course Survey (\'17-\'18)', has_lesson_plan: false
 level 'csp-post-survey-2018-levelgroup', progression: 'CS Principles Post-course Survey', assessment: true
 

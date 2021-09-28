@@ -1116,6 +1116,13 @@ da:
             '"rain"': regn
       gamelab_makeNewSpriteAnon:
         text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': højre
+            '90': ned
+            '180': venstre
+            '270': op
       gamelab_mirrorSprite:
         text: "{SPRITE} kigger i retning {DIRECTION}"
         options:
@@ -1147,6 +1154,7 @@ da:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": kravle
+            "'sound://category_digital/jump_7.mp3'": hop
       gamelab_pointInDirection:
         text: peg {SPRITE} {DIRECTION}
         options:
@@ -1511,6 +1519,8 @@ da:
             '"ripples"': Krusninger
           PALETTE:
             '"rainbow"': Regnbue
+      PoemBot_setBackgroundImageAs:
+        text: sæt baggrund til {IMG}
       PoemBot_setForegroundEffect:
         text: indstil baggrundseffekt {EFFECT}
         options:
@@ -1538,6 +1548,8 @@ da:
             spinning_left: spinning til venstre
             spinning_right: spinning til højre
             wandering: vandrende
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       RyanLab_moveForward:
         text: flyt fremad
       RyanLab_turnLeft:

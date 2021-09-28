@@ -1159,6 +1159,13 @@ de:
         text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       gamelab_makeNumSprites:
         text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': rechts
+            '90': runter
+            '180': links
+            '270': hoch
       gamelab_mirrorSprite:
         text: "{SPRITE} zeigt nach {DIRECTION}"
         options:
@@ -1195,6 +1202,7 @@ de:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": Taste
             "'sound://category_collect/clicky_crunch.mp3'": knirschen
+            "'sound://category_digital/jump_7.mp3'": springen
       gamelab_pointInDirection:
         text: richte {SPRITE} nach {DIRECTION} aus
         options:
@@ -1302,6 +1310,11 @@ de:
           CONDITION:
             '"when"': wenn
             '"while"': solange
+      gamelab_spriteSayChoices:
+        options:
+          SPEECH:
+            '"I am Batman!"': Ich bin Batman!
+            '"I am Catwoman!"': Ich bin Catwoman!
       gamelab_subjectSpritePointer:
         text: "{SPRITE} geklicked"
       gamelab_textVariableJoin:
@@ -1600,6 +1613,8 @@ de:
             '"x"': x-Position
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
+      Mikelab_setupOutbreak:
+        text: "Einrichtung des Ausbruchs \nBevölkerung:{SPRITE2N}\n{TOGGLE}Virus"
       Mikelab_setupSim:
         text: |-
           Starte Simulation mit
@@ -1674,6 +1689,28 @@ de:
         text: x Koordinate von {SPRITE}
       Mikelab_yLocationOf:
         text: y Koordinate von {SPRITE}
+      Outbreak_beginCongregating:
+        text: Monster versammeln sich
+      Outbreak_beginQuarantining:
+        text: kranke Monster gehen in Quarantäne
+      Outbreak_beginSocialDistancing:
+        text: Monster beginnen soziale Distanzierung
+      Outbreak_beginWandering:
+        text: Monster beginnen herumzulaufen
+      Outbreak_beginWearingMasks:
+        text: Monster tragen Masken
+      Outbreak_layoutBorder:
+        text: Monster in einem Rand anordnen
+      Outbreak_layoutClusters:
+        text: Monster in einem Cluster von {NUM} anordnen
+      Outbreak_layoutGrid:
+        text: Monster als ein Raster anordnen
+      Outbreak_layoutRandom:
+        text: Monster zufällig anordnen
+      Outbreak_stopMoving:
+        text: Monster bewegen sich nicht mehr
+      PoemBot_makeNumSprites:
+        text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
       PoemBot_playSound:
         text: spieleTon {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1686,7 +1723,10 @@ de:
             '"stars"': Sterne
             '"ripples"': Welligkeit
           PALETTE:
+            '"sky"': Himmel
             '"rainbow"': Regenbogen
+      PoemBot_setBackgroundImageAs:
+        text: setze Hintergund auf {IMG}
       PoemBot_setForegroundEffect:
         text: Vordergrundeffekt einstellen {EFFECT}
         options:
@@ -1700,24 +1740,26 @@ de:
         options:
           BEHAVIOR:
             fluttering: flattern
-            growing: wachsend
-            jittering: zitternd
-            shrinking: schrumpfend
-            spinning_left: linksdrehend
-            spinning_right: rechtsdrehend
-            wandering: wandernd
+            growing: wachsen
+            jittering: zittern
+            shrinking: schrumpfen
+            spinning_left: nach links drehen
+            spinning_right: nach rechts drehen
+            wandering: wandern
             wobbling: wackelnd
       PoemBot_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: flattern
-            growing: wachsend
-            jittering: zitternd
-            shrinking: schrumpfend
-            spinning_left: linksdrehend
-            spinning_right: rechtsdrehend
-            wandering: wandernd
+            growing: wachsen
+            jittering: zittern
+            shrinking: schrumpfen
+            spinning_left: nach links drehen
+            spinning_right: nach rechts drehen
+            wandering: wandern
             wobbling: wackelnd
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       RyanLab_moveForward:
         text: vorwärts bewegen
       RyanLab_turnLeft:
@@ -1825,7 +1867,7 @@ de:
             '"d"': d
       craft_ifPath:
         text: |-
-          wenn Weg {DIR}
+          wenn Pfad {DIR}
           {STATEMENT}
         options:
           DIR:
@@ -1858,7 +1900,7 @@ de:
       craft_moveForward:
         text: vorwärts bewegen
       craft_placeBlock:
-        text: plaziere {blockType}
+        text: platziere {blockType}
         options:
           blockType:
             '"strippedOak"': Eichenholz
@@ -1887,12 +1929,12 @@ de:
             '"kelp"': Seetang
             '"polishedGranite"': polierter Granit
       craft_placePrismarine:
-        text: plaziere Prismarin
+        text: platziere Prismarin
       craft_placeTorch:
         text: Fackel platzieren
       craft_repeatUntilConduit:
         text: |-
-          wiederholen, bis die Reihe geschlossen ist
+          wiederholen, bis der Aquisator fertig ist
           {STATEMENT}
       craft_repeatUntilGoal:
         text: |-

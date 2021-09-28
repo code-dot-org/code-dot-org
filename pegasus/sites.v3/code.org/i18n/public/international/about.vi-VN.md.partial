@@ -1,20 +1,20 @@
 ---
-title: About
+title: Giới thiệu
 theme: responsive
 video_player: true
 ---
 
-# About Us
+# Giới thiệu về chúng tôi
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry, or algebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+  Code.org® là một tổ chức phi lợi nhuận nhằm mở rộng khả năng tiếp cận môn khoa học máy tính trong trường học và tăng cường sự tham gia của thiếu nữ và học sinh đến từ các nhóm thiểu số khác. Tầm nhìn của chúng tôi là mọi học sinh ở mọi trường đều có cơ hội học môn khoa học máy tính giống như các môn sinh học, hóa học hoặc đại số. Chúng tôi cung cấp giáo trình được sử dụng rộng rãi nhất để giảng dạy môn khoa học máy tính ở trường tiểu học và trung học, đồng thời tổ chức chiến dịch <a href="https://hourofcode.com">Giờ lập trình</a> hàng năm, thu hút 10% học sinh trên thế giới. Code.org được hỗ trợ bởi các nhà tài trợ hào phóng là Amazon, Facebook, Google, Infosys Foundation, Microsoft và <a href="/about/donors">nhiều tổ chức khác</a>.
 </div>
 
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
   
-  <font size="4" color="#FFFFFF"><b>Code.org courses are used by tens of millions of students and by one million teachers all around the world.</b></font>
+  <font size="4" color="#FFFFFF"><b>Các khóa học của Code.org được hàng chục triệu học sinh và một triệu giáo viên trên khắp thế giới sử dụng.</b></font>
  
 </div>
 
@@ -22,33 +22,33 @@ video_player: true
 
 <div style="clear:both"></div>
 
-## History
+## Lịch sử
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
+Vào năm 2013, Code.org do anh em song sinh Hadi và Ali Partovi ra mắt thông qua một [video tuyên truyền về môn khoa học máy tính](https://www.youtube.com/watch?v=nKIu9yen5nc). Video này leo lên hạng 1 trên YouTube trong một ngày và 15.000 trường học đã liên hệ với chúng tôi để được trợ giúp. Kể từ đó, chúng tôi đã mở rộng từ một đội ngũ nhân viên tình nguyện được trang bị năng lực để xây dựng một tổ chức hoàn thiện hỗ trợ phong trào trên toàn thế giới. Chúng tôi tin rằng một nền giáo dục khoa học máy tính chất lượng nên dành cho mọi trẻ em chứ không chỉ một số trẻ may mắn.
 <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## What We Do
+## Hoạt động của chúng tôi
 
-We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. Our work builds on decades of effort, by countless organizations and individuals who have helped establish, fund, and spread computer science education. We're grateful for the tireless work of the broader computer science education community, and we thank all the partners and individuals who have expanded our impact over the years.
+Chúng tôi hoạt động trong mảng giáo dục: thiết kế [các khóa học của riêng mình](https://studio.code.org/courses) hoặc hợp tác với những đối tác khác, đào tạo giáo viên, hợp tác với các khu học chánh lớn, giúp thay đổi các chính sách của chính phủ, mở rộng ra phạm vi quốc tế thông qua quan hệ đối tác và tiếp thị để phá vỡ các định kiến. Công việc của chúng tôi được xây dựng trên nền tảng là nỗ lực nhiều thập kỷ của vô số tổ chức và cá nhân đã giúp thiết lập, tài trợ và truyền bá giáo dục môn khoa học máy tính. Chúng tôi biết ơn vì những nỗ lực không mệt mỏi của cộng đồng giáo dục môn khoa học máy tính rộng lớn và chúng tôi cảm ơn tất cả các đối tác cũng như cá nhân đã mở rộng tầm ảnh hưởng của chúng tôi trong những năm qua.
 
-## Code.org's International Reach
+## Phạm vi tiếp cận quốc tế của Code.org
 
-Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organisation for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization.
+Hơn 40% lưu lượng truy cập trang web của chúng tôi đến từ bên ngoài Hoa Kỳ và con số đó đang tiếp tục tăng. Để mở rộng khả năng tiếp cận môn khoa học máy tính trên toàn cầu, nhóm của chúng tôi hợp tác chặt chẽ với [hơn 100 đối tác quốc tế](/about/partners), giúp họ quảng bá Giờ lập trình, ủng hộ việc thay đổi chính sách cũng như đào tạo giáo viên. Chúng tôi đang đưa khoa học máy tính trở thành một phần trong hội nghị giáo dục quốc tế bằng cách hợp tác với các bộ giáo dục trên toàn thế giới và làm việc với các tổ chức quốc tế như Tổ chức Hợp tác và Phát triển Kinh tế và Tổ chức Giáo dục, Khoa học và Văn hóa của Liên Hợp Quốc.
 
-<img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%" />
+<img alt="Đối tác quốc tế của Code.org" src="/images/international/international_partners.jpg" width="100%" />
 
-## Translation
+## Dịch thuật
 
-Want to have a direct impact on students in your country? Help us make Code.org content available in their native language! If you volunteer to help translate our tutorials and lessons, you'll be joining a community of more than 7,000 translators who help bring computer science education to students around the world. Take a look at our [translation guide](/translate) for more information.
+Bạn muốn có tác động trực tiếp đến học sinh ở đất nước của bạn? Hãy giúp chúng tôi mang cung cấp nội dung Code.org bằng ngôn ngữ mẹ đẻ của các em! Nếu bạn tình nguyện giúp dịch các bài hướng dẫn và bài học của chúng tôi, bạn sẽ tham gia cộng đồng hơn 7.000 dịch giả, những người giúp mang giáo dục môn khoa học máy tính đến học sinh trên khắp thế giới. Hãy xem [hướng dẫn dịch](/translate) của chúng tôi để biết thêm thông tin.
 
-## Our commitment to free curriculum and open source technology
+## Cam kết của chúng tôi về chương trình đào tạo miễn phí và công nghệ mã nguồn mở
 
-All curriculum resources and tutorials we create will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+Tất cả các tài liệu và hướng dẫn đào tạo mà chúng tôi tạo ra sẽ miễn phí vĩnh viễn và được cấp phép công khai theo giấy phép [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/), trong đó cho phép những người khác tạo ra tài liệu đào tạo phái sinh cho các mục đích phi thương mại. Nếu bạn quan tâm đến giấy phép sử dụng tài liệu của chúng tôi cho mục đích thương mại, hãy [liên hệ với chúng tôi](/contact). Các khóa học của chúng tôi được dịch ra để sử dụng trên toàn thế giới hoặc bởi những người nói các ngôn ngữ khác nhau. Công nghệ của chúng tôi được phát triển như một [dự án mã nguồn mở](https://github.com/code-dot-org/code-dot-org).
 
-<img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%" />
+<img alt="Học sinh có máy tính xách tay" src="/images/international/group_computer.jpg" width="100%" />
 
-## Follow us
+## Theo dõi chúng tôi
 
-[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+[Hãy đăng ký để nhận cập nhật tình trạng](/about/hear-from-us) về tiến độ của phong trào khoa học máy tính K-12 và về công việc của Code.org. Hoặc theo dõi Code.org trên mạng xã hội:
 
 {{ social_media_codeorg }}

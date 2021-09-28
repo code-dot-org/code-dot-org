@@ -61,7 +61,6 @@ class LessonGroup < ApplicationRecord
 
     raw_lesson_groups&.map(&:deep_symbolize_keys)&.map do |raw_lesson_group|
       if !raw_lesson_group[:user_facing]
-        raise 'non-user-facing lesson group must have blank key' unless raw_lesson_group[:key].blank?
         lesson_group = LessonGroup.find_or_create_by!(
           key: '',
           script: script,

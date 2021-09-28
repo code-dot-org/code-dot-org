@@ -1172,14 +1172,27 @@ pl:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: utwórz {EFFECT} efekt z {NUM} {ANIMATION_NAME} duszkami
         options:
           EFFECT:
             '"burst"': wybuch
+            '"pop"': popularny
             '"rain"': deszcz
+            '"zigzag"': zigzag
       gamelab_makeNewSpriteAnon:
         text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
       gamelab_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
+      gamelab_makeProjectile:
+        text: |-
+          utworzyć pocisk
+          {ANIMATION_NAME} z {LOCATION} z szybkością {SPEED}kierunkiem{DIRECTION}
+        options:
+          DIRECTION:
+            '0': w prawo
+            '90': do dołu
+            '180': w lewo
+            '270': do góry
       gamelab_mirrorSprite:
         text: "{SPRITE} skierowany {DIRECTION}"
         options:
@@ -1214,8 +1227,15 @@ pl:
         text: PlaySound {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": akcent
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": popularny
             "'sound://category_app/app_button_1.mp3'": przycisk
             "'sound://category_collect/clicky_crunch.mp3'": chrzęst
+            "'sound://category_swish/quick_swing.mp3'": huśtać się
+            "'sound://category_digital/jump_7.mp3'": skocz
+      gamelab_playSpeech:
+        text: odtwórz mowę {SOUND}
       gamelab_pointInDirection:
         text: punkt {SPRITE} {DIRECTION}
         options:
@@ -1804,8 +1824,28 @@ pl:
         text: potwory zatrzymują się
       PoemBot_addLine:
         text: dodaj linię {LINE}
+      PoemBot_destroy:
+        text: usuń {ANIMATION_NAME}
+      PoemBot_hidePoem:
+        text: ukryj wiersz
+      PoemBot_makeNumSprites:
+        text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
       PoemBot_playSound:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            '"sound://category_bell/bells_win_low.mp3"': Dzwon
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Jasny
+            '"sound://category_background/fire_burning.mp3"': Kominek
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Las
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harfy
+            '"sound://category_nature/summer_night_loop.mp3"': Noc
+            '"sound://category_background/ocean_waves.mp3"': Ocean
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': Deszczowy
+            '"sound://category_background/rainforest_ambient_sound.mp3"': Deszczowy las
+            '"sound://category_background/wavering_wind.mp3"': Senny
+            '"sound://category_background/typewriter.mp3"': Maszyna do pisania
+            '"sound://category_background/waterfall.mp3"': Wodospad
       PoemBot_randomWord:
         text: losowe słowo
       PoemBot_setAuthor:
@@ -1818,9 +1858,25 @@ pl:
             '"squiggles"': Pokręcone linie
             '"space"': Przestrzeń
             '"stars"': Gwiazdy
+            '"darkCircles"': Ciemne koła
+            '"fadeColors"': Zanikanie kolorów
+            '"blooming"': Rozkwiecony
             '"ripples"': Fale
+            '"clouds"': Chmury
           PALETTE:
+            '"sky"': Niebo
+            '"ocean"': Ocean
+            '"sunrise"': Wschód słońca
+            '"sunset"': Zachód słońca
+            '"spring"': Wiosna
+            '"summer"': Lato
+            '"autumn"': Jesień
+            '"winter"': Zima
+            '"grayscale"': Czarny i biały
             '"rainbow"': Tęcza
+            '"roses"': Róże
+      PoemBot_setBackgroundImageAs:
+        text: ustaw tło na {IMG}
       PoemBot_setFont:
         text: ustaw czcionkę {FONT}
         options:
@@ -1843,20 +1899,59 @@ pl:
             '"rain"': Deszcz
             '"bubbles"': Bąbelki
             '"hearts"': Kolorowe Serca
+            '"emojis"': Szczęśliwe emotikony
             '"confetti"': Konfetti
             '"starburst"': Rozprysk
+            '"glass"': Rozbijające się szkło
+            '"twinkling"': Migotliwy
       PoemBot_setPoem:
         text: ustaw wiersz {POEM}
+        options:
+          POEM:
+            '"---"': "---"
+            '"hafez"': Mój wspaniały obraz
+            '"carroll_1"': Błysk, Błysk, Mała gwiazda
+            '"rumi_1"': Śpiewać
+            '"field"': Wynken, Blynken, and Nod
+            '"carroll_2"': Krokodyl
+            '"twain"': Ciepłe letnie słońce
+            '"wordsworth"': Wędrowałem samotnie jak chmura
+            '"carroll_3"': Jabberwocky
+            '"rios"': Nie wchodź do biblioteki
+            '"rumi_2"': Ocean
+            '"hughes_1"': Wariacje snów
+            '"hughes"': Harlem
+      PoemBot_setPrompt:
+        text: monituj użytkownika {NAME}{RIGHT_QUOTE} o zmienną {VAR}
+      PoemBot_setPromptWithChoices:
+        text: monituj użytkownika  {TEXT}{RIGHT_QUOTE} o zmienną {VAR} z wyborami {A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      PoemBot_setSize:
+        text: ustaw {SPRITE} rozmiar na {VAL}
+      PoemBot_setTextEffect:
+        text: ustaw efekt tekstu {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': znikać
+            '"typewriter"': maszyna do pisania
+            '"flyLeft"': lecieć z lewej
+            '"flyRight"': lecieć z prawej
+            '"flyTop"': lecieć z góry
+            '"flyBottom"': lecieć z dołu
       PoemBot_setTitle:
         text: ustaw tytuł wiersza {TITLE}
       PoemBot_showPoem:
         text: pokaż wiersz
       PoemBot_startBehavior:
+        text: 'duszek {ANIMATION_NAME} rozpoczyna {BEHAVIOR} '
         options:
           BEHAVIOR:
             fluttering: trzepotanie
             growing: rośnięcie
             jittering: trzęsienie się
+            moving_north_and_looping: pętla na północ
+            moving_south_and_looping: pętla na południe
+            moving_east_and_looping: pętla na wschód
+            moving_west_and_looping: pętla na zachód
             shrinking: zwężenie
             spinning_left: obracanie się w lewo
             spinning_right: obracanie się w prawo
@@ -1864,23 +1959,33 @@ pl:
             wandering: wędrowanie
             wobbling: chybotanie
       PoemBot_stopBehavior:
+        text: 'duszek {ANIMATION_NAME} zatrzymuje {BEHAVIOR} '
         options:
           BEHAVIOR:
             fluttering: trzepotanie
             growing: rośnięcie
             jittering: trzęsienie się
+            moving_north_and_looping: pętla na północ
+            moving_south_and_looping: pętla na południe
+            moving_east_and_looping: pętla na wschód
+            moving_west_and_looping: pętla na zachód
             shrinking: zwężenie
             spinning_left: obracanie się w lewo
             spinning_right: obracanie się w prawo
             swimming_left_and_right: pływanie
             wandering: wędrowanie
             wobbling: chybotanie
+            '"all"': "--wszystkie zachowania--"
       PoemBot_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       PoemBot_whenLineShows:
         text: gdy linia {N} pokazuje
+      PoemBot_whenPromptAnswered:
+        text: gdy {VAR} uzyskała odpowiedź
       RyanLab_moveForward:
         text: idź do przodu
       RyanLab_turnLeft:
@@ -1994,71 +2099,6 @@ pl:
             '"quarantining"': poddaje się kwarantannie, gdy jest chory
             '"avoiding"': dystans społeczny
             '"none"': nie ruszać się
-      batman_batmanSay:
-        text: "{IMG}powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Batman!"': Jestem Batmanem!
-            '"Being kind is never wasted."': Bycie miłym nigdy nie jest stratą.
-            '"When you know better, you do better."': Gdy wiesz lepiej, robisz lepiej.
-            '"You always pass failure on the way to success."': Zawsze mijasz porażkę na drodze do sukcesu.
-            '"Make each day your masterpiece."': Uczyń każdy dzień swoim arcydziełem.
-      batman_batwomanSay:
-        text: "{IMG}powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Batwoman!"': Jestem Batmanem!
-      batman_bruceSay:
-        text: "{IMG}powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"Call me Bruce"': Mów mi Bruce.
-            '"Being kind is never wasted."': Bycie miłym nigdy nie jest stratą.
-            '"When you know better, you do better."': Gdy wiesz lepiej, robisz lepiej.
-            '"You always pass failure on the way to success."': Zawsze mijasz porażkę na drodze do sukcesu.
-            '"Make each day your masterpiece."': Uczyń każdy dzień swoim arcydziełem.
-      batman_catwomanSay:
-        text: "{IMG}powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Catwoman!"': Jestem Kobietą Kotem!
-            '"Never quit!"': Nigdy nie rezygnuj!
-            '"Live Fast."': Żyj szybko.
-      batman_freezeSay:
-        text: "{IMG}powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I''m Mr. Freeze!"': Jestem Mr. Freeze!
-            '"Stay Cool!"': Uspokój się!
-            '"Everyone, chill!"': Wszyscy, wyluzujcie się!
-            '"Cool party!"': Fajna impreza!
-            '"Allow me to break the ice."': Pozwól mi przełamać lody.
-            '"Tonight’s forecast… a freeze is coming!"': Dzisiejsza prognoza… nadchodzi przymrozek!
-      batman_harleySay:
-        text: "{IMG}powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Harley Quinn!"': Jestem Harley Quinn!
-      batman_jokerSay:
-        text: "{IMG}powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I''m the Joker!"': Jestem Jokerem!
-      batman_nightwingSay:
-        text: "{IMG}powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Nightwing!"': Jestem Nightwingiem!
-      batman_poisonivySay:
-        text: "{IMG}powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Poison Ivy!"': Jestem Trujący Bluszcz!
-      batman_robinSay:
-        text: "{IMG}powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Robin!"': Jestem Robinem!
       binary_drawBin:
         text: narysuj binarny {BIN}
       binary_drawBinScreen:

@@ -1065,6 +1065,13 @@ tr:
         text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
         text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': sağ
+            '90': aşağı
+            '180': sol
+            '270': yukarı
       gamelab_mirrorSprite:
         text: "{SPRITE} yüz {DIRECTION}"
         options:
@@ -1101,6 +1108,7 @@ tr:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": Tuş
             "'sound://category_collect/clicky_crunch.mp3'": çatlak
+            "'sound://category_digital/jump_7.mp3'": zıpla
       gamelab_pointInDirection:
         text: point {SPRITE} {DIRECTION}
         options:
@@ -1586,6 +1594,8 @@ tr:
         text: canavarları rastgele yerleştir
       Outbreak_stopMoving:
         text: canavarlar hareket etmeyi bırakıyor
+      PoemBot_makeNumSprites:
+        text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
       PoemBot_playSound:
         text: playSound {SOUND}
       PoemBot_setBackgroundEffect:
@@ -1599,6 +1609,8 @@ tr:
             '"ripples"': Dalgaları
           PALETTE:
             '"rainbow"': Gökkuşağı
+      PoemBot_setBackgroundImageAs:
+        text: arka planı {IMG} olarak ayarlayın
       PoemBot_setForegroundEffect:
         text: ön plan efektini {EFFECT} olarak ayarla
         options:
@@ -1635,6 +1647,10 @@ tr:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      PoemBot_whenPromptAnswered:
+        text: "{VAR} cevaplandığında"
       RyanLab_moveForward:
         text: ilerle
       RyanLab_turnLeft:

@@ -201,14 +201,20 @@
         },
         "coursea-2021/Loops in Ice Age": {
           "overview": "En base al concepto de repetición de instrucciones de \"Bucles felices\", en este nivel los estudiantes usarán bucles para llegar hasta la bellota de manera más eficiente en Code.org.",
+          "preparation": "-   Repasa la lección desconectada anterior  y elabora preguntas para recordar a los alumnos por qué se utilizan los bucles.\n-   (Opcional) Elige un par de rompecabezas para hacerlos en grupo con tu clase.\n-   Reúne los materiales de los bucles felices anteriores para reutilizarlos en el calentamiento.\n-   Asegúrate de que cada alumno tenga un diario de reflexión.",
+          "purpose": "En esta lección, los estudiantes aprenderán más sobre los bucles y cómo implementarlos en el código de Blockly. El uso de bucles es una habilidad importante en la programación porque repetir manualmente las instrucciones es tedioso e ineficiente. Con estos rompecabezas de Code.org, los estudiantes aprenderán a añadir instrucciones a los bucles existentes, a reunir el código repetido en los bucles y a reconocer los patrones que deben repetirse.",
           "student_overview": "Usa los bucles para ayudar a Scrat a cubrir más terreno."
         },
         "coursea-2021/Loops in Collector": {
           "overview": "Durante esta etapa se desarrolla el concepto de instrucciones repetidas de \"Bucles felices\", para que los estudiantes puedan usar bucles y recoger tesoros de manera más eficiente en Code.org.",
+          "preparation": "-   Practica con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Elige un par de rompecabezas para hacerlos en grupo con tu clase.\n-   Repasa las **\\*Recomendaciones de la Lección del FCS**.\n-   Asegúrate de que cada alumno tenga un diario de reflexión",
+          "purpose": "Esta lección ofrece a los alumnos más práctica con los bucles y presenta un nuevo bloque, `obtener un tesoro`. El bloque funciona igual que el de \"recoger maíz\" en La Cosechadora. Estos rompecabezas son más abiertos, dando a los estudiantes más flexibilidad para sus soluciones finales.",
           "student_overview": "Ayuda a Laurel la Aventurera a recolectar el tesoro subterráneo."
         },
         "coursea-2021/Ocean Scene with Loops": {
           "overview": "En cuanto a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la actividad conectada anterior, los bucles se utilizaron para recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imágenes mediante bucles.",
+          "preparation": "-   Practica con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Revisa las **\\*Recomendaciones de la Lección CSF**.\n-   Asegúrate de que cada alumno tiene un diario de reflexión.",
+          "purpose": "Esta lección ofrece una perspectiva diferente de cómo los bucles pueden crear cosas en la programación. Los alumnos también pueden reflexionar aquí sobre la ineficacia de la programación sin bucles debido a la cantidad de bloques que requeriría el programa sin la ayuda de los bucles de `repetición`.",
           "student_overview": "Usa bucles y patrones para finalizar las imágenes."
         },
         "coursea-2021/Events: The Big Event": {
@@ -334,6 +340,7 @@
         },
         "coursed-2021/Loops in Ice Age": {
           "overview": "Como una actualización (o introducción) rápida al uso de los bucles, en esta etapa los estudiantes usarán el bloque `repetir` para que Scrat llegue hasta la bellota de la manera más eficiente posible.",
+          "purpose": "En esta lección, los estudiantes aprenderán más sobre los bucles y cómo implementarlos en el código de Blockly. El uso de bucles es una habilidad importante en la programación porque repetir manualmente las instrucciones es tedioso e ineficiente. Con estos rompecabezas de Code.org, los estudiantes aprenderán a añadir instrucciones a los bucles existentes, a reunir el código repetido en los bucles y a reconocer los patrones que deben repetirse.",
           "student_overview": "En esta lección, usarás el bloque repetir para ayudar a Scrat a alcanzar la bellota lo más eficientemente posible. "
         },
         "coursed-2021/Loops in Artist": {

@@ -46,10 +46,7 @@ class Ability
       Pd::Application::ApplicationBase,
       Pd::Application::Facilitator1819Application,
       Pd::Application::Facilitator1920Application,
-      Pd::Application::Teacher1819Application,
-      Pd::Application::Teacher1920Application,
-      Pd::Application::Teacher2021Application,
-      Pd::Application::Teacher2122Application,
+      Pd::Application::TeacherApplication,
       Pd::InternationalOptIn,
       :maker_discount,
       :edit_manifest,
@@ -295,7 +292,7 @@ class Ability
       !!script.is_migrated
     end
 
-    can [:read, :student_lesson_plan], Lesson do |lesson|
+    can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
       script = lesson.script
       if script.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
