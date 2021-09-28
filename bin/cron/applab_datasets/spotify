@@ -20,8 +20,8 @@ TOP_50_USA_ID = '37i9dQZEVXbLRQDuF5jeBp'
 PROFANITY_LOCALE = 'en-US'
 
 CHART_TYPE = {
-  TOP_50: 'TOP_50',
-  VIRAL_50: 'VIRAL_50',
+  TOP: 'TOP',
+  VIRAL: 'VIRAL',
 }
 
 def get_token
@@ -48,7 +48,9 @@ def get_playlist_data(chart_type, playlist_id)
 
   items = JSON.parse(response)['tracks']['items']
   columns = ['id', 'Track Name', 'Artist', 'Position', 'URL']
-  if chart_type === CHART_TYPE[:TOP_50] then columns << 'Popularity' end # Only include Popularity for Top Charts
+  if chart_type === CHART_TYPE[:TOP]
+    columns.insert(4, 'Popularity')   # Only include Popularity for Top Charts
+  end
 
   regex = generate_profanity_regex(items)
   records = {}
@@ -60,10 +62,10 @@ def get_playlist_data(chart_type, playlist_id)
 
     record = OpenStruct.new
     record.id = id
-    record.Position = id # list of track items returned in order of popularity
+    record.Position = id
     record['Track Name'] = track['name']
     record.Artist = track['artists'][0]['name'] # first will be main artist, featured artists included in record name
-    if chart_type === CHART_TYPE[:TOP_50] then record.Popularity = track['popularity'] end
+    if chart_type === CHART_TYPE[:TOP] then record.Popularity = track['popularity'] end
     record.URL = track['href']
 
     records[id] = record.to_h.to_json
@@ -78,7 +80,7 @@ def get_string_to_check(track)
   if track.nil?
     return ""
   else
-    return "#{track['name']} - #{track['artists'][0]['name']}"
+    return "#{track['name']} - #{track['artists'][0]['name']} "
   end
 end
 
@@ -92,23 +94,19 @@ end
 
 def main
   get_token
-  # fb = FirebaseHelper.new('shared')
+  fb = FirebaseHelper.new('shared')
 
-  records, columns = get_playlist_data(CHART_TYPE[:TOP_50], TOP_50_GLOBAL_ID)
-  puts 'TOP 50 GLOBAL', records, columns
+  records, columns = get_playlist_data(CHART_TYPE[:TOP], TOP_50_GLOBAL_ID)
+  fb.upload_live_table('Top 50 Worldwide', records, columns)
 
-  records, columns = get_playlist_data(CHART_TYPE[:TOP_50], TOP_50_USA_ID)
-  puts 'TOP 50 USA', records, columns
+  records, columns = get_playlist_data(CHART_TYPE[:TOP], TOP_50_USA_ID)
+  fb.upload_live_table('Top 50 USA', records, columns)
 
-  records, columns = get_playlist_data(CHART_TYPE[:VIRAL_50], VIRAL_50_GLOBAL_ID)
-  puts 'VIRAL 50 GLOBAL', records, columns
+  records, columns = get_playlist_data(CHART_TYPE[:VIRAL], VIRAL_50_GLOBAL_ID)
+  fb.upload_live_table('Viral 50 Worldwide', records, columns)
 
-  records, columns = get_playlist_data(CHART_TYPE[:VIRAL_50], VIRAL_50_USA_ID)
-  puts 'VIRAL 50 USA', records, columns
-
-  #TODO: create a test DB or check that the table will save as expected?
-
-  # fb.upload_live_table('Viral 50 Worldwide', records, columns)
+  records, columns = get_playlist_data(CHART_TYPE[:VIRAL], VIRAL_50_USA_ID)
+  fb.upload_live_table('Viral 50 USA', records, columns)
 end
 
 main
