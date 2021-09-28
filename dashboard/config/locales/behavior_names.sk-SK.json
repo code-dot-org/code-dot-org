@@ -1857,7 +1857,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "hliadkovať",
@@ -1872,7 +1873,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "hliadkovať",
@@ -1889,7 +1891,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "hliadkovať",
@@ -1906,7 +1909,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_events_conflict": {
           "patrolling": "hliadkovať",
@@ -1922,7 +1926,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_events_freeplay_air": {
           "moving west and looping": "posun na západ a cyklenie",
@@ -2035,7 +2040,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_events_practice_reorder": {
           "moving east": "posúvať sa na východ",
@@ -2054,7 +2060,8 @@
           "driving with arrow keys": "ovládanie pomocou šípok",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_events_predict": {
           "mystery behavior": "záhadné správanie",
@@ -2087,7 +2094,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_events_ship": {
           "patrolling": "hliadkovať",
@@ -2104,7 +2112,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_events_stops": {
           "moving east": "posúvať sa na východ",
@@ -2120,7 +2129,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_events_time": {
           "patrolling": "hliadkovať",
@@ -2137,7 +2147,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_label_predict": {
           "moving east": "posúvať sa na východ",
@@ -2412,7 +2423,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_text_choice_color": {
           "patrolling": "hliadkovať",
@@ -2428,7 +2440,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_text_choice_conversation": {
           "wandering": "túlať sa",
@@ -2544,7 +2557,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_text_concat": {
           "patrolling": "hliadkovať",
@@ -2560,7 +2574,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_text_events": {
           "patrolling": "hliadkovať",
@@ -2576,7 +2591,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_text_print": {
           "patrolling": "hliadkovať",
@@ -2592,7 +2608,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_text_prompts": {
           "patrolling": "hliadkovať",
@@ -2608,7 +2625,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_text_review": {
           "patrolling": "hliadkovať",
@@ -2624,7 +2642,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "courseF_variables_card": {
           "wandering": "túlať sa",
@@ -2791,6 +2810,294 @@
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
           "moving with arrow keys": "posúvanie klávesami so šípkami"
+        },
+        "helloworld_animals_backgrounds": {
+          "swimming left and right": "plávať vľavo a vpravo",
+          "shrinking": "zmenšovať sa",
+          "patrolling": "hliadkovať",
+          "wandering": "túlať sa",
+          "growing": "rásť",
+          "jittering": "chvieť sa",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo"
+        },
+        "helloworld_animals_behaviors": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_animals_costumes": {
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_animals_events": {
+          "patrolling": "hliadkovať",
+          "growing": "rásť",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "jittering": "chvieť sa",
+          "wandering": "túlať sa",
+          "shrinking": "zmenšovať sa",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "fluttering": "chvenie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_animals_sounds": {
+          "swimming left and right": "plávať vľavo a vpravo",
+          "shrinking": "zmenšovať sa",
+          "patrolling": "hliadkovať",
+          "wandering": "túlať sa",
+          "growing": "rásť",
+          "jittering": "chvieť sa",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo"
+        },
+        "helloworld_emoji_backgrounds": {
+          "swimming left and right": "plávať vľavo a vpravo",
+          "shrinking": "zmenšovať sa",
+          "patrolling": "hliadkovať",
+          "wandering": "túlať sa",
+          "growing": "rásť",
+          "jittering": "chvieť sa",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo"
+        },
+        "helloworld_emoji_behaviors": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_emoji_costumes": {
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_emoji_events": {
+          "patrolling": "hliadkovať",
+          "growing": "rásť",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "jittering": "chvieť sa",
+          "wandering": "túlať sa",
+          "shrinking": "zmenšovať sa",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "fluttering": "chvenie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_emoji_sounds": {
+          "swimming left and right": "plávať vľavo a vpravo",
+          "shrinking": "zmenšovať sa",
+          "patrolling": "hliadkovať",
+          "wandering": "túlať sa",
+          "growing": "rásť",
+          "jittering": "chvieť sa",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo"
+        },
+        "helloworld_food_backgrounds": {
+          "swimming left and right": "plávať vľavo a vpravo",
+          "shrinking": "zmenšovať sa",
+          "patrolling": "hliadkovať",
+          "wandering": "túlať sa",
+          "growing": "rásť",
+          "jittering": "chvieť sa",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo"
+        },
+        "helloworld_food_costumes": {
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_food_events": {
+          "patrolling": "hliadkovať",
+          "growing": "rásť",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "jittering": "chvieť sa",
+          "wandering": "túlať sa",
+          "shrinking": "zmenšovať sa",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "fluttering": "chvenie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_food_sounds": {
+          "swimming left and right": "plávať vľavo a vpravo",
+          "shrinking": "zmenšovať sa",
+          "patrolling": "hliadkovať",
+          "wandering": "túlať sa",
+          "growing": "rásť",
+          "jittering": "chvieť sa",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo"
+        },
+        "helloworld_retro_backgrounds": {
+          "swimming left and right": "plávať vľavo a vpravo",
+          "shrinking": "zmenšovať sa",
+          "patrolling": "hliadkovať",
+          "wandering": "túlať sa",
+          "growing": "rásť",
+          "jittering": "chvieť sa",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo"
+        },
+        "helloworld_retro_behaviors": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_retro_costumes": {
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_retro_events": {
+          "patrolling": "hliadkovať",
+          "growing": "rásť",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "jittering": "chvieť sa",
+          "wandering": "túlať sa",
+          "shrinking": "zmenšovať sa",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "fluttering": "chvenie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_retro_sounds": {
+          "swimming left and right": "plávať vľavo a vpravo",
+          "shrinking": "zmenšovať sa",
+          "patrolling": "hliadkovať",
+          "wandering": "túlať sa",
+          "growing": "rásť",
+          "jittering": "chvieť sa",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo"
         }
       }
     }
