@@ -4,7 +4,7 @@ import jsonic from 'jsonic';
 import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
-import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/P5Lab';
+import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/constants';
 import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
 import animationList, {
   setInitialAnimationList
