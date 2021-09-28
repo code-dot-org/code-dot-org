@@ -32,17 +32,15 @@ export default class PlaygroundText extends React.Component {
       fontStyle
     } = this.props;
 
-    console.log(PlaygroundFontType);
-
     const dynamicStyles = {
       left: x * 2,
       top: y * 2,
       zIndex: index,
       height: height * 2,
-      fontSize: height * 2,
-      fontFamily: PlaygroundFontType[font],
       color: `rgb(${parseInt(red)}, ${parseInt(green)}, ${parseInt(blue)})`,
-      transform: `rotate(${parseFloat(rotation)}deg)`
+      transform: `rotate(${parseFloat(rotation)}deg)`,
+      fontSize: height * 2,
+      fontFamily: PlaygroundFontType[font]
     };
 
     if (
