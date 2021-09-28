@@ -2,7 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
-import {UnwrappedInstructionsDialogWrapper as InstructionsDialogWrapper} from '@cdo/apps/templates/instructions/InstructionsDialogWrapper';
+import {UnwrappedInstructionsDialogWrapper as InstructionsDialogWrapper} from '@cdo/apps/templates/instructions/InstructionsDialogWrapperDEPRECATED';
 
 describe('InstructionsDialogWrapper', () => {
   let spy, wrapper;
