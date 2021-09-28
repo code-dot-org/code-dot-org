@@ -10,6 +10,7 @@ import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import styleConstants from '@cdo/apps/styleConstants';
 import {allowAnimationMode} from './stateQueries';
 import * as utils from '../utils';
+import color from '@cdo/apps/util/color';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -59,11 +60,17 @@ class P5LabVisualizationHeader extends React.Component {
           selected={interfaceMode}
           onChange={this.changeInterfaceMode}
         >
-          <button type="button" value={P5LabInterfaceMode.CODE} id="codeMode">
+          <button
+            style={styles.buttonFocus}
+            type="button"
+            value={P5LabInterfaceMode.CODE}
+            id="codeMode"
+          >
             {msg.codeMode()}
           </button>
           {allowAnimationMode && (
             <button
+              style={styles.buttonFocus}
               type="button"
               value={P5LabInterfaceMode.ANIMATION}
               id="animationMode"
@@ -80,6 +87,12 @@ class P5LabVisualizationHeader extends React.Component {
 const styles = {
   main: {
     height: styleConstants['workspace-headers-height']
+  },
+  buttonFocus: {
+    ':focus': {
+      outlineWidth: 1,
+      outlineColor: color.black
+    }
   }
 };
 export default connect(
