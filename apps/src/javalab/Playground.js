@@ -132,12 +132,17 @@ export default class Playground {
       // can't add new items if the game is over or if the item already exists
       return;
     }
+    console.log(itemData);
 
     const textData = {
       text: itemData.text,
       x: itemData.x,
       y: itemData.y,
       height: itemData.height,
+      rotation: itemData.rotation,
+      red: itemData.colorRed,
+      blue: itemData.colorBlue,
+      green: itemData.colorGreen,
       type: PlaygroundItemType.TEXT
     };
     this.addPlaygroundItem(itemData.id, textData);
