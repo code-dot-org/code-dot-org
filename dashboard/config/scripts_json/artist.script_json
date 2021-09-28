@@ -4,13 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "tts": true,
       "version_year": "unversioned",
-      "is_course": true
+      "tts": true,
+      "is_course": true,
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "artist",
-    "serialized_at": "2021-08-03 22:46:40 UTC",
+    "serialized_at": "2021-09-21 22:04:03 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "artist"
@@ -35,9 +37,14 @@
       "name": "Artist",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using new blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - (Optional) Obtain protractors for your class to visualize the angles they must use to complete the puzzles.\r\n - Print one **Turns & Angles - Student Handout** for each student.",
+        "purpose": "Building off of the students' previous experience with sequencing, this lesson will work to inspire more creativity with coding. The purpose of this lesson is to solidify knowledge on sequencing by introducing new blocks and goals. In this case, students learn more about pixels and angles using the new blocks, while still practicing their sequencing skills. Also, students will be able to visualize new goals such as coding the Artist to draw a square.",
+        "student_overview": "Create beautiful images by programming the Artist."
       },
       "seeding_key": {
         "lesson.key": "Artist",
@@ -47,21 +54,140 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "c53a1348-2816-4c38-9417-92561d0bca19",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c53a1348-2816-4c38-9417-92561d0bca19",
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "artist"
+      }
+    },
+    {
+      "key": "12a90414-dae4-4f2b-8598-0b3b9fd6a767",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12a90414-dae4-4f2b-8598-0b3b9fd6a767",
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "artist"
+      }
+    },
+    {
+      "key": "edab8a37-9fcc-4e69-ae10-b4d09e32ff4d",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "edab8a37-9fcc-4e69-ae10-b4d09e32ff4d",
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "artist"
+      }
+    },
+    {
+      "key": "777be184-c917-4732-ad47-bb1fad0a30e4",
+      "position": 4,
+      "properties": {
+        "duration": 0,
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "777be184-c917-4732-ad47-bb1fad0a30e4",
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "artist"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "88489303-1952-49c3-914a-2cfa7a138778",
+      "position": 1,
+      "properties": {
+        "description": "Show the students one or both of the following videos as an introduction to angles:\r\n\r\n**Artist Introduction - Student Video** (1.5 minutes long)\r\n\r\n**Turns & Angles - Student Video** (2 minutes long)\r\n\r\nUse **Turns & Angles - Student Handout** to show the students interior versus exterior angles for different shapes. This document can be used as a hand out or you can choose to print it out as a poster for students to refer to.\r\n\r\n#### Ask:\r\n\r\nDiscuss the square and triangle shapes from the document.\r\n\r\n - How would you code a computer to draw that shape?\r\n - What order do the instructions need to be in?\r\n\r\nTell the students that in these puzzles they will be moving a character who leaves a line everywhere he goes. The students will be writing code that gets the character to draw various shapes, including a square.",
+        "name": "Introduction\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "88489303-1952-49c3-914a-2cfa7a138778",
+        "lesson_activity.key": "c53a1348-2816-4c38-9417-92561d0bca19"
+      }
+    },
+    {
+      "key": "75db60fb-671b-4740-80ae-0b13f4c09897",
+      "position": 1,
+      "properties": {
+        "description": "In this set of puzzles, the artist will no longer be constrained to 90 degree angles. Having physical protractors available can be help students better visualize the angles they need. Otherwise, the stage provides images of the angles as the student selects which angle to use. (Please note: Angle choices are limited to two inside of the dropdown menu, reducing the number of options students have to work through.)\r\n\r\nBefore sending the students to the computers to work on the puzzles, it might be beneficial to give a brief presentation of how to use the tools in this level. We recommend puzzle 5 as a good puzzle to show how to use the protractor online.",
+        "name": "Online Puzzles\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "75db60fb-671b-4740-80ae-0b13f4c09897",
+        "lesson_activity.key": "12a90414-dae4-4f2b-8598-0b3b9fd6a767"
+      }
+    },
+    {
+      "key": "8aeabd7e-dab0-4f23-827b-58d98a04085f",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f",
+        "lesson_activity.key": "12a90414-dae4-4f2b-8598-0b3b9fd6a767"
+      }
+    },
+    {
+      "key": "813c2ac9-e6b5-4cae-8ca1-430abeefa89e",
+      "position": 3,
+      "properties": {
+        "description": "The eighth puzzle asks the students to draw a 6 sided polygon. This might be challenging for some students. We recommend getting the students to try a few times, ask a peer, then ask the teacher for help. Below is an image that might be helpful for the students.\r\n\r\n![](https://curriculum.code.org/media/uploads/hexagon2018.png)"
+      },
+      "seeding_key": {
+        "activity_section.key": "813c2ac9-e6b5-4cae-8ca1-430abeefa89e",
+        "lesson_activity.key": "12a90414-dae4-4f2b-8598-0b3b9fd6a767"
+      }
+    },
+    {
+      "key": "461e1eda-c85f-4f41-aa4d-719d6a88d8d2",
+      "position": 1,
+      "properties": {
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - What are the interior angles that make up a square. What about for a triangle?\r\n - Sketch a simple shape on your paper and imagine the code used to draw it. Can you write that code out next to the shape?",
+        "name": "Journaling\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "461e1eda-c85f-4f41-aa4d-719d6a88d8d2",
+        "lesson_activity.key": "edab8a37-9fcc-4e69-ae10-b4d09e32ff4d"
+      }
+    },
+    {
+      "key": "532c3e19-487f-44e0-97ff-a71886e169f2",
+      "position": 1,
+      "properties": {
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\r\n\r\n**The Copy Machine**\r\n\r\n- Give students two pieces of paper\r\n- On one sheet draw a simple image, using straight lines only.\r\n- On the second sheet draw instructions for recreating that image commands to move straight and turn at various angles.\r\n- Trade instruction sheets and attempt to recreate the image using only the provided instructions."
+      },
+      "seeding_key": {
+        "activity_section.key": "532c3e19-487f-44e0-97ff-a71886e169f2",
+        "lesson_activity.key": "777be184-c917-4732-ad47-bb1fad0a30e4"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Standalone_Artist_1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -70,7 +196,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       },
       "level_keys": [
         "Standalone_Artist_1"
@@ -79,12 +206,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Standalone_Artist_2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -93,7 +217,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       },
       "level_keys": [
         "Standalone_Artist_2"
@@ -102,12 +227,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Standalone_Artist_3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -116,7 +238,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       },
       "level_keys": [
         "Standalone_Artist_3"
@@ -125,12 +248,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Standalone_Artist_4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -139,7 +259,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       },
       "level_keys": [
         "Standalone_Artist_4"
@@ -148,12 +269,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Standalone_Artist_5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -162,7 +280,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       },
       "level_keys": [
         "Standalone_Artist_5"
@@ -171,12 +290,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Standalone_Artist_5.5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -185,7 +301,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       },
       "level_keys": [
         "Standalone_Artist_5.5"
@@ -194,12 +311,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Standalone_Artist_6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -208,7 +322,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       },
       "level_keys": [
         "Standalone_Artist_6"
@@ -217,12 +332,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Standalone_Artist_7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -231,7 +343,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       },
       "level_keys": [
         "Standalone_Artist_7"
@@ -240,12 +353,9 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Standalone_Artist_8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -254,7 +364,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       },
       "level_keys": [
         "Standalone_Artist_8"
@@ -263,12 +374,9 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Standalone_Artist_9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -277,7 +385,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       },
       "level_keys": [
         "Standalone_Artist_9"
@@ -293,7 +402,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       }
     },
     {
@@ -304,7 +414,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       }
     },
     {
@@ -315,7 +426,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       }
     },
     {
@@ -326,7 +438,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       }
     },
     {
@@ -337,7 +450,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       }
     },
     {
@@ -348,7 +462,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       }
     },
     {
@@ -359,7 +474,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       }
     },
     {
@@ -370,7 +486,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       }
     },
     {
@@ -381,7 +498,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       }
     },
     {
@@ -392,15 +510,69 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "artist"
+        "script.name": "artist",
+        "activity_section.key": "8aeabd7e-dab0-4f23-827b-58d98a04085f"
       }
     }
   ],
   "resources": [
-
+    {
+      "name": "Artist Introduction",
+      "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+      "key": "csf-artist-intro-video",
+      "properties": {
+        "type": "Student Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "csf-artist-intro-video"
+      }
+    },
+    {
+      "name": "Turns & Angles",
+      "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+      "key": "csf-turns-angles-doc",
+      "properties": {
+        "type": "Student Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csf-turns-angles-doc"
+      }
+    },
+    {
+      "name": "Turns & Angles",
+      "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+      "key": "csf-turns-angles-video",
+      "properties": {
+        "type": "Student Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "csf-turns-angles-video"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "resource.key": "csf-artist-intro-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "resource.key": "csf-turns-angles-doc"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "resource.key": "csf-turns-angles-video"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -418,10 +590,49 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc",
+      "properties": {
+        "description": "Create a program to complete an image using sequential steps."
+      },
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "objective.key": "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc"
+      }
+    },
+    {
+      "key": "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085",
+      "properties": {
+        "description": "Break complex shapes into simple parts."
+      },
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "objective.key": "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

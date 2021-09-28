@@ -81,41 +81,34 @@ class ReviewTab extends Component {
     const initialLoadPromises = [];
 
     initialLoadPromises.push(
-      new Promise((resolve, reject) => {
-        codeReviewDataApi
-          .getCodeReviewCommentsForProject(channelId)
-          .done((data, _, request) => {
-            this.setState({
-              comments: data,
-              token: request.getResponseHeader('csrf-token')
-            });
-            resolve();
+      codeReviewDataApi
+        .getCodeReviewCommentsForProject(channelId)
+        .done((data, _, request) => {
+          this.setState({
+            comments: data,
+            token: request.getResponseHeader('csrf-token')
           });
-      })
+        })
     );
 
     initialLoadPromises.push(
-      new Promise((resolve, reject) => {
-        codeReviewDataApi
-          .getPeerReviewStatus(channelId, serverLevelId, serverScriptId)
-          .done(data => {
-            const id = (data && data.id) || null;
-            this.setState({
-              reviewCheckboxEnabled: data.canMarkReviewable,
-              isReadyForReview: data.reviewEnabled,
-              projectOwnerName: data.name,
-              reviewableProjectId: id
-            });
-            resolve();
-          })
-          .fail(() => {
-            this.setState({
-              reviewCheckboxEnabled: false,
-              isReadyForReview: false
-            });
-            reject();
+      codeReviewDataApi
+        .getPeerReviewStatus(channelId, serverLevelId, serverScriptId)
+        .done(data => {
+          const id = (data && data.id) || null;
+          this.setState({
+            reviewCheckboxEnabled: data.canMarkReviewable,
+            isReadyForReview: data.reviewEnabled,
+            projectOwnerName: data.name,
+            reviewableProjectId: id
           });
-      })
+        })
+        .fail(() => {
+          this.setState({
+            reviewCheckboxEnabled: false,
+            isReadyForReview: false
+          });
+        })
     );
 
     if (
@@ -123,25 +116,14 @@ class ReviewTab extends Component {
       this.props.viewAs !== ViewType.Teacher
     ) {
       initialLoadPromises.push(
-        new Promise((resolve, reject) => {
-          codeReviewDataApi
-            .getReviewablePeers(channelId, serverLevelId, serverScriptId)
-            .done(data => {
-              this.setState({
-                reviewablePeers: _.chain(data)
-                  .filter(peerEntry => peerEntry && peerEntry.length === 2)
-                  .map(peerEntry => ({id: peerEntry[0], name: peerEntry[1]}))
-                  .value()
-              });
-              resolve();
-            })
-            .fail(() => {
-              this.setState({
-                errorLoadingReviewblePeers: true
-              });
-              reject();
+        codeReviewDataApi
+          .getReviewablePeers(channelId, serverLevelId, serverScriptId)
+          .done(data => this.setState({reviewablePeers: data}))
+          .fail(() => {
+            this.setState({
+              errorLoadingReviewblePeers: true
             });
-        })
+          })
       );
     }
 
