@@ -129,6 +129,19 @@ export const PlaygroundSignalType = {
   SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE'
 };
 
+export const PlaygroundFontType = {
+  SANS: 'sans-serif',
+  SERIF: 'serif',
+  MONO: 'monospace'
+};
+
+export const PlaygroundFontStyleType = makeEnum(
+  'NORMAL',
+  'BOLD',
+  'ITALIC',
+  'BOLD_ITALIC'
+);
+
 export const PlaygroundItemType = {
   IMAGE: 'image',
   TEXT: 'text'
