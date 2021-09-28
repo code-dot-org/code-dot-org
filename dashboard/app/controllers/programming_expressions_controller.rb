@@ -23,7 +23,7 @@ class ProgrammingExpressionsController < ApplicationController
     end
     programming_expression = ProgrammingExpression.new(key: params[:key], name: params[:key], programming_environment_id: params[:programming_environment_id])
     if programming_expression.save
-      redirect_to '/home/'
+      redirect_to edit_programming_expression_url(programming_expression)
     else
       render :not_acceptable, json: programming_expression.errors
     end
@@ -42,7 +42,12 @@ class ProgrammingExpressionsController < ApplicationController
     end
     programming_expression.name = programming_expression_params[:name]
     programming_expression.short_description = programming_expression_params[:short_description]
-    programming_expression.save! if programming_expression.changed?
+    begin
+      programming_expression.save! if programming_expression.changed?
+      render json: programming_expression.summarize_for_edit.to_json
+    rescue ActiveRecord::RecordInvalid => e
+      render(status: :not_acceptable, plain: e.message)
+    end
   end
 
   private
