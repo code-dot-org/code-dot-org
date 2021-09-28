@@ -916,6 +916,11 @@ class LessonTest < ActiveSupport::TestCase
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
   end
 
+  test 'start_url returns student_lesson_plan_pdf_url when no scripts' do
+    new_lesson = create :lesson, key: 'Some Verbose Lesson Name', has_lesson_plan: true, student_lesson_plan_pdf_url: 'code'
+    assert_equal new_lesson.start_url, 'code'
+  end
+
   test 'opportunity standards do not count as regular standards' do
     lesson = create :lesson
     standard = create :standard
