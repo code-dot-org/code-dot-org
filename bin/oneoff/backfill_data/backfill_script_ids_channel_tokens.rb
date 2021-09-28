@@ -91,6 +91,9 @@ $level_to_script_ids = {}
 # This hash caches a mapping from level id to level active record
 $level_id_to_level = {}
 
+# This hash caches a mapping from level id to parent levels
+$level_id_to_parent_levels = {}
+
 def update_script_ids
   puts "Backfilling channel token script_ids..."
   puts "Script started at #{Time.now}"
@@ -103,6 +106,7 @@ def update_script_ids
       next if channel_token.script_id.present?
 
       begin
+        error = false
         level_id = channel_token.level_id
 
         # get all the possible scripts the channel_token could be associated with
@@ -144,9 +148,10 @@ def update_script_ids
         end
       rescue StandardError
         print "[Err]"
+        error = true
       end
 
-      log_backfill_failed(channel_token.id, csv)
+      log_backfill_failed(channel_token_id: channel_token.id, csv: csv, is_logged_in: user_id.present?, was_error: error)
     end
   end
   puts
@@ -165,13 +170,14 @@ def get_associated_script_ids(level_id)
   level = get_level(level_id)
   script_ids = level.script_levels.map(&:script_id)
 
-  level.parent_levels.map do |parent_level|
+  parent_levels = get_parent_levels(level_id)
+  parent_levels.map do |parent_level|
     parent_level_script_ids = parent_level.script_levels.map(&:script_id)
     script_ids.concat(parent_level_script_ids)
   end
 
-  $level_to_script_ids[level.id] = script_ids.uniq
-  return $level_to_script_ids[level.id]
+  $level_to_script_ids[level_id] = script_ids.uniq
+  return $level_to_script_ids[level_id]
 end
 
 def get_level(level_id)
@@ -184,22 +190,35 @@ def get_level(level_id)
   level
 end
 
+def get_parent_levels(level_id)
+  unless $level_id_to_parent_levels[level_id].nil?
+    return $level_id_to_parent_levels[level_id]
+  end
+
+  level = get_level(level_id)
+  $level_id_to_parent_levels[level_id] = level.parent_levels
+  $level_id_to_parent_levels[level_id]
+end
+
 def update_channel_token(channel_token, script_id, csv)
   unless $is_dry_run
     did_save = channel_token.update_attributes(script_id: script_id)
 
     unless did_save
-      log_backfill_failed(channel_token.id, csv)
+      user_id = user_id_for_storage_id(channel_token.storage_id)
+      log_backfill_failed(channel_token_id: channel_token.id, csv: csv, is_logged_in: user_id.present?, was_error: true)
       return
     end
   end
   print "#{channel_token.id},"
 end
 
-def log_backfill_failed(channel_token_id, csv)
+def log_backfill_failed(channel_token_id:, csv:, is_logged_in: false, was_error: false)
   print "[F] #{channel_token_id},"
   $unable_to_backfill += 1
-  csv << [channel_token_id]
+  logged_in_value = is_logged_in ? "logged-in" : "logged-out"
+  error_value = was_error ? "error" : "no error"
+  csv << [channel_token_id, logged_in_value, error_value]
 end
 
 def associated_script_ids_from_user_scripts(user_id, script_ids)
@@ -212,14 +231,14 @@ def associated_script_ids_from_user_levels(user_id, level_id)
 
   level = get_level(level_id)
 
-  if script_ids_from_user_levels.any? && level.contained_levels.any?
+  if script_ids_from_user_levels.empty? && level.contained_levels.any?
     contained_level_id = level.contained_levels.first
     script_ids_from_user_levels = user_level_script_ids(user_id, contained_level_id)
   end
 
-  if script_ids_from_user_levels.any? && level.parent_levels.any?
-    parent_level_ids = level.parent_levels(&:id)
-    script_ids_from_user_levels = user_level_script_ids(user_id, parent_level_ids)
+  if script_ids_from_user_levels.empty?
+    parent_levels = get_parent_levels(level_id)
+    script_ids_from_user_levels = user_level_script_ids(user_id, parent_levels.map(&:id)) if parent_levels.any?
   end
 
   return script_ids_from_user_levels.uniq
