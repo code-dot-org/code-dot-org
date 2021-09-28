@@ -2,11 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function PlaygroundText({id, text, x, y, height}) {
+  // what to do with overflow text?
   const dynamicStyle = {
     marginLeft: parseInt(x),
     marginTop: parseInt(y),
     zIndex: 100,
-    fontSize: parseInt(height)
+    fontSize: parseInt(height),
+    fontFamily: 'Courier',
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    color: 'red'
   };
 
   return (
