@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "starwars",
-    "serialized_at": "2021-09-21 21:57:27 UTC",
+    "serialized_at": "2021-09-28 14:43:15 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "starwars"
@@ -33,14 +33,14 @@
   "lessons": [
     {
       "key": "Hour of Code 2015",
-      "name": "Hour of Code 2015",
+      "name": "Star Wars: Building a Galaxy With Code (JavaScript)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. \r\n\r\n**Option 1: Blocks**\r\n\r\nThe first option uses drag-drop blocks. This version works best for:\r\n\r\n - Students on mobile devices without keyboards\r\n - Younger students (6+ because the tutorial requires reading)\r\n - International students\r\n\r\nWe recommend this for international students because JavaScript syntax is not translated and for the first Hour of Code, the translated blocks provide a better introduction.\r\n\r\n**Option 2: JavaScript**\r\n\r\nThis option teaches the same basic concepts, but because it uses both drag-drop blocks and JavaScript, the students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+.",
+        "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. This version uses both drag-drop blocks and JavaScript. Students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+.\n\nA [Blockly version](/s/starwarsblocks) is also available and recommended for students on mobile devices without keyboards, younger students, and international students.",
         "preparation": "### One Week Before Your Hour of Code\r\n\r\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \r\n- Review and complete the online tutorial yourself: [Star Wars: Building a Galaxy with Code](http://hourofcode.com/star) \r\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\r\n\r\n### One Day Before Your Hour of Code\r\n\r\n- Write the words “coding”, “programming” and “debugging” on the board or add them to your word wall if you have one.\r\n- Write the words \"Computer Science\" in the middle of your board or on piece of paper at the center of a bulletin board. This will serve as your [\"mind map\"](https://en.wikipedia.org/wiki/Mind_map) for the Getting Ready and Assessment activities.\r\n- Each student who completes the activity should receive a certificate. [Print one](http://code.org/certificates) for everyone in advance to make this easier at the end of your Hour of Code.\r\n",
         "purpose": "This lesson introduces the core CS concepts of coding and programming including sequencing and events. The JavaScript version of the tutorial also lets the students experience typing code.",
         "student_overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. "
@@ -57,7 +57,6 @@
       "key": "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4",
       "position": 1,
       "properties": {
-        "duration": 0,
         "name": "Getting Started (5 minutes)"
       },
       "seeding_key": {
@@ -71,7 +70,6 @@
       "key": "156ffaf5-a045-4956-9c89-15fcc64fa3af",
       "position": 2,
       "properties": {
-        "duration": 0,
         "name": "Activity (30-45 minutes)"
       },
       "seeding_key": {
@@ -85,7 +83,6 @@
       "key": "d3737bd7-bb57-4fae-9cbb-d5faf9c198d2",
       "position": 3,
       "properties": {
-        "duration": 0,
         "name": "Wrap Up (5 minutes)"
       },
       "seeding_key": {
@@ -99,7 +96,6 @@
       "key": "262ad475-1b09-4834-8401-0cf39d3955c5",
       "position": 4,
       "properties": {
-        "duration": 0,
         "name": "Extended Learning"
       },
       "seeding_key": {
@@ -113,7 +109,6 @@
       "key": "ab54fc81-dcbd-4647-a4c7-5308b0b6299b",
       "position": 5,
       "properties": {
-        "duration": 0,
         "name": "Assessment (2 minutes)"
       },
       "seeding_key": {
@@ -156,7 +151,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "One way to introduce the Hour of Code if you are not very familiar with coding yourself is to show one of [our inspirational videos](https://hourofcode.com/us/resources#videos). Choose one you think your students will find inspiring, and share it now. For learners in the middle grades, we suggest “[Change the World: Hour of Code 2015](https://youtu.be/BvRvluhfzf0?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).”\r\n"
           }
@@ -195,7 +189,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Be sure to play through your chosen tutorials yourself, before asking your students to attempt them. That way you’ll know what to expect and can make decisions about whether to let students choose their own tutorial, or if you want to assign tutorials based on student needs.\r\n"
           }
@@ -294,6 +287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -315,6 +311,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right_down"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -336,6 +335,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_backtrack"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -357,6 +359,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_diagonal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -378,6 +383,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_around"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -399,6 +407,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_finale"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -420,6 +431,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_two_items"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -441,6 +455,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_four_items"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -462,6 +479,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_score"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -483,6 +503,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_win_lose"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -504,6 +527,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_add_characters"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -525,6 +551,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_chain_characters"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -546,6 +575,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_multiply_characters"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -567,6 +599,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_change_setting"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -588,6 +623,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_free"
+        ]
       },
       "bonus": false,
       "seeding_key": {
