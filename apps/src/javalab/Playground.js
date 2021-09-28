@@ -143,6 +143,8 @@ export default class Playground {
       red: itemData.colorRed,
       blue: itemData.colorBlue,
       green: itemData.colorGreen,
+      fontFamily: itemData.font,
+      fontStyle: itemData.fontStyle,
       type: PlaygroundItemType.TEXT
     };
     this.addPlaygroundItem(itemData.id, textData);
