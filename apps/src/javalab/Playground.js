@@ -1,4 +1,8 @@
-import {PlaygroundSignalType, PlaygroundItemType} from './constants';
+import {
+  PlaygroundSignalType,
+  PlaygroundItemType,
+  WebSocketMessageType
+} from './constants';
 import {assets, starterAssets} from '@cdo/apps/clientApi';
 import javalabMsg from '@cdo/javalab/locale';
 import {getStore} from '../redux';
@@ -110,9 +114,6 @@ export default class Playground {
     if (this.isGameOver || this.imageItemExists(itemData)) {
       return;
     }
-    let onClick = isClickable
-      ? () => this.handleImageClick(itemData.id)
-      : () => {};
 
     const imageData = {
       fileUrl: this.getUrl(itemData.filename),
@@ -121,9 +122,12 @@ export default class Playground {
       height: itemData.height,
       width: itemData.width,
       index: itemData.index,
-      onClick: onClick,
+      isClickable: isClickable,
       type: PlaygroundItemType.IMAGE
     };
+    if (isClickable) {
+      imageData.onClick = () => this.handleImageClick(itemData.id);
+    }
     this.addPlaygroundItem(itemData.id, imageData);
   }
 
@@ -199,12 +203,12 @@ export default class Playground {
     this.resetAudioElement();
   }
 
-  // TODO: Call this from click handler on new clickable items
   handleImageClick(imageId) {
     if (this.isGameOver || !this.isGameRunning) {
       // can only handle click events if game is not over and game is running
       return;
     }
+    this.onJavabuilderMessage(WebSocketMessageType.PLAYGROUND, imageId);
   }
 
   getUrl(filename) {
