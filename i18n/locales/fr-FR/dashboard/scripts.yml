@@ -176,6 +176,8 @@ fr:
           lessons:
             Artist:
               name: Artiste
+              description_student: Crée de belles images en programmant l'Artiste.
+              description_teacher: Dans cette leçon, les élèves prendront le contrôle de l'Artiste pour réaliser les dessins à l'écran. Cette phase d'Artiste permettra aux élèves de créer des images de complexité croissante, en utilisant de nouveaux blocs tels que `avancer de 100 pixels` et `tourner à droite de 90 degrés`.
           student_description: Dessine des super images et schémas avec l'Artiste!
         hourofcode:
           title: Labyrinthe classique
@@ -1687,6 +1689,7 @@ fr:
           lessons:
             Oceans:
               name: Océans
+              description_student: 'Résumé du Tutoriel : Tout d''abord, les élèves classent les objets en tant que "poisson" ou "pas poisson" pour tenter d''éliminer les déchets de l''océan. Ensuite, les élèves élargiront leur ensemble de données d''entraînement pour inclure d''autres créatures marines. Dans la deuxième partie de l''activité, les élèves choisiront leurs propres étiquettes à appliquer aux images de poissons générés aléatoirement. Ces données de formation sont utilisées pour un modèle d''apprentissage automatique qui devrait ensuite être capable d''étiqueter de nouvelles images par ses propres moyens.'
           student_description: Découvrez comment L'IA et l'apprentissage automatique peuvent être utilisés pour résoudre les problèmes mondiaux.
         CSPPD3-Unit3-pt2:
           lessons:
@@ -2288,9 +2291,9 @@ fr:
             Sprite Movement Methods:
               name: Méthodes de Déplacement du Lutin
             Sprites and Images:
-              name: Lutins et Images
+              name: Sprites et Images
             Sprites and Properties:
-              name: Lutins et Propriétés
+              name: Sprites et Propriétés
             Variables Unplugged:
               name: Variables Débranchées
             Variables and Animation:
@@ -3020,9 +3023,9 @@ fr:
             'Project: Interactive Card':
               name: 'Projet: Carte Interactive'
             Sprites and Images:
-              name: Lutins et Images
+              name: Sprites et Images
             Sprites and Properties:
-              name: Lutins et Propriétés
+              name: Sprites et Propriétés
             Variables Unplugged:
               name: Variables Débranchées
             Variables and Animation:
@@ -3411,6 +3414,8 @@ fr:
           lessons:
             Bounce:
               name: Rebond
+              description_student: Tu souhaites jouer à des jeux vidéo à l'école ? Dans cette leçon, tu apprendras à créer le tien !
+              description_teacher: Dans cette activité en ligne, les élèves apprendront ce que sont les événements et comment les ordinateurs les utilisent dans des programmes comme les jeux vidéo. Les élèves travailleront à travers des énigmes, faisant réagir le programme aux événements (tels que les boutons fléchés quand ils sont pressés.) À la fin de l'énigme, les élèves auront la possibilité de personnaliser leur jeu avec des vitesses et des sons différents.
           student_description: Choisir une équipe et faite un match de basket
         sample-csp5:
           lessons:
@@ -3982,6 +3987,8 @@ fr:
           lessons:
             Sports:
               name: Sports
+              description_student: Tu souhaites jouer à des jeux vidéo à l'école ? Dans cette leçon, tu apprendras à créer le tien !
+              description_teacher: Dans cette activité en ligne, les élèves apprendront ce que sont les événements et comment les ordinateurs les utilisent dans des programmes comme les jeux vidéo. Les élèves travailleront à travers des énigmes, faisant réagir le programme aux événements (tels que les boutons fléchés quand ils sont pressés.) À la fin de l'énigme, les élèves auront la possibilité de personnaliser leur jeu avec des vitesses et des sons différents.
           student_description: Coder votre propre sport
         2016_sciencePD-phase2b:
           lessons:
@@ -4775,9 +4782,9 @@ fr:
             Variables and Animation:
               name: Variables et Animation
             Sprites and Properties:
-              name: Lutins et Propriétés
+              name: Sprites et Propriétés
             Sprites and Images:
-              name: Lutins et Images
+              name: Sprites et Images
             Booleans and Conditionals:
               name: Booléens et Conditions
             Conditionals and Keyboard Input:
@@ -7444,7 +7451,7 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
             Learning Sprites with Sprite Lab:
-              name: S'initier au Labo des Lutins
+              name: S'initier au Labo des Sprites
             Alien Dance Party with Sprite Lab:
               name: Soirée Dansante des Extraterrestres
             Pet Giraffe with Sprite Lab:
@@ -7890,7 +7897,7 @@ fr:
             Functions in Minecraft:
               name: Les Fonctions dans Minecraft
             Learning Sprites with Sprite Lab:
-              name: S'initier au Labo des Lutins
+              name: S'initier au Labo des Sprites
             Alien Dance Party with Sprite Lab:
               name: Soirée Dansante des Extraterrestres
             Pet Giraffe with Sprite Lab:
@@ -8019,7 +8026,7 @@ fr:
             Variables that Change in Artist:
               name: Modifier des Variables avec l'Artiste
             Learning Sprites with Sprite Lab:
-              name: S'initier au Labo des Lutins
+              name: S'initier au Labo des Sprites
             Alien Dance Party with Sprite Lab:
               name: Soirée Dansante des Extraterrestres
             Pet Giraffe with Sprite Lab:
@@ -8583,13 +8590,13 @@ fr:
             CS Principles Post-Course Survey:
               name: CS PrincipPrincipleses Enquête Post-Cours
         spritelab:
-          title: Introduction au Labo des Lutins (PILOTE)
+          title: Introduction au Labo des Sprites (PILOTE)
           description_audience: Cours E / F Étudiants
           description_short: Ceci est un cours Pilote pour le nouvel outil Labo des Lutins de Code.org, pour les cours E et F
           description: Ceci est un cours Pilote pour le nouvel outil Labo des Lutins de Code.org, pour les cours E et F
           lessons:
             'Fish Tank: Creating Sprites':
-              name: 'Aquarium : Créer des Lutins'
+              name: 'Aquarium : Créer des Sprites'
             Fish Tank - Creating Sprites:
               name: Aquarium - Créer des Lutins
             Alien Dance Party - Input:
@@ -11821,7 +11828,7 @@ fr:
               display_name: Enquête
           lessons:
             CSD post-course survey:
-              name: CSD Enquête  Post-Cours
+              name: Enquête Post-Cours Auprès des Étudiants de CSD (2018 - 2019)
         csp-post-survey-2018:
           title: Enquête (2018 - 2019) Post-Cours auprès des étudiants de CSP
           description_audience: Étudiants en CSP
@@ -11832,7 +11839,7 @@ fr:
               display_name: Enquête
           lessons:
             CSP post-course survey:
-              name: Enquête Post-Cours CSP
+              name: Enquête (2018 - 2019) Post-Cours auprès des étudiants de CSP
           student_description: Bienvenue dans l'Enquête Post-Cours CS Principles de Code.org. Cette enquête prend environ 15 minutes. Tes réponses sont privées et anonymes -- ton professeur peut voir des résultats agrégés anonymes pour toute la classe. Les résultats sont essentiels pour ton professeur et Code.org afin de maintenir et d'améliorer le cours.  Merci pour ton temps et ta considération.
         csp5-pilot:
           title: CSP Unité 5 Pilote - Les Listes, les Boucles et les Traverses
@@ -15092,13 +15099,17 @@ fr:
         2021drafting:
           lessons:
             Course F Introduction:
-              name: Introduction au Labo des Lutins
+              name: Introduction au Labo des Sprites
+            lesson-2:
+              name: Texte et invites
             Virus Simulation for Code Bytes:
               name: Codage d'une simulation
             Making Sprites:
               name: Faire des sprites
             Sprites in Action:
-              name: Les Lutins en Action
+              name: Les Sprites en Action
+            blank space stories:
+              name: Histoires d'espace vide
             End of Course Project:
               name: Fin du projet.
             Outbreaklab:
@@ -16359,6 +16370,8 @@ fr:
             AI for Oceans:
               key: IA pour les Océans
               name: IA pour les Océans
+              description_student: Classez les objets en « poisson » ou « pas de poisson » pour tenter de retirer les déchets de l'océan. Ensuite, développez votre ensemble de données d'entraînement pour inclure d'autres créatures marines qui appartiennent à l'eau. Dans la deuxième partie de l'activité, choisissez vos propres étiquettes à appliquer aux images de poissons générés aléatoirement. Ces données d'entraînement sont utilisées pour un modèle d'apprentissage automatique qui devrait ensuite être capable d'étiqueter de nouvelles images par lui-même.
+              description_teacher: Dans cette leçon **exploratoire**, les élèves formeront un modèle d'apprentissage automatique en classant des poissons et d'autres objets.
             Internet:
               key: Internet
               name: Internet et les réseaux connectés
@@ -16373,11 +16386,12 @@ fr:
               key: Les Boucles Pour dans l'Abeille
               name: Les Boucles « Pour » avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !
+              description_teacher: 'Cette leçon de **renforcement des compétences** se concentre sur les boucles Pour et sur l''utilisation d''une variable d''incrémentation pour résoudre des énigmes plus complexes. '
             For Loops in Artist:
               key: Les Boucles « Pour » dans l'Artiste
               name: Les Boucles « Pour » avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle.
-              description_teacher: Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles `for` pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.
+              description_teacher: Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles Pour pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.
             Editing Behaviors:
               name: Les Comportements dans le Labo des Lutins
               description_student: Apprends à programmer les comportements de ton propre lutin !
@@ -16395,13 +16409,25 @@ fr:
               description_student: 'Dans cette leçon, les élèves en apprendront davantage sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. '
               description_teacher: 'Dans cette leçon, les élèves en apprendront davantage sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. '
             lesson-6:
-              name: Introduction au Labo des Lutins
+              name: Introduction au Labo des Sprites
+              description_student: Vous aborderez lerôle des ordinateurs et de la technologie dans votre vie, en mettant l'accent sur la façon dont les applications et les outils donnent aux utilisateurs des choix sur la façon de les utiliser.
             lesson-7:
               name: Faire des sprites
+              description_teacher: 'Dans cette leçon de **renforcement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche de « jeu libre » ouverte où ils pourront construire ce qu''ils veulent. Les étudiants écriront des programmes et découvriront les deux concepts au cœur de Sprite Lab : les sprites et les comportements. '
             lesson-8:
-              name: Les Lutins en Action
+              name: Les Sprites en Action
+            lesson-9:
+              name: Histoires d'espace vide
+              description_student: 'Dans cette activité, vous utiliserez des histoires à compléter (similaires à Mad Libs®) pour vous préparer à comprendre comment les ordinateurs prennent et stockent les entrées d''un utilisateur, puis les utiliserez plus tard lors de l''exécution d''un programme. '
+              description_teacher: 'Dans cette leçon de **mise en contexte**, les élèves utiliseront des histoires à compléter (similaires à Mad Libs®) comme contexte pour comprendre comment les ordinateurs prennent et stockent les entrées d''un utilisateur, puis les utiliseront plus tard quand le programme s''exécute. '
+            lesson-10:
+              name: Texte et invites
+              description_student: Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab.
+              description_teacher: 'Dans cette leçon de **renforcement des compétences**, les étudiants s''entraîneront avec les variables dans Sprite Lab. '
             lesson-5:
               name: Épidémie
+              description_student: Un virus est arrivé à Monster Town ! Apprenez à créer un simulateur de virus et aidez les monstres à guérir.
+              description_teacher: 'Cette leçon combine le **renforcement des compétences** autour d''événements avec un **mini-projet** où les élèves peuvent créer leur propre simulation informatique dans Sprite Lab. Ils étudieront la simulation pour comprendre à quelle vitesse un virus peut se propager et ce qui peut être fait pour le ralentir. '
             lesson-2:
               name: Le Pouvoir des Mots
               description_student: Le harcèlement n'est jamais acceptable. Cette leçon vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
@@ -16529,11 +16555,12 @@ fr:
               key: Les Boucles « Pour » avec l'Abeille
               name: Les Boucles « Pour » avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !
+              description_teacher: 'Cette leçon de **renforcement des compétences** se concentre sur les boucles Pour et sur l''utilisation d''une variable d''incrémentation pour résoudre des énigmes plus complexes. '
             For Loops with Artist:
               key: Les Boucles « Pour » avec l'Artiste
               name: Les Boucles « Pour » avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle.
-              description_teacher: Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles `for` pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.
+              description_teacher: Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles Pour pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.
             Swimming Fish in Sprite Lab:
               key: Des Poissons qui Nagent, avec le Labo des Lutins
               name: Des Poissons qui Nagent, avec le Labo des Lutins
@@ -16564,8 +16591,14 @@ fr:
               description_teacher: Dans cette leçon, les élèves programmeront leur propre soirée dansante interactive. Cette activité nécessite du son car l'outil a été conçu pour répondre à la musique.
             lesson-2:
               name: Faire des sprites
+              description_student: Dans ce cours, vous allez faire des programmes et en apprendre davantage sur les sprites et les comportements.
+              description_teacher: 'Dans cette leçon de **renforcement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche de « jeu libre » ouverte où ils pourront construire ce qu''ils veulent. Les étudiants écriront des programmes et découvriront les deux concepts au cœur de Sprite Lab : les sprites et les comportements. '
             lesson-3:
-              name: Les Lutins en Action
+              name: Les Sprites en Action
+            lesson-4:
+              name: Texte et invites
+              description_student: Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab.
+              description_teacher: 'Dans cette leçon de **renforcement des compétences**, les étudiants s''entraîneront avec les variables dans Sprite Lab. '
           lesson_groups:
             csf_warmup:
               display_name: Warm-up (Séance d’échauffement)
@@ -16655,15 +16688,21 @@ fr:
             Virus Simulation for Code Bytes:
               name: Codage d'une simulation
             Course F Introduction:
-              name: Introduction au Labo des Lutins
+              name: Introduction au Labo des Sprites
             lesson-3:
               name: Créer un Chat-bot
             Making Sprites:
               name: Faire des sprites
             Sprites in Action:
-              name: Les Lutins en Action
+              name: Les Sprites en Action
+            blank space stories:
+              name: Histoires d'espace vide
+            texts-and-prompts:
+              name: Texte et invites
             introducing-spritelab:
-              name: Introduction au Labo des Lutins
+              name: Introduction au Labo des Sprites
+            blank-space-stories:
+              name: Histoires d'espace vide
           lesson_groups:
             ramp_up:
               display_name: Introduction
@@ -17296,3 +17335,7 @@ fr:
               display_name: Contenu
             lessonGroup-2:
               display_name: Contenu
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: " Débranché"
