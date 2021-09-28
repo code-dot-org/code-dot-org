@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2021-09-20 19:23:20 UTC",
+    "serialized_at": "2021-09-28 17:32:55 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "ai-ethics"
@@ -99,11 +99,23 @@
       "key": "740f1945-7982-48c2-9ff3-f45c0648beed",
       "position": 4,
       "properties": {
-        "duration": 0,
         "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "740f1945-7982-48c2-9ff3-f45c0648beed",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-ethics"
+      }
+    },
+    {
+      "key": "c0e15509-cd4f-4267-bbab-40505cbf23d7",
+      "position": 5,
+      "properties": {
+        "name": "Beyond an Hour of Code"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c0e15509-cd4f-4267-bbab-40505cbf23d7",
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "ai-ethics"
@@ -115,8 +127,8 @@
       "key": "f9300a15-4df7-4de2-b95e-3e706dbea3fc",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: Ask students if they have ever encountered the term “artificial intelligence” (or “AI”). If they have, ask volunteers how they would define it in their own words. If they have not, ask them what they think the term might mean. \r\n\r\n**Vocabulary**: Artificial intelligence is the ability of machines to learn and problem-solve.\r\n\r\n**Discuss**: Ask students about technologies they’ve encountered, be they real or fictional, that might incorporate AI. Draw out as much detail as possible, suggesting a few of your own if necessary to spark ideas. Display the label “AI Examples” on the board and record applicable responses beneath it. If appropriate, display images of technologies that use AI, such as social media apps, video games, or self-driving cars.\r\n\r\n**Prompt**: Again, AI is the ability of machines to learn and problem-solve. By comparison, it is said that humans have “natural” intelligence. What are your thoughts on the differences between artificial intelligence and natural intelligence?\r\n\r\n**Discuss**: Allow students to think and respond to the prompt above.",
-        "name": "What is artificial intelligence?\r"
+        "description": "\n\n\n####What is artificial intelligence?\n**Discuss**: Ask students if they have ever encountered the term “artificial intelligence” (or “AI”). If they have, ask volunteers how they would define it in their own words. If they have not, ask them what they think the term might mean. \n\n**Vocabulary**: Artificial intelligence is the ability of machines to learn and problem-solve.\n\n**Discuss**: Ask students about technologies they’ve encountered, be they real or fictional, that might incorporate AI. Draw out as much detail as possible, suggesting a few of your own if necessary to spark ideas. Display the label “AI Examples” on the board and record applicable responses beneath it. If appropriate, display images of technologies that use AI, such as social media apps, video games, or self-driving cars.\n\n**Prompt**: Again, AI is the ability of machines to learn and problem-solve. By comparison, it is said that humans have “natural” intelligence. What are your thoughts on the differences between artificial intelligence and natural intelligence?\n\n**Discuss**: Allow students to think and respond to the prompt above.",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "f9300a15-4df7-4de2-b95e-3e706dbea3fc",
@@ -139,8 +151,7 @@
       "key": "9061ada9-e33b-4b99-ad85-8e4796fbd011",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: Ask students to describe how some of the technologies they’ve brought up might demonstrate artificial intelligence. Take the conversation further by asking what some of the benefits and drawbacks of these technologies might be. Among the drawbacks discussed, which might be labeled “wrong” or “bad”? Why?",
-        "name": "What are ethics?\r"
+        "description": "####What are ethics?\n\n\n**Discuss**: Ask students to describe how some of the technologies they’ve brought up might demonstrate artificial intelligence. Take the conversation further by asking what some of the benefits and drawbacks of these technologies might be. Among the drawbacks discussed, which might be labeled “wrong” or “bad”? Why?"
       },
       "seeding_key": {
         "activity_section.key": "9061ada9-e33b-4b99-ad85-8e4796fbd011",
@@ -186,8 +197,8 @@
       "key": "1a93cc89-e65b-44d5-92e6-9a9413b782ed",
       "position": 1,
       "properties": {
-        "description": "**Groups**: Place students in groups of three or four.",
-        "name": "Research and Reflect\r"
+        "description": "\n\n###Research and Reflect\n**Groups**: Place students in groups of three or four.",
+        "name": "Our AI Code of Ethics"
       },
       "seeding_key": {
         "activity_section.key": "1a93cc89-e65b-44d5-92e6-9a9413b782ed",
@@ -210,7 +221,7 @@
       "key": "609afe62-77fe-4acd-88b8-5678c8d7b6db",
       "position": 3,
       "properties": {
-        "description": "**Distribute**: Share the **AI Ethics Research Areas** document with each group. Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  Then, provide each group with one copy of the **AI Ethics Research Reflection **handout. \r\n\r\n**Work**: Have groups research their area with their fellow group members, answering questions on the handout along the way. Encourage students to skim longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\r\n\r\n**Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout."
+        "description": "**Distribute**: Share the **AI Ethics Research Areas** document with each group. Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  Then, provide each group with one copy of the **AI Ethics Research Reflection** handout. \n\n**Work**: Have groups research their area with their fellow group members, answering questions on the handout along the way. Encourage students to skim longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n**Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout."
       },
       "seeding_key": {
         "activity_section.key": "609afe62-77fe-4acd-88b8-5678c8d7b6db",
@@ -221,8 +232,7 @@
       "key": "ff631d39-5a3b-4f29-87fa-96eb5786386f",
       "position": 4,
       "properties": {
-        "description": "**Display**: Once students have completed their research, share an example of an AI code of ethics similar to what they will be creating, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\r\n\r\n**Prompt**: Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow? \r\n\r\n**Work**: Allow groups time to write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page). The format of the resource is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation, or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!",
-        "name": "Draft “Our AI Code of Ethics” Resource \r"
+        "description": "###Draft “Our AI Code of Ethics” Resource \n\n**Display**: Once students have completed their research, share an example of an AI code of ethics similar to what they will be creating, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n**Prompt**: Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow? \n\n**Work**: Allow groups time to write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page). The format of the resource is completely up to you and your students. For example, you might ask groups to create a poster, or for each to take a single slide from a shared presentation, or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!"
       },
       "seeding_key": {
         "activity_section.key": "ff631d39-5a3b-4f29-87fa-96eb5786386f",
@@ -251,6 +261,17 @@
       "seeding_key": {
         "activity_section.key": "d7069a19-4184-4878-b8c2-7a3b86207781",
         "lesson_activity.key": "740f1945-7982-48c2-9ff3-f45c0648beed"
+      }
+    },
+    {
+      "key": "8b0607d7-d1e5-4185-8d68-de8d64cec899",
+      "position": 1,
+      "properties": {
+        "description": "After your Hour of Code ends, there are many ways to continue teaching computer science in your K-5 classroom. Here are some ideas:\n* Teach the [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) courses. These six courses are designed for young learners. Students work their way through a series of puzzles that teach them to code, and educators have access to engaging lesson plans that help make the learning come alive. Code.org offers free professional development for these courses, online or in-person.\n* Visit [You can Teach Computer Science](https://studio.code.org/courses?view=teacher) for more course suggestions.\n* Invite a computer science expert to talk to your class about his or her work. Don’t know any local computer scientists? Reach out to a volunteer on our [volunteer map](https://code.org/volunteer/local).\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b0607d7-d1e5-4185-8d68-de8d64cec899",
+        "lesson_activity.key": "c0e15509-cd4f-4267-bbab-40505cbf23d7"
       }
     }
   ],

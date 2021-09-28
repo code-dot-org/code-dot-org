@@ -8,8 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-22 20:01:33 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-09-28 16:49:02 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "poetry-hoc3"
     }
@@ -74,7 +74,7 @@
       "key": "59df14b7-1344-480b-8b6b-3fc94684b8bc",
       "position": 2,
       "properties": {
-        "name": "Main Activity"
+        "name": "Main Activity (Old)"
       },
       "seeding_key": {
         "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc",
@@ -82,8 +82,19 @@
       }
     },
     {
-      "key": "50216925-6742-400e-b45a-2de4cd3b63f2",
+      "key": "3d1e45e9-9dd0-476b-b864-f0d86d0827b6",
       "position": 3,
+      "properties": {
+        "name": "Main Activity (New)"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d1e45e9-9dd0-476b-b864-f0d86d0827b6",
+        "lesson_activity.key": "6c1cc064-3015-461d-86b5-a3fe5b145c0d"
+      }
+    },
+    {
+      "key": "50216925-6742-400e-b45a-2de4cd3b63f2",
+      "position": 4,
       "properties": {
         "name": "Wrap Up"
       },
@@ -104,7 +115,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetryHoC_addBackground_v3"
+          "poetry_hoc_backgroundEffects"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -112,7 +123,7 @@
         "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc"
       },
       "level_keys": [
-        "poetryHoC_addBackground_v3"
+        "poetry_hoc_backgroundEffects"
       ]
     },
     {
@@ -125,7 +136,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetry_exemplar1"
+          "poetry_hoc_exemplar1"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -133,7 +144,7 @@
         "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc"
       },
       "level_keys": [
-        "poetry_exemplar1"
+        "poetry_hoc_exemplar1"
       ]
     },
     {
@@ -146,7 +157,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetryHoC_addSound_v3"
+          "poetry_hoc_sounds"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -154,7 +165,7 @@
         "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc"
       },
       "level_keys": [
-        "poetryHoC_addSound_v3"
+        "poetry_hoc_sounds"
       ]
     },
     {
@@ -167,7 +178,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetryHoC_events1_v3"
+          "poetry_hoc_events1"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -175,7 +186,7 @@
         "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc"
       },
       "level_keys": [
-        "poetryHoC_events1_v3"
+        "poetry_hoc_events1"
       ]
     },
     {
@@ -188,7 +199,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetry_exemplar2"
+          "poetry_hoc_exemplar2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -196,7 +207,7 @@
         "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc"
       },
       "level_keys": [
-        "poetry_exemplar2"
+        "poetry_hoc_exemplar2"
       ]
     },
     {
@@ -209,7 +220,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetryHoC_addSprites_v2"
+          "poetry_hoc_addSprites"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -217,7 +228,7 @@
         "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc"
       },
       "level_keys": [
-        "poetryHoC_addSprites_v2"
+        "poetry_hoc_addSprites"
       ]
     },
     {
@@ -230,7 +241,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetryHoC_spriteProperties_v2"
+          "poetry_hoc_spriteBehaviors"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -238,7 +249,7 @@
         "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc"
       },
       "level_keys": [
-        "poetryHoC_spriteProperties_v2"
+        "poetry_hoc_spriteBehaviors"
       ]
     },
     {
@@ -251,7 +262,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetryHoC_spriteBehaviors_v2"
+          "poetry_hoc_spriteSizes"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -259,7 +270,7 @@
         "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc"
       },
       "level_keys": [
-        "poetryHoC_spriteBehaviors_v2"
+        "poetry_hoc_spriteSizes"
       ]
     },
     {
@@ -272,7 +283,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetryHoC_freePlay_v2"
+          "poetry_hoc_freeplay"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -280,16 +291,16 @@
         "activity_section.key": "59df14b7-1344-480b-8b6b-3fc94684b8bc"
       },
       "level_keys": [
-        "poetryHoC_freePlay_v2"
+        "poetry_hoc_freeplay"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "poetryHoC_addBackground_v3",
+        "level.key": "poetry_hoc_backgroundEffects",
         "script_level.level_keys": [
-          "poetryHoC_addBackground_v3"
+          "poetry_hoc_backgroundEffects"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -299,9 +310,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetry_exemplar1",
+        "level.key": "poetry_hoc_exemplar1",
         "script_level.level_keys": [
-          "poetry_exemplar1"
+          "poetry_hoc_exemplar1"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -311,9 +322,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetryHoC_addSound_v3",
+        "level.key": "poetry_hoc_sounds",
         "script_level.level_keys": [
-          "poetryHoC_addSound_v3"
+          "poetry_hoc_sounds"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -323,9 +334,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetryHoC_events1_v3",
+        "level.key": "poetry_hoc_events1",
         "script_level.level_keys": [
-          "poetryHoC_events1_v3"
+          "poetry_hoc_events1"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -335,9 +346,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetry_exemplar2",
+        "level.key": "poetry_hoc_exemplar2",
         "script_level.level_keys": [
-          "poetry_exemplar2"
+          "poetry_hoc_exemplar2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -347,9 +358,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetryHoC_addSprites_v2",
+        "level.key": "poetry_hoc_addSprites",
         "script_level.level_keys": [
-          "poetryHoC_addSprites_v2"
+          "poetry_hoc_addSprites"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -359,9 +370,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetryHoC_spriteProperties_v2",
+        "level.key": "poetry_hoc_spriteBehaviors",
         "script_level.level_keys": [
-          "poetryHoC_spriteProperties_v2"
+          "poetry_hoc_spriteBehaviors"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -371,9 +382,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetryHoC_spriteBehaviors_v2",
+        "level.key": "poetry_hoc_spriteSizes",
         "script_level.level_keys": [
-          "poetryHoC_spriteBehaviors_v2"
+          "poetry_hoc_spriteSizes"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -383,9 +394,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetryHoC_freePlay_v2",
+        "level.key": "poetry_hoc_freeplay",
         "script_level.level_keys": [
-          "poetryHoC_freePlay_v2"
+          "poetry_hoc_freeplay"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
