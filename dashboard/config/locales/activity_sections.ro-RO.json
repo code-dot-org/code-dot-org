@@ -2,6 +2,13 @@
   "ro-RO": {
     "data": {
       "activity_sections": {
+        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+          "progression_name": "Bine ai venit în Orașul Monștrilor"
+        },
+        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
+          "name": "Joc la liber",
+          "progression_name": "Joc la liber"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Introducere"
         },

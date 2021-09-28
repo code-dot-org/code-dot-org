@@ -176,6 +176,8 @@ id:
           lessons:
             Artist:
               name: Artis
+              description_student: Buat gambar-gambar yang indah dengan memprogram Artis.
+              description_teacher: Dalam pelajaran ini, murid akan mengontrol Artis untuk menyelesaikan gambar di layar. Tahapan Artis ini akan mempersilakan murid membuat gambar-gambar yang semakin kompleks menggunakan blok baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.
           student_description: Gambarlah gambar dan desain-desain yang keren dengan the Artist!
         hourofcode:
           title: Labirin Klasik
@@ -1666,6 +1668,7 @@ id:
           lessons:
             Oceans:
               name: Oceans
+              description_student: 'Ringkasan Tutorial: Pertama murid menggolongkan objek sebagai “ikan” atau “bukan ikan” sebagai upaya untuk membuang sampah dari lautan. Lalu, murid perlu memperluas himpunan data latihan agar mencakup makhluk laut lainnya yang tergolong hewan air. Di bagian kedua aktivitas, murid akan memilih label sendiri untuk diterapkan pada gambar ikan yang dibuat secara acak. Data latihan ini digunakan untuk sebuah model mesin pembelajaran yang lantas dapat melabeli sendiri gambar baru.'
           student_description: Pelajari cara menggunakan AI dan pembelajaran mesin untuk menyelesaikan masalah dunia nyata.
         CSPPD3-Unit3-pt2:
           lessons:
@@ -3399,6 +3402,8 @@ id:
           lessons:
             Bounce:
               name: Terpental
+              description_student: Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!
+              description_teacher: Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.
           student_description: Pilih tim Anda dan buat permainan basket
         sample-csp5:
           lessons:
@@ -3971,6 +3976,8 @@ id:
           lessons:
             Sports:
               name: Olahraga
+              description_student: Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!
+              description_teacher: Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.
           student_description: Padu dan padankan lintas olahraga
         2016_sciencePD-phase2b:
           lessons:
@@ -10088,7 +10095,7 @@ id:
               description_teacher: Berpijak pada konsep mengulang instruksi dari "Happy Loops," tahap ini akan meminta murid menggunakan loop untuk sampai ke biji akorn dengan lebih efisien di Code.org.
             Programming in Ice Age:
               name: Pemrograman dengan Scrat
-              description_student: Tulis pemrograman untuk membantu Scrat mencapai biji akorn.
+              description_student: Tulis program untuk membantu Scrat mencapai biji akorn.
               description_teacher: Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
             Programming with Rey and BB-8:
               name: Pemrograman dengan Rey dan BB-8
@@ -11864,7 +11871,7 @@ id:
               display_name: Survei
           lessons:
             CSD post-course survey:
-              name: Survei pascakursus CSD
+              name: Survei Pascakursus Murid CSD  ('18-'19)
         csp-post-survey-2018:
           title: Survei Pascakursus Murid CSP  ('18-'19)
           description_audience: Murid CSP
@@ -11875,7 +11882,7 @@ id:
               display_name: Survei
           lessons:
             CSP post-course survey:
-              name: Survei pascakursus CSP
+              name: Survei Pascakursus Murid CSP  ('18-'19)
           student_description: Selamat Datang di Survei Pascakursus CS Principles Code.org.  Survei ini membutuhkan kira-kira 15 menit sampai selesai. Tanggapan Anda bersifat privat dan anonim -- guru Anda dapat melihat hasil agregat anonim untuk seluruh kelas. Hasil survei sangat penting bagi guru Anda dan Code.org demi kelangsungan dan kesempurnaan kursus. Terima kasih atas waktu dan pertimbangan Anda.
         csp5-pilot:
           title: CSP Unit 5 Percontohan - Daftar, Loop, dan Traversal
@@ -14245,7 +14252,7 @@ id:
               description_student: Program Scrat untuk mencapai biji akorn.
             Programming in Ice Age:
               name: Pemrograman dengan Scrat
-              description_student: Tulis pemrograman untuk membantu Scrat mencapai biji akorn.
+              description_student: Tulis program untuk membantu Scrat mencapai biji akorn.
               description_teacher: Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
             Programming with Rey and BB-8:
               name: Pemrograman dengan Rey dan BB-8
@@ -16827,7 +16834,7 @@ id:
             Programming in Ice Age:
               key: Pemrograman dalam Zaman Es
               name: Pemrograman dengan Scrat
-              description_student: Tulis pemrograman untuk membantu Scrat mencapai biji akorn.
+              description_student: Tulis program untuk membantu Scrat mencapai biji akorn.
               description_teacher: Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
             Programming with Rey and BB-8:
               key: Pemrograman dengan Rey dan BB-8

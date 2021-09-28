@@ -1620,6 +1620,18 @@
         "international_outbreak_freeplay": {
           "recovering": "回復する",
           "moving left and right": "左右に動かす"
+        },
+        "helloworld_animals_events": {
+          "moving forward": "前に進める"
+        },
+        "helloworld_emoji_events": {
+          "moving forward": "前に進める"
+        },
+        "helloworld_food_events": {
+          "moving forward": "前に進める"
+        },
+        "helloworld_retro_events": {
+          "moving forward": "前に進める"
         }
       }
     }

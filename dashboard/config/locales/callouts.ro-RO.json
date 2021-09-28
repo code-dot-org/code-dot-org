@@ -364,6 +364,45 @@
         },
         "Underground Iron_2021": {
           "craft_what_is_iron": "Extrage acest fier!"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Bloc nou!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Bloc nou!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Bloc nou!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Bloc nou!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Bloc nou!",
+          "hello_world_new_block": "Bloc nou!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Bloc nou!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Bloc nou!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Bloc nou!",
+          "hello_world_new_block": "Bloc nou!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Bloc nou!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Bloc nou!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Bloc nou!",
+          "hello_world_new_block": "Bloc nou!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Bloc nou!"
         }
       }
     }

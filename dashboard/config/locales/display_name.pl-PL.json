@@ -546,7 +546,19 @@
         "scrat_loops_C-F_video_2021": "Pętle w filmie wideo \"Epoka Lodowcowa\"",
         "courseF_apps_aquarium": "Wirtualne akwarium",
         "courseF_apps_chatbot": "Chat Bot X-9",
-        "international_outbreak_freeplay": "Udostępnij wiadomość"
+        "international_outbreak_freeplay": "Udostępnij wiadomość",
+        "helloworld_animals_costumes": "Kostiumy",
+        "helloworld_animals_sizes": "Rozmiar",
+        "helloworld_animals_sounds": "Dźwięki",
+        "helloworld_emoji_costumes": "Kostiumy",
+        "helloworld_emoji_sizes": "Rozmiar",
+        "helloworld_emoji_sounds": "Dźwięki",
+        "helloworld_food_costumes": "Kostiumy",
+        "helloworld_food_sizes": "Rozmiar",
+        "helloworld_food_sounds": "Dźwięki",
+        "helloworld_retro_costumes": "Kostiumy",
+        "helloworld_retro_sizes": "Rozmiar",
+        "helloworld_retro_sounds": "Dźwięki"
       }
     }
   }

@@ -79,7 +79,15 @@
         "CourseF_outbreak6": "Pomozte svým sprajtům automaticky se časem zlepšovat!",
         "CourseF_outbreak7": "Virus nebývá vždy přenášen a také roušky ne vždy zabrání přenosu. Zlepšete svou simulaci tím, že způsobíte, aby k infekcím docházelo náhodně.",
         "CourseF_outbreak8": "Zamezte onemocnění svých sprajtů tím, že jim dáte imunitu.",
-        "international_outbreak_freeplay": "Použijte tento projekt ke sdělení nějakého sdělení. Co chcete, aby se ostatní na základě tohoto naučili?"
+        "international_outbreak_freeplay": "Použijte tento projekt ke sdělení nějakého sdělení. Co chcete, aby se ostatní na základě tohoto naučili?",
+        "helloworld_animals_location": "Způsobte, aby sprajt po uplynutí určité doby zahájil nějaké nové chování.",
+        "helloworld_animals_sizes": "Naučte se měnit velikost sprajtů.",
+        "helloworld_emoji_location": "Způsobte, aby sprajt po uplynutí určité doby zahájil nějaké nové chování.",
+        "helloworld_emoji_sizes": "Naučte se měnit velikost sprajtů.",
+        "helloworld_food_location": "Způsobte, aby sprajt po uplynutí určité doby zahájil nějaké nové chování.",
+        "helloworld_food_sizes": "Naučte se měnit velikost sprajtů.",
+        "helloworld_retro_location": "Způsobte, aby sprajt po uplynutí určité doby zahájil nějaké nové chování.",
+        "helloworld_retro_sizes": "Naučte se měnit velikost sprajtů."
       }
     }
   }
