@@ -5,8 +5,7 @@ import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
 
 export default function ProgrammingExpressionEditor({
-  initialProgrammingExpression,
-  videoOptions
+  initialProgrammingExpression
 }) {
   const [name, setName] = useState(initialProgrammingExpression.name);
   const [shortDescription, setShortDescription] = useState(
@@ -16,9 +15,6 @@ export default function ProgrammingExpressionEditor({
     initialProgrammingExpression.lastUpdated
   );
   const [isSaving, setIsSaving] = useState(false);
-  const [videoKey, setVideoKey] = useState(
-    initialProgrammingExpression.videoKey || ''
-  );
 
   useEffect(() => {
     if (isSaving) {
@@ -30,8 +26,7 @@ export default function ProgrammingExpressionEditor({
         data: JSON.stringify({
           id: initialProgrammingExpression.id,
           name: name,
-          shortDescription: shortDescription,
-          videoKey: videoKey
+          shortDescription: shortDescription
         })
       }).done(data => {
         setIsSaving(false);
@@ -59,21 +54,6 @@ export default function ProgrammingExpressionEditor({
           style={styles.textInput}
         />
       </label>
-      <label>
-        Video
-        <select
-          value={videoKey}
-          onChange={e => setVideoKey(e.target.value)}
-          style={styles.selectInput}
-        >
-          <option value={''}>---</option>
-          {videoOptions.map(video => (
-            <option key={video.key} value={video.key}>
-              {video.name}
-            </option>
-          ))}
-        </select>
-      </label>
       <TextareaWithMarkdownPreview
         markdown={shortDescription}
         label={'Short Description'}
@@ -93,10 +73,7 @@ export default function ProgrammingExpressionEditor({
 }
 
 ProgrammingExpressionEditor.propTypes = {
-  initialProgrammingExpression: PropTypes.object.isRequired,
-  videoOptions: PropTypes.arrayOf(
-    PropTypes.shape({key: PropTypes.string, name: PropTypes.string})
-  ).isRequired
+  initialProgrammingExpression: PropTypes.object.isRequired
 };
 
 const styles = {
