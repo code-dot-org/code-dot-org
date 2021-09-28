@@ -400,7 +400,7 @@ class Documents < Sinatra::Base
           locals = split[1].scan(/("(?:\\.|[^"])*"|[^\s]*):\s*("(?:\\.|[^"])*"|[^\s]*)/).
             map(&:compact).
             to_h.
-            transform_values(&:undump)
+            transform_values {|v| @actionview.sanitize(v.undump)}
 
           result = view(uri, locals, !locals.empty?)
           locals.each {|k, v| result.gsub!("%#{k}%", v)}
