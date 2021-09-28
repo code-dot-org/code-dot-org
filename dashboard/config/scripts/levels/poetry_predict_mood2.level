@@ -64,7 +64,7 @@
   "level_num": "custom",
   "user_id": 831,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-21T18:45:58.503+00:00\",\"changed\":[\"cloned from \\\"poetry_predict_mood1\\\"\"],\"cloned_from\":\"poetry_predict_mood1\"},{\"changed_at\":\"2021-09-21 18:52:05 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 18:52:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 20:25:13 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-21T18:45:58.503+00:00\",\"changed\":[\"cloned from \\\"poetry_predict_mood1\\\"\"],\"cloned_from\":\"poetry_predict_mood1\"},{\"changed_at\":\"2021-09-21 18:52:05 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 18:52:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 20:25:13 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-23 16:21:26 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

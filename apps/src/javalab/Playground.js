@@ -1,6 +1,21 @@
-import {PlaygroundSignalType} from './constants';
+import {
+  PlaygroundSignalType,
+  PlaygroundItemType,
+  WebSocketMessageType
+} from './constants';
 import {assets, starterAssets} from '@cdo/apps/clientApi';
 import javalabMsg from '@cdo/javalab/locale';
+import {getStore} from '../redux';
+import {
+  addItemData,
+  removeItemData,
+  changeItemData,
+  setItemData,
+  getItemIds
+} from './playgroundRedux';
+import color from '@cdo/apps/util/color';
+
+const DEFAULT_BACKGROUND_COLOR = color.white;
 
 export default class Playground {
   constructor(
@@ -24,11 +39,25 @@ export default class Playground {
     this.starterAssetsApi = starterAssetsApi || starterAssets;
     this.assetsApi = assetsApi || assets;
 
+    this.addPlaygroundItem = (itemId, itemData) =>
+      getStore().dispatch(addItemData(itemId, itemData));
+    this.removePlaygroundItem = itemId =>
+      getStore().dispatch(removeItemData(itemId));
+    this.changePlaygroundItem = (itemId, itemData) =>
+      getStore().dispatch(changeItemData(itemId, itemData));
+    this.setPlaygroundItems = itemData =>
+      getStore().dispatch(setItemData(itemData));
+
     this.starterAssetsApi.getStarterAssets(
       levelName,
       this.onStarterAssetsReceived,
       () => {}
     );
+  }
+
+  onStop() {
+    this.endGame();
+    this.resetAudioElement();
   }
 
   onStarterAssetsReceived = result => {
@@ -49,8 +78,7 @@ export default class Playground {
         this.isGameRunning = true;
         break;
       case PlaygroundSignalType.EXIT:
-        this.isGameRunning = false;
-        this.isGameOver = true;
+        this.endGame();
         break;
       case PlaygroundSignalType.ADD_CLICKABLE_ITEM:
         this.addClickableItem(data.detail);
@@ -77,17 +105,33 @@ export default class Playground {
   }
 
   addClickableItem(itemData) {
-    if (this.isGameOver) {
-      // can't add new items if the game is over
-      return;
-    }
+    this.addImageHelper(itemData, true);
   }
 
   addImageItem(itemData) {
-    if (this.isGameOver) {
-      // can't add new items if the game is over
+    this.addImageHelper(itemData, false);
+  }
+
+  addImageHelper(itemData, isClickable) {
+    // ignore request if the game is over or if the item already exists
+    if (this.isGameOver || this.imageItemExists(itemData)) {
       return;
     }
+
+    const imageData = {
+      fileUrl: this.getUrl(itemData.filename),
+      x: itemData.x,
+      y: itemData.y,
+      height: itemData.height,
+      width: itemData.width,
+      index: itemData.index,
+      isClickable: isClickable,
+      type: PlaygroundItemType.IMAGE
+    };
+    if (isClickable) {
+      imageData.onClick = () => this.handleImageClick(itemData.id);
+    }
+    this.addPlaygroundItem(itemData.id, imageData);
   }
 
   addTextItem(itemData) {
@@ -102,6 +146,10 @@ export default class Playground {
       // can't remove items if game is over
       return;
     }
+    if (this.imageItemExists(itemData)) {
+      this.removePlaygroundItem(itemData.id);
+    }
+    // TODO: handle text deletion
   }
 
   changeItem(itemData) {
@@ -109,6 +157,16 @@ export default class Playground {
       // can't change items if game is over
       return;
     }
+    if (this.imageItemExists(itemData)) {
+      const newImageData = {...itemData};
+      if (itemData.filename) {
+        newImageData.fileUrl = this.getUrl(itemData.filename);
+        // we don't need to pass filename as imageData
+        delete newImageData.filename;
+      }
+      this.changePlaygroundItem(itemData.id, newImageData);
+    }
+    // TODO: handle text changes
   }
 
   playSound(soundData) {
@@ -116,6 +174,8 @@ export default class Playground {
       // can't play sound if game is over
       return;
     }
+
+    this.setMediaElement(this.getAudioElement(), soundData.filename);
   }
 
   setBackgroundImage(backgroundData) {
@@ -125,27 +185,34 @@ export default class Playground {
     }
 
     const filename = backgroundData.filename;
-
     const backgroundElement = this.getBackgroundElement();
-    backgroundElement.onerror = () => {
+    this.setMediaElement(backgroundElement, filename);
+    backgroundElement.style.opacity = 1.0;
+  }
+
+  setMediaElement(element, filename) {
+    element.onerror = () => {
       this.onFileLoadError(filename);
     };
-    backgroundElement.src = this.getUrl(filename);
-    backgroundElement.style.opacity = 1.0;
+    element.src = this.getUrl(filename);
   }
 
   reset() {
     this.isGameOver = false;
     this.isGameRunning = false;
+    // reset playground items to be empty
+    this.setPlaygroundItems({});
     this.resetBackgroundElement();
+    this.resetAudioElement();
+    this.resetContainer();
   }
 
-  // TODO: Call this from click handler on new clickable items
   handleImageClick(imageId) {
     if (this.isGameOver || !this.isGameRunning) {
       // can only handle click events if game is not over and game is running
       return;
     }
+    this.onJavabuilderMessage(WebSocketMessageType.PLAYGROUND, imageId);
   }
 
   getUrl(filename) {
@@ -162,10 +229,42 @@ export default class Playground {
     return document.getElementById('playground-background');
   }
 
+  getAudioElement() {
+    return document.getElementById('playground-audio');
+  }
+
+  getContainer() {
+    return document.getElementById('playground-container');
+  }
+
+  resetAudioElement() {
+    const audioElement = this.getAudioElement();
+    audioElement.pause();
+    this.resetMediaElement(audioElement);
+  }
+
   resetBackgroundElement() {
     const backgroundElement = this.getBackgroundElement();
-    backgroundElement.onerror = undefined;
-    backgroundElement.src = undefined;
     backgroundElement.style.opacity = 0.0;
+    this.resetMediaElement(backgroundElement);
+  }
+
+  resetMediaElement(element) {
+    element.onerror = undefined;
+    element.src = '';
+  }
+
+  resetContainer() {
+    const containerElement = this.getContainer();
+    containerElement.style.backgroundColor = DEFAULT_BACKGROUND_COLOR;
+  }
+
+  endGame() {
+    this.isGameRunning = false;
+    this.isGameOver = true;
+  }
+
+  imageItemExists(itemData) {
+    return getItemIds(getStore().getState().playground).includes(itemData.id);
   }
 }

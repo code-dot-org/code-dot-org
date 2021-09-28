@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA U5L7 Template",
+    "long_instructions": "use reversedimage",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-09-24T18:41:11.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-09-24 18:41:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-24 18:41:55 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
