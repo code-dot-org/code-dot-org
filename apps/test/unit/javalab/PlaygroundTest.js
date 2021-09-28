@@ -1,7 +1,10 @@
 import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 import Playground from '@cdo/apps/javalab/Playground';
-import {PlaygroundSignalType} from '@cdo/apps/javalab/constants';
+import {
+  PlaygroundSignalType,
+  WebSocketMessageType
+} from '@cdo/apps/javalab/constants';
 import javalabMsg from '@cdo/javalab/locale';
 import {
   getStore,
@@ -10,7 +13,6 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import playgroundRedux from '@cdo/apps/javalab/playgroundRedux';
-import {WebSocketMessageType} from '../../../src/javalab/constants';
 
 describe('Playground', () => {
   const levelName = 'level';
@@ -27,7 +29,8 @@ describe('Playground', () => {
     onJavabuilderMessage,
     starterAssetsApi,
     assetsApi,
-    playground;
+    playground,
+    setIsProgramRunning;
 
   beforeEach(() => {
     stubRedux();
@@ -35,6 +38,7 @@ describe('Playground', () => {
     onOutputMessage = sinon.stub();
     onNewlineMessage = sinon.stub();
     onJavabuilderMessage = sinon.stub();
+    setIsProgramRunning = sinon.stub();
     starterAssetsApi = {
       getStarterAssets: (levelName, onSuccess, onFailure) => {
         onSuccess({
@@ -62,6 +66,7 @@ describe('Playground', () => {
       onNewlineMessage,
       onJavabuilderMessage,
       levelName,
+      setIsProgramRunning,
       starterAssetsApi,
       assetsApi
     );
@@ -411,6 +416,11 @@ describe('Playground', () => {
     const imageId = 'test';
     playground.handleImageClick(imageId);
     expect(onJavabuilderMessage).to.not.have.been.called;
+  });
+
+  it('sets isProgramRunning to false onStop', () => {
+    playground.onClose();
+    expect(setIsProgramRunning).to.have.been.calledWith(false);
   });
 
   function verifyOnFileLoadError(filename) {
