@@ -53,7 +53,7 @@ class PlaygroundVisualizationColumn extends React.Component {
           showPreviewTitle={false}
           toggleVisualizationCollapsed={toggleVisualizationCollapsed}
         />
-        <div style={{opacity}}>
+        <div style={{...styles.playgroundPreviewBackground, opacity}}>
           <div
             className={classNames({responsive: this.props.isResponsive})}
             id="visualization"
@@ -77,7 +77,6 @@ class PlaygroundVisualizationColumn extends React.Component {
 
 const styles = {
   playground: {
-    backgroundColor: 'white',
     width: 800,
     height: 800
   },
@@ -94,6 +93,12 @@ const styles = {
     left: 0,
     opacity: 0,
     zIndex: -1
+  },
+  playgroundPreviewBackground: {
+    backgroundImage: 'url("/blockly/media/javalab/Playground.png")',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'top'
   }
 };
 
