@@ -855,13 +855,13 @@ pl:
         codebreak_e11: Odcinek 11.0 - Abstrakcja z Susan Wojcicki & China Anne McClain
         codebreak_e12: Odcinek 12.0 - Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą
           Mejią Minaya
-        csf21pilot_events: 'Sprite Lab: Duszki w akcji (CSF 2021 Pilotaż)'
-        csf21pilot_prompts: 'Sprite Lab: Tekst i zachęty (Pilotaż CSF 2021) '
+        csf21pilot_events: 'Sprite Lab: Duszki w akcji'
+        csf21pilot_prompts: 'Sprite Lab: Tekst i zachęty'
         outbreak_mike: Epizod CodeBytes 3 z Mikiem - Symulator pandemii
         poembot-pilot-prompts: Haiku Boty - Monituj z wyborem [PILOT]
         poembot-pilot-text: Haiku Boty - Zachowanie tekstu [PILOT]
         poembot-pilot-haiku: Haiku Boty - Pokaż swoje Haiku [PILOT]
-        csd_ml_intro_to_ai_lab: Lekcja 6
+        csd_ml_intro_to_ai_lab: Wprowadzenie do AI Lab
         csd_ml_import_model: Importowanie modelu AI
         csf_lots_of_sprites: 'Sprite Lab: Wiele duszków'
         playlab_2021: Wprowadzenie do Play Lab
@@ -872,7 +872,7 @@ pl:
         PL-Video-21: Zapraszamy do profesjonalnej nauki w Code.org!
         csp_tutorial_datavis1: Wizualizator danych w App Lab — część 1
         csp_tutorial_datavis2: Wizualizator danych w App Lab — część 2
-        csd_ml_intro_ai_lab_july2021: Lekcja 6
+        csd_ml_intro_ai_lab_july2021: Wprowadzenie do AI Lab
         csd_ml_training_testing_ai_lan: Szkolenie i testowanie w AI Lab
         csd_ml_model_cards_july2021: Karty modeli w AI Lab
         Gettting_Started_Progress: Postęp, informacje zwrotne i ocena
@@ -889,6 +889,9 @@ pl:
           w parach
         PL_CSD_TeacherTips_Debugging: Wskazówki dla nauczycieli — Debugowanie
         PL_CSD_TeacherTips_LeadLearner: Wskazówki dla nauczycieli — Prowadzący uczeń
+        poembot-playtest-intro: Wprowadzenie do PoemBot Playtest
+        poembot-playtest-sprites: Duszki PoemBot Playtest
+        poembot-playtest-events: Zdarzenia PoemBot Playtest
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

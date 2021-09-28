@@ -230,6 +230,13 @@ si:
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': දකුණ
+            '90': යට
+            '180': වම
+            '270': උඩ
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -239,6 +246,7 @@ si:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_digital/jump_7.mp3'": පනින්න
       gamelab_randColor:
         text: අහඹු වර්ණයක්
       gamelab_randomColor:

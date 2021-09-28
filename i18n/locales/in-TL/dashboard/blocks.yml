@@ -1168,10 +1168,19 @@ in:
             '"burst"': crwdns2692825:0crwdne2692825:0
             '"pop"': crwdns2692827:0crwdne2692827:0
             '"rain"': crwdns2692829:0crwdne2692829:0
+            '"zigzag"': crwdns2693583:0crwdne2693583:0
       gamelab_makeNewSpriteAnon:
         text: crwdns401076:0[ANIMATION_NAME]crwdnd401076:0[0]crwdnd401076:0[LOCATION]crwdnd401076:0[1]crwdne401076:0
       gamelab_makeNumSprites:
         text: crwdns2463966:0[NUM]crwdnd2463966:0[0]crwdnd2463966:0[ANIMATION_NAME]crwdnd2463966:0[1]crwdne2463966:0
+      gamelab_makeProjectile:
+        text: crwdns2693585:0[ANIMATION_NAME]crwdnd2693585:0[0]crwdnd2693585:0[LOCATION]crwdnd2693585:0[1]crwdnd2693585:0[SPEED]crwdnd2693585:0[2]crwdnd2693585:0[DIRECTION]crwdnd2693585:0[3]crwdne2693585:0
+        options:
+          DIRECTION:
+            '0': crwdns2693587:0crwdne2693587:0
+            '90': crwdns2693589:0crwdne2693589:0
+            '180': crwdns2693591:0crwdne2693591:0
+            '270': crwdns2693593:0crwdne2693593:0
       gamelab_mirrorSprite:
         text: crwdns169085:0[SPRITE]crwdnd169085:0[0]crwdnd169085:0[DIRECTION]crwdnd169085:0[1]crwdne169085:0
         options:
@@ -1208,9 +1217,25 @@ in:
           SOUND:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": crwdns2692833:0crwdne2692833:0
             "'sound://category_digital/boing_2.mp3'": crwdns2692835:0crwdne2692835:0
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": crwdns2693795:0crwdne2693795:0
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": crwdns2693797:0crwdne2693797:0
             "'sound://category_app/app_button_1.mp3'": crwdns2692837:0crwdne2692837:0
             "'sound://category_collect/clicky_crunch.mp3'": crwdns2692839:0crwdne2692839:0
             "'sound://category_swish/quick_swing.mp3'": crwdns2692841:0crwdne2692841:0
+            "'sound://category_nature/summer_night_loop.mp3'": crwdns2693799:0crwdne2693799:0
+            "'sound://category_background/ocean_waves.mp3'": crwdns2693801:0crwdne2693801:0
+            "'sound://category_animals/dolphin.mp3'": crwdns2693803:0crwdne2693803:0
+            "'sound://category_nature/thunderstorm_1.mp3'": crwdns2693805:0crwdne2693805:0
+            "'sound://category_animals/chick.mp3'": crwdns2693807:0crwdne2693807:0
+            "'sound://category_animals/dog.mp3'": crwdns2693809:0crwdne2693809:0
+            "'sound://category_animals/tiger.mp3'": crwdns2693811:0crwdne2693811:0
+            "'sound://category_transition/trippy_robotic_transition.mp3'": crwdns2693813:0crwdne2693813:0
+            "'sound://category_transition/star_dust_particle_10.mp3'": crwdns2693815:0crwdne2693815:0
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": crwdns2693817:0crwdne2693817:0
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": crwdns2693819:0crwdne2693819:0
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": crwdns2693821:0crwdne2693821:0
+            "'sound://category_retro/retro_game_classic_player_death_9.mp3'": crwdns2693823:0crwdne2693823:0
+            "'sound://category_digital/jump_7.mp3'": crwdns2693825:0crwdne2693825:0
       gamelab_playSpeech:
         text: crwdns2692843:0[SOUND]crwdnd2692843:0[0]crwdne2692843:0
       gamelab_pointInDirection:
@@ -1830,8 +1855,12 @@ in:
         text: crwdns2546980:0crwdne2546980:0
       PoemBot_addLine:
         text: crwdns2688416:0[LINE]crwdnd2688416:0[0]crwdne2688416:0
+      PoemBot_destroy:
+        text: crwdns2693757:0[ANIMATION_NAME]crwdnd2693757:0[0]crwdne2693757:0
       PoemBot_hidePoem:
         text: crwdns2692845:0crwdne2692845:0
+      PoemBot_makeNumSprites:
+        text: crwdns2693759:0[NUM]crwdnd2693759:0[0]crwdnd2693759:0[ANIMATION_NAME]crwdnd2693759:0[1]crwdne2693759:0
       PoemBot_playSound:
         text: crwdns2692847:0[SOUND]crwdnd2692847:0[0]crwdne2692847:0
         options:
@@ -1877,6 +1906,8 @@ in:
             '"grayscale"': crwdns2692907:0crwdne2692907:0
             '"rainbow"': crwdns2692909:0crwdne2692909:0
             '"roses"': crwdns2692911:0crwdne2692911:0
+      PoemBot_setBackgroundImageAs:
+        text: crwdns2693761:0[IMG]crwdnd2693761:0[0]crwdne2693761:0
       PoemBot_setFont:
         text: crwdns2692577:0[FONT]crwdnd2692577:0[0]crwdne2692577:0
         options:
@@ -1921,6 +1952,10 @@ in:
             '"rumi_2"': crwdns2692949:0crwdne2692949:0
             '"hughes_1"': crwdns2692951:0crwdne2692951:0
             '"hughes"': crwdns2692953:0crwdne2692953:0
+      PoemBot_setPrompt:
+        text: crwdns2693763:0[NAME]crwdnd2693763:0[0]crwdnd2693763:0[RIGHT_QUOTE]crwdnd2693763:0[1]crwdnd2693763:0[VAR]crwdnd2693763:0[2]crwdne2693763:0
+      PoemBot_setPromptWithChoices:
+        text: crwdns2693765:0[TEXT]crwdnd2693765:0[0]crwdnd2693765:0[RIGHT_QUOTE]crwdnd2693765:0[1]crwdnd2693765:0[VAR]crwdnd2693765:0[2]crwdnd2693765:0[A]crwdnd2693765:0[3]crwdnd2693765:0[RIGHT_QUOTE_A]crwdnd2693765:0[4]crwdnd2693765:0[LEFT_QUOTE_B]crwdnd2693765:0[5]crwdnd2693765:0[B]crwdnd2693765:0[6]crwdnd2693765:0[RIGHT_QUOTE_B]crwdnd2693765:0[7]crwdnd2693765:0[LEFT_QUOTE_C]crwdnd2693765:0[8]crwdnd2693765:0[C]crwdnd2693765:0[9]crwdnd2693765:0[RIGHT_QUOTE_C]crwdnd2693765:0[10]crwdne2693765:0
       PoemBot_setSize:
         text: crwdns2692955:0[SPRITE]crwdnd2692955:0[0]crwdnd2692955:0[VAL]crwdnd2692955:0[1]crwdne2692955:0
       PoemBot_setTextEffect:
@@ -1976,8 +2011,12 @@ in:
         text: crwdns2688588:0[LEFT_QUOTE]crwdnd2688588:0[0]crwdnd2688588:0[TEXT]crwdnd2688588:0[1]crwdnd2688588:0[RIGHT_QUOTE]crwdnd2688588:0[2]crwdne2688588:0
       PoemBot_textConcat:
         text: crwdns2688590:0[LEFT_QUOTE]crwdnd2688590:0[0]crwdnd2688590:0[TEXT1]crwdnd2688590:0[1]crwdnd2688590:0[TEXT2]crwdnd2688590:0[2]crwdnd2688590:0[RIGHT_QUOTE]crwdnd2688590:0[3]crwdne2688590:0
+      PoemBot_textVariableJoin:
+        text: crwdns2693767:0[VAR]crwdnd2693767:0[0]crwdnd2693767:0[TEXT2]crwdnd2693767:0[1]crwdne2693767:0
       PoemBot_whenLineShows:
         text: crwdns2692599:0[N]crwdnd2692599:0[0]crwdne2692599:0
+      PoemBot_whenPromptAnswered:
+        text: crwdns2693769:0[VAR]crwdnd2693769:0[0]crwdne2693769:0
       RyanLab_moveForward:
         text: crwdns241356:0crwdne241356:0
       RyanLab_readSound:
@@ -2093,71 +2132,6 @@ in:
             '"quarantining"': crwdns2658974:0crwdne2658974:0
             '"avoiding"': crwdns2658976:0crwdne2658976:0
             '"none"': crwdns2658978:0crwdne2658978:0
-      batman_batmanSay:
-        text: crwdns2688748:0[IMG]crwdnd2688748:0[0]crwdnd2688748:0[SPEECH]crwdnd2688748:0[1]crwdne2688748:0
-        options:
-          SPEECH:
-            '"I am Batman!"': crwdns2688750:0crwdne2688750:0
-            '"Being kind is never wasted."': crwdns2688752:0crwdne2688752:0
-            '"When you know better, you do better."': crwdns2688754:0crwdne2688754:0
-            '"You always pass failure on the way to success."': crwdns2688756:0crwdne2688756:0
-            '"Make each day your masterpiece."': crwdns2688758:0crwdne2688758:0
-      batman_batwomanSay:
-        text: crwdns2688760:0[IMG]crwdnd2688760:0[0]crwdnd2688760:0[SPEECH]crwdnd2688760:0[1]crwdne2688760:0
-        options:
-          SPEECH:
-            '"I am Batwoman!"': crwdns2688762:0crwdne2688762:0
-      batman_bruceSay:
-        text: crwdns2688764:0[IMG]crwdnd2688764:0[0]crwdnd2688764:0[SPEECH]crwdnd2688764:0[1]crwdne2688764:0
-        options:
-          SPEECH:
-            '"Call me Bruce"': crwdns2688766:0crwdne2688766:0
-            '"Being kind is never wasted."': crwdns2688768:0crwdne2688768:0
-            '"When you know better, you do better."': crwdns2688770:0crwdne2688770:0
-            '"You always pass failure on the way to success."': crwdns2688772:0crwdne2688772:0
-            '"Make each day your masterpiece."': crwdns2688774:0crwdne2688774:0
-      batman_catwomanSay:
-        text: crwdns2688776:0[IMG]crwdnd2688776:0[0]crwdnd2688776:0[SPEECH]crwdnd2688776:0[1]crwdne2688776:0
-        options:
-          SPEECH:
-            '"I am Catwoman!"': crwdns2688778:0crwdne2688778:0
-            '"Never quit!"': crwdns2688780:0crwdne2688780:0
-            '"Live Fast."': crwdns2688782:0crwdne2688782:0
-      batman_freezeSay:
-        text: crwdns2688784:0[IMG]crwdnd2688784:0[0]crwdnd2688784:0[SPEECH]crwdnd2688784:0[1]crwdne2688784:0
-        options:
-          SPEECH:
-            '"I''m Mr. Freeze!"': crwdns2688786:0crwdne2688786:0
-            '"Stay Cool!"': crwdns2688788:0crwdne2688788:0
-            '"Everyone, chill!"': crwdns2688790:0crwdne2688790:0
-            '"Cool party!"': crwdns2688792:0crwdne2688792:0
-            '"Allow me to break the ice."': crwdns2688794:0crwdne2688794:0
-            '"Tonight’s forecast… a freeze is coming!"': crwdns2688796:0crwdne2688796:0
-      batman_harleySay:
-        text: crwdns2688798:0[IMG]crwdnd2688798:0[0]crwdnd2688798:0[SPEECH]crwdnd2688798:0[1]crwdne2688798:0
-        options:
-          SPEECH:
-            '"I am Harley Quinn!"': crwdns2688800:0crwdne2688800:0
-      batman_jokerSay:
-        text: crwdns2688802:0[IMG]crwdnd2688802:0[0]crwdnd2688802:0[SPEECH]crwdnd2688802:0[1]crwdne2688802:0
-        options:
-          SPEECH:
-            '"I''m the Joker!"': crwdns2688804:0crwdne2688804:0
-      batman_nightwingSay:
-        text: crwdns2688806:0[IMG]crwdnd2688806:0[0]crwdnd2688806:0[SPEECH]crwdnd2688806:0[1]crwdne2688806:0
-        options:
-          SPEECH:
-            '"I am Nightwing!"': crwdns2688808:0crwdne2688808:0
-      batman_poisonivySay:
-        text: crwdns2688810:0[IMG]crwdnd2688810:0[0]crwdnd2688810:0[SPEECH]crwdnd2688810:0[1]crwdne2688810:0
-        options:
-          SPEECH:
-            '"I am Poison Ivy!"': crwdns2688812:0crwdne2688812:0
-      batman_robinSay:
-        text: crwdns2688814:0[IMG]crwdnd2688814:0[0]crwdnd2688814:0[SPEECH]crwdnd2688814:0[1]crwdne2688814:0
-        options:
-          SPEECH:
-            '"I am Robin!"': crwdns2688816:0crwdne2688816:0
       binary_drawBin:
         text: crwdns391332:0[BIN]crwdnd391332:0[0]crwdne391332:0
       binary_drawBinScreen:

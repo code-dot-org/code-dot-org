@@ -276,11 +276,21 @@ class Lesson < ApplicationRecord
   end
 
   def localized_name
-    if script.lessons.many?
+    # The behavior to show the script title instead of the lesson name in
+    # single-lesson scripts is deprecated.
+    #
+    # TODO(dave): once all scripts with exactly one lesson are migrated and no longer
+    # using legacy lesson plans, remove this condition and consolidate with
+    # localized_name_for_lesson_show.
+    if script.lessons.many? || (script.is_migrated && !script.use_legacy_lesson_plans)
       I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
+  end
+
+  def localized_name_for_lesson_show
+    I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
   end
 
   def localized_lesson_plan
@@ -402,7 +412,9 @@ class Lesson < ApplicationRecord
     # a user trying to edit a lesson plan via /s/[script-name]/lessons/1/edit
     # has sufficient permissions or not. therefore, use a different path
     # when editing lesson plans in hoc scripts.
-    ScriptConfig.hoc_scripts.include?(script.name) ? edit_lesson_path(id: id) : script_lesson_edit_path(script, self)
+    has_lesson_plan && !ScriptConfig.hoc_scripts.include?(script.name) ?
+      script_lesson_edit_path(script, self) :
+      edit_lesson_path(id: id)
   end
 
   def get_uncached_show_path
@@ -499,7 +511,7 @@ class Lesson < ApplicationRecord
       position: relative_position,
       lockable: lockable,
       key: key,
-      displayName: localized_name,
+      displayName: localized_name_for_lesson_show,
       overview: render_property(:overview),
       announcements: announcements,
       purpose: render_property(:purpose),

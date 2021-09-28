@@ -27130,3 +27130,27 @@ fr:
               name: Accéléromètre
             lesson-19:
               name: Projet
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Outils
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Leçons
+            lessonGroup-3:
+              display_name: Projet
+        csa4-exemplars:
+          lessons:
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lesson group:
+              display_name: Contenu
+            content:
+              display_name: Contenu
+            lesson_group:
+              display_name: Contenu
+            lessonGroup-2:
+              display_name: Contenu

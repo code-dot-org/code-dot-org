@@ -1094,6 +1094,13 @@ sv:
             '"rain"': regn
       gamelab_makeNewSpriteAnon:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': höger
+            '90': ner
+            '180': vänster
+            '270': upp
       gamelab_mirrorSprite:
         text: "{SPRITE} Ansikte {DIRECTION}"
         options:
@@ -1119,6 +1126,7 @@ sv:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": krasch
+            "'sound://category_digital/jump_7.mp3'": hoppa
       gamelab_pointInDirection:
         text: Punkt {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1558,6 +1566,8 @@ sv:
             '"ripples"': Krusningar
           PALETTE:
             '"rainbow"': Regnbåge
+      PoemBot_setBackgroundImageAs:
+        text: ställa in bakgrunden till {IMG}
       PoemBot_setForegroundEffect:
         text: ställ in förgrundseffekt {EFFECT}
         options:

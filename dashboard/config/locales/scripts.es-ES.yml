@@ -25,6 +25,7 @@ es:
         cspexams_category_name: Prueba de práctica de Principios de Ciencias de la
           Computación
         csp17_category_name: Principios de Ciencias de la Computación ('17-'18)
+        aiml_2021_category_name: IA / ML
         full_course_category_name: Cursos completos
         hoc_category_name: Hora del Código
         math_category_name: Matemáticas
@@ -1013,6 +1014,14 @@ es:
               name: Modelo misterioso
             Welcome Back!:
               name: "¡Hola otra vez!"
+        Testing:
+          title: Probando
+          description: Probando
+          description_short: Probando
+          lessons:
+            Testing:
+              name: Probando
+          student_description: Probando
         cspunit2:
           lessons:
             Algorithms Detour - Hard Problems TSP:
@@ -1057,6 +1066,8 @@ es:
               name: La necesidad de DNS
         algebraPD2a:
           title: Ciencias de la computación en álgebra PD
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Big Game - Animation:
               name: El gran juego - Animación
@@ -1088,6 +1099,7 @@ es:
               name: La receta de diseño
             Big GAme - Collision Detection:
               name: El gran juego - Detección de colisiones
+          student_description: Enseñar programación funcional a través de álgebra
         allthethings:
           title: "¡Todas las cosas!"
           description: Todos los tipos de niveles para las pruebas de la Interfaz
@@ -1194,6 +1206,8 @@ es:
           name: todo lo que hay
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Best Practices for Teaching Computer Science:
               name: Mejores prácticas para la enseñanza de ciencias de la computación
@@ -1219,6 +1233,7 @@ es:
               name: Panel del docente
             Writing Contracts:
               name: Contratos de redacción
+          student_description: Enseñar programación funcional a través de álgebra
         cspfacilitator:
           lessons:
             App Lab:
@@ -1261,6 +1276,8 @@ es:
             Planning:
               name: Planificación
         ECSPD2:
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unidad 1, Día 10 Contar una historia con datos
@@ -1283,6 +1300,7 @@ es:
               name: Cierre
             Unit 1, Days 1-2 What Is a Computer?:
               name: Unidad 1, Días 1-2 ¿Qué es un ordenador?
+          student_description: Enseñar programación funcional a través de álgebra
         equityPD:
           lessons:
             Equity PD:
@@ -1290,6 +1308,7 @@ es:
             Necessary Background:
               name: Experiencia necesaria
         algebraPD2:
+          title: CS en Algebra Parte 2
           lessons:
             Lesson Prep:
               name: Preparación de la lección
@@ -1304,6 +1323,8 @@ es:
             Welcome!:
               name: "¡Bienvenido!"
         sciencePD2b:
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Advanced StarLogo Nova:
               name: StarLogo Nova avanzado
@@ -1319,6 +1340,7 @@ es:
               name: "¡Bienvenido!"
             Wrap-Up:
               name: Cierre
+          student_description: Enseñar programación funcional a través de álgebra
         equity-pd:
           lessons:
             Code.org Equity PD:
@@ -1352,6 +1374,8 @@ es:
             Next Steps:
               name: Próximos pasos
         sciencePD2b-iZone:
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Advanced StarLogo Nova:
               name: StarLogo Nova avanzado
@@ -1367,7 +1391,10 @@ es:
               name: "¡Bienvenido!"
             Wrap-Up:
               name: Cierre
+          student_description: Enseñar programación funcional a través de álgebra
         ECSPD2-iZone:
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unidad 1, Día 10 Contar una historia con datos
@@ -1390,7 +1417,10 @@ es:
               name: Cierre
             Unit 1, Days 1-2 What Is a Computer?:
               name: Unidad 1, Días 1-2 ¿Qué es un ordenador?
+          student_description: Enseñar programación funcional a través de álgebra
         ECSPD2-NexTech:
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unidad 1, Día 10 Contar una historia con datos
@@ -1413,6 +1443,7 @@ es:
               name: Cierre
             Unit 1, Days 1-2 What Is a Computer?:
               name: Unidad 1, Días 1-2 ¿Qué es un ordenador?
+          student_description: Enseñar programación funcional a través de álgebra
         CSPPD2:
           lessons:
             Getting Started:
@@ -1999,6 +2030,7 @@ es:
             Middle_School_Hackathon:
               name: Hackatón_Escuela_Secundaria
         algebraPD1:
+          title: CS en Algebra Parte 1
           description: Enseñar álgebra a través de programación funcional
           lessons:
             Course Overview:
@@ -3180,6 +3212,7 @@ es:
             conceptos de programación y el proceso de diseño que usan los científicos
             informáticos a diario, añade juegos más sofisticados basados en sprites.
             En el proyecto final, desarrollarás un programa personalizado e interactivo."
+          description_short: Programación
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imágenes y animaciones'
@@ -4909,6 +4942,7 @@ es:
             Loops in Harvester:
               name: Bucles en la cosechadora
         coursed-draft:
+          title: 'Fundamentos de Ciencias de la Computación: Curso D'
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           lessons:
@@ -5543,6 +5577,7 @@ es:
             estudiantes deberían contar con experiencia en Ciencias de la Computación
             y tener la capacidad de divertirse mientras crean algo.
         coursed-ramp:
+          title: 'Fundamentos de Ciencias de la Computación: Curso D'
           lessons:
             Introduction:
               name: Introducción
@@ -9285,6 +9320,8 @@ es:
               name: Implementación de la encuesta final de CSD de 2019
             Place for testing crazy stuff:
               name: Un lugar para probar cosas locas
+            CSD pre-survey 2021:
+              name: Encuesta previa a CSD 2021
         k1hoc2017:
           title: Hora del Código para escuela primaria 2017
           lessons:
@@ -17416,6 +17453,8 @@ es:
               display_name: 'Colección 1: Everglades y sus ecosistemas'
             time4cs_c2:
               display_name: 'Colección 2: Cadenas de comida (en Everglades)'
+            time4cs_c3:
+              display_name: Vivir en Everglades
             time4cs_c4:
               display_name: 'Colección 4: El impacto de las especies invasivas (en
                 Everglades)'
@@ -17677,6 +17716,8 @@ es:
               name: Proyecto - Diseñar una aplicación Parte 3
             Project - Designing an App Part 4:
               name: Proyecto - Diseñar una aplicación Parte 4
+            The Need for Programming Languages:
+              name: La necesidad de lenguajes de programación
         csp4-pilot-staging:
           title: 'Unidad 4: Variables, condicionales y funciones'
           lesson_groups:
@@ -19261,6 +19302,8 @@ es:
               name: Proyecto - Diseñar una aplicación Parte 4
             'Project: Share Your App':
               name: 'Proyecto: comparte tu aplicación'
+            The Need for Programming Languages:
+              name: La necesidad de lenguajes de programación
             'Project: Finish Your App':
               name: 'Proyecto: finalizar tu aplicación'
             Programs Explore:
@@ -19282,6 +19325,13 @@ es:
         csl-vn:
           title: Enseñanza de ciencias de la computación para Vietnam
           description_audience: Tuổi 5-10
+          description_short: Khoa học máy tính cơ bản cho học sinh Việt Nam
+          description: 'Khoa Học Máy Tính (ciencias de la computación) là môn học
+            cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu
+            học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này
+            nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương
+            trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu
+            học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '
           lesson_groups:
             csf_sequencing:
               display_name: Secuencias
@@ -19302,6 +19352,12 @@ es:
               name: Escena del océano con bucles
             Tell a Story in Play Lab:
               name: Contar una historia en el Laboratorio de juegos
+          student_description: 'Khoa Học Máy Tính (ciencias de la computación) là
+            môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà
+            từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá
+            học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt
+            Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho
+            học sinh tiểu học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '
         dlp19-csd-mod-fit:
           title: Descripción del aprendizaje profundo en Descubrimientos de Ciencias
             de la Computación 2019
@@ -19715,6 +19771,8 @@ es:
               name: 'Detector de colisiones: procesamiento con eventos'
         dance-2019:
           title: Fiesta de baile (remix 2019)
+          description_short: "¡Con la presencia de Katy Perry, Shawn Mendes, Panic!
+            At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj y muchos más!"
           description: "¡Programa tu propio baile para compartirlo con tus amigos!"
           lessons:
             Dance Party:
@@ -19985,6 +20043,8 @@ es:
               display_name: 'Colección 1: Everglades y sus ecosistemas'
             time4cs_c2:
               display_name: 'Colección 2: Cadenas de comida (en Everglades)'
+            time4cs_c3:
+              display_name: Vivir en Everglades
             time4cs_c4:
               display_name: 'Colección 4: El impacto de las especies invasivas (en
                 Everglades)'
@@ -23967,6 +24027,8 @@ es:
               name: Proyecto - Diseñar una aplicación Parte 1
             Project - Designing an App Part 2:
               name: Proyecto - Diseñar una aplicación Parte 2
+            The Need for Programming Languages:
+              name: La necesidad de lenguajes de programación
             Intro to Programming:
               name: Introducción a la programación
             Debugging:
@@ -27519,6 +27581,8 @@ es:
                 transfiriendo los diseños de las interfaces de usuario de sus guías
                 de planificación al Laboratorio de Aplicaciones.
             The Need for Programming Languages:
+              key: La necesidad de lenguajes de programación
+              name: La necesidad de lenguajes de programación
               description_student: 'Esta es la primera de una serie de lecciones en
                 las que los alumnos avanzarán en la construcción de su propia aplicación
                 operativa. '
@@ -28917,6 +28981,7 @@ es:
                 \  5.1 Efectos beneficiosos y perjudiciales\n-   5.6 Computación segura"
           name: csp10-2021
         coursea-2021:
+          title: Curso A (2021)
           description_short: Una introducción a las ciencias de la computación para
             prelectores.
           description_audience: De 4 a 7 años
@@ -29050,6 +29115,7 @@ es:
             y la seguridad en Internet. Al final del curso, crea tu propio juego o
             historia para compartir.
         courseb-2021:
+          title: Curso B (2021)
           description_short: Una introducción a las ciencias de la computación para
             prelectores. Es similar al Curso A, pero con conceptos más avanzados.
           description_audience: De 5 a 8 años
@@ -29198,6 +29264,7 @@ es:
             y la seguridad en Internet. Al final del curso, crea tu propio juego o
             historia para compartir.
         coursec-2021:
+          title: Curso C (2021)
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           description_audience: De 6 a 10 años
@@ -29635,6 +29702,7 @@ es:
               display_name: Ciudadanía Digital
           name: Curso D - 2021
         coursee-2021:
+          title: Curso E (2021)
           description_audience: De 8 a 12 años
           lessons:
             Sequencing in the Maze:
@@ -29884,6 +29952,17 @@ es:
               display_name: Impactos de la computación
           name: Curso E - 2021
         coursef-2021:
+          title: Curso F (2021)
+          description: Hemos creado el Curso F para estudiantes en el 5° grado. Al
+            comenzar este curso los estudiantes aprenderán sobre las decisiones que
+            la gente toma cuando utilizan las aplicaciones. Luego, los estudiantes
+            aprenderán a crear diferentes tipos de aplicaciones con multiples opciones
+            para los usuarios usando el Laboratorio de Sprites. En las próximas lecciones
+            del curso, los estudiantes aprenderán conceptos mas avanzados, como los
+            variables y los bucles "para". Los estudiantes tendrán más autonomía y
+            la oportunidad de tomar sus propias decisiones a través del curso. Los
+            estudiantes terminaran el curso con proyectos interactivos y obras de
+            arte que podrán compartir con sus amigos/as y familiares.
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias
             de la Computación y crea tu propio arte, historia o juego.
           description_audience: De 9 a 13 años
@@ -30108,6 +30187,12 @@ es:
                 y la tecnología en sus vidas, centrándose en cómo las aplicaciones
                 y las herramientas dan a los usuarios la posibilidad de elegir la
                 forma de utilizarlas.
+              description_teacher: 'En esta lección **definida por el contexto**,
+                los estudiantes debatirán sobre el papel de las computadoras y la
+                tecnología en sus vidas, centrándose en cómo las aplicaciones y las
+                herramientas ofrecen a los usuarios la posibilidad de elegir cómo
+                utilizarlas. Los estudiantes explorarán aplicaciones similares a las
+                que crearán más adelante.  '
             lesson-7:
               name: Creación de Sprites
               description_student: En esta lección escribirás programas y aprenderás
@@ -30195,6 +30280,7 @@ es:
               display_name: Ciudadanía Digital
           name: Curso F - 2021
         express-2021:
+          title: Curso Express (2021)
           description: Aprende los fundamentos de las ciencias de la computación y
             la seguridad en Internet. Al final del curso, crea tu propio juego o historia
             para compartir.
@@ -35470,6 +35556,8 @@ es:
               display_name: "¡Demuestra lo que sabes!"
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: Plantilla
             lesson-2:
               name: Innovaciones en computación
             lesson-9:
@@ -35478,3 +35566,59 @@ es:
               name: Acelerómetro
             lesson-19:
               name: Proyecto
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Herramientas
+            lesson-4:
+              name: Ejemplos
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lecciones
+            lessonGroup-3:
+              display_name: Proyecto
+        csa4-exemplars:
+          lessons:
+            new lesson:
+              name: Utiliza las Bibliotecas Existentes para Añadir Capacidades
+            lesson-1:
+              name: Utiliza las Bibliotecas Existentes para Añadir Capacidades
+            lesson-2:
+              name: Resolviendo Problemas con la Clase de Matemáticas
+            lesson-4:
+              name: Comparando Valores para Tomar Decisiones
+            lesson-5:
+              name: Añadiendo Aleatoriedad a un Programa
+            lesson-6:
+              name: Comparando Referencias a Objetos y Datos
+            lesson-7:
+              name: Proporcionando una Ruta Alternativa de Ejecución
+            lesson-8:
+              name: Probando Múltiples Condiciones
+            lesson-9:
+              name: Usando Operadores Lógicos
+            lesson-10:
+              name: Aplicando las Leyes de De Morgan a las Expresiones Booleanas
+            lesson-12:
+              name: El Barrio - Proyecto de fiesta vecinal - Día 2
+            lesson-13:
+              name: El Barrio - Proyecto de fiesta vecinal - Día 3
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lesson group:
+              display_name: Contenido
+            content:
+              display_name: Contenido
+            show_what_you_know:
+              display_name: "¡Demuestra lo que sabes!"
+            lesson_group:
+              display_name: Contenido
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"

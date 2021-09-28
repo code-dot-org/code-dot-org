@@ -9,7 +9,9 @@ pl:
       moving east: przechodzenie na wschód
       moving east and looping: przechodząc na wschód i powtarzając w pętli
       moving north: przechodzenie na północ
+      moving north and looping: poruszanie się na północ i w pętli
       moving south: przechodzenie na południe
+      moving south and looping: poruszanie się na południe i w pętli
       moving west: przechodzenie na zachód
       moving west and looping: przechodząc na zachód i powtarzając w pętli
       moving with arrow keys: poruszanie się za pomocą klawiszy strzałek

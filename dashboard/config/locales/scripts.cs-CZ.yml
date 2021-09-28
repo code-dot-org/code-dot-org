@@ -9782,3 +9782,20 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgety
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lekce
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Obsah
+            content:
+              display_name: Obsah
+            lesson_group:
+              display_name: Obsah
+            lessonGroup-2:
+              display_name: Obsah
