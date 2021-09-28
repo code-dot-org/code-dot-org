@@ -25,7 +25,7 @@ module WebPurify
     url = "http://api1.webpurify.com/services/rest/" \
       "?api_key=#{CDO.webpurify_key}" \
       "&method=webpurify.live.return" \
-      "&text=#{URI.encode(text)}" \
+      "&text=#{CGI.escape(text)}" \
       "&lang=#{language_codes}" \
       "&format=json"
     result = JSON.
