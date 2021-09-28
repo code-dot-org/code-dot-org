@@ -14,4 +14,20 @@ export default class Poetry extends SpriteLab {
     }
     return new PoetryLibrary(args.p5);
   }
+
+  setupReduxSubscribers(store) {
+    super.setupReduxSubscribers(store);
+    let state = {};
+    store.subscribe(() => {
+      const lastState = state;
+      state = store.getState();
+
+      if (
+        lastState.poetry &&
+        lastState.poetry.selectedPoem.title !== state.poetry.selectedPoem.title
+      ) {
+        this.reset();
+      }
+    });
+  }
 }
