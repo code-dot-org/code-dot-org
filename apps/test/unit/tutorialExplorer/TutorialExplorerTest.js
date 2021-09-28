@@ -110,6 +110,31 @@ describe('TutorialExplorer filterTutorials tests', function() {
       popularityrank: 9
     }
   ];
+  const specTutorials = [
+    {
+      name: 'specific',
+      orgname: 'tech',
+      tags: '',
+      languages_supported: 'en',
+      tags_platform: 'browser,ipad',
+      tags_subject: 'art',
+      tags_activity_type: '',
+      displayweight: 5,
+      popularityrank: 9
+    },
+    {
+      name: 'special',
+      orgname: 'code',
+      tags: '',
+      languages_supported: 'en',
+      tags_platform: 'browser,ipad',
+      tags_subject: 'math',
+      tags_activity_type: '',
+      displayweight: 5,
+      popularityrank: 10
+    }
+  ];
+  const tutorialsWithSpec = tutorials.concat(specTutorials);
 
   it('no filter, but do-not-show works', function() {
     const props = {
@@ -313,33 +338,6 @@ describe('TutorialExplorer filterTutorials tests', function() {
   });
 
   it('get tutorials by search term', function() {
-    const specTutorials = [
-      {
-        name: 'specific',
-        orgname: 'tech',
-        tags: '',
-        languages_supported: 'en',
-        tags_platform: 'browser,ipad',
-        tags_subject: 'math',
-        tags_activity_type: '',
-        displayweight: 5,
-        popularityrank: 9
-      },
-      {
-        name: 'special',
-        orgname: 'tech',
-        tags: '',
-        languages_supported: 'en',
-        tags_platform: 'browser,ipad',
-        tags_subject: 'math',
-        tags_activity_type: '',
-        displayweight: 5,
-        popularityrank: 10
-      }
-    ];
-
-    const tutorialsWithSpec = tutorials.concat(specTutorials);
-
     const props = {
       filters: {},
       locale: 'en-us',
@@ -370,5 +368,30 @@ describe('TutorialExplorer filterTutorials tests', function() {
       props
     );
     assert.equal(filtered3.length, 0);
+  });
+
+  it('get tutorials by search term and subject filter', function() {
+    const props = {
+      filters: {
+        subject: ['math']
+      },
+      locale: 'en-us',
+      sortBy: 'displayweight',
+      orgname: 'code',
+      sortByFieldName: 'displayweight',
+      searchTerm: 'spec'
+    };
+
+    const filtered = TutorialExplorer.filterTutorials(tutorialsWithSpec, props);
+    assert.equal(filtered.length, 1);
+    assert.equal(filtered[0].name, 'special');
+
+    props.searchTerm = 'specific';
+
+    const filtered2 = TutorialExplorer.filterTutorials(
+      tutorialsWithSpec,
+      props
+    );
+    assert.equal(filtered2.length, 0);
   });
 });
