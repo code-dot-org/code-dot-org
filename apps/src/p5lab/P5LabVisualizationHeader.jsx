@@ -9,6 +9,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import styleConstants from '@cdo/apps/styleConstants';
 import {allowAnimationMode, countAllowedModes} from './stateQueries';
+import PoemSelector from './poetry/PoemSelector';
 import * as utils from '../utils';
 
 /**
@@ -57,6 +58,7 @@ class P5LabVisualizationHeader extends React.Component {
     const {interfaceMode, allowAnimationMode} = this.props;
     return (
       <div>
+        {this.props.labType === P5LabType.POETRY && <PoemSelector />}
         {this.props.numAllowedModes > 1 && (
           <div style={styles.main} id="playSpaceHeader">
             <ToggleGroup
