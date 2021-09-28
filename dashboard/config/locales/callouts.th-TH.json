@@ -422,6 +422,45 @@
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
         }
       }
     }

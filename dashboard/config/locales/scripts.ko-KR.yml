@@ -195,6 +195,10 @@ ko:
           lessons:
             Artist:
               name: 예술가
+              description_student: 아티스트로 프로그래밍하여 아름다운 이미지를 만드세요.
+              description_teacher: 이 레슨에서 학생들은 아티스트를 컨트롤하여 화면 위 그림을 완성할 것입니다. 이 아티스트
+                단계는 학생들에게 '100 픽셀 앞으로 이동'과 '90도 우회전'과 같은 새 블록을 사용하여 점점 더 복잡해 지는 이미지를
+                만들 수 있게 합니다.
           student_description: 화가를 이용해 멋진 그림과 디자인을 만들어보세요!
         hourofcode:
           title: 고전 미로게임
@@ -1707,6 +1711,10 @@ ko:
           lessons:
             Oceans:
               name: 바다
+              description_student: '튜토리얼 요약: 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 "물고기"
+                또는 "물고기가 아님"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의 교육
+                데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다.
+                이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수 있어야 합니다.'
           student_description: AI와 머신러닝이 세계적 문제를 다루는 데 어떻게 이용되는지 학습
         CSPPD3-Unit3-pt2:
           lessons:
@@ -3626,6 +3634,12 @@ ko:
           lessons:
             Bounce:
               name: 바운스
+              description_student: 학교에서 비디오 게임을 맘대로 해봤으면 하고 원해 본 적 있으세요? 이 레슨에서는 직접
+                비디오 게임을 만들거예요.
+              description_teacher: 이 온라인 활동에서, 학생들은 이벤트가 무엇이고, 컴퓨터가 그것을 비디오 게임 등과
+                같은 프로그램에서 어떻게 사용하는지 배우게 될 것입니다. 학생들은 퍼즐을 하며 프로그램이 이벤트 (화살표 버튼이 눌러지는
+                등)에 반응하게 만들 것입니다. 퍼즐의 끝에서, 학생들은 속도와 소리를 다르게 함으로써 자신만의 게임으로 만들 기회를
+                갖습니다.
           student_description: 팀을 선택하고 농구경기를 하세요
         sample-csp5:
           lessons:
@@ -4386,6 +4400,12 @@ ko:
           lessons:
             Sports:
               name: 스포츠
+              description_student: 학교에서 비디오 게임을 맘대로 해봤으면 하고 원해 본 적 있으세요? 이 레슨에서는 직접
+                비디오 게임을 만들거예요.
+              description_teacher: 이 온라인 활동에서, 학생들은 이벤트가 무엇이고, 컴퓨터가 그것을 비디오 게임 등과
+                같은 프로그램에서 어떻게 사용하는지 배우게 될 것입니다. 학생들은 퍼즐을 하며 프로그램이 이벤트 (화살표 버튼이 눌러지는
+                등)에 반응하게 만들 것입니다. 퍼즐의 끝에서, 학생들은 속도와 소리를 다르게 함으로써 자신만의 게임으로 만들 기회를
+                갖습니다.
           student_description: 스포츠 혼합 및 매칭
         2016_sciencePD-phase2b:
           lessons:
@@ -14304,7 +14324,7 @@ ko:
               display_name: 설문조사
           lessons:
             CSD post-course survey:
-              name: CSD 과정 후 설문조사
+              name: CSD 학생 과정 후 설문조사 ('18-'19)
           student_description: "CS 발견 과정후 설문조사는 피드백을 얻고 과정을 개선하는데 중요한 툴입니다. \n설문조사는
             비공개 및 익명으로 처리됩니다 -- 교사는 전체 학급의 익명 총합 결과만 볼 수 있습니다. 결과는 교사와 Code.org가 과정을
             지속 및 개선하는데 필수적입니다. 시간을 내주시어 성심껏 답변해주셔서 감사합니다."
@@ -14320,7 +14340,7 @@ ko:
               display_name: 설문조사
           lessons:
             CSP post-course survey:
-              name: CSP 과정 후 설문조사
+              name: CSP 학생 과정 후 설문조사 ('18-'19)
           student_description: Code.org CS 원리 과정후 설문조사에 오신 걸 환영합니다. 이 설문조사는 모두 마치는
             데까지 약 10분이 걸립니다. 응답내용은 비공개 및 익명으로 처리됩니다 -- 교사는 전체 학급의 익명 총합 결과만 볼 수 있습니다.
             결과는 교사와 Code.org가 과정을 지속 및 개선하는데 필수적입니다. 시간을 내주시어 성심껏 답변해주셔서 감사합니다.
@@ -22450,6 +22470,8 @@ ko:
           lessons:
             lesson-20:
               name: 평가일
+            lesson-24:
+              name: Java 연구소
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -22457,6 +22479,8 @@ ko:
           lessons:
             lesson-15:
               name: 평가일
+            lesson-16:
+              name: Java 연구소
           lesson_groups:
             lesson group:
               display_name: 컨텐츠
@@ -22464,6 +22488,8 @@ ko:
           lessons:
             lesson-15:
               name: 평가일
+            lesson-17:
+              name: Java 연구소
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -22471,6 +22497,8 @@ ko:
           lessons:
             lesson-15:
               name: 평가일
+            lesson-16:
+              name: Java 연구소
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -22826,6 +22854,8 @@ ko:
           lessons:
             Assessment Day:
               name: 평가일
+            lesson-1:
+              name: Java 연구소
             lesson-20:
               name: 평가일
           lesson_groups:
@@ -22839,6 +22869,8 @@ ko:
               key: 새 레슨
             lesson-15:
               name: 평가일
+            lesson-1:
+              name: Java 연구소
           lesson_groups:
             lesson group:
               display_name: 컨텐츠
@@ -22846,6 +22878,8 @@ ko:
           lessons:
             Assessment Day:
               name: 평가일
+            lesson-1:
+              name: Java 연구소
             lesson-15:
               name: 평가일
           lesson_groups:
@@ -22855,6 +22889,8 @@ ko:
           lessons:
             Assessment Day:
               name: 평가일
+            lesson-1:
+              name: Java 연구소
             lesson-15:
               name: 평가일
           lesson_groups:

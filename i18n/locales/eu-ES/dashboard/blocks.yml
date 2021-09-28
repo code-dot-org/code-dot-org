@@ -781,6 +781,10 @@ eu:
             '"down"': behera gezia
             '"left"': ezker gezia
             '"right"': eskuin gezia
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': euria
       RyanLab_moveForward:
         text: mugitu aurrera
       RyanLab_turnLeft:

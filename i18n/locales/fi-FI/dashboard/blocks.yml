@@ -1579,10 +1579,13 @@ fi:
         text: x koordinaatti {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinaatti {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': sade
+      Poetry_playSound:
         text: PlaySound {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: aseta taustaefekti {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Värit
@@ -1591,10 +1594,9 @@ fi:
             '"ripples"': Aaltoilu
           PALETTE:
             '"rainbow"': Sateenkaari
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: aseta tausta {IMG}
-      PoemBot_setForegroundEffect:
-        text: aseta etuefekti {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Sade
@@ -1602,6 +1604,20 @@ fi:
             '"hearts"': Värikkäät sydämet
             '"confetti"': Konfetti
             '"starburst"': Tähtisäteet
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: siirry eteenpäin
       RyanLab_turnLeft:

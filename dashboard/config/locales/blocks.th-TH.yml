@@ -1576,10 +1576,13 @@ th:
         text: สัตว์ประหลาดเริ่มสวมหน้ากาก
       Outbreak_stopMoving:
         text: สัตว์ประหลาดหยุดเคลื่อนไหว
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': มีฝน
+      Poetry_playSound:
         text: เล่นเสียง {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': สี
@@ -1589,10 +1592,9 @@ th:
             '"ripples"': ระลอกคลื่น
           PALETTE:
             '"rainbow"': สายรุ้ง
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: ตั้งค่าพื้นหลังเป็น {IMG}
-      PoemBot_setForegroundEffect:
-        text: กำหนดโฟร์กราวด์เอฟเฟค {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': ฝน
@@ -1600,14 +1602,28 @@ th:
             '"hearts"': หัวใจหลากสี
             '"confetti"': กระดาษสี
             '"starburst"': ดาวกระจาย
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             wandering: เคลื่อนที่
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             wandering: เคลื่อนที่
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: ไปข้างหน้า
       RyanLab_turnLeft:

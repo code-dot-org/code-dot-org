@@ -1203,6 +1203,7 @@ sk:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": tlačidlo
             "'sound://category_collect/clicky_crunch.mp3'": chrúmať
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harfa
             "'sound://category_digital/jump_7.mp3'": skoč
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
@@ -1731,12 +1732,16 @@ sk:
         text: y súradnica {SPRITE}
       Outbreak_beginCongregating:
         text: Príšerky sa začínajú zhromažďovať
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': prasknutie
+            '"rain"': dážď
+      Poetry_makeNumSprites:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv
-      PoemBot_playSound:
+      Poetry_playSound:
         text: playSound {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: nastav efekt pozadia {EFFECT}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Farby
@@ -1746,10 +1751,9 @@ sk:
             '"ripples"': Vlnky
           PALETTE:
             '"rainbow"': Dúha
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: nastav pozadie na {IMG}
-      PoemBot_setForegroundEffect:
-        text: nastav efekt popredia {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Dážď
@@ -1757,7 +1761,7 @@ sk:
             '"hearts"': Farebné srdcia
             '"confetti"': Konfety
             '"starburst"': Žiara
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: chvenie
@@ -1769,7 +1773,7 @@ sk:
             swimming_left_and_right: plávanie
             wandering: túlať sa
             wobbling: kolísanie
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: chvenie
@@ -1781,13 +1785,23 @@ sk:
             swimming_left_and_right: plávanie
             wandering: túlať sa
             wobbling: kolísanie
-      PoemBot_stringValue:
-        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
-      PoemBot_whenPromptAnswered:
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: keď {VAR} zodpovedaná
       RyanLab_moveForward:
         text: posuň sa dopredu

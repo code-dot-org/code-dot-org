@@ -190,6 +190,5 @@
   "thirdClickButNoSpeech": "Du hast mehr als zwei Sprites angeklickt, aber einer deiner Klicks hat nicht bewirkt, dass ein Sprite etwas sagt. Füge einen `sagen` Block unter jedem `wenn angeklickt`-Ereignis hinzu.",
   "changeOrSetSize": "Bei keinem deiner Sprites hat sich die Größe verändert.",
   "changeOrSetCostume": "Bei keinem deiner Sprites hat sich das Kostüm verändert.",
-  "changeBackground": "Der Hintergrund hat sich nicht verändert.",
-  "poemBotMakeBackground": "Du brauchst einen Hintergrund-Effekt."
+  "changeBackground": "Der Hintergrund hat sich nicht verändert."
 }

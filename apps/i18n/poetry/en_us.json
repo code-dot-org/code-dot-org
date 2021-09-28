@@ -9,6 +9,7 @@
   "noTextEffects": "You need to add a text effect to your project.",
   "oneTextEffect": "Great work! You added one text effect. Try adding another.",
   "removedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
+  "selectPoem": "Select Poem",
   "setSize": "Use a `set size` block to change the size of your sprite. Use a number other than 100.",
   "spriteEvent": "Try adding or removing a sprite under your `when line shows` event block.",
   "successAddedSprite": "Great work adding a new sprite with an event! Click “Keep Playing” to try removing a sprite with an event.",
