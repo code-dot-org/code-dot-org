@@ -17,7 +17,6 @@ import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailTog
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {testLessons} from './unitCalendarTestData';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
   sectionsForDropdown: [],
@@ -30,7 +29,6 @@ const defaultProps = {
   teacherResources: [],
   studentResources: [],
   showAssignButton: true,
-  publishedState: 'beta',
   isMigrated: false
 };
 
@@ -303,52 +301,6 @@ describe('UnitOverviewTopRow', () => {
     ]);
     expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Lesson Plans',
-      'Print Handouts'
-    ]);
-  });
-
-  it('does not render overview printing option in dropdown for pilot course', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
-        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Teacher}
-        publishedState={PublishedState.pilot}
-      />
-    );
-    expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
-    expect(dropdownLinks.map(link => link.props.href)).to.eql([
-      '/link/to/script_resources.pdf'
-    ]);
-    expect(dropdownLinks.map(link => link.props.children)).to.eql([
-      'Print Handouts'
-    ]);
-  });
-
-  it('does not render overview printing option in dropdown for in development course', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
-        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Teacher}
-        publishedState={PublishedState.in_development}
-      />
-    );
-    expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
-    expect(dropdownLinks.map(link => link.props.href)).to.eql([
-      '/link/to/script_resources.pdf'
-    ]);
-    expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Handouts'
     ]);
   });

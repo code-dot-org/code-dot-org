@@ -1311,6 +1311,8 @@
   "paginationLabel": "Page:",
   "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}.",
   "pairingNavigatorLink": "Click here to view the solution you created as a team.",
+  "pairingNavigatorUnknownDriver": "This puzzle was completed while pairing with another student but the code you wrote together is no longer available. The other student may have deleted their Code.org account or reset their progress on this level.",
+  "pairingUnknownPartnerName": "n/a",
   "pairProgramming": "Pair Programming",
   "pairProgrammingChosePartners": "Choose partners:",
   "pairProgrammingStop": "Stop Pair Programming",

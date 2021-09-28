@@ -6,6 +6,6 @@ published_state 'preview'
 is_course true
 
 lesson_group 'csd_survey', display_name: 'Post-Course Survey'
-lesson 'CSD post-course survey', display_name: 'CSD post-course survey', has_lesson_plan: false
+lesson 'CSD post-course survey', display_name: 'CSD Student Post-Course Survey (\'18-\'19)', has_lesson_plan: false
 level 'csd-post-survey-2017-levelgroup-2018-2nd-semester', progression: 'CS Discoveries Post-course Survey', assessment: true
 

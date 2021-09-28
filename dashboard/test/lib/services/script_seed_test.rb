@@ -912,6 +912,18 @@ module Services
       end
     end
 
+    test 'seed sets published_state on course_version' do
+      script = create_script_tree(num_lessons_per_group: 1)
+      script.published_state = 'preview'
+      script.save!
+
+      json = ScriptSeed.serialize_seeding_json(script)
+      ScriptSeed.seed_from_json(json)
+
+      script = Script.with_seed_models.find(script.id)
+      assert_equal 'preview', script.course_version.published_state
+    end
+
     test 'import_script sets seeded_from from serialized_at' do
       script = create(:script, is_migrated: true)
       assert script.seeded_from.nil?

@@ -17,6 +17,7 @@ import javalab, {
   setIsRunning,
   setDisableFinishButton
 } from './javalabRedux';
+import playground from './playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './JavabuilderConnection';
@@ -131,7 +132,8 @@ Javalab.prototype.init = function(config) {
       this.miniApp = new Playground(
         this.onOutputMessage,
         this.onNewlineMessage,
-        onJavabuilderMessage
+        onJavabuilderMessage,
+        this.level.name
       );
       this.visualization = <PlaygroundVisualizationColumn />;
       break;
@@ -180,7 +182,7 @@ Javalab.prototype.init = function(config) {
     isSubmitted: !!config.level.submitted
   });
 
-  registerReducers({javalab});
+  registerReducers({javalab, playground});
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
   if (config.level.editBlocks) {
@@ -323,6 +325,7 @@ Javalab.prototype.onRun = function() {
 
 // Called by the Javalab app when it wants to stop student code execution
 Javalab.prototype.onStop = function() {
+  this.miniApp?.onStop?.();
   this.javabuilderConnection.closeConnection();
 };
 

@@ -9,6 +9,22 @@ class Services::CurriculumPdfs::ScriptOverviewTest < ActiveSupport::TestCase
     PDF.stubs(:merge_local_pdfs)
   end
 
+  test 'get_script_overview_url returns nil if we did not generate a pdf' do
+    CDO.stubs(:rack_env).returns(:staging)
+    unit_with_lesson_plans = create(:script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta, seeded_from: Time.at(1), name: "test-pdf-path1")
+    lg_with_lps = create(:lesson_group, script: unit_with_lesson_plans)
+    create(:lesson, script: unit_with_lesson_plans, lesson_group: lg_with_lps, has_lesson_plan: true)
+
+    unit_without_lesson_plans = create(:script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta, seeded_from: Time.at(1), name: "test-pdf-path2")
+    lg_without_lps = create(:lesson_group, script: unit_with_lesson_plans)
+    create(:lesson, script: unit_without_lesson_plans, lesson_group: lg_without_lps, has_lesson_plan: false)
+
+    assert Services::CurriculumPdfs.should_generate_overview_pdf?(unit_with_lesson_plans)
+    refute_nil Services::CurriculumPdfs.get_script_overview_url(unit_with_lesson_plans)
+    refute Services::CurriculumPdfs.should_generate_overview_pdf?(unit_without_lesson_plans)
+    assert_nil Services::CurriculumPdfs.get_script_overview_url(unit_without_lesson_plans)
+  end
+
   test 'PDF paths (and urls) are versioned' do
     script = create(:script, seeded_from: Time.at(1), name: "test-pdf-path")
     assert_equal "test-pdf-path/19700101000001/test-pdf-path.pdf",

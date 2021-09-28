@@ -33,7 +33,7 @@ class ProgressLessonTeacherInfo extends React.Component {
     unitName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenLesson: PropTypes.func.isRequired,
-    lockableAuthorized: PropTypes.bool.isRequired
+    lockableAuthorized: PropTypes.bool
   };
 
   constructor(props) {
