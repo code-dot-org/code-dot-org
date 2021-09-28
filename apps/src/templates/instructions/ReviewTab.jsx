@@ -6,13 +6,12 @@ import {getStore} from '@cdo/apps/redux';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import Button from '@cdo/apps/templates/Button';
 import {currentLocation, navigateToHref} from '@cdo/apps/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
 import CodeReviewDataApi from './codeReview/CodeReviewDataApi';
-import PeerSelectDropdown from './codeReview/PeerSelectDropdown';
+import ReviewNavigator from './codeReview/ReviewNavigator';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
@@ -355,64 +354,6 @@ class ReviewTab extends Component {
     }
   }
 
-  renderPeerDropdown(reviewablePeers, onSelectPeer) {
-    if (reviewablePeers.length === 0) {
-      return null;
-    }
-
-    return (
-      <PeerSelectDropdown
-        text={javalabMsg.reviewClassmateProject()}
-        peers={reviewablePeers}
-        onSelectPeer={onSelectPeer}
-      />
-    );
-  }
-
-  renderBackToMyProject(onClickBackToProject) {
-    return (
-      <Button
-        text={javalabMsg.returnToMyProject()}
-        color={Button.ButtonColor.white}
-        icon={'caret-left'}
-        size={Button.ButtonSize.default}
-        iconStyle={styles.backToProjectIcon}
-        onClick={onClickBackToProject}
-        style={styles.backToProjectButton}
-      />
-    );
-  }
-
-  renderHeader = () => {
-    const {
-      reviewablePeers,
-      errorLoadingReviewablePeers,
-      reviewCheckboxEnabled
-    } = this.state;
-    const {viewAsCodeReviewer} = this.props;
-    let dropdownView = null;
-    let reviewCheckbox = null;
-
-    if (errorLoadingReviewablePeers) {
-      // TODO: Handle this error state
-    } else {
-      dropdownView = viewAsCodeReviewer
-        ? this.renderBackToMyProject(this.onClickBackToProject)
-        : this.renderPeerDropdown(reviewablePeers, this.onSelectPeer);
-    }
-
-    if (reviewCheckboxEnabled && !viewAsCodeReviewer) {
-      reviewCheckbox = this.renderReadyForReviewCheckbox();
-    }
-
-    return (
-      <>
-        {dropdownView}
-        {reviewCheckbox}
-      </>
-    );
-  };
-
   render() {
     const {viewAsCodeReviewer, viewAsTeacher, codeReviewEnabled} = this.props;
     const {
@@ -421,7 +362,10 @@ class ReviewTab extends Component {
       forceRecreateEditorKey,
       isReadyForReview,
       errorSavingReviewableProject,
-      projectOwnerName
+      projectOwnerName,
+      reviewCheckboxEnabled,
+      reviewablePeers,
+      errorLoadingReviewablePeers
     } = this.state;
 
     // channelId is not available on projects where the student has not edited the starter code.
@@ -448,7 +392,20 @@ class ReviewTab extends Component {
     return (
       <div style={styles.reviewsContainer}>
         <div style={styles.reviewHeader}>
-          {codeReviewEnabled && !viewAsTeacher && this.renderHeader()}
+          {codeReviewEnabled && !viewAsTeacher && (
+            <>
+              <ReviewNavigator
+                peers={reviewablePeers}
+                onSelectPeer={this.onSelectPeer}
+                onReturnToProject={this.onClickBackToProject}
+                viewPeerList={!viewAsCodeReviewer}
+                loadError={errorLoadingReviewablePeers}
+              />
+              {reviewCheckboxEnabled &&
+                !viewAsCodeReviewer &&
+                this.renderReadyForReviewCheckbox()}
+            </>
+          )}
         </div>
         {errorSavingReviewableProject && (
           <div style={styles.peerReviewErrorMessage}>
@@ -521,17 +478,6 @@ const styles = {
   commentsSection: {
     display: 'flex',
     flexDirection: 'column'
-  },
-  backToProjectIcon: {
-    // The back to project icon is styled to be the same size and placement
-    // as the dropdown icon (see Dropdown.js)
-    fontSize: 24,
-    position: 'relative',
-    top: 3
-  },
-  backToProjectButton: {
-    margin: 0,
-    paddingTop: 0
   },
   reviewDisabledText: {
     fontStyle: 'italic'
