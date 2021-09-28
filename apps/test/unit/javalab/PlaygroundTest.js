@@ -10,6 +10,8 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import playgroundRedux from '@cdo/apps/javalab/playgroundRedux';
+import color from '@cdo/apps/util/color';
+import {WebSocketMessageType} from '../../../src/javalab/constants';
 
 describe('Playground', () => {
   const levelName = 'level';
@@ -21,6 +23,7 @@ describe('Playground', () => {
 
   let backgroundElement,
     audioElement,
+    containerElement,
     onOutputMessage,
     onNewlineMessage,
     onJavabuilderMessage,
@@ -56,6 +59,8 @@ describe('Playground', () => {
 
     audioElement = {pause: () => {}};
 
+    containerElement = {style: {}};
+
     playground = new Playground(
       onOutputMessage,
       onNewlineMessage,
@@ -67,6 +72,7 @@ describe('Playground', () => {
 
     playground.getBackgroundElement = () => backgroundElement;
     playground.getAudioElement = () => audioElement;
+    playground.getContainer = () => containerElement;
   });
 
   afterEach(() => {
@@ -304,6 +310,14 @@ describe('Playground', () => {
     expect(audioElement.onerror).to.be.undefined;
   });
 
+  it('resets container on reset', () => {
+    expect(containerElement.style.backgroundColor).to.be.undefined;
+
+    playground.reset();
+
+    expect(containerElement.style.backgroundColor).to.equal(color.white);
+  });
+
   it('can add multiple images via ADD_IMAGE_ITEM', () => {
     const assetFile = 'assetFile';
     const firstId = 'first_id';
@@ -380,6 +394,36 @@ describe('Playground', () => {
 
     const itemData = getStore().getState().playground.itemData;
     expect(Object.keys(itemData).length).to.equal(0);
+  });
+
+  it('calls onJavabuilderMessage for a valid click event', () => {
+    var runMessage = {
+      value: PlaygroundSignalType.RUN
+    };
+    playground.handleSignal(runMessage);
+    const imageId = 'test';
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.have.been.calledWith(
+      WebSocketMessageType.PLAYGROUND,
+      imageId
+    );
+  });
+
+  it('does not call onJavabuilderMessage for a click event if the game is over', () => {
+    var exitMessage = {
+      value: PlaygroundSignalType.EXIT
+    };
+    playground.handleSignal(exitMessage);
+    const imageId = 'test';
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.not.have.been.called;
+  });
+
+  it('does not call onJavabuilderMessage for a click event if the game is not running', () => {
+    // by default, the game is not running
+    const imageId = 'test';
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.not.have.been.called;
   });
 
   function verifyOnFileLoadError(filename) {

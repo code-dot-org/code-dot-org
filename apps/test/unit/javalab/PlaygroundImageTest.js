@@ -14,7 +14,7 @@ describe('PlaygroundImageTest', () => {
       height: '100',
       width: '250',
       index: '0',
-      onClick: () => {}
+      isClickable: false
     };
 
     const wrapper = shallow(<PlaygroundImage {...props} />);
@@ -39,6 +39,7 @@ describe('PlaygroundImageTest', () => {
       height: '100',
       width: '250',
       index: '0',
+      isClickable: true,
       onClick: onClick
     };
     const wrapper = shallow(<PlaygroundImage {...props} />);
