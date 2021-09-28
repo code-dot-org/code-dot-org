@@ -1,7 +1,12 @@
+import {P5LabType} from '../constants';
 import SpriteLab from '../spritelab/SpriteLab';
 import PoetryLibrary from './PoetryLibrary';
 
 export default class Poetry extends SpriteLab {
+  getLabType() {
+    return P5LabType.POETRY;
+  }
+
   createLibrary(args) {
     if (!args.p5) {
       console.warn('cannot create poetry library without p5 instance');
