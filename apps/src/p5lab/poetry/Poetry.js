@@ -1,9 +1,33 @@
+import {P5LabType} from '../constants';
 import SpriteLab from '../spritelab/SpriteLab';
+import PoetryLibrary from './PoetryLibrary';
 
-var Poetry = function() {
-  SpriteLab.call(this);
-};
+export default class Poetry extends SpriteLab {
+  getLabType() {
+    return P5LabType.POETRY;
+  }
 
-Poetry.prototype = Object.create(SpriteLab.prototype);
+  createLibrary(args) {
+    if (!args.p5) {
+      console.warn('cannot create poetry library without p5 instance');
+      return;
+    }
+    return new PoetryLibrary(args.p5);
+  }
 
-module.exports = Poetry;
+  setupReduxSubscribers(store) {
+    super.setupReduxSubscribers(store);
+    let state = {};
+    store.subscribe(() => {
+      const lastState = state;
+      state = store.getState();
+
+      if (
+        lastState.poetry &&
+        lastState.poetry.selectedPoem.title !== state.poetry.selectedPoem.title
+      ) {
+        this.reset();
+      }
+    });
+  }
+}

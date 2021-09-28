@@ -219,6 +219,12 @@ es:
           lessons:
             Artist:
               name: Artista
+              description_student: Programa el Artista para crear imágenes hermosas.
+              description_teacher: En esta lección, los estudiantes tomarán control
+                del Artista para completar los dibujos en pantalla. En esta etapa
+                del Artista, los estudiantes podrán crear imágenes de mayor complejidad
+                mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar
+                90 grados a la derecha`.
           student_description: "¡Dibuja imagenes estupendas y diseños con el Artista!"
         hourofcode:
           title: Laberinto clásico
@@ -1836,6 +1842,15 @@ es:
           lessons:
             Oceans:
               name: Océanos
+              description_student: 'Resumen de la tutoría: En primer lugar, los alumnos
+                clasifican los objetos como "peces" o "no peces" para intentar eliminar
+                la basura del océano. A continuación, los alumnos deberán ampliar
+                su conjunto de datos de entrenamiento para incluir otras criaturas
+                marinas que pertenecen al agua. En la segunda parte de la actividad,
+                los alumnos elegirán sus propias etiquetas para aplicarlas a imágenes
+                de peces generadas al azar. Estos datos de entrenamiento se utilizan
+                para un modelo de aprendizaje automático que luego debería ser capaz
+                de etiquetar nuevas imágenes por sí mismo.'
           student_description: Aprende cómo IA y el aprendizaje automático se pueden
             usar para abordar problemas del mundo.
         CSPPD3-Unit3-pt2:
@@ -4067,6 +4082,14 @@ es:
           lessons:
             Bounce:
               name: Rebotar
+              description_student: "¿Has pensado que alguna vez puedes jugar videojuegos
+                en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
+              description_teacher: En esta actividad online, los/as estudiantes aprenderán
+                lo que son los eventos, y cómo los computadores los usan en los programas
+                como los videojuegos. Los/as estudiantes trabajarán los desafíos haciendo
+                que el programa reaccione a los eventos (como presionar los botones
+                de flecha). Al final del desafío, los/as estudiantes tendrán la oportunidad
+                de personalizar su juego con diferentes velocidades y sonidos.
           student_description: Elije un equipo y crea un juego de basquetbol
         sample-csp5:
           lessons:
@@ -5123,6 +5146,14 @@ es:
           lessons:
             Sports:
               name: Deportes
+              description_student: "¿Has pensado que alguna vez puedes jugar videojuegos
+                en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
+              description_teacher: En esta actividad online, los/as estudiantes aprenderán
+                lo que son los eventos, y cómo los computadores los usan en los programas
+                como los videojuegos. Los/as estudiantes trabajarán los desafíos haciendo
+                que el programa reaccione a los eventos (como presionar los botones
+                de flecha). Al final del desafío, los/as estudiantes tendrán la oportunidad
+                de personalizar su juego con diferentes velocidades y sonidos.
           student_description: Multideporte
         2016_sciencePD-phase2b:
           lessons:
@@ -18178,7 +18209,7 @@ es:
               display_name: Encuesta
           lessons:
             CSD post-course survey:
-              name: Encuesta de fin de curso de CSD
+              name: Encuesta de fin de curso para estudiantes de CSD ('18-'19)
           student_description: "La encuesta de fin de curso de Descubrimientos de
             Ciencias de la Computación de Code.org es una herramienta importante que
             usamos para obtener tus comentarios y hacer mejoras al curso. \n\nLa encuesta
@@ -18201,7 +18232,7 @@ es:
               display_name: Encuesta
           lessons:
             CSP post-course survey:
-              name: Encuesta de fin de curso de CSP
+              name: Encuesta de fin de curso de CSP para estudiantes ('18-'19)
           student_description: Bienvenido a la encuesta de fin de curso de Principios
             de Ciencias de la Computación de Code.org. Para completar esta encuesta,
             demorarás unos 15 minutos. Tus respuestas son privadas y anónimas, es
@@ -31884,6 +31915,12 @@ es:
                 que abarca los temas de la unidad.
             lesson-21:
               name: 'Lección de Prueba #1'
+            lesson-24:
+              name: Laboratorio Java
+            lesson-22:
+              name: Clases y Objetos
+            lesson-23:
+              name: Utilización de comandos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -32108,6 +32145,12 @@ es:
                 de sus programas. Ahora, los alumnos evalúan el logro de los objetivos
                 de aprendizaje de la unidad y las habilidades en una evaluación de
                 opción múltiple.
+            lesson-16:
+              name: Laboratorio Java
+            lesson-17:
+              name: Clases y Objetos
+            lesson-18:
+              name: Utilización de comandos
           lesson_groups:
             lesson group:
               display_name: Contenido
@@ -32309,6 +32352,12 @@ es:
                 -   Practicar la calificación de un FRQ con una rúbrica de calificación
             lesson-15:
               name: Día de evaluación
+            lesson-17:
+              name: Laboratorio Java
+            lesson-18:
+              name: Clases y Objetos
+            lesson-19:
+              name: Utilización de comandos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -32401,6 +32450,14 @@ es:
               name: Día FRQ
             lesson-15:
               name: Día de evaluación
+            lesson-16:
+              name: Laboratorio Java
+            lesson-17:
+              name: Clases y Objetos
+            lesson-18:
+              name: Utilización de comandos
+            lesson-19:
+              name: Tratando los Datos como Tipos Diferentes
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -34258,43 +34315,11 @@ es:
             Unit 1 Pilot Survey:
               name: 'Lección de Prueba #1'
             lesson-1:
-              name: Bienvenido a CSA
-              description_student: En esta lección, conocerás los valores de la ingeniería
-                del software y la forma en que practicas estos principios en otros
-                aspectos de tu vida. ¡Al final de esta lección, descubrirás tu propia
-                identidad como ingeniero de software!
-              description_teacher: Creer en la propia identidad de la ingeniería del
-                software fomenta la confianza y la perseverancia. Esta lección presenta
-                los valores fundamentales de la ingeniería del software y contempla
-                las impresiones comunes que pueden tener los alumnos. Los alumnos
-                reflexionan sobre cómo practican ya muchos de estos valores para descubrir
-                su propia identidad de ingeniero de software.
+              name: Laboratorio Java
             lesson-2:
               name: Clases y Objetos
-              description_student: Descubrirás el funcionamiento de "El Barrio" y
-                aprenderás algunos de los componentes clave del lenguaje de programación
-                Java. Conocerás al `Pintor` y harás cambios en el código para aprender
-                lo que el `Pintor` puede hacer.
-              description_teacher: 'Los alumnos acceden al Laboratorio Java para explorar
-                "El Barrio" y se les presenta la clase `Pintor`. Los alumnos examinan
-                el código de inicio y realizan modificaciones sencillas para lograr
-                diferentes resultados con un objeto `Pintor` y practican la creación
-                de un objeto `Pintor` para identificar la relación entre una clase
-                y un objeto.  '
             lesson-3:
               name: Utilización de comandos
-              description_student: Ahora que has conocido al `Pintor`, en esta lección
-                utilizarás los comandos de acción para mover el `Pintor` por El Barrio.
-                Aprenderás algunas de las reglas de Java que debes seguir para que
-                el Pintor se mueva.
-              description_teacher: En esta lección, los alumnos aplican soluciones
-                utilizando comandos de acción para mover al " Pintor " por El Barrio.
-                Los alumnos desarrollan sus habilidades de pensamiento computacional
-                traduciendo las soluciones en código Java mientras practican la duplicación
-                de patrones. Mientras resuelven estos problemas, los alumnos aprenden
-                la importancia de distinguir entre mayúsculas y minúsculas y del punto
-                y coma en Java, y se les expone al uso de la notación de puntos para
-                llamar a los comandos del "Pintor".
             lesson-4:
               name: Condicionales y Depuración
               description_student: Ahora que sabes cómo utilizar los comandos de acción,
@@ -34768,25 +34793,9 @@ es:
                 `privado` y el propósito de la encapsulación para ocultar la construcción
                 interna de un objeto.
             lesson-2:
-              name: Usando Variables
+              name: Clases y Objetos
             lesson-3:
-              name: Escribir Constructores
-              description_student: ¡El camión de comida del Proyecto "Pastelería Mercurio"
-                necesita tu ayuda! El propietario quiere vender postres en El Barrio
-                pero necesita poder introducir y almacenar sus postres en un programa.
-                Se te ha pedido que utilices tus conocimientos de ingeniería de software
-                para crear un programa que pueda crear objetos de postre para que
-                el propietario pueda hacer un seguimiento de su inventario. Comienza
-                creando una clase `Postre` para que el propietario pueda introducir
-                el sabor, la cantidad disponible y el precio de cada postre que vende.
-              description_teacher: Los alumnos conocen el camión de comida del Proyecto
-                "Pastelería Mercurio" y la necesidad del propietario de un programa
-                para introducir y almacenar artículos de postre. Como ingenieros de
-                software, los alumnos utilizan estrategias de diseño orientado a objetos
-                para identificar los atributos necesarios y los tipos de datos apropiados
-                para una clase "Postre". Los alumnos escriben un constructor y utilizan
-                un objeto `Escáner` que permite obtener los valores de las variables
-                de instancia para inicializar un objeto `Postre`.
+              name: Utilización de comandos
             lesson-4:
               name: Agregando Varios Constructores
               description_student: ¡El camión de comida del Proyecto Pastelería Mercurio
@@ -34972,6 +34981,8 @@ es:
                 de sus programas. Ahora, los alumnos evalúan el logro de los objetivos
                 de aprendizaje de la unidad y las habilidades en una evaluación de
                 opción múltiple.
+            lesson-1:
+              name: Laboratorio Java
           lesson_groups:
             lesson group:
               display_name: Contenido
@@ -35173,43 +35184,11 @@ es:
             Assessment Day:
               name: Día de evaluación
             lesson-1:
-              name: Creando Arrays
-              description_student: La propietaria de un "camión de comida" aumentó
-                su inventario de postres. Antes tenía que declarar variables separadas
-                para hacer un seguimiento del inventario, pero ¿qué pasa si tiene
-                150 postres? ¡Eso sería un montón de variables! En esta lección, explorarás
-                cómo crear un array unidimensional (1D), determinar su longitud y
-                utilizar valores índice para acceder a elementos individuales.
-              description_teacher: En esta lección desconectada, los alumnos crean
-                matrices (Arrays) unidimensionales (1D) para almacenar listas de valores.
-                Los alumnos aprenden a referirse a la longitud de una matriz 1D y
-                a acceder a los elementos individuales que se almacenan.
+              name: Laboratorio Java
             lesson-2:
-              name: Acceso y Modificación de Elementos
-              description_student: Creas arrays para almacenar valores utilizando
-                la palabra clave `new`. Se explora el Teatro, que permite manipular
-                sonidos y formas. Utiliza El Barrio y El Teatro para practicar el
-                acceso y la modificación de elementos en matrices utilizando valores
-                de índice.
-              description_teacher: En esta lección, los alumnos crean matrices (arrays)
-                para almacenar valores utilizando la palabra clave `new`. Exploran
-                El Teatro, que les permite manipular sonidos y formas. Utilizan El
-                barrio y El teatro para practicar el acceso y la modificación de elementos
-                en matrices utilizando valores de índice.
+              name: Clases y Objetos
             lesson-3:
-              name: Recorrido de Arrays con Bucles For
-              description_student: En esta lección, aprenderás sobre los bucles `for`
-                y cómo utilizarlos para recorrer arrays. Volverás a visitar El barrio
-                y utilizarás tablas de seguimiento para documentar cómo se ejecuta
-                el código dentro de un bucle `for`. Utilizarás los bucles `for` para
-                resolver problemas en The Neighborhood y obtendrás experiencia sobre
-                tu trabajo a través de una revisión de código.
-              description_teacher: Los alumnos escriben bucles "for" para recorrer
-                matrices (arrays) y buscar y modificar elementos que cumplan determinadas
-                condiciones. Los alumnos vuelven a visitar El barrio y utilizan tablas
-                de seguimiento para documentar cómo se ejecuta el código dentro de
-                un bucle `for`. Participan en una revisión del código después de completar
-                un nivel de elección y revisan su código basándose en los comentarios.
+              name: Utilización de comandos
             lesson-4:
               name: Recorrido de Arrays con Bucles While
               description_student: "¿Recuerdas los bucles `while`? En esta lección,
@@ -35410,14 +35389,14 @@ es:
                 de Java y la clase `Matemáticas`.
             Comparing Values to Make Decisions:
               name: Comparando Valores para Tomar Decisiones
-              description_student: 'Hoy, se trata de utilizar el código para tomar
+              description_student: Hoy, se trata de utilizar el código para tomar
                 decisiones. Se comparan las relaciones entre los valores mientras
                 se utilizan sentencias condicionales para ayudar al `Pintor` a tomar
-                decisiones. '
-              description_teacher: 'Los alumnos utilizan operadores relacionales para
+                decisiones.
+              description_teacher: Los alumnos utilizan operadores relacionales para
                 escribir y evaluar expresiones. Los alumnos amplían el uso de las
                 sentencias `if` para comparar valores almacenados en variables y elementos
-                de matrices (arrays). '
+                de matrices (arrays).
             Adding Randomness to a Program:
               name: Añadiendo Aleatoriedad a un Programa
               description_student: Uno de los casos de uso más comunes para generar
@@ -35451,47 +35430,11 @@ es:
             Assessment Day:
               name: Día de evaluación
             lesson-1:
-              name: Utiliza las Bibliotecas Existentes para Añadir Capacidades
-              description_student: El Barrio está organizando una fiesta en la calle
-                y necesita que se desarrolle un juego para que la comunidad juegue
-                con sus amigos y familiares. Examina las API y su documentación para
-                identificar las características que puedes añadir a tus programas.
-                Para empezar a desarrollar el juego " Explotar el globo" en la fiesta
-                del barrio, importas la API de El Parque y la utilizas para introducir
-                imágenes que se puedan pulsar.
-              description_teacher: El Barrio está organizando una fiesta en la calle
-                y necesita que se desarrolle un juego para que la comunidad juegue
-                con sus amigos y familiares. Los alumnos exploran las API y su documentación
-                para identificar las características que pueden añadir a sus programas.
-                Para empezar a desarrollar el juego "Explota el Globo" para la fiesta
-                del barrio, los estudiantes importan la API de El Parque y la utilizan
-                para añadir imágenes que se pueden pulsar.
+              name: Laboratorio Java
             lesson-3:
-              name: Resolviendo Problemas con la Clase de Matemáticas
-              description_student: En la Unidad 3 has visto el código fuente de la
-                clase `Matemáticas`, pero ahora es el momento de ver lo que puede
-                hacer. En esta lección, aprenderás sobre las clases `final` y los
-                métodos estáticos e identificarás sus propósitos y usos. Utilizarás
-                algunos métodos de la clase `Matemáticas` - `Math.pow(double a, double
-                b)`, `Math.abs(double a)`, y `Math.sqrt(double a)` - para resolver
-                problemas.
-              description_teacher: Los alumnos vuelven a visitar la clase `Matemáticas`,
-                profundizando en sus métodos. Aprenden sobre las clases `final` y
-                los métodos estáticos e identifican sus propósitos y usos. Utilizan
-                `Math.pow(double a, double b)`, `Math.abs(double a)` y `Math.sqrt(double
-                a)` para resolver problemas.
+              name: Utilización de comandos
             lesson-4:
               name: Tratando los Datos como Tipos Diferentes
-              description_student: "¡El Camión de Comida se ha quedado sin monedas!
-                Como la dueña no puede dar cambio con monedas, sólo puede cobrar cantidades
-                enteras de euros y no céntimos. Aprende a utilizar el reparto, el
-                redondeo y los números aleatorios para ayudar a la dueña a superar
-                su escasez de monedas."
-              description_teacher: Los alumnos vuelven a visitar el Proyecto Camión
-                de Comida de Pasteles Mercurio para aprender sobre el reparto, el
-                redondeo y los números aleatorios. Los alumnos resuelven escenarios
-                para el propietario del camión de comida utilizando sus conocimientos
-                de Java y la clase `Matemáticas`.
             lesson-5:
               name: Comparando Valores para Tomar Decisiones
               description_student: 'Hoy, se trata de utilizar el código para tomar
@@ -35526,6 +35469,8 @@ es:
               name: Usando Operadores Lógicos
             lesson-11:
               name: Aplicando las Leyes de De Morgan a las Expresiones Booleanas
+            lesson-2:
+              name: Clases y Objetos
             lesson-12:
               name: El Barrio - Proyecto de fiesta vecinal - Día 2
             lesson-13:
@@ -35609,6 +35554,8 @@ es:
               name: Día FRQ
             lesson-15:
               name: Día de evaluación
+            lesson-16:
+              name: Comparando Referencias a Objetos y Datos
           lesson_groups:
             lesson group:
               display_name: Contenido
@@ -35622,3 +35569,7 @@ es:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 'Fiesta de baile: sin conexión'

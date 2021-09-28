@@ -68,11 +68,57 @@
         "define/express/2021": {
           "word": "Definuj"
         },
+        "click/pre-express/2021": {
+          "word": "Klikni",
+          "definition": "Stlač tlačidlo myši"
+        },
+        "drag/pre-express/2021": {
+          "word": "Potiahni",
+          "definition": "Klikni tlačidlo myši a drž ho, kým kurzor myši presunieš na iné miesto. "
+        },
         "drop/pre-express/2021": {
-          "word": "Špagát"
+          "word": "Pusti",
+          "definition": "Uvoľni tlačidlo myši, čím pustíš ťahaný predmet."
+        },
+        "double_click/pre-express/2021": {
+          "word": "Klikni dvakrát",
+          "definition": "Stlač tlačidlo myši veľmi rýchlo"
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy. "
+        },
+        "bug/pre-express/2021": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
         },
         "debugging/pre-express/2021": {
-          "word": "Hľadanie a odstraňovanie chýb"
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/pre-express/2021": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "programming/pre-express/2021": {
+          "word": "Programovanie",
+          "definition": "Činnosť, ktorou sa vytvára program."
+        },
+        "persistence/pre-express/2021": {
+          "word": "Vytrvalosť",
+          "definition": "Odhodlanie skúšať niečo znova a znova, aj keď je to veľmi ťažké. "
+        },
+        "loop/pre-express/2021": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/pre-express/2021": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "event/pre-express/2021": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "behavior/coursee/2021": {
           "word": "Správanie",

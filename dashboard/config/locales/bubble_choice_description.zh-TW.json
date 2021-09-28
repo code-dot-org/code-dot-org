@@ -88,7 +88,15 @@
         "outbreak_freeplay_basic": "使用你之前看過的模組繼續前進！",
         "ramp_artist_loops4_2021": "通過循環一個序列來創建這個星形圖案",
         "ramp_artist_loops6v1_2021": "使用循環來繪製這個樓梯。",
-        "international_outbreak_freeplay": "使用你的專案來分享訊息。你希望其他人從你的專案裡面學習到什麼呢？"
+        "international_outbreak_freeplay": "使用你的專案來分享訊息。你希望其他人從你的專案裡面學習到什麼呢？",
+        "helloworld_animals_location": "讓精靈圖在一段時間後開始一個新行為。",
+        "helloworld_animals_sizes": "學習改變精靈圖的大小。",
+        "helloworld_emoji_location": "讓精靈圖在一段時間後開始一個新行為。",
+        "helloworld_emoji_sizes": "學習改變精靈圖的大小。",
+        "helloworld_food_location": "讓精靈圖在一段時間後開始一個新行為。",
+        "helloworld_food_sizes": "學習改變精靈圖的大小。",
+        "helloworld_retro_location": "讓精靈圖在一段時間後開始一個新行為。",
+        "helloworld_retro_sizes": "學習改變精靈圖的大小。"
       }
     }
   }

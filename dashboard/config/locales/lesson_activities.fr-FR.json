@@ -2,6 +2,9 @@
   "fr-FR": {
     "data": {
       "lesson_activities": {
+        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
+          "name": "Activité principale"
+        },
         "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
           "name": "Warm-up (Séance d’échauffement)"
         },
@@ -52,6 +55,9 @@
         },
         "c6c49adb-f68f-411c-a9ec-bd89e0134bbd": {
           "name": "Conclusion"
+        },
+        "385b01c4-de16-401f-bc49-71e637e93ccc": {
+          "name": "Opportunité interdisciplinaire "
         },
         "5750d053-1daa-409c-9b83-bc4306ba4aef": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -121,6 +127,9 @@
         },
         "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
           "name": "Apprentissage accru"
+        },
+        "22f02104-4519-48dd-aa08-c532f9e080c9": {
+          "name": "Opportunité interdisciplinaire "
         },
         "8362c620-cea5-4a56-b0b4-74a606bf62da": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -209,6 +218,12 @@
         "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
           "name": " Suivez la Traînée Digitale"
         },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "Avis : OK pour partager ? "
+        },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": "Conclusion : Moment de pause et de réflexion "
+        },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
           "name": "Apprentissage accru"
         },
@@ -296,6 +311,9 @@
         "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
           "name": "Apprentissage accru"
         },
+        "3ffb2700-4b4c-4deb-a009-856be4b850da": {
+          "name": "Opportunité interdisciplinaire "
+        },
         "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
           "name": "Warm-up (Séance d’échauffement)"
         },
@@ -305,6 +323,9 @@
         "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
           "name": " Conclusion"
         },
+        "352bcbca-fe70-41d4-8d38-7cfed390e991": {
+          "name": "Opportunité interdisciplinaire "
+        },
         "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
           "name": "Warm-up (Séance d’échauffement)"
         },
@@ -313,6 +334,9 @@
         },
         "ad9b2654-4506-4741-9f53-5699cb20615d": {
           "name": "Conclusion"
+        },
+        "3ed032b9-b27d-4c86-8aff-1e60ba90a038": {
+          "name": "Opportunité interdisciplinaire "
         },
         "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -337,6 +361,9 @@
         },
         "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
           "name": "Apprentissage accru"
+        },
+        "e524c263-6ebc-47c9-9d43-3b738a99574b": {
+          "name": "Opportunité interdisciplinaire "
         },
         "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -379,6 +406,9 @@
         },
         "9ef71984-8749-46e9-ada3-889815c8f1b9": {
           "name": "Apprentissage accru"
+        },
+        "620c06c7-711d-459f-9f67-af3d142eb29c": {
+          "name": "Opportunité interdisciplinaire "
         },
         "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -505,6 +535,9 @@
         },
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Conclusion"
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": "Conclusion : Moment de pause et de réflexion "
         },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
           "name": "Apprentissage accru"

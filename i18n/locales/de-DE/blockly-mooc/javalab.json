@@ -45,6 +45,7 @@
   "fileImportError": "Ein oder mehrere Dateinamen sind von Java Lab reserviert und können nicht in dieses Projekt importiert werden. Folgende Dateien können nicht importiert werden:",
   "fileImportWarning": "Du hast ein oder mehrere doppelte Dateinamen zwischen diesem Projekt und deinen ausgewählten Profil-Dateien. Die doppelten Dateinamen sind:",
   "fileImportWarningConfirm": "Willst du diese Dateien mit den Dateien aus deinem Profil ersetzen?",
+  "genericErrorMessage": "Bitte versuche es nochmal",
   "import": "Importieren",
   "includeFiles": "Dateien einfügen",
   "internalCompilerException": "Ups. Wir haben während der Kompilation deines Programms einen Fehler auf unserer Seite entdeckt. Probiere es erneut auszuführen. Falls der Fehler bestehen bleibt, kontaktiere uns unter support@code.org. Füge die Verbindungs-ID {connectionId} in deine Nachricht ein.",

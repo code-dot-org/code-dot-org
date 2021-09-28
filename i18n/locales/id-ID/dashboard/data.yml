@@ -287,7 +287,7 @@ id:
         C1_moveitmoveit_unplugged: Gerakkan itu, Gerakkan itu
         C1_bigevent_unplugged: Acara besar
         C1_getting_loopy: Dapat berulang-ulang
-        C1_pair_programming: Pemrograman berpasangan
+        C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Introduksi Sekuensi Labirin
         C1_maze_debugging: Debugging Labirin
         C1_bee_level_intro: Tingkat Lebah - Pengenalan
@@ -526,7 +526,7 @@ id:
         teaching_cs_pair_programming: 'Mengajarkan CS Fundamentals: Pair Programming'
         teaching_problem_solving: 'Mengajarkan CS Fundamentals: Mengajarkan Pemecahan Masalah'
         csd_applab_designmode: 'CS Discoveries: App Lab - Mode Desain'
-        csd_pair_programming: Pemrograman berpasangan
+        csd_pair_programming: Pair Programming
         csd_gamelab_functions: Function Panggilan dan Definisi
         csd_applab_parameters: Fungsi dengan parameter
         csd_applab_loops: Loop dalam App Lab

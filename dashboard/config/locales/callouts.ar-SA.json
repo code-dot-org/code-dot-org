@@ -1594,6 +1594,45 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "قطعة برمجية جديدة!",
+          "hello_world_new_block": "قطعة برمجية جديدة!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "قطعة برمجية جديدة!",
+          "hello_world_new_block": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "قطعة برمجية جديدة!",
+          "hello_world_new_block": "قطعة برمجية جديدة!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "قطعة برمجية جديدة!"
         }
       }
     }

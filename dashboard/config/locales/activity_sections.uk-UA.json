@@ -2,6 +2,13 @@
   "uk-UA": {
     "data": {
       "activity_sections": {
+        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+          "progression_name": "Ласкаво просимо до Монстро-міста"
+        },
+        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
+          "name": "Вільна гра",
+          "progression_name": "Вільна гра"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Вступ"
         },

@@ -1101,6 +1101,45 @@
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Matapos ikonekta ang lahat ng mga bloke, pindutin ang \"Run\" para simulan ang iyong programa."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Bagong block!",
+          "hello_world_new_block": "Bagong block!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Bagong block!",
+          "hello_world_new_block": "Bagong block!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Bagong block!",
+          "hello_world_new_block": "Bagong block!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Bagong block!"
         }
       }
     }

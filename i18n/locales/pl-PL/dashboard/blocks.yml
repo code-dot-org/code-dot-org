@@ -1230,9 +1230,25 @@ pl:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": akcent
             "'sound://category_digital/boing_2.mp3'": boing
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": popularny
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": migotanie
             "'sound://category_app/app_button_1.mp3'": przycisk
             "'sound://category_collect/clicky_crunch.mp3'": chrzęst
             "'sound://category_swish/quick_swing.mp3'": huśtać się
+            "'sound://category_nature/summer_night_loop.mp3'": letnia noc
+            "'sound://category_background/ocean_waves.mp3'": fale oceanu
+            "'sound://category_animals/dolphin.mp3'": kliknięcia delfina
+            "'sound://category_nature/thunderstorm_1.mp3'": burza z piorunami
+            "'sound://category_animals/chick.mp3'": ćwierkanie ptaszka
+            "'sound://category_animals/dog.mp3'": szczekanie psa
+            "'sound://category_animals/tiger.mp3'": ryk tygrysa
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": jasny
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": mistyczny
+            "'sound://category_transition/trippy_robotic_transition.mp3'": głos robota
+            "'sound://category_transition/star_dust_particle_10.mp3'": gwiezdny pył
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": statek kosmiczny
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magiczne zaklęcie
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": ping
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": sci fi
             "'sound://category_digital/jump_7.mp3'": skocz
       gamelab_playSpeech:
         text: odtwórz mowę {SOUND}
@@ -1822,15 +1838,23 @@ pl:
         text: załóż Miasto Potworów z [COUNT] [0] potworami
       Outbreak_stopMoving:
         text: potwory zatrzymują się
-      PoemBot_addLine:
+      Poetry_addLine:
         text: dodaj linię {LINE}
-      PoemBot_destroy:
+      Poetry_destroy:
         text: usuń {ANIMATION_NAME}
-      PoemBot_hidePoem:
+      Poetry_hidePoem:
         text: ukryj wiersz
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        text: utwórz {EFFECT} efekt z {NUM} {ANIMATION_NAME} duszkami
+        options:
+          EFFECT:
+            '"burst"': wybuch
+            '"pop"': popularny
+            '"rain"': deszcz
+            '"zigzag"': zigzag
+      Poetry_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
-      PoemBot_playSound:
+      Poetry_playSound:
         text: PlaySound {SOUND}
         options:
           SOUND:
@@ -1846,12 +1870,12 @@ pl:
             '"sound://category_background/wavering_wind.mp3"': Senny
             '"sound://category_background/typewriter.mp3"': Maszyna do pisania
             '"sound://category_background/waterfall.mp3"': Wodospad
-      PoemBot_randomWord:
+      Poetry_randomWord:
         text: losowe słowo
-      PoemBot_setAuthor:
+      Poetry_setAuthor:
         text: ustaw autora wiersza {AUTHOR}
-      PoemBot_setBackgroundEffect:
-        text: ustaw efekt tła {EFFECT}
+      Poetry_setBackgroundEffect:
+        text: ustaw efekt tła {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"colors"': Kolory
@@ -1875,9 +1899,9 @@ pl:
             '"grayscale"': Czarny i biały
             '"rainbow"': Tęcza
             '"roses"': Róże
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: ustaw tło na {IMG}
-      PoemBot_setFont:
+      Poetry_setFont:
         text: ustaw czcionkę {FONT}
         options:
           FONT:
@@ -1887,13 +1911,12 @@ pl:
             '"Times"': Times
             '"Courier"': Courier
             '"Arial Black"': Arial Black
-            '"Impact"': Wpływ
+            '"Impact"': Impact
             '"Tahoma"': Tahoma
             '"Verdana"': Verdana
-      PoemBot_setFontColor:
+      Poetry_setFontColor:
         text: ustaw kolor czcionki {FILL}
-      PoemBot_setForegroundEffect:
-        text: ustaw efekt pierwszego planu {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Deszcz
@@ -1904,14 +1927,14 @@ pl:
             '"starburst"': Rozprysk
             '"glass"': Rozbijające się szkło
             '"twinkling"': Migotliwy
-      PoemBot_setPoem:
+      Poetry_setPoem:
         text: ustaw wiersz {POEM}
         options:
           POEM:
             '"---"': "---"
             '"hafez"': Mój wspaniały obraz
             '"carroll_1"': Błysk, Błysk, Mała gwiazda
-            '"rumi_1"': Śpiewać
+            '"rumi_1"': Śpiewaj
             '"field"': Wynken, Blynken, and Nod
             '"carroll_2"': Krokodyl
             '"twain"': Ciepłe letnie słońce
@@ -1921,54 +1944,44 @@ pl:
             '"rumi_2"': Ocean
             '"hughes_1"': Wariacje snów
             '"hughes"': Harlem
-      PoemBot_setPrompt:
-        text: monituj użytkownika {NAME}{RIGHT_QUOTE} o zmienną {VAR}
-      PoemBot_setPromptWithChoices:
-        text: monituj użytkownika  {TEXT}{RIGHT_QUOTE} o zmienną {VAR} z wyborami {A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
-      PoemBot_setSize:
+            '"hopler"': W ogrodzie
+            '"lomeli"': Zwróć
+      Poetry_setSize:
         text: ustaw {SPRITE} rozmiar na {VAL}
-      PoemBot_setTextEffect:
+      Poetry_setTextEffect:
         text: ustaw efekt tekstu {EFFECT}
         options:
           EFFECT:
             '"fade"': znikać
             '"typewriter"': maszyna do pisania
-            '"flyLeft"': lecieć z lewej
-            '"flyRight"': lecieć z prawej
+            '"flyLeft"': lecieć z lewa
+            '"flyRight"': lecieć z prawa
             '"flyTop"': lecieć z góry
             '"flyBottom"': lecieć z dołu
-      PoemBot_setTitle:
+      Poetry_setTitle:
         text: ustaw tytuł wiersza {TITLE}
-      PoemBot_showPoem:
+      Poetry_showPoem:
         text: pokaż wiersz
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         text: 'duszek {ANIMATION_NAME} rozpoczyna {BEHAVIOR} '
         options:
           BEHAVIOR:
             fluttering: trzepotanie
             growing: rośnięcie
             jittering: trzęsienie się
-            moving_north_and_looping: pętla na północ
-            moving_south_and_looping: pętla na południe
-            moving_east_and_looping: pętla na wschód
-            moving_west_and_looping: pętla na zachód
             shrinking: zwężenie
             spinning_left: obracanie się w lewo
             spinning_right: obracanie się w prawo
             swimming_left_and_right: pływanie
             wandering: wędrowanie
             wobbling: chybotanie
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         text: 'duszek {ANIMATION_NAME} zatrzymuje {BEHAVIOR} '
         options:
           BEHAVIOR:
             fluttering: trzepotanie
             growing: rośnięcie
             jittering: trzęsienie się
-            moving_north_and_looping: pętla na północ
-            moving_south_and_looping: pętla na południe
-            moving_east_and_looping: pętla na wschód
-            moving_west_and_looping: pętla na zachód
             shrinking: zwężenie
             spinning_left: obracanie się w lewo
             spinning_right: obracanie się w prawo
@@ -1976,15 +1989,28 @@ pl:
             wandering: wędrowanie
             wobbling: chybotanie
             '"all"': "--wszystkie zachowania--"
-      PoemBot_stringValue:
+      Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
+      Poetry_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
-      PoemBot_whenLineShows:
+      Poetry_whenLineShows:
         text: gdy linia {N} pokazuje
-      PoemBot_whenPromptAnswered:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: gdy {VAR} uzyskała odpowiedź
       RyanLab_moveForward:
         text: idź do przodu

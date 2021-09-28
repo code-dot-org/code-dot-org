@@ -1641,6 +1641,45 @@
         "CourseF_outbreak2": {
           "minitoolbox": "여기를 클릭하여 블록을 확장하세요.",
           "pointerlocation": "대상 블록을 여기로 끌어 오세요."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "새 블록!",
+          "hello_world_new_block": "새 블록!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "새 블록!",
+          "hello_world_new_block": "새 블록!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "새 블록!",
+          "hello_world_new_block": "새 블록!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "새 블록!"
         }
       }
     }

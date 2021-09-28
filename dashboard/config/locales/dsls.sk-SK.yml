@@ -5470,7 +5470,8 @@ sk-SK:
         - text: Záhradníčka pozbiera všetky plodiny okrem tekvice.
           correct: true
           feedback: Správne!
-        - feedback: Nesprávne. S týmto kódom bude záhradníčka chodiť hore dole a bude
+        - text: Záhradníčka pozbiera iba tekvicu.
+          feedback: Nesprávne. S týmto kódom bude záhradníčka chodiť hore dole a bude
             zbierať všetok šalát a kukuricu, na ktoré narazí, ale nebude zbierať tekvicu.
         markdown: |
           V tejto úlohe je výhonok rastliny buď kukurica alebo šalát.
@@ -5485,6 +5486,8 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Tento kód sa jám ani nedotkne.
+          feedback: Nesprávne. Cyklus `pokiaľ` si poradí s cyklom akejkoľvek veľkosti,
+            ale nie je tu žiaden kód, pomocou ktorého by sa z kôpky odstránila hlina.
         - text: Tento kód sa poslednej jamy ani nedotkne.
           feedback: Nesprávne. Chýba kód na odstránenie hliny z hromady.
         questions:
@@ -5525,6 +5528,9 @@ sk-SK:
       courseD_multi_maze_until2_predict1_2021:
         answers:
         - text: Vtáčik sa nepohne.
+          feedback: Nesprávne. Tento kód prikáže vtáčikovi ísť vpred tak dlho, kým
+            má pred sebou cestu, a potom ho otočí doľava. Toto bude robiť, až kým
+            sa nedostane k prasiatku!
         - text: Vták sa dostane až k prasiatku.
           correct: true
           feedback: Správne!
@@ -5597,10 +5603,14 @@ sk-SK:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Nestane sa nič.
-        - {}
-        - correct: true
+          feedback: Nesprávne. Klbko sena sa začne kotúľať.
+        - text: Klbko sena vzlietne k hornej časti obrazovky.
+          feedback: Nesprávne. Klbko sena sa začne kotúľať.
+        - text: Klbko sena sa začne kotúľať.
+          correct: true
           feedback: Správne!
-        - {}
+        - text: Klbko sena zabliká – objaví sa a zmizne.
+          feedback: Nesprávne. Klbko sena sa začne kotúľať.
         questions:
         - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
       courseF_EOC_2021:
@@ -5615,12 +5625,19 @@ sk-SK:
           venuj chvíľu pozornosti ukážkovým projektom.
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Postava sa bude iba točiť doprava.
+          feedback: Nesprávne. Postava sa zároveň bude posúvať na východ.
+        - text: Postava sa bude iba posúvať na východ.
+          feedback: Nesprávne. Postava sa neprestane točiť – oba typy pohybu bude
+            robiť naraz.
+        - text: Postava sa bude točiť a posúvať naraz.
+          correct: true
+          feedback: Správne! Obe správania sa budú diať naraz.
+        - text: Postava sa bude najprv točiť a potom posúvať.
+          feedback: Nesprávne. V Sprite Labe sa spojené bloky aktivujú okamžite, takže
+            obe správania budú prebiehať naraz.
         questions:
-        - {}
+        - text: Prezri si kód a odhadni, čo sa bude diať.
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -5636,8 +5653,13 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
+          feedback: Nesprávne. Na to, aby sa to stalo, by premenná `dĺžka` musela
+            byť v cykle `opakuj`.
         - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
-        - feedback: Premenná `dĺžka` je nastavená na 50 a používa sa v bloku `posuň
+          feedback: Nesprávne. Na to, aby sa to stalo, by premenná `dĺžka` musela
+            byť použitá v bloku `otoč`.
+        - text: Počítač vyzve používateľa, aby uviedol číslo.
+          feedback: Premenná `dĺžka` je nastavená na 50 a používa sa v bloku `posuň
             dopredu o`, takže umelec nakreslí trojuholník so stranami dlhými 50 pixelov.
         questions:
         - text: Nastavili sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
@@ -5649,35 +5671,56 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
-        - {}
+        - text: 'Včela sa posunie dopredu a pozbiera jeden nektár z kvetov číslo 1 až
+            4. '
         markdown: Aha! S použitím `for` cyklu je táto úloha omnoho jednoduchšia!
         questions:
         - text: Pozri si kód nižšie. Čo sa stane, keď stlačíš "Spustiť"?
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Obe lietadlá sa na mriežke posunú o jedno miesto a potom zastavia.
+          feedback: Nesprávne. Tieto sprajty majú „správania“, ktoré budú aktívne,
+            až kým im neprikážeme, aby skončili.
+        - text: Obe lietadlá sa začnú hýbať a nezastavia.
+          correct: true
+          feedback: Správne! Tieto správania lietadlám hovoria, aby sa začali hýbať
+            a nezastavovali.
+        - text: Najprv sa posunie jedno lietadlo a druhé sa posunie až po ňom.
+          feedback: Nesprávne. Všetky bloky kódu nasledujúce po sebe sa v Sprite Labe
+            spúšťajú naraz.
+        - text: Lietadlá do seba narazia.
+          feedback: Nesprávne. Lietadlá nie sú umiestnené tak, že by sa mali dotknúť.
         questions:
-        - {}
+        - text: Prezri si kód a odhadni, čo sa bude diať.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Program vypíše text „Ahoj, (meno)!“
+          feedback: Nesprávne. Blok „meno“ bude nahradený tým, čo napíšeš.
+        - text: Program ťa privíta menom, ktoré napíšeš.
+          correct: true
+          feedback: Správne! Text, ktorý zadáš, sa použije namiesto bloku „meno“.
+        - text: Postave sa zmení veľkosť.
+          feedback: Nesprávne. Na obrazovke sa zobrazí text.
+        - text: Počítač položí ďalšiu otázku.
+          feedback: Nesprávne. Počítač položí iba jednu otázku, a to hneď pri spustení
+            programu.
         questions:
-        - {}
+        - text: 'Program ti umožňuje napísať zadať klávesnice odpoveď na otázku. Blok
+            `tlačiť` slúži na zobrazenie textu na obrazovke. Odhadni, čo sa bude diať:
+            Čo sa stane, keď otázku zodpovieš?'
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: Umelec vyrieši túto úlohu správne.
+          feedback: Nesprávne. Cyklus využíva funkciu „nakresli mnohouholník“, nie
+            „nakresli rad mnohouholníkov“.
         - text: Umelec nakreslí 4 štvorce akoby  vzor okna.
           correct: true
           feedback: Správne!
         - text: Umelec nakreslí len jeden rad štvorcov.
           feedback: Nesprávne. Program nezavolá funkciu „nakresli rad mnohouholníkov“.
         - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
+          feedback: Nesprávne. V cykle je medzi jednotlivými opakovaniami funkcie
+            „nakresli mnohouholník“ otočenie o 90 stupňov.
         questions:
         - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
       csf_be_a_super_digital_citizen_2021:

@@ -45,6 +45,9 @@
           "word": "Bucles desde",
           "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
         },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modelos y Simulaciones"
+        },
         "machine_learning/coursef/2021": {
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"

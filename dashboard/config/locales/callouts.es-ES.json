@@ -2169,6 +2169,45 @@
         },
         "courseF_variables_predict": {
           "variablesPredict": "Fíjate bien en el código que hay debajo de este punto."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "¡Bloque nuevo!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "¡Bloque nuevo!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "¡Bloque nuevo!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "¡Bloque nuevo!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "¡Bloque nuevo!",
+          "hello_world_new_block": "¡Bloque nuevo!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "¡Bloque nuevo!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "¡Bloque nuevo!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "¡Bloque nuevo!",
+          "hello_world_new_block": "¡Bloque nuevo!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "¡Bloque nuevo!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "¡Bloque nuevo!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "¡Bloque nuevo!",
+          "hello_world_new_block": "¡Bloque nuevo!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "¡Bloque nuevo!"
         }
       }
     }

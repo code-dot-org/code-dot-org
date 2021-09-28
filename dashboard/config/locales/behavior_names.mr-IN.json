@@ -197,6 +197,18 @@
           "growing": "वाढत आहे",
           "moving left and right": "डावीकडे आणि उजवीकडे जाणे",
           "jittering": "थरथरत आहे"
+        },
+        "helloworld_animals_events": {
+          "moving forward": "पुढे जाणे"
+        },
+        "helloworld_emoji_events": {
+          "moving forward": "पुढे जाणे"
+        },
+        "helloworld_food_events": {
+          "moving forward": "पुढे जाणे"
+        },
+        "helloworld_retro_events": {
+          "moving forward": "पुढे जाणे"
         }
       }
     }
