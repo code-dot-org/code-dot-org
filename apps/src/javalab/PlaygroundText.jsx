@@ -41,12 +41,14 @@ export default class PlaygroundText extends React.Component {
     console.log(rotation);
     // what to do with overflow text?
     const dynamicStyle = {
-      marginLeft: parseInt(x),
-      marginTop: parseInt(y),
+      left: x * 2,
+      top: y * 2,
       zIndex: index,
-      fontSize: parseInt(height),
+      height: parseInt(height) * 2,
+      fontSize: parseInt(height) * 2,
       fontFamily: fontFamilyMap[fontFamily],
       color: `rgb(${parseInt(red)}, ${parseInt(green)}, ${parseInt(blue)})`,
+      transformOrigin: 'top left',
       transform: `rotate(${parseFloat(rotation)}deg)`
     };
 
@@ -67,6 +69,8 @@ export default class PlaygroundText extends React.Component {
 
 const styles = {
   textStyle: {
-    position: 'absolute'
+    position: 'absolute',
+    display: 'flex',
+    alignItems: 'center'
   }
 };
