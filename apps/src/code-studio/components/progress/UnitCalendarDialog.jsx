@@ -56,7 +56,7 @@ export default class UnitCalendarDialog extends Component {
   changeMinutes = e => {
     const newTime = e.target.value;
     this.logMinutesChange(this.state.instructionalMinutes, newTime);
-    this.setState({instructionalMinutes: newTime});
+    this.setState({instructionalMinutes: Number(newTime)});
   };
 
   render() {
@@ -84,7 +84,7 @@ export default class UnitCalendarDialog extends Component {
         </div>
         <UnitCalendar
           lessons={lessons}
-          weeklyInstructionalMinutes={Number(this.state.instructionalMinutes)}
+          weeklyInstructionalMinutes={this.state.instructionalMinutes}
           weekWidth={WEEK_WIDTH}
         />
         <Button
