@@ -23,7 +23,6 @@ import SendLesson from './SendLesson';
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
-    lessonUrl: PropTypes.string,
     onClickStudentLessonPlan: PropTypes.func,
 
     // redux provided
@@ -74,8 +73,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       hiddenLessonState,
       hasNoSections,
       lockableAuthorized,
-      lesson,
-      lessonUrl
+      lesson
     } = this.props;
 
     const sectionId = (section && section.id.toString()) || '';
@@ -89,7 +87,7 @@ class ProgressLessonTeacherInfo extends React.Component {
     const shouldRender =
       lesson.lesson_plan_html_url ||
       (lesson.lockable && !hasNoSections) ||
-      lessonUrl ||
+      lesson.lessonStartUrl ||
       showHiddenForSectionToggle;
     if (!shouldRender) {
       return null;
