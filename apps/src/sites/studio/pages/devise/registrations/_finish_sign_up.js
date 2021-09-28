@@ -52,7 +52,6 @@ $(document).ready(() => {
 
   function init() {
     setUserType(getUserType());
-    styleSelectedUserTypeButton(getUserType());
     renderSchoolInfo();
     renderParentSignUpSection();
   }
@@ -124,12 +123,10 @@ $(document).ready(() => {
   // Event listeners for changing the user type
   document.addEventListener('selectUserTypeTeacher', e => {
     $('#user_user_type').val('teacher');
-    styleSelectedUserTypeButton('teacher');
     setUserType('teacher');
   });
   document.addEventListener('selectUserTypeStudent', e => {
     $('#user_user_type').val('student');
-    styleSelectedUserTypeButton('student');
     setUserType('student');
   });
 
@@ -170,6 +167,7 @@ $(document).ready(() => {
       // Show student fields by default.
       switchToStudent();
     }
+    styleSelectedUserTypeButton(userType);
   }
 
   function switchToTeacher() {
