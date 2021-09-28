@@ -42,6 +42,7 @@
   "fileImportError": "Uno o più nomi del file sono riservati da Java Lab e non sono importabili in questo progetto. I file non importabili:",
   "fileImportWarning": "Hai uno o più nomi di file duplicati tra questo progetto e i file del tuo zaino selezionato. I nomi del file duplicato sono:",
   "fileImportWarningConfirm": "Desideri sostituire questi file con i file dal tuo zaino?",
+  "genericErrorMessage": "Sei pregato di riprovare",
   "import": "Importa",
   "includeFiles": "Includi File",
   "internalCompilerException": "Ops. Abbiamo riscontrato un errore dal nostro lato. Prova a rieseguirlo. Se questo errore persiste, contattaci a support@code.org. Assicurati di includere l'ID della connessione {connectionId} nel tuo messaggio.",
