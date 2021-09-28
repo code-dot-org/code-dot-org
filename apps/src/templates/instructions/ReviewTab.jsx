@@ -86,9 +86,9 @@ class ReviewTab extends Component {
 
     const initialLoadPromises = [];
 
-    const onDoneFetchingComments = data => this.setState({comments: data});
+    const setComments = data => this.setState({comments: data});
     initialLoadPromises.push(
-      this.dataApi.getCodeReviewCommentsForProject(onDoneFetchingComments)
+      this.dataApi.getCodeReviewCommentsForProject(setComments)
     );
 
     initialLoadPromises.push(
