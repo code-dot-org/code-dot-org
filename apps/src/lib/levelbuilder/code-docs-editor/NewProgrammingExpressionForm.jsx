@@ -15,8 +15,8 @@ export default function NewProgrammingExpressionForm({
         <HelpTip>
           <p>
             The programming expression slug is used in URLs and cannot be
-            updated once set. A slug can only contain lowercase letters, numbers
-            and dashes.
+            updated once set. A slug can only contain letters, numbers, periods,
+            underscores, and dashes.
           </p>
         </HelpTip>
       </label>
