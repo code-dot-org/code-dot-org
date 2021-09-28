@@ -28,7 +28,9 @@ describe('AnimationPickerBody', function() {
     defaultQuery: {
       categoryQuery: '',
       searchQuery: ''
-    }
+    },
+    selectedAnimations: [],
+    onAnimationSelectionComplete: emptyFunction
   };
 
   describe('upload warning', function() {
@@ -59,7 +61,7 @@ describe('AnimationPickerBody', function() {
         <AnimationPickerBody {...defaultProps} is13Plus={true} />
       );
       const warnings = body.find(WarningLabel);
-      expect(warnings).not.to.exist;
+      expect(warnings).to.have.length(0);
     });
   });
 

@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/redux';
 import playgroundRedux from '@cdo/apps/javalab/playgroundRedux';
 import color from '@cdo/apps/util/color';
+import {WebSocketMessageType} from '../../../src/javalab/constants';
 
 describe('Playground', () => {
   const levelName = 'level';
@@ -393,6 +394,36 @@ describe('Playground', () => {
 
     const itemData = getStore().getState().playground.itemData;
     expect(Object.keys(itemData).length).to.equal(0);
+  });
+
+  it('calls onJavabuilderMessage for a valid click event', () => {
+    var runMessage = {
+      value: PlaygroundSignalType.RUN
+    };
+    playground.handleSignal(runMessage);
+    const imageId = 'test';
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.have.been.calledWith(
+      WebSocketMessageType.PLAYGROUND,
+      imageId
+    );
+  });
+
+  it('does not call onJavabuilderMessage for a click event if the game is over', () => {
+    var exitMessage = {
+      value: PlaygroundSignalType.EXIT
+    };
+    playground.handleSignal(exitMessage);
+    const imageId = 'test';
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.not.have.been.called;
+  });
+
+  it('does not call onJavabuilderMessage for a click event if the game is not running', () => {
+    // by default, the game is not running
+    const imageId = 'test';
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.not.have.been.called;
   });
 
   function verifyOnFileLoadError(filename) {
