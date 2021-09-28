@@ -225,7 +225,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def should_send_exit_survey?
-    !workshop.fit_weekend?
+    !(workshop.fit_weekend? || workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR)
   end
 
   def send_exit_survey
