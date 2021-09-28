@@ -139,6 +139,7 @@ export default class Playground {
       x: itemData.x,
       y: itemData.y,
       height: itemData.height,
+      index: itemData.index,
       rotation: itemData.rotation,
       red: itemData.colorRed,
       blue: itemData.colorBlue,
