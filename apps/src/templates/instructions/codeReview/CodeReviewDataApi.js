@@ -43,6 +43,7 @@ export default class CodeReviewDataApi {
   }
 
   submitNewCodeReviewComment(commentText) {
+    this.raiseIfNoToken();
     return $.ajax({
       url: `/code_review_comments`,
       type: 'POST',
@@ -57,6 +58,7 @@ export default class CodeReviewDataApi {
   }
 
   resolveCodeReviewComment(commentId, resolvedStatus) {
+    this.raiseIfNoToken();
     return $.ajax({
       url: `/code_review_comments/${commentId}/toggle_resolved`,
       type: 'PATCH',
@@ -66,6 +68,7 @@ export default class CodeReviewDataApi {
   }
 
   deleteCodeReviewComment(commentId) {
+    this.raiseIfNoToken();
     return $.ajax({
       url: `/code_review_comments/${commentId}`,
       type: 'DELETE',
@@ -74,6 +77,7 @@ export default class CodeReviewDataApi {
   }
 
   enablePeerReview() {
+    this.raiseIfNoToken();
     return $.ajax({
       url: `/reviewable_projects`,
       type: 'POST',
@@ -87,10 +91,19 @@ export default class CodeReviewDataApi {
   }
 
   disablePeerReview(projectId) {
+    this.raiseIfNoToken();
     return $.ajax({
       url: `/reviewable_projects/${projectId}`,
       headers: {'X-CSRF-Token': this.token},
       method: `DELETE`
     });
+  }
+
+  raiseIfNoToken() {
+    if (!this.token) {
+      const errorMessage =
+        'You must set the CSRF token before making this request';
+      throw new Error(errorMessage);
+    }
   }
 }
