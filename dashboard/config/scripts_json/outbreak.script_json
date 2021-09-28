@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "outbreak",
-    "serialized_at": "2021-09-24 22:14:22 UTC",
+    "serialized_at": "2021-09-28 18:09:39 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "outbreak"
@@ -167,26 +167,8 @@
       }
     },
     {
-      "key": "c3a7e014-dfaf-4b99-baac-540d1462a6db",
-      "position": 5,
-      "properties": {
-        "description": "**Do This:** Show the “Lots of Sprites” video and discuss how the special blocks inside the event blocks work.",
-        "progression_name": "Video: Lots of Sprites",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The event blocks in this lesson are more advanced than what students have used so far in the course. Make sure students know that they can expand the green event blocks by pressing the + button. Students are working with lots of sprites today. Normally, commands in Sprite Lab affect all of the sprites with the same costume. The blocks inside the event block will make it so each attached action only affects the sprites that were involved in that event."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "c3a7e014-dfaf-4b99-baac-540d1462a6db",
-        "lesson_activity.key": "a4b68e1c-d78c-455c-922f-2fd57f697f58"
-      }
-    },
-    {
       "key": "df13fa93-37df-4188-837d-462c48179625",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "**Do This:** Transition students to their computers, and have them begin following the instructions for each level in the skill building section. If students finish this section early, they can continue experimenting with their code in Level 6 until the class is ready to move on.",
         "progression_name": "Skill Building"
@@ -197,20 +179,8 @@
       }
     },
     {
-      "key": "05b36f45-0f29-4ad3-8669-6c4d4ff65bf5",
-      "position": 7,
-      "properties": {
-        "description": "**Do This:** Bring the class back together to read *Outbreak: Thinking Like a Scientist.*",
-        "progression_name": "Learning from Simulations"
-      },
-      "seeding_key": {
-        "activity_section.key": "05b36f45-0f29-4ad3-8669-6c4d4ff65bf5",
-        "lesson_activity.key": "a4b68e1c-d78c-455c-922f-2fd57f697f58"
-      }
-    },
-    {
       "key": "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e",
-      "position": 8,
+      "position": 6,
       "properties": {
         "description": "**Do this:** Transition students back to their computers, and have them work through the remaining levels. Some of these levels offer optional challenges. Encourage students to read the instructions carefully and to experiment with their simulations.",
         "progression_name": "Mini-Project: Outbreak Simulator"
@@ -222,7 +192,7 @@
     },
     {
       "key": "0620e645-f84e-47ca-809b-3dcbe803d83e",
-      "position": 9,
+      "position": 7,
       "properties": {
         "progression_name": "Free Play"
       },
@@ -274,6 +244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story"
+        ],
         "progression": "Welcome to Monster Town"
       },
       "bonus": false,
@@ -296,28 +269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Lots of Sprites"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_lotsofsprites_video"
+        "level_keys": [
+          "CourseF_outbreak1"
         ],
-        "lesson.key": "Outbreak",
-        "lesson_group.key": "outbreak",
-        "script.name": "outbreak",
-        "activity_section.key": "c3a7e014-dfaf-4b99-baac-540d1462a6db"
-      },
-      "level_keys": [
-        "courseF_lotsofsprites_video"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -335,11 +289,14 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -357,11 +314,14 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak3"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -379,11 +339,14 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -401,33 +364,14 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Learning from Simulations"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_outbreak_story2"
+        "level_keys": [
+          "CourseF_outbreak5"
         ],
-        "lesson.key": "Outbreak",
-        "lesson_group.key": "outbreak",
-        "script.name": "outbreak",
-        "activity_section.key": "05b36f45-0f29-4ad3-8669-6c4d4ff65bf5"
-      },
-      "level_keys": [
-        "CourseF_outbreak_story2"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -445,11 +389,14 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak6"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -467,11 +414,14 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak7"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -489,11 +439,14 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak8"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -511,11 +464,14 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "international_outbreak_freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -544,18 +500,6 @@
         "lesson_group.key": "outbreak",
         "script.name": "outbreak",
         "activity_section.key": "385c2c6a-f7e4-4c90-b081-7030d22193ed"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_lotsofsprites_video",
-        "script_level.level_keys": [
-          "courseF_lotsofsprites_video"
-        ],
-        "lesson.key": "Outbreak",
-        "lesson_group.key": "outbreak",
-        "script.name": "outbreak",
-        "activity_section.key": "c3a7e014-dfaf-4b99-baac-540d1462a6db"
       }
     },
     {
@@ -604,18 +548,6 @@
         "lesson_group.key": "outbreak",
         "script.name": "outbreak",
         "activity_section.key": "df13fa93-37df-4188-837d-462c48179625"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_outbreak_story2",
-        "script_level.level_keys": [
-          "CourseF_outbreak_story2"
-        ],
-        "lesson.key": "Outbreak",
-        "lesson_group.key": "outbreak",
-        "script.name": "outbreak",
-        "activity_section.key": "05b36f45-0f29-4ad3-8669-6c4d4ff65bf5"
       }
     },
     {
