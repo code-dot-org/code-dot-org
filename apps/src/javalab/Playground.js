@@ -31,7 +31,6 @@ export default class Playground {
     this.onNewlineMessage = onNewlineMessage;
     this.onJavabuilderMessage = onJavabuilderMessage;
     this.isGameRunning = false;
-    this.isGameOver = false;
     this.levelName = levelName;
     this.starterAssetFilenames = [];
 
@@ -113,8 +112,8 @@ export default class Playground {
   }
 
   addImageHelper(itemData, isClickable) {
-    // ignore request if the game is over or if the item already exists
-    if (this.isGameOver || this.imageItemExists(itemData)) {
+    // ignore request if the item already exists
+    if (this.imageItemExists(itemData)) {
       return;
     }
 
@@ -134,18 +133,9 @@ export default class Playground {
     this.addPlaygroundItem(itemData.id, imageData);
   }
 
-  addTextItem(itemData) {
-    if (this.isGameOver) {
-      // can't add new items if the game is over
-      return;
-    }
-  }
+  addTextItem(itemData) {}
 
   removeItem(itemData) {
-    if (this.isGameOver) {
-      // can't remove items if game is over
-      return;
-    }
     if (this.imageItemExists(itemData)) {
       this.removePlaygroundItem(itemData.id);
     }
@@ -153,10 +143,6 @@ export default class Playground {
   }
 
   changeItem(itemData) {
-    if (this.isGameOver) {
-      // can't change items if game is over
-      return;
-    }
     if (this.imageItemExists(itemData)) {
       const newImageData = {...itemData};
       if (itemData.filename) {
@@ -170,20 +156,10 @@ export default class Playground {
   }
 
   playSound(soundData) {
-    if (this.isGameOver) {
-      // can't play sound if game is over
-      return;
-    }
-
     this.setMediaElement(this.getAudioElement(), soundData.filename);
   }
 
   setBackgroundImage(backgroundData) {
-    if (this.isGameOver) {
-      // can't set background if game is over
-      return;
-    }
-
     const filename = backgroundData.filename;
     const backgroundElement = this.getBackgroundElement();
     this.setMediaElement(backgroundElement, filename);
@@ -198,7 +174,6 @@ export default class Playground {
   }
 
   reset() {
-    this.isGameOver = false;
     this.isGameRunning = false;
     // reset playground items to be empty
     this.setPlaygroundItems({});
@@ -208,8 +183,8 @@ export default class Playground {
   }
 
   handleImageClick(imageId) {
-    if (this.isGameOver || !this.isGameRunning) {
-      // can only handle click events if game is not over and game is running
+    if (!this.isGameRunning) {
+      // can only handle click events if game is running
       return;
     }
     this.onJavabuilderMessage(WebSocketMessageType.PLAYGROUND, imageId);
@@ -261,7 +236,6 @@ export default class Playground {
 
   endGame() {
     this.isGameRunning = false;
-    this.isGameOver = true;
   }
 
   imageItemExists(itemData) {
