@@ -30,7 +30,6 @@ class ProgrammingExpression < ApplicationRecord
     color
     syntax
     short_description
-    video_key
   )
 
   KEY_CHAR_RE = /[A-Za-z0-9\-\_\.]/
@@ -168,8 +167,7 @@ class ProgrammingExpression < ApplicationRecord
       key: key,
       name: name,
       programmingEnvironmentName: programming_environment.name,
-      shortDescription: short_description || '',
-      videoKey: video_key
+      shortDescription: short_description || ''
     }
   end
 

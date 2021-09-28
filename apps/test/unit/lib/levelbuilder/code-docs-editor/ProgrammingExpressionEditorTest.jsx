@@ -13,17 +13,7 @@ describe('ProgrammingExpressionEditor', () => {
         name: 'Block',
         key: 'block',
         shortDescription: 'This is a short description.'
-      },
-      videoOptions: [
-        {
-          key: 'video1',
-          name: 'Video 1'
-        },
-        {
-          key: 'video2',
-          name: 'Video 2'
-        }
-      ]
+      }
     };
   });
 
@@ -52,14 +42,6 @@ describe('ProgrammingExpressionEditor', () => {
         .at(1)
         .props().readOnly
     ).to.be.true;
-
-    // Video select
-    expect(wrapper.find('option').length).to.equal(3);
-    expect(wrapper.find('option').map(option => option.props().value)).to.eql([
-      '',
-      'video1',
-      'video2'
-    ]);
 
     // short description
     expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(1);

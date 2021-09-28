@@ -35,15 +35,24 @@ class ProgrammingExpressionsController < ApplicationController
   end
 
   def update
-    underscored_params = params.transform_keys(&:underscore).permit(:id, :name, :short_description, :video_key)
-    programming_expression = ProgrammingExpression.find_by_id(underscored_params[:id])
+    programming_expression = ProgrammingExpression.find_by_id(params[:id])
     unless programming_expression
       render :not_found
       return
     end
-    programming_expression.name = underscored_params[:name]
-    programming_expression.short_description = underscored_params[:short_description]
-    programming_expression.video_key = underscored_params[:video_key] unless underscored_params[:video_key].blank?
+    programming_expression.name = programming_expression_params[:name]
+    programming_expression.short_description = programming_expression_params[:short_description]
     programming_expression.save! if programming_expression.changed?
+  end
+
+  private
+
+  def programming_expression_params
+    transformed_params = params.transform_keys(&:underscore)
+    transformed_params = transformed_params.permit(
+      :name,
+      :short_description,
+    )
+    transformed_params
   end
 end

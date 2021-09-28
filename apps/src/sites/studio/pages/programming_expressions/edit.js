@@ -14,13 +14,11 @@ $(document).ready(() => {
   const store = getStore();
 
   const programmingExpression = getScriptData('programmingExpression');
-  const videoOptions = getScriptData('videoOptions');
   ReactDOM.render(
     <Provider store={store}>
       <>
         <ProgrammingExpressionEditor
           initialProgrammingExpression={programmingExpression}
-          videoOptions={videoOptions}
         />
         <ExpandableImageDialog />
       </>
