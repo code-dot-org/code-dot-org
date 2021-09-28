@@ -132,7 +132,6 @@ export default class Playground {
       // can't add new items if the game is over or if the item already exists
       return;
     }
-    console.log(itemData);
 
     const textData = {
       text: itemData.text,
@@ -144,7 +143,7 @@ export default class Playground {
       red: itemData.colorRed,
       blue: itemData.colorBlue,
       green: itemData.colorGreen,
-      fontFamily: itemData.font,
+      font: itemData.font,
       fontStyle: itemData.fontStyle,
       type: PlaygroundItemType.TEXT
     };

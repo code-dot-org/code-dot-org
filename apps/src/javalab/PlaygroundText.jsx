@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {PlaygroundFontStyleType, PlaygroundFontType} from './constants';
 
 export default class PlaygroundText extends React.Component {
   static propTypes = {
@@ -13,20 +14,12 @@ export default class PlaygroundText extends React.Component {
     red: PropTypes.string.isRequired,
     blue: PropTypes.string.isRequired,
     green: PropTypes.string.isRequired,
-    fontFamily: PropTypes.string.isRequired,
+    font: PropTypes.string.isRequired,
     fontStyle: PropTypes.string.isRequired
   };
 
-  render() {
-    const fontFamilyMap = {
-      SANS: 'sans-serif',
-      SERIF: 'serif',
-      MONO: 'monospace'
-    };
-
+  getDynamicStyles() {
     const {
-      id,
-      text,
       x,
       y,
       height,
@@ -35,32 +28,49 @@ export default class PlaygroundText extends React.Component {
       red,
       blue,
       green,
-      fontFamily,
+      font,
       fontStyle
     } = this.props;
-    console.log(rotation);
-    // what to do with overflow text?
-    const dynamicStyle = {
+
+    console.log(PlaygroundFontType);
+
+    const dynamicStyles = {
       left: x * 2,
       top: y * 2,
       zIndex: index,
-      height: parseInt(height) * 2,
-      fontSize: parseInt(height) * 2,
-      fontFamily: fontFamilyMap[fontFamily],
+      height: height * 2,
+      fontSize: height * 2,
+      fontFamily: PlaygroundFontType[font],
       color: `rgb(${parseInt(red)}, ${parseInt(green)}, ${parseInt(blue)})`,
-      transformOrigin: 'top left',
       transform: `rotate(${parseFloat(rotation)}deg)`
     };
 
-    if (fontStyle === 'BOLD' || fontStyle === 'BOLD_ITALIC') {
-      dynamicStyle.fontWeight = 'bold';
+    if (
+      [
+        PlaygroundFontStyleType.BOLD,
+        PlaygroundFontStyleType.BOLD_ITALIC
+      ].includes(fontStyle)
+    ) {
+      dynamicStyles.fontWeight = 'bold';
     }
-    if (fontStyle === 'ITALIC' || fontStyle === 'BOLD_ITALIC') {
-      dynamicStyle.fontStyle = 'italic';
+    if (
+      [
+        PlaygroundFontStyleType.ITALIC,
+        PlaygroundFontStyleType.BOLD_ITALIC
+      ].includes(fontStyle)
+    ) {
+      dynamicStyles.fontStyle = 'italic';
     }
 
+    return dynamicStyles;
+  }
+
+  render() {
+    const {id, text} = this.props;
+    const dynamicStyles = this.getDynamicStyles();
+
     return (
-      <span style={{...dynamicStyle, ...styles.textStyle}} id={id}>
+      <span style={{...dynamicStyles, ...styles.textStyle}} id={id}>
         {text}
       </span>
     );
@@ -71,6 +81,7 @@ const styles = {
   textStyle: {
     position: 'absolute',
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    transformOrigin: 'top left'
   }
 };
