@@ -466,6 +466,45 @@
         },
         "courseD_bee_conditionals2_dani": {
           "4_5_Bee_Conditionals_2_1": "Kom ihåg att kolla så att ALLA moln har en BLOMMA. Du behöver inte kolla efter bivaxkakor alls."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Nytt Block!",
+          "hello_world_new_block": "Nytt Block!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Nytt Block!",
+          "hello_world_new_block": "Nytt Block!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Nytt Block!",
+          "hello_world_new_block": "Nytt Block!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Nytt Block!"
         }
       }
     }
