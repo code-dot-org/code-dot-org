@@ -12,10 +12,18 @@ export default class PlaygroundText extends React.Component {
     rotation: PropTypes.string.isRequired,
     red: PropTypes.string.isRequired,
     blue: PropTypes.string.isRequired,
-    green: PropTypes.string.isRequired
+    green: PropTypes.string.isRequired,
+    fontFamily: PropTypes.string.isRequired,
+    fontStyle: PropTypes.string.isRequired
   };
 
   render() {
+    const fontFamilyMap = {
+      SANS: 'sans-serif',
+      SERIF: 'serif',
+      MONO: 'monospace'
+    };
+
     const {
       id,
       text,
@@ -26,7 +34,9 @@ export default class PlaygroundText extends React.Component {
       rotation,
       red,
       blue,
-      green
+      green,
+      fontFamily,
+      fontStyle
     } = this.props;
     console.log(rotation);
     // what to do with overflow text?
@@ -35,12 +45,17 @@ export default class PlaygroundText extends React.Component {
       marginTop: parseInt(y),
       zIndex: index,
       fontSize: parseInt(height),
-      fontFamily: 'Courier',
-      fontStyle: 'italic',
-      fontWeight: 'bold',
+      fontFamily: fontFamilyMap[fontFamily],
       color: `rgb(${parseInt(red)}, ${parseInt(green)}, ${parseInt(blue)})`,
       transform: `rotate(${parseFloat(rotation)}deg)`
     };
+
+    if (fontStyle === 'BOLD' || fontStyle === 'BOLD_ITALIC') {
+      dynamicStyle.fontWeight = 'bold';
+    }
+    if (fontStyle === 'ITALIC' || fontStyle === 'BOLD_ITALIC') {
+      dynamicStyle.fontStyle = 'italic';
+    }
 
     return (
       <span style={{...dynamicStyle, ...styles.textStyle}} id={id}>
