@@ -1,14 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
 import {POEMS} from './constants';
 
-export default function PoemSelector(props) {
+function PoemSelector(props) {
   const onChange = e => {
     const poemTitle = e.target.value;
     const poem = Object.values(POEMS).find(poem => poem.title === poemTitle);
     if (poem) {
-      console.log(poem);
+      props.onChangePoem(poem);
     }
   };
   return (
@@ -27,6 +30,11 @@ export default function PoemSelector(props) {
   );
 }
 
+PoemSelector.propTypes = {
+  // from Redux
+  onChangePoem: PropTypes.func.isRequired
+};
+
 const styles = {
   container: {
     maxWidth: APP_WIDTH
@@ -35,3 +43,12 @@ const styles = {
     width: '100%'
   }
 };
+
+export default connect(
+  state => ({}),
+  dispatch => ({
+    onChangePoem(poem) {
+      dispatch(setPoem(poem));
+    }
+  })
+)(PoemSelector);
