@@ -434,6 +434,8 @@ describe('Playground', () => {
   it('sets isProgramRunning to false on stop', () => {
     playground.onClose();
     expect(setIsProgramRunning).to.have.been.calledWith(false);
+    expect(onOutputMessage).to.have.been.calledOnce;
+    expect(onNewlineMessage).to.have.been.calledOnce;
   });
 
   function verifyOnFileLoadError(filename) {
