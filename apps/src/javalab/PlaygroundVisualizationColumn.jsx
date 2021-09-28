@@ -82,7 +82,8 @@ const styles = {
   playground: {
     backgroundColor: 'white',
     width: 800,
-    height: 800
+    height: 800,
+    overflow: 'hidden'
   },
   playgroundDiv: {
     width: 800,
