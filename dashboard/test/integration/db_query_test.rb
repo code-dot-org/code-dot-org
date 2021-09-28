@@ -89,4 +89,42 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
   end
+
+  test "student in section views uncached hoc unit" do
+    script = create(
+      :script,
+      :with_levels,
+      levels_count: 10,
+      is_course: true,
+      family_name: 'hoc-family',
+      version_year: 'unversioned',
+      published_state: SharedConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(script)
+
+    teacher = create :teacher
+    section = create :section, user: teacher
+    student = create :student
+    section.students = [student]
+    student.assign_script(script)
+    sign_in student
+
+    assert_cached_queries(15) do
+      get "/s/#{script.name}"
+      assert_response :success
+    end
+
+    # Simulate all the ajax requests which the unit overview page sends to the
+    # server on page load.
+
+    assert_cached_queries(10) do
+      get "/api/user_progress/#{script.name}"
+      assert_response :success
+    end
+
+    assert_cached_queries(4) do
+      get "/api/v1/teacher_feedbacks/count?student_id=#{student.id}"
+      assert_response :success
+    end
+  end
 end
