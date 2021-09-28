@@ -2,7 +2,7 @@
 import {expect} from '../../../util/reconfiguredChai';
 import {stub} from 'sinon';
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
-import CoreLibrary from '@cdo/apps/p5lab/spritelab/libraries/CoreLibrary';
+import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 
 describe('SpriteLab Core Library', () => {

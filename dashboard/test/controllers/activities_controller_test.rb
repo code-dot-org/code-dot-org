@@ -1020,7 +1020,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 100, existing_navigator_user_level.best_result
     assert_equal 20, existing_navigator_user_level.time_spent
 
-    assert_equal [@user], existing_navigator_user_level.driver_user_levels.map(&:user)
+    assert_equal @user, existing_navigator_user_level.driver
   end
 
   test "milestone with pairings updates navigator's existing user level" do
@@ -1042,7 +1042,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 100, existing_driver_user_level.best_result
     assert_equal 20, existing_driver_user_level.time_spent
 
-    assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
+    assert_equal [pairing.name], existing_driver_user_level.navigators_names
   end
 
   test "milestone with pairings stops updating levels when pairing is disabled" do
@@ -1064,7 +1064,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     existing_driver_user_level.reload
     assert_equal 100, existing_driver_user_level.best_result
 
-    assert_equal [], existing_driver_user_level.navigator_user_levels.map(&:user)
+    assert_nil existing_driver_user_level.navigators_names
   end
 
   test "milestone fails to update locked/readonly level" do
