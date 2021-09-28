@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "mc",
-    "serialized_at": "2021-09-28 18:24:52 UTC",
+    "serialized_at": "2021-09-28 21:00:13 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "mc"
@@ -33,7 +33,7 @@
   "lessons": [
     {
       "key": "Hour of Code 2015",
-      "name": "Hour of Code 2015",
+      "name": "Minecraft: Adventurer",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -41,7 +41,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.",
-        "preparation": "### One Week Before Your Hour of Code\n\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to receive swag or classroom support.\n- Review and complete the online tutorial yourself: [Minecraft Hour of Code](https://hourofcode.com/mc) \n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n### One Day Before Your Hour of Code\n\n- Print one or more of the [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at the end of this lesson plan, or create your own. \n- Each student who completes the activity should receive a [certificate](https://code.org/certificates?script=mc). Print one for each student in advance to make this easier at the end of your Hour of Code.\n",
+        "preparation": "### One Week Before Your Hour of Code\n\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to receive swag or classroom support.\n- Review and complete the online tutorial yourself: [Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1) \n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n### One Day Before Your Hour of Code\n\n- Print one or more of the [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at the end of this lesson plan, or create your own. \n- Each student who completes the activity should receive a [certificate](https://code.org/certificates?script=mc). Print one for each student in advance to make this easier at the end of your Hour of Code.\n",
         "purpose": "This lesson introduces the core CS concepts of coding and programming (using blocks), as well as simple debugging techniques.",
         "student_overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end."
       },
@@ -180,7 +180,7 @@
       "key": "aafa75c2-9439-415c-b42f-cac8ddfc2874",
       "position": 1,
       "properties": {
-        "description": "Challenge your students to complete the [Minecraft](https://hourofcode.com/mc) tutorial.\n\nDepending on the age and ability of your students, you might consider: \n\n- For younger students, we suggest you break your class into pairs and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- For learners in the middle grades, we find that working independently on tutorials works well. Sometimes it helps to allow students to choose their own tutorial. If students aren't interested in Minecraft, they can get a similar experience with the [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://hourofcode.com/sw) tutorials.\n- For older or adult learners, the [Minecraft](https://hourofcode.com/mc) tutorial works extremely well either as an independent challenge or a pair programming activity.",
+        "description": "Challenge your students to complete the [Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1) tutorial.\n\nDepending on the age and ability of your students, you might consider: \n\n- For younger students, we suggest you break your class into pairs and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- For learners in the middle grades, we find that working independently on tutorials works well. Sometimes it helps to allow students to choose their own tutorial. If students aren't interested in Minecraft, they can get a similar experience with the [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://studio.code.org/s/starwars/lessons/1/levels/1) tutorials.\n- For older or adult learners, the [Minecraft](https://hourofcode.com/mc) tutorial works extremely well either as an independent challenge or a pair programming activity.",
         "name": "Minecraft Adventurer",
         "tips": [
           {
