@@ -2090,9 +2090,12 @@ en:
           lesson_groups: {}
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
               description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. '
-              description_teacher: "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. \r\n\r\n**Option 1: Blocks**\r\n\r\nThe first option uses drag-drop blocks. This version works best for:\r\n\r\n - Students on mobile devices without keyboards\r\n - Younger students (6+ because the tutorial requires reading)\r\n - International students\r\n\r\nWe recommend this for international students because JavaScript syntax is not translated and for the first Hour of Code, the translated blocks provide a better introduction.\r\n\r\n**Option 2: JavaScript**\r\n\r\nThis option teaches the same basic concepts, but because it uses both drag-drop blocks and JavaScript, the students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+."
+              description_teacher: |-
+                In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. This version uses both drag-drop blocks and JavaScript. Students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+.
+
+                A [Blockly version](/s/starwarsblocks) is also available and recommended for students on mobile devices without keyboards, younger students, and international students.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code (Blockly)'
@@ -2102,9 +2105,12 @@ en:
           lesson_groups: {}
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: 'Star Wars: Building a Galaxy With Code (Blockly)'
               description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. '
-              description_teacher: "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. \r\n\r\n**Option 1: Blocks**\r\n\r\nThe first option uses drag-drop blocks. This version works best for:\r\n\r\n - Students on mobile devices without keyboards\r\n - Younger students (6+ because the tutorial requires reading)\r\n - International students\r\n\r\nWe recommend this for international students because JavaScript syntax is not translated and for the first Hour of Code, the translated blocks provide a better introduction.\r\n\r\n**Option 2: JavaScript**\r\n\r\nThis option teaches the same basic concepts, but because it uses both drag-drop blocks and JavaScript, the students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+."
+              description_teacher: |-
+                In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. This version uses drag-drop blocks and works best for students on mobile devices without keyboards, younger students, and international students. It is recommended for ages 6+.
+
+                A [JavaScript](s/starwars) version is also available. For older students on computers, learning JavaScript can be fun and provide an additional challenge. Note that JavaScript syntax is not translated and for the first Hour of Code, the translated blocks found here provide a better introduction.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         mc:
           title: Minecraft Hour of Code
@@ -7164,8 +7170,8 @@ en:
               name: Intro to AppLab - Getting Started
             Intro to App Lab:
               name: Intro to App Lab
-              description_student: 'This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a "Choose Your Own Adventure", "Greeting Card", or "Personality Quiz" app. They can also continue on to build more projects featured on the code.org/applab page. '
-              description_teacher: "This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. \n\n**Age Appropriateness:** The tutorial is designed for students over 13. Because it allows students to upload custom sounds and images, young students should not use this without supervision. To protect students' privacy, if your students are under 13, they will not be able to use this tutorial unless you first set up accounts for them in a section you manage.\n\n"
+              description_student: "At the end of the tutorial, you will be able to extend a project you started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. You can also continue on to build more projects featured on the code.org/applab page. \n\nHave fun completing your Hour of Code with App Lab!"
+              description_teacher: "This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. \n\nHave fun completing your Hour of Code with App Lab!\n\n**Age Appropriateness:** The tutorial is designed for students over 13. Because it allows students to upload custom sounds and images, young students should not use this without supervision. To protect students' privacy, if your students are under 13, they will not be able to use this tutorial unless you first set up accounts for them in a section you manage.\n\n"
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
           student_description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
@@ -15373,7 +15379,7 @@ en:
           lessons:
             Dance Party - Go Further:
               name: Keep on Dancing
-              description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. '
+              description_student: 'Learners of all ages continue an introductory experience with coding and computer science in a safe, supportive environment. '
               description_teacher: In this lesson, learners of all ages continue their experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
         csp10-pilot:

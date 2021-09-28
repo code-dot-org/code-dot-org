@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "oceans",
-    "serialized_at": "2021-09-27 20:26:55 UTC",
+    "serialized_at": "2021-09-28 17:18:13 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "oceans"
@@ -80,26 +80,26 @@
       }
     },
     {
-      "key": "04400eef-5989-4325-a801-ab4ad451f130",
+      "key": "b304de28-91d8-4215-a853-27f5a3f8a157",
       "position": 3,
       "properties": {
-        "name": "Extended Learning"
+        "name": "Celebrate and Keep Going!"
       },
       "seeding_key": {
-        "lesson_activity.key": "04400eef-5989-4325-a801-ab4ad451f130",
+        "lesson_activity.key": "b304de28-91d8-4215-a853-27f5a3f8a157",
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans"
       }
     },
     {
-      "key": "b304de28-91d8-4215-a853-27f5a3f8a157",
+      "key": "04400eef-5989-4325-a801-ab4ad451f130",
       "position": 4,
       "properties": {
-        "name": "Celebrate and Keep Going!"
+        "name": "Extended Learning"
       },
       "seeding_key": {
-        "lesson_activity.key": "b304de28-91d8-4215-a853-27f5a3f8a157",
+        "lesson_activity.key": "04400eef-5989-4325-a801-ab4ad451f130",
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans"
@@ -117,19 +117,6 @@
         "lesson_group.key": "",
         "script.name": "oceans"
       }
-    },
-    {
-      "key": "954c6fc7-91dd-49f7-9e63-1b4cd63dc556",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "954c6fc7-91dd-49f7-9e63-1b4cd63dc556",
-        "lesson.key": "Oceans",
-        "lesson_group.key": "",
-        "script.name": "oceans"
-      }
     }
   ],
   "activity_sections": [
@@ -137,12 +124,13 @@
       "key": "54b95e4d-58b7-4551-9782-7ce134f4e457",
       "position": 1,
       "properties": {
-        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \n\n**Video:** [AI: Machine Learning](https://www.youtube.com/watch?v=OeU5m6vRyCk) The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch it as a class and debrief afterwards to help students build connections to the content.",
+        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \n\n**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n\n* **Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor to discuss what they are experiencing. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students.\n* **Read the Instructions:** The instructions usually provide helpful information about what is happening behind the scenes. \n* **Go back and try different things:** If students finish quickly, encourage them to go back to \"Train More\". In the last part of the activity, students can also go back and choose a \"New Word\". More training data tends to make the machine learning model more accurate and consistent. Students can also learn by purposefully training their model incorrectly, or not training it at all.\n**Video:** [AI: Machine Learning](https://www.youtube.com/watch?v=OeU5m6vRyCk) The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch it as a class and debrief afterwards to help students build connections to the content.",
         "name": "Build Excitement!\r",
+        "progression_name": "AI Machine Learning - Video",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\n\nHave fun completing your Hour of Code!"
+            "markdown": "You can share these stories with your class to help them see how AI will impact the future.\n\n* [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n* [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n* [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n* [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n* [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n* [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n* [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)\n"
           }
         ]
       },
@@ -152,61 +140,21 @@
       }
     },
     {
-      "key": "276f818d-6f12-436b-9183-778f6a4eb670",
-      "position": 1,
-      "properties": {
-        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n\n* **Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor to discuss what they are experiencing. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students.\n* **Read the Instructions:** The instructions usually provide helpful information about what is happening behind the scenes. \n* **Go back and try different things:** If students finish quickly, encourage them to go back to \"Train More\". In the last part of the activity, students can also go back and choose a \"New Word\". More training data tends to make the machine learning model more accurate and consistent. Students can also learn by purposefully training their model incorrectly, or not training it at all.",
-        "name": "AI for Oceans"
-      },
-      "seeding_key": {
-        "activity_section.key": "276f818d-6f12-436b-9183-778f6a4eb670",
-        "lesson_activity.key": "160cbd69-f567-4fb4-9623-0e69ecec9b3a"
-      }
-    },
-    {
-      "key": "a337a04b-3f9b-4412-8bd6-e98cabddc47a",
+      "key": "a000c7ca-046c-47c5-b2c9-5a3043c747d9",
       "position": 2,
       "properties": {
-        "description": "####Level 1 - [Machine Learning](https://studio.code.org/s/oceans/stage/1/puzzle/1)",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "You can share these stories with your class to help them see how AI will impact the future.\r\n\r\n* [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\r\n* [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\r\n* [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\r\n* [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\r\n* [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\r\n* [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\r\n* [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)\r\n"
-          }
-        ]
+        "description": "**Quick Share-out:** Where have you seen or experienced artificial intelligence in your lives?\nExamples from the video include: \n\n* email filters\n* auto-complete text\n* video recommendation systems\n* voice recognition\n* translation apps\n* digital assistants\n* image recognition\n\n**Prompt:** Based on what you saw in the video, what is machine learning?\n\n**Discuss:** Beginning in small groups then moving to whole class, students share their responses. The goal here is to get students acquainted with the world of artificial intelligence, reflect on the prevalence of artificial intelligence in our lives and think broadly about potential future innovations.\n\n**Say:** *Machine learning refers to a computer that can recognize patterns and make decisions without being explicitly programmed. In this activity you’re going to supply the data to train your own machine learning model. Imagine an ocean that contains creatures like fish, but also contains trash dumped by humans. What if we could train a computer to tell the difference and then use that technology to help clean the ocean?*"
       },
       "seeding_key": {
-        "activity_section.key": "a337a04b-3f9b-4412-8bd6-e98cabddc47a",
-        "lesson_activity.key": "160cbd69-f567-4fb4-9623-0e69ecec9b3a"
-      }
-    },
-    {
-      "key": "285798a9-4dfb-4f42-9fcc-50e49711ccc4",
-      "position": 3,
-      "properties": {
-        "description": "\n**Quick Share-out:** Where have you seen or experienced artificial intelligence in your lives?\nExamples from the video include: \n\n* email filters\n* auto-complete text\n* video recommendation systems\n* voice recognition\n* translation apps\n* digital assistants\n* image recognition\n\n**Prompt:** Based on what you saw in the video, what is machine learning?"
-      },
-      "seeding_key": {
-        "activity_section.key": "285798a9-4dfb-4f42-9fcc-50e49711ccc4",
-        "lesson_activity.key": "160cbd69-f567-4fb4-9623-0e69ecec9b3a"
-      }
-    },
-    {
-      "key": "b4ad5555-869a-46e2-89f7-00a9d43e3b08",
-      "position": 4,
-      "properties": {
-        "description": "**Discuss:** Beginning in small groups then moving to whole class, students share their responses. The goal here is to get students acquainted with the world of artificial intelligence, reflect on the prevalence of artificial intelligence in our lives and think broadly about potential future innovations.\n\n**Say:** *Machine learning refers to a computer that can recognize patterns and make decisions without being explicitly programmed. In this activity you’re going to supply the data to train your own machine learning model. Imagine an ocean that contains creatures like fish, but also contains trash dumped by humans. What if we could train a computer to tell the difference and then use that technology to help clean the ocean?*"
-      },
-      "seeding_key": {
-        "activity_section.key": "b4ad5555-869a-46e2-89f7-00a9d43e3b08",
-        "lesson_activity.key": "160cbd69-f567-4fb4-9623-0e69ecec9b3a"
+        "activity_section.key": "a000c7ca-046c-47c5-b2c9-5a3043c747d9",
+        "lesson_activity.key": "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0"
       }
     },
     {
       "key": "fd806d81-ec5e-4b00-a4d5-2a588e64160b",
-      "position": 5,
+      "position": 1,
       "properties": {
-        "description": "####Levels 2-4 - [Train AI to Clean the Ocean](https://studio.code.org/s/oceans/stage/1/puzzle/2)",
+        "name": "AI For Oceans",
         "tips": [
           {
             "type": "contentCorner",
@@ -221,9 +169,9 @@
     },
     {
       "key": "5d09fa3e-63ce-4142-ac59-d893889ce78d",
-      "position": 6,
+      "position": 2,
       "properties": {
-        "description": "Students can work through the first three levels on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects."
+        "description": "####Levels 2-4 - Train AI to Clean the Ocean\n\nStudents can work through levels 2-4 on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects."
       },
       "seeding_key": {
         "activity_section.key": "5d09fa3e-63ce-4142-ac59-d893889ce78d",
@@ -232,9 +180,10 @@
     },
     {
       "key": "917bb837-8f93-4a92-86dc-ed60980f680b",
-      "position": 7,
+      "position": 3,
       "properties": {
-        "description": "####Level 5 - [Training Data & Bias](https://studio.code.org/s/oceans/stage/1/puzzle/5)\n\n**Quick Share-out:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n**Video**: [AI: Training Data & Bias](https://youtu.be/x2mRoFNm22g)"
+        "description": "####Level 5 - Training Data & Bias\n\n**Quick Share-out:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n",
+        "progression_name": "AI: Training Data & Bias - Video"
       },
       "seeding_key": {
         "activity_section.key": "917bb837-8f93-4a92-86dc-ed60980f680b",
@@ -243,9 +192,9 @@
     },
     {
       "key": "2dd01487-fb16-4666-bd3c-56ae2ce5a364",
-      "position": 8,
+      "position": 4,
       "properties": {
-        "description": "**Prompt:** How do you think your training data influence the results that A.I. produced?"
+        "description": "**Prompt:** How do you think your training data influenced the results that A.I. produced?"
       },
       "seeding_key": {
         "activity_section.key": "2dd01487-fb16-4666-bd3c-56ae2ce5a364",
@@ -254,7 +203,7 @@
     },
     {
       "key": "5ccd5b0c-d53b-4931-9405-218822bb91c6",
-      "position": 9,
+      "position": 5,
       "properties": {
         "description": "**Discuss:** In small groups, students share their responses. Circulate the room and listen to student ideas. This can be followed with full class discussion, or students can jump right back into the tutorial. The goal is to get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\"."
       },
@@ -265,9 +214,9 @@
     },
     {
       "key": "6403e073-cdd0-46e8-9e02-f336a51baf91",
-      "position": 10,
+      "position": 6,
       "properties": {
-        "description": "####Levels 6 - [Using Training Data](https://studio.code.org/s/oceans/stage/1/puzzle/6)"
+        "description": "####Levels 6 - Using Training Data"
       },
       "seeding_key": {
         "activity_section.key": "6403e073-cdd0-46e8-9e02-f336a51baf91",
@@ -276,9 +225,10 @@
     },
     {
       "key": "7b664ff9-4e73-4d47-b54e-f2963900fa2a",
-      "position": 11,
+      "position": 7,
       "properties": {
         "description": "In the second half of the activity, students will teach A.I. about a word of their choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that students will end up with different results based on their training data. Some students may even intentionally train A.I. incorrectly to see what happens. If students are reflecting on how machine learning works, it should be encouraged!",
+        "progression_name": "Using Training Data",
         "tips": [
           {
             "type": "contentCorner",
@@ -293,9 +243,10 @@
     },
     {
       "key": "0e3fc271-27d1-4e73-9981-3e36c95c583f",
-      "position": 12,
+      "position": 8,
       "properties": {
-        "description": "####Level 7 - [Impacts on Society](https://studio.code.org/s/oceans/stage/1/puzzle/7)\n\n**Video**: [AI: Impact on Society](https://youtu.be/ng4c1g3COfs)\n\n**Say:** *Artificial intelligence systems learn from the data we give it, but that data could be opinion-based or biased.*"
+        "description": "####Level 7 - Impacts on Society\n\n\n\n**Say:** *Artificial intelligence systems learn from the data we give it, but that data could be opinion-based or biased.*",
+        "progression_name": "AI: Impact on Society - Video"
       },
       "seeding_key": {
         "activity_section.key": "0e3fc271-27d1-4e73-9981-3e36c95c583f",
@@ -304,7 +255,7 @@
     },
     {
       "key": "10c97a69-e8a4-4eb0-8a7d-86e143c3c4ac",
-      "position": 13,
+      "position": 9,
       "properties": {
         "description": "**Say:** *Think back to the examples of artificial intelligence we discussed at the beginning. Think of a time where machine learning might have gotten something wrong in the real world? (For example, voice recognition fails to understand you.)*\n\n**Prompt:** How could biased data result in problems for artificial intelligence? What are ways to address this?"
       },
@@ -315,7 +266,7 @@
     },
     {
       "key": "fa3c9144-cc51-42f5-8069-6f50da5b465d",
-      "position": 14,
+      "position": 10,
       "properties": {
         "description": "**Discuss:** Beginning in small groups then moving to whole class, students share their responses.  The goal of this discussion is to bring students back to the context of artificial intelligence in the real world.\n\n**Say:** *Some ways to address bias are to use a larger or more inclusive set of training data. \nIn the final part of the activity you’re going to teach A.I. a word that could be interpreted in different ways.*"
       },
@@ -326,24 +277,14 @@
     },
     {
       "key": "a47af864-6d0d-441c-98ea-6e50d036c415",
-      "position": 15,
+      "position": 11,
       "properties": {
-        "description": "####Level 8 - [Teach A.I. a new word](https://studio.code.org/s/oceans/stage/1/puzzle/8)\n\nHere, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed.\n\n**Open question:** *What is a problem you care about that artificial intelligence could help to solve?*"
+        "description": "####Level 8 - Teach A.I. a New Word\n\nHere, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed.\n\n**Open question:** *What is a problem you care about that artificial intelligence could help to solve?*",
+        "progression_name": "Teach AI a New Word"
       },
       "seeding_key": {
         "activity_section.key": "a47af864-6d0d-441c-98ea-6e50d036c415",
         "lesson_activity.key": "160cbd69-f567-4fb4-9623-0e69ecec9b3a"
-      }
-    },
-    {
-      "key": "be0db11e-cb8e-4658-844c-73a9faafa36d",
-      "position": 1,
-      "properties": {
-        "description": "####Help Classify Animals at Mountain Zebra National Park\n\nSnapshot Safari has placed hundreds of hidden cameras across southern Africa, capturing millions of images of beautiful and rare animals. Students can help protect the endangered Cape Mountain Zebra by classifying the different animals in these images.  You can read about the project [here](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/about/research) or click below to give it a try!\n\n[Snapshot Mountain Zebra - Zooniverse](\nhttps://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445)"
-      },
-      "seeding_key": {
-        "activity_section.key": "be0db11e-cb8e-4658-844c-73a9faafa36d",
-        "lesson_activity.key": "04400eef-5989-4325-a801-ab4ad451f130"
       }
     },
     {
@@ -355,6 +296,17 @@
       "seeding_key": {
         "activity_section.key": "0cc68ced-0af8-4fbf-a8df-4df044149a60",
         "lesson_activity.key": "b304de28-91d8-4215-a853-27f5a3f8a157"
+      }
+    },
+    {
+      "key": "be0db11e-cb8e-4658-844c-73a9faafa36d",
+      "position": 1,
+      "properties": {
+        "description": "####Help Classify Animals at Mountain Zebra National Park\n\nSnapshot Safari has placed hundreds of hidden cameras across southern Africa, capturing millions of images of beautiful and rare animals. Students can help protect the endangered Cape Mountain Zebra by classifying the different animals in these images.  You can read about the project [here](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/about/research) or click below to give it a try!\n\n[Snapshot Mountain Zebra - Zooniverse](\nhttps://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445)"
+      },
+      "seeding_key": {
+        "activity_section.key": "be0db11e-cb8e-4658-844c-73a9faafa36d",
+        "lesson_activity.key": "04400eef-5989-4325-a801-ab4ad451f130"
       }
     },
     {
@@ -391,16 +343,6 @@
         "activity_section.key": "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300",
         "lesson_activity.key": "422a9a0d-186b-4332-93a8-8ccc5c407ec6"
       }
-    },
-    {
-      "key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5",
-        "lesson_activity.key": "954c6fc7-91dd-49f7-9e63-1b4cd63dc556"
-      }
     }
   ],
   "script_levels": [
@@ -410,9 +352,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Video_Machine_Learning"
-        ]
+        "progression": "AI Machine Learning - Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -422,7 +362,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "54b95e4d-58b7-4551-9782-7ce134f4e457"
       },
       "level_keys": [
         "Oceans_Video_Machine_Learning"
@@ -431,12 +371,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_FishVTrash"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -446,7 +383,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "5d09fa3e-63ce-4142-ac59-d893889ce78d"
       },
       "level_keys": [
         "Oceans_FishVTrash"
@@ -455,12 +392,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_CreaturesVTrashDemo"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -470,7 +404,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "5d09fa3e-63ce-4142-ac59-d893889ce78d"
       },
       "level_keys": [
         "Oceans_CreaturesVTrashDemo"
@@ -479,12 +413,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_CreaturesVTrash"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -494,7 +425,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "5d09fa3e-63ce-4142-ac59-d893889ce78d"
       },
       "level_keys": [
         "Oceans_CreaturesVTrash"
@@ -503,12 +434,10 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Video_Training_Data"
-        ]
+        "progression": "AI: Training Data & Bias - Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -518,7 +447,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "917bb837-8f93-4a92-86dc-ed60980f680b"
       },
       "level_keys": [
         "Oceans_Video_Training_Data"
@@ -527,12 +456,10 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Short"
-        ]
+        "progression": "Using Training Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -542,7 +469,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "7b664ff9-4e73-4d47-b54e-f2963900fa2a"
       },
       "level_keys": [
         "Oceans_Short"
@@ -551,12 +478,10 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Video_Societal_Implications"
-        ]
+        "progression": "AI: Impact on Society - Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -566,7 +491,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "0e3fc271-27d1-4e73-9981-3e36c95c583f"
       },
       "level_keys": [
         "Oceans_Video_Societal_Implications"
@@ -575,12 +500,10 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Long"
-        ]
+        "progression": "Teach AI a New Word"
       },
       "bonus": false,
       "seeding_key": {
@@ -590,7 +513,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "a47af864-6d0d-441c-98ea-6e50d036c415"
       },
       "level_keys": [
         "Oceans_Long"
@@ -607,7 +530,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "54b95e4d-58b7-4551-9782-7ce134f4e457"
       }
     },
     {
@@ -619,7 +542,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "5d09fa3e-63ce-4142-ac59-d893889ce78d"
       }
     },
     {
@@ -631,7 +554,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "5d09fa3e-63ce-4142-ac59-d893889ce78d"
       }
     },
     {
@@ -643,7 +566,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "5d09fa3e-63ce-4142-ac59-d893889ce78d"
       }
     },
     {
@@ -655,7 +578,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "917bb837-8f93-4a92-86dc-ed60980f680b"
       }
     },
     {
@@ -667,7 +590,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "7b664ff9-4e73-4d47-b54e-f2963900fa2a"
       }
     },
     {
@@ -679,7 +602,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "0e3fc271-27d1-4e73-9981-3e36c95c583f"
       }
     },
     {
@@ -691,7 +614,7 @@
         "lesson.key": "Oceans",
         "lesson_group.key": "",
         "script.name": "oceans",
-        "activity_section.key": "1348dfcf-e97b-4abb-9f73-fd8b4263cee5"
+        "activity_section.key": "a47af864-6d0d-441c-98ea-6e50d036c415"
       }
     }
   ],
