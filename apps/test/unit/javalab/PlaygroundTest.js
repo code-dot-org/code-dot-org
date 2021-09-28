@@ -418,7 +418,7 @@ describe('Playground', () => {
     expect(onJavabuilderMessage).to.not.have.been.called;
   });
 
-  it('sets isProgramRunning to false onStop', () => {
+  it('sets isProgramRunning to false on stop', () => {
     playground.onClose();
     expect(setIsProgramRunning).to.have.been.calledWith(false);
   });
