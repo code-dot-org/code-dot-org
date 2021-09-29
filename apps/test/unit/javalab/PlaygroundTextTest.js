@@ -2,6 +2,7 @@ import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import PlaygroundText from '@cdo/apps/javalab/PlaygroundText';
+import {PlaygroundFontTypeFontFamilies} from '@cdo/apps/javalab/constants';
 
 describe('PlaygroundImageTest', () => {
   it('sets styles correctly', () => {
@@ -30,7 +31,7 @@ describe('PlaygroundImageTest', () => {
     expect(textStyles.left).to.equal(700);
     expect(textStyles.height).to.equal(200);
     expect(textStyles.fontSize).to.equal(200);
-    expect(textStyles.fontFamily).to.equal('monospace');
+    expect(textStyles.fontFamily).to.equal(PlaygroundFontTypeFontFamilies.MONO);
     expect(textStyles.fontWeight).to.equal('bold');
     expect(textStyles.fontStyle).to.equal('italic');
     expect(textStyles.color).to.equal('rgb(0, 255, 0)');

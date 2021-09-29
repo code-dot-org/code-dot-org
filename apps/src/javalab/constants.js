@@ -129,10 +129,10 @@ export const PlaygroundSignalType = {
   SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE'
 };
 
-export const PlaygroundFontType = {
-  SANS: 'sans-serif',
-  SERIF: 'serif',
-  MONO: 'monospace'
+export const PlaygroundFontTypeFontFamilies = {
+  SANS: 'Arial, Helvetica, sans-serif',
+  SERIF: '"Times New Roman", Times, serif',
+  MONO: '"Courier New", Courier, monospace'
 };
 
 export const PlaygroundFontStyleType = makeEnum(
