@@ -12,7 +12,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
   # GET /api/v1/pd/workshops
   def index
-    puts "CREATE NEW WORKSHOP"
     if params[:state]
       @workshops = @workshops.in_state(params[:state])
     end
@@ -31,7 +30,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     @workshops = @workshops.exclude_summer if params[:exclude_summer]
 
-    puts "ABOUT TO RENDER"
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
   end
 
