@@ -1,3 +1,4 @@
+/* global appOptions */
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -72,6 +73,7 @@ PoemEditor.propTypes = {
 
 function PoemSelector(props) {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedPoem, setSelectedPoem] = useState(undefined);
 
   const handleClose = poem => {
     props.onChangePoem(poem);
@@ -80,6 +82,7 @@ function PoemSelector(props) {
 
   const onChange = e => {
     const poemTitle = e.target.value;
+    setSelectedPoem(poemTitle);
 
     if (poemTitle === msg.enterMyOwn()) {
       setIsOpen(true);
@@ -90,13 +93,20 @@ function PoemSelector(props) {
       }
     }
   };
+
+  if (!selectedPoem) {
+    const defaultPoem = POEMS[appOptions.level.defaultPoem];
+    setSelectedPoem(defaultPoem.title);
+    props.onChangePoem(defaultPoem);
+  }
+
   return (
     <div style={styles.container}>
       <PoemEditor isOpen={isOpen} handleClose={handleClose} />
       <label>
         <b>{msg.selectPoem()}</b>
       </label>
-      <select style={styles.selector} onChange={onChange}>
+      <select value={selectedPoem} style={styles.selector} onChange={onChange}>
         {Object.values(POEMS).map(poem => (
           <option key={poem.title} value={poem.title}>
             {poem.title}
