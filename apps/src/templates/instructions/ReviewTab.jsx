@@ -36,7 +36,6 @@ class ReviewTab extends Component {
     errorSavingReviewableProject: false,
     errorLoadingReviewblePeers: false,
     comments: [],
-    token: '',
     forceRecreateEditorKey: 0,
     reviewablePeers: [],
     projectOwnerName: '',
@@ -87,15 +86,9 @@ class ReviewTab extends Component {
 
     const initialLoadPromises = [];
 
+    const setComments = data => this.setState({comments: data});
     initialLoadPromises.push(
-      this.dataApi
-        .getCodeReviewCommentsForProject()
-        .done((data, _, request) => {
-          this.setState({
-            comments: data,
-            token: request.getResponseHeader('csrf-token')
-          });
-        })
+      this.dataApi.getCodeReviewCommentsForProject(setComments)
     );
 
     initialLoadPromises.push(
@@ -153,14 +146,13 @@ class ReviewTab extends Component {
   };
 
   onNewCommentSubmit = commentText => {
-    const {token} = this.state;
     this.setState({
       commentSaveError: false,
       commentSaveInProgress: true
     });
 
     this.dataApi
-      .submitNewCodeReviewComment(commentText, token)
+      .submitNewCodeReviewComment(commentText)
       .done(newComment => {
         const comments = this.state.comments;
         comments.push(newComment);
@@ -184,10 +176,8 @@ class ReviewTab extends Component {
   };
 
   onCommentDelete = deletedCommentId => {
-    const {token} = this.state;
-
     this.dataApi
-      .deleteCodeReviewComment(deletedCommentId, token)
+      .deleteCodeReviewComment(deletedCommentId)
       .done(() => {
         const comments = [...this.state.comments];
         _.remove(comments, comment => comment.id === deletedCommentId);
@@ -198,10 +188,8 @@ class ReviewTab extends Component {
   };
 
   onCommentResolveStateToggle = (resolvedCommentId, newResolvedStatus) => {
-    const {token} = this.state;
-
     this.dataApi
-      .resolveCodeReviewComment(resolvedCommentId, newResolvedStatus, token)
+      .resolveCodeReviewComment(resolvedCommentId, newResolvedStatus)
       .done(() => {
         const comments = [...this.state.comments];
         const resolvedCommentIndex = comments.findIndex(
@@ -237,7 +225,6 @@ class ReviewTab extends Component {
   renderReadyForReviewCheckbox() {
     const {
       reviewCheckboxEnabled,
-      token,
       isReadyForReview,
       loadingReviewableState
     } = this.state;
@@ -246,9 +233,7 @@ class ReviewTab extends Component {
       !this.props.codeReviewEnabled ||
       this.props.viewAsCodeReviewer ||
       this.props.viewAs === ViewType.Teacher ||
-      !reviewCheckboxEnabled ||
-      !token ||
-      token.length === 0
+      !reviewCheckboxEnabled
     ) {
       return null;
     }
@@ -284,7 +269,7 @@ class ReviewTab extends Component {
 
     if (isReadyForReview) {
       this.dataApi
-        .enablePeerReview(this.state.token)
+        .enablePeerReview()
         .done(data => {
           this.setState({
             reviewableProjectId: data.id,
@@ -302,7 +287,7 @@ class ReviewTab extends Component {
         });
     } else {
       this.dataApi
-        .disablePeerReview(this.state.reviewableProjectId, this.state.token)
+        .disablePeerReview(this.state.reviewableProjectId)
         .done(() => {
           this.setState({
             isReadyForReview: false,
