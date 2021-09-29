@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "dance-2019",
-    "serialized_at": "2021-09-27 19:07:28 UTC",
+    "serialized_at": "2021-09-28 22:52:09 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "dance-2019"
@@ -218,7 +218,7 @@
       "key": "5442c2d2-c29f-4455-a3aa-bb02b59f0bbe",
       "position": 1,
       "properties": {
-        "description": "This tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw ) . We are using radio-safe versions of all songs and for students under 13..",
+        "description": "This tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw ) . We are using radio-safe versions of all songs and for students under 13.",
         "name": "Music Filtering\r"
       },
       "seeding_key": {

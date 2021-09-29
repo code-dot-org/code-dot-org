@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "dance",
-    "serialized_at": "2021-09-28 21:35:29 UTC",
+    "serialized_at": "2021-09-28 23:02:33 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "dance"
@@ -42,7 +42,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.",
-        "preparation": "### One Week Before Your Hour of Code\r\n\r\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \r\n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\r\n- Review and complete the online tutorial yourself: [Dance Party](https://studio.code.org/s/dance-2019) \r\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\r\n- Review the supplementary lesson plan, [\"The Big Dance Party\"](https://curriculum.code.org/hoc/unplugged/4/) to determine whether or not you'd like to lead this lesson in advance of your Hour of Code.\r\n\r\n### One Day Before Your Hour of Code\r\n\r\n- Each student who completes the activity should receive a certificate. [Print one](http://code.org/certificates) for everyone in advance to make this easier at the end of your Hour of Code.\r\n- (optional) Encourage students to bring in headphones to use during the activity.\r\n",
+        "preparation": "### One Week Before Your Hour of Code\n\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n- Review and complete the online tutorial yourself: [Dance Party](https://studio.code.org/s/dance/lessons/1/levels/1) \n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n- Review the supplementary lesson plan, [\"The Big Dance Party\"](studio.code.org/s/dance-unplugged/lessons/1) to determine whether or not you'd like to lead this lesson in advance of your Hour of Code.\n\n### One Day Before Your Hour of Code\n\n- Each student who completes the activity should receive a [certificate](http://code.org/certificates). Print one for each student in advance to make this easier at the end of your Hour of Code.\n- (optional) Encourage students to bring in headphones to use during the activity.\n",
         "purpose": "This lesson introduces the core CS concepts of coding and event programming (using blocks).",
         "student_overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music."
       },
@@ -58,7 +58,8 @@
       "key": "a2eb5e99-bebd-4dd0-bd23-2e26b4460f7f",
       "position": 1,
       "properties": {
-        "name": "Getting Started (5 minutes)"
+        "duration": 5,
+        "name": "Getting Started"
       },
       "seeding_key": {
         "lesson_activity.key": "a2eb5e99-bebd-4dd0-bd23-2e26b4460f7f",
@@ -140,7 +141,7 @@
       "position": 1,
       "properties": {
         "description": "Welcome students to class and very briefly introduce the day’s activity.",
-        "name": "Setting the Stage\r"
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "0335c0d1-6eb5-4671-a1e2-1e3f559b3103",
@@ -154,7 +155,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you have time and would like to prepare your students with an unplugged activity, consider delivering [\"Dance Party: Unplugged\"](https://curriculum.code.org/hoc/unplugged/4/) before your Hour of Code event. This brief lesson introduces students to the idea of events triggering different dance moves.\r\n\r\n"
+            "markdown": "If you have time and would like to prepare your students with an unplugged activity, consider delivering [\"Dance Party: Unplugged\"](https://studio.code.org/s/dance-unplugged/lessons/1) before your Hour of Code event. This brief lesson introduces students to the idea of events triggering different dance moves.\n\n"
           }
         ]
       },
@@ -206,7 +207,7 @@
       "key": "e51e34df-5370-43a4-bae5-14d2ba49a932",
       "position": 6,
       "properties": {
-        "description": "Explain that today we're going to be creative with \"code\", which just means means a set of instructions that a computer can understand. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\r\n\r\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this [r dance-party-playlist] to help kick things off. Capture your class's moves on video.\r\n\r\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        "description": "Explain that today we're going to be creative with \"code\", which just means means a set of instructions that a computer can understand. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw) to help kick things off. \n\nCapture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
       },
       "seeding_key": {
         "activity_section.key": "e51e34df-5370-43a4-bae5-14d2ba49a932",
@@ -217,7 +218,7 @@
       "key": "3d2ec9d2-ed62-4db0-99ca-ddf8e012d75a",
       "position": 1,
       "properties": {
-        "description": "This tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this [r spotify-playlist-pg-13]. We are using radio-safe versions of all songs and for students under 13, we limit the music to this filtered list [r dance-party-playlist]. If you would like to use the filtered list with older students, you can share [this link](https://studio.code.org/s/dance?songfilter=on) with your classroom.",
+        "description": "This tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw ). We are using radio-safe versions of all songs for students under 13.",
         "name": "Music Filtering\r"
       },
       "seeding_key": {
@@ -241,8 +242,7 @@
       "key": "4dee8e28-b791-4791-ae95-8276c0da6331",
       "position": 3,
       "properties": {
-        "description": "\n\n#### Level 1\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.\n\n\n\n\n\n\n\n\n\n\n",
-        "name": "Level by Level"
+        "description": "\n\n#### Level 1\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.\n\n\n\n\n\n\n\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "4dee8e28-b791-4791-ae95-8276c0da6331",
@@ -442,6 +442,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_01"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -463,6 +466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_02"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -484,6 +490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_03"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -505,6 +514,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_04"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -526,6 +538,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_05"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -547,6 +562,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_06"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -568,6 +586,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_08"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -589,6 +610,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_09"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -610,6 +634,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -631,6 +658,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -652,6 +682,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_11b"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -673,6 +706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_11_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -694,6 +730,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
