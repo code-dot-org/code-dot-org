@@ -207,6 +207,12 @@ tr:
           lessons:
             Artist:
               name: Sanatçı
+              description_student: Sanatçıyı programlayarak güzel resimler oluşturun.
+              description_teacher: Bu derste öğrenciler, ekrandaki çizimleri tamamlaması
+                için Sanatçının kontrolünü ele alacaktır. Bu Sanatçı aşaması, öğrencilerin,
+                '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları
+                kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak
+                sağlayacaktır.
           student_description: Sanatçı ile harika resimler ve tasarımlar yap!
         hourofcode:
           title: Klasik Labirent
@@ -1778,6 +1784,14 @@ tr:
           lessons:
             Oceans:
               name: Okyanuslar
+              description_student: 'Ders Özeti: Öncelikle öğrenciler, okyanustan çöpleri
+                kaldırmak amacıyla nesneleri ya "balık" ya da "balık değil" olarak
+                sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait
+                olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir.
+                Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş
+                balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir.
+                Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen
+                bir makine öğrenim modeli için kullanılır.'
           student_description: Yapay zekâ ve makine öğreniminin dünyanın sorunlarını
             yönlendirmek için nasıl kullanılabileceğini öğrenin.
         CSPPD3-Unit3-pt2:
@@ -3920,6 +3934,14 @@ tr:
           lessons:
             Bounce:
               name: Sıçrama
+              description_student: Hiç okulda bilgisayar oyunları oynamayı dilediniz
+                mi? Bu derste kendi oyununuzu oluşturacaksınız!
+              description_teacher: Bu çevrim içi etkinlikte, öğrenciler, olayların
+                ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları
+                nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine
+                basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar.
+                Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri
+                kullanabilecekleri fırsatları olacak.
           student_description: Takımınızı seçin ve bir basketbol oyunu oynayın
         sample-csp5:
           lessons:
@@ -4919,6 +4941,14 @@ tr:
           lessons:
             Sports:
               name: Spor
+              description_student: Hiç okulda bilgisayar oyunları oynamayı dilediniz
+                mi? Bu derste kendi oyununuzu oluşturacaksınız!
+              description_teacher: Bu çevrim içi etkinlikte, öğrenciler, olayların
+                ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları
+                nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine
+                basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar.
+                Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri
+                kullanabilecekleri fırsatları olacak.
           student_description: Kendi sporunu kodla
         2016_sciencePD-phase2b:
           lessons:
@@ -17046,7 +17076,7 @@ tr:
               display_name: Anket
           lessons:
             CSD post-course survey:
-              name: CSD kurs sonrası anketi
+              name: CSD Öğrenci Kurs Sonrası Anketi ('18-'19)
         csp-post-survey-2018:
           title: CSP Öğrenci Kurs Sonrası Anketi ('18-'19)
           description_audience: CSP Öğrencileri
@@ -17056,7 +17086,7 @@ tr:
               display_name: Anket
           lessons:
             CSP post-course survey:
-              name: CSP kurs sonrası anketi
+              name: CSP Öğrenci Kurs Sonrası Anketi ('18-'19)
         csp5-pilot:
           title: CSP Ünite 5 Pilot - Listeler, Döngüler ve Gezinmeler
           lesson_groups:

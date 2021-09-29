@@ -183,6 +183,8 @@ it:
           lessons:
             Artist:
               name: Artista
+              description_student: Crea splendide immagini programmando l'artista.
+              description_teacher: In questa lezione gli alunni prenderanno il controllo di un'artista per fargli completare dei disegni sullo schermo. Attraverso i vari esercizi della lezione gli alunni creeranno immagini di complessità crescente utilizzando nuovi blocchi come `vai avanti di 100 pixel` e `gira a destra di 90 gradi`.
           student_description: Disegna fantastiche immagini e decorazioni con l'artista!
         hourofcode:
           title: Labirinto Classico
@@ -1425,6 +1427,7 @@ it:
           lessons:
             Oceans:
               name: L'Intelligenza Artificiale per il mare
+              description_student: 'Riepilogo del tutorial: i primi studenti classificano gli oggetti come "pesce" o "non pesce" per tentare di rimuovere la spazzatura dall''oceano. Quindi, gli studenti dovranno espandere il loro set di dati di addestramento per includere altre creature marine che appartengono all''acqua. Nella seconda parte dell''attività, gli studenti sceglieranno le proprie etichette da applicare alle immagini di pesci generati casualmente. Questi dati di addestramento vengono utilizzati per un modello di apprendimento automatico che dovrebbe quindi essere in grado di etichettare le nuove immagini da soli.'
           student_description: Impara come si può usare l'Intelligenza Artificiale per risolvere i problemi del mondo di oggi.
         CSPPD3-Unit3-pt2:
           lessons:
@@ -2204,6 +2207,8 @@ it:
           lessons:
             Bounce:
               name: Ping-Pong
+              description_student: Ti piacerebbe poter giocare con dei videogiochi a scuola? In questa lezione potrai crearne uno tutto tuo!
+              description_teacher: In questa attività online, gli studenti impareranno cosa sono gli Eventi e come i computer li usano in programmi come i videogiochi. Gli studenti creeranno dei programmi che reagiscono agli Eventi (come la pressione dei pulsanti freccia). Alla fine della lezione, gli studenti avranno la possibilità di personalizzare il proprio gioco modificando velocità e suoni.
           student_description: |-
             <https://studio.code.org/s/basketball/stage/>
 
@@ -2494,6 +2499,8 @@ it:
           lessons:
             Sports:
               name: Sport
+              description_student: Ti piacerebbe poter giocare con dei videogiochi a scuola? In questa lezione potrai crearne uno tutto tuo!
+              description_teacher: In questa attività online, gli studenti impareranno cosa sono gli Eventi e come i computer li usano in programmi come i videogiochi. Gli studenti creeranno dei programmi che reagiscono agli Eventi (come la pressione dei pulsanti freccia). Alla fine della lezione, gli studenti avranno la possibilità di personalizzare il proprio gioco modificando velocità e suoni.
           student_description: Combina diversi sport
         2016_sciencePD-phase2b:
           lessons:
@@ -7959,8 +7966,8 @@ it:
               name: Codifica di una simulazione
           lesson_groups:
             outbreak:
-              display_name: Simulazione dell'epidemia
-          title: Simulazione dell'epidemia
+              display_name: Simulazione di epidemia
+          title: Simulazione di epidemia
           description_short: Usa il Laboratorio dei personaggi per programmare la simulazione di un'epidemia di virus.
           description: Usa il Laboratorio dei personaggi per programmare la simulazione di un'epidemia di virus.
           name: epidemia
@@ -7981,7 +7988,7 @@ it:
             lessonGroup-3:
               display_name: Variabili
             outbreak:
-              display_name: Simulazione dell'epidemia
+              display_name: Simulazione di epidemia
             debugging:
               display_name: Correzione errori (debugging)
         csd1-2021:
@@ -8814,7 +8821,7 @@ it:
             ramp_up:
               display_name: Introduzione
             outbreak:
-              display_name: Simulazione dell'epidemia
+              display_name: Simulazione di epidemia
             lessonGroup-3:
               display_name: Variabili
             Sprites:
@@ -9125,3 +9132,7 @@ it:
               display_name: Contenuto
             lessonGroup-2:
               display_name: Contenuto
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: Festa di ballo

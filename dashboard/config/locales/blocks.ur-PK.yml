@@ -1465,9 +1465,13 @@ ur:
         text: ایکس {SPRITE} کے مربوط
       Mikelab_yLocationOf:
         text: Y کے ہم آہنگ {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': بارش
+      Poetry_playSound:
         text: پلے آواز {SOUND}
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': رنگ
@@ -1477,10 +1481,9 @@ ur:
             '"ripples"': ریپلز
           PALETTE:
             '"rainbow"': قوس قزح
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: پس منظر کو {IMG} پر سیٹ کریں
-      PoemBot_setForegroundEffect:
-        text: پس منظر اثر {EFFECT} سیٹ کریں
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': بارش
@@ -1488,6 +1491,20 @@ ur:
             '"hearts"': رنگین دل
             '"confetti"': کاغذی لیریاں
             '"starburst"': اسٹاربسٹ
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: آگے چلیں
       RyanLab_turnLeft:

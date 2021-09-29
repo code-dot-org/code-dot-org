@@ -155,6 +155,15 @@
           "recovering": "αναρρώνοντας",
           "moving left and right": "κίνηση αριστερά και δεξιά",
           "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_animals_behaviors": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_retro_behaviors": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
         }
       }
     }

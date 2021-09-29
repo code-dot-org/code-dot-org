@@ -620,6 +620,10 @@ sl:
             '"down"': puščica dol
             '"left"': puščica levo
             '"right"': puščica desno
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': dež
       RyanLab_moveForward:
         text: premakni se naprej
       RyanLab_turnLeft:

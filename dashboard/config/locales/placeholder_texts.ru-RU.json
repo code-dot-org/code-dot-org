@@ -320,7 +320,8 @@
           "605f302ebc9f7fbacba60b15f551a633": "Какой твой любимый цвет?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Укажи свой любимый цвет:",
           "1f258d88a70309efc1435ef5daa277a0": "Спасибо за общение со мной сегодня!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос",
+          "ae096fbf24d913754b01a1601672bf62": "тоже!"
         },
         "courseF_editable_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Командные игры",
@@ -343,7 +344,9 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
         },
         "courseF_text_choice_events": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос",
+          "c529a06c3f8518b63ff6dfac482b335c": "Назови эту планету:",
+          "44506356d48394cd903b579df9de9117": ", землянин!"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
@@ -378,6 +381,17 @@
         },
         "courseF_variables_madlib_finish": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "мой вопрос"
+        },
+        "courseF_label_predict": {
+          "f15045cb7e57652546d4a0b2c695356f": "Что ты будешь есть?",
+          "937dc37c06cc5d89a7096eb048b73590": "прямо сейчас!"
+        },
+        "courseF_text_choice_interview": {
+          "5bd698afd23bccde289bb0b4aa72a518": "Назови робота.",
+          "34088af1fb721900963462375b3bbe23": "робот!"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "Как тебя зовут?"
         }
       }
     }

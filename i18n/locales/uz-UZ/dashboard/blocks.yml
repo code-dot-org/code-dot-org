@@ -1631,11 +1631,15 @@ uz:
         text: "{SPRITE} x koordinatasi"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': yomg‘ir
+      Poetry_makeNumSprites:
         text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
-      PoemBot_playSound:
+      Poetry_playSound:
         text: " {SOUND} ijro etish"
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Ranglar
@@ -1645,10 +1649,9 @@ uz:
             '"ripples"': To‘lqinlar
           PALETTE:
             '"rainbow"': Kamalak
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: orqa fonni {IMG} ga o'zgartirish
-      PoemBot_setForegroundEffect:
-        text: old plan effektini {EFFECT} o'rnatish
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Yomg'ir
@@ -1656,7 +1659,7 @@ uz:
             '"hearts"': Rangli yuraklar
             '"confetti"': Konfetti
             '"starburst"': Yulduzlar to'plami
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             growing: o'sish
@@ -1666,7 +1669,7 @@ uz:
             spinning_right: o'ng tarafga aylanish
             swimming_left_and_right: suzmoqda
             wandering: daydish
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             growing: o'sish
@@ -1676,7 +1679,21 @@ uz:
             spinning_right: o'ng tarafga aylanish
             swimming_left_and_right: suzmoqda
             wandering: daydish
-      PoemBot_whenPromptAnswered:
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: "{VAR} javob berilganda"
       RyanLab_moveForward:
         text: oldinga siljish

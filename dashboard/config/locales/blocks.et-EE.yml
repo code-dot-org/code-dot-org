@@ -1147,17 +1147,17 @@ et:
             '"down"': nool alla
             '"left"': nool vasakule
             '"right"': nool paremale
-      PoemBot_setBackgroundEffect:
-        text: |-
-          määra taustaefekt
-          {EFFECT} {PALETTE}
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': vihm
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Värvid
           PALETTE:
             '"rainbow"': Vikerkaar
-      PoemBot_setForegroundEffect:
-        text: määra esiplaani efekt {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Vihm

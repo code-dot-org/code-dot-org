@@ -278,7 +278,8 @@
           "name": "Meneos - Go Noodle"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "Cómo Hacer una Sección de Clase en Code.org"
+          "name": "Cómo Hacer una Sección de Clase en Code.org",
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Mapas felices",
@@ -345,6 +346,9 @@
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Detente y Piensa Online"
         },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Caras de Sentimiento Imagen de Emoción"
+        },
         "csf_lesson_recommendations_1/coursea/2021": {
           "name": "CSF Recomendaciones de Lecciones ",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
@@ -365,13 +369,27 @@
           "name": "El Gran Evento (Cursos A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "Caras de Sentimiento - Imagen de Emoción"
+        },
         "csf-lesson-recommend/coursea/2021": {
           "name": "Sugerencias para la Actividad Principal de Fundamentos de Ciencias de la Computación",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "Caras de Sentimiento - Imagen de Emoción"
+        },
         "csf_lesson_recommendations_2/coursea/2021": {
           "name": "CSF Recomendaciones de Lecciones ",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "artist_project_planning_guide/coursea/2021": {
+          "name": "Proyecto de Artista - Guía de Planificación",
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "name": "Proyecto de Artista - Guía de Planificación",
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
         },
         "csta_standards_mapping/coursea/2021": {
           "name": "Normas de la CSTA",
@@ -382,10 +400,12 @@
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
         },
         "cross-curricular_extension_activities/coursea/2021": {
-          "name": "Extensión de Actividades multidisciplinarias"
+          "name": "Extensión de Actividades multidisciplinarias",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursea/2021": {
-          "name": "Vocabulario del curso"
+          "name": "Vocabulario del curso",
+          "url": "https://studio.code.org/s/coursea-2021/vocab"
         },
         "implementation_guide/coursea/2021": {
           "name": "Guía de implementación"
@@ -405,6 +425,9 @@
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Foro de profesores"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Mis amigos robóticos"

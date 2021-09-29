@@ -2058,6 +2058,45 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Arraste os blocos da caixa de ferramentas em seu espaço de trabalho."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Novo bloco!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Novo bloco!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Novo bloco!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Novo bloco!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Novo bloco!",
+          "hello_world_new_block": "Novo bloco!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Novo bloco!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Novo bloco!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Novo bloco!",
+          "hello_world_new_block": "Novo bloco!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Novo bloco!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Novo bloco!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Novo bloco!",
+          "hello_world_new_block": "Novo bloco!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Novo bloco!"
         }
       }
     }

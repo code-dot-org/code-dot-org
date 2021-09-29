@@ -701,7 +701,7 @@
   dashboard_sections_table_secret: "Jenis login"
   dashboard_sections_table_grade: "Kelas"
   dashboard_sections_table_course: "Kursus"
-  dashboard_sections_table_pairing_allowed: "Pemrograman berpasangan"
+  dashboard_sections_table_pairing_allowed: "Pair Programming"
   dashboard_sections_table_stage_extras: "Tahapan Tambahan"
   dashboard_sections_table_students: "Siswa"
   dashboard_sections_table_code: "Kode Sesi"

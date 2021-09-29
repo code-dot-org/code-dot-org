@@ -5768,6 +5768,7 @@ sk:
               name: Cykly v Dobe ľadovej
             Loops in Collector:
               name: Cykly s Laurel
+              description_teacher: V tejto lekcii budú žiaci pokračovať v oboznamovaní sa s konceptom cyklov. Dobrodružka Laurel v nej využíva cykly na to, aby zbierala poklady v otvorených jaskynných priestranstvách. Žiaci budú mať odteraz k dispozícii blok `získaj poklad`, ktorý jej na jej ceste pomôže.
             Loops in Artist:
               name: Kreslenie v záhrade pomocou cyklov
             'Events: The Big Event':
@@ -7361,6 +7362,7 @@ sk:
               description_teacher: S využítím konceptu "zacyklených cyklov" z predošlej lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie zbieranie kukurice.
             Loops in Collector:
               name: Cykly s Laurel
+              description_teacher: V tejto lekcii budú žiaci pokračovať v oboznamovaní sa s konceptom cyklov. Dobrodružka Laurel v nej využíva cykly na to, aby zbierala poklady v otvorených jaskynných priestranstvách. Žiaci budú mať odteraz k dispozícii blok `získaj poklad`, ktorý jej na jej ceste pomôže.
             Loops in Artist:
               name: Kreslenie v záhrade pomocou cyklov
             The Right App:
@@ -7800,6 +7802,8 @@ sk:
               name: Včela Hláskovanie
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
+            Loops in Collector:
+              description_teacher: V tejto lekcii budú žiaci pokračovať v oboznamovaní sa s konceptom cyklov. Dobrodružka Laurel v nej využíva cykly na to, aby zbierala poklady v otvorených jaskynných priestranstvách. Žiaci budú mať odteraz k dispozícii blok `získaj poklad`, ktorý jej na jej ceste pomôže.
             Ocean Scene with Loops:
               name: Na mori s cyklami
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
@@ -9061,6 +9065,7 @@ sk:
             Programming with Rey and BB-8:
               key: Programovanie s Rey a BB-8
               name: Programovanie s Rey a BB-8
+              description_teacher: Táto lekcia **na rozvíjanie zručností** žiaci využijú svoje novozískané programovacie zručnosti zložitejšími spôsobmi, aby robota BB‑8 znavigovali náročnou dráhou.
             Programming in Harvester:
               key: Programovanie so Záhradníčkou
               name: Programovanie so Záhradníčkou
@@ -9068,9 +9073,11 @@ sk:
             Loops with Scrat:
               key: Cykly so Scratom
               name: Cykly so Scratom
+              description_teacher: V tejto lekcii **na rozvíjanie zručností** si žiaci precvičia koncept cyklov pri programovaní úloh, ktorých cieľom je pomôcť veveričke dostať sa k žaluďu.
             Loops with Laurel:
               key: Cykly s Laurel
               name: Cykly s Laurel
+              description_teacher: V tejto lekcii budú žiaci pokračovať v oboznamovaní sa s konceptom cyklov. Dobrodružka Laurel v nej využíva cykly na to, aby zbierala poklady v otvorených jaskynných priestranstvách. Žiaci budú mať odteraz k dispozícii blok `získaj poklad`, ktorý jej na jej ceste pomôže.
             Ocean Scene with Loops:
               key: Na mori s cyklami
               name: Na mori s cyklami
@@ -9078,6 +9085,7 @@ sk:
             Drawing Gardens with Loops:
               key: Kreslenie v záhrade pomocou cyklov
               name: Kreslenie v záhrade pomocou cyklov
+              description_teacher: V tejto lekcii **na rozvíjanie zručností** sa žiaci budú učiť, ako kresliť obrázky cyklovaním jednoduchých postupností inštrukcií. Žiaci sa naučia vytvárať vzory pomocou cyklov. Na konci lekcie budú mať príležitosť vytvoriť si vlastné obrázky.
             On the Move with Events:
               key: Udalosti v pohybe
               name: Udalosti v pohybe
