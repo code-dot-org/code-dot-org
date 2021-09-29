@@ -7,11 +7,14 @@ export default class CodeReviewDataApi {
     this.scriptId = scriptId;
   }
 
-  getCodeReviewCommentsForProject() {
+  getCodeReviewCommentsForProject(onDone) {
     return $.ajax({
       url: `/code_review_comments/project_comments`,
       method: 'GET',
       data: {channel_id: this.channelId}
+    }).done((data, _, request) => {
+      this.token = request.getResponseHeader('csrf-token');
+      onDone(data);
     });
   }
 
@@ -39,11 +42,12 @@ export default class CodeReviewDataApi {
     });
   }
 
-  submitNewCodeReviewComment(commentText, token) {
+  submitNewCodeReviewComment(commentText) {
+    this.raiseIfNoToken();
     return $.ajax({
       url: `/code_review_comments`,
       type: 'POST',
-      headers: {'X-CSRF-Token': token},
+      headers: {'X-CSRF-Token': this.token},
       data: {
         channel_id: this.channelId,
         script_id: this.scriptId,
@@ -53,28 +57,31 @@ export default class CodeReviewDataApi {
     });
   }
 
-  resolveCodeReviewComment(commentId, resolvedStatus, token) {
+  resolveCodeReviewComment(commentId, resolvedStatus) {
+    this.raiseIfNoToken();
     return $.ajax({
       url: `/code_review_comments/${commentId}/toggle_resolved`,
       type: 'PATCH',
-      headers: {'X-CSRF-Token': token},
+      headers: {'X-CSRF-Token': this.token},
       data: {is_resolved: resolvedStatus}
     });
   }
 
-  deleteCodeReviewComment(commentId, token) {
+  deleteCodeReviewComment(commentId) {
+    this.raiseIfNoToken();
     return $.ajax({
       url: `/code_review_comments/${commentId}`,
       type: 'DELETE',
-      headers: {'X-CSRF-Token': token}
+      headers: {'X-CSRF-Token': this.token}
     });
   }
 
-  enablePeerReview(token) {
+  enablePeerReview() {
+    this.raiseIfNoToken();
     return $.ajax({
       url: `/reviewable_projects`,
       type: 'POST',
-      headers: {'X-CSRF-Token': token},
+      headers: {'X-CSRF-Token': this.token},
       data: {
         channel_id: this.channelId,
         level_id: this.levelId,
@@ -83,11 +90,20 @@ export default class CodeReviewDataApi {
     });
   }
 
-  disablePeerReview(projectId, token) {
+  disablePeerReview(projectId) {
+    this.raiseIfNoToken();
     return $.ajax({
       url: `/reviewable_projects/${projectId}`,
-      headers: {'X-CSRF-Token': token},
+      headers: {'X-CSRF-Token': this.token},
       method: `DELETE`
     });
+  }
+
+  raiseIfNoToken() {
+    if (!this.token) {
+      const errorMessage =
+        'You must set the CSRF token before making this request';
+      throw new Error(errorMessage);
+    }
   }
 }
