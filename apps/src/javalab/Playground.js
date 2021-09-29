@@ -148,7 +148,6 @@ export default class Playground {
     if (this.itemExists(itemData)) {
       this.removePlaygroundItem(itemData.id);
     }
-    // TODO: handle text deletion
   }
 
   changeItem(itemData) {
