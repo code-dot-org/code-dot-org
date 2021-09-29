@@ -1,14 +1,19 @@
 {
+  "author": "Author",
   "backgroundOrTextEffect": "You need to add a background or text effect.",
   "deletedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
+  "editCustomPoem": "Edit Custom Poem",
   "effectWithEvent": "Try using a new foreground or background effect under your `when line shows` event block.",
+  "enterMyOwn": "Enter my own",
   "foregroundEffectWithEvent": "You need to add a foreground effect using an event.",
   "makeBackground": "You need to add a background effect.",
   "makeForeground": "You need to add a foreground effect.",
   "noBehavior": "Click on the **Sprites** toolbox to find this block.\n<xml><block type=\"PoemBot_startBehavior\"><title name=\"ANIMATION_NAME\">\"tropicalfish_04_1\"</title><title name=\"BEHAVIOR\">swimming_left_and_right</title></block></xml>",
   "noTextEffects": "You need to add a text effect to your project.",
   "oneTextEffect": "Great work! You added one text effect. Try adding another.",
+  "poem": "Poem",
   "removedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
+  "save": "Save",
   "selectPoem": "Select Poem",
   "setSize": "Use a `set size` block to change the size of your sprite. Use a number other than 100.",
   "spriteEvent": "Try adding or removing a sprite under your `when line shows` event block.",
@@ -28,5 +33,6 @@
   "successLevel10": "Congratulations! You completed Level 10.",
   "successRemovedSprite": "Great work removing a new sprite with an event! Click “Keep Playing” to try adding  a sprite with an event.",
   "successTextEvent": "Great job changing your text effect with an event! Click 'Keep Playing' to try changing the foreground or background effect.",
-  "textEffectWithEvent": "Set a new text effect under your `when line shows` event block."
+  "textEffectWithEvent": "Set a new text effect under your `when line shows` event block.",
+  "title": "Title"
 }
