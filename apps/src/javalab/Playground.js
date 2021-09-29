@@ -133,20 +133,12 @@ export default class Playground {
       return;
     }
 
-    const textData = {
-      text: itemData.text,
-      x: itemData.x,
-      y: itemData.y,
-      height: itemData.height,
-      index: itemData.index,
-      rotation: itemData.rotation,
-      red: itemData.colorRed,
-      blue: itemData.colorBlue,
-      green: itemData.colorGreen,
-      font: itemData.font,
-      fontStyle: itemData.fontStyle,
-      type: PlaygroundItemType.TEXT
-    };
+    const textData = {...itemData};
+    delete textData.id;
+    textData.type = PlaygroundItemType.TEXT;
+
+    console.log(textData);
+
     this.addPlaygroundItem(itemData.id, textData);
   }
 
@@ -174,8 +166,8 @@ export default class Playground {
         delete newImageData.filename;
       }
       this.changePlaygroundItem(itemData.id, newImageData);
+    } else if (this.getItem(itemData.id).type === PlaygroundItemType.TEXT) {
     }
-    // TODO: handle text changes
   }
 
   playSound(soundData) {
