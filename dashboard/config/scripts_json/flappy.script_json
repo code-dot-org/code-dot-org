@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "flappy",
-    "serialized_at": "2021-09-29 21:20:16 UTC",
+    "serialized_at": "2021-09-29 21:38:44 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "flappy"
@@ -84,7 +84,8 @@
       "key": "0f35ab45-5ea5-4778-8e8d-94a0a08fecab",
       "position": 3,
       "properties": {
-        "name": "Wrap Up (5 minutes)"
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "0f35ab45-5ea5-4778-8e8d-94a0a08fecab",
@@ -97,7 +98,8 @@
       "key": "ee59e8a1-0506-46f1-a5eb-537c9daf43ce",
       "position": 4,
       "properties": {
-        "name": "Assessment (2 minutes)"
+        "duration": 2,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "ee59e8a1-0506-46f1-a5eb-537c9daf43ce",
@@ -114,19 +116,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "de1d2662-9c84-4c8c-9aa5-76ecdda9776d",
-        "lesson.key": "Flappy Code",
-        "lesson_group.key": "",
-        "script.name": "flappy"
-      }
-    },
-    {
-      "key": "a1072cfb-1772-40a6-87ea-08c99157598c",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a1072cfb-1772-40a6-87ea-08c99157598c",
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy"
@@ -202,8 +191,18 @@
       }
     },
     {
-      "key": "55f2f6a9-8e6b-49c2-8988-e2a09956e222",
+      "key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c",
       "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c",
+        "lesson_activity.key": "3ff80342-0510-45ed-bf69-4cf19ebaf5c1"
+      }
+    },
+    {
+      "key": "55f2f6a9-8e6b-49c2-8988-e2a09956e222",
+      "position": 4,
       "properties": {
         "description": "If a group or individual finishes early, they can attempt another tutorial by visiting [code.org/learn](http://code.org/learn)."
       },
@@ -271,16 +270,6 @@
         "activity_section.key": "f7c11887-da26-4c7b-be7a-1b84d330ed30",
         "lesson_activity.key": "de1d2662-9c84-4c8c-9aa5-76ecdda9776d"
       }
-    },
-    {
-      "key": "d995de69-1891-45e1-a884-3dac92f6f571",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571",
-        "lesson_activity.key": "a1072cfb-1772-40a6-87ea-08c99157598c"
-      }
     }
   ],
   "script_levels": [
@@ -290,9 +279,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -302,7 +288,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       },
       "level_keys": [
         "flappy_1"
@@ -314,9 +300,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -326,7 +309,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       },
       "level_keys": [
         "flappy_2"
@@ -338,9 +321,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -350,7 +330,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       },
       "level_keys": [
         "flappy_3"
@@ -362,9 +342,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -374,7 +351,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       },
       "level_keys": [
         "flappy_4"
@@ -386,9 +363,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -398,7 +372,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       },
       "level_keys": [
         "flappy_5"
@@ -410,9 +384,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -422,7 +393,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       },
       "level_keys": [
         "flappy_6"
@@ -434,9 +405,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -446,7 +414,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       },
       "level_keys": [
         "flappy_7"
@@ -458,9 +426,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -470,7 +435,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       },
       "level_keys": [
         "flappy_8"
@@ -482,9 +447,6 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -494,7 +456,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       },
       "level_keys": [
         "flappy_9"
@@ -506,9 +468,6 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_11"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -518,7 +477,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       },
       "level_keys": [
         "flappy_11"
@@ -535,7 +494,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       }
     },
     {
@@ -547,7 +506,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       }
     },
     {
@@ -559,7 +518,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       }
     },
     {
@@ -571,7 +530,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       }
     },
     {
@@ -583,7 +542,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       }
     },
     {
@@ -595,7 +554,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       }
     },
     {
@@ -607,7 +566,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       }
     },
     {
@@ -619,7 +578,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       }
     },
     {
@@ -631,7 +590,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       }
     },
     {
@@ -643,7 +602,7 @@
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
         "script.name": "flappy",
-        "activity_section.key": "d995de69-1891-45e1-a884-3dac92f6f571"
+        "activity_section.key": "f4d29ae4-ab03-44bf-b5b6-93a4dc09de0c"
       }
     }
   ],
