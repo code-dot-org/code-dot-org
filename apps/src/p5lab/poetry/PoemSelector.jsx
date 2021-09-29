@@ -9,7 +9,7 @@ import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
 import {POEMS} from './constants';
 
-function CreatePoemModal(props) {
+function PoemEditor(props) {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [poem, setPoem] = useState('');
@@ -65,7 +65,7 @@ function CreatePoemModal(props) {
   );
 }
 
-CreatePoemModal.propTypes = {
+PoemEditor.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   handleClose: PropTypes.func.isRequired
 };
@@ -92,7 +92,7 @@ function PoemSelector(props) {
   };
   return (
     <div style={styles.container}>
-      <CreatePoemModal isOpen={isOpen} handleClose={handleClose} />
+      <PoemEditor isOpen={isOpen} handleClose={handleClose} />
       <label>
         <b>{msg.selectPoem()}</b>
       </label>
