@@ -86,7 +86,11 @@ class Script < ApplicationRecord
             unit_group: :course_version
           }
         },
-        :course_version
+        {
+          course_version: {
+            course_offering: :course_versions
+          }
+        }
       ]
     )
   end
@@ -628,6 +632,9 @@ class Script < ApplicationRecord
     return nil unless family_name
     # Only redirect students.
     return nil unless user && user.student?
+    # Do not perform other more expensive checks unless there are other units
+    # we could possibly redirect to.
+    return nil unless course_version&.course_offering&.course_versions&.many?
     # No redirect unless user is allowed to view this unit version and they are not already assigned to this unit
     # or the course it belongs to.
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
