@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "aquatic",
-    "serialized_at": "2021-09-28 21:04:49 UTC",
+    "serialized_at": "2021-09-29 16:19:15 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "aquatic"
@@ -180,7 +180,7 @@
       "key": "91cc858b-9f90-4134-b890-237f457e8423",
       "position": 1,
       "properties": {
-        "description": "Challenge your students to complete the [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) tutorial.\n\nDepending on the age and ability of your students, you might consider: \n\n- For younger students, we suggest you break your class into pairs and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- For learners in the middle grades, we find that working independently on tutorials works well. Sometimes it helps to allow students to choose their own tutorial. If students aren't interested in Minecraft, they can get a similar experience with the [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://studio.code.org/s/starwars/lessons/1/levels/1) tutorials.\n- For older or adult learners, the [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) tutorial. works extremely well either as an independent challenge or a pair programming activity.",
+        "description": "Challenge your students to complete the [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) tutorial.\n\nDepending on the age and ability of your students, you might consider: \n\n- For younger students, we suggest you break your class into pairs and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- For learners in the middle grades, we find that working independently on tutorials works well. Sometimes it helps to allow students to choose their own tutorial. If students aren't interested in Minecraft, they can get a similar experience with the [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://code.org/starwars) tutorials.\n- For older or adult learners, the [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) tutorial. works extremely well either as an independent challenge or a pair programming activity.",
         "name": "Minecraft: Voyage Aquatic"
       },
       "seeding_key": {
@@ -292,6 +292,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -313,6 +316,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -334,6 +340,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -355,6 +364,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -376,6 +388,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -397,6 +412,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -418,6 +436,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_7a"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -439,6 +460,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -460,6 +484,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_9b"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -481,6 +508,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -502,6 +532,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -523,6 +556,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_12"
+        ]
       },
       "bonus": false,
       "seeding_key": {

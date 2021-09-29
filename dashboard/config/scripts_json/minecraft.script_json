@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "minecraft",
-    "serialized_at": "2021-09-28 20:53:44 UTC",
+    "serialized_at": "2021-09-29 16:17:28 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "minecraft"
@@ -181,7 +181,7 @@
       "key": "75d779c4-24f7-40be-bf92-b0c094c16d11",
       "position": 1,
       "properties": {
-        "description": "Challenge your students to complete this [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1) activity.\n\nDepending on the age and ability of your students, you might consider: \n\n- For younger students, we suggest you break your class into pairs and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- For learners in the middle grades, we find that working independently on tutorials works well. Sometimes it helps to allow students to choose their own tutorial. If students aren't interested in Minecraft, they can get a similar experience with the [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://studio.code.org/s/starwars/lessons/1/levels/1) tutorials.\n- For older or adult learners, the [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1) tutorial works extremely well either as an independent challenge or a pair programming activity.",
+        "description": "Challenge your students to complete this [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1) activity.\n\nDepending on the age and ability of your students, you might consider: \n\n- For younger students, we suggest you break your class into pairs and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- For learners in the middle grades, we find that working independently on tutorials works well. Sometimes it helps to allow students to choose their own tutorial. If students aren't interested in Minecraft, they can get a similar experience with the [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://code.org/starwars) tutorials.\n- For older or adult learners, the [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1) tutorial works extremely well either as an independent challenge or a pair programming activity.",
         "name": "Minecraft: Designer"
       },
       "seeding_key": {
@@ -283,6 +283,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 2-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -304,6 +307,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -325,6 +331,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -346,6 +355,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 New Walk"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -367,6 +379,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 New Drop"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -388,6 +403,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -409,6 +427,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -430,6 +451,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Village Test"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -451,6 +475,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 New Spawn"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -472,6 +499,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -493,6 +523,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 SCORE LEVEL"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -514,6 +547,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "hero",
-    "serialized_at": "2021-09-28 21:07:42 UTC",
+    "serialized_at": "2021-09-29 16:18:22 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "hero"
@@ -179,7 +179,7 @@
       "key": "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1",
       "position": 1,
       "properties": {
-        "description": "Challenge your students to complete the [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) tutorial.\n\nDepending on the age and ability of your students, you might consider: \n\n- For younger students, we suggest you break your class into pairs and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- For learners in the middle grades, we find that working independently on tutorials works well. Sometimes it helps to allow students to choose their own tutorial. If students aren't interested in Minecraft, they can get a similar experience with the [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://studio.code.org/s/starwars/lessons/1/levels/1) tutorials.\n- For older or adult learners, the [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) tutorial works extremely well either as an independent challenge or a pair programming activity.",
+        "description": "Challenge your students to complete the [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) tutorial.\n\nDepending on the age and ability of your students, you might consider: \n\n- For younger students, we suggest you break your class into pairs and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- For learners in the middle grades, we find that working independently on tutorials works well. Sometimes it helps to allow students to choose their own tutorial. If students aren't interested in Minecraft, they can get a similar experience with the [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://code.org/starwars) tutorials.\n- For older or adult learners, the [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) tutorial works extremely well either as an independent challenge or a pair programming activity.",
         "name": "Minecraft: Hero's Journey"
       },
       "seeding_key": {
@@ -292,6 +292,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_01_RETRY"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
@@ -314,6 +317,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_02_Cole"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
@@ -336,6 +342,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_03_Cole"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
@@ -358,6 +367,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04_Cole"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
@@ -380,6 +392,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04POINT5_RYAN"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
@@ -402,6 +417,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_05_Cole"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
@@ -424,6 +442,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_06_Cole"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
@@ -446,6 +467,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Function intro Ryan"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
@@ -468,6 +492,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_07_Cole"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
@@ -490,6 +517,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_10_RETRY"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
@@ -512,6 +542,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_Ali"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
@@ -534,6 +567,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_FP20x20"
+        ],
         "progression": "Minecraft: Hero's Journey"
       },
       "bonus": false,
