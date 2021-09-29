@@ -1247,12 +1247,16 @@ en:
             "'sound://category_animals/chick.mp3'": bird tweet
             "'sound://category_animals/dog.mp3'": dog bark
             "'sound://category_animals/tiger.mp3'": tiger roar
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harp
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": bright
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": mystical
             "'sound://category_transition/trippy_robotic_transition.mp3'": robot voice
             "'sound://category_transition/star_dust_particle_10.mp3'": star dust
             "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": space ship
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magic spell
             "'sound://category_retro/retro_game_ui_select_6.mp3'": ping
-            "'sound://category_retro/retro_game_classic_player_death_9.mp3'": game over
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": sci fi
             "'sound://category_digital/jump_7.mp3'": jump
       gamelab_playSpeech:
         text: play speech {SOUND}
@@ -1911,15 +1915,23 @@ en:
         text: setup Monster Town with{COUNT}monsters
       Outbreak_stopMoving:
         text: monsters stop moving
-      PoemBot_addLine:
+      Poetry_addLine:
         text: add line {LINE}
-      PoemBot_destroy:
+      Poetry_destroy:
         text: remove {ANIMATION_NAME}
-      PoemBot_hidePoem:
+      Poetry_hidePoem:
         text: hide poem
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        text: create {EFFECT} effect with {NUM} {ANIMATION_NAME} sprites
+        options:
+          EFFECT:
+            '"burst"': burst
+            '"pop"': pop
+            '"rain"': rain
+            '"zigzag"': zig-zag
+      Poetry_makeNumSprites:
         text: make {NUM} new {ANIMATION_NAME} sprites
-      PoemBot_playSound:
+      Poetry_playSound:
         text: play sound {SOUND}
         options:
           SOUND:
@@ -1935,11 +1947,11 @@ en:
             '"sound://category_background/wavering_wind.mp3"': Sleepy
             '"sound://category_background/typewriter.mp3"': Typewriter
             '"sound://category_background/waterfall.mp3"': Waterfall
-      PoemBot_randomWord:
+      Poetry_randomWord:
         text: random word
-      PoemBot_setAuthor:
+      Poetry_setAuthor:
         text: set poem author {AUTHOR}
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         text: set background effect {EFFECT} {PALETTE}
         options:
           EFFECT:
@@ -1964,9 +1976,9 @@ en:
             '"grayscale"': Black & White
             '"rainbow"': Rainbow
             '"roses"': Roses
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: set background to {IMG}
-      PoemBot_setFont:
+      Poetry_setFont:
         text: set font {FONT}
         options:
           FONT:
@@ -1979,10 +1991,10 @@ en:
             '"Impact"': Impact
             '"Tahoma"': Tahoma
             '"Verdana"': Verdana
-      PoemBot_setFontColor:
+      Poetry_setFontColor:
         text: set font color {FILL}
-      PoemBot_setForegroundEffect:
-        text: do {EFFECT} effect
+      Poetry_setForegroundEffect:
+        text: do {EFFECT} foreground effect
         options:
           EFFECT:
             '"rain"': Rain
@@ -1993,7 +2005,7 @@ en:
             '"starburst"': Starburst
             '"glass"': Shattering Glass
             '"twinkling"': Twinkling
-      PoemBot_setPoem:
+      Poetry_setPoem:
         text: set poem {POEM}
         options:
           POEM:
@@ -2010,13 +2022,16 @@ en:
             '"rumi_2"': Ocean
             '"hughes_1"': Dream Variations
             '"hughes"': Harlem
-      PoemBot_setPrompt:
-        text: prompt user {NAME}{RIGHT_QUOTE} for variable {VAR}
-      PoemBot_setPromptWithChoices:
-        text: prompt user {TEXT}{RIGHT_QUOTE} for variable {VAR} with choices {A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
-      PoemBot_setSize:
+            '"hopler"': In the Garden
+            '"lomeli"': Return
+            '"singer"': Toasting Marshmallows
+      Poetry_setPrompt:
+        text: prompt user {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} for variable {VAR}
+      Poetry_setPromptWithChoices:
+        text: prompt user {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} for variable {VAR} with choices {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
         text: set {SPRITE} size to {VAL}
-      PoemBot_setTextEffect:
+      Poetry_setTextEffect:
         text: set text effect {EFFECT}
         options:
           EFFECT:
@@ -2026,11 +2041,11 @@ en:
             '"flyRight"': fly from right
             '"flyTop"': fly from top
             '"flyBottom"': fly from bottom
-      PoemBot_setTitle:
+      Poetry_setTitle:
         text: set poem title {TITLE}
-      PoemBot_showPoem:
+      Poetry_showPoem:
         text: show poem
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         text: 'sprite {ANIMATION_NAME} begins {BEHAVIOR} '
         options:
           BEHAVIOR:
@@ -2047,7 +2062,7 @@ en:
             swimming_left_and_right: swimming
             wandering: wandering
             wobbling: wobbling
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         text: 'sprite {ANIMATION_NAME} stops {BEHAVIOR} '
         options:
           BEHAVIOR:
@@ -2065,15 +2080,28 @@ en:
             wandering: wandering
             wobbling: wobbling
             '"all"': "--all behaviors--"
-      PoemBot_stringValue:
+      Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
+      Poetry_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
-      PoemBot_whenLineShows:
+      Poetry_whenLineShows:
         text: when line {N} shows
-      PoemBot_whenPromptAnswered:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: when {VAR} answered
       RyanLab_moveForward:
         text: move forward
