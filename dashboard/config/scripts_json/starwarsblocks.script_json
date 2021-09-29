@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "starwarsblocks",
-    "serialized_at": "2021-09-28 14:46:29 UTC",
+    "serialized_at": "2021-09-29 18:21:25 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "starwarsblocks"
@@ -40,7 +40,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. This version uses drag-drop blocks and works best for students on mobile devices without keyboards, younger students, and international students. It is recommended for ages 6+.\n\nA [JavaScript](s/starwars) version is also available. For older students on computers, learning JavaScript can be fun and provide an additional challenge. Note that JavaScript syntax is not translated and for the first Hour of Code, the translated blocks found here provide a better introduction.",
+        "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. This version uses drag-drop blocks and works best for students on mobile devices without keyboards, younger students, and international students. It is recommended for ages 6+.\n\nA [JavaScript](s/starwars) version is also available. For older students on computers, learning JavaScript can be fun and provide an additional challenge. Note that JavaScript syntax is not translated and for the first Hour of Code, the translated blocks found here provide a better introduction. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+.",
         "preparation": "### One Week Before Your Hour of Code\r\n\r\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \r\n- Review and complete the online tutorial yourself: [Star Wars: Building a Galaxy with Code](http://hourofcode.com/star) \r\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\r\n\r\n### One Day Before Your Hour of Code\r\n\r\n- Write the words “coding”, “programming” and “debugging” on the board or add them to your word wall if you have one.\r\n- Write the words \"Computer Science\" in the middle of your board or on piece of paper at the center of a bulletin board. This will serve as your [\"mind map\"](https://en.wikipedia.org/wiki/Mind_map) for the Getting Ready and Assessment activities.\r\n- Each student who completes the activity should receive a certificate. [Print one](http://code.org/certificates) for everyone in advance to make this easier at the end of your Hour of Code.\r\n",
         "purpose": "This lesson introduces the core CS concepts of coding and programming including sequencing and events. The JavaScript version of the tutorial also lets the students experience typing code.",
         "student_overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. "
