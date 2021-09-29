@@ -107,7 +107,7 @@ export default class Playground {
 
   addImageHelper(itemData, isClickable) {
     // ignore request if the game is over or if the item already exists
-    if (this.isGameOver || this.imageItemExists(itemData)) {
+    if (this.isGameOver || this.itemExists(itemData)) {
       return;
     }
     let onClick = isClickable
@@ -128,7 +128,7 @@ export default class Playground {
   }
 
   addTextItem(itemData) {
-    if (this.isGameOver || this.imageItemExists(itemData)) {
+    if (this.isGameOver || this.itemExists(itemData)) {
       // can't add new items if the game is over or if the item already exists
       return;
     }
@@ -155,7 +155,7 @@ export default class Playground {
       // can't remove items if game is over
       return;
     }
-    if (this.imageItemExists(itemData)) {
+    if (this.itemExists(itemData)) {
       this.removePlaygroundItem(itemData.id);
     }
     // TODO: handle text deletion
@@ -166,7 +166,7 @@ export default class Playground {
       // can't change items if game is over
       return;
     }
-    if (this.imageItemExists(itemData)) {
+    if (this.getItem(itemData.id).type === PlaygroundItemType.IMAGE) {
       const newImageData = {...itemData};
       if (itemData.filename) {
         newImageData.fileUrl = this.getUrl(itemData.filename);
@@ -263,7 +263,11 @@ export default class Playground {
     this.isGameOver = true;
   }
 
-  imageItemExists(itemData) {
+  itemExists(itemData) {
     return getItemIds(getStore().getState().playground).includes(itemData.id);
+  }
+
+  getItem(itemId) {
+    return getStore().getState().playground.itemData[itemId];
   }
 }
