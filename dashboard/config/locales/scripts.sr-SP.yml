@@ -1043,6 +1043,10 @@ sr:
               name: Бројачке петље
             Functions with Parameters:
               name: Функције са параметрима
+        workshop-gamelab:
+          lessons:
+            Input:
+              name: Унос
         coursee-ramp:
           lessons:
             Conditionals:

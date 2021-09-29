@@ -2,6 +2,19 @@
   "es-ES": {
     "data": {
       "activity_sections": {
+        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+          "progression_name": "Bienvenido a Monster Town"
+        },
+        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+          "progression_name": "Desarrollo de Habilidades"
+        },
+        "7ae620e6-5b98-405a-86a0-ac4fa8f13dce": {
+          "progression_name": "Miniproyecto: Simulador de Brotes"
+        },
+        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
+          "name": "Juego libre",
+          "progression_name": "Juego libre"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Introducción",
           "description": "En este curso aprenderemos a programar. El código se utiliza para crear aplicaciones, juegos, páginas web, simulaciones y muchas cosas más que usamos en una computadora."
@@ -1188,10 +1201,15 @@
           "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   ¿Cómo hicieron los bucles que tu programa fuera más fácil de escribir?\n-   Dibuja algo que utilice bucles."
         },
         "6f6b3e61-f640-4e12-b65a-a798a35229e8": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "-   Repasa rápidamente la definición de bucle, la acción de hacer algo una y otra vez. \n-   Analiza diferentes patrones como los zigzags y los pasos de escalera.\n    -   ¿Cómo explicarías a alguien cómo dibujar ese patrón?\n    -   ¿Cómo podrías dibujar esto utilizando un bucle?\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nEn los niveles de artista los alumnos utilizarán ángulos de 45 grados descritos como noroeste, noreste, suroeste y sureste. Recomendamos analizar brevemente estas direcciones con la clase y dibujar una imagen para que los alumnos puedan consultarla.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)"
         },
         "13752711-384a-4249-bf95-632d8a8ad185": {
-          "name": "Escena del océano con bucles"
+          "name": "Escena del océano con bucles",
+          "description": "#### Demostración del Profesor"
+        },
+        "8e4ed9a9-b50b-45bf-ac33-86251c7c10a9": {
+          "description": "Hemos incluido algunos niveles de predicción de opción múltiple que son difíciles para los no lectores. Estos niveles son opcionales para que los revises con tu clase y te ayuden a preparar los rompecabezas que vienen. También se pueden utilizar después de terminar la etapa como repaso para la clase.\n\nNiveles de Predicción:\n\n-   [Curso A, Bucles en Artista](https://studio.code.org/levels/8726)"
         },
         "6d5074a8-2f60-46de-b974-532be01603c4": {
           "progression_name": "Vídeo: El Artista en Code Studio"
@@ -1213,7 +1231,7 @@
         },
         "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
           "tips": [
-            null
+            "Recuerda a los alumnos que sólo deben compartir su trabajo con sus amigos o familiares cercanos. Para más información, visualiza o muestra a la clase el vídeo \"Pausa y Piensa en Línea\"."
           ],
           "progression_name": "Juego libre"
         },
@@ -1221,45 +1239,69 @@
           "progression_name": "Lecciones adicionales"
         },
         "75843546-1fa3-4171-b034-3c14d8d9d5a4": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   Dibuja unas escaleras. Imagina el bucle necesario para dibujar esto.\n-   Dibuja algo más en tu vida que utilice bucles."
+        },
+        "85143426-6671-4809-8601-8502634e2f51": {
+          "description": "### Codificar mi dibujo (30-45 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) **Informática + Lengua y Literatura inglesas**\n\n[\\*\\*Codificar mi dibujo\\*\\*](https://docs.google.com/document/d/1ez9QdAtpHr4ra-zCkJu0A_BRdksVO5JU-qxO1B5RDLE/edit#) es una actividad opcional alineada con los estándares Common Core ELA, escrita por nuestra comunidad de profesores. En parejas o grupos de tres, los alumnos practicarán una comunicación clara para codificar los dibujos de los demás en Artista.\n\n_Estándares a los que se dirige:_\n\n-   **CSCS.ELA-Literacy.SL.K.2**: Confirmar la comprensión de un texto leído en voz alta o de la información presentada oralmente o a través de otros medios de comunicación, haciendo y respondiendo a preguntas sobre detalles clave y solicitando aclaraciones si no se entiende algo.\n-   **CSCS.ELA-Literacy.SL.K.3**: Hacer y responder preguntas para buscar ayuda, obtener información o aclarar algo que no se entiende.\n-   **CSCS.ELA-Literacy.SL.K.6**: Hablar de forma audible y expresar claramente los pensamientos, sentimientos e ideas."
         },
         "ac847e89-ccab-4f15-8585-b06d61723c4c": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "#### Vocabulario\n\nEsta lección tiene una palabra de vocabulario nueva e importante:\n\n-   **Evento** - _Dilo conmigo: E-vento._ \n\nUn acontecimiento es una acción que hace que algo ocurra."
+        },
+        "43f50bd1-d9ac-4ebd-8ec4-a471d8c673c6": {
+          "description": "#### Una serie de acontecimientos\n\nVeamos si podemos encontrar un patrón aquí:\n\n-   Cuando pulsas un interruptor, se encienden las luces.\n-   Cuando tocas un dispositivo, se inicia una aplicación.\n-   Cuando suena la alarma, te levantas de la cama.\n-   Cuando (evento)*, \\_(acción)*.\n\nEn informática, los **eventos** provocan otras acciones. Nuestra nueva palabra de vocabulario de hoy es **evento**. Normalmente, cuando oímos \"evento\" pensamos en:\n\n-   Excursión\n-   Competición\n-   Fiesta de cumpleaños\n\nHoy vamos a aprender un nuevo significado de la palabra evento. Vamos a centrarnos en los acontecimientos que provocan otras acciones, como cuando al pulsar un interruptor se encienden las luces o al pulsar un botón se mueve un personaje de un juego."
         },
         "14f82c4a-fa73-4426-adb6-b32b5f14f3be": {
           "progression_name": "El Gran Evento - Actividad Desconectada"
         },
         "6ffda847-c078-4edf-b7ca-4499b1d9249e": {
           "name": "El Gran Evento",
+          "description": "-   _¿Recuerdas haber ayudado a los flurbs a encontrar fruta?_\n    -   _En ese ejercicio, sabías de antemano dónde querías que terminara tu flurb, así que podías hacer un programa que los llevara de principio a fin sin ninguna interrupción._\n    -   _En la mayoría de los programas reales, no podemos hacer eso porque queremos tener opciones, dependiendo de las necesidades del usuario._\n        -   _Digamos que quiero que mi personaje sólo se mueva cuando mi dedo está en la pantalla de mi teléfono. Tendría que programar el personaje para que sólo se mueva cuando ponga el dedo en la pantalla de mi teléfono._\n        -   _El hecho de poner el dedo en la pantalla se convertiría en un suceso que le dice a mi personaje que se mueva._",
           "tips": [
-            null
+            "Si tus alumnos parecen confusos, habla de sus juegos favoritos y de todas las formas en que hacen saber a los personajes lo que deben hacer. Señala que el juego sería muy aburrido si se desarrollara de principio a fin sin necesidad de realizar ningún suceso."
           ]
+        },
+        "ab5654c4-0bfd-4ef4-8a0c-c33db9dbeecd": {
+          "description": "En lecciones anteriores, creamos algoritmos que nos permitían controlar a un amigo o flurb durante varios pasos a la vez. Era divertido y útil, pero ¿qué pasa cuando no sabes todo lo que quieres que haga tu amigo de antemano? ¡Aquí es donde entran los sucesos!\n\n**Direcciones:**\n\n-   Proyecta\\*\\* **\\*El Gran Suceso (Cursos A, B) - Imagen del Controlador** en la pantalla de tu aula.\n\n![El Gran Suceso](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n-   Decide con tu clase qué hace cada botón. Sugerimos:\n    -   Botón Rosa -> Decir \"¡Wooooo!\"\n    -   Botón Azul -> \"¡Si!\"\n    -   Botón Morado -> \"¡Boom!\"\n-   Practica tocando los botones en la pantalla y haz que tu clase reaccione.\n-   Añade algunas secuencias de botones a la mezcla y haz que los alumnos intenten seguir el ritmo de sus sonidos.\n-   Haz saber a tu clase que cada vez que se pulsa un botón, es un suceso que les permite saber lo que se espera que hagan a continuación.\n-   Haz que la clase comience una tarea planificada antes de interrumpirla de nuevo con los botones. Sugerimos:\n    -   Contar hasta 10\n    -   Cantar \"El viejo MacDonald\"\n-   Una vez que su plan esté en marcha, interrumpa la pulsación de los botones de forma esporádica.\n-   Continúe con la mezcla hasta que comprendan la diferencia entre las acciones guiadas por un plan y las impulsadas por un suceso."
         },
         "40978575-9e16-4760-a200-0678f187ff4c": {
           "name": "Reflexión",
+          "description": "Debatir: Pide a los alumnos que reflexionen sobre lo que han aprendido mediante las siguientes preguntas:\n\n-   ¿Qué hemos aprendido?\n-   ¿Qué hemos aprendido?\n\n**Sugerencias:**\n\n-   ¿De qué ha tratado la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   Dibuja un \"suceso\" que haya causado una acción hoy.\n-   Dibuja una acción causada por un \"suceso\" que haya ocurrido hoy.",
           "tips": [
-            null
+            "Los alumnos deben demostrar que comprenden que los \"sucesos\" son algo que puede provocar otras acciones. Recuerda los ejemplos anteriores de la lección o anima a los alumnos a inventar los suyos propios."
           ]
         },
         "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5": {
-          "name": "Evaluación"
+          "name": "Evaluación",
+          "description": "**Distribuir**: Reparte una **\\*Evaluación** a cada alumno y permíteles que la completen de forma independiente después de haberles explicado bien las instrucciones. Esto debería resultarles familiar, gracias a las actividades anteriores."
         },
         "d540fe6c-fd83-4e7d-98cc-6e78a2d36073": {
           "description": "Use estas actividades para mejorar el aprendizaje de los alumnos. Pueden usarse como actividades fuera del aula u otros enriquecimientos. \n\n**El Evento de una Persona es la Reacción de Otra**\n\nAsigne a cada estudiante un evento del cual encargarse y una reacción apropiada para ese evento. Encadene las acciones para que así la reacción de un/a niño/a se convierta en un evento que gatilla la reacción de otro/a estudiante. Siga asignando hasta que todos tengan algo que hacer y que todos hagan reaccionar a alguien. \n\n**Eventopalooza**\n\nDivida la clase en grupos. Usando el Controlador de Eventos, asigne a cada grupo una reacción diferente para el mismo botón. Haga esto para cada uno de los tres botones, ¡y entonces observe el caos!"
         },
         "cb6735d8-d986-408b-adef-61e9a52ad30f": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "Repasa la actividad \"El gran evento\" con los alumnos:\n\n-   _¿Qué hemos \"programado\" que hagan los eventos de los botones?_\n\n_Ahora vamos a añadir eventos a nuestro código. Específicamente, vamos a tener un evento para cuando dos personajes se toquen._\n\n-   _¿Cuándo has visto que dos personajes se toquen como evento en los juegos?_"
+        },
+        "59ef2dfe-0dad-4172-8225-3e844fecb36f": {
+          "description": "Estas actividades ayudarán a trasladar los conceptos desconectados de \"El Gran Evento\" al mundo online en el que se mueven los alumnos. Escoge _una_ de las siguientes para hacer con tu clase:"
         },
         "4282b236-dd48-4702-81fd-452fb86a8288": {
           "tips": [
-            null
+            "Los alumnos tendrán la oportunidad de compartir su producto final con un enlace. Esta es una gran oportunidad para mostrar a tu comunidad escolar las grandes cosas que tus alumnos están haciendo. Recoge todos los enlaces y guárdalos en la página web de tu clase para que todos los vean.\n\nRecuerda a los alumnos que sólo deben compartir sus trabajos con sus amigos o familiares cercanos. Para más información, mira o muestra el vídeo de la clase **\\*Pausa y piensa en línea**."
           ]
         },
+        "9126c997-86b1-4d78-9eaf-3d07e06c6355": {
+          "name": "Actividad Desconectada Utilizando Bloques de Papel",
+          "description": "Utilizando el mando de la **\\*Imagen del controlador** y los bloques de **\\*Manipulativos**, reúne a tu clase para repetir la actividad de la lección anterior. Pregunta a la clase: \"Cuando se pulsa el botón verde, ¿qué hacemos?\" y luego rellena uno de los bloques de eventos \"cuando\" y uno de los bloques de acción azules.  Asegúrate de que los alumnos entienden que los bloques `cuando` tienen que estar encima del bloque azul y que tienen que tocarse para que el programa se ejecute.\n\n#### -O-"
+        },
         "b4da0866-a056-4d28-bbca-119bbd17fe04": {
-          "name": "Previsualizar desafíos online como clase"
+          "name": "Previsualizar desafíos online como clase",
+          "description": "Selecciona un rompecabezas de los correspondientes en línea. Recomendamos el rompecabezas 7.  Pide a diferentes alumnos que hagan un ruido divertido cuando hagas clic en Jorge. Explica que se trata de un evento al que están reaccionando y que Jorge puede ser codificado para hacer ruido cuando se hace clic sobre él."
         },
         "d20df183-f25b-45af-ae7c-f80a4405f2d2": {
-          "name": "En movimiento con eventos"
+          "name": "En movimiento con eventos",
+          "description": "Esta es la actividad más libre del curso. En la fase final, los alumnos tienen libertad para crear su propia historia. Es posible que quieras darles pautas estructuradas sobre el tipo de historia que deben escribir, sobre todo a los alumnos que se sientan abrumados por el exceso de opciones."
         },
         "c37ca368-ea56-4b4d-a06c-1d2b94516bf8": {
           "progression_name": "Vídeo: Introducción al Laboratorio de Juegos"
@@ -1277,32 +1319,46 @@
           "progression_name": "Lecciones adicionales"
         },
         "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué ha tratado la lección de hoy?\n-   Dibuja en la esquina de la página de tu diario una cara que muestre cómo te has sentido con la lección de hoy.\n-   Dibuja un evento que hayas utilizado en tu programa de hoy.\n-   Imagina que tienes un robot con mando a distancia. ¿Qué aspecto tendría el mando a distancia? Haz un dibujo de lo que crees que podrías hacer con el robot."
         },
         "807c4bfd-ed3e-4400-a83a-a535c56f3155": {
           "description": "Usa estas actividades para mejorar el aprendizaje del alumno. Se pueden usar como actividades al aire libre u otro tipo de enriquecimiento. \n\n**Mirar bajo la capucha**\n\nCuando compartes un enlace a tu historia, también compartes todo el código que va de fondo. Esta es una buena forma para que los alumnos aprendan de los demás. \n\n Publica enlaces para historias completas en línea. \n    \\-   ¡También inventa una historia para compartir! \n\n-   Cuando los alumnos suban un enlace, pídeles que hagan clic en el botón \"Cómo Funciona\" para ver el código que está detrás de la historia.\n-   Discutan como grupo las formas diferentes en que sus compañeros codificaron sus historias. \n    -   ¿Qué te sorprendió?\n    -   ¿Qué te gustaría intentar?\n-   Escoge la historia de alguien más y haz clic en `Remix` para construir desde ahí. (No te preocupes, la historia original será guardada)."
         },
         "4ae60932-ccb3-411c-bfb4-bc9e52149b27": {
           "name": "Revisión",
+          "description": "**Haz esto:**\n\n-   Procura que los alumnos se entusiasmen y se preparen para la actividad de hoy. Comienza pidiendo a los alumnos que recuerden lo que ya han hecho en la lección anterior utilizando las herramientas del Artista.\n-   Repasa la palabra de vocabulario **bucle**.\n-   Si has creado tu propio ejemplo de proyecto, compártelo ahora.",
           "progression_name": "Proyecto"
         },
         "d07826c3-fe5d-4ffa-a4ff-6bd799a62342": {
+          "name": "Contando una historia con el Artista",
+          "description": "**Hazlo:** Sube el nivel de esta lección en el proyector.",
           "progression_name": "Proyecto"
+        },
+        "22c1ade3-49af-45ce-84bb-ba4337206074": {
+          "description": "Hoy celebraremos lo mucho que habéis aprendido creando nuestros propios proyectos para contar una historia con el Artista.   El Artista viajará hoy a tres lugares: un jardín, un zoo y el espacio exterior.\n\nTu trabajo es crear un camino para él y contar una historia sobre lo que hizo y vio.\n\n¿Caminará entre las flores?\n\n¿Construirá una casa para los animales? \n\n¿Qué más puede ver o hacer?"
         },
         "76119a2d-a3f8-4c17-b38a-c0194431de25": {
           "name": "Planificación",
+          "description": "**Haz esto:** Distribuye la **guía de planificación** y repásala con los alumnos.\nLos alumnos elegirán _al menos un_ lugar para el artista. A continuación, deberán dibujar el camino que seguirá el artista. (Es como un rompecabezas de puntos, pero sin los números).\nJunto a la imagen, los alumnos deben escribir sus historias. ",
           "tips": [
-            null
+            "Las historias pueden ser de una o dos frases, lo que se consideres apropiado para tu clase."
           ]
         },
         "0ab5b62b-a464-4801-a963-d23d293ea5ff": {
           "name": "Proyecto",
+          "description": "Cuando tengas la actividad en tu ordenador, haz clic en cualquiera de las opciones para empezar. Empieza con tu plan, pero puedes hacer que el artista dibuje lo que quieras. Al final de la clase, compartiremos nuestros proyectos con la clase.",
           "progression_name": "Proyecto"
         },
         "16e34527-4efe-46f1-970b-f365858958a9": {
+          "description": "A medida que los alumnos trabajen, apóyalos respondiendo a sus preguntas y aportando ideas. Anímales a compartir ideas para que la actividad sea más colaborativa.",
           "tips": [
-            null
+            "Todas las opciones de esta lección se consideran \"Juego Libre\", lo que significa que no hay una única respuesta correcta. Si un alumno pulsa \"Terminar\", volverá a la lista de opciones. Puedes pedir a los alumnos que completen una sola opción o todas las que les interesen según el tiempo disponible."
           ]
+        },
+        "adc355f7-34d5-450e-aa57-e001b2a7973c": {
+          "name": "Escaparate",
+          "description": "Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos, más o menos, a permitirles mostrar sus proyectos. Esto puede hacerse de muchas maneras, pero aquí hay algunas:\n\n-   **Demostración pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos y cuenten su historia delante de la clase. Mientras lo hacen, pídeles que hablen de cómo fue para ellos la experiencia de planificar y codificar. \n-   **Cuentacuentos en pareja**: Si la clase es muy numerosa o tiene poco tiempo, haz que los alumnos o los grupos se pongan en parejas y hagan una demostración de sus proyectos de esta manera. \n-   **Paseo por la galería**: Asegúrate de que todos los estudiantes tienen sus proyectos listos para la prueba. Haz que los estudiantes se muevan al estilo \"sillas musicales\" a otro ordenador y ejecuten el proyecto allí y lean la historia. Cuando reciban una señal tuya, deben trasladarse a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades de comunicación estructurada, esto garantiza que los estudiantes puedan hacer una demostración del mayor número posible de proyectos de sus compañeros."
         },
         "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
           "name": "Vocabulario Clave"
@@ -1569,13 +1625,13 @@
         },
         "67fb7588-f699-4cf5-9a67-065456c6baee": {
           "tips": [
-            null
+            "Si tus alumnos parecen confusos, habla de sus juegos favoritos y de todas las formas en que hacen saber a los personajes lo que deben hacer. Señala que el juego sería muy aburrido si se desarrollara de principio a fin sin necesidad de realizar ningún suceso."
           ]
         },
         "abca79b2-6a21-4f74-b06d-07ea956d12bc": {
           "name": "Reflexión",
           "tips": [
-            null
+            "Los alumnos deben demostrar que comprenden que los \"sucesos\" son algo que puede provocar otras acciones. Recuerda los ejemplos anteriores de la lección o anima a los alumnos a inventar los suyos propios."
           ]
         },
         "e597d594-8df0-40d4-a4a5-9de0932f0bfc": {
@@ -3189,10 +3245,12 @@
           "description": "Pedir a los alumnos que escriban sobre lo que han aprendido, por qué es útil y cómo se sienten al respecto puede ayudar a consolidar los conocimientos que han obtenido hoy y a crear una hoja de repaso que les sirva para el futuro.\n\n\\*\\*Sugerencias: \\*\\*\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja en la esquina de la página de tu diario una de las **\\*Caras de Emoción** que muestre cómo te has sentido con la lección de hoy.\n-   Dibuja una línea de tesoros que Laurel pueda recoger.\n-   Dibuja algo que utilice bucles."
         },
         "6361a98f-3232-4060-8758-b1f8064507a8": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "-   Repasa rápidamente la definición de bucle, la acción de hacer algo una y otra vez. \n-   Analiza diferentes patrones como los zigzags y los pasos de escalera.\n    -   ¿Cómo explicarías a alguien cómo dibujar ese patrón?\n    -   ¿Cómo podrías dibujar esto utilizando un bucle?\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nEn los niveles de artista los alumnos utilizarán ángulos de 45 grados descritos como noroeste, noreste, suroeste y sureste. Recomendamos analizar brevemente estas direcciones con la clase y dibujar una imagen para que los alumnos puedan consultarla.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)"
         },
         "8cb479d1-0b50-4d24-998d-9fff971dcf0c": {
-          "name": "Escena del océano con bucles"
+          "name": "Escena del océano con bucles",
+          "description": "#### Demostración del Profesor"
         },
         "b510eb90-ae82-47f6-9d8f-7b2b52700802": {
           "tips": [

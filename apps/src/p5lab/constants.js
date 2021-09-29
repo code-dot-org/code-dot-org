@@ -4,6 +4,9 @@ var utils = require('@cdo/apps/utils');
 /** @enum {string} */
 export const P5LabInterfaceMode = utils.makeEnum('CODE', 'ANIMATION');
 
+/** @enum {string} */
+export const P5LabType = utils.makeEnum('GAMELAB', 'SPRITELAB', 'POETRY');
+
 /** @const {number} */
 export const APP_WIDTH = 400;
 

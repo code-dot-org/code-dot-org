@@ -315,7 +315,15 @@
         "csd U3 conditional statements video_2019": "Video: Şərti Bəyanatlar",
         "CourseF_outbreak5": "Simulyasiyyanızı dəyişin",
         "CourseF_outbreak7": "təsadüfi dəyişim",
-        "international_outbreak_freeplay": "Mesajı paylaşın"
+        "international_outbreak_freeplay": "Mesajı paylaşın",
+        "helloworld_animals_costumes": "Kostyumlar",
+        "helloworld_animals_location": "Zaman Hadisələri",
+        "helloworld_emoji_costumes": "Kostyumlar",
+        "helloworld_emoji_location": "Zaman Hadisələri",
+        "helloworld_food_costumes": "Kostyumlar",
+        "helloworld_food_location": "Zaman Hadisələri",
+        "helloworld_retro_costumes": "Kostyumlar",
+        "helloworld_retro_location": "Zaman Hadisələri"
       }
     }
   }

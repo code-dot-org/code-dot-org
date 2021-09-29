@@ -176,6 +176,8 @@ zh-TW:
           lessons:
             Artist:
               name: 藝術家
+              description_student: 為藝術家設計程式，製作漂亮的圖像。
+              description_teacher: 在本課堂中，學生會控制藝術家完成畫面上的圖畫。這個藝術家舞台可讓學生製作越來越複雜的圖像，期間會使用新的積木，例如「move forward by 100 pixels」（向前移動 100 像素）與「turn right by 90 degrees」（向右旋轉 90 度）等。
           student_description: 和小畫家一起畫圖和設計！
         hourofcode:
           title: 經典迷宮
@@ -1784,6 +1786,7 @@ zh-TW:
           lessons:
             Oceans:
               name: 海洋
+              description_student: 教程摘要：學生首先會把物件分類為「fish」（魚）或「not fish」（不是魚），從而嘗試清除海洋中的垃圾。然後，學生將需要擴充訓練資料集，加入屬於海洋的其他海洋生物。在活動的第 2 部分，學生會自行選擇標籤套用於隨機產生的魚中。這些訓練資料會在機器學習模型中使用，然後學習模型便應能夠自行標籤新的圖像。
           student_description: 瞭解 AI（人工智慧）和機器學習，可以怎樣用來解決全球問題。
         CSPPD3-Unit3-pt2:
           title: 計算機科學原理：單元 3 專業發展挑戰
@@ -3575,6 +3578,8 @@ zh-TW:
           lessons:
             Bounce:
               name: 彈跳
+              description_student: 有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！
+              description_teacher: 在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。
           student_description: 選擇你的球隊，來場籃球比賽
         sample-csp5:
           lessons:
@@ -4151,6 +4156,8 @@ zh-TW:
           lessons:
             Sports:
               name: 運動
+              description_student: 有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！
+              description_teacher: 在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。
           student_description: 搞個混搭的運動遊戲
         2016_sciencePD-phase2b:
           lessons:
@@ -6181,7 +6188,8 @@ zh-TW:
               name: 其它
             Thanks:
               name: 謝謝
-            " ": {}
+            " ":
+              name: ''
         csp-pre-survey-test-2017:
           lessons:
             new stage:
@@ -12073,7 +12081,7 @@ zh-TW:
               display_name: 問卷
           lessons:
             CSD post-course survey:
-              name: CSD 課後問卷調查
+              name: CSD 學生課後問卷調查 ('18-'19)
         csp-post-survey-2018:
           title: CSP 學生課後問卷調查 ('18-'19)
           description_audience: CSP 學生
@@ -12084,7 +12092,7 @@ zh-TW:
               display_name: 問卷
           lessons:
             CSP post-course survey:
-              name: CSP 課後問卷調查
+              name: CSP 學生課後問卷調查 ('18-'19)
           student_description: 歡迎來到 Code.org 電腦科學原理課後問卷調查。本問卷調查需要大約 15 分鐘完成。你的回覆將會保持私密與匿名 -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
         csp5-pilot:
           title: CSP 單元 5 試行版 - 清單（List）、迴圈（Loop）與尋訪（Traversal）
@@ -17435,6 +17443,8 @@ zh-TW:
           lessons:
             lesson-20:
               name: 評估日
+            lesson-24:
+              name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -17442,6 +17452,8 @@ zh-TW:
           lessons:
             lesson-15:
               name: 評估日
+            lesson-16:
+              name: Java 實驗室
           lesson_groups:
             lesson group:
               display_name: 內容
@@ -17449,6 +17461,8 @@ zh-TW:
           lessons:
             lesson-15:
               name: 評估日
+            lesson-17:
+              name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -17456,6 +17470,8 @@ zh-TW:
           lessons:
             lesson-15:
               name: 評估日
+            lesson-16:
+              name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -17781,6 +17797,8 @@ zh-TW:
           lessons:
             Assessment Day:
               name: 評估日
+            lesson-1:
+              name: Java 實驗室
             lesson-20:
               name: 評估日
           lesson_groups:
@@ -17792,6 +17810,8 @@ zh-TW:
               name: 評估日
             lesson-15:
               name: 評估日
+            lesson-1:
+              name: Java 實驗室
           lesson_groups:
             lesson group:
               display_name: 內容
@@ -17799,6 +17819,8 @@ zh-TW:
           lessons:
             Assessment Day:
               name: 評估日
+            lesson-1:
+              name: Java 實驗室
             lesson-15:
               name: 評估日
           lesson_groups:
@@ -17808,6 +17830,8 @@ zh-TW:
           lessons:
             Assessment Day:
               name: 評估日
+            lesson-1:
+              name: Java 實驗室
             lesson-15:
               name: 評估日
           lesson_groups:

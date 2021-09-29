@@ -55,9 +55,9 @@
         "CSD U2 Layout Properties Map": "Layout property",
         "CSD U2 Layout Properties Map_2018": "Layout property",
         "CSD U2 Layout Properties Map_2019": "Layout property",
-        "CSD U2 Pair Programming Video": "Pemrograman berpasangan",
-        "CSD U2 Pair Programming Video_2018": "Pemrograman berpasangan",
-        "CSD U2 Pair Programming Video_2019": "Pemrograman berpasangan",
+        "CSD U2 Pair Programming Video": "Pair Programming",
+        "CSD U2 Pair Programming Video_2018": "Pair Programming",
+        "CSD U2 Pair Programming Video_2019": "Pair Programming",
         "CSD U2 RGB intro": "RGB Widget",
         "CSD U2 RGB intro_2018": "RGB Widget",
         "CSD U2 RGB intro_2019": "RGB Widget",
@@ -340,7 +340,11 @@
         "scrat_loops_C-F_video_2021": "Loops dalam Video Zaman Es",
         "CourseF_outbreak5": "Modifikasi Simulasi Anda",
         "international_outbreak_freeplay": "Bagikan Pesan",
-        "CourseF_outbreak6": "Peluang Acak"
+        "CourseF_outbreak6": "Peluang Acak",
+        "helloworld_animals_costumes": "Kostum",
+        "helloworld_emoji_costumes": "Kostum",
+        "helloworld_food_costumes": "Kostum",
+        "helloworld_retro_costumes": "Kostum"
       }
     }
   }

@@ -51,6 +51,7 @@
   "fileImportError": "Egy vagy töb fájl név a Java Lab által van fenntartva és nem lehet ebbe a projektbe importálni. Fájloko amiket nem lehet importálni:",
   "fileImportWarning": "Még egy vagy több duplikált fájlneved van a projekted és a hátizsákodból kiválasztott fájlaid között. A duplikált fájlnevek:",
   "fileImportWarningConfirm": "Le szeretnéd cserélni ezeket a fájlokat a hátizsákodban lévő fájlokra?",
+  "genericErrorMessage": "Kérlek próbáld újra",
   "import": "Importálás",
   "includeFiles": "Fájlokat tartalmaz\n",
   "internalCompilerException": "Oops. Hibába ütköztünk a programod összeállítása közben. Próbáld meg lefuttatni újra. Hogyha a probléma folytatódik, lépjen velünk kapcsolatba a support@code.org email címen. Győződjö meg róla, hogy a csatlakozási azonosítót {connectionId} is elküldi az üzenetben.",

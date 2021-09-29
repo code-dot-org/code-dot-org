@@ -1360,11 +1360,11 @@ se:
         text: x koordináhta {SPRITE}
       Mikelab_yLocationOf:
         text: y koordináhta {SPRITE}
-      PoemBot_makeNumSprites:
+      Poetry_makeNumSprites:
         text: ráhkat{NUM} ođđa {ANIMATION_NAME} sprite:id
-      PoemBot_playSound:
+      Poetry_playSound:
         text: čuojatJiena {SOUND}
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Ivnnit
@@ -1374,10 +1374,9 @@ se:
             '"ripples"': Bárožat
           PALETTE:
             '"rainbow"': Arvedávgi
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: bija duogábeali dása {IMG}
-      PoemBot_setForegroundEffect:
-        text: bija ovddabeal-effeavtta {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Arvi
@@ -1385,6 +1384,20 @@ se:
             '"hearts"': Ivdnás Váimmut
             '"confetti"': Konfetti
             '"starburst"': Starburst
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       SpriteLab2Beta_spriteSay:
         text: sprite {SPRITE} dadjá {TEXT} {SECONDS} sekunddaid
       Vector_createSpriteWith:
