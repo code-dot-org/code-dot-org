@@ -11,9 +11,9 @@ export default class PlaygroundText extends React.Component {
     height: PropTypes.string.isRequired,
     index: PropTypes.string.isRequired,
     rotation: PropTypes.string.isRequired,
-    red: PropTypes.string.isRequired,
-    blue: PropTypes.string.isRequired,
-    green: PropTypes.string.isRequired,
+    colorRed: PropTypes.string.isRequired,
+    colorGreen: PropTypes.string.isRequired,
+    colorBlue: PropTypes.string.isRequired,
     font: PropTypes.string.isRequired,
     fontStyle: PropTypes.string.isRequired
   };
@@ -25,9 +25,9 @@ export default class PlaygroundText extends React.Component {
       height,
       index,
       rotation,
-      red,
-      blue,
-      green,
+      colorRed,
+      colorGreen,
+      colorBlue,
       font,
       fontStyle
     } = this.props;
@@ -37,7 +37,9 @@ export default class PlaygroundText extends React.Component {
       top: y * 2,
       zIndex: index,
       height: height * 2,
-      color: `rgb(${parseInt(red)}, ${parseInt(green)}, ${parseInt(blue)})`,
+      color: `rgb(${parseInt(colorRed)}, ${parseInt(colorGreen)}, ${parseInt(
+        colorBlue
+      )})`,
       transform: `rotate(${parseFloat(rotation)}deg)`,
       fontSize: height * 2,
       fontFamily: PlaygroundFontType[font]
