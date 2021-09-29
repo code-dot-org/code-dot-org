@@ -15,6 +15,7 @@ import {
 import experiments from '@cdo/apps/util/experiments';
 import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
+import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MAX_SEARCH_RESULTS = 40;
 const MAX_HEIGHT = 460;
@@ -198,8 +199,19 @@ export default class AnimationPickerBody extends React.Component {
       onAnimationSelectionComplete
     } = this.props;
 
+    // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
+    // animation picker is loaded. 600 pixels is minimum height of the animation picker.
+    const shouldDisplaySecondDoneButton =
+      this.multiSelectEnabled_ && isMobileDevice();
     return (
       <div style={{marginBottom: 10}}>
+        {shouldDisplaySecondDoneButton && (
+          <Button
+            text={msg.done()}
+            onClick={onAnimationSelectionComplete}
+            color={Button.ButtonColor.orange}
+          />
+        )}
         <h1 style={dialogStyles.title}>{msg.animationPicker_title()}</h1>
         {!is13Plus && !hideUploadOption && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
