@@ -837,16 +837,49 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal courseg_2017, Script.latest_assigned_version('courseg', student)
   end
 
-  test 'has_other_versions? makes no queries when there are no other versions' do
+  test 'has_other_versions? makes no queries when there is one other unit group version' do
     Script.stubs(:should_cache?).returns true
-    unit = create(
-      :script, is_course: true, family_name: 'my-family', version_year: 'unversioned',
-      published_state: SharedConstants::PUBLISHED_STATE.stable
-    )
-    CourseOffering.add_course_offering(unit)
-    unit = Script.get_from_cache(unit.id)
+
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017')
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    CourseOffering.add_course_offering(csp_2017)
+
+    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018')
+    create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
+    CourseOffering.add_course_offering(csp_2018)
+
+    csp1_2017 = Script.get_from_cache(csp1_2017.id)
     assert_queries(0) do
-      refute unit.has_other_versions?
+      assert csp1_2017.has_other_versions?
+    end
+  end
+
+  test 'has_other_versions? makes no queries when there is one other unit version' do
+    Script.stubs(:should_cache?).returns true
+
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true)
+    CourseOffering.add_course_offering(foo18)
+
+    foo17 = Script.get_from_cache(foo17.id)
+    assert_queries(0) do
+      assert foo17.has_other_versions?
+    end
+  end
+
+  # we expect to hit this case when serving uncached hoc unit overview pages.
+  test 'has_other_versions? makes no queries when there are no other unit versions' do
+    Script.stubs(:should_cache?).returns true
+
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(foo17)
+
+    foo17 = Script.get_from_cache(foo17.id)
+    assert_queries(0) do
+      refute foo17.has_other_versions?
     end
   end
 
