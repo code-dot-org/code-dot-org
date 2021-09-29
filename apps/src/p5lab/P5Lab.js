@@ -207,8 +207,8 @@ export default class P5Lab {
     getStore().dispatch(
       setInitialAnimationList(
         initialAnimationList,
-        this.isSpritelab /* shouldRunV3Migration */,
-        this.isSpritelab,
+        this.isBlockly /* shouldRunV3Migration */,
+        this.isBlockly,
         defaultSprites
       )
     );
@@ -559,7 +559,7 @@ export default class P5Lab {
     initialAnimationList,
     defaultSprites = {orderedKeys: [], propsByKey: {}}
   ) {
-    if (!this.isSpritelab) {
+    if (!this.isBlockly) {
       return initialAnimationList;
     }
     let configDictionary = {};
