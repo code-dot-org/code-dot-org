@@ -1655,12 +1655,15 @@ is:
         text: x hnit {SPRITE}
       Mikelab_yLocationOf:
         text: y hnit {SPRITE}
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
+      Poetry_makeNumSprites:
         text: búa til {NUM} nýja {ANIMATION_NAME} kvika
-      PoemBot_playSound:
+      Poetry_playSound:
         text: spilaHljóð {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: stilla bakgrunnshrifin {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Litir
@@ -1670,10 +1673,9 @@ is:
             '"ripples"': Gárur
           PALETTE:
             '"rainbow"': Regnbogi
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: stilla bakgrunn á {IMG}
-      PoemBot_setForegroundEffect:
-        text: stilla á forgrunnshrifin {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Rigning
@@ -1681,9 +1683,23 @@ is:
             '"hearts"': Litrík hjörtu
             '"confetti"': Skraut
             '"starburst"': Stjörnublossi
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
-      PoemBot_whenPromptAnswered:
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: þegar {VAR} er svarað
       RyanLab_moveForward:
         text: færa áfram

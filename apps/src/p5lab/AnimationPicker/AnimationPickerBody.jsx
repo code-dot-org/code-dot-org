@@ -5,40 +5,20 @@ import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
-import styles from './styles';
+import * as dialogStyles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {
   searchAssets,
   filterOutBackgrounds
 } from '@cdo/apps/code-studio/assets/searchAssets';
+import experiments from '@cdo/apps/util/experiments';
+import Button from '@cdo/apps/templates/Button';
+import {AnimationProps} from '@cdo/apps/p5lab/shapes';
+import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MAX_SEARCH_RESULTS = 40;
 const MAX_HEIGHT = 460;
-
-const animationPickerStyles = {
-  allAnimations: {
-    color: color.purple,
-    fontFamily: "'Gotham 7r', sans-serif",
-    cursor: 'pointer'
-  },
-  breadCrumbs: {
-    margin: '8px 0',
-    fontSize: 14,
-    display: 'inline-block'
-  },
-  pagination: {
-    float: 'right',
-    display: 'inline',
-    marginTop: 10
-  },
-  emptyResults: {
-    paddingBottom: 10
-  },
-  navigation: {
-    minHeight: 30
-  }
-};
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
@@ -46,6 +26,7 @@ export default class AnimationPickerBody extends React.Component {
     onDrawYourOwnClick: PropTypes.func.isRequired,
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
+    onAnimationSelectionComplete: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
     libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
@@ -53,7 +34,8 @@ export default class AnimationPickerBody extends React.Component {
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
-    canDraw: PropTypes.bool.isRequired
+    canDraw: PropTypes.bool.isRequired,
+    selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired
   };
 
   state = {
@@ -61,6 +43,10 @@ export default class AnimationPickerBody extends React.Component {
     categoryQuery: '',
     currentPage: 0
   };
+
+  componentDidMount() {
+    this.multiSelectEnabled_ = experiments.isEnabled(experiments.MULTISELECT);
+  }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.defaultQuery !== nextProps.defaultQuery) {
@@ -179,14 +165,23 @@ export default class AnimationPickerBody extends React.Component {
     ));
   }
 
-  animationItemsRendering(animations) {
+  animationItemsRendering(animations, isMultiSelectEnabled) {
     return animations.map(animationProps => (
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
         label={this.props.hideAnimationNames ? undefined : animationProps.name}
         animationProps={animationProps}
-        onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
+        onClick={() =>
+          this.props.onPickLibraryAnimation(
+            animationProps,
+            isMultiSelectEnabled
+          )
+        }
         playAnimations={this.props.playAnimations}
+        selected={this.props.selectedAnimations.some(
+          e => e.sourceUrl === animationProps.sourceUrl
+        )}
+        multiSelectEnabled={this.multiSelectEnabled_}
       />
     ));
   }
@@ -200,12 +195,24 @@ export default class AnimationPickerBody extends React.Component {
       hideUploadOption,
       is13Plus,
       onDrawYourOwnClick,
-      onUploadClick
+      onUploadClick,
+      onAnimationSelectionComplete
     } = this.props;
 
+    // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
+    // animation picker is loaded. 600 pixels is minimum height of the animation picker.
+    const shouldDisplaySecondDoneButton =
+      this.multiSelectEnabled_ && isMobileDevice();
     return (
       <div style={{marginBottom: 10}}>
-        <h1 style={styles.title}>{msg.animationPicker_title()}</h1>
+        {shouldDisplaySecondDoneButton && (
+          <Button
+            text={msg.done()}
+            onClick={onAnimationSelectionComplete}
+            color={Button.ButtonColor.orange}
+          />
+        )}
+        <h1 style={dialogStyles.title}>{msg.animationPicker_title()}</h1>
         {!is13Plus && !hideUploadOption && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
@@ -214,13 +221,13 @@ export default class AnimationPickerBody extends React.Component {
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
         {(searchQuery !== '' || categoryQuery !== '') && (
-          <div style={animationPickerStyles.navigation}>
+          <div style={styles.navigation}>
             {categoryQuery !== '' && (
-              <div style={animationPickerStyles.breadCrumbs}>
+              <div style={styles.breadCrumbs}>
                 {this.props.navigable && (
                   <span
                     onClick={this.onClearCategories}
-                    style={animationPickerStyles.allAnimations}
+                    style={styles.allAnimations}
                   >
                     {`${msg.animationPicker_allCategories()} > `}
                   </span>
@@ -237,7 +244,7 @@ export default class AnimationPickerBody extends React.Component {
           {' '}
           {(searchQuery !== '' || categoryQuery !== '') &&
             results.length === 0 && (
-              <div style={animationPickerStyles.emptyResults}>
+              <div style={styles.emptyResults}>
                 {msg.animationPicker_noResultsFound()}
               </div>
             )}
@@ -262,8 +269,20 @@ export default class AnimationPickerBody extends React.Component {
             categoryQuery === '' &&
             this.animationCategoriesRendering()}
           {(searchQuery !== '' || categoryQuery !== '') &&
-            this.animationItemsRendering(results || [])}
+            this.animationItemsRendering(
+              results || [],
+              this.multiSelectEnabled_
+            )}
         </ScrollableList>
+        {this.multiSelectEnabled_ && (
+          <div style={styles.footer}>
+            <Button
+              text={msg.done()}
+              onClick={onAnimationSelectionComplete}
+              color={Button.ButtonColor.orange}
+            />
+          </div>
+        )}
       </div>
     );
   }
@@ -276,4 +295,32 @@ export const WarningLabel = ({children}) => (
 );
 WarningLabel.propTypes = {
   children: PropTypes.node
+};
+
+const styles = {
+  allAnimations: {
+    color: color.purple,
+    fontFamily: "'Gotham 7r', sans-serif",
+    cursor: 'pointer'
+  },
+  breadCrumbs: {
+    margin: '8px 0',
+    fontSize: 14,
+    display: 'inline-block'
+  },
+  pagination: {
+    float: 'right',
+    display: 'inline',
+    marginTop: 10
+  },
+  emptyResults: {
+    paddingBottom: 10
+  },
+  navigation: {
+    minHeight: 30
+  },
+  footer: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  }
 };

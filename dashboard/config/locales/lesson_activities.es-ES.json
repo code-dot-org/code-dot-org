@@ -2,6 +2,12 @@
   "es-ES": {
     "data": {
       "lesson_activities": {
+        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
+          "name": "Actividad Principal"
+        },
+        "06dfaf3b-e495-4577-baa6-883a782e198f": {
+          "name": "Niveles"
+        },
         "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
           "name": "Calentamiento"
         },
@@ -532,6 +538,9 @@
         },
         "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
           "name": "Calentamiento"
+        },
+        "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
+          "name": "Actividad puente - Eventos - Elige uno"
         },
         "c92853be-b1ed-4b05-afe9-79928330a3a3": {
           "name": "Actividad Principal"

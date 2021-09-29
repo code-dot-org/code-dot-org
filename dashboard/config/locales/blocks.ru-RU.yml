@@ -1491,12 +1491,16 @@ ru:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': взрыв
+            '"rain"': дождь
+      Poetry_makeNumSprites:
         text: создать {NUM} новый {ANIMATION_NAME} слайдов
-      PoemBot_playSound:
+      Poetry_playSound:
         text: playSound {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: задать фоновый эффект {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Цвета
@@ -1505,17 +1509,16 @@ ru:
             '"ripples"': Круги на воде
           PALETTE:
             '"rainbow"': Радуга
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: установить фон для {IMG}
-      PoemBot_setForegroundEffect:
-        text: задать эффект переднего плана {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Дождь
             '"bubbles"': Пузыри
             '"hearts"': Цветные сердечки
             '"confetti"': Конфетти
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             growing: увеличение
@@ -1524,7 +1527,7 @@ ru:
             spinning_left: левостороннее вращение
             spinning_right: правостороннее вращение
             wandering: блуждание
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             growing: увеличение
@@ -1533,6 +1536,20 @@ ru:
             spinning_left: левостороннее вращение
             spinning_right: правостороннее вращение
             wandering: блуждание
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: двигаться вперед
       RyanLab_turnLeft:

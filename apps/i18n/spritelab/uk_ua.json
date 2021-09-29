@@ -98,6 +98,5 @@
   "noVarUse": "Вам потрібно використати змінну з вашої підказки в тексті, виведеному на екран.",
   "addText": "Додайте текст на екран за допомогою блоку друку:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>",
   "spritelabFeedbackUseFishCostume": "Ви маєте скористатися принаймні одним костюмом риби. ",
-  "spritelabFeedbackCreateTwoDifferentSprites": "Потрібно два спрайта з різними костюмами. ",
-  "poemBotMakeBackground": "Вам потрібно додати фоновий ефект."
+  "spritelabFeedbackCreateTwoDifferentSprites": "Потрібно два спрайта з різними костюмами. "
 }

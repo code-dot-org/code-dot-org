@@ -1,0 +1,232 @@
+<Poetry>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "block_pools": [
+      "Poetry"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "use_modal_function_editor": "true",
+    "preload_asset_list": null,
+    "embed": "true",
+    "instructions_important": "false",
+    "short_instructions": "Make a prediction!",
+    "long_instructions": "Read this poem.\r\n\r\nThen, press \"Run.\"\r\n\r\nDid the images match the mood of each line of the poem?",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "true",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_code": "var validationInfo = getValidationInfo();\r\nif (!validationInfo.successFrame) {\r\n  setSuccessFrame();\r\n}\r\n\r\nif (World.frameCount == validationInfo.endTime+30) {\r\n  levelFailure(0, 'genericSuccess');\r\n}",
+    "validation_enabled": "false",
+    "hide_pause_button": "true",
+    "instructions_icon": "octiGeneral"
+  },
+  "game_id": 69,
+  "published": true,
+  "created_at": "2021-09-28T16:16:31.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
+  "audit_log": "[{\"changed_at\":\"2021-09-28 16:20:56 +0000\",\"changed\":[\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:56:13 +0000\",\"changed\":[\"preload_asset_list\",\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">4</title>
+          <next>
+            <block type="gamelab_destroy">
+              <value name="THIS">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <title name="ANIMATION">"book_1"</title>
+                </block>
+              </value>
+              <next>
+                <block type="PoemBot_setFontColor">
+                  <value name="FILL">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#000000</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="PoemBot_setBackgroundEffect">
+                      <title name="EFFECT">"clouds"</title>
+                      <title name="PALETTE">"sunrise"</title>
+                      <next>
+                        <block type="gamelab_makeBurst">
+                          <title name="EFFECT">"pop"</title>
+                          <title name="ANIMATION_NAME">"open_book_1"</title>
+                          <value name="NUM">
+                            <block type="math_number">
+                              <title name="NUM">20</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="when_run">
+          <next>
+            <block type="PoemBot_setFontColor">
+              <value name="FILL">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="PoemBot_setBackgroundEffect">
+                  <title name="EFFECT">"darkCircles"</title>
+                  <title name="PALETTE">"sunset"</title>
+                  <next>
+                    <block type="PoemBot_setForegroundEffect">
+                      <title name="EFFECT">"glass"</title>
+                      <next>
+                        <block type="gamelab_makeNewSpriteAnon">
+                          <title name="ANIMATION_NAME">"book_1"</title>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker">
+                              <title name="LOCATION">{"x":195,"y":205}</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="PoemBot_startBehavior">
+                              <title name="ANIMATION_NAME">"book_1"</title>
+                              <title name="BEHAVIOR">growing</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">10</title>
+          <next>
+            <block type="PoemBot_setBackgroundEffect">
+              <title name="EFFECT">"stars"</title>
+              <title name="PALETTE">"sunrise"</title>
+              <next>
+                <block type="PoemBot_setForegroundEffect">
+                  <title name="EFFECT">"twinkling"</title>
+                  <next>
+                    <block type="gamelab_destroy">
+                      <value name="THIS">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <title name="ANIMATION">"emoji_05_1"</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_makeNewSpriteAnon">
+                          <title name="ANIMATION_NAME">"red_shirt_hands_in_pockets2_1"</title>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker">
+                              <title name="LOCATION">{"x":32,"y":341}</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">7</title>
+          <next>
+            <block type="PoemBot_setFontColor">
+              <value name="FILL">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="PoemBot_setBackgroundEffect">
+                  <title name="EFFECT">"squiggles"</title>
+                  <title name="PALETTE">"autumn"</title>
+                  <next>
+                    <block type="gamelab_makeNumSprites">
+                      <title name="ANIMATION_NAME">"emoji_05_1"</title>
+                      <value name="NUM">
+                        <block type="math_number">
+                          <title name="NUM">10</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="PoemBot_setSize">
+                          <title name="SPRITE">"emoji_05_1"</title>
+                          <title name="VAL">50</title>
+                          <next>
+                            <block type="PoemBot_startBehavior">
+                              <title name="ANIMATION_NAME">"emoji_05_1"</title>
+                              <title name="BEHAVIOR">jittering</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">11</title>
+          <next>
+            <block type="gamelab_destroy">
+              <value name="THIS">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <title name="ANIMATION">"red_shirt_hands_in_pockets2_1"</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon">
+                  <title name="ANIMATION_NAME">"green_shirt_books_1"</title>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker">
+                      <title name="LOCATION">{"x":31,"y":340}</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="PoemBot_setForegroundEffect">
+                      <title name="EFFECT">"emojis"</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
+  </blocks>
+</Poetry>

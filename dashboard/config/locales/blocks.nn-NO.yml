@@ -1488,10 +1488,13 @@ nn:
         text: x-koordinator til {SPRITE}
       Mikelab_yLocationOf:
         text: y-koordinator til {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
+      Poetry_playSound:
         text: spillLyd {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: vel bakgrunnseffekt {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Fargar
@@ -1499,13 +1502,26 @@ nn:
             '"stars"': Stjerner
           PALETTE:
             '"rainbow"': Regnboge
-      PoemBot_setForegroundEffect:
-        text: velg forgrunnseffekt {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Regn
             '"bubbles"': Bobler
             '"confetti"': Konfetti
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: gå framover
       RyanLab_turnLeft:
