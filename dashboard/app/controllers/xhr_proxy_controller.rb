@@ -66,6 +66,7 @@ class XhrProxyController < ApplicationController
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
+    data.weather.gov.hk
     dataservice.accuweather.com
     distanza.org
     dweet.io

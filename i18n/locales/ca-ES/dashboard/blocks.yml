@@ -981,16 +981,14 @@ ca:
             '"down"': fletxa cap avall
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
-      PoemBot_setBackgroundEffect:
-        text: definir l'efecte de fons {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"space"': Espai
             '"stars"': Estrelles
           PALETTE:
             '"rainbow"': Arc de Sant Martí
-      PoemBot_setForegroundEffect:
-        text: definir l'efecte de fons {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Pluja

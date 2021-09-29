@@ -155,6 +155,15 @@
           "recovering": "nagpapagaling",
           "moving left and right": "paggalaw sa kaliwa at kanan",
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "helloworld_animals_behaviors": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "helloworld_retro_behaviors": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
         }
       }
     }

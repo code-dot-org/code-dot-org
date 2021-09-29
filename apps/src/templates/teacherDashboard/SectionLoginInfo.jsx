@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -189,27 +188,34 @@ class WordOrPictureLogins extends React.Component {
   }
 
   printLoginCards = () => {
-    const printArea = document.getElementById('printArea').outerHTML;
-    // Adding a unique ID to the window name allows for multiple instances of this window
-    // to be open at once without affecting each other.
-    const windowName = `printWindow-${_.uniqueId()}`;
-    let printWindow = window.open('', windowName, '');
     const {section} = this.props;
+    const printArea = document.getElementById('printArea').outerHTML;
+    // Popup blockers cause issues with creating a new window for printing.
+    // Creating a hidden iframe temporarily on the page as a workaround.
+    const printIframe = document.createElement('iframe');
+    printIframe.style.display = 'none';
 
-    printWindow.document.open();
-    printWindow.addEventListener('load', event => {
-      printWindow.print();
+    // Wrapping `write` calls in an onload event listener
+    // to allow contentDocument/contentWindow initialization.
+    printIframe.addEventListener('load', event => {
+      printIframe.contentDocument.open();
+      printIframe.contentDocument.write(
+        `<html><head><title>${i18n.printLoginCards_windowTitle({
+          sectionName: section.name
+        })}</title></head>
+        <body>${printArea}</body></html>`
+      );
+      printIframe.contentDocument.close();
+      printIframe.contentWindow.print();
     });
+    document.body.appendChild(printIframe);
 
-    printWindow.document.write(
-      `<html><head><title>${i18n.printLoginCards_windowTitle({
-        sectionName: section.name
-      })}</title></head>`
-    );
-    printWindow.document.write('<body onafterprint="self.close()">');
-    printWindow.document.write(printArea);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
+    // `onafterprint` event handling isn't consistent across browsers.
+    // Using a timeout allows the iframe `print()` to block before
+    // deleting the iframe.
+    setTimeout(function() {
+      printIframe.remove();
+    }, 1000);
   };
 
   render() {

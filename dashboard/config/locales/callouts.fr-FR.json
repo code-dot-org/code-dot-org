@@ -1420,7 +1420,7 @@
           "new_block_4": "Nouveau bloc !"
         },
         "CourseF_outbreak2": {
-          "minitoolbox": "Cliquez ici pour agrandir le bloc.",
+          "minitoolbox": "Cliques ici pour agrandir le bloc.",
           "pointerlocation": "Faites glisser un bloc sujet ici."
         },
         "CourseF_outbreak7": {
@@ -1768,6 +1768,45 @@
         },
         "courseF_sprites_properties": {
           "sprites_category2": "Recherche un nouveau bloc ici."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Nouveau bloc !"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Nouveau bloc !"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Nouveau bloc !"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Nouveau bloc !"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Nouveau bloc !",
+          "hello_world_new_block": "Nouveau bloc !"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Nouveau bloc !"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Nouveau bloc !"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Nouveau bloc !",
+          "hello_world_new_block": "Nouveau bloc !"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Nouveau bloc !"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Nouveau bloc !"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Nouveau bloc !",
+          "hello_world_new_block": "Nouveau bloc !"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Nouveau bloc !"
         }
       }
     }

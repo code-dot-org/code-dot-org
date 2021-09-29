@@ -550,6 +550,45 @@
         },
         "courseF_text_prompts": {
           "prompt_block": "Burada ipucu blokunu tapın!"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Yeni blok!"
         }
       }
     }

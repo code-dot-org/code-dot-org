@@ -190,6 +190,5 @@
   "thirdClickButNoSpeech": "Po kliknutí na viac než dve postavičky sa stalo, že jedno z tvojich kliknutí nedosiahlo, aby postavička niečo povedala. Pod každú udalosť `keď klikneš na` pridaj blok `povedz`. <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Ahoj svet!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
   "changeOrSetSize": "Žiadnej z tvojich postavičiek sa nezmenila veľkosť.",
   "changeOrSetCostume": "Žiadnej z tvojich postavičiek sa nezmenil kostým.",
-  "changeBackground": "Pozadie sa nezmenilo.",
-  "poemBotMakeBackground": "Potrebuješ pridať efekt v pozadí."
+  "changeBackground": "Pozadie sa nezmenilo."
 }

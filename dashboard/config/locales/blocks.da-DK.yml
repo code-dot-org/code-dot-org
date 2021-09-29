@@ -1506,10 +1506,13 @@ da:
             '"down"': pil ned
             '"left"': venstre pil
             '"right"': højre pil
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
+      Poetry_playSound:
         text: afspil lyd {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: indstil baggrundseffekt {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Farver
@@ -1519,10 +1522,9 @@ da:
             '"ripples"': Krusninger
           PALETTE:
             '"rainbow"': Regnbue
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: sæt baggrund til {IMG}
-      PoemBot_setForegroundEffect:
-        text: indstil baggrundseffekt {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Regn
@@ -1530,7 +1532,7 @@ da:
             '"hearts"': Farvede hjerter
             '"confetti"': Konfetti
             '"starburst"': Starburst
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             growing: vokser
@@ -1539,7 +1541,7 @@ da:
             spinning_left: spinning til venstre
             spinning_right: spinning til højre
             wandering: vandrende
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             growing: vokser
@@ -1548,8 +1550,22 @@ da:
             spinning_left: spinning til venstre
             spinning_right: spinning til højre
             wandering: vandrende
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: flyt fremad
       RyanLab_turnLeft:

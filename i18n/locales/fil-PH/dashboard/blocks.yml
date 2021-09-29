@@ -1561,9 +1561,13 @@ fil:
         text: x coordinate ng {SPRITE}
       Mikelab_yLocationOf:
         text: y ang mga {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ulan
+      Poetry_playSound:
         text: Ang ... {SOUND}
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Mga Kulay
@@ -1572,10 +1576,9 @@ fil:
             '"ripples"': Ripples
           PALETTE:
             '"rainbow"': Bahaghari
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: Itakda ang background sa {IMG}
-      PoemBot_setForegroundEffect:
-        text: itakda ang foreground effect {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Ulan
@@ -1583,6 +1586,20 @@ fil:
             '"hearts"': Makulay na mga Puso
             '"confetti"': Confetti
             '"starburst"': Starburst
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: umabante
       RyanLab_turnLeft:

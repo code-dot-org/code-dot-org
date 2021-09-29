@@ -1191,6 +1191,7 @@ it:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": pulsante
             "'sound://category_collect/clicky_crunch.mp3'": sgranocchiamento
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": arpa
             "'sound://category_digital/jump_7.mp3'": salta
       gamelab_pointInDirection:
         text: orienta {SPRITE} in direzione {DIRECTION}
@@ -1360,13 +1361,16 @@ it:
           se {NUM}% probabilità
           {STATEMENT}
       gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} probabilità
+           {STATEMENT}
         options:
           NUM:
-            '10': very low
-            '25': basso
+            '10': molto bassa
+            '25': bassa
             '50': 50/50
-            '75': alto
-            '90': very high
+            '75': alta
+            '90': molto alta
       gamelab_xLocationOf:
         text: coordinata x di {SPRITE}
       gamelab_yLocationOf:
@@ -1680,12 +1684,16 @@ it:
         text: coordinata x di {SPRITE}
       Mikelab_yLocationOf:
         text: coordinata y di {SPRITE}
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': scoppio
+            '"rain"': pioggia
+      Poetry_makeNumSprites:
         text: crea {NUM} nuovi sprite {ANIMATION_NAME}
-      PoemBot_playSound:
+      Poetry_playSound:
         text: riproduci il suono {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: imposta sfondo con effetto {EFFECT}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Colori
@@ -1695,10 +1703,9 @@ it:
             '"ripples"': Increspature
           PALETTE:
             '"rainbow"': Arcobaleno
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: imposta lo sfondo {IMG}
-      PoemBot_setForegroundEffect:
-        text: imposta effetto di primo piano {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Pioggia
@@ -1706,7 +1713,7 @@ it:
             '"hearts"': Cuori colorati
             '"confetti"': Coriandoli
             '"starburst"': Esplosione di stelle
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: ondeggiamento
@@ -1718,7 +1725,7 @@ it:
             swimming_left_and_right: nuoto
             wandering: movimento casuale
             wobbling: barcollamento
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: ondeggiamento
@@ -1730,6 +1737,20 @@ it:
             swimming_left_and_right: nuoto
             wandering: movimento casuale
             wobbling: barcollamento
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: vai avanti
       RyanLab_turnLeft:

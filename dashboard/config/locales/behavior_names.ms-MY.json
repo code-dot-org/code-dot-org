@@ -166,6 +166,15 @@
           "jittering": "gelisah",
           "moving west": "ke barat",
           "patrolling": "ronda"
+        },
+        "helloworld_animals_behaviors": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "helloworld_retro_behaviors": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
         }
       }
     }

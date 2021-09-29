@@ -131,6 +131,32 @@
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_a": "Твој програм треба да:\n\n-   Користи функцију\n-   Помери напред за 100 + 75 пиксела\n-   Користи функцију"
+        },
+        "4-5 Maze 5": {
+          "4-5_Maze_5_a": "Покушај да користиш петљу \"понови\" сваки пут када треба да се помераш унапред више од два пута.",
+          "4-5_Maze_5_b": "Можеш користити више од једне петље \"понови\"."
+        },
+        "4-5 Maze 7": {
+          "4-5_Maze_7_a": "**Да ли желиш да твој код буде што краћи?**\n\nПогледај да ли има шаблона у твојим блоковима. Да ли видиш да се нешто понавља? Покушај да ставиш блок за понављање око тог дела који се понавља!"
+        },
+        "course3_maze_debugging_challenge1": {
+          "courseC_maze_debugging_challenge1_a": "Лево или десно? Зависи од тебе!",
+          "courseC_maze_debugging_challenge1_c": "Ако се заглавиш у решавању увек можеш кренути из почетка или можеш да обришеш цео код и да кренеш на свој начин да решаваш!"
+        },
+        "courseC_maze_debugging_challenge1": {
+          "courseC_maze_debugging_challenge1_a": "Лево или десно? Зависи од тебе!"
+        },
+        "courseC_maze_debugging_challenge1_2018": {
+          "courseC_maze_debugging_challenge1_a": "Лево или десно? Зависи од тебе!"
+        },
+        "courseC_maze_debugging_challenge1_2019": {
+          "courseC_maze_debugging_challenge1_a": "Лево или десно? Зависи од тебе!"
+        },
+        "courseC_maze_debugging_challenge1_2020": {
+          "courseC_maze_debugging_challenge1_a": "Лево или десно? Зависи од тебе!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "Лево или десно? Зависи од тебе!"
         }
       }
     }

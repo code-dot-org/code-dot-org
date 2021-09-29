@@ -1109,6 +1109,7 @@ tr:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": Tuş
             "'sound://category_collect/clicky_crunch.mp3'": çatlak
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": arp
             "'sound://category_digital/jump_7.mp3'": zıpla
       gamelab_pointInDirection:
         text: point {SPRITE} {DIRECTION}
@@ -1148,8 +1149,12 @@ tr:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': çöl
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaksi
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ızgara
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': çayır
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': gökkuşağı
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': Sahne
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': yıldızlar
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': yeraltı
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Sualtı
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': kış
             undefined: hiçbiri
@@ -1492,6 +1497,10 @@ tr:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şehir
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': çayır
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': Sahne
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': yeraltı
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1598,12 +1607,16 @@ tr:
         text: canavarları rastgele yerleştir
       Outbreak_stopMoving:
         text: canavarlar hareket etmeyi bırakıyor
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': patlama
+            '"rain"': yağmur
+      Poetry_makeNumSprites:
         text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
-      PoemBot_playSound:
+      Poetry_playSound:
         text: playSound {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: arka plan efektini {EFFECT} {PALETTE} olarak ayarla
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Renkler
@@ -1613,17 +1626,16 @@ tr:
             '"ripples"': Dalgaları
           PALETTE:
             '"rainbow"': Gökkuşağı
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: arka planı {IMG} olarak ayarlayın
-      PoemBot_setForegroundEffect:
-        text: ön plan efektini {EFFECT} olarak ayarla
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Yağmur
             '"bubbles"': Baloncuklar
             '"hearts"': Renkli Kalpler
             '"confetti"': Konfeti
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: fluttering
@@ -1635,7 +1647,7 @@ tr:
             swimming_left_and_right: yüzme
             wandering: gezinme
             wobbling: sallanma
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: fluttering
@@ -1647,13 +1659,23 @@ tr:
             swimming_left_and_right: yüzme
             wandering: gezinme
             wobbling: sallanma
-      PoemBot_stringValue:
-        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
-      PoemBot_whenPromptAnswered:
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: "{VAR} cevaplandığında"
       RyanLab_moveForward:
         text: ilerle
