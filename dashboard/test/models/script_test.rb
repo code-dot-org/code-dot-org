@@ -1245,8 +1245,16 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes versions' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
-    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.preview)
+    foo17 = create(
+      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(
+      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo18)
 
     versions = foo17.summarize[:versions]
     assert_equal 2, versions.length
@@ -1259,9 +1267,21 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize excludes unlaunched versions' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
-    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.preview)
-    create(:script, name: 'foo-2019', family_name: 'foo', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta)
+    foo17 = create(
+      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(
+      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo18)
+    foo19 = create(
+      :script, name: 'foo-2019', family_name: 'foo', version_year: '2019', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.beta
+    )
+    CourseOffering.add_course_offering(foo19)
 
     versions = foo17.summarize[:versions]
     assert_equal 2, versions.length
