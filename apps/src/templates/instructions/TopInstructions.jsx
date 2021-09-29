@@ -836,7 +836,7 @@ const styles = {
     zIndex: OVERLAY_Z_INDEX + 1
   },
   exampleSolutions: {
-    margin: 5
+    margin: 10
   }
 };
 // Note: usually the unconnected component is only used for tests, in this case it is used

@@ -166,7 +166,7 @@ class LevelDetailsDialog extends Component {
           resizable={false}
           serverLevelId={parseInt(level.id)}
           serverScriptId={this.state.scriptLevel.scriptId}
-          exampleSolutions={level.exampleSolutions}
+          exampleSolutions={this.state.scriptLevel.exampleSolutions}
         />
       );
     } else {
