@@ -873,7 +873,7 @@ export default connect(
     dynamicInstructions: getDynamicInstructions(state.instructions),
     dynamicInstructionsKey: state.instructions.dynamicInstructionsKey,
     overlayVisible: state.instructions.overlayVisible,
-    exampleSolutions: state.instructions.exampleSolutions
+    exampleSolutions: state.pageConstants.exampleSolutions
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
