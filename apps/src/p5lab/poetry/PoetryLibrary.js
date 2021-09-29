@@ -53,14 +53,12 @@ export default class PoetryLibrary extends CoreLibrary {
         if (!this.isPreviewFrame()) {
           for (let i = 0; i < renderInfo.lines.length; i++) {
             const lineNum = i + 1; // students will 1-index the lines
-            if (this.lineEvents[lineNum]) {
+            if (this.lineEvents[lineNum] && !this.lineEvents[lineNum].fired) {
               // Fire line events
               this.lineEvents[lineNum].forEach(callback => callback());
 
-              // Clear out line events so they don't fire again. This way, we'll fire
-              // the event only on the first frame where renderInfo.lines has
-              // that many items
-              this.lineEvents[lineNum] = null;
+              // Set fired to true so that we don't re-fire this event again.
+              this.lineEvents[lineNum].fired = true;
             }
           }
         }
@@ -117,6 +115,8 @@ export default class PoetryLibrary extends CoreLibrary {
 
       animatePoem() {
         this.poemState.animationStartFrame = this.p5.World.frameCount;
+        // Reset line events since we're starting the poem animation over.
+        Object.values(this.lineEvents).forEach(e => (e.fired = false));
       },
 
       showPoem() {
