@@ -87,6 +87,7 @@ describe('entry tests', () => {
     'jigsaw',
     'maze',
     'netsim',
+    'poetry',
     'studio',
     'turtle',
     'weblab'
@@ -632,6 +633,8 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'programming_expressions/new':
+      './src/sites/studio/pages/programming_expressions/new.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',

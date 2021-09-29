@@ -11,7 +11,7 @@ import {currentLocation, navigateToHref} from '@cdo/apps/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
-import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
+import CodeReviewDataApi from './codeReview/CodeReviewDataApi';
 import PeerSelectDropdown from './codeReview/PeerSelectDropdown';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
@@ -42,7 +42,8 @@ class ReviewTab extends Component {
     projectOwnerName: '',
     authorizationError: false,
     commentSaveError: false,
-    commentSaveInProgress: false
+    commentSaveInProgress: false,
+    dataApi: {}
   };
 
   onSelectPeer = peer => {
@@ -78,44 +79,43 @@ class ReviewTab extends Component {
       return;
     }
 
+    this.dataApi = new CodeReviewDataApi(
+      channelId,
+      serverLevelId,
+      serverScriptId
+    );
+
     const initialLoadPromises = [];
 
     initialLoadPromises.push(
-      new Promise((resolve, reject) => {
-        codeReviewDataApi
-          .getCodeReviewCommentsForProject(channelId)
-          .done((data, _, request) => {
-            this.setState({
-              comments: data,
-              token: request.getResponseHeader('csrf-token')
-            });
-            resolve();
+      this.dataApi
+        .getCodeReviewCommentsForProject()
+        .done((data, _, request) => {
+          this.setState({
+            comments: data,
+            token: request.getResponseHeader('csrf-token')
           });
-      })
+        })
     );
 
     initialLoadPromises.push(
-      new Promise((resolve, reject) => {
-        codeReviewDataApi
-          .getPeerReviewStatus(channelId, serverLevelId, serverScriptId)
-          .done(data => {
-            const id = (data && data.id) || null;
-            this.setState({
-              reviewCheckboxEnabled: data.canMarkReviewable,
-              isReadyForReview: data.reviewEnabled,
-              projectOwnerName: data.name,
-              reviewableProjectId: id
-            });
-            resolve();
-          })
-          .fail(() => {
-            this.setState({
-              reviewCheckboxEnabled: false,
-              isReadyForReview: false
-            });
-            reject();
+      this.dataApi
+        .getPeerReviewStatus()
+        .done(data => {
+          const id = (data && data.id) || null;
+          this.setState({
+            reviewCheckboxEnabled: data.canMarkReviewable,
+            isReadyForReview: data.reviewEnabled,
+            projectOwnerName: data.name,
+            reviewableProjectId: id
           });
-      })
+        })
+        .fail(() => {
+          this.setState({
+            reviewCheckboxEnabled: false,
+            isReadyForReview: false
+          });
+        })
     );
 
     if (
@@ -123,25 +123,14 @@ class ReviewTab extends Component {
       this.props.viewAs !== ViewType.Teacher
     ) {
       initialLoadPromises.push(
-        new Promise((resolve, reject) => {
-          codeReviewDataApi
-            .getReviewablePeers(channelId, serverLevelId, serverScriptId)
-            .done(data => {
-              this.setState({
-                reviewablePeers: _.chain(data)
-                  .filter(peerEntry => peerEntry && peerEntry.length === 2)
-                  .map(peerEntry => ({id: peerEntry[0], name: peerEntry[1]}))
-                  .value()
-              });
-              resolve();
-            })
-            .fail(() => {
-              this.setState({
-                errorLoadingReviewblePeers: true
-              });
-              reject();
+        this.dataApi
+          .getReviewablePeers()
+          .done(data => this.setState({reviewablePeers: data}))
+          .fail(() => {
+            this.setState({
+              errorLoadingReviewblePeers: true
             });
-        })
+          })
       );
     }
 
@@ -164,25 +153,14 @@ class ReviewTab extends Component {
   };
 
   onNewCommentSubmit = commentText => {
-    const {
-      channelId,
-      serverScriptId,
-      serverLevelId
-    } = getStore().getState().pageConstants;
     const {token} = this.state;
     this.setState({
       commentSaveError: false,
       commentSaveInProgress: true
     });
 
-    codeReviewDataApi
-      .submitNewCodeReviewComment(
-        commentText,
-        channelId,
-        serverScriptId,
-        serverLevelId,
-        token
-      )
+    this.dataApi
+      .submitNewCodeReviewComment(commentText, token)
       .done(newComment => {
         const comments = this.state.comments;
         comments.push(newComment);
@@ -208,7 +186,7 @@ class ReviewTab extends Component {
   onCommentDelete = deletedCommentId => {
     const {token} = this.state;
 
-    codeReviewDataApi
+    this.dataApi
       .deleteCodeReviewComment(deletedCommentId, token)
       .done(() => {
         const comments = [...this.state.comments];
@@ -222,7 +200,7 @@ class ReviewTab extends Component {
   onCommentResolveStateToggle = (resolvedCommentId, newResolvedStatus) => {
     const {token} = this.state;
 
-    codeReviewDataApi
+    this.dataApi
       .resolveCodeReviewComment(resolvedCommentId, newResolvedStatus, token)
       .done(() => {
         const comments = [...this.state.comments];
@@ -305,18 +283,8 @@ class ReviewTab extends Component {
     });
 
     if (isReadyForReview) {
-      const {
-        channelId,
-        serverLevelId,
-        serverScriptId
-      } = getStore().getState().pageConstants;
-      codeReviewDataApi
-        .enablePeerReview(
-          channelId,
-          serverLevelId,
-          serverScriptId,
-          this.state.token
-        )
+      this.dataApi
+        .enablePeerReview(this.state.token)
         .done(data => {
           this.setState({
             reviewableProjectId: data.id,
@@ -333,7 +301,7 @@ class ReviewTab extends Component {
           });
         });
     } else {
-      codeReviewDataApi
+      this.dataApi
         .disablePeerReview(this.state.reviewableProjectId, this.state.token)
         .done(() => {
           this.setState({

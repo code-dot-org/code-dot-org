@@ -74,6 +74,13 @@ var baseConfig = {
         'javalab',
         'locale-do-not-import.js'
       ),
+      '@cdo/poetry/locale': path.resolve(
+        __dirname,
+        'src',
+        'p5lab',
+        'poetry',
+        'locale-do-not-import.js'
+      ),
       '@cdo/spritelab/locale': path.resolve(
         __dirname,
         'src',
