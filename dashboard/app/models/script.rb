@@ -1726,6 +1726,7 @@ class Script < ApplicationRecord
   # sharing the family_name of this course, including this one.
   def summarize_versions(user = nil)
     return [] unless family_name
+    return [] unless has_other_versions?
     return [] unless unit_groups.empty?
     with_hidden = user&.hidden_script_access?
     units = Script.
