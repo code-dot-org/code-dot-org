@@ -7368,7 +7368,7 @@ se:
               display_name: Iskkadeapmi
           lessons:
             CSP post-course survey:
-              name: CSP maŋŋil-kurssa iskkadeapmi
+              name: CSP Oahppi Maŋŋil kurssa Iskkadeapmi ('18-'19)
         csp5-pilot:
           lessons:
             Unit 5 Assessment:
@@ -9390,5 +9390,19 @@ se:
               display_name: Sisdoallu
         csa5-pilot-facilitator:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Modulat
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Sisdoallu
+            content:
+              display_name: Sisdoallu
+            lesson_group:
+              display_name: Sisdoallu
             lessonGroup-2:
               display_name: Sisdoallu

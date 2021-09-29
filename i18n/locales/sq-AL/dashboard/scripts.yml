@@ -2956,3 +2956,17 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: Veglat
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Përmbajtja
+            content:
+              display_name: Përmbajtja
+            lesson_group:
+              display_name: Përmbajtja
+            lessonGroup-2:
+              display_name: Përmbajtja

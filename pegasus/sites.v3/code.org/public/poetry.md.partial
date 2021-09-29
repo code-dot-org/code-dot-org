@@ -15,11 +15,11 @@ Some description goes here.
 
 ## Featured Student Creations
 
-{{ featured_project, title: "Coin color", author: "M", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "Real world simulation", author: "D", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "ROBOT", author: "B", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "EVADE", author: "W", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "Protect the castle", author: "S", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "Remix: my project", author: "K", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "ping pong", author: "V", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "First agme", author: "C", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project_html, title: "Coin color", author: "M", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project_html, title: "Real world simulation", author: "D", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project_html, title: "ROBOT", author: "B", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project_html, title: "EVADE", author: "W", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project_html, title: "Protect the castle", author: "S", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project_html, title: "Remix: my project", author: "K", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project_html, title: "ping pong", author: "V", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project_html, title: "First agme", author: "C", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}

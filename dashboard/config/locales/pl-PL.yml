@@ -239,6 +239,10 @@ pl:
     email_preference_yes: Tak
     email_preference_no: Nie
     email_preference_required: Musisz podać preferencje adresu e-mail.
+    share_teacher_email_reg_partner_question: Czy chcesz, abyśmy udostępnili Twoje
+      dane kontaktowe [regionalnemu partnerowi Code.org](%{cdo_regional_partner_desc})
+      w Twoim stanie, aby mogli powiadamiać Cię o lokalnym rozwoju zawodowym, zasobach
+      i wydarzeniach?
     share_teacher_email_reg_partner_preference_yes: Tak
     share_teacher_email_reg_partner_preference_no: Nie
     share_teacher_email_reg_partner_preference_required: Musisz podać preferencje

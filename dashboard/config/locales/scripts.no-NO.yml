@@ -3781,3 +3781,17 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Moduler
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Innhold
+            content:
+              display_name: Innhold
+            lesson_group:
+              display_name: Innhold
+            lessonGroup-2:
+              display_name: Innhold

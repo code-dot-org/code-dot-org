@@ -875,7 +875,15 @@
         "CourseE_Project_SpriteLab_examples_2021": "Danse de monstre (SpriteLab)",
         "courseF_apps_collector": "Jeu Collector",
         "courseF_apps_madlib": "Histoire de l'espace vide ",
-        "international_outbreak_freeplay": "Partager un message"
+        "international_outbreak_freeplay": "Partager un message",
+        "helloworld_animals_costumes": "Costumes",
+        "helloworld_animals_location": "Événements temporels ",
+        "helloworld_emoji_costumes": "Costumes",
+        "helloworld_emoji_location": "Événements temporels ",
+        "helloworld_food_costumes": "Costumes",
+        "helloworld_food_location": "Événements temporels ",
+        "helloworld_retro_costumes": "Costumes",
+        "helloworld_retro_location": "Événements temporels "
       }
     }
   }

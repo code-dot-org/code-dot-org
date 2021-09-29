@@ -1067,6 +1067,13 @@ ms:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION} 123_321
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': kanan
+            '90': bawah
+            '180': kiri
+            '270': atas
       gamelab_mirrorSprite:
         text: "{SPRITE} muka {DIRECTION}"
         options:
@@ -1089,6 +1096,9 @@ ms:
         text: PlaySound {SOUND}
       gamelab_playSoundOptions:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1460,9 +1470,9 @@ ms:
         text: raksasa mula memakai pelitup muka
       Outbreak_stopMoving:
         text: raksasa berhenti bergerak
-      PoemBot_playSound:
+      Poetry_playSound:
         text: PlaySound {SOUND}
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Warna
@@ -1472,8 +1482,9 @@ ms:
             '"ripples"': Riak
           PALETTE:
             '"rainbow"': Pelangi
-      PoemBot_setForegroundEffect:
-        text: tetapkan kesan {EFFECT} latar depan
+      Poetry_setBackgroundImageAs:
+        text: tetapkan latar belakang ke {IMG}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Hujan
@@ -1481,6 +1492,20 @@ ms:
             '"hearts"': Hati Berwarna-warni
             '"confetti"': Konfeti
             '"starburst"': Pecahan Cahaya
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: bergerak ke hadapan
       RyanLab_turnLeft:

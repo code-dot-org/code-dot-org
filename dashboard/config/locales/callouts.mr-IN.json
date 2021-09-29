@@ -398,6 +398,45 @@
         },
         "CourseF_outbreak7": {
           "costumes_callout": "नवीन पोशाख तयार करण्यासाठी क्लिक करा"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "नवीन ब्लॉक!",
+          "hello_world_new_block": "नवीन ब्लॉक!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "नवीन ब्लॉक!",
+          "hello_world_new_block": "नवीन ब्लॉक!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "नवीन ब्लॉक!",
+          "hello_world_new_block": "नवीन ब्लॉक!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "नवीन ब्लॉक!"
         }
       }
     }

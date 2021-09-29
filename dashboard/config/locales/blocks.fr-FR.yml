@@ -989,7 +989,7 @@ fr:
       gamelab_costumeImage:
         text: "{COSTUME}"
       gamelab_createNewSprite:
-        text: crée un nouveau lutin appellé {NAME} avec le costume {COSTUME}  à {LOCATION}
+        text: crée un nouveau sprite appellé {NAME} avec le costume {COSTUME}  à {LOCATION}
       gamelab_destroy:
         text: supprimer {THIS}
       gamelab_draggable:
@@ -1115,6 +1115,15 @@ fr:
             '"rain"': pluie
       gamelab_makeNewSpriteAnon:
         text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
+      gamelab_makeNumSprites:
+        text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': vers la droite
+            '90': vers le bas
+            '180': vers la gauche
+            '270': vers le haut
       gamelab_mirrorSprite:
         text: "{SPRITE} orienté vers {DIRECTION}"
         options:
@@ -1148,6 +1157,7 @@ fr:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_digital/jump_7.mp3'": sauter
       gamelab_pointInDirection:
         text: diriger {SPRITE} vers {DIRECTION}
         options:
@@ -1612,10 +1622,15 @@ fr:
         text: dispose les monstres au hasard
       Outbreak_stopMoving:
         text: les monstres ne bougent plus
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': pluie
+      Poetry_makeNumSprites:
+        text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
+      Poetry_playSound:
         text: jouer le son {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: définir l’effet de fond {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Couleurs
@@ -1625,8 +1640,9 @@ fr:
             '"ripples"': Ondulations
           PALETTE:
             '"rainbow"': Arc-en-ciel
-      PoemBot_setForegroundEffect:
-        text: définir l’effet de premier plan {EFFECT}
+      Poetry_setBackgroundImageAs:
+        text: établir {IMG} comme arrière-plan
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Pluie
@@ -1634,14 +1650,28 @@ fr:
             '"hearts"': Cœurs colorés
             '"confetti"': Confettis
             '"starburst"': Starburst
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             swimming_left_and_right: natation
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             swimming_left_and_right: natation
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: avancer
       RyanLab_turnLeft:

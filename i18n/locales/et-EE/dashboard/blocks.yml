@@ -857,6 +857,13 @@ et:
         options:
           EFFECT:
             '"rain"': vihm
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': paremale
+            '90': alla
+            '180': vasakule
+            '270': üles
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -870,6 +877,7 @@ et:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": purustama
+            "'sound://category_digital/jump_7.mp3'": hüppa
       gamelab_randColor:
         text: juhuslik värv
       gamelab_randomColor:
@@ -1139,17 +1147,17 @@ et:
             '"down"': nool alla
             '"left"': nool vasakule
             '"right"': nool paremale
-      PoemBot_setBackgroundEffect:
-        text: |-
-          määra taustaefekt
-          {EFFECT} {PALETTE}
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': vihm
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Värvid
           PALETTE:
             '"rainbow"': Vikerkaar
-      PoemBot_setForegroundEffect:
-        text: määra esiplaani efekt {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Vihm

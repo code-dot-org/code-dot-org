@@ -1150,6 +1150,13 @@ es-MX:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       gamelab_makeNumSprites:
         text: hacer {NUM} nuevos sprites de {ANIMATION_NAME}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': derecha
+            '90': abajo
+            '180': izquierda
+            '270': arriba
       gamelab_mirrorSprite:
         text: "{SPRITE} hacia {DIRECTION}"
         options:
@@ -1186,6 +1193,8 @@ es-MX:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": botón
             "'sound://category_collect/clicky_crunch.mp3'": aplastar
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": arpa
+            "'sound://category_digital/jump_7.mp3'": salta
       gamelab_pointInDirection:
         text: apuntar {SPRITE} {DIRECTION}
         options:
@@ -1746,10 +1755,16 @@ es-MX:
         text: Configurar Monster Town con{COUNT}monstruos
       Outbreak_stopMoving:
         text: los monstruos dejan de moverse
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': ráfaga
+            '"rain"': lluvia
+      Poetry_makeNumSprites:
+        text: hacer {NUM} nuevos sprites de {ANIMATION_NAME}
+      Poetry_playSound:
         text: reproducirSonido {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: establecer efecto de fondo {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Colores
@@ -1759,8 +1774,9 @@ es-MX:
             '"ripples"': Ondas
           PALETTE:
             '"rainbow"': Arcoíris
-      PoemBot_setForegroundEffect:
-        text: establecer efecto de primer plano {EFFECT}
+      Poetry_setBackgroundImageAs:
+        text: establecer fondo a {IMG}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Lluvia
@@ -1768,7 +1784,7 @@ es-MX:
             '"hearts"': Corazones coloridos
             '"confetti"': Confeti
             '"starburst"': Explosión de estrellas
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: revolotear
@@ -1780,7 +1796,7 @@ es-MX:
             swimming_left_and_right: natación
             wandering: deambulando
             wobbling: tambalearse
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: revolotear
@@ -1792,10 +1808,24 @@ es-MX:
             swimming_left_and_right: natación
             wandering: deambulando
             wobbling: tambalearse
-      PoemBot_stringValue:
-        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
+        text: cuando {VAR} respondió
       RyanLab_moveForward:
         text: avanzar
       RyanLab_turnLeft:

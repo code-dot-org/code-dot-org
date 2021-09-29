@@ -1644,6 +1644,27 @@
           "recovering": "đang hồi phục",
           "moving left and right": "di chuyển sang trái và sang phải",
           "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "helloworld_animals_behaviors": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "helloworld_animals_events": {
+          "moving forward": "tiến về phía trước"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "helloworld_emoji_events": {
+          "moving forward": "tiến về phía trước"
+        },
+        "helloworld_food_events": {
+          "moving forward": "tiến về phía trước"
+        },
+        "helloworld_retro_behaviors": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "helloworld_retro_events": {
+          "moving forward": "tiến về phía trước"
         }
       }
     }
