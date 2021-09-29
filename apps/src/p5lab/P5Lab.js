@@ -508,28 +508,6 @@ export default class P5Lab {
       validationEnabled: !!config.level.validationEnabled
     });
 
-    // Push project-sourced animation metadata into store. Always use the
-    // animations specified by the level definition for embed and contained
-    // levels.
-    const useConfig =
-      config.initialAnimationList &&
-      !config.embed &&
-      !config.hasContainedLevels;
-    let initialAnimationList = useConfig
-      ? config.initialAnimationList
-      : this.startAnimations;
-    initialAnimationList = this.loadAnyMissingDefaultAnimations(
-      initialAnimationList
-    );
-
-    getStore().dispatch(
-      setInitialAnimationList(
-        initialAnimationList,
-        this.isBlockly /* shouldRunV3Migration */,
-        this.isBlockly
-      )
-    );
-
     this.generatedProperties = {
       ...config.initialGeneratedProperties
     };
