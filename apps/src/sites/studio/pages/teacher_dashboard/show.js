@@ -14,9 +14,10 @@ import teacherSections, {
   setRosterProvider,
   setValidAssignments,
   setValidGrades,
-  setTextToSpeechScriptIds,
-  setPreReaderScriptIds,
-  setStageExtrasScriptIds
+  setTextToSpeechUnitIds,
+  setPreReaderUnitIds,
+  setLessonExtrasUnitIds,
+  setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
@@ -26,14 +27,14 @@ import sectionProgress, {
   setShowSectionProgressDetails
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import currentUser, {
   setCurrentUserId,
   setCurrentUserName,
   setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
-import {setValidScripts} from '../../../../redux/scriptSelectionRedux';
+import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -48,9 +49,9 @@ const {
   currentUserId,
   hasSeenStandardsReportInfo,
   localeCode,
-  textToSpeechScriptIds,
-  preReaderScriptIds,
-  lessonExtrasScriptIds,
+  textToSpeechUnitIds,
+  preReaderUnitIds,
+  lessonExtrasUnitIds,
   showSectionProgressDetails
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
@@ -61,7 +62,7 @@ $(document).ready(function() {
     sectionData,
     manageStudents,
     sectionProgress,
-    scriptSelection,
+    unitSelection,
     stats,
     textResponses,
     sectionAssessments,
@@ -84,10 +85,13 @@ $(document).ready(function() {
   store.dispatch(setValidAssignments(validCourses, validScripts));
   store.dispatch(setValidGrades(validGrades));
   store.dispatch(setLocaleCode(localeCode));
-  store.dispatch(setStageExtrasScriptIds(lessonExtrasScriptIds));
-  store.dispatch(setTextToSpeechScriptIds(textToSpeechScriptIds));
-  store.dispatch(setPreReaderScriptIds(preReaderScriptIds));
+  store.dispatch(setLessonExtrasUnitIds(lessonExtrasUnitIds));
+  store.dispatch(setTextToSpeechUnitIds(textToSpeechUnitIds));
+  store.dispatch(setPreReaderUnitIds(preReaderUnitIds));
   store.dispatch(setShowSectionProgressDetails(showSectionProgressDetails));
+
+  // DCDO Flag - show/hide Lock Section field
+  store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
 
   if (!section.sharing_disabled && section.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));

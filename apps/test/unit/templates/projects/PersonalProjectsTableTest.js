@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
 import {
   stubRedux,
@@ -12,8 +12,11 @@ import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDia
 import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
+import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('PersonalProjectsTable', () => {
+  allowConsoleWarnings();
+
   beforeEach(() => {
     stubRedux();
     registerReducers({publishDialog, deleteDialog});

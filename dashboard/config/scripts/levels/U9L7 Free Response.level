@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "long_instructions": "Based on what you learned about the Twitter cropping algorithm, what are other examples of tasks that you think should not be accomplished with algorithms? Explain your answer.",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "title": "Free Response"
+  },
+  "game_id": 52,
+  "published": true,
+  "created_at": "2021-05-25T16:22:01.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "audit_log": "[{\"changed_at\":\"2021-05-25 16:24:37 +0000\",\"changed\":[\"published\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-05-25 16:25:22 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-05-25 16:26:19 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</FreeResponse>

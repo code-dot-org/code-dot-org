@@ -31,7 +31,7 @@ For more instructions on encouraging employees and connecting your employees wit
 
 ## 1. Promote your Hour of Code
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
+- Incentive os engenheiros de software da sua empresa a visitar uma escola local para ajudar a conduzir uma Hora de Código e para inspirar os alunos a estudar ciência da computação. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
@@ -49,12 +49,12 @@ Um computador com ligação à Internet assegura a melhor experiência da Hora d
 **Plan Ahead!** Do the following before your event starts:
 
 - Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Eles irão perceber que a ciência computacional é uma atividade social e colaborativa.
+- Se a atividade escolhida funcionar melhor com som, forneça auriculares ou peça aos participantes que tragam os seus.
+- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quando os participantes trabalham em equipa, ajudam-se uns aos outros e dependem menos do organizador. Eles irão perceber que a ciência computacional é uma atividade social e colaborativa.
 - **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
 
 ## 5.  Start your Hour of Code off with an inspiring video
-Comece seu evento da Hora de Código inspirando os participantes e discutindo o impacto da ciência computacional em cada situação das nossas vidas. Share more about what inspired you to pursue computer science and your role at your company.
+Comece seu evento da Hora de Código inspirando os participantes e discutindo o impacto da ciência computacional em cada situação das nossas vidas. Partilhe mais informações sobre o que o inspirou a seguir o caminho da ciência computacional e sobre o seu papel na sua empresa.
 
 **Show an inspirational video:**
 
@@ -63,21 +63,21 @@ Comece seu evento da Hora de Código inspirando os participantes e discutindo o 
 - [O presidente Obama apela a que todos os alunos aprendam ciência computacional](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity to students:**
+**Ideias para apresentar a sua atividade da Hora de Código a estudantes:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- Explique as formas como a tecnologia afeta as nossas vidas, usando exemplos que sensibilizem tanto rapazes como raparigas - fale sobre a tecnologia que salva vidas, ajuda e liga pessoas.
+- Se trabalha numa empresa de tecnologia, demonstre produtos divertidos e inovadores que a sua empresa esteja a desenvolver.
+- Se não trabalha numa empresa de tecnologia, aborde as formas como a sua empresa usa a tecnologia para resolver problemas e atingir objetivos.
+- Convide engenheiros de software da sua empresa para falar sobre o que os levou a escolher o estudo da ciência computacional e sobre os projetos em que estejam a trabalhar.
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Code!
 **Direcione os participantes para a atividade**
 
 - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+- Para estudantes mais novos, carregue a página da atividade antecipadamente ou adicione-a aos favoritos.
 
-**When participants come across difficulties it's okay to respond:**
+**Quando os participantes tiverem dificuldades, é aceitável responder:**
 
 - “I don’t know. Let’s figure this out together.”
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
@@ -85,13 +85,13 @@ Comece seu evento da Hora de Código inspirando os participantes e discutindo o 
 **O que fazer se alguém terminar mais cedo?**
 
 - They can try another Hour of Code activity at hourofcode.com/learn.
-- Or, ask them to help a friend who are having trouble with the activity.
+- Ou peça que ajude um amigo que tenha dificuldades na atividade.
 
 ## 7) Celebrar
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- [Encomende t-shirts personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para os seus colaboradores.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 {{ signup_button }}

@@ -1,4 +1,5 @@
 login_required true
+published_state 'beta'
 
 lesson 'The Internet', display_name: 'The Internet Is for Everyone', has_lesson_plan: true
 level 'U2L1 Student Lesson Introduction'

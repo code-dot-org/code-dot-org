@@ -1,0 +1,6 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#defaultPoem"}}
+  Default Poem
+
+#defaultPoem.in.collapse
+  = f.label :default_poem, 'Default Poem'
+  = f.select :default_poem, options_for_select(@level.class.hoc_poems, @level.default_poem)

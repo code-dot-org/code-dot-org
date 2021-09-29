@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Lesson 14', display_name: 'Lesson 14', has_lesson_plan: false
 level 'Pixelation - Video - Lesson 14 - B and W'
 level 'Pixelation - Lesson 14 - Make the Letter A'

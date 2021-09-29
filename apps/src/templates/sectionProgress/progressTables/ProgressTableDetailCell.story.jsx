@@ -139,19 +139,6 @@ export default storybook => {
               studentProgress={studentProgress}
             />
           )
-      },
-      {
-        name: 'level with sublevels',
-        description: 'Should show small dots for sublevels',
-        story: () =>
-          wrapped(
-            <ProgressTableDetailCell
-              studentId={1}
-              sectionId={1}
-              levels={[levelWithSublevels]}
-              studentProgress={studentProgress}
-            />
-          )
       }
     ]);
 };

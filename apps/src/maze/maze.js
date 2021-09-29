@@ -6,7 +6,6 @@ const timeoutList = require('../lib/util/timeoutList');
 import AppView from '../templates/AppView';
 const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter')
   .default;
-const codegen = require('../lib/tools/jsinterpreter/codegen');
 const dom = require('../dom');
 const utils = require('../utils');
 import {TestResults, ResultType} from '../constants';
@@ -146,7 +145,7 @@ module.exports = class Maze {
         Blockly.HSV_SATURATION = 0.6;
 
         Blockly.SNAP_RADIUS *= this.scale.snapRadius;
-        Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopTrap();
+        Blockly.setInfiniteLoopTrap();
       }
 
       const svg = document.getElementById('svgMaze');
@@ -181,11 +180,17 @@ module.exports = class Maze {
       });
     };
 
+    // Note: Setting alwaysHideRunButton in our config is necessary because
+    // StudioApp.js will manipulate the run/reset buttons, displaying the run
+    // button when "Reset" is clicked. We do not want this behavior on stepOnly levels.
+    const alwaysHideRunButton = !!(
+      this.controller.level.stepOnly && !this.controller.level.edit_blocks
+    );
+    config.alwaysHideRunButton = alwaysHideRunButton;
+
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
-      hideRunButton: !!(
-        this.controller.level.stepOnly && !this.controller.level.edit_blocks
-      )
+      hideRunButton: alwaysHideRunButton
     });
 
     var visualizationColumn = (

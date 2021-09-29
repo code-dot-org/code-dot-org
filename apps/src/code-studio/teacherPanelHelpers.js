@@ -1,5 +1,5 @@
 import queryString from 'query-string';
-import {setSectionLockStatus} from './stageLockRedux';
+import {setSectionLockStatus} from './lessonLockRedux';
 import {
   setSections,
   selectSection
@@ -11,7 +11,7 @@ import {reload} from '@cdo/apps/utils';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {setStudentsForCurrentSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
-import TeacherPanel from './components/progress/TeacherPanel';
+import TeacherPanel from './components/progress/teacherPanel/TeacherPanel';
 
 /**
  * Render our teacher panel that shows up on our course overview page.

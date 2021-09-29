@@ -9,6 +9,15 @@ wrong 'Packets that arrive out of order will be sent back to the server.'
 right 'The packets may arrive out of order'
 
 teacher_markdown <<MARKDOWN
+**Explanation:** Because each of the packets may take different routes to Emilee’s computer and these routes may be slower or faster compared with the others, the packets may arrive in a different order from how they were sent.
+
+[Lesson 5 - Packets](https://studio.code.org/s/csp2-2021/lessons/5) gave students a chance to experience this themselves with the Internet Simulator.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CSN-1.C.3: Packets may arrive at the destination in order, out-of-order, or not at all.
+
+:::
 
 MARKDOWN
 

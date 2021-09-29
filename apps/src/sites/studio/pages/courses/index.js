@@ -35,6 +35,7 @@ function showCourses() {
         isSignedOut={signedOut}
         modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
         specialAnnouncement={specialAnnouncement}
+        showAiCard={coursesData.showAiCard}
       />
     </Provider>,
     document.getElementById('courses-container')

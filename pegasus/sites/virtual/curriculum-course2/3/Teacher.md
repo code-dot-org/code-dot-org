@@ -66,7 +66,7 @@ Some students may struggle with turning their bird in the correct direction, par
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Maze: Sequence](http://learn.code.org/s/course2/stage/3/puzzle/1)
+### <a name="Activity"></a> [Maze: Sequence](http://learn.code.org/s/course2/lessons/3/levels/1)
 
 As your students work through the puzzles, observe how they plan the path for the bird. Identify different strategies used and ask students to share with the whole class. This helps students to recognize that there are many ways to approach these problems.
 You may want to go through a few puzzles on the projector. While doing this you can ask one student to trace the path on the screen while another writes the directions on a whiteboard.

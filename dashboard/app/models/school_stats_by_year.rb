@@ -51,7 +51,7 @@ class SchoolStatsByYear < ApplicationRecord
   # @param filename [String] The CSV file name.
   # @param options [Hash] Optional, the CSV file parsing options.
   # @param dry_run [Boolean] Optional, roll back any db transactions after processing.
-  def self.merge_from_csv(filename, options = {col_sep: "\t", headers: true, quote_char: "\x00"}, dry_run = false)
+  def self.merge_from_csv(filename, options = {col_sep: "\t", headers: true, quote_char: "\x00"}, dry_run: false)
     new_schools = 0
     updated_schools = 0
     unchanged_schools = 0

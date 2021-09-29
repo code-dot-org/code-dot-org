@@ -68,7 +68,7 @@ Students will have the opportunity to share their final product with a link. Thi
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Play Lab: Variables](http://learn.code.org/s/course4/stage/7/puzzle/1)
+### <a name="Activity"></a> [Play Lab: Variables](http://learn.code.org/s/course4/lessons/7/levels/1)
 
 This lesson will guide the students from a place where they are playing a game programmed using numbers traditionally, to a place where they substitute variables for numerical values so that their program is easier to read. 
 

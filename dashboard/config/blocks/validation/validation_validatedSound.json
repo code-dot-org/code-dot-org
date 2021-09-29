@@ -1,0 +1,13 @@
+{
+  "category": "Validation",
+  "config": {
+    "func": "validatedSound",
+    "blockText": "PLAYSound {SOUND}",
+    "args": [
+      {
+        "name": "SOUND",
+        "customInput": "soundPicker"
+      }
+    ]
+  }
+}

@@ -40,4 +40,38 @@ class ParentLevelsChildLevelTest < ActiveSupport::TestCase
       )
     end
   end
+
+  test 'scopes filter by kind' do
+    parent = create :level
+
+    contained = create :level
+    ParentLevelsChildLevel.create(
+      parent_level: parent,
+      child_level: contained,
+      kind: ParentLevelsChildLevel::CONTAINED
+    )
+
+    project_template = create :level
+    ParentLevelsChildLevel.create(
+      parent_level: parent,
+      child_level: project_template,
+      kind: ParentLevelsChildLevel::PROJECT_TEMPLATE
+    )
+
+    sublevel = create :level
+    ParentLevelsChildLevel.create(
+      parent_level: parent,
+      child_level: sublevel,
+      kind: ParentLevelsChildLevel::SUBLEVEL
+    )
+
+    assert_equal [contained, project_template, sublevel],
+      ParentLevelsChildLevel.where(parent_level: parent).map(&:child_level)
+    assert_equal [contained],
+      ParentLevelsChildLevel.where(parent_level: parent).contained.map(&:child_level)
+    assert_equal [project_template],
+      ParentLevelsChildLevel.where(parent_level: parent).project_template.map(&:child_level)
+    assert_equal [sublevel],
+      ParentLevelsChildLevel.where(parent_level: parent).sublevel.map(&:child_level)
+  end
 end

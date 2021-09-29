@@ -7,31 +7,36 @@ import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
 import $ from 'jquery';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 import {
   setDynamicInstructionsDefaults,
-  setDynamicInstructionsKey
+  setDynamicInstructionsKey,
+  setDynamicInstructionsOverlayDismissCallback
 } from '../redux/instructions';
 
 /**
- * On small mobile devices, when in portrait orientation, we show an overlay
- * image telling the user to rotate their device to landscape mode.  Because
- * the ailab app is able to render at a minimum width of 480px, we set this
- * width to be somewhat larger.  We will use this width to set the viewport
- * on the mobile device, and correspondingly to scale up the overlay image to
- * properly fit on the mobile device for that viewport.
+ * This is used to set the viewport width in portrait mode, and will become
+ * the viewport height in landscape mode.  On a 1024x768 screen in landscape
+ * it will set the same viewport scale as Applab (which does it by requesting
+ * 1200 pixels' width), which is roughly 0.85, since 1200 / 1024 * 768 = 900.
  */
-const MOBILE_PORTRAIT_WIDTH = 600;
+const MOBILE_PORTRAIT_WIDTH = 900;
 
 function getInstructionsDefaults() {
   var instructions = {
     selectDataset: 'Select the data set you would like to use.',
+    uploadedDataset: 'You just uploaded a dataset.',
+    selectedDataset: 'You just selected a dataset.',
     dataDisplayLabel: 'Choose one column to predict.',
     dataDisplayFeatures:
       'Choose one or more columns as inputs to help make the prediction.',
-    selectTrainer: 'Set up the training.',
+    selectedFeatureNumerical: 'You just selected a numerical feature.',
+    selectedFeatureCategorical: 'You just selected a categorical feature.',
     trainModel: 'Your model is being trained.',
+    generateResults: 'Your model is being tested.',
     results: 'Review the results.',
+    resultsDetails: 'Details of results are being shown.',
     saveModel: 'Save the trained model for use in App Lab.',
     modelSummary:
       "You've successfully trained and saved your model. Review your model \
@@ -149,8 +154,8 @@ Ailab.prototype.onContinue = function() {
   });
 };
 
-Ailab.prototype.setInstructionsKey = function(instructionsKey) {
-  getStore().dispatch(setDynamicInstructionsKey(instructionsKey));
+Ailab.prototype.setInstructionsKey = function(instructionsKey, options) {
+  getStore().dispatch(setDynamicInstructionsKey(instructionsKey, options));
 };
 
 Ailab.prototype.initMLActivities = function() {
@@ -177,9 +182,24 @@ Ailab.prototype.initMLActivities = function() {
     });
   };
 
+  const logMetric = (eventName, details) => {
+    firehoseClient.putRecord(
+      {
+        study: 'ai-ml',
+        study_group: 'ai-lab',
+        event: eventName,
+        data_json: JSON.stringify(details)
+      },
+      {includeUserId: true}
+    );
+  };
+
   setAssetPath('/blockly/media/skins/ailab/');
 
-  const {initAll} = require('@code-dot-org/ml-playground');
+  const {
+    initAll,
+    instructionsDismissed
+  } = require('@code-dot-org/ml-playground');
 
   // Set initial state for UI elements.
   initAll({
@@ -187,8 +207,15 @@ Ailab.prototype.initMLActivities = function() {
     onContinue,
     setInstructionsKey,
     i18n: ailabMsg,
-    saveTrainedModel
+    saveTrainedModel,
+    logMetric
   });
+
+  if (instructionsDismissed) {
+    getStore().dispatch(
+      setDynamicInstructionsOverlayDismissCallback(instructionsDismissed)
+    );
+  }
 };
 
 export default Ailab;

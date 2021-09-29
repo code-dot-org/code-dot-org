@@ -1,0 +1,55 @@
+{
+  "name": "csa-pilot-facilitator",
+  "script_names": [
+    "csa1-pilot-facilitator",
+    "csa2-pilot-facilitator",
+    "csa3-pilot-facilitator",
+    "csa4-pilot-facilitator",
+    "csa5-pilot-facilitator"
+  ],
+  "published_state": "pilot",
+  "properties": {
+    "family_name": "csa-pilot-facilitator",
+    "version_year": "2021",
+    "pilot_experiment": "csa-pilot-facilitators",
+    "has_numbered_units": true
+  },
+  "resources": [
+    {
+      "name": "All Resources",
+      "url": "/courses/csa-pilot-facilitator/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/csa-pilot-facilitator/standards",
+      "key": "all_standards_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_3"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csa-pilot-facilitator/vocab",
+      "key": "all_vocabulary_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3"
+      }
+    }
+  ],
+  "student_resources": [
+
+  ]
+}

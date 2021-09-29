@@ -21,9 +21,10 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import Announcements from '../../code-studio/components/progress/Announcements';
-import LessonStandards, {ExpandMode} from './LessonStandards';
+import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -62,9 +63,14 @@ class LessonOverview extends Component {
   };
 
   compilePdfDropdownOptions = () => {
-    const {lessonPlanPdfUrl, scriptResourcesPdfUrl} = this.props.lesson;
+    const {lessonPlanPdfUrl, scriptResourcesPdfUrl, unit} = this.props.lesson;
+
+    const showOverviewPDFOption =
+      unit.publishedState !== PublishedState.pilot &&
+      unit.publishedState !== PublishedState.in_development;
+
     const options = [];
-    if (lessonPlanPdfUrl) {
+    if (lessonPlanPdfUrl && showOverviewPDFOption) {
       options.push({
         key: 'singleLessonPlan',
         name: i18n.printLessonPlan(),
@@ -198,10 +204,7 @@ class LessonOverview extends Component {
                     />
                   )}
                 </div>
-                <LessonStandards
-                  standards={lesson.standards}
-                  expandMode={ExpandMode.FIRST}
-                />
+                <LessonStandards standards={lesson.standards} />
               </div>
             )}
             {lesson.opportunityStandards.length > 0 && (

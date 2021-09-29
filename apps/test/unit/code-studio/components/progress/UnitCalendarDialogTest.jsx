@@ -15,6 +15,7 @@ describe('UnitCalendarDialog', () => {
         handleClose={() => console.log('hello')}
         lessons={testLessons}
         weeklyInstructionalMinutes={90}
+        scriptId={123}
       />
     );
     expect(
@@ -35,9 +36,10 @@ describe('UnitCalendarDialog', () => {
         handleClose={() => console.log('hello')}
         lessons={testLessons}
         weeklyInstructionalMinutes={45}
+        scriptId={123}
       />
     );
-    expect(wrapper.find('option').length).to.equal(5);
+    expect(wrapper.find('option').length).to.equal(6);
     expect(
       wrapper.containsMatchingElement(
         <option value={45} key={`minutes-45`}>
@@ -63,9 +65,10 @@ describe('UnitCalendarDialog', () => {
         handleClose={() => console.log('hello')}
         lessons={testLessons}
         weeklyInstructionalMinutes={20}
+        scriptId={123}
       />
     );
-    expect(wrapper.find('option').length).to.equal(6);
+    expect(wrapper.find('option').length).to.equal(7);
     expect(
       wrapper.containsMatchingElement(
         <option value={20} key={`minutes-20`}>
@@ -91,6 +94,7 @@ describe('UnitCalendarDialog', () => {
         handleClose={() => console.log('hello')}
         lessons={testLessons}
         weeklyInstructionalMinutes={45}
+        scriptId={123}
       />
     );
     expect(wrapper.state('instructionalMinutes')).to.equal(45);

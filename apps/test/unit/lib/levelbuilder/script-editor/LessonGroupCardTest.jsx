@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
+import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/lib/levelbuilder/unit-editor/LessonGroupCard';
 import sinon from 'sinon';
 
 export const nonUserFacingGroup = {
@@ -145,5 +145,11 @@ describe('LessonGroupCard', () => {
 
     expect(addLesson).to.have.been.calledOnce;
     window.prompt.restore();
+  });
+
+  it('displays clone lesson dialog when cloning a lesson', () => {
+    const wrapper = shallow(<LessonGroupCard {...defaultProps} />);
+    wrapper.instance().handleCloneLesson(0);
+    expect(wrapper.find('CloneLessonDialog')).to.have.lengthOf(1);
   });
 });

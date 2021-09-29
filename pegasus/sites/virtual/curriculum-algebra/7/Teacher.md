@@ -58,7 +58,7 @@ The blocks menu displays a few new items (Boolean, Cond, and Functions) which wi
 ## Activity: The Big Game - Variables
 ### <a name="Activity1"></a> 3) Online Puzzles
 
-In this stage you'll define and modify variables to changes how some games function. Head to [CS in Algebra stage 7](http://studio.code.org/s/algebra/stage/7/puzzle/1) in Code Studio to get started programming.
+In this stage you'll define and modify variables to changes how some games function. Head to [CS in Algebra stage 7](http://studio.code.org/s/algebra/lessons/7/levels/1) in Code Studio to get started programming.
 
 [/together]
 

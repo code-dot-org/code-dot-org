@@ -69,6 +69,9 @@ module ScriptConstants
       EXPRESS_2021_NAME = 'express-2021'.freeze,
       PRE_READER_EXPRESS_2021_NAME = 'pre-express-2021'.freeze,
     ],
+    aiml_2021: [
+      AIML_2021_NAME = 'aiml-2021'.freeze,
+    ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
@@ -136,6 +139,7 @@ module ScriptConstants
       CSD4_2021_NAME = 'csd4-2021'.freeze,
       CSD5_2021_NAME = 'csd5-2021'.freeze,
       CSD6_2021_NAME = 'csd6-2021'.freeze,
+      CSD7_2021_NAME = 'csd7-2021'.freeze,
     ],
     csd_2020: [
       CSD1_2020_NAME = 'csd1-2020'.freeze,
@@ -257,13 +261,17 @@ module ScriptConstants
     ],
   }.freeze
 
-  ADDITIONAL_I18N_SCRIPTS = [
+  ADDITIONAL_I18N_UNITS = [
     APPLAB_1HOUR = 'applab-1hour'.freeze,
     APPLAB_2HOUR = 'applab-2hour'.freeze,
     CSD_POST_SURVEY = 'csd-post-survey'.freeze,
     DEEPDIVE_DEBUGGING = 'deepdive-debugging'.freeze,
     FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
     GAMELAB = 'gamelab'.freeze,
+    HELLO_WORLD_FOOD = 'hello-world-food'.freeze,
+    HELLO_WORLD_ANIMALS = 'hello-world-animals'.freeze,
+    HELLO_WORLD_EMOJI = 'hello-world-emoji'.freeze,
+    HELLO_WORLD_RETRO = 'hello-world-retro'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
@@ -271,7 +279,8 @@ module ScriptConstants
     PIXELATION = 'pixelation'.freeze,
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
-    K5_ONLINEPD = 'K5-OnlinePD'.freeze
+    K5_ONLINEPD = 'K5-OnlinePD'.freeze,
+    KODEA_PD_2021 = 'kodea-pd-2021'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -311,16 +320,23 @@ module ScriptConstants
     CSD5 = "csd5".freeze,
     CSD6 = "csd6".freeze,
 
+    # AIML
+    AIML = "aiml".freeze,
+
+    # Testing
+    #
+    # note that this constant is hard to rename from 'script' to 'unit' because
+    # doing so causes the course version to change, causing seeding to fail.
     TEST = 'ui-test-versioned-script'.freeze
   ].freeze
 
-  def self.script_in_category?(category, script)
+  def self.unit_in_category?(category, script)
     return CATEGORIES[category].include? script
   end
 
   def self.script_in_any_category?(script)
     CATEGORIES.keys.any? do |category|
-      script_in_category?(category, script)
+      unit_in_category?(category, script)
     end
   end
 
@@ -383,7 +399,7 @@ module ScriptConstants
 
   def self.has_congrats_page?(script)
     script == ACCELERATED_NAME ||
-      ScriptConstants.script_in_category?(:csf_international, script) ||
+      ScriptConstants.unit_in_category?(:csf_international, script) ||
       CSF_COURSE_PATTERNS.map {|r| r =~ script}.any?
   end
 
@@ -428,17 +444,18 @@ module ScriptConstants
   end
 
   def self.i18n?(script)
-    ScriptConstants.script_in_category?(:csf_international, script) ||
-      ScriptConstants.script_in_category?(:csf, script) ||
-      ScriptConstants.script_in_category?(:csf_2018, script) ||
-      ScriptConstants.script_in_category?(:csf_2019, script) ||
-      ScriptConstants.script_in_category?(:csf_2020, script) ||
-      ScriptConstants.script_in_category?(:csd, script) ||
-      ScriptConstants.script_in_category?(:csd_2018, script) ||
-      ScriptConstants.script_in_category?(:csd_2019, script) ||
-      ScriptConstants.script_in_category?(:twenty_hour, script) ||
-      ScriptConstants.script_in_category?(:hoc, script) ||
+    ScriptConstants.unit_in_category?(:csf_international, script) ||
+      ScriptConstants.unit_in_category?(:csf, script) ||
+      ScriptConstants.unit_in_category?(:csf_2018, script) ||
+      ScriptConstants.unit_in_category?(:csf_2019, script) ||
+      ScriptConstants.unit_in_category?(:csf_2020, script) ||
+      ScriptConstants.unit_in_category?(:csf_2021, script) ||
+      ScriptConstants.unit_in_category?(:csd, script) ||
+      ScriptConstants.unit_in_category?(:csd_2018, script) ||
+      ScriptConstants.unit_in_category?(:csd_2019, script) ||
+      ScriptConstants.unit_in_category?(:twenty_hour, script) ||
+      ScriptConstants.unit_in_category?(:hoc, script) ||
       JIGSAW_NAME == script ||
-      ADDITIONAL_I18N_SCRIPTS.include?(script)
+      ADDITIONAL_I18N_UNITS.include?(script)
   end
 end

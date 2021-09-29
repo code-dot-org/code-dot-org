@@ -11,6 +11,7 @@
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
 import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
 
-let locale = safeLoadLocale('gamelab_locale');
-locale = localeWithI18nStringTracker(locale, 'gamelab_locale');
-module.exports = locale;
+export default localeWithI18nStringTracker(
+  safeLoadLocale('gamelab_locale'),
+  'gamelab'
+);

@@ -23,7 +23,7 @@ markdown <<MARKDOWN
 * Human Machine Language - Activity Guide ([PDF](https://docs.google.com/document/d/1OGN091PuMtj8mrRLpfhV1oGJxz9dHDaqwJ-PGyenxbU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OGN091PuMtj8mrRLpfhV1oGJxz9dHDaqwJ-PGyenxbU/export?format=doc))
 * Minimum Card Algorithm - Activity Guide ([PDF](https://docs.google.com/document/d/1FLEhLLb0j5zIC3s2R3qpq8VTHsm4QxRQ-DAKJXHUe2A/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1FLEhLLb0j5zIC3s2R3qpq8VTHsm4QxRQ-DAKJXHUe2A/export?format=doc))
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

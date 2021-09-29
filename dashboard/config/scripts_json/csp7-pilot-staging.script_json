@@ -2,7 +2,6 @@
   "script": {
     "name": "csp7-pilot-staging",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "project_sharing": true,
@@ -162,7 +161,6 @@
       "properties": {
         "progression": "More with Functions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -183,7 +181,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +201,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -225,7 +221,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -246,7 +241,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -267,7 +261,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -288,7 +281,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -309,7 +301,6 @@
       "properties": {
         "progression": "console.log Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -330,7 +321,6 @@
       "properties": {
         "progression": "console.log Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -351,7 +341,6 @@
       "properties": {
         "progression": "console.log Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -372,7 +361,6 @@
       "properties": {
         "progression": "console.log Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -393,7 +381,6 @@
       "properties": {
         "progression": "console.log Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -414,7 +401,6 @@
       "properties": {
         "progression": "App Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -435,7 +421,6 @@
       "properties": {
         "progression": "App Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -456,7 +441,6 @@
       "properties": {
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -477,7 +461,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -498,7 +481,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -519,7 +501,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -540,7 +521,6 @@
       "properties": {
         "progression": "Video: Libraries"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -561,7 +541,6 @@
       "properties": {
         "progression": "One Function Library"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -582,7 +561,6 @@
       "properties": {
         "progression": "One Function Library"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -603,7 +581,6 @@
       "properties": {
         "progression": "Libraries Playground"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -624,7 +601,6 @@
       "properties": {
         "progression": "Libraries Playground"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -645,7 +621,6 @@
       "properties": {
         "progression": "Student Survey (Libraries)"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -666,7 +641,6 @@
       "properties": {
         "progression": "Teacher Survey (Libraries)"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [

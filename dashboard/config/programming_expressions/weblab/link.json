@@ -1,4 +1,5 @@
 {
   "func": "link",
-  "category": "HTML Tags"
+  "category": "HTML Tags",
+  "syntax": "<link></link>"
 }

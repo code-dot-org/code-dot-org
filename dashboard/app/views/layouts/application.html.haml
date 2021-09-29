@@ -65,7 +65,7 @@
 
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
       - unless view_options[:no_header]
-        = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, full_width: view_options[:full_width]}
+        = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, lesson: @lesson, full_width: view_options[:full_width]}
       - if view_options[:code_studio_logo]
         = render partial: 'layouts/logo'
       - page = yield

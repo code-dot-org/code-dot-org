@@ -1,0 +1,101 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "elements": [
+        {
+          "type": "text",
+          "name": "birth_year",
+          "title": "What is your year of birth? ",
+          "description": "Please enter a whole number e.g. 1975. ",
+          "inputType": "number",
+          "min": 1930,
+          "max": 2000,
+          "placeHolder": "enter a number"
+        },
+        {
+          "type": "radiogroup",
+          "name": "gender_identity",
+          "title": "What is your gender identity?",
+          "choices": [
+            {
+              "value": "female",
+              "text": "Female"
+            },
+            {
+              "value": "male",
+              "text": "Male"
+            },
+            {
+              "value": "non_binary",
+              "text": "Non-binary"
+            },
+            {
+              "value": "not_listed",
+              "text": "Preferred term not listed"
+            },
+            {
+              "value": "no_answer",
+              "text": "Prefer not to answer"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "racial_ethnic_identity",
+          "title": "What is your racial or ethnic identity? [check all that apply] ",
+          "choices": [
+            {
+              "value": "am_indian_alaska",
+              "text": "American Indian/Alaska Native"
+            },
+            {
+              "value": "asian",
+              "text": "Asian"
+            },
+            {
+              "value": "black_aa",
+              "text": "Black or African American"
+            },
+            {
+              "value": "hispanic_latino",
+              "text": "Hispanic or Latino"
+            },
+            {
+              "value": "native_hawaiin_pi",
+              "text": "Native Hawaiian or other Pacific Islander"
+            },
+            {
+              "value": "white",
+              "text": "White"
+            },
+            {
+              "value": "other_race",
+              "text": "Other"
+            },
+            {
+              "value": "no_answer",
+              "text": "Prefer not to answer"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "years_teaching",
+          "title": "How many years have you taught at the K-12 level (any subject)?",
+          "description": "Please enter a whole number. If you are about to start your first year teaching, enter 0.",
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "type": "text",
+          "name": "years_teaching_cs",
+          "title": "How many years have you taught COMPUTER SCIENCE at the K-12 level?",
+          "description": "Please enter a whole number. Enter 0 if it's your first year teaching computer science.",
+          "inputType": "number",
+          "min": 0
+        }
+      ]
+    }
+  ]
+}

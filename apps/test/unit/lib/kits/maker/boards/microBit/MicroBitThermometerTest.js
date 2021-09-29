@@ -11,6 +11,9 @@ describe('MicroBitThermometer', function() {
     boardClient = new MicrobitStubBoard();
     thermometer = new MicroBitThermometer({mb: boardClient});
   });
+  afterEach(() => {
+    sinon.restore();
+  });
 
   it(`attributes are readonly`, () => {
     let attributes = ['raw', 'celsius', 'fahrenheit', 'C', 'F'];

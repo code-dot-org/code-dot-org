@@ -1,0 +1,148 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "elements": [
+        {
+          "type": "panel",
+          "name": "module_3_panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "question1",
+              "html": "<h2>How useful was Module 3?</h2>\n<p>We're interested in your feedback about how useful the activities in Module 3 were for you.</p>\n"
+            },
+            {
+              "type": "html",
+              "name": "question4",
+              "html": "<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;\" cellpadding=\"1px\"><caption><span style=\"font-family: arial, helvetica, sans-serif;\"> </span></caption>\n<tbody>\n<tr>\n<td style=\"width: 17%; padding-top: 3px; text-align: center; vertical-align: top;\"><span style=\"font-size: 13.3333px; font-family: arial, helvetica, sans-serif;\"><strong>N/A</strong></span></td>\n<td style=\"width: 20.2282%; padding-top: 3px; text-align: center; vertical-align: top;\"><span style=\"font-family: arial, helvetica, sans-serif;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #ffffff;\">----</span>2</span></strong></span></td>\n<td style=\"width: 21.7718%; text-align: center; vertical-align: top;\"><span style=\"font-family: arial, helvetica, sans-serif;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #ffffff;\">----</span>4<span style=\"color: #ffffff;\">----</span>5</span></strong></span></td>\n<td style=\"width: 20%; text-align: center; vertical-align: top;\"><span style=\"font-family: arial, helvetica, sans-serif;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #ffffff;\">----</span>7</span></strong></span></td>\n</tr>\n<tr>\n<td style=\"width: 17%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt; font-family: arial, helvetica, sans-serif;\">I don't recognize this / I don't believe we did this today</span></td>\n<td style=\"width: 20.2282%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt; font-family: arial, helvetica, sans-serif;\">Not useful to me</span></td>\n<td style=\"width: 21.7718%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt; font-family: arial, helvetica, sans-serif;\">Somewhat useful to me</span></td>\n<td style=\"width: 20%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt; font-family: arial, helvetica, sans-serif;\">Very useful to me</span></td>\n</tr>\n</tbody>\n</table>"
+            },
+            {
+              "type": "matrix",
+              "name": "csd_activities_m3",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "Please rate the usefulness of these CS Discoveries workshop activities.",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "N/A"
+                },
+                {
+                  "value": "2",
+                  "text": "1"
+                },
+                {
+                  "value": "3",
+                  "text": "2"
+                },
+                {
+                  "value": "4",
+                  "text": "3"
+                },
+                {
+                  "value": "5",
+                  "text": "4"
+                },
+                {
+                  "value": "6",
+                  "text": "5"
+                },
+                {
+                  "value": "7",
+                  "text": "6"
+                },
+                {
+                  "value": "8",
+                  "text": "7"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "welcome",
+                  "text": "Welcome"
+                },
+                {
+                  "value": "model_lesson",
+                  "text": "Model Lesson"
+                },
+                {
+                  "value": "model_lesson_reflection",
+                  "text": "Model Lesson Reflection and Group Work"
+                },
+                {
+                  "value": "wrap_up",
+                  "text": "Wrap Up"
+                }
+              ]
+            },
+            {
+              "type": "matrix",
+              "name": "csp_activities_m3",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "Please rate the usefulness of these CS Principles workshop activities.",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "N/A"
+                },
+                {
+                  "value": "2",
+                  "text": "1"
+                },
+                {
+                  "value": "3",
+                  "text": "2"
+                },
+                {
+                  "value": "4",
+                  "text": "3"
+                },
+                {
+                  "value": "5",
+                  "text": "4"
+                },
+                {
+                  "value": "6",
+                  "text": "5"
+                },
+                {
+                  "value": "7",
+                  "text": "6"
+                },
+                {
+                  "value": "8",
+                  "text": "7"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "opener",
+                  "text": "Workshop Opener"
+                },
+                {
+                  "value": "model_lesson_lists_investigate",
+                  "text": "Model Lesson - Lists Investigate"
+                },
+                {
+                  "value": "model_lesson_reflection",
+                  "text": "Model Lesson Reflection”"
+                },
+                {
+                  "value": "wrap_up",
+                  "text": "Wrap Up"
+                }
+              ]
+            },
+            {
+              "type": "comment",
+              "name": "other_activities_m3",
+              "title": "If you participated in any other activities during this workshop, please describe them below.",
+              "cols": 40,
+              "rows": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

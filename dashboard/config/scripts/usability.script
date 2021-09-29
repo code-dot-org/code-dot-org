@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Intro', display_name: 'Intro', has_lesson_plan: false
 level 'Course 4 Maze 6'
 level 'Course 4 Bee 1'

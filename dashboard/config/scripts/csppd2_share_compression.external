@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 
 In lesson 13 students will use a widget to compress short chunks of text. This lesson, which we saw during the in-person professional development, is an opportunity to learn about heuristics, which are rules of thumb that for a general algorithm for solving a problem. Text compression leads to developing a heuristic because the specifics of compressing the text will change as the text being compressed changes, so we need a general principle to follow for compressing the text (for example, looking for patterns of 3 letter combinations that repeat across different words). 
 
->Let’s start by opening the <a href=https://studio.code.org/s/cspunit1/stage/13/puzzle/2 target=“_blank”>text compression level</a> in another page. **Go through a couple of different poems, and work to develop a heuristic for compressing the text.**  
+>Let’s start by opening the <a href=https://studio.code.org/s/cspunit1/lessons/13/levels/2 target=“_blank”>text compression level</a> in another page. **Go through a couple of different poems, and work to develop a heuristic for compressing the text.**
 
 #### <a href="http://forum.code.org/t/lesson-13-text-compression/574" target="blank" rel="noopener noreferrer">Forum Thread for Lesson 13 <i class="fa fa-external-link-square" ></i></a>
 
@@ -22,5 +22,5 @@ In lesson 13 students will use a widget to compress short chunks of text. This l
 
 **Once you've posted in the forum, click continue below.**
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

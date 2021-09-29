@@ -8,7 +8,7 @@ Feature: Lesson extras teacher panel
     Then I save the section id from row 0 of the section table
 
     # Lesson extras overview page
-    Then I navigate to the script "coursea-2018" stage 14 lesson extras page for the section I saved
+    Then I navigate to the script "coursea-2018" lesson 14 lesson extras page for the section I saved
     And I wait until element "#teacher-panel-container" is visible
     And check that the URL contains "section_id="
     And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible

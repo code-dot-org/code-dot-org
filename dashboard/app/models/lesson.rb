@@ -23,7 +23,7 @@
 
 require 'cdo/shared_constants'
 
-# Ordered partitioning of script levels within a script
+# Ordered partitioning of script levels within a unit
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Lesson)
 class Lesson < ApplicationRecord
   include LevelsHelper
@@ -71,29 +71,64 @@ class Lesson < ApplicationRecord
     assessment_opportunities
   )
 
-  # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
-  # numbers the lessons in order in two groups 1. lessons that are numbered on the script overview page (lockable false OR has_lesson_plan true)
-  # 2. lessons that are not numbered on the script overview page (lockable true AND has_lesson_plan false)
+  # A lesson has an absolute position and a relative position. The difference
+  # between the two is that relative_position numbers the lessons in order in
+  # two groups
+  #
+  # 1. lessons that are numbered on the unit overview page (lockable false OR
+  # has_lesson_plan true)
+  # 2. lessons that are not numbered on the unit overview page (lockable true
+  # AND has_lesson_plan false)
+  #
   # if we have two lessons without lesson plans that are lockable followed by a
-  # lesson that is not lockable, the third lesson will have an absolute_position of 3 but a relative_position of 1
+  # lesson that is not lockable, the third lesson will have an
+  # absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
   validates_uniqueness_of :key, scope: :script_id
 
   include CodespanOnlyMarkdownHelper
 
-  def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
-    script.lessons.reload
+  def self.update_lessons_in_migrated_unit(unit, lesson_group, raw_lessons, counters)
+    raw_lessons.map do |raw_lesson|
+      lesson = fetch_lesson(raw_lesson, unit)
+
+      lesson.assign_attributes(
+        lesson_group: lesson_group,
+        absolute_position: (counters.lesson_position += 1),
+        relative_position: lesson.numbered_lesson? ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
+      )
+      lesson.save! if lesson.changed?
+      lesson
+    end
+  end
+
+  def self.fetch_lesson(raw_lesson, unit)
+    if raw_lesson[:id]
+      return Lesson.find_by!(script: unit, id: raw_lesson[:id], key: raw_lesson[:key])
+    end
+    Lesson.prevent_blank_display_name(raw_lesson)
+    Lesson.create!(
+      key: raw_lesson[:key],
+      script: unit,
+      name: raw_lesson[:name],
+      relative_position: 0,  # will be updated by the caller, but can't be nil
+      has_lesson_plan: true
+    )
+  end
+
+  def self.add_lessons(unit, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
+    unit.lessons.reload
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_blank_display_name(raw_lesson)
-      Lesson.prevent_changing_stable_i18n_key(script, raw_lesson)
+      Lesson.prevent_changing_stable_i18n_key(unit, raw_lesson)
 
-      lesson = script.lessons.detect {|l| l.key == raw_lesson[:key]} ||
+      lesson = unit.lessons.detect {|l| l.key == raw_lesson[:key]} ||
         Lesson.find_or_create_by(
           key: raw_lesson[:key],
-          script: script
+          script: unit
         ) do |l|
-          l.name = "" # will be updated below, but cant be null
+          l.name = raw_lesson[:name]
           l.relative_position = 0 # will be updated below, but cant be null
           l.has_lesson_plan = true # will be reset below if specified
         end
@@ -113,7 +148,7 @@ class Lesson < ApplicationRecord
       lesson.save! if lesson.changed?
 
       lesson.script_levels = ScriptLevel.add_script_levels(
-        script, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
+        unit, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
       )
       lesson.save!
       lesson.reload
@@ -124,10 +159,10 @@ class Lesson < ApplicationRecord
     end
   end
 
-  def self.prevent_changing_stable_i18n_key(script, raw_lesson)
-    if script.is_stable && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
+  def self.prevent_changing_stable_i18n_key(unit, raw_lesson)
+    if unit.stable? && ScriptConstants.i18n?(unit.name) && I18n.t("data.script.name.#{unit.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
 
-      raise "Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
+      raise "Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
     end
   end
 
@@ -164,16 +199,28 @@ class Lesson < ApplicationRecord
     relative_position.to_s
   end
 
+  def get_script_level_by_id
+    # if Scripts are cached, then we do in-memory filtering to avoid a database
+    # hit. If Scripts are NOT cached, then we want to find by a query in order
+    # to _minimize_ the database hit.
+    if Script.should_cache?
+      script_levels = script.script_levels.select {|sl| sl.stage_id == id}
+      return script_levels.first
+    else
+      return script.script_levels.find_by(stage_id: id)
+    end
+  end
+
   def unplugged_lesson?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.unplugged?
+    script_level = get_script_level_by_id
+    return false unless script_level.present?
+    script_level.oldest_active_level.unplugged?
   end
 
   def spelling_bee?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.spelling_bee?
+    script_level = get_script_level_by_id
+    return false unless script_level.present?
+    script_level.oldest_active_level.spelling_bee?
   end
 
   # We number lessons that either have lesson plans or are not lockable
@@ -182,9 +229,25 @@ class Lesson < ApplicationRecord
   end
 
   def has_lesson_pdf?
-    return false if ScriptConstants.script_in_category?(:csf, script.name) || ScriptConstants.script_in_category?(:csf_2018, script.name)
+    return false if ScriptConstants.unit_in_category?(:csf, script.name) || ScriptConstants.unit_in_category?(:csf_2018, script.name)
 
     !!has_lesson_plan
+  end
+
+  # Returns a version of the named property which is fully ready for
+  # user-facing rendering. Currently does localization and markdown
+  # preprocessing, could in the future be expanded to do more.
+  def render_property(property_name)
+    result = get_localized_property(property_name)
+    result = Services::MarkdownPreprocessor.process(result || '')
+    return result
+  end
+
+  # A simple helper function to encapsulate creating a unique key, since this
+  # model does not have a unique identifier field of its own.
+  def get_localized_property(property_name)
+    key = Services::GloballyUniqueIdentifiers.build_lesson_key(self)
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, property_name, key)
   end
 
   def localized_title
@@ -194,21 +257,31 @@ class Lesson < ApplicationRecord
 
     if script.lessons.to_a.many?
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
-    else # script only has one lesson, use the script name
+    else # unit only has one lesson, use the unit name
       script.title_for_display
     end
   end
 
   def localized_name
-    if script.lessons.many?
+    # The behavior to show the script title instead of the lesson name in
+    # single-lesson scripts is deprecated.
+    #
+    # TODO(dave): once all scripts with exactly one lesson are migrated and no longer
+    # using legacy lesson plans, remove this condition and consolidate with
+    # localized_name_for_lesson_show.
+    if script.lessons.many? || (script.is_migrated && !script.use_legacy_lesson_plans)
       I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
   end
 
+  def localized_name_for_lesson_show
+    I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
+  end
+
   def localized_lesson_plan
-    return script_lesson_path(script, self) if script.is_migrated
+    return script_lesson_path(script, self) if script.is_migrated? && !script.use_legacy_lesson_plans?
 
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
@@ -239,9 +312,9 @@ class Lesson < ApplicationRecord
     end
   end
 
-  def script_resource_pdf_url
+  def unit_resource_pdf_url
     if script.is_migrated?
-      Services::CurriculumPdfs.get_script_resources_url(script)
+      Services::CurriculumPdfs.get_unit_resources_url(script)
     end
   end
 
@@ -281,7 +354,7 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonEditPath: edit_lesson_path(id: id)
+        lessonEditPath: get_uncached_edit_path
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -319,9 +392,31 @@ class Lesson < ApplicationRecord
     lesson_summary.freeze
   end
 
+  def get_uncached_edit_path
+    # for hoc scripts, everything under /s/[script-name]/lessons/* is cached,
+    # and user-identifying cookies are stripped. this means we can't tell if
+    # a user trying to edit a lesson plan via /s/[script-name]/lessons/1/edit
+    # has sufficient permissions or not. therefore, use a different path
+    # when editing lesson plans in hoc scripts.
+    has_lesson_plan && !ScriptConfig.hoc_scripts.include?(script.name) ?
+      script_lesson_edit_path(script, self) :
+      edit_lesson_path(id: id)
+  end
+
+  def get_uncached_show_path
+    # use a custom path for viewing hoc lesson plans on levelbuilder, so that
+    # levelbuilders can see the gray "extra links" box with a link to edit
+    # the lesson. this also sidesteps some weird problems where visiting a
+    # a path like levelbuilder-studio.code.org/s/dance/lessons/1 messes up
+    # the user's login session and requires them to reauthenticate before
+    # accessing other pages which require levelbuilder credentials.
+    ScriptConfig.hoc_scripts.include?(script.name) ? lesson_path(id: id) : script_lesson_path(script, self)
+  end
+
   def summarize_for_calendar
     {
       id: id,
+      lessonNumber: relative_position,
       title: localized_title,
       duration: lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0},
       assessment: !!assessment,
@@ -330,21 +425,31 @@ class Lesson < ApplicationRecord
     }
   end
 
-  # Provides data about this lesson needed by the script edit page.
-  #
-  # TODO: [PLAT-369] trim down to only include those fields needed on the
-  # script edit page
-  def summarize_for_script_edit
+  # Provides data about this lesson needed by the edit page for unmigrated units.
+  def summarize_for_unit_edit
     summary = summarize(true, for_edit: true).dup
-    # Do not let script name override lesson name when there is only one lesson
+    # Do not let unit name override lesson name when there is only one lesson
     summary[:name] = name
     summary[:lesson_group_display_name] = lesson_group&.display_name
     summary.freeze
   end
 
+  def summarize_for_migrated_unit_edit
+    {
+      id: id,
+      name: name,
+      key: key,
+      assessment: !!assessment,
+      lockable: !!lockable,
+      hasLessonPlan: has_lesson_plan,
+      unplugged: unplugged,
+      lessonEditPath: get_uncached_edit_path
+    }
+  end
+
   # Provides all the editable data related to this lesson and its activities for
   # display on the lesson edit page, excluding any lesson attributes which can
-  # be edited on the script edit page (e.g. name and key).
+  # be edited on the unit edit page (e.g. name and key).
   #
   # The only non-editable data included are the ids of activities and activity
   # sections, which are needed to identify those objects but cannot themselves
@@ -378,10 +483,10 @@ class Lesson < ApplicationRecord
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
-      scriptIsVisible: !script.hidden,
+      unitIsLaunched: script.launched?,
       scriptPath: script_path(script),
-      lessonPath: script_lesson_path(script, self),
-      lessonExtrasAvailableForScript: script.lesson_extras_available
+      lessonPath: get_uncached_show_path,
+      lessonExtrasAvailableForUnit: script.lesson_extras_available
     }
   end
 
@@ -392,11 +497,11 @@ class Lesson < ApplicationRecord
       position: relative_position,
       lockable: lockable,
       key: key,
-      displayName: localized_name,
-      overview: Services::MarkdownPreprocessor.process(overview || ''),
+      displayName: localized_name_for_lesson_show,
+      overview: render_property(:overview),
       announcements: announcements,
-      purpose: Services::MarkdownPreprocessor.process(purpose || ''),
-      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      purpose: render_property(:purpose),
+      preparation: render_property(:preparation),
       activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown)},
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
@@ -410,7 +515,7 @@ class Lesson < ApplicationRecord
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedTeacher: user&.authorized_teacher?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
-      scriptResourcesPdfUrl: script_resource_pdf_url
+      scriptResourcesPdfUrl: unit_resource_pdf_url
     }
   end
 
@@ -419,7 +524,7 @@ class Lesson < ApplicationRecord
       key: key,
       position: relative_position,
       displayName: localized_name,
-      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      preparation: render_property(:preparation),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
@@ -437,7 +542,7 @@ class Lesson < ApplicationRecord
       position: relative_position,
       key: key,
       displayName: localized_name,
-      overview: student_overview || '',
+      overview: get_localized_property(:student_overview) || '',
       announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
@@ -592,7 +697,7 @@ class Lesson < ApplicationRecord
       lesson_activity
     end
 
-    # It's too messy to keep track of all 3 position values for scripts during
+    # It's too messy to keep track of all 3 position values for units during
     # this update, so just set activity_section_position as the source of truth
     # and then fix chapter and position values after.
     script.fix_script_level_positions
@@ -635,7 +740,7 @@ class Lesson < ApplicationRecord
   # this lesson is in a CSF course offering, the other lesson may also be in
   # any other CSF course offering.
   # 2. same lesson key (untranslated lesson name)
-  # The results are sorted first by version year and then by script name.
+  # The results are sorted first by version year and then by unit name.
   #
   # This method is intended only to be used in levelbuilder mode, when script
   # caching is disabled.
@@ -643,7 +748,7 @@ class Lesson < ApplicationRecord
   # The purpose of this method is to help curriculum writers find lessons
   # related to the one they are currently editing in which they might want to
   # make similar edits. The heuristic used by this method is that the lesson key
-  # will not change when a script is deep-copied into a new version year, or
+  # will not change when a unit is deep-copied into a new version year, or
   # when a lesson is shared across CSF courses within the same version year. If
   # this heuristic proves to be inadequate, we could consider adding an explicit
   # link between related lessons.
@@ -699,7 +804,7 @@ class Lesson < ApplicationRecord
   def summarize_related_lessons
     related_lessons.map do |lesson|
       {
-        scriptTitle: lesson.script.localized_title,
+        unitTitle: lesson.script.localized_title,
         versionYear: lesson.script.get_course_version&.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
@@ -721,6 +826,101 @@ class Lesson < ApplicationRecord
 
   def lesson_plan_has_verified_resources
     resources.any? {|r| r.audience == 'Verified Teacher'}
+  end
+
+  # Makes a copy of the lesson and adds it to the end last lesson group
+  # in destination_unit. It does not clone levels.
+  # Both destination_unit and the unit this lesson is in must:
+  # - be migrated
+  # - be in a course version
+  # - be in course versions from the same version year
+  def copy_to_unit(destination_unit, new_level_suffix = nil)
+    return if script == destination_unit
+    raise 'Both lesson and unit must be migrated' unless script.is_migrated? && destination_unit.is_migrated?
+    raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil?
+
+    copied_lesson = dup
+    copied_lesson.key = copied_lesson.name
+    copied_lesson.script_id = destination_unit.id
+
+    destination_lesson_group = destination_unit.lesson_groups.last
+    unless destination_lesson_group
+      destination_lesson_group = LessonGroup.create!(script: destination_unit, position: 1, user_facing: false, key: 'new-lesson-group')
+      Script.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_unit.name)
+    end
+    copied_lesson.lesson_group_id = destination_lesson_group.id
+
+    copied_lesson.absolute_position = destination_unit.lessons.count + 1
+    copied_lesson.relative_position =
+      destination_unit.lessons.select {|l| copied_lesson.numbered_lesson? == l.numbered_lesson?}.length + 1
+
+    copied_lesson.save!
+
+    # Copy lesson activities, activity sections, and script levels
+    copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
+      copied_lesson_activity = original_lesson_activity.dup
+      copied_lesson_activity.key = SecureRandom.uuid
+      copied_lesson_activity.lesson_id = copied_lesson.id
+      copied_lesson_activity.save!
+      copied_lesson_activity.activity_sections = original_lesson_activity.activity_sections.map do |original_activity_section|
+        copied_activity_section = original_activity_section.dup
+        copied_activity_section.key = SecureRandom.uuid
+        copied_activity_section.lesson_activity_id = copied_lesson_activity.id
+        copied_activity_section.save!
+        sl_data = original_activity_section.script_levels.map.with_index(1) do |original_script_level, pos|
+          # Only include active level and discard variants
+          original_active_level = original_script_level.oldest_active_level
+          copied_level = new_level_suffix.blank? ? original_active_level : original_active_level.clone_with_suffix(new_level_suffix)
+          {
+            "activitySectionPosition" => pos,
+            "assessment" => original_script_level.assessment,
+            "bonus" => original_script_level.bonus,
+            "challenge" => original_script_level.challenge,
+            "levels" => [copied_level]
+          }
+        end
+        copied_activity_section.update_script_levels(sl_data) unless sl_data.blank?
+        copied_activity_section
+      end
+      copied_lesson_activity
+    end
+
+    # Copy objectives
+    copied_lesson.objectives = objectives.map do |original_objective|
+      copied_objective = original_objective.dup
+      copied_objective.key = SecureRandom.uuid
+      copied_objective
+    end
+
+    # Copy programming expressions and standards associations
+    copied_lesson.programming_expressions = programming_expressions
+    copied_lesson.standards = standards
+    copied_lesson.opportunity_standards = opportunity_standards
+
+    # Copy objects that require course version, i.e. resources and vocab
+    course_version = destination_unit.get_course_version
+    copied_lesson.resources = resources.map {|r| r.copy_to_course_version(course_version)}.uniq
+
+    copied_lesson.vocabularies = vocabularies.map do |original_vocab|
+      persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
+      if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
+        persisted_vocab
+      else
+        copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
+        copied_vocab
+      end
+    end.uniq
+
+    copied_lesson.save!
+    Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_unit.name)
+    destination_unit.fix_script_level_positions
+    destination_unit.write_script_json
+    copied_lesson
+  end
+
+  def report_bug_url(request)
+    message = "Bug in Lesson #{name}\n#{request.url}\n#{request.user_agent}\n"
+    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
   private

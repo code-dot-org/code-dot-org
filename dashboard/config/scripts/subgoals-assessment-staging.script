@@ -1,4 +1,5 @@
 login_required true
+published_state 'beta'
 
 lesson 'all assessment items as standalone assessment levels', display_name: 'all assessment items as standalone assessment levels', has_lesson_plan: false
 level 'csp_U3_square_v_rect_FR', assessment: true

@@ -1,5 +1,17 @@
-import * as coreLibrary from '../coreLibrary';
 import {commands as behaviorCommands} from './behaviorCommands';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+
+function move(coreLibrary, spriteArg, distance) {
+  let sprites = coreLibrary.getSpriteArray(spriteArg);
+  sprites.forEach(sprite => {
+    if (!sprite.direction) {
+      sprite.direction = 0;
+    }
+    let direction = sprite.direction % 360;
+    sprite.x += distance * Math.cos((direction * Math.PI) / 180);
+    sprite.y += distance * Math.sin((direction * Math.PI) / 180);
+  });
+}
 
 export const commands = {
   addTarget(spriteArg, targetCostume, targetType) {
@@ -7,7 +19,7 @@ export const commands = {
       console.warn(`unkknown targetType: ${targetType}`);
       return;
     }
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
       if (!sprite.targetSet) {
         sprite.targetSet = {follow: [], avoid: []};
@@ -19,8 +31,8 @@ export const commands = {
   },
 
   bounceOff(spriteArg, targetArg) {
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
-    let targets = coreLibrary.getSpriteArray(targetArg);
+    let sprites = this.getSpriteArray(spriteArg);
+    let targets = this.getSpriteArray(targetArg);
     sprites.forEach(sprite => {
       targets.forEach(target => {
         if (sprite.isTouching(target)) {
@@ -39,7 +51,7 @@ export const commands = {
     if (val === undefined || prop === undefined) {
       return;
     }
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let sprites = this.getSpriteArray(spriteArg);
     let specialCases = {
       direction: sprite => (sprite.direction = (sprite.direction + val) % 360),
       scale: sprite => {
@@ -59,15 +71,32 @@ export const commands = {
     });
   },
   edgesDisplace(spriteArg) {
-    if (!this.edges) {
-      this.createEdgeSprites();
+    if (!this.p5.edges) {
+      this.p5.createEdgeSprites();
     }
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
-    sprites.forEach(sprite => this.edges.displace(sprite));
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => this.p5.edges.displace(sprite));
+  },
+
+  glideTo(spriteArg, location) {
+    if (!location) {
+      return;
+    }
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => {
+      if (!sprite.glideTargets) {
+        sprite.glideTargets = [];
+      }
+      sprite.glideTargets.push(location);
+      this.addBehavior(sprite, {
+        func: behaviorCommands.glideFunc.apply(this),
+        name: 'glide'
+      });
+    });
   },
 
   isCostumeEqual(spriteArg, costumeName) {
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let sprites = this.getSpriteArray(spriteArg);
     if (sprites.length === 0) {
       return false;
     }
@@ -75,17 +104,17 @@ export const commands = {
   },
 
   isKeyPressed(key) {
-    return this.keyDown(key);
+    return this.p5.keyDown(key);
   },
 
   isTouchingEdges(spriteArg) {
-    if (!this.edges) {
-      this.createEdgeSprites();
+    if (!this.p5.edges) {
+      this.p5.createEdgeSprites();
     }
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let sprites = this.getSpriteArray(spriteArg);
     let touching = false;
     sprites.forEach(sprite => {
-      if (sprite.isTouching(this.edges)) {
+      if (sprite.isTouching(this.p5.edges)) {
         touching = true;
       }
     });
@@ -93,8 +122,8 @@ export const commands = {
   },
 
   isTouchingSprite(spriteArg, targetArg) {
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
-    let targets = coreLibrary.getSpriteArray(targetArg);
+    let sprites = this.getSpriteArray(spriteArg);
+    let targets = this.getSpriteArray(targetArg);
     let touching = false;
     sprites.forEach(sprite => {
       targets.forEach(target => {
@@ -109,14 +138,14 @@ export const commands = {
     if (!location) {
       return;
     }
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
       sprite.x = location.x;
       sprite.y = location.y;
     });
   },
   mirrorSprite(spriteArg, direction) {
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
       if (direction === 'right') {
         sprite.mirrorX(1);
@@ -126,18 +155,15 @@ export const commands = {
     });
   },
   moveForward(spriteArg, distance) {
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
-    sprites.forEach(sprite => {
-      if (!sprite.direction) {
-        sprite.direction = 0;
-      }
-      let direction = sprite.direction % 360;
-      sprite.x += distance * Math.cos((direction * Math.PI) / 180);
-      sprite.y += distance * Math.sin((direction * Math.PI) / 180);
-    });
+    move(this, spriteArg, distance);
   },
+
+  moveBackward(spriteArg, distance) {
+    move(this, spriteArg, -1 * distance);
+  },
+
   moveInDirection(spriteArg, distance, direction) {
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let sprites = this.getSpriteArray(spriteArg);
     let dirs = {
       North: sprite => (sprite.y -= distance),
       East: sprite => (sprite.x += distance),
@@ -153,7 +179,7 @@ export const commands = {
     });
   },
   moveToward(spriteArg, distance, target) {
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
       if (sprite && target) {
         const distanceFromSpriteToTarget = Math.sqrt(
@@ -176,25 +202,25 @@ export const commands = {
   },
 
   setDefaultSpriteSize(size) {
-    coreLibrary.defaultSpriteSize = size;
+    this.defaultSpriteSize = size;
   },
 
   setProp(spriteArg, prop, val) {
     if (val === undefined) {
       return;
     }
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let sprites = this.getSpriteArray(spriteArg);
     let specialCases = {
       direction: sprite => (sprite.direction = val % 360),
       draggable: sprite => {
         if (val) {
-          coreLibrary.addBehavior(sprite, {
-            func: behaviorCommands.draggableFunc(this),
+          this.addBehavior(sprite, {
+            func: behaviorCommands.draggableFunc.apply(this),
             name: 'draggable'
           });
         } else {
-          coreLibrary.removeBehavior(sprite, {
-            func: behaviorCommands.draggableFunc(this),
+          this.removeBehavior(sprite, {
+            func: behaviorCommands.draggableFunc.apply(this),
             name: 'draggable'
           });
         }
@@ -214,11 +240,35 @@ export const commands = {
       }
     });
   },
+
+  spriteSay(spriteArg, speech) {
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => {
+      const bubbleId = this.addSpeechBubble(sprite, speech);
+      audioCommands.playSpeech({
+        text: speech,
+        gender: 'female',
+        language: 'English',
+        onComplete: () => this.removeSpeechBubble(bubbleId)
+      });
+    });
+  },
+
+  removeTint(spriteArg) {
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => (sprite.tint = null));
+  },
+
+  setTint(spriteArg, color) {
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => (sprite.tint = color));
+  },
+
   turn(spriteArg, degrees, direction) {
     if (!degrees) {
       return;
     }
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
       if (direction === 'right') {
         sprite.rotation += degrees;

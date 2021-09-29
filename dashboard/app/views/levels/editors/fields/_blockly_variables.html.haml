@@ -1,0 +1,8 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#variables"}}
+  Blockly Variables
+
+#variables.in.collapse
+  = f.label :blockly_variables,'Pre-initialized Blockly Variables'
+  %p Enter a comma-separated list of variables that will be pre-populated in the variable dropdown blocks.
+  %p{style: 'color: red; font-size: larger' } NOTE: Only works with Google Blockly.
+  = f.text_area :blockly_variables, value: @level.blockly_variables

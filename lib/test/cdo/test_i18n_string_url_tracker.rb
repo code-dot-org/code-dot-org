@@ -2,12 +2,14 @@ require_relative '../test_helper'
 require 'cdo/i18n_string_url_tracker'
 require 'active_support/core_ext/numeric/time'
 
-class TestI18nStringUrlTracker < Minitest::Test
+# Common setup/teardown for test/benchmark classes.
+module SetupI18nStringUrlTracker
   def stub_redis
+    @redis_records = []
     RedisClient.instance.stubs(:put_record).with do |stream, data|
       # Capture the data we try to send to Redis so we can verify it is what we expect.
       @redis_stream = stream
-      @redis_record = data.dup
+      @redis_records << @redis_record = data.dup
       true
     end
   end
@@ -16,6 +18,7 @@ class TestI18nStringUrlTracker < Minitest::Test
     RedisClient.instance.unstub(:put_record)
     @redis_stream = nil
     @redis_record = nil
+    @redis_records = nil
   end
 
   def stub_dcdo(flag)
@@ -38,6 +41,10 @@ class TestI18nStringUrlTracker < Minitest::Test
     unstub_dcdo
     I18nStringUrlTracker.instance.send(:shutdown)
   end
+end
+
+class TestI18nStringUrlTracker < Minitest::Test
+  include SetupI18nStringUrlTracker
 
   def test_instance_not_empty
     assert I18nStringUrlTracker.instance
@@ -100,6 +107,20 @@ class TestI18nStringUrlTracker < Minitest::Test
     I18nStringUrlTracker.instance.send(:flush)
     assert_equal(:i18n, @redis_stream)
     assert_equal(expected_record, @redis_record)
+  end
+
+  def test_flush_given_false_dcdo_flag_should_clear_buffer_and_not_call_redis
+    unstub_redis
+    RedisClient.instance.expects(:put_record).never
+    test_record = {string_key: 'string.key', url: 'https://code.org', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    unstub_dcdo
+    stub_dcdo(false)
+    I18nStringUrlTracker.instance.send(:flush)
+
+    # Verify the internal @buffer has been cleared
+    buffer = I18nStringUrlTracker.instance.instance_variable_get :@buffer
+    assert_equal(0, buffer.size)
   end
 
   def test_log_given_false_dcdo_flag_should_not_call_redis
@@ -193,7 +214,7 @@ class TestI18nStringUrlTracker < Minitest::Test
 
   def test_log_given_interval_should_log_data_after_the_given_time_has_passed
     test_record = {string_key: 'string.key', url: 'https://studio.code.org/home', source: 'test'}
-    interval = 0.2
+    interval = 0.2.seconds
     I18nStringUrlTracker.instance.send(:set_flush_interval, interval)
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     # verify that no redis information has been logged because the interval has not passed yet
@@ -234,5 +255,28 @@ class TestI18nStringUrlTracker < Minitest::Test
     I18nStringUrlTracker.instance.send(:flush)
     assert_equal(:i18n, @redis_stream)
     assert_equal(expected_record, @redis_record)
+  end
+
+  def test_log_multiple_sources
+    test_record = {string_key: 'string.key', url: 'https://code.org/url', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source] + '2')
+    I18nStringUrlTracker.instance.send(:flush)
+    assert_equal %w(test test2), @redis_records.map {|x| x[:source]}
+  end
+end
+
+require 'minitest/benchmark'
+class BenchI18nStringUrlTracker < Minitest::Benchmark
+  include SetupI18nStringUrlTracker
+
+  def self.bench_range
+    [1, 1, 1_000, 1_000, 2_000, 5_000, 10_000]
+  end
+
+  def bench_linear_performance
+    assert_performance_linear(0.95) do |n|
+      n.times {|m| I18nStringUrlTracker.instance.log(m.to_s, n.to_s, m.to_s)}
+    end
   end
 end

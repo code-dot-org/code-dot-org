@@ -27,7 +27,7 @@ class SummaryProgressTable extends React.Component {
     }
 
     return (
-      <table style={styles.table}>
+      <table className="uitest-summary-progress-table" style={styles.table}>
         {!minimal && (
           <thead>
             <tr style={styles.headerRow}>

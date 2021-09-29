@@ -1,0 +1,16 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "elements": [
+        {
+          "type": "panel",
+          "name": "module_1_panel",
+          "elements": [
+
+          ]
+        }
+      ]
+    }
+  ]
+}

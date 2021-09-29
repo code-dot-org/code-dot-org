@@ -12,9 +12,10 @@ class JavalabTabMenuComponent extends Component {
     cancelTabMenu: PropTypes.func.isRequired,
     renameFromTabMenu: PropTypes.func.isRequired,
     deleteFromTabMenu: PropTypes.func.isRequired,
-    changeVisibilityFromTabMenu: PropTypes.func.isRequired,
+    changeFileTypeFromTabMenu: PropTypes.func.isRequired,
     showVisibilityOption: PropTypes.bool.isRequired,
-    fileIsVisible: PropTypes.bool
+    fileIsVisible: PropTypes.bool,
+    fileIsValidation: PropTypes.bool
   };
 
   state = {
@@ -27,8 +28,9 @@ class JavalabTabMenuComponent extends Component {
       deleteFromTabMenu,
       cancelTabMenu,
       showVisibilityOption,
-      changeVisibilityFromTabMenu,
-      fileIsVisible
+      changeFileTypeFromTabMenu,
+      fileIsVisible,
+      fileIsValidation
     } = this.props;
     return (
       <div>
@@ -48,14 +50,49 @@ class JavalabTabMenuComponent extends Component {
         >
           Delete
         </button>
-        {showVisibilityOption && (
+        {showVisibilityOption && !fileIsVisible && (
           <button
             type="button"
-            key="visibility"
-            onClick={changeVisibilityFromTabMenu}
+            key="starter"
+            onClick={() => {
+              changeFileTypeFromTabMenu(
+                true /*isVisible*/,
+                false /*isValidation*/
+              );
+            }}
             style={styles.anchor}
           >
-            {fileIsVisible ? 'Make support file' : 'Make starter file'}
+            Make starter file
+          </button>
+        )}
+        {showVisibilityOption && (fileIsVisible || fileIsValidation) && (
+          <button
+            type="button"
+            key="support"
+            onClick={() => {
+              changeFileTypeFromTabMenu(
+                false /*isVisible*/,
+                false /*isValidation*/
+              );
+            }}
+            style={styles.anchor}
+          >
+            Make support file
+          </button>
+        )}
+        {showVisibilityOption && !fileIsValidation && (
+          <button
+            type="button"
+            key="validation"
+            onClick={() => {
+              changeFileTypeFromTabMenu(
+                false /*isVisible*/,
+                true /*isValidation*/
+              );
+            }}
+            style={styles.anchor}
+          >
+            Make validation file
           </button>
         )}
         <button

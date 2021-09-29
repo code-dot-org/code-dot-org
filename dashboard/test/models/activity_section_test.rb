@@ -75,4 +75,26 @@ class ActivitySectionTest < ActiveSupport::TestCase
       assert_equal expected, activity_section.seeding_key(seed_context)
     end
   end
+
+  test "summarize retrives translations" do
+    activity_section = create(:activity_section, name: "English name", description: "English description")
+    test_locale = :"te-ST"
+    custom_i18n = {
+      "data" => {
+        "activity_sections" => {
+          activity_section.key => {
+            "name" => "Translated name",
+            "description" => "Translated description"
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations(test_locale, custom_i18n)
+    assert_equal("English name", activity_section.summarize[:name])
+    assert_equal("English description", activity_section.summarize[:description])
+    I18n.locale = test_locale
+    assert_equal("Translated name", activity_section.summarize[:name])
+    assert_equal("Translated description", activity_section.summarize[:description])
+    I18n.locale = I18n.default_locale
+  end
 end

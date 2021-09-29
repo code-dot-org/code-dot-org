@@ -5,13 +5,13 @@ import {assert, expect} from '../../../util/deprecatedChai';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const defaultProps = {
-  localeEnglishName: 'English',
+  localeCode: 'en-US',
   section: {
     id: 11,
     name: 'foo',
     loginType: 'email',
     providerManaged: false,
-    stageExtras: false,
+    lessonExtras: false,
     ttsAutoplayEnabled: false,
     pairingAllowed: false,
     studentCount: 0,
@@ -74,7 +74,7 @@ const defaultProps = {
       version_year: '2017',
       version_title: '2017',
       is_stable: true,
-      supported_locales: ['Spanish']
+      supported_locale_codes: ['es-MX']
     },
     // script not in course
     null_7: {
@@ -119,7 +119,7 @@ const hiddenSectionProps = {
     name: 'foo',
     loginType: 'email',
     providerManaged: false,
-    stageExtras: false,
+    lessonExtras: false,
     ttsAutoplayEnabled: false,
     pairingAllowed: false,
     studentCount: 0,
@@ -318,7 +318,7 @@ describe('AssignmentSelector', () => {
       const wrapper = shallow(
         <AssignmentSelector
           {...defaultProps}
-          localeEnglishName="Spanish"
+          localeCode="es-MX"
           section={{
             ...defaultProps.section,
             courseId: null,
@@ -344,7 +344,7 @@ describe('AssignmentSelector', () => {
       const wrapper = shallow(
         <AssignmentSelector
           {...defaultProps}
-          localeEnglishName="Slovak"
+          localeCode="sk-SK"
           section={{
             ...defaultProps.section,
             courseId: null,

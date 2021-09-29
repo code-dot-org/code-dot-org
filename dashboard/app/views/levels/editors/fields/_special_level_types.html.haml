@@ -6,7 +6,7 @@
 
 #special-levels.in.collapse
   -# Dance and Spritelab are special types of Gamelab levels
-  - if @level.is_a?(Gamelab) || @level.is_a?(Applab) || @level.is_a?(Weblab) || @level.is_a?(FreeResponse)
+  - if @level.is_a?(Gamelab) || @level.is_a?(Applab) || @level.is_a?(Weblab) || @level.is_a?(FreeResponse) || @level.is_a?(Javalab)
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :submittable, description: "Submittable"}
     %p
       If checked, students with teachers can "submit" a solution for
@@ -26,7 +26,7 @@
         %li For users: The coding workspace, design mode, data mode, the reset button, and sharing are all disabled.
         %li For levelbuilders: The coding workspace and design mode are available in start mode.
 
-  - if (@level.is_a?(Blockly) || @level.is_a?(Weblab))
+  - if (@level.is_a?(Blockly) || @level.is_a?(Weblab) || @level.is_a?(Javalab))
     .field
       = f.label :project_template_level_name, 'Project Template Level Name'
       %p What this does:
@@ -34,6 +34,7 @@
         %li if start_blocks are defined in the project template level, use those instead of the start blocks for this level
         %li if toolbox_blocks are defined in the project template level, use those instead of the toolbox blocks for this level
         %li For Weblab - if Starting Sources are defined in the project template level, use those instead of the Starting Sources for this level
+        %li if starter_assets are defined in the project template level, use those instead of the starter_assets for this level
         %li autocreate a project that is shared with all levels with the same project template level
       %p
         (Leave blank if you do not want all of this)
@@ -42,7 +43,7 @@
         =link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Making-and-Using-Templates', target: '_blank'
       = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
 
-  - if @level.is_a?(Blockly)
+  - if (@level.is_a?(Blockly) || @level.is_a?(Javalab))
     .field
       = f.label :contained_level_names, 'Contained Level Names'
       %p The text area to add contained levels to create predict levels. Each level name referenced here will be embedded in the Instructions Pane (click the plus sign to add a contained level)

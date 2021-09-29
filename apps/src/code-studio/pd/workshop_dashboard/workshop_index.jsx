@@ -38,11 +38,6 @@ const filterParams = {
     state: 'Ended'
   }
 };
-const styles = {
-  surveySubmissionsButton: {
-    marginLeft: 5
-  }
-};
 
 export class WorkshopIndex extends React.Component {
   static propTypes = {
@@ -166,6 +161,12 @@ export class WorkshopIndex extends React.Component {
     );
   }
 }
+
+const styles = {
+  surveySubmissionsButton: {
+    marginLeft: 5
+  }
+};
 
 export default connect(state => ({
   permission: state.workshopDashboard.permission

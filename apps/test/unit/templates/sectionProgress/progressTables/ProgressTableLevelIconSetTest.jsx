@@ -6,7 +6,7 @@ import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTable
 import {
   bubbleContainerWidths,
   BubbleSize
-} from '@cdo/apps/templates/progress/progressStyles';
+} from '@cdo/apps/templates/progress/BubbleFactory';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 

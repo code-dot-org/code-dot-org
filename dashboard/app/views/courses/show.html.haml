@@ -5,7 +5,7 @@
 - unit_group = local_assigns[:unit_group]
 
 - data = {}
-- data[:course_summary] = unit_group.summarize(@current_user)
+- data[:course_summary] = unit_group.summarize(@current_user, for_edit: false)
 - data[:sections] = @sections_with_assigned_info || []
 - data[:is_teacher] = @current_user.try(:teacher?) || false
 - data[:is_verified_teacher] = @current_user.try(:authorized_teacher?) || false

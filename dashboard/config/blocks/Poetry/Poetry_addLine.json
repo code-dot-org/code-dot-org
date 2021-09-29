@@ -1,0 +1,12 @@
+{
+  "category": "",
+  "config": {
+    "func": "addLine",
+    "blockText": "add line {LINE}",
+    "args": [
+      {
+        "name": "LINE"
+      }
+    ]
+  }
+}

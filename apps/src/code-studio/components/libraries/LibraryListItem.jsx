@@ -7,86 +7,6 @@ import i18n from '@cdo/locale';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import Tooltip from '@cdo/apps/templates/Tooltip';
 
-const styles = {
-  overflowEllipsis: {
-    textOverflow: 'ellipsis',
-    overflow: 'hidden'
-  },
-  listItem: {
-    padding: 8,
-    margin: 2,
-    color: color.dark_charcoal,
-    textAlign: 'left',
-    display: 'flex',
-    borderBottom: `1px solid ${color.lightest_gray}`,
-    lineHeight: 1.5
-  },
-  libraryTitle: {
-    fontFamily: "'Gotham 5r', sans-serif",
-    fontSize: 16,
-    cursor: 'pointer',
-    color: color.link_color,
-    ':hover': {
-      color: color.link_color
-    }
-  },
-  description: {
-    marginRight: 25,
-    flexShrink: 2
-  },
-  actions: {
-    display: 'flex',
-    flexGrow: 1,
-    justifyContent: 'flex-end'
-  },
-  actionBtn: {
-    padding: 8,
-    fontSize: 18,
-    backgroundColor: color.white,
-    ':hover': {
-      boxShadow: 'none'
-    }
-  },
-  iconPadding: {
-    padding: '0 2px'
-  },
-  addBtn: {
-    color: color.link_color,
-    borderColor: color.link_color,
-    ':hover': {
-      color: color.white,
-      backgroundColor: color.link_color
-    }
-  },
-  updateBtn: {
-    color: color.orange,
-    borderColor: color.orange,
-    ':hover': {
-      color: color.white,
-      backgroundColor: color.orange
-    }
-  },
-  updateText: {
-    fontFamily: "'Gotham 5r', sans-serif",
-    paddingLeft: 5,
-    fontSize: 16
-  },
-  removeBtn: {
-    color: color.dark_red,
-    borderColor: color.dark_red,
-    ':hover': {
-      color: color.white,
-      backgroundColor: color.dark_red
-    },
-    ':disabled': {
-      color: color.light_gray,
-      borderColor: color.light_gray,
-      backgroundColor: color.lightest_gray,
-      cursor: 'default'
-    }
-  }
-};
-
 export class LibraryListItem extends React.Component {
   static propTypes = {
     library: PropTypes.object.isRequired,
@@ -173,5 +93,85 @@ export class LibraryListItem extends React.Component {
     );
   }
 }
+
+const styles = {
+  overflowEllipsis: {
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
+  },
+  listItem: {
+    padding: 8,
+    margin: 2,
+    color: color.dark_charcoal,
+    textAlign: 'left',
+    display: 'flex',
+    borderBottom: `1px solid ${color.lightest_gray}`,
+    lineHeight: 1.5
+  },
+  libraryTitle: {
+    fontFamily: "'Gotham 5r', sans-serif",
+    fontSize: 16,
+    cursor: 'pointer',
+    color: color.link_color,
+    ':hover': {
+      color: color.link_color
+    }
+  },
+  description: {
+    marginRight: 25,
+    flexShrink: 2
+  },
+  actions: {
+    display: 'flex',
+    flexGrow: 1,
+    justifyContent: 'flex-end'
+  },
+  actionBtn: {
+    padding: 8,
+    fontSize: 18,
+    backgroundColor: color.white,
+    ':hover': {
+      boxShadow: 'none'
+    }
+  },
+  iconPadding: {
+    padding: '0 2px'
+  },
+  addBtn: {
+    color: color.link_color,
+    borderColor: color.link_color,
+    ':hover': {
+      color: color.white,
+      backgroundColor: color.link_color
+    }
+  },
+  updateBtn: {
+    color: color.orange,
+    borderColor: color.orange,
+    ':hover': {
+      color: color.white,
+      backgroundColor: color.orange
+    }
+  },
+  updateText: {
+    fontFamily: "'Gotham 5r', sans-serif",
+    paddingLeft: 5,
+    fontSize: 16
+  },
+  removeBtn: {
+    color: color.dark_red,
+    borderColor: color.dark_red,
+    ':hover': {
+      color: color.white,
+      backgroundColor: color.dark_red
+    },
+    ':disabled': {
+      color: color.light_gray,
+      borderColor: color.light_gray,
+      backgroundColor: color.lightest_gray,
+      cursor: 'default'
+    }
+  }
+};
 
 export default Radium(LibraryListItem);

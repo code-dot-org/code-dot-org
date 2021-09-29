@@ -1,18 +1,18 @@
 ---
-title: Supporting special needs students for the Hour of Code
+title: Mbështetja e studentëve me nevoja të veçanta për Orën e Kodit
 ---
 
-# Supporting students with disabilities for the Hour of Code
+# Mbështetja e studentëve me aftësi të kufizuara për Orën e Kodit
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+Anyone can try an Hour of Code during Computer Science Education Week. Shpesh, studentët me autizëm, ADHD ose ndryshime të tjera në të mësuar zbulojnë se e duan programimin. Inkurajoni të gjithë studentët në klasën tuaj që ta provoni! Gjatë krijimit të përvojës për klasën tuaj, shpërbleni pjesëmarrjen sesa përfundimin. Ju mund t'i jepni të gjithëve një certifikatë ["> ]({{ support-special-needs-students/certificate }cert) pa marrë parasysh se sa enigma ose sfida plotësojnë brenda orës. [ Programimi në çift ](https://www.youtube.com/watch?v=vgkahOzFH2Q) është një mënyrë tjetër e shkëlqyeshme për të mësuar bashkëpunimin dhe për t'i bërë studentët të punojnë së bashku për të zgjidhur problemet.
 
-## Fit a variety of needs with unplugged and online tutorials
+## Përshtatni një larmi nevojash me udhëzime të online ose unplugged
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/stage/15/puzzle/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+Në gjetjen e aktivitetit të duhur për të gjithë në klasën tuaj, merrni parasysh si opsionet në internet ashtu edhe ato "nga priza" që nuk kërkojnë kompjuterë. Aktivitetet nga priza i lejojnë studentët të mësojnë me konceptet e shkencave kompjuterike. [ Ngjarja e Madhe ](https://studio.code.org/s/course1/lessons/15/levels/1) i vendos mësuesit në kontroll mbi veprimet e studentëve, duke lejuar një mundësi të shkëlqyeshme për ta përshtatur përmbajtjen me aftësitë e secilit student.
 
-For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students who are deaf or hard of hearing can participate fully in the online tutorials.
+Për studentët e tjerë, akomodimet e disponueshme në kompjuter mund t'i lejojnë ata të marrin pjesë më mirë sesa një zgjedhje pa kompjuter Për shembull, studentët që janë të shurdhër ose me veshtiresi ne te dëgjuar mund të marrin pjesë plotësisht në udhëzimet në internet.
 
-The most inclusive choice may also depend on whether you have an accessible computer lab or laptops.
+Zgjedhja më gjithëpërfshirëse mund të varet edhe nga fakti nëse keni një laborator kompjuteri ose laptopë të arritshëm.
 
 For example, do your students have reduced mobility or dexterity? If all your students have access to technology at your school, ask your students or tech teacher what accommodations your students typically use with the computers available.
 

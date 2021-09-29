@@ -1,4 +1,4 @@
 name 'TeacherCon Eval Q2'
 question 'How comfortable are you with teaching lessons where students do a majority of activities on computers?'
 answer 'Very Comfortable'
-answer 'Not Comfortable', weight: 1000, stage_name: 'Balancing Teachers and Tools'
+answer 'Not Comfortable', weight: 1000, lesson_name: 'Balancing Teachers and Tools'

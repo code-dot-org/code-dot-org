@@ -12,6 +12,8 @@
     "parent_level_id": 14729
   },
   "published": true,
-  "notes": "Taking this out of the artist level in which it was embedded"
+  "notes": "Taking this out of the artist level in which it was embedded",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

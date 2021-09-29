@@ -1,5 +1,5 @@
 /** @file Test the TouchSensor maker component which wraps Touchpad */
-import {expect} from '../../../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import TouchSensor from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/TouchSensor';

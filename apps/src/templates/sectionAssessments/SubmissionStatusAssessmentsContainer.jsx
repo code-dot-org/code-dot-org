@@ -31,20 +31,22 @@ const CSV_SUBMISSION_STATUS_HEADERS = [
 
 class SubmissionStatusAssessmentsContainer extends Component {
   static propTypes = {
+    onClickDownload: PropTypes.func.isRequired,
+    // from redux
     studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
     studentExportableData: PropTypes.arrayOf(studentExportableDataPropType)
   };
 
   render() {
-    const {studentExportableData} = this.props;
     return (
       <div>
         <div style={styles.buttonContainer}>
           <h2>{i18n.studentOverviewTableHeader()}</h2>
           <CSVLink
             filename="assessments-submission-status.csv"
-            data={studentExportableData}
+            data={this.props.studentExportableData}
             headers={CSV_SUBMISSION_STATUS_HEADERS}
+            onClick={this.props.onClickDownload}
           >
             <Button
               __useDeprecatedTag

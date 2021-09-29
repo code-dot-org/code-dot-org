@@ -29,8 +29,13 @@ import {Provider} from 'react-redux';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import _ from 'lodash';
+import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('LessonEditor', () => {
+  // Warnings allowed due to usage of deprecated  componentWillReceiveProps
+  // lifecycle method.
+  allowConsoleWarnings();
+
   let defaultProps, store, clock;
   beforeEach(() => {
     sinon.stub(utils, 'navigateToHref');
@@ -70,7 +75,7 @@ describe('LessonEditor', () => {
         courseVersionId: 1,
         scriptPath: '/s/my-script/',
         lessonPath: '/lessons/1',
-        scriptIsVisible: false,
+        unitIsLaunched: false,
         frameworks: []
       }
     };
@@ -130,7 +135,7 @@ describe('LessonEditor', () => {
 
   it('disables editing of lockable and has lesson plan for visible script', () => {
     let initialLessonDataCopy = _.cloneDeep(defaultProps.initialLessonData);
-    initialLessonDataCopy.scriptIsVisible = true;
+    initialLessonDataCopy.unitIsLaunched = true;
     const wrapper = createWrapper({initialLessonData: initialLessonDataCopy});
     expect(
       wrapper
@@ -222,7 +227,7 @@ describe('LessonEditor', () => {
 
     const saveBar = wrapper.find('SaveBar');
 
-    const saveAndKeepEditingButton = saveBar.find('button').at(0);
+    const saveAndKeepEditingButton = saveBar.find('button').at(1);
     expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
       .true;
     saveAndKeepEditingButton.simulate('click');
@@ -243,6 +248,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     //check that last saved message is showing
     expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+    server.restore();
   });
 
   it('shows error when save and keep editing has error saving', () => {
@@ -259,7 +265,7 @@ describe('LessonEditor', () => {
 
     const saveBar = wrapper.find('SaveBar');
 
-    const saveAndKeepEditingButton = saveBar.find('button').at(0);
+    const saveAndKeepEditingButton = saveBar.find('button').at(1);
     expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
       .true;
     saveAndKeepEditingButton.simulate('click');
@@ -295,7 +301,7 @@ describe('LessonEditor', () => {
 
     const saveBar = wrapper.find('SaveBar');
 
-    const saveAndCloseButton = saveBar.find('button').at(1);
+    const saveAndCloseButton = saveBar.find('button').at(2);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
     saveAndCloseButton.simulate('click');
 
@@ -326,7 +332,7 @@ describe('LessonEditor', () => {
 
     const saveBar = wrapper.find('SaveBar');
 
-    const saveAndCloseButton = saveBar.find('button').at(1);
+    const saveAndCloseButton = saveBar.find('button').at(2);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
     saveAndCloseButton.simulate('click');
 
@@ -358,7 +364,7 @@ describe('LessonEditor', () => {
 
     const saveBar = wrapper.find('SaveBar');
 
-    const saveAndCloseButton = saveBar.find('button').at(1);
+    const saveAndCloseButton = saveBar.find('button').at(2);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
     saveAndCloseButton.simulate('click');
 

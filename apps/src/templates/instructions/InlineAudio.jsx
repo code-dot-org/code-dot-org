@@ -100,7 +100,7 @@ class InlineAudio extends React.Component {
     }
   }
 
-  componentWillUpdate(nextProps) {
+  UNSAFE_componentWillUpdate(nextProps) {
     const audioTargetWillChange =
       this.props.src !== nextProps.src ||
       this.props.message !== nextProps.message;

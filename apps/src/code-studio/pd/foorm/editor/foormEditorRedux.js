@@ -1,5 +1,6 @@
 const SET_QUESTIONS = 'foormEditor/SET_QUESTIONS';
 const SET_HAS_JSON_ERROR = 'foormEditor/SET_HAS_JSON_ERROR';
+const SET_HAS_LINT_ERROR = 'foormEditor/SET_HAS_LINT_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
 const SET_LIBRARY_QUESTION_DATA = 'foormEditor/SET_LIBRARY_QUESTION_DATA';
 const SET_LIBRARY_DATA = 'foormEditor/SET_LIBRARY_DATA';
@@ -45,6 +46,11 @@ export const setLibraryData = libraryData => ({
 export const setHasJSONError = hasJSONError => ({
   type: SET_HAS_JSON_ERROR,
   hasJSONError
+});
+
+export const setHasLintError = hasLintError => ({
+  type: SET_HAS_LINT_ERROR,
+  hasLintError
 });
 
 // "Entities" represent metadata (ID, name, etc.) about the forms or libraries
@@ -93,10 +99,15 @@ const initialState = {
   // State relevant for both Form and Library editors
   questions: '',
   hasJSONError: false,
+  hasLintError: false,
   fetchableEntities: [],
   saveError: null,
   lastSaved: null,
   lastSavedQuestions: '',
+  // Represents either form ID or library question ID -- our database ID for the thing being edited.
+  // Needed for validation of library questions.
+  // to do would be to move references to formId and libraryQuestionId to use this.
+  foormEntityId: null,
   // State specific to Foorm Form editor
   formId: null,
   formName: null,
@@ -124,6 +135,12 @@ export default function foormEditorRedux(state = initialState, action) {
       hasJSONError: action.hasJSONError
     };
   }
+  if (action.type === SET_HAS_LINT_ERROR) {
+    return {
+      ...state,
+      hasLintError: action.hasLintError
+    };
+  }
   if (action.type === SET_FORM_DATA) {
     return {
       ...state,
@@ -131,7 +148,8 @@ export default function foormEditorRedux(state = initialState, action) {
       isFormPublished: action.formData['published'],
       formName: action.formData['name'],
       formVersion: action.formData['version'],
-      formId: action.formData['id']
+      formId: action.formData['id'],
+      foormEntityId: action.formData['id']
     };
   }
   if (action.type === SET_LIBRARY_QUESTION_DATA) {
@@ -139,7 +157,8 @@ export default function foormEditorRedux(state = initialState, action) {
       ...state,
       questions: action.libraryQuestionData['question'],
       libraryQuestionName: action.libraryQuestionData['name'],
-      libraryQuestionId: action.libraryQuestionData['id']
+      libraryQuestionId: action.libraryQuestionData['id'],
+      foormEntityId: action.libraryQuestionData['id']
     };
   }
   if (action.type === SET_LIBRARY_DATA) {

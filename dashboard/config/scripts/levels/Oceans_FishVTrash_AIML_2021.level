@@ -1,0 +1,14 @@
+<Fish>
+  <config><![CDATA[{
+  "game_id": 66,
+  "created_at": "2021-05-12T19:15:42.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "mode": "fishvtrash",
+    "parent_level_id": 4
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</Fish>

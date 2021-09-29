@@ -10,10 +10,10 @@
       %a.btn.btn-large.btn-primary.nextPageButton
         =t('next_page')
     - elsif local_assigns[:continue_button]
-      %a.btn.btn-large.btn-primary.next-stage.submitButton
+      %a.btn.btn-large.btn-primary.next-lesson.submitButton
         =t('continue')
     - else
-      %a.btn.btn-large.btn-primary.next-stage.submitButton
+      %a.btn.btn-large.btn-primary.next-lesson.submitButton
         =t('submit')
       - if @level.properties['submittable']
         %a.btn.btn-large.btn-primary.unsubmitButton{style: 'display: none'}

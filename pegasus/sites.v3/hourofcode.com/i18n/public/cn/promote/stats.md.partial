@@ -16,7 +16,7 @@ nav: promote_nav
 
 ## 在简讯中使用这则导语
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### 将计算机科学带到你的学校。从《编程一小时》开始。
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. 但只有不到一半的学校有在讲授计算机科学！ 好消息是，我们正在着手改变现状。 如果你以前听说过《编程一小时》，你应该知道它创造了历史。 1亿名学生正通过编程一小时活动入门计算机科学并体验着其中的乐趣。
 
@@ -48,7 +48,7 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 <a id="infographics"></a>
 
-## Infographics
+## 图表
 
 {{ stats_carousel }}
 

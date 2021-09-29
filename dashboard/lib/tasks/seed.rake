@@ -93,7 +93,12 @@ namespace :seed do
     'coursec-2019',
     'coursee-2019',
     'coursea-2020',
+    'csd1-2019',
+    'csd2-2019',
     'csd3-2019',
+    'csd4-2019',
+    'csd5-2019',
+    'csd6-2019',
     'csp1-2017',
     'csp2-2017',
     'csp3-2017',
@@ -171,7 +176,6 @@ namespace :seed do
     script_files = opts[:script_files] || SCRIPTS_GLOB
     begin
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
-      LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
       _, custom_i18n = Script.setup(custom_scripts, show_progress: Rake.application.options.trace)
       Script.merge_and_write_i18n(custom_i18n)
     rescue
@@ -183,6 +187,7 @@ namespace :seed do
   SCRIPTS_DEPENDENCIES = [
     :environment,
     :games,
+    :deprecated_blockly_levels,
     :custom_levels,
     :dsls,
     :programming_expressions,
@@ -225,7 +230,7 @@ namespace :seed do
 
   timed_task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2018 csp-2019 csp-2020).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2018 csd-2019 csp-2019 csp-2020).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
@@ -286,6 +291,10 @@ namespace :seed do
   timed_task custom_levels: :environment do
     level_name = ENV['LEVEL_NAME']
     LevelLoader.load_custom_levels(level_name)
+  end
+
+  timed_task deprecated_blockly_levels: :environment do
+    Services::DeprecatedLevelLoader.load_blockly_levels
   end
 
   # Seeds the data in callouts
@@ -391,6 +400,36 @@ namespace :seed do
     SecretPicture.setup
   end
 
+  timed_task restricted_section: :environment do
+    name = "Fake Section Cap Teacher"
+    email = "Fake-User-Email-Created-#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+    password = "#{name}password"
+    user = User.create!(
+      {
+        name: name,
+        email: email,
+        password: password,
+        user_type: "teacher",
+        age: "21+"
+      }
+    )
+
+    section = Section.create!(name: 'Section Capacity Test', user: user)
+
+    500.times do |i|
+      follower = User.create(
+        {
+          name: "Fake Section Cap Student #{i}",
+          email: "#{i}#{email}",
+          password: password,
+          user_type: "student",
+          age: "14"
+        }
+      )
+      Follower.create!(section_id: section.id, student_user_id: follower.id)
+    end
+  end
+
   timed_task :cached_ui_test do
     HASH_FILE = 'db/ui_test_data.hash'
 
@@ -414,7 +453,7 @@ namespace :seed do
     end
 
     puts 'Cache mismatch, running full ui test seed'
-    Rake::Task['seed:ui_test'].invoke
+    RakeUtils.rake_stream_output 'seed:ui_test'
     File.write(HASH_FILE, current_hash)
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end

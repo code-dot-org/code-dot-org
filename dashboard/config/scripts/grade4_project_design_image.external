@@ -1,9 +1,0 @@
-name 'grade4_project_design_image'
-title 'title'
-description 'description here'
-href 'path/to/html/in/asset/folder'
-markdown <<MARKDOWN
-Source:
-<a href="https://www.teachengineering.org/k12engineering/designprocess">https://www.teachengineering.org/k12engineering/designprocess</a>
-<img src="https://images.code.org/a8c63e80e3bf54065575c5f10f06db15-image-1470239719553.png" width=500>
-MARKDOWN

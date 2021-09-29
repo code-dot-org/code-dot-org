@@ -2,14 +2,33 @@ name 'OPD-K5 sprite lab_2021'
 title 'Sprite Lab'
 description 'description here'
 markdown <<MARKDOWN
-# Overview: Sprite Lab
+# Introduction to Sequencing with Sprites
 
-<img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png" class="level-image">
+<img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 30px 30px;">
 
-## Advanced coding concept: Sprites and behaviors in Sprite Lab
-- Become familiar with a new coding environment: Sprite Lab
-- Practice creating Sprites
-- Practice coding behaviors for different Sprites
+## Course Lesson Objective
 
-![]()
+After completing Lesson 8 you will be able to:
+
+* define sprite and (sprite) behavior,
+* add a sprite to the screen, 
+* and change a sprite's behavior.
+
+## CS Concepts
+
+A **sprite** is a graphic character on the screen with properties that describe its location, movement, and look.
+
+A **behavior** is an action that a sprite performs continuously until it's told to stop.
+
+### Lesson Plan
+
+* Read the **context-setting** lesson plan, <a href="https://studio.code.org/s/coursee-2021/lessons/1" target="blank">Course E - Lesson 1:  Follow the Algorithm</a> from Course E that first introduces students to sprites.
+
+* Also, preview the <a href="https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview" target="blank">teacher slides</a> that accompany Course E - Lesson 1:  Follow the Algorithm.
+
+**Note:**  The lesson plan and teacher slides each open in a new window.  Be sure to return to this online course to continue with lessons.
+
+
+
+
 MARKDOWN

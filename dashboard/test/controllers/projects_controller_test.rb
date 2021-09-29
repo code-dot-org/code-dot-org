@@ -19,6 +19,16 @@ class ProjectsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    # Create placeholder levels for the standalone project pages.
+    # Note that all this does is create blank levels with appropriate names; it
+    # doesn't set them up as actual project template levels, much less give
+    # them specific content.
+    ProjectsController::STANDALONE_PROJECTS.each do |type, config|
+      next if Level.where(name: config[:name]).exists?
+      factory = FactoryGirl.factories.registered?(type) ? type : :level
+      create(factory, name: config[:name])
+    end
+
     @driver = create :user
     @navigator = create :user
     @section = create :section
@@ -59,14 +69,14 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "index: redirect to '/' if user is admin" do
+  test "index: redirect admins to root" do
     sign_in create(:admin)
 
     get :index
-    assert_redirected_to '/'
+    assert_redirected_to root_path
 
     get :index, params: {tab_name: 'libraries'}
-    assert_redirected_to '/'
+    assert_redirected_to root_path
 
     # Don't redirect if we're already on /projects/public
     get :index, params: {tab_name: 'public'}
@@ -257,16 +267,16 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in_with_request create(:admin)
 
     get :index
-    assert_redirected_to '/'
+    assert_redirected_to root_path
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}
-      assert_redirected_to '/'
+      assert_redirected_to root_path
     end
 
     %w(applab gamelab).each do |lab|
       get :show, params: {key: lab, share: true, channel_id: 'fake_channel_id'}
-      assert_redirected_to '/'
+      assert_redirected_to root_path
     end
   end
 

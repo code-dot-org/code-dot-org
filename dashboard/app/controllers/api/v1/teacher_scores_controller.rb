@@ -3,15 +3,15 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
   authorize_resource
 
   # POST /teacher_scores
-  def score_stages_for_section
+  def score_lessons_for_section
     section = Section.find(params[:section_id])
     if section.user_id == current_user.id
       TeacherScore.transaction do
-        params[:stage_scores].each do |stage_score|
-          TeacherScore.score_stage_for_section(
+        params[:lesson_scores].each do |lesson_score|
+          TeacherScore.score_lesson_for_section(
             params[:section_id],
-            stage_score[:stage_id],
-            stage_score[:score]
+            lesson_score[:lesson_id],
+            lesson_score[:score]
           )
         end
         head :no_content
@@ -42,6 +42,6 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
   # Never trust parameters from the scary internet, only allow the following
   # list through.
   def teacher_score_params
-    params.require(:teacher_score).permit(:user_level_id, :score, :teacher_id, :section_id, :stage_id, :script_id)
+    params.require(:teacher_score).permit(:user_level_id, :score, :teacher_id, :section_id, :lesson_id, :script_id)
   end
 end

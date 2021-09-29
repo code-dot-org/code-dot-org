@@ -34,7 +34,7 @@ import sectionAssessments, {
   notStartedFakeTimestamp
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
-import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 
 describe('sectionAssessmentsRedux', () => {
   const initialState = sectionAssessments(undefined, {});
@@ -87,7 +87,7 @@ describe('sectionAssessmentsRedux', () => {
   describe('setSurveys', () => {
     it('associates the assessment data to the correct script', () => {
       const scriptId = 2;
-      const surveyData = [{stage_name: 'a name', levelgroup_results: []}];
+      const surveyData = [{lesson_name: 'a name', levelgroup_results: []}];
       const action = setSurveys(scriptId, surveyData);
       const nextState = sectionAssessments(initialState, action);
       const actualSurveyData = nextState.surveysByScript[scriptId];
@@ -131,8 +131,8 @@ describe('sectionAssessmentsRedux', () => {
             levelNum: '5',
             performance: 'performanceLevel3',
             performanceLevelDetails: '3',
-            stageName: 'Lesson 5: Creating Functions',
-            stageNum: '5',
+            lessonName: 'Lesson 5: Creating Functions',
+            lessonNum: '5',
             studentName: 'Student',
             timestamp: '03/20/19 at 02:34:22'
           },
@@ -143,8 +143,8 @@ describe('sectionAssessmentsRedux', () => {
             levelNum: '4',
             performance: 'performanceLevel2',
             performanceLevelDetails: 'My meets value',
-            stageName: 'Lesson 4: Using Simple Commands',
-            stageNum: '4',
+            lessonName: 'Lesson 4: Using Simple Commands',
+            lessonNum: '4',
             studentName: 'Student',
             timestamp: '03/21/19 at 11:54:17'
           }
@@ -200,7 +200,7 @@ describe('sectionAssessmentsRedux', () => {
   describe('getCurrentScriptAssessmentList', () => {
     it('gets a list of assessments - script is not csd or csp', () => {
       const rootState = {
-        scriptSelection: {
+        unitSelection: {
           scriptId: 123,
           validScripts: [{id: 123, script_name: 'learn-cs'}]
         },
@@ -218,7 +218,7 @@ describe('sectionAssessmentsRedux', () => {
           },
           surveysByScript: {
             123: {
-              9: {stage_name: 'Survey 9'}
+              9: {lesson_name: 'Survey 9'}
             }
           }
         }
@@ -232,7 +232,7 @@ describe('sectionAssessmentsRedux', () => {
 
     it('gets a list of assessments - script is csd or csp', () => {
       const rootState = {
-        scriptSelection: {
+        unitSelection: {
           scriptId: 123,
           validScripts: [{id: 123, script_name: 'csp8-2011'}]
         },
@@ -250,7 +250,7 @@ describe('sectionAssessmentsRedux', () => {
           },
           surveysByScript: {
             123: {
-              9: {stage_name: 'Survey 9'}
+              9: {lesson_name: 'Survey 9'}
             }
           }
         }
@@ -291,7 +291,7 @@ describe('sectionAssessmentsRedux', () => {
     beforeEach(() => {
       rootState = {
         sectionAssessments: initialState,
-        scriptSelection: {
+        unitSelection: {
           scriptId: 3
         }
       };
@@ -636,7 +636,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: [
                     {
                       type: 'free_response',
@@ -687,7 +687,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: [
                     {
                       type: 'multi',
@@ -745,7 +745,7 @@ describe('sectionAssessmentsRedux', () => {
       it('returns true when the current script is CSD', () => {
         const state = {
           ...rootState,
-          scriptSelection: {
+          unitSelection: {
             scriptId: 2,
             validScripts: [{id: 2, script_name: 'csd8-2011'}]
           }
@@ -757,7 +757,7 @@ describe('sectionAssessmentsRedux', () => {
       it('returns false when the current script is not CSD', () => {
         const state = {
           ...rootState,
-          scriptSelection: {
+          unitSelection: {
             scriptId: 2,
             validScripts: [{id: 2, script_name: 'learn-cs'}]
           }
@@ -771,7 +771,7 @@ describe('sectionAssessmentsRedux', () => {
       it('returns true when the current script is CSD or CSP', () => {
         const state = {
           ...rootState,
-          scriptSelection: {
+          unitSelection: {
             scriptId: 2,
             validScripts: [{id: 2, script_name: 'csp8-2011'}]
           }
@@ -783,7 +783,7 @@ describe('sectionAssessmentsRedux', () => {
       it('returns false when the current script is not CSD or CSP', () => {
         const state = {
           ...rootState,
-          scriptSelection: {
+          unitSelection: {
             scriptId: 2,
             validScripts: [{id: 2, script_name: 'learn-cs'}]
           }
@@ -1280,7 +1280,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: [
                     {
                       type: 'multi',
@@ -1318,7 +1318,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: []
                 }
               }
@@ -1343,7 +1343,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: [
                     {
                       type: 'multi',
@@ -1373,28 +1373,28 @@ describe('sectionAssessmentsRedux', () => {
             numberAnswered: 1,
             questionNumber: 1,
             questionText: 'question1',
-            stage: 'name'
+            lesson: 'name'
           },
           {
             answer: 'disagree',
             numberAnswered: 0,
             questionNumber: 1,
             questionText: 'question1',
-            stage: 'name'
+            lesson: 'name'
           },
           {
             answer: 'agree',
             numberAnswered: 0,
             questionNumber: 2,
             questionText: 'question2',
-            stage: 'name'
+            lesson: 'name'
           },
           {
             answer: 'disagree',
             numberAnswered: 1,
             questionNumber: 2,
             questionText: 'question2',
-            stage: 'name'
+            lesson: 'name'
           }
         ]);
       });
@@ -1431,7 +1431,7 @@ describe('sectionAssessmentsRedux', () => {
                           type: 'Multi'
                         }
                       ],
-                      stage: 'stage 1',
+                      lesson: 'lesson 1',
                       timestamp: '1'
                     }
                   }
@@ -1449,7 +1449,7 @@ describe('sectionAssessmentsRedux', () => {
                           type: 'Multi'
                         }
                       ],
-                      stage: 'stage 1',
+                      lesson: 'lesson 1',
                       timestamp: '1'
                     }
                   }
@@ -1465,7 +1465,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 1,
             response: 'A',
-            stage: 'stage 1',
+            lesson: 'lesson 1',
             studentName: 'Saira',
             timestamp: '1'
           },
@@ -1473,7 +1473,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 2,
             response: 'B',
-            stage: 'stage 1',
+            lesson: 'lesson 1',
             studentName: 'Saira',
             timestamp: '1'
           },
@@ -1481,7 +1481,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'unsubmitted',
             question: 3,
             response: '',
-            stage: 'stage 1',
+            lesson: 'lesson 1',
             studentName: 'Saira',
             timestamp: '1'
           },
@@ -1489,7 +1489,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 1,
             response: 'A',
-            stage: 'stage 1',
+            lesson: 'lesson 1',
             studentName: 'Rebecca',
             timestamp: '1'
           },
@@ -1497,7 +1497,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 2,
             response: 'B',
-            stage: 'stage 1',
+            lesson: 'lesson 1',
             studentName: 'Rebecca',
             timestamp: '1'
           },
@@ -1505,7 +1505,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'incorrect',
             question: 3,
             response: 'B',
-            stage: 'stage 1',
+            lesson: 'lesson 1',
             studentName: 'Rebecca',
             timestamp: '1'
           }
@@ -1517,7 +1517,7 @@ describe('sectionAssessmentsRedux', () => {
       it('returns an array of objects', () => {
         const stateWithFeedback = {
           ...rootState,
-          scriptSelection: {
+          unitSelection: {
             scriptId: 2
           },
           sectionAssessments: {
@@ -1526,8 +1526,8 @@ describe('sectionAssessmentsRedux', () => {
               2: {
                 13: {
                   studentName: 'Mike',
-                  stageNum: '4',
-                  stageName: 'Loops',
+                  lessonNum: '4',
+                  lessonName: 'Loops',
                   levelNum: '7',
                   keyConcept: 'You should be learning about loops',
                   performanceLevelDetails: 'A loop is in the code',
@@ -1537,8 +1537,8 @@ describe('sectionAssessmentsRedux', () => {
                 },
                 40: {
                   studentName: 'Anne',
-                  stageNum: '8',
-                  stageName: 'Functions',
+                  lessonNum: '8',
+                  lessonName: 'Functions',
                   levelNum: '10',
                   keyConcept: '',
                   performanceLevelDetails: '',
@@ -1548,8 +1548,8 @@ describe('sectionAssessmentsRedux', () => {
                 },
                 52: {
                   studentName: 'Mike',
-                  stageNum: '3',
-                  stageName: 'Variables',
+                  lessonNum: '3',
+                  lessonName: 'Variables',
                   levelNum: '3',
                   keyConcept: 'Use variables to help and make coding better.',
                   performanceLevelDetails:
@@ -1561,8 +1561,8 @@ describe('sectionAssessmentsRedux', () => {
                 },
                 61: {
                   studentName: 'Anne',
-                  stageNum: '3',
-                  stageName: 'Variables',
+                  lessonNum: '3',
+                  lessonName: 'Variables',
                   levelNum: '3',
                   keyConcept: 'Use variables to help and make coding better.',
                   performanceLevelDetails: 'You uses no variables',
@@ -1579,8 +1579,8 @@ describe('sectionAssessmentsRedux', () => {
         assert.deepEqual(csvData, [
           {
             studentName: 'Mike',
-            stageNum: '4',
-            stageName: 'Loops',
+            lessonNum: '4',
+            lessonName: 'Loops',
             levelNum: '7',
             keyConcept: 'You should be learning about loops',
             performanceLevelDetails: 'A loop is in the code',
@@ -1590,8 +1590,8 @@ describe('sectionAssessmentsRedux', () => {
           },
           {
             studentName: 'Anne',
-            stageNum: '8',
-            stageName: 'Functions',
+            lessonNum: '8',
+            lessonName: 'Functions',
             levelNum: '10',
             keyConcept: '',
             performanceLevelDetails: '',
@@ -1601,8 +1601,8 @@ describe('sectionAssessmentsRedux', () => {
           },
           {
             studentName: 'Mike',
-            stageNum: '3',
-            stageName: 'Variables',
+            lessonNum: '3',
+            lessonName: 'Variables',
             levelNum: '3',
             keyConcept: 'Use variables to help and make coding better.',
             performanceLevelDetails:
@@ -1613,8 +1613,8 @@ describe('sectionAssessmentsRedux', () => {
           },
           {
             studentName: 'Anne',
-            stageNum: '3',
-            stageName: 'Variables',
+            lessonNum: '3',
+            lessonName: 'Variables',
             levelNum: '3',
             keyConcept: 'Use variables to help and make coding better.',
             performanceLevelDetails: 'You uses no variables',
@@ -1765,7 +1765,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: [
                     {
                       question: 'What is a variable?',
@@ -1910,7 +1910,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name'
+                  lesson_name: 'name'
                 }
               }
             }

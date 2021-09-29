@@ -38,14 +38,18 @@ module.exports = function(grunt) {
 // Auto-generated from Gruntfile.js
 import '@babel/polyfill';
 import 'whatwg-fetch';
-import Adapter from 'enzyme-adapter-react-15.4';
+import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
-import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/throwOnConsole';
+import { throwOnConsoleErrorsEverywhere } from './util/throwOnConsole';
 ${loadContext}
 describe('entry tests', () => {
   throwOnConsoleErrorsEverywhere();
-  throwOnConsoleWarningsEverywhere();
+
+  // TODO: Add warnings back once we've run the rename-unsafe-lifecycles codemod.
+  // https://codedotorg.atlassian.net/browse/XTEAM-377
+  // throwOnConsoleWarningsEverywhere();
+
   ${runTests}
 });
 `;
@@ -83,6 +87,7 @@ describe('entry tests', () => {
     'jigsaw',
     'maze',
     'netsim',
+    'poetry',
     'studio',
     'turtle',
     'weblab'
@@ -337,6 +342,7 @@ describe('entry tests', () => {
           ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
           ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
           ['build/package/css/lessons.css', 'style/curriculum/lessons.scss'],
+          ['build/package/css/levels.css', 'style/curriculum/levels.scss'],
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
             'build/package/css/levelbuilder.css',
@@ -569,7 +575,8 @@ describe('entry tests', () => {
     'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
     'scripts/code': './src/sites/studio/pages/scripts/code.js',
     'scripts/standards': './src/sites/studio/pages/scripts/standards.js',
-    'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
+    'scripts/lesson_extras':
+      './src/sites/studio/pages/scripts/lesson_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
     'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
     'teacher_dashboard/show':
@@ -626,13 +633,19 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'programming_expressions/new':
+      './src/sites/studio/pages/programming_expressions/new.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js',
     'sprite_management/sprite_upload':
-      './src/sites/studio/pages/sprite_management/sprite_upload.js'
+      './src/sites/studio/pages/sprite_management/sprite_upload.js',
+    'sprite_management/sprite_management_directory':
+      './src/sites/studio/pages/sprite_management/sprite_management_directory.js',
+    'sprite_management/default_sprites_editor':
+      './src/sites/studio/pages/sprite_management/default_sprites_editor.js'
   };
 
   var pegasusEntries = {

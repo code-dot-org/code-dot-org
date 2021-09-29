@@ -8,34 +8,6 @@ import FieldGroup from '../form_components/FieldGroup';
 import ButtonList from '../form_components/ButtonList';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  error: {
-    color: color.red
-  },
-  miniContactContainer: {
-    backgroundColor: color.lightest_cyan,
-    padding: 20,
-    borderRadius: 10,
-    textAlign: 'left'
-  },
-  modalHeader: {
-    padding: '0 15px 0 0',
-    height: 30,
-    borderBottom: 'none'
-  },
-  modalBody: {
-    padding: '0 15px 15px 15px',
-    fontSize: 14,
-    lineHeight: '22px'
-  },
-  intro: {
-    paddingBottom: 10
-  },
-  select: {
-    maxWidth: 500
-  }
-};
-
 const ROLES = [
   'Teacher',
   'Librarian',
@@ -306,3 +278,31 @@ export class RegionalPartnerMiniContactPopupLink extends React.Component {
     );
   }
 }
+
+const styles = {
+  error: {
+    color: color.red
+  },
+  miniContactContainer: {
+    backgroundColor: color.lightest_cyan,
+    padding: 20,
+    borderRadius: 10,
+    textAlign: 'left'
+  },
+  modalHeader: {
+    padding: '0 15px 0 0',
+    height: 30,
+    borderBottom: 'none'
+  },
+  modalBody: {
+    padding: '0 15px 15px 15px',
+    fontSize: 14,
+    lineHeight: '22px'
+  },
+  intro: {
+    paddingBottom: 10
+  },
+  select: {
+    maxWidth: 500
+  }
+};

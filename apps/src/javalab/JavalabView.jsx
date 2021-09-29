@@ -1,34 +1,54 @@
 import React from 'react';
-import JavalabConsole from './JavalabConsole';
-import {connect} from 'react-redux';
-import JavalabEditor from './JavalabEditor';
-import JavalabSettings from './JavalabSettings';
-import {appendOutputLog, setIsDarkMode} from './javalabRedux';
 import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
+import JavalabConsole from './JavalabConsole';
+import JavalabEditor from './JavalabEditor';
+import JavalabPanels from './JavalabPanels';
+import {appendOutputLog, setIsDarkMode, setIsRunning} from './javalabRedux';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
-import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
-import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import TopInstructions, {
+  TabType
+} from '@cdo/apps/templates/instructions/TopInstructions';
+import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
+import ControlButtons from './ControlButtons';
+import {CsaViewMode} from './constants';
+import styleConstants from '../styleConstants';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 class JavalabView extends React.Component {
   static propTypes = {
-    handleVersionHistory: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired,
     onRun: PropTypes.func.isRequired,
+    onStop: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
     onCommitCode: PropTypes.func.isRequired,
     onInputMessage: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
-    visualization: PropTypes.object.isRequired,
+    visualization: PropTypes.object,
+    viewMode: PropTypes.string.isRequired,
+    isProjectTemplateLevel: PropTypes.bool.isRequired,
+    handleClearPuzzle: PropTypes.func.isRequired,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    disableFinishButton: PropTypes.bool,
     isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
     setIsDarkMode: PropTypes.func,
-    channelId: PropTypes.string
+    channelId: PropTypes.string,
+    isEditingStartSources: PropTypes.bool,
+    isRunning: PropTypes.bool,
+    setIsRunning: PropTypes.func,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
+    longInstructions: PropTypes.string,
+    awaitingContainedResponse: PropTypes.bool,
+    isSubmittable: PropTypes.bool,
+    isSubmitted: PropTypes.bool
+  };
+
+  state = {
+    isTesting: false
   };
 
   componentDidMount() {
@@ -42,108 +62,160 @@ class JavalabView extends React.Component {
 
   // Sends redux call to update dark mode, which handles user preferences
   renderSettings = () => {
-    const {isDarkMode} = this.props;
+    const {isDarkMode, setIsDarkMode} = this.props;
     return [
-      <a
-        onClick={() => this.props.setIsDarkMode(!isDarkMode)}
-        key="theme-setting"
-      >
+      <a onClick={() => setIsDarkMode(!isDarkMode)} key="theme-setting">
         Switch to {isDarkMode ? 'light mode' : 'dark mode'}
       </a>
     ];
   };
 
-  getButtonStyles = isSettingsButton => {
-    const {isDarkMode} = this.props;
-    if (isDarkMode) {
-      return styles.singleButton;
-    } else if (isSettingsButton) {
-      return {...styles.singleButton, backgroundColor: color.orange};
+  // This controls the 'run' button state
+  toggleRun = () => {
+    const toggledIsRunning = !this.props.isRunning;
+    this.props.setIsRunning(toggledIsRunning);
+    if (toggledIsRunning) {
+      this.props.onRun();
     } else {
-      return {...styles.singleButton, backgroundColor: color.cyan};
+      this.props.onStop();
     }
+  };
+
+  // This controls the 'test' button state, but running/stopping tests
+  // is not yet implemented and will need to be added here.
+  toggleTest = () => {
+    this.setState(
+      state => ({isTesting: !state.isTesting}),
+      () => {
+        // TODO: Run/stop tests.
+      }
+    );
+  };
+
+  isLeftSideVisible = () => {
+    // It's possible that a console level without instructions won't have
+    // anything to show on the left side.
+    return (
+      this.props.viewMode !== CsaViewMode.CONSOLE ||
+      !!this.props.longInstructions
+    );
+  };
+
+  renderVisualization = width => {
+    const {visualization} = this.props;
+    if (visualization) {
+      return (
+        <div id="visualization-container" style={styles.preview}>
+          {visualization}
+        </div>
+      );
+    }
+
+    // For levels without a visualization, still create a div so that the
+    // updateLayout function can adjust the width of the entire left side.
+    return (
+      <div
+        id="visualization"
+        style={{
+          ...styles.visualizationPlaceholder,
+          width: width + styleConstants['resize-bar-width']
+        }}
+      >
+        &nbsp;
+      </div>
+    );
   };
 
   render() {
     const {
       isDarkMode,
+      viewMode,
+      visualization,
       onCommitCode,
-      onContinue,
-      onRun,
       onInputMessage,
-      handleVersionHistory,
-      visualization
+      onContinue,
+      isEditingStartSources,
+      isRunning,
+      showProjectTemplateWorkspaceIcon,
+      disableFinishButton,
+      awaitingContainedResponse,
+      isSubmittable,
+      isSubmitted,
+      isProjectTemplateLevel,
+      handleClearPuzzle
     } = this.props;
+    const {isTesting} = this.state;
+
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
     } else {
       document.body.style.backgroundColor = color.background_gray;
     }
+
     return (
       <StudioAppWrapper>
-        <div style={styles.javalab}>
-          <div
-            id="visualizationColumn"
-            className="responsive"
-            style={styles.instructionsAndPreview}
-          >
-            <TopInstructions mainStyle={styles.instructions} standalone />
-            <div style={styles.preview}>{visualization}</div>
-          </div>
-          <VisualizationResizeBar />
-          <div
-            style={{
-              ...styles.editorAndConsole,
-              color: isDarkMode ? color.white : color.black
-            }}
-            className="editor-column"
-          >
-            <JavalabEditor
-              onCommitCode={onCommitCode}
-              handleVersionHistory={handleVersionHistory}
-            />
-            <div style={styles.consoleAndButtons}>
-              <div style={styles.buttons}>
-                <button
-                  type="button"
-                  style={this.getButtonStyles(false)}
-                  onClick={() => {}}
-                >
-                  <FontAwesome icon="stop" className="fa-2x" />
-                  <br />
-                  Stop
-                </button>
-                <button
-                  type="button"
-                  style={this.getButtonStyles(false)}
-                  onClick={onContinue}
-                >
-                  <FontAwesome icon="check" className="fa-2x" />
-                  <br />
-                  Continue
-                </button>
-              </div>
-              <div style={styles.buttons}>
-                <JavalabSettings
-                  style={this.getButtonStyles(true /* isSettingsButton */)}
-                >
-                  {this.renderSettings()}
-                </JavalabSettings>
-                <button
-                  type="button"
-                  style={this.getButtonStyles(false)}
-                  onClick={onRun}
-                >
-                  <FontAwesome icon="play" className="fa-2x" />
-                  <br />
-                  Run
-                </button>
-              </div>
-              <div style={styles.consoleStyle}>
-                <JavalabConsole onInputMessage={onInputMessage} />
-              </div>
-            </div>
-          </div>
+        <div
+          style={{
+            ...styles.javalab
+          }}
+        >
+          <JavalabPanels
+            isLeftSideVisible={this.isLeftSideVisible()}
+            viewMode={viewMode}
+            visualization={visualization}
+            topLeftPanel={height => (
+              <TopInstructions
+                mainStyle={styles.instructions}
+                standalone
+                displayDocumentationTab={false}
+                displayReviewTab
+                initialSelectedTab={
+                  queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true'
+                    ? TabType.REVIEW
+                    : null
+                }
+                explicitHeight={height}
+                resizable={false}
+              />
+            )}
+            bottomLeftPanel={this.renderVisualization}
+            topRightPanel={height => (
+              <JavalabEditor
+                onCommitCode={onCommitCode}
+                showProjectTemplateWorkspaceIcon={
+                  showProjectTemplateWorkspaceIcon
+                }
+                height={height}
+                isProjectTemplateLevel={isProjectTemplateLevel}
+                handleClearPuzzle={handleClearPuzzle}
+              />
+            )}
+            bottomRightPanel={() => (
+              <JavalabConsole
+                onInputMessage={onInputMessage}
+                style={{
+                  ...styles.consoleParent,
+                  ...(!this.isLeftSideVisible() && {paddingBottom: 40})
+                }}
+                bottomRow={
+                  <ControlButtons
+                    isRunning={isRunning}
+                    isTesting={isTesting}
+                    toggleRun={this.toggleRun}
+                    toggleTest={this.toggleTest}
+                    isEditingStartSources={isEditingStartSources}
+                    disableFinishButton={disableFinishButton}
+                    disableRunButtons={awaitingContainedResponse}
+                    onContinue={() => onContinue(isSubmittable)}
+                    renderSettings={this.renderSettings}
+                    showTestButton={false}
+                    isSubmittable={isSubmittable}
+                    isSubmitted={isSubmitted}
+                  />
+                }
+              />
+            )}
+          />
         </div>
       </StudioAppWrapper>
     );
@@ -151,14 +223,6 @@ class JavalabView extends React.Component {
 }
 
 const styles = {
-  instructionsAndPreview: {
-    width: '100%',
-    position: 'absolute',
-    marginRight: 15,
-    color: color.black,
-    right: '15px',
-    top: '15px'
-  },
   instructions: {
     width: '100%',
     position: 'relative',
@@ -166,44 +230,38 @@ const styles = {
     color: color.black,
     left: 0
   },
-  editorAndConsole: {
-    position: 'absolute',
-    right: '15px',
-    marginLeft: '15px'
+  consoleParent: {
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
+    flexGrow: 1,
+    overflowY: 'hidden'
+  },
+  visualizationPlaceholder: {
+    height: 1,
+    maxWidth: undefined,
+    maxHeight: undefined,
+    marginTop: styleConstants['resize-bar-width']
   },
   preview: {
-    backgroundColor: color.light_gray,
-    height: '200px',
-    marginTop: '13px'
+    marginTop: styleConstants['resize-bar-width']
   },
   javalab: {
     display: 'flex',
-    margin: 15
-  },
-  consoleAndButtons: {
-    marginTop: 15,
-    display: 'flex'
-  },
-  consoleStyle: {
-    flexGrow: 1
-  },
-  buttons: {
-    marginRight: 15,
-    height: 75,
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  singleButton: {
-    // this matches the current code mirror theme we are using
-    // TODO: either add to color.scss or use a color from there depending
-    // on final theme choice.
-    backgroundColor: color.darkest_gray,
-    color: color.white,
-    width: 95,
-    textAlign: 'center'
+    flexWrap: 'wrap',
+    direction: 'ltr'
   },
   clear: {
     clear: 'both'
+  },
+  buttons: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    width: '100%',
+    margin: '10px 0',
+    overflowY: 'hidden'
   }
 };
 
@@ -214,12 +272,22 @@ export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     channelId: state.pageConstants.channelId,
-    isDarkMode: state.javalab.isDarkMode
+    isDarkMode: state.javalab.isDarkMode,
+    isEditingStartSources: state.pageConstants.isEditingStartSources,
+    isRunning: state.javalab.isRunning,
+    showProjectTemplateWorkspaceIcon: !!state.pageConstants
+      .showProjectTemplateWorkspaceIcon,
+    editorColumnHeight: state.javalab.editorColumnHeight,
+    longInstructions: state.instructions.longInstructions,
+    awaitingContainedResponse: state.runState.awaitingContainedResponse,
+    disableFinishButton: state.javalab.disableFinishButton,
+    isSubmittable: state.pageConstants.isSubmittable,
+    isSubmitted: state.pageConstants.isSubmitted
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
-    setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode))
+    setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode)),
+    setIsRunning: isRunning => dispatch(setIsRunning(isRunning))
   })
 )(UnconnectedJavalabView);

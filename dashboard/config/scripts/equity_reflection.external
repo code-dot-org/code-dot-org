@@ -16,5 +16,5 @@ markdown <<MARKDOWN
 
 Then return here and click "Continue" below to move on.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

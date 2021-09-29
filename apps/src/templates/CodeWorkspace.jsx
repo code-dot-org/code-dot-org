@@ -19,7 +19,7 @@ import {queryParams} from '../code-studio/utils';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
-    studentHasNotStartedLevel: PropTypes.bool,
+    displayNotStartedBanner: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -211,7 +211,7 @@ class CodeWorkspace extends React.Component {
             className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
           />
         )}
-        {this.props.studentHasNotStartedLevel && !inCsfExampleSolution && (
+        {this.props.displayNotStartedBanner && !inCsfExampleSolution && (
           <div style={styles.studentNotStartedWarning}>
             {i18n.levelNotStartedWarning()}
           </div>
@@ -252,7 +252,7 @@ const styles = {
 
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
 export default connect(state => ({
-  studentHasNotStartedLevel: state.pageConstants.isNotStartedLevel,
+  displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
   editCode: state.pageConstants.isDroplet,
   isRtl: state.isRtl,
   readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,

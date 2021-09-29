@@ -61,7 +61,7 @@ export const taughtSections = [
     id: 14,
     name: 'Best Section Ever',
     loginType: 'picture',
-    stageExtras: false,
+    lessonExtras: false,
     pairingAllowed: true,
     studentCount: 25,
     code: 'MRTHUN',
@@ -75,7 +75,7 @@ export const taughtSections = [
     id: 15,
     name: 'Even Better Section',
     loginType: 'word',
-    stageExtras: false,
+    lessonExtras: false,
     pairingAllowed: true,
     studentCount: 18,
     code: 'DINOSAR',
@@ -151,5 +151,5 @@ export const topCourse = {
   lessonName: 'Lesson 3: Learn to drag and drop',
   linkToOverview: 'http://localhost-studio.code.org:3000/s/course1',
   linkToLesson:
-    'http://localhost-studio.code.org:3000/s/course1/stage/3/puzzle/1'
+    'http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1'
 };

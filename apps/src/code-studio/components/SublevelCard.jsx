@@ -8,10 +8,7 @@ import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagI
 import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
 import queryString from 'query-string';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
-
-const THUMBNAIL_IMAGE_SIZE = 200;
-const MARGIN = 10;
-const WIDTH = 435;
+import _ from 'lodash';
 
 export default class SublevelCard extends React.Component {
   static propTypes = {
@@ -89,17 +86,25 @@ export default class SublevelCard extends React.Component {
 
     if (isLessonExtra) {
       return (
-        <a style={styles.flagBubble} href={this.getSublevelUrl()}>
-          <LessonExtrasFlagIcon
-            perfect={sublevel.perfect}
-            style={styles.flagBubble}
-          />
+        <a href={this.getSublevelUrl()}>
+          <LessonExtrasFlagIcon isPerfect={sublevel.perfect} size={30} />
         </a>
       );
     }
 
+    let mappedSublevel = sublevel;
+    if (mappedSublevel) {
+      // ProgressBubble expects level keys to be camelCase (instead of snake case)
+      // converting keys to the correct casing here
+      mappedSublevel = _.mapKeys(sublevel, (value, key) => _.camelCase(key));
+    }
+
     return (
-      <ProgressBubble level={sublevel} disabled={false} hideToolTips={true} />
+      <ProgressBubble
+        level={mappedSublevel}
+        disabled={false}
+        hideToolTips={true}
+      />
     );
   };
 
@@ -143,6 +148,10 @@ export default class SublevelCard extends React.Component {
   }
 }
 
+const THUMBNAIL_IMAGE_SIZE = 200;
+const MARGIN = 10;
+const WIDTH = 435;
+
 const styles = {
   row: {
     display: 'flex',
@@ -175,11 +184,6 @@ const styles = {
     fontSize: THUMBNAIL_IMAGE_SIZE - 50,
     color: color.white,
     opacity: 0.8
-  },
-  flagBubble: {
-    fontSize: 30,
-    height: 30,
-    width: 30
   },
   column: {
     marginLeft: MARGIN * 2,

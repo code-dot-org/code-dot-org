@@ -267,6 +267,18 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_codeprojects_get_deleted_project
+    post_file_data(@api, 'index.html', '<div></div>', 'text/html')
+    @api.get_root_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+
+    @api.delete_object('index.html')
+    @api.get_root_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert not_found?
+
+    delete_all_manifest_versions
+  end
+
   def test_allow_mismatched_mime_type
     mismatched_filename = @api.randomize_filename('mismatchedmimetype.png')
     delete_all_file_versions(mismatched_filename)

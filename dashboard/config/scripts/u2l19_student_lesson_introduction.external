@@ -35,7 +35,7 @@ The modulo operation (or "clock arithmetic" as we call it in the lesson) is a re
 * Widget: <a href="https://studio.code.org/projects/applab/hCEJDg_MsULeilvyoikF4g" target="_blank">Public Key Crypto Widget</a>
 * Optional: <a href="https://docs.google.com/document/d/1d6mEbpykWsFKP2PAC5cj7ak_ouoPrwhMcFpYf7xd_Yw" target="_blank">Handout: How Does Public Key Crypto Really Work?</a>
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

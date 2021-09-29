@@ -22,7 +22,8 @@ class Notification extends Component {
   static propTypes = {
     type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
     notice: PropTypes.string.isRequired,
-    details: PropTypes.string.isRequired,
+    details: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+      .isRequired,
     detailsLinkText: PropTypes.string,
     detailsLink: PropTypes.string,
     detailsLinkNewWindow: PropTypes.bool,

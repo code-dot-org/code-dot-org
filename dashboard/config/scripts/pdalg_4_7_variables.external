@@ -9,5 +9,5 @@ The use of variables in functional programing is one of the concepts most likely
 
 Because we want our variables to act as they do in Algebra, we use variables that are immutable, meaning that the value a variable refers to never changes during the execution of any one program. For students who struggle with this, you can let them know that in languages they may have used in the past, this type of variable is called a constant. In functional programing, all variables are immutable, but in other programing paradigms some variables may change over time and some may remain constant.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

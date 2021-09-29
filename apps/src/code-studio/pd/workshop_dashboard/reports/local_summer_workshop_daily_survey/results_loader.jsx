@@ -5,19 +5,6 @@ import Spinner from '../../../components/spinner';
 import Results from './results';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  errorContainer: {
-    marginTop: 15,
-    marginLeft: 15
-  },
-  errorDetailsBox: {
-    backgroundColor: color.lightest_gray,
-    padding: 20,
-    maxWidth: 550,
-    marginTop: 20
-  }
-};
-
 export class ResultsLoader extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
@@ -96,3 +83,16 @@ export class ResultsLoader extends React.Component {
     }
   }
 }
+
+const styles = {
+  errorContainer: {
+    marginTop: 15,
+    marginLeft: 15
+  },
+  errorDetailsBox: {
+    backgroundColor: color.lightest_gray,
+    padding: 20,
+    maxWidth: 550,
+    marginTop: 20
+  }
+};

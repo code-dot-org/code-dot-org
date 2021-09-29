@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 require 'nokogiri'
@@ -62,7 +63,6 @@ class Blockly < Level
     definition_highlight
     definition_collapse
     disable_examples
-    project_template_level_name
     hide_share_and_remix
     is_project_level
     code_functions
@@ -70,7 +70,6 @@ class Blockly < Level
     failure_message_override
     droplet_tooltips_disabled
     lock_zero_param_functions
-    contained_level_names
     encrypted_examples
     disable_if_else_editing
     show_type_hints
@@ -115,15 +114,6 @@ class Blockly < Level
 
   def filter_level_attributes(level_hash)
     super(level_hash.tap {|hash| hash['properties'].except!(*xml_blocks)})
-  end
-
-  before_validation :update_contained_levels
-
-  def update_contained_levels
-    contained_level_names = properties["contained_level_names"]
-    contained_level_names.try(:delete_if, &:blank?)
-    contained_level_names = nil unless contained_level_names.try(:present?)
-    properties["contained_level_names"] = contained_level_names
   end
 
   before_save :update_preload_asset_list
@@ -233,6 +223,15 @@ class Blockly < Level
       xml << category.children
       #block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
     end
+    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+  end
+
+  # "counter" mutations should not be stored because it results in the language being
+  # hardcoded. The only exception to this is student saved projects.
+  def self.remove_counter_mutations(xml_string)
+    xml = Nokogiri::XML(xml_string, &:noblanks)
+    return xml_string if xml.nil?
+    xml.xpath("//block[@type='controls_for_counter']//mutation[@counter='counter']").each(&:remove)
     xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
 
@@ -711,7 +710,7 @@ class Blockly < Level
   end
 
   def shared_functions
-    Rails.cache.fetch("shared_functions/#{I18n.locale}/#{type}", force: !Script.should_cache?) do
+    Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
     end.join
   end
@@ -729,6 +728,12 @@ class Blockly < Level
         next unless arg["name"] == I18n.t('behaviors.this_sprite', locale: :en)
         arg["name"] = I18n.t('behaviors.this_sprite')
       end
+
+      behavior.xpath(".//title[@name=\"NAME\"]").each do |name|
+        localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
+        name.content = localized_name if localized_name
+      end
+
       behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
         next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
         parameter.content = I18n.t('behaviors.this_sprite')

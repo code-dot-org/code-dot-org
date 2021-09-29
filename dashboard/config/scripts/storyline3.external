@@ -8,9 +8,9 @@ markdown <<MARKDOWN
 
 <p style="color:orange;font-size: 1em; line-height: 1.5;">
 Are you ready for an adventure?  
-Click <a class="btn btn-large btn-primary next-stage submitButton">Continue</a> to help Anita and her bee collect enough coins to get the wizard's potions back!
+Click Continue to help Anita and her bee collect enough coins to get the wizard's potions back!
 </p>
 <br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 </div>
 MARKDOWN

@@ -85,7 +85,9 @@ If you get a bunch of complaints about database, like missing tables or how some
 
 1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words` to seed the missing data, or
 
-2. `RAILS_ENV=test bundle exec rake db:reset db:test:prepare` to recreate your local dashboard test db and reseed the data.
+2. recreate your local dashboard test db and reseed the data via:
+    * `RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
+    * `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
 
 If you just want to run a single file of tests, from the dashboard directory you can run
 `bundle exec spring testunit ./path/to/your/test.rb` 

@@ -1,0 +1,32 @@
+name 'VPL - CSD - Module 7 - CI - U6L4_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 6 - Lesson 4:  Input Unplugged
+**Estimated time: 10 minutes**
+
+
+
+
+## Investigation Goals
+
+* **Compare sample apps to identify where input is coming from for each**
+
+* **Identify how Game Lab (draw loop) and App Lab (onEvent) handle inputs differently**
+
+## Investigation Tasks
+
+* Read the <a href="https://docs.google.com/document/d/1Pqq09UzF8xNP688FwK7x9zrsjxxM4WajAVtEwM1wYPE/edit" target="_blank"> Inputs and Events Activity Guide </a> for Lesson 4
+* Work through Lesson 4, Levels 2 and 3 (click continue to begin)
+
+
+
+
+
+
+
+
+
+MARKDOWN

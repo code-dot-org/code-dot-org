@@ -18,4 +18,4 @@
     -# Temporary hack - explicitly include the submissions helper so this submit button will post milestone
     -# Long term plan is to have a footer section that will include these buttons
     %script{src: webpack_asset_path('js/levels/_external_link.js')}
-    = link_to @script_level.end_of_stage? ? t('done_with_module') : t('continue'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn btn-large pull-right btn-primary next-stage submitButton'
+    = link_to @script_level.end_of_lesson? ? t('done_with_module') : t('continue'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn btn-large pull-right btn-primary next-lesson submitButton'

@@ -2,7 +2,6 @@
   "script": {
     "name": "csp8-2021",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:02 UTC",
+    "serialized_at": "2021-07-30 20:28:26 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp8-2021"
     }
@@ -66,6 +66,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "This lesson will be updated in Fall 2021 to reflect updates to the Create PT."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -872,7 +873,6 @@
         ],
         "progression": "Tech Setup and Tools for Create PT"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -898,7 +898,6 @@
         ],
         "progression": "Create PT Coding Workspace"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -942,6 +941,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp8-2021/resources",
+      "key": "all_resources_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_8"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp8-2021/standards",
+      "key": "all_standards_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_8"
+      }
+    },
+    {
       "name": "APCSP CT 20-21 Scoring Guidelines",
       "url": "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-2021-create-performance-task-scoring-guidelines.pdf",
       "key": "apcsp_ct_20-21_scoring_guidelines",
@@ -963,6 +984,18 @@
       },
       "seeding_key": {
         "resource.key": "apcsp_ct_20-21_task_instructions"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
       }
     },
     {
@@ -1144,6 +1177,18 @@
       }
     },
     {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
+      }
+    },
+    {
       "name": "CSP Unit 8 - Create PT Prep",
       "url": "https://docs.google.com/presentation/d/174nHpIilMIvy5kcnB-jQ6Ai9rajgnUtBrSfNObOKHCk/edit?usp=sharing",
       "key": "csp_unit_8_-_create_pt_prep",
@@ -1154,9 +1199,75 @@
       "seeding_key": {
         "resource.key": "csp_unit_8_-_create_pt_prep"
       }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "resource.key": "apcsp_ct_20-21_task_instructions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "resource.key": "csp_unit_8_-_create_pt_prep"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Make a Plan",
+        "resource.key": "create-pt-survival-guide-20-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Make a Plan",
+        "resource.key": "csp_unit_8_-_create_pt_prep"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Review the Task",
+        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Review the Task",
+        "resource.key": "apcsp_ct_20-21_task_instructions"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
@@ -1184,19 +1295,19 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "apcsp_ct_20-21_task_instructions"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_3"
       }
     },
     {
@@ -1238,54 +1349,47 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp_create_pt_code_org_annotated_sample_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp_create_pt_code_org_annotated_sample_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp_create_pt_code_org_annotated_sample_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Make a Plan",
-        "resource.key": "create-pt-survival-guide-20-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Make a Plan",
         "resource.key": "csp_unit_8_-_create_pt_prep"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "resource.key": "apcsp_ct_20-21_task_instructions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
       }
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_8",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_8",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
+        "script.name": "csp8-2021"
+      }
+    }
   ],
   "scripts_student_resources": [
 

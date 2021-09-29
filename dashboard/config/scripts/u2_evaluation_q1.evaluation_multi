@@ -1,4 +1,4 @@
 name 'U2 evaluation q1'
 question ‘How comfortable are you using spreadsheet tools to find relationships in data?’
-answer ‘Very comfortable!’, weight: -1, stage_name: 'Lessons 11 - 15: Communicating with Visualizations'
-answer ‘Not very comfortable’, weight: 3, stage_name: 'Lessons 11 - 15: Communicating with Visualizations'
+answer ‘Very comfortable!’, weight: -1, lesson_name: 'Lessons 11 - 15: Communicating with Visualizations'
+answer ‘Not very comfortable’, weight: 3, lesson_name: 'Lessons 11 - 15: Communicating with Visualizations'

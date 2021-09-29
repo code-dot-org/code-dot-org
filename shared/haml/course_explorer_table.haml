@@ -44,36 +44,32 @@
     }
 
 :ruby
-  show_csa = DCDO.get("courses_show_csa", CDO.default_courses_show_csa)
   courses = []
-  csa_offset = show_csa ? 1 : 0
 
-  if show_csa
-    courses << {
-      id: "csa",
-      name: "CSA",
-      starts: 10,
-      ends: 12,
-      range: "Grades 10-12",
-      regular_order: 0,
-      responsive_small_order: 0,
-      subtitle: "Full year course",
-      link: CDO.code_org_url('/educate/csa'),
-      img: "/shared/images/teacher-announcement/csa-upsell.png",
-      announcement: "<i>Coming in 2022</i>",
-      description: "
-        <p>In Computer Science A, students learn object-oriented
-        programming using Java. Students take on the role of software engineers,
-        and practice skills that are used in the field.</p>
+  courses << {
+    id: "csa",
+    name: "CSA",
+    starts: 10,
+    ends: 12,
+    range: "Grades 10-12",
+    regular_order: 0,
+    responsive_small_order: 0,
+    subtitle: "Full year course",
+    link: CDO.code_org_url('/educate/csa'),
+    img: "/shared/images/teacher-announcement/csa-upsell.png",
+    announcement: "<i>Coming in 2022</i>",
+    description: "
+      <p>In Computer Science A, students learn object-oriented
+      programming using Java. Students take on the role of software engineers,
+      and practice skills that are used in the field.</p>
 
-        <p>The Code.org CSA course is designed for any high school student who
-        wishes to continue their computer science education after completing an
-        introductory course such as Computer Science Principles (CSP) or Computer
-        Science Discoveries (CSD).</p>
+      <p>The Code.org CSA course is designed for any high school student who
+      wishes to continue their computer science education after completing an
+      introductory course such as Computer Science Principles (CSP) or Computer
+      Science Discoveries (CSD).</p>
 
-        <p>More information coming soon!</p>"
-    }
-  end
+      <p>More information coming soon!</p>"
+  }
 
   csp_pl_link = CDO.code_org_url('/educate/professional-learning/middle-high')
   courses << {
@@ -82,8 +78,8 @@
     starts: 9,
     ends: 12,
     range: "Grades 9-12",
-    regular_order: 0 + csa_offset,
-    responsive_small_order: 0 + csa_offset,
+    regular_order: 1,
+    responsive_small_order: 1,
     subtitle: "Full year course",
     link: CDO.code_org_url("/educate/csp"),
     course_link: CDO.studio_url("/courses/csp"),
@@ -106,8 +102,8 @@
     starts: 6,
     ends: 10,
     range: "Grades 6-10",
-    regular_order: 1 + csa_offset,
-    responsive_small_order: 1 + csa_offset,
+    regular_order: 2,
+    responsive_small_order: 2,
     subtitle: "Semester or full year course",
     link: CDO.code_org_url("/educate/csd"),
     course_link: CDO.studio_url("/courses/csd"),
@@ -129,8 +125,8 @@
     name: "CS Fundamentals",
     starts: 0,
     ends: 5,
-    regular_order: 2 + csa_offset,
-    responsive_small_order: 2 + csa_offset,
+    regular_order: 3,
+    responsive_small_order: 3,
     range: "Grades K-5",
     subtitle: "12+ lesson courses for each grade can be taught once a week",
     link: CDO.code_org_url("/educate/curriculum/elementary-school"),
@@ -156,8 +152,8 @@
     starts: 0,
     ends: 2,
     range: "Grades K-2",
-    regular_order: 3 + csa_offset,
-    responsive_small_order: 4 + csa_offset,
+    regular_order: 4,
+    responsive_small_order: 5,
     subtitle: "",
     course_link: CDO.studio_url("/s/pre-express"),
     img: "/shared/images/courses/logo_tall_pre-express.jpg",
@@ -179,8 +175,8 @@
     starts: 3,
     ends: 12,
     range: "Grades 3-12",
-    regular_order: 4 + csa_offset,
-    responsive_small_order: 3 + csa_offset,
+    regular_order: 5,
+    responsive_small_order: 4,
     subtitle: "Condensed version of curriculum in one 30 hour course for older students",
     link: CDO.code_org_url("/educate/curriculum/express-course"),
     course_link: CDO.studio_url("/s/express"),
@@ -236,7 +232,7 @@
 -#
   We support two courses on the same line.  This is the index of the first of
   those two courses.
-- index_course_first_same_line = 3 + csa_offset
+- index_course_first_same_line = 4
 
 - if responsive
   .courseexplorer.courses.smallresponsive{style: "margin-left: 0px; margin-top: 30px;"}

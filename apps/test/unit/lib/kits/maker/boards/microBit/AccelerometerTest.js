@@ -13,6 +13,10 @@ describe('MicroBitAccelerometer', function() {
     accelerometer = new Accelerometer({mb: boardClient});
   });
 
+  afterEach(() => {
+    sinon.restore();
+  });
+
   it(`attributes are readonly`, () => {
     let attributes = [
       'roll',

@@ -28,7 +28,8 @@ import DialogButtons from './templates/DialogButtons';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import FeedbackUtils from './feedback';
-import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
+import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
+import InstructionsDialogWrapperDEPRECATED from './templates/instructions/InstructionsDialogWrapperDEPRECATED';
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
 import VersionHistory from './templates/VersionHistory';
@@ -83,20 +84,21 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+
 var copyrightStrings;
 
 /**
  * The minimum width of a playable whole blockly game.
  */
-var MIN_WIDTH = 1200;
-var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-var MAX_VISUALIZATION_WIDTH = 400;
-var MIN_VISUALIZATION_WIDTH = 200;
+const MIN_WIDTH = 1200;
+const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+export const MAX_VISUALIZATION_WIDTH = 400;
+export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
-var MAX_PHONE_WIDTH = 500;
+const MAX_PHONE_WIDTH = 500;
 
 class StudioApp extends EventEmitter {
   constructor() {
@@ -302,8 +304,6 @@ StudioApp.prototype.init = function(config) {
   }
   this.config = config;
 
-  this.hasContainedLevels = config.hasContainedLevels;
-
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
@@ -320,15 +320,27 @@ StudioApp.prototype.init = function(config) {
   this.configureDom(config);
 
   if (!config.level.iframeEmbedAppAndCode) {
+    // We are migrating usages of InstructionsDialogWrapperDEPRECATED to use
+    // InstructionsDialog instead. NetSim is the first consumer to be migrated.
+    const useNewDialog = config.app === 'netsim';
     ReactDOM.render(
       <Provider store={getStore()}>
-        <div>
-          <InstructionsDialogWrapper
-            showInstructionsDialog={autoClose => {
-              this.showInstructionsDialog_(config.level, autoClose);
-            }}
+        {useNewDialog ? (
+          <InstructionsDialog
+            title={msg.puzzleTitle({
+              stage_total: config.level.lesson_total,
+              puzzle_number: config.level.puzzle_number
+            })}
           />
-        </div>
+        ) : (
+          <div>
+            <InstructionsDialogWrapperDEPRECATED
+              showInstructionsDialog={autoClose => {
+                this.showInstructionsDialog_(config.level, autoClose);
+              }}
+            />
+          </div>
+        )}
       </Provider>,
       document.body.appendChild(document.createElement('div'))
     );
@@ -549,8 +561,6 @@ StudioApp.prototype.init = function(config) {
     this.setupLegacyShareView();
   }
 
-  initializeContainedLevel();
-
   if (config.isChallengeLevel) {
     const startDialogDiv = document.createElement('div');
     document.body.appendChild(startDialogDiv);
@@ -646,8 +656,15 @@ StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function() {
   }
 };
 
+// When pairing, source code is stored only with the driver. If the user completed
+// this level as a navigator, show an alert with a link to the (read-only) source
+// code stored in the driver's account.
 StudioApp.prototype.alertIfCompletedWhilePairing = function(config) {
-  if (!!config.level.pairingDriver) {
+  if (!config.level.isNavigator) {
+    return;
+  }
+
+  if (config.level.pairingDriver) {
     this.displayWorkspaceAlert(
       'warning',
       <div>
@@ -661,6 +678,14 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function(config) {
           </a>
         )}
       </div>
+    );
+  } else {
+    // This case -- where config.level.isNavigator is true but
+    // config.level.pairingDriver is null -- occurs when the driver's user
+    // account was deleted or the driver's progress was deleted.
+    this.displayWorkspaceAlert(
+      'warning',
+      <div>{msg.pairingNavigatorUnknownDriver()}</div>
     );
   }
 };
@@ -676,6 +701,7 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
     ReactDOM.render(
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
+        isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
         useFilesApi: !!config.useFilesApi
       }),
       contentDiv
@@ -769,9 +795,9 @@ StudioApp.prototype.scaleLegacyShare = function() {
   }
 };
 
-StudioApp.prototype.getCode = function() {
+StudioApp.prototype.getCode = function(opt_showHidden) {
   if (!this.editCode) {
-    return codegen.workspaceCode(Blockly);
+    return Blockly.getWorkspaceCode(opt_showHidden);
   }
   if (this.hideSource) {
     return this.startBlocks_;
@@ -1003,8 +1029,7 @@ StudioApp.prototype.runChangeHandlers = function() {
 StudioApp.prototype.setupChangeHandlers = function() {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
-    const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
-    blocklyCanvas.addEventListener('blocklyBlockSpaceChange', runAllHandlers);
+    Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
   } else {
     this.editor.on('change', runAllHandlers);
     // Droplet doesn't automatically bubble up aceEditor changes
@@ -1039,13 +1064,20 @@ StudioApp.prototype.toggleRunReset = function(button) {
   }
 
   var run = document.getElementById('runButton');
-  var reset = document.getElementById('resetButton');
-  if (run || reset) {
-    run.style.display = showRun ? 'inline-block' : 'none';
+  if (run) {
+    // Note: Checking alwaysHideRunButton is necessary because are some levels where we never
+    // want to show the "run" button (e.g., maze levels that are "stepOnly").
+    run.style.display =
+      showRun && !this.config.alwaysHideRunButton ? 'inline-block' : 'none';
     run.disabled = !showRun;
+  }
+
+  var reset = document.getElementById('resetButton');
+  if (reset) {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
   }
+
   if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
     // craft has a darker color scheme than other blockly labs. It needs to
     // toggle between different colors on run/reset or else, on run, the workspace
@@ -1299,7 +1331,7 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose) {
   var headerElement;
 
   var puzzleTitle = msg.puzzleTitle({
-    stage_total: level.stage_total,
+    stage_total: level.lesson_total,
     puzzle_number: level.puzzle_number
   });
 
@@ -2112,6 +2144,9 @@ StudioApp.prototype.setConfigValues_ = function(config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function() {};
   this.skin = config.skin;
   this.polishCodeHook = config.polishCodeHook;
+  this.hasContainedLevels = config.hasContainedLevels;
+
+  initializeContainedLevel();
 };
 
 // Overwritten by applab.
@@ -3398,27 +3433,15 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
 /**
  * Checks if the level a teacher is viewing of a students has
  * not been started.
- * For contained levels don't show the banner ever.
- * Otherwise if its a channel backed level check for the channel. Lastly
- * if its not a channel backed level and its not free play we know it has
- * not been started if no progress has been made.
+ * For contained levels and project levels don't show the banner ever.
+ * Otherwise check if the teacher is viewing (readonlyWorkspace) and if
+ * the level has been started.
  */
-StudioApp.prototype.isNotStartedLevel = function(config) {
-  const progress = getStore().getState().progress;
-
+StudioApp.prototype.displayNotStartedBanner = function(config) {
   if (config.hasContainedLevels || config.level.isProjectLevel) {
     return false;
-  } else if (
-    ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(
-      config.levelGameName
-    )
-  ) {
-    return config.readonlyWorkspace && !config.channel;
   } else {
-    return (
-      config.readonlyWorkspace &&
-      progress.levelResults[progress.currentLevelId] === undefined
-    );
+    return config.readonlyWorkspace && !config.level.isStarted;
   }
 };
 
@@ -3433,6 +3456,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign(
     {
+      canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
       skinId: config.skinId,
@@ -3447,13 +3471,13 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isChallengeLevel: !!config.isChallengeLevel,
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
-      isNotStartedLevel: this.isNotStartedLevel(config),
+      displayNotStartedBanner: this.displayNotStartedBanner(config),
       isShareView: !!config.share,
       pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
       hasContainedLevels: config.hasContainedLevels,
       puzzleNumber: level.puzzle_number,
-      stageTotal: level.stage_total,
+      lessonTotal: level.lesson_total,
       noVisualization: false,
       visualizationInWorkspace: false,
       smallStaticAvatar: config.skin.smallStaticAvatar,

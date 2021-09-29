@@ -37,11 +37,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @admin = create(:admin)
 
-    script_levels = Script.twenty_hour_script.script_levels
-    @script_level_prev = script_levels[0]
-    @script_level = @script_level_prev.next_progression_level
-    @script_level_next = @script_level.next_progression_level
-    @script = @script_level.script
+    @script = create(:script)
+    @script_level_prev = create(:script_level, script: @script)
+    @script_level = create(:script_level, script: @script)
+    @script_level_next = create(:script_level, script: @script)
+    create(:lesson_group, lessons: [@script_level_prev.lesson, @script_level.lesson, @script_level_next.lesson], script: @script)
     @level = @script_level.level
 
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
@@ -579,16 +579,13 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing userlevel
-
-    user_level_finder = mock('user_level_finder')
-    user_level_finder.stubs(:first).returns(nil)
+    # (assumes that the only call to first_or_initialize when handling
+    # a milestone post is the call in User#track_level_progress)
     existing_user_level = UserLevel.create(user: @user, level: @script_level.level, script: @script_level.script)
-    user_level_finder.stubs(:first_or_initialize).
+    ActiveRecord::Relation.stubs(:first_or_initialize).
       raises(ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '1208682-37' for key 'index_user_levels_on_user_id_and_level_id'"))).
       then.
       returns(existing_user_level)
-
-    UserLevel.stubs(:where).returns(user_level_finder)
 
     assert_creates(LevelSource, Activity) do
       assert_does_not_create(UserLevel) do
@@ -912,44 +909,35 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert response['level_source'].match(/^http:\/\/test.host\/c\//)
   end
 
-  test 'milestone changes to next stage in default script' do
-    last_level_in_stage = @script_level.script.script_levels.reverse.find {|x| x.level.game.name == 'Artist'}
-    post :milestone,
-      params: @milestone_params.merge(script_level_id: last_level_in_stage.id)
-    assert_response :success
-    response = JSON.parse(@response.body)
-    assert_equal({'previous' => {'name' => 'The Artist', 'position' => 5}}, response['stage_changing'])
-  end
-
-  test 'milestone changes to next stage in custom script' do
+  test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
     game = create(:game)
     (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
     script_dsl = ScriptDSL.parse(
-      "lesson 'Milestone Stage 1', display_name: 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Stage 2', display_name: 'Milestone Stage 2'; level 'Level 3'",
+      "lesson 'Milestone Lesson 1', display_name: 'Milestone Lesson 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Lesson 2', display_name: 'Milestone Lesson 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
+    script = Script.add_unit({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
 
-    last_level_in_first_stage = script.lessons.first.script_levels.last
+    last_level_in_first_lesson = script.lessons.first.script_levels.last
     post :milestone,
       params: @milestone_params.merge(
-        script_level_id: last_level_in_first_stage.id
+        script_level_id: last_level_in_first_lesson.id
       )
     assert_response :success
     response = JSON.parse(@response.body)
 
-    # find localized test strings for custom stage names in script
-    assert response.key?('stage_changing'), "No key 'stage_changing' in response #{response.inspect}"
-    assert_equal('milestone-stage-1', response['stage_changing']['previous']['name'])
+    # find localized test strings for custom lesson names in script
+    assert response.key?('lesson_changing'), "No key 'lesson_changing' in response #{response.inspect}"
+    assert_equal('milestone-lesson-1', response['lesson_changing']['previous']['name'])
   end
 
   test 'milestone post respects level_id for active level' do
     script = create :script
-    stage = create :lesson, script: script
+    lesson = create :lesson, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
-    script_level = create :script_level, script: script, lesson: stage, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
 
     post :milestone,
       params: @milestone_params.merge(
@@ -1032,7 +1020,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 100, existing_navigator_user_level.best_result
     assert_equal 20, existing_navigator_user_level.time_spent
 
-    assert_equal [@user], existing_navigator_user_level.driver_user_levels.map(&:user)
+    assert_equal @user, existing_navigator_user_level.driver
   end
 
   test "milestone with pairings updates navigator's existing user level" do
@@ -1054,7 +1042,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 100, existing_driver_user_level.best_result
     assert_equal 20, existing_driver_user_level.time_spent
 
-    assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
+    assert_equal [pairing.name], existing_driver_user_level.navigators_names
   end
 
   test "milestone with pairings stops updating levels when pairing is disabled" do
@@ -1076,7 +1064,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     existing_driver_user_level.reload
     assert_equal 100, existing_driver_user_level.best_result
 
-    assert_equal [], existing_driver_user_level.navigator_user_levels.map(&:user)
+    assert_nil existing_driver_user_level.navigators_names
   end
 
   test "milestone fails to update locked/readonly level" do
@@ -1094,10 +1082,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    stage = create :lesson, name: 'Stage1', script: script, lockable: true
+    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true
 
     # Create a ScriptLevel joining this level to the script.
-    script_level = create :script_level, script: script, levels: [level], assessment: true, lesson: stage
+    script_level = create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
 
     milestone_params = {
       user_id: student_1,
@@ -1125,13 +1113,13 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # milestone post should cause it to become locked again
     user_level = UserLevel.find(user_level.id)
-    assert user_level.show_as_locked?(stage)
+    assert user_level.show_as_locked?(lesson)
 
     # milestone post should also fail when we have an existing user_level that is locked
     post :milestone, params: milestone_params
     assert_response 403
 
-    user_level.delete
+    user_level.really_destroy!
     # explicity create a user_level that is readonly_answers
     create :user_level, user: student_1, script: script, level: level, submitted: true, locked: true, readonly_answers: true
     post :milestone, params: milestone_params

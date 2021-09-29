@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 
 /**
  * A component that provides a toggle that goes between visible and hidden that
- * can be used be teachers to hide/show scripts or stages on a per section basis.
+ * can be used be teachers to hide/show scripts or lesson on a per section basis.
  */
 class HiddenForSectionToggle extends React.Component {
   static propTypes = {

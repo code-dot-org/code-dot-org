@@ -1,334 +1,328 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import ProgressBubble from './ProgressBubble';
+import {
+  BasicBubble,
+  BubbleShape,
+  BasicTooltip,
+  BubbleSize
+} from './BubbleFactory';
+import BubbleBadge, {BadgeType} from './BubbleBadge';
+import {defaultBubbleIcon} from './progressHelpers';
+import {levelProgressStyle} from './progressStyles';
 import FontAwesome from '../FontAwesome';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {connect} from 'react-redux';
+import _ from 'lodash';
+import './styles.scss';
 
-// Give all of our TDs a padding
-const TD = ({style, ...props}) => (
-  <td
-    style={{
-      ...styles.tdStyle,
-      ...style
-    }}
-    {...props}
-  />
-);
-TD.propTypes = {
-  style: PropTypes.object
-};
+const MAX_UNSPLIT_STATUS_COLUMNS = 5;
 
-class ProgressLegend extends Component {
+export default class ProgressLegend extends Component {
   static propTypes = {
-    excludeCsfColumn: PropTypes.bool.isRequired,
-    // Redux
-    isRtl: PropTypes.bool
+    includeCsfColumn: PropTypes.bool.isRequired,
+    includeProgressNotApplicable: PropTypes.bool,
+    includeReviewStates: PropTypes.bool
   };
 
   render() {
-    const {excludeCsfColumn, isRtl} = this.props;
+    const statusColumns = this.getLevelStatusColumns();
+    const detailColumns = this.getLevelDetailsColumns();
 
-    const secondRowRowSpan = 2;
+    return this.renderTable(detailColumns, statusColumns);
+  }
 
-    // Adjust icon and border styles if locale is RTL
-    const iconStyle = isRtl ? styles.iconRTL : styles.icon;
-    const sideBorderStyle = isRtl ? styles.leftBorder : styles.rightBorder;
+  renderTable(detailColumns, statusColumns) {
+    // If we have too many status columns to show in the width allowed,
+    // we split the table in two.
+    if (detailColumns && statusColumns?.length > MAX_UNSPLIT_STATUS_COLUMNS) {
+      return (
+        <div>
+          {this.renderTable(null, statusColumns)}
+          {this.renderTable(detailColumns, null)}
+        </div>
+      );
+    }
+
+    let columns = [this.getLevelTypeColumn()];
+    detailColumns && (columns = columns.concat(detailColumns));
+    statusColumns && (columns = columns.concat(statusColumns));
+
+    // transpose rows into columns
+    const rows = _.zip(...columns);
 
     return (
-      <table style={styles.table} className="progress-legend">
+      <table className="progress-legend">
         <thead>
-          <tr style={styles.header}>
-            <TD style={styles.headerCell}>{i18n.levelType()}</TD>
-            <TD style={styles.headerCell} colSpan={3}>
-              {i18n.levelDetails()}
-            </TD>
-            <TD style={styles.headerCell} colSpan={excludeCsfColumn ? 4 : 5}>
-              {i18n.levelStatus()}
-            </TD>
-          </tr>
-          <tr style={styles.secondRow}>
-            <TD colSpan={4} />
-            <TD>{i18n.notStarted()}</TD>
-            <TD>{i18n.inProgress()}</TD>
-            {!excludeCsfColumn && (
-              <TD>
-                <div>{i18n.completed()}</div>
-                <div style={styles.secondaryText}>({i18n.tooManyBlocks()})</div>
-              </TD>
+          <tr>
+            <td>{i18n.levelType()}</td>
+            {detailColumns && <td colSpan={3}>{i18n.levelDetails()}</td>}
+            {statusColumns && (
+              <td colSpan={statusColumns.length}>{i18n.levelStatus()}</td>
             )}
-            <TD>
-              <div>{i18n.completed()}</div>
-              {!excludeCsfColumn && (
-                <div style={styles.secondaryText}>({i18n.perfect()})</div>
-              )}
-            </TD>
-            <TD>{i18n.assessmentAndSurvey()}</TD>
           </tr>
+          {statusColumns && <tr>{rows[0].map(cell => cell)}</tr>}
         </thead>
         <tbody>
-          <tr style={styles.subsequentRow}>
-            <TD style={sideBorderStyle}>{i18n.concept()}</TD>
-            <TD>
-              <div style={styles.iconAndText}>
-                <FontAwesome icon="file-text" style={iconStyle} />
-                {i18n.text()}
-              </div>
-            </TD>
-            <TD>
-              <div style={styles.iconAndText}>
-                <FontAwesome icon="video-camera" style={iconStyle} />
-                {i18n.video()}
-              </div>
-            </TD>
-            <TD style={sideBorderStyle}>
-              <div style={styles.iconAndText}>
-                <FontAwesome icon="map" style={iconStyle} />
-                {i18n.map()}
-              </div>
-            </TD>
-            <TD>
-              <div style={styles.center}>
-                <ProgressBubble
-                  level={{
-                    id: '1',
-                    status: LevelStatus.not_tried,
-                    isLocked: false,
-                    isConceptLevel: true,
-                    name: `${i18n.concept()}: ${i18n.notStarted()}`
-                  }}
-                  disabled={false}
-                />
-              </div>
-            </TD>
-            <TD>
-              <div style={styles.center}>
-                <ProgressBubble
-                  level={{
-                    id: '1',
-                    status: LevelStatus.attempted,
-                    isLocked: false,
-                    isConceptLevel: true,
-                    name: `${i18n.concept()}: ${i18n.inProgress()}`
-                  }}
-                  disabled={false}
-                />
-              </div>
-            </TD>
-            {!excludeCsfColumn && <TD>N/A</TD>}
-            <TD>
-              <div style={styles.center}>
-                <ProgressBubble
-                  level={{
-                    id: '1',
-                    status: LevelStatus.perfect,
-                    isLocked: false,
-                    isConceptLevel: true,
-                    name: `${i18n.concept()}: ${i18n.completed()} (${i18n.perfect()})`
-                  }}
-                  disabled={false}
-                />
-              </div>
-            </TD>
-            <TD>N/A</TD>
-          </tr>
-          <tr style={styles.subsequentRow}>
-            <TD style={sideBorderStyle} rowSpan={secondRowRowSpan}>
-              {i18n.activity()}
-            </TD>
-            <TD>
-              <div style={styles.iconAndTextDivTop}>
-                <FontAwesome icon="scissors" style={iconStyle} />
-                {i18n.unplugged()}
-              </div>
-              <div style={styles.iconAndTextDivBottom}>
-                <FontAwesome icon="flag-checkered" style={iconStyle} />
-                {i18n.stageExtras()}
-              </div>
-            </TD>
-            <TD>
-              <div style={styles.iconAndTextDivTop}>
-                <FontAwesome icon="desktop" style={iconStyle} />
-                {i18n.online()}
-              </div>
-              <div style={styles.iconAndTextDivBottom}>
-                <FontAwesome icon="check-circle" style={iconStyle} />
-                {i18n.progressLegendAssessment()}
-              </div>
-            </TD>
-            <TD style={sideBorderStyle}>
-              <div style={styles.iconAndTextDivTop}>
-                <FontAwesome icon="list-ul" style={iconStyle} />
-                {i18n.question()}
-              </div>
-              <div style={styles.iconAndTextDivBottom}>
-                <FontAwesome icon="sitemap" style={iconStyle} />
-                {i18n.choiceLevel()}
-              </div>
-            </TD>
-            <TD rowSpan={secondRowRowSpan}>
-              <div style={styles.center}>
-                <ProgressBubble
-                  level={{
-                    id: '1',
-                    status: LevelStatus.not_tried,
-                    isLocked: false,
-                    isConceptLevel: false,
-                    name: `${i18n.activity()}: ${i18n.notStarted()}`
-                  }}
-                  disabled={false}
-                />
-              </div>
-            </TD>
-            <TD rowSpan={secondRowRowSpan}>
-              <div style={styles.center}>
-                <ProgressBubble
-                  level={{
-                    id: '1',
-                    status: LevelStatus.attempted,
-                    isLocked: false,
-                    isConceptLevel: false,
-                    name: `${i18n.activity()}: ${i18n.inProgress()}`
-                  }}
-                  disabled={false}
-                />
-              </div>
-            </TD>
-            {!excludeCsfColumn && (
-              <TD rowSpan={secondRowRowSpan}>
-                <div style={styles.center}>
-                  <ProgressBubble
-                    level={{
-                      id: '1',
-                      status: LevelStatus.passed,
-                      isLocked: false,
-                      isConceptLevel: false,
-                      name: `${i18n.activity()}: ${i18n.completed()} (${i18n.tooManyBlocks()})`
-                    }}
-                    disabled={false}
-                  />
-                </div>
-              </TD>
-            )}
-            <TD rowSpan={secondRowRowSpan}>
-              <div style={styles.center}>
-                <ProgressBubble
-                  level={{
-                    id: '1',
-                    status: LevelStatus.perfect,
-                    isLocked: false,
-                    isConceptLevel: false,
-                    name: `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
-                  }}
-                  disabled={false}
-                />
-              </div>
-            </TD>
-            <TD rowSpan={secondRowRowSpan}>
-              <div style={styles.center}>
-                <ProgressBubble
-                  level={{
-                    id: '1',
-                    status: LevelStatus.submitted,
-                    isLocked: false,
-                    isConceptLevel: false,
-                    name: `${i18n.activity()}: ${i18n.submitted()}`
-                  }}
-                  disabled={false}
-                />
-              </div>
-            </TD>
-          </tr>
+          <tr>{rows[1].map(cell => cell)}</tr>
+          <tr>{rows[2].map(cell => cell)}</tr>
         </tbody>
       </table>
     );
   }
-}
 
-const styles = {
-  table: {
-    textAlign: 'center',
-    width: '100%',
-    // Margin to get it to line up with ProgressLesson
-    marginLeft: 3,
-    marginRight: 3,
-    marginTop: 60
-  },
-  tdStyle: {
-    padding: 10,
-    borderStyle: 'none'
-  },
-  header: {
-    backgroundColor: color.white,
-    color: color.charcoal,
-    whiteSpace: 'nowrap'
-  },
-  secondRow: {
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
-    borderWidth: 2,
-    borderColor: color.lightest_gray,
-    borderStyle: 'solid',
-    verticalAlign: 'top'
-  },
-  subsequentRow: {
-    backgroundColor: color.white,
-    borderWidth: 2,
-    borderColor: color.lightest_gray,
-    borderStyle: 'solid'
-  },
-  rightBorder: {
-    borderRightStyle: 'solid',
-    borderWidth: 2,
-    borderColor: color.lightest_gray
-  },
-  leftBorder: {
-    borderLeftStyle: 'solid',
-    borderWidth: 2,
-    borderColor: color.lightest_gray
-  },
-  headerCell: {
-    fontWeight: 'bold',
-    fontSize: 18
-  },
-  secondaryText: {
-    fontSize: 10
-  },
-  iconAndText: {
-    whiteSpace: 'nowrap'
-  },
-  iconAndTextDiv: {
-    whiteSpace: 'nowrap',
-    paddingBottom: 16
-  },
-  iconAndTextDivTop: {
-    whiteSpace: 'nowrap',
-    paddingTop: 10,
-    paddingBottom: 16
-  },
-  iconAndTextDivBottom: {
-    whiteSpace: 'nowrap',
-    paddingBottom: 10
-  },
-  icon: {
-    marginRight: 5,
-    size: 20
-  },
-  iconRTL: {
-    marginLeft: 5,
-    size: 20
-  },
-  center: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
+  getLevelStatusColumns() {
+    const {
+      includeCsfColumn,
+      includeProgressNotApplicable,
+      includeReviewStates
+    } = this.props;
+
+    const columns = [];
+    includeProgressNotApplicable && columns.push(this.getProgressNAColumn());
+    columns.push(this.getNotStartedColumn());
+    columns.push(this.getInProgressColumn());
+    includeReviewStates && columns.push(this.getKeepWorkingColumn());
+    includeReviewStates && columns.push(this.getNeedsReviewColumn());
+    includeCsfColumn && columns.push(this.getTooManyBlocksColumn());
+    columns.push(this.getPerfectColumn());
+    columns.push(this.getAssessmentsColumn());
+
+    return columns;
   }
-};
 
-export const UnconnectedProgressLegend = ProgressLegend;
+  getLevelDetailsColumns() {
+    const column1 = [
+      <td key={_.uniqueId()} />,
+      <td key={_.uniqueId()}>
+        {this.getLevelDetails('file-text', i18n.text())}
+      </td>,
+      <td key={_.uniqueId()}>
+        {this.getLevelDetails('scissors', i18n.unplugged())}
+        {this.getLevelDetails('flag-checkered', i18n.stageExtras())}
+      </td>
+    ];
+    const column2 = [
+      <td key={_.uniqueId()} />,
+      <td key={_.uniqueId()}>
+        {this.getLevelDetails('video-camera', i18n.video())}
+      </td>,
+      <td key={_.uniqueId()}>
+        {this.getLevelDetails('desktop', i18n.online())}
+        {this.getLevelDetails('check-circle', i18n.progressLegendAssessment())}
+      </td>
+    ];
+    const column3 = [
+      <td key={_.uniqueId()} />,
+      <td key={_.uniqueId()} className="end-border">
+        {this.getLevelDetails('map', i18n.map())}
+      </td>,
+      <td key={_.uniqueId()} className="end-border">
+        {this.getLevelDetails('list-ul', i18n.question())}
+        {this.getLevelDetails('sitemap', i18n.choiceLevel())}
+      </td>
+    ];
+    return [column1, column2, column3];
+  }
 
-export default connect(state => ({
-  isRtl: state.isRtl
-}))(ProgressLegend);
+  getLevelTypeColumn() {
+    return [
+      <td key={_.uniqueId()} />,
+      <td key={_.uniqueId()}>{i18n.concept()}</td>,
+      <td key={_.uniqueId()}>{i18n.activity()}</td>
+    ];
+  }
+
+  getProgressNAColumn() {
+    return [
+      <td key={_.uniqueId()}>
+        {i18n.progress()}
+        <br />
+        {i18n.notApplicable()}
+      </td>,
+      <td key={_.uniqueId()}>
+        <div>—</div>
+      </td>,
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>—</div>
+      </td>
+    ];
+  }
+
+  getNotStartedColumn() {
+    return [
+      <td key={_.uniqueId()}>{i18n.notStarted()}</td>,
+      <td key={_.uniqueId()}>
+        <div>
+          {this.getBubble(
+            LevelStatus.not_tried,
+            true,
+            `${i18n.concept()}: ${i18n.notStarted()}`
+          )}
+        </div>
+      </td>,
+      <td key={_.uniqueId()}>
+        <div>
+          {this.getBubble(
+            LevelStatus.not_tried,
+            false,
+            `${i18n.activity()}: ${i18n.notStarted()}`
+          )}
+        </div>
+      </td>
+    ];
+  }
+
+  getInProgressColumn() {
+    return [
+      <td key={_.uniqueId()}>{i18n.inProgress()}</td>,
+      <td key={_.uniqueId()}>
+        <div>
+          {this.getBubble(
+            LevelStatus.attempted,
+            true,
+            `${i18n.concept()}: ${i18n.inProgress()}`
+          )}
+        </div>
+      </td>,
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
+          {this.getBubble(
+            LevelStatus.attempted,
+            false,
+            `${i18n.activity()}: ${i18n.inProgress()}`
+          )}
+        </div>
+      </td>
+    ];
+  }
+
+  getKeepWorkingColumn() {
+    return [
+      <td key={_.uniqueId()}>{i18n.keepWorking()}</td>,
+      this.getNotApplicableCell(),
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
+          {this.getBubble(
+            LevelStatus.attempted,
+            false,
+            `${i18n.activity()}: ${i18n.keepWorking()}`,
+            true
+          )}
+        </div>
+      </td>
+    ];
+  }
+
+  getNeedsReviewColumn() {
+    return [
+      <td key={_.uniqueId()}>{i18n.needsReview()}</td>,
+      this.getNotApplicableCell(),
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
+          {this.getBubble(
+            LevelStatus.perfect,
+            false,
+            `${i18n.activity()}: ${i18n.needsReview()}`,
+            true
+          )}
+        </div>
+      </td>
+    ];
+  }
+
+  getTooManyBlocksColumn() {
+    return [
+      <td key={_.uniqueId()}>
+        <div>{i18n.completed()}</div>
+        <div>({i18n.tooManyBlocks()})</div>
+      </td>,
+      this.getNotApplicableCell(),
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
+          {this.getBubble(
+            LevelStatus.passed,
+            false,
+            `${i18n.activity()}: ${i18n.completed()} (${i18n.tooManyBlocks()})`
+          )}
+        </div>
+      </td>
+    ];
+  }
+
+  getPerfectColumn() {
+    return [
+      <td key={_.uniqueId()}>
+        <div>{i18n.completed()}</div>
+        {this.props.includeCsfColumn && <div>({i18n.perfect()})</div>}
+      </td>,
+      <td key={_.uniqueId()}>
+        <div>
+          {this.getBubble(
+            LevelStatus.perfect,
+            true,
+            `${i18n.concept()}: ${i18n.completed()} (${i18n.perfect()})`
+          )}
+        </div>
+      </td>,
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
+          {this.getBubble(
+            LevelStatus.perfect,
+            false,
+            `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
+          )}
+        </div>
+      </td>
+    ];
+  }
+
+  getAssessmentsColumn() {
+    return [
+      <td key={_.uniqueId()}>{i18n.assessmentAndSurvey()}</td>,
+      this.getNotApplicableCell(),
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
+          {this.getBubble(
+            LevelStatus.submitted,
+            false,
+            `${i18n.activity()}: ${i18n.submitted()}`
+          )}
+        </div>
+      </td>
+    ];
+  }
+
+  getNotApplicableCell() {
+    return <td key={_.uniqueId()}>{i18n.notApplicable()}</td>;
+  }
+
+  getLevelDetails(icon, text) {
+    return (
+      <div className="level-details">
+        <FontAwesome icon={icon} />
+        {text}
+      </div>
+    );
+  }
+
+  getBubble(status, isConcept, text, includeKeepWorkingBadge = false) {
+    const shape = isConcept ? BubbleShape.diamond : BubbleShape.circle;
+    return (
+      <BasicTooltip icon={defaultBubbleIcon} text={text}>
+        <BasicBubble
+          shape={shape}
+          size={BubbleSize.full}
+          progressStyle={levelProgressStyle(status)}
+        >
+          {includeKeepWorkingBadge && (
+            <BubbleBadge
+              badgeType={BadgeType.keepWorking}
+              bubbleSize={BubbleSize.full}
+              bubbleShape={shape}
+            />
+          )}
+        </BasicBubble>
+      </BasicTooltip>
+    );
+  }
+}

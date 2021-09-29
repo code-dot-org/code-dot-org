@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/deprecatedChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import {
   stubRedux,
   restoreRedux,
@@ -12,7 +12,7 @@ import reducer, {
   setRosterProvider,
   setValidGrades,
   setValidAssignments,
-  setPreReaderScriptIds,
+  setPreReaderUnitIds,
   setSections,
   selectSection,
   removeSection,
@@ -73,7 +73,9 @@ const sections = [
     course_id: 29,
     createdAt: createdAt,
     studentCount: 10,
-    hidden: false
+    hidden: false,
+    restrict_section: false,
+    code_review_enabled: true
   },
   {
     id: 12,
@@ -93,7 +95,9 @@ const sections = [
     course_id: null,
     createdAt: createdAt,
     studentCount: 1,
-    hidden: false
+    hidden: false,
+    restrict_section: false,
+    code_review_enabled: true
   },
   {
     id: 307,
@@ -113,7 +117,9 @@ const sections = [
     course_id: 29,
     createdAt: createdAt,
     studentCount: 0,
-    hidden: false
+    hidden: false,
+    restrict_section: false,
+    code_review_enabled: true
   }
 ];
 
@@ -139,6 +145,16 @@ const validCourses = [
     script_ids: [112, 113],
     assignment_family_title: 'CS Principles',
     assignment_family_name: 'csp',
+    version_year: '2017'
+  },
+  {
+    id: 31,
+    name: 'CS X 2017',
+    script_name: 'csx-2017',
+    category: 'Full Courses',
+    position: 2,
+    category_priority: 0,
+    assignment_family_title: 'CS X',
     version_year: '2017'
   }
 ];
@@ -387,7 +403,7 @@ describe('teacherSectionsRedux', () => {
       const assignment = validAssignments[assignId];
       assert.equal('Accelerated Course', assignment.name);
       assert.equal('20-hour', assignment.assignment_family_name);
-      assert.equal('2017', assignment.version_year);
+      assert.equal(undefined, assignment.version_year);
     });
 
     it('sets assignment family, version and is_stable from validScripts for a script not in a course', () => {
@@ -417,6 +433,44 @@ describe('teacherSectionsRedux', () => {
       assert(
         assignmentFamilies.find(
           af => af.assignment_family_name === scriptInCourse.script_name
+        )
+      );
+    });
+
+    it('only adds assignmentFamily for courses with family name', () => {
+      assert(
+        nextState.assignmentFamilies.find(
+          af => af.assignment_family_title === 'CS Principles'
+        )
+      );
+      assert.isUndefined(
+        nextState.assignmentFamilies.find(
+          af => af.assignment_family_title === 'CS X'
+        )
+      );
+    });
+
+    it('adds assignmentFamily for standalone unit with non-2017 version year', () => {
+      const scripts = validScripts.concat([
+        {
+          id: 37,
+          name: 'CS Et Cetera 2021',
+          script_name: 'csetc-2021',
+          category: 'other',
+          position: null,
+          category_priority: 3,
+          assignment_family_title: 'CS Et Cetera',
+          assignment_family_name: 'csetc',
+          version_year: '2021'
+        }
+      ]);
+
+      const action = setValidAssignments(validCourses, scripts);
+      const nextState = reducer(initialState, action);
+
+      assert(
+        nextState.assignmentFamilies.find(
+          af => af.assignment_family_title === 'CS Et Cetera'
         )
       );
     });
@@ -553,7 +607,7 @@ describe('teacherSectionsRedux', () => {
         loginType: undefined,
         grade: '',
         providerManaged: false,
-        stageExtras: true,
+        lessonExtras: true,
         ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
@@ -562,7 +616,9 @@ describe('teacherSectionsRedux', () => {
         courseId: null,
         scriptId: null,
         hidden: false,
-        isAssigned: undefined
+        isAssigned: undefined,
+        restrictSection: false,
+        codeReviewEnabled: true
       });
     });
   });
@@ -579,7 +635,7 @@ describe('teacherSectionsRedux', () => {
         grade: '11',
         providerManaged: false,
         code: 'DWGMFX',
-        stageExtras: false,
+        lessonExtras: false,
         ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
@@ -588,7 +644,9 @@ describe('teacherSectionsRedux', () => {
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
-        isAssigned: undefined
+        isAssigned: undefined,
+        restrictSection: false,
+        codeReviewEnabled: true
       });
     });
   });
@@ -656,25 +714,25 @@ describe('teacherSectionsRedux', () => {
       ).to.throw();
     });
 
-    it('switching script assignment updates stage extras value from script', () => {
+    it('switching script assignment updates lesson extras value from script', () => {
       let state = reducer(
         editingNewSectionState,
         setValidAssignments(validCourses, validScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 1}));
-      expect(state.sectionBeingEdited.stageExtras).to.equal(false);
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(false);
 
       state = reducer(state, editSectionProperties({scriptId: 36}));
-      expect(state.sectionBeingEdited.stageExtras).to.equal(true);
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
 
       state = reducer(state, editSectionProperties({scriptId: 37}));
-      expect(state.sectionBeingEdited.stageExtras).to.equal(true);
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
     });
 
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
       let state = reducer(
         editingNewSectionState,
-        setPreReaderScriptIds(preReaderScripts)
+        setPreReaderUnitIds(preReaderScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
@@ -687,7 +745,7 @@ describe('teacherSectionsRedux', () => {
     it.skip('switching script assignment updates default tts autoplay enabled value based on script', () => {
       let state = reducer(
         editingNewSectionState,
-        setPreReaderScriptIds(preReaderScripts)
+        setPreReaderUnitIds(preReaderScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
@@ -727,7 +785,9 @@ describe('teacherSectionsRedux', () => {
       courseId: null,
       scriptId: null,
       createdAt: createdAt,
-      hidden: false
+      hidden: false,
+      restrict_section: false,
+      code_review_enabled: true
     };
 
     function successResponse(customProps = {}) {
@@ -867,7 +927,7 @@ describe('teacherSectionsRedux', () => {
           loginType: 'picture',
           grade: '3',
           providerManaged: false,
-          stageExtras: false,
+          lessonExtras: false,
           ttsAutoplayEnabled: false,
           pairingAllowed: true,
           sharingDisabled: undefined,
@@ -877,7 +937,9 @@ describe('teacherSectionsRedux', () => {
           scriptId: null,
           createdAt: createdAt,
           hidden: false,
-          isAssigned: undefined
+          isAssigned: undefined,
+          restrictSection: false,
+          codeReviewEnabled: true
         }
       });
     });
@@ -931,7 +993,9 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
-      hidden: false
+      hidden: false,
+      restrict_section: false,
+      code_review_enabled: true
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -1162,7 +1226,9 @@ describe('teacherSectionsRedux', () => {
       course_id: 29,
       createdAt: createdAt,
       studentCount: 10,
-      hidden: false
+      hidden: false,
+      restrict_section: false,
+      code_review_enabled: true
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -1172,7 +1238,7 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.login_type, serverSection.loginType);
       assert.strictEqual(section.grade, serverSection.grade);
       assert.strictEqual(section.code, serverSection.code);
-      assert.strictEqual(section.lesson_extras, serverSection.stageExtras);
+      assert.strictEqual(section.lesson_extras, serverSection.lessonExtras);
       assert.strictEqual(
         section.tts_autoplay_enabled,
         serverSection.ttsAutoplayEnabled
@@ -1184,6 +1250,14 @@ describe('teacherSectionsRedux', () => {
       );
       assert.strictEqual(section.course_id, serverSection.courseId);
       assert.strictEqual(section.hidden, serverSection.hidden);
+      assert.strictEqual(
+        section.restrict_section,
+        serverSection.restrictSection
+      );
+      assert.strictEqual(
+        section.code_review_enabled,
+        serverSection.codeReviewEnabled
+      );
     });
 
     it('maps from a script object to a script_id', () => {

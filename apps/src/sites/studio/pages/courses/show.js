@@ -1,28 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import announcementReducer, {
+  addAnnouncement
+} from '@cdo/apps/code-studio/announcementsRedux';
+import clientState from '@cdo/apps/code-studio/clientState';
+import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {getStore} from '@cdo/apps/code-studio/redux';
+import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
-  setSections,
+  pageTypes,
   selectSection,
   setPageType,
-  pageTypes
+  setSections
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import clientState from '@cdo/apps/code-studio/clientState';
-import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {registerReducers} from '@cdo/apps/redux';
 import {setUserSignedIn} from '@cdo/apps/templates/currentUserRedux';
-import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
 import {
   setVerified,
   setVerifiedResources
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
-import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
-import announcementReducer, {
-  addAnnouncement
-} from '@cdo/apps/code-studio/announcementsRedux';
-import {registerReducers} from '@cdo/apps/redux';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
 $(document).ready(showCourseOverview);
 
@@ -99,11 +101,7 @@ function showCourseOverview() {
         teacherResources={teacherResources}
         migratedTeacherResources={courseSummary.migrated_teacher_resources}
         studentResources={courseSummary.student_resources}
-        isTeacher={isTeacher}
-        viewAs={ViewType.Teacher}
         scripts={courseSummary.scripts}
-        isVerifiedTeacher={!!scriptData.is_verified_teacher}
-        hasVerifiedResources={!!courseSummary.has_verified_resources}
         versions={convertAssignmentVersionShapeFromServer(versions)}
         showVersionWarning={
           !!scriptData.show_version_warning && versions.length > 1
@@ -117,4 +115,5 @@ function showCourseOverview() {
     </Provider>,
     document.getElementById('course_overview')
   );
+  tooltipifyVocabulary();
 }

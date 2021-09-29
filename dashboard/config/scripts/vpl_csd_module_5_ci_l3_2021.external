@@ -1,0 +1,31 @@
+name 'VPL - CSD - Module 5 - CI - L3_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 5 - Lesson 3:  ASCII and Binary Representation 
+**Estimated time: 15 minutes**
+
+
+
+
+## Investigation Goals
+
+**Identify how patterns can represent information**
+
+## Investigation Tasks
+
+* Review the lesson plan, <a href="https://curriculum.code.org/csd-20/unit5/3/" target="_blank">Lesson 3: ASCII and Binary Representation</a>
+* Review vocabulary (binary, ASCII)
+* Skim the activity guide to support students in completing the activity within this lesson
+
+
+
+
+
+
+
+
+
+MARKDOWN

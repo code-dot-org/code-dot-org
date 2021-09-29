@@ -33,8 +33,12 @@ class FoormFormSaveBar extends Component {
     // Populated by Redux
     formQuestions: PropTypes.object,
     hasJSONError: PropTypes.bool,
+    hasLintError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
+    isLatestVersion: PropTypes.bool,
     formId: PropTypes.number,
+    formName: PropTypes.string,
+    formVersion: PropTypes.number,
     lastSaved: PropTypes.number,
     saveError: PropTypes.string,
     setFormData: PropTypes.func,
@@ -51,20 +55,24 @@ class FoormFormSaveBar extends Component {
       confirmationDialogBeingShownName: null,
       isSaving: false,
       showNewFormSave: false,
-      formName: null,
+      formShortName: null, // just the second part of the name without the category
       formCategory: null
     };
   }
+
+  hasCodeMirrorError = () => this.props.hasLintError || this.props.hasJSONError;
 
   updateQuestionsUrl = () =>
     `/foorm/forms/${this.props.formId}/update_questions`;
 
   publishUrl = () => `/foorm/forms/${this.props.formId}/publish`;
 
-  handleSave = () => {
+  handleSave = (saveAsNewVersion = false) => {
     this.setState({isSaving: true});
     this.props.setSaveError(null);
-    if (this.props.isFormPublished) {
+    if (saveAsNewVersion) {
+      this.saveNewForm(true);
+    } else if (this.props.isFormPublished) {
       // show a warning if in published mode
       this.setState({
         confirmationDialogBeingShownName: confirmationDialogNames.save
@@ -75,6 +83,14 @@ class FoormFormSaveBar extends Component {
     } else {
       this.save(this.updateQuestionsUrl());
     }
+  };
+
+  handleSaveNewVersion = () => {
+    this.setState({
+      isSaving: true,
+      confirmationDialogBeingShownName: confirmationDialogNames.saveNewVersion
+    });
+    this.props.setSaveError(null);
   };
 
   handlePublish = () => {
@@ -117,26 +133,32 @@ class FoormFormSaveBar extends Component {
       });
   };
 
-  isFormNameValid = () => {
-    return this.state.formName && this.state.formName.match('^[a-z0-9_]+$');
+  isFormShortNameValid = () => {
+    return (
+      this.state.formShortName && this.state.formShortName.match('^[a-z0-9_]+$')
+    );
   };
 
-  saveNewForm = () => {
-    const newFormName = `${this.state.formCategory}/${this.state.formName}`;
+  saveNewForm = (saveAsNewVersion = false) => {
+    const newFormName = `${this.state.formCategory}/${
+      this.state.formShortName
+    }`;
     $.ajax({
       url: `/foorm/forms`,
       type: 'post',
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        name: newFormName,
+        name: saveAsNewVersion ? this.props.formName : newFormName,
+        version: saveAsNewVersion ? this.props.formVersion + 1 : undefined,
         questions: this.props.formQuestions
       })
     })
       .done(result => {
         this.handleSaveSuccess(result);
         this.setState({
-          showNewFormSave: false
+          showNewFormSave: false,
+          confirmationDialogBeingShownName: null
         });
         // adds new form to form dropdown
         this.props.addFetchableForm({
@@ -148,7 +170,8 @@ class FoormFormSaveBar extends Component {
       .fail(result => {
         this.handleSaveError(result);
         this.setState({
-          showNewFormSave: false
+          showNewFormSave: false,
+          confirmationDialogBeingShownName: null
         });
       });
   };
@@ -185,7 +208,8 @@ class FoormFormSaveBar extends Component {
   }
 
   renderNewFormSaveModal = () => {
-    const showFormNameError = this.state.formName && !this.isFormNameValid();
+    const showFormNameError =
+      this.state.formShortName && !this.isFormShortNameValid();
     return (
       <Modal
         show={this.state.showNewFormSave}
@@ -226,7 +250,7 @@ class FoormFormSaveBar extends Component {
               id="formName"
               type="text"
               required={true}
-              onChange={e => this.setState({formName: e.target.value})}
+              onChange={e => this.setState({formShortName: e.target.value})}
             />
           </FormGroup>
           {showFormNameError && (
@@ -240,9 +264,9 @@ class FoormFormSaveBar extends Component {
         <Modal.Footer>
           <Button
             bsStyle="primary"
-            onClick={this.saveNewForm}
+            onClick={() => this.saveNewForm(false)}
             disabled={
-              !(this.state.formName && this.state.formCategory) ||
+              !(this.state.formShortName && this.state.formCategory) ||
               showFormNameError
             }
           >
@@ -260,19 +284,19 @@ class FoormFormSaveBar extends Component {
         <div style={styles.saveButtonBackground} className="saveBar">
           {this.props.lastSaved &&
             !this.props.saveError &&
-            !this.props.hasJSONError && (
+            !this.hasCodeMirrorError() && (
               <div style={styles.lastSaved} className="lastSavedMessage">
                 {`Last saved at: ${new Date(
                   this.props.lastSaved
                 ).toLocaleString()}`}
               </div>
             )}
-          {this.props.hasJSONError && (
+          {this.hasCodeMirrorError() && (
             <div style={styles.error}>
               {`Please fix parsing error before saving. See the errors noted on the left side of the editor.`}
             </div>
           )}
-          {this.props.saveError && !this.props.hasJSONError && (
+          {this.props.saveError && !this.hasCodeMirrorError() && (
             <div
               style={styles.error}
               className="saveErrorMessage"
@@ -289,17 +313,28 @@ class FoormFormSaveBar extends Component {
               type="button"
               style={styles.button}
               onClick={this.handlePublish}
-              disabled={this.state.isSaving || this.props.hasJSONError}
+              disabled={this.state.isSaving || this.hasCodeMirrorError()}
             >
               Publish
+            </button>
+          )}
+          {this.props.isLatestVersion && (
+            <button
+              className="btn btn-primary"
+              type="button"
+              style={styles.button}
+              onClick={() => this.handleSaveNewVersion()}
+              disabled={this.state.isSaving || this.props.hasJSONError}
+            >
+              Save as New Version
             </button>
           )}
           <button
             className="btn btn-primary"
             type="button"
             style={styles.button}
-            onClick={this.handleSave}
-            disabled={this.state.isSaving || this.props.hasJSONError}
+            onClick={() => this.handleSave(false)}
+            disabled={this.state.isSaving || this.hasCodeMirrorError()}
           >
             Save
           </button>
@@ -330,6 +365,19 @@ class FoormFormSaveBar extends Component {
           onCancel={this.handleSaveCancel}
           headerText="Publish Form"
           bodyText={aboutToPublishWarning}
+        />
+        <ConfirmationDialog
+          show={
+            this.state.confirmationDialogBeingShownName ===
+            confirmationDialogNames.saveNewVersion
+          }
+          onOk={() => {
+            this.handleSave(true);
+          }}
+          okText={'Yes, save the form'}
+          onCancel={this.handleSaveCancel}
+          headerText="Save Form as New Version"
+          bodyText={saveNewVersionWarning(this.props.formVersion + 1)}
         />
       </div>
     );
@@ -373,6 +421,24 @@ const styles = {
   }
 };
 
+const saveNewVersionWarning = version => (
+  <div>
+    <span style={styles.warning}>Warning: </span>You are about to save version{' '}
+    {version} of this form. Read more about versioning{' '}
+    <a
+      href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5d-The-Foorm-Editor#when-to-version"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      here
+    </a>
+    . Check with an engineer if you are unsure this needs a new version.
+    <br />
+    <br />
+    Are you sure you want to save your changes?
+  </div>
+);
+
 const publishedSaveWarning = (
   <div>
     <span style={styles.warning}>Warning: </span>You are editing a published
@@ -406,7 +472,8 @@ const aboutToPublishWarning = (
 
 const confirmationDialogNames = {
   save: 'save',
-  publish: 'publish'
+  publish: 'publish',
+  saveNewVersion: 'saveNewVersion'
 };
 
 export const UnconnectedFoormFormSaveBar = FoormFormSaveBar;
@@ -415,8 +482,11 @@ export default connect(
   state => ({
     formQuestions: state.foorm.questions || {},
     isFormPublished: state.foorm.isFormPublished,
+    hasLintError: state.foorm.hasLintError,
     hasJSONError: state.foorm.hasJSONError,
     formId: state.foorm.formId,
+    formName: state.foorm.formName,
+    formVersion: state.foorm.formVersion,
     lastSaved: state.foorm.lastSaved,
     saveError: state.foorm.saveError
   }),

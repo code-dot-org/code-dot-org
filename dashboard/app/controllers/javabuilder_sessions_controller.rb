@@ -12,7 +12,11 @@ class JavabuilderSessionsController < ApplicationController
   def get_access_token
     channel_id = params[:channelId]
     project_version = params[:projectVersion]
+    # TODO: remove project_url after javabuilder is deployed with update to no longer need it
     project_url = params[:projectUrl]
+    level_id = params[:levelId]
+    options = params[:options]
+    options = options ? options.to_json : '{}'
     if !channel_id || !project_version || !project_url
       return render status: :bad_request, json: {}
     end
@@ -37,7 +41,9 @@ class JavabuilderSessionsController < ApplicationController
       storage_app_id: storage_app_id,
       channel_id: channel_id,
       project_version: project_version,
-      project_url: project_url
+      project_url: project_url,
+      level_id: level_id,
+      options: options
     }
 
     # log payload to firehose

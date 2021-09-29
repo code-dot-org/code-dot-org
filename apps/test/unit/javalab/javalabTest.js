@@ -37,8 +37,7 @@ describe('Javalab', () => {
   });
 
   afterEach(() => {
-    project.autosave.restore();
-    ReactDOM.render.restore();
+    sinon.restore();
     restoreRedux();
     restoreStudioApp();
   });

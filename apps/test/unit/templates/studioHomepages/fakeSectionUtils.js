@@ -14,7 +14,7 @@ export const sections = [
       'https://code.org/teacher-dashboard#/sections/111111/manage',
     code: 'ABCDEF',
     loginType: 'picture',
-    stageExtras: false,
+    lessonExtras: false,
     pairingAllowed: true,
     courseId: null,
     scriptId: null
@@ -32,7 +32,7 @@ export const sections = [
       'https://code.org/teacher-dashboard#/sections/222222/manage',
     code: 'EEBSKR',
     loginType: 'picture',
-    stageExtras: false,
+    lessonExtras: false,
     pairingAllowed: true,
     courseId: null,
     scriptId: null

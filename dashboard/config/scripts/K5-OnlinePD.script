@@ -1,6 +1,7 @@
 professional_learning_course 'K5 Support'
 login_required true
 announcements [{"notice"=>"Updated version of this course available! ", "details"=>"We have released a new and improved version of this course! Click \"learn more\" to be routed to the 2019 version of Teaching Computer Science Fundamentals.", "link"=>"https://studio.code.org/s/k5-onlinepd-2019", "type"=>"warning", "visibility"=>"Teacher-only"}]
+published_state 'beta'
 
 lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
 level 'OPD-K5 Intro'

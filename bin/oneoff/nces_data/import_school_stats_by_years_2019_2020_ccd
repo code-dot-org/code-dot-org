@@ -115,8 +115,6 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools.csv") do |filename|
   end
 end
 
-# URL where source was found ("Public School File" under 2018-19 tab): https://nces.ed.gov/programs/edge/Geographic/SchoolLocations
-# Download link: https://nces.ed.gov/programs/edge/data/EDGE_GEOCODE_PUBLICSCH_1819.zip
 AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/locale.csv") do |filename|
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'UTF-8'}, dry_run: DRY_RUN) do |row|
     {

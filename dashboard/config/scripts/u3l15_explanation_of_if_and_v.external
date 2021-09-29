@@ -87,7 +87,7 @@ To state what should be obvious by this point: `=` is for assigning a value to a
 |:---|---|
 | ![](https://images.code.org/acf7d36df4d669f284b35ccc82509f1b-image-1446154925792.png) | "var *a* gets 7.<br>If *a* equal-equal 9 then<br> *a* gets 0" |
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 
 MARKDOWN

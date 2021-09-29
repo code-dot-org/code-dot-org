@@ -15,10 +15,12 @@
 #  readonly_answers :boolean
 #  unlocked_at      :datetime
 #  time_spent       :integer
+#  deleted_at       :datetime
+#  properties       :text(65535)
 #
 # Indexes
 #
-#  index_user_levels_on_user_id_and_level_id_and_script_id  (user_id,level_id,script_id) UNIQUE
+#  index_user_levels_unique  (user_id,script_id,level_id,deleted_at) UNIQUE
 #
 
 require 'cdo/activity_constants'
@@ -27,6 +29,8 @@ require 'cdo/activity_constants'
 # Includes number of attempts (attempts), best score and whether it was submitted
 class UserLevel < ApplicationRecord
   AUTOLOCK_PERIOD = 1.day
+
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :user
   belongs_to :level
@@ -42,9 +46,9 @@ class UserLevel < ApplicationRecord
   scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
   scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
 
-  def self.by_stage(stage)
-    levels = stage.script_levels.map(&:level_ids).flatten
-    where(script: stage.script, level: levels)
+  def self.by_lesson(lesson)
+    levels = lesson.script_levels.map(&:level_ids).flatten
+    where(script: lesson.script, level: levels)
   end
 
   def attempted?
@@ -63,42 +67,76 @@ class UserLevel < ApplicationRecord
     ActivityConstants.passing?(best_result)
   end
 
-  # user levels can be linked through pair programming. The 'driver'
-  # user level is the one that is linked to the user account that
-  # completed the activity; the 'navigator' user level is the one that
-  # also gets credit for the solution.
-  has_many :paired_user_levels_as_navigator, class_name: 'PairedUserLevel', foreign_key: 'navigator_user_level_id'
-  has_many :paired_user_levels_as_driver, class_name: 'PairedUserLevel', foreign_key: 'driver_user_level_id'
+  # Retrieves and memoizes the latest PairedUserLevel that's associated with
+  # this UserLevel for internal callers. External callers should call one of
+  # the higher-level pairing-related methods below.
+  #
+  # Conceptually, each UserLevel should only be associated with one
+  # PairedUserLevel. However, since we don't clean up previous entries in the
+  # paired_user_levels table when posting progress, there can be multiple
+  # entries in the paired_user_levels table associated with a user_level. We
+  # heuristically consider the latest entry in the paired_user_levels table as
+  # the "active" one. This is correct for most cases but can be incorrect in
+  # some edge cases such as when a student leaves a pairing group and makes
+  # further progress on a level as an individual.
+  private def latest_paired_user_level
+    return @latest_paired_user_level if defined? @latest_paired_user_level
+    @latest_paired_user_level =
+      PairedUserLevel.where(driver_user_level_id: id).
+        or(PairedUserLevel.where(navigator_user_level_id: id)).
+        last
+  end
 
-  has_many :navigator_user_levels, through: :paired_user_levels_as_driver
-  has_many :driver_user_levels, through: :paired_user_levels_as_navigator
-
+  # Returns whether this UserLevel represents progress completed by a pairing
+  # group where the user was the driver.
   def driver?
-    navigator_user_levels.present?
+    return false if latest_paired_user_level.nil?
+    id == latest_paired_user_level.driver_user_level_id
   end
 
+  # Returns whether this UserLevel represents progress completed by a pairing
+  # group where the user was a navigator.
   def navigator?
-    driver_user_levels.present?
+    return false if latest_paired_user_level.nil?
+    id == latest_paired_user_level.navigator_user_level_id
   end
 
-  def self.most_recent_driver(script, level, user)
-    most_recent = find_by(script: script, level: level, user: user).try(:driver_user_levels).try(:last)
-    return nil unless most_recent
-
-    most_recent_user = most_recent.user || DeletedUser.instance
-    return most_recent_user.name, most_recent.level_source_id, most_recent_user
-  end
-
-  def self.most_recent_navigator(script, level, user)
-    most_recent = find_by(script: script, level: level, user: user).try(:navigator_user_levels).try(:last)
-    return nil unless most_recent
-
-    most_recent_user = most_recent.user || DeletedUser.instance
-    return most_recent_user.name, most_recent.level_source_id, most_recent_user
-  end
-
+  # Returns whether this UserLevel represents progress completed by a pairing
+  # group.
   def paired?
     driver? || navigator?
+  end
+
+  # Returns the User object representing the driver of the pairing group if this
+  # UserLevel represents progress completed by a pairing group and the driver
+  # information is available.  It is possible for navigator? to return true but
+  # driver to return nil if the driver or the driver's progress was deleted.
+  def driver
+    latest_paired_user_level&.driver
+  end
+
+  # Returns the driver's level_source id if this UserLevel represents progress
+  # completed when in a pairing group. For non-channel-backed levels, this is
+  # where the source written by the pairing group is stored.
+  def driver_level_source_id
+    latest_paired_user_level&.driver_level_source_id
+  end
+
+  # Returns the names of the (other) navigators of the pairing group if this
+  # UserLevel represents progress completed when in a pairing group. If this
+  # UserLevel represents the driver's progress, this method will return the
+  # names of all navigators in the pairing group. If this UserLevel represents
+  # a navigator's progress, that navigator will be omitted from the returned
+  # list. Navigators whose user account or progress was deleted are omitted from
+  # the list.
+  def navigators_names
+    latest_paired_user_level&.navigators_names(exclude_self: navigator?)
+  end
+
+  # Returns the number of navigators in the pairing group if this UserLevel
+  # represents progress completed when in a pairing group.
+  def navigator_count
+    latest_paired_user_level&.navigator_count
   end
 
   def calculate_total_time_spent(additional_time)
@@ -143,16 +181,16 @@ class UserLevel < ApplicationRecord
 
   # this is the "locked" value we return to the client.
   # if the lesson isn't lockable, we always return `false`.
-  def show_as_locked?(stage)
-    return false unless stage.lockable?
+  def show_as_locked?(lesson)
+    return false unless lesson.lockable?
     locked
   end
 
   # `readonly` and `locked` are mutually exclusive on the client, so we use
   # this helper to override the value of `readonly_answers` when we're supposed
   # to show as locked.
-  def show_as_readonly?(stage)
-    readonly_answers? && !show_as_locked?(stage)
+  def show_as_readonly?(lesson)
+    readonly_answers? && !show_as_locked?(lesson)
   end
 
   # First ScriptLevel in this Script containing this Level.
@@ -184,6 +222,21 @@ class UserLevel < ApplicationRecord
 
     # preserve updated_at, which represents the user's submission timestamp.
     user_level.save!(touch: false)
+  end
+
+  def self.update_best_result(user_id, level_id, script_id, best_result, touch_updated_at = true)
+    user_level = UserLevel.find_by(
+      level_id: level_id,
+      script_id: script_id,
+      user_id: user_id
+    )
+
+    if user_level.present?
+      user_level.best_result = best_result
+
+      # touch_updated_at=false preserves updated_at, which represents the user's submission timestamp.
+      user_level.save!(touch: touch_updated_at)
+    end
   end
 
   # Get number of passed levels per user for the given set of user IDs

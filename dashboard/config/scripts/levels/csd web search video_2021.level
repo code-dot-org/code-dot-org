@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "video_key": "csd_concept_search",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24906,
+    "name_suffix": "_2021"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2021-05-12T03:31:09.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-27 22:03:11 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-29 18:25:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-29 18:31:37 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-29 18:34:47 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2021-05-12 03:32:05 +0000\",\"changed\":[\"video_key\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

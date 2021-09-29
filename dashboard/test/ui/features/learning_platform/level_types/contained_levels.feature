@@ -68,6 +68,28 @@ Scenario: Gamelab with multiple choice contained level
   And I wait until current URL contains "/lessons/41/levels/3"
   Then I close my eyes
 
+Scenario: Javalab with free response contained level
+  When I open my eyes to test "javalab contained level"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/44/levels/6"
+  And I rotate to landscape
+  And I wait to see ".response"
+  And I scroll the ".response" element into view
+  Then I see no difference for "initial load" using stitch mode "none"
+  Then I press keys "This is my answer" for element ".response"
+  And I see no difference for "answer entered" using stitch mode "none"
+  Then I press "runButton"
+  And I see no difference for "level run" using stitch mode "none"
+
+  # At this point, we should have submitted our result to the server, do
+  # a reload and make sure we have the submission
+  Then I am on "http://studio.code.org/s/allthethings/lessons/44/levels/6"
+  And I rotate to landscape
+  And I wait to see ".response"
+  And I see no difference for "reloaded with contained level answered" using stitch mode "none"
+  Then I press "runButton"
+  And I see no difference for "finished level with contained level" using stitch mode "none"
+  Then I close my eyes
+
 Scenario: Authorized Teacher on Maze with free response contained level
   When I open my eyes to test "maze free response contained level"
   Given I sign in as "Teacher_Lillian"

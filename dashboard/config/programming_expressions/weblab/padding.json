@@ -1,4 +1,5 @@
 {
   "func": "pad",
-  "category": "CSS Properties"
+  "category": "CSS Properties",
+  "syntax": "padding: value;"
 }

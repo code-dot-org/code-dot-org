@@ -1,0 +1,16 @@
+<div class="col-100" style="width:100%; border: 1px solid #696969; color:#696969; padding: 30px 30px 20px 30px; border-radius:15px;">
+<div class="col-33" style="padding-right: 20px;">
+
+{{ ai_vid_panel }}
+
+</div>
+
+<div class="col-66">
+
+<h3><%= I18n.t("ai_ethics_panel_header", default: "Exploring the Ethics of AI panel discussion") %></h3>
+<p><%= I18n.t("ai_ethics_panel_description_1", default: "Go deeper with some of our favorite AI experts! This panel discussion touches on important issues like algorithmic bias and the future of work. Pair it with our") %> <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank"><%= I18n.t("ai_ethics_lesson_plan", default: "AI & Ethics lesson plan") %></a> <%= I18n.t("ai_ethics_panel_description_2", default: "for a great introduction to the ethics of artificial intelligence!") %></p>
+
+</div>
+
+<div style="clear: both"></div>
+</div>

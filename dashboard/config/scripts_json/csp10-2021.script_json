@@ -2,7 +2,6 @@
   "script": {
     "name": "csp10-2021",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-04 03:06:03 UTC",
+    "serialized_at": "2021-09-27 20:35:09 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -2651,7 +2651,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2677,7 +2676,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2703,7 +2701,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2729,7 +2726,6 @@
         ],
         "progression": "Keylogging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2755,7 +2751,6 @@
         ],
         "progression": "Phishing"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2781,7 +2776,6 @@
         ],
         "progression": "Malware"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2807,7 +2801,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2828,9 +2821,11 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L08 CFU security risks_2021"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2856,7 +2851,6 @@
         ],
         "progression": "Encryption Widgets"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2882,7 +2876,6 @@
         ],
         "progression": "Encryption Widgets"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2908,7 +2901,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2934,7 +2926,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2960,7 +2951,6 @@
         ],
         "progression": "Unit 10 Exam"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3136,6 +3126,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp10-2021/resources",
+      "key": "all_resources_10",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_10"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp10-2021/standards",
+      "key": "all_standards_10",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_10"
+      }
+    },
+    {
       "name": "Call Center - Reading Passage",
       "url": "https://docs.google.com/document/d/1ukiDCZ1tnd0CtuPl0o2H6vOLGaYbIgjbO2xHlLTuTio/edit?usp=sharing",
       "key": "call-center-reading-passage",
@@ -3196,6 +3208,18 @@
       },
       "seeding_key": {
         "resource.key": "csp-unit-10-project-overview"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -3308,13 +3332,37 @@
       "seeding_key": {
         "resource.key": "teacher_forum"
       }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp-unit-10-project-overview"
+        "lesson.key": "Data Policies and Privacy",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Policies and Privacy",
+        "resource.key": "data-policies-activity-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 14: Unit Assessment Day",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3326,19 +3374,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "innovation-simulation-bios"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp_innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp_innovation_simulation_nameplates"
+        "resource.key": "csp-unit-10-project-overview"
       }
     },
     {
@@ -3350,7 +3386,25 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
+        "resource.key": "csp_innovation_simulation_nameplates"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "resource.key": "csp_innovation_simulation_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
         "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "resource.key": "innovation-simulation-bios"
       }
     },
     {
@@ -3373,30 +3427,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Data Policies and Privacy",
-        "resource.key": "data-policies-activity-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Policies and Privacy",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Value of Privacy",
-        "resource.key": "data-policies-activity-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Value of Privacy",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 3",
         "resource.key": "csp-unit-10-project-overview"
       }
@@ -3410,6 +3440,96 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 3",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "resource.key": "csp-unit-10-project-overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "resource.key": "csp_innovation_simulation_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 5",
+        "resource.key": "csp-unit-10-project-overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 5",
+        "resource.key": "csp_innovation_simulation_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 5",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 6",
+        "resource.key": "csp-unit-10-project-overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 6",
+        "resource.key": "csp_innovation_simulation_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 6",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 7",
+        "resource.key": "csp-unit-10-project-overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 7",
+        "resource.key": "csp_innovation_simulation_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 7",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "resource.key": "call-center-reading-passage"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
         "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
@@ -3434,113 +3554,41 @@
     {
       "seeding_key": {
         "lesson.key": "Security Risks Part 2",
-        "resource.key": "planet_money_bad_credit_bureau_podcast_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 2",
         "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
-        "resource.key": "csp-unit-10-project-overview"
+        "lesson.key": "Security Risks Part 2",
+        "resource.key": "planet_money_bad_credit_bureau_podcast_"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
-        "resource.key": "csp_innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
+        "lesson.key": "The Value of Privacy",
         "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Protecting Data Part 1",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "resource.key": "call-center-reading-passage"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 5",
-        "resource.key": "csp-unit-10-project-overview"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 5",
-        "resource.key": "csp_innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 5",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 6",
-        "resource.key": "csp-unit-10-project-overview"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 6",
-        "resource.key": "csp_innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 6",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 7",
-        "resource.key": "csp-unit-10-project-overview"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 7",
-        "resource.key": "csp_innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 7",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 14: Unit Assessment Day",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "lesson.key": "The Value of Privacy",
+        "resource.key": "data-policies-activity-guide"
       }
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_10",
+        "script.name": "csp10-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_10",
+        "script.name": "csp10-2021"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "course_master_vocabulary",
@@ -3549,7 +3597,19 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp10-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp10-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp10-2021"
       }
     }

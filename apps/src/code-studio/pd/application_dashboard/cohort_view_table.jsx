@@ -17,28 +17,6 @@ import {
   RegionalPartnerPropType
 } from '../components/regional_partner_dropdown';
 
-const styles = {
-  container: {
-    overflowX: 'auto'
-  },
-  table: {
-    width: '100%'
-  },
-  statusCellCommon: {
-    padding: '5px'
-  },
-  statusCell: StatusColors,
-  notesCell: {
-    maxWidth: '200px'
-  },
-  notesCellContent: {
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    paddingLeft: '2px'
-  }
-};
-
 export class CohortViewTable extends React.Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
@@ -77,7 +55,7 @@ export class CohortViewTable extends React.Component {
     };
   }
 
-  componentWillUpdate() {
+  UNSAFE_componentWillUpdate() {
     this.constructColumns();
   }
 
@@ -368,6 +346,28 @@ export class CohortViewTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    overflowX: 'auto'
+  },
+  table: {
+    width: '100%'
+  },
+  statusCellCommon: {
+    padding: '5px'
+  },
+  statusCell: StatusColors,
+  notesCell: {
+    maxWidth: '200px'
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
+  }
+};
 
 export default connect(state => ({
   regionalPartnerGroup: state.regionalPartners.regionalPartnerGroup,

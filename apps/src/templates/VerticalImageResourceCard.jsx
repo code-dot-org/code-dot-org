@@ -67,7 +67,7 @@ class VerticalImageResourceCard extends Component {
       <div style={[cardStyle, localeStyle]}>
         <div style={imageStyle}>
           <a href={link}>
-            <img src={imgSrc} />
+            <img src={imgSrc} alt={title} />
           </a>
         </div>
         <div>

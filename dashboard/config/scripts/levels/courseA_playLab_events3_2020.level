@@ -64,9 +64,7 @@
     "remove_items_when_actor_collides": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/bcaf4479ba666f703a66d36583f0cc91=levelbuilder/45308.png",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

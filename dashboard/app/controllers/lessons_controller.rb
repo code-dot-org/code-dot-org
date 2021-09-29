@@ -30,6 +30,12 @@ class LessonsController < ApplicationController
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user, can_view_teacher_markdown?)
   end
 
+  # GET /lessons/2345
+  def show_by_id
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, can_view_teacher_markdown?)
+    render :show
+  end
+
   # GET /s/script-name/lessons/1/student
   def student_lesson_plan
     script = Script.get_from_cache(params[:script_id])
@@ -44,14 +50,21 @@ class LessonsController < ApplicationController
     @lesson_data = @lesson.summarize_for_student_lesson_plan
   end
 
-  # GET /lessons/1/edit
+  # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
+  def edit_with_lesson_position
+    script = Script.get_from_cache(params[:script_id])
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+
+    disallow_legacy_script_levels
+    setup_edit
+    render :edit
+  end
+
+  # GET /lessons/1/edit where 1 is the ID of the lesson
   def edit
-    @lesson_data = @lesson.summarize_for_lesson_edit
-    # Return an empty list, because computing the list of related lessons here
-    # sometimes hits a bug and causes the lesson edit page to fail to load.
-    @related_lessons = []
-    @search_options = Level.search_options
-    view_options(full_width: true)
+    setup_edit
   end
 
   # PATCH/PUT /lessons/1
@@ -129,7 +142,31 @@ class LessonsController < ApplicationController
     render(status: :not_acceptable, plain: e.message)
   end
 
+  def clone
+    destination_script = Script.find_by_name(params[:destinationUnitName])
+    raise "Cannot find script #{params[:destinationUnitName]}" unless destination_script
+    raise 'Destination script and lesson script must be in a course version' unless destination_script.get_course_version && @lesson.script.get_course_version
+    raise 'Lessons current unit and destination unit must both use code studio lesson plans' unless !destination_script.use_legacy_lesson_plans && !@lesson.script.use_legacy_lesson_plans
+    ActiveRecord::Base.transaction do
+      copied_lesson = @lesson.copy_to_unit(destination_script)
+      render(status: 200, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
+    end
+  rescue => err
+    render(json: {error: err.message}.to_json, status: :not_acceptable)
+  end
+
   private
+
+  # We have two urls you can use to edit a lesson with a lesson plan. This does the
+  # work for both of them to prepare the data for editing
+  def setup_edit
+    @lesson_data = @lesson.summarize_for_lesson_edit
+    # Return an empty list, because computing the list of related lessons here
+    # sometimes hits a bug and causes the lesson edit page to fail to load.
+    @related_lessons = []
+    @search_options = Level.search_options
+    view_options(full_width: true)
+  end
 
   def lesson_params
     # Convert camelCase params to snake_case. Right now this only works on

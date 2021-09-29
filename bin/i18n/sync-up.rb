@@ -4,6 +4,7 @@
 # 1. from i18n/locales/source to Code.org project
 # 2. from pegasus/sites.v3/code.org/public to Code.org - Markdown project
 # 3. from i18n/locales/source/hourofcode to Hourofcode project
+# 4. from i18n/locales/source/**/restricted.yml to Code.org - Restricted project
 
 require_relative 'i18n_script_utils'
 

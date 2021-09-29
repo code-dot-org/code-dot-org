@@ -2,15 +2,17 @@
   "script": {
     "name": "csd-post-survey",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "exclude_csf_column_in_legend": true,
-      "has_verified_resources": true
+      "has_verified_resources": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-05-03 23:55:24 UTC",
+    "family_name": "csd-post-survey",
+    "serialized_at": "2021-08-03 22:47:35 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csd-post-survey"
     }
@@ -32,7 +34,7 @@
   "lessons": [
     {
       "key": "CSD post-course survey",
-      "name": "CSD post-course survey",
+      "name": "CSD Student Post-Course Survey ('18-'19)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -64,7 +66,6 @@
         ],
         "progression": "CS Discoveries Post-course Survey"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

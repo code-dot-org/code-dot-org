@@ -38,10 +38,16 @@ class ParentLevelsChildLevel < ApplicationRecord
   belongs_to :child_level, class_name: 'Level'
   validates_uniqueness_of :child_level, scope: :parent_level
 
+  default_scope {order(position: :asc)}
+
   VALID_KINDS = [
     CONTAINED = 'contained'.freeze,
     PROJECT_TEMPLATE = 'project_template'.freeze,
     SUBLEVEL = 'sublevel'.freeze
   ]
   validates_inclusion_of :kind, in: VALID_KINDS
+
+  VALID_KINDS.each do |kind|
+    scope kind, -> {where(kind: kind)}
+  end
 end

@@ -79,6 +79,13 @@ class HelpHeader
         url: "/report_abuse",
         id: "report-abuse"
       }
+    elsif options[:lesson]
+      report_url = options[:lesson].report_bug_url(options[:request])
+      entries << {
+        title: I18n.t("#{loc_prefix}report_bug"),
+        url: report_url,
+        id: "report-bug"
+      }
     else
       entries << {
         title: I18n.t("#{loc_prefix}report_bug"),

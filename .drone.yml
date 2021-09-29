@@ -6,81 +6,81 @@ name: unit
 clone:
   disable: true
 
-steps: 
-- name: clone
-  image: docker:git
-  commands:
-  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
-  - git reset --hard $DRONE_COMMIT
-  # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
-  - git remote set-branches --add origin $DRONE_TARGET_BRANCH
-  - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
+steps:
+  - name: clone
+    image: docker:git
+    commands:
+      - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
+      - git reset --hard $DRONE_COMMIT
+      # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
+      - git remote set-branches --add origin $DRONE_TARGET_BRANCH
+      - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
 
-- name: restore-cache
-  image: plugins/s3-cache
-  settings:
-    endpoint: s3://code-dot-org
-    debug: true
-    pull: true
-    restore: true
-    filename: unit-tests-cache.tar
+  - name: restore-cache
+    image: plugins/s3-cache
+    settings:
+      endpoint: s3://code-dot-org
+      debug: true
+      pull: true
+      restore: true
+      filename: unit-tests-cache.tar
 
-- name: unit-tests
-  image: wjordan/code-dot-org:2020-09-10
-  pull: always
-  volumes:
-  - name: rbenv
-    path: /home/circleci/.rbenv
-  - name: mysql
-    path: /var/lib/mysql
-  environment:
-    # Each Drone secret below must be explicitly written to locals.yml in /docker/unit_tests.sh
-    CLOUDFRONT_KEY_PAIR_ID:
-      from_secret: CLOUDFRONT_KEY_PAIR_ID
-    CLOUDFRONT_PRIVATE_KEY:
-      from_secret: CLOUDFRONT_PRIVATE_KEY
-    CODECOV_TOKEN:
-      from_secret: CODECOV_TOKEN
-  commands:
-    # If running on EC2, get hostname from ec2 metadata
-    - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
-    - sudo chown -R circleci:circleci .
-    # cache is restored to source directory, so we need to copy it into the right place
-    - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
-    - rm -rf "$(pwd)/home/circleci/.rbenv"
-    # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-    - export CIRCLE_SHA1=$DRONE_COMMIT
-    - EXIT_CODE=0
-    - /entrypoint.sh docker/unit_tests.sh || EXIT_CODE=$?
-    - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
-    - exit $EXIT_CODE
+  - name: unit-tests
+    image: codedotorg/code-dot-org:latest
+    pull: always
+    volumes:
+      - name: rbenv
+        path: /home/circleci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
+    environment:
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/unit_tests.sh
+      CLOUDFRONT_KEY_PAIR_ID:
+        from_secret: CLOUDFRONT_KEY_PAIR_ID
+      CLOUDFRONT_PRIVATE_KEY:
+        from_secret: CLOUDFRONT_PRIVATE_KEY
+      CODECOV_TOKEN:
+        from_secret: CODECOV_TOKEN
+    commands:
+      # If running on EC2, get hostname from ec2 metadata
+      - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
+      - sudo chown -R circleci:circleci .
+      # cache is restored to source directory, so we need to copy it into the right place
+      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
+      - rm -rf "$(pwd)/home/circleci/.rbenv"
+      # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
+      - export CIRCLE_SHA1=$DRONE_COMMIT
+      - EXIT_CODE=0
+      - /entrypoint.sh docker/unit_tests.sh || EXIT_CODE=$?
+      - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
+      - exit $EXIT_CODE
 
-- name: update-cache
-  image: plugins/s3-cache
-  volumes:
-  - name: rbenv
-    path: /home/circleci/.rbenv
-  settings:
-    endpoint: s3://code-dot-org
-    debug: true
-    pull: true
-    rebuild: true
-    filename: unit-tests-cache.tar
-    mount:
-      - /home/circleci/.rbenv
+  - name: update-cache
+    image: plugins/s3-cache
+    volumes:
+      - name: rbenv
+        path: /home/circleci/.rbenv
+    settings:
+      endpoint: s3://code-dot-org
+      debug: true
+      pull: true
+      rebuild: true
+      filename: unit-tests-cache.tar
+      mount:
+        - /home/circleci/.rbenv
 
 volumes:
-- name: rbenv
-  temp: {}
-- name: mysql
-  temp: {}
+  - name: rbenv
+    temp: {}
+  - name: mysql
+    temp: {}
 
 trigger:
   branch:
-  - 'staging'
-  - 'staging-next'
+    - "staging"
+    - "staging-next"
   event:
-  - pull_request
+    - pull_request
 
 ---
 kind: pipeline
@@ -91,102 +91,102 @@ clone:
   disable: true
 
 services:
-- name: ui-tests-redis
-  image: redis
-  ports:
-  - 6379
+  - name: ui-tests-redis
+    image: redis
+    ports:
+      - 6379
 
-steps: 
-- name: clone
-  image: docker:git
-  commands:
-  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
-  - git reset --hard $DRONE_COMMIT
-  # Also fetch the target branch (which is staging or staging-next for pull requests.) We need this for determining which tests to run based on changed files.
-  - git remote set-branches --add origin $DRONE_TARGET_BRANCH
-  - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
-  # Merge so we're up-to-date with the target before running tests. We only do this for UI tests, not unit tests,
-  # since it disrupts Codecov pull request reports.
-  - git config user.name "Drone"
-  - git config user.email "drone-fake-user@code.org"
-  - git merge origin/$DRONE_TARGET_BRANCH
+steps:
+  - name: clone
+    image: docker:git
+    commands:
+      - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
+      - git reset --hard $DRONE_COMMIT
+      # Also fetch the target branch (which is staging or staging-next for pull requests.) We need this for determining which tests to run based on changed files.
+      - git remote set-branches --add origin $DRONE_TARGET_BRANCH
+      - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
+      # Merge so we're up-to-date with the target before running tests. We only do this for UI tests, not unit tests,
+      # since it disrupts Codecov pull request reports.
+      - git config user.name "Drone"
+      - git config user.email "drone-fake-user@code.org"
+      - git merge origin/$DRONE_TARGET_BRANCH
 
-- name: restore-cache
-  image: plugins/s3-cache
-  settings:
-    endpoint: s3://code-dot-org
-    debug: true
-    pull: true
-    restore: true
+  - name: restore-cache
+    image: plugins/s3-cache
+    settings:
+      endpoint: s3://code-dot-org
+      debug: true
+      pull: true
+      restore: true
 
-- name: ui-tests
-  image: wjordan/code-dot-org:2020-09-10
-  volumes:
-  - name: rbenv
-    path: /home/circleci/.rbenv
-  - name: mysql
-    path: /var/lib/mysql
-  environment:
-    # Each Drone secret below must be explicitly written to locals.yml in /docker/ui_tests.sh
-    CLOUDFRONT_KEY_PAIR_ID:
-      from_secret: CLOUDFRONT_KEY_PAIR_ID
-    CLOUDFRONT_PRIVATE_KEY:
-      from_secret: CLOUDFRONT_PRIVATE_KEY
-    PROPERTIES_ENCRYPTION_KEY:
-      from_secret: PROPERTIES_ENCRYPTION_KEY
-    FIREBASE_NAME:
-      from_secret: FIREBASE_NAME
-    FIREBASE_SECRET:
-      from_secret: FIREBASE_SECRET
-    FIREBASE_SHARED_SECRET:
-      from_secret: FIREBASE_SHARED_SECRET
-    SAUCE_USERNAME:
-      from_secret: SAUCE_USERNAME
-    SAUCE_ACCESS_KEY:
-      from_secret: SAUCE_ACCESS_KEY
-  commands:
-    # If running on EC2, get hostname from ec2 metadata
-    - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
-    - sudo chown -R circleci:circleci .
-    # cache is restored to source directory, so we need to copy it into the right place
-    - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
-    # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-    - export CIRCLE_SHA1=$DRONE_COMMIT
-    - EXIT_CODE=0
-    - /entrypoint.sh docker/ui_tests.sh || EXIT_CODE=$?
-    - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
-    - exit $EXIT_CODE
+  - name: ui-tests
+    image: codedotorg/code-dot-org:latest
+    volumes:
+      - name: rbenv
+        path: /home/circleci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
+    environment:
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ui_tests.sh
+      CLOUDFRONT_KEY_PAIR_ID:
+        from_secret: CLOUDFRONT_KEY_PAIR_ID
+      CLOUDFRONT_PRIVATE_KEY:
+        from_secret: CLOUDFRONT_PRIVATE_KEY
+      PROPERTIES_ENCRYPTION_KEY:
+        from_secret: PROPERTIES_ENCRYPTION_KEY
+      FIREBASE_NAME:
+        from_secret: FIREBASE_NAME
+      FIREBASE_SECRET:
+        from_secret: FIREBASE_SECRET
+      FIREBASE_SHARED_SECRET:
+        from_secret: FIREBASE_SHARED_SECRET
+      SAUCE_USERNAME:
+        from_secret: SAUCE_USERNAME
+      SAUCE_ACCESS_KEY:
+        from_secret: SAUCE_ACCESS_KEY
+    commands:
+      # If running on EC2, get hostname from ec2 metadata
+      - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
+      - sudo chown -R circleci:circleci .
+      # cache is restored to source directory, so we need to copy it into the right place
+      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
+      # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
+      - export CIRCLE_SHA1=$DRONE_COMMIT
+      - EXIT_CODE=0
+      - /entrypoint.sh docker/ui_tests.sh || EXIT_CODE=$?
+      - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
+      - exit $EXIT_CODE
 
-- name: update-cache
-  image: plugins/s3-cache
-  volumes:
-  - name: rbenv
-    path: /home/circleci/.rbenv
-  settings:
-    endpoint: s3://code-dot-org
-    debug: true
-    pull: true
-    rebuild: true
-    mount:
-      - /home/circleci/.rbenv
-      # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
-      - dashboard/db/ui_test_data.hash
-      - dashboard/db/ui_test_data.sql
+  - name: update-cache
+    image: plugins/s3-cache
+    volumes:
+      - name: rbenv
+        path: /home/circleci/.rbenv
+    settings:
+      endpoint: s3://code-dot-org
+      debug: true
+      pull: true
+      rebuild: true
+      mount:
+        - /home/circleci/.rbenv
+        # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
+        - dashboard/db/ui_test_data.hash
+        - dashboard/db/ui_test_data.sql
 
 volumes:
-- name: rbenv
-  temp: {}
-- name: mysql
-  temp: {}
+  - name: rbenv
+    temp: {}
+  - name: mysql
+    temp: {}
 
 trigger:
   branch:
-  - 'staging'
-  - 'staging-next'
+    - "staging"
+    - "staging-next"
   event:
-  - pull_request
+    - pull_request
 ---
 kind: signature
-hmac: dc4e945db625740ff05bf17df74f5e97a40b0e336db058bf3ea7c5543e9ce9e5
+hmac: 44de2cd71efea1f3179ea8efe094b937b5b899c96149c18a18813d0026e03f77
 
 ...

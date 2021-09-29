@@ -2,13 +2,13 @@
   "script": {
     "name": "csd-sample-online",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:36 UTC",
+    "serialized_at": "2021-08-03 22:47:46 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "csd-sample-online"
     }
@@ -75,7 +75,6 @@
           "csd digital unplugged WIAC"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -99,7 +98,6 @@
           "csd digital unplugged WIAC L1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -123,7 +121,6 @@
           "csd digital unplugged WIAC L2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -147,7 +144,6 @@
           "CSD digital Unplugged WIAC video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -171,7 +167,6 @@
           "csd digital unplugged WIAC L3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -195,7 +190,6 @@
           "CSD digital unplugged WIAC Qs"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -219,7 +213,6 @@
           "csd digital unplugged PSP word search"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -243,7 +236,6 @@
           "csd digital unplugged PSP seating"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

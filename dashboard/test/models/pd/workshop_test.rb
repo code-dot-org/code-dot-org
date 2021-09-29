@@ -919,7 +919,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # Fully purge the user account's PD records,
     # which removes their user ID from attendances.
-    DeleteAccountsHelper.new.clean_and_destroy_pd_content workshop_participant.id
+    DeleteAccountsHelper.new.clean_and_destroy_pd_content workshop_participant.id, workshop_participant.email
     workshop.reload
 
     # Should still return 0 once we've fully purged the teacher user ID from the attendance

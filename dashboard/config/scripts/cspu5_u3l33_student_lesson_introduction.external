@@ -20,7 +20,7 @@ Processing arrays of information is much more interesting and powerful when we c
 * Store information about the drawing in an array.
 * Process stored information to redraw an image with a variety of visual effects.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

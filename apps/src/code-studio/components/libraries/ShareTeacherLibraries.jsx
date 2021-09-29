@@ -16,26 +16,6 @@ import {
   updateProjectLibrary
 } from '@cdo/apps/templates/projects/projectsRedux';
 
-const styles = {
-  container: {
-    fontSize: 13,
-    lineHeight: '18px',
-    color: color.dark_charcoal
-  },
-  footer: {
-    display: 'flex',
-    flexFlow: 'row',
-    justifyContent: 'space-between',
-    margin: 2,
-    paddingTop: 10
-  },
-  libraryCopierLabel: {
-    color: color.purple,
-    marginBottom: 10,
-    fontStyle: 'italic'
-  }
-};
-
 export class ShareTeacherLibraries extends React.Component {
   static propTypes = {
     onCancel: PropTypes.func.isRequired,
@@ -202,6 +182,26 @@ export class ShareTeacherLibraries extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    fontSize: 13,
+    lineHeight: '18px',
+    color: color.dark_charcoal
+  },
+  footer: {
+    display: 'flex',
+    flexFlow: 'row',
+    justifyContent: 'space-between',
+    margin: 2,
+    paddingTop: 10
+  },
+  libraryCopierLabel: {
+    color: color.purple,
+    marginBottom: 10,
+    fontStyle: 'italic'
+  }
+};
 
 export default connect(
   state => ({

@@ -14,14 +14,13 @@
     curriculum.
 - elsif @workshop.course == Pd::Workshop::COURSE_FACILITATOR
   %p
-    I wanted to remind you about your upcoming Code.org summer workshop prep
-    session.
+    I wanted to remind you about your upcoming Facilitator workshop.
 - elsif @workshop.course == Pd::Workshop::COURSE_CSF
   %p
     I wanted to remind you about your upcoming Code.org
     = @workshop.course_name
     = @workshop.subject
-    workshop.
+    workshop. This is a great step towards bringing computer science to your classroom!
 - else
   %p
     This is a reminder about your upcoming Code.org
@@ -52,20 +51,12 @@
   %p
     - if @workshop.course == Pd::Workshop::COURSE_CSF
       This is a great step towards bringing computer science to your classroom!
-    - unless @workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
-      We’re excited to continue to work together to bring computer science to your classroom.
     If you have any questions, reach out to your workshop organizer directly:
     = "#{@organizer.name} at "
     = mail_to @organizer.email, "#{@organizer.email}."
 
 - if @workshop.subject == Pd::Workshop::SUBJECT_CSF_201
-  %p
-    Please remember that this workshop is for educators who are already using the CS Fundamentals curriculum in their classroom.
-    If you have not used CS Fundamentals with students yet, or don’t plan to do so before this workshop, please
-    = link_to 'click here to cancel your registration', @cancel_url, target: "_blank", rel: "noopener noreferrer"
-    to this workshop and sign up for a
-    = link_to 'CS Fundamentals Intro workshop', 'https://code.org/professional-development-workshops'
-    near you to help you get started.
+  = render partial: 'csf_deepdive_reminder'
 
   %h3
     Pre-workshop survey

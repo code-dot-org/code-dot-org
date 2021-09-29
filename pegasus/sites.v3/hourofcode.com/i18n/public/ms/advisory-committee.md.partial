@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Jam Kod dan Jawatankuasa Penasihat CSEdWeek
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Jam Kod dan Jawatankuasa Penasihat CSEdWeek
 
 {{ advisory-committee/about_headshots }}
 

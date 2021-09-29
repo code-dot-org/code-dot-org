@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {assert} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
+import LessonDescriptions from '@cdo/apps/lib/levelbuilder/unit-editor/LessonDescriptions';
 
 const currentDescriptions = [
   {
@@ -31,6 +31,10 @@ describe('LessonDescriptions', () => {
     defaultProps = {
       updateLessonDescriptions
     };
+  });
+
+  afterEach(() => {
+    sinon.restore();
   });
 
   it('begins collapsed', () => {

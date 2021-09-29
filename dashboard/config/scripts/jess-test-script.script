@@ -1,6 +1,7 @@
 hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/"], ["teacherForum", "https://forum.code.org/"], ["curriculumGuide", "https://docs.google.com/document/d/1-O6o5yQ4I1dk0n4Qzh86quXGBtzDDtyJ3Skr6RpcpO4/preview"], ["professionalLearning", "https://studio.code.org/my-professional-learning"]]
+published_state 'beta'
 
 lesson 'Module 1', display_name: 'Module 1', has_lesson_plan: false
 level 'OPL - CSD-PL AYWS1 Debugging Intro', progression: 'Module 1 Overview'
@@ -8,11 +9,11 @@ level 'VPL - CSD - Module 1 Summer Review Overview', progression: 'Summer Worksh
 level 'VPL-CSD 2020 Summer Review', progression: 'Summer Workshop Review (~ 10 - 20 mins)'
 level 'VPL - CSD - Variables Overview', progression: 'New Content (~ 35 mins)'
 level 'VPL - CSD Module Variable Video with Reflection', progression: 'New Content (~ 35 mins)'
-level 'VPL-CSD U3 Variables Predict Where XY_2020', progression: 'New Content (~ 35 mins)'
+level 'VPL-CSD-U3 Variables Predict Where XY_2021', progression: 'New Content (~ 35 mins)'
 level 'VPL - CSD - Variable Resources', progression: 'New Content (~ 35 mins)'
-level 'VPL-CSD U3 Variables naming rules v2_2018_2020', progression: 'New Content (~ 35 mins)'
+level 'VPL-CSD U3 Variables naming rules v2_2018_21', progression: 'New Content (~ 35 mins)'
 level 'VPL - CSD - Random Numbers Overview', progression: 'New Content (~ 35 mins)'
-level 'VPL-CSD U3 Random random ellipse2_2018_2020', progression: 'New Content (~ 35 mins)'
+level 'VPL-CSD U3 Random random ellipse2_2018_21', progression: 'New Content (~ 35 mins)'
 level 'VPL - CSD Module 1 New Content Reflection', progression: 'New Content (~ 35 mins)'
 level 'VPL- CSD - Module 1 Debugging OverviewOPD-K5 Pair_copy', progression: 'Debugging (~ 25 mins)'
 level 'VPL - CSD Module 1 Debugging Reflection 1', progression: 'Debugging (~ 25 mins)'
@@ -24,7 +25,7 @@ lesson 'Module 2', display_name: 'Module 2', has_lesson_plan: false
 level 'VPL - CSD Module 2 Overview', progression: 'Module 2 Overview'
 level 'VPL - CSD - Module 1 - CI', progression: 'Lesson Investigation (~ 60 min)'
 level 'VPL - CSD: Introduction to the Draw Loop_2020', progression: 'Lesson Investigation (~ 60 min)'
-level 'VPL-CSD 2020 - Module 2 CI - Draw Loop', progression: 'Lesson Investigation (~ 60 min)'
+level 'VPL-CSD 2021 - Module 2 CI - Draw Loop', progression: 'Lesson Investigation (~ 60 min)'
 level 'VPL - CSD Module 2 CI The Draw Loop Reflection', progression: 'Lesson Investigation (~ 60 min)'
 level 'VPL - CSD: Animating Sprite Movement_2020', progression: 'Lesson Investigation (~ 60 min)'
 level 'VPL-CSD 2020 - Module 2 CI - Sprite Movement', progression: 'Lesson Investigation (~ 60 min)'
@@ -43,13 +44,14 @@ lesson 'Module 3', display_name: 'Module 3', has_lesson_plan: false
 level 'VPL - CSD Module 3 Overview', progression: 'Module 3 Overview'
 level 'VPL - CSD M3 Check-in', progression: 'Check In (~5 mins)'
 level 'VPL - CSD M3 Theme Introduction', progression: 'Theme Introduction (~5 mins)'
-level 'VPL - CSD Module 3 Curriculum Investigation Overview', progression: 'Lesson Investigation (~60 mins)'
-level 'VPL - CSD - Module 3 - U4L1 Investigation', progression: 'Lesson Investigation (~60 mins)'
-level 'VPL - CSD - Module 3 - Problem Solving Process Guide', progression: 'Lesson Investigation (~60 mins)'
-level 'VPL - CSD Module 3 Problem Solving Process', progression: 'Lesson Investigation (~60 mins)'
-level 'VPL - CSD - Module 3 - U4L2 Investigation', progression: 'Lesson Investigation (~60 mins)'
-level 'VPL - CSD Module 3 U4L2 Reflection', progression: 'Reflection (~5 mins)'
-level 'VPL - CSD Module 3 U4L2 Intro Group Dynamics', progression: 'Intro to Group Dynamics (~5 mins)'
+level 'VPL - CSD Module 3 Curriculum Investigation Overview', progression: 'Curriculum Investigation (~60 mins)'
+level 'VPL - CSD - Module 3 - U4L1 Investigation', progression: 'Curriculum Investigation (~60 mins)'
+level 'VPL - CSD - Module 3 - Problem Solving Process Guide', progression: 'Curriculum Investigation (~60 mins)'
+level 'VPL - CSD Module 3 Problem Solving Process', progression: 'Curriculum Investigation (~60 mins)'
+level 'VPL - CSD - Module 3 - U4L2 Investigation', progression: 'Curriculum Investigation (~60 mins)'
+level 'VPL - CSD Module 3 U4L2 Reflection', progression: 'Curriculum Investigation (~60 mins)'
+level 'VPL - CSD Module 3 U4L2 Intro Group Dynamics', progression: 'Supporting Effective Group Work (~5 mins)'
+level 'VPL - CSD Module 3 Equity - 2021', progression: 'Equity and Data (~5 mins)'
 level 'VPL - CSD - Module 3 Wrap Up', progression: 'Module 3 Asynchronous Wrap Up (~10 mins)'
 
 lesson 'Module 4', display_name: 'Module 4', has_lesson_plan: false
@@ -80,7 +82,7 @@ level 'VPL - CSD - Module 5 - CI - L1', progression: 'Lesson Investigation (~65 
 level 'VPL - CSD - Module 5 - CI - L2', progression: 'Lesson Investigation (~65 mins)'
 level 'VPL - CSD - Module 5 - CI - L3', progression: 'Lesson Investigation (~65 mins)'
 level 'VPL - CSD - Module 5 - CI - L4', progression: 'Lesson Investigation (~65 mins)'
-level 'VPL - CSD - Module 5 - CI - L4_1', progression: 'Lesson Investigation (~65 mins)'
+level 'VPL - CSD - U4L1 - 2021', progression: 'Lesson Investigation (~65 mins)'
 level 'VPL - CSD - Module 5 - CI - L4_2', progression: 'Lesson Investigation (~65 mins)'
 level 'VPL - CSD - Module 5 - CI - L4_3', progression: 'Lesson Investigation (~65 mins)'
 level 'VPL - CSD -  Module 5 - CI - L4_4', progression: 'Lesson Investigation (~65 mins)'
@@ -130,5 +132,17 @@ level 'VPL - CSD Module 7 - Alternative Unit', progression: 'Preview: Alternate 
 level 'VPL - CSD Module 8 - Alternative Unit', progression: 'Preview: Alternate Units to Unit 6 (~10 mins)'
 level 'VPL - CSD - Module 7 Wrap Up', progression: 'Module 7 Asynchronous Wrap Up (~10 mins)'
 
-lesson 'Self Paced Playground', display_name: 'Self-Paced Playground', has_lesson_plan: false
+lesson 'Module 8', display_name: 'Module 8', has_lesson_plan: false
+level 'VPL - CSD Module 8 Overview', progression: 'Module 8 Overview'
+level 'VPL - CSD - Module 8 - CI', progression: 'Curriculum Investigation Overview'
+level 'VPL - CSD - Module 8 - U6L6', progression: 'Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)'
+level 'VPL - CSD - Module 8 - U6L6 Lesson 2', progression: 'Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)'
+level 'VPL - CSD - Module 8 - U6L6 Level 3', progression: 'Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)'
+level 'VPL - CSD - Module 8 - U6L6 - Level 4', progression: 'Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)'
+level 'VPL - CSD Module 8  U6L6 Reflection', progression: 'Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)'
+level 'VPL - CSD - Module 8 - Conclusions and Connections2', progression: 'Conclusions and Connections (~20 - 25 mins)'
+level 'VPL - CSD U6 Chapter 1 Project', progression: 'Conclusions and Connections (~20 - 25 mins)'
+level 'VPL - CSD M8 Conclusions and Connections Reflection', progression: 'Conclusions and Connections (~20 - 25 mins)'
+level 'VPL - CSD Module 7 - Equity Journey', progression: 'Equity Journey (~5 mins)'
+level 'VPL - CSD - Module 8 Wrap Up', progression: 'Module 8 Asynchronous Wrap Up (~10 mins)'
 

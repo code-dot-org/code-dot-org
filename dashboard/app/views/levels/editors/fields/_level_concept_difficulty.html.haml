@@ -1,0 +1,33 @@
+%h1.control-legend.collapsed{data: {toggle: "collapse", target: "#lcd"}}
+  Level Concept Difficulty
+#lcd.collapse
+  .field
+    = f.label 'concepts'
+    %p
+      Select
+      %a.select_all{href: '#'} all
+      \/
+      %a.select_none{href: '#'} none
+      (shift-click or cmd-click to select multiple).
+    = f.collection_select :concept_ids, Concept.cached, :id, :name, { :selected => @level.concept_ids }, { :multiple => true, :name => 'level[concept_ids][]', :size => Concept.cached.length }
+
+  -# We can only save a related LevelConceptDifficulty object for a level that's already been created, not for a new level about to be created
+  - if @level && @level.id
+    .field
+      = f.label 'concept difficulties'
+      %a{href: "https://docs.google.com/spreadsheets/d/1jPVTIqsIH6qLUd_WlKtzE7CEiaQG-hqM9n_A1hY-rL0"} Concept Difficulty Tagging guidelines
+      %table{style: 'width: 80%'}
+        %thead
+          %tr
+            %th Concept
+            %th Difficulty
+        %tbody
+          - concept_difficulty = @level.level_concept_difficulty || LevelConceptDifficulty.new(level:@level)
+          %input{type: 'hidden', name: "level[level_concept_difficulty_attributes][id]", value: concept_difficulty.id}
+          - LevelConceptDifficulty::CONCEPTS.each do |concept|
+            - difficulty = concept_difficulty.send(concept)
+            %tr
+              %td
+                = concept
+              %td
+                = select_tag "level[level_concept_difficulty_attributes][#{concept}]", options_for_select((1..LevelConceptDifficulty::MAXIMUM_CONCEPT_DIFFICULTY).to_a, difficulty), include_blank: true

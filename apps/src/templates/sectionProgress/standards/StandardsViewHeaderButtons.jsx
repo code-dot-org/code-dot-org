@@ -119,14 +119,14 @@ class StandardsViewHeaderButtons extends Component {
 
     for (var i = 0; i < selectedLessonIds.length; i++) {
       selectedLessonScores[i] = {
-        stage_id: selectedLessonIds[i],
+        lesson_id: selectedLessonIds[i],
         score: TeacherScores.COMPLETE
       };
     }
 
     for (var j = 0; j < unselectedLessonIds.length; j++) {
       unselectedLessonScores[j] = {
-        stage_id: unselectedLessonIds[j],
+        lesson_id: unselectedLessonIds[j],
         score: TeacherScores.INCOMPLETE
       };
     }
@@ -138,7 +138,7 @@ class StandardsViewHeaderButtons extends Component {
       dataType: 'json',
       data: JSON.stringify({
         section_id: sectionId,
-        stage_scores: selectedLessonScores.concat(unselectedLessonScores)
+        lesson_scores: selectedLessonScores.concat(unselectedLessonScores)
       })
     }).done(() => {
       if (this.state.isLessonStatusDialogOpen) {
@@ -204,7 +204,7 @@ export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
 
 export default connect(
   state => ({
-    scriptId: state.scriptSelection.scriptId,
+    scriptId: state.unitSelection.scriptId,
     selectedLessons: state.sectionStandardsProgress.selectedLessons,
     unpluggedLessons: getUnpluggedLessonsForScript(state)
   }),

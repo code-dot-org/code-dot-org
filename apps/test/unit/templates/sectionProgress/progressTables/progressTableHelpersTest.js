@@ -20,13 +20,8 @@ describe('progressTableHelpers', () => {
       expect(formatTimeSpent(null)).to.equal('');
     });
 
-    it('returns "" when timeSpent is 0', () => {
+    it('returns "-" when timeSpent is 0', () => {
       const studentProgress = {timeSpent: 0};
-      expect(formatTimeSpent(studentProgress)).to.equal('');
-    });
-
-    it('returns "-" when timeSpent is null (default value)', () => {
-      const studentProgress = {timeSpent: null};
       expect(formatTimeSpent(studentProgress)).to.equal('-');
     });
 
@@ -39,17 +34,12 @@ describe('progressTableHelpers', () => {
 
   describe('formatLastUpdated', () => {
     const formatLastUpdated = unitTestExports.formatLastUpdated;
-    it('returns "" when progress is null', () => {
+    it('returns "-" when progress is null', () => {
       expect(formatLastUpdated(null)).to.equal('');
     });
 
-    it('returns "" when lastTimestamp is 0', () => {
+    it('returns "-" when lastTimestamp is 0', () => {
       const studentProgress = {lastTimestamp: 0};
-      expect(formatLastUpdated(studentProgress)).to.equal('');
-    });
-
-    it('returns "-" when lastTimestamp is null (default)', () => {
-      const studentProgress = {lastTimestamp: null};
       expect(formatLastUpdated(studentProgress)).to.equal('-');
     });
 

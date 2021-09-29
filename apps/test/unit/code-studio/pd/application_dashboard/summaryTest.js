@@ -67,5 +67,7 @@ describe('Summary', () => {
     expect(rows.at(0).children()).to.have.length(2);
 
     expect(summary.find('Spinner')).to.have.length(0);
+
+    server.restore();
   });
 });

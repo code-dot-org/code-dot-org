@@ -27,13 +27,13 @@ describe('npsSurveyBlock', () => {
   it('displays nothing on initial mount', () => {
     ajaxStub.returns({done: sinon.stub()});
     const wrapper = shallow(<NpsSurveyBlock />);
-    expect(wrapper).to.deep.equal({});
+    expect(wrapper).to.be.empty;
   });
 
   it('displays nothing when no result is received from the server', () => {
     ajaxStub.returns({done: sinon.stub().callsArgWith(0, undefined)});
     const wrapper = shallow(<NpsSurveyBlock />);
-    expect(wrapper).to.deep.equal({});
+    expect(wrapper).to.be.empty;
   });
 
   it('displays a foorm when a result is received from the server', () => {
@@ -59,6 +59,6 @@ describe('npsSurveyBlock', () => {
     wrapper.update();
     expect(wrapper.find('Foorm').length).to.equal(0);
     expect(wrapper.find('Button').length).to.equal(0);
-    expect(wrapper).to.deep.equal({});
+    expect(wrapper).to.be.empty;
   });
 });

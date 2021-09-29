@@ -1,6 +1,9 @@
 login_required true
+published_state 'beta'
 
 lesson 'ailab-explore', display_name: 'Explore AI Lab', has_lesson_plan: false
-level 'ml-class test-ai lab 1', progression: 'Explore AI Lab'
-level 'ml-class test-app lab 1', progression: 'Importing into App Lab'
+level 'ml-class test-ai lab foods', progression: 'Introduction to AI Lab'
+level 'ml-class test-ai lab choice-parent', progression: 'Explore AI Lab'
+level 'ml-class test-app lab import', progression: 'Import a Model to App Lab'
+level 'ml-class test-app lab choice parent', progression: 'Customize Your App'
 

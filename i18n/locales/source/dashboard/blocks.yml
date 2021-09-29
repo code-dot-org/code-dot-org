@@ -1074,8 +1074,8 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
-      gamelab_hideHaiku:
-        text: hide haiku
+      gamelab_glideTo:
+        text: "[SPRITE][0] glide to [LOCATION][1]"
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_ifVarEquals:
@@ -1179,10 +1179,26 @@ en:
         text: location of [SPRITE][0]
       gamelab_location_picker:
         text: "[LOCATION][0]"
+      gamelab_makeBurst:
+        text: create [EFFECT][0] effect with [NUM][1] [ANIMATION_NAME][2] sprites
+        options:
+          EFFECT:
+            '"burst"': burst
+            '"pop"': pop
+            '"rain"': rain
+            '"zigzag"': zig-zag
       gamelab_makeNewSpriteAnon:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       gamelab_makeNumSprites:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites
+      gamelab_makeProjectile:
+        text: "create projectile \n[ANIMATION_NAME][0] from [LOCATION][1] with speed [SPEED][2]direction[DIRECTION][3]"
+        options:
+          DIRECTION:
+            '0': right
+            '90': down
+            '180': left
+            '270': up
       gamelab_mirrorSprite:
         text: "[SPRITE][0] face [DIRECTION][1]"
         options:
@@ -1212,7 +1228,38 @@ en:
       gamelab_patrollingUpDown:
         text: patrolling up and down
       gamelab_playSound:
-        text: playSound [SOUND][0]
+        text: play sound [SOUND][0]
+      gamelab_playSoundOptions:
+        text: play sound [SOUND][0]
+        options:
+          SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": accent
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": twinkle
+            "'sound://category_app/app_button_1.mp3'": button
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_swish/quick_swing.mp3'": swing
+            "'sound://category_nature/summer_night_loop.mp3'": summer night
+            "'sound://category_background/ocean_waves.mp3'": ocean waves
+            "'sound://category_animals/dolphin.mp3'": dolphin clicks
+            "'sound://category_nature/thunderstorm_1.mp3'": thunderstorm
+            "'sound://category_animals/chick.mp3'": bird tweet
+            "'sound://category_animals/dog.mp3'": dog bark
+            "'sound://category_animals/tiger.mp3'": tiger roar
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harp
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": bright
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": mystical
+            "'sound://category_transition/trippy_robotic_transition.mp3'": robot voice
+            "'sound://category_transition/star_dust_particle_10.mp3'": star dust
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": space ship
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magic spell
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": ping
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": sci fi
+            "'sound://category_digital/jump_7.mp3'": jump
+      gamelab_playSpeech:
+        text: play speech [SOUND][0]
       gamelab_pointInDirection:
         text: point [SPRITE][0] [DIRECTION][1]
         options:
@@ -1221,8 +1268,6 @@ en:
             '"East"': East
             '"South"': South
             '"West"': West
-      gamelab_printHaiku:
-        text: show haiku [BREAK][0] poem title [TITLE][1] poem author [AUTHOR][2] line 1 [LINE1][3] line 2 [LINE2][4] line 3 [LINE3][5]
       gamelab_printText:
         text: print [TEXT][0]
       gamelab_randColor:
@@ -1337,12 +1382,36 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_spriteSay:
+        text: "[SPRITE][0] say [SPEECH][1]"
+      gamelab_spriteSayChoices:
+        text: "[SPRITE][0] say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I am Batman!"': I am Batman!
+            '"Being kind is never wasted."': Being kind is never wasted.
+            '"When you know better, you do better."': When you know better, you do better.
+            '"You always pass failure on the way to success."': You always pass failure on the way to success.
+            '"Make each day your masterpiece."': Make each day your masterpiece.
+            '"I am Catwoman!"': I am Catwoman!
+            '"Never quit!"': Never quit!
+            '"Live Fast."': Live Fast.
+      gamelab_spriteSayTime:
+        text: "[SPRITE][0]say[TEXT1][1]for[NUM][2]seconds"
+      gamelab_startAvoiding:
+        text: "[SPRITE][0] begins avoiding [TARGET][1]"
       gamelab_startFollowing:
         text: "[SPRITE][0] begins following [TARGET][1]"
+      gamelab_startGliding:
+        text: "[SPRITE][0] starts gliding"
+      gamelab_stopAvoiding:
+        text: "[SPRITE][0] stops avoiding other sprites"
       gamelab_stopCollectingData:
         text: stop collecting data
       gamelab_stopFollowing:
         text: "[SPRITE][0] stops following other sprites"
+      gamelab_stopGliding:
+        text: "[SPRITE][0] stops gliding"
       gamelab_subjectSpritePointer:
         text: "[SPRITE][0]"
       gamelab_textJoin:
@@ -1651,6 +1720,17 @@ en:
         text: 'location x: [X][0] y: [Y][1]'
       Mikelab_location_picker:
         text: "[LOCATION][0]"
+      Mikelab_poemTextJoin:
+        text: "[TEXT1][0] [VAR][1] [TEXT2][2]"
+        options:
+          TEXT1:
+            '"Balancing on the "': '"Balancing on the"'
+            '"A chubby cat "': '"A chubby cat"'
+            '"The "': '"The "'
+          TEXT2:
+            '" fence"': '" fence"'
+            '""': '""'
+            '" breeze blows"': '" breeze blows"'
       Mikelab_randomColor:
         text: random color
       Mikelab_removeAllBehaviors:
@@ -1706,6 +1786,11 @@ en:
           [A5][4][A6][5][A7][6][A8][7]
           [B1][8][B2][9][B3][10][B4][11]
           [B5][12][B6][13][B7][14][B8][15]
+      Mikelab_setupOutbreak:
+        text: |-
+          outbreak setup
+          population:[SPRITE2N][0]
+          [TOGGLE][1]virus
       Mikelab_setupSim:
         text: |-
           setup simulation with
@@ -1810,20 +1895,208 @@ en:
         text: monsters begin wandering
       Outbreak_beginWearingMasks:
         text: monsters begin wearing masks
-      Outbreak_layoutSprites:
-        text: layout monsters as a [FORMAT][0]
-        options:
-          FORMAT:
-            '"grid"': grid
-            '"border"': border
-            '"row"': row
-            '"random"': random
+      Outbreak_layoutBorder:
+        text: layout monsters in a border
+      Outbreak_layoutClusters:
+        text: layout monsters in clusters of [NUM][0]
+      Outbreak_layoutGrid:
+        text: layout monsters as a grid
+      Outbreak_layoutRandom:
+        text: layout monsters randomly
       Outbreak_setSpeed:
         text: set monster speed to [VAL][0]
       Outbreak_setupOutbreak:
         text: setup Monster Town with[COUNT][0]monsters
       Outbreak_stopMoving:
         text: monsters stop moving
+      Poetry_addLine:
+        text: add line [LINE][0]
+      Poetry_destroy:
+        text: remove [ANIMATION_NAME][0]
+      Poetry_hidePoem:
+        text: hide poem
+      Poetry_makeBurst:
+        text: create [EFFECT][0] effect with [NUM][1] [ANIMATION_NAME][2] sprites
+        options:
+          EFFECT:
+            '"burst"': burst
+            '"pop"': pop
+            '"rain"': rain
+            '"zigzag"': zig-zag
+      Poetry_makeNumSprites:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites
+      Poetry_playSound:
+        text: play sound [SOUND][0]
+        options:
+          SOUND:
+            '"sound://category_bell/bells_win_low.mp3"': Bell
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Bright
+            '"sound://category_background/fire_burning.mp3"': Fireside
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Forest
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harps
+            '"sound://category_nature/summer_night_loop.mp3"': Night
+            '"sound://category_background/ocean_waves.mp3"': Ocean
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': Rainy
+            '"sound://category_background/rainforest_ambient_sound.mp3"': Rainforest
+            '"sound://category_background/wavering_wind.mp3"': Sleepy
+            '"sound://category_background/typewriter.mp3"': Typewriter
+            '"sound://category_background/waterfall.mp3"': Waterfall
+      Poetry_randomWord:
+        text: random word
+      Poetry_setAuthor:
+        text: set poem author [AUTHOR][0]
+      Poetry_setBackgroundEffect:
+        text: set background effect [EFFECT][0] [PALETTE][1]
+        options:
+          EFFECT:
+            '"colors"': Colors
+            '"squiggles"': Squiggles
+            '"space"': Space
+            '"stars"': Stars
+            '"darkCircles"': Dark Circles
+            '"fadeColors"': Color Fade
+            '"blooming"': Blooming
+            '"ripples"': Ripples
+            '"clouds"': Clouds
+          PALETTE:
+            '"sky"': Sky
+            '"ocean"': Ocean
+            '"sunrise"': Sunrise
+            '"sunset"': Sunset
+            '"spring"': Spring
+            '"summer"': Summer
+            '"autumn"': Autumn
+            '"winter"': Winter
+            '"grayscale"': Black & White
+            '"rainbow"': Rainbow
+            '"roses"': Roses
+      Poetry_setBackgroundImageAs:
+        text: set background to [IMG][0]
+      Poetry_setFont:
+        text: set font [FONT][0]
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Georgia"': Georgia
+            '"Palatino"': Palatino
+            '"Times"': Times
+            '"Courier"': Courier
+            '"Arial Black"': Arial Black
+            '"Impact"': Impact
+            '"Tahoma"': Tahoma
+            '"Verdana"': Verdana
+      Poetry_setFontColor:
+        text: set font color [FILL][0]
+      Poetry_setForegroundEffect:
+        text: do [EFFECT][0] foreground effect
+        options:
+          EFFECT:
+            '"rain"': Rain
+            '"bubbles"': Bubbles
+            '"hearts"': Colorful Hearts
+            '"emojis"': Happy Emojis
+            '"confetti"': Confetti
+            '"starburst"': Starburst
+            '"glass"': Shattering Glass
+            '"twinkling"': Twinkling
+      Poetry_setPoem:
+        text: set poem [POEM][0]
+        options:
+          POEM:
+            '"---"': "---"
+            '"hafez"': My Brilliant Image
+            '"carroll_1"': Twinkle, Twinkle Little Star
+            '"rumi_1"': Sing
+            '"field"': Wynken, Blynken, and Nod
+            '"carroll_2"': Crocodile
+            '"twain"': Warm Summer Sun
+            '"wordsworth"': I Wandered Lonely as a Cloud
+            '"carroll_3"': Jabberwocky
+            '"rios"': Don't Go Into the Library
+            '"rumi_2"': Ocean
+            '"hughes_1"': Dream Variations
+            '"hughes"': Harlem
+            '"hopler"': In the Garden
+            '"lomeli"': Return
+            '"singer"': Toasting Marshmallows
+      Poetry_setPrompt:
+        text: prompt user [LEFT_QUOTE][0][NAME][1][RIGHT_QUOTE][2] for variable [VAR][3]
+      Poetry_setPromptWithChoices:
+        text: prompt user [LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2] for variable [VAR][3] with choices [LEFT_QUOTE_A][4][A][5][RIGHT_QUOTE_A][6] [LEFT_QUOTE_B][7][B][8][RIGHT_QUOTE_B][9] [LEFT_QUOTE_C][10][C][11][RIGHT_QUOTE_C][12]
+      Poetry_setSize:
+        text: set [SPRITE][0] size to [VAL][1]
+      Poetry_setTextEffect:
+        text: set text effect [EFFECT][0]
+        options:
+          EFFECT:
+            '"fade"': fade
+            '"typewriter"': typewriter
+            '"flyLeft"': fly from left
+            '"flyRight"': fly from right
+            '"flyTop"': fly from top
+            '"flyBottom"': fly from bottom
+      Poetry_setTitle:
+        text: set poem title [TITLE][0]
+      Poetry_showPoem:
+        text: show poem
+      Poetry_startBehavior:
+        text: 'sprite [ANIMATION_NAME][0] begins [BEHAVIOR][1] '
+        options:
+          BEHAVIOR:
+            fluttering: fluttering
+            growing: growing
+            jittering: jittering
+            moving_north_and_looping: looping north
+            moving_south_and_looping: looping south
+            moving_east_and_looping: looping east
+            moving_west_and_looping: looping west
+            shrinking: shrinking
+            spinning_left: spinning left
+            spinning_right: spinning right
+            swimming_left_and_right: swimming
+            wandering: wandering
+            wobbling: wobbling
+      Poetry_stopBehavior:
+        text: 'sprite [ANIMATION_NAME][0] stops [BEHAVIOR][1] '
+        options:
+          BEHAVIOR:
+            fluttering: fluttering
+            growing: growing
+            jittering: jittering
+            moving_north_and_looping: looping north
+            moving_south_and_looping: looping south
+            moving_east_and_looping: looping east
+            moving_west_and_looping: looping west
+            shrinking: shrinking
+            spinning_left: spinning left
+            spinning_right: spinning right
+            swimming_left_and_right: swimming
+            wandering: wandering
+            wobbling: wobbling
+            '"all"': "--all behaviors--"
+      Poetry_stringValue:
+        text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"
+      Poetry_textConcat:
+        text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
+      Poetry_textVariableJoin:
+        text: "[VAR][0][TEXT2][1]"
+      Poetry_whenLineShows:
+        text: when line [N][0] shows
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
+        text: when [VAR][0] answered
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:
@@ -1869,6 +2142,12 @@ en:
             '"border"': border
             '"row"': row
             '"random"': random
+      aalab_levelFailure:
+        text: student [STATE][0] wtih key [KEY][1]
+        options:
+          STATE:
+            '0': passes
+            '3': fails
       aalab_setSpeed:
         text: set monster speed to [VAL][0]
       aalab_setupSim:
@@ -1906,6 +2185,26 @@ en:
             '"quarantining"': quarantining when sick
             '"avoiding"': social distancing
             '"none"': staying still
+      aalab_spriteSayChoices:
+        text: "[SPRITE][0] say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I have spoken."': I have spoken.
+            '"Bounty hunting is a complicated profession."': Bounty hunting is a complicated profession.
+            '"I will initiate self-destruct."': I will initiate self-destruct.
+            '"This is the way."': This is the way.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': People get built different. We don’t need to figure it out, we just need to respect it.
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': You don’t need a mirror to look good. You’re beautiful on the inside.
+            '"Sometimes life is scary and dark. That is why we must find the light."': Sometimes life is scary and dark. That is why we must find the light.
+            '"Everything small is just a smaller version of something big."': Everything small is just a smaller version of something big.
+            '"Suckin’ at something is the first step to being sorta good at something."': Suckin’ at something is the first step to being sorta good at something.
+            '"Life happens wherever you are, whether you make it or not."': Life happens wherever you are, whether you make it or not.
+            '"You can’t knock me down!"': You can’t knock me down!
+            '"Roar!"': Roar!
+            '"My first girlfriend turned into the moon."': My first girlfriend turned into the moon.
+            '"True humility is the only antidote to shame."': True humility is the only antidote to shame.
+            '"You are stronger and wiser and freer than you have ever been."': You are stronger and wiser and freer than you have ever been.
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': You have to try every time. You can't quit because you're afraid you might fail.
       aalab_startIntervention:
         text: monsters begin [BEHAVIOR][0]
         options:
@@ -2057,3 +2356,7 @@ en:
           DIR:
             right: right ↻
             left: left ↺
+      validation_validatedBackground:
+        text: set background to [IMG][0]
+      validation_validatedSound:
+        text: PLAYSound [SOUND][0]
