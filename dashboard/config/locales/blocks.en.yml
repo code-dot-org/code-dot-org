@@ -1186,10 +1186,19 @@ en:
             '"burst"': burst
             '"pop"': pop
             '"rain"': rain
+            '"zigzag"': zig-zag
       gamelab_makeNewSpriteAnon:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
         text: make {NUM} new {ANIMATION_NAME} sprites
+      gamelab_makeProjectile:
+        text: "create projectile \n{ANIMATION_NAME} from {LOCATION} with speed {SPEED}direction{DIRECTION}"
+        options:
+          DIRECTION:
+            '270': up
+            '90': down
+            '180': left
+            '0': right
       gamelab_mirrorSprite:
         text: "{SPRITE} face {DIRECTION}"
         options:
@@ -1226,9 +1235,29 @@ en:
           SOUND:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": accent
             "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": twinkle
             "'sound://category_app/app_button_1.mp3'": button
             "'sound://category_collect/clicky_crunch.mp3'": crunch
             "'sound://category_swish/quick_swing.mp3'": swing
+            "'sound://category_nature/summer_night_loop.mp3'": summer night
+            "'sound://category_background/ocean_waves.mp3'": ocean waves
+            "'sound://category_animals/dolphin.mp3'": dolphin clicks
+            "'sound://category_nature/thunderstorm_1.mp3'": thunderstorm
+            "'sound://category_animals/chick.mp3'": bird tweet
+            "'sound://category_animals/dog.mp3'": dog bark
+            "'sound://category_animals/tiger.mp3'": tiger roar
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harp
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": bright
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": mystical
+            "'sound://category_transition/trippy_robotic_transition.mp3'": robot voice
+            "'sound://category_transition/star_dust_particle_10.mp3'": star dust
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": space ship
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magic spell
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": ping
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": sci fi
+            "'sound://category_digital/jump_7.mp3'": jump
       gamelab_playSpeech:
         text: play speech {SOUND}
       gamelab_pointInDirection:
@@ -1886,11 +1915,23 @@ en:
         text: setup Monster Town with{COUNT}monsters
       Outbreak_stopMoving:
         text: monsters stop moving
-      PoemBot_addLine:
+      Poetry_addLine:
         text: add line {LINE}
-      PoemBot_hidePoem:
+      Poetry_destroy:
+        text: remove {ANIMATION_NAME}
+      Poetry_hidePoem:
         text: hide poem
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        text: create {EFFECT} effect with {NUM} {ANIMATION_NAME} sprites
+        options:
+          EFFECT:
+            '"burst"': burst
+            '"pop"': pop
+            '"rain"': rain
+            '"zigzag"': zig-zag
+      Poetry_makeNumSprites:
+        text: make {NUM} new {ANIMATION_NAME} sprites
+      Poetry_playSound:
         text: play sound {SOUND}
         options:
           SOUND:
@@ -1906,11 +1947,11 @@ en:
             '"sound://category_background/wavering_wind.mp3"': Sleepy
             '"sound://category_background/typewriter.mp3"': Typewriter
             '"sound://category_background/waterfall.mp3"': Waterfall
-      PoemBot_randomWord:
+      Poetry_randomWord:
         text: random word
-      PoemBot_setAuthor:
+      Poetry_setAuthor:
         text: set poem author {AUTHOR}
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         text: set background effect {EFFECT} {PALETTE}
         options:
           EFFECT:
@@ -1935,7 +1976,9 @@ en:
             '"grayscale"': Black & White
             '"rainbow"': Rainbow
             '"roses"': Roses
-      PoemBot_setFont:
+      Poetry_setBackgroundImageAs:
+        text: set background to {IMG}
+      Poetry_setFont:
         text: set font {FONT}
         options:
           FONT:
@@ -1948,10 +1991,10 @@ en:
             '"Impact"': Impact
             '"Tahoma"': Tahoma
             '"Verdana"': Verdana
-      PoemBot_setFontColor:
+      Poetry_setFontColor:
         text: set font color {FILL}
-      PoemBot_setForegroundEffect:
-        text: do {EFFECT} effect
+      Poetry_setForegroundEffect:
+        text: do {EFFECT} foreground effect
         options:
           EFFECT:
             '"rain"': Rain
@@ -1962,7 +2005,7 @@ en:
             '"starburst"': Starburst
             '"glass"': Shattering Glass
             '"twinkling"': Twinkling
-      PoemBot_setPoem:
+      Poetry_setPoem:
         text: set poem {POEM}
         options:
           POEM:
@@ -1979,9 +2022,16 @@ en:
             '"rumi_2"': Ocean
             '"hughes_1"': Dream Variations
             '"hughes"': Harlem
-      PoemBot_setSize:
+            '"hopler"': In the Garden
+            '"lomeli"': Return
+            '"singer"': Toasting Marshmallows
+      Poetry_setPrompt:
+        text: prompt user {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} for variable {VAR}
+      Poetry_setPromptWithChoices:
+        text: prompt user {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} for variable {VAR} with choices {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
         text: set {SPRITE} size to {VAL}
-      PoemBot_setTextEffect:
+      Poetry_setTextEffect:
         text: set text effect {EFFECT}
         options:
           EFFECT:
@@ -1991,11 +2041,11 @@ en:
             '"flyRight"': fly from right
             '"flyTop"': fly from top
             '"flyBottom"': fly from bottom
-      PoemBot_setTitle:
+      Poetry_setTitle:
         text: set poem title {TITLE}
-      PoemBot_showPoem:
+      Poetry_showPoem:
         text: show poem
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         text: 'sprite {ANIMATION_NAME} begins {BEHAVIOR} '
         options:
           BEHAVIOR:
@@ -2012,7 +2062,7 @@ en:
             swimming_left_and_right: swimming
             wandering: wandering
             wobbling: wobbling
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         text: 'sprite {ANIMATION_NAME} stops {BEHAVIOR} '
         options:
           BEHAVIOR:
@@ -2030,12 +2080,29 @@ en:
             wandering: wandering
             wobbling: wobbling
             '"all"': "--all behaviors--"
-      PoemBot_stringValue:
+      Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
+      Poetry_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_whenLineShows:
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
         text: when line {N} shows
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
+        text: when {VAR} answered
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:
@@ -2153,71 +2220,6 @@ en:
             '"quarantining"': quarantining when sick
             '"avoiding"': social distancing
             '"none"': staying still
-      batman_batmanSay:
-        text: "{IMG}say {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Batman!"': I am Batman!
-            '"Being kind is never wasted."': Being kind is never wasted.
-            '"When you know better, you do better."': When you know better, you do better.
-            '"You always pass failure on the way to success."': You always pass failure on the way to success.
-            '"Make each day your masterpiece."': Make each day your masterpiece.
-      batman_batwomanSay:
-        text: "{IMG}say {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Batwoman!"': I am Batwoman!
-      batman_bruceSay:
-        text: "{IMG}say {SPEECH}"
-        options:
-          SPEECH:
-            '"Call me Bruce"': Call me Bruce.
-            '"Being kind is never wasted."': Being kind is never wasted.
-            '"When you know better, you do better."': When you know better, you do better.
-            '"You always pass failure on the way to success."': You always pass failure on the way to success.
-            '"Make each day your masterpiece."': Make each day your masterpiece.
-      batman_catwomanSay:
-        text: "{IMG}say {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Catwoman!"': I am Catwoman!
-            '"Never quit!"': Never quit!
-            '"Live Fast."': Live Fast.
-      batman_freezeSay:
-        text: "{IMG}say {SPEECH}"
-        options:
-          SPEECH:
-            '"I''m Mr. Freeze!"': I'm Mr. Freeze!
-            '"Stay Cool!"': Stay Cool!
-            '"Everyone, chill!"': Everyone, chill!
-            '"Cool party!"': Cool party!
-            '"Allow me to break the ice."': Allow me to break the ice.
-            '"Tonight’s forecast… a freeze is coming!"': Tonight’s forecast… a freeze is coming!
-      batman_harleySay:
-        text: "{IMG}say {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Harley Quinn!"': I am Harley Quinn!
-      batman_jokerSay:
-        text: "{IMG}say {SPEECH}"
-        options:
-          SPEECH:
-            '"I''m the Joker!"': I'm the Joker!
-      batman_nightwingSay:
-        text: "{IMG}say {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Nightwing!"': I am Nightwing!
-      batman_poisonivySay:
-        text: "{IMG}say {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Poison Ivy!"': I am Poison Ivy!
-      batman_robinSay:
-        text: "{IMG}say {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Robin!"': I am Robin!
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:

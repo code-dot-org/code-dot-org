@@ -13,6 +13,7 @@ import animationTab from './redux/animationTab';
 import locationPicker from './redux/locationPicker';
 import textConsole from './redux/textConsole';
 import spritelabInputList from './redux/spritelabInput';
+import poetry from './redux/poetry';
 import locales from '@cdo/apps/redux/localesRedux';
 var errorDialogStack = require('./redux/errorDialogStack').default;
 var P5LabInterfaceMode = require('./constants').P5LabInterfaceMode;
@@ -64,5 +65,6 @@ module.exports = {
   locationPicker,
   textConsole,
   spritelabInputList,
+  poetry,
   locales
 };

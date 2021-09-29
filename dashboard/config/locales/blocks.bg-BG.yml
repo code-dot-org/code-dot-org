@@ -779,6 +779,13 @@ bg:
         options:
           EFFECT:
             '"rain"': дъжд
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': надясно
+            '90': надолу
+            '180': наляво
+            '270': нагоре
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -792,6 +799,7 @@ bg:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": криза
+            "'sound://category_digital/jump_7.mp3'": скок
       gamelab_randColor:
         text: случаен цвят
       gamelab_randomColor:
@@ -1048,15 +1056,33 @@ bg:
             '"down"': стрелка надолу
             '"left"': лява стрелка
             '"right"': стрелка надясно
-      PoemBot_setBackgroundEffect:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': дъжд
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Цветове
-      PoemBot_setForegroundEffect:
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Дъжд
             '"bubbles"': Балончета
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: върви напред
       RyanLab_turnLeft:

@@ -297,7 +297,15 @@
         "ramp_artist_loops8_2021": "Osmiúhelník",
         "scrat_loops_C-F_video_2021": "Cykly v Době ledové - video",
         "CourseF_outbreak5": "Upravte svou simulaci",
-        "international_outbreak_freeplay": "Sdílet zprávu"
+        "international_outbreak_freeplay": "Sdílet zprávu",
+        "helloworld_animals_costumes": "Kostýmy",
+        "helloworld_animals_location": "Časové události",
+        "helloworld_emoji_costumes": "Kostýmy",
+        "helloworld_emoji_location": "Časové události",
+        "helloworld_food_costumes": "Kostýmy",
+        "helloworld_food_location": "Časové události",
+        "helloworld_retro_costumes": "Kostýmy",
+        "helloworld_retro_location": "Časové události"
       }
     }
   }

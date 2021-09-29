@@ -611,7 +611,7 @@
         "CourseD_Dance_2020_bonus3_2021": "Formation einnehmen",
         "CourseD_EOC_artist_example2021": "Strandszene (Künstler)",
         "CourseD_EOC_bounce1_example_2021": "Zufällige Geschwindigkeit beim Prellen",
-        "CourseD_EOC_dance_examples_2021": "Tanzparty",
+        "CourseD_EOC_dance_examples_2021": "Disko-Party",
         "CourseD_EOC_starwars_example_2021": "Meide die Stormtrooper!",
         "CourseEF_video_IntroSpriteLab_2021": "Hier ist das Sprite Lab",
         "CourseEF_video_MakeSprite_2021": "Wie man einen Sprite erstellt",
@@ -619,11 +619,11 @@
         "CourseF_Oceans_Video_Machine_Learning_2021": "Video: Maschinelles Lernen",
         "CourseF_Oceans_Video_Societal_Implications_2021": "Video: Gesellschaftliche Auswirkungen",
         "CourseF_Oceans_Video_Training_Data_2021": "Video: Trainingsdaten",
-        "CourseF_outbreak1": "Simulation eines Virus",
-        "CourseF_outbreak2": "Simulation eines Virus",
-        "CourseF_outbreak3": "Simulation eines Virus",
+        "CourseF_outbreak1": "Virus Simulation",
+        "CourseF_outbreak2": "Virus Simulation",
+        "CourseF_outbreak3": "Virus Simulation",
         "CourseF_outbreak4": "Modifiziere deine Simulation",
-        "CourseF_outbreak7": "Zufallswahrscheinlichkeit",
+        "CourseF_outbreak7": "Immunität und Impfungen",
         "CourseF_outbreak8": "Immunität und Impfungen",
         "CourseF_video_introSpriteLab_2021": "Hier ist das Sprite Lab",
         "MC_HOC_2017_01_RETRY_2021": "Eigenheim",
@@ -658,7 +658,10 @@
         "ramp_artist_loops4_2021": "Stern",
         "scrat_loops_C-F_video_2021": "Schleifen im Ice Age Video",
         "CourseF_outbreak5": "Modifiziere deine Simulation",
-        "international_outbreak_freeplay": "Teile eine Nachricht"
+        "international_outbreak_freeplay": "Teile eine Nachricht",
+        "CourseD_EOC_starwars": "Erschaffe ein Star Wars Spiel",
+        "CourseD_EOC_starwars_2021": "Erschaffe ein Star Wars Spiel",
+        "CourseF_outbreak6": "Zufallswahrscheinlichkeit"
       }
     }
   }

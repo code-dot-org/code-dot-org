@@ -2,6 +2,16 @@
   "cs-CZ": {
     "data": {
       "activity_sections": {
+        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+          "progression_name": "Vítejte ve Městě Příšer"
+        },
+        "7ae620e6-5b98-405a-86a0-ac4fa8f13dce": {
+          "progression_name": "Miniprojekt: Simulátor epidemie"
+        },
+        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
+          "name": "Volná hra",
+          "progression_name": "Volná hra"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Úvod"
         },

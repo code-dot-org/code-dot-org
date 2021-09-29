@@ -44,11 +44,27 @@
         "assessment-answer-internet/coursef/2021": {
           "name": "интернет"
         },
+        "get-site-ip-com/coursef/2021": {
+          "name": "получить-сайт-ip-com"
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": "Словарь курса \t"
+        },
         "implementation_guide/coursef/2021": {
           "name": "Руководство по применению"
         },
+        "lesson_type_guide/coursef/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide/coursef/2021": {
+          "name": "Руководство по отладке"
+        },
         "curriculum_guide_1/coursef/2021": {
-          "name": "Руководство для учителя"
+          "name": "Руководство для учителя",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursef/2021": {
+          "name": "2021 Журнал изменений"
         },
         "teacher_forum_1/coursef/2021": {
           "name": "Форум учителей"
@@ -58,6 +74,12 @@
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
           "name": " Следуйте по Цифровому следу"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "Цифровые следы: квадраты цифровых следов"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "name": "Цифровые следы: следы животных"
         },
         "mimi-activity/courseb/2021": {
           "name": "Вперед, вперед"
@@ -70,6 +92,9 @@
         },
         "teacher-video-move-it/courseb/2021": {
           "name": "Двигай, двигай"
+        },
+        "jigsaw/courseb/2021": {
+          "name": "Практика перетаскивания"
         },
         "pair-programming-vid/courseb/2021": {
           "name": "Программирование в парах"
@@ -101,11 +126,26 @@
         "assessment-answer-big-event/courseb/2021": {
           "name": "Большое Событие"
         },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "Большое событие (курсы A, B)"
+        },
+        "course_vocabulary/courseb/2021": {
+          "name": "Словарь курса"
+        },
         "implementation_guide/courseb/2021": {
           "name": "Руководство по применению"
         },
+        "lesson_type_guide/courseb/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "Руководство по отладке"
+        },
         "curriculum_guide_1/courseb/2021": {
           "name": "Руководство для учителя"
+        },
+        "2021_change_log/courseb/2021": {
+          "name": "2021 Журнал изменений"
         },
         "teacher_forum_1/courseb/2021": {
           "name": "Форум учителей"
@@ -113,8 +153,17 @@
         "pair-programming-vid/coursea/2021": {
           "name": "Программирование в парах"
         },
+        "20_20_20_rule/coursea/2021": {
+          "name": "Правило 20/20/20"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+        },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Весёлые карты"
+        },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "Правило 20/20/20"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Большое Событие"
@@ -125,11 +174,29 @@
         "assessment-answer-big-event/coursea/2021": {
           "name": "Большое Событие"
         },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "Большое событие (курсы A, B)"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "Словарь курса"
+        },
         "implementation_guide/coursea/2021": {
           "name": "Руководство по применению"
         },
+        "lesson_type_guide/coursea/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "Руководство по отладке"
+        },
         "curriculum_guide_1/coursea/2021": {
           "name": "Руководство для учителя"
+        },
+        "2021_change_log/coursea/2021": {
+          "name": "2021 Журнал изменений"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Форум учителей"
@@ -152,6 +219,9 @@
         "pair-programming-vid/coursec/2021": {
           "name": "Программирование в парах"
         },
+        "debugging_guide/coursec/2021": {
+          "name": "Руководство по отладке"
+        },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Большое Событие"
         },
@@ -160,6 +230,9 @@
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Большое Событие"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "Большое событие (курс В)"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Двоичные браслеты"
@@ -176,11 +249,23 @@
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Двоичные браслеты"
         },
+        "course_vocabulary/coursec/2021": {
+          "name": "Словарь курса"
+        },
         "implementation_guide/coursec/2021": {
           "name": "Руководство по применению"
         },
+        "lesson_type_guide/coursec/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "Руководство по отладке"
+        },
         "curriculum_guide_1/coursec/2021": {
           "name": "Руководство для учителя"
+        },
+        "2021_change_log/coursec/2021": {
+          "name": "2021 Журнал изменений"
         },
         "teacher_forum_1/coursec/2021": {
           "name": "Форум учителей"
@@ -225,7 +310,7 @@
           "name": "Эстафетное программирование"
         },
         "dance_party_unplugged/coursed/2021": {
-          "name": " Оффлайн"
+          "name": " Танцевальная вечеринка: оффлайн"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Условные выражения с картами"
@@ -242,14 +327,29 @@
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Условные выражения с картами"
         },
+        "course_vocabulary/coursed/2021": {
+          "name": "Словарь курса"
+        },
         "implementation_guide/coursed/2021": {
           "name": "Руководство по применению"
+        },
+        "lesson_type_guide/coursed/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "Руководство по отладке"
         },
         "curriculum_guide_1/coursed/2021": {
           "name": "Руководство для учителя"
         },
+        "2021_change_log/coursed/2021": {
+          "name": "2021 Журнал изменений"
+        },
         "teacher_forum_1/coursed/2021": {
           "name": "Форум учителей"
+        },
+        "unplugged_maze_blocks/express/2021": {
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair_programming/express/2021": {
           "name": "Программирование в парах"
@@ -258,25 +358,45 @@
           "name": "Документация Лаборатории спрайтов"
         },
         "making_sprites/express/2021": {
-          "name": "Создание спрайтов"
+          "name": "Создание спрайтов",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "Документация Лаборатории спрайтов"
         },
         "sprites_in_action/express/2021": {
-          "name": "Спрайты в действии"
+          "name": "Спрайты в действии",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
+        },
+        "text_and_prompts/express/2021": {
+          "name": "Текст из запросы на ввод"
         },
         "variables_video/express/2021": {
           "name": "Переменные"
         },
+        "course_vocabulary_1/express/2021": {
+          "name": "Словарь курса"
+        },
         "teacher_forum_1/express/2021": {
           "name": "Форум учителей"
+        },
+        "debugging_guide/express/2021": {
+          "name": "Руководство по отладке"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Программирование в парах"
         },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "Правило 20/20/20"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "name": "Словарь курса"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "Форум учителей"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "Руководство по отладке"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Документация Лаборатории спрайтов"
@@ -284,23 +404,44 @@
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
           "name": " Очень Цифровой Гражданин"
         },
+        "digital-sharing-video/coursee/2021": {
+          "name": "Этика распространения цифровой информации (видео)"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "Повороты и углы"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "Повороты и углы"
+        },
         "lesson-in-action-songwriting/coursee/2021": {
-          "name": " Написание песен"
+          "name": "Функции офлайн: Написание песен"
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": " Написание песен"
+          "name": "Функции офлайн: Написание песен"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": " Написание песен"
+          "name": "Функции офлайн: Написание песен"
         },
         "assessment-answer-songwriting/coursee/2021": {
-          "name": " Написание песен"
+          "name": "Функции офлайн: Написание песен"
+        },
+        "course_vocabulary/coursee/2021": {
+          "name": "Словарь курса"
         },
         "implementation_guide/coursee/2021": {
           "name": "Руководство по применению"
         },
+        "lesson_type_guide/coursee/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide/coursee/2021": {
+          "name": "Руководство по отладке"
+        },
         "curriculum_guide_1/coursee/2021": {
           "name": "Руководство для учителя"
+        },
+        "2021_change_log/coursee/2021": {
+          "name": "2021 Журнал изменений"
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Форум учителей"

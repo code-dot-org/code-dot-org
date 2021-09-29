@@ -4446,3 +4446,22 @@ ga:
           lessons:
             lesson-19:
               name: Tionscadal
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Giuirléidí
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ceachtanna
+            lessonGroup-3:
+              display_name: Tionscadal
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Ábhar
+            content:
+              display_name: Ábhar
+            lesson_group:
+              display_name: Ábhar
+            lessonGroup-2:
+              display_name: Ábhar

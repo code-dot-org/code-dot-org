@@ -948,6 +948,13 @@ bs:
         options:
           EFFECT:
             '"rain"': kiša
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': desno
+            '90': dolje
+            '180': lijevo
+            '270': gore
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -961,6 +968,7 @@ bs:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": zvuk krckanja
+            "'sound://category_digital/jump_7.mp3'": skoči
       gamelab_randColor:
         text: nasumična boja
       gamelab_randomColor:
@@ -1173,21 +1181,37 @@ bs:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
-      PoemBot_setBackgroundEffect:
-        text: podesi efekat pozadine {EFFECT}
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': kiša
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Boje
             '"stars"': Zvijezde
           PALETTE:
             '"rainbow"': Duge
-      PoemBot_setForegroundEffect:
-        text: podesi efekat sprijeda {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Kiša
             '"bubbles"': Balončići
             '"confetti"': Konfeti
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: idi naprijed
       RyanLab_turnLeft:

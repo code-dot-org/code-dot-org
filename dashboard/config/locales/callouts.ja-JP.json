@@ -1706,6 +1706,45 @@
         },
         "courseF_variables_predict": {
           "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "新しいブロック！"
         }
       }
     }

@@ -429,6 +429,45 @@
         },
         "courseE_artist_functions_challenge2_2021": {
           "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Novi blok!",
+          "hello_world_new_block": "Novi blok!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Novi blok!",
+          "hello_world_new_block": "Novi blok!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Novi blok!",
+          "hello_world_new_block": "Novi blok!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Novi blok!"
         }
       }
     }

@@ -1064,6 +1064,13 @@ mi:
         options:
           EFFECT:
             '"rain"': ua
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': matau
+            '90': raro
+            '180': mauī
+            '270': runga
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1077,6 +1084,7 @@ mi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": karihi
+            "'sound://category_digital/jump_7.mp3'": peke
       gamelab_randColor:
         text: tae matapōkere
       gamelab_randomColor:
@@ -1338,7 +1346,11 @@ mi:
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
-      PoemBot_setBackgroundEffect:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ua
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Tae
@@ -1348,8 +1360,7 @@ mi:
             '"ripples"': Ngā Pungarungaru
           PALETTE:
             '"rainbow"': Āniwaniwa
-      PoemBot_setForegroundEffect:
-        text: whakarite i te papamua {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Ua
@@ -1357,6 +1368,20 @@ mi:
             '"hearts"': Manawa Tae
             '"confetti"': Pepa tae iti
             '"starburst"': Pāpahu Whetū
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: neke ki mua
       RyanLab_turnLeft:

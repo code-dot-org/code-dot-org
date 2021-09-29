@@ -1007,6 +1007,13 @@
         options:
           EFFECT:
             '"rain"': regn
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': høyre
+            '90': ned
+            '180': venstre
+            '270': opp
       gamelab_mirrorSprite:
         text: "{SPRITE} se til {DIRECTION}"
         options:
@@ -1038,6 +1045,7 @@
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": knas
+            "'sound://category_digital/jump_7.mp3'": Hopp
       gamelab_pointInDirection:
         text: pek {SPRITE} {DIRECTION}
         options:
@@ -1358,10 +1366,13 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
+      Poetry_playSound:
         text: spillLyd {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: velg bakgrunnseffekt {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Farger
@@ -1369,13 +1380,26 @@
             '"stars"': Stjerner
           PALETTE:
             '"rainbow"': Regnbue
-      PoemBot_setForegroundEffect:
-        text: sett forgrunneffekt {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Regn
             '"bubbles"': Bobler
             '"confetti"': Konfetti
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: gå fremover
       RyanLab_turnLeft:

@@ -6,9 +6,9 @@ title: Hour of Code How-to Guide for After-school
 
 # როგორ ჩავატაროთ კოდის ერთი საათი კლასგარეშე გარემოში და კლუბებში
 
-### Join the movement and introduce your students to computer science with these steps.
+### შეუერთდით მოძრაობას და გააცანით თქვენს მოსწავლეებს კომპიუტერული მეცნიერება შემდეგი საფეხურების მიხედვით.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+გამოთვლითი აზროვნება გვეხმარება პრობლემის გადაწყვეტის უნარების, ლოგიკის და კრეატიულობის განვითარებაში. ტექნოლოგია მსოფლიოში ყველა ინდუსტრიას ცვლის. დღეს, მოსწავლეებმა უნდა ისწავლონ როგორ შექმნან ტექნოლოგია და არა მარტო გამოიყენონ ის. ბავშვობიდანვე დაწყებით მათ ექნებათ ფუნდამენტი, რომელიც გამოადგებათ 21-ე საუკუნის ნებისმიერ პროფესიაში.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
@@ -28,7 +28,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 **გჭირდებათ გაკვეთილის გეგმა კლასგარეშე კოდის ერთი საათისთვის?** გადახედეთ ამ [შაბლონს](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას
+## 3. გაუწიეთ პოპულარიზაცია კოდის ერთ საათს
 
 Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
 
@@ -63,7 +63,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 6. დაწერეთ კოდი!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. ბმული შეგიძლიათ იპოვოთ[ ტუტორიალის შესახებ ინფორმაციაში]({{ urls/learn }}), მონაწილეთა რაოდენობის ქვემოთ.
+**მიეცით მონაწილეებს მითითებები აქტივობის შესახებ** - დაწერეთ ტუტორიალის ბმული დაფაზე. ბმული შეგიძლიათ იპოვოთ[ ტუტორიალის შესახებ ინფორმაციაში]({{ urls/learn }}), მონაწილეთა რაოდენობის ქვემოთ.
 
 **When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
@@ -71,10 +71,10 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 7. აღნიშნეთ
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [დაბეჭდეთ სერტიფიკატები]({{ urls/certificates }}) თქვენი მოსწავლეებისთვის.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
-- გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
+- გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეოები სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg — ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
 ## კოდის ერთი საათის სხვა რესურსები მასწავლებლებისთვის
 

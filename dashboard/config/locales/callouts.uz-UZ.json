@@ -1502,6 +1502,76 @@
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Barcha bloklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Ishga tushirish\" tugmachasini bosing."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_collector": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_pet": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Yangi blok!",
+          "hello_world_new_block": "Yangi blok!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Yangi blok!",
+          "hello_world_new_block": "Yangi blok!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Yangi blok!",
+          "hello_world_new_block": "Yangi blok!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Yangi blok!"
         }
       }
     }

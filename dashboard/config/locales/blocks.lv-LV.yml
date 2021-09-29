@@ -253,6 +253,13 @@ lv:
         options:
           DIRECTION:
             '"North"': Ziemeļi
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': pa labi
+            '90': uz leju
+            '180': pa kreisi
+            '270': uz augšu
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -266,6 +273,7 @@ lv:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": kraukš
+            "'sound://category_digital/jump_7.mp3'": lēkt
       gamelab_pointInDirection:
         options:
           DIRECTION:
@@ -411,7 +419,7 @@ lv:
             '"down"': bultiņa uz leju
             '"left"': bultiņa pa kreisi
             '"right"': bultiņa pa labi
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Krāsas

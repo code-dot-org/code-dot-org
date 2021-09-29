@@ -433,9 +433,9 @@
         "MC_HOC_2017_Ali": "Twierdza Nether",
         "MC_HOC_2017_Ali_2019": "Twierdza Nether",
         "MC_HOC_2017_Ali_2020": "Twierdza Nether",
-        "MC_HOC_2017_FP20x20": "Czas na zabawę:",
-        "MC_HOC_2017_FP20x20_2019": "Czas na zabawę:",
-        "MC_HOC_2017_FP20x20_2020": "Czas na zabawę:",
+        "MC_HOC_2017_FP20x20": "Czas na zabawę",
+        "MC_HOC_2017_FP20x20_2019": "Czas na zabawę",
+        "MC_HOC_2017_FP20x20_2020": "Czas na zabawę",
         "Robot Doodle_2018": "Bazgroły robota",
         "courseE_Dogger_2": "Przykład łodzi rybackiej",
         "courseF_project_1": "Przykład projektu \"Sprite Lab\"",
@@ -515,7 +515,7 @@
         "MC_HOC_2017_07_Cole_2021": "Śnieżna przełęcz",
         "MC_HOC_2017_10_RETRY_2021": "Jaskinia",
         "MC_HOC_2017_Ali_2021": "Twierdza Nether",
-        "MC_HOC_2017_FP20x20_2021": "Czas na zabawę:",
+        "MC_HOC_2017_FP20x20_2021": "Czas na zabawę",
         "courseA_EOC_artist_1": "Artysta: Zoo",
         "courseA_EOC_artist_2": "Artysta: Ogród",
         "courseA_EOC_artist_3": "Artysta: Kosmos",
@@ -546,7 +546,19 @@
         "scrat_loops_C-F_video_2021": "Pętle w filmie wideo \"Epoka Lodowcowa\"",
         "courseF_apps_aquarium": "Wirtualne akwarium",
         "courseF_apps_chatbot": "Chat Bot X-9",
-        "international_outbreak_freeplay": "Udostępnij wiadomość"
+        "international_outbreak_freeplay": "Udostępnij wiadomość",
+        "helloworld_animals_costumes": "Kostiumy",
+        "helloworld_animals_sizes": "Rozmiar",
+        "helloworld_animals_sounds": "Dźwięki",
+        "helloworld_emoji_costumes": "Kostiumy",
+        "helloworld_emoji_sizes": "Rozmiar",
+        "helloworld_emoji_sounds": "Dźwięki",
+        "helloworld_food_costumes": "Kostiumy",
+        "helloworld_food_sizes": "Rozmiar",
+        "helloworld_food_sounds": "Dźwięki",
+        "helloworld_retro_costumes": "Kostiumy",
+        "helloworld_retro_sizes": "Rozmiar",
+        "helloworld_retro_sounds": "Dźwięki"
       }
     }
   }

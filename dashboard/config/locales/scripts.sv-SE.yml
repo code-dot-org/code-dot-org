@@ -3656,3 +3656,17 @@ sv:
           lessons:
             lesson-19:
               name: Projekt
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Projekt
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Innehåll
+            content:
+              display_name: Innehåll
+            lesson_group:
+              display_name: Innehåll
+            lessonGroup-2:
+              display_name: Innehåll

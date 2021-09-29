@@ -175,7 +175,11 @@
         "CourseF_outbreak6": "रिकव्हरी",
         "CourseF_outbreak7": "यादृच्छिक संधी",
         "CourseF_outbreak8": "रोगप्रतिकार शक्ती आणि लशी",
-        "international_outbreak_freeplay": "मेसेज शेअर करा"
+        "international_outbreak_freeplay": "मेसेज शेअर करा",
+        "helloworld_animals_location": "टाईम इव्हेंट्स",
+        "helloworld_emoji_location": "टाईम इव्हेंट्स",
+        "helloworld_food_location": "टाईम इव्हेंट्स",
+        "helloworld_retro_location": "टाईम इव्हेंट्स"
       }
     }
   }

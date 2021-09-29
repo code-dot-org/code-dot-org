@@ -190,6 +190,5 @@
   "thirdClickButNoSpeech": "你點了兩個角色，但其中一個角色沒有說話。請增加一個 `說話` 方塊在每個 `點一下` 事件。 <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">你好呀！</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"預設\"</title></block></value></block></xml>",
   "changeOrSetSize": "你的角色都沒有改變大小。",
   "changeOrSetCostume": "你的角色都沒有改變服裝。",
-  "changeBackground": "背景沒有改變。",
-  "poemBotMakeBackground": "你需要新增背景效果。"
+  "changeBackground": "背景沒有改變。"
 }

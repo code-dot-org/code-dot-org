@@ -474,8 +474,8 @@ fr:
         csd_gamelab_if_else: Instructions « Si/Sinon »
         CSF_SpriteLabIntro_CDEF: Voici le Labo du Lutin
         CSF_Spritelab_MakeSprite_CDEF: Comment Créer un Lutin dans le Labo du Lutin
-        CDEF_Video_SpritesInAction: Les Lutins en Action
-        CSF_SpriteLab_SpritesInAction_CDEF: Les Lutins en Action
+        CDEF_Video_SpritesInAction: Les Sprites en Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Les Sprites en Action
         CSF_StarWars_ProjectIntro: Introduction au Projet Star Wars
         mc_2018_intro: 'Minecraft : Voyage Aquatique - Introduction'
         MC_2018_loops: 'Minecraft : Voyage Aquatique - Répéter jusqu''à'
@@ -507,9 +507,9 @@ fr:
         csd_applab_loops: Boucles dans le Labo des Applis
         csd_problem_solving_process: Le Processus de Résolution de Problèmes
         CSF_Going_Places_Safely: Mon Quartier en Ligne
-        CSF_SpriteLab_Intro_v2: Introduction au Labo des Lutins
+        CSF_SpriteLab_Intro_v2: Introduction au Labo des Sprites
         CSF_Spritelab_MakeSprite_v2: Comment Créer un Lutin
-        CSF_SpriteLab_SpritesInAction_v2: Les Lutins en Action
+        CSF_SpriteLab_SpritesInAction_v2: Les Sprites en Action
         csd_debugging: Le Débogage
         csd_applab_designmode_short: Mode Création du Labo des Applis
         csp-pd-welcome: Bienvenue dans la Famille !

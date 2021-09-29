@@ -995,6 +995,13 @@ ta:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': வலது
+            '90': கீழே
+            '180': இடது
+            '270': மேலே
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1004,6 +1011,10 @@ ta:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": குதி
       gamelab_randColor:
         text: ஏதாவது ஒரு நிறம்
       gamelab_randomColor:
@@ -1246,7 +1257,7 @@ ta:
         text: அசுரர்களை தோராயமாக அமைக்கவும்
       Outbreak_stopMoving:
         text: அரக்கர்கள் நகர்வதை நிறுத்துகிறார்கள்
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': வண்ணங்கள்
@@ -1256,13 +1267,26 @@ ta:
             '"ripples"': சிற்றலைகள்
           PALETTE:
             '"rainbow"': வானவில்
-      PoemBot_setForegroundEffect:
-        text: முன்னணி எஃபெக்டை அமைக்கவும் {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': மழை
             '"bubbles"': குமிழிகள்
             '"confetti"': கான்ஃபெடி
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: முன்னோக்கி நகர்த்த
       RyanLab_turnLeft:
