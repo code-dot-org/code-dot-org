@@ -17,7 +17,6 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import PeerSelectDropdown from '@cdo/apps/templates/instructions/codeReview/PeerSelectDropdown';
 import Button from '@cdo/apps/templates/Button';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 describe('Code Review Tab', () => {
@@ -330,7 +329,7 @@ describe('Code Review Tab', () => {
         onLoadComplete={onLoadComplete}
         codeReviewEnabled={false}
         viewAsCodeReviewer={false}
-        viewAs={ViewType.Teacher}
+        viewAsTeacher={true}
       />
     );
     wrapper.setState({initialLoadCompleted: true});
@@ -380,7 +379,7 @@ describe('Code Review Tab', () => {
         onLoadComplete={onLoadComplete}
         codeReviewEnabled
         viewAsCodeReviewer={false}
-        viewAs={ViewType.Teacher}
+        viewAsTeacher={true}
       />
     );
     wrapper.setState({initialLoadCompleted: true});
