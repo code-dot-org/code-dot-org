@@ -215,7 +215,7 @@ en:
           lesson_groups: {}
           lessons:
             Artist:
-              name: Artist
+              name: Code with Anna and Elsa
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
           student_description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -2095,7 +2095,7 @@ en:
               description_teacher: |-
                 In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. This version uses both drag-drop blocks and JavaScript. Students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+.
 
-                A [Blockly version](/s/starwarsblocks) is also available and recommended for students on mobile devices without keyboards, younger students, and international students.
+                A [Blockly version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) is also available and recommended for students on mobile devices without keyboards, younger students, and international students.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code (Blockly)'
