@@ -50,11 +50,11 @@ module Pd::Application
     end
 
     def self.year
-      YEAR_21_22
+      ActiveApplicationModels::APPLICATION_CURRENT_YEAR
     end
 
     def self.next_year
-      YEAR_22_23
+      ActiveApplicationModels::APPLICATION_NEXT_YEAR
     end
 
     # @override
