@@ -3,16 +3,12 @@
 
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
-import {getLocation} from './locationPickerModule';
+import {getLocation} from '../redux/locationPicker';
 import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
-import {animationSourceUrl} from '../animationListModule';
+import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
-import {
-  Goal,
-  show,
-  showBackground
-} from '../AnimationPicker/animationPickerModule';
+import {Goal, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 function animations(areBackgrounds) {
@@ -187,20 +183,11 @@ const customInputTypes = {
       ) {
         buttons = [
           {
-            text: i18n.draw(),
+            text: i18n.costumeMode(),
             action: () => {
               getStore().dispatch(
-                changeInterfaceMode(
-                  P5LabInterfaceMode.ANIMATION,
-                  true /* spritelabDraw */
-                )
+                changeInterfaceMode(P5LabInterfaceMode.ANIMATION)
               );
-            }
-          },
-          {
-            text: i18n.more(),
-            action: () => {
-              getStore().dispatch(show(Goal.NEW_ANIMATION, true));
             }
           }
         ];
@@ -343,7 +330,9 @@ const customInputTypes = {
         );
     },
     generateCode(block, arg) {
-      return `{name: '${block.getTitleValue(arg.name)}'}`;
+      return `{name: '${Blockly.JavaScript.translateVarName(
+        block.getTitleValue(arg.name)
+      )}'}`;
     }
   },
   limitedColourPicker: {
@@ -450,7 +439,9 @@ export default {
     };
     generator.sprite_variables_get = function() {
       return [
-        `{name: '${this.getTitleValue('VAR')}'}`,
+        `{name: '${Blockly.JavaScript.translateVarName(
+          this.getTitleValue('VAR')
+        )}'}`,
         Blockly.JavaScript.ORDER_ATOMIC
       ];
     };
@@ -618,6 +609,7 @@ export default {
           block.setHSV(136, 0.84, 0.8);
           block.parameterNames_ = [i18n.thisSprite()];
           block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
+          block.setUserVisible(false);
         },
         overrides: {
           getVars(category) {

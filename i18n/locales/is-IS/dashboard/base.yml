@@ -167,8 +167,8 @@ is:
     additional_information: "Við þurfum viðbótarupplýsingar til að geta haldið áfram að skrá þig."
     user_type_button: "Uppfæra tegund aðgangs"
     user_type_label: "Tegund aðgangs"
-    user_type_teacher: "Kennari"
     user_type_student: "nemandi"
+    user_type_teacher: "Kennari"
     field_is_required: "er nauðsynlegt"
     accept_terms: "Þú verður að samþykkja að stofna aðgang"
     error: "Villa kom upp."
@@ -176,6 +176,9 @@ is:
     email_preference_yes: "Já"
     email_preference_no: "Nei"
     email_preference_required: "Þú verður tilgreina tölvupóst."
+    share_teacher_email_reg_partner_preference_yes: "Já"
+    share_teacher_email_reg_partner_preference_no: "Nei"
+    share_teacher_email_reg_partner_preference_required: "Þú verður tilgreina tölvupóst."
     parent_account_checkbox: "Ég er foreldri/forráðamaður sem er að skrá fyrir hönd barns míns"
     parent_account_email_progress_permission: "Megum við senda þér af og til netpóst með upplýsingum um framvindu og verkefni barns þíns, og upplýsingum um námskeiðið og tölvunarfræði? [(Sjá persónuverndarstefnu okkar)](%{privacy_policy_url})"
     parent_account_email_label: "Netfang foreldris/forráðamanns"
@@ -269,6 +272,7 @@ is:
     invite_sent: 'Boð send'
     added_teacher: '%{name} bætt við sem kennara'
     registered: "Þú ert með skráningu í %{section_name}."
+    already_exists: 'Þú ert nú þegar í hópnum %{section_name}.'
     error:
       signed_in: 'Skráðu þig út fyrst'
       username_not_found: 'Notandaheitið %{username} fannst ekki'
@@ -590,8 +594,6 @@ is:
       link: "Nánar"
       applab_unsupported_tablet: "Appsmiðjan virkar best á borð- eða fartölvu með mús og lyklaborði. Það gætu komið upp vandamál við notkun þessa verkfæris á núverandi tæki."
       gamelab_unsupported_tablet: "Leikjamiðjan virkar best á borð- eða fartölvu með mús og lyklaborði. Það gætu komið upp vandamál við notkun þessa verkfæris á núverandi tæki."
-      oceans_unsupported_browser: "Þessi vafri er ekki studdur fyrir þetta kennsluefni. Vinsamlegast reyndu að opna þessa síðu með Edge, Chrome, Firefox eða öðrum nýlegum vafra."
-      weblab_unsupported_browser: "Því miður eru nú að koma upp vandamál við notkun Vefsmiðjunnar í þessum vafra. Þú gætir prófað að nota annan vafra þar til lausn finnst. Við biðjumst afsökunar á þessu."
       weblab_unsupported_locale_storage: "Það gætu komið upp vandamál við notkun Vefsmiðjunnar þegar stillt er á Private Browsing. Opnaðu verkefnið þitt aftur með vafrann í venjulegri stöðu. Við biðjumst forláts á þessu."
   slow_loading: 'Þetta tekur lengur en venjulega...'
   try_reloading: 'Reyndu að endurhlaða síðunni'
@@ -980,9 +982,8 @@ is:
       school_city: 'Bær skóla'
       school_country: 'Land skóla'
       colombian_school_city: 'Bær skóla'
-      colombian_school_department: 'Deild skóla'
       colombian_school_municipality: 'Umdæmi skóla'
-      colombian_school_name: 'Nafn skóla'
+      colombian_chilean_school_name: 'Nafn skóla'
       ages: 'Hvaða aldurshóp(um) kennir þú þetta árið?'
       subjects: 'Hvaða fag/fög kennir þú þetta árið?'
       resources: 'Hvaða eftirfarandi tilföng notar þú fyrir tölvunarfræði?'
@@ -1082,6 +1083,7 @@ is:
   page_not_found_description: "Síðan sem þú ert að leita að finnst ekki á þessu veffangi. Athugaðu veffangið og prófaðu aftur. Eða farðu aftur á heimasíðu okkar."
   page_not_found_button: "Aftur á heimasíðu"
   copy: 'Afrita'
+  confirm: 'Staðfesta'
   maker:
     google_oauth:
       login_with_google: 'Innskráning á Maker appið með Google'

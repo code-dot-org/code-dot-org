@@ -46,10 +46,26 @@ az:
         title: Estafet proqramlaşdırması
       Unplug10:
         title: İnternet
+        desc: Bu dərsdə tələbələr veb ünvanları, IP və DNS-lər haqqında məlumat əldə
+          edərkən İnternet vasitəsilə hərəkət etdiklərini iddia edəcəklər.
       Unplug11:
         title: Yekun
       UnplugHappyMaps:
         title: Şən xəritələr
+        desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
+          üçün sadə alqoritmlər (təlimat dəstləri) yaradırlar.
+      MoveIt:
+        title: Hərəkət et
+        desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
+          üçün sadə alqoritmlər (təlimat dəstləri) yaradırlar.
+      PlantASeed:
+        title: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+        desc: Bu dərs alqoritmləri gündəlik həyatımızda istifadə etməyə, nümunə olaraq
+          bir toxum əkmə hərəkətindən istifadə yollarımıza çağırır. Həm də kompüter
+          elminin daha böyük mənzərəsinə və alqoritmlərin vacib rol oynadığına diqqət
+          yetirir.
+      BuildingAFoundation:
+        title: Təməl qurmaq
       RelayProgramming:
         title: Estafet proqramlaşdırması
       Conditionals:
@@ -62,6 +78,13 @@ az:
         title: Funksional muncuqlar
       SongwritingParameters:
         title: Mahnı yazma
+        desc: Şagirdlər funksiyaları təyin etmə və çağırmağı öyrənmək üçün bir mahnıda
+          xor konsepsiyasından istifadə edirlər.
+      DiceRace:
+        title: 'Həqiqi Həyat Alqoritmləri: Zər Yarışı'
+        desc: Bu dərs gündəlik həyatımızda alqoritmlərdən istifadə yollarımızı çağırır.
+          Bunun bir hissəsi olaraq, tələbələr bir zər yarış oyunu üçün alqoritmi müəyyənləşdirəcək
+          və yazacaqlar.
       Internet:
         title: İnternet
         desc: Şagirdlər kağız parçalarından istifadə edərək müxtəlif internet yayım
@@ -70,6 +93,8 @@ az:
         title: Rəqəmsal vətəndaşlıq
       BinaryImages:
         title: İkilik təsvirlər
+      VideoGamesCoordinatePlanes:
+        title: video oyunlar və koordinat təyyarələri
       courseB_unplugged_MRF:
         title: Sərbəst fəaliyyət
       courseB_unplugged_loopyMRF:
@@ -80,22 +105,49 @@ az:
         title: Sərbəst fəaliyyət
       courseF_unplugged_powerOfWords:
         title: Sərbəst fəaliyyət
+      courseAB_unplugged_plantASeed:
+        title: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+        desc: Bu dərs alqoritmləri gündəlik həyatımızda istifadə etməyə, nümunə olaraq
+          bir toxum əkmə hərəkətindən istifadə yollarımıza çağırır. Həm də kompüter
+          elminin daha böyük mənzərəsinə və alqoritmlərin vacib rol oynadığına diqqət
+          yetirir.
       courseA_unplugged_happyMaps:
         title: Şən xəritələr
+        desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
+          üçün sadə alqoritmlər (təlimat dəstləri) yaradırlar.
+      courseC_unplugged_buildingAFoundation:
+        title: Təməl qurmaq
       courseD_unplugged_graphPaperProgramming:
         title: Millimetrlik kağızda proqramlaşdırma
       courseD_unplugged_relayProgramming:
         title: Estafet proqramlaşdırması
       courseD_unplugged_binaryImages:
         title: İkilik təsvirlər
+      courseE_unplugged_diceRace:
+        desc: Bu dərs gündəlik həyatımızda alqoritmlərdən istifadə yollarımızı çağırır.
+          Bunun bir hissəsi olaraq, tələbələr bir zər yarış oyunu üçün alqoritmi müəyyənləşdirəcək
+          və yazacaqlar.
+      courseE_unplugged_songwritingParameters:
+        desc: Şagirdlər funksiyaları təyin etmə və çağırmağı öyrənmək üçün bir mahnıda
+          xor konsepsiyasından istifadə edirlər.
       courseE_unplugged_internet:
         title: İnternet
         desc: Şagirdlər kağız parçalarından istifadə edərək müxtəlif internet yayım
           metodlarını təmsil edən ismarışlar göndərirlər.
       courseE_unplugged_songwriting:
         title: Mahnı yazma
+        desc: Şagirdlər funksiyaları təyin etmə və çağırmağı öyrənmək üçün bir mahnıda
+          xor konsepsiyasından istifadə edirlər.
+      PlantASeed_2018:
+        title: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+        desc: Bu dərs alqoritmləri gündəlik həyatımızda istifadə etməyə, nümunə olaraq
+          bir toxum əkmə hərəkətindən istifadə yollarımıza çağırır. Həm də kompüter
+          elminin daha böyük mənzərəsinə və alqoritmlərin vacib rol oynadığına diqqət
+          yetirir.
       UnplugHappyMaps_2018:
         title: Şən xəritələr
+        desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
+          üçün sadə alqoritmlər (təlimat dəstləri) yaradırlar.
       GraphPaperProgramming_2018:
         title: Millimetrlik kağızda proqramlaşdırma
       courseD_unplugged_digitalCitizenship_2018:
@@ -106,6 +158,8 @@ az:
         title: Şərti ifadələr
       BinaryImages_2018:
         title: İkilik təsvirlər
+      MoveItMoveIt_2018:
+        title: Hərəkət et
       RelayProgramming_2018:
         title: Estafet proqramlaşdırması
       Conditionals_2019:
@@ -120,7 +174,17 @@ az:
         title: İkilik təsvirlər
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Sərbəst fəaliyyət
+      PlantASeed_2019:
+        title: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+        desc: Bu dərs alqoritmləri gündəlik həyatımızda istifadə etməyə, nümunə olaraq
+          bir toxum əkmə hərəkətindən istifadə yollarımıza çağırır. Həm də kompüter
+          elminin daha böyük mənzərəsinə və alqoritmlərin vacib rol oynadığına diqqət
+          yetirir.
       UnplugHappyMaps_2019:
         title: Şən xəritələr
+        desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
+          üçün sadə alqoritmlər (təlimat dəstləri) yaradırlar.
+      MoveItMoveIt_2019:
+        title: Hərəkət et
       timeforcs_demo_conditionals:
         title: Şərti ifadələr

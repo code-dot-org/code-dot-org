@@ -20,7 +20,7 @@ describe('JavalabSettings', () => {
   it('is initially just a button', () => {
     const wrapper = shallow(<JavalabSettings {...defaultProps} />);
     assert.strictEqual(wrapper.children().length, 1);
-    assert.strictEqual(wrapper.childAt(0).name(), 'button');
+    assert.strictEqual(wrapper.childAt(0).name(), 'JavalabButton');
   });
 
   it('shows children when clicked', () => {

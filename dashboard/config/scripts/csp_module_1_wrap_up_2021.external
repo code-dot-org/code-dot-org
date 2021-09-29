@@ -1,0 +1,15 @@
+name 'CSP - Module 1 Wrap Up_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 1 Asynchronous Wrap Up
+
+## Next Steps
+
+1. Return to your cohort's shared slide deck for Module 1.
+2. Follow the directions in the shared slide deck to finish final reflections, add questions this raised for you, or do the other tasks listed in the shared slides for this module.
+3. Join us for the Module 1 Synchronous Workshop.
+
+MARKDOWN

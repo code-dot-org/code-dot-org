@@ -27,7 +27,7 @@ Do you know the quickest route from your home to the most common place you go? H
 * Intro Worksheet: <a href="https://docs.google.com/document/d/1rt3qZpT2lUOnrQIsz7Mp6grxv2fkOttk9_Zqji0E0CY/edit?usp=sharing">Intro to the shortest path problem</a>
 * Worksheet:  <a href="https://docs.google.com/document/d/1gER6NzVjeWAYgPM6T0Lr3FU4j9i-5m19YXJqco6pmac/edit?usp=sharing">Dijsktra's Shortest Path Algrothm</a>
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

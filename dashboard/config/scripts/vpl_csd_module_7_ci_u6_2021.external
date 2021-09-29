@@ -1,0 +1,41 @@
+name 'VPL - CSD - Module 7 - CI-U6_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Curriculum Investigation
+
+## Overview
+
+In this section, you will investigate four lessons in Unit 6. Each lesson includes an investigation goal and task. Reflection prompts are included to further guide your planning and implementation. You may want to write down ideas about how to teach these lessons in your journal throughout the investigations. The times below are suggestions.  Feel free to take as much time as you need.  
+
+**Note:**  
+
+* If you have a Circuit Playground, consider setting it up now before going on to the next level.  
+
+	* Steps for installing the Circuit Playground are found in the CS Discoveries Maker Toolkit IT Setup at https://studio.code.org/maker/setup.  
+    
+    * If you need additional support, check out our general <a href="https://support.code.org/hc/en-us/articles/115003407851" target="_blank">Maker Toolkit support article </a>  to get help with common debugging issues.  
+    
+* If you do not have a Circuit Playground, consider making a note of the resources provided in this Overview section to use when you do have a Circuit Playground. 
+
+**You will not need a Circuit Playground to complete the following activities.**
+
+## Lesson Investigations
+
+* Lesson 1: Innovations in Computing (~10 minutes)
+
+* Lesson 2: Designing Screens with Code (revisit App Lab, ~20 minutes)
+    
+* Lesson 3: The Circuit Playground (~20 minutes)
+
+* Lesson 4: Input Unplugged (~10 minutes)
+
+
+
+
+
+
+
+MARKDOWN

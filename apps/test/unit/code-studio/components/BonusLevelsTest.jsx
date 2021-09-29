@@ -10,9 +10,25 @@ const DEFAULT_PROPS = {
   userId: null
 };
 
+const setUp = () => {
+  return shallow(<BonusLevels {...DEFAULT_PROPS} />);
+};
+
 describe('BonusLevels', () => {
   it('renders correct number of bonus levels', () => {
-    const wrapper = shallow(<BonusLevels {...DEFAULT_PROPS} />);
+    const wrapper = setUp();
     assert.equal(7, wrapper.find('SublevelCard').length);
+  });
+
+  it('renders the correct header on load', () => {
+    const wrapper = setUp();
+    assert(wrapper.contains('Lesson 3 Challenges'));
+  });
+
+  it('updates the lesson header when arrows are toggled', () => {
+    const wrapper = setUp();
+    const leftArrow = wrapper.find('FontAwesome').first();
+    leftArrow.simulate('click');
+    assert(wrapper.contains('Lesson 2 Challenges'));
   });
 });

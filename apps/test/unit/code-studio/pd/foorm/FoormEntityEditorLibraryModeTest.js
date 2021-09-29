@@ -66,6 +66,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
   afterEach(() => {
     restoreRedux();
+    server.restore();
   });
 
   const sampleExistingLibraryQuestionData = {

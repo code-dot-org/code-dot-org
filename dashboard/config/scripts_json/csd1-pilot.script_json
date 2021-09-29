@@ -2,7 +2,6 @@
   "script": {
     "name": "csd1-pilot",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "exclude_csf_column_in_legend": true,
@@ -197,7 +196,6 @@
       "assessment": true,
       "properties": {
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -217,7 +215,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -237,7 +234,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -257,7 +253,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -277,7 +272,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -297,7 +291,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -317,7 +310,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -337,7 +329,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -357,7 +348,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -377,7 +367,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -397,7 +386,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -417,7 +405,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -437,7 +424,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -457,7 +443,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -478,7 +463,6 @@
       "properties": {
         "progression": "App: Is It Your Birthday?"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -499,7 +483,6 @@
       "properties": {
         "progression": "App: National Park Quiz"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -520,7 +503,6 @@
       "properties": {
         "progression": "App: How Many Countries..."
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -541,7 +523,6 @@
       "properties": {
         "progression": "App: My Famous Birthday"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -562,7 +543,6 @@
       "properties": {
         "progression": "App: Stamp Notebook"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -583,7 +563,6 @@
       "properties": {
         "progression": "App: The Fastest Finger"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -604,7 +583,6 @@
       "properties": {
         "progression": "App: Guess the Number"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -625,7 +603,6 @@
       "properties": {
         "progression": "App: Where Should I Live?"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -645,7 +622,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -665,7 +641,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -685,7 +660,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -705,7 +679,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -725,7 +698,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [

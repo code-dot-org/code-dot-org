@@ -1,4 +1,4 @@
-import {assert, expect} from '../../../util/deprecatedChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import * as Table from 'reactabular-table';
@@ -22,7 +22,7 @@ const sectionRowData = [
     scriptId: 168,
     grade: '5',
     loginType: 'picture',
-    stageExtras: true,
+    lessonExtras: true,
     pairingAllowed: true,
     providerManaged: false,
     hidden: false,

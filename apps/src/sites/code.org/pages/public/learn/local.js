@@ -42,7 +42,12 @@ $(function() {
   geocoder.addTo('#mapboxgeocoder');
 
   // Make the map sticky.
-  $('#map').sticky({topSpacing: 0});
+  stickMap();
+
+  //re-evaluate the page footer offset on window resize
+  $(window).resize(function() {
+    stickMap();
+  });
 
   // Trigger query when a facet is changed.
   $('#class-search-facets')
@@ -51,6 +56,12 @@ $(function() {
       submitForm();
     });
 });
+
+function stickMap() {
+  $('#map').sticky({
+    bottomSpacing: $('#pagefooter').height() + 50
+  });
+}
 
 function submitForm() {
   var form_data = $('#class-search-form').serializeArray();

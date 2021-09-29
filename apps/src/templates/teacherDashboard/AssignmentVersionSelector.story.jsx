@@ -13,6 +13,7 @@ const defaultVersions = [
     year: '2019',
     title: "19'-20'",
     isStable: false,
+    localeCodes: [],
     locales: []
   },
   {
@@ -21,6 +22,7 @@ const defaultVersions = [
     isStable: true,
     isRecommended: true,
     isSelected: false,
+    localeCodes: ['en-US'],
     locales: ['English']
   },
   {
@@ -29,7 +31,8 @@ const defaultVersions = [
     isStable: true,
     isRecommended: false,
     isSelected: true,
-    locales: ['English', 'French', 'Spanish']
+    localeCodes: ['en-US', 'fr-FR', 'es-MX'],
+    locales: ['English', 'Français', 'Español (Latinoamérica)']
   }
 ];
 

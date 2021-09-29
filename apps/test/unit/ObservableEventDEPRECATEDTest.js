@@ -1,4 +1,4 @@
-import {assert} from '../util/deprecatedChai';
+import {assert} from '../util/reconfiguredChai';
 
 describe('ObservableEventDEPRECATED', function() {
   var ObservableEventDEPRECATED = require('@cdo/apps/ObservableEventDEPRECATED');

@@ -10,9 +10,8 @@ Feature: Script overview page
     And I am on "http://studio.code.org/s/allthethings"
     And I wait until element "td:contains(Maze)" is visible
     And I wait until element ".teacher-panel" is not visible
-    And I wait for 2 seconds
-    Then I verify progress for stage 2 level 1 is "perfect"
-    Then I verify progress for stage 2 level 2 is "not_tried"
+    Then I verify progress for lesson 2 level 1 is "perfect"
+    Then I verify progress for lesson 2 level 2 is "not_tried"
     And I sign out
 
     # Verify progress as teacher viewing themself and student on script overview page
@@ -20,16 +19,14 @@ Feature: Script overview page
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new"
     And I am on "http://studio.code.org/s/allthethings"
     And I wait until element ".teacher-panel" is visible
-    And I wait until jQuery Ajax requests are finished
-    Then I verify progress for stage 29 level 4 is "perfect"
+    Then I verify progress for lesson 29 level 4 in detail view is "perfect"
     When I click selector ".teacher-panel table td:contains(Sally)" once I see it
     And I wait until element "td:contains(Maze)" is visible
-    And I wait for 2 seconds
-    Then I verify progress for stage 2 level 1 is "perfect"
-    Then I verify progress for stage 2 level 2 is "not_tried"
+    Then I verify progress for lesson 2 level 1 is "perfect"
+    Then I verify progress for lesson 2 level 2 is "not_tried"
 
     # Make sure we only see student progress, not teacher progress.
-    Then I verify progress for stage 29 level 4 is "not_tried"
+    Then I verify progress for lesson 29 level 4 is "not_tried"
 
   Scenario: Script overview contents
     Given I create a student named "Jean"
@@ -47,5 +44,5 @@ Feature: Script overview page
 
     And I am on "http://studio.code.org/s/mc"
     And I wait until element "td:contains(Minecraft)" is visible
-    # verify script name overrides stage name when there is only one stage
+    # verify script name overrides lesson name when there is only one lesson
     And element "td:contains(1. Minecraft Hour of Code)" is visible

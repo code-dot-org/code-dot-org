@@ -166,6 +166,24 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Koristi padajući izbornik da bi zamijenio \"???\" s brojem"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Stavili smo malo blokovi za početak"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ovaj kod će početi graditi svoju kuću. Može li to završiti?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Ponavljanje akcije stavljanjem blokova ovdje"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Meni ovo glačalo!"
         }
       }
     }

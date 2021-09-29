@@ -2,7 +2,11 @@
   data:
     variable_names:
       actor: figur
+      age: alder
+      answer: svar
+      binary: binær
       cats: alle katter
+      color: farge
       counter: teller
       dogs: alle hunder
       height: høyde

@@ -1,1 +1,9 @@
+---
 kk:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: AP® Информатика қағидалары
+        csp-2018:
+          assignment_family_title: AP® Информатика қағидалары

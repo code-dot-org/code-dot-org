@@ -1,4 +1,4 @@
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {setRecommendedAndSelectedVersions} from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 
 const fakeVersions = [
@@ -7,21 +7,24 @@ const fakeVersions = [
     year: '2017',
     title: '2017',
     isStable: true,
-    locales: ['English', 'Spanish']
+    locales: ['English', 'Spanish'],
+    localeCodes: ['en-US', 'es-MX']
   },
   {
     name: 'coursea-2018',
     year: '2018',
     title: '2018',
     isStable: true,
-    locales: ['English']
+    locales: ['English'],
+    localeCodes: ['en-US']
   },
   {
     name: 'coursea-2019',
     year: '2019',
     title: '2019',
     isStable: false,
-    locales: ['English']
+    locales: ['English'],
+    localeCodes: ['en-US']
   }
 ];
 
@@ -29,7 +32,7 @@ describe('AssignmentVersionSelector', () => {
   describe('setRecommendedAndSelectedVersions', () => {
     it('sets latest stable version supported in locale to isRecommended if locale provided', () => {
       const versions = JSON.parse(JSON.stringify(fakeVersions));
-      const response = setRecommendedAndSelectedVersions(versions, 'Spanish');
+      const response = setRecommendedAndSelectedVersions(versions, 'es-MX');
       const recommendedVersion = response.find(v => v.isRecommended);
       const selectedVersion = response.find(v => v.isSelected);
 

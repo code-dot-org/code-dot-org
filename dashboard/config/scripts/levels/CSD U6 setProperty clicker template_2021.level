@@ -1,16 +1,12 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2020-12-04T21:55:48.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "// Move the smiley when it is clicked\r\nonEvent(\"smiley\", \"click\", function(event) {\r\n  \r\n});",
+    "start_blocks": "// Move the smiley when it is clicked\r\nonEvent(\"smiley\", \"click\", function() {\r\n  \r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -48,11 +44,25 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20380,
     "name_suffix": "_2021",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "validation_enabled": "false",
+    "text_mode_at_start": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "ai_enabled": "false"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2020-12-04T21:55:48.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-06 21:23:55 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-21 19:05:56 +0000\",\"changed\":[\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-06 21:23:55 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-21 19:05:56 +0000\",\"changed\":[\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2021-08-25 16:23:23 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

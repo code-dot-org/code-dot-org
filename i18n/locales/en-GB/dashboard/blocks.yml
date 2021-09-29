@@ -60,6 +60,14 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': visible
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': visible
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -103,6 +111,11 @@ en-GB:
           KEY:
             '"space"': space
             '"x"': x
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_digital/jump_7.mp3'": jump
       gamelab_randColor:
         text: random colour
       gamelab_randomColor:
@@ -153,15 +166,24 @@ en-GB:
             '"a"': A
             '"s"': S
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': 'yes'
+            '"no"': 'no'
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": color
+      aalab_layoutSprites:
+        options:
+          FORMAT:
             '"random"': random
       binary_whenKey:
         options:

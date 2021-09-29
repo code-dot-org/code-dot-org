@@ -316,5 +316,3 @@ cs:
       timeforcs_demo_conditionals:
         title: Podmínky
         desc: Aby se žáci naučili, co jsou podmíněné příkazy, hrají karetní hru a vytváří si pravidla jako "Když si vytáhnu červenou kartu, dostanu bod" a "Vytáhnu-li si černou kartu, ty dostaneš bod."
-      TheRightApp_2019:
-        desc: "* Každý používá počítače, hlavně chytré telefony. \\r\n* Aplikace pro chytré telefony, neboli \"appky\", pomáhají lidem dělat věci jako povídat si s přáteli, poslouchat hudbu, nakupovat, nebo jen procházet web.\\r\n* Je důležité, aby programátoři rozuměli potřebám ostatních a navrhovali aplikace s ohledem na ně!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

@@ -14,7 +14,7 @@ title: Blurbs and useful stats
 
 ## Folosiți acest scurt rezumat în buletinele de știri
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### Adu stiinta compitarelor la scoala ta. Incepe cu Ora de Cod!
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Dar mai puţin de jumătate din toate şcolile predau astazi stiinta calculatoarelor! Vestea bună e că suntem pe cale să schimbăm acest lucru. Dacă ați auzit de Ora de Programare anul trecut, probabil știți că a făcut istorie. 100 de milioane de studenţi au descoperit cât de accesibila şi distractiva poate fi stiinta computerului si programarea doar prin incercarea unei Ore de Programare.
 
@@ -46,7 +46,7 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 <a id="infographics"></a>
 
-## Infographics
+## Infografice
 
 {{ stats_carousel }}
 

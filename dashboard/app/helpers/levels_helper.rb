@@ -25,12 +25,12 @@ module LevelsHelper
       if script_level.lesson.numbered_lesson?
         puzzle_page_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       else
-        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
+        puzzle_page_script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       end
     elsif params[:sublevel_position]
       sublevel_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
     elsif !script_level.lesson.numbered_lesson?
-      script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
+      script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
       query_params = params.merge(level_name: script_level.level.name)
       script_lesson_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
@@ -85,19 +85,20 @@ module LevelsHelper
   # If given a user, find the channel associated with the given level/user.
   # Otherwise, gets the storage_id associated with the (potentially signed out)
   # current user, and either finds or creates a channel for the level
-  def get_channel_for(level, user = nil)
+  def get_channel_for(level, script_id = nil, user = nil)
     if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
       user_storage_id = storage_id_for_user_id(user.id)
-      channel_token = ChannelToken.find_channel_token(level, user_storage_id)
+      channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
     else
       user_storage_id = get_storage_id
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
         request.ip,
         user_storage_id,
+        script_id,
         {
           hidden: true,
         }
@@ -105,6 +106,21 @@ module LevelsHelper
     end
 
     channel_token&.channel
+  end
+
+  # If given a level, script and a user, returns whether the level
+  # has been started by the user. A channel-backed level is considered started when a
+  # channel is created for the level, which happens when the user first visits the level page.
+  # Other levels are considered started when progress has been saved for the level (for example
+  # clicking the run button saves progress).
+  def level_started?(level, script, user)
+    return false unless user.present?
+
+    if level.channel_backed?
+      return get_channel_for(level, script.id, user).present?
+    else
+      user.last_attempt(level, script).present?
+    end
   end
 
   def select_and_track_autoplay_video
@@ -161,13 +177,20 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    if @level.channel_backed? && params[:action] != 'edit_blocks'
+    if (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
       view_options(
-        channel: get_channel_for(@level, @user),
+        channel: get_channel_for(@level, @script&.id, @user),
         server_project_level_id: @level.project_template_level.try(:id),
       )
       # readonly if viewing another user's channel
       readonly_view_options if @user
+    end
+
+    # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
+    if @level.is_a?(Javalab) && (@user || current_user)
+      user_id = @user&.id || current_user&.id
+      backpack = Backpack.find_by_user_id(user_id)
+      view_options(backpack_channel: backpack&.channel)
     end
 
     # Always pass user age limit
@@ -180,7 +203,7 @@ module LevelsHelper
       view_options(
         lesson_position: @script_level.lesson.absolute_position,
         level_position: @script_level.position,
-        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @stage)
+        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @lesson)
       )
     end
 
@@ -225,14 +248,20 @@ module LevelsHelper
     end
 
     if pairing_check_user
-      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
-      if recent_driver && !recent_user.is_a?(DeletedUser)
-        level_view_options(@level.id, pairing_driver: recent_driver)
-        if recent_attempt
-          level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+      user_level = UserLevel.find_by(user: pairing_check_user, script: @script, level: @level)
+      is_navigator = !user_level.nil? && user_level.navigator?
+      if is_navigator
+        driver = user_level.driver
+        driver_level_source_id = user_level.driver_level_source_id
+      end
+
+      level_view_options(@level.id, is_navigator: is_navigator)
+      if driver
+        level_view_options(@level.id, pairing_driver: driver.name)
+        if driver_level_source_id
+          level_view_options(@level.id, pairing_attempt: edit_level_source_path(driver_level_source_id))
         elsif @level.channel_backed?
-          recent_channel = get_channel_for(@level, recent_user) if recent_user
-          level_view_options(@level.id, pairing_channel_id: recent_channel) if recent_channel
+          level_view_options(@level.id, pairing_channel_id: get_channel_for(@level, @script&.id, driver))
         end
       end
     end
@@ -253,10 +282,11 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
-    if @script_level && @level.can_have_feedback?
+    if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
       @app_options[:serverScriptId] = @script.id
       @app_options[:serverScriptLevelId] = @script_level.id
       @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
+      @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
     end
 
     # Blockly caches level properties, whereas this field depends on the user
@@ -278,6 +308,10 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
+
+      if (@user || current_user) && @script
+        @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
+      end
     end
 
     if current_user
@@ -295,7 +329,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
-      @app_options[:usingDarkModePref] = !!current_user.using_dark_mode
+      @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
@@ -323,6 +357,7 @@ module LevelsHelper
         use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
+        use_javalab: use_javalab,
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,
@@ -366,7 +401,7 @@ module LevelsHelper
   def set_puzzle_position_options(level_options)
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
+    level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
   end
 
   # Options hash for non-blockly puzzle apps
@@ -496,7 +531,7 @@ module LevelsHelper
     # ScriptLevel-dependent option
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
+    level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
     level_options['final_level'] = script_level.final_level? if script_level
 
     # Edit blocks-dependent options
@@ -701,10 +736,10 @@ module LevelsHelper
         else
           data_t_suffix 'script.name', @script_level.script.name, 'title'
         end
-      stage = @script_level.name
+      lesson = @script_level.name
       position = @script_level.position
       if @script_level.script.lessons.many?
-        "#{script}: #{stage} ##{position}"
+        "#{script}: #{lesson} ##{position}"
       elsif @script_level.position != 1
         "#{script} ##{position}"
       else
@@ -775,7 +810,7 @@ module LevelsHelper
   def firebase_shared_auth_token
     return nil unless CDO.firebase_shared_secret
 
-    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
     payload = {
       uid: user_or_session_id,
       is_dashboard_user: !!current_user,
@@ -801,7 +836,7 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
-    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
     payload = {
       uid: user_or_session_id,
       is_dashboard_user: !!current_user,

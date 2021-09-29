@@ -8,7 +8,7 @@ title: Sebarkan beritanya
 
 ## 1. Sebarkan berita
 
-Tell your friends about the **#HourOfCode**!
+Beri tahu teman Anda tentang ** #HourOfCode </ strong>!</p> 
 
 {{ promote/share_buttons }}
 

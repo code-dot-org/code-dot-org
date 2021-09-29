@@ -3,6 +3,7 @@ ne:
   data:
     parameter_names:
       actor: नायक
+      color: color
       counter: counter
       height: height
       honey: honey

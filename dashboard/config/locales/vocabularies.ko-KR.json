@@ -1,0 +1,113 @@
+{
+  "ko-KR": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "행동"
+        },
+        "variable/coursef/2021": {
+          "word": "변수"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "머신 러닝"
+        },
+        "internet/coursef/2021": {
+          "word": "인터넷"
+        },
+        "packets/coursef/2021": {
+          "word": "패킷"
+        },
+        "define/coursef/2021": {
+          "word": "함수 정의"
+        },
+        "debugging/courseb/2021": {
+          "word": "디버깅"
+        },
+        "drop/courseb/2021": {
+          "word": "드롭"
+        },
+        "programming/courseb/2021": {
+          "word": "프로그래밍"
+        },
+        "debugging/coursea/2021": {
+          "word": "디버깅"
+        },
+        "drop/coursea/2021": {
+          "word": "드롭"
+        },
+        "programming/coursea/2021": {
+          "word": "프로그래밍"
+        },
+        "debugging/coursec/2021": {
+          "word": "디버깅"
+        },
+        "sequencing/coursec/2021": {
+          "word": "시퀸싱"
+        },
+        "programming/coursec/2021": {
+          "word": "프로그래밍"
+        },
+        "binary/coursec/2021": {
+          "word": "2진"
+        },
+        "debugging/coursed/2021": {
+          "word": "디버깅"
+        },
+        "programming/coursed/2021": {
+          "word": "프로그래밍"
+        },
+        "conditionals/coursed/2021": {
+          "word": "조건"
+        },
+        "debugging/express/2021": {
+          "word": "디버깅"
+        },
+        "sequencing/express/2021": {
+          "word": "시퀸싱"
+        },
+        "programming/express/2021": {
+          "word": "프로그래밍"
+        },
+        "behavior/express/2021": {
+          "word": "행동"
+        },
+        "conditionals/express/2021": {
+          "word": "조건"
+        },
+        "function/express/2021": {
+          "word": "함수"
+        },
+        "variable/express/2021": {
+          "word": "변수"
+        },
+        "define/express/2021": {
+          "word": "함수 정의"
+        },
+        "drop/pre-express/2021": {
+          "word": "드롭"
+        },
+        "debugging/pre-express/2021": {
+          "word": "디버깅"
+        },
+        "programming/pre-express/2021": {
+          "word": "프로그래밍"
+        },
+        "behavior/coursee/2021": {
+          "word": "행동"
+        },
+        "copyright/coursee/2021": {
+          "word": "저작권"
+        },
+        "function/coursee/2021": {
+          "word": "함수"
+        },
+        "conditionals/coursee/2021": {
+          "word": "조건"
+        },
+        "define/coursee/2021": {
+          "word": "함수 정의"
+        }
+      }
+    }
+  }
+}

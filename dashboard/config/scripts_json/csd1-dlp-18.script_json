@@ -2,16 +2,17 @@
   "script": {
     "name": "csd1-dlp-18",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "professional_learning_course": "CS Discoveries Facilitator in Training 2018-2019",
       "peer_reviews_to_complete": 6,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "deprecated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:24 UTC",
+    "serialized_at": "2021-09-09 20:45:12 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "csd1-dlp-18"
     }
@@ -92,7 +93,6 @@
         ],
         "progression": "Background"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -117,7 +117,6 @@
         ],
         "progression": "Deadlines and Payment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -142,7 +141,6 @@
         ],
         "progression": "Resource Recommendations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -167,7 +165,6 @@
         ],
         "progression": "Guidelines For Peer Review"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -191,7 +188,6 @@
           "csd1dlp-q1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -215,7 +211,6 @@
           "csd1dlp-q2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -239,7 +234,6 @@
           "csd1dlp-q3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

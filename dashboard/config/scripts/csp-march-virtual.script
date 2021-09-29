@@ -2,6 +2,7 @@ professional_learning_course 'CS Principles Curriculum Training for Facilitators
 peer_reviews_to_complete 4
 login_required true
 student_detail_progress_view true
+published_state 'beta'
 
 lesson 'Saturday Session Resources', display_name: 'Saturday Session Resources', has_lesson_plan: false
 level 'Mar20 Prework_0'

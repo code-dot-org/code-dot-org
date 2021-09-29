@@ -21,8 +21,6 @@ tr:
     mailer:
       confirmation_instructions:
         subject: Code.org onay yönergeleri
-      reset_password_instructions:
-        subject: Code.org parola sıfırlama yönergeleri
       unlock_instructions:
         subject: Talimatların kilidini aç
     omniauth_callbacks:

@@ -254,15 +254,6 @@ en:
       courseF_unplugged_songwritingParameters:
         title: Songwriting With Parameters
         desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r\n\r\n### How it Works\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r\n\r\n### How it Works\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess as follows:\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
         title: My Robotic Friends
         desc: Learn to program by writing code for your friends!
@@ -419,9 +410,6 @@ en:
       PaperPlanes_2019:
         title: 'Real-life Algorithms: Paper Planes'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
-      test-uid-passthrough:
-        title: ''
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r\n\r\n## How it Works\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing that particular student to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments.\r\n<br><br><br><br>\r\n\r\n<span style=\"display:none\">submitButton next-stage</span>\r\n\r\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\"> Click here to play Swipe Right for CS!</a>\r\n\r\n"
       PlantASeed_2019:
         title: 'Real-life Algorithms: Plant a Seed'
         desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
@@ -461,6 +449,6 @@ en:
       timeforcs_demo_conditionals:
         title: Conditionals
         desc: To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."
-      TheRightApp_2019:
-        title: The Right App
-        desc: "* Everyone uses computers these days, especially smartphones. \r\n* Smartphone applications, or \"apps\", help people do things like talk to friends, listen to music, shop, or just explore the web.\r\n* It is important for programmers to understand others' needs and design apps with them in mind!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      SP-VPL-CSD-21-CourseNavigation:
+        title: 
+        desc: 

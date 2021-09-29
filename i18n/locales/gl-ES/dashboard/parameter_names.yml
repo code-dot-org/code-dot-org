@@ -2,6 +2,7 @@ gl:
   data:
     parameter_names:
       actor: actor
+      color: cor
       counter: contador
       height: altura
       honey: mel

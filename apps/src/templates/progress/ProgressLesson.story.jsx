@@ -25,7 +25,8 @@ const defaultProps = {
   lessonIsVisible: () => true,
   lessonIsLockedForUser: () => false,
   lessonIsLockedForAllStudents: () => false,
-  lockableAuthorized: true
+  lockableAuthorized: true,
+  lockableAuthorizedLoaded: true
 };
 
 export default storybook => {
@@ -55,7 +56,7 @@ export default storybook => {
           <ProgressLesson
             {...defaultProps}
             viewAs={ViewType.Student}
-            currentStageId={-1}
+            currentLessonId={-1}
             lesson={{
               id: -1,
               isFocusArea: false,

@@ -1,0 +1,507 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "name": "preamble_page",
+      "elements": [
+
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "pd_survey_preamble"
+        }
+      ]
+    },
+    {
+      "name": "page_teaching_context",
+      "elements": [
+        {
+          "type": "html",
+          "name": "question1",
+          "html": "<h2>Teaching Context</h2>\nFirst, we have some questions about the context in which you are teaching {workshop_course}. Your responses help us understand issues that may be unique to your local context and allow us to develop programming to provide you with support."
+        },
+        {
+          "type": "radiogroup",
+          "name": "required_course_status",
+          "title": "Is {workshop_course} a required or elective course at your school?",
+          "choices": [
+            {
+              "value": "required",
+              "text": "Required"
+            },
+            {
+              "value": "elective",
+              "text": "Elective"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "course_length_weeks",
+          "title": " For a typical section of {workshop_course} that you will teach, approximately how many WEEKS will the class run? ",
+          "choices": [
+            {
+              "value": "5_fewer",
+              "text": "5 or fewer"
+            },
+            {
+              "value": "6_10",
+              "text": "6 - 10"
+            },
+            {
+              "value": "11_15",
+              "text": "11 - 15"
+            },
+            {
+              "value": "16_20",
+              "text": "16 - 20"
+            },
+            {
+              "value": "21_30",
+              "text": "21 - 30"
+            },
+            {
+              "value": "30_more",
+              "text": "30 or more (full year)"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "section_time_minutes",
+          "title": "At your school, on average, how many MINUTES PER WEEK will a typical section of {workshop_course} meet?",
+          "choices": [
+            {
+              "value": "50_less",
+              "text": "50 or less"
+            },
+            {
+              "value": "51_100",
+              "text": "51 - 100"
+            },
+            {
+              "value": "101_150",
+              "text": "101 - 150"
+            },
+            {
+              "value": "151_200",
+              "text": "151 - 200"
+            },
+            {
+              "value": "201_250",
+              "text": "201 - 250"
+            },
+            {
+              "value": "251_300",
+              "text": "251 - 300"
+            },
+            {
+              "value": "301_more",
+              "text": "301 or more"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "csp_panel_ap",
+          "elements": [
+            {
+              "type": "html",
+              "name": "question6",
+              "visible": false,
+              "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS PRINCIPLES&lt;&lt;</span></p>"
+            },
+            {
+              "type": "checkbox",
+              "name": "teaching_csp_as",
+              "title": " I plan to teach {workshop_course} as...",
+              "description": "Check all that apply.",
+              "hasOther": true,
+              "otherPlaceHolder": "Other",
+              "choices": [
+                {
+                  "value": "AP",
+                  "text": "An AP Course"
+                },
+                {
+                  "value": "honors",
+                  "text": "An honors course (non-AP) "
+                },
+                {
+                  "value": "regular",
+                  "text": "A regular course (non-AP) "
+                }
+              ],
+              "otherText": "Other"
+            },
+            {
+              "type": "radiogroup",
+              "name": "taught_ap_before",
+              "title": "Have you taught an AP class before?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "other_aps_taught",
+              "visibleIf": "{taught_ap_before} = 'yes'",
+              "title": "What other AP course(s) have you taught? ",
+              "description": "Check all that apply.",
+              "choices": [
+                {
+                  "value": "ap_csa",
+                  "text": "AP Computer Science A"
+                },
+                {
+                  "value": "ap_calc",
+                  "text": "AP Calculus (AB or BC)"
+                },
+                {
+                  "value": "ap_stats",
+                  "text": "AP Statistics"
+                },
+                {
+                  "value": "ap_sciences",
+                  "text": "AP Sciences"
+                },
+                {
+                  "value": "ap_english",
+                  "text": "AP English"
+                },
+                {
+                  "value": "ap_world_lang",
+                  "text": "AP World Languages"
+                },
+                {
+                  "value": "ap_hist_and_soc_sci",
+                  "text": "AP History and Social Sciences"
+                },
+                {
+                  "value": "ap_arts",
+                  "text": "AP Arts"
+                },
+                {
+                  "value": "ap_capstone",
+                  "text": "AP Capstone"
+                }
+              ],
+              "colCount": 2
+            },
+            {
+              "type": "checkbox",
+              "name": "grade_levels_csp",
+              "title": "I plan to teach CS Principles to students in the following grade levels. (check all that apply)",
+              "choices": [
+                {
+                  "value": "8",
+                  "text": "8th"
+                },
+                {
+                  "value": "9",
+                  "text": "9th"
+                },
+                {
+                  "value": "10",
+                  "text": "10th"
+                },
+                {
+                  "value": "11",
+                  "text": "11th"
+                },
+                {
+                  "value": "12",
+                  "text": "12th"
+                },
+                {
+                  "value": "not_sure",
+                  "text": "not sure"
+                }
+              ]
+            }
+          ],
+          "visibleIf": "{workshop_course} = 'CS Principles'"
+        },
+        {
+          "type": "panel",
+          "name": "csd_panel_teaching_context",
+          "elements": [
+            {
+              "type": "html",
+              "name": "question7",
+              "visible": false,
+              "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS DISCOVERIES&lt;&lt;</span></p>"
+            },
+            {
+              "type": "checkbox",
+              "name": "grade_levels_csd",
+              "title": "I plan to teach CS Discoveries to students in the following grade levels. (check all that apply)",
+              "choices": [
+                {
+                  "value": "4",
+                  "text": "4th"
+                },
+                {
+                  "value": "5",
+                  "text": "5th"
+                },
+                {
+                  "value": "6",
+                  "text": "6th"
+                },
+                {
+                  "value": "7",
+                  "text": "7th"
+                },
+                {
+                  "value": "8",
+                  "text": "8th"
+                },
+                {
+                  "value": "9",
+                  "text": "9th"
+                },
+                {
+                  "value": "10",
+                  "text": "10th"
+                },
+                {
+                  "value": "11",
+                  "text": "11th"
+                },
+                {
+                  "value": "12",
+                  "text": "12th"
+                },
+                {
+                  "value": "not_sure",
+                  "text": "not sure"
+                }
+              ]
+            }
+          ],
+          "visibleIf": "{workshop_course} = 'CS Discoveries'"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
+          "name": "years_teaching"
+        },
+
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
+          "name": "years_teaching_cs"
+        },
+        {
+          "type": "radiogroup",
+          "name": "total_pd_time",
+          "title": "What is the TOTAL amount of time you have spent on professional development related to computer science or computer science teaching in the last 2 years? (reference: a typical weeklong summer workshop is about 35 hours) ",
+          "choices": [
+            {
+              "value": "none",
+              "text": "None"
+            },
+            {
+              "value": "less_6",
+              "text": "Less than 6 hours"
+            },
+            {
+              "value": "6_15",
+              "text": "6-15 hours"
+            },
+            {
+              "value": "16_35",
+              "text": "16-35 hours"
+            },
+            {
+              "value": "36_80",
+              "text": "36-80 hours"
+            },
+            {
+              "value": "more_80",
+              "text": "More than 80 hours"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page_teaching_computer_science",
+      "elements": [
+        {
+          "type": "html",
+          "name": "question5",
+          "html": "<h2>Teaching Computer Science</h2>"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "cs_community"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "true_of_me_now_scale_expl"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "codedotorg_teaching_strategies_csd"
+
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "codedotorg_teaching_strategies_csp"
+        }
+      ]
+    },
+
+
+
+
+    {
+      "name": "page_teaching_philosophy",
+      "elements": [
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "pairs_of_statements_instructions"
+        },
+
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "lead_learner_panel"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "recruit_responsibility_panel"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "prioritize_time_panel"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "instructional_focus_panel"
+        }
+      ]
+    },
+    {
+      "name": "page_wrap_up_submit",
+      "elements": [
+        {
+          "type": "html",
+          "name": "question2",
+          "html": "<h2>Wrap Up and Submit</h2>\n<p>As a reminder this survey is <strong>confidential</strong>. We collect this information for program improvement. None of your responses will ever be tied back to you personally.</p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "highest_level_cs_education",
+          "title": "Which most accurately describes the highest level of formal computer science education you have completed? ",
+          "hasOther": true,
+          "otherPlaceHolder": "Other CS Education",
+          "choices": [
+            {
+              "value": "little_no",
+              "text": "At this time, I have little to no formal education in computer science."
+            },
+            {
+              "value": "online_courses",
+              "text": "I have taken one or more courses online for credit."
+            },
+            {
+              "value": "college_courses",
+              "text": "I took one or more courses in college."
+            },
+            {
+              "value": "earning_degree",
+              "text": "I am currently in the process of earning a computer science degree."
+            },
+            {
+              "value": "bachelors_degree",
+              "text": "I have a Bachelor's degree in computer science."
+            },
+            {
+              "value": "masters_degree",
+              "text": "I have a Master's degree in computer science."
+            },
+            {
+              "value": "phd",
+              "text": "I have a PhD in computer science."
+            }
+          ],
+          "otherText": "Other CS Education"
+        },
+        {
+          "type": "radiogroup",
+          "name": "assigned_or_chose_to_teach",
+          "title": "Which of the following most closely applies to you about teaching {workshop_course} next school year: ",
+          "choices": [
+            {
+              "value": "assigned",
+              "text": "I was assigned to teach the course."
+            },
+            {
+              "value": "chose",
+              "text": "I chose to teach the course."
+            },
+            {
+              "value": "not_planning",
+              "text": "I am not currently planning to teach the course next year."
+            }
+          ]
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
+          "name": "birth_year"
+        },
+
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
+          "name": "gender_identity"
+        },
+
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
+          "name": "racial_ethnic_identity"
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h2>Thank you!</h2>\n<p>Thank you so much for taking the time to complete this survey. Your input and feedback is vital for our programs.</p>\n"
+        }
+      ]
+    }
+  ]
+}

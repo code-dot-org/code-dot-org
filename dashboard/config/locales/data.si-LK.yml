@@ -445,6 +445,8 @@ si:
         CSF_loops_AB: ලූපයන්
         csd_pair_programming: යුගල වශයෙන් ක්‍රමලේඛනය
         csd_applab_parameters: පරාමිතියන් සහිත ශ්‍රිත
+        playlab_2021: ක්‍රීඩා පරීක්ෂණාගාරය වෙත හඳුන්වාදීම
+        playlab_2021_reader: ක්‍රීඩා පරීක්ෂණාගාරය වෙත හඳුන්වාදීම
     callout:
       text:
         drag_blocks: '"move" කොටසක් අරගෙන අනික් කොටසේ යටට හයි කරන්න'

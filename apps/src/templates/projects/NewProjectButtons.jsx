@@ -142,6 +142,7 @@ class NewProjectButtons extends React.Component {
                     <img
                       style={thumbnailStyle}
                       src={PROJECT_INFO[projectType].thumbnail}
+                      alt={PROJECT_INFO[projectType].label}
                     />
                     <div style={styles.label}>
                       {PROJECT_INFO[projectType].label}

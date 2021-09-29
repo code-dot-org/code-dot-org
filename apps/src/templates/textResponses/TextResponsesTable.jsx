@@ -13,7 +13,7 @@ import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
   name: TABLE_WIDTH / 5,
-  stage: TABLE_WIDTH / 5,
+  lesson: TABLE_WIDTH / 5,
   puzzle: TABLE_WIDTH / 6,
   question: TABLE_WIDTH / 5,
   response: TABLE_WIDTH / 4
@@ -106,13 +106,13 @@ class TextResponsesTable extends Component {
         }
       },
       {
-        property: 'stage',
+        property: 'lesson',
         header: {
-          label: i18n.stage(),
+          label: i18n.lesson(),
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.stage}
+              ...{width: TABLE_COLUMN_WIDTHS.lesson}
             }
           },
           transforms: [sortable]

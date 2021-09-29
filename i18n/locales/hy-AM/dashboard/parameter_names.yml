@@ -2,6 +2,7 @@ hy:
   data:
     parameter_names:
       actor: դերասան
+      color: գույնը
       counter: counter
       height: բարձրություն
       honey: մեղր

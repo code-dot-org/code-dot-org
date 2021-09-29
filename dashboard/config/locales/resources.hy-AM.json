@@ -1,0 +1,206 @@
+{
+  "hy-AM": {
+    "data": {
+      "resources": {
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Համացանց"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Implementation Guide"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Տեղափոխել այն, տեղափոխել այն"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Տեղափոխել այն, տեղափոխել այն"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Տեղափոխել այն, տեղափոխել այն"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Տեղափոխիր առարկան"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Զույգ Ծրագրավորում"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Getting Loopy"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Getting Loopy"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Getting Loopy"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Getting Loopy"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "The Big Event"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "The Big Event"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "The Big Event"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Implementation Guide"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Զույգ Ծրագրավորում"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Ուրախ Քարտեզներ"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "The Big Event"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "The Big Event"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "The Big Event"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Implementation Guide"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "My Robotic Friends"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "My Robotic Friends"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "My Robotic Friends"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "My Robotic Friends"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "My Robotic Friends"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Զույգ Ծրագրավորում"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "The Big Event"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "The Big Event"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "The Big Event"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binary Bracelets"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Binary Bracelets"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Binary Bracelets"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Binary Bracelets"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Binary Bracelets"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Implementation Guide"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Զույգ Ծրագրավորում"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Relay programming"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Relay programming"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Relay programming"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Relay programming"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Relay programming"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Relay programming"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Conditionals with Cards"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Conditionals with Cards"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Conditionals with Cards"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Conditionals with Cards"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Conditionals with Cards"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Implementation Guide"
+        },
+        "pair_programming/express/2021": {
+          "name": "Զույգ Ծրագրավորում"
+        },
+        "variables_video/express/2021": {
+          "name": "փոփոխականների"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Զույգ Ծրագրավորում"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Implementation Guide"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+name 'CSA U2L2-L4'
+title 'Check for Understanding'
+
+wrong 'int'
+wrong 'double'
+right 'String'
+wrong 'Painter'
+
+markdown <<MARKDOWN
+Consider the following code. What is the type of the variable `color`?
+
+```
+1  String location = "South";
+2  int initialX = 3;
+3  int initialY = 4;
+4  int paintLevel = 200;
+5  String color = "purple";
+6  Painter mae = new Painter(initialX, initialY, location, paintLevel);
+7  mae.paint(color);
+```
+MARKDOWN

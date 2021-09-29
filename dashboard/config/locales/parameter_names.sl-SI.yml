@@ -3,6 +3,7 @@ sl:
   data:
     parameter_names:
       actor: igralec
+      color: barva
       counter: števec
       height: višina
       honey: med

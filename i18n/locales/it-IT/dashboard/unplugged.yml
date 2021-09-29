@@ -219,10 +219,6 @@ it:
       courseF_unplugged_songwritingParameters:
         title: Composizione di Canzoni - Parametri
         desc: 'Una delle strutture più belle nell''informatica è la funzione.  Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all''interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all''interno di funzioni è un''utile pratica.'
-      swipeRightPassThrough:
-        title: Sessione degli Scenari di Reclutamento
-      swipeRightPassThrough-test123:
-        title: Sessione degli Scenari di Reclutamento
       courseB_unplugged_MRF_2018:
         title: I miei amici robotici
         desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
@@ -378,6 +374,3 @@ it:
       timeforcs_demo_conditionals:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
-      TheRightApp_2019:
-        title: L'App Giusta
-        desc: "* Tutti usano i computer oggigiorno, specialmente gli smartphone. \\r\n* Le applicazioni per smartphone, o \"app\", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.\\r\n* È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

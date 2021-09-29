@@ -146,7 +146,7 @@ class ScriptLevel < ApplicationRecord
 
   def self.remove_variants(raw_script_level)
     first_active_level = raw_script_level[:levels].find do |raw_level|
-      variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name])
+      variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name].to_sym)
       !(variant && variant[:active] == false)
     end
     raw_script_level[:levels] = [first_active_level]
@@ -209,7 +209,7 @@ class ScriptLevel < ApplicationRecord
 
   def has_another_level_to_go_to?
     if script.professional_learning_course?
-      !end_of_stage?
+      !end_of_lesson?
     else
       next_progression_level
     end
@@ -320,7 +320,7 @@ class ScriptLevel < ApplicationRecord
     script.script_levels[i - 1]
   end
 
-  def end_of_stage?
+  def end_of_lesson?
     lesson.script_levels.to_a.last == self
   end
 
@@ -370,16 +370,9 @@ class ScriptLevel < ApplicationRecord
   end
 
   def summarize(include_prev_next=true, for_edit: false)
-    kind =
-      if level.unplugged?
-        LEVEL_KIND.unplugged
-      elsif assessment
-        LEVEL_KIND.assessment
-      else
-        LEVEL_KIND.puzzle
-      end
-
     ids = level_ids
+    active_id = oldest_active_level.id
+    inactive_ids = ids - [active_id]
 
     levels.each do |l|
       ids.concat(l.contained_levels.map(&:id))
@@ -387,7 +380,8 @@ class ScriptLevel < ApplicationRecord
 
     summary = {
       ids: ids.map(&:to_s),
-      activeId: oldest_active_level.id.to_s,
+      activeId: active_id.to_s,
+      inactiveIds: inactive_ids.map(&:to_s),
       position: position,
       kind: kind,
       icon: level.icon,
@@ -435,7 +429,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       # Add a next pointer if it's not the obvious (level+1)
-      if end_of_stage?
+      if end_of_lesson?
         if next_level
           summary[:next] = [next_level.lesson.absolute_position, next_level.position]
         else
@@ -518,12 +512,14 @@ class ScriptLevel < ApplicationRecord
     lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
     if lesson_extra_user_level
       {
-        id: lesson_extra_user_level.id.to_s,
+        id: bonus_level_ids.first.to_s,
         bonus: true,
-        user_id: student.id,
+        userId: student.id,
+        passed: true,
         status: SharedConstants::LEVEL_STATUS.perfect,
-        passed: true
-      }.merge!(lesson_extra_user_level.attributes)
+        userLevelId: lesson_extra_user_level.id,
+        updatedAt: lesson_extra_user_level.updated_at
+      }
     elsif bonus_level_ids.count == 0
       {
         # Some lessons have a lesson extras option without any bonus levels. In
@@ -531,7 +527,7 @@ class ScriptLevel < ApplicationRecord
         # be displayed as "perfect." Example level: /s/express-2020/lessons/28/extras
         id: '-1',
         bonus: true,
-        user_id: student.id,
+        userId: student.id,
         passed: true,
         status: SharedConstants::LEVEL_STATUS.perfect
       }
@@ -539,58 +535,62 @@ class ScriptLevel < ApplicationRecord
       {
         id: bonus_level_ids.first.to_s,
         bonus: true,
-        user_id: student.id,
+        userId: student.id,
         passed: false,
         status: SharedConstants::LEVEL_STATUS.not_tried
       }
     end
   end
 
+  def contained_levels
+    levels.map(&:contained_levels).flatten
+  end
+
   # Bring together all the information needed to show the teacher panel on a level
-  def summarize_for_teacher_panel(student)
-    contained_levels = levels.map(&:contained_levels).flatten
-    contained = contained_levels.any?
+  def summarize_for_teacher_panel(student, teacher = nil)
+    level_for_progress = oldest_active_level.get_level_for_progress(student, script)
+    user_level = student.last_attempt_for_any([level_for_progress], script_id: script_id)
 
-    levels = if bubble_choice?
-               [level.best_result_sublevel(student, script) || level]
-             elsif contained
-               contained_levels
-             else
-               [level]
-             end
-
-    user_level = student.last_attempt_for_any(levels, script_id: script_id)
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
+    contained = contained_levels.any?
 
-    if user_level
-      paired = user_level.paired?
+    if user_level && user_level.paired?
+      is_driver = user_level.driver?
+      is_navigator = user_level.navigator?
+      driver = user_level.driver&.name
+      navigators = user_level.navigators_names
+    end
 
-      driver_info = UserLevel.most_recent_driver(script, levels, student)
-      driver = driver_info[0] if driver_info
-
-      navigator_info = UserLevel.most_recent_navigator(script, levels, student)
-      navigator = navigator_info[0] if navigator_info
+    if teacher.present?
+      # feedback for contained level is stored with the level ID not the contained level ID
+      level_id_for_feedback = contained ? level.id : level_for_progress.id
+      feedback = TeacherFeedback.get_latest_feedback_given(student.id, level_id_for_feedback, teacher.id, script_id)
     end
 
     teacher_panel_summary = {
       id: level.id.to_s,
       contained: contained,
       submitLevel: level.properties['submittable'] == 'true',
-      paired: paired,
+      paired: is_driver || is_navigator || false,
+      isDriver: is_driver,
+      isNavigator: is_navigator,
       driver: driver,
-      navigator: navigator,
+      navigators: navigators,
       isConceptLevel: level.concept_level?,
-      user_id: student.id,
+      userId: student.id,
       passed: passed,
       status: status,
       levelNumber: position,
       assessment: assessment,
-      bonus: bonus
+      bonus: bonus,
+      teacherFeedbackReviewState: feedback&.review_state,
+      kind: kind
     }
+
     if user_level
-      # note: level.id gets replaced with user_level.id here
-      teacher_panel_summary.merge!(user_level.attributes)
+      teacher_panel_summary[:userLevelId] = user_level.id
+      teacher_panel_summary[:updatedAt] = user_level.updated_at
     end
 
     teacher_panel_summary
@@ -704,5 +704,36 @@ class ScriptLevel < ApplicationRecord
       save! if changed?
     end
     self.levels = levels
+  end
+
+  def add_variant(new_level)
+    raise "can only be used on migrated scripts" unless script.is_migrated
+    raise "expected 1 existing level but found: #{levels.map(&:key)}" unless levels.count == 1
+    raise "expected empty variants property but found #{variants}" if variants
+    raise "cannot add variant to non-custom level" unless levels.first.level_num == 'custom'
+    existing_level = levels.first
+
+    levels << new_level
+    update!(
+      level_keys: levels.map(&:key),
+      variants: {
+        existing_level.name => {"active" => false}
+      }
+    )
+    if Rails.application.config.levelbuilder_mode
+      script.write_script_json
+    end
+  end
+
+  private
+
+  def kind
+    if level.unplugged?
+      LEVEL_KIND.unplugged
+    elsif assessment
+      LEVEL_KIND.assessment
+    else
+      LEVEL_KIND.puzzle
+    end
   end
 end

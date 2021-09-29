@@ -395,10 +395,38 @@ sk:
         text: Stredná časť je panel nástrojov a každý z týchto blokov je časťou kódu.
           Biely priestor napravo sa volá pracovný priestor a tu budeš vytvárať svoj
           program.
+      4:
+        text: Na začiatok budeš musieť spojiť tvoje bloky s oranžovým blokom "pri
+          spustení". Môžeš spojiť dokopy viacero blokov tým, že ich vytiahneš a keď
+          uvidíš žltú čiaru, potom sa do seba zacvaknú.
+      5:
+        text: V tejto prvej úlohe je našou postavičkou tučniak a urobíme to, aby povedal
+          "Ahoj!" tak, že vytiahneme von blok "povedz", spojíme ho s blokom "pri spustení"
+          a napíšeme do ňho "Ahoj." Pomocou blokov "posuň postavu" vpravo a vľavo
+          môžeme dosiahnuť, aby sa tučniak hýbal. Akonáhle budú bloky na mieste, stlač
+          tlačidlo "Spustiť", aby sa zobrazilo, čo sa ti podarilo naprogramovať.
+      6:
+        text: Začni a na konci budeš vedieť  vytvoriť svoju vlastnú hru s rôznymi
+          hráčmi, ktorí budú reagovať na podnety, môžu byť šťastní, alebo zosmutnieť,
+          získavať body, alebo hádzať ohnivé gule, či dokonca jeden druhého vymazať.
+          Je to všetko na tebe akú hru chceš vytvoriť.
     playlab_events:
+      1:
+        text: 'Teraz sa naučíme o niečom, čo programátori hier používajú každý deň.
+          Sú to Udalosti. Udalosť hovorí tvojmu programu, aby čakal na to, keď sa
+          niečo stane. A potom, keď sa to stane, program vykoná nejakú aktivitu. '
       2:
         text: Niektoré príklady udalostí čakajú na kliknutie myškou, na stlačenie
           tlačidla šípky, alebo na dotyk na dotykovú obrazovku.
+      3:
+        text: Tu urobíme, aby vesmírny robot Spacebot pozdravil pozemšťanov, keď na
+          ňho klikneme. Použijeme blok "po kliknutí na postavu" a pripojíme k nemu
+          blok "povedz". Keď hráč klikne na robota, vykoná sa všetko, čo je pripojené
+          k udalosti "po kliknutí na postavu". Čo hovorí tvoj mimozemšťan?
+      4:
+        text: Sú tam aj bloky "keď šípka". Ak k nim pripojíš bloky "posuň", môžeš
+          začať s pohybom postavičiek hore, dole, vľavo či vpravo. Krok po kroku sa
+          tvoja hra stáva viac interaktívnou.
     playlab_repeat_forever:
       1:
         text: Toto je blok "opakuj donekonečna". Čokoľvek vložíme do tohoto bloku,
@@ -452,6 +480,28 @@ sk:
       2:
         text: V tejto lekcii budeš ovládaný papierovým diaľkovým ovládačom. Je to
           niečo ako reálna-živá video hra.
+      3:
+        text: Udalosť je akcia, ktorá spôsobí, že sa niečo udeje. Je to ako keď klikneš
+          na tlačidlo myši a načíta sa webstránka. To je udalosť. Keď sa dotkneš obrazovky
+          na svojom tablete kvôli posúvaniu obrazu, to je tiež udalosť. Udalosti sú
+          skvelým spôsobom ako nechať užívateľa riadiť tvoj program, kedykoľvek to
+          potrebuje alebo chce.
+      4:
+        text: Často sa dejú veci, na ktoré všetci odpovedáme určitým spôsobom. Ak
+          sme hladní, ideme do chladničky. Ak počujeme, že prišiel poštár a vhodil
+          list do schránky, ideme si vybrať túto poštu. To sú rovnaké udalosti ako
+          stlačenie tlačidla alebo pohnutie joystickom. Udalosti, ktoré sú pre nás
+          spúšťačom pre vykonanie určitej aktivity.
+      5:
+        text: Vo videohrách sa nachádza udalosť nazývaná "Update" (obnov) a opakuje
+          sa 30 alebo 60 krát za sekundu. Pre programátorov videohier je možno dôležitejšia
+          ako udalosť gombíka či joysticku.
+    C1_building_foundation:
+      2:
+        text: Táto lekcia sa volá budovanie základov. V tejto lekcii budeme pracovať
+          na úlohe, ktorá má byť skutočne zložitá. Musíte prísť na to, ako postaviť
+          štruktúru vysokú aspoň ako jeden z týchto pohárov, a musí byť dosť silná
+          nato, aby udržala váhu knihy.
     C1_happy_maps_unplugged:
       1:
         text: Táto lekcia sa volá Veselé mapy. Dnes budeme pomáhať našej malej chlpatej
@@ -573,6 +623,11 @@ sk:
         text: Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a
           skontrolujem jeden rám a potom ho vrátim a túto činnosť opakujem viackrát.
           Toto je vlastne cyklus - vykonávanie rovnakej činnosti opakovane.
+    C2_playlab_createstory:
+      1:
+        text: Doteraz sa ti podarilo vytvoriť animáciu alebo príbeh, ktorý keď je
+          spustený, vykoná stále to isté. Teraz môžeš vytvoriť interaktívnu hru, ktorá
+          sa dá v skutočnosti aj hrať.
     C2_relay_programming:
       1:
         text: Dnes budeme programovať v štafete. Bude to o programovaní pod tlakom
@@ -649,6 +704,11 @@ sk:
           by sme použiť 5 blokov "posun sa dopredu", alebo môžeme počítaču povedať,
           nech sa raz posunie dopredu a prikázať mu to zopakovať 5 krát použitím jedného
           opakovacieho bloku.
+    C3_playlab_create_game:
+      1:
+        text: Doteraz sa ti podarilo vytvoriť animáciu alebo príbeh, ktorý keď je
+          spustený, vykoná stále to isté. Teraz môžeš vytvoriť interaktívnu hru, ktorá
+          sa dá v skutočnosti aj hrať.
     C4_conditionals:
       1:
         text: Máme nový blok, ktorý sa volá blok ak / inak. Je to podmienka rovnako
@@ -817,6 +877,15 @@ sk:
           hráč, tak tie bloky umiestnime do vnútra bloku "opakuj donekonečna". V nasledujúcej
           úlohe je našim cieľom, aby Anna neustále chodila hore a dole. Ak sa naučíš
           používať opakovacie príkazy, ušetrí ti pri tvorbe vlastnej hry kopec času.
+    unplug1:
+      3:
+        text: Keď som sa konečne naučil trochu programovať, tá biela plocha sa premenila
+          na množstvo dverí a po ich otvorení sa za nimi nachádzala, samozrejme, ďalšia
+          chodba s množstvom dverí. Programovanie je jednoduché a zábavné. Môžeš urobiť
+          čokoľvek, čo chce tvoja myseľ. Nakoniec otvoríš dostatok dverí, aby vošlo
+          svetlo. Pre mňa je hotový program ako stavba naplnená svetlom. Všetky kúty
+          sú osvetlené. Počet ľudí, ktorých môžeš ovplyvniť a komunikovať s nimi,
+          je niečo, čo svet predtým nevidel.
     unplug3:
       1:
         text: V programovaní na štvorčekový papier sa snažíme vysvetliť, ako programovanie
@@ -872,6 +941,10 @@ sk:
           (kučeravou) zátvorkou, nie bodko-čiarkou. Toto nám dáva priestor, aby sme
           dovnútra volžili ďalšie príkazy. Každý príkaz, ktorý vložíme dovnútra zátvoriek,
           sa spustí, keď hráč stlačí šípku hore.
+      9:
+        text: Teraz namiesto toho, aby sme  písali celý kód na ovládanie droida vopred,
+          môžeme nechať R2-D2 reagovať na stlačenie kláves, aby sa pohyoval po obrazovke.
+          Krok po kroku sa tvoja hra stáva viac interaktívnou.
     starwars_congrats:
       1:
         text: Ahoj, volám sa Alice. V Code.org vediem produktový a technický tím a
@@ -1087,6 +1160,13 @@ sk:
         text: Ak by si chcel vytvoriť svoju vlastnú hru, je to naozaj jednoduché.
           Potrebuješ poznať len zopár základov programovania a za chvíľu už môžeš
           hrať hru ktorú si si sám vytvoril.
+      2:
+        text: Máš obľúbenú videohru? Teraz urobíme krok bližšie k vytváraniu takých
+          hier, ako v Play Labe. Dobré hry majú príbeh a každý príbeh má postavy.
+          Postavy sa rozprávajú, pohybujú sa a navzájom na seba pôsobia. Možno na
+          základe pravidiel hry aj získavajú body. Dnes sa budeme učiť, ako spraviť
+          všetky tieto veci jednu za druhou so zábavnými postavičkami, a potom vytvoríme
+          hru od základu, ktorá sa dá zdieľať a hrať na mobile.
       6:
         text: Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde
           budeme budovať náš program.
@@ -1099,6 +1179,13 @@ sk:
         text: Ak by si chcel vytvoriť svoju vlastnú hru, je to naozaj jednoduché.
           Potrebuješ poznať len zopár základov programovania a za chvíľu už môžeš
           hrať hru ktorú si si sám vytvoril.
+      2:
+        text: Máš obľúbenú videohru? Teraz urobíme krok bližšie k vytváraniu takých
+          hier, ako v Play Labe. Dobré hry majú príbeh a každý príbeh má postavy.
+          Postavy sa rozprávajú, pohybujú sa a navzájom na seba pôsobia. Možno na
+          základe pravidiel hry aj získavajú body. Dnes sa budeme učiť, ako spraviť
+          všetky tieto veci jednu za druhou so zábavnými postavičkami, a potom vytvoríme
+          hru od základu, ktorá sa dá zdieľať a hrať na mobile.
       6:
         text: Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde
           budeme budovať náš program.
@@ -1598,24 +1685,68 @@ sk:
     csd_concept_computer:
       1:
         image: notes/csd_concept_computer_1.png
+        text: Volám sa May-Li Khoe, som dizajnérka a vynálezkyňa. Niekoľko návrhov
+          dizajnu som robila pre Apple, teraz navrhujem produkty pre deti, ktoré im
+          uľahčia vyučovanie v škole. Som tiež DJka a venujem sa aj tancu.
       2:
         image: notes/csd_concept_computer_2.png
+        text: Počítače sú všade! Nájdeš ich v našich vreckách, autách, niektorí ich
+          nosia na ruke. Možno sa jeden taký nachádza práve teraz v tvojom ruksaku.
+          Čo však robí z počítača počítač? Čo vôbec robí z počítača počítač? A ako
+          funguje?
       3:
         image: notes/csd_concept_computer_3.png
+        text: "Ahoj, som Nat! Jeden z pôvodných dizajnérov Xboxu. S počítačmi pracujem
+          asi od svojich siedmich rokov a v súčasnosti sa venujem virtuálnej realite.
+          Vždy sme ako ľudia budovali nástroje, ktoré nám pomáhali riešiť problémy.
+          Nástroje ako napr. \nfúrik, kladivo, tlačiareň alebo príves traktora."
       4:
         image: notes/csd_concept_computer_4.png
+        text: Všetky tieto vynálezy nám pomohli pri manuálnej práci. Po čase začali
+          byť ľudia zvedaví, či by sa dalo navrhnúť a vyrobiť zariadenie, ktoré by
+          nám pomohlo pri premýšľaní, napr. pri riešení rovníc alebo sledovaní hviezd
+          na oblohe. Namiesto presunu alebo spracúvania fyzických predmetov, ako sú
+          hlina a kameň, by tieto zariadenia mali slúžiť na spracúvanie informácií.
+          Kým priekopníci informatiky skúmali, ako navrhnúť mysliaci stroj, uvedomili
+          si, že musí plniť štyri rôzne úlohy.
       5:
         image: notes/csd_concept_computer_5.png
+        text: Mal by vedieť vkladať vstupy, ukladať informácie, spracúvať ich a následne
+          odovzdávať výsledky. Teraz to možno znie jednoducho, ale tieto štyri veci
+          majú spoločné všetky počítače. Je to to, čo robí z počítača počítač.
       6:
         image: notes/csd_concept_computer_6.png
+        text: Počítače sa začali používať ako kalkulačka, čo bolo v tom čase naozaj
+          úžasné, a vtedy spracúvali len čísla. Teraz ich však môžeme použiť na komunikáciu,
+          hranie hier, ovládanie robotov a iné bláznivé veci, aké si viete predstaviť.
+          Moderné počítače už dávno nevyzerajú ako tie veľké staré stroje, stále však
+          vykonávajú tie isté 4 úlohy.
       7:
         image: notes/csd_concept_computer_7.png
+        text: "Najskôr sa porozprávame o vstupe. Moja obľúbená časť, pretože vstupy
+          sú všetko, čo robí svet alebo čo robíte vy, vďaka \nčomu počítač plní úlohy.
+          Počítaču môžete dávať príkazy pomocou klávesnice, myši, mikrofónu alebo
+          kamery. Všetky tieto rôzne vstupy poskytujú počítaču informácie, ktoré sa
+          potom uložia do pamäte."
       8:
         image: notes/csd_concept_computer_8.png
+        text: Procesor počítača prijíma informácie z jeho pamäte. Spracúva ich alebo
+          ich mení pomocou algoritmu, ktorý predstavuje sériu príkazov. A potom odošle
+          spracované informácie späť na uloženie do pamäte. Toto pokračuje, kým spracované
+          informácie nie sú pripravené na výstup.
       9:
         image: notes/csd_concept_computer_9.png
+        text: Spôsob, akým počítač odovzdáva informácie, závisí od toho, na čo bol
+          navrhnutý. Displej počítača zobrazuje text, fotografie, videá, interaktívne
+          hry -- aj virtuálnu realitu! Výstup môže dokonca obsahovať signály na riadenie
+          robota.
       10:
         image: notes/csd_concept_computer_10.png
+        text: A kto vie, ako budú počítače vyzerať v budúcnosti? Dúfam, že práve ty
+          budeš rozhodovať o tom, ako budú počítače v budúcnosti vyzerať. Bez ohľadu
+          na rôzne typy technológií, ktoré počítače používajú, vykonávajú stále rovnaké
+          4 úlohy. Prijímajú informácie, ukladajú ich ako dáta, spracovávajú ich a
+          nakoniec odovzdávajú výsledky.
     csd_concept_binary_data:
       1:
         image: notes/csd_concept_binary_data_1.png

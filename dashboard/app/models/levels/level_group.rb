@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 class LevelGroup < DSLDefined
@@ -30,7 +31,7 @@ class LevelGroup < DSLDefined
 
   def dsl_default
     <<~ruby
-      name 'unique level name here'
+      name '#{DEFAULT_LEVEL_NAME}'
       title 'title of the assessment here'
       submittable 'true'
       anonymous 'false'
@@ -254,7 +255,7 @@ class LevelGroup < DSLDefined
   # answer to that sublevel question or not, which explains the empty hashes
   # intermingled with real results.
   # [ 23432:
-  #   { stage_name: "Stage 30: Anonymous student survey",
+  #   { lesson_name: "Lesson 30: Anonymous student survey",
   #     levelgroup_results: [
   #       {
   #         type: "multi",
@@ -295,7 +296,7 @@ class LevelGroup < DSLDefined
 
       # All the results for one LevelGroup for a group of students.
       surveys_by_level_group[level_group.id] = {
-        stage_name: script_level.lesson.localized_title,
+        lesson_name: script_level.lesson.localized_title,
         levelgroup_results: reportable_results
       }
     end

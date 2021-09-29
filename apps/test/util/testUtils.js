@@ -17,31 +17,23 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
   window.React = React;
   window.dashboard = {...window.dashboard, assets, project};
 
-  beforeFunc(() => {
-    sinon.stub(project, 'clearHtml');
-    sinon.stub(project, 'exceedsAbuseThreshold').returns(false);
-    sinon.stub(project, 'hasPrivacyProfanityViolation').returns(false);
-    sinon.stub(project, 'getCurrentId').returns('fake_id');
-    sinon.stub(project, 'isEditing').returns(true);
-    sinon.stub(project, 'getMakerAPIs').returns(false);
+  const sandbox = sinon.createSandbox();
 
-    sinon.stub(assets.listStore, 'reset');
-    sinon.stub(assets.listStore, 'add').returns([]);
-    sinon.stub(assets.listStore, 'remove').returns([]);
-    sinon.stub(assets.listStore, 'list').returns([]);
+  beforeFunc(() => {
+    sandbox.stub(project, 'clearHtml');
+    sandbox.stub(project, 'exceedsAbuseThreshold').returns(false);
+    sandbox.stub(project, 'hasPrivacyProfanityViolation').returns(false);
+    sandbox.stub(project, 'getCurrentId').returns('fake_id');
+    sandbox.stub(project, 'isEditing').returns(true);
+    sandbox.stub(project, 'getMakerAPIs').returns(false);
+
+    sandbox.stub(assets.listStore, 'reset');
+    sandbox.stub(assets.listStore, 'add').returns([]);
+    sandbox.stub(assets.listStore, 'remove').returns([]);
+    sandbox.stub(assets.listStore, 'list').returns([]);
   });
   afterFunc(() => {
-    project.clearHtml.restore();
-    project.exceedsAbuseThreshold.restore();
-    project.hasPrivacyProfanityViolation.restore();
-    project.getCurrentId.restore();
-    project.isEditing.restore();
-    project.getMakerAPIs.restore();
-
-    assets.listStore.reset.restore();
-    assets.listStore.add.restore();
-    assets.listStore.remove.restore();
-    assets.listStore.list.restore();
+    sandbox.restore();
   });
 
   window.trackEvent = () => {};

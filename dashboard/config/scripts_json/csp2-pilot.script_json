@@ -2,7 +2,6 @@
   "script": {
     "name": "csp2-pilot",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/cspilot/unit2/{LESSON}",
@@ -205,7 +204,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -226,7 +224,6 @@
       "properties": {
         "progression": "Widget: Internet Simulator"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -247,7 +244,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -268,7 +264,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -289,7 +284,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -310,7 +304,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -331,7 +324,6 @@
       "properties": {
         "progression": "Internet Simulator: Broadcast Mode"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -352,7 +344,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -373,7 +364,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -394,7 +384,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -415,7 +404,6 @@
       "properties": {
         "progression": "Internet Simulator: Routers"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -436,7 +424,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -457,7 +444,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -478,7 +464,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -499,7 +484,6 @@
       "properties": {
         "progression": "Internet Simulator: Packets"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -520,7 +504,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -541,7 +524,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -562,7 +544,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -583,7 +564,6 @@
       "properties": {
         "progression": "Internet Simulator: DNS"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -604,7 +584,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -625,7 +604,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -646,7 +624,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -667,7 +644,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -688,7 +664,6 @@
       "properties": {
         "progression": "Unit 2 Exam"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -709,7 +684,6 @@
       "properties": {
         "progression": "Unit 2 STUDENT Survey"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -730,7 +704,6 @@
       "properties": {
         "progression": "Unit 2 TEACHER Survey"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [

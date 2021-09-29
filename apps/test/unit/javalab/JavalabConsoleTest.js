@@ -40,7 +40,7 @@ describe('Java Lab Console Test', () => {
           .find('input')
           .first()
           .instance().style.backgroundColor
-      ).to.equal('rgb(255, 255, 255)');
+      ).to.equal('rgba(0, 0, 0, 0)');
       expect(
         editor
           .find('.javalab-console')
@@ -57,7 +57,7 @@ describe('Java Lab Console Test', () => {
           .find('input')
           .first()
           .instance().style.backgroundColor
-      ).to.equal('rgb(0, 0, 0)');
+      ).to.equal('rgba(0, 0, 0, 0)');
       expect(
         editor
           .find('.javalab-console')

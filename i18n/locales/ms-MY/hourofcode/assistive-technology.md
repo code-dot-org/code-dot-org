@@ -1,21 +1,21 @@
 ---
-title: Completing an Hour of Code with Assistive Technology
+title: Melengkapkan Jam Kod dengan Teknologi Bantu
 ---
 
-# Completing an Hour of Code with Assistive Technology
+# Melengkapkan Jam Kod dengan Teknologi Bantu
 
-Anyone can try an Hour of Code during Computer Science Education Week.
+Sesiapa sahaja boleh mencuba Jam Kod semasa Minggu Pendidikan Sains Komputer.
 
-## Using Screen Readers
+## Menggunakan Pembaca Skrin
 
-If you use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+Jika anda menggunakan pembaca skrin, [tutorial Quorum untuk mereka yang baru bermula](https://quorumlanguage.com/hourofcode/astro1.html) atau [tutorial Quorum untuk pelajar yang selesa](https://quorumlanguage.com/hourofcode/part1.html) ialah tempat yang amat baik untuk memulakan Jam Kod. Quorum bermula sebagai bahasa tertafsir yang pada asalnya direka bentuk untuk diakses melalui pembaca skrin. Quorum telah menjadi bahasa pengaturcaraan serbaguna yang direka bentuk untuk mana-mana pengguna. Dan, jika anda ingin menjangkaui Jam Kod, pasukan di Quorum mempunyai alatan dan kurikulum tambahan.
 
-[![Tutorial for beginners](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial for comfortable students](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+[![Tutorial untuk mereka yang baru bermula](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial untuk pelajar yang selesa](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
 
-## Code.org Tutorials Without Audio
+## Tutorial Code.org Tanpa Audio
 
-The [Code.org tutorials](https://studio.code.org/courses) can all be used with or without sound. All the videos have captions.
+[Tutorial Code.org](https://studio.code.org/courses) kesemuanya boleh digunakan dengan atau tanpa bunyi. Semua video mempunyai kapsyen.
 
-## Pair Programming
+## Pengaturcaraan Berpasangan
 
-Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to [check out this video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to learn the best techniques for pair programming.
+Pengaturcaraan berpasangan ialah alat yang digunakan oleh saintis komputer untuk menyelesaikan masalah sebagai pasangan atau pasukan. Cuba berusaha mengatasi cabaran Jam Kod dengan rakan atau kawan sekelas. Jangan lupa [menonton video ini](https://www.youtube.com/watch?v=vgkahOzFH2Q) bertujuan mempelajari teknik terbaik untuk pengaturcaraan berpasangan.

@@ -17,10 +17,10 @@ Computational thinking helps nurture problem-solving skills, logic, and creativi
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
 
 - [Who can volunteer?](#who-can-volunteer)
-- [Why volunteer?](#why-volunteer)
+- [ทำไมต้องอาสา?](#why-volunteer)
 - [How do volunteers get selected?](#selection)
 - [What if I want to volunteer with a specific school?](#choose-a-school)
-- [How to prepare](#how-to-prepare)
+- [วิธีเตรียม](#how-to-prepare)
 - [When you're hosting an event](#hosting-an-event)
 - [Spread the word about the Hour of Code](#promote-hour-of-code)
 - [More ways to support the Hour of Code](#support-hour-of-code)
@@ -42,7 +42,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. [
 
 <a id="why-volunteer"></a>
 
-## Why volunteer?
+## ทำไมต้องอาสา?
 
 Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
 
@@ -50,8 +50,8 @@ Computer science is the defining field of the 21st century, yet most schools sti
 
 Check out some testimonials from past volunteers:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.” 
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.” 
+- "ส่วนที่ดีที่สุดของประสบการณ์ของฉันคือ ทั้งชั้นเรียนนี้เป็นผู้หญิงและคนผิวสี มันเป็นสัญญาณที่ดีต่ออุตสาหกรรมของเราที่จะมีโอกาสได้เข้าถึงและทำให้เด็กเหล่านี้ตื่นเต้น" 
+- "ชอบเป็นพิเศษที่ได้ส่งเสริมให้เด็กผู้หญิงรู้เทคโนโลยี รู้สึกเหมือนว่าฉันได้ช่วยคนรุ่นต่อไปในพื้นที่ท้องถิ่นของฉัน" 
 - "ฉันชอบมากที่ได้เห็นว่าเด็กๆตื่นเต้นขนาดไหน One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.” 
 
 [<button>Sign up to volunteer</button>]({{ urls/volunteer }})
@@ -78,13 +78,13 @@ If you are receiving too many requests from teachers, you can always update your
 
 You don’t have to use our volunteer map in order to volunteer! In fact, we recommend reaching out to teachers and administrators directly if there’s a classroom you’d like to volunteer with.
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - If you have another school in mind, visit their website to find appropriate contacts to reach out to such as a principal or vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, Junior Achievement, a YMCA branch, and more to co-host an event. - If you’re unable to find a school that is hosting an Hour of Code, you can volunteer to help run your own event with your company. Check out our [How-To Guide for Companies](https://hourofcode.com/us/how-to/companies) to learn more and get inspired.
+To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - If you have another school in mind, visit their website to find appropriate contacts to reach out to such as a principal or vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, Junior Achievement, a YMCA branch, and more to co-host an event. - หากคุณไม่พบโรงเรียนที่จัดกิจกรรมชั่วโมงเขียนโค้ด คุณสามารถอาสาจัดกิจกรรมนี้ร่วมกับบริษัทของคุณได้ Check out our [How-To Guide for Companies](https://hourofcode.com/us/how-to/companies) to learn more and get inspired.
 
 * * *
 
 <a id="how-to-prepare"></a>
 
-## How to prepare
+## วิธีเตรียม
 
 Whether you’re attending an Hour of Code event remotely or in-person, you’ll have a much smoother experience if you make these preparations beforehand.
 
@@ -116,7 +116,7 @@ Need more resources? [Check out these other tips](https://code.org/files/CSTT_Vo
 
 If you are the host of an event with a classroom, use the sample agenda to guide you. Confirm the agreed schedule for the day and discuss any talking points with the teacher beforehand. If you are physically visiting the class, make sure you sign in with the school and greet the teacher the day-of your event.
 
-If you’re considering hosting the Hour of Code at home or in the community, we recommend taking a look at some of our in-depth How-To Guides for [parents](https://hourofcode.com/us/how-to/parents) and [organizations or companies](https://hourofcode.com/us/how-to/companies).
+หากคุณกำลังวางแผนจัดกิจกรรมชั่วโมงเขียนโค้ดที่บ้านหรือในชุมชน เราขอแนะนำให้ศึกษารายละเอียดต่างๆ จากวิธีดำเนินการของเราสำหรับ[ผู้ปกครอง](https://hourofcode.com/us/how-to/parents)และ[องค์กรหรือบริษัท](https://hourofcode.com/us/how-to/companies)
 
 ### 1. ดูวิดีโอวิธีการสอนนี้ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -136,7 +136,7 @@ Work with the school or teacher to discuss what makes the most sense. We’ve se
 
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- เชิญวิศวกรซอฟต์แวร์จากบริษัทของคุณมาพูดเกี่ยวกับว่าทำไมพวกเขาจึงตัดสินใจเรียนวิชาวิทยาการคอมพิวเตอร์ และพูดถึงโครงการที่พวกเขากำลังทำอยู่
 - If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
 
 ### 3. Plan your technology needs
@@ -160,7 +160,7 @@ If your event is going to be virtual, you’ll want to decide on your conference
 
 We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **ทุกกิจกรรมของ Hour of Code** ใช้เวลาเตรียมตัวน้อย เเละเน้นการนำตนเอง ทำให้ผู้เข้าร่วมสามารถเรียนรู้ได้ตามจังหวะเเละระดับทักษะของตัวเอง
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
@@ -190,7 +190,7 @@ One of the best ways to help is to spread the word and promote the Hour of Code.
 
 ### 1. Register Your Event
 
-When you sign up your Hour of Code event, you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+เมื่อคุณลงทะเบียนกิจกรรมชั่วโมงเขียนโค้ด คุณจะได้รับอีเมลเผยแพร่ที่มีประโยชน์ที่จะแจ้งข่าวสารและเคล็ดลับวิธีการจัดกิจกรรมชั่วโมงเขียนโค้ดให้อย่างราบรื่น It’s also how you can let local schools or parents know that you’re hosting an event near them.
 
 ### 2. Post on Social Media
 
@@ -242,12 +242,12 @@ For more suggestions on how to support Code.org and the Hour of Code, visit [Cod
 
 ## Volunteering FAQ
 
-### I haven't been contacted by a teacher yet. How can I still volunteer?
+### ฉันยังไม่ได้รับการติดต่อจากครูเลย ฉันจะอาสาได้อย่างไร?
 
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.  
+ลองค้นหาโรงเรียนในท้องถิ่นและโทรศัพท์หาผู้อำนวยการ/ครู/แผนกติดต่อ และถามว่าคุณจะช่วยได้อย่างไรบ้าง  
 
 
-### How long do classroom visits last for?
+### ใช้เวลาในห้องเรียนนานเท่าไหร่?
 
 An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.   
 
@@ -259,7 +259,7 @@ Code.org and our partners design all the Hour of Code activities to engage stude
 
 ### How do I get selected as a technical volunteer or guest speaker?
 
-Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local). Try to make your profile as complete as possible to increase the chance that a teacher will select you. If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
+ครูจะหาอาสาสมัครจาก[แผนที่อาสาสมัคร](https://code.org/volunteer/local)ของเรา พยายามทำโพรไฟล์ของคุณให้ครบถ้วนเท่าที่เป็นไปได้ เพื่อเพิ่มโอกาสที่ครูจะเลือกคุณ If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
 
 
 When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   

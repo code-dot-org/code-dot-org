@@ -1131,10 +1131,21 @@ uz:
         text: "{SPRITE} lokatsiyasi"
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': yomg‘ir
       gamelab_makeNewSpriteAnon:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       gamelab_makeNumSprites:
         text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': o‘ng
+            '90': pastga
+            '180': chap
+            '270': yuqoriga
       gamelab_mirrorSprite:
         text: "{SPRITE} {DIRECTION} ga yuzlangan"
         options:
@@ -1165,6 +1176,12 @@ uz:
         text: yuqoriga va pastga qarab patrul qilish
       gamelab_playSound:
         text: " {SOUND} ijro etish"
+      gamelab_playSoundOptions:
+        text: " {SOUND} ijro etish"
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": siqilish
+            "'sound://category_digital/jump_7.mp3'": sakramoq
       gamelab_pointInDirection:
         text: " {SPRITE} ga {DIRECTION} berish"
         options:
@@ -1232,6 +1249,16 @@ uz:
             '"y"': y pozitsiyasi
             '"direction"': harakatlanish yo‘nalishi
             '"speed"': tezlik
+      gamelab_setProp_dropdown:
+        text: " {SPRITE} {PROPERTY} qiymatini {SIZE} ga o'rnatish"
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': o‘rta
+            '100': large
       gamelab_setSizes:
         text: " {SPRITE} {PROPERTY} qiymatini {N}% ga o'rnatish"
         options:
@@ -1540,6 +1567,8 @@ uz:
             '"x"': x holati
             '"y"': y pozitsiyasi
             '"direction"': harakatlanish yo‘nalishi
+      Mikelab_setupSim:
+        text: "{SPRITE3N}{SPRITE3COSTUME} yig'ishda\n{SPRITE1N}{SPRITE1COSTUME} tezligi {SPRITE1SPEED}\n{SPRITE2N}{SPRITE2COSTUME} tezligi {SPRITE2SPEED} \nbilan simulyatsiya o'rnatish"
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1602,6 +1631,70 @@ uz:
         text: "{SPRITE} x koordinatasi"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': yomg‘ir
+      Poetry_makeNumSprites:
+        text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
+      Poetry_playSound:
+        text: " {SOUND} ijro etish"
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Ranglar
+            '"squiggles"': Siqilish (burmalar)
+            '"space"': Qoinot
+            '"stars"': Yulduzlar
+            '"ripples"': To‘lqinlar
+          PALETTE:
+            '"rainbow"': Kamalak
+      Poetry_setBackgroundImageAs:
+        text: orqa fonni {IMG} ga o'zgartirish
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Yomg'ir
+            '"bubbles"': Pufakchalar
+            '"hearts"': Rangli yuraklar
+            '"confetti"': Konfetti
+            '"starburst"': Yulduzlar to'plami
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: o'sish
+            jittering: titrash
+            shrinking: kichrayish
+            spinning_left: chap tarafga aylanish
+            spinning_right: o'ng tarafga aylanish
+            swimming_left_and_right: suzmoqda
+            wandering: daydish
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: o'sish
+            jittering: titrash
+            shrinking: kichrayish
+            spinning_left: chap tarafga aylanish
+            spinning_right: o'ng tarafga aylanish
+            swimming_left_and_right: suzmoqda
+            wandering: daydish
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
+        text: "{VAR} javob berilganda"
       RyanLab_moveForward:
         text: oldinga siljish
       RyanLab_turnLeft:
@@ -1635,49 +1728,27 @@ uz:
         options:
           PROPERTY:
             "'shapeColor'": rang
-      aalab_addBehaviorForDuration:
-        text: " {SPRITE} sprayt {BEHAVIOR} harakati {SECONDS} sekund davomida bo'ladi"
-      aalab_addBehaviorUntilBoolean:
-        text: " {SPRITE} sprayt {BEHAVIOR} xatti-harakatini {CONDITION} gacha boshlaydi"
-      aalab_createNewSpriteAnonReturn2:
-        text: yangi {SPRITE_NAME} sprayt {ANIMATION_NAME} kostyum bilan {LOCATION} da
-      aalab_goToScene:
-        text: " {SCENE} sahnasiga o‘tish"
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: "{SPRITE} piksel masofaga {DISTANCE} ga siljitish"
-        options:
-          DIRECTION:
-            '"North"': Shimol
-            '"East"': Sharq
-            '"South"': Janub
-            '"West"': G'arb
-      aalab_prompt:
-        text: savol berish {MESSAGE}
-      aalab_scene:
-        text: "{SCENE} sahnasi"
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: hikoyani o'rnatish
-      aalab_starwars_playSound:
-        text: "{OPTION} ovozni ijro etish"
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': panjara
+            '"border"': chegara
+            '"row"': satr
             '"random"': tasodifiy
-            '"R2-D2 random"': R2-D2 tasodifiy
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': hamma
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': hamma
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: "{BIN} binar chizma qilish"
       binary_drawBinScreen:
@@ -1816,3 +1887,5 @@ uz:
           DIR:
             right: o‘ngga ↻
             left: chapga ↺
+      validation_validatedBackground:
+        text: orqa fonni {IMG} ga o'zgartirish

@@ -240,7 +240,25 @@
         "Standalone_Artist_6": "Pakartok šį penkiakampį 6 kartus, kad sukurtumetę šį dezainą. Kiek laipsnių jums reikės pasukti kiekvieną kartą? Užoumina: padalykite laipsnių skaičių apskritime iš skaičiaus kartų, kiek kartojate.",
         "Standalone_Artist_7": "Funkcija tai kitas programavimo instrumentas, kuris padės nesikartoti. Ši junkcija nupieš gelyte, tai naudokitę ją kai jūs norėsite nupiešti gelytę. naudodamas šia funkcija ir naujajį peršokimo blokelį, kad nupieštumete šias gelytes. Užoumina: Šios gelytes tarp savęs turi 150 pikselių tarpą.",
         "Standalone_Artist_8": "Štai funkcija pavadinimu \"Nupiešk figūrą\" kuria mes užprogramavome piešti šešiakampius. Paleisk programa, kad pažiūrėtum ką jinai daro ir tada eksperementuok su šia funkcija, tam kad pamatytumete, kas atsitiks. Ar jūs galite perprougramuoti taip, kad pieštu raštą iš kvadratų, trikampių, daugiakampių?",
-        "Standalone_Artist_9": "Dabar tavo laikas piešti, padarykite kokį tik noritę pavikslėlį! Jūs net tūrite tuščia funkciją kuria jūs galite užprogramuoti daryti ką tik norite! "
+        "Standalone_Artist_9": "Dabar tavo laikas piešti, padarykite kokį tik noritę pavikslėlį! Jūs net tūrite tuščia funkciją kuria jūs galite užprogramuoti daryti ką tik norite! ",
+        "CourseD_Dance_2020_05_2021": "O dabar liepk šokėjui pradėti naują judesį po 6 taktų!",
+        "Overworld Avoid Monsters_2021": "Atsitrenkti į Creeper'į - bloga idėja. Atsargiai judėk tarp Crepper'ių ir saugiai pasiek namus.",
+        "Overworld Chop Tree_2021": "Mediena - labai svarbus išteklius, iš jos pagaminta labai daug daiktų. Eik iki medžio ir naudok \"sunaikinti bloką\" komandą tam, kad jį nukirstum.",
+        "Overworld Chop Trees_2021": "Mums reikia pastatyti namą prieš nusileidžiant saulei. Namui reikia labai daug medienos - nukirsk visus 3 medžius.",
+        "Overworld Free Play 20x20_2021": "Sveikinu! Tu išsprendei visus galvosūkius! Dabar gali kasti, statyti ir kurti ką nors ypatingo, panaudodamas viską, ką išmokai.",
+        "Overworld House Frame Chosen_2021": "Pastatyk likusią namo dalį iš kokios tik nori medžiagos. Tau pravers \"kartok\" komanda.",
+        "Overworld Move to Sheep_2021": "Pridėk antrą \"ženk į priekį\" komandą, kad pasiektum avį.",
+        "Overworld Place Wall_2021": "Kiekvieno namo statyba prasideda nuo sienos. Pastatyk pirmąją savo namo dalį naudodamas \"ženk į priekį\" ir \"padėti\" komandas į \"kartok\" blokelio vidų.",
+        "Overworld Plant Crops_2021": "Yra svarbu planuoti į priekį. Pasodink pasėlius iš abiejų vandens telkinio pusių, kad nereikėtų būti alkanam.",
+        "Overworld Powered Minecart_2021": "Puikiai padirbėta! Tu surinkai daugybę\ništeklių ir pastatei nedidelį namą. Dabar patiesk geležinkelį nuo žemėlapio krašto iki\nsavo namo durų.",
+        "Overworld Shear Sheep_2021": "Avių kirpimo metas! Naudokis \"kirpti\" komanda,\nkad surinktum vilną iš abiejų avių.",
+        "Underground Avoiding Lava_2021": "Po kai kuriais blokais slepiasi lava. Tau reikės ją uždengti prieš einant toliau. Tau pravers \"jei\" komanda. Pridėk \"ženk į priekį\" komandą teisingoje vietoje, kad galėtum sunaikinti šiuos blokus.",
+        "Underground If Statements_2021": "Darosi sudėtinga. Sunaikink 3 raudonus akmenis, tačiau neįkrisk į lavą. Naudok \"jei\" komandą, kad padengtum grindiniu lavą, kurią atrasi.",
+        "Underground Iron_2021": "Vaikščioti per lavą - bloga idėja. Padėk grindinį, kad sukurtum tiltelį, tada sunaikink bent 2 geležies blokus.",
+        "Underground Mining Coal_2021": "Vertingiausius išteklius rasi po žeme, bet gali sutemti. Padėk bent 2 deglus ir iškask bent 2 anglis.",
+        "courseC_artist_prog5_2021": "Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.",
+        "courseD_maze_nestedLoops6_2021": "Nuvesk mane prie saulėgrąžų!",
+        "courseE_artist_functions1_dani": "Labas. Aš zombis menininkas. Aš mėgstu piešti!\nPadėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis."
       }
     }
   }

@@ -40,7 +40,6 @@ require 'aws-sdk-cloudwatch'
 STARTED = 'build-started'.freeze
 S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
 S3_LOGS_PREFIX = CDO.name.freeze
-GIT_PULL_STARTED_PATH = deploy_dir('git-pull-started').freeze
 
 # Upload the given log to the logs s3 bucket.
 # @param [String] key where uploaded log should be located
@@ -61,31 +60,6 @@ rescue Exception => msg
   return ''
 end
 
-def protected_git_pull
-  # Use a lock file to prevent git-pull and unison, which both modify files in
-  # local repo, to run at the same time on the staging environment.
-  #
-  # Context: On the staging environment, we use the unison tool to sync content
-  # between local Dropbox and git repo. It works most of the time. However, we've
-  # seen half-dozen cases of Dropbox content being reverted. Those cases happened
-  # a few hours or even a few days after content editors had made file changes.
-  # They mostly coincided with the starts of new builds.
-  # This change is a speculative fix to prevent any potential conflicts between
-  # git-pull and unison.
-  #
-  if rack_env?(:staging)
-    FileUtils.touch GIT_PULL_STARTED_PATH
-    # Wait a few seconds to give the unison tool time to finish.
-    # Unison is fast and usually finishes in less than 1 second.
-    sleep 2
-  end
-  RakeUtils.git_pull
-ensure
-  if rack_env?(:staging) && File.exist?(GIT_PULL_STARTED_PATH)
-    FileUtils.rm GIT_PULL_STARTED_PATH
-  end
-end
-
 def build
   Dir.chdir(deploy_dir) do
     return 0 unless RakeUtils.git_updates_available? || File.file?(STARTED) || !CDO.daemon
@@ -93,7 +67,7 @@ def build
 
     RakeUtils.git_fetch
     count = RakeUtils.git_update_count
-    protected_git_pull if count > 0
+    RakeUtils.git_pull if count > 0
     count = [1, count].max
 
     log = `git log --pretty=format:"%h %s (%an)" -n #{count}`

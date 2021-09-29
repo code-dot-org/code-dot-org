@@ -1,4 +1,3 @@
-hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursef/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursef/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursef/standards/"]]
 lesson_extras_available true
@@ -7,7 +6,7 @@ project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'coursef'
 version_year '2018'
-is_stable true
+published_state 'stable'
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 tts true
@@ -252,21 +251,21 @@ level 'Virtual Pet Freeplay'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas', has_lesson_plan: true
-level 'courseF_video_csMatters_2018', named: true
-level 'InspirationalArtwork_2018', named: true
-level 'courseF_project_1', named: true
+level 'courseF_video_csMatters_2018', progression: 'Video: CS Matters'
+level 'InspirationalArtwork_2018', progression: 'Inspiration!'
+level 'courseF_project_1', progression: 'Sprite Lab Example Project'
 
 lesson 'The Design Process', display_name: 'The Design Process', has_lesson_plan: true
-level 'Begin planning your project_2018', named: true
+level 'Begin planning your project_2018', progression: 'Begin planning your project_2018'
 
 lesson 'Build Your Project', display_name: 'Build Your Project', has_lesson_plan: true
-level 'Course F: Artist Project_2018', named: true
-level 'CourseF_Project_SpriteLab', named: true
+level 'Course F: Artist Project_2018', progression: 'Course F Artist Project'
+level 'CourseF_Project_SpriteLab', progression: 'Course F Sprite Lab Project'
 
 lesson 'Revise Your Project', display_name: 'Revise Your Project', has_lesson_plan: true
-level 'Course F: Artist Project - Revise_2018', named: true
-level 'CourseF_Project_Revise_SpriteLab', named: true
+level 'Course F: Artist Project - Revise_2018', progression: 'Revise Artist Project'
+level 'CourseF_Project_Revise_SpriteLab', progression: 'Revise Sprite Lab Project'
 
 lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_plan: true
-level 'Prepare for your presentation_2018', named: true
+level 'Prepare for your presentation_2018', progression: 'Prepare for your presentation_2018'
 

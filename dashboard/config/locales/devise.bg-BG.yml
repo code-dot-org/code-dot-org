@@ -21,8 +21,6 @@ bg:
     mailer:
       confirmation_instructions:
         subject: Инструкции за потвърждение на Code.org
-      reset_password_instructions:
-        subject: Инструкции за възстановяване на паролата в Code.org
       unlock_instructions:
         subject: Инструкции за отключване
     omniauth_callbacks:

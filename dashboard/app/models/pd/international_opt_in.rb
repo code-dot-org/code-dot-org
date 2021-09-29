@@ -24,6 +24,12 @@ class Pd::InternationalOptIn < ApplicationRecord
     )
   ).freeze
 
+  CHILEAN_SCHOOL_DATA = JSON.parse(
+    File.read(
+      File.join(Rails.root, 'config', 'chileanSchoolData.json')
+    )
+  ).freeze
+
   belongs_to :user
 
   validates_presence_of :user_id, :form_data
@@ -92,9 +98,11 @@ class Pd::InternationalOptIn < ApplicationRecord
     # apps/src/code-studio/pd/form_components/utils.js
     entries = Hash[entry_keys.map do |key, values|
       [key, values.map do |value|
+        # Capitalize country values to be consistent with other country strings in our database
+        answer = key.to_s == 'schoolCountry' ? value.titleize : value
         {
           answerText: I18n.t("pd.form_entries.#{key.to_s.underscore}.#{value.underscore}"),
-          answerValue: value
+          answerValue: answer
         }
       end]
     end]
@@ -103,6 +111,7 @@ class Pd::InternationalOptIn < ApplicationRecord
     entries[:workshopFacilitator] = INTERNATIONAL_OPT_IN_FACILITATORS
 
     entries[:colombianSchoolData] = COLOMBIAN_SCHOOL_DATA
+    entries[:chileanSchoolData] = CHILEAN_SCHOOL_DATA
 
     super.merge(entries)
   end
@@ -129,13 +138,15 @@ class Pd::InternationalOptIn < ApplicationRecord
       legalOptIn
     )
 
-    # Colombia has some specialized school categorization logic, so we
+    # Colombia and Chile have some specialized school categorization logic, so we
     # provide some custom labels.
     keys += %w(
       colombianSchoolCity
-      colombianSchoolDepartment
+      colombianChileanSchoolDepartment
       colombianSchoolMunicipality
-      colombianSchoolName
+      colombianChileanSchoolName
+      chileanSchoolCommune
+      chileanSchoolId
     )
 
     Hash[keys.collect {|v| [v, I18n.t("pd.form_labels.#{v.underscore}")]}]

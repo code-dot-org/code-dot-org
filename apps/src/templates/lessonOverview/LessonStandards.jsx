@@ -23,22 +23,23 @@ export const styles = {
     fontFamily: "'Gotham 5r', sans-serif",
     fontWeight: 'bold',
     color: color.dark_charcoal
+  },
+  summary: {
+    padding: 3
+  },
+  standard: {
+    padding: 3
   }
 };
 
 export const ExpandMode = {
   NONE: 'none',
-  FIRST: 'first',
   ALL: 'all'
 };
 
 const expandModeShape = PropTypes.oneOf([
   // The component should not be expanded.
   ExpandMode.NONE,
-
-  // The component should be expanded. Its first child and the first child of
-  // each of its descendants should also be expanded.
-  ExpandMode.FIRST,
 
   // This component and all its descendants should be expanded.
   ExpandMode.ALL
@@ -55,8 +56,6 @@ function getChildExpandMode(parentExpandMode, index) {
   switch (parentExpandMode) {
     case ExpandMode.ALL:
       return ExpandMode.ALL;
-    case ExpandMode.FIRST:
-      return index === 0 ? ExpandMode.FIRST : ExpandMode.NONE;
     case ExpandMode.NONE:
       return ExpandMode.NONE;
   }
@@ -67,7 +66,7 @@ function getChildExpandMode(parentExpandMode, index) {
  * @returns {boolean} Whether the component's details element should be expanded
  */
 function getDetailsOpen(expandMode) {
-  return expandMode === ExpandMode.ALL || expandMode === ExpandMode.FIRST;
+  return expandMode === ExpandMode.ALL;
 }
 
 export default class LessonStandards extends PureComponent {
@@ -152,7 +151,7 @@ class UnconnectedParentCategory extends PureComponent {
     return (
       <li key={shortcode}>
         <details open={isOpen}>
-          <summary>
+          <summary style={styles.summary}>
             <span style={styles.categoryShortcode}>{shortcode}</span>
             {' - '}
             {description}
@@ -196,7 +195,7 @@ class UnconnectedCategory extends PureComponent {
     return (
       <li key={shortcode}>
         <details open={isOpen}>
-          <summary>
+          <summary style={styles.summary}>
             <span style={styles.categoryShortcode}>{shortcode}</span>
             {' - '}
             {description}
@@ -222,12 +221,10 @@ class Standard extends PureComponent {
   render() {
     const {standard} = this.props;
     return (
-      <li key={standard.shortcode}>
-        <summary>
-          <span style={styles.standardShortcode}>{standard.shortcode}</span>
-          {' - '}
-          {standard.description}
-        </summary>
+      <li key={standard.shortcode} style={styles.standard}>
+        <span style={styles.standardShortcode}>{standard.shortcode}</span>
+        {' - '}
+        {standard.description}
       </li>
     );
   }

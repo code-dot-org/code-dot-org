@@ -6,7 +6,7 @@
 #  path         :string(255)      not null
 #  kind         :string(255)
 #  form_name    :string(255)      not null
-#  form_version :integer
+#  form_version :integer          not null
 #  properties   :text(65535)
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
@@ -20,8 +20,11 @@ class Foorm::SimpleSurveyForm < ApplicationRecord
 
   serialized_attrs [
     'survey_data',
-    'allow_multiple_submissions'
+    'allow_multiple_submissions',
+    'allow_signed_out'
   ]
+
+  belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
 
   validates :path, presence: true, format: {with: /\A[a-z0-9_]+\z/}
 

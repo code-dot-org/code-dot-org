@@ -1,4 +1,4 @@
-import {assert} from '../util/deprecatedChai';
+import {assert} from '../util/reconfiguredChai';
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 

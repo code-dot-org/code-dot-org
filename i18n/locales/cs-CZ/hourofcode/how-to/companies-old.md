@@ -5,54 +5,54 @@ title: Jak uspořádat hodinu kódu - Firmy
 {{ signup_button }}
 
 # Jak přivést Hodinu kódu do vaší společnosti
-### Find out how you and your employees can inspire students to try computer science!
+### Zjistěte si, jak můžete Vy i Vaši zaměstnanci inspirovat studenty k účasti na počítačové vědě!
 
 ***
 
-## Connect with local classrooms and volunteer for the Hour of Code
-Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+## Spojte se s místními školními třídami a staňte se dobrovolníkem pro Hodinu programování
+Code.org nabízí všem zaměstnancům příležitost [spojit se s místními]({{ urls/volunteer }}) třídami během Hodiny programování, kde mohou sdílet své zkušenosti z kariéry v technických oborech a inspirovat studenty ke studiu počítačových věd.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }})
+[<button>Zaregistrujte se jako dobrovolník!</button>]({{ urls/volunteer }})
 <br>
 <br>
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Další pokyny k povzbuzení zaměstnanců a napojení Vašich zaměstnanců na třídy najdete v našem [Průvodci pro firemní partnery]({{ localized_files/hoc_corporate_toolkit }}).
 
-## Additional ways companies can support the Hour of Code
+## Další způsoby, jak mohou firmy podpořit Hodinu programování
 
-- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- Požádejte svého výkonného ředitele, aby [rozeslal celofiremní e-mail]({{ promote/sample_emails }}), ve kterém by zdůraznil důležitost počítačové vědy a vybídl by zaměstnance, aby šířili osvětu.
+- Pořádejte se svými spolupracovníky Šťastnou hodinku Hodiny programování a vyzkoušejte [aktivity]({{ urls/learn }}).
+- Pořádejte akci o Hodině programování pro místní třídu studentů nebo partnerů z neziskových organizací, aby udělali Hodinu programování v kanceláři Vaší firmy. Podívejte se do níže uvedeného průvodce událostmi.
 
 
 # Jak uspořádat Hodinu kódu se studenty
 
-## 1. Promote your Hour of Code
-- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
+## 1. Propagujte svou Hodinu programování
+- Propagujte svou akci [Hodina programování]({{ urls/promote }}) a vybídněte ostatní, aby ji pořádali.
+- Vybídněte softwarové inženýry ve své firmě, aby navštívili některou místní třídu a aby pomohli vést Hodinu programování a inspirovat studenty ke studiu počítačové vědy. Mohou se [zaregistrovat,]({{ urls/volunteer_engineer }}) aby byli napojeni na třídu.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Sledujte toto návodné video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## 3. Choose an activity
-We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+## 3. Vyberte si nějakou aktivitu
+Pořádáme množství [zábavných hodinových aktivit]({{ urls/learn }}) pro účastníky všech věkových kategorií, které vytvořilo mnoho různých partnerů. [Vyzkoušejte je!]({{ urls/learn }})
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+**Všechny aktivity Hodiny programování** vyžadují jen minimální čas na přípravu a probíhají pod vlastním vedením - to účastníkům umožňuje pracovat vlastním tempem a na vlastní úrovni dovedností.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 4. Plan your technology needs - computers are optional
+## 4. Naplánujte si své technologické potřeby - počítače nejsou povinné
 
-Nejlepší zkušenost s Hodinou kódu je na počítačích připojených na internet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Nejlepší zkušenost s Hodinou kódu je na počítačích připojených na internet. **Nepotřebujete** však pro každého účastníka jeden počítač a dokonce můžete udělat Hodinu programování zcela bez počítače.
 
-**Plan Ahead!** Do the following before your event starts:
+**Plánujte předem!** Před zahájením akce proveďte následující kroky:
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Uvidí také, že informatika je společenská a týmová záležitost.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- Vyzkoušejte aktivity na počítačích nebo na zařízeních. Zajistěte, aby správně fungovaly na počítačích se zvukem a videem.
+- Jestliže vyberete aktivitu, kterou je nejlepší používat se zvukem, zajistěte sluchátka nebo požádejte účastníky, aby si přinesli svá vlastní.
+- **Nemáte dostatek zařízení?** Použijte [párové programování](https://www.youtube.com/watch?v=vgkahOzFH2Q). Když se účastníci dají dohromady, pomáhají si navzájem a méně se spoléhají na organizátora. Uvidí také, že informatika je společenská a týmová záležitost.
+- **Máte nízkou rychlost internetu?** Naplánujte to tak, že budete v místě akce přehrávat videa, aby nemusel každý účastník stahovat svá vlastní videa. Nebo zkuste offline aktivity.
 
-## 5.  Start your Hour of Code off with an inspiring video
-Začněte s Hodinou kódu tím, že budete inspirovat účastníky a diskutovat o tom, jak informatika ovlivňuje každou oblast našich životů. Share more about what inspired you to pursue computer science and your role at your company.
+## 5.  Začněte svou Hodinu programování inspirativním videem
+Začněte s Hodinou kódu tím, že budete inspirovat účastníky a diskutovat o tom, jak informatika ovlivňuje každou oblast našich životů. Sdílejte více podrobností o tom, co vás inspirovalo ke studiu počítačové vědy a jaká je Vaše role ve firmě.
 
 **Ukažte inspirativní video:**
 
@@ -61,35 +61,35 @@ Začněte s Hodinou kódu tím, že budete inspirovat účastníky a diskutovat 
 - [Prezident Obama povzbuzující všechny studenty ke studiu informatiky](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - [Zde](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) můžete najít další inspirující videa.
 
-**Ideas to introduce your Hour of Code activity to students:**
+**Nápady, jak studentům představit Vaši aktivitu Hodiny programování:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Vysvětlete způsoby, jakými technika ovlivňuje naše životy, přičemž uveďte příklady, které zaujmou chlapce i dívky - mluvte o technologiích, které zachraňují životy, pomáhají lidem, spojují lidi.
+- Pokud jste technologická společnost, ukazujte zábavné a inovativní produkty, na kterých Vaše společnost pracuje.
+- Pokud nejste technologická společnost, diskutujte o způsobech, jakými Vaše společnost využívá technologií k řešení problémů a k dosahování cílů.
+- Pozvěte softwarové inženýry z Vaší společnosti, aby promluvili o tom, proč se rozhodli studovat počítačovou vědu, a o projektech, na kterých pracují.
+- Podívejte se na tipy na to, jak dosáhnout, aby se dívky zajímaly o počítačovou vědu [tady]({{ urls/girls }}).
 
-## 6. Code!
+## 6. Programujte!
 **Přímí účastníci aktivity**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+- Napište odkaz na aktivitu na tabuli. Najděte odkaz uvedený na [informacích pro vaši vybranou aktivitu]({{ urls/learn }}) pod počtem účastníků.
+- Pro mladší studenty nahrajte stránku s aktivitami s předstihem nebo ji uložte jako záložku.
 
-**When participants come across difficulties it's okay to respond:**
+**Když účastníci narazí na obtíže, je dobré zareagovat:**
 
-- “I don’t know. Let’s figure this out together.”
+- "Nevím. Přijďme na to společně.”
 - "Učit se programovat je jako učit se nový jazyk; nejde hned mluvit plynule."
 
 **Co udělat, když někdo skončí dříve?**
 
-- They can try another Hour of Code activity at hourofcode.com/learn.
-- Or, ask them to help a friend who are having trouble with the activity.
+- Mohou zkusit jinou aktivitu Hodiny programování na hourofcode.org/learn
+- Nebo je požádejte, aby pomohli příteli, kterému aktivita nejde.
 
 ## 7) Oslavte úspěch
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Vytiskněte účastníkům a studentům [certifikáty]({{ urls/certificates }}).
+- Vytiskněte nálepky [„Dělal jsem hodinu programování!“]({{ promote/resources_stickers }}).
+- [Objednejte speciální trička](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) svým zaměstnancům.
+- Fotografie a videa ze své akce „Hodina programování“ sdílejte na sociálních médiích. Použijte #HourOfCode a @codeorg, abychom mohli zveřejnit i Váš úspěch!
 
 {{ signup_button }}

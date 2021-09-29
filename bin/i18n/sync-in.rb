@@ -13,10 +13,11 @@ require 'digest/md5'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative '../../tools/scripts/ManifestBuilder'
+require_relative '../animation_assets/manifest_builder'
 
 def sync_in
   puts "Sync in starting"
+  Services::I18n::CurriculumSyncUtils.sync_in
   HocSyncUtils.sync_in
   localize_level_and_project_content
   localize_block_content
@@ -256,43 +257,19 @@ def localize_level_content(variable_strings, parameter_strings)
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
-        if ScriptConstants.script_in_category?(:hoc, script.name)
+        if ScriptConstants.unit_in_category?(:hoc, script.name)
           File.join(level_content_directory, "Hour of Code")
-        elsif script.version_year
-          File.join(level_content_directory, script.version_year)
-        else
+        elsif script.unversioned?
           File.join(level_content_directory, "other")
+        else
+          File.join(level_content_directory, script.version_year)
         end
 
       FileUtils.mkdir_p script_i18n_directory
       script_i18n_name = "#{script.name}.json"
       script_i18n_filename = File.join(script_i18n_directory, script_i18n_name)
 
-      # If a script is updated such that its destination directory changes
-      # after creation, we can end up in a situation in which we have multiple
-      # copies of the script file in the repo, which makes it difficult for the
-      # sync out to know which is the canonical version.
-      #
-      # To prevent that, here we proactively check for existing files in the
-      # filesystem with the same filename as our target script file, but a
-      # different directory. If found, we refuse to create the second such
-      # script file and notify of the attempt, so the issue can be manually
-      # resolved.
-      #
-      # Note we could try here to remove the old version of the file both from
-      # the filesystem and from github, but it would be significantly harder to
-      # also remove it from Crowdin.
-      matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|
-        other_filename == script_i18n_filename
-      end
-      unless matching_files.empty?
-        # Clean up the file paths, just to make our output a little nicer
-        base = Pathname.new(level_content_directory)
-        relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
-        relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
-        STDERR.puts "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
-        next
-      end
+      next if I18nScriptUtils.unit_directory_change?(script_i18n_name, script_i18n_filename)
 
       File.write(script_i18n_filename, JSON.pretty_generate(script_strings))
     end
@@ -353,7 +330,7 @@ def localize_animation_library
   spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/animations/spritelab_animation_library.json"
   FileUtils.mkdir_p(File.dirname(spritelab_animation_source_file))
   File.open(spritelab_animation_source_file, "w") do |file|
-    animation_strings = ManifestBuilder.new({spritelab: true, silent: true}).get_animation_strings
+    animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
     file.write(JSON.pretty_generate(animation_strings))
   end
 end
@@ -464,11 +441,12 @@ end
 
 def localize_markdown_content
   markdown_files_to_localize = %w[
-    international/about.md.partial
-    educate/curriculum/csf-transition-guide.md
+    ai.md.partial
     athome.md.partial
     break.md.partial
     csforgood.md
+    curriculum/unplugged.md.partial
+    educate/curriculum/csf-transition-guide.md
     hourofcode/artist.md.partial
     hourofcode/flappy.md.partial
     hourofcode/frozen.md.partial
@@ -478,6 +456,7 @@ def localize_markdown_content
     hourofcode/playlab.md.partial
     hourofcode/starwars.md.partial
     hourofcode/unplugged-conditionals-with-cards.md.partial
+    international/about.md.partial
   ]
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)

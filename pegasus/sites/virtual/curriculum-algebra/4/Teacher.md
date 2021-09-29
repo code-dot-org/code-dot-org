@@ -177,7 +177,7 @@ In the next unit, you’ll learn how to create your own functions to save work i
 ## Assessment
 ### <a name="Assessment"></a>6) Contract Writing Assessment
 
-Visit [CS in Algebra Stage 4](http://studio.code.org/s/algebra/stage/4/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 4](http://studio.code.org/s/algebra/lessons/4/levels/1) in Code Studio to complete the assessments.
 -->
 
 [/together]

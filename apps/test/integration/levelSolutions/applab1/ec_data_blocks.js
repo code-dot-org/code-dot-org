@@ -280,7 +280,8 @@ export default {
           'onRecordEvent',
           'getUserId',
           'drawChart',
-          'drawChartFromRecords'
+          'drawChartFromRecords',
+          'getPrediction'
         ];
         assert.deepEqual(actualBlocks, expectedBlocks);
         Applab.onPuzzleComplete();

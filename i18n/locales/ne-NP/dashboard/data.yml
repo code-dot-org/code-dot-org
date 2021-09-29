@@ -351,6 +351,8 @@ ne:
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
         CSF_my_robotic_friends: My Robotic Friends
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduction to Loops
@@ -392,6 +394,9 @@ ne:
         CSF_loops_AB: Loops
         csd_pair_programming: Pair Programming
         csd_applab_parameters: Functions with Parameters
+        csd_debugging: Debugging
+        playlab_2021: Introduction to Play Lab
+        playlab_2021_reader: Introduction to Play Lab
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -36,7 +36,7 @@ ko:
         StudioEC: Play Lab
         Applab: 앱 연구실
         NetSim: 인터넷 시뮬레이터
-        Custom: 화가
+        Custom: 예술가
         CustomStudio: Play Lab
         Gamelab: 게임 랩
         Spritelab: 스프라이트 연구소
@@ -673,6 +673,8 @@ ko:
         codebreak_e11: '코드 브레이크 11.0: 수잔 보이치키 및 차이나 앤 맥클레인 추상'
         codebreak_e12: '코드 브레이크 12.0: 알로에 블라크, 브렛 테일러, 파울라 메이아 하드웨어'
         csf21pilot_events: '스프라이트 랩: 스프라이트 인 액션 (CSF 2021 파일럿)'
+        playlab_2021: 플레이 랩 소개
+        playlab_2021_reader: 플레이 랩 소개
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

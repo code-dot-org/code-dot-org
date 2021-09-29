@@ -6,12 +6,11 @@
 module InternationalOptInPeople
   INTERNATIONAL_OPT_IN_FACILITATORS = [
     "Centro de Innovación - Mineduc",
-    "Eleanor Cheah",
-    "Rodrigo Fabrega",
-    "Weena Naowaprateep",
-    "Beth Zigmont & Hana Zimmerman Karl",
-    "María Cristina Charters",
+    "Fundacion Kodea",
+    "Hana Zimmerman Karl",
     "IT Park Team",
+    "Paraguay Educa",
+    "Rodrigo Fabrega",
     I18n.t('pd.international_opt_in.facilitator_not_listed'),
     I18n.t('pd.international_opt_in.facilitator_not_applicable')
   ].freeze
@@ -24,6 +23,7 @@ module InternationalOptInPeople
     "IT Park",
     "Malaysia Digital Economy Corporation",
     "Mineduc",
+    "Paraguay Educa",
     "Wix.com",
     I18n.t('pd.international_opt_in.organizer_not_listed')
   ].freeze

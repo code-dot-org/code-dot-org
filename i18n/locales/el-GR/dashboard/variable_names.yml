@@ -5,6 +5,9 @@ el:
       Green: Πράσινο
       Red: Κόκκινο
       actor: ηθοποιός
+      age: ηλικία
+      answer: απάντηση
+      binary: δυαδικό
       cats: όλες οι γάτες
       color: χρώμα
       counter: μετρητής

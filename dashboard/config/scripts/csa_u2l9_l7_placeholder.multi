@@ -1,0 +1,21 @@
+name 'CSA U2L9-L7 Placeholder'
+title 'Check for Understanding'
+
+markdown <<MARKDOWN
+Consider the following class definition.
+
+```
+public class ShavedIce {
+   private String topping;
+   // Constructor not shown
+}
+```
+
+Which of the following is a correct header for a method of the `ShavedIce` class that would change the value of the instance variable `topping` so it can be called from a class other than `ShavedIce`?
+MARKDOWN
+
+wrong 'public String getTopping()'
+wrong 'public String setTopping()'
+wrong 'private void setTopping()'
+wrong 'private void setTopping(String topping)'
+right 'public void setTopping(String topping)'

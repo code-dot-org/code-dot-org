@@ -1,0 +1,497 @@
+{
+  "zh-TW": {
+    "data": {
+      "resources": {
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Sprite Lab 簡介"
+        },
+        "exploring_apps/coursef/2021": {
+          "name": "探索應用程式"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Sprite Lab 簡介"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "探索應用程式"
+        },
+        "making_sprites/coursef/2021": {
+          "name": "製作精靈圖"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Sprite Lab 說明文件"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "運行中的角色"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "name": "在線上，停一停、想一想"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "有趣的計次迴圈"
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "有趣的計數迴圈 - 評估答案"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "有趣的計次迴圈"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "有趣的計次迴圈"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "有趣的計次迴圈"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "有趣的計次迴圈"
+        },
+        "course-cf-blockly-blocks/coursef/2021": {
+          "name": "不插電活動積木（課程 C-F）"
+        },
+        "running-simulations/coursef/2021": {
+          "name": "執行模擬"
+        },
+        "ai-ml/coursef/2021": {
+          "name": "AI（人工智慧）：機器學習"
+        },
+        "ai-training/coursef/2021": {
+          "name": "AI（人工智慧）：訓練資料與偏見"
+        },
+        "ai-societal/coursef/2021": {
+          "name": "AI（人工智慧）：社會影響"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "網際網路"
+        },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "IP 位址卡與傳遞類型卡"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "網際網路 Internet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "網際網路 Internet"
+        },
+        "design-process/coursef/2021": {
+          "name": "設計流程"
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "期末專案設計"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "name": "電腦科學基礎期末專案"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "實施指南"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "課程指引"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "教師論壇"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Sprite Lab 說明文件"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "移動它，移動它"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "移動它，移動它"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "移動它，移動它"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "移動它，移動它"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "name": "各種感受的面孔"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "name": "不插電活動 Blockly 積木（K-1 年級）"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "結對編程"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "「快樂地圖」遊戲物件"
+        },
+        "compass-rose/courseb/2021": {
+          "name": "羅盤玫瑰"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stevie 和 Big Project"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "沒被發現的程式的錯誤（Bug）"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "學習迴圈"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "學習迴圈"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "學習迴圈"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "學習迴圈"
+        },
+        "csf-lesson-recommend/courseb/2021": {
+          "name": "電腦科學基礎主要活動秘訣"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "name": "在線上，停一停、想一想"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "大事件"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "大事件"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "大事件"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "大事件（課程 A、B）"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "實施指南"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "課程指引"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "教師論壇"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "結對編程"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "快樂地圖"
+        },
+        "happy-map-cards/coursea/2021": {
+          "name": "「快樂地圖」卡片"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "「快樂地圖」卡片"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "「快樂地圖」遊戲物件"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "不插電活動 Blockly 積木（K-1 年級）"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "加大版「快樂地圖」卡片"
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "「快樂地圖」遊戲物件獎勵包"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "各種感受的面孔"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "name": "在線上，停一停、想一想"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "大事件"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "大事件"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "大事件"
+        },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "大事件（課程 A、B）"
+        },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "電腦科學基礎主要活動秘訣"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "實施指南"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "課程指引"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "教師論壇"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "我的機器人朋友"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "我的機器人朋友"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "我的機器人朋友"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "我的機器人朋友"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "我的機器人朋友"
+        },
+        "unplugged-maze-blocks/coursec/2021": {
+          "name": "不插電活動的迷宮積木"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "結對編程"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "電腦科學基礎主要活動秘訣"
+        },
+        "course-cf-blockly-blocks/coursec/2021": {
+          "name": "不插電活動積木（課程 C-F）"
+        },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "藝術家簡介"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "轉向與角度"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "轉向與角度"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "大事件"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "大事件"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "大事件"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "大事件（課程 C）"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "name": "在線上，停一停、想一想"
+        },
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "位元與位元組"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "二進制手環"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "二進制手環"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "二進制手環"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "二進制手環"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "二進制手環"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "實施指南"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "課程指引"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "教師論壇"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "方格紙編程"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "方格紙編程"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "方格紙編程"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "方格紙編程"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "方格紙編程"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "方格紙編程"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "結對編程"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "接力編程"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "接力編程"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "接力編程"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "接力編程"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "接力編程"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "接力編程"
+        },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": "不插電活動積木（課程 C-F）"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "name": "在線上，停一停、想一想"
+        },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Spotify 播放清單（所有年齡段）"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "各種感受的面孔"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "name": "在線上，停一停、想一想"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "用撲克牌學習條件判斷（Conditionals）"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "用撲克牌學習條件判斷（Conditionals）"
+        },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "用撲克牌學習條件式（Conditional）計畫範本"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "用撲克牌學習條件判斷（Conditionals）"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "用撲克牌學習條件判斷（Conditionals）"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "用撲克牌學習條件判斷（Conditionals）"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "實施指南"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "課程指引"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "教師論壇"
+        },
+        "unplugged_maze_blocks/express/2021": {
+          "name": "不插電活動的迷宮積木"
+        },
+        "pair_programming/express/2021": {
+          "name": "結對編程"
+        },
+        "artist_introduction/express/2021": {
+          "name": "藝術家簡介"
+        },
+        "turns_angles/express/2021": {
+          "name": "轉向與角度"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "轉向與角度"
+        },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Sprite Lab 說明文件"
+        },
+        "making_sprites/express/2021": {
+          "name": "製作精靈圖"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Sprite Lab 說明文件"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "運行中的角色"
+        },
+        "pause_and_think_online/express/2021": {
+          "name": "在線上，停一停、想一想"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Spotify 播放清單（所有年齡段）"
+        },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": "不插電活動積木（課程 C-F）"
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": "不插電活動積木（課程 C-F）"
+        },
+        "variables_video/express/2021": {
+          "name": "變數"
+        },
+        "rubric-csf-final-projects/express/2021": {
+          "name": "電腦科學基礎期末專案"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "教師論壇"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "結對編程"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "各種感受的面孔"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "在線上，停一停、想一想"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "教師論壇"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Sprite Lab 說明文件"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "在線上，停一停、想一想"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "轉向與角度"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "轉向與角度"
+        },
+        "unplugged-video-songwriting-functions/coursee/2021": {
+          "name": "以函式作曲"
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "函式（不插電活動）：作曲"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": "函式（不插電活動）：作曲"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": "函式（不插電活動）：作曲"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": "函式（不插電活動）：作曲"
+        },
+        "course-cf-blockly-blocks/coursee/2021": {
+          "name": "不插電活動積木（課程 C-F）"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "以無障礙為目的設計程式"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "電腦科學基礎期末專案"
+        },
+        "design-process/coursee/2021": {
+          "name": "設計流程"
+        },
+        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
+          "name": "72 種創意方法，讓學生展示自己學到的東西"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "實施指南"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "課程指引"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "教師論壇"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Sprite Lab 說明文件"
+        }
+      }
+    }
+  }
+}

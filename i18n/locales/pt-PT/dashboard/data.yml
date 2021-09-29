@@ -352,6 +352,8 @@ pt:
         C4_unplugged_parameters: Composição de música com parâmetros
         C4_unplugged_binary: Binário
         CSF_create_functions: Criar Funções
+        CSF_debugging_k1_blocks: Depuração
+        CSF_debugging_text_blocks: Depuração
         CSF_my_robotic_friends: Meus amigos robóticos
         CSF_Power_of_Words: Poder das Palavras
         frozen_intro: Introdução à Hora de Código
@@ -415,6 +417,9 @@ pt:
         hint_videos_d_11_7_first: 'Vídeos Sugestão: D.11.7 Primeiro'
         hint_videos_d_11_7_last: 'Vídeos Sugestão: D.11.7 Último'
         hint_videos_d_11_9_first: 'Vídeos Sugestão: D.11.9 Primeiro'
+        hint_videos_d_11_9_last: 'Vídeos Sugestão: D.11.9 Último'
+        hint_videos_d_11_11_first: 'Vídeos Sugestão: D.11.11 Primeiro'
+        hint_videos_d_11_11_last: 'Vídeos Sugestão: D.11.11 Último'
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_if_allskins: O bloco Se
@@ -430,8 +435,11 @@ pt:
         what_is_an_event: O que é um evento?
         csd_pair_programming: Programação em duplas
         csd_applab_parameters: Funções com parâmetros
+        csd_debugging: Depuração
         csp-pd-welcome: Bem-vindo(a) à Família!
         csd_what_computers_do: O que é que os Computadores fazem?
+        playlab_2021: Introdução ao Laboratório
+        playlab_2021_reader: Introdução ao Laboratório
     callout:
       text:
         drag_blocks: Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco

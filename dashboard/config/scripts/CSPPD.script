@@ -1,5 +1,6 @@
 professional_learning_course 'CS Principles Support'
 login_required true
+published_state 'beta'
 
 lesson 'Introduction to PD', display_name: 'Introduction to PD', has_lesson_plan: false
 level 'CSPPD presurvey'

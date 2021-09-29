@@ -1,4 +1,5 @@
 login_required true
+published_state 'pilot'
 pilot_experiment 'denny-science-piloters'
 
 lesson 'Collision Detector: Designing Screens', display_name: 'Collision Detector: Designing Screens', has_lesson_plan: false

@@ -14,14 +14,6 @@ import {PermissionPropType, WorkshopAdmin, Organizer} from '../permission';
 import color from '@cdo/apps/util/color';
 import {Row, Col, ButtonToolbar, Button, Tabs, Tab} from 'react-bootstrap';
 
-const styles = {
-  saveStatus: {
-    error: {
-      color: color.red
-    }
-  }
-};
-
 export class WorkshopAttendance extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired
@@ -242,6 +234,14 @@ export class WorkshopAttendance extends React.Component {
     );
   }
 }
+
+const styles = {
+  saveStatus: {
+    error: {
+      color: color.red
+    }
+  }
+};
 
 export default connect(state => ({
   permission: state.workshopDashboard.permission

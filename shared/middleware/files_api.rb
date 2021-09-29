@@ -54,11 +54,16 @@ class FilesApi < Sinatra::Base
 
   def codeprojects_can_view?(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+
+    # Attempt to find active project in database. This will raise StorageApps::NotFound if
+    # no active project exists, which is handled below.
+    StorageApps.new(owner_storage_id).get(encrypted_channel_id)
+
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
     !get_user_sharing_disabled(owner_user_id)
 
   # Default to cannot view if there is an error
-  rescue ArgumentError, OpenSSL::Cipher::CipherError
+  rescue StorageApps::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
     false
   end
 
@@ -140,6 +145,8 @@ class FilesApi < Sinatra::Base
   # GET /v3/(animations|assets|sources|files|libraries)/<channel-id>/<filename>?version=<version-id>
   #
   # Read a file. Optionally get a specific version instead of the most recent.
+  # Note: we depend on this URL in Javabuilder
+  # https://github.com/code-dot-org/javabuilder/blob/main/org-code-javabuilder/protocol/src/main/java/org/code/protocol/GlobalProtocol.java
   #
   get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     if endpoint == 'libraries'
@@ -268,7 +275,11 @@ class FilesApi < Sinatra::Base
     end
 
     return body_string unless parsed_json.key?('source')
-    blockly_xml = Nokogiri::XML(parsed_json['source'])
+    source_json = parsed_json['source']
+    if source_json.is_a?(Hash)
+      source_json = source_json.to_s
+    end
+    blockly_xml = Nokogiri::XML(source_json)
     return body_string unless blockly_xml.errors.empty?
 
     # first, remove all comment blocks by replacing them with the next block in
@@ -595,7 +606,7 @@ class FilesApi < Sinatra::Base
     content_type :json
 
     filename.downcase! if endpoint == 'files'
-    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename).to_json
+    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments']).to_json
   end
 
   #

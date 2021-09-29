@@ -2,23 +2,91 @@
 hu:
   data:
     progressions:
+      Alien Defender: Földönkívüli támadás
+      Analog Sensors: Analóg szenzorok
       Artist Project: Művész-projekt
       'Artist: Variables': 'Művész: változók'
+      Back and Forth: Előre és hátra
+      Bass, Mid, and Treble: Basszus, közép- és magashangok
+      Bunny Jumper: Ugró nyuszi
+      Buttons and Switch: Gombok és kapcsolók
+      CSS Classes: CSS osztályok
+      CSS Text Properties: CSS szöveg tulajdonságok
+      CSS and Style Sheets: CSS és stílus lapok
       Challenge: Kihívás
+      'Circuit Playground: Introduction': 'Áramkör játszótér: LED-EK'
+      'Circuit Playground: LEDs': 'Áramkör játszótér: LED-EK'
+      Course E Artist Project: Tanfolyam E Művész projekt
+      Course E Sprite Lab Project: Tanfolyam E Sprite labor projekt
+      Course F Artist Project: Tanfolyam F Művész projekt
+      Course F Sprite Lab Project: Tanfolyam F Sprite labor projekt
+      Creating Sprites: Sprite-ok létrehozása
+      Creative Commons Search: Creative Commons keresés
+      Dance Crews: Tánccsapatok
+      Debugging: Hibakeresés
+      Design Mode: Tervező mód
       Drawing: Rajz
+      Drawing Shapes: Síkidomok rajzolása
+      Editing Images: Képek szerkesztése
+      End of Course Projects: Tanfolyam végi projektek
       Events: Események
+      'Exploration: Adding Style': 'Felfedezés: stílus hozzáadása'
+      Explore HTML: Fedezd fel a HTML-t
       For Loops: Számláló ciklusok
+      Formatting HTML: HTML formázás
       Free Play: Ingyenes Játék
       Functions: funkciók
+      Functions Review: Függvények áttekintése
       Functions with Parameters: Paraméteres függvények
+      Get In Formation: Alakzatba állás
+      HTML Tags: HTML-címkék
+      Headings in HTML: HTML címsorok
       How to Make a Sprite: Hogyan készítsünk sprite-ot
+      Hyperlinks: Hiperhivatkozások
+      If Statements: Ha nyilatkozatok
+      If-Else Statements: Ha-egyébként nyilatkozatok
+      Improve Your Game: Javíts a játékodon
+      Inspiration!: Inspiráció!
+      Intro to Design Mode: Bevezető a Tervező módhoz
+      Introduction to Game Lab: Bevezetés a játéklaborba
       Lesson Extras: Lecke Extrák
+      Lesson Overview: Lecke áttekintése
       Lists: Listák
+      Lists in HTML: HTML listák
       Measures: Ütem
+      More Buttons: Több gomb
+      Overview: Összefoglaló
       Pair Programming: Páros programozás
+      Picturing Data: Az adatok leképezése
       Programming with Rey and BB-8: Programozás Rey és BB-8 segítségével
       Properties: Tulajdonságok
       Publishing Your Website: Webhelyének közzététele
+      Quarter Notes: Negyedek
+      RGB Widget: RGB widget
+      Random Numbers: Véletlen számok
+      Review: Felülvizsgálat
+      Revise Artist Project: Tekintsd át a Művész projektet
+      Sample Game: Minta játék
+      Sample Program: Példa program
+      Speed it Up, Slow it Down: Gyorsítás, lassítás
+      Sprite Interactions: Sprite interakciók
+      Sprite Interactions Review: Sprite interakciók áttekintése
+      Sprite Lab Example Project: Sprite labor példa projekt
       Sprite Lab Project: Szereplő Lab Projekt
+      Sprite Properties: Sprite tulajdonságok
+      Sprite Scenes: Sprite helyzetek
+      Sprite Velocity: Sprite sebesség
+      Variables: változók
       Video: Videó
+      'Video: Conditionals': 'Video: feltételes utasítások'
+      'Video: For Loops': 'Videó: Ciklusok'
+      'Video: If/Else Statements': 'Video: feltételes utasítások'
+      'Video: Intro to CSS': 'Videó: bevezetés a CSS-be'
+      'Video: Intro to CSS Part 2': 'Videó: bevezetés a CSS-be, 2. rész'
+      'Video: Introduction to Arrays': 'Videó: bevezető a Tömbök-höz'
+      'Video: Introduction to Sprites': 'Videó: bevezető a sprite-okhoz'
+      'Video: Problem Solving Process': 'Videó: probléma-megoldási folyamat'
+      'Video: Sprite Movement': 'Videó: mozgó sprite'
+      'Video: Velocity': 'Videó: sebesség'
+      Where'd They Go?: Hová tűntek?
       Wrap-up: Összefoglaló

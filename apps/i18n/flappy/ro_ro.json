@@ -33,7 +33,7 @@
   "playSoundSplash": "redă sunet de stropire",
   "playSoundLaser": "redă sunet de laser",
   "playSoundTooltip": "Redă sunetul ales.",
-  "reinfFeedbackMsg": "Poţi apăsa butonul \"Încercaţi din nou\" pentru a reveni să joci jocul tău.",
+  "reinfFeedbackMsg": "Tu poţi apăsa butonul \"Încercaţi din nou\" pentru a reveni să joci jocul tău.",
   "scoreText": "Scor: {playerScore}",
   "setBackground": "setează scena",
   "setBackgroundRandom": "Setează decor Aleator",

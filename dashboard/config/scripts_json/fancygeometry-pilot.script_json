@@ -2,13 +2,13 @@
   "script": {
     "name": "fancygeometry-pilot",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:13 UTC",
+    "serialized_at": "2021-08-03 22:48:04 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "fancygeometry-pilot"
     }

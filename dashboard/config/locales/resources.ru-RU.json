@@ -1,0 +1,455 @@
+{
+  "ru-RU": {
+    "data": {
+      "resources": {
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Представляем Лабораторию спрайтов"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Представляем Лабораторию спрайтов"
+        },
+        "making_sprites/coursef/2021": {
+          "name": "Создание спрайтов"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Документация Лаборатории спрайтов"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "Спрайты в действии"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Игры с циклами"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Игры с циклами"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Игры с циклами"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Игры с циклами"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Игры с циклами"
+        },
+        "ai-ml/coursef/2021": {
+          "name": " Машинное обучение"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Интернет"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "интернет"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "интернет"
+        },
+        "get-site-ip-com/coursef/2021": {
+          "name": "получить-сайт-ip-com"
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": "Словарь курса \t"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Руководство по применению"
+        },
+        "lesson_type_guide/coursef/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide/coursef/2021": {
+          "name": "Руководство по отладке"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Руководство для учителя",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursef/2021": {
+          "name": "2021 Журнал изменений"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Форум учителей"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Документация Лаборатории спрайтов"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": " Следуйте по Цифровому следу"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "Цифровые следы: квадраты цифровых следов"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "name": "Цифровые следы: следы животных"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Вперед, вперед"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Вперед, вперед"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Вперед, вперед"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Двигай, двигай"
+        },
+        "jigsaw/courseb/2021": {
+          "name": "Практика перетаскивания"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Программирование в парах"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Стиви и Большой Проект"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "Незамеченные Баги"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Зацикливание"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Зацикливание"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Зацикливание"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Зацикливание"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Большое Событие"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "Большое Событие"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Большое Событие"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "Большое событие (курсы A, B)"
+        },
+        "course_vocabulary/courseb/2021": {
+          "name": "Словарь курса"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Руководство по применению"
+        },
+        "lesson_type_guide/courseb/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "Руководство по отладке"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Руководство для учителя"
+        },
+        "2021_change_log/courseb/2021": {
+          "name": "2021 Журнал изменений"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "Форум учителей"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Программирование в парах"
+        },
+        "20_20_20_rule/coursea/2021": {
+          "name": "Правило 20/20/20"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Весёлые карты"
+        },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "Правило 20/20/20"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Большое Событие"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Большое Событие"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Большое Событие"
+        },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "Большое событие (курсы A, B)"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "Словарь курса"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Руководство по применению"
+        },
+        "lesson_type_guide/coursea/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "Руководство по отладке"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Руководство для учителя"
+        },
+        "2021_change_log/coursea/2021": {
+          "name": "2021 Журнал изменений"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "Форум учителей"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Мои друзья роботы"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Мои друзья роботы"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Мои друзья роботы"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Мои друзья роботы"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Мои друзья роботы"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Программирование в парах"
+        },
+        "debugging_guide/coursec/2021": {
+          "name": "Руководство по отладке"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Большое Событие"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Большое Событие"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Большое Событие"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "Большое событие (курс В)"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Двоичные браслеты"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Двоичные браслеты"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Двоичные браслеты"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Двоичные браслеты"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Двоичные браслеты"
+        },
+        "course_vocabulary/coursec/2021": {
+          "name": "Словарь курса"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Руководство по применению"
+        },
+        "lesson_type_guide/coursec/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "Руководство по отладке"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Руководство для учителя"
+        },
+        "2021_change_log/coursec/2021": {
+          "name": "2021 Журнал изменений"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "Форум учителей"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Программирование на бумаге в клеточку"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Программирование на бумаге в клеточку"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Программирование на бумаге в клеточку"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Программирование на бумаге в клеточку"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Программирование на бумаге в клеточку"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Программирование на бумаге в клеточку"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Программирование в парах"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Эстафетное программирование"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Эстафетное программирование"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Эстафетное программирование"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Эстафетное программирование"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Эстафетное программирование"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Эстафетное программирование"
+        },
+        "dance_party_unplugged/coursed/2021": {
+          "name": " Танцевальная вечеринка: оффлайн"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Условные выражения с картами"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Условные выражения с картами"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Условные выражения с картами"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Условные выражения с картами"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Условные выражения с картами"
+        },
+        "course_vocabulary/coursed/2021": {
+          "name": "Словарь курса"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Руководство по применению"
+        },
+        "lesson_type_guide/coursed/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "Руководство по отладке"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Руководство для учителя"
+        },
+        "2021_change_log/coursed/2021": {
+          "name": "2021 Журнал изменений"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Форум учителей"
+        },
+        "unplugged_maze_blocks/express/2021": {
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+        },
+        "pair_programming/express/2021": {
+          "name": "Программирование в парах"
+        },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Документация Лаборатории спрайтов"
+        },
+        "making_sprites/express/2021": {
+          "name": "Создание спрайтов",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Документация Лаборатории спрайтов"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "Спрайты в действии",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
+        },
+        "text_and_prompts/express/2021": {
+          "name": "Текст из запросы на ввод"
+        },
+        "variables_video/express/2021": {
+          "name": "Переменные"
+        },
+        "course_vocabulary_1/express/2021": {
+          "name": "Словарь курса"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Форум учителей"
+        },
+        "debugging_guide/express/2021": {
+          "name": "Руководство по отладке"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Программирование в парах"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "Правило 20/20/20"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "name": "Словарь курса"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "Форум учителей"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "Руководство по отладке"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Документация Лаборатории спрайтов"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": " Очень Цифровой Гражданин"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "name": "Этика распространения цифровой информации (видео)"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "Повороты и углы"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "Повороты и углы"
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "Функции офлайн: Написание песен"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": "Функции офлайн: Написание песен"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": "Функции офлайн: Написание песен"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": "Функции офлайн: Написание песен"
+        },
+        "course_vocabulary/coursee/2021": {
+          "name": "Словарь курса"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Руководство по применению"
+        },
+        "lesson_type_guide/coursee/2021": {
+          "name": "Руководство по типам занятий"
+        },
+        "debugging_guide/coursee/2021": {
+          "name": "Руководство по отладке"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Руководство для учителя"
+        },
+        "2021_change_log/coursee/2021": {
+          "name": "2021 Журнал изменений"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Форум учителей"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Документация Лаборатории спрайтов"
+        }
+      }
+    }
+  }
+}

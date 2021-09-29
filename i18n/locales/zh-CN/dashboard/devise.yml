@@ -18,8 +18,6 @@ zh-CN:
     mailer:
       confirmation_instructions:
         subject: "Code.org 确认说明"
-      reset_password_instructions:
-        subject: "Code.org 重置密码说明"
       unlock_instructions:
         subject: "解锁指令"
     omniauth_callbacks:

@@ -101,6 +101,14 @@ gl:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': visible
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': visible
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -129,6 +137,7 @@ gl:
             '"down"': abaixo
             '"right"': dereita
             '"space"': espazo
+            '"enter"': introduza
       gamelab_atTime:
         options:
           UNIT:
@@ -175,11 +184,23 @@ gl:
             '"left"': esquerda
             '"right"': dereita
             '"space"': espazo
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': dereita
+            '90': abaixo
+            '180': esquerda
+            '270': arriba
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': dereita
             '"left"': esquerda
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": triture
+            "'sound://category_digital/jump_7.mp3'": saltar
       gamelab_randColor:
         text: cor aleatoria
       gamelab_randomColor:
@@ -204,6 +225,10 @@ gl:
             '"x"': posición x
             '"y"': posición y
             '"speed"': velocidade
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -321,6 +346,11 @@ gl:
             '"a"': A
             '"s"': S
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': si
+            '"no"': non
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -334,9 +364,13 @@ gl:
         text: vire á esquerda
       RyanLab_turnRight:
         text: vire á dereita
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": cor
+      aalab_layoutSprites:
+        options:
+          FORMAT:
             '"random"': aleatorio
       binary_move:
         options:

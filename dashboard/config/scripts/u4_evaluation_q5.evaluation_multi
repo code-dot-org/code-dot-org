@@ -1,5 +1,5 @@
 name 'U4 evaluation q5’
 question ‘Have you had a chance to see the Explore Performance Task scoring guidelines that were released in November 2016?’
 answer ‘Yes! I\’m very familiar with the new Explore Task Rubric/scoring guidelines’
-answer ‘I checked out the old version, but haven\’t seen the updates’, weight: 1, stage_name: ‘Lessons 8 - 9: Practice PT’
-answer ‘I haven\’t looked at any Explore Task Rubrics’, weight: 2, stage_name: ‘Lessons 8 - 9: Practice PT’
+answer ‘I checked out the old version, but haven\’t seen the updates’, weight: 1, lesson_name: ‘Lessons 8 - 9: Practice PT’
+answer ‘I haven\’t looked at any Explore Task Rubrics’, weight: 2, lesson_name: ‘Lessons 8 - 9: Practice PT’

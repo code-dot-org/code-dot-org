@@ -378,7 +378,7 @@ sv:
           ger det ett namn, kallas det en funktion.
       4:
         text: Hej, jag heter Jess. När du programmerar med block använder du funktioner
-          om där finns en samling åtgärder du vill använda flera gånger. Du har till
+          om det finns en samling åtgärder du vill använda flera gånger. Du har till
           exempel skrivit kod för att skapa en kvadrat.
       5:
         text: 'Du kan definiera detta som en funktion kallad "skapa en kvadrat." '

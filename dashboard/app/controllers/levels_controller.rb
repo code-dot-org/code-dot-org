@@ -7,8 +7,8 @@ EMPTY_XML = '<xml></xml>'.freeze
 class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
-  before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :embed_level, :get_rubric]
+  before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric, :get_serialized_maze]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :embed_level, :get_rubric, :get_serialized_maze]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -47,6 +47,7 @@ class LevelsController < ApplicationController
     NetSim,
     Odometer,
     Pixelation,
+    Poetry,
     PublicKeyCryptography,
     StandaloneVideo,
     StarWarsGrid,
@@ -137,9 +138,7 @@ class LevelsController < ApplicationController
   def edit
     # Make sure that the encrypted property is a boolean
     @level.properties['encrypted'] = @level.properties['encrypted'].to_bool if @level.properties['encrypted']
-    scripts = @level.script_levels.map(&:script)
-    @visible = scripts.reject(&:hidden).any?
-    @pilot = scripts.select(&:pilot_experiment).any?
+    @in_script = @level.script_levels.any?
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
     fb = FirebaseHelper.new('shared')
     @dataset_library_manifest = fb.get_library_manifest
@@ -156,6 +155,14 @@ class LevelsController < ApplicationController
       performanceLevel3: @level.rubric_performance_level_3,
       performanceLevel4: @level.rubric_performance_level_4
     }
+  end
+
+  # GET /levels/:id/get_serialized_maze
+  # Get the serialized_maze for the level, if it exists.
+  def get_serialized_maze
+    serialized_maze = @level.try(:get_serialized_maze)
+    return head :no_content unless serialized_maze
+    render json: serialized_maze
   end
 
   # GET /levels/:id/edit_blocks/:type
@@ -214,6 +221,7 @@ class LevelsController < ApplicationController
     blocks_xml = params[:program]
     type = params[:type]
     set_solution_image_url(@level) if type == 'solution_blocks'
+    blocks_xml = Blockly.remove_counter_mutations(blocks_xml)
     blocks_xml = Blockly.convert_toolbox_to_category(blocks_xml) if type == 'toolbox_blocks'
     @level.properties[type] = blocks_xml
     @level.log_changes(current_user)
@@ -282,7 +290,9 @@ class LevelsController < ApplicationController
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
     params[:user] = current_user
 
-    create_level_params = level_params
+    # safely convert params to hash now so that if they are modified later, it
+    # will not result in a ActionController::UnfilteredParameters error.
+    create_level_params = level_params.to_h
 
     # Give platformization partners permission to edit any levels they create.
     editor_experiment = Experiment.get_editor_experiment(current_user)
@@ -305,8 +315,14 @@ class LevelsController < ApplicationController
   # DELETE /levels/1
   # DELETE /levels/1.json
   def destroy
-    @level.destroy
-    redirect_to(params[:redirect] || levels_url)
+    result = @level.destroy
+    if result
+      flash.notice = "Deleted #{@level.name.inspect}"
+      redirect_to(params[:redirect] || levels_url)
+    else
+      flash.alert = @level.errors.full_messages.join(". ")
+      redirect_to(edit_level_path(@level))
+    end
   end
 
   def new

@@ -1,0 +1,30 @@
+name 'VPL - CSD - Module 7 - CI - U6L3_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 6 - Lesson 3:  The Circuit Playground
+**Estimated time: 20 minutes**
+
+
+
+
+## Investigation Goal
+
+**Identify how App Lab gets output from the Circuit Playground**
+
+## Investigation Tasks
+
+* Review the lesson plan, <a href="https://curriculum.code.org/csd-20/unit6/3/" target="_blank">Lesson 3: The Circuit Playground</a>
+	* Notice the "Warm Up" refers to the Circuit Playground board inspection
+    * Notice the "Activity" refers to connecting to the board and highlights the difference between hardware and software
+    * Watch the video: <a href="https://studio.code.org/s/csd6-2020/lessons/3/levels/2" target="_blank">How Computers Work: Hardware and Software </a>
+
+**Note**:  Activities requiring the Circuit Playground are not included in this asynchronous work. However, students will use the Circuit Playground as a part of Unit 6 Lesson 3. If you are interested in exploring this further, you can access those levels through the lesson plan linked above.
+
+<img src="https://images.code.org/f8dc5434a848c18c862d4fe0d77b62ab-image-1604422679971.png" style="display: block; margin-left: auto; margin-right: auto; height:30%; width:30%">
+
+
+><a href="https://code.org/circuitplayground" target="blank" rel="noopener noreferrer">CLICK HERE to learn more about purchasing and using the Circuit Playground </a>
+MARKDOWN

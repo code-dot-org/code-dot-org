@@ -639,6 +639,7 @@
   dashboard_middle_courses_desc: "Nasz program nauczania dla gimnazjum wykorzystuje informatykę i programowanie w kontekście matematyki i przyrody - jako narzędzie nauczania pojęć wywodzących się z matematyki i przyrody. Aby zarejestrować się na warsztaty rozwoju zawodowego, zgłoś się <a href=\"/educate/districts\"> do partnerstwa w Twoim okręgu</a> z Code.org."
   dashboard_high_courses: "Całoroczne kursy dla liceum"
   dashboard_high_courses_desc: "Nasz program dla szkół ponadgimnazjalnych pomaga przygotować pracujących nauczycieli do prowadzenia zajęć z informatyki przez cały rok. Aby zarejestrować się na warsztaty rozwoju zawodowego, zgłoś się <a href=\"/educate/districts\"> do partnerstwa w Twoim okregu</a> z Code.org."
+  dashboard_course_csina: "Informatyka w algebrze"
   dashboard_course_csina_desc: "Code.org współpracuje z Bootstrap przy opracowaniu programu nauczania, który uczy pojęć algebraicznych i geometrycznych z wykorzystaniem programowania."
   dashboard_course_csins: "Informatyki w przyrodzie"
   dashboard_course_csins_desc: "Code.org współpracuje z Project GUTS przy wprowadzeniu pojęć informatycznych z wykorzystaniem modelowania i symulacji."
@@ -981,12 +982,14 @@
   coursed-2020_name: Kurs D (2020)
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
+  coursed-2021_name: Kurs D (2021)
   express-2018_name: Szybki Kurs (2018)
   pre-express-2018_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2018)
   express-2019_name: Kurs ekspresowy (2019)
   pre-express-2019_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2019)
   express-2020_name: Kurs ekspresowy (2020)
   pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
+  pre-express-2021_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2021)
   csd2_name: 'Jednostka 2: Tworzenie stron'
   csd3_name: 'Jednostka 3: Animacje i gry'
   accelerated_name: "Przyspieszony kurs"
@@ -1225,6 +1228,12 @@
   coursed-2020_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie cyfrowym.
   coursee-2020_shortdescription_congrats: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
   coursef-2020_shortdescription_congrats: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
+  coursea-2021_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
+  courseb-2021_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
+  coursec-2021_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji, pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+  coursed-2021_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie cyfrowym.
+  coursee-2021_shortdescription_congrats: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
+  coursef-2021_shortdescription_congrats: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
   codeorg_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   codeintl_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1521,7 +1530,7 @@
   user_header_applab: 'App Lab '
   user_header_artist: 'Artysta '
   user_header_gamelab: "Laboratorium Gier (Game Lab)"
-  user_header_playlab: "Play Lab"
+  user_header_playlab: "Lab Gier"
   user_header_dance: "Potańcówka"
   user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"
@@ -1738,3 +1747,50 @@
   footer_store: "Skład"
   footer_support: "Wsparcie"
   footer_terms: "Warunki"
+  ai_for_oceans: "AI dla oceanów"
+  ai_for_oceans_lesson_plan: "plan lekcji"
+  ai_for_oceans_tile_description: "Pomóż A.I. oczyść oceany, ucząc go wykrywania śmieci! Dowiedz się o danych treningowych i uprzedzeniach oraz o tym, jak sztuczna inteligencja może zajmować się problemami świata. Widok "
+  how_ai_works: "Jak działa AI"
+  how_ai_works_tile_description: "Dowiedzieć się, jak działa sztuczna inteligencja i dlaczego jest to ważne, dzięki tej serii krótkich filmów. Z udziałem CEO firmy Microsoft Satya Nadella i innych ekspertów. "
+  watch_the_videos: "Obejrzyj wideo"
+  ai_and_ethics: "AI i etyka "
+  ai_and_ethics_tile_description: "Uczniowie zastanawiają się nad etycznymi konsekwencjami sztucznej inteligencji, a następnie wspólnie tworzą zasób „Kodeks etyczny AI” dla twórców i prawodawców sztucznej inteligencji na całym świecie. "
+  view_lesson_plan: "Zobacz plan Lekcji"
+  ai_in_partnership_with: "W partnerstwie z: "
+  ai_microsoft_thanks: "Dziękujemy Microsoft za wspieranie naszej wizji i misji, aby zapewnić, że każde dziecko ma możliwość nauki informatyki i umiejętności, by odnieść sukces w XXI wieku."
+  ai_ethics_panel_header: "Panel dyskusyjny Badanie etyki AI"
+  ai_ethics_panel_description_1: "Wejdź głębiej z niektórymi z naszych ulubionych ekspertów AI! Ta dyskusja panelowa porusza ważne kwestie, takie jak zwodniczość algorytmów i przyszłość pracy. Połącz to z naszym "
+  ai_ethics_lesson_plan: "Plan lekcji AI i etyka"
+  ai_ethics_panel_description_2: "świetne wprowadzenie do etyki sztucznej inteligencji! "
+  cs_for_good: "Informatyka na dobre"
+  cs_for_good_tile_description: "Zasoby, które mają zainspirować uczniów do głębokiego przemyślenia roli, jaką może odegrać informatyka w tworzeniu bardziej sprawiedliwego i zrównoważonego świata. "
+  view_resources: "Zobacz zasoby"
+  imagine_cup_junior: "Imagine Cup Junior"
+  imagine_cup_junior_tile_description: "To globalne wyzwanie AI  na Dobre wprowadza uczniów w inicjatywy Microsoft AI na Dobre, umożliwiając im rozwiązanie problemu na świecie dzięki potędze sztucznej inteligencji. "
+  ai_activity: "Aktywność"
+  ai_description: "Opis"
+  ai_seeing_ai: "Widząc AI"
+  ai_seeing_ai_description: "Darmowa aplikacja, która opowiada o świecie wokół Ciebie w różnych językach."
+  ai_quick_draw: "Szybko, Wyciągnij!"
+  ai_quick_draw_description: "Czy sieć neuronowa może nauczyć się rozpoznawać gryzmoły?"
+  ai_teachable_machine: "Pojętna maszyna"
+  ai_teachable_machine_description: "Naucz komputer rozpoznawać Twoje własne obrazy, dźwięki oraz pozy."
+  ai_google: "Eksperymenty AI z Google"
+  ai_google_description: "Rozpocznij poznawanie uczenia maszynowego poprzez obrazy, rysunki, język, muzykę i wiele innych."
+  ai_zooniverse: "Zooniverse - Snapshot Mountain Zebra"
+  ai_zooniverse_description: "Pomóż chronić zagrożoną zebrę górską, rozpoznając różne zwierzęta na zdjęciach."
+  ai_audience: "Odbiorcy"
+  ai_minecraft_description: 'Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu nauczania informatyki i szkoleń dla nauczycieli. (Wymaga Minecraftu: Education Edition)'
+  ai_k_12_audience: "K-12 (Wymaga czytania)"
+  ai_microsoft_workshop: "Bezpłatne wirtualne warsztaty firmy Microsoft "
+  ai_microsoft_workshop_description: "Rozpalaj ciekawość dzięki darmowym warsztatom STEM i kodowania."
+  ai_machine_learning_for_kids: "Uczenie maszynowe dla dzieci"
+  ai_machine_learning_for_kids_description: "Wytrenuj model uczenia maszynowego za pomocą tekstu, liczb lub obrazów i używaj go do tworzenia gier w Scratch. "
+  ai_ibm_machine_learning_for_kids: 'IBM: Uczenie maszynowe dla dzieci'
+  ai_ecs: 'ECS: Sztuczna inteligencja (AI)'
+  ai_ecs_description: "Nowa alternatywna jednostka programowa dla programu nauczania Odkrywanie Informatyki (ECS)."
+  ai_elements: "Elementy sztucznej inteligencji (AI)"
+  ai_elements_description: "Seria bezpłatnych kursów online utworzonych przez Reaktor i Uniwersytet Helsiński."
+  ai_cognimates: "Cognimates"
+  ai_cognimates_description: "Platforma edukacyjna AI do tworzenia gier, programowania robotów i szkolenia."
+  ai_try_activity: "Spróbuj aktywności"

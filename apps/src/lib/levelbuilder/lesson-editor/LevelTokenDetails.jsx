@@ -28,10 +28,11 @@ class LevelTokenDetails extends Component {
     scriptLevel: scriptLevelShape.isRequired,
     activitySectionPosition: PropTypes.number.isRequired,
     activityPosition: PropTypes.number.isRequired,
+    inactiveLevelNames: PropTypes.arrayOf(PropTypes.string),
 
     //redux
     setScriptLevelField: PropTypes.func.isRequired,
-    lessonExtrasAvailableForScript: PropTypes.bool
+    lessonExtrasAvailableForUnit: PropTypes.bool
   };
 
   handleCheckboxChange = field => {
@@ -51,6 +52,7 @@ class LevelTokenDetails extends Component {
       tooltipIds[option] = _.uniqueId();
     });
     const scriptLevelOptions = ['bonus', 'assessment', 'challenge'];
+    const inactiveLevelNames = this.props.inactiveLevelNames || [];
 
     return (
       <div style={styles.levelTokenActive}>
@@ -70,7 +72,7 @@ class LevelTokenDetails extends Component {
                 disabled={
                   option === 'bonus' &&
                   !this.props.scriptLevel[option] &&
-                  !this.props.lessonExtrasAvailableForScript
+                  !this.props.lessonExtrasAvailableForUnit
                 }
               />
               &nbsp;
@@ -78,7 +80,7 @@ class LevelTokenDetails extends Component {
               <ReactTooltip id={tooltipIds[option]} delayShow={500}>
                 <div style={styles.tooltip}>
                   {option === 'bonus' &&
-                  !this.props.lessonExtrasAvailableForScript
+                  !this.props.lessonExtrasAvailableForUnit
                     ? !this.props.scriptLevel[option]
                       ? disabledBonusTooltipText
                       : bonusAlreadySelectedTooltipText
@@ -88,6 +90,12 @@ class LevelTokenDetails extends Component {
             </label>
           ))}
         </span>
+        {inactiveLevelNames.length > 0 && (
+          <div>
+            inactive variants:&nbsp;
+            {inactiveLevelNames.map(key => `"${key}"`).join(', ')}
+          </div>
+        )}
       </div>
     );
   }
@@ -121,7 +129,7 @@ export const UnconnectedLevelTokenDetails = LevelTokenDetails;
 
 export default connect(
   state => ({
-    lessonExtrasAvailableForScript: state.lessonExtrasAvailableForScript
+    lessonExtrasAvailableForUnit: state.lessonExtrasAvailableForUnit
   }),
   {
     setScriptLevelField

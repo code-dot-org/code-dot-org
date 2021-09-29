@@ -3,13 +3,18 @@ sl:
   data:
     variable_names:
       actor: igralec
+      age: starost
+      answer: odgovor
+      binary: binarno
       cats: muce
+      color: barva
       counter: števec
       dogs: kužki
       height: višina
       honey: med
       left: levo
       length: dolžina
+      level: stopnja
       name: ime
       nectar: nektar
       points: točk

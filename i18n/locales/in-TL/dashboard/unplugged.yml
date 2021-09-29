@@ -253,15 +253,6 @@ in:
       courseF_unplugged_songwritingParameters:
         title: crwdns88674:0crwdne88674:0
         desc: 'crwdns88675:0crwdne88675:0'
-      swipeRightPassThrough:
-        title: crwdns93141:0crwdne93141:0
-        desc: "crwdns93142:0crwdne93142:0"
-      swipeRightPassThrough-test123:
-        title: crwdns93143:0crwdne93143:0
-        desc: "crwdns93144:0crwdne93144:0"
-      brad-repro-bug-000:
-        title: crwdns93145:0crwdne93145:0
-        desc: "crwdns93146:0crwdne93146:0"
       courseB_unplugged_MRF_2018:
         title: crwdns112003:0crwdne112003:0
         desc: crwdns112004:0crwdne112004:0
@@ -418,9 +409,6 @@ in:
       PaperPlanes_2019:
         title: 'crwdns390774:0crwdne390774:0'
         desc: crwdns390776:0crwdne390776:0
-      test-uid-passthrough:
-        title: 'crwdns391584:0crwdne391584:0'
-        desc: "crwdns391586:0crwdne391586:0"
       PlantASeed_2019:
         title: 'crwdns394102:0crwdne394102:0'
         desc: crwdns394104:0crwdne394104:0
@@ -460,6 +448,6 @@ in:
       timeforcs_demo_conditionals:
         title: crwdns404342:0crwdne404342:0
         desc: crwdns404344:0crwdne404344:0
-      TheRightApp_2019:
-        title: crwdns404346:0crwdne404346:0
-        desc: "crwdns404348:0crwdne404348:0"
+      SP-VPL-CSD-21-CourseNavigation:
+        title: crwdns2628040:0crwdne2628040:0
+        desc: crwdns2628042:0crwdne2628042:0

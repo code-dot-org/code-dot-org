@@ -6,82 +6,82 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# จะทำอย่างไรให้สื่อหันมาสนใจกิจกรรมชั่วโมงเขียนโค้ดของคุณ
 
-### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
+### จุดความสนใจให้กับกิจกรรมชั่วโมงเขียนโค้ด และเชิญสื่อในพื้นที่มาร่วมหาคำตอบว่าเหตุใดโรงเรียนจึงให้ความสำคัญกับวิทยาการคอมพิวเตอร์
 
-*For all press and media inquiries, contact <press@code.org>*
+*ในกรณีที่สำนักข่าวและสื่อมีคำถาม โปรดติดต่อ <press@code.org>*
 
 * * *
 
-## Key Tips
+## เคล็ดลับที่สำคัญ
 
-- Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-- Ask a school staff member or volunteer to take photos to share online or send to press.
-- Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- ส่งอีเมลแจ้งสื่อต่าง ๆ ให้ทราบถึงกิจกรรมนี้ก่อนล่วงหน้า 2 สัปดาห์ ก่อนส่งอีเมลติตตามหรือติดต่อทางโทรศัพท์ในกรณีที่คุณไม่ได้รับคำตอบรับหรือปฏิเสธ
+- ขอเจ้าหน้าที่ของโรงเรียนหรืออาสาสมัครถ่ายรูปเพื่อแชร์บนโลกออนไลน์หรือส่งให้กับสำนักข่าว
+- เขียนถึงกิิจกรรมชั่วโมงเขียนโค้ดลงบนหน้าแรกของเว็บไซต์ของคุณ หรือในหนังสือพิมพ์ของโรงเรียน ก่อนโพสต์รายละเอียดของกิจกรรม พร้อมรูปภาพนักเรียนขณะทำกิจกรรม
+- แชร์แผนการล่าสุดของคุณ ประกาศเรื่องกิจกรรมนี้และโพสต์รูปภาพในระหว่าง {{ campaign_date/year }} บน Facebook และ Twitter ติดแฮชแท็ก **#ชั่วโมงเขียนโค้ด** เพื่อให้ Code.org มองเห็นและช่วยโปรโมทกิจกรรมของคุณ
 
-## Step-by-step guide
+## คำแนะนำทีละขั้นตอน
 
-### 1. Plan your event
+### 1. วางแผนจัดกิจกรรม
 
-- Plan an assembly to kick off the Hour of Code.
-- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
-- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
-- Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
+- จัดประชุมเพื่อเริ่มต้นกิจกรรมชั่วโมงเขียนโค้ด
+- ส่ง[จดหมาย]({{ promote/sample_emails }})ถึงผู้ปกครองนักเรียนและขอให้ช่วยประชาสัมพันธ์
+- ส่ง[จดหมาย]({{ promote/sample_emails }})เชิญนายกเทศมนตรีในพื้นที่ สมาชิกสภาคองเกรส ผู้ว่าราชการ หรือนักธุรกิจผู้ทรงอิทธิพลมาร่วมงานและให้ข้อคิดแก่นักเรียน
+- จัดกิจกรรมของกลุ่ม (เช่น การสาธิตกิจกรรมการเขียนโปรแกรมแบบ ‘ออฟไลน์’) หรือจัดกิจกรรมที่คิดและนำโดยนักเรียน
+- เปิด[วิดีโอชั่วโมงเขียนโค้ด]({{ urls/home }})ของ Code.org หรือหนึ่งใน[วิดีโอเหล่านี้]({{ promote/videos }})เพื่อสร้างแรงบันดาลใจให้กับนักเรียน <br />
 
-### 2. Identify specific reporters that cover education or local events
+### 2. มอบหมายให้ผู้สื่อข่าวรายงานกิจกรรมวิชาการหรือกิจกรรมในพื้นที่
 
-Like local newspapers, TV station or radio stations, or blogs. <br />
+เช่น หนังสือพิมพ์ สถานีโทรทัศน์หรือสถานีวิทยุท้องถิ่น หรือบล็อกต่าง ๆ <br />
 
-### 3. Contact local media
+### 3. ติดต่อสื่อในท้องที่
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+วิธีติดต่อที่ดีที่สุดคืออีเมล อีเมลควรกระชับและตอบคำถามที่ว่า "เหตุใดทุกคนควรสนใจกิจกรรมนี้" รวมข้อมูลติดต่อ (และหมายเลขโทรศัพท์มือถือ) ของผู้ที่จะอยู่ประจำการภายในงาน **[ดูตัวอย่างการเขียนรายละเอียดเพื่อแจ้งสื่อ]({{ promote/press-kit-emails }})**
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+ค้นหาข้อมูลติดต่อผู้สื่อข่าวจากอินเทอร์เน็ต หากไม่พบ ให้โทรติดต่อสำนักข่าวโดยตรงหรือส่งอีเมลไปยังที่อยู่อีเมลปกติขององค์กรและแจ้งว่าต้องการให้ส่งต่อข้อความไปยังผู้สื่อข่าวที่ดูแลงานสายนี้ <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. เตรียมคำถามภาคสนามที่เกี่ยวข้องกับกิจกรรมในโรงเรียนของคุณ ดูตัวอย่างได้จากด้านล่างนี้:
 
-#### Why is your school doing an Hour of Code?
+#### เหตุใดโรงเรียนของคุณจึงจัดกิิจกรรมชั่วโมงเขียนโค้ด
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+เราทุกคนทราบว่า นักเรียนจำเป็นต้องศึกษาวิธีท่องโลกปัจจุบันที่มีเทคโนโลยีอยู่ทุกทิศทุกทาง แต่ผู้สอนจำนวนมากไม่เคยรู้จักวิทยาการคอมพิวเตอร์และไม่ทราบว่าจะเริ่มต้น ณ จุดใด กิิจกรรมนี้คือการเปิดโอกาสให้เราทุกคนได้เห็นว่าวิทยาการคอมพิวเตอร์เป็นเรื่องของอะไร
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages. <br /> <br />
+เราหวังว่ากิจกรรมนี้จะกระตุ้นให้นักเรียนศึกษาเรื่องนี้ต่อไป งานวิจัยยังชี้ให้เห็นว่า เด็กเล็กจะเข้าใจแนวคิดเรื่องการเขียนโปรแกรมได้ก่อนรู้จักวิธีอ่านและเขียนด้วยซ้ำ ซึ่งจริง ๆ แล้ว สมองของพวกเขาเปิดรับภาษาของคอมพิวเตอร์ได้ตั้งแต่วัยเด็ก เหมือนกับภาษาต่างประเทศ <br /> <br />
 
-#### Why is this important?
+#### เหตุใดวิทยาการคอมพิวเตอร์จึงมีความสำคัญ
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br />
+เทคโนโลยีกำลังเปลี่ยนแปลงอุตสาหกรรมทุกแขนงบนโลกใบนี้ ในปี 2015 มีงาน 7 ล้านตำแหน่งเปิดรับสมัครในสหรัฐฯ รวมถึงในสาขาวิชาต่าง ๆ เช่น ศิลปะและงานออกแบบ ที่ให้คุณค่ากับทักษะการเขียนโค้ด แต่ 60% ของโรงเรียนในสหรัฐฯ ไม่สอนวิชาวิทยาการคอมพิวเตอร์ ถึงเวลาที่เราต้องก้าวให้ทันศตวรรษที่ 21 กันแล้ว สิ่งที่เราทราบคือ ไม่ว่านักเรียนจะทำอาชีพอะไรเมื่อโตขึ้น ไม่ว่าจะเป็นหมอ นักธุรกิจ เล่นการเมือง หรือทำงานศิลปะ แต่ถ้าพวกเขารู้จักวิธีสร้างเทคโนโลยี พวกเขาก็จะมีความเชื่อมั่นและเป็นที่ต้องการตัว <br />
 
 <a id="sample-emails"></a>
 
-## Sample email to send to invite local media to your event
+## ตัวอย่างเทียบเชิญสื่อในท้องที่ในรูปอีเมล
 
-**Subject line**: Local school joins mission to introduce students to computer science
+**ชื่อเรื่อง**: โรงเรียนในพื้นที่ร่วมเป็นหนึ่งในผู้สานต่อภารกิจแนะนำนักเรียนสู่วิทยาการคอมพิวเตอร์
 
-คอมพิวเตอร์มีอยู่ทุกที่ เปลี่ยนแปลงทุกอุตสาหกรรมบนโลกใบนี้ แต่โรงเรียนน้อยกว่าครึ่งหนึ่งของโรงเรียนทั้งหมดเปิดสอนวิชาวิทยาการคอมพิวเตอร์ Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. ข่าวดีคือ พวกเรากำลังจะเปลี่ยนแปลงสิ่งนี้
+คอมพิวเตอร์มีอยู่ทุกที่ เปลี่ยนแปลงทุกอุตสาหกรรมบนโลกใบนี้ แต่โรงเรียนน้อยกว่าครึ่งหนึ่งของโรงเรียนทั้งหมดเปิดสอนวิชาวิทยาการคอมพิวเตอร์ หญิงสาวและนักเรียนจากกลุ่มชายขอบและชนกลุ่มน้อยมีสัดส่วนต่ำมากในชั้นเรียนวิทยาการคอมพิวเตอร์ และในอุตสาหกรรมเทคโนโลยี ข่าวดีคือ พวกเรากำลังจะเปลี่ยนแปลงสิ่งนี้
 
-ด้วย Hour of Code วิชาวิทยาการคอมพิวเตอร์ได้อยู่บนหน้าหลักของ Google, MSN, Yahoo!, และ Disney มากกว่า 100 หุ้นส่วนได้ร่วมกันสนับสนุนการเคลื่อนไหวนี้ Apple Store ทุกแห่งในโลกได้จัดงาน Hour of Code แล้ว แม้แต่ประธานาธิบดี Obama ก็ได้เขียนโปรแกรมบรรทัดแรกของเขาเป็นส่วนหนึ่งของการรณรงค์นี้
+ต้องขอบคุณกิจกรรมชั่วโมงเขียนโค้ด ที่ทำให้วิชาวิทยาการคอมพิวเตอร์ได้อยู่บนหน้าแรกของ Google, MSN, Yahoo!, และ Disney มากกว่า 100 หุ้นส่วนได้ร่วมกันสนับสนุนการเคลื่อนไหวนี้ Apple Store ทุกแห่งในโลกได้จัดกิจกรรมชั่วโมงเขียนโค้ดแล้ว แม้แต่อดีตประธานาธิบดีโอบามาก็ได้เขียนโปรแกรมบรรทัดแรกของเขา เพื่อให้เป็นส่วนหนึ่งของการรณรงค์นี้
 
-ทั้งหมดนั้นคือเหตุผลที่นักเรียนทุกคน [จำนวน X คน] ที่ [SCHOOL NAME] มาเข้าร่วมกิจกรรมการเรียนรู้ที่ใหญ่ที่สุดในประวัติศาสตร์: Hour of Code ในระหว่างสัปดาห์การศึกษาเรื่องวิทยาศาสตร์คอมพิวเตอร์ (3-9 ธันวาคม)
+ทั้งหมดนั้นคือเหตุผลที่นักเรียนทุกคน [จำนวน X คน] ที่ [ชื่อโรงเรียน] มาเข้าร่วมกิจกรรมการเรียนรู้ที่ใหญ่ที่สุดในประวัติศาสตร์: ชั่วโมงเขียนโค้ดในระหว่างสัปดาห์วิชาการวิทยาการคอมพิวเตอร์ (3-9 ธันวาคม)
 
-ฉันเขียนมาเพื่อเชิญชวนคุณให้เข้าร่วมการประชุมเริ่มต้นของเรา และมาดูเด็กๆเริ่มกิจกรรมในวันที่ [DATE]
+เราขอเชิญชวนคุณให้เข้าร่วมการประชุมเตรียมความพร้อมของเรา และมาดูเด็ก ๆ ทำกิจกรรมนี้ในวันที่ [DATE]
 
-Hour of Code จัดโดยองค์กรไม่หวังผลกำไร Code.org และอีกกว่า 100 องค์กร เป็นการเคลื่อนไหวระดับโลกที่เชื่อว่านักเรียนในวันนี้พร้อมแล้วที่จะเรียนรู้ทักษะสำหรับความสำเร็จในศตวรรษที่ 21 โปรดร่วมกับเรา
+กิจกรรมชั่วโมงเขียนโค้ดที่จัดขึ้นโดยองค์กรไม่แสวงหาผลกำไร รวมถึง Code.org และอีกกว่า 100 องค์กร เป็นการเคลื่อนไหวระดับโลกที่เชื่อว่านักเรียนในวันนี้พร้อมแล้วที่จะเรียนรู้ทักษะที่สำคัญต่อความสำเร็จในศตวรรษที่ 21 โปรดร่วมกับเรา
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+ติดต่อ: [ชื่อของคุณ], [ตำแหน่ง], โทรศัพท์มือถือ: (212) 555-5555 วันเวลา: [วันที่และเวลาที่จัดกิจกรรม] สถานที่: [ที่อยู่และเส้นทาง]
 
-I look forward to being in touch. <br />
+หวังว่าจะได้รับการติดต่อกลับในเร็ว ๆ นี้<br />
 
-## Additional details and a quote you can use in materials
+## รายละเอียดเพิ่มเติมและคำพูดที่คุณนำมาใช้ประกอบเนื้อหาได้
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"กิจกรรมชั่วโมงเขียนโค้ดจัดขึ้นมาเพื่อสร้างความกระจ่างในเรื่องโค้ด และแสดงให้เห็นว่าวิทยาการคอมพิวเตอร์ไม่ได้เรื่องยากอะไรมากมาย และใคร ๆ ก็สามารถเรียนรู้พื้นฐานได้" นี่คือคำกล่าวของ Hadi Partovi ผู้ก่อตั้งและซีอีโอ Code.org "นักเรียนกว่า 100 ล้านคนทั่วโลกได้ลองกิจกรรมชั่วโมงเขียนโค้ด มีความต้องการศึกษาเรื่องวิทยาการคอมพิวเตอร์ในศตวรรษที่ 21 กันทั่วทุกแห่งหน โดยไม่มีพรมแดนขวางกั้น" <br /> <br />
 
-#### About Code.org
+#### เกี่ยวกับ Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org คือองค์กรไม่แสวงหากำไรตามมาตรา 501c3 แห่งประมวลรัษฎากรของสหรัฐฯ ที่มุ่งเพิ่มระดับการมีส่วนร่วมในวิทยาการคอมพิวเตอร์ และการมีส่วนร่วมในหมู่หญิงสาวและนักเรียนจากกลุ่มด้อยความสำคัญ วิสัยทัศน์ขององค์กรคือเปิดโอกาสให้นักเรียนทุกคนจากทุกโรงเรียนได้เรียนรู้วิธีการเขียนโปรแกรมคอมพิวเตอร์ หลังจากเปิดตัวในปี 2013, Code.org ได้จัดแคมเปญชั่วโมงเขียนโค้ดขึ้นมา – แคมเปญนี้คือการแนะนำนักเรียนกว่า 100 ล้านคนให้รู้จักกับวิทยาการคอมพิวเตอร์ ณ ปัจจุบัน – และยังได้จับมือกับเขตการศึกษาภาครัฐอีก 70 เขตทั่วประเทศเพื่อขยายโปรแกรมวิทยาการคอมพิวเตอร์ของตน Code.org ได้รับการสนับสนุนจากกลุ่มผู้บริจาคใจบุญไม่ว่าจะเป็นบริษัท มูลนิธิและบุคคลต่าง ๆ เช่น Microsoft, Facebook, Infosys Foundation USA, Amazon และอื่น ๆ หากต้องการรายละเอียดเพิ่มเติม โปรดคลิกที่: [code.org]({{ urls/codeorg }})
 
   
-Find more resources and sample emails [here]({{ promote/sample_emails }}).
+หากต้องการแหล่งข้อมูลและอีเมลตัวอย่างเพิ่มเติม คลิก[ที่นี่]({{ promote/sample_emails }})
 
 {{ signup_button }}

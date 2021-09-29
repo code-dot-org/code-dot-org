@@ -2,7 +2,6 @@
   "script": {
     "name": "csp6",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "student_detail_progress_view": true,
@@ -13,7 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:49 UTC",
+    "serialized_at": "2021-08-03 22:46:57 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "csp6"
     }
@@ -171,7 +171,6 @@
         ],
         "progression": "U6 AP Performance Task Tech Setup - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -196,7 +195,6 @@
         ],
         "progression": "U6 Create PT Review - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -221,7 +219,6 @@
         ],
         "progression": "U6 Create PT - Make a Plan - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -246,7 +243,6 @@
         ],
         "progression": "U6 Create PT - Complete the Task - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -271,7 +267,6 @@
         ],
         "progression": "U6 Explore PT Review - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -296,7 +291,6 @@
         ],
         "progression": "U6 Explore PT - Make a Plan - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -321,7 +315,6 @@
         ],
         "progression": "U6 Explore PT - Complete the Task - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -346,7 +339,6 @@
         ],
         "progression": "Click Here!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

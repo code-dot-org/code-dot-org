@@ -1,4 +1,4 @@
 name 'U5 evaluation q5’
 question 'How do you typically organize students in your classes?'
-answer 'Students usually work independently', weight: 1, stage_name: 'Group Work and Peer Learning'
-answer 'Students usually work in small groups', weight: -1, stage_name: 'Group Work and Peer Learning'
+answer 'Students usually work independently', weight: 1, lesson_name: 'Group Work and Peer Learning'
+answer 'Students usually work in small groups', weight: -1, lesson_name: 'Group Work and Peer Learning'

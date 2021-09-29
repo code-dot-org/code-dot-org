@@ -1,0 +1,33 @@
+name 'VPL - CSD - Module 6 - CI - U5L9_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 5 - Lesson 9:  Problem Solving and Data  
+**Estimated time: 20 minutes**
+
+
+
+
+## Investigation Goal
+
+**Identify opportunities for students to use data to draw conclusions and solve problems**
+
+## Investigation Tasks
+
+* Review the "Overview", "Purpose", and "Assessment Opportunities" sections of the lesson plan, <a href="https://curriculum.code.org/csd-20/unit5/9/" target="_blank">Lesson 9: Problem Solving and Data</a>
+
+* Read "Solving a Data Problem" - Activity Guide Exemplar
+
+* Reflect on ways to modify the scenario to make it more relevant to the students in your classroom
+
+
+
+
+
+
+
+
+
+MARKDOWN

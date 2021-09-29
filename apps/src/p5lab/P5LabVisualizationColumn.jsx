@@ -27,7 +27,7 @@ import {
   selectLocation,
   updateLocation,
   isPickingLocation
-} from './spritelab/locationPickerModule';
+} from './redux/locationPicker';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
@@ -38,6 +38,7 @@ class P5LabVisualizationColumn extends React.Component {
     finishButton: PropTypes.bool.isRequired,
     pauseHandler: PropTypes.func.isRequired,
     hidePauseButton: PropTypes.bool.isRequired,
+    onPromptAnswer: PropTypes.func,
 
     // From redux
     isResponsive: PropTypes.bool.isRequired,
@@ -54,10 +55,6 @@ class P5LabVisualizationColumn extends React.Component {
     consoleMessages: PropTypes.array.isRequired,
     isRtl: PropTypes.bool
   };
-
-  constructor(props) {
-    super(props);
-  }
 
   // Cache app-space mouse coordinates, which we get from the
   // VisualizationOverlay when they change.
@@ -93,7 +90,7 @@ class P5LabVisualizationColumn extends React.Component {
     }
   };
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     // Use jQuery to turn on and off the grid since it lives in a protected div
     if (nextProps.showGrid !== this.props.showGrid) {
       if (nextProps.showGrid) {
@@ -189,7 +186,9 @@ class P5LabVisualizationColumn extends React.Component {
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
-          {isSpritelab && <SpritelabInput />}
+          {isSpritelab && (
+            <SpritelabInput onPromptAnswer={this.props.onPromptAnswer} />
+          )}
         </div>
 
         <GameButtons>

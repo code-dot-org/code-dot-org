@@ -37,7 +37,7 @@
     "fishshort-words-training-pause2": "よくできました！  A.I（人工知能）のトレーニングを続けるか、準備ができたら続行します。",
     "fishshort-predicting-init1": "トレーニングデータを使用して、魚という「{word}」を認識するようにA.I（人工知能）をプログラムしました。",
     "fishshort-predicting-init2": "A.I（人工知能）が魚という「{word}」を認識するか見てみましょう。",
-    "fishshort-pond-init1": "あなたのトレーニングに基づいて、  A.I（人工知能）は {n, plural,one {この} other {これらの}} 魚を 「{word}」で認識しました。 A.I（人工知能）はどのように行いましたか？結果を改善したい場合は、さらにトレーニングできます。\n",
+    "fishshort-pond-init1": "    結果を改善したい場合は、さらにトレーニングできます。",
     "fishshort-pond-init2": "情報ボタンをクリックすると、 A.I（人工知能）が学んだことを確認できます。",
     "fishlong-words-init1": "それでは、 A.I（人工知能）があまり明白でない単語を学習できるかを見てみましょう",
     "fishlong-words-init2": "あなたの意見による言葉を A.I（人工知能）に教えましょう。あなたの感覚で、言葉に合う魚を選んで下さい。",

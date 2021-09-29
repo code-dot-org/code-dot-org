@@ -1,0 +1,35 @@
+{
+  "my-MM": {
+    "data": {
+      "resources": {
+        "teacher_forum_1/coursef/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "variables_video/express/2021": {
+          "name": "Variables"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "ဆရာဖိုရမ်"
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,3 @@
-hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/express/standards"]]
 lesson_extras_available true
@@ -7,48 +6,24 @@ project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'pre-express'
 version_year '2020'
-is_stable true
+published_state 'stable'
 curriculum_umbrella 'CSF'
 tts true
 is_course true
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
 lesson 'Learn to Drag and Drop', display_name: 'Learn to Drag and Drop', has_lesson_plan: true
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:1'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:2'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:3'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:4'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:5'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:6'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:7'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:8'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:9'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:10'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:11'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12'
 
 lesson 'Sequencing with Scrat', display_name: 'Sequencing with Scrat', has_lesson_plan: true

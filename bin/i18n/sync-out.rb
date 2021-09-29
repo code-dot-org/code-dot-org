@@ -3,7 +3,7 @@
 # Distribute downloaded translations from i18n/locales
 # back to blockly-core, apps, pegasus, and dashboard.
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'cdo/languages'
 
 require 'cdo/crowdin/utils'
@@ -15,10 +15,10 @@ require 'parallel'
 require 'tempfile'
 require 'yaml'
 
+require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative 'hoc_sync_utils'
-require_relative '../../tools/scripts/ManifestBuilder'
+require_relative '../animation_assets/manifest_builder'
 
 def sync_out(upload_manifests=false)
   puts "Sync out starting"
@@ -28,6 +28,7 @@ def sync_out(upload_manifests=false)
   copy_untranslated_apps
   rebuild_blockly_js_files
   restore_markdown_headers
+  Services::I18n::CurriculumSyncUtils.sync_out
   HocSyncUtils.sync_out
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
   I18nScriptUtils.with_synchronous_stdout do
@@ -125,9 +126,9 @@ def restore_redacted_files
     ERR
   end
 
-  puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count} processes"
+  puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
-  Parallel.each(locales) do |prop|
+  Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
     locale = prop[:locale_s]
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
@@ -139,24 +140,30 @@ def restore_redacted_files
       translated_path = original_path.sub("original", locale)
       next unless File.file?(translated_path)
 
-      if original_path.include? "course_content"
+      if original_path == 'i18n/locales/original/dashboard/blocks.yml'
+        # Blocks are text, not markdown
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
+      elsif original_path.starts_with? "i18n/locales/original/course_content"
+        # Course content should be merged with existing content, so existing
+        # data doesn't get lost
         restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
         translated_data = JSON.parse(File.read(translated_path))
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
         end
       else
+        # Everything else is differentiated only by the plugins used
         plugins = []
-        if original_path == 'i18n/locales/original/dashboard/blocks.yml'
-          plugins << 'blockfield'
-        elsif [
+        if [
           'i18n/locales/original/dashboard/scripts.yml',
           'i18n/locales/original/dashboard/courses.yml'
         ].include? original_path
           plugins << 'resourceLink'
           plugins << 'vocabularyDefinition'
+        elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
+          plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
         end
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins, 'txt')
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
       end
 
       find_malformed_links_images(locale, translated_path)
@@ -310,9 +317,9 @@ end
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations(upload_manifests)
   locales = Languages.get_locale
-  puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count} processes"
+  puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
-  Parallel.each(locales) do |prop|
+  Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
     locale = prop[:locale_s]
     locale_dir = File.join("i18n/locales", locale)
     next if locale == 'en-US'
@@ -351,7 +358,7 @@ def distribute_translations(upload_manifests)
     ### Animation library
     spritelab_animation_translation_path = "/animations/spritelab_animation_library.json"
     if file_changed?(locale, spritelab_animation_translation_path)
-      @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true})
+      @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
       spritelab_animation_translation_file = File.join(locale_dir, spritelab_animation_translation_path)
       translations = JSON.load(File.open(spritelab_animation_translation_file))
       # Use js_locale here as the animation library is used by apps
@@ -382,13 +389,14 @@ def distribute_translations(upload_manifests)
 
     ### Pegasus markdown
     Dir.glob("#{locale_dir}/codeorg-markdown/**/*.*") do |loc_file|
-      relative_path = loc_file.delete_prefix(locale_dir)
+      relative_path = loc_file.delete_prefix("#{locale_dir}/codeorg-markdown")
       next unless file_changed?(locale, relative_path)
 
       destination_dir = "pegasus/sites.v3/code.org/i18n/public"
-      relative_dir = File.dirname(loc_file.delete_prefix("#{locale_dir}/codeorg-markdown"))
+      relative_dir = File.dirname(relative_path)
       name = File.basename(loc_file, ".*")
       destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
+      FileUtils.mkdir_p(File.dirname(destination))
       FileUtils.mv(loc_file, destination)
     end
 

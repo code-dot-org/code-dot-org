@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import React from 'react';
 import {mount} from 'enzyme';
-import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/script-editor/LessonExtrasEditor';
+import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExtrasEditor';
 import sinon from 'sinon';
 
 describe('LessonExtrasEditor', () => {

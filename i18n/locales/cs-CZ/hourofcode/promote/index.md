@@ -8,7 +8,7 @@ title: Rozšiřujte povědomí
 
 ## 1. Mluvte o tom
 
-Tell your friends about the **#HourOfCode**!
+Řekněte svým přátelům o** Hodině kódu**!
 
 {{ promote/share_buttons }}
 

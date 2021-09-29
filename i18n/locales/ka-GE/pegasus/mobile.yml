@@ -26,6 +26,7 @@
   twentyhours_heading: "სცადეთ ჩვენი პროგრამირების კურსი"
   twentyhours_text: "დაასრულეთ თქვენი პირველი კოდის ერთი საათი? გაიგეთ მეტი ინფორმატიკისა და პროგრამირების შესახებ მომდევნო კურსში."
   og_title: 'Code.org: სწავლა შეუძლია ყველას'
+  og_title_soon: "კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული"
   og_title_here: "კოდის ერთი საათი დაიწყო!"
   og_description: "ყოველი სკოლის ყოველ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა, ისწავლოს კომპიუტერული მეცნიერება. ის ყველაფერს ცვლის."
   csedweek_og_title: "კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული"
@@ -66,6 +67,7 @@
   congratulations: "გილოცავთ!"
   congratulations_on_completing_hoc: "გილოცავთ! კოდის ერთი საათი დასრულებულია"
   congratulations_volunteer: 'გილოცავთ:ახლა, როცა თქვენ უკვე სცადეთ კოდის ერთი საათი, <a href="https://code.org/volunteer">დარეგისტრირდით მოხლისედ თქვენს კლასში</a> და დაეხმარეთ მოსწავლეებს კოდის ერთი საათის სწავლაში!'
+  congratulations_on_completing_course: "გილოცავთ %{course} კურსის დასრულებას"
   congrats_next_tutorials_title: "შემდეგ სცადეთ ეს ტუტორიალები"
   congrats_next_tutorials_desc: "სცადეთ ეს უფრო მოკლე, ერთსაათიანი ტუტორიალები ან <a href=\"%{current_path}/next\">ჩვენი პარტნიორების ტუტორიალები</a>."
   get_a_certificate_of_achievement: "მიიღეთ სერტიფიკატი"
@@ -144,7 +146,13 @@
   thanks_for_submitting: "მადლობა, თქვენი მოთხოვნა მიღებულია!"
   if_you_enjoyed: "თუ მოგეწონათ სწავლა, შესთავაზეთ მეგობრებსაც! ჩვენ გვინდა, რომ მთელმა სამყარომ ისწავლოს პროგრამირება."
   personalize_certificate: "სერტიფიკატის პერსონიფიკაცია"
+  print_batch_certificates: "ამობეჭდეთ სერტიფიკატების დასტა"
   print_certificates: "სერტიფიკატის ამობეჭდვა"
+  print_ice_art_from_frozen: "ამობეჭდეთ ნახატები „გაყინულის“ ტუტორიალიდან"
+  want_a_blank_certificate_template: "ცარიელი სერტიფიკატი გინდათ, რომ ხელით ჩაწეროთ მოსწავლეების სახელები?"
+  landscape_recommended_certificates: "გირჩევთ ქაღალდის **ჰორიზონტალური ორიენტაცია** მიუთითოთ ამობეჭდვის დროს."
+  print_one_here_certificates: "აქედან ამობეჭდეთ."
+  enter_certificate_names: "ერთდროულად 30 სახელი შეგილიათ დაწეროთ, **თითო ხაზზე ერთი**. დააჭირეთ ღილაკს **სერტიფიკატის ამობეჭდვა** და გაიხსნება გვერდი საიდანაც შეძლებთ ამობეჭდოთ %{script_name} სერტიფიკატები."
   share_achievement: "მიღწევის გაზიარება"
   beyond_hour_message: "გააგრძელეთ ჩვენი <a href='http://studio.code.org'>სხვა კურსები</a> ან გაიგეთ, კიდევ როგორ შეგიძლითა <a href='/learn/beyond'>ისწავლოთ ერთი საათის დასრულების შემდეგ</a>."
   leaderboards_for_hoc: "კოდის ერთი საათის ლიდერთა დაფა."
@@ -266,6 +274,8 @@
   homepage_hero_text_stat_loc: "2.5 მილიონი გოგო სწავლობს კოდის სტუდიაში"
   homepage_hero_text_stat_students: "#student_count მოსწავლის ანგარიში კოდის სტუდიაში"
   homepage_hero_text_stat_served: 'კოდის ერთი საათი: #served–მა უკვე სცადა'
+  homepage_hero_hoc_is_coming: "კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული"
+  homepage_hero_hoc_is_here: "კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული"
   homepage_slot_text_hoc: "კოდის ერთი საათი"
   homepage_slot_text_frozen: "გაყინული ანასთან და ელზასთან ერთად"
   homepage_slot_text_teacher: "მასწავლებლის მართვის პანელი"
@@ -391,8 +401,8 @@
   mc_gradelevel: "ასაკი 6-106"
   mc_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
   mc_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6+"
-  minecraft_designer: "Minecraft-ის დიზაინერი"
-  minecraft_adventurer: "Minecraft-ის თავაგადასავლები"
+  minecraft_designer: "Minecraft დიზაინერი"
+  minecraft_adventurer: "Minecraft თავგადასავალი"
   minecraft_tutorials: "Minecraft-ის კოდის ერთი საათი: ტუტორიალები"
   minecraft_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | 2+ კლასი"
   minecraft_agent_button: "დაწყება"
@@ -401,8 +411,9 @@
   minecraft_adventurer_description: "გამოიყენეთ კოდი და შექმენით ალექსის ან სტივის თავგადასავალი."
   minecraft_adventurer_button: "დაწყება"
   minecraft_no_internet: "არ გაქვთ ინტერნეტი?"
-  minecraft_download_adventurer: "მაინკრაფთის ოფლაინ–ვერსიის გადმოწერა."
+  minecraft_download_adventurer: "Minecraft თავგადასავლის გადმოწერა."
   minecraft_subtitle: "Minecraft-ის კოდის ერთი საათი"
+  minecraft_og_designer: "Minecraft-ი დაბრუნდა ახალი აქტივობით კოდის ერთი საათისთვის. დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის საკუთარ სამყაროში."
   sports_page_title: "კოდის ერთი საათი: სპორტი"
   sports_og_title: "აჯობე საკუთარ თავს. სწავლა ყველას შეუძლია."
   sports_og_description: "ჩემპიონები და ოქროს მედლების მფლობელები მოგიწოდებენ, სცადო კოდის ერთი საათი. შექმენი საკუთარი სპორტული თამაში."
@@ -559,6 +570,7 @@
   dashboard_middle_courses_desc: "ჩვენი საშუალო სკოლის კურიკულუმი იყენებს ინფორმატიკასა და პროგრამირებას, როგორც მათემატიკისა და ზუსტი მეცნიერებების სწავლების საშუალებას. პროფესიული განვითარების ვორქშოპებზე რეგისტრაციისთვის, შეიტანეთ განცხადება <a href=\"/educate/districts\">თქვენს ოლქში</a> Code.org-ზე."
   dashboard_high_courses: "ერთწლიანი კურსები დამამთავრებელი კლასებისთვის"
   dashboard_high_courses_desc: "ჩვენი დამამთავრებელი კლასების პროგრამა ეხმარება სკოლებს გადაამზადონ მასწავლებლები და ასწავლონ ეს ახალი საგანი მთელი წლის მანძილზე. პროფესიული განვითარების ვორქშოპებზე რეგისტრაციისთვის, შეიტანეთ განცხადება <a href=\"/educate/districts\">თქვენს ოლქში</a> Code.org-ზე."
+  dashboard_course_csina: "ინფორმატიკა ალგებრაში"
   dashboard_course_csina_desc: "Code.org-ისა და Bootstrap-ის თანამშრომლობის შედეგად შემუშავდა კურიკულუმი, რომლითაც ალგებრა და გეომეტრია პროგრამირების დახმარებით ისწავლება."
   dashboard_course_csins: "ინფორმატიკა მეცნიერებაში"
   dashboard_course_csins_desc: "Code.org-ისა და Project GUTS-ის თანამშრომლობის შედეგად შემუშავდა შესავალი კურსი ინფორმატიკაში მოდელირებისა და სიმულაციის კონტექსტში."
@@ -865,6 +877,7 @@
   express-2018_name: დაჩქარებული კურსი
   accelerated_name: "დაჩქარებული კურსი"
   express_name: "დაჩქარებული კურსი"
+  pre-express_name: კითხვამდელთა ექსპრეს კურსი
   20-hour_name: დაჩქარებული კურსი
   algebra_name: "კომპიუტერული მეცნიერება ალგებრაში"
   AlgebraA_name: "CS ალგებრაში, კურსი A"
@@ -1075,6 +1088,9 @@
   coursea-2020_shortdescription_congrats: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
   courseb-2020_shortdescription_congrats: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
   coursec-2020_shortdescription_congrats: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
+  coursea-2021_shortdescription_congrats: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
+  courseb-2021_shortdescription_congrats: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
+  coursec-2021_shortdescription_congrats: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
   codeorg_longdescription: "ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით. ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები, თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე."
   codeintl_longdescription: "ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით. ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები, თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე."
   khan_longdescription: "ისწავლეთ JavaScript პროგრამირების საფუძვლები - ხატეთ კოდით. გააკეთეთ ეს დამოუკიდებლად - ან კლასთან ერთად!"
@@ -1328,6 +1344,8 @@
   header_legal_privacy: "კონფიდენციალურობის პოლიტიკა"
   header_legal_tos: "მომსახურების პირობები"
   header_tutorials: "ტუტორიალები"
+  header_screen_reader_hamburger: "მენიუ"
+  header_screen_reader_help: "დახმარების მენიუ"
   header_documentation: "დოკუმენტაცია"
   user_header_label: "გამარჯობა %{username}"
   user_header_team: "გუნდი"
@@ -1335,11 +1353,14 @@
   user_header_logout: "გასვლა"
   user_header_signin: "შესვლა"
   user_header_create: 'შექმნა '
+  user_header_applab: 'App Lab '
+  user_header_artist: 'მხატვარი '
   user_header_gamelab: "თამაშების ლაბი"
   user_header_playlab: "თამაშების ლაბი"
   user_header_dance: "ცეკვა"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  user_header_view_project_gallery: "დაათვალიერეთ პროექტის გალერეა"
   user_header_view_my_projects: "ჩემი პროექტების ნახვა"
   view_all_sections: "ყველა განყოფილების ნახვა"
   view_section: "განყოფილების ნახვა"
@@ -1368,13 +1389,13 @@
   hoc2018_creativity_courses_link: "გააგრძელეთ სწავლა <a href=\"https://studio.code.org/courses\">Code.org-ის კურსებით</a>"
   hoc2018_mc_page_title: "Minecraft-ის კოდის ერთი საათი: ტუტორიალები"
   hoc2018_mc_details: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | 2+ კლასი"
-  hoc2018_mc_designer_title: "Minecraft-ის დიზაინერი"
+  hoc2018_mc_designer_title: "Minecraft დიზაინერი"
   hoc2018_mc_designer_description: "დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის საკუთარ სამყაროში."
-  hoc2018_mc_adventurer_title: "Minecraft-ის თავაგადასავლები"
+  hoc2018_mc_adventurer_title: "Minecraft თავგადასავალი"
   hoc2018_mc_adventurer_description: "გამოიყენეთ კოდი და შექმენით ალექსის ან სტივის თავგადასავალი."
   hoc2018_mc_start: "დაწყება"
   hoc2018_mc_no_internet: "არ გაქვთ ინტერნეტი?"
-  hoc2018_mc_download_adventurer: "მაინკრაფთის ოფლაინ–ვერსიის გადმოწერა."
+  hoc2018_mc_download_adventurer: "Minecraft თავგადასავლის გადმოწერა."
   hoc2018_mc_educators_box2_button: "გადმოწერა"
   hoc2018_mc_watch_videos: "სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს"
   hoc2018_mc_videos_more: "მეტი <a href='%{inspiring_videos_playlist}'>შთამაგონებელი ვიდეო</a> ცნობადი სახეების მონაწილეობით"
@@ -1401,6 +1422,7 @@
   hoc2018_dance_teacher_resources_tile2_button: "აქტივობა უკომპიუტეროდ"
   hoc2018_dance_amazon_about_future_engineer_button: "გაიგეთ მეტი"
   hoc2018_dance_amazon_scholarship_programs_button: "მიიღეთ მონაწილეობა ახლავე"
+  page_not_found_title: "გვერდი არ მოიძებნა"
   footer_powered_by_aws: "შექმნილია Amazon Web Services დახმარებით"
   footer_privacy_policy: "კონფიდენციალურობის პოლიტიკა"
   footer_about: "გაიცანით"
@@ -1408,3 +1430,6 @@
   footer_donate: "შემოწირულობა"
   footer_support: "დახმარება და თემი"
   footer_terms: "პირობები"
+  ai_for_oceans_lesson_plan: "გაკვეთილის გეგმა"
+  ai_activity: "აქტივობა"
+  ai_description: "აღწერა"

@@ -28,8 +28,15 @@ class ProgrammingExpression < ApplicationRecord
 
   serialized_attrs %w(
     color
-    parameters
+    syntax
   )
+
+  KEY_CHAR_RE = /[A-Za-z0-9\-\_\.]/
+  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
+  validates_format_of :key,
+    presence: true,
+    with: KEY_RE,
+    message: "must only be letters, numbers, dashes, underscores, and periods. Got \"%{value}\""
 
   def self.properties_from_file(path, content)
     expression_config = JSON.parse(content)
@@ -37,13 +44,16 @@ class ProgrammingExpression < ApplicationRecord
     environment_name = File.basename(File.dirname(path)) == 'GamelabJr' ? 'spritelab' : File.basename(File.dirname(path))
     programming_environment = ProgrammingEnvironment.find_by(name: environment_name)
 
+    syntax = ProgrammingExpression.get_syntax(expression_config)
+
     if environment_name == 'spritelab'
       {
         key: expression_config['config']['docFunc'] || expression_config['config']['func'] || expression_config['config']['name'],
         name: expression_config['config']['func'] || expression_config['config']['name'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
-        color: expression_config['config']['color']
+        color: expression_config['config']['color'],
+        syntax: expression_config['config']['func'] || expression_config['config']['name']
       }
     else
       {
@@ -52,9 +62,22 @@ class ProgrammingExpression < ApplicationRecord
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         color: ProgrammingExpression.get_category_color(expression_config['category']),
-        parameters: expression_config['paletteParams']
+        syntax: syntax
       }
     end
+  end
+
+  def self.get_syntax(config)
+    syntax = config['func']
+    if config['syntax']
+      syntax = config['syntax']
+    elsif config['paletteParams']
+      syntax = config['func'] + "(" + config['paletteParams'].join(', ') + ")"
+    elsif config['block']
+      syntax = config['block']
+    end
+
+    syntax
   end
 
   def self.get_category_color(category)
@@ -130,6 +153,7 @@ class ProgrammingExpression < ApplicationRecord
       color: color,
       key: key,
       name: name,
+      syntax: syntax,
       link: documentation_path,
       programmingEnvironmentName: programming_environment.name,
       uniqueKey: [key, programming_environment.name].join('/')
@@ -137,6 +161,6 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def summarize_for_lesson_show
-    {name: name, color: color, parameters: parameters, link: documentation_path}
+    {name: name, color: color, syntax: syntax, link: documentation_path}
   end
 end

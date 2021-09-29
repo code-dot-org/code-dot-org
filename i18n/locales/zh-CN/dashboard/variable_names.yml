@@ -6,6 +6,8 @@ zh-CN:
       Green: 绿色
       Red: 红色
       actor: 角色
+      age: 年龄
+      answer: 回答
       armlength: 臂长
       binary: 二进制
       birds: 鸟
@@ -15,16 +17,21 @@ zh-CN:
       counter: counter
       direction: 方向
       dogs: 狗
+      energy: 能源
       height: 高度
       honey: 蜂蜜
       i: i
       left: 向左
       length: 长度
+      level: 级别
       name: 名称
       nectar: 花蜜
       nectars: 花蜜
+      planet: 星球
       points: 分数
       random: 随机
+      red1: 红色1
+      red2: 红色2
       repeat: 重复
       right: 向右
       score: 得分

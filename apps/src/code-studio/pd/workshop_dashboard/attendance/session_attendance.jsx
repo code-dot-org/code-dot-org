@@ -18,17 +18,6 @@ import {PermissionPropType, WorkshopAdmin, ProgramManager} from '../permission';
 const REFRESH_DELAY = 5000;
 const IDLE_TIMEOUT = 60000;
 
-const styles = {
-  idle: {
-    opacity: 0.5
-  },
-  attendanceSummary: {
-    fontFamily: 'Gotham 4r',
-    fontSize: 16,
-    margin: 15
-  }
-};
-
 export class SessionAttendance extends React.Component {
   static propTypes = {
     permission: PermissionPropType.isRequired,
@@ -80,7 +69,7 @@ export class SessionAttendance extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.sessionId !== this.props.sessionId) {
       this.load(nextProps);
       this.startRefreshInterval();
@@ -207,6 +196,17 @@ export class SessionAttendance extends React.Component {
     );
   }
 }
+
+const styles = {
+  idle: {
+    opacity: 0.5
+  },
+  attendanceSummary: {
+    fontFamily: 'Gotham 4r',
+    fontSize: 16,
+    margin: 15
+  }
+};
 
 export default connect(state => ({
   permission: state.workshopDashboard.permission

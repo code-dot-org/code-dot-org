@@ -46,7 +46,7 @@ Building on the previous Play Lab activity, students will add deeper interactivi
 
 
 ## Activity
-### <a name="Activity"></a> [Play Lab: For Loops](http://learn.code.org/s/course4/stage/11/puzzle/1)
+### <a name="Activity"></a> [Play Lab: For Loops](http://learn.code.org/s/course4/lessons/11/levels/1)
 
 Play Lab allows students to combine their new for loop skills with skills from past lessons to create fun games that are relevant to their life. The last puzzle of this stage is fairly unstructured, so a watchful eye may be helpful to encourage the class to integrate for loops into their final game.
 

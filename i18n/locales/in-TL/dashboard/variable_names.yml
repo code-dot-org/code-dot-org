@@ -60,11 +60,13 @@ in:
       level: crwdns2483864:0crwdne2483864:0
       marginX: crwdns2483866:0crwdne2483866:0
       marginY: crwdns2483868:0crwdne2483868:0
+      meal: crwdns2572154:0crwdne2572154:0
       myName: crwdns2483870:0crwdne2483870:0
       name: crwdns2483872:0crwdne2483872:0
       nectar: crwdns2483874:0crwdne2483874:0
       nectars: crwdns2483876:0crwdne2483876:0
       padYOffset: crwdns2483878:0crwdne2483878:0
+      planet: crwdns2572156:0crwdne2572156:0
       player_score: crwdns2483880:0crwdne2483880:0
       points: crwdns2483882:0crwdne2483882:0
       punchLine: crwdns2483884:0crwdne2483884:0
@@ -75,9 +77,13 @@ in:
       repetitions: crwdns2483894:0crwdne2483894:0
       right: crwdns2483896:0crwdne2483896:0
       score: crwdns2483898:0crwdne2483898:0
+      score1: crwdns2572158:0crwdne2572158:0
+      score2: crwdns2572160:0crwdne2572160:0
       screenHeight: crwdns2483900:0crwdne2483900:0
       screenWidth: crwdns2483902:0crwdne2483902:0
       set sides: crwdns2483904:0crwdne2483904:0
+      setupSimScore1: crwdns2572162:0crwdne2572162:0
+      setupSimScore2: crwdns2572164:0crwdne2572164:0
       shout: crwdns2483906:0crwdne2483906:0
       sides: crwdns2483908:0crwdne2483908:0
       size: crwdns2483910:0crwdne2483910:0

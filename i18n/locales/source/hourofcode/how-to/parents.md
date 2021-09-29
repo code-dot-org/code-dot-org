@@ -27,7 +27,7 @@ There are countless <a href="https://hourofcode.com/us/learn">Hour of Code activ
 All of our activities integrate problem-solving and critical-thinking with fun and creativity, but here are some student favorites: 
 
 - For the child who loves to play: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Dance Party</a>
-- For the child who loves Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+- For the child who loves Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lessons/1/levels/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
 - For the child who loves to learn: <a href="https://code.org/oceans">AI for Oceans</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>
 
 <h3>Low-tech or no-tech?</h3>

@@ -1,0 +1,47 @@
+{
+  "gl-ES": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Variábel"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Definir"
+        },
+        "binary/coursec/2021": {
+          "word": "Binario"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Condicionais"
+        },
+        "conditionals/express/2021": {
+          "word": "Condicionais"
+        },
+        "function/express/2021": {
+          "word": "Función"
+        },
+        "variable/express/2021": {
+          "word": "Variábel"
+        },
+        "define/express/2021": {
+          "word": "Definir"
+        },
+        "copyright/coursee/2021": {
+          "word": "Dereitos de Autor"
+        },
+        "function/coursee/2021": {
+          "word": "Función"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Condicionais"
+        },
+        "define/coursee/2021": {
+          "word": "Definir"
+        }
+      }
+    }
+  }
+}

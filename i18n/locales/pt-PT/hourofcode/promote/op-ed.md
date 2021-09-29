@@ -12,11 +12,11 @@ title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Co
 
 * * *
 
-#### Title: Computing…Where the Jobs Are
+#### Título: Computação…Onde estão os empregos
 
 #### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Computers are everywhere. They’re in our pockets. They’re on our walls. Eles estão nos nossos carros. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
 But who exactly is going to write this software?
 

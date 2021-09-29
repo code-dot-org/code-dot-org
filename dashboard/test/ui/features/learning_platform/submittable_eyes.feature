@@ -19,7 +19,7 @@ Scenario: Lockable level
   When I open my eyes to test "lockable level"
   Then I am on "http://studio.code.org/s/allthethings"
   And I see no difference for "course overview"
-  And I scroll our lockable stage into view
+  And I scroll our lockable lesson into view
   And I see no difference for "course overview with locked level in view"
 
   Then I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
@@ -27,6 +27,6 @@ Scenario: Lockable level
   And I see no difference for "locked level on level page"
   Then I click selector ".header_popup_link"
   And I wait to see ".react_stage"
-  And I scroll our lockable stage into view
+  And I scroll our lockable lesson into view
   Then I see no difference for "locked level popup progress"
   And I close my eyes

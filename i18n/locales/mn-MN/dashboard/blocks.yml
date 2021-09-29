@@ -902,7 +902,7 @@ mn:
             '"left"': зүүн
             '"down"': доошоо
             '"right"': баруун
-            '"space"': зай
+            '"space"': сансар
             '"enter"': enter товч
             '"a"': a
             '"b"': b
@@ -981,6 +981,8 @@ mn:
         text: "{SPRITE} дээр дарсан"
       gamelab_comment:
         text: 'сэтгэгдэл: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: "шинэ шидтэнг \n {NAME} нэртэй\n {COSTUME} хувцастай\n {LOCATION} дээр болгоорой"
       gamelab_destroy:
@@ -1103,8 +1105,19 @@ mn:
         text: "{SPRITE}-н байршил"
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': бороотой
       gamelab_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': баруун
+            '90': доошоо
+            '180': зүүн
+            '270': дээшээ
       gamelab_mirrorSprite:
         text: "{SPRITE} нь {DIRECTION} руу харж байна"
         options:
@@ -1131,6 +1144,12 @@ mn:
         text: "{SPRITE} дээр дарсан"
       gamelab_playSound:
         text: хөгжимтоглох {SOUND}
+      gamelab_playSoundOptions:
+        text: хөгжимтоглох {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": хямрах
+            "'sound://category_digital/jump_7.mp3'": үсрэх
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION}-г заах"
         options:
@@ -1194,6 +1213,16 @@ mn:
             '"y"': у байрлал
             '"direction"': хөдөлгөөний чиглэл
             '"speed"': хурд
+      gamelab_setProp_dropdown:
+        text: "{SPRITE} {PROPERTY}-г {SIZE} руу тохируулах"
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': дундаж
+            '100': large
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY}-г {N}% руу тохируулах"
         options:
@@ -1220,6 +1249,8 @@ mn:
             '"while"': байхад
       gamelab_subjectSpritePointer:
         text: "{SPRITE} дээр дарсан"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_turn:
         text: "{SPRITE}-г {DIRECTION} рүү {N} хэмээ эргүүлэх"
         options:
@@ -1469,6 +1500,8 @@ mn:
           DANCE:
             MOVES.ClapHigh: загас
             MOVES.Clown: миний-шошго биш
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'байршил х: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1495,6 +1528,13 @@ mn:
             '"x"': х байрлал
             '"y"': у байрлал
             '"direction"': хөдөлгөөний чиглэл
+      Mikelab_setupSim:
+        text: |-
+          тохиргооны симуляци дараахтай хамт
+          {SPRITE1N}{SPRITE1COSTUME}хурд[SPRITE1SPEED]
+          {SPRITE2N}{SPRITE2COSTUME}хурд[SPRITE2SPEED]
+          цуглуулж буй
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1557,6 +1597,48 @@ mn:
         text: "{SPRITE}-н х тэнхлэг"
       Mikelab_yLocationOf:
         text: "{SPRITE}-н у тэнхлэг"
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': бороотой
+      Poetry_playSound:
+        text: хөгжимтоглох {SOUND}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Өнгөнүүд
+            '"squiggles"': Жижиг долгио
+            '"space"': Сансар
+            '"stars"': Одод
+            '"ripples"': Долгионууд
+          PALETTE:
+            '"rainbow"': Солонго
+      Poetry_setBackgroundImageAs:
+        text: суурь өнгийг {IMG} руу тохируулах
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Бороо
+            '"bubbles"': Хөөс
+            '"hearts"': Өнгөлөг зүрх
+            '"confetti"': Конфетти
+            '"starburst"': Оддын тэсрэлт
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: урагш хөдлөх
       RyanLab_turnLeft:
@@ -1590,38 +1672,26 @@ mn:
         options:
           PROPERTY:
             "'shapeColor'": өнгө
-      aalab_addBehaviorForDuration:
-        text: aalab шидтэн {SPRITE} нь {BEHAVIOR}-р эхэлж {SECONDS} секунд үргэлжилнэ
-      aalab_addBehaviorUntilBoolean:
-        text: шидтэн {SPRITE} нь {BEHAVIOR}-р эхэлж {CONDITION} хүртэл үргэлжилнэ
-      aalab_createNewSpriteAnonReturn2:
-        text: шинэ шидтэн {SPRITE_NAME} нэртэй бөгөөд {LOCATION} байрлал дээр {ANIMATION_NAME} хувцастай байна
-      aalab_goToScene:
-        text: "{SCENE} үзэгдэл рүү очих"
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: "{SPRITE}-г {DISTANCE} пикселээр {DIRECTION}-д хөдөлгөх"
+          FORMAT:
+            '"grid"': сүлжээ
+            '"border"': хил
+            '"row"': мөр
+      aalab_someGraduallyStartIntervention:
         options:
-          DIRECTION:
-            '"North"': Хойд
-            '"East"': Дорнод
-            '"South"': Өмнөд
-            '"West"': Өрнөд
-      aalab_prompt:
-        text: асуулт асуух {MESSAGE}
-      aalab_scene:
-        text: үзэгдэл {SCENE}
+          PORTION:
+            '1': бүгд
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: түүхийг тохируулах
+          PORTION:
+            '1': бүгд
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: хоёртыг зурах {BIN}
       binary_drawBinScreen:
@@ -1716,6 +1786,7 @@ mn:
             '"stoneBricks"': чулуун тоосго
             '"mossyStoneBricks"': хөвдтэй чулаан тоосго
             '"crackedStoneBricks"': хагарсан чулуун тоосго
+            '"chiseledStoneBricks"': чимэглэгч чулуун тоосго
             '"blueCoralBlock"': хөх шүрэн блок
             '"pinkCoralBlock"': ялгаан шүрэн блок
             '"magentaCoralBlock"': цайвар шүрэн блок
@@ -1763,3 +1834,5 @@ mn:
           DIR:
             right: баруун гар тийш ↻
             left: зүүн гар тийш ↺
+      validation_validatedBackground:
+        text: суурь өнгийг {IMG} руу тохируулах

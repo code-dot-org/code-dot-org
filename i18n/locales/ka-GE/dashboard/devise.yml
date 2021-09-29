@@ -18,8 +18,6 @@ ka:
     mailer:
       confirmation_instructions:
         subject: "Code.org დადასტურების ინსტრუქციები"
-      reset_password_instructions:
-        subject: "Code.org პაროლის აღდგენის ინსტრუქციები"
       unlock_instructions:
         subject: "ინსტრუქციების გახსნა"
     omniauth_callbacks:

@@ -235,7 +235,7 @@ class HeaderMiddle extends React.Component {
 
           {extraScriptNameData && (
             <div
-              id="script_name_container"
+              id="unit_name_container"
               style={{
                 float: 'left',
                 textAlign: 'right',

@@ -555,6 +555,8 @@ zh-CN:
         poembot-pilot-text: 俳句机器人-存储文本[PILOT]
         poembot-pilot-haiku: 俳句机器人-显示你的俳句[PILOT]
         csd_ml_import_model: 导入AI模型
+        playlab_2021: 游戏实验室的介绍
+        playlab_2021_reader: 游戏实验室的介绍
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

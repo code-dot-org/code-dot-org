@@ -123,6 +123,24 @@
         },
         "HOC 2018 Level_9b": {
           "voyage_aquatic_9a": "Tirohia nga paraka punga moana whero me te kikorangi? Whakamahia era hei pou kia huri  maui, huri matau ranei kia whakawhiti pai ai i te ākau."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**Me pewhea te oti i tenei taumata?**\n\n-   Kia puta he kaihopu kanikani ki te ataata.\n\n_Ka oti te taumata nei amuri i te ineine e wha._"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me īni te kaikanikani ki ona nekehanga a muri i nga wāhanga e 4.\n\n_Ka mutu te taumata a muri nga wāhanga e 7._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   ka timata te to nekehanga a muri i te wahanga tua4. A muri i te wahanga tua6 me tini tana nekehanga ki tetahi mea hou\n\n_Ka mutu tenei taumata a muri nga wahanga e 11._"
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ka pewhea te whakamahia i nga tikanga kia whakawhiti i te Whakamaharatanga Moana?  "
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "whakamahia te paraka ara hei awhina ki te ara tika."
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Tirohia nga paraka punga moana whero me te kikorangi? Whakamahia era hei pou kia huri  maui, huri matau ranei kia whakawhiti pai ai i te ākau."
         }
       }
     }

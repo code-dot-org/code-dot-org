@@ -11,28 +11,6 @@ import {StatusColors, getApplicationStatuses} from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 
-const styles = {
-  container: {
-    overflowX: 'auto'
-  },
-  table: {
-    width: '100%'
-  },
-  statusCellCommon: {
-    padding: '5px'
-  },
-  statusCell: StatusColors,
-  notesCell: {
-    maxWidth: '200px'
-  },
-  notesCellContent: {
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    paddingLeft: '2px'
-  }
-};
-
 export class QuickViewTable extends React.Component {
   static propTypes = {
     path: PropTypes.string.isRequired,
@@ -373,6 +351,28 @@ export class QuickViewTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    overflowX: 'auto'
+  },
+  table: {
+    width: '100%'
+  },
+  statusCellCommon: {
+    padding: '5px'
+  },
+  statusCell: StatusColors,
+  notesCell: {
+    maxWidth: '200px'
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
+  }
+};
 
 export default connect(state => ({
   regionalPartnerGroup: state.regionalPartners.regionalPartnerGroup,

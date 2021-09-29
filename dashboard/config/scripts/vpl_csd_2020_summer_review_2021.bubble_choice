@@ -1,0 +1,10 @@
+name 'VPL-CSD 2020 Summer Review_2021'
+display_name 'CS Discoveries 2020 Summer Workshop Review'
+description 'During the summer workshop we started to dig into the content of Unit 3: Interactive Animations and Games. The following activities are provided for you to review content from the summer workshop that we will build on in the first synchronous workshop. This review is **OPTIONAL.** Choose to do all, some, or none of the activities depending on how much you would like to review.'
+
+sublevels
+level 'VPL-CSD: Drawing in Game Lab 1_2021'
+level 'VPL-CSD: Drawing in Game Lab 2_2021'
+level 'VPL-CSD U3 fill_2021'
+level 'VPL-CSD U3 Random Ellipse Behind_2021'
+level 'VPL-CSD U3 Random background2_2021'

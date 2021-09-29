@@ -8,17 +8,17 @@ de:
           GROUP:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           MOVE1:
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Oben klatschen
@@ -64,17 +64,17 @@ de:
           GROUP:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': alle Einhörner
+            '"UNICORN"': einhörner
           MOVE:
             '"next"': "(nächster)"
             '"prev"': "(vorheriger)"
@@ -132,17 +132,17 @@ de:
           GROUP:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           PROPERTY:
             '"scale"': Größe
             '"width"': Breite
@@ -156,17 +156,17 @@ de:
           GROUP:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           MOVE:
             '"rand"': "(zufällig)"
             MOVES.XBend: Arme hoch
@@ -322,17 +322,17 @@ de:
           GROUP:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           LOCATION:
             "{x: 200, y: 100}": oben
             "{x: 200, y: 300}": unten
@@ -350,17 +350,17 @@ de:
           GROUP:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           FORMAT:
             '"border"': Grenze
             '"inner"': Quadrat im Inneren
@@ -368,7 +368,7 @@ de:
             '"circle"': Kreis
             '"grid"': Raster
             '"top"': obere Reihe
-            '"row"': Zeile
+            '"row"': Klasse
             '"bottom"': untere Reihe
             '"left"': linke Spalte
             '"column"': Spalte
@@ -409,13 +409,13 @@ de:
           genannt {NAME} in {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': Alien
+            '"ALIEN"': Ausserirdischer
             '"BEAR"': Bär
             '"CAT"': Katze
             '"DOG"': Hund
             '"DUCK"': Ente
             '"FROG"': Frosch
-            '"MOOSE"': Elch
+            '"MOOSE"': alle Elche
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Roboter
             '"SHARK"': Hai
@@ -458,18 +458,18 @@ de:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': Aliens
-            '"BEAR"': Bären
-            '"CAT"': Katzen
-            '"DOG"': Hunde
-            '"DUCK"': Enten
-            '"FROG"': Frösche
-            '"MOOSE"': Elch
-            '"PINEAPPLE"': Ananas
-            '"ROBOT"': Roboter
-            '"SHARK"': Haie
+            '"ALIEN"': alle Aliens
+            '"BEAR"': bären
+            '"CAT"': alle Katzen
+            '"DOG"': alle Hunde
+            '"DUCK"': enten
+            '"FROG"': frösche
+            '"MOOSE"': alle Elche
+            '"PINEAPPLE"': ananas
+            '"ROBOT"': alle Roboter
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           LAYOUT:
             '"border"': Grenze
             '"inner"': Quadrat im Inneren
@@ -477,7 +477,7 @@ de:
             '"circle"': Kreis
             '"grid"': Raster
             '"top"': obere Reihe
-            '"row"': Zeile
+            '"row"': Klasse
             '"bottom"': untere Reihe
             '"left"': linke Spalte
             '"column"': Spalte
@@ -523,14 +523,14 @@ de:
             '"stars"': Sterne
           PALETTE:
             '"rave"': Schwarzweiß
-            '"cool"': Cool
+            '"cool"': Blaus
             '"electronic"': Elektronisch
             '"iceCream"': Eiscreme
             '"default"': Hell
             '"neon"': Neon
             '"tropical"': Tropisch
             '"vintage"': Vintage
-            '"warm"': Rottöne
+            '"warm"': Rots
       Dancelab_setBackgroundEffectWithPalette:
         text: "hintergrundeffekt einstellen \n{PALETTE} {EFFECT}"
         options:
@@ -555,7 +555,7 @@ de:
             '"snowflakes"': Schnee
             '"text"': Song-Titel
             '"squiggles"': Schnörkel
-            '"galaxy"': Weltall
+            '"galaxy"': Leerzeichen
             '"sparkles"': Funkeln
             '"spiral"': Spirale
             '"disco"': Quadrate
@@ -563,14 +563,14 @@ de:
             '"music_wave"': Wellen
           PALETTE:
             '"rave"': Schwarzweiß
-            '"cool"': Cool
+            '"cool"': Blaus
             '"electronic"': Elektronisch
             '"iceCream"': Eiscreme
             '"default"': Hell
             '"neon"': Neon
             '"tropical"': Tropisch
             '"vintage"': Vintage
-            '"warm"': Rottöne
+            '"warm"': Rots
       Dancelab_setDanceSpeed:
         text: verändern Sie die {SPRITE} Tanzgeschwindigkeit zu {SPEED}
         options:
@@ -586,17 +586,17 @@ de:
           GROUP:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           SPEED:
             '1': Normal
             '2': schnell
@@ -614,7 +614,7 @@ de:
             '"music_notes"': Musiknoten
             '"pineapples"': Ananas
             '"pizzas"': Pizza
-            '"smiling_poop"': Poop
+            '"smiling_poop"': Kacke
             '"rain"': Regen
             '"floating_rainbows"': Regenbogen
             '"smile_face"': Lächeln
@@ -636,7 +636,7 @@ de:
             '"paint_drip"': Tropfende Farbe
             '"pineapples"': Ananas
             '"pizzas"': Pizza
-            '"smiling_poop"': Poop
+            '"smiling_poop"': Kacke
             '"rain"': Regen
             '"floating_rainbows"': Regenbogen
             '"smile_face"': Lächeln
@@ -660,17 +660,17 @@ de:
           GROUP:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           PROPERTY:
             '"scale"': Größe
             '"width"': Breite
@@ -696,17 +696,17 @@ de:
           GROUP:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           PROPERTY:
             '"scale"': Größe
             '"width"': Breite
@@ -723,34 +723,34 @@ de:
           THIS:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
       Dancelab_setTintEachInline:
         text: stelle {THIS} Farbton auf {VAL}
         options:
           THIS:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
       Dancelab_setTintInline:
         text: stellen Sie {SPRITE} Farbton auf {VAL}
       Dancelab_setVisible:
@@ -765,17 +765,17 @@ de:
           THIS:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           VISIBILITY:
             'true': sichtbar
             'false': unsichtbar
@@ -800,17 +800,17 @@ de:
           GROUP:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           PROPERTY:
             '"scale"': Größe
             '"width"': Breite
@@ -845,17 +845,17 @@ de:
           GROUP:
             sprites: Alle
             '"ALIEN"': alle Aliens
-            '"BEAR"': alle Bären
+            '"BEAR"': bären
             '"CAT"': alle Katzen
             '"DOG"': alle Hunde
-            '"DUCK"': alle Enten
-            '"FROG"': alle Frösche
+            '"DUCK"': enten
+            '"FROG"': frösche
             '"MOOSE"': alle Elche
-            '"PINEAPPLE"': alle Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': alle Roboter
-            '"SHARK"': alle Haie
+            '"SHARK"': haie
             '"SLOTH"': faultiere
-            '"UNICORN"': Einhörner
+            '"UNICORN"': einhörner
           PROPERTY:
             '"scale"': Größe
             '"width"': Breite
@@ -974,6 +974,10 @@ de:
         text: Setup
       gamelab_addBehaviorSimple:
         text: "{SPRITE} beginnt {BEHAVIOR}"
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': vermeiden
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -1146,10 +1150,22 @@ de:
         text: Position von {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': platzen
+            '"rain"': Regen
       gamelab_makeNewSpriteAnon:
         text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       gamelab_makeNumSprites:
         text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': rechts
+            '90': runter
+            '180': links
+            '270': hoch
       gamelab_mirrorSprite:
         text: "{SPRITE} zeigt nach {DIRECTION}"
         options:
@@ -1180,6 +1196,13 @@ de:
         text: patrouilliert auf und ab
       gamelab_playSound:
         text: spieleTon {SOUND}
+      gamelab_playSoundOptions:
+        text: spieleTon {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": Taste
+            "'sound://category_collect/clicky_crunch.mp3'": knirschen
+            "'sound://category_digital/jump_7.mp3'": springen
       gamelab_pointInDirection:
         text: richte {SPRITE} nach {DIRECTION} aus
         options:
@@ -1253,6 +1276,16 @@ de:
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
             '"speed"': Geschwindigkeit
+      gamelab_setProp_dropdown:
+        text: setze {SPRITE} {PROPERTY} auf {SIZE}
+        options:
+          PROPERTY:
+            '"scale"': Größe
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mittel
+            '100': large
       gamelab_setSizes:
         text: stellen Sie {SPRITE} {PROPERTY} auf {N}%
         options:
@@ -1277,8 +1310,15 @@ de:
           CONDITION:
             '"when"': wenn
             '"while"': solange
+      gamelab_spriteSayChoices:
+        options:
+          SPEECH:
+            '"I am Batman!"': Ich bin Batman!
+            '"I am Catwoman!"': Ich bin Catwoman!
       gamelab_subjectSpritePointer:
         text: "{SPRITE} geklicked"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: hingefallen
       gamelab_turn:
@@ -1539,6 +1579,8 @@ de:
           DANCE:
             MOVES.ClapHigh: Fisch
             MOVES.Clown: nicht mein-label
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'Position x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1571,11 +1613,25 @@ de:
             '"x"': x-Position
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
+      Mikelab_setupOutbreak:
+        text: "Einrichtung des Ausbruchs \nBevölkerung:{SPRITE2N}\n{TOGGLE}Virus"
+      Mikelab_setupSim:
+        text: |-
+          Starte Simulation mit
+          {SPRITE1N}{SPRITE1COSTUME}Geschwindigkeit{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Geschwindigkeit{SPRITE2SPEED}
+          sammle
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': rechts
             '"left"': links
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"above"': darüber
+            '"below"': darunter
       Mikelab_sprite:
         text: neues {COSTUME} Sprite bei {LOCATION}
         options:
@@ -1633,6 +1689,93 @@ de:
         text: x Koordinate von {SPRITE}
       Mikelab_yLocationOf:
         text: y Koordinate von {SPRITE}
+      Outbreak_beginCongregating:
+        text: Monster versammeln sich
+      Outbreak_beginQuarantining:
+        text: kranke Monster gehen in Quarantäne
+      Outbreak_beginSocialDistancing:
+        text: Monster beginnen soziale Distanzierung
+      Outbreak_beginWandering:
+        text: Monster beginnen herumzulaufen
+      Outbreak_beginWearingMasks:
+        text: Monster tragen Masken
+      Outbreak_layoutBorder:
+        text: Monster in einem Rand anordnen
+      Outbreak_layoutClusters:
+        text: Monster in einem Cluster von {NUM} anordnen
+      Outbreak_layoutGrid:
+        text: Monster als ein Raster anordnen
+      Outbreak_layoutRandom:
+        text: Monster zufällig anordnen
+      Outbreak_stopMoving:
+        text: Monster bewegen sich nicht mehr
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': platzen
+            '"rain"': Regen
+      Poetry_makeNumSprites:
+        text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
+      Poetry_playSound:
+        text: spieleTon {SOUND}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Farben
+            '"squiggles"': Schnörkel
+            '"space"': Leerzeichen
+            '"stars"': Sterne
+            '"ripples"': Welligkeit
+          PALETTE:
+            '"rainbow"': Regenbogen
+      Poetry_setBackgroundImageAs:
+        text: setze Hintergund auf {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Regen
+            '"bubbles"': Blasen
+            '"hearts"': Farbenfrohe Herzen
+            '"confetti"': Konfetti
+            '"starburst"': Starburst
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: flattern
+            growing: wachsen
+            jittering: zittern
+            shrinking: schrumpfen
+            spinning_left: nach links drehen
+            spinning_right: nach rechts drehen
+            wandering: wandern
+            wobbling: wackelnd
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: flattern
+            growing: wachsen
+            jittering: zittern
+            shrinking: schrumpfen
+            spinning_left: nach links drehen
+            spinning_right: nach rechts drehen
+            wandering: wandern
+            wobbling: wackelnd
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: vorwärts bewegen
       RyanLab_turnLeft:
@@ -1666,49 +1809,27 @@ de:
         options:
           PROPERTY:
             "'shapeColor'": Farbe
-      aalab_addBehaviorForDuration:
-        text: aalab Sprite {SPRITE} beginnt {BEHAVIOR} für {SECONDS} Sekunden
-      aalab_addBehaviorUntilBoolean:
-        text: "{SPRITE} beginnt {BEHAVIOR} bis {CONDITION}"
-      aalab_createNewSpriteAnonReturn2:
-        text: neues Sprite mit Namen {SPRITE_NAME} mit Kostüm {ANIMATION_NAME} an der Position {LOCATION}
-      aalab_goToScene:
-        text: gehe zur Szene {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: bewege {SPRITE} {DISTANCE} Pixel {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Ost
-            '"South"': Süd
-            '"West"': West
-      aalab_prompt:
-        text: stelle Frage {MESSAGE}
-      aalab_scene:
-        text: Szene {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: Starte Geschichte
-      aalab_starwars_playSound:
-        text: Spiele{OPTION}Klang
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': Raster
+            '"border"': Grenze
+            '"row"': Klasse
             '"random"': zufällig
-            '"R2-D2 random"': R2-D2 Zufall
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': Alle
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': Alle
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: zeichne Binärwert {BIN}
       binary_drawBinScreen:
@@ -1762,7 +1883,7 @@ de:
             '"d"': d
       craft_ifPath:
         text: |-
-          wenn Weg {DIR}
+          wenn Pfad {DIR}
           {STATEMENT}
         options:
           DIR:
@@ -1795,7 +1916,7 @@ de:
       craft_moveForward:
         text: vorwärts bewegen
       craft_placeBlock:
-        text: plaziere {blockType}
+        text: platziere {blockType}
         options:
           blockType:
             '"strippedOak"': Eichenholz
@@ -1824,12 +1945,12 @@ de:
             '"kelp"': Seetang
             '"polishedGranite"': polierter Granit
       craft_placePrismarine:
-        text: plaziere Prismarin
+        text: platziere Prismarin
       craft_placeTorch:
         text: Fackel platzieren
       craft_repeatUntilConduit:
         text: |-
-          wiederholen, bis die Reihe geschlossen ist
+          wiederholen, bis der Aquisator fertig ist
           {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
@@ -1851,3 +1972,5 @@ de:
           DIR:
             right: rechts ↻
             left: links ↺
+      validation_validatedBackground:
+        text: setze Hintergund auf {IMG}

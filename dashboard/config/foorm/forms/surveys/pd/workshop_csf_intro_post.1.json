@@ -1,0 +1,118 @@
+{
+  "published": true,
+  "title": "Satisfaction Survey for Code.org's CS Fundamentals Intro Professional Development Workshop",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro_text",
+          "html": "<p><strong>Well done, you've completed the Code.org CS Fundamentals Intro workshop!</strong></p><p>This survey asks questions about your experience today. Your feedback is crucial to ensuring we best serve educators through continual program improvement.</p><p><strong>Privacy and Confidentiality</strong></p><ul><li>Your individual responses here are completely <strong>confidential</strong>.</li><li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li><li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li><li>Your <strong>de-identified</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li></ul>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "workshop_type",
+          "title": "Was your workshop:",
+          "choices": [
+            {
+              "value": "item1",
+              "text": "in person"
+            },
+            {
+              "value": "item2",
+              "text": "virtual"
+            }
+          ]
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "overall_success"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "what_supported"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "what_detracted"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "curriculum_impressions_csf"
+        },
+        {
+          "type": "comment",
+          "name": "feedback_venue_logistics",
+          "title": "Do you have feedback about the venue and the way logistics were run for this workshop? Please be specific and provide suggestions for improvement."
+        },
+        {
+          "type": "comment",
+          "name": "anything_else",
+          "title": "Is there anything else you’d like to tell us about your experience at this workshop?"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/facilitator_panel",
+          "library_version": 0,
+          "name": "facilitators"
+        },
+        {
+          "type": "html",
+          "name": "last_text",
+          "html": "Lastly, we would like to know a little about you, your background, and if we can stay in touch with you."
+        },
+        {
+          "type": "text",
+          "name": "year_of_birth",
+          "title": "What is your year of birth?",
+          "inputType": "number",
+          "min": "1920",
+          "max": "2020"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
+          "name": "gender_identity"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
+          "name": "racial_ethnic_identity"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "permission_to_quote"
+        },
+        {
+          "type": "radiogroup",
+          "name": "willing_talk",
+          "title": "Would you be willing to talk to someone at Code.org about your PD experiences? ",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

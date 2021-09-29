@@ -1,0 +1,83 @@
+{
+  "sv-SE": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "Beteende"
+        },
+        "variable/coursef/2021": {
+          "word": "Variabel"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Definiera"
+        },
+        "debugging/courseb/2021": {
+          "word": "Felsökning"
+        },
+        "drop/courseb/2021": {
+          "word": "Släpp"
+        },
+        "debugging/coursea/2021": {
+          "word": "Felsökning"
+        },
+        "drop/coursea/2021": {
+          "word": "Släpp"
+        },
+        "debugging/coursec/2021": {
+          "word": "Felsökning"
+        },
+        "binary/coursec/2021": {
+          "word": "Binära"
+        },
+        "debugging/coursed/2021": {
+          "word": "Felsökning"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Villkor"
+        },
+        "debugging/express/2021": {
+          "word": "Felsökning"
+        },
+        "behavior/express/2021": {
+          "word": "Beteende"
+        },
+        "conditionals/express/2021": {
+          "word": "Villkor"
+        },
+        "function/express/2021": {
+          "word": "Funktion"
+        },
+        "variable/express/2021": {
+          "word": "Variabel"
+        },
+        "define/express/2021": {
+          "word": "Definiera"
+        },
+        "drop/pre-express/2021": {
+          "word": "Släpp"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Felsökning"
+        },
+        "behavior/coursee/2021": {
+          "word": "Beteende"
+        },
+        "copyright/coursee/2021": {
+          "word": "Copyright"
+        },
+        "function/coursee/2021": {
+          "word": "Funktion"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Villkor"
+        },
+        "define/coursee/2021": {
+          "word": "Definiera"
+        }
+      }
+    }
+  }
+}

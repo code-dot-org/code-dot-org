@@ -7,6 +7,158 @@
         },
         "courseF_playlab_variables5c": {
           "bda9643ac6601722a28f238714274da4": "लाल"
+        },
+        "courseF_apps_aquarium": {
+          "83e4a96aed96436c621b9809e258b309": "मासा",
+          "f655df68ec33643278de7e69794e8d76": "व्हर्च्युअल ॲक्वेरीयम ",
+          "a1a2a07348784279a1e7a6f46dc7e353": "तुम्ही त्यात काय घालाल?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "इतर",
+          "0d3e73168beb875063ea0f0302fe32bd": "कोणता मासा?",
+          "caaf8264ca397dba2d35ef902bbbd953": "कोणता प्राणी?",
+          "78574118d153534fd0925a2f5ca25e79": "कोणती वस्तू?",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "जीव"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "83db90f8846d091d3532256816f105d9": "ही आहे नीला.",
+          "0192cdc04916ec27aa11738bb6e48d6e": "नीला तिच्या घराचे स्पेसबॉटपासून संरक्षण करायचा प्रयत्न करत आहे.",
+          "df8312187449c70820d7c58229a6b17e": "स्पेसबॉट इतर प्राण्यांना घाबरवत आहे.",
+          "c084e152431f9116b9fdb3f7d465f13d": "नीलाला स्पेसबॉटला शहाण्यासारखे वागायला शिकवायचे आहे. ",
+          "b2f02bf648ce32c4362afe1578d41f70": "जमले! नीलाने स्पेसबॉटला दयाळूपणाची ताकद दाखवली.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "इतर प्राणी आता त्याला घाबरत नाहीत!"
+        },
+        "courseE_aboutme_1_2021": {
+          "8e985f60f328934accd78e7649584840": "आईसक्रिम ही माझी आवडती गोष्ट आहे!",
+          "31ba97bb501bb1f5b448221be09bad32": "हे माझे कॉर्गी, लॉलीपॉप आहे! मी तिला कोडींग करायला शिकवले पाहिजे!"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "कोणाचा वाढदिवस आहे?",
+          "d1210f945885351b13feb9bbb868aeef": "ते किती वर्षांचे होतील?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_apps_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "हाय, मी आहे X-9! तुमचे नाव काय आहे? ",
+          "f0e5da70d264f312a1658d51c130b101": "तुमचे नाव एन्टर करा:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "तुमचे वय एन्टर करा:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "सुद्धा वयाचा आहे!",
+          "605f302ebc9f7fbacba60b15f551a633": "तुमचा आवडता रंग कोणता आहे?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "तुमचा आवडता रंग एन्टर करा:",
+          "1f258d88a70309efc1435ef5daa277a0": "आज माझ्याशी चॅट केल्याबद्दल धन्यवाद!"
+        },
+        "courseF_apps_collector": {
+          "077449fb290b51b9d70c9f2f3d3213bc": "सेकंद",
+          "490082498449bd20ff0199737dfa4916": "खेळाचा प्रकार निवडा:",
+          "41f2b2212de0105c2a942ebb4a44e449": "द ग्रेट कलेक्टर गेम!",
+          "e8a10c04d72b2f135dabe360c4bdd534": "तुम्ही जिंकलात!"
+        },
+        "courseF_apps_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "पार्टी गेम्स",
+          "bf08dd3d1961874f13e77c936aad27e5": "रिकाम्या जागेची गोष्ट",
+          "514b8d5320196898a9ced3efe0d4c802": "एक विशेषण एन्टर करा:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "एक वस्तू एन्टर करा:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "शरीराचा एक अवयव एन्टर करा:",
+          "e522ee28f39133b45497637539ff429b": "एक संख्या एन्टर करा:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "गेम्स.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-तीन पायांची शर्यत!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "कोणाचा वाढदिवस आहे?",
+          "d1210f945885351b13feb9bbb868aeef": "ते किती वर्षांचे होतील?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_editable_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "हाय, मी आहे X-9! तुमचे नाव काय आहे? ",
+          "f0e5da70d264f312a1658d51c130b101": "तुमचे नाव एन्टर करा:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "तुमचे वय एन्टर करा:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "सुद्धा वयाचा आहे!",
+          "605f302ebc9f7fbacba60b15f551a633": "तुमचा आवडता रंग कोणता आहे?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "तुमचा आवडता रंग एन्टर करा:",
+          "1f258d88a70309efc1435ef5daa277a0": "आज माझ्याशी चॅट केल्याबद्दल धन्यवाद!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_editable_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "पार्टी गेम्स",
+          "bf08dd3d1961874f13e77c936aad27e5": "रिकाम्या जागेची गोष्ट",
+          "514b8d5320196898a9ced3efe0d4c802": "एक विशेषण एन्टर करा:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "एक वस्तू एन्टर करा:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "शरीराचा एक अवयव एन्टर करा:",
+          "e522ee28f39133b45497637539ff429b": "एक संख्या एन्टर करा:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "गेम्स.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-तीन पायांची शर्यत!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न",
+          "c529a06c3f8518b63ff6dfac482b335c": "या ग्रहाला नाव द्या:",
+          "44506356d48394cd903b579df9de9117": ", अर्थलिंग!"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_text_choice_interview": {
+          "5bd698afd23bccde289bb0b4aa72a518": "रोबोटला नाव द्या.",
+          "34088af1fb721900963462375b3bbe23": "रोबोट!"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "कोणाचा वाढदिवस आहे?",
+          "d1210f945885351b13feb9bbb868aeef": "ते किती वर्षांचे होतील?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+        },
+        "courseF_label_predict": {
+          "f15045cb7e57652546d4a0b2c695356f": "तुम्ही काय खाल?",
+          "937dc37c06cc5d89a7096eb048b73590": "लवकरच येत आहे!"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "पर्याय 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "पर्याय 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "पर्याय 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "पर्याय 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "पर्याय 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "पर्याय 3"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "स्काय डान्सर",
+          "78d989e01047ba7043a38650d695abaa": "खेळाडू निवडा",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "पर्याय 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "पर्याय 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "पर्याय 3"
         }
       }
     }

@@ -2,13 +2,13 @@
   "script": {
     "name": "dance-extras-gallery",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:29 UTC",
+    "serialized_at": "2021-08-03 22:47:39 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "dance-extras-gallery"
     }
@@ -58,9 +58,9 @@
       "properties": {
         "level_keys": [
           "Dance_Party_extras_gallery_intro"
-        ]
+        ],
+        "progression": "Keep On Dancing!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

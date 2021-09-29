@@ -23,7 +23,8 @@ reporters = [CowReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
 end
-Minitest::Reporters.use! reporters
+# Skip this if the tests are run in RubyMine
+Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
@@ -143,6 +144,45 @@ class ActiveSupport::TestCase
   include ActiveSupport::Testing::SetupAllAndTeardownAll
   include ActiveSupport::Testing::TransactionalTestCase
   include CaptureQueries
+
+  setup_all do
+    # Some of the functionality we're testing here relies on Scripts with
+    # certain hardcoded names. In the old fixture-based model, this data was
+    # all provided; in the new factory-based model, we need to do a little
+    # prep.
+    #
+    # NOTE for any future developers: please DO NOT add new scripts to this
+    # list. This exists to provide backwards compatibility to old tests which
+    # are dependent on factory-provided content. If you are writing new tests,
+    # please make sure that they are instead relying on factory-provided
+    # content.
+    tested_script_names = [
+      'ECSPD',
+      'allthethings',
+      Script::COURSE1_NAME,
+      Script::COURSE4_NAME,
+      Script::FLAPPY_NAME,
+      Script::FROZEN_NAME,
+      Script::HOC_NAME,
+      Script::PLAYLAB_NAME,
+      Script::TWENTY_HOUR_NAME
+    ]
+
+    tested_script_names.each do |script_name|
+      # create a placeholder factory-provided Script if we don't already have a
+      # fixture-provided one
+      script = Script.find_by_name(script_name) ||
+        create(:script, :with_levels, levels_count: 5, name: script_name)
+
+      # make sure that all the Script's ScriptLevels have associated Levels.
+      # This is expected during the interim period where we are no longer
+      # generating Levels from fixtures, but are still generating Scripts
+      script.script_levels.each do |script_level|
+        next unless script_level.levels.empty?
+        script_level.levels = [create(:level)]
+      end
+    end
+  end
 
   def assert_creates(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do

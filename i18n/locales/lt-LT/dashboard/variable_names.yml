@@ -2,6 +2,10 @@ lt:
   data:
     variable_names:
       actor: veikėjas
+      age: amžius
+      answer: atsakymas
+      binary: dvejetainis
+      color: spalva
       counter: skaitiklis
       height: aukštis
       honey: medus

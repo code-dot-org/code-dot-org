@@ -1,0 +1,137 @@
+{
+  "km-KH": {
+    "data": {
+      "resources": {
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "អ៊ីនធឺណិត"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stevie and the Big Project"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "កំហុសដែលមិនបានគ្រោងទុក"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "sprite_lab_documentation/express/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "variables_video/express/2021": {
+          "name": "អ​ថេរ"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        }
+      }
+    }
+  }
+}

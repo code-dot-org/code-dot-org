@@ -61,10 +61,14 @@ class UnassignButton extends React.Component {
 
 const styles = {
   buttonMargin: {
-    marginLeft: 10
+    marginLeft: 10,
+    display: 'flex',
+    alignItems: 'center'
   },
   buttonMarginRTL: {
-    marginRight: 10
+    marginRight: 10,
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 

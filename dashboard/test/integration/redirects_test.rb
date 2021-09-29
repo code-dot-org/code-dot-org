@@ -75,7 +75,7 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     create :script_level, script: script, lesson: lesson, bonus: true
 
     @teacher = create(:teacher)
-    create(:section, user: @teacher, script: script, stage_extras: true, id: 999999)
+    create(:section, user: @teacher, script: script, lesson_extras: true, id: 999999)
 
     sign_in(@teacher)
 

@@ -51,6 +51,7 @@ describe('FoormLibraryEditorManager', () => {
 
   afterEach(() => {
     restoreRedux();
+    server.restore();
   });
 
   const sampleExistingLibraryQuestionData = {

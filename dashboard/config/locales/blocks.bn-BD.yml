@@ -10,11 +10,13 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_changePropEachBy:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_everySeconds:
         options:
@@ -24,6 +26,7 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_getTime:
         options:
@@ -75,41 +78,57 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_setPropRandomEach:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': দৃশ্যমান
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': দৃশ্যমান
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_translateStrings:
         options:
@@ -168,11 +187,23 @@ bn:
             '"right"': ডানে
             '"space"': স্থান
             '"x"': এক্স
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ডানে
+            '90': নিচে
+            '180': বামে
+            '270': উপরে
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': ডানে
             '"left"': বামে
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": কড়্কড়্ শব্দ
+            "'sound://category_digital/jump_7.mp3'": লাফান
       gamelab_randColor:
         text: যেকোনো রঙ
       gamelab_randomColor:
@@ -194,10 +225,15 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"speed"': গতি
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': আকার
       gamelab_setSizes:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       gamelab_spriteClicked:
         options:
@@ -295,6 +331,11 @@ bn:
             '"right"': ডানমুখী তীর
             '"w"': W
             '"s"': S
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': '"হ্যাঁ"'
+            '"no"': না
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -308,9 +349,13 @@ bn:
         text: বামে যান
       RyanLab_turnRight:
         text: ডানে যান
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": রং
+      aalab_layoutSprites:
+        options:
+          FORMAT:
             '"random"': এলোমেলো
       binary_move:
         options:

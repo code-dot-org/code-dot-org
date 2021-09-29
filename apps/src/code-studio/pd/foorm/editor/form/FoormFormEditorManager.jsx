@@ -8,9 +8,11 @@ import {
   setSaveError,
   setFormData,
   setHasJSONError,
+  setHasLintError,
   setLastSavedQuestions
 } from '../foormEditorRedux';
 import FoormFormSaveBar from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
+import {getLatestVersionMap} from '../../foormHelpers';
 
 /*
 Parent component for editing Foorm forms. Will initially show a choice
@@ -34,6 +36,7 @@ class FoormFormEditorManager extends React.Component {
     setSaveError: PropTypes.func,
     setFormData: PropTypes.func,
     setHasJSONError: PropTypes.func,
+    setHasLintError: PropTypes.func,
     setLastSavedFormQuestions: PropTypes.func
   };
 
@@ -108,6 +111,7 @@ class FoormFormEditorManager extends React.Component {
   updateFormData(formData) {
     this.props.setFormData(formData);
     this.props.setHasJSONError(false);
+    this.props.setHasLintError(false);
     this.props.setLastSavedFormQuestions(formData['questions']);
     this.props.resetCodeMirror(formData['questions']);
   }
@@ -179,10 +183,14 @@ class FoormFormEditorManager extends React.Component {
   }
 
   renderSaveBar() {
+    const latestVersionMap = getLatestVersionMap(this.getFetchableForms());
     return (
       <FoormFormSaveBar
         formCategories={this.props.categories}
         resetCodeMirror={this.props.resetCodeMirror}
+        isLatestVersion={
+          latestVersionMap[this.props.formName] === this.props.formVersion
+        }
       />
     );
   }
@@ -210,6 +218,7 @@ class FoormFormEditorManager extends React.Component {
           onSelect={formMetadata => this.loadFormData(formMetadata)}
           foormEntities={this.getFetchableForms()}
           foormEntityName="Form"
+          showVersionFilterToggle={true}
         />
         {this.state.hasLoadError && (
           <div style={styles.loadError}>Could not load the selected form.</div>
@@ -261,6 +270,7 @@ export default connect(
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setFormData: formData => dispatch(setFormData(formData)),
     setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
+    setHasLintError: hasLintError => dispatch(setHasLintError(hasLintError)),
     setLastSavedFormQuestions: formQuestions =>
       dispatch(setLastSavedQuestions(formQuestions))
   })

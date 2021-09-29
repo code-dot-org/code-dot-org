@@ -9,10 +9,10 @@ class AddLevelFilters extends Component {
     handleSearch: PropTypes.func.isRequired,
     handleChangeLevelName: PropTypes.func.isRequired,
     handleChangeLevelType: PropTypes.func.isRequired,
-    handleChangeScript: PropTypes.func.isRequired,
+    handleChangeUnit: PropTypes.func.isRequired,
     handleChangeOwner: PropTypes.func.isRequired,
     ownerId: PropTypes.string.isRequired,
-    scriptId: PropTypes.string.isRequired,
+    unitId: PropTypes.string.isRequired,
     levelType: PropTypes.string.isRequired,
     levelName: PropTypes.string.isRequired,
 
@@ -59,15 +59,15 @@ class AddLevelFilters extends Component {
           </select>
         </label>
         <label style={styles.label}>
-          By Script:
+          By Unit:
           <select
             style={styles.dropdown}
-            onChange={this.props.handleChangeScript}
-            value={this.props.scriptId}
+            onChange={this.props.handleChangeUnit}
+            value={this.props.unitId}
           >
-            {this.props.searchOptions.scriptOptions.map(script => (
-              <option key={script[0]} value={script[1]}>
-                {script[0]}
+            {this.props.searchOptions.scriptOptions.map(unit => (
+              <option key={unit[0]} value={unit[1]}>
+                {unit[0]}
               </option>
             ))}
           </select>

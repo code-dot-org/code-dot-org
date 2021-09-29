@@ -60,8 +60,8 @@ module Pd::Foorm
 
       filled_in_form_questions = ::Foorm::Form.fill_in_library_items(form_questions_parsed_from_json)
       filled_in_form_questions.deep_symbolize_keys!
-      filled_in_form_questions[:pages].each do |page|
-        page[:elements].each do |question_data|
+      filled_in_form_questions[:pages]&.each do |page|
+        page[:elements]&.each do |question_data|
           parsed_form_questions.deep_merge!(parse_element(question_data, false))
         end
       end

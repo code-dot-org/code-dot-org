@@ -408,52 +408,6 @@ de:
           Programmen wieder und wieder verwendet werden können. In dieser Lektion
           lernen Schüler intuitiv, warum die Kombination von einzelnen Codeelementen
           zu Funktionen so nützlich ist.  '
-      swipeRightPassThrough:
-        title: Sitzung der Szenarien für die Personalbeschaffung
-        desc: "\"# Sitzung zu Rekrutierungs-Szenarien\r\n\r\n## Rechtswischen für
-          Informatik\r\nIn dieser Sitzung verwenden wir ein Werkzeug namens \"\"Swipe
-          Right for CS\"\"/Rechtswischen für Informatik , das von unseren Partnern
-          am MIT entwickelt wurde. In \"\"Swipe Right for CS\"\" lesen Sie einige
-          Profile von SchülerInnen und überlegen sich spezifische Aussagen, die Sie
-          verwenden könnten, um ihn/sie davon zu überzeugen, sich in Ihrem Kurs zu
-          Informatik-Prinzipien einzuschreiben. \r\n\r\n### So funktioniert das Werkzeug\r\nWenn
-          Sie das Spiel \"\"Swipe Right for CS\"\" spielen, sehen Sie eine Reihe von
-          Zitaten, die Sie bei jedem/r SchülerIn erwähnen können. Sie wischen bei
-          Zitaten, die Ihrer Meinung nach SchülerInnen überzeugen würden, sich für
-          den Kurs einzuschreiben, nach rechts und bei Aussagen, die Ihrer Meinung
-          nach nicht überzeugend sind, nach links. Während der Sitzung werden wir
-          als Gruppe Ihre Gedanken über die Arten von Aussagen diskutieren, die am
-          effektivsten sind, um SchülerInnen dazu zu motivieren, sich für Informatik
-          einzuschreiben, und Sie werden die Gelegenheit haben zu sehen, wie sich
-          andere Personen in Ihrem Workshop bei jedem der Argumente durch ihre Wischbewegung
-          entschieden haben. \r\n\r\n\r\nWenn Sie unten auf Weiter klicken, leiten
-          wir Sie zum Spiel weiter und geben die E-Mail-Adresse von Code.org weiter,
-          mit der Sie eingeloggt sind.\"\n"
-      swipeRightPassThrough-test123:
-        title: Sitzung der Szenarien für die Personalbeschaffung
-        desc: "\"# Sitzung zu Rekrutierungs-Szenarien\r\n\r\n## Rechtswischen für
-          Informatik\r\nIn dieser Sitzung verwenden wir ein Werkzeug namens \"\"Swipe
-          Right for CS\"\"/Rechtswischen für Informatik , das von unseren Partnern
-          am MIT entwickelt wurde. In \"\"Swipe Right for CS\"\" lesen Sie einige
-          Profile von SchülerInnen und überlegen sich spezifische Aussagen, die Sie
-          verwenden könnten, um ihn/sie davon zu überzeugen, sich in Ihrem Kurs zu
-          Informatik-Prinzipien einzuschreiben. \r\n\r\n### So funktioniert das Werkzeug\r\nWenn
-          Sie das Spiel \"\"Swipe Right for CS\"\" spielen, sehen Sie eine Reihe von
-          Zitaten, die Sie bei jedem/r SchülerIn erwähnen können. Sie wischen bei
-          Zitaten, die Ihrer Meinung nach SchülerInnen überzeugen würden, sich für
-          den Kurs einzuschreiben, nach rechts und bei Aussagen, die Ihrer Meinung
-          nach nicht überzeugend sind, nach links. Während der Sitzung werden wir
-          als Gruppe Ihre Gedanken über die Arten von Aussagen diskutieren, die am
-          effektivsten sind, um SchülerInnen dazu zu motivieren, sich für Informatik
-          einzuschreiben, und Sie werden die Gelegenheit haben zu sehen, wie sich
-          andere Personen in Ihrem Workshop bei jedem der Argumente durch ihre Wischbewegung
-          entschieden haben. \r\n\r\n\r\nWenn Sie unten auf Weiter klicken, leiten
-          wir Sie zum Spiel weiter und geben die E-Mail-Adresse von Code.org weiter,
-          mit der Sie eingeloggt sind.\"\n"
-      brad-repro-bug-000:
-        title: 'Brad Repro Bug 000
-
-'
       courseB_unplugged_MRF_2018:
         title: Meine Roboterfreunde
         desc: Lerne zu programmieren, indem du Code für deine Freunde schreibst!
@@ -696,27 +650,6 @@ de:
         desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben
           behandelt. Als Beispiel dienen Papierflieger. Außerdem wird ein umfassenderes
           Bild der Informatik und der Rolle von Algorithmen vermittelt.
-      test-uid-passthrough:
-        title: " "
-        desc: "\"# Sitzung zu Rekrutierungs-Szenarien\r\n\r\n## Rechtswischen für
-          Informatik\r\nIn dieser Sitzung verwenden wir ein Werkzeug namens \"\"Swipe
-          Right for CS\"\"/Rechtswischen für Informatik , das von unseren Partnern
-          am MIT entwickelt wurde. In \"\"Swipe Right for CS\"\" lesen Sie einige
-          Profile von SchülerInnen und überlegen sich spezifische Aussagen, die Sie
-          verwenden könnten, um ihn/sie davon zu überzeugen, sich in Ihrem Kurs zu
-          Informatik-Prinzipien einzuschreiben. \r\n\r\n### So funktioniert das Werkzeug\r\nWenn
-          Sie das Spiel \"\"Swipe Right for CS\"\" spielen, sehen Sie eine Reihe von
-          Zitaten, die Sie bei jedem/r SchülerIn erwähnen können. Sie wischen bei
-          Zitaten, die Ihrer Meinung nach SchülerInnen überzeugen würden, sich für
-          den Kurs einzuschreiben, nach rechts und bei Aussagen, die Ihrer Meinung
-          nach nicht überzeugend sind, nach links. Während der Sitzung werden wir
-          als Gruppe Ihre Gedanken über die Arten von Aussagen diskutieren, die am
-          effektivsten sind, um SchülerInnen dazu zu motivieren, sich für Informatik
-          einzuschreiben, und Sie werden die Gelegenheit haben zu sehen, wie sich
-          andere Personen in Ihrem Workshop bei jedem der Argumente durch ihre Wischbewegung
-          entschieden haben. \r\n\r\n\r\nWenn Sie unten auf Weiter klicken, leiten
-          wir Sie zum Spiel weiter und geben die E-Mail-Adresse von Code.org weiter,
-          mit der Sie eingeloggt sind.\"\n"
       PlantASeed_2019:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum
@@ -780,10 +713,6 @@ de:
           für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich
           einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen
           Punkt" erstellen.
-      TheRightApp_2019:
-        title: Die richtige App
-        desc: "* Jeder benutzt heutzutage Computer, insbesondere Smartphones. \r\n*
-          Smartphone-Anwendungen oder \"Apps\" helfen Menschen mit Freunden zu reden,
-          Musik zu hören, einzukaufen oder einfach das Internet zu erkunden.\r\n*
-          Es ist wichtig für Programmierer, die Bedürfnisse anderer zu verstehen und
-          Anwendungen mit Blick auf sie zu entwickeln!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      SP-VPL-CSD-21-CourseNavigation:
+        title: " "
+        desc: " "

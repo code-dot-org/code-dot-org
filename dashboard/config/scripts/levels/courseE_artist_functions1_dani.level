@@ -1,0 +1,222 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2021-05-27T17:26:30.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "artist_zombie",
+    "short_instructions": "Help the zombie draw glasses using squares with sides of 100 pixels.  \r\nThe bridge between the glasses is 75 pixels long.",
+    "x": "30",
+    "y": "225",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "ideal": "8",
+    "slider_speed": "0.7",
+    "embed": "false",
+    "long_instructions": "*\"Me zombie artist. Me love drawing!\"*\r\n\r\nHelp the zombie draw glasses using squares with sides of 100 pixels.  \r\nThe bridge between the glasses is 75 pixels long.\r\n\r\n",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "never_autoplay_video": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.\",\"hint_id\":\"courseE_artist_functions1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/06fcb0423acf147330e54d8e3e7e575d/courseE_artist_functions1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"It is okay to draw overlapping lines to make your glasses.\",\"hint_id\":\"courseE_artist_functions1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ee1e39df00da7e51b2cc6fe840044e34/courseE_artist_functions1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"For shorter code, try using a `repeat` loop to draw the square frames of the glasses.\",\"hint_id\":\"courseE_artist_functions1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f861c61c36ee91e50dbb7fba4f3f0931/courseE_artist_functions1.mp3\"}]",
+    "discard_background": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_artist_functions1_1\",\r\n  \"callout_text\": \"Let's start by using this block to help create the first square.\",\r\n  \"element_id\": \"#loop\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "hint_prompt_attempts_threshold": 23,
+    "parent_level_id": 5822,
+    "name_suffix": "_dani",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "This level has new scaffolding since the original to help guide students to the ideal solution.  While it is usually a good thing for students to be able to use many different programs to create the same algorithm, we want to lead them by the hand here so that the addition of functions makes sense.",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 03:12:39 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant" limit="3">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="controls_repeat" limit="2" id="loop">
+          <title name="TIMES">4</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">100</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">175</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">100</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">90</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">45</title>
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="draw ear stems"/>
+              <next>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE">135</title>
+                  <next>
+                    <block type="jump" inline="true">
+                      <title name="DIR">jumpForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">275</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE">45</title>
+                          <next>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="draw ear stems"/>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw ear stems</title>
+          <statement name="STACK">
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">125</title>
+              <next>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE">135</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">50</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">180</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE">135</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">125</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

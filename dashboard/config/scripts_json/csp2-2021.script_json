@@ -2,7 +2,6 @@
   "script": {
     "name": "csp2-2021",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:59 UTC",
+    "serialized_at": "2021-08-26 16:43:24 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -1660,7 +1660,7 @@
       "key": "9788ec6c-7468-4e17-8c12-40f96c175649",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** As students enter class hand each of them a single IP address (precut by teacher from [r ip-address-labels/csp/2021])",
+        "description": "**Distribute:** As students enter class hand each of them a single IP address (precut by teacher from [IP Address Labels](https://docs.google.com/document/d/1IcnID2dhXrhagkJCUULO8g240NflvofUs3q23yEnUu4/edit?usp=sharing))",
         "name": "DNS - Unplugged - 5 mins\r",
         "tips": [
           {
@@ -1835,7 +1835,7 @@
       "key": "4ffb5c13-ec43-4ec8-80ab-13d601a46e39",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss** Have students discuss their responses with a partner before sharing out with the class to make sure students understand the key takeaways about HTTP.\n\n**Discussion Goal:** Here are the most important points for students to take away about HTTP and the way it works\n\n* When you visit a website you're actually getting sent a file by a server. HTTP is solving the problem of how to ask for that file.\n* Your computer and that server communicate using a protocol called HTTP. \n* HTTP is plain-text, so it literally includes the ASCII word \"GET ...\" and the file name requested.\n* All of your communications are being sent over the Internet so these requests are being sent inside TCP/IP packets and over the physical wires of the Internet.\n* There are other secure ways of sending information online because using HTTP, all our information would otherwise be sent as plain text.\n* Certificate authorities ensure that when you start a secure connection you're talking to the website you think you're talking to.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss** Have students discuss their responses with a partner before sharing out with the class to make sure students understand the key takeaways about HTTP.\n\n**Discussion Goal:** Here are the most important points for students to take away about HTTP and the way it works\n\n* When you visit a website you're actually getting sent a file by a server. HTTP is solving the problem of how to ask for that file.\n* Your computer and that server communicate using a protocol called HTTP. \n* HTTP is plain-text, so it literally includes the ASCII word \"GET ...\" and the file name requested.\n* All of your communications are being sent over the Internet so these requests are being sent inside TCP/IP packets and over the physical wires of the Internet.\n* There are other secure ways of sending information online because using HTTP, all our information would otherwise be sent as plain text.\n* Certificate authorities ensure that when you start a secure connection you're talking to the website you think you're talking to.\n* \n"
       },
       "seeding_key": {
         "activity_section.key": "4ffb5c13-ec43-4ec8-80ab-13d601a46e39",
@@ -1857,7 +1857,13 @@
       "key": "e1910615-a244-4ed8-9a26-210ad5517985",
       "position": 2,
       "properties": {
-        "description": "Use this final prompt as a review of everything covered in both today's lesson and those that came before. You'll actually probably want to start with the bottom of your review guide.\n\n**Discussion Goal:** Use this final discussion to review not just this lesson but every protocol / layer of the Internet students have learned so far. You'd aim to see responses like the following \n\n* When you type in code.org, your browser will contact the DNS to find Code.org's IP address\n* When you receive the address you'll send an HTTP GET request to code.org to send you its homepage\n* Code.org's server will respond with the HTML code that makes up its web page\n* All of the communications above happen on the Internet which means TCP or UDP will break the message into packets and then send them. If TCP is used, error checking will occur.\n* IP will route the packets back and forth between your computer and the server\n* All of this information is sent over the physical wires, cable, wifi networks, and routers that make up the physical network of the internet.\n\n"
+        "description": "Use this final prompt as a review of everything covered in both today's lesson and those that came before. You'll actually probably want to start with the bottom of your review guide.\n\n**Discussion Goal:** Use this final discussion to review not just this lesson but every protocol / layer of the Internet students have learned so far. You'd aim to see responses like the following \n\n* When you type in code.org, your browser will contact the DNS to find Code.org's IP address\n* When you receive the address you'll send an HTTP GET request to code.org to send you its homepage\n* Code.org's server will respond with the HTML code that makes up its web page\n* All of the communications above happen on the Internet which means TCP or UDP will break the message into packets and then send them. If TCP is used, error checking will occur.\n* IP will route the packets back and forth between your computer and the server\n* All of this information is sent over the physical wires, cable, wifi networks, and routers that make up the physical network of the internet.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to bring up [Tim Berners-Lee](https://en.wikipedia.org/wiki/Tim_Berners-Lee), the inventor of the World Wide Web and the first person to implement HTTP in 1989, who describes creating the web like this: \"Most of the technology involved in the web, like the hypertext, like the Internet, ... had all been designed already. I just had to put them together. It was a step of generalizing, going to a higher level of abstraction.\""
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e1910615-a244-4ed8-9a26-210ad5517985",
@@ -2153,7 +2159,6 @@
         ],
         "progression": "Internet Simulator"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2179,7 +2184,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2205,7 +2209,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2231,7 +2234,6 @@
         ],
         "progression": "Internet Simulator"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2257,7 +2259,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2283,7 +2284,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2309,7 +2309,6 @@
         ],
         "progression": "Internet Simulator"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2335,7 +2334,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2361,7 +2359,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2387,7 +2384,6 @@
         ],
         "progression": "Internet Simulator"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2413,7 +2409,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2439,7 +2434,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2464,7 +2458,6 @@
           "U1L5 CSP Internet Simulator DNS_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2490,7 +2483,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2516,7 +2508,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2542,7 +2533,6 @@
         ],
         "progression": "Unit 2 Exam"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2754,6 +2744,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp2-2021/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp2-2021/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
@@ -2778,12 +2790,24 @@
       }
     },
     {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
+      }
+    },
+    {
       "name": "EXEMPLAR: Internet Dilemmas",
       "url": "https://docs.google.com/document/d/1LHCRJlpBK56ynaYp5-RfiKlaAzCoh99QXUU8xbMPJS4/edit?usp=sharing",
       "key": "exemplar-internet-dilemmas",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
@@ -2801,6 +2825,18 @@
       },
       "seeding_key": {
         "resource.key": "internet-dilemmas-2021"
+      }
+    },
+    {
+      "name": "IP Address Labels",
+      "url": "https://docs.google.com/document/d/1IcnID2dhXrhagkJCUULO8g240NflvofUs3q23yEnUu4/edit?usp=sharing",
+      "key": "ip_address_labels",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "ip_address_labels"
       }
     },
     {
@@ -2893,6 +2929,30 @@
       }
     },
     {
+      "name": "U2 High Score Sample Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1AuFdmglDQD6-gzzipbP492kkIUejKrwtHpLbvFv8kcA/edit?usp=sharing",
+      "key": "u2_high_score_sample_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u2_high_score_sample_guide_rubric"
+      }
+    },
+    {
+      "name": "U2 Mid Score Sample Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1nWb27SlMffIYwKf3jgurJBPWyYhyIc-gSzObvJlHR8s/edit?usp=sharing",
+      "key": "u2_mid_score_sample_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u2_mid_score_sample_guide_rubric"
+      }
+    },
+    {
       "name": "U2L03 The Need for Addressing",
       "url": "https://docs.google.com/document/d/1JbZgvlloovjaV5UfewWj-E1-S5zmwgiv-r8_5cASoPY/edit?usp=sharing",
       "key": "u2l02-the-need-for-addressing",
@@ -2919,6 +2979,18 @@
       }
     },
     {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
+    },
+    {
       "name": "What is the Internet?",
       "url": "https://www.youtube.com/watch?v=Dxcc6ycZ73M",
       "key": "what-is-the-internet",
@@ -2935,50 +3007,44 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
-        "resource.key": "what-is-the-internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
-        "resource.key": "csp-unit-2-the-internet"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Building a Network",
         "resource.key": "csp-unit-2-the-internet"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Need for Addressing",
+        "lesson.key": "DNS and HTTP",
         "resource.key": "csp-unit-2-the-internet"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "resource.key": "the-internet-ip-addresses-and-dns-1"
+        "lesson.key": "DNS and HTTP",
+        "resource.key": "ip_address_labels"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "resource.key": "u2l02-the-need-for-addressing"
+        "lesson.key": "DNS and HTTP",
+        "resource.key": "layers-of-the-internet-activity-guide"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
+        "lesson.key": "DNS and HTTP",
+        "resource.key": "the-internet-http-and-html-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "DNS and HTTP",
+        "resource.key": "the-internet-ip-addresses-and-dns-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Assessment Day",
         "resource.key": "csp-unit-2-the-internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "resource.key": "teacher-guide-router"
       }
     },
     {
@@ -3001,32 +3067,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "DNS and HTTP",
+        "lesson.key": "Project - Internet Dilemmas Part 1",
         "resource.key": "csp-unit-2-the-internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "resource.key": "the-internet-ip-addresses-and-dns-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "resource.key": "layers-of-the-internet-activity-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "resource.key": "the-internet-http-and-html-1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Internet Dilemmas Part 1",
-        "resource.key": "csp-unit-2-the-internet"
+        "resource.key": "exemplar-internet-dilemmas"
       }
     },
     {
@@ -3037,14 +3085,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 2",
-        "resource.key": "csp-unit-2-the-internet"
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "resource.key": "u2_high_score_sample_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "resource.key": "u2_mid_score_sample_guide_rubric"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Internet Dilemmas Part 2",
-        "resource.key": "internet-dilemmas-2021"
+        "resource.key": "csp-unit-2-the-internet"
       }
     },
     {
@@ -3055,12 +3109,78 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "resource.key": "internet-dilemmas-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "resource.key": "u2_high_score_sample_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "resource.key": "u2_mid_score_sample_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
         "resource.key": "csp-unit-2-the-internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "resource.key": "teacher-guide-router"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "resource.key": "csp-unit-2-the-internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "resource.key": "the-internet-ip-addresses-and-dns-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "resource.key": "u2l02-the-need-for-addressing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
+        "resource.key": "csp-unit-2-the-internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
+        "resource.key": "what-is-the-internet"
       }
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "csp2-2021"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "course_master_vocabulary",
@@ -3069,7 +3189,19 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp2-2021"
       }
     }

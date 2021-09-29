@@ -1,0 +1,47 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "makeProjectile",
+    "inline": false,
+    "blockText": "create projectile \n{ANIMATION_NAME} from {LOCATION} with speed {SPEED}direction{DIRECTION}",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "ANIMATION_NAME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      },
+      {
+        "name": "SPEED"
+      },
+      {
+        "name": "DIRECTION",
+        "options": [
+          [
+            "up",
+            "270"
+          ],
+          [
+            "down",
+            "90"
+          ],
+          [
+            "left",
+            "180"
+          ],
+          [
+            "right",
+            "0"
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -5,15 +5,21 @@ ru:
       Green: Зеленый
       Red: Красный
       actor: персонаж
+      age: возраст
+      answer: ответ
+      binary: двоичный
+      birds: птицы
       cats: все кошки
       color: цвет
       counter: счетчик
       dogs: все собаки
+      energy: энергия
       height: высота
       honey: мед
       i: Я
       left: влево
       length: длина
+      level: уровень
       name: наименование
       nectar: нектар
       points: очки

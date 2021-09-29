@@ -2,7 +2,6 @@
   "script": {
     "name": "cspunit1-tools",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "pd": true,
@@ -10,7 +9,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:50 UTC",
+    "serialized_at": "2021-08-03 22:46:58 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "cspunit1-tools"
     }
@@ -62,7 +62,6 @@
           "plc csp1 intro to tools"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

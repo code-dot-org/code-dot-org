@@ -19,5 +19,5 @@ To achieve this effect, simply add some random angles in both directions to each
 
 Experiment a bit with the random number parameter.  What happens when the wiggle is less than 30 degrees?  What if it's greater than 90 degrees?
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

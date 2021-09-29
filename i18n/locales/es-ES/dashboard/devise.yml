@@ -18,8 +18,6 @@ es:
     mailer:
       confirmation_instructions:
         subject: "Instrucciones de confirmación de Code.org"
-      reset_password_instructions:
-        subject: "Reiniciar las instrucciones de la contraseña de Code.org"
       unlock_instructions:
         subject: "Instrucciones de desbloqueo"
     omniauth_callbacks:

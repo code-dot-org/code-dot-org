@@ -2,6 +2,8 @@
 te:
   data:
     script:
+      category:
+        hoc_category_name: అవర్ ఆఫ్ కోడ్
       name:
         events:
           title: ఈవెంట్లు
@@ -21,7 +23,6 @@ te:
             Events:
               name: ఈవెంట్లు
         dance:
-          title: డాన్స్ పార్టీ
           lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
@@ -146,6 +147,9 @@ te:
               name: డాన్స్ పార్టీ
             lesson-1:
               name: డాన్స్ పార్టీ
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ఈవెంట్లు
         pre-express-2021:
           lesson_groups:
             csf_events:

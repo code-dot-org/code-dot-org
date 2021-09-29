@@ -69,87 +69,87 @@ module FakeDashboard
   #
   # Fake Data: Scripts
   #
-  SCRIPTS = [
-    SCRIPT_FOO = {
+  UNITS = [
+    UNIT_FOO = {
       id: 1,
       name: 'Foo',
-      hidden: 0
+      published_state: 'preview'
     },
-    SCRIPT_BAR = {
+    UNIT_BAR = {
       id: 3,
       name: 'Bar',
-      hidden: 0
+      published_state: 'preview'
     },
-    SCRIPT_MC = {
+    UNIT_MC = {
       id: 4,
       name: 'mc',
-      hidden: 0
+      published_state: 'preview'
     },
-    SCRIPT_HOUROFCODE = {
+    UNIT_HOUROFCODE = {
       id: 5,
       name: 'hourofcode',
-      hidden: 0
+      published_state: 'preview'
     },
-    SCRIPT_MINECRAFT = {
+    UNIT_MINECRAFT = {
       id: 6,
       name: 'minecraft',
-      hidden: 0
+      published_state: 'preview'
     },
-    SCRIPT_FLAPPY = {
+    UNIT_FLAPPY = {
       id: 10,
       name: 'flappy',
-      hidden: 0
+      published_state: 'preview'
     },
-    SCRIPT_CSP1 = {
+    UNIT_CSP1 = {
       id: 31,
       name: 'csp1-2017',
-      hidden: 0,
+      published_state: 'preview'
     },
-    SCRIPT_CSP2 = {
+    UNIT_CSP2 = {
       id: 32,
       name: 'csp2-2017',
-      hidden: 0,
+      published_state: 'preview'
     },
-    SCRIPT_CSP3 = {
+    UNIT_CSP3 = {
       id: 34,
       name: 'csp3-2017',
-      hidden: 0,
+      published_state: 'preview'
     },
-    # put the hidden scripts at the end and give them higher ids, to make
+    # put the unlaunched units at the end and give them higher ids, to make
     # unit testing slightly easier.
-    SCRIPT_ALLTHETHINGS = {
+    UNIT_ALLTHETHINGS = {
       id: 45,
       name: 'allthehiddenthings',
-      hidden: 1
+      published_state: 'beta'
     },
-    SCRIPT_CSP2_ALT = {
+    UNIT_CSP2_ALT = {
       id: 53,
       name: 'csp2-alt',
-      hidden: 1
+      published_state: 'beta'
     },
   ]
 
-  COURSE_SCRIPTS = [
+  COURSE_UNITS = [
     {
       course_id: COURSE_CSP[:id],
-      script_id: SCRIPT_CSP1[:id],
+      script_id: UNIT_CSP1[:id],
       position: 1
     },
     {
       course_id: COURSE_CSP[:id],
-      script_id: SCRIPT_CSP2[:id],
+      script_id: UNIT_CSP2[:id],
       position: 2
     },
     {
       course_id: COURSE_CSP[:id],
-      script_id: SCRIPT_CSP2_ALT[:id],
+      script_id: UNIT_CSP2_ALT[:id],
       position: 2,
       experiment_name: 'csp2-alt-experiment',
-      default_script_id: SCRIPT_CSP2[:id]
+      default_script_id: UNIT_CSP2[:id]
     },
     {
       course_id: COURSE_CSP[:id],
-      script_id: SCRIPT_CSP3[:id],
+      script_id: UNIT_CSP3[:id],
       position: 3
     },
   ]
@@ -225,8 +225,8 @@ module FakeDashboard
     users: USERS,
     user_permissions: USER_PERMISSIONS,
     unit_groups: COURSES,
-    scripts: SCRIPTS,
-    course_scripts: COURSE_SCRIPTS,
+    scripts: UNITS,
+    course_scripts: COURSE_UNITS,
     experiments: EXPERIMENTS,
     sections: TEACHER_SECTIONS,
     followers: FOLLOWERS,

@@ -1,0 +1,24 @@
+name 'CSP-PL - Unit 4 Wrap-up_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Unit 4 and the role of collaboration
+**Goal:** The purpose of this section is to zoom out and look at the big picture of Unit 4 and consider the pros and cons of independent and collaborative work while students are learning to program. *(Estimated time: 10 minutes)*
+
+## Wrapping up Unit 4
+Thus far, you have seen one of the three different EIPM sequences in Unit 4.  In addition to an EIPM sequence on variables, Unit 4 also includes a sequence on conditionals and on functions.  Here are a few more things  you should know about this unit:
+
+* At the end of the unit, students make a “decider app” as a final project for the unit.  There is also a multiple choice test built into the unit. 
+* In the project students work in pairs to create an app that helps a person make a decision.  This project includes a rubric and has specific requirements such as using one number and one string to make a decision and having at least three different possible output answers.
+* After this unit, students go on to learn more advanced programming topics such as lists, loops, and traversals. 
+
+![](https://images.code.org/8dd8c6175d1c11046e291de25181b65b-image-1594994860858.06.36 AM.png)
+
+
+
+Throughout the programming units, you can determine how you want to encourage students to work collaboratively while programming.  In the next section, we are going to think more deeply about the role of collaboration and independent work in your classroom.
+
+
+MARKDOWN

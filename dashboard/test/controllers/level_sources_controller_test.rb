@@ -165,7 +165,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'artist levelsource has sharing meta tags' do
-    level_source = create(:level_source, level: Artist.first)
+    level_source = create(:level_source, level: create(:artist))
     get :show, params: {id: level_source.id}
 
     assert_response :success
@@ -179,7 +179,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'playlab levelsource has sharing meta tags' do
-    level_source = create(:level_source, level: Studio.first)
+    level_source = create(:level_source, level: create(:playlab))
     get :show, params: {id: level_source.id}
 
     assert_response :success

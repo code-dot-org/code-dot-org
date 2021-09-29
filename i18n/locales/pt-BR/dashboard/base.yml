@@ -161,8 +161,9 @@ pt:
     additional_information: "Precisamos de mais informações para continuar com o processo de inscrição."
     user_type_button: "Atualizar Tipo de Conta"
     user_type_label: "Tipo de conta"
-    user_type_teacher: "Professor"
     user_type_student: "Estudante"
+    user_type_student_ability_1: "Salvar seu progresso e projetos"
+    user_type_teacher: "Professor"
     field_is_required: "é obrigatório"
     accept_terms: "Você precisa aceitar para criar uma conta."
     error: "Ocorreu um erro."
@@ -171,6 +172,9 @@ pt:
     email_preference_yes: "Sim"
     email_preference_no: "Não"
     email_preference_required: "Você deve especificar um e-mail de preferência."
+    share_teacher_email_reg_partner_preference_yes: "Sim"
+    share_teacher_email_reg_partner_preference_no: "Não"
+    share_teacher_email_reg_partner_preference_required: "Você deve especificar um e-mail de preferência."
     parent_account_checkbox: "Sou pai/responsável, atuando em nome do(a) meu(minha) filho(a)"
     parent_account_email_progress_permission: "Podemos enviar e-mails com atualizações ocasionais sobre o progresso e os projetos do(a) seu(sua) filho(a), bem como atualizações sobre seu curso e seus conhecimentos em informática? [(consulte nossa política de privacidade)]%{privacy_policy_url})"
     parent_account_email_label: "E-mail do Pai/Responsável"
@@ -263,7 +267,8 @@ pt:
   follower:
     invite_sent: 'Convite enviado'
     added_teacher: '%{name} foi adicionado como seu professor'
-    registered: "Você se cadastrou para %{section_name}."
+    registered: "Você já está registrado para %{section_name}."
+    already_exists: 'Você já se juntou à seção %{section_name}.'
     error:
       signed_in: 'Saia antes de prosseguir'
       username_not_found: 'Nome de usuário %{username} não encontrado'
@@ -584,8 +589,6 @@ pt:
       link: "Saiba mais"
       applab_unsupported_tablet: "App Lab funciona melhor em um computador desktop ou laptop com um mouse e um teclado. Você pode ter problemas usando esta ferramenta no seu dispositivo atual."
       gamelab_unsupported_tablet: "O Laboratório de Jogos funciona melhor em um computador desktop ou um laptop com um mouse e um teclado. Você pode ter problemas usando esta ferramenta no seu dispositivo atual."
-      oceans_unsupported_browser: "Esse tutorial não roda neste navegador. Tente visitar essa página usando Edge, Chrome, Firefox ou outro navegador moderno."
-      weblab_unsupported_browser: "Infelizmente, estamos com problemas com o carregamento do Web Lab neste navegador. Você pode tentar usar um navegador diferente até que isso seja resolvido. Desculpe pela inconveniência."
       weblab_unsupported_locale_storage: "Você pode ter problemas ao usar o Laboratório Web no modo de Navegação Privativa. Por favor recarregue seu projeto no modo normal. Desculpe pela inconveniência."
   slow_loading: 'Isso está demorando mais do que o normal...'
   try_reloading: 'Tente recarregar a página'
@@ -965,7 +968,7 @@ pt:
       school_city: 'Cidade da Escola'
       school_country: 'País da Escola'
       colombian_school_city: 'Cidade da Escola'
-      colombian_school_name: 'Nome da escola'
+      colombian_chilean_school_name: 'Nome da escola'
       ages: 'Qual idade(s) você ensina este ano?'
       subjects: 'Qual(is) disciplina(s) você ensina este ano?'
       resources: 'Quais dos seguintes recursos de educação de Ciência da Computação você utiliza?'
@@ -1063,6 +1066,7 @@ pt:
   page_not_found_description: "A página que você está procurando não existe neste endereço. Verifique o endereço de web e carregue novamente. Ou, então, volte para nossa página inicial."
   page_not_found_button: "Volte para a página inicial"
   copy: 'Copiar'
+  confirm: 'Confirmar'
   maker:
     google_oauth:
       login_with_google: 'Login no aplicativo Maker com o Google'
@@ -1076,3 +1080,5 @@ pt:
     text: "**Você é pai ou responsável?** Associe seu e-mail a esta conta para se manter atualizado em relação ao progresso e aos projetos do(a) seu(sua) filho(a)!"
     link_your_email: "Associe seu e-mail"
     not_now: "Agora não"
+  behaviors:
+    this_sprite: "este personagem"

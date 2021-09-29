@@ -1,0 +1,56 @@
+%h1 User Progress
+
+%p This page allows an admin to view recent progress for a user and delete progress for all levels in a script. All times in UTC.
+
+:ruby
+  def format_time(datetime)
+    datetime.try(:strftime, '%F %T')
+  end
+
+= form_tag url_for(action: 'user_progress_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :user_identifier, params[:user_identifier], class: 'form-control', placeholder: 'user id, email, or username', size: 80
+  %button.btn{type: 'submit'}
+    %i.fa.fa-search
+
+-if @target_user
+  %h2 User information
+  %table.table.table-hover.table-condensed
+    %thead
+      %th Id
+      %th Email
+      %th Name
+      %th User type
+      %th Current sign in at
+      %th Created at
+    %tbody
+      %tr
+        %td= @target_user.id
+        %td= @target_user.email
+        %td= @target_user.name
+        %td= @target_user.user_type
+        %td= format_time(@target_user.current_sign_in_at)
+        %td= format_time(@target_user.created_at)
+
+  %h2 Scripts with most recent progress (sorted by updated_at, up to 100 shown)
+  %p Data represents rows from the user_scripts table
+  %table.table.table-hover.table-condensed
+    %thead
+      %th Id
+      %th Script id
+      %th Script name
+      %th Started at
+      %th Completed at
+      %th Assigned at
+      %th Last progress at
+      %th
+    %tbody
+      - @user_scripts.each do |user_script|
+        %tr
+          %td= user_script.id
+          %td= user_script.script_id
+          %td= user_script.script.name
+          %td= format_time(user_script.started_at)
+          %td= format_time(user_script.completed_at)
+          %td= format_time(user_script.assigned_at)
+          %td= format_time(user_script.last_progress_at)
+          %td= link_to 'Delete...', delete_progress_form_path(user_id: @target_user.id, script_id: user_script.script_id)

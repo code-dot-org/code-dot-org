@@ -2,7 +2,6 @@
   "script": {
     "name": "test-migrated-models",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "peer_reviews_to_complete": 0,
@@ -83,7 +82,6 @@
       "properties": {
         "progression": "My Activity Section"
       },
-      "named_level": null,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

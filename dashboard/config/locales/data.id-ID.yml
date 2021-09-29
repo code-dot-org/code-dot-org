@@ -37,7 +37,7 @@ id:
         Applab: Laboratorium Aplikasi
         NetSim: Simulator Internet
         Custom: Artis
-        CustomStudio: Play Lab/Lab Permainan
+        CustomStudio: Lab Permainan
         Gamelab: Game Lab
         Spritelab: Sprite Lab
     trophy:
@@ -857,6 +857,10 @@ id:
           Epner'
         codebreak_e04: Code Breal 4.0 Informasi Digital bersama Mike Krieger dan Alice
           Keeler
+        csd_how_teamwork_works: Bagaimana timkerja bekerja
+        csd_teamwork_and_disagreement: Timkerja- Menghadapi perbedaan pendapat
+        playlab_2021: Pengantar Play Lab
+        playlab_2021_reader: Pengantar Play Lab
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

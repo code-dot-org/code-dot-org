@@ -1,9 +1,9 @@
 ---
-title: Sudjelovanje cijele škole
+title: Sudjelovanje škole
 ---
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Neka cijela škola sudjeluje
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informacije o učestvovanju cijele škole na Satu kodiranja idu ovdje.

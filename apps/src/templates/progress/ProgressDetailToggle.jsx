@@ -109,6 +109,8 @@ const styles = {
   }
 };
 
+export const UnconnectedProgressDetailToggle = ProgressDetailToggle;
+
 export default connect(
   state => ({
     isPlc: !!state.progress.professionalLearningCourse,

@@ -411,42 +411,6 @@ uz:
           talabalarga intuitiv ravishda nima uchun ekanligini va kod qismlarini funksiyalarga
           birlashtirish qanchalik foydali amaliyot bo'lishi mumkinligiтш ga yordam
           tushunishga beradi.
-      swipeRightPassThrough:
-        title: Ishga qabul qilish senariylari sessiyasi
-        desc: "# Ishga qabul qilish senariylari sessiyasi\r\n\r\n## CS uchun o'ngga
-          silang\r\nUshbu mashg'ulot uchun biz MIT-dagi hamkorlarimiz tomonidan ishlab
-          chiqilgan \"CS uchun o'ngga silash\" vositasidan foydalanamiz. CS uchun
-          o'ngga silash mashg'ulotida siz ba'zi talabalar profillarini o'qiysiz va
-          uni CS tamoyillari kursiga yozilish uchun ishontirish uchun foydalanishingiz
-          mumkin bo'lgan aniq bayonotlarni ko'rib chiqasiz. \r\n\r\n### Qanday ishlaydi\r\nCS
-          for Swipe o'yinida siz har bir talabaga aytishingiz mumkin bo'lgan bir qator
-          takliflarni ko'rasiz. Talabalarni kursga yozilishga ishontirish uchun samarali
-          deb hisoblagan kotirovkalarni o'ngga suring va samarali bo'lmaydi deb hisoblagan
-          fikrlarni chapga suring. Sessiya davomida biz talabalarni CSga o'qishga
-          kirishda eng samarali bo'lgan bayonotlar turlari bo'yicha sizning fikrlaringizni
-          guruh bo'lib muhokama qilamiz va sizning ustaxonangizdagi boshqa odamlar
-          har bir argumentni qanday siljiganini ko'rish imkoniga ega bo'lasiz. \r\n\r\n\r\nQuyida
-          davom etish tugmasini bosganingizda biz sizni o'yinga yuboramiz va Code.org
-          tizimiga kirgan elektron pochta manzilingizni yuboramiz."
-      swipeRightPassThrough-test123:
-        title: Ishga qabul qilish senariylari sessiyasi
-        desc: "# Ishga qabul qilish senariylari sessiyasi\r\n\r\n## CS uchun o'ngga
-          silang\r\nUshbu mashg'ulot uchun biz MIT-dagi hamkorlarimiz tomonidan ishlab
-          chiqilgan \"CS uchun o'ngga silash\" vositasidan foydalanamiz. CS uchun
-          o'ngga silash mashg'ulotida siz ba'zi talabalar profillarini o'qiysiz va
-          uni CS tamoyillari kursiga yozilish uchun ishontirish uchun foydalanishingiz
-          mumkin bo'lgan aniq bayonotlarni ko'rib chiqasiz. \r\n\r\n### Qanday ishlaydi\r\nCS
-          for Swipe o'yinida siz har bir talabaga aytishingiz mumkin bo'lgan bir qator
-          takliflarni ko'rasiz. Talabalarni kursga yozilishga ishontirish uchun samarali
-          deb hisoblagan kotirovkalarni o'ngga suring va samarali bo'lmaydi deb hisoblagan
-          fikrlarni chapga suring. Sessiya davomida biz talabalarni CSga o'qishga
-          kirishda eng samarali bo'lgan bayonotlar turlari bo'yicha sizning fikrlaringizni
-          guruh bo'lib muhokama qilamiz va sizning ustaxonangizdagi boshqa odamlar
-          har bir argumentni qanday siljiganini ko'rish imkoniga ega bo'lasiz. \r\n\r\n\r\nQuyida
-          davom etish tugmasini bosganingizda biz sizni o'yinga yuboramiz va Code.org
-          tizimiga kirgan elektron pochta manzilingizni yuboramiz."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         title: My Robotic Friends
         desc: Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
@@ -635,24 +599,6 @@ uz:
           xususan qog'ozli samolyotlarni ishlab chiqarishni taklif qiladi. Ushbu dars
           shuningdek, informatika fanining umumiyroq ko'rinishiga va algoritmlarning
           muhim rol o'ynashiga bag'ishlangan.
-      test-uid-passthrough:
-        desc: "# Ishga qabul qilish senariylari sessiyasi\r\n\r\n## CS uchun o'ngga
-          silang\r\nUshbu mashg'ulot uchun biz MIT-dagi hamkorlarimiz tomonidan ishlab
-          chiqilgan \"CS uchun o'ngga silash\" vositasidan foydalanamiz. CS uchun
-          o'ngga silash mashg'ulotida siz ba'zi talabalar profillarini o'qiysiz va
-          uni CS tamoyillari kursiga yozilish uchun ishontirish uchun foydalanishingiz
-          mumkin bo'lgan aniq bayonotlarni ko'rib chiqasiz. \r\n\r\n### Qanday ishlaydi\r\nCS
-          for Swipe o'yinida siz har bir talabaga aytishingiz mumkin bo'lgan bir qator
-          takliflarni ko'rasiz. Ma'lum talabani kursga yozilishga qiziqtirish uchun
-          samarali deb hisoblagan kotirovkalarni o'ngga suring va samarali bo'lmaydi
-          deb hisoblagan fikrlarni chapga suring. Sessiya davomida biz talabalarni
-          CSga o'qishga kirishda eng samarali bo'lgan bayonotlar turlari bo'yicha
-          sizning fikrlaringizni guruh bo'lib muhokama qilamiz va sizning ustaxonangizdagi
-          boshqa odamlar har bir argumentni qanday siljiganini ko'rish imkoniga ega
-          bo'lasiz. \r\n<br><br><br><br>\r\n\r\n<span style=\"display:none\">keyingi
-          bosqichga o'tish tugmasi</span>\r\n\r\n<a class=\"btn btn-large btn-primary
-          submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">
-          \"Swipe Right for CS\" mashg'ulotiga o'tish uchun bu yerni bosing!</a>\r\n\r"
       PlantASeed_2019:
         title: 'Hayotiy algoritmlar: Urug‘ ekish'
         desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini eslatadi,
@@ -712,10 +658,3 @@ uz:
         desc: Shartli bayonotlar to'g'risida ma'lumot olish uchun talabalar karta
           o'yini o'ynaydilar va "Agar men qizil karta olsam, men ball olaman" va "agar
           men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
-      TheRightApp_2019:
-        title: To'g'ri ilova
-        desc: "* Hozirgi kunda hamma kompyuterlardan, ayniqsa, smartfonlardan foydalanmoqda.
-          \r\n* * Smartfon ilovasi yoki \"app\" odamlarga do'stlari bilan suhbatlashish,
-          musiqa tinglash, xarid qilish yoki shunchaki Internetni o'rganish kabi ishlarni
-          bajarishda yordam beradi.\r\n* Dasturchilar boshqalarning ehtiyojlarini
-          tushunishlari va ularni hisobga olgan holda dasturlarni loyihalashlari muhimdir!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

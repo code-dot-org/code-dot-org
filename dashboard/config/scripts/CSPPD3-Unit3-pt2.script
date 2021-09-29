@@ -1,5 +1,6 @@
 professional_learning_course 'CS Principles Support'
 login_required true
+published_state 'beta'
 
 lesson 'Challenge Overview', display_name: 'Challenge Overview', has_lesson_plan: false
 level 'CSPPD3-u3 challenge overview'

@@ -1,4 +1,4 @@
 name 'U1 evaluation q4'
 question ‘Do you know how IP addresses work?’
 answer ‘Yes!’
-answer ‘Nope!’, weight: 4, stage_name:  'Lesson 9: Internet Addressing'
+answer ‘Nope!’, weight: 4, lesson_name:  'Lesson 9: Internet Addressing'

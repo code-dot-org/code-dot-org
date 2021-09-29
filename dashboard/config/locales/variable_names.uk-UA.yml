@@ -6,6 +6,9 @@ uk:
       Green: Зелена
       Red: Червона
       actor: персонаж
+      age: вік
+      answer: відповідь
+      binary: двійкова система
       birds: птахи
       cats: коти
       color: колір
@@ -18,6 +21,7 @@ uk:
       length: довжина
       name: ім’я
       nectar: нектар
+      planet: планета
       points: балів
       random: випадковий
       repeat: повторити
@@ -26,6 +30,7 @@ uk:
       sides: сторони
       size: розмір
       speed: швидкість
+      startX: startX
       variable: змінна
       width: ширина
       wizard: чарівник

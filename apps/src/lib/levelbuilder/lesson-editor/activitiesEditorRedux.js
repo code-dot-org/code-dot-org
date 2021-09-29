@@ -37,13 +37,13 @@ export const init = (
   activities,
   searchOptions,
   programmingEnvironments,
-  lessonExtrasAvailableForScript
+  lessonExtrasAvailableForUnit
 ) => ({
   type: INIT,
   activities,
   searchOptions,
   programmingEnvironments,
-  lessonExtrasAvailableForScript
+  lessonExtrasAvailableForUnit
 });
 
 export const initActivities = activities => ({
@@ -487,10 +487,10 @@ function programmingEnvironments(state = {}, action) {
   return state;
 }
 
-function lessonExtrasAvailableForScript(state = {}, action) {
+function lessonExtrasAvailableForUnit(state = {}, action) {
   switch (action.type) {
     case INIT:
-      return action.lessonExtrasAvailableForScript;
+      return action.lessonExtrasAvailableForUnit;
   }
   return state;
 }
@@ -624,7 +624,7 @@ export default {
   activities,
   searchOptions,
   programmingEnvironments,
-  lessonExtrasAvailableForScript
+  lessonExtrasAvailableForUnit
 };
 
 export const emptyActivitySection = {

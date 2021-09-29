@@ -14,7 +14,7 @@ title: Blurbs and useful stats
 
 ## Toto zrhnutie je ideálne pre použitie v Newsletteroch
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### Priveďte informatiku na Vašu školu. Začnite už teraz s Hodinou Kódu!
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Avšak len na menej než polovici škôl sa učí informatika! Dobrou správou je, že sme na ceste tento stav zmeniť. Ak ste minulý rok počuli o Hodine Kódu, možno už viete, že zmenila históriu. 100 miliónov študentov už objavilo, ako dostupná a zábavná môže informatika byť len vďaka jednej Hodine Kódu.
 
@@ -46,7 +46,7 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 <a id="infographics"></a>
 
-## Infographics
+## Infografika
 
 {{ stats_carousel }}
 

@@ -1,12 +1,16 @@
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {executeUserCode} from '@cdo/apps/craft/code-connection/craft';
 
 describe('Code Connection extension', () => {
-  it('move forward block to verify single key-value parsing', done => {
+  beforeEach(() => {
     sinon.stub(studioApp(), 'highlight');
-
+  });
+  afterEach(() => {
+    sinon.restore();
+  });
+  it('move forward block to verify single key-value parsing', done => {
     const mockClient = {
       async_command: command => {
         expect(command).to.eql('move?direction=forward');

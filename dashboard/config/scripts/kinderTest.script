@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Bee: Conditionals', display_name: 'Bee: Conditionals', has_lesson_plan: false
 level 'grade4_bee_conditionals_ifvid'
 level 'grade4_bee_conditionals_quantum1'

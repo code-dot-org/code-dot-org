@@ -26,7 +26,7 @@ Several lessons in this unit leverage external tools and resources to give stude
 ## Code Studio Tools in Unit 4
 Lessons 5 - 7 take students through a series of discovery lessons related to how digital information on the internet is protected and secured. These lessons rely heavily on educational widgets that are built into Code Studio.
 
-- **Lesson 5: Simple Encryption** | [Caesar Cipher Widget](https://studio.code.org/s/csp4-2019/stage/5/puzzle/2) to crack a simple alphabetic shift cipher; [Frequency Analysis Widget](https://studio.code.org/s/csp4-2019/stage/5/puzzle/5) to crack a random substitution cipher
-- **Lesson 6: Encryption with Keys and Passwords** | [Vigenere Cipher Widget](http://studio.code.org/s/csp4-2019/stage/6/puzzle/2)
-- **Lesson 7: Public Key Cryptography** | [Modulo Clock](https://studio.code.org/s/csp4-2019/stage/7/puzzle/4) to explore "clock" arithmetic; [Public Key Crypto Widget](https://studio.code.org/s/csp4-2019/stage/7/puzzle/6) to explore how public key cryptography works
+- **Lesson 5: Simple Encryption** | [Caesar Cipher Widget](https://studio.code.org/s/csp4-2019/lessons/5/levels/2) to crack a simple alphabetic shift cipher; [Frequency Analysis Widget](https://studio.code.org/s/csp4-2019/lessons/5/levels/5) to crack a random substitution cipher
+- **Lesson 6: Encryption with Keys and Passwords** | [Vigenere Cipher Widget](http://studio.code.org/s/csp4-2019/lessons/6/levels/2)
+- **Lesson 7: Public Key Cryptography** | [Modulo Clock](https://studio.code.org/s/csp4-2019/lessons/7/levels/4) to explore "clock" arithmetic; [Public Key Crypto Widget](https://studio.code.org/s/csp4-2019/lessons/7/levels/6) to explore how public key cryptography works
 MARKDOWN

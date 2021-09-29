@@ -9,6 +9,7 @@
     "csd6-2018",
     "csd-post-survey-2018"
   ],
+  "published_state": "stable",
   "properties": {
     "teacher_resources": [
       [
@@ -22,9 +23,7 @@
     ],
     "has_verified_resources": true,
     "family_name": "csd",
-    "version_year": "2018",
-    "is_stable": true,
-    "visible": true
+    "version_year": "2018"
   },
   "resources": [
 

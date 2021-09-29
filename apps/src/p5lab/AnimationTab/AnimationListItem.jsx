@@ -12,8 +12,8 @@ import {
   setAnimationFrameDelay,
   setAnimationLooping,
   isNameUnique
-} from '../animationListModule';
-import {selectAnimation} from './animationTabModule';
+} from '../redux/animationList';
+import {selectAnimation} from '../redux/animationTab';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
 import _ from 'lodash';
@@ -56,7 +56,7 @@ class AnimationListItem extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
@@ -69,7 +69,7 @@ class AnimationListItem extends React.Component {
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.setState({frameDelay: this.getAnimationProps(this.props).frameDelay});
     this.debouncedFrameDelay = _.debounce(() => {
       const latestFrameDelay = this.state.frameDelay;

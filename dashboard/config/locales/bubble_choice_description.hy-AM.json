@@ -1,2 +1,9 @@
 {
+  "hy-AM": {
+    "data": {
+      "bubble_choice_description": {
+        "courseD_bee_nestedLoops8_2021": "Collect all of the nectar from each flower\nand make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. "
+      }
+    }
+  }
 }

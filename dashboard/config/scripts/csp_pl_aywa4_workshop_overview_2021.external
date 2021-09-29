@@ -1,0 +1,30 @@
+name 'CSP-PL AYWA4 Workshop Overview_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 4: CS Principles Virtual Professional Learning 
+
+## Module 4 Overview
+
+Welcome to the Module 4 asynchronous work for CS Principles!  These experiences will help prepare you for the following synchronous workshop and also help you understand the content and curriculum as you prepare to teach your own students. Combined, these asynchronous tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+
+**During this asynchronous work you will:**
+
+* Learn more about the Lists EIPM progression in Unit 5 by engaging in the same programming tasks students will engage in.
+* Experience the loops and traversals mental models introduced in Explore lessons from Unit 5. 
+* Use the datasets feature in App Lab.
+* Reflect on ways to provide students feedback prior to a summative assessment.
+
+
+**After this asynchronous work you will:**
+
+* Understand the content in the List Practice and/or Make lessons.
+* Be able to use the dataset feature in App Lab to create a list in a project.
+* Be prepared to discuss the role of feedback and assessment in CS Principles.
+
+
+Let's get started!
+
+MARKDOWN

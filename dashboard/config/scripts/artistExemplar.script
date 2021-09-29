@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Artist Exemplar', display_name: 'Artist Exemplar', has_lesson_plan: false
 level 'aEstory1'
 level 'aE1'

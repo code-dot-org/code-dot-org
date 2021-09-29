@@ -2,6 +2,7 @@
   data:
     parameter_names:
       actor: figur
+      color: farge
       counter: teller
       height: høyde
       honey: honning

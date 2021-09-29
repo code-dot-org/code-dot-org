@@ -8,7 +8,7 @@ title: Supporting special needs students for the Hour of Code
 
 ## Fit a variety of needs with unplugged and online tutorials
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/stage/15/puzzle/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/lessons/15/levels/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
 
 For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students who are deaf or hard of hearing can participate fully in the online tutorials.
 

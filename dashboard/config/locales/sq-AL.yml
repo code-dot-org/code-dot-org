@@ -161,8 +161,8 @@ sq:
       me rregjistrimin tuaj.
     user_type_button: Përditëso llojin e llogarisë
     user_type_label: Lloji i llogarisë
-    user_type_teacher: Mësues
     user_type_student: Student
+    user_type_teacher: Mësues
     field_is_required: E domosdoshme
     accept_terms: Ju duhet të jeni dakord për të krijuar një llogari
     error: Ndodhi një gabim.
@@ -172,6 +172,10 @@ sq:
     email_preference_yes: Po
     email_preference_no: Jo
     email_preference_required: Ju duhet të specifikoni preferencën e postës elektronike.
+    share_teacher_email_reg_partner_preference_yes: Po
+    share_teacher_email_reg_partner_preference_no: Jo
+    share_teacher_email_reg_partner_preference_required: Ju duhet të specifikoni preferencën
+      e postës elektronike.
   school_info:
     title: Informacione për shkollën (opsionale)
     school_country: Qyteti i shkollës
@@ -277,6 +281,7 @@ sq:
       sign_in_to_save: Logohu për të ruajtur ecurinë tënde
       project_gallery: Projekte
       educate_hoc: Ora e Kodimit
+      stats: statistikat
       legal_privacy: Rregullat e Privatësisë
       legal_tos: Kushtet e shërbimit
     user:
@@ -360,6 +365,7 @@ sq:
     delete_confirm: A je i sigurtë që do të fshish llogarinë tënde?
     update_email: Përditëso
     parent_guardian_email_label: Prindi/ kujdestari email
+    remove_parent_email_label: Hiq
     none: Asnjë
   user_level:
     completed: E përfunduar
@@ -603,6 +609,7 @@ sq:
     unplugged_conditionals:
       title: Kushtet
     widgets:
+      audience: Moshat 14+
       cta: 'Mëso si '
   landing:
     report_bug: Raportoni një problem
@@ -876,7 +883,7 @@ sq:
       email: Email
       school_name: Emri i shkollës
       school_country: Qyteti i shkollës
-      colombian_school_name: Emri i shkollës
+      colombian_chilean_school_name: Emri i shkollës
     form_entries:
       gender:
         male: Mashkull
@@ -898,3 +905,4 @@ sq:
   cookie_banner:
     accept: Pranoj
   copy: Kopjo
+  confirm: Konfirmo

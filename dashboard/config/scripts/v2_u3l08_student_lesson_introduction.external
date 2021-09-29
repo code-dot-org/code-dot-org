@@ -23,5 +23,5 @@ markdown <<MARKDOWN
 *  **[Call a function with parameters](//studio.code.org/docs/applab/callMyFunction_n/)** - `Call a function with parameters`
 *  **[Define a function with parameters](//studio.code.org/docs/applab/functionParams_n/)** - `function myFunction(n){ //code }`
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

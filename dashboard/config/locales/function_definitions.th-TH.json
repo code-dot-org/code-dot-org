@@ -1775,6 +1775,346 @@
               "length": "ความยาว"
             }
           }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "วาดรูปดวงดาว",
+            "parameters": {
+              "points": "คะแนน",
+              "length": "ความยาว"
+            }
+          },
+          "draw a circle": {
+            "name": "วาดวงกลม"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ความยาว",
+              "repeat": "ทำซ้ำ"
+            }
+          },
+          "draw a triangle": {
+            "name": "วาดสามเหลี่ยม",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a house": {
+            "name": "วาดรูปบ้าน",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "วาดรูปดวงดาว",
+            "parameters": {
+              "points": "คะแนน",
+              "length": "ความยาว"
+            }
+          },
+          "draw a circle": {
+            "name": "วาดวงกลม"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ความยาว",
+              "repeat": "ทำซ้ำ"
+            }
+          },
+          "draw a triangle": {
+            "name": "วาดสามเหลี่ยม",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a house": {
+            "name": "วาดรูปบ้าน",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "วาดรูปดวงดาว",
+            "parameters": {
+              "points": "คะแนน",
+              "length": "ความยาว"
+            }
+          },
+          "draw a circle": {
+            "name": "วาดวงกลม"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ความยาว",
+              "repeat": "ทำซ้ำ"
+            }
+          },
+          "draw a triangle": {
+            "name": "วาดสามเหลี่ยม",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a house": {
+            "name": "วาดรูปบ้าน",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "วาดรูปดวงดาว",
+            "parameters": {
+              "points": "คะแนน",
+              "length": "ความยาว"
+            }
+          },
+          "draw a circle": {
+            "name": "วาดวงกลม"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ความยาว",
+              "repeat": "ทำซ้ำ"
+            }
+          },
+          "draw a triangle": {
+            "name": "วาดสามเหลี่ยม",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a house": {
+            "name": "วาดรูปบ้าน",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "สร้างสะพาน"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "เคลียร์เส้นทาง"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "ซ่อมทางระยะยาว"
+          },
+          "fix short path": {
+            "name": "ซ่อมทางระยะสั้น"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "สร้างสะพานสั้น"
+          },
+          "build long bridge": {
+            "name": "สร้างสะพานยาว"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "ฟังก์ชั่น 1"
+          },
+          "function 2": {
+            "name": "ฟังก์ชั่น 2"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          },
+          "draw hexagon": {
+            "name": "วาดรูปหกเหลี่ยม"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "วาดรูปดวงดาว"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "วาดรูปดวงดาว"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "วาดรูปดวงดาว"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "วาดรูปดวงดาว"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          },
+          "draw a line of squares": {
+            "name": "วาดเส้นสีเหลี่ยมจตุรัส"
+          },
+          "draw square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "วาดเส้นสีเหลี่ยมจตุรัส"
+          },
+          "draw square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "วาดเส้นสีเหลี่ยมจตุรัส"
+          },
+          "draw square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "วาดรูปหกเหลี่ยม"
+          },
+          "draw a line of squares": {
+            "name": "วาดเส้นสีเหลี่ยมจตุรัส"
+          },
+          "draw square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "จบเกม"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน"
+          }
         }
       }
     }

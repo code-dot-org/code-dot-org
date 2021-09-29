@@ -3,11 +3,15 @@ ka:
   data:
     variable_names:
       actor: პერსონაჟი
+      age: ასაკი
+      answer: პასუხი
+      binary: ორობითი
+      color: ფერი
       counter: მრიცხველი
       height: სიმაღლე
       honey: თაფლი
       left: მარცხნივ
-      length: სიგრძე
+      length: ხანგრძლივობა
       name: სახელი
       nectar: ნექტარი
       points: ქულები

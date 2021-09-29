@@ -2,13 +2,13 @@
   "script": {
     "name": "allthehiddenthings",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:50 UTC",
+    "serialized_at": "2021-08-03 22:46:58 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "allthehiddenthings"
     }
@@ -75,7 +75,6 @@
           "allthethings_U3 - Simple Drawing - Rectangle Width and Height"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -99,7 +98,6 @@
           "Test GameLab Predictive"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -123,7 +121,6 @@
           "Test Contained Multi"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -147,7 +144,6 @@
           "PS predictive Applab level test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -1,4 +1,5 @@
 {
   "func": "img",
-  "category": "HTML Tags"
+  "category": "HTML Tags",
+  "syntax": "<img >"
 }

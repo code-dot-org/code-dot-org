@@ -4,7 +4,7 @@ title: प्रेस किट
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# एक घंटा कोड का में पत्रकारोंको आकर्षित करनेके कुछ तरीके
 
 ### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 

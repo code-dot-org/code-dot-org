@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_01_040241) do
+ActiveRecord::Schema.define(version: 2021_09_16_222743) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -110,6 +110,15 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.index ["level_id"], name: "fk_rails_8f51960e09"
     t.index ["script_id", "level_id"], name: "index_authored_hint_view_requests_on_script_id_and_level_id"
     t.index ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids"
+  end
+
+  create_table "backpacks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "storage_app_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["storage_app_id"], name: "index_backpacks_on_storage_app_id", unique: true
+    t.index ["user_id"], name: "index_backpacks_on_user_id", unique: true
   end
 
   create_table "blocks", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -233,8 +242,10 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "storage_id", null: false
+    t.integer "script_id"
+    t.datetime "deleted_at"
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id"
-    t.index ["storage_id", "level_id"], name: "index_channel_tokens_on_storage_id_and_level_id", unique: true
+    t.index ["storage_id", "level_id", "script_id", "deleted_at"], name: "index_channel_tokens_unique", unique: true
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id"
   end
 
@@ -262,6 +273,23 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.datetime "voided_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+    t.integer "storage_app_id", null: false
+    t.string "project_version"
+    t.integer "script_id"
+    t.integer "level_id"
+    t.integer "commenter_id", null: false
+    t.text "comment", limit: 16777215
+    t.integer "project_owner_id"
+    t.integer "section_id"
+    t.boolean "is_from_teacher"
+    t.boolean "is_resolved"
+    t.timestamp "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["storage_app_id", "project_version"], name: "index_code_review_comments_on_storage_app_id_and_version"
   end
 
   create_table "concepts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -372,6 +400,7 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "course_offering_id"
+    t.string "published_state", default: "in_development"
     t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id"
     t.index ["course_offering_id", "key"], name: "index_course_versions_on_course_offering_id_and_key", unique: true
     t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id"
@@ -490,7 +519,7 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.string "path", null: false
     t.string "kind"
     t.string "form_name", null: false
-    t.integer "form_version"
+    t.integer "form_version", null: false
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -674,6 +703,7 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.text "notes"
     t.text "audit_log"
     t.index ["game_id"], name: "index_levels_on_game_id"
+    t.index ["level_num"], name: "index_levels_on_level_num"
     t.index ["name"], name: "index_levels_on_name"
   end
 
@@ -1228,7 +1258,7 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.boolean "allow_joining_via_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_pilots_on_name"
+    t.index ["name"], name: "index_pilots_on_name", unique: true
   end
 
   create_table "plc_course_units", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1316,6 +1346,16 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
   end
 
+  create_table "project_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+    t.integer "storage_app_id", null: false
+    t.string "object_version_id", null: false
+    t.text "comment", limit: 16777215
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["storage_app_id", "object_version_id"], name: "index_project_versions_on_storage_app_id_and_object_version_id", unique: true
+    t.index ["storage_app_id"], name: "index_project_versions_on_storage_app_id"
+  end
+
   create_table "puzzle_ratings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "script_id"
@@ -1379,6 +1419,16 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.integer "course_version_id", null: false
     t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
+  end
+
+  create_table "reviewable_projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "storage_app_id", null: false
+    t.integer "user_id", null: false
+    t.integer "level_id"
+    t.integer "script_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "script_id", "level_id", "storage_app_id"], name: "index_reviewable_projects_on_user_script_level_storage_app"
   end
 
   create_table "school_districts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1500,15 +1550,16 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "wrapup_video_id"
-    t.boolean "hidden", default: false, null: false
     t.integer "user_id"
     t.boolean "login_required", default: false, null: false
     t.text "properties"
     t.string "new_name"
     t.string "family_name"
+    t.string "published_state", default: "in_development"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
+    t.index ["published_state"], name: "index_scripts_on_published_state"
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
   end
 
@@ -1575,6 +1626,7 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.boolean "hidden", default: false, null: false
     t.boolean "tts_autoplay_enabled", default: false, null: false
     t.boolean "restrict_section", default: false
+    t.boolean "code_review_enabled", default: true
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["user_id"], name: "index_sections_on_user_id"
@@ -1669,29 +1721,6 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.string "emails"
   end
 
-  create_table "survey_answers", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.integer "user_id"
-    t.bigint "form_id"
-    t.bigint "submission_id"
-    t.string "question_id"
-    t.text "answer_value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "survey_questions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.bigint "form_id"
-    t.string "question_id"
-    t.text "preamble"
-    t.text "question_text"
-    t.string "answer_type"
-    t.text "answer_options"
-    t.integer "min_value"
-    t.integer "max_value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "survey_results", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.string "kind"
@@ -1717,6 +1746,7 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.datetime "seen_on_feedback_page_at"
     t.integer "script_id", null: false
     t.integer "analytics_section_id"
+    t.string "review_state"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id"
     t.index ["teacher_id"], name: "index_teacher_feedbacks_on_teacher_id"
   end
@@ -1749,7 +1779,9 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "published_state", default: "in_development", null: false
     t.index ["name"], name: "index_unit_groups_on_name"
+    t.index ["published_state"], name: "index_unit_groups_on_published_state"
   end
 
   create_table "unit_groups_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1795,7 +1827,9 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.boolean "readonly_answers"
     t.datetime "unlocked_at"
     t.integer "time_spent"
-    t.index ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true
+    t.datetime "deleted_at"
+    t.text "properties"
+    t.index ["user_id", "script_id", "level_id", "deleted_at"], name: "index_user_levels_unique", unique: true
   end
 
   create_table "user_ml_models", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1907,8 +1941,9 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text "properties"
+    t.datetime "deleted_at"
     t.index ["script_id"], name: "index_user_scripts_on_script_id"
-    t.index ["user_id", "script_id"], name: "index_user_scripts_on_user_id_and_script_id", unique: true
+    t.index ["user_id", "script_id", "deleted_at"], name: "index_user_scripts_on_user_id_and_script_id_and_deleted_at", unique: true
   end
 
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

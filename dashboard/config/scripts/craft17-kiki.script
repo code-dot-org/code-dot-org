@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'craft17 stage', display_name: 'craft17 stage', has_lesson_plan: false
 level 'MC_HOC_2017_01_Kiki'
 level 'MC_HOC_2017_02_Kiki'

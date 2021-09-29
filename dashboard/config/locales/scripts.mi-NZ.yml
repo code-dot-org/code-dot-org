@@ -428,12 +428,12 @@ mi:
             iho i te tekau miniti? Whakamātauria tā mātou whakaakoranga Waehere Flappy!
         jigsaw:
           title: Pangahono
-          description: Whakamātauhia tā mātou akoranga Pangahono
-          description_short: Whakamātauhia tā mātou akoranga Pangahono
+          description: Whakamātauhia tā mātou akoranga Pangahono.
+          description_short: Whakamātauhia tā mātou akoranga Pangahono.
           lessons:
             Jigsaw:
               name: Pangahono
-          student_description: Whakamātauhia tā mātou akoranga Pangahono
+          student_description: Whakamātauhia tā mātou akoranga Pangahono.
         step:
           title: Hipanga
           description: Akoranga Hātepe
@@ -521,12 +521,6 @@ mi:
               name: Pūtaruna ā-Ipurangi
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Tākaia
         algebraPD2:
@@ -549,25 +543,14 @@ mi:
               name: Whakamutunga
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Tākaia
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Tākaia
         asUnplugged:
+          description_audience: Ngā Tau 6-13
           lessons:
             Binary Bracelets:
               name: Kōmore Ā-Rua
@@ -587,6 +570,8 @@ mi:
               name: Te Tito Waiata
             The Big Event:
               name: Te Takahanga Nui
+        afterschool1:
+          description_audience: Ngā Tau 7-13
         ScienceP3OLPT2:
           lessons:
             Wrap-Up:
@@ -622,7 +607,6 @@ mi:
           student_description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te
             Taiwhanga Tākaro Gumball!
         starwars:
-          title: 'Nga Pakanga Whetū: Hangaia he ikarangi me te uhingaro'
           description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake
             kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
           description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
@@ -633,7 +617,6 @@ mi:
           student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
             ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
         starwarsblocks:
-          title: 'Nga Pakanga Whetū: Hangaia he ikarangi me te uhingaro'
           description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake
             kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
           description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
@@ -699,7 +682,10 @@ mi:
           lessons:
             Peer Review:
               name: Arotake ā-Hoa
+        CSF_Secret_Sample_Story:
+          description_audience: Ngā Tau 8-18+
         MikeTest:
+          description_audience: Ngā Tau 8-98
           lessons:
             Artist Functions:
               name: Ngā Taumahi Rehetoi
@@ -716,6 +702,7 @@ mi:
             'Bee: Conditionals':
               name: 'Pī: Ngā Here'
         gradeKinder:
+          description_audience: Ngā Tau 5-18
           lessons:
             Events:
               name: Ngā Takunetanga
@@ -726,12 +713,14 @@ mi:
             'Real-life Algorithms: Plant a Seed':
               name: 'Hātepe Motuhenga: Whakatōkia he Kano'
         grade4:
+          description_audience: Ngā Tau 9-99
           lessons:
             Digital Citizenship:
               name: Te Kirirarautanga Matihiko
             Songwriting:
               name: Te Tito Waiata
         grade1:
+          description_audience: Ngā Tau 5-18
           lessons:
             Events:
               name: Ngā Takunetanga
@@ -740,6 +729,7 @@ mi:
             Loops:
               name: Ngā Koromeke
         grade5:
+          description_audience: Ngā Tau 10-110
           lessons:
             'Artist: For Loops':
               name: 'Rehetoi: Mō Ngā Koromeke'
@@ -763,16 +753,13 @@ mi:
               name: 'Momotu: Titowaiata me ngā Tawhā'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Tākaia
         grade3:
+          description_audience: Ngā Tau 5-18
           lessons:
+            " Bee: Conditionals":
+              name: " Pī: Ngā Here"
             'Artist: Nested Loops':
               name: 'Rehetoi: Ngā Koromeke Tauroto'
             Bee Debugging:
@@ -796,6 +783,7 @@ mi:
             Conditionals:
               name: Ngā Here
         grade2:
+          description_audience: Ngā Tau 5-18
           lessons:
             Flappy:
               name: Flappy
@@ -1359,8 +1347,6 @@ mi:
               name: Kōmore Ā-Rua
             'Unplugged: Binary':
               name: Ngā Atahanga Tāhūrua
-            Artist Binary:
-              name: Rehetoi Tāhūrua
             Internet:
               name: Te Ipurangi
             Crowdsourcing:
@@ -1389,8 +1375,6 @@ mi:
               name: Te Kirirarautanga Matihiko
             'Unplugged: Binary':
               name: Ngā Atahanga Tāhūrua
-            Artist Binary:
-              name: Rehetoi Tāhūrua
             Graph Paper Programming:
               name: Papatono Pepa Kauwhata
             Relay Programming:
@@ -1407,6 +1391,8 @@ mi:
               name: Kōmore Ā-Rua
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: Ngā Taumahi Whai Tawhā\_
             Functions with Parameters:
               name: Ngā Taumahi Whai Tawhā
         coursee-2018:
@@ -1551,6 +1537,8 @@ mi:
               name: Rehetoi
         aquatic:
           title: 'Toihuke: Rerenga Moana'
+          description_short: Me whakamahi i to whakaaro hangarau me nga pukenga whakaoti
+            ki te torotoro, ki te hanga ao ki raro moana i te waehere!
         dance--draft:
           lessons:
             Dance Party:
@@ -1618,8 +1606,6 @@ mi:
               name: Te Kirirarautanga Matihiko
             'Unplugged: Binary':
               name: Ngā Atahanga Tāhūrua
-            Artist Binary:
-              name: Rehetoi Tāhūrua
             Dance Party:
               name: Te Pāti Kanikani
         coursee-2019:
@@ -2107,8 +2093,6 @@ mi:
               name: Papatonotanga ā-Tānga
             'Unplugged: Binary':
               name: Ngā Atahanga Tāhūrua
-            Artist Binary:
-              name: Rehetoi Tāhūrua
             Digital Citizenship:
               name: Te Kirirarautanga Matihiko
             Dance Party:
@@ -2334,7 +2318,6 @@ mi:
               name: Ngā Atahanga Tāhūrua
             Artist Binary:
               key: Rehetoi Tāhūrua
-              name: Rehetoi Tāhūrua
           lesson_groups:
             csf_events:
               display_name: Ngā Takunetanga
@@ -2403,6 +2386,8 @@ mi:
               display_name: Ngā Taurangi
             csf_for_loops:
               display_name: Mō Ngā Koromeke
+            lessonGroup-9:
+              display_name: Ngā Takunetanga
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2421,10 +2406,24 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Ihirangi
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Kupu Whakataki
             Loops:
               key: Ngā Koromeke
               name: Ngā Koromeke
@@ -2448,3 +2447,49 @@ mi:
               display_name: Kupu Whakataki
             Introduction:
               display_name: Kupu Whakataki
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: whakamātautau
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Ihirangi
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Ihirangi
+            content:
+              display_name: Ihirangi
+            lesson_group:
+              display_name: Ihirangi
+            lessonGroup-2:
+              display_name: Ihirangi

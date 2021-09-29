@@ -3,6 +3,7 @@ sr:
   data:
     parameter_names:
       actor: учесник
+      color: боја
       counter: бројач
       height: висина
       honey: мед
@@ -11,3 +12,4 @@ sr:
       min: мин
       size: величина
       speed: брзина
+      width: Širina

@@ -1,0 +1,13 @@
+vi:
+  devise:
+    mailer:
+      reset_password_instructions:
+        subject: "Hướng dẫn đặt lại mật khẩu Code.org"
+        hello: "Xin chào %{user_email}!"
+        change_password_for: "Đổi mật khẩu cho %{user_name}:"
+        change_my_password: "Đổi mật khẩu của tôi:"
+        ignore_if_did_not_request: "Nếu bạn không gửi yêu cầu này, xin vui lòng bỏ qua email này."
+        your_password_reset: "Ai đó đã yêu cầu đổi mật khẩu của bạn. Bạn có thể thay đổi mật khẩu bằng đường link sau bất cứ lúc nào trong thời hạn %{day_count} ngày."
+        your_password_wont_change: "Mật khẩu của bạn sẽ không thay đổi cho đến khi bạn truy cập đường link ở trên và tạo một mật khẩu mới."
+        associated_account_password_reset: "Ai đó đã yêu cầu đổi mật khẩu cho các tài khoản gắn với địa chỉ email của bạn. Bạn có thể đặt lại mật khẩu cho các tài khoản đó sử dụng các đường link dưới đây bất cứ lúc nào trong thời hạn %{day_count} ngày."
+        associated_account_password_wont_change: "Các mật khẩu sẽ không thay đổi cho đến khi bạn truy cập đường link ở trên và tạo một mật khẩu mới."

@@ -900,7 +900,7 @@ ga:
             '"left"': ar chlé
             '"down"': síos
             '"right"': ar dheis
-            '"space"': an spásbharra
+            '"space"': spás
             '"enter"': enter
             '"a"': a
             '"b"': b
@@ -977,8 +977,12 @@ ga:
             '"while"': chomh fada is atá
       gamelab_clickedOn:
         text: nuair a chliceáiltear {SPRITE}
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'nóta trachta: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: "déan sprid nua \n darb ainm {NAME} \n le culaith {COSTUME} \n {LOCATION}"
       gamelab_destroy:
@@ -1090,8 +1094,19 @@ ga:
         text: suíomh {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': báisteach
       gamelab_makeNewSpriteAnon:
         text: déan sprid nua {ANIMATION_NAME} {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ar dheis
+            '90': síos
+            '180': ar chlé
+            '270': suas
       gamelab_mirrorSprite:
         text: aghaidh {SPRITE} {DIRECTION}
         options:
@@ -1102,8 +1117,17 @@ ga:
         text: suíomh na luiche
       gamelab_moveForward:
         text: bog {SPRITE} {DISTANCE} picteilín ar aghaidh
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: patrólú suas anuas
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": cnagadh
+            "'sound://category_digital/jump_7.mp3'": léim
       gamelab_printText:
         text: priontáil {TEXT}
       gamelab_randColor:
@@ -1163,6 +1187,16 @@ ga:
             '"y"': ionad y
             '"direction"': treo gluaiseachta
             '"speed"': luas
+      gamelab_setProp_dropdown:
+        text: 'socraigh {PROPERTY} do {SPRITE}: {SIZE}'
+        options:
+          PROPERTY:
+            '"scale"': méid
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': tamall
+            '100': large
       gamelab_setSizes:
         text: 'socraigh {PROPERTY} do {SPRITE}: {N}%'
         options:
@@ -1180,6 +1214,10 @@ ga:
           CONDITION:
             '"when"': nuair atá
             '"while"': chomh fada is atá
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: rothlam
       gamelab_turn:
@@ -1405,6 +1443,8 @@ ga:
           DANCE:
             MOVES.ClapHigh: iasc
             MOVES.Clown: ní mo-lipéad é
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'ionad x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1490,6 +1530,62 @@ ga:
         text: comhordanáid x de {SPRITE}
       Mikelab_yLocationOf:
         text: comhordanáid y de {SPRITE}
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': báisteach
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Dathanna
+            '"squiggles"': Caisirníní
+            '"space"': An Spás
+            '"stars"': Réaltaí
+            '"ripples"': Tonnáin
+          PALETTE:
+            '"rainbow"': Tuar ceatha
+      Poetry_setBackgroundImageAs:
+        text: 'socraigh an cúlra: {IMG}'
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Báisteach
+            '"bubbles"': Boilgeoga
+            '"hearts"': Croíthe Daite
+            '"confetti"': Coinfití
+            '"starburst"': Pléascadh Réaltaí
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: fás
+            jittering: crith
+            shrinking: crapadh
+            spinning_right: casadh ar deiseal
+            wandering: fánaíocht
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: fás
+            jittering: crith
+            shrinking: crapadh
+            spinning_right: casadh ar deiseal
+            wandering: fánaíocht
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: téigh ar aghaidh
       RyanLab_turnLeft:
@@ -1510,32 +1606,27 @@ ga:
         options:
           PROPERTY:
             "'shapeColor'": dath
-      aalab_addBehaviorUntilBoolean:
-        text: tosaíonn sprid {SPRITE} {BEHAVIOR} go dtí {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: sprid nua darb ainm {SPRITE_NAME} le culaith {ANIMATION_NAME} {LOCATION}
-      aalab_goToScene:
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: socrú an scéil
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': i ngreille
+            '"border"': ar an imeall
+            '"row"': ina ró
             '"random"': randamach
-            '"R2-D2 random"': R2-D2 randamach
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': uile
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': uile
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawPixelHere:
         options:
           VAL:
@@ -1605,6 +1696,7 @@ ga:
             '"stoneBricks"': brící cloiche
             '"mossyStoneBricks"': brící cloiche caonaigh
             '"crackedStoneBricks"': brící cloiche gágacha
+            '"chiseledStoneBricks"': brící cloiche maisiúla
             '"blueCoralBlock"': bloc coiréil ghoirm
             '"pinkCoralBlock"': bloc coiréil bhándeirg
             '"magentaCoralBlock"': bloc coiréil mhaigeanta
@@ -1652,3 +1744,5 @@ ga:
           DIR:
             right: ar deiseal ↻
             left: ar tuathal ↺
+      validation_validatedBackground:
+        text: 'socraigh an cúlra: {IMG}'

@@ -59,7 +59,7 @@ Similar to the last previous conditionals stage, only this time we're helping th
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Maze: Conditionals](http://learn.code.org/s/course3/stage/8/puzzle/1)
+### <a name="Activity"></a> [Maze: Conditionals](http://learn.code.org/s/course3/lessons/8/levels/1)
 
 The conditionals in this stage pertain to whether or not there is a path available to the right, left, or ahead. If there is chomper in the way, the conditional will report that there is no path available in that direction.
 

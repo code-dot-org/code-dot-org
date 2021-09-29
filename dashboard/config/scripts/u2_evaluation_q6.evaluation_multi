@@ -1,5 +1,5 @@
 name 'U2 evaluation q6'
 question ‘Do you have experience using Google Trends?’
-answer ‘Yep— I am super comfortable with Google Trends!’, weight: -1, stage_name: ‘Lessons 7 - 10: Interpreting Visual Data’
- answer ‘I have used it before, but not extensively.’, weight: 1, stage_name: ‘Lessons 7 - 10: Interpreting Visual Data’
-answer ’Nope— never used it!’, weight: 3, stage_name: ‘Lessons 7 - 10: Interpreting Visual Data’
+answer ‘Yep— I am super comfortable with Google Trends!’, weight: -1, lesson_name: ‘Lessons 7 - 10: Interpreting Visual Data’
+ answer ‘I have used it before, but not extensively.’, weight: 1, lesson_name: ‘Lessons 7 - 10: Interpreting Visual Data’
+answer ’Nope— never used it!’, weight: 3, lesson_name: ‘Lessons 7 - 10: Interpreting Visual Data’

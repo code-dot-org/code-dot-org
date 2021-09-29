@@ -2,7 +2,6 @@
   "script": {
     "name": "csp3-pilot",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "has_verified_resources": true,
@@ -235,7 +234,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -256,7 +254,6 @@
       "properties": {
         "progression": "App Exploration"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -277,7 +274,6 @@
       "properties": {
         "progression": "App Exploration"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -298,7 +294,6 @@
       "properties": {
         "progression": "App Exploration"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -319,7 +314,6 @@
       "properties": {
         "progression": "App Exploration"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -340,7 +334,6 @@
       "properties": {
         "progression": "App Exploration"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -361,7 +354,6 @@
       "properties": {
         "progression": "How Computers Work"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -382,7 +374,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -403,7 +394,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -424,7 +414,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -445,7 +434,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -466,7 +454,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -487,7 +474,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -508,7 +494,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -529,7 +514,6 @@
       "properties": {
         "progression": "Design Mode Exploration"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -550,7 +534,6 @@
       "properties": {
         "progression": "Design Mode Exploration"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -571,7 +554,6 @@
       "properties": {
         "progression": "Design Mode Exploration"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -592,7 +574,6 @@
       "properties": {
         "progression": "Design Mode Exploration"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -613,7 +594,6 @@
       "properties": {
         "progression": "Design Mode Exploration"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -634,7 +614,6 @@
       "properties": {
         "progression": "Design Mode Exploration"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -655,7 +634,6 @@
       "properties": {
         "progression": "Copy an App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -676,7 +654,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -697,7 +674,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -718,7 +694,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -739,7 +714,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -760,7 +734,6 @@
       "properties": {
         "progression": "Sample Prototype"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -781,7 +754,6 @@
       "properties": {
         "progression": "Build Your Screens"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -802,7 +774,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -823,7 +794,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -844,7 +814,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -865,7 +834,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -886,7 +854,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -907,7 +874,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -928,7 +894,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -949,7 +914,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -970,7 +934,6 @@
       "properties": {
         "progression": "Check for Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -991,7 +954,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1012,7 +974,6 @@
       "properties": {
         "progression": "Debugging"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1033,7 +994,6 @@
       "properties": {
         "progression": "Debugging"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1054,7 +1014,6 @@
       "properties": {
         "progression": "Debugging"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1075,7 +1034,6 @@
       "properties": {
         "progression": "Debugging"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1096,7 +1054,6 @@
       "properties": {
         "progression": "Debugging"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1117,7 +1074,6 @@
       "properties": {
         "progression": "Debugging"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1138,7 +1094,6 @@
       "properties": {
         "progression": "Debugging"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1159,7 +1114,6 @@
       "properties": {
         "progression": "Check for Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1180,7 +1134,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1201,7 +1154,6 @@
       "properties": {
         "progression": "Pair Programming"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1222,7 +1174,6 @@
       "properties": {
         "progression": "Add Code"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1243,7 +1194,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1264,7 +1214,6 @@
       "properties": {
         "progression": "Add More Code"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1285,7 +1234,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1306,7 +1254,6 @@
       "properties": {
         "progression": "Submit Your App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1327,7 +1274,6 @@
       "properties": {
         "progression": "Unit 3 Exam"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1348,7 +1294,6 @@
       "properties": {
         "progression": "Unit 3 STUDENT Survey"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1369,7 +1314,6 @@
       "properties": {
         "progression": "Unit 3 TEACHER Survey"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [

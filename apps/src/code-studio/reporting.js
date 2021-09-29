@@ -129,6 +129,7 @@ function validateReport(report) {
         if (
           report.app === 'applab' ||
           report.app === 'gamelab' ||
+          report.app === 'javalab' ||
           report.app === 'spritelab' ||
           report.app === 'weblab'
         ) {
@@ -330,7 +331,7 @@ reporting.sendReport = function(report) {
           response.redirect = fallback.redirect;
         }
         if (appOptions.isBonusLevel) {
-          // Bonus levels might have to take students back to a different stage,
+          // Bonus levels might have to take students back to a different lesson,
           // ignore the redirect in response and use the url from appOptions
           // instead
           response.redirect = appOptions.nextLevelUrl;
@@ -413,9 +414,10 @@ function reportComplete(report, response) {
     lastServerResponse.report_error = report.error;
     lastServerResponse.nextRedirect = response.redirect;
     lastServerResponse.videoInfo = response.video_info;
-    lastServerResponse.endOfStageExperience = response.end_of_stage_experience;
+    lastServerResponse.endOfLessonExperience =
+      response.end_of_lesson_experience;
     lastServerResponse.previousStageInfo =
-      response.stage_changing && response.stage_changing.previous;
+      response.lesson_changing && response.lesson_changing.previous;
   }
   if (report.onComplete) {
     report.onComplete(response);

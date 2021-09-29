@@ -2,7 +2,7 @@ import $ from 'jquery';
 import sinon from 'sinon';
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import {
@@ -11,6 +11,7 @@ import {
   restoreStudioApp
 } from '@cdo/apps/StudioApp';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
+import * as utils from '@cdo/apps/utils';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -23,12 +24,14 @@ describe('The ShowCodeToggle component', () => {
     sinon.spy($, 'post');
     sinon.spy($, 'getJSON');
     sinon.stub(project, 'getCurrentId').returns('some-project-id');
+    sinon.stub(utils, 'fireResizeEvent'); // Called by StudioApp.js
   });
   afterEach(() => {
     server.restore();
     $.post.restore();
     $.getJSON.restore();
     project.getCurrentId.restore();
+    utils.fireResizeEvent.restore();
   });
 
   beforeEach(stubStudioApp);

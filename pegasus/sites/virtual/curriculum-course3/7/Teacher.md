@@ -63,7 +63,7 @@ Review conditional statements with students.
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Bee: Conditionals](http://learn.code.org/s/course3/stage/7/puzzle/1)
+### <a name="Activity"></a> [Bee: Conditionals](http://learn.code.org/s/course3/lessons/7/levels/1)
 
 In the Course 2 Bee Conditionals, we only looked at simple conditionals called "if statments," such as "if there is one nectar, collect it." Bascially, we are saying if a statement is true, do something. In this stage we are going to look at what to if that statement is _not_ true, we call these "if, else" statements.
 

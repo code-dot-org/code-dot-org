@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 *  **[turnLeft](//studio.code.org/docs/applab/turnLeft/)** - `turnLeft`
 *  **[penDown](//studio.code.org/docs/applab/penDown/)** - `penDown`
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

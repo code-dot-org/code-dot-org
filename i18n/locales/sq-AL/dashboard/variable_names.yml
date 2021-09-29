@@ -2,7 +2,11 @@ sq:
   data:
     variable_names:
       actor: personazh
+      age: mosha
+      answer: përgjigje
+      binary: binare
       birds: zogjtë
+      color: ngjyra
       counter: numërues
       height: gjatësia
       honey: mjaltë

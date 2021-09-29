@@ -17,11 +17,15 @@ bg:
       Game/Score: Игра/резултат
       Games/Score: Игри/резултат
       Groups: Групи
+      Input: Поле за въвеждане
+      Location: Адрес
       Locations: Места
       Logic: Логика
       Loops: Повторения
       Math: Математика
       Numbers: Числа
+      Sprites: Спрайт
       Text: Текст
       Variables: Променливи
       'Variables ': 'Променливи '
+      'Variables  ': 'Променливи  '

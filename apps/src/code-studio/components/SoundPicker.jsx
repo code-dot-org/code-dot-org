@@ -9,6 +9,7 @@ import {
 import SoundLibrary from './SoundLibrary';
 import i18n from '@cdo/locale';
 import Sounds from '../../Sounds';
+import {RecordingFileType} from './recorders';
 
 const audioExtension = '.mp3';
 
@@ -96,6 +97,7 @@ export default class SoundPicker extends React.Component {
           useFilesApi={this.props.useFilesApi}
           projectId={this.props.projectId}
           soundPlayer={this.props.soundPlayer}
+          recordingFileType={RecordingFileType.MP3}
         />
       );
     return (

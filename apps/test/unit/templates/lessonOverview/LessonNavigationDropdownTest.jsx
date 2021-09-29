@@ -172,7 +172,7 @@ describe('LessonNavigationDropdown', () => {
 
     let section2 = wrapper.find('a').at(10);
     expect(section2.contains('Lesson Group 2')).to.be.true;
-    section2.simulate('click');
+    section2.simulate('click', {preventDefault: () => {}});
 
     expect(wrapper.find('a').length).to.equal(9);
 
@@ -201,7 +201,7 @@ describe('LessonNavigationDropdown', () => {
         .at(1)
         .contains('1 - Lesson 1')
     ).to.be.true;
-    lesson1.simulate('click');
+    lesson1.simulate('click', {preventDefault: () => {}});
 
     expect(firehoseClient.putRecord).to.have.been.calledOnce;
     firehoseClient.putRecord.yieldTo('callback');

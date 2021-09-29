@@ -1,0 +1,91 @@
+{
+  "category": "World",
+  "config": {
+    "func": "poemTextJoin",
+    "blockText": "{TEXT1} {VAR} {TEXT2}",
+    "returnType": "String",
+    "inline": false,
+    "args": [
+      {
+        "name": "LEFT_QUOTE",
+        "dummy": true,
+        "inline": true,
+        "customOptions": {
+          "assetUrl": "media/quote0.png",
+          "width": 12,
+          "height": 12
+        }
+      },
+      {
+        "name": "RIGHT_QUOTE",
+        "dummy": true,
+        "inline": true,
+        "customOptions": {
+          "assetUrl": "media/quote1.png",
+          "width": 12,
+          "height": 12
+        }
+      },
+      {
+        "name": "TEXT1",
+        "options": [
+          [
+            "\"Balancing on the\"",
+            "\"Balancing on the \""
+          ],
+          [
+            "\"A chubby cat\"",
+            "\"A chubby cat \""
+          ],
+          [
+            "\"The \"",
+            "\"The \""
+          ]
+        ],
+        "field": true
+      },
+      {
+        "name": "VAR",
+        "variableInput": true
+      },
+      {
+        "name": "TEXT2",
+        "options": [
+          [
+            "\" fence\"",
+            "\" fence\""
+          ],
+          [
+            "\"\"",
+            "\"\""
+          ],
+          [
+            "\" breeze blows\"",
+            "\" breeze blows\""
+          ]
+        ],
+        "field": true
+      },
+      {
+        "name": "LEFT_QUOTE2",
+        "dummy": true,
+        "inline": true,
+        "customOptions": {
+          "assetUrl": "media/quote0.png",
+          "width": 12,
+          "height": 12
+        }
+      },
+      {
+        "name": "RIGHT_QUOTE2",
+        "dummy": true,
+        "inline": true,
+        "customOptions": {
+          "assetUrl": "media/quote1.png",
+          "width": 12,
+          "height": 12
+        }
+      }
+    ]
+  }
+}

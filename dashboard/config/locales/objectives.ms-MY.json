@@ -1,0 +1,35 @@
+{
+  "ms-MY": {
+    "data": {
+      "objectives": {
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Huraikan kepentingan pengguna dalam proses reka bentuk."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Kenal pasti peperi dalam atur cara komputer yang sedang berjalan."
+        },
+        "f748f186-f152-468e-9f51-48bee23c44db": {
+          "description": "Bincangkan peranan yang dimainkan oleh kecerdasan buatan dalam kehidupan mereka."
+        },
+        "82bb0282-0550-4779-9a86-a15fbb93215f": {
+          "description": "Latih dan uji model pembelajaran mesin."
+        },
+        "6638c886-891e-4d59-820a-227e37274e49": {
+          "description": "Alasan tentang sejauh mana kepincangan manusia memainkan peranan di dalam pembelajaran mesin."
+        },
+        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
+          "description": "Terjemahkan URL ke dalam Alamat IP."
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "Ketahui bahawa internet boleh digunakan untuk mengunjungi merata tempat yang jauh dan belajar perkara baharu."
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Bandingkan sejauh mana kekal selamat dalam talian serupa dengan kekal selamat di dunia sebenar."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Terangkan peraturan untuk mengembara dengan selamat dalam internet."
+        }
+      }
+    }
+  }
+}

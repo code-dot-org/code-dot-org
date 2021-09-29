@@ -1,73 +1,74 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: व्हर्च्युअल कार्यक्रमांसाठी अवर ऑफ कोड, कसे-करावे मार्गदर्शिका
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# व्हर्च्युअल अवर ऑफ कोड कार्यक्रमासाठी टिप्स
 
-### You don't have to be in-person to run a successful Hour of Code!
+### यशस्वी अवर ऑफ कोड घेण्यासाठी तुम्ही प्रत्यक्ष उपस्थित असणे आवश्यक नाही!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+परंपरेने अवर ऑफ कोड जगभर वर्गामध्ये घेतला गेला असला तरीही तुम्ही मजा लुटण्यासाठी प्रत्यक्ष उपस्थित असणे आवश्यक नाही! तुम्ही तरीसुद्धा यातील काही शिफारशींचा उपयोग करून विद्यार्थ्यांसाठी लांबून इंटरअॅक्टीव्ह आणि प्रेरणादायी अवर ऑफ कोड आयोजित करू शकता.  तुम्हाला अजूनही प्रश्न असतील तर आमची[व्हर्च्युअल कार्यक्रमांसाठीची मार्गदर्शिका]({{ localized_files/participation_guide_virtual }})  पहा.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+## तुम्ही लांब असाल तरीसुद्धा तुम्ही एकत्रित सुरुवात करू शकता
+जरी तुम्ही विद्यार्थ्यांनी स्वतंत्रपणे त्यांच्या कृती पूर्ण कराव्यात असे नियोजन केले असेल तरीसुद्धा तुम्ही सहभाग्यांची उत्सुकता वाढवण्यासाठी तुमच्या कार्यक्रमाची सुरुवात एका व्हर्च्युअल ऑनलाईन कार्यक्रमाने करावी, अशी आम्ही शिफारस करतो. तुम्ही तुमचा कार्यकम अनेक रंजक पद्धती वापरून सुरू करू शकता: 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>एका पाहुण्या वक्त्याला आमंत्रित करा</b>: सर्व प्रकारच्या पार्श्वभूमीतून आलेले हजारो स्वयंसेवक तुमच्या आमंत्रणासाठी उत्सुक आहेत! त्यांना शोधण्यासाठी फक्त आमचा <a href="https://code.org/volunteer/local">स्वयंसेवक नकाशा</a> वापरा. व्हर्च्युअल अवर ऑफ कोड कार्यक्रमासाठी तुम्हाला अंतराची मर्यादा नाही, त्यामुळे आवश्यकता असेल तर लांबून मदत देऊ करणारे स्वयंसेवक तुमच्या झिप कोडच्या बाहेरसुद्धा शोधू शकता. तुम्ही स्वयंसेवकाशी संपर्क साधल्यावर संभाव्य विषय, चर्चेचे प्रश्न आणि इतर गोष्टींसाठी <a href="http://hourofcode.com/us/how-to/volunteers">अवर ऑफ कोड स्वयंसेवकांसाठी कसा करावा</a> या मार्गदर्शिकेचा संदर्भ घ्या.</li> 
+<li><b>एक प्रेरणादायी व्हिडीओ दाखवा</b>: तुमचा कार्यक्रम सुरू करण्यासाठी एक दुसरा विश्वासार्ह पर्याय म्हणजे सहभाग्यांना आपल्या अनेक <a href="http://hourofcode.com/us/promote/resources#videos">प्रेरणादायी व्हिडीओ</a>पैकी एखादा दाखवा. अनेक व्हिडीओ 5 मिनिटांपेक्षा कमी लांबीचे आहेत आणि तुमचे विद्यार्थी ज्यांना ओळखतील अशा सेलिब्रिटीजच्या प्रेरणेचा आणि प्रोत्साहनाचा यात समावेश आहे.
+</li> 
+<li><b>भल्यासाठी संगणक शास्त्र याची चर्चा करा</b>: आपल्या दैनंदिन जीवनातील तंत्रज्ञानाच्या परिणामाचा विचार करून तुमच्या अवर ऑफ कोड कार्यक्रमाचे संगणक शास्त्राच्या सखोल आकलनात रूपांतर करा. विद्यार्थ्यांना मार्गदर्शक प्रश्न विचारा आणि तुमच्या कार्यक्रमाच्या आरंभाचे रूपांतर एका परस्परसंवादी चर्चेत करा.  संवाद कसा सुरू करावा याबद्दलच्या कल्पनांसाठी हे <a href="https://code.org/csforgood#prompts">चर्चेचे प्रश्न</a> बघा.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## वेळेपूर्वीच कशाची तयारी करावी
 
-### १ Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. तुमचा व्हिडीओ कॉन्फरन्सिंग प्लॅटफॉर्म ठरवा
+तुम्ही आत्तापर्यंत  Cisco Webex, Google Meet, Microsoft Teams, Skype किंवा Zoom अशा प्लॅटफॉर्म्सशी कदाचित परिचित झालेले असाल. तुम्ही कोणतेही टूल निवडले असले तरीही, आम्ही तुम्हाला त्याची ओळख करून घेनायची, त्याच्या क्षमतांची चाचणी घेण्याची आणि तुमच्या कार्यक्रमाच्या दिनांकापूर्वी तुमचा अवर ऑफ कोडचा कृती कार्यक्रम करून पाहण्याची शिफारस करतो.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### २. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. विद्यार्थी कसे सहभागी होतील याचे नियोजन करा
+**स्व-मार्गदर्शित अवर ऑफ कोड कृती**<br> तुम्ही सुरुवात केल्यावर विद्यार्थ्यांना एकत्र लाईव्ह काम करायला लावण्याऐवजी त्यांना <a href="https://hourofcode.com/us/learn">अवर ऑफ कोड कृती</a>  आपापली स्वतंत्रपणे करण्यासाठी व्हिडीओ कॉन्फरन्स सोडून जाण्याची परवानगी द्या. त्यामुळे विद्यार्थी त्यांच्या स्वत:च्या प्रोजेक्टमध्ये रामू शकतात आणि संगणक शास्त्राच्या संकल्पना अधिक चांगल्या प्रकारे समजून घेऊ शकतात. त्यामुळे त्यांचे लक्ष कमीत कमी विचलित होईल आणि व्हिडीओ कॉन्फरन्सिंगची विंडो उघडी असल्यामुळे येणारा अडथळा कमी होईल.
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+वेळेपूर्वीच तुम्ही त्यांच्यासाठी 1-3 ट्युटोरीयल्सचे पर्याय ठरवून ठेवलेत तर ते उपयोगी पडेल.    त्यामुळे तुम्ही त्यांच्या इयत्तेच्या पातळीसाठी सुयोग्य कृती निवडू शकाल. शिवाय, जर विद्यार्थ्यांना काही प्रश्न असतील आणि तुमच्या मदतीची आवश्यकता असेल तर ते ज्या ट्युटोरीयल्सवर काम करत आहेत, त्यांच्याशी तुम्ही आधीपासूनच परिचित असाल तर तुम्ही जास्त तयारीत असाल.
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+जर तुमच्या वर्गाने आरंभ झाल्यावर लगेच त्यांची कृती करायला सुरुवात करणे अपेक्षित असेल तर तुम्ही एक व्हर्च्युअल कॉन्फरन्स रूम, चॅट प्लॅटफॉर्म किंवा संवादाची इतर माध्यमे खुली ठेवू शकता म्हणजे आवश्यकता असेल तेव्हा ते प्रश्न विचारण्यासाठी तुमच्याशी पुन्हा जोडले जाऊ शकतात.
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+**अवर ऑफ कोड कृती एकत्र ऑनलाईन**<br> जर तुम्हाला तुमच्या सहभाग्यांना तुमच्या संपूर्ण कार्यक्रमादरम्यान एकाच व्हिडीओ कॉलवर ठेवायचे असेल तर कृपया याची नोंद घ्या की त्यांना सर्व वेळ दोन विंडोज उघड्या ठेवाव्या लागतील - एक व्हिडीओ कॉन्फरन्सिंग प्लॅटफॉर्मसाठी आणि एक विद्यार्थ्यांना त्यांच्या कृतीवर काम करण्यासाठी.
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**पालकांसह**<br> इयत्ता 4 थी पेक्षा लहान विद्यार्थ्यांसाठी, त्यांच्या पालकांना घरी अवर ऑफ कोड कार्यक्रम होस्ट करण्यासाठी प्रोत्साहन देण्याचा विचार करा. तुम्ही त्यांना काही शिफारस करण्यात आलेली ट्युटोरीयल्स तसेच <a href="https://hourofcode.com/us/how-to/parents">पालकांसाठी कसे-करावे</a> हे उपयुक्त मार्गदर्शक वापरून त्यांना मदत करू शकता.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. स्वयंसेवकाचा यादीत समावेश करा
+आमच्या <a href="https://code.org/volunteer/local">स्वयंसेवक नकाशाला</a> भेट देऊन तुम्ही तुमच्या गरजांनुसार सुयोग्य स्वयंसेवक शोधू शकता. लांबून सहभागी होण्यासाठी अनेकजण उपलब्ध आहेत आणि त्यांच्या संगणक शास्त्रातील अनुभवाबद्दल, तंत्रज्ञानाचा त्यांच्या कामावर कसा परिणाम होतो याबद्दल बोलण्यासाठी किंवा सरळ तुम्हाला विद्यार्थ्यांच्या प्रश्नांचे ट्रबलशूटिंग करायला मदत करण्यासाठी खूप उत्सुक आहेत. तुम्हाला स्वयंसेवक मिळाल्यावर  त्यांच्या भूमिकेची चर्चा करण्यासाठी, तांत्रिक गरजा निश्चित करण्यासाठी आणि ऑनलाईन सहभागाचे लॉजिस्टिक्स ठरवण्यासाठी त्यांच्याशी वेळेपूर्वीच मिटिंग आयोजित करा.
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+### 4. सेलिब्रेशनसाठी वस्तू
+तुमचा व्हर्च्युअल अवर ऑफ कोड साजरा करायच्या काही कल्पनांसाठी खाली पहा. तुमच्यापैकी काहींना वेळेपूर्वी तयारी करावी लागेल. उदा. तुमच्या सर्व सहभाग्यांसाठी पूर्णता  <a href="https://code.org/certificates"> प्रमाणपत्रे </a> तयार करणे इ.
 
 ---
 
-## Celebrate together
+## एकत्रितपणे साजरा करा
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+तुम्ही कार्यक्रम जसा सुरू केलात त्याप्रमाणे नंतरही यश साजरे करण्यासाठी एकत्र या! तुमचे व्हर्च्युअल सेलिब्रेशन परस्परसंवादी आणि खास करण्यासाठी इथे काही कल्पना सुचवल्या आहेत:
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- विद्यार्थ्यांना त्यांचे पूर्ण झालेले प्रोजेक्ट्स उर्वरीत वर्गाशी शेअर करू द्या. तुमच्या कॉन्फरन्सिंग प्लॅटफॉर्मवर शक्य असेल तर तुम्ही तुमच्या विद्यार्थ्यांना त्यांच्या प्रोजेक्टचा स्क्रीन शॉट घ्यायला आणि ते त्यांचे व्हर्च्युअल बॅकग्राउंड म्हणून लावायला प्रोत्साहन देऊ शकता.
+- शिकलेल्या गोष्टींची चर्चा करा: ते संगणक शास्त्राबद्दल आणि तंत्रज्ञानाबद्दल काय शिकले आहेत? जेव्हा त्यांना काही समस्या आली तेव्हा त्यांनी ती कशी सोडवली?
+- तुमच्या सहभाग्यांसाठी <a href="https://code.org/certificates">प्रमाणपत्रे तयार करा आणि शेअर करा</a>
+- तुमच्या सोशल मिडीयावर तुमच्या व्हर्च्युअल अवर ऑफ कोड कार्यक्रमाचे फोटो आणि व्हिडीओ शेअर करा. #HourOfCode आणि @codeorg वापरा म्हणजे आम्हीसुद्धा तुमच्या यशाला ठळक प्रसिद्धी देऊ!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+शेवटी, जर तुम्ही तुमचा कार्यक्रम <a href="https://code.org/volunteer/local">पाहुण्या वक्त्याने</a>,<a href="https://hourofcode.com/us/promote/resources#">प्रेरणादायी व्हिडीओने</a>, किंवा <a href="https://code.org/csforgood#prompts">प्रश्नांची चर्चा</a> करून सुरू केला नसेल तर त्यातील एखादा अनुभव समाविष्ट करण्यासाठी ही अजून एक चांगली संधी आहे.
 
 {{ signup_button }}

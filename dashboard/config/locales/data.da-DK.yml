@@ -602,6 +602,8 @@ da:
         C4_unplugged_parameters: Sangskrivning med parametre
         C4_unplugged_binary: Binære
         CSF_create_functions: Oprettelse af funktioner
+        CSF_debugging_k1_blocks: Fejlfinding
+        CSF_debugging_text_blocks: Fejlfinding
         CSF_maze_intro_k1_blocks: Introduktion til Code Studio
         CSF_maze_intro_text_blocks: Introduktion til Code Studio
         CSF_my_robotic_friends: Mine robot venner
@@ -646,11 +648,14 @@ da:
         hoc_dance_congrats: Dance Party - Las os feste!
         csd_pair_programming: Par programmering
         csd_applab_parameters: Funktioner med parametre
+        csd_debugging: Fejlfinding
         hoc_dance_congrats_2019: Dance Party 2019 - Las os feste!
         hoc_dance_warmup_2019: Dance Party 2019 - Opvarmning
         hoc_dance_events_2019: Dance Party 2019 - Hændelser
         hoc_dance_measures_2019: Dance Party 2019 - Takter
         hoc_dance_properties_2019: Dance Party 2019 - Egenskaber
+        playlab_2021: Introduktion til Play Lab
+        playlab_2021_reader: Introduktion til Play Lab
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok

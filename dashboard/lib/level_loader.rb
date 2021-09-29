@@ -36,11 +36,15 @@ class LevelLoader
       level_md5s_by_name = Hash[Level.pluck(:name, :md5)]
       existing_level_names = level_md5s_by_name.keys.to_set
 
+      level_file_names = level_file_paths.map {|path| level_name_from_path path}
+      if level_file_names.include? 'blockly'
+        raise 'custom levels must not be named "blockly"'
+      end
+
       # First, save stubs of any new levels - they'll need to have ids in
       # order to create certain associations (in particular
       # level_concept_difficulty) when we bulk-load the level properties.
-      new_level_names = level_file_paths.
-        map {|path| level_name_from_path path}.
+      new_level_names = level_file_names.
         reject {|name| existing_level_names.include? name}
       Level.import! new_level_names.map {|name| {name: name}}
 
@@ -54,6 +58,11 @@ class LevelLoader
       if [:development, :adhoc].include?(rack_env) && !CDO.properties_encryption_key
         puts "WARNING: skipping seeding encrypted levels because CDO.properties_encryption_key is not defined"
         changed_levels.reject!(&:encrypted?)
+      end
+
+      dsl_levels = changed_levels.select {|l| l.is_a? DSLDefined}
+      if dsl_levels.any?
+        raise "cannot define DSLDefined level types in .level files: #{dsl_levels.map {|l| "#{l.name}.level".dump}.join(',')}"
       end
 
       # activerecord-import (with MySQL, anyway) doesn't save associated
@@ -124,18 +133,6 @@ class LevelLoader
     level.assign_attributes(level.load_level_xml(xml_node))
 
     level
-  end
-
-  def self.update_unplugged
-    # Unplugged level data is specified in 'unplugged.en.yml' file
-    unplugged = YAML.load_file(Rails.root.join('config/locales/unplugged.en.yml'))['en']['data']['unplugged'].keys
-    unplugged_game = Game.find_by(name: 'Unplugged')
-    unplugged.map do |name, _|
-      Level.where(name: name).first_or_create.update(
-        type: 'Unplugged',
-        game: unplugged_game
-      )
-    end
   end
 
   private_class_method def self.level_name_from_path(path)

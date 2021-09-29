@@ -124,15 +124,15 @@ export function setupApp(appOptions) {
       var lastServerResponse = reporting.getLastServerResponse();
       if (lastServerResponse.videoInfo) {
         showVideoDialog(lastServerResponse.videoInfo);
-      } else if (lastServerResponse.endOfStageExperience) {
+      } else if (lastServerResponse.endOfLessonExperience) {
         const body = document.createElement('div');
-        const stageInfo = lastServerResponse.previousStageInfo;
-        const stageName = `${msg.stage()} ${stageInfo.position}: ${
-          stageInfo.name
+        const lessonInfo = lastServerResponse.previousStageInfo;
+        const lessonName = `${msg.lesson()} ${lessonInfo.position}: ${
+          lessonInfo.name
         }`;
         ReactDOM.render(
           <PlayZone
-            stageName={stageName}
+            lessonName={lessonName}
             onContinue={() => {
               dialog.hide();
             }}
@@ -321,6 +321,7 @@ function loadAppAsync(appOptions) {
           );
         }
 
+        appOptions.level.isNavigator = data.isNavigator;
         if (data.pairingDriver) {
           appOptions.level.pairingDriver = data.pairingDriver;
           appOptions.level.pairingAttempt = data.pairingAttempt;

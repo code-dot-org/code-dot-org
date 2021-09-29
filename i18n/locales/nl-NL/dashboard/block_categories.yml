@@ -18,6 +18,7 @@ nl:
       Games/Score: Spellen/Score
       Groups: Groepen
       Input: Invoer
+      Location: Plaats
       Locations: Plaatsen
       Logic: Logica
       Loops: Lussen
@@ -28,4 +29,5 @@ nl:
       Text: Tekst
       Variables: Variabelen
       'Variables ': 'Variabelen '
+      'Variables  ': 'Variabelen  '
       World: Wereld

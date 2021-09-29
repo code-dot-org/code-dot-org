@@ -1321,6 +1321,686 @@
               "length": "haba"
             }
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "ang aking Function"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "gumuhit ng bituin"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "gumuhit ng bituin"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          },
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "tapusin ang laro"
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binary"
+            }
+          }
         }
       }
     }

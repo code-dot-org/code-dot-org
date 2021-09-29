@@ -145,6 +145,14 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': matomas
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': matomas
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -178,6 +186,7 @@ lt:
             '"down"': žemyn
             '"right"': dešinėn
             '"space"': kosmosas
+            '"enter"': įveskite
             '"x"': x
       gamelab_atTime:
         options:
@@ -227,11 +236,23 @@ lt:
             '"right"': dešinėn
             '"space"': kosmosas
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': dešinėn
+            '90': žemyn
+            '180': kairėn
+            '270': aukštyn
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': dešinėn
             '"left"': kairėn
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": trakšt
+            "'sound://category_digital/jump_7.mp3'": šok
       gamelab_randColor:
         text: Atsitiktinė spalva
       gamelab_randomColor:
@@ -248,6 +269,7 @@ lt:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': po
               vandeniu
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': žiema
+            undefined: joks (registruojasi patys)
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -262,6 +284,15 @@ lt:
             '"x"': x pozicija
             '"y"': y pozicija
             '"speed"': greitis
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': šiek tiek
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -383,6 +414,11 @@ lt:
             '"a"': A
             '"s"': P
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': taip
+            '"no"': ne
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -396,9 +432,13 @@ lt:
         text: pasisuk į kairę
       RyanLab_turnRight:
         text: pasisuk į dešinę
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": spalva
+      aalab_layoutSprites:
+        options:
+          FORMAT:
             '"random"': atsitiktinis
       binary_move:
         options:

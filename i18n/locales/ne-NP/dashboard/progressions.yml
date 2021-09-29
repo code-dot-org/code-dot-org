@@ -2,10 +2,13 @@ ne:
   data:
     progressions:
       'Artist: Variables': 'Artist: Variables'
+      Debugging: Debugging
       Events: कार्य 
       For Loops: For Loops
       Functions: Functions
       Functions with Parameters: Functions with Parameters
       Lists: Lists
+      Overview: Overview
       Pair Programming: Pair Programming
+      Variables: Variables
       Wrap-up: Wrap-up

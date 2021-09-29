@@ -13,12 +13,11 @@
     "csp10-2020",
     "csp-post-survey-2020"
   ],
+  "published_state": "stable",
   "properties": {
     "version_year": "2020",
     "family_name": "csp",
-    "has_verified_resources": true,
-    "visible": true,
-    "is_stable": true
+    "has_verified_resources": true
   },
   "resources": [
 

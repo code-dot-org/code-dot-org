@@ -18,6 +18,8 @@ export function isResponsiveFromState(state) {
 /**
  * Protected div with ID "visualization" that depends on Redux state to render
  * with the "responsive" class or not.
+ *
+ * Note: This component is controlled externally by StudioApp.resizeVisualization.
  */
 class ProtectedVisualizationDiv extends React.Component {
   static propTypes = {

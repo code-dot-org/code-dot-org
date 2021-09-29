@@ -31,6 +31,7 @@ FactoryGirl.define do
 
   factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
+    published_state "beta"
   end
 
   factory :experiment do
@@ -535,8 +536,11 @@ FactoryGirl.define do
       end
     end
 
-    trait :script do
-      create(:script_level)
+    trait :with_script do
+      after :create do |level|
+        script_level = create(:script_level, levels: [level])
+        create(:lesson_group, lessons: [script_level.lesson], script: script_level.script)
+      end
     end
 
     factory :sublevel do
@@ -559,9 +563,11 @@ FactoryGirl.define do
   end
 
   factory :bounce, parent: :level, class: Bounce do
+    game {Game.bounce}
   end
 
   factory :artist, parent: :level, class: Artist do
+    game {Game.custom_artist}
   end
 
   factory :maze, parent: :level, class: :Maze do
@@ -642,6 +648,10 @@ FactoryGirl.define do
     game {Game.curriculum_reference}
   end
 
+  factory :javalab, parent: :level, class: Javalab do
+    game {Game.javalab}
+  end
+
   factory :block do
     transient do
       sequence(:index)
@@ -694,6 +704,22 @@ FactoryGirl.define do
 
   factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
+    published_state "beta"
+    is_migrated true
+
+    trait :with_levels do
+      transient do
+        levels_count 0
+      end
+
+      after(:create) do |script, evaluator|
+        evaluator.levels_count.times do
+          level = create(:level)
+          script_level = create(:script_level, levels: [level], script: script)
+          create(:lesson_group, lessons: [script_level.lesson], script: script)
+        end
+      end
+    end
 
     factory :csf_script do
       after(:create) do |csf_script|
@@ -730,9 +756,9 @@ FactoryGirl.define do
 
   factory :user_ml_model do
     user
-    model_id "1234AIBot"
-    metadata "Model details"
-    name "Model name"
+    model_id {Random.rand(111..999)}
+    name {"Model name #{Random.rand(111..999)}"}
+    metadata '{ "description": "Model details" }'
   end
 
   factory :script_level do
@@ -934,7 +960,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script
+    script {create :script, published_state: SharedConstants::PUBLISHED_STATE.stable}
   end
 
   factory :user_school_info do
@@ -986,24 +1012,27 @@ FactoryGirl.define do
 
   factory :bubble_choice_level, class: BubbleChoice do
     game {create(:game, app: "bubble_choice")}
-    name 'name'
+    sequence(:name) {|n| "Bubble_Choice_Level_#{n}"}
     display_name 'display_name'
-    transient do
-      sublevels []
-    end
     properties do
       {
         display_name: display_name,
-        sublevels: sublevels.pluck(:name)
       }
     end
 
+    # Allow passing a list of levels in the create method to automatically set
+    # up sublevels
+    transient do
+      sublevels []
+    end
+
+    after(:create) do |bubble_choice, evaluator|
+      bubble_choice.setup_sublevels(evaluator.sublevels.pluck(:name)) if evaluator.sublevels.present?
+    end
+
+    # Also allow specifying a trait to automatically create sublevels
     trait :with_sublevels do
-      after(:create) do |bc|
-        sublevels = create_list(:level, 3)
-        bc.properties['sublevels'] = sublevels.pluck(:name)
-        bc.save!
-      end
+      sublevels {create_list(:level, 3)}
     end
   end
 
@@ -1309,6 +1338,7 @@ FactoryGirl.define do
     # Note: This creates channel_tokens where the channel is NOT an accurately
     # encrypted version of storage_app_id/app_id
     storage_app_id 1
+    association :level
     storage_id {storage_user.try(:id) || 2}
   end
 
@@ -1370,6 +1400,21 @@ FactoryGirl.define do
         create :script_level, script: tf.script, levels: [tf.level]
       end
     end
+  end
+
+  factory :code_review_comment do
+    association :commenter, factory: :student
+    association :project_owner, factory: :student
+
+    storage_app_id 1
+    comment 'a comment about your project'
+  end
+
+  factory :reviewable_project do
+    sequence(:storage_app_id)
+    association :user, factory: :student
+    association :level
+    association :script
   end
 
   factory :teacher_score do

@@ -1,4 +1,5 @@
 login_required true
+published_state 'beta'
 
 lesson 'Start and End Screens', display_name: 'Start and End Screens', has_lesson_plan: false
 level 'Gamelab StartScreen Intro'

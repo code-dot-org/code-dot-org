@@ -1,4 +1,5 @@
 {
   "func": "border",
-  "category": "CSS Properties"
+  "category": "CSS Properties",
+  "syntax": "border: border-width border-style border-color;"
 }

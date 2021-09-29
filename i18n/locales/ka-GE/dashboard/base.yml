@@ -130,8 +130,8 @@ ka:
     additional_information: "რეგისტრაციის გასაგრძელებლად გვჭირდება დამატებითი ინფორმაცია."
     user_type_button: "ანგარიშის ტიპის განახლება"
     user_type_label: "ანგარიშის ტიპი"
-    user_type_teacher: "მასწავლებელი"
     user_type_student: "მოსწავლე"
+    user_type_teacher: "მასწავლებელი"
     field_is_required: "სავალდებულოა"
     accept_terms: "ანგარიშის შესაქმნელად უნდა დაეთანხმოთ"
     error: "მოხდა შეცდომა."
@@ -140,6 +140,9 @@ ka:
     email_preference_yes: "დიახ"
     email_preference_no: "არა"
     email_preference_required: "თქვენ უნდა მიუთითოთ ელფოსტის პარამეტრები."
+    share_teacher_email_reg_partner_preference_yes: "დიახ"
+    share_teacher_email_reg_partner_preference_no: "არა"
+    share_teacher_email_reg_partner_preference_required: "თქვენ უნდა მიუთითოთ ელფოსტის პარამეტრები."
   school_info:
     title: 'სასკოლო ინფორმაცია (არასავალდებულო)'
     school_country: 'სკოლის ქვეყანა'
@@ -228,6 +231,7 @@ ka:
     invite_sent: 'მოწვევა გაგზავნილია'
     added_teacher: '%{name} გიმატებთ, როგორც მასწავლებელს'
     registered: "თქვენ დარეგისტრირდით სექციაში %{section_name}."
+    already_exists: 'თქვენ უკვე შეუერთდით სექციას %{section_name}.'
     error:
       signed_in: 'თუ შეიძლება გაგრძელებამდე გამოდით თქვენი ანგარიშიდან'
       username_not_found: 'მომხმარებლის სახელი %{username} არ მოიძებნა'
@@ -334,7 +338,7 @@ ka:
       gumball: 'გამბოლის საოცარი სამყარო'
       iceage: 'გამყინვარების პერიოდი'
       infinity: 'უსასრულობა'
-      minecraft_adventurer: 'Minecraft-ის თავაგადასავლები'
+      minecraft_adventurer: 'Minecraft თავგადასავალი'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft გმირი'
       playlab: 'თამაშების ლაბი'
@@ -416,6 +420,7 @@ ka:
     account_successfully_updated: "ანგარიში წარმატებით განახლდა."
     update_email: "განახლება"
     parent_guardian_email_label: "მშობლის/მეურვის ელფოსტა"
+    remove_parent_email_label: "წაშლა"
     none: "არცერთი"
   user_level:
     completed: 'დასრულებულია'
@@ -521,7 +526,6 @@ ka:
       link: "გაიგეთ მეტი"
       applab_unsupported_tablet: "აპლიკაციების ლაბორატორია საუკეთესოდ მუშაობს სტაციონალურ ან ლეპტოპის ტიპი კომპიუტერებზე, მაუსით და კლავიატურით. მიმდინარე მოწყობილობაზე მოცემული ინსტრუმენტის გამოყენებისას შესაძლოა, შეგექმნათ პრობლემები."
       gamelab_unsupported_tablet: "თამაშების ლაბორატორია საუკეთესოდ მუშაობს სტაციონალურ ან ლეპტოპის ტიპი კომპიუტერებზე, მაუსით და კლავიატურით. მიმდინარე მოწყობილობაზე მოცემული ინსტრუმენტის გამოყენებისას შესაძლოა, შეგექმნათ პრობლემები."
-      weblab_unsupported_browser: "სამწუხაროდ, ამ ბრაუზერში ვებ ლაბორატორიის ჩატვირთვისას პრობლემებს გადავეყარეთ. სასურველია, გამოიყენოთ სხვა ბრაუზერი, სანამ პრობლემა აღმოიფხვრება. ბოდიშს გიხდით შეფერხებისთვის."
       weblab_unsupported_locale_storage: "თქვენ შეიძლება, შეგექმნათ პრობლემები ვებ ლაბორატორიის პრივატული ბრაუზინგის რეჟიმში გამოყენებისას. გთხოვთ, გადატვირთოთ თქვენი პროექტი ჩვეულებრივ რეჟიმში. ბოდიშს გიხდით შეფერხებისათვის."
   slow_loading: 'ჰმ.. პროცესს ჩვეულებრივზე მეტი დრო მიაქვს...'
   try_reloading: 'სცადეთ გვერდის გადატვირთვა'
@@ -880,7 +884,7 @@ ka:
       school_city: 'სკოლის ქალაქი'
       school_country: 'სკოლის ქვეყანა'
       colombian_school_city: 'სკოლის ქალაქი'
-      colombian_school_name: 'სკოლის სახელი'
+      colombian_chilean_school_name: 'სკოლის სახელი'
       workshop_organizer: 'სემინარის ორგანიზატორი'
       workshop_facilitator: 'სემინარის თანაშემწე'
       workshop_course: 'სემინარის კურსი'
@@ -947,4 +951,5 @@ ka:
   courses_category: 'ყველა კურსი'
   cookie_banner:
     accept: 'ვეთანხმები'
+  page_not_found_title: "გვერდი არ მოიძებნა"
   copy: 'კოპირება'

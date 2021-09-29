@@ -187,10 +187,16 @@ ky:
         options:
           THIS:
             sprites: баары
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': көрүнгөн
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: баары
+          VISIBILITY:
+            'true': көрүнгөн
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -281,11 +287,26 @@ ky:
             '"space"': космос
             '"x"': x
             '"y"': y
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': жаан
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': оңго
+            '90': ылдый
+            '180': солго
+            '270': өйдө
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': оңго
             '"left"': солго
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": секир
       gamelab_randColor:
         text: кокус түс
       gamelab_randomColor:
@@ -303,6 +324,7 @@ ky:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': суу
               алдында
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': кыш
+            undefined: жок
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -317,6 +339,15 @@ ky:
             '"x"': x позиция
             '"y"': у позиция
             '"speed"': ылдамдык
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': орто
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -466,6 +497,11 @@ ky:
             '"a"': A
             '"s"': Түш
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': ооба
+            '"no"': жок
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -473,16 +509,38 @@ ky:
             '"down"': жебе төмөн
             '"left"': жебе солго
             '"right"': жебе оңго
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': жаан
       RyanLab_moveForward:
         text: алдыга жылдыр
       RyanLab_turnLeft:
         text: солго бурул
       RyanLab_turnRight:
         text: оңго бурул
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": түс
+      aalab_layoutSprites:
+        options:
+          FORMAT:
             '"random"': туш келди
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': баары
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': баары
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:

@@ -412,44 +412,6 @@ id:
           dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran
           ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan
           kode ke dalam fungsi adalah sebuah praktik yang berguna.  '
-      swipeRightPassThrough:
-        title: Sesi Skenario Perekrutan
-        desc: "# Sesi Skenario Perekrutan\r\n\r\n## Usap ke Kanan untuk CS\r\nUntuk
-          sesi ini, kami akan menggunakan alat bernama \"Swipe Right for CS\", yang
-          telah dikembangkan oleh partner kami di MIT. Dalam Swipe Right for CS, Anda
-          akan membaca beberapa profil siswa sampai selesai dan menimbang pernyataan
-          khusus yang mungkin Anda gunakan untuk meyakinkan siswa tersebut agar mau
-          mendaftar kursus CS Principles Anda. \r\n\r\n### Cara Kerjanya\r\nKetika
-          memutar permainan Swipe Right for CS, Anda akan melihat sederet kutipan
-          yang akan Anda ucapkan kepada masing-masing siswa. Anda harus mengusap kutipan
-          ke kanan yang Anda rasa akan efektif dalam meyakinkan siswa agar mau mendaftar
-          kursus dan mengusap pernyataan ke kiri yang menurut Anda tidak akan efektif.
-          Selama sesi, kami sebagai kelompok akan mendiskusikan pikiran-pikiran Anda
-          tentang jenis pernyataan yang paling efektif dalam menjaring siswa untuk
-          mendaftar di CS, dan Anda berpeluang melihat bagaimana para peserta lain
-          dalam lokakarya Anda mengusap masing-masing argumen. \r\n\r\n\r\nKetika
-          Anda mengklik lanjutkan di bawah ini, kami akan membawa Anda ke permainan,
-          dan meneruskan alamat email Code.org yang Anda gunakan untuk masuk."
-      swipeRightPassThrough-test123:
-        title: Sesi Skenario Perekrutan
-        desc: "# Sesi Skenario Perekrutan\r\n\r\n## Usap ke Kanan untuk CS\r\nUntuk
-          sesi ini, kami akan menggunakan alat bernama \"Swipe Right for CS\", yang
-          telah dikembangkan oleh partner kami di MIT. Dalam Swipe Right for CS, Anda
-          akan membaca beberapa profil siswa sampai selesai dan menimbang pernyataan
-          khusus yang mungkin Anda gunakan untuk meyakinkan siswa tersebut agar mau
-          mendaftar kursus CS Principles Anda. \r\n\r\n### Cara Kerjanya\r\nKetika
-          memutar permainan Swipe Right for CS, Anda akan melihat sederet kutipan
-          yang akan Anda ucapkan kepada masing-masing siswa. Anda harus mengusap kutipan
-          ke kanan yang Anda rasa akan efektif dalam meyakinkan siswa agar mau mendaftar
-          kursus dan mengusap pernyataan ke kiri yang menurut Anda tidak akan efektif.
-          Selama sesi, kami sebagai kelompok akan mendiskusikan pikiran-pikiran Anda
-          tentang jenis pernyataan yang paling efektif dalam menjaring siswa untuk
-          mendaftar di CS, dan Anda berpeluang melihat bagaimana para peserta lain
-          dalam lokakarya Anda mengusap masing-masing argumen. \r\n\r\n\r\nKetika
-          Anda mengklik lanjutkan di bawah ini, kami akan membawa Anda ke permainan,
-          dan meneruskan alamat email Code.org yang Anda gunakan untuk masuk."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         title: Teman-teman robot saya
         desc: Belajar memprogram dengan menulis kode untuk teman-teman Anda!
@@ -636,24 +598,6 @@ id:
           sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus
           pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma
           memainkan peranan yang amat penting.
-      test-uid-passthrough:
-        desc: "# Sesi Skenario Perekrutan\r\n\r\n## Usap ke Kanan untuk CS\r\nUntuk
-          sesi ini, kami akan menggunakan alat bernama \"Swipe Right for CS\", yang
-          telah dikembangkan oleh partner kami di MIT. Dalam Swipe Right for CS, Anda
-          akan membaca beberapa profil siswa sampai selesai dan menimbang pernyataan
-          khusus yang mungkin Anda gunakan untuk meyakinkannya agar mau mendaftar
-          kursus CS Principles Anda. \r\n\r\n## Cara Kerjanya\r\nKetika memutar permainan
-          Swipe Right for CS, Anda akan melihat sederet kutipan yang akan Anda ucapkan
-          kepada masing-masing siswa. Anda harus mengusap kutipan ke kanan yang Anda
-          rasa akan efektif dalam meyakinkan siswa tersebut agar mau mendaftar kursus
-          dan mengusap pernyataan ke kiri yang menurut Anda tidak akan efektif. Selama
-          sesi, kami sebagai kelompok akan mendiskusikan pikiran-pikiran Anda tentang
-          jenis pernyataan yang paling efektif dalam menjaring siswa untuk mendaftar
-          di CS, dan Anda berpeluang melihat bagaimana para peserta lain dalam lokakarya
-          Anda mengusap masing-masing argumen. \r\n<br><br><br><br>\r\n\r\n<span style=\"display:none\">submitButton
-          next-stage</span>\r\n\r\n<a class=\"btn btn-large btn-primary submitButton\"
-          href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">
-          Klik di sini untuk memainkan Swipe Right for CS!</a>\r\n\r."
       PlantASeed_2019:
         title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
         desc: Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan
@@ -712,10 +656,3 @@ id:
         desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan
           kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan
           satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
-      TheRightApp_2019:
-        title: Aplikasi yang Tepat
-        desc: "* Semua orang menggunakan komputer dewasa ini, terutama telepon pintar.\r\n*
-          Aplikasi telepon pintar, atau \"aplikasi\", membantu orang melakukan hal-hal
-          seperti berbicara dengan teman, mendengarkan musik, berbelanja, atau sekadar
-          menjelajahi web.\r\n* Pemrogram perlu memahami kebutuhan orang lain dan
-          merancang aplikasi dengan mempertimbangkan kebutuhan tersebut!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"

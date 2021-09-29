@@ -121,13 +121,15 @@ sl:
     data_collection_us: "Razumem, da je Code.org neprofitno spletno mesto iz ZDA in da se lahko zakoni glede zbiranja podatkov v ZDA razlikujejo od zakonov v moji državi."
     visit_privacy: 'Obiščite [Privacy Policy](%{privacy_url}) Code.org za več informacij.'
     additional_information: "Potrebujemo nekaj dodatnih informacij za uspešno prijavo."
-    user_type_teacher: "Učitelj/ica"
     user_type_student: "Učenec"
+    user_type_teacher: "Učitelj/ica"
     field_is_required: "se zahtevan(o)"
     accept_terms: "Moraš se strinjati, če želiš ustvariti račun"
     error: "Prišlo je do napake."
     email_preference_yes: "Da"
     email_preference_no: "Ne"
+    share_teacher_email_reg_partner_preference_yes: "Da"
+    share_teacher_email_reg_partner_preference_no: "Ne"
   school_info:
     private: 'zasebna'
     other: 'Drugi'
@@ -238,6 +240,7 @@ sl:
       about_contact: "Kontaktirajte nas"
       about_faqs: "Pogosta vprašanja"
       learn: "Učenje"
+      stats: "Pokaži statistiko"
       help_us: "Pomagaj nam"
       teach: "Predavaj"
       about: "O programu"
@@ -303,6 +306,7 @@ sl:
       section: 'Razdelek'
       example: 'Primer rešitve'
       example_with_number: 'Primer rešitve %{solution_number}'
+      last_updated: 'Nazadnje posodobljeno:'
       worked_with: 'Delal z'
       update_lock_settings: 'Posodobite nastavitve zaklepanja tukaj.'
   user:
@@ -318,6 +322,7 @@ sl:
     delete_confirm: 'Ali ste prepričani, da želite izbrisati svoj račun?'
     update_email: "Posodobi"
     parent_guardian_email_label: "Elektronska pošta staršev/skrbnikov"
+    remove_parent_email_label: "Odstrani"
   user_level:
     completed: 'Zaključeno'
     tried: 'Poskus'
@@ -486,6 +491,8 @@ sl:
       audience: "Starost 4+"
     unplugged_conditionals:
       title: "Pogoji"
+    widgets:
+      audience: "Starost 14+"
   landing:
     report_bug: "Sporoči napako"
     support: "Pomoč"
@@ -615,7 +622,7 @@ sl:
     form_labels:
       email: 'Elektronska pošta'
       school_name: 'Ime šole'
-      colombian_school_name: 'Ime šole'
+      colombian_chilean_school_name: 'Ime šole'
     form_entries:
       gender:
         male: 'Moški'

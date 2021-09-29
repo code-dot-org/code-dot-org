@@ -1,7 +1,7 @@
 import React from 'react';
 import i18n from '@cdo/locale';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -12,7 +12,7 @@ const MOCK_SECTIONS = [
   {
     id: 3,
     name: 'intro to computer science III',
-    stageExtras: true,
+    lessonExtras: true,
     pairingAllowed: true,
     ttsAutoplayEnabled: false,
     studentCount: 5,
@@ -22,7 +22,7 @@ const MOCK_SECTIONS = [
   {
     id: 2,
     name: 'intro to computer science II',
-    stageExtras: true,
+    lessonExtras: true,
     pairingAllowed: true,
     ttsAutoplayEnabled: false,
     studentCount: 4,
@@ -32,7 +32,7 @@ const MOCK_SECTIONS = [
   {
     id: 1,
     name: 'intro to computer science I',
-    stageExtras: true,
+    lessonExtras: true,
     pairingAllowed: true,
     ttsAutoplayEnabled: false,
     studentCount: 6,

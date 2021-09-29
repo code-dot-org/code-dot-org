@@ -1,0 +1,74 @@
+{
+  "no-NO": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Variabel"
+        },
+        "internet/coursef/2021": {
+          "word": "Internett"
+        },
+        "define/coursef/2021": {
+          "word": "Definer"
+        },
+        "debugging/courseb/2021": {
+          "word": "Feilsøking"
+        },
+        "drop/courseb/2021": {
+          "word": "Fall"
+        },
+        "debugging/coursea/2021": {
+          "word": "Feilsøking"
+        },
+        "drop/coursea/2021": {
+          "word": "Fall"
+        },
+        "debugging/coursec/2021": {
+          "word": "Feilsøking"
+        },
+        "binary/coursec/2021": {
+          "word": "Binær"
+        },
+        "debugging/coursed/2021": {
+          "word": "Feilsøking"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Betingelser"
+        },
+        "debugging/express/2021": {
+          "word": "Feilsøking"
+        },
+        "conditionals/express/2021": {
+          "word": "Betingelser"
+        },
+        "function/express/2021": {
+          "word": "Funksjon"
+        },
+        "variable/express/2021": {
+          "word": "Variabel"
+        },
+        "define/express/2021": {
+          "word": "Definer"
+        },
+        "drop/pre-express/2021": {
+          "word": "Fall"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Feilsøking"
+        },
+        "copyright/coursee/2021": {
+          "word": "Opphavsrett"
+        },
+        "function/coursee/2021": {
+          "word": "Funksjon"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Betingelser"
+        },
+        "define/coursee/2021": {
+          "word": "Definer"
+        }
+      }
+    }
+  }
+}

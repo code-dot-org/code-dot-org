@@ -491,6 +491,142 @@
               "sides": "siiddut"
             }
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "mu funkšuvdna"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+          },
+          "draw a circle": {
+            "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+            "parameters": {
+              "radius": "rádius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "tevdne bieggamillu",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a square": {
+            "parameters": {
+              "sides": "siiddut"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+          },
+          "draw a circle": {
+            "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+            "parameters": {
+              "radius": "rádius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "tevdne bieggamillu",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+          },
+          "draw a circle": {
+            "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+            "parameters": {
+              "radius": "rádius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "tevdne bieggamillu",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+          },
+          "draw a circle": {
+            "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+            "parameters": {
+              "radius": "rádius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "tevdne bieggamillu",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "hukse šaldi"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "sihko geainnu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "divus guhkes geainnu"
+          },
+          "fix short path": {
+            "name": "divus oanehis geainnu"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "hukse oanehis šaldi"
+          },
+          "build long bridge": {
+            "name": "hukse guhkes šaldi"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funkšuvdna 1"
+          },
+          "function 2": {
+            "name": "funkšuvdna 2"
+          }
         }
       }
     }

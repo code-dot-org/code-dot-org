@@ -2,14 +2,14 @@
   "script": {
     "name": "allthettsthings",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:04 UTC",
+    "serialized_at": "2021-08-03 22:47:13 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "allthettsthings"
     }
@@ -61,7 +61,6 @@
           "allthethings_ttscsf contained"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -85,7 +84,6 @@
           "allthethings_ttscsd"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -109,7 +107,6 @@
           "allthethings_ttscsp contained"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -133,7 +130,6 @@
           "allthethings_ttscsp"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

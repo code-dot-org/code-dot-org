@@ -33,7 +33,7 @@ describe('SectionProgress', () => {
       scriptData: {
         id: 123,
         path: '/scripts/myscript',
-        stages: [
+        lessons: [
           {
             id: 456,
             levels: [{id: '789'}]
@@ -45,7 +45,7 @@ describe('SectionProgress', () => {
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
       showStandardsIntroDialog: false,
-      studentLastUpdateByScript: {
+      studentLastUpdateByUnit: {
         1: Date.now()
       }
     };

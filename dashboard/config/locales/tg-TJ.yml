@@ -28,8 +28,8 @@ tg:
   signup_form:
     submit: Худро ба қайд гиред
     teacher: Шумо муаллим ҳастед?
-    user_type_teacher: Муаллим
     user_type_student: Донишҷӯ
+    user_type_teacher: Муаллим
   school_info:
     other: Дигар
   signin_form:
@@ -99,6 +99,7 @@ tg:
   user:
     new_password_hint: "(агар нахоҳед, ки онро тағйир диҳед, холӣ монед)"
     update_email: Навсозӣ кардан
+    remove_parent_email_label: Тоза кардан
   home:
     student_reg_link: Донишҷӯ
     online: онлайн
@@ -111,6 +112,7 @@ tg:
     student: Донишҷӯ
     teacher: Муаллим
   footer:
+    more: БЕШТАР
     feedback: Таъмини изҳори назар
     support: Дастгирӣ
   reference_area:
@@ -118,11 +120,16 @@ tg:
   compatibility:
     upgrade:
       link: Маълумоти бештар
+  upsell:
+    widgets:
+      audience: 'Синну сол: 14+'
   race_interstitial:
     races:
       other: Дигар
     submit: Пешниҳод кардан
     decline: Пӯшидан
+  progress:
+    in_progress: иҷро мешавад
   project:
     projects: Лоиҳаҳо
     create: Эҷод кардани лоиҳа

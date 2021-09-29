@@ -2,13 +2,13 @@
   "script": {
     "name": "ml-playground",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:52 UTC",
+    "serialized_at": "2021-08-11 21:32:05 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "ml-playground"
     }
@@ -268,12 +268,27 @@
       }
     },
     {
-      "key": "bug-bash",
-      "name": "Bug Bash Playground",
+      "key": "videoLevels",
+      "name": "Video Recording Levels",
       "absolute_position": 17,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "bug-bash",
+      "name": "Bug Bash Playground",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -285,10 +300,10 @@
     {
       "key": "model-cards",
       "name": "Model Cards Playground",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -300,10 +315,10 @@
     {
       "key": "exemplars",
       "name": "Exemplars I Accidentally Made in LB",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -315,10 +330,10 @@
     {
       "key": "temp",
       "name": "TEMP LEVELS - DELETE LATER",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -330,10 +345,10 @@
     {
       "key": "USE Programs",
       "name": "USE Programs (AppLab Only)",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 21,
+      "relative_position": 22,
       "properties": {
       },
       "seeding_key": {
@@ -345,10 +360,10 @@
     {
       "key": "MODIFY Programs",
       "name": "MODIFY Programs (AppLab -> Widget -> AppLab)",
-      "absolute_position": 22,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 22,
+      "relative_position": 23,
       "properties": {
       },
       "seeding_key": {
@@ -360,10 +375,10 @@
     {
       "key": "dog",
       "name": "Does Code.org Like Your Dog?",
-      "absolute_position": 23,
+      "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 23,
+      "relative_position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -375,14 +390,29 @@
     {
       "key": "ailab-explore",
       "name": "Explore AI Lab",
-      "absolute_position": 24,
+      "absolute_position": 25,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 24,
+      "relative_position": 25,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "CSP Tester",
+      "name": "CSP Tester",
+      "absolute_position": 26,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 26,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSP Tester",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
@@ -406,7 +436,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -431,7 +460,6 @@
         ],
         "progression": "Recognizing Fish"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -456,7 +484,6 @@
         ],
         "progression": "Recognizing Fish Features"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -481,7 +508,6 @@
         ],
         "progression": "Recognizing Expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -506,7 +532,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -531,7 +556,6 @@
         ],
         "progression": "Looking for Patterns"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -556,7 +580,6 @@
         ],
         "progression": "Green Glass Door"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -581,7 +604,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -606,7 +628,6 @@
         ],
         "progression": "Shoe Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -631,7 +652,6 @@
         ],
         "progression": "Improved Shoe Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -656,7 +676,6 @@
         ],
         "progression": "Ultimate Shoe Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -681,7 +700,6 @@
         ],
         "progression": "Ultimate Shoe Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -706,7 +724,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -731,7 +748,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -756,7 +772,6 @@
         ],
         "progression": "Dataset #1: Tacos"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -781,7 +796,6 @@
         ],
         "progression": "Dataset #2: Ice Cream"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -806,7 +820,6 @@
         ],
         "progression": "Dataset #3: Pizza"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -831,7 +844,6 @@
         ],
         "progression": "You Choose: Restaurant Recommendations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -856,7 +868,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -881,7 +892,6 @@
         ],
         "progression": "(Enable AI Models)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -906,7 +916,6 @@
         ],
         "progression": "What is your Ideal Vacation?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -931,7 +940,6 @@
         ],
         "progression": "Import Your Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -956,7 +964,6 @@
         ],
         "progression": "Changing Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -981,7 +988,6 @@
         ],
         "progression": "Changing Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1006,7 +1012,6 @@
         ],
         "progression": "Changing Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1031,7 +1036,6 @@
         ],
         "progression": "You Choose: Quiz Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1056,7 +1060,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1081,7 +1084,6 @@
         ],
         "progression": "Medical Priority App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1106,7 +1108,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1131,7 +1132,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1156,7 +1156,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1181,7 +1180,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1206,7 +1204,6 @@
         ],
         "progression": "Safari Planner"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1231,7 +1228,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1256,7 +1252,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1281,7 +1276,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1306,7 +1300,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1331,7 +1324,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1356,7 +1348,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1381,7 +1372,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1406,7 +1396,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1431,7 +1420,6 @@
         ],
         "progression": "You Choose: Improve Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1456,7 +1444,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1481,7 +1468,6 @@
         ],
         "progression": "Raspado Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1506,7 +1492,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1531,7 +1516,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1556,7 +1540,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1581,7 +1564,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1606,7 +1588,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1631,7 +1612,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1656,7 +1636,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1681,7 +1660,6 @@
         ],
         "progression": "You Choose: Improve Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1706,7 +1684,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1731,7 +1708,6 @@
         ],
         "progression": "Zoo Predictions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1756,7 +1732,6 @@
         ],
         "progression": "Importing Your Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1781,7 +1756,6 @@
         ],
         "progression": "Customizing Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1806,7 +1780,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1831,7 +1804,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1856,7 +1828,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1881,7 +1852,6 @@
         ],
         "progression": "Planning Your App - AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1906,7 +1876,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1931,7 +1900,6 @@
         ],
         "progression": "App with Real-World Data - AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1956,7 +1924,6 @@
         ],
         "progression": "App with Real-World Data - App Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1977,11 +1944,82 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "ml-video recording-import app 1"
+        ],
+        "progression": "Importing A Model + If Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-video recording-import app 1"
+        ],
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-video recording-import app 1"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-video recording-custom design elts"
+        ],
+        "progression": "Custome Design Elts + Edit Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-video recording-custom design elts"
+        ],
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-video recording-custom design elts"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-videos-intro ai lab shoes"
+        ],
+        "progression": "Introduction to AI Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-videos-intro ai lab shoes"
+        ],
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-videos-intro ai lab shoes"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "ml-ai lab template"
         ],
         "progression": "AI Lab Bash"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1996,7 +2034,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2006,7 +2044,6 @@
         ],
         "progression": "App Lab Import Bash"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2021,7 +2058,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2031,7 +2068,6 @@
         ],
         "progression": "Model Card Template"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2046,7 +2082,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2056,7 +2092,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2071,7 +2106,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2081,7 +2116,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2096,7 +2130,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2106,7 +2140,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2121,7 +2154,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2131,7 +2164,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2146,7 +2178,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2156,7 +2188,6 @@
         ],
         "progression": "Pet Exemplar"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2171,7 +2202,31 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender exemplar"
+        ],
+        "progression": "Book Recommender Exemplar"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender exemplar"
+        ],
+        "lesson.key": "exemplars",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-intro app lab-book recommender exemplar"
+      ]
+    },
+    {
+      "chapter": 76,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2181,7 +2236,6 @@
         ],
         "progression": "Medical Priority App (external app)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2196,7 +2250,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2206,7 +2260,6 @@
         ],
         "progression": "Which Pixar Character Are You?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2221,7 +2274,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2231,7 +2284,6 @@
         ],
         "progression": "Recognizing Ocean Animals"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2246,7 +2298,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 79,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2256,7 +2308,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2271,7 +2322,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 80,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2281,7 +2332,6 @@
         ],
         "progression": "(Slides) Bias in Machine Learning Video"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2296,7 +2346,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 81,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2306,7 +2356,6 @@
         ],
         "progression": "How Much Will Insurance Cost?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2321,7 +2370,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 82,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2331,7 +2380,6 @@
         ],
         "progression": "How Much Will Insurance Cost?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2346,7 +2394,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 83,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2356,7 +2404,6 @@
         ],
         "progression": "How Much Will Insurance Cost?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2371,7 +2418,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 84,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2381,7 +2428,6 @@
         ],
         "progression": "How Much Will Insurance Cost?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2396,7 +2442,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 85,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2406,7 +2452,6 @@
         ],
         "progression": "How Much Will Insurance Cost?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2421,7 +2466,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 86,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2431,7 +2476,6 @@
         ],
         "progression": "Supervised Learning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2446,7 +2490,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 87,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -2456,7 +2500,6 @@
         ],
         "progression": "Video: Introduction to AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2471,7 +2514,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2481,7 +2524,6 @@
         ],
         "progression": "Movie Recommendations (AppLab Only)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2496,7 +2538,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2506,7 +2548,6 @@
         ],
         "progression": "Movie Recommendations (AppLab Only)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2521,7 +2562,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2531,7 +2572,6 @@
         ],
         "progression": "Movie Recommendations (AppLab Only)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2546,7 +2586,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2556,7 +2596,6 @@
         ],
         "progression": "Movie Recommendations (AppLab Only)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2571,7 +2610,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2581,7 +2620,6 @@
         ],
         "progression": "Movie Recommendations (AppLab Only)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2596,7 +2634,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2606,7 +2644,6 @@
         ],
         "progression": "School Acceptance (AppLab Only)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2621,7 +2658,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2631,7 +2668,6 @@
         ],
         "progression": "School Acceptance (AppLab Only)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2646,7 +2682,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 95,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2656,7 +2692,6 @@
         ],
         "progression": "School Acceptance (AppLab Only)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2671,7 +2706,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 96,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2681,7 +2716,6 @@
         ],
         "progression": "School Acceptance (AppLab Only)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2696,7 +2730,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 97,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2706,7 +2740,6 @@
         ],
         "progression": "School Acceptance (AppLab Only)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2721,7 +2754,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2731,7 +2764,6 @@
         ],
         "progression": "Dog Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2746,7 +2778,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2756,7 +2788,6 @@
         ],
         "progression": "Dog Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2771,7 +2802,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2781,7 +2812,6 @@
         ],
         "progression": "Dog Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2796,7 +2826,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 101,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2806,7 +2836,6 @@
         ],
         "progression": "Dog Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2821,7 +2850,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 102,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2831,7 +2860,6 @@
         ],
         "progression": "Dog Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2846,7 +2874,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 103,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2856,7 +2884,6 @@
         ],
         "progression": "Dog Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2871,7 +2898,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 104,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2881,7 +2908,6 @@
         ],
         "progression": "Dog Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2896,7 +2922,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 105,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2906,7 +2932,6 @@
         ],
         "progression": "Candy Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2921,7 +2946,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 106,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2931,7 +2956,6 @@
         ],
         "progression": "Candy Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2946,7 +2970,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 107,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2956,7 +2980,6 @@
         ],
         "progression": "Candy Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2971,7 +2994,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 108,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2981,7 +3004,6 @@
         ],
         "progression": "Candy Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2996,7 +3018,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 109,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -3006,7 +3028,6 @@
         ],
         "progression": "Candy Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3021,7 +3042,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 110,
       "position": 13,
       "activity_section_position": null,
       "assessment": false,
@@ -3031,7 +3052,6 @@
         ],
         "progression": "Candy Predictor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3046,7 +3066,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3055,7 +3075,6 @@
           "ml-code dog-1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3070,7 +3089,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 112,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3079,7 +3098,6 @@
           "AIlab-test-1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3094,7 +3112,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 113,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3103,7 +3121,6 @@
           "ml-code dog-export"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3118,7 +3135,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 114,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3128,7 +3145,6 @@
         ],
         "progression": "Introduction to AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3143,7 +3159,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 115,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3153,7 +3169,6 @@
         ],
         "progression": "Explore AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3168,7 +3183,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 116,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3178,7 +3193,6 @@
         ],
         "progression": "Explore AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3193,7 +3207,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 117,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3203,7 +3217,6 @@
         ],
         "progression": "Importing into App Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3215,6 +3228,30 @@
       },
       "level_keys": [
         "ml-class test-app lab 1"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U7 Param Practice App_3_ExemplarIssue"
+        ],
+        "progression": "Parameters and Returns"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7 Param Practice App_3_ExemplarIssue"
+        ],
+        "lesson.key": "CSP Tester",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "CSP U7 Param Practice App_3_ExemplarIssue"
       ]
     }
   ],
@@ -3914,6 +3951,39 @@
     },
     {
       "seeding_key": {
+        "level.key": "ml-video recording-import app 1",
+        "script_level.level_keys": [
+          "ml-video recording-import app 1"
+        ],
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-video recording-custom design elts",
+        "script_level.level_keys": [
+          "ml-video recording-custom design elts"
+        ],
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-videos-intro ai lab shoes",
+        "script_level.level_keys": [
+          "ml-videos-intro ai lab shoes"
+        ],
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-ai lab template",
         "script_level.level_keys": [
           "ml-ai lab template"
@@ -3994,6 +4064,17 @@
         "level.key": "ml-pet exemplar",
         "script_level.level_keys": [
           "ml-pet exemplar"
+        ],
+        "lesson.key": "exemplars",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender exemplar",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender exemplar"
         ],
         "lesson.key": "exemplars",
         "lesson_group.key": "",
@@ -4458,6 +4539,17 @@
           "ml-class test-app lab 1"
         ],
         "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7 Param Practice App_3_ExemplarIssue",
+        "script_level.level_keys": [
+          "CSP U7 Param Practice App_3_ExemplarIssue"
+        ],
+        "lesson.key": "CSP Tester",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }

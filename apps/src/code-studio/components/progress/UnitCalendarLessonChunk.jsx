@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ReactTooltip from 'react-tooltip';
 
 class UnitCalendarLessonChunk extends Component {
   static propTypes = {
@@ -31,11 +32,15 @@ class UnitCalendarLessonChunk extends Component {
       isStart,
       isEnd,
       isMajority,
-      url
+      url,
+      lessonNumber
     } = this.props.lessonChunk;
 
+    const chunkWidth = Math.floor(minuteWidth * duration) - 10;
+    const smallChunk = chunkWidth < 50;
+
     let chunkStyle = {
-      width: Math.floor(minuteWidth * duration) - 10,
+      width: chunkWidth,
       ...styles.box,
       ...(assessment
         ? isHover
@@ -48,11 +53,15 @@ class UnitCalendarLessonChunk extends Component {
       ...(isEnd ? styles.isEnd : styles.isNotEnd)
     };
 
+    let displayTitle = smallChunk ? lessonNumber : title;
+
     return (
       <a
         style={chunkStyle}
         target="_blank"
         rel="noopener noreferrer"
+        data-for={`lesson-information-${lessonNumber}`}
+        data-tip
         href={url}
         onMouseEnter={this.handleMouseEnter}
         onMouseOut={this.handleMouseOut}
@@ -94,9 +103,18 @@ class UnitCalendarLessonChunk extends Component {
               onMouseEnter={this.handleMouseEnter}
               onMouseOut={this.handleMouseOut}
             >
-              {title}
+              {displayTitle}
             </div>
           </div>
+        )}
+        {smallChunk && (
+          <ReactTooltip
+            id={`lesson-information-${lessonNumber}`}
+            role="tooltip"
+            effect="solid"
+          >
+            <div>{title}</div>
+          </ReactTooltip>
         )}
       </a>
     );

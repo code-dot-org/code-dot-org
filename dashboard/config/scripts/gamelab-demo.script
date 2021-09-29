@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Simple Sprite Movement', display_name: 'Simple Sprite Movement', has_lesson_plan: false
 level 'GameLab Livecode Demo 1'
 level 'GameLab Livecode Demo 2'

@@ -30,6 +30,12 @@ export default class ProgressionDetails extends Component {
   };
 
   convertScriptLevelForProgression = scriptLevel => {
+    const subLevelsForProgression = scriptLevel.sublevels
+      ? scriptLevel.sublevels.map(l => {
+          l.isSublevel = true;
+          return l;
+        })
+      : undefined;
     const activeLevel =
       scriptLevel.levels.length > 1
         ? scriptLevel.levels.filter(level => {
@@ -50,7 +56,7 @@ export default class ProgressionDetails extends Component {
       levelNumber: scriptLevel.levelNumber,
       bonus: scriptLevel.bonus,
       level: activeLevel,
-      sublevels: scriptLevel.sublevels
+      sublevels: subLevelsForProgression
     };
   };
 

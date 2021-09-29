@@ -27,6 +27,7 @@ const defaultProps = {
             ],
             programmingExpressions: [
               {
+                syntax: 'playSound',
                 name: 'playSound',
                 link: 'studio.code.org/docs/applab/playSound'
               }
@@ -78,6 +79,7 @@ const defaultProps = {
             ],
             programmingExpressions: [
               {
+                syntax: 'playSound',
                 name: 'playSound',
                 link: 'studio.code.org/docs/applab/playSound'
               }
@@ -147,6 +149,7 @@ const defaultProps = {
             ],
             programmingExpressions: [
               {
+                syntax: 'playSound',
                 name: 'playSound',
                 link: 'studio.code.org/docs/applab/playSound'
               }

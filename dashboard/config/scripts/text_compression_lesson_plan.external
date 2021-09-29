@@ -3,5 +3,5 @@ name 'text compression lesson plan'
 markdown <<MARKDOWN
 <iframe width="100%" height="1650" scrolling="auto" frameborder="0" src="https://docs.google.com/document/d/1TBLaAvyFRYnWUakGWc-3O6b3qu_DvNvPEotT-_I8_o0/edit"></iframe>
 <br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

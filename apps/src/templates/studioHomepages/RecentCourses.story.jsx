@@ -51,7 +51,7 @@ const topCourse = {
   lessonName: 'Lesson 3: Learn to drag and drop',
   linkToOverview: 'http://localhost-studio.code.org:3000/s/course1',
   linkToLesson:
-    'http://localhost-studio.code.org:3000/s/course1/stage/3/puzzle/1'
+    'http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1'
 };
 
 export default storybook => {

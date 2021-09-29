@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'reference', display_name: 'reference', has_lesson_plan: false
 level 'PDK5 Intro C'
 level '2-3'

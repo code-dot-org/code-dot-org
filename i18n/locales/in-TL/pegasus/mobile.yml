@@ -969,12 +969,20 @@
   coursed-2020_name: crwdns2370236:0crwdne2370236:0
   coursee-2020_name: crwdns2370238:0crwdne2370238:0
   coursef-2020_name: crwdns2370240:0crwdne2370240:0
+  coursea-2021_name: crwdns2688474:0crwdne2688474:0
+  courseb-2021_name: crwdns2688476:0crwdne2688476:0
+  coursec-2021_name: crwdns2688478:0crwdne2688478:0
+  coursed-2021_name: crwdns2688480:0crwdne2688480:0
+  coursee-2021_name: crwdns2688482:0crwdne2688482:0
+  coursef-2021_name: crwdns2688484:0crwdne2688484:0
   express-2018_name: crwdns135969:0crwdne135969:0
   pre-express-2018_name: crwdns135970:0crwdne135970:0
   express-2019_name: crwdns1625442:0crwdne1625442:0
   pre-express-2019_name: crwdns1625444:0crwdne1625444:0
   express-2020_name: crwdns2370242:0crwdne2370242:0
   pre-express-2020_name: crwdns2370244:0crwdne2370244:0
+  express-2021_name: crwdns2688486:0crwdne2688486:0
+  pre-express-2021_name: crwdns2688488:0crwdne2688488:0
   csd2_name: 'crwdns2066990:0crwdne2066990:0'
   csd3_name: 'crwdns2043992:0crwdne2043992:0'
   accelerated_name: "crwdns2041128:0crwdne2041128:0"
@@ -1215,6 +1223,12 @@
   coursed-2020_shortdescription_congrats: crwdns2485706:0crwdne2485706:0
   coursee-2020_shortdescription_congrats: crwdns2485708:0crwdne2485708:0
   coursef-2020_shortdescription_congrats: crwdns2485710:0crwdne2485710:0
+  coursea-2021_shortdescription_congrats: crwdns2688490:0crwdne2688490:0
+  courseb-2021_shortdescription_congrats: crwdns2688492:0crwdne2688492:0
+  coursec-2021_shortdescription_congrats: crwdns2688494:0crwdne2688494:0
+  coursed-2021_shortdescription_congrats: crwdns2688496:0crwdne2688496:0
+  coursee-2021_shortdescription_congrats: crwdns2688498:0crwdne2688498:0
+  coursef-2021_shortdescription_congrats: crwdns2688500:0crwdne2688500:0
   codeorg_longdescription: "crwdns21574:0crwdne21574:0"
   codeintl_longdescription: "crwdns23751:0crwdne23751:0"
   thinkersmithspanish_longdescription: "crwdns25939:0crwdne25939:0"
@@ -1736,3 +1750,50 @@
   footer_store: "crwdns2484098:0crwdne2484098:0"
   footer_support: "crwdns2484100:0crwdne2484100:0"
   footer_terms: "crwdns2484102:0crwdne2484102:0"
+  ai_for_oceans: "crwdns2571290:0crwdne2571290:0"
+  ai_for_oceans_lesson_plan: "crwdns2571292:0crwdne2571292:0"
+  ai_for_oceans_tile_description: "crwdns2571294:0crwdne2571294:0"
+  how_ai_works: "crwdns2571296:0crwdne2571296:0"
+  how_ai_works_tile_description: "crwdns2571298:0crwdne2571298:0"
+  watch_the_videos: "crwdns2571300:0crwdne2571300:0"
+  ai_and_ethics: "crwdns2571302:0crwdne2571302:0"
+  ai_and_ethics_tile_description: "crwdns2571304:0crwdne2571304:0"
+  view_lesson_plan: "crwdns2571306:0crwdne2571306:0"
+  ai_in_partnership_with: "crwdns2571308:0crwdne2571308:0"
+  ai_microsoft_thanks: "crwdns2571310:0crwdne2571310:0"
+  ai_ethics_panel_header: "crwdns2571312:0crwdne2571312:0"
+  ai_ethics_panel_description_1: "crwdns2571314:0crwdne2571314:0"
+  ai_ethics_lesson_plan: "crwdns2571316:0crwdne2571316:0"
+  ai_ethics_panel_description_2: "crwdns2571318:0crwdne2571318:0"
+  cs_for_good: "crwdns2571320:0crwdne2571320:0"
+  cs_for_good_tile_description: "crwdns2571322:0crwdne2571322:0"
+  view_resources: "crwdns2571324:0crwdne2571324:0"
+  imagine_cup_junior: "crwdns2571326:0crwdne2571326:0"
+  imagine_cup_junior_tile_description: "crwdns2571328:0crwdne2571328:0"
+  ai_activity: "crwdns2571330:0crwdne2571330:0"
+  ai_description: "crwdns2571332:0crwdne2571332:0"
+  ai_seeing_ai: "crwdns2571334:0crwdne2571334:0"
+  ai_seeing_ai_description: "crwdns2571336:0crwdne2571336:0"
+  ai_quick_draw: "crwdns2571338:0crwdne2571338:0"
+  ai_quick_draw_description: "crwdns2571340:0crwdne2571340:0"
+  ai_teachable_machine: "crwdns2571342:0crwdne2571342:0"
+  ai_teachable_machine_description: "crwdns2571344:0crwdne2571344:0"
+  ai_google: "crwdns2571346:0crwdne2571346:0"
+  ai_google_description: "crwdns2571348:0crwdne2571348:0"
+  ai_zooniverse: "crwdns2571350:0crwdne2571350:0"
+  ai_zooniverse_description: "crwdns2571352:0crwdne2571352:0"
+  ai_audience: "crwdns2571354:0crwdne2571354:0"
+  ai_minecraft_description: 'crwdns2571356:0crwdne2571356:0'
+  ai_k_12_audience: "crwdns2571358:0crwdne2571358:0"
+  ai_microsoft_workshop: "crwdns2571360:0crwdne2571360:0"
+  ai_microsoft_workshop_description: "crwdns2571362:0crwdne2571362:0"
+  ai_machine_learning_for_kids: "crwdns2571364:0crwdne2571364:0"
+  ai_machine_learning_for_kids_description: "crwdns2571366:0crwdne2571366:0"
+  ai_ibm_machine_learning_for_kids: 'crwdns2571368:0crwdne2571368:0'
+  ai_ecs: 'crwdns2571370:0crwdne2571370:0'
+  ai_ecs_description: "crwdns2571372:0crwdne2571372:0"
+  ai_elements: "crwdns2571374:0crwdne2571374:0"
+  ai_elements_description: "crwdns2571376:0crwdne2571376:0"
+  ai_cognimates: "crwdns2571378:0crwdne2571378:0"
+  ai_cognimates_description: "crwdns2571380:0crwdne2571380:0"
+  ai_try_activity: "crwdns2571382:0crwdne2571382:0"

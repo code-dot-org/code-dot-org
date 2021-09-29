@@ -22,8 +22,6 @@ kk:
     mailer:
       confirmation_instructions:
         subject: Code.org растау нұсқаулықтары
-      reset_password_instructions:
-        subject: Code.org құрия сөзді қалпына келтіру нұсқаулары
       unlock_instructions:
         subject: Бұғаттан ашу нұсқаулары
     omniauth_callbacks:

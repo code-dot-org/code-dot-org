@@ -26,8 +26,8 @@ LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
 end
 
-# Checks that CDO.github_access_token and CDO.slack_token are defined. If not,
-# exits the program.
+# Checks that CDO.github_access_token, CDO.slack_token, CDO.honeybadger_api_token, and CDO.devinternal_db_writer
+# are defined. If not, exits the program.
 def check_for_cdo_keys
   return if CDO.github_access_token && CDO.slack_token && CDO.honeybadger_api_token && CDO.devinternal_db_writer
 
@@ -41,11 +41,8 @@ def check_for_cdo_keys
       https://api.slack.com/custom-integrations/legacy-tokens
       https://app.honeybadger.io/users/edit#authentication
 
-    Get the devinternal_db_writer key from the cdo-secrets section at:
-
-      https://manage.chef.io/organizations/code-dot-org/environments/development/attributes
-
     Please add them to your locals.yml and rerun the script.
+    CDO.devinternal_db_writer should be pulled automatically from AWS Secrets Manager.
 
   EOS
   exit

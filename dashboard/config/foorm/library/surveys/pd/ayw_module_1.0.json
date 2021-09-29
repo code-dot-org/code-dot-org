@@ -9,7 +9,7 @@
           "elements": [
             {
               "type": "html",
-              "name": "question1",
+              "name": "preamble",
               "html": "<h2>How useful was Module 1?</h2>\n\n<p>For each activity in this module, we ask that you <strong>rate how useful that activity was to you <em>personally</em></strong> in terms of your own <strong>learning, development, teaching practice</strong>, etc.</p>"
             },
             {

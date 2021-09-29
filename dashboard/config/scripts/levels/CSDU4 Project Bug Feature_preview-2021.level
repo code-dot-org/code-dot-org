@@ -20,7 +20,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "project_template_level_name": "CSD Unit 4 App Prototype_preview-2021",
+    "project_template_level_name": "CSD Unit 4 App Prototype_2021",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
@@ -55,13 +55,14 @@
       "/docs/concepts/app-lab/design-mode/design-mode-elements/"
     ],
     "mini_rubric": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "widget_mode": "false",
-    "libraries_enabled": "false"
+    "ai_enabled": "false"
   },
   "game_id": 41,
   "published": true,
@@ -69,7 +70,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-09-21 17:07:42 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-21 17:09:08 +0000\",\"changed\":[\"teacher_markdown\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-06 01:06:39 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2021-01-08 20:49:25 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2021-01-08 20:52:28 +0000\",\"changed\":[\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-09-21 17:07:42 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-21 17:09:08 +0000\",\"changed\":[\"teacher_markdown\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-06 01:06:39 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2021-01-08 20:49:25 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2021-01-08 20:52:28 +0000\",\"changed\":[\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2021-09-15 17:21:47 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

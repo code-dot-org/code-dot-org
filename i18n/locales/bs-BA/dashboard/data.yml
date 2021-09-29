@@ -329,6 +329,8 @@ bs:
         C4_unplugged_forloops: Od-Do-Za Petlje
         C4_unplugged_parameters: Pisanje pjesama
         C4_unplugged_binary: Binarno
+        CSF_debugging_k1_blocks: Otklanjanje pogrešaka
+        CSF_debugging_text_blocks: Otklanjanje pogrešaka
         CSF_my_robotic_friends: Moji Prijatelji Roboti
         CSF_Power_of_Words: Snaga riječi
         CSF_Super_Digital_Citizen: Super digitalni građanin
@@ -364,8 +366,11 @@ bs:
         writing_first_program: Pisanje tvog prvog kompjuterskog programa!
         csd_pair_programming: Programiranje u Paru
         csd_applab_parameters: Funkcije sa Parametrima
+        csd_debugging: Otklanjanje pogrešaka
         hoc_dance_events_2019: Plesna zabava - Događaji
         hoc_dance_properties_2019: Plesna zabava - Osobenosti
+        playlab_2021: Uvod u Laboratorij Igara
+        playlab_2021_reader: Uvod u Laboratorij Igara
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod nekok drugog bloka

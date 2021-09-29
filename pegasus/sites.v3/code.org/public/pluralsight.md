@@ -33,7 +33,7 @@ Curated by expert technologists, the library features over 350 courses totaling 
    * Choose the section you want to unlock the offer for
    * Select ‘Allow Editing’ and then ‘Save’ in the dialog to unlock the offer for that section.
 
-1. Lastly, have your students sign-in and [visit this page](https://studio.code.org/s/pluralsight/lockable/1/puzzle/1) to redeem the offer and sign up for a free Pluralsight One account.
+1. Lastly, have your students sign-in and [visit this page](https://studio.code.org/s/pluralsight/lockable/1/levels/1) to redeem the offer and sign up for a free Pluralsight One account.
 
 ***
 #### About Pluralsight

@@ -2,7 +2,6 @@
   "script": {
     "name": "csp-ap",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "student_detail_progress_view": true,
@@ -28,7 +27,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:03 UTC",
+    "serialized_at": "2021-08-03 22:47:12 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "csp-ap"
     }
@@ -196,7 +196,6 @@
         ],
         "progression": "AP Performance Task Tech Setup - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -221,7 +220,6 @@
         ],
         "progression": "Create PT -  Review - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -246,7 +244,6 @@
         ],
         "progression": "Create PT - Make a Plan - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -271,7 +268,6 @@
         ],
         "progression": "Create PT - Complete the Task - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -296,7 +292,6 @@
         ],
         "progression": "Explore PT - Review - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -321,7 +316,6 @@
         ],
         "progression": "Explore PT - Make a Plan - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -346,7 +340,6 @@
         ],
         "progression": "Explore PT - Complete the Task - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

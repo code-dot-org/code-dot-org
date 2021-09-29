@@ -1,0 +1,18 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "spriteSay",
+    "blockText": "{SPRITE} say {SPEECH}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "SPEECH",
+        "type": "String",
+        "field": true
+      }
+    ]
+  }
+}

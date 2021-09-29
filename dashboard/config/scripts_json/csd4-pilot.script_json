@@ -2,7 +2,6 @@
   "script": {
     "name": "csd4-pilot",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "pilot_experiment": "csd-piloters"
@@ -120,7 +119,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -140,7 +138,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -160,7 +157,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -180,7 +176,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -200,7 +195,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -220,7 +214,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -240,7 +233,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -260,7 +252,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -281,7 +272,6 @@
       "properties": {
         "progression": "Reflection"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -301,7 +291,6 @@
       "assessment": true,
       "properties": {
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [

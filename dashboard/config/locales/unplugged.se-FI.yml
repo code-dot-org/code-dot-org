@@ -355,42 +355,6 @@ se:
           ođđasit ahte ođđasit stuorit prográmmaid siste. Dát lekšuvdna veahkeha ohppiid
           intuitiivvalaččat ipmirdit manne lea vuogas bargu ovttastahttit kodabihtáid
           funkšuvnnas.
-      swipeRightPassThrough:
-        title: RekruterenScenarat
-        desc: "# RekruterenScenarat\r\n\r\n## Swipe Olgeš guvlui CS:ai\r\nDán oasis
-          mii geavahit reaiddu man namma lea \"Swipe Olgeš guvlui CS:ai\", maid muhtun
-          min ovttasbargi MIT:as lea ovdánahttán. Dás, Swipe Olgeš guvlui CS:ai, sáhtát
-          lohkat ohppiidprofiillaid ja árvvoštallat earenoamáš dadjamiid maid sáhtát
-          geavahit fillet su dieđihit du iežat CS Prinsihpaid-kursii. \r\n\r\n###
-          Movt dát Doaibmá\r\nGo don spealat Swipe Olgeš guvlui CS:ai-spealu oainnát
-          muhtun sitáhtaid maid sáhtát dadjat juohke oahppái. Don swipet olgeš guvlui
-          go leat sitáhtat maid don doaivvut leat effektiiva oažžut dán oahppi iežas
-          dieđihit kursii ja swipe gurut guvlui jus it jáhke ahte dát sitáhta lea
-          effektiiva. Dán oasis áigut maid digaštallat joavkkus makkár jurdagat leat
-          dus dan birra mat leat eanemus effektiiva dasa ahte oažžut oahppi dieđihit
-          iežas CS:ii, ja dus lea vejolašvuohta oaidnit movt eará olbmot du bargobájis
-          leat swipen juohke argumeanttas. \r\n\r\n\r\nGo deaddilat Joatkke vuolábealde,
-          sáddet mii dutnje spealu, ja bidjat mielddusin Code.org e-poastaadreassa
-          mainna leat loggen sisa.\n"
-      swipeRightPassThrough-test123:
-        title: RekruterenScenarat
-        desc: "# RekruterenScenarat\r\n\r\n## Swipe Olgeš guvlui CS:ai\r\nDán oasis
-          mii geavahit reaiddu man namma lea \"Swipe Olgeš guvlui CS:ai\", maid muhtun
-          min ovttasbargi MIT:as lea ovdánahttán. Dás, Swipe Olgeš guvlui CS:ai, sáhtát
-          lohkat ohppiidprofiillaid ja árvvoštallat earenoamáš dadjamiid maid sáhtát
-          geavahit fillet su dieđihit du iežat CS Prinsihpaid-kursii. \r\n\r\n###
-          Movt dát Doaibmá\r\nGo don spealat Swipe Olgeš guvlui CS:ai-spealu oainnát
-          muhtun sitáhtaid maid sáhtát dadjat juohke oahppái. Don swipet olgeš guvlui
-          go leat sitáhtat maid don doaivvut leat effektiiva oažžut dán oahppi iežas
-          dieđihit kursii ja swipe gurut guvlui jus it jáhke ahte dát sitáhta lea
-          effektiiva. Dán oasis áigut maid digaštallat joavkkus makkár jurdagat leat
-          dus dan birra mat leat eanemus effektiiva dasa ahte oažžut oahppi dieđihit
-          iežas CS:ii, ja dus lea vejolašvuohta oaidnit movt eará olbmot du bargobájis
-          leat swipen juohke argumeanttas. \r\n\r\n\r\nGo deaddilat Joatkke vuolábealde,
-          sáddet mii dutnje spealu, ja bidjat mielddusin Code.org e-poastaadreassa
-          mainna leat loggen sisa.\n"
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         desc: Oahpa programmeret dainna ahte čálát koda du olbmáide!
       PlantASeed_2018:
@@ -555,23 +519,6 @@ se:
         desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis,
           ráhkadit earenoamáš bábergirdi. Dát lekšuvdna deattuha maiddái stuorit gova
           dihtordiehtagas ja movt algoritmmain lea guovddáš rolla das.
-      test-uid-passthrough:
-        desc: "# Rekruteren Scenaraid\r\n\r\n## Swipe Olgeš guvlui CS:ai\r\nDán oasis
-          mii geavahit reaiddu man namma lea \"Swipe Olgeš guvlui CS:ai\", maid muhtun
-          min ovttasbargi MIT:as lea ovdánahttán. Dás, Swipe Olgeš guvlui CS:ai, sáhtát
-          lohkat ohppiidprofiillaid ja árvvoštallat earenoamáš dadjamiid maid sáhtát
-          geavahit fillet su dieđihit du iežat CS Prinsihpaid-kursii. \r\n\r\n## Movt
-          dát Doaibmá\r\nGo don spealat Swipe Olgeš guvlui CS:ai-spealu oainnát muhtun
-          sitáhtaid maid sáhtát dadjat juohke oahppái. Don swipet olgeš guvlui go
-          leat sitáhtat maid don doaivvut leat effektiiva oažžut dán oahppi iežas
-          dieđihit kursii ja swipe gurut guvlui jus it jáhke ahte dát sitáhta lea
-          effektiiva. Dán oasis áigut maid digaštallat joavkkus makkár jurdagat leat
-          dus dan birra mat leat eanemus effektiiva dasa ahte oažžut oahppi dieđihit
-          iežas CS:ii, ja dus lea vejolašvuohta oaidnit movt eará olbmot du bargobájis
-          leat swipen juohke argumeanttas.\r\n<br><br><br><br>\r\n\r\n<span style=\"display:none\">submitButton
-          next-stage</span>\r\n\r\n<a class=\"btn btn-large btn-primary submitButton\"
-          href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">
-          Click here to play Swipe Right for CS!</a>\r\n\r\n"
       PlantASeed_2019:
         title: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
         desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis
@@ -623,10 +570,3 @@ se:
         desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit
           njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá"
           ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
-      TheRightApp_2019:
-        title: Dat Rievttes App:a
-        desc: "* Juohkehaš geavaha dihtoriid dán áiggi, earenoamážit smartatelefuvnnaid.
-          \r\n* Smartatelefuvnna applikašuvnnat, dahje \"app:at\", veahkehit olbmuid
-          čoavdit áššiid nu go hupmat olbmáiguin, guldalit musihka, gávppašit, dahje
-          ohcat neahtas.\r\n* Lea dehálaš ahte programmerárat ipmirdit earáid dárbbuid
-          ja designejit app:aid daid mielde!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

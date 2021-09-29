@@ -64,7 +64,7 @@ A contract can be quite long and often scrolls off the screen.  To make dragging
 ## Activity: The Big Game - Animation
 ### <a name="Activity1"></a> 2) Online Puzzles
 
- Using what you've learned about the Design Recipe you'll be writing functions that add animation to your game. Head to [CS in Algebra stage 12](http://studio.code.org/s/algebra/stage/12/puzzle/1) in Code Studio to get started programming.  Note that when you click run, the title and subtitle will display for about 5 seconds before the other functions start.
+ Using what you've learned about the Design Recipe you'll be writing functions that add animation to your game. Head to [CS in Algebra stage 12](http://studio.code.org/s/algebra/lessons/12/levels/1) in Code Studio to get started programming.  Note that when you click run, the title and subtitle will display for about 5 seconds before the other functions start.
 
 [/together]
 

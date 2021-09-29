@@ -218,8 +218,8 @@ de:
       mit deiner Anmeldung fortzufahren.
     user_type_button: Kontoart aktualisieren
     user_type_label: Kontentyp
-    user_type_teacher: Lehrer
     user_type_student: Schüler
+    user_type_teacher: Lehrer
     field_is_required: ist erforderlich
     accept_terms: Du musst der Erstellung eines Kontos zustimmen
     error: Ein Fehler ist aufgetreten.
@@ -229,6 +229,10 @@ de:
     email_preference_yes: Ja
     email_preference_no: Nein
     email_preference_required: Sie müssen eine bevorzugte Emailadresse angeben.
+    share_teacher_email_reg_partner_preference_yes: Ja
+    share_teacher_email_reg_partner_preference_no: Nein
+    share_teacher_email_reg_partner_preference_required: Sie müssen eine bevorzugte
+      Emailadresse angeben.
     parent_account_checkbox: Ich bin ein(e) Elternteil/Erziehungsberechtige(r) und
       melde mich im Namen meines Kindes an
     parent_account_email_progress_permission: Dürfen wir Sie gelegentlich per E-Mail
@@ -330,6 +334,7 @@ de:
     invite_sent: Einladung gesendet
     added_teacher: "%{name} wurde als dein Lehrer hinzugefügt"
     registered: Du hast dich für %{section_name} registriert.
+    already_exists: Sie sind der Lerngruppe %{section_name} schon beigetreten.
     error:
       signed_in: Bitte melde dich ab, bevor du fortfährst
       username_not_found: Benutzername %{username} wurde nicht gefunden
@@ -585,6 +590,7 @@ de:
       Laufenden zu bleiben. Sie können diese E-Mail-Adresse auch zur Wiederherstellung
       von Passwörtern verwenden.
     parent_guardian_email_label: Eltern / Erziehungsberechtigten E-Mail-Adresse
+    remove_parent_email_label: Entfernen
     none: Keiner
     only_one_parent_email_supported_warning: 'Hinweis: Zur Zeit können wir nur eine
       E-Mail-Adresse eines Elternteils/Erziehungsberechtigten pro SchülerInnen-Konto
@@ -681,21 +687,21 @@ de:
     help_from_html_old: Entwickler von Google, Microsoft, Facebook und Twitter haben
       geholfen, diese Materialien zu erstellen.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Alle Rechte
-      vorbehalten.<br />Star Wars&#8482; &copy; %{current_year} Disney und Lucasfilm.
+      vorbehalten.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       Alle Rechte vorbehalten.<br />Frozen&#8482; &copy; %{current_year} Disney. Alle
       Rechte vorbehalten.<br />Ice Age&#8482; &copy; %{current_year} 20th Century
       Fox. Alle Rechte vorbehalten.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
       Rovio Entertainment Ltd. Alle Rechte vorbehalten.<br />Plants vs. Zombies&#8482;
-      &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten.<br />Die
-      fantastische Welt von Gumball ist Warenzeichen and &copy; 2015 Cartoon Network.
-    art_from_html_old: Minecraft &#8482; &copy; %{current_year} Microsoft. Alle Rechte
-      vorbehalten. Star Wars &#8482; &copy; %{current_year} Disney und Lucasfilm.
-      Alle Rechte vorbehalten. Frozen &#8482; &copy; %{current_year} Disney. Alle
-      Rechte vorbehalten. Ice Age &#8482; &copy; %{current_year} 20th Century Fox.
-      Alle Rechte vorbehalten. Angry Birds &#8482; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Alle Rechte vorbehalten. Plants vs Zombies &#8482; &copy;
-      %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten. Die erstaunliche
-      Welt von Gumball ist Warenzeichen und &copy; 2015 Cartoon Network.
+      &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten.<br />The
+      Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Alle Rechte
+      vorbehalten. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Alle
+      Rechte vorbehalten. Frozen&#8482; &copy; %{current_year} Disney. Alle Rechte
+      vorbehalten. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Alle Rechte
+      vorbehalten. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Alle Rechte vorbehalten. Plants vs. Zombies&#8482; &copy; %{current_year}
+      Electronic Arts Inc. Alle Rechte vorbehalten. The Amazing World of Gumball is
+      trademark and &copy; 2015 Cartoon Network.
     code_from_html: Code.org nutzt p5.play, das unter <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">der
       GNU LGPL 2.1</a> lizensiert ist.
     powered_by_aws: Betrieben von Amazon Web Services
@@ -746,13 +752,6 @@ de:
       gamelab_unsupported_tablet: Game Lab funktioniert am Besten auf einem Desktop-PC
         oder einem Laptop mit Maus und Tastatur. Es könnte Probleme bei der Wiedergabe
         auf deinem jetzigen Gerät geben.
-      oceans_unsupported_browser: Dieser Browser wird für dieses Tutorial nicht unterstützt.
-        Bitte versuche diese Seite mit Edge, Chrome, Firefox oder einem anderen modernen
-        Browser zu besuchen.
-      weblab_unsupported_browser: Unglücklicherweise gibt es momentan ein Problem
-        beim Laden von Web Lab in diesem Browser. Sie können einen anderen Browser
-        verwenden bis das Problem gelöst ist. Wir entschuldigen uns vielmals für die
-        Unannehmlichkeiten.
       weblab_unsupported_locale_storage: Es gibt möglicherweise Probleme beim benutzen
         von Web Lab im privaten Browser-Modus. Bitte laden sie ihr Projekt nochmal
         im normalen Modus. Wir entschuldigen uns für die Unannehmlichkeiten.
@@ -1036,6 +1035,9 @@ de:
       zur Verfügung stehen, bevor Sie die aktualisierten Bedingungen nicht explizit
       akzeptieren.
     review_terms: Aktualisierte Bedingungen ansehen
+  donor_interstitial:
+    local_supporters: Lokale Unterstützer
+    global_supporters: Globale Unterstützer
   school_info_interstitial:
     title: Wir wollen jedem Schüler die Informatik näher bringen - helfen Sie uns,
       unsere Fortschritte zu verfolgen!
@@ -1188,7 +1190,7 @@ de:
       einloggen, keinen Fortschritt speichern und keine Zertifikate ausdrucken. Die
       Lehrer sollten diese möglicherweise vorher <a href="%{url}">hier</a> ausdrucken.'
     minecraft_name: Minecraft "Hour of Code"
-    starwars_blocks_name: 'Star Wars: Aufbau einer Galaxis mit Code (Blöcke)'
+    starwars_blocks_name: 'Star Wars: Aufbau einer Galaxis mit Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Aufbau einer Galaxis mit Code (JavaScript)'
     download_message: "%{app_name} zur Offline-Nutzung (136MB) herunterladen"
     download_in_Albanian: 'Download auf Albanisch:'
@@ -1268,7 +1270,7 @@ de:
       school_city: Stadt der Schule
       school_country: Land der Schule
       colombian_school_city: Stadt der Schule
-      colombian_school_name: Schulname
+      colombian_chilean_school_name: Schulname
       ages: Welches Alter unterrichten Sie in diesem Jahr?
       subjects: Welches Fach / welche Fächer unterrichten Sie in diesem Jahr?
       resources: Welche der folgenden informatischen Bildungsressourcen nutzen Sie?
@@ -1301,10 +1303,12 @@ de:
       school_country:
         canada: Kanada
         chile: Chile
+        colombia: Kolumbien
         israel: Israel
         malaysia: Malaysien
         mexico: Mexiko
         thailand: Thailand
+        uzbekistan: Usbekistan
       ages:
         ages_under_6: "< 6 Jahre alt"
         ages_7_8: 7-8 Jahre alt
@@ -1349,6 +1353,7 @@ de:
         csf_express: CS Grundlagen (Pre-Express oder Express)
         csd: CS Entdeckungen
         csp: Informatik Grundprinzipien
+        not_applicable: Nicht anwendbar
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nein
@@ -1367,6 +1372,7 @@ de:
         Sie beim Kennenlernen des Lehrplans und der Tools von Code.org zu unterstützen.
         Bitte teilen Sie uns Ihre Fragen und Anregungen mit, indem Sie uns unter[support@code.org](%{support_email_url})
         eine Email schreiben oder im [Lehrerforum](%{teacher_forum_url}) posten!
+      facilitator_not_applicable: Nicht anwendbar
     logged_out:
       heading: Vielen Dank für Ihr Interesse am Professional Learning Program!
       body: Um zu beginnen, müssen Sie zuerst in Ihr Code.org-Konto eingeloggt sein.
@@ -1398,6 +1404,7 @@ de:
     Sie zurück zu unserer Webseite.
   page_not_found_button: Zurück zur Homepage
   copy: Kopieren
+  confirm: Bestätigen
   maker:
     google_oauth:
       login_with_google: Melde dich in der Maker App mit Google an
@@ -1416,6 +1423,6 @@ de:
       Sie Ihre E-Mail-Adresse mit diesem Konto, um über die Fortschritte und Projekte
       Ihres Kindes auf dem Laufenden zu bleiben!"
     link_your_email: E-Mail-Adresse Verlinken
-    not_now: 'Nicht jetzt
-
-'
+    not_now: Nicht jetzt
+  behaviors:
+    this_sprite: dieser Sprite

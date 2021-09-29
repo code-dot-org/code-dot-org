@@ -18,6 +18,7 @@ da:
       Games/Score: Spil/score
       Groups: Grupper
       Input: input
+      Location: Placering
       Locations: Placering
       Logic: Logik
       Loops: Løkker
@@ -28,4 +29,5 @@ da:
       Text: Tekst
       Variables: Variabler
       'Variables ': 'Variabler '
+      'Variables  ': 'Variabler  '
       World: Verden

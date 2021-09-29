@@ -17,5 +17,5 @@ Many students are drawn to the coupon code challenge, and often their first step
     
 This process allows us to more effectively debug our program because we already know that `cost` works, so any new bugs we introduct must be in the `coupon` function.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

@@ -61,11 +61,13 @@ en:
       level: level
       marginX: marginX
       marginY: marginY
+      meal: meal
       myName: myName
       name: name
       nectar: nectar
       nectars: nectars
       padYOffset: padYOffset
+      planet: planet
       player_score: player_score
       points: points
       punchLine: punchLine
@@ -76,9 +78,13 @@ en:
       repetitions: repetitions
       right: right
       score: score
+      score1: score1
+      score2: score2
       screenHeight: screenHeight
       screenWidth: screenWidth
       set sides: set sides
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
       shout: shout
       sides: sides
       size: size

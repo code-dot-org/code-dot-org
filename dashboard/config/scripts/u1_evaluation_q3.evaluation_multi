@@ -1,4 +1,4 @@
 name 'U1 evaluation q3'
 question ‘Are you comfortable with HTML or Markdown?’
 answer ‘Yes!’
-answer ‘Nope!’, weight: 3, stage_name: 'Lesson 7: Encoding and Sending Text'
+answer ‘Nope!’, weight: 3, lesson_name: 'Lesson 7: Encoding and Sending Text'

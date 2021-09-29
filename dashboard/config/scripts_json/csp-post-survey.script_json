@@ -2,14 +2,14 @@
   "script": {
     "name": "csp-post-survey",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:59 UTC",
+    "serialized_at": "2021-08-03 22:47:08 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp-post-survey"
     }
@@ -31,7 +31,7 @@
   "lessons": [
     {
       "key": "CSP post-course survey",
-      "name": "CSP post-course survey",
+      "name": "CSP Student Post-Course Survey ('17-'18)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -63,7 +63,6 @@
         ],
         "progression": "CS Principles Post-course Survey"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

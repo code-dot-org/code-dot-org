@@ -1,4 +1,4 @@
-import {expect, assert} from '../../../../util/deprecatedChai';
+import {expect, assert} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
 import Observer from '@cdo/apps/Observer';
@@ -315,7 +315,6 @@ setCallback(function(message) {
             enableEvents: false,
             ...config(allDone)
           });
-          expect(() => jsInterpreter.executeInterpreter(true)).to.throwError;
           expect(lastCallback).to.be.null;
           expect(allDone).not.to.have.been.called;
         });
@@ -334,6 +333,9 @@ setCallback(function(message) {
               });
               sinon.spy(jsInterpreter, 'executeInterpreter');
               jsInterpreter.executeInterpreter(true);
+            });
+            afterEach(() => {
+              sinon.restore();
             });
 
             it("will be created from the interpreter's callback function", () => {
@@ -488,6 +490,9 @@ myCallback("this message is coming from inside the interpreter");
       onPauseObserver = sinon.spy();
       jsInterpreter.onPause.register(onPauseObserver);
       sinon.spy(jsInterpreter, 'handleError');
+    });
+    afterEach(() => {
+      sinon.restore();
     });
 
     function getCurrentLine() {

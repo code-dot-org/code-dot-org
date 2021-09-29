@@ -18,6 +18,7 @@ uk:
       Games/Score: Ігри / рахунок
       Groups: Групи
       Input: Ввід
+      Location: Місце знаходження
       Locations: Розташування
       Logic: Логіка
       Loops: Цикли
@@ -28,4 +29,5 @@ uk:
       Text: Текст
       Variables: Змінні
       'Variables ': 'Змінні '
+      'Variables  ': 'Змінні  '
       World: Світ

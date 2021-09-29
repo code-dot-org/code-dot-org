@@ -2,13 +2,13 @@
   "script": {
     "name": "dance-low",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:27 UTC",
+    "serialized_at": "2021-08-03 22:47:37 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "dance-low"
     }

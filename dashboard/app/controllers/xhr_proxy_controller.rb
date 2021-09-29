@@ -18,6 +18,7 @@ class XhrProxyController < ApplicationController
   ALLOWED_CONTENT_TYPES = Set.new(
     %w(
       application/json
+      application/geo+json
       text/javascript
       text/json
       text/plain
@@ -27,6 +28,7 @@ class XhrProxyController < ApplicationController
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     apex.oracle.com
+    api.amadeus.com
     api.blizzard.com
     api.coinlayer.com
     api.datamuse.com
@@ -41,6 +43,7 @@ class XhrProxyController < ApplicationController
     api.nookipedia.com
     api.opencagedata.com
     api.open-notify.org
+    api.openrouteservice.org
     api.openweathermap.org
     api.pegelalarm.at
     api.randomuser.me
@@ -53,6 +56,7 @@ class XhrProxyController < ApplicationController
     api.thingspeak.com
     api.uclassify.com
     api.waqi.info
+    api.weather.gov
     api.zippopotam.us
     bible-api.com
     code.org
@@ -62,12 +66,16 @@ class XhrProxyController < ApplicationController
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
+    data.weather.gov.hk
     dataservice.accuweather.com
+    distanza.org
     dweet.io
     enclout.com
+    googleapis.com
     herokuapp.com
     hubblesite.org
     images-api.nasa.gov
+    io.adafruit.com
     isenseproject.org
     lakeside-cs.org
     maker.ifttt.com
@@ -83,6 +91,7 @@ class XhrProxyController < ApplicationController
     random.org
     rejseplanen.dk
     restcountries.eu
+    roblox.com
     runescape.com
     sessionserver.mojang.com
     spreadsheets.google.com
@@ -96,6 +105,7 @@ class XhrProxyController < ApplicationController
     vpic.nhtsa.dot.gov
     wikipedia.org
     worldclockapi.com
+    worldtimeapi.org
   ).freeze
 
   # How long the content is allowed to be cached

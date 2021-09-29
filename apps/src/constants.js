@@ -70,6 +70,9 @@ export const TestResults = {
   UNSUBMITTED_ATTEMPT: -50, // Progress was saved without submitting for review, or was unsubmitted.
 
   SKIPPED: -100, // Skipped, e.g. they used the skip button on a challenge level
+  // The teacher has triggered a reset of progress through leaving "Keep working" feedback.
+  // TEACHER_FEEDBACK_KEEP_WORKING is only set by the back-end
+  TEACHER_FEEDBACK_KEEP_WORKING: -110,
   LEVEL_STARTED: -150, // The user has triggered the reset action at least once (ex: by clicking the reset button)
 
   // Numbers below 20 are generally considered some form of failure.

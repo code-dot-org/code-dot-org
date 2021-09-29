@@ -26,13 +26,14 @@ class ProgressLesson extends React.Component {
 
     // redux provided
     scriptId: PropTypes.number,
-    currentStageId: PropTypes.number,
+    currentLessonId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonIsLockedForUser: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.string,
-    lockableAuthorized: PropTypes.bool.isRequired,
+    lockableAuthorized: PropTypes.bool,
+    lockableAuthorizedLoaded: PropTypes.bool.isRequired,
     lessonIsLockedForAllStudents: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
   };
@@ -41,20 +42,20 @@ class ProgressLesson extends React.Component {
     super(props);
     this.state = {
       // We want teachers to start with everything uncollapsed. For students we
-      // collapse everything except current stage
+      // collapse everything except current lesson
       collapsed:
         props.viewAs !== ViewType.Teacher &&
-        props.currentStageId !== props.lesson.id
+        props.currentLessonId !== props.lesson.id
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    // If we're assigned a stageId, and it is for this lesson, uncollapse
-    if (nextProps.currentStageId !== this.props.currentStageId) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    // If we're assigned a lesson id, and it is for this lesson, uncollapse
+    if (nextProps.currentLessonId !== this.props.currentLessonId) {
       this.setState({
         collapsed:
           this.state.collapsed &&
-          nextProps.currentStageId !== this.props.lesson.id
+          nextProps.currentLessonId !== this.props.lesson.id
       });
     }
   }
@@ -96,15 +97,15 @@ class ProgressLesson extends React.Component {
       return null;
     }
 
-    // Is this a hidden stage that we still render because we're a teacher
+    // Is this a hidden lesson that we still render because we're a teacher
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
     const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
     const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
     const showAsLocked = isLockedForUser || isLockedForSection;
 
-    const title = lesson.stageNumber
+    const title = lesson.lessonNumber
       ? i18n.lessonNumbered({
-          lessonNumber: lesson.stageNumber,
+          lessonNumber: lesson.lessonNumber,
           lessonName: lesson.name
         })
       : lesson.name;
@@ -125,8 +126,19 @@ class ProgressLesson extends React.Component {
     // TODO: Make the back-end return a lesson url as part of the lesson metadata so we
     // don't need to pass it separately from lesson here and in ProgressLessonTeacherInfo.
     const lessonUrl = levels[0] && levels[0].url;
+
+    // If a teacher is not verified they will not be lockableAuthorized (meaning they can't
+    // lock or unlock lessons). For a lockable lesson where teacher is not authorized, we will
+    // display a warning explaining that they need to be verified to unlock lessons.
+    const showNotAuthorizedWarning =
+      lesson.lockable &&
+      viewAs === ViewType.Teacher &&
+      this.props.lockableAuthorizedLoaded &&
+      !this.props.lockableAuthorized;
+
     return (
       <div
+        className="uitest-progress-lesson"
         style={{
           ...styles.outer,
           ...((hiddenForStudents || showAsLocked) && styles.hiddenOrLocked)
@@ -185,19 +197,17 @@ class ProgressLesson extends React.Component {
                 </span>
               )}
           </div>
-          {lesson.lockable &&
-            !this.props.lockableAuthorized &&
-            viewAs === ViewType.Teacher && (
-              <div style={styles.notAuthorizedWarning}>
-                {i18n.unverifiedTeacherLockWarning()}
-                <a
-                  style={styles.learnMoreLink}
-                  href="https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-"
-                >
-                  {i18n.learnMoreWithPeriod()}
-                </a>
-              </div>
-            )}
+          {showNotAuthorizedWarning && (
+            <div style={styles.notAuthorizedWarning}>
+              {i18n.unverifiedTeacherLockWarning()}
+              <a
+                style={styles.learnMoreLink}
+                href="https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-"
+              >
+                {i18n.learnMoreWithPeriod()}
+              </a>
+            </div>
+          )}
           {!this.state.collapsed && (
             <ProgressLessonContent
               description={description}
@@ -294,10 +304,11 @@ const styles = {
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
-  currentStageId: state.progress.currentStageId,
+  currentLessonId: state.progress.currentLessonId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
-  lockableAuthorized: state.stageLock.lockableAuthorized,
+  lockableAuthorized: state.lessonLock.lockableAuthorized,
+  lockableAuthorizedLoaded: state.lessonLock.lockableAuthorizedLoaded,
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
   lessonIsLockedForUser: (lesson, levels, viewAs) =>
     lessonIsLockedForUser(lesson, levels, state, viewAs),

@@ -472,6 +472,8 @@ sl:
         C4_unplugged_variables: Spremenljivke v ovojnicah
         C4_unplugged_parameters: Pisanje pesmi s parametri
         C4_unplugged_binary: Binarno
+        CSF_debugging_k1_blocks: Odpravljanje napak
+        CSF_debugging_text_blocks: Odpravljanje napak
         CSF_my_robotic_friends: Moji robotski prijatelji
         frozen_intro: Uvod v Uro kodiranja
         frozen_loops: Uvod v zanke
@@ -485,6 +487,7 @@ sl:
         CSF_loops_AB: Zanke
         csd_pair_programming: Programiranje parov
         csd_applab_parameters: Funkcije s parametri
+        csd_debugging: Odpravljanje napak
     callout:
       text:
         drag_blocks: Povleci blok "premakni se" in ga postavi pod drugi blok

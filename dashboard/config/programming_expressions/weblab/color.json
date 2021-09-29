@@ -1,4 +1,5 @@
 {
   "func": "color",
-  "category": "CSS Properties"
+  "category": "CSS Properties",
+  "syntax": "color: value;"
 }

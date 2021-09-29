@@ -3,6 +3,7 @@ bn:
   data:
     parameter_names:
       actor: অভিনেতা
+      color: রং
       counter: গণক
       height: উচ্চতা
       honey: মধু
@@ -11,3 +12,4 @@ bn:
       min: নূন্যতম
       size: আকার
       speed: গতি
+      width: চওড়া

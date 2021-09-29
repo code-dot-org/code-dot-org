@@ -92,7 +92,7 @@ crwdns2059364:0crwdne2059364:0 crwdns2059366:0{{ campaign_date/year }}crwdne2059
 
 crwdns2059370:0crwdne2059370:0
 
-crwdns2059372:0{{ country }}crwdne2059372:0<br />
+crwdns2690169:0{{ country_language }}crwdne2690169:0<br />
 
 * * *
 
@@ -132,7 +132,7 @@ crwdns2059414:0{{ campaign_date/full }}crwdne2059414:0 crwdns2059416:0crwdne2059
 
 crwdns2059424:0crwdne2059424:0
 
-crwdns2059426:0{{ country }}crwdne2059426:0<br />
+crwdns2690171:0{{ country_language }}crwdne2690171:0<br />
 
 * * *
 

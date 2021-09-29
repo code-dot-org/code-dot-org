@@ -18,8 +18,6 @@ in:
     mailer:
       confirmation_instructions:
         subject: crwdns4345:0crwdne4345:0
-      reset_password_instructions:
-        subject: crwdns4346:0crwdne4346:0
       unlock_instructions:
         subject: crwdns2764:0crwdne2764:0
     omniauth_callbacks:

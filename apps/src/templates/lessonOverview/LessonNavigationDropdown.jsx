@@ -34,7 +34,8 @@ export default class LessonNavigationDropdown extends Component {
     };
   }
 
-  handleDropdownClick = listItem => {
+  handleDropdownClick = (e, listItem) => {
+    e.preventDefault();
     if (listItem.link) {
       firehoseClient.putRecord(
         {
@@ -112,7 +113,8 @@ export default class LessonNavigationDropdown extends Component {
           {lessonsList.map((listItem, index) => (
             <a
               key={index}
-              onClick={this.handleDropdownClick.bind(this, listItem)}
+              onClick={e => this.handleDropdownClick(e, listItem)}
+              href={listItem.link && linkWithQueryParams(listItem.link)}
               className={listItem.link ? 'navigate' : 'no-navigation'} // Used to specify if the dropdown should collapse when clicked
               style={listItem.link ? styles.lesson : styles.section}
             >

@@ -316,6 +316,12 @@
           },
           "triangle": {
             "name": "трикутник"
+          },
+          "sun": {
+            "name": "сонце"
+          },
+          "square": {
+            "name": "квадрат"
           }
         },
         "Geometric Sun_2018": {
@@ -333,6 +339,12 @@
           },
           "triangle": {
             "name": "трикутник"
+          },
+          "sun": {
+            "name": "сонце"
+          },
+          "square": {
+            "name": "квадрат"
           }
         },
         "InspirationalArtwork": {
@@ -1978,6 +1990,842 @@
         "courseE_farmer_functions9a1_2020": {
           "garden square": {
             "name": "садова площа"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "моя функція"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "намалювати зірку",
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "parameters": {
+              "points": "балів",
+              "length": "довжина"
+            }
+          },
+          "draw a circle": {
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина",
+              "repeat": "повторити"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина",
+              "sides": "сторони"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "намалювати зірку",
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "parameters": {
+              "points": "балів",
+              "length": "довжина"
+            }
+          },
+          "draw a circle": {
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина",
+              "repeat": "повторити"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "намалювати зірку",
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "parameters": {
+              "points": "балів",
+              "length": "довжина"
+            }
+          },
+          "draw a circle": {
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина",
+              "repeat": "повторити"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "намалювати зірку",
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "parameters": {
+              "points": "балів",
+              "length": "довжина"
+            }
+          },
+          "draw a circle": {
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина",
+              "repeat": "повторити"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "побудувати міст"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "очистити шлях"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "виправити довгий шлях"
+          },
+          "fix short path": {
+            "name": "виправити короткий шлях"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "побудувати короткий міст"
+          },
+          "build long bridge": {
+            "name": "побудувати довгий міст"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "функція 1"
+          },
+          "function 2": {
+            "name": "функція 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "потенційне рішення"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "намалювати квадрат"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "намалювати квадрат"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "намалювати зірку"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "намалювати зірку"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "намалювати зірку"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "намалювати зірку"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "щось зробити"
+          },
+          "draw a line of squares": {
+            "name": "малювати лінію квадрату"
+          },
+          "draw square": {
+            "name": "намалюйте квадрат"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "намалювати квадрат"
+          },
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "малювати лінію квадрату"
+          },
+          "draw square": {
+            "name": "намалюйте квадрат"
+          },
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "малювати лінію квадрату"
+          },
+          "draw square": {
+            "name": "намалюйте квадрат"
+          },
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw a line of squares": {
+            "name": "малювати лінію квадрату"
+          },
+          "draw square": {
+            "name": "намалюйте квадрат"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "намалювати квадрат"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "намалювати квадрат"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "завершити гру"
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двійкова система"
+            }
           }
         }
       }

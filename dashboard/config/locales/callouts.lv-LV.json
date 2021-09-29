@@ -149,6 +149,9 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Izmanto izkrītošo izvēlni, lai aizstātu \"???\" ar skaitli"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Nospied \"Palaist\", lai izmēģinātu programmu"
         }
       }
     }

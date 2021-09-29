@@ -9,19 +9,18 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import reducers, {
   init,
   mapLessonGroupDataForEditor
-} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
-import {valueOr} from '@cdo/apps/utils';
+import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 
-export default function initPage(scriptEditorData) {
-  const scriptData = scriptEditorData.script;
-  const lessonLevelData = scriptEditorData.lessonLevelData;
+export default function initPage(unitEditorData) {
+  const scriptData = unitEditorData.script;
+  const lessonLevelData = unitEditorData.lessonLevelData;
   const lessonGroups = mapLessonGroupDataForEditor(scriptData.lesson_groups);
 
-  const locales = scriptEditorData.locales;
+  const locales = unitEditorData.locales;
 
   registerReducers({
     ...reducers,
@@ -30,7 +29,7 @@ export default function initPage(scriptEditorData) {
     isRtl
   });
   const store = getStore();
-  store.dispatch(init(lessonGroups, scriptEditorData.levelKeyList));
+  store.dispatch(init(lessonGroups));
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({
       type,
@@ -49,12 +48,11 @@ export default function initPage(scriptEditorData) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <ScriptEditor
+      <UnitEditor
         id={scriptData.id}
-        name={scriptEditorData.script.name}
-        i18nData={scriptEditorData.i18n}
-        initialHidden={valueOr(scriptData.hidden, true)}
-        initialIsStable={scriptData.is_stable}
+        name={unitEditorData.script.name}
+        i18nData={unitEditorData.i18n}
+        initialPublishedState={scriptData.publishedState}
         initialDeprecated={scriptData.deprecated}
         initialLoginRequired={scriptData.loginRequired}
         initialHideableLessons={scriptData.hideable_lessons}
@@ -72,11 +70,12 @@ export default function initPage(scriptEditorData) {
         initialProjectWidgetVisible={scriptData.project_widget_visible}
         initialProjectWidgetTypes={scriptData.project_widget_types || []}
         initialTeacherResources={teacherResources}
+        initialLastUpdatedAt={scriptData.updated_at}
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
         initialLessonLevelData={lessonLevelData}
         initialHasVerifiedResources={scriptData.has_verified_resources}
         initialCurriculumPath={scriptData.curriculum_path || ''}
-        initialPilotExperiment={scriptData.pilot_experiment}
+        initialPilotExperiment={scriptData.pilot_experiment || ''}
         initialEditorExperiment={scriptData.editor_experiment || ''}
         initialAnnouncements={announcements}
         initialSupportedLocales={scriptData.supported_locales || []}
@@ -85,24 +84,28 @@ export default function initPage(scriptEditorData) {
         initialCurriculumUmbrella={scriptData.curriculum_umbrella || ''}
         initialFamilyName={scriptData.family_name || ''}
         initialVersionYear={scriptData.version_year || ''}
-        scriptFamilies={scriptEditorData.script_families}
-        versionYearOptions={scriptEditorData.version_year_options}
-        isLevelbuilder={scriptEditorData.is_levelbuilder}
+        initialIsMakerUnit={scriptData.is_maker_unit || false}
+        unitFamilies={unitEditorData.script_families}
+        versionYearOptions={unitEditorData.version_year_options}
+        isLevelbuilder={unitEditorData.is_levelbuilder}
         initialTts={scriptData.tts}
         /* isCourse controls whether this Script/Unit is intended to be the root of a CourseOffering version.
          * hasCourse indicates whether this Script/Unit is part of a UnitGroup. These two in theory should be
          * complements, but currently (August 2020) they are not, so they are separate fields for now. */
         initialIsCourse={scriptData.is_course}
-        hasCourse={scriptEditorData.has_course}
+        hasCourse={unitEditorData.has_course}
         initialShowCalendar={scriptData.showCalendar}
         initialWeeklyInstructionalMinutes={
           scriptData.weeklyInstructionalMinutes
         }
         initialCourseVersionId={scriptData.courseVersionId}
+        preventCourseVersionChange={scriptData.preventCourseVersionChange}
         isMigrated={scriptData.is_migrated}
         initialIncludeStudentLessonPlans={
           scriptData.includeStudentLessonPlans || false
         }
+        initialUseLegacyLessonPlans={scriptData.useLegacyLessonPlans || false}
+        scriptPath={scriptData.scriptPath}
       />
     </Provider>,
     document.querySelector('.edit_container')

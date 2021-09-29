@@ -112,6 +112,7 @@ ta:
             '"x"': கிடைமட்ட அமைவிடம்
             '"y"': செங்குத்து அமைவிடம்
       Dancelab_changePropEachBy:
+        text: மாற்றவும் {GROUP} {PROPERTY} இந்த அளவிற்கு {VAL}
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -818,6 +819,7 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -863,6 +865,7 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -885,6 +888,10 @@ ta:
         text: செட்அப்
       Dancelab_whenSetup2:
         text: செட்அப்
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': தவிர்க்கவும்
       gamelab_atTime:
         options:
           UNIT:
@@ -901,6 +908,8 @@ ta:
           CONDITION:
             '"when"': எப்போது
             '"while"': எப்பொழுது
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -945,6 +954,7 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} குதிக்கவும் {LOCATION}"
@@ -983,12 +993,28 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': வலது
+            '90': கீழே
+            '180': இடது
+            '270': மேலே
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': வலது
             '"left"': இடது
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": குதி
       gamelab_randColor:
         text: ஏதாவது ஒரு நிறம்
       gamelab_randomColor:
@@ -1000,16 +1026,24 @@ ta:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': குகை
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': மாநகர்
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': பாலைவனம்
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': கிரிட்
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': வானவில்
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': நீருக்கடியில்
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': குளிர்காலம்
+            undefined: எதுவுமில்லை
       gamelab_setProp:
+        text: "{SPRITE} {PROPERTY} ஐ {VAL} ஆக்கவும்"
         options:
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
+      gamelab_setProp_dropdown:
+        text: "{SPRITE} {PROPERTY} ஐ {SIZE} ஆக்கவும்"
+        options:
+          PROPERTY:
+            '"scale"': அளவு
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -1021,6 +1055,8 @@ ta:
           CONDITION:
             '"when"': எப்போது
             '"while"': எப்பொழுது
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:
@@ -1051,6 +1087,12 @@ ta:
             '"w"': w
             '"s"': s
             '"d"': d
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 200, y: 100}": மீன்
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": மீன்
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1105,6 +1147,10 @@ ta:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
+      Mikelab_hideFish:
+        options:
+          TRASH:
+            fish: மீன்
       Mikelab_ifDanceIs:
         text: |-
           ஒருவேளை {SPRITE} {DANCE} செய்தால்
@@ -1122,6 +1168,20 @@ ta:
             MOVES.Kick: ஸ்டார்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: மீன்
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: மீன்
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: மீன்
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
       Mikelab_setBG:
@@ -1134,11 +1194,17 @@ ta:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
+      Mikelab_setupOutbreak:
+        text: "அவுட்பிரேக்  செட்அப் \nமக்கள் தொகை:{SPRITE2N}\n{TOGGLE}வைரஸ்"
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': வலது
             '"left"': இடது
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': கீழே
       Mikelab_sprite:
         options:
           LOCATION:
@@ -1166,6 +1232,61 @@ ta:
             '"a"': அ
             '"s"': தெற்கு
             '"d"': ஈ
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': ஆம்
+            '"no"': இல்லை
+      Outbreak_beginCongregating:
+        text: அரக்கர்கள் ஒன்றுகூடத் தொடங்குகிறார்கள்
+      Outbreak_beginQuarantining:
+        text: பேய்கள் நோய்வாய்ப்பட்டபோது தனிமைப்படுத்தத் தொடங்குகின்றன
+      Outbreak_beginSocialDistancing:
+        text: அரக்கர்கள் சமூக தூரத்தைத் தொடங்குகிறார்கள்
+      Outbreak_beginWandering:
+        text: அரக்கர்கள் அலையத் தொடங்குகிறார்கள்
+      Outbreak_beginWearingMasks:
+        text: அரக்கர்கள் முகமூடிகளை அணியத் தொடங்குகிறார்கள்
+      Outbreak_layoutBorder:
+        text: ஒரு எல்லையில் அரக்கர்களை அமைக்கவும்
+      Outbreak_layoutClusters:
+        text: கொத்துகளாக அமைந்த அரக்கர்கள்{NUM}
+      Outbreak_layoutGrid:
+        text: ஒரு கட்டமாக அரக்கர்களை அமைக்கவும்
+      Outbreak_layoutRandom:
+        text: அசுரர்களை தோராயமாக அமைக்கவும்
+      Outbreak_stopMoving:
+        text: அரக்கர்கள் நகர்வதை நிறுத்துகிறார்கள்
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': வண்ணங்கள்
+            '"squiggles"': சிறு வளை கோடுகள்
+            '"space"': ஸ்பேஸ்
+            '"stars"': நட்சத்திரங்கள்
+            '"ripples"': சிற்றலைகள்
+          PALETTE:
+            '"rainbow"': வானவில்
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': மழை
+            '"bubbles"': குமிழிகள்
+            '"confetti"': கான்ஃபெடி
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: முன்னோக்கி நகர்த்த
       RyanLab_turnLeft:
@@ -1174,21 +1295,16 @@ ta:
         text: வலதுபுறம் திரும்பவும்
       Vector_positionCenter:
         text: மையம்
-      aalab_goToScene:
+      Vector_where:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
+          PROPERTY:
+            "'shapeColor'": நிறம்
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': கிரிட்
+            '"border"': பார்டர்
+            '"row"': வரிசை
             '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       binary_move:
         options:
@@ -1211,18 +1327,47 @@ ta:
             '"s"': s
             '"d"': d
       craft_ifPath:
+        text: |-
+          பாதை என்றால் {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": மாருதி
       craft_ifStandingOn:
+        text: |-
+          நின்று கொண்டிருந்தால் {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": மண்
       craft_ifStandingOnLimit:
+        text: |-
+          நின்று கொண்டிருந்தால் {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": மண்
       craft_moveForward:
         text: முன்னோக்கி நகர்த்த
+      craft_placeBlock:
+        text: இடம் {blockType}
+      craft_placePrismarine:
+        text: பிரிஸ்மரைன் வைக்கவும்
       craft_placeTorch:
         text: இடம் மின்வளக்கு
+      craft_repeatUntilConduit:
+        text: |-
+          வழித்தடம் முடியும் வரை மீண்டும் செய்யவும்
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          இலக்கு வரை மீண்டும் செய்யவும்
+          {STATEMENT}
+      craft_spawnEntity:
+        text: ஸ்பான் {ENTITY}
+      craft_turn:
+        text: திரும்பவும்{DIR}
+        options:
+          DIR:
+            right: சரி ↻
+            left: இடது  ↺

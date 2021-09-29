@@ -11,7 +11,7 @@ import color from '@cdo/apps/util/color';
 
 describe('ProgressLesson', () => {
   const defaultProps = {
-    currentStageId: 1,
+    currentLessonId: 1,
     lesson: {
       ...fakeLesson('lesson1', 1),
       description_teacher: 'Teacher description here',
@@ -24,6 +24,7 @@ describe('ProgressLesson', () => {
     lessonIsVisible: () => true,
     lessonIsLockedForUser: () => false,
     lessonIsLockedForAllStudents: () => false,
+    lockableAuthorizedLoaded: true,
     lockableAuthorized: true
   };
 
@@ -210,7 +211,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         viewAs={ViewType.Student}
-        currentStageId={2}
+        currentLessonId={2}
       />
     );
     assert.equal(wrapper.state('collapsed'), true);
@@ -221,7 +222,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         viewAs={ViewType.Teacher}
-        currentStageId={2}
+        currentLessonId={2}
       />
     );
     assert.equal(wrapper.state('collapsed'), false);
@@ -241,17 +242,17 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.state('collapsed'), false);
   });
 
-  it('uncollapses itself for student when currentStage gets updated', () => {
+  it('uncollapses itself for student when currentLesson gets updated', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        currentStageId={null}
+        currentLessonId={null}
         viewAs={ViewType.Student}
       />
     );
     assert.equal(wrapper.state('collapsed'), true);
 
-    wrapper.setProps({currentStageId: 1});
+    wrapper.setProps({currentLessonId: 1});
     assert.equal(wrapper.state('collapsed'), false);
   });
 
@@ -260,7 +261,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         viewAs={ViewType.Student}
-        currentStageId={null}
+        currentLessonId={null}
       />
     );
     assert.equal(wrapper.state('collapsed'), true);
@@ -289,12 +290,13 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('shows not verified warning on lockable lesson when viewing as unverified teacher', () => {
+  it('shows not verified warning on lockable lesson when lockableAuthorizedLoaded and lockableAuthorized is false', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         viewAs={ViewType.Teacher}
         lesson={fakeLesson('lesson1', 1, true)}
+        lockableAuthorizedLoaded={true}
         lockableAuthorized={false}
         lessonIsLockedForUser={() => true}
       />
@@ -304,13 +306,29 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('does not show not verified warning on lockable lesson when viewing as verified teacher', () => {
+  it('does not show not verified warning on lockable lesson when lockableAuthorizedLoaded and lockableAuthorized is true', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         viewAs={ViewType.Teacher}
         lesson={fakeLesson('lesson1', 1, true)}
+        lockableAuthorizedLoaded={true}
         lockableAuthorized={true}
+      />
+    );
+    expect(wrapper.text()).to.not.include(
+      'This lesson is locked - you need to become a verified teacher to unlock it.'
+    );
+  });
+
+  it('does not show not verified warning on lockable lesson when lockableAuthorizedLoaded is false', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        viewAs={ViewType.Teacher}
+        lesson={fakeLesson('lesson1', 1, true)}
+        lockableAuthorizedLoaded={false}
+        lockableAuthorized={null}
       />
     );
     expect(wrapper.text()).to.not.include(

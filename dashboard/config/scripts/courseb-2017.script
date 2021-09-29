@@ -1,4 +1,3 @@
-hidden false
 hideable_lessons true
 lesson_extras_available true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-1718/courseb/{LESSON}'
@@ -7,7 +6,7 @@ project_widget_types ["playlab_k1", "artist_k1"]
 new_name 'courseb-2017'
 family_name 'courseb'
 version_year '2017'
-is_stable true
+published_state 'stable'
 supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "ta-IN", "th-TH", "tr-TR", "ur-PK", "uz-UZ", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
 tts true
@@ -24,41 +23,17 @@ level 'PlantASeed'
 
 lesson 'Learn to Drag and Drop', display_name: 'Sequencing with Drag and Drop', has_lesson_plan: true
 level 'elementary_video_pairProgramming'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:2'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:3'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:4'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:5'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:6'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:7'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:8'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:9'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:10'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:11'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12'
-skin 'jigsaw'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:13'
 
 lesson 'Your Digital Footprint', display_name: 'Digital Citizenship: My Digital Footprint', has_lesson_plan: true, unplugged: true

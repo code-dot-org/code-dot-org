@@ -58,5 +58,5 @@ You will typically write a function that returns a value when you have **a calcu
 * Use your parameters to calculate your result **and save that result in a single variable**.
 * **Return that variable** on the last line of your function.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

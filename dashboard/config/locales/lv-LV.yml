@@ -107,12 +107,14 @@ lv:
     additional_information: Mums nepieciešama papildus informācija, lai turpinātu
       Tavu pieteikumu.
     user_type_label: Konta tips
-    user_type_teacher: Skolotāja
     user_type_student: Students
+    user_type_teacher: Skolotāja
     field_is_required: ir nepieciešams
     error: Radusies kļūda.
     email_preference_yes: Jā
     email_preference_no: Nē
+    share_teacher_email_reg_partner_preference_yes: Jā
+    share_teacher_email_reg_partner_preference_no: Nē
   school_info:
     select_school_type: Skolas tips
     other: Citi
@@ -207,6 +209,7 @@ lv:
       educate_hoc: Programmēšanas stunda
       about_us: Par mums
       about_partners: Partneri
+      stats: Statistika
       legal_privacy: Privātuma politika
       legal_tos: Nosacījumi
     user:
@@ -279,6 +282,7 @@ lv:
     create_personal_login_under_13_parent_email: Vecāka/aizbildņa e-pasta adrese
     update_email: Atjaunināt
     parent_guardian_email_label: Vecāka/aizbildņa e-pasts
+    remove_parent_email_label: Noņemt
   user_level:
     completed: Pabeigts
     tried: Mēģināts
@@ -528,7 +532,7 @@ lv:
       last_name: Uzvārds
       email: E-pasts
       school_name: Skolas nosaukums
-      colombian_school_name: Skolas nosaukums
+      colombian_chilean_school_name: Skolas nosaukums
     form_entries:
       gender:
         male: Vīrietis

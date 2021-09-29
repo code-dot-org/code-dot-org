@@ -6,6 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import ModelCard from './ModelCard';
 import color from '@cdo/apps/util/color';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const DEFAULT_MARGIN = 7;
 
@@ -72,9 +73,22 @@ export default class ModelManagerDialog extends React.Component {
     return this.state.models.find(model => model.id === id);
   };
 
+  logImport = modelId => {
+    firehoseClient.putRecord(
+      {
+        study: 'ai-ml',
+        study_group: 'trained-models',
+        event: 'import-to-applab',
+        data_json: JSON.stringify({modelId: modelId})
+      },
+      {includeUserId: true}
+    );
+  };
+
   importMLModel = async () => {
     this.setState({isImportPending: true});
     const modelId = this.root.value;
+    this.logImport(modelId);
     await this.props.autogenerateML(modelId);
     this.setState({isImportPending: false});
     this.closeModelManager();

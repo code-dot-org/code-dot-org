@@ -11,11 +11,11 @@ module Pd::Foorm
       form_id
       form_name
       form_version
-      question_type
-      question_name
-      question_text
+      item_type
+      item_name
+      item_text
       matrix_item_name
-      matrix_item_text
+      matrix_item_header
       is_facilitator_specific
       response_options
       num_response_options
@@ -72,9 +72,9 @@ module Pd::Foorm
         questions.each do |question_name, question_details|
           # Information relevant to all question types
           reshaped_form_question = {
-            question_name: question_name,
-            question_text: fill_question_placeholders(question_details[:title]),
-            question_type: question_details[:type],
+            item_name: question_name,
+            item_text: fill_question_placeholders(question_details[:title]),
+            item_type: question_details[:type],
             is_facilitator_specific:  section == :facilitator ? 1 : 0
           }
 
@@ -97,9 +97,14 @@ module Pd::Foorm
             question_details[:rows].each do |matrix_item_name, matrix_item_text|
               reshaped_matrix_item = reshaped_form_question.clone
 
+              # For matrix questions, put the question name and text (generally a preamble) in their own attributes.
+              # item_name and item_text values are re-added from the sub-questions below.
+              reshaped_matrix_item[:matrix_item_name] = reshaped_matrix_item.delete :item_name
+              reshaped_matrix_item[:matrix_item_header] = reshaped_matrix_item.delete :item_text
+
               additional_attributes = {
-                matrix_item_name: matrix_item_name,
-                matrix_item_text: matrix_item_text,
+                item_name: matrix_item_name,
+                item_text: matrix_item_text,
                 response_options: readable_response_options,
                 num_response_options: readable_response_options.length
               }

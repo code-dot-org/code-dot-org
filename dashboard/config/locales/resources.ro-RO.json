@@ -1,0 +1,275 @@
+{
+  "ro-RO": {
+    "data": {
+      "resources": {
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Prezentând Laboratorul de Desen"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Prezentând Laboratorul de Desen"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "Spiriduși în acțiune"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Pentru distracția cu bucle"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Pentru distracția cu bucle"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Pentru distracția cu bucle"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Pentru distracția cu bucle"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Pentru distracția cu bucle"
+        },
+        "running-simulations/coursef/2021": {
+          "name": "Rularea de simulări"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internetul"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Ghid de implementare"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Ghid Curicular"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Forum profesori"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Mutaţi-l, mutați-l"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Mutaţi-l, mutați-l"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Mutaţi-l, mutați-l"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Mişcă-te, Mişcă-te"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Programare în perechi"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stevie şi marele proiect"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "Bug-uri neidentificate"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Transformând în Buclă"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Transformând în Buclă"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Transformând în Buclă"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Transformând în Buclă"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Marele eveniment"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "Marele eveniment"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Marele eveniment"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Ghid de implementare"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Ghid Curicular"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "Forum profesori"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Programare în perechi"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Hărţi Fericite"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Marele eveniment"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Marele eveniment"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Marele eveniment"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Ghid de implementare"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Ghid Curicular"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "Forum profesori"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Amicii mei roboți"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Amicii mei roboți"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Amicii mei roboți"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Amicii mei roboți"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Amicii mei roboți"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Programare în perechi"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Marele eveniment"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Marele eveniment"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Marele eveniment"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Brăţări Binare"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Brăţări Binare"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Brăţări Binare"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Brăţări Binare"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Brăţări Binare"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Ghid de implementare"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Ghid Curicular"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "Forum profesori"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Programare pe Hârtie Milimetrică"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Programare pe Hârtie Milimetrică"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Programare pe Hârtie Milimetrică"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Programare pe Hârtie Milimetrică"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Programare pe Hârtie Milimetrică"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Programare pe Hârtie Milimetrică"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Programare în perechi"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Programare de releu"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Programare de releu"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Programare de releu"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Programare de releu"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Programare de releu"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Programare de releu"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Condiționale cu Carduri"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Condiționale cu Carduri"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Condiționale cu Carduri"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Condiționale cu Carduri"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Condiționale cu Carduri"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Ghid de implementare"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Ghid Curicular"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Forum profesori"
+        },
+        "pair_programming/express/2021": {
+          "name": "Programare în perechi"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "Spiriduși în acțiune"
+        },
+        "variables_video/express/2021": {
+          "name": "Variabile"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Forum profesori"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Programare în perechi"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "Forum profesori"
+        },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "Urmați algoritmul"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "Design pentru accesibilitate"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Ghid de implementare"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Ghid Curicular"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Forum profesori"
+        }
+      }
+    }
+  }
+}

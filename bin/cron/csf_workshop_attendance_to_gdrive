@@ -10,7 +10,7 @@ require 'cdo/google/sheet'
 # a spreadsheet in Google Drive (with permissions locked down to our organization).
 #
 
-EARLIEST_WORKSHOP_END_DATE = Date.new(2020, 6, 1)
+EARLIEST_WORKSHOP_END_DATE = Date.new(2021, 6, 1)
 LATEST_WORKSHOP_START_DATE = Date.today
 
 def get_rows
@@ -30,7 +30,9 @@ def get_rows
       "Total Hours",
       "Num Registered",
       "Number Scholarship Teachers Attending All Sessions",
-      "Attendance Day 1+"
+      "Attendance Day 1+",
+      "Workshop End Date",
+      "Workshop ID"
     ]
   ]
 
@@ -54,7 +56,9 @@ def get_rows
         workshop.effective_num_hours,
         workshop.enrollments.count,
         workshop.teachers_attending_all_sessions(true).count,
-        workshop.teachers_attending_all_sessions.count
+        workshop.teachers_attending_all_sessions.count,
+        workshop.sessions.last&.formatted_date,
+        workshop.id
       ]
     end
 

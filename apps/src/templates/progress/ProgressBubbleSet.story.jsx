@@ -54,17 +54,6 @@ export default storybook => {
         )
       },
       {
-        name: 'includes a paired level',
-        description: 'Should show the pair programming icon',
-        story: () => (
-          <ProgressBubbleSet
-            levels={[fakeLevel({paired: true}), ...fakeLevels(5)]}
-            disabled={false}
-            pairingIconEnabled={true}
-          />
-        )
-      },
-      {
         name: 'first level is unplugged',
         description: 'Should get a pill for unplugged',
         story: () => (

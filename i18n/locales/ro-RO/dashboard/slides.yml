@@ -1275,18 +1275,78 @@ ro:
         text: "Cand ai terminat sa-ti realizezi jocul, alegi sa distribui un link pe care il poti da prietenilor sau sa joci tu propriul joc pe telefon. Distractie placuta! De abia astept sa joc versiunea ta de Minecraft."
     mc_2017_agent_intro:
       1:
+        text: "Stacy: Stampy, Lizzy, Preston - vă mulțumesc că ați venit cu mine. Ceea ce vreau să vă arăt se află imediat după acest platou. Cred că o să vă placă la nebunie!"
       2:
+        text: "Stai puțin - șina are o gaură! (țipete)"
       3:
+        text: "Toată lumea e bine? Stampy: Ah, înțeleg care e problema. Uite! Era o gaură în șină. Stacy: Serios, Stampy? Lizzy: Poate ar trebui să adunăm blocuri ca să o reparăm. Preston: Hai să ne întrecem. Primul care ajunge înapoi în vârf câștigă. Stacy: Bine, pe locuri, fiți gata, start! Ok, o să adun niște teracotă. Stai un pic. Băieți, nu pot să fac săpături! Preston: Nici eu. Lizzy: Nici eu nu pot. Stacy: Ei bine, asta e foarte ciudat. Stampy, tu poți să faci săpături? Stampy: Nu pot! Stacy: Bine, toată lumea să rămână calmă. Stampy: E stricat jocul? Stacy: Dacă e stricat, cum facem ca să-l reparăm? Lizzy: Nu știu. Stampy: Știe cineva să scrie cod pentru Minecraft?"
       4:
+        text: "(Poof) Preston: Ce-i asta? Stampy: N-am mai văzut așa ceva până acum. Lizzy: Este adorabil! Se poate... se poate domestici? Preston: Ok, ce se întâmplă? Cineva trebuie să se întoarcă în lumea reală și să repare treaba asta. Toți: Nu-i ce trebuie! Nu-i ce... Bine, mă duc eu."
       5:
+        text: "Ah, ok, acum mă aflu în lumea reală. Voi încerca să găsesc birourile Minecraft."
       6:
+        text: "Dar voi avea nevoie de ajutorul tău. Urmărește tutorialul, începe să înveți cum să scrii, iar după câteva niveluri voi veni și eu, ok? Urează-mi vaftă! Cred că pe aici ar trebui s-o iau. Au! Cactus! Sunt bine!"
       7:
+        text: "Pentru a finaliza provocarea Hour of Code va trebui să scrii cod pentru a programa Agentul. Vei lucra împreună cu Agentul pentru a elimina orice obstacol din calea ta, astfel încât să poți lua obiectele de care ai nevoie pentru călătorie. Numai Agentul poate așeza și sparge blocuri și numai tu poți colecta obiecte. Ecranul tău este împărțit în trei părți principale. În stânga este Minecraft."
       8:
+        text: "În zona din mijloc se află o casetă de instrumente care conține comenzi pe care Agentul le poate înțelege."
       9:
+        text: "Iar în dreapta se află spațiul de lucru. Aici se află comenzile necesare cu care poți construi programul cu care îl vei controla pe Agent."
       10:
+        text: "Agentul poate să meargă, să se întoarcă și să calce pe plăci care se activează la apăsare. De asemenea, acesta poate distruge și așeza blocuri. Atunci când așază blocul ca pe șinele de minicar, îl așază sub el."
       11:
         text: "Daca ati uitat ce trebuie sa faceti, instructiunile pentru fiecare nivel sunt in partea de sus."
       12:
+        text: "Dacă dorești să încerci din nou, poți apăsa butonul albastru de resetare pentru a reseta totul de la început. Iar dacă trebuie să ștergi un bloc de cod, trage-l din spațiul de lucru în caseta de instrumente. Nu uita să apeși pe „rulează” pentru a pune Agentul în mișcare. Ok, acum încearcă să treci de primele nivele. Baftă!"
+    mc_2017_repeat:
+      1:
+        text: "Stampy: Oare ce face Stacy?"
+      2:
+        text: "Stacy: Woah, cred că sunt în locul potrivit. Este uimitor!"
+      3:
+        text: "Mă simt ca și cum m-aș fi întors în Minecraft! Bună. Ce mai faceți? Alo?"
+      4:
+        text: "Oh, uite un creeper. N-o să-mi faci nimic, sper? Katie: Stacy? Stacy: Bună, Katie? Katie: Da, bine ai venit la Minecraft!"
+      5:
+        text: "Stacy: E extraordinar. Lucrezi aici ca dezvoltator, nu-i așa? Katie: Da, este minunat. Sunt dezvoltator în echipa de lansare pe piață a Minecraft. Stacy: Câte limbaje de programare cunoști? Katie: În cariera mea, am lucrat probabil cu peste o duzină de limbaje de programare. Stacy: O duzină? Katie: Da. Stacy: Ai auzit de un golem care își spune „Agentul”? Katie: Folosim Agentul pentru a face lucruri pe care Steve sau Alex nu le pot face, cum ar fi să meargă pe lavă. Stacy: Ei bine, eu vreau să învăț să programez, la fel și ei, care este unul dintre primele lucruri pe care trebuie să le știm atunci când încă învățăm să programăm?"
+      6:
+        text: "Katie: Trebuie să înveți cum să folosești buclele. Buclele sunt concepute de dezvoltatori pentru a transmite comenzi unui computer, acestea pot fi rulate la nesfârșit. Stacy: Am înțeles, cred că urma să dăm de așa ceva în nivelurile următoare, așa că să mergem mai departe și să încercăm să lucrăm cu buclele."
+      7:
+        text: "În cadrul nivelului următor, poți folosi o buclă pentru a muta Agentul de-a lungul drumului. Trage blocul „repetă” în spațiul de lucru și așază blocul „deplasare înainte” în interiorul blocului „repetă”. Acest lucru va transmite o instrucțiune computerului să facă același lucru de mai multe ori la rând, fără a fi nevoie să tragi mai multe blocuri în spațiul de lucru. Poți alege numărul de repetări introducând un număr în blocul „repetă”."
+      8:
+        text: "Poți introduce în bloc comenzi de întoarcere și comenzi multiple, dar deocamdată încearcă să folosești o repetare pentru a-l face pe Agent să se deplaseze înainte cu câțiva pași. Nu uita că, dacă te-ai blocat la un puzzle, poți oricând să apeși butonul albastru de resetare și să încerci din nou."
+      9:
+        text: "Dacă îți dorești să ai un job cool, cum are Katie, fă clic pe butonul „arată codul” când termini fiecare nivel. Așa vei vedea codul Javascript folosit de Katie și alți dezvoltatori atunci când programează Minecraft. Katie: Baftă tuturor!"
+    mc_2017_functions:
+      1:
+        text: "Preston: Nu vreau să mă laud, dar sunt destul de bun la parkour. Lizzy: Hai să dormim, așa o să se facă ziuă când se întoarce Stacy."
+      2:
+        text: "Stacy: Hei, m-am întors de la birourile Minecraft și cred că știu cum să rezolv problema din jocul meu. Cred că pot folosi o funcție. Numai un pic, să deschid asta."
+      3:
+        text: "O funcție este un set specific de instrucțiuni necesare pentru a îndeplini o anumită sarcină, ca un fel de rețetă. În următoarele niveluri vei avea acces la funcții pe care le poți folosi pentru a rezolva puzzle-urile."
+      4:
+        text: "Uită-te la codul funcției atunci când aceasta se află în spațiul de lucru, pentru a vedea ce face."
+      5:
+        text: "Apoi, găsește blocul corespunzător cu acest nume în caseta de instrumente și trage-l din caseta de instrumente în blocul „rulează”."
+      6:
+        text: "Nu uita că poți utiliza aceeași funcție de fiecare dată când trebuie să execuți același set de instrucțiuni pentru a face ceva, cum ar fi construirea unui pod. Mult noroc, vei reuși cu siguranță!"
+    mc_2017_congratulations:
+      1:
+        text: "Preston: Felicitări!"
+      2:
+        text: "Lizzy: Felicitări!"
+      3:
+        text: "Stampy: Felicitări, ai reușit!"
+      4:
+        text: "Stacy: Felicitări, v-ați descurcat minunat! Iar acum că ați terminat Hour of Code, puteți începe să programați în Minecraft. Ați învățat despre bucle, funcții și despre ce face un Agent software."
+      5:
+        text: "Acum a venit momentul să trecem la nivelul de joc liber, în care voi sunteți developerii. Folosiți timpul rămas pentru a scrie propriile funcții pentru a explora, face săpături și construi."
+      6:
+        text: "Puteți să luați cu voi codul pe care îl veți scrie în acest nivel în lumea voastră din Minecraft, în Minecraft: Education Edition. Trebuie doar să faceți clic pe „Terminat” și să urmați instrucțiunile pentru a obține linkul pe care îl puteți utiliza în lumea voastră pentru a continua să scrieți cod împreună cu Agentul. Distracție plăcută și felicitări pentru o treabă bine făcută!"
+      7:
+        text: "Stacy: M-am întors! Ok, băieți, acesta este Agentul! Să vă arăt ce poate face. Uite, face exact ce i-am spus. I-am spus să construiască o scară din aceste blocuri de teracotă, iar acum putem folosi scara ca să ieșim de aici. Și poate face mult mai mult, nu doar scări. Îi pot spune Agentului să facă ce vreau, iar el face."
+      8:
+        text: "Stampy: Cum ai făcut asta? Stacy: A fost foarte simplu. Tot ce a trebuit să fac a fost să folosesc codul!"
     hoc_dance_warmup:
       1:
         text: "Ora de cod | Petrecere cu dans: Pregătire"

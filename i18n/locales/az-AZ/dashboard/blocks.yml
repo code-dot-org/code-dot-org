@@ -1,3 +1,4 @@
+---
 az:
   data:
     blocks:
@@ -5,25 +6,67 @@ az:
         options:
           GROUP:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
           MOVE1:
+            MOVES.Dab: Dab
             MOVES.Drop: Burax
+            MOVES.Floss: ip
+            MOVES.Fresh: təzə
+            MOVES.Kick: Ulduz
+            MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
           MOVE2:
+            MOVES.Dab: Dab
             MOVES.Drop: Burax
+            MOVES.Floss: ip
+            MOVES.Fresh: təzə
+            MOVES.Kick: Ulduz
+            MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
       Dancelab_atTimestamp:
         options:
           UNIT:
+            '"measures"': Ölçülər
             '"seconds"': saniyələr
+      Dancelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': Rəng
+            '"saturation"': doyma
+            '"brightness"': Parlaqlıq
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
           MOVE:
             '"next"': "(Növbəti)"
             '"prev"': "(Əvvəlki)"
             '"rand"': "(İxtiyari)"
+            MOVES.Dab: Dab
             MOVES.Drop: Burax
+            MOVES.Floss: ip
+            MOVES.Fresh: təzə
+            MOVES.Kick: Ulduz
+            MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
       Dancelab_changeMoveLR:
         options:
@@ -31,55 +74,145 @@ az:
             '"next"': "(Növbəti)"
             '"prev"': "(Əvvəlki)"
             '"rand"': "(İxtiyari)"
+            MOVES.Dab: Dab
             MOVES.Drop: Burax
+            MOVES.Floss: ip
+            MOVES.Fresh: təzə
+            MOVES.Kick: Ulduz
+            MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
+            '"rotation"': fırlanma
+            '"x"': üfüqi vəziyyət
+            '"y"': şaquli vəziyyət
       Dancelab_changePropEachBy:
         options:
           GROUP:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
+            '"rotation"': fırlanma
+            '"x"': üfüqi vəziyyət
+            '"y"': şaquli vəziyyət
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
           MOVE:
             '"rand"': "(İxtiyari)"
+            MOVES.XBend: Qatlamaq
+            MOVES.XClapSide: alqış
+            MOVES.Dab: Dab
+            MOVES.XFever: Disko
             MOVES.Drop: Burax
+            MOVES.Floss: ip
+            MOVES.Fresh: təzə
+            MOVES.XHop: Hoppanmaq
+            MOVES.XHighKick: Təpik
+            MOVES.XKnee: Diz
+            MOVES.XKneel: Diz çökmək
+            MOVES.XArmsSide: Çatmaq
+            MOVES.XSlide: Sürüşmək
+            MOVES.Kick: Ulduz
+            MOVES.XArmsUp: Dartmaq
+            MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
       Dancelab_doMoveLR:
         options:
           MOVE:
             '"rand"': "(İxtiyari)"
+            MOVES.XBend: Qatlamaq
+            MOVES.XClapSide: alqış
+            MOVES.Dab: Dab
+            MOVES.XFever: Disko
             MOVES.Drop: Burax
+            MOVES.Floss: ip
+            MOVES.Fresh: təzə
+            MOVES.XHop: Hoppanmaq
+            MOVES.XHighKick: Təpik
+            MOVES.XKnee: Diz
+            MOVES.XKneel: Diz çökmək
+            MOVES.XArmsSide: Çatmaq
+            MOVES.XSlide: Sürüşmək
+            MOVES.Kick: Ulduz
+            MOVES.XArmsUp: Dartmaq
+            MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
       Dancelab_everySeconds:
         options:
           UNIT:
+            '"measures"': Ölçülər
             '"seconds"': saniyələr
+      Dancelab_everySecondsRange:
+        options:
+          UNIT:
+            measures: Ölçülər
+            seconds: Saniyələr
+      Dancelab_everyVerseChorus:
+        options:
+          UNIT:
+            '"chorus"': Xor
+      Dancelab_getEnergy:
+        options:
+          RANGE:
+            '"low"': Bass
+            '"mid"': orta
       Dancelab_getProp:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
+            '"rotation"': fırlanma
+            '"x"': üfüqi vəziyyət
+            '"y"': şaquli vəziyyət
+            '"tint"': Rəng
       Dancelab_getTime:
         options:
           UNIT:
+            '"measures"': Ölçülər
             '"seconds"': saniyələr
       Dancelab_ifDanceIs:
         options:
           DANCE:
+            MOVES.Dab: Dab
             MOVES.Drop: Burax
+            MOVES.Floss: ip
+            MOVES.Fresh: təzə
+            MOVES.Kick: Ulduz
+            MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
       Dancelab_ifTime:
         options:
           UNIT:
+            '"measures"': Ölçülər
             '"seconds"': saniyələr
       Dancelab_jumpTo:
         options:
@@ -97,6 +230,16 @@ az:
         options:
           GROUP:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
           LOCATION:
             "{x: 200, y: 100}": yuxarı
             "{x: 200, y: 300}": aşağı
@@ -111,20 +254,37 @@ az:
         options:
           GROUP:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
           FORMAT:
             '"border"': kənar
             '"diamond"': almaz
             '"circle"': dairə
+            '"grid"': tor
+            '"row"': sinif
             '"plus"': üstəgəl
             '"random"': təsadüfi
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
             '"ALIEN"': yadplanetli
+            '"BEAR"': ayı
             '"CAT"': pişik
             '"DOG"': it
             '"DUCK"': ördək
+            '"FROG"': qurbağa
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': ananas
             '"ROBOT"': robot
+            '"SHARK"': köpək balığı
             '"UNICORN"': tək buynuzlu at
           LOCATION:
             "{x: 200, y: 100}": yuxarı
@@ -140,10 +300,15 @@ az:
         options:
           COSTUME:
             '"ALIEN"': yadplanetli
+            '"BEAR"': ayı
             '"CAT"': pişik
             '"DOG"': it
             '"DUCK"': ördək
+            '"FROG"': qurbağa
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': ananas
             '"ROBOT"': robot
+            '"SHARK"': köpək balığı
             '"UNICORN"': tək buynuzlu at
           LOCATION:
             "{x: 200, y: 100}": yuxarı
@@ -177,10 +342,23 @@ az:
             '18': '18'
             '19': '19'
             '20': '20'
+          COSTUME:
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
           LAYOUT:
             '"border"': kənar
             '"diamond"': almaz
             '"circle"': dairə
+            '"grid"': tor
+            '"row"': sinif
             '"plus"': üstəgəl
             '"random"': təsadüfi
       Dancelab_randomColor:
@@ -189,7 +367,6 @@ az:
         options:
           EFFECT:
             '"none"': Heç biri
-            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(İxtiyari)"
             '"circles"': Çevrələr
             '"color_cycle"': Rənglər
             '"diamonds"': Almazlar
@@ -222,15 +399,38 @@ az:
             '"electronic"': Elektronik
             '"iceCream"': Dondurma
             '"default"': Işıq
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': sürətli
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
+          SPEED:
+            '1': normal
+            '2': sürətli
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
             '"none"': Heç biri
-            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(İxtiyari)"
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -240,62 +440,189 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
+            '"rotation"': fırlanma
+            '"x"': üfüqi vəziyyət
+            '"y"': şaquli vəziyyət
       Dancelab_setPropEach:
         options:
           GROUP:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
+            '"rotation"': fırlanma
+            '"x"': üfüqi vəziyyət
+            '"y"': şaquli vəziyyət
+            '"tint"': Rəng
       Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
+            '"rotation"': fırlanma
+            '"x"': üfüqi vəziyyət
+            '"y"': şaquli vəziyyət
+            '"tint"': Rəng
       Dancelab_setPropRandomEach:
         options:
           GROUP:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
+            '"rotation"': fırlanma
+            '"x"': üfüqi vəziyyət
+            '"y"': şaquli vəziyyət
+            '"tint"': Rəng
       Dancelab_setTintEach:
         options:
           THIS:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
       Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': görünən
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
+          VISIBILITY:
+            'true': görünən
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
+            '"rotation"': fırlanma
+            '"x"': üfüqi vəziyyət
+            '"y"': şaquli vəziyyət
+            '"tint"': Rəng
+          RANGE:
+            '"bass"': Bass
+            '"mid"': orta
       Dancelab_startMappingEach:
         options:
           GROUP:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
+            '"rotation"': fırlanma
+            '"x"': üfüqi vəziyyət
+            '"y"': şaquli vəziyyət
+            '"tint"': Rəng
+          RANGE:
+            '"bass"': Bass
+            '"mid"': orta
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
+            '"rotation"': fırlanma
+            '"x"': üfüqi vəziyyət
+            '"y"': şaquli vəziyyət
+            '"tint"': Rəng
+          RANGE:
+            '"bass"': Bass
+            '"mid"': orta
       Dancelab_stopMappingEach:
         options:
           GROUP:
             sprites: bütün
+            '"ALIEN"': yadplanetli
+            '"BEAR"': Ayılar
+            '"CAT"': pişiklər
+            '"DOG"': itlər
+            '"DUCK"': ördəklər
+            '"FROG"': qurbağalar
+            '"MOOSE"': sığır
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robotlar
+            '"SHARK"': Köpək balıqları
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
+            '"rotation"': fırlanma
+            '"x"': üfüqi vəziyyət
+            '"y"': şaquli vəziyyət
+            '"tint"': Rəng
+          RANGE:
+            '"bass"': Bass
+            '"mid"': orta
       Dancelab_translateStrings:
         options:
           STRING:
@@ -357,6 +684,16 @@ az:
             '"7"': '7'
             '"8"': '8'
             '"9"': '9'
+      Dancelab_whenPeak:
+        options:
+          RANGE:
+            '0': Bass
+            '1': orta
+            '2': treble
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': yayın
       gamelab_atTime:
         options:
           UNIT:
@@ -365,6 +702,9 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"rotation"': fırlanma
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
             '"speed"': sürət
       gamelab_checkTouching:
         options:
@@ -375,6 +715,10 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"rotation"': fırlanma
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
+            '"tint"': Rəng
             '"speed"': sürət
       gamelab_getThisSprite:
         options:
@@ -453,11 +797,30 @@ az:
             '"w"': w
             '"x"': x
             '"y"': 'y'
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': partlayış
+            '"rain"': yağış
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': sağa
+            '90': aşağı
+            '180': sola
+            '270': yuxarı
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': sağa
             '"left"': sola
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": düymə
+            "'sound://category_collect/clicky_crunch.mp3'": çatlamış
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": arfa
+            "'sound://category_digital/jump_7.mp3'": atıl
       gamelab_randColor:
         text: ixtiyari rəng
       gamelab_randomColor:
@@ -469,19 +832,48 @@ az:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': mağara
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şəhər
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': məhkəmə
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': səhra
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': qalaksi
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': tor
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': çəmən
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': göy qurşağı
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': mərhələ
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ulduzlar
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': yeraltı
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': suyun altı
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': qış
+            undefined: heç biri
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': orta
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"rotation"': fırlanma
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
             '"speed"': sürət
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': orta
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
       gamelab_spriteClicked:
         options:
@@ -517,10 +909,19 @@ az:
             '"w"': w
             '"s"': s
             '"d"': d
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 200, y: 100}": balıq
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": balıq
       Mikelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"rotation"': fırlanma
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -536,6 +937,9 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"rotation"': fırlanma
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_groupChangeAnim:
         options:
           SELECT:
@@ -546,6 +950,9 @@ az:
             '"all"': bütün
           PROPERTY:
             '"scale"': ölçü
+            '"rotation"': fırlanma
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -565,6 +972,9 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"rotation"': fırlanma
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_groupRemoveAllBehaviors:
         options:
           SELECT:
@@ -583,15 +993,39 @@ az:
             '"all"': bütün
           PROPERTY:
             '"scale"': ölçü
+            '"rotation"': fırlanma
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_groupSetTint:
         options:
           SELECT:
             '"all"': bütün
+      Mikelab_hideFish:
+        options:
+          TRASH:
+            fish: balıq
       Mikelab_ifDanceIs:
         options:
           DANCE:
+            MOVES.Dab: Dab
             MOVES.Drop: Burax
+            MOVES.Floss: ip
+            MOVES.Fresh: təzə
+            MOVES.Kick: Ulduz
+            MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: balıq
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: balıq
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: balıq
       Mikelab_randomColor:
         text: ixtiyari rəng
       Mikelab_repeatUntilComplete:
@@ -600,15 +1034,26 @@ az:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şəhər
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': çəmən
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': mərhələ
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': yeraltı
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"rotation"': fırlanma
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': sağa
             '"left"': sola
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': aşağıda
       Mikelab_sprite:
         options:
           LOCATION:
@@ -642,6 +1087,11 @@ az:
             '"a"': A
             '"s"': Cənub
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': bəli
+            '"no"': xeyr
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -649,28 +1099,86 @@ az:
             '"down"': aşağıya ox
             '"left"': sola ox
             '"right"': sağa ox
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': partlayış
+            '"rain"': yağış
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Rənglər
+            '"space"': Boşluq
+            '"stars"': Ulduzlar
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            jittering: |-
+              titrəmək
+              (hər hansı cihazın titrəməsi)
+            shrinking: |-
+              kiçilmək
+              (ölçüdə və ya miqdarda kiçik olmaq)
+            swimming_left_and_right: üzmə
+            wandering: gəzən
+            wobbling: titrəmə(titrəmək)
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            jittering: |-
+              titrəmək
+              (hər hansı cihazın titrəməsi)
+            shrinking: |-
+              kiçilmək
+              (ölçüdə və ya miqdarda kiçik olmaq)
+            swimming_left_and_right: üzmə
+            wandering: gəzən
+            wobbling: titrəmə(titrəmək)
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: irəli get
       RyanLab_turnLeft:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
-      aalab_goToScene:
+      Vector_where:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
+          PROPERTY:
+            "'shapeColor'": rəng
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': tor
+            '"border"': kənar
+            '"row"': sinif
             '"random"': təsadüfi
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': bütün
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': bütün
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:
@@ -707,3 +1215,8 @@ az:
         text: irəli get
       craft_placeTorch:
         text: məşəl yerləşdir
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"dolphin"': delfin
+            '"squid"': kalamar

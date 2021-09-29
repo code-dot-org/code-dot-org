@@ -1,0 +1,27 @@
+{
+  "bs-BA": {
+    "data": {
+      "lessons": {
+        "courseb-2021/Sequencing in Maze": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "coursea-2021/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "overview": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
+          "purpose": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu."
+        },
+        "coursea-2021/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "pre-express-2021/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "pre-express-2021/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        }
+      }
+    }
+  }
+}

@@ -187,8 +187,17 @@ vi:
       ký cho bạn.
     user_type_button: Cập nhật tài khoản
     user_type_label: Kiểu tài khoản
-    user_type_teacher: Giáo viên
     user_type_student: Học sinh
+    user_type_student_desc: 'Khám phá tất cả khóa học và hoạt động của chúng tôi,
+      kèm theo:'
+    user_type_student_ability_1: Lưu tiến độ và các dự án của bạn
+    user_type_student_ability_2: Tham gia buổi học trên lớp của giáo viên
+    user_type_teacher: Giáo viên
+    user_type_teacher_desc: 'Tất cả quyền truy cập của học sinh, kèm theo:'
+    user_type_teacher_ability_1: Tạo mục quản lý lớp học
+    user_type_teacher_ability_2: Chỉ định và theo dõi bài làm của học sinh
+    user_type_teacher_ability_3: Đăng ký học nâng cao chuyên môn
+    user_type_teacher_ability_4: Tương tác trên diễn đàn dành cho giáo viên
     field_is_required: là bắt buộc
     accept_terms: Bạn phải đồng ý để tạo một tài khoản
     error: Đã xảy ra lỗi.
@@ -199,6 +208,10 @@ vi:
     email_preference_yes: Đồng ý
     email_preference_no: Không
     email_preference_required: Bạn phải có một tài khoản email tham chiếu.
+    share_teacher_email_reg_partner_preference_yes: Đồng ý
+    share_teacher_email_reg_partner_preference_no: Không
+    share_teacher_email_reg_partner_preference_required: Bạn phải có một tài khoản
+      email tham chiếu.
     parent_account_checkbox: Tôi là phụ huynh/người giám hộ đăng ký nhân danh con
       của tôi
     parent_account_email_progress_permission: Liệu chúng tôi có thể gửi thư điện tử
@@ -295,6 +308,7 @@ vi:
     invite_sent: Đã gửi lời mời
     added_teacher: "%{name} được thêm như giáo viên của bạn"
     registered: Bạn đã đăng kí cho mục %{section_name}.
+    already_exists: Bạn đã tham gia nhóm đào tạo %{section_name}.
     error:
       signed_in: Xin vui lòng đăng xuất trước khi tiếp tục
       username_not_found: Tên người sử dụng % {username} không tìm thấy
@@ -307,6 +321,8 @@ vi:
       provider_managed_section: Mục này được quản lý bởi nhà cung cấp khác và bạn
         không thể tham gia. Vui lòng liên hệ giáo viên của bạn để %{provider} thêm
         bạn vào và tham gia mục này.
+      restricted_section: Chúng tôi không thể thêm bạn vào nhóm đào tạo %{section_code}
+        vì nhóm này bị khóa. Vui lòng liên hệ với giáo viên của bạn để được giúp đỡ.
     mail:
       student_disassociated:
         subject: 'Thông báo từ Code.org: %{student_name} không còn trong danh sách
@@ -373,6 +389,7 @@ vi:
       about_contact: Liên hệ
       about_faqs: Hỏi đáp
       learn: Học
+      stats: Xem thống kê
       help_us: Giúp đỡ chúng tôi
       teach: Dạy
       about: về chúng tôi
@@ -410,13 +427,16 @@ vi:
       gumball: Thế giới kì diệu của Gumball
       iceage: Kỉ băng hà
       infinity: Vô cùng
+      minecraft_adventurer: Minecraft Chuyến phiêu lưu
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft Hero
       playlab: Phòng trò chơi
       playlab_k1: Kho trò chơi (dành cho trẻ chưa biết đọc)
       scratch: Scratch
       sports: Thể thao
-      starwars: Cuộc Chiến Giữa Các Vì Sao
+      starwars: Chiến tranh giữa các vì sao
+      starwarsblocks: Chiến tranh giữa các vì sao (Khối)
+      starwarsblocks_hour: Chiến tranh giữa các vì sao (Khối)
       weblab: Kho Web
       view_all: Xem tất cả các dự án ...
     popup:
@@ -453,6 +473,7 @@ vi:
       example: Ví dụ
       example_with_number: Ví dụ giải pháp %{solution_number}
       submitted_on: 'Gửi lên ngày:'
+      last_updated: 'Cập nhật lần cuối:'
       unsubmit: Ngưng gửi
       worked_with: Làm việc với
       update_lock_settings: Cập Nhật khóa cài đặt tại đây.
@@ -515,6 +536,7 @@ vi:
       này để luôn được cập nhật về tiến triển và các bài tập của con bạn. Bạn cũng
       sẽ có thể sử dụng địa chỉ email này để khôi phục mật khẩu.
     parent_guardian_email_label: Email của phụ huynh/người giám hộ
+    remove_parent_email_label: Loại bỏ
     none: Không có
     only_one_parent_email_supported_warning: 'Lưu ý: Hiện tại, chúng tôi chỉ có thể
       hỗ trợ một địa chỉ thư điện tử của phụ huynh/người giám hộ cho mỗi học sinh.'
@@ -574,6 +596,8 @@ vi:
   move_students:
     new_section_dne: Xin lỗi, nhưng phần học %{new_section_code} không tồn tại. Vui
       lòng nhập một mã khác cho phần học.
+    current_section_dne: Xin lỗi, nhưng phần học %{current_section_code} không tồn
+      tại. Vui lòng nhập một mã khác cho phần học.
     student_ids_not_entered: Vui lòng cung cấp student_ids.
     student_not_found: Không thể tìm thấy một hoặc vài sinh viên.
     all_students_must_be_in_current_section: Tất cả các sinh viên hiện phải đăng ký
@@ -668,9 +692,6 @@ vi:
       gamelab_unsupported_tablet: Game Lab hoạt động tốt nhất trên máy tính để bàn
         hoặc máy tính xách tay với chuột và bàn phím. Bạn có thể gặp sự cố khi sử
         dụng công cụ này trên thiết bị hiện tại của mình.
-      weblab_unsupported_browser: Rất tiếc, chúng tôi hiện đang gặp sự cố khi tải
-        Lab Web trên trình duyệt này. Bạn có thể muốn sử dụng một trình duyệt khác
-        cho đến khi được giải quyết. Xin lỗi vì sự bất tiện.
       weblab_unsupported_locale_storage: Bạn có thể gặp sự cố khi sử dụng Web Lab
         ở chế độ Duyệt web Riêng tư. Vui lòng tải lại dự án của bạn ở chế độ thông
         thường. Xin lỗi vì sự bất tiện.
@@ -679,7 +700,7 @@ vi:
   next_stage: Hoàn thành! Tiếp tục màn tiếp theo
   download_pdf: Mở giáo án
   lesson_plan: Giáo Án
-  view_lesson_plan: Xem Giáo Án
+  view_lesson_plan: Xem giáo án
   pdf_download: Tải phiên bản PDF
   download_coming_soon: Tải về các hoạt động sắp diễn ra.
   video_coming_soon: Video sắp tới!
@@ -736,8 +757,8 @@ vi:
       body: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính và các
         khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó khá
         thú vị để tìm hiểu ở tất cả các lứa tuổi.
-      body_short: Học những căn bản về khoa học máy tính với phiên bản cấp tốc của
-        các lớp 2-4.
+      body_short: Học môn khoa học máy tính cơ bản trong phiên bản cấp tốc của các
+        khóa học 2-4.
     hoc2014:
       try_new_tutorial: Hãy thử lớp học Giờ Lập trình phiên bản beta của chúng tôi
       try_frozen: Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen
@@ -764,7 +785,7 @@ vi:
     frozen:
       title: Frozen
     starwars:
-      title: Cuộc Chiến Giữa Các Vì Sao
+      title: Chiến tranh giữa các vì sao
     infinity:
       title: Phòng thí nghiệm Vui Chơi Bất Tận
       body: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với
@@ -790,15 +811,15 @@ vi:
       body: Trong bài học này, học viên sẽ sử dụng Widget nén văn bản để nén văn bản
         bằng cách thay thế các mẫu với các ký hiệu.
     unplugged:
-      title: Bài học không cần máy tính
+      title: Bài học không sử dụng thiết bị điện tử
       audience: 4 tuổi trở lên
       body: Chúng tôi đã biên soạn một danh sách các bài học không cắm phí cho bạn
         để sử dụng trong lớp học của bạn. Bây giờ bạn có thể dạy các nguyên tắc cơ
         bản của khoa học máy tính, cho dù bạn có máy tính trong lớp học hay không!
         Hãy thử sử dụng những bài học này như là một khóa học độc lập hoặc làm những
         bài học bổ sung cho bất kỳ khóa học về khoa học máy tính nào.
-      body_short: Nếu bạn không có máy tính, hãy thử các bài học không cần máy tính
-        này trong lớp học của bạn.
+      body_short: Nếu bạn không có máy tính, hãy thử các bài học không sử dụng thiết
+        bị điện tử này trong lớp học của bạn.
     unplugged_conditionals:
       title: Điều kiện
       body: Tìm hiểu về các thuật toán và tuyên bố có điều kiện trong hoạt động "không
@@ -1115,7 +1136,7 @@ vi:
       school_city: Thành phố của trường
       school_country: Quốc gia
       colombian_school_city: Thành phố của trường
-      colombian_school_name: Tên trường
+      colombian_chilean_school_name: Tên trường
     form_entries:
       gender:
         male: Nam
@@ -1140,12 +1161,35 @@ vi:
         scratch: Scratch
       robotics:
         grok: Tìm hiểu Grok
+      workshop_course:
+        csf_express: Nguyên tắc cơ bản của KHMT (Cấp tốc hoặc Cấp tốc cho trẻ chưa
+          biết đọc)
       email_opt_in:
         opt_in_yes: Đồng ý
         opt_in_no: Không
+    international_opt_in:
+      title: Tham gia hội thảo
+      intro: Cảm ơn bạn đã dành thời gian để tham gia đào tạo về chương trình giảng
+        dạy của Code.org. Sứ mệnh của chúng tôi là mang đến cơ hội học môn khoa học
+        máy tính cho tất cả trẻ em ở tất cả các trường học trên toàn thế giới. Sứ
+        mệnh này sẽ không thể thực hiện được nếu thiếu bạn.
+      instructions: Vui lòng điền vào biểu mẫu bên dưới để cho biết 1) bạn đã tham
+        dự hội thảo đào tạo do một trong những đối tác quốc tế của Code.org tổ chức
+        và 2) bạn đồng ý chia sẻ thông tin của mình với đối tác quốc tế của chúng
+        tôi ở quốc gia của bạn để họ có thể giúp đỡ bạn trên hành trình trở thành
+        một giáo viên dạy môn khoa học máy tính.
+      thanks_markdown: Cảm ơn bạn đã gửi đơn! Chúng tôi rất mong được hỗ trợ bạn khi
+        bạn hiểu chương trình giảng dạy và công cụ của Code.org. Vui lòng tiếp tục
+        chia sẻ câu hỏi và phản hồi của bạn với chúng tôi bằng cách viết thư cho chúng
+        tôi theo địa chỉ [support@code.org](%{support_email_url}) hoặc bằng cách đăng
+        trên [diễn đàn giáo viên](%{teacher_forum_url})!
+      facilitator_not_listed: Điều hành viên của tôi không có trong danh sách
+      organizer_not_listed: Người tổ chức của tôi không có trong danh sách
   cookie_banner:
     accept: tôi đồng ý
+  page_not_found_title: Không tìm thấy trang
   copy: Sao chép
+  confirm: Xác nhận
   parent_email_banner:
     text: "**Bạn là cha mẹ hay người giám hộ?** Hãy liên kết email của bạn với tài
       khoản này để luôn cập nhật về tiến trình và dự án của con bạn!"

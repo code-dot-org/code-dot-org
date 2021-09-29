@@ -22,8 +22,6 @@ el:
     mailer:
       confirmation_instructions:
         subject: Code.org οδηγίες επιβεβαίωσης
-      reset_password_instructions:
-        subject: Code.org  οδηγίες για επαναφορά του κωδικού πρόσβασης
       unlock_instructions:
         subject: Οδηγίες ξεκλειδώματος
     omniauth_callbacks:

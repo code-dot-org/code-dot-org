@@ -37,19 +37,19 @@ Share pictures of your event on Facebook and Twitter and use the hashtag **#Hour
 
 ## Veranstalten Sie eine "Coding-Nacht" mit dem Thema "Hour of Code" für die ganze Familie und laden Sie die Eltern und Angehörigen zur Teilnahme ein
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. Dies ist eine gute Möglichkeit, ein größeres Publikum zu erreichen und Eltern und Angehörige zu ermutigen, die Informatik-Ausbildung an Ihrer Schule zu fördern. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Hier können Sie den Leitfaden herunterladen.](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 * * *
 
 ## Example plan for a school assembly or event
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Veranstaltung:**Kick-off Veranstaltung für eine schulweite Informatikwoche,
 
 **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Zeit:**Während des Schultages, vorzugsweise am Vormittag. Voraussichtliche Dauer: 1 Stunde.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Ort:**Versammlungsraum der Schule (z.B. Aula, Turnsaal, Vortragssaal)
 
 ## Programm
 

@@ -12,6 +12,8 @@ class ApiControllerTest < ActionController::TestCase
 
     @section = create(:section, user: @teacher, login_type: 'word')
 
+    @script = create(:script)
+
     # some of our tests depend on sorting of students by name, thus we name them ourselves
     @students = []
     7.times do |i|
@@ -21,13 +23,13 @@ class ApiControllerTest < ActionController::TestCase
     end
     @student_1, @student_2, @student_3, @student_4, @student_5, @student_6, @student_7 = @students
 
-    flappy = Script.get_from_cache(Script::FLAPPY_NAME)
-    @flappy_section = create(:section, user: @teacher, script_id: flappy.id)
+    @flappy = create(:text_match, :with_script).script_levels.first.script
+    @flappy_section = create(:section, user: @teacher, script_id: @flappy.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.reload
 
-    allthings = Script.get_from_cache('allthethings')
-    @allthings_section = create(:section, user: @teacher, script_id: allthings.id)
+    @allthings = create(:text_match, :with_script).script_levels.first.script
+    @allthings_section = create(:section, user: @teacher, script_id: @allthings.id)
     @student_allthings = create(:student, name: 'student_allthings')
     create(:follower, section: @allthings_section, student_user: @student_allthings)
     @allthings_section.reload
@@ -36,6 +38,20 @@ class ApiControllerTest < ActionController::TestCase
 
   setup do
     sign_in @teacher
+  end
+
+  private def create_script_with_bonus_levels
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    regular_level = create :maze
+    create :script_level, script: script, levels: [regular_level], lesson: lesson
+
+    bonus_level = create :maze
+    create :script_level, script: script, levels: [bonus_level], lesson: lesson, bonus: true
+
+    [script, lesson, regular_level, bonus_level]
   end
 
   private def create_script_with_lockable_lesson
@@ -48,7 +64,7 @@ class ApiControllerTest < ActionController::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    lesson = create :lesson, name: 'Stage1', script: script, lockable: true, lesson_group: lesson_group
+    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
 
     # Create a ScriptLevel joining this level to the script.
     create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
@@ -67,7 +83,7 @@ class ApiControllerTest < ActionController::TestCase
     get :section_text_responses, params: {section_id: @section.id}
     assert_response :success
 
-    # we fall back to twenty_hour_script, which has no text_response levels
+    # we fall back to twenty_hour_unit, which has no text_response levels
     assert_equal '[]', @response.body
   end
 
@@ -79,14 +95,14 @@ class ApiControllerTest < ActionController::TestCase
 
     response = JSON.parse(@response.body)
 
-    # make sure our response has lesson from allthethingsscript
-    assert /\/s\/allthethings\// =~ response[0]['url']
+    # make sure our response has lesson from the specified script
+    assert /\/s\/#{@allthings.name}\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with assigned course" do
     unit_group = create :unit_group
-    create :unit_group_unit, unit_group: unit_group, script: Script.get_from_cache('allthethings'), position: 1
-    create :unit_group_unit, unit_group: unit_group, script: Script.get_from_cache(Script::FLAPPY_NAME), position: 2
+    create :unit_group_unit, unit_group: unit_group, script: @allthings, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: @flappy, position: 2
     unit_group.reload
 
     section = create(:section, user: @teacher, login_type: 'word', unit_group: unit_group)
@@ -95,7 +111,7 @@ class ApiControllerTest < ActionController::TestCase
     section.reload
     student.reload
 
-    make_text_progress_in_script(Script.get_from_cache('allthethings'), student)
+    make_text_progress_in_script(@allthings, student)
 
     get :section_text_responses, params: {section_id: section.id}
     assert_response :success
@@ -103,11 +119,11 @@ class ApiControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     # make sure our response has lesson from allthethings
-    assert /\/s\/allthethings\// =~ response[0]['url']
+    assert /\/s\/#{@allthings.name}\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with specific script" do
-    script = Script.find_by_name('cspunit1')
+    script = create(:text_match, :with_script).script_levels.first.script
 
     make_text_progress_in_script(@allthings_section.script, @student_allthings)
     make_text_progress_in_script(script, @student_allthings)
@@ -122,14 +138,14 @@ class ApiControllerTest < ActionController::TestCase
     # did not receive responses from multiple scripts
     assert_equal 1, response.length
     # response is from script_id (not section's script)
-    assert /\/s\/cspunit1\// =~ response[0]['url']
+    assert /\/s\/#{script.name}\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with script with text response" do
     script = create :script, name: 'text-response-script'
     lesson_group = create :lesson_group, script: script
-    lesson1 = create :lesson, script: script, name: 'First Stage', key: 'First Stage', lesson_group: lesson_group
-    lesson2 = create :lesson, script: script, name: 'Second Stage', key: 'Second Stage', lesson_group: lesson_group
+    lesson1 = create :lesson, script: script, name: 'First Lesson', key: 'First Lesson', lesson_group: lesson_group
+    lesson2 = create :lesson, script: script, name: 'Second Lesson', key: 'Second Lesson', lesson_group: lesson_group
 
     # create 2 text_match levels
     level1 = create :text_match
@@ -173,7 +189,7 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Lesson 1: First Stage',
+        'lesson' => 'Lesson 1: First Lesson',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
@@ -181,7 +197,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Lesson 2: Second Stage',
+        'lesson' => 'Lesson 2: Second Lesson',
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
@@ -189,7 +205,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
-        'stage' => 'Lesson 1: First Stage',
+        'lesson' => 'Lesson 1: First Lesson',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
@@ -227,9 +243,9 @@ class ApiControllerTest < ActionController::TestCase
     section_response = body[@section.id.to_s]
     assert_equal @section.id, section_response['section_id']
     assert_equal @section.name, section_response['section_name']
-    assert_equal 1, section_response['stages'].length
+    assert_equal 1, section_response['lessons'].length
 
-    lessons_response = section_response['stages']
+    lessons_response = section_response['lessons']
     assert_equal 1, lessons_response.keys.length, '1 lesson in our script'
     lesson_response = lessons_response[lesson.id.to_s]
     assert_equal 7, lesson_response.length, "entry for each student in section"
@@ -253,8 +269,8 @@ class ApiControllerTest < ActionController::TestCase
     # do a much more limited set of validation for the flappy section
     flappy_section_response = body[@flappy_section.id.to_s]
     assert_equal @flappy_section.id, flappy_section_response['section_id']
-    assert_equal 1, flappy_section_response['stages'][lesson.id.to_s].length
-    assert_equal @student_flappy_1.name, flappy_section_response['stages'][lesson.id.to_s][0]['name']
+    assert_equal 1, flappy_section_response['lessons'][lesson.id.to_s].length
+    assert_equal @student_flappy_1.name, flappy_section_response['lessons'][lesson.id.to_s][0]['name']
   end
 
   # Helper for setting up student lock tests
@@ -263,7 +279,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
 
-    student_responses = body[@section.id.to_s]['stages'][lesson.id.to_s]
+    student_responses = body[@section.id.to_s]['lessons'][lesson.id.to_s]
     if student_responses
       return student_responses[student_number - 1]
     else
@@ -490,7 +506,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, user_level.submitted?
 
     # Now, unlock the assessment again to simulate a retake scenario
-    user_level.delete
+    user_level.really_destroy!
     assert_nil UserLevel.find_by(user_level_data)
     updates = [
       {
@@ -531,7 +547,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.send(:unlocked_at)
 
     # view_anwers for a user_level that does not yet exist
-    user_level.delete
+    user_level.really_destroy!
     assert_nil UserLevel.find_by(user_level_data)
     updates = [
       {
@@ -548,7 +564,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.send(:unlocked_at)
 
     # multiple updates at once
-    user_level.delete
+    user_level.really_destroy!
     assert_nil UserLevel.find_by(user_level_data)
     assert_nil UserLevel.find_by(user_level_data2)
     updates = [
@@ -750,7 +766,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get user progress" do
-    script = Script.twenty_hour_script
+    script = create(:script, :with_levels, levels_count: 2)
 
     user = create :user, total_lines: 2
     create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
@@ -771,12 +787,12 @@ class ApiControllerTest < ActionController::TestCase
   test "should get user progress for lesson" do
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
-    script = Script.hoc_2014_script
+    script = create(:script, :with_levels, levels_count: 1)
 
     user = create :user, total_lines: 2
     sign_in user
 
-    script_level = script.script_levels[0]
+    script_level = script.script_levels.first
     level = script_level.level
     level_source = create :level_source, level: level, data: 'level source'
 
@@ -784,7 +800,7 @@ class ApiControllerTest < ActionController::TestCase
       level: level, level_source: level_source
     create :activity, user: user, level: level, level_source: level_source
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -825,7 +841,7 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user
     sign_in user
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -837,14 +853,14 @@ class ApiControllerTest < ActionController::TestCase
   test "should get user progress for lesson for signed-out user" do
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
-    script = Script.hoc_2014_script
+    script = create(:script, :with_levels, levels_count: 1)
     script_level = script.script_levels[0]
     level = script_level.level
 
     user = create :user
     sign_out user
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -868,11 +884,11 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get user progress for lesson with young student" do
-    script = Script.twenty_hour_script
+    script = create(:script, :with_levels, levels_count: 1)
     young_student = create :young_student
     sign_in young_student
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -885,11 +901,11 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should get user progress for disabled milestone posts" do
     Gatekeeper.set('postMilestone', value: false)
-    script = Script.course1_script
+    script = create(:script, :with_levels, levels_count: 1)
     user = create :user, total_lines: 2
     sign_in user
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -909,7 +925,7 @@ class ApiControllerTest < ActionController::TestCase
     create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
     create :activity, user: @student_1, level: level1a, level_source: level_source
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1,
@@ -922,7 +938,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Script.stubs(:should_cache?).returns true
 
-    assert_queries 7 do
+    assert_queries 8 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -930,17 +946,17 @@ class ApiControllerTest < ActionController::TestCase
     data = JSON.parse(@response.body)
     expected = {
       'script' => {
-        'id' => Script.get_from_cache(Script::FLAPPY_NAME).id,
-        'name' => 'Flappy Code',
-        'levels_count' => 10,
-        'stages' => [{
-          'length' => 10,
-          'title' => 'Flappy Code'
+        'id' => @flappy.id,
+        'name' => I18n.t("data.script.name.#{@flappy.name}.title"),
+        'levels_count' => 1,
+        'lessons' => [{
+          'length' => 1,
+          'title' => @flappy.name
         }]
       },
       'students' => [{
         'id' => @student_flappy_1.id,
-        'levels' => (1..10).map {|level_num| ['not_tried', level_num, "/flappy/#{level_num}"]}
+        'levels' => [['not_tried', 1, "/s/#{@flappy.name}/lessons/1/levels/1"]]
       }]
     }
 
@@ -1118,7 +1134,7 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    assert_equal Script.get_from_cache(Script::FLAPPY_NAME).id, JSON.parse(@response.body)['script']['id']
+    assert_equal @flappy.id, JSON.parse(@response.body)['script']['id']
   end
 
   test "should not return progress for bonus levels" do
@@ -1138,13 +1154,77 @@ class ApiControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
     assert_equal 1, response["students"][0]["levels"].length
     assert_equal 1, response["script"]["levels_count"]
-    assert_equal 1, response["script"]["stages"][0]["length"]
+    assert_equal 1, response["script"]["lessons"][0]["length"]
   end
+
+  test "teacher_panel_progress returns progress when called with script and level" do
+    script, _, regular_level, _ = create_script_with_bonus_levels
+
+    # create progress for student_1 on regular_level
+    create :user_level, user: @student_1, script: script, level: regular_level, best_result: ActivityConstants::BEST_PASS_RESULT
+
+    get :teacher_panel_progress, params: {
+      section_id: @section.id,
+      script_id: script.id,
+      level_id: regular_level.id
+    }
+
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+
+    # response is an array with one element for each student
+    # students are sorted by name so @student_1 should be the first result
+    assert_equal @students.length, response.length
+    assert_equal @student_1.id, response[0]["userId"]
+    assert_equal regular_level.id.to_s, response[0]["id"]
+    assert_equal "perfect", response[0]["status"]
+  end
+
+  test "teacher_panel_progress returns progress when called with lesson and is_bonus_lesson" do
+    script, lesson, _, bonus_level = create_script_with_bonus_levels
+
+    # create progress for student_1 on bonus_level
+    create :user_level, user: @student_1, script: script, level: bonus_level, best_result: ActivityConstants::BEST_PASS_RESULT
+
+    get :teacher_panel_progress, params: {
+      section_id: @section.id,
+      script_id: script.id,
+      lesson_id: lesson.id,
+      is_lesson_extras: true
+    }
+
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+
+    # response is an array with one element for each student
+    # students are sorted by name so @student_1 should be the first result
+    assert_equal @students.length, response.length
+    assert_equal @student_1.id, response[0]["userId"]
+    assert_equal bonus_level.id.to_s, response[0]["id"]
+    assert_equal "perfect", response[0]["status"]
+  end
+
+  test "teacher_panel_progress returns error when called by teacher not associated with section" do
+    sign_in @teacher_other
+
+    get :teacher_panel_progress, params: {
+      section_id: @section.id,
+      script_id: @script.id
+    }
+
+    assert_response :forbidden
+  end
+
+  # test "" do
+
+  # end
 
   test "script_structure returns summarized script" do
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
-    script = Script.find_by_name('algebra')
+    script = create(:script)
 
     user = create :user
     sign_in user
@@ -1160,7 +1240,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_out :user
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
-    script = Script.find_by_name('algebra')
+    script = create(:script, :with_levels, levels_count: 5)
 
     get :script_structure, params: {script: script.id}
     assert_response :success

@@ -20,8 +20,6 @@ bs:
     mailer:
       confirmation_instructions:
         subject: Code.org upute za potvrđivanje
-      reset_password_instructions:
-        subject: Code.org upute za ponovno postavljanje šifre
       unlock_instructions:
         subject: Upute za otključavanje
     omniauth_callbacks:

@@ -1,10 +1,10 @@
 ---
-title: Computer Science for Good
+title: "#학급 내 선의를 위한 CS"
 video_player: true
 theme: responsive
 social:
   og:title: "#CSforGood in your class"
-  og:description: 'Resources and activities for talking to your students about #CSforGood'
+  og:description: "Resources and activities for talking to your students about #CSforGood"
   og:image: http://code.org/images/csforgood.png
   og:image:width: 850
   og:image:height: 502
@@ -14,165 +14,158 @@ social:
   og:video:type: ''
 ---
 
-<center>
-<h1>
-  Talking about Computer Science for Good in Your Classroom
-</h1>
-</center>
+<h1>#학급 내 선의를 위한 CS</h1>
 
-<center>
-<img src="/images/fit-850/marketing/talkingtoclass.jpg">
-</center>
+<div class="col-40" style="padding-right: 20px; padding-bottom: 20px">
+    <img src="/images/csforgood_1-1.png" style="width:100%">
+</div>
 
-<br>Computer science is a foundational subject in today’s world that will benefit students in any career path. It not only gives them room to flex their creativity but also equips them with the tools to tackle some of the world’s most pressing problems.
+<div class="col-60">
+<p>올해의 이벤트 - 세계적 유행병과 경제 불황, 인종 불평등에 대한 세계적 저항-는 테크놀로지의 매우 유망함과 위험 두 가지 모두를 보여 주고 있습니다. 우리는 서로 연결되어 있기 위해 테크놀로지 (Zoom, 아무나?)에 의존하지만 우리는 또한 편향된 알고리즘이 어떻게 우리를 인종 또는 성별에 따라 갈라 놓고 있는지 보고 있습니다. 우리는 테크놀로지에 의존하여 정보를 얻고 있지만 또한 잘못된 정보가 얼마나 쉽게 확산될 수 있는지 역시 목격하고 있습니다. 우리는 테크놀로지에 의존하여 생산성을 유지하지만 또한 인터넷에 접속하지 못하는 이들은 뒤쳐진 채 남겨집니다.</p>
+<p>CS와 테크놀로지를 실제 세계에서 활용 및 응용하는 방법은 컴퓨터 과학 학습에서 매우 중요한 부분입니다. 우리는 학생들이 세계 각국의 사람들이 직면하는 문제를 이해하도록 돕고 더욱 공정하고 지속가능한 세계를 만드는 데 있어서 컴퓨터 과학이 할 수 있는 역할에 대해 더욱 깊이 생각하도록 고무시킵니다.</p>
+</div>
 
-How computer science is used and applied in the real world is a crucial part of learning computer science. That is why we’re focusing on #CSforGood as the theme for the Hour of Code this year. We can help students understand some of the challenges that people around the world face and inspire them to think more deeply about the role computer science can play in creating a more equitable and sustainable world.
-
-<center>
-<img src="/images/fit-500/marketing/sdg-new-image-csforgood.jpg">
-</center>
-
-Using the <a href="https://www.un.org/sustainabledevelopment/">United Nations’ Sustainable Development Goals (SDGs)</a> as a guide, our goal is to convey to students how computer science can make a positive impact in our world - from self-driving car technology that can make our roads safer, to data science techniques that can identify disease earlier and keep us healthier. <br><br>
-
-<center>
-<a href="https://www.code.org/oceans"><img src="/images/fit-700/marketing/ai-oceans-csforgood.png"></a>
-</center>
-
-<br>When considering CS for Good, we were inspired to think about the potential of Artificial Intelligence, and are pleased to introduce Code.org's brand-new Hour of Code activity: <a href="https://www.code.org/oceans">AI for Oceans</a>. In this activity, students will learn about AI, machine learning, training data, and bias, all while exploring ethical issues and how AI can be used to address world problems. It's also just one example of how CS is about much more than coding. Enjoy this first step in a new journey to teach more about AI!<br>
-
-<a id="prompts"></a>
-
-# Example #CSforGood discussion prompts
-Here are some themes and questions to spark discussion in your classroom about the role of technology in creating positive social change. For a deeper discussion, pair these  prompts with <a href="#articles">stories of CS for Good in the real-world</a>.
-
-## **Technology can be part of the solution.**
-While large, systemic challenges like poverty and environmental sustainability often require attitude shifts, wide-scale cooperation, and in some cases, personal or collective sacrifice, technology can help jumpstart efforts, detect problems, and ease barriers.
-
-### *Questions or prompts for discussion*:
-- Think of some challenges faced by people in your school, neighborhood, city, or anywhere else in the world. What are some solutions people have come up with to solve those problems?
-- How can computer science be combined with other efforts to address different parts of the problem?
-- Are there any issues you think technology can’t help solve? Why or why not?
-
-## **Computer science is helping address challenges, big and small, all around the world.**
-Whether building affordable technology to help farmers in sub-Saharan Africa, programming white blood cells to fight cancer, or revolutionizing the packaged foods industry with artificial intelligence, people are using CS in creative ways to solve problems and provide opportunities for others.
-
-### *Questions or prompts for discussion*:
-- Can you think of any problems in your own life that could be solved or helped using computer science?
-- What’s a recent example you’ve seen where technology was used to help solve a pressing problem somewhere in the world?
-- Do you think there are ways to use computer science in addressing big issues like healthcare, access to clean water, or poverty?
-
-Note for teachers: Use the above articles OR find a few of your own and distribute them to students to read beforehand. Then, use them to structure your discussion.
-
-## **With great power comes great responsibility.**
-Computer science can be a source of positive change...or it can create new challenges. By recognizing that CS, like any tool, requires thoughtfulness and ethical responsibility, we can empower students to think critically and work on solving problems holistically.
-
-### *Questions or prompts for discussion*:
-- Should there be rules or guidelines in place for how to use computer science to solve big issues?
-- If so, why or why not?
-- Can you brainstorm any?
-
-## **Today’s students will be tomorrow’s problem-solvers, innovators, and decision-makers.**
-The more accessible CS education is, the more students we can reach and the more inclusive, diverse, and impactful tomorrow’s technology and solutions will be.
-
-### *Questions or prompts for discussion*:
-- Why is it important that everyone has access to learn computer science?
-- What do you think might happen to solutions and programs if only the same kind of person studied computer science?
-- Can you think of what you might say to someone to encourage them to learn computer science?
-
----
-
-<a id="activities"></a>
-
-# CS for Good-Inspired Hour of Code Activities
-If you're looking for an engaging way to introduce your students to the concept of CS for Good, there are countless tutorials and activities to choose from!
-
-## Beginner Activities
-For students who are new to computer science, these activities will help them develop a basic understanding of CS concepts.
-
-| Activity                                                                                                                                       | Description                                                                                                                                                                                                                                                                                                                                                                                                   | Grades                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| [Beach Cleanup with Kodable (Kodable)](https://www.kodable.com/hour-of-code#beach-cleanup)                                                     | Learn to program using basic commands and clean up the beach to protect ocean life.                                                                                                                                                                                                                                                                                                                           | Grades 2+                                                               |
-| [Imagine a World (Scratch)](https://scratch.mit.edu/projects/editor/?tutorial=imagine)                                                         | Imagine a world where anything is possible, then bring it to life with Scratch!                                                                                                                                                                                                                                                                                                                               | Grades 2+                                                               |
-| [Minecraft Hour of Code: AI for Good (Microsoft: Education Edition)](https://education.minecraft.net/hour-of-code)                             | Program the Minecraft Agent to collect data about forest fires. Then write code to help prevent the spread of fire, save the village, and bring life back to the forest. Learn coding basics and explore a real-world example of artificial intelligence. Requires client download.                                                                                                                           | Grades 2+                                                               |
-| [AI for Oceans](https://www.code.org/oceans)                                                                                                   | Students will learn about AI, machine learning, training data, and bias, all while exploring ethical issues and how AI can be used to address world problems.                                                                                                                                                                                                                                                 | Grades 3+                                                               |
-| [Code Your Hero (Google)](https://csfirst.withgoogle.com/c/cs-first/en/code-your-hero/code-your-hero/introduction-from-hero-to-superhero.html) | Turn an everyday hero from your life or community into a superhero by programming them to fly over buildings, spin, work with a sidekick, and score points by touching objects in a game. In Code Your Hero, show off your hero's special powers and your own creativity with CS First and Scratch.                                                                                                           | Grades 2-8                                                              |
-| [Responsible Consumption and Production (Tynker)](https://www.tynker.com/hour-of-code/responsible-consumption-and-production)                  | Part of the UN Sustainable Development Goals project, this coding prompt shows off projects exploring issues surrounding recycling and reuse. Beginners can play with working projects and advanced programmers can create their own projects from scratch.                                                                                                                                                   | Grades 2-8                                                              |
-| [Security Siege (Code Avengers)](https://www.codeavengers.com/impacts-of-computing/300#1.1.1)                                                  | Join Niko and Sakura on their virtual reality journey to Tubrosos Castle. You will expose the poor security systems used at the castle and learn how to avoid becoming the victim of a scam.                                                                                                                                                                                                                  | Grades 2-8                                                              |
-| [Codesters: Code Your Own PSA (Codesters)](https://www.codesters.com/curriculum/hour-of-code-2019/Create+a+PSA/1/)                             | Learn the basics of coding in Python while creating your own Public Service Announcement. Choose a topic you find important and design you own animated or interactive PSA to share critical information about how to make a positive impact on the world.                                                                                                                                                    | Grades 6+                                                               |
-| [Plastic Pollution PSA (Vidcode)](https://www.vidcode.com/project/end-plastic-pollution)                                                       | The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sine waves and customized emojis to make a unique project.                                                     | Grades 6+                                                               |
-| [Vidcode: Deal With It (Vidcode)](https://www.vidcode.com/project/dealwithit)                                                                  | Start coding for good by creating animations featuring notable women leaders and quotes that express their point of view.                                                                                                                                                                                                                                                                                     | Grades 6+                                                               |
-| [Eco Warriors #Trashtag](https://make.gamefroot.com/#/learn/eco-warriors)                                                                      | Code your own game and raise awareness for protecting our environment.                                                                                                                                                                                                                                                                                                                                        | Grades 6+                                                               |
-| [Vidcode: Map Your Community](https://www.vidcode.com/project/community-map)                                                                   | Collect and analyze data for community engagement, by coding your own community map!                                                                                                                                                                                                                                                                                                                          | Grades 6+                                                               |
-| [Vidcode: Climate Science & Code (Vidcode)](https://www.vidcode.com/project/hourofcode-science)                                                | Students research a fact about the Earth's climate, engaging with the work of scientists and artists in response to climate change. Students then take their research and plan a video sharing their fact. Videos can be about understanding climate change and its effects, public response to climate change, how climate change impacts everyday life, and what actions can you take to make a difference. | Grades 6+                                                               |
-| [Mosquito patrol (Raspberry Pi)](https://projects.raspberrypi.org/en/projects/cd-sebento-scratch-1)                                            | Make a game where you protect people from malaria by making a parrot catch mosquitoes.                                                                                                                                                                                                                                                                                                                        | Grades 6-8                                                              |
-| [Digital Citizenship: Online Safety (Vidcode) (BrainPOP)](https://go.brainpop.com/vidcode/onlinesafety)                                        | Creative Coding - developed with Scratch and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular topics. Projects are scaffolded so that teachers of any subject - regardless of prior experience - can easily introduce coding. The project-based approach positions coding as a means of self-expression for students and gives them a creative way to show what they know.    | Grades 6-8                                                              |
-| [Digital Citizenship: Online Safety (Scratch) (BrainPOP)](https://go.brainpop.com/scratch/onlinesafety)                                        | Creative Coding - developed with Scratch and Vidcode - pairs block- and text-based projects with hundreds of cross-curricular topics. Projects are scaffolded so that teachers of any subject - regardless of prior experience - can easily introduce coding. The project-based approach positions coding as a means of self-expression for students and gives them a creative way to show what they know.    | Grades 6-8|                                                           | |
-| [Aqueducts (Terminal Two, Endless)](https://terminaltwo.com/hourofcode/aqueducts)                                                              | In this puzzle game, you're the hero bringing water back to your village! Make your way through the levels in this self-guided isometric experience. Levels will start simple, exposing players to basic coding fundamentals. As you play, you will learn more complex coding techniques. Afterwards, design and build your own levels and puzzles to share.                                                  | Grades 6-8                                                              |
-
-
+<div style="clear:both"></div>
 
 <br>
 
+<div class="col-100" style="text-align:center">
+  <a href="#discuss">토론 프롬프트</a> | <a href="#tutorials">#CSforGood 튜토리얼 및 레슨 플랜</a> | <a href="#realworld">#실제 세상에서 CSforGood</a> | <a href="#reachout">문의!</a>
+</div>
 
-## Comfortable Activities
-These activities are best for students who have already developed a basic understanding of computer science concepts. Comfortable activities are great for students looking to deepen their knowledge!
+<a id="discuss"></a>
+<h2>#CSforGood에 관해 학생들과 함께 토론</h2>
+<p>다음은 긍정적인 사회 변화를 만드는데 있어서 컴퓨터 과학의 역할에 관한 학급토론에 활기를 불러 일으켜 줄 테마와 질문들입니다. <a href="/files/csforgood-discussion-2020.pdf" target="_blank">이 토론 가이드를 PDF로 다운로드하세요</a>.</p>
 
-| Activity                                                                                                                                              | Description                                                                                                                                                                                                                                                              | Grades     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
-| [Affordable and Clean Energy (Tynker) *(HTML)*](https://www.tynker.com/hour-of-code/affordable-and-clean-energy-html)                                 | Part of the UN Sustainable Development Goals project, this coding project has you create your own webpage exploring renewable energy, energy efficiency, and access to energy. Design your own page showcasing sustainability issues!                                    | Grades 2+  |
-| [Affordable and Clean Energy (Tynker)](https://www.tynker.com/hour-of-code/affordable-and-clean-energy)                                               | Part of the UN Sustainable Development Goals project, this coding prompt shows off projects exploring renewable energy, energy efficiency, and access to energy. Readers can play with working projects and advanced programmers can create their own original projects. | Grades 2-8 |
-| [Life on Land (Tynker)](https://www.tynker.com/hour-of-code/life-on-land)                                                                             | Part of the UN Sustainable Development Goals project, this coding prompt shows off projects exploring the importance of forests to the world's ecosystem. Readers can play with working projects and advanced programmers can create their own original projects.        | Grades 2-8 |
-| [Change the World (Tynker)](https://www.tynker.com/hour-of-code/change-the-world)                                                                     | Create a project that shows how you would change the world! Whether you are passionate about recycling or have an idea to achieve world peace, share your vision with code!                                                                                              | Grades 2-8 |
-| [Responsible Consumption and Production (Javascript) (Tynker)](https://www.tynker.com/hour-of-code/responsible-consumption-and-production-javascript) | Part of the UN Sustainable Development Goals project, this coding prompt shows off a short project exploring recycling and reuse. Readers can create their own game by expanding the project.                                                                            | Grades 6+  |
-| [Life on Land (Python) (Tynker)](https://www.tynker.com/hour-of-code/life-on-land-python)                                                             | Part of the UN Sustainable Development Goals project, this Python project will have you create your own tree-planting game.                                                                                                                                              | Grades 6+  |
+<h3><strong>문제를 감지하기 위해 CS를 배웁니다.</strong></h3>
 
+<div class="educate-callout-box" style="width:300px; height:235px; background-color:#7665a0; color:#ffffff; padding:20px; border-radius:15px; float:right; margin-left:20px">
+  <p><strong>올해 수업은 가상 수업이었습니까?</strong></p>
+  <p>학급을 둘 씩 짝을 이루게 하거나 또는 그룹으로 나눠 보세요.</p>
+  <p>학급을 나누는 것이 가능하지 않으면 공유 문서 또는 슬라이드 데크 (<a href="https://docs.google.com/presentation/d/1pGcC3Nn_qCvXIChdatuVWqVwnGi6HOt8qJqSwB5YU6w/edit#slide=id.p" target="_blank" style="color:#ffffff">템플릿</a>)을 사용하고 각 그룹에 문서의 일부 섹션 또는 단일 슬라이드를 지정해 줍니다.</p>
+</div>
+
+<p>우리가 살고 싶은 사회를 만드는 일은 우리가 해결해야 하는 문제에 대한 이해에서 시작합니다. 테크놀로지로 문제를 감지하고 심지어 추측할 수 있습니다.</p>
+<p>학생들에게<a href="https://www.reuters.com/article/us-alphabet-google-quake/google-turns-android-phones-into-earthquake-sensors-california-to-get-alerts-idUSKCN2571TN" target="_blank">지진을 감지하기 위해 스마트폰을 사용하는 방법</a>에 관한 스토리를 읽게하고 그 다음, 짝 또는 그룹과 함께 아래 문제에 답을 하게 하세요. 그 다음, 학급 토론을 합니다.</p>
+<p><i>토론 질문:</i></p>
+<ul>
+<li>이 글이 이야기하고 있는 기술은 무슨 기술입니까?</li>
+<li>구글은 어떤 문제를 해결하려 합니까? 왜 이것이 중요한가요?</li>
+<li>컴퓨터 과학 또는 기술이 문제를 감지하는데 도움을 줄 수 있는 다른 방법은 무엇입니까?</li>
+</ul>
+
+<h3><strong>우리는 창의적인 솔루션을 찾기 위해 CS를 배웁니다</strong></h3>
+<p>컴퓨터 과학 학습은 솔루션을 찾기 위한 기초를 제공합니다. 각 산업과 생활의 여러 측면에서 우리가 그 기초 위에서 솔루션을 설계할 수 있는 것은 우리의 창의성 덕분입니다.</p>
+<p>학생들에게 <a href="https://www.technologyreview.com/2020/09/22/1008675/ai-planners-minecraft-urban-design-healthier-happier-cities/" target="_blank">도시 계획자가 AI 마인크래프트를 사용하여 더 나은 도시를 설계하는 방법</a>에 관한 스토리를 읽게 하고 그 다음, 짝 또는 그룹과 함께 아래 문제에 답을 하게 하세요. 그 다음, 학급 토론을 합니다.</p>
+<p><i>토론 질문:</i></p>
+<ul>
+<li>이 글이 이야기하고 있는 기술은 무슨 기술입니까?</li>
+<li>참가자는 어떤 도전을 해결하려 하고 있습니까?</li>
+<li>매일 사용하는 기술에 대해 생각해 보세요. 어떤 도움을 줍니까? 어떤 문제 또는 도전을 해결하는데 도움을 줍니까?</li>
+<li>문제를 해결하기 위해 의도했던 방식이 아닌 다른 방식으로 기술을 사용했던 적이 있었어요?</li>
+</ul>
+
+<h3><strong>서로 연결되기 위해 CS를 배웁니다</strong></h3>
+
+<iframe src="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/" id="cbsNewsVideo" allowfullscreen allow="fullscreen" frameborder="0" width="325px" height="183px" style="float:right; margin-left:20px" mark="crwd-mark"></iframe>
+
+<p>동영상 채팅 및 수업부터 서로 떨어져 있어도 함께 노래 부를 수 있게 해주는 앱까지, 사람들은 세계적 전염병 속에서도 우리를 커뮤니티의 일부 외형과 계속 연결되어 있게 하는 기술적 혁신을 이루고 있습니다. 또한, 우리의 통합을 위해 기술을 인도적으로 활용하는 방식을 계속해서 찾을 것입니다.</p>
+<p>학생들에게 (<a href="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/?intcid=CNM-00-10abd1h" target="_blank">CBS 뉴스의 동영상 원본에 링크</a>) 치노 밸리 연합 학군 학생들이 covid-19로 인해 그들의 연례 합창제가 취소된 후 화상 회의를 통해 "오버 더 레인"
+의 아카펠라 버전을 부르는 동영상을 시청하게 합니다. 그 다음, 짝 또는 그룹과 함께 아래 문제에 답을 하게 하세요.</p>
+<p><i>토론 질문:</i></p>
+<ul>
+<li>코비드로 인한 외출제한 명령에도 불구하고 학생들이 함께 노래를 부를 수 있게 한 기술을 모두 말하세요.</li>
+<li>그러한 기술을 사용합니까? 얼마나 자주 사용합니까? 일주일에 몇 번? 매일?</li>
+<li>최근에 예술작품을 만들기 위해 기술을 사용했습니까? 음악 녹음? 시 쓰기? 친구와 게임을 하기 위해? 가족과 말하기 위해? 이러한 기술에 접근할 수 없으면, 어떻게 할 거예요?</li>
+<li>누구나 이러한 기술에 접근해야 합니까? 왜 그렇습니까 또는 왜 그렇지 않습니까?</li>
+</ul>
+
+<h3><strong>공평과 포용성을 보장하기 위해 CS를 배웁니다</strong></h3>
+<p>유행병은 정보격차를 전에 없이 드러내고 있습니다. 우리 모두가 포함되고 우리의 요구가 반영되는 미래를 건설하는데 참여하기 위해 누구나 컴퓨터 과학을 배울 기회를 가져야 합니다.</p>
+<p>학생들에게<a href="https://www.therobotreport.com/princeton-tool-helps-clear-biases-computer-vision/" target="_blank">인공지능(AI)을 교육할 때 사용하는 이미지 세트에서 로봇이 잠재적 편향을 제거하도록 돕는 새로운 툴</a>에 관한 스토리를 읽게하고 그 다음, 짝 또는 그룹과 함께 아래 문제에 답을 하게 하세요. 그 다음, 학급 토론을 합니다.</p>
+<ul>
+<li>이 툴이 무슨 일을 하며 어떤 문제를 해결하려고 합니까?</li>
+<li>'오픈 소스"의 의미는 무엇이라고 생각하세요? 연구원이 그들의 툴을 오픈 소스로 만드는 이유는 무엇입니까?</li>
+<li>이미지 세트에서 이 글에서 언급한 편향의 예는 무엇입니까? 다른 예는 없나요?</li>
+<li>그러한 편향을 식별하는 것이 중요한 이유는 무엇입니까? 이것이 공평 및 포용성과 어떻게 관련이 있습니까?</li>
+</ul>
+
+<a id="tutorials"></a>
+<h2>#CSforgood 튜토리얼 및 레슨 플랜</h2>
+<p>학생들에게 #CSforGood의 개념을 소개하는 매력적인 방법을 찾고 있다면, 선택할 수 있는 튜토리얼과 활동이 셀 수 없이 많습니다!</p>
+
+<h3>구성:</h3>
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+
+<a href="https://code.org/oceans" target="_blank"><img src="/images/tutorials/hoc2019/oceans.png" style="width: 100%"></a>
 <br>
+<a href="https://code.org/oceans" target="_blank"><h3 style="color:#7665a0"><strong>바다환경을 위한 AI </strong></h3></a>
+<p>컴퓨터 과학은 코딩 외 훨신 더 많은 것에 관한 학문입니다! 윤리적 문제와 AI를 사용하여 세계적 문제를 해결하는 방법을 탐구하면서, AI와 머신 러닝, 교육 데이터, 편견에 관해 배웁니다.</p>
+<p><i>출처 Code.org. 3학년 이상.</i></p>
 
+</div>
 
-## Robotics Activities
-Built around various robotics or physical computing sets, these tutorials are great for a hands-on computer science experience.
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-| Activity                                                                                                                 | Description                                                                                                                                                                                                                                                                                                                            | Grades                |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| [KIBO Snowplow - Important Jobs in the Community](https://kinderlabrobotics.com/hour-of-code-the-kibo-snowplow/)         | The city is covered in snow, and we need to design a KIBO snowplow to help clean up! Students will engage in the engineering design process as they design, test, and improve snowplow robots that can help clean up the cotton-ball snow. Students will also learn more about the many important jobs that make a community function. | Pre-reader to Grade 5 |
-| [micro:bit: coding towards Global Goal 14, Life Below Water](https://microbit.org/do-your-bit/goal-14-life-below-water/) | Code your way to preserving the oceans using micro:bit. Find out more about Global Goal 14, Life Below Water and learn to code a sea turtle beach light.                                                                                                                                                                               | Grades 2-8            |
-| [micro:bit: coding towards Global Goal 14, Life on Land](https://microbit.org/do-your-bit/goal-15-life-on-land/)         | Code your way to protecting local wildlife using micro:bit. Find out more about Global Goal 15, Life on Land and learn to code a wildlife species counter.                                                                                                                                                                             | Grades 2-8            |
-| [Sphero Goes Green](https://edu.sphero.com/cwists/preview/38663-sphero-goes-greenx)                                      | Once you've learned the basics of computer science, take your understanding a step further. In this activity, learn how to use a counting number variable to keep track of all your classrooms recycling.                                                                                                                              | Grades 2-8            |
+<a href="https://aka.ms/HourofCode2020" target="_blank"><img src="/images/tutorials/hoc2020/mee_empathy.jpg" style="width: 100%"></a>
+<br>
+<a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:#7665a0"><strong>마인크래프트 두 개 마을 이야기</strong></h3></a>
+<p>코드의 힘을 사용하여 두 개 마을을 하나로 모으세요. 플레이어들은 이웃들에 대한 동정과 사랑을 경험하고, 협동과 포용에 대해 배우고, 우리 모두를 고유하고 특별하게 만드는 다양성을 받아들이게 될 것입니다.</p>
+<p><i>출처 마인크래프트: 교육 에디션. 2학년 이상.</i></p>
 
-<a id="articles"></a>
+</div>
 
-# Using CS for Good in the Real World
-Every day, organizations and individuals are finding new ways to use computer science to help solve the world's challenges. Here are some real-world examples to take a look at with your classroom.
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-Try using the <a href="#prompts">Example Discussion Prompts</a> with your classroom to investigate how these solutions are using CS for Good, and if there's room for improvement.
+<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><img src="/images/tutorials/hoc2020/csfirst_unplugged.png" style="width: 100%"></a>
+<br>
+<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:#7665a0"><strong>CS 첫 번째 언플러그드</strong></h3></a>
+<p>컴퓨터 또는 인터넷이 없어요? 문제 없습니다. CS 첫 번째 언플러그드 활동을 해 보며 비록 서로 떨어져 있어도 서로 연결된 상태를 유지하도록 돕는 등 컴퓨터 과학이 어떻게 문제를 해결하는지 탐구합니다. "플러그드 인" 스크래치 활동 역시 사용할 수 있습니다!</p>
+<p><i>출처 구글. 2 - 8학년</i></p>
 
-## Environment
-- [Could a network of sensors give first responders more time to control wildfires?](https://www.fastcompany.com/90424260/could-a-network-of-sensors-give-first-responders-more-time-to-control-wildfires)
-- [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)
+</div>
+<div style="clear: both; margin-bottom: 15px"></div>
 
-## Health and fitness
-- [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)
-- [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)
-- [Scientists develop robotic shorts that make it easier to walk and run](https://www.theverge.com/2019/8/19/20811832/exosuit-shorts-running-walking-darpa-harvard-university)
-- [First Human CRISPR Trial in the US Aims to Cure Inherited Blindness](https://singularityhub.com/2019/07/28/first-human-crispr-trial-in-the-us-aims-to-cure-inherited-blindness/)
-- [MIT AI tool can predict breast cancer up to 5 years early, works equally well for white and black patients](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)
+<h3>더 많은 #CSforgood 튜토리얼 및 레슨 플랜:</h3>
+<p><a href="https://pbskids.org/scigirls/games/code-quest" target="_blank">SciGirls: 코드 퀘스트</a> (SciGirls/Twin Cities PBS): 이 온라인 코딩 어드벤처에서는 잠수함 서비가 바닷 속을 탐구하며 코드를 사용해 다양한 아이템을 찾고 해저에 관한 과학 데이터를 수집합니다. 2-8학년 초보자를 위한 자기 주도형 튜토리얼.</p>
+<p><a href="https://www.vidcode.com/project/climate-clock" target="_blank">기후 시계</a> (Vidcode): 이 아워오브코드 활동에서, 학생들은 자신의 기후 시계를 만드는 법을 배울 것입니다. 객체와 속성, 변수, 함수, 루프를 활용하고 텍스트를 원하는 대로 구성하여 이 세상을 위한 메시지와 미래를 위한 희망을 전달할 것입니다. 6학년 이상의 초보자를 위한 자기 주도형 튜토리얼.<p>
+<p><a href="https://www.codespeaklabs.com/blog/code-a-happy-place-meditation-app" target="_blank">행복한 장소 명상 앱 코딩</a> (CodeSpeak Labs): 올해는 학생들에게 스트레스가 많은 한 해였지만 마음을 다스리는 연습도 하나의 도전이 될 수 있습니다. "행복한 장소"로 가게 해 줄 명상 앱 프로그래밍 방법을 배워보세요. 2-8학년 초보자용. 교사 지도 튜토리얼로서 좋습니다.</p>
+<p><a href="https://edu.irobot.com/learning-library/robot-feelings-the-kind-playground" target="_blank">로봇의 감정: 상냥한 운동장</a> (iRobot): 로봇은 친구와 놀 때 상냥하게 구는 법을 배울 것입니다. 이 게임에서, 로봇이 잇달아 상냥한 결정을 네 번 내릴 수 있게 연습시킵니다. 로봇이 나쁜 선택을 하면, 처음부터 다시 시작해야 합니다! 함께 플레이해 보세요! 유치원생-5학년 초보자용 루트 로봇은 선택사항입니다.</p>
+<p><a href="https://microbit.org/news/2020-05-30/microbit-at-home-saving-sea-turtles/" target="_blank">바다 거북이 구하기</a> (micro:bit): 저전력의 빨간 색 LED 해변 조명의 원형을 만들어 해변 경로에 빛을 비추고 또한 바다 거북이를 안전하게 해주는데 사용할 수 있습니다. 6-8학년 초보자용 가정 학습용으로 좋음.</p>
+<br> 
+<p>더 많은 #CSforGood-주제 튜토리얼을 포함하여 아워오브코드 활동 및 레슨 플랜의 전체 목록은 <a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>에서 보세요!</p>
 
-## Public Safety/Security
-- [The Pentagon has a laser that can identify people from a distance—by their heartbeat](https://www.technologyreview.com/s/613891/the-pentagon-has-a-laser-that-can-identify-people-from-a-distanceby-their-heartbeat/)
-- [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?) (More than half of battlefield casualties occur when soldiers deliver supplies in combat zones).
-- [The latest tool to help police develop empathy for the public: Virtual reality headsets](https://www.washingtonpost.com/technology/2019/09/20/latest-tool-help-police-develop-empathy-public-virtual-reality-headsets/)
-- [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)
-- [The First Public Schools In The US Will Start Using Facial Recognition Next Week](https://www.buzzfeednews.com/article/daveyalba/lockport-schools-facial-recognition-pilot-aegis)
-- [AI is being used to rescue children from sex trafficking](https://qz.com/1636498/thorn-uses-amazon-powered-ai-to-save-minors-from-sex-trafficking/)
+<a id="realworld"></a>
+<h2>심화: #CSforgood을 실제 세상에서 사용하는 방법</h2>
+<p>매일 여러 조직과 개인들이 컴퓨터 과학을 사용하여 세계의 문제를 해결하는 새로운 방법을 찾고 있습니다. 다음은 교실에서 살펴볼 수 있는 실세계의 예입니다.</p>
 
-## Manufacturing/Infrastructure/Robotics
-- [MIT’s robot boats can self-assemble to build bridges, stages or even markets](https://techcrunch.com/2019/06/05/mits-robot-boats-can-self-assemble-to-build-bridges-stages-or-even-markets/)
-- [The Futuristic Tech Disrupting Real Estate and Construction](https://singularityhub.com/2019/05/31/the-futuristic-tech-disrupting-real-estate-and-construction/)
-- [Inspection robots are climbing the walls to monitor safety conditions in hazardous locations](https://techcrunch.com/2019/05/02/inspection-robots-are-climbing-the-walls-to-monitor-safety-conditions-in-hazardous-locations/?)
-- [Boston Dynamics’ Robots are Preparing to Leave the Lab — is the World Ready?](https://www.theverge.com/2019/7/17/20697540/boston-dynamics-robots-commercial-real-world-business-spot-on-sale)
+<h3>문제 감지</h3>
+<ul>
+<li><a href="https://www.axios.com/spread-covid-19-smart-thermometers-b0694e9b-f287-4496-8a9d-235b19c906eb.html" target="_blank">COVID-19 확산을 스마트 체온계로 예측</a></li>
+<li><a href="https://spectrum.ieee.org/the-human-os/biomedical/devices/scientists-can-now-take-virtual-walks-through-human-cells" target="_blank">과학자는 이제 인간의 세포를 가상으로 상세히 관찰할 수 있습니다.</a></li>
+<li><a href="https://www.bbc.com/news/technology-54538228" target="_blank">쿠키 그림에서 알츠하이머를 발견하는 AI</a></li>
+</ul>
 
-## Research
-- [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)
-- [How Cutting-Edge Tech Is Empowering Ancient Archaeology](https://onezero.medium.com/how-cutting-edge-tech-is-empowering-ancient-archaeology-891a37cc16cd)
+<h3>창의적인 솔루션 찾기</h3>
+<ul>
+<li><a href="https://www.engadget.com/alphabets-loon-and-att-will-tackle-global-crises-with-internet-balloons-130050805.html" target="_blank">구글의 모회사는 케냐의 리프트 밸리에 인터넷을 보급하기 위해 바다에  '떠다닐 휴대폰 탑"을 풍선에 실어 날리고 있습니다.</a></li>
+<li><a href="https://www.theverge.com/2020/10/19/21522863/health-data-records-covid-coronavirus-model-nih-privacy-n3c" target="_blank">미국의 파편화된 헬스 데이터를 통합하려는 야심찬 노력</a></li>
+<li><a href="https://www.theverge.com/21523976/virtual-power-plants-solar-energy-grid-resilience-climate-change" target="_blank">차세대 발전소는 가상일 것입니다.</a></li>
+</ul>
 
+<h3>서로 연결</h3>
+<ul>
+<li><a href="https://www.wbur.org/artery/2020/10/16/1990s-tech-helping-musicians-collaborate-apart" target="_blank">1990년대 기술이 서로 떨어져 있어도 시간에 맞춰 연주할 수 있게 음악가를 돕고 있습니다.</a></li>
+<li><a href="https://fabrydiseasenews.com/2020/05/21/video-games-connect-chronically-ill-children-isolated-at-home-hospital/" target="_blank">비디오 게임이 만성질환으로 집과 병원에서 고립되어 있는 아동을 서로 연결시켜 줍니다.</a></li>
+</ul>
 
+<h3>공평과 포용성 보장</h3>
+<ul>
+<li><a href="https://slate.com/technology/2020/09/synthetic-data-artificial-intelligence-bias.html" target="_blank">가짜 데이터가 만약 우리가 그냥 그대로 놔두면, 머신 러닝의 편향 문제를 해결해 줄 수 있습니다.</a></li>
+<li><a href="https://www.nbcnews.com/news/us-news/native-american-teachers-entrepreneurs-seek-new-ways-close-digital-divide-n1243746" target="_blank">미국 원주민 교사와 사업가가 정보 격차를 좁히기 위한 새로운 방법을 찾고 있습니다.</a></li>
+<li><a href="https://www.wired.com/story/accessibility-video-games-ablegamers/" target="_blank">게이머는 접근성에 관한 한 자신의 길을 구축합니다.</a></li>
+</ul>
+
+<a id="reachout"></a>
+<h2>문의!</h2>
+<p>학생들이 #CSforGood! 을 어느 정도로 흥미를 갖고 하는지 알고 싶습니다! #CSforGood 해시태그를 사용하거나 또는 #CSforGood 스토리를 <a href="mailto:csforgood@code.org">csforgood@code.org</a>으로 보내 주세요.

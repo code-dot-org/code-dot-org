@@ -1,5 +1,5 @@
 name 'U4 evaluation q1’
 question ‘Have you ever investigated how digital security and encryption work?’
-answer ‘Yes! I am super familiar with security and encryption’, weight: 1, stage_name: ‘Lessons 1 - 4: Data in the Real World’
-answer ‘I know these terms and generally know why they exist, but I am not sure about how encryption work’, weight: 1, stage_name: ‘Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption’
-answer ‘Nope— I\’m not familiar with encryption’, weight: 3, stage_name: ‘Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption’
+answer ‘Yes! I am super familiar with security and encryption’, weight: 1, lesson_name: ‘Lessons 1 - 4: Data in the Real World’
+answer ‘I know these terms and generally know why they exist, but I am not sure about how encryption work’, weight: 1, lesson_name: ‘Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption’
+answer ‘Nope— I\’m not familiar with encryption’, weight: 3, lesson_name: ‘Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption’

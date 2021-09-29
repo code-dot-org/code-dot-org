@@ -94,7 +94,7 @@ W tym roku uczyńmy tę inicjatywę jeszcze większą. Namawiam Was do przyłąc
 
 Opowiedz o nas. Zorganizuj wydarzenie. Poproś lokalną szkołę o rejestrację. Albo sam spróbuj Godziny Kodowania — każdy może odnieść korzyści z nauki podstaw.
 
-Zacznij na http://hourofcode.com/{{ country }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -134,7 +134,7 @@ Dlatego cała nasza szkoła dołącza do największego wydarzenia edukacyjnego w
 
 To jest szansa na zmianę przyszłości edukacji w [NAZWA MIASTA].
 
-Odwiedź http://hourofcode.com/{{ country }} po szczegółowe informacje i pomagaj promować to przedsięwzięcie. <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 

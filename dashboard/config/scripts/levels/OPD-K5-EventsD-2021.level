@@ -1,0 +1,115 @@
+<Bounce>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "basketball",
+    "timeout_failure_tick": "100",
+    "scale": {
+      "snapRadius": 2
+    },
+    "ball_direction": "4.0369465598628835",
+    "short_instructions": "Attach a block to the `when ball hits hand` event to ensure the ball reaches the basket.",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[32,0,0,0,0,0,0,0],[0,0,0,0,0,0,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0]]",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "fail_on_ball_exit": "false",
+    "use_flag_goal": "false",
+    "long_instructions": "**Example student lesson level shown here:  Course D - Lesson 6, Level 3:  Events in Bounce**.\r\n\r\nWe're going to send a basketball flying down towards the hand.  Attach a block to the `when ball hits hand` event to ensure the ball reaches the basket.",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You do not need to move the hand to solve this puzzle.\",\"hint_id\":\"courseD_bounce_events5s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6c38d5c84c93f48e9bfa58ae73ba71bc/courseD_bounce_events5s_2018.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Make sure you have added this code to your workspace:\\n\\n<xml>  <block type=\\\"bounce_whenPaddleCollided\\\" deletable=\\\"false\\\"> <next> <block type=\\\"bounce_bounceBall\\\"/></next></block></xml>\",\"hint_id\":\"courseD_bounce_events5s_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6e162c30594e63c89115cc2cad70d5b6/courseD_bounce_events5s_2018.mp3\"}]",
+    "project_template_level_name": "courseD_bounce_events_template_2021",
+    "parent_level_id": 26735,
+    "name_suffix": "_2021",
+    "embed": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "free_play": "false",
+    "encrypted": "false",
+    "preload_asset_list": null
+  },
+  "game_id": 22,
+  "published": true,
+  "created_at": "2021-06-09T18:19:12.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-04 01:11:26 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:23:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:07:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:14:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:17:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:48:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"authored_hints\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-05 00:38:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-29 20:32:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-06-09 18:19:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-09 18:42:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-09 18:42:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+        <block type="bounce_whenLeft" deletable="false" y="85px" x="15px">
+          <next>
+            <block type="bounce_moveLeft"/>
+          </next>
+        </block>
+        <block type="bounce_whenRight" deletable="false" y="85px" x="200px">
+          <next>
+            <block type="bounce_moveRight"/>
+          </next>
+        </block>
+        <block type="bounce_whenPaddleCollided" deletable="false" y="185px" x="15px"/>
+        <block type="bounce_whenWallCollided" deletable="false" y="185px" x="200px"/>
+        <block type="bounce_whenBallMissesPaddle" deletable="false" y="325px" x="15px"/>
+        <block type="bounce_whenBallInGoal" deletable="false" y="325px" x="200px"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="bounce_moveLeft"/>
+        <block type="bounce_moveRight"/>
+        <block type="bounce_bounceBall"/>
+        <block type="bounce_playSound"/>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="bounce_bounceBall"/>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+        <block type="bounce_whenLeft" deletable="false" y="85px" x="15px">
+          <next>
+            <block type="bounce_moveLeft"/>
+          </next>
+        </block>
+        <block type="bounce_whenRight" deletable="false" y="85px" x="200px">
+          <next>
+            <block type="bounce_moveRight"/>
+          </next>
+        </block>
+        <block type="bounce_whenPaddleCollided" deletable="false" y="185px" x="15px">
+          <next>
+            <block type="bounce_bounceBall"/>
+          </next>
+        </block>
+        <block type="bounce_whenWallCollided" deletable="false" y="185px" x="200px"/>
+        <block type="bounce_whenBallMissesPaddle" deletable="false" y="325px" x="15px"/>
+        <block type="bounce_whenBallInGoal" deletable="false" y="325px" x="200px"/>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Bounce>

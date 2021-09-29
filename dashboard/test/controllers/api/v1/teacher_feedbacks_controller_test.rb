@@ -8,6 +8,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   PERFORMANCE1 = 'performanceLevel1'
   PERFORMANCE2 = 'performanceLevel3'
   PERFORMANCE3 = 'performanceLevel4'
+  REVIEW_STATE = TeacherFeedback::REVIEW_STATES.keepWorking
 
   self.use_transactional_test_case = true
   setup_all do
@@ -32,6 +33,13 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal @section.id, teacher_feedback.analytics_section_id
   end
 
+  test 'create - when review state is keepWorking, calls update_best_result with expected params' do
+    UserLevel.expects(:update_best_result).once.
+      with(@student.id, @level.id, @script.id, ActivityConstants::TEACHER_FEEDBACK_KEEP_WORKING, false)
+
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, REVIEW_STATE)
+  end
+
   test 'retrieves no content when no feedback is available' do
     sign_in @teacher
     get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
@@ -40,11 +48,12 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'can be retrieved by teacher' do
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, REVIEW_STATE)
     get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
 
     assert_equal COMMENT1, parsed_response['comment']
     assert_equal PERFORMANCE1, parsed_response['performance']
+    assert_equal REVIEW_STATE, parsed_response['review_state']
   end
 
   test 'retrieves feedback for correct student' do
@@ -237,12 +246,15 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     section2 = create :section, user: teacher2
     section2.add_student(@student)
 
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    sign_out @teacher
-    teacher_sign_in_and_give_feedback(teacher2, @student, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
-    sign_out teacher2
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT3, PERFORMANCE3)
-    sign_out @teacher
+    create :teacher_feedback, teacher: @teacher, student: @student, script: @script_level.script, level: @level, comment: COMMENT1, performance: PERFORMANCE1
+
+    feedback2 = create :teacher_feedback, teacher: teacher2, student: @student, script: @script_level.script, level: @level, comment: COMMENT2, performance: PERFORMANCE2
+    feedback2.created_at = feedback2.created_at + 1
+    feedback2.save validate: false
+
+    feedback3 = create :teacher_feedback, teacher: @teacher, student: @student, script: @script_level.script, level: @level, comment: COMMENT3, performance: PERFORMANCE3
+    feedback3.created_at = feedback3.created_at + 2
+    feedback3.save validate: false
 
     sign_in @student
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
@@ -298,16 +310,19 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_empty parsed_response
   end
 
-  test 'serializer returns teacher name' do
+  test 'serializer returns student_last_updated and is_awaiting_teacher_review' do
     @teacher1 = create :teacher, name: 'Test Name'
     @section1 = create :section, user: @teacher1
     @section1.add_student(@student)
+    user_level = create :user_level, user: @student, level: @level, script: @script
+    user_level.reload # needed to retrieve the correct updated_at date
 
     teacher_sign_in_and_give_feedback(@teacher1, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
     sign_in @student
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
 
-    assert_equal 'Test Name', parsed_response[0]['teacher_name']
+    assert_equal user_level.updated_at, parsed_response[0]['student_last_updated']
+    assert_equal false, parsed_response[0]['is_awaiting_teacher_review']
   end
 
   test 'increment_visit_count returns no_content on successful save' do
@@ -339,7 +354,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   # Note that the section that a piece of teacher feedback is explicitly associated with via section ID
   # is not (as of Feb. 2021) used in our application (we're only logging section ID for analytics purposes for now),
   # so the section created during setup_all is provided as a default.
-  def teacher_sign_in_and_give_feedback(teacher, student, script, level, script_level, comment, performance, section=@section)
+  def teacher_sign_in_and_give_feedback(teacher, student, script, level, script_level, comment, performance, review_state = nil, section=@section)
     sign_in teacher
     params = {
       student_id: student.id,
@@ -348,6 +363,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
       script_level_id: script_level.id,
       comment: comment,
       performance: performance,
+      review_state: review_state,
       analytics_section_id: section.id
     }
 

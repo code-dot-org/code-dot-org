@@ -1,4 +1,5 @@
 professional_learning_course 'CS in Algebra Legacy'
+published_state 'beta'
 
 lesson 'Course Overview', display_name: 'Course Overview', has_lesson_plan: false
 level 'PDAlg bootstrap'

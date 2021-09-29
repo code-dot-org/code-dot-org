@@ -25,7 +25,7 @@ describe('AddLevelDialog', () => {
     expect(wrapper.contains('Add Levels')).to.be.true;
     expect(wrapper.find('LessonEditorDialog').length).to.equal(1);
     expect(wrapper.find('Connect(AddLevelDialogTop)').length).to.equal(1);
-    expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
+    expect(wrapper.find('Connect(UnconnectedLevelToken)').length).to.equal(2);
     expect(wrapper.find('FontAwesome').length).to.equal(0); // no spinner
   });
 });

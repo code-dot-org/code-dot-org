@@ -203,6 +203,43 @@
         "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseF_apps_aquarium": {
+          "83e4a96aed96436c621b9809e258b309": "hal",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "teremtmény",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "egyéb"
+        },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Nyertél!"
         }
       }
     }

@@ -1139,7 +1139,7 @@ FactoryGirl.define do
   factory :foorm_library_question, class: 'Foorm::LibraryQuestion' do
     sequence(:library_name) {|n| "surveys/pd/library_name#{n}"}
     library_version 0
-    sequence(:question_name) {|n| "library_question_name#{n}"}
+    sequence(:question_name) {|n| "what_supported#{n}"}
     sequence(:question) do |n|
       "{
         \"type\": \"comment\",
@@ -1173,5 +1173,10 @@ FactoryGirl.define do
     sequence(:path) {|n| "test_path_#{n}"}
     form_name 'A form that does not actually exist'
     form_version 0
+  end
+
+  factory :foorm_simple_survey_submission, class: 'Foorm::SimpleSurveySubmission' do
+    association :foorm_submission, factory: :basic_foorm_submission
+    association :simple_survey_form, factory: :foorm_simple_survey_form
   end
 end

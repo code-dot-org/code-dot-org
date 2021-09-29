@@ -1,4 +1,5 @@
 student_detail_progress_view true
+published_state 'beta'
 
 lesson 'Intro to AppLab - Choose Your Own Adventure', display_name: 'Intro to AppLab - Choose Your Own Adventure', has_lesson_plan: false
 level 'AppLab Intro 1 - Welcome', progression: 'Welcome to App Lab!'

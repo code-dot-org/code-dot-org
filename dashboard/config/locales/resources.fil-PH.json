@@ -1,0 +1,242 @@
+{
+  "fil-PH": {
+    "data": {
+      "resources": {
+        "exploring_apps/coursef/2021": {
+          "name": "Pagtuklas ng mga Apps"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "Pagtuklas ng mga Apps"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Saya sa For Loop"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Saya sa For Loop"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Saya sa For Loop"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Saya sa For Loop"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Saya sa For Loop"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "The Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Galawin ito, Galawin ito"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Galawin ito, Galawin ito"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Galawin ito, Galawin ito"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Iusog mo, Iusog mo"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Pair programming"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stevie at ang Big Project"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "Hindi Namalayang mga Bugs"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Pagiging Loopy"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Pagiging Loopy"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Pagiging Loopy"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Pagiging Loopy"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "The Big Event"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "The Big Event"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "The Big Event"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Pair programming"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Happy Maps"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "The Big Event"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "The Big Event"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "The Big Event"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Pair programming"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "The Big Event"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "The Big Event"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "The Big Event"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binary na mga Pulseras"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Binary na mga Pulseras"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Binary na mga Pulseras"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Binary na mga Pulseras"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Binary na mga Pulseras"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Pair programming"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "pair_programming/express/2021": {
+          "name": "Pair programming"
+        },
+        "variables_video/express/2021": {
+          "name": "Mga variable"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Pair programming"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Pagtitipon ng Guro"
+        }
+      }
+    }
+  }
+}

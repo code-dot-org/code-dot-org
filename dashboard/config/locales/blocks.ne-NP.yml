@@ -97,6 +97,14 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': देखिने
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': देखिने
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -175,11 +183,23 @@ ne:
             '"right"': दाँया
             '"space"': space
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': दाँया
+            '90': तल
+            '180': बाँया
+            '270': माथि
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': दाँया
             '"left"': बाँया
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_digital/jump_7.mp3'": jump
       gamelab_randColor:
         text: कुनै एक  रङ
       gamelab_randomColor:
@@ -208,6 +228,15 @@ ne:
           PROPERTY:
             '"scale"': size
             '"speed"': speed
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': size
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medium
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -313,6 +342,11 @@ ne:
             '"a"': क
             '"s"': द
             '"d"': 'घ '
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': हो
+            '"no"': होइन
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -326,6 +360,10 @@ ne:
         text: turn left
       RyanLab_turnRight:
         text: turn right
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": color
       binary_move:
         options:
           DIR:

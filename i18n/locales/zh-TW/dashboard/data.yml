@@ -561,6 +561,8 @@ zh-TW:
         poembot-pilot-text: 俳句機器人 - 儲存文字 [PILOT]
         poembot-pilot-haiku: 俳句機器人 - 展示你的俳句 [PILOT]
         csd_ml_import_model: 匯入 AI 模型
+        playlab_2021: Play Lab 的介紹
+        playlab_2021_reader: Play Lab 的介紹
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

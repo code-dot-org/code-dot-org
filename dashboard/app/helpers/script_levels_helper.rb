@@ -1,28 +1,28 @@
 module ScriptLevelsHelper
   def script_level_solved_response(response, script_level)
-    next_user_redirect = script_level.next_level_or_redirect_path_for_user(current_user, @stage)
+    next_user_redirect = script_level.next_level_or_redirect_path_for_user(current_user, @lesson)
 
     if script_level.has_another_level_to_go_to?
       if script_level == script_level.lesson.last_progression_script_level
-        response[:stage_changing] = {previous: {name: script_level.name, position: script_level.lesson.absolute_position}}
+        response[:lesson_changing] = {previous: {name: script_level.name, position: script_level.lesson.absolute_position}}
 
-        # End-of-Stage Experience is only enabled for:
+        # End-of-Lesson Experience is only enabled for:
         # scripts with the lesson_extras_available property
-        # stages except for the last stage of a script
-        # users in or teaching sections with an enabled "stage extras" flag
-        enabled_for_stage = script_level.script.lesson_extras_available &&
+        # lessons except for the last lesson of a script
+        # users in or teaching sections with an enabled "lesson extras" flag
+        enabled_for_lesson = script_level.script.lesson_extras_available &&
           !script_level.end_of_script?
         enabled_for_user = current_user && current_user.section_for_script(script_level.script) &&
             current_user.section_for_script(script_level.script).lesson_extras
         enabled_for_teacher = current_user.try(:teacher?) &&
             current_user.sections.where(
               script_id: script_level.script_id,
-              stage_extras: true
+              lesson_extras: true
             ).any?
-        if enabled_for_stage && (enabled_for_user || enabled_for_teacher)
+        if enabled_for_lesson && (enabled_for_user || enabled_for_teacher)
           response[:redirect] = script_lesson_extras_path(
             script_id: script_level.script.name,
-            lesson_position: (@stage || script_level.lesson).absolute_position
+            lesson_position: (@lesson || script_level.lesson).absolute_position
           )
         end
       end

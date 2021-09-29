@@ -1,0 +1,60 @@
+{
+  "fa-AF": {
+    "data": {
+      "vocabularies": {
+        "click/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "drag/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "drop/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "double_click/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "program/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "persistence/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        }
+      }
+    }
+  }
+}
