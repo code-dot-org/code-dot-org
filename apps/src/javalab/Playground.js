@@ -137,8 +137,6 @@ export default class Playground {
     delete textData.id;
     textData.type = PlaygroundItemType.TEXT;
 
-    console.log(textData);
-
     this.addPlaygroundItem(itemData.id, textData);
   }
 
@@ -158,16 +156,32 @@ export default class Playground {
       // can't change items if game is over
       return;
     }
+
+    const newItemData = this.getNewItemData(itemData);
+    this.changePlaygroundItem(itemData.id, newItemData);
+  }
+
+  getNewItemData(itemData) {
+    // We do not include the ID as part of each item's data.
+    // The ID serves as the key referencing an object that contains the item's contents.
+    const newItemData = {...itemData};
+    delete newItemData.id;
+
     if (this.getItem(itemData.id).type === PlaygroundItemType.IMAGE) {
-      const newImageData = {...itemData};
       if (itemData.filename) {
-        newImageData.fileUrl = this.getUrl(itemData.filename);
+        newItemData.fileUrl = this.getUrl(itemData.filename);
         // we don't need to pass filename as imageData
-        delete newImageData.filename;
+        delete newItemData.filename;
       }
-      this.changePlaygroundItem(itemData.id, newImageData);
-    } else if (this.getItem(itemData.id).type === PlaygroundItemType.TEXT) {
+      return newItemData;
     }
+
+    if (this.getItem(itemData.id).type === PlaygroundItemType.IMAGE) {
+      this.changePlaygroundItem(itemData.id, newItemData);
+      return newItemData;
+    }
+
+    return itemData;
   }
 
   playSound(soundData) {
