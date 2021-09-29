@@ -833,6 +833,19 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal courseg_2017, Script.latest_assigned_version('courseg', student)
   end
 
+  test 'has_other_versions? makes no queries when there are no other versions' do
+    Script.stubs(:should_cache?).returns true
+    unit = create(
+      :script, is_course: true, family_name: 'my-family', version_year: 'unversioned',
+      published_state: SharedConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(unit)
+    unit = Script.get_from_cache(unit.id)
+    assert_queries(0) do
+      refute unit.has_other_versions?
+    end
+  end
+
   test 'banner image' do
     assert_nil Script.find_by_name('flappy').banner_image
     assert_equal 'banner_course1.jpg', Script.find_by_name('course1').banner_image
