@@ -82,7 +82,8 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       lessonsBySectionId: {
         '11': {}
       },
-      lockableAuthorized: false
+      lockableAuthorized: false,
+      lockableAuthorizedLoaded: true
     },
     viewAs: viewAs,
     teacherSections: {
@@ -116,7 +117,8 @@ export const createStoreWithLockedLesson = (
       lessonsBySectionId: {
         '11': {}
       },
-      lockableAuthorized: lockableAuthorized
+      lockableAuthorized: lockableAuthorized,
+      lockableAuthorizedLoaded: true
     },
     viewAs: viewAs,
     teacherSections: {

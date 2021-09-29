@@ -85,7 +85,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           enrollment: @enrollment,
           facilitators: facilitators,
           workshop_enrollment_status: "unsubmitted",
-          previous_courses: Pd::Teacher2021ApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
+          previous_courses: Pd::TeacherApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
           collect_demographics: collect_demographics
         }.to_json
       }

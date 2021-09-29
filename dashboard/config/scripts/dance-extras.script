@@ -1,15 +1,1 @@
-family_name 'dance-extras'
-version_year 'unversioned'
-published_state 'preview'
-tts true
-is_course true
-
-lesson 'Dance Party - Go Further', display_name: 'Dance Party - Go Further', has_lesson_plan: false
-level 'Dance_Party_extras_intro', progression: 'Keep On Dancing!'
-level 'Dance_Party_extras_layout', progression: 'Get In Formation'
-level 'Dance_Party_extras_visible', progression: 'Where\'d They Go?'
-level 'Dance_Party_extras_battle', progression: 'Dance Crews'
-level 'Dance_Party_extras_every_beat', progression: 'Quarter Notes'
-level 'Dance_Party_extras_on_beat', progression: 'Bass, Mid, and Treble'
-level 'Dance_Party_extras_speed', progression: 'Speed it Up, Slow it Down'
-
+is_migrated true

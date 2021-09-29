@@ -1,22 +1,12 @@
 <Javalab>
   <config><![CDATA[{
-  "properties": {
-    "encrypted": "false",
-    "long_instructions": "updateDice()",
-    "mini_rubric": "false",
-    "submittable": "false",
-    "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "CSA U4 Template"
-  },
   "game_id": 68,
   "published": true,
   "created_at": "2021-09-02T14:54:36.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-02 14:54:39 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-03 16:03:13 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-03 16:07:43 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-02 14:54:39 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-03 16:03:13 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-03 16:07:43 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:02:34 +0000\",\"changed\":[\"encrypted\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "encrypted_properties": "gryN+UMIil/IryToWJ6erMuVxmmq/u8eNt7NnmaOnMexO5/yPvdsjFBt4SZz\nvSax93AfBoT/GNqlCJDAOxLi8AUAeXb1FSmWFMMbxA+C+wovsBG/kyoby1yW\nn5FpYN6TK4wxRl62O2cu6fynqeFThMtLttkmC/imG6z62C6LMmMJq6tEZk3W\nzoqieXkPg2UnjMdJAG6gjTJRit4InEqhUVq4P76t6VN5Qv/F1Lw/UoYe591U\nwMQyIK0Yq19TJuRFkJvWStfdstcCRTE74qBoHvsvbnTaM6dcDEUd1IuRXPQc\nMwx4OWy5vBOO2Tk9f6BYYzTTzX24UDSFzPul2kAU1sVXtIMOadcj05C2VW4N\n88Nl5aTM4InmcLiIzghPkyu2tgd1x2dn4NkroNclnB7lj+//sg6ZM1CQ5Qbh\nasv54xWnxFypmzrV53gxjBUpalfm1B7vePA5Nc45/YpO/s6yA7SPMw+qzr8z\nfUN+BaPdveL0OxP21Kf1euBChJN+A4p/ZWtKGuPXERMUGv8hgqJP3uBN0Ot4\nlTqrUDVP2KDRq1E=\n",
+  "encrypted_notes": null
 }]]></config>
 </Javalab>
