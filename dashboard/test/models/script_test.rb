@@ -694,9 +694,11 @@ class ScriptTest < ActiveSupport::TestCase
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
     create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    CourseOffering.add_course_offering(csp_2017)
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
     create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
+    CourseOffering.add_course_offering(csp_2018)
     section = create :section, unit_group: csp_2018
     section.students << student
 
@@ -708,8 +710,10 @@ class ScriptTest < ActiveSupport::TestCase
   test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit not belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
-    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
-    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
+    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(courseg_2017)
+    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', is_course: true)
+    CourseOffering.add_course_offering(courseg_2018)
     section = create :section, script: courseg_2018
     section.students << student
 

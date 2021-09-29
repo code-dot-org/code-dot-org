@@ -83,7 +83,11 @@ class Script < ApplicationRecord
         },
         {
           unit_group_units: {
-            unit_group: :course_version
+            unit_group: {
+              course_version: {
+                course_offering: :course_versions
+              }
+            }
           }
         },
         {
@@ -1004,7 +1008,7 @@ class Script < ApplicationRecord
   # When given an object from the unit cache, returns whether it has other
   # versions, without touching the database.
   def has_other_versions?
-    course_version&.course_offering&.course_versions&.many?
+    get_course_version&.course_offering&.course_versions&.many?
   end
 
   # Create or update any units, script levels and lessons specified in the
