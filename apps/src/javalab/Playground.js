@@ -1,4 +1,8 @@
-import {PlaygroundSignalType, PlaygroundItemType} from './constants';
+import {
+  PlaygroundSignalType,
+  PlaygroundItemType,
+  WebSocketMessageType
+} from './constants';
 import {assets, starterAssets} from '@cdo/apps/clientApi';
 import javalabMsg from '@cdo/javalab/locale';
 import {getStore} from '../redux';
@@ -9,6 +13,9 @@ import {
   setItemData,
   getItemIds
 } from './playgroundRedux';
+import color from '@cdo/apps/util/color';
+
+const DEFAULT_BACKGROUND_COLOR = color.white;
 
 export default class Playground {
   constructor(
@@ -110,9 +117,6 @@ export default class Playground {
     if (this.isGameOver || this.imageItemExists(itemData)) {
       return;
     }
-    let onClick = isClickable
-      ? () => this.handleImageClick(itemData.id)
-      : () => {};
 
     const imageData = {
       fileUrl: this.getUrl(itemData.filename),
@@ -121,9 +125,12 @@ export default class Playground {
       height: itemData.height,
       width: itemData.width,
       index: itemData.index,
-      onClick: onClick,
+      isClickable: isClickable,
       type: PlaygroundItemType.IMAGE
     };
+    if (isClickable) {
+      imageData.onClick = () => this.handleImageClick(itemData.id);
+    }
     this.addPlaygroundItem(itemData.id, imageData);
   }
 
@@ -197,14 +204,15 @@ export default class Playground {
     this.setPlaygroundItems({});
     this.resetBackgroundElement();
     this.resetAudioElement();
+    this.resetContainer();
   }
 
-  // TODO: Call this from click handler on new clickable items
   handleImageClick(imageId) {
     if (this.isGameOver || !this.isGameRunning) {
       // can only handle click events if game is not over and game is running
       return;
     }
+    this.onJavabuilderMessage(WebSocketMessageType.PLAYGROUND, imageId);
   }
 
   getUrl(filename) {
@@ -225,6 +233,10 @@ export default class Playground {
     return document.getElementById('playground-audio');
   }
 
+  getContainer() {
+    return document.getElementById('playground-container');
+  }
+
   resetAudioElement() {
     const audioElement = this.getAudioElement();
     audioElement.pause();
@@ -240,6 +252,11 @@ export default class Playground {
   resetMediaElement(element) {
     element.onerror = undefined;
     element.src = '';
+  }
+
+  resetContainer() {
+    const containerElement = this.getContainer();
+    containerElement.style.backgroundColor = DEFAULT_BACKGROUND_COLOR;
   }
 
   endGame() {

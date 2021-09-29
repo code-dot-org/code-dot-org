@@ -28,7 +28,8 @@ import DialogButtons from './templates/DialogButtons';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import FeedbackUtils from './feedback';
-import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
+import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
+import InstructionsDialogWrapperDEPRECATED from './templates/instructions/InstructionsDialogWrapperDEPRECATED';
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
 import VersionHistory from './templates/VersionHistory';
@@ -319,15 +320,27 @@ StudioApp.prototype.init = function(config) {
   this.configureDom(config);
 
   if (!config.level.iframeEmbedAppAndCode) {
+    // We are migrating usages of InstructionsDialogWrapperDEPRECATED to use
+    // InstructionsDialog instead. NetSim is the first consumer to be migrated.
+    const useNewDialog = config.app === 'netsim';
     ReactDOM.render(
       <Provider store={getStore()}>
-        <div>
-          <InstructionsDialogWrapper
-            showInstructionsDialog={autoClose => {
-              this.showInstructionsDialog_(config.level, autoClose);
-            }}
+        {useNewDialog ? (
+          <InstructionsDialog
+            title={msg.puzzleTitle({
+              stage_total: config.level.lesson_total,
+              puzzle_number: config.level.puzzle_number
+            })}
           />
-        </div>
+        ) : (
+          <div>
+            <InstructionsDialogWrapperDEPRECATED
+              showInstructionsDialog={autoClose => {
+                this.showInstructionsDialog_(config.level, autoClose);
+              }}
+            />
+          </div>
+        )}
       </Provider>,
       document.body.appendChild(document.createElement('div'))
     );
