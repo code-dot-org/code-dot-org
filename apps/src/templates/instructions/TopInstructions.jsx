@@ -733,7 +733,9 @@ class TopInstructions extends Component {
               />
             )}
             {this.isViewingAsTeacher &&
-              (hasContainedLevels || teacherMarkdown || exampleSolutions) && (
+              (hasContainedLevels ||
+                teacherMarkdown ||
+                exampleSolutions.length > 0) && (
                 <div>
                   {exampleSolutions.length > 0 && (
                     <div style={styles.exampleSolutions}>
@@ -834,7 +836,6 @@ const styles = {
     zIndex: OVERLAY_Z_INDEX + 1
   },
   exampleSolutions: {
-    textAlign: 'center',
     margin: 5
   }
 };
@@ -875,7 +876,8 @@ export default connect(
     dynamicInstructions: getDynamicInstructions(state.instructions),
     dynamicInstructionsKey: state.instructions.dynamicInstructionsKey,
     overlayVisible: state.instructions.overlayVisible,
-    exampleSolutions: state.pageConstants.exampleSolutions
+    exampleSolutions:
+      (state.pageConstants && state.pageConstants.exampleSolutions) || []
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

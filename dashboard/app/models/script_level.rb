@@ -445,10 +445,11 @@ class ScriptLevel < ApplicationRecord
     summary
   end
 
-  def summarize_for_lesson_show(can_view_teacher_markdown)
+  def summarize_for_lesson_show(current_user, can_view_teacher_markdown)
     summary = summarize
     summary[:id] = id.to_s
     summary[:scriptId] = script_id
+    summary[:exampleSolutions] = get_example_solutions(current_user)
     summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
@@ -725,7 +726,7 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def get_example_solutions(current_user, section)
+  def get_example_solutions(current_user, section=nil)
     level_example_links = []
 
     level = levels.first
