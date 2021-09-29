@@ -28,7 +28,7 @@ namespace :seed do
   verbose false
 
   timed_task check_migrations: :environment do
-    ActiveRecord::Migration&.check_pending!
+    ActiveRecord::Migration.check_pending!
   end
 
   timed_task videos: :environment do
