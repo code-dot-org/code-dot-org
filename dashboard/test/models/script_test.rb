@@ -1200,8 +1200,10 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show_script_version_warning' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
-    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true)
+    CourseOffering.add_course_offering(foo18)
     user = create(:student)
 
     refute foo17.summarize[:show_script_version_warning]
