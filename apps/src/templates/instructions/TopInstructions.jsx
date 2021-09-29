@@ -746,6 +746,8 @@ class TopInstructions extends Component {
                           href={example}
                           target="_blank"
                           rel="noopener noreferrer"
+                          ref={ref => (this.teacherOnlyTab = ref)}
+                          hidden={tabSelected !== TabType.TEACHER_ONLY}
                         />
                       ))}
                     </div>
