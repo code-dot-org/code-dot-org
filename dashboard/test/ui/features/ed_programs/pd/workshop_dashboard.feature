@@ -70,8 +70,8 @@ Scenario: New workshop: CSD units 2-3 with 2 facilitators
 
   #And I see no difference for "new workshop details: CSD"
 
-  And I scroll the "button:contains('Publish')" element into view
-  And I press "button:contains('Publish')" using jQuery
+  And I scroll the "#workshop-form-save-btn" element into view
+  And I press "#workshop-form-save-btn" using jQuery
   And I wait until element ".panel-title:contains('Your workshop sign-up link:')" is visible
   And I see jquery selector button.btn-orange:contains('Start Workshop')
 
