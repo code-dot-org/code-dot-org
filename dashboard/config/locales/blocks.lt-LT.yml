@@ -236,6 +236,13 @@ lt:
             '"right"': dešinėn
             '"space"': kosmosas
             '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': dešinėn
+            '90': žemyn
+            '180': kairėn
+            '270': aukštyn
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -245,6 +252,7 @@ lt:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": trakšt
+            "'sound://category_digital/jump_7.mp3'": šok
       gamelab_randColor:
         text: Atsitiktinė spalva
       gamelab_randomColor:

@@ -4810,3 +4810,20 @@ nn:
           lessons:
             lesson-19:
               name: Prosjekt
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Moduler
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Prosjekt
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Innhald
+            content:
+              display_name: Innhald
+            lesson_group:
+              display_name: Innhald
+            lessonGroup-2:
+              display_name: Innhald

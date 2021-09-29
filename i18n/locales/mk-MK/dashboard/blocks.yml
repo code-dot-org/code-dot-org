@@ -43,6 +43,7 @@ mk:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": копче
             "'sound://category_collect/clicky_crunch.mp3'": криза
+            "'sound://category_digital/jump_7.mp3'": Рипај
       gamelab_randColor:
         text: случајна боја
       gamelab_randomColor:

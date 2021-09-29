@@ -147,6 +147,5 @@
   "addPromptWithChoices": "你需要向代码中添加提示块： \n <xml><block type=\"gamelab_setPromptWithChoices\"></block></xml>",
   "addAdditionalPrompts": "你的程序没有创建足够的提示。",
   "answerPromptWithChoices": "你的提示应该给用户三个选择。运行程序后不要忘记回答提示！",
-  "haikuBlock": "俳句没有出现。如果已经添加了块，请仔细检查代码中的变量标签，并确保所有提示都已回答。",
-  "poemBotMakeBackground": "需要添加背景效果。"
+  "haikuBlock": "俳句没有出现。如果已经添加了块，请仔细检查代码中的变量标签，并确保所有提示都已回答。"
 }

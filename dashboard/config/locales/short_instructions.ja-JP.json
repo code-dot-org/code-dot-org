@@ -3548,7 +3548,7 @@
         "courseF_bee_variables_5b_2021": "自分のコードを作成して、このパズルを解いてみましょう。",
         "courseF_editable_card": "グリーティングカードプログラムのコードを探索しましょう！",
         "courseF_editable_chatbot": "チャットボットプログラムのコードを探索しましょう！",
-        "courseF_editable_madlib": "ストーリー自由帳プログラムのコードを探求しましょう！",
+        "courseF_editable_madlib": "ブランクスペースストーリープログラムのコードを探求しましょう！",
         "courseF_events_choice_conflict2": "一方のキーを押すとスプライトが小さくなり、もう一方のキーを押すと大きくなります。",
         "courseF_events_choice_pufferfish": "「キーが押されているあいだ」のイベントブロックを使用して、ユーザーがキーを押している間、スプライトのサイズを繰り返し変更します。",
         "courseF_events_practice_reorder": "スプライトが今までの動きだけを止めるように、「2秒で」の下にあるコードのじゅんばんを変えます。",
@@ -3569,10 +3569,11 @@
         "courseF_variables_card_finish": "カスタマイズされたグリーティングカードを完成させます",
         "courseF_variables_chatbot": "自分だけのチャットボットを作りましょう！",
         "courseF_variables_chatbot_finish": "チャットボットを仕上げましょう。",
-        "courseF_variables_madlib": "インタラクティブなストーリーじゆうちょうを作りましょう！",
-        "courseF_variables_madlib_finish": "カスタマイズしたストーリー自由帳を完成させましょう。",
+        "courseF_variables_madlib": "インタラクティブなブランクスペースストーリーを作りましょう！",
+        "courseF_variables_madlib_finish": "カスタマイズしたブランクスペースストーリーを完成させましょう。",
         "ramp_artist_loops6v1_2021": "くり返しを使って、この階段をかいてみましょう。",
-        "simcustom_2021": "スプライトコスチュームまたは下のコードを変更してみましょう。"
+        "simcustom_2021": "スプライトコスチュームまたは下のコードを変更してみましょう。",
+        "international_outbreak_freeplay": "プロジェクトに必要な変更や改善を加えましょう。  "
       }
     }
   }

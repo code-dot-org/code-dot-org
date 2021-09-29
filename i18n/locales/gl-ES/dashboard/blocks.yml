@@ -184,6 +184,13 @@ gl:
             '"left"': esquerda
             '"right"': dereita
             '"space"': espazo
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': dereita
+            '90': abaixo
+            '180': esquerda
+            '270': arriba
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -193,6 +200,7 @@ gl:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": triture
+            "'sound://category_digital/jump_7.mp3'": saltar
       gamelab_randColor:
         text: cor aleatoria
       gamelab_randomColor:

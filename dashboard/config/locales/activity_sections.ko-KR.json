@@ -2,6 +2,16 @@
   "ko-KR": {
     "data": {
       "activity_sections": {
+        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+          "progression_name": "몬스터 타운에 오신 것을 환영합니다"
+        },
+        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+          "progression_name": "실력 향상"
+        },
+        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
+          "name": "자유 플레이",
+          "progression_name": "자유 플레이"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "소개"
         },
@@ -306,6 +316,9 @@
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "소개"
         },
+        "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "progression_name": "몬스터 타운에 오신 것을 환영합니다"
+        },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
             null
@@ -313,6 +326,9 @@
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "progression_name": "실력 향상"
+        },
+        "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
+          "progression_name": "시뮬레이션으로 학습"
         },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "성찰"
