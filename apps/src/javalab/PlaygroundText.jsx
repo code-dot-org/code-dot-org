@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {PlaygroundFontStyleType, PlaygroundFontType} from './constants';
+import {
+  PlaygroundFontStyleType,
+  PlaygroundFontTypeFontFamilies
+} from './constants';
 
 export default class PlaygroundText extends React.Component {
   static propTypes = {
@@ -42,7 +45,7 @@ export default class PlaygroundText extends React.Component {
       )})`,
       transform: `rotate(${parseFloat(rotation)}deg)`,
       fontSize: height * 2,
-      fontFamily: PlaygroundFontType[font]
+      fontFamily: PlaygroundFontTypeFontFamilies[font]
     };
 
     if (
