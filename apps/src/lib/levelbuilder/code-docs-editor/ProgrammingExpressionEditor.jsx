@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
+import $ from 'jquery';
 
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression
@@ -11,10 +12,11 @@ export default function ProgrammingExpressionEditor({
   const [shortDescription, setShortDescription] = useState(
     initialProgrammingExpression.shortDescription
   );
+  const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(
     initialProgrammingExpression.lastUpdated
   );
-  const [isSaving, setIsSaving] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (isSaving) {
@@ -28,10 +30,15 @@ export default function ProgrammingExpressionEditor({
           name: name,
           shortDescription: shortDescription
         })
-      }).done(data => {
-        setIsSaving(false);
-        setLastUpdated(Date.now());
-      });
+      })
+        .done(data => {
+          setIsSaving(false);
+          setLastUpdated(Date.now());
+        })
+        .fail(error => {
+          setIsSaving(false);
+          setError(error.responseText);
+        });
     }
   }, [isSaving]);
 
@@ -70,6 +77,7 @@ export default function ProgrammingExpressionEditor({
         handleSave={() => setIsSaving(true)}
         isSaving={isSaving}
         lastSaved={lastUpdated}
+        error={error}
         handleView={() => navigateToHref('/')}
       />
     </div>
