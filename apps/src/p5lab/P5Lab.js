@@ -18,8 +18,6 @@ import {
 } from '@cdo/apps/lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-var gamelabMsg = require('@cdo/gamelab/locale');
-var spritelabMsg = require('@cdo/spritelab/locale');
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./gamelab/apiJavascript');
 var consoleApi = require('@cdo/apps/consoleApi');
@@ -291,7 +289,7 @@ export default class P5Lab {
     }.bind(this);
 
     config.dropletConfig = dropletConfig;
-    config.appMsg = this.isBlockly ? spritelabMsg : gamelabMsg;
+    config.appMsg = this.getMsg();
     this.studioApp_.loadLibraryBlocks(config);
 
     // hide makeYourOwn on the share page
@@ -891,7 +889,7 @@ export default class P5Lab {
   }
 
   onPuzzleComplete(submit, testResult, message) {
-    let msg = this.isBlockly ? spritelabMsg : gamelabMsg;
+    let msg = this.getMsg();
     if (message && msg[message]) {
       this.message = msg[message]();
     }
@@ -1591,7 +1589,7 @@ export default class P5Lab {
    */
   displayFeedback_() {
     var level = this.level;
-    let msg = this.isBlockly ? spritelabMsg : gamelabMsg;
+    let msg = this.getMsg();
 
     this.studioApp_.displayFeedback({
       feedbackType: this.testResults,
