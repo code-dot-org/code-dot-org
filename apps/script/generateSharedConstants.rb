@@ -101,6 +101,7 @@ def main
         WORKSHOP_APPLICATION_STATES
         WORKSHOP_SEARCH_ERRORS
         WORKSHOP_TYPES
+        NOT_FUNDED_SUBJECTS
       ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false
