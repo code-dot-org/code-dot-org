@@ -1,3 +1,4 @@
+import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
 import * as utils from './commands/utils';
@@ -18,9 +19,7 @@ export default class PoetryLibrary extends CoreLibrary {
       endTime: POEM_DURATION
     };
     this.poemState = {
-      title: '',
-      author: '',
-      lines: [],
+      ...getStore().getState().poetry.selectedPoem,
       font: {
         fill: 'black',
         stroke: 'rgba(0,0,0,0)',

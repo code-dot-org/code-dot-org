@@ -15,9 +15,7 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import PeerSelectDropdown from '@cdo/apps/templates/instructions/codeReview/PeerSelectDropdown';
-import Button from '@cdo/apps/templates/Button';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import ReviewNavigator from '@cdo/apps/templates/instructions/codeReview/ReviewNavigator';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 describe('Code Review Tab', () => {
@@ -330,7 +328,7 @@ describe('Code Review Tab', () => {
         onLoadComplete={onLoadComplete}
         codeReviewEnabled={false}
         viewAsCodeReviewer={false}
-        viewAs={ViewType.Teacher}
+        viewAsTeacher={true}
       />
     );
     wrapper.setState({initialLoadCompleted: true});
@@ -338,57 +336,13 @@ describe('Code Review Tab', () => {
     expect(wrapper.find(CommentEditor).length).to.equal(1);
   });
 
-  it('shows the peer select dropdown if viewing own project', () => {
-    const peer1 = {
-      name: 'student1',
-      id: 1
-    };
-
-    const peer2 = {
-      name: 'student2',
-      id: 2
-    };
-
-    stubGetReviewablePeersServerCall([peer1, peer2]);
-
-    server.respond();
-
-    expect(wrapper.find(PeerSelectDropdown).length).to.equal(1);
-    expect(wrapper.find(PeerSelectDropdown).props().peers).to.deep.equal([
-      peer1,
-      peer2
-    ]);
+  it('shows the ReviewNavigator if viewing own project', () => {
+    expect(wrapper.find(ReviewNavigator).length).to.equal(1);
   });
 
-  it('shows back to my project button if viewing peer project', () => {
-    server.respond();
-    wrapper = shallow(
-      <ReviewTab
-        onLoadComplete={onLoadComplete}
-        codeReviewEnabled
-        viewAsCodeReviewer={true}
-      />
-    );
-    wrapper.setState({initialLoadCompleted: true});
-    expect(wrapper.find(PeerSelectDropdown).length).to.equal(0);
-    expect(wrapper.find(Button).length).to.equal(1);
-  });
-
-  it('does not show the peer dropdown or back to project button if a teacher is viewing the project', () => {
-    wrapper = shallow(
-      <ReviewTab
-        onLoadComplete={onLoadComplete}
-        codeReviewEnabled
-        viewAsCodeReviewer={false}
-        viewAs={ViewType.Teacher}
-      />
-    );
-    wrapper.setState({initialLoadCompleted: true});
-
-    server.respond();
-
-    expect(wrapper.find(PeerSelectDropdown).length).to.equal(0);
-    expect(wrapper.find(Button).length).to.equal(0);
+  it('does not show the ReviewNavigator if a teacher is viewing the project', () => {
+    wrapper.setProps({viewAsTeacher: true});
+    expect(wrapper.find(ReviewNavigator).length).to.equal(0);
   });
 
   it('does not render enable code review checkbox when codeReviewEnabled is false', () => {
@@ -414,13 +368,5 @@ describe('Code Review Tab', () => {
     );
 
     server.respond();
-  }
-
-  function stubGetReviewablePeersServerCall(peerData) {
-    server.respondWith(
-      'GET',
-      `/reviewable_projects/for_level?channel_id=${channelId}&level_id=${serverLevelId}&script_id=${serverScriptId}`,
-      [200, {'Content-Type': 'application/json'}, JSON.stringify(peerData)]
-    );
   }
 });

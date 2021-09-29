@@ -989,7 +989,7 @@ fr:
       gamelab_costumeImage:
         text: "{COSTUME}"
       gamelab_createNewSprite:
-        text: crée un nouveau lutin appellé {NAME} avec le costume {COSTUME}  à {LOCATION}
+        text: crée un nouveau sprite appellé {NAME} avec le costume {COSTUME}  à {LOCATION}
       gamelab_destroy:
         text: supprimer {THIS}
       gamelab_draggable:
@@ -1621,12 +1621,15 @@ fr:
         text: dispose les monstres au hasard
       Outbreak_stopMoving:
         text: les monstres ne bougent plus
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': pluie
+      Poetry_makeNumSprites:
         text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
-      PoemBot_playSound:
+      Poetry_playSound:
         text: jouer le son {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: définir l’effet de fond {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Couleurs
@@ -1636,10 +1639,9 @@ fr:
             '"ripples"': Ondulations
           PALETTE:
             '"rainbow"': Arc-en-ciel
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: établir {IMG} comme arrière-plan
-      PoemBot_setForegroundEffect:
-        text: définir l’effet de premier plan {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Pluie
@@ -1647,14 +1649,28 @@ fr:
             '"hearts"': Cœurs colorés
             '"confetti"': Confettis
             '"starburst"': Starburst
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             swimming_left_and_right: natation
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             swimming_left_and_right: natation
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: avancer
       RyanLab_turnLeft:

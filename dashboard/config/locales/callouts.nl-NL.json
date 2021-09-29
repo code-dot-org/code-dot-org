@@ -919,6 +919,45 @@
         },
         "courseE_farmer_functions2b_2021": {
           "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Nieuw blok!",
+          "hello_world_new_block": "Nieuw blok!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Nieuw blok!",
+          "hello_world_new_block": "Nieuw blok!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Nieuw blok!",
+          "hello_world_new_block": "Nieuw blok!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Nieuw blok!"
         }
       }
     }

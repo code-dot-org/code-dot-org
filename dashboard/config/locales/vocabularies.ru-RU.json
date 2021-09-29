@@ -5,11 +5,17 @@
         "behavior/coursef/2021": {
           "word": "Поведение"
         },
+        "event/coursef/2021": {
+          "word": "Событие"
+        },
         "variable/coursef/2021": {
           "word": "Переменная"
         },
         "input/coursef/2021": {
           "word": "Ввод"
+        },
+        "loop/coursef/2021": {
+          "word": "Цикл"
         },
         "machine_learning/coursef/2021": {
           "word": "Машинное обучение"
@@ -23,6 +29,13 @@
         "define/coursef/2021": {
           "word": "Определить"
         },
+        "algorithm/courseb/2021": {
+          "word": "Алгоритм",
+          "definition": "Список шагов для завершения задачи."
+        },
+        "bug/courseb/2021": {
+          "word": "Ошибка"
+        },
         "debugging/courseb/2021": {
           "word": "Отладка"
         },
@@ -35,6 +48,16 @@
         "programming/courseb/2021": {
           "word": "Программирование"
         },
+        "loop/courseb/2021": {
+          "word": "Цикл"
+        },
+        "event/courseb/2021": {
+          "word": "Событие"
+        },
+        "algorithm/coursea/2021": {
+          "word": "Алгоритм",
+          "definition": "Список шагов для завершения задачи."
+        },
         "debugging/coursea/2021": {
           "word": "Отладка"
         },
@@ -44,8 +67,24 @@
         "drop/coursea/2021": {
           "word": "Дроп"
         },
+        "bug/coursea/2021": {
+          "word": "Ошибка"
+        },
         "programming/coursea/2021": {
           "word": "Программирование"
+        },
+        "loop/coursea/2021": {
+          "word": "Цикл"
+        },
+        "event/coursea/2021": {
+          "word": "Событие"
+        },
+        "algorithm/coursec/2021": {
+          "word": "Алгоритм",
+          "definition": "Список шагов для завершения задачи."
+        },
+        "bug/coursec/2021": {
+          "word": "Ошибка"
         },
         "debugging/coursec/2021": {
           "word": "Отладка"
@@ -56,17 +95,46 @@
         "programming/coursec/2021": {
           "word": "Программирование"
         },
+        "loop/coursec/2021": {
+          "word": "Цикл"
+        },
+        "event/coursec/2021": {
+          "word": "Событие"
+        },
         "binary/coursec/2021": {
           "word": "Двоичный"
+        },
+        "algorithm/coursed/2021": {
+          "word": "Алгоритм",
+          "definition": "Список шагов для завершения задачи."
+        },
+        "bug/coursed/2021": {
+          "word": "Ошибка"
         },
         "debugging/coursed/2021": {
           "word": "Отладка"
         },
+        "loop/coursed/2021": {
+          "word": "Цикл"
+        },
         "programming/coursed/2021": {
           "word": "Программирование"
         },
+        "event/coursed/2021": {
+          "word": "Событие"
+        },
+        "program/coursed/2021": {
+          "word": "Программа"
+        },
         "conditionals/coursed/2021": {
           "word": "Условные команды"
+        },
+        "algorithm/express/2021": {
+          "word": "Алгоритм",
+          "definition": "Список шагов для завершения задачи."
+        },
+        "bug/express/2021": {
+          "word": "Ошибка"
         },
         "debugging/express/2021": {
           "word": "Отладка"
@@ -74,11 +142,23 @@
         "sequencing/express/2021": {
           "word": "Последовательность действий"
         },
+        "program/express/2021": {
+          "word": "Программа"
+        },
         "programming/express/2021": {
           "word": "Программирование"
         },
         "behavior/express/2021": {
           "word": "Поведение"
+        },
+        "event/express/2021": {
+          "word": "Событие"
+        },
+        "code/express/2021": {
+          "word": "код"
+        },
+        "loop/express/2021": {
+          "word": "Цикл"
         },
         "conditionals/express/2021": {
           "word": "Условные команды"
@@ -89,6 +169,9 @@
         "variable/express/2021": {
           "word": "Переменная"
         },
+        "for_loop/express/2021": {
+          "word": "Для цикла"
+        },
         "define/express/2021": {
           "word": "Определить"
         },
@@ -98,23 +181,48 @@
         "drop/pre-express/2021": {
           "word": "Дроп"
         },
+        "algorithm/pre-express/2021": {
+          "word": "Алгоритм",
+          "definition": "Список шагов для завершения задачи."
+        },
+        "bug/pre-express/2021": {
+          "word": "Ошибка"
+        },
         "debugging/pre-express/2021": {
           "word": "Отладка"
+        },
+        "program/pre-express/2021": {
+          "word": "Программа"
         },
         "programming/pre-express/2021": {
           "word": "Программирование"
         },
+        "loop/pre-express/2021": {
+          "word": "Цикл"
+        },
+        "event/pre-express/2021": {
+          "word": "Событие"
+        },
         "behavior/coursee/2021": {
           "word": "Поведение"
         },
+        "event/coursee/2021": {
+          "word": "Событие"
+        },
         "copyright/coursee/2021": {
           "word": "Авторские права"
+        },
+        "loop/coursee/2021": {
+          "word": "Цикл"
         },
         "function/coursee/2021": {
           "word": "Функция"
         },
         "conditionals/coursee/2021": {
           "word": "Условные команды"
+        },
+        "condition/coursee/2021": {
+          "word": "Условие"
         },
         "define/coursee/2021": {
           "word": "Определить"

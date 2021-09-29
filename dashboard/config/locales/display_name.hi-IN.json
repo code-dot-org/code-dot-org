@@ -285,7 +285,15 @@
         "MC_HOC_2017_Ali_2021": "निचला किला",
         "MC_HOC_2017_FP20x20_2021": "फ्रीप्ले",
         "international_outbreak_freeplay": "एक मैसेज साझा करें",
-        "CourseF_outbreak6": "रैंडम चांस"
+        "CourseF_outbreak6": "रैंडम चांस",
+        "helloworld_animals_costumes": "कॉस्ट्यूम्स",
+        "helloworld_animals_location": "टाइम इवेंट्स",
+        "helloworld_emoji_costumes": "कॉस्ट्यूम्स",
+        "helloworld_emoji_location": "टाइम इवेंट्स",
+        "helloworld_food_costumes": "कॉस्ट्यूम्स",
+        "helloworld_food_location": "टाइम इवेंट्स",
+        "helloworld_retro_costumes": "कॉस्ट्यूम्स",
+        "helloworld_retro_location": "टाइम इवेंट्स"
       }
     }
   }

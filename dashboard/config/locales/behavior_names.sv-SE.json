@@ -155,6 +155,15 @@
           "recovering": "återhämtning",
           "moving left and right": "flytta vänster och höger",
           "moving with arrow keys": "flytta med piltangenter"
+        },
+        "helloworld_animals_behaviors": {
+          "moving with arrow keys": "flytta med piltangenter"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving with arrow keys": "flytta med piltangenter"
+        },
+        "helloworld_retro_behaviors": {
+          "moving with arrow keys": "flytta med piltangenter"
         }
       }
     }

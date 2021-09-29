@@ -618,6 +618,45 @@
         },
         "courseD_bee_conditionals2_dani": {
           "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Новий блок!",
+          "hello_world_new_block": "Новий блок!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Новий блок!",
+          "hello_world_new_block": "Новий блок!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Новий блок!",
+          "hello_world_new_block": "Новий блок!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Новий блок!"
         }
       }
     }

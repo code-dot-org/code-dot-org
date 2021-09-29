@@ -201,6 +201,12 @@ vi:
           lessons:
             Artist:
               name: Họa sĩ
+              description_student: Tạo hình ảnh đẹp bằng cách lập trình Artist.
+              description_teacher: Trong bài học này, học sinh sẽ điều khiển Artist
+                để hoàn thành bức tranh trên màn hình. Giai đoạn Artist này sẽ giúp
+                học sinh tạo ra các hình ảnh có độ phức tạp tăng dần bằng cách sử
+                dụng các khối mới như `di chuyển về phía trước 100 pixel` và `quay
+                sang phải 90 độ`.
           student_description: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
         hourofcode:
           title: Mê cung cổ điển
@@ -1707,6 +1713,16 @@ vi:
             các vấn đề của thế giới.
           description_short: Tìm hiểu cách AI và học máy có thể được sử dụng để giải
             quyết các vấn đề của thế giới.
+          lessons:
+            Oceans:
+              description_student: 'Tóm tắt bài hướng dẫn: Đầu tiên, học sinh phân
+                loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ
+                rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào
+                tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong
+                phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên
+                hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử
+                dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh
+                mới.'
           student_description: Tìm hiểu cách AI và học máy có thể được sử dụng để
             giải quyết các vấn đề của thế giới.
         CSPPD3-Unit3-pt2:
@@ -3165,6 +3181,14 @@ vi:
           lessons:
             Bounce:
               name: Bật lại
+              description_student: Bạn đã bao giờ ước mình có thể chơi game ở trường
+                chưa? Trong bài học này, bạn sẽ tự làm game đấy!
+              description_teacher: Trong hoạt động trực tuyến này, học sinh sẽ tìm
+                hiểu định nghĩa sự kiện và cách máy tính sử dụng chúng trong các chương
+                trình như video game. Học sinh sẽ xử lý các bài tập lập trình để chương
+                trình phản ứng với các sự kiện (như khi nhấn phím mũi tên). Sau khi
+                hoàn thành bài tập, học sinh sẽ có cơ hội tùy chỉnh game của mình
+                với tốc độ và âm thanh khác nhau.
           student_description: Chọn đội của bạn và làm game bóng rổ
         sample-csp5:
           lessons:
@@ -3568,6 +3592,14 @@ vi:
           lessons:
             Sports:
               name: Thể thao
+              description_student: Bạn đã bao giờ ước mình có thể chơi game ở trường
+                chưa? Trong bài học này, bạn sẽ tự làm game đấy!
+              description_teacher: Trong hoạt động trực tuyến này, học sinh sẽ tìm
+                hiểu định nghĩa sự kiện và cách máy tính sử dụng chúng trong các chương
+                trình như video game. Học sinh sẽ xử lý các bài tập lập trình để chương
+                trình phản ứng với các sự kiện (như khi nhấn phím mũi tên). Sau khi
+                hoàn thành bài tập, học sinh sẽ có cơ hội tùy chỉnh game của mình
+                với tốc độ và âm thanh khác nhau.
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -13748,36 +13780,6 @@ vi:
                 bằng cách sử dụng các biến thực thể. Học sinh sẽ tìm hiểu sự khác
                 biệt giữa `public` và `private` và mục đích của việc đóng gói để ẩn
                 cài đặt bên trong của một đối tượng.
-            lesson-2:
-              name: Sử dụng biến
-              description_student: Các biến tạo ra phương pháp lưu trữ thông tin cho
-                các kỹ sư phần mềm. Loại thông tin chúng ta cần lưu trữ xác định loại
-                biến chúng ta cần sử dụng, kiểu dữ liệu của biến và cách chúng ta
-                sử dụng biến đó. Trong bài học này, bạn sẽ sử dụng biến để lưu trữ
-                thông tin dùng để tạo các đối tượng `Painter` và lưu trữ thông tin
-                do người dùng nhập.
-              description_teacher: Trong bài học này, học sinh sẽ khám phá chức năng
-                của biến và phân biệt giữa biến nguyên thủy và biến tham chiếu. Học
-                sinh sử dụng lớp `Scanner` để lấy dữ liệu đầu vào từ người dùng và
-                xác định biến để lưu trữ giá trị do người dùng cung cấp. Các giá trị
-                này được sử dụng để tạo các đối tượng `Painter` trong dự án Khu phố.
-            lesson-3:
-              name: Viết hàm khởi tạo
-              description_student: Xe bán hàng Tiệm bánh dự án Mercury cần sự giúp
-                đỡ của bạn! Chủ tiệm muốn bán món tráng miệng trong Khu phố nhưng
-                cần nhập và lưu trữ món tráng miệng của họ trong một chương trình.
-                Bạn cần sử dụng các kỹ năng kỹ thuật phần mềm của mình để viết chương
-                trình có thể tạo các đối tượng món tráng miệng, giúp chủ tiệm theo
-                dõi hàng tồn kho. Bạn bắt đầu bằng cách tạo lớp `dessert` để chủ tiệm
-                có thể nhập hương vị, số lượng có sẵn và giá của mỗi món tráng miệng
-                mà họ bán.
-              description_teacher: Học sinh được giới thiệu về xe bán hàng Tiệm bánh
-                dự án Mercury và nhu cầu của chủ tiệm là một chương trình nhập và
-                lưu trữ các món tráng miệng. Với tư cách là kỹ sư phần mềm, học sinh
-                sử dụng các chiến lược thiết kế hướng đối tượng để xác định các thuộc
-                tính cần thiết và các kiểu dữ liệu thích hợp cho lớp `Dessert`. Học
-                sinh viết hàm khởi tạo và sử dụng đối tượng `Scanner` để lấy các giá
-                trị cho các biến thực thể nhằm khởi tạo đối tượng `Dessert`.
             lesson-4:
               name: Thêm nhiều hàm khởi tạo
             lesson-5:

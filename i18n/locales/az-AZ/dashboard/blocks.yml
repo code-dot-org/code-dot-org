@@ -819,6 +819,7 @@ az:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": düymə
             "'sound://category_collect/clicky_crunch.mp3'": çatlamış
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": arfa
             "'sound://category_digital/jump_7.mp3'": atıl
       gamelab_randColor:
         text: ixtiyari rəng
@@ -1098,13 +1099,18 @@ az:
             '"down"': aşağıya ox
             '"left"': sola ox
             '"right"': sağa ox
-      PoemBot_setBackgroundEffect:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': partlayış
+            '"rain"': yağış
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Rənglər
             '"space"': Boşluq
             '"stars"': Ulduzlar
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             jittering: |-
@@ -1116,7 +1122,7 @@ az:
             swimming_left_and_right: üzmə
             wandering: gəzən
             wobbling: titrəmə(titrəmək)
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             jittering: |-
@@ -1128,6 +1134,20 @@ az:
             swimming_left_and_right: üzmə
             wandering: gəzən
             wobbling: titrəmə(titrəmək)
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: irəli get
       RyanLab_turnLeft:

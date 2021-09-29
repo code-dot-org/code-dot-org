@@ -1245,9 +1245,9 @@ ku:
         text: پۆتانی xی {SPRITE}
       Mikelab_yLocationOf:
         text: پۆتانی yی {SPRITE}
-      PoemBot_playSound:
+      Poetry_playSound:
         text: دەنگ هەڵکەر {SOUND}
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': ڕەنگ
@@ -1255,15 +1255,28 @@ ku:
             '"stars"': ئەستێرە
           PALETTE:
             '"rainbow"': پەلكەزێرینە
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: پاشبنەما دابنێ {IMG}
-      PoemBot_setForegroundEffect:
-        text: ئیفێکتی پێشبنەما دابنێ {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': باران
             '"bubbles"': بڵق
             '"confetti"': بڕشتی کاغەز
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       SpriteLab2Beta_spriteSay:
         text: سپڕایت {SPRITE} بڵێ {TEXT} بەماوەی {SECONDS} چرکە
       Vector_createSpriteWith:

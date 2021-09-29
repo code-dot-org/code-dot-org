@@ -3132,6 +3132,11 @@
               "binary": "binarli"
             }
           }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "o'yinni qaytarish"
+          }
         }
       }
     }

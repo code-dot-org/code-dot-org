@@ -1366,10 +1366,13 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
+      Poetry_playSound:
         text: spillLyd {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: velg bakgrunnseffekt {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Farger
@@ -1377,13 +1380,26 @@
             '"stars"': Stjerner
           PALETTE:
             '"rainbow"': Regnbue
-      PoemBot_setForegroundEffect:
-        text: sett forgrunneffekt {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Regn
             '"bubbles"': Bobler
             '"confetti"': Konfetti
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: gå fremover
       RyanLab_turnLeft:

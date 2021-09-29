@@ -590,7 +590,8 @@
           "craft_callout_preplaced_house": "Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn. Bạn có hoàn thành được không?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Nhấn \"Run\" để thử chương trình của bạn"
+          "craft_run_button_callout": "Nhấn \"Run\" để thử chương trình của bạn",
+          "craft_drag_block_callout": "Kéo một khối “move forward” (tiến lên) và gắn bên dưới khối kia"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Lặp lại các hành động bằng cách đặt các khối gỗ vào đây"
@@ -820,7 +821,8 @@
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
         },
         "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "Bạn có thể kéo các khối bị dưa vào hộp công cụ để bỏ đi."
+          "courseC_maze_programming3_2": "Bạn có thể kéo các khối bị dưa vào hộp công cụ để bỏ đi.",
+          "stone_block_2": "Khối xám không thể bỏ."
         },
         "courseD_maze_ramp5_2021": {
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
@@ -839,6 +841,72 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Kéo các khối từ hộp công cụ vào không gian làm việc của bạn."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Hãy đưa diễn viên đến vị trí lá cờ này để chuyển sang cấp độ tiếp theo."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Hãy dùng khối này khi Waddles và Chomp chạm vào nhau!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Khối này giúp bạn di chuyển các diễn viên đến các vị trí khác nhau trong không gian chơi."
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Thêm khối này vào giữa chương trình của bạn."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Số bốn trên bí ngô cho bạn biết rằng có bốn bí ngô ở đó để nhặt."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Đừng quên kiểm tra TẤT CẢ đám mây xem có HOA hay không. Bạn không cần kiểm tra tổ ong đâu nhé."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Hãy dùng vòng lặp này để lấy tất cả mật hoa (hoặc mật ong) từ một bông hoa (hoặc tổ ong)."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Bạn cần dùng khối `while path ahead` (khi có đường phía trước) để giải bài tập này."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Hộp công cụ lần này có cấu trúc hơi khác một chút! Hãy nhấp chuột vào các danh mục khác nhau để xem bạn có những khối nào."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Khối mới!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Khối mới!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Khối mới!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Khối mới!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Khối mới!",
+          "hello_world_new_block": "Khối mới!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Khối mới!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Khối mới!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Khối mới!",
+          "hello_world_new_block": "Khối mới!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Khối mới!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Khối mới!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Khối mới!",
+          "hello_world_new_block": "Khối mới!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Khối mới!"
         }
       }
     }

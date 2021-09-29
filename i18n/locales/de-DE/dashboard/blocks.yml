@@ -1709,12 +1709,16 @@ de:
         text: Monster zufällig anordnen
       Outbreak_stopMoving:
         text: Monster bewegen sich nicht mehr
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': platzen
+            '"rain"': Regen
+      Poetry_makeNumSprites:
         text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
-      PoemBot_playSound:
+      Poetry_playSound:
         text: spieleTon {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: Hintergrundeffekt einstellen {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Farben
@@ -1723,12 +1727,10 @@ de:
             '"stars"': Sterne
             '"ripples"': Welligkeit
           PALETTE:
-            '"sky"': Himmel
             '"rainbow"': Regenbogen
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: setze Hintergund auf {IMG}
-      PoemBot_setForegroundEffect:
-        text: Vordergrundeffekt einstellen {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Regen
@@ -1736,7 +1738,7 @@ de:
             '"hearts"': Farbenfrohe Herzen
             '"confetti"': Konfetti
             '"starburst"': Starburst
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: flattern
@@ -1747,7 +1749,7 @@ de:
             spinning_right: nach rechts drehen
             wandering: wandern
             wobbling: wackelnd
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: flattern
@@ -1758,8 +1760,22 @@ de:
             spinning_right: nach rechts drehen
             wandering: wandern
             wobbling: wackelnd
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: vorwärts bewegen
       RyanLab_turnLeft:

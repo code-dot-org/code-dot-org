@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nextsteps-faq"
+    "/home": "nasa-myjourney"
   },
 
   "banners": {
-    "nextsteps-faq": {
-      "image": "/images/csjourneys/nextsteps-faq-banner3.png",
-      "title": "Demystify next steps for your students",
-      "body": "Give high school students the opportunity to hear answers to some of the most common questions about computer science, including what career options are available and how artificial intelligence and big data will shape the job market.",
+    "nasa-myjourney": {
+      "image": "/images/csjourneys/nasa-banner.png",
+      "title": "Building models of the universe with NASA",
+      "body": "Hear from two NASA scientists about their career journeys and how they use data science to build 3D models of the universe. Recommended for grades K-5. Recording will be available the day after the live session.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-1",
-      "buttonId": "nextsteps-faq-details"
+      "buttonUrl": "https://www.eventbrite.com/e/my-journey-building-models-of-the-universe-registration-167178077129",
+      "buttonId": "myjourney-nasa-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",
