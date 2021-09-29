@@ -1346,7 +1346,11 @@ mi:
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
-      PoemBot_setBackgroundEffect:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ua
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Tae
@@ -1356,8 +1360,7 @@ mi:
             '"ripples"': Ngā Pungarungaru
           PALETTE:
             '"rainbow"': Āniwaniwa
-      PoemBot_setForegroundEffect:
-        text: whakarite i te papamua {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Ua
@@ -1365,6 +1368,20 @@ mi:
             '"hearts"': Manawa Tae
             '"confetti"': Pepa tae iti
             '"starburst"': Pāpahu Whetū
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: neke ki mua
       RyanLab_turnLeft:

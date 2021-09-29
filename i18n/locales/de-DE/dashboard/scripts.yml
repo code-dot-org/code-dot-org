@@ -179,6 +179,8 @@ de:
           lessons:
             Artist:
               name: Künstler
+              description_student: Erstelle schöne Bilder durch die Programmierung des Zeichners.
+              description_teacher: In dieser Lektion übernehmen die SchülerInnen die Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen. In dieser Phase mit dem Künstler können die SchülerInnen Bilder von zunehmender Komplexität erstellen, indem sie neue Bausteine wie "100 Pixel vorwärts" und "90 Grad nach rechts drehen" verwenden.
           student_description: Zeichne coole Bilder und Designs mit dem Künstler!
         hourofcode:
           title: Klassisches Labyrinth
@@ -3433,6 +3435,8 @@ de:
           lessons:
             Bounce:
               name: Bounce
+              description_student: Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!
+              description_teacher: In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.
           student_description: Wähle Dein Team und spiele eine Runde Basketball
         sample-csp5:
           lessons:
@@ -3999,6 +4003,8 @@ de:
           lessons:
             Sports:
               name: Sport
+              description_student: Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!
+              description_teacher: In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.
           student_description: Kombiniere Elemente unterschiedlicher Sportarten
         2016_sciencePD-phase2b:
           lessons:
@@ -6041,7 +6047,8 @@ de:
             Thanks:
               name: Danke
             '': {}
-            " ": {}
+            " ":
+              name: ''
         csp-pre-survey-test-2017:
           lessons:
             new stage:
@@ -11918,7 +11925,7 @@ de:
               display_name: Umfrage
           lessons:
             CSD post-course survey:
-              name: Erkenntnisse aus der Informatik Befragung nach dem Kurs
+              name: Erkenntnisse aus der Informatik Befragung der SchülerInnen nach dem Kurs ('18-'19)
         csp-post-survey-2018:
           title: Grundsätze der Informatik Schülerbefragungen nach dem Kurs ('18-'19)
           description_audience: Grundsätze der Informatik- SchülerInnen
@@ -11929,7 +11936,7 @@ de:
               display_name: Umfrage
           lessons:
             CSP post-course survey:
-              name: Grundsätze der Informatik Befragung nach dem Kurs
+              name: Grundsätze der Informatik Schülerbefragungen nach dem Kurs ('18-'19)
           student_description: Willkommen bei der Befragung nach dem Kurs zu Grundsätzen der Informatik von Code.org. Diese Befragung dauert ca. 15 Minuten. Ihre Antworten sind privat und anonym- Ihr Lehrer kann anonyme Gesamtergebnisse für die gesamte Klasse einsehen. Die Ergebnisse sind für Ihren Lehrer und für Code.org von entscheidender Bedeutung, um den Kurs weiterzuführen und zu verbessern. Vielen Dank für Ihre Zeit und Aufmerksamkeit.
         csp5-pilot:
           title: Grundsätze der Informatik Lerneinheit 5 Pilot - Listen, Schleifen, und Traversalen
@@ -17565,6 +17572,9 @@ de:
             lesson-20:
               name: Prüfungstag
             lesson-21: {}
+            lesson-24: {}
+            lesson-22: {}
+            lesson-23: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -17573,6 +17583,9 @@ de:
             lesson-15:
               name: Prüfungstag
             lesson-1: {}
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
           lesson_groups:
             lesson group:
               display_name: Inhalt
@@ -17581,6 +17594,9 @@ de:
             lesson-15:
               name: Prüfungstag
             lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -17588,6 +17604,10 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -18100,6 +18120,9 @@ de:
             Assessment Day:
               name: Prüfungstag
             Unit 1 Pilot Survey: {}
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-20:
               name: Prüfungstag
             lesson-21: {}
@@ -18111,6 +18134,8 @@ de:
             Assessment Day:
               name: Prüfungstag
             Unit 2 Pilot Survey: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-15:
               name: Prüfungstag
             lesson-1: {}
@@ -18122,6 +18147,9 @@ de:
             Assessment Day:
               name: Prüfungstag
             Unit 3 Pilot Survey: {}
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-15:
               name: Prüfungstag
             lesson-16: {}
@@ -18132,10 +18160,14 @@ de:
           lessons:
             Assessment Day:
               name: Prüfungstag
+            lesson-1: {}
+            lesson-3: {}
+            lesson-4: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
             lesson-10: {}
+            lesson-2: {}
             lesson-15:
               name: Prüfungstag
           lesson_groups:
@@ -18251,6 +18283,7 @@ de:
             lesson-14: {}
             lesson-15:
               name: Prüfungstag
+            lesson-16: {}
           lesson_groups:
             lesson group:
               display_name: Inhalt
@@ -18261,5 +18294,11 @@ de:
             lessonGroup-2:
               display_name: Inhalt
         csc-things:
+          lessons:
+            lesson-1: {}
+        poetry-hoc2:
+          lessons:
+            lesson-1: {}
+        poetry-hoc3:
           lessons:
             lesson-1: {}

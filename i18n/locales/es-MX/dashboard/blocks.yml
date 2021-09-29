@@ -1192,6 +1192,7 @@ es-MX:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": botón
             "'sound://category_collect/clicky_crunch.mp3'": aplastar
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": arpa
             "'sound://category_digital/jump_7.mp3'": salta
       gamelab_pointInDirection:
         text: apuntar {SPRITE} {DIRECTION}
@@ -1750,15 +1751,16 @@ es-MX:
         text: Configurar Monster Town con{COUNT}monstruos
       Outbreak_stopMoving:
         text: los monstruos dejan de moverse
-      PoemBot_makeNumSprites:
-        text: hacer {NUM} nuevos sprites de {ANIMATION_NAME}
-      PoemBot_playSound:
-        text: reproducirSonido {SOUND}
+      Poetry_makeBurst:
         options:
-          SOUND:
-            '"sound://category_background/ocean_waves.mp3"': Océano
-      PoemBot_setBackgroundEffect:
-        text: establecer efecto de fondo {EFFECT} {PALETTE}
+          EFFECT:
+            '"burst"': ráfaga
+            '"rain"': lluvia
+      Poetry_makeNumSprites:
+        text: hacer {NUM} nuevos sprites de {ANIMATION_NAME}
+      Poetry_playSound:
+        text: reproducirSonido {SOUND}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Colores
@@ -1767,13 +1769,10 @@ es-MX:
             '"stars"': Estrellas
             '"ripples"': Ondas
           PALETTE:
-            '"sky"': Sky
-            '"ocean"': Océano
             '"rainbow"': Arcoíris
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: establecer fondo a {IMG}
-      PoemBot_setForegroundEffect:
-        text: establecer efecto de primer plano {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Lluvia
@@ -1781,12 +1780,7 @@ es-MX:
             '"hearts"': Corazones coloridos
             '"confetti"': Confeti
             '"starburst"': Explosión de estrellas
-      PoemBot_setPoem:
-        options:
-          POEM:
-            '"rumi_2"': Océano
-      PoemBot_startBehavior:
-        text: 'gráfico {ANIMATION_NAME} inicia {BEHAVIOR} '
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: revolotear
@@ -1798,8 +1792,7 @@ es-MX:
             swimming_left_and_right: natación
             wandering: deambulando
             wobbling: tambalearse
-      PoemBot_stopBehavior:
-        text: 'gráfico {ANIMATION_NAME} detiene {BEHAVIOR} '
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: revolotear
@@ -1811,13 +1804,23 @@ es-MX:
             swimming_left_and_right: natación
             wandering: deambulando
             wobbling: tambalearse
-      PoemBot_stringValue:
-        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
-      PoemBot_whenPromptAnswered:
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: cuando {VAR} respondió
       RyanLab_moveForward:
         text: avanzar

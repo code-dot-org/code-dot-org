@@ -127,19 +127,67 @@
           "student_overview": "Priprav sa na veľa kódovania! Je načase vytvoriť tvoj projekt."
         },
         "pre-express-2021/Learn to Drag and Drop": {
-          "overview": "Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh."
+          "overview": "Táto lekcia **na rozvíjanie zručností** poskytne študentom predstavu o tom, čo očakávať, keď prvýkrát prídu do počítačovej učebne. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačovej učebni, a potom budú obiť on‑line úlohy pomocou počítača.",
+          "preparation": "-   Pozrite si video pre učiteľov **\\*Ako na Code.org vytvoriť triednu sekciu**. Vytvorte si na Code.org vlastnú triednu sekciu a uistite sa, že ste každému žiakovi dali kartičku s jeho **prihlasovacím kódom**.\n-   Uistite sa, že žiaci budú mať na svojich zariadeniach prístup k lekcii č. 2. Zamyslite sa nad tým, či budete chcieť ukryť ďalšie lekcie, aby niektorí žiaci nenapredovali v kurze príliš rýchlo.\n-   Požiadajte školského IT pracovníka, aby na pracovnú plochu pridal rýchly odkaz na vašu triednu sekciu.\n-   Prezrite si webové stránky organizácie Common Sense Education, kde nájdete viac obsahu zameraného na on‑line bezpečnosť.",
+          "purpose": "Hlavným cieľom tejto lekcie je umožniť žiakom, aby sa zlepšovali v práci s počítačom. Pokrytím najzákladnejších funkcií počítača, ako je klikanie, presúvanie a púšťanie, stierame rozdiely medzi žiakmi a dávame všetkým možnosť zvládnuť budúce úlohy rovnako dobre. Táto lekcia tiež poskytuje skvelú príležitosť predstaviť žiakom základné termíny týkajúce sa počítačového hardvéru, napríklad „myš“, „touchpad“ či „dotyková obrazovka“ (v závislosti od toho, aké zariadenia používate).",
+          "student_overview": "Dokonči úlohy presúvaním objektov."
         },
         "pre-express-2021/Sequencing with Scrat": {
-          "overview": "Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh."
+          "overview": "V tejto lekcii **na rozvíjanie zručností** budú žiaci vytvárať sekvenčné algoritmy na presúvanie veveričky z jednej strany bludiska k žaluďu na druhej strane bludiska. Na splnenie tejto úlohy budú v lineárnej postupnosti spájať programovacie bloky.",
+          "preparation": "-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "V tejto lekcii sa budú žiaci rozvíjať v programovaní a ladení (hľadaní chýb) na počítačovej platforme. Formát týchto úloh využíva bloky, ktoré žiakom pomáhajú oboznámiť sa s postupnosťou a ďalšími konceptmi bez toho, aby sa museli trápiť syntaxou.",
+          "student_overview": "Naprogramuj Scrata tak, aby sa dostal k žaluďu."
+        },
+        "pre-express-2021/Programming in with Angry Birds": {
+          "overview": "V tejto lekcii **na rozvíjanie zručností** budú žiaci pokračovať vo vytváraní sekvenčných algoritmov.",
+          "preparation": "-   Prejdite si celú lekciu, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   (Voliteľné) Vyberte zopár úloh, ktoré bude celá trieda robiť spoločne.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "V tejto lekcii sa budú žiaci rozvíjať v programovaní a ladení (hľadaní chýb) na počítačovej platforme. Formát týchto úloh využíva bloky, ktoré žiakom pomáhajú oboznámiť sa s postupnosťou a ďalšími konceptmi bez toho, aby sa museli trápiť syntaxou."
+        },
+        "pre-express-2021/Programming with Rey and BB-8": {
+          "overview": "Táto lekcia **na rozvíjanie zručností** žiaci využijú svoje novozískané programovacie zručnosti zložitejšími spôsobmi, aby robota BB‑8 znavigovali náročnou dráhou.",
+          "preparation": "-   Prejdite si celú lekciu, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   Uistite sa, že každý študent má zápisník na poznámky.",
+          "purpose": "Táto lekcia je zameraná na transfer poznatkov, a preto poskytuje žiakom nové prostredie na precvičenie zručností, ktoré si rozvíjali. Fanúšikovia Hviezdnych vojen budú skákať od šťastia, keď tieto úlohy uvidia. Každá úloha v tejto sérii slúži na to, aby žiakom pomohla hlbšie porozumieť základným konceptom, ktoré budú používať vo zvyšku tohto kurzu."
         },
         "pre-express-2021/Programming in Harvester": {
-          "overview": "Študenti aplikujú naučené koncepty programovania v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového bloku. Študenti budú pokračovať v rozvíjaní zručností sekvenčných algoritmov a začnú používať debugovací proces."
+          "overview": "Študenti aplikujú naučené koncepty programovania v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového bloku. Študenti budú pokračovať v rozvíjaní zručností sekvenčných algoritmov a začnú používať debugovací proces.",
+          "preparation": "-   Prejdite si celú lekciu, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   Uistite sa, že každý študent má zápisník na poznámky.",
+          "purpose": "V tejto lekcii sa žiaci budú učiť ladiť programy a naďalej si budú rozvíjať svoje programovacie zručnosti.",
+          "student_overview": "Pomôž Záhradníčke pozbierať zeleninu, ktorú má po ceste."
+        },
+        "pre-express-2021/Loops with Scrat": {
+          "overview": "V tejto lekcii **na rozvíjanie zručností** si žiaci precvičia koncept cyklov pri programovaní úloh, ktorých cieľom je pomôcť veveričke dostať sa k žaluďu.",
+          "preparation": "-   (Voliteľné) Vyberte zopár úloh, ktoré bude celá trieda robiť spoločne.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "V tejto lekcii sa žiaci naučia viac o cykloch a o tom, ako ich využiť v programovacom rozhraní Blockly. Používanie _cyklov_ je dôležitá programovacia zručnosť, pretože manuálne opakovanie príkazov je namáhavé a neefektívne. V týchto úlohách od Code.org sa žiaci naučia, ako pridávať príkazy do existujúcich cyklov, ako opakujúci sa kód zjednodušiť pomocou cyklu a ako rozlíšiť, ktorú časť kódu treba opakovať.",
+          "student_overview": "Pomôž Scratovi  prejsť väčšiu dráhu pomocou cyklov."
+        },
+        "pre-express-2021/Loops with Laurel": {
+          "overview": "V tejto lekcii budú žiaci pokračovať v oboznamovaní sa s konceptom cyklov. Dobrodružka Laurel v nej využíva cykly na to, aby zbierala poklady v otvorených jaskynných priestranstvách. Žiaci budú mať odteraz k dispozícii blok `získaj poklad`, ktorý jej na jej ceste pomôže.",
+          "preparation": "-   Prejdite si všetky úlohy, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   (Voliteľné) Vyberte zopár úloh, ktoré bude celá trieda robiť spoločne.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Táto lekcia žiakom poskytuje príležitosť precvičiť si používanie cyklov. Motivuje ich k tomu, aby viacero blokov umiestnili do bloku `opakuj`, aby dokázali pozbierať čo najviac kusov pokladu."
         },
         "pre-express-2021/Ocean Scene with Loops": {
-          "overview": "V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy."
+          "overview": "V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.",
+          "preparation": "-   Prejdite si celú lekciu, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   Uistite sa, že každý študent má zápisník na poznámky.",
+          "purpose": "Táto lekcia žiakom poskytne iný pohľad na to, ako sa dajú pri programovaní vytvárať veci pomocou cyklov. Žiaci sa tiež môžu zamyslieť nad tým, že programovanie bez cyklov neefektívne, pretože bez cyklov `opakuj` by si program vyžadoval veľké množstvo blokov. ",
+          "student_overview": "Dokonči obrázky pomocou cyklov a vzorov."
+        },
+        "pre-express-2021/Drawing Gardens with Loops": {
+          "overview": "V tejto lekcii **na rozvíjanie zručností** sa žiaci budú učiť, ako kresliť obrázky cyklovaním jednoduchých postupností inštrukcií. Žiaci sa naučia vytvárať vzory pomocou cyklov. Na konci lekcie budú mať príležitosť vytvoriť si vlastné obrázky.",
+          "preparation": "-   Prejdite si celú lekciu, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   Uistite sa, že každý študent má zápisník na poznámky.",
+          "purpose": "Táto lekcia žiakom poskytne iný pohľad na to, ako sa dajú pri programovaní vytvárať veci pomocou cyklov. Žiaci si tiež otestujú svoje kritické myslenie, keď budú mať za úlohu vyhodnotiť kód, ktorý dostanú, a určiť, čo k nemu treba doplniť na vyriešenie úlohy. Žiaci sa tiež môžu zamyslieť nad tým, že programovanie bez cyklov neefektívne, pretože bez cyklov `opakuj` by si program vyžadoval veľké množstvo blokov.",
+          "student_overview": "Dokonči obrázky pomocou cyklov a vzorov."
         },
         "pre-express-2021/On the Move with Events": {
-          "overview": "V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!"
+          "overview": "V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!",
+          "preparation": "-   Prejdite si všetky úlohy, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   (Voliteľné) Vyberte zopár úloh, ktoré bude celá trieda robiť spoločne.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Žiaci sa dnes v prostredí Play Labu lepšie zoznámia s udalosťami. Udalosti sú veľmi časté vo väčšine počítačových programov. V tejto aktivite budú žiaci využívať udalosti na to, aby pohybovali postavou po obrazovke, aby vydávali zvuky či menili pozadie, to všetko na základe udalostí vyvolaných používateľom.",
+          "student_overview": "Vytvor si vlastnú hru alebo príbeh."
+        },
+        "pre-express-2021/A Royal Battle with Events": {
+          "overview": "V tomto **miniprojekte** dostanú žiaci príležitosť naučiť sa, ako používať udalosti v Play Labe, a budú môcť využiť všetky doteraz získané programovacie zručnosti na vytvorenie animovanej hry. ",
+          "preparation": "-   Prejdite si všetky úlohy, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   (Voliteľné) Vyberte zopár úloh, ktoré bude celá trieda robiť spoločne.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "V tejto on‑line aktivite sa žiaci naučia, ako sa v Play Labe používajú udalosti. Najprv naprogramujú rytiera tak, aby sa hýbal pri stlačení šípky na klávesnici hýbal, a nakoniec budú mať v rámci záverečnej voľnej úlohy príležitosť ukázať zvyšné zručnosti, ktoré počas kurzu nadobudli, vrátane postupností a cyklov.",
+          "student_overview": "Vytvor pomocou udalostí príbeh alebo interaktívnu hru."
         },
         "coursee-2021/Simon Says": {
           "overview": "V tejto lekcii si študenti zahrajú hru, ktorá im pomôže premýšľať nad spôsobmi prideľovania príkazov tak, aby dosiahnuť želaný výsledok. Pomôže im to ľahšie premostiť do prostredia Sprite Labu v nasledujúcej lekcii.",

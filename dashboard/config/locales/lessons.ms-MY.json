@@ -2,8 +2,28 @@
   "ms-MY": {
     "data": {
       "lessons": {
+        "coursef-2021/lesson-6": {
+          "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan membincangkan peranan komputer dan teknologi dalam kehidupan mereka, dengan menumpukan kepada cara aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya. Pelajar juga akan meneroka aplikasi yang serupa dengan aplikasi yang akan mereka cipta sendiri nanti.",
+          "preparation": "-   Tentukan cara pelajar akan log masuk ke dalam Code.org.\n-   Jika diperlukan, cipta akaun Code.org untuk pelajar.\n-   Berikan topik Memperkenalkan Makmal Peperi kepada pelajar.\n-   Cetak salinan lembaran kerja **\\* Meneroka Aplikasi** (atau siarkan versi digital kepada LMS anda).",
+          "purpose": "Pelajaran pertama ialah menjadikan pelajar teruja tentang kursus dan menghubungkan minat peribadi mereka kepada sains komputer. ",
+          "student_overview": "Anda akan membincangkan peranan komputer dan teknologi dalam kehidupan anda dengan tumpuan diberikan kepada sejauh mana aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya."
+        },
+        "coursef-2021/lesson-7": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. ",
+          "preparation": "Sila lalui tahap tersebut dan semak **\\*slaid pelajaran**.",
+          "purpose": "Pelajaran ini direka bentuk bertujuan memperkenalkan pelajar kepada pengaturcaraan di dalam Makmal Peperi. Pelajar akan mula membentuk pemahaman model pengaturcaraan alat ini dan meneroka cara mereka boleh menggunakannya untuk menyatakan perasaan mereka sendiri.",
+          "student_overview": "Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku."
+        },
+        "coursef-2021/lesson-8": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap acara yang ditetapkan masanya dan input pengguna. "
+        },
         "coursef-2021/lesson-2": {
+          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nPelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Learn more.][2]\n\nOleh kerana kanak-kanak membesar, mereka akan mula berkomunikasi dengan lebih banyak secara dalam talian. Tetapi sebahagian daripada perkara yang mereka lihat boleh mengakibatkan mereka merasa sakit hati, sedih, marah, atau malah takut. Bantu pelajar anda membina empati terhadap individu lain dan pelajari strategi yang perlu digunakan apabila berhadapan dengan buli siber.",
+          "purpose": "Pendidikan yang Munasabah mencipta pelajaran ini untuk mengajar pelajar perkara yang perlu mereka lakukan apabila seseorang menggunakan bahasa yang zalim atau menyakitkan dalam internet.",
           "student_overview": "Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian."
+        },
+        "coursef-2021/lesson-9": {
+          "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) sebagai konteks untuk memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan."
         },
         "coursef-2021/Loops with the Artist": {
           "overview": "Pelajaran **membina kemahiran** ini mengalihkan tumpuan daripada Makmal Peperi kepada Artis, alat baharu yang akan diterokai oleh pelajar sepanjang tempoh kursus yang tinggal ini."
@@ -24,15 +44,23 @@
           "student_overview": "Anda akan menikmati banyak keseronokan apabila mempelajari tentang gelung `untuk`!"
         },
         "coursef-2021/For Loops in Artist": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar berlatih gelung “untuk” dengan Artis. Pelajar akan menyelesaikan teka-teki untuk mencipta reka bentuk kompleks dan seni unik.",
           "student_overview": "Bersedia untuk membuat hasil kerja agung anda yang seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan membuat beberapa gambar yang cukup luar biasa."
         },
         "coursef-2021/Simulating Experiments": {
+          "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan menjalankan dan mengumpulkan data daripada simulasi ringkas di Makmal Peperi. Selepas menjalankan simulasi beberapa kali, pelajar akan mempunyai peluang membuat ramalan tentang sejauh mana dengan menukar pemboleh ubah dalam simulasi mungkin memberikan kesan kepada hasilnya dan kemudian uji hipotesis tersebut.",
           "student_overview": "Jalankan simulasi pada komputer dan eksperimen dengan menukar pemboleh ubah."
         },
+        "coursef-2021/Internet": {
+          "student_overview": "Adakah anda pernah terfikir cara maklumat bergerak merentasi Internet? Ini bukan silap mata! Pelajaran ini akan mengajar anda asas-asas cara internet berfungsi."
+        },
         "coursef-2021/End of Course Project": {
+          "overview": "Pelajaran **projek** ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek baharu!",
           "student_overview": "Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!"
         },
         "courseb-2021/Digital Trails": {
+          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nPelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Learn more.][2]\n\nAdakah perkara yang anda lakukan dalam talian sentiasa berada dalam talian? Pelajar mempelajari bahawa maklumat yang mereka kongsi dalam talian meninggalkan jejak digital atau \"jejak.\" Bergantung kepada cara mereka menguruskannya, jejak ini boleh menjadi besar atau kecil, serta berbahaya atau bermanfaat. Pelajar membandingkan jalan berbeza dan berfikir secara kritikal tentang jenis maklumat yang mereka mahu tinggalkan.",
+          "purpose": "Pendidikan yang Munasabah mencipta pelajaran ini untuk mengajar pelajar tentang \"jejak digital\" dan jenis maklumat yang sesuai untuk mereka memilikinya sendiri.",
           "student_overview": "Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web."
         },
         "courseb-2021/Move It, Move It": {
@@ -42,9 +70,11 @@
           "student_overview": "Bantu Red, Angry Bird mengikuti laluan menuju ke tempat khinzir yang nakal."
         },
         "courseb-2021/Programming in Harvester": {
+          "overview": "Pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai dalam pelajaran **membina kemahiran** ini. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan.",
           "student_overview": "Bantu Penuai mengumpulkan sayuran di sepanjang laluan."
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan belajar menggunakan gelung untuk menyampaikan arahan dengan lebih mudah dengan melihat pada corak pergerakan berulang dalam tarian.",
           "student_overview": "Dalam pelajaran ini, kami akan mengadakan majlis tari-menari dengan menggunakan gelung berulang!"
         },
         "courseb-2021/Loops in Harvester": {
@@ -60,18 +90,22 @@
           "student_overview": "Lakarkan aplikasi telefon pintar anda sendiri."
         },
         "courseb-2021/Events: The Big Event": {
+          "overview": "Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep acara melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.",
           "student_overview": "Bergerak atau berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi."
         },
         "courseb-2021/Events in Play Lab": {
           "student_overview": "Gunakan peristiwa untuk mencipta cerita atau membuat permainan berinteraktif."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "[\\[pendidikan yang munasabah](https://creativecommons.org/)][1]\n\nPelajaran ini pada asalnya dicipta oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.][2]\n\nKuasa internet membolehkan pelajar mengalami dan mengunjungi merata tempat yang mungkin tidak dapat mereka lihat dengan sendiri. Tetapi, seperti melakukan perjalanan di dalam dunia nyata, ia penting untuk menjaga keselamatan semasa melakukan perjalanan dalam talian. Dalam perjalanan lapangan maya ini, kanak-kanak boleh berlatih menjaga keselamatan semasa pengembaraan dalam talian.",
+          "overview": "[\\[common sense education](https://creativecommons.org/)][1]\n\nPelajaran ini pada asalnya dicipta oleh Pendidikan yang Munasabah. [Learn more.][2]\n\nKuasa internet membolehkan pelajar mengalami dan mengunjungi merata tempat yang mungkin tidak dapat mereka lihat dengan sendiri. Tetapi, seperti melakukan perjalanan di dalam dunia nyata, ia penting untuk menjaga keselamatan semasa melakukan perjalanan dalam talian. Dalam perjalanan lapangan maya ini, kanak-kanak boleh berlatih menjaga keselamatan semasa pengembaraan dalam talian.",
           "preparation": "-   Semak bahan pengajaran.\n-   Cetak kertas sebaran untuk setiap pelajar.\n-   (Pilihan) Cetak poster puisi untuk paparan di dalam kelas.",
           "purpose": "Pendidikan yang Munasabah mencipta pelajaran ini untuk mengajar pelajar cara mereka boleh pergi ke merata tempat dengan selamat secara dalam talian.",
           "student_overview": "Pelajari cara untuk pergi ke merata tempat dengan selamat dalam talian."
         },
         "coursea-2021/Learn to Drag and Drop": {
+          "overview": "Pelajaran **membina kemahiran** ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.",
+          "preparation": "-   Tonton **\\*Cara Membuat Bahagian Kelas** di Code.org - Video Guru. Cipta bahagian kelas anda sendiri di Code.org dan pastikan setiap pelajar mempunyai kad dengan kod laluan mereka padanya.\n-   Pastikan pelajar akan dapat mengakses Pelajaran 2 daripada peranti mereka. Sila pertimbangkan sekiranya anda mahu menyembunyikan pelajaran akan datang bagi mengelakkan pelajar daripada bergerak terlalu pantas ke hadapan.\n-   Minta kakitangan IT sekolah menambahkan pautan pantas untuk bahagian kelas anda kepada desktop komputer.\n-   Semak laman web Pendidikan yang Munasabah untuk lebih banyak kandungan keselamatan dalam talian.",
+          "purpose": "Matlamat utama pelajaran ini ialah untuk membina pengalaman pelajar dengan komputer. Dengan meliputi fungsi komputer paling asas seperti mengklik, menyeret dan melepaskan, kita mewujudkan persekitaran pembelajaran yang lebih setara di dalam kelas untuk teka-teki masa depan. Pelajaran ini juga menyediakan peluang besar untuk memperkenalkan terminologi perkakasan komputer asas, yang mungkin termasuk \"tetikus\", \"pad jejak\" atau \"skrin sentuh\", bergantung pada peranti anda.",
           "student_overview": "Klik dan tarik untuk menyelesaikan teka-teki."
         },
         "coursea-2021/Programming: Happy Maps": {
@@ -85,6 +119,7 @@
           "student_overview": "Tulis program untuk membantu Scrat mendapatkan buah oak."
         },
         "coursea-2021/Programming with Rey and BB-8": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan menggunakan kemahiran pengaturcaraan yang baharu diperoleh mereka dengan cara yang lebih rumit untuk menavigasi kursus yang sukar dengan BB-8\\_.",
           "student_overview": "Bantu BB-8 mengumpulkan logam sekerap."
         },
         "coursea-2021/Loops: Happy Loops": {
@@ -100,24 +135,29 @@
           "student_overview": "Gunakan gelung dan corak untuk menyiapkan imej."
         },
         "coursea-2021/Events: The Big Event": {
+          "overview": "Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep peristiwa melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.",
           "student_overview": "Bergerak dan berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi."
         },
         "coursea-2021/Events in Play Lab": {
           "student_overview": "Cipta permainan dan cerita anda sendiri."
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
+          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nPelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Learn more.][2]\n\nInternet dipenuhi dengan semua jenis individu yang menarik, tetapi kadang-kadang, sebilangan daripada mereka boleh menjadi zalim antara satu sama lain. Dengan peranan ini, bantu pelajar anda memahami sebab lebih mudah bersikap zalim dalam talian daripada bersemuka dan cara menangani kekejian dalam talian apabila mereka melihatnya.",
+          "purpose": "Pendidikan yang Munasabah mencipta pelajaran ini bertujuan mengajar pelajar tentang kekejian dan perkara yang perlu dilakukan jika anda mengalaminya dalam talian.",
           "student_overview": "Dalam pelajaran ini, anda akan mempelajari tentang kekejian dan perkara yang perlu dilakukan jika anda mengalaminya dalam talian."
         },
         "coursec-2021/Programming: My Robotic Friends": {
           "student_overview": "Dalam pelajaran ini, anda akan berpura-pura yang rakan sekelas anda ialah robot dan mengatur cara mereka untuk membina corak cawan yang tersusun."
         },
         "coursec-2021/Debugging in Maze": {
+          "purpose": "Pelajar di dalam kelas anda mungkin berasa kecewa dengan pelajaran ini kerana inti pati penyahpepijatan. Penyahpepijatan ialah konsep yang sangat penting kepada pengaturcaraan komputer. Saintis komputer mesti mempunyai kecekapan yang tinggi untuk menghadapi pepijat dalam program mereka sendiri. Penyahpepijatan memaksa pelajar mengenali masalah dan mengatasinya sambil membina pemikiran kritikal dan kemahiran menyelesaikan masalah.",
           "student_overview": "Cari masalah di dalam teka-teki dan berlatih kemahiran penyahpepijatan anda."
         },
         "coursec-2021/Programming in Collector": {
           "student_overview": "Tulis algoritma untuk membantu Pengembara Laurel mengumpulkan banyak batu permata!"
         },
         "coursec-2021/Programming in Artist": {
+          "purpose": "Membina pengalaman terdahulu pelajar dengan penjujukan, pelajaran ini akan berfungsi untuk menginspirasikan lebih banyak kreativiti dengan pengekodan. Tujuan pelajaran ini ialah untuk memantapkan pengetahuan mengenai penjujukan dengan memperkenalkan blok dan matlamat baharu. Dalam hal ini, pelajar mempelajari lebih banyak tentang piksel dan sudut dengan menggunakan blok baharu, sambil masih berlatih kemahiran penjujukan mereka. Pelajar juga akan dapat menggambarkan matlamat baharu seperti pengekodan Artis untuk melukis segi empat sama.",
           "student_overview": "Cipta imej yang cantik dengan mengatur cara Artis."
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
@@ -131,6 +171,7 @@
           "student_overview": "Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!"
         },
         "coursec-2021/Events: The Big Event": {
+          "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan belajar bahawa peristiwa ialah cara terbaik menambahkan fleksibiliti kepada algoritma prabertulis.",
           "student_overview": "Main permainan yang menyeronokkan untuk mengetahui tentang peristiwa."
         },
         "coursec-2021/Build a Flappy Game": {
@@ -146,18 +187,23 @@
           "student_overview": "Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda."
         },
         "coursed-2021/lesson-5": {
+          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nPelajaran ini pada asalnya dibuat oleh [Common Sense Education][2].\n\nKata laluan dalam talian yang lebih kuat dan selamat ialah idea yang baik untuk semua individu. Tetapi bagaimanakah kita boleh membantu kanak-kanak mencipta kata laluan yang lebih baik dan betul-betul boleh mengingatinya? Gunakan petua dalam pelajaran ini untuk membantu kanak-kanak mencipta kata laluan yang selamat dan tidak boleh dilupakan.",
+          "purpose": "Pendidikan yang Munasabah mencipta pelajaran ini untuk mengajar pelajar tentang sejauh mana kata laluan yang kuat boleh membantu melindungi privasi mereka.",
           "student_overview": "Dalam pelajaran ini, anda akan mempelajari cara kata laluan melindungi maklumat anda dan membuat kata laluan yang baik."
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar menggunakan simbol memberikan arahan kepada satu sama lain untuk mewarnakan segi empat sama pada kertas graf. Dengan \"mengatur cara\" antara satu sama lain untuk melukis gambar, pelajar mendapat peluang merasai pengalaman sebahagian daripada konsep teras pengaturcaraan melalui cara yang menyeronokkan dan mudah diakses. ",
           "student_overview": "Dalam pelajaran ini, anda akan mengatur cara rakan sekelas anda untuk melukis gambar!"
         },
         "coursed-2021/Introduction to Online Puzzles": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berlatih kemahiran _penjujukan_ dan penyahpepijatan mereka dalam teka-teki pagar sesat.",
           "student_overview": "Pelajaran ini akan memberikan anda latihan dalam kemahiran yang anda perlukan untuk kursus ini."
         },
         "coursed-2021/Relay Programming": {
           "student_overview": "Adakah anda masih ingat pada permulaan kursus ini apabila anda membuat lukisan dengan menggunakan kod? Dalam pelajaran ini, anda akan bekerjasama dengan pasukan untuk melakukan sesuatu yang serupa!"
         },
         "coursed-2021/Debugging in Collector": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berlatih melakukan penyahpepijatan dalam persekitaran \"pengumpul\". Pelajar perlu berlatih membaca dan mengedit kod untuk membetulkan teka-teki dengan algoritma, gelung dan gelung bersarang yang mudah.",
           "student_overview": "Adakah anda pernah menghadapi masalah semasa pengekodan? Dalam pelajaran ini, anda akan mempelajari rahsia penyahpepijatan. Penyahpepijatan ialah proses mencari dan membetulkan masalah dalam kod anda."
         },
         "coursed-2021/Events in Bounce": {
@@ -173,10 +219,14 @@
           "student_overview": "Dalam pelajaran ini, anda akan menggunakan blok ulangan untuk membantu Scrat mendapatkan buah oak secekap yang mungkin."
         },
         "coursed-2021/Loops in Artist": {
+          "overview": "Pelajaran **membina kemahiran** ini dibina berasaskan pemahaman tentang gelung daripada pelajaran sebelumnya dan berfungsi sebagai pelaksanaan penyahpepijatan untuk latihan penyelesaian masalah tambahan.",
           "student_overview": "Dalam pelajaran ini, gelung memudahkan imej menarik dibuat dengan Artis!"
         },
         "coursed-2021/Conditionals with Cards": {
           "student_overview": "Sudah tiba masanya untuk bermain permainan yang anda memperoleh mata hanya di bawah syarat tertentu!"
+        },
+        "coursed-2021/lesson-6": {
+          "overview": "Pelajaran **membina kemahiran** ini akan memberikan pelajar peluang berlatih konsep yang telah mereka pelajari sehingga tahap ini dan mendapatkan pengalaman pertama mereka dengan bersyarat!"
         },
         "coursed-2021/Conditionals in Bee": {
           "student_overview": "Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar."
@@ -189,16 +239,28 @@
           "student_overview": "Anda boleh melakukan beberapa perkara yang menakjubkan apabila anda menggunakan gelung `sehingga`!"
         },
         "coursed-2021/End of Course Project": {
+          "overview": "Pelajaran **projek** ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek baharu!",
           "student_overview": "Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda."
         },
         "express-2021/Debugging with Scrat": {
+          "purpose": "Pelajar di dalam kelas anda mungkin berasa kecewa dengan pelajaran ini kerana inti pati penyahpepijatan. Penyahpepijatan ialah konsep yang sangat penting kepada pengaturcaraan komputer. Saintis komputer mesti mempunyai kecekapan yang tinggi untuk mencari pepijat dalam program mereka sendiri. Penyahpepijatan memaksa pelajar mengenali masalah dan mengatasinya sambil membina pemikiran kritikal dan kemahiran menyelesaikan masalah.",
           "student_overview": "Cari masalah di dalam teka-teki dan berlatih kemahiran penyahpepijatan anda."
         },
         "express-2021/Creating Art with Code": {
+          "purpose": "Membina pengalaman terdahulu pelajar dengan penjujukan, pelajaran ini akan berfungsi untuk menginspirasikan lebih banyak kreativiti dengan pengekodan. Tujuan pelajaran ini ialah untuk memantapkan pengetahuan mengenai penjujukan dengan memperkenalkan blok dan matlamat baharu. Dalam hal ini, pelajar mempelajari lebih banyak tentang piksel dan sudut dengan menggunakan blok baharu, sambil masih berlatih kemahiran penjujukan mereka. Pelajar juga akan dapat menggambarkan matlamat baharu seperti pengekodan Artis untuk melukis segi empat sama.",
           "student_overview": "Cipta imej yang cantik dengan mengatur cara Artis."
         },
         "express-2021/Swimming Fish in Sprite Lab": {
           "student_overview": "Pelajari cara mencipta dan mengedit peperi."
+        },
+        "express-2021/lesson-2": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. ",
+          "preparation": "Sila lalui tahap tersebut dan semak **\\*slaid pelajaran**.",
+          "purpose": "Pelajaran ini direka bentuk bertujuan memperkenalkan pelajar kepada pengaturcaraan di dalam Makmal Peperi. Pelajar akan mula membentuk pemahaman model pengaturcaraan alat ini dan meneroka cara mereka boleh menggunakannya untuk menyatakan perasaan mereka sendiri.",
+          "student_overview": "Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku."
+        },
+        "express-2021/lesson-3": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap acara yang ditetapkan masanya dan input pengguna. "
         },
         "express-2021/lesson-1": {
           "student_overview": "Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri."
@@ -208,6 +270,9 @@
         },
         "express-2021/Nested Loops in Maze": {
           "student_overview": "Gelung di dalam gelung di dalam gelung. Apakah yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda mencipta gelung bersarang."
+        },
+        "express-2021/Looking Ahead with Minecraft ": {
+          "overview": "Pelajaran **membina kemahiran** ini akan memberikan pelajar peluang berlatih konsep yang telah mereka pelajari sehingga tahap ini dan mendapatkan pengalaman pertama mereka dengan bersyarat!"
         },
         "express-2021/If/Else with Bee": {
           "student_overview": "Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar."
@@ -241,18 +306,27 @@
           "student_overview": "Lebah ini menyukai pemboleh ubah!"
         },
         "express-2021/For Loops with Artist": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar berlatih gelung “untuk” dengan Artis. Pelajar akan menyelesaikan teka-teki untuk mencipta reka bentuk kompleks dan seni unik.",
           "student_overview": "Bersedia untuk membuat hasil kerja agung anda yang seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan membuat beberapa gambar yang cukup luar biasa."
         },
         "express-2021/End of Course Project": {
+          "overview": "Pelajaran **projek** ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek baharu!",
           "student_overview": "Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda."
         },
         "pre-express-2021/Learn to Drag and Drop": {
+          "overview": "Pelajaran **membina kemahiran** ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.",
+          "preparation": "-   Tonton **\\*Cara Membuat Bahagian Kelas** di Code.org - Video Guru. Cipta bahagian kelas anda sendiri di Code.org dan pastikan setiap pelajar mempunyai kad dengan **kod laluan** mereka padanya.\n-   Pastikan pelajar akan dapat mengakses Pelajaran 2 daripada peranti mereka. Sila pertimbangkan sekiranya anda mahu menyembunyikan pelajaran akan datang bagi mengelakkan pelajar daripada bergerak terlalu pantas ke hadapan.\n-   Minta kakitangan IT sekolah menambahkan pautan pantas untuk bahagian kelas anda kepada desktop komputer.\n-   Semak laman web Pendidikan yang Munasabah untuk lebih banyak kandungan keselamatan dalam talian.",
+          "purpose": "Matlamat utama pelajaran ini ialah untuk membina pengalaman pelajar dengan komputer. Dengan meliputi fungsi komputer paling asas seperti mengklik, menyeret dan melepaskan, kita mewujudkan persekitaran pembelajaran yang lebih setara di dalam kelas untuk teka-teki masa depan. Pelajaran ini juga menyediakan peluang besar untuk memperkenalkan terminologi perkakasan komputer asas, yang mungkin termasuk \"tetikus\", \"pad jejak\" atau \"skrin sentuh\", bergantung pada peranti anda.",
           "student_overview": "Klik dan tarik untuk menyelesaikan teka-teki."
         },
         "pre-express-2021/Sequencing with Scrat": {
           "student_overview": "Atur cara Scrat mendapatkan buah oak."
         },
+        "pre-express-2021/Programming with Rey and BB-8": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan menggunakan kemahiran pengaturcaraan yang baharu diperoleh mereka dengan cara yang lebih rumit untuk menavigasi kursus yang sukar dengan BB-8."
+        },
         "pre-express-2021/Programming in Harvester": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan. ",
           "student_overview": "Bantu Penuai mengumpulkan sayuran di sepanjang laluan."
         },
         "pre-express-2021/Loops with Scrat": {
@@ -283,9 +357,13 @@
           "student_overview": "Cipta projek berinteraktif yang boleh dikongsikan dengan rakan sekelas."
         },
         "coursee-2021/lesson-4": {
+          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nPelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Learn more.][2]\n\nAlatan dalam talian memperkasakan kanak-kanak dan mereka juga mempunyai tanggungjawab yang besar. Tetapi adakah kanak-kanak sentiasa mengetahui perkara yang perlu dilakukan apabila mereka mengalami buli siber? Tunjukkan kepada pelajar anda cara yang sesuai untuk mengambil tindakan dan menyelesaikan konflik, dengan menjadi individu bertanggungjawab membantu mereka yang memerlukan.",
+          "purpose": "Pendidikan yang Munasabah mencipta pelajaran ini untuk mengajar pelajar cara mereka boleh menjadi individu bertanggungjawab apabila mereka  melihat kejadian buli siber.",
           "student_overview": "Pelajari cara anda boleh menjadi individu bertanggungjawab apabila anda melihat buli siber."
         },
         "coursee-2021/Private and Personal Information": {
+          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nPelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Learn more.][2]\n\nSudah menjadi kebiasaan pelajar kami untuk berkongsi dan menyambungkan dengan individu lain. Tetapi berkongsi dalam talian mempunyai beberapa risiko. Bagaimanakah kita boleh membantu kanak-kanak membina hubungan yang kuat, positif dan selamat dalam talian? Bantu pelajar anda mengetahui perbezaan antara perkara peribadi dan paling baik dibiarkan sebagai perkara sulit.",
+          "purpose": "Pendidikan yang Munasabah mencipta pelajaran ini untuk mengajar pelajar jenis maklumat tentang mereka yang OK untuk dikongsi dalam talian.",
           "student_overview": "Internet ialah sesuatu yang menyeronokkan dan menarik, tetapi adalah penting untuk kekal selamat. Pelajaran ini mengajar anda perbezaan antara maklumat yang selamat untuk dikongsi dan maklumat yang bersifat sulit."
         },
         "coursee-2021/Digital Sharing": {

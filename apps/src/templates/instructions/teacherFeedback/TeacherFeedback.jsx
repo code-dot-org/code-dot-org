@@ -357,7 +357,8 @@ export default connect(
     verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
     selectedSectionId:
       state.teacherSections && state.teacherSections.selectedSectionId,
-    canHaveFeedbackReviewState: state.pageConstants.canHaveFeedbackReviewState
+    canHaveFeedbackReviewState:
+      state.pageConstants && state.pageConstants.canHaveFeedbackReviewState
   }),
   dispatch => ({
     updateUserProgress(userId) {

@@ -227,7 +227,8 @@
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
         "sequencing/coursec/2021": {
-          "word": "シークエンス"
+          "word": "シークエンス",
+          "definition": "コンピュータがコマンドを読めるように、コマンドを正しい順番に並べること。"
         },
         "programming/coursec/2021": {
           "word": "プログラミング",
@@ -246,7 +247,8 @@
           "definition": "何かを引き起こすアクション。"
         },
         "binary/coursec/2021": {
-          "word": "２しんすう"
+          "word": "２しんすう",
+          "definition": "2つの選択肢だけを使って情報を表現する方法。"
         },
         "algorithm/coursed/2021": {
           "word": "アルゴリズム",
@@ -272,6 +274,10 @@
           "word": "プログラミング",
           "definition": "プログラム作成の技能。"
         },
+        "frustrated/coursed/2021": {
+          "word": " 欲求不満",
+          "definition": "何かが自分の思い通りにならないので、イライラしたり怒ったりすること。"
+        },
         "persistence/coursed/2021": {
           "word": "粘り強さ",
           "definition": "何かがとても難しい時でも、何度も何度もトライすること。"
@@ -280,12 +286,37 @@
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"
         },
+        "code/coursed/2021": {
+          "word": "コード",
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
         "repeat/coursed/2021": {
           "word": "繰り返し",
           "definition": "何かを再びすること。"
         },
+        "command/coursed/2021": {
+          "word": "コマンド",
+          "definition": "コンピュータへの命令。多くの命令を組み合わせてアルゴリズムやコンピュータプログラムを構成しています。"
+        },
         "conditionals/coursed/2021": {
-          "word": "条件"
+          "word": "条件",
+          "definition": "特定の条件でしか実行されないステートメント。"
+        },
+        "pseudocode/coursed/2021": {
+          "word": "疑似コード",
+          "definition": "アルゴリズムのステップに関するわかりやすい言語による説明"
+        },
+        "condition/coursed/2021": {
+          "word": "条件",
+          "definition": "アクションを許可する前に、プログラムが真かどうかをチェックするもの。"
+        },
+        "while_loop/coursed/2021": {
+          "word": "「while」ループ",
+          "definition": "条件が真である間、繰り返し続けるループ。"
+        },
+        "until/coursed/2021": {
+          "word": "Until（まで）",
+          "definition": "何かが真実になるまでの間だけ、何かをするように指示する命令。"
         },
         "algorithm/express/2021": {
           "word": "アルゴリズム",
@@ -300,7 +331,8 @@
           "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
         },
         "sequencing/express/2021": {
-          "word": "シークエンス"
+          "word": "シークエンス",
+          "definition": "コンピュータがコマンドを読めるように、コマンドを正しい順番に並べること。"
         },
         "program/express/2021": {
           "word": "プログラム",
@@ -322,6 +354,10 @@
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"
         },
+        "code/express/2021": {
+          "word": "コード",
+          "definition": "コードを記述したり、コンピューターの命令を記述したりします。"
+        },
         "loop/express/2021": {
           "word": "ループ",
           "definition": "何度も何度も何かをするという行為。"
@@ -330,17 +366,36 @@
           "word": "繰り返し",
           "definition": "何かを再びすること。"
         },
+        "command/express/2021": {
+          "word": "コマンド",
+          "definition": "コンピュータへの命令。多くの命令を組み合わせてアルゴリズムやコンピュータプログラムを構成しています。"
+        },
+        "condition/express/2021": {
+          "word": "条件",
+          "definition": "アクションを許可する前に、プログラムが真かどうかをチェックするもの。"
+        },
         "conditionals/express/2021": {
-          "word": "条件"
+          "word": "条件",
+          "definition": "特定の条件でしか実行されないステートメント。"
+        },
+        "while_loop/express/2021": {
+          "word": "「while」ループ",
+          "definition": "条件が真である間、繰り返し続けるループ。"
+        },
+        "until/express/2021": {
+          "word": "Until（まで）",
+          "definition": "何かが真実になるまでの間だけ、何かをするように指示する命令。"
         },
         "function/express/2021": {
-          "word": "関数（かんすう）"
+          "word": "関数（かんすう）",
+          "definition": "簡単に何度も何度も呼び出すことができるコードの一部。"
         },
         "variable/express/2021": {
           "word": "変数",
           "definition": "プログラムで使用される情報の一部のラベル。"
         },
         "prompt/express/2021": {
+          "word": "プロンプト",
           "definition": "ユーザーからの入力を待つコンピュータ画面上のメッセージ。"
         },
         "for_loop/express/2021": {
@@ -419,6 +474,10 @@
           "word": "行動",
           "definition": "スプライトが停止を指示されるまで継続して行う動作。"
         },
+        "algorithm/coursee/2021": {
+          "word": "アルゴリズム",
+          "definition": "タスクを終わらせるためのステップリスト。"
+        },
         "sprite/coursee/2021": {
           "word": "スプライト",
           "definition": "場所、大きさ、見た目がわかる画面上のグラフィック。"
@@ -439,10 +498,20 @@
           "definition": "何かを再びすること。"
         },
         "function/coursee/2021": {
-          "word": "関数（かんすう）"
+          "word": "関数（かんすう）",
+          "definition": "簡単に何度も何度も呼び出すことができるコードの一部。"
+        },
+        "condition/coursee/2021": {
+          "word": "条件",
+          "definition": "アクションを許可する前に、プログラムが真かどうかをチェックするもの。"
         },
         "conditionals/coursee/2021": {
-          "word": "条件"
+          "word": "条件",
+          "definition": "特定の条件でしか実行されないステートメント。"
+        },
+        "while_loop/coursee/2021": {
+          "word": "「while」ループ",
+          "definition": "条件が真である間、繰り返し続けるループ。"
         },
         "define/coursee/2021": {
           "word": "定義",

@@ -1616,12 +1616,13 @@ ro:
         text: coordonatele x ale {SPRITE}
       Mikelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ploaie
+      Poetry_playSound:
         text: PlaySound {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: |-
-          setează efectul de fundal la
-          {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Culori
@@ -1631,10 +1632,9 @@ ro:
             '"ripples"': Ondulații
           PALETTE:
             '"rainbow"': Curcubeu
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: setează fundalul cu {IMG}
-      PoemBot_setForegroundEffect:
-        text: setează efect pentru planul din faţă {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Ploaie
@@ -1642,6 +1642,20 @@ ro:
             '"hearts"': Inimi colorate
             '"confetti"': Confeti
             '"starburst"': Accelerare
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: mută înainte
       RyanLab_turnLeft:

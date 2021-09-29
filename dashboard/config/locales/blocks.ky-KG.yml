@@ -509,6 +509,10 @@ ky:
             '"down"': жебе төмөн
             '"left"': жебе солго
             '"right"': жебе оңго
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': жаан
       RyanLab_moveForward:
         text: алдыга жылдыр
       RyanLab_turnLeft:
