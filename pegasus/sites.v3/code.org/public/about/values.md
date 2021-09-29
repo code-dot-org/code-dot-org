@@ -6,37 +6,6 @@ theme: responsive
 
 # Our core values:
 
-<div class="careers__section-container careers__section-container--values">
-  <div class="careers__values-group">
-    <div class="careers__values-tile careers__teal">
-      <img class="careers__values-icon" src="../images/values/ValuesIcon1.png" alt="">
-      <p>We believe Computer Science is foundational for all students</p>
-    </div>
-    <div class="careers__values-tile careers__middle careers__purple">
-      <img class="careers__values-icon" src="../images/values/ValuesIcon2.png" alt="">
-      <p>We are committed to equity, access, and opportunity</p>
-    </div>
-    <div class="careers__values-tile careers__orange">
-      <img class="careers__values-icon" src="../images/values/ValuesIcon3.png" alt="">
-      <p>We believe<br>in the power of a collaborative education community</p>
-    </div>
-  </div>
-  <div class="careers__values-group">
-    <div class="careers__values-tile careers__cyan">
-      <img class="careers__values-icon" src="../images/values/ValuesIcon4.png" alt="">
-      <p>We are<br>agile and responsive to feedback</p>
-    </div>
-    <div class="careers__values-tile careers__middle careers__green">
-      <img class="careers__values-icon" src="../images/values/ValuesIcon5.png" alt="">
-      <p>We act with integrity<br>and transparency</p>
-    </div>
-    <div class="careers__values-tile careers__dark-gray">
-      <img class="careers__values-icon" src="../images/values/ValuesIcon6.png" alt="">
-      <p>We believe broad impact requires thinking big and acting holistically</p>
-    </div>
-  </div>
-</div>
-
 ## We believe computer science is foundational for all students
 We believe that learning computer science is fundamental to active and informed participation in an increasingly digital society and provides all students with a critical lens for interpreting the world around them. Computer science offers life-changing and economic opportunities, whether they pursue careers in technology or not. We create high-quality, approachable experiences to engage all students in computer science.
 
