@@ -15,7 +15,7 @@ class ReviewNavigator extends Component {
 
   getPeerList() {
     const {loadError, peers, onSelectPeer} = this.props;
-    if (loadError) {
+    if (loadError || !Array.isArray(peers)) {
       return [
         <a key="error" onClick={() => {}}>
           {javalabMsg.errorLoadingClassmates()}
