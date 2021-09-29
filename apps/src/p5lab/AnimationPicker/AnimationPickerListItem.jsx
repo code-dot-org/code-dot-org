@@ -6,7 +6,6 @@ import color from '@cdo/apps/util/color';
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 import AnimationPreview from './AnimationPreview';
-import experiments from '@cdo/apps/util/experiments';
 
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
@@ -19,17 +18,15 @@ class AnimationPickerListItem extends React.Component {
     label: PropTypes.string,
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
-    category: PropTypes.string
+    category: PropTypes.string,
+    selected: PropTypes.bool,
+    multiSelectEnabled: PropTypes.bool
   };
 
   state = {
     loaded: false,
     hover: false
   };
-
-  componentDidMount() {
-    this.multiSelectEnabled_ = experiments.isEnabled(experiments.MULTISELECT);
-  }
 
   render() {
     const {
@@ -38,7 +35,9 @@ class AnimationPickerListItem extends React.Component {
       category,
       onClick,
       playAnimations,
-      label
+      label,
+      selected,
+      multiSelectEnabled
     } = this.props;
     const {loaded, hover} = this.state;
     const rootStyle = [styles.root, !label && styles.noLabel];
@@ -64,7 +63,18 @@ class AnimationPickerListItem extends React.Component {
 
     const thumbnailStyleWithHover = [
       thumbnailStyle,
-      hover && styles.hoverBorder
+      hover && styles.multiSelectBorder,
+      hover && styles.hoverBorder,
+      selected && styles.selectBorder
+    ];
+
+    const multiSelectIconClassName = `fa ${
+      selected ? 'fa-check' : 'fa-plus'
+    } fa-2x`;
+    const multiSelectIconStyle = [
+      styles.multiSelectIcon,
+      hover && styles.hoverIcon,
+      selected && styles.selectIcon
     ];
 
     return (
@@ -96,9 +106,15 @@ class AnimationPickerListItem extends React.Component {
           )}
         </div>
         {label && <div style={labelStyle}>{label}</div>}
-        {animationProps && loaded && hover && this.multiSelectEnabled_ && (
-          <i className="fa fa-plus fa-2x" style={styles.hoverIcon} />
-        )}
+        {animationProps &&
+          loaded &&
+          (hover || selected) &&
+          multiSelectEnabled && (
+            <i
+              className={multiSelectIconClassName}
+              style={multiSelectIconStyle}
+            />
+          )}
       </div>
     );
   }
@@ -148,11 +164,8 @@ const styles = {
   categoryImage: {
     borderRadius: 10
   },
-  hoverIcon: {
+  multiSelectIcon: {
     position: 'absolute',
-    color: color.purple,
-    backgroundColor: color.white,
-    borderColor: color.purple,
     borderStyle: 'solid',
     borderWidth: '2px',
     height: HOVER_PLUS_SIZE,
@@ -161,13 +174,30 @@ const styles = {
     top: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2,
     left: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2
   },
-  hoverBorder: {
+  hoverIcon: {
+    color: color.purple,
+    backgroundColor: color.white,
+    borderColor: color.purple
+  },
+  selectIcon: {
+    color: color.white,
+    backgroundColor: color.level_perfect,
+    borderColor: color.level_perfect
+  },
+  multiSelectBorder: {
     borderStyle: 'solid',
     borderRadius: 12,
     cursor: 'pointer',
-    borderColor: color.purple,
     borderWidth: '3px',
     padding: 0
+  },
+  hoverBorder: {
+    borderColor: color.purple
+  },
+  selectBorder: {
+    borderWidth: '3px',
+    padding: 0,
+    borderColor: color.level_perfect
   }
 };
 

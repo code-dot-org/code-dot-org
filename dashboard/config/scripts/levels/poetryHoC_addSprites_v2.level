@@ -19,7 +19,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "Authors use literal language to paint a picture in the reader's mind. You can add sprites to illustrate the poem. \r\n\r\n* Connect a `make new sprite` block under the `when run` block.\r\n* Choose a costume for your sprite.\r\n* Press \"Run.\" \r\n\r\n*Extra Challenge:* Use an **event** to make a new sprite appear when the mood shifts!",
+    "long_instructions": "Authors use imagery to paint a picture in the reader's mind. You can add sprites to illustrate the poem. \r\n\r\n* Connect a `make new sprite` block under the `when run` block.\r\n* Choose a costume for your sprite.\r\n* Press \"Run.\" \r\n\r\n*Extra Challenge:* Use an **event** to make a new sprite appear when a new character is introduced!",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -32,9 +32,9 @@
     "debugger_disabled": "false",
     "validation_enabled": "false",
     "mini_toolbox": "false",
-    "hide_pause_button": "false",
+    "hide_pause_button": "true",
     "instructions_icon": "octiGeneral",
-    "callout_json": "[]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_sprite\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"3\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "parent_level_id": 29613,
     "video_key": "poembot-playtest-sprites",
     "validation_code": "var validationInfo = getValidationInfo();\r\nvar spriteIds = getSpriteIdsInUse();\r\nvar hasLineEvent = validationInfo.lineEvents.length > 0;\r\n\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {\r\n    numSpriteIds: 0,\r\n    usedEvent: false\r\n  };\r\n}\r\n\r\nif (spriteIds.length > 0) {\r\n  setSuccessFrame();\r\n}\r\n\r\nif (World.frameCount !== 1 && hasLineEvent && spriteIds.length > validationProps.previous.numSpriteIds) {\r\n  validationProps.previous.usedEvent = true;\r\n}\r\n\r\nvalidationProps.previous.numSpriteIds = spriteIds.length;\r\n\r\n\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    if (validationProps.previous.usedEvent) {\r\n      levelFailure(0, 'genericBonusSuccess');\r\n    } else {\r\n      levelFailure(0, 'poemBotSuccessLevel4');\r\n    }\r\n  } else {\r\n    levelFailure(3, 'noSprites');\r\n  }\r\n}",
@@ -51,7 +51,7 @@
   "created_at": "2021-09-21T18:24:05.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2021-09-21T18:24:05.508+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_addSprites\\\"\"],\"cloned_from\":\"poetryHoC_addSprites\"},{\"changed_at\":\"2021-09-21 18:24:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 20:30:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:31:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:40:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:03:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 16:32:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 16:36:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 16:38:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 17:16:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 17:26:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-21T18:24:05.508+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_addSprites\\\"\"],\"cloned_from\":\"poetryHoC_addSprites\"},{\"changed_at\":\"2021-09-21 18:24:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-21 20:30:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:31:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 20:40:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-21 21:03:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 16:32:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 16:36:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 16:38:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 17:16:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 17:26:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-22 20:29:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-22 21:27:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 21:30:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 21:32:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-22 21:33:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-23 17:49:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-23 17:53:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-23 18:39:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_pause_button\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-24 16:22:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-24 16:45:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-24 16:55:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-24 16:56:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-09-27 16:01:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 16:25:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:36:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -83,19 +83,16 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_setBackground">
-          <value name="COLOR">
-            <block type="colour_picker">
-              <title name="COLOUR">#666666</title>
+        <block type="PoemBot_whenLineShows">
+          <title name="N">0</title>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon">
+          <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker">
+              <title name="LOCATION">{"x":200,"y":243}</title>
             </block>
           </value>
-        </block>
-        <block type="PoemBot_setBackgroundEffect">
-          <title name="EFFECT">"colors"</title>
-          <title name="PALETTE">"grayscale"</title>
-        </block>
-        <block type="PoemBot_setForegroundEffect">
-          <title name="EFFECT">"rain"</title>
         </block>
         <block type="PoemBot_setFont">
           <title name="FONT">"Arial"</title>
@@ -110,16 +107,22 @@
         <block type="PoemBot_setTextEffect">
           <title name="EFFECT">"fade"</title>
         </block>
-        <block type="gamelab_makeNewSpriteAnon">
-          <title name="ANIMATION_NAME">"alligator_mouth_closed"</title>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker">
-              <title name="LOCATION">{"x":200,"y":200}</title>
+        <block type="PoemBot_playSound">
+          <title name="SOUND">"sound://category_bell/bells_win_low.mp3"</title>
+        </block>
+        <block type="PoemBot_setForegroundEffect">
+          <title name="EFFECT">"rain"</title>
+        </block>
+        <block type="gamelab_setBackground">
+          <value name="COLOR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff6666</title>
             </block>
           </value>
         </block>
-        <block type="PoemBot_whenLineShows">
-          <title name="N">5</title>
+        <block type="PoemBot_setBackgroundEffect">
+          <title name="EFFECT">"colors"</title>
+          <title name="PALETTE">"grayscale"</title>
         </block>
       </xml>
     </toolbox_blocks>
