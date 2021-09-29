@@ -7,14 +7,15 @@ describe('PlaygroundImageTest', () => {
   it('sets styles correctly', () => {
     const props = {
       id: '1',
+      text: 'some text',
       x: '350',
       y: '0',
       height: '100',
       index: '0',
       rotation: '90.5',
-      red: '0',
-      blue: '0',
-      green: '255',
+      colorRed: '0',
+      colorGreen: '255',
+      colorBlue: '0',
       font: 'MONO',
       fontStyle: 'BOLD_ITALIC'
     };
@@ -32,7 +33,7 @@ describe('PlaygroundImageTest', () => {
     expect(textStyles.fontFamily).to.equal('monospace');
     expect(textStyles.fontWeight).to.equal('bold');
     expect(textStyles.fontStyle).to.equal('italic');
-    expect(textStyles.color).to.equal('rgb(0,255,0)');
+    expect(textStyles.color).to.equal('rgb(0, 255, 0)');
     expect(textStyles.transform).to.equal('rotate(90.5deg)');
   });
 });
