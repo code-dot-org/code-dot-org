@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import _ from 'lodash';
-import {getStore} from '@cdo/apps/redux';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
@@ -23,7 +22,10 @@ class ReviewTab extends Component {
     // Populated by redux
     codeReviewEnabled: PropTypes.bool,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
-    viewAsTeacher: PropTypes.bool
+    viewAsTeacher: PropTypes.bool,
+    channelId: PropTypes.string,
+    serverLevelId: PropTypes.number,
+    serverScriptId: PropTypes.number
   };
 
   state = {
@@ -67,9 +69,10 @@ class ReviewTab extends Component {
     const {
       channelId,
       serverLevelId,
-      serverScriptId
-    } = getStore().getState().pageConstants;
-    const {viewAsCodeReviewer, viewAsTeacher} = this.props;
+      serverScriptId,
+      viewAsCodeReviewer,
+      viewAsTeacher
+    } = this.props;
 
     // If there's no channelId (happens when a teacher is viewing as a student who has not done any work on a level),
     // do not make API calls that require a channelId
@@ -249,47 +252,39 @@ class ReviewTab extends Component {
     );
   }
 
-  setReadyForReview(isReadyForReview) {
+  setReadyForReview(shouldBeReadyForReview) {
     this.setState({
       loadingReviewableState: true,
       errorSavingReviewableProject: false
     });
 
-    if (isReadyForReview) {
+    const errorResponse = () =>
+      this.setState({
+        errorSavingReviewableProject: true,
+        loadingReviewableState: false
+      });
+
+    const newState = {
+      isReadyForReview: shouldBeReadyForReview,
+      errorSavingReviewableProject: false,
+      loadingReviewableState: false
+    };
+
+    if (shouldBeReadyForReview) {
       this.dataApi
         .enablePeerReview()
-        .done(data => {
+        .done(data =>
           this.setState({
-            reviewableProjectId: data.id,
-            isReadyForReview: true,
-            errorSavingReviewableProject: false,
-            loadingReviewableState: false
-          });
-        })
-        .fail(() => {
-          this.setState({
-            isReadyForReview: false,
-            errorSavingReviewableProject: true,
-            loadingReviewableState: false
-          });
-        });
+            ...newState,
+            reviewableProjectId: data.id
+          })
+        )
+        .fail(errorResponse);
     } else {
       this.dataApi
         .disablePeerReview(this.state.reviewableProjectId)
-        .done(() => {
-          this.setState({
-            isReadyForReview: false,
-            errorSavingReviewableProject: false,
-            loadingReviewableState: false
-          });
-        })
-        .fail(() => {
-          this.setState({
-            isReadyForReview: true,
-            errorSavingReviewableProject: true,
-            loadingReviewableState: false
-          });
-        });
+        .done(() => this.setState(newState))
+        .fail(errorResponse);
     }
   }
 
@@ -355,7 +350,12 @@ class ReviewTab extends Component {
   }
 
   render() {
-    const {viewAsCodeReviewer, viewAsTeacher, codeReviewEnabled} = this.props;
+    const {
+      viewAsCodeReviewer,
+      viewAsTeacher,
+      codeReviewEnabled,
+      channelId
+    } = this.props;
     const {
       initialLoadCompleted,
       comments,
@@ -369,11 +369,8 @@ class ReviewTab extends Component {
     } = this.state;
 
     // channelId is not available on projects where the student has not edited the starter code.
-    // comments cannot be made on projects in this tate.
-    const projectOwnerHasNotEditedCode = !getStore().getState().pageConstants
-      .channelId;
-
-    if (projectOwnerHasNotEditedCode) {
+    // comments cannot be made on projects in this state.
+    if (!channelId) {
       return (
         <div style={{...styles.reviewsContainer, ...styles.messageText}}>
           {javalabMsg.noCodeReviewUntilStudentEditsCode()}
@@ -432,7 +429,10 @@ export const UnconnectedReviewTab = ReviewTab;
 export default connect(state => ({
   codeReviewEnabled: state.sectionData.section.codeReviewEnabled,
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
-  viewAsTeacher: state.viewAs === ViewType.Teacher
+  viewAsTeacher: state.viewAs === ViewType.Teacher,
+  channelId: state.pageConstants.channelId,
+  serverLevelId: state.pageConstants.serverLevelId,
+  serverScriptId: state.pageConstants.serverScriptId
 }))(ReviewTab);
 
 const styles = {
