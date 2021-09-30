@@ -3,18 +3,46 @@ import PropTypes from 'prop-types';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import Button from '@cdo/apps/templates/Button';
 import javalabMsg from '@cdo/javalab/locale';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 class ReviewNavigator extends Component {
   static propTypes = {
-    peers: PropTypes.array,
     onSelectPeer: PropTypes.func,
     onReturnToProject: PropTypes.func,
     viewPeerList: PropTypes.bool,
-    loadError: PropTypes.bool
+    loadPeers: PropTypes.func
+  };
+
+  state = {
+    peers: [],
+    loadError: false,
+    loadInProgress: false
+  };
+
+  onDropdownClick = () => {
+    this.setState({loadInProgress: true, loadError: false, peers: []});
+    this.props.loadPeers(this.onPeerLoadSuccess, this.onPeerLoadFailure);
+  };
+
+  onPeerLoadSuccess = peerList => {
+    this.setState({peers: peerList, loadInProgress: false});
+  };
+
+  onPeerLoadFailure = () => {
+    console.log('in peer load failure');
+    this.setState({loadError: true, loadInProgress: false});
   };
 
   getPeerList() {
-    const {loadError, peers, onSelectPeer} = this.props;
+    const {onSelectPeer} = this.props;
+    const {loadError, peers, loadInProgress} = this.state;
+    if (loadInProgress) {
+      return [
+        <a key="loading" onClick={() => {}}>
+          <Spinner size="medium" />
+        </a>
+      ];
+    }
     if (loadError || !Array.isArray(peers)) {
       return [
         <a key="error" onClick={() => {}}>
@@ -48,6 +76,7 @@ class ReviewNavigator extends Component {
         <DropdownButton
           text={javalabMsg.reviewClassmateProject()}
           color={Button.ButtonColor.white}
+          onClick={this.onDropdownClick}
         >
           {this.getPeerList()}
         </DropdownButton>
