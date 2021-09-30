@@ -172,7 +172,6 @@ export default class Playground {
         // we don't need to pass filename as imageData
         delete changedItemData.filename;
       }
-      return changedItemData;
     }
 
     // No changes to itemData required for text items other than removing ID property.
