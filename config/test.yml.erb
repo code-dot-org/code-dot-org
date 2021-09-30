@@ -47,7 +47,3 @@ disable_s3_image_uploads: true
 
 # provide a unique path for firebase channels data for ci, to avoid conflicts in channel ids.
 firebase_channel_id_suffix: '<%=ci ? "-#{circle_run_identifier}" : ''%>'
-
-# Credentials for the Spotify API, used to provide playlist data in App Labs
-spotify_api_client_id: !Secret
-spotify_api_client_secret: !Secret
