@@ -374,8 +374,8 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
 
-    user.marketing_segment_data&.each do |segment_name, _|
-      auth.cookies[environment_specific_cookie_name("_teacher_#{segment_name}")] = {value: "", expires: Time.at(0), domain: :all}
+    User.marketing_segment_data_keys.each do |key|
+      auth.cookies[environment_specific_cookie_name("_teacher_#{key}")] = {value: "", expires: Time.at(0), domain: :all}
     end
   end
 
