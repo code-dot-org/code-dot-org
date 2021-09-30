@@ -27,24 +27,47 @@ CHART_TYPE = {
 def get_token
   client_id = CDO.spotify_api_client_id
   client_secret = CDO.spotify_api_client_secret
-  url = "https://accounts.spotify.com/api/token"
-  headers = {
-    'authorization' => 'Basic ' + Base64.strict_encode64(client_id + ':' + client_secret),
-    'content-type' => 'application/x-www-form-urlencoded',
-  }
-  form = {
-    'grant_type' => 'client_credentials'
-  }
-  auth_response = JSON.parse(RestClient.post(url, form, headers))
-  $token = auth_response['access_token']
+
+  begin
+    url = "https://accounts.spotify.com/api/token"
+    headers = {
+      'authorization' => 'Basic ' + Base64.strict_encode64(client_id + ':' + client_secret),
+      'content-type' => 'application/x-www-form-urlencoded',
+    }
+    form = {
+      'grant_type' => 'client_credentials'
+    }
+    auth_response = JSON.parse(RestClient.post(url, form, headers))
+    $token = auth_response['access_token']
+  rescue RestClient::Exception => e
+    Honeybadger.notify(
+      e,
+      error_message: "Failed to retrieve OAuth token from Spotify for use in App Lab Datasets.",
+      context: {
+        tenant_id: client_id,
+        url: url
+      }
+    )
+  end
 end
 
 def get_playlist_data(chart_type, playlist_id)
   # Filters for the query: a comma-separated list of the fields to return
   field_query = 'fields=tracks.items(track(name,href,artists,popularity))'
-  url = "#{BASE_URL}/playlists/#{playlist_id}?#{field_query}"
-  response = RestClient.get(url, {authorization: "Bearer #{$token}"})
-  return unless response.code == 200
+
+  begin
+    url = "#{BASE_URL}/playlists/#{playlist_id}?#{field_query}"
+    response = RestClient.get(url, {authorization: "Bearer #{$token}"})
+  rescue RestClient::Exception => e
+    Honeybadger.notify(
+      e,
+      error_message: "Failed to retrieve playlist data from Spotify for use in App Lab Datasets.",
+      context: {
+        playlist_id: playlist_id,
+      }
+    )
+    return
+  end
 
   items = JSON.parse(response)['tracks']['items']
   columns = ['id', 'Track Name', 'Artist', 'Position', 'URL']
