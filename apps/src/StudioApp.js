@@ -1323,22 +1323,14 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose) {
     !!reduxState.instructions.longInstructions &&
     !reduxState.instructionsDialog.imgOnly;
 
-  var instructionsDiv = document.createElement('div');
-  instructionsDiv.className = isMarkdownMode
-    ? 'markdown-instructions-container'
-    : 'instructions-container';
-
   var headerElement;
-
-  var puzzleTitle = msg.puzzleTitle({
-    stage_total: level.lesson_total,
-    puzzle_number: level.puzzle_number
-  });
-
   if (isMarkdownMode) {
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
-    headerElement.innerHTML = puzzleTitle;
+    headerElement.innerHTML = msg.puzzleTitle({
+      stage_total: level.lesson_total,
+      puzzle_number: level.puzzle_number
+    });
     if (!this.icon) {
       headerElement.className += ' no-modal-icon';
     }
@@ -1350,6 +1342,10 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose) {
   // elements that don't want to be rendered until they are in the DOM
   var instructionsReactContainer = document.createElement('div');
   instructionsReactContainer.className = 'instructions-content';
+  var instructionsDiv = document.createElement('div');
+  instructionsDiv.className = isMarkdownMode
+    ? 'markdown-instructions-container'
+    : 'instructions-container';
   instructionsDiv.appendChild(instructionsReactContainer);
 
   var buttons = document.createElement('div');
