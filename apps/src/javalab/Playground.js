@@ -1,7 +1,8 @@
 import {
   PlaygroundSignalType,
   PlaygroundItemType,
-  WebSocketMessageType
+  WebSocketMessageType,
+  STATUS_MESSAGE_PREFIX
 } from './constants';
 import {assets, starterAssets} from '@cdo/apps/clientApi';
 import javalabMsg from '@cdo/javalab/locale';
@@ -23,6 +24,7 @@ export default class Playground {
     onNewlineMessage,
     onJavabuilderMessage,
     levelName,
+    setIsProgramRunning,
     // Only used for testing
     starterAssetsApi,
     assetsApi
@@ -30,6 +32,7 @@ export default class Playground {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.onJavabuilderMessage = onJavabuilderMessage;
+    this.setIsProgramRunning = setIsProgramRunning;
     this.isGameRunning = false;
     this.isGameOver = false;
     this.levelName = levelName;
@@ -102,6 +105,14 @@ export default class Playground {
         this.setBackgroundImage(data.detail);
         break;
     }
+  }
+
+  onClose() {
+    this.onOutputMessage(
+      `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
+    );
+    this.onNewlineMessage();
+    this.setIsProgramRunning(false);
   }
 
   addClickableItem(itemData) {
