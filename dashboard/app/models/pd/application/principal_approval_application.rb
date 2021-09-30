@@ -38,13 +38,14 @@
 module Pd::Application
   class PrincipalApprovalApplication < ApplicationBase
     include Pd::PrincipalApprovalApplicationConstants
+    include Pd::SharedApplicationConstants
 
     belongs_to :teacher_application, class_name: 'Pd::Application::TeacherApplication',
                primary_key: :application_guid, foreign_key: :application_guid
 
     validates_presence_of :teacher_application
 
-    # @return a valid year (see ApplicationConstants.APPLICATION_YEARS)
+    # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
       self.class.year
     end
