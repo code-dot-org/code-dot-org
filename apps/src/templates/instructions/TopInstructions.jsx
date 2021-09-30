@@ -750,6 +750,7 @@ class TopInstructions extends Component {
                           rel="noopener noreferrer"
                           ref={ref => (this.teacherOnlyTab = ref)}
                           hidden={tabSelected !== TabType.TEACHER_ONLY}
+                          style={styles.exampleSolutionButton}
                         />
                       ))}
                     </div>
@@ -836,7 +837,10 @@ const styles = {
     zIndex: OVERLAY_Z_INDEX + 1
   },
   exampleSolutions: {
-    margin: 10
+    marginTop: 10
+  },
+  exampleSolutionButton: {
+    marginLeft: 20
   }
 };
 // Note: usually the unconnected component is only used for tests, in this case it is used
