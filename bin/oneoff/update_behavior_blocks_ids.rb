@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-# wandering behavioral blocks with no id set have their id
-# set on the frontend as their text value. This causes issues
-# when viewing the levels in different languages.
+# Behavioral blocks with no id set have their id
+# set on the frontend as their text value. This causes
+# issues when viewing the levels in different languages.
 
 require_relative '../../dashboard/config/environment'
 
