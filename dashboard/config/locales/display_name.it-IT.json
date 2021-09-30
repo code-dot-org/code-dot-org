@@ -493,9 +493,9 @@
         "CourseF_outbreak3": "Simulazione del virus",
         "CourseF_outbreak4": "Modifica la tua simulazione",
         "CourseF_outbreak5": "Guarigione",
-        "CourseF_outbreak6": "Guarigione",
+        "CourseF_outbreak6": "Probabilità",
         "CourseF_outbreak7": "Immunità e vaccini",
-        "CourseF_outbreak8": "Immunità e vaccini",
+        "CourseF_outbreak8": "Condividi un messaggio",
         "CourseF_video_introSpriteLab_2021": "Questo è il Laboratorio dei personaggi",
         "MC_HOC_2017_01_RETRY_2021": "Podere",
         "MC_HOC_2017_02_Cole_2021": "La fattoria",
@@ -519,7 +519,11 @@
         "outbreak_freeplay_basic": "Cassetta deli attrezzi base",
         "ramp_artist_loops4_2021": "Stella",
         "scrat_loops_C-F_video_2021": "Video: Cicli con l'Era Glaciale",
-        "international_outbreak_freeplay": "Cassetta deli attrezzi base"
+        "international_outbreak_freeplay": "Cassetta degli attrezzi base",
+        "helloworld_animals_costumes": "Costumi",
+        "helloworld_emoji_costumes": "Costumi",
+        "helloworld_food_costumes": "Costumi",
+        "helloworld_retro_costumes": "Costumi"
       }
     }
   }

@@ -1259,6 +1259,7 @@
   "paginationLabel": "Strona:",
   "pairingNavigatorWarning": "Ta łamigłówka została zakończona wspólnie z {driver}.",
   "pairingNavigatorLink": "Kliknij tutaj, aby zobaczyć rozwiązanie, które utworzyłeś w zespole.",
+  "pairingUnknownPartnerName": "n/a",
   "pairProgramming": "Programowanie w parach",
   "pairProgrammingChosePartners": "Wybierz partnerów:",
   "pairProgrammingStop": "Przerwij programowanie w parach",

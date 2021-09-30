@@ -761,6 +761,7 @@ pt:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": botão
             "'sound://category_collect/clicky_crunch.mp3'": triturar
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": Harpa
             "'sound://category_digital/jump_7.mp3'": saltar
       gamelab_pointInDirection:
         text: ponto {SPRITE} {DIRECTION}
@@ -1171,10 +1172,29 @@ pt:
         text: x coordenada de {SPRITE}
       Mikelab_yLocationOf:
         text: y coordenada de {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': explodido
+            '"rain"': chuva
+      Poetry_playSound:
         text: PlaySound {SOUND}
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: definir fundo para {IMG}
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: segue em frente
       RyanLab_turnLeft:

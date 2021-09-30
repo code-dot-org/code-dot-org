@@ -6939,3 +6939,13 @@ uz-UZ:
           4. Amazon.com - har xil turdagi tovarlarni onlayn xarid qilish sayti
           4. Yahoo.com - qidiruv tizimi, elektron pochta provayderi va yangiliklar manbasi
           5. Wikipedia.org - foydalanuvchilar tomonidan yaratilgan kontentli bepul ensiklopediya
+      courseF_beeFor_practice:
+        display_name: Asalari mashqi
+      courseF_beeVar_practice:
+        display_name: Asalari mashqi
+      courseF_intro_apps:
+        description: CS Fundamentals kursiga xush kelibsiz! Undagi loyihalarning barchasi
+          Sprite Lab yordamida yaratilgan. Mumkin bo'lgan narsalarni ko'rish uchun
+          hozirroq ularni sinab ko'ring. Ushbu kurs oxirida siz o'zingizning shu kabi
+          va ulardan ham a'lo loyihalaringizni amalga oshira olasiz!
+        display_name: Sprite Lab ilovalari

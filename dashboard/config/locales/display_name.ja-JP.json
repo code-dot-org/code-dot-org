@@ -269,7 +269,15 @@
         "courseF_variables_madlib": "ブランクスペースストーリー、パート1",
         "courseF_variables_madlib_finish": "ブランクスペースストーリー、パート2",
         "ramp_artist_loops6v1_2021": "階段",
-        "international_outbreak_freeplay": "標準ツールボックス"
+        "international_outbreak_freeplay": "標準ツールボックス",
+        "helloworld_animals_costumes": "コスチューム",
+        "helloworld_animals_location": "じかんイベント",
+        "helloworld_emoji_costumes": "コスチューム",
+        "helloworld_emoji_location": "じかんイベント",
+        "helloworld_food_costumes": "コスチューム",
+        "helloworld_food_location": "じかんイベント",
+        "helloworld_retro_costumes": "コスチューム",
+        "helloworld_retro_location": "じかんイベント"
       }
     }
   }

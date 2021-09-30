@@ -22,6 +22,5 @@
   "spritelabFeedbackMoveUpNotDown": "Din figur må flytte seg opp (nord) isteden for ned(sør).",
   "spritelabFeedbackRobotFasterThanRover": "Roboten nådde høyere side av skjermen først, før bilen.",
   "spritelabFeedbackDifferentStarRotation": "Begge figurer i stjernekostyme må snu seg like mye.",
-  "spritelabFeedbackAstronautMoveToCorner": "Astronaut figuren må bevege seg til en av de fire hjørnene.",
-  "poemBotMakeBackground": "Du må lage ein bakgrunnseffekt."
+  "spritelabFeedbackAstronautMoveToCorner": "Astronaut figuren må bevege seg til en av de fire hjørnene."
 }

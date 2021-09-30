@@ -398,7 +398,9 @@ class Lesson < ApplicationRecord
     # a user trying to edit a lesson plan via /s/[script-name]/lessons/1/edit
     # has sufficient permissions or not. therefore, use a different path
     # when editing lesson plans in hoc scripts.
-    ScriptConfig.hoc_scripts.include?(script.name) ? edit_lesson_path(id: id) : script_lesson_edit_path(script, self)
+    has_lesson_plan && !ScriptConfig.hoc_scripts.include?(script.name) ?
+      script_lesson_edit_path(script, self) :
+      edit_lesson_path(id: id)
   end
 
   def get_uncached_show_path

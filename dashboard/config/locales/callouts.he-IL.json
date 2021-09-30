@@ -436,6 +436,45 @@
         },
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "בלוק חדש!",
+          "hello_world_new_block": "בלוק חדש!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "בלוק חדש!",
+          "hello_world_new_block": "בלוק חדש!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "בלוק חדש!",
+          "hello_world_new_block": "בלוק חדש!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "בלוק חדש!"
         }
       }
     }

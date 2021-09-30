@@ -101,6 +101,7 @@ def main
         WORKSHOP_APPLICATION_STATES
         WORKSHOP_SEARCH_ERRORS
         WORKSHOP_TYPES
+        NOT_FUNDED_SUBJECTS
       ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false
@@ -129,7 +130,7 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
-      source_module: Pd::Teacher2122ApplicationConstants,
+      source_module: Pd::TeacherApplicationConstants,
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/teacherApplicationConstants.js"
@@ -138,7 +139,7 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(PAGE_LABELS TEXT_FIELDS),
-      source_module: Pd::PrincipalApproval2122ApplicationConstants,
+      source_module: Pd::PrincipalApprovalApplicationConstants,
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"

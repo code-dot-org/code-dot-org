@@ -175,6 +175,8 @@ ro:
           lessons:
             Artist:
               name: Artist
+              description_student: Creați imagini extraordinare programând Artistul.
+              description_teacher: În această lecție, elevii vor avea control asupra Artistului și vor finaliza desene pe ecran. În această etapă din Artist, elevii vor crea imagini a căror complexitate va crește progresiv, folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează la dreapta cu 90 de grade`.
           student_description: Desenează poze şi proiecte mişto cu Artistul!
         hourofcode:
           title: Labirint Clasic
@@ -1068,7 +1070,8 @@ ro:
           lessons:
             Unit 6 Overview:
               name: Prezentare generală - Lecția 6
-        cspunit4draft: {}
+        cspunit4draft:
+          description_short: Date
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -1158,7 +1161,10 @@ ro:
             Hour of Code 2015:
               name: Ora de cod 2015
           student_description: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau Alex intr-o aventura in acest univers Minecraft.
-        oceans: {}
+        oceans:
+          lessons:
+            Oceans:
+              description_student: 'Rezumatul tutorialului: Mai întâi elevii vor clasifica obiectele în două categorii - „pești” și „obiecte care nu sunt pești”, încercând să îndepărteze gunoaiele din ocean. Apoi elevii vor extinde setul de date de învățare, incluzând alte creaturi marine care trăiesc în apă. În a doua parte a activității, elevii vor alege propriile etichete care vor fi aplicate unor imagini cu pești generați aleatoriu. Aceste date de învățare sunt apoi utilizate pentru un model de învățare automatizată care trebuie să poată asocia singur noile etichete cu imaginile corespunzătoare.'
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -1482,6 +1488,8 @@ ro:
               name: Amprenta digitală
             Peer Review:
               name: Împerecheaţi dispozitivele
+        CSDU5-Draft:
+          description_short: Date
         CSF_Secret_Sample_Story:
           description_audience: Vârste 8 - 18 ani+
         MikeTest:
@@ -1801,6 +1809,8 @@ ro:
           lessons:
             Bounce:
               name: Săritură
+              description_student: Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!
+              description_teacher: În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.
           student_description: Realizeaza un joc de baschet
         sample-csp5:
           lessons:
@@ -2107,6 +2117,8 @@ ro:
           lessons:
             Sports:
               name: Sporturi (Sports)
+              description_student: Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!
+              description_teacher: În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.
           student_description: Amesteca si potriveste sporturile
         2016_sciencePD-phase2b:
           lessons:
@@ -4588,6 +4600,8 @@ ro:
               display_name: Avansare
             csf_variables:
               display_name: Variabile
+            csf_data:
+              display_name: Date
             csf_for_loops:
               display_name: Bucle Pentru
             csf_internet:
@@ -5134,6 +5148,8 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+            csf_data:
+              display_name: Date
             end_of_course_project:
               display_name: Proiect de final de curs
           lessons:
@@ -6119,8 +6135,6 @@ ro:
               name: Bucle Pentru
         dance-extras-2019:
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
-          lessons:
-            Dance Party - Go Further: {}
           student_description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         csp10-pilot: {}
         csp4-preview:
@@ -6547,6 +6561,8 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+            csf_data:
+              display_name: Date
             end_of_course_project:
               display_name: Proiect de final de curs
           lessons:
@@ -6834,6 +6850,8 @@ ro:
               display_name: Cetățenia Digitală
             csf_variables:
               display_name: Variabile
+            csf_data:
+              display_name: Date
             csf_for_loops:
               display_name: Bucle Pentru
             csf_sprites:
@@ -7751,6 +7769,8 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+            csf_data:
+              display_name: Date
             end_of_course_project:
               display_name: Proiect de final de curs
           name: coursec-2021
@@ -8329,22 +8349,36 @@ ro:
         csa1-pilot:
           lessons:
             lesson-21: {}
+            lesson-24: {}
+            lesson-22: {}
+            lesson-23: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
         csa2-pilot:
           lessons:
             lesson-1: {}
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
           lesson_groups:
             lesson group:
               display_name: Conţinut
         csa3-pilot:
           lessons:
             lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
         csa4-pilot:
+          lessons:
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -8715,6 +8749,9 @@ ro:
         csa1-pilot-facilitator:
           lessons:
             Unit 1 Pilot Survey: {}
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-21: {}
           lesson_groups:
             lessonGroup-2:
@@ -8722,6 +8759,8 @@ ro:
         csa2-pilot-facilitator:
           lessons:
             Unit 2 Pilot Survey: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-1: {}
           lesson_groups:
             lesson group:
@@ -8729,16 +8768,23 @@ ro:
         csa3-pilot-facilitator:
           lessons:
             Unit 3 Pilot Survey: {}
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
         csa4-pilot-facilitator:
           lessons:
+            lesson-1: {}
+            lesson-3: {}
+            lesson-4: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
             lesson-10: {}
+            lesson-2: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -8844,6 +8890,7 @@ ro:
             lesson-13: {}
             lesson-14: {}
             lesson-15: {}
+            lesson-16: {}
           lesson_groups:
             lesson group:
               display_name: Conţinut
@@ -8854,5 +8901,11 @@ ro:
             lessonGroup-2:
               display_name: Conţinut
         csc-things:
+          lessons:
+            lesson-1: {}
+        poetry-hoc2:
+          lessons:
+            lesson-1: {}
+        poetry-hoc3:
           lessons:
             lesson-1: {}

@@ -239,7 +239,11 @@
         "CourseF_outbreak6": "무작위 기회",
         "CourseF_outbreak7": "면역과 백신",
         "CourseF_outbreak8": "메시지 공유",
-        "international_outbreak_freeplay": "표준 도구 상자"
+        "international_outbreak_freeplay": "표준 도구 상자",
+        "helloworld_animals_costumes": "의상",
+        "helloworld_emoji_costumes": "의상",
+        "helloworld_food_costumes": "의상",
+        "helloworld_retro_costumes": "의상"
       }
     }
   }

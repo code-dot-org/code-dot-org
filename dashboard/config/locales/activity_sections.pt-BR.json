@@ -2,6 +2,16 @@
   "pt-BR": {
     "data": {
       "activity_sections": {
+        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+          "progression_name": "Seja bem-vindo à Monster Town"
+        },
+        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+          "progression_name": "Desenvolvimento de Habilidades"
+        },
+        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Introdução"
         },
