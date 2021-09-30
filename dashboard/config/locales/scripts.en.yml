@@ -181,7 +181,7 @@ en:
           lessons:
             Play Lab:
               name: Play Lab
-              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           description_audience: ''
           student_description: Create a story or make a game with Play Lab!
@@ -215,7 +215,7 @@ en:
           lesson_groups: {}
           lessons:
             Artist:
-              name: Artist
+              name: Code with Anna and Elsa
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
           student_description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -370,8 +370,8 @@ en:
           lesson_groups: {}
           lessons:
             Infinity:
-              name: Infinity
-              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              name: Disney Infinity Play Lab
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Use Play Lab to create a story or game starring Disney Infinity characters.
         algebrademo:
@@ -1993,7 +1993,7 @@ en:
           lessons:
             Ice Age Play Lab:
               name: Ice Age Play Lab
-              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Create a story or make a game with Ice Age Play Lab!
         CSPPD3-Unit3:
@@ -2095,7 +2095,7 @@ en:
               description_teacher: |-
                 In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. This version uses both drag-drop blocks and JavaScript. Students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+.
 
-                A [Blockly version](/s/starwarsblocks) is also available and recommended for students on mobile devices without keyboards, younger students, and international students.
+                A [Blockly version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) is also available and recommended for students on mobile devices without keyboards, younger students, and international students.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code (Blockly)'
@@ -26125,8 +26125,8 @@ en:
           lessons:
             lesson-1:
               name: Hello World
-              description_student: 
-              description_teacher: 
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. There are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)
           lesson_groups: {}
           name: hello-world-food
           title: Hello World

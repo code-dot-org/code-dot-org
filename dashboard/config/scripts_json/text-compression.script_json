@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "text-compression",
-    "serialized_at": "2021-09-22 19:14:15 UTC",
+    "serialized_at": "2021-09-29 22:30:07 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "text-compression"
@@ -99,7 +99,6 @@
       "key": "ddc8f987-c000-409d-aaf7-8546464a70d9",
       "position": 4,
       "properties": {
-        "duration": 0,
         "name": "Extended Learning"
       },
       "seeding_key": {
@@ -128,8 +127,8 @@
       "key": "2596c914-8e1c-4c92-b66c-9062e2a778c2",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**",
-        "name": "Warm up: Abbr In Ur Txt Msgs (5-7 mins)\r"
+        "description": "####Abbr In Ur Txt Msgs \n\nAs a warm up to thinking about Text Compression, connect to ways that most people already compress text in their lives, through abbreviations and acronyms with which most people have some experience in text messages.\n\nMotivate some ideas about why someone would want to compress text.\n\n**Prompt:**",
+        "name": "Warm up"
       },
       "seeding_key": {
         "activity_section.key": "2596c914-8e1c-4c92-b66c-9062e2a778c2",
@@ -137,25 +136,8 @@
       }
     },
     {
-      "key": "8eb0263c-39e9-4918-96c6-0ca2023f1179",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "As a warm up to thinking about Text Compression, connect to ways that most people already compress text in their lives, through abbreviations and acronyms with which most people have some experience in text messages.\r\n\r\nMotivate some ideas about why someone would want to compress text.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8eb0263c-39e9-4918-96c6-0ca2023f1179",
-        "lesson_activity.key": "e7d8c33e-9a74-4c71-88bc-697d78573d4c"
-      }
-    },
-    {
       "key": "e7bb5d35-bec3-45f9-9022-f718aedb634c",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "* *\"When you send text messages to a friend, do you spell every word correctly?\"* \r\n    * Do you use abbreviations for common words? List as many as you can.  \r\n    * Write some examples of things you might see in a text message that are not proper English.\r\n\r\nGive students a minute to write, and to share with a neighbor?\r\n\r\n* *\"Why do you use these abbreviations?  What is the benefit?\"*\r\n    * Possible answers:\r\n        * to save characters/keystrokes\r\n        * to hide from parents/teachers\r\n        * to be cool, clever, funny\r\n        * to “speak in code”\r\n        * to say the same thing in less space"
       },
@@ -166,9 +148,9 @@
     },
     {
       "key": "8464f3ff-176d-4c69-bd66-1089fef7d689",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "description": "\"What's this about? - Compression: Same Data, Fewer Bits\"\r\n\r\n* Today's class is about **compression**\r\n* When you abbreviate or use coded language to shorten the original text, you are “compressing text.”  Computers do this too, **in order to save time and space.**\r\n\r\n* The art and science of compression is about figuring out how to represent the SAME DATA with FEWER BITS.\r\n\r\n* Why is this important? One reason is that storage space is limited and you'd always prefer to use fewer bits if you could.  A much more compelling reason is that there is an upper limit to how fast bits can be transmitted over the Internet.\r\n\r\n* What if we need to send a large amount of text faster over the Internet, but we’ve reached the physical limit of how fast we can send bits?  Our only choice is to somehow capture the same information with fewer bits; we call this **compression**.",
+        "description": "\"What's this about? - Compression: Same Data, Fewer Bits\"\n\n* Today's lesson is about *compression*\n* When you abbreviate or use coded language to shorten the original text, you are “compressing text.”  Computers do this too, in order to save time and space.\n\n* The art and science of compression is about figuring out how to represent the SAME DATA with FEWER BITS.\n\n* Why is this important? One reason is that storage space is limited and you'd always prefer to use fewer bits if you could.  A much more compelling reason is that there is an upper limit to how fast bits can be transmitted over the Internet.\n\n* What if we need to send a large amount of text faster over the Internet, but we’ve reached the physical limit of how fast we can send bits?  Our only choice is to somehow capture the same information with fewer bits; we call this *compression*.",
         "remarks": true
       },
       "seeding_key": {
@@ -178,7 +160,7 @@
     },
     {
       "key": "9157e4da-0260-4b90-a36a-7b6b36f25666",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "**Transition:** \r\n\r\nLet's look at an example of a text message that's been compressed in a clever way."
       },
@@ -217,7 +199,6 @@
       "properties": {
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "The video explains a little bit about compression in general - the difference between [v lossless compression] and [v lossy compression].  Todays class is about **[v lossless compression]** we'll do lossy compression in a class or two after looking at image encoding.\r\n"
           }
@@ -234,7 +215,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Teacher's Choice** whether to show the video to the whole class or let students watch it from within Code Studio.  There are benefits and drawbacks to each.\r\n\r\n**Option to Consider**: Get students into the text compression tool BEFORE showing the video.  You might find students are more receptive to some of the information in the video if they have tried to use the tool first.\r\n\r\n**Communication and Collaboration:**  To develop communication and collaboration between students, include one of the following scenarios in class:\r\n\r\n* Have students who were assigned the same poem compare results, or seat them in the same area of the room.\r\n* Have a little friendly competition - but be careful not to let “bad” competition seep in - to see which pair can compress a poem the most.  Use a poem that none of the students have compressed yet.\r\n* For each poem, have the group(s) who did it figure out the best in the class, and record it on the board or somewhere that people can see.\r\n    * Have a class goal of getting the compression percentages for the four poems as high as possible.\r\n    * The groups with the best compression percentages may be asked to share their strategy with the class.\r\n\r\nStudents may be reluctant to share if they feel they don’t have the best results, but students should see others’ work and offer advice and strategies.\r\n"
           }
@@ -331,6 +311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Text Compression"
+        ],
         "progression": "Text Compression"
       },
       "bonus": false,
@@ -353,6 +336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Text Compression"
+        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -569,36 +555,36 @@
     {
       "seeding_key": {
         "lesson.key": "Text Compression",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CL.L2:3"
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Text Compression",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CPP.L2:4"
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Text Compression",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CT.L2:9"
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Text Compression",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CT.L3B:8"
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Text Compression",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CT.L3B:9"
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
       }
     }
   ],
