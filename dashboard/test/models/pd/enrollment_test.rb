@@ -166,6 +166,14 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.send_exit_survey
   end
 
+  test 'send_exit_survey does not send mail for EIR:Admin/Counselor workshops' do
+    workshop = create :admin_counselor_workshop, :ended
+    enrollment = create :pd_enrollment, user: create(:teacher), workshop: workshop
+    Pd::WorkshopMailer.expects(:exit_survey).never
+
+    enrollment.send_exit_survey
+  end
+
   test 'send_exit_survey sends email and updates survey_sent_at' do
     enrollment = create :pd_enrollment, user: create(:teacher)
 
@@ -642,7 +650,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     workshop = create :workshop
     teacher = create :teacher
     enrollment = create :pd_enrollment, user: teacher, workshop: workshop
-    application = create :pd_teacher2021_application, user: teacher
+    application = create :pd_teacher_application, user: teacher
 
     assert_nil enrollment.application_id
 

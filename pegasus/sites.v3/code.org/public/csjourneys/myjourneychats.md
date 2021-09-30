@@ -43,7 +43,7 @@ social:
 
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Developing responsible artificial intelligence</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<a href="https://www.eventbrite.com/e/my-journey-developing-responsible-artificial-intelligence-registration-168002151959" target="_blank"><img src="/images/csjourneys/myjourney-google.png" style="max-width:100%; border-radius:15px" alt="Taylor Roper"></a>
+<a href="https://code.zoom.us/rec/share/S0iGc__as1P7ojySOWcUbyzzjWE_t95g6kcRLvwNVyvrgJ6BxBPGb1Pxy1HGtuyU.WneOY6X_RCiEeue-" target="_blank"><img src="/images/csjourneys/myjourney-google.png" style="max-width:100%; border-radius:15px" alt="Taylor Roper"></a>
 <center><img src="/images/avatars/google.png" style="max-width:50%; margin-top:15px" alt="Google logo"></center>
 </div>
 
@@ -63,7 +63,7 @@ As a program manager on <a href="https://about.google/" target="_blank">Google</
 
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Artificial intelligence and sports</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<a href="https://www.eventbrite.com/e/my-journey-using-artificial-intelligence-in-sports-registration-163522164195" target="_blank"><img src="/images/csjourneys/myjourney-patrick2.png" style="max-width:100%; border-radius:15px" alt="Patrick Lucey"></a>
+<a href="https://code.zoom.us/rec/play/09veMf1354wOxNcJxSMPqmGgf6qh3vTdvIaSGHTpeyik4_59etRQXEIuPbAQwSzKiYAIMkXpqSRGHO_L.ym6IZsLcInwcxQAG" target="_blank"><img src="/images/csjourneys/myjourney-patrick2.png" style="max-width:100%; border-radius:15px" alt="Patrick Lucey"></a>
 <center><img src="/images/csjourneys/stats-perform.jpg" style="max-width:50%; margin-top:15px" alt="Stats PERFORM logo"></center>
 </div>
 
@@ -76,7 +76,7 @@ As a program manager on <a href="https://about.google/" target="_blank">Google</
 <strong>Patrick Lucey</strong> serves as Chief Scientist at <a href="https://www.statsperform.com/" target="_blank">Stats PERFORM</a>. Previously, Patrick was at Disney Research, where he conducted research into automatic sports broadcasting. His main research interests are in artificial intelligence and interactive machine learning in sporting domains. For more background, please check out Patrick’s <a href="https://patricklucey.com/index.html" target="_blank">personal page</a>.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-using-artificial-intelligence-in-sports-registration-163522164195" target="_blank"><button>Register my class</button></a>
+<a href="https://code.zoom.us/rec/play/09veMf1354wOxNcJxSMPqmGgf6qh3vTdvIaSGHTpeyik4_59etRQXEIuPbAQwSzKiYAIMkXpqSRGHO_L.ym6IZsLcInwcxQAG" target="_blank"><button>Watch the chat</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>

@@ -13,4 +13,10 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
     assert_equal 1, programming_expression.lessons.length
     assert_equal 1, lesson.programming_expressions.length
   end
+
+  test "programming expression cannot have invalid key" do
+    assert_raises ActiveRecord::RecordInvalid do
+      ProgrammingExpression.create!(key: 'an invalid key', name: 'invalid block')
+    end
+  end
 end

@@ -31,6 +31,13 @@ class ProgrammingExpression < ApplicationRecord
     syntax
   )
 
+  KEY_CHAR_RE = /[A-Za-z0-9\-\_\.]/
+  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
+  validates_format_of :key,
+    presence: true,
+    with: KEY_RE,
+    message: "must only be letters, numbers, dashes, underscores, and periods. Got \"%{value}\""
+
   def self.properties_from_file(path, content)
     expression_config = JSON.parse(content)
 
