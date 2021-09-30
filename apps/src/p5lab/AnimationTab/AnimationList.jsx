@@ -22,10 +22,6 @@ class AnimationList extends React.Component {
     hideBackgrounds: PropTypes.bool.isRequired
   };
 
-  componentDidMount() {
-    this.listRef.focus();
-  }
-
   render() {
     let addAnimation = (
       <NewListItem
@@ -43,7 +39,7 @@ class AnimationList extends React.Component {
       });
     }
     return (
-      <ScrollableList style={styles.root} className="animationList" ref={ref => (this.listRef = ref)}>
+      <ScrollableList style={styles.root} className="animationList">
         {this.props.spriteLab && addAnimation}
         {animationListKeys.map(key => (
           <AnimationListItem
