@@ -214,5 +214,11 @@ module Pd
       COURSE_CSP => 'csp',
       COURSE_CSA => 'csa'
     }
+
+    OFFERED_PROGRAMS = [
+      'CSD',
+      'CSP',
+      'CSA'
+    ]
   end
 end
