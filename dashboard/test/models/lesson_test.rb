@@ -916,9 +916,28 @@ class LessonTest < ActiveSupport::TestCase
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
   end
 
-  test 'start_url returns student_lesson_plan_pdf_url when no scripts' do
-    new_lesson = create :lesson, key: 'Some Verbose Lesson Name', has_lesson_plan: true, student_lesson_plan_pdf_url: 'code'
-    assert_equal new_lesson.start_url, 'code'
+  test 'start_url returns correct lockable lesson url' do
+    new_script = create :script, include_student_lesson_plans: false, is_migrated: true
+    new_lesson = create :lesson, script: new_script, key: 'Fancy Name', has_lesson_plan: false, lockable: true
+    level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
+    create :script_level, script: new_script, levels: [level1], assessment: true, lesson: new_lesson
+
+    assert_equal(
+      new_lesson.start_url,
+      "http://test-studio.code.org/s/#{new_script.name}/lockable/1/levels/1"
+    )
+  end
+
+  test 'start_url returns correct lesson start url' do
+    new_script = create :script, include_student_lesson_plans: true, is_migrated: true
+    new_lesson = create :lesson, script: new_script, key: 'Fancy Name', has_lesson_plan: true
+    level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
+    create :script_level, script: new_script, levels: [level1], assessment: false, lesson: new_lesson
+
+    assert_equal(
+      new_lesson.start_url,
+      "http://test-studio.code.org/s/#{new_script.name}/lessons/1/levels/1"
+    )
   end
 
   test 'opportunity standards do not count as regular standards' do
