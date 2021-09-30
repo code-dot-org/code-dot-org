@@ -8,9 +8,8 @@ module Pd
       # - the constant is used for displaying the school year in the application form
       # - two scripts (teacher_applications_to_gdrive and scheduled_pd_application_emails) use the constant
       # - used for regional partner workshop enrollment counts
-      APPLICATION_CURRENT_YEAR = YEAR_22_23
-      APPLICATION_NEXT_YEAR = YEAR_23_24
-      APPLICATION_CURRENT_YEAR_SHORT = YEAR_22_23_SHORT
+      APPLICATION_CURRENT_YEAR = Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR
+      APPLICATION_NEXT_YEAR = Pd::SharedApplicationConstants::APPLICATION_NEXT_YEAR
 
       # Active (this year's) application classes and factories
       TEACHER_APPLICATION_CLASS = TeacherApplication

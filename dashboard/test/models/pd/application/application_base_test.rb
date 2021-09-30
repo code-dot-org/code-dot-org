@@ -4,6 +4,7 @@ module Pd::Application
   class ApplicationBaseTest < ActiveSupport::TestCase
     include ApplicationConstants
     include Pd::Application::ActiveApplicationModels
+    include Pd::SharedApplicationConstants
 
     freeze_time
 

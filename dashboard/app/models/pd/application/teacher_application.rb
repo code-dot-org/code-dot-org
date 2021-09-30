@@ -37,6 +37,7 @@
 module Pd::Application
   class TeacherApplication < ApplicationBase
     include Pd::TeacherApplicationConstants
+    include Pd::SharedApplicationConstants
     include PdWorkshopHelper
     include Rails.application.routes.url_helpers
     include SchoolInfoDeduplicator
@@ -118,7 +119,7 @@ module Pd::Application
       end
     end
 
-    # @return a valid year (see ApplicationConstants.APPLICATION_YEARS)
+    # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
       self.class.year
     end

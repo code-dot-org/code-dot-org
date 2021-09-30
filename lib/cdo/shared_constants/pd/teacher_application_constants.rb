@@ -7,7 +7,7 @@ module Pd
       string.gsub(/\n\s*/, ' ')
     end
 
-    YEAR = Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR
+    YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
     SECTION_HEADERS = {
       about_you: 'About You',

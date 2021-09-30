@@ -42,6 +42,7 @@ require 'state_abbr'
 module Pd::Application
   class ApplicationBase < ApplicationRecord
     include ApplicationConstants
+    include Pd::SharedApplicationConstants
     include Pd::Form
     include SerializedProperties
 
