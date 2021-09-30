@@ -287,37 +287,26 @@ FeedbackUtils.prototype.displayFeedback = function(
         onContinue();
       };
     }
-    if (isPerfect) {
-      ReactDOM.render(
-        <ChallengeDialog
-          title={msg.challengeLevelPerfectTitle()}
-          avatar={icon}
-          complete
-          handlePrimary={onChallengeContinue}
-          primaryButtonLabel={msg.continue()}
-          cancelButtonLabel={msg.tryAgain()}
-          showPuzzleRatingButtons={showPuzzleRatingButtons}
-        >
-          {displayShowCode && this.getShowCodeComponent_(options, true)}
-        </ChallengeDialog>,
-        container
-      );
-    } else {
-      ReactDOM.render(
-        <ChallengeDialog
-          title={msg.challengeLevelPassTitle()}
-          avatar={icon}
-          handlePrimary={onChallengeContinue}
-          primaryButtonLabel={msg.continue()}
-          cancelButtonLabel={msg.tryAgain()}
-          showPuzzleRatingButtons={showPuzzleRatingButtons}
-          text={msg.challengeLevelPassText({idealBlocks})}
-        >
-          {displayShowCode && this.getShowCodeComponent_(options, true)}
-        </ChallengeDialog>,
-        container
-      );
-    }
+
+    ReactDOM.render(
+      <ChallengeDialog
+        title={
+          isPerfect
+            ? msg.challengeLevelPerfectTitle()
+            : msg.challengeLevelPassTitle()
+        }
+        avatar={icon}
+        text={isPerfect ? null : msg.challengeLevelPassText({idealBlocks})}
+        complete={isPerfect}
+        handlePrimary={onChallengeContinue}
+        primaryButtonLabel={msg.continue()}
+        cancelButtonLabel={msg.tryAgain()}
+        showPuzzleRatingButtons={showPuzzleRatingButtons}
+      >
+        {displayShowCode && this.getShowCodeComponent_(options, true)}
+      </ChallengeDialog>,
+      container
+    );
     return;
   }
 
