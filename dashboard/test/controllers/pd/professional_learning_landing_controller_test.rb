@@ -67,6 +67,25 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_nil response[:last_workshop_survey_course]
   end
 
+  test 'EIR:Admin/Counselor workshops do not show up as pending exit surveys' do
+    # Fake EIR workshop, which should not produce an exit survey
+    eir_workshop = create :admin_counselor_workshop, :ended
+
+    # Given a teacher that attended the workshop, such that they would get
+    # a survey for any other workshop subject.
+    teacher = create :teacher
+    go_to_workshop eir_workshop, teacher
+
+    # When the teacher loads the PL landing page
+    load_pl_landing teacher
+
+    # Then they don't see a prompt for a pending exit survey
+    # (That is, we didn't pass down the parameters that would cause that prompt to appear.)
+    response = assigns(:landing_page_data)
+    assert_nil response[:last_workshop_survey_url]
+    assert_nil response[:last_workshop_survey_course]
+  end
+
   test 'FiT workshops do not interfere with other pending exit surveys' do
     # Fake CSF workshop (older than the FiT workshop) which should
     # produce a pending exit survey
