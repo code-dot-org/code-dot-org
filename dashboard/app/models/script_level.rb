@@ -445,7 +445,7 @@ class ScriptLevel < ApplicationRecord
     summary
   end
 
-  def summarize_for_lesson_show(current_user, can_view_teacher_markdown)
+  def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
     summary = summarize
     summary[:id] = id.to_s
     summary[:scriptId] = script_id
