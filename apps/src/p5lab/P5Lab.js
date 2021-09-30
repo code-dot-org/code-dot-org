@@ -1109,13 +1109,13 @@ export default class P5Lab {
       }
 
       if (this.isBlockly) {
-        this.spritelabLibrary = this.createLibrary({p5: this.p5Wrapper.p5});
+        this.library = this.createLibrary({p5: this.p5Wrapper.p5});
 
-        const spritelabCommands = this.spritelabLibrary.commands;
-        for (const command in spritelabCommands) {
+        const libraryCommands = this.library.commands;
+        for (const command in libraryCommands) {
           this.JSInterpreter.createGlobalProperty(
             command,
-            spritelabCommands[command].bind(this.spritelabLibrary),
+            libraryCommands[command].bind(this.library),
             null
           );
         }
