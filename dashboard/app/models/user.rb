@@ -2367,6 +2367,10 @@ class User < ApplicationRecord
     }.compact
   end
 
+  def self.marketing_segment_data_keys
+    %w(locale account_age_in_years grades courses has_attended_pd within_usschool_percent_frl school_title_i)
+  end
+
   private
 
   def account_age_in_years

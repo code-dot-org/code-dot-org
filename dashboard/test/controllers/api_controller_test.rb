@@ -938,7 +938,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Script.stubs(:should_cache?).returns true
 
-    assert_queries 8 do
+    assert_queries 12 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -1216,10 +1216,6 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_response :forbidden
   end
-
-  # test "" do
-
-  # end
 
   test "script_structure returns summarized script" do
     overview_path = 'http://script.overview/path'
