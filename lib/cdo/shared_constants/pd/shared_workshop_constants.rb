@@ -7,6 +7,7 @@ module Pd
       COURSE_CS_IN_A = 'CS in Algebra'.freeze,
       COURSE_CS_IN_S = 'CS in Science'.freeze,
       COURSE_CSD = 'CS Discoveries'.freeze,
+      COURSE_CSA = 'Computer Science A'.freeze,
       COURSE_COUNSELOR = 'Counselor'.freeze,
       COURSE_ADMIN = 'Admin'.freeze,
       COURSE_FACILITATOR = 'Facilitator'.freeze,
@@ -73,6 +74,17 @@ module Pd
         SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSP_FIT = SUBJECT_FIT,
         SUBJECT_CSP_FOR_RETURNING_TEACHERS,
+      ],
+      COURSE_CSA => [
+        SUBJECT_CSA_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
+        SUBJECT_CSA_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
+        SUBJECT_CSA_WORKSHOP_1 = SUBJECT_WORKSHOP_1,
+        SUBJECT_CSA_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
+        SUBJECT_CSA_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
+        SUBJECT_CSA_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
+        SUBJECT_CSA_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
+        SUBJECT_CSA_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
+        SUBJECT_CSA_FIT = SUBJECT_FIT,
       ],
       COURSE_CSD => [
         SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
@@ -199,7 +211,14 @@ module Pd
     COURSE_KEY_MAP = {
       COURSE_CSF => 'csf',
       COURSE_CSD => 'csd',
-      COURSE_CSP => 'csp'
+      COURSE_CSP => 'csp',
+      COURSE_CSA => 'csa'
     }
+
+    OFFERED_PROGRAMS = [
+      'CSD',
+      'CSP',
+      'CSA'
+    ]
   end
 end

@@ -163,6 +163,7 @@ class P5LabView extends React.Component {
         hideUploadOption={this.props.isBlockly}
         hideAnimationNames={this.props.isBlockly}
         hideBackgrounds={this.props.isBlockly}
+        labType={this.props.labType}
       />
     ) : (
       undefined
