@@ -156,27 +156,27 @@ export default class Playground {
       return;
     }
 
-    const newItemData = this.getNewItemData(itemData);
-    this.changePlaygroundItem(itemData.id, newItemData);
+    const changedItemData = this.getChangedItemData(itemData);
+    this.changePlaygroundItem(itemData.id, changedItemData);
   }
 
-  getNewItemData(itemData) {
+  getChangedItemData(itemData) {
     // We do not include the ID as part of each item's data.
     // The ID serves as the key referencing an object that contains the item's contents.
-    const newItemData = {...itemData};
-    delete newItemData.id;
+    const changedItemData = {...itemData};
+    delete changedItemData.id;
 
     if (this.getItem(itemData.id).type === PlaygroundItemType.IMAGE) {
       if (itemData.filename) {
-        newItemData.fileUrl = this.getUrl(itemData.filename);
+        changedItemData.fileUrl = this.getUrl(itemData.filename);
         // we don't need to pass filename as imageData
-        delete newItemData.filename;
+        delete changedItemData.filename;
       }
-      return newItemData;
+      return changedItemData;
     }
 
     // No changes to itemData required for text items other than removing ID property.
-    return newItemData;
+    return changedItemData;
   }
 
   playSound(soundData) {
