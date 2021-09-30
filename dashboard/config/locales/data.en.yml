@@ -645,6 +645,9 @@ en:
         poembot-playtest-intro: PoemBot Playtest Intro
         poembot-playtest-sprites: PoemBot Playtest Sprites
         poembot-playtest-events: PoemBot Playtest Events
+        hello_world_intro: Hello World - Intro
+        hello_world_events: Hello World - Events
+        hello_world_congrats: Hello World - Congratulations
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

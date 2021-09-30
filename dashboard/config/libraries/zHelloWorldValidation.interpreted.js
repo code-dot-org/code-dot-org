@@ -44,7 +44,7 @@ function level4(){
 
   // Check criteria and give failure feedback
   if (World.frameCount > failTime) {
-    levelFailure(3, "clickAnySprite");
+    levelFailure(3, "clickAllSprites");
   }
 
   // Pass 5 seconds after success
