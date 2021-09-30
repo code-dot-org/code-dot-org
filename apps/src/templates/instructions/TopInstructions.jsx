@@ -741,10 +741,9 @@ class TopInstructions extends Component {
                     <div style={styles.exampleSolutions}>
                       {exampleSolutions.map((example, index) => (
                         <Button
-                          __useDeprecatedTag
                           key={index}
                           text={i18n.exampleSolution({number: index + 1})}
-                          color="blue"
+                          color={Button.ButtonColor.blue}
                           href={example}
                           target="_blank"
                           rel="noopener noreferrer"
