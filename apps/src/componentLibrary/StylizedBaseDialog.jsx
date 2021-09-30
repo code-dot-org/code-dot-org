@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import {makeEnum} from '@cdo/apps/utils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 
@@ -12,9 +13,12 @@ import Button from '@cdo/apps/templates/Button';
  * Includes a FooterButton component that appropriately styles buttons for the dialog.
  */
 
+const FooterButtonType = makeEnum('cancel', 'confirm', 'default');
+const DialogStyle = makeEnum('default', 'simple');
+
 export function FooterButton(props) {
-  const isConfirm = props.type === 'confirm';
-  const isCancel = props.type === 'cancel';
+  const isConfirm = props.type === FooterButtonType.confirm;
+  const isCancel = props.type === FooterButtonType.cancel;
   const color = props.color || (isConfirm && 'orange') || (isCancel && 'gray');
 
   // TODO: We shouldn't need to override <Button/> styles -- they should likely be default.
@@ -36,12 +40,12 @@ export function FooterButton(props) {
 // This component renders a <Button/>, so it will also accept/require any propTypes
 // from that component.
 FooterButton.propTypes = {
-  type: PropTypes.oneOf(['confirm', 'cancel', 'default']).isRequired,
+  type: PropTypes.oneOf(Object.keys(FooterButtonType)).isRequired,
   color: PropTypes.string
 };
 
 FooterButton.defaultProps = {
-  type: 'default'
+  type: FooterButtonType.default
 };
 
 export default function StylizedBaseDialog(props) {
@@ -64,7 +68,7 @@ export default function StylizedBaseDialog(props) {
   }
 
   const horizontalRule =
-    props.type === 'simple' ? null : <hr style={styles.hr} />;
+    props.type === DialogStyle.simple ? null : <hr style={styles.hr} />;
   const defaultButtons = [
     <FooterButton
       key="cancel"
@@ -91,7 +95,7 @@ export default function StylizedBaseDialog(props) {
       <div
         style={{
           ...styles.container,
-          ...(props.type === 'simple' ? {} : {padding: GUTTER})
+          ...(props.type === DialogStyle.simple ? {} : {padding: GUTTER})
         }}
       >
         {props.body}
@@ -129,7 +133,7 @@ StylizedBaseDialog.propTypes = {
   handleConfirmation: PropTypes.func,
   handleClose: PropTypes.func.isRequired,
   handleCancellation: PropTypes.func,
-  type: PropTypes.oneOf(['default', 'simple'])
+  type: PropTypes.oneOf(Object.keys(DialogStyle))
 };
 
 StylizedBaseDialog.defaultProps = {
@@ -138,7 +142,7 @@ StylizedBaseDialog.defaultProps = {
   hideFooter: false,
   confirmationButtonText: i18n.dialogOK(),
   cancellationButtonText: i18n.dialogCancel(),
-  type: 'default'
+  type: DialogStyle.default
 };
 
 const GUTTER = 20;
