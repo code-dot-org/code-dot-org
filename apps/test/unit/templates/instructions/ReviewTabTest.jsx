@@ -253,8 +253,7 @@ describe('Code Review Tab', () => {
           reviewEnabled: false
         });
 
-        const input = wrapper.find('input');
-        expect(input).to.be.empty;
+        expect(wrapper.find('input')).to.be.empty;
       });
 
       it('shows comment input if peer review enabled', () => {
@@ -303,7 +302,6 @@ describe('Code Review Tab', () => {
       });
 
       wrapper.setState({initialLoadCompleted: true});
-
       expect(wrapper.find(CommentEditor).length).to.equal(1);
     });
 
