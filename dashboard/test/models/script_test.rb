@@ -856,6 +856,20 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
+  test 'has_other_versions? makes no queries when there are no other unit group versions' do
+    Script.stubs(:should_cache?).returns true
+
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017')
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    CourseOffering.add_course_offering(csp_2017)
+
+    csp1_2017 = Script.get_from_cache(csp1_2017.id)
+    assert_queries(0) do
+      refute csp1_2017.has_other_versions?
+    end
+  end
+
   test 'has_other_versions? makes no queries when there is one other unit version' do
     Script.stubs(:should_cache?).returns true
 
