@@ -14,27 +14,30 @@ import Button from '@cdo/apps/templates/Button';
  */
 
 const FooterButtonType = makeEnum('cancel', 'confirm', 'default');
+const FooterButtonColor = {
+  [FooterButtonType.cancel]: Button.ButtonColor.gray,
+  [FooterButtonType.confirm]: Button.ButtonColor.orange
+};
+
 const DialogStyle = makeEnum('default', 'simple');
 
 export function FooterButton(props) {
-  const isConfirm = props.type === FooterButtonType.confirm;
-  const isCancel = props.type === FooterButtonType.cancel;
-  const color = props.color || (isConfirm && 'orange') || (isCancel && 'gray');
+  function color() {
+    if (props.color) {
+      return props.color;
+    }
+
+    return FooterButtonColor[props.type];
+  }
 
   // TODO: We shouldn't need to override <Button/> styles -- they should likely be default.
   // Tracked by https://codedotorg.atlassian.net/browse/STAR-1616.
   const style = {
     ...styles.buttons.all,
-    ...(isConfirm && styles.buttons.confirmation)
+    ...(styles.buttons[props.type] || {})
   };
 
-  return (
-    <Button
-      style={style}
-      color={typeof color === 'string' ? color : undefined}
-      {...props}
-    />
-  );
+  return <Button style={style} color={color()} {...props} />;
 }
 
 // This component renders a <Button/>, so it will also accept/require any propTypes
@@ -164,6 +167,6 @@ const styles = {
   },
   buttons: {
     all: {boxShadow: 'none'},
-    confirmation: {borderColor: color.orange}
+    [FooterButtonType.confirm]: {borderColor: color.orange}
   }
 };
