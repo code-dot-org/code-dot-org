@@ -98,7 +98,7 @@ export default function StylizedBaseDialog(props) {
       <div
         style={{
           ...styles.container,
-          ...(props.type === DialogStyle.simple ? {} : {padding: GUTTER})
+          ...(styles.body[props.type] || {})
         }}
       >
         {props.body}
@@ -159,6 +159,9 @@ const styles = {
   hr: {
     margin: 0,
     borderColor: color.lighter_gray
+  },
+  body: {
+    [DialogStyle.default]: {padding: GUTTER}
   },
   footer: {
     display: 'flex',
