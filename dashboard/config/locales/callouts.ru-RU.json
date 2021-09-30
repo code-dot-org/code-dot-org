@@ -1792,6 +1792,89 @@
         },
         "courseF_text_events": {
           "events_category": "Щелкни здесь, чтобы открыть категорию “События”."
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Щелкни здесь для добавления новых костюмов в свой проект!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Щелкни здесь для добавления новых костюмов в свой проект!"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Ты можешь замедлить выполнение программы здесь."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Попробуй изменить \"когда\" на \"в то время, когда\"."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "У этого блока неправильный порядок."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Посмотри внимательно на код под этим пунктом."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Поищи новый блок здесь!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Изменился ли цвет фона, когда ты ответил на вопрос? Если да, нажми \"Готово\". Если нет, нажми \"Сбросить\", исправь код и нажми \"Выполнить\" снова."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Все готово? Если да, щелкни 'Завершить'. Если нет, щелкни 'Сброс', измени код и снова щелкни 'Пуск'."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Поищи два новых блока здесь!",
+          "text_answer_finish": "Отображался ли начальный экран в течение 3 секунд? Если да, щелкни 'Завершить'. Если нет, щелкни 'Сброс', измени код и снова щелкни 'Пуск'."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Поищи новые блоки здесь!"
+        },
+        "courseF_text_print": {
+          "print_block": "Найди блок `печать` здесь!",
+          "text_print_finish": "Твое сообщение появилось выше? Если да, щелкни 'Завершить'. Если нет, щелкни 'Сброс', измени код и снова щелкни 'Пуск'."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Найди блок запроса на ввод здесь!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Посмотри внимательно на код под этим пунктом."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Новый блок!",
+          "hello_world_new_block": "Новый блок!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Новый блок!",
+          "hello_world_new_block": "Новый блок!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Новый блок!",
+          "hello_world_new_block": "Новый блок!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Новый блок!"
         }
       }
     }

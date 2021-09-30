@@ -931,7 +931,15 @@
         "ramp_artist_loops8_2021": "八边形",
         "scrat_loops_C-F_video_2021": "冰河时代视频中的循环",
         "outbreak5": "恢复",
-        "international_outbreak_freeplay": "分享信息"
+        "international_outbreak_freeplay": "分享信息",
+        "helloworld_animals_costumes": "图案",
+        "helloworld_animals_location": "时间事件",
+        "helloworld_emoji_costumes": "图案",
+        "helloworld_emoji_location": "时间事件",
+        "helloworld_food_costumes": "图案",
+        "helloworld_food_location": "时间事件",
+        "helloworld_retro_costumes": "图案",
+        "helloworld_retro_location": "时间事件"
       }
     }
   }

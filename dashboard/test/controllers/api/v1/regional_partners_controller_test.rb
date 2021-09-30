@@ -336,6 +336,8 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
           [COURSE_CSD, SUBJECT_CSD_SUMMER_WORKSHOP]
         when :csp_teachers
           [COURSE_CSP, SUBJECT_CSP_SUMMER_WORKSHOP]
+        when :csa_teachers
+          [COURSE_CSA, SUBJECT_CSA_SUMMER_WORKSHOP]
         end
 
       create :workshop,

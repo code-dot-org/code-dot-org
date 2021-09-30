@@ -208,6 +208,12 @@ uz:
           lessons:
             Artist:
               name: Rassom
+              description_student: Rassomni dasturlash orqali chiroyli rasmlar yarating.
+              description_teacher: Bu darsda talabalar ekrandagi chizmalarni tugatish
+                uchun Rassomni boshqarishadi. Bu Rassom bosqichi talabalarga yangi
+                bo‘limlar, masalan, `move forward by 100 pixels` va `turn right by
+                90 degrees` kabilardan foydalangan holda yuqori mukammallikdagi rasmlar
+                yaratish imkonini beradi.
           student_description: Rassom bilan ajoyib rasmlar va dizayn chizing!
         hourofcode:
           title: Klassik labirint
@@ -1671,6 +1677,14 @@ uz:
           lessons:
             Oceans:
               name: Oceans
+              description_student: 'O''quv qo''llanmasining qisqacha mazmuni: Dastlab
+                talabalar okeandan chiqindilarni olib tashlash uchun obyektlarni ''baliqlar''
+                yoki ''baliqlar emas'' deb tasniflashadi. Keyin talabalar o''zlarining
+                ma''lumot to''plamlarini boshqa dengizni o''z ichiga olgan holda kengaytirishlari
+                kerak bo''ladi. Faoliyatning ikkinchi qismida talabalar tasodifiy
+                hosil bo''lgan baliqlarning rasmlariga murojaat qilish uchun o''zlarining
+                yorliqlarini tanlaydilar. Ushbu ma''lumotlar yangi tasvirlarni belgilashga
+                qodir bo''lgan mashina o''rganish modeli uchun ishlatiladi. '
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -3794,6 +3808,14 @@ uz:
           lessons:
             Bounce:
               name: Sakrash
+              description_student: Maktabda biron marta video o‘ynashni orzu qilganmisiz?
+                Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!
+              description_teacher: Bu onlayn mashg‘ulotda, talabalar hodisalar nima
+                ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday
+                ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli
+                tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar
+                ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini
+                turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.
           student_description: Choose your team and make a basketball game
         sample-csp5:
           lessons:
@@ -4831,6 +4853,14 @@ uz:
           lessons:
             Sports:
               name: Sport
+              description_student: Maktabda biron marta video o‘ynashni orzu qilganmisiz?
+                Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!
+              description_teacher: Bu onlayn mashg‘ulotda, talabalar hodisalar nima
+                ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday
+                ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli
+                tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar
+                ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini
+                turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.
           student_description: Mix and match across sports
         2016_sciencePD-phase2b:
           lessons:
@@ -17488,7 +17518,7 @@ uz:
               display_name: Survey
           lessons:
             CSD post-course survey:
-              name: CSD post-course survey
+              name: CSD Student Post-Course Survey ('18-'19)
           student_description: "CS Discoveries kursdan keyingi so‘rovnoma sizdan fikr-mulohaza
             olishimiz va kursni takomillashtirishimiz uchun foydalanadigan muhim vositadir.
             \n\nSo‘rovnoma yopiq va anonim tarzda o‘tkaziladi - o‘qituvchingiz butun
@@ -17509,7 +17539,7 @@ uz:
               display_name: Survey
           lessons:
             CSP post-course survey:
-              name: CSP post-course survey
+              name: CSP Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This
             survey takes about 15 minutes to complete.  Your responses are private
             and anonymous -- your teacher can see anonymous aggregate results for
@@ -27677,3 +27707,7 @@ uz:
               display_name: Kontent
             lessonGroup-2:
               display_name: Kontent
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 'Raqs Bazmi: Tarmoqsiz'

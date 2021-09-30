@@ -1649,11 +1649,15 @@ cs:
         text: nakonfigurujte Město příšer s{COUNT}příšerami
       Outbreak_stopMoving:
         text: příšery se přestávají pohybovat
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': déšť
+      Poetry_makeNumSprites:
         text: vytvoř {NUM} nových {ANIMATION_NAME} postav
-      PoemBot_playSound:
+      Poetry_playSound:
         text: přehraj zvuk {SOUND}
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Barvy
@@ -1663,9 +1667,9 @@ cs:
             '"ripples"': Vlny
           PALETTE:
             '"rainbow"': Duha
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: nastav pozadí na {IMG}
-      PoemBot_setForegroundEffect:
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Déšť
@@ -1673,6 +1677,20 @@ cs:
             '"hearts"': Barevná srdíčka
             '"confetti"': Konfety
             '"starburst"': Výbuch hvězdy
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: posuň se vpřed
       RyanLab_turnLeft:

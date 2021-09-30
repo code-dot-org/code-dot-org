@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-14 21:47:58 UTC",
+    "serialized_at": "2021-09-29 16:01:06 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd1-2021"
@@ -5681,10 +5681,9 @@
     },
     {
       "name": "Problem Solving Process",
-      "url": "https://drive.google.com/file/d/0B2UNlnU_5Vg4aC1DVGdWU19hZkE/view",
+      "url": "https://drive.google.com/file/d/0B2UNlnU_5Vg4aC1DVGdWU19hZkE/view?usp=sharing&resourcekey=0-1I3oX1C8Q_P1YAV15vJfOw",
       "key": "problem-solving-process",
       "properties": {
-        "type": "Graphic",
         "audience": "Teacher"
       },
       "seeding_key": {

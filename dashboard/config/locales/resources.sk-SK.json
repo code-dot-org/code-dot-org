@@ -246,10 +246,36 @@
           "name": "Fórum učiteľov"
         },
         "pair-programming-vid/pre-express/2021": {
-          "name": "Programovanie v páre"
+          "name": "Párové programovanie"
+        },
+        "class-section-video/pre-express/2021": {
+          "name": "Ako na Code.org vytvoriť triednu sekciu"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "Smajlíkovia"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "Pravidlo 20/20/20"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "name": "Keď sú žiaci neposední – Go Noodle"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "Mysli celým telom, keď si online"
+        },
+        "csta_standards_mapping/pre-express/2021": {
+          "name": "Mapovanie štandardov CSTA",
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "name": "Slovná zásoba z kurzu\t",
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "Fórum učiteľov"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "Sprievodca ladením"
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "Sleduj algoritmus",

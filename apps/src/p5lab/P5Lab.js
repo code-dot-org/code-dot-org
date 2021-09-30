@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
-import {P5LabInterfaceMode, APP_WIDTH} from './constants';
+import {P5LabInterfaceMode, P5LabType, APP_WIDTH} from './constants';
 import {
   SpritelabReservedWords,
   valueTypeTabShapeMap
@@ -209,17 +209,29 @@ export default class P5Lab {
       throw new Error('P5Lab requires a StudioApp');
     }
 
-    this.isSpritelab = this.studioApp_.isUsingBlockly();
+    this.isBlockly = this.studioApp_.isUsingBlockly();
 
     this.skin = config.skin;
-    if (this.isSpritelab) {
-      const mediaUrl = `/blockly/media/spritelab/${config.level
-        .instructionsIcon || 'avatar'}.png`;
-      this.skin.smallStaticAvatar = mediaUrl;
-      this.skin.staticAvatar = mediaUrl;
-      this.skin.winAvatar = mediaUrl;
-      this.skin.failureAvatar = mediaUrl;
+    let mediaUrl;
+    switch (this.getLabType()) {
+      case P5LabType.GAMELAB:
+        mediaUrl = null;
+        break;
+      case P5LabType.SPRITELAB:
+        mediaUrl = `/blockly/media/spritelab/${config.level.instructionsIcon ||
+          'avatar'}.png`;
+        break;
+      case P5LabType.POETRY:
+        mediaUrl = `/blockly/media/poetry/${config.level.instructionsIcon ||
+          'avatar'}.png`;
+        break;
+    }
+    this.skin.smallStaticAvatar = mediaUrl;
+    this.skin.staticAvatar = mediaUrl;
+    this.skin.winAvatar = mediaUrl;
+    this.skin.failureAvatar = mediaUrl;
 
+    if (this.isBlockly) {
       // SpriteLab projects don't allow users to include dpad controls
       defaultMobileControlsConfig.dpadVisible = false;
 
@@ -227,11 +239,6 @@ export default class P5Lab {
         new BlocklyModeErrorHandler(() => this.JSInterpreter, null)
       );
     } else {
-      this.skin.smallStaticAvatar = null;
-      this.skin.staticAvatar = null;
-      this.skin.winAvatar = null;
-      this.skin.failureAvatar = null;
-
       injectErrorHandler(
         new JavaScriptModeErrorHandler(() => this.JSInterpreter, this)
       );
@@ -271,7 +278,7 @@ export default class P5Lab {
       onPreload: this.onP5Preload.bind(this),
       onSetup: this.onP5Setup.bind(this),
       onDraw: this.onP5Draw.bind(this),
-      spritelab: this.isSpritelab
+      spritelab: this.isBlockly
     });
 
     config.afterClearPuzzle = function() {
@@ -284,14 +291,14 @@ export default class P5Lab {
         setInitialAnimationList(
           this.startAnimations,
           false /* shouldRunV3Migration */,
-          this.isSpritelab
+          this.isBlockly
         )
       );
       this.studioApp_.resetButtonClick();
     }.bind(this);
 
     config.dropletConfig = dropletConfig;
-    config.appMsg = this.isSpritelab ? spritelabMsg : gamelabMsg;
+    config.appMsg = this.isBlockly ? spritelabMsg : gamelabMsg;
     this.studioApp_.loadLibraryBlocks(config);
 
     // hide makeYourOwn on the share page
@@ -317,8 +324,8 @@ export default class P5Lab {
     // instructions to display). Otherwise provide a way for us to have top pane
     // instructions disabled by default, but able to turn them on.
     config.noInstructionsWhenCollapsed =
-      !this.isSpritelab ||
-      (this.isSpritelab &&
+      !this.isBlockly ||
+      (this.isBlockly &&
         !hasInstructions(
           this.level.shortInstructions,
           this.level.longInstructions,
@@ -397,7 +404,7 @@ export default class P5Lab {
 
       this.setCrosshairCursorForPlaySpace();
 
-      if (this.isSpritelab) {
+      if (this.isBlockly) {
         this.currentCode = Blockly.getWorkspaceCode();
         this.studioApp_.addChangeHandler(() => {
           const newCode = Blockly.getWorkspaceCode();
@@ -421,7 +428,7 @@ export default class P5Lab {
       (!config.hideSource &&
         !config.level.debuggerDisabled &&
         !config.level.iframeEmbedAppAndCode);
-    var showPauseButton = this.isSpritelab && !config.level.hidePauseButton;
+    var showPauseButton = this.isBlockly && !config.level.hidePauseButton;
     var showDebugConsole = config.level.editCode && !config.hideSource;
     this.debuggerEnabled =
       showDebugButtons || showPauseButton || showDebugConsole;
@@ -467,7 +474,7 @@ export default class P5Lab {
       showAnimationMode: !config.level.hideAnimationMode,
       startInAnimationTab: config.level.startInAnimationTab,
       allAnimationsSingleFrame:
-        config.level.allAnimationsSingleFrame || this.isSpritelab,
+        config.level.allAnimationsSingleFrame || this.isBlockly,
       isIframeEmbed: !!config.level.iframeEmbed,
       isProjectLevel: !!config.level.isProjectLevel,
       isSubmittable: !!config.level.submittable,
@@ -493,8 +500,8 @@ export default class P5Lab {
     getStore().dispatch(
       setInitialAnimationList(
         initialAnimationList,
-        this.isSpritelab /* shouldRunV3Migration */,
-        this.isSpritelab
+        this.isBlockly /* shouldRunV3Migration */,
+        this.isBlockly
       )
     );
 
@@ -525,6 +532,7 @@ export default class P5Lab {
               pauseHandler={this.onPause?.bind(this)}
               hidePauseButton={!!this.level.hidePauseButton}
               onPromptAnswer={this.onPromptAnswer?.bind(this)}
+              labType={this.getLabType()}
             />
           </Provider>,
           document.getElementById(config.containerId)
@@ -544,7 +552,7 @@ export default class P5Lab {
    * @param {Object} initialAnimationList
    */
   loadAnyMissingDefaultAnimations(initialAnimationList) {
-    if (!this.isSpritelab) {
+    if (!this.isBlockly) {
       return initialAnimationList;
     }
     let configDictionary = {};
@@ -745,7 +753,7 @@ export default class P5Lab {
       getStore().getState().pageConstants.isShareView
     );
 
-    if (this.isSpritelab) {
+    if (this.isBlockly) {
       // Add to reserved word list: API, local variables in execution evironment
       // (execute) and the infinite loop detection function.
       Blockly.JavaScript.addReservedWords(
@@ -890,7 +898,7 @@ export default class P5Lab {
   }
 
   onPuzzleComplete(submit, testResult, message) {
-    let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
+    let msg = this.isBlockly ? spritelabMsg : gamelabMsg;
     if (message && msg[message]) {
       this.message = msg[message]();
     }
@@ -1048,7 +1056,7 @@ export default class P5Lab {
     this.studioApp_.clearAndAttachRuntimeAnnotations();
 
     if (
-      this.isSpritelab &&
+      this.isBlockly &&
       (this.studioApp_.hasUnwantedExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())
     ) {
@@ -1088,7 +1096,7 @@ export default class P5Lab {
         );
       }
 
-      if (this.isSpritelab) {
+      if (this.isBlockly) {
         this.spritelabLibrary = this.createLibrary({p5: this.p5Wrapper.p5});
 
         const spritelabCommands = this.spritelabLibrary.commands;
@@ -1237,7 +1245,7 @@ export default class P5Lab {
    */
   onP5Preload() {
     Promise.all([
-      this.isSpritelab
+      this.isBlockly
         ? this.preloadSpriteImages_()
         : this.preloadAnimations_(this.level.pauseAnimationsByDefault),
       this.maybePreloadBackgrounds_(),
@@ -1259,7 +1267,7 @@ export default class P5Lab {
 
   // Preloads background images if this is Sprite Lab
   maybePreloadBackgrounds_() {
-    if (!this.isSpritelab) {
+    if (!this.isBlockly) {
       return Promise.resolve();
     }
     return this.p5Wrapper.preloadBackgrounds();
@@ -1509,7 +1517,7 @@ export default class P5Lab {
           this.eventHandlers.draw.apply(null);
           this.runValidationCode();
         });
-      } else if (this.isSpritelab) {
+      } else if (this.isBlockly) {
         this.eventHandlers.draw.apply(null);
       }
     }
@@ -1590,7 +1598,7 @@ export default class P5Lab {
    */
   displayFeedback_() {
     var level = this.level;
-    let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
+    let msg = this.isBlockly ? spritelabMsg : gamelabMsg;
 
     this.studioApp_.displayFeedback({
       feedbackType: this.testResults,

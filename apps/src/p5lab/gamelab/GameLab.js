@@ -1,9 +1,14 @@
 import P5Lab from '../P5Lab';
+import {P5LabType} from '../constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {showLevelBuilderSaveButton} from '../../code-studio/header';
 import color from '@cdo/apps/util/color';
 
 export default class GameLab extends P5Lab {
+  getLabType() {
+    return P5LabType.GAMELAB;
+  }
+
   init(config) {
     if (!this.studioApp_) {
       throw new Error('GameLab requires a StudioApp');

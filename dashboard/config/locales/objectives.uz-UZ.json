@@ -2,6 +2,12 @@
   "uz-UZ": {
     "data": {
       "objectives": {
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Vaqtga bog'langan hodisalarga javob beradigan dasturlarni ishlab chiqish."
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "Foydalanuvchi kiritishlariga javob beradigan dasturlarni ishlab chiqish."
+        },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "So‘z va iboralarni saqlash uchun o‘zgaruvchilardan foydalaning."
         },
