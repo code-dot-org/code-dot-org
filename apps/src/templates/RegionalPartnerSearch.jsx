@@ -150,6 +150,14 @@ class RegionalPartnerSearch extends Component {
           partnerInfo.summer_workshops.filter(
             workshop => workshop.course === 'CS Principles'
           )
+      },
+      {
+        heading: 'Computer Science A Workshops',
+        workshops:
+          partnerInfo &&
+          partnerInfo.summer_workshops.filter(
+            workshop => workshop.course === 'Computer Science A'
+          )
       }
     ];
 
@@ -291,10 +299,9 @@ class RegionalPartnerSearch extends Component {
             {appState !== WorkshopApplicationStates.now_closed && (
               <div>
                 <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
-                {workshopCollections[0].workshops.length === 0 &&
-                  workshopCollections[1].workshops.length === 0 && (
-                    <div>Workshop details coming soon!</div>
-                  )}
+                {workshopCollections.every(
+                  collection => collection.workshops.length === 0
+                ) && <div>Workshop details coming soon!</div>}
 
                 {workshopCollections.map(
                   (collection, collectionIndex) =>
