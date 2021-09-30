@@ -8,27 +8,27 @@
         "name": "EFFECT",
         "options": [
           [
-            "Colors",
+            "Shifting",
             "\"colors\""
           ],
           [
-            "Squiggles",
+            "Wavy",
             "\"squiggles\""
           ],
           [
-            "Space",
+            "Hyper Speed",
             "\"space\""
           ],
           [
-            "Stars",
+            "Starry",
             "\"stars\""
           ],
           [
-            "Dark Circles",
+            "Fading",
             "\"darkCircles\""
           ],
           [
-            "Color Fade",
+            "Frosted",
             "\"fadeColors\""
           ],
           [
@@ -36,11 +36,11 @@
             "\"blooming\""
           ],
           [
-            "Ripples",
+            "Rippling",
             "\"ripples\""
           ],
           [
-            "Clouds",
+            "Cloudy",
             "\"clouds\""
           ]
         ]
@@ -48,6 +48,14 @@
       {
         "name": "PALETTE",
         "options": [
+          [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Grays",
+            "\"grayscale\""
+          ],
           [
             "Sky",
             "\"sky\""
@@ -79,14 +87,6 @@
           [
             "Winter",
             "\"winter\""
-          ],
-          [
-            "Black & White",
-            "\"grayscale\""
-          ],
-          [
-            "Rainbow",
-            "\"rainbow\""
           ],
           [
             "Roses",
