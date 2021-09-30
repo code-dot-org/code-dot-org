@@ -768,7 +768,15 @@
         "ramp_artist_loops6v1_2021": "樓梯",
         "ramp_artist_loops8_2021": "八邊形",
         "scrat_loops_C-F_video_2021": "冰河歷險紀中的迴圈影片",
-        "international_outbreak_freeplay": "分享資訊"
+        "international_outbreak_freeplay": "分享資訊",
+        "helloworld_animals_costumes": "造型",
+        "helloworld_animals_location": "時間事件",
+        "helloworld_emoji_costumes": "造型",
+        "helloworld_emoji_location": "時間事件",
+        "helloworld_food_costumes": "造型",
+        "helloworld_food_location": "時間事件",
+        "helloworld_retro_costumes": "造型",
+        "helloworld_retro_location": "時間事件"
       }
     }
   }

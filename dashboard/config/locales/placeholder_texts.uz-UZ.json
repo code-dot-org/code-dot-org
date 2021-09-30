@@ -310,16 +310,125 @@
         },
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "baliq",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "boshqa"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "boshqa",
+          "f655df68ec33643278de7e69794e8d76": "Virtual Akvarium"
         },
         "courseF_apps_chatbot": {
-          "ae096fbf24d913754b01a1601672bf62": "ham!"
+          "ae096fbf24d913754b01a1601672bf62": "ham!",
+          "a72e7c5c68af0546e963e510297f5233": "Salom, men X-9! Ismingiz nima?",
+          "f0e5da70d264f312a1658d51c130b101": "Ismingizni kiriting:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Yoshingiz nechada?",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yoshingizni kiriting:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ham shu yoshda!",
+          "605f302ebc9f7fbacba60b15f551a633": "Eng sevimli rangingiz qaysi?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Eng sevimli rangni kiriting:",
+          "1f258d88a70309efc1435ef5daa277a0": "Bugungi suhmatimiz uchun rahmat!"
         },
         "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Siz yutasiz!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "Siz yutasiz!",
+          "077449fb290b51b9d70c9f2f3d3213bc": " soniya",
+          "490082498449bd20ff0199737dfa4916": "O'yin turini tanlang:",
+          "41f2b2212de0105c2a942ebb4a44e449": "Ulkan Kollektor o‘yini!"
         },
         "courseF_editable_chatbot": {
-          "ae096fbf24d913754b01a1601672bf62": "ham!"
+          "ae096fbf24d913754b01a1601672bf62": "ham!",
+          "a72e7c5c68af0546e963e510297f5233": "Salom, men X-9! Ismingiz nima?",
+          "f0e5da70d264f312a1658d51c130b101": "Ismingizni kiriting:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yoshingizni kiriting:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ham shu yoshda!",
+          "605f302ebc9f7fbacba60b15f551a633": "Eng sevimli rangingiz qaysi?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Eng sevimli rangni kiriting:",
+          "1f258d88a70309efc1435ef5daa277a0": "Bugungi suhmatimiz uchun rahmat!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?",
+          "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_apps_madlib": {
+          "514b8d5320196898a9ced3efe0d4c802": "Sifat kiriting:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Obyekt kiriting:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Tana qismini kiriting:",
+          "e522ee28f39133b45497637539ff429b": "Son kiriting:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "o'yinlar.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-oyoqli poyga!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?",
+          "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_editable_madlib": {
+          "514b8d5320196898a9ced3efe0d4c802": "Sifat kiriting:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Obyekt kiriting:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Tana qismini kiriting:",
+          "e522ee28f39133b45497637539ff429b": "Son kiriting:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "o'yinlar.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-oyoqli poyga!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?",
+          "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         }
       }
     }

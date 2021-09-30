@@ -1170,6 +1170,7 @@ ar:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": زر
             "'sound://category_collect/clicky_crunch.mp3'": سحق
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": قيثارة
             "'sound://category_digital/jump_7.mp3'": قفز
       gamelab_pointInDirection:
         text: نقطه {SPRITE} {DIRECTION}
@@ -1209,6 +1210,7 @@ ar:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': صحراء
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': مجرة
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': شبكة
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': مرج
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': قوس قزح
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': الخيال العلمي
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': نجوم
@@ -1542,6 +1544,7 @@ ar:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': مدينة
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': مرج
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1624,12 +1627,14 @@ ar:
         text: x إحداثيات {SPRITE}
       Mikelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': تدفق
+            '"rain"': مطر
+      Poetry_playSound:
         text: بلاي ساوند {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: |-
-          ضبط تأثيرات الخلفية
-          {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': ألوان
@@ -1639,10 +1644,9 @@ ar:
             '"ripples"': تموجات
           PALETTE:
             '"rainbow"': ألوان
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: تعيين الخلفية إلى {IMG}
-      PoemBot_setForegroundEffect:
-        text: عيّن التأثيرات الأمامية {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': مطر
@@ -1650,7 +1654,7 @@ ar:
             '"hearts"': قلوب ملونة
             '"confetti"': قصاصات من الورق
             '"starburst"': النجمي
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             growing: النمو
@@ -1659,7 +1663,7 @@ ar:
             spinning_left: الدوران ناحية اليسار
             spinning_right: الدوران ناحية اليمين
             wandering: التحرك
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             growing: النمو
@@ -1668,6 +1672,20 @@ ar:
             spinning_left: الدوران ناحية اليسار
             spinning_right: الدوران ناحية اليمين
             wandering: التحرك
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: تحريك إلى الأمام
       RyanLab_turnLeft:

@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:03 UTC",
+    "serialized_at": "2021-09-29 21:23:27 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "2021drafting"
@@ -1786,6 +1786,54 @@
     },
     {
       "chapter": 62,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "spritelab_validation_testing"
+        ],
+        "progression": "Validation String testing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "spritelab_validation_testing"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "spritelab_validation_testing"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "effect block template"
+        ],
+        "progression": "Create your own burst effect"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "effect block template"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "effect block template"
+      ]
+    },
+    {
+      "chapter": 64,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1809,7 +1857,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1833,7 +1881,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1857,7 +1905,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1881,7 +1929,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2571,6 +2619,28 @@
         "level.key": "spritelab_speech_prototype_mike2",
         "script_level.level_keys": [
           "spritelab_speech_prototype_mike2"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "spritelab_validation_testing",
+        "script_level.level_keys": [
+          "spritelab_validation_testing"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "effect block template",
+        "script_level.level_keys": [
+          "effect block template"
         ],
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "Toolbox Levels",

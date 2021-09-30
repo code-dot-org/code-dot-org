@@ -1524,6 +1524,45 @@
         },
         "courseE_aboutme_2_2021": {
           "": "यहां क्लिक करें!"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "नई ब्लॉक",
+          "hello_world_new_block": "नई ब्लॉक"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "नई ब्लॉक",
+          "hello_world_new_block": "नई ब्लॉक"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "नई ब्लॉक",
+          "hello_world_new_block": "नई ब्लॉक"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "नई ब्लॉक"
         }
       }
     }

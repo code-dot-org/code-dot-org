@@ -916,6 +916,30 @@ class LessonTest < ActiveSupport::TestCase
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
   end
 
+  test 'start_url returns correct lockable lesson url' do
+    new_script = create :script, include_student_lesson_plans: false, is_migrated: true
+    new_lesson = create :lesson, script: new_script, key: 'Fancy Name', has_lesson_plan: false, lockable: true
+    level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
+    create :script_level, script: new_script, levels: [level1], assessment: true, lesson: new_lesson
+
+    assert_equal(
+      new_lesson.start_url,
+      "http://test-studio.code.org/s/#{new_script.name}/lockable/1/levels/1"
+    )
+  end
+
+  test 'start_url returns correct lesson start url' do
+    new_script = create :script, include_student_lesson_plans: true, is_migrated: true
+    new_lesson = create :lesson, script: new_script, key: 'Fancy Name', has_lesson_plan: true
+    level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
+    create :script_level, script: new_script, levels: [level1], assessment: false, lesson: new_lesson
+
+    assert_equal(
+      new_lesson.start_url,
+      "http://test-studio.code.org/s/#{new_script.name}/lessons/1/levels/1"
+    )
+  end
+
   test 'opportunity standards do not count as regular standards' do
     lesson = create :lesson
     standard = create :standard
@@ -1003,10 +1027,13 @@ class LessonTest < ActiveSupport::TestCase
 
     other_unit = create :script
     other_lesson_group = create :lesson_group, script: other_unit
-    other_lesson = create :lesson, script: other_unit, lesson_group: other_lesson_group
+    lesson_without_plan = create :lesson, script: other_unit, lesson_group: other_lesson_group, relative_position: 1, absolute_position: 1, has_lesson_plan: false
+    lesson_with_plan = create :lesson, script: other_unit, lesson_group: other_lesson_group, relative_position: 1, absolute_position: 2, has_lesson_plan: true
 
-    assert_equal "/s/#{other_unit.name}/lessons/1", other_lesson.get_uncached_show_path
-    assert_equal "/s/#{other_unit.name}/lessons/1/edit", other_lesson.get_uncached_edit_path
+    assert_equal "/s/#{other_unit.name}/lessons/1", lesson_with_plan.get_uncached_show_path
+    assert_equal "/s/#{other_unit.name}/lessons/1/edit", lesson_with_plan.get_uncached_edit_path
+
+    assert_equal "/lessons/#{lesson_without_plan.id}/edit", lesson_without_plan.get_uncached_edit_path
   end
 
   class LessonCopyTests < ActiveSupport::TestCase

@@ -676,6 +676,10 @@ sr:
             '"down"': стрелица доле
             '"left"': стрелица лево
             '"right"': стрелица десно
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': киша
       RyanLab_moveForward:
         text: помери се напред
       RyanLab_turnLeft:

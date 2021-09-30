@@ -2,6 +2,12 @@
   "uz-UZ": {
     "data": {
       "activity_sections": {
+        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+          "progression_name": "Monster Town-ga xush kelibsiz!"
+        },
+        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+          "progression_name": "Malaka orttirish"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Kirish"
         },
@@ -11,13 +17,17 @@
           ]
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
-          "name": "Sprite laboratoriyasi bilan tanishish"
+          "name": "Sprite laboratoriyasi bilan tanishish",
+          "progression_name": "Video: Sprite laboratoriyasi bilan tanishish"
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
           "name": "Exploring Apps",
           "tips": [
             null
           ]
+        },
+        "f321b39c-8051-4fc9-9e40-24f25216f88c": {
+          "name": "Ulashing"
         },
         "1fa1e4c0-3147-4057-8131-07b03520b95e": {
           "name": "Reflection"
@@ -31,10 +41,14 @@
           "name": "Kirish"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "name": "Sprayt yasash",
           "tips": [
             null
           ],
           "progression_name": "Oldindan ko'rish"
+        },
+        "3eb6f356-a55c-4c86-a056-e8af46058092": {
+          "progression_name": "Video: Sprayt qanday qilinadi"
         },
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "tips": [
@@ -48,7 +62,8 @@
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Erkin o'yin: Sahna yaratish"
         },
         "a594c37e-142d-44f1-93c9-e49ecce1e716": {
           "name": "Reflection"
@@ -90,8 +105,17 @@
         "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
           "progression_name": "O‘rganish"
         },
+        "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
+          "progression_name": "Erkin o'yin"
+        },
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
           "name": "Reflection"
+        },
+        "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
+          "name": "Asosiy Lug‘at"
+        },
+        "06057973-b621-4a48-a991-4f99aafdedca": {
+          "progression_name": "So‘z kuchi - kompyutersiz mashg‘ulotlar"
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "tips": [
@@ -333,6 +357,12 @@
           "tips": [
             null
           ]
+        },
+        "919543ed-3f8f-4a49-ba9e-c34d0d3cfaa3": {
+          "progression_name": "Video: Jamiyatga ta'sirlar"
+        },
+        "833ae7ce-6703-495b-b010-224f0d32134f": {
+          "progression_name": "Sun'iy Intellektga yangi so'z o'rgating"
         },
         "daee1c13-09e4-4f2f-88c8-d3841869bfcb": {
           "tips": [
@@ -925,6 +955,9 @@
             null
           ]
         },
+        "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
+          "name": "Asosiy Lug‘at"
+        },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
           "name": "My Robotic Friends"
         },
@@ -1268,6 +1301,9 @@
         },
         "8bc8bad1-8150-46ce-bf97-0d368dafd6ef": {
           "progression_name": "Loyiha"
+        },
+        "b8f03681-d01e-4384-b88f-5e562eab172f": {
+          "name": "Asosiy Lug‘at"
         },
         "2a466981-732c-4b6b-82da-7a5552e04294": {
           "name": "Kirish"
@@ -2612,6 +2648,12 @@
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
           "name": "Reflection"
         },
+        "fe0cef4a-d3fd-446e-9874-8270ccda6a52": {
+          "name": "Asosiy Lug‘at"
+        },
+        "bec84680-216c-4711-b91f-5b37260fd598": {
+          "name": "Asosiy Lug‘at"
+        },
         "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
           "name": "Kirish"
         },
@@ -2622,6 +2664,9 @@
         },
         "2e6aa365-ef8d-4f04-8a5e-fcc6bb53bc1d": {
           "progression_name": "Men haqimda Sprite Lab bilan"
+        },
+        "e7f9b4de-f4a4-401b-99ad-207a2fad7964": {
+          "name": "Ulashing"
         },
         "abd54ca8-cb9c-46ad-be0a-814b9eb36162": {
           "name": "Reflection"

@@ -473,7 +473,11 @@ hr:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
-      PoemBot_startBehavior:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': kiša
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: lepršanje
@@ -484,7 +488,7 @@ hr:
             spinning_right: vrteći se udesno
             wandering: lutanje
             wobbling: njihanje
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: lepršanje
@@ -495,6 +499,20 @@ hr:
             spinning_right: vrteći se udesno
             wandering: lutanje
             wobbling: njihanje
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: idi naprijed
       RyanLab_turnLeft:

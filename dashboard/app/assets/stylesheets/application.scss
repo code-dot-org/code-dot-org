@@ -2902,7 +2902,8 @@ $modal-no-icon-gap: 22px;
 }
 
 .modal-image {
-  width: $modal-image-width;
+  max-width: $modal-image-width;
+  max-height: 100px;
   height: auto;
   margin-top: -75px;
   position: absolute;

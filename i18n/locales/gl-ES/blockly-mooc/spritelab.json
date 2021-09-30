@@ -22,6 +22,5 @@
   "spritelabFeedbackMoveUpNotDown": "O teu sprite debe moverse para arriba (norte) no lugar de abaixo (sur).",
   "spritelabFeedbackRobotFasterThanRover": "O robot acadou a parte dereita da pantalla antes que o explorador.",
   "spritelabFeedbackDifferentStarRotation": "Os sprites con disfraces de estrela deben xirar na mesma medida.",
-  "spritelabFeedbackAstronautMoveToCorner": "O sprite de astronauta debe moverse cara un dos catro recantos.",
-  "poemBotMakeBackground": "Tes que engadir un efecto de fondo."
+  "spritelabFeedbackAstronautMoveToCorner": "O sprite de astronauta debe moverse cara un dos catro recantos."
 }

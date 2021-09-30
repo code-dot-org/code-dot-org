@@ -29,6 +29,8 @@ module LevelsHelper
       end
     elsif params[:sublevel_position]
       sublevel_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
+    # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
+    # not include the '/lockable/' piece added in this elsif case
     elsif !script_level.lesson.numbered_lesson?
       script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
@@ -248,14 +250,20 @@ module LevelsHelper
     end
 
     if pairing_check_user
-      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
-      if recent_driver && !recent_user.is_a?(DeletedUser)
-        level_view_options(@level.id, pairing_driver: recent_driver)
-        if recent_attempt
-          level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+      user_level = UserLevel.find_by(user: pairing_check_user, script: @script, level: @level)
+      is_navigator = !user_level.nil? && user_level.navigator?
+      if is_navigator
+        driver = user_level.driver
+        driver_level_source_id = user_level.driver_level_source_id
+      end
+
+      level_view_options(@level.id, is_navigator: is_navigator)
+      if driver
+        level_view_options(@level.id, pairing_driver: driver.name)
+        if driver_level_source_id
+          level_view_options(@level.id, pairing_attempt: edit_level_source_path(driver_level_source_id))
         elsif @level.channel_backed?
-          recent_channel = get_channel_for(@level, @script&.id, recent_user) if recent_user
-          level_view_options(@level.id, pairing_channel_id: recent_channel) if recent_channel
+          level_view_options(@level.id, pairing_channel_id: get_channel_for(@level, @script&.id, driver))
         end
       end
     end

@@ -2,6 +2,87 @@
   "sk-SK": {
     "data": {
       "objectives": {
+        "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
+          "description": "Rozpoznať, čo sa od nich očakáva, keď prichádzajú do počítačovej učebne."
+        },
+        "d1485387-01e4-484d-9935-75f7c14b9d76": {
+          "description": "Používať správne termíny na označenie myši, touchpadu alebo dotykovej obrazovky."
+        },
+        "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
+          "description": "Vhodne sa správať v počítačovej učebni"
+        },
+        "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
+          "description": "Experimentovať so štandardnými akciami v blokovom programovaní, ako je klikanie či presúvanie."
+        },
+        "a5a52414-42a7-4b32-897b-819a70572328": {
+          "description": "Vyjadriť pohyb pomocou sledu príkazov."
+        },
+        "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
+          "description": "Vytvoriť program tým, že zmenia usporiadanie sledu pohybov."
+        },
+        "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
+          "description": "Vytvoriť počítačový program na základe súboru písomných pokynov."
+        },
+        "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
+          "description": "Usporiadať príkazy do logického poradia."
+        },
+        "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
+          "description": "Nájsť v programe chyby a vytvoriť si plán na ich opravenie."
+        },
+        "620da514-ad6e-4049-a9d3-d189a79af01e": {
+          "description": "Vyjadriť pohyb pomocou sledu príkazov."
+        },
+        "adabe26f-78e0-47f4-92b2-535a38f53f15": {
+          "description": "Identifikovať v programe chyby a zistiť, kde sa nachádzajú."
+        },
+        "38f34964-ca2d-4d03-ab82-e937fc487d2a": {
+          "description": "Vytvoriť program pomocou štruktúr, ktoré opakujú úseky kódu"
+        },
+        "b6f41a7c-0967-4986-b7b6-910819b28396": {
+          "description": "Zlepšiť existujúci kód tým, že nájdu opakujúce sa úseky a presunú ich do štruktúr cyklov"
+        },
+        "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
+          "description": "Identifikovať, aké výhody má použitie cyklovej štruktúry v porovnaní s manuálnym opakovaním."
+        },
+        "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
+          "description": "Rozložiť dlhý sled inštrukcií na čo najkratší sled inštrukcií, ktorý sa dá opakovať."
+        },
+        "2ebb5323-fe4a-4611-9fbf-01444afb8720": {
+          "description": "Spočítať, koľkokrát by sa mala akcia opakovať a zachytiť ju ako cyklus."
+        },
+        "6aac3c12-4427-43d1-877c-727d0665ab49": {
+          "description": "Rozložiť tvar na najdlhšiu možnú postupnosť krokov, ktorá sa dá opakovať. "
+        },
+        "6dbab2fb-7a17-4269-885e-84768be03a1f": {
+          "description": "Vytvoriť program, ktorý opakovaním jednoduchých postupností kreslí zložité tvary. "
+        },
+        "57f261f3-7603-47fc-b704-9d99a4c4c00a": {
+          "description": "Spočítať, koľkokrát by sa mala akcia opakovať a zachytiť ju ako cyklus."
+        },
+        "066b586a-0b6b-4a9f-875d-ce788d7f2197": {
+          "description": "Rozložiť tvar na najdlhšiu možnú postupnosť krokov, ktorá sa dá opakovať. "
+        },
+        "dc83123d-d493-40aa-a543-9daa1421c2c8": {
+          "description": "Vytvoriť program, ktorý opakovaním jednoduchých postupností kreslí zložité tvary. "
+        },
+        "15115c43-46c8-4ab4-93e4-947e2fd42703": {
+          "description": "Identifikovať akcie, ktoré súvisia so vstupnými udalosťami."
+        },
+        "2fa04500-f1d4-4924-aa39-70292711d432": {
+          "description": "Vytvoriť animovaný interaktívny príbeh použitím postupností a obslúh udalostí."
+        },
+        "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
+          "description": "Podeliť sa o kreatívny výtvor s ostatnými žiakmi."
+        },
+        "8295b4b6-f9ac-4b43-b271-b7bd9e6829f3": {
+          "description": "Identifikovať akcie, ktoré súvisia so vstupnými udalosťami."
+        },
+        "70e87cab-0d62-4974-9061-425a179bcb2d": {
+          "description": "Vytvoriť animovaný interaktívny príbeh použitím postupností a obslúh udalostí."
+        },
+        "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
+          "description": "Podeliť sa o kreatívny výtvor s ostatnými žiakmi."
+        },
         "a937dee9-2cd3-4978-8f88-09f8af577395": {
           "description": "začnite v tomto kontexte spomínať nový spôsob písania programov"
         },

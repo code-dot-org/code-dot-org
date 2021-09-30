@@ -91,6 +91,8 @@ level 'avoid_follow_lines', progression: 'Draw Lines'
 level 'drawshape', progression: 'Draw Shape'
 level 'spritelab_speech_prototype_mike', progression: 'Speech Bubbles'
 level 'spritelab_speech_prototype_mike2', progression: 'Speech Bubbles'
+level 'spritelab_validation_testing', progression: 'Validation String testing'
+level 'effect block template', progression: 'Create your own burst effect'
 
 lesson_group 'Loom Levels', display_name: 'Loom Levels'
 lesson 'video', display_name: 'Sprite Lab Videos', has_lesson_plan: false

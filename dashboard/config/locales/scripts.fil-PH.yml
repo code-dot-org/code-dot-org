@@ -3845,6 +3845,14 @@ fil:
           lessons:
             Bounce:
               name: Bounce
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay
+                matututo kung ano ang mga pangyayari, at kung paano ang mga kompyuter
+                gumagamit sa mga ito sa mga programa gaya ng mga video na mga laro.
+                Ang mga estudyante ay magtatrabaho sa mga palaisipan na nagpagawa
+                sa mga programa na tumugon sa mga pangyayari (gaya ng pagpindot sa
+                mga arrow na mga buttons.) Sa bandang huli ng palaisipan, ang mga
+                estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang
+                laro gamit ang iba't ibang mga bilis at mga tunog.
           student_description: Gumawa ng isang basketbol na laro
         sample-csp5:
           lessons:
@@ -4953,6 +4961,14 @@ fil:
           lessons:
             Sports:
               name: Mga Palakasan
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay
+                matututo kung ano ang mga pangyayari, at kung paano ang mga kompyuter
+                gumagamit sa mga ito sa mga programa gaya ng mga video na mga laro.
+                Ang mga estudyante ay magtatrabaho sa mga palaisipan na nagpagawa
+                sa mga programa na tumugon sa mga pangyayari (gaya ng pagpindot sa
+                mga arrow na mga buttons.) Sa bandang huli ng palaisipan, ang mga
+                estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang
+                laro gamit ang iba't ibang mga bilis at mga tunog.
           student_description: Maghalo at magtugma sa iba't ibang palakasan
         2016_sciencePD-phase2b:
           lessons:

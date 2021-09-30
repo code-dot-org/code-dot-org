@@ -199,6 +199,11 @@ cs:
           lessons:
             Artist:
               name: Umělec
+              description_student: Vytvářejte krásné obrazy programováním Umělce.
+              description_teacher: V této lekci studenti převezmou nadvládu nad Umělcem
+                a budou dokončovat výkresy na obrazovce. Tato fáze Umělce umožní studentům
+                vytvářet pomocí nových bloků jako například `posuv dopředu o 100 pixelů`
+                a `zabočení doprava o 90 stupňů` čím dál tím složitější obrázky.
           student_description: Bakresli v pohodě obrázky a vzory s umělcem!
         hourofcode:
           title: Klasické bludiště
@@ -871,6 +876,16 @@ cs:
             po světě Minecraft.
         oceans:
           title: AI pomáhá oceánům
+          lessons:
+            Oceans:
+              description_student: 'Shrnutí výukového kurzu: Nejprve studenti zařadí
+                předměty jako buďto „ryba“ nebo „neryba“, aby se pokusili odstranit
+                odpad z oceánu. Pak budou studenti muset rozšířit svůj cvičný datový
+                soubor tak, aby zahrnoval i jiné mořské tvory patřící do vody. V druhé
+                části aktivity budou studenti vybírat své vlastní značky, které aplikují
+                na obrázky náhodně vytvořených ryb. Tato cvičná data se používají
+                pro model strojového učení, který by měl být schopen označovat nové
+                obrázky sám od sebe.'
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1285,6 +1300,14 @@ cs:
           lessons:
             Bounce:
               name: Bounce
+              description_student: Přáli jste si někdy hrát ve škole videohry? V této
+                lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
+              description_teacher: V této online aktivitě se studenti naučí, co jsou
+                události a jak je počítače využívají v programech jako jsou video
+                hry. Studenti budou pracovat na úlohách, které přimějí program reagovat
+                na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy
+                dostanou studenti příležitost přizpůsobit si svou hru různými stupni
+                rychlosti a zvuky.
           student_description: Vyberte si svůj tým a vytvořte basketbalovou hru
         hoc-encryption:
           lessons:
@@ -1584,6 +1607,14 @@ cs:
           lessons:
             Sports:
               name: Sporty
+              description_student: Přáli jste si někdy hrát ve škole videohry? V této
+                lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
+              description_teacher: V této online aktivitě se studenti naučí, co jsou
+                události a jak je počítače využívají v programech jako jsou video
+                hry. Studenti budou pracovat na úlohách, které přimějí program reagovat
+                na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy
+                dostanou studenti příležitost přizpůsobit si svou hru různými stupni
+                rychlosti a zvuky.
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -9716,37 +9747,6 @@ cs:
                 a znázorňovat příslušné atributy pomocí instančních proměnných. Studenti
                 se mohou naučit rozdíl mezi „veřejným“ a „soukromým“ a účel enkapsulace
                 ke skrytí vnitřní implementace objektu.
-            lesson-2:
-              name: Používání proměnných
-              description_student: Proměnné představují způsob, jak mohou softwaroví
-                inženýři ukládat informace. Typ informací, které potřebujeme uložit,
-                určuje druh proměnné, jakou budeme muset použít, její datový typ a
-                to, jak ji můžeme používat. V této lekci budete používat proměnné
-                k ukládání informací používaných k vytvoření objektů typu `Malíř`
-                a k ukládání informací zadávaných uživatelem.
-              description_teacher: V této lekci budou studenti prozkoumávat funkcionalitu
-                proměnných a učit se rozlišovat mezi základními proměnnými a referenčními
-                proměnnými. Studenti budou užívat třídu `Scanner` k získání vstupu
-                od uživatele a k vymezení proměnných k ukládání hodnot dodaných uživatelem.
-                Tyto hodnoty se používají ke zkonstruování objektů typu `Malíř` ve
-                Čtvrti.
-            lesson-3:
-              name: Psaní konstruktorů
-              description_student: Pojízdná prodejna pečiva projektu Mercury potřebuje
-                vaši pomoc! Majitel chce prodávat dezerty ve Čtvrti, ale potřebuje
-                mít možnost své dezerty zadávat a ukládat do programu. Byli jste požádáni,
-                abyste pomocí svých programátorských dovedností vytvořili program,
-                který bude umět vytvářet objekty typu dezertu, aby mohl majitel sledovat
-                svůj inventář. Začnete vytvořením třídy `Dezert`, aby majitel mohl
-                zadat příchuť, dostupné množství a cenu jednotlivých dezertů, které
-                prodává.
-              description_teacher: Studenti budou obeznámeni s druhy pečiva z pojízdné
-                prodejny projektu Mercury Pastries a s majitelovou potřebou programu
-                na zadávání a ukládání položek typu dezert. Jako softwaroví inženýři
-                budou studenti využívat objektově orientovaných strategií návrhu k
-                identifikaci nezbytných atributů a vhodných datových typů pro třídu
-                `Dezert`. Studenti napíší konstruktor a použijí objekt `Scanner` k
-                vytvoření hodnot pro instanční proměnné k inicializaci objektu `Dezert`.
             lesson-4:
               name: Přidání více konstruktorů
             lesson-5:

@@ -20,7 +20,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 
-    assert_cached_queries(26) do
+    assert_cached_queries(14) do
       get script_lesson_script_level_path(
         script_id: script.name,
         lesson_position: 1,
@@ -51,18 +51,18 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level.id
     )
 
-    assert_cached_queries(12) do
+    assert_cached_queries(11) do
       get user_progress_path,
         headers: {'HTTP_USER_AGENT': 'test'}
       assert_response :success
     end
   end
 
-  test "post milestone to course1 passing" do
+  test "post milestone passing" do
     student = create :student
     sign_in student
 
-    sl = Script.find_by_name('course1').script_levels[2]
+    sl = create(:script, :with_levels, levels_count: 3).script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     assert_cached_queries(8) do
@@ -74,11 +74,11 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "post milestone to course1 not passing" do
+  test "post milestone not passing" do
     student = create :student
     sign_in student
 
-    sl = Script.find_by_name('course1').script_levels[2]
+    sl = create(:script, :with_levels, levels_count: 3).script_levels[2]
     params = {program: 'fake program', testResult: 0, result: 'false'}
 
     assert_cached_queries(8) do

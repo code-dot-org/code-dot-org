@@ -2,7 +2,7 @@ import {
   SubjectNames,
   AcademicYearWorkshopSubjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {CSF, CSD, CSP} from '../application/ApplicationConstants';
+import {CSF, CSD, CSP, CSA} from '../application/ApplicationConstants';
 
 export function useFoormSurvey(subject, lastSessionDate) {
   // Local summer workshop, CSF Intro workshop, CSP workshop for returning teachers, and academic year workshops for CSP and CSD
@@ -24,7 +24,8 @@ export function shouldShowSurveyResults(state, course, subject, date) {
     subject === SubjectNames.SUBJECT_CSF_101 && !useFoormSurvey(subject, date);
   return (
     (state === 'Ended' && !pegasusBasedCsfIntro) ||
-    ([CSD, CSP].includes(course) && subject !== SubjectNames.SUBJECT_FIT) ||
+    ([CSD, CSP, CSA].includes(course) &&
+      subject !== SubjectNames.SUBJECT_FIT) ||
     (course === CSF && subject === SubjectNames.SUBJECT_CSF_201)
   );
 }
