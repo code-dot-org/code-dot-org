@@ -9,6 +9,11 @@ social:
 
 %link{href: "/css/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
+-# These are needed for the signup form, even if the map isn't currently showing.
+%script{src:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'}
+:javascript
+  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
+
 -facebook = {:u=>"http://#{request.host}/us"}
 
 -# We set the DCDO default to CDO.default_hoc_mode here because we can't change the DCDO flag on the test machine, but
