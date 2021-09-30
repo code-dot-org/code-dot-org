@@ -35,7 +35,7 @@ module Pd
 
       workshop = get_workshop_by_enrollment_or_course_and_subject(
         enrollment_code: params[:enrollmentCode],
-        course: [COURSE_CSD, COURSE_CSP],
+        course: [COURSE_CSD, COURSE_CSP, COURSE_CSA],
         subject: [SUBJECT_SUMMER_WORKSHOP, SUBJECT_CSP_FOR_RETURNING_TEACHERS],
         should_have_attended: true
       )
@@ -79,7 +79,7 @@ module Pd
       should_have_attended = day != 0
       workshop = get_workshop_by_enrollment_or_course_and_subject(
         enrollment_code: enrollment_code,
-        course: [COURSE_CSD, COURSE_CSP],
+        course: [COURSE_CSD, COURSE_CSP, COURSE_CSA],
         subject: subject,
         should_have_attended: should_have_attended
       )

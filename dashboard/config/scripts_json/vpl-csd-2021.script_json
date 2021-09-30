@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-31 23:45:35 UTC",
+    "serialized_at": "2021-09-30 14:25:26 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "vpl-csd-2021"
@@ -101,6 +101,36 @@
       },
       "seeding_key": {
         "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "key": "Module 5",
+      "name": "Module 5",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "key": "Module 6",
+      "name": "Module 6",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2021"
       }
@@ -1624,6 +1654,774 @@
       "level_keys": [
         "VPL - CSD - Module 4 Wrap Up"
       ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 5 Overview"
+        ],
+        "progression": "Module 5 Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 5 Overview"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD Module 5 Overview"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD M5 Theme Introduction"
+        ],
+        "progression": "Theme Introduction (~5 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD M5 Theme Introduction"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD M5 Theme Introduction"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI"
+        ],
+        "progression": "Lesson Investigation (~65 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 - CI"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L1"
+        ],
+        "progression": "Lesson Investigation (~65 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L1"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 - CI - L1"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L2"
+        ],
+        "progression": "Lesson Investigation (~65 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L2"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 - CI - L2"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L3"
+        ],
+        "progression": "Lesson Investigation (~65 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L3"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 - CI - L3"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L4"
+        ],
+        "progression": "Lesson Investigation (~65 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L4"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 - CI - L4"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - U4L1 - 2021"
+        ],
+        "progression": "Lesson Investigation (~65 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - U4L1 - 2021"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - U4L1 - 2021"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_2"
+        ],
+        "progression": "Lesson Investigation (~65 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_2"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 - CI - L4_2"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_3"
+        ],
+        "progression": "Lesson Investigation (~65 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_3"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 - CI - L4_3"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD -  Module 5 - CI - L4_4"
+        ],
+        "progression": "Lesson Investigation (~65 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD -  Module 5 - CI - L4_4"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD -  Module 5 - CI - L4_4"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_5"
+        ],
+        "progression": "Lesson Investigation (~65 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_5"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 - CI - L4_5"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 5 Reflection"
+        ],
+        "progression": "Reflection (~5 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 5 Reflection"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD Module 5 Reflection"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - Supporting Equity-2"
+        ],
+        "progression": "Supporting Equity (~10 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - Supporting Equity-2"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 - Supporting Equity-2"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 5 - Supporting Equity_Reflection"
+        ],
+        "progression": "Supporting Equity (~10 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 5 - Supporting Equity_Reflection"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD Module 5 - Supporting Equity_Reflection"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5_Wrap Up"
+        ],
+        "progression": "Wrap Up (~10 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5_Wrap Up"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5_Wrap Up"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 Overview"
+        ],
+        "progression": "Module 6 Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 Overview"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD Module 6 Overview"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI"
+        ],
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - CI"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 6 - CI"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L6"
+        ],
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L6"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 6 - CI - U5L6"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 U5L6 Reflection"
+        ],
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 U5L6 Reflection"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD Module 6 U5L6 Reflection"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - Problem Solving Process Guide"
+        ],
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - Problem Solving Process Guide"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 6 - Problem Solving Process Guide"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L9"
+        ],
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L9"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 6 - CI - U5L9"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 PSP Reflection"
+        ],
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 PSP Reflection"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD Module 6 PSP Reflection"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 U5L9 Reflection"
+        ],
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 U5L9 Reflection"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD Module 6 U5L9 Reflection"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L13"
+        ],
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L13"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 6 - CI - U5L13"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 U5L13 Reflection"
+        ],
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 U5L13 Reflection"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD Module 6 U5L13 Reflection"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 Unit Reflection"
+        ],
+        "progression": "Lesson Investigation (~60 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 Unit Reflection"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD Module 6 Unit Reflection"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - Conclusions and Connections"
+        ],
+        "progression": "Conclusions and Connections (~10 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - Conclusions and Connections"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 6 - Conclusions and Connections"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 1 Project"
+        ],
+        "progression": "Conclusions and Connections (~10 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD U5 Chapter 1 Project"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD U5 Chapter 1 Project"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 2 Project"
+        ],
+        "progression": "Conclusions and Connections (~10 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD U5 Chapter 2 Project"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD U5 Chapter 2 Project"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 5 - Differentiation"
+        ],
+        "progression": "Differentiation (~10 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 5 - Differentiation"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD Module 5 - Differentiation"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 Wrap Up"
+        ],
+        "progression": "Wrap Up (~10 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 Wrap Up"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 Wrap Up"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2316,6 +3114,358 @@
           "VPL - CSD - Module 4 Wrap Up"
         ],
         "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 5 Overview",
+        "script_level.level_keys": [
+          "VPL - CSD Module 5 Overview"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD M5 Theme Introduction",
+        "script_level.level_keys": [
+          "VPL - CSD M5 Theme Introduction"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 - CI",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 - CI - L1",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L1"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 - CI - L2",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L2"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 - CI - L3",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L3"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 - CI - L4",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L4"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - U4L1 - 2021",
+        "script_level.level_keys": [
+          "VPL - CSD - U4L1 - 2021"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 - CI - L4_2",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_2"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 - CI - L4_3",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_3"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD -  Module 5 - CI - L4_4",
+        "script_level.level_keys": [
+          "VPL - CSD -  Module 5 - CI - L4_4"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 - CI - L4_5",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_5"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 5 Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module 5 Reflection"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 - Supporting Equity-2",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - Supporting Equity-2"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 5 - Supporting Equity_Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module 5 - Supporting Equity_Reflection"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5_Wrap Up",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5_Wrap Up"
+        ],
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 6 Overview",
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 Overview"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 6 - CI",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - CI"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 6 - CI - U5L6",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L6"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 6 U5L6 Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 U5L6 Reflection"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 6 - Problem Solving Process Guide",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - Problem Solving Process Guide"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 6 - CI - U5L9",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L9"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 6 PSP Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 PSP Reflection"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 6 U5L9 Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 U5L9 Reflection"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 6 - CI - U5L13",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L13"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 6 U5L13 Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 U5L13 Reflection"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 6 Unit Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 Unit Reflection"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 6 - Conclusions and Connections",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 6 - Conclusions and Connections"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD U5 Chapter 1 Project",
+        "script_level.level_keys": [
+          "VPL - CSD U5 Chapter 1 Project"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD U5 Chapter 2 Project",
+        "script_level.level_keys": [
+          "VPL - CSD U5 Chapter 2 Project"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 5 - Differentiation",
+        "script_level.level_keys": [
+          "VPL - CSD Module 5 - Differentiation"
+        ],
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 Wrap Up",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 Wrap Up"
+        ],
+        "lesson.key": "Module 6",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2021"
       }

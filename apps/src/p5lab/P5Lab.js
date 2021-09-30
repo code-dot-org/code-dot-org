@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
-import {P5LabInterfaceMode, APP_WIDTH} from './constants';
+import {P5LabInterfaceMode, P5LabType, APP_WIDTH} from './constants';
 import {
   SpritelabReservedWords,
   valueTypeTabShapeMap
@@ -18,8 +18,6 @@ import {
 } from '@cdo/apps/lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-var gamelabMsg = require('@cdo/gamelab/locale');
-var spritelabMsg = require('@cdo/spritelab/locale');
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./gamelab/apiJavascript');
 var consoleApi = require('@cdo/apps/consoleApi');
@@ -212,14 +210,26 @@ export default class P5Lab {
     this.isBlockly = this.studioApp_.isUsingBlockly();
 
     this.skin = config.skin;
-    if (this.isBlockly) {
-      const mediaUrl = `/blockly/media/spritelab/${config.level
-        .instructionsIcon || 'avatar'}.png`;
-      this.skin.smallStaticAvatar = mediaUrl;
-      this.skin.staticAvatar = mediaUrl;
-      this.skin.winAvatar = mediaUrl;
-      this.skin.failureAvatar = mediaUrl;
+    let mediaUrl;
+    switch (this.getLabType()) {
+      case P5LabType.GAMELAB:
+        mediaUrl = null;
+        break;
+      case P5LabType.SPRITELAB:
+        mediaUrl = `/blockly/media/spritelab/${config.level.instructionsIcon ||
+          'avatar'}.png`;
+        break;
+      case P5LabType.POETRY:
+        mediaUrl = `/blockly/media/poetry/${config.level.instructionsIcon ||
+          'avatar'}.png`;
+        break;
+    }
+    this.skin.smallStaticAvatar = mediaUrl;
+    this.skin.staticAvatar = mediaUrl;
+    this.skin.winAvatar = mediaUrl;
+    this.skin.failureAvatar = mediaUrl;
 
+    if (this.isBlockly) {
       // SpriteLab projects don't allow users to include dpad controls
       defaultMobileControlsConfig.dpadVisible = false;
 
@@ -227,11 +237,6 @@ export default class P5Lab {
         new BlocklyModeErrorHandler(() => this.JSInterpreter, null)
       );
     } else {
-      this.skin.smallStaticAvatar = null;
-      this.skin.staticAvatar = null;
-      this.skin.winAvatar = null;
-      this.skin.failureAvatar = null;
-
       injectErrorHandler(
         new JavaScriptModeErrorHandler(() => this.JSInterpreter, this)
       );
@@ -291,7 +296,7 @@ export default class P5Lab {
     }.bind(this);
 
     config.dropletConfig = dropletConfig;
-    config.appMsg = this.isBlockly ? spritelabMsg : gamelabMsg;
+    config.appMsg = this.getMsg();
     this.studioApp_.loadLibraryBlocks(config);
 
     // hide makeYourOwn on the share page
@@ -891,7 +896,7 @@ export default class P5Lab {
   }
 
   onPuzzleComplete(submit, testResult, message) {
-    let msg = this.isBlockly ? spritelabMsg : gamelabMsg;
+    let msg = this.getMsg();
     if (message && msg[message]) {
       this.message = msg[message]();
     }
@@ -1591,7 +1596,7 @@ export default class P5Lab {
    */
   displayFeedback_() {
     var level = this.level;
-    let msg = this.isBlockly ? spritelabMsg : gamelabMsg;
+    let msg = this.getMsg();
 
     this.studioApp_.displayFeedback({
       feedbackType: this.testResults,
