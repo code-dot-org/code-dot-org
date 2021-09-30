@@ -502,7 +502,7 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       purpose: render_property(:purpose),
       preparation: render_property(:preparation),
-      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(user, can_view_teacher_markdown)},
+      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user)},
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
