@@ -7,12 +7,12 @@ style_min: true
 
 # Choose your Hello World theme
 
-{{ spritelab_module, title: "Happy Food", image: "images/csc/helloworld/module0.png", url: "/about" }}
-{{ spritelab_module, title: "Animals", image: "images/csc/helloworld/module0.png", url: "/" }}
-{{ spritelab_module, title: "Retro", image: "images/csc/helloworld/module0.png", url: "/" }}
-{{ spritelab_module, title: "Emoji", image: "images/csc/helloworld/module0.png", url: "/" }}
+{{ spritelab_module, title: "Happy Food", color: "#C14790", image: "images/csc/helloworld/module0.png", url: "/about" }}
+{{ spritelab_module, title: "Animals", color: "#00ADBC", image: "images/csc/helloworld/module0.png", url: "/" }}
+{{ spritelab_module, title: "Retro", color: "#FFA400", image: "images/csc/helloworld/module0.png", url: "/" }}
+{{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/module0.png", url: "/" }}
 
-{{ teacher_info, title: "How to continue learning after Hello World", description: "Description goes here.", button_text: "Learn more" }}
+{{ teacher_info, heading: "Teacher Info", title: "How to continue learning after Hello World", description: "Description goes here.", button_text: "Learn more" }}
 
 ## Featured Student Creations
 
