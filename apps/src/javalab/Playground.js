@@ -151,8 +151,8 @@ export default class Playground {
   }
 
   changeItem(itemData) {
-    if (this.isGameOver) {
-      // can't change items if game is over
+    if (this.isGameOver || !this.itemExists(itemData)) {
+      // can't change items if game is over or if the item does not exist
       return;
     }
 
@@ -175,12 +175,8 @@ export default class Playground {
       return newItemData;
     }
 
-    if (this.getItem(itemData.id).type === PlaygroundItemType.IMAGE) {
-      this.changePlaygroundItem(itemData.id, newItemData);
-      return newItemData;
-    }
-
-    return itemData;
+    // No changes to itemData required for text items other than removing ID property.
+    return newItemData;
   }
 
   playSound(soundData) {
