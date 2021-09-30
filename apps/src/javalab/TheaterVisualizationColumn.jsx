@@ -41,7 +41,7 @@ class TheaterVisualizationColumn extends React.Component {
           <ProtectedVisualizationDiv>
             <div id="theater-container" style={styles.theater}>
               <img id="theater" style={styles.theaterImage} />
-              <audio id="theater-audio" />
+              <audio id="theater-audio" preload="auto" />
             </div>
           </ProtectedVisualizationDiv>
         </div>
