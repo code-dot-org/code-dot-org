@@ -27,6 +27,10 @@ export default class PoetryLibrary extends CoreLibrary {
       },
       isVisible: true,
       textEffects: [],
+      // By default, start the poem animation when the program starts (frame 1)
+      // The animation can be restarted with the animatePoem() block, which
+      // updates this value.
+      // This value is used as an offset when calculating which lines to show.
       animationStartFrame: 1
     };
     this.backgroundEffect = () => this.p5.background('white');
