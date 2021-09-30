@@ -4,6 +4,11 @@ import SpriteLab from '../spritelab/SpriteLab';
 import PoetryLibrary from './PoetryLibrary';
 
 export default class Poetry extends SpriteLab {
+  getAvatarUrl(levelInstructor) {
+    const defaultAvatar = 'octi';
+    return `/blockly/media/poetry/${levelInstructor || defaultAvatar}.png`;
+  }
+
   getMsg() {
     return msg;
   }
