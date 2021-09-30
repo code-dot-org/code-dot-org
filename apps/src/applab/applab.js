@@ -1505,10 +1505,10 @@ Applab.showConfirmationDialog = function(config) {
 
   var buttons = document.createElement('div');
   ReactDOM.render(
-    React.createElement(DialogButtons, {
-      confirmText: commonMsg.dialogOK(),
-      cancelText: commonMsg.dialogCancel()
-    }),
+    <DialogButtons
+      confirmText={commonMsg.dialogOK()}
+      cancelText={commonMsg.dialogCancel()}
+    />,
     buttons
   );
   contentDiv.appendChild(buttons);

@@ -216,15 +216,20 @@
         },
         "coursea-2021/Events: The Big Event": {
           "overview": "Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.",
+          "preparation": "-   Prepárate para proyectar **\\*La Imagen del Controlador**.\n-   Imprime una **\\*Evaluación** por alumno.\n-   Asegúrate de que cada alumno tenga un diario de reflexión.",
+          "purpose": "Hoy, los alumnos aprenderán a distinguir los eventos de las acciones. Los alumnos verán cómo se interrumpen las actividades al pulsar un \"botón\" en un mando de papel. Al ver este evento, la clase reaccionará con una acción única. Los eventos son muy utilizados en programación y deberían ser fácilmente reconocibles después de esta lección.",
           "student_overview": "Muévete y grita cuando tus docentes presionen los botones de un control remoto gigante."
         },
         "coursea-2021/Events in Play Lab": {
           "overview": "En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!",
+          "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Elige un par de rompecabezas para hacerlos en grupo con tu clase.\n-   Repasa las recomendaciones de la lección **\\*CSF**.\n-   Asegúrate de que todos los alumnos tengan un diario de reflexión.",
           "purpose": "Hoy, los/as estudiantes desarrollarán aún más su comprensión de los eventos usando Play Lab. Los eventos son muy comunes en los programas de computación. En esta actividad, los/as estudiantes usarán los eventos para hacer que un personaje se mueva por la pantalla, haga ruidos, y cambie los fondos basado en eventos iniciados por el usuario.",
           "student_overview": "Crea tu propio juego o historia."
         },
         "coursea-2021/lesson-1": {
           "overview": "En esta lección de **proyecto**, los alumnos aplican lo que han aprendido sobre secuencias y bucles en un proyecto abierto con el Artista.",
+          "preparation": "-   Escribe y codifica tu propia historia para el Artista por adelantado para inspirar a los alumnos.",
+          "purpose": "Esta lección ofrece a los alumnos una última oportunidad de utilizar de forma creativa sus nuevos conocimientos informáticos.",
           "student_overview": "¡Cuenta una historia con el Artista!"
         },
         "coursec-2021/Putting a STOP to Online Meanness": {

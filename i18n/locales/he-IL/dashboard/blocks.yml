@@ -1584,12 +1584,15 @@ he:
         text: x קואורדינטות של {SPRITE}
       Mikelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': גשום
+      Poetry_makeNumSprites:
         text: צור {NUM} דמויות {ANIMATION_NAME} חדשות
-      PoemBot_playSound:
+      Poetry_playSound:
         text: נגן צליל {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: קבעו אפקט רקע {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': צבעים
@@ -1599,10 +1602,9 @@ he:
             '"ripples"': אדוות
           PALETTE:
             '"rainbow"': קשת
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: להגדיר רקע ל {IMG}
-      PoemBot_setForegroundEffect:
-        text: קבע אפקט חזית {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': גשם
@@ -1610,7 +1612,7 @@ he:
             '"hearts"': לבבות צבעוניים
             '"confetti"': קונפטי
             '"starburst"': כוכבים
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             growing: לגדול
@@ -1619,7 +1621,7 @@ he:
             spinning_left: להסתובב שמאלה
             spinning_right: להסתובב ימינה
             wandering: לשוטט
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             growing: לגדול
@@ -1628,6 +1630,20 @@ he:
             spinning_left: להסתובב שמאלה
             spinning_right: להסתובב ימינה
             wandering: לשוטט
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: זוז קדימה
       RyanLab_turnLeft:

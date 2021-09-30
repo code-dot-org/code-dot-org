@@ -419,7 +419,7 @@ lv:
             '"down"': bultiņa uz leju
             '"left"': bultiņa pa kreisi
             '"right"': bultiņa pa labi
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Krāsas

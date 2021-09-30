@@ -44,6 +44,7 @@
   "fileImportError": "Jeden alebo viacero názvov súborov má prostredie Java Lab rezervované, a preto nebolo možné importovať ich do tohto projektu. Týka sa to nasledujúcich súborov:",
   "fileImportWarning": "Medzi týmto projektom a vybranými súbormi z ruksaku sa vyskytol jeden alebo viacero duplicitných názvov súborov. Týka sa to nasledujúcich názvov súborov:",
   "fileImportWarningConfirm": "Chceš tieto súbory nahradiť súbormi z tvojho ruksaku?",
+  "genericErrorMessage": "Skús to znova",
   "import": "Import",
   "includeFiles": "Zahrnúť súbory",
   "internalCompilerException": "Ale nie! Pri kompilovaní tvojho programu sa na našej strane vyskytla chyba. Skús ho spustiť znova. Ak bude táto chyba pretrvávať, obráť sa na nás na adrese support@code.org. Nezabudni do svojej správy pridať aj identifikátor spojenia {connectionId}.",

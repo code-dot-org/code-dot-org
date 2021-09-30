@@ -3040,9 +3040,9 @@
         "CourseF_outbreak2": "Trasforma i mostri sani in mostri malati quando si toccano.",
         "CourseF_outbreak3": "Fai in modo che i mostri si trasformino in mostri con le mascherine quando si clicca su di essi.",
         "CourseF_outbreak4": "Cambia il numero e la dimensione dei personaggi che rappresentano i mostri della tua simulazione.",
-        "CourseF_outbreak6": "Fai in modo che tutti i mostri malati inizino la loro guarigione quando un mostro sano tocca un mostro malato.",
-        "CourseF_outbreak7": "Aggiungi una percentuale di probabilità di ammalarsi ogni volta che i mostri sani toccano quelli malati. Fallo per tutte le possibili combinazioni di mostri con e senza mascherina.",
-        "CourseF_outbreak8": "Crea un nuovo costume per i mostri con immunità al virus e usalo nella tua simulazione.",
+        "CourseF_outbreak6": "Aggiungi una percentuale di probabilità di ammalarsi ogni volta che i mostri sani toccano quelli malati. Fallo per tutte le possibili combinazioni di mostri con e senza mascherina.",
+        "CourseF_outbreak7": "Crea un nuovo costume per i mostri con immunità al virus e usalo nella tua simulazione.",
+        "CourseF_outbreak8": "Condividi un messaggio con la tua simulazione.",
         "Dance Party 2_2021": "Cambia il comportamento nel blocco `___begins___` (_inizia_) per fare in modo che l'alieno gironzoli in modo casuale.",
         "Dance Party 4_2021": "Crea un terzo personaggio chiamato `alien3` e posiziona tutti gli alieni lungo una linea retta.",
         "Dance Party Freeplay_2021": "Ora crea la tua discoteca aliena!",
@@ -3571,7 +3571,7 @@
         "ramp_artist_loops7_2021": "Cerca uno schema che si ripete e rendi questo programma più breve usando un ciclo!",
         "ramp_artist_loops8_2021": "Cerca uno schema che si ripete e rendi questo programma più breve usando un ciclo.",
         "ramp_artist_loops9_2021": "Risolvi questo esercizio disegnando un quadrato.",
-        "CourseF_outbreak5": "Cambia il numero e la dimensione dei personaggi che rappresentano i mostri della tua simulazione.",
+        "CourseF_outbreak5": "Ora tutti i mostri malati iniziano gradualmente a guarire.",
         "international_outbreak_freeplay": "Aggiungi al tuo progetto tutte le modifiche o i miglioramenti che desideri."
       }
     }

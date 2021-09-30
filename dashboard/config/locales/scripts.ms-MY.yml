@@ -77,6 +77,12 @@ ms:
           lessons:
             Artist:
               name: Artis
+              description_student: Cipta imej yang cantik dengan mengatur cara Artis.
+              description_teacher: Dalam pelajaran ini, pelajar akan mengawal Artis
+                bagi melengkapkan lukisan pada skrin. Tahap Artis ini akan membolehkan
+                pelajar mencipta imej kekompleksan yang meningkat dengan menggunakan
+                blok baharu seperti `bergerak ke hadapan dengan 100 piksel` dan \`belok
+                ke kanan sebanyak 90 darjah '.
           student_description: Lukis gambar and reka bentuk menarik dengan Artis!
         hourofcode:
           title: Pagar Sesat Klasik
@@ -333,6 +339,16 @@ ms:
           title: Jam Kod Minecraft
         oceans:
           title: Kecerdasan Buatan (AI) untuk Lautan
+          lessons:
+            Oceans:
+              description_student: 'Rumusan Tutorial: Pelajar pertama mengklasifikasikan
+                objek sebagai sama ada "ikan" atau "bukan ikan" sebagai usaha untuk
+                mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan
+                kumpulan data latihan mereka untuk memasukkan hidupan laut lain yang
+                terdapat di dalam air. Dalam bahagian kedua aktiviti itu, pelajar
+                akan memilih label mereka sendiri untuk digunakan pada imej ikan yang
+                dihasilkan secara rawak. Data latihan ini digunakan untuk model pembelajaran
+                mesin yang sepatutnya boleh melabelkan imej baharu dengan sendirinya.'
         ScienceP3OLPT3:
           lessons:
             Wrap-Up:
@@ -352,11 +368,18 @@ ms:
             Simple Encryption:
               name: Penyulitan Mudah
         CSDU3-Draft:
+          description_short: Pengaturcaraan
           lessons:
             Functions:
               name: Fungsi
+        TEMP CSD Unit 3:
+          description_short: Pengaturcaraan
         CSF_Secret_Sample:
           description_audience: Umur 8-18 tahun
+        ECSPD1:
+          lessons:
+            Wrap Up:
+              name: Penggulungan
         cspunit1-support:
           lesson_groups:
             required:
@@ -369,6 +392,10 @@ ms:
           lessons:
             Introduction to Text Compression:
               name: Pengenalan kepada Pemampatan Teks
+        CSDU1-Draft:
+          lessons:
+            Exploring Apps:
+              name: Meneroka Aplikasi
         CSF_Secret_Sample_Story:
           description_audience: Umur 8-18 tahun+
         MikeTest:
@@ -396,6 +423,8 @@ ms:
               name: 'Jigsaw: Belajar untuk drag and drop'
             Loops:
               name: Gelung
+            Programming:
+              name: Pengaturcaraan
         grade4:
           description_audience: Peringkat umur 9-99 tahun
           lessons:
@@ -414,6 +443,8 @@ ms:
               name: 'Jigsaw: Belajar untuk drag and drop'
             Loops:
               name: Gelung
+            Programming:
+              name: Pengaturcaraan
             'Debugging: Unspotted Bugs':
               name: 'Penyahpepijatan: Pepijat Tidak Dikesan'
         grade5:
@@ -486,6 +517,16 @@ ms:
           lessons:
             Bounce:
               name: Lantunan
+              description_student: Adakah anda pernah berharap agar dapat bermain
+                permainan video di sekolah? Dalam pelajaran ini, anda akan mencipta
+                permainan itu sendiri!
+              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempelajari
+                maksud peristiwa dan cara komputer menggunakannya dalam pengaturcaraan
+                seperti permainan video. Pelajar akan melakukannya melalui teka-teki
+                dengan membuatkan pengaturcaraan memberikan reaksi terhadap peristiwa
+                (seperti butang anak panah ditekan.) Pada akhir teka-teki, pelajar
+                akan mempunyai peluang menyesuaikan permainan mereka dengan kelajuan
+                dan suara yang berbeza.
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -703,6 +744,16 @@ ms:
           lessons:
             Sports:
               name: Sukan
+              description_student: Adakah anda pernah berharap agar dapat bermain
+                permainan video di sekolah? Dalam pelajaran ini, anda akan mencipta
+                permainan itu sendiri!
+              description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempelajari
+                maksud peristiwa dan cara komputer menggunakannya dalam pengaturcaraan
+                seperti permainan video. Pelajar akan melakukannya melalui teka-teki
+                dengan membuatkan pengaturcaraan memberikan reaksi terhadap peristiwa
+                (seperti butang anak panah ditekan.) Pada akhir teka-teki, pelajar
+                akan mempunyai peluang menyesuaikan permainan mereka dengan kelajuan
+                dan suara yang berbeza.
         2016_sciencePD-phase2b:
           lessons:
             Wrap-Up:
@@ -1708,10 +1759,17 @@ ms:
             Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak
             yang boleh anda kongsikan dengan rakan dan keluarga.
           name: kursusf-2017
+        csdnovice:
+          lessons:
+            Wrap Up:
+              name: Penggulungan
         cspnovice:
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
+          lessons:
+            Wrap Up:
+              name: Penggulungan
         csp1-dlp:
           lesson_groups:
             required:
@@ -3140,18 +3198,30 @@ ms:
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
+          lessons:
+            Wrap Up:
+              name: Penggulungan
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
+          lessons:
+            Wrap Up:
+              name: Penggulungan
         csp-novice-18:
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
+          lessons:
+            Wrap Up:
+              name: Penggulungan
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
+          lessons:
+            Wrap Up:
+              name: Penggulungan
         pre-express-2018:
           title: Ekspres Prapembaca (2018)
           description: Pelajari asas sains komputer dan keselamatan internet. Pada
@@ -4121,6 +4191,8 @@ ms:
             sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
           description_audience: 'Umur: 9-18 tahun'
           lesson_groups:
+            csf_warmup:
+              display_name: Mula Memanas
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -4921,10 +4993,16 @@ ms:
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
+          lessons:
+            Wrap Up:
+              name: Penggulungan
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
+          lessons:
+            Wrap Up:
+              name: Penggulungan
         csd2-pilot:
           lessons:
             Lists:
@@ -6398,6 +6476,8 @@ ms:
             sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
           description_audience: 'Umur: 9-18 tahun'
           lesson_groups:
+            csf_warmup:
+              display_name: Mula Memanas
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -6683,6 +6763,8 @@ ms:
             virus.
         2021drafting:
           lessons:
+            lesson-2:
+              name: Teks dan Prom
             Virus Simulation for Code Bytes:
               name: Mengekod Simulasi
             End of Course Project:
@@ -6759,6 +6841,12 @@ ms:
               key: Pelajari Tarik dan Lepas
               name: Pelajari Tarik dan Lepas
               description_student: Klik dan tarik untuk menyelesaikan teka-teki.
+              description_teacher: Pelajaran **membina kemahiran** ini akan memberikan
+                idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka
+                menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan
+                ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam
+                makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan
+                komputer untuk menyelesaikan teka-teki dalam talian.
             'Programming: Happy Maps':
               key: 'Pengaturcaraan: Peta Bahagia'
               name: Peta-peta Gembira
@@ -6776,6 +6864,10 @@ ms:
               key: Pengaturcaraan dengan Rey dan BB-8
               name: Pengaturcaraan dengan Rey dan BB-8
               description_student: Bantu BB-8 mengumpulkan logam sekerap.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan menggunakan kemahiran pengaturcaraan yang baharu diperoleh mereka
+                dengan cara yang lebih rumit untuk menavigasi kursus yang sukar dengan
+                BB-8\_.
             'Loops: Happy Loops':
               key: 'Gelung: Gelung Bahagia'
               name: Gelung Bahagia
@@ -6799,6 +6891,9 @@ ms:
               name: Jr. Peristiwa Besar
               description_student: Bergerak dan berteriak apabila guru anda menekan
                 butang pada alat kawalan jauh gergasi.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas
+                akan mengalami konsep acara melalui permainan apabila mereka bergerak
+                atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
             Events in Play Lab:
               key: Peristiwa di dalam Makmal Mainan
               description_student: Cipta permainan dan cerita anda sendiri.
@@ -6848,10 +6943,17 @@ ms:
               name: Pengaturcaraan dengan Penuai
               description_student: Bantu Penuai mengumpulkan sayuran di sepanjang
                 laluan.
+              description_teacher: Pelajar akan menggunakan konsep pengaturcaraan
+                yang telah dipelajari kepada persekitaran Penuai dalam pelajaran **membina
+                kemahiran** ini. Pelajar akan terus membangunkan kemahiran algoritma
+                berjujukan dan mula menggunakan proses penyahpepijatan.
             'Loops: Getting Loopy':
               key: 'Gelung: Menjadi Bergelung'
               description_student: Dalam pelajaran ini, kami akan mengadakan majlis
                 tari-menari dengan menggunakan gelung berulang!
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar
+                akan belajar menggunakan gelung untuk menyampaikan arahan dengan lebih
+                mudah dengan melihat pada corak pergerakan berulang dalam tarian.
             Loops in Harvester:
               name: Gelung dengan Penuai
               description_student: Bantu Penuai mengumpulkan lebih banyak lagi, dengan
@@ -6872,6 +6974,9 @@ ms:
               name: Jr. Peristiwa Besar
               description_student: Bergerak atau berteriak apabila guru anda menekan
                 butang pada alat kawalan jauh gergasi.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas
+                akan mengalami konsep acara melalui permainan apabila mereka bergerak
+                atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
             Events in Play Lab:
               key: Peristiwa di dalam Makmal Mainan
               description_student: Gunakan peristiwa untuk mencipta cerita atau membuat
@@ -6968,6 +7073,9 @@ ms:
               key: 'Peristiwa: Peristiwa Besar'
               description_student: Main permainan yang menyeronokkan untuk mengetahui
                 tentang peristiwa.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar
+                akan belajar bahawa peristiwa ialah cara terbaik menambahkan fleksibiliti
+                kepada algoritma prabertulis.
             Build a Flappy Game:
               key: Membina Permainan Kibasan
               name: Membina Permainan Kibasan
@@ -7009,11 +7117,20 @@ ms:
               name: Pengaturcaraan kertas graf
               description_student: Dalam pelajaran ini, anda akan mengatur cara rakan
                 sekelas anda untuk melukis gambar!
+              description_teacher: 'Dalam pelajaran **tetapan konteks** ini, pelajar
+                menggunakan simbol memberikan arahan kepada satu sama lain untuk mewarnakan
+                segi empat sama pada kertas graf. Dengan "mengatur cara" antara satu
+                sama lain untuk melukis gambar, pelajar mendapat peluang merasai pengalaman
+                sebahagian daripada konsep teras pengaturcaraan melalui cara yang
+                menyeronokkan dan mudah diakses. '
             Introduction to Online Puzzles:
               key: Pengenalan kepada Teka-teki dalam Talian
               name: Pengenalan kepada Teka-teki dalam Talian
               description_student: Pelajaran ini akan memberikan anda latihan dalam
                 kemahiran yang anda perlukan untuk kursus ini.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan berlatih kemahiran _penjujukan_ dan penyahpepijatan mereka dalam
+                teka-teki pagar sesat.
             Relay Programming:
               key: Pengaturcaraan penyampai
               name: Pengaturcaraan penyampai
@@ -7028,6 +7145,10 @@ ms:
                 Dalam pelajaran ini, anda akan mempelajari rahsia penyahpepijatan.
                 Penyahpepijatan ialah proses mencari dan membetulkan masalah dalam
                 kod anda.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan berlatih melakukan penyahpepijatan dalam persekitaran "pengumpul".
+                Pelajar perlu berlatih membaca dan mengedit kod untuk membetulkan
+                teka-teki dengan algoritma, gelung dan gelung bersarang yang mudah.
             Events in Bounce:
               key: Peristiwa dalam Lantunan
               name: Peristiwa dalam Lantunan
@@ -7052,6 +7173,10 @@ ms:
               name: Melukis Bentuk dengan Gelung
               description_student: Dalam pelajaran ini, gelung memudahkan imej menarik
                 dibuat dengan Artis!
+              description_teacher: Pelajaran **membina kemahiran** ini dibina berasaskan
+                pemahaman tentang gelung daripada pelajaran sebelumnya dan berfungsi
+                sebagai pelaksanaan penyahpepijatan untuk latihan penyelesaian masalah
+                tambahan.
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
             Conditionals with Cards:
@@ -7120,6 +7245,12 @@ ms:
               description_student: Pastikan tangan mereka bersedia untuk melaksanakan
                 pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek
                 anda.
+              description_teacher: Pelajaran **projek** ini membawa pelajar melalui
+                proses mereka bentuk, membangunkan dan mempamerkan projek baharu!
+            lesson-6:
+              description_teacher: Pelajaran **membina kemahiran** ini akan memberikan
+                pelajar peluang berlatih konsep yang telah mereka pelajari sehingga
+                tahap ini dan mendapatkan pengalaman pertama mereka dengan bersyarat!
             lesson-5:
               name: Menguatkan Kata Laluan
               description_student: Dalam pelajaran ini, anda akan mempelajari cara
@@ -7396,12 +7527,21 @@ ms:
               name: Mensimulasikan Eksperimen
               description_student: Jalankan simulasi pada komputer dan eksperimen
                 dengan menukar pemboleh ubah.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar
+                akan menjalankan dan mengumpulkan data daripada simulasi ringkas di
+                Makmal Peperi. Selepas menjalankan simulasi beberapa kali, pelajar
+                akan mempunyai peluang membuat ramalan tentang sejauh mana dengan
+                menukar pemboleh ubah dalam simulasi mungkin memberikan kesan kepada
+                hasilnya dan kemudian uji hipotesis tersebut.
             AI for Oceans:
               key: Kecerdasan Buatan (AI) untuk Lautan
               name: Kecerdasan Buatan (AI) Untuk Lautan
             Internet:
               key: Internet
               name: Internet
+              description_student: Adakah anda pernah terfikir cara maklumat bergerak
+                merentasi Internet? Ini bukan silap mata! Pelajaran ini akan mengajar
+                anda asas-asas cara internet berfungsi.
             For Loop Fun:
               description_student: Anda akan menikmati banyak keseronokan apabila
                 mempelajari tentang gelung `untuk`!
@@ -7413,6 +7553,9 @@ ms:
               description_student: Bersedia untuk membuat hasil kerja agung anda yang
                 seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan
                 membuat beberapa gambar yang cukup luar biasa.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                berlatih gelung “untuk” dengan Artis. Pelajar akan menyelesaikan teka-teki
+                untuk mencipta reka bentuk kompleks dan seni unik.
             Editing Behaviors:
               name: Tingkah Laku di dalam Makmal Peperi
               description_student: Pelajari mengatur cara tingkah laku anda sendiri!
@@ -7426,11 +7569,37 @@ ms:
               description_student: Projek sebesar ini memerlukan masa dan perancangan
                 yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan
                 kreativiti anda!
+              description_teacher: Pelajaran **projek** ini membawa pelajar melalui
+                proses mereka bentuk, membangunkan dan mempamerkan projek baharu!
             lesson-1:
               name: Mereka Bentuk untuk Aksesibiliti
               description_student: Dalam pelajaran ini, pelajar akan mempelajari tentang
                 aksesibiliti dan nilai empati melalui sumbang saran dan mereka bentuk
                 penyelesaian yang boleh diakses untuk aplikasi hipotesis.
+            lesson-6:
+              description_student: Anda akan membincangkan peranan komputer dan teknologi
+                dalam kehidupan anda dengan tumpuan diberikan kepada sejauh mana aplikasi
+                dan alatan memberikan pengguna pilihan tentang cara menggunakannya.
+            lesson-7:
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya
+                dengan tugas “permainan bebas” terbuka apabila mereka dapat membina
+                apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari
+                tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
+            lesson-8:
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya
+                dengan tugas “permainan bebas” terbuka apabila mereka dapat membina
+                apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak
+                balas terhadap acara yang ditetapkan masanya dan input pengguna. '
+            lesson-9:
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar
+                akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®)
+                sebagai konteks untuk memahami cara komputer mengambil dan menyimpan
+                input daripada pengguna, kemudian menggunakannya nanti semasa atur
+                cara dijalankan.
+            lesson-10:
+              name: Teks dan Prom
             lesson-2:
               name: Kuasa Perkataan
               description_student: Perbuatan membuli sememangnya sangat teruk. Pelajaran
@@ -7498,6 +7667,10 @@ ms:
             Snowflakes with Anna and Elsa:
               key: Emping Salji dengan Anna dan Elsa
               name: Emping Salji dengan Anna dan Elsa
+            'Looking Ahead with Minecraft ':
+              description_teacher: Pelajaran **membina kemahiran** ini akan memberikan
+                pelajar peluang berlatih konsep yang telah mereka pelajari sehingga
+                tahap ini dan mendapatkan pengalaman pertama mereka dengan bersyarat!
             If/Else with Bee:
               description_student: Memandangkan anda sudah memahami bersyarat, sudah
                 tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila
@@ -7568,6 +7741,9 @@ ms:
               description_student: Bersedia untuk membuat hasil kerja agung anda yang
                 seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan
                 membuat beberapa gambar yang cukup luar biasa.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                berlatih gelung “untuk” dengan Artis. Pelajar akan menyelesaikan teka-teki
+                untuk mencipta reka bentuk kompleks dan seni unik.
             Swimming Fish in Sprite Lab:
               description_student: Pelajari cara mencipta dan mengedit peperi.
             Alien Dance Party:
@@ -7588,10 +7764,28 @@ ms:
               description_student: Pastikan tangan mereka bersedia untuk melaksanakan
                 pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek
                 anda.
+              description_teacher: Pelajaran **projek** ini membawa pelajar melalui
+                proses mereka bentuk, membangunkan dan mempamerkan projek baharu!
             lesson-1:
               name: Majlis Tari-Menari
               description_student: Masa untuk meraikan! Dalam pelajaran ini, anda
                 akan mengatur cara majlis tari-menari berinteraktif anda sendiri.
+            lesson-2:
+              description_student: Dalam pelajaran ini anda akan menulis atur cara
+                dan mempelajari tentang peperi dan tingkah laku.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya
+                dengan tugas “permainan bebas” terbuka apabila mereka dapat membina
+                apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari
+                tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
+            lesson-3:
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya
+                dengan tugas “permainan bebas” terbuka apabila mereka dapat membina
+                apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak
+                balas terhadap acara yang ditetapkan masanya dan input pengguna. '
+            lesson-4:
+              name: Teks dan Prom
           lesson_groups:
             csf_sequencing:
               display_name: Penjujukan
@@ -7628,6 +7822,12 @@ ms:
               key: Pelajari Tarik dan Lepas
               name: Pelajari Tarik dan Lepas
               description_student: Klik dan tarik untuk menyelesaikan teka-teki.
+              description_teacher: Pelajaran **membina kemahiran** ini akan memberikan
+                idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka
+                menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan
+                ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam
+                makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan
+                komputer untuk menyelesaikan teka-teki dalam talian.
             Sequencing with Scrat:
               key: Penjujukan dengan Scrat
               name: Penjujukan dengan Scrat
@@ -7637,10 +7837,18 @@ ms:
             Programming with Rey and BB-8:
               key: Pengaturcaraan dengan Rey dan BB-8
               name: Pengaturcaraan dengan Rey dan BB-8
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan menggunakan kemahiran pengaturcaraan yang baharu diperoleh mereka
+                dengan cara yang lebih rumit untuk menavigasi kursus yang sukar dengan
+                BB-8.
             Programming in Harvester:
               name: Pengaturcaraan dengan Penuai
               description_student: Bantu Penuai mengumpulkan sayuran di sepanjang
                 laluan.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada
+                persekitaran Penuai. Pelajar akan terus membangunkan kemahiran algoritma
+                berjujukan dan mula menggunakan proses penyahpepijatan. '
             Loops with Scrat:
               key: Gelung dengan Scrat
               name: Gelung dengan Scrat
@@ -7688,6 +7896,8 @@ ms:
               name: Ikan Berenang dengan Makmal Peperi
             Virus Simulation for Code Bytes:
               name: Mengekod Simulasi
+            texts-and-prompts:
+              name: Teks dan Prom
           lesson_groups:
             outbreak:
               display_name: Simulasi Wabak
@@ -7964,38 +8174,6 @@ ms:
                 objek dan mewakili atribut yang berkaitan dengan menggunakan pemboleh
                 ubah contoh. Pelajar mempelajari perbezaan antara `umum` dan `persendirian`
                 dan tujuan pengkapsulan untuk menyembunyikan pelaksanaan dalaman objek.
-            lesson-2:
-              name: Menggunakan Pemboleh Ubah
-              description_student: Pemboleh ubah memberikan cara untuk jurutera perisian
-                menyimpan maklumat. Jenis maklumat yang perlu kita simpan menentukan
-                jenis pemboleh ubah yang perlu kita gunakan, jenis datanya dan cara
-                kita dapat menggunakannya. Di dalam pelajaran ini, anda menggunakan
-                pemboleh ubah bagi menyimpan maklumat yang digunakan untuk mencipta
-                objek `Pelukis` dan menyimpan input maklumat oleh pengguna.
-              description_teacher: Di dalam pelajaran ini, pelajar meneroka kefungsian
-                pemboleh ubah dan membezakan antara pemboleh ubah primitif dan rujukan.
-                Pelajar menggunakan kelas `Pengimbas` untuk mendapatkan input daripada
-                pengguna dan menentukan pemboleh ubah untuk menyimpan nilai yang diberikan
-                oleh pengguna. Nilai ini digunakan untuk membina objek `Pelukis` di
-                dalam Kejiranan.
-            lesson-3:
-              name: Pembina Penulisan
-              description_student: Projek trak makanan Pastri Mercury memerlukan bantuan
-                anda! Pemiliknya mahu menjual pencuci mulut di dalam Kejiranan tetapi
-                perlu boleh memasukkan dan menyimpan pencuci mulut mereka di dalam
-                atur cara. Anda telah diminta menggunakan kemahiran kejuruteraan perisian
-                anda untuk mencipta atur cara yang boleh mencipta objek pencuci mulut
-                supaya pemiliknya dapat menjejaki inventori. Anda mulakan dengan mencipta
-                kelas `Pencuci Mulut` supaya pemiliknya dapat memasukkan perisa, kuantiti
-                tersedia dan harga bagi setiap pencuci mulut yang mereka jual.
-              description_teacher: Pelajar diperkenalkan kepada Projek trak makanan
-                Pastri Mercury dan keperluan pemilik untuk atur cara yang bertujuan
-                memasukkan dan menyimpan item pencuci mulut. Sebagai jurutera perisian,
-                pelajar menggunakan strategi reka bentuk berorientasikan objek untuk
-                mengenal pasti atribut yang perlu dan jenis data yang sesuai bagi
-                kelas `Pencuci Mulut`. Pelajar menulis pembina dan menggunakan objek
-                `Pengimbas` untuk mendapatkan nilai bagi pemboleh ubah contoh bagi
-                memulakan objek `Pencuci Mulut`.
             lesson-4:
               name: Menambah Pelbagai Pembina
             lesson-5:

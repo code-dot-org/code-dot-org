@@ -15,6 +15,5 @@
   "outbreakCostumeTab": "Klicka på fliken 'Dräkter' ovanför spelområdet för att lägga till en ny sprite-dräkt i ditt projekt.",
   "outbreakUseCostume": "Din nya sprite-dräkt dök inte upp i din simulering. Klicka på glödlampan om du vill ha en ledtråd.",
   "outbreakReplaySuccess": "Se till att spela upp simuleringen flera gånger innan du fortsätter!",
-  "outbreakSuccess": "Du är klar med nivån. När du är redo för nästa utmaning, tryck på Fortsätt.",
-  "poemBotMakeBackground": "Du måste lägga till en bakgrundseffekt."
+  "outbreakSuccess": "Du är klar med nivån. När du är redo för nästa utmaning, tryck på Fortsätt."
 }

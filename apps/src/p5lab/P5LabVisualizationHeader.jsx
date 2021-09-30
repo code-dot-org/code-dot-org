@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {changeInterfaceMode} from './actions';
 import {connect} from 'react-redux';
-import {P5LabInterfaceMode} from './constants';
+import {P5LabInterfaceMode, P5LabType} from './constants';
 import msg from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import styleConstants from '@cdo/apps/styleConstants';
-import {allowAnimationMode} from './stateQueries';
+import {allowAnimationMode, countAllowedModes} from './stateQueries';
+import PoemSelector from './poetry/PoemSelector';
 import * as utils from '../utils';
 
 /**
@@ -16,19 +17,21 @@ import * as utils from '../utils';
  */
 class P5LabVisualizationHeader extends React.Component {
   static propTypes = {
+    labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
       P5LabInterfaceMode.ANIMATION
     ]).isRequired,
     allowAnimationMode: PropTypes.bool.isRequired,
     onInterfaceModeChange: PropTypes.func.isRequired,
-    spriteLab: PropTypes.bool.isRequired
+    isBlockly: PropTypes.bool.isRequired,
+    numAllowedModes: PropTypes.number.isRequired
   };
 
   changeInterfaceMode = mode => {
     // Make sure code workspace is rendered properly after switching from the Animation Tab.
     if (mode === P5LabInterfaceMode.CODE) {
-      if (this.props.spriteLab) {
+      if (this.props.isBlockly) {
         // Sprite Lab (Blockly) doesn't need a window resize event, but it does need to rerender.
         setTimeout(() => Blockly.mainBlockSpace.render(), 0);
       } else {
@@ -36,7 +39,7 @@ class P5LabVisualizationHeader extends React.Component {
         setTimeout(() => utils.fireResizeEvent(), 0);
       }
     } else if (mode === P5LabInterfaceMode.ANIMATION) {
-      if (this.props.spriteLab) {
+      if (this.props.isBlockly) {
         Blockly.WidgetDiv.hide();
       }
 
@@ -44,7 +47,7 @@ class P5LabVisualizationHeader extends React.Component {
         study: 'animation-library',
         study_group: 'control-2020',
         event: 'tab-click',
-        data_string: this.props.spriteLab ? 'spritelab' : 'gamelab'
+        data_string: this.props.isBlockly ? 'spritelab' : 'gamelab'
       });
     }
 
@@ -54,24 +57,35 @@ class P5LabVisualizationHeader extends React.Component {
   render() {
     const {interfaceMode, allowAnimationMode} = this.props;
     return (
-      <div style={styles.main} id="playSpaceHeader">
-        <ToggleGroup
-          selected={interfaceMode}
-          onChange={this.changeInterfaceMode}
-        >
-          <button type="button" value={P5LabInterfaceMode.CODE} id="codeMode">
-            {msg.codeMode()}
-          </button>
-          {allowAnimationMode && (
-            <button
-              type="button"
-              value={P5LabInterfaceMode.ANIMATION}
-              id="animationMode"
+      <div>
+        {this.props.labType === P5LabType.POETRY && <PoemSelector />}
+        {this.props.numAllowedModes > 1 && (
+          <div style={styles.main} id="playSpaceHeader">
+            <ToggleGroup
+              selected={interfaceMode}
+              onChange={this.changeInterfaceMode}
             >
-              {this.props.spriteLab ? msg.costumeMode() : msg.animationMode()}
-            </button>
-          )}
-        </ToggleGroup>
+              <button
+                type="button"
+                value={P5LabInterfaceMode.CODE}
+                id="codeMode"
+              >
+                {msg.codeMode()}
+              </button>
+              {allowAnimationMode && (
+                <button
+                  type="button"
+                  value={P5LabInterfaceMode.ANIMATION}
+                  id="animationMode"
+                >
+                  {this.props.isBlockly
+                    ? msg.costumeMode()
+                    : msg.animationMode()}
+                </button>
+              )}
+            </ToggleGroup>
+          </div>
+        )}
       </div>
     );
   }
@@ -86,7 +100,8 @@ export default connect(
   state => ({
     interfaceMode: state.interfaceMode,
     allowAnimationMode: allowAnimationMode(state),
-    spriteLab: state.pageConstants.isBlockly
+    isBlockly: state.pageConstants.isBlockly,
+    numAllowedModes: countAllowedModes(state)
   }),
   dispatch => ({
     onInterfaceModeChange: mode => dispatch(changeInterfaceMode(mode))

@@ -47,6 +47,7 @@ export default storybook =>
             handleClose={() => console.log('Unit Calendar Dialog Closed')}
             lessons={sampleLessonList}
             weeklyInstructionalMinutes={90}
+            scriptId={123}
           />
         </div>
       )

@@ -466,6 +466,45 @@
         },
         "courseD_bee_conditionals2_dani": {
           "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Uus plokk!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Uus plokk!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Uus plokk!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Uus plokk!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Uus plokk!",
+          "hello_world_new_block": "Uus plokk!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Uus plokk!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Uus plokk!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Uus plokk!",
+          "hello_world_new_block": "Uus plokk!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Uus plokk!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Uus plokk!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Uus plokk!",
+          "hello_world_new_block": "Uus plokk!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Uus plokk!"
         }
       }
     }

@@ -1140,7 +1140,7 @@ mr:
         text: राक्षसांना तुम्हाला हवे त्या ठिकाणी ठेवा
       Outbreak_stopMoving:
         text: राक्षस हालचाल थांबायला सुरुवात करतात
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': रंग
@@ -1148,13 +1148,26 @@ mr:
             '"stars"': तारे
           PALETTE:
             '"rainbow"': इंद्रधनुष्य
-      PoemBot_setForegroundEffect:
-        text: अग्रभूमीचा प्रभाव {EFFECT} करा
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': पाऊस
             '"bubbles"': फुगे
             '"confetti"': कॉन्फेटी
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       aalab_layoutSprites:
         options:
           FORMAT:

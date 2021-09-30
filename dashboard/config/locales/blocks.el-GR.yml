@@ -1608,10 +1608,13 @@ el:
         text: x συντεταγμένη του {SPRITE}
       Mikelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': βροχή
+      Poetry_playSound:
         text: παίξεΉχο {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: όρισε παρασκήνιο σε {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Χρώματα
@@ -1621,10 +1624,9 @@ el:
             '"ripples"': Πτυχώσεις
           PALETTE:
             '"rainbow"': Ουράνιο τόξο
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: Ορισμός φόντου σε {IMG}
-      PoemBot_setForegroundEffect:
-        text: όρισε προσκήνιο σε {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Βροχή
@@ -1632,14 +1634,28 @@ el:
             '"hearts"': Πολύχρωμες καρδιές
             '"confetti"': Κομφετί
             '"starburst"': Οδοντωτός σύνδεσμος
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             swimming_left_and_right: κολύμβηση
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             swimming_left_and_right: κολύμβηση
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: προχώρησε μπροστά
       RyanLab_turnLeft:

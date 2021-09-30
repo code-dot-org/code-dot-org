@@ -243,6 +243,19 @@ class Lesson < ApplicationRecord
     return result
   end
 
+  # If there is a script_level, build_script_level_path will provide the correct url,
+  # even if it's a lockable lesson. Otherwise, we give the url to the student resources
+  # page, and the lesson plan pdf as a backup.
+  def start_url
+    if script_levels.first
+      return url_from_path(build_script_level_path(script_levels.first))
+    elsif script.include_student_lesson_plans && script.is_migrated
+      return url_from_path(script_lesson_student_path(script, self))
+    elsif student_lesson_plan_pdf_url
+      return student_lesson_plan_pdf_url
+    end
+  end
+
   # A simple helper function to encapsulate creating a unique key, since this
   # model does not have a unique identifier field of its own.
   def get_localized_property(property_name)
@@ -354,7 +367,8 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonEditPath: get_uncached_edit_path
+        lessonEditPath: get_uncached_edit_path,
+        lessonStartUrl: start_url
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
