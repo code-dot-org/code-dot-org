@@ -30,6 +30,12 @@ class Pd::InternationalOptIn < ApplicationRecord
     )
   ).freeze
 
+  UZBEKISTAN_SCHOOL_DATA = JSON.parse(
+    File.read(
+      File.join(Rails.root, 'config', 'uzbekistanSchoolData.json')
+    )
+  ).freeze
+
   belongs_to :user
 
   validates_presence_of :user_id, :form_data
@@ -112,6 +118,7 @@ class Pd::InternationalOptIn < ApplicationRecord
 
     entries[:colombianSchoolData] = COLOMBIAN_SCHOOL_DATA
     entries[:chileanSchoolData] = CHILEAN_SCHOOL_DATA
+    entries[:uzbekistanSchoolData] = UZBEKISTAN_SCHOOL_DATA
 
     super.merge(entries)
   end
@@ -124,8 +131,10 @@ class Pd::InternationalOptIn < ApplicationRecord
       email
       emailAlternate
       gender
+      school
       schoolCity
       schoolCountry
+      schoolDepartmentRegion
       schoolName
       ages
       subjects
@@ -147,6 +156,7 @@ class Pd::InternationalOptIn < ApplicationRecord
       colombianChileanSchoolName
       chileanSchoolCommune
       chileanSchoolId
+      uzbekistanSchoolDistrict
     )
 
     Hash[keys.collect {|v| [v, I18n.t("pd.form_labels.#{v.underscore}")]}]
