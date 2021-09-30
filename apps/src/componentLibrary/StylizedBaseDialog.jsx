@@ -75,13 +75,13 @@ export default function StylizedBaseDialog(props) {
   const defaultButtons = [
     <FooterButton
       key="cancel"
-      type="cancel"
+      type={FooterButtonType.cancel}
       text={props.cancellationButtonText}
       onClick={props.handleCancellation || props.handleClose}
     />,
     <FooterButton
       key="confirm"
-      type="confirm"
+      type={FooterButtonType.confirm}
       text={props.confirmationButtonText}
       onClick={props.handleConfirmation || props.handleClose}
     />
