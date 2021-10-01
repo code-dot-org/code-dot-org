@@ -362,7 +362,7 @@ Devise.setup do |config|
 
     # The following cookies are used by marketing to create personalized experiences for teachers, such as displaying
     # specific banner content.
-    user.marketing_segment_data&.each do |segment_name, value|
+    user.marketing_segment_data&.compact&.each do |segment_name, value|
       auth.cookies[environment_specific_cookie_name("_teacher_#{segment_name}")] = {value: value, domain: :all}
     end
   end
