@@ -180,6 +180,8 @@ en:
           lessons:
             Play Lab:
               name: Play Lab
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           description_audience: ''
           student_description: Create a story or make a game with Play Lab!
         artist:
@@ -190,6 +192,8 @@ en:
           lessons:
             Artist:
               name: Artist
+              description_student: Create beautiful images by programming the Artist.
+              description_teacher: In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using new blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.
           student_description: Draw cool pictures and designs with the Artist!
         hourofcode:
           title: Classic Maze
@@ -200,6 +204,8 @@ en:
           lessons:
             Maze:
               name: Maze
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for young learners, ages 4-10, but can be adapted for older learners using the differentiation suggestions provided.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for young learners, ages 4-10, but can be adapted for older learners using the differentiation suggestions provided.
           student_description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
           title: Code with Anna and Elsa
@@ -209,6 +215,8 @@ en:
           lessons:
             Artist:
               name: Artist
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
           student_description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
         course4:
           title: Course 4
@@ -362,6 +370,8 @@ en:
           lessons:
             Infinity:
               name: Infinity
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Use Play Lab to create a story or game starring Disney Infinity characters.
         algebrademo:
           title: Algebra Demo
@@ -551,6 +561,8 @@ en:
           lessons:
             Flappy Code:
               name: Flappy Code
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
         jigsaw:
           title: Jigsaw
@@ -703,6 +715,8 @@ en:
           lessons:
             Text Compression:
               name: Text Compression
+              description_student: 'At some point we reach a physical limit of how fast we can send bits and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must compress the data.  '
+              description_teacher: "At some point we reach a physical limit of how fast we can send bits and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must **compress** the data. In this lesson, students will use the Text Compression Widget to compress segments of English text by looking for patterns and substituting symbols for larger patterns of text.\r\n"
           student_description: Compress text by identifying repeated patterns.
         CSPPD:
           title: Computer Science Principles PD
@@ -1984,6 +1998,8 @@ en:
           lessons:
             Ice Age Play Lab:
               name: Ice Age Play Lab
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Create a story or make a game with Ice Age Play Lab!
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -2067,6 +2083,8 @@ en:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           description_audience: ''
           student_description: Create a story or make a game with Gumball Play Lab!
         starwars:
@@ -2078,6 +2096,8 @@ en:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+              description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. '
+              description_teacher: "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. \r\n\r\n**Option 1: Blocks**\r\n\r\nThe first option uses drag-drop blocks. This version works best for:\r\n\r\n - Students on mobile devices without keyboards\r\n - Younger students (6+ because the tutorial requires reading)\r\n - International students\r\n\r\nWe recommend this for international students because JavaScript syntax is not translated and for the first Hour of Code, the translated blocks provide a better introduction.\r\n\r\n**Option 2: JavaScript**\r\n\r\nThis option teaches the same basic concepts, but because it uses both drag-drop blocks and JavaScript, the students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+."
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code (Blockly)'
@@ -2088,6 +2108,8 @@ en:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+              description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. '
+              description_teacher: "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. \r\n\r\n**Option 1: Blocks**\r\n\r\nThe first option uses drag-drop blocks. This version works best for:\r\n\r\n - Students on mobile devices without keyboards\r\n - Younger students (6+ because the tutorial requires reading)\r\n - International students\r\n\r\nWe recommend this for international students because JavaScript syntax is not translated and for the first Hour of Code, the translated blocks provide a better introduction.\r\n\r\n**Option 2: JavaScript**\r\n\r\nThis option teaches the same basic concepts, but because it uses both drag-drop blocks and JavaScript, the students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+."
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         mc:
           title: Minecraft Hour of Code
@@ -2098,6 +2120,8 @@ en:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
         oceans:
           title: AI for Oceans
@@ -2108,6 +2132,8 @@ en:
           lessons:
             Oceans:
               name: Oceans
+              description_student: 'Tutorial Summary: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.'
+              description_teacher: First, students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
           student_description: Learn how AI and machine learning can be used to address world problems.
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -4174,6 +4200,8 @@ en:
           lessons:
             Bounce:
               name: Bounce
+              description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
+              description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
           student_description: Choose your team and make a basketball game
         sample-csp5:
           lessons:
@@ -4188,6 +4216,8 @@ en:
           lessons:
             Simple Encryption:
               name: Simple Encryption
+              description_student: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.  Students try their own hand at cracking a message encoded with the classic Caesar cipher and also a Random Substitution Cipher.  Students should become well-acquainted with idea that in an age of powerful computational tools, techniques of encryption will need to be more sophisticated.  The most important aspect of this lesson is to understand how and why encryption plays a role in all of our lives every day on the Internet, and that making good encryption is not trivial.  Students will get their feet wet with understanding the considerations that must go into making strong encryption in the face of powerful computational tools that can be used to crack it. The need for secrecy when sending bits over the Internet is important for anyone using the Internet.
+              description_teacher: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.  Students try their own hand at cracking a message encoded with the classic Caesar cipher and also a Random Substitution Cipher.  Students should become well-acquainted with idea that in an age of powerful computational tools, techniques of encryption will need to be more sophisticated.  The most important aspect of this lesson is to understand how and why encryption plays a role in all of our lives every day on the Internet, and that making good encryption is not trivial.  Students will get their feet wet with understanding the considerations that must go into making strong encryption in the face of powerful computational tools that can be used to crack it. The need for secrecy when sending bits over the Internet is important for anyone using the Internet.
           student_description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
         csd2-2017:
           title: CSD Unit 2 - Web Development ('17-'18)
@@ -4456,6 +4486,8 @@ en:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code Designer
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Program animals and other Minecraft creatures in your own version of Minecraft.
         flappy-impact-study:
           title: Flappy Code with Survey
@@ -4792,6 +4824,8 @@ en:
           lessons:
             Sports:
               name: Sports
+              description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
+              description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
           student_description: Mix and match across sports
         2016_sciencePD-phase2b:
           title: ''
@@ -5952,7 +5986,7 @@ en:
             CSP post survey 2018 staging:
               name: CSP post survey 2018 staging
             CSP post-course survey:
-              name: CSP post-course survey
+              name: CSP Student Post-Course Survey ('17-'18)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         public-key-cryptography:
           title: Public Key Cryptography Widgets
@@ -7147,6 +7181,8 @@ en:
               name: Intro to AppLab - Getting Started
             Intro to App Lab:
               name: Intro to App Lab
+              description_student: 'This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a "Choose Your Own Adventure", "Greeting Card", or "Personality Quiz" app. They can also continue on to build more projects featured on the code.org/applab page. '
+              description_teacher: "This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. \n\n**Age Appropriateness:** The tutorial is designed for students over 13. Because it allows students to upload custom sounds and images, young students should not use this without supervision. To protect students' privacy, if your students are under 13, they will not be able to use this tutorial unless you first set up accounts for them in a section you manage.\n\n"
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
           student_description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
@@ -7838,6 +7874,8 @@ en:
               name: 'Minecraft\: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
         applab-intro-staging:
           title: Intro to App Lab Staging
@@ -10512,7 +10550,7 @@ en:
               display_name: Post-Course Survey
           lessons:
             CSD post-course survey:
-              name: CSD post-course survey
+              name: CSD Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         csd-novice-18:
           title: CS Discoveries Novice Reflections 2018-2019
@@ -10858,6 +10896,8 @@ en:
               name: new stage
             Dance Party:
               name: Dance Party
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Code your own dance party to share with your friends!
         frozen-2018-test-b:
           title: New Frozen Script
@@ -10880,6 +10920,8 @@ en:
           lessons:
             Aquatic:
               name: Aquatic
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
         sconyers:
           title: Tracey's Playground
@@ -10994,6 +11036,8 @@ en:
           lessons:
             Dance Party - Go Further:
               name: Dance Party - Go Further
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
         coursef-2019:
           title: Course F (2019)
@@ -11941,7 +11985,7 @@ en:
               display_name: Survey
           lessons:
             CSP Mid-year survey:
-              name: CSP Mid-year survey
+              name: CSP Student Mid-year Survey
           student_description: Welcome to the Code.org CS Principles Mid-Year Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         gamelab:
           title: Game Lab
@@ -14175,7 +14219,7 @@ en:
               display_name: Survey
           lessons:
             CSD post-course survey:
-              name: CSD post-course survey
+              name: CSD Student Post-Course Survey ('18-'19)
           student_description: "The CS Discoveries Post-Course Survey is an important tool we use to get feedback from you and make improvements to the course. \n The survey is private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration."
         csp-post-survey-2018:
           title: CSP Student Post-Course Survey ('18-'19)
@@ -14187,7 +14231,7 @@ en:
               display_name: Survey
           lessons:
             CSP post-course survey:
-              name: CSP post-course survey
+              name: CSP Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         csp5-pilot:
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
@@ -15235,6 +15279,8 @@ en:
           lessons:
             Dance Party:
               name: Dance Party
+              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Code your own dance party to share with your friends!
         k5-onlinepd-2019:
           title: Teaching Computer Science Fundamentals (2019)
@@ -15355,9 +15401,9 @@ en:
           lesson_groups: {}
           lessons:
             Dance Party - Go Further:
-              name: Dance Party - Go Further
-              description_student: ''
-              description_teacher: ''
+              name: Keep on Dancing
+              description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. '
+              description_teacher: In this lesson, learners of all ages continue their experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
         csp10-pilot:
           title: Cybersecurity and Global Impacts
@@ -22297,6 +22343,18 @@ en:
               name: Unit 1 Pilot Survey
               description_student: 
               description_teacher: 
+            lesson-24:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            lesson-22:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            lesson-23:
+              name: The Theater
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22305,6 +22363,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
           name: csa1-pilot
           title: Object Oriented Programming
           description_audience: ''
@@ -22377,6 +22437,18 @@ en:
               name: Unit 2 Pilot Survey
               description_student: 
               description_teacher: 
+            lesson-16:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            lesson-17:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            lesson-18:
+              name: The Theater
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lesson group:
               display_name: Content
@@ -22384,6 +22456,8 @@ en:
               display_name: Show What You Know
             lessonGroup-3:
               display_name: Pilot Survey
+            lessonGroup-4:
+              display_name: Sandbox
           name: csa2-pilot
           title: Giving Objects State
           description_audience: ''
@@ -22462,6 +22536,18 @@ en:
               name: Unit 3 Pilot Survey
               description_student: 
               description_teacher: 
+            lesson-17:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            lesson-18:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            lesson-19:
+              name: The Theater
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22469,6 +22555,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
           name: csa3-pilot
           title: Expanding Program Data
           description_audience: ''
@@ -22544,11 +22632,29 @@ en:
               name: Assessment Day
               description_student: In this unit, you expanded the expressions used in conditionals and iteration to use relational and logical operators. You used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. You developed an understanding of De Morgan's Laws and writing truth tables. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
               description_teacher: In this unit, students expanded the expressions used in conditionals and iteration to use relational and logical operators. Students used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. Students developed an understanding of De Morgan's Laws and writing truth tables. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            lesson-16:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            lesson-17:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            lesson-18:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            lesson-19:
+              name: The Playground
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandbox
           name: csa4-pilot
           title: Expanding Program Logic
           description_audience: ''
@@ -24978,21 +25084,19 @@ en:
               description_teacher: 
             lesson-1:
               key: lesson-1
-              name: Welcome to CSA
-              description_student: In this lesson, you explore software engineering values and the ways that you practice these values in other aspects of your life. By the end of this lesson, you discover your own software engineering identity!
-              description_teacher: Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity.
+              name: Java Lab
+              description_student: 
+              description_teacher: 
             lesson-2:
               key: lesson-2
-              name: Classes and Objects
-              description_student: You explore how The Neighborhood works and learn some of the key components of the Java programming language. You meet the `Painter` and make changes to the code to learn what the `Painter` can do.
-              description_teacher: 'Students access the Java Lab on Code Studio to explore The Neighborhood and are introduced to the `Painter` class. Students examine starter code and make simple modifications to achieve different outcomes with a `Painter` object and practice creating a `Painter` object to identify the relationship between a class and an object.
-
-'
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
             lesson-3:
               key: lesson-3
-              name: Calling Methods
-              description_student: Now that you have met the `Painter`, you learn about some of the methods that the `Painter` has to move and work with paint in The Neighborhood. You practice calling these methods to solve problems while learning the importance of case-sensitivity and semicolons in Java.
-              description_teacher: In this lesson, students implement solutions by calling methods to move the `Painter` around The Neighborhood and work with paint. Students practice calling these methods to solve problems while learning the importance of case-sensitivity and semicolons in Java.
+              name: The Theater
+              description_student: 
+              description_teacher: 
             lesson-4:
               key: lesson-4
               name: Conditionals and Debugging
@@ -25094,6 +25198,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
           title: Object Oriented Programming
           description: Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces the core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity.
           student_description: ''
@@ -25173,14 +25279,14 @@ en:
               description_teacher: In this unplugged lesson, students create objects and represent relevant attributes using instance variables. Students learn the difference between `public` and `private` and the purpose of encapsulation to hide the internal implementation of an object.
             lesson-2:
               key: lesson-2
-              name: Using Variables
-              description_student: Variables provide a way for software engineers to store information. The type of information we need to store determines what kind of variable we need to use, how it stores data, and how we can use it. In this lesson, you use variables to store information and use these variables to create `Painter` objects and store information input by a user.
-              description_teacher: In this lesson, students investigate the functionality of variables and differentiate between primitive and reference variables. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
             lesson-3:
               key: lesson-3
-              name: Writing Constructors
-              description_student: The Project Mercury Pastries food truck needs your help! The owner wants to sell desserts in The Neighborhood but needs to be able to input and store their desserts in a program. You have been asked to use your software engineering skills to create a program that can create dessert objects so the owner can keep track of their inventory. You start by creating a `Dessert` class so the owner can enter the flavor, available quantity, and price of each dessert they sell.
-              description_teacher: Students are introduced to the Project Mercury Pastries food truck and the owner's need for a program to input and store dessert items. As software engineers, students utilize object-oriented design strategies to identify necessary attributes and appropriate data types for a `Dessert` class. Students write a constructor and use a `Scanner` object to obtain values for the instance variables to initialize a `Dessert` object.
+              name: The Theater
+              description_student: 
+              description_teacher: 
             lesson-4:
               key: lesson-4
               name: Adding Multiple Constructors
@@ -25243,9 +25349,9 @@ en:
               description_teacher: In this unit, students developed an understanding of data encapsulation and object-oriented design decisions to build a program to meet the needs of the Project Mercury Pastries food truck. Students created objects with appropriate instance variables based on program needs while exploring data types, variables, and expressions to work with object data. Students also implemented accessor, mutator, and `toString` methods to retrieve, modify, and output object data. Throughout the unit, students used the `Scanner` class to obtain user input to expand the interactivity of their programs. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-1:
               key: lesson-1
-              name: Unit 2 Pilot Survey
-              description_student: ''
-              description_teacher: ''
+              name: Java Lab
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lesson group:
               display_name: Content
@@ -25253,6 +25359,8 @@ en:
               display_name: Show What You Know
             lessonGroup-3:
               display_name: Pilot Survey
+            lessonGroup-4:
+              display_name: Sandbox
           title: Giving Objects State
           description: In this unit, students create objects and define instance variables to represent attributes. Students explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. Students implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with objects, students use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
           student_description: In this unit, you create objects and define instance variables to represent attributes. You explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. You implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with your objects, you use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
@@ -25333,19 +25441,19 @@ en:
               description_teacher: 
             lesson-1:
               key: lesson-1
-              name: Creating Arrays
-              description_student: The food truck owner increased their inventory of desserts. You have declared separate variables to keep track of the inventory, but what if you needed to store 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements.
-              description_teacher: In this unplugged lesson, students create one-dimensional (1D) arrays to store lists of values. Students learn how to refer to the length of a 1D array and access individual elements that are stored.
+              name: Java Lab
+              description_student: 
+              description_teacher: 
             lesson-2:
               key: lesson-2
-              name: Accessing and Modifying Elements
-              description_student: You create arrays to store values using the keyword `new`. You explore The Theater, which allows you to manipulate sounds and shapes. You use The Neighborhood and The Theater to practice accessing and modifying elements in arrays using index values.
-              description_teacher: In this lesson, students create arrays to store values using the keyword `new`. They explore The Theater, which allows them to manipulate sounds and shapes. They use The Neighborhood and The Theater to practice accessing and modifying elements in arrays using index values.
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
             lesson-3:
               key: lesson-3
-              name: Traversing Arrays with for Loops
-              description_student: In this lesson, you learn about `for` loops and how to use them to traverse arrays. You revisit The Neighborhood and use trace tables to document how code executes within a `for` loop. You use `for` loops to solve problems in The Neighborhood and get feedback on your work through a code review.
-              description_teacher: Students write `for` loops to traverse arrays and to search for and modify elements that meet certain conditions. Students revisit The Neighborhood and use trace tables to document how code executes within a `for` loop. They participate in a code review after completing a choice level and revise their code based on feedback.
+              name: The Theater
+              description_student: 
+              description_teacher: 
             lesson-4:
               key: lesson-4
               name: Traversing Arrays with while Loops
@@ -25424,6 +25532,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
           title: Expanding Program Data
           description: In this unit, students create one-dimensional arrays to store primitive values and object references. Students represent constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students use conditionals and iteration to search for values that meet specific criteria or to perform manipulations to solve problems.
           student_description: In this unit, you create one-dimensional arrays to store primitive values and object references. You represent constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you use conditionals and iteration to search for values that meet specific criteria or to perform manipulations to solve problems.
@@ -25434,79 +25544,86 @@ en:
           lessons:
             Using Existing Libraries to Add Capabilities:
               name: Using Existing Libraries to Add Capabilities
-              description_student: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs. To begin developing the Pop the Balloon game for The Neighborhood block party, you import The Park API and use it to implement clickable images.
-              description_teacher: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. Students explore APIs and their documentation to identify features that they can add to their programs. To begin developing the Pop the Balloon game for The Neighborhood block party, students import The Park API and use it to implement clickable images.
+              description_student: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs to get started. You use `import` statements to import The Playground, implement clickable images, and begin developing the Pop the Balloon game for the block party.
+              description_teacher: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. To get started, students explore APIs and their documentation to identify features to add to their programs. Students use `import` statements to import The Playground, implement clickable images, and begin developing the Pop the Balloon game for the block party.
             Solving Problems with the Math Class:
               name: Solving Problems with the Math Class
-              description_student: In Unit 3, you looked at the source code for the `Math` class, but now it’s time to see what it can do! In this lesson, you learn about `final` classes and static methods and identify their purposes and uses. You use some of the `Math` class methods - `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` - to solve problems.
-              description_teacher: Students revisit the `Math` class, going more in-depth to explore its methods. They learn about `final` classes and static methods and identify their purposes and uses. They use `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` to solve problems.
+              description_student: Another class in the Java API is the `Math` class, which contains methods for performing mathematical functions. In this lesson, you explore the `Math` class to learn about its structure and methods. As you review the documentation for the `Math` class, you discover the purpose and use of `final` classes and static methods. You practice using methods in the `Math` class and the `Scanner` class to solve problems.
+              description_teacher: Students explore the `Math` class to learn about its structure and methods. As students review the documentation for the `Math` class, students discover the purpose and use of `final` classes and static methods. Students practice using methods in the `Math` class and the `Scanner` class to solve problems.
             Treating Data as a Different Types:
               name: Treating Data as a Different Types
-              description_student: The Food Truck has run out of coins! Because the owner can’t give change with coins, she can only charge whole dollar amounts and no cents. You learn how to use casting, rounding, and random numbers to help the owner through her coin shortage.
-              description_teacher: Students revisit the Project Mercury Pastries Food Truck to learn about casting, rounding, and random numbers. The students solve scenarios for the food truck owner using their knowledge of Java and the `Math` class.
+              description_student: In the previous lesson, you learned how to use `Math` class to calculate absolute values, square roots, and exponents. You continue manipulating values as you learn about casting and rounding. You combine these techniques with `Math.random()` to generate random numbers within specific ranges.
+              description_teacher: Students explore the use of casting and truncation to help the owner of the Project Mercury Pastries Food Truck round their prices to whole dollar numbers. Students apply casting and rounding techniques to generate random numbers using `Math.random()` within specific ranges.
             Comparing Values to Make Decisions:
               name: Comparing Values to Make Decisions
-              description_student: 'Today is all about using code to make decisions. You compare relationships between values while using conditional statements to help the `Painter` make decisions. '
-              description_teacher: 'Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. '
+              description_student: In The Neighborhood, you have used Boolean methods to help the `Painter` make decisions about navigating and painting. In this lesson, you learn to use relational operators to write Boolean expressions and use these with `if` statements to update the dice images in the Pop the Balloons game to show the correct side with a specified value.
+              description_teacher: Students use relational operators to write and evaluate Boolean expressions. Students then use these relational operators to expand the conditions they can check with `if` statements. The dice images in the Pop the Balloons game are then updated using relational operators and `if` statements to show the correct side with a specified value.
             Adding Randomness to a Program:
               name: Adding Randomness to a Program
-              description_student: One of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes. Today, you add randomization to the Pop the Balloon game by adding a dice rolling feature.
-              description_teacher: In this lesson, students develop the dice rolling feature of the Pop the Balloon game. Each subtask of the development process requires students to add different randomization features, including generating numbers between ranges, computing probabilities, and using conditional statements that are executed based on varying results.
+              description_student: One of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes. In this lesson, you develop the dice roll functionality and add the balloon sprites to incorporate randomization in your Pop the Balloons game.
+              description_teacher: Students develop the dice roll functionality of the Pop the Balloon game and add clickable balloons. Each subtask of the development of these game components requires students to add different randomization features, including generating numbers between ranges, computing probabilities, and using conditional statements that are executed based on varying results.
             Comparing Object References and Data:
               name: Comparing Object References and Data
-              description_student: We have compared two `int`s or `double`s for equality, but how do we compare objects? Can two `String`s be equal? What about two donuts? You discover how to test two objects for equality and implement your findings in the Pop the Balloons game.
-              description_teacher: Students differentiate between comparisons of objects and primitive values. Students explore the effects of using `==` or `!=` with objects to identify the need for the `equals()` method to compare object data.
+              description_student: We have compared two `int`s or `double`s for equality, but how do we compare objects? What does it mean for two `String`s be equal? What about two donuts? You discover how to test two objects for equality and implement your findings in the Pop the Balloons game.
+              description_teacher: Students differentiate between comparisons of objects and primitive values. Students explore the effects of using `==` or `!=` with objects to identify the need for the `equals()` method to compare object data. Using the `equals()` method, students add to the Pop the Balloons game to compare `Balloon` objects and determine if there are valid moves left.
             Providing an Alternate Path of Execution:
               name: Providing an Alternate Path of Execution
-              description_student: You review `if/else` statements and use them to implement alternate actions based on the outcome of a Boolean expression. You apply `if/else` statements to access elements from arrays and use `Math.random()` to access random elements. You then implement `if/else` statements in the Pop the Balloons game to check whether a move is valid.
-              description_teacher: Students review `if/else` statements and use them to implement alternate actions based on the outcome of a Boolean expression. Students apply `if/else` statements to access elements from arrays and use `Math.random()` to access random elements. `if/else` statements are then implemented in the Pop the Balloons game to check the validity of a move.
+              description_student: You review `if/else` statements to implement alternate actions based on the outcome of a Boolean expression. You practice using `if/else` statements with `Math.random()` to access random elements from an array in The Neighborhood. Using `if/else statements`, you check the validity of a player's move in the Pop the Balloons game.
+              description_teacher: Students review `if/else` statements to implement alternate actions based on the outcome of a Boolean expression. Students practice using `if/else` statements with `Math.random()` to access random elements from an array in The Neighborhood. Using `if/else` statements, students check the validity of a player's move in the Pop the Balloons game.
             Testing Multiple Conditions:
               name: Testing Multiple Conditions
-              description_student: 'Today is all about evaluating multiple conditions to select a specific desired outcome. In The Neighborhood, you use `if/else-if/else` statements to solve problems for the `Painter`. You then implement `if/else-if/else` statements in the Pop the Balloons game to update the picture of the balloon if it has been popped. '
-              description_teacher: Students use `if/else-if/else` statements to evaluate multiple conditions to select a specific desired outcome. Students develop the balloon display feature of the Pop the Balloons game using `if/else-if/else` statements to change the image of the balloon if it has been popped.
+              description_student: Sometimes we need to check multiple conditions to determine the correct outcome. In The Neighborhood, you learn to use `if/else-if/else` statements to solve problems for the `Painter`. You then implement `if/else-if/else` statements in the Pop the Balloons game to check the game's status and determine whether or not the player won.
+              description_teacher: Students use `if/else-if/else` statements to evaluate multiple conditions to select a specific desired outcome. To check the game's status and determine whether or not the player won, students use multi-selection statements to check the condition of the game and choose the appropriate outcome.
             Using Logical Operators:
               name: Using Logical Operators
-              description_student: You learn how to write nested `if` statements and expressions involving three logical operators. You simplify more complex multiple conditionals using logical operators to solve problems. You revisit The Neighborhood and add nested `if` statements to solve a given problem for the `Painter`. You then implement nested `if` statements and logical operators in the Pop the Balloons game to check how many moves are left and calculate the game's score.
-              description_teacher: Students explore problems involving multiple conditions and write nested `if` statements to create solutions for these problems. Students write expressions involving logical operators in conditional statements and identify the effect of logical operators on the outcome of the expression. Nested `if` statements and logical operators are then implemented in the Pop the Balloons game to check how many moves are left and calculate the score.
+              description_student: You explore problems involving multiple conditions and learn to use nested `if` statements in your solutions. You write expressions using new logical operators in conditional statements and identify the effect of these operators on the result. You then improve the gameplay and functionality of your Pop the Balloons game using nested `if` statements and logical operators.
+              description_teacher: Students explore problems involving multiple conditions and write nested `if` statements to develop solutions. Students write expressions using logical operators in conditional statements and identify the effect of logical operators on the result. Nested `if` statements and logical operators are then implemented in the Pop the Balloons game to improve gameplay and overall functionality.
             Applying De Morgan's Laws to Boolean Expressions:
               name: Applying De Morgan's Laws to Boolean Expressions
               description_student: You learn about truth tables, a tool we can use to evaluate compound Boolean expressions. You learn about De Morgan's Laws and prove them with a partner using truth tables.
               description_teacher: Students learn how to construct truth tables to represent compound Boolean expressions. Students work together to use truth tables to prove De Morgan’s Laws and explore open-source code.
             Neighborhood Block Party Project - Day 1:
               name: Neighborhood Block Party Project - Day 1
-              description_student: For this project, you design the core elements for a simple game by planning and developing a game engine. You outline the game mechanics, pseudocode each component, then use an interactive design process to make a game that reacts to a user’s interaction. At the end of this project, you participate in a block party to play one another’s games!
-              description_teacher: Students design and build a game engine for this project, focusing primarily on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identify its core functionalities. They write pseudocode for these components and begin the development of their project.
+              description_student: For this project, you outline a simple game's core logic and structure by designing a game engine. You determine how the game functions, write pseudocode for each component, then use an iterative design approach to develop a game that responds to a player's selections and interaction. At the end of this project, you participate in The Neighborhood Block Party to play each other's games!
+              description_teacher: Students design a game engine for this project, focusing on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identifying its core functionalities. They write pseudocode for these components to plan the development of their project.
             Neighborhood Block Party Project - Day 2:
               name: Neighborhood Block Party Project - Day 2
-              description_student: Now that you have a plan, today’s goal is to write code. You begin the development of your game engine by translating your pseudocode to Java. You participate in a code review and reflect on your progress to prepare for the final development of your game engine.
-              description_teacher: In the previous lesson, students planned a game engine for a simple game and wrote pseudocode for its core functions. Students begin the development of their game engine by translating their pseudocode to Java. They participate in a code review and reflect on their progress to prepare for the final development of their game engine.
+              description_student: Now that you have a plan, today’s goal is to begin a simple, functional game. You begin the development of your game engine by translating your pseudocode to Java. You participate in a code review and reflect on your progress as you prepare for the final development of your game engine.
+              description_teacher: In the previous lesson, students designed a game engine for a simple game and wrote pseudocode for its core functions. Students begin developing their game engine by translating their pseudocode to Java. They participate in a code review and reflect on their progress as they prepare for the final development of their game engine.
             Neighborhood Block Party Project - Day 3:
               name: Neighborhood Block Party Project - Day 3
-              description_student: It’s Block Party Day! Before the party begins, you will participate in two iterations to further develop your game engine and revise your priority list based on your progress and project requirements. At the end of class, you celebrate your success by playing each other's games and celebrating your development.
+              description_student: It’s Block Party Day! Before the party begins, you will participate in two iterations to further develop your simple game and revise your priority list based on your progress and project requirements. At the end of class, you celebrate your success by playing each other's games and celebrating your development.
               description_teacher: Students begin the second iteration of their project. After working on their code, they self-assess their work against the project rubric and create a final priority list for their last iteration. Students then complete their last iteration, and the class celebrates in the form of a block party where students play each others’ games. Students finish the project with a final reflection and identify potential next steps to continue developing their game.
             FRQ Day:
               name: FRQ Day
-              description_student: 'Today you complete a Free Response Question (FRQ) almost completely on your own. To derive a solution for the FRQ on your own, you will follow a three step process: annotating, writing pseudocode, and writing code in Java. Finally, you score your attempt against a scoring rubric and reflect on your experience.'
-              description_teacher: "Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ work, they begin to work more independently, working through annotating, pseudocoding, and completing an FRQ on their own. After annotating and writing their solutions, students still discuss their results with their peers and receive support.  \n\nThe goals of this lesson are:\n* Practice annotating an FRQ\n* Practice writing pseudocode for an FRQ\n* Practice writing a solution for an FRQ\n* Practice scoring an FRQ against a scoring rubric"
+              description_student: Today you complete a Free Response Question (FRQ) almost completely on your own. To develop a solution for the FRQ, you annotate the problem, write pseudocode, and translate your pseudocode to Java. Finally, you score your attempt against a scoring rubric and reflect on your experience.
+              description_teacher: |-
+                Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ activities, they begin to work more independently by annotating, writing pseudocode, and implementing a solution on their own. Students work with their peers to evaluate their work against a scoring rubric and reflect on their progress.
+
+                The goals of this lesson are:
+                * Practice annotating an FRQ
+                * Practice writing pseudocode for an FRQ
+                * Practice writing a solution for an FRQ
+                * Practice scoring an FRQ against a scoring rubric
             Assessment Day:
               name: Assessment Day
               description_student: In this unit, you expanded the expressions used in conditionals and iteration to use relational and logical operators. You used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. You developed an understanding of De Morgan's Laws and writing truth tables. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
               description_teacher: In this unit, students expanded the expressions used in conditionals and iteration to use relational and logical operators. Students used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. Students developed an understanding of De Morgan's Laws and writing truth tables. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-1:
               key: lesson-1
-              name: Using Existing Libraries to Add Capabilities
-              description_student: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs. To begin developing the Pop the Balloon game for The Neighborhood block party, you import The Park API and use it to implement clickable images.
-              description_teacher: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. Students explore APIs and their documentation to identify features that they can add to their programs. To begin developing the Pop the Balloon game for The Neighborhood block party, students import The Park API and use it to implement clickable images.
+              name: Java Lab
+              description_student: 
+              description_teacher: 
             lesson-3:
               key: lesson-3
-              name: Solving Problems with the Math Class
-              description_student: In Unit 3, you looked at the source code for the `Math` class, but now it’s time to see what it can do! In this lesson, you learn about `final` classes and static methods and identify their purposes and uses. You use some of the `Math` class methods - `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` - to solve problems.
-              description_teacher: Students revisit the `Math` class, going more in-depth to explore its methods. They learn about `final` classes and static methods and identify their purposes and uses. They use `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` to solve problems.
+              name: The Theater
+              description_student: 
+              description_teacher: 
             lesson-4:
               key: lesson-4
-              name: Treating Data as a Different Types
-              description_student: The Food Truck has run out of coins! Because the owner can’t give change with coins, she can only charge whole dollar amounts and no cents. You learn how to use casting, rounding, and random numbers to help the owner through her coin shortage.
-              description_teacher: Students revisit the Project Mercury Pastries Food Truck to learn about casting, rounding, and random numbers. The students solve scenarios for the food truck owner using their knowledge of Java and the `Math` class.
+              name: The Playground
+              description_student: 
+              description_teacher: 
             lesson-5:
               key: lesson-5
               name: Comparing Values to Make Decisions
@@ -25544,9 +25661,9 @@ en:
               description_teacher: Students learn how to construct truth tables to represent compound Boolean expressions. Students work together to use truth tables to prove De Morgan’s Laws and explore open-source code.
             lesson-2:
               key: lesson-2
-              name: Neighborhood Block Party Project - Day 1
-              description_student: For this project, you design the core elements for a simple game by planning and developing a game engine. You outline the game mechanics, pseudocode each component, then use an interactive design process to make a game that reacts to a user’s interaction. At the end of this project, you participate in a block party to play one another’s games!
-              description_teacher: Students design and build a game engine for this project, focusing primarily on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identify its core functionalities. They write pseudocode for these components and begin the development of their project.
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
             lesson-12:
               key: lesson-12
               name: Neighborhood Block Party Project - Day 2
@@ -25572,6 +25689,8 @@ en:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandbox
           title: Expanding Program Logic
           description: In this unit, students learn how the use of APIs and libraries can expand the functionalities of their programs. Students learn to use relational and logical operators to expand the decisions for conditionals and iteration. Students use casting operators and `Math` class methods as they evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and writing truth tables. Students use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
           student_description: In this unit, you learn how the use of APIs and libraries can expand the functionalities of your programs. You learn to use relational and logical operators to expand the decisions for conditionals and iteration. You use casting operators and `Math` class methods as you evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and writing truth tables. You use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
@@ -26074,6 +26193,10 @@ en:
               name: Assessment Day
               description_student: 
               description_teacher: 
+            lesson-16:
+              name: Comparing Object References and Data
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lesson group:
               display_name: Content
@@ -26097,6 +26220,8 @@ en:
           lessons:
             lesson-1:
               name: Our AI Code of Ethics
+              description_student: Collaboratively research about AI ethics and create a shareable code of conduct.
+              description_teacher: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
           lesson_groups: {}
           name: ai-ethics
           title: Our AI Code of Ethics
@@ -26105,7 +26230,11 @@ en:
           description: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
           student_description: 'Conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of your choice. '
         dance-unplugged:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: 'Dance Party: Unplugged'
+              description_student: 'Have a class dance party to learn about events. '
+              description_teacher: Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
           lesson_groups: {}
           name: dance-unplugged
           title: Hour of Code - Dance Party - Unplugged
@@ -26125,4 +26254,30 @@ en:
           description_audience: ''
           description_short: ''
           description: 'These are just a work in progress :) '
+          student_description: ''
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Poetry HoC v2
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poetry-hoc2
+          title: Poetry HoC v2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Mood Study
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poetry-hoc3
+          title: Poetry HoC v3
+          description_audience: ''
+          description_short: ''
+          description: ''
           student_description: ''

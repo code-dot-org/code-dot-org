@@ -233,12 +233,14 @@ module Pd::Application
       csf
       csd
       csp
+      csa
     ).index_by(&:to_sym).freeze
 
     COURSE_NAME_MAP = {
       csp: Pd::Workshop::COURSE_CSP,
       csd: Pd::Workshop::COURSE_CSD,
-      csf: Pd::Workshop::COURSE_CSF
+      csf: Pd::Workshop::COURSE_CSF,
+      csa: Pd::Workshop::COURSE_CSA
     }
 
     belongs_to :user

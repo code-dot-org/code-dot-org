@@ -337,6 +337,43 @@
           "83db90f8846d091d3532256816f105d9": "Toto je Neila.",
           "0192cdc04916ec27aa11738bb6e48d6e": "Neila sa snaží ochrániť svoj domov pred vesmírnym robotom.",
           "df8312187449c70820d7c58229a6b17e": "Vesmírny robot plaší iné stvorenia."
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka"
+        },
+        "courseF_text_choice_events": {
+          "c529a06c3f8518b63ff6dfac482b335c": "Pomenuj túto planétu:",
+          "44506356d48394cd903b579df9de9117": ", pozemšťan!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka"
+        },
+        "courseF_text_choice_interview": {
+          "5bd698afd23bccde289bb0b4aa72a518": "Pomenuj robota.",
+          "34088af1fb721900963462375b3bbe23": "a som robot!"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto má dnes narodeniny?",
+          "d1210f945885351b13feb9bbb868aeef": "Koľko bude mať rokov?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "Ako sa voláš?"
         }
       }
     }

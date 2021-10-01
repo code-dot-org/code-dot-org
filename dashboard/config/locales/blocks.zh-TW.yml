@@ -1190,6 +1190,7 @@ zh-TW:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": 緊縮
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": 豎琴
             "'sound://category_digital/jump_7.mp3'": 定位到
       gamelab_pointInDirection:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 度
@@ -1742,12 +1743,15 @@ zh-TW:
         text: 隨機佈局怪物
       Outbreak_stopMoving:
         text: 怪物停止移動
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': 下雨
+      Poetry_makeNumSprites:
         text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
-      PoemBot_playSound:
+      Poetry_playSound:
         text: 播放音效 {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: 背景效果設為 {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': 色塊
@@ -1757,10 +1761,9 @@ zh-TW:
             '"ripples"': 漣漪
           PALETTE:
             '"rainbow"': 彩虹
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: 背景設為 {IMG}
-      PoemBot_setForegroundEffect:
-        text: 前景效果設為 {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': 雨滴
@@ -1768,7 +1771,7 @@ zh-TW:
             '"hearts"': 繽紛愛心
             '"confetti"': 紙屑
             '"starburst"': 星爆
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: 飄移
@@ -1780,7 +1783,7 @@ zh-TW:
             swimming_left_and_right: 游泳
             wandering: 徘徊
             wobbling: 搖晃
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: 飄移
@@ -1792,6 +1795,20 @@ zh-TW:
             swimming_left_and_right: 游泳
             wandering: 徘徊
             wobbling: 搖晃
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: 移動-向前
       RyanLab_turnLeft:

@@ -516,6 +516,45 @@
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "Klik på TIP! hvis du har brug for hjælp!"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Ny blok!",
+          "hello_world_new_block": "Ny blok!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Ny blok!",
+          "hello_world_new_block": "Ny blok!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Ny blok!",
+          "hello_world_new_block": "Ny blok!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Ny blok!"
         }
       }
     }

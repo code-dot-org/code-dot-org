@@ -18,12 +18,14 @@ export const fakeLesson = (
   name,
   id,
   lockable = false,
-  lessonNumber = undefined
+  lessonNumber = undefined,
+  lessonStartUrl = 'code.org'
 ) => ({
   name,
   id,
   lockable,
   lessonNumber,
+  lessonStartUrl,
   isFocusArea: false
 });
 

@@ -2,6 +2,12 @@
   "uz-UZ": {
     "data": {
       "lesson_activities": {
+        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
+          "name": "Asosiy mashg‘ulot"
+        },
+        "06dfaf3b-e495-4577-baa6-883a782e198f": {
+          "name": "Darajalar"
+        },
         "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
           "name": "Qizdirish"
         },
@@ -37,6 +43,9 @@
         },
         "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
           "name": "Wrap Up"
+        },
+        "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
+          "name": "Ko‘ring: So‘z kuchi"
         },
         "86dafe20-4778-4665-94eb-cf837951259b": {
           "name": "Qo‘shimcha mashg‘ulotlar"

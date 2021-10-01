@@ -38,6 +38,7 @@ import {
   ValidScores as FacilitatorValidScores
 } from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
+import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import _ from 'lodash';
 import {
   getApplicationStatuses,
@@ -66,7 +67,7 @@ export class DetailViewContents extends React.Component {
     canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
-      course: PropTypes.oneOf(['csf', 'csd', 'csp']),
+      course: PropTypes.oneOf(Object.values(CourseKeyMap)),
       course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
       update_emails_sent_by_system: PropTypes.bool,

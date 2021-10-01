@@ -230,6 +230,10 @@ my:
           KEY:
             '"a"': က
             '"d"': ဃ
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': မိုးရွာသည်
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:

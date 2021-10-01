@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-23 17:58:34 UTC",
+    "serialized_at": "2021-09-29 19:51:51 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csa2-pilot-facilitator"
@@ -2546,7 +2546,7 @@
       "key": "8db7f441-7d5e-4e91-aa2f-72343c0a9f72",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce class hierarchies.\n* Each class in a class hierarchy inherits from the class above it.\n* All classes implicitly inherit from a universal subclass called `Object`.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Class Hierarchy cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With their partner, students arrange the cards to create a class hierarchy of the `Painter`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce class hierarchies.\n* Each class in a class hierarchy inherits from the class above it.\n* All classes implicitly inherit from a universal superclass called `Object`.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Class Hierarchy cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With their partner, students arrange the cards to create a class hierarchy of the `Painter`.",
         "name": "Constructing a Class Hierarchy",
         "tips": [
           {
@@ -5911,6 +5911,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -5933,6 +5936,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -5955,6 +5961,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,

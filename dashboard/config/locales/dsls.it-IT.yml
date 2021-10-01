@@ -7667,7 +7667,7 @@ it-IT:
           Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
       CourseF_outbreak_story:
         content1: descrizione qui
-        markdown: "# Epidemia: programma la tua simulazione\n\n## Benvenuto nella
+        markdown: "# Epidemia - Programma la tua simulazione\n\n## Benvenuto nella
           Città dei Mostri!\nUn tempo la Città dei Mostri era un luogo sano e felice.
           I mostri della Città dei Mostri adoravano girovagare per andare a trovare
           i loro amici. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -7743,7 +7743,7 @@ it-IT:
           del virus quando questo arriva in città. "
       CourseF_outbreak_story2:
         content1: descrizione qui
-        markdown: "# Epidemia: Pensare come uno scienziato\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+        markdown: "# Epidemia - Pensare come uno scienziato\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nLe simulazioni sono un ottimo modo
           per imparare cose che possono essere difficili da osservare nel mondo reale.
           Aiutano gli scienziati a risolvere problemi e testare nuove idee in modo

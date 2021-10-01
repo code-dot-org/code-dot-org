@@ -534,6 +534,7 @@ const lessonFromLesson = lesson =>
     'id',
     'lockable',
     'lessonNumber',
+    'lessonStartUrl',
     'lesson_plan_html_url',
     'student_lesson_plan_html_url',
     'description_student',

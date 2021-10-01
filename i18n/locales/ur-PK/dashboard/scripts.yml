@@ -167,6 +167,14 @@ ur:
           lessons:
             Lists:
               name: فہرستیں
+        coursea-draft:
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
+        courseb-draft:
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         coursee-draft:
           lessons:
             Conditionals:
@@ -211,13 +219,22 @@ ur:
           title: کورس A
           assignment_family_title: کورس A
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         courseb-2017:
           title: کورس B
           assignment_family_title: کورس B
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔ (کورس A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         coursec-2017:
           title: کورس C
           assignment_family_title: کورس C
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         coursed-2017:
           title: کورس D
           assignment_family_title: کورس D
@@ -229,24 +246,53 @@ ur:
           lessons:
             Envelope Variables:
               name: لفافہ متغیرات
+            Loops in Artist:
+              name: Artist میں لوپس
         coursef-2017:
           title: کورس F
           assignment_family_title: کورس F
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         express-2017:
           lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
             Envelope Variables:
               name: لفافہ متغیرات
+        pre-express-2017:
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         e-f-ramp:
           lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
             Conditionals:
               name: شرائط
+        new-d:
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
+        new-express:
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
+        new-stages-sept-2017:
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         new-e:
           lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
             Conditionals:
               name: شرائط
         new-f:
           lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
             Envelope Variables:
               name: لفافہ متغیرات
         hero:
@@ -255,10 +301,14 @@ ur:
               name: Minecraft کوڈ کی گھڑی
         course-e-2018:
           lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
             Conditionals:
               name: شرائط
         course-f-2018:
           lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
             Envelope Variables:
               name: لفافہ متغیرات
         csd6-old:
@@ -335,6 +385,8 @@ ur:
             csf_variables:
               display_name: متغیرات
           lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
             Envelope Variables:
               name: لفافہ متغیرات
             The Artist:
@@ -356,6 +408,10 @@ ur:
               name: ثنائی تصاویر
             Dance Party:
               name: ڈانس پارٹی
+        coursee-2019:
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         express-2019:
           lesson_groups:
             csf_loops:
@@ -379,6 +435,9 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         coursea-2019:
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
           lesson_groups:
@@ -386,6 +445,9 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         courseb-2019:
           lesson_groups:
             csf_loops:
@@ -414,6 +476,10 @@ ur:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+        time4csdemo:
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -484,6 +550,10 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+        peru-2019:
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         dance-2019:
           lessons:
             Dance Party:
@@ -605,12 +675,17 @@ ur:
           lessons:
             Dance Party:
               name: ڈانس پارٹی
+            Loops in Artist:
+              name: Artist میں لوپس
         pre-express-2020:
           lesson_groups:
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+          lessons:
+            Loops in Artist:
+              name: Artist میں لوپس
         csp5-virtual:
           lessons:
             Variables:
@@ -718,6 +793,9 @@ ur:
             csf_events:
               display_name: ایونٹس/واقعات
         courseb-2021:
+          lessons:
+            Loops in Artist:
+              key: Artist میں لوپس
           lesson_groups:
             csf_loops:
               display_name: لوپس
@@ -735,6 +813,8 @@ ur:
             Dance Party:
               key: ڈانس پارٹی
               name: ڈانس پارٹی
+            Loops in Artist:
+              key: Artist میں لوپس
             'Unplugged: Binary':
               name: ثنائی تصاویر
           lesson_groups:

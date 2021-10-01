@@ -5,6 +5,7 @@ import PreviewPaneHeader from './PreviewPaneHeader';
 import classNames from 'classnames';
 import {toggleVisualizationCollapsed} from './javalabRedux';
 import PlaygroundImage from './PlaygroundImage';
+import PlaygroundText from './PlaygroundText';
 import {PlaygroundItemType} from './constants';
 
 class PlaygroundVisualizationColumn extends React.Component {
@@ -27,6 +28,8 @@ class PlaygroundVisualizationColumn extends React.Component {
       const itemData = playgroundItemData[itemId];
       if (itemData.type === PlaygroundItemType.IMAGE) {
         return <PlaygroundImage key={itemId} id={itemId} {...itemData} />;
+      } else if (itemData.type === PlaygroundItemType.TEXT) {
+        return <PlaygroundText key={itemId} id={itemId} {...itemData} />;
       }
     });
     return items;
@@ -53,7 +56,7 @@ class PlaygroundVisualizationColumn extends React.Component {
           showPreviewTitle={false}
           toggleVisualizationCollapsed={toggleVisualizationCollapsed}
         />
-        <div style={{opacity}}>
+        <div style={{...styles.playgroundPreviewBackground, opacity}}>
           <div
             className={classNames({responsive: this.props.isResponsive})}
             id="visualization"
@@ -77,9 +80,9 @@ class PlaygroundVisualizationColumn extends React.Component {
 
 const styles = {
   playground: {
-    backgroundColor: 'white',
     width: 800,
-    height: 800
+    height: 800,
+    overflow: 'hidden'
   },
   playgroundDiv: {
     width: 800,
@@ -94,6 +97,12 @@ const styles = {
     left: 0,
     opacity: 0,
     zIndex: -1
+  },
+  playgroundPreviewBackground: {
+    backgroundImage: 'url("/blockly/media/javalab/Playground.png")',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'top'
   }
 };
 
