@@ -83,7 +83,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>Starts moving</description>
           </mutation>
-          <title name="NAME">moving</title>
+          <title name="NAME" id="moving">moving</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" inline="true">
               <title name="DIRECTION">"South"</title>

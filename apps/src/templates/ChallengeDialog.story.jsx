@@ -4,7 +4,7 @@ import GeneratedCode from './feedback/GeneratedCode';
 import React from 'react';
 
 const wrapperStyle = {
-  marginTop: 200
+  marginTop: 100
 };
 
 export default storybook => {
@@ -20,6 +20,23 @@ export default storybook => {
             cancelButtonLabel="Skip for now"
             primaryButtonLabel="I'm Ready!"
             text="Challenge Puzzles are lessons designed to push your skills to a new level."
+            title="Challenge Puzzle!"
+            isIntro
+          />
+        </div>
+      )
+    },
+    {
+      name: 'Starting dialog with large avatar',
+      description: 'Shrinks the avatar to prevent overlap with dialog content.',
+      story: () => (
+        <div style={wrapperStyle}>
+          <ChallengeDialog
+            hideBackdrop
+            avatar="/blockly/media/spritelab/avatar.png"
+            cancelButtonLabel="Skip for now"
+            primaryButtonLabel="I'm Ready!"
+            text="Challenge Puzzles are lessons designed to stretch your brain! Just do the best that you can!"
             title="Challenge Puzzle!"
             isIntro
           />
