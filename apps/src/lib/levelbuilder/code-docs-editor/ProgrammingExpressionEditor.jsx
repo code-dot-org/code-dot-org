@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
@@ -9,45 +9,48 @@ import color from '@cdo/apps/util/color';
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression
 }) {
-  const [name, setName] = useState(initialProgrammingExpression.name);
-  const [shortDescription, setShortDescription] = useState(
-    initialProgrammingExpression.shortDescription
-  );
+  //const [name, setName] = useState(initialProgrammingExpression.name);
+  //const [shortDescription, setShortDescription] = useState(
+  //  initialProgrammingExpression.shortDescription
+  //);
+  const [programmingExpression, setProgrammingExpression] = useState({
+    ...initialProgrammingExpression,
+    id: null,
+    key: null
+  });
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(
     initialProgrammingExpression.lastUpdated
   );
   const [error, setError] = useState(null);
 
-  useEffect(() => {
+  const save = () => {
     if (isSaving) {
-      fetch(`/programming_expressions/${initialProgrammingExpression.id}`, {
-        method: 'PUT',
-        headers: {
-          'content-type': 'application/json',
-          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-        },
-        body: JSON.stringify({
-          id: initialProgrammingExpression.id,
-          name: name,
-          shortDescription: shortDescription
-        })
-      })
-        .then(response => {
-          if (response.ok) {
-            setIsSaving(false);
-            setLastUpdated(Date.now());
-          } else {
-            setIsSaving(false);
-            setError(response.statusText);
-          }
-        })
-        .catch(error => {
-          setIsSaving(false);
-          setError(error.responseText);
-        });
+      return;
     }
-  }, [isSaving]);
+    setIsSaving(true);
+    fetch(`/programming_expressions/${initialProgrammingExpression.id}`, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json',
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+      },
+      body: JSON.stringify(programmingExpression)
+    })
+      .then(response => {
+        if (response.ok) {
+          setIsSaving(false);
+          setLastUpdated(Date.now());
+        } else {
+          setIsSaving(false);
+          setError(response.statusText);
+        }
+      })
+      .catch(error => {
+        setIsSaving(false);
+        setError(error.responseText);
+      });
+  };
 
   return (
     <div>
@@ -59,8 +62,13 @@ export default function ProgrammingExpressionEditor({
       <label>
         Display Name
         <input
-          value={name}
-          onChange={e => setName(e.target.value)}
+          value={programmingExpression.name}
+          onChange={e =>
+            setProgrammingExpression({
+              ...programmingExpression,
+              name: e.target.value
+            })
+          }
           style={styles.textInput}
         />
       </label>
@@ -73,15 +81,20 @@ export default function ProgrammingExpressionEditor({
         />
       </label>
       <TextareaWithMarkdownPreview
-        markdown={shortDescription}
+        markdown={programmingExpression.shortDescription}
         label={'Short Description'}
-        handleMarkdownChange={e => setShortDescription(e.target.value)}
+        handleMarkdownChange={e =>
+          setProgrammingExpression({
+            ...programmingExpression,
+            shortDescription: e.target.value
+          })
+        }
         features={{
           imageUpload: true
         }}
       />
       <SaveBar
-        handleSave={() => setIsSaving(true)}
+        handleSave={save}
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
