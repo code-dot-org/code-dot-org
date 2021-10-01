@@ -28,7 +28,6 @@ class CourseBlocksTools extends Component {
       },
       {
         heading: i18n.courseBlocksToolsWebLab(),
-        callout: `(${i18n.beta()})`,
         description: i18n.courseBlocksToolsWebLabDescription(),
         link: pegasus('/weblab')
       },
