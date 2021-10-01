@@ -29,7 +29,6 @@ class ReviewNavigator extends Component {
   };
 
   onPeerLoadFailure = () => {
-    console.log('in peer load failure');
     this.setState({loadError: true, loadInProgress: false});
   };
 
