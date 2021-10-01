@@ -7,7 +7,7 @@ import {Provider} from 'react-redux';
 import sinon from 'sinon';
 
 describe('ProgrammingExpressionEditor', () => {
-  let defaultProps;
+  let defaultProps, fetchSpy;
 
   beforeEach(() => {
     defaultProps = {
@@ -18,6 +18,11 @@ describe('ProgrammingExpressionEditor', () => {
         shortDescription: 'This is a short description.'
       }
     };
+    fetchSpy = sinon.stub(window, 'fetch');
+  });
+
+  afterEach(() => {
+    fetchSpy.restore();
   });
 
   it('renders default props', () => {
@@ -53,7 +58,7 @@ describe('ProgrammingExpressionEditor', () => {
     ).to.equal('This is a short description.');
   });
 
-  it('displays timestamp if save succeeds', () => {
+  it('attempts to save when save is pressed', () => {
     const store = getStore();
     const wrapper = mount(
       <Provider store={store}>
@@ -61,58 +66,15 @@ describe('ProgrammingExpressionEditor', () => {
       </Provider>
     );
 
-    let server = sinon.fakeServer.create();
-    server.respondWith('PUT', `/programming_expressions/1`, [
-      200,
-      {'Content-Type': 'application/json'},
-      ''
-    ]);
-
+    fetchSpy.returns(Promise.resolve({ok: true}));
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndCloseButton = saveBar.find('button').at(2);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
     saveAndCloseButton.simulate('click');
 
-    // check the the spinner is showing
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-
-    server.respond();
-
-    wrapper.update();
-    expect(wrapper.find('SaveBar').props().lastSaved).to.not.be.null;
-  });
-
-  it('displays error message if save fails', () => {
-    const store = getStore();
-    const wrapper = mount(
-      <Provider store={store}>
-        <ProgrammingExpressionEditor {...defaultProps} />
-      </Provider>
-    );
-
-    let returnData = 'There was an error';
-    let server = sinon.fakeServer.create();
-    server.respondWith('PUT', `/programming_expressions/1`, [
-      404,
-      {'Content-Type': 'application/json'},
-      returnData
-    ]);
-
-    const saveBar = wrapper.find('SaveBar');
-
-    const saveAndCloseButton = saveBar.find('button').at(2);
-    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
-    saveAndCloseButton.simulate('click');
-
-    // check the the spinner is showing
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-
-    server.respond();
-
-    wrapper.update();
-    expect(wrapper.find('SaveBar').props().error).to.equal(
-      'There was an error'
-    );
+    expect(fetchSpy).to.be.called.once;
+    const fetchCall = fetchSpy.getCall(0);
+    expect(fetchCall.args[0]).to.equal('/programming_expressions/1');
   });
 });
