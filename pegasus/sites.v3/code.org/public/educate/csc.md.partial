@@ -7,28 +7,27 @@ style_min: true
 
 # Heading
 
-First part of content.
+Some description goes here.
 
-## Section 0
+{{ tutorial_promo2, heading: "New Hour of Code activities", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_background.jpg", left_heading: "Mood study", left_description: "Learn about computer science and poetry by creating an animated poem.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Start", right_heading: "Hello World", right_description: "Learn computer science fundamentals with Sprite Lab", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start" }}
 
-<div style="width: 100px">{{ codebreak_promoreel }}</div>
+## Modules
 
-## Section 1
+Some description goes here.
 
-{{ csc_module, title: "Title 1", grades: "3-5", description: "Some kind of \"description goes\" here." }}
+{{ csc_module, title: "Poetry", grades: "3-5", subject: "ELA", duration: "5-6 hours", description: "Some kind of \"description goes\" here.", button_text: "Learn more", url: "/about" }}
+{{ csc_module, title: "Something else", grades: "3-5", subject: "ELA", duration: "5-6 hours", description: "Some kind of \"description goes\" here.", button_text: "Learn more", url: "/" }}
 
-{{ csc_module, title: "Title 2", description: "Another description here.", action: "Do action" }}
+## Open-ended projects
 
-## Section 2
+Some description goes here.
 
-<div style="width: 100px">{{codebreak_promoreel}}</div>
+{{ csc_module, title: "Title 3", grades: "3-5", subject: "ELA", duration: "5-6 hours", description: "Some kind of \"description goes\" here.", button_text: "Learn more", url: "/" }}
+{{ csc_module, title: "Title 4", grades: "3-5", subject: "ELA", duration: "5-6 hours", description: "Some kind of \"description goes\" here.", button_text: "Learn more", url: "/" }}
 
-## Section 3
+## Bridging Lessons
 
-{{ csc_module, title: "Title 3", grades: "3-5", description: "Some kind of \"description goes\" here." }}
+Some description goes here.
 
-{{ csc_module, title: "Title 4", description: "Another description here, isn't it!", action: "Do action" }}
-
-## Section 4
-
-<div style="width: 100px">{{ codebreak_promoreel }}</div>
+{{ csc_module, title: "Title 5", grades: "3-5", subject: "ELA", duration: "5-6 hours", description: "Some kind of \"description goes\" here.", button_text: "Learn more", url: "/" }}
+{{ csc_module, title: "Title 6", grades: "3-5", subject: "ELA", duration: "5-6 hours", description: "Some kind of \"description goes\" here.", button_text: "Learn more", url: "/" }}

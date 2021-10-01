@@ -146,8 +146,7 @@ class ProgrammingExpressionsEditor extends Component {
   };
 
   handleCloseAddProgrammingExpression = programmingExpression => {
-    this.setState(
-      {addProgrammingExpressionOpen: false},
+    this.setState({addProgrammingExpressionOpen: false}, () =>
       this.props.addProgrammingExpression(programmingExpression)
     );
   };

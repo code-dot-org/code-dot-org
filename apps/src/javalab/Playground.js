@@ -124,7 +124,7 @@ export default class Playground {
 
   addImageHelper(itemData, isClickable) {
     // ignore request if the item already exists
-    if (this.imageItemExists(itemData)) {
+    if (this.itemExists(itemData)) {
       return;
     }
 
@@ -144,26 +144,51 @@ export default class Playground {
     this.addPlaygroundItem(itemData.id, imageData);
   }
 
-  addTextItem(itemData) {}
+  addTextItem(itemData) {
+    if (this.itemExists(itemData)) {
+      // can't add new items if the item already exists
+      return;
+    }
+
+    const textData = {...itemData};
+    delete textData.id;
+    textData.type = PlaygroundItemType.TEXT;
+
+    this.addPlaygroundItem(itemData.id, textData);
+  }
 
   removeItem(itemData) {
-    if (this.imageItemExists(itemData)) {
+    if (this.itemExists(itemData)) {
       this.removePlaygroundItem(itemData.id);
     }
-    // TODO: handle text deletion
   }
 
   changeItem(itemData) {
-    if (this.imageItemExists(itemData)) {
-      const newImageData = {...itemData};
-      if (itemData.filename) {
-        newImageData.fileUrl = this.getUrl(itemData.filename);
-        // we don't need to pass filename as imageData
-        delete newImageData.filename;
-      }
-      this.changePlaygroundItem(itemData.id, newImageData);
+    if (!this.itemExists(itemData)) {
+      // can't change items if the item does not exist
+      return;
     }
-    // TODO: handle text changes
+
+    const changedItemData = this.getChangedItemData(itemData);
+    this.changePlaygroundItem(itemData.id, changedItemData);
+  }
+
+  getChangedItemData(itemData) {
+    // We do not include the ID as part of each item's data.
+    // The ID serves as the key referencing an object that contains the item's contents.
+    const changedItemData = {...itemData};
+    delete changedItemData.id;
+
+    if (this.getItem(itemData.id).type === PlaygroundItemType.IMAGE) {
+      if (itemData.filename) {
+        changedItemData.fileUrl = this.getUrl(itemData.filename);
+        // we don't need to pass filename as imageData
+        delete changedItemData.filename;
+      }
+    }
+
+    // No changes to itemData required for text items other than removing ID property.
+    return changedItemData;
   }
 
   playSound(soundData) {
@@ -249,7 +274,11 @@ export default class Playground {
     this.isGameRunning = false;
   }
 
-  imageItemExists(itemData) {
+  itemExists(itemData) {
     return getItemIds(getStore().getState().playground).includes(itemData.id);
+  }
+
+  getItem(itemId) {
+    return getStore().getState().playground.itemData[itemId];
   }
 }

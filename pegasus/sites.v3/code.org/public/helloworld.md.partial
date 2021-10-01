@@ -1,0 +1,26 @@
+---
+title: Hello World
+video_player: true
+theme: responsive
+style_min: true
+---
+
+# Choose your Hello World theme
+
+{{ spritelab_module, title: "Happy Food", color: "#C14790", image: "images/csc/helloworld/module0.png", url: "/about" }}
+{{ spritelab_module, title: "Animals", color: "#00ADBC", image: "images/csc/helloworld/module0.png", url: "/" }}
+{{ spritelab_module, title: "Retro", color: "#FFA400", image: "images/csc/helloworld/module0.png", url: "/" }}
+{{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/module0.png", url: "/" }}
+
+{{ teacher_info, heading: "Teacher Info", title: "How to continue learning after Hello World", description: "Description goes here.", button_text: "Learn more" }}
+
+## Featured Student Creations
+
+{{ featured_project, title: "Coin color", author: "M", age: "13+", image: "images/csc/helloworld/creation0.png", url: "/about" }}
+{{ featured_project, title: "Real world simulation", author: "D", age: "8+", image: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, title: "ROBOT", author: "B", age: "18+", image: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, title: "EVADE", author: "W", age: "13+", image: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, title: "Protect the castle", author: "S", age: "8+", image: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, title: "Remix: my project", author: "K", age: "8+", image: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, title: "ping pong", author: "V", age: "18+", image: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, title: "First agme", author: "C", age: "13+", image: "images/csc/helloworld/creation0.png", url: "/" }}
