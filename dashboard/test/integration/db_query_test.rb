@@ -109,7 +109,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(script)
     sign_in student
 
-    assert_cached_queries(10) do
+    assert_cached_queries(8) do
       get "/s/#{script.name}"
       assert_response :success
     end
