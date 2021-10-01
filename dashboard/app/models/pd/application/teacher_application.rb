@@ -121,21 +121,18 @@ module Pd::Application
 
     # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
-      self.class.year
+      application_year
     end
 
-    def self.year
-      ActiveApplicationModels::APPLICATION_CURRENT_YEAR
-    end
-
-    def self.next_year
-      ActiveApplicationModels::APPLICATION_NEXT_YEAR
+    def self.next_year(year)
+      current_year_index = APPLICATION_YEARS.index(year)
+      current_year_index >= 0 ? APPLICATION_YEARS[current_year_index + 1] : nil
     end
 
     # @override
     def set_type_and_year
       self.application_type = TEACHER_APPLICATION
-      self.application_year = year
+      self.application_year = ActiveApplicationModels::APPLICATION_CURRENT_YEAR unless application_year
     end
 
     def set_course_from_program
@@ -422,7 +419,7 @@ module Pd::Application
     end
 
     # @override
-    def self.options
+    def self.options(year = APPLICATION_CURRENT_YEAR)
       {
         country: [
           'United States',
@@ -588,7 +585,7 @@ module Pd::Application
         plan_to_teach: [
           "Yes, I plan to teach this course this year (#{year}) and my administrator approves of me teaching the course",
           "I hope to teach this course this year (#{year}) but it is not yet on the master schedule and/or my administrator has not confirmed that I will be assigned to this course",
-          "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (#{next_year})",
+          "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (#{next_year(year)})",
           "No, someone else from my school will teach this course this year (#{year})",
           TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
         ],
@@ -974,8 +971,8 @@ module Pd::Application
     def auto_score!
       responses = sanitize_form_data_hash
 
-      options = self.class.options
-      principal_options = Pd::Application::PrincipalApprovalApplication.options
+      options = self.class.options(year)
+      principal_options = Pd::Application::PrincipalApprovalApplication.options(year)
 
       meets_minimum_criteria_scores = {}
       meets_scholarship_criteria_scores = {}
