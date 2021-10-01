@@ -277,6 +277,7 @@ module ScriptConstants
     ODOMETER = 'odometer'.freeze,
     OUTBREAK = 'outbreak'.freeze,
     PIXELATION = 'pixelation'.freeze,
+    POETRY = 'poetry'.freeze,
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
     K5_ONLINEPD = 'K5-OnlinePD'.freeze,
