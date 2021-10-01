@@ -9,10 +9,6 @@ import color from '@cdo/apps/util/color';
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression
 }) {
-  //const [name, setName] = useState(initialProgrammingExpression.name);
-  //const [shortDescription, setShortDescription] = useState(
-  //  initialProgrammingExpression.shortDescription
-  //);
   const [programmingExpression, setProgrammingExpression] = useState({
     ...initialProgrammingExpression,
     id: null,
@@ -54,7 +50,7 @@ export default function ProgrammingExpressionEditor({
 
   return (
     <div>
-      <h1>{`Editing ${initialProgrammingExpression.name}`}</h1>
+      <h1>{`Editing ${initialProgrammingExpression.key}`}</h1>
       <h2>
         This feature is in development. Please continue to use curriculum
         builder to edit code documentation.
