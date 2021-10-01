@@ -5,6 +5,7 @@ import Button from '@cdo/apps/templates/Button';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Tooltip from '@cdo/apps/templates/Tooltip';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgress, studentShape} from './types';
 
@@ -65,6 +66,31 @@ export default class SelectedStudentInfo extends React.Component {
     }
   };
 
+  renderPartners({partners, partnerCount}) {
+    // Three cases:
+    // - no known names: "3 other students"
+    // - exactly one partner whose name is known: "Student name"
+    // - all other cases: "Student name + 2" (with tooltip listing all known names)
+    if (partners.length === 0) {
+      return <div>{i18n.otherStudents({count: partnerCount})}</div>;
+    } else if (partners.length === 1 && partnerCount === 1) {
+      return <div>{partners[0]}</div>;
+    } else {
+      let tooltipText = partners.join(', ');
+      const anonymousPartnersCount = partnerCount - partners.length;
+      if (anonymousPartnersCount > 0) {
+        tooltipText +=
+          ' + ' + i18n.otherStudents({count: anonymousPartnersCount});
+      }
+
+      return (
+        <Tooltip text={tooltipText} place="bottom">
+          <div>{partners[0] + ' + ' + (partnerCount - 1)}</div>
+        </Tooltip>
+      );
+    }
+  }
+
   render() {
     const {selectedStudent, levelWithProgress} = this.props;
 
@@ -89,21 +115,7 @@ export default class SelectedStudentInfo extends React.Component {
       );
     }
 
-    const {
-      isDriver,
-      isNavigator,
-      driver,
-      navigators,
-      submitLevel,
-      status,
-      updatedAt
-    } = levelWithProgress;
-
-    const paired = isDriver || isNavigator;
-    const partner =
-      (isDriver && navigators && navigators[0]) ||
-      (isNavigator && driver) ||
-      i18n.pairingUnknownPartnerName();
+    const {paired, submitLevel, status, updatedAt} = levelWithProgress;
 
     return (
       <div style={styles.main}>
@@ -117,8 +129,7 @@ export default class SelectedStudentInfo extends React.Component {
           {paired && (
             <div>
               <div>{i18n.workedWith()}</div>
-              {isDriver && <div>{i18n.partner({partner: partner})}</div>}
-              {isNavigator && <div>{i18n.loggedIn({partner: partner})}</div>}
+              {this.renderPartners(levelWithProgress)}
             </div>
           )}
           <div style={styles.bubble}>
