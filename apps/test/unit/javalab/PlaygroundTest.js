@@ -171,52 +171,6 @@ describe('Playground', () => {
     verifyOnFileLoadError(assetFile);
   });
 
-  it("doesn't set background image if game is over", () => {
-    const exitMessage = {
-      value: PlaygroundSignalType.EXIT
-    };
-
-    const data = {
-      value: PlaygroundSignalType.SET_BACKGROUND_IMAGE,
-      detail: {
-        filename: 'filename'
-      }
-    };
-
-    playground.handleSignal(exitMessage);
-
-    verifyDefaultMediaElementState(backgroundElement);
-    expect(backgroundElement.style.opacity).to.equal(0);
-
-    playground.handleSignal(data);
-
-    // Background should not update
-    verifyDefaultMediaElementState(backgroundElement);
-    expect(backgroundElement.style.opacity).to.equal(0);
-  });
-
-  it("doesn't play sound if game is over", () => {
-    const exitMessage = {
-      value: PlaygroundSignalType.EXIT
-    };
-
-    const data = {
-      value: PlaygroundSignalType.PLAY_SOUND,
-      detail: {
-        filename: 'filename'
-      }
-    };
-
-    playground.handleSignal(exitMessage);
-
-    verifyDefaultMediaElementState(audioElement);
-
-    playground.handleSignal(data);
-
-    // Audio element should not update
-    verifyDefaultMediaElementState(audioElement);
-  });
-
   it('resets the background image on reset()', () => {
     const data = {
       value: PlaygroundSignalType.SET_BACKGROUND_IMAGE,
