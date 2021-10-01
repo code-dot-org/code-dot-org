@@ -261,7 +261,8 @@ const styles = {
     marginTop: 4,
     textAlign: 'center',
     userSelect: 'none',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    fontSize: '13px'
   },
   nameInputWrapper: {
     marginLeft: 5,
