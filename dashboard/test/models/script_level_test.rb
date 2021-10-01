@@ -177,10 +177,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
       contained: false,
       submitLevel: false,
       paired: false,
-      isDriver: nil,
-      isNavigator: nil,
-      driver: nil,
-      navigators: nil,
+      partners: nil,
+      partnerCount: nil,
       isConceptLevel: false,
       userId: student.id,
       passed: false,
@@ -267,12 +265,17 @@ class ScriptLevelTest < ActiveSupport::TestCase
     )
     create :paired_user_level, driver_user_level: driver_ul, navigator_user_level: navigator_ul
 
+    # driver
     summary1 = sl.summarize_for_teacher_panel(student, teacher)
-    summary2 = sl.summarize_for_teacher_panel(student2, teacher)
     assert_equal true, summary1[:paired]
+    assert_equal [student2.name], summary1[:partners]
+    assert_equal 1, summary1[:partnerCount]
+
+    # navigator
+    summary2 = sl.summarize_for_teacher_panel(student2, teacher)
     assert_equal true, summary2[:paired]
-    assert_equal student.name, summary2[:driver]
-    assert_equal student2.name, summary1[:navigators][0]
+    assert_equal [student.name], summary2[:partners]
+    assert_equal 1, summary2[:partnerCount]
   end
 
   test 'teacher panel summarize for lesson extra' do
