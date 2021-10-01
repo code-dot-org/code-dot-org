@@ -2,5 +2,8 @@
   Default Poem
 
 #defaultPoem.in.collapse
-  = f.label :default_poem, 'Default Poem'
+  = render partial: 'levels/editors/fields/checkboxes',
+    locals: {f: f, field_name: :show_poem_dropdown,
+    description: "Show poem selector dropdown"}
+  = f.label :default_poem, 'Default Poem (Only applies if poem selector dropdown is shown)'
   = f.select :default_poem, options_for_select(@level.class.hoc_poems, @level.default_poem)

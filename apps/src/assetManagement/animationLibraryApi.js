@@ -17,7 +17,7 @@ export function getManifest(appType, locale = 'en_us') {
 
 // Returns the list of default sprites in SpriteLab in English
 export function getDefaultList() {
-  return fetch(`/api/v1/animation-library/default-spritelab`).then(response =>
+  return fetch('/api/v1/animation-library/default-spritelab').then(response =>
     response.json()
   );
 }
@@ -46,6 +46,13 @@ export function updateDefaultList(listData) {
     .catch(err => {
       return Promise.reject(err);
     });
+}
+
+// Returns the metadata of the list of default sprites in SpriteLab in English
+export function getDefaultListMetadata() {
+  return fetch('/api/v1/animation-library/default-spritelab-metadata').then(
+    response => response.json()
+  );
 }
 
 export function createDefaultSpriteMetadata(listData) {
