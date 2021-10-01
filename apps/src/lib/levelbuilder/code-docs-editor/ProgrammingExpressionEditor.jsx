@@ -15,9 +15,7 @@ export default function ProgrammingExpressionEditor({
     key: null
   });
   const [isSaving, setIsSaving] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState(
-    initialProgrammingExpression.lastUpdated
-  );
+  const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
 
   const save = () => {
@@ -34,11 +32,10 @@ export default function ProgrammingExpressionEditor({
       body: JSON.stringify(programmingExpression)
     })
       .then(response => {
+        setIsSaving(false);
         if (response.ok) {
-          setIsSaving(false);
           setLastUpdated(Date.now());
         } else {
-          setIsSaving(false);
           setError(response.statusText);
         }
       })
