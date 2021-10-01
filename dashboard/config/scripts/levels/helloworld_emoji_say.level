@@ -25,7 +25,7 @@
     "disable_examples": "false",
     "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
-    "free_play": "true",
+    "free_play": "false",
     "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
@@ -63,11 +63,12 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Use the `say` block to make me say whatever you like!",
     "instructions_icon": "emoji",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To make the emoji say something, connect the blocks of code like this:\\n\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\"><next>  <block type=\\\"gamelab_makeNewSpriteAnon\\\">\\n    <title name=\\\"ANIMATION_NAME\\\">\\\"emoji_19\\\"</title>\\n    <value name=\\\"LOCATION\\\">\\n      <block type=\\\"gamelab_location_picker\\\">\\n        <title name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</title>\\n      </block>\\n    </value><next>  <block type=\\\"gamelab_spriteSay\\\">\\n    <title name=\\\"SPEECH\\\">Hello, world!</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"emoji_19\\\"</title>\\n      </block>\\n    </value>\\n  </block></next>\\n  </block></next></block>\\n</xml>\",\"hint_id\":\"hello-world-first-solution-emoji\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6c93148c4e69b5083075c61ba3d63ae3/helloworld_emoji_say.mp3\"}]",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To make the emoji say something, connect the blocks of code like this:\\n\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\"><next>  <block type=\\\"gamelab_makeNewSpriteAnon\\\">\\n    <title name=\\\"ANIMATION_NAME\\\">\\\"emoji_19\\\"</title>\\n    <value name=\\\"LOCATION\\\">\\n      <block type=\\\"gamelab_location_picker\\\">\\n        <title name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</title>\\n      </block>\\n    </value><next>  <block type=\\\"gamelab_spriteSay\\\">\\n    <title name=\\\"SPEECH\\\">Hello, world!</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"emoji_19\\\"</title>\\n      </block>\\n    </value>\\n  </block></next>\\n  </block></next></block>\\n</xml>\",\"hint_id\":\"hello-world-first-solution-emoji\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6c93148c4e69b5083075c61ba3d63ae3/helloworld_emoji_say.mp3\"}]"
+    "video_key": "hello_world_intro"
   },
   "game_id": 64,
   "published": true,
@@ -75,7 +76,7 @@
   "level_num": "custom",
   "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-13T20:17:45.173+00:00\",\"changed\":[\"cloned from \\\"helloworld_animals_say\\\"\"],\"cloned_from\":\"helloworld_animals_say\"},{\"changed_at\":\"2021-09-13 20:17:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:18:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 17:44:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 17:48:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 18:12:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 17:01:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-13T20:17:45.173+00:00\",\"changed\":[\"cloned from \\\"helloworld_animals_say\\\"\"],\"cloned_from\":\"helloworld_animals_say\"},{\"changed_at\":\"2021-09-13 20:17:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:18:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 17:44:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 17:48:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 18:12:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 17:01:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-29 14:26:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-30 13:48:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

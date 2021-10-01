@@ -1,8 +1,18 @@
+import msg from '@cdo/poetry/locale';
 import {P5LabType} from '../constants';
 import SpriteLab from '../spritelab/SpriteLab';
 import PoetryLibrary from './PoetryLibrary';
 
 export default class Poetry extends SpriteLab {
+  getAvatarUrl(levelInstructor) {
+    const defaultAvatar = 'octi';
+    return `/blockly/media/poetry/${levelInstructor || defaultAvatar}.png`;
+  }
+
+  getMsg() {
+    return msg;
+  }
+
   getLabType() {
     return P5LabType.POETRY;
   }
