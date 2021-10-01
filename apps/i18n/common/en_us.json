@@ -1990,7 +1990,7 @@
   "unassignConfirm": "Unassign",
   "unassigning": "Unassigning",
   "unassignSection": "Unassign {courseName}?",
-  "unassignSectionConfirm": "Your students in {sectionName} will no longer be taken to {CourseName} when they sign in.",
+  "unassignSectionConfirm": "Your students in {sectionName} will no longer be taken to {courseName} when they sign in.",
   "uncompletedLessons": "Lesson not completed",
   "unsubmit": "Unsubmit",
   "unsubmitAssessment": "Unsubmit your assessment",

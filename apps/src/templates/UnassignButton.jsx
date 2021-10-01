@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import Button from './Button';
 import i18n from '@cdo/locale';
 import {unassignSection} from '@cdo/apps/templates/teacherDashboard/unassignButtonRedux';
+import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import {UnassignSectionDialog} from '@cdo/apps/src/templates';
 
 class UnassignButton extends React.Component {
@@ -11,6 +13,8 @@ class UnassignButton extends React.Component {
     sectionId: PropTypes.number.isRequired,
     showUnassignDialog: PropTypes.bool,
     // Redux
+    sectionName: PropTypes.string.isRequired,
+    courseName: PropTypes.string.isRequired,
     unassignSection: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
   };
@@ -39,7 +43,13 @@ class UnassignButton extends React.Component {
 
   render() {
     const {text, icon} = this.state;
-    const {isRtl, showUnassignDialog, sectionId} = this.props;
+    const {
+      isRtl,
+      courseName,
+      sectionName,
+      showUnassignDialog,
+      sectionId
+    } = this.props;
 
     // Adjust styles if locale is RTL
     const buttonMarginStyle = isRtl
@@ -62,6 +72,8 @@ class UnassignButton extends React.Component {
         />
         {showUnassignDialog && (
           <UnassignSectionDialog
+            courseName={courseName}
+            sectionName={sectionName}
             isOpen={true}
             sectionId={sectionId}
             onClose={this.toggleUnassignDialog}
@@ -91,7 +103,9 @@ export const UnconnectedUnassignButton = UnassignButton;
 
 export default connect(
   state => ({
-    isRtl: state.isRtl
+    isRtl: state.isRtl,
+    sectionName: sectionName(state, this.props.sectionId),
+    courseName: getSelectedScriptFriendlyName(state)
   }),
   unassignSection
 )(UnassignButton);
