@@ -10,8 +10,9 @@ require 'cdo/profanity_filter'
 require 'rest-client'
 
 BASE_URL = 'https://api.spotify.com/v1'
+TOKEN_URL = 'https://accounts.spotify.com/api/token'
 
-#PLAYLIST IDs
+# PLAYLIST IDs
 VIRAL_50_GLOBAL_ID = '37i9dQZEVXbLiRSasKsNU9'
 VIRAL_50_USA_ID = '37i9dQZEVXbKuaTI1Z1Afx'
 TOP_50_GLOBAL_ID = '37i9dQZEVXbMDoHDwVN2tF'
@@ -29,7 +30,6 @@ def get_token
   client_secret = CDO.spotify_api_client_secret
 
   begin
-    url = "https://accounts.spotify.com/api/token"
     headers = {
       'authorization' => 'Basic ' + Base64.strict_encode64(client_id + ':' + client_secret),
       'content-type' => 'application/x-www-form-urlencoded',
@@ -37,7 +37,7 @@ def get_token
     form = {
       'grant_type' => 'client_credentials'
     }
-    auth_response = JSON.parse(RestClient.post(url, form, headers))
+    auth_response = JSON.parse(RestClient.post(TOKEN_URL, form, headers))
     $token = auth_response['access_token']
   rescue RestClient::Exception => e
     Honeybadger.notify(
@@ -64,6 +64,7 @@ def get_playlist_data(chart_type, playlist_id)
       error_message: "Failed to retrieve playlist data from Spotify for use in App Lab Datasets.",
       context: {
         playlist_id: playlist_id,
+        chart_type: chart_type
       }
     )
     return
@@ -71,9 +72,7 @@ def get_playlist_data(chart_type, playlist_id)
 
   items = JSON.parse(response)['tracks']['items']
   columns = ['id', 'Track Name', 'Artist', 'Position', 'URL']
-  if chart_type === CHART_TYPE[:TOP]
-    columns.insert(4, 'Popularity')   # Only include Popularity for Top Charts
-  end
+  columns.insert(4, 'Popularity') if chart_type === CHART_TYPE[:TOP] # Only include Popularity for Top Charts
 
   regex = generate_profanity_regex(items)
   records = {}
@@ -81,14 +80,14 @@ def get_playlist_data(chart_type, playlist_id)
 
   items.each do |item|
     track = item['track']
-    next if track.nil? || regex&.match?(get_string_to_check(track)) # skip track if it is nil or contains profanity
+    next if track.nil? || regex&.match?(get_track_info_string(track)) # Skip track if it is nil or contains profanity
 
     record = OpenStruct.new
     record.id = id
     record.Position = id
     record['Track Name'] = track['name']
-    record.Artist = track['artists'][0]['name'] # first will be main artist, featured artists included in record name
-    if chart_type === CHART_TYPE[:TOP] then record.Popularity = track['popularity'] end
+    record.Artist = track['artists'][0]['name'] # First will be main artist, featured artists included in record name
+    record.Popularity = track['popularity'] if chart_type === CHART_TYPE[:TOP]
     record.URL = track['href']
 
     records[id] = record.to_h.to_json
@@ -99,18 +98,15 @@ def get_playlist_data(chart_type, playlist_id)
 end
 
 # Only check artist and track names for profanity
-def get_string_to_check(track)
-  if track.nil?
-    return ""
-  else
-    return "#{track['name']} - #{track['artists'][0]['name']} "
-  end
+def get_track_info_string(track)
+  return '' if track.nil?
+  "#{track['name']} - #{track['artists'][0]['name']} "
 end
 
 # Generates a case-insensitive regex of profanities in the entire dataset
 # to match each item against.
 def generate_profanity_regex(items)
-  str = items.reduce('') {|acc, item| acc + get_string_to_check(item['track'])}
+  str = items.reduce('') {|acc, item| acc + get_track_info_string(item['track'])}
   profanities = ProfanityFilter.find_potential_profanities(str, PROFANITY_LOCALE) || []
   profanities.empty? ? nil : /(#{profanities.join("|")})/i
 end
