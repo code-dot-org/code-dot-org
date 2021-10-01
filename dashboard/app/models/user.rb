@@ -2361,32 +2361,33 @@ class User < ApplicationRecord
       locale: read_attribute(:locale),
       account_age_in_years: account_age_in_years,
       grades: grades_being_taught.any? ? grades_being_taught.to_json : nil,
-      courses: courses_being_taught.any? ? courses_being_taught.to_json : nil,
+      curriculums: curriculums_being_taught.any? ? curriculums_being_taught.to_json : nil,
       has_attended_pd: has_attended_pd?,
       within_us: within_united_states?,
       school_percent_frl: school_stats&.frl_eligible_total,
       school_title_i: school_stats&.title_i_status
-    }.compact
+    }
   end
 
   def self.marketing_segment_data_keys
-    %w(locale account_age_in_years grades courses has_attended_pd within_usschool_percent_frl school_title_i)
+    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl school_title_i)
   end
 
   private
 
   def account_age_in_years
-    ((Time.now - created_at.to_time) / 1.year).floor
+    ((Time.now - created_at.to_time) / 1.year).round
   end
 
   # Returns a list of all grades that the teacher currently has sections for
   def grades_being_taught
-    sections.map(&:grade).uniq
+    @grades_being_taught ||= sections.map(&:grade).uniq
   end
 
-  # Returns a list of all courses that the teacher currently has sections for
-  def courses_being_taught
-    sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
+  # Returns a list of all curriculums that the teacher currently has sections for
+  # ex: ["csf", "csd"]
+  def curriculums_being_taught
+    @curriculums_being_taught ||= sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
   end
 
   def has_attended_pd?

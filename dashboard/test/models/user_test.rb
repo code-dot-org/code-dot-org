@@ -4536,8 +4536,8 @@ class UserTest < ActiveSupport::TestCase
 
   test 'marketing_segment_data returns expected account age for teacher' do
     teacher = create :teacher, created_at: 20.months.ago
-    # 20 months = 1.66 years -> 1 full year
-    assert_equal 1, teacher.marketing_segment_data[:account_age_in_years]
+    # 20 months = 1.66 years rounds to 2 years
+    assert_equal 2, teacher.marketing_segment_data[:account_age_in_years]
   end
 
   test 'marketing_segment_data returns expected locale' do
@@ -4562,21 +4562,21 @@ class UserTest < ActiveSupport::TestCase
     assert_nil teacher.marketing_segment_data[:grades]
   end
 
-  test 'marketing_segment_data returns expected courses for teacher with sections' do
+  test 'marketing_segment_data returns expected curriculums for teacher with sections' do
     teacher = create :teacher
     csf_script = create :csf_script
     csd_script = create :csd_script
     create :section, user: teacher, script: csf_script
     create :section, user: teacher, script: csd_script
 
-    expected_courses = ["CSF", "CSD"]
-    marketing_segment_courses = JSON.parse(teacher.marketing_segment_data[:courses])
-    assert_equal expected_courses.sort, marketing_segment_courses.sort
+    expected_curriculums = ["CSF", "CSD"]
+    marketing_segment_curriculums = JSON.parse(teacher.marketing_segment_data[:curriculums])
+    assert_equal expected_curriculums.sort, marketing_segment_curriculums.sort
   end
 
-  test 'marketing_segment_data does not return courses for teacher with no sections' do
+  test 'marketing_segment_data does not return curriculums for teacher with no sections' do
     teacher = create :teacher
-    assert_nil teacher.marketing_segment_data[:courses]
+    assert_nil teacher.marketing_segment_data[:curriculums]
   end
 
   test 'marketing_segment_data returns expected value for has_attended_pd' do
@@ -4607,5 +4607,10 @@ class UserTest < ActiveSupport::TestCase
     school_info = create :school_info, school: school
     teacher = create :teacher, school_info: school_info
     assert_equal title_i_status, teacher.marketing_segment_data[:school_title_i]
+  end
+
+  test "marketing_segment_data returns the same keys as marketing_segment_data_keys" do
+    teacher = create :teacher
+    assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
   end
 end
