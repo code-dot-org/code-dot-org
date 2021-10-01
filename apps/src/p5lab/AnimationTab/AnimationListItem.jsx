@@ -234,7 +234,7 @@ const styles = {
 
     // Provide vertical padding because we flow vertically, but require
     // children to use margins horizontally.
-    padding: '4px 0px 4px 0px',
+    padding: '4px 0px',
 
     // Allows looping button to display relative to whole card
     position: 'relative',
