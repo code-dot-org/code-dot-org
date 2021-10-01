@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Button from './Button';
 import i18n from '@cdo/locale';
-import {unassignSection} from '@cdo/apps/templates/teacherDashboard/unassignButtonRedux';
-import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  unassignSection,
+  sectionName
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
-import {UnassignSectionDialog} from '@cdo/apps/src/templates';
+import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 
 class UnassignButton extends React.Component {
   static propTypes = {
