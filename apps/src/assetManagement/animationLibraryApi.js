@@ -48,7 +48,7 @@ export function updateDefaultList(listData) {
     });
 }
 
-export function uploadDefaultListMetadata(metadata, environment) {
+function uploadDefaultListMetadata(metadata, environment) {
   return fetch(
     `/api/v1/animation-library/default-spritelab-metadata/${environment}`,
     {
@@ -122,7 +122,7 @@ export function createDefaultSpriteMetadata(listData) {
   });
 }
 
-// Regenerates the metadata for the default list of sprites in SpriteLab
+// Regenerates the metadata for the default list of sprites in SpriteLab and uploads it to S3
 export function regenerateDefaultSpriteMetadata(listData) {
   return createDefaultSpriteMetadata(listData).then(defaultMetadata => {
     return uploadDefaultListMetadata(defaultMetadata, 'levelbuilder');
