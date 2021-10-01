@@ -9,7 +9,6 @@ module Pd
       # - two scripts (teacher_applications_to_gdrive and scheduled_pd_application_emails) use the constant
       # - used for regional partner workshop enrollment counts
       APPLICATION_CURRENT_YEAR = Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR
-      APPLICATION_NEXT_YEAR = Pd::SharedApplicationConstants::APPLICATION_NEXT_YEAR
 
       # Active (this year's) application classes and factories
       TEACHER_APPLICATION_CLASS = TeacherApplication
