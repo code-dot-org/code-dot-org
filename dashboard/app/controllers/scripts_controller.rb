@@ -43,9 +43,11 @@ class ScriptsController < ApplicationController
     @redirect_unit_url = @script.redirect_to_unit_url(current_user, locale: request.locale)
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
-    @section = current_user&.sections&.all&.find {|s| s.id == params[:section_id]}&.summarize
-    sections = current_user.try {|u| u.sections.all.reject(&:hidden).map {|s| s.slice(:id, :name, :script_id, :course_id)}}
-    @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
+    unless current_user&.student?
+      @section = current_user&.sections&.all&.find {|s| s.id == params[:section_id]}&.summarize
+      sections = current_user.try {|u| u.sections.all.reject(&:hidden).map {|s| s.slice(:id, :name, :script_id, :course_id)}}
+      @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
+    end
 
     @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !@script.is_course
     session[:show_unversioned_redirect_warning] = false
