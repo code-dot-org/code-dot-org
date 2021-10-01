@@ -215,6 +215,7 @@ module Api::V1::Pd
     def get_applications_by_role(role, include_associations: true)
       applications_of_type = @applications.where(type: TYPES_BY_ROLE[role].try(&:name))
       applications_of_type = applications_of_type.includes(:user, :regional_partner) if include_associations
+      applications_of_type = applications_of_type.where(application_year: APPLICATION_CURRENT_YEAR)
 
       case role
       when :csf_facilitators
@@ -224,11 +225,11 @@ module Api::V1::Pd
       when :csp_facilitators
         return applications_of_type.csp
       when :csd_teachers
-        return applications_of_type.csd.where(application_year: APPLICATION_CURRENT_YEAR)
+        return applications_of_type.csd
       when :csp_teachers
-        return applications_of_type.csp.where(application_year: APPLICATION_CURRENT_YEAR)
+        return applications_of_type.csp
       when :csa_teachers
-        return applications_of_type.csa.where(application_year: APPLICATION_CURRENT_YEAR)
+        return applications_of_type.csa
       else
         raise ActiveRecord::RecordNotFound
       end
