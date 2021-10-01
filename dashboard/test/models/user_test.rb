@@ -4516,17 +4516,17 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, user.properties['section_attempts']
   end
 
-  test 'school returns the school associated with the user' do
+  test 'school_info_school returns the school associated with the user' do
     school = create :school
     school_info = create :school_info, school: school
     user = create :teacher, school_info: school_info
 
-    assert_equal school.id, user.school.id
+    assert_equal school.id, user.school_info_school.id
   end
 
-  test 'school returns nil if user has no school association' do
+  test 'school_info_school returns nil if user has no school association' do
     user = create :teacher
-    assert_nil user.school
+    assert_nil user.school_info_school
   end
 
   test 'marketing_segment_data returns nil if user is not a teacher' do
