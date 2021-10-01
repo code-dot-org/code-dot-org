@@ -35,10 +35,8 @@ class ReviewTab extends Component {
     reviewableProjectId: '',
     loadingReviewableState: false,
     errorSavingReviewableProject: false,
-    errorLoadingReviewablePeers: false,
     comments: [],
     forceRecreateEditorKey: 0,
-    reviewablePeers: [],
     projectOwnerName: '',
     authorizationError: false,
     commentSaveError: false,
@@ -66,13 +64,7 @@ class ReviewTab extends Component {
     `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
 
   componentDidMount() {
-    const {
-      channelId,
-      serverLevelId,
-      serverScriptId,
-      viewAsCodeReviewer,
-      viewAsTeacher
-    } = this.props;
+    const {channelId, serverLevelId, serverScriptId} = this.props;
 
     // If there's no channelId (happens when a teacher is viewing as a student who has not done any work on a level),
     // do not make API calls that require a channelId
@@ -114,19 +106,6 @@ class ReviewTab extends Component {
         })
     );
 
-    if (!(viewAsCodeReviewer || viewAsTeacher)) {
-      initialLoadPromises.push(
-        this.dataApi
-          .getReviewablePeers()
-          .done(data => this.setState({reviewablePeers: data}))
-          .fail(() => {
-            this.setState({
-              errorLoadingReviewablePeers: true
-            });
-          })
-      );
-    }
-
     Promise.all(initialLoadPromises).finally(() => {
       this.setState({initialLoadCompleted: true});
     });
@@ -137,6 +116,13 @@ class ReviewTab extends Component {
       this.props.onLoadComplete();
     }
   }
+
+  loadPeers = (onSuccess, onFailure) => {
+    this.dataApi
+      .getReviewablePeers()
+      .done(onSuccess)
+      .fail(onFailure);
+  };
 
   onNewCommentCancel = () => {
     this.setState({
@@ -363,9 +349,7 @@ class ReviewTab extends Component {
       isReadyForReview,
       errorSavingReviewableProject,
       projectOwnerName,
-      reviewCheckboxEnabled,
-      reviewablePeers,
-      errorLoadingReviewablePeers
+      reviewCheckboxEnabled
     } = this.state;
 
     // channelId is not available on projects where the student has not edited the starter code.
@@ -392,11 +376,10 @@ class ReviewTab extends Component {
           {codeReviewEnabled && !viewAsTeacher && (
             <>
               <ReviewNavigator
-                peers={reviewablePeers}
                 onSelectPeer={this.onSelectPeer}
                 onReturnToProject={this.onClickBackToProject}
                 viewPeerList={!viewAsCodeReviewer}
-                loadError={errorLoadingReviewablePeers}
+                loadPeers={this.loadPeers}
               />
               {reviewCheckboxEnabled &&
                 !viewAsCodeReviewer &&
