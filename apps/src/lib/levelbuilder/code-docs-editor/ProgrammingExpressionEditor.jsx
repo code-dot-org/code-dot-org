@@ -6,14 +6,31 @@ import {navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
+function useProgrammingExpression(initialProgrammingExpression) {
+  const [programmingExpression, setProgrammingExpression] = useState(
+    initialProgrammingExpression
+  );
+
+  function updateProgrammingExpression(key, value) {
+    setProgrammingExpression({...programmingExpression, [key]: value});
+  }
+
+  return [programmingExpression, updateProgrammingExpression];
+}
+
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression
 }) {
-  const [programmingExpression, setProgrammingExpression] = useState({
-    ...initialProgrammingExpression,
-    id: null,
-    key: null
-  });
+  // We don't want to update id or key
+  const {
+    id,
+    key,
+    ...remainingProgrammingExpression
+  } = initialProgrammingExpression;
+  const [
+    programmingExpression,
+    updateProgrammingExpression
+  ] = useProgrammingExpression(remainingProgrammingExpression);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -23,7 +40,7 @@ export default function ProgrammingExpressionEditor({
       return;
     }
     setIsSaving(true);
-    fetch(`/programming_expressions/${initialProgrammingExpression.id}`, {
+    fetch(`/programming_expressions/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
@@ -47,7 +64,7 @@ export default function ProgrammingExpressionEditor({
 
   return (
     <div>
-      <h1>{`Editing ${initialProgrammingExpression.key}`}</h1>
+      <h1>{`Editing ${key}`}</h1>
       <h2>
         This feature is in development. Please continue to use curriculum
         builder to edit code documentation.
@@ -57,7 +74,7 @@ export default function ProgrammingExpressionEditor({
         <input
           value={programmingExpression.name}
           onChange={e =>
-            setProgrammingExpression({
+            updateProgrammingExpression({
               ...programmingExpression,
               name: e.target.value
             })
@@ -67,17 +84,13 @@ export default function ProgrammingExpressionEditor({
       </label>
       <label>
         Key (Used in URLs)
-        <input
-          value={initialProgrammingExpression.key}
-          readOnly
-          style={styles.textInput}
-        />
+        <input value={key} readOnly style={styles.textInput} />
       </label>
       <TextareaWithMarkdownPreview
         markdown={programmingExpression.shortDescription}
         label={'Short Description'}
         handleMarkdownChange={e =>
-          setProgrammingExpression({
+          updateProgrammingExpression({
             ...programmingExpression,
             shortDescription: e.target.value
           })
