@@ -27,7 +27,7 @@ describe('ProgrammingExpressionEditor', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<ProgrammingExpressionEditor {...defaultProps} />);
-    expect(wrapper.contains('Editing Block')).to.be.true;
+    expect(wrapper.contains('Editing block')).to.be.true;
 
     // Display name
     expect(
