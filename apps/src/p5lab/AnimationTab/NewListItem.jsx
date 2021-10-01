@@ -43,7 +43,7 @@ const styles = {
     width: '100%',
     padding: 0,
     paddingBottom: 4,
-    marginBottom: 4,
+    marginBottom: 0,
     boxShadow: 'none',
     ':hover': {
       cursor: 'pointer'
