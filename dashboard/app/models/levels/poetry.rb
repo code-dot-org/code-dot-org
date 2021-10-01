@@ -26,6 +26,7 @@
 
 class Poetry < GamelabJr
   serialized_attrs %w(
+    show_poem_dropdown
     default_poem
   )
 
@@ -62,6 +63,7 @@ class Poetry < GamelabJr
   # Used by levelbuilders to set a default poem on a Poetry level.
   def self.hoc_poems
     [
+      ['', ''],
       ['My Brilliant Image', 'hafez'],
       ['Twinkle, Twinkle Little Star', 'carroll_1'],
       ['Crocodile', 'carroll_2'],
