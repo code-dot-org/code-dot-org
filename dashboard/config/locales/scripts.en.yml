@@ -26414,3 +26414,16 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Sprite Effect Challenge
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: spritelab-effects-challenge
+          title: Sprite Effect Challenge
+          description_audience: Intermediate/advanced users of Sprite Lab
+          description_short: Take the challenge to create your own sprite effect using Sprite Lab!
+          description: ''
+          student_description: ''
