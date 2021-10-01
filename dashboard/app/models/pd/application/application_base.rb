@@ -37,7 +37,6 @@
 require 'state_abbr'
 
 # Base class for the Pd application forms.
-# Make sure to use a derived class for a specific application type and year.
 # This on its own will fail validation.
 module Pd::Application
   class ApplicationBase < ApplicationRecord
