@@ -114,7 +114,10 @@ class CourseScript extends Component {
             />
             {isAssigned && viewAs === ViewType.Student && <Assigned />}
             {isAssigned && viewAs === ViewType.Teacher && selectedSectionId && (
-              <UnassignButton sectionId={selectedSectionId} />
+              <UnassignButton
+                showUnassignDialog={false}
+                sectionId={selectedSectionId}
+              />
             )}
             {!isAssigned &&
               viewAs === ViewType.Teacher &&

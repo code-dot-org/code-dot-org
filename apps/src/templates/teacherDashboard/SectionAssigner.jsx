@@ -52,7 +52,10 @@ class SectionAssigner extends Component {
             scriptId={scriptId}
           />
           {selectedSection && selectedSection.isAssigned && (
-            <UnassignButton sectionId={selectedSection.id} />
+            <UnassignButton
+              showUnassignDialog={false}
+              sectionId={selectedSection.id}
+            />
           )}
           {selectedSection &&
             !selectedSection.isAssigned &&
