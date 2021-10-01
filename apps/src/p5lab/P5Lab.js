@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
-import {P5LabInterfaceMode, P5LabType, APP_WIDTH} from './constants';
+import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {
   SpritelabReservedWords,
   valueTypeTabShapeMap
@@ -236,24 +236,11 @@ export default class P5Lab {
     this.isBlockly = this.studioApp_.isUsingBlockly();
 
     this.skin = config.skin;
-    let mediaUrl;
-    switch (this.getLabType()) {
-      case P5LabType.GAMELAB:
-        mediaUrl = null;
-        break;
-      case P5LabType.SPRITELAB:
-        mediaUrl = `/blockly/media/spritelab/${config.level.instructionsIcon ||
-          'avatar'}.png`;
-        break;
-      case P5LabType.POETRY:
-        mediaUrl = `/blockly/media/poetry/${config.level.instructionsIcon ||
-          'avatar'}.png`;
-        break;
-    }
-    this.skin.smallStaticAvatar = mediaUrl;
-    this.skin.staticAvatar = mediaUrl;
-    this.skin.winAvatar = mediaUrl;
-    this.skin.failureAvatar = mediaUrl;
+    const avatarUrl = this.getAvatarUrl(config.level.instructionsIcon);
+    this.skin.smallStaticAvatar = avatarUrl;
+    this.skin.staticAvatar = avatarUrl;
+    this.skin.winAvatar = avatarUrl;
+    this.skin.failureAvatar = avatarUrl;
 
     if (this.isBlockly) {
       // SpriteLab projects don't allow users to include dpad controls
