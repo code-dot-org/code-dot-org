@@ -133,7 +133,8 @@ Javalab.prototype.init = function(config) {
         this.onOutputMessage,
         this.onNewlineMessage,
         onJavabuilderMessage,
-        this.level.name
+        this.level.name,
+        this.setIsRunning
       );
       this.visualization = <PlaygroundVisualizationColumn />;
       break;

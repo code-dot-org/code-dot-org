@@ -9,6 +9,11 @@ import {clearPrompts, popPrompt} from '../redux/spritelabInput';
 import CoreLibrary from './CoreLibrary';
 
 export default class SpriteLab extends P5Lab {
+  getAvatarUrl(levelInstructor) {
+    const defaultAvatar = 'avatar';
+    return `/blockly/media/spritelab/${levelInstructor || defaultAvatar}.png`;
+  }
+
   getMsg() {
     return msg;
   }
