@@ -4,6 +4,7 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
+import color from '@cdo/apps/util/color';
 
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression
@@ -20,22 +21,28 @@ export default function ProgrammingExpressionEditor({
 
   useEffect(() => {
     if (isSaving) {
-      $.ajax({
-        url: `/programming_expressions/${initialProgrammingExpression.id}`,
+      fetch(`/programming_expressions/${initialProgrammingExpression.id}`, {
         method: 'PUT',
-        dataType: 'json',
-        contentType: 'application/json;charset=UTF-8',
-        data: JSON.stringify({
+        headers: {
+          'content-type': 'application/json',
+          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        },
+        body: JSON.stringify({
           id: initialProgrammingExpression.id,
           name: name,
           shortDescription: shortDescription
         })
       })
-        .done(data => {
-          setIsSaving(false);
-          setLastUpdated(Date.now());
+        .then(response => {
+          if (response.ok) {
+            setIsSaving(false);
+            setLastUpdated(Date.now());
+          } else {
+            setIsSaving(false);
+            setError(response.statusText);
+          }
         })
-        .fail(error => {
+        .catch(error => {
           setIsSaving(false);
           setError(error.responseText);
         });
@@ -101,7 +108,7 @@ const styles = {
     boxSizing: 'border-box',
     padding: '4px 6px',
     color: '#555',
-    border: '1px solid #ccc',
+    border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     margin: 0
   },
@@ -109,7 +116,7 @@ const styles = {
     boxSizing: 'border-box',
     padding: '4px 6px',
     color: '#555',
-    border: '1px solid #ccc',
+    border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     marginLeft: 5
   }
