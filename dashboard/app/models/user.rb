@@ -2071,8 +2071,10 @@ class User < ApplicationRecord
     TERMS_OF_SERVICE_VERSIONS.last
   end
 
-  def school
-    @school ||= Queries::SchoolInfo.last_complete(self)&.school
+  # Ideally this would just be called school, but school is already a column
+  # on the user table representing the school name
+  def school_info_school
+    Queries::SchoolInfo.last_complete(self)&.school
   end
 
   def show_census_teacher_banner?
@@ -2084,7 +2086,7 @@ class User < ApplicationRecord
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
   # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
   def school_donor_name
-    school_id = school&.id
+    school_id = school_info_school&.id
     donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 
     donor_name
@@ -2392,7 +2394,7 @@ class User < ApplicationRecord
   end
 
   def school_stats
-    @school_stats ||= school&.most_recent_school_stats
+    @school_stats ||= school_info_school&.most_recent_school_stats
   end
 
   def hidden_lesson_ids(sections)
